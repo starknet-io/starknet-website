@@ -10,7 +10,12 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-netlify-cms",
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",

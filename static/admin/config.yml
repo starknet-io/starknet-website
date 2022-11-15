@@ -1,0 +1,97 @@
+backend:
+  name: github
+  repo: yuki-wtf/gatsby-starknet-docs
+  branch: main
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: src/pages
+    create: true
+    fields:
+      - name: path
+        label: Path
+      - name: title
+        label: Title
+      - name: body
+        label: Body
+        widget: markdown
+  - name: events
+    label: Events
+    label_singular: Event
+    folder: src/events
+    create: true
+    fields:
+      - name: name
+        label: Event Name
+      - name: image
+        label: Event Image
+        widget: file
+      - name: start_date
+        label: Start Date
+        widget: date
+      - name: end_date
+        label: End Date
+        widget: date
+      - name: location
+        label: Location
+        widget: map
+      - name: location_name
+        label: Location Name
+      - name: url
+        label: Website URL
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Main Menu"
+        name: "main-menu"
+        file: "src/settings/main-menu.yml"
+        fields:
+          - label: Pages
+            name: pages
+            widget: list
+            fields:
+              - label: Page
+                name: page
+                widget: relation
+                collection: "pages"
+                search_fields: ["title"]
+                value_field: "path"
+                display_fields: ["title"]
+              - label: Pages
+                name: pages
+                widget: list
+                fields:
+                  - label: Page
+                    name: page
+                    widget: relation
+                    collection: "pages"
+                    search_fields: ["title"]
+                    value_field: "path"
+                    display_fields: ["title"]
+                  - label: Pages
+                    name: pages
+                    widget: list
+                    fields:
+                      - label: Page
+                        name: page
+                        widget: relation
+                        collection: "pages"
+                        search_fields: ["title"]
+                        value_field: "path"
+                        display_fields: ["title"]
+                      - label: Pages
+                        name: pages
+                        widget: list
+                        fields:
+                          - label: Page
+                            name: page
+                            widget: relation
+                            collection: "pages"
+                            search_fields: ["title"]
+                            value_field: "path"
+                            display_fields: ["title"]
