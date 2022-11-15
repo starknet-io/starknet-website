@@ -7,6 +7,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "format": "rome format --write *.ts src",
+    "check": "rome check *.ts src",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

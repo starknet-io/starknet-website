@@ -4,5 +4,10 @@
     "rules": {
       "recommended": true
     }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentSize": 2,
+    "indentStyle": "space"
   }
 }
