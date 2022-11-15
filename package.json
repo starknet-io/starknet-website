@@ -9,6 +9,10 @@
     "clean": "gatsby clean",
     "format": "rome format --write *.js *.ts src",
     "check": "rome check *.js *.ts src",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -34,7 +38,9 @@
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
+    "cypress": "^11.0.1",
     "rome": "^10.0.1",
+    "start-server-and-test": "^1.14.0",
     "typescript": "^4.8.4"
   }
 }
