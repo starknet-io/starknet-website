@@ -1,12 +1,6 @@
 {
-  "name": "starknet",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
-  "description": "starknet",
-  "author": "Tsotne Nazarashvili",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
