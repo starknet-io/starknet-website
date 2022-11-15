@@ -11,13 +11,20 @@
     "check": "rome check *.js *.ts src",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "test": "yarn vitest run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mdx-js/react": "^2.1.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
+    "cypress": "^11.0.1",
     "gatsby": "^5.0.0",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
@@ -28,20 +35,17 @@
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
+    "happy-dom": "^7.7.0",
     "netlify-cms-app": "^2.15.72",
     "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.4"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "cypress": "^11.0.1",
     "rome": "^10.0.1",
     "start-server-and-test": "^1.14.0",
-    "typescript": "^4.8.4"
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.8.4",
+    "vite-tsconfig-paths": "^3.5.2",
+    "vitest": "^0.25.2"
   },
   "resolutions": {
     "vfile": "^4.2.1"
