@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -16,13 +17,27 @@ const config: GatsbyConfig = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: "gatsby-theme-i18n",
+      options: {
+        defaultLang: "en",
+        prefixDefault: true,
+        configPath: path.resolve("./i18n/config.json"),
+      },
+    },
+    {
+      resolve: "gatsby-theme-i18n-react-intl",
+      options: {
+        defaultLocale: "./i18n/intl/en.json",
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "./src/images/icon.png",
       },
     },
     "gatsby-plugin-mdx",
@@ -43,6 +58,14 @@ const config: GatsbyConfig = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./content/posts/",
+      },
+      __key: "posts",
     },
   ],
 };
