@@ -1,0 +1,13 @@
+diff --git a/node_modules/gatsby-theme-i18n/gatsby-node.js b/node_modules/gatsby-theme-i18n/gatsby-node.js
+index 5e01d30..04d5aa4 100644
+--- a/node_modules/gatsby-theme-i18n/gatsby-node.js
++++ b/node_modules/gatsby-theme-i18n/gatsby-node.js
+@@ -123,7 +123,7 @@ exports.onCreateNode = ({ node, actions }, themeOptions) => {
+   const { defaultLang } = withDefaults(themeOptions)
+ 
+   if (node.internal.type === `Mdx`) {
+-    const name = path.basename(node.fileAbsolutePath, `.mdx`)
++    const name = path.basename(node.fileAbsolutePath ?? node.internal.contentFilePath, `.mdx`)
+ 
+     const isDefault = name === `index`
+ 
