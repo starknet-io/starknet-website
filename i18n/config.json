@@ -1,0 +1,42 @@
+[
+  {
+    "code": "en",
+    "hrefLang": "en",
+    "name": "English",
+    "localName": "English",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "de",
+    "hrefLang": "de-DE",
+    "name": "German",
+    "localName": "Deutsch",
+    "langDir": "ltr",
+    "dateFormat": "DD.MM.YYYY"
+  },
+  {
+    "code": "es",
+    "hrefLang": "es",
+    "name": "Spanish",
+    "localName": "Español",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY"
+  },
+  {
+    "code": "ka",
+    "hrefLang": "ka",
+    "name": "Georgian",
+    "localName": "ქართული",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "zh",
+    "hrefLang": "zh",
+    "name": "Chinese",
+    "localName": "Chinese",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  }
+]
