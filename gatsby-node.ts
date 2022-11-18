@@ -84,7 +84,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       createRedirect({
         ...commonRedirectProps,
         fromPath: node.frontmatter.slug,
-        toPath: `${defaultLanguage}/${node.frontmatter.slug}`,
+        toPath: `/${defaultLanguage}${node.frontmatter.slug}`,
       });
 
       createPage({
