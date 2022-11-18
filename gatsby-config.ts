@@ -4,7 +4,10 @@ import path from "path";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Starknet",
-    siteUrl: "http://localhost:8000/",
+    siteUrl:
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:8000/"
+        : process.env.DEPLOY_PRIME_URL,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -12,7 +15,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: `gatsby-plugin-netlify`,
+      resolve: "gatsby-plugin-netlify",
       options: {
         generateMatchPathRewrites: false,
       },
