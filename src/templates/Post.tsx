@@ -1,9 +1,5 @@
 import React from "react";
 import { graphql, Slice } from "gatsby";
-import { MDXProvider } from "@mdx-js/react";
-import { Link } from "gatsby";
-
-const shortcodes = { Link };
 
 interface Props {
   readonly children: React.ReactNode;
@@ -18,13 +14,8 @@ export default function PageTemplate({ data, children }: Props) {
   return (
     <>
       <h1>{data.mdx.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
-        <Slice
-          alias={`blog-${
-            data.mdx.fields.locale
-          }-${data.mdx.frontmatter.slug.replace(/\//g, "--")}`}
-        />
-      </MDXProvider>
+
+      <Slice alias='content-mdx' allowEmpty/>
     </>
   );
 }

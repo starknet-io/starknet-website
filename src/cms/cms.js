@@ -1,28 +1,28 @@
-import CMS from "netlify-cms-app"
-import { markdownToHtml } from "netlify-cms-widget-markdown/dist/esm/serializers"
+import CMS from "netlify-cms-app";
+import { markdownToHtml } from "netlify-cms-widget-markdown/dist/esm/serializers";
 
-window.CMS = CMS
+window.CMS = CMS;
 
 const css = (strings, ...values) => {
-  const style = document.createElement('style')
-  style.innerHTML = String.raw({ raw: strings }, ...values)
-  return style
-}
+  const style = document.createElement("style");
+  style.innerHTML = String.raw({ raw: strings }, ...values);
+  return style;
+};
 
 const mainMenuStyles = css`
   /* custom css for main menu settings page */
-`
+`;
 
 function onLocationChange() {
-  if (window.location.hash === '#/collections/settings/entries/main-menu') {
-    document.body.appendChild(mainMenuStyles)
+  if (window.location.hash === "#/collections/settings/entries/main-menu") {
+    document.body.appendChild(mainMenuStyles);
   } else {
-    document.body.removeChild(mainMenuStyles)
+    document.body.removeChild(mainMenuStyles);
   }
 }
 
-window.addEventListener('hashchange', onLocationChange);
-onLocationChange()
+window.addEventListener("hashchange", onLocationChange);
+onLocationChange();
 
 CMS.registerEditorComponent({
   // Internal id of the component
@@ -61,7 +61,7 @@ CMS.registerEditorComponent({
     return {
       summary: match[1],
       details: match[2],
-    }
+    };
   },
   // Given an object with one property for each field defined in `fields`,
   // return the string you wish to be inserted into your markdown.
@@ -76,7 +76,7 @@ CMS.registerEditorComponent({
 ${data.details}
 
 </details>
-  `
+  `;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
@@ -88,9 +88,9 @@ ${data.details}
 ${markdownToHtml(data.details)}
 
 </details>
-  `
+  `;
   },
-})
+});
 CMS.registerEditorComponent({
   id: "two-columns",
   label: "Two Columns",
@@ -126,7 +126,7 @@ CMS.registerEditorComponent({
     return {
       left: match[1],
       right: match[2],
-    }
+    };
   },
   // Given an object with one property for each field defined in `fields`,
   // return the string you wish to be inserted into your markdown.
@@ -141,7 +141,7 @@ ${data.left}
 <Grid.Column>
 ${data.right}
 </Grid.Column>
-</Grid>`
+</Grid>`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
@@ -151,13 +151,13 @@ ${data.right}
 <div style="width: 100%">${markdownToHtml(data.left)}</div>
 <div style="width: 100%">${markdownToHtml(data.right)}</div>
 </div>
-  `
+  `;
   },
-})
+});
 
 function parse(str) {
   try {
-    return JSON.parse(str)
+    return JSON.parse(str);
   } catch (err) {}
 }
 
@@ -198,12 +198,14 @@ CMS.registerEditorComponent({
   //
   // This is used to populate the custom widget in the markdown editor in the CMS.
   fromBlock: function (match) {
-    if (match == null) { return null }
+    if (match == null) {
+      return null;
+    }
     return {
       title: parse(match[1]) ?? "",
       desc: parse(match[2]) ?? "",
       price: parse(match[3]) ?? 0,
-    }
+    };
   },
   // Given an object with one property for each field defined in `fields`,
   // return the string you wish to be inserted into your markdown.
@@ -215,7 +217,7 @@ CMS.registerEditorComponent({
   title=${JSON.stringify(data.title ?? "")}
   desc=${JSON.stringify(data.desc ?? "")}
   price={${JSON.stringify(data.price ?? 0)}}
-/>`
+/>`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
@@ -226,6 +228,6 @@ CMS.registerEditorComponent({
 <p style=""><b>desc:</b> ${data.desc}</p>
 <p style=""><b>price:</b> ${data.price}</p>
 </div>
-`
+`;
   },
-})
+});

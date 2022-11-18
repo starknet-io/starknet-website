@@ -1,9 +1,5 @@
 import React from "react";
 
 export default function () {
-    return (
-        <>
-            test-test-123
-        </>
-    )
+  return <>test-test-123</>;
 }
