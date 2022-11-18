@@ -1,5 +1,4 @@
 import { GatsbyNode } from "gatsby";
-import { createFilePath } from "gatsby-source-filesystem";
 import path from "path";
 import i18nConfig from "./i18n/config.json";
 
@@ -10,29 +9,6 @@ const commonRedirectProps = {
   isPermanent: true,
   ignoreCase: true,
   force: true,
-};
-
-export const onCreateNode: GatsbyNode<{
-  fileAbsolutePath: string;
-}>["onCreateNode"] = async ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-
-  // if (node.internal.type === "Mdx") {
-  //   const match = node.internal.contentFilePath?.match(/content\/(\w{2})\/.+\.mdx?/);
-
-  //   let locale = defaultLanguage;
-
-  //   if (match != null) {
-  //     locale == match[1];
-  //   }
-
-  //   createNodeField({ node, name: `locale`, value: locale });
-  //   createNodeField({
-  //     node,
-  //     name: `isDefault`,
-  //     value: locale == defaultLanguage,
-  //   });
-  // }
 };
 
 export const createPages: GatsbyNode["createPages"] = async ({
@@ -88,13 +64,8 @@ export const createPages: GatsbyNode["createPages"] = async ({
       });
 
       createPage({
-        // As mentioned above you could also query something else like frontmatter.title above and use a helper function
-        // like slugify to create a slug
         path: node.frontmatter.slug,
-        // Provide the path to the MDX content file so webpack can pick it up and transform it into JSX
         component: postTemplate,
-        // You can use the values in this context in
-        // our page layout component
         context: {
           slug: node.frontmatter.slug,
           locale: node.fields.locale,
