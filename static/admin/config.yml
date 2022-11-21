@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: yuki-wtf/gatsby-starknet-docs
-  branch: main
+  repo: starknet-io/starknet-website
+  branch: dev
 
 media_folder: static/assets
 public_folder: /assets
@@ -10,7 +10,8 @@ collections:
   - name: pages
     label: Pages
     label_singular: Page
-    folder: src/pages
+    identifier_field: path
+    folder: content/en
     create: true
     fields:
       - name: path
