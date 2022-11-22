@@ -1,11 +1,12 @@
 const colorVariable = require("@mertasan/tailwindcss-variables/colorVariable");
 
+const variablePrefix = "starknet-colors";
+
 const colors = {
   navbar: "white",
 };
 
 const darkColors = {
-  ...colors,
   navbar: "rgb(31, 41, 55)",
 };
 
@@ -15,12 +16,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: Object.fromEntries(
-        Object.keys(colors).map((key) => [
-          key,
-          colorVariable(`var(--starknet-colors-${key})`, true),
-        ]),
-      ),
+      colors: getDynamicColors(colors),
     },
     variables: {
       DEFAULT: colors,
@@ -31,7 +27,7 @@ module.exports = {
   },
   plugins: [
     require("@mertasan/tailwindcss-variables")({
-      variablePrefix: "starknet-colors",
+      variablePrefix,
       colorVariables: true,
       forceRGB: true,
       darkToRoot: false,
@@ -39,3 +35,12 @@ module.exports = {
     require("@tailwindcss/forms"),
   ],
 };
+
+function getDynamicColors(colors) {
+  const keys = Object.keys(colors);
+  const entries = keys.map((key) => {
+    return [key, colorVariable(`var(--${variablePrefix}-${key})`, true)];
+  });
+
+  return Object.fromEntries(entries);
+}
