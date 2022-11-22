@@ -1,13 +1,18 @@
 import type { GatsbyConfig } from "gatsby";
 import path from "path";
 
+function getSiteUrl () {
+  if (process.env.NODE_ENV === "development") {
+    return "http://localhost:8000/"
+  }
+
+  return process.env.DEPLOY_PRIME_URL ?? "http://localhost:8000/"
+}
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Starknet",
-    siteUrl:
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:8000/"
-        : process.env.DEPLOY_PRIME_URL,
+    siteUrl: getSiteUrl(),
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
