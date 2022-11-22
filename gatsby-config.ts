@@ -1,12 +1,12 @@
 import type { GatsbyConfig } from "gatsby";
 import path from "path";
 
-function getSiteUrl () {
+function getSiteUrl() {
   if (process.env.NODE_ENV === "development") {
-    return "http://localhost:8000/"
+    return "http://localhost:8000/";
   }
 
-  return process.env.DEPLOY_PRIME_URL ?? "http://localhost:8000/"
+  return process.env.DEPLOY_PRIME_URL ?? "http://localhost:8000/";
 }
 
 const config: GatsbyConfig = {

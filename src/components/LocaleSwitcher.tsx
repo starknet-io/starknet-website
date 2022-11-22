@@ -40,7 +40,7 @@ export default function LocaleSwitcher() {
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm",
                     )}
-                    to={location.pathname.replace(/^\/\w{2}\//, '/')}
+                    to={location.pathname.replace(/^\/\w{2}\//, "/")}
                     language={c.code}
                   >
                     {c.name}
