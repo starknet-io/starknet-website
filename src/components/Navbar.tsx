@@ -76,11 +76,17 @@ export default function Navbar() {
                 <div className="hidden lg:ml-6 lg:block">
                   <div className="flex space-x-4">
                     {menu.pages.map(({ page, pages }: any) => {
-                      const post = data.posts.nodes.find(
-                        (p: any) =>
-                          p.childMdx.fields.locale === locale &&
-                          p.childMdx.frontmatter.path === page,
-                      );
+                      const post =
+                        data.posts.nodes.find(
+                          (p: any) =>
+                            p.childMdx.fields.locale === locale &&
+                            p.childMdx.frontmatter.path === page,
+                        ) ??
+                        data.posts.nodes.find(
+                          (p: any) =>
+                            p.childMdx.fields.isDefault &&
+                            p.childMdx.frontmatter.path === page,
+                        );
 
                       return (
                         <Menu as="div" className="relative ml-4 flex-shrink-0">
