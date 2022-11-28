@@ -1,9 +1,9 @@
 ---
-title: My second blog post
+title: Lien vers le deuxième article de blog
 path: /second-post/
 ---
 
-# My second blog post
+# Lien vers le deuxième article de blog
 
 Lorem ipsum solor sit est.
 
