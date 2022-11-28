@@ -54,9 +54,15 @@ const config: GatsbyConfig = {
         icon: "./src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-yaml",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -64,6 +70,14 @@ const config: GatsbyConfig = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "settings",
+        path: "./src/settings/",
+      },
+      __key: "settings",
     },
     {
       resolve: "gatsby-source-filesystem",

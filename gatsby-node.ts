@@ -31,7 +31,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
               isDefault
             }
             frontmatter {
-              slug
+              path
             }
             internal {
               contentFilePath
@@ -50,7 +50,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   posts.forEach(({ childMdx: node }: any) => {
     createSlice({
-      id: `content-mdx-${node.frontmatter.slug}-${node.fields.locale}`,
+      id: `content-mdx-${node.frontmatter.path}-${node.fields.locale}`,
       component: node.internal.contentFilePath,
     });
   });
@@ -59,19 +59,19 @@ export const createPages: GatsbyNode["createPages"] = async ({
     if (node.fields.isDefault) {
       createRedirect({
         ...commonRedirectProps,
-        fromPath: node.frontmatter.slug,
-        toPath: `/${defaultLanguage}${node.frontmatter.slug}`,
+        fromPath: node.frontmatter.path,
+        toPath: `/${defaultLanguage}${node.frontmatter.path}`,
       });
 
       createPage({
-        path: node.frontmatter.slug,
+        path: node.frontmatter.path,
         component: postTemplate,
         context: {
-          slug: node.frontmatter.slug,
+          slug: node.frontmatter.path,
           locale: node.fields.locale,
         },
         slices: {
-          "content-mdx": `content-mdx-${node.frontmatter.slug}-${node.fields.locale}`,
+          "content-mdx": `content-mdx-${node.frontmatter.path}-${node.fields.locale}`,
         },
       });
     }

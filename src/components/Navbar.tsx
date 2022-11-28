@@ -6,8 +6,54 @@ import React from "react";
 import classnames from "classnames";
 import LocaleSwitcher from "./LocaleSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { graphql, useStaticQuery } from "gatsby";
+import { LocalizedLink, useLocalization } from "gatsby-theme-i18n";
 
 export default function Navbar() {
+  const data = useStaticQuery(graphql`
+    {
+      settings: allFile(
+        filter: {
+          sourceInstanceName: { eq: "settings" }
+          relativePath: { eq: "main-menu.yml" }
+        }
+      ) {
+        nodes {
+          relativePath
+          childSettingsYaml {
+            pages {
+              page
+              pages {
+                page
+              }
+            }
+          }
+        }
+      }
+      posts: allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
+        nodes {
+          childMdx {
+            id
+            fields {
+              locale
+              isDefault
+            }
+            frontmatter {
+              path
+              title
+            }
+            internal {
+              contentFilePath
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const { locale } = useLocalization();
+  const menu = data.settings.nodes[0].childSettingsYaml;
+
   return (
     <Disclosure as="nav" className="bg-navbar">
       {({ open }) => (
@@ -29,31 +75,62 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:ml-6 lg:block">
                   <div className="flex space-x-4">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a
-                      href="#"
-                      className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                    >
-                      Dashboard
-                    </a>
-                    <a
-                      href="#"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      Team
-                    </a>
-                    <a
-                      href="#"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      Projects
-                    </a>
-                    <a
-                      href="#"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      Calendar
-                    </a>
+                    {menu.pages.map(({ page, pages }: any) => {
+                      const post =
+                        data.posts.nodes.find(
+                          (p: any) =>
+                            p.childMdx.fields.locale === locale &&
+                            p.childMdx.frontmatter.path === page,
+                        ) ??
+                        data.posts.nodes.find(
+                          (p: any) =>
+                            p.childMdx.fields.isDefault &&
+                            p.childMdx.frontmatter.path === page,
+                        );
+
+                      return (
+                        <Menu as="div" className="relative ml-4 flex-shrink-0">
+                          <div>
+                            <Menu.Button className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                              {post.childMdx.frontmatter.title}
+                            </Menu.Button>
+                          </div>
+                          <Transition
+                            as={Fragment}
+                            enter="transition ease-out duration-100"
+                            enterFrom="transform opacity-0 scale-95"
+                            enterTo="transform opacity-100 scale-100"
+                            leave="transition ease-in duration-75"
+                            leaveFrom="transform opacity-100 scale-100"
+                            leaveTo="transform opacity-0 scale-95"
+                          >
+                            <Menu.Items className="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                              {pages.map(({ page, pages }: any) => {
+                                const post = data.posts.nodes.find(
+                                  (p: any) =>
+                                    p.childMdx.fields.locale === locale &&
+                                    p.childMdx.frontmatter.path === page,
+                                );
+
+                                return (
+                                  <Menu.Item>
+                                    {({ active }) => (
+                                      <LocalizedLink
+                                        to={page}
+                                        language={locale}
+                                        className="block px-4 py-2 text-sm text-gray-700"
+                                      >
+                                        {post.childMdx.frontmatter.title}
+                                      </LocalizedLink>
+                                    )}
+                                  </Menu.Item>
+                                );
+                              })}
+                            </Menu.Items>
+                          </Transition>
+                        </Menu>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
