@@ -1,6 +1,6 @@
 ---
-path: /page1/
-title: page1
+path: /page3/
+title: page3
 ---
 
-page1
+page3
