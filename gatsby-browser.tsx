@@ -1,3 +1,5 @@
+import "./src/css/index.css"
+
 import React from "react"
 import browserLang from "browser-lang"
 import { GatsbyBrowser, withPrefix } from "gatsby"

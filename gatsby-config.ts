@@ -1,13 +1,18 @@
 import type { GatsbyConfig } from "gatsby";
 import path from "path";
 
+function getSiteUrl() {
+  if (process.env.NODE_ENV === "development") {
+    return "http://localhost:8000/";
+  }
+
+  return process.env.DEPLOY_PRIME_URL ?? "http://localhost:8000/";
+}
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Starknet",
-    siteUrl:
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:8000/"
-        : process.env.DEPLOY_PRIME_URL,
+    siteUrl: getSiteUrl(),
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -49,9 +54,15 @@ const config: GatsbyConfig = {
         icon: "./src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-yaml",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -59,6 +70,14 @@ const config: GatsbyConfig = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "settings",
+        path: "./src/settings/",
+      },
+      __key: "settings",
     },
     {
       resolve: "gatsby-source-filesystem",
