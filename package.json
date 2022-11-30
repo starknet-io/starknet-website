@@ -17,7 +17,9 @@
     "test": "yarn vitest run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "storybook": "yarn workspace storybook-workspace storybook",
+    "build-storybook": "yarn workspace storybook-workspace build-storybook"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
