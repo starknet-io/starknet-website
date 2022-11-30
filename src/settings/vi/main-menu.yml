@@ -1,0 +1,9 @@
+pages:
+  - page: /learn/
+    pages:
+      - page: /page1/
+      - page: /page2/
+  - page: /build/
+    pages:
+      - page: /page3/
+      - page: /page4/

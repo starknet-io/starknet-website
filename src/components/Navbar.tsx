@@ -15,13 +15,17 @@ export default function Navbar() {
     {
       settings: allFile(
         filter: {
-          sourceInstanceName: { eq: "settings" }
-          relativePath: { eq: "main-menu.yml" }
+          sourceInstanceName: {eq: "settings"},
+          relativePath: {regex: "/main-menu\\.yml/"}, 
         }
       ) {
         nodes {
           relativePath
-          childSettingsYaml {
+          childSettings {
+            fields {
+              locale
+              isDefault
+            }
             pages {
               page
               pages {
@@ -53,7 +57,11 @@ export default function Navbar() {
   `);
 
   const { locale } = useLocalization();
-  const menu = data.settings.nodes[0].childSettingsYaml;
+  const menu = (
+    data.settings.nodes.find(
+      (n: any) => n.childSettings.fields.locale === locale
+    ) ?? data.settings.nodes.find((n: any) => n.childSettings.fields.isDefault)
+  ).childSettings;
   const intl = useIntl()
   
   return (
@@ -82,12 +90,12 @@ export default function Navbar() {
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.locale === locale &&
-                            p.childMdx.frontmatter.path === page,
+                            p.childMdx.frontmatter.path === page
                         ) ??
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.isDefault &&
-                            p.childMdx.frontmatter.path === page,
+                            p.childMdx.frontmatter.path === page
                         );
 
                       return (
@@ -111,7 +119,7 @@ export default function Navbar() {
                                 const post = data.posts.nodes.find(
                                   (p: any) =>
                                     p.childMdx.fields.locale === locale &&
-                                    p.childMdx.frontmatter.path === page,
+                                    p.childMdx.frontmatter.path === page
                                 );
 
                                 return (
@@ -213,7 +221,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Your Profile
@@ -226,7 +234,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Settings
@@ -239,7 +247,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Sign out

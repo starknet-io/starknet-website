@@ -50,7 +50,7 @@ collections:
     files:
       - label: "Main Menu"
         name: "main-menu"
-        file: "src/settings/main-menu.yml"
+        file: "src/settings/en/main-menu.yml"
         fields:
           - label: Pages
             name: pages
@@ -96,3 +96,11 @@ collections:
                             search_fields: ["title"]
                             value_field: "path"
                             display_fields: ["title"]
+      - label: "Events Page"
+        name: "events-page"
+        file: "src/settings/en/events-page.yml"
+        fields:
+          - label: Title
+            name: title
+          - label: Description 
+            name: description
