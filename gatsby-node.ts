@@ -97,3 +97,27 @@ export const onPostBootstrap: GatsbyNode["onPostBootstrap"] = ({ actions }) => {
     });
   });
 };
+
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions ,getNode}) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === "settings") {
+    const parent = getNode(node.parent!)!
+    const match = parent.internal.description?.match(
+      /\/settings\/(\w{2})\/.+\.yml?/
+    );  
+
+    let lang = defaultLanguage;
+
+    if (match != null) {
+      lang = match[1];
+    }
+
+    createNodeField({ node, name: "locale", value: lang });
+    createNodeField({
+      node,
+      name: "isDefault",
+      value: lang === defaultLanguage,
+    });
+  }
+};

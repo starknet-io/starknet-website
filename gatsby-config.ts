@@ -62,7 +62,12 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-transformer-yaml",
+    {
+      resolve: "gatsby-transformer-yaml",
+      options: {
+        typeName: "settings", 
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
