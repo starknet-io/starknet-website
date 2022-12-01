@@ -1,0 +1,40 @@
+diff --git a/gatsby-node.js b/gatsby-node.js
+index 5e01d30a0f60a812951e44c9eca2b52dbc5e8a24..984e584d5412676ea673595b0de228889a901549 100644
+--- a/gatsby-node.js
++++ b/gatsby-node.js
+@@ -123,14 +123,20 @@ exports.onCreateNode = ({ node, actions }, themeOptions) => {
+   const { defaultLang } = withDefaults(themeOptions)
+ 
+   if (node.internal.type === `Mdx`) {
+-    const name = path.basename(node.fileAbsolutePath, `.mdx`)
++    const match = node.internal.contentFilePath?.match(/\/content\/(\w{2})\/.+\.mdx?/);
+ 
+-    const isDefault = name === `index`
++    let lang = defaultLang;
+ 
+-    const lang = isDefault ? defaultLang : name.split(`.`)[1]
++    if (match != null) {
++      lang = match[1];
++    }
+ 
+-    createNodeField({ node, name: `locale`, value: lang })
+-    createNodeField({ node, name: `isDefault`, value: isDefault })
++    createNodeField({ node, name: `locale`, value: lang });
++    createNodeField({
++      node,
++      name: `isDefault`,
++      value: lang == defaultLang,
++    });
+   }
+ }
+ 
+@@ -180,6 +186,9 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
+         originalPath,
+         dateFormat: locale.dateFormat,
+       },
++      slices: {
++        "content-mdx": `content-mdx-${page.context.slug}-${locale.code}`,
++      },
+     }
+ 
+     // Check if the page is a localized 404

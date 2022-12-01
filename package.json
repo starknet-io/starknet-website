@@ -1,4 +1,5 @@
 {
+  "name": "root-workspace",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,7 +18,8 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "typecheck": "tsc --noEmit",
-    "postinstall": "patch-package"
+    "storybook": "yarn workspace storybook-workspace storybook",
+    "build-storybook": "yarn workspace storybook-workspace build-storybook"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
@@ -54,7 +56,6 @@
     "gatsby-transformer-yaml": "^5.2.0",
     "happy-dom": "^7.7.0",
     "netlify-cms-app": "^2.15.72",
-    "patch-package": "^6.5.0",
     "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -68,7 +69,11 @@
     "vite-tsconfig-paths": "^3.5.2",
     "vitest": "^0.25.2"
   },
+  "packageManager": "yarn@3.3.0",
+  "workspaces": [
+    "./workspaces/*"
+  ],
   "resolutions": {
-    "netlify-cms-app/**/vfile": "^4.2.1"
+    "gatsby-theme-i18n@^3.0.0": "patch:gatsby-theme-i18n@npm%3A3.0.0#./.yarn/patches/gatsby-theme-i18n-npm-3.0.0-a314b01511.patch"
   }
 }
