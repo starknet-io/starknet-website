@@ -1,5 +1,8 @@
 import type { GatsbyConfig } from "gatsby";
 import path from "path";
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 function getSiteUrl() {
   if (process.env.NODE_ENV === "development") {
@@ -99,34 +102,6 @@ const config: GatsbyConfig = {
         path: "./content/",
       },
       __key: "posts",
-    },
-    {
-      resolve: "gatsby-source-youtube",
-      options: {
-        // All options are optional
-        // By default, it will fetch videos from your playlists
-        //
-        // Comma-separated list of the YouTube channel ID(s)
-        channelId: "@starkware_ltd",
-        // Comma-separated list of the YouTube playlist ID(s)
-        // playlistId: "AFD...dfgDF",
-        // To update video:
-        // updateVideo: (video) => {
-        //   const countryTag = video.tags.find((tag) => tag.startWith("country"))
-
-        //   if (countryTag) {
-        //     const [, country] = video.title.split(":")
-        //     return {
-        //       ...video,
-        //       country,
-        //     }
-        //   }
-
-        //   return video
-        // },
-        // For a better stack trace and more information
-        debug: true,
-      },
     },
   ],
 };
