@@ -1,16 +1,20 @@
-import * as React from "react";
-import type { HeadProps, PageProps } from "gatsby";
-import { PageLayout } from "../components/Layout";
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import * as React from 'react';
+import type { HeadProps, PageProps } from 'gatsby';
+import { PageLayout } from '../components/Layout';
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  ChevronRightIcon,
+  TableCellsIcon,
+} from '@heroicons/react/20/solid';
+import Tabs from '../components/Tabs';
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: 'Product', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Company', href: '#' },
 ];
 
 export default function (props: PageProps) {
@@ -28,7 +32,9 @@ export default function (props: PageProps) {
                   <span className="rounded-full bg-indigo-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
                     We're hiring
                   </span>
-                  <span className="ml-4 text-sm">Visit our careers page</span>
+                  <span className="ml-4 text-sm">
+                    Visit our careers page
+                  </span>
                   <ChevronRightIcon
                     className="ml-2 h-5 w-5 text-gray-500"
                     aria-hidden="true"
@@ -36,15 +42,20 @@ export default function (props: PageProps) {
                 </a>
                 <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span className="block">A better way to</span>
-                  <span className="block text-indigo-400">ship web apps</span>
+                  <span className="block text-indigo-400">
+                    ship web apps
+                  </span>
                 </h1>
                 <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat.
+                  Anim aute id magna aliqua ad ad non deserunt sunt.
+                  Qui irure qui Lorem cupidatat commodo. Elit sunt
+                  amet fugiat veniam occaecat fugiat.
                 </p>
                 <div className="mt-10 sm:mt-12">
-                  <form action="#" className="sm:mx-auto sm:max-w-xl lg:mx-0">
+                  <form
+                    action="#"
+                    className="sm:mx-auto sm:max-w-xl lg:mx-0"
+                  >
                     <div className="sm:flex">
                       <div className="min-w-0 flex-1">
                         <label htmlFor="email" className="sr-only">
@@ -67,8 +78,9 @@ export default function (props: PageProps) {
                       </div>
                     </div>
                     <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                      Start your free 14-day trial, no credit card necessary. By
-                      providing your email, you agree to our{" "}
+                      Start your free 14-day trial, no credit card
+                      necessary. By providing your email, you agree to
+                      our{' '}
                       <a href="#" className="font-medium text-white">
                         terms of service
                       </a>
