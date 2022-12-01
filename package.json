@@ -48,6 +48,7 @@
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-source-youtube": "^2.5.1",
     "gatsby-theme-i18n": "^3.0.0",
     "gatsby-theme-i18n-react-intl": "^3.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
