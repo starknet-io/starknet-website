@@ -1,3 +1,5 @@
+import "../../../src/css/index.css"
+
 import { action } from "@storybook/addon-actions"
 
 // Gatsby's Link overrides:
