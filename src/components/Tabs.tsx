@@ -21,7 +21,7 @@ interface ListProps {
 const List = ({ children }: ListProps) => {
   return (
     <TabsPrimitive.List
-      className={cx("flex w-full rounded-t-lg bg-white dark:bg-gray-800")}
+      className={cx("flex w-full rounded-t-lg bg-tabsTrigger")}
     >
       {children}
     </TabsPrimitive.List>

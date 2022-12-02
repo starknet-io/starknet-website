@@ -1,10 +1,10 @@
 import { ComponentMeta } from "@storybook/react";
 import React from "react";
 
-import Tabs from "../../../../src/components/Tabs/Tabs";
+import Tabs from "../../../../src/components/Tabs";
 
 export default {
-  title: "Tabs",
+  title: "starknet.io/Tabs",
   component: Tabs.Root,
 } as ComponentMeta<typeof Tabs.Root>;
 

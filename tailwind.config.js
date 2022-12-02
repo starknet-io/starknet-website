@@ -3,11 +3,13 @@ const colorVariable = require("@mertasan/tailwindcss-variables/colorVariable");
 const variablePrefix = "starknet-colors";
 
 const colors = {
-  navbar: "white",
+  navbar: "rgb(300, 200, 30)",
+  tabsTrigger: "#ff0000",
 };
 
 const darkColors = {
-  navbar: "rgb(31, 41, 55)",
+  navbar: "rgb(3, 100, 30)",
+  tabsTrigger: "#bb3345",
 };
 
 /** @type {import('tailwindcss').Config} */
