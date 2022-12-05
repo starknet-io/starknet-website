@@ -32,7 +32,7 @@
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/node": "^18.11.10",
-    "@types/react": "^18.0.25",
+    "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
@@ -54,13 +54,13 @@
     "gatsby-theme-i18n-react-intl": "^3.0.0",
     "gatsby-transformer-sharp": "^5.2.0",
     "gatsby-transformer-yaml": "^5.2.0",
-    "happy-dom": "^7.7.0",
+    "happy-dom": "^7.7.2",
     "netlify-cms-app": "^2.15.72",
     "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-intl": "^6.2.4",
+    "react-intl": "^6.2.5",
     "react-use": "^17.4.0",
     "rome": "^10.0.1",
     "start-server-and-test": "^1.14.0",
@@ -74,6 +74,7 @@
     "./workspaces/*"
   ],
   "resolutions": {
+    "netlify-cms-widget-markdown/unified": "^10.0.0",
     "gatsby-theme-i18n@^3.0.0": "patch:gatsby-theme-i18n@npm%3A3.0.0#./.yarn/patches/gatsby-theme-i18n-npm-3.0.0-a314b01511.patch"
   }
 }
