@@ -4,8 +4,9 @@ import i18nConfig from "./i18n/config.json";
 import {
   createFileNodeFromBuffer,
   FileSystemNode,
+  CreateFileNodeFromBufferArgs,
 } from "gatsby-source-filesystem";
-import { google } from "googleapis";
+import { google, youtube_v3 } from "googleapis";
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -19,16 +20,10 @@ const commonRedirectProps = {
   force: true,
 };
 
-export interface CreateFileNodeFromURLArgs {
-  url: string;
-  cache?: GatsbyCache;
-  getCache?: Function;
-  createNode: Function;
-  createNodeId: Function;
-  parentNodeId?: string;
-  hash?: string;
-  ext?: string;
-  name?: string;
+type CreateFileNodeBaseArgs = Omit<CreateFileNodeFromBufferArgs, "buffer">;
+
+interface CreateFileNodeFromURLArgs extends CreateFileNodeBaseArgs {
+  readonly url: string;
 }
 
 async function createFileNodeFromURL(
@@ -40,6 +35,31 @@ async function createFileNodeFromURL(
   return await createFileNodeFromBuffer({
     ...args,
     buffer,
+  });
+}
+
+export interface CreateFileNodeFromThumbnailsArgs
+  extends CreateFileNodeBaseArgs {
+  readonly thumbnails: youtube_v3.Schema$ThumbnailDetails | undefined | null;
+}
+
+async function createFileNodeFromThumbnails(
+  args: CreateFileNodeFromThumbnailsArgs
+) {
+  const url =
+    args.thumbnails?.maxres?.url ??
+    args.thumbnails?.standard?.url ??
+    args.thumbnails?.high?.url ??
+    args.thumbnails?.medium?.url ??
+    args.thumbnails?.default?.url;
+
+  if (url == null) {
+    return undefined;
+  }
+
+  return await createFileNodeFromURL({
+    ...args,
+    url,
   });
 }
 
@@ -56,41 +76,64 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async ({
       auth: process.env.YOUTUBE_API_KEY,
     });
 
-    const { data } = await youtube.playlists.list({
-      part: ["snippet"],
+    const { data: playlists } = await youtube.playlists.list({
+      part: ["snippet", "contentDetails"],
       channelId: "UCnDWguR8mE2oDBsjhQkgbvg",
       maxResults: 20,
     });
 
-    for await (const item of data.items ?? []) {
-      const playlistNodeId = createNodeId(item.id!);
-      const thumbnailUrl =
-        item.snippet?.thumbnails?.maxres?.url ??
-        item.snippet?.thumbnails?.standard?.url ??
-        item.snippet?.thumbnails?.high?.url ??
-        item.snippet?.thumbnails?.medium?.url ??
-        item.snippet?.thumbnails?.default?.url;
-      let remoteImage___NODE;
-      if (thumbnailUrl) {
-        const image = createFileNodeFromURL({
-          url: thumbnailUrl,
-          parentNodeId: playlistNodeId,
-          createNode,
-          createNodeId,
-          cache,
-        });
-        remoteImage___NODE = image.then((i) => i.id).catch(() => undefined);
+    for await (const playlist of playlists.items ?? []) {
+      if (playlist.contentDetails?.itemCount! === 0) {
+        continue
       }
 
+      const playlistNodeId = createNodeId(playlist.id!);
+
+      const image = await createFileNodeFromThumbnails({
+        thumbnails: playlist.snippet?.thumbnails,
+        createNode,
+        createNodeId,
+        parentNodeId: playlistNodeId,
+        cache,
+      });
+
       await createNode({
-        remoteImage___NODE,
+        remoteImage___NODE: image?.id,
         id: playlistNodeId,
-        youTubePlaylistItem: item,
+        youTubePlaylist: playlist,
         internal: {
-          type: "YouTubePlaylistItems",
-          contentDigest: createContentDigest(item),
+          type: "YouTubePlaylists",
+          contentDigest: createContentDigest(playlist),
         },
       });
+
+      const { data: playlistItems } = await youtube.playlistItems.list({
+        part: ["snippet"],
+        playlistId: playlist.id!,
+        maxResults: 20,
+      });
+      for await (const playlistItem of playlistItems.items ?? []) {
+        const playlistItemNodeId = createNodeId(playlistItem.id!);
+
+        const image = await createFileNodeFromThumbnails({
+          thumbnails: playlistItem.snippet?.thumbnails,
+          createNode,
+          createNodeId,
+          parentNodeId: playlistItemNodeId,
+          cache,
+        });
+
+        await createNode({
+          remoteImage___NODE: image?.id,
+          id: playlistItemNodeId,
+          parentNodeId: playlistNodeId,
+          youTubePlaylistItem: playlistItem,
+          internal: {
+            type: "YouTubePlaylistItem",
+            contentDigest: createContentDigest(playlist),
+          },
+        });
+      }
     }
   } catch (err: any) {
     console.log(err);
