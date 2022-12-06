@@ -4309,7 +4309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addons@npm:6.5.14":
+"@storybook/addons@npm:6.5.14, @storybook/addons@npm:^6.0.0":
   version: 6.5.14
   resolution: "@storybook/addons@npm:6.5.14"
   dependencies:
@@ -4331,7 +4331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/api@npm:6.5.14":
+"@storybook/api@npm:6.5.14, @storybook/api@npm:^6.0.0":
   version: 6.5.14
   resolution: "@storybook/api@npm:6.5.14"
   dependencies:
@@ -4552,7 +4552,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/components@npm:6.5.14":
+"@storybook/components@npm:6.5.14, @storybook/components@npm:^6.0.0":
   version: 6.5.14
   resolution: "@storybook/components@npm:6.5.14"
   dependencies:
@@ -4670,7 +4670,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-events@npm:6.5.14":
+"@storybook/core-events@npm:6.5.14, @storybook/core-events@npm:^6.0.0":
   version: 6.5.14
   resolution: "@storybook/core-events@npm:6.5.14"
   dependencies:
@@ -5181,7 +5181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:6.5.14":
+"@storybook/theming@npm:6.5.14, @storybook/theming@npm:^6.0.0":
   version: 6.5.14
   resolution: "@storybook/theming@npm:6.5.14"
   dependencies:
@@ -8931,6 +8931,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "class-variance-authority@npm:0.4.0"
+  peerDependencies:
+    typescript: ">= 4.5.5 < 5"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 86037e5baa231a0c36a6dc2f260f6c18daa66bdccb6f4c1baee7112abd3dd2a11f412cfb3a0377b65357cc41ec6cb2f9cc70e9f64275109703fd6839ed50a450
+  languageName: node
+  linkType: hard
+
 "classnames@npm:^2.3.2":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
@@ -12103,7 +12115,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
+"fast-deep-equal@npm:^3.0.0, fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
   checksum: e21a9d8d84f53493b6aa15efc9cfd53dd5b714a1f23f67fb5dc8f574af80df889b3bce25dc081887c6d25457cce704e636395333abad896ccdec03abaf1f3f9d
@@ -23539,6 +23551,7 @@ __metadata:
     "@vitejs/plugin-react": ^2.2.0
     autoprefixer: ^10.4.13
     browser-lang: 0.1.0
+    class-variance-authority: ^0.4.0
     classnames: ^2.3.2
     cypress: ^11.2.0
     gatsby: ^5.2.0
@@ -24805,6 +24818,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"storybook-dark-mode@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "storybook-dark-mode@npm:1.1.2"
+  dependencies:
+    "@storybook/addons": ^6.0.0
+    "@storybook/api": ^6.0.0
+    "@storybook/components": ^6.0.0
+    "@storybook/core-events": ^6.0.0
+    "@storybook/theming": ^6.0.0
+    fast-deep-equal: ^3.0.0
+    global: ^4.4.0
+    memoizerific: ^1.11.3
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: c1522be5d7b52315e7343840bc5b6ed771e671814ccc0f63fbaa3a9f47d25c5cc0e0f5d0cdb5ac3e75e356e93d66ced8722ad2b0f7306b4113489e21cf8b07ff
+  languageName: node
+  linkType: hard
+
 "storybook-workspace@workspace:workspaces/storybook":
   version: 0.0.0-use.local
   resolution: "storybook-workspace@workspace:workspaces/storybook"
@@ -24827,6 +24864,7 @@ __metadata:
     postcss: ^8.4.19
     react: ^18.2.0
     react-dom: ^18.2.0
+    storybook-dark-mode: ^1.1.2
   languageName: unknown
   linkType: soft
 

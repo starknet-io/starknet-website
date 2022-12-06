@@ -65,7 +65,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-transformer-yaml",
       options: {
-        typeName: "settings", 
+        typeName: "settings",
       },
     },
     {
