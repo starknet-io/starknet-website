@@ -3,7 +3,7 @@ import { graphql, HeadProps, PageProps } from "gatsby";
 import { PageLayout } from "../components/Layout";
 
 export default function (props: PageProps<any>) {
-  const settings = props.data.settings ?? props.data.defaultSettings
+  const settings = props.data.settings ?? props.data.defaultSettings;
 
   return (
     <PageLayout>
@@ -14,7 +14,7 @@ export default function (props: PageProps<any>) {
 }
 
 export function Head(props: HeadProps<any>) {
-  const settings = props.data.settings ?? props.data.defaultSettings
+  const settings = props.data.settings ?? props.data.defaultSettings;
 
   return <title>{settings.childSettings.title}</title>;
 }

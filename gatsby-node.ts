@@ -27,7 +27,7 @@ interface CreateFileNodeFromURLArgs extends CreateFileNodeBaseArgs {
 }
 
 async function createFileNodeFromURL(
-  args: CreateFileNodeFromURLArgs
+  args: CreateFileNodeFromURLArgs,
 ): Promise<FileSystemNode> {
   const res = await fetch(args.url);
   const buffer = Buffer.from(await res.arrayBuffer());
@@ -44,7 +44,7 @@ export interface CreateFileNodeFromThumbnailsArgs
 }
 
 async function createFileNodeFromThumbnails(
-  args: CreateFileNodeFromThumbnailsArgs
+  args: CreateFileNodeFromThumbnailsArgs,
 ) {
   const url =
     args.thumbnails?.maxres?.url ??
@@ -84,7 +84,7 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async ({
 
     for await (const playlist of playlists.items ?? []) {
       if (playlist.contentDetails?.itemCount! === 0) {
-        continue
+        continue;
       }
 
       const playlistNodeId = createNodeId(playlist.id!);
@@ -237,7 +237,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
   if (node.internal.type === "settings") {
     const parent = getNode(node.parent!)!;
     const match = parent.internal.description?.match(
-      /\/settings\/(\w{2})\/.+\.yml?/
+      /\/settings\/(\w{2})\/.+\.yml?/,
     );
 
     let lang = defaultLanguage;

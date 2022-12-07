@@ -59,11 +59,11 @@ export default function Navbar() {
   const { locale } = useLocalization();
   const menu = (
     data.settings.nodes.find(
-      (n: any) => n.childSettings.fields.locale === locale
+      (n: any) => n.childSettings.fields.locale === locale,
     ) ?? data.settings.nodes.find((n: any) => n.childSettings.fields.isDefault)
   ).childSettings;
-  const intl = useIntl()
-  
+  const intl = useIntl();
+
   return (
     <Disclosure as="nav" className="bg-navbar">
       {({ open }) => (
@@ -90,12 +90,12 @@ export default function Navbar() {
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.locale === locale &&
-                            p.childMdx.frontmatter.path === page
+                            p.childMdx.frontmatter.path === page,
                         ) ??
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.isDefault &&
-                            p.childMdx.frontmatter.path === page
+                            p.childMdx.frontmatter.path === page,
                         );
 
                       return (
@@ -119,7 +119,7 @@ export default function Navbar() {
                                 const post = data.posts.nodes.find(
                                   (p: any) =>
                                     p.childMdx.fields.locale === locale &&
-                                    p.childMdx.frontmatter.path === page
+                                    p.childMdx.frontmatter.path === page,
                                 );
 
                                 return (
@@ -160,7 +160,7 @@ export default function Navbar() {
                       id="search"
                       name="search"
                       className="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 leading-5 text-gray-300 placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:outline-none focus:ring-white sm:text-sm"
-                      placeholder={intl.formatMessage({id: 'search'})}
+                      placeholder={intl.formatMessage({ id: "search" })}
                       type="search"
                     />
                   </div>
@@ -221,7 +221,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Your Profile
@@ -234,7 +234,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Settings
@@ -247,7 +247,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Sign out

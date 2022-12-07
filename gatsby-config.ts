@@ -1,8 +1,8 @@
 import type { GatsbyConfig } from "gatsby";
 import path from "path";
-import * as dotenv from 'dotenv'
+import * as dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 
 function getSiteUrl() {
   if (process.env.NODE_ENV === "development") {
@@ -68,7 +68,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-transformer-yaml",
       options: {
-        typeName: "settings", 
+        typeName: "settings",
       },
     },
     {

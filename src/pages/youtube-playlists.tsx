@@ -31,7 +31,7 @@ export default function (props: PageProps<any>) {
                   {youTubePlaylist.snippet.channelTitle}
                 </p>
               </a>
-            )
+            ),
           )}
         </div>
       </div>
