@@ -1,15 +1,11 @@
 import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "../../libs/headlessui";
-import {
-  Bars3Icon,
-  BellIcon,
-  XMarkIcon,
-} from "../../libs/heroicons/24/outline";
+import { Disclosure, Menu, Transition } from "../libs/headlessui";
+import { Bars3Icon, BellIcon, XMarkIcon } from "../libs/heroicons/24/outline";
 import React from "react";
 import classnames from "classnames";
 import LocaleSwitcher from "./LocaleSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { MagnifyingGlassIcon } from "../../libs/heroicons/20/solid";
+import { MagnifyingGlassIcon } from "../libs/heroicons/20/solid";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
