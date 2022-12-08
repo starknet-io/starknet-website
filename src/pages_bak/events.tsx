@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, HeadProps, PageProps } from "gatsby";
 import { PageLayout } from "../components/Layout";
 
-export default function (props: PageProps<any>) {
+export default function Events(props: PageProps<any>) {
   const settings = props.data.settings ?? props.data.defaultSettings;
 
   return (

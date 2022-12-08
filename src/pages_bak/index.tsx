@@ -13,7 +13,7 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 
-export default function (props: PageProps) {
+export default function Home(props: PageProps) {
   return (
     <PageLayout>
       <div className="bg-gray-900 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
