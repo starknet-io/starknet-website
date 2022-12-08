@@ -1,68 +1,79 @@
 import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure, Menu, Transition } from "../../libs/headlessui";
+import {
+  Bars3Icon,
+  BellIcon,
+  XMarkIcon,
+} from "../../libs/heroicons/24/outline";
 import React from "react";
 import classnames from "classnames";
 import LocaleSwitcher from "./LocaleSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { graphql, useStaticQuery } from "gatsby";
-import { LocalizedLink, useLocalization } from "gatsby-theme-i18n";
-import { FormattedMessage, useIntl } from "react-intl";
+import { MagnifyingGlassIcon } from "../../libs/heroicons/20/solid";
+import Link from "next/link";
+import Image from "next/image";
+import {useLocale, useTranslations} from 'next-intl';
 
 export default function Navbar() {
-  const data = useStaticQuery(graphql`
-    {
-      settings: allFile(
-        filter: {
-          sourceInstanceName: {eq: "settings"},
-          relativePath: {regex: "/main-menu\\.yml/"}, 
-        }
-      ) {
-        nodes {
-          relativePath
-          childSettings {
-            fields {
-              locale
-              isDefault
-            }
-            pages {
-              page
-              pages {
-                page
-              }
-            }
-          }
-        }
-      }
-      posts: allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
-        nodes {
-          childMdx {
-            id
-            fields {
-              locale
-              isDefault
-            }
-            frontmatter {
-              path
-              title
-            }
-            internal {
-              contentFilePath
-            }
-          }
-        }
-      }
-    }
-  `);
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     settings: allFile(
+  //       filter: {
+  //         sourceInstanceName: {eq: "settings"},
+  //         relativePath: {regex: "/main-menu\\.yml/"},
+  //       }
+  //     ) {
+  //       nodes {
+  //         relativePath
+  //         childSettings {
+  //           fields {
+  //             locale
+  //             isDefault
+  //           }
+  //           pages {
+  //             page
+  //             pages {
+  //               page
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     posts: allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
+  //       nodes {
+  //         childMdx {
+  //           id
+  //           fields {
+  //             locale
+  //             isDefault
+  //           }
+  //           frontmatter {
+  //             path
+  //             title
+  //           }
+  //           internal {
+  //             contentFilePath
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
-  const { locale } = useLocalization();
-  const menu = (
-    data.settings.nodes.find(
-      (n: any) => n.childSettings.fields.locale === locale,
-    ) ?? data.settings.nodes.find((n: any) => n.childSettings.fields.isDefault)
-  ).childSettings;
-  const intl = useIntl();
+  const locale = useLocale();
+  const menu = { pages: [] };
+  const data = {
+    posts: {
+      nodes: [],
+    },
+  };
+  // const menu = (
+  //   data.settings.nodes.find(
+  //     (n: any) => n.childSettings.fields.locale === locale,
+  //   ) ?? data.settings.nodes.find((n: any) => n.childSettings.fields.isDefault)
+  // ).childSettings;
+  // const intl = useIntl();
+  const t = useTranslations()
 
   return (
     <Disclosure as="nav" className="bg-navbar">
@@ -72,34 +83,42 @@ export default function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex items-center px-2 lg:px-0">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="block h-8 w-auto lg:hidden"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Your Company"
+                    width={47}
+                    height={40}
                   />
-                  <img
+                  <Image
                     className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Your Company"
+                    width={47}
+                    height={40}
                   />
                 </div>
                 <div className="hidden lg:ml-6 lg:block">
                   <div className="flex space-x-4">
                     {menu.pages.map(({ page, pages }: any) => {
-                      const post =
+                      const post: any =
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.locale === locale &&
-                            p.childMdx.frontmatter.path === page,
+                            p.childMdx.frontmatter.path === page
                         ) ??
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.isDefault &&
-                            p.childMdx.frontmatter.path === page,
+                            p.childMdx.frontmatter.path === page
                         );
 
                       return (
-                        <Menu as="div" className="relative ml-4 flex-shrink-0">
+                        <Menu
+                          key={page}
+                          as="div"
+                          className="relative ml-4 flex-shrink-0"
+                        >
                           <div>
                             <Menu.Button className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                               {post.childMdx.frontmatter.title}
@@ -116,22 +135,21 @@ export default function Navbar() {
                           >
                             <Menu.Items className="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                               {pages.map(({ page, pages }: any) => {
-                                const post = data.posts.nodes.find(
+                                const post: any = data.posts.nodes.find(
                                   (p: any) =>
                                     p.childMdx.fields.locale === locale &&
-                                    p.childMdx.frontmatter.path === page,
+                                    p.childMdx.frontmatter.path === page
                                 );
 
                                 return (
-                                  <Menu.Item>
+                                  <Menu.Item key={page}>
                                     {({ active }) => (
-                                      <LocalizedLink
-                                        to={page}
-                                        language={locale}
+                                      <Link
+                                        href={`/${locale}${page}`}
                                         className="block px-4 py-2 text-sm text-gray-700"
                                       >
                                         {post.childMdx.frontmatter.title}
-                                      </LocalizedLink>
+                                      </Link>
                                     )}
                                   </Menu.Item>
                                 );
@@ -147,7 +165,7 @@ export default function Navbar() {
               <div className="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
                 <div className="w-full max-w-lg lg:max-w-xs">
                   <label htmlFor="search" className="sr-only">
-                    <FormattedMessage id="search" />
+                    {t('search')}
                   </label>
                   <div className="relative">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -160,7 +178,7 @@ export default function Navbar() {
                       id="search"
                       name="search"
                       className="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 leading-5 text-gray-300 placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:outline-none focus:ring-white sm:text-sm"
-                      placeholder={intl.formatMessage({ id: "search" })}
+                      placeholder={t("search")}
                       type="search"
                     />
                   </div>
@@ -198,10 +216,12 @@ export default function Navbar() {
                     <div>
                       <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
-                        <img
+                        <Image
                           className="h-8 w-8 rounded-full"
                           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                           alt=""
+                          width={32}
+                          height={32}
                         />
                       </Menu.Button>
                     </div>
@@ -221,7 +241,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Your Profile
@@ -234,7 +254,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Settings
@@ -247,7 +267,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Sign out
@@ -297,10 +317,12 @@ export default function Navbar() {
             <div className="border-t border-gray-700 pt-4 pb-3">
               <div className="flex items-center px-5">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="h-10 w-10 rounded-full"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt=""
+                    width={40}
+                    height={40}
                   />
                 </div>
                 <div className="ml-3">

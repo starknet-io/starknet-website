@@ -1,16 +1,17 @@
 import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import React from "react";
 import classnames from "classnames";
 import i18nConfig from "../../i18n/config.json";
-import { LocalizedLink, useLocalization } from "gatsby-theme-i18n";
-import { useLocation } from "@reach/router";
+import { Menu, Transition } from "../../libs/headlessui";
+import { ChevronDownIcon } from "../../libs/heroicons/20/solid";
+import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import {useLocale} from 'next-intl';
 
 export default function LocaleSwitcher() {
-  const { locale } = useLocalization();
+  const locale = useLocale();
   const localeConfig = i18nConfig.find((c) => c.code === locale);
-  const location = useLocation();
+  const pathname = usePathname()!;
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -35,16 +36,15 @@ export default function LocaleSwitcher() {
             {i18nConfig.map((c, i) => (
               <Menu.Item key={i}>
                 {({ active }) => (
-                  <LocalizedLink
+                  <Link
                     className={classnames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm",
                     )}
-                    to={location.pathname.replace(/^\/\w{2}\//, "/")}
-                    language={c.code}
+                    href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}
                   >
                     {c.name}
-                  </LocalizedLink>
+                  </Link>
                 )}
               </Menu.Item>
             ))}
