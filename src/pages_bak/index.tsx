@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -26,7 +27,7 @@ export default function Home(props: PageProps) {
                   className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                 >
                   <span className="rounded-full bg-indigo-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                    We're hiring
+                    We&apos;re hiring
                   </span>
                   <span className="ml-4 text-sm">Visit our careers page</span>
                   <ChevronRightIcon
@@ -81,7 +82,7 @@ export default function Home(props: PageProps) {
             <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                 {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-                <img
+                <Image
                   className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                   src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
                   alt=""

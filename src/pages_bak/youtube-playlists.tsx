@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql, HeadProps, PageProps } from "gatsby";
 import { PageLayout } from "../components/Layout";
+import Image from "next/image";
 
 export default function YoutubePlaylists(props: PageProps<any>) {
   return (
@@ -18,7 +19,7 @@ export default function YoutubePlaylists(props: PageProps<any>) {
                 href={`https://www.youtube.com/playlist?list=${youTubePlaylist.id}`}
               >
                 <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-                  <img
+                  <Image
                     src={remoteImage.publicURL}
                     alt=""
                     className="pointer-events-none object-cover group-hover:opacity-75"

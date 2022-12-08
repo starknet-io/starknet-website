@@ -9,7 +9,7 @@ interface Props {
 
 export default function PageTemplate({ data, children }: Props) {
   if (data.mdx == null) {
-    return <div>This page hasn't been translated yet</div>;
+    return <div>This page hasn&apos;t been translated yet</div>;
   }
 
   return (
