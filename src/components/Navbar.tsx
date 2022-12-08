@@ -12,7 +12,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { MagnifyingGlassIcon } from "../../libs/heroicons/20/solid";
 import Link from "next/link";
 import Image from "next/image";
-import {useLocale, useTranslations} from 'next-intl';
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Navbar() {
   // const data = useStaticQuery(graphql`
@@ -73,7 +73,7 @@ export default function Navbar() {
   //   ) ?? data.settings.nodes.find((n: any) => n.childSettings.fields.isDefault)
   // ).childSettings;
   // const intl = useIntl();
-  const t = useTranslations()
+  const t = useTranslations();
 
   return (
     <Disclosure as="nav" className="bg-navbar">
@@ -105,12 +105,12 @@ export default function Navbar() {
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.locale === locale &&
-                            p.childMdx.frontmatter.path === page
+                            p.childMdx.frontmatter.path === page,
                         ) ??
                         data.posts.nodes.find(
                           (p: any) =>
                             p.childMdx.fields.isDefault &&
-                            p.childMdx.frontmatter.path === page
+                            p.childMdx.frontmatter.path === page,
                         );
 
                       return (
@@ -138,7 +138,7 @@ export default function Navbar() {
                                 const post: any = data.posts.nodes.find(
                                   (p: any) =>
                                     p.childMdx.fields.locale === locale &&
-                                    p.childMdx.frontmatter.path === page
+                                    p.childMdx.frontmatter.path === page,
                                 );
 
                                 return (
@@ -165,7 +165,7 @@ export default function Navbar() {
               <div className="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
                 <div className="w-full max-w-lg lg:max-w-xs">
                   <label htmlFor="search" className="sr-only">
-                    {t('search')}
+                    {t("search")}
                   </label>
                   <div className="relative">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -241,7 +241,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Your Profile
@@ -254,7 +254,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Settings
@@ -267,7 +267,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Sign out

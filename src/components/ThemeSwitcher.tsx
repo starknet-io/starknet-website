@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useLocalStorage, useMedia } from "react-use";
 import { useEffect } from "react";

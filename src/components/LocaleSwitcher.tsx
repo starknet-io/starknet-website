@@ -4,9 +4,9 @@ import classnames from "classnames";
 import i18nConfig from "../../i18n/config.json";
 import { Menu, Transition } from "../../libs/headlessui";
 import { ChevronDownIcon } from "../../libs/heroicons/20/solid";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import {useLocale} from 'next-intl';
+import { useLocale } from "next-intl";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();

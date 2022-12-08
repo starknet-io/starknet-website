@@ -4,12 +4,9 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: [
-      "tailwindui.com",
-      "images.unsplash.com"
-    ],
-    dangerouslyAllowSVG: true
-  }
-}
+    domains: ["tailwindui.com", "images.unsplash.com"],
+    dangerouslyAllowSVG: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
