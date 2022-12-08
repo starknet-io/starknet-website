@@ -1,3 +1,4 @@
+"use client"
 import { useLocalStorage, useMedia } from "react-use";
 import { useEffect } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
