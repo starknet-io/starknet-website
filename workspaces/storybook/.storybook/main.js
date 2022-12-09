@@ -19,6 +19,15 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+    },
+  },
   webpackFinal: async (config) => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
     config.module.rules[0].exclude = [
