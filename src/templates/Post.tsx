@@ -16,7 +16,7 @@ export default function PageTemplate({ data, children }: Props) {
     <PageLayout>
       <h1>{data.mdx.frontmatter.title}</h1>
 
-      <Slice alias='content-mdx' allowEmpty={true} />
+      <Slice alias="content-mdx" allowEmpty={true} />
     </PageLayout>
   );
 }
