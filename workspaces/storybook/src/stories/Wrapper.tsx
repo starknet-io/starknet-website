@@ -6,7 +6,7 @@ type Props = {
 
 const Wrapper = ({ children }: Props) => {
   return (
-    <div className="bg-navbar p-4 w-96 flex gap-4 flex-wrap">{children}</div>
+    <div className="bg-body p-4 w-1/2 flex gap-4 flex-wrap">{children}</div>
   );
 };
 
