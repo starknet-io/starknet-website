@@ -98,14 +98,18 @@ export const onPostBootstrap: GatsbyNode["onPostBootstrap"] = ({ actions }) => {
   });
 };
 
-export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions ,getNode}) => {
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({
+  node,
+  actions,
+  getNode,
+}) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "settings") {
-    const parent = getNode(node.parent!)!
+    const parent = getNode(node.parent!)!;
     const match = parent.internal.description?.match(
       /\/settings\/(\w{2})\/.+\.yml?/
-    );  
+    );
 
     let lang = defaultLanguage;
 
@@ -120,4 +124,16 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions ,getNod
       value: lang === defaultLanguage,
     });
   }
+};
+
+export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@ui": path.resolve(__dirname, "src/components"),
+      },
+    },
+  });
 };

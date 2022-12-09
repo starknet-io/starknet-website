@@ -4,8 +4,8 @@ import { PageLayout } from "../components/Layout";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
-
+import { ChevronRightIcon, TableCellsIcon } from "@heroicons/react/20/solid";
+import { Button } from "@ui/Button";
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
@@ -57,14 +57,7 @@ export default function (props: PageProps) {
                           className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
                         />
                       </div>
-                      <div className="mt-3 sm:mt-0 sm:ml-3">
-                        <button
-                          type="submit"
-                          className="block w-full rounded-md bg-indigo-500 py-3 px-4 font-medium text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
-                        >
-                          Start free trial
-                        </button>
-                      </div>
+                      <div className="mt-3 sm:mt-0 sm:ml-3"></div>
                     </div>
                     <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                       Start your free 14-day trial, no credit card necessary. By
@@ -90,6 +83,23 @@ export default function (props: PageProps) {
             </div>
           </div>
         </div>
+        <Button>Test</Button>
+
+        {/* <Tabs.Root defaultValue="tab1">
+          <Tabs.List aria-label="tabs example">
+            <Tabs.Trigger title="Page One" value="tab1" />
+            <Tabs.Trigger title="Page Two" value="tab2" />
+            <Tabs.Trigger title="Page three" value="tab3" />
+          </Tabs.List>
+          <Tabs.Content value="tab1">
+            Tab one content
+            <Button variant="default" size="large">
+              Hello
+            </Button>
+          </Tabs.Content>
+          <Tabs.Content value="tab2">Tab two content</Tabs.Content>
+          <Tabs.Content value="tab3">Tab three content</Tabs.Content>
+        </Tabs.Root> */}
       </div>
     </PageLayout>
   );

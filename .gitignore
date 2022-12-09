@@ -2,6 +2,7 @@
 node_modules/
 public
 src/gatsby-types.d.ts
+.env
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -9,3 +10,4 @@ src/gatsby-types.d.ts
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+workspaces/storybook/src/.DS_Store
