@@ -1,7 +1,8 @@
 import { ComponentMeta } from "@storybook/react";
 import React from "react";
 
-import Tabs from "../../../../src/components/Tabs";
+import * as Tabs from "@ui/Tabs";
+import { Button } from "@ui/Button";
 
 export default {
   title: "starknet.io/Tabs",
@@ -14,11 +15,13 @@ export const Primary = () => (
       <Tabs.List aria-label="tabs example">
         <Tabs.Trigger title="Page One" value="tab1" />
         <Tabs.Trigger title="Page Two" value="tab2" />
-        <Tabs.Trigger title="Page three" value="tab3" />
+        <Tabs.Trigger title="Page threes" value="tab3" />
       </Tabs.List>
-      <Tabs.Content value="tab1">Tab one content</Tabs.Content>
-      <Tabs.Content value="tab2">Tab two content</Tabs.Content>
-      <Tabs.Content value="tab3">Tab three content</Tabs.Content>
+      {["tab1", "tab2", "tab3"].map((tab) => (
+        <Tabs.Content value={tab} key={tab}>
+          <Button>I am {tab}</Button>
+        </Tabs.Content>
+      ))}
     </Tabs.Root>
   </div>
 );
