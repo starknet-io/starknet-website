@@ -19,7 +19,7 @@ type PageTransformer<P extends Page, P2 extends P> = (page: P) => Promise<P2>;
 
 export async function transformMainMenu<P extends Page, P2 extends P>(
   mainMenu: MainMenu<P>,
-  pageTransformer: PageTransformer<P, P2>
+  pageTransformer: PageTransformer<P, P2>,
 ): Promise<MainMenu<P2>> {
   return {
     pages: await transformPages(mainMenu.pages, pageTransformer),
@@ -28,7 +28,7 @@ export async function transformMainMenu<P extends Page, P2 extends P>(
 
 export async function transformPages<P extends Page, P2 extends P>(
   pages: readonly P[],
-  pageTransformer: PageTransformer<P, P2>
+  pageTransformer: PageTransformer<P, P2>,
 ): Promise<readonly P2[]> {
   return await Promise.all(
     pages.map(async (page) => {
@@ -39,6 +39,6 @@ export async function transformPages<P extends Page, P2 extends P>(
             ? await transformPages(page.pages as any, pageTransformer)
             : [],
       };
-    })
+    }),
   );
 }

@@ -13,9 +13,8 @@ export default async function LocaleLayout({
   return (
     <NextIntlProviderServer locale={locale}>
       <NavbarServer />
-        
+
       {children}
-    
     </NextIntlProviderServer>
   );
 }

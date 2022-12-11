@@ -1,7 +1,6 @@
-
 export interface EventsPage {
-  readonly title: string
-  readonly description: string
+  readonly title: string;
+  readonly description: string;
 }
 
 export async function getEventsPage(locale: string): Promise<EventsPage> {
@@ -11,4 +10,3 @@ export async function getEventsPage(locale: string): Promise<EventsPage> {
 
   return (await import("../../settings/en/events-page.yml")).default;
 }
-

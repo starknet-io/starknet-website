@@ -2,7 +2,10 @@ import Navbar, { Props } from "../(components)/Navbar";
 import { useLocale, useTranslations } from "next-intl";
 import { getContentByPage } from "../../../data/content";
 import { NextIntlClientProvider } from "next-intl/client";
-import { getMainMenu, transformMainMenu } from "../../../data/settings/main-menu";
+import {
+  getMainMenu,
+  transformMainMenu,
+} from "../../../data/settings/main-menu";
 
 // @ts-expect-error Server Component
 export async function NavbarServer(): JSX.Element {
@@ -15,7 +18,7 @@ export async function NavbarServer(): JSX.Element {
         ...page,
         title: (await getContentByPage(page.page, locale)).title,
       } as Props["mainMenu"]["pages"][number];
-    }
+    },
   );
 
   return (

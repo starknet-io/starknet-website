@@ -26,7 +26,6 @@
     "@mdx-js/react": "^2.1.5",
     "@mertasan/tailwindcss-variables": "^2.5.1",
     "@next/mdx": "^13.0.6",
-    "@reach/router": "^1.3.4",
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/node": "^18.11.13",
@@ -37,35 +36,16 @@
     "browser-lang": "0.1.0",
     "classnames": "^2.3.2",
     "cypress": "^11.2.0",
-    "dotenv": "^16.0.3",
     "eslint": "^8.29.0",
     "eslint-config-next": "^13.0.6",
-    "gatsby": "^5.2.0",
-    "gatsby-plugin-image": "^3.2.0",
-    "gatsby-plugin-manifest": "^5.2.0",
-    "gatsby-plugin-mdx": "^5.2.0",
-    "gatsby-plugin-netlify": "^5.1.0",
-    "gatsby-plugin-netlify-cms": "^7.2.0",
-    "gatsby-plugin-postcss": "^6.2.0",
-    "gatsby-plugin-react-helmet": "^6.2.0",
-    "gatsby-plugin-sharp": "^5.2.0",
-    "gatsby-plugin-sitemap": "^6.2.0",
-    "gatsby-source-filesystem": "^5.2.0",
-    "gatsby-theme-i18n": "^3.0.0",
-    "gatsby-theme-i18n-react-intl": "^3.0.0",
-    "gatsby-transformer-sharp": "^5.2.0",
-    "gatsby-transformer-yaml": "^5.2.0",
     "googleapis": "^109.0.1",
     "happy-dom": "^7.8.1",
     "js-yaml-loader": "^1.2.2",
-    "netlify-cms-app": "^2.15.72",
     "next": "^13.0.6",
     "next-intl": "2.11.0-alpha.2",
     "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-intl": "^6.2.5",
     "react-use": "^17.4.0",
     "remark-frontmatter": "^4.0.1",
     "remark-mdx-frontmatter": "^2.1.1",
@@ -80,8 +60,5 @@
   "packageManager": "yarn@3.3.0",
   "workspaces": [
     "./workspaces/*"
-  ],
-  "resolutions": {
-    "gatsby-theme-i18n@^3.0.0": "patch:gatsby-theme-i18n@npm%3A3.0.0#./.yarn/patches/gatsby-theme-i18n-npm-3.0.0-a314b01511.patch"
-  }
+  ]
 }

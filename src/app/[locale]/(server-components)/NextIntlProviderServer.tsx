@@ -5,10 +5,13 @@ import { getI18n } from "../../../data/i18n";
 interface Props {
   readonly children: React.ReactNode;
   readonly locale: string;
-};
+}
 
 // @ts-expect-error Server Component
-export async function NextIntlProviderServer ({ children, locale }: Props): JSX.Element {
+export async function NextIntlProviderServer({
+  children,
+  locale,
+}: Props): JSX.Element {
   try {
     const messages = await getI18n(locale);
 

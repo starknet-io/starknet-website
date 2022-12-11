@@ -1,7 +1,11 @@
 "use client";
 
 import { Disclosure, Menu, Transition } from "../../../libs/headlessui";
-import { Bars3Icon, BellIcon, XMarkIcon } from "../../../libs/heroicons/24/outline";
+import {
+  Bars3Icon,
+  BellIcon,
+  XMarkIcon,
+} from "../../../libs/heroicons/24/outline";
 import { MagnifyingGlassIcon } from "../../../libs/heroicons/20/solid";
 import React from "react";
 import classnames from "classnames";
@@ -168,7 +172,7 @@ export default function Navbar({ mainMenu }: Props) {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Your Profile
@@ -181,7 +185,7 @@ export default function Navbar({ mainMenu }: Props) {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Settings
@@ -194,7 +198,7 @@ export default function Navbar({ mainMenu }: Props) {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700",
                               )}
                             >
                               Sign out
