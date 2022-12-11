@@ -1,17 +1,16 @@
 "use client";
 
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "../libs/headlessui";
-import { Bars3Icon, BellIcon, XMarkIcon } from "../libs/heroicons/24/outline";
+import { Disclosure, Menu, Transition } from "../../../libs/headlessui";
+import { Bars3Icon, BellIcon, XMarkIcon } from "../../../libs/heroicons/24/outline";
+import { MagnifyingGlassIcon } from "../../../libs/heroicons/20/solid";
 import React from "react";
 import classnames from "classnames";
-import LocaleSwitcher from "./LocaleSwitcher";
-import ThemeSwitcher from "./ThemeSwitcher";
-import { MagnifyingGlassIcon } from "../libs/heroicons/20/solid";
 import Link from "next/link";
 import Image from "next/image";
-import { MainMenu, Page } from "../content";
 import { useLocale, useTranslations } from "next-intl";
+import type { MainMenu, Page } from "../../../data/settings/main-menu";
+import LocaleSwitcher from "./LocaleSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export interface Props {
   readonly mainMenu: MainMenu<Page<{ readonly title: string }>>;
@@ -59,7 +58,7 @@ export default function Navbar({ mainMenu }: Props) {
                             </Menu.Button>
                           </div>
                           <Transition
-                            as={Fragment}
+                            as={React.Fragment}
                             enter="transition ease-out duration-100"
                             enterFrom="transform opacity-0 scale-95"
                             enterTo="transform opacity-100 scale-100"
@@ -154,7 +153,7 @@ export default function Navbar({ mainMenu }: Props) {
                       </Menu.Button>
                     </div>
                     <Transition
-                      as={Fragment}
+                      as={React.Fragment}
                       enter="transition ease-out duration-100"
                       enterFrom="transform opacity-0 scale-95"
                       enterTo="transform opacity-100 scale-100"

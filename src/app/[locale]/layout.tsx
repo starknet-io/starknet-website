@@ -1,15 +1,21 @@
-import {ReactNode} from 'react';
-import NextIntlProvider from './NextIntlProvider';
+import { NavbarServer } from "./(server-components)/NavbarServer";
+import { NextIntlProviderServer } from "./(server-components)/NextIntlProviderServer";
 
-type Props = {
-  children: ReactNode;
-  params: {locale: string};
-};
+interface Props {
+  readonly children: React.ReactNode;
+  readonly params: { readonly locale: string };
+}
 
 export default async function LocaleLayout({
   children,
-  params: {locale}
+  params: { locale },
 }: Props) {
-  // @ts-expect-error Waiting for TypeScript to support Server Components
-  return <NextIntlProvider locale={locale}>{children}</NextIntlProvider>;
+  return (
+    <NextIntlProviderServer locale={locale}>
+      <NavbarServer />
+        
+      {children}
+    
+    </NextIntlProviderServer>
+  );
 }

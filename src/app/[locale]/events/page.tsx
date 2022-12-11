@@ -1,14 +1,9 @@
-import { useTranslations } from "next-intl";
-import { NavbarServer } from "../../../components/NavbarServer";
+import { EventsPageServer } from "./(server-components)/EventsPageServer";
 
-export default function Index() {
-  const t = useTranslations();
-
+export default function EventsPage() {
   return (
     <>
-      <NavbarServer  />
-
-      <p>{t("search")}</p>
+      <EventsPageServer />
     </>
   );
 }

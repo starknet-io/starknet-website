@@ -1,0 +1,10 @@
+{
+  "name": "netlify-cms-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+    
+  }
+}
