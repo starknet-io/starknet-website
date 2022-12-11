@@ -1,3 +1,5 @@
+"use client";
+
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "../libs/headlessui";
 import { Bars3Icon, BellIcon, XMarkIcon } from "../libs/heroicons/24/outline";
@@ -8,67 +10,15 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { MagnifyingGlassIcon } from "../libs/heroicons/20/solid";
 import Link from "next/link";
 import Image from "next/image";
+import { MainMenu, Page } from "../content";
 import { useLocale, useTranslations } from "next-intl";
 
-export default function Navbar() {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     settings: allFile(
-  //       filter: {
-  //         sourceInstanceName: {eq: "settings"},
-  //         relativePath: {regex: "/main-menu\\.yml/"},
-  //       }
-  //     ) {
-  //       nodes {
-  //         relativePath
-  //         childSettings {
-  //           fields {
-  //             locale
-  //             isDefault
-  //           }
-  //           pages {
-  //             page
-  //             pages {
-  //               page
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //     posts: allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
-  //       nodes {
-  //         childMdx {
-  //           id
-  //           fields {
-  //             locale
-  //             isDefault
-  //           }
-  //           frontmatter {
-  //             path
-  //             title
-  //           }
-  //           internal {
-  //             contentFilePath
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+export interface Props {
+  readonly mainMenu: MainMenu<Page<{ readonly title: string }>>;
+}
 
+export default function Navbar({ mainMenu }: Props) {
   const locale = useLocale();
-  const menu = { pages: [] };
-  const data = {
-    posts: {
-      nodes: [],
-    },
-  };
-  // const menu = (
-  //   data.settings.nodes.find(
-  //     (n: any) => n.childSettings.fields.locale === locale,
-  //   ) ?? data.settings.nodes.find((n: any) => n.childSettings.fields.isDefault)
-  // ).childSettings;
-  // const intl = useIntl();
   const t = useTranslations();
 
   return (
@@ -96,19 +46,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:ml-6 lg:block">
                   <div className="flex space-x-4">
-                    {menu.pages.map(({ page, pages }: any) => {
-                      const post: any =
-                        data.posts.nodes.find(
-                          (p: any) =>
-                            p.childMdx.fields.locale === locale &&
-                            p.childMdx.frontmatter.path === page,
-                        ) ??
-                        data.posts.nodes.find(
-                          (p: any) =>
-                            p.childMdx.fields.isDefault &&
-                            p.childMdx.frontmatter.path === page,
-                        );
-
+                    {mainMenu.pages.map(({ page, title, pages }) => {
                       return (
                         <Menu
                           key={page}
@@ -117,7 +55,7 @@ export default function Navbar() {
                         >
                           <div>
                             <Menu.Button className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
-                              {post.childMdx.frontmatter.title}
+                              {title}
                             </Menu.Button>
                           </div>
                           <Transition
@@ -130,13 +68,7 @@ export default function Navbar() {
                             leaveTo="transform opacity-0 scale-95"
                           >
                             <Menu.Items className="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                              {pages.map(({ page, pages }: any) => {
-                                const post: any = data.posts.nodes.find(
-                                  (p: any) =>
-                                    p.childMdx.fields.locale === locale &&
-                                    p.childMdx.frontmatter.path === page,
-                                );
-
+                              {pages.map(({ page, title, pages }) => {
                                 return (
                                   <Menu.Item key={page}>
                                     {({ active }) => (
@@ -144,7 +76,7 @@ export default function Navbar() {
                                         href={`/${locale}${page}`}
                                         className="block px-4 py-2 text-sm text-gray-700"
                                       >
-                                        {post.childMdx.frontmatter.title}
+                                        {title}
                                       </Link>
                                     )}
                                   </Menu.Item>
@@ -237,7 +169,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Your Profile
@@ -250,7 +182,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Settings
@@ -263,7 +195,7 @@ export default function Navbar() {
                               href="#"
                               className={classnames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700",
+                                "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Sign out
