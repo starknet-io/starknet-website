@@ -1,4 +1,5 @@
 import CMS from "netlify-cms-app";
+import config from "./config.yml";
 // @ts-expect-error
 import { markdownToHtml } from "netlify-cms-widget-markdown/dist/esm/serializers";
 
@@ -236,8 +237,6 @@ CMS.registerEditorComponent({
   },
 });
 
-import config from './config.yml'
-
 CMS.init({
-  config
-})
+  config,
+});
