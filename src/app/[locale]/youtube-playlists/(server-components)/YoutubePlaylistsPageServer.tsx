@@ -27,7 +27,6 @@ export async function YoutubePlaylistsPageServer(): JSX.Element {
               href={`https://www.youtube.com/playlist?list=${item.id}`}
             >
               <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={
                     item.snippet?.thumbnails?.maxres?.url ??

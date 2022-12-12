@@ -10,6 +10,7 @@
     "fmt": "yarn rome:format",
     "rome:format": "rome format --write *.{ts,tsx,js} src workspaces/{netlify-cms,storybook}/{src,*.js,.storybook}",
     "rome:check": "rome check *.{ts,tsx,js} src workspaces/{netlify-cms,storybook}/{src,*.js,.storybook}",
+    "eslint:check": "eslint *.{ts,tsx,js} src workspaces/{netlify-cms,storybook}/{src,*.js,.storybook}",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test": "yarn vitest run",
