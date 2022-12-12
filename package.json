@@ -17,6 +17,8 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "typecheck": "tsc --noEmit",
+    "storybook:dev": "yarn workspace storybook-workspace dev",
+    "storybook:build": "yarn workspace storybook-workspace build",
     "storybook": "yarn workspace storybook-workspace storybook",
     "build-storybook": "yarn workspace storybook-workspace build-storybook"
   },
