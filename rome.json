@@ -9,6 +9,9 @@
       },
       "a11y": {
         "useValidAnchor": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "warn"
       }
     }
   },

@@ -1,14 +1,7 @@
-import { useLocale } from "next-intl";
-import { getEventsPage } from "../../../../data/settings/events-page";
-import { google, youtube_v3 } from "googleapis";
-import Image from "next/image";
+import { google } from "googleapis";
 
 // @ts-expect-error Server Component
 export async function YoutubePlaylistsPageServer(): JSX.Element {
-  const locale = useLocale();
-
-  const { title, description } = await getEventsPage(locale);
-
   const youtube = google.youtube({
     version: "v3",
     auth: process.env.YOUTUBE_API_KEY,

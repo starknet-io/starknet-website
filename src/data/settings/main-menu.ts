@@ -10,7 +10,7 @@ export interface MainMenu<P extends Page = Page> {
 export async function getMainMenu(locale: string): Promise<MainMenu> {
   try {
     return (await import(`../../settings/${locale}/main-menu.yml`)).default;
-  } catch (err) {}
+  } catch {}
 
   return (await import("../../settings/en/main-menu.yml")).default;
 }

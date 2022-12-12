@@ -20,7 +20,7 @@ export async function NextIntlProviderServer({
         {children}
       </NextIntlServerProvider>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }

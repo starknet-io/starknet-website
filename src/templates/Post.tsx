@@ -7,7 +7,7 @@ interface Props {
   readonly data: any;
 }
 
-export default function PageTemplate({ data, children }: Props) {
+export default function PageTemplate({ data }: Props) {
   if (data.mdx == null) {
     return <div>This page hasn&apos;t been translated yet</div>;
   }

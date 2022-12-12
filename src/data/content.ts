@@ -16,13 +16,13 @@ export async function getContentByFilename(
     return mdxToContent(
       (await import(`../../content/${locale}/${filename}.md`)).default,
     );
-  } catch (err) {}
+  } catch {}
 
   try {
     return mdxToContent(
       (await import(`../../content/en/${filename}.md`)).default,
     );
-  } catch (err) {}
+  } catch {}
 
   throw new Error(`Content not found! ${filename}`);
 }

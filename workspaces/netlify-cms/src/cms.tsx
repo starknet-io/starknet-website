@@ -162,7 +162,7 @@ ${data.right}
 function parse(text: string) {
   try {
     return JSON.parse(text);
-  } catch (err) {}
+  } catch {}
 }
 
 CMS.registerEditorComponent({
