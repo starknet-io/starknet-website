@@ -1,5 +1,7 @@
 const GRID_SIZE = 15;
 
+const dd = "dsds"
+
 export function gameStateToGrid(data: string): number[][] {
   const intGameState = BigInt(data);
   const gameState: number[][] = [];

@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, Slice } from "gatsby";
-import { PageLayout } from "../components/Layout";
+// import { graphql, Slice } from "gatsby";
+// import { PageLayout } from "../components/Layout";
 
 interface Props {
   readonly children: React.ReactNode;
@@ -13,15 +13,15 @@ export default function PageTemplate({ data, children }: Props) {
   }
 
   return (
-    <PageLayout>
+    <>
       <h1>{data.mdx.frontmatter.title}</h1>
 
-      <Slice alias='content-mdx' allowEmpty={true} />
-    </PageLayout>
+      {/* <Slice alias='content-mdx' allowEmpty={true} /> */}
+    </>
   );
 }
 
-export const query = graphql`
+export const query = `
   query ($locale: String!, $slug: String!) {
     mdx(
       fields: { locale: { eq: $locale } }

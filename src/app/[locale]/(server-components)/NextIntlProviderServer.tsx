@@ -7,10 +7,10 @@ interface Props {
   readonly locale: string;
 }
 
-// @ts-expect-error Server Component
 export async function NextIntlProviderServer({
   children,
   locale,
+  // @ts-expect-error Server Component
 }: Props): JSX.Element {
   try {
     const messages = await getI18n(locale);
