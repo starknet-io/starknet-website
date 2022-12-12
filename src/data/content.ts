@@ -1,7 +1,9 @@
+import { MDXProps } from "mdx/types";
+
 interface Content {
   readonly path: string;
   readonly title: string;
-  readonly MDXContent: React.Component;
+  readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
 function mdxToContent({ default: MDXContent, path, title }: any): Content {
@@ -13,15 +15,11 @@ export async function getContentByFilename(
   locale: string,
 ): Promise<Content> {
   try {
-    return mdxToContent(
-      (await import(`../../content/${locale}/${filename}.md`)).default,
-    );
+    return mdxToContent(await import(`../../content/${locale}/${filename}.md`));
   } catch {}
 
   try {
-    return mdxToContent(
-      (await import(`../../content/en/${filename}.md`)).default,
-    );
+    return mdxToContent(await import(`../../content/en/${filename}.md`));
   } catch {}
 
   throw new Error(`Content not found! ${filename}`);

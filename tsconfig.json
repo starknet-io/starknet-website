@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["vitest/importMeta", "vitest/globals"],
+    "types": ["vitest/importMeta", "vitest/globals", "@types/mdx"],
     "plugins": [
       {
         "name": "next"
