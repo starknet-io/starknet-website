@@ -20,7 +20,7 @@ const nextConfig = {
     domains: ["tailwindui.com", "images.unsplash.com"],
     dangerouslyAllowSVG: true,
   },
-  webpack(config, context) {
+  webpack(config, _context) {
     config.module.rules.push({
       test: /\.ya?ml$/,
       use: "js-yaml-loader",
