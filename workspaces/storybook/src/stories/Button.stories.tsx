@@ -1,41 +1,88 @@
+import { ComponentMeta } from "@storybook/react";
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Button } from "@ui/Button";
+import Wrapper from "./Wrapper";
 
-import { Button } from "./Button";
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Button",
+  title: "starknet.io/Button",
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export const Primary = () => (
+  <>
+    <Wrapper>
+      <Button intent="default">Default button</Button>
+      <Button intent="primary">Primary</Button>
+      <Button intent="destructive">Destructive</Button>
+      <Button intent="default" disabled>
+        Default disabled
+      </Button>
+    </Wrapper>
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: "Button",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
-  label: "Button",
-};
+    <Wrapper>
+      <Button intent="default" size="slim">
+        Default slim
+      </Button>
+      <Button intent="default" size="medium">
+        Default medium
+      </Button>
+      <Button intent="default" size="large">
+        Default large
+      </Button>
+    </Wrapper>
+    <Wrapper>
+      <Button intent="primary" size="slim">
+        Primary slim
+      </Button>
+      <Button intent="primary" size="medium">
+        Primary medium
+      </Button>
+      <Button intent="primary" size="large">
+        Primary large
+      </Button>
+    </Wrapper>
+    <Wrapper>
+      <Button intent="destructive" size="slim">
+        Destructive slim
+      </Button>
+      <Button intent="destructive" size="medium">
+        Destructive medium
+      </Button>
+      <Button intent="destructive" size="large">
+        Destructive large
+      </Button>
+    </Wrapper>
+    <Wrapper>
+      <Button intent="primary" size="slim" loading>
+        Destructive slim
+      </Button>
+      <Button intent="primary" size="medium" loading>
+        Destructive medium
+      </Button>
+      <Button intent="primary" size="large" loading>
+        Destructive large
+      </Button>
+    </Wrapper>
+    <Wrapper>
+      <Button intent="default" size="slim" fullWidth>
+        Default slim fullwidth
+      </Button>
+      <Button intent="default" size="medium" fullWidth>
+        Default medium fullwidth
+      </Button>
+      <Button intent="default" size="large" fullWidth>
+        Default large fullwidth
+      </Button>
+      <Button intent="primary" size="slim" fullWidth>
+        primary slim fullwidth
+      </Button>
+      <Button intent="primary" size="medium" fullWidth>
+        primary medium fullwidth
+      </Button>
+      <Button intent="primary" size="large" fullWidth>
+        primary large fullwidth
+      </Button>
+    </Wrapper>
+  </>
+);
+Primary.storyName = "Default";

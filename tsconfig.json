@@ -15,6 +15,10 @@
     "jsx": "preserve",
     "incremental": true,
     "types": ["vitest/importMeta", "vitest/globals", "@types/mdx"],
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["./src/components/*"]
+    },
     "plugins": [
       {
         "name": "next"
