@@ -11,3 +11,4 @@ src/gatsby-types.d.ts
 !.yarn/sdks
 !.yarn/versions
 workspaces/storybook/src/.DS_Store
+.idea/
