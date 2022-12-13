@@ -1,9 +1,26 @@
 // todo - make functional.  Currently hardcoded for demo purposes
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import cx from "classnames";
-import React from "react";
+import React, { ReactNode } from 'react';
 
-type Props = {};
+interface Menu {
+  label: string;
+  url: string;
+  icon?: ReactNode;
+}
+
+interface MenuCategory {
+  category: string;
+  menus: Menu[];
+}
+
+type Props = {
+  title: string;
+  description: string;
+  icon?: ReactNode;
+  mainMenus: MenuCategory[];
+  footerMenus: Menu[];
+};
 
 export const NavigationMenu = (_props: Props) => {
   return (

@@ -10,12 +10,11 @@ interface CheckboxProps extends CheckboxPrimitive.CheckboxProps {
 
 export const Checkbox = ({
   label,
-  disabled: _disabled,
   id = "1",
   ...rest
 }: CheckboxProps) => {
   return (
-    <form className="flex items-center justify-center h-96">
+    <div className="flex items-center justify-center m-2">
       <CheckboxPrimitive.Root
         {...rest}
         className={cx(
@@ -34,12 +33,12 @@ export const Checkbox = ({
       <LabelPrimitive.Label
         htmlFor={id}
         className={cx(
-          "ml-3 select-none text-sm font-medium text-bodyText",
-          "disabled:opacity-20",
+          "ml-3 select-none text-sm font-medium text-bodyText cursor-pointer",
+          { 'opacity-20 cursor-not-allowed': rest.disabled },
         )}
       >
         {label}
       </LabelPrimitive.Label>
-    </form>
+    </div>
   );
 };

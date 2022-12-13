@@ -17,7 +17,24 @@ export const Primary = () => (
         width: "50%",
       }}
     >
-      <NavigationMenu />
+      <NavigationMenu
+        title='LEARNING HUB'
+        description='Start here for an overview of all things Starknet'
+        mainMenus={[
+          {
+            category: 'THE BASICS',
+            menus: [
+              { label: 'What is Starknet?', url: ''}
+            ]
+          }
+        ]}
+        footerMenus={[
+          { label: 'Starknet foundation', url: ''},
+          { label: 'Glossary', url: ''},
+          { label: 'FAQs', url: ''},
+          { label: 'Media kit', url: ''},
+        ]}
+      />
     </div>
   </div>
 );

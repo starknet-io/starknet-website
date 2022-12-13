@@ -9,12 +9,22 @@ export default {
 
 export const Primary = () => (
   <>
-    <div className="flex items-center justify-center  ">
+    <div className="flex items-center justify-center">
       <Checkbox
-        disabled={true}
+        name='tos'
+        id='tos'
         required={true}
-        label="Accept the termss"
-        onCheckedChange={() => console.log("red")}
+        label="Accept the terms"
+        onCheckedChange={() => console.log("changed")}
+      />
+    </div>
+    <div className="flex items-center justify-center">
+      <Checkbox
+        name='cannot'
+        id='cannot'
+        disabled={true}
+        label="I am disabled"
+        onCheckedChange={() => console.log("you should not see me")}
       />
     </div>
   </>

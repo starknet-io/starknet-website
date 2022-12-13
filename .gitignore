@@ -26,6 +26,7 @@ node_modules
 .cache
 .parcel-cache
 storybook-static
+.idea
 
 # debug
 npm-debug.log*
