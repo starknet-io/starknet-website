@@ -1,7 +1,7 @@
 // todo - make functional.  Currently hardcoded for demo purposes
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import cx from "classnames";
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 interface Menu {
   label: string;

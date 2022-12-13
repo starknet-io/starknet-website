@@ -22,17 +22,15 @@ export const Primary = () => (
         description='Start here for an overview of all things Starknet'
         mainMenus={[
           {
-            category: 'THE BASICS',
-            menus: [
-              { label: 'What is Starknet?', url: ''}
-            ]
-          }
+            category: "THE BASICS",
+            menus: [{ label: "What is Starknet?", url: "" }],
+          },
         ]}
         footerMenus={[
-          { label: 'Starknet foundation', url: ''},
-          { label: 'Glossary', url: ''},
-          { label: 'FAQs', url: ''},
-          { label: 'Media kit', url: ''},
+          { label: "Starknet foundation", url: "" },
+          { label: "Glossary", url: "" },
+          { label: "FAQs", url: "" },
+          { label: "Media kit", url: "" },
         ]}
       />
     </div>
