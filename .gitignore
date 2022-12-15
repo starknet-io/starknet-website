@@ -1,8 +1,7 @@
-.cache/
-node_modules/
-public
-src/gatsby-types.d.ts
-.env
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,5 +9,41 @@ src/gatsby-types.d.ts
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-workspaces/storybook/src/.DS_Store
-.idea/
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+.cache
+.parcel-cache
+storybook-static
+.idea
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# gatsby
+src/gatsby-types.d.ts

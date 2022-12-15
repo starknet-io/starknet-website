@@ -45,7 +45,7 @@ export const Content = ({ children, ...rest }: ContentProps) => {
           "radix-side-bottom:animate-slide-up-fade",
           "radix-side-left:animate-slide-right-fade",
           "inline-flex items-center rounded-md px-4 py-2.5",
-          "bg-toolTip"
+          "bg-toolTip",
         )}
       >
         <span className="block text-xs leading-none text-toolTipText ">

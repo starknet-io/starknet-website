@@ -72,7 +72,10 @@ interface ButtonProps
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, intent, size, fullWidth, disabled, loading, ...props }, ref) => {
+  function Button(
+    { children, intent, size, fullWidth, disabled, loading, ...props },
+    ref,
+  ) {
     return (
       <button
         ref={ref}
@@ -82,7 +85,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <span
           className={classNames(
             "leading-[1.25rem]",
-            loading && "text-transparent"
+            loading && "text-transparent",
           )}
         >
           {children}
@@ -104,5 +107,5 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </button>
     );
-  }
+  },
 );

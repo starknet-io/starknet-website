@@ -11,25 +11,27 @@ import React from "react";
 type SelectButtonProps = Omit<React.ComponentProps<"button">, "className"> & {};
 
 const SelectButton = React.forwardRef<HTMLButtonElement, SelectButtonProps>(
-  ({ children, ...props }, ref) => (
-    <button
-      ref={ref}
-      {...props}
-      className={cx(
-        "inline-flex select-none items-center justify-center rounded-md px-4 py-2 text-sm font-medium",
-        "bg-selectButton text-bodyText hover:bg-selectButtonHover ",
-        "hover:selectButtonHover",
-        "focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75",
+  function SelectButton({ children, ...props }, ref) {
+    return (
+      <button
+        ref={ref}
+        {...props}
+        className={cx(
+          "inline-flex select-none items-center justify-center rounded-md px-4 py-2 text-sm font-medium",
+          "bg-selectButton text-bodyText hover:bg-selectButtonHover ",
+          "hover:selectButtonHover",
+          "focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75",
 
-        "group",
-        "radix-state-open:bg-gray-50",
-        "radix-state-on:bg-gray-50",
-        "radix-state-instant-open:bg-gray-50 radix-state-delayed-open:bg-gray-50"
-      )}
-    >
-      {children}
-    </button>
-  )
+          "group",
+          "radix-state-open:bg-gray-50",
+          "radix-state-on:bg-gray-50",
+          "radix-state-instant-open:bg-gray-50 radix-state-delayed-open:bg-gray-50",
+        )}
+      >
+        {children}
+      </button>
+    );
+  },
 );
 
 export const Root = ({ children, ...rest }: SelectPrimitive.SelectProps) => {
@@ -85,7 +87,7 @@ export const Option = ({
       className={cx(
         "relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700  font-medium focus:bg-gray-100",
         "radix-disabled:opacity-50",
-        "focus:outline-none select-none"
+        "focus:outline-none select-none",
       )}
       value={value}
       {...rest}

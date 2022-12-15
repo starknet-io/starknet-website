@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -22,7 +25,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "babel-loader": "^8.3.0",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook-dark-mode": "^1.1.2",

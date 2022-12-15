@@ -38,7 +38,7 @@ export const Trigger = ({ title, value, ...rest }: TriggerProps) => {
         "radix-state-active:border-b-gray-700 focus-visible:radix-state-active:border-b-transparent radix-state-inactive:bg-body  ",
         "flex-1 px-3 py-2.5",
         "focus:radix-state-active:border-b-red",
-        "focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+        "focus:z-10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75",
       )}
       {...rest}
     >
