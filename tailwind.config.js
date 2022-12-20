@@ -51,6 +51,14 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx,mdx}"],
   darkMode: "class",
   theme: {
+    fontSize: {
+      xsmall: '0.6rem',
+      small: '0.8rem',
+      base: '1rem',
+      medium: '1.25rem',
+      large: '1.5rem',
+      xlarge: '1.75rem',
+    },
     extend: {
       colors: getDynamicColors(colors),
     },
@@ -69,6 +77,7 @@ module.exports = {
       darkToRoot: false,
     }),
     require("@tailwindcss/forms"),
+    require('@tailwindcss/typography'),
     require("tailwindcss-radix")(),
   ],
 };
