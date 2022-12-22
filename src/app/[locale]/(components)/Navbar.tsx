@@ -1,18 +1,18 @@
 "use client";
 
-import { Disclosure, Menu, Transition } from "../../../libs/headlessui";
+import { Disclosure, Menu, Transition } from "src/libs/headlessui";
 import {
   Bars3Icon,
   BellIcon,
   XMarkIcon,
-} from "../../../libs/heroicons/24/outline";
-import { MagnifyingGlassIcon } from "../../../libs/heroicons/20/solid";
+} from "src/libs/heroicons/24/outline";
+import { MagnifyingGlassIcon } from "src/libs/heroicons/20/solid";
 import React from "react";
 import classnames from "classnames";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import type { MainMenu, Page } from "../../../data/settings/main-menu";
+import type { MainMenu, Page } from "src/data/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
 

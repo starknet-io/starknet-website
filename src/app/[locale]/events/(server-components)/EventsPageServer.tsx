@@ -1,5 +1,5 @@
 import { useLocale } from "next-intl";
-import { getEventsPage } from "../../../../data/settings/events-page";
+import { getEventsPage } from "src/data/settings/events-page";
 
 // @ts-expect-error Server Component
 export async function EventsPageServer(): JSX.Element {

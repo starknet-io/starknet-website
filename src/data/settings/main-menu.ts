@@ -9,10 +9,10 @@ export interface MainMenu<P extends Page = Page> {
 
 export async function getMainMenu(locale: string): Promise<MainMenu> {
   try {
-    return (await import(`../../settings/${locale}/main-menu.yml`)).default;
+    return (await import(`src/settings/${locale}/main-menu.yml`)).default;
   } catch {}
 
-  return (await import("../../settings/en/main-menu.yml")).default;
+  return (await import("src/settings/en/main-menu.yml")).default;
 }
 
 type PageTransformer<P extends Page, P2 extends P> = (page: P) => Promise<P2>;

@@ -1,11 +1,11 @@
 import Navbar, { Props } from "../(components)/Navbar";
 import { useLocale, useTranslations } from "next-intl";
-import { getContentByPage } from "../../../data/content";
+import { getContentByPage } from "src/data/content-at-compiletime";
 import { NextIntlClientProvider } from "next-intl/client";
 import {
   getMainMenu,
   transformMainMenu,
-} from "../../../data/settings/main-menu";
+} from "src/data/settings/main-menu";
 
 // @ts-expect-error Server Component
 export async function NavbarServer(): JSX.Element {

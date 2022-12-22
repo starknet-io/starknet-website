@@ -1,6 +1,6 @@
 import { NextIntlServerProvider } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { getI18n } from "../../../data/i18n";
+import { getI18n } from "src/data/i18n";
 
 interface Props {
   readonly children: React.ReactNode;

@@ -15,11 +15,11 @@ export async function getContentByFilename(
   locale: string,
 ): Promise<Content> {
   try {
-    return mdxToContent(await import(`../../content/${locale}/${filename}.md`));
+    return mdxToContent(await import(`content/${locale}/${filename}.md`));
   } catch {}
 
   try {
-    return mdxToContent(await import(`../../content/en/${filename}.md`));
+    return mdxToContent(await import(`content/en/${filename}.md`));
   } catch {}
 
   throw new Error(`Content not found! ${filename}`);
