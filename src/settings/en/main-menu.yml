@@ -3,6 +3,7 @@ pages:
     pages:
       - page: /page1/
       - page: /page2/
+      - page: /what/
   - page: /developers/
   - page: /ecosystem/
   - page: /community/
