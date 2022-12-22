@@ -17,7 +17,12 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["tailwindui.com", "images.unsplash.com"],
+    domains: [
+      "tailwindui.com",
+      "starknet.io",
+      "starkware.co",
+      "images.unsplash.com",
+    ],
     dangerouslyAllowSVG: true,
   },
   webpack(config, _context) {
