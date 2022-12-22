@@ -6,7 +6,7 @@ const colors = {
   body: "#fff",
   bodyText: "#111",
   focus: "#FA1777",
-  navbar: "#ccc",
+  navbar: "#fff",
   tabsTrigger: "#ccc",
   primary: "#444",
   buttonPrimary: "#444",
@@ -25,10 +25,10 @@ const colors = {
 };
 
 const darkColors = {
-  body: "#333",
-  bodyText: "#eaeaea",
+  body: "#fff",
+  bodyText: "#444",
   focus: "#FA1777",
-  navbar: "#111",
+  navbar: "#fff",
   tabsTrigger: "#444",
   primary: "#338998",
   buttonPrimary: "#338998",
@@ -52,12 +52,12 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontSize: {
-      xsmall: '0.6rem',
-      small: '0.8rem',
-      base: '1rem',
-      medium: '1.25rem',
-      large: '1.5rem',
-      xlarge: '1.75rem',
+      xsmall: "0.6rem",
+      small: "0.8rem",
+      base: "1rem",
+      medium: "1.25rem",
+      large: "1.5rem",
+      xlarge: "1.75rem",
     },
     extend: {
       colors: getDynamicColors(colors),
@@ -77,7 +77,7 @@ module.exports = {
       darkToRoot: false,
     }),
     require("@tailwindcss/forms"),
-    require('@tailwindcss/typography'),
+    require("@tailwindcss/typography"),
     require("tailwindcss-radix")(),
   ],
 };

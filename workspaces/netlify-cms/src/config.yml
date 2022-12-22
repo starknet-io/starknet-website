@@ -24,7 +24,7 @@ collections:
   - name: events
     label: Events
     label_singular: Event
-    folder: src/events
+    folder: src/events/en
     create: true
     fields:
       - name: name
@@ -102,5 +102,5 @@ collections:
         fields:
           - label: Title
             name: title
-          - label: Description 
+          - label: Description
             name: description
