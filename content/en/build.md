@@ -1,6 +1,5 @@
 ---
-path: /build/
-title: Build
+path: /developers/
+title: Developers
 ---
-
-Build!
+Developer
