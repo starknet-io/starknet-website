@@ -1,5 +1,5 @@
 ---
-path: /what/
-title: What is starknet
+path: /what-is-starknet/
+title: What is starknet?
 ---
 a﻿sdfasdfasdfasf
