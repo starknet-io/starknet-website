@@ -102,5 +102,5 @@ collections:
         fields:
           - label: Title
             name: title
-          - label: Description 
+          - label: Description
             name: description

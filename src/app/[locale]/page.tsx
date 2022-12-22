@@ -8,7 +8,7 @@ import {
   RefinementList,
 } from "react-instantsearch-hooks-web";
 
-import { ChevronRightIcon } from "../../libs/heroicons/20/solid";
+// import { ChevronRightIcon } from "../../libs/heroicons/20/solid";
 
 const searchClient = algoliasearch(
   "EIX7SZ4KVU",

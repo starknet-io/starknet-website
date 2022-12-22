@@ -6,9 +6,9 @@ import {
   BellIcon,
   XMarkIcon,
 } from "../../../libs/heroicons/24/outline";
-import { MagnifyingGlassIcon } from "../../../libs/heroicons/20/solid";
+
 import React from "react";
-import classnames from "classnames";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
