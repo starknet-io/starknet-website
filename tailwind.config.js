@@ -25,8 +25,8 @@ const colors = {
 };
 
 const darkColors = {
-  body: "#333",
-  bodyText: "#eaeaea",
+  body: "#fff",
+  bodyText: "#444",
   focus: "#FA1777",
   navbar: "#111",
   tabsTrigger: "#444",
