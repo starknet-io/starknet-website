@@ -1,9 +1,14 @@
 pages:
   - page: /learn/
     pages:
-      - page: /page1/
-      - page: /page2/
-      - page: /what/
+      - page: /what-is-starknet/
+        pages: []
+      - page: /what-is-cairo/
+      - page: /what-are-starks/
+      - page: /layer-2/
+      - page: /zero-knowledge-proofs/
+      - page: /validity-proofs/
+      - page: /computational-integrity/
   - page: /developers/
   - page: /ecosystem/
   - page: /community/
