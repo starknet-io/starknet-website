@@ -1,6 +1,6 @@
 ---
-path: /page2/
-title: page2
+path: /Templates/
+title: Templates
 ---
 
-page2
+Templates
