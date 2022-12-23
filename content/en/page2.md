@@ -1,5 +1,5 @@
 ---
-path: /Templates/
+path: /templates/
 title: Templates
 ---
 Templates
