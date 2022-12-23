@@ -10,5 +10,10 @@ pages:
       - page: /validity-proofs/
       - page: /computational-integrity/
   - page: /developers/
+    pages:
+      - page: /Libraries-and-plugins/
+      - page: /templates/
+      - page: /starknet-playground/
   - page: /ecosystem/
+    pages: []
   - page: /community/
