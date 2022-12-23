@@ -1,6 +1,5 @@
 ---
-path: /page1/
-title: page1
+path: /starknet-playground/
+title: Starknet playground
 ---
-
-page1
+Starknet playground
