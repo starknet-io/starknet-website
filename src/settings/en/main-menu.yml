@@ -1,6 +1,4 @@
 pages:
-  - page: /developers/
-    pages: []
   - page: /learn/
     pages:
       - page: /what-is-cairo/
@@ -12,6 +10,8 @@ pages:
       - page: /validity-proofs/
       - page: /computational-integrity/
       - page: /starknet-foundation/
+  - page: /developers/
+    pages: []
   - page: /ecosystem/
     pages: []
   - page: /community/
