@@ -11,7 +11,8 @@ pages:
       - page: /computational-integrity/
       - page: /starknet-foundation/
   - page: /developers/
-    pages: []
+    pages:
+      - page: /governance/
   - page: /ecosystem/
     pages: []
   - page: /community/
