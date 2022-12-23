@@ -1,6 +1,5 @@
 ---
-path: /page3/
-title: page3
+path: /Libraries-and-plugins/
+title: Libraries & plug-ins
 ---
-
-page3
+Libraries & plug-ins
