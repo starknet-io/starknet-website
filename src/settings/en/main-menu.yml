@@ -9,8 +9,10 @@ pages:
       - page: /zero-knowledge-proofs/
       - page: /validity-proofs/
       - page: /computational-integrity/
+      - page: /starknet-foundation/
   - page: /developers/
     pages: []
   - page: /ecosystem/
     pages: []
   - page: /community/
+    pages: []
