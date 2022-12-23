@@ -4,8 +4,6 @@ title: What is starknet?
 ---
 
 
-# StarkNet’s Governance First Phase
-
 ## *StarkNet’s Governance first phase launches*
 
 We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
