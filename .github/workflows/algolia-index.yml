@@ -16,8 +16,11 @@ jobs:
           node-version: 18
           cache: yarn
       - run: touch .env
-      - run: echo ALGOLIA_APP_ID=${{ secrets.ALGOLIA_APP_ID }} >> .env
-      - run: echo ALGOLIA_SEARCH_API_KEY=${{ secrets.ALGOLIA_SEARCH_API_KEY }} >> .env
-      - run: echo ALGOLIA_WRITE_API_KEY=${{ secrets.ALGOLIA_WRITE_API_KEY }} >> .env
+      - run: echo ALGOLIA_APP_ID=$value >> .env
+        env: {value: "${{ secrets.ALGOLIA_APP_ID }}"} 
+      - run: echo ALGOLIA_SEARCH_API_KEY=$value >> .env
+        env: {value: "${{ secrets.ALGOLIA_SEARCH_API_KEY }}"} 
+      - run: echo ALGOLIA_WRITE_API_KEY=$value >> .env
+        env: {value: "${{ secrets.ALGOLIA_WRITE_API_KEY }}"} 
       - run: yarn
       - run: yarn workspace algolia-index-workspace update-index
