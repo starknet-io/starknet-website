@@ -1,5 +1,7 @@
 files:
   - source: /content/en
     translation: /content/%two_letters_code%/%original_file_name%
+  - source: /src/events/en
+    translation: /src/events/%two_letters_code%/%original_file_name%
   - source: /i18n/intl/en.json
     translation: /i18n/intl/%two_letters_code%.json

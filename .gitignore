@@ -19,6 +19,8 @@ node_modules
 
 # production
 /build
+/public/slice-data/
+/public/page-data/
 
 # misc
 .DS_Store
