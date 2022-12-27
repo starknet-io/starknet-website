@@ -20,6 +20,7 @@ export async function PageServer({ params }: Props): JSX.Element {
         <h2>{title}</h2>
         <MDXContent />
       </div>
+      <div>Content nav</div>
     </div>
   );
 }
