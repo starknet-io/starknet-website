@@ -19,5 +19,6 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-      - run: yarn
-      - run: yarn workspace algolia-index-workspace update-index
+      # - run: yarn
+      # - run: yarn workspace algolia-index-workspace update-index
+      - run: echo "${{ secrets.ALGOLIA_APP_ID }}"
