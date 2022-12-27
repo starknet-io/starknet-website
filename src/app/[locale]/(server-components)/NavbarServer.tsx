@@ -1,6 +1,6 @@
 import Navbar, { Props } from "../(components)/Navbar";
 import { useLocale, useTranslations } from "next-intl";
-import { getContentByPage } from "src/data/content-at-compiletime";
+import { getContentByPage } from "src/data/content";
 import { NextIntlClientProvider } from "next-intl/client";
 import {
   getMainMenu,

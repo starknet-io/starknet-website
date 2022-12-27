@@ -26,6 +26,6 @@
     ]
   },
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["env.d.ts", "next-env.d.ts", "src", "workspaces/{netlify-cms,storybook}", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

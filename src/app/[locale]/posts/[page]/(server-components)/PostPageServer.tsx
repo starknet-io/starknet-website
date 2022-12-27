@@ -1,4 +1,4 @@
-import { getContentByFilename } from "src/data/remote/pages";
+import { getPostByFilename } from "src/data/posts";
 
 export interface Props {
   readonly params: {
@@ -8,8 +8,8 @@ export interface Props {
 }
 
 // @ts-expect-error Server Component
-export async function PageServer({ params }: Props): JSX.Element {
-  const { title, MDXContent } = await getContentByFilename(
+export async function PostPageServer({ params }: Props): JSX.Element {
+  const { title, MDXContent } = await getPostByFilename(
     params.page,
     params.locale
   );
