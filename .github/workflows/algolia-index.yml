@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - dev
+      - ft/content-onedge
+  pull_request:
+    branches:
+      - dev
+      - ft/content-onedge
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - run: yarn
+      - run: yarn workspace algolia-index-workspace update-index
