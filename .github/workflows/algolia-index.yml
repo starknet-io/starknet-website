@@ -1,11 +1,7 @@
-name: Node.js CI
+name: update algolia index (web_posts_dev)
 
 on:
   push:
-    branches:
-      - dev
-      - ft/content-onedge
-  pull_request:
     branches:
       - dev
       - ft/content-onedge
