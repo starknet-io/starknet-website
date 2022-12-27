@@ -1,5 +1,4 @@
 import { MDXProps } from "mdx/types";
-import fs from "node:fs/promises";
 import * as mdx from "@mdx-js/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
@@ -12,31 +11,7 @@ interface Post {
   readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
-async function getFileByFilename(
-  filename: string,
-  locale: string
-): Promise<VFileCompatible> {
-  try {
-    return fs.readFile(
-      new URL(`../../_posts/${locale}/${filename}.md`, import.meta.url)
-    );
-  } catch {}
-
-  try {
-    return fs.readFile(
-      new URL(`../../_posts/en/${filename}.md`, import.meta.url)
-    );
-  } catch {}
-
-  throw new Error(`Post not found! ${filename}`);
-}
-
-export async function getPostByFilename(
-  filename: string,
-  locale: string
-): Promise<Post> {
-  let file = await getFileByFilename(filename, locale);
-
+export async function fileToPost(file: VFileCompatible): Promise<Post> {
   const code = await mdx.compile(file, {
     development: false,
     outputFormat: "function-body",
@@ -52,6 +27,40 @@ export async function getPostByFilename(
   } = await mdx.run(code, { ...runtime });
 
   return { MDXContent, path, title } as Post;
+}
+
+async function getFileByFilename(
+  filename: string,
+  locale: string
+): Promise<VFileCompatible> {
+  try {
+    const res = await fetch(
+      new URL(`posts/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!)
+    );
+
+    if (res.ok) {
+      return res.text();
+    }
+  } catch {}
+
+  try {
+    const res = await fetch(
+      new URL(`posts/en/${filename}.md`, process.env.CONTENT_BASE_URL!)
+    );
+
+    if (res.ok) {
+      return res.text();
+    }
+  } catch {}
+
+  throw new Error(`Post not found! ${filename}`);
+}
+
+export async function getPostByFilename(
+  filename: string,
+  locale: string
+): Promise<Post> {
+  return fileToPost(await getFileByFilename(filename, locale));
 }
 
 export async function getPostByPage(

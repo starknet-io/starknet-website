@@ -1,4 +1,4 @@
-import { getContentByFilename } from "src/data/content-at-runtime";
+import { getContentByFilename } from "src/data/remote/pages";
 
 export interface Props {
   readonly params: {

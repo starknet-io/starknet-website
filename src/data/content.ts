@@ -17,15 +17,19 @@ async function getFileByFilename(
   locale: string
 ): Promise<VFileCompatible> {
   try {
-    return fs.readFile(
-      new URL(`../../content/${locale}/${filename}.md`, import.meta.url)
-    );
+    const res = (await fetch(new URL(`pages/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!)))
+
+    if (res.ok) {
+      return res.text()
+    }
   } catch {}
 
   try {
-    return fs.readFile(
-      new URL(`../../content/en/${filename}.md`, import.meta.url)
-    );
+    const res = (await fetch(new URL(`pages/en/${filename}.md`, process.env.CONTENT_BASE_URL!)))
+    
+    if (res.ok) {
+      return res.text()
+    }
   } catch {}
 
   throw new Error(`Content not found! ${filename}`);
