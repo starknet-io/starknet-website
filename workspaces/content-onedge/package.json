@@ -5,8 +5,8 @@
   "scripts": {
     "build": "yarn precopy; yarn copy:posts; yarn copy:content; yarn copy:events",
     "precopy": "mkdir -p dist/posts; mkdir -p dist/pages; mkdir -p dist/events",
-    "copy:posts": "cp -r ../../_posts dist/posts/",
-    "copy:content": "cp -r ../../content dist/pages/",
-    "copy:events": "cp -r ../../src/events dist/events/"
+    "copy:posts": "cp -r ../../_posts/* dist/posts/",
+    "copy:content": "cp -r ../../content/* dist/pages/",
+    "copy:events": "cp -r ../../src/events/* dist/events/"
   }
 }
