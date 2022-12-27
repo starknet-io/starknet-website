@@ -9666,6 +9666,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"content-onedge-workspace@workspace:workspaces/content-onedge":
+  version: 0.0.0-use.local
+  resolution: "content-onedge-workspace@workspace:workspaces/content-onedge"
+  languageName: unknown
+  linkType: soft
+
 "content-type@npm:~1.0.4":
   version: 1.0.4
   resolution: "content-type@npm:1.0.4"

@@ -8,7 +8,5 @@
     "copy:posts": "cp -r ../../_posts dist/posts/",
     "copy:content": "cp -r ../../content dist/pages/",
     "copy:events": "cp -r ../../src/events dist/events/"
-  },
-  "dependencies": {
   }
 }
