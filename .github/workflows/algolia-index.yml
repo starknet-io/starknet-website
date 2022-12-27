@@ -9,20 +9,15 @@ on:
 jobs:
   update-index:
     runs-on: ubuntu-22.04
-    env:
-      ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-      ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-      ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: yarn
-      # - run: yarn
-      # - run: yarn workspace algolia-index-workspace update-index
-      - shell: bash
-        env:
-          SUPER_SECRET: ${{ secrets.ALGOLIA_APP_ID }}
-        run: |
-          echo "$SUPER_SECRET"
+      - run: touch .env
+      - run: echo ALGOLIA_APP_ID=${{ secrets.ALGOLIA_APP_ID }} >> .env
+      - run: echo ALGOLIA_SEARCH_API_KEY=${{ secrets.ALGOLIA_SEARCH_API_KEY }} >> .env
+      - run: echo ALGOLIA_WRITE_API_KEY=${{ secrets.ALGOLIA_WRITE_API_KEY }} >> .env
+      - run: yarn
+      - run: yarn workspace algolia-index-workspace update-index
