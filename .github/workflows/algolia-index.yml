@@ -25,4 +25,4 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.ALGOLIA_APP_ID }}
         run: |
-          example-command "$SUPER_SECRET"
+          echo "$SUPER_SECRET"
