@@ -7,3 +7,4 @@ location: '{"type":"Point","coordinates":[-8.3166504,38.8054702]}'
 location_name: Heden Santa Apolónia
 url: https://www.starknet.cc/
 ---
+
