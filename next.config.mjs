@@ -13,6 +13,7 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
   experimental: {
     appDir: true,
   },
@@ -24,6 +25,13 @@ const nextConfig = {
       "images.unsplash.com",
     ],
     dangerouslyAllowSVG: true,
+  },
+  async redirects() {
+    return [{
+      source: '/',
+      destination: '/en',
+      permanent: false
+    }]
   },
   webpack(config, _context) {
     config.module.rules.push({

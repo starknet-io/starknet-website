@@ -1,0 +1,13 @@
+{
+  "name": "algolia-index-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "update-index": "vite-node src/index.ts"
+  },
+  "dependencies": {
+    "algoliasearch": "^4.14.3",
+    "dotenv": "^16.0.3",
+    "vite-node": "^0.26.2"
+  }
+}

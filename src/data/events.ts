@@ -33,9 +33,9 @@ export async function getEventByFilename(
 export async function getEvents(locale: string): Promise<readonly Event[]> {
   try {
     const files = await fs.readdir(
-      path.resolve(__dirname, "../../../../../src/events", locale)
+      path.resolve(__dirname, "../../../../../_data/events", locale)
     );
-  
+
     return Promise.all(
       files.map((file) => getEventByFilename(path.basename(file, ".md"), locale))
     );
@@ -43,9 +43,9 @@ export async function getEvents(locale: string): Promise<readonly Event[]> {
   try {
     const locale = 'en'
     const files = await fs.readdir(
-      path.resolve(__dirname, "../../../../../src/events", locale)
+      path.resolve(__dirname, "../../../../../_data/events", locale)
     );
-  
+
     return Promise.all(
       files.map((file) => getEventByFilename(path.basename(file, ".md"), locale))
     );

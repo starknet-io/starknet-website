@@ -5,8 +5,8 @@ export interface EventsPage {
 
 export async function getEventsPage(locale: string): Promise<EventsPage> {
   try {
-    return (await import(`../../settings/${locale}/events-page.yml`)).default;
+    return (await import(`_data/settings/${locale}/events-page.yml`)).default;
   } catch {}
 
-  return (await import("../../settings/en/events-page.yml")).default;
+  return (await import("_data/settings/en/events-page.yml")).default;
 }

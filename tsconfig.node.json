@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts", "workspaces/algolia-index/vite-env.d.ts", "workspaces/algolia-index/src"]
+}

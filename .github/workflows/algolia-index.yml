@@ -1,0 +1,23 @@
+name: update algolia index (web_posts_dev)
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  update-index:
+    environment: "dev-algolia-index"
+    env:
+      ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+      ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+      ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - run: yarn
+      - run: yarn workspace algolia-index-workspace update-index
