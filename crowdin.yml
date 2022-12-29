@@ -1,5 +1,5 @@
 files:
-  - source: /_data/*/en
-    translation: /_data/*/%two_letters_code%/%original_file_name%
+  - source: /_data/**/en
+    translation: /_data/**/%two_letters_code%/%original_file_name%
   - source: /i18n/intl/en.json
     translation: /i18n/intl/%two_letters_code%.json
