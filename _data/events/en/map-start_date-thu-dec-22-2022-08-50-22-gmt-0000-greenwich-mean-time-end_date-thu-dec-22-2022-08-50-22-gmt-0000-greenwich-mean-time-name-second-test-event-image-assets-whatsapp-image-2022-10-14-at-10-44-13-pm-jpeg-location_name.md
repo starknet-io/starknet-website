@@ -7,3 +7,4 @@ location: '{"type":"Point","coordinates":[-7.0944214,53.1764117]}'
 location_name: Online
 url: https://forms.reform.app/starkware/starknet-basecamp-registration/itvk4e
 ---
+
