@@ -1,21 +1,34 @@
 pages:
-  - page: /learn/
+  - 
+    page: /learn/
     pages:
-      - page: /what-is-cairo/
-      - page: /what-is-starknet/
-        pages: []
-      - page: /what-are-starks/
-      - page: /layer-2/
-      - page: /zero-knowledge-proofs/
-      - page: /validity-proofs/
-      - page: /computational-integrity/
-      - page: /starknet-foundation/
-  - page: /developers/
+      - 
+        page: /what-is-cairo/
+      - 
+        page: /what-is-starknet/
+        pages: [ ]
+      - 
+        page: /what-are-starks/
+      - 
+        page: /layer-2/
+      - 
+        page: /zero-knowledge-proofs/
+      - 
+        page: /validity-proofs/
+      - 
+        page: /computational-integrity/
+      - 
+        page: /starknet-foundation/
+  - 
+    page: /developers/
     pages:
-      - page: /governance/
-      - page: /zk-rollups/
-
-  - page: /ecosystem/
-    pages: []
-  - page: /community/
-    pages: []
+      - 
+        page: /governance/
+      - 
+        page: /zk-rollups/
+  - 
+    page: /ecosystem/
+    pages: [ ]
+  - 
+    page: /community/
+    pages: [ ]
