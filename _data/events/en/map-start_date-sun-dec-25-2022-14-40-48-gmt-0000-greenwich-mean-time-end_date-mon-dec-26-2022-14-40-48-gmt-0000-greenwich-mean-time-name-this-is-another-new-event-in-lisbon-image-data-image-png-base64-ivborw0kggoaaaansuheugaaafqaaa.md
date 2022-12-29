@@ -7,3 +7,4 @@ location: '{"type":"Point","coordinates":[-3.6392212,39.9160563]}'
 location_name: Venue name
 url: https://starknet.io
 ---
+
