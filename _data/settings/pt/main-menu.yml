@@ -1,9 +1,34 @@
 pages:
-  - page: /learn/
+  - 
+    page: /learn/
     pages:
-      - page: /page1/
-      - page: /page2/
-  - page: /build/
+      - 
+        page: /what-is-cairo/
+      - 
+        page: /what-is-starknet/
+        pages: [ ]
+      - 
+        page: /what-are-starks/
+      - 
+        page: /layer-2/
+      - 
+        page: /zero-knowledge-proofs/
+      - 
+        page: /validity-proofs/
+      - 
+        page: /computational-integrity/
+      - 
+        page: /starknet-foundation/
+  - 
+    page: /developers/
     pages:
-      - page: /page3/
-      - page: /page4/
+      - 
+        page: /governance/
+      - 
+        page: /zk-rollups/
+  - 
+    page: /ecosystem/
+    pages: [ ]
+  - 
+    page: /community/
+    pages: [ ]
