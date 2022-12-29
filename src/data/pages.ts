@@ -1,12 +1,11 @@
 import { MDXProps } from "mdx/types";
-import fs from "node:fs/promises";
 import * as mdx from "@mdx-js/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import * as runtime from "react/jsx-runtime";
 import { VFileCompatible } from "@mdx-js/mdx/lib/compile";
 
-interface Content {
+interface Page {
   readonly path: string;
   readonly title: string;
   readonly MDXContent: (props: MDXProps) => JSX.Element;
@@ -26,19 +25,19 @@ async function getFileByFilename(
 
   try {
     const res = (await fetch(new URL(`pages/en/${filename}.md`, process.env.CONTENT_BASE_URL!)))
-    
+
     if (res.ok) {
       return res.text()
     }
   } catch {}
 
-  throw new Error(`Content not found! ${filename}`);
+  throw new Error(`Page not found! ${filename}`);
 }
 
-export async function getContentByFilename(
+export async function getPageByFilename(
   filename: string,
   locale: string
-): Promise<Content> {
+): Promise<Page> {
   let file = await getFileByFilename(filename, locale);
 
   const code = await mdx.compile(file, {
@@ -55,12 +54,12 @@ export async function getContentByFilename(
     title,
   } = await mdx.run(code, { ...runtime });
 
-  return { MDXContent, path, title } as Content;
+  return { MDXContent, path, title } as Page;
 }
 
-export async function getContentByPage(
+export async function getPageByPage(
   page: string,
   locale: string
-): Promise<Content> {
-  return getContentByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
+): Promise<Page> {
+  return getPageByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }

@@ -7,5 +7,5 @@
     "target": "ESNext",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", "workspaces/algolia-index"]
+  "include": ["vite.config.ts", "workspaces/algolia-index/vite-env.d.ts", "workspaces/algolia-index/src"]
 }

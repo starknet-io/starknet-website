@@ -35,7 +35,7 @@ async function fileToPost(file: VFileCompatible): Promise<Post> {
 
 try {
   const rootPath = path.resolve(__dirname, "../../..");
-  const postsPath = path.resolve(rootPath, "_posts");
+  const postsPath = path.resolve(rootPath, "_data/posts");
 
   const dotenvFiles = [
     path.resolve(rootPath, ".env.local"),

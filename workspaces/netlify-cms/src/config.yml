@@ -11,7 +11,7 @@ collections:
     label: Pages
     label_singular: Page
     identifier_field: path
-    folder: content/en
+    folder: _data/pages/en
     create: true
     fields:
       - name: path
@@ -24,7 +24,7 @@ collections:
   - name: events
     label: Events
     label_singular: Event
-    folder: src/events/en
+    folder: _data/events/en
     create: true
     fields:
       - name: name
@@ -50,7 +50,7 @@ collections:
     files:
       - label: "Main Menu"
         name: "main-menu"
-        file: "src/settings/en/main-menu.yml"
+        file: "_data/settings/en/main-menu.yml"
         fields:
           - label: Pages
             name: pages
@@ -98,7 +98,7 @@ collections:
                             display_fields: ["title"]
       - label: "Events Page"
         name: "events-page"
-        file: "src/settings/en/events-page.yml"
+        file: "_data/settings/en/events-page.yml"
         fields:
           - label: Title
             name: title

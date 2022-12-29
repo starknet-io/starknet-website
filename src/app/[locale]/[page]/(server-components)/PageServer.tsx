@@ -1,4 +1,4 @@
-import { getContentByFilename } from "src/data/content";
+import { getPageByFilename } from "src/data/pages";
 
 export interface Props {
   readonly params: {
@@ -9,7 +9,7 @@ export interface Props {
 
 // @ts-expect-error Server Component
 export async function PageServer({ params }: Props): JSX.Element {
-  const { title, MDXContent } = await getContentByFilename(
+  const { title, MDXContent } = await getPageByFilename(
     params.page,
     params.locale
   );
