@@ -1,4 +1,5 @@
 import mdx from "@next/mdx";
+import path from "node:path";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
@@ -38,6 +39,8 @@ const nextConfig = {
       test: /\.ya?ml$/,
       use: "js-yaml-loader",
     });
+
+    config.resolve.alias['next-intl/config'] = path.resolve('src/i18n.ts');
 
     return config;
   },

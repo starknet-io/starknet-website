@@ -1,5 +1,8 @@
+import "./globals.css";
+import "src/css/index.css";
+
 import { NavbarServer } from "./(server-components)/NavbarServer";
-import { NextIntlProviderServer } from "./(server-components)/NextIntlProviderServer";
+import { NextIntlServerProvider } from "next-intl/server";
 
 interface Props {
   readonly children: React.ReactNode;
@@ -11,10 +14,13 @@ export default async function LocaleLayout({
   params: { locale },
 }: Props) {
   return (
-    <NextIntlProviderServer locale={locale}>
-      <NavbarServer />
-
-      {children}
-    </NextIntlProviderServer>
+    <html lang={locale}>
+      <body>
+        <NextIntlServerProvider locale={locale}>
+          <NavbarServer />
+          {children}
+        </NextIntlServerProvider>
+      </body>
+    </html>
   );
 }

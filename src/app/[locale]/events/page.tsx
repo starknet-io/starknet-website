@@ -1,9 +1,30 @@
-import { EventsPageServer } from "./(server-components)/EventsPageServer";
+import { useLocale } from "next-intl";
+import { getEventsPage } from "src/data/settings/events-page";
+import { getEvents } from "src/data/events";
+import { use } from "react";
 
-export default function EventsPage() {
+export default function EventsPage(): JSX.Element {
+  const locale = useLocale();
+  const { title, description } = use(getEventsPage(locale));
+  const events = use(getEvents(locale));
+
   return (
-    <>
-      <EventsPageServer />
-    </>
+    <div className="mx-auto  max-w-7xl px-2 sm:px-4 lg:px-8 pt-7">
+      <div className="prose">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+
+      <div className="grid grid-cols-1  gap-4  sm:grid-cols-1 sm:gap-6 lg:grid-cols-1 xl:gap-8 pt-6">
+        {events.map((event) => (
+          <div key={event.name} className="relative prose">
+            <div className="group p-2 aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+              <h3>{event.name}</h3>
+              <h4>{event.location_name}</h4>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

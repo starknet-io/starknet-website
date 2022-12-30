@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "src/libs/heroicons/24/outline";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import type { MainMenu, Page } from "src/data/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -16,6 +16,7 @@ export interface Props {
 
 export default function Navbar({ mainMenu }: Props) {
   const locale = useLocale();
+  const t = useTranslations()
 
   return (
     <Disclosure as="nav" className="bg-navbar">
@@ -87,7 +88,7 @@ export default function Navbar({ mainMenu }: Props) {
                 </div>
               </div>
               <div className="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
-                <div className="w-full max-w-lg lg:max-w-xs">search</div>
+                <div className="w-full max-w-lg lg:max-w-xs">{t('search')}</div>
               </div>
               <div className="flex lg:hidden">
                 {/* Mobile menu button */}

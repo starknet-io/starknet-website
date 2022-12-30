@@ -1,7 +1,7 @@
-import { createIntlMiddleware } from "next-intl/server";
-import i18nConfig from "i18n/config.json";
+import {createIntlMiddleware} from 'next-intl/server';
 
-export default createIntlMiddleware({
-  locales: i18nConfig.map((c) => c.code),
-  defaultLocale: "en",
-});
+export default createIntlMiddleware();
+
+export const config = {
+  matcher: '/'
+};
