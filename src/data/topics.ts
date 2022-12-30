@@ -1,20 +1,15 @@
-import { MDXProps } from "mdx/types";
 import * as mdx from "@mdx-js/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import * as runtime from "react/jsx-runtime";
 import { VFileCompatible } from "@mdx-js/mdx/lib/compile";
 
-interface Post {
+interface Topic {
   readonly id: string;
-  readonly title: string;
-  readonly category: string;
-  readonly topic: string;
-  readonly short_desc: string;
-  readonly MDXContent: (props: MDXProps) => JSX.Element;
+  readonly name: string;
 }
 
-export async function fileToPost(file: VFileCompatible): Promise<Post> {
+export async function fileToTopic(file: VFileCompatible): Promise<Topic> {
   const code = await mdx.compile(file, {
     development: false,
     outputFormat: "function-body",
@@ -24,15 +19,11 @@ export async function fileToPost(file: VFileCompatible): Promise<Post> {
   });
 
   const {
-    default: MDXContent,
     id,
-    title,
-    category,
-    topic,
-    short_desc,
+    name,
   } = await mdx.run(code, { ...runtime });
 
-  return { MDXContent, id, title, category, topic, short_desc } satisfies Post;
+  return { id, name } satisfies Topic;
 }
 
 async function getFileByFilename(
@@ -41,7 +32,7 @@ async function getFileByFilename(
 ): Promise<VFileCompatible> {
   try {
     const res = await fetch(
-      new URL(`posts/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!),
+      new URL(`topics/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!),
     );
 
     if (res.ok) {
@@ -51,7 +42,7 @@ async function getFileByFilename(
 
   try {
     const res = await fetch(
-      new URL(`posts/en/${filename}.md`, process.env.CONTENT_BASE_URL!),
+      new URL(`topics/en/${filename}.md`, process.env.CONTENT_BASE_URL!),
     );
 
     if (res.ok) {
@@ -59,12 +50,12 @@ async function getFileByFilename(
     }
   } catch {}
 
-  throw new Error(`Post not found! ${filename}`);
+  throw new Error(`Topic not found! ${filename}`);
 }
 
-export async function getPostByFilename(
+export async function getTopicByFilename(
   filename: string,
   locale: string,
-): Promise<Post> {
-  return fileToPost(await getFileByFilename(filename, locale));
+): Promise<Topic> {
+  return fileToTopic(await getFileByFilename(filename, locale));
 }

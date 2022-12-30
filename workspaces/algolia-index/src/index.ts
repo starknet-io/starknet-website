@@ -56,7 +56,7 @@ try {
       objects.push({
         ...(await fileToPost(file)),
         locale,
-        filepath: path.join("_posts", locale, filename),
+        filepath: path.join("_data/posts", locale, filename),
       });
     }
   }
