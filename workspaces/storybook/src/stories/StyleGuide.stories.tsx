@@ -8,14 +8,14 @@ export default {
 export const Font = () => (
   <Wrapper>
     <div className='prose'>
-      <h1>Header 1: {`<h1>`}</h1>
-      <h2>Header 2: {`<h2>`}</h2>
-      <h3>Header 3: {`<h3>`}</h3>
-      <h4>Header 4: {`<h4>`}</h4>
-      <h5>Header 5: {`<h5>`}</h5>
-      <h6>Header 6: {`<h6>`}</h6>
-      <code>{`<code>`}</code>
-      <blockquote>{`<blockquote>`}</blockquote>
+      <h1>Header 1: {"<h1>"}</h1>
+      <h2>Header 2: {"<h2>"}</h2>
+      <h3>Header 3: {"<h3>"}</h3>
+      <h4>Header 4: {"<h4>"}</h4>
+      <h5>Header 5: {"<h5>"}</h5>
+      <h6>Header 6: {"<h6>"}</h6>
+      <code>{"<code>"}</code>
+      <blockquote>{"<blockquote>"}</blockquote>
       <div className='text-xsmall'>.text-xsmall</div>
       <div className='text-small'>.text-small</div>
       <div className='text-base'>.text-base</div>
@@ -36,16 +36,34 @@ export const Colors = () => (
       <p className='py-2 px-4 text-tabsTrigger'>.text-tabsTrigger</p>
       <p className='py-2 px-4 text-primary'>.text-primary</p>
       <p className='py-2 px-4 text-buttonPrimary'>.text-buttonPrimary</p>
-      <p className='py-2 px-4 bg-gray-500 text-buttonPrimaryText'>.text-buttonPrimaryText</p>
-      <p className='py-2 px-4 text-buttonPrimaryHover'>.text-buttonPrimaryHover</p>
+      <p className='py-2 px-4 bg-gray-500 text-buttonPrimaryText'>
+        .text-buttonPrimaryText
+      </p>
+      <p className='py-2 px-4 text-buttonPrimaryHover'>
+        .text-buttonPrimaryHover
+      </p>
       <p className='py-2 px-4 text-buttonDefault'>.text-buttonDefault</p>
-      <p className='py-2 px-4 text-buttonDefaultText'>.text-buttonDefaultText</p>
-      <p className='py-2 px-4 text-buttonDefaultHover'>.text-buttonDefaultHover</p>
-      <p className='py-2 px-4 text-buttonDestructive'>.text-buttonDestructive</p>
-      <p className='py-2 px-4 bg-gray-500 text-buttonDestructiveText'>.text-buttonDestructiveText</p>
-      <p className='py-2 px-4 text-buttonDestructiveHover'>.text-buttonDestructiveHover</p>
-      <p className='py-2 px-4 bg-gray-500 text-selectButton'>.text-selectButton</p>
-      <p className='py-2 px-4 bg-gray-500 text-selectButtonHover'>.text-selectButtonHover</p>
+      <p className='py-2 px-4 text-buttonDefaultText'>
+        .text-buttonDefaultText
+      </p>
+      <p className='py-2 px-4 text-buttonDefaultHover'>
+        .text-buttonDefaultHover
+      </p>
+      <p className='py-2 px-4 text-buttonDestructive'>
+        .text-buttonDestructive
+      </p>
+      <p className='py-2 px-4 bg-gray-500 text-buttonDestructiveText'>
+        .text-buttonDestructiveText
+      </p>
+      <p className='py-2 px-4 text-buttonDestructiveHover'>
+        .text-buttonDestructiveHover
+      </p>
+      <p className='py-2 px-4 bg-gray-500 text-selectButton'>
+        .text-selectButton
+      </p>
+      <p className='py-2 px-4 bg-gray-500 text-selectButtonHover'>
+        .text-selectButtonHover
+      </p>
       <p className='py-2 px-4 text-toolTip'>.text-toolTip</p>
       <p className='py-2 px-4 text-toolTipText'>.text-toolTipText</p>
     </div>

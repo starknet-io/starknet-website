@@ -11,7 +11,7 @@ export interface Props {
 export async function PageServer({ params }: Props): JSX.Element {
   const { title, MDXContent } = await getPageByFilename(
     params.page,
-    params.locale
+    params.locale,
   );
 
   return (

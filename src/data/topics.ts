@@ -18,10 +18,7 @@ export async function fileToTopic(file: VFileCompatible): Promise<Topic> {
     rehypePlugins: [],
   });
 
-  const {
-    id,
-    name,
-  } = await mdx.run(code, { ...runtime });
+  const { id, name } = await mdx.run(code, { ...runtime });
 
   return { id, name } satisfies Topic;
 }

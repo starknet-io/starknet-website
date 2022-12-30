@@ -11,7 +11,7 @@ export interface Props {
 export async function PostPageServer({ params }: Props): JSX.Element {
   const { title, MDXContent } = await getPostByFilename(
     params.id,
-    params.locale
+    params.locale,
   );
 
   return (

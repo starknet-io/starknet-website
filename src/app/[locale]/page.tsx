@@ -12,7 +12,7 @@ import {
 
 const searchClient = algoliasearch(
   "EIX7SZ4KVU",
-  "022134985272ac0a499480996693a6c4"
+  "022134985272ac0a499480996693a6c4",
 );
 
 function Hit({

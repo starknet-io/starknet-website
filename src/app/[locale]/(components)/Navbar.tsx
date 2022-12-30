@@ -1,16 +1,11 @@
 "use client";
 
 import { Disclosure, Menu, Transition } from "src/libs/headlessui";
-import {
-  Bars3Icon,
-  BellIcon,
-  XMarkIcon,
-} from "src/libs/heroicons/24/outline";
+import { Bars3Icon, XMarkIcon } from "src/libs/heroicons/24/outline";
 import React from "react";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import type { MainMenu, Page } from "src/data/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -21,7 +16,6 @@ export interface Props {
 
 export default function Navbar({ mainMenu }: Props) {
   const locale = useLocale();
-  const t = useTranslations();
 
   return (
     <Disclosure as="nav" className="bg-navbar">

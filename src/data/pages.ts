@@ -13,21 +13,25 @@ interface Page {
 
 async function getFileByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<VFileCompatible> {
   try {
-    const res = (await fetch(new URL(`pages/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!)))
+    const res = await fetch(
+      new URL(`pages/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!),
+    );
 
     if (res.ok) {
-      return res.text()
+      return res.text();
     }
   } catch {}
 
   try {
-    const res = (await fetch(new URL(`pages/en/${filename}.md`, process.env.CONTENT_BASE_URL!)))
+    const res = await fetch(
+      new URL(`pages/en/${filename}.md`, process.env.CONTENT_BASE_URL!),
+    );
 
     if (res.ok) {
-      return res.text()
+      return res.text();
     }
   } catch {}
 
@@ -36,7 +40,7 @@ async function getFileByFilename(
 
 export async function getPageByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<Page> {
   let file = await getFileByFilename(filename, locale);
 
@@ -59,7 +63,7 @@ export async function getPageByFilename(
 
 export async function getPageByPage(
   page: string,
-  locale: string
+  locale: string,
 ): Promise<Page> {
   return getPageByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }

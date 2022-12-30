@@ -17,7 +17,7 @@ function mdxToEvent(data: any): Event {
 
 export async function getEventByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<Event> {
   try {
     return mdxToEvent(await import(`../events/${locale}/${filename}.md`));
@@ -33,21 +33,25 @@ export async function getEventByFilename(
 export async function getEvents(locale: string): Promise<readonly Event[]> {
   try {
     const files = await fs.readdir(
-      path.resolve(__dirname, "../../../../../_data/events", locale)
+      path.resolve(__dirname, "../../../../../_data/events", locale),
     );
 
     return Promise.all(
-      files.map((file) => getEventByFilename(path.basename(file, ".md"), locale))
+      files.map((file) =>
+        getEventByFilename(path.basename(file, ".md"), locale),
+      ),
     );
   } catch {}
   try {
-    const locale = 'en'
+    const locale = "en";
     const files = await fs.readdir(
-      path.resolve(__dirname, "../../../../../_data/events", locale)
+      path.resolve(__dirname, "../../../../../_data/events", locale),
     );
 
     return Promise.all(
-      files.map((file) => getEventByFilename(path.basename(file, ".md"), locale))
+      files.map((file) =>
+        getEventByFilename(path.basename(file, ".md"), locale),
+      ),
     );
   } catch {}
 

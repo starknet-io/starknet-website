@@ -18,10 +18,7 @@ export async function fileToCategory(file: VFileCompatible): Promise<Category> {
     rehypePlugins: [],
   });
 
-  const {
-    id,
-    name,
-  } = await mdx.run(code, { ...runtime });
+  const { id, name } = await mdx.run(code, { ...runtime });
 
   return { id, name } satisfies Category;
 }
@@ -32,7 +29,10 @@ async function getFileByFilename(
 ): Promise<VFileCompatible> {
   try {
     const res = await fetch(
-      new URL(`categories/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!),
+      new URL(
+        `categories/${locale}/${filename}.md`,
+        process.env.CONTENT_BASE_URL!,
+      ),
     );
 
     if (res.ok) {

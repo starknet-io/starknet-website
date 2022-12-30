@@ -2,6 +2,8 @@ name: update algolia index (web_posts_dev)
 
 on:
   push:
+    paths:
+      - "_data/**"
     branches:
       - dev
 
