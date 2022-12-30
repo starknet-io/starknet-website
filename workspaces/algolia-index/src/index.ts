@@ -9,9 +9,11 @@ import * as runtime from "react/jsx-runtime";
 import { VFileCompatible } from "@mdx-js/mdx/lib/compile";
 
 interface Post {
-  readonly path: string;
+  readonly id: string;
   readonly title: string;
-  // readonly MDXContent: (props: MDXProps) => JSX.Element;
+  readonly category: string;
+  readonly topic: string;
+  readonly short_desc: string;
 }
 
 async function fileToPost(file: VFileCompatible): Promise<Post> {
@@ -23,14 +25,11 @@ async function fileToPost(file: VFileCompatible): Promise<Post> {
     rehypePlugins: [],
   });
 
-  const {
-    // default: MDXContent,
-    path,
-    title,
-  } = await mdx.run(code, { ...runtime });
+  const { id, title, category, topic, short_desc } = await mdx.run(code, {
+    ...runtime,
+  });
 
-  // return { MDXContent, path, title } as Post;
-  return { path, title } as Post;
+  return { id, title, category, topic, short_desc } satisfies Post;
 }
 
 try {
@@ -57,14 +56,14 @@ try {
       objects.push({
         ...(await fileToPost(file)),
         locale,
-        filepath: path.join('_posts', locale, filename)
+        filepath: path.join("_posts", locale, filename),
       });
     }
   }
 
   const client = algoliasearch(
     process.env.ALGOLIA_APP_ID!,
-    process.env.ALGOLIA_WRITE_API_KEY!
+    process.env.ALGOLIA_WRITE_API_KEY!,
   );
   const index = client.initIndex(indexName);
 
