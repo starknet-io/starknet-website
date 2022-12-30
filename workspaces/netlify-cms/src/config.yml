@@ -21,6 +21,62 @@ collections:
       - name: body
         label: Body
         widget: markdown
+  - name: posts
+    label: Posts
+    label_singular: Post
+    identifier_field: id
+    folder: _data/posts/en
+    create: true
+    fields:
+      - name: id
+        label: id
+      - name: title
+        label: Title
+      - name: image
+        label: Image
+        widget: file
+      - name: category
+        label: Category
+        widget: relation
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "id"
+        display_fields: ["name"]
+      - name: topic
+        label: Topic
+        widget: relation
+        collection: "topics"
+        search_fields: ["name"]
+        value_field: "id"
+        display_fields: ["name"]
+      - name: short_desc
+        label: Short Description
+        widget: text
+      - name: body
+        label: Body
+        widget: markdown
+  - name: topics
+    label: Topics
+    label_singular: Topic
+    identifier_field: id
+    folder: _data/topics/en
+    create: true
+    fields:
+      - name: id
+        label: id
+      - name: name
+        label: Name
+  - name: categories
+    label: Categories
+    label_singular: Category
+    identifier_field: id
+    folder: _data/categories/en
+    create: true
+    fields:
+      - name: id
+        label: id
+      - name: name
+        label: Name
   - name: events
     label: Events
     label_singular: Event
