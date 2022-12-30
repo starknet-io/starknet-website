@@ -3,14 +3,14 @@ import { getPostByFilename } from "src/data/posts";
 export interface Props {
   readonly params: {
     readonly locale: string;
-    readonly page: string;
+    readonly id: string;
   };
 }
 
 // @ts-expect-error Server Component
 export async function PostPageServer({ params }: Props): JSX.Element {
   const { title, MDXContent } = await getPostByFilename(
-    params.page,
+    params.id,
     params.locale
   );
 

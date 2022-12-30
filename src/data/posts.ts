@@ -6,8 +6,11 @@ import * as runtime from "react/jsx-runtime";
 import { VFileCompatible } from "@mdx-js/mdx/lib/compile";
 
 interface Post {
-  readonly path: string;
+  readonly id: string;
   readonly title: string;
+  readonly category: string;
+  readonly topic: string;
+  readonly short_desc: string;
   readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
@@ -22,20 +25,23 @@ export async function fileToPost(file: VFileCompatible): Promise<Post> {
 
   const {
     default: MDXContent,
-    path,
+    id,
     title,
+    category,
+    topic,
+    short_desc,
   } = await mdx.run(code, { ...runtime });
 
-  return { MDXContent, path, title } as Post;
+  return { MDXContent, id, title, category, topic, short_desc } satisfies Post;
 }
 
 async function getFileByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<VFileCompatible> {
   try {
     const res = await fetch(
-      new URL(`posts/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!)
+      new URL(`posts/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!),
     );
 
     if (res.ok) {
@@ -45,7 +51,7 @@ async function getFileByFilename(
 
   try {
     const res = await fetch(
-      new URL(`posts/en/${filename}.md`, process.env.CONTENT_BASE_URL!)
+      new URL(`posts/en/${filename}.md`, process.env.CONTENT_BASE_URL!),
     );
 
     if (res.ok) {
@@ -58,14 +64,7 @@ async function getFileByFilename(
 
 export async function getPostByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<Post> {
   return fileToPost(await getFileByFilename(filename, locale));
-}
-
-export async function getPostByPage(
-  page: string,
-  locale: string
-): Promise<Post> {
-  return getPostByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }
