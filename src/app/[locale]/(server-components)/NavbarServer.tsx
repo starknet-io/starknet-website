@@ -9,14 +9,12 @@ export function NavbarServer(): JSX.Element {
   const t = useTranslations();
   const locale = useLocale();
   const mainMenu = use(
-    (async () => {
-      return transformMainMenu(await getMainMenu(locale), async (page) => {
-        return {
-          ...page,
-          title: (await getPageByPage(page.page, locale)).title,
-        } as Props["mainMenu"]["pages"][number];
-      });
-    })()
+    transformMainMenu(use(getMainMenu(locale)), async (page) => {
+      return {
+        ...page,
+        title: (await getPageByPage(page.page, locale)).title,
+      } as Props["mainMenu"]["pages"][number];
+    })
   );
 
   return (
