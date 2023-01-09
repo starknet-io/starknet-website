@@ -1,4 +1,4 @@
-import { defaultLocale } from "./i18n";
+import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getMDXModule } from "./utils";
 
 interface Category {

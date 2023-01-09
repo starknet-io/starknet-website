@@ -1,18 +1,6 @@
-import { AbstractIntlMessages } from "next-intl";
-import { NextIntlRuntimeConfig } from "next-intl/dist/server/NextIntlConfig";
-import { NextIntlConfig } from "next-intl";
+import type { NextIntlConfig } from "next-intl";
 import i18nConfig from "_data/i18n/config.json";
-
-export async function getMessages(
-  runtimeConfig: NextIntlRuntimeConfig,
-): Promise<AbstractIntlMessages> {
-  try {
-    return (await import(`_data/i18n/intl/${runtimeConfig.locale}.json`))
-      .default;
-  } catch {}
-
-  return (await import("_data/i18n/intl/en.json")).default;
-}
+import { getMessages } from "./intl";
 
 export interface LocaleConfig {
   readonly code: string;
@@ -29,7 +17,9 @@ export const defaultLocale = "en";
 export const config: NextIntlConfig = {
   locales: i18nConfig.map((c) => c.code),
   defaultLocale,
-  getMessages,
+  getMessages({ locale }) {
+    return getMessages(locale);
+  },
 };
 
 export default config;

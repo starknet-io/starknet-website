@@ -40,7 +40,7 @@ const nextConfig = {
       use: "js-yaml-loader",
     });
 
-    config.resolve.alias['next-intl/config'] = path.resolve('src/data/i18n.ts');
+    config.resolve.alias['next-intl/config'] = path.resolve('src/data/i18n/config.ts');
 
     return config;
   },

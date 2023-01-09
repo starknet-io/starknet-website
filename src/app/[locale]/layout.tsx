@@ -9,10 +9,7 @@ interface Props {
   readonly params: { readonly locale: string };
 }
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: Props) {
+export default function LocaleLayout({ children, params: { locale } }: Props) {
   return (
     <html lang={locale}>
       <body>

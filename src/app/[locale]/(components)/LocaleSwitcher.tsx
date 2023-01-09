@@ -6,7 +6,7 @@ import { ChevronDownIcon } from "src/libs/heroicons/20/solid";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { locales } from "src/data/i18n";
+import { locales } from "src/data/i18n/config";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();

@@ -1,5 +1,5 @@
 import { MDXProps } from "mdx/types";
-import { defaultLocale } from "./i18n";
+import { defaultLocale } from "./i18n/config";
 import { getFirst, getMDXModule } from "./utils";
 
 interface Post {
