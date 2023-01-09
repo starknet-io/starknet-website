@@ -12,7 +12,7 @@ export default function YoutubePlaylistsPage(): JSX.Element {
       part: ["snippet", "contentDetails"],
       channelId: "UCnDWguR8mE2oDBsjhQkgbvg",
       maxResults: 20,
-    })
+    }),
   );
 
   return (

@@ -39,7 +39,7 @@ export default function LocaleSwitcher() {
                   <Link
                     className={classnames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
+                      "block px-4 py-2 text-sm",
                     )}
                     href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}
                   >

@@ -1,16 +1,17 @@
 import { AbstractIntlMessages } from "next-intl";
 import { NextIntlRuntimeConfig } from "next-intl/dist/server/NextIntlConfig";
 import { NextIntlConfig } from "next-intl";
-import i18nConfig from "i18n/config.json";
+import i18nConfig from "_data/i18n/config.json";
 
 export async function getMessages(
-  runtimeConfig: NextIntlRuntimeConfig
+  runtimeConfig: NextIntlRuntimeConfig,
 ): Promise<AbstractIntlMessages> {
   try {
-    return (await import(`i18n/intl/${runtimeConfig.locale}.json`)).default;
+    return (await import(`_data/i18n/intl/${runtimeConfig.locale}.json`))
+      .default;
   } catch {}
 
-  return (await import("i18n/intl/en.json")).default;
+  return (await import("_data/i18n/intl/en.json")).default;
 }
 
 export interface LocaleConfig {
@@ -22,12 +23,13 @@ export interface LocaleConfig {
   readonly dateFormat: string;
 }
 
-export const locales: readonly LocaleConfig[] = i18nConfig
+export const locales: readonly LocaleConfig[] = i18nConfig;
+export const defaultLocale = "en";
 
 export const config: NextIntlConfig = {
   locales: i18nConfig.map((c) => c.code),
-  defaultLocale: "en",
+  defaultLocale,
   getMessages,
 };
 
-export default config
+export default config;

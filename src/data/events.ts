@@ -1,5 +1,5 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+import { defaultLocale } from "./i18n";
+import { getFirst, getJSON, getMDXModule } from "./utils";
 
 export interface Event {
   readonly name: string;
@@ -11,8 +11,17 @@ export interface Event {
   readonly url: string;
 }
 
-function mdxToEvent(data: any): Event {
-  return data;
+export async function getEvents(locale: string): Promise<readonly Event[]> {
+  try {
+    return await getFirst(
+      () => getJSON(`_dynamic/events/${locale}/.json`),
+      () => getJSON(`_dynamic/events/${defaultLocale}/.json`),
+    );
+  } catch (cause) {
+    throw new Error("getEvents failed!", {
+      cause,
+    });
+  }
 }
 
 export async function getEventByFilename(
@@ -20,40 +29,13 @@ export async function getEventByFilename(
   locale: string,
 ): Promise<Event> {
   try {
-    return mdxToEvent(await import(`../events/${locale}/${filename}.md`));
-  } catch {}
-
-  try {
-    return mdxToEvent(await import(`../events/en/${filename}.md`));
-  } catch {}
-
-  throw new Error(`Event not found! ${filename}`);
-}
-
-export async function getEvents(locale: string): Promise<readonly Event[]> {
-  try {
-    const files = await fs.readdir(
-      path.resolve(__dirname, "../../../../../_data/events", locale),
+    return await getFirst(
+      () => getMDXModule(`events/${locale}/${filename}.md`),
+      () => getMDXModule(`events/${defaultLocale}/${filename}.md`),
     );
-
-    return Promise.all(
-      files.map((file) =>
-        getEventByFilename(path.basename(file, ".md"), locale),
-      ),
-    );
-  } catch {}
-  try {
-    const locale = "en";
-    const files = await fs.readdir(
-      path.resolve(__dirname, "../../../../../_data/events", locale),
-    );
-
-    return Promise.all(
-      files.map((file) =>
-        getEventByFilename(path.basename(file, ".md"), locale),
-      ),
-    );
-  } catch {}
-
-  throw new Error("Events not found!");
+  } catch (cause) {
+    throw new Error(`Event not found! ${filename}`, {
+      cause,
+    });
+  }
 }

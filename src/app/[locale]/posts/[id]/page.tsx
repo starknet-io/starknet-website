@@ -10,7 +10,7 @@ export interface Props {
 
 export default function Page({ params }: Props): JSX.Element {
   const { title, MDXContent } = use(
-    getPostByFilename(params.id, params.locale)
+    getPostByFilename(params.id, params.locale),
   );
 
   return (
