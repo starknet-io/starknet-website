@@ -1,9 +1,24 @@
 import { defaultLocale } from "./i18n";
-import { getFirst, getMDXModule } from "./utils";
+import { getFirst, getJSON, getMDXModule } from "./utils";
 
 interface Category {
   readonly id: string;
   readonly name: string;
+}
+
+export async function getCategories(
+  locale: string,
+): Promise<readonly Category[]> {
+  try {
+    return await getFirst(
+      () => getJSON(`_dynamic/categories/${locale}/.json`),
+      () => getJSON(`_dynamic/categories/${defaultLocale}/.json`),
+    );
+  } catch (cause) {
+    throw new Error("getCategories failed!", {
+      cause,
+    });
+  }
 }
 
 export async function getCategoryByFilename(

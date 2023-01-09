@@ -8,24 +8,26 @@ import { defaultLocale, locales } from "./locales";
 import { mdx } from "./mdx";
 import { transformMainMenu } from "./main-menu";
 
-// events
-await fs.mkdir("_data/_dynamic/events", { recursive: true });
+// categories, events, topics
+for (const datatype of ["categories", "events", "topics"]) {
+  await fs.mkdir(`_data/_dynamic/${datatype}`, { recursive: true });
 
-const filenames = await fs.readdir(`_data/events/${defaultLocale}`);
+  const filenames = await fs.readdir(`_data/${datatype}/${defaultLocale}`);
 
-for (const locale of locales) {
-  const events: any[] = [];
+  for (const locale of locales) {
+    const data: any[] = [];
 
-  for (const filename of filenames) {
-    events.push(
-      await getFirst(
-        () => mdx(`_data/events/${locale.code}/${filename}`),
-        () => mdx(`_data/events/${defaultLocale}/${filename}`),
-      ),
-    );
+    for (const filename of filenames) {
+      data.push(
+        await getFirst(
+          () => mdx(`_data/${datatype}/${locale.code}/${filename}`),
+          () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`),
+        ),
+      );
+    }
+
+    await write(`_data/_dynamic/${datatype}/${locale.code}.json`, data);
   }
-
-  await write(`_data/_dynamic/events/${locale.code}.json`, events);
 }
 
 // main menu
@@ -41,7 +43,7 @@ for (const locale of locales) {
       const filename = page.page.replace(/(^\/|\/$)/g, "");
 
       const data = await getFirst(
-        () => mdx(`_data/pages/${locale}/${filename}.md`),
+        () => mdx(`_data/pages/${locale.code}/${filename}.md`),
         () => mdx(`_data/pages/${defaultLocale}/${filename}.md`),
       );
 
