@@ -1,73 +1,73 @@
-import { defineStyle, defineStyleConfig } from '@chakra-ui/react';
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
 const engineering = defineStyle({
-  background: '#ff0000',
-  color: 'white',
+  background: "#ff0000",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 const community_calls = defineStyle({
-  background: 'orange.900',
-  color: 'white',
+  background: "orange.900",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 const stark_math = defineStyle({
-  background: 'orange.400',
-  color: 'white',
+  background: "orange.400",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 const stark_at_home = defineStyle({
-  background: 'orange.400',
-  color: 'white',
+  background: "orange.400",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 const governance = defineStyle({
-  background: 'orange.400',
-  color: 'white',
+  background: "orange.400",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 const community_and_events = defineStyle({
-  background: 'orange.400',
-  color: 'white',
+  background: "orange.400",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 const stark_struct = defineStyle({
-  background: 'orange.400',
-  color: 'white',
+  background: "orange.400",
+  color: "white",
 
   // let's also provide dark mode alternatives
   _dark: {
-    background: 'orange.300',
-    color: 'orange.800',
+    background: "orange.300",
+    color: "orange.800",
   },
 });
 

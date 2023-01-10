@@ -96,7 +96,7 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
         </defs>
       </svg>
     );
-  } else if (colorMode === "dark") {
+  } else {
     return (
       <svg
         viewBox="0 0 179 43"

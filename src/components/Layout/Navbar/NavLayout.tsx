@@ -171,7 +171,7 @@ export const Logo = (props: HTMLChakraProps<"svg">) => {
         </defs>
       </svg>
     );
-  } else if (colorMode === "dark") {
+  } else {
     return (
       <svg
         viewBox="0 0 179 43"

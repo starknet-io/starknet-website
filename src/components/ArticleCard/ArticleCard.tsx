@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Avatar,
   Badge,
@@ -8,29 +8,29 @@ import {
   Link,
   Stack,
   useColorModeValue as mode,
-} from '@chakra-ui/react';
-import { Heading } from '../../components/Typography/Heading';
-import { Text } from '../../components/Typography/Text';
+} from "@chakra-ui/react";
+import { Heading } from "../../components/Typography/Heading";
+import { Text } from "../../components/Typography/Text";
 
 type Props = {
-  id: string;
-  img: string;
-  imgAlt: string;
-  category:
-    | 'engineering'
-    | 'community_calls'
-    | 'stark_struct'
-    | 'stark_math'
-    | 'stark_at_home'
-    | 'governance'
-    | 'community_and_events';
-  title: string;
-  excerpt: string;
-  avatarUrl: string;
-  author: string;
-  publishedAt: string;
-  href: string;
-  variant: 'default' | 'lg';
+  id?: string;
+  img?: string;
+  imgAlt?: string;
+  category?:
+    | "engineering"
+    | "community_calls"
+    | "stark_struct"
+    | "stark_math"
+    | "stark_at_home"
+    | "governance"
+    | "community_and_events";
+  title?: string;
+  excerpt?: string;
+  avatarUrl?: string;
+  author?: string;
+  publishedAt?: string;
+  href?: string;
+  variant?: "default" | "lg";
 };
 
 export const ArticleCard = ({
@@ -46,23 +46,18 @@ export const ArticleCard = ({
   href,
 }: Props) => {
   return (
-    <Link
-      href={href}
-      key={id}
-      _hover={{ textDecor: 'none' }}
-      role="group"
-    >
+    <Link href={href} key={id} _hover={{ textDecor: "none" }} role="group">
       <Box
         p="0"
         bg="bg-surface"
-        boxShadow={mode('lg', 'lg-dark')}
-        _groupHover={{ boxShadow: mode('xl', 'xl-dark') }}
+        boxShadow={mode("lg", "lg-dark")}
+        _groupHover={{ boxShadow: mode("xl", "xl-dark") }}
         transition="all 0.2s"
         height="full"
         borderRadius={8}
       >
         <Stack
-          spacing={{ base: '8', lg: '16' }}
+          spacing={{ base: "8", lg: "16" }}
           justify="space-between"
           height="full"
         >
