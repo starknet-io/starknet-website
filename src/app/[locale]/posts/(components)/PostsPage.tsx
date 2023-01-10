@@ -1,5 +1,7 @@
 "use client";
 
+import { SimpleGrid } from "@chakra-ui/react";
+import { ArticleCard } from "@ui/ArticleCard/ArticleCard";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
@@ -10,6 +12,7 @@ import {
   RefinementList,
   Pagination,
   Configure,
+  HitsPerPage,
 } from "src/libs/react-instantsearch-hooks-web";
 
 export interface AutoProps {
@@ -37,10 +40,18 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
         />
-        <SearchBox />
+        {/* <SearchBox /> */}
         <RefinementList attribute="brand" />
-        <Hits hitComponent={Hit} />
-        <Pagination />
+
+        <SimpleGrid
+          columns={{ base: 1, md: 2, lg: 2, xl: 2 }}
+          rowGap={{ base: "8", md: "12" }}
+          columnGap="8"
+          pt={8}
+        >
+          <Hits hitComponent={Hit} />
+        </SimpleGrid>
+        {/* <Pagination /> */}
       </InstantSearch>
     </div>
   );
@@ -48,10 +59,13 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
 
 function Hit({ hit }: any) {
   return (
-    <article>
-      <h2>
-        <Highlight attribute="title" hit={hit} />
-      </h2>
-    </article>
+    <ArticleCard
+      publishedAt="May 20 · 5 min read"
+      excerpt="Cairo is a new open source design system for Figma and Sketch. It’s a collection of components, design patterns, and resources that you can use to design, prototype, and build products."
+      category={hit.category}
+      img="https://www.billboard.com/wp-content/uploads/media/st-vincent-escape-room-2017-billboard-1548.jpg?w=942&h=623&crop=1"
+      title={hit.title}
+      id={hit.id}
+    />
   );
 }
