@@ -13,19 +13,19 @@ import { Heading } from "../../components/Typography/Heading";
 import { Text } from "../../components/Typography/Text";
 
 type Props = {
-  id?: string;
+  id?: string | number;
   img?: string;
   imgAlt?: string;
   category?:
     | "engineering"
-    | "community_calls"
+    | "community-calls"
     | "stark_struct"
     | "stark_math"
     | "stark_at_home"
     | "governance"
     | "community_and_events";
-  title?: string;
-  excerpt?: string;
+  title?: any;
+  excerpt?: any;
   avatarUrl?: string;
   author?: string;
   publishedAt?: string;
