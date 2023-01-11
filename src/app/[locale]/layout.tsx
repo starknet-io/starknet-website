@@ -1,6 +1,5 @@
-import "./globals.css";
-import "src/css/index.css";
-
+import { PageContainer } from "./(components)/PageContainer";
+import { FooterServer } from "./(server-components)/FooterServer";
 import { NavbarServer } from "./(server-components)/NavbarServer";
 import { NextIntlServerProvider } from "next-intl/server";
 
@@ -14,8 +13,12 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
     <html lang={locale}>
       <body>
         <NextIntlServerProvider locale={locale}>
-          <NavbarServer />
-          {children}
+          <PageContainer>
+            <NavbarServer />
+
+            {children}
+          </PageContainer>
+          <FooterServer />
         </NextIntlServerProvider>
       </body>
     </html>

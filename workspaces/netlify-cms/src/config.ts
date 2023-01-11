@@ -260,6 +260,19 @@ export const config: CmsConfig = {
                   display_fields: ["title"],
                 },
                 {
+                  label: "Post",
+                  name: "post",
+                  widget: "relation",
+                  collection: "posts",
+                  search_fields: ["title"],
+                  value_field: "id",
+                  display_fields: ["title"],
+                },
+                {
+                  label: "Custom Link",
+                  name: "custom_link",
+                },
+                {
                   label: "Pages",
                   name: "pages",
                   widget: "list",
