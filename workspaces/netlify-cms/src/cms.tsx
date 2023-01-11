@@ -1,5 +1,5 @@
 import CMS from "netlify-cms-app";
-import config from "./config.yml";
+import { config } from "./config";
 // @ts-expect-error
 import { markdownToHtml } from "netlify-cms-widget-markdown/dist/esm/serializers";
 

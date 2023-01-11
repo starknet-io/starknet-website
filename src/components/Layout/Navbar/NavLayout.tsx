@@ -3,7 +3,6 @@ import {
   Icon,
   IconButton,
   StackDivider,
-  HTMLChakraProps,
   useBreakpointValue,
   ButtonGroup,
   Container,
@@ -11,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 
-import { FiGlobe, FiMenu, FiMoon, FiSun } from "react-icons/fi";
+import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { SearchInput } from "./SearchInput";
 

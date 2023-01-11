@@ -29,6 +29,9 @@ node_modules
 .parcel-cache
 storybook-static
 .idea
+__*
+_data/_dynamic
+.eslintcache
 
 # debug
 npm-debug.log*

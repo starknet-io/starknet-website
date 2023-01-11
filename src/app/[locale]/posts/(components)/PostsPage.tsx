@@ -1,18 +1,13 @@
 "use client";
 
-import { Box, Container, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Container, SimpleGrid } from "@chakra-ui/react";
 import { ArticleCard } from "@ui/ArticleCard/ArticleCard";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
-  SearchBox,
-  Hits,
-  Highlight,
   RefinementList,
-  Pagination,
   Configure,
-  HitsPerPage,
 } from "src/libs/react-instantsearch-hooks-web";
 import { useHits } from "react-instantsearch-hooks";
 import { PageContentContainer } from "../../(components)/PageContentContainer";
@@ -51,14 +46,6 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
     </PageContentContainer>
   );
 }
-
-type HitProps = {
-  locale: string;
-  id: string;
-  short_desc: string;
-  category: string;
-  title: string;
-};
 
 function CustomHits() {
   const { hits } = useHits();

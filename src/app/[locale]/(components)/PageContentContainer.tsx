@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Flex, Stack } from "@chakra-ui/react";
+import { Container, Stack } from "@chakra-ui/react";
 import { Main } from "@ui/Layout/Main";
 import { Sidebar } from "@ui/Layout/Sidebar";
 

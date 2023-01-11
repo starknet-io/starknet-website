@@ -1,11 +1,22 @@
 {
+  "files": {
+    "ignore": [
+      "**/.yarnrc.yml",
+      "**/.yarn/**",
+      "**/_data/**",
+      "**/.next/**",
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/storybook-static/**"
+    ]
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "suspicious": {
         "noExplicitAny": "off",
-        "noArrayIndexKey" :"off"
+        "noArrayIndexKey": "off"
       },
       "a11y": {
         "useValidAnchor": "off"

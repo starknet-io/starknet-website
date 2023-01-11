@@ -31,7 +31,6 @@
     "next-env.d.ts",
     "src",
     "workspaces/netlify-cms/src",
-    "workspaces/storybook/src",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", "dist"]

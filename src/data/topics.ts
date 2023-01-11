@@ -1,61 +1,36 @@
-import * as mdx from "@mdx-js/mdx";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import * as runtime from "react/jsx-runtime";
-import { VFileCompatible } from "@mdx-js/mdx/lib/compile";
+import { defaultLocale } from "./i18n/config";
+import { getFirst, getJSON, getMDXModule } from "./utils";
 
 interface Topic {
   readonly id: string;
   readonly name: string;
 }
 
-export async function fileToTopic(file: VFileCompatible): Promise<Topic> {
-  const code = await mdx.compile(file, {
-    development: false,
-    outputFormat: "function-body",
-    providerImportSource: undefined,
-    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-    rehypePlugins: [],
-  });
-
-  const {
-    id,
-    name,
-  } = await mdx.run(code, { ...runtime });
-
-  return { id, name } satisfies Topic;
-}
-
-async function getFileByFilename(
-  filename: string,
-  locale: string,
-): Promise<VFileCompatible> {
+export async function getTopics(locale: string): Promise<readonly Topic[]> {
   try {
-    const res = await fetch(
-      new URL(`topics/${locale}/${filename}.md`, process.env.CONTENT_BASE_URL!),
+    return await getFirst(
+      () => getJSON(`_dynamic/topics/${locale}/.json`),
+      () => getJSON(`_dynamic/topics/${defaultLocale}/.json`),
     );
-
-    if (res.ok) {
-      return res.text();
-    }
-  } catch {}
-
-  try {
-    const res = await fetch(
-      new URL(`topics/en/${filename}.md`, process.env.CONTENT_BASE_URL!),
-    );
-
-    if (res.ok) {
-      return res.text();
-    }
-  } catch {}
-
-  throw new Error(`Topic not found! ${filename}`);
+  } catch (cause) {
+    throw new Error("getTopics failed!", {
+      cause,
+    });
+  }
 }
 
 export async function getTopicByFilename(
   filename: string,
   locale: string,
 ): Promise<Topic> {
-  return fileToTopic(await getFileByFilename(filename, locale));
+  try {
+    return await getFirst(
+      () => getMDXModule(`topics/${locale}/${filename}.md`),
+      () => getMDXModule(`topics/${defaultLocale}/${filename}.md`),
+    );
+  } catch (cause) {
+    throw new Error(`Topic not found! ${filename}`, {
+      cause,
+    });
+  }
 }

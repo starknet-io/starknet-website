@@ -1,0 +1,7 @@
+**/.yarnrc.yml
+**/.yarn
+**/_data
+**/.next
+**/node_modules
+**/dist
+**/storybook-static

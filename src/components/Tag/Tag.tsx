@@ -1,4 +1,4 @@
-import { Tag as ChakraTag, TagProps } from '@chakra-ui/react';
+import { Tag as ChakraTag, TagProps } from "@chakra-ui/react";
 
 type props = {
   children: React.ReactNode;

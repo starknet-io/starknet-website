@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist; cp -r ../../_data dist"
+    "update-dynamic-data": "vite-node src/index.ts",
+    "build": "yarn update-dynamic-data; rm -rf dist; cp -r ../../_data dist"
+  },
+  "dependencies": {
+    "vite-node": "^0.27.0",
+    "yaml": "^2.2.1"
   }
 }

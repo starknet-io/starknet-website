@@ -1,16 +1,15 @@
 "use client";
 import { SimpleGrid } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
-import { useLocale, useTranslations } from "next-intl";
-import type { MainMenu, Page } from "src/data/settings/main-menu";
+import { useLocale } from "next-intl";
+import type { MainMenu } from "src/data/settings/main-menu";
 
 export interface Props {
-  readonly mainMenu: MainMenu<Page<{ readonly title: string }>>;
+  readonly mainMenu: MainMenu;
 }
 
 export const Footer = ({ mainMenu }: Props) => {
   const locale = useLocale();
-  const t = useTranslations();
 
   return (
     <FooterComponent.Root>

@@ -2,10 +2,9 @@
 
 import React from "react";
 import * as NavAccordian from "../../../components/Layout/Navbar/NavAccordion";
-import { useLocale, useTranslations } from "next-intl";
-import type { MainMenu, Page } from "src/data/settings/main-menu";
+import { useLocale } from "next-intl";
+import type { MainMenu } from "src/data/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
-
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
@@ -13,12 +12,11 @@ import { Link as ChakraLink, Stack } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
 
 export interface Props {
-  readonly mainMenu: MainMenu<Page<{ readonly title: string }>>;
+  readonly mainMenu: MainMenu;
 }
 
 export default function Navbar({ mainMenu }: Props) {
   const locale = useLocale();
-  const t = useTranslations();
 
   return (
     <NavbarContainer>
