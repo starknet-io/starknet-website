@@ -2,6 +2,7 @@ import { PageContainer } from "./(components)/PageContainer";
 import { FooterServer } from "./(server-components)/FooterServer";
 import { NavbarServer } from "./(server-components)/NavbarServer";
 import { NextIntlServerProvider } from "next-intl/server";
+import { ThemeProvider } from "../providers/ThemeProvider";
 
 interface Props {
   readonly children: React.ReactNode;
@@ -13,12 +14,14 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
     <html lang={locale}>
       <body>
         <NextIntlServerProvider locale={locale}>
-          <PageContainer>
-            <NavbarServer />
+          <ThemeProvider>
+            <PageContainer>
+              <NavbarServer />
 
-            {children}
-          </PageContainer>
-          <FooterServer />
+              {children}
+            </PageContainer>
+            <FooterServer />
+          </ThemeProvider>
         </NextIntlServerProvider>
       </body>
     </html>
