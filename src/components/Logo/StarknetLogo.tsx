@@ -8,7 +8,7 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
   const { colorMode } = useColorMode();
   if (colorMode === "light") {
     return (
-      <chakra.svg
+      <svg
         width="178"
         height={height}
         viewBox="0 0 178 41"
@@ -94,11 +94,11 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
             <stop offset="1" stopColor="#D672EF" />
           </linearGradient>
         </defs>
-      </chakra.svg>
+      </svg>
     );
   } else {
     return (
-      <chakra.svg
+      <svg
         viewBox="0 0 179 43"
         height={height}
         fill="none"
@@ -205,7 +205,7 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
             <stop offset="1" stopColor="#D672EF" />
           </linearGradient>
         </defs>
-      </chakra.svg>
+      </svg>
     );
   }
 };
