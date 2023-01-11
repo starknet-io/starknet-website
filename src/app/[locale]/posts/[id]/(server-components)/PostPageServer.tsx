@@ -1,3 +1,4 @@
+import { PageContentContainer } from "src/app/[locale]/(components)/PageContentContainer";
 import { getPostByFilename } from "src/data/posts";
 
 export interface Props {
@@ -15,11 +16,11 @@ export async function PostPageServer({ params }: Props): JSX.Element {
   );
 
   return (
-    <div className="mx-auto  max-w-7xl px-2 sm:px-4 lg:px-8 pt-7">
+    <PageContentContainer>
       <div className="prose">
         <h2>{title}</h2>
         <MDXContent />
       </div>
-    </div>
+    </PageContentContainer>
   );
 }

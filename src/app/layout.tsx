@@ -1,5 +1,6 @@
-import "./globals.css";
-import "../css/index.css";
+// import "./globals.css";
+// import "../css/index.css";
+import { ThemeProvider } from "./providers/ThemeProvider";
 
 interface Props {
   readonly children: React.ReactNode;
@@ -16,7 +17,9 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang={lang}>
       <head />
-      <body>{children}</body>
+      <body>
+        <ThemeProvider> {children}</ThemeProvider>
+      </body>
     </html>
   );
 }

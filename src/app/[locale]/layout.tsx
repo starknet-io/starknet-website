@@ -1,3 +1,5 @@
+import { PageContainer } from "./(components)/PageContainer";
+import { FooterServer } from "./(server-components)/FooterServer";
 import { NavbarServer } from "./(server-components)/NavbarServer";
 import { NextIntlProviderServer } from "./(server-components)/NextIntlProviderServer";
 
@@ -12,9 +14,12 @@ export default async function LocaleLayout({
 }: Props) {
   return (
     <NextIntlProviderServer locale={locale}>
-      <NavbarServer />
+      <PageContainer>
+        <NavbarServer />
 
-      {children}
+        {children}
+      </PageContainer>
+      <FooterServer />
     </NextIntlProviderServer>
   );
 }
