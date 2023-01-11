@@ -7,6 +7,7 @@ type Props = {
   variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
+// rome-ignore lint/correctness/noUnusedVariables: <explanation>
 export const Heading = ({ variant, children, as, ...rest }: Props) => {
   switch (variant) {
     case "h1":

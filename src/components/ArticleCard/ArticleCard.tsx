@@ -9,7 +9,6 @@ import {
   Stack,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
-import { Heading } from "../../components/Typography/Heading";
 import { Text } from "../../components/Typography/Text";
 
 type Props = {
