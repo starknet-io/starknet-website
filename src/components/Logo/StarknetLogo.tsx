@@ -8,7 +8,7 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
   const { colorMode } = useColorMode();
   if (colorMode === "light") {
     return (
-      <svg
+      <chakra.svg
         width="178"
         height={height}
         viewBox="0 0 178 41"
@@ -90,15 +90,15 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
             y2="41.6807"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EC796B" />
-            <stop offset="1" stop-color="#D672EF" />
+            <stop stopColor="#EC796B" />
+            <stop offset="1" stopColor="#D672EF" />
           </linearGradient>
         </defs>
-      </svg>
+      </chakra.svg>
     );
   } else {
     return (
-      <svg
+      <chakra.svg
         viewBox="0 0 179 43"
         height={height}
         fill="none"
@@ -179,8 +179,8 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
             y2="14.6192"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EC796B" />
-            <stop offset="1" stop-color="#D672EF" />
+            <stop stopColor="#EC796B" />
+            <stop offset="1" stopColor="#D672EF" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_789_81084"
@@ -190,8 +190,8 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
             y2="42.6807"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EC796B" />
-            <stop offset="1" stop-color="#D672EF" />
+            <stop stopColor="#EC796B" />
+            <stop offset="1" stopColor="#D672EF" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_789_81084"
@@ -201,11 +201,11 @@ export const StarknetLogo = ({ height = "40" }: Props) => {
             y2="29.6254"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EC796B" />
-            <stop offset="1" stop-color="#D672EF" />
+            <stop stopColor="#EC796B" />
+            <stop offset="1" stopColor="#D672EF" />
           </linearGradient>
         </defs>
-      </svg>
+      </chakra.svg>
     );
   }
 };
