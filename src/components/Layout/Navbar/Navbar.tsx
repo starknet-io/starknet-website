@@ -20,9 +20,14 @@ import { NavLayout } from "./NavLayout";
 type Props = {
   desktopNavItems?: React.ReactNode;
   mobileNavItems?: any;
+  languageSwitcher?: React.ReactElement;
 };
 
-export const NavBar = ({ desktopNavItems, mobileNavItems }: Props) => {
+export const NavBar = ({
+  desktopNavItems,
+  mobileNavItems,
+  languageSwitcher,
+}: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const { colorMode, toggleColorMode } = useColorMode();
@@ -36,6 +41,7 @@ export const NavBar = ({ desktopNavItems, mobileNavItems }: Props) => {
         onClickMenu={onOpen}
         isMenuOpen={isOpen}
         items={desktopNavItems}
+        languageSwitcher={languageSwitcher}
       />
       <Drawer
         placement="left"

@@ -23,6 +23,7 @@ export default function Navbar({ mainMenu }: Props) {
   return (
     <NavbarContainer>
       <NavBar
+        languageSwitcher={<LocaleSwitcher />}
         desktopNavItems={
           <>
             {mainMenu.pages.map(({ page, title, pages }) => {
