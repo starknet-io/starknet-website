@@ -7,6 +7,7 @@ import {
   ButtonGroup,
   Container,
   useColorMode,
+  Spacer,
 } from "@chakra-ui/react";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 
@@ -40,7 +41,7 @@ export const NavLayout = (props: NavLayoutProps) => {
           </>
         )}
 
-        <HStack divider={<StackDivider height="6" alignSelf="unset" />}>
+        <HStack spacing={6}>
           <SearchInput />
           {isDesktop && (
             <>
@@ -56,9 +57,9 @@ export const NavLayout = (props: NavLayoutProps) => {
                 aria-label="Toggle color mode"
                 onClick={toggleColorMode}
               />
-              {props.languageSwitcher}
             </>
           )}
+          {isDesktop && props.languageSwitcher}
 
           {!isDesktop && (
             <IconButton
