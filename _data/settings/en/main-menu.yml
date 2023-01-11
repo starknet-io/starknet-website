@@ -18,5 +18,5 @@ pages:
     pages: []
   - page: /community/
     pages:
-      - custom_link: "/blog "
+      - custom_link: "/blog"
         page: ""
