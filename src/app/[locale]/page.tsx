@@ -69,13 +69,6 @@ export default function Index() {
             >
               <Stack spacing={{ base: "8", md: "12" }}>
                 <Stack spacing="4">
-                  <Badge
-                    colorScheme="blue"
-                    alignSelf="start"
-                    size={useBreakpointValue({ base: "md", md: "lg" })}
-                  >
-                    Launching
-                  </Badge>
                   <Stack
                     spacing={{ base: "4", md: "6" }}
                     maxW={{ md: "xl", lg: "md", xl: "xl" }}
@@ -96,12 +89,6 @@ export default function Index() {
                 <Stack direction={{ base: "column", md: "row" }} spacing="3">
                   <Button
                     variant="primary"
-                    size={useBreakpointValue({ base: "lg", md: "xl" })}
-                  >
-                    Buy now
-                  </Button>
-                  <Button
-                    variant="secondary"
                     size={useBreakpointValue({ base: "lg", md: "xl" })}
                   >
                     Learm more
