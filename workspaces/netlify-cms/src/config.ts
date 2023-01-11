@@ -192,10 +192,6 @@ export const config: CmsConfig = {
               label: "Discord",
             },
             {
-              name: "discord",
-              label: "Discord",
-            },
-            {
               name: "logo",
               label: "Project Logo",
               widget: "image",
