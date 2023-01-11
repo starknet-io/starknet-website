@@ -15,7 +15,7 @@ export async function FooterServer(): JSX.Element {
         ...page,
         title: (await getPageByPage(page.page, locale)).title,
       } as Props["mainMenu"]["pages"][number];
-    }
+    },
   );
 
   return (

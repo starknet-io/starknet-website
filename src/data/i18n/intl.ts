@@ -18,7 +18,7 @@ import { AbstractIntlMessages } from "next-intl";
 // }
 
 export async function getMessages(
-  locale: string
+  locale: string,
 ): Promise<AbstractIntlMessages> {
   try {
     return (await import(`_data/i18n/intl/${locale}.json`)).default;

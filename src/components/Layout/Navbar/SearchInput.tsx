@@ -14,10 +14,10 @@ import {
   ModalOverlay,
   useBreakpointValue,
   useDisclosure,
-} from '@chakra-ui/react';
-import * as React from 'react';
-import { RiSearchLine } from 'react-icons/ri';
-import { Text } from '../../Typography/Text';
+} from "@chakra-ui/react";
+import * as React from "react";
+import { RiSearchLine } from "react-icons/ri";
+import { Text } from "../../Typography/Text";
 
 export const SearchInput = () => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
