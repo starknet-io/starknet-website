@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "_data/posts/**"
+      - "_data/jobs/**"
+      - "_data/events/**"
     branches:
       - dev
 
@@ -22,4 +24,4 @@ jobs:
           node-version: 18
           cache: yarn
       - run: yarn
-      - run: yarn workspace algolia-index-workspace update-index
+      - run: yarn update:algolia

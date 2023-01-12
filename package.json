@@ -18,6 +18,7 @@
     "test:e2e:ci": "start-server-and-test 'yarn dev' 3000 'yarn cy:run'",
     "typecheck": "tsc --noEmit",
     "data": "yarn workspace content-onedge-workspace update-dynamic-data",
+    "update:algolia": "yarn workspace content-onedge-workspace update-algolia-index",
     "storybook:dev": "yarn workspace storybook-workspace dev",
     "storybook:build": "yarn workspace storybook-workspace build",
     "storybook": "yarn workspace storybook-workspace storybook",

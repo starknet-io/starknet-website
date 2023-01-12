@@ -11033,6 +11033,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "content-onedge-workspace@workspace:workspaces/content-onedge"
   dependencies:
+    algoliasearch: ^4.14.3
+    dotenv: ^16.0.3
     vite-node: ^0.27.0
     yaml: ^2.2.1
   languageName: unknown
