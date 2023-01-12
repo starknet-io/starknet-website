@@ -25,8 +25,8 @@ type Props = {
     | "community_and_events";
   title?: any;
   excerpt?: any;
-  avatarUrl?: string;
-  author?: string;
+  // avatarUrl?: string;
+  // author?: string;
   publishedAt?: string;
   href?: string;
   variant?: "default" | "lg";
@@ -39,8 +39,8 @@ export const ArticleCard = ({
   category,
   title,
   excerpt,
-  avatarUrl,
-  author,
+  // avatarUrl,
+  // author,
   publishedAt,
   href,
 }: Props) => {
@@ -49,8 +49,8 @@ export const ArticleCard = ({
       <Box
         p="0"
         bg="bg-surface"
-        boxShadow={mode("lg", "lg-dark")}
-        _groupHover={{ boxShadow: mode("xl", "xl-dark") }}
+        boxShadow={mode("xs", "xs-dark")}
+        _groupHover={{ boxShadow: mode("sm", "sm-dark") }}
         transition="all 0.2s"
         height="full"
         borderRadius={8}
@@ -84,9 +84,9 @@ export const ArticleCard = ({
           </Stack>
           <Box p={6}>
             <HStack>
-              <Avatar src={avatarUrl} boxSize="10" />
+              {/* <Avatar src={avatarUrl} boxSize="10" /> */}
               <Box fontSize="sm">
-                <Text fontWeight="medium">{author}</Text>
+                {/* <Text fontWeight="medium">{author}</Text> */}
                 <Text color="muted">{publishedAt}</Text>
               </Box>
             </HStack>
