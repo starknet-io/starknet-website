@@ -8656,16 +8656,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"algolia-index-workspace@workspace:workspaces/algolia-index":
-  version: 0.0.0-use.local
-  resolution: "algolia-index-workspace@workspace:workspaces/algolia-index"
-  dependencies:
-    algoliasearch: ^4.14.3
-    dotenv: ^16.0.3
-    vite-node: ^0.27.0
-  languageName: unknown
-  linkType: soft
-
 "algoliasearch-helper@npm:^3.11.2":
   version: 3.11.2
   resolution: "algoliasearch-helper@npm:3.11.2"
