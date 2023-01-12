@@ -23,13 +23,16 @@ export default function LocaleSwitcherNew() {
     >
       {locales
         .filter((c) => topLanguages.includes(c.code))
-        .map((c, i) => (
-          <div key={i}>
-            <Link href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}>
-              {c.name} ({c.code})
+        .map((c, i) => {
+          return (
+            <Link
+              key={i}
+              href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}
+            >
+              {localeConfig.code === c.code && ">"} {c.name} ({c.code})
             </Link>
-          </div>
-        ))}
+          );
+        })}
     </LanguageSwitcherDropdown>
   );
 }
