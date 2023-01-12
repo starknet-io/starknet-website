@@ -1,8 +1,6 @@
-"use client";
-import { Text as ChakraText, TextProps } from "@chakra-ui/react";
+import { Text as ChakraText, TextProps } from "src/libs/chakra-ui";
 
 type Props = {
-  children: React.ReactNode;
   variant?: "baseRegular" | "baseSemibold" | "baseBold" | "baseExtraBold";
 } & TextProps;
 

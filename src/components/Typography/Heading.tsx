@@ -1,11 +1,10 @@
 "use client";
-import { Heading as ChakraHeading } from "@chakra-ui/react";
+import { Heading as ChakraHeading, HeadingProps } from "@chakra-ui/react";
 
 type Props = {
-  children: React.ReactNode;
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-};
+} & HeadingProps;
 
 // rome-ignore lint/correctness/noUnusedVariables: <explanation>
 export const Heading = ({ variant, children, as, ...rest }: Props) => {
