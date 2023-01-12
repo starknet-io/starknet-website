@@ -19,7 +19,7 @@ export default function LocaleSwitcherNew() {
       description=" Some copy here that gives a concise summary of the language
               resources as well as how the community is being asked to
               contribute and a link to a dedicated page on the topic."
-      selectedLocale={localeConfig.code}
+      selectedLocale={localeConfig.localName}
     >
       {locales
         .filter((c) => topLanguages.includes(c.code))
@@ -29,7 +29,7 @@ export default function LocaleSwitcherNew() {
               key={i}
               href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}
             >
-              {localeConfig.code === c.code && ">"} {c.name} ({c.code})
+              {localeConfig.code === c.code && ">"} {c.name} ({c.localName})
             </Link>
           );
         })}
