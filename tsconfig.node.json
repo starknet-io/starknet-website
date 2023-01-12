@@ -10,7 +10,6 @@
   "include": [
     "vite.config.ts",
     "vite-env.d.ts",
-    "workspaces/algolia-index/src",
     "workspaces/content-onedge/src"
   ]
 }
