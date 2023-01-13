@@ -1,7 +1,7 @@
 import mdx from "@next/mdx";
-import path from "node:path";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+import withNextIntl from "next-intl/withNextIntl";
 
 const withMDX = mdx({
   extension: /\.mdx?$/,
@@ -34,16 +34,15 @@ const nextConfig = {
       permanent: false
     }]
   },
+  i18nConfig: 'src/data/i18n/config.ts',
   webpack(config, _context) {
     config.module.rules.push({
       test: /\.ya?ml$/,
       use: "js-yaml-loader",
     });
 
-    config.resolve.alias['next-intl/config'] = path.resolve('src/data/i18n/config.ts');
-
     return config;
   },
 };
 
-export default withMDX(nextConfig);
+export default withNextIntl(withMDX(nextConfig));

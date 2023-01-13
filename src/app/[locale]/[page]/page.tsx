@@ -1,5 +1,6 @@
 import { use } from "react";
 import { getPageByFilename } from "src/data/pages";
+import { useTranslations } from "next-intl";
 
 export interface Props {
   readonly params: {
@@ -9,8 +10,9 @@ export interface Props {
 }
 
 export default function Page({ params }: Props): JSX.Element {
+  const t = useTranslations();
   const { title, MDXContent } = use(
-    getPageByFilename(params.page, params.locale),
+    getPageByFilename(params.page, params.locale)
   );
 
   return (
@@ -19,7 +21,8 @@ export default function Page({ params }: Props): JSX.Element {
         <h2>{title}</h2>
         <MDXContent />
       </div>
-      <div>Content nav</div>
+
+      <div>Content nav {t("search")}</div>
     </div>
   );
 }
