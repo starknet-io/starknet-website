@@ -22,8 +22,8 @@
     "storybook:build": "yarn workspace storybook-workspace build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "theme": "chakra-cli tokens ./src/style/theme.ts",
-    "theme:watch": "chakra-cli tokens ./src/style/theme.ts --watch"
+    "theme": "chakra-cli tokens src/style/theme.ts",
+    "theme:watch": "chakra-cli tokens src/style/theme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/pro-theme": "^0.0.57",
