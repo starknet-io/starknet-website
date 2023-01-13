@@ -2835,6 +2835,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chakra-ui/storybook-addon@npm:^4.0.16":
+  version: 4.0.17
+  resolution: "@chakra-ui/storybook-addon@npm:4.0.17"
+  peerDependencies:
+    "@chakra-ui/react": 0.0.0-dev-20230112160451
+    "@storybook/addons": ">=6.4"
+    "@storybook/api": ">=6.4"
+    "@storybook/components": ">=6.4"
+    react: ">=16.8.x"
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 20e425b3415baeaa9aed2b2bd1d5a829f01df280d7acd7c3f2f57cd382f13ef54f8b29df010cbe87a11201261ef786188942dc40538fa9779282d634669ef8b8
+  languageName: node
+  linkType: hard
+
 "@chakra-ui/styled-system@npm:2.5.1":
   version: 2.5.1
   resolution: "@chakra-ui/styled-system@npm:2.5.1"
@@ -21459,6 +21477,7 @@ __metadata:
     "@chakra-ui/cli": ^2.3.0
     "@chakra-ui/pro-theme": ^0.0.57
     "@chakra-ui/react": ^2.4.7
+    "@chakra-ui/storybook-addon": ^4.0.16
     "@emotion/react": ^11.10.5
     "@emotion/styled": ^11.10.5
     "@fontsource/inter": ^4.5.14
