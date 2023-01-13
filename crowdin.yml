@@ -1,5 +1,19 @@
 files:
-  - source: /_data/**/en
-    translation: /_data/**/%two_letters_code%/%original_file_name%
+  - source: /_data/categories/en
+    translation: /_data/categories/%two_letters_code%/%original_file_name%
+  - source: /_data/events/en
+    translation: /_data/events/%two_letters_code%/%original_file_name%
+  - source: /_data/i18n/en
+    translation: /_data/i18n/%two_letters_code%/%original_file_name%
+  - source: /_data/jobs/en
+    translation: /_data/jobs/%two_letters_code%/%original_file_name%
+  - source: /_data/pages/en
+    translation: /_data/pages/%two_letters_code%/%original_file_name%
+  - source: /_data/posts/en
+    translation: /_data/posts/%two_letters_code%/%original_file_name%
+  - source: /_data/settings/en
+    translation: /_data/settings/%two_letters_code%/%original_file_name%
+  - source: /_data/topics/en
+    translation: /_data/topics/%two_letters_code%/%original_file_name%
   - source: /i18n/intl/en.json
     translation: /i18n/intl/%two_letters_code%.json
