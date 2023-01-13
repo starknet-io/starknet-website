@@ -45,11 +45,12 @@ for (const locale of locales) {
       const data = await getFirst(
         () => mdx(`_data/pages/${locale.code}/${filename}.md`),
         () => mdx(`_data/pages/${defaultLocale}/${filename}.md`),
+        async () => null,
       );
 
       return {
         ...page,
-        title: data.title,
+        title: data?.title ?? "",
       };
     },
   );
