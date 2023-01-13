@@ -3,6 +3,7 @@ import { Text } from "@ui/Typography/Text";
 import { use } from "react";
 import { getPageByFilename } from "src/data/pages";
 import { PageContentContainer } from "../(components)/PageContentContainer";
+import { useTranslations } from "next-intl";
 
 export interface Props {
   readonly params: {
@@ -12,6 +13,7 @@ export interface Props {
 }
 
 export default function Page({ params }: Props): JSX.Element {
+  const t = useTranslations();
   const { title, MDXContent } = use(
     getPageByFilename(params.page, params.locale)
   );
@@ -19,6 +21,7 @@ export default function Page({ params }: Props): JSX.Element {
   return (
     <PageContentContainer>
       <>
+        {t("search")}
         <MDXContent
           components={{
             h2: (props) => <Heading as="h2" variant="h2" {...props} />,
