@@ -17,15 +17,15 @@ import { FiExternalLink } from "react-icons/fi";
 
 import { Card } from "../Card/Card";
 type Props = {
-  readonly title: string;
-  readonly startDateTime: string;
-  readonly description: string;
-  readonly href: string;
-  readonly location: string;
-  readonly image: string;
-  readonly tags: string[];
-  readonly city: string;
-  readonly venue: string;
+  readonly title?: string;
+  readonly startDateTime?: string;
+  readonly description?: string;
+  readonly href?: string;
+  readonly location?: string;
+  readonly image?: string;
+  readonly tags?: string[];
+  readonly city?: string;
+  readonly venue?: string;
 };
 
 export const EventCard = (props: Props) => {

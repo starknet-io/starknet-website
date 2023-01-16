@@ -102,7 +102,8 @@ type CategoryProps = {
     | "stark_math"
     | "stark_at_home"
     | "governance"
-    | "community_and_events";
+    | "community_and_events"
+    | string;
 };
 const Category = ({ category }: CategoryProps) => {
   return (

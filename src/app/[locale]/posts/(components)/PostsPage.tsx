@@ -23,7 +23,6 @@ import {
 import { useHits, useRefinementList } from "react-instantsearch-hooks";
 import { PageContentContainer } from "../../(components)/PageContentContainer";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { FiPlus } from "react-icons/fi";
 
 export interface AutoProps {
   readonly params: {
@@ -160,7 +159,7 @@ function CustomCategories() {
     attribute: "category",
     sortBy: ["name:asc"],
   });
-  console.log("cats", items);
+
   return (
     <SubNav.Root>
       {items.map((item, i) => (
@@ -172,8 +171,16 @@ function CustomCategories() {
   );
 }
 
+type HitProps = {
+  readonly hits: readonly {
+    readonly title: string;
+    readonly short_desc: string;
+    readonly image: string;
+    readonly category: string;
+  }[];
+};
 function CustomHits() {
-  const { hits } = useHits();
+  const { hits }: HitProps = useHits();
 
   return (
     <>
@@ -188,7 +195,7 @@ function CustomHits() {
             <ArticleCard.Image url={`/static/${hit.image}`} />
 
             <ArticleCard.Body>
-              <ArticleCard.Category category={hit.category} />
+              <ArticleCard.Category category={hit?.category} />
               <ArticleCard.Content title={hit.title} excerpt={hit.short_desc} />
             </ArticleCard.Body>
             <ArticleCard.Footer
