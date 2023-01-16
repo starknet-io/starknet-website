@@ -1,11 +1,8 @@
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { use } from "react";
 import { getPageByFilename } from "src/data/pages";
 import { PageContentContainer } from "../(components)/PageContentContainer";
-import { useTranslations } from "next-intl";
-import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { FeaturedArticleCard } from "@ui/ArticleCard/FeaturedArticleCard";
+
 import {
   Breadcrumb,
   BreadcrumbItem,

@@ -13,7 +13,6 @@ import { Button } from "@ui/Button";
 import { Stat } from "@ui/Stat/Stat";
 import { PageContentContainerNoSidebar } from "./(components)/PageContentContainerNoSidebar";
 import { useMessages } from "./(components)/ClientLocaleProvider";
-import { PageContentContainer } from "./(components)/PageContentContainer";
 
 export default function Index() {
   const messages = useMessages();

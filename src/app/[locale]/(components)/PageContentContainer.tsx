@@ -3,8 +3,8 @@
 import { Container, Stack, ContainerProps } from "@chakra-ui/react";
 
 import { Main } from "@ui/Layout/Main";
-import { Sidebar } from "@ui/Layout/Sidebar";
-import { TableOfContents } from "./TableOfContents";
+// import { Sidebar } from "@ui/Layout/Sidebar";
+// import { TableOfContents } from "./TableOfContents";
 
 type Props = {} & ContainerProps;
 
