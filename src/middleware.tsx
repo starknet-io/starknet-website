@@ -1,7 +1,7 @@
-import {createIntlMiddleware} from 'next-intl/server';
+import { createIntlMiddleware } from "next-intl/server";
 
 export default createIntlMiddleware();
 
 export const config = {
-  matcher: ['/((?!_next).*)']
+  matcher: ["/((?!_next).*)"],
 };

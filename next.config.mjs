@@ -27,13 +27,6 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
   },
-  async redirects() {
-    return [{
-      source: '/',
-      destination: '/en',
-      permanent: false
-    }]
-  },
   i18nConfig: 'src/data/i18n/config.ts',
   webpack(config, _context) {
     config.module.rules.push({

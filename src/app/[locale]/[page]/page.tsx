@@ -12,7 +12,7 @@ export interface Props {
 export default function Page({ params }: Props): JSX.Element {
   const t = useTranslations();
   const { title, MDXContent } = use(
-    getPageByFilename(params.page, params.locale)
+    getPageByFilename(params.page, params.locale),
   );
 
   return (
