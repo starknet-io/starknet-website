@@ -44,7 +44,7 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
 
   return (
-    <PageContentContainer pt="24">
+    <PageContentContainer pt="18">
       <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
         <Configure
           hitsPerPage={40}
@@ -199,14 +199,10 @@ function CustomHits() {
           </ArticleCard.Root>
         ))}
       </SimpleGrid>
-      <HStack>
+      <HStack mt="24">
         <Divider />
-        <Button
-          flexShrink={0}
-          variant="secondary"
-          leftIcon={<FiPlus fontSize="1.25rem" />}
-        >
-          Create
+        <Button flexShrink={0} variant="secondary">
+          View More
         </Button>
         <Divider />
       </HStack>

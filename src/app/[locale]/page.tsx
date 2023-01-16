@@ -12,8 +12,12 @@ import {
 import { Button } from "@ui/Button";
 import { Stat } from "@ui/Stat/Stat";
 import { PageContentContainerNoSidebar } from "./(components)/PageContentContainerNoSidebar";
+import { useMessages } from "./(components)/ClientLocaleProvider";
+import { PageContentContainer } from "./(components)/PageContentContainer";
 
 export default function Index() {
+  const messages = useMessages();
+
   return (
     <PageContentContainerNoSidebar>
       <Box as="section" bg="bg-surface">
@@ -49,7 +53,7 @@ export default function Index() {
                     variant="primary"
                     size={useBreakpointValue({ base: "lg", md: "xl" })}
                   >
-                    Learm more
+                    Learm more {messages.search}
                   </Button>
                 </Stack>
               </Stack>

@@ -1,3 +1,4 @@
+"use client";
 import { Fragment } from "react";
 import React from "react";
 import classnames from "classnames";
@@ -5,12 +6,13 @@ import { Menu, Transition } from "src/libs/headlessui";
 import { ChevronDownIcon } from "src/libs/heroicons/20/solid";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useLocale } from "next-intl";
-import { locales } from "src/data/i18n/config";
+import { i18nConfig } from "src/data/i18n/config";
+import { useLocale } from "./ClientLocaleProvider";
 import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDropdown";
-export default function LocaleSwitcherNew() {
+
+export default function LocaleSwitcher() {
   const locale = useLocale();
-  const localeConfig = locales.find((c) => c.code === locale)!;
+  const localeConfig = i18nConfig.find((c) => c.code === locale)!;
   const pathname = usePathname()!;
   const topLanguages = ["en", "es", "fr", "de", "it", "pt", "ar", "ja", "ko"];
 
@@ -21,7 +23,7 @@ export default function LocaleSwitcherNew() {
               contribute and a link to a dedicated page on the topic."
       selectedLocale={localeConfig.localName}
     >
-      {locales
+      {i18nConfig
         .filter((c) => topLanguages.includes(c.code))
         .map((c, i) => {
           return (
