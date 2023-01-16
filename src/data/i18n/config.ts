@@ -12,4 +12,4 @@ export interface LocaleConfig {
 export const i18nConfig: readonly LocaleConfig[] = i18nConfigData;
 export const defaultLocale = "en";
 
-export const locales: readonly string[] =  i18nConfig.map((c) => c.code)
+export const locales: readonly string[] = i18nConfig.map((c) => c.code);

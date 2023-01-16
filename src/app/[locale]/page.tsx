@@ -13,7 +13,7 @@ import { useMessages } from "./(components)/ClientLocaleProvider";
 import { PageContentContainer } from "./(components)/PageContentContainer";
 
 export default function Index() {
-  const messages = useMessages()
+  const messages = useMessages();
 
   return (
     <PageContentContainer>

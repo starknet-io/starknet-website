@@ -3,5 +3,9 @@ interface Props {
 }
 
 export default function RootLayout({ children }: Props) {
-  return children;
+  return <>{children}</>;
+}
+
+export function generateStaticParams() {
+  return [];
 }
