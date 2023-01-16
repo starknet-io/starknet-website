@@ -1,10 +1,10 @@
-import { useLocale } from "next-intl";
 import { getEventsPage } from "src/data/settings/events-page";
 import { getEvents } from "src/data/events";
 import { use } from "react";
 
-export default function EventsPage(): JSX.Element {
-  const locale = useLocale();
+export default function EventsPage({
+  params: { locale },
+}: LocaleProps): JSX.Element {
   const { title, description } = use(getEventsPage(locale));
   const events = use(getEvents(locale));
 

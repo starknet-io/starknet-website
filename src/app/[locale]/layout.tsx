@@ -1,26 +1,33 @@
 import { PageContainer } from "./(components)/PageContainer";
-import { FooterServer } from "./(server-components)/FooterServer";
-import { NavbarServer } from "./(server-components)/NavbarServer";
 import { ThemeProvider } from "../providers/ThemeProvider";
-import { useLocale } from "next-intl";
+import { ClientLocaleProvider } from "./(components)/ClientLocaleProvider";
+import { getMessages } from "src/data/i18n/intl";
+import { use, useMemo } from "react";
+import Navbar from "./(components)/Navbar";
+import { Footer } from "./(components)/Footer";
+import { getMainMenu } from "src/data/settings/main-menu";
+import React from "react";
 
-interface Props {
-  readonly children: React.ReactNode;
-}
+interface Props extends React.PropsWithChildren<LocaleProps> {}
 
-export default function LocaleLayout({ children }: Props) {
-  const locale = useLocale();
+export default function LocaleLayout({ children, params: { locale } }: Props) {
+  const mainMenu = use(getMainMenu(locale));
+  const messages = use(getMessages(locale));
 
   return (
     <html lang={locale}>
       <body>
         <ThemeProvider>
-          <PageContainer>
-            <NavbarServer />
+          <ClientLocaleProvider
+            value={useMemo(() => ({ locale, messages }), [locale, messages])}
+          >
+            <PageContainer>
+              <Navbar mainMenu={mainMenu} />
 
-            {children}
-          </PageContainer>
-          <FooterServer />
+              {children}
+            </PageContainer>
+            <Footer mainMenu={mainMenu} />
+          </ClientLocaleProvider>
         </ThemeProvider>
       </body>
     </html>

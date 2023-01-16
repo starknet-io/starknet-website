@@ -1,6 +1,6 @@
 import { use } from "react";
 import { getPageByFilename } from "src/data/pages";
-import { useTranslations } from "next-intl";
+import { useMessages } from "../(components)/ClientLocaleProvider";
 
 export interface Props {
   readonly params: {
@@ -10,7 +10,7 @@ export interface Props {
 }
 
 export default function Page({ params }: Props): JSX.Element {
-  const t = useTranslations();
+  const messages = useMessages()
   const { title, MDXContent } = use(
     getPageByFilename(params.page, params.locale)
   );
@@ -22,7 +22,7 @@ export default function Page({ params }: Props): JSX.Element {
         <MDXContent />
       </div>
 
-      <div>Content nav {t("search")}</div>
+      <div>Content nav {messages.search}</div>
     </div>
   );
 }

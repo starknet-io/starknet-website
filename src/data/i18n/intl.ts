@@ -1,4 +1,3 @@
-import { AbstractIntlMessages } from "next-intl";
 // import { getFirst, getJSON } from "../utils";
 // import { defaultLocale } from "./config";
 
@@ -17,9 +16,11 @@ import { AbstractIntlMessages } from "next-intl";
 //   }
 // }
 
+export type MessagesType = typeof import("_data/i18n/intl/en.json")
+
 export async function getMessages(
   locale: string,
-): Promise<AbstractIntlMessages> {
+): Promise<MessagesType> {
   try {
     return (await import(`_data/i18n/intl/${locale}.json`)).default;
   } catch {}

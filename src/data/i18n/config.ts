@@ -1,6 +1,4 @@
-import type { NextIntlConfig } from "next-intl";
-import i18nConfig from "_data/i18n/config.json";
-import { getMessages } from "./intl";
+import i18nConfigData from "_data/i18n/config.json";
 
 export interface LocaleConfig {
   readonly code: string;
@@ -11,15 +9,7 @@ export interface LocaleConfig {
   readonly dateFormat: string;
 }
 
-export const locales: readonly LocaleConfig[] = i18nConfig;
+export const i18nConfig: readonly LocaleConfig[] = i18nConfigData;
 export const defaultLocale = "en";
 
-export const config: NextIntlConfig = {
-  locales: i18nConfig.map((c) => c.code),
-  defaultLocale,
-  getMessages({ locale }) {
-    return getMessages(locale);
-  },
-};
-
-export default config;
+export const locales: readonly string[] =  i18nConfig.map((c) => c.code)

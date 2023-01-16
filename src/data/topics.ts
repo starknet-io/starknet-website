@@ -9,8 +9,8 @@ interface Topic {
 export async function getTopics(locale: string): Promise<readonly Topic[]> {
   try {
     return await getFirst(
-      () => getJSON(`_dynamic/topics/${locale}/.json`),
-      () => getJSON(`_dynamic/topics/${defaultLocale}/.json`),
+      () => getJSON(`_dynamic/topics/${locale}.json`),
+      () => getJSON(`_dynamic/topics/${defaultLocale}.json`),
     );
   } catch (cause) {
     throw new Error("getTopics failed!", {

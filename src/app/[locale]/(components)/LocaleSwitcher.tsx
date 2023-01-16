@@ -1,3 +1,4 @@
+"use client";
 import { Fragment } from "react";
 import React from "react";
 import classnames from "classnames";
@@ -5,12 +6,12 @@ import { Menu, Transition } from "src/libs/headlessui";
 import { ChevronDownIcon } from "src/libs/heroicons/20/solid";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useLocale } from "next-intl";
-import { locales } from "src/data/i18n/config";
+import { i18nConfig } from "src/data/i18n/config";
+import { useLocale } from "./ClientLocaleProvider";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
-  const localeConfig = locales.find((c) => c.code === locale)!;
+  const localeConfig = i18nConfig.find((c) => c.code === locale)!;
   const pathname = usePathname()!;
 
   return (
@@ -33,13 +34,13 @@ export default function LocaleSwitcher() {
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            {locales.map((c, i) => (
+            {i18nConfig.map((c, i) => (
               <Menu.Item key={i}>
                 {({ active }) => (
                   <Link
                     className={classnames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm",
+                      "block px-4 py-2 text-sm"
                     )}
                     href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}
                   >
