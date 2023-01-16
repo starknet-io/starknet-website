@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { use } from "react";
 import { getMessages } from "src/data/i18n/intl";
 import { getPageByFilename } from "src/data/pages";
 
@@ -9,10 +8,12 @@ export interface Props {
   };
 }
 
-export default function Page({ params: { locale, page } }: Props): JSX.Element {
+export default async function Page({
+  params: { locale, page },
+}: Props): Promise<JSX.Element> {
   try {
-    const messages = use(getMessages(locale));
-    const { title, MDXContent } = use(getPageByFilename(page, locale));
+    const messages = await getMessages(locale);
+    const { title, MDXContent } = await getPageByFilename(page, locale);
 
     return (
       <div className="mx-auto  max-w-7xl px-2 sm:px-4 lg:px-8 pt-7">
@@ -24,7 +25,8 @@ export default function Page({ params: { locale, page } }: Props): JSX.Element {
         <div>Content nav {messages.search}</div>
       </div>
     );
-  } catch {
+  } catch (err) {
+    console.log(err);
     notFound();
   }
 }

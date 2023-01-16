@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { use } from "react";
 import { getPostByFilename } from "src/data/posts";
 
 export interface Props {
@@ -9,10 +8,11 @@ export interface Props {
   };
 }
 
-export default function Page({ params }: Props): JSX.Element {
+export default async function Page({ params }: Props): Promise<JSX.Element> {
   try {
-    const { title, MDXContent } = use(
-      getPostByFilename(params.id, params.locale),
+    const { title, MDXContent } = await getPostByFilename(
+      params.id,
+      params.locale
     );
 
     return (
@@ -23,7 +23,8 @@ export default function Page({ params }: Props): JSX.Element {
         </div>
       </div>
     );
-  } catch {
+  } catch (err) {
+    console.log(err);
     notFound();
   }
 }
