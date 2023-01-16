@@ -3,6 +3,7 @@ import { FooterServer } from "./(server-components)/FooterServer";
 import { NavbarServer } from "./(server-components)/NavbarServer";
 import { ThemeProvider } from "../providers/ThemeProvider";
 import { useLocale } from "next-intl";
+import { SubNavServer } from "./(server-components)/SubNavServer";
 
 interface Props {
   readonly children: React.ReactNode;
@@ -17,7 +18,7 @@ export default function LocaleLayout({ children }: Props) {
         <ThemeProvider>
           <PageContainer>
             <NavbarServer />
-
+            {/* <SubNavServer /> */}
             {children}
           </PageContainer>
           <FooterServer />

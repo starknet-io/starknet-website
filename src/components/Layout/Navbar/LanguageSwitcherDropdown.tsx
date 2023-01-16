@@ -42,6 +42,7 @@ export const LanguageSwitcherDropdown = ({
       <>
         <PopoverTrigger>
           <Button
+            size="sm"
             leftIcon={<Icon as={FiGlobe} fontSize="xl" />}
             variant="link"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
@@ -49,7 +50,12 @@ export const LanguageSwitcherDropdown = ({
             {selectedLocale}
           </Button>
         </PopoverTrigger>
-        <PopoverContent p="8" width={{ base: "sm", md: "2xl" }}>
+        <PopoverContent
+          bg="navbar-dropdown-bg"
+          border={0}
+          p="8"
+          width={{ base: "sm", md: "2xl" }}
+        >
           <HStack spacing={12} alignItems="start">
             <VStack spacing={2} alignItems="start">
               <Text fontWeight="medium">Languages</Text>

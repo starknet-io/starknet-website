@@ -11,37 +11,37 @@ export const Heading = ({ variant, children, as, ...rest }: Props) => {
   switch (variant) {
     case "h1":
       return (
-        <ChakraHeading as="h1" fontWeight="extrabold" size="2xl" {...rest}>
+        <ChakraHeading as="h1" fontWeight="extrabold" size="lg" {...rest}>
           {children}
         </ChakraHeading>
       );
     case "h2":
       return (
-        <ChakraHeading as="h2" fontWeight="extrabold" size="3xl" {...rest}>
+        <ChakraHeading as="h2" fontWeight="extrabold" size="md" {...rest}>
           {children}
         </ChakraHeading>
       );
     case "h3":
       return (
-        <ChakraHeading as="h3" fontWeight="bold" size="3xl" {...rest}>
+        <ChakraHeading as="h3" py={4} fontWeight="bold" size="xs" {...rest}>
           {children}
         </ChakraHeading>
       );
     case "h4":
       return (
-        <ChakraHeading as="h4" fontWeight="bold" size="xl" {...rest}>
+        <ChakraHeading as="h4" py={4} fontWeight="bold" size="xs" {...rest}>
           {children}
         </ChakraHeading>
       );
     case "h5":
       return (
-        <ChakraHeading as="h5" fontWeight="bold" size="lg" {...rest}>
+        <ChakraHeading as="h5" py={4} fontWeight="bold" size="xxs" {...rest}>
           {children}
         </ChakraHeading>
       );
     case "h6":
       return (
-        <ChakraHeading as="h6" fontWeight="bold" size="md" {...rest}>
+        <ChakraHeading as="h6" py={4} fontWeight="normal" size="xxs" {...rest}>
           {children}
         </ChakraHeading>
       );

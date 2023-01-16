@@ -20,8 +20,8 @@ type RootProps = {
 const Root = ({ children, ...rest }: RootProps) => {
   return (
     <Box as="footer" role="contentinfo" {...rest}>
-      <Container>
-        <Box bg="bg-surface">
+      <Box>
+        <Box>
           <Container as="footer" role="contentinfo">
             <Stack
               spacing={{ base: "12", md: "8" }}
@@ -45,7 +45,7 @@ const Root = ({ children, ...rest }: RootProps) => {
                 spacing="8"
               >
                 <StarknetLogo height="30" />
-                <Text fontSize="sm" color="subtle">
+                <Text fontSize="xs" color="subtle">
                   &copy; {new Date().getFullYear()} Starknet. All rights
                   reserved.
                 </Text>
@@ -79,7 +79,7 @@ const Root = ({ children, ...rest }: RootProps) => {
             </Stack>
           </Container>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };
@@ -108,7 +108,7 @@ type LinkProps = {
 
 const Link = ({ title, href }: LinkProps) => {
   return (
-    <Button as="a" variant="link" href={href}>
+    <Button size="sm" as="a" variant="link" href={href}>
       {title}
     </Button>
   );

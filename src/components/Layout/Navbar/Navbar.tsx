@@ -34,8 +34,8 @@ export const NavBar = ({
   return (
     <Box
       as="nav"
-      bg="bg-surface"
-      boxShadow={useColorModeValue("sm", "sm-dark")}
+      bg="navbar-bg"
+      //  boxShadow={useColorModeValue("sm", "sm-dark")}
     >
       <NavLayout
         onClickMenu={onOpen}

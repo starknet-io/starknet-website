@@ -1,16 +1,16 @@
 "use client";
 
-import { Container, Stack, ContainerProps } from "@chakra-ui/react";
-
+import { Container, Stack } from "@chakra-ui/react";
 import { Main } from "@ui/Layout/Main";
 import { Sidebar } from "@ui/Layout/Sidebar";
-import { TableOfContents } from "./TableOfContents";
 
-type Props = {} & ContainerProps;
+type Props = {
+  children: React.ReactNode;
+};
 
-export const PageContentContainer = ({ children, ...rest }: Props) => {
+export const PageContentContainerNoSidebar = ({ children }: Props) => {
   return (
-    <Container py="16" flex="1" {...rest}>
+    <Container py="16" flex="1">
       <Stack
         direction={{ base: "column", lg: "row" }}
         spacing={{ base: "12", lg: "16" }}
