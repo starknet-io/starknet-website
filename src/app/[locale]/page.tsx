@@ -9,9 +9,12 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
+import { useMessages } from "./(components)/ClientLocaleProvider";
 import { PageContentContainer } from "./(components)/PageContentContainer";
 
 export default function Index() {
+  const messages = useMessages();
+
   return (
     <PageContentContainer>
       <Box as="section" bg="bg-surface">
@@ -47,7 +50,7 @@ export default function Index() {
                     variant="primary"
                     size={useBreakpointValue({ base: "lg", md: "xl" })}
                   >
-                    Learm more
+                    Learm more {messages.search}
                   </Button>
                 </Stack>
               </Stack>

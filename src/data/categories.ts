@@ -11,8 +11,8 @@ export async function getCategories(
 ): Promise<readonly Category[]> {
   try {
     return await getFirst(
-      () => getJSON(`_dynamic/categories/${locale}/.json`),
-      () => getJSON(`_dynamic/categories/${defaultLocale}/.json`),
+      () => getJSON(`_dynamic/categories/${locale}.json`),
+      () => getJSON(`_dynamic/categories/${defaultLocale}.json`),
     );
   } catch (cause) {
     throw new Error("getCategories failed!", {

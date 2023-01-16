@@ -14,8 +14,8 @@ export interface Event {
 export async function getEvents(locale: string): Promise<readonly Event[]> {
   try {
     return await getFirst(
-      () => getJSON(`_dynamic/events/${locale}/.json`),
-      () => getJSON(`_dynamic/events/${defaultLocale}/.json`),
+      () => getJSON(`_dynamic/events/${locale}.json`),
+      () => getJSON(`_dynamic/events/${defaultLocale}.json`),
     );
   } catch (cause) {
     throw new Error("getEvents failed!", {

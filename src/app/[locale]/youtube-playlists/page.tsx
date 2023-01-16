@@ -1,19 +1,16 @@
 import { google } from "googleapis";
-import { use } from "react";
 
-export default function YoutubePlaylistsPage(): JSX.Element {
+export default async function YoutubePlaylistsPage(): Promise<JSX.Element> {
   const youtube = google.youtube({
     version: "v3",
     auth: process.env.YOUTUBE_API_KEY,
   });
 
-  const { data: playlists } = use(
-    youtube.playlists.list({
-      part: ["snippet", "contentDetails"],
-      channelId: "UCnDWguR8mE2oDBsjhQkgbvg",
-      maxResults: 20,
-    }),
-  );
+  const { data: playlists } = await youtube.playlists.list({
+    part: ["snippet", "contentDetails"],
+    channelId: "UCnDWguR8mE2oDBsjhQkgbvg",
+    maxResults: 20,
+  });
 
   return (
     <>

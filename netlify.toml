@@ -1,3 +1,6 @@
+[dev]
+framework = "next"
+
 [build]
   command = "yarn build"
   publish = ".next"

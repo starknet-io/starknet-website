@@ -1,12 +1,11 @@
-import { useLocale } from "next-intl";
 import { getEventsPage } from "src/data/settings/events-page";
 import { getEvents } from "src/data/events";
-import { use } from "react";
 
-export default function EventsPage(): JSX.Element {
-  const locale = useLocale();
-  const { title, description } = use(getEventsPage(locale));
-  const events = use(getEvents(locale));
+export default async function EventsPage({
+  params: { locale },
+}: LocaleProps): Promise<JSX.Element> {
+  const { title, description } = await getEventsPage(locale);
+  const events = await getEvents(locale);
 
   return (
     <div className="mx-auto  max-w-7xl px-2 sm:px-4 lg:px-8 pt-7">

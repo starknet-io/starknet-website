@@ -1,8 +1,8 @@
 "use client";
 import { SimpleGrid } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
-import { useLocale } from "next-intl";
 import type { MainMenu } from "src/data/settings/main-menu";
+import { useLocale } from "./ClientLocaleProvider";
 
 export interface Props {
   readonly mainMenu: MainMenu;
