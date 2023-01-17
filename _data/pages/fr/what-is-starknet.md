@@ -3,10 +3,11 @@ path: /what-is-starknet/
 title: What is starknet?
 ---
 
-
-### *StarkNet’s Governance first phase launches*
+### What is Starknet?
 
 Nous sommes heureux d'annoncer la prochaine étape du processus de décentralisation de StarkNet — voter pour des modifications de protocole.
+
+![Cairo logo](https://lh3.googleusercontent.com/A24O3j4v2jhye6FdAWRIypjdtHj3TNRgFkuIYgnzjhVWSWbjEFHHT22QoNH1Tp0Z5tDSqy61asvLtphcp0yUmF4TUqFyH9y1ty4msk0UDBo1TyPHBvvEdnJtlyvJoa2QZ6HBYsGM "cairo logo")
 
 Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
