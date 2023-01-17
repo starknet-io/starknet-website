@@ -4,22 +4,22 @@ title: What is starknet?
 ---
 
 
-### *StarkNet’s Governance first phase launches*
+### *StarkNets erste Phase der Regierungsführung startet*
 
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Wir freuen uns, den nächsten Schritt im Dezentralisierungsprozess von StarkNet ankündigen zu können – für Protokolländerungen zu stimmen.
 
 Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Dieser Beitrag wird sich auf den nächsten Schritt ausdehnen, nämlich die erste Phase der StarkNet-Regierung, die sich in den kommenden Monaten erstrecken wird.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
+* Die erste Abstimmung über die Annahme oder Ablehnung der vorgeschlagenen Änderungen am StarkNet-Protokoll wird bald stattfinden
+* Die Teilnehmer an den Abstimmungen in der ersten Phase werden sein:\
+  — Kennzeichenhalter\
+  — Delegierte ausgewählt von Kennzeicheninhabern, die ihre Stimmrechte lieber delegieren möchten\
+  — Delegierte, die von der StarkNet Stiftung ausgewählt wurden, um einige ihrer Stimmrechte auszuüben:\
+  — Ein professioneller Baumeisterrat. von der StarkNet Stiftung gesetzt
 * All are invited to nominate themselves as a delegate in StarkNet’s Governance
 * Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
 
