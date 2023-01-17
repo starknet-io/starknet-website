@@ -21,8 +21,10 @@
     "update:algolia": "yarn workspace content-onedge-workspace update-algolia-index",
     "storybook:dev": "yarn workspace storybook-workspace dev",
     "storybook:build": "yarn workspace storybook-workspace build",
-    "storybook": "yarn workspace storybook-workspace storybook",
-    "build-storybook": "yarn workspace storybook-workspace build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "theme": "chakra-cli tokens src/style/theme.ts",
+    "theme:watch": "chakra-cli tokens src/style/theme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/pro-theme": "^0.0.57",
@@ -83,6 +85,16 @@
     "netlify-cms-widget-markdown/unified": "^10.0.0"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^2.3.0"
+    "@chakra-ui/cli": "^2.3.0",
+    "@chakra-ui/storybook-addon": "^4.0.16",
+    "@storybook/addon-essentials": "^7.0.0-beta.25",
+    "@storybook/addon-interactions": "^7.0.0-beta.25",
+    "@storybook/addon-links": "^7.0.0-beta.25",
+    "@storybook/blocks": "^7.0.0-beta.25",
+    "@storybook/nextjs": "^7.0.0-beta.25",
+    "@storybook/react": "^7.0.0-beta.25",
+    "@storybook/testing-library": "^0.0.13",
+    "eslint-plugin-storybook": "^0.6.10",
+    "storybook": "^7.0.0-beta.25"
   }
 }
