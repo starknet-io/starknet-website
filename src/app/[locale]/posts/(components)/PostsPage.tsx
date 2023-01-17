@@ -14,15 +14,20 @@ import {
 } from "@chakra-ui/react";
 import * as SubNav from "@ui/SubNav/SubNav";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { useMemo } from "react";
+import { use, useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
 } from "src/libs/react-instantsearch-hooks-web";
-import { useHits, useRefinementList } from "react-instantsearch-hooks";
+import {
+  useClearRefinements,
+  useHits,
+  useRefinementList,
+} from "react-instantsearch-hooks";
 import { PageContentContainer } from "../../(components)/PageContentContainer";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
+import { getCategories } from "src/data/categories";
 
 export interface AutoProps {
   readonly params: {
@@ -53,69 +58,45 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
         <Box>
           <CustomCategories />
         </Box>
-      </InstantSearch>
-      <Box mt={6}>
-        <Breadcrumb separator="->">
-          <BreadcrumbItem>
-            <BreadcrumbLink fontSize="sm" href="#">
-              Parent
-            </BreadcrumbLink>
-          </BreadcrumbItem>
 
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink fontSize="sm" href="#">
-              Blog
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-      </Box>
-      <Box>
-        <Stack
-          direction={{ base: "column", lg: "row" }}
-          spacing={{ base: "12", lg: "16" }}
-          flex="1"
-          pt={8}
-        >
-          <Box width={{ sm: "full", md: "2xl" }}>
-            <InstantSearch
-              searchClient={searchClient}
-              indexName="web_posts_dev"
-            >
-              <Configure
-                hitsPerPage={40}
-                facetsRefinements={{ locale: [params.locale] }}
-              />
+        <Box mt={6}>
+          <Breadcrumb separator="->">
+            <BreadcrumbItem>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Parent
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Blog
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </Box>
+        <Box>
+          <Stack
+            direction={{ base: "column", lg: "row" }}
+            spacing={{ base: "12", lg: "16" }}
+            flex="1"
+            pt={8}
+          >
+            <Box width={{ sm: "full", md: "2xl" }}>
               <CustomTopics />
-            </InstantSearch>
-          </Box>
-          <Box>
-            <SectionHeader
-              title={"Blog"}
-              description={
-                "The latest articles, podcasts and videos on all things StarkNet."
-              }
-            />
-
-            <InstantSearch
-              searchClient={searchClient}
-              indexName="web_posts_dev"
-              initialUiState={{
-                ["web_posts_dev"]: {
-                  query: "All",
-                  page: 1,
-                },
-              }}
-            >
-              <Configure
-                hitsPerPage={40}
-                facetsRefinements={{ locale: [params.locale] }}
+            </Box>
+            <Box>
+              <SectionHeader
+                title={"Blog"}
+                description={
+                  "The latest articles, podcasts and videos on all things StarkNet."
+                }
               />
 
               <CustomHits />
-            </InstantSearch>
-          </Box>
-        </Stack>
-      </Box>
+            </Box>
+          </Stack>
+        </Box>
+      </InstantSearch>
     </PageContentContainer>
   );
 }
@@ -138,18 +119,6 @@ function CustomTopics() {
           {item.label}
         </Button>
       ))}
-      <Button size="sm" variant="outline">
-        ZK Proofs
-      </Button>
-      <Button size="sm" variant="outline">
-        StarkNet foundation
-      </Button>
-      <Button size="sm" variant="outline">
-        Gaming
-      </Button>
-      <Button size="sm" variant="outline">
-        dApps
-      </Button>
     </Wrap>
   );
 }
@@ -159,9 +128,11 @@ function CustomCategories() {
     attribute: "category",
     sortBy: ["name:asc"],
   });
+  const { refine: clearRefine } = useClearRefinements();
 
   return (
     <SubNav.Root>
+      <SubNav.Item onClick={() => clearRefine()}>All posts</SubNav.Item>
       {items.map((item, i) => (
         <SubNav.Item onClick={() => refine(item.value)} key={item.value}>
           <> {item.label}</>
