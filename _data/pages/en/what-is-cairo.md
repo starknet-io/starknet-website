@@ -10,7 +10,7 @@ Over the last few weeks, StarkNet took significant steps to further decentraliza
 
 This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
 
-![Cairo logo]( "cairo logo")
+![Cairo logo](https://miro.medium.com/max/1400/1*FyS2czk_3poGfRhNBSMzIw.webp "cairo logo")
 
 ### Another heading
 
