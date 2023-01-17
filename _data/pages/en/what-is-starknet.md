@@ -2,6 +2,7 @@
 path: /what-is-starknet/
 title: What is starknet?
 ---
+
 ### What is Starknet?
 
 We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
