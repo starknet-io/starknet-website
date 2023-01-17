@@ -31,4 +31,7 @@ pages:
     pages: [ ]
   - 
     page: /community/
-    pages: [ ]
+    pages:
+      - 
+        custom_link: "/blog"
+        page: ""
