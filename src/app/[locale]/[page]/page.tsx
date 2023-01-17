@@ -15,6 +15,8 @@ import {
   VStack,
   StackDivider,
   Stack,
+  Image,
+  Img,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
 import { getMessages } from "src/data/i18n/intl";
@@ -61,7 +63,14 @@ export default async function Page({
           <Box maxW={{ base: "full", md: "2xl" }}>
             <MDXContent
               components={{
-                h2: (props) => <Heading as="h2" variant="h2" {...props} />,
+                h2: (props) => (
+                  <Heading
+                    as="h2"
+                    color="heading-navy-fg"
+                    variant="h2"
+                    {...props}
+                  />
+                ),
                 h3: (props) => (
                   <Heading
                     color="heading-navy-fg"
@@ -99,6 +108,7 @@ export default async function Page({
                 ul: (props) => <UnorderedList pl={1} {...props} />,
                 ol: (props) => <OrderedList pl={1} {...props} />,
                 li: (props) => <ListItem {...props} />,
+                img: (props) => <Img my="4" {...props} />,
               }}
             />
           </Box>
