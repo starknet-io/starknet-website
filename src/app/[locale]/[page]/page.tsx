@@ -13,10 +13,13 @@ import {
   Flex,
   Box,
   VStack,
+  StackDivider,
+  Stack,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
 import { getMessages } from "src/data/i18n/intl";
 import { Sidebar } from "@ui/Layout/Sidebar";
+import { SubNavLinkGroup } from "@ui/TableOfContents/TableOfContents";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -55,7 +58,7 @@ export default async function Page({
         </Box>
 
         <Flex gap="32" direction={{ base: "column", md: "row" }} mt="8">
-          <Box maxW={{ base: "column", md: "container.sm" }}>
+          <Box maxW={{ base: "full", md: "2xl" }}>
             <MDXContent
               components={{
                 h2: (props) => <Heading as="h2" variant="h2" {...props} />,
@@ -100,11 +103,35 @@ export default async function Page({
             />
           </Box>
           <Sidebar>
-            <UnorderedList>
-              <ListItem>Hello </ListItem>
-              <ListItem>Hello </ListItem>
-              <ListItem>Hello </ListItem>
-            </UnorderedList>
+            <SubNavLinkGroup
+              label="Table of contents"
+              links={[
+                {
+                  label: "Page navigation item 1",
+                  url: "https://www.google.com",
+                },
+                {
+                  label: "Page navigation item 2",
+                  url: "https://www.google.com",
+                },
+                {
+                  label: "Page navigation item 3",
+                  url: "https://www.google.com",
+                },
+                {
+                  label: "Page navigation item 4",
+                  url: "https://www.google.com",
+                },
+                {
+                  label: "Page navigation item 5",
+                  url: "https://www.google.com",
+                },
+                {
+                  label: "Page navigation item 6",
+                  url: "https://www.google.com",
+                },
+              ]}
+            />
           </Sidebar>
         </Flex>
       </PageContentContainer>
