@@ -23,7 +23,7 @@ export default function Index() {
 
   return (
     <PageContentContainerNoSidebar>
-      <Box as="section" bg="card-bg">
+      <Box as="section" bg="card-bg" borderRadius="xl">
         <Container py={{ base: "16", md: "24" }}>
           <Stack spacing={{ base: "8", md: "10" }}>
             <Stack spacing={{ base: "4", md: "5" }} align="center">
@@ -55,46 +55,44 @@ export default function Index() {
           </Stack>
         </Container>
       </Box>
-
-      <Container py={{ base: "16", md: "24" }}>
-        <Box
-          bg="card-bg"
-          boxShadow={useColorModeValue("sm", "sm-dark")}
-          borderRadius="xl"
-          px={{ base: "6", lg: "16" }}
-          py={{ base: "10", lg: "16" }}
+      <Spacer height={12} />
+      <Box
+        bg="card-bg"
+        borderRadius="xl"
+        px={{ base: "6", lg: "16" }}
+        py={{ base: "10", lg: "16" }}
+      >
+        <Stack
+          spacing="8"
+          direction={{ base: "column", lg: "row" }}
+          justify="space-between"
         >
-          <Stack
-            spacing="8"
-            direction={{ base: "column", lg: "row" }}
-            justify="space-between"
-          >
-            <Stack spacing="4" maxW="2xl">
-              <Heading color="heading-navy-fg" as="h4" variant="h4" size="sm">
-                Community led.{" "}
-              </Heading>
-              <Text
-                color="muted"
-                fontSize={useBreakpointValue({ base: "lg", lg: "xl" })}
-              >
-                This website is a community powered guide to the Starknet
-                ecosystem
-              </Text>
-            </Stack>
-            <Stack
-              spacing="3"
-              direction={{ base: "column", sm: "row" }}
-              justify={{ base: "start" }}
+          <Stack spacing="4" maxW="2xl">
+            <Heading color="heading-navy-fg" as="h4" variant="h4" size="sm">
+              Community led.{" "}
+            </Heading>
+            <Text
+              color="muted"
+              fontSize={useBreakpointValue({ base: "lg", lg: "xl" })}
             >
-              <Button variant="secondary" size="lg">
-                Get Involved
-              </Button>
-            </Stack>
+              This website is a community powered guide to the Starknet
+              ecosystem
+            </Text>
           </Stack>
-        </Box>
-      </Container>
+          <Stack
+            spacing="3"
+            direction={{ base: "column", sm: "row" }}
+            justify={{ base: "start" }}
+          >
+            <Button variant="secondary" size="lg">
+              Get Involved
+            </Button>
+          </Stack>
+        </Stack>
+      </Box>
 
-      <Box as="section" bg="card-bg">
+      <Spacer height={24} />
+      <Box as="section" bg="card-bg" borderRadius="xl">
         <Box position="relative" height={{ lg: "500px" }}>
           <Container py={{ base: "16", md: "24" }} height="full">
             <Stack
@@ -155,7 +153,7 @@ export default function Index() {
 
       <Spacer height={12} />
 
-      <Box as="section" bg="card-bg">
+      <Box as="section" bg="card-bg" borderRadius="xl">
         <Box position="relative" height={{ lg: "500px" }}>
           <Container py={{ base: "16", md: "24" }} height="full">
             <Stack
@@ -260,9 +258,9 @@ export default function Index() {
         </Box>
       </SimpleGrid>
 
-      <Spacer height={12} />
+      <Spacer height={32} />
 
-      <Box as="section" bg="card-bg">
+      <Box as="section" bg="card-bg" borderRadius="xl">
         <Box position="relative" height={{ lg: "500px" }}>
           <Container py={{ base: "16", md: "24" }} height="full">
             <Stack
@@ -408,7 +406,7 @@ export default function Index() {
           </Stack>
         </Box>
       </SimpleGrid>
-      <Spacer height={12} />
+      <Spacer height={24} />
       <Box>
         <Heading color="heading-navy-fg" as="h2" variant="h2" mt="12" mb="8">
           Start building
@@ -492,9 +490,9 @@ export default function Index() {
         </SimpleGrid>
       </Box>
 
-      <Spacer height={6} />
+      <Spacer height={2} />
       <Box>
-        <Heading color="heading-navy-fg" as="h4" variant="h4" mt="12" mb="8">
+        <Heading color="heading-navy-fg" as="h4" variant="h4" mt="12" mb="3">
           Explore new possibilities:
         </Heading>
 
@@ -587,7 +585,7 @@ export default function Index() {
         </SimpleGrid>
       </Box>
 
-      <Spacer height={12} />
+      <Spacer height={24} />
       <Box>
         <Heading color="heading-navy-fg" as="h2" variant="h2" mt="12" mb="8">
           Start playing
@@ -673,7 +671,7 @@ export default function Index() {
         </SimpleGrid>
       </Box>
 
-      <Spacer height={12} />
+      <Spacer height={24} />
       <Box>
         <Heading color="heading-navy-fg" as="h2" variant="h2" mt="12" mb="8">
           Starknet today
