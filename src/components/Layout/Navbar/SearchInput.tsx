@@ -42,8 +42,9 @@ export const SearchInput = () => {
           <Icon as={RiSearchLine} color="gray.500" fontSize="lg" />
         </InputLeftElement>
         <Input
-          focusBorderColor="blue.500"
-          borderColor="gray.500"
+          bg={"card-bg"}
+          focusBorderColor="blue.900"
+          borderColor="gray.800"
           width="full"
           fontSize="sm"
           variant="filled"
@@ -54,9 +55,9 @@ export const SearchInput = () => {
         />
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
           <OverlayOne />
-          <ModalContent>
+          <ModalContent bg="card-bg">
             <ModalBody>
-              <Text>Search goes here</Text>
+              <Text>Algolia search</Text>
             </ModalBody>
             <ModalFooter>
               <Button onClick={onClose}>Cancel</Button>
