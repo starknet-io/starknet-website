@@ -15,6 +15,11 @@ const outline = defineStyle({
     color: "btn-outline-hover-fg",
     borderColor: "btn-outline-hover-border",
   },
+  _active: {
+    bg: "btn-outline-active-bg",
+    color: "btn-outline-active-fg",
+    borderColor: "btn-outline-active-border",
+  },
 });
 
 export const buttonTheme = defineStyleConfig({
