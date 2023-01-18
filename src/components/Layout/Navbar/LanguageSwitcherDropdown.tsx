@@ -39,6 +39,7 @@ export const LanguageSwitcherDropdown = ({
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
+    offset={[0, 30]}
   >
     {({ isOpen }) => (
       <>
@@ -55,7 +56,9 @@ export const LanguageSwitcherDropdown = ({
         <PopoverContent
           bg="navbar-dropdown-bg"
           border={0}
-          p="8"
+          py="48px"
+          px="32px"
+          right="32px"
           borderRadius="16px"
           width={{ base: "sm", md: "3xl" }}
         >
@@ -65,9 +68,9 @@ export const LanguageSwitcherDropdown = ({
             divider={
               <StackDivider
                 borderColor="divider-bg"
-                top="24px"
+                top="0"
                 position="relative"
-                height="450px"
+                height="435px"
               />
             }
           >

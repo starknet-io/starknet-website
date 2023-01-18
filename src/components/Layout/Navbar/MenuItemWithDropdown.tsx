@@ -23,6 +23,7 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
+    offset={[0, 30]}
   >
     {({ isOpen }) => (
       <>
