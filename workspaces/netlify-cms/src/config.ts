@@ -3,7 +3,9 @@ import { CmsConfig } from "netlify-cms-core";
 const locale = "en";
 
 const branch =
-  location.pathname === "/" ? "dev" : location.pathname.replace("^/", "");
+  location.pathname === "/" ? "dev" : location.pathname.replace(/^\//, "");
+
+console.log(branch);
 
 export const config: CmsConfig = {
   backend: {
@@ -552,20 +554,30 @@ export const config: CmsConfig = {
                   widget: "list",
                   fields: [
                     {
-                      label: "Title",
-                      name: "title",
-                      required: false,
-                    },
-                    {
                       label: "Blocks",
                       name: "blocks",
                       widget: "list",
                       fields: [
                         {
+                          label: "Title",
+                          name: "title",
+                          required: false,
+                        },
+                        {
                           label: "Menu Items",
                           name: "items",
                           widget: "list",
                           fields: [
+                            {
+                              label: "Custom Title",
+                              required: false,
+                              name: "custom_title",
+                            },
+                            {
+                              label: "Custom Icon",
+                              required: false,
+                              name: "custom_icon",
+                            },
                             {
                               label: "Custom Internal Link",
                               required: false,
