@@ -59,7 +59,7 @@ export const Heading = ({ variant, children, as, ...rest }: Props) => {
       );
     case "h6":
       return (
-        <ChakraHeading as="h6" fontSize="0.875rem" {...rest}>
+        <ChakraHeading as="h6" fontSize="0.875rem" lineHeight="1rem" {...rest}>
           {children}
         </ChakraHeading>
       );
