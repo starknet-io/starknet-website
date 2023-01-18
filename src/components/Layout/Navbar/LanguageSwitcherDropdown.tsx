@@ -3,14 +3,16 @@ import {
   PopoverContent,
   PopoverTrigger,
   Stack,
-  Text,
   Icon,
   HStack,
   Button,
   VStack,
   Spacer,
   Img,
+  Box,
 } from "@chakra-ui/react";
+import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 
 import * as React from "react";
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
@@ -28,6 +30,7 @@ export const LanguageSwitcherDropdown = ({
   description,
   children,
   selectedLocale,
+  title = "Languages",
 }: Props) => (
   <Popover
     trigger="hover"
@@ -52,25 +55,37 @@ export const LanguageSwitcherDropdown = ({
           bg="navbar-dropdown-bg"
           border={0}
           p="8"
-          width={{ base: "sm", md: "2xl" }}
+          width={{ base: "sm", md: "3xl" }}
         >
-          <HStack spacing={12} alignItems="start">
+          <HStack spacing={8} alignItems="start">
             <VStack spacing={2} alignItems="start">
-              <Text fontWeight="medium">Languages</Text>
+              <Heading
+                pl={10}
+                color="heading-navy-fg"
+                as="h6"
+                variant="h6"
+                textTransform="uppercase"
+              >
+                {title}
+              </Heading>
               {children}
               <Spacer height={3} />
-              <Button variant="primary">See all languages</Button>
+              <Box pl={10}>
+                <Button variant="outline">See all languages</Button>
+              </Box>
             </VStack>
 
             <Stack spacing="1" pb={4}>
-              <Text fontWeight="medium">Language Center</Text>
-              <Img
-                height={122}
-                py={2}
-                borderRadius="md"
-                src="https://www.solidbackgrounds.com/images/1024x768/1024x768-trolley-grey-solid-color-background.jpg"
-              />
-              <Text fontSize="sm" color="muted">
+              <Heading
+                color="heading-navy-fg"
+                as="h6"
+                variant="h6"
+                textTransform="uppercase"
+              >
+                Language Center
+              </Heading>
+
+              <Text variant="cardBody">
                 {description}
               </Text>
             </Stack>
