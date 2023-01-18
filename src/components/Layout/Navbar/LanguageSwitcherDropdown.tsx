@@ -10,6 +10,7 @@ import {
   Spacer,
   Img,
   Box,
+  StackDivider,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -55,15 +56,28 @@ export const LanguageSwitcherDropdown = ({
           bg="navbar-dropdown-bg"
           border={0}
           p="8"
+          borderRadius="16px"
           width={{ base: "sm", md: "3xl" }}
         >
-          <HStack spacing={8} alignItems="start">
+          <HStack
+            spacing={8}
+            alignItems="start"
+            divider={
+              <StackDivider
+                borderColor="divider-bg"
+                top="24px"
+                position="relative"
+                height="450px"
+              />
+            }
+          >
             <VStack spacing={2} alignItems="start">
               <Heading
                 pl={10}
                 color="heading-navy-fg"
                 as="h6"
                 variant="h6"
+                mb={3}
                 textTransform="uppercase"
               >
                 {title}
@@ -81,13 +95,12 @@ export const LanguageSwitcherDropdown = ({
                 as="h6"
                 variant="h6"
                 textTransform="uppercase"
+                mb={5}
               >
                 Language Center
               </Heading>
 
-              <Text variant="cardBody">
-                {description}
-              </Text>
+              <Text variant="cardBody">{description}</Text>
             </Stack>
           </HStack>
         </PopoverContent>
