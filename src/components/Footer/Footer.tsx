@@ -10,6 +10,8 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
+import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { StarknetLogo } from "../Logo/StarknetLogo";
 
@@ -92,10 +94,11 @@ type ColumnProps = {
 const Column = ({ title, children }: ColumnProps) => {
   return (
     <Stack spacing="4" minW={{ lg: "40" }}>
-      <Text fontSize="sm" fontWeight="semibold" color="subtle">
+      {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
-      </Text>
-      <Stack spacing="3" shouldWrapChildren>
+      </Text> */}
+      <NavbarHeading tt="capitalize">{title}</NavbarHeading>
+      <Stack spacing="1" shouldWrapChildren>
         {children}
       </Stack>
     </Stack>
@@ -104,13 +107,14 @@ const Column = ({ title, children }: ColumnProps) => {
 type LinkProps = {
   title: string;
   href: string;
+  isExternal?: boolean;
 };
 
-const Link = ({ title, href }: LinkProps) => {
+const Link = ({ title, href, isExternal }: LinkProps) => {
   return (
-    <Button size="sm" as="a" variant="link" href={href}>
+    <NavBarLink isExternal={false} href={href}>
       {title}
-    </Button>
+    </NavBarLink>
   );
 };
 

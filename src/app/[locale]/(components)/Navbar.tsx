@@ -9,6 +9,8 @@ import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { NavLink } from "@ui/Layout/Navbar/NavLink";
 import { Text } from "@ui/Typography/Text";
 import { useLocale } from "./ClientLocaleProvider";
+import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
+import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -25,19 +27,13 @@ export default function Navbar({ mainMenu }: Props) {
           <>
             {mainMenu.pages.map(({ page, title, pages }) => {
               return (
-                <MenuItemWithDropdown
-                  key={title}
-                  title={title}
-                  hubTitle={title}
-                  hubLink={page}
-                >
+                <MenuItemWithDropdown key={title} label={title}>
+                  <NavbarHeading>Heading</NavbarHeading>
                   {pages.map(({ page, title }) => {
                     return (
-                      <NavLink
-                        key={page}
-                        href={`/${locale}${page}`}
-                        label={title}
-                      />
+                      <NavBarLink key={page} href={`/${locale}${page}`}>
+                        {title}
+                      </NavBarLink>
                     );
                   })}
                 </MenuItemWithDropdown>
@@ -52,13 +48,12 @@ export default function Navbar({ mainMenu }: Props) {
                 <NavAccordian.Item key={page}>
                   <NavAccordian.Button title={title} />
                   <NavAccordian.Panel>
+                    <NavbarHeading pt="24px">The Basics</NavbarHeading>
                     {pages.map(({ page, title }) => {
                       return (
-                        <NavAccordian.Link
-                          title={title}
-                          key={page}
-                          href={`/${locale}/${page}`}
-                        />
+                        <NavBarLink key={page} href={`/${locale}${page}`}>
+                          {title}
+                        </NavBarLink>
                       );
                     })}
                   </NavAccordian.Panel>

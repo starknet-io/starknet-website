@@ -6,6 +6,7 @@ import { theme as proTheme } from "@chakra-ui/pro-theme";
 import { extendTheme } from "@chakra-ui/react";
 import { badgeTheme } from "../components/Badge/BadgeStyles";
 import { tagTheme } from "../components/Tag/TagStyles";
+import { accordionTheme } from "@ui/Accordion/Accordion";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -20,6 +21,20 @@ const theme = extendTheme(proTheme, {
     },
   },
   components: {
+    Accordion: accordionTheme,
+    Drawer: {
+      parts: ["dialog", "header", "body"],
+      variants: {
+        primary: {
+          dialog: {
+            background: "nav-dialog-bg",
+          },
+          header: {
+            background: "nav-header-bg",
+          },
+        },
+      },
+    },
     Button,
     Badge: badgeTheme,
     tag: tagTheme,

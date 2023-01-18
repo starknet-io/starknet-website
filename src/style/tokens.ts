@@ -17,7 +17,6 @@ export const tokens = {
       "btn-outline-active-bg": "#EFEFEF",
       "btn-outline-active-fg": "#6B7280",
       "btn-outline-active-border": "#EFEFEF",
-
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -39,7 +38,7 @@ export const tokens = {
       "article-card-bg": "#FFFFFF",
       "card-bg": "#FFFFFF",
       "subnav-fg": "#858585",
-      "subnav-fg-accent": "0C0C4F",
+      "subnav-fg-accent": "#0C0C4F",
       "heading-navy-fg": "#0C0C4F",
       "columnlink-bg": "transparent",
       "columnlink-fg": "#6B7280",
@@ -48,6 +47,19 @@ export const tokens = {
       "columnlink-active-bg": "#FFFFFF",
       "columnlink-active-fg": "#0C0C4F",
       "divider-bg": "#EFEFEF",
+      "navbar-link-bg": "transparent",
+      "navbar-link-fg": "#6B7280",
+      "navbar-link-hover-bg": "#FBFBFB",
+      "navbar-link-hover-fg": "#5C94FF",
+      "navbar-link-active-bg": "transparent",
+      "navbar-link-active-fg": "#2166EF",
+      "navbar-link-visited-bg": "transparent",
+      "navbar-link-visited-fg": "#2166EF",
+      "nav-dialog-bg": "#FBFBFB",
+      "nav-header-bg": "#ffffff",
+      "nav-accordian-expanded-bg": "#0C0C4F",
+      "nav-accordian-expanded-fg": "#FFFFFF",
+      "nav-footer-br": "#EFEFEF",
     },
 
     dark: {
@@ -97,6 +109,19 @@ export const tokens = {
       "columnlink-active-bg": "transparent",
       "columnlink-active-fg": "#9EBFFF",
       "divider-bg": "#313131",
+      "navbar-link-bg": "transparent",
+      "navbar-link-fg": "#CCCCCC",
+      "navbar-link-hover-bg": "#121212",
+      "navbar-link-hover-fg": "#9EBFFF",
+      "navbar-link-active-bg": "transparent",
+      "navbar-link-active-fg": "#2166EF",
+      "navbar-link-visited-bg": "transparent",
+      "navbar-link-visited-fg": "#2166EF",
+      "nav-dialog-bg": "#1B1B1B",
+      "nav-header-bg": "#000000",
+      "nav-accordian-expanded-bg": "#AFCAFF",
+      "nav-accordian-expanded-fg": "#121212",
+      "nav-footer-br": "#313131",
     },
   },
 };
@@ -279,6 +304,58 @@ export const semanticTokens = {
     "btn-outline-active-border": {
       default: tokens.colors.light["btn-outline-active-border"],
       _dark: tokens.colors.dark["btn-outline-active-border"],
+    },
+    "navbar-link-bg": {
+      default: tokens.colors.light["navbar-link-bg"],
+      _dark: tokens.colors.dark["navbar-link-bg"],
+    },
+    "navbar-link-fg": {
+      default: tokens.colors.light["navbar-link-fg"],
+      _dark: tokens.colors.dark["navbar-link-fg"],
+    },
+    "navbar-link-hover-bg": {
+      default: tokens.colors.light["navbar-link-hover-bg"],
+      _dark: tokens.colors.dark["navbar-link-hover-bg"],
+    },
+    "navbar-link-active-bg": {
+      default: tokens.colors.light["navbar-link-active-bg"],
+      _dark: tokens.colors.dark["navbar-link-active-bg"],
+    },
+    "navbar-link-hover-fg": {
+      default: tokens.colors.light["navbar-link-hover-fg"],
+      _dark: tokens.colors.dark["navbar-link-hover-fg"],
+    },
+    "navbar-link-active-fg": {
+      default: tokens.colors.light["navbar-link-active-fg"],
+      _dark: tokens.colors.dark["navbar-link-active-fg"],
+    },
+    "navbar-link-visited-bg": {
+      default: tokens.colors.light["navbar-link-visited-bg"],
+      _dark: tokens.colors.dark["navbar-link-visited-bg"],
+    },
+    "navbar-link-visited-fg": {
+      default: tokens.colors.light["navbar-link-visited-fg"],
+      _dark: tokens.colors.dark["navbar-link-visited-fg"],
+    },
+    "nav-dialog-bg": {
+      default: tokens.colors.light["nav-dialog-bg"],
+      _dark: tokens.colors.dark["nav-dialog-bg"],
+    },
+    "nav-header-bg": {
+      default: tokens.colors.light["nav-header-bg"],
+      _dark: tokens.colors.dark["nav-header-bg"],
+    },
+    "nav-accordian-expanded-bg": {
+      default: tokens.colors.light["nav-accordian-expanded-bg"],
+      _dark: tokens.colors.dark["nav-accordian-expanded-bg"],
+    },
+    "nav-accordian-expanded-fg": {
+      default: tokens.colors.light["nav-accordian-expanded-fg"],
+      _dark: tokens.colors.dark["nav-accordian-expanded-fg"],
+    },
+    "nav-footer-br": {
+      default: tokens.colors.light["nav-footer-br"],
+      _dark: tokens.colors.dark["nav-footer-br"],
     },
   },
 };

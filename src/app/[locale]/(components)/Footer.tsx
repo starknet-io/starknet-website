@@ -24,6 +24,7 @@ export const Footer = ({ mainMenu }: Props) => {
               {pages.map(({ page, title }) => {
                 return (
                   <FooterComponent.Link
+                    isExternal
                     key={title}
                     href={`/${locale}${page}`}
                     title={title}
