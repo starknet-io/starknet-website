@@ -1,3 +1,4 @@
+import { MDXProps } from "mdx/types";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getMDXModule } from "./utils";
 
@@ -6,7 +7,7 @@ interface Topic {
   readonly image: string;
   readonly twitter: string;
   readonly website_url: string;
-  readonly description: string;
+  readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
 export async function getDapps(locale: string): Promise<readonly Topic[]> {

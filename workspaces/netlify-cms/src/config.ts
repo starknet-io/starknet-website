@@ -360,7 +360,7 @@ export const config: CmsConfig = {
         },
         {
           label: "Glossary description",
-          name: "glossary_description",
+          name: "body",
           widget: "markdown",
         },
       ],
@@ -391,7 +391,7 @@ export const config: CmsConfig = {
         },
         {
           label: "Description",
-          name: "description",
+          name: "body",
           widget: "markdown",
         },
       ],
@@ -422,7 +422,7 @@ export const config: CmsConfig = {
         },
         {
           label: "Description",
-          name: "description",
+          name: "body",
           widget: "markdown",
         },
       ],

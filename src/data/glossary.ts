@@ -1,9 +1,10 @@
+import { MDXProps } from "mdx/types";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getMDXModule } from "./utils";
 
 interface Topic {
   readonly glossary_item: string;
-  readonly glossary_description: string;
+  readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
 export async function getGlossary(locale: string): Promise<readonly Topic[]> {
