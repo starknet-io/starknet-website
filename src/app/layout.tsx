@@ -1,7 +1,13 @@
-interface Props {
-  readonly children: React.ReactNode;
-}
+import React from "react";
 
-export default async function RootLayout({ children }: Props) {
-  return <>{children}</>;
+interface Props extends React.PropsWithChildren {}
+
+export default async function RootLayout({
+  children,
+}: Props): Promise<JSX.Element> {
+  return (
+    <html>
+      <body>{children}</body>
+    </html>
+  );
 }

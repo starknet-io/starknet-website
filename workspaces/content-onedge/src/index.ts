@@ -8,25 +8,40 @@ import { defaultLocale, locales } from "./locales";
 import { mdx } from "./mdx";
 import { transformMainMenu } from "./main-menu";
 
-// categories, events, topics
-for (const datatype of ["categories", "events", "topics"]) {
-  await fs.mkdir(`_data/_dynamic/${datatype}`, { recursive: true });
+const datatypes = [
+  "categories",
+  "events",
+  "topics",
+  "glossary",
+  "dapps",
+  "wallets",
+  "block_explorers",
+  "bridges",
+];
 
-  const filenames = await fs.readdir(`_data/${datatype}/${defaultLocale}`);
+for (const datatype of datatypes) {
+  try {
+    await fs.mkdir(`_data/_dynamic/${datatype}`, { recursive: true });
 
-  for (const locale of locales) {
-    const data: any[] = [];
+    const filenames = await fs.readdir(`_data/${datatype}/${defaultLocale}`);
 
-    for (const filename of filenames) {
-      data.push(
-        await getFirst(
-          () => mdx(`_data/${datatype}/${locale.code}/${filename}`),
-          () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`),
-        ),
-      );
+    for (const locale of locales) {
+      const data: any[] = [];
+
+      for (const filename of filenames) {
+        data.push(
+          await getFirst(
+            () => mdx(`_data/${datatype}/${locale.code}/${filename}`),
+            () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`),
+          ),
+        );
+      }
+
+      await write(`_data/_dynamic/${datatype}/${locale.code}.json`, data);
     }
-
-    await write(`_data/_dynamic/${datatype}/${locale.code}.json`, data);
+  } catch (err) {
+    console.log("datatype", datatype);
+    console.log(err);
   }
 }
 
