@@ -8,6 +8,16 @@ export const tokens = {
       "navbar-bg": "#FAFAFA",
       "navbar-dropdown-bg": "#FFFFFF",
       "navlink-fg": "#6B7280",
+      "btn-outline-bg": "transparent",
+      "btn-outline-fg": "#6B7280",
+      "btn-outline-border": "#EFEFEF",
+      "btn-outline-hover-bg": "transparent",
+      "btn-outline-hover-fg": "#5C94FF",
+      "btn-outline-hover-border": "#5C94FF",
+      "btn-outline-active-bg": "#EFEFEF",
+      "btn-outline-active-fg": "#6B7280",
+      "btn-outline-active-border": "#EFEFEF",
+
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -31,6 +41,12 @@ export const tokens = {
       "subnav-fg": "#858585",
       "subnav-fg-accent": "0C0C4F",
       "heading-navy-fg": "#0C0C4F",
+      "columnlink-bg": "transparent",
+      "columnlink-fg": "#6B7280",
+      "columnlink-hover-bg": "#FBFBFB",
+      "columnlink-hover-fg": "#5C94FF",
+      "columnlink-active-bg": "#FFFFFF",
+      "columnlink-active-fg": "#0C0C4F",
     },
 
     dark: {
@@ -41,6 +57,15 @@ export const tokens = {
       "navbar-bg": "#121212",
       "navbar-dropdown-bg": "#1B1B1B",
       "navlink-fg": "#CCCCCC",
+      "btn-outline-bg": "transparent",
+      "btn-outline-fg": "#6B7280",
+      "btn-outline-border": "#EFEFEF",
+      "btn-outline-hover-bg": "transparent",
+      "btn-outline-hover-fg": "#5C94FF",
+      "btn-outline-hover-border": "#5C94FF",
+      "btn-outline-active-bg": "#EFEFEF",
+      "btn-outline-active-fg": "#6B7280",
+      "btn-outline-active-border": "#EFEFEF",
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -64,6 +89,12 @@ export const tokens = {
       "subnav-fg": "#7E7E7E",
       "subnav-fg-accent": "#ffffff",
       "heading-navy-fg": "#FFFFFF",
+      "columnlink-bg": "transparent",
+      "columnlink-fg": "#CCCCCC",
+      "columnlink-hover-bg": "#121212",
+      "columnlink-hover-fg": "#9EBFFF",
+      "columnlink-active-bg": "transparent",
+      "columnlink-active-fg": "#9EBFFF",
     },
   },
 };
@@ -191,5 +222,62 @@ export const semanticTokens = {
       default: tokens.colors.light["heading-navy-fg"],
       _dark: tokens.colors.dark["heading-navy-fg"],
     },
+    "columnlink-bg": {
+      default: tokens.colors.light["columnlink-bg"],
+      _dark: tokens.colors.dark["columnlink-bg"],
+    },
+    "columnlink-fg": {
+      default: tokens.colors.light["columnlink-fg"],
+      _dark: tokens.colors.dark["columnlink-fg"],
+    },
+    "columnlink-hover-bg": {
+      default: tokens.colors.light["columnlink-hover-bg"],
+      _dark: tokens.colors.dark["columnlink-hover-bg"],
+    },
+    "columnlink-hover-fg": {
+      default: tokens.colors.light["columnlink-hover-fg"],
+      _dark: tokens.colors.dark["columnlink-hover-fg"],
+    },
+    "columnlink-active-bg": {
+      default: tokens.colors.light["columnlink-active-bg"],
+      _dark: tokens.colors.dark["columnlink-active-bg"],
+    },
+    "columnlink-active-fg": {
+      default: tokens.colors.light["columnlink-active-fg"],
+      _dark: tokens.colors.dark["columnlink-active-fg"],
+    },
+    "btn-outline-bg": {
+      default: tokens.colors.light["btn-outline-bg"],
+      _dark: tokens.colors.dark["btn-outline-bg"],
+    },
+    "btn-outline-fg": {
+      default: tokens.colors.light["btn-outline-fg"],
+      _dark: tokens.colors.dark["btn-outline-fg"],
+    },
+    "btn-outline-border": {
+      default: tokens.colors.light["btn-outline-border"],
+      _dark: tokens.colors.dark["btn-outline-border"],
+    },
+    "btn-outline-hover-border": {
+      default: tokens.colors.light["btn-outline-hover-border"],
+      _dark: tokens.colors.dark["btn-outline-hover-border"],
+    },
+    "btn-outline-hover-fg": {
+      default: tokens.colors.light["btn-outline-hover-fg"],
+      _dark: tokens.colors.dark["btn-outline-hover-fg"],
+    },
+    "btn-outline-active-bg": {
+      default: tokens.colors.light["btn-outline-active-bg"],
+      _dark: tokens.colors.dark["btn-outline-active-bg"],
+    },
+    "btn-outline-active-fg": {
+      default: tokens.colors.light["btn-outline-active-fg"],
+      _dark: tokens.colors.dark["btn-outline-active-fg"],
+    },
+    "btn-outline-active-border": {
+      default: tokens.colors.light["btn-outline-active-border"],
+      _dark: tokens.colors.dark["btn-outline-active-border"],
+    },
+
   },
 };

@@ -1,7 +1,7 @@
 "use client";
 import { semanticTokens } from "./tokens";
 import { styles } from "./global-styles";
-import { ButtonStyles as Button } from "../components/Button/ButtonStyles";
+import { buttonTheme as Button } from "../components/Button/ButtonStyles";
 import { theme as proTheme } from "@chakra-ui/pro-theme";
 import { extendTheme } from "@chakra-ui/react";
 import { badgeTheme } from "../components/Badge/BadgeStyles";
