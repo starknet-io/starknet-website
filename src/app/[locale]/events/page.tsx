@@ -1,30 +1,54 @@
-import { useLocale } from "next-intl";
 import { getEventsPage } from "src/data/settings/events-page";
 import { getEvents } from "src/data/events";
-import { use } from "react";
+import { PageContentContainer } from "../(components)/PageContentContainer";
+import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
+import { EventCard } from "@ui/ListCards/EventCard";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Box,
+  Wrap,
+} from "../../../libs/chakra-ui";
 
-export default function EventsPage(): JSX.Element {
-  const locale = useLocale();
-  const { title, description } = use(getEventsPage(locale));
-  const events = use(getEvents(locale));
+export default async function EventsPage({
+  params: { locale },
+}: LocaleProps): Promise<JSX.Element> {
+  const { title, description } = await getEventsPage(locale);
+  const events = await getEvents(locale);
 
   return (
-    <div className="mx-auto  max-w-7xl px-2 sm:px-4 lg:px-8 pt-7">
-      <div className="prose">
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </div>
+    <PageContentContainer>
+      <Breadcrumb separator="->">
+        <BreadcrumbItem>
+          <BreadcrumbLink fontSize="sm" href="#">
+            Parent
+          </BreadcrumbLink>
+        </BreadcrumbItem>
 
-      <div className="grid grid-cols-1  gap-4  sm:grid-cols-1 sm:gap-6 lg:grid-cols-1 xl:gap-8 pt-6">
-        {events.map((event) => (
-          <div key={event.name} className="relative prose">
-            <div className="group p-2 aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-              <h3>{event.name}</h3>
-              <h4>{event.location_name}</h4>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink fontSize="sm" href="#">
+            Events
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+
+      <SectionHeader title={title} description={description} />
+      <Box>
+        <Wrap spacing={4} direction="column">
+          {events.map((event) => (
+            <EventCard
+              href="https://www.google.com"
+              startDateTime="Fri, Jan 12 • 2:00 PM EST"
+              key={event.name}
+              description={
+                "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
+              }
+              title={event.name}
+            />
+          ))}
+        </Wrap>
+      </Box>
+    </PageContentContainer>
   );
 }

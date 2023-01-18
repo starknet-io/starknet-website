@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
 import * as NavAccordian from "../../../components/Layout/Navbar/NavAccordion";
-import { useLocale } from "next-intl";
 import type { MainMenu } from "src/data/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
-import { Link as ChakraLink, Stack } from "@chakra-ui/react";
+import { NavLink } from "@ui/Layout/Navbar/NavLink";
 import { Text } from "@ui/Typography/Text";
+import { useLocale } from "./ClientLocaleProvider";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -34,17 +33,11 @@ export default function Navbar({ mainMenu }: Props) {
                 >
                   {pages.map(({ page, title }) => {
                     return (
-                      <ChakraLink
-                        variant="menu"
-                        href={`/${locale}${page}`}
+                      <NavLink
                         key={page}
-                      >
-                        <Stack spacing="2" direction="row" p="0">
-                          <Stack spacing="1">
-                            <Text>{title}</Text>
-                          </Stack>
-                        </Stack>
-                      </ChakraLink>
+                        href={`/${locale}${page}`}
+                        label={title}
+                      />
                     );
                   })}
                 </MenuItemWithDropdown>

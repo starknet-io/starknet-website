@@ -21,8 +21,10 @@
     "update:algolia": "yarn workspace content-onedge-workspace update-algolia-index",
     "storybook:dev": "yarn workspace storybook-workspace dev",
     "storybook:build": "yarn workspace storybook-workspace build",
-    "storybook": "yarn workspace storybook-workspace storybook",
-    "build-storybook": "yarn workspace storybook-workspace build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "theme": "chakra-cli tokens src/style/theme.ts",
+    "theme:watch": "chakra-cli tokens src/style/theme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/pro-theme": "^0.0.57",
@@ -30,6 +32,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/inter": "^4.5.14",
+    "@formatjs/intl-localematcher": "^0.2.32",
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
     "@mdx-js/loader": "^2.2.1",
@@ -39,6 +42,7 @@
     "@next/mdx": "^13.1.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/mdx": "^2.0.3",
+    "@types/negotiator": "^0.6.1",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
@@ -54,9 +58,9 @@
     "googleapis": "^110.0.0",
     "happy-dom": "^8.1.3",
     "js-yaml-loader": "^1.2.2",
+    "negotiator": "^0.6.3",
     "netlify-cli": "^12.7.2",
     "next": "^13.1.2",
-    "next-intl": "2.11.0-beta.1",
     "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -81,6 +85,16 @@
     "netlify-cms-widget-markdown/unified": "^10.0.0"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^2.3.0"
+    "@chakra-ui/cli": "^2.3.0",
+    "@chakra-ui/storybook-addon": "^4.0.16",
+    "@storybook/addon-essentials": "^7.0.0-beta.25",
+    "@storybook/addon-interactions": "^7.0.0-beta.25",
+    "@storybook/addon-links": "^7.0.0-beta.25",
+    "@storybook/blocks": "^7.0.0-beta.25",
+    "@storybook/nextjs": "^7.0.0-beta.25",
+    "@storybook/react": "^7.0.0-beta.25",
+    "@storybook/testing-library": "^0.0.13",
+    "eslint-plugin-storybook": "^0.6.10",
+    "storybook": "^7.0.0-beta.25"
   }
 }

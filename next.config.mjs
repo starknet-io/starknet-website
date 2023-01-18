@@ -1,7 +1,6 @@
 import mdx from "@next/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import withNextIntl from "next-intl/withNextIntl";
 
 const withMDX = mdx({
   extension: /\.mdx?$/,
@@ -27,7 +26,6 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
   },
-  i18nConfig: 'src/data/i18n/config.ts',
   webpack(config, _context) {
     config.module.rules.push({
       test: /\.ya?ml$/,
@@ -38,4 +36,4 @@ const nextConfig = {
   },
 };
 
-export default withNextIntl(withMDX(nextConfig));
+export default withMDX(nextConfig);

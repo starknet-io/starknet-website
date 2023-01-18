@@ -29,11 +29,20 @@ export const MenuItemWithDropdown = ({ children, title, hubTitle }: Props) => (
     {({ isOpen }) => (
       <>
         <PopoverTrigger>
-          <Button variant="link" rightIcon={<PopoverIcon isOpen={isOpen} />}>
+          <Button
+            size="sm"
+            variant="link"
+            rightIcon={<PopoverIcon isOpen={isOpen} />}
+          >
             {title}
           </Button>
         </PopoverTrigger>
-        <PopoverContent p="5" width={{ base: "sm", md: "2xl" }}>
+        <PopoverContent
+          bg="navbar-dropdown-bg"
+          border={0}
+          p="5"
+          width={{ base: "sm", md: "2xl" }}
+        >
           <Stack spacing="1" pb={4}>
             <Text fontWeight="medium">{hubTitle}</Text>
             <Text fontSize="sm" color="muted">

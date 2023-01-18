@@ -548,19 +548,7 @@ export const config: CmsConfig = {
                   value_field: "path",
                   display_fields: ["title"],
                 },
-                {
-                  label: "Post",
-                  name: "post",
-                  widget: "relation",
-                  collection: "posts",
-                  search_fields: ["title"],
-                  value_field: "id",
-                  display_fields: ["title"],
-                },
-                {
-                  label: "Custom Link",
-                  name: "custom_link",
-                },
+
                 {
                   label: "Pages",
                   name: "pages",
@@ -569,11 +557,28 @@ export const config: CmsConfig = {
                     {
                       label: "Page",
                       name: "page",
+                      required: false,
                       widget: "relation",
                       collection: "pages",
                       search_fields: ["title"],
                       value_field: "path",
                       display_fields: ["title"],
+                    },
+                    {
+                      label: "Post",
+                      name: "post",
+                      required: false,
+                      widget: "relation",
+                      collection: "posts",
+                      search_fields: ["title"],
+                      value_field: "id",
+                      display_fields: ["title"],
+                    },
+                    {
+                      label: "Custom Link",
+                      display_fields: ["title"],
+                      required: false,
+                      name: "custom_link",
                     },
                     {
                       label: "Pages",
