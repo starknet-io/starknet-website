@@ -1,2 +1,11 @@
 items:
   - title: Learn
+    Columns:
+      - title: Start here
+        blocks:
+          - items:
+              - page: /learn/
+                custom_internal_link: ""
+  - title: Developers
+  - title: Ecosystem
+  - title: Community
