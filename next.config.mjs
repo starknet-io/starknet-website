@@ -26,13 +26,6 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
   },
-  async redirects() {
-    return [{
-      source: '/',
-      destination: '/en',
-      permanent: false
-    }]
-  },
   webpack(config, _context) {
     config.module.rules.push({
       test: /\.ya?ml$/,
