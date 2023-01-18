@@ -6,9 +6,12 @@ export interface Event {
   readonly image: string;
   readonly start_date: Date;
   readonly end_date: Date;
-  readonly location: string; //'{"type":"Point","coordinates":[-7.0944214,53.1764117]}'
-  readonly location_name: string;
+  readonly location: string;
+  readonly city: string;
+  readonly venue: string;
+  readonly type: string;
   readonly url: string;
+  readonly tags: string;
 }
 
 export async function getEvents(locale: string): Promise<readonly Event[]> {
