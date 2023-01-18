@@ -2,11 +2,9 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-  SimpleGrid,
   Stack,
   Text,
   Icon,
-  Flex,
   HStack,
   Button,
   VStack,
@@ -15,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 
 import * as React from "react";
-import { FiGlobe } from "react-icons/fi";
+import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 import { PopoverIcon } from "./PopoverIcon";
 
@@ -43,7 +41,7 @@ export const LanguageSwitcherDropdown = ({
         <PopoverTrigger>
           <Button
             size="sm"
-            leftIcon={<Icon as={FiGlobe} fontSize="xl" />}
+            leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
             variant="link"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
           >

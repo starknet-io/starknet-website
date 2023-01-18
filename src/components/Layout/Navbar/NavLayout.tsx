@@ -2,18 +2,20 @@ import {
   HStack,
   Icon,
   IconButton,
-  StackDivider,
   useBreakpointValue,
   ButtonGroup,
   Container,
   useColorMode,
-  Spacer,
 } from "@chakra-ui/react";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import Link from "next/link";
 
-import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
-import { MdClose } from "react-icons/md";
+import {
+  HiBars3,
+  HiOutlineMoon,
+  HiOutlineSun,
+  HiOutlineXMark,
+} from "react-icons/hi2";
 import { SearchInput } from "./SearchInput";
 
 type NavLayoutProps = {
@@ -27,7 +29,7 @@ type NavLayoutProps = {
 
 export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
-  const MenuIcon = isMenuOpen ? MdClose : FiMenu;
+  const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (
@@ -52,9 +54,9 @@ export const NavLayout = (props: NavLayoutProps) => {
                 variant="ghost"
                 icon={
                   colorMode === "light" ? (
-                    <Icon as={FiMoon} fontSize="xl" />
+                    <Icon as={HiOutlineMoon} fontSize="xl" />
                   ) : (
-                    <Icon as={FiSun} fontSize="xl" />
+                    <Icon as={HiOutlineSun} fontSize="xl" />
                   )
                 }
                 aria-label="Toggle color mode"

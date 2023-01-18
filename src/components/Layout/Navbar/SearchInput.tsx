@@ -16,7 +16,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { RiSearchLine } from "react-icons/ri";
+import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+
 import { Text } from "../../Typography/Text";
 
 export const SearchInput = () => {
@@ -30,7 +31,7 @@ export const SearchInput = () => {
     return (
       <IconButton
         variant="ghost"
-        icon={<Icon as={RiSearchLine} fontSize="xl" />}
+        icon={<Icon as={HiOutlineMagnifyingGlass} fontSize="xl" />}
         aria-label="Open Menu"
       />
     );
@@ -39,7 +40,7 @@ export const SearchInput = () => {
     <>
       <InputGroup>
         <InputLeftElement>
-          <Icon as={RiSearchLine} color="gray.500" fontSize="lg" />
+          <Icon as={HiOutlineMagnifyingGlass} color="gray.500" fontSize="lg" />
         </InputLeftElement>
         <Input
           bg={"card-bg"}

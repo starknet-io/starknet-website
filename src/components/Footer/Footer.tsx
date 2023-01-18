@@ -10,7 +10,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
+import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { StarknetLogo } from "../Logo/StarknetLogo";
 
 type RootProps = {
@@ -55,25 +55,25 @@ const Root = ({ children, ...rest }: RootProps) => {
                   as="a"
                   href="#"
                   aria-label="Discord"
-                  icon={<FaDiscord fontSize="1.25rem" />}
+                  icon={<SiDiscord fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="GitHub"
-                  icon={<FaGithub fontSize="1.25rem" />}
+                  icon={<SiGithub fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="YouTube"
-                  icon={<FaYoutube fontSize="1.25rem" />}
+                  icon={<SiYoutube fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="Twitter"
-                  icon={<FaTwitter fontSize="1.25rem" />}
+                  icon={<SiTwitter fontSize="1.25rem" />}
                 />
               </ButtonGroup>
             </Stack>
