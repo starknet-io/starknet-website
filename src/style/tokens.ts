@@ -47,6 +47,7 @@ export const tokens = {
       "columnlink-hover-fg": "#5C94FF",
       "columnlink-active-bg": "#FFFFFF",
       "columnlink-active-fg": "#0C0C4F",
+      "divider-bg": "#EFEFEF",
     },
 
     dark: {
@@ -58,14 +59,14 @@ export const tokens = {
       "navbar-dropdown-bg": "#1B1B1B",
       "navlink-fg": "#CCCCCC",
       "btn-outline-bg": "transparent",
-      "btn-outline-fg": "#6B7280",
-      "btn-outline-border": "#EFEFEF",
+      "btn-outline-fg": "#ffffff",
+      "btn-outline-border": "#7E7E7E",
       "btn-outline-hover-bg": "transparent",
-      "btn-outline-hover-fg": "#5C94FF",
-      "btn-outline-hover-border": "#5C94FF",
-      "btn-outline-active-bg": "#EFEFEF",
-      "btn-outline-active-fg": "#6B7280",
-      "btn-outline-active-border": "#EFEFEF",
+      "btn-outline-hover-fg": "#9EBFFF",
+      "btn-outline-hover-border": "#9EBFFF",
+      "btn-outline-active-bg": "#000000",
+      "btn-outline-active-fg": "#858585",
+      "btn-outline-active-border": "#000000",
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -95,6 +96,7 @@ export const tokens = {
       "columnlink-hover-fg": "#9EBFFF",
       "columnlink-active-bg": "transparent",
       "columnlink-active-fg": "#9EBFFF",
+      "divider-bg": "#313131",
     },
   },
 };
@@ -278,6 +280,5 @@ export const semanticTokens = {
       default: tokens.colors.light["btn-outline-active-border"],
       _dark: tokens.colors.dark["btn-outline-active-border"],
     },
-
   },
 };
