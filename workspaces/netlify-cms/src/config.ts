@@ -2,11 +2,14 @@ import { CmsConfig } from "netlify-cms-core";
 
 const locale = "en";
 
+const branch =
+  location.pathname === "/" ? "dev" : location.pathname.replace("^/", "");
+
 export const config: CmsConfig = {
   backend: {
     name: "github",
     repo: "starknet-io/starknet-website",
-    branch: "dev",
+    branch,
   },
   media_folder: "static/assets",
   public_folder: "/assets",
@@ -535,77 +538,62 @@ export const config: CmsConfig = {
           file: `_data/settings/${locale}/main-menu.yml`,
           fields: [
             {
-              label: "Pages",
-              name: "pages",
+              label: "Top Level Menu Items",
+              name: "items",
               widget: "list",
               fields: [
                 {
-                  label: "Page",
-                  name: "page",
-                  widget: "relation",
-                  collection: "pages",
-                  search_fields: ["title"],
-                  value_field: "path",
-                  display_fields: ["title"],
+                  label: "Title",
+                  name: "title",
                 },
-
                 {
-                  label: "Pages",
-                  name: "pages",
+                  label: "Columns",
+                  name: "Columns",
                   widget: "list",
                   fields: [
                     {
-                      label: "Page",
-                      name: "page",
+                      label: "Title",
+                      name: "title",
                       required: false,
-                      widget: "relation",
-                      collection: "pages",
-                      search_fields: ["title"],
-                      value_field: "path",
-                      display_fields: ["title"],
                     },
                     {
-                      label: "Post",
-                      name: "post",
-                      required: false,
-                      widget: "relation",
-                      collection: "posts",
-                      search_fields: ["title"],
-                      value_field: "id",
-                      display_fields: ["title"],
-                    },
-                    {
-                      label: "Custom Link",
-                      display_fields: ["title"],
-                      required: false,
-                      name: "custom_link",
-                    },
-                    {
-                      label: "Pages",
-                      name: "pages",
+                      label: "Blocks",
+                      name: "blocks",
                       widget: "list",
                       fields: [
                         {
-                          label: "Page",
-                          name: "page",
-                          widget: "relation",
-                          collection: "pages",
-                          search_fields: ["title"],
-                          value_field: "path",
-                          display_fields: ["title"],
-                        },
-                        {
-                          label: "Pages",
-                          name: "pages",
+                          label: "Menu Items",
+                          name: "items",
                           widget: "list",
                           fields: [
                             {
+                              label: "Custom Internal Link",
+                              required: false,
+                              name: "custom_internal_link",
+                            },
+                            {
+                              label: "Custom External Link",
+                              required: false,
+                              name: "custom_external_link",
+                            },
+                            {
                               label: "Page",
                               name: "page",
+                              required: false,
                               widget: "relation",
                               collection: "pages",
                               search_fields: ["title"],
                               value_field: "path",
+                              display_fields: ["title"],
+                            },
+                            {
+                              label: "Post",
+                              name: "post",
+                              required: false,
+                              widget: "relation",
+                              collection: "posts",
+                              search_fields: ["title"],
+                              value_field: "id",
                               display_fields: ["title"],
                             },
                           ],
