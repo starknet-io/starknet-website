@@ -32,8 +32,8 @@ for (const datatype of datatypes) {
         data.push(
           await getFirst(
             () => mdx(`_data/${datatype}/${locale.code}/${filename}`),
-            () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`)
-          )
+            () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`),
+          ),
         );
       }
 
@@ -52,7 +52,7 @@ for (const locale of locales) {
   const mainMenu = await transformMainMenu(
     await getFirst(
       () => yaml(`_data/settings/${locale.code}/main-menu.yml`),
-      () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`)
+      () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
     ),
     async (page) => {
       const filename = page.page.replace(/(^\/|\/$)/g, "");
@@ -60,14 +60,14 @@ for (const locale of locales) {
       const data = await getFirst(
         () => mdx(`_data/pages/${locale.code}/${filename}.md`),
         () => mdx(`_data/pages/${defaultLocale}/${filename}.md`),
-        async () => null
+        async () => null,
       );
 
       return {
         ...page,
         title: data?.title ?? "",
       };
-    }
+    },
   );
 
   await write(`_data/_dynamic/main-menu/${locale.code}.json`, mainMenu);

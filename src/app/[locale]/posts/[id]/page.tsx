@@ -13,7 +13,7 @@ export default async function Page({ params }: Props): Promise<JSX.Element> {
   try {
     const { title, MDXContent } = await getPostByFilename(
       params.id,
-      params.locale
+      params.locale,
     );
 
     return (

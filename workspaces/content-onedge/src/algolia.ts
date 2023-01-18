@@ -29,7 +29,7 @@ async function fileToPost(locale: string, filename: string): Promise<Post> {
 
   const data = await getFirst(
     () => mdx(path.join("_data", resourceName, locale, filename)),
-    () => mdx(path.join("_data", resourceName, defaultLocale, filename))
+    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   const id = filename.replace(/\.md$/, "");
@@ -66,7 +66,7 @@ async function fileToEvent(locale: string, filename: string): Promise<Event> {
 
   const data = await getFirst(
     () => mdx(path.join("_data", resourceName, locale, filename)),
-    () => mdx(path.join("_data", resourceName, defaultLocale, filename))
+    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   return {
@@ -112,7 +112,7 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
 
   const data = await getFirst(
     () => json(path.join("_data", resourceName, locale, filename)),
-    () => json(path.join("_data", resourceName, defaultLocale, filename))
+    () => json(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   return {
@@ -141,7 +141,7 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
 try {
   const client = algoliasearch(
     process.env.ALGOLIA_APP_ID!,
-    process.env.ALGOLIA_WRITE_API_KEY!
+    process.env.ALGOLIA_WRITE_API_KEY!,
   );
 
   const resources = [
@@ -156,7 +156,7 @@ try {
     const indexName = `web_${resourceName}_dev`;
     const objects = [];
     const filenames = await fs.readdir(
-      path.join("_data", resourceName, defaultLocale)
+      path.join("_data", resourceName, defaultLocale),
     );
 
     for (const locale of locales) {
