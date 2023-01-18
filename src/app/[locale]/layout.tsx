@@ -7,9 +7,6 @@ import { Footer } from "./(components)/Footer";
 import { getMainMenu } from "src/data/settings/main-menu";
 import React from "react";
 
-// import { NavbarServer } from "./(server-components)/NavbarServer";
-// import { FooterServer } from "./(server-components)/FooterServer";
-
 interface Props extends React.PropsWithChildren<LocaleProps> {}
 
 export default async function LocaleLayout({
