@@ -41,7 +41,7 @@ export default function Navbar({ mainMenu }: Props) {
                     mainMenuItem.columns?.map((column, columnIndex) => (
                       <Box key={columnIndex}>
                         {column.blocks?.map((block, blockIndex) => (
-                          <Box mb={22} key={blockIndex}>
+                          <Box mb={22} key={`${blockIndex}${block.title}`}>
                             <NavbarHeading>{block.title}</NavbarHeading>
                             {block.items?.map((item, itemIndex) => {
                               let title =
@@ -71,7 +71,7 @@ export default function Navbar({ mainMenu }: Props) {
                               return (
                                 <NavBarLink
                                   isExternal={isExternal}
-                                  key={itemIndex}
+                                  key={`${itemIndex}${title}`}
                                   href={link}
                                 >
                                   {title} {hasIcon && item.custom_icon}
@@ -91,7 +91,9 @@ export default function Navbar({ mainMenu }: Props) {
           <NavAccordian.Root>
             {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => {
               return (
-                <NavAccordian.Item key={mainMenuItemIndex}>
+                <NavAccordian.Item
+                  key={`${mainMenuItemIndex}${mainMenuItem.title}`}
+                >
                   <NavAccordian.Button title={mainMenuItem.title} />
                   <NavAccordian.Panel>
                     {mainMenuItem.columns?.length &&
@@ -99,7 +101,10 @@ export default function Navbar({ mainMenu }: Props) {
                         <Box key={columnIndex}>
                           {column.blocks?.map((block, blockIndex) => (
                             <>
-                              <NavbarHeading key={blockIndex} pt="24px">
+                              <NavbarHeading
+                                key={`${blockIndex}${block.title}`}
+                                pt="24px"
+                              >
                                 {block.title}
                               </NavbarHeading>
                               {block.items?.map((item, itemIndex) => {
@@ -124,7 +129,10 @@ export default function Navbar({ mainMenu }: Props) {
                                 }
 
                                 return (
-                                  <NavBarLink key={itemIndex} href={link}>
+                                  <NavBarLink
+                                    key={`${itemIndex}${title}`}
+                                    href={link}
+                                  >
                                     {title}
                                   </NavBarLink>
                                 );
