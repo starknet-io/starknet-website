@@ -99,7 +99,7 @@ items:
               - custom_title: Blog home
                 custom_internal_link: /posts/
               - custom_title: Engineering posts
-                custom_external_link: /posts/
+                custom_external_link: ""
                 custom_internal_link: /posts/
               - custom_internal_link: /posts/
                 custom_title: Community Calls
