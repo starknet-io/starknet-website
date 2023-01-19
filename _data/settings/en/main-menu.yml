@@ -45,6 +45,7 @@ items:
             items:
               - custom_title: ""
                 page: /starknet-foundation/
+              - page: /media-kit/
   - title: Developers
     columns:
       - blocks:
@@ -65,9 +66,17 @@ items:
       - blocks:
           - title: ""
             items:
-              - page: /Libraries-and-plugins/
-              - custom_title: Test external link
-                custom_external_link: http://www.google.com
+              - page: ""
+                custom_internal_link: /dapps/
+                custom_title: Dapps
+              - custom_title: Wallets
+                custom_external_link: ""
+                custom_internal_link: /wallets/
+              - custom_title: Bridges & onramps
+                custom_external_link: ""
+                custom_internal_link: /bridges-and-onramps/
+              - custom_title: Block Explorers
+                custom_internal_link: /block-explorers
   - title: Community
     columns:
       - blocks:
