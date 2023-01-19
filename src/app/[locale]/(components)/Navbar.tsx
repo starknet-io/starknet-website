@@ -9,7 +9,8 @@ import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { useLocale } from "./ClientLocaleProvider";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Box, Flex, HStack } from "@chakra-ui/react";
+import { Box, Flex, Icon, IconButton } from "@chakra-ui/react";
+import { SiDiscord, SiYoutube, SiTwitter, SiGithub } from "react-icons/si";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -50,10 +51,12 @@ export default function Navbar({ mainMenu }: Props) {
 
                               let link;
                               let isExternal;
+                              let hasIcon;
 
                               if (item.custom_external_link) {
                                 link = item.custom_external_link;
                                 isExternal = true;
+                                if (item.custom_icon) hasIcon = true;
                               } else if (item.custom_internal_link) {
                                 link = `/${locale}/${item.custom_internal_link.replace(
                                   /(^\/|\/$)/g,
@@ -71,7 +74,7 @@ export default function Navbar({ mainMenu }: Props) {
                                   key={itemIndex}
                                   href={link}
                                 >
-                                  {title}
+                                  {title} {hasIcon && item.custom_icon}
                                 </NavBarLink>
                               );
                             })}
