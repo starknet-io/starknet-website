@@ -51,9 +51,12 @@ export interface Event {
   readonly image: string;
   readonly start_date: Date;
   readonly end_date: Date;
-  readonly location: string; //'{"type":"Point","coordinates":[-7.0944214,53.1764117]}'
-  readonly location_name: string;
+  readonly location: string;
+  readonly city: string;
+  readonly venue: string;
+  readonly type: string;
   readonly url: string;
+  readonly tags: string;
   readonly locale: string;
   readonly filepath: string;
 }
@@ -72,7 +75,10 @@ async function fileToEvent(locale: string, filename: string): Promise<Event> {
     start_date: data.start_date,
     end_date: data.end_date,
     location: data.location,
-    location_name: data.location_name,
+    city: data.city,
+    venue: data.venue,
+    tags: data.tags,
+    type: data.type,
     url: data.url,
     locale,
     filepath: path.join("_data", resourceName, locale, filename),
@@ -88,8 +94,10 @@ interface Job {
     readonly logo: string;
   };
   readonly job: {
-    readonly description: string;
     readonly title: string;
+    readonly description: string;
+    readonly role: string;
+    readonly type: string;
     readonly required_experience: string;
     readonly scope: string;
     readonly location: string;
@@ -108,8 +116,23 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
   );
 
   return {
-    job: data.job,
-    contact: data.contact,
+    job: {
+      title: data.job.title,
+      description: data.job.description,
+      role: data.job.role,
+      type: data.job.type,
+      required_experience: data.job.required_experience,
+      scope: data.job.scope,
+      location: data.job.location,
+      how_to_apply: data.job.how_to_apply,
+    },
+    contact: {
+      name: data.contact.name,
+      email: data.contact.email,
+      twitter: data.contact.twitter,
+      discord: data.contact.discord,
+      logo: data.contact.logo,
+    },
     locale,
     filepath: path.join("_data", resourceName, locale, filename),
   };

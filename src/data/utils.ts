@@ -13,7 +13,7 @@ export async function getJSON(filepath: string): Promise<any> {
       new URL(`../../_data/${filepath}`, import.meta.url).pathname,
       {
         encoding: "utf8",
-      }
+      },
     );
 
     return JSON.parse(file);
@@ -36,7 +36,7 @@ export async function getString(filepath: string): Promise<string> {
       new URL(`../../_data/${filepath}`, import.meta.url).pathname,
       {
         encoding: "utf8",
-      }
+      },
     );
 
     return file;

@@ -2,11 +2,16 @@ import { CmsConfig } from "netlify-cms-core";
 
 const locale = "en";
 
+const branch =
+  location.pathname === "/" ? "dev" : location.pathname.replace(/^\//, "");
+
+console.log(branch);
+
 export const config: CmsConfig = {
   backend: {
     name: "github",
     repo: "starknet-io/starknet-website",
-    branch: "dev",
+    branch,
   },
   media_folder: "static/assets",
   public_folder: "/assets",
@@ -143,22 +148,75 @@ export const config: CmsConfig = {
           widget: "datetime",
         },
         {
-          name: "end_date",
+          name: "end_date", // ?? keep this?
           label: "End Date",
           widget: "datetime",
         },
         {
           name: "location",
           label: "Location",
-          widget: "map",
+          widget: "select",
+          options: [
+            {
+              label: "online / remote",
+              value: "online_remote",
+            },
+            {
+              label: "USA",
+              value: "usa",
+            },
+            {
+              label: "Europe",
+              value: "europe",
+            },
+            {
+              label: "Asia",
+              value: "asia",
+            },
+            {
+              label: "South America",
+              value: "south_america",
+            },
+            {
+              label: "Canada",
+              value: "canada",
+            },
+          ],
         },
         {
-          name: "location_name",
-          label: "Location Name",
+          name: "city",
+          label: "City",
+        },
+        {
+          name: "venue",
+          label: "Venue",
+        },
+        {
+          name: "type",
+          label: "Type",
+          widget: "select",
+          options: [
+            {
+              label: "Community Event",
+              value: "community_event",
+            },
+            {
+              label: "Conference",
+              value: "conference",
+            },
+            {
+              label: "Hackathon",
+              value: "hackathon",
+            },
+          ],
         },
         {
           name: "url",
           label: "Website URL",
+        },
+        {
+          name: "tags",
+          label: "Tags",
         },
       ],
     },
@@ -212,13 +270,75 @@ export const config: CmsConfig = {
               label: "Description",
             },
             {
-              name: "required_experience",
-              label: "Required experience",
-              widget: "text",
+              name: "role",
+              label: "Role",
+            },
+            {
+              name: "type",
+              label: "Type",
+              widget: "select",
+              options: [
+                {
+                  label: "online / remote",
+                  value: "online_remote",
+                },
+                {
+                  label: "USA",
+                  value: "usa",
+                },
+                {
+                  label: "Europe",
+                  value: "europe",
+                },
+                {
+                  label: "Asia",
+                  value: "asia",
+                },
+                {
+                  label: "South America",
+                  value: "south_america",
+                },
+                {
+                  label: "Canada",
+                  value: "canada",
+                },
+              ],
             },
             {
               name: "location",
-              label: "Job location / Remote",
+              label: "Location",
+              widget: "select",
+              options: [
+                {
+                  label: "online / remote",
+                  value: "online_remote",
+                },
+                {
+                  label: "USA",
+                  value: "usa",
+                },
+                {
+                  label: "Europe",
+                  value: "europe",
+                },
+                {
+                  label: "Asia",
+                  value: "asia",
+                },
+                {
+                  label: "South America",
+                  value: "south_america",
+                },
+                {
+                  label: "Canada",
+                  value: "canada",
+                },
+              ],
+            },
+            {
+              name: "required_experience",
+              label: "Required experience",
+              widget: "text",
             },
             {
               name: "scope",
@@ -233,6 +353,184 @@ export const config: CmsConfig = {
       ],
     },
     {
+      label: "Glossary",
+      name: "glossary",
+      folder: `_data/glossary/${locale}`,
+      create: true,
+      identifier_field: "glossary_item",
+      fields: [
+        {
+          label: "Glossary item",
+          name: "glossary_item",
+        },
+        {
+          label: "Glossary description",
+          name: "body",
+          widget: "markdown",
+        },
+      ],
+    },
+    {
+      label: "Dapps",
+      name: "dapps",
+      folder: `_data/dapps/${locale}`,
+      create: true,
+      identifier_field: "name",
+      fields: [
+        {
+          label: "Name",
+          name: "name",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: "image",
+        },
+        {
+          label: "Twitter handle",
+          name: "twitter",
+        },
+        {
+          label: "Website url",
+          name: "website_url",
+        },
+        {
+          label: "Description",
+          name: "body",
+          widget: "markdown",
+        },
+      ],
+    },
+    {
+      label: "Wallets",
+      name: "wallets",
+      folder: `_data/wallets/${locale}`,
+      create: true,
+      identifier_field: "name",
+      fields: [
+        {
+          label: "Name",
+          name: "name",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: "image",
+        },
+        {
+          label: "Twitter handle",
+          name: "twitter",
+        },
+        {
+          label: "Website url",
+          name: "website_url",
+        },
+        {
+          label: "Description",
+          name: "body",
+          widget: "markdown",
+        },
+      ],
+    },
+    {
+      label: "Block explorers",
+      name: "block_explorers",
+      folder: `_data/block_explorers/${locale}`,
+      create: true,
+      identifier_field: "name",
+      fields: [
+        {
+          label: "Name",
+          name: "name",
+        },
+        {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: [
+            {
+              label: "Browser extension",
+              value: "browser_extension",
+            },
+            {
+              label: "iOS",
+              value: "ios",
+            },
+            {
+              label: "Android",
+              value: "android",
+            },
+          ],
+        },
+        {
+          label: "Website url",
+          name: "website_url",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: "image",
+        },
+        {
+          label: "Company name",
+          name: "company_name",
+        },
+        {
+          label: "Twitter handle",
+          name: "twitter",
+        },
+      ],
+    },
+    {
+      label: "Bridges and fiat on ramps",
+      name: "bridges",
+      folder: `_data/bridges/${locale}`,
+      create: true,
+      identifier_field: "name",
+      fields: [
+        {
+          label: "Name",
+          name: "name",
+        },
+        {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: [
+            {
+              label: "Browser extension",
+              value: "browser_extension",
+            },
+            {
+              label: "iOS",
+              value: "ios",
+            },
+            {
+              label: "Android",
+              value: "android",
+            },
+          ],
+        },
+        {
+          label: "Website url",
+          name: "website_url",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: "image",
+        },
+        {
+          label: "Company name",
+          name: "company_name",
+        },
+        {
+          label: "Twitter handle",
+          name: "twitter",
+        },
+      ],
+    },
+    {
       label: "Settings",
       name: "settings",
       files: [
@@ -242,77 +540,72 @@ export const config: CmsConfig = {
           file: `_data/settings/${locale}/main-menu.yml`,
           fields: [
             {
-              label: "Pages",
-              name: "pages",
+              label: "Top Level Menu Items",
+              name: "items",
               widget: "list",
               fields: [
                 {
-                  label: "Page",
-                  name: "page",
-                  widget: "relation",
-                  collection: "pages",
-                  search_fields: ["title"],
-                  value_field: "path",
-                  display_fields: ["title"],
+                  label: "Title",
+                  name: "title",
                 },
-
                 {
-                  label: "Pages",
-                  name: "pages",
+                  label: "Columns",
+                  name: "Columns",
                   widget: "list",
                   fields: [
                     {
-                      label: "Page",
-                      name: "page",
-                      required: false,
-                      widget: "relation",
-                      collection: "pages",
-                      search_fields: ["title"],
-                      value_field: "path",
-                      display_fields: ["title"],
-                    },
-                    {
-                      label: "Post",
-                      name: "post",
-                      required: false,
-                      widget: "relation",
-                      collection: "posts",
-                      search_fields: ["title"],
-                      value_field: "id",
-                      display_fields: ["title"],
-                    },
-                    {
-                      label: "Custom Link",
-                      display_fields: ["title"],
-                      required: false,
-                      name: "custom_link",
-                    },
-                    {
-                      label: "Pages",
-                      name: "pages",
+                      label: "Blocks",
+                      name: "blocks",
                       widget: "list",
                       fields: [
                         {
-                          label: "Page",
-                          name: "page",
-                          widget: "relation",
-                          collection: "pages",
-                          search_fields: ["title"],
-                          value_field: "path",
-                          display_fields: ["title"],
+                          label: "Title",
+                          name: "title",
+                          required: false,
                         },
                         {
-                          label: "Pages",
-                          name: "pages",
+                          label: "Menu Items",
+                          name: "items",
                           widget: "list",
                           fields: [
                             {
+                              label: "Custom Title",
+                              required: false,
+                              name: "custom_title",
+                            },
+                            {
+                              label: "Custom Icon",
+                              required: false,
+                              name: "custom_icon",
+                            },
+                            {
+                              label: "Custom Internal Link",
+                              required: false,
+                              name: "custom_internal_link",
+                            },
+                            {
+                              label: "Custom External Link",
+                              required: false,
+                              name: "custom_external_link",
+                            },
+                            {
                               label: "Page",
                               name: "page",
+                              required: false,
                               widget: "relation",
                               collection: "pages",
                               search_fields: ["title"],
                               value_field: "path",
+                              display_fields: ["title"],
+                            },
+                            {
+                              label: "Post",
+                              name: "post",
+                              required: false,
+                              widget: "relation",
+                              collection: "posts",
+                              search_fields: ["title"],
+                              value_field: "id",
                               display_fields: ["title"],
                             },
                           ],

@@ -105,15 +105,15 @@ const Column = ({ title, children }: ColumnProps) => {
   );
 };
 type LinkProps = {
-  title: string;
   href: string;
   isExternal?: boolean;
+  children: React.ReactNode;
 };
 
-const Link = ({ title, href, isExternal }: LinkProps) => {
+const Link = ({ children, href, isExternal }: LinkProps) => {
   return (
-    <NavBarLink isExternal={false} href={href}>
-      {title}
+    <NavBarLink isExternal={isExternal} href={href}>
+      {children}
     </NavBarLink>
   );
 };
