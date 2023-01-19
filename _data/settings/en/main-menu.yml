@@ -18,7 +18,7 @@ items:
       - blocks:
           - title: HOW DOES STARKNET WORK?
             items:
-              - page: zk-rollups
+              - page: /zk-rollups
               - page: /starknets-architecture/
               - page: /sequencers/
               - page: /provers/
@@ -28,12 +28,12 @@ items:
       - blocks:
           - title: USING STARKNET
             items:
-              - page: trustless-bridging
-              - page: account-abstraction
-              - page: storage-proofs
-              - page: on-chain-gaming
-              - page: cheap-computation
-              - page: oracles-on-starknet
+              - page: /trustless-bridging
+              - page: /account-abstraction
+              - page: /storage-proofs
+              - page: /on-chain-gaming
+              - page: /cheap-computation
+              - page: /oracles-on-starknet
       - blocks:
           - title: COMMON QUESTIONS
             items:
@@ -70,10 +70,8 @@ items:
                 custom_internal_link: /dapps/
                 custom_title: Dapps
               - custom_title: Wallets
-                custom_external_link: ""
                 custom_internal_link: /wallets/
               - custom_title: Bridges & onramps
-                custom_external_link: ""
                 custom_internal_link: /bridges-and-onramps/
               - custom_title: Block Explorers
                 custom_internal_link: /block-explorers
@@ -99,7 +97,6 @@ items:
               - custom_title: Blog home
                 custom_internal_link: /posts/
               - custom_title: Engineering posts
-                custom_external_link: ""
                 custom_internal_link: /posts/
               - custom_internal_link: /posts/
                 custom_title: Community Calls
