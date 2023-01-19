@@ -90,8 +90,27 @@ items:
                 custom_title: Events
               - custom_internal_link: /jobs
                 custom_title: Jobs
+              - page: /governance/
+              - custom_title: Community forum
+                custom_external_link: https://community.starknet.io/
       - blocks:
           - title: BLOG & MEDIA
+            items:
+              - custom_title: Blog home
+                custom_internal_link: /posts/
+              - custom_title: Engineering posts
+                custom_external_link: /posts/
+                custom_internal_link: /posts/
+              - custom_internal_link: /posts/
+                custom_title: Community Calls
+              - custom_title: Stark struck
+                custom_internal_link: /posts/
+              - custom_title: Stark math
+                custom_internal_link: /posts/
+              - custom_title: Governance posts
+                custom_internal_link: /posts/
+              - custom_title: Community & Events posts
+                custom_internal_link: /posts/
       - blocks:
           - title: OTHER
           - title: SOCIAL
