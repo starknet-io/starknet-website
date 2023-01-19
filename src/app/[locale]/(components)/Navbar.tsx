@@ -31,12 +31,10 @@ export default function Navbar({ mainMenu }: Props) {
               >
                 {mainMenuItem.columns?.length &&
                   mainMenuItem.columns?.map((column, columnIndex) => (
-                    <div key={columnIndex}>
+                    <Box key={columnIndex}>
                       {column.blocks?.map((block, blockIndex) => (
-                        <>
-                          <NavbarHeading key={blockIndex}>
-                            {block.title}
-                          </NavbarHeading>
+                        <Box mb={22} key={blockIndex}>
+                          <NavbarHeading>{block.title}</NavbarHeading>
                           {block.items?.map((item, itemIndex) => {
                             let title =
                               item.custom_title ||
@@ -44,9 +42,11 @@ export default function Navbar({ mainMenu }: Props) {
                               item.post_title;
 
                             let link;
+                            let isExternal;
 
                             if (item.custom_external_link) {
                               link = item.custom_external_link;
+                              isExternal = true;
                             } else if (item.custom_internal_link) {
                               link = `/${locale}/${item.custom_internal_link.replace(
                                 /(^\/|\/$)/g,
@@ -59,14 +59,18 @@ export default function Navbar({ mainMenu }: Props) {
                             }
 
                             return (
-                              <NavBarLink key={itemIndex} href={link}>
+                              <NavBarLink
+                                isExternal={isExternal}
+                                key={itemIndex}
+                                href={link}
+                              >
                                 {title}
                               </NavBarLink>
                             );
                           })}
-                        </>
+                        </Box>
                       ))}
-                    </div>
+                    </Box>
                   ))}
               </MenuItemWithDropdown>
             ))}

@@ -30,7 +30,7 @@ export const Footer = ({ mainMenu }: Props) => {
                   <div key={columnIndex}>
                     {column.blocks?.map((block, blockIndex) => (
                       <div key={blockIndex}>
-                        <NavbarHeading>{block.title}</NavbarHeading>
+                        {/* <NavbarHeading>{block.title}</NavbarHeading> */}
 
                         {block.items?.map((item, itemIndex) => {
                           let title =
@@ -39,9 +39,11 @@ export const Footer = ({ mainMenu }: Props) => {
                             item.post_title;
 
                           let link;
+                          let isExternal;
 
                           if (item.custom_external_link) {
                             link = item.custom_external_link;
+                            isExternal = true;
                           } else if (item.custom_internal_link) {
                             link = `/${locale}/${item.custom_internal_link.replace(
                               /(^\/|\/$)/g,
@@ -62,7 +64,11 @@ export const Footer = ({ mainMenu }: Props) => {
                           }
 
                           return (
-                            <FooterComponent.Link href={link} key={itemIndex}>
+                            <FooterComponent.Link
+                              isExternal={isExternal}
+                              href={link}
+                              key={itemIndex}
+                            >
                               {title}
                             </FooterComponent.Link>
                           );
