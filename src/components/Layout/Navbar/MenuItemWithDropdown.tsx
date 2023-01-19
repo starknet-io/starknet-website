@@ -42,9 +42,12 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
           border={0}
           px="56px"
           py="48px"
+          maxH="493px"
+          width="auto"
+
           // maxW={{ base: "sm", md: "2xl" }}
         >
-          <Box>{children}</Box>
+          {children}
         </PopoverContent>
       </>
     )}

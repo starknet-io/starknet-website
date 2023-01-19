@@ -9,7 +9,7 @@ import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { useLocale } from "./ClientLocaleProvider";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, HStack } from "@chakra-ui/react";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -29,49 +29,56 @@ export default function Navbar({ mainMenu }: Props) {
                 key={mainMenuItemIndex}
                 label={mainMenuItem.title}
               >
-                {mainMenuItem.columns?.length &&
-                  mainMenuItem.columns?.map((column, columnIndex) => (
-                    <Box key={columnIndex}>
-                      {column.blocks?.map((block, blockIndex) => (
-                        <Box mb={22} key={blockIndex}>
-                          <NavbarHeading>{block.title}</NavbarHeading>
-                          {block.items?.map((item, itemIndex) => {
-                            let title =
-                              item.custom_title ||
-                              item.page_title ||
-                              item.post_title;
+                <Box
+                  maxW="900px"
+                  mx="auto"
+                  display="block"
+                  sx={{ columnCount: [1, 2, 3] }}
+                >
+                  {mainMenuItem.columns?.length &&
+                    mainMenuItem.columns?.map((column, columnIndex) => (
+                      <>
+                        {column.blocks?.map((block, blockIndex) => (
+                          <Box mb={22} key={blockIndex} display="inline-block">
+                            <NavbarHeading>{block.title}</NavbarHeading>
+                            {block.items?.map((item, itemIndex) => {
+                              let title =
+                                item.custom_title ||
+                                item.page_title ||
+                                item.post_title;
 
-                            let link;
-                            let isExternal;
+                              let link;
+                              let isExternal;
 
-                            if (item.custom_external_link) {
-                              link = item.custom_external_link;
-                              isExternal = true;
-                            } else if (item.custom_internal_link) {
-                              link = `/${locale}/${item.custom_internal_link.replace(
-                                /(^\/|\/$)/g,
-                                ""
-                              )}`;
-                            } else if (item.page) {
-                              link = `/${locale}${item.page}`;
-                            } else if (item.post) {
-                              link = `/${locale}${item.post}`;
-                            }
+                              if (item.custom_external_link) {
+                                link = item.custom_external_link;
+                                isExternal = true;
+                              } else if (item.custom_internal_link) {
+                                link = `/${locale}/${item.custom_internal_link.replace(
+                                  /(^\/|\/$)/g,
+                                  ""
+                                )}`;
+                              } else if (item.page) {
+                                link = `/${locale}${item.page}`;
+                              } else if (item.post) {
+                                link = `/${locale}${item.post}`;
+                              }
 
-                            return (
-                              <NavBarLink
-                                isExternal={isExternal}
-                                key={itemIndex}
-                                href={link}
-                              >
-                                {title}
-                              </NavBarLink>
-                            );
-                          })}
-                        </Box>
-                      ))}
-                    </Box>
-                  ))}
+                              return (
+                                <NavBarLink
+                                  isExternal={isExternal}
+                                  key={itemIndex}
+                                  href={link}
+                                >
+                                  {title}
+                                </NavBarLink>
+                              );
+                            })}
+                          </Box>
+                        ))}
+                      </>
+                    ))}
+                </Box>
               </MenuItemWithDropdown>
             ))}
           </>
