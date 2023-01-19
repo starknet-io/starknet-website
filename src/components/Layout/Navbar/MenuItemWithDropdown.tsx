@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Popover,
   PopoverContent,
@@ -41,11 +42,12 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
           border={0}
           px="56px"
           py="48px"
-          width={{ base: "sm", md: "2xl" }}
+          maxH="493px"
+          width="auto"
+
+          // maxW={{ base: "sm", md: "2xl" }}
         >
-          <SimpleGrid columns={{ base: 1, md: 2 }} columnGap="6" rowGap="0">
-            {children}
-          </SimpleGrid>
+          {children}
         </PopoverContent>
       </>
     )}

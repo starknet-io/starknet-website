@@ -20,7 +20,7 @@ export const config: CmsConfig = {
       name: "pages",
       label: "Pages",
       label_singular: "Page",
-      identifier_field: "path",
+      identifier_field: "title",
       folder: `_data/pages/${locale}`,
       create: true,
       fields: [
@@ -73,6 +73,7 @@ export const config: CmsConfig = {
           name: "topic",
           label: "Topic",
           widget: "relation",
+          multiple: true,
           collection: "topics",
           search_fields: ["name"],
           value_field: "id",
@@ -136,6 +137,10 @@ export const config: CmsConfig = {
         {
           name: "name",
           label: "Event Name",
+        },
+        {
+          name: "subtitle",
+          label: "subtitle Name",
         },
         {
           name: "image",

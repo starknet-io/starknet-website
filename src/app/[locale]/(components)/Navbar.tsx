@@ -9,7 +9,8 @@ import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { useLocale } from "./ClientLocaleProvider";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Icon, IconButton } from "@chakra-ui/react";
+import { SiDiscord, SiYoutube, SiTwitter, SiGithub } from "react-icons/si";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -29,45 +30,59 @@ export default function Navbar({ mainMenu }: Props) {
                 key={mainMenuItemIndex}
                 label={mainMenuItem.title}
               >
-                {mainMenuItem.columns?.length &&
-                  mainMenuItem.columns?.map((column, columnIndex) => (
-                    <div key={columnIndex}>
-                      {column.blocks?.map((block, blockIndex) => (
-                        <>
-                          <NavbarHeading key={blockIndex}>
-                            {block.title}
-                          </NavbarHeading>
-                          {block.items?.map((item, itemIndex) => {
-                            let title =
-                              item.custom_title ||
-                              item.page_title ||
-                              item.post_title;
+                <Flex
+                  maxW="900px"
+                  mx="auto"
+                  gap="48px"
+                  // display="block"
+                  // sx={{ columnCount: [1, 2, 3, 4] }}
+                >
+                  {mainMenuItem.columns?.length &&
+                    mainMenuItem.columns?.map((column, columnIndex) => (
+                      <Box key={columnIndex}>
+                        {column.blocks?.map((block, blockIndex) => (
+                          <Box mb={22} key={`${blockIndex}${block.title}`}>
+                            <NavbarHeading>{block.title}</NavbarHeading>
+                            {block.items?.map((item, itemIndex) => {
+                              let title =
+                                item.custom_title ||
+                                item.page_title ||
+                                item.post_title;
 
-                            let link;
+                              let link;
+                              let isExternal;
+                              let hasIcon;
 
-                            if (item.custom_external_link) {
-                              link = item.custom_external_link;
-                            } else if (item.custom_internal_link) {
-                              link = `/${locale}/${item.custom_internal_link.replace(
-                                /(^\/|\/$)/g,
-                                ""
-                              )}`;
-                            } else if (item.page) {
-                              link = `/${locale}${item.page}`;
-                            } else if (item.post) {
-                              link = `/${locale}${item.post}`;
-                            }
+                              if (item.custom_external_link) {
+                                link = item.custom_external_link;
+                                isExternal = true;
+                                if (item.custom_icon) hasIcon = true;
+                              } else if (item.custom_internal_link) {
+                                link = `/${locale}/${item.custom_internal_link.replace(
+                                  /(^\/|\/$)/g,
+                                  ""
+                                )}`;
+                              } else if (item.page) {
+                                link = `/${locale}${item.page}`;
+                              } else if (item.post) {
+                                link = `/${locale}${item.post}`;
+                              }
 
-                            return (
-                              <NavBarLink key={itemIndex} href={link}>
-                                {title}
-                              </NavBarLink>
-                            );
-                          })}
-                        </>
-                      ))}
-                    </div>
-                  ))}
+                              return (
+                                <NavBarLink
+                                  isExternal={isExternal}
+                                  key={`${itemIndex}${title}`}
+                                  href={link}
+                                >
+                                  {title} {hasIcon && item.custom_icon}
+                                </NavBarLink>
+                              );
+                            })}
+                          </Box>
+                        ))}
+                      </Box>
+                    ))}
+                </Flex>
               </MenuItemWithDropdown>
             ))}
           </>
@@ -76,7 +91,9 @@ export default function Navbar({ mainMenu }: Props) {
           <NavAccordian.Root>
             {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => {
               return (
-                <NavAccordian.Item key={mainMenuItemIndex}>
+                <NavAccordian.Item
+                  key={`${mainMenuItemIndex}${mainMenuItem.title}`}
+                >
                   <NavAccordian.Button title={mainMenuItem.title} />
                   <NavAccordian.Panel>
                     {mainMenuItem.columns?.length &&
@@ -84,7 +101,10 @@ export default function Navbar({ mainMenu }: Props) {
                         <Box key={columnIndex}>
                           {column.blocks?.map((block, blockIndex) => (
                             <>
-                              <NavbarHeading key={blockIndex} pt="24px">
+                              <NavbarHeading
+                                key={`${blockIndex}${block.title}`}
+                                pt="24px"
+                              >
                                 {block.title}
                               </NavbarHeading>
                               {block.items?.map((item, itemIndex) => {
@@ -109,7 +129,10 @@ export default function Navbar({ mainMenu }: Props) {
                                 }
 
                                 return (
-                                  <NavBarLink key={itemIndex} href={link}>
+                                  <NavBarLink
+                                    key={`${itemIndex}${title}`}
+                                    href={link}
+                                  >
                                     {title}
                                   </NavBarLink>
                                 );
