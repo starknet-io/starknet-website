@@ -1,5 +1,5 @@
 ---
-path: storage-proofs
+path: /storage-proofs/
 title: Storage proofs
 ---
 StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).

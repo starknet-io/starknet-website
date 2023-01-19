@@ -51,6 +51,15 @@ items:
           - items:
               - custom_title: Developers Hub
                 page: /developers/
+              - custom_external_link: https://docs.starknet.io
+                custom_title: Documentation
+              - custom_internal_link: /tutorials/
+                custom_title: Tutorials
+              - page: /resources-and-tools
+              - custom_title: Starknet Playground
+                custom_external_link: https://starknet.io/playground
+              - custom_title: Engineering blog
+                custom_internal_link: /posts/
   - title: Ecosystem
     columns:
       - blocks:
