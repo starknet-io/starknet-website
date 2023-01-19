@@ -68,7 +68,7 @@ export default function Index() {
           justify="space-between"
         >
           <Stack spacing="4" maxW="2xl">
-            <Heading color="heading-navy-fg" as="h4" variant="h4" size="sm">
+            <Heading color="heading-navy-fg" as="h3" variant="h3" size="sm">
               Community led.{" "}
             </Heading>
             <Text
@@ -109,8 +109,8 @@ export default function Index() {
                   >
                     <Heading
                       color="heading-navy-fg"
-                      as="h4"
-                      variant="h4"
+                      as="h2"
+                      variant="h2"
                       size={useBreakpointValue({ base: "md", md: "lg" })}
                     >
                       What is Starknet?
@@ -184,8 +184,8 @@ export default function Index() {
                   >
                     <Heading
                       color="heading-navy-fg"
-                      as="h4"
-                      variant="h4"
+                      as="h2"
+                      variant="h2"
                       size={useBreakpointValue({ base: "md", md: "lg" })}
                     >
                       How does it scale Ethereum?
@@ -277,8 +277,8 @@ export default function Index() {
                   >
                     <Heading
                       color="heading-navy-fg"
-                      as="h4"
-                      variant="h4"
+                      as="h2"
+                      variant="h2"
                       size={useBreakpointValue({ base: "md", md: "lg" })}
                     >
                       What do Ethereum + Starknet unlock?

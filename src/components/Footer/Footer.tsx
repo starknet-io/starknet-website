@@ -89,11 +89,12 @@ const Root = ({ children, ...rest }: RootProps) => {
 type ColumnProps = {
   title: string;
   children: React.ReactNode;
+  color?: string;
 };
 
-const Column = ({ title, children }: ColumnProps) => {
+const Column = ({ title, children, color }: ColumnProps) => {
   return (
-    <Stack spacing="4" minW={{ lg: "40" }}>
+    <Stack bg={color} spacing="4" minW={{ lg: "40" }}>
       {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
       </Text> */}

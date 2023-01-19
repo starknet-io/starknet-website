@@ -12,10 +12,6 @@ import {
   ListItem,
   Flex,
   Box,
-  VStack,
-  StackDivider,
-  Stack,
-  Image,
   Img,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";

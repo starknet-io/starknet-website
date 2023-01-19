@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   useDisclosure,
   Icon,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import * as React from "react";
 
@@ -32,6 +33,7 @@ export const NavBar = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const { colorMode, toggleColorMode } = useColorMode();
+  const isMobile = useBreakpointValue({ base: true, lg: false });
   return (
     <Box
       as="nav"
@@ -44,59 +46,61 @@ export const NavBar = ({
         items={desktopNavItems}
         languageSwitcher={languageSwitcher}
       />
-      <Drawer
-        placement="left"
-        initialFocusRef={menuButtonRef}
-        isOpen={isOpen}
-        onClose={onClose}
-        size="full"
-        variant="primary"
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader padding="0">
-            <NavLayout
-              onClickMenu={onClose}
-              isMenuOpen={isOpen}
-              menuButtonRef={menuButtonRef}
-            />
-          </DrawerHeader>
-          <DrawerBody>{mobileNavItems}</DrawerBody>
-          <HStack
-            mt="6"
-            height="189px"
-            borderTopColor="nav-footer-br"
-            borderTopWidth="1px"
-          >
-            <Button
-              variant="ghost"
-              leftIcon={
-                colorMode === "dark" ? (
-                  <Icon as={HiOutlineSun} fontSize="xl" />
-                ) : (
-                  <Icon as={HiOutlineMoon} fontSize="xl" />
-                )
-              }
-              flex="1"
-              height="100%"
-              onClick={toggleColorMode}
-              size="lg"
+      {isMobile && (
+        <Drawer
+          placement="left"
+          initialFocusRef={menuButtonRef}
+          isOpen={isOpen}
+          onClose={onClose}
+          size="full"
+          variant="primary"
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader padding="0">
+              <NavLayout
+                onClickMenu={onClose}
+                isMenuOpen={isOpen}
+                menuButtonRef={menuButtonRef}
+              />
+            </DrawerHeader>
+            <DrawerBody>{mobileNavItems}</DrawerBody>
+            <HStack
+              mt="6"
+              height="189px"
+              borderTopColor="nav-footer-br"
+              borderTopWidth="1px"
             >
-              {colorMode === "light" ? "Dark" : "Light"} mode
-            </Button>
-            <Button
-              flex="1"
-              height="100%"
-              fontWeight="semibold"
-              size="lg"
-              variant="ghost"
-              leftIcon={<Icon as={HiGlobeAlt} fontSize="xl" />}
-            >
-              Languages
-            </Button>
-          </HStack>
-        </DrawerContent>
-      </Drawer>
+              <Button
+                variant="ghost"
+                leftIcon={
+                  colorMode === "dark" ? (
+                    <Icon as={HiOutlineSun} fontSize="xl" />
+                  ) : (
+                    <Icon as={HiOutlineMoon} fontSize="xl" />
+                  )
+                }
+                flex="1"
+                height="100%"
+                onClick={toggleColorMode}
+                size="lg"
+              >
+                {colorMode === "light" ? "Dark" : "Light"} mode
+              </Button>
+              <Button
+                flex="1"
+                height="100%"
+                fontWeight="semibold"
+                size="lg"
+                variant="ghost"
+                leftIcon={<Icon as={HiGlobeAlt} fontSize="xl" />}
+              >
+                Languages
+              </Button>
+            </HStack>
+          </DrawerContent>
+        </Drawer>
+      )}
     </Box>
   );
 };
