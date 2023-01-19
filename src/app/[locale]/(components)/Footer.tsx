@@ -1,7 +1,6 @@
 "use client";
-import { SimpleGrid } from "@chakra-ui/react";
+import { Box, Stack, StackDivider } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
-import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import type { MainMenu } from "src/data/settings/main-menu";
 import { useLocale } from "./ClientLocaleProvider";
 
@@ -14,10 +13,13 @@ export const Footer = ({ mainMenu }: Props) => {
 
   return (
     <FooterComponent.Root>
-      <SimpleGrid
-        columns={{ base: 2, md: 5 }}
-        gap="8"
-        width={{ base: "full", lg: "auto" }}
+      <Stack
+        divider={<StackDivider borderColor="nav-footer-br" />}
+        align="stretch"
+        gap={10}
+        alignItems="flex-start"
+        justifyContent="flex-start"
+        direction={{ base: "column", lg: "row" }}
       >
         {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
           <FooterComponent.Column
@@ -25,13 +27,16 @@ export const Footer = ({ mainMenu }: Props) => {
             title={mainMenuItem.title}
           >
             {mainMenuItem.columns?.length && (
-              <div>
+              <Box
+              // sx={{
+              //   columnCount: mainMenuItem.title === "Learn" ? 2 : "inherit",
+              // }}
+              // width={mainMenuItem.title === "Learn" ? "350px" : "auto"}
+              >
                 {mainMenuItem.columns?.map((column, columnIndex) => (
-                  <div key={columnIndex}>
+                  <Box key={columnIndex}>
                     {column.blocks?.map((block, blockIndex) => (
-                      <div key={blockIndex}>
-                        {/* <NavbarHeading>{block.title}</NavbarHeading> */}
-
+                      <Box key={blockIndex}>
                         {block.items?.map((item, itemIndex) => {
                           let title =
                             item.custom_title ||
@@ -73,11 +78,11 @@ export const Footer = ({ mainMenu }: Props) => {
                             </FooterComponent.Link>
                           );
                         })}
-                      </div>
+                      </Box>
                     ))}
-                  </div>
+                  </Box>
                 ))}
-              </div>
+              </Box>
             )}
           </FooterComponent.Column>
         ))}
@@ -98,7 +103,7 @@ export const Footer = ({ mainMenu }: Props) => {
             </FooterComponent.Column>
           );
         })} */}
-      </SimpleGrid>
+      </Stack>
     </FooterComponent.Root>
   );
 };

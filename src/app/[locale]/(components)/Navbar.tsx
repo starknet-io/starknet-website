@@ -114,9 +114,11 @@ export default function Navbar({ mainMenu }: Props) {
                                   item.post_title;
 
                                 let link;
+                                let isExternal;
 
                                 if (item.custom_external_link) {
                                   link = item.custom_external_link;
+                                  isExternal = true;
                                 } else if (item.custom_internal_link) {
                                   link = `/${locale}/${item.custom_internal_link.replace(
                                     /(^\/|\/$)/g,
@@ -132,6 +134,7 @@ export default function Navbar({ mainMenu }: Props) {
                                   <NavBarLink
                                     key={`${itemIndex}${title}`}
                                     href={link}
+                                    isExternal={isExternal}
                                   >
                                     {title}
                                   </NavBarLink>
