@@ -550,7 +550,7 @@ export const config: CmsConfig = {
                 },
                 {
                   label: "Columns",
-                  name: "Columns",
+                  name: "columns",
                   widget: "list",
                   fields: [
                     {
