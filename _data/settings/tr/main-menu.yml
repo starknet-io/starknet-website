@@ -48,7 +48,7 @@ items:
         blocks:
           - 
             title: USING STARKNET
-            items:
+            items: null
       - 
         blocks:
           - 
@@ -67,6 +67,16 @@ items:
                 page: /developers/
   - 
     title: Ecosystem
+    columns:
+      - 
+        blocks:
+          - 
+            items:
+              - 
+                page: /sequencers/
+              - 
+                custom_title: "Test custom title "
+                custom_external_link: http://www.google.com
   - 
     title: Community
     columns:
