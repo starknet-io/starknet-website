@@ -75,6 +75,10 @@ items:
                 custom_internal_link: /bridges-and-onramps/
               - custom_title: Block Explorers
                 custom_internal_link: /block-explorers
+          - items:
+              - page: /sequencers/
+              - custom_title: "Test custom title "
+                custom_external_link: http://www.google.com
   - title: Community
     columns:
       - blocks:
