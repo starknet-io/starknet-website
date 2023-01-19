@@ -26,7 +26,7 @@ items:
               - page: /governance/
       - blocks:
           - title: USING STARKNET
-            items:
+            items: null
       - blocks:
           - title: COMMON QUESTIONS
           - title: OTHER
@@ -37,6 +37,12 @@ items:
               - custom_title: Developers Hub
                 page: /developers/
   - title: Ecosystem
+    columns:
+      - blocks:
+          - items:
+              - page: /sequencers/
+              - custom_title: "Test custom title "
+                custom_external_link: http://www.google.com
   - title: Community
     columns:
       - blocks:
