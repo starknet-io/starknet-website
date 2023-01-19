@@ -1,11 +1,25 @@
 import fs from "node:fs/promises";
 import YAML from "yaml";
 
+const cache: { [key: string]: any } = {};
+
 export async function json(filepath: string): Promise<any> {
-  return JSON.parse(await fs.readFile(filepath, { encoding: "utf8" }));
+  if (cache[`json-${filepath}`] == null) {
+    cache[`json-${filepath}`] = (async () => {
+      return JSON.parse(await fs.readFile(filepath, { encoding: "utf8" }));
+    })();
+  }
+
+  return cache[`json-${filepath}`];
 }
 export async function yaml(filepath: string): Promise<any> {
-  return YAML.parse(await fs.readFile(filepath, { encoding: "utf8" }));
+  if (cache[`yaml-${filepath}`] == null) {
+    cache[`yaml-${filepath}`] = (async () => {
+      return YAML.parse(await fs.readFile(filepath, { encoding: "utf8" }));
+    })();
+  }
+
+  return cache[`yaml-${filepath}`];
 }
 
 export async function write(filepath: string, data: any): Promise<void> {

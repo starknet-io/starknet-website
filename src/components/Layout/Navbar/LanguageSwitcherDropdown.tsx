@@ -2,20 +2,21 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-  SimpleGrid,
   Stack,
-  Text,
   Icon,
-  Flex,
   HStack,
   Button,
   VStack,
   Spacer,
   Img,
+  Box,
+  StackDivider,
 } from "@chakra-ui/react";
+import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 
 import * as React from "react";
-import { FiGlobe } from "react-icons/fi";
+import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 import { PopoverIcon } from "./PopoverIcon";
 
@@ -30,6 +31,7 @@ export const LanguageSwitcherDropdown = ({
   description,
   children,
   selectedLocale,
+  title = "Languages",
 }: Props) => (
   <Popover
     trigger="hover"
@@ -37,13 +39,14 @@ export const LanguageSwitcherDropdown = ({
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
+    offset={[0, 30]}
   >
     {({ isOpen }) => (
       <>
         <PopoverTrigger>
           <Button
             size="sm"
-            leftIcon={<Icon as={FiGlobe} fontSize="xl" />}
+            leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
             variant="link"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
           >
@@ -53,28 +56,54 @@ export const LanguageSwitcherDropdown = ({
         <PopoverContent
           bg="navbar-dropdown-bg"
           border={0}
-          p="8"
-          width={{ base: "sm", md: "2xl" }}
+          py="48px"
+          px="32px"
+          right="32px"
+          borderRadius="16px"
+          width={{ base: "sm", md: "3xl" }}
         >
-          <HStack spacing={12} alignItems="start">
+          <HStack
+            spacing={8}
+            alignItems="start"
+            divider={
+              <StackDivider
+                borderColor="divider-bg"
+                top="0"
+                position="relative"
+                height="435px"
+              />
+            }
+          >
             <VStack spacing={2} alignItems="start">
-              <Text fontWeight="medium">Languages</Text>
+              <Heading
+                pl={10}
+                color="heading-navy-fg"
+                as="h6"
+                variant="h6"
+                mb={3}
+                textTransform="uppercase"
+              >
+                {title}
+              </Heading>
               {children}
               <Spacer height={3} />
-              <Button variant="primary">See all languages</Button>
+              <Box pl={10}>
+                <Button variant="outline">See all languages</Button>
+              </Box>
             </VStack>
 
             <Stack spacing="1" pb={4}>
-              <Text fontWeight="medium">Language Center</Text>
-              <Img
-                height={122}
-                py={2}
-                borderRadius="md"
-                src="https://www.solidbackgrounds.com/images/1024x768/1024x768-trolley-grey-solid-color-background.jpg"
-              />
-              <Text fontSize="sm" color="muted">
-                {description}
-              </Text>
+              <Heading
+                color="heading-navy-fg"
+                as="h6"
+                variant="h6"
+                textTransform="uppercase"
+                mb={5}
+              >
+                Language Center
+              </Heading>
+
+              <Text variant="cardBody">{description}</Text>
             </Stack>
           </HStack>
         </PopoverContent>

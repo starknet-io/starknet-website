@@ -10,7 +10,9 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
+import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
+import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
+import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { StarknetLogo } from "../Logo/StarknetLogo";
 
 type RootProps = {
@@ -55,25 +57,25 @@ const Root = ({ children, ...rest }: RootProps) => {
                   as="a"
                   href="#"
                   aria-label="Discord"
-                  icon={<FaDiscord fontSize="1.25rem" />}
+                  icon={<SiDiscord fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="GitHub"
-                  icon={<FaGithub fontSize="1.25rem" />}
+                  icon={<SiGithub fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="YouTube"
-                  icon={<FaYoutube fontSize="1.25rem" />}
+                  icon={<SiYoutube fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
                   href="#"
                   aria-label="Twitter"
-                  icon={<FaTwitter fontSize="1.25rem" />}
+                  icon={<SiTwitter fontSize="1.25rem" />}
                 />
               </ButtonGroup>
             </Stack>
@@ -92,25 +94,27 @@ type ColumnProps = {
 const Column = ({ title, children }: ColumnProps) => {
   return (
     <Stack spacing="4" minW={{ lg: "40" }}>
-      <Text fontSize="sm" fontWeight="semibold" color="subtle">
+      {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
-      </Text>
-      <Stack spacing="3" shouldWrapChildren>
+      </Text> */}
+      <NavbarHeading tt="capitalize">{title}</NavbarHeading>
+      <Stack spacing="1" shouldWrapChildren>
         {children}
       </Stack>
     </Stack>
   );
 };
 type LinkProps = {
-  title: string;
   href: string;
+  isExternal?: boolean;
+  children: React.ReactNode;
 };
 
-const Link = ({ title, href }: LinkProps) => {
+const Link = ({ children, href, isExternal }: LinkProps) => {
   return (
-    <Button size="sm" as="a" variant="link" href={href}>
-      {title}
-    </Button>
+    <NavBarLink isExternal={isExternal} href={href}>
+      {children}
+    </NavBarLink>
   );
 };
 

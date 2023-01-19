@@ -12,7 +12,8 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { FiMoon, FiSun } from "react-icons/fi";
+
+import { HiGlobeAlt, HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import { Button } from "../../Button";
 
 import { NavLayout } from "./NavLayout";
@@ -49,6 +50,7 @@ export const NavBar = ({
         isOpen={isOpen}
         onClose={onClose}
         size="full"
+        variant="primary"
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -59,34 +61,40 @@ export const NavBar = ({
               menuButtonRef={menuButtonRef}
             />
           </DrawerHeader>
-          <DrawerBody>
-            {mobileNavItems}
-            <HStack mt="6">
-              <Button
-                leftIcon={
-                  colorMode === "dark" ? (
-                    <Icon as={FiMoon} fontSize="xl" />
-                  ) : (
-                    <Icon as={FiSun} fontSize="xl" />
-                  )
-                }
-                flex="1"
-                onClick={toggleColorMode}
-                variant="primary"
-                size="lg"
-              >
-                {colorMode === "light" ? "Light" : "Dark"} mode
-              </Button>
-              <Button
-                flex="1"
-                colorScheme="blue"
-                fontWeight="semibold"
-                size="lg"
-              >
-                Languages
-              </Button>
-            </HStack>
-          </DrawerBody>
+          <DrawerBody>{mobileNavItems}</DrawerBody>
+          <HStack
+            mt="6"
+            height="189px"
+            borderTopColor="nav-footer-br"
+            borderTopWidth="1px"
+          >
+            <Button
+              variant="ghost"
+              leftIcon={
+                colorMode === "dark" ? (
+                  <Icon as={HiOutlineSun} fontSize="xl" />
+                ) : (
+                  <Icon as={HiOutlineMoon} fontSize="xl" />
+                )
+              }
+              flex="1"
+              height="100%"
+              onClick={toggleColorMode}
+              size="lg"
+            >
+              {colorMode === "light" ? "Dark" : "Light"} mode
+            </Button>
+            <Button
+              flex="1"
+              height="100%"
+              fontWeight="semibold"
+              size="lg"
+              variant="ghost"
+              leftIcon={<Icon as={HiGlobeAlt} fontSize="xl" />}
+            >
+              Languages
+            </Button>
+          </HStack>
         </DrawerContent>
       </Drawer>
     </Box>

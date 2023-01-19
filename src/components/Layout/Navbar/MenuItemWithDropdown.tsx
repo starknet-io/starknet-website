@@ -12,19 +12,18 @@ import * as React from "react";
 import { PopoverIcon } from "./PopoverIcon";
 
 type Props = {
-  title: string;
-  hubTitle: string;
-  hubLink: string;
+  label: string;
   children: React.ReactNode;
 };
 
-export const MenuItemWithDropdown = ({ children, title, hubTitle }: Props) => (
+export const MenuItemWithDropdown = ({ children, label }: Props) => (
   <Popover
     trigger="hover"
     openDelay={300}
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
+    offset={[0, 30]}
   >
     {({ isOpen }) => (
       <>
@@ -34,22 +33,17 @@ export const MenuItemWithDropdown = ({ children, title, hubTitle }: Props) => (
             variant="link"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
           >
-            {title}
+            {label}
           </Button>
         </PopoverTrigger>
         <PopoverContent
           bg="navbar-dropdown-bg"
           border={0}
-          p="5"
+          px="56px"
+          py="48px"
           width={{ base: "sm", md: "2xl" }}
         >
-          <Stack spacing="1" pb={4}>
-            <Text fontWeight="medium">{hubTitle}</Text>
-            <Text fontSize="sm" color="muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Text>
-          </Stack>
-          <SimpleGrid columns={{ base: 1, md: 2 }} columnGap="6" rowGap="2">
+          <SimpleGrid columns={{ base: 1, md: 2 }} columnGap="6" rowGap="0">
             {children}
           </SimpleGrid>
         </PopoverContent>

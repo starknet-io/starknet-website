@@ -46,7 +46,7 @@ type RootProps = {
 
 const Root = ({ children }: RootProps) => {
   return (
-    <Accordion allowMultiple as="ul" listStyleType="none">
+    <Accordion variant="navigation" allowMultiple as="ul" listStyleType="none">
       {children}
     </Accordion>
   );
