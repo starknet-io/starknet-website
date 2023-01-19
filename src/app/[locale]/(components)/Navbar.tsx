@@ -29,17 +29,18 @@ export default function Navbar({ mainMenu }: Props) {
                 key={mainMenuItemIndex}
                 label={mainMenuItem.title}
               >
-                <Box
+                <Flex
                   maxW="900px"
                   mx="auto"
-                  display="block"
-                  sx={{ columnCount: [1, 2, 3] }}
+                  gap="48px"
+                  // display="block"
+                  // sx={{ columnCount: [1, 2, 3, 4] }}
                 >
                   {mainMenuItem.columns?.length &&
                     mainMenuItem.columns?.map((column, columnIndex) => (
-                      <>
+                      <Box key={columnIndex}>
                         {column.blocks?.map((block, blockIndex) => (
-                          <Box mb={22} key={blockIndex} display="inline-block">
+                          <Box mb={22} key={blockIndex}>
                             <NavbarHeading>{block.title}</NavbarHeading>
                             {block.items?.map((item, itemIndex) => {
                               let title =
@@ -76,9 +77,9 @@ export default function Navbar({ mainMenu }: Props) {
                             })}
                           </Box>
                         ))}
-                      </>
+                      </Box>
                     ))}
-                </Box>
+                </Flex>
               </MenuItemWithDropdown>
             ))}
           </>
