@@ -6,11 +6,10 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
-import { NavLink } from "@ui/Layout/Navbar/NavLink";
-import { Text } from "@ui/Typography/Text";
 import { useLocale } from "./ClientLocaleProvider";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
+import { Box } from "@chakra-ui/react";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -21,109 +20,111 @@ export default function Navbar({ mainMenu }: Props) {
 
   return (
     <NavbarContainer>
-      <ul>
-        {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
-          <li key={mainMenuItemIndex}>
-            <span>{mainMenuItem.title}</span>
-
-            {mainMenuItem.columns?.length && (
-              <ul>
-                {mainMenuItem.columns?.map((column, columnIndex) => (
-                  <li key={columnIndex}>
-                    <ul>
-                      {column.blocks?.map((block, blockIndex) => (
-                        <li key={blockIndex}>
-                          <span>{block.title}</span>
-
-                          <ul>
-                            {block.items?.map((item, itemIndex) => {
-                              let title =
-                                item.custom_title ||
-                                item.page_title ||
-                                item.post_title;
-
-                              let link;
-
-                              if (item.custom_external_link) {
-                                link = item.custom_external_link;
-                              } else if (item.custom_internal_link) {
-                                link = `/${locale}/${item.custom_internal_link.replace(
-                                  /(^\/|\/$)/g,
-                                  ""
-                                )}`;
-                              } else if (item.page) {
-                                link = `/${locale}/pages/${item.page.replace(
-                                  /(^\/|\/$)/g,
-                                  ""
-                                )}`;
-                              } else if (item.post) {
-                                link = `/${locale}/posts/${item.post.replace(
-                                  /(^\/|\/$)/g,
-                                  ""
-                                )}`;
-                              } else {
-                                return <span key={itemIndex}>{title}</span>;
-                              }
-
-                              return (
-                                <a href={link} key={itemIndex}>
-                                  {title}
-                                </a>
-                              );
-                            })}
-                          </ul>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
-      {/* <NavBar
+      <NavBar
         languageSwitcher={<LocaleSwitcher />}
         desktopNavItems={
           <>
-            {mainMenu.pages.map(({ page, title, pages }) => {
-              return (
-                <MenuItemWithDropdown key={title} label={title}>
-                  <NavbarHeading>Heading</NavbarHeading>
-                  {pages.map(({ page, title }) => {
-                    return (
-                      <NavBarLink key={page} href={`/${locale}${page}`}>
-                        {title}
-                      </NavBarLink>
-                    );
-                  })}
-                </MenuItemWithDropdown>
-              );
-            })}
+            {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
+              <MenuItemWithDropdown
+                key={mainMenuItemIndex}
+                label={mainMenuItem.title}
+              >
+                {mainMenuItem.columns?.length &&
+                  mainMenuItem.columns?.map((column, columnIndex) => (
+                    <div key={columnIndex}>
+                      {column.blocks?.map((block, blockIndex) => (
+                        <>
+                          <NavbarHeading key={blockIndex}>
+                            {block.title}
+                          </NavbarHeading>
+                          {block.items?.map((item, itemIndex) => {
+                            let title =
+                              item.custom_title ||
+                              item.page_title ||
+                              item.post_title;
+
+                            let link;
+
+                            if (item.custom_external_link) {
+                              link = item.custom_external_link;
+                            } else if (item.custom_internal_link) {
+                              link = `/${locale}/${item.custom_internal_link.replace(
+                                /(^\/|\/$)/g,
+                                ""
+                              )}`;
+                            } else if (item.page) {
+                              link = `/${locale}${item.page}`;
+                            } else if (item.post) {
+                              link = `/${locale}${item.post}`;
+                            }
+
+                            return (
+                              <NavBarLink key={itemIndex} href={link}>
+                                {title}
+                              </NavBarLink>
+                            );
+                          })}
+                        </>
+                      ))}
+                    </div>
+                  ))}
+              </MenuItemWithDropdown>
+            ))}
           </>
         }
         mobileNavItems={
           <NavAccordian.Root>
-            {mainMenu.pages.map(({ page, title, pages }) => {
+            {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => {
               return (
-                <NavAccordian.Item key={page}>
-                  <NavAccordian.Button title={title} />
+                <NavAccordian.Item key={mainMenuItemIndex}>
+                  <NavAccordian.Button title={mainMenuItem.title} />
                   <NavAccordian.Panel>
-                    <NavbarHeading pt="24px">The Basics</NavbarHeading>
-                    {pages.map(({ page, title }) => {
-                      return (
-                        <NavBarLink key={page} href={`/${locale}${page}`}>
-                          {title}
-                        </NavBarLink>
-                      );
-                    })}
+                    {mainMenuItem.columns?.length &&
+                      mainMenuItem.columns?.map((column, columnIndex) => (
+                        <Box key={columnIndex}>
+                          {column.blocks?.map((block, blockIndex) => (
+                            <>
+                              <NavbarHeading key={blockIndex} pt="24px">
+                                {block.title}
+                              </NavbarHeading>
+                              {block.items?.map((item, itemIndex) => {
+                                let title =
+                                  item.custom_title ||
+                                  item.page_title ||
+                                  item.post_title;
+
+                                let link;
+
+                                if (item.custom_external_link) {
+                                  link = item.custom_external_link;
+                                } else if (item.custom_internal_link) {
+                                  link = `/${locale}/${item.custom_internal_link.replace(
+                                    /(^\/|\/$)/g,
+                                    ""
+                                  )}`;
+                                } else if (item.page) {
+                                  link = `/${locale}${item.page}`;
+                                } else if (item.post) {
+                                  link = `/${locale}${item.post}`;
+                                }
+
+                                return (
+                                  <NavBarLink key={itemIndex} href={link}>
+                                    {title}
+                                  </NavBarLink>
+                                );
+                              })}
+                            </>
+                          ))}
+                        </Box>
+                      ))}
                   </NavAccordian.Panel>
                 </NavAccordian.Item>
               );
             })}
           </NavAccordian.Root>
         }
-      /> */}
+      />
     </NavbarContainer>
   );
 }
