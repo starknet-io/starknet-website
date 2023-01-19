@@ -21,15 +21,30 @@ items:
               - page: zk-rollups
               - page: /starknets-architecture/
               - page: /sequencers/
+              - page: /provers/
               - page: /starknets-security
               - page: /fees-on-starknet/
               - page: /governance/
       - blocks:
           - title: USING STARKNET
-            items: null
+            items:
+              - page: trustless-bridging
+              - page: account-abstraction
+              - page: storage-proofs
+              - page: on-chain-gaming
+              - page: cheap-computation
+              - page: oracles-on-starknet
       - blocks:
           - title: COMMON QUESTIONS
+            items:
+              - custom_internal_link: /glossary
+                custom_title: Glossary
+              - custom_title: FAQ's
+                custom_internal_link: /faqs/
           - title: OTHER
+            items:
+              - custom_title: ""
+                page: /starknet-foundation/
   - title: Developers
     columns:
       - blocks:
