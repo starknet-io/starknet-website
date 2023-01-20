@@ -52,17 +52,17 @@ export const Footer = ({ mainMenu }: Props) => {
                           } else if (item.custom_internal_link) {
                             link = `/${locale}/${item.custom_internal_link.replace(
                               /(^\/|\/$)/g,
-                              ""
+                              "",
                             )}`;
                           } else if (item.page) {
                             link = `/${locale}/${item.page.replace(
                               /(^\/|\/$)/g,
-                              ""
+                              "",
                             )}`;
                           } else if (item.post) {
                             link = `/${locale}/posts/${item.post.replace(
                               /(^\/|\/$)/g,
-                              ""
+                              "",
                             )}`;
                           } else {
                             return <span key={itemIndex}>{title}</span>;
