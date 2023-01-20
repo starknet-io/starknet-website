@@ -1,7 +1,7 @@
 export const tokens = {
   colors: {
     light: {
-      "bg-default": "#F6F6F6",
+      "bg-default": "#FBFBFB",
       "fg-default": "#6B7280",
       "fg-muted": "#858585",
       "fg-accent": "#E97880",
@@ -463,6 +463,10 @@ export const semanticTokens = {
     "button-nav-focus-br": {
       default: tokens.colors.light["button-nav-focus-br"],
       _dark: tokens.colors.dark["button-nav-focus-br"],
+    },
+    "divider-bg": {
+      default: tokens.colors.light["divider-bg"],
+      _dark: tokens.colors.dark["divider-bg"],
     },
   },
 };

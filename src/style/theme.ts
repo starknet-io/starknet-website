@@ -9,6 +9,7 @@ import { tagTheme } from "../components/Tag/TagStyles";
 import { accordionTheme } from "@ui/Accordion/Accordion";
 import { inputTheme } from "@ui/Input/Input";
 import { kbdTheme } from "@ui/Kbd/Kbd";
+import { dividerTheme } from "@ui/Divider/Divider";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -42,6 +43,7 @@ const theme = extendTheme(proTheme, {
     Badge: badgeTheme,
     tag: tagTheme,
     Kbd: kbdTheme,
+    Divider: dividerTheme,
   },
 });
 export default theme;
