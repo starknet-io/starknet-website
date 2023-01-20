@@ -1,7 +1,7 @@
 ---
-name: sdsdsd
-image: /assets/cleanshot-2023-01-17-at-14.00.56-2x.png
-twitter: sdsd
-website_url: sdsss
+name: Argent X
+image: https://images.prismic.io/argentwebsite/313db37e-055d-42ee-9476-a92bda64e61d_logo.svg?auto=format%2Ccompress&fit=max&q=50
+twitter: "@argentHQ"
+website_url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
 ---
-sds*d*sds
+Earn, stake and trade with low fees, high speeds & strong security.
