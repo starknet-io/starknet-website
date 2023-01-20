@@ -77,6 +77,11 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#5C94FF",
       "kbd-bg": "#cccccc",
       "kbd-fg": "#363636",
+      "hero-gradient-1a": "#FFDAD6",
+      "hero-gradient-1b": "#B6C6FF",
+      "heading-hero-gradient-1a": "#0C0C4F",
+      "heading-hero-gradient-1b": "#0C0C4F",
+      "text-hero-fg": "#000",
     },
 
     dark: {
@@ -156,6 +161,11 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#AFCAFF",
       "kbd-bg": "#313131",
       "kbd-fg": "#CCCCCC",
+      "heading-hero-gradient-1a": "#D672EF",
+      "heading-hero-gradient-1b": "#EC796B",
+      "hero-gradient-1a": "#222",
+      "hero-gradient-1b": "#111",
+      "text-hero-fg": "#FFFFFF",
     },
   },
 };
@@ -467,6 +477,26 @@ export const semanticTokens = {
     "divider-bg": {
       default: tokens.colors.light["divider-bg"],
       _dark: tokens.colors.dark["divider-bg"],
+    },
+    "hero-gradient-1a": {
+      default: tokens.colors.light["hero-gradient-1a"],
+      _dark: tokens.colors.dark["hero-gradient-1a"],
+    },
+    "hero-gradient-1b": {
+      default: tokens.colors.light["hero-gradient-1b"],
+      _dark: tokens.colors.dark["hero-gradient-1b"],
+    },
+    "heading-hero-gradient-1b": {
+      default: tokens.colors.light["heading-hero-gradient-1b"],
+      _dark: tokens.colors.dark["heading-hero-gradient-1b"],
+    },
+    "heading-hero-gradient-1a": {
+      default: tokens.colors.light["heading-hero-gradient-1b"],
+      _dark: tokens.colors.dark["heading-hero-gradient-1b"],
+    },
+    "text-hero-fg": {
+      default: tokens.colors.light["text-hero-fg"],
+      _dark: tokens.colors.dark["text-hero-fg"],
     },
   },
 };
