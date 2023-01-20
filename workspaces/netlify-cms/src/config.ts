@@ -284,28 +284,20 @@ export const config: CmsConfig = {
               widget: "select",
               options: [
                 {
-                  label: "online / remote",
-                  value: "online_remote",
+                  label: "Full time",
+                  value: "full_time",
                 },
                 {
-                  label: "USA",
-                  value: "usa",
+                  label: "Part time",
+                  value: "part_time",
                 },
                 {
-                  label: "Europe",
-                  value: "europe",
+                  label: "Freelance",
+                  value: "freelance",
                 },
                 {
-                  label: "Asia",
-                  value: "asia",
-                },
-                {
-                  label: "South America",
-                  value: "south_america",
-                },
-                {
-                  label: "Canada",
-                  value: "canada",
+                  label: "Contract",
+                  value: "contract",
                 },
               ],
             },
@@ -352,6 +344,10 @@ export const config: CmsConfig = {
             {
               name: "how_to_apply",
               label: "How to apply",
+            },
+            {
+              name: "apply_url",
+              label: "Link to apply",
             },
           ],
         },

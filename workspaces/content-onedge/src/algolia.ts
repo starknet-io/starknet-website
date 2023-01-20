@@ -102,6 +102,7 @@ interface Job {
     readonly scope: string;
     readonly location: string;
     readonly how_to_apply: string;
+    readonly apply_url: string;
   };
   readonly locale: string;
   readonly filepath: string;
@@ -125,6 +126,7 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
       scope: data.job.scope,
       location: data.job.location,
       how_to_apply: data.job.how_to_apply,
+      apply_url: data.job.apply_url,
     },
     contact: {
       name: data.contact.name,
