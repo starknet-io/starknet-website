@@ -2,6 +2,7 @@
 path: /what-is-cairo/
 title: What is Cairo
 ---
+
 ### What is Cairo?
 
 We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
