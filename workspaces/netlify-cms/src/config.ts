@@ -616,5 +616,110 @@ export const config: CmsConfig = {
         },
       ],
     },
+    {
+      label: "Settings",
+      name: "settings",
+      files: [
+        {
+          label: "Main Menu",
+          name: "main-menu",
+          file: `_data/settings/${locale}/main-menu.yml`,
+          fields: [
+            {
+              label: "Top Level Menu Items",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Title",
+                  name: "title",
+                },
+                {
+                  label: "Columns",
+                  name: "columns",
+                  widget: "list",
+                  fields: [
+                    {
+                      label: "Blocks",
+                      name: "blocks",
+                      widget: "list",
+                      fields: [
+                        {
+                          label: "Title",
+                          name: "title",
+                          required: false,
+                        },
+                        {
+                          label: "Menu Items",
+                          name: "items",
+                          widget: "list",
+                          fields: [
+                            {
+                              label: "Custom Title",
+                              required: false,
+                              name: "custom_title",
+                            },
+                            {
+                              label: "Custom Icon",
+                              required: false,
+                              name: "custom_icon",
+                            },
+                            {
+                              label: "Custom Internal Link",
+                              required: false,
+                              name: "custom_internal_link",
+                            },
+                            {
+                              label: "Custom External Link",
+                              required: false,
+                              name: "custom_external_link",
+                            },
+                            {
+                              label: "Page",
+                              name: "page",
+                              required: false,
+                              widget: "relation",
+                              collection: "pages",
+                              search_fields: ["title"],
+                              value_field: "path",
+                              display_fields: ["title"],
+                            },
+                            {
+                              label: "Post",
+                              name: "post",
+                              required: false,
+                              widget: "relation",
+                              collection: "posts",
+                              search_fields: ["title"],
+                              value_field: "id",
+                              display_fields: ["title"],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Tutorials Page",
+          name: "tutorials-page",
+          file: `_data/settings/${locale}/tutorials-page.yml`,
+          fields: [
+            {
+              label: "Title",
+              name: "title",
+            },
+            {
+              label: "Description",
+              name: "description",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
