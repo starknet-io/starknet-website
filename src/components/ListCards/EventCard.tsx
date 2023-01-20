@@ -38,7 +38,7 @@ export const EventCard = (props: Props) => {
       >
         <Stack spacing="4">
           <Avatar
-            rounded="sm"
+            rounded="xl"
             bg="black"
             size="lg"
             src={props.image}
