@@ -705,6 +705,21 @@ export const config: CmsConfig = {
           ],
         },
         {
+          label: "Events Page",
+          name: "events-page",
+          file: `_data/settings/${locale}/events-page.yml`,
+          fields: [
+            {
+              label: "Title",
+              name: "title",
+            },
+            {
+              label: "Description",
+              name: "description",
+            },
+          ],
+        },
+        {
           label: "Tutorials Page",
           name: "tutorials-page",
           file: `_data/settings/${locale}/tutorials-page.yml`,
