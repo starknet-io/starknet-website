@@ -6,14 +6,14 @@ export interface EventsPage {
   readonly description: string;
 }
 
-export async function getEventsPage(locale: string): Promise<EventsPage> {
+export async function getTutorialsPage(locale: string): Promise<EventsPage> {
   try {
     return await getFirst(
-      () => getYAML(`settings/${locale}/events-page.yml`),
-      () => getYAML(`settings/${defaultLocale}/events-page.yml`),
+      () => getYAML(`settings/${locale}/tutorials-page.yml`),
+      () => getYAML(`settings/${defaultLocale}/tutorials-page.yml`),
     );
   } catch (cause) {
-    throw new Error("getEventsPage failed!", {
+    throw new Error("getTutorialsPage failed!", {
       cause,
     });
   }

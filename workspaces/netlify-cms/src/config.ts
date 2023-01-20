@@ -1,4 +1,4 @@
-import { CmsConfig } from "netlify-cms-core";
+import { CmsConfig, CmsFieldMeta } from "netlify-cms-core";
 
 const locale = "en";
 
@@ -536,107 +536,83 @@ export const config: CmsConfig = {
       ],
     },
     {
-      label: "Settings",
-      name: "settings",
-      files: [
+      label: "Tutorials",
+      name: "tutorials",
+      folder: `_data/tutorials/${locale}`,
+      create: true,
+      identifier_field: "id",
+      fields: [
         {
-          label: "Main Menu",
-          name: "main-menu",
-          file: `_data/settings/${locale}/main-menu.yml`,
-          fields: [
+          label: "ID",
+          name: "id",
+        },
+        {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: [
             {
-              label: "Top Level Menu Items",
-              name: "items",
-              widget: "list",
-              fields: [
-                {
-                  label: "Title",
-                  name: "title",
-                },
-                {
-                  label: "Columns",
-                  name: "columns",
-                  widget: "list",
-                  fields: [
-                    {
-                      label: "Blocks",
-                      name: "blocks",
-                      widget: "list",
-                      fields: [
-                        {
-                          label: "Title",
-                          name: "title",
-                          required: false,
-                        },
-                        {
-                          label: "Menu Items",
-                          name: "items",
-                          widget: "list",
-                          fields: [
-                            {
-                              label: "Custom Title",
-                              required: false,
-                              name: "custom_title",
-                            },
-                            {
-                              label: "Custom Icon",
-                              required: false,
-                              name: "custom_icon",
-                            },
-                            {
-                              label: "Custom Internal Link",
-                              required: false,
-                              name: "custom_internal_link",
-                            },
-                            {
-                              label: "Custom External Link",
-                              required: false,
-                              name: "custom_external_link",
-                            },
-                            {
-                              label: "Page",
-                              name: "page",
-                              required: false,
-                              widget: "relation",
-                              collection: "pages",
-                              search_fields: ["title"],
-                              value_field: "path",
-                              display_fields: ["title"],
-                            },
-                            {
-                              label: "Post",
-                              name: "post",
-                              required: false,
-                              widget: "relation",
-                              collection: "posts",
-                              search_fields: ["title"],
-                              value_field: "id",
-                              display_fields: ["title"],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
+              label: "Youtube",
+              value: "youtube",
+            },
+            {
+              label: "Blog",
+              value: "blog",
+            },
+            {
+              label: "Github",
+              value: "github",
             },
           ],
         },
         {
-          label: "Events Page",
-          name: "events-page",
-          file: `_data/settings/${locale}/events-page.yml`,
-          fields: [
+          label: "URL",
+          name: "url",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: 'image',
+          required: false
+        },
+        {
+          label: "Title",
+          name: "title",
+          required: false
+        },
+        {
+          label: "Author",
+          name: "author",
+          required: false
+        },
+        {
+          label: "Published at",
+          name: "published_at",
+          widget: 'datetime',
+        },
+        {
+          label: "Difficulty",
+          name: "difficulty",
+          widget: "select",
+          options: [
             {
-              label: "Title",
-              name: "title",
+              label: "Beginner",
+              value: "beginner",
             },
             {
-              label: "Description",
-              name: "description",
+              label: "Intermediate",
+              value: "intermediate",
+            },
+            {
+              label: "Advanced",
+              value: "advanced",
             },
           ],
+        },
+        {
+          label: "Tags",
+          name: "tags",
+          required: false
         },
       ],
     },
