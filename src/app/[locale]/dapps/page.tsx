@@ -10,6 +10,7 @@ import {
   Box,
   Wrap,
 } from "../../../libs/chakra-ui";
+import { PageLayout } from "@ui/Layout/PageLayout";
 
 export default async function DappsPage({
   params: { locale },
@@ -18,38 +19,28 @@ export default async function DappsPage({
   const events = await getEvents(locale);
 
   return (
-    <PageContentContainer>
-      <Breadcrumb separator="->">
-        <BreadcrumbItem>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Parent
-          </BreadcrumbLink>
-        </BreadcrumbItem>
+    <Box>
+      <PageLayout
+        sectionHeaderTitle="dAPPS"
+        sectionHeaderDescription="Page header with high level description of section and visual treatment from brand team."
+        breadcrumbs={
+          <Breadcrumb separator="->">
+            <BreadcrumbItem>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Parent
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Dapps
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-
-      <SectionHeader title="Dapps" description="lorem ipsum" />
-      <Box>
-        Content
-        {/* <Wrap spacing={4} direction="column">
-          {events.map((event) => (
-            <EventCard
-              href="https://www.google.com"
-              startDateTime="Fri, Jan 12 • 2:00 PM EST"
-              key={event.name}
-              description={
-                "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-              }
-              title={event.name}
-            />
-          ))}
-        </Wrap> */}
-      </Box>
-    </PageContentContainer>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink fontSize="sm" href="#">
+                dAPPS
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        }
+        pageLastUpdated="Page last updated 21 Nov 2023"
+        main={<Box>Test</Box>}
+      />
+    </Box>
   );
 }

@@ -11,7 +11,9 @@ import {
   Wrap,
   HStack,
   Divider,
+  Flex,
   Container,
+  Spacer,
 } from "@chakra-ui/react";
 import * as SubNav from "@ui/SubNav/SubNav";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -28,8 +30,9 @@ import {
 } from "react-instantsearch-hooks";
 import { PageContentContainer } from "../../(components)/PageContentContainer";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { getCategories } from "src/data/categories";
+import { Text } from "@ui/Typography/Text";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { Heading } from "@ui/Typography/Heading";
 
 export interface AutoProps {
   readonly params: {
@@ -44,22 +47,22 @@ export interface Props extends AutoProps {
   };
 }
 
-export function PostsPage({ params, env }: Props): JSX.Element | null {
+export function JobsPage({ params, env }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
 
   return (
-    <Box pt="18">
-      <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
+    <Box>
+      <InstantSearch searchClient={searchClient} indexName="web_jobs_dev">
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
         />
 
         <PageLayout
-          sectionHeaderTitle="Blog"
-          sectionHeaderDescription="The latest articles, podcasts and videos on all things StarkNet."
+          sectionHeaderTitle="Jobs"
+          sectionHeaderDescription="Find a job at Mozilla"
           breadcrumbs={
             <Breadcrumb separator="->">
               <BreadcrumbItem>
@@ -76,12 +79,20 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
             </Breadcrumb>
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
-          leftAside={
-            <Box minH="xs">
-              <CustomTopics />
+          leftAside={<Box minH="xs">Filters</Box>}
+          main={
+            <Box>
+              <Heading variant="h3" as="h3" pt={0}>
+                Hello there
+              </Heading>
+              <Text variant="baseRegular" fontSize="sm">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+                delectus quis illo nesciunt doloribus molestias quas
+                reprehenderit quo accusamus odit natus consequuntur, quasi
+                aspernatur veritatis dolorum distinctio aut repellendus cumque!
+              </Text>
             </Box>
           }
-          main={<CustomHits />}
         />
       </InstantSearch>
     </Box>
@@ -95,8 +106,10 @@ function CustomTopics() {
   });
   console.log("topics", items);
   return (
-    <Wrap>
-      {items.map((item, i) => (
+    <Box bg="red">
+      <Wrap>
+        Hello
+        {/* {items.map((item, i) => (
         <Button
           size="sm"
           variant="outline"
@@ -105,27 +118,9 @@ function CustomTopics() {
         >
           {item.label}
         </Button>
-      ))}
-    </Wrap>
-  );
-}
-
-function CustomCategories() {
-  const { items, refine } = useRefinementList({
-    attribute: "category",
-    sortBy: ["name:asc"],
-  });
-  const { refine: clearRefine } = useClearRefinements();
-
-  return (
-    <SubNav.Root>
-      <SubNav.Item onClick={() => clearRefine()}>All posts</SubNav.Item>
-      {items.map((item, i) => (
-        <SubNav.Item onClick={() => refine(item.value)} key={item.value}>
-          <> {item.label}</>
-        </SubNav.Item>
-      ))}
-    </SubNav.Root>
+      ))} */}
+      </Wrap>
+    </Box>
   );
 }
 
@@ -148,7 +143,8 @@ function CustomHits() {
         columnGap="8"
         pt={2}
       >
-        {hits.map((hit, i) => (
+        Hello
+        {/* {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>
             <ArticleCard.Image url={`/static/${hit.image}`} />
 
@@ -162,7 +158,7 @@ function CustomHits() {
               duration="1hr 2mins"
             />
           </ArticleCard.Root>
-        ))}
+        ))} */}
       </SimpleGrid>
       <HStack mt="24">
         <Divider />
