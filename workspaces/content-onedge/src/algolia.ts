@@ -140,24 +140,27 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
 
 interface Tutorial {
   readonly id: string;
-  readonly type: 'youtube' | 'blog' | 'github';
+  readonly type: "youtube" | "blog" | "github";
   readonly url: string;
   readonly image?: string;
   readonly title?: string;
   readonly author?: string;
   readonly published_at: string;
-  readonly difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  readonly difficulty?: "beginner" | "intermediate" | "advanced";
   readonly tags?: string;
   readonly locale: string;
   readonly filepath: string;
 }
 
-async function fileToTutorial(locale: string, filename: string) : Promise<Tutorial> {
+async function fileToTutorial(
+  locale: string,
+  filename: string,
+): Promise<Tutorial> {
   const resourceName = "tutorials";
 
   const data = await getFirst(
-    () => json(path.join("_data", resourceName, locale, filename)),
-    () => json(path.join("_data", resourceName, defaultLocale, filename)),
+    () => mdx(path.join("_data", resourceName, locale, filename)),
+    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   return {

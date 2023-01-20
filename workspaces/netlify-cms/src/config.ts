@@ -1,4 +1,4 @@
-import { CmsConfig, CmsFieldMeta } from "netlify-cms-core";
+import { CmsConfig } from "netlify-cms-core";
 
 const locale = "en";
 
@@ -572,23 +572,23 @@ export const config: CmsConfig = {
         {
           label: "Image",
           name: "image",
-          widget: 'image',
-          required: false
+          widget: "image",
+          required: false,
         },
         {
           label: "Title",
           name: "title",
-          required: false
+          required: false,
         },
         {
           label: "Author",
           name: "author",
-          required: false
+          required: false,
         },
         {
           label: "Published at",
           name: "published_at",
-          widget: 'datetime',
+          widget: "datetime",
         },
         {
           label: "Difficulty",
@@ -612,7 +612,7 @@ export const config: CmsConfig = {
         {
           label: "Tags",
           name: "tags",
-          required: false
+          required: false,
         },
       ],
     },

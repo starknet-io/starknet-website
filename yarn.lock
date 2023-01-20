@@ -21332,17 +21332,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-uuid-v4@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "netlify-cms-widget-uuid-v4@npm:1.1.1"
-  dependencies:
-    prop-types: ^15.6.1
-  peerDependencies:
-    react: ^16
-  checksum: 44437142a8bf4096aa6ec7639db52e9194ea796e453b659bb560befc843fa2aca53d7ff06e30aafdc76b7f1b69423f8b7a4f21791f9e6265484c262afff666f9
-  languageName: node
-  linkType: hard
-
 "netlify-cms-workspace@workspace:workspaces/netlify-cms":
   version: 0.0.0-use.local
   resolution: "netlify-cms-workspace@workspace:workspaces/netlify-cms"
@@ -21352,7 +21341,6 @@ __metadata:
     netlify-cms-core: ^2.55.2
     netlify-cms-ui-default: ^2.15.5
     netlify-cms-widget-markdown: ^2.15.1
-    netlify-cms-widget-uuid-v4: ^1.1.1
     parcel: ^2.8.2
     path-browserify: ^1.0.1
   languageName: unknown

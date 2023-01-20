@@ -2,7 +2,7 @@ import CMS from "netlify-cms-app";
 import { config } from "./config";
 
 // @ts-expect-error
-import {UuidControl, UuidPreview} from 'netlify-cms-widget-uuid-v4';
+import { UuidControl, UuidPreview } from "netlify-cms-widget-uuid-v4";
 
 // @ts-expect-error
 import { markdownToHtml } from "netlify-cms-widget-markdown/dist/esm/serializers";
@@ -10,8 +10,7 @@ import { markdownToHtml } from "netlify-cms-widget-markdown/dist/esm/serializers
 // @ts-expect-error
 window.CMS = CMS;
 
-
-CMS.registerWidget('uuid', UuidControl, UuidPreview)
+CMS.registerWidget("uuid", UuidControl, UuidPreview);
 
 const css = (strings: TemplateStringsArray, ...values: any[]) => {
   const style = document.createElement("style");

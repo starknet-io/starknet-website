@@ -14,7 +14,6 @@
     "netlify-cms-core": "^2.55.2",
     "netlify-cms-ui-default": "^2.15.5",
     "netlify-cms-widget-markdown": "^2.15.1",
-    "netlify-cms-widget-uuid-v4": "^1.1.1",
     "parcel": "^2.8.2",
     "path-browserify": "^1.0.1"
   }
