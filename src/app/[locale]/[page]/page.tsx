@@ -38,13 +38,13 @@ export default async function Page({
           <Flex direction="column" gap="2">
             <Breadcrumb separator="->">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="xs" href="#">
                   Parent
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="xs" href="#">
                   {title}
                 </BreadcrumbLink>
               </BreadcrumbItem>

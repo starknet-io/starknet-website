@@ -20,19 +20,32 @@ type Props = {
 export const MenuItemWithDropdown = ({ children, label }: Props) => (
   <Popover
     trigger="hover"
-    openDelay={300}
+    openDelay={250}
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
-    offset={[0, 30]}
+    offset={[0, 20]}
   >
     {({ isOpen }) => (
       <>
         <PopoverTrigger>
           <Button
+            color={isOpen ? "button-nav-active-fg" : "button-nav-fg"}
+            bg={isOpen ? "button-nav-hover-bg" : "button-nav-bg"}
             size="sm"
+            pl="16px "
+            pr="8px"
+            height="40px"
             variant="link"
-            rightIcon={<PopoverIcon isOpen={isOpen} />}
+            borderRadius="4px"
+            rightIcon={
+              <PopoverIcon
+                isOpen={isOpen}
+                color={
+                  isOpen ? "button-nav-active-icon-fg" : "button-nav-icon-fg"
+                }
+              />
+            }
           >
             {label}
           </Button>

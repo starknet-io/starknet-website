@@ -6,6 +6,10 @@ import {
   ButtonGroup,
   Container,
   useColorMode,
+  StackDivider,
+  Divider,
+  Box,
+  Flex,
 } from "@chakra-ui/react";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import Link from "next/link";
@@ -40,7 +44,7 @@ export const NavLayout = (props: NavLayoutProps) => {
         </Link>
         {isDesktop && (
           <>
-            <ButtonGroup variant="link" spacing="8">
+            <ButtonGroup variant="link" spacing="18px">
               {props.items}
             </ButtonGroup>
           </>
@@ -64,7 +68,20 @@ export const NavLayout = (props: NavLayoutProps) => {
               />
             </>
           )}
-          {isDesktop && props.languageSwitcher}
+
+          {isDesktop && (
+            <>
+              <Box
+                w="1px"
+                bg="nav-footer-br"
+                h="30px"
+                position="relative"
+                left="-13px"
+                marginLeft="20px"
+              />
+              {props.languageSwitcher}
+            </>
+          )}
 
           {!isDesktop && (
             <IconButton

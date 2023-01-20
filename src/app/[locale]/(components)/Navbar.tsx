@@ -39,7 +39,7 @@ export default function Navbar({ mainMenu }: Props) {
                 >
                   {mainMenuItem.columns?.length &&
                     mainMenuItem.columns?.map((column, columnIndex) => (
-                      <Box key={columnIndex}>
+                      <Box key={`${columnIndex}1244`}>
                         {column.blocks?.map((block, blockIndex) => (
                           <Box mb={22} key={`${blockIndex}${block.title}`}>
                             <NavbarHeading>{block.title}</NavbarHeading>

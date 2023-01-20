@@ -5,9 +5,18 @@ export const tokens = {
       "fg-default": "#6B7280",
       "fg-muted": "#858585",
       "fg-accent": "#E97880",
-      "navbar-bg": "#FAFAFA",
+      "navbar-bg": "#FFFFFF",
       "navbar-dropdown-bg": "#FFFFFF",
-      "navlink-fg": "#6B7280",
+      "button-nav-bg": "transparent",
+      "button-nav-fg": "#363636",
+      "button-nav-icon-fg": "#CCCCCC",
+      "button-nav-hover-bg": "#FBFBFB",
+      "button-nav-hover-fg": "#363636",
+      "button-nav-hover-icon-fg": "#5C94FF",
+      "button-nav-active-bg": "#FBFBFB",
+      "button-nav-active-fg": "#363636",
+      "button-nav-active-icon-fg": "#CCCCCC",
+      "button-nav-focus-br": "#5C94FF",
       "btn-outline-bg": "transparent",
       "btn-outline-fg": "#6B7280",
       "btn-outline-border": "#EFEFEF",
@@ -60,6 +69,14 @@ export const tokens = {
       "nav-accordian-expanded-bg": "#0C0C4F",
       "nav-accordian-expanded-fg": "#FFFFFF",
       "nav-footer-br": "#EFEFEF",
+      "nav-searchinput-bg": "#F6F6F6",
+      "nav-searchinput-fg": "#858585",
+      "nav-searchinput-br": "#F6F6F6",
+      "nav-searchinput-hover-br": "#EFEFEF",
+      "nav-searchinput-hover-bg": "#F6F6F6",
+      "nav-searchinput-hover-fg": "#5C94FF",
+      "kbd-bg": "#cccccc",
+      "kbd-fg": "#363636",
     },
 
     dark: {
@@ -69,7 +86,16 @@ export const tokens = {
       "fg-accent": "#FE9E92",
       "navbar-bg": "#121212",
       "navbar-dropdown-bg": "#1B1B1B",
-      "navlink-fg": "#CCCCCC",
+      "button-nav-bg": "transparent",
+      "button-nav-fg": "#FFFFFF",
+      "button-nav-icon-fg": "#7E7E7E",
+      "button-nav-hover-bg": "#000000",
+      "button-nav-hover-fg": "#FFFFFF",
+      "button-nav-hover-icon-fg": "#AFCAFF",
+      "button-nav-active-bg": "#000000",
+      "button-nav-active-fg": "#7E7E7E",
+      "button-nav-active-icon-fg": "#7E7E7E",
+      "button-nav-focus-br": "#AFCAFF",
       "btn-outline-bg": "transparent",
       "btn-outline-fg": "#ffffff",
       "btn-outline-border": "#7E7E7E",
@@ -122,6 +148,14 @@ export const tokens = {
       "nav-accordian-expanded-bg": "#AFCAFF",
       "nav-accordian-expanded-fg": "#121212",
       "nav-footer-br": "#313131",
+      "nav-searchinput-bg": "#1B1B1B",
+      "nav-searchinput-fg": "#AFCAFF",
+      "nav-searchinput-br": "#1B1B1B",
+      "nav-searchinput-hover-br": "#858585",
+      "nav-searchinput-hover-bg": "#000000",
+      "nav-searchinput-hover-fg": "#AFCAFF",
+      "kbd-bg": "#313131",
+      "kbd-fg": "#CCCCCC",
     },
   },
 };
@@ -152,10 +186,10 @@ export const semanticTokens = {
       default: tokens.colors.light["navbar-dropdown-bg"],
       _dark: tokens.colors.dark["navbar-dropdown-bg"],
     },
-    "navlink-fg": {
-      default: tokens.colors.light["navlink-fg"],
-      _dark: tokens.colors.dark["navlink-fg"],
-    },
+    // "navlink-fg": {
+    //   default: tokens.colors.light["navlink-fg"],
+    //   _dark: tokens.colors.dark["navlink-fg"],
+    // },
     "btn-bg": {
       default: tokens.colors.light["btn-bg"],
       _dark: tokens.colors.dark["btn-bg"],
@@ -356,6 +390,79 @@ export const semanticTokens = {
     "nav-footer-br": {
       default: tokens.colors.light["nav-footer-br"],
       _dark: tokens.colors.dark["nav-footer-br"],
+    },
+    "nav-searchinput-bg": {
+      default: tokens.colors.light["nav-searchinput-bg"],
+      _dark: tokens.colors.dark["nav-searchinput-bg"],
+    },
+    "nav-searchinput-fg": {
+      default: tokens.colors.light["nav-searchinput-fg"],
+      _dark: tokens.colors.dark["nav-searchinput-fg"],
+    },
+    "nav-searchinput-hover-bg": {
+      default: tokens.colors.light["nav-searchinput-hover-bg"],
+      _dark: tokens.colors.dark["nav-searchinput-hover-bg"],
+    },
+    "nav-searchinput-hover-fg": {
+      default: tokens.colors.light["nav-searchinput-hover-fg"],
+      _dark: tokens.colors.dark["nav-searchinput-hover-fg"],
+    },
+    "nav-searchinput-br": {
+      default: tokens.colors.light["nav-searchinput-br"],
+      _dark: tokens.colors.dark["nav-searchinput-br"],
+    },
+    "nav-searchinput-hover-br": {
+      default: tokens.colors.light["nav-searchinput-hover-br"],
+      _dark: tokens.colors.dark["nav-searchinput-hover-br"],
+    },
+    "kbd-bg": {
+      default: tokens.colors.light["kbd-bg"],
+      _dark: tokens.colors.dark["kbd-bg"],
+    },
+    "kbd-fg": {
+      default: tokens.colors.light["kbd-fg"],
+      _dark: tokens.colors.dark["kbd-fg"],
+    },
+
+    "button-nav-bg": {
+      default: tokens.colors.light["button-nav-bg"],
+      _dark: tokens.colors.dark["button-nav-bg"],
+    },
+    "button-nav-fg": {
+      default: tokens.colors.light["button-nav-fg"],
+      _dark: tokens.colors.dark["button-nav-fg"],
+    },
+    "button-nav-icon-fg": {
+      default: tokens.colors.light["button-nav-icon-fg"],
+      _dark: tokens.colors.dark["button-nav-icon-fg"],
+    },
+    "button-nav-hover-bg": {
+      default: tokens.colors.light["button-nav-hover-bg"],
+      _dark: tokens.colors.dark["button-nav-hover-bg"],
+    },
+    "button-nav-hover-fg": {
+      default: tokens.colors.light["button-nav-hover-fg"],
+      _dark: tokens.colors.dark["button-nav-hover-fg"],
+    },
+    "button-nav-hover-icon-fg": {
+      default: tokens.colors.light["button-nav-hover-icon-fg"],
+      _dark: tokens.colors.dark["button-nav-hover-icon-fg"],
+    },
+    "button-nav-active-bg": {
+      default: tokens.colors.light["button-nav-active-bg"],
+      _dark: tokens.colors.dark["button-nav-active-bg"],
+    },
+    "button-nav-active-fg": {
+      default: tokens.colors.light["button-nav-active-fg"],
+      _dark: tokens.colors.dark["button-nav-active-fg"],
+    },
+    "button-nav-active-icon-fg": {
+      default: tokens.colors.light["button-nav-active-icon-fg"],
+      _dark: tokens.colors.dark["button-nav-active-icon-fg"],
+    },
+    "button-nav-focus-br": {
+      default: tokens.colors.light["button-nav-focus-br"],
+      _dark: tokens.colors.dark["button-nav-focus-br"],
     },
   },
 };

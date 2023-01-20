@@ -7,6 +7,8 @@ import { extendTheme } from "@chakra-ui/react";
 import { badgeTheme } from "../components/Badge/BadgeStyles";
 import { tagTheme } from "../components/Tag/TagStyles";
 import { accordionTheme } from "@ui/Accordion/Accordion";
+import { inputTheme } from "@ui/Input/Input";
+import { kbdTheme } from "@ui/Kbd/Kbd";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -22,6 +24,7 @@ const theme = extendTheme(proTheme, {
   },
   components: {
     Accordion: accordionTheme,
+    Input: inputTheme,
     Drawer: {
       parts: ["dialog", "header", "body"],
       variants: {
@@ -38,6 +41,7 @@ const theme = extendTheme(proTheme, {
     Button,
     Badge: badgeTheme,
     tag: tagTheme,
+    Kbd: kbdTheme,
   },
 });
 export default theme;

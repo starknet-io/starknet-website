@@ -39,16 +39,13 @@ export const SearchInput = () => {
   return (
     <>
       <InputGroup>
-        <InputLeftElement>
-          <Icon as={HiOutlineMagnifyingGlass} color="gray.500" fontSize="lg" />
+        <InputLeftElement top="3px">
+          <Icon as={HiOutlineMagnifyingGlass} fontSize="lg" />
         </InputLeftElement>
         <Input
-          bg={"card-bg"}
-          focusBorderColor="blue.900"
-          borderColor="gray.800"
+          variant="search"
           width="full"
           fontSize="sm"
-          variant="filled"
           type="text"
           placeholder="Search"
           autoComplete="off"
@@ -65,8 +62,10 @@ export const SearchInput = () => {
             </ModalFooter>
           </ModalContent>
         </Modal>
-        <InputRightElement>
-          <Kbd>/</Kbd>
+        <InputRightElement right="40px" top="3px">
+          <Kbd variant="search" size="md">
+            /
+          </Kbd>
         </InputRightElement>
       </InputGroup>
     </>
