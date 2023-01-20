@@ -11,7 +11,7 @@ import {
   Wrap,
 } from "../../../libs/chakra-ui";
 
-export default async function JobsPage({
+export default async function TutorialsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   const { title, description } = await getEventsPage(locale);
@@ -28,15 +28,12 @@ export default async function JobsPage({
 
         <BreadcrumbItem isCurrentPage>
           <BreadcrumbLink fontSize="sm" href="#">
-            Jobs
+            Tutorials
           </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <SectionHeader
-        title="Jobs"
-        description="Find a job with the best teams building on Starknet."
-      />
+      <SectionHeader title="Tutorials" description="lorem ipsum" />
       <Box>
         {/* <Wrap spacing={4} direction="column">
           {events.map((event) => (
