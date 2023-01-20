@@ -1,7 +1,10 @@
+"use client";
 import {
   Box,
   Container,
   Image,
+  Img,
+  Spacer,
   Stack,
   Text,
   useBreakpointValue,
@@ -15,22 +18,47 @@ type Props = {
   description: string | React.ReactNode;
   img: string;
   imgAlt: string;
-  url: string;
+  url?: string;
   urlTitle?: string;
   image_orientation?: "left" | "right";
 };
 
-export const BlockWithImage = ({
-  title = "How does it scale Ethereum?",
+export const BlockHeroLines = ({
+  title = "Dapps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs' to securely compress huge amounts of transactions for Ethereum.",
-  img = "https://cdn.midjourney.com/08fcc5e8-f866-4582-96b1-030943fccfca/grid_0.png",
+  img = "/cube.svg",
   imgAlt = "starknet",
   url = "https://starkware.co/starknet",
-  urlTitle,
+  urlTitle = "test",
 }: Props) => {
   return (
-    <Box as="section" bg="card-bg" borderRadius="xl">
-      <Box position="relative" height={{ lg: "500px" }}>
+    <Box
+      as="section"
+      bg="card-bg"
+      borderRadius="32px"
+      bgGradient="linear( hero-gradient-1a 3.96%, hero-gradient-1b 254.34%)"
+      position="relative"
+      zIndex={0}
+      overflow="hidden"
+    >
+      <Box
+        position="absolute"
+        height="100%"
+        width="100%"
+        zIndex={1}
+        opacity={0.5}
+        mixBlendMode="soft-light"
+      >
+        <Img
+          src="/lines.svg"
+          alt="lines"
+          objectFit="cover"
+          w="100%"
+          height="100%"
+        />
+      </Box>
+
+      <Box zIndex={2} position="relative" height={{ lg: "500px" }}>
         <Container py={{ base: "16", md: "24" }} height="full">
           <Stack
             direction={{ base: "column", lg: "row" }}
@@ -38,28 +66,15 @@ export const BlockWithImage = ({
             align={{ lg: "center" }}
             height="full"
           >
-            <Box
-              // pos={{ lg: "absolute" }}
-              // left="0"
-              // bottom="0"
-              w={{ base: "full", lg: "40%" }}
-              height={{ base: "96", lg: "full" }}
-            >
-              <Image
-                boxSize="full"
-                objectFit="cover"
-                src={img}
-                alt="starknet"
-              />
-            </Box>
-            <Stack spacing={{ base: "8", md: "12" }}>
+            <Stack spacing={{ base: "8", md: "12" }} order={{ base: 1, lg: 0 }}>
               <Stack spacing="4">
                 <Stack
                   spacing={{ base: "4", md: "6" }}
                   maxW={{ md: "xl", lg: "md", xl: "xl" }}
                 >
                   <Heading
-                    color="heading-navy-fg"
+                    bgGradient="linear(95.36deg, heading-hero-gradient-1a 1.31%, heading-hero-gradient-1b 169.4%)"
+                    bgClip="text"
                     as="h2"
                     variant="h2"
                     size={useBreakpointValue({ base: "md", md: "lg" })}
@@ -71,15 +86,31 @@ export const BlockWithImage = ({
                   </Text>
                 </Stack>
               </Stack>
-              <Stack direction={{ base: "column", md: "row" }} spacing="3">
+              {/* <Stack direction={{ base: "column", md: "row" }} spacing="3">
                 <Button
-                  variant="link"
+                  variant="outline"
                   size={useBreakpointValue({ base: "lg", md: "xl" })}
                 >
-                  {urlTitle} &rarr;
+                  {urlTitle}
                 </Button>
-              </Stack>
+              </Stack> */}
             </Stack>
+            <Spacer display={{ base: "none", lg: "block" }} />
+            <Box
+              order={{ base: 0, lg: 2 }}
+              // pos={{ lg: "absolute" }}
+              // left="0"
+              // bottom="0"
+              w={{ base: "full", lg: "35%" }}
+              height={{ base: "96", lg: "full" }}
+            >
+              <Image
+                boxSize={{ base: "xs", lg: "xs" }}
+                objectFit="contain"
+                src={img}
+                alt="starknet"
+              />
+            </Box>
           </Stack>
         </Container>
       </Box>
