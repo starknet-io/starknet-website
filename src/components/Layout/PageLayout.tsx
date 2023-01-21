@@ -41,7 +41,7 @@ export const PageLayout = (props: Props) => {
             as="aside"
             order={{ base: "2", lg: "0" }}
             role="complementary"
-            width={{ base: "full", lg: "xs" }}
+            width={{ base: "full", lg: "193px" }}
             alignSelf="start"
             // position={{ base: "unset", lg: "sticky" }}
             top="36"
