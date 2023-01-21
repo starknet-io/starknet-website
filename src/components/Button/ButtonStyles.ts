@@ -51,12 +51,8 @@ const filterActive = defineStyle({
   bg: "btn-filter-active-bg",
   color: "btn-filter-active-fg",
   _hover: {
-    bg: "btn-filter-active-bg",
-    color: "btn-filter-active-fg",
-  },
-  _active: {
-    bg: "btn-filter-active-bg",
-    color: "btn-filter-active-fg",
+    bg: "btn-filter-active-hover-bg",
+    color: "btn-filter-active-hover-fg",
   },
 });
 

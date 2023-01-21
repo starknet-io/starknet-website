@@ -97,6 +97,8 @@ export const tokens = {
       "btn-filter-fg": "#6A6A6A",
       "btn-filter-hover-fg": "#0C0C4F",
       "btn-filter-active-fg": "#ffffff",
+      "btn-filter-active-hover-fg": "#E5E5F3",
+      "btn-filter-active-hover-bg": "#858585",
     },
 
     dark: {
@@ -196,6 +198,8 @@ export const tokens = {
       "btn-filter-fg": "#CCCCCC",
       "btn-filter-hover-fg": "#CCCCCC",
       "btn-filter-active-fg": "#121212",
+      "btn-filter-active-hover-fg": "#0B0B0B",
+      "btn-filter-active-hover-bg": "#B2CDFF",
     },
   },
 };
@@ -587,6 +591,14 @@ export const semanticTokens = {
     "btn-filter-active-fg": {
       default: tokens.colors.light["btn-filter-active-fg"],
       _dark: tokens.colors.dark["btn-filter-active-fg"],
+    },
+    "btn-filter-active-hover-fg": {
+      default: tokens.colors.light["btn-filter-active-hover-fg"],
+      _dark: tokens.colors.dark["btn-filter-active-hover-fg"],
+    },
+    "btn-filter-active-hover-bg": {
+      default: tokens.colors.light["btn-filter-active-hover-bg"],
+      _dark: tokens.colors.dark["btn-filter-active-hover-bg"],
     },
   },
 };
