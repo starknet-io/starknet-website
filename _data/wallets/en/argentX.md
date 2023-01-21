@@ -7,3 +7,4 @@ twitter: "@argentHQ"
 website_url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
 description: Earn, stake and trade with low fees, high speeds & strong security.
 ---
+Earn, stake and trade with low fees, high speeds & strong security.
