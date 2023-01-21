@@ -139,7 +139,7 @@ type HitProps = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-
+  console.log("hits", hits);
   return (
     <>
       <SimpleGrid
@@ -150,7 +150,7 @@ function CustomHits() {
       >
         {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>
-            <ArticleCard.Image url={`/static/${hit.image}`} />
+            <ArticleCard.Image url={`${hit.image}`} />
 
             <ArticleCard.Body>
               <ArticleCard.Category category={hit?.category} />
