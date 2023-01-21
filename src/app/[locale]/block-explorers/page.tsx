@@ -10,14 +10,14 @@ import {
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { BlockHeroLines } from "src/blocks/BlockHeroLines";
-import { getWallets } from "src/data/wallets";
 import { ListCard } from "@ui/ListCards/ListCard";
+import { getBlockExplorers } from "src/data/block_explorers";
 
 export default async function DappsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   // const { title, description } = await getEventsPage(locale);
-  const wallets = await getWallets(locale);
+  const blockExplorers = await getBlockExplorers(locale);
 
   return (
     <Box>
@@ -49,19 +49,19 @@ export default async function DappsPage({
             <Box h={16} />
             <Container>
               <Flex gap={4} direction="column" flex={1}>
-                {wallets.map((wallet) => {
-                  console.log(wallet);
+                {blockExplorers.map((blockExplorer) => {
+                  console.log(blockExplorer);
                   return (
                     <ListCard
-                      href={wallet.website_url}
-                      twitterHandle={wallet.twitter}
-                      image={wallet.image}
+                      href={blockExplorer.website_url}
+                      twitterHandle={blockExplorer.twitter}
+                      image={blockExplorer.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
-                      key={wallet.name}
+                      key={blockExplorer.name}
                       description={
                         "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
                       }
-                      title={wallet.name}
+                      title={blockExplorer.name}
                     />
                   );
                 })}
