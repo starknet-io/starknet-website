@@ -397,8 +397,8 @@ export const config: CmsConfig = {
         },
         {
           label: "Description",
-          name: "body",
-          widget: "markdown",
+          name: "description",
+          widget: "string",
         },
       ],
     },
