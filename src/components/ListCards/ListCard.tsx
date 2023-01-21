@@ -8,6 +8,7 @@ import {
   IconButton,
   Stack,
   Tag,
+  useBreakpointValue,
   useColorModeValue,
   Wrap,
 } from "@chakra-ui/react";
@@ -33,7 +34,8 @@ type Props = {
   readonly variant?: "default" | "list" | "event" | "job";
 };
 
-export const EventCard = (props: Props) => {
+export const ListCard = (props: Props) => {
+  const isDesktop = useBreakpointValue({ base: false, lg: true });
   return (
     <Card href={props.href} variant="list">
       <Stack
@@ -83,7 +85,7 @@ export const EventCard = (props: Props) => {
           <Text
             pb="14px"
             fontSize="sm"
-            noOfLines={1}
+            noOfLines={isDesktop ? 1 : 2}
             color="list-card-lg-desc-fg"
           >
             {props.description}

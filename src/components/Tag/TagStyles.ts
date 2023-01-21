@@ -1,18 +1,22 @@
 import { tagAnatomy } from "@chakra-ui/anatomy";
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
+import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(tagAnatomy.keys);
 
-const tagPrimary = definePartsStyle({
+const listCard = definePartsStyle({
   container: {
-    bg: "orange.400",
-    color: "blackAlpha.700",
+    px: "12px",
+    py: "2px",
+    background: "#F3F4F6",
+    color: "#1F2937",
+    fontSize: "14px",
+    borderRadius: "12px",
   },
 });
 
 export const tagTheme = defineMultiStyleConfig({
   variants: {
-    tagPrimary,
+    listCard,
   },
 });
