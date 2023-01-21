@@ -22,8 +22,42 @@ const outline = defineStyle({
   },
 });
 
+const filter = defineStyle({
+  // change the appearance of the border
+  borderRadius: 4, // remove the border radius
+  fontWeight: "medium", // change the font weight
+  fontSize: "12px",
+  lineHeight: "12px",
+  padding: "8px 16px",
+  color: "btn-filter-fg",
+
+  bg: "btn-filter-bg",
+  _hover: {
+    bg: "btn-filter-hover-bg",
+    color: "btn-filter-hover-fg",
+  },
+  _active: {
+    bg: "btn-filter-active-bg",
+    color: "btn-filter-active-fg",
+  },
+});
+const filterActive = defineStyle({
+  // change the appearance of the border
+  borderRadius: 4, // remove the border radius
+  fontWeight: "medium", // change the font weight
+  fontSize: "12px",
+  lineHeight: "12px",
+  padding: "8px 16px",
+  bg: "btn-filter-active-bg",
+  color: "btn-filter-active-fg",
+  _hover: {
+    bg: "btn-filter-active-hover-bg",
+    color: "btn-filter-active-hover-fg",
+  },
+});
+
 export const buttonTheme = defineStyleConfig({
-  variants: { outline },
+  variants: { outline, filter, filterActive },
 });
 
 // export const ButtonStyles = defineStyleConfig({

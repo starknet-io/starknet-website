@@ -77,7 +77,7 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
-            <Box minH="xs">
+            <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomTopics />
             </Box>
           }
@@ -99,7 +99,7 @@ function CustomTopics() {
       {items.map((item, i) => (
         <Button
           size="sm"
-          variant="outline"
+          variant={item.isRefined ? "filterActive" : "filter"}
           onClick={() => refine(item.value)}
           key={i}
         >

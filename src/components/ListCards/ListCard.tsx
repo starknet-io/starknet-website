@@ -34,6 +34,8 @@ type Props = {
   readonly venue?: string;
   readonly twitterHandle?: string;
   readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
+  readonly type?: string[];
+  readonly rounded?: boolean;
 };
 
 export const ListCard = (props: Props) => {
@@ -47,7 +49,7 @@ export const ListCard = (props: Props) => {
       >
         <Stack spacing="4">
           <Avatar
-            rounded="xl"
+            rounded={props.rounded ? "full" : "xl"}
             bg="black"
             size="superLg"
             src={props.image}
@@ -85,12 +87,7 @@ export const ListCard = (props: Props) => {
             </HStack>
           </Stack>
 
-          <Text
-            pb="14px"
-            fontSize="sm"
-            noOfLines={isDesktop ? 1 : 2}
-            color="list-card-lg-desc-fg"
-          >
+          <Text pb="14px" fontSize="sm" color="list-card-lg-desc-fg">
             {props.description}
           </Text>
           {props.variant === "event" && (
@@ -100,9 +97,9 @@ export const ListCard = (props: Props) => {
               </Button>
             </Box>
           )}
-          {props.variant === "wallet" && (
-            <Wrap pb="20px" pt="8px" shouldWrapChildren>
-              {["Browser extension", "iOS", "Android"].map((tag) => (
+          {props.type && (
+            <Wrap pb="20px" pt="4px" shouldWrapChildren>
+              {props.type.map((tag) => (
                 <Tag key={tag} variant="listCard">
                   {tag}
                 </Tag>

@@ -135,17 +135,35 @@ export const config: CmsConfig = {
       create: true,
       fields: [
         {
+          name: "type",
+          label: "Type",
+          widget: "select",
+          options: [
+            {
+              label: "Community Event",
+              value: "community_event",
+            },
+            {
+              label: "Conference",
+              value: "conference",
+            },
+            {
+              label: "Hackathon",
+              value: "hackathon",
+            },
+          ],
+        },
+        {
           name: "name",
           label: "Event Name",
         },
         {
-          name: "subtitle",
-          label: "subtitle Name",
+          name: "description",
+          label: "Description",
         },
         {
-          name: "image",
-          label: "Event Image",
-          widget: "image",
+          name: "url",
+          label: "Website URL",
         },
         {
           name: "start_date",
@@ -153,10 +171,16 @@ export const config: CmsConfig = {
           widget: "datetime",
         },
         {
-          name: "end_date", // ?? keep this?
-          label: "End Date",
-          widget: "datetime",
+          name: "image",
+          label: "Event Image",
+          widget: "image",
         },
+
+        // {
+        //   name: "end_date", // ?? keep this?
+        //   label: "End Date",
+        //   widget: "datetime",
+        // },
         {
           name: "location",
           label: "Location",
@@ -193,35 +217,14 @@ export const config: CmsConfig = {
           label: "City",
         },
         {
-          name: "venue",
-          label: "Venue",
-        },
-        {
-          name: "type",
-          label: "Type",
-          widget: "select",
-          options: [
-            {
-              label: "Community Event",
-              value: "community_event",
-            },
-            {
-              label: "Conference",
-              value: "conference",
-            },
-            {
-              label: "Hackathon",
-              value: "hackathon",
-            },
-          ],
-        },
-        {
-          name: "url",
-          label: "Website URL",
+          name: "country",
+          label: "Country",
         },
         {
           name: "tags",
           label: "Tags",
+          widget: "list",
+          default: ["crypto", "blockchain", "starknet"],
         },
       ],
     },

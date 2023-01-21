@@ -4,7 +4,7 @@ import { getFirst, getJSON, getMDXModule } from "./utils";
 
 interface Topic {
   readonly name: string;
-  readonly type: string;
+  readonly type: string[];
   readonly image: string;
   readonly twitter: string;
   readonly website_url: string;

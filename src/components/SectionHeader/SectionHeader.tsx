@@ -28,7 +28,7 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
           >
             {title}
           </Heading>
-          <Text color="muted" fontSize="md">
+          <Text color="muted" fontSize="md" pb={8}>
             {description}
           </Text>
         </Box>

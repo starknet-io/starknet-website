@@ -91,6 +91,14 @@ export const tokens = {
       "list-card-icon-fg": "#000",
       "list-card-tag-fg": "#1F2937",
       "list-card-tag-bg": "#F3F4F6",
+      "btn-filter-bg": "#F6F6F6",
+      "btn-filter-hover-bg": "#F1F1FF",
+      "btn-filter-active-bg": "#6B7280",
+      "btn-filter-fg": "#6A6A6A",
+      "btn-filter-hover-fg": "#0C0C4F",
+      "btn-filter-active-fg": "#ffffff",
+      "btn-filter-active-hover-fg": "#E5E5F3",
+      "btn-filter-active-hover-bg": "#858585",
     },
 
     dark: {
@@ -184,6 +192,14 @@ export const tokens = {
       "list-card-icon-fg": "#FFFFFF",
       "list-card-tag-fg": "#1F2937",
       "list-card-tag-bg": "#F3F4F6",
+      "btn-filter-bg": "#1B1B1B",
+      "btn-filter-hover-bg": "#363636",
+      "btn-filter-active-bg": "#9EBFFF",
+      "btn-filter-fg": "#CCCCCC",
+      "btn-filter-hover-fg": "#CCCCCC",
+      "btn-filter-active-fg": "#121212",
+      "btn-filter-active-hover-fg": "#0B0B0B",
+      "btn-filter-active-hover-bg": "#B2CDFF",
     },
   },
 };
@@ -551,6 +567,38 @@ export const semanticTokens = {
     "list-card-tag-bg": {
       default: tokens.colors.light["list-card-tag-bg"],
       _dark: tokens.colors.dark["list-card-tag-bg"],
+    },
+    "btn-filter-bg": {
+      default: tokens.colors.light["btn-filter-bg"],
+      _dark: tokens.colors.dark["btn-filter-bg"],
+    },
+    "btn-filter-hover-bg": {
+      default: tokens.colors.light["btn-filter-hover-bg"],
+      _dark: tokens.colors.dark["btn-filter-hover-bg"],
+    },
+    "btn-filter-active-bg": {
+      default: tokens.colors.light["btn-filter-active-bg"],
+      _dark: tokens.colors.dark["btn-filter-active-bg"],
+    },
+    "btn-filter-fg": {
+      default: tokens.colors.light["btn-filter-fg"],
+      _dark: tokens.colors.dark["btn-filter-fg"],
+    },
+    "btn-filter-hover-fg": {
+      default: tokens.colors.light["btn-filter-hover-fg"],
+      _dark: tokens.colors.dark["btn-filter-hover-fg"],
+    },
+    "btn-filter-active-fg": {
+      default: tokens.colors.light["btn-filter-active-fg"],
+      _dark: tokens.colors.dark["btn-filter-active-fg"],
+    },
+    "btn-filter-active-hover-fg": {
+      default: tokens.colors.light["btn-filter-active-hover-fg"],
+      _dark: tokens.colors.dark["btn-filter-active-hover-fg"],
+    },
+    "btn-filter-active-hover-bg": {
+      default: tokens.colors.light["btn-filter-active-hover-bg"],
+      _dark: tokens.colors.dark["btn-filter-active-hover-bg"],
     },
   },
 };
