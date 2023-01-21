@@ -1,55 +1,73 @@
-import { getEventsPage } from "src/data/settings/events-page";
-import { getEvents } from "src/data/events";
-import { PageContentContainer } from "../(components)/PageContentContainer";
-import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { EventCard } from "@ui/ListCards/EventCard";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   Box,
   Wrap,
+  Spacer,
+  Flex,
+  Container,
 } from "../../../libs/chakra-ui";
+import { PageLayout } from "@ui/Layout/PageLayout";
+import { BlockHeroLines } from "src/blocks/BlockHeroLines";
+import { ListCard } from "@ui/ListCards/ListCard";
+import { getBlockExplorers } from "src/data/block_explorers";
 
-export default async function BlockExplorersPage({
+export default async function DappsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
-  const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  // const { title, description } = await getEventsPage(locale);
+  const blockExplorers = await getBlockExplorers(locale);
 
   return (
-    <PageContentContainer>
-      <Breadcrumb separator="->">
-        <BreadcrumbItem>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Parent
-          </BreadcrumbLink>
-        </BreadcrumbItem>
+    <Box>
+      <PageLayout
+        breadcrumbs={
+          <Breadcrumb separator="->">
+            <BreadcrumbItem>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Parent
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Block explorers
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-
-      <SectionHeader title="Block explorers" description="lorem ipsum" />
-      <Box>
-        Content
-        {/* <Wrap spacing={4} direction="column">
-          {events.map((event) => (
-            <EventCard
-              href="https://www.google.com"
-              startDateTime="Fri, Jan 12 • 2:00 PM EST"
-              key={event.name}
-              description={
-                "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-              }
-              title={event.name}
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Block explorers
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        }
+        pageLastUpdated="Page last updated 21 Nov 2023"
+        main={
+          <Box>
+            <BlockHeroLines
+              imgAlt="cube"
+              img="/cube.svg"
+              title=" Block explorers"
+              description="Page header with high level description of section and visual treatment from brand team."
             />
-          ))}
-        </Wrap> */}
-      </Box>
-    </PageContentContainer>
+            <Box h={16} />
+            <Container>
+              <Flex gap={4} direction="column" flex={1}>
+                {blockExplorers.map((blockExplorer) => {
+                  console.log(blockExplorer);
+                  return (
+                    <ListCard
+                      href={blockExplorer.website_url}
+                      twitterHandle={blockExplorer.twitter}
+                      image={blockExplorer.image}
+                      // startDateTime="Fri, Jan 12 • 2:00 PM EST"
+                      key={blockExplorer.name}
+                      description={blockExplorer.description}
+                      title={blockExplorer.name}
+                    />
+                  );
+                })}
+              </Flex>
+            </Container>
+          </Box>
+        }
+      />
+    </Box>
   );
 }

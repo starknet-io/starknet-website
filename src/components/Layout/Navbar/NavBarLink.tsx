@@ -30,12 +30,12 @@ export const NavBarLink = (props: Props) => {
           color: "navbar-link-active-fg",
         },
       }}
-      _visited={{
-        color: "navbar-link-active-fg",
-        svg: {
-          color: "navbar-link-active-fg",
-        },
-      }}
+      // _visited={{
+      //   color: "navbar-link-active-fg",
+      //   svg: {
+      //     color: "navbar-link-active-fg",
+      //   },
+      // }}
       {...props}
       as={NextLink}
       href={props.href}

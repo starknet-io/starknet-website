@@ -1,57 +1,15 @@
-import { getEventsPage } from "src/data/settings/events-page";
-import { getEvents } from "src/data/events";
-import { PageContentContainer } from "../(components)/PageContentContainer";
-import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { EventCard } from "@ui/ListCards/EventCard";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Box,
-  Wrap,
-} from "../../../libs/chakra-ui";
+import { AutoProps, JobsPage } from "./(components)/JobsPage";
 
-export default async function JobsPage({
-  params: { locale },
-}: LocaleProps): Promise<JSX.Element> {
-  const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
-
+export default function Page(props: AutoProps) {
   return (
-    <PageContentContainer>
-      <Breadcrumb separator="->">
-        <BreadcrumbItem>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Parent
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Jobs
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-
-      <SectionHeader
-        title="Jobs"
-        description="Find a job with the best teams building on Starknet."
+    <>
+      <JobsPage
+        {...props}
+        env={{
+          ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
+          ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
+        }}
       />
-      <Box>
-        {/* <Wrap spacing={4} direction="column">
-          {events.map((event) => (
-            <EventCard
-              href="https://www.google.com"
-              startDateTime="Fri, Jan 12 • 2:00 PM EST"
-              key={event.name}
-              description={
-                "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-              }
-              title={event.name}
-            />
-          ))}
-        </Wrap> */}
-      </Box>
-    </PageContentContainer>
+    </>
   );
 }

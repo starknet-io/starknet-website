@@ -25,9 +25,10 @@ export const Heading = ({ variant, children, as, ...rest }: Props) => {
       return (
         <ChakraHeading
           as="h3"
-          py={4}
+          pb={3}
           fontWeight="bold"
           fontSize="1.5rem"
+          lineHeight={"3rem"}
           {...rest}
         >
           {children}

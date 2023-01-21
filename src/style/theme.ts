@@ -9,6 +9,9 @@ import { tagTheme } from "../components/Tag/TagStyles";
 import { accordionTheme } from "@ui/Accordion/Accordion";
 import { inputTheme } from "@ui/Input/Input";
 import { kbdTheme } from "@ui/Kbd/Kbd";
+import { dividerTheme } from "@ui/Divider/Divider";
+import { avatarTheme } from "@ui/Avatar/Avatar";
+import { iconButtonTheme } from "@ui/IconButton/IconButton";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -24,7 +27,9 @@ const theme = extendTheme(proTheme, {
   },
   components: {
     Accordion: accordionTheme,
+    Avatar: avatarTheme,
     Input: inputTheme,
+    IconButton: iconButtonTheme,
     Drawer: {
       parts: ["dialog", "header", "body"],
       variants: {
@@ -40,8 +45,9 @@ const theme = extendTheme(proTheme, {
     },
     Button,
     Badge: badgeTheme,
-    tag: tagTheme,
     Kbd: kbdTheme,
+    Divider: dividerTheme,
+    Tag: tagTheme,
   },
 });
 export default theme;

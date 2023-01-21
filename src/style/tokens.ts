@@ -1,7 +1,7 @@
 export const tokens = {
   colors: {
     light: {
-      "bg-default": "#F6F6F6",
+      "bg-default": "#FBFBFB",
       "fg-default": "#6B7280",
       "fg-muted": "#858585",
       "fg-accent": "#E97880",
@@ -46,6 +46,7 @@ export const tokens = {
       "btn-primary-active-border": "#0C0C4F",
       "article-card-bg": "#FFFFFF",
       "card-bg": "#FFFFFF",
+      "card-br": "#EFEFEF",
       "subnav-fg": "#858585",
       "subnav-fg-accent": "#0C0C4F",
       "heading-navy-fg": "#0C0C4F",
@@ -77,6 +78,19 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#5C94FF",
       "kbd-bg": "#cccccc",
       "kbd-fg": "#363636",
+      "hero-gradient-1a": "#FFDAD6",
+      "hero-gradient-1b": "#B6C6FF",
+      "heading-hero-gradient-1a": "#0C0C4F",
+      "heading-hero-gradient-1b": "#0C0C4F",
+      "text-hero-fg": "#000",
+      "list-card-lg-title-fg": "#000",
+      "list-card-sm-title-fg": "#6B7280",
+      "list-card-sm-title-link-fg": "#5C94FF",
+      "list-card-lg-desc-fg": "#6B7280",
+      "list-card-img-bg": "#000",
+      "list-card-icon-fg": "#000",
+      "list-card-tag-fg": "#1F2937",
+      "list-card-tag-bg": "#F3F4F6",
     },
 
     dark: {
@@ -125,6 +139,7 @@ export const tokens = {
       "btn-primary-active-border": "#5C94FF",
       "article-card-bg": "#1B1B1B",
       "card-bg": "#1B1B1B",
+      "card-br": "#1B1B1B",
       "subnav-fg": "#7E7E7E",
       "subnav-fg-accent": "#ffffff",
       "heading-navy-fg": "#FFFFFF",
@@ -156,6 +171,19 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#AFCAFF",
       "kbd-bg": "#313131",
       "kbd-fg": "#CCCCCC",
+      "heading-hero-gradient-1a": "#D672EF",
+      "heading-hero-gradient-1b": "#EC796B",
+      "hero-gradient-1a": "#222",
+      "hero-gradient-1b": "#111",
+      "text-hero-fg": "#FFFFFF",
+      "list-card-lg-title-fg": "#FFFFFF",
+      "list-card-sm-title-fg": "#CCCCCC",
+      "list-card-sm-title-link-fg": "#AFCAFF",
+      "list-card-lg-desc-fg": "#CCCCCC",
+      "list-card-img-bg": "#000",
+      "list-card-icon-fg": "#FFFFFF",
+      "list-card-tag-fg": "#1F2937",
+      "list-card-tag-bg": "#F3F4F6",
     },
   },
 };
@@ -270,6 +298,10 @@ export const semanticTokens = {
     "card-bg": {
       default: tokens.colors.light["card-bg"],
       _dark: tokens.colors.dark["card-bg"],
+    },
+    "card-br": {
+      default: tokens.colors.light["card-br"],
+      _dark: tokens.colors.dark["card-br"],
     },
     "subnav-fg": {
       default: tokens.colors.light["subnav-fg"],
@@ -463,6 +495,62 @@ export const semanticTokens = {
     "button-nav-focus-br": {
       default: tokens.colors.light["button-nav-focus-br"],
       _dark: tokens.colors.dark["button-nav-focus-br"],
+    },
+    "divider-bg": {
+      default: tokens.colors.light["divider-bg"],
+      _dark: tokens.colors.dark["divider-bg"],
+    },
+    "hero-gradient-1a": {
+      default: tokens.colors.light["hero-gradient-1a"],
+      _dark: tokens.colors.dark["hero-gradient-1a"],
+    },
+    "hero-gradient-1b": {
+      default: tokens.colors.light["hero-gradient-1b"],
+      _dark: tokens.colors.dark["hero-gradient-1b"],
+    },
+    "heading-hero-gradient-1b": {
+      default: tokens.colors.light["heading-hero-gradient-1b"],
+      _dark: tokens.colors.dark["heading-hero-gradient-1b"],
+    },
+    "heading-hero-gradient-1a": {
+      default: tokens.colors.light["heading-hero-gradient-1b"],
+      _dark: tokens.colors.dark["heading-hero-gradient-1b"],
+    },
+    "text-hero-fg": {
+      default: tokens.colors.light["text-hero-fg"],
+      _dark: tokens.colors.dark["text-hero-fg"],
+    },
+    "list-card-lg-title-fg": {
+      default: tokens.colors.light["list-card-lg-title-fg"],
+      _dark: tokens.colors.dark["list-card-lg-title-fg"],
+    },
+    "list-card-sm-title-fg": {
+      default: tokens.colors.light["list-card-sm-title-fg"],
+      _dark: tokens.colors.dark["list-card-sm-title-fg"],
+    },
+    "list-card-sm-title-link-fg": {
+      default: tokens.colors.light["list-card-sm-title-link-fg"],
+      _dark: tokens.colors.dark["list-card-sm-title-link-fg"],
+    },
+    "list-card-lg-desc-fg": {
+      default: tokens.colors.light["list-card-lg-desc-fg"],
+      _dark: tokens.colors.dark["list-card-lg-desc-fg"],
+    },
+    "list-card-img-bg": {
+      default: tokens.colors.light["list-card-img-bg"],
+      _dark: tokens.colors.dark["list-card-img-bg"],
+    },
+    "list-card-icon-fg": {
+      default: tokens.colors.light["list-card-icon-fg"],
+      _dark: tokens.colors.dark["list-card-icon-fg"],
+    },
+    "list-card-tag-fg": {
+      default: tokens.colors.light["list-card-tag-fg"],
+      _dark: tokens.colors.dark["list-card-tag-fg"],
+    },
+    "list-card-tag-bg": {
+      default: tokens.colors.light["list-card-tag-bg"],
+      _dark: tokens.colors.dark["list-card-tag-bg"],
     },
   },
 };

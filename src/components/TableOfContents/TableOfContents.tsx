@@ -1,5 +1,5 @@
 "use client";
-import { Box, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Stack, Text } from "@chakra-ui/react";
 
 export type SubNavLinkGroupProps = {
   label: string;
@@ -9,7 +9,7 @@ export type SubNavLinkGroupProps = {
 export const SubNavLinkGroup = (props: SubNavLinkGroupProps) => {
   const { label, links } = props;
   return (
-    <Box>
+    <Flex direction="column" alignItems="flex-end">
       <Text
         fontSize="xs"
         textTransform="uppercase"
@@ -27,6 +27,6 @@ export const SubNavLinkGroup = (props: SubNavLinkGroupProps) => {
           </li>
         ))}
       </Stack>
-    </Box>
+    </Flex>
   );
 };

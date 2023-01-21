@@ -1,55 +1,73 @@
-import { getEventsPage } from "src/data/settings/events-page";
-import { getEvents } from "src/data/events";
-import { PageContentContainer } from "../(components)/PageContentContainer";
-import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { EventCard } from "@ui/ListCards/EventCard";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   Box,
   Wrap,
+  Spacer,
+  Flex,
+  Container,
 } from "../../../libs/chakra-ui";
+import { PageLayout } from "@ui/Layout/PageLayout";
+import { BlockHeroLines } from "src/blocks/BlockHeroLines";
+import { getWallets } from "src/data/wallets";
+import { ListCard } from "@ui/ListCards/ListCard";
 
-export default async function WalletsPage({
+export default async function DappsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
-  const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  // const { title, description } = await getEventsPage(locale);
+  const wallets = await getWallets(locale);
 
   return (
-    <PageContentContainer>
-      <Breadcrumb separator="->">
-        <BreadcrumbItem>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Parent
-          </BreadcrumbLink>
-        </BreadcrumbItem>
+    <Box>
+      <PageLayout
+        breadcrumbs={
+          <Breadcrumb separator="->">
+            <BreadcrumbItem>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Parent
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink fontSize="sm" href="#">
-            Wallets
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-
-      <SectionHeader title="Wallets" description="lorem ipsum" />
-      <Box>
-        Content
-        {/* <Wrap spacing={4} direction="column">
-          {events.map((event) => (
-            <EventCard
-              href="https://www.google.com"
-              startDateTime="Fri, Jan 12 • 2:00 PM EST"
-              key={event.name}
-              description={
-                "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-              }
-              title={event.name}
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink fontSize="sm" href="#">
+                Wallets
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        }
+        pageLastUpdated="Page last updated 21 Nov 2023"
+        main={
+          <Box>
+            <BlockHeroLines
+              imgAlt="cube"
+              img="/cube.svg"
+              title="Wallets"
+              description="Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs' to securely compress huge amounts of transactions for Ethereum."
             />
-          ))}
-        </Wrap> */}
-      </Box>
-    </PageContentContainer>
+            <Box h={16} />
+            <Container>
+              <Flex gap={4} direction="column" flex={1}>
+                {wallets.map((wallet) => {
+                  console.log(wallet);
+                  return (
+                    <ListCard
+                      href={wallet.website_url}
+                      twitterHandle={wallet.twitter}
+                      image={wallet.image}
+                      // startDateTime="Fri, Jan 12 • 2:00 PM EST"
+                      key={wallet.name}
+                      description={wallet.description}
+                      title={wallet.name}
+                    />
+                  );
+                })}
+              </Flex>
+            </Container>
+          </Box>
+        }
+      />
+    </Box>
   );
 }

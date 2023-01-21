@@ -397,8 +397,8 @@ export const config: CmsConfig = {
         },
         {
           label: "Description",
-          name: "body",
-          widget: "markdown",
+          name: "description",
+          widget: "string",
         },
       ],
     },
@@ -412,6 +412,26 @@ export const config: CmsConfig = {
         {
           label: "Name",
           name: "name",
+        },
+        {
+          label: "Type",
+          name: "type",
+          multiple: true,
+          widget: "select",
+          options: [
+            {
+              label: "Browser extension",
+              value: "browser_extension",
+            },
+            {
+              label: "iOS",
+              value: "ios",
+            },
+            {
+              label: "Android",
+              value: "android",
+            },
+          ],
         },
         {
           label: "Image",
@@ -429,7 +449,6 @@ export const config: CmsConfig = {
         {
           label: "Description",
           name: "body",
-          widget: "markdown",
         },
       ],
     },
@@ -480,6 +499,11 @@ export const config: CmsConfig = {
           label: "Twitter handle",
           name: "twitter",
         },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+        },
       ],
     },
     {
@@ -528,6 +552,11 @@ export const config: CmsConfig = {
         {
           label: "Twitter handle",
           name: "twitter",
+        },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
         },
       ],
     },
