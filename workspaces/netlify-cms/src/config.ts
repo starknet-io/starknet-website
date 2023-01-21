@@ -414,6 +414,26 @@ export const config: CmsConfig = {
           name: "name",
         },
         {
+          label: "Type",
+          name: "type",
+          multiple: true,
+          widget: "select",
+          options: [
+            {
+              label: "Browser extension",
+              value: "browser_extension",
+            },
+            {
+              label: "iOS",
+              value: "ios",
+            },
+            {
+              label: "Android",
+              value: "android",
+            },
+          ],
+        },
+        {
           label: "Image",
           name: "image",
           widget: "image",
@@ -429,7 +449,6 @@ export const config: CmsConfig = {
         {
           label: "Description",
           name: "body",
-          widget: "markdown",
         },
       ],
     },

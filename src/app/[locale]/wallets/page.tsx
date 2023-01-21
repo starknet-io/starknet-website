@@ -58,9 +58,7 @@ export default async function DappsPage({
                       image={wallet.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
                       key={wallet.name}
-                      description={
-                        "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-                      }
+                      description={wallet.description}
                       title={wallet.name}
                     />
                   );
