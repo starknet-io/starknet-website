@@ -20,6 +20,8 @@ export default async function DappsPage({
   // const { title, description } = await getEventsPage(locale);
   const dapps = await getDapps(locale);
 
+  console.log(dapps);
+
   return (
     <Box>
       <PageLayout
@@ -51,7 +53,6 @@ export default async function DappsPage({
             <Container>
               <Flex gap={4} direction="column" flex={1}>
                 {dapps.map((dapp) => {
-                  console.log(dapp);
                   return (
                     <ListCard
                       href={dapp.website_url}
