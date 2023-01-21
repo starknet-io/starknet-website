@@ -6,6 +6,7 @@ on:
       - "_data/posts/**"
       - "_data/jobs/**"
       - "_data/events/**"
+      - "_data/tutorials/**"
     branches:
       - dev
 

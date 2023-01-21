@@ -13,7 +13,7 @@ export const config: CmsConfig = {
     repo: "starknet-io/starknet-website",
     branch,
   },
-  media_folder: "static/assets",
+  media_folder: "public/assets",
   public_folder: "/assets",
   collections: [
     {
@@ -284,28 +284,20 @@ export const config: CmsConfig = {
               widget: "select",
               options: [
                 {
-                  label: "online / remote",
-                  value: "online_remote",
+                  label: "Full time",
+                  value: "full_time",
                 },
                 {
-                  label: "USA",
-                  value: "usa",
+                  label: "Part time",
+                  value: "part_time",
                 },
                 {
-                  label: "Europe",
-                  value: "europe",
+                  label: "Freelance",
+                  value: "freelance",
                 },
                 {
-                  label: "Asia",
-                  value: "asia",
-                },
-                {
-                  label: "South America",
-                  value: "south_america",
-                },
-                {
-                  label: "Canada",
-                  value: "canada",
+                  label: "Contract",
+                  value: "contract",
                 },
               ],
             },
@@ -352,6 +344,10 @@ export const config: CmsConfig = {
             {
               name: "how_to_apply",
               label: "How to apply",
+            },
+            {
+              name: "apply_url",
+              label: "Link to apply",
             },
           ],
         },
@@ -536,6 +532,87 @@ export const config: CmsConfig = {
       ],
     },
     {
+      label: "Tutorials",
+      name: "tutorials",
+      folder: `_data/tutorials/${locale}`,
+      create: true,
+      identifier_field: "id",
+      fields: [
+        {
+          label: "ID",
+          name: "id",
+        },
+        {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: [
+            {
+              label: "Youtube",
+              value: "youtube",
+            },
+            {
+              label: "Blog",
+              value: "blog",
+            },
+            {
+              label: "Github",
+              value: "github",
+            },
+          ],
+        },
+        {
+          label: "URL",
+          name: "url",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        },
+        {
+          label: "Title",
+          name: "title",
+          required: false,
+        },
+        {
+          label: "Author",
+          name: "author",
+          required: false,
+        },
+        {
+          label: "Published at",
+          name: "published_at",
+          widget: "datetime",
+        },
+        {
+          label: "Difficulty",
+          name: "difficulty",
+          widget: "select",
+          options: [
+            {
+              label: "Beginner",
+              value: "beginner",
+            },
+            {
+              label: "Intermediate",
+              value: "intermediate",
+            },
+            {
+              label: "Advanced",
+              value: "advanced",
+            },
+          ],
+        },
+        {
+          label: "Tags",
+          name: "tags",
+          required: false,
+        },
+      ],
+    },
+    {
       label: "Settings",
       name: "settings",
       files: [
@@ -627,6 +704,21 @@ export const config: CmsConfig = {
           label: "Events Page",
           name: "events-page",
           file: `_data/settings/${locale}/events-page.yml`,
+          fields: [
+            {
+              label: "Title",
+              name: "title",
+            },
+            {
+              label: "Description",
+              name: "description",
+            },
+          ],
+        },
+        {
+          label: "Tutorials Page",
+          name: "tutorials-page",
+          file: `_data/settings/${locale}/tutorials-page.yml`,
           fields: [
             {
               label: "Title",

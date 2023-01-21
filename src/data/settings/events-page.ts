@@ -13,7 +13,7 @@ export async function getEventsPage(locale: string): Promise<EventsPage> {
       () => getYAML(`settings/${defaultLocale}/events-page.yml`),
     );
   } catch (cause) {
-    throw new Error("getMainMenu failed!", {
+    throw new Error("getEventsPage failed!", {
       cause,
     });
   }

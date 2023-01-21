@@ -1,12 +1,17 @@
 import { Text as ChakraText, TextProps } from "src/libs/chakra-ui";
 
 type Props = {
-  variant?: "cardBody" | "baseRegular" | "baseSemibold" | "baseBold" | "baseExtraBold";
+  variant?:
+    | "cardBody"
+    | "baseRegular"
+    | "baseSemibold"
+    | "baseBold"
+    | "baseExtraBold";
 } & TextProps;
 
 export const Text = ({ variant, children, ...rest }: Props) => {
   switch (variant) {
-       case "cardBody":
+    case "cardBody":
       return (
         <ChakraText
           fontWeight="normal"

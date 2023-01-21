@@ -102,6 +102,7 @@ interface Job {
     readonly scope: string;
     readonly location: string;
     readonly how_to_apply: string;
+    readonly apply_url: string;
   };
   readonly locale: string;
   readonly filepath: string;
@@ -125,6 +126,7 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
       scope: data.job.scope,
       location: data.job.location,
       how_to_apply: data.job.how_to_apply,
+      apply_url: data.job.apply_url,
     },
     contact: {
       name: data.contact.name,
@@ -133,6 +135,46 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
       discord: data.contact.discord,
       logo: data.contact.logo,
     },
+    locale,
+    filepath: path.join("_data", resourceName, locale, filename),
+  };
+}
+
+interface Tutorial {
+  readonly id: string;
+  readonly type: "youtube" | "blog" | "github";
+  readonly url: string;
+  readonly image?: string;
+  readonly title?: string;
+  readonly author?: string;
+  readonly published_at: string;
+  readonly difficulty?: "beginner" | "intermediate" | "advanced";
+  readonly tags?: string;
+  readonly locale: string;
+  readonly filepath: string;
+}
+
+async function fileToTutorial(
+  locale: string,
+  filename: string,
+): Promise<Tutorial> {
+  const resourceName = "tutorials";
+
+  const data = await getFirst(
+    () => mdx(path.join("_data", resourceName, locale, filename)),
+    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
+  );
+
+  return {
+    id: data.id,
+    type: data.type,
+    url: data.url,
+    image: data.image,
+    title: data.title,
+    author: data.author,
+    published_at: data.published_at,
+    difficulty: data.difficulty,
+    tags: data.tags,
     locale,
     filepath: path.join("_data", resourceName, locale, filename),
   };
@@ -148,6 +190,7 @@ try {
     ["posts", fileToPost],
     ["jobs", fileToJob],
     ["events", fileToEvent],
+    ["tutorials", fileToTutorial],
   ] as const;
 
   for (const [resourceName, fileToresource] of resources) {

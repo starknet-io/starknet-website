@@ -23,7 +23,7 @@ export const FeaturedArticleCard = (props: Props) => {
         <Image
           borderRadius={8}
           maxW={600}
-          src="../../../static/assets/image.jpg"
+          src="/assets/image.jpg"
         />
         <Stack spacing={{ base: "8", md: "10" }} width="full" justify="center">
           <Stack spacing={{ base: "4", md: "6" }}>
