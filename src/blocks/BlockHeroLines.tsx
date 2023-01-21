@@ -15,11 +15,11 @@ import React from "react";
 type Props = {
   title: string;
   description: string | React.ReactNode;
-  img: string;
-  imgAlt: string;
+  img?: string;
+  imgAlt?: string;
   url?: string;
   urlTitle?: string;
-  image_orientation?: "left" | "right";
+  variant?: "wallets" | "block_explorers" | "bridges" | "dapps";
 };
 
 export const BlockHeroLines = ({
@@ -29,7 +29,23 @@ export const BlockHeroLines = ({
   imgAlt = "starknet",
   url = "https://starkware.co/starknet",
   urlTitle = "test",
+  variant = "dapps",
 }: Props) => {
+  const renderImage = () => {
+    switch (variant) {
+      case "dapps":
+        return "/assets/blockHeroLines/wallets.svg";
+      case "block_explorers":
+        return "/assets/blockHeroLines/block_explorers.svg";
+      case "bridges":
+        return "/assets/blockHeroLines/bridges.svg";
+      case "wallets":
+        return "/assets/blockHeroLines/wallets.svg";
+
+      default:
+        return "/assets/blockHeroLines/wallets.svg";
+    }
+  };
   return (
     <Box
       as="section"
@@ -177,7 +193,7 @@ export const BlockHeroLines = ({
               <Image
                 boxSize={{ base: "300px", lg: "250px" }}
                 // objectFit="contain"
-                src={img}
+                src={renderImage()}
                 alt="starknet"
               />
             </Box>

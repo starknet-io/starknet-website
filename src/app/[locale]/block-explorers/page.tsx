@@ -41,8 +41,7 @@ export default async function DappsPage({
         main={
           <Box>
             <BlockHeroLines
-              imgAlt="cube"
-              img="/cube.svg"
+              variant="block_explorers"
               title=" Block explorers"
               description="Page header with high level description of section and visual treatment from brand team."
             />
