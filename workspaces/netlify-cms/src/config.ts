@@ -534,6 +534,11 @@ export const config: CmsConfig = {
           label: "Twitter handle",
           name: "twitter",
         },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+        },
       ],
     },
     {

@@ -8,13 +8,14 @@ interface Topic {
   readonly image: string;
   readonly company_name: string;
   readonly twitter: string;
+  readonly description: string;
 }
 
 export async function getBridges(locale: string): Promise<readonly Topic[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/bridges/${locale}.json`),
-      () => getJSON(`_dynamic/bridges/${defaultLocale}.json`),
+      () => getJSON(`_dynamic/bridges/${defaultLocale}.json`)
     );
   } catch (cause) {
     throw new Error("getBridges failed!", {
@@ -25,12 +26,12 @@ export async function getBridges(locale: string): Promise<readonly Topic[]> {
 
 export async function getBridgeByFilename(
   filename: string,
-  locale: string,
+  locale: string
 ): Promise<Topic> {
   try {
     return await getFirst(
       () => getMDXModule(`bridges/${locale}/${filename}.md`),
-      () => getMDXModule(`bridges/${defaultLocale}/${filename}.md`),
+      () => getMDXModule(`bridges/${defaultLocale}/${filename}.md`)
     );
   } catch (cause) {
     throw new Error(`Bridge not found! ${filename}`, {

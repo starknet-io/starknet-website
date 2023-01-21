@@ -12,12 +12,13 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { BlockHeroLines } from "src/blocks/BlockHeroLines";
 import { getWallets } from "src/data/wallets";
 import { ListCard } from "@ui/ListCards/ListCard";
+import { getBridges } from "src/data/bridges";
 
 export default async function DappsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   // const { title, description } = await getEventsPage(locale);
-  const wallets = await getWallets(locale);
+  const bridges = await getBridges(locale);
 
   return (
     <Box>
@@ -49,19 +50,17 @@ export default async function DappsPage({
             <Box h={16} />
             <Container>
               <Flex gap={4} direction="column" flex={1}>
-                {wallets.map((wallet) => {
-                  console.log(wallet);
+                {bridges.map((bridge) => {
+                  console.log(bridge);
                   return (
                     <ListCard
-                      href={wallet.website_url}
-                      twitterHandle={wallet.twitter}
-                      image={wallet.image}
+                      href={bridge.website_url}
+                      twitterHandle={bridge.twitter}
+                      image={bridge.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
-                      key={wallet.name}
-                      description={
-                        "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-                      }
-                      title={wallet.name}
+                      key={bridge.name}
+                      description={bridge.description}
+                      title={bridge.name}
                     />
                   );
                 })}
