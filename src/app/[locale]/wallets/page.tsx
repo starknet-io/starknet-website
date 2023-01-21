@@ -41,8 +41,7 @@ export default async function DappsPage({
         main={
           <Box>
             <BlockHeroLines
-              imgAlt="cube"
-              img="/cube.svg"
+              variant="wallets"
               title="Wallets"
               description="Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs' to securely compress huge amounts of transactions for Ethereum."
             />

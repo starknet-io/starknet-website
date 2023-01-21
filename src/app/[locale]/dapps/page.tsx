@@ -3,14 +3,11 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Box,
-  Wrap,
-  Spacer,
   Flex,
   Container,
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { BlockHeroLines } from "src/blocks/BlockHeroLines";
-import { getWallets } from "src/data/wallets";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { getDapps } from "src/data/dapps";
 
@@ -19,8 +16,6 @@ export default async function DappsPage({
 }: LocaleProps): Promise<JSX.Element> {
   // const { title, description } = await getEventsPage(locale);
   const dapps = await getDapps(locale);
-
-  console.log(dapps);
 
   return (
     <Box>
@@ -44,8 +39,7 @@ export default async function DappsPage({
         main={
           <Box>
             <BlockHeroLines
-              imgAlt="cube"
-              img="/cube.svg"
+              variant="dapps"
               title="Dapps"
               description="Discover apps in the Starknet ecosystem across NFTs, Defi, DAOs and more."
             />
@@ -55,7 +49,6 @@ export default async function DappsPage({
                 {dapps.map((dapp) => {
                   return (
                     <ListCard
-                      variant="dapp"
                       href={dapp.website_url}
                       twitterHandle={dapp.twitter}
                       image={dapp.image}

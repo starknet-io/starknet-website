@@ -1,0 +1,9 @@
+<svg width="272" height="250" viewBox="0 0 272 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M271 125C271 106.36 255.89 91.25 237.25 91.25H181C181 116.103 160.853 136.25 136 136.25C111.147 136.25 91 116.103 91 91.25H34.75C16.1104 91.25 1 106.36 1 125M271 125V215C271 233.64 255.89 248.75 237.25 248.75H34.75C16.1104 248.75 1 233.64 1 215V125M271 125V80M1 125V80M271 80C271 61.3604 255.89 46.25 237.25 46.25H34.75C16.1104 46.25 1 61.3604 1 80M271 80V35C271 16.3604 255.89 1.25 237.25 1.25H34.75C16.1104 1.25 1 16.3604 1 35V80" stroke="url(#paint0_linear_1656_434655)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_1656_434655" x1="266" y1="-26.5" x2="113.218" y2="360.089" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EC796B"/>
+<stop offset="1" stop-color="#F4C9FF"/>
+</linearGradient>
+</defs>
+</svg>
