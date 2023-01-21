@@ -1,28 +1,27 @@
-import { getEventsPage } from "src/data/settings/events-page";
-import { getEvents } from "src/data/events";
-import { PageContentContainer } from "../(components)/PageContentContainer";
-import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { EventCard } from "@ui/ListCards/EventCard";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   Box,
   Wrap,
+  Spacer,
+  Flex,
+  Container,
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { BlockHeroLines } from "src/blocks/BlockHeroLines";
+import { getWallets } from "src/data/wallets";
+import { ListCard } from "@ui/ListCards/ListCard";
 
-export default async function BlockExplorersPage({
+export default async function DappsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
-  const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  // const { title, description } = await getEventsPage(locale);
+  const wallets = await getWallets(locale);
 
   return (
     <Box>
       <PageLayout
-        sectionHeaderTitle="Block explorers"
-        sectionHeaderDescription="Page header with high level description of section and visual treatment from brand team."
         breadcrumbs={
           <Breadcrumb separator="->">
             <BreadcrumbItem>
@@ -39,7 +38,37 @@ export default async function BlockExplorersPage({
           </Breadcrumb>
         }
         pageLastUpdated="Page last updated 21 Nov 2023"
-        main={<Box>Test</Box>}
+        main={
+          <Box>
+            <BlockHeroLines
+              imgAlt="cube"
+              img="/cube.svg"
+              title=" Block explorers"
+              description="Page header with high level description of section and visual treatment from brand team."
+            />
+            <Box h={16} />
+            <Container>
+              <Flex gap={4} direction="column" flex={1}>
+                {wallets.map((wallet) => {
+                  console.log(wallet);
+                  return (
+                    <ListCard
+                      href={wallet.website_url}
+                      twitter={wallet.twitter}
+                      image={wallet.image}
+                      // startDateTime="Fri, Jan 12 • 2:00 PM EST"
+                      key={wallet.name}
+                      description={
+                        "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
+                      }
+                      title={wallet.name}
+                    />
+                  );
+                })}
+              </Flex>
+            </Container>
+          </Box>
+        }
       />
     </Box>
   );
