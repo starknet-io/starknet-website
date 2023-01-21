@@ -13,7 +13,7 @@ export const config: CmsConfig = {
     repo: "starknet-io/starknet-website",
     branch,
   },
-  media_folder: "static/assets",
+  media_folder: "public/assets",
   public_folder: "/assets",
   collections: [
     {
