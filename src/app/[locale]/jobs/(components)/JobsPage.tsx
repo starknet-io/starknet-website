@@ -14,6 +14,7 @@ import {
   Flex,
   Container,
   Spacer,
+  VStack,
 } from "@chakra-ui/react";
 import * as SubNav from "@ui/SubNav/SubNav";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -33,6 +34,7 @@ import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
 import { Text } from "@ui/Typography/Text";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
+import { ListCard } from "@ui/ListCards/ListCard";
 
 export interface AutoProps {
   readonly params: {
@@ -62,7 +64,7 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
 
         <PageLayout
           sectionHeaderTitle="Jobs"
-          sectionHeaderDescription="Find a job at Mozilla"
+          sectionHeaderDescription="Find a job with the best teams building on Starknet."
           breadcrumbs={
             <Breadcrumb separator="->">
               <BreadcrumbItem>
@@ -79,18 +81,15 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
             </Breadcrumb>
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
-          leftAside={<Box minH="xs">Filters</Box>}
+          leftAside={
+            <Box minH="xs">
+              <CustomRole />
+              <CustomType />
+            </Box>
+          }
           main={
             <Box>
-              <Heading variant="h3" as="h3" pt={0}>
-                Hello there
-              </Heading>
-              <Text variant="baseRegular" fontSize="sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-                delectus quis illo nesciunt doloribus molestias quas
-                reprehenderit quo accusamus odit natus consequuntur, quasi
-                aspernatur veritatis dolorum distinctio aut repellendus cumque!
-              </Text>
+              <CustomHits />
             </Box>
           }
         />
@@ -99,52 +98,109 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
   );
 }
 
-function CustomTopics() {
+function CustomRole() {
   const { items, refine } = useRefinementList({
-    attribute: "topic",
+    attribute: "job.role",
     sortBy: ["name:asc"],
   });
-  console.log("topics", items);
+  console.log("Role", items);
   return (
-    <Box bg="red">
-      <Wrap>
-        Hello
-        {/* {items.map((item, i) => (
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={() => refine(item.value)}
-          key={i}
-        >
-          {item.label}
-        </Button>
-      ))} */}
-      </Wrap>
+    <Box>
+      <Heading as="h4" variant={"h6"} mb={4}>
+        Role
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => (
+          <Button
+            size="sm"
+            variant={item.isRefined ? "filterActive" : "filter"}
+            onClick={() => refine(item.value)}
+            key={i}
+          >
+            {item.label}
+          </Button>
+        ))}
+      </VStack>
     </Box>
   );
 }
 
+function CustomType() {
+  const { items, refine } = useRefinementList({
+    attribute: "job.type",
+    sortBy: ["name:asc"],
+  });
+  console.log("type", items);
+  return (
+    <Box mt={8}>
+      <Heading as="h4" variant={"h6"} mb={4}>
+        Type
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => (
+          <Button
+            variant={item.isRefined ? "filterActive" : "filter"}
+            size="sm"
+            onClick={() => refine(item.value)}
+            key={i}
+          >
+            {item.label}
+          </Button>
+        ))}
+      </VStack>
+    </Box>
+  );
+}
+
+interface Contact {
+  discord: string;
+  email: string;
+  logo: string;
+  name: string;
+  twitter: string;
+}
+interface Job {
+  description: string;
+  how_to_apply: string;
+  location: string;
+  required_experience: string;
+  role: string;
+  scope: string;
+  title: string;
+  type: string;
+}
+
 type HitProps = {
   readonly hits: readonly {
-    readonly title: string;
-    readonly short_desc: string;
-    readonly image: string;
-    readonly category: string;
+    contact: Contact;
+    job: Job;
   }[];
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
+  console.log(hits);
 
   return (
     <>
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, xl: 3 }}
-        rowGap={{ base: "8", md: "12" }}
-        columnGap="8"
-        pt={2}
-      >
-        Hello
-        {/* {hits.map((hit, i) => (
+      <Flex gap={4} direction="column" flex={1}>
+        {hits.map((hit, i) => {
+          let tags: string[] = [];
+          if (hit.job.role) tags.push(hit.job.role);
+          if (hit.job.type) tags.push(hit.job.type);
+          return (
+            <ListCard
+              rounded
+              key={hit.contact.name}
+              startDateTime={hit.contact.name}
+              image={hit.contact.logo}
+              title={hit.job.title}
+              description={hit.job.description}
+              type={tags}
+            />
+          );
+        })}
+      </Flex>
+      {/* {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>
             <ArticleCard.Image url={`/static/${hit.image}`} />
 
@@ -159,14 +215,14 @@ function CustomHits() {
             />
           </ArticleCard.Root>
         ))} */}
-      </SimpleGrid>
-      <HStack mt="24">
+
+      {/* <HStack mt="24">
         <Divider />
         <Button flexShrink={0} variant="secondary">
           View More
         </Button>
         <Divider />
-      </HStack>
+      </HStack> */}
     </>
   );
 }
