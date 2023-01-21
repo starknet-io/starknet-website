@@ -6,4 +6,3 @@ website_url: https://www.starknet-ecosystem.com/
 description: Immerse yourself in the StarkNet Ecosystem by discovering projects,
   jobs, metrics and learning resources.
 ---
-Immerse yourself in the StarkNet Ecosystem by discovering projects, jobs, metrics and learning resources.

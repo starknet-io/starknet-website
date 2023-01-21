@@ -5,4 +5,3 @@ twitter: "@argentHQ"
 website_url: https://www.dappland.com/
 description: Discover and rate the best apps on Starknet
 ---
-Discover and rate the best apps on Starknet
