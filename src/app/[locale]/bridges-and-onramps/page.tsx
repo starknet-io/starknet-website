@@ -54,7 +54,7 @@ export default async function DappsPage({
                   return (
                     <ListCard
                       href={wallet.website_url}
-                      twitter={wallet.twitter}
+                      twitterHandle={wallet.twitter}
                       image={wallet.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
                       key={wallet.name}
