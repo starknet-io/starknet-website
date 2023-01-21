@@ -3,35 +3,19 @@
 import {
   BreadcrumbItem,
   BreadcrumbLink,
-  SimpleGrid,
   Breadcrumb,
   Box,
-  Stack,
   Button,
-  Wrap,
-  HStack,
-  Divider,
   Flex,
-  Container,
-  Spacer,
   VStack,
 } from "@chakra-ui/react";
-import * as SubNav from "@ui/SubNav/SubNav";
-import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { use, useMemo } from "react";
+import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
 } from "src/libs/react-instantsearch-hooks-web";
-import {
-  useClearRefinements,
-  useHits,
-  useRefinementList,
-} from "react-instantsearch-hooks";
-import { PageContentContainer } from "../../(components)/PageContentContainer";
-import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { Text } from "@ui/Typography/Text";
+import { useHits, useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
@@ -82,7 +66,7 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
-            <Box minH="xs">
+            <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomRole />
               <CustomType />
             </Box>
@@ -106,7 +90,7 @@ function CustomRole() {
   console.log("Role", items);
   return (
     <Box>
-      <Heading as="h4" variant={"h6"} mb={4}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Role
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -133,7 +117,7 @@ function CustomType() {
   console.log("type", items);
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} mb={4}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
