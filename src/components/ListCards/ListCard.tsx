@@ -86,12 +86,7 @@ export const ListCard = (props: Props) => {
             </HStack>
           </Stack>
 
-          <Text
-            pb="14px"
-            fontSize="sm"
-            noOfLines={isDesktop ? 1 : 2}
-            color="list-card-lg-desc-fg"
-          >
+          <Text pb="14px" fontSize="sm" color="list-card-lg-desc-fg">
             {props.description}
           </Text>
           {props.variant === "event" && (
@@ -102,7 +97,7 @@ export const ListCard = (props: Props) => {
             </Box>
           )}
           {props.type && (
-            <Wrap pb="20px" pt="8px" shouldWrapChildren>
+            <Wrap pb="20px" pt="4px" shouldWrapChildren>
               {props.type.map((tag) => (
                 <Tag key={tag} variant="listCard">
                   {tag}
