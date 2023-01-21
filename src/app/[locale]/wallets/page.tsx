@@ -59,6 +59,7 @@ export default async function DappsPage({
                       key={wallet.name}
                       description={wallet.description}
                       title={wallet.name}
+                      type={wallet.type}
                     />
                   );
                 })}

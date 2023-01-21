@@ -34,6 +34,7 @@ type Props = {
   readonly venue?: string;
   readonly twitterHandle?: string;
   readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
+  readonly type?: string[];
 };
 
 export const ListCard = (props: Props) => {
@@ -100,9 +101,9 @@ export const ListCard = (props: Props) => {
               </Button>
             </Box>
           )}
-          {props.variant === "wallet" && (
+          {props.type && (
             <Wrap pb="20px" pt="8px" shouldWrapChildren>
-              {["Browser extension", "iOS", "Android"].map((tag) => (
+              {props.type.map((tag) => (
                 <Tag key={tag} variant="listCard">
                   {tag}
                 </Tag>
