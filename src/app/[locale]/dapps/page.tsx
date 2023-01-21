@@ -60,9 +60,7 @@ export default async function DappsPage({
                       image={dapp.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
                       key={dapp.name}
-                      description={
-                        "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-                      }
+                      description={dapp.description}
                       title={dapp.name}
                     />
                   );

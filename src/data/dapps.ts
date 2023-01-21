@@ -7,6 +7,7 @@ interface Topic {
   readonly image: string;
   readonly twitter: string;
   readonly website_url: string;
+  readonly description: string;
   readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
