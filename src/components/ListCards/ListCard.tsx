@@ -11,12 +11,14 @@ import {
   useBreakpointValue,
   useColorModeValue,
   Wrap,
+  Link,
 } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
+import NextLink from "next/link";
 import * as React from "react";
 
 import { FiExternalLink } from "react-icons/fi";
-import { HiGlobeAlt } from "react-icons/hi2";
+import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 
 import { Card } from "../Card/Card";
@@ -30,8 +32,8 @@ type Props = {
   readonly tags?: string[];
   readonly city?: string;
   readonly venue?: string;
-  readonly twitter?: string;
-  readonly variant?: "default" | "list" | "event" | "job";
+  readonly twitterHandle?: string;
+  readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
 };
 
 export const ListCard = (props: Props) => {
@@ -78,7 +80,8 @@ export const ListCard = (props: Props) => {
               {props.title}
             </Text>
             <HStack fontSize={{ base: "md", md: "xl" }}>
-              <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" />
+              {/* <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" /> */}
+              <Icon as={HiArrowUpRight} color="list-card-sm-title-link-fg" />
             </HStack>
           </Stack>
 
@@ -97,16 +100,37 @@ export const ListCard = (props: Props) => {
               </Button>
             </Box>
           )}
+          {props.variant === "wallet" && (
+            <Wrap pb="20px" pt="8px" shouldWrapChildren>
+              {["Browser extension", "iOS", "Android"].map((tag) => (
+                <Tag key={tag} variant="listCard">
+                  {tag}
+                </Tag>
+              ))}
+            </Wrap>
+          )}
 
-          <Wrap pb="20px" pt="8px" shouldWrapChildren>
-            {["Browser extension", "iOS", "Android"].map((tag) => (
-              <Tag key={tag} variant="listCard">
-                {tag}
-              </Tag>
-            ))}
-          </Wrap>
           <Wrap shouldWrapChildren>
-            <IconButton
+            {props.href && (
+              <Link
+                isExternal
+                as={NextLink}
+                href={`https://www.twitter.com/${props.href}`}
+              >
+                <HiGlobeAlt color="list-card-icon-fg" />
+              </Link>
+            )}
+            {props.twitterHandle && (
+              <Link
+                isExternal
+                as={NextLink}
+                href={`https://www.twitter.com/${props.twitterHandle}`}
+              >
+                <SiTwitter color="list-card-icon-fg" />
+              </Link>
+            )}
+
+            {/* <IconButton
               variant="simple"
               aria-label="Website"
               icon={<HiGlobeAlt />}
@@ -120,7 +144,7 @@ export const ListCard = (props: Props) => {
               variant="simple"
               aria-label="Discord"
               icon={<SiDiscord />}
-            />
+            /> */}
           </Wrap>
         </Box>
       </Stack>

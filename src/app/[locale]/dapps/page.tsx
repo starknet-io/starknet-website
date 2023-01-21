@@ -55,8 +55,9 @@ export default async function DappsPage({
                 {dapps.map((dapp) => {
                   return (
                     <ListCard
+                      variant="dapp"
                       href={dapp.website_url}
-                      twitter={dapp.twitter}
+                      twitterHandle={dapp.twitter}
                       image={dapp.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
                       key={dapp.name}
