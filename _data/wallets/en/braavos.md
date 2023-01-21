@@ -1,5 +1,9 @@
 ---
 name: Braavos
+type:
+  - browser_extension
+  - ios
+  - android
 image: https://pbs.twimg.com/profile_images/1552943461690646529/c3KCx_M2_400x400.jpg
 twitter: "@myBraavos"
 website_url: https://chrome.google.com/webstore/detail/braavos-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma
