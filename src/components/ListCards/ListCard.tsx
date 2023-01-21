@@ -35,6 +35,7 @@ type Props = {
   readonly twitterHandle?: string;
   readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
   readonly type?: string[];
+  readonly rounded?: boolean;
 };
 
 export const ListCard = (props: Props) => {
@@ -48,7 +49,7 @@ export const ListCard = (props: Props) => {
       >
         <Stack spacing="4">
           <Avatar
-            rounded="xl"
+            rounded={props.rounded ? "full" : "xl"}
             bg="black"
             size="superLg"
             src={props.image}
