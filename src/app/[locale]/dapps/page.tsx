@@ -12,12 +12,13 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { BlockHeroLines } from "src/blocks/BlockHeroLines";
 import { getWallets } from "src/data/wallets";
 import { ListCard } from "@ui/ListCards/ListCard";
+import { getDapps } from "src/data/dapps";
 
 export default async function DappsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   // const { title, description } = await getEventsPage(locale);
-  const wallets = await getWallets(locale);
+  const dapps = await getDapps(locale);
 
   return (
     <Box>
@@ -32,7 +33,7 @@ export default async function DappsPage({
 
             <BreadcrumbItem isCurrentPage>
               <BreadcrumbLink fontSize="sm" href="#">
-                dApps
+                Dapps
               </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
@@ -43,25 +44,25 @@ export default async function DappsPage({
             <BlockHeroLines
               imgAlt="cube"
               img="/cube.svg"
-              title="dApps"
-              description="Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs' to securely compress huge amounts of transactions for Ethereum."
+              title="Dapps"
+              description="Discover apps in the Starknet ecosystem across NFTs, Defi, DAOs and more."
             />
             <Box h={16} />
             <Container>
               <Flex gap={4} direction="column" flex={1}>
-                {wallets.map((wallet) => {
-                  console.log(wallet);
+                {dapps.map((dapp) => {
+                  console.log(dapp);
                   return (
                     <ListCard
-                      href={wallet.website_url}
-                      twitter={wallet.twitter}
-                      image={wallet.image}
+                      href={dapp.website_url}
+                      twitter={dapp.twitter}
+                      image={dapp.image}
                       // startDateTime="Fri, Jan 12 • 2:00 PM EST"
-                      key={wallet.name}
+                      key={dapp.name}
                       description={
                         "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
                       }
-                      title={wallet.name}
+                      title={dapp.name}
                     />
                   );
                 })}
