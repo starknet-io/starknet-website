@@ -13,4 +13,3 @@ topic:
 short_desc: Today we will host Elin Tulchinsky and Alon Haramati from StarkWare
   to talk about the new StarkNet Rust Sequencer
 ---
-t﻿est
