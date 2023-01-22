@@ -29,6 +29,7 @@ import { useHits, useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
+import { type Event } from "src/data/events";
 
 export interface AutoProps {
   readonly params: {
@@ -75,7 +76,12 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
             </Breadcrumb>
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
-          leftAside={<Box minH="xs">{/* <CustomTags /> */}</Box>}
+          leftAside={
+            <Box minH="xs" display={{ base: "none", lg: "block" }}>
+              <CustomLocation />
+              <CustomType />
+            </Box>
+          }
           main={
             <Box>
               <CustomHits />
@@ -87,9 +93,10 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
   );
 }
 
-function CustomTags() {
+function CustomLocation() {
   const { items, refine } = useRefinementList({
     attribute: "location",
+    sortBy: ["name:asc"],
   });
   console.log("location", items);
   return (
@@ -113,55 +120,63 @@ function CustomTags() {
   );
 }
 
-interface Contact {
-  discord: string;
-  email: string;
-  logo: string;
-  name: string;
-  twitter: string;
-}
-interface Job {
-  description: string;
-  how_to_apply: string;
-  location: string;
-  required_experience: string;
-  role: string;
-  scope: string;
-  title: string;
-  type: string;
+function CustomType() {
+  const { items, refine } = useRefinementList({
+    attribute: "type",
+    sortBy: ["name:asc"],
+  });
+  console.log("type", items);
+  return (
+    <Box mt={8}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+        Type
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => (
+          <Button
+            size="sm"
+            variant={item.isRefined ? "filterActive" : "filter"}
+            onClick={() => refine(item.value)}
+            key={i}
+          >
+            {item.label}
+          </Button>
+        ))}
+      </VStack>
+    </Box>
+  );
 }
 
 type HitProps = {
   readonly hits: readonly {
-    contact: Contact;
-    job: Job;
+    readonly start_date: string;
+    readonly name: string;
+    readonly image: string;
+    readonly description: string;
+    readonly tags: string[];
   }[];
 };
 function CustomHits() {
-  const { hits } = useHits();
+  const { hits }: HitProps = useHits();
   console.log("hits", hits);
 
   return (
     <>
-      hello
-      {/* <Flex gap={4} direction="column" flex={1}>
-        {hits.map((hit, i) => {
-          let tags: string[] = [];
-          if (hit.job.role) tags.push(hit.job.role);
-          if (hit.job.type) tags.push(hit.job.type);
+      <Flex gap={4} direction="column" flex={1}>
+        {hits.map((hit) => {
           return (
             <ListCard
               rounded
-              key={hit.contact.name}
-              startDateTime={hit.contact.name}
-              image={hit.contact.logo}
-              title={hit.job.title}
-              description={hit.job.description}
-              type={tags}
+              key={hit?.name}
+              startDateTime={hit?.start_date}
+              image={hit.image}
+              title={hit.name}
+              description={hit.description}
+              type={hit.tags}
             />
           );
         })}
-      </Flex> */}
+      </Flex>
     </>
   );
 }
