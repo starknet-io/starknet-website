@@ -11,12 +11,14 @@ import {
   Wrap,
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { getGlossary } from "src/data/glossary";
 
 export default async function GlossaryPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  const glossary = await getGlossary(locale);
+  console.log(glossary);
 
   return (
     <Box>
