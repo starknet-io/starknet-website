@@ -56,7 +56,9 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
         />
-
+        <Container maxW="container.xl" mb={4}>
+          <CustomCategories />
+        </Container>
         <PageLayout
           sectionHeaderTitle="Blog"
           sectionHeaderDescription="The latest articles, podcasts and videos on all things StarkNet."
