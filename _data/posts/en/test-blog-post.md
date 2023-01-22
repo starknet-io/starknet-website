@@ -4,11 +4,9 @@ title: hello world
 image: /assets/cleanshot-2023-01-17-at-14.01.12-2x.png
 category: engineering
 topic: events
-short_desc: StarkNet launched on Mainnet almost a year ago. We started building
-  StarkNet by focusing on functionality. Now, we shift the focus to improving
-  performance with a series of steps that will help enhance the StarkNet
-  experience.
+short_desc: StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience. ---
 ---
+
 # Cairo 1.0 is Here
 
 ## Or, as the ancient Egyptians would say, ‘Hieroglyphics just got a whole lot easier’
