@@ -5,7 +5,7 @@ title: What is starknet?
 
 ### What is Starknet?
 
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+We aare excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes
 
 ![Cairo logo](https://lh3.googleusercontent.com/A24O3j4v2jhye6FdAWRIypjdtHj3TNRgFkuIYgnzjhVWSWbjEFHHT22QoNH1Tp0Z5tDSqy61asvLtphcp0yUmF4TUqFyH9y1ty4msk0UDBo1TyPHBvvEdnJtlyvJoa2QZ6HBYsGM "cairo logo")
 
@@ -30,7 +30,7 @@ Two processes are being advanced simultaneously in order to fulfill StarkNet’s
 
 Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
 
 ### StarkNet’s Governance First phase plan
 
