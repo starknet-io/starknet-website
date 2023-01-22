@@ -80,6 +80,12 @@ export const config: CmsConfig = {
           label: "Time to read / watch / listen (in minutes)",
         },
         {
+          name: "video_link",
+          label: "Video - youtube link",
+          widget: "string",
+          required: false,
+        },
+        {
           name: "image",
           label: "Featured Image",
           widget: "image",
@@ -112,6 +118,7 @@ export const config: CmsConfig = {
           name: "body",
           label: "Body",
           widget: "markdown",
+          required: false,
         },
       ],
     },
