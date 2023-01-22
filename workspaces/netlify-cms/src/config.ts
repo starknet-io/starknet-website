@@ -43,7 +43,7 @@ export const config: CmsConfig = {
       name: "posts",
       label: "Posts",
       label_singular: "Post",
-      identifier_field: "id",
+      identifier_field: "title",
       folder: `_data/posts/${locale}`,
       create: true,
       fields: [
