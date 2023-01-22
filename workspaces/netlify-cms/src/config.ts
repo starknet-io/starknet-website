@@ -48,16 +48,40 @@ export const config: CmsConfig = {
       create: true,
       fields: [
         {
+          name: "post_type",
+          label: "Post Type",
+          widget: "select",
+          options: [
+            {
+              label: "Article",
+              value: "article",
+            },
+            {
+              label: "Video",
+              value: "video",
+            },
+            {
+              label: "Audio",
+              value: "audio",
+            },
+          ],
+          default: "article",
+        },
+        {
           name: "id",
           label: "id",
         },
         {
           name: "title",
-          label: "Title",
+          label: "Post Title",
+        },
+        {
+          name: "time_to_consume",
+          label: "Time to read / watch / listen (in minutes)",
         },
         {
           name: "image",
-          label: "Image",
+          label: "Featured Image",
           widget: "image",
         },
         {
