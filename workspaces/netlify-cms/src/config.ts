@@ -231,6 +231,7 @@ export const config: CmsConfig = {
     {
       name: "jobs",
       label: "Jobs",
+      identifier_field: "job.title",
       label_singular: "Job",
       folder: `_data/jobs/${locale}`,
       create: true,
