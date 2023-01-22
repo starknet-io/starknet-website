@@ -22,17 +22,17 @@ export default async function GlossaryPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   // function to lowercase and replace spaces with dashes
-  const toSlug = (str: string) => {
-    return str
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w\-]+/g, "")
-      .replace(/\-\-+/g, "-")
-      .replace(/^-+/, "")
-      .replace(/-+$/, "");
-  };
+  // const toSlug = (str: string) => {
+  //   return str
+  //     .toLowerCase()
+  //     .replace(/\s+/g, "-")
+  //     .replace(/[^\w\-]+/g, "")
+  //     .replace(/\-\-+/g, "-")
+  //     .replace(/^-+/, "")
+  //     .replace(/-+$/, "");
+  // };
 
-  const glossaryItems = await getGlossary(locale);
+  // const glossaryItems = await getGlossary(locale);
 
   return (
     <Box>
