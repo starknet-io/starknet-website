@@ -11,12 +11,14 @@ import {
   Wrap,
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { getFaqs } from "src/data/faqs";
 
 export default async function FaqsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
   const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  // const faqs = await getFaqs(locale);
+  // console.log(faqs);
 
   return (
     <Box>
@@ -39,7 +41,7 @@ export default async function FaqsPage({
           </Breadcrumb>
         }
         pageLastUpdated="Page last updated 21 Nov 2023"
-        main={<Box>Test</Box>}
+        main={<Box>Faq items</Box>}
       />
     </Box>
   );

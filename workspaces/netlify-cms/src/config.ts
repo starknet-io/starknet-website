@@ -43,21 +43,51 @@ export const config: CmsConfig = {
       name: "posts",
       label: "Posts",
       label_singular: "Post",
-      identifier_field: "id",
+      identifier_field: "title",
       folder: `_data/posts/${locale}`,
       create: true,
       fields: [
+        {
+          name: "post_type",
+          label: "Post Type",
+          widget: "select",
+          options: [
+            {
+              label: "Article",
+              value: "article",
+            },
+            {
+              label: "Video",
+              value: "video",
+            },
+            {
+              label: "Audio",
+              value: "audio",
+            },
+          ],
+          default: "article",
+        },
         {
           name: "id",
           label: "id",
         },
         {
           name: "title",
-          label: "Title",
+          label: "Post Title",
+        },
+        {
+          name: "time_to_consume",
+          label: "Time to read / watch / listen (in minutes)",
+        },
+        {
+          name: "video_link",
+          label: "Video - youtube link",
+          widget: "string",
+          required: false,
         },
         {
           name: "image",
-          label: "Image",
+          label: "Featured Image",
           widget: "image",
         },
         {
@@ -88,6 +118,7 @@ export const config: CmsConfig = {
           name: "body",
           label: "Body",
           widget: "markdown",
+          required: false,
         },
       ],
     },
@@ -231,6 +262,7 @@ export const config: CmsConfig = {
     {
       name: "jobs",
       label: "Jobs",
+      identifier_field: "job.title",
       label_singular: "Job",
       folder: `_data/jobs/${locale}`,
       create: true,
@@ -369,6 +401,24 @@ export const config: CmsConfig = {
         },
         {
           label: "Glossary description",
+          name: "body",
+          widget: "markdown",
+        },
+      ],
+    },
+    {
+      label: "Faqs",
+      name: "faqs",
+      folder: `_data/faqs/${locale}`,
+      create: true,
+      identifier_field: "faq_item",
+      fields: [
+        {
+          label: "Question",
+          name: "faq_item",
+        },
+        {
+          label: "Answer",
           name: "body",
           widget: "markdown",
         },

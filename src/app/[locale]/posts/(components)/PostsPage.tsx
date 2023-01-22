@@ -123,7 +123,13 @@ function CustomCategories() {
     <SubNav.Root>
       <SubNav.Item onClick={() => clearRefine()}>All posts</SubNav.Item>
       {items.map((item, i) => (
-        <SubNav.Item onClick={() => refine(item.value)} key={item.value}>
+        <SubNav.Item
+          onClick={() => {
+            if (item.isRefined) return;
+            refine(item.value);
+          }}
+          key={item.value}
+        >
           <> {item.label}</>
         </SubNav.Item>
       ))}

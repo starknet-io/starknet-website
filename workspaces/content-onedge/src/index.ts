@@ -13,6 +13,7 @@ const datatypes = [
   "events",
   "topics",
   "glossary",
+  "faqs",
   "dapps",
   "wallets",
   "block_explorers",
@@ -32,8 +33,8 @@ for (const datatype of datatypes) {
         data.push(
           await getFirst(
             () => mdx(`_data/${datatype}/${locale.code}/${filename}`),
-            () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`),
-          ),
+            () => mdx(`_data/${datatype}/${defaultLocale}/${filename}`)
+          )
         );
       }
 
@@ -51,7 +52,7 @@ await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 for (const locale of locales) {
   const mainMenu: MainMenu = await getFirst(
     () => yaml(`_data/settings/${locale.code}/main-menu.yml`),
-    () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
+    () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`)
   );
 
   for (const mainMenuItem of mainMenu.items) {
@@ -64,7 +65,7 @@ for (const locale of locales) {
               const data = await getFirst(
                 () => mdx(`_data/pages/${locale.code}/${filename}.md`),
                 () => mdx(`_data/pages/${defaultLocale}/${filename}.md`),
-                async () => null,
+                async () => null
               );
 
               item.page_title = data?.title;
@@ -76,7 +77,7 @@ for (const locale of locales) {
               const data = await getFirst(
                 () => mdx(`_data/posts/${locale.code}/${filename}.md`),
                 () => mdx(`_data/posts/${defaultLocale}/${filename}.md`),
-                async () => null,
+                async () => null
               );
 
               item.post_title = data?.title;

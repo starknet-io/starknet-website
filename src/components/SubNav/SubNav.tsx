@@ -33,7 +33,9 @@ const Root = ({ children }: RootProps) => {
   );
 };
 
-type ItemProps = {} & TabProps;
+type ItemProps = {
+  isActive?: boolean;
+} & TabProps;
 
 const Item = ({ children, ...rest }: ItemProps) => {
   return (
@@ -45,9 +47,11 @@ const Item = ({ children, ...rest }: ItemProps) => {
       mr={6}
       color="subnav-fg"
       alignItems="flex-start"
+      isDisabled={rest.isDisabled}
       _selected={{
         color: "subnav-fg-accent",
         fontWeight: "medium",
+        opacity: 0.2,
       }}
     >
       {children}
