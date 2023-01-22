@@ -1,5 +1,5 @@
 ---
-path: /zk-rollups/
+path: zk-rollups
 title: ZK rollups
 ---
 
