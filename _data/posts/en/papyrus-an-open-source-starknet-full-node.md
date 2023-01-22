@@ -7,7 +7,11 @@ video_link: sdsd
 image: /assets/blog2.webp
 category: engineering
 topic:
-  - account-abstraction
+  - decentralization
+  - full_node
+  - open_source
+  - starknet
+  - ethereum
 short_desc: Today we are introducing Papyrus, a Rust implementation of a
   StarkNet full node, which will help pave the way to mass use of StarkNet.
 ---
