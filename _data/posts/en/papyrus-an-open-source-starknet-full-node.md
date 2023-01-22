@@ -12,9 +12,9 @@ topic:
   - open_source
   - starknet
   - ethereum
-short_desc: Today we are introducing Papyrus, a Rust implementation of a
-  StarkNet full node, which will help pave the way to mass use of StarkNet.
+short_desc: Today we are introducing Papyrus, a Rust implementation of a StarkNet full node, which will help pave the way to mass use of StarkNet. ---
 ---
+
 # Papyrus: An Open-Source StarkNet Full Node
 
 ## Papyrus will be a key component of the decentralized StarkNet infrastructure
