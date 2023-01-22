@@ -5,7 +5,7 @@ title: What is starknet?
 
 ### What is Starknet?
 
-Nous sommes heureux d'annoncer la prochaine étape du processus de décentralisation de StarkNet — voter pour des modifications de protocole.
+We aare excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes
 
 ![Cairo logo](https://lh3.googleusercontent.com/A24O3j4v2jhye6FdAWRIypjdtHj3TNRgFkuIYgnzjhVWSWbjEFHHT22QoNH1Tp0Z5tDSqy61asvLtphcp0yUmF4TUqFyH9y1ty4msk0UDBo1TyPHBvvEdnJtlyvJoa2QZ6HBYsGM "cairo logo")
 
