@@ -20,11 +20,7 @@ export const FeaturedArticleCard = (props: Props) => {
         direction={{ base: "column", md: "column", lg: "row" }}
         spacing={{ base: "12", lg: "16" }}
       >
-        <Image
-          borderRadius={8}
-          maxW={600}
-          src="/assets/image.jpg"
-        />
+        <Image borderRadius={8} maxW={600} src="/assets/image.jpg" />
         <Stack spacing={{ base: "8", md: "10" }} width="full" justify="center">
           <Stack spacing={{ base: "4", md: "6" }}>
             <Heading size={useBreakpointValue({ base: "sm", md: "md" })}>

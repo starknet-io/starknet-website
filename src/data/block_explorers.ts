@@ -12,12 +12,12 @@ interface Topic {
 }
 
 export async function getBlockExplorers(
-  locale: string
+  locale: string,
 ): Promise<readonly Topic[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/block_explorers/${locale}.json`),
-      () => getJSON(`_dynamic/block_explorers/${defaultLocale}.json`)
+      () => getJSON(`_dynamic/block_explorers/${defaultLocale}.json`),
     );
   } catch (cause) {
     throw new Error("getBlockExplorers failed!", {
@@ -28,12 +28,12 @@ export async function getBlockExplorers(
 
 export async function getBlockExplorerByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<Topic> {
   try {
     return await getFirst(
       () => getMDXModule(`block_explorers/${locale}/${filename}.md`),
-      () => getMDXModule(`block_explorers/${defaultLocale}/${filename}.md`)
+      () => getMDXModule(`block_explorers/${defaultLocale}/${filename}.md`),
     );
   } catch (cause) {
     throw new Error(`BlockExplorer not found! ${filename}`, {

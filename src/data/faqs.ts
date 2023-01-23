@@ -11,7 +11,7 @@ export async function getFaqs(locale: string): Promise<readonly Faq[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/faqs/${locale}.json`),
-      () => getJSON(`_dynamic/faqs/${defaultLocale}.json`)
+      () => getJSON(`_dynamic/faqs/${defaultLocale}.json`),
     );
   } catch (cause) {
     throw new Error("getFaqs failed!", {
@@ -22,12 +22,12 @@ export async function getFaqs(locale: string): Promise<readonly Faq[]> {
 
 export async function getFaqByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<Faq> {
   try {
     return await getFirst(
       () => getMDXModule(`faqs/${locale}/${filename}.md`),
-      () => getMDXModule(`faqs/${defaultLocale}/${filename}.md`)
+      () => getMDXModule(`faqs/${defaultLocale}/${filename}.md`),
     );
   } catch (cause) {
     throw new Error(`Faqs not found! ${filename}`, {
