@@ -33,9 +33,47 @@ export const config: CmsConfig = {
           label: "Title",
         },
         {
-          name: "body",
-          label: "Body",
-          widget: "markdown",
+          name: 'blocks',
+          label: 'Blocks',
+          widget: 'list',
+          types: [
+            {
+              name: 'markdown',
+              label: 'Markdown',
+              widget: 'object',
+              fields: [
+                {
+                  name: 'markdown',
+                  label: 'Markdown',
+                  widget: 'markdown'
+                }
+              ]
+            },
+            {
+              name: 'community_events',
+              label: 'Community events',
+              widget: 'object',
+              fields: []
+            },
+            {
+              name: 'basic_card',
+              label: 'Basic card',
+              widget: 'object',
+              fields: []
+            },
+            {
+              name: 'large_card',
+              label: 'Large card',
+              widget: 'object',
+              fields: []
+            },
+            {
+              name: 'flex_layout',
+              label: 'Flex layout',
+              widget: 'object',
+              fields: []
+            },
+          ]
         },
       ],
     },
