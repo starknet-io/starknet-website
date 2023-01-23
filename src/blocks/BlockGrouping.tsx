@@ -1,3 +1,4 @@
+"use client";
 import { Fade, Flex, ScaleFade, SlideFade } from "@chakra-ui/react";
 import React from "react";
 import { useInViewport } from "react-in-viewport";

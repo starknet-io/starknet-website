@@ -1,3 +1,4 @@
+"use client";
 import { accordionAnatomy } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers } from "src/libs/chakra-ui";
 
