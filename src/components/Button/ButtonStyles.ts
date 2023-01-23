@@ -22,6 +22,10 @@ const outline = defineStyle({
   },
 });
 
+const solid = defineStyle({
+  bg: "btn-primary-bg",
+});
+
 const filter = defineStyle({
   // change the appearance of the border
   borderRadius: 4, // remove the border radius
@@ -57,7 +61,7 @@ const filterActive = defineStyle({
 });
 
 export const buttonTheme = defineStyleConfig({
-  variants: { outline, filter, filterActive },
+  variants: { outline, filter, filterActive, solid },
 });
 
 // export const ButtonStyles = defineStyleConfig({
