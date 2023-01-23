@@ -23,6 +23,7 @@ import {
 } from "src/libs/react-instantsearch-hooks-web";
 import {
   useClearRefinements,
+  useHierarchicalMenu,
   useHits,
   useRefinementList,
 } from "react-instantsearch-hooks";
@@ -113,9 +114,8 @@ function CustomTopics() {
 }
 
 function CustomCategories() {
-  const { items, refine } = useRefinementList({
-    attribute: "category",
-    sortBy: ["name:asc"],
+  const { items, refine } = useHierarchicalMenu({
+    attributes: ["category"],
   });
   const { refine: clearRefine } = useClearRefinements();
 
