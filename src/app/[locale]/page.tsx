@@ -20,7 +20,8 @@ import { BasicCard } from "../../blocks/cards/BasicCard";
 import { LargeCard } from "../../blocks/cards/LargeCard";
 import { ImageIconCard } from "../../blocks/cards/ImageIconCard";
 import { CommunityCard } from "../../blocks/cards/CommunityCard";
-import { BlockStats } from "../../blocks/BlockStats";
+import { BlockStats } from "../../blocks/dataBlocks/BlockStats";
+import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageContentContainerNoSidebar } from "./(components)/PageContentContainerNoSidebar";
 import { useMessages } from "./(components)/ClientLocaleProvider";
@@ -298,6 +299,7 @@ export default function Index() {
       </BlockCards>
 
       <Spacer height={32} />
+      {/* <BlockCommunityEvents params={{ locale: "en" }} /> */}
       {/* Block for stats which fetches stats from an api  */}
       <BlockStats />
 
