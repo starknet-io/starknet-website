@@ -1,0 +1,6 @@
+path: test page
+title: test page
+template: page
+blocks:
+  - type: markdown
+    body: dsdsds
