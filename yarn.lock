@@ -16006,7 +16006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
+"hoist-non-react-statics@npm:^3.0.0, hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -24027,6 +24027,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-in-viewport@npm:^1.0.0-alpha.29":
+  version: 1.0.0-alpha.29
+  resolution: "react-in-viewport@npm:1.0.0-alpha.29"
+  dependencies:
+    hoist-non-react-statics: ^3.0.0
+  peerDependencies:
+    react: ^16.8.3 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.3 || ^17.0.0 || ^18.0.0
+  checksum: c90a34b91a78e8885adeaab59777a20bb2c71daeebd905bceaa1a64e3482d91480a2e282bf4f28a2b3831a109e2d3eea94577a12d92458cadaa4318f3b499703
+  languageName: node
+  linkType: hard
+
 "react-input-autosize@npm:^3.0.0":
   version: 3.0.0
   resolution: "react-input-autosize@npm:3.0.0"
@@ -25549,6 +25561,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-icons: ^4.7.1
+    react-in-viewport: ^1.0.0-alpha.29
     react-instantsearch-hooks-web: ^6.38.3
     react-use: ^17.4.0
     remark-frontmatter: ^4.0.1
