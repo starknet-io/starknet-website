@@ -1,0 +1,7 @@
+path: /developers/
+title: Developers
+template: article
+blocks:
+  - type: markdown
+    body: >-
+      Developers

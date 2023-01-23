@@ -63,14 +63,15 @@ for (const locale of locales) {
             const filename = item.page.replace(/(^\/|\/$)/g, "");
             if (filename !== "") {
               const data = await getFirst(
-                () => mdx(`_data/pages/${locale.code}/${filename}.md`),
-                () => mdx(`_data/pages/${defaultLocale}/${filename}.md`),
+                () => yaml(`_data/pages/${locale.code}/${filename}.yml`),
+                () => yaml(`_data/pages/${defaultLocale}/${filename}.yml`),
                 async () => null,
               );
 
               item.page_title = data?.title;
             }
           }
+
           if (item.post != null) {
             const filename = item.post.replace(/(^\/|\/$)/g, "");
             if (filename !== "") {

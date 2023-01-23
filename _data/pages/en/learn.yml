@@ -1,0 +1,7 @@
+path: /learn/
+title: Learn
+template: article
+blocks:
+  - type: markdown
+    body: >-
+      Learn!

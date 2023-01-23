@@ -91,47 +91,40 @@ const topLevelBlocks: CmsFieldList["types"] = [
     widget: "object",
     fields: [
       {
-        name: "children",
-        label: "Children",
-        widget: "object",
-        fields: [
-          {
-            name: "base",
-            widget: "number",
-            required: false,
-          },
-          {
-            name: "md",
-            widget: "number",
-            required: false,
-          },
-          {
-            name: "lg",
-            widget: "number",
-            required: false,
-          },
-          {
-            name: "xl",
-            widget: "number",
-            required: false,
-          },
-          {
-            name: "heading",
-            required: false,
-          },
-          {
-            name: "headingVariant",
-            widget: "select",
-            options: ["sm", "md", "lg"],
-            required: false,
-          },
-          {
-            name: "blocks",
-            label: "Blocks",
-            widget: "list",
-            types: blocks,
-          },
-        ],
+        name: "base",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "md",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "lg",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "xl",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "heading",
+        required: false,
+      },
+      {
+        name: "heading_variant",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+        required: false,
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
       },
     ],
   },
@@ -152,7 +145,7 @@ export const config: CmsConfig = {
       label_singular: "Page",
       identifier_field: "title",
       folder: `_data/pages/${locale}`,
-      format: 'yaml',
+      format: "yaml",
       create: true,
       fields: [
         {
@@ -164,10 +157,10 @@ export const config: CmsConfig = {
           label: "Title",
         },
         {
-          name: 'template',
-          widget: 'select',
-          options: ['page', 'article'],
-          default: 'page'
+          name: "template",
+          widget: "select",
+          options: ["page", "article"],
+          default: "page",
         },
         {
           name: "blocks",

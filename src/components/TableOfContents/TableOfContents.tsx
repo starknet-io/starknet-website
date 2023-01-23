@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Stack, Text } from "src/libs/chakra-ui";
 
 export type SubNavLinkGroupProps = {
   label: string;

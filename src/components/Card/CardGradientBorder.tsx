@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box } from "src/libs/chakra-ui";
 import React from "react";
 
 type Props = {

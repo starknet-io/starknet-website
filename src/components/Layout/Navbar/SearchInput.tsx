@@ -14,7 +14,7 @@ import {
   ModalOverlay,
   useBreakpointValue,
   useDisclosure,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import * as React from "react";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 

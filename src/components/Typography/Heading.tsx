@@ -1,5 +1,5 @@
 "use client";
-import { Heading as ChakraHeading, HeadingProps } from "@chakra-ui/react";
+import { Heading as ChakraHeading, HeadingProps } from "src/libs/chakra-ui";
 
 type Props = {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

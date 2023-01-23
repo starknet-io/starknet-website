@@ -1,4 +1,4 @@
-import { HTMLChakraProps, useColorMode } from "@chakra-ui/react";
+import { HTMLChakraProps, useColorMode } from "src/libs/chakra-ui";
 
 type Props = {
   height?: string;

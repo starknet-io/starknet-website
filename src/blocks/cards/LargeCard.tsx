@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Flex,
@@ -5,7 +7,7 @@ import {
   Link,
   Stack,
   useBreakpointValue,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";

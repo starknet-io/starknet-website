@@ -9,7 +9,7 @@ import {
   Stack,
   Text,
   useBreakpointValue,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 
 type Props = {};
 

@@ -1,0 +1,7 @@
+path: /sequencers/
+title: Sequencers
+template: article
+blocks:
+  - type: markdown
+    body: >-
+      Sequencers

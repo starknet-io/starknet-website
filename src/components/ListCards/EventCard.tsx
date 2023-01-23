@@ -10,7 +10,7 @@ import {
   Tag,
   useColorModeValue,
   Wrap,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import * as React from "react";
 

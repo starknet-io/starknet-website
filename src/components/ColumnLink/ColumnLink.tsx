@@ -7,7 +7,7 @@ import {
   LinkProps,
   Text,
   TextProps,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { HiPlay } from "react-icons/hi2";
 import NextLink from "next/link";
 type Props = {

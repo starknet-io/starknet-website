@@ -1,4 +1,4 @@
-import { Badge as ChakraBadge, BadgeProps } from "@chakra-ui/react";
+import { Badge as ChakraBadge, BadgeProps } from "src/libs/chakra-ui";
 
 export const Badge = (props: BadgeProps) => {
   return <ChakraBadge {...props}>{props.children}</ChakraBadge>;
