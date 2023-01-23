@@ -310,7 +310,7 @@ export default function Index() {
         </BlockCards>
       </BlockGrouping>
       <BlockGrouping>
-        <BlockCommunityEvents params={{ locale: locale }} />
+        {/* <BlockCommunityEvents params={{ locale: locale }} /> */}
       </BlockGrouping>
 
       <BlockGrouping>
