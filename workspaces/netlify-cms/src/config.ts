@@ -152,6 +152,7 @@ export const config: CmsConfig = {
       label_singular: "Page",
       identifier_field: "title",
       folder: `_data/pages/${locale}`,
+      format: 'yaml',
       create: true,
       fields: [
         {
@@ -161,6 +162,12 @@ export const config: CmsConfig = {
         {
           name: "title",
           label: "Title",
+        },
+        {
+          name: 'template',
+          widget: 'select',
+          options: ['page', 'article'],
+          default: 'page'
         },
         {
           name: "blocks",
