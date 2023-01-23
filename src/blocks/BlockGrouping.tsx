@@ -12,7 +12,7 @@ export const BlockGrouping = ({ children }: Props) => {
   const { inViewport } = useInViewport(
     ref,
     {
-      rootMargin: "-200px",
+      rootMargin: "-30px",
     },
     { disconnectOnLeave: true },
     {}
