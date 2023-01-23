@@ -4,16 +4,21 @@ import React from "react";
 type Props = {
   children: React.ReactNode;
   padding?: string;
+  borderRadius?: string;
 };
 
-export const CardGradientBorder = ({ children, padding = "8" }: Props) => {
+export const CardGradientBorder = ({
+  children,
+  padding = "8",
+  borderRadius = "24px",
+}: Props) => {
   return (
     <Box
       borderWidth="1px"
       borderColor="card-br"
       padding={`${padding}px`}
       bg="card-bg"
-      borderRadius={{ base: "24px" }}
+      borderRadius={{ base: borderRadius }}
       transition=" all 0.5s ease"
       _hover={{
         background:
