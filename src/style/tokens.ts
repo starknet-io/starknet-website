@@ -103,6 +103,14 @@ export const tokens = {
       "card-link-hover-fg": "#5C94FF",
       "hero-home-bg": "#E5ECED",
       "hero-home-text-fg": "#313131",
+      "card-orange-bg": "#FDF8F8",
+      "card-orange-br": "#F9F0F0",
+      "card-blue-bg": "#F6FAFC",
+      "card-blue-br": "#F3F6F8",
+      "card-yellow-bg": "#FDFBF9",
+      "card-yellow-br": "#F7F4F2",
+      "card-green-bg": "#F8FCFD",
+      "card-green-br": "#EFF6F7",
     },
 
     dark: {
@@ -207,7 +215,15 @@ export const tokens = {
       "card-link-fg": "#AFCAFF",
       "card-link-hover-fg": "#AFCAFF",
       "hero-home-bg": "#000000",
-      "hero-home-text-fg": "#FFFFFF",
+      "hero-home-text-fg": "#121212",
+      "card-orange-bg": "#161616",
+      "card-orange-br": "#121212",
+      "card-blue-bg": "#161616",
+      "card-blue-br": "#121212",
+      "card-yellow-bg": "#161616",
+      "card-yellow-br": "#121212",
+      "card-green-bg": "#161616",
+      "card-green-br": "#121212",
     },
   },
 };
@@ -623,6 +639,38 @@ export const semanticTokens = {
     "hero-home-text-fg": {
       default: tokens.colors.light["hero-home-text-fg"],
       _dark: tokens.colors.dark["hero-home-text-fg"],
+    },
+    "card-orange-bg": {
+      default: tokens.colors.light["card-orange-bg"],
+      _dark: tokens.colors.dark["card-orange-bg"],
+    },
+    "card-orange-br": {
+      default: tokens.colors.light["card-orange-br"],
+      _dark: tokens.colors.dark["card-orange-br"],
+    },
+    "card-green-bg": {
+      default: tokens.colors.light["card-green-bg"],
+      _dark: tokens.colors.dark["card-green-bg"],
+    },
+    "card-yellow-br": {
+      default: tokens.colors.light["card-yellow-br"],
+      _dark: tokens.colors.dark["card-yellow-br"],
+    },
+    "card-yellow-bg": {
+      default: tokens.colors.light["card-yellow-bg"],
+      _dark: tokens.colors.dark["card-yellow-bg"],
+    },
+    "card-green-br": {
+      default: tokens.colors.light["card-green-br"],
+      _dark: tokens.colors.dark["card-green-br"],
+    },
+    "card-blue-bg": {
+      default: tokens.colors.light["card-blue-bg"],
+      _dark: tokens.colors.dark["card-blue-bg"],
+    },
+    "card-blue-br": {
+      default: tokens.colors.light["card-blue-br"],
+      _dark: tokens.colors.dark["card-blue-br"],
     },
   },
 };
