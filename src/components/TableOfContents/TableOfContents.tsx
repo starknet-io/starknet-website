@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Stack, Text } from "src/libs/chakra-ui";
 
 export type SubNavLinkGroupProps = {
   label: string;
@@ -19,8 +19,8 @@ export const SubNavLinkGroup = (props: SubNavLinkGroupProps) => {
         {label}
       </Text>
       <Stack spacing="4" as="ul" mt="6" listStyleType="none">
-        {links.map(({ label, url }) => (
-          <li key={url}>
+        {links.map(({ label, url }, i) => (
+          <li key={i}>
             <Link href={url} fontSize="sm">
               {label}
             </Link>

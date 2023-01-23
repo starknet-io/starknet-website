@@ -1,5 +1,5 @@
 "use client";
-import { Box } from "@chakra-ui/react";
+import { Box } from "src/libs/chakra-ui";
 
 type Props = {
   children: React.ReactNode;

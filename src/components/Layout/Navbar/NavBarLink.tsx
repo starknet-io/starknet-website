@@ -1,6 +1,6 @@
 "use client";
 import NextLink from "next/link";
-import { Link, LinkProps, Icon } from "@chakra-ui/react";
+import { Link, LinkProps, Icon } from "src/libs/chakra-ui";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 type Props = {} & LinkProps;

@@ -10,7 +10,7 @@ import {
   Image,
   Stack,
   Text,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import React from "react";
 
 type Props = {};

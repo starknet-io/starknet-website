@@ -1,4 +1,4 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "src/libs/chakra-ui";
 
 const card = defineStyle({
   textDecoration: "none",

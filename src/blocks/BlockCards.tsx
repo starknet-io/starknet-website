@@ -1,4 +1,4 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import React from "react";
 

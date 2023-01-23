@@ -11,7 +11,7 @@ import {
   Divider,
   Image,
   Container,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import { HiOutlineUserGroup, HiUserGroup } from "react-icons/hi2";
 import NextLink from "next/link";

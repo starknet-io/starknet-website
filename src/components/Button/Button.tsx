@@ -1,5 +1,5 @@
 "use client";
-import { Button as ChakraButton, ButtonProps } from "@chakra-ui/react";
+import { Button as ChakraButton, ButtonProps } from "src/libs/chakra-ui";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 
 type props = {

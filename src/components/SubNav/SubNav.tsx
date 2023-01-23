@@ -9,7 +9,7 @@ import {
   Tabs,
   Container,
   TabProps,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import React from "react";
 
 type RootProps = {

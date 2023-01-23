@@ -1,4 +1,4 @@
-import { Icon, IconProps } from "@chakra-ui/react";
+import { Icon, IconProps } from "src/libs/chakra-ui";
 import * as React from "react";
 import { FiChevronDown } from "react-icons/fi";
 

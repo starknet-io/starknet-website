@@ -1,20 +1,4 @@
-"use client";
-
-import {
-  Box,
-  Container,
-  Stack,
-  Text,
-  useBreakpointValue,
-  SimpleGrid,
-  useColorModeValue,
-  Badge,
-  Spacer,
-  Img,
-} from "@chakra-ui/react";
-import { Button } from "@ui/Button";
-import { Heading } from "@ui/Typography/Heading";
-import { Stat } from "@ui/Stat/Stat";
+import { Spacer } from "src/libs/chakra-ui";
 import { BlockCards } from "../../blocks/BlockCards";
 import { BasicCard } from "../../blocks/cards/BasicCard";
 import { LargeCard } from "../../blocks/cards/LargeCard";
@@ -26,12 +10,10 @@ import { BlockGrouping } from "../../blocks/BlockGrouping";
 import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageContentContainerNoSidebar } from "./(components)/PageContentContainerNoSidebar";
-import { useMessages, useLocale } from "./(components)/ClientLocaleProvider";
 
-export default function Index() {
-  const messages = useMessages();
-  const locale = useLocale();
-
+export default async function Index({
+  params: { locale },
+}: LocaleProps): Promise<JSX.Element> {
   return (
     <PageContentContainerNoSidebar>
       {/* <Box as="section" bg="card-bg" borderRadius="xl">

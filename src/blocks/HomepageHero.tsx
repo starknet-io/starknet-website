@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Img, Stack } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Img, Stack } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import React from "react";

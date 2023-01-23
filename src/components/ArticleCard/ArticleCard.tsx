@@ -9,7 +9,7 @@ import {
   Stack,
   Icon,
   useColorModeValue as mode,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { Text } from "../../components/Typography/Text";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { Heading } from "@ui/Typography/Heading";

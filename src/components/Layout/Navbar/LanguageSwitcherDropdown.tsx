@@ -11,7 +11,7 @@ import {
   Img,
   Box,
   StackDivider,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 

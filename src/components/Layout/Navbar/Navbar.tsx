@@ -11,7 +11,7 @@ import {
   useDisclosure,
   Icon,
   useBreakpointValue,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import * as React from "react";
 
 import { HiGlobeAlt, HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";

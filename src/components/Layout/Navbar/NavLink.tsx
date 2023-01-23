@@ -1,5 +1,5 @@
 "use client";
-import { Stack, Link, Text } from "@chakra-ui/react";
+import { Stack, Link, Text } from "src/libs/chakra-ui";
 
 import React from "react";
 

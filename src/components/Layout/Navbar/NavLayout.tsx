@@ -10,7 +10,7 @@ import {
   Divider,
   Box,
   Flex,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import Link from "next/link";
 
