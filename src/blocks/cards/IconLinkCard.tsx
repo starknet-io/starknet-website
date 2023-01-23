@@ -1,4 +1,4 @@
-import { Box, Link, Stack, Image, useColorModeValue } from "@chakra-ui/react";
+import { Box, Link, Stack, Image, useColorModeValue } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { Text } from "@ui/Typography/Text";
 import React from "react";

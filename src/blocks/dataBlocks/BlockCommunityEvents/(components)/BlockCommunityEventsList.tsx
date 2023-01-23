@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "src/libs/chakra-ui";
 
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";

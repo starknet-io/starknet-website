@@ -8,7 +8,6 @@ import YAML from "yaml";
 
 export async function getJSON(filepath: string): Promise<any> {
   if (process.env.CONTENT_BASE_URL === "_data") {
-    console.log(new URL(`../../_data/${filepath}`, import.meta.url).pathname);
     const file = await fs.readFile(
       new URL(`../../_data/${filepath}`, import.meta.url).pathname,
       {

@@ -3,14 +3,15 @@ import { BasicCard } from "./cards/BasicCard";
 import { LargeCard } from "./cards/LargeCard";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
-import { BlockCommunityEventsList } from "./dataBlocks/BlockCommunityEvents/(components)/BlockCommunityEventsList";
+import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 
 interface Props {
   readonly block: TopLevelBlock;
   readonly locale: string;
 }
 
-export async function Block({ block, locale }: Props) {
+// @ts-expect-error
+export async function Block({ block, locale }: Props): JSX.Element {
   if (block.type === "basic_card") {
     return (
       <BasicCard
@@ -32,15 +33,10 @@ export async function Block({ block, locale }: Props) {
       />
     );
   } else if (block.type === "markdown") {
-    // @ts-expect-error
     return <MarkdownBlock body={block.body} />;
   } else if (block.type === "community_events") {
     return (
-      <BlockCommunityEventsList
-        env={{
-          ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
-          ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
-        }}
+      <BlockCommunityEvents
         params={{
           locale,
         }}
@@ -57,8 +53,7 @@ export async function Block({ block, locale }: Props) {
         headingVariant={block.heading_variant}
       >
         {block.blocks.map((block, i) => (
-          // @ts-expect-error
-          <Block key={i} block={block} />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
     );

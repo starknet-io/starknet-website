@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import React from "react";
 import { BlockCards } from "../BlockCards";

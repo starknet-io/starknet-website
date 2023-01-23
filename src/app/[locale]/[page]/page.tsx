@@ -56,8 +56,7 @@ export default async function Page({
           main={
             <Box>
               {blocks.map((block, i) => (
-                // @ts-expect-error
-                <Block key={i} block={block} />
+                <Block key={i} block={block} locale={locale} />
               ))}
             </Box>
           }

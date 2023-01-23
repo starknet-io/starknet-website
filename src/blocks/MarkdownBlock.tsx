@@ -7,7 +7,8 @@ interface Props {
   readonly body: string;
 }
 
-export async function MarkdownBlock({ body }: Props) {
+// @ts-expect-error
+export async function MarkdownBlock({ body }: Props): JSX.Element {
   return (
     <ReactMarkdown
       components={{
