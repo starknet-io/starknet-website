@@ -99,6 +99,10 @@ export const tokens = {
       "btn-filter-active-fg": "#ffffff",
       "btn-filter-active-hover-fg": "#E5E5F3",
       "btn-filter-active-hover-bg": "#858585",
+      "card-link-fg": "#5C94FF",
+      "card-link-hover-fg": "#5C94FF",
+      "hero-home-bg": "#E5ECED",
+      "hero-home-text-fg": "#313131",
     },
 
     dark: {
@@ -200,6 +204,10 @@ export const tokens = {
       "btn-filter-active-fg": "#121212",
       "btn-filter-active-hover-fg": "#0B0B0B",
       "btn-filter-active-hover-bg": "#B2CDFF",
+      "card-link-fg": "#AFCAFF",
+      "card-link-hover-fg": "#AFCAFF",
+      "hero-home-bg": "#000000",
+      "hero-home-text-fg": "#FFFFFF",
     },
   },
 };
@@ -599,6 +607,22 @@ export const semanticTokens = {
     "btn-filter-active-hover-bg": {
       default: tokens.colors.light["btn-filter-active-hover-bg"],
       _dark: tokens.colors.dark["btn-filter-active-hover-bg"],
+    },
+    "card-link-fg": {
+      default: tokens.colors.light["card-link-fg"],
+      _dark: tokens.colors.dark["card-link-fg"],
+    },
+    "card-link-hover-fg": {
+      default: tokens.colors.light["card-link-hover-fg"],
+      _dark: tokens.colors.dark["card-link-hover-fg"],
+    },
+    "hero-home-bg": {
+      default: tokens.colors.light["hero-home-bg"],
+      _dark: tokens.colors.dark["hero-home-bg"],
+    },
+    "hero-home-text-fg": {
+      default: tokens.colors.light["hero-home-text-fg"],
+      _dark: tokens.colors.dark["hero-home-text-fg"],
     },
   },
 };
