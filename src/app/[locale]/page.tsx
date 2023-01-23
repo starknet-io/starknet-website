@@ -24,10 +24,11 @@ import { BlockStats } from "../../blocks/dataBlocks/BlockStats";
 import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageContentContainerNoSidebar } from "./(components)/PageContentContainerNoSidebar";
-import { useMessages } from "./(components)/ClientLocaleProvider";
+import { useMessages, useLocale } from "./(components)/ClientLocaleProvider";
 
 export default function Index() {
   const messages = useMessages();
+  const locale = useLocale();
 
   return (
     <PageContentContainerNoSidebar>
@@ -299,7 +300,8 @@ export default function Index() {
       </BlockCards>
 
       <Spacer height={32} />
-      {/* <BlockCommunityEvents params={{ locale: "en" }} /> */}
+      <BlockCommunityEvents params={{ locale: locale }} />
+      <Spacer height={32} />
       {/* Block for stats which fetches stats from an api  */}
       <BlockStats />
 

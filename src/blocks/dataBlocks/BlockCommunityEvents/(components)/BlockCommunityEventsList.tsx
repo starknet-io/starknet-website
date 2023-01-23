@@ -11,6 +11,7 @@ import {
 import { useHits } from "react-instantsearch-hooks";
 
 import { ListCard } from "@ui/ListCards/ListCard";
+import { Heading } from "@ui/Typography/Heading";
 
 export interface AutoProps {
   readonly params: {
@@ -40,7 +41,12 @@ export function BlockCommunityEventsList({
         facetsRefinements={{ locale: [params.locale] }}
       />
       <Box>
-        <CustomHits />
+        <Flex justifyContent="center">
+          <Heading variant="h2" as="h2" color="heading-navy-fg" mb="64px">
+            Community Events
+          </Heading>
+        </Flex>
+        <CustomHits hitsPerPage={hitsPerPage} />
       </Box>
     </InstantSearch>
   );
@@ -55,25 +61,57 @@ type HitProps = {
     readonly tags: string[];
   }[];
 };
-function CustomHits() {
+function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
   const { hits }: HitProps = useHits();
   console.log("hits", hits);
-
+  const newHits = [
+    {
+      start_date: "2021-09-01",
+      name: "StarkNet Hackathon",
+      image: "https://starknet.io/images/hackathon.png",
+      description: "StarkNet Hackathon",
+      tags: ["Hackathon"],
+    },
+    {
+      start_date: "2021-09-01",
+      name: "StarkNet Hackathon",
+      image: "https://starknet.io/images/hackathon.png",
+      description: "StarkNet Hackathon",
+      tags: ["Hackathon"],
+    },
+    {
+      start_date: "2021-09-01",
+      name: "StarkNet Hackathon",
+      image: "https://starknet.io/images/hackathon.png",
+      description: "StarkNet Hackathon",
+      tags: ["Hackathon"],
+    },
+    {
+      start_date: "2021-09-01",
+      name: "StarkNet Hackathon",
+      image: "https://starknet.io/images/hackathon.png",
+      description: "StarkNet Hackathon",
+      tags: ["Hackathon"],
+    },
+  ];
   return (
     <>
       <Flex gap={4} direction="column" flex={1}>
-        {hits.map((hit) => {
-          return (
-            <ListCard
-              rounded
-              key={hit?.name}
-              startDateTime={hit?.start_date}
-              image={hit.image}
-              title={hit.name}
-              description={hit.description}
-              type={hit.tags}
-            />
-          );
+        {newHits.map((hit, i) => {
+          if (i > hitsPerPage - 1) return null;
+          else {
+            return (
+              <ListCard
+                rounded
+                key={hit?.name}
+                startDateTime={hit?.start_date}
+                image={hit.image}
+                title={hit.name}
+                description={hit.description}
+                type={hit.tags}
+              />
+            );
+          }
         })}
       </Flex>
     </>
