@@ -53,7 +53,7 @@ export const BlockCards = ({
           {heading}
         </Heading>
       )}
-      <SimpleGrid columns={{ base, md, lg, xl }} spacing="32px" mb="32px">
+      <SimpleGrid columns={{ base, md, lg, xl }} spacing="32px">
         {children}
       </SimpleGrid>
     </Box>
