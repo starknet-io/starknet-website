@@ -19,6 +19,7 @@ import { BlockCards } from "../../blocks/BlockCards";
 import { BasicCard } from "../../blocks/cards/BasicCard";
 import { LargeCard } from "../../blocks/cards/LargeCard";
 import { ImageIconCard } from "../../blocks/cards/ImageIconCard";
+import { IconLinkCard } from "../../blocks/cards/IconLinkCard";
 import { CommunityCard } from "../../blocks/cards/CommunityCard";
 import { BlockStats } from "../../blocks/dataBlocks/BlockStats";
 import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
@@ -100,6 +101,40 @@ export default function Index() {
         </Stack>
       </Box>
       <Spacer height={24} /> */}
+      <BlockCards base={1} md={2} lg={4}>
+        <IconLinkCard
+          icon="/assets/cards/7.svg"
+          color="orange"
+          linkHref="Learn"
+          linkLabel="Unlimited scale"
+          // description="sdfsadf"
+          title="title"
+        />
+        <IconLinkCard
+          icon="/assets/cards/7.svg"
+          color="blue"
+          linkHref="Learn"
+          linkLabel="Unlimited scale"
+          // description="sdfsadf"
+          title="title"
+        />
+        <IconLinkCard
+          icon="/assets/cards/7.svg"
+          color="green"
+          linkHref="Learn"
+          linkLabel="Unlimited scale"
+          // description="sdfsadf"
+          title="title"
+        />
+        <IconLinkCard
+          icon="/assets/cards/7.svg"
+          color="yellow"
+          linkHref="Learn"
+          linkLabel="Unlimited scale"
+          // description="sdfsadf"
+          title="title"
+        />
+      </BlockCards>
       <HomepageHero />
       <Spacer height={8} />
       <CommunityCard
