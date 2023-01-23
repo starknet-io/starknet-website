@@ -35,11 +35,7 @@ export const NavBar = ({
   const { colorMode, toggleColorMode } = useColorMode();
   const isMobile = useBreakpointValue({ base: true, lg: false });
   return (
-    <Box
-      as="nav"
-      bg="navbar-bg"
-      //  boxShadow={useColorModeValue("sm", "sm-dark")}
-    >
+    <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
       <NavLayout
         onClickMenu={onOpen}
         isMenuOpen={isOpen}

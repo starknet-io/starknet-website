@@ -62,7 +62,7 @@ export const SearchInput = () => {
             </ModalFooter>
           </ModalContent>
         </Modal>
-        <InputRightElement right="40px" top="3px">
+        <InputRightElement right="43px" top="3px">
           <Kbd variant="search" size="md">
             /
           </Kbd>

@@ -17,9 +17,9 @@ type Props = {
 
 export const ColumnLink = (props: Props) => {
   return (
-    <Link
+    <Button
       {...props}
-      as={Button}
+      as={Link}
       leftIcon={
         <Icon
           color={props.active ? "columnlink-active-fg" : "columnlink-bg"}
@@ -47,7 +47,7 @@ export const ColumnLink = (props: Props) => {
       }}
     >
       {props.children}
-    </Link>
+    </Button>
   );
 };
 

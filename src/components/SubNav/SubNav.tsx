@@ -51,7 +51,6 @@ const Item = ({ children, ...rest }: ItemProps) => {
       _selected={{
         color: "subnav-fg-accent",
         fontWeight: "medium",
-        opacity: 0.2,
       }}
     >
       {children}
