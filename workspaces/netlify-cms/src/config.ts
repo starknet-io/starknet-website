@@ -10,12 +10,11 @@ console.log(branch);
 const blocks: CmsFieldList["types"] = [
   {
     name: "markdown",
-    label: "Markdown",
+    label: "Rich Text / Markdown",
     widget: "object",
     fields: [
       {
-        name: "markdown",
-        label: "Markdown",
+        name: "body",
         widget: "markdown",
       },
     ],
@@ -24,7 +23,12 @@ const blocks: CmsFieldList["types"] = [
     name: "community_events",
     label: "Community events",
     widget: "object",
-    fields: [],
+    fields: [
+      {
+        name: 'type',
+        widget: 'hidden'
+      }
+    ]
   },
   {
     name: "basic_card",
@@ -35,10 +39,10 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: "linkLabel",
+        name: "link_label",
       },
       {
-        name: "linkHref",
+        name: "link_href",
       },
       {
         name: "size",
@@ -57,10 +61,10 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: "linkLabel",
+        name: "link_label",
       },
       {
-        name: "linkHref",
+        name: "link_href",
       },
       {
         name: "description",
