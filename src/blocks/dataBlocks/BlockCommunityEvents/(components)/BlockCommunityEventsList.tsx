@@ -23,10 +23,12 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  hitsPerPage?: number;
 }
 export function BlockCommunityEventsList({
   params,
   env,
+  hitsPerPage = 3,
 }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
@@ -34,7 +36,7 @@ export function BlockCommunityEventsList({
   return (
     <InstantSearch searchClient={searchClient} indexName="web_events_dev">
       <Configure
-        hitsPerPage={40}
+        hitsPerPage={hitsPerPage}
         facetsRefinements={{ locale: [params.locale] }}
       />
       <Box>
