@@ -2,6 +2,7 @@ path: /community/
 title: Community
 template: article
 blocks:
-  - type: markdown
+  - 
+    type: markdown
     body: >-
       Community
