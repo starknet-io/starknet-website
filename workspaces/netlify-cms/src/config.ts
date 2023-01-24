@@ -1,4 +1,4 @@
-import { CmsConfig } from "netlify-cms-core";
+import { CmsConfig, CmsFieldList } from "netlify-cms-core";
 
 const locale = "en";
 
@@ -6,6 +6,129 @@ const branch =
   location.pathname === "/" ? "dev" : location.pathname.replace(/^\//, "");
 
 console.log(branch);
+
+const blocks: CmsFieldList["types"] = [
+  {
+    name: "markdown",
+    label: "Rich Text / Markdown",
+    widget: "object",
+    fields: [
+      {
+        name: "body",
+        widget: "markdown",
+      },
+    ],
+  },
+  {
+    name: "community_events",
+    label: "Community events",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+    ],
+  },
+  {
+    name: "basic_card",
+    label: "Basic card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
+      },
+      {
+        name: "size",
+        widget: "select",
+        required: false,
+        options: ["sm", "md"],
+      },
+    ],
+  },
+  {
+    name: "large_card",
+    label: "Large card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
+      },
+      {
+        name: "description",
+      },
+      {
+        name: "image",
+        widget: "image",
+      },
+      {
+        name: "orientation",
+        widget: "select",
+        required: false,
+        options: ["left", "right"],
+      },
+    ],
+  },
+];
+const topLevelBlocks: CmsFieldList["types"] = [
+  ...blocks,
+
+  {
+    name: "flex_layout",
+    label: "Flex layout",
+    widget: "object",
+    fields: [
+      {
+        name: "base",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "md",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "lg",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "xl",
+        widget: "number",
+        required: false,
+      },
+      {
+        name: "heading",
+        required: false,
+      },
+      {
+        name: "heading_variant",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+        required: false,
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
+];
 
 export const config: CmsConfig = {
   backend: {
@@ -22,6 +145,7 @@ export const config: CmsConfig = {
       label_singular: "Page",
       identifier_field: "title",
       folder: `_data/pages/${locale}`,
+      format: "yaml",
       create: true,
       fields: [
         {
@@ -33,9 +157,16 @@ export const config: CmsConfig = {
           label: "Title",
         },
         {
-          name: "body",
-          label: "Body",
-          widget: "markdown",
+          name: "template",
+          widget: "select",
+          options: ["page", "article"],
+          default: "page",
+        },
+        {
+          name: "blocks",
+          label: "Blocks",
+          widget: "list",
+          types: topLevelBlocks,
         },
       ],
     },

@@ -1,4 +1,4 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "src/libs/chakra-ui";
 
 const primary = defineStyle({
   borderWidth: "1px", // change the width of the border

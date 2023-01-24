@@ -4,7 +4,7 @@ import {
   StackProps,
   Text,
   useBreakpointValue,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import * as React from "react";
 
 interface StatProps extends StackProps {

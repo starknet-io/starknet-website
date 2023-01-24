@@ -14,7 +14,7 @@ import {
   ModalOverlay,
   useBreakpointValue,
   useDisclosure,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import * as React from "react";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 
@@ -62,7 +62,7 @@ export const SearchInput = () => {
             </ModalFooter>
           </ModalContent>
         </Modal>
-        <InputRightElement right="40px" top="3px">
+        <InputRightElement right="43px" top="3px">
           <Kbd variant="search" size="md">
             /
           </Kbd>

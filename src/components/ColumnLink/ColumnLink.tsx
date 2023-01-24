@@ -7,7 +7,7 @@ import {
   LinkProps,
   Text,
   TextProps,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { HiPlay } from "react-icons/hi2";
 import NextLink from "next/link";
 type Props = {
@@ -15,14 +15,14 @@ type Props = {
 } & ButtonProps &
   LinkProps;
 
-export const ColumnLink = (props: Props) => {
+export const ColumnLink = ({ active, ...props }: Props) => {
   return (
-    <Link
+    <Button
       {...props}
-      as={Button}
+      as={Link}
       leftIcon={
         <Icon
-          color={props.active ? "columnlink-active-fg" : "columnlink-bg"}
+          color={active ? "columnlink-active-fg" : "columnlink-bg"}
           as={HiPlay}
           boxSize="24px"
         />
@@ -38,7 +38,7 @@ export const ColumnLink = (props: Props) => {
       fontWeight="semibold"
       justifyContent="flex-start"
       bg="columnlink-bg"
-      color={props.active ? "columnlink-active-fg" : "columnlink-fg"}
+      color={active ? "columnlink-active-fg" : "columnlink-fg"}
       _hover={{ bg: "columnlink-hover-bg", color: "columnlink-hover-fg" }}
       _active={{ bg: "columnlink-active-bg", color: "columnlink-active-fg" }}
       _focus={{
@@ -47,7 +47,7 @@ export const ColumnLink = (props: Props) => {
       }}
     >
       {props.children}
-    </Link>
+    </Button>
   );
 };
 
@@ -55,7 +55,10 @@ type ColumnLinkDescriptionProps = {
   active?: boolean;
 } & TextProps;
 
-export const ColumnLinkDescription = (props: ColumnLinkDescriptionProps) => {
+export const ColumnLinkDescription = ({
+  active,
+  ...props
+}: ColumnLinkDescriptionProps) => {
   return (
     <Text
       {...props}
@@ -70,7 +73,7 @@ export const ColumnLinkDescription = (props: ColumnLinkDescriptionProps) => {
       fontWeight="semibold"
       justifyContent="flex-start"
       bg="columnlink-bg"
-      color={props.active ? "columnlink-active-fg" : "columnlink-fg"}
+      color={active ? "columnlink-active-fg" : "columnlink-fg"}
       display="flex"
       alignItems="center"
     >

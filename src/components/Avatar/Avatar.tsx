@@ -1,5 +1,5 @@
 import { avatarAnatomy } from "@chakra-ui/anatomy";
-import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
+import { createMultiStyleConfigHelpers, defineStyle } from "src/libs/chakra-ui";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(avatarAnatomy.keys);

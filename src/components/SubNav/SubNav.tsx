@@ -9,7 +9,7 @@ import {
   Tabs,
   Container,
   TabProps,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import React from "react";
 
 type RootProps = {
@@ -51,7 +51,6 @@ const Item = ({ children, ...rest }: ItemProps) => {
       _selected={{
         color: "subnav-fg-accent",
         fontWeight: "medium",
-        opacity: 0.2,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import { useColorModeValue } from "@chakra-ui/react";
+import { useColorModeValue } from "src/libs/chakra-ui";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 

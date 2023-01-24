@@ -1,4 +1,4 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "src/libs/chakra-ui";
 
 const outline = defineStyle({
   // change the appearance of the border
@@ -20,6 +20,10 @@ const outline = defineStyle({
     color: "btn-outline-active-fg",
     borderColor: "btn-outline-active-border",
   },
+});
+
+const solid = defineStyle({
+  bg: "btn-primary-bg",
 });
 
 const filter = defineStyle({
@@ -57,7 +61,7 @@ const filterActive = defineStyle({
 });
 
 export const buttonTheme = defineStyleConfig({
-  variants: { outline, filter, filterActive },
+  variants: { outline, filter, filterActive, solid },
 });
 
 // export const ButtonStyles = defineStyleConfig({

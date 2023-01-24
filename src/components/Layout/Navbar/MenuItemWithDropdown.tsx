@@ -7,7 +7,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import * as React from "react";
 
 import { PopoverIcon } from "./PopoverIcon";

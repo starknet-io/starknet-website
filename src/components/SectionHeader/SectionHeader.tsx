@@ -1,5 +1,5 @@
 "use client";
-import { Box, Stack, Divider, Text, Container } from "@chakra-ui/react";
+import { Box, Stack, Divider, Text, Container } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 
 import React from "react";

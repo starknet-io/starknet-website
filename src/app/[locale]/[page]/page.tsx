@@ -19,6 +19,7 @@ import { getMessages } from "src/data/i18n/intl";
 import { Sidebar } from "@ui/Layout/Sidebar";
 import { SubNavLinkGroup } from "@ui/TableOfContents/TableOfContents";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { Block } from "src/blocks/Block";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -31,7 +32,7 @@ export default async function Page({
 }: Props): Promise<JSX.Element> {
   try {
     const messages = await getMessages(locale);
-    const { title, MDXContent } = await getPageByFilename(page, locale);
+    const { title, blocks } = await getPageByFilename(page, locale);
 
     return (
       <Box>
@@ -53,60 +54,11 @@ export default async function Page({
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
           main={
-            <Box>
-              <MDXContent
-                components={{
-                  h2: (props) => (
-                    <Heading
-                      as="h2"
-                      color="heading-navy-fg"
-                      variant="h2"
-                      {...props}
-                    />
-                  ),
-                  h3: (props) => (
-                    <Heading
-                      color="heading-navy-fg"
-                      pb={4}
-                      as="h3"
-                      variant="h3"
-                      {...props}
-                    />
-                  ),
-                  h4: (props) => (
-                    <Heading
-                      color="heading-navy-fg"
-                      as="h4"
-                      variant="h4"
-                      {...props}
-                    />
-                  ),
-                  h5: (props) => (
-                    <Heading
-                      color="heading-navy-fg"
-                      as="h5"
-                      variant="h4"
-                      {...props}
-                    />
-                  ),
-                  h6: (props) => (
-                    <Heading
-                      color="heading-navy-fg"
-                      as="h6"
-                      variant="h6"
-                      {...props}
-                    />
-                  ),
-                  p: (props) => (
-                    <Text py={2} variant="baseRegular" {...props} />
-                  ),
-                  ul: (props) => <UnorderedList pl={1} {...props} />,
-                  ol: (props) => <OrderedList pl={1} {...props} />,
-                  li: (props) => <ListItem {...props} />,
-                  img: (props) => <Img my="4" {...props} />,
-                }}
-              />
-            </Box>
+            <Flex direction="column" gap="32px">
+              {blocks.map((block, i) => (
+                <Block key={i} block={block} locale={locale} />
+              ))}
+            </Flex>
           }
           rightAside={
             <SubNavLinkGroup

@@ -12,6 +12,7 @@ import { kbdTheme } from "@ui/Kbd/Kbd";
 import { dividerTheme } from "@ui/Divider/Divider";
 import { avatarTheme } from "@ui/Avatar/Avatar";
 import { iconButtonTheme } from "@ui/IconButton/IconButton";
+import { linkTheme } from "@ui/Link/Link";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -48,6 +49,7 @@ const theme = extendTheme(proTheme, {
     Kbd: kbdTheme,
     Divider: dividerTheme,
     Tag: tagTheme,
+    Link: linkTheme,
   },
 });
 export default theme;

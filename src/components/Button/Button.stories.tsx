@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack } from "@chakra-ui/react";
+import { HStack } from "src/libs/chakra-ui";
 import { Meta } from "@storybook/react";
 import { Button } from "./Button";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";

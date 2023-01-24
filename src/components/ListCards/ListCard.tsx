@@ -12,7 +12,7 @@ import {
   useColorModeValue,
   Wrap,
   Link,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import * as React from "react";

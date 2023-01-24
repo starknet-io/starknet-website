@@ -10,7 +10,7 @@ import {
   Divider,
   Box,
   Flex,
-} from "@chakra-ui/react";
+} from "src/libs/chakra-ui";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import Link from "next/link";
 
@@ -20,6 +20,7 @@ import {
   HiOutlineSun,
   HiOutlineXMark,
 } from "react-icons/hi2";
+import { useLocale } from "src/app/[locale]/(components)/ClientLocaleProvider";
 import { SearchInput } from "./SearchInput";
 
 type NavLayoutProps = {
@@ -34,12 +35,13 @@ type NavLayoutProps = {
 export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
+  const locale = useLocale();
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Container py={{ base: "4", lg: "8" }}>
       <HStack spacing="4" justify="space-between">
-        <Link href="/">
+        <Link href={`/${locale}/`}>
           <StarknetLogo />
         </Link>
         {isDesktop && (
