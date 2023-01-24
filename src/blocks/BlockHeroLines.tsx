@@ -19,7 +19,14 @@ type Props = {
   imgAlt?: string;
   url?: string;
   urlTitle?: string;
-  variant?: "wallets" | "block_explorers" | "bridges" | "dapps";
+  variant?:
+    | "wallets"
+    | "block_explorers"
+    | "bridges"
+    | "dapps"
+    | "learn"
+    | "build"
+    | "community";
 };
 
 export const BlockHeroLines = ({
@@ -41,7 +48,12 @@ export const BlockHeroLines = ({
         return "/assets/blockHeroLines/bridges.svg";
       case "wallets":
         return "/assets/blockHeroLines/wallets.svg";
-
+      case "learn":
+        return "/assets/blockHeroLines/wallets.svg";
+      case "build":
+        return "/assets/blockHeroLines/wallets.svg";
+      case "build":
+        return "/assets/blockHeroLines/community.svg";
       default:
         return "/assets/blockHeroLines/wallets.svg";
     }
@@ -183,10 +195,6 @@ export const BlockHeroLines = ({
             <Spacer display={{ base: "none", lg: "block" }} />
             <Box
               order={{ base: 0, lg: 2 }}
-              // pos={{ lg: "absolute" }}
-              // left="0"
-              // bottom="0"
-              // bg="red"
               w={{ base: "full", lg: "25%" }}
               height={{ base: "350px", lg: "300px" }}
             >
