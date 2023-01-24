@@ -2,6 +2,7 @@ path: /starknets-security
 title: Starknet’s security
 template: article
 blocks:
-  - type: markdown
+  - 
+    type: markdown
     body: >-
       Starknet’s security
