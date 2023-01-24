@@ -2,6 +2,7 @@ path: /Templates/
 title: Templates
 template: article
 blocks:
-  - type: markdown
+  - 
+    type: markdown
     body: >-
       Templates
