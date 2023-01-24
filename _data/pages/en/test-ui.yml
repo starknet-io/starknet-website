@@ -98,11 +98,35 @@ blocks:
   - type: dapps
     noOfItems: "1"
     no_of_items: "1"
+  - type: markdown
+    body: >-
+      ### What are wallets?﻿
+
+
+      StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
+  - type: wallets
+    no_of_items: "1"
+  - type: markdown
+    body: >-
+      ### What are Block explorers?
+
+
+      StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
   - type: block_explorers
     no_of_items: "1"
+  - type: markdown
+    body: >-
+      ### What are Bridges? 
+
+
+      StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
   - type: bridges
     no_of_items: "1"
+  - type: markdown
+    body: >-
+      ### What are fiat on-ramps? 
+
+
+      StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
   - type: on_ramps
-    no_of_items: "1"
-  - type: wallets
     no_of_items: "1"
