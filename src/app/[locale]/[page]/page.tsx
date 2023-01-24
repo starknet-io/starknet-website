@@ -32,7 +32,7 @@ export default async function Page({
 }: Props): Promise<JSX.Element> {
   try {
     const messages = await getMessages(locale);
-    const { title, blocks, template, breadcrumbs, showLastUpdated } =
+    const { title, blocks, template, breadcrumbs, pageLastUpdated } =
       await getPageByFilename(page, locale);
     console.log(template);
     return (

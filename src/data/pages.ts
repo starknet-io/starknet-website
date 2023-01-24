@@ -124,7 +124,7 @@ export interface Page {
   readonly title: string;
   readonly template: "page" | "article";
   readonly breadcrumbs: boolean;
-  readonly showLastUpdated: boolean;
+  readonly pageLastUpdated: boolean;
   readonly blocks: readonly TopLevelBlock[];
 }
 
