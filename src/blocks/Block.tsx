@@ -6,6 +6,7 @@ import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import { BlockHeroLines } from "./BlockHeroLines";
+import { BlockGrouping } from "./BlockGrouping";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -58,6 +59,14 @@ export async function Block({ block, locale }: Props): JSX.Element {
           <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
+    );
+  } else if (block.type === "group") {
+    return (
+      <BlockGrouping>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </BlockGrouping>
     );
   } else if (block.type === "hero") {
     return (

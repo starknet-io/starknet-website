@@ -121,6 +121,7 @@ const blocks: CmsFieldList["types"] = [
           "build",
           "community",
         ],
+        default: "learn",
       },
     ],
   },
@@ -128,6 +129,24 @@ const blocks: CmsFieldList["types"] = [
 
 const topLevelBlocks: CmsFieldList["types"] = [
   ...blocks,
+
+  {
+    name: "group",
+    label: "Block group",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
 
   {
     name: "flex_layout",

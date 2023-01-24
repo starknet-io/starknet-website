@@ -5,6 +5,7 @@ export interface MarkdownBlock {
   readonly type: "markdown";
   readonly body: string;
 }
+
 export interface CommunityEventsBlock {
   readonly type: "community_events";
 }
@@ -63,8 +64,12 @@ export interface FlexLayoutBlock {
   readonly heading_variant?: "sm" | "md" | "lg";
   readonly blocks: readonly Block[];
 }
+export interface GroupBlock {
+  readonly type: "group";
+  readonly blocks: readonly Block[];
+}
 
-export type TopLevelBlock = Block | FlexLayoutBlock;
+export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock;
 
 export interface Page {
   readonly path: string;
