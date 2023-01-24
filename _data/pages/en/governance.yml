@@ -2,6 +2,7 @@ path: /governance/
 title: Governance
 template: article
 blocks:
-  - type: markdown
+  - 
+    type: markdown
     body: >-
       Governance
