@@ -1,0 +1,8 @@
+path: /provers/
+title: Provers
+template: article
+blocks:
+  - 
+    type: markdown
+    body: >-
+      Provers
