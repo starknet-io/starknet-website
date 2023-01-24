@@ -104,7 +104,7 @@ blocks:
     no_of_items: "1"
   - type: markdown
     body: >-
-      ### What are wallets?﻿
+      ### What are wallets?
 
 
       StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
@@ -134,3 +134,4 @@ blocks:
       StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
   - type: on_ramps
     no_of_items: "1"
+

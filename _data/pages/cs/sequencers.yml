@@ -5,15 +5,7 @@ blocks:
   - 
     type: markdown
     body: >-
-      ## S﻿equencers 
-
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/). 
-
-      ### S﻿econd heading 3 
-
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. 
-
-      Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
+      ## S﻿equencers StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/). ### S﻿econd heading 3 StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
   - 
     type: flex_layout
     base: 1
@@ -35,10 +27,6 @@ blocks:
   - 
     type: markdown
     body: >-
-      ### S﻿econd heading 4 
-
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. 
-
-      Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
+      ### S﻿econd heading 4 StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
   - 
     type: community_events
