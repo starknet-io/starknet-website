@@ -31,6 +31,20 @@ const blocks: CmsFieldList["types"] = [
     ],
   },
   {
+    name: "dapps",
+    label: "Dapps",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "noOfItems",
+      },
+    ],
+  },
+  {
     name: "basic_card",
     label: "Basic card",
     widget: "object",
