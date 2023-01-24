@@ -4,6 +4,7 @@ import { LargeCard } from "./cards/LargeCard";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
+import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -56,6 +57,14 @@ export async function Block({ block, locale }: Props): JSX.Element {
           <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
+    );
+  } else if (block.type === "dapps") {
+    return (
+      <BlockDapps
+        params={{
+          locale,
+        }}
+      />
     );
   } else {
     // this will report type error if there is unhandled block.type

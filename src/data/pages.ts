@@ -8,6 +8,9 @@ export interface MarkdownBlock {
 export interface CommunityEventsBlock {
   readonly type: "community_events";
 }
+export interface DappsBlock {
+  readonly type: "dapps";
+}
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
@@ -30,6 +33,7 @@ export interface LargeCardBlock {
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
+  | DappsBlock
   | BasicCardBlock
   | LargeCardBlock;
 
@@ -55,12 +59,12 @@ export interface Page {
 
 export async function getPageByFilename(
   filename: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getYAML(`pages/${locale}/${filename}.yml`),
-      () => getYAML(`pages/${defaultLocale}/${filename}.yml`),
+      () => getYAML(`pages/${defaultLocale}/${filename}.yml`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${filename}`, {
@@ -71,7 +75,7 @@ export async function getPageByFilename(
 
 export async function getPageByPage(
   page: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   return getPageByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }
