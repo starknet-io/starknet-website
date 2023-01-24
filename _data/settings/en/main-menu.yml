@@ -1,134 +1,213 @@
 items:
-  - title: Learn
+  - 
+    title: Learn
     columns:
-      - blocks:
-          - title: START HERE
+      - 
+        blocks:
+          - 
+            title: START HERE
             items:
-              - page: /learn/
+              - 
+                page: /learn/
                 custom_title: Learning hub
-          - title: THE BASICS
+          - 
+            title: THE BASICS
             items:
-              - page: /what-is-starknet/
-              - page: /what-is-cairo/
-              - page: /what-are-starks/
-              - page: /layer-2/
-              - page: /zero-knowledge-proofs/
-              - page: /validity-proofs/
-              - page: /computational-integrity/
-      - blocks:
-          - title: HOW DOES STARKNET WORK?
+              - 
+                page: /what-is-starknet/
+              - 
+                page: /what-is-cairo/
+              - 
+                page: /what-are-starks/
+              - 
+                page: /layer-2/
+              - 
+                page: /zero-knowledge-proofs/
+              - 
+                page: /validity-proofs/
+              - 
+                page: /computational-integrity/
+      - 
+        blocks:
+          - 
+            title: HOW DOES STARKNET WORK?
             items:
-              - page: /zk-rollups
-              - page: /starknets-architecture/
-              - page: /sequencers/
-              - page: /provers/
-              - page: /starknets-security
-              - page: /fees-on-starknet/
-              - page: /governance/
-      - blocks:
-          - title: USING STARKNET
+              - 
+                page: /zk-rollups
+              - 
+                page: /starknets-architecture/
+              - 
+                page: /sequencers/
+              - 
+                page: /provers/
+              - 
+                page: /starknets-security
+              - 
+                page: /fees-on-starknet/
+              - 
+                page: /governance/
+      - 
+        blocks:
+          - 
+            title: USING STARKNET
             items:
-              - page: /trustless-bridging
-              - page: /account-abstraction
-              - page: /storage-proofs
-              - page: /on-chain-gaming
-              - page: /cheap-computation
-              - page: /oracles-on-starknet
-      - blocks:
-          - title: COMMON QUESTIONS
+              - 
+                page: /trustless-bridging
+              - 
+                page: /account-abstraction
+              - 
+                page: /storage-proofs
+              - 
+                page: /on-chain-gaming
+              - 
+                page: /cheap-computation
+              - 
+                page: /oracles-on-starknet
+      - 
+        blocks:
+          - 
+            title: COMMON QUESTIONS
             items:
-              - custom_internal_link: /glossary
+              - 
+                custom_internal_link: /glossary
                 custom_title: Glossary
-              - custom_title: FAQ's
+              - 
+                custom_title: FAQ's
                 custom_internal_link: /faqs/
-          - title: OTHER
+          - 
+            title: OTHER
             items:
-              - custom_title: ""
+              - 
+                custom_title: ""
                 page: /starknet-foundation/
-  - title: Developers
+  - 
+    title: Developers
     columns:
-      - blocks:
-          - items:
-              - custom_title: Developers Hub
-                page: /developers/
-              - custom_external_link: https://docs.starknet.io
-                custom_title: Documentation
-              - custom_internal_link: /tutorials/
-                custom_title: Tutorials
-              - page: /resources-and-tools
-              - custom_title: Starknet Playground
-                custom_external_link: https://starknet.io/playground
-              - custom_title: Engineering blog
-                custom_internal_link: /posts/
-  - title: Ecosystem
-    columns:
-      - blocks:
-          - title: ""
+      - 
+        blocks:
+          - 
             items:
-              - page: ""
+              - 
+                custom_title: Developers Hub
+                page: /developers/
+              - 
+                custom_external_link: https://docs.starknet.io
+                custom_title: Documentation
+              - 
+                custom_internal_link: /tutorials/
+                custom_title: Tutorials
+              - 
+                page: /resources-and-tools
+              - 
+                custom_title: Starknet Playground
+                custom_external_link: https://starknet.io/playground
+              - 
+                custom_title: Engineering blog
+                custom_internal_link: /posts/
+  - 
+    title: Ecosystem
+    columns:
+      - 
+        blocks:
+          - 
+            title: ""
+            items:
+              - 
+                page: ""
                 custom_internal_link: /dapps/
                 custom_title: Dapps
-              - custom_title: Wallets
+              - 
+                custom_title: Wallets
                 custom_internal_link: /wallets/
-              - custom_title: Bridges & onramps
+              - 
+                custom_title: Bridges & onramps
                 custom_internal_link: /bridges-and-onramps/
-              - custom_title: Block Explorers
+              - 
+                custom_title: Block Explorers
                 custom_internal_link: /block-explorers
-
-  - title: Community
+  - 
+    title: Community
     columns:
-      - blocks:
-          - title: START HERE
+      - 
+        blocks:
+          - 
+            title: START HERE
             items:
-              - custom_title: Community Hub
+              - 
+                custom_title: Community Hub
                 page: /community/
-          - title: GET INVOLVED
+          - 
+            title: GET INVOLVED
             items:
-              - custom_internal_link: /events
+              - 
+                custom_internal_link: /events
                 custom_title: Events
-              - custom_internal_link: /jobs
+              - 
+                custom_internal_link: /jobs
                 custom_title: Jobs
-              - page: /governance/
-              - custom_title: Community forum
+              - 
+                page: /governance/
+              - 
+                custom_title: Community forum
                 custom_external_link: https://community.starknet.io/
-      - blocks:
-          - title: BLOG & MEDIA
+      - 
+        blocks:
+          - 
+            title: BLOG & MEDIA
             items:
-              - custom_title: Blog home
+              - 
+                custom_title: Blog home
                 custom_internal_link: /posts/
-              - custom_title: Engineering posts
+              - 
+                custom_title: Engineering posts
                 custom_internal_link: /posts/
-              - custom_internal_link: /posts/
+              - 
+                custom_internal_link: /posts/
                 custom_title: Community Calls
-              - custom_title: Stark struck
+              - 
+                custom_title: Stark struck
                 custom_internal_link: /posts/
-              - custom_title: Stark math
+              - 
+                custom_title: Stark math
                 custom_internal_link: /posts/
-              - custom_title: Governance posts
+              - 
+                custom_title: Governance posts
                 custom_internal_link: /posts/
-              - custom_title: Community & Events posts
+              - 
+                custom_title: Community & Events posts
                 custom_internal_link: /posts/
-      - blocks:
-          - title: OTHER
+      - 
+        blocks:
+          - 
+            title: OTHER
             items:
-              - page: /language-resources/
-              - page: /media-kit/
-              - custom_title: Starknet EDU newsletter
+              - 
+                page: /language-resources/
+              - 
+                page: /media-kit/
+              - 
+                custom_title: Starknet EDU newsletter
                 custom_external_link: /some-link
-              - custom_title: Starknet roundup newsletter
+              - 
+                custom_title: Starknet roundup newsletter
                 custom_external_link: /some-link
-          - title: SOCIAL
+          - 
+            title: SOCIAL
             items:
-              - custom_title: youtube
+              - 
+                custom_title: youtube
                 custom_icon: SiYoutube
                 custom_external_link: https://www.youtube.com/@starkware_ltd
-              - custom_title: Discord
+              - 
+                custom_title: Discord
                 custom_icon: SiDiscord
                 custom_external_link: https://starknet.io/discord
-              - custom_icon: SiGithub
+              - 
+                custom_icon: SiGithub
                 custom_title: Github
                 custom_external_link: https://github.com/starkware-libs
-              - custom_internal_link: ""
+              - 
+                custom_internal_link: ""
                 custom_icon: SiTwitter
                 custom_title: Twitter
                 custom_external_link: https://twitter.com/@Starknet_edu
