@@ -13,6 +13,22 @@ export interface DappsBlock {
   readonly type: "dapps";
   readonly no_of_items: number;
 }
+export interface BlockExplorersBlock {
+  readonly type: "block_explorers";
+  readonly no_of_items: number;
+}
+export interface BridgesBlock {
+  readonly type: "bridges";
+  readonly no_of_items: number;
+}
+export interface OnRampsBlock {
+  readonly type: "on_ramps";
+  readonly no_of_items: number;
+}
+export interface WalletsBlock {
+  readonly type: "wallets";
+  readonly no_of_items: number;
+}
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
@@ -75,6 +91,10 @@ export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
   | DappsBlock
+  | BlockExplorersBlock
+  | BridgesBlock
+  | OnRampsBlock
+  | WalletsBlock
   | BasicCardBlock
   | LargeCardBlock
   | IconLinkCardBlock

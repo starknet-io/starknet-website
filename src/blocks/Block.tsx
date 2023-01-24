@@ -10,6 +10,10 @@ import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
 import { IconLinkCard } from "./cards/IconLinkCard";
 import { ImageIconCard } from "./cards/ImageIconCard";
+import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
+import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
+import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
+import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -114,6 +118,38 @@ export async function Block({ block, locale }: Props): JSX.Element {
   } else if (block.type === "dapps") {
     return (
       <BlockDapps
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "block_explorers") {
+    return (
+      <BlockBlockExplorers
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "bridges") {
+    return (
+      <BlockBridges
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "on_ramps") {
+    return (
+      <BlockOnRamps
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "wallets") {
+    return (
+      <BlockWallets
         params={{
           locale,
         }}

@@ -41,6 +41,67 @@ const blocks: CmsFieldList["types"] = [
       },
       {
         name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "block_explorers",
+    label: "Block Explorers block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "bridges",
+    label: "Bridges block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "on_ramps",
+    label: "On-Ramps block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "wallets",
+    label: "Wallets block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
       },
     ],
   },
