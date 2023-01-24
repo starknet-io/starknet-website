@@ -355,11 +355,24 @@ export const config: CmsConfig = {
           name: "title",
           label: "Title",
         },
+
         {
           name: "template",
           widget: "select",
-          options: ["page", "article"],
-          default: "page",
+          options: ["landing", "content"],
+          default: "content",
+        },
+        {
+          name: "breadcrumbs",
+          label: "Show breadcrumbs",
+          widget: "boolean",
+          default: true,
+        },
+        {
+          name: "page_last_updated",
+          label: "Show page updated",
+          widget: "boolean",
+          default: true,
         },
         {
           name: "blocks",

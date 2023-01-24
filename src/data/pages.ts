@@ -122,7 +122,9 @@ export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock;
 export interface Page {
   readonly path: string;
   readonly title: string;
-  readonly template: "page" | "article";
+  readonly template: "landing" | "content";
+  readonly breadcrumbs: boolean;
+  readonly pageLastUpdated: boolean;
   readonly blocks: readonly TopLevelBlock[];
 }
 

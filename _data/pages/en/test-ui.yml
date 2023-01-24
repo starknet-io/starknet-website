@@ -1,6 +1,8 @@
 path: /test-ui-page/
 title: Test ui
 template: page
+breadcrumbs: true
+page_last_updated: false
 blocks:
   - 
     type: hero

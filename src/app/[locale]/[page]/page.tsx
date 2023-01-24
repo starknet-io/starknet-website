@@ -32,65 +32,48 @@ export default async function Page({
 }: Props): Promise<JSX.Element> {
   try {
     const messages = await getMessages(locale);
-    const { title, blocks } = await getPageByFilename(page, locale);
-
+    const { title, blocks, template, breadcrumbs, pageLastUpdated } =
+      await getPageByFilename(page, locale);
+    console.log(template);
     return (
       <Box>
         <PageLayout
           breadcrumbs={
-            <Breadcrumb separator="->">
-              <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
-                </BreadcrumbLink>
-              </BreadcrumbItem>
+            <>
+              {breadcrumbs ? (
+                <Breadcrumb separator="->">
+                  <BreadcrumbItem>
+                    <BreadcrumbLink fontSize="sm" href="#">
+                      Parent
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
 
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  {title}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
+                  <BreadcrumbItem isCurrentPage>
+                    <BreadcrumbLink fontSize="sm" href="#">
+                      {title}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                </Breadcrumb>
+              ) : null}
+            </>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
+          pageLastUpdated={
+            pageLastUpdated ? "Page last updated 21 Nov 2023" : null
+          }
           main={
-            <Flex direction="column" gap="32px">
+            <Flex
+              direction="column"
+              gap={{
+                base: template === "content" ? "32px" : "56px",
+                lg: template === "content" ? "32px" : "136px",
+              }}
+            >
               {blocks.map((block, i) => (
                 <Block key={i} block={block} locale={locale} />
               ))}
             </Flex>
           }
-          rightAside={
-            <SubNavLinkGroup
-              label="Table of contents"
-              links={[
-                {
-                  label: "Page navigation item 1",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 2",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 3",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 4",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 5",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 6",
-                  url: "https://www.google.com",
-                },
-              ]}
-            />
-          }
+          rightAside={<>{template === "content" ? <div>Hello</div> : null}</>}
         />
       </Box>
     );
