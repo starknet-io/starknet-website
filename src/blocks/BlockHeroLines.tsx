@@ -15,20 +15,19 @@ import React from "react";
 type Props = {
   title: string;
   description: string | React.ReactNode;
-  img?: string;
-  imgAlt?: string;
-  url?: string;
-  urlTitle?: string;
-  variant?: "wallets" | "block_explorers" | "bridges" | "dapps";
+  variant?:
+    | "wallets"
+    | "block_explorers"
+    | "bridges"
+    | "dapps"
+    | "learn"
+    | "build"
+    | "community";
 };
 
 export const BlockHeroLines = ({
   title = "Dapps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
-  img = "/cube.svg",
-  imgAlt = "starknet",
-  url = "https://starkware.co/starknet",
-  urlTitle = "test",
   variant = "dapps",
 }: Props) => {
   const renderImage = () => {
@@ -41,7 +40,12 @@ export const BlockHeroLines = ({
         return "/assets/blockHeroLines/bridges.svg";
       case "wallets":
         return "/assets/blockHeroLines/wallets.svg";
-
+      case "learn":
+        return "/assets/blockHeroLines/wallets.svg";
+      case "build":
+        return "/assets/blockHeroLines/wallets.svg";
+      case "build":
+        return "/assets/blockHeroLines/community.svg";
       default:
         return "/assets/blockHeroLines/wallets.svg";
     }
@@ -183,10 +187,6 @@ export const BlockHeroLines = ({
             <Spacer display={{ base: "none", lg: "block" }} />
             <Box
               order={{ base: 0, lg: 2 }}
-              // pos={{ lg: "absolute" }}
-              // left="0"
-              // bottom="0"
-              // bg="red"
               w={{ base: "full", lg: "25%" }}
               height={{ base: "350px", lg: "300px" }}
             >

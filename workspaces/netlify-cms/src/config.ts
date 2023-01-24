@@ -21,12 +21,106 @@ const blocks: CmsFieldList["types"] = [
   },
   {
     name: "community_events",
-    label: "Community events",
+    label: "Community events block",
     widget: "object",
     fields: [
       {
         name: "type",
         widget: "hidden",
+      },
+    ],
+  },
+  {
+    name: "dapps",
+    label: "Dapps block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "block_explorers",
+    label: "Block Explorers block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "bridges",
+    label: "Bridges block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "on_ramps",
+    label: "On-Ramps block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "wallets",
+    label: "Wallets block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+      {
+        name: "no_of_items",
+        required: false,
+      },
+    ],
+  },
+  {
+    name: "get_involved_card",
+    label: "Get Involved card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "description",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
       },
     ],
   },
@@ -49,9 +143,68 @@ const blocks: CmsFieldList["types"] = [
         widget: "select",
         required: false,
         options: ["sm", "md"],
+        default: "sm",
       },
     ],
   },
+  {
+    name: "icon_link_card",
+    label: "Icon link card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
+      },
+      {
+        name: "icon",
+        widget: "image",
+      },
+      {
+        name: "color",
+        widget: "select",
+        required: false,
+        options: ["orange", "blue", "green", "yellow"],
+        default: "orange",
+      },
+    ],
+  },
+  {
+    name: "image_icon_link_card",
+    label: "Image Icon link card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "description",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
+      },
+      {
+        name: "icon",
+        widget: "image",
+      },
+      {
+        name: "color",
+        widget: "select",
+        required: false,
+        options: ["orange", "blue", "green", "yellow"],
+        default: "orange",
+      },
+    ],
+  },
+
   {
     name: "large_card",
     label: "Large card",
@@ -81,9 +234,54 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "hero",
+    label: "Hero",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+
+      {
+        name: "description",
+      },
+
+      {
+        name: "variant",
+        widget: "select",
+        required: false,
+        options: [
+          "wallets",
+          "block_explorers",
+          "bridges",
+          "dapps",
+          "learn",
+          "build",
+          "community",
+        ],
+        default: "learn",
+      },
+    ],
+  },
 ];
+
 const topLevelBlocks: CmsFieldList["types"] = [
   ...blocks,
+
+  {
+    name: "group",
+    label: "Block group",
+    widget: "object",
+    fields: [
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
 
   {
     name: "flex_layout",
@@ -119,6 +317,7 @@ const topLevelBlocks: CmsFieldList["types"] = [
         widget: "select",
         options: ["sm", "md", "lg"],
         required: false,
+        default: "sm",
       },
       {
         name: "blocks",

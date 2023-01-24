@@ -11,6 +11,7 @@ import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { FaqBlock } from "src/blocks/FaqBlock";
 import { Flex } from "../../libs/chakra-ui";
+import BlockDapps from "src/blocks/dataBlocks/BlockDapps/BlockDapps";
 
 export default async function Index({
   params: { locale },
@@ -268,6 +269,13 @@ export default async function Index({
                     "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called “STARK Proofs” to securely compress huge amounts of transactions for Ethereum.",
                 },
               ]}
+            />
+          </BlockGrouping>
+          <BlockGrouping>
+            <BlockDapps
+              params={{
+                locale,
+              }}
             />
           </BlockGrouping>
         </Flex>

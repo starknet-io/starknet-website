@@ -19,12 +19,13 @@ import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 
 type Props = {
   image?: string;
-  imageAlt: string;
+  imageAlt?: string;
   title: string;
   description: string;
   linkLabel: string;
   linkHref: string;
   icon: string;
+  color?: "orange" | "blue" | "green" | "yellow";
 };
 
 export const ImageIconCard = ({
@@ -35,6 +36,7 @@ export const ImageIconCard = ({
   linkLabel,
   linkHref,
   icon,
+  color,
 }: Props) => {
   return (
     <CardGradientBorder padding="0">

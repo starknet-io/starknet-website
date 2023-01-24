@@ -63,37 +63,7 @@ type HitProps = {
 };
 function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
   const { hits }: HitProps = useHits();
-  console.log("hits", hits);
-  // const newHits = [
-  //   {
-  //     start_date: "2021-09-01",
-  //     name: "StarkNet Hackathon",
-  //     image: "https://starknet.io/images/hackathon.png",
-  //     description: "StarkNet Hackathon",
-  //     tags: ["Hackathon"],
-  //   },
-  //   {
-  //     start_date: "2021-09-01",
-  //     name: "StarkNet Hackathon",
-  //     image: "https://starknet.io/images/hackathon.png",
-  //     description: "StarkNet Hackathon",
-  //     tags: ["Hackathon"],
-  //   },
-  //   {
-  //     start_date: "2021-09-01",
-  //     name: "StarkNet Hackathon",
-  //     image: "https://starknet.io/images/hackathon.png",
-  //     description: "StarkNet Hackathon",
-  //     tags: ["Hackathon"],
-  //   },
-  //   {
-  //     start_date: "2021-09-01",
-  //     name: "StarkNet Hackathon",
-  //     image: "https://starknet.io/images/hackathon.png",
-  //     description: "StarkNet Hackathon",
-  //     tags: ["Hackathon"],
-  //   },
-  // ];
+
   return (
     <>
       <Flex gap={4} direction="column" flex={1}>

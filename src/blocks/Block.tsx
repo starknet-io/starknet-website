@@ -4,6 +4,16 @@ import { LargeCard } from "./cards/LargeCard";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
+import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
+import { BlockHeroLines } from "./BlockHeroLines";
+import { BlockGrouping } from "./BlockGrouping";
+import { CommunityCard } from "./cards/CommunityCard";
+import { IconLinkCard } from "./cards/IconLinkCard";
+import { ImageIconCard } from "./cards/ImageIconCard";
+import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
+import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
+import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
+import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -32,6 +42,29 @@ export async function Block({ block, locale }: Props): JSX.Element {
         orientation={block.orientation}
       />
     );
+  }
+  if (block.type === "icon_link_card") {
+    return (
+      <IconLinkCard
+        title={block.title}
+        linkLabel={block.link_label}
+        linkHref={block.link_href}
+        icon={block.icon}
+        color={block.color}
+      />
+    );
+  }
+  if (block.type === "image_icon_link_card") {
+    return (
+      <ImageIconCard
+        title={block.title}
+        description={block.description}
+        linkLabel={block.link_label}
+        linkHref={block.link_href}
+        icon={block.icon}
+        color={block.color}
+      />
+    );
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} />;
   } else if (block.type === "community_events") {
@@ -56,6 +89,71 @@ export async function Block({ block, locale }: Props): JSX.Element {
           <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
+    );
+  } else if (block.type === "group") {
+    return (
+      <BlockGrouping>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </BlockGrouping>
+    );
+  } else if (block.type === "hero") {
+    return (
+      <BlockHeroLines
+        title={block.title}
+        description={block.description}
+        variant={block.variant}
+      />
+    );
+  } else if (block.type === "get_involved_card") {
+    return (
+      <CommunityCard
+        linkHref={block.link_href}
+        linkLabel={block.link_label}
+        title={block.title}
+        description={block.description}
+      />
+    );
+  } else if (block.type === "dapps") {
+    return (
+      <BlockDapps
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "block_explorers") {
+    return (
+      <BlockBlockExplorers
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "bridges") {
+    return (
+      <BlockBridges
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "on_ramps") {
+    return (
+      <BlockOnRamps
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "wallets") {
+    return (
+      <BlockWallets
+        params={{
+          locale,
+        }}
+      />
     );
   } else {
     // this will report type error if there is unhandled block.type
