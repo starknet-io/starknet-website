@@ -59,9 +59,6 @@ blocks:
 
 
       Starknet sits on top of Ethereum as a layer 2 network. It uses technology called “STARK Proofs” to securely compress huge amounts of transactions for Ethereum.
-  - type: dapps
-    noOfItems: "1"
-    no_of_items: "1"
   - type: community_events
   - type: flex_layout
     base: 1
@@ -98,3 +95,14 @@ blocks:
         link_label: View docs
         link_href: https://docs.starknet.io
         icon: /assets/7.svg
+  - type: dapps
+    noOfItems: "1"
+    no_of_items: "1"
+  - type: block_explorers
+    no_of_items: "1"
+  - type: bridges
+    no_of_items: "1"
+  - type: on_ramps
+    no_of_items: "1"
+  - type: wallets
+    no_of_items: "1"
