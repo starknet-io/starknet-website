@@ -2,6 +2,7 @@ path: /developers/
 title: Developers
 template: article
 blocks:
-  - type: markdown
+  - 
+    type: markdown
     body: >-
       Developers
