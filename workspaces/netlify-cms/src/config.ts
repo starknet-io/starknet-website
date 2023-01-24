@@ -359,8 +359,8 @@ export const config: CmsConfig = {
         {
           name: "template",
           widget: "select",
-          options: ["page", "article"],
-          default: "page",
+          options: ["landing", "content"],
+          default: "content",
         },
         {
           name: "breadcrumbs",

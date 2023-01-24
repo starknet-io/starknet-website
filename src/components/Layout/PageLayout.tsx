@@ -7,11 +7,11 @@ import React from "react";
 type Props = {
   leftAside?: React.ReactNode;
   main?: React.ReactNode;
-  rightAside?: React.ReactNode;
+  rightAside?: React.ReactNode | null;
   rightAsideSticky?: boolean;
   pageHeader?: React.ReactNode;
   breadcrumbs?: React.ReactNode;
-  pageLastUpdated?: string;
+  pageLastUpdated?: string | null;
   sectionHeaderTitle?: string | undefined;
   sectionHeaderDescription?: string | undefined;
 };

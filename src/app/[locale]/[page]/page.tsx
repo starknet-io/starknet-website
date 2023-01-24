@@ -39,29 +39,41 @@ export default async function Page({
       <Box>
         <PageLayout
           breadcrumbs={
-            <Breadcrumb separator="->">
-              <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
-                </BreadcrumbLink>
-              </BreadcrumbItem>
+            <>
+              {breadcrumbs ? (
+                <Breadcrumb separator="->">
+                  <BreadcrumbItem>
+                    <BreadcrumbLink fontSize="sm" href="#">
+                      Parent
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
 
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  {title}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
+                  <BreadcrumbItem isCurrentPage>
+                    <BreadcrumbLink fontSize="sm" href="#">
+                      {title}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                </Breadcrumb>
+              ) : null}
+            </>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
+          pageLastUpdated={
+            pageLastUpdated ? "Page last updated 21 Nov 2023" : null
+          }
           main={
-            <Flex direction="column" gap="32px">
+            <Flex
+              direction="column"
+              gap={{
+                base: template === "content" ? "32px" : "56px",
+                lg: template === "content" ? "32px" : "136px",
+              }}
+            >
               {blocks.map((block, i) => (
                 <Block key={i} block={block} locale={locale} />
               ))}
             </Flex>
           }
-          rightAside={<>{template === "article" && <div>Hello</div>}</>}
+          rightAside={<>{template === "content" ? <div>Hello</div> : null}</>}
         />
       </Box>
     );
