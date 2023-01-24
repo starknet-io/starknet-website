@@ -1,0 +1,8 @@
+path: /governance/
+title: Governance
+template: article
+blocks:
+  - 
+    type: markdown
+    body: >-
+      Governance
