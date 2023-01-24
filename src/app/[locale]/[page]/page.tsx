@@ -32,8 +32,9 @@ export default async function Page({
 }: Props): Promise<JSX.Element> {
   try {
     const messages = await getMessages(locale);
-    const { title, blocks } = await getPageByFilename(page, locale);
-
+    const { title, blocks, template, breadcrumbs, showLastUpdated } =
+      await getPageByFilename(page, locale);
+    console.log(template);
     return (
       <Box>
         <PageLayout
@@ -60,38 +61,7 @@ export default async function Page({
               ))}
             </Flex>
           }
-          rightAside={
-            <>Test </>
-            // <SubNavLinkGroup
-            //   label="Table of contents"
-            //   links={[
-            //     {
-            //       label: "Page navigation item 1",
-            //       url: "https://www.google.com",
-            //     },
-            //     {
-            //       label: "Page navigation item 2",
-            //       url: "https://www.google.com",
-            //     },
-            //     {
-            //       label: "Page navigation item 3",
-            //       url: "https://www.google.com",
-            //     },
-            //     {
-            //       label: "Page navigation item 4",
-            //       url: "https://www.google.com",
-            //     },
-            //     {
-            //       label: "Page navigation item 5",
-            //       url: "https://www.google.com",
-            //     },
-            //     {
-            //       label: "Page navigation item 6",
-            //       url: "https://www.google.com",
-            //     },
-            //   ]}
-            // />
-          }
+          rightAside={<>{template === "article" && <div>Hello</div>}</>}
         />
       </Box>
     );

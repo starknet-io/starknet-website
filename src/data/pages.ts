@@ -123,6 +123,8 @@ export interface Page {
   readonly path: string;
   readonly title: string;
   readonly template: "page" | "article";
+  readonly breadcrumbs: boolean;
+  readonly showLastUpdated: boolean;
   readonly blocks: readonly TopLevelBlock[];
 }
 
