@@ -10,7 +10,7 @@ export interface CommunityEventsBlock {
 }
 export interface DappsBlock {
   readonly type: "dapps";
-  readonly noOfItems: number;
+  readonly no_of_items: number;
 }
 export interface BasicCardBlock {
   readonly type: "basic_card";

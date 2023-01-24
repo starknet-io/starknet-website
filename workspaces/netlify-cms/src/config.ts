@@ -40,7 +40,7 @@ const blocks: CmsFieldList["types"] = [
         widget: "hidden",
       },
       {
-        name: "noOfItems",
+        name: "no_of_items",
       },
     ],
   },
