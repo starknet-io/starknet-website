@@ -8,12 +8,11 @@ category: engineering
 topic:
   - account-abstraction
 short_desc: >-
-  Out with the complex keys, in with face ID. A case study on Account
-  Abstraction.
-
+  Out with the complex keys, in with face ID. A case study on Account Abstraction. 
 
   The moment people can use familiar methods like face ID to sign crypto transactions, we’ll see a boom in self-custody. Everyone knows that running your own wallet is the original crypto ideal, but it’s intimidating, and has people embracing exchanges instead.
 ---
+
 # How StarkNet is revolutionizing crypto signing
 
 ## *Out with the complex keys, in with face ID. A case study on Account Abstraction*
