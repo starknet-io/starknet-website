@@ -24,7 +24,7 @@ export const BlockGrouping = ({ children }: Props) => {
         ref={ref}
         direction="column"
         gap="32px"
-        mb={{ base: "56px", lg: "136px" }}
+        // mb={{ base: "56px", lg: "136px" }}
       >
         {children}
       </Flex>

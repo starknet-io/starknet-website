@@ -54,11 +54,11 @@ export default async function Page({
           }
           pageLastUpdated="Page last updated 21 Nov 2023"
           main={
-            <Box>
+            <Flex direction="column" gap="32px">
               {blocks.map((block, i) => (
                 <Block key={i} block={block} locale={locale} />
               ))}
-            </Box>
+            </Flex>
           }
           rightAside={
             <SubNavLinkGroup

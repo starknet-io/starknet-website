@@ -10,6 +10,7 @@ import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEven
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { FaqBlock } from "src/blocks/FaqBlock";
+import { Flex } from "../../libs/chakra-ui";
 
 export default async function Index({
   params: { locale },
@@ -17,7 +18,7 @@ export default async function Index({
   return (
     <PageLayout
       main={
-        <>
+        <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
           <BlockGrouping>
             <HomepageHero />
 
@@ -269,7 +270,7 @@ export default async function Index({
               ]}
             />
           </BlockGrouping>
-        </>
+        </Flex>
       }
     />
   );
