@@ -8,6 +8,7 @@ import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import { BlockHeroLines } from "./BlockHeroLines";
 import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
+import { IconLinkCard } from "./cards/IconLinkCard";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -34,6 +35,17 @@ export async function Block({ block, locale }: Props): JSX.Element {
         description={block.description}
         image={block.image}
         orientation={block.orientation}
+      />
+    );
+  }
+  if (block.type === "icon_link_card") {
+    return (
+      <IconLinkCard
+        title={block.title}
+        linkLabel={block.link_label}
+        linkHref={block.link_href}
+        icon={block.icon}
+        color={block.color}
       />
     );
   } else if (block.type === "markdown") {

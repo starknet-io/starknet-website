@@ -86,6 +86,32 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "icon_link_card",
+    label: "Icon link card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
+      },
+      {
+        name: "icon",
+      },
+      {
+        name: "color",
+        widget: "select",
+        required: false,
+        options: ["orange", "blue", "green", "yellow"],
+        default: "orange",
+      },
+    ],
+  },
 
   {
     name: "large_card",
@@ -199,6 +225,7 @@ const topLevelBlocks: CmsFieldList["types"] = [
         widget: "select",
         options: ["sm", "md", "lg"],
         required: false,
+        default: "sm",
       },
       {
         name: "blocks",
