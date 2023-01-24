@@ -38,3 +38,18 @@ blocks:
     noOfItems: "1"
     no_of_items: "1"
   - type: community_events
+  - type: flex_layout
+    base: 1
+    md: 2
+    lg: 2
+    blocks:
+      - type: basic_card
+        title: Scaling transactions
+        link_label: Learn
+        link_href: /learn/
+        size: sm
+      - type: basic_card
+        title: Scaling compute power
+        link_label: Learn
+        link_href: /sequencers/
+        size: sm
