@@ -61,35 +61,36 @@ export default async function Page({
             </Flex>
           }
           rightAside={
-            <SubNavLinkGroup
-              label="Table of contents"
-              links={[
-                {
-                  label: "Page navigation item 1",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 2",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 3",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 4",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 5",
-                  url: "https://www.google.com",
-                },
-                {
-                  label: "Page navigation item 6",
-                  url: "https://www.google.com",
-                },
-              ]}
-            />
+            <>Test </>
+            // <SubNavLinkGroup
+            //   label="Table of contents"
+            //   links={[
+            //     {
+            //       label: "Page navigation item 1",
+            //       url: "https://www.google.com",
+            //     },
+            //     {
+            //       label: "Page navigation item 2",
+            //       url: "https://www.google.com",
+            //     },
+            //     {
+            //       label: "Page navigation item 3",
+            //       url: "https://www.google.com",
+            //     },
+            //     {
+            //       label: "Page navigation item 4",
+            //       url: "https://www.google.com",
+            //     },
+            //     {
+            //       label: "Page navigation item 5",
+            //       url: "https://www.google.com",
+            //     },
+            //     {
+            //       label: "Page navigation item 6",
+            //       url: "https://www.google.com",
+            //     },
+            //   ]}
+            // />
           }
         />
       </Box>

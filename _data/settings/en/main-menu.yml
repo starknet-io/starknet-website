@@ -45,7 +45,6 @@ items:
             items:
               - custom_title: ""
                 page: /starknet-foundation/
-              - page: /media-kit/
   - title: Developers
     columns:
       - blocks:
