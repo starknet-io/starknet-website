@@ -13,6 +13,12 @@ blocks:
           transactions for Ethereum. "
         image: /assets/cleanshot-2023-01-17-at-14.01.12-2x.png
         orientation: right
+      - type: get_involved_card
+        size: sm
+        title: "Community led. "
+        description: This website is a community powered guide to the Starknet ecosystem.
+        link_label: Get involved
+        link_href: /community
       - type: large_card
         title: What do Ethereum + Starknet unlock?
         description: "Together the networks unlock Ethereum’s vision for a fairer and
