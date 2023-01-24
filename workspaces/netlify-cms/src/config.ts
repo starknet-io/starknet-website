@@ -63,6 +63,7 @@ const blocks: CmsFieldList["types"] = [
         widget: "select",
         required: false,
         options: ["sm", "md"],
+        default: "sm",
       },
     ],
   },
@@ -135,10 +136,6 @@ const topLevelBlocks: CmsFieldList["types"] = [
     label: "Block group",
     widget: "object",
     fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
       {
         name: "blocks",
         label: "Blocks",
