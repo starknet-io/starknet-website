@@ -78,3 +78,23 @@ blocks:
         link_label: Learn
         link_href: /sequencers/
         size: sm
+  - type: flex_layout
+    heading_variant: md
+    base: 1
+    md: 2
+    heading: Some other heading
+    blocks:
+      - type: image_icon_link_card
+        color: orange
+        title: Learn how Starknet works
+        description: Learn how the Starknet architecture and tech stack works.
+        link_label: How starknet works
+        link_href: /learn/
+        icon: /assets/6.svg
+      - type: image_icon_link_card
+        color: orange
+        title: Developer documentation
+        description: Read the docs to learn how to build on Starknet and Cairo.
+        link_label: View docs
+        link_href: https://docs.starknet.io
+        icon: /assets/7.svg
