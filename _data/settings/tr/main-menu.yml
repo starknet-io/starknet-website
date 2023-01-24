@@ -33,11 +33,13 @@ items:
             title: HOW DOES STARKNET WORK?
             items:
               - 
-                page: zk-rollups
+                page: /zk-rollups
               - 
                 page: /starknets-architecture/
               - 
                 page: /sequencers/
+              - 
+                page: /provers/
               - 
                 page: /starknets-security
               - 
@@ -48,13 +50,36 @@ items:
         blocks:
           - 
             title: USING STARKNET
-            items: null
+            items:
+              - 
+                page: /trustless-bridging
+              - 
+                page: /account-abstraction
+              - 
+                page: /storage-proofs
+              - 
+                page: /on-chain-gaming
+              - 
+                page: /cheap-computation
+              - 
+                page: /oracles-on-starknet
       - 
         blocks:
           - 
             title: COMMON QUESTIONS
+            items:
+              - 
+                custom_internal_link: /glossary
+                custom_title: Glossary
+              - 
+                custom_title: FAQ's
+                custom_internal_link: /faqs/
           - 
             title: OTHER
+            items:
+              - 
+                custom_title: ""
+                page: /starknet-foundation/
   - 
     title: Developers
     columns:
@@ -65,18 +90,41 @@ items:
               - 
                 custom_title: Developers Hub
                 page: /developers/
+              - 
+                custom_external_link: https://docs.starknet.io
+                custom_title: Documentation
+              - 
+                custom_internal_link: /tutorials/
+                custom_title: Tutorials
+              - 
+                page: /resources-and-tools
+              - 
+                custom_title: Starknet Playground
+                custom_external_link: https://starknet.io/playground
+              - 
+                custom_title: Engineering blog
+                custom_internal_link: /posts/
   - 
     title: Ecosystem
     columns:
       - 
         blocks:
           - 
+            title: ""
             items:
               - 
-                page: /sequencers/
+                page: ""
+                custom_internal_link: /dapps/
+                custom_title: Dapps
               - 
-                custom_title: "Test custom title "
-                custom_external_link: http://www.google.com
+                custom_title: Wallets
+                custom_internal_link: /wallets/
+              - 
+                custom_title: Bridges & onramps
+                custom_internal_link: /bridges-and-onramps/
+              - 
+                custom_title: Block Explorers
+                custom_internal_link: /block-explorers
   - 
     title: Community
     columns:
@@ -97,14 +145,69 @@ items:
               - 
                 custom_internal_link: /jobs
                 custom_title: Jobs
+              - 
+                page: /governance/
+              - 
+                custom_title: Community forum
+                custom_external_link: https://community.starknet.io/
       - 
         blocks:
           - 
             title: BLOG & MEDIA
+            items:
+              - 
+                custom_title: Blog home
+                custom_internal_link: /posts/
+              - 
+                custom_title: Engineering posts
+                custom_internal_link: /posts/
+              - 
+                custom_internal_link: /posts/
+                custom_title: Community Calls
+              - 
+                custom_title: Stark struck
+                custom_internal_link: /posts/
+              - 
+                custom_title: Stark math
+                custom_internal_link: /posts/
+              - 
+                custom_title: Governance posts
+                custom_internal_link: /posts/
+              - 
+                custom_title: Community & Events posts
+                custom_internal_link: /posts/
       - 
         blocks:
           - 
             title: OTHER
+            items:
+              - 
+                page: /language-resources/
+              - 
+                page: /media-kit/
+              - 
+                custom_title: Starknet EDU newsletter
+                custom_external_link: /some-link
+              - 
+                custom_title: Starknet roundup newsletter
+                custom_external_link: /some-link
           - 
             title: SOCIAL
-            items: [ ]
+            items:
+              - 
+                custom_title: youtube
+                custom_icon: SiYoutube
+                custom_external_link: https://www.youtube.com/@starkware_ltd
+              - 
+                custom_title: Discord
+                custom_icon: SiDiscord
+                custom_external_link: https://starknet.io/discord
+              - 
+                custom_icon: SiGithub
+                custom_title: Github
+                custom_external_link: https://github.com/starkware-libs
+              - 
+                custom_internal_link: ""
+                custom_icon: SiTwitter
+                custom_title: Twitter
+                custom_external_link: https://twitter.com/@Starknet_edu
