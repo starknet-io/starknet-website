@@ -1,9 +1,8 @@
 ---
 path: /computational-integrity/
 title: Computational Integrity
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Computational Integrity

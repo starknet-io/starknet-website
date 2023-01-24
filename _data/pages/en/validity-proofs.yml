@@ -1,8 +1,7 @@
 path: /validity-proofs/
 title: Validity proofs
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Validity proofs

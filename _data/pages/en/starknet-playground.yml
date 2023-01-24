@@ -1,8 +1,7 @@
 path: /starknet-playground/
 title: Starknet playground
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Starknet playground

@@ -1,8 +1,7 @@
 path: /layer-2/
 title: Layer 2
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Layer 2

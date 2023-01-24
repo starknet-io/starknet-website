@@ -1,8 +1,12 @@
 path: /learn/
 title: Learn
-template: article
+template: landing
 blocks:
-  - 
-    type: markdown
+blocks:
+  - type: hero
+    title: Learn about Starknet
+    description: An educational guide to Starknet, how it works and how to start using it.
+    variant: learn
+  - type: markdown
     body: >-
       Learn!

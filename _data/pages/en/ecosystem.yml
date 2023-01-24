@@ -1,8 +1,7 @@
 path: /ecosystem/
 title: Ecosystem
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Ecosystem

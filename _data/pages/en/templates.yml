@@ -1,8 +1,7 @@
 path: /templates/
 title: Templates
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Templates

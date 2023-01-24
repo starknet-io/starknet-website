@@ -1,8 +1,7 @@
 path: /zero-knowledge-proofs/
 title: Zero-knowledge proofs
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       safasdf

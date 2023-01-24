@@ -1,6 +1,6 @@
 path: /what-is-starknet/
 title: What is starknet?
-template: article
+template: content
 blocks:
   - type: markdown
     body: >-

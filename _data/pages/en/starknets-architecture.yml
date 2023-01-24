@@ -1,8 +1,7 @@
 path: /starknets-architecture/
 title: Starknet’s architecture
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       sdfsd

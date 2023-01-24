@@ -1,8 +1,7 @@
 path: /crowdin-integration/
 title: Crowdin Integration
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Crowdin Integration

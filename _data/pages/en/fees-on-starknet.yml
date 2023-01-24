@@ -1,8 +1,8 @@
 path: /fees-on-starknet/
 title: Fees on Starknet
-template: article
+template: content
 blocks:
-  - 
+  -
     type: markdown
     body: >-
       Fees on Starknet

@@ -1,8 +1,7 @@
 path: /what-are-starks/
 title: What are Starks?
-template: article
+template: content
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       What are Starks?
