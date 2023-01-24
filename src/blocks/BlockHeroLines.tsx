@@ -15,10 +15,6 @@ import React from "react";
 type Props = {
   title: string;
   description: string | React.ReactNode;
-  img?: string;
-  imgAlt?: string;
-  url?: string;
-  urlTitle?: string;
   variant?:
     | "wallets"
     | "block_explorers"
@@ -32,10 +28,6 @@ type Props = {
 export const BlockHeroLines = ({
   title = "Dapps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
-  img = "/cube.svg",
-  imgAlt = "starknet",
-  url = "https://starkware.co/starknet",
-  urlTitle = "test",
   variant = "dapps",
 }: Props) => {
   const renderImage = () => {

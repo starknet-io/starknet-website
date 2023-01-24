@@ -11,12 +11,13 @@ export default async function BlockDapps({
 }: //@ts-expect-error
 Props): JSX.Element {
   const dapps = await getDapps(locale);
+  console.log("no of items", noOfItems);
   return (
     <Box>
       <Container>
         <Flex gap={4} direction="column" flex={1}>
           {dapps.map((dapp, i) => {
-            if (noOfItems && i >= noOfItems - 1) return;
+            if (noOfItems && i <= noOfItems) return null;
             return (
               <ListCard
                 href={dapp.website_url}

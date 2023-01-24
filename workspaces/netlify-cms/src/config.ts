@@ -95,7 +95,37 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "hero",
+    label: "Hero",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+
+      {
+        name: "description",
+      },
+
+      {
+        name: "variant",
+        widget: "select",
+        required: false,
+        options: [
+          "wallets",
+          "block_explorers",
+          "bridges",
+          "dapps",
+          "learn",
+          "build",
+          "community",
+        ],
+      },
+    ],
+  },
 ];
+
 const topLevelBlocks: CmsFieldList["types"] = [
   ...blocks,
 

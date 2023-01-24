@@ -31,12 +31,27 @@ export interface LargeCardBlock {
   readonly orientation?: "left" | "right";
 }
 
+export interface HeroBlock {
+  readonly type: "hero";
+  readonly title: string;
+  readonly description: string;
+  readonly variant?:
+    | "wallets"
+    | "block_explorers"
+    | "bridges"
+    | "dapps"
+    | "learn"
+    | "build"
+    | "community";
+}
+
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
   | DappsBlock
   | BasicCardBlock
-  | LargeCardBlock;
+  | LargeCardBlock
+  | HeroBlock;
 
 export interface FlexLayoutBlock {
   readonly type: "flex_layout";
