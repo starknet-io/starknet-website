@@ -1,6 +1,8 @@
 path: /resources-and-tools
 title: Resources and tools
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - type: markdown
     body: >-

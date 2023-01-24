@@ -1,7 +1,9 @@
 ---
-path: /computational-integrity/
+path: /learn/computational-integrity/
 title: Computational Integrity
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - type: markdown
     body: >-

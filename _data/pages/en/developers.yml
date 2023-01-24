@@ -1,6 +1,8 @@
 path: /developers/
 title: Developers
 template: landing
+breadcrumbs: true
+page_last_updated: false
 blocks:
   - type: hero
     title: Build on Starknet

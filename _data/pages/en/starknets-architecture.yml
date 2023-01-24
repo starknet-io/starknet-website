@@ -1,6 +1,8 @@
-path: /starknets-architecture/
+path: /learn/starknets-architecture/
 title: Starknet’s architecture
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - type: markdown
     body: >-

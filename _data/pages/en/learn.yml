@@ -1,6 +1,8 @@
-path: /learn/
+path: /learn/learning-hub
 title: Learn
 template: landing
+breadcrumbs: true
+page_last_updated: false
 blocks:
   - type: hero
     variant: learn

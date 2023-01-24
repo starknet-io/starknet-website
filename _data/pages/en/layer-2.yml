@@ -1,6 +1,8 @@
-path: /layer-2/
+path: /learn/layer-2/
 title: Layer 2
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - type: markdown
     body: >-

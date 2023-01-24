@@ -1,6 +1,8 @@
-path: /account-abstraction/
+path: /learn/account-abstraction/
 title: Account abstraction
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - type: markdown
     body: >-

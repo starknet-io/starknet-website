@@ -1,8 +1,9 @@
-path: /fees-on-starknet/
+path: /learn/fees-on-starknet/
 title: Fees on Starknet
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
-  -
-    type: markdown
+  - type: markdown
     body: >-
       Fees on Starknet

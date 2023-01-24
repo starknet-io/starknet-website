@@ -1,6 +1,8 @@
-path: /what-is-cairo/
+path: /learn/what-is-cairo/
 title: What is Cairo
 template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - type: markdown
     body: >-
