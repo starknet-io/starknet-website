@@ -113,6 +113,36 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "image_icon_link_card",
+    label: "Image Icon link card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "description",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
+      },
+      {
+        name: "icon",
+        widget: "image",
+      },
+      {
+        name: "color",
+        widget: "select",
+        required: false,
+        options: ["orange", "blue", "green", "yellow"],
+        default: "orange",
+      },
+    ],
+  },
 
   {
     name: "large_card",

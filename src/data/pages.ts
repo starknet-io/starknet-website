@@ -23,9 +23,19 @@ export interface BasicCardBlock {
 export interface IconLinkCardBlock {
   readonly type: "icon_link_card";
   readonly title: string;
+
   readonly link_label: string;
   readonly link_href: string;
   readonly icon: string;
+  readonly color?: "orange" | "blue" | "green" | "yellow";
+}
+export interface ImageIconLinkCardBlock {
+  readonly type: "image_icon_link_card";
+  readonly title: string;
+  readonly link_label: string;
+  readonly link_href: string;
+  readonly icon: string;
+  readonly description: string;
   readonly color?: "orange" | "blue" | "green" | "yellow";
 }
 export interface GetInvolvedBlock {
@@ -68,6 +78,7 @@ export type Block =
   | BasicCardBlock
   | LargeCardBlock
   | IconLinkCardBlock
+  | ImageIconLinkCardBlock
   | GetInvolvedBlock
   | HeroBlock;
 

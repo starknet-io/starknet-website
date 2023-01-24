@@ -9,6 +9,7 @@ import { BlockHeroLines } from "./BlockHeroLines";
 import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
 import { IconLinkCard } from "./cards/IconLinkCard";
+import { ImageIconCard } from "./cards/ImageIconCard";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -42,6 +43,18 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <IconLinkCard
         title={block.title}
+        linkLabel={block.link_label}
+        linkHref={block.link_href}
+        icon={block.icon}
+        color={block.color}
+      />
+    );
+  }
+  if (block.type === "image_icon_link_card") {
+    return (
+      <ImageIconCard
+        title={block.title}
+        description={block.description}
         linkLabel={block.link_label}
         linkHref={block.link_href}
         icon={block.icon}
