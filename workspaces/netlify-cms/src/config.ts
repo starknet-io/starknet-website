@@ -102,6 +102,7 @@ const blocks: CmsFieldList["types"] = [
       },
       {
         name: "icon",
+        widget: "image",
       },
       {
         name: "color",
