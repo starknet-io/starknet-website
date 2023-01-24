@@ -1,0 +1,6 @@
+path: test-ui-page
+title: Test ui
+template: page
+blocks:
+  - type: dapps
+    noOfItems: "1"
