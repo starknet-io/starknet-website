@@ -2,6 +2,7 @@ path: /starknet-foundation/
 title: Starknet foundation
 template: article
 blocks:
-  - type: markdown
+  - 
+    type: markdown
     body: >-
       Here's some content
