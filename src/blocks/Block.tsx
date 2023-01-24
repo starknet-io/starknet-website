@@ -7,6 +7,7 @@ import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCom
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import { BlockHeroLines } from "./BlockHeroLines";
 import { BlockGrouping } from "./BlockGrouping";
+import { CommunityCard } from "./cards/CommunityCard";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -74,6 +75,15 @@ export async function Block({ block, locale }: Props): JSX.Element {
         title={block.title}
         description={block.description}
         variant={block.variant}
+      />
+    );
+  } else if (block.type === "get_involved_card") {
+    return (
+      <CommunityCard
+        linkHref={block.link_href}
+        linkLabel={block.link_label}
+        title={block.title}
+        description={block.description}
       />
     );
   } else if (block.type === "dapps") {

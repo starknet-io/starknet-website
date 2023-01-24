@@ -21,7 +21,7 @@ const blocks: CmsFieldList["types"] = [
   },
   {
     name: "community_events",
-    label: "Community events",
+    label: "Community events block",
     widget: "object",
     fields: [
       {
@@ -32,7 +32,7 @@ const blocks: CmsFieldList["types"] = [
   },
   {
     name: "dapps",
-    label: "Dapps",
+    label: "Dapps block",
     widget: "object",
     fields: [
       {
@@ -41,6 +41,25 @@ const blocks: CmsFieldList["types"] = [
       },
       {
         name: "no_of_items",
+      },
+    ],
+  },
+  {
+    name: "get_involved_card",
+    label: "Get Involved card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "description",
+      },
+      {
+        name: "link_label",
+      },
+      {
+        name: "link_href",
       },
     ],
   },
@@ -67,6 +86,7 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+
   {
     name: "large_card",
     label: "Large card",

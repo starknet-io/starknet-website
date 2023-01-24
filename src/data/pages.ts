@@ -20,6 +20,13 @@ export interface BasicCardBlock {
   readonly link_href: string;
   readonly size?: "sm" | "md";
 }
+export interface GetInvolvedBlock {
+  readonly type: "get_involved_card";
+  readonly title: string;
+  readonly description: string;
+  readonly link_label: string;
+  readonly link_href: string;
+}
 
 export interface LargeCardBlock {
   readonly type: "large_card";
@@ -52,6 +59,7 @@ export type Block =
   | DappsBlock
   | BasicCardBlock
   | LargeCardBlock
+  | GetInvolvedBlock
   | HeroBlock;
 
 export interface FlexLayoutBlock {
