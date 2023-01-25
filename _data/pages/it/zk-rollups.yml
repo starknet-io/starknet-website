@@ -16,6 +16,5 @@ blocks:
   - 
     type: community_events
   - 
-    type: bridges
-  - 
-    type: on_ramps
+    type: markdown
+    body: H﻿ello
