@@ -104,6 +104,9 @@ for (const locale of locales) {
     );
     const safeID = data.id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
-    await write(`_data/_dynamic/posts/${locale.code}/${safeID}.json`, data);
+    await write(`_data/_dynamic/posts/${locale.code}/${safeID}.json`, {
+      ...data,
+      id: safeID,
+    });
   }
 }

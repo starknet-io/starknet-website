@@ -31,8 +31,10 @@ async function fileToPost(locale: string, filename: string): Promise<Post> {
     () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
+  const safeID = data.id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
   return {
-    id: data.id,
+    id: safeID,
     title: data.title,
     category: data.category,
     topic: data.topic,
