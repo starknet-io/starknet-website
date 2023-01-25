@@ -1,6 +1,8 @@
 path: /trustless-bridging/
 title: Trustless bridging
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - 
     type: markdown
