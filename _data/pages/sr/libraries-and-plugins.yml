@@ -1,6 +1,8 @@
 path: /Libraries-and-plugins/
 title: Libraries & plug-ins
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - 
     type: markdown
