@@ -55,7 +55,13 @@ export async function Block({ block, locale }: Props): JSX.Element {
       />
     );
   } else if (block.type === "container") {
-    return <Container maxWidth={block.max_width} />;
+    return (
+      <Container maxWidth={block.max_width}>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </Container>
+    );
   } else if (block.type === "image_icon_link_card") {
     return (
       <ImageIconCard

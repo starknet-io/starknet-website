@@ -13,10 +13,7 @@ export interface DappsBlock {
   readonly type: "dapps";
   readonly no_of_items: number;
 }
-export interface Container {
-  readonly type: "container";
-  readonly max_width: number;
-}
+
 export interface BlockExplorersBlock {
   readonly type: "block_explorers";
   readonly no_of_items: number;
@@ -104,9 +101,13 @@ export type Block =
   | IconLinkCardBlock
   | ImageIconLinkCardBlock
   | GetInvolvedBlock
-  | Container
   | HeroBlock;
 
+export interface Container {
+  readonly type: "container";
+  readonly max_width: number;
+  readonly blocks: readonly Block[];
+}
 export interface FlexLayoutBlock {
   readonly type: "flex_layout";
   readonly base?: number;
@@ -122,7 +123,7 @@ export interface GroupBlock {
   readonly blocks: readonly Block[];
 }
 
-export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock;
+export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
 
 export interface Page {
   readonly path: string;
