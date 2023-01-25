@@ -1,6 +1,8 @@
 path: /oracles-on-starknet/
 title: Oracles on StarkNet
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - 
     type: markdown
