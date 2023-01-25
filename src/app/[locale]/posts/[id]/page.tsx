@@ -15,7 +15,7 @@ export default async function Page({
   params: { id, locale },
 }: Props): Promise<JSX.Element> {
   try {
-    const { title, blocks,body } = await getPostByID(id, locale);
+    const { title, blocks, body } = await getPostByID(id, locale);
 
     return (
       <PageContentContainer>
@@ -25,8 +25,7 @@ export default async function Page({
           {blocks.map((block, i) => (
             <Block key={i} block={block} locale={locale} />
           ))}
-          <Block  block={{type: 'markdown', body}} locale={locale} />
-
+          <Block block={{ type: "markdown", body }} locale={locale} />
         </Flex>
       </PageContentContainer>
     );

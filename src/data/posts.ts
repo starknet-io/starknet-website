@@ -15,11 +15,8 @@ interface Post {
   readonly body: string;
 }
 
-export async function getPostByID(
-  id: string,
-  locale: string,
-): Promise<Post> {
-  const safeID = id.replace(/[^a-z0-9]/gi, '-').toLowerCase()
+export async function getPostByID(id: string, locale: string): Promise<Post> {
+  const safeID = id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
   try {
     return (await getFirst(

@@ -6,7 +6,7 @@ import { registerWidget } from "./widgets/uuid";
 // @ts-expect-error
 window.CMS = cms;
 
-registerWidget(cms)
+registerWidget(cms);
 
 cms.init({
   config,

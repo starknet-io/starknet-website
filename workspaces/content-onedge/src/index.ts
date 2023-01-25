@@ -32,8 +32,8 @@ for (const datatype of datatypes) {
         data.push(
           await getFirst(
             () => yaml(`_data/${datatype}/${locale.code}/${filename}`),
-            () => yaml(`_data/${datatype}/${defaultLocale}/${filename}`)
-          )
+            () => yaml(`_data/${datatype}/${defaultLocale}/${filename}`),
+          ),
         );
       }
 
@@ -51,7 +51,7 @@ await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 for (const locale of locales) {
   const mainMenu: MainMenu = await getFirst(
     () => yaml(`_data/settings/${locale.code}/main-menu.yml`),
-    () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`)
+    () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
   );
 
   for (const mainMenuItem of mainMenu.items) {
@@ -64,7 +64,7 @@ for (const locale of locales) {
               const data = await getFirst(
                 () => yaml(`_data/pages/${locale.code}/${filename}.yml`),
                 () => yaml(`_data/pages/${defaultLocale}/${filename}.yml`),
-                async () => null
+                async () => null,
               );
 
               item.page_title = data?.title;
@@ -77,7 +77,7 @@ for (const locale of locales) {
               const data = await getFirst(
                 () => yaml(`_data/posts/${locale.code}/${filename}.yml`),
                 () => yaml(`_data/posts/${defaultLocale}/${filename}.yml`),
-                async () => null
+                async () => null,
               );
 
               item.post_title = data?.title;
@@ -100,7 +100,7 @@ for (const locale of locales) {
   for (const filename of filenames) {
     const data: any = await getFirst(
       () => yaml(`_data/posts/${locale.code}/${filename}`),
-      () => yaml(`_data/posts/${defaultLocale}/${filename}`)
+      () => yaml(`_data/posts/${defaultLocale}/${filename}`),
     );
     const safeID = data.id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 

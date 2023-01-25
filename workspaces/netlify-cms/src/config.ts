@@ -349,7 +349,7 @@ export const config: CmsConfig = {
         {
           name: "id",
           label: "id",
-          widget: 'uuid' as 'string'
+          widget: "uuid" as "string",
         },
         {
           name: "title",
@@ -393,7 +393,7 @@ export const config: CmsConfig = {
         {
           name: "id",
           label: "id",
-          widget: 'uuid' as 'string'
+          widget: "uuid" as "string",
         },
         {
           name: "post_type",
@@ -484,7 +484,7 @@ export const config: CmsConfig = {
         {
           name: "id",
           label: "id",
-          widget: 'uuid' as 'string'
+          widget: "uuid" as "string",
         },
         {
           name: "name",
@@ -504,7 +504,7 @@ export const config: CmsConfig = {
         {
           name: "id",
           label: "id",
-          widget: 'uuid' as 'string'
+          widget: "uuid" as "string",
         },
         {
           name: "name",
@@ -619,7 +619,7 @@ export const config: CmsConfig = {
         {
           name: "id",
           label: "id",
-          widget: 'uuid' as 'string'
+          widget: "uuid" as "string",
         },
         {
           name: "contact",
