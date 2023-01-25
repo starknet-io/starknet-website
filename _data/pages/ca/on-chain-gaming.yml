@@ -1,6 +1,8 @@
 path: /on-chain-gaming/
 title: On-chain gaming
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - 
     type: markdown
