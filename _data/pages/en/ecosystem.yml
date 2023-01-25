@@ -1,8 +1,9 @@
 path: /ecosystem/
 title: Ecosystem
-template: article
+template: landing
+breadcrumbs: true
+page_last_updated: false
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Ecosystem

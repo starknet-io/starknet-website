@@ -1,8 +1,13 @@
 path: /community/
 title: Community
-template: article
+template: landing
+breadcrumbs: true
+page_last_updated: false
 blocks:
-  - 
-    type: markdown
+  - type: hero
+    title: Community hub
+    description: Join a community of thousands of developers, designers, technologists and entrepreneurs scaling Ethereum.
+    variant: build
+  - type: markdown
     body: >-
       Community

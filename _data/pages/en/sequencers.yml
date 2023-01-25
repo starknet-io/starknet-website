@@ -1,44 +1,40 @@
 path: /sequencers/
 title: Sequencers
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
-      ## S﻿equencers 
+      ## S﻿equencers
 
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/). 
+      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
 
-      ### S﻿econd heading 3 
+      ### S﻿econd heading 3
 
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. 
+      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic.
 
       Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
-  - 
-    type: flex_layout
+  - type: flex_layout
     base: 1
     md: 2
     lg: ""
     blocks:
-      - 
-        type: basic_card
+      - type: basic_card
         title: "Test title "
         link_label: What is starknet
         link_href: /what-is-starknet/
         size: md
-      - 
-        type: basic_card
+      - type: basic_card
         title: Developers
         link_label: Go to docs
         link_href: http://docs.starknet.io
         size: md
-  - 
-    type: markdown
+  - type: markdown
     body: >-
-      ### S﻿econd heading 4 
+      ### S﻿econd heading 4
 
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. 
+      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic.
 
       Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
-  - 
-    type: community_events
+  - type: community_events

@@ -1,8 +1,9 @@
 path: /starknets-security
 title: Starknet’s security
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
-  - 
-    type: markdown
+  - type: markdown
     body: >-
       Starknet’s security

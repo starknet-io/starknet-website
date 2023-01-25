@@ -1,8 +1,13 @@
 path: /developers/
 title: Developers
-template: article
+template: landing
+breadcrumbs: true
+page_last_updated: false
 blocks:
-  - 
-    type: markdown
+  - type: hero
+    title: Build on Starknet
+    description: A manual and dev resource list for builders, by builders.
+    variant: build
+  - type: markdown
     body: >-
       Developers
