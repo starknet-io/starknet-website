@@ -139,10 +139,14 @@ function CustomCategories() {
 
 type HitProps = {
   readonly hits: readonly {
+    readonly id: string;
     readonly title: string;
-    readonly short_desc: string;
     readonly image: string;
     readonly category: string;
+    readonly topic: string;
+    readonly short_desc: string;
+    readonly locale: string;
+    readonly filepath: string;
   }[];
 };
 function CustomHits() {
@@ -157,7 +161,7 @@ function CustomHits() {
         pt={2}
       >
         {hits.map((hit, i) => (
-          <ArticleCard.Root href="$" key={i}>
+          <ArticleCard.Root href={`/${hit.locale}/posts/${hit.id}`} key={i}>
             <ArticleCard.Image url={hit.image} />
 
             <ArticleCard.Body>

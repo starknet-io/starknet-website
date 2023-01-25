@@ -1,5 +1,0 @@
----
-id: zk-proofs
-name: ZK Proofs
----
-

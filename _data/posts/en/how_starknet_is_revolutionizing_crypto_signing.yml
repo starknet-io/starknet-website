@@ -1,0 +1,107 @@
+post_type: article
+id: how_starknet_is_revolutionizing_crypto_signing
+title: How StarkNet is revolutionizing crypto signing
+time_to_consume: 6 min read
+image: /assets/blog1.webp
+category: engineering
+topic:
+  - account-abstraction
+short_desc: >-
+  Out with the complex keys, in with face ID. A case study on Account Abstraction.
+
+  The moment people can use familiar methods like face ID to sign crypto transactions, we’ll see a boom in self-custody. Everyone knows that running your own wallet is the original crypto ideal, but it’s intimidating, and has people embracing exchanges instead.
+blocks:
+  - type: markdown
+    body: >-
+      # How StarkNet is revolutionizing crypto signing
+
+      ## *Out with the complex keys, in with face ID. A case study on Account Abstraction*
+
+      The moment people can use familiar methods like face ID to sign crypto transactions, we’ll see a boom in self-custody. Everyone knows that running your own wallet is the original crypto ideal, but it’s intimidating, and has people embracing exchanges instead.
+
+      This is a case study of how a StarkNet functionality called Account Abstraction is being used by Braavos to get a far more intuitive way of using your wallet.
+
+      ## Introducing Account Abstraction
+
+      After the FTX scandal, the question is more relevant than ever. Why do people still choose to give their crypto to centralized institutions, rather than custody it themselves? The answer: for most people, self-custody is complicated. Seed phrases are the ‘worst-best’ recovery mechanism, deterring many (even some of the most hardened degens).
+
+      The answer to this challenge: Account Abstraction. Account Abstraction allows wallets to meet (and exceed) the UX expectations of Web2 users, such as signing a transaction using Face ID or using two-factor authentication. It facilitates account segmentation and spend limits; and eventually enables simple account recovery and removing the seed phrase all together. It is a revolution for UI and UX.
+
+      ## StarkNet
+
+      StarkNet, the leading Validity Rollup, has several key characteristics that makes it the most promising solution to scale Ethereum. Based on STARK proofs, it provides low gas fees without compromising Ethereum security. The track record of STARK proofs powering StarkEx includes $800B in cumulative trading volume, 300M transactions, and 90M NFTs.
+
+      The capabilities of STARK proofs to provide low fees, coupled with the power of Account Abstraction, allowed Braavos to develop the innovative wallet capabilities it is aiming for.
+
+      ## Context
+
+      Most major blockchains, including Bitcoin and Ethereum, use the secp256k1 elliptic curve cryptographic signature schemes (see [here](http://ethanfast.com/top-crypto.html) for a comprehensive list). This elliptic curve implementation is considered to be robust — many blockchains use it and it stood the test of time. But it is not compatible with the cryptographic signature scheme available in mobile devices’ Hardware Security Modules (HSM), such as the iPhones and the Android (Pixel and other) phones.
+
+      These devices use another curve — secp256r1 (also called NIST-P256). This means that users of these blockchains cannot take advantage of the security chips on their devices and have to default to hardware wallets if they want to gain a strong level of security. This severely restricts any UX innovation on how users can sign into a wallet and approve transactions (hence, the ubiquity of seed-phrases).
+
+      StarkNet does not support secp256r1, and has its own proprietary curve which is a STARK-friendly curve. But unlike other blockchains, StarkNet has account abstraction available natively on its platform, which opens up a new world of UX opportunities for wallet apps. Braavos harnessed this capability to introduce the Hardware Signer.
+
+      ## The Hardware Signer
+
+      The Hardware Signer consists of two main parts:
+
+      * The secure sub-system in users’ mobile device
+      * The account smart contract that can run arbitrary logic (a.k.a Account Abstraction)
+
+      ## Secure Sub-System
+
+      The Hardware Signer utilizes the secure subsystem built-in in users’ device — iPhone’s **Secure Enclave** or Android Phone’s **Titan** HSM — to protect the account.
+
+      ![](https://miro.medium.com/max/1400/0*EPm8q10ykvFGnvcv)
+
+      The Secure Enclave / Titan chip is a dedicated and isolated sub-system, totally separated from the application processor that can generate private keys and sign messages. It generates the keys using an internal True Random Number Generator (TRNG) and signs messages over the NIST-P256 (secp256r1) elliptic curve via its internal Public Key Accelerator (PKA). The private keys never leave the secure system and are unknown/inaccessible to anyone, not even to the user, or to the application itself.
+
+      This means that even if the device application processor kernel becomes compromised, user keys stay safe!
+
+      ![](https://miro.medium.com/max/1400/0*yHJ--fK8keNdTci8)
+
+      ## Deeper Dive into the Secure Enclave
+
+      During the chip manufacturing process a UID (Unique Identifier) is generated by the TRNG and is stored in the PKA. It can’t be read and never leaves the PKA, thus it is unknown even to the Secure Enclave processor and to the Secure Enclave Processor Operating System (SepOS).
+
+      This UID is a random number which is unique per device and is used to encrypt all other keys that will be generated in the future on this device.\
+      The way it works is as follows: the application will request the SepOS to generate a new key-pair, the SepOS will instruct the Secure Enclave TRNG to generate a key and encrypt it (using the UID). The app can then request from the SepOS to decrypt the key and sign a message using the generated key. During this entire process the generated key does not leave the enclave and is unknown to anyone.
+
+      (For more information on the Secure Enclave, please see [here](https://support.apple.com/en-il/guide/security/sec59b0b31ff/web)).
+
+      The way the Secure Enclave is built and operates, along with the fact that it is a target for attacks by powerful corporations and governments around the world, is the reason its security surpasses standard hardware wallets.
+
+      ## Account Abstraction
+
+      The power of Braavos as a smart contract based wallet on top of StarkNet, is that it is comprised of two pillars:
+
+      * The client side (e.g. the application) that allows the user to review/sign transactions and send them to the chain.
+      * The on-chain side — has an account smart contract that can run arbitrary logic; and in particular in our case, run arbitrary signature **verification** logic.
+
+      The application signs the transaction using the mobile device security module and then sends it to the account contract on-chain that can verify it.
+
+      As mentioned above, the security module on iPhones and Android phones uses a cryptography that is called NIST-P256 (secp256r1), which is not compatible with any major blockchain cryptographic scheme, including StarkNet. This is why having a smart contract account on-chain that all transactions go through and can run arbitrary logic, is crucial in utilizing these HSMs on iPhones and Android phones.
+
+      ![](https://miro.medium.com/max/1400/0*1gItqYMJgmpu_fXc)
+
+      ## Biometrics
+
+      How does the user approve a transaction via Braavos wallet? Can a malicious application simply auto-sign a transaction without the user’s consent?
+
+      No!!
+
+      The cool thing about the built-in security module in mobile devices, such as the Secure Enclave, is that it supports intrinsically biometric authentication of the user identity. This means that even the actual approval to sign a transaction is done directly versus the Secure Enclave. The approval does not go through the application, and the user will need to approve the transaction with his fingerprint or face identification.
+
+      ## Recovery
+
+      If no one knows the private key, what happens if the device gets lost or becomes bricked? How can the user gain back control of the account?
+
+      In Braavos, an account will actually have 2 public keys — the Hardware Signer key, which will be used to sign all transactions, and the key derived from the seed phrase that can only sign one transaction — a “Request to remove Hardware Signer”. This request won’t be executed immediately, but rather will have a time delay of 4 days (configurable) in order to allow the user to use the Hardware Signer to cancel such a request. This means that if the device gets stolen/lost/bricked, users will still be able to recover their account within 4 days. However, if their Seed Phrase gets stolen and an attacker issues a request to remove the Hardware Signer, the user will automatically (and repeatedly) get a notification to their mobile device and will be able to cancel the request and keep all of the assets safe.
+
+      ## Summary
+
+      The Hardware Signer feature offers both state-of-the-art security level for crypto users, and the experience users are used to from web2. In this sense, signing a transaction is as smooth and worry free as paying with Apple/Google pay.
+
+      This is just one, yet prominent, example of the power of StarkNet, smart contract based wallet (a.k.a Account Abstraction) and the new design space it enables.
+
+      We foresee the development of more and more nascent capabilities that will drive the crypto industry to a better and more inclusive future, providing new and existing users alike with uncompromised security coupled with uncompromised UX.

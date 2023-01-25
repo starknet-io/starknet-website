@@ -1,5 +1,0 @@
----
-id: decentralization
-name: Decentralization
----
-

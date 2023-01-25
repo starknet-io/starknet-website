@@ -1,8 +1,0 @@
-path: /validity-proofs/
-title: Validity proofs
-template: article
-blocks:
-  - 
-    type: markdown
-    body: >-
-      Validity proofs

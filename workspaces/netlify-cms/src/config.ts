@@ -342,14 +342,14 @@ export const config: CmsConfig = {
       name: "pages",
       label: "Pages",
       label_singular: "Page",
-      identifier_field: "title",
+      identifier_field: "id",
       folder: `_data/pages/${locale}`,
-      format: "yaml",
       create: true,
       fields: [
         {
-          name: "path",
-          label: "Path",
+          name: "id",
+          label: "id",
+          widget: 'uuid' as 'string'
         },
         {
           name: "title",
@@ -386,10 +386,15 @@ export const config: CmsConfig = {
       name: "posts",
       label: "Posts",
       label_singular: "Post",
-      identifier_field: "title",
+      identifier_field: "id",
       folder: `_data/posts/${locale}`,
       create: true,
       fields: [
+        {
+          name: "id",
+          label: "id",
+          widget: 'uuid' as 'string'
+        },
         {
           name: "post_type",
           label: "Post Type",
@@ -409,10 +414,6 @@ export const config: CmsConfig = {
             },
           ],
           default: "article",
-        },
-        {
-          name: "id",
-          label: "id",
         },
         {
           name: "title",
@@ -458,6 +459,12 @@ export const config: CmsConfig = {
           widget: "text",
         },
         {
+          name: "blocks",
+          label: "Blocks",
+          widget: "list",
+          types: topLevelBlocks,
+        },
+        {
           name: "body",
           label: "Body",
           widget: "markdown",
@@ -471,11 +478,13 @@ export const config: CmsConfig = {
       label_singular: "Topic",
       identifier_field: "id",
       folder: `_data/topics/${locale}`,
+      slug: "{{name}}",
       create: true,
       fields: [
         {
           name: "id",
           label: "id",
+          widget: 'uuid' as 'string'
         },
         {
           name: "name",
@@ -489,11 +498,13 @@ export const config: CmsConfig = {
       label_singular: "Category",
       identifier_field: "id",
       folder: `_data/categories/${locale}`,
+      slug: "{{name}}",
       create: true,
       fields: [
         {
           name: "id",
           label: "id",
+          widget: 'uuid' as 'string'
         },
         {
           name: "name",
@@ -506,6 +517,7 @@ export const config: CmsConfig = {
       label: "Events",
       label_singular: "Event",
       folder: `_data/events/${locale}`,
+      slug: "{{name}}",
       create: true,
       fields: [
         {
@@ -549,12 +561,6 @@ export const config: CmsConfig = {
           label: "Event Image",
           widget: "image",
         },
-
-        // {
-        //   name: "end_date", // ?? keep this?
-        //   label: "End Date",
-        //   widget: "datetime",
-        // },
         {
           name: "location",
           label: "Location",
@@ -605,12 +611,16 @@ export const config: CmsConfig = {
     {
       name: "jobs",
       label: "Jobs",
-      identifier_field: "job.title",
+      identifier_field: "id",
       label_singular: "Job",
       folder: `_data/jobs/${locale}`,
       create: true,
-      format: "json",
       fields: [
+        {
+          name: "id",
+          label: "id",
+          widget: 'uuid' as 'string'
+        },
         {
           name: "contact",
           label: "Contact",

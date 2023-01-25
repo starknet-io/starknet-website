@@ -8226,6 +8226,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@types/uuid@npm:9.0.0"
+  checksum: 59ae56d9547c8758588659da2a2b4c97cce79c2aae1798c892bb29452ef08e87859dea2ec3a66bfa88d0d2153147520be2b1893be920f9f0bc9c53a3207ea6aa
+  languageName: node
+  linkType: hard
+
 "@types/webpack-env@npm:^1.16.0":
   version: 1.18.0
   resolution: "@types/webpack-env@npm:1.18.0"
@@ -21337,12 +21344,14 @@ __metadata:
   resolution: "netlify-cms-workspace@workspace:workspaces/netlify-cms"
   dependencies:
     "@parcel/transformer-yaml": ^2.8.2
+    "@types/uuid": ^9.0.0
     netlify-cms-app: ^2.15.72
     netlify-cms-core: ^2.55.2
     netlify-cms-ui-default: ^2.15.5
     netlify-cms-widget-markdown: ^2.15.1
     parcel: ^2.8.2
     path-browserify: ^1.0.1
+    uuid: ^9.0.0
   languageName: unknown
   linkType: soft
 
