@@ -78,7 +78,7 @@ export const BlockHeroLines = ({
         />
       </Box>
 
-      <Box zIndex={2} position="relative" height={{ lg: "500px" }}>
+      <Box zIndex={2} position="relative" height={{ lg: "480px" }}>
         <Container py={{ base: "16", md: "16" }} height="full">
           <Stack
             direction={{ base: "column", lg: "row" }}
@@ -188,7 +188,7 @@ export const BlockHeroLines = ({
             <Box
               order={{ base: 0, lg: 2 }}
               w={{ base: "full", lg: "25%" }}
-              height={{ base: "350px", lg: "300px" }}
+              height={{ base: "350px", lg: "250px" }}
             >
               <Image
                 boxSize={{ base: "300px", lg: "250px" }}
