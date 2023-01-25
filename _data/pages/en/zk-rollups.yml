@@ -5,5 +5,9 @@ breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: markdown
-    body: >-
-      dsfsdf
+    body: dsfsdf
+  - type: get_involved_card
+    title: Get Involved
+    description: sadfasdf
+    link_label: Link address
+    link_href: /what-is-starknet/
