@@ -1,6 +1,8 @@
 path: /media-kit/
 title: Media kit
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - 
     type: markdown
