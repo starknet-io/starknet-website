@@ -16,8 +16,7 @@ blocks:
         title: Community
         link_label: Get involved
         link_href: /community/
-        description:
-          "Starknet sits on top of Ethereum as a layer 2 network. It uses
+        description: "Starknet sits on top of Ethereum as a layer 2 network. It uses
           technology called “STARK Proofs” to securely compress huge amounts of
           transactions for Ethereum. "
         image: /assets/cleanshot-2023-01-17-at-14.01.12-2x.png
@@ -30,8 +29,7 @@ blocks:
         link_href: /community
       - type: large_card
         title: What do Ethereum + Starknet unlock?
-        description:
-          "Together the networks unlock Ethereum’s vision for a fairer and
+        description: "Together the networks unlock Ethereum’s vision for a fairer and
           more open internet. Decentralised financial systems. Digital assets.
           Trustless systems. "
         link_label: What is now possible
@@ -108,14 +106,17 @@ blocks:
 
 
       StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
+  - type: container
+    blocks:
+      - type: markdown
+        body: >-
+          ### What are Block explorers?
+
+
+          StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
+    max_width: "1024"
   - type: wallets
     no_of_items: "1"
-  - type: markdown
-    body: >-
-      ### What are Block explorers?
-
-
-      StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
   - type: block_explorers
     no_of_items: "1"
   - type: markdown
@@ -134,4 +135,3 @@ blocks:
       StarkNet is a permissionless decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.
   - type: on_ramps
     no_of_items: "1"
-
