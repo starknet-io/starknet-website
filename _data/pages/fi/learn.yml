@@ -1,6 +1,8 @@
 path: /learn/
 title: Learn
-template: page
+template: landing
+breadcrumbs: true
+page_last_updated: false
 blocks:
   - 
     type: hero
