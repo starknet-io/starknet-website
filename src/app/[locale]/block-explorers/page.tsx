@@ -46,7 +46,7 @@ export default async function DappsPage({
               description="Page header with high level description of section and visual treatment from brand team."
             />
             <Box h={16} />
-            <Container>
+            <Container maxW="1062px">
               <Flex gap={4} direction="column" flex={1}>
                 {blockExplorers.map((blockExplorer) => {
                   console.log(blockExplorer);

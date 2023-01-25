@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex } from "src/libs/chakra-ui";
+import { Box, Flex, Container } from "src/libs/chakra-ui";
 
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -40,14 +40,16 @@ export function BlockCommunityEventsList({
         hitsPerPage={hitsPerPage}
         facetsRefinements={{ locale: [params.locale] }}
       />
-      <Box>
-        <Flex justifyContent="center">
-          <Heading variant="h2" as="h2" color="heading-navy-fg" mb="64px">
-            Community Events
-          </Heading>
-        </Flex>
-        <CustomHits hitsPerPage={hitsPerPage} />
-      </Box>
+      <Container maxW="1062px">
+        <Box>
+          <Flex justifyContent="center">
+            <Heading variant="h2" as="h2" color="heading-navy-fg" mb="64px">
+              Community Events
+            </Heading>
+          </Flex>
+          <CustomHits hitsPerPage={hitsPerPage} />
+        </Box>
+      </Container>
     </InstantSearch>
   );
 }
@@ -72,7 +74,6 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
           else {
             return (
               <ListCard
-                rounded
                 key={hit?.name}
                 startDateTime={hit?.start_date}
                 image={hit.image}

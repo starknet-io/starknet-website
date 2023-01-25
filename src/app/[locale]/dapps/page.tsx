@@ -44,7 +44,7 @@ export default async function DappsPage({
               description="Discover apps in the Starknet ecosystem across NFTs, Defi, DAOs and more."
             />
             <Box h={16} />
-            <Container>
+            <Container maxW="1062px">
               <Flex gap={4} direction="column" flex={1}>
                 {dapps.map((dapp) => {
                   return (

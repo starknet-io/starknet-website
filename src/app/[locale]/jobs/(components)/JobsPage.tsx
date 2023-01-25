@@ -173,7 +173,6 @@ function CustomHits() {
           if (hit.job.type) tags.push(hit.job.type);
           return (
             <ListCard
-              rounded
               key={hit.contact.name}
               startDateTime={hit.contact.name}
               image={hit.contact.logo}

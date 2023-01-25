@@ -263,11 +263,6 @@ export default async function Index({
                   content:
                     "Starknet is a technology that uses math and cryptography to securely scale Ethereum. The community is growing fast and building out an exciting ecosystem of dapps and infrastructure.",
                 },
-                {
-                  label: "How does it scale Ethereum?",
-                  content:
-                    "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called “STARK Proofs” to securely compress huge amounts of transactions for Ethereum.",
-                },
               ]}
             />
           </BlockGrouping>

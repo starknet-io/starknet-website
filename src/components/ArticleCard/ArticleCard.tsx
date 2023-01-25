@@ -74,7 +74,7 @@ const Image = ({ url, imageAlt }: ImageProps) => {
         src={url}
         alt={imageAlt}
         width="full"
-        height="15rem"
+        height="10rem"
         objectFit="cover"
         borderTopRadius={8}
       />

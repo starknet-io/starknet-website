@@ -282,6 +282,24 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "container",
+    label: "Container",
+    widget: "object",
+    fields: [
+      {
+        name: "max_width",
+        label: "Max width",
+        types: blocks,
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
 
   {
     name: "flex_layout",

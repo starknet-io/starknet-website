@@ -46,7 +46,7 @@ export default async function DappsPage({
               description="Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs' to securely compress huge amounts of transactions for Ethereum."
             />
             <Box h={16} />
-            <Container>
+            <Container maxW="1062px">
               <Flex gap={4} direction="column" flex={1}>
                 {wallets.map((wallet) => {
                   console.log(wallet);

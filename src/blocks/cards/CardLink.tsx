@@ -1,25 +1,27 @@
-import { Box, Link } from "src/libs/chakra-ui";
-import NextLink, { LinkProps } from "next/link";
-import { HTMLProps, FC } from "react";
+"use client";
+
+import { Box, BoxProps, LinkBox } from "src/libs/chakra-ui";
 
 type Props = {
   children: React.ReactNode;
-} & LinkProps &
-  HTMLProps<HTMLAnchorElement>;
+  href: string | undefined;
+} & BoxProps;
 
-export const CardLink = ({ href, children }: Props) => {
+export const CardLink = ({ href, children, ...rest }: Props): JSX.Element => {
   return (
-    <Link
+    <LinkBox
       as={Box}
       href={href}
       sx={{
+        cursor: "pointer",
         textDecoration: "none!important",
         _peerHover: {
           textDecoration: "none!important",
         },
       }}
+      {...rest}
     >
       {children}
-    </Link>
+    </LinkBox>
   );
 };

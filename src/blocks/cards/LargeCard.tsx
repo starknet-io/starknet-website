@@ -21,20 +21,18 @@ type Props = {
   description: string;
   image: string;
   orientation?: "left" | "right";
-} & LocaleProps;
+};
 
-export default function LargeCard({
+export const LargeCard = ({
   title,
   linkHref = "/what-is-starknet/",
   linkLabel,
   description,
   image = "https://cdn.midjourney.com/08fcc5e8-f866-4582-96b1-030943fccfca/grid_0.png",
-  params,
   orientation = "left",
-}: Props): JSX.Element {
-  console.log("params", params, "linkHref", linkHref, "linkLabel", linkLabel);
+}: Props) => {
   return (
-    <CardLink href={`/${params.locale}${linkHref}`}>
+    <CardLink href={linkHref}>
       <CardGradientBorder padding="0">
         <Box
           as="section"
@@ -103,7 +101,7 @@ export default function LargeCard({
                     </Flex>
                   </Flex>
                   <Stack direction={{ base: "column", md: "row" }} spacing="3">
-                    <Link as={NextLink} variant="card" href={linkHref}>
+                    <Link as={NextLink} variant="card" href={`/${linkHref}`}>
                       {linkLabel} &rarr;
                     </Link>
                   </Stack>
@@ -115,4 +113,4 @@ export default function LargeCard({
       </CardGradientBorder>
     </CardLink>
   );
-}
+};
