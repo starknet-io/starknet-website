@@ -11,3 +11,6 @@ blocks:
     description: sadfasdf
     link_label: Link address
     link_href: /what-is-starknet/
+  - type: community_events
+  - type: bridges
+  - type: on_ramps
