@@ -1,6 +1,8 @@
 path: /starknet-playground/
 title: Starknet playground
-template: article
+template: content
+breadcrumbs: true
+page_last_updated: true
 blocks:
   - 
     type: markdown
