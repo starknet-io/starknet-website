@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
+import { PageContentContainer } from "src/app/[locale]/(components)/PageContentContainer";
 import { Block } from "src/blocks/Block";
 import { getPostBySlug } from "src/data/posts";
 import { Flex } from "src/libs/chakra-ui";
-import { PageContentContainer } from "../../(components)/PageContentContainer";
 
 export interface Props {
   readonly params: {
