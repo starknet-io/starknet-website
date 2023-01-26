@@ -1,0 +1,8 @@
+id: d202009a-3541-4366-b664-36ef2e492aa3
+title: Wallets
+template: landing
+parent_page: /ecosystem/
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: wallets
