@@ -51,7 +51,8 @@ export const LargeCard = ({
               >
                 <Box
                   order={orientation === "right" ? 1 : 0}
-                  maxW={{ base: "full", lg: "464px" }}
+                  maxW={{ base: "full", lg: "480px" }}
+                  maxH={{ base: "full", lg: "480px" }}
                   borderRadius="16px"
                   overflow="hidden"
                 >
