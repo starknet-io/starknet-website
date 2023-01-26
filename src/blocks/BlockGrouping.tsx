@@ -15,7 +15,7 @@ export const BlockGrouping = ({ children }: Props) => {
       rootMargin: "-30px",
     },
     { disconnectOnLeave: true },
-    {}
+    {},
   );
 
   return (

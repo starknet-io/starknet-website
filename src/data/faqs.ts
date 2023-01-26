@@ -1,10 +1,9 @@
-import { MDXProps } from "mdx/types";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Faq {
+export interface Faq {
   readonly faq_item: string;
-  readonly MDXContent: (props: MDXProps) => JSX.Element;
+  readonly body: string;
 }
 
 export async function getFaqs(locale: string): Promise<readonly Faq[]> {
@@ -26,8 +25,8 @@ export async function getFaqByFilename(
 ): Promise<Faq> {
   try {
     return await getFirst(
-      () => getMDXModule(`faqs/${locale}/${filename}.md`),
-      () => getMDXModule(`faqs/${defaultLocale}/${filename}.md`),
+      () => getYAML(`faqs/${locale}/${filename}.yml`),
+      () => getYAML(`faqs/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Faqs not found! ${filename}`, {

@@ -6,8 +6,7 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
 import { defaultLocale, locales } from "./locales";
-import { getFirst, json } from "./utils";
-import { mdx } from "./mdx";
+import { getFirst, slugify, yaml } from "./utils";
 
 const dotenvFiles = [".env.local", ".env"];
 
@@ -15,6 +14,7 @@ dotenvFiles.forEach((path) => dotenv.config({ path }));
 
 interface Post {
   readonly id: string;
+  readonly slug: string;
   readonly title: string;
   readonly image: string;
   readonly category: string;
@@ -27,15 +27,21 @@ interface Post {
 async function fileToPost(locale: string, filename: string): Promise<Post> {
   const resourceName = "posts";
 
-  const data = await getFirst(
-    () => mdx(path.join("_data", resourceName, locale, filename)),
-    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
+  const defaultLocaleData = await yaml(
+    path.join("_data", resourceName, defaultLocale, filename),
   );
 
-  const id = filename.replace(/\.md$/, "");
+  const data = await getFirst(
+    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => defaultLocaleData,
+  );
+
+  const safeID = slugify(data.id);
+  const slug = slugify(defaultLocaleData.title);
 
   return {
-    id,
+    id: safeID,
+    slug,
     title: data.title,
     category: data.category,
     topic: data.topic,
@@ -65,8 +71,8 @@ async function fileToEvent(locale: string, filename: string): Promise<Event> {
   const resourceName = "events";
 
   const data = await getFirst(
-    () => mdx(path.join("_data", resourceName, locale, filename)),
-    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   return {
@@ -112,8 +118,8 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
   const resourceName = "jobs";
 
   const data = await getFirst(
-    () => json(path.join("_data", resourceName, locale, filename)),
-    () => json(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   return {
@@ -161,8 +167,8 @@ async function fileToTutorial(
   const resourceName = "tutorials";
 
   const data = await getFirst(
-    () => mdx(path.join("_data", resourceName, locale, filename)),
-    () => mdx(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
   );
 
   return {

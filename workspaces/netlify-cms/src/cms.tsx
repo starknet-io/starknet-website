@@ -1,10 +1,18 @@
 import "./styles";
-import CMS from "netlify-cms-app";
+import cms from "netlify-cms-app";
 import { config } from "./config";
+import NetlifyCmsWidgetUUID from "./widgets/uuid";
+// import NetlifyCmsWidgetYouTube from "./widgets/youtube";
 
 // @ts-expect-error
-window.CMS = CMS;
+window.CMS = cms;
 
-CMS.init({
+// @ts-expect-error
+cms.registerWidget([
+  NetlifyCmsWidgetUUID.Widget(),
+  // NetlifyCmsWidgetYouTube.Widget(),
+]);
+
+cms.init({
   config,
 });

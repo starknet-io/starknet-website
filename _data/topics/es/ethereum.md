@@ -1,5 +1,0 @@
----
-id: ethereum
-name: Ethereum
----
-

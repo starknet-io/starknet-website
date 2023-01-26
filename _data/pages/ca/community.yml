@@ -1,8 +1,0 @@
-path: /community/
-title: Community
-template: article
-blocks:
-  - 
-    type: markdown
-    body: >-
-      Community

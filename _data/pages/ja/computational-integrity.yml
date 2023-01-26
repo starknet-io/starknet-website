@@ -1,9 +1,0 @@
----
-path: /computational-integrity/
-title: Computational Integrity
-template: article
-blocks:
-  - 
-    type: markdown
-    body: >-
-      Computational Integrity
