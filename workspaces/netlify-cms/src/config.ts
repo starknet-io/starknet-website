@@ -1112,7 +1112,7 @@ export const config: CmsConfig = {
                               widget: "relation",
                               collection: "pages",
                               search_fields: ["title"],
-                              value_field: "path",
+                              value_field: "id",
                               display_fields: ["title"],
                             },
                             {

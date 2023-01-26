@@ -4,6 +4,7 @@ import { getFirst, getJSON } from "./utils";
 
 interface Post {
   readonly id: string;
+  readonly slug: string;
   readonly title: string;
   readonly image: string;
   readonly category: string;
@@ -15,16 +16,17 @@ interface Post {
   readonly body: string;
 }
 
-export async function getPostByID(id: string, locale: string): Promise<Post> {
-  const safeID = id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
-
+export async function getPostBySlug(
+  slug: string,
+  locale: string,
+): Promise<Post> {
   try {
     return (await getFirst(
-      () => getJSON(`_dynamic/posts/${locale}/${safeID}.json`),
-      () => getJSON(`_dynamic/posts/${defaultLocale}/${safeID}.json`),
+      () => getJSON(`_dynamic/posts/${locale}/${slug}.json`),
+      () => getJSON(`_dynamic/posts/${defaultLocale}/${slug}.json`),
     )) as Post;
   } catch (cause) {
-    throw new Error(`Post not found! ${id}`, {
+    throw new Error(`Post not found! ${slug}`, {
       cause,
     });
   }

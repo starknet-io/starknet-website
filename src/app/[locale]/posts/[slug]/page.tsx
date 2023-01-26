@@ -1,21 +1,21 @@
 import { notFound } from "next/navigation";
 import { Block } from "src/blocks/Block";
-import { getPostByID } from "src/data/posts";
+import { getPostBySlug } from "src/data/posts";
 import { Flex } from "src/libs/chakra-ui";
 import { PageContentContainer } from "../../(components)/PageContentContainer";
 
 export interface Props {
   readonly params: {
     readonly locale: string;
-    readonly id: string;
+    readonly slug: string;
   };
 }
 
 export default async function Page({
-  params: { id, locale },
+  params: { slug, locale },
 }: Props): Promise<JSX.Element> {
   try {
-    const { title, blocks, body } = await getPostByID(id, locale);
+    const { title, blocks, body } = await getPostBySlug(slug, locale);
 
     return (
       <PageContentContainer>

@@ -3,7 +3,7 @@ import * as path from "node:path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 
-import { getFirst, write, yaml } from "./utils";
+import { getFirst, slugify, write, yaml } from "./utils";
 import { defaultLocale, locales } from "./locales";
 import { MainMenu } from "./main-menu";
 
@@ -98,15 +98,22 @@ for (const locale of locales) {
   await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
 
   for (const filename of filenames) {
-    const data: any = await getFirst(
-      () => yaml(`_data/posts/${locale.code}/${filename}`),
-      () => yaml(`_data/posts/${defaultLocale}/${filename}`),
+    const defaultLocaleData = await yaml(
+      `_data/posts/${defaultLocale}/${filename}`,
     );
-    const safeID = data.id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
+    const data = await getFirst(
+      () => yaml(`_data/posts/${locale.code}/${filename}`),
+      () => defaultLocaleData,
+    );
+
+    const safeID = slugify(data.id);
+    const slug = slugify(defaultLocaleData.title);
 
     await write(`_data/_dynamic/posts/${locale.code}/${safeID}.json`, {
       ...data,
       id: safeID,
+      slug,
     });
   }
 }

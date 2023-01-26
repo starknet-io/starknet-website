@@ -6,7 +6,7 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
 import { defaultLocale, locales } from "./locales";
-import { getFirst, yaml } from "./utils";
+import { getFirst, slugify, yaml } from "./utils";
 
 const dotenvFiles = [".env.local", ".env"];
 
@@ -14,6 +14,7 @@ dotenvFiles.forEach((path) => dotenv.config({ path }));
 
 interface Post {
   readonly id: string;
+  readonly slug: string;
   readonly title: string;
   readonly image: string;
   readonly category: string;
@@ -26,15 +27,21 @@ interface Post {
 async function fileToPost(locale: string, filename: string): Promise<Post> {
   const resourceName = "posts";
 
-  const data = await getFirst(
-    () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+  const defaultLocaleData = await yaml(
+    path.join("_data", resourceName, defaultLocale, filename),
   );
 
-  const safeID = data.id.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+  const data = await getFirst(
+    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => defaultLocaleData,
+  );
+
+  const safeID = slugify(data.id);
+  const slug = slugify(defaultLocaleData.title);
 
   return {
     id: safeID,
+    slug,
     title: data.title,
     category: data.category,
     topic: data.topic,

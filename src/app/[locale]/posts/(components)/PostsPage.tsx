@@ -140,6 +140,7 @@ function CustomCategories() {
 type HitProps = {
   readonly hits: readonly {
     readonly id: string;
+    readonly slug: string;
     readonly title: string;
     readonly image: string;
     readonly category: string;
@@ -161,7 +162,7 @@ function CustomHits() {
         pt={2}
       >
         {hits.map((hit, i) => (
-          <ArticleCard.Root href={`/${hit.locale}/posts/${hit.id}`} key={i}>
+          <ArticleCard.Root href={`/${hit.locale}/posts/${hit.slug}`} key={i}>
             <ArticleCard.Image url={hit.image} />
 
             <ArticleCard.Body>
