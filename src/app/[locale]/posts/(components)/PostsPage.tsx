@@ -11,25 +11,20 @@ import {
   HStack,
   Divider,
   Container,
-  Tab,
   Flex,
 } from "@chakra-ui/react";
-import * as SubNav from "@ui/SubNav/SubNav";
+
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import { useMemo } from "react";
 import algoliasearch, { SearchClient } from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-} from "src/libs/react-instantsearch-hooks-web";
-import {
-  useClearRefinements,
-  useHierarchicalMenu,
   useHits,
   useRefinementList,
-} from "react-instantsearch-hooks";
-import { PageContentContainer } from "../../(components)/PageContentContainer";
-import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
+  useInfiniteHits,
+} from "src/libs/react-instantsearch-hooks-web";
+
 import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -63,7 +58,7 @@ export function PostsPage({
     <Box pt="18" minH="100vh">
       <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
         <Configure
-          hitsPerPage={40}
+          hitsPerPage={50}
           facetsRefinements={{
             locale: [params.locale],
             topic: searchParams.get("topic")?.split(",") ?? [],
@@ -154,7 +149,7 @@ function CustomCategories({
   const router = useRouter();
   console.log(params);
   return (
-    <Flex as="ul" gap="24px">
+    <Flex as="ul" gap="24px" borderBottomWidth="1px" borderColor="tabs-main-br">
       <Button
         variant="category"
         as="a"
@@ -199,7 +194,7 @@ type HitProps = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  console.log("hits", hits);
+  const { showMore } = useInfiniteHits();
   return (
     <>
       <SimpleGrid
@@ -227,13 +222,14 @@ function CustomHits() {
           </ArticleCard.Root>
         ))}
       </SimpleGrid>
-      <HStack mt="24">
+
+      {/* <HStack mt="24">
         <Divider />
-        <Button flexShrink={0} variant="secondary">
+        <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
           View More
         </Button>
         <Divider />
-      </HStack>
+      </HStack> */}
     </>
   );
 }

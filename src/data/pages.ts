@@ -73,6 +73,13 @@ export interface LargeCardBlock {
   readonly image: string;
   readonly orientation?: "left" | "right";
 }
+export interface LinkListItem {
+  readonly type: "link_list_item";
+  readonly label?: string;
+  readonly href?: string;
+  readonly sub_label?: string;
+  readonly is_external?: boolean;
+}
 
 export interface HeroBlock {
   readonly type: "hero";
@@ -101,7 +108,8 @@ export type Block =
   | IconLinkCardBlock
   | ImageIconLinkCardBlock
   | GetInvolvedBlock
-  | HeroBlock;
+  | HeroBlock
+  | LinkListItem;
 
 export interface Container {
   readonly type: "container";
@@ -122,8 +130,17 @@ export interface GroupBlock {
   readonly type: "group";
   readonly blocks: readonly Block[];
 }
+export interface LinkListBlock {
+  readonly type: "link_list";
+  readonly blocks: readonly Block[];
+}
 
-export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
+export type TopLevelBlock =
+  | Block
+  | FlexLayoutBlock
+  | GroupBlock
+  | Container
+  | LinkListBlock;
 
 export interface Page {
   readonly path: string;
@@ -136,12 +153,12 @@ export interface Page {
 
 export async function getPageByFilename(
   filename: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getYAML(`pages/${locale}/${filename}.yml`),
-      () => getYAML(`pages/${defaultLocale}/${filename}.yml`),
+      () => getYAML(`pages/${defaultLocale}/${filename}.yml`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${filename}`, {
@@ -152,7 +169,7 @@ export async function getPageByFilename(
 
 export async function getPageByPage(
   page: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   return getPageByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }

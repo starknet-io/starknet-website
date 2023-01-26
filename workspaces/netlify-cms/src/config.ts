@@ -264,6 +264,28 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "link_list_item",
+    label: "Link list item",
+    widget: "object",
+    fields: [
+      {
+        name: "label",
+      },
+      {
+        name: "sub_label",
+      },
+      {
+        name: "href",
+      },
+      {
+        name: "is_external",
+        widget: "boolean",
+        required: false,
+        default: false,
+      },
+    ],
+  },
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
@@ -282,6 +304,20 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "link_list",
+    label: "LinkList",
+    widget: "object",
+    fields: [
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
+
   {
     name: "container",
     label: "Container",

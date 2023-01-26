@@ -1,6 +1,7 @@
 export const tokens = {
   colors: {
     light: {
+      "listLink-fg": "#5C94FF",
       "bg-default": "#FBFBFB",
       "fg-default": "#6B7280",
       "fg-muted": "#858585",
@@ -111,6 +112,7 @@ export const tokens = {
       "card-yellow-br": "#F7F4F2",
       "card-green-bg": "#F8FCFD",
       "card-green-br": "#EFF6F7",
+      "tabs-main-br": "#EFEFEF",
       "tabs-fg": "#858585",
       "tabs-bg": "transparent",
       "tabs-hover-fg": "#858585",
@@ -120,6 +122,7 @@ export const tokens = {
     },
 
     dark: {
+      "listLink-fg": "#AFCAFF",
       "bg-default": "#0B0B0B",
       "fg-default": "#CCCCCC",
       "fg-muted": "#7E7E7E",
@@ -165,7 +168,7 @@ export const tokens = {
       "btn-primary-active-border": "#5C94FF",
       "article-card-bg": "#1B1B1B",
       "card-bg": "#1B1B1B",
-      "card-br": "#1B1B1B",
+      "card-br": "#000000",
       "subnav-fg": "#7E7E7E",
       "subnav-fg-accent": "#ffffff",
       "heading-navy-fg": "#FFFFFF",
@@ -230,6 +233,7 @@ export const tokens = {
       "card-yellow-br": "#121212",
       "card-green-bg": "#161616",
       "card-green-br": "#121212",
+      "tabs-main-br": "#1E1D1D",
       "tabs-fg": "#7E7E7E",
       "tabs-bg": "transparent",
       "tabs-hover-fg": "#CCCCCC",
@@ -242,6 +246,10 @@ export const tokens = {
 
 export const semanticTokens = {
   colors: {
+    "listLink-fg": {
+      default: tokens.colors.light["listLink-fg"],
+      _dark: tokens.colors.dark["listLink-fg"],
+    },
     "bg-default": {
       default: tokens.colors.light["bg-default"],
       _dark: tokens.colors.dark["bg-default"],
@@ -683,6 +691,10 @@ export const semanticTokens = {
     "card-blue-br": {
       default: tokens.colors.light["card-blue-br"],
       _dark: tokens.colors.dark["card-blue-br"],
+    },
+    "tabs-main-br": {
+      default: tokens.colors.light["tabs-main-br"],
+      _dark: tokens.colors.dark["tabs-main-br"],
     },
     "tabs-fg": {
       default: tokens.colors.light["tabs-fg"],

@@ -16,6 +16,7 @@ import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { LargeCard } from "./cards/LargeCard";
 import { Container } from "./Container";
+import { LinkList, LinkListItem } from "./LinkList";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -97,6 +98,23 @@ export async function Block({ block, locale }: Props): JSX.Element {
           <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
+    );
+  } else if (block.type === "link_list") {
+    return (
+      <LinkList>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </LinkList>
+    );
+  } else if (block.type === "link_list_item") {
+    return (
+      <LinkListItem
+        label={block.label}
+        isExternal={block.is_external}
+        href={block.href}
+        subLabel={block.sub_label}
+      />
     );
   } else if (block.type === "group") {
     return (
