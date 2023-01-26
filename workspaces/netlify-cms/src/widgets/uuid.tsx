@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 // @ts-expect-error
@@ -8,12 +8,18 @@ import { CmsWidgetControlProps } from "netlify-cms-core";
 function Control(props: CmsWidgetControlProps & any) {
   const [uuid] = useState(() => uuidv4());
 
+  useEffect(() => {
+    if (!props.value) {
+      props.onChange(uuid);
+    }
+  }, [props, props.value, uuid]);
+
   return (
     <input
       type="text"
       id={props.forID}
       className={props.classNameWrapper}
-      value={props.value || uuid}
+      value={props.value}
       disabled
       // onChange={(e) => props.onChange(e.target.value)}
       // onFocus={props.setActiveStyle}

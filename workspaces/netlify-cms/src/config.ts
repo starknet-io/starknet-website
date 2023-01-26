@@ -364,6 +364,7 @@ export const config: CmsConfig = {
       folder: `_data/pages/${locale}`,
       create: true,
       format: "yml",
+      slug: "{{title}}",
       summary: "{{title}}",
       fields: [
         {
@@ -419,6 +420,8 @@ export const config: CmsConfig = {
       folder: `_data/posts/${locale}`,
       create: true,
       format: "yml",
+      slug: "{{title}}",
+      summary: "{{title}}",
       fields: [
         {
           name: "id",
