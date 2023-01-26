@@ -111,6 +111,12 @@ export const tokens = {
       "card-yellow-br": "#F7F4F2",
       "card-green-bg": "#F8FCFD",
       "card-green-br": "#EFF6F7",
+      "tabs-fg": "#858585",
+      "tabs-bg": "transparent",
+      "tabs-hover-fg": "#858585",
+      "tabs-border-bg": "transparent",
+      "tabs-fg-active": "#0C0C4F",
+      "tabs-border-active-bg": "#E97880",
     },
 
     dark: {
@@ -224,6 +230,12 @@ export const tokens = {
       "card-yellow-br": "#121212",
       "card-green-bg": "#161616",
       "card-green-br": "#121212",
+      "tabs-fg": "#7E7E7E",
+      "tabs-bg": "transparent",
+      "tabs-hover-fg": "#CCCCCC",
+      "tabs-border-bg": "transparent",
+      "tabs-fg-active": "#FFFFFF",
+      "tabs-border-active-bg": "#FE9E92",
     },
   },
 };
@@ -671,6 +683,30 @@ export const semanticTokens = {
     "card-blue-br": {
       default: tokens.colors.light["card-blue-br"],
       _dark: tokens.colors.dark["card-blue-br"],
+    },
+    "tabs-fg": {
+      default: tokens.colors.light["tabs-fg"],
+      _dark: tokens.colors.dark["tabs-fg"],
+    },
+    "tabs-bg": {
+      default: tokens.colors.light["tabs-bg"],
+      _dark: tokens.colors.dark["tabs-bg"],
+    },
+    "tabs-hover-fg": {
+      default: tokens.colors.light["tabs-hover-fg"],
+      _dark: tokens.colors.dark["tabs-hover-fg"],
+    },
+    "tabs-border-bg": {
+      default: tokens.colors.light["tabs-border-bg"],
+      _dark: tokens.colors.dark["tabs-border-bg"],
+    },
+    "tabs-fg-active": {
+      default: tokens.colors.light["tabs-fg-active"],
+      _dark: tokens.colors.dark["tabs-fg-active"],
+    },
+    "tabs-border-active-bg": {
+      default: tokens.colors.light["tabs-border-active-bg"],
+      _dark: tokens.colors.dark["tabs-border-active-bg"],
     },
   },
 };

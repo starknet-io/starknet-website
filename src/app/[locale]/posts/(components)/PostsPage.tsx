@@ -11,6 +11,8 @@ import {
   HStack,
   Divider,
   Container,
+  Tab,
+  Flex,
 } from "@chakra-ui/react";
 import * as SubNav from "@ui/SubNav/SubNav";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -58,7 +60,7 @@ export function PostsPage({
   const searchParams = useSearchParams();
 
   return (
-    <Box pt="18">
+    <Box pt="18" minH="100vh">
       <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
         <Configure
           hitsPerPage={40}
@@ -115,7 +117,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
   });
 
   return (
-    <Wrap>
+    <Wrap flexWrap="wrap">
       {items.map((topic, i) => (
         <Button
           size="sm"
@@ -152,17 +154,21 @@ function CustomCategories({
   const router = useRouter();
   console.log(params);
   return (
-    <SubNav.Root>
-      <SubNav.Item
+    <Flex as="ul" gap="24px">
+      <Button
+        variant="category"
+        as="a"
         isActive={params.category == null}
         onClick={() => {
           router.replace(`/${params.locale}/posts`);
         }}
       >
         All posts
-      </SubNav.Item>
+      </Button>
       {categories.map((category) => (
-        <SubNav.Item
+        <Button
+          variant="category"
+          as="a"
           isActive={category.id === params.category}
           onClick={() => {
             if (category.id === params.category) return;
@@ -172,9 +178,9 @@ function CustomCategories({
           key={category.id}
         >
           <> {category.name}</>
-        </SubNav.Item>
+        </Button>
       ))}
-    </SubNav.Root>
+    </Flex>
   );
 }
 
