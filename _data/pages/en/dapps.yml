@@ -5,8 +5,8 @@ parent_page: /ecosystem/
 breadcrumbs: true
 page_last_updated: true
 blocks:
-  - type: dapps
   - type: hero
     variant: dapps
     title: Dapps
     description: Discover apps in the Starknet ecosystem across NFTs, Defi, DAOs and more.
+  - type: dapps
