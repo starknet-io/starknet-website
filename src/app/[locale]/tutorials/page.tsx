@@ -11,12 +11,13 @@ import {
   Wrap,
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { getTutorialsPage } from "src/data/settings/tutorials-page";
 
 export default async function TutorialsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
-  const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  // const { title, description } = await getTutorialsPage(locale);
+  // const events = await getTutorials(locale);
 
   return (
     <Box>
