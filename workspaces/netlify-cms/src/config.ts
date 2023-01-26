@@ -310,6 +310,11 @@ const topLevelBlocks: CmsFieldList["types"] = [
     widget: "object",
     fields: [
       {
+        name: "heading",
+        label: "Heading",
+        required: false,
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",
@@ -317,7 +322,6 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
-
   {
     name: "container",
     label: "Container",
@@ -336,7 +340,6 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
-
   {
     name: "flex_layout",
     label: "Flex layout",
