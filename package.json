@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn data; next dev",
-    "build": "next build",
+    "build": "yarn data; next build",
     "start": "next start",
     "lint": "next lint",
     "fmt": "yarn rome:format",

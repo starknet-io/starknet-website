@@ -1,11 +1,10 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
 export interface Event {
   readonly name: string;
   readonly image: string;
   readonly start_date: string;
-  readonly end_date: string;
   readonly location: string;
   readonly city: string;
   readonly venue: string;
@@ -34,8 +33,8 @@ export async function getEventByFilename(
 ): Promise<Event> {
   try {
     return await getFirst(
-      () => getMDXModule(`events/${locale}/${filename}.md`),
-      () => getMDXModule(`events/${defaultLocale}/${filename}.md`),
+      () => getYAML(`events/${locale}/${filename}.yml`),
+      () => getYAML(`events/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Event not found! ${filename}`, {

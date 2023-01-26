@@ -1,8 +1,0 @@
-path: /layer-2/
-title: Layer 2
-template: article
-blocks:
-  - 
-    type: markdown
-    body: >-
-      Layer 2

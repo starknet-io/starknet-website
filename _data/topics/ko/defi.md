@@ -1,5 +1,0 @@
----
-id: defi
-name: DeFi
----
-

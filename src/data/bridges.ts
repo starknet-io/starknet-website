@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Topic {
+export interface Bridge {
   readonly name: string;
   readonly type: string;
   readonly website_url: string;
@@ -11,7 +11,7 @@ interface Topic {
   readonly description: string;
 }
 
-export async function getBridges(locale: string): Promise<readonly Topic[]> {
+export async function getBridges(locale: string): Promise<readonly Bridge[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/bridges/${locale}.json`),
@@ -27,11 +27,11 @@ export async function getBridges(locale: string): Promise<readonly Topic[]> {
 export async function getBridgeByFilename(
   filename: string,
   locale: string,
-): Promise<Topic> {
+): Promise<Bridge> {
   try {
     return await getFirst(
-      () => getMDXModule(`bridges/${locale}/${filename}.md`),
-      () => getMDXModule(`bridges/${defaultLocale}/${filename}.md`),
+      () => getYAML(`bridges/${locale}/${filename}.yml`),
+      () => getYAML(`bridges/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Bridge not found! ${filename}`, {

@@ -1,0 +1,15 @@
+contact:
+  name: ZKX
+  email: test@test.com
+  twitter: "@test"
+  discord: http://www.test.com
+  logo: "/assets/cleanshot-2023-01-17-at-14.01.12-2x.png"
+job:
+  title: Job title test
+  description: Job description test
+  role: Frontend
+  type: online_remote
+  location: europe
+  required_experience: This is required experience
+  scope: this is job scope
+  how_to_apply: 'THis is how link '

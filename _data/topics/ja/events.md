@@ -1,5 +1,0 @@
----
-id: events
-name: Events
----
-

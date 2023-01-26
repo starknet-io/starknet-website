@@ -136,12 +136,12 @@ export interface Page {
 
 export async function getPageByFilename(
   filename: string,
-  locale: string
+  locale: string,
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getYAML(`pages/${locale}/${filename}.yml`),
-      () => getYAML(`pages/${defaultLocale}/${filename}.yml`)
+      () => getYAML(`pages/${defaultLocale}/${filename}.yml`),
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${filename}`, {
@@ -152,7 +152,7 @@ export async function getPageByFilename(
 
 export async function getPageByPage(
   page: string,
-  locale: string
+  locale: string,
 ): Promise<Page> {
   return getPageByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }

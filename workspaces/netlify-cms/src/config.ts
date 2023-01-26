@@ -360,25 +360,36 @@ export const config: CmsConfig = {
       name: "pages",
       label: "Pages",
       label_singular: "Page",
-      identifier_field: "title",
+      identifier_field: "id",
       folder: `_data/pages/${locale}`,
-      format: "yaml",
       create: true,
+      format: "yml",
+      summary: "{{title}}",
       fields: [
         {
-          name: "path",
-          label: "Path",
+          name: "id",
+          label: "id",
+          widget: "uuid" as "string",
         },
         {
           name: "title",
           label: "Title",
         },
-
         {
           name: "template",
           widget: "select",
           options: ["landing", "content"],
           default: "content",
+        },
+        {
+          name: "parent_page",
+          label: "Parent page",
+          required: false,
+          widget: "relation",
+          collection: "pages",
+          search_fields: ["title"],
+          value_field: "id",
+          display_fields: ["title"],
         },
         {
           name: "breadcrumbs",
@@ -404,10 +415,16 @@ export const config: CmsConfig = {
       name: "posts",
       label: "Posts",
       label_singular: "Post",
-      identifier_field: "title",
+      identifier_field: "id",
       folder: `_data/posts/${locale}`,
       create: true,
+      format: "yml",
       fields: [
+        {
+          name: "id",
+          label: "id",
+          widget: "uuid" as "string",
+        },
         {
           name: "post_type",
           label: "Post Type",
@@ -427,10 +444,6 @@ export const config: CmsConfig = {
             },
           ],
           default: "article",
-        },
-        {
-          name: "id",
-          label: "id",
         },
         {
           name: "title",
@@ -476,6 +489,12 @@ export const config: CmsConfig = {
           widget: "text",
         },
         {
+          name: "blocks",
+          label: "Blocks",
+          widget: "list",
+          types: topLevelBlocks,
+        },
+        {
           name: "body",
           label: "Body",
           widget: "markdown",
@@ -489,11 +508,14 @@ export const config: CmsConfig = {
       label_singular: "Topic",
       identifier_field: "id",
       folder: `_data/topics/${locale}`,
+      slug: "{{name}}",
       create: true,
+      format: "yml",
       fields: [
         {
           name: "id",
           label: "id",
+          widget: "uuid" as "string",
         },
         {
           name: "name",
@@ -507,11 +529,14 @@ export const config: CmsConfig = {
       label_singular: "Category",
       identifier_field: "id",
       folder: `_data/categories/${locale}`,
+      slug: "{{name}}",
       create: true,
+      format: "yml",
       fields: [
         {
           name: "id",
           label: "id",
+          widget: "uuid" as "string",
         },
         {
           name: "name",
@@ -524,7 +549,9 @@ export const config: CmsConfig = {
       label: "Events",
       label_singular: "Event",
       folder: `_data/events/${locale}`,
+      slug: "{{name}}",
       create: true,
+      format: "yml",
       fields: [
         {
           name: "type",
@@ -567,12 +594,6 @@ export const config: CmsConfig = {
           label: "Event Image",
           widget: "image",
         },
-
-        // {
-        //   name: "end_date", // ?? keep this?
-        //   label: "End Date",
-        //   widget: "datetime",
-        // },
         {
           name: "location",
           label: "Location",
@@ -623,12 +644,18 @@ export const config: CmsConfig = {
     {
       name: "jobs",
       label: "Jobs",
-      identifier_field: "job.title",
+      identifier_field: "id",
       label_singular: "Job",
       folder: `_data/jobs/${locale}`,
       create: true,
-      format: "json",
+      format: "yml",
+      summary: "{{job.title}}",
       fields: [
+        {
+          name: "id",
+          label: "id",
+          widget: "uuid" as "string",
+        },
         {
           name: "contact",
           label: "Contact",
@@ -754,6 +781,7 @@ export const config: CmsConfig = {
       name: "glossary",
       folder: `_data/glossary/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "glossary_item",
       fields: [
         {
@@ -772,6 +800,7 @@ export const config: CmsConfig = {
       name: "faqs",
       folder: `_data/faqs/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "faq_item",
       fields: [
         {
@@ -790,6 +819,7 @@ export const config: CmsConfig = {
       name: "dapps",
       folder: `_data/dapps/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -821,6 +851,7 @@ export const config: CmsConfig = {
       name: "wallets",
       folder: `_data/wallets/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -871,6 +902,7 @@ export const config: CmsConfig = {
       name: "block_explorers",
       folder: `_data/block_explorers/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -925,6 +957,7 @@ export const config: CmsConfig = {
       name: "bridges",
       folder: `_data/bridges/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -979,6 +1012,7 @@ export const config: CmsConfig = {
       name: "tutorials",
       folder: `_data/tutorials/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "id",
       fields: [
         {
@@ -1120,7 +1154,7 @@ export const config: CmsConfig = {
                               widget: "relation",
                               collection: "pages",
                               search_fields: ["title"],
-                              value_field: "path",
+                              value_field: "id",
                               display_fields: ["title"],
                             },
                             {
@@ -1171,6 +1205,19 @@ export const config: CmsConfig = {
               label: "Description",
               name: "description",
             },
+            // {
+            //   label: "Youtube",
+            //   name: "youtube_link",
+            //   widget: 'youtube' as 'object',
+            //   fields: [
+            //     {
+            //       name: 'title'
+            //     },
+            //     {
+            //       name: 'description'
+            //     }
+            //   ]
+            // },
           ],
         },
       ],

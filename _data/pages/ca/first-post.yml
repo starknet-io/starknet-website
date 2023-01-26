@@ -1,8 +1,0 @@
-title: My first blog post
-path: /first-post/
-template: article
-blocks:
-  - 
-    type: markdown
-    body: >-
-      # My first blog post Lorem ipsum solor sit est. Link to second blog post: [Link to second](/second-post)
