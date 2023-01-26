@@ -132,6 +132,7 @@ export interface GroupBlock {
 }
 export interface LinkListBlock {
   readonly type: "link_list";
+  readonly heading?: string;
   readonly blocks: readonly Block[];
 }
 

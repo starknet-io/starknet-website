@@ -20,30 +20,8 @@ export default async function Index({
     <PageLayout
       main={
         <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
-          <LinkList.Root>
-            <LinkList.Item
-              label="Zk Rollups"
-              isExternal={false}
-              hasIcon={false}
-              href="/what-is-starknet/"
-              avatarTitle="Cillian hunter"
-              avatarUrl="https://media.licdn.com/dms/image/C4E03AQEL1kyEviTOtg/profile-displayphoto-shrink_800_800/0/1599485062384?e=2147483647&v=beta&t=Gqe-AR0KFZ6tqXjdiCZnOcDeQhLV3T4HnZETLJGeMSo"
-            />
-            <LinkList.Item
-              label="Brazil starknet community"
-              isExternal
-              href="/what-is-starknet/"
-            />
-            <LinkList.Item
-              label="What is Starknet?"
-              isExternal
-              href="/what-is-starknet/"
-              subLabel="Eli Ben Sasson"
-            />
-          </LinkList.Root>
           <BlockGrouping>
             <HomepageHero />
-
             <CommunityCard
               description=" This website is a community powered guide to the Starknet
               ecosystem."

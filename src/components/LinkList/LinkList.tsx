@@ -1,11 +1,8 @@
 "use client";
+import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
-import {
-  HiArrowRightCircle,
-  HiArrowUpRight,
-  HiOutlineArrowRightCircle,
-} from "react-icons/hi2";
+import { HiArrowRightCircle, HiArrowUpRight } from "react-icons/hi2";
 import {
   Box,
   Icon,
@@ -17,21 +14,32 @@ import {
   Avatar,
 } from "../../libs/chakra-ui";
 
-const Root = (props: FlexProps) => {
+type RootProps = {
+  heading?: string;
+} & FlexProps;
+
+const Root = (props: RootProps) => {
   return (
-    <Flex
-      {...props}
-      as="ul"
-      bg="card-bg"
-      borderRadius="16px"
-      borderWidth="1px"
-      borderColor="card-br"
-      overflow="hidden"
-      direction="column"
-      gap="12px"
-    >
-      {props.children}
-    </Flex>
+    <Box>
+      {props.heading && (
+        <Heading variant="h2" as="h2">
+          {props.heading}
+        </Heading>
+      )}
+      <Flex
+        {...props}
+        as="ul"
+        bg="card-bg"
+        borderRadius="16px"
+        borderWidth="1px"
+        borderColor="card-br"
+        overflow="hidden"
+        direction="column"
+        gap="12px"
+      >
+        {props.children}
+      </Flex>
+    </Box>
   );
 };
 
