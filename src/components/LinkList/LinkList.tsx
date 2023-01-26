@@ -66,10 +66,11 @@ const Item = ({
       color="listLink-fg"
       fontWeight="700"
       textDecoration="none"
-      height="80px"
+      height={{ base: "auto", md: "80px" }}
       display="flex"
       alignItems="center"
-      padding="0 24px"
+      py={{ base: "16px", md: "0px" }}
+      px={{ base: "16px", md: "24px" }}
       isExternal={isExternal}
       _hover={{ textDecoration: "none" }}
       borderTopWidth="0px!important"
@@ -78,27 +79,42 @@ const Item = ({
       _first={{ borderTopWidth: "0px!important" }}
       _last={{ borderBottomWidth: "0px!important" }}
     >
-      <HStack spacing="16px">
+      <Flex direction={{ base: "column", md: "row" }} gap="8px">
         {avatarUrl && <Avatar name={avatarTitle || "N/A "} src={avatarUrl} />}
-        {hasIcon && <Icon boxSize="24px" as={HiArrowRightCircle} />}
-        <Box _hover={{ textDecoration: "underline" }}>
+
+        <Flex
+          gap="8px"
+          alignItems="center"
+          direction="row"
+          _hover={{ textDecoration: "underline" }}
+        >
+          {hasIcon && <Icon boxSize="24px" as={HiArrowRightCircle} />}
           {label}{" "}
           {isExternal && (
             <Icon fontWeight="bold" boxSize="12px" as={HiArrowUpRight} />
           )}
-        </Box>
+        </Flex>
         {subLabel && (
-          <>
-            <Text color="fg-default" fontWeight="normal">
+          <Flex gap="8px">
+            <Text
+              display={{ base: "none", md: "flex" }}
+              color="fg-default"
+              fontWeight="normal"
+            >
               •
             </Text>
 
-            <Text color="fg-default" fontWeight="normal">
+            <Text
+              pl={{ base: "32px", md: "0px" }}
+              noOfLines={1}
+              color="fg-default"
+              fontWeight="normal"
+            >
               {subLabel}
             </Text>
-          </>
+          </Flex>
         )}
-      </HStack>
+      </Flex>
     </Link>
   );
 };
