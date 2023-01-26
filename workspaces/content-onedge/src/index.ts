@@ -110,7 +110,7 @@ for (const locale of locales) {
     const safeID = slugify(data.id);
     const slug = slugify(defaultLocaleData.title);
 
-    await write(`_data/_dynamic/posts/${locale.code}/${safeID}.json`, {
+    await write(`_data/_dynamic/posts/${locale.code}/${slug}.json`, {
       ...data,
       id: safeID,
       slug,
