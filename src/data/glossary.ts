@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Glossary {
+export interface Glossary {
   readonly glossary_item: string;
   readonly body: string;
 }

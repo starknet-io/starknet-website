@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Faq {
+export interface Faq {
   readonly faq_item: string;
   readonly body: string;
 }

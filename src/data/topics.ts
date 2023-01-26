@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Topic {
+export interface Topic {
   readonly id: string;
   readonly name: string;
 }

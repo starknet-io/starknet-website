@@ -2,7 +2,7 @@ import { defaultLocale } from "./i18n/config";
 import { TopLevelBlock } from "./pages";
 import { getFirst, getJSON } from "./utils";
 
-interface Post {
+export interface Post {
   readonly id: string;
   readonly slug: string;
   readonly title: string;

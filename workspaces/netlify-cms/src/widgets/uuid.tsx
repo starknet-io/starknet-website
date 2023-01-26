@@ -14,9 +14,10 @@ function Control(props: CmsWidgetControlProps & any) {
       id={props.forID}
       className={props.classNameWrapper}
       value={props.value || uuid}
-      onChange={(e) => props.onChange(e.target.value)}
-      onFocus={props.setActiveStyle}
-      onBlur={props.setInactiveStyle}
+      disabled
+      // onChange={(e) => props.onChange(e.target.value)}
+      // onFocus={props.setActiveStyle}
+      // onBlur={props.setInactiveStyle}
     />
   );
 }

@@ -345,6 +345,8 @@ export const config: CmsConfig = {
       identifier_field: "id",
       folder: `_data/pages/${locale}`,
       create: true,
+      format: "yml",
+      summary: "{{title}}",
       fields: [
         {
           name: "id",
@@ -398,6 +400,7 @@ export const config: CmsConfig = {
       identifier_field: "id",
       folder: `_data/posts/${locale}`,
       create: true,
+      format: "yml",
       fields: [
         {
           name: "id",
@@ -489,6 +492,7 @@ export const config: CmsConfig = {
       folder: `_data/topics/${locale}`,
       slug: "{{name}}",
       create: true,
+      format: "yml",
       fields: [
         {
           name: "id",
@@ -509,6 +513,7 @@ export const config: CmsConfig = {
       folder: `_data/categories/${locale}`,
       slug: "{{name}}",
       create: true,
+      format: "yml",
       fields: [
         {
           name: "id",
@@ -528,6 +533,7 @@ export const config: CmsConfig = {
       folder: `_data/events/${locale}`,
       slug: "{{name}}",
       create: true,
+      format: "yml",
       fields: [
         {
           name: "type",
@@ -624,6 +630,8 @@ export const config: CmsConfig = {
       label_singular: "Job",
       folder: `_data/jobs/${locale}`,
       create: true,
+      format: "yml",
+      summary: "{{job.title}}",
       fields: [
         {
           name: "id",
@@ -755,6 +763,7 @@ export const config: CmsConfig = {
       name: "glossary",
       folder: `_data/glossary/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "glossary_item",
       fields: [
         {
@@ -773,6 +782,7 @@ export const config: CmsConfig = {
       name: "faqs",
       folder: `_data/faqs/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "faq_item",
       fields: [
         {
@@ -791,6 +801,7 @@ export const config: CmsConfig = {
       name: "dapps",
       folder: `_data/dapps/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -822,6 +833,7 @@ export const config: CmsConfig = {
       name: "wallets",
       folder: `_data/wallets/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -872,6 +884,7 @@ export const config: CmsConfig = {
       name: "block_explorers",
       folder: `_data/block_explorers/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -926,6 +939,7 @@ export const config: CmsConfig = {
       name: "bridges",
       folder: `_data/bridges/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "name",
       fields: [
         {
@@ -980,6 +994,7 @@ export const config: CmsConfig = {
       name: "tutorials",
       folder: `_data/tutorials/${locale}`,
       create: true,
+      format: "yml",
       identifier_field: "id",
       fields: [
         {

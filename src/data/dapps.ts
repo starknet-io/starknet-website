@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Dapp {
+export interface Dapp {
   readonly name: string;
   readonly image: string;
   readonly twitter: string;

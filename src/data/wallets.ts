@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Wallet {
+export interface Wallet {
   readonly name: string;
   readonly type: string[];
   readonly image: string;

@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Topic {
+export interface BlockExplorer {
   readonly name: string;
   readonly type: string;
   readonly website_url: string;
@@ -13,7 +13,7 @@ interface Topic {
 
 export async function getBlockExplorers(
   locale: string,
-): Promise<readonly Topic[]> {
+): Promise<readonly BlockExplorer[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/block_explorers/${locale}.json`),
@@ -29,7 +29,7 @@ export async function getBlockExplorers(
 export async function getBlockExplorerByFilename(
   filename: string,
   locale: string,
-): Promise<Topic> {
+): Promise<BlockExplorer> {
   try {
     return await getFirst(
       () => getYAML(`block_explorers/${locale}/${filename}.yml`),
