@@ -5,17 +5,22 @@ parent_page: /ecosystem/
 breadcrumbs: true
 page_last_updated: true
 blocks:
-  - type: markdown
-    body: >-
-      ## What are bridges?
+  - type: container
+    max_width: "1062"
+    blocks:
+      - type: markdown
+        body: >-
+          ## What are bridges?
 
 
-      Bridges are technologies that enable the transfer of digital assets between different blockchain networks. They allow users to move assets, such as tokens, from one blockchain to another without the need for a centralized intermediary. This allows for greater interoperability between different blockchain platforms and can also enable the use of assets on multiple networks.
+          Bridges are technologies that enable the transfer of digital assets between different blockchain networks. They allow users to move assets, such as tokens, from one blockchain to another without the need for a centralized intermediary. This allows for greater interoperability between different blockchain platforms and can also enable the use of assets on multiple networks.
   - type: bridges
-  - type: markdown
-    body: >-
-      ## What are fiat on-ramps?
+  - type: container
+    blocks:
+      - type: markdown
+        body: >-
+          ## What are fiat on-ramps?
 
 
-      Fiat on-ramps allow users to convert fiat currency (government-issued currency, such as USD, EUR, etc.) into cryptocurrency. This can be done through a variety of methods, including cryptocurrency exchanges, peer-to-peer marketplaces. These on-ramps allow individuals to purchase cryptocurrency using their local currency, making it easier for them to enter the crypto market.
+          Fiat on-ramps allow users to convert fiat currency (government-issued currency, such as USD, EUR, etc.) into cryptocurrency. This can be done through a variety of methods, including cryptocurrency exchanges, peer-to-peer marketplaces. These on-ramps allow individuals to purchase cryptocurrency using their local currency, making it easier for them to enter the crypto market.
   - type: on_ramps
