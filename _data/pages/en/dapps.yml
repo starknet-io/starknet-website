@@ -5,4 +5,19 @@ parent_page: /ecosystem/
 breadcrumbs: true
 page_last_updated: true
 blocks:
-  - type: dapps
+  - type: markdown
+    body: >-
+      ## What are wallets?
+
+
+      A cryptocurrency wallet is like a special bank account that you can use to store and manage your digital money, called cryptocurrency. It helps you keep track of how much money you have and lets you send and receive money from other people who also have a cryptocurrency wallet. You can access your wallet from your computer, phone, or other device, and it's important to keep it safe and secure so that nobody can steal your money
+  - type: container
+    max_width: "1062"
+    blocks:
+      - type: dapps
+  - type: markdown
+    body: >-
+      ## How to use wallets
+
+
+      A cryptocurrency wallet is like a special bank account that you can use to store and manage your digital money, called cryptocurrency. It helps you keep track of how much money you have and lets you send and receive money from other people who also have a cryptocurrency wallet. You can access your wallet from your computer, phone, or other device, and it's important to keep it safe and secure so that nobody can steal your money.
