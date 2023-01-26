@@ -30,9 +30,9 @@ export const CommunityCard = ({
   return (
     <Container maxW="1104px">
       <CardLink href={linkHref}>
-        <CardGradientBorder borderRadius="104px">
+        <CardGradientBorder borderRadius="104px" padding="0">
           <Box
-            bg="bg-card"
+            bg="card-bg"
             px={{ base: "24px", md: "48px" }}
             py="8"
             borderRadius="104px"
