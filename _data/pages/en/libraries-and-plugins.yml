@@ -5,5 +5,16 @@ breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: markdown
-    body: >-
-      Libraries & plug-ins
+    body: Libraries & plug-ins
+  - type: link_list
+    blocks:
+      - type: link_list_item
+        is_external: true
+        label: starknet.js
+        sub_label: A Javascript SDK for Starknet
+        href: https://www.starknetjs.com/
+      - type: link_list_item
+        is_external: true
+        label: starknet.php
+        sub_label: A PHP SDK for Starknet
+        href: starknet.php
