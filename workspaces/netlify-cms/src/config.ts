@@ -355,12 +355,21 @@ export const config: CmsConfig = {
           name: "title",
           label: "Title",
         },
-
         {
           name: "template",
           widget: "select",
           options: ["landing", "content"],
           default: "content",
+        },
+        {
+          name: "parent_page",
+          label: "Parent page",
+          required: false,
+          widget: "relation",
+          collection: "pages",
+          search_fields: ["title"],
+          value_field: "id",
+          display_fields: ["title"],
         },
         {
           name: "breadcrumbs",
