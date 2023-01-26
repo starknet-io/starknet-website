@@ -59,7 +59,7 @@ items:
               - custom_title: Starknet Playground
                 custom_external_link: https://starknet.io/playground
               - custom_title: Engineering blog
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/engineering
   - title: Ecosystem
     columns:
       - blocks:
@@ -99,17 +99,17 @@ items:
               - custom_title: Blog home
                 custom_internal_link: /posts/
               - custom_title: Engineering posts
-                custom_internal_link: /posts/
-              - custom_internal_link: /posts/
+                custom_internal_link: /posts/engineering
+              - custom_internal_link: /posts/community-calls
                 custom_title: Community Calls
               - custom_title: Stark struck
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/stark-struck
               - custom_title: Stark math
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/stark-math
               - custom_title: Governance posts
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/governance
               - custom_title: Community & Events posts
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/community-and-events
       - blocks:
           - title: OTHER
             items:
