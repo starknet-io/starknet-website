@@ -23,7 +23,7 @@ export const CardGradientBorder = ({
       transition=" all 0.5s ease"
       _hover={{
         background:
-          "linear-gradient(white, white) padding-box,linear-gradient(200deg, #C507E4, #5C94FF) ",
+          "linear-gradient(200deg, white, white) padding-box,linear-gradient(200deg, #C507E4, #5C94FF) ",
         borderColor: "transparent",
       }}
       {...rest}
