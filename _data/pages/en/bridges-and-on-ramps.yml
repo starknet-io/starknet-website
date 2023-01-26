@@ -6,7 +6,7 @@ breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: container
-    max_width: "1062"
+    max_width: "800"
     blocks:
       - type: markdown
         body: >-
@@ -23,4 +23,5 @@ blocks:
 
 
           Fiat on-ramps allow users to convert fiat currency (government-issued currency, such as USD, EUR, etc.) into cryptocurrency. This can be done through a variety of methods, including cryptocurrency exchanges, peer-to-peer marketplaces. These on-ramps allow individuals to purchase cryptocurrency using their local currency, making it easier for them to enter the crypto market.
+    max_width: "800"
   - type: on_ramps
