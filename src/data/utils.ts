@@ -1,9 +1,10 @@
 import fs from "node:fs/promises";
+import path from "node:path";
 import YAML from "yaml";
 
 export async function getJSON(filepath: string): Promise<any> {
   const file = await fs.readFile(
-    new URL(`../../_data/${filepath}`, import.meta.url).pathname,
+    path.join(process.cwd(), "_data", filepath),
     "utf8",
   );
 
@@ -12,7 +13,7 @@ export async function getJSON(filepath: string): Promise<any> {
 
 export async function getString(filepath: string): Promise<string> {
   const file = await fs.readFile(
-    new URL(`../../_data/${filepath}`, import.meta.url).pathname,
+    path.join(process.cwd(), "_data", filepath),
     "utf8",
   );
 
