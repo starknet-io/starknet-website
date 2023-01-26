@@ -18,7 +18,7 @@ blocks:
           securely scale Ethereum. It is known as a Validity-rollup (or
           ZK-rollup); it ”rolls” many transactions up to send to Ethereum as a
           single transaction. Read on to learn the fundamentals.
-        image: /assets/hero.svg
+        image: /assets/hero-1-.svg
         orientation: left
   - type: markdown
     body: Learn!
