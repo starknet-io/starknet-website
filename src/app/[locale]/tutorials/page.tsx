@@ -16,14 +16,13 @@ import { getTutorialsPage } from "src/data/settings/tutorials-page";
 export default async function TutorialsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
-  // const { title, description } = await getTutorialsPage(locale);
-  // const events = await getTutorials(locale);
+  const { title, description } = await getTutorialsPage(locale);
 
   return (
     <Box>
       <PageLayout
-        sectionHeaderTitle="Tutorials"
-        sectionHeaderDescription="Page header with high level description of section and visual treatment from brand team."
+        sectionHeaderTitle={title}
+        sectionHeaderDescription={description}
         breadcrumbs={
           <Breadcrumb separator="->">
             <BreadcrumbItem>
