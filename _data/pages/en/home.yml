@@ -1,0 +1,25 @@
+id: e27b992a-2ca3-4f78-8f11-ae755307f0dc
+title: Home
+template: landing
+breadcrumbs: false
+page_last_updated: false
+blocks:
+  - type: group
+    blocks:
+      - type: get_involved_card
+        title: "Community led. "
+        description: "This website is a community powered guide to the Starknet
+          ecosystem.  "
+        link_label: Get involved
+        link_href: /community/
+  - type: group
+    blocks:
+      - type: large_card
+        title: What is Starknet?
+        description: "Starknet is a decentralised layer-2 network that enables Ethereum
+          to scale securely and enables dapps to achieve unlimited scale for
+          transactions and computation. "
+        link_label: Learn more
+        link_href: /what-is-starknet/
+        image: /assets/what-is-starknet-small.png
+        orientation: left
