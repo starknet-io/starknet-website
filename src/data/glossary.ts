@@ -1,13 +1,14 @@
-import { MDXProps } from "mdx/types";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Topic {
+interface Glossary {
   readonly glossary_item: string;
-  readonly MDXContent: (props: MDXProps) => JSX.Element;
+  readonly body: string;
 }
 
-export async function getGlossary(locale: string): Promise<readonly Topic[]> {
+export async function getGlossary(
+  locale: string,
+): Promise<readonly Glossary[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/glossary/${locale}.json`),
@@ -23,11 +24,11 @@ export async function getGlossary(locale: string): Promise<readonly Topic[]> {
 export async function getGlossaryByFilename(
   filename: string,
   locale: string,
-): Promise<Topic> {
+): Promise<Glossary> {
   try {
     return await getFirst(
-      () => getMDXModule(`glossary/${locale}/${filename}.md`),
-      () => getMDXModule(`glossary/${defaultLocale}/${filename}.md`),
+      () => getYAML(`glossary/${locale}/${filename}.yml`),
+      () => getYAML(`glossary/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Glossary not found! ${filename}`, {

@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
 interface Topic {
   readonly id: string;
@@ -25,8 +25,8 @@ export async function getTopicByFilename(
 ): Promise<Topic> {
   try {
     return await getFirst(
-      () => getMDXModule(`topics/${locale}/${filename}.md`),
-      () => getMDXModule(`topics/${defaultLocale}/${filename}.md`),
+      () => getYAML(`topics/${locale}/${filename}.yml`),
+      () => getYAML(`topics/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Topic not found! ${filename}`, {

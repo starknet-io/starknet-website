@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
 interface Topic {
   readonly name: string;
@@ -30,8 +30,8 @@ export async function getBridgeByFilename(
 ): Promise<Topic> {
   try {
     return await getFirst(
-      () => getMDXModule(`bridges/${locale}/${filename}.md`),
-      () => getMDXModule(`bridges/${defaultLocale}/${filename}.md`),
+      () => getYAML(`bridges/${locale}/${filename}.yml`),
+      () => getYAML(`bridges/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Bridge not found! ${filename}`, {

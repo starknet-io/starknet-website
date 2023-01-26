@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
 export interface Category {
   readonly id: string;
@@ -27,8 +27,8 @@ export async function getCategoryByFilename(
 ): Promise<Category> {
   try {
     return (await getFirst(
-      () => getMDXModule(`categories/${locale}/${filename}.md`),
-      () => getMDXModule(`categories/${defaultLocale}/${filename}.md`),
+      () => getYAML(`categories/${locale}/${filename}.yml`),
+      () => getYAML(`categories/${defaultLocale}/${filename}.yml`),
     )) as Category;
   } catch (cause) {
     throw new Error(`Category not found! ${filename}`, {

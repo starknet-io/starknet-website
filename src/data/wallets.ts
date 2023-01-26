@@ -1,18 +1,16 @@
-import { MDXProps } from "mdx/types";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
-interface Topic {
+interface Wallet {
   readonly name: string;
   readonly type: string[];
   readonly image: string;
   readonly twitter: string;
   readonly website_url: string;
   readonly description: string;
-  readonly MDXContent: (props: MDXProps) => JSX.Element;
 }
 
-export async function getWallets(locale: string): Promise<readonly Topic[]> {
+export async function getWallets(locale: string): Promise<readonly Wallet[]> {
   try {
     return await getFirst(
       () => getJSON(`_dynamic/wallets/${locale}.json`),
@@ -28,11 +26,11 @@ export async function getWallets(locale: string): Promise<readonly Topic[]> {
 export async function getWalletByFilename(
   filename: string,
   locale: string,
-): Promise<Topic> {
+): Promise<Wallet> {
   try {
     return await getFirst(
-      () => getMDXModule(`wallets/${locale}/${filename}.md`),
-      () => getMDXModule(`wallets/${defaultLocale}/${filename}.md`),
+      () => getYAML(`wallets/${locale}/${filename}.yml`),
+      () => getYAML(`wallets/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`Wallet not found! ${filename}`, {

@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getMDXModule } from "./utils";
+import { getFirst, getJSON, getYAML } from "./utils";
 
 interface Topic {
   readonly name: string;
@@ -32,8 +32,8 @@ export async function getBlockExplorerByFilename(
 ): Promise<Topic> {
   try {
     return await getFirst(
-      () => getMDXModule(`block_explorers/${locale}/${filename}.md`),
-      () => getMDXModule(`block_explorers/${defaultLocale}/${filename}.md`),
+      () => getYAML(`block_explorers/${locale}/${filename}.yml`),
+      () => getYAML(`block_explorers/${defaultLocale}/${filename}.yml`),
     );
   } catch (cause) {
     throw new Error(`BlockExplorer not found! ${filename}`, {

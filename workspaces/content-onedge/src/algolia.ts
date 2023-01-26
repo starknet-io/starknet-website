@@ -6,7 +6,7 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
 import { defaultLocale, locales } from "./locales";
-import { getFirst, json, yaml } from "./utils";
+import { getFirst, yaml } from "./utils";
 
 const dotenvFiles = [".env.local", ".env"];
 

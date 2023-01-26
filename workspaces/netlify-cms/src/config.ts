@@ -1163,6 +1163,19 @@ export const config: CmsConfig = {
               label: "Description",
               name: "description",
             },
+            // {
+            //   label: "Youtube",
+            //   name: "youtube_link",
+            //   widget: 'youtube' as 'object',
+            //   fields: [
+            //     {
+            //       name: 'title'
+            //     },
+            //     {
+            //       name: 'description'
+            //     }
+            //   ]
+            // },
           ],
         },
       ],
