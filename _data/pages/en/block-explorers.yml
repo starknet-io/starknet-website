@@ -5,4 +5,9 @@ parent_page: /ecosystem/
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: hero
+    variant: block_explorers
+    title: Block explorers
+    description: Page header with high level description of section and visual
+      treatment from brand team.
   - type: block_explorers
