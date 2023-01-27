@@ -1,0 +1,10 @@
+id: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
+title: Glossary
+template: content
+parent_page: /learn/
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: page_header
+    title: Glossary
+    description: A list of common terms used in the Starknet ecosystem
