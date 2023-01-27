@@ -40,8 +40,8 @@ export const Footer = ({ mainMenu }: Props) => {
                         {block.items?.map((item, itemIndex) => {
                           let title =
                             item.custom_title ||
-                            item.page_title ||
-                            item.post_title;
+                            item.page_data?.title ||
+                            item.post_data?.title;
 
                           let link;
                           let isExternal;
@@ -55,15 +55,9 @@ export const Footer = ({ mainMenu }: Props) => {
                               "",
                             )}`;
                           } else if (item.page) {
-                            link = `/${locale}/${item.page.replace(
-                              /(^\/|\/$)/g,
-                              "",
-                            )}`;
+                            link = `/${locale}/${item.page_data?.slug}`;
                           } else if (item.post) {
-                            link = `/${locale}/posts/${item.post.replace(
-                              /(^\/|\/$)/g,
-                              "",
-                            )}`;
+                            link = `/${locale}/posts/${item.post_data?.category}/${item.post_data?.slug}`;
                           } else {
                             return <span key={itemIndex}>{title}</span>;
                           }
