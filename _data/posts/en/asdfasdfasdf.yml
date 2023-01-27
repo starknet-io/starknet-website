@@ -7,6 +7,7 @@ image: /assets/2.svg
 category: community-and-events
 topic:
   - decentralization
+  - cryptography
 short_desc: "asdfasdfasdf sdafsadf "
 blocks:
   - type: markdown
