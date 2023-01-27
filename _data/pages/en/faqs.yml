@@ -16,7 +16,15 @@ blocks:
           presented in our [decentralization
           proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
           in the section titled  “What will the tokens be used for?”
-  - type: accordion_item
-    label: Where Can I Monitor StarkNet’s Transactions?
-    body: There are 2 block explorers you can
-      use: [Voyager](https://voyager.online/txns) and [StarkScan](https://starkscan.co/)
+      - type: accordion_item
+        body: SHARP (shared prover) is a service that allows proving the execution
+          of **several** Cairo programs in **the same proof**. The Cairo program
+          enforcing the validity of Starknet’s state transition, the StarkNet
+          OS, can make use of SHARP. Namely, proving StarkNet’s state transition
+          can be done together with a bunch of programs that are unrelated to
+          StarkNet, lowering the marginal cost of each participant. Whether or
+          not it is worthwhile for StarkNet to use SHARP or have a dedicated
+          prover depends on several parameters, most prominently the TPS
+          (transactions per second). Large executions might not benefit too much
+          by sharing the proof with much smaller programs.
+        label: How is StarkNet Related to SHARP?
