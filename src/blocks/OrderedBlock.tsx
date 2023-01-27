@@ -1,3 +1,4 @@
+"use client";
 import { Box, Flex } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import React from "react";
@@ -22,7 +23,7 @@ export const OrderedBlockItem = ({
   return (
     <Flex direction="column">
       <Heading as="h2" variant="h2" color="heading-navy-fg">
-        {title}
+        {title}ss
       </Heading>
       <Box>{children}</Box>
     </Flex>

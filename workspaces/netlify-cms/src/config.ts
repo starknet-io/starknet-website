@@ -320,7 +320,8 @@ const blocks: CmsFieldList["types"] = [
     widget: "object",
     fields: [
       {
-        name: "Title",
+        name: "title",
+        label: "Titles",
       },
       {
         name: "body",
