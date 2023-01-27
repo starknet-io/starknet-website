@@ -2,7 +2,11 @@
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
-import { HiArrowRightCircle, HiArrowUpRight } from "react-icons/hi2";
+import {
+  HiArrowRightCircle,
+  HiArrowUpRight,
+  HiOutlineArrowRightCircle,
+} from "react-icons/hi2";
 import {
   Box,
   Icon,
@@ -88,7 +92,7 @@ const Item = ({
           direction="row"
           _hover={{ textDecoration: "underline" }}
         >
-          {hasIcon && <Icon boxSize="24px" as={HiArrowRightCircle} />}
+          {hasIcon && <Icon boxSize="24px" as={HiOutlineArrowRightCircle} />}
           {label}{" "}
           {isExternal && (
             <Icon fontWeight="bold" boxSize="12px" as={HiArrowUpRight} />
