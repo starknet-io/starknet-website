@@ -286,6 +286,21 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "accordion_item",
+    label: "Accordion item",
+    widget: "object",
+    fields: [
+      {
+        name: "label",
+      },
+      {
+        name: "content",
+        label: "Content",
+        widget: "markdown",
+      },
+    ],
+  },
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
@@ -305,6 +320,24 @@ const topLevelBlocks: CmsFieldList["types"] = [
   {
     name: "link_list",
     label: "LinkList",
+    widget: "object",
+    fields: [
+      {
+        name: "heading",
+        label: "Heading",
+        required: false,
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
+  {
+    name: "accordion",
+    label: "Accordion",
     widget: "object",
     fields: [
       {

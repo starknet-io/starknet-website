@@ -17,6 +17,7 @@ import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { LargeCard } from "./cards/LargeCard";
 import { Container } from "./Container";
 import { LinkList, LinkListItem } from "./LinkList";
+import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -115,6 +116,22 @@ export async function Block({ block, locale }: Props): JSX.Element {
         href={block.href}
         subLabel={block.sub_label}
       />
+    );
+  } else if (block.type === "accordion") {
+    return (
+      <AccordionRoot heading={block.heading}>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </AccordionRoot>
+    );
+  } else if (block.type === "accordion_item") {
+    return (
+      <AccordionItem label={block.label}>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </AccordionItem>
     );
   } else if (block.type === "group") {
     return (
