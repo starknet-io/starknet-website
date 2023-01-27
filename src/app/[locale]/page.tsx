@@ -9,7 +9,7 @@ import { BlockGrouping } from "../../blocks/BlockGrouping";
 import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import { FaqBlock } from "src/blocks/FaqBlock";
+
 import { Flex } from "../../libs/chakra-ui";
 import BlockDapps from "src/blocks/dataBlocks/BlockDapps/BlockDapps";
 import * as LinkList from "@ui/LinkList/LinkList";
@@ -238,33 +238,7 @@ export default async function Index({
           <BlockGrouping>
             <BlockStats />
           </BlockGrouping>
-          <BlockGrouping>
-            <FaqBlock
-              heading="Common questions"
-              items={[
-                {
-                  label: "What is Starknet?",
-                  content:
-                    "Starknet is a technology that uses math and cryptography to securely scale Ethereum. The community is growing fast and building out an exciting ecosystem of dapps and infrastructure.",
-                },
-                {
-                  label: "How does it scale Ethereum?",
-                  content:
-                    "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called “STARK Proofs” to securely compress huge amounts of transactions for Ethereum.",
-                },
-              ]}
-            />
-            <FaqBlock
-              heading="Something else"
-              items={[
-                {
-                  label: "What is Starknet?",
-                  content:
-                    "Starknet is a technology that uses math and cryptography to securely scale Ethereum. The community is growing fast and building out an exciting ecosystem of dapps and infrastructure.",
-                },
-              ]}
-            />
-          </BlockGrouping>
+
           <BlockGrouping>
             <BlockDapps
               params={{

@@ -84,7 +84,8 @@ export interface LinkListItem {
 
 export interface AccordionItem {
   readonly type: "accordion_item";
-  readonly label?: string;
+  readonly label: string;
+  readonly body: MarkdownBlock;
 }
 
 export interface HeroBlock {

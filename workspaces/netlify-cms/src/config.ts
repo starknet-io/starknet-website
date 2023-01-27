@@ -295,7 +295,7 @@ const blocks: CmsFieldList["types"] = [
         name: "label",
       },
       {
-        name: "content",
+        name: "body",
         label: "Content",
         widget: "markdown",
       },

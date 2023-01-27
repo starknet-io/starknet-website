@@ -128,9 +128,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
   } else if (block.type === "accordion_item") {
     return (
       <AccordionItem label={block.label}>
-        {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
-        ))}
+        <>{block.body} </>
       </AccordionItem>
     );
   } else if (block.type === "group") {

@@ -19,7 +19,12 @@ export const AccordionRoot = ({ heading, children }: Props) => {
   );
 };
 
-export const AccordionItem = ({ label, children }: any) => {
+type ItemProps = {
+  children: React.ReactNode;
+  label: string;
+};
+
+export const AccordionItem = ({ label, children }: ItemProps) => {
   return (
     <PageAccordion.Item label={label}>
       <PageAccordion.Panel>{children}</PageAccordion.Panel>
