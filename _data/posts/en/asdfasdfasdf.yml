@@ -1,0 +1,13 @@
+id: ab955bb4-1bfc-4027-b3f1-cd9f1441a03e
+post_type: article
+title: asdfasdfasdf
+time_to_consume: "3"
+video_link: www.youtube.com
+image: /assets/2.svg
+category: community-and-events
+topic:
+  - decentralization
+short_desc: "asdfasdfasdf sdafsadf "
+blocks:
+  - type: markdown
+    body: a﻿sdfdasdfasdfasdfas
