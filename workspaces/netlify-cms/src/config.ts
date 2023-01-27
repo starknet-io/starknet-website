@@ -289,8 +289,6 @@ const blocks: CmsFieldList["types"] = [
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
-  ...blocks,
-
   {
     name: "group",
     label: "Block group",
@@ -330,7 +328,7 @@ const topLevelBlocks: CmsFieldList["types"] = [
       {
         name: "max_width",
         label: "Max width",
-        types: blocks,
+        widget: "number",
       },
       {
         name: "blocks",
@@ -384,6 +382,7 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
+  ...blocks,
 ];
 
 export const config: CmsConfig = {
