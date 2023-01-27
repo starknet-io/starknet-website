@@ -134,9 +134,16 @@ export async function Block({ block, locale }: Props): JSX.Element {
       </AccordionItem>
     );
   } else if (block.type === "ordered_block") {
+    let newBlocks = block.blocks;
+    // @ts-ignore - will fix types later
+    let alphabeticalBlocks = newBlocks.sort((a: any, b: any) => {
+      if (a.title < b.title) {
+        return -1;
+      }
+    });
     return (
       <OrderedBlock>
-        {block.blocks.map((block, i) => {
+        {alphabeticalBlocks.map((block: any, i: number) => {
           console.log(block);
           return <Block key={i} block={block} locale={locale} />;
         })}
