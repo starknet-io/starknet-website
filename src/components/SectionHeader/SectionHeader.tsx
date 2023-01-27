@@ -6,7 +6,7 @@ import React from "react";
 
 type Props = {
   title: string | undefined;
-  description: string | undefined;
+  description?: string | undefined;
   size?: "sm" | "lg";
 };
 
@@ -28,9 +28,11 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
           >
             {title}
           </Heading>
-          <Text color="muted" fontSize="md" pb={8}>
-            {description}
-          </Text>
+          {description && (
+            <Text color="muted" fontSize="md" pb={8}>
+              {description}
+            </Text>
+          )}
         </Box>
         <Divider variant="primary" />
       </Stack>

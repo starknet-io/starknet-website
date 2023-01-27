@@ -20,6 +20,19 @@ const blocks: CmsFieldList["types"] = [
     ],
   },
   {
+    name: "page_header",
+    label: "Page Header",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+      },
+      {
+        name: "description",
+      },
+    ],
+  },
+  {
     name: "community_events",
     label: "Community events block",
     widget: "object",

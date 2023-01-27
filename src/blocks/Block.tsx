@@ -18,6 +18,7 @@ import { LargeCard } from "./cards/LargeCard";
 import { Container } from "./Container";
 import { LinkList, LinkListItem } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
+import { PageHeaderBlock } from "./PageHeaderBlock";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -130,6 +131,10 @@ export async function Block({ block, locale }: Props): JSX.Element {
       <AccordionItem label={block.label}>
         <>{block.body} </>
       </AccordionItem>
+    );
+  } else if (block.type === "page_header") {
+    return (
+      <PageHeaderBlock title={block.title} description={block.description} />
     );
   } else if (block.type === "group") {
     return (
