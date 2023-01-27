@@ -1,4 +1,6 @@
 import { defaultLocale } from "../i18n/config";
+import { Page } from "../pages";
+import { Post } from "../posts";
 import { getFirst, getJSON } from "../utils";
 
 export interface MainMenu {
@@ -26,10 +28,9 @@ export interface BlockItem {
   readonly custom_external_link?: string;
 
   readonly page?: string;
-  readonly page_title?: string;
-
+  readonly page_data?: Omit<Page, "blocks">;
   readonly post?: string;
-  readonly post_title?: string;
+  readonly post_data?: Omit<Post, "blocks" | "body">;
 }
 
 export async function getMainMenu(locale: string): Promise<MainMenu> {

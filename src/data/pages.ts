@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getYAML } from "./utils";
+import { getFirst, getJSON } from "./utils";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -144,7 +144,8 @@ export type TopLevelBlock =
   | LinkListBlock;
 
 export interface Page {
-  readonly path: string;
+  readonly id: string;
+  readonly slug: string;
   readonly title: string;
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
@@ -152,25 +153,18 @@ export interface Page {
   readonly blocks: readonly TopLevelBlock[];
 }
 
-export async function getPageByFilename(
-  filename: string,
-  locale: string
+export async function getPageBySlug(
+  slug: string,
+  locale: string,
 ): Promise<Page> {
   try {
     return (await getFirst(
-      () => getYAML(`pages/${locale}/${filename}.yml`),
-      () => getYAML(`pages/${defaultLocale}/${filename}.yml`)
+      () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
     )) as Page;
   } catch (cause) {
-    throw new Error(`Page not found! ${filename}`, {
+    throw new Error(`Page not found! ${slug}`, {
       cause,
     });
   }
-}
-
-export async function getPageByPage(
-  page: string,
-  locale: string
-): Promise<Page> {
-  return getPageByFilename(page.replace(/(^\/|\/$)/g, ""), locale);
 }
