@@ -1,0 +1,22 @@
+id: b5689d3a-348b-4ccb-b787-520b64c55e41
+title: faqs
+template: content
+parent_page: /learn/
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: accordion
+    heading: Common questions
+    blocks:
+      - type: accordion_item
+        label: What will the StarkNet tokens be used for?
+        body: The StarkNet token will be used as a staking token for participation in
+          StarkNet’s consensus mechanisms, as a Governance token, and for paying
+          transaction fees. The rationale for each of these utilities is
+          presented in our [decentralization
+          proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
+          in the section titled  “What will the tokens be used for?”
+  - type: accordion_item
+    label: Where Can I Monitor StarkNet’s Transactions?
+    body: There are 2 block explorers you can
+      use: [Voyager](https://voyager.online/txns) and [StarkScan](https://starkscan.co/)
