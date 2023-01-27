@@ -627,8 +627,8 @@ export const config: CmsConfig = {
         },
         {
           name: "start_date",
-          label: "Start Date",
-          widget: "datetime",
+          label: "Date range",
+          widget: "string",
         },
         {
           name: "image",
@@ -666,14 +666,14 @@ export const config: CmsConfig = {
             },
           ],
         },
-        {
-          name: "city",
-          label: "City",
-        },
-        {
-          name: "country",
-          label: "Country",
-        },
+        // {
+        //   name: "city",
+        //   label: "City",
+        // },
+        // {
+        //   name: "country",
+        //   label: "Country",
+        // },
         {
           name: "tags",
           label: "Tags",
@@ -793,6 +793,14 @@ export const config: CmsConfig = {
                 {
                   label: "Canada",
                   value: "canada",
+                },
+                {
+                  label: "Tel-Aviv / Remote",
+                  value: "tel_aviv_remote",
+                },
+                {
+                  label: "Global / Remote",
+                  value: "global_remote",
                 },
               ],
             },
