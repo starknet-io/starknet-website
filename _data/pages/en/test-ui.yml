@@ -1,9 +1,13 @@
 id: /test-ui-page/
-title: Test ui
+title: Test UI - Full
 template: landing
 breadcrumbs: true
 page_last_updated: false
 blocks:
+  - type: page_header
+    title: "Test UI page "
+    description: SHARP (shared prover) is a service that allows proving the
+      execution of several Cairo programs in the same proof.
   - type: hero
     title: Learn
     description: "Starknet sits on top of Ethereum as a layer 2 network. It uses

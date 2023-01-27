@@ -1,3 +1,4 @@
+import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
 import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON } from "./utils";
@@ -87,6 +88,11 @@ export interface AccordionItem {
   readonly label: string;
   readonly body: MarkdownBlock;
 }
+export interface PageHeaderBlock {
+  readonly type: "page_header";
+  readonly title: string;
+  readonly description: string;
+}
 
 export interface HeroBlock {
   readonly type: "hero";
@@ -117,7 +123,8 @@ export type Block =
   | GetInvolvedBlock
   | HeroBlock
   | LinkListItem
-  | AccordionItem;
+  | AccordionItem
+  | PageHeaderBlock;
 
 export interface Container {
   readonly type: "container";
