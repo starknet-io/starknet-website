@@ -20,7 +20,7 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
       <ReactMarkdown
         components={{
           h2: (props) => (
-            <Heading as="h2" color="heading-navy-fg" variant="h2" {...props} />
+            <Heading as="h2" color="heading-navy-fg" variant="h3" {...props} />
           ),
           h3: (props) => (
             <Heading
