@@ -6,8 +6,6 @@ page_last_updated: true
 blocks:
   - type: markdown
     body: >-
-      
-
       ## Section 1
 
 
@@ -15,6 +13,9 @@ blocks:
 
 
       StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
+
+
+      a﻿sdfsadf
 
 
       ## Section 2
@@ -36,8 +37,6 @@ blocks:
 
 
       StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
-
-
 
 
       ## Section 1
