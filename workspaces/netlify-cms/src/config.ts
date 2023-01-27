@@ -286,6 +286,21 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "accordion_item",
+    label: "Accordion item",
+    widget: "object",
+    fields: [
+      {
+        name: "label",
+      },
+      {
+        name: "body",
+        label: "Content",
+        widget: "markdown",
+      },
+    ],
+  },
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
@@ -305,6 +320,24 @@ const topLevelBlocks: CmsFieldList["types"] = [
   {
     name: "link_list",
     label: "LinkList",
+    widget: "object",
+    fields: [
+      {
+        name: "heading",
+        label: "Heading",
+        required: false,
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
+  {
+    name: "accordion",
+    label: "Accordion",
     widget: "object",
     fields: [
       {
@@ -844,25 +877,7 @@ export const config: CmsConfig = {
         },
       ],
     },
-    {
-      label: "Faqs",
-      name: "faqs",
-      folder: `_data/faqs/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "faq_item",
-      fields: [
-        {
-          label: "Question",
-          name: "faq_item",
-        },
-        {
-          label: "Answer",
-          name: "body",
-          widget: "markdown",
-        },
-      ],
-    },
+
     {
       label: "Dapps",
       name: "dapps",

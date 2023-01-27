@@ -1,0 +1,30 @@
+id: b5689d3a-348b-4ccb-b787-520b64c55e41
+title: faqs
+template: content
+parent_page: /learn/
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: accordion
+    heading: Common questions
+    blocks:
+      - type: accordion_item
+        label: What will the StarkNet tokens be used for?
+        body: The StarkNet token will be used as a staking token for participation in
+          StarkNet’s consensus mechanisms, as a Governance token, and for paying
+          transaction fees. The rationale for each of these utilities is
+          presented in our [decentralization
+          proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
+          in the section titled  “What will the tokens be used for?”
+      - type: accordion_item
+        body: SHARP (shared prover) is a service that allows proving the execution
+          of **several** Cairo programs in **the same proof**. The Cairo program
+          enforcing the validity of Starknet’s state transition, the StarkNet
+          OS, can make use of SHARP. Namely, proving StarkNet’s state transition
+          can be done together with a bunch of programs that are unrelated to
+          StarkNet, lowering the marginal cost of each participant. Whether or
+          not it is worthwhile for StarkNet to use SHARP or have a dedicated
+          prover depends on several parameters, most prominently the TPS
+          (transactions per second). Large executions might not benefit too much
+          by sharing the proof with much smaller programs.
+        label: How is StarkNet Related to SHARP?

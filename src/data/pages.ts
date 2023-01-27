@@ -1,3 +1,4 @@
+import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON } from "./utils";
 
@@ -81,6 +82,12 @@ export interface LinkListItem {
   readonly is_external?: boolean;
 }
 
+export interface AccordionItem {
+  readonly type: "accordion_item";
+  readonly label: string;
+  readonly body: MarkdownBlock;
+}
+
 export interface HeroBlock {
   readonly type: "hero";
   readonly title: string;
@@ -109,7 +116,8 @@ export type Block =
   | ImageIconLinkCardBlock
   | GetInvolvedBlock
   | HeroBlock
-  | LinkListItem;
+  | LinkListItem
+  | AccordionItem;
 
 export interface Container {
   readonly type: "container";
@@ -135,13 +143,19 @@ export interface LinkListBlock {
   readonly heading?: string;
   readonly blocks: readonly Block[];
 }
+export interface AccordionBlock {
+  readonly type: "accordion";
+  readonly heading?: string;
+  readonly blocks: readonly Block[];
+}
 
 export type TopLevelBlock =
   | Block
   | FlexLayoutBlock
   | GroupBlock
   | Container
-  | LinkListBlock;
+  | LinkListBlock
+  | AccordionBlock;
 
 export interface Page {
   readonly id: string;
@@ -155,12 +169,12 @@ export interface Page {
 
 export async function getPageBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
