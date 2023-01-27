@@ -581,12 +581,6 @@ export const config: CmsConfig = {
           widget: "list",
           types: topLevelBlocks,
         },
-        {
-          name: "body",
-          label: "Body",
-          widget: "markdown",
-          required: false,
-        },
       ],
     },
     {
