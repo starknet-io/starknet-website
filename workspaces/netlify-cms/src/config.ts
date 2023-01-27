@@ -877,25 +877,7 @@ export const config: CmsConfig = {
         },
       ],
     },
-    {
-      label: "Faqs",
-      name: "faqs",
-      folder: `_data/faqs/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "faq_item",
-      fields: [
-        {
-          label: "Question",
-          name: "faq_item",
-        },
-        {
-          label: "Answer",
-          name: "body",
-          widget: "markdown",
-        },
-      ],
-    },
+
     {
       label: "Dapps",
       name: "dapps",
