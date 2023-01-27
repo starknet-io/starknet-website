@@ -18,3 +18,4 @@ blocks:
         label: starknet.php
         sub_label: A PHP SDK for Starknet
         href: starknet.php
+    heading: Libraries
