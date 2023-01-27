@@ -45,6 +45,80 @@ for (const datatype of datatypes) {
   }
 }
 
+const postsIdMap = new Map<string, any>();
+
+{
+  // posts
+  const filenames = await fs.readdir(`_data/posts/${defaultLocale}`);
+
+  for (const locale of locales) {
+    await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
+
+    for (const filename of filenames) {
+      const defaultLocaleData = await yaml(
+        `_data/posts/${defaultLocale}/${filename}`,
+      );
+
+      const data = await getFirst(
+        () => yaml(`_data/posts/${locale.code}/${filename}`),
+        () => defaultLocaleData,
+      );
+
+      const safeID = slugify(data.id);
+      const slug = slugify(defaultLocaleData.title);
+      const finalData = {
+        ...data,
+        id: safeID,
+        slug,
+      };
+
+      postsIdMap.set(`${locale.code}/${safeID}`, finalData);
+
+      await write(
+        `_data/_dynamic/posts/${locale.code}/${slug}.json`,
+        finalData,
+      );
+    }
+  }
+}
+
+const pagesIdMap = new Map<string, any>();
+
+{
+  // pages
+  const filenames = await fs.readdir(`_data/pages/${defaultLocale}`);
+
+  for (const locale of locales) {
+    await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
+
+    for (const filename of filenames) {
+      const defaultLocaleData = await yaml(
+        `_data/pages/${defaultLocale}/${filename}`,
+      );
+
+      const data = await getFirst(
+        () => yaml(`_data/pages/${locale.code}/${filename}`),
+        () => defaultLocaleData,
+      );
+
+      const safeID = slugify(data.id);
+      const slug = slugify(defaultLocaleData.title);
+      const finalData = {
+        ...data,
+        id: safeID,
+        slug,
+      };
+
+      pagesIdMap.set(`${locale.code}/${safeID}`, finalData);
+
+      await write(
+        `_data/_dynamic/pages/${locale.code}/${slug}.json`,
+        finalData,
+      );
+    }
+  }
+}
+
 // main menu
 await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 
@@ -59,28 +133,37 @@ for (const locale of locales) {
       for (const block of column.blocks ?? []) {
         for (const item of block.items ?? []) {
           if (item.page != null) {
-            const filename = item.page.replace(/(^\/|\/$)/g, "");
-            if (filename !== "") {
-              const data = await getFirst(
-                () => yaml(`_data/pages/${locale.code}/${filename}.yml`),
-                () => yaml(`_data/pages/${defaultLocale}/${filename}.yml`),
-                async () => null,
-              );
+            const key = `${locale.code}/${slugify(item.page)}`;
+            if (pagesIdMap.has(key)) {
+              const data = pagesIdMap.get(key);
 
-              item.page_title = data?.title;
+              item.page_data = {
+                id: data.id,
+                slug: data.slug,
+                title: data.title,
+                template: data.template,
+                breadcrumbs: data.breadcrumbs,
+                pageLastUpdated: data.pageLastUpdated,
+              };
             }
           }
 
           if (item.post != null) {
-            const filename = item.post.replace(/(^\/|\/$)/g, "");
-            if (filename !== "") {
-              const data = await getFirst(
-                () => yaml(`_data/posts/${locale.code}/${filename}.yml`),
-                () => yaml(`_data/posts/${defaultLocale}/${filename}.yml`),
-                async () => null,
-              );
+            const key = `${locale.code}/${slugify(item.post)}`;
+            if (postsIdMap.has(key)) {
+              const data = postsIdMap.get(key);
 
-              item.post_title = data?.title;
+              item.post_data = {
+                id: data.id,
+                slug: data.slug,
+                title: data.title,
+                image: data.image,
+                category: data.category,
+                topic: data.topic,
+                short_desc: data.short_desc,
+                locale: data.locale,
+                filepath: data.filepath,
+              };
             }
           }
         }
@@ -89,31 +172,4 @@ for (const locale of locales) {
   }
 
   await write(`_data/_dynamic/main-menu/${locale.code}.json`, mainMenu);
-}
-
-// posts
-const filenames = await fs.readdir(`_data/posts/${defaultLocale}`);
-
-for (const locale of locales) {
-  await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
-
-  for (const filename of filenames) {
-    const defaultLocaleData = await yaml(
-      `_data/posts/${defaultLocale}/${filename}`,
-    );
-
-    const data = await getFirst(
-      () => yaml(`_data/posts/${locale.code}/${filename}`),
-      () => defaultLocaleData,
-    );
-
-    const safeID = slugify(data.id);
-    const slug = slugify(defaultLocaleData.title);
-
-    await write(`_data/_dynamic/posts/${locale.code}/${slug}.json`, {
-      ...data,
-      id: safeID,
-      slug,
-    });
-  }
 }

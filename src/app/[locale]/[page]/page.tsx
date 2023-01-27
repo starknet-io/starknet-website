@@ -1,6 +1,6 @@
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { getPageByFilename } from "src/data/pages";
+import { getPageBySlug } from "src/data/pages";
 import { PageContentContainer } from "../(components)/PageContentContainer";
 
 import {
@@ -33,7 +33,7 @@ export default async function Page({
   try {
     const messages = await getMessages(locale);
     const { title, blocks, template, breadcrumbs, pageLastUpdated } =
-      await getPageByFilename(page, locale);
+      await getPageBySlug(page, locale);
     console.log(template);
     return (
       <Box>

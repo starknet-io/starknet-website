@@ -23,8 +23,8 @@ export interface BlockItem {
   custom_external_link?: string;
 
   page?: string;
-  page_title?: string;
+  page_data?: any;
 
   post?: string;
-  post_title?: string;
+  post_data?: any;
 }
