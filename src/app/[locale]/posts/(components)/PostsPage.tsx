@@ -6,7 +6,6 @@ import {
   SimpleGrid,
   Breadcrumb,
   Box,
-  Stack,
   Button,
   Wrap,
   HStack,
@@ -15,8 +14,8 @@ import {
 } from "@chakra-ui/react";
 import * as SubNav from "@ui/SubNav/SubNav";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { use, useMemo } from "react";
-import algoliasearch from "src/libs/algoliasearch/lite";
+import { useMemo } from "react";
+import algoliasearch, { SearchClient } from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
@@ -29,36 +28,48 @@ import {
 } from "react-instantsearch-hooks";
 import { PageContentContainer } from "../../(components)/PageContentContainer";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { getCategories } from "src/data/categories";
+import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import type { Topic } from "src/data/topics";
 
-export interface AutoProps {
-  readonly params: {
-    readonly locale: string;
+export interface Props extends LocaleProps {
+  readonly categories: readonly Category[];
+  readonly topics: readonly Topic[];
+  readonly params: LocaleParams & {
+    readonly category?: string;
   };
-}
-
-export interface Props extends AutoProps {
   readonly env: {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
 }
 
-export function PostsPage({ params, env }: Props): JSX.Element | null {
+export function PostsPage({
+  env,
+  params,
+  categories,
+  topics,
+}: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
+
+  const searchParams = useSearchParams();
 
   return (
     <Box pt="18">
       <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
         <Configure
           hitsPerPage={40}
-          facetsRefinements={{ locale: [params.locale] }}
+          facetsRefinements={{
+            locale: [params.locale],
+            topic: searchParams.get("topic")?.split(",") ?? [],
+            category: params.category != null ? [params.category] : [],
+          }}
         />
         <Container maxW="container.xl" mb={4}>
-          <CustomCategories />
+          <CustomCategories categories={categories} params={params} />
         </Container>
         <PageLayout
           sectionHeaderTitle="Blog"
@@ -81,7 +92,7 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
           pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <CustomTopics />
+              <CustomTopics topics={topics} />
             </Box>
           }
           main={<CustomHits />}
@@ -90,47 +101,77 @@ export function PostsPage({ params, env }: Props): JSX.Element | null {
     </Box>
   );
 }
+function CustomTopics({ topics }: Pick<Props, "topics">) {
+  const router = useRouter();
+  const pathname = usePathname()!;
+  const searchParams = useSearchParams();
+  const topicSet = useMemo(() => {
+    return new Set(searchParams.get("topic")?.split(",") ?? []);
+  }, [searchParams]);
 
-function CustomTopics() {
-  const { items, refine } = useRefinementList({
+  const { items } = useRefinementList({
     attribute: "topic",
     sortBy: ["name:asc"],
   });
-  console.log("topics", items);
+
   return (
     <Wrap>
-      {items.map((item, i) => (
+      {items.map((topic, i) => (
         <Button
           size="sm"
-          variant={item.isRefined ? "filterActive" : "filter"}
-          onClick={() => refine(item.value)}
+          variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
+          onClick={() => {
+            const params = new URLSearchParams(searchParams);
+
+            if (topicSet.has(topic.value)) {
+              topicSet.delete(topic.value);
+            } else {
+              topicSet.add(topic.value);
+            }
+
+            if (topicSet.size === 0) {
+              router.replace(pathname);
+            } else {
+              params.set("topic", Array.from(topicSet.values()).join(","));
+              router.replace(`${pathname}?${params.toString()}`);
+            }
+          }}
           key={i}
         >
-          {item.label}
+          {topics.find((a) => a.id === topic.value)?.name}
         </Button>
       ))}
     </Wrap>
   );
 }
 
-function CustomCategories() {
-  const { items, refine } = useHierarchicalMenu({
-    attributes: ["category"],
-  });
-  const { refine: clearRefine } = useClearRefinements();
-
+function CustomCategories({
+  categories,
+  params,
+}: Pick<Props, "categories" | "params">) {
+  const router = useRouter();
+  console.log(params);
   return (
     <SubNav.Root>
-      <SubNav.Item onClick={() => clearRefine()}>All posts</SubNav.Item>
-      {items.map((item, i) => (
+      <SubNav.Item
+        isActive={params.category == null}
+        onClick={() => {
+          router.replace(`/${params.locale}/posts`);
+        }}
+      >
+        All posts
+      </SubNav.Item>
+      {categories.map((category) => (
         <SubNav.Item
+          isActive={category.id === params.category}
           onClick={() => {
-            if (item.isRefined) return;
-            refine(item.value);
+            if (category.id === params.category) return;
+
+            router.replace(`/${params.locale}/posts/${category.id}`);
           }}
-          key={item.value}
+          key={category.id}
         >
-          <> {item.label}</>
+          <> {category.name}</>
         </SubNav.Item>
       ))}
     </SubNav.Root>
@@ -162,7 +203,10 @@ function CustomHits() {
         pt={2}
       >
         {hits.map((hit, i) => (
-          <ArticleCard.Root href={`/${hit.locale}/posts/${hit.slug}`} key={i}>
+          <ArticleCard.Root
+            href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
+            key={i}
+          >
             <ArticleCard.Image url={hit.image} />
 
             <ArticleCard.Body>
