@@ -161,6 +161,7 @@ blocks:
 
 
           In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+        body: f﻿asdfasdfasdfasdfsadf
       - type: accordion_item
         label: What is another question
         content: We are happy to announce a new StarkNet Sequencer is in the works. As
@@ -171,6 +172,7 @@ blocks:
           we now continue with StarkNet’s new sequencer. It will be open-source,
           available under Apache 2.0 license, and you can go check out [the
           repo](https://github.com/starkware-libs/blockifier) now!
+        body: a﻿sdfasdfasdfsadf
   - type: link_list
     heading: Link list Heading
     blocks:
