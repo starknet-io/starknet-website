@@ -19,6 +19,7 @@ import { Container } from "./Container";
 import { LinkList, LinkListItem } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
+import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -131,6 +132,21 @@ export async function Block({ block, locale }: Props): JSX.Element {
       <AccordionItem label={block.label}>
         <>{block.body} </>
       </AccordionItem>
+    );
+  } else if (block.type === "ordered_block") {
+    return (
+      <OrderedBlock>
+        {block.blocks.map((block, i) => {
+          console.log(block);
+          return <Block key={i} block={block} locale={locale} />;
+        })}
+      </OrderedBlock>
+    );
+  } else if (block.type === "ordered_item") {
+    return (
+      <OrderedBlockItem title={block.title}>
+        <>{block.body} </>
+      </OrderedBlockItem>
     );
   } else if (block.type === "page_header") {
     return (

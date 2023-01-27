@@ -314,6 +314,21 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "ordered_item",
+    label: "Ordered item",
+    widget: "object",
+    fields: [
+      {
+        name: "Title",
+      },
+      {
+        name: "body",
+        label: "Content",
+        widget: "markdown",
+      },
+    ],
+  },
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
@@ -358,6 +373,19 @@ const topLevelBlocks: CmsFieldList["types"] = [
         label: "Heading",
         required: false,
       },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
+  {
+    name: "ordered_block",
+    label: "Ordered Block",
+    widget: "object",
+    fields: [
       {
         name: "blocks",
         label: "Blocks",

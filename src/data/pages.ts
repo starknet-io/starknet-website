@@ -88,6 +88,11 @@ export interface AccordionItem {
   readonly label: string;
   readonly body: MarkdownBlock;
 }
+export interface OrderedItem {
+  readonly type: "ordered_item";
+  readonly title: string;
+  readonly body: MarkdownBlock;
+}
 export interface PageHeaderBlock {
   readonly type: "page_header";
   readonly title: string;
@@ -124,6 +129,7 @@ export type Block =
   | HeroBlock
   | LinkListItem
   | AccordionItem
+  | OrderedItem
   | PageHeaderBlock;
 
 export interface Container {
@@ -155,6 +161,10 @@ export interface AccordionBlock {
   readonly heading?: string;
   readonly blocks: readonly Block[];
 }
+export interface OrderedBlock {
+  readonly type: "ordered_block";
+  readonly blocks: readonly Block[];
+}
 
 export type TopLevelBlock =
   | Block
@@ -162,7 +172,8 @@ export type TopLevelBlock =
   | GroupBlock
   | Container
   | LinkListBlock
-  | AccordionBlock;
+  | AccordionBlock
+  | OrderedBlock;
 
 export interface Page {
   readonly id: string;
