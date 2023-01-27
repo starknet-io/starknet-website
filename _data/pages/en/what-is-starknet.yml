@@ -4,12 +4,12 @@ template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: What is starknet
   - type: markdown
     body: >-
-      ## What is StarkNet?
-
-
-      StarkNet is a cutting-edge, permissionless layer 2 network that empowers developers and users to unleash the full potential of smart contracts. 
+      StarkNet is a cutting-edge, permissionless layer 2 network that empowers
+      developers and users to unleash the full potential of smart contracts. 
 
 
       ![](/assets/cleanshot-2023-01-17-at-14.01.12-2x.png)
