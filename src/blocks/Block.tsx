@@ -129,7 +129,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     );
   } else if (block.type === "accordion_item") {
     return (
-      <AccordionItem label={block.title}>
+      <AccordionItem label={block.label}>
         <>{block.body} </>
       </AccordionItem>
     );

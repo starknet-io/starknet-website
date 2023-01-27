@@ -306,6 +306,7 @@ const blocks: CmsFieldList["types"] = [
     fields: [
       {
         name: "label",
+        label: "Label",
       },
       {
         name: "body",
