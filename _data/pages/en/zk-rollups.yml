@@ -4,6 +4,9 @@ template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: ZK rollups
+blocks:
   - type: markdown
     body: dsfsdf
   - type: get_involved_card

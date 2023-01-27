@@ -4,6 +4,9 @@ template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Templates
+blocks:
   - type: markdown
     body: >-
       Templates

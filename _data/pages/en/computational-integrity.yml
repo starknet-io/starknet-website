@@ -5,6 +5,9 @@ template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Computational Integrity
+blocks:
   - type: markdown
     body: >-
       Computational Integrity
