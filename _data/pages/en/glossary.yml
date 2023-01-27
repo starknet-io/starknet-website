@@ -17,6 +17,7 @@ blocks:
           and we are sharing today its first module. Over time, new components
           of the sequencer will be completed, until eventually a Rust-based
           sequencer will replace the current Python-based sequencer entirely.
+        title: Zero knowledge proofs
       - type: ordered_item
         Title: B is what this begins with
         body: Our approach to building this sequencer is the same approach that guided
@@ -24,6 +25,7 @@ blocks:
           and we are sharing today its first module. Over time, new components
           of the sequencer will be completed, until eventually a Rust-based
           sequencer will replace the current Python-based sequencer entirely.
+        title: Best
       - type: ordered_item
         Title: A Shiny New Sequencer
         body: Starknet’s state transition, the StarkNet OS, can make use of SHARP.
@@ -34,6 +36,7 @@ blocks:
           parameters, most prominently the TPS (transactions per second). Large
           executions might not benefit too much by sharing the proof with much
           smaller programs.
+        title: The time
       - type: ordered_item
         Title: "This is "
         body: Our approach to building this sequencer is the same approach that guided
@@ -41,3 +44,4 @@ blocks:
           and we are sharing today its first module. Over time, new components
           of the sequencer will be completed, until eventually a Rust-based
           sequencer will replace the current Python-based sequencer entirely.
+        title: A place
