@@ -1,19 +1,22 @@
 import { TopLevelBlock } from "src/data/pages";
 import { BasicCard } from "./cards/BasicCard";
-import { LargeCard } from "./cards/LargeCard";
+
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
-import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import { BlockHeroLines } from "./BlockHeroLines";
 import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
 import { IconLinkCard } from "./cards/IconLinkCard";
 import { ImageIconCard } from "./cards/ImageIconCard";
+import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
+import { LargeCard } from "./cards/LargeCard";
+import { Container } from "./Container";
+import { LinkList, LinkListItem } from "./LinkList";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -42,8 +45,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         orientation={block.orientation}
       />
     );
-  }
-  if (block.type === "icon_link_card") {
+  } else if (block.type === "icon_link_card") {
     return (
       <IconLinkCard
         title={block.title}
@@ -53,8 +55,15 @@ export async function Block({ block, locale }: Props): JSX.Element {
         color={block.color}
       />
     );
-  }
-  if (block.type === "image_icon_link_card") {
+  } else if (block.type === "container") {
+    return (
+      <Container maxWidth={block.max_width}>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </Container>
+    );
+  } else if (block.type === "image_icon_link_card") {
     return (
       <ImageIconCard
         title={block.title}
@@ -89,6 +98,23 @@ export async function Block({ block, locale }: Props): JSX.Element {
           <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
+    );
+  } else if (block.type === "link_list") {
+    return (
+      <LinkList heading={block.heading}>
+        {block.blocks.map((block, i) => (
+          <Block key={i} block={block} locale={locale} />
+        ))}
+      </LinkList>
+    );
+  } else if (block.type === "link_list_item") {
+    return (
+      <LinkListItem
+        label={block.label}
+        isExternal={block.is_external}
+        href={block.href}
+        subLabel={block.sub_label}
+      />
     );
   } else if (block.type === "group") {
     return (

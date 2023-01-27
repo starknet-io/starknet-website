@@ -1,23 +1,17 @@
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { getPageByFilename } from "src/data/pages";
+import { getPageBySlug } from "src/data/pages";
 import { PageContentContainer } from "../(components)/PageContentContainer";
 
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  UnorderedList,
-  OrderedList,
-  ListItem,
   Flex,
   Box,
-  Img,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
 import { getMessages } from "src/data/i18n/intl";
-import { Sidebar } from "@ui/Layout/Sidebar";
-import { SubNavLinkGroup } from "@ui/TableOfContents/TableOfContents";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
 
@@ -33,7 +27,7 @@ export default async function Page({
   try {
     const messages = await getMessages(locale);
     const { title, blocks, template, breadcrumbs, pageLastUpdated } =
-      await getPageByFilename(page, locale);
+      await getPageBySlug(page, locale);
     console.log(template);
     return (
       <Box>
@@ -73,7 +67,7 @@ export default async function Page({
               ))}
             </Flex>
           }
-          rightAside={<>{template === "content" ? <div>Hello</div> : null}</>}
+          rightAside={<>{template === "content" ? <Box>Hello</Box> : null}</>}
         />
       </Box>
     );

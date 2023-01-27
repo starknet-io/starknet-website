@@ -11,18 +11,18 @@ import {
   Wrap,
 } from "../../../libs/chakra-ui";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { getTutorialsPage } from "src/data/settings/tutorials-page";
 
 export default async function TutorialsPage({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
-  const { title, description } = await getEventsPage(locale);
-  const events = await getEvents(locale);
+  const { title, description } = await getTutorialsPage(locale);
 
   return (
     <Box>
       <PageLayout
-        sectionHeaderTitle="Tutorials"
-        sectionHeaderDescription="Page header with high level description of section and visual treatment from brand team."
+        sectionHeaderTitle={title}
+        sectionHeaderDescription={description}
         breadcrumbs={
           <Breadcrumb separator="->">
             <BreadcrumbItem>

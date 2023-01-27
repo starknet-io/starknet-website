@@ -14,8 +14,11 @@ blocks:
         title: Starknet 101
         link_label: Learn
         link_href: /learn/
-        description: Starknet is a layer-2 network that uses math and cryptography to securely scale Ethereum. It is known as a Validity-rollup (or ZK-rollup); it ”rolls” many transactions up to send to Ethereum as a single transaction. Read on to learn the fundamentals.
-        image: /assets/cleanshot-2023-01-17-at-14.00.56-2x.png
+        description: Starknet is a layer-2 network that uses math and cryptography to
+          securely scale Ethereum. It is known as a Validity-rollup (or
+          ZK-rollup); it ”rolls” many transactions up to send to Ethereum as a
+          single transaction. Read on to learn the fundamentals.
+        image: /assets/hero-1-.svg
         orientation: left
   - type: markdown
     body: Learn!

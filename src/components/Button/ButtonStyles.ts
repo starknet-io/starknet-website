@@ -60,8 +60,46 @@ const filterActive = defineStyle({
   },
 });
 
+const category = defineStyle({
+  cursor: "pointer",
+  // change the appearance of the border
+  borderRadius: 0, // remove the border radius
+  fontWeight: "medium", // change the font weight
+  fontSize: "14px",
+  lineHeight: "14px",
+  padding: "8px 0 16px",
+  color: "tabs-fg",
+  borderBottomWidth: "1px",
+  borderColor: "tabs-border-bg",
+
+  bg: "tabs-bg",
+  _hover: {
+    bg: "tabs-bg",
+    color: "tabs-hover-fg",
+  },
+  _active: {
+    bg: "tabs-bg",
+    color: "tabs-fg-active",
+    borderColor: "tabs-border-active-bg",
+  },
+});
+const categoryActive = defineStyle({
+  // change the appearance of the border
+  // borderRadius: 4, // remove the border radius
+  // fontWeight: "medium", // change the font weight
+  // fontSize: "12px",
+  // lineHeight: "12px",
+  // padding: "8px 16px",
+  // bg: "btn-filter-active-bg",
+  // color: "btn-filter-active-fg",
+  // _hover: {
+  //   bg: "btn-filter-active-hover-bg",
+  //   color: "btn-filter-active-hover-fg",
+  // },
+});
+
 export const buttonTheme = defineStyleConfig({
-  variants: { outline, filter, filterActive, solid },
+  variants: { outline, filter, filterActive, solid, category, categoryActive },
 });
 
 // export const ButtonStyles = defineStyleConfig({

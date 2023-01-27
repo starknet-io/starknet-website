@@ -1,13 +1,14 @@
-import { Box, Link, Stack } from "src/libs/chakra-ui";
+import { Box, Link, LinkOverlay, Stack } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
-import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardLink } from "./CardLink";
+import { CustomLink } from "@ui/Link/CustomLink";
 
 type Props = {
   title: string;
   linkLabel: string;
-  linkHref: string;
+  linkHref: string | undefined;
   size?: "sm" | "md";
 };
 
@@ -18,37 +19,39 @@ export const BasicCard = ({
   size = "md",
 }: Props) => {
   return (
-    <CardGradientBorder>
-      <Box
-        mx="auto"
-        maxW="5xl"
-        w={{ base: "full" }}
-        bg="card-bg"
-        borderRadius={{ base: "24px" }}
-        pl={{ base: size === "sm" ? "32px" : "48px" }}
-        pr={{ base: size === "sm" ? "32px" : "48px" }}
-        pb={{ base: size === "sm" ? "48px" : "48px" }}
-        pt={{ base: size === "sm" ? "120px" : "80px" }}
-        display="flex"
-      >
-        <Stack
-          direction={{ base: "column", md: "column" }}
-          spacing={{ base: "8px" }}
-          justify="flex-end"
-          alignItems="flex-start"
+    <CardLink href={linkHref}>
+      <CardGradientBorder>
+        <Box
+          mx="auto"
+          maxW="5xl"
+          w={{ base: "full" }}
+          bg="card-bg"
+          borderRadius={{ base: "24px" }}
+          pl={{ base: size === "sm" ? "32px" : "48px" }}
+          pr={{ base: size === "sm" ? "32px" : "48px" }}
+          pb={{ base: size === "sm" ? "48px" : "48px" }}
+          pt={{ base: size === "sm" ? "120px" : "80px" }}
+          display="flex"
         >
-          <Stack spacing="1">
-            <Text color="heading-navy-fg" fontSize="24px" fontWeight="bold">
-              {title}
-            </Text>
+          <Stack
+            direction={{ base: "column", md: "column" }}
+            spacing={{ base: "8px" }}
+            justify="flex-end"
+            alignItems="flex-start"
+          >
+            <Stack spacing="1">
+              <Text color="heading-navy-fg" fontSize="24px" fontWeight="bold">
+                {title}
+              </Text>
+            </Stack>
+            <Box>
+              <LinkOverlay as={CustomLink} variant="card" href={linkHref}>
+                {linkLabel} &rarr;
+              </LinkOverlay>
+            </Box>
           </Stack>
-          <Box>
-            <Link as={NextLink} variant="card" href={linkHref}>
-              {linkLabel} &rarr;
-            </Link>
-          </Box>
-        </Stack>
-      </Box>
-    </CardGradientBorder>
+        </Box>
+      </CardGradientBorder>
+    </CardLink>
   );
 };

@@ -1,0 +1,14 @@
+id: d202009a-3541-4366-b664-36ef2e492aa3
+title: Wallets
+template: landing
+parent_page: /ecosystem/
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: hero
+    variant: wallets
+    title: Wallets
+    description: Starknet sits on top of Ethereum as a layer 2 network. It uses
+      technology called 'STARK Proofs' to securely compress huge amounts of
+      transactions for Ethereum.
+  - type: wallets

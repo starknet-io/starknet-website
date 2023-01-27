@@ -59,22 +59,24 @@ items:
               - custom_title: Starknet Playground
                 custom_external_link: https://starknet.io/playground
               - custom_title: Engineering blog
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/engineering
   - title: Ecosystem
     columns:
       - blocks:
           - title: ""
             items:
-              - page: ""
-                custom_internal_link: /dapps/
+              - page: 0dc3d102-0936-433e-9219-f46e3087e396
+                custom_internal_link: ""
                 custom_title: Dapps
               - custom_title: Wallets
-                custom_internal_link: /wallets/
+                custom_internal_link: ""
+                page: d202009a-3541-4366-b664-36ef2e492aa3
               - custom_title: Bridges & onramps
-                custom_internal_link: /bridges-and-onramps/
+                custom_internal_link: ""
+                page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
               - custom_title: Block Explorers
-                custom_internal_link: /block-explorers
-
+                custom_internal_link: ""
+                page: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
   - title: Community
     columns:
       - blocks:
@@ -97,17 +99,17 @@ items:
               - custom_title: Blog home
                 custom_internal_link: /posts/
               - custom_title: Engineering posts
-                custom_internal_link: /posts/
-              - custom_internal_link: /posts/
+                custom_internal_link: /posts/engineering
+              - custom_internal_link: /posts/community-calls
                 custom_title: Community Calls
               - custom_title: Stark struck
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/stark-struck
               - custom_title: Stark math
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/stark-math
               - custom_title: Governance posts
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/governance
               - custom_title: Community & Events posts
-                custom_internal_link: /posts/
+                custom_internal_link: /posts/community-and-events
       - blocks:
           - title: OTHER
             items:

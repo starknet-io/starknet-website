@@ -12,7 +12,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { FaqBlock } from "src/blocks/FaqBlock";
 import { Flex } from "../../libs/chakra-ui";
 import BlockDapps from "src/blocks/dataBlocks/BlockDapps/BlockDapps";
-
+import * as LinkList from "@ui/LinkList/LinkList";
 export default async function Index({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
@@ -21,8 +21,7 @@ export default async function Index({
       main={
         <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
           <BlockGrouping>
-            <HomepageHero />
-
+            {/* <HomepageHero /> */}
             <CommunityCard
               description=" This website is a community powered guide to the Starknet
               ecosystem."
@@ -262,11 +261,6 @@ export default async function Index({
                   label: "What is Starknet?",
                   content:
                     "Starknet is a technology that uses math and cryptography to securely scale Ethereum. The community is growing fast and building out an exciting ecosystem of dapps and infrastructure.",
-                },
-                {
-                  label: "How does it scale Ethereum?",
-                  content:
-                    "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called “STARK Proofs” to securely compress huge amounts of transactions for Ethereum.",
                 },
               ]}
             />

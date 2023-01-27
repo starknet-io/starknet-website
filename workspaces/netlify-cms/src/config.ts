@@ -264,11 +264,31 @@ const blocks: CmsFieldList["types"] = [
       },
     ],
   },
+  {
+    name: "link_list_item",
+    label: "Link list item",
+    widget: "object",
+    fields: [
+      {
+        name: "label",
+      },
+      {
+        name: "sub_label",
+      },
+      {
+        name: "href",
+      },
+      {
+        name: "is_external",
+        widget: "boolean",
+        required: false,
+        default: false,
+      },
+    ],
+  },
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
-  ...blocks,
-
   {
     name: "group",
     label: "Block group",
@@ -282,7 +302,42 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
-
+  {
+    name: "link_list",
+    label: "LinkList",
+    widget: "object",
+    fields: [
+      {
+        name: "heading",
+        label: "Heading",
+        required: false,
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
+  {
+    name: "container",
+    label: "Container",
+    widget: "object",
+    fields: [
+      {
+        name: "max_width",
+        label: "Max width",
+        widget: "number",
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+      },
+    ],
+  },
   {
     name: "flex_layout",
     label: "Flex layout",
@@ -327,6 +382,7 @@ const topLevelBlocks: CmsFieldList["types"] = [
       },
     ],
   },
+  ...blocks,
 ];
 
 export const config: CmsConfig = {

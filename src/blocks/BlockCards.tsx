@@ -1,3 +1,4 @@
+"use client";
 import { Box, SimpleGrid } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import React from "react";

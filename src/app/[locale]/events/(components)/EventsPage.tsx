@@ -3,22 +3,14 @@
 import {
   BreadcrumbItem,
   BreadcrumbLink,
-  SimpleGrid,
   Breadcrumb,
   Box,
-  Stack,
   Button,
-  Wrap,
-  HStack,
-  Divider,
   Flex,
-  Container,
-  Spacer,
   VStack,
 } from "@chakra-ui/react";
-import * as SubNav from "@ui/SubNav/SubNav";
-import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { use, useMemo } from "react";
+
+import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
@@ -29,7 +21,6 @@ import { useHits, useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
-import { type Event } from "src/data/events";
 
 export interface AutoProps {
   readonly params: {
@@ -154,6 +145,7 @@ type HitProps = {
     readonly image: string;
     readonly description: string;
     readonly tags: string[];
+    readonly url: string;
   }[];
 };
 function CustomHits() {
@@ -166,7 +158,7 @@ function CustomHits() {
         {hits.map((hit) => {
           return (
             <ListCard
-              rounded
+              href={hit.url}
               key={hit?.name}
               startDateTime={hit?.start_date}
               image={hit.image}

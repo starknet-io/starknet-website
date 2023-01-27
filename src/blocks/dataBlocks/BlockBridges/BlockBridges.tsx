@@ -14,7 +14,7 @@ Props): JSX.Element {
   console.log("no of items", noOfItems);
   return (
     <Box>
-      <Container>
+      <Container maxW="1062px">
         <Flex gap={4} direction="column" flex={1}>
           {bridges.map((bridge, i) => {
             if (noOfItems && i <= noOfItems) return null;

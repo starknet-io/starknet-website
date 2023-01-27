@@ -12,8 +12,9 @@ export const HomepageHero = (props: Props) => {
       bg="hero-home-bg"
       borderRadius="24px"
       as="section"
-      minH="700px"
+      minH="600px"
       position="relative"
+      overflow="hidden"
       // borderWidth="1px"
       // borderColor="card-br"
     >
@@ -70,16 +71,24 @@ export const HomepageHero = (props: Props) => {
         align="center"
       >
         <Box position="relative" w="full" h="full">
-          {/* <Img
-            src="/assets/hero.png"
+          <Img
+            src="/assets/home/herobackground.svg"
             alt="Main Image"
             w="full"
             h="full"
             objectFit="cover"
-            objectPosition="top bottom"
+            objectPosition="top center"
             position="absolute"
-          /> */}
-          <Box position="absolute" w="full" h="full" />
+          />
+          <Box top="10%" w="50%" h="full" position="absolute" right="0">
+            <Img
+              src="/assets/home/heroimage.svg"
+              alt="Main Image"
+              w="800px"
+              objectFit="cover"
+              objectPosition="center right"
+            />
+          </Box>
         </Box>
       </Flex>
     </Box>
