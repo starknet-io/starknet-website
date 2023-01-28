@@ -18,9 +18,9 @@ interface Post {
   readonly title: string;
   readonly image: string;
   readonly category: string;
-  readonly postType: string;
-  readonly publishedDate: string;
-  readonly timeToConsume: string;
+  readonly post_type: string;
+  readonly published_date: string;
+  readonly time_to_consume: string;
   readonly topic: string;
   readonly short_desc: string;
   readonly locale: string;
@@ -46,9 +46,9 @@ async function fileToPost(locale: string, filename: string): Promise<Post> {
     id: safeID,
     slug,
     title: data.title,
-    postType: data.postType,
-    publishedDate: data.publishedDate,
-    timeToConsume: data.timeToConsume,
+    post_type: data.post_type,
+    published_date: data.publish_date,
+    time_to_consume: data.time_to_consume,
     category: data.category,
     topic: data.topic,
     short_desc: data.short_desc,
