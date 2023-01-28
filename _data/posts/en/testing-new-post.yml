@@ -1,8 +1,7 @@
 id: e975f067-3fd3-424e-985d-277db2fd67ef
-post_type: article
+post_type: audio
 title: testing new post
-published_date: Jan 27th, 2023
-time_to_consume: 4 min read
+time_to_consume: "4"
 image: https://editors.dexerto.com/wp-content/uploads/2022/07/06/MidJourney.jpg
 category: stark-math
 topic:
@@ -35,8 +34,23 @@ blocks:
 
 
       While the auditor presumably wants to preserve their long-term reputation, and also avoid breaking the law, the simple truth is that there is still a risk that they may be bribed to lie. FTX claimed to be regulated with GAAP audits, and look at what happened.
-
-
+  - type: flex_layout
+    heading_variant: sm
+    base: 1
+    md: 2
+    blocks:
+      - type: basic_card
+        size: sm
+        title: Learn more about Starks
+        link_label: Learn
+        link_href: /learn/
+      - type: basic_card
+        size: sm
+        title: Cairo 101
+        link_label: View course
+        link_href: /tutorials/
+  - type: markdown
+    body: >-
       #### **The exchange can borrow assets right before the snapshot**
 
 
