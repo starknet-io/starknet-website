@@ -1,74 +1,32 @@
 import { defineStyle, defineStyleConfig } from "src/libs/chakra-ui";
 
 const engineering = defineStyle({
-  background: "#ff0000",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-engineering-bg",
+  color: "badge-engineering-fg",
 });
 const community_calls = defineStyle({
-  background: "orange.900",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-community-calls-bg",
+  color: "badge-community-calls-fg",
 });
 const stark_math = defineStyle({
-  background: "orange.400",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-stark-math-bg",
+  color: "badge-stark-math-fg",
 });
 const stark_at_home = defineStyle({
-  background: "orange.400",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-stark-math-bg",
+  color: "badge-stark-math-fg",
 });
 const governance = defineStyle({
-  background: "orange.400",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-governance-bg",
+  color: "badge-governance-fg",
 });
 const community_and_events = defineStyle({
-  background: "orange.400",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-community-and-events-bg",
+  color: "badge-community-and-events-fg",
 });
 const stark_struct = defineStyle({
-  background: "orange.400",
-  color: "white",
-
-  // let's also provide dark mode alternatives
-  _dark: {
-    background: "orange.300",
-    color: "orange.800",
-  },
+  background: "badge-starkstruck-bg",
+  color: "badge-starkstruck-fg",
 });
 
 export const badgeTheme = defineStyleConfig({

@@ -190,11 +190,42 @@ type HitProps = {
     readonly short_desc: string;
     readonly locale: string;
     readonly filepath: string;
+    readonly postType: string;
+    readonly timeToConsume: string;
+    readonly publishedAt: string;
   }[];
+};
+
+const categories = {
+  "community-calls": {
+    label: "Community calls",
+    id: "community_calls",
+  },
+  "community-and-events": {
+    label: "Community and events",
+    id: "community_and_events",
+  },
+  "stark-struck": {
+    label: "Stark Struck",
+    id: "stark_struct",
+  },
+  engineering: {
+    label: "Engineering",
+    id: "engineering",
+  },
+  governance: {
+    label: "Governance",
+    id: "governance",
+  },
+  "stark-math": {
+    label: "Stark Math",
+    id: "stark_math",
+  },
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
   const { showMore } = useInfiniteHits();
+  console.log(hits);
   return (
     <>
       <SimpleGrid
@@ -211,13 +242,15 @@ function CustomHits() {
             <ArticleCard.Image url={hit.image} />
 
             <ArticleCard.Body>
-              <ArticleCard.Category category={hit?.category} />
+              {/* @ts-expect-error TODO: fix this */}
+
+              <ArticleCard.Category category={categories[`${hit.category}`]} />
               <ArticleCard.Content title={hit.title} excerpt={hit.short_desc} />
             </ArticleCard.Body>
             <ArticleCard.Footer
-              postType="audio"
-              publishedAt="Nov 24, 2022"
-              duration="1hr 2mins"
+              postType={hit.postType}
+              publishedAt={hit.publishedAt}
+              timeToConsume={hit?.timeToConsume}
             />
           </ArticleCard.Root>
         ))}

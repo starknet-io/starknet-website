@@ -119,6 +119,18 @@ export const tokens = {
       "tabs-border-bg": "transparent",
       "tabs-fg-active": "#0C0C4F",
       "tabs-border-active-bg": "#E97880",
+      "badge-starkstruck-bg": "#D1FAE5",
+      "badge-starkstruck-fg": "#065F46",
+      "badge-engineering-bg": "#FEE2E2",
+      "badge-engineering-fg": "#991B1B",
+      "badge-community-calls-bg": "#FEF3C7",
+      "badge-community-calls-fg": "#92400E",
+      "badge-stark-math-bg": "#DBEAFE",
+      "badge-stark-math-fg": "#1E40AF",
+      "badge-governance-bg": "#EDE9FE",
+      "badge-governance-fg": "#5B21B6",
+      "badge-community-and-events-bg": "#FCE7F3",
+      "badge-community-and-events-fg": "#9D174D",
     },
 
     dark: {
@@ -240,6 +252,18 @@ export const tokens = {
       "tabs-border-bg": "transparent",
       "tabs-fg-active": "#FFFFFF",
       "tabs-border-active-bg": "#FE9E92",
+      "badge-starkstruck-bg": "#D1FAE5",
+      "badge-starkstruck-fg": "#065F46",
+      "badge-engineering-bg": "#FEE2E2",
+      "badge-engineering-fg": "#991B1B",
+      "badge-community-calls-bg": "#FEF3C7",
+      "badge-community-calls-fg": "#92400E",
+      "badge-stark-math-bg": "#DBEAFE",
+      "badge-stark-math-fg": "#1E40AF",
+      "badge-governance-bg": "#EDE9FE",
+      "badge-governance-fg": "#5B21B6",
+      "badge-community-and-events-bg": "#FCE7F3",
+      "badge-community-and-events-fg": "#9D174D",
     },
   },
 };
@@ -719,6 +743,54 @@ export const semanticTokens = {
     "tabs-border-active-bg": {
       default: tokens.colors.light["tabs-border-active-bg"],
       _dark: tokens.colors.dark["tabs-border-active-bg"],
+    },
+    "badge-starkstruck-bg": {
+      default: tokens.colors.light["badge-starkstruck-bg"],
+      _dark: tokens.colors.dark["badge-starkstruck-bg"],
+    },
+    "badge-starkstruck-fg": {
+      default: tokens.colors.light["badge-starkstruck-fg"],
+      _dark: tokens.colors.dark["badge-starkstruck-fg"],
+    },
+    "badge-engineering-bg": {
+      default: tokens.colors.light["badge-engineering-bg"],
+      _dark: tokens.colors.dark["badge-engineering-bg"],
+    },
+    "badge-engineering-fg": {
+      default: tokens.colors.light["badge-engineering-fg"],
+      _dark: tokens.colors.dark["badge-engineering-fg"],
+    },
+    "badge-community-calls-bg": {
+      default: tokens.colors.light["badge-community-calls-bg"],
+      _dark: tokens.colors.dark["badge-community-calls-bg"],
+    },
+    "badge-community-calls-fg": {
+      default: tokens.colors.light["badge-community-calls-fg"],
+      _dark: tokens.colors.dark["badge-community-calls-fg"],
+    },
+    "badge-stark-math-bg": {
+      default: tokens.colors.light["badge-stark-math-bg"],
+      _dark: tokens.colors.dark["badge-stark-math-bg"],
+    },
+    "badge-stark-math-fg": {
+      default: tokens.colors.light["badge-stark-math-fg"],
+      _dark: tokens.colors.dark["badge-stark-math-fg"],
+    },
+    "badge-governance-bg": {
+      default: tokens.colors.light["badge-governance-bg"],
+      _dark: tokens.colors.dark["badge-governance-bg"],
+    },
+    "badge-governance-fg": {
+      default: tokens.colors.light["badge-governance-fg"],
+      _dark: tokens.colors.dark["badge-governance-fg"],
+    },
+    "badge-community-and-events-bg": {
+      default: tokens.colors.light["badge-community-and-events-bg"],
+      _dark: tokens.colors.dark["badge-community-and-events-bg"],
+    },
+    "badge-community-and-events-fg": {
+      default: tokens.colors.light["badge-community-and-events-fg"],
+      _dark: tokens.colors.dark["badge-community-and-events-fg"],
     },
   },
 };

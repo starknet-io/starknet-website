@@ -1,5 +1,5 @@
 "use client";
-
+// toDo rebuild this card in to a generalized grid card
 import {
   Badge,
   Box,
@@ -10,28 +10,11 @@ import {
   Icon,
   useColorModeValue as mode,
 } from "src/libs/chakra-ui";
-import { Text } from "../../components/Typography/Text";
+import { Text } from "@ui/Typography/Text";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { Heading } from "@ui/Typography/Heading";
-
-// type Props = {
-//   img?: string;
-//   imgAlt?: string;
-//   postType: "post" | "audio" | "video";
-//   category?:
-//     | "engineering"
-//     | "community-calls"
-//     | "stark_struct"
-//     | "stark_math"
-//     | "stark_at_home"
-//     | "governance"
-//     | "community_and_events";
-//   title?: any;
-//   excerpt?: any;
-//   publishedAt?: string;
-//   href?: string;
-//   variant?: "default" | "lg";
-// };
+import { CardLink } from "src/blocks/cards/CardLink";
+import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 
 type RootProps = {
   children: React.ReactNode;
@@ -40,25 +23,25 @@ type RootProps = {
 
 const Root = ({ children, href }: RootProps) => {
   return (
-    <Link href={href} _hover={{ textDecor: "none" }} role="group">
-      <Box
-        p="0"
-        bg="article-card-bg"
-        boxShadow={mode("xs", "xs-dark")}
-        _groupHover={{ boxShadow: mode("sm", "sm-dark") }}
-        transition="all 0.2s"
-        height="full"
-        borderRadius={8}
-      >
-        <Stack
-          spacing={{ base: "8", lg: "16" }}
-          justify="space-between"
+    <CardGradientBorder padding="0" borderRadius="8px">
+      <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
+        <Box
+          p="0"
+          transition="all 0.2s"
           height="full"
+          borderRadius={8}
+          bg="card-bg"
         >
-          <Stack spacing="8">{children}</Stack>
-        </Stack>
+          <Stack
+            spacing={{ base: "8", lg: "16" }}
+            justify="space-between"
+            height="full"
+          >
+            <Stack spacing="8">{children}</Stack>
+          </Stack>
+        </Box>
       </Box>
-    </Link>
+    </CardGradientBorder>
   );
 };
 
@@ -74,7 +57,7 @@ const Image = ({ url, imageAlt }: ImageProps) => {
         src={url}
         alt={imageAlt}
         width="full"
-        height="10rem"
+        height={{ base: "14rem", lg: "10rem" }}
         objectFit="cover"
         borderTopRadius={8}
       />
@@ -94,21 +77,11 @@ const Body = ({ children }: BodyProps) => {
   );
 };
 
-type CategoryProps = {
-  category?:
-    | "engineering"
-    | "community-calls"
-    | "stark_struct"
-    | "stark_math"
-    | "stark_at_home"
-    | "governance"
-    | "community_and_events"
-    | string;
-};
-const Category = ({ category }: CategoryProps) => {
+const Category = ({ category }: any) => {
+  console.log("category", category);
   return (
     <Box pb={3}>
-      <Badge variant={category}>{category}</Badge>
+      <Badge variant={category?.id}>{category?.label}</Badge>
     </Box>
   );
 };
@@ -123,10 +96,10 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
   if (featured) {
     return (
       <Stack spacing="3">
-        <Heading as="h3" variant="h3">
+        <Heading as="h3" variant="h3" noOfLines={2}>
           {title}
         </Heading>
-        <Text fontSize="sm" variant="baseRegular">
+        <Text fontSize="sm" variant="baseRegular" noOfLines={3}>
           {excerpt}
         </Text>
       </Stack>
@@ -134,10 +107,10 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
   }
   return (
     <Stack spacing="3">
-      <Text fontSize="md" variant="baseExtraBold">
+      <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
         {title}
       </Text>
-      <Text fontSize="sm" variant="baseRegular">
+      <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
         {excerpt}
       </Text>
     </Stack>
@@ -145,18 +118,19 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
 };
 
 type FooterProps = {
-  postType: "post" | "audio" | "video";
+  postType: string;
   publishedAt?: string;
-  duration?: string;
+  timeToConsume?: string;
 };
 const Footer = ({
   postType,
-  publishedAt,
-  duration = "5min read",
+  publishedAt = "N/A",
+  timeToConsume = "5min read",
 }: FooterProps) => {
+  console.log(postType);
   const renderPostTypeIcon = () => {
     switch (postType) {
-      case "post":
+      case "article":
         return FiBookOpen;
       case "audio":
         return FiHeadphones;
@@ -176,7 +150,7 @@ const Footer = ({
           {publishedAt}·
         </Text>
         <Text fontSize="sm" color="muted">
-          {duration}
+          {timeToConsume}
         </Text>
       </HStack>
     </Box>

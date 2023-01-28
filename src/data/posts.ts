@@ -12,6 +12,8 @@ export interface Post {
   readonly short_desc: string;
   readonly post_type: string;
   readonly post_date: string;
+  readonly time_to_consume: string;
+  readonly published_date: string;
   readonly locale: string;
   readonly filepath: string;
   readonly blocks: readonly TopLevelBlock[];
