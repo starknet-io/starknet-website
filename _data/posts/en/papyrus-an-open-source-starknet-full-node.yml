@@ -1,6 +1,7 @@
-post_type: article
 id: papyrus_an_open_source_starknet_full_node
+post_type: article
 title: "Papyrus: An Open-Source StarkNet Full Node"
+published_date: Oct 4th, 22
 time_to_consume: "3"
 video_link: sdsd
 image: /assets/blog2.webp
@@ -11,7 +12,8 @@ topic:
   - open_source
   - starknet
   - ethereum
-short_desc: Today we are introducing Papyrus, a Rust implementation of a StarkNet full node, which will help pave the way to mass use of StarkNet.
+short_desc: Today we are introducing Papyrus, a Rust implementation of a
+  StarkNet full node, which will help pave the way to mass use of StarkNet.
 blocks:
   - type: markdown
     body: >-
@@ -21,9 +23,7 @@ blocks:
 
       **TL;DR**
 
-      * Papyrus is a Rust implementation of a StarkNet full node
-      * It will provide foundations for the new StarkNet Sequencer, which will dramatically enhance StarkNet’s throughput
-      * Papyrus will help advance performance and decentralization. Now that StarkNet has achieved excellent usability, these are its major development priorities
+      * Papyrus is a Rust implementation of a StarkNet full node * It will provide foundations for the new StarkNet Sequencer, which will dramatically enhance StarkNet’s throughput * Papyrus will help advance performance and decentralization. Now that StarkNet has achieved excellent usability, these are its major development priorities
 
       ## Introduction
 
