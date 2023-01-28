@@ -6,7 +6,6 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Zero-knowledge proofs
-blocks:
   - type: markdown
     body: >-
       safasdf

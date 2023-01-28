@@ -6,7 +6,6 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Provers
-blocks:
   - type: markdown
     body: >-
       Provers
