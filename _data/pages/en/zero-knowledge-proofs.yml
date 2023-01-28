@@ -1,9 +1,11 @@
-id: /zero-knowledge-proofs/
+id: 55498400-e80e-42df-9e7f-d9a470e242ce
 title: Zero-knowledge proofs
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Zero-knowledge proofs
   - type: markdown
     body: >-
       safasdf

@@ -1,10 +1,12 @@
 ---
-id: /computational-integrity/
+id: 10e9c4de-5c35-451c-b932-fb4657db68e6
 title: Computational Integrity
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Computational Integrity
   - type: markdown
     body: >-
       Computational Integrity

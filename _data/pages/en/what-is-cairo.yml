@@ -1,9 +1,11 @@
-id: /what-is-cairo/
+id: 26b19750-c03e-4c67-b742-15736fa3ad72
 title: What is Cairo
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: What is cairo
   - type: markdown
     body: >-
       Cairo is a Turing-complete programming language designed to make writing

@@ -1,9 +1,11 @@
-id: /oracles-on-starknet/
+id: da0ce2db-0c09-444b-8ad8-73ee8a971646
 title: Oracles on StarkNet
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Oracles on starknet
   - type: markdown
     body: >-
       StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).

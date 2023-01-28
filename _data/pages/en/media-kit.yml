@@ -1,9 +1,11 @@
-id: /media-kit/
+id: 67bd2eed-da36-471f-8d92-df3a0fc2c1df
 title: Media kit
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Media kit
   - type: markdown
     body: >-
       Developers can write and deploy their own contracts on StarkNet to achieve unlimited scale – without compromising Ethereum’s composability and security.

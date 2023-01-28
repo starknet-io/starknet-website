@@ -1,9 +1,11 @@
-id: /governance/
+id: 859ca393-8ae8-4768-8bf9-d6f204b080d2
 title: Governance
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Governance
   - type: markdown
     body: >-
       Governance

@@ -1,9 +1,11 @@
-id: /trustless-bridging/
+id: a994f81b-1d6f-44ed-8c3a-cab4ef869020
 title: Trustless bridging
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Trustless bridging
   - type: markdown
     body: >-
       StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).

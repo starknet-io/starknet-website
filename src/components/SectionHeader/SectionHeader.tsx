@@ -21,7 +21,8 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
           <Heading
             as="h2"
             variant="h2"
-            fontSize={size === "sm" ? "3rem" : "5xl"}
+            fontSize={{ base: "32px", md: "48px" }}
+            lineHeight={{ base: "1.5em", md: "1.5em" }}
             pb={size === "sm" ? 2 : 6}
             fontWeight="extrabold"
             color="heading-navy-fg"

@@ -1,4 +1,4 @@
-id: /account-abstraction/
+id: 5da42b21-bac0-4b75-9744-5202a8b33a3c
 title: Account abstraction
 template: content
 breadcrumbs: true
@@ -6,14 +6,15 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Account abstraction
-    description: Allows proving the execution of several Cairo programs in the same
+    description:
+      Allows proving the execution of several Cairo programs in the same
       proof. The Cairo program
   - type: markdown
     body: >-
       ## Section 1
 
 
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/). 
+      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
 
 
       StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
@@ -25,7 +26,7 @@ blocks:
       ## Section 2
 
 
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/). 
+      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
 
 
       StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
@@ -46,16 +47,7 @@ blocks:
       ## Section 1
 
 
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/). 
+      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation –  without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
 
 
       StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic. Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
-  - type: large_card
-    title: What do Ethereum + Starknet unlock?
-    link_href: test
-    description: ogether the networks unlock Ethereum’s vision for a fairer and more
-      open internet. Decentralised financial systems. Digital assets. Trustless
-      systems.
-    image: /assets/cleanshot-2023-01-22-at-14.07.10-2x.png
-    orientation: right
-    link_label: "what is now possible "

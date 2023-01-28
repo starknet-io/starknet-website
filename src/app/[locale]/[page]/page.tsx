@@ -1,7 +1,4 @@
-import { Heading } from "@ui/Typography/Heading";
-import { Text } from "@ui/Typography/Text";
 import { getPageBySlug } from "src/data/pages";
-import { PageContentContainer } from "../(components)/PageContentContainer";
 
 import {
   Breadcrumb,
@@ -28,7 +25,7 @@ export default async function Page({
     const messages = await getMessages(locale);
     const { title, blocks, template, breadcrumbs, pageLastUpdated } =
       await getPageBySlug(page, locale);
-    console.log(template);
+
     return (
       <Box>
         <PageLayout
@@ -38,7 +35,7 @@ export default async function Page({
                 <Breadcrumb separator="->">
                   <BreadcrumbItem>
                     <BreadcrumbLink fontSize="sm" href="#">
-                      Parent
+                      Parents
                     </BreadcrumbLink>
                   </BreadcrumbItem>
 
@@ -62,9 +59,9 @@ export default async function Page({
                 lg: template === "content" ? "32px" : "136px",
               }}
             >
-              {blocks.map((block, i) => (
-                <Block key={i} block={block} locale={locale} />
-              ))}
+              {blocks.map((block, i) => {
+                return <Block key={i} block={block} locale={locale} />;
+              })}
             </Flex>
           }
           rightAside={<>{template === "content" ? <Box>Hello</Box> : null}</>}

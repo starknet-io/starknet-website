@@ -8,54 +8,52 @@ items:
                 custom_title: Learning hub
           - title: THE BASICS
             items:
-              - page: /what-is-starknet/
-              - page: /what-is-cairo/
-              - page: /what-are-starks/
-              - page: /layer-2/
-              - page: /zero-knowledge-proofs/
-              - page: /validity-proofs/
-              - page: /computational-integrity/
+              - page: 93b845d7-5662-4cd4-8c13-3730440880c0
+              - page: 26b19750-c03e-4c67-b742-15736fa3ad72
+              - page: 7c686e43-afaa-4b10-91a3-64214651bc54
+              - page: 0bef9a7b-1de6-4419-aa04-5cfa2bb5ba68
+              - page: 55498400-e80e-42df-9e7f-d9a470e242ce
+              - page: 267c3eab-eed0-4631-a402-c98a39bc25aa
+              - page: 10e9c4de-5c35-451c-b932-fb4657db68e6
       - blocks:
           - title: HOW DOES STARKNET WORK?
             items:
-              - page: /zk-rollups
-              - page: /starknets-architecture/
-              - page: /sequencers/
-              - page: /provers/
-              - page: /starknets-security
-              - page: /fees-on-starknet/
-              - page: /governance/
+              - page: 69026d1e-3e92-477f-9410-b2b0c79a4237
+              - page: 94a917bf-dc9b-4b4d-b890-67d09f8e4c16
+              - page: 902bbe96-f923-4ca1-8b4d-e8caf8f5cd5e
+              - page: f27bfed6-86f4-4410-94c3-515928b5af60
+              - page: b7e5af4c-1ecf-4ef2-bf86-51a8850c2afa
+              - page: ee4399d7-b3fe-4a9f-bcbb-d38c81ba5ee8
+              - page: 859ca393-8ae8-4768-8bf9-d6f204b080d2
       - blocks:
           - title: USING STARKNET
             items:
-              - page: /trustless-bridging
-              - page: /account-abstraction
-              - page: /storage-proofs
-              - page: /on-chain-gaming
-              - page: /cheap-computation
-              - page: /oracles-on-starknet
+              - page: a994f81b-1d6f-44ed-8c3a-cab4ef869020
+              - page: 5da42b21-bac0-4b75-9744-5202a8b33a3c
+              - page: 069eb0c5-3893-466e-8025-7a6bdf87d60b
+              - page: cef51ff2-ebf1-425c-83de-5b7d3f93e415
+              - page: b0089b77-a97a-4120-843b-cbff304758ee
+              - page: da0ce2db-0c09-444b-8ad8-73ee8a971646
       - blocks:
           - title: COMMON QUESTIONS
             items:
-              - custom_internal_link: /glossary
-                custom_title: Glossary
-              - custom_title: FAQ's
-                custom_internal_link: /faqs/
+              - page: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
+              - custom_title: FAQ
+                page: b5689d3a-348b-4ccb-b787-520b64c55e41
           - title: OTHER
             items:
-              - custom_title: ""
-                page: /starknet-foundation/
+              - page: 630a7343-d7f9-43ac-b34b-24219789ea1d
   - title: Developers
     columns:
       - blocks:
           - items:
               - custom_title: Developers Hub
-                page: /developers/
+                page: c1050a37-5af0-4277-aabd-b681ffe2cda5
               - custom_external_link: https://docs.starknet.io
                 custom_title: Documentation
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
-              - page: /resources-and-tools
+              - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
               - custom_title: Starknet Playground
                 custom_external_link: https://starknet.io/playground
               - custom_title: Engineering blog
@@ -66,31 +64,23 @@ items:
           - title: ""
             items:
               - page: 0dc3d102-0936-433e-9219-f46e3087e396
-                custom_internal_link: ""
-                custom_title: Dapps
-              - custom_title: Wallets
-                custom_internal_link: ""
-                page: d202009a-3541-4366-b664-36ef2e492aa3
-              - custom_title: Bridges & onramps
-                custom_internal_link: ""
-                page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
-              - custom_title: Block Explorers
-                custom_internal_link: ""
-                page: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
+              - page: d202009a-3541-4366-b664-36ef2e492aa3
+              - page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
+              - page: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
   - title: Community
     columns:
       - blocks:
           - title: START HERE
             items:
               - custom_title: Community Hub
-                page: /community/
+                page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
           - title: GET INVOLVED
             items:
               - custom_internal_link: /events
                 custom_title: Events
               - custom_internal_link: /jobs
                 custom_title: Jobs
-              - page: /governance/
+              - page: 859ca393-8ae8-4768-8bf9-d6f204b080d2
               - custom_title: Community forum
                 custom_external_link: https://community.starknet.io/
       - blocks:
@@ -113,7 +103,7 @@ items:
       - blocks:
           - title: OTHER
             items:
-              - page: /language-resources/
+              - page: 9ef815e0-d670-404f-a97d-c5aebfe80a12
               - page: /media-kit/
               - custom_title: Starknet EDU newsletter
                 custom_external_link: /some-link

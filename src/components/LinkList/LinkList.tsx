@@ -26,7 +26,7 @@ const Root = (props: RootProps) => {
   return (
     <Box>
       {props.heading && (
-        <Heading variant="h2" as="h2">
+        <Heading variant="h3" color="heading-navy-fg" as="h2">
           {props.heading}
         </Heading>
       )}
