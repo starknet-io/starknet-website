@@ -40,10 +40,18 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
           h6: (props) => (
             <Heading color="heading-navy-fg" as="h6" variant="h6" {...props} />
           ),
-          p: (props) => <Text py={2} variant="baseRegular" {...props} />,
-          ul: (props) => <UnorderedList pl={1} {...props} />,
-          ol: (props) => <OrderedList pl={1} {...props} />,
-          li: (props) => <ListItem {...props} />,
+          p: (props) => (
+            <Text
+              pt={2}
+              pb={4}
+              lineHeight="32px"
+              variant="baseRegular"
+              {...props}
+            />
+          ),
+          ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
+          ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
+          li: (props) => <ListItem lineHeight="32px" {...props} />,
           img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
         }}
       >
