@@ -18,6 +18,7 @@ interface Post {
   readonly title: string;
   readonly image: string;
   readonly category: string;
+  readonly postType: string;
   readonly topic: string;
   readonly short_desc: string;
   readonly locale: string;
@@ -28,12 +29,12 @@ async function fileToPost(locale: string, filename: string): Promise<Post> {
   const resourceName = "posts";
 
   const defaultLocaleData = await yaml(
-    path.join("_data", resourceName, defaultLocale, filename),
+    path.join("_data", resourceName, defaultLocale, filename)
   );
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const safeID = slugify(data.id);
@@ -72,7 +73,7 @@ async function fileToEvent(locale: string, filename: string): Promise<Event> {
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename))
   );
 
   return {
@@ -119,7 +120,7 @@ async function fileToJob(locale: string, filename: string): Promise<Job> {
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename))
   );
 
   return {
@@ -162,13 +163,13 @@ interface Tutorial {
 
 async function fileToTutorial(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Tutorial> {
   const resourceName = "tutorials";
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename))
   );
 
   return {
@@ -189,7 +190,7 @@ async function fileToTutorial(
 try {
   const client = algoliasearch(
     process.env.ALGOLIA_APP_ID!,
-    process.env.ALGOLIA_WRITE_API_KEY!,
+    process.env.ALGOLIA_WRITE_API_KEY!
   );
 
   const resources = [
@@ -205,7 +206,7 @@ try {
     const indexName = `web_${resourceName}_dev`;
     const objects = [];
     const filenames = await fs.readdir(
-      path.join("_data", resourceName, defaultLocale),
+      path.join("_data", resourceName, defaultLocale)
     );
 
     for (const locale of locales) {
