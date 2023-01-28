@@ -34,7 +34,7 @@ export const FeaturedArticleCard = (props: Props) => {
             <ArticleCard.Footer
               postType="audio"
               publishedAt="Nov 24, 2022"
-              duration="1hr 2mins"
+              timeToConsume="1hr 2mins"
             />
           </Stack>
         </Stack>

@@ -567,6 +567,12 @@ export const config: CmsConfig = {
           label: "Post Title",
         },
         {
+          name: "published_date",
+          label: "Published Date",
+          widget: "datetime",
+          format: "MMM Do, YY",
+        },
+        {
           name: "time_to_consume",
           label: "Time to read / watch / listen (in minutes)",
         },

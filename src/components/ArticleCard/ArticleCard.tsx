@@ -1,5 +1,5 @@
 "use client";
-
+// toDo rebuild this card in to a generalized grid card
 import {
   Badge,
   Box,
@@ -15,25 +15,6 @@ import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { Heading } from "@ui/Typography/Heading";
 import { CardLink } from "src/blocks/cards/CardLink";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-
-// type Props = {
-//   img?: string;
-//   imgAlt?: string;
-//   postType: "post" | "audio" | "video";
-//   category?:
-//     | "engineering"
-//     | "community-calls"
-//     | "stark_struct"
-//     | "stark_math"
-//     | "stark_at_home"
-//     | "governance"
-//     | "community_and_events";
-//   title?: any;
-//   excerpt?: any;
-//   publishedAt?: string;
-//   href?: string;
-//   variant?: "default" | "lg";
-// };
 
 type RootProps = {
   children: React.ReactNode;
@@ -76,7 +57,7 @@ const Image = ({ url, imageAlt }: ImageProps) => {
         src={url}
         alt={imageAlt}
         width="full"
-        height="10rem"
+        height={{ base: "14rem", lg: "10rem" }}
         objectFit="cover"
         borderTopRadius={8}
       />
@@ -129,7 +110,7 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
       <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
         {title}
       </Text>
-      <Text fontSize="sm" variant="baseRegular" noOfLines={3}>
+      <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
         {excerpt}
       </Text>
     </Stack>
@@ -139,12 +120,12 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
 type FooterProps = {
   postType: string;
   publishedAt?: string;
-  duration?: string;
+  timeToConsume?: string;
 };
 const Footer = ({
   postType,
-  publishedAt,
-  duration = "5min read",
+  publishedAt = "N/A",
+  timeToConsume = "5min read",
 }: FooterProps) => {
   console.log(postType);
   const renderPostTypeIcon = () => {
@@ -169,7 +150,7 @@ const Footer = ({
           {publishedAt}·
         </Text>
         <Text fontSize="sm" color="muted">
-          {duration}
+          {timeToConsume}
         </Text>
       </HStack>
     </Box>

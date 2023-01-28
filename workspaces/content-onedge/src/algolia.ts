@@ -19,6 +19,8 @@ interface Post {
   readonly image: string;
   readonly category: string;
   readonly postType: string;
+  readonly publishedDate: string;
+  readonly timeToConsume: string;
   readonly topic: string;
   readonly short_desc: string;
   readonly locale: string;
@@ -44,6 +46,9 @@ async function fileToPost(locale: string, filename: string): Promise<Post> {
     id: safeID,
     slug,
     title: data.title,
+    postType: data.postType,
+    publishedDate: data.publishedDate,
+    timeToConsume: data.timeToConsume,
     category: data.category,
     topic: data.topic,
     short_desc: data.short_desc,
