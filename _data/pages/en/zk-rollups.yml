@@ -8,11 +8,3 @@ blocks:
     title: ZK rollups
   - type: markdown
     body: dsfsdf
-  - type: get_involved_card
-    title: Get Involved
-    description: sadfasdf
-    link_label: Link address
-    link_href: /what-is-starknet/
-  - type: community_events
-  - type: markdown
-    body: H﻿ello

@@ -39,8 +39,8 @@ items:
             items:
               - custom_internal_link: /glossary
                 custom_title: Glossary
-              - custom_title: FAQ's
-                custom_internal_link: /faqs/
+              - custom_title: FAQ
+                custom_internal_link: /frequently-asked-questions/
           - title: OTHER
             items:
               - custom_title: ""

@@ -528,7 +528,7 @@ export const config: CmsConfig = {
     },
     {
       name: "posts",
-      label: "Posts",
+      label: "Blog - Posts",
       label_singular: "Post",
       identifier_field: "id",
       folder: `_data/posts/${locale}`,
@@ -615,7 +615,7 @@ export const config: CmsConfig = {
     },
     {
       name: "topics",
-      label: "Topics",
+      label: "Blog - Topics",
       label_singular: "Topic",
       identifier_field: "id",
       folder: `_data/topics/${locale}`,
@@ -636,7 +636,7 @@ export const config: CmsConfig = {
     },
     {
       name: "categories",
-      label: "Categories",
+      label: "Blog - Categories",
       label_singular: "Category",
       identifier_field: "id",
       folder: `_data/categories/${locale}`,
@@ -892,25 +892,6 @@ export const config: CmsConfig = {
               label: "Link to apply",
             },
           ],
-        },
-      ],
-    },
-    {
-      label: "Glossary",
-      name: "glossary",
-      folder: `_data/glossary/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "glossary_item",
-      fields: [
-        {
-          label: "Glossary item",
-          name: "glossary_item",
-        },
-        {
-          label: "Glossary description",
-          name: "body",
-          widget: "markdown",
         },
       ],
     },

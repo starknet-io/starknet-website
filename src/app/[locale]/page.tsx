@@ -13,7 +13,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Flex } from "../../libs/chakra-ui";
 import BlockDapps from "src/blocks/dataBlocks/BlockDapps/BlockDapps";
 import * as LinkList from "@ui/LinkList/LinkList";
-import { PageHeaderBlock } from "src/blocks/PageHeaderBlock";
+
 export default async function Index({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {

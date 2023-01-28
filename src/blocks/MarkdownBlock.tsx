@@ -44,7 +44,7 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
           ul: (props) => <UnorderedList pl={1} {...props} />,
           ol: (props) => <OrderedList pl={1} {...props} />,
           li: (props) => <ListItem {...props} />,
-          img: (props) => <Img my="4" {...props} />,
+          img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
         }}
       >
         {body}

@@ -28,3 +28,23 @@ blocks:
 
 
       Finally, StarkNet's fractal scaling and recursion technology allows for nesting proofs inside of proofs resulting in a smaller final proof, providing cost and latency benefits, and new opportunities for L3 and applicative-recursion for even better performance and cost benefits. The sky's the limit with StarkNet.
+  - type: link_list
+    heading: Related
+    blocks:
+      - type: link_list_item
+        is_external: false
+        label: Zero-knowledge Proofs
+        href: en/zero-knowlege-proofs
+  - type: link_list
+    heading: Further reading
+    blocks:
+      - type: link_list_item
+        is_external: true
+        label: Zero knowledge proofs 101
+        sub_label: Eli Ben-Sasson
+        href: http://www.google.com
+      - type: link_list_item
+        is_external: true
+        label: Scaling Ethereum with Rollups
+        sub_label: Vitalik Buterin
+        href: http://www.google.com

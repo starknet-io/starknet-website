@@ -17,26 +17,3 @@ blocks:
       StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic.
 
       Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
-  - type: flex_layout
-    base: 1
-    md: 2
-    lg: ""
-    blocks:
-      - type: basic_card
-        title: "Test title "
-        link_label: What is starknet
-        link_href: /what-is-starknet/
-        size: md
-      - type: basic_card
-        title: Developers
-        link_label: Go to docs
-        link_href: http://docs.starknet.io
-        size: md
-  - type: markdown
-    body: >-
-      ### S﻿econd heading 4
-
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic.
-
-      Your use of the StarkNet Alpha is under [these](https://starknet.io/starknet-terms-of-use/) terms of use.
-  - type: community_events
