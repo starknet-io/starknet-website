@@ -12,6 +12,9 @@ import {
   Divider,
   Spacer,
   Badge,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
 } from "src/libs/chakra-ui";
 
 export interface Props {
@@ -25,11 +28,34 @@ export default async function Page({
   params: { slug, locale },
 }: Props): Promise<JSX.Element> {
   try {
-    const { title, blocks, body, image, topic, post_type } =
+    const { title, blocks, body, image, topic, post_type, category } =
       await getPostBySlug(slug, locale);
-    console.log("topic", topic);
+
     return (
       <PageLayout
+        breadcrumbs={
+          <Breadcrumb separator="->">
+            <BreadcrumbItem>
+              <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="sm" href="# " noOfLines={1}>
+                  Blog
+                </BreadcrumbLink>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink fontSize="sm" href="#" noOfLines={1}>
+                {category}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink fontSize="sm" noOfLines={1}>
+                {title}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        }
+        pageLastUpdated={"Page last updated 21 Nov 2023"}
         main={
           <Container maxWidth="846px">
             <Img mb="32px" borderRadius={"8px"} src={image} alt={title} />
