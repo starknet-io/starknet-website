@@ -47,7 +47,7 @@ async function fileToPost(locale: string, filename: string): Promise<Post> {
     slug,
     title: data.title,
     post_type: data.post_type,
-    published_date: data.publish_date,
+    published_date: data.published_date,
     time_to_consume: data.time_to_consume,
     category: data.category,
     topic: data.topic,
