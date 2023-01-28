@@ -9,11 +9,11 @@ import {
   Stack,
   Icon,
   useColorModeValue as mode,
+  Flex,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { Heading } from "@ui/Typography/Heading";
-import { CardLink } from "src/blocks/cards/CardLink";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 
 type RootProps = {
@@ -32,13 +32,16 @@ const Root = ({ children, href }: RootProps) => {
           borderRadius={8}
           bg="card-bg"
         >
-          <Stack
-            spacing={{ base: "8", lg: "16" }}
-            justify="space-between"
+          <Flex
+            direction="column"
+            gap={{ base: "8", lg: "16" }}
+            // justify="space-between"
             height="full"
           >
-            <Stack spacing="8">{children}</Stack>
-          </Stack>
+            <Flex gap="8" direction="column" flex={1}>
+              {children}
+            </Flex>
+          </Flex>
         </Box>
       </Box>
     </CardGradientBorder>
@@ -71,9 +74,9 @@ type BodyProps = {
 
 const Body = ({ children }: BodyProps) => {
   return (
-    <Box pl={6} pr={6}>
+    <Flex flex={1} direction="column" pl={6} pr={6}>
       {children}
-    </Box>
+    </Flex>
   );
 };
 
@@ -89,31 +92,18 @@ const Category = ({ category }: any) => {
 type ContentProps = {
   title: string;
   excerpt: string;
-  featured?: boolean;
 };
 
-const Content = ({ title, excerpt, featured = false }: ContentProps) => {
-  if (featured) {
-    return (
-      <Stack spacing="3">
-        <Heading as="h3" variant="h3" noOfLines={2}>
-          {title}
-        </Heading>
-        <Text fontSize="sm" variant="baseRegular" noOfLines={3}>
-          {excerpt}
-        </Text>
-      </Stack>
-    );
-  }
+const Content = ({ title, excerpt }: ContentProps) => {
   return (
-    <Stack spacing="3">
+    <Flex gap="3" direction="column" flex={1}>
       <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
         {title}
       </Text>
       <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
         {excerpt}
       </Text>
-    </Stack>
+    </Flex>
   );
 };
 
@@ -142,18 +132,18 @@ const Footer = ({
     }
   };
   return (
-    <Box p={6}>
+    <Flex p={6}>
       <HStack>
         <Icon as={renderPostTypeIcon()} />
 
         <Text fontSize="sm" color="muted">
-          {publishedAt}·
+          {publishedAt} ·
         </Text>
         <Text fontSize="sm" color="muted">
           {timeToConsume}
         </Text>
       </HStack>
-    </Box>
+    </Flex>
   );
 };
 

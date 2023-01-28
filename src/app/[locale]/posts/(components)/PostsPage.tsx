@@ -190,9 +190,9 @@ type HitProps = {
     readonly short_desc: string;
     readonly locale: string;
     readonly filepath: string;
-    readonly postType: string;
-    readonly timeToConsume: string;
-    readonly publishedAt: string;
+    readonly post_type: string;
+    readonly time_to_consume: string;
+    readonly published_date: string;
   }[];
 };
 
@@ -248,9 +248,9 @@ function CustomHits() {
               <ArticleCard.Content title={hit.title} excerpt={hit.short_desc} />
             </ArticleCard.Body>
             <ArticleCard.Footer
-              postType={hit.postType}
-              publishedAt={hit.publishedAt}
-              timeToConsume={hit?.timeToConsume}
+              postType={hit.post_type}
+              publishedAt={hit.published_date}
+              timeToConsume={hit?.time_to_consume}
             />
           </ArticleCard.Root>
         ))}

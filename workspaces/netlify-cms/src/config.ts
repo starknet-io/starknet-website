@@ -570,7 +570,7 @@ export const config: CmsConfig = {
           name: "published_date",
           label: "Published Date",
           widget: "datetime",
-          format: "MMM Do, YY",
+          format: "MMM Do, YYYY",
         },
         {
           name: "time_to_consume",
