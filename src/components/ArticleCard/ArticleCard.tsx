@@ -24,7 +24,7 @@ type RootProps = {
 const Root = ({ children, href }: RootProps) => {
   return (
     <CardGradientBorder padding="0" borderRadius="8px">
-      <CardLink href={href} _hover={{ textDecor: "none" }} role="group">
+      <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
         <Box
           p="0"
           transition="all 0.2s"
@@ -40,7 +40,7 @@ const Root = ({ children, href }: RootProps) => {
             <Stack spacing="8">{children}</Stack>
           </Stack>
         </Box>
-      </CardLink>
+      </Box>
     </CardGradientBorder>
   );
 };
