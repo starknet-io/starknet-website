@@ -10,9 +10,11 @@ import {
   Icon,
   useColorModeValue as mode,
 } from "src/libs/chakra-ui";
-import { Text } from "../../components/Typography/Text";
+import { Text } from "@ui/Typography/Text";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { Heading } from "@ui/Typography/Heading";
+import { CardLink } from "src/blocks/cards/CardLink";
+import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 
 // type Props = {
 //   img?: string;
@@ -40,25 +42,25 @@ type RootProps = {
 
 const Root = ({ children, href }: RootProps) => {
   return (
-    <Link href={href} _hover={{ textDecor: "none" }} role="group">
-      <Box
-        p="0"
-        bg="article-card-bg"
-        boxShadow={mode("xs", "xs-dark")}
-        _groupHover={{ boxShadow: mode("sm", "sm-dark") }}
-        transition="all 0.2s"
-        height="full"
-        borderRadius={8}
-      >
-        <Stack
-          spacing={{ base: "8", lg: "16" }}
-          justify="space-between"
+    <CardGradientBorder padding="0" borderRadius="8px">
+      <CardLink href={href} _hover={{ textDecor: "none" }} role="group">
+        <Box
+          p="0"
+          transition="all 0.2s"
           height="full"
+          borderRadius={8}
+          bg="card-bg"
         >
-          <Stack spacing="8">{children}</Stack>
-        </Stack>
-      </Box>
-    </Link>
+          <Stack
+            spacing={{ base: "8", lg: "16" }}
+            justify="space-between"
+            height="full"
+          >
+            <Stack spacing="8">{children}</Stack>
+          </Stack>
+        </Box>
+      </CardLink>
+    </CardGradientBorder>
   );
 };
 
@@ -94,21 +96,11 @@ const Body = ({ children }: BodyProps) => {
   );
 };
 
-type CategoryProps = {
-  category?:
-    | "engineering"
-    | "community-calls"
-    | "stark_struct"
-    | "stark_math"
-    | "stark_at_home"
-    | "governance"
-    | "community_and_events"
-    | string;
-};
-const Category = ({ category }: CategoryProps) => {
+const Category = ({ category }: any) => {
+  console.log("category", category);
   return (
     <Box pb={3}>
-      <Badge variant={category}>{category}</Badge>
+      <Badge variant={category?.id}>{category?.label}</Badge>
     </Box>
   );
 };
@@ -123,10 +115,10 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
   if (featured) {
     return (
       <Stack spacing="3">
-        <Heading as="h3" variant="h3">
+        <Heading as="h3" variant="h3" noOfLines={2}>
           {title}
         </Heading>
-        <Text fontSize="sm" variant="baseRegular">
+        <Text fontSize="sm" variant="baseRegular" noOfLines={3}>
           {excerpt}
         </Text>
       </Stack>
@@ -134,10 +126,10 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
   }
   return (
     <Stack spacing="3">
-      <Text fontSize="md" variant="baseExtraBold">
+      <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
         {title}
       </Text>
-      <Text fontSize="sm" variant="baseRegular">
+      <Text fontSize="sm" variant="baseRegular" noOfLines={3}>
         {excerpt}
       </Text>
     </Stack>
@@ -145,7 +137,7 @@ const Content = ({ title, excerpt, featured = false }: ContentProps) => {
 };
 
 type FooterProps = {
-  postType: "post" | "audio" | "video";
+  postType: string;
   publishedAt?: string;
   duration?: string;
 };
@@ -154,9 +146,10 @@ const Footer = ({
   publishedAt,
   duration = "5min read",
 }: FooterProps) => {
+  console.log(postType);
   const renderPostTypeIcon = () => {
     switch (postType) {
-      case "post":
+      case "article":
         return FiBookOpen;
       case "audio":
         return FiHeadphones;

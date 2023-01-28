@@ -60,7 +60,9 @@ export default async function Page({
           <Container maxWidth="846px">
             <Img mb="32px" borderRadius={"8px"} src={image} alt={title} />
             <Box mb={"16px"}>
-              <Badge variant="stark_at_home">{post_type}</Badge>
+              <Badge variant="stark_at_home" textTransform="capitalize">
+                {post_type}
+              </Badge>
             </Box>
             <Heading variant="h2" as="h2" color="heading-navy-fg">
               {title}
