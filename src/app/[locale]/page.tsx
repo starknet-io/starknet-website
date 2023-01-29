@@ -10,10 +10,12 @@ import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEven
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageLayout } from "@ui/Layout/PageLayout";
 
-import { Flex } from "../../libs/chakra-ui";
+import { Badge, Flex, HStack, Spacer } from "../../libs/chakra-ui";
 import BlockDapps from "src/blocks/dataBlocks/BlockDapps/BlockDapps";
 import * as LinkList from "@ui/LinkList/LinkList";
-
+import * as GridCard from "@ui/Card/GridCard";
+import { Text } from "@ui/Typography/Text";
+import { Tag } from "@ui/Tag/Tag";
 export default async function Index({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
@@ -21,6 +23,27 @@ export default async function Index({
     <PageLayout
       main={
         <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
+          <BlockGrouping>
+            <Flex direction="row">
+              <GridCard.Root href="">
+                <GridCard.Image url="blob:https://starknet-website-cms.netlify.app/51e990da-5fb7-44f7-92f7-7f98d24cad07" />
+                <GridCard.Body>
+                  <GridCard.Category
+                    category={{ id: "github", label: "Github" }}
+                  />
+                  <GridCard.Content title="Intro to cairo" />
+                </GridCard.Body>
+                <GridCard.Footer>
+                  <HStack spacing="8px">
+                    <Tag variant="listCard">Ethereum </Tag>
+                    <Tag variant="listCard">Account abstraction </Tag>
+                  </HStack>
+                </GridCard.Footer>
+              </GridCard.Root>
+              <Spacer />
+              <Spacer />
+            </Flex>
+          </BlockGrouping>
           <BlockGrouping>
             {/* <HomepageHero /> */}
             <CommunityCard

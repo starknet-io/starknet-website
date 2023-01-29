@@ -97,7 +97,12 @@ type ContentProps = {
 const Content = ({ title, excerpt }: ContentProps) => {
   return (
     <Flex gap="3" direction="column" flex={1}>
-      <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
+      <Text
+        color="heading-navy-fg"
+        fontSize="18px"
+        variant="baseBold"
+        noOfLines={2}
+      >
         {title}
       </Text>
       <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
