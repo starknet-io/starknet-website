@@ -1,44 +1,76 @@
 "use client";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
+import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import {
   Box,
   Button,
   Container,
+  Flex,
   Heading,
   Image,
+  Img,
   Stack,
   Text,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
 
-type Props = {};
+type Props = {
+  title: string;
+  href: string;
+  imageUrl: string;
+  imageAlt: string;
+  excerpt: string;
+  postType: string;
+  publishedAt?: string;
+  timeToConsume?: string;
+};
 
 export const FeaturedArticleCard = (props: Props) => {
   return (
-    <Box pb={8}>
-      <Stack
-        direction={{ base: "column", md: "column", lg: "row" }}
-        spacing={{ base: "12", lg: "16" }}
+    <CardGradientBorder padding="24px">
+      <Box
+        bg="card-bg"
+        cursor="pointer"
+        as="a"
+        pb={8}
+        width="100%"
+        href={props.href}
       >
-        <Image borderRadius={8} maxW={600} src="/assets/image.jpg" />
-        <Stack spacing={{ base: "8", md: "10" }} width="full" justify="center">
-          <Stack spacing={{ base: "4", md: "6" }}>
-            <Heading size={useBreakpointValue({ base: "sm", md: "md" })}>
-              StarkNet Performance Roadmap
-            </Heading>
-            <Text fontSize={{ base: "lg", md: "xl" }} color="muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto accusantium praesentium eius, ut atque fuga culpa,
-              similique sequi cum eos quis dolorum.
-            </Text>
-            <ArticleCard.Footer
-              postType="audio"
-              publishedAt="Nov 24, 2022"
-              timeToConsume="1hr 2mins"
-            />
+        <Flex gap="32px">
+          <Img
+            maxW={{ base: "200px", md: "350px", lg: "550px" }}
+            maxH={{ base: "200px", md: "300px", lg: "400px" }}
+            objectFit="cover"
+            borderRadius={"8px"}
+            src={props.imageUrl}
+          />
+          <Stack
+            spacing={{ base: "8", md: "10" }}
+            width="full"
+            justify="center"
+          >
+            <Stack spacing={{ base: "4", md: "6" }}>
+              <Heading
+                color="heading-navy-fg"
+                lineHeight="1.1"
+                fontWeight="bold"
+                fontSize={useBreakpointValue({ base: "48px" })}
+              >
+                {props.title}
+              </Heading>
+              <Text fontSize={{ base: "14px" }} color="muted">
+                {props.excerpt}
+              </Text>
+              <ArticleCard.Footer
+                postType={props.postType}
+                publishedAt={props.publishedAt}
+                timeToConsume={props.timeToConsume}
+              />
+            </Stack>
           </Stack>
-        </Stack>
-      </Stack>
-    </Box>
+        </Flex>
+      </Box>
+    </CardGradientBorder>
   );
 };

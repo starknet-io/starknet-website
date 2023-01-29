@@ -37,7 +37,8 @@ const Root = ({ children, href }: RootProps) => {
           height="full"
           borderRadius={8}
           bg="card-bg"
-          minW="321px"
+          maxW="321px"
+          minW="300px"
         >
           <Flex
             direction="column"
