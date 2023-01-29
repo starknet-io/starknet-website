@@ -152,31 +152,41 @@ function CustomCategories({
   const router = useRouter();
   console.log(params);
   return (
-    <Flex as="ul" gap="24px" borderBottomWidth="1px" borderColor="tabs-main-br">
-      <Button
-        variant="category"
-        as="a"
-        isActive={params.category == null}
-        onClick={() => {
-          router.replace(`/${params.locale}/posts`);
-        }}
-      >
-        All posts
-      </Button>
-      {categories.map((category) => (
+    <Flex
+      as="ul"
+      sx={{ overflowX: "scroll" }}
+      gap="24px"
+      borderBottomWidth="1px"
+      borderColor="tabs-main-br"
+      width="100%"
+    >
+      <Box>
         <Button
           variant="category"
           as="a"
-          isActive={category.id === params.category}
+          isActive={params.category == null}
           onClick={() => {
-            if (category.id === params.category) return;
-
-            router.replace(`/${params.locale}/posts/${category.id}`);
+            router.replace(`/${params.locale}/posts`);
           }}
-          key={category.id}
         >
-          <> {category.name}</>
+          All posts
         </Button>
+      </Box>
+      {categories.map((category) => (
+        <Box key={category.id}>
+          <Button
+            variant="category"
+            as="a"
+            isActive={category.id === params.category}
+            onClick={() => {
+              if (category.id === params.category) return;
+
+              router.replace(`/${params.locale}/posts/${category.id}`);
+            }}
+          >
+            <> {category.name}</>
+          </Button>
+        </Box>
       ))}
     </Flex>
   );
