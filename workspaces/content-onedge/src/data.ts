@@ -17,11 +17,13 @@ export interface Post extends Meta {
   readonly title: string;
   readonly image: string;
   readonly category: string;
-  readonly post_type: string;
-  readonly published_date: string;
-  readonly time_to_consume: string;
-  readonly topic: string;
+  readonly topic: string[];
   readonly short_desc: string;
+  readonly post_type: string;
+  readonly post_date: string;
+  readonly time_to_consume: string;
+  readonly published_date: string;
+  readonly blocks: readonly any[];
 }
 
 export async function fileToPost(
@@ -61,11 +63,13 @@ export async function fileToPost(
     title: data.title,
     category: data.category,
     post_type: data.post_type,
+    post_date: data.post_date,
     published_date: data.published_date,
     time_to_consume: data.time_to_consume,
     topic: data.topic,
     short_desc: data.short_desc,
     image: data.image,
+    blocks: data.blocks,
     locale,
     sourceFilepath: path.join("_data", resourceName, locale, filename),
     gitlog: log.latest

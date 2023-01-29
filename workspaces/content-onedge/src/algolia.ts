@@ -36,7 +36,10 @@ try {
 
     for (const locale of locales) {
       for (const filename of filenames) {
-        objects.push(await fileToResource(locale.code, filename));
+        objects.push({
+          ...(await fileToResource(locale.code, filename)),
+          blocks: undefined,
+        });
       }
     }
 
