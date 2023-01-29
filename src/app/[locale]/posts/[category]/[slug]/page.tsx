@@ -1,7 +1,9 @@
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
 import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 import { notFound } from "next/navigation";
+import { FiBookOpen } from "react-icons/fi";
 import { Block } from "src/blocks/Block";
 import { getPostBySlug } from "src/data/posts";
 import {
@@ -15,6 +17,8 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
+  HStack,
+  Icon,
 } from "src/libs/chakra-ui";
 
 export interface Props {
@@ -28,8 +32,17 @@ export default async function Page({
   params: { slug, locale },
 }: Props): Promise<JSX.Element> {
   try {
-    const { title, blocks, body, image, topic, post_type, category } =
-      await getPostBySlug(slug, locale);
+    const {
+      title,
+      blocks,
+      body,
+      image,
+      topic,
+      post_type,
+      published_date,
+      time_to_consume,
+      category,
+    } = await getPostBySlug(slug, locale);
 
     return (
       <PageLayout
@@ -67,7 +80,18 @@ export default async function Page({
             <Heading variant="h2" as="h2" color="heading-navy-fg">
               {title}
             </Heading>
-
+            <Flex mt="16px">
+              <HStack>
+                <Text fontSize="sm" color="muted">
+                  {published_date} ·
+                </Text>
+                <Text fontSize="sm" color="muted">
+                  {time_to_consume}
+                </Text>
+              </HStack>
+              <Spacer />
+            </Flex>
+            <Divider mt="8px" mb="32px" />
             <Flex direction="column" gap="32px">
               {blocks.map((block, i) => (
                 <Block key={i} block={block} locale={locale} />
