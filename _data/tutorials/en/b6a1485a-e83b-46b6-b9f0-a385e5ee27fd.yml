@@ -1,0 +1,9 @@
+id: b6a1485a-e83b-46b6-b9f0-a385e5ee27fd
+type: github
+url: www.github.com
+image: /assets/github.png
+title: ERC20 token porting on Starknet
+author: Eli Ben-Sasson
+published_at: Dec 26th, 2022
+difficulty: beginner
+tags: Ethereum, Account abstraction
