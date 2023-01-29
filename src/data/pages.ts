@@ -1,7 +1,7 @@
 import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
 import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "./utils";
+import { getFirst, getJSON, Meta } from "./utils";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -175,7 +175,7 @@ export type TopLevelBlock =
   | AccordionBlock
   | OrderedBlock;
 
-export interface Page {
+export interface Page extends Meta {
   readonly id: string;
   readonly slug: string;
   readonly link: string;

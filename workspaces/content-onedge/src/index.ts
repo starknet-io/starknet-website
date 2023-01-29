@@ -6,7 +6,7 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import { getFirst, slugify, write, yaml } from "./utils";
 import { defaultLocale, locales } from "./locales";
 import { MainMenu } from "./main-menu";
-import { fileToPage, fileToPost, Page } from "./data";
+import { fileToPage, fileToPost, Page, Post } from "./data";
 
 const datatypes = [
   "categories",
@@ -44,7 +44,7 @@ for (const datatype of datatypes) {
   }
 }
 
-const postsIdMap = new Map<string, any>();
+const postsIdMap = new Map<string, Post>();
 
 {
   // posts
@@ -112,6 +112,7 @@ const pagesIdMap = new Map<string, Page>();
         return {
           ...page,
           blocks: undefined,
+          gitlog: undefined,
         };
       });
     }
@@ -183,7 +184,7 @@ for (const locale of locales) {
           if (item.post != null) {
             const key = `${locale.code}/${slugify(item.post)}`;
             if (postsIdMap.has(key)) {
-              const data = postsIdMap.get(key);
+              const data = postsIdMap.get(key)!;
 
               item.post_data = {
                 id: data.id,
@@ -194,7 +195,7 @@ for (const locale of locales) {
                 topic: data.topic,
                 short_desc: data.short_desc,
                 locale: data.locale,
-                filepath: data.filepath,
+                sourceFilepath: data.sourceFilepath,
               };
             }
           }

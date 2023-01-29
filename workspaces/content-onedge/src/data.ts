@@ -1,8 +1,12 @@
 import * as path from "node:path";
 import { defaultLocale } from "./locales";
 import { getFirst, slugify, yaml } from "./utils";
+import { DefaultLogFields, simpleGit } from "simple-git";
+
+const git = simpleGit();
 
 export interface Meta {
+  readonly gitlog?: DefaultLogFields | undefined | null;
   readonly sourceFilepath: string;
   readonly locale: string;
 }
@@ -25,15 +29,28 @@ export async function fileToPost(
   filename: string,
 ): Promise<Post> {
   const resourceName = "posts";
-
-  const defaultLocaleData = await yaml(
-    path.join("_data", resourceName, defaultLocale, filename),
+  const defaultLocaleFilepath = path.join(
+    "_data",
+    resourceName,
+    defaultLocale,
+    filename,
   );
+  const filepath = path.join("_data", resourceName, locale, filename);
+
+  const defaultLocaleData = await yaml(defaultLocaleFilepath);
 
   const data = await getFirst(
-    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => yaml(filepath),
     () => defaultLocaleData,
   );
+
+  const sourceFilepath =
+    defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+
+  const log = await git.log({
+    file: sourceFilepath,
+    maxCount: 1,
+  });
 
   const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
@@ -51,6 +68,12 @@ export async function fileToPost(
     image: data.image,
     locale,
     sourceFilepath: path.join("_data", resourceName, locale, filename),
+    gitlog: log.latest
+      ? {
+          ...log.latest,
+          body: "",
+        }
+      : null,
   };
 }
 
@@ -207,15 +230,28 @@ export async function fileToPage(
   filename: string,
 ): Promise<Page> {
   const resourceName = "pages";
-
-  const defaultLocaleData = await yaml(
-    path.join("_data", resourceName, defaultLocale, filename),
+  const defaultLocaleFilepath = path.join(
+    "_data",
+    resourceName,
+    defaultLocale,
+    filename,
   );
+  const filepath = path.join("_data", resourceName, locale, filename);
+
+  const defaultLocaleData = await yaml(defaultLocaleFilepath);
 
   const data = await getFirst(
-    () => yaml(path.join("_data", resourceName, locale, filename)),
+    () => yaml(filepath),
     () => defaultLocaleData,
   );
+
+  const sourceFilepath =
+    defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+
+  const log = await git.log({
+    file: sourceFilepath,
+    maxCount: 1,
+  });
 
   const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
@@ -225,6 +261,12 @@ export async function fileToPage(
     id: safeID,
     slug,
     locale,
-    sourceFilepath: path.join("_data", resourceName, locale, filename),
+    sourceFilepath,
+    gitlog: log.latest
+      ? {
+          ...log.latest,
+          body: "",
+        }
+      : null,
   };
 }

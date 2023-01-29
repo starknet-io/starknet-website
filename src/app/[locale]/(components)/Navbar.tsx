@@ -60,7 +60,7 @@ export default function Navbar({ mainMenu }: Props) {
                               } else if (item.custom_internal_link) {
                                 link = `/${locale}/${item.custom_internal_link.replace(
                                   /(^\/|\/$)/g,
-                                  ""
+                                  "",
                                 )}`;
                               } else if (item.page_data) {
                                 link = item.page_data.link;
@@ -119,7 +119,7 @@ export default function Navbar({ mainMenu }: Props) {
                                 } else if (item.custom_internal_link) {
                                   link = `/${locale}/${item.custom_internal_link.replace(
                                     /(^\/|\/$)/g,
-                                    ""
+                                    "",
                                   )}`;
                                 } else if (item.page_data) {
                                   link = item.page_data.link;

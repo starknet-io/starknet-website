@@ -1,8 +1,8 @@
 import { defaultLocale } from "./i18n/config";
 import { TopLevelBlock } from "./pages";
-import { getFirst, getJSON } from "./utils";
+import { getFirst, getJSON, Meta } from "./utils";
 
-export interface Post {
+export interface Post extends Meta {
   readonly id: string;
   readonly slug: string;
   readonly title: string;
@@ -14,10 +14,7 @@ export interface Post {
   readonly post_date: string;
   readonly time_to_consume: string;
   readonly published_date: string;
-  readonly locale: string;
-  readonly filepath: string;
   readonly blocks: readonly TopLevelBlock[];
-  readonly body: string;
 }
 
 export async function getPostBySlug(
