@@ -24,7 +24,7 @@ const Root = ({ children, ...rest }: RootProps) => {
     <Box as="footer" role="contentinfo" {...rest}>
       <Box>
         <Box>
-          <Container as="footer" role="contentinfo">
+          <Container as="footer" role="contentinfo" maxW="1200">
             <Stack
               spacing={{ base: "12", md: "8" }}
               direction={{ base: "column-reverse", lg: "row" }}

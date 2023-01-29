@@ -104,7 +104,6 @@ items:
           - title: OTHER
             items:
               - page: 9ef815e0-d670-404f-a97d-c5aebfe80a12
-              - page: /media-kit/
               - custom_title: Starknet EDU newsletter
                 custom_external_link: /some-link
               - custom_title: Starknet roundup newsletter
