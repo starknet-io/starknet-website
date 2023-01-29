@@ -140,11 +140,11 @@ function CustomType() {
 }
 
 type Tutorial = {
-  readonly id: string;
+  readonly id?: string;
   readonly type: "youtube" | "blog" | "github";
   readonly url: string;
   readonly image?: string;
-  readonly title?: string;
+  readonly title: string;
   readonly author?: string;
   readonly published_at: string;
   readonly difficulty?: "beginner" | "intermediate" | "advanced";
@@ -154,18 +154,16 @@ type Tutorial = {
 };
 
 type HitProps = {
-  readonly hits: readonly {
-    hit: Tutorial;
-  }[];
+  readonly hits: readonly Tutorial[];
 };
 function CustomHits() {
-  const { hits } = useHits();
+  const { hits }: HitProps = useHits();
   console.log(hits);
 
   return (
     <>
       <Flex gap={4} direction="row" flex={1}>
-        {hits.map((hit: Tutorial, i) => {
+        {hits.map((hit, i) => {
           let tags: string[] = [];
           if (hit.difficulty) tags.push(hit.difficulty);
           if (hit.type) tags.push(hit.type);
@@ -176,7 +174,7 @@ function CustomHits() {
                 <GridCard.Category
                   category={{ id: "github", label: "Github" }}
                 />
-                <GridCard.Content title={hit?.title} />
+                <GridCard.Content title={hit.title} />
               </GridCard.Body>
               <GridCard.Footer>
                 <HStack spacing="8px">
