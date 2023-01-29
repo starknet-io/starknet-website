@@ -178,21 +178,23 @@ export type TopLevelBlock =
 export interface Page {
   readonly id: string;
   readonly slug: string;
+  readonly link: string;
   readonly title: string;
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
+  readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly blocks: readonly TopLevelBlock[];
 }
 
 export async function getPageBySlug(
   slug: string,
-  locale: string
+  locale: string,
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {

@@ -49,9 +49,9 @@ export default function Navbar({ mainMenu }: Props) {
                                 item.page_data?.title ||
                                 item.post_data?.title;
 
-                              let link;
-                              let isExternal;
-                              let hasIcon;
+                              let link: string;
+                              let isExternal = false;
+                              let hasIcon = false;
 
                               if (item.custom_external_link) {
                                 link = item.custom_external_link;
@@ -60,12 +60,14 @@ export default function Navbar({ mainMenu }: Props) {
                               } else if (item.custom_internal_link) {
                                 link = `/${locale}/${item.custom_internal_link.replace(
                                   /(^\/|\/$)/g,
-                                  "",
+                                  ""
                                 )}`;
-                              } else if (item.page) {
-                                link = `/${locale}/${item.page_data?.slug}`;
-                              } else if (item.post) {
-                                link = `/${locale}/posts/${item.post_data?.category}/${item.post_data?.slug}`;
+                              } else if (item.page_data) {
+                                link = item.page_data.link;
+                              } else if (item.post_data) {
+                                link = `/${locale}/posts/${item.post_data.category}/${item.post_data.slug}`;
+                              } else {
+                                return <span key={itemIndex}>{title}</span>;
                               }
 
                               return (
@@ -108,8 +110,8 @@ export default function Navbar({ mainMenu }: Props) {
                                   item.page_data?.title ||
                                   item.post_data?.title;
 
-                                let link;
-                                let isExternal;
+                                let link: string;
+                                let isExternal = false;
 
                                 if (item.custom_external_link) {
                                   link = item.custom_external_link;
@@ -117,12 +119,14 @@ export default function Navbar({ mainMenu }: Props) {
                                 } else if (item.custom_internal_link) {
                                   link = `/${locale}/${item.custom_internal_link.replace(
                                     /(^\/|\/$)/g,
-                                    "",
+                                    ""
                                   )}`;
-                                } else if (item.page) {
-                                  link = `/${locale}/${item.page_data?.slug}`;
-                                } else if (item.post) {
-                                  link = `/${locale}/posts/${item.post_data?.category}/${item.post_data?.slug}`;
+                                } else if (item.page_data) {
+                                  link = item.page_data.link;
+                                } else if (item.post_data) {
+                                  link = `/${locale}/posts/${item.post_data.category}/${item.post_data.slug}`;
+                                } else {
+                                  return <span key={itemIndex}>{title}</span>;
                                 }
 
                                 return (

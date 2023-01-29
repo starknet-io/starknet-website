@@ -22,12 +22,12 @@ export interface Post {
 
 export async function getPostBySlug(
   slug: string,
-  locale: string
+  locale: string,
 ): Promise<Post> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/posts/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/posts/${defaultLocale}/${slug}.json`)
+      () => getJSON(`_dynamic/posts/${defaultLocale}/${slug}.json`),
     )) as Post;
   } catch (cause) {
     throw new Error(`Post not found! ${slug}`, {
