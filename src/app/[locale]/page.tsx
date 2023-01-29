@@ -10,10 +10,12 @@ import { BlockCommunityEvents } from "../../blocks/dataBlocks/BlockCommunityEven
 import { HomepageHero } from "../../blocks/HomepageHero";
 import { PageLayout } from "@ui/Layout/PageLayout";
 
-import { Flex } from "../../libs/chakra-ui";
+import { Badge, Flex, HStack, Spacer } from "../../libs/chakra-ui";
 import BlockDapps from "src/blocks/dataBlocks/BlockDapps/BlockDapps";
 import * as LinkList from "@ui/LinkList/LinkList";
-
+import * as GridCard from "@ui/Card/GridCard";
+import { Text } from "@ui/Typography/Text";
+import { Tag } from "@ui/Tag/Tag";
 export default async function Index({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {

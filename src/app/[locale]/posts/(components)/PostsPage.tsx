@@ -12,6 +12,8 @@ import {
   Divider,
   Container,
   Flex,
+  useBreakpointValue,
+  GridItem,
 } from "@chakra-ui/react";
 
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -29,6 +31,7 @@ import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Topic } from "src/data/topics";
+import { FeaturedArticleCard } from "@ui/ArticleCard/FeaturedArticleCard";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -224,7 +227,7 @@ const categories = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  const { showMore } = useInfiniteHits();
+  const isDesktop = useBreakpointValue({ base: false, md: true });
   console.log(hits);
   return (
     <>
@@ -234,26 +237,49 @@ function CustomHits() {
         columnGap="8"
         pt={2}
       >
-        {hits.map((hit, i) => (
-          <ArticleCard.Root
-            href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
-            key={i}
-          >
-            <ArticleCard.Image url={hit.image} />
+        {hits.map((hit, i) => {
+          // todo: add a featured image once we have image templates in place
+          // if (i === 0 && isDesktop) {
+          //   return (
+          //     <GridItem colSpan={3} key={i} minH="400px">
+          //       <FeaturedArticleCard
+          //         href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
+          //         imageAlt={hit.title}
+          //         imageUrl={hit.image}
+          //         title={hit.title}
+          //         excerpt={hit.short_desc}
+          //         timeToConsume={hit?.time_to_consume}
+          //         publishedAt={hit.published_date}
+          //         postType={hit.post_type}
+          //       />
+          //     </GridItem>
+          //   );
+          // }
+          return (
+            <ArticleCard.Root
+              href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
+              key={i}
+            >
+              <ArticleCard.Image url={hit.image} />
 
-            <ArticleCard.Body>
-              {/* @ts-expect-error TODO: fix this */}
-
-              <ArticleCard.Category category={categories[`${hit.category}`]} />
-              <ArticleCard.Content title={hit.title} excerpt={hit.short_desc} />
-            </ArticleCard.Body>
-            <ArticleCard.Footer
-              postType={hit.post_type}
-              publishedAt={hit.published_date}
-              timeToConsume={hit?.time_to_consume}
-            />
-          </ArticleCard.Root>
-        ))}
+              <ArticleCard.Body>
+                <ArticleCard.Category
+                  /* @ts-expect-error TODO: fix this */
+                  category={categories[`${hit.category}`]}
+                />
+                <ArticleCard.Content
+                  title={hit.title}
+                  excerpt={hit.short_desc}
+                />
+              </ArticleCard.Body>
+              <ArticleCard.Footer
+                postType={hit.post_type}
+                publishedAt={hit.published_date}
+                timeToConsume={hit?.time_to_consume}
+              />
+            </ArticleCard.Root>
+          );
+        })}
       </SimpleGrid>
 
       {/* <HStack mt="24">

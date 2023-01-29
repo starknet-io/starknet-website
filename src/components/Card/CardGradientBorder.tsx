@@ -1,16 +1,21 @@
 import { Box, BoxProps } from "src/libs/chakra-ui";
 import React from "react";
 
+interface BorderRadius {
+  base: string;
+  md?: string;
+  lg?: string;
+}
 type Props = {
   children: React.ReactNode;
   padding?: string;
-  borderRadius?: string;
+  borderRadius?: BorderRadius;
 } & BoxProps;
 
 export const CardGradientBorder = ({
   children,
   padding = "8",
-  borderRadius = "24px",
+  borderRadius = { base: "24px" },
   ...rest
 }: Props) => {
   return (
@@ -19,7 +24,7 @@ export const CardGradientBorder = ({
       borderColor="card-br"
       padding={`${padding}px`}
       bg="card-bg"
-      borderRadius={{ base: borderRadius }}
+      borderRadius={borderRadius}
       transition=" all 0.5s ease"
       _hover={{
         background:

@@ -23,13 +23,13 @@ type RootProps = {
 
 const Root = ({ children, href }: RootProps) => {
   return (
-    <CardGradientBorder padding="0" borderRadius="8px">
+    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
         <Box
           p="0"
           transition="all 0.2s"
           height="full"
-          borderRadius={8}
+          borderRadius="8px"
           bg="card-bg"
         >
           <Flex
@@ -97,7 +97,12 @@ type ContentProps = {
 const Content = ({ title, excerpt }: ContentProps) => {
   return (
     <Flex gap="3" direction="column" flex={1}>
-      <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
+      <Text
+        color="heading-navy-fg"
+        fontSize="18px"
+        variant="baseBold"
+        noOfLines={2}
+      >
         {title}
       </Text>
       <Text fontSize="sm" variant="baseRegular" noOfLines={4}>

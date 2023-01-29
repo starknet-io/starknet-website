@@ -80,6 +80,7 @@ export const LargeCard = ({
                     >
                       <Box maxW={{ base: "full", md: "80%" }}>
                         <Heading
+                          marginTop={{ base: "32px", md: "0" }}
                           color="heading-navy-fg"
                           as="h2"
                           variant="h2"
@@ -87,22 +88,34 @@ export const LargeCard = ({
                             base: "1.2em",
                             md: "1.3em",
                           })}
-                          size={useBreakpointValue({ base: "xs", md: "48px" })}
+                          fontSize={useBreakpointValue({
+                            base: "40px",
+                            md: "48px",
+                          })}
                           mb={0}
-                          mt={0}
                         >
                           {title}
                         </Heading>
                       </Box>
                       <Box maxW={{ base: "full", md: "80%" }}>
-                        <Text fontSize={{ base: "lg", md: "md" }} mb={0} mt={0}>
+                        <Text
+                          fontSize={{ base: "16px", md: "18px" }}
+                          lineHeight={{ base: "32px" }}
+                          mb={0}
+                          mt={0}
+                        >
                           {description}
                         </Text>
                       </Box>
                     </Flex>
                   </Flex>
                   <Stack direction={{ base: "column", md: "row" }} spacing="3">
-                    <Link as={NextLink} variant="card" href={`/${linkHref}`}>
+                    <Link
+                      mb="32px"
+                      as={NextLink}
+                      variant="card"
+                      href={`/${linkHref}`}
+                    >
                       {linkLabel} &rarr;
                     </Link>
                   </Stack>

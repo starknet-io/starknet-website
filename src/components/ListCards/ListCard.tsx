@@ -40,7 +40,7 @@ type Props = {
 export const ListCard = (props: Props) => {
   return (
     <CardLink href={props.href} maxW="5xl">
-      <CardGradientBorder padding="0" borderRadius="16px">
+      <CardGradientBorder padding="0" borderRadius={{ base: "16px" }}>
         <Box
           w={{ base: "full" }}
           mx="auto"
