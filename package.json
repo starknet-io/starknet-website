@@ -73,6 +73,7 @@
     "remark-frontmatter": "^4.0.1",
     "remark-mdx-frontmatter": "^2.1.1",
     "rome": "^11.0.0",
+    "simple-git": "^3.16.0",
     "start-server-and-test": "^1.15.2",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",

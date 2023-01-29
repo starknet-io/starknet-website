@@ -8,23 +8,23 @@ import {
   Box,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
-import { getMessages } from "src/data/i18n/intl";
+// import { getMessages } from "src/data/i18n/intl";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
 
 export interface Props {
   readonly params: LocaleParams & {
-    readonly page: string;
+    readonly slug: readonly string[];
   };
 }
 
 export default async function Page({
-  params: { locale, page },
+  params: { locale, slug },
 }: Props): Promise<JSX.Element> {
   try {
-    const messages = await getMessages(locale);
+    // const messages = await getMessages(locale);
     const { title, blocks, template, breadcrumbs, pageLastUpdated } =
-      await getPageBySlug(page, locale);
+      await getPageBySlug(slug.join("/"), locale);
 
     return (
       <Box>

@@ -1,7 +1,7 @@
 import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
 import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "./utils";
+import { getFirst, getJSON, Meta } from "./utils";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -175,24 +175,26 @@ export type TopLevelBlock =
   | AccordionBlock
   | OrderedBlock;
 
-export interface Page {
+export interface Page extends Meta {
   readonly id: string;
   readonly slug: string;
+  readonly link: string;
   readonly title: string;
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
+  readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly blocks: readonly TopLevelBlock[];
 }
 
 export async function getPageBySlug(
   slug: string,
-  locale: string
+  locale: string,
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {

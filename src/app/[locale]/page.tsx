@@ -24,6 +24,27 @@ export default async function Index({
       main={
         <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
           <BlockGrouping>
+            <Flex direction="row">
+              <GridCard.Root href="">
+                <GridCard.Image url="blob:https://starknet-website-cms.netlify.app/51e990da-5fb7-44f7-92f7-7f98d24cad07" />
+                <GridCard.Body>
+                  <GridCard.Category
+                    category={{ id: "github", label: "Github" }}
+                  />
+                  <GridCard.Content title="Intro to cairo" />
+                </GridCard.Body>
+                <GridCard.Footer>
+                  <HStack spacing="8px">
+                    <Tag variant="listCard">Ethereum </Tag>
+                    <Tag variant="listCard">Account abstraction </Tag>
+                  </HStack>
+                </GridCard.Footer>
+              </GridCard.Root>
+              <Spacer />
+              <Spacer />
+            </Flex>
+          </BlockGrouping>
+          <BlockGrouping>
             {/* <HomepageHero /> */}
             <CommunityCard
               description=" This website is a community powered guide to the Starknet

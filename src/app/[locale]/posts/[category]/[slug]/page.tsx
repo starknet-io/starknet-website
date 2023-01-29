@@ -35,7 +35,6 @@ export default async function Page({
     const {
       title,
       blocks,
-      body,
       image,
       topic,
       post_type,
@@ -96,7 +95,6 @@ export default async function Page({
               {blocks.map((block, i) => (
                 <Block key={i} block={block} locale={locale} />
               ))}
-              <Block block={{ type: "markdown", body }} locale={locale} />
             </Flex>
             <Spacer height="32px" />
             <Divider />
