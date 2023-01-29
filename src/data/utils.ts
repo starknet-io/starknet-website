@@ -1,6 +1,13 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import YAML from "yaml";
+import { DefaultLogFields } from "simple-git";
+
+export interface Meta {
+  readonly gitlog?: DefaultLogFields | undefined | null;
+  readonly sourceFilepath: string;
+  readonly locale: string;
+}
 
 export async function getJSON(filepath: string): Promise<any> {
   const file = await fs.readFile(
