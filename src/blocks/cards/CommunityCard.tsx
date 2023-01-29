@@ -6,6 +6,7 @@ import {
   Divider,
   Image,
   Container,
+  Flex,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 
@@ -30,30 +31,33 @@ export const CommunityCard = ({
   return (
     <Container maxW="1104px">
       <CardLink href={linkHref}>
-        <CardGradientBorder borderRadius="104px" padding="0">
+        <CardGradientBorder
+          borderRadius={{ base: "24px", lg: "104px" }}
+          padding="0"
+        >
           <Box
             bg="card-bg"
             px={{ base: "24px", md: "48px" }}
             py="8"
-            borderRadius="104px"
+            borderRadius={{ base: "24px", lg: "104px" }}
             // borderWidth="1px"
             // borderColor="card-br"
             boxShadow="none"
           >
-            <Stack
-              spacing="4"
-              direction={{ base: "column", sm: "row" }}
-              justify="space-between"
-            >
-              <HStack spacing="10">
+            <Stack spacing="4" direction={{ base: "column", sm: "row" }}>
+              <Flex
+                direction={{ base: "column", md: "row" }}
+                alignItems={{ base: "flex-start", md: "flex-start" }}
+                gap={{ base: "24px", lg: "10" }}
+              >
                 <Image
                   src="/assets/cards/user-group.svg"
                   alt="icon"
-                  boxSize={{ base: "12", sm: "72px" }}
+                  boxSize={{ base: "72px" }}
                 />
 
                 <Divider orientation="vertical" />
-                <Box>
+                <Box mt={{ base: "-30px", md: 0 }}>
                   <HStack>
                     <Heading
                       color="heading-navy-fg"
@@ -80,7 +84,7 @@ export const CommunityCard = ({
                     </Link>
                   </Text>
                 </Box>
-              </HStack>
+              </Flex>
             </Stack>
           </Box>
         </CardGradientBorder>

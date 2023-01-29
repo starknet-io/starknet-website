@@ -29,13 +29,13 @@ type RootProps = {
 
 const Root = ({ children, href }: RootProps) => {
   return (
-    <CardGradientBorder padding="0" borderRadius="8px">
+    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
         <Box
           p="0"
           transition="all 0.2s"
           height="full"
-          borderRadius={8}
+          borderRadius="8px"
           bg="card-bg"
           maxW="321px"
           minW="300px"
