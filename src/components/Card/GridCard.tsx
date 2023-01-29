@@ -14,6 +14,13 @@ import {
 import { Text } from "@ui/Typography/Text";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import {
+  HiCalendar,
+  HiCalendarDays,
+  HiOutlineAcademicCap,
+  HiOutlineCalendarDays,
+  HiOutlineUser,
+} from "react-icons/hi2";
 
 type RootProps = {
   children: React.ReactNode;
@@ -96,54 +103,41 @@ type ContentProps = {
 const Content = ({ title, excerpt }: ContentProps) => {
   return (
     <Flex gap="3" direction="column" flex={1}>
-      <Text fontSize="md" variant="baseExtraBold" noOfLines={2}>
+      <Text
+        color="heading-navy-fg"
+        fontSize="18px"
+        variant="baseBold"
+        noOfLines={2}
+      >
         {title}
       </Text>
-      <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
-        {excerpt}
-      </Text>
+      <HStack spacing="2">
+        <Icon as={HiOutlineCalendarDays} mr={2} boxSize="18px" />
+        <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+          12th Nov, 2003
+        </Text>
+      </HStack>
+      <HStack spacing="2">
+        <Icon as={HiOutlineUser} mr={2} boxSize="18px" />
+        <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+          Eli
+        </Text>
+      </HStack>
+      <HStack spacing="2">
+        <Icon as={HiOutlineAcademicCap} mr={2} boxSize="18px" />
+        <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+          Beginner
+        </Text>
+      </HStack>
     </Flex>
   );
 };
 
 type FooterProps = {
-  postType: string;
-  publishedAt?: string;
-  timeToConsume?: string;
+  children: React.ReactNode;
 };
-const Footer = ({
-  postType,
-  publishedAt = "N/A",
-  timeToConsume = "5min read",
-}: FooterProps) => {
-  console.log(postType);
-  const renderPostTypeIcon = () => {
-    switch (postType) {
-      case "article":
-        return FiBookOpen;
-      case "audio":
-        return FiHeadphones;
-      case "video":
-        return FiTv;
-
-      default:
-        return FiBookOpen;
-    }
-  };
-  return (
-    <Flex p={6}>
-      <HStack>
-        <Icon as={renderPostTypeIcon()} />
-
-        <Text fontSize="sm" color="muted">
-          {publishedAt} ·
-        </Text>
-        <Text fontSize="sm" color="muted">
-          {timeToConsume}
-        </Text>
-      </HStack>
-    </Flex>
-  );
+const Footer = ({ children }: FooterProps) => {
+  return <Flex p={6}>{children}</Flex>;
 };
 
 export { Root, Image, Body, Category, Content, Footer };
