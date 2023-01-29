@@ -28,6 +28,18 @@ const stark_struct = defineStyle({
   background: "badge-starkstruck-bg",
   color: "badge-starkstruck-fg",
 });
+const github = defineStyle({
+  background: "badge-starkstruck-bg",
+  color: "badge-starkstruck-fg",
+});
+const blog = defineStyle({
+  background: "badge-community-and-events-bg",
+  color: "badge-community-and-events-fg",
+});
+const youtube = defineStyle({
+  background: "badge-governance-bg",
+  color: "badge-governance-fg",
+});
 
 export const badgeTheme = defineStyleConfig({
   variants: {
@@ -38,5 +50,8 @@ export const badgeTheme = defineStyleConfig({
     stark_at_home,
     governance,
     community_and_events,
+    github,
+    blog,
+    youtube,
   },
 });
