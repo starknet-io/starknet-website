@@ -21,7 +21,7 @@ export const OrderedBlockItem = ({
   title,
 }: OrderedBlockItemProps) => {
   return (
-    <Flex direction="column">
+    <Flex direction="column" mb="32px">
       <Heading as="h2" variant="h3" color="heading-navy-fg">
         {title}
       </Heading>
