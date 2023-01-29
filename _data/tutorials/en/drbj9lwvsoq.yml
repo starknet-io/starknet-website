@@ -1,9 +1,10 @@
 id: DrBJ9LWvsOQ
 type: youtube
 url: https://www.youtube.com/watch?v=DrBJ9LWvsOQ&ab_channel=StarkWare
+image: /assets/zzs5k5wbzzho7hhqopbpbi7ooe.avif
 title: StarkNet 101 Workshop - What is it, how it works, and why it will blow
   your mind
 author: StarkWare
 published_at: Dec 28th, 2022
-difficulty: beginner
+difficulty: advanced
 tags: Cairo, solidity, react, starknet.js
