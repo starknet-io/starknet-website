@@ -1150,6 +1150,7 @@ export const config: CmsConfig = {
           label: "Published at",
           name: "published_at",
           widget: "datetime",
+          format: "MMM Do, YYYY",
         },
         {
           label: "Difficulty",
