@@ -69,18 +69,14 @@ export default async function Page({
         pageLastUpdated={"Page last updated 21 Nov 2023"}
         main={
           <Container maxWidth="846px">
-            {post.post_type === "video" ? (
-              <Flex mb="32px">
-                <YoutubePlayer videoId={videoId} />
-              </Flex>
-            ) : (
+            {post.post_type !== "video" ? (
               <Img
                 mb="32px"
                 borderRadius={"8px"}
                 src={post.image}
                 alt={post.title}
               />
-            )}
+            ) : null}
 
             <Box mb={"16px"}>
               <Badge variant="stark_at_home" textTransform="capitalize">
@@ -102,6 +98,11 @@ export default async function Page({
               <Spacer />
             </Flex>
             <Divider mt="8px" mb="32px" />
+            {post.post_type === "video" ? (
+              <Flex mb="32px">
+                <YoutubePlayer videoId={videoId} />
+              </Flex>
+            ) : null}
             <Flex direction="column" gap="32px">
               {post.blocks.map((block, i) => (
                 <Block key={i} block={block} locale={locale} />
