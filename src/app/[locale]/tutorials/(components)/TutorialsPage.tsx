@@ -161,7 +161,7 @@ function CustomHits() {
 
   return (
     <>
-      <Flex gap={4} direction="row" flex={1}>
+      <Flex gap={4} direction="row" flex={1} flexWrap="wrap">
         {hits.map((hit, i) => {
           let tags: string[] = [];
           if (hit.difficulty) tags.push(hit.difficulty);
