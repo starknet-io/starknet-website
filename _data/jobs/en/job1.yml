@@ -1,13 +1,19 @@
+id: 1a5b7f44-9862-42c8-bdbb-5080b54a6540
 contact:
-  name: sd
-  email: sdsds
-  twitter: sd
-  discord: sdsd
-  logo: "/assets/starknet-now-available_1200x628_image.png"
+  name: Braavos
+  email: jobs@braavos.app
+  twitter: https://twitter.com/myBraavos
+  discord: https://discord.com/invite/MZPkZfE9F2
+  logo: /assets/logo-golden.png
 job:
-  description: sds
-  title: dsds
-  required_experience: dsds
-  scope: ds
-  location: sds
-  how_to_apply: sds
+  required_experience: ""
+  scope: ""
+  location: online_remote
+  role: "Full stack "
+  title: Senior Full Stack Engineer
+  how_to_apply: ""
+  type: full_time
+  description: We are looking for a sharp engineer with a real passion for
+    building things, an internal sense of urgency and a getting things done
+    mentality.
+  apply_url: jobs@braavos.app
