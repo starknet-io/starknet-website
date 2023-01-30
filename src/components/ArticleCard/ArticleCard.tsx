@@ -27,10 +27,11 @@ const Root = ({ children, href }: RootProps) => {
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
         <Box
           p="0"
-          transition="all 0.2s"
           height="full"
           borderRadius="8px"
           bg="card-bg"
+          maxW={{ base: "100%", lg: "315px" }}
+          minW={{ base: "100%", lg: "315px" }}
         >
           <Flex
             direction="column"

@@ -3,94 +3,103 @@ import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
 import { HiChevronRight } from "react-icons/hi2";
+import { TextCycle } from "@ui/TextCycle";
 
 type Props = {};
 
 export const HomepageHero = (props: Props) => {
   return (
     <Box
-      bg="hero-home-bg"
-      borderRadius="24px"
       as="section"
-      minH="600px"
-      position="relative"
+      pt="48px"
+      pb="16px"
       overflow="hidden"
-      // borderWidth="1px"
-      // borderColor="card-br"
+      bg="#eaeaea"
+      bgGradient="linear(0.59deg, #FBECF3 0.97%, #F3EBF7 26.24%, #F0F0FB 54.59%, #E6F0FF 99.96%)"
+      borderRadius="24px"
+      position="relative"
+      mt="-24px"
     >
-      <Box py="32" position="relative" zIndex={1}>
-        <Box
-          maxW={{ base: "xl", md: "7xl" }}
-          mx="auto"
-          px={{ base: "6", md: "20" }}
-          color="white"
+      <Box inset={0} position="absolute" opacity="0.6" mixBlendMode="overlay">
+        <Img
+          zIndex={0}
+          pos="relative"
+          w="full"
+          h="full"
+          src="/assets/home/Pattern.png"
+          alt="Screenshot for Form builder"
+          objectFit={{ base: "cover", lg: "cover" }}
+        />
+      </Box>
+      <Box zIndex={2} inset={0} position="absolute" mixBlendMode="color-dodge">
+        <Img
+          pos="relative"
+          w="full"
+          h="full"
+          src="/assets/home/curves.svg"
+          alt="curves"
+          objectFit={{ base: "cover", lg: "cover" }}
+        />
+      </Box>
+
+      <Box
+        zIndex={2}
+        maxW={{ base: "xl", md: "7xl" }}
+        mx="auto"
+        px={{ base: "6", md: "48px", lg: "48px", xl: "81px" }}
+      >
+        <Flex
+          align="flex-start"
+          direction={{ base: "column", lg: "row" }}
+          justify="space-between"
+          mb="20"
         >
-          <Box maxW="xl">
+          <Box flex="1" maxW={{ lg: "xl" }} pt="6" order={{ base: 1, lg: 0 }}>
             <Heading
-              variant="h1"
-              as="h1"
+              as="h2"
+              variant="h2"
+              mt="8"
+              fontWeight="extrabold"
+              lineHeight="1.2"
+              fontSize={{ base: "72px", md: "80px", lg: "96px" }}
               color="heading-navy-fg"
-              lineHeight={{ base: "1.2", lg: "1.1em" }}
-              fontSize={{ base: "56px", lg: "104px" }}
             >
-              ようこそ to Starknet
+              ようこそ <br /> to Starknet
             </Heading>
-            <Text
-              fontSize={{ base: "18px" }}
-              mt="4"
-              maxW="lg"
-              color="hero-home-text-fg"
-              fontWeight="700"
-            >
+            <Text color="#313131" mt="5" fontSize="18px" fontWeight="bold">
               Starknet is the secure scaling technology bringing Ethereum’s
               benefits to the world.
             </Text>
+
             <Stack
               direction={{ base: "column", md: "row" }}
-              mt="10"
               spacing="4"
+              mt="72px"
+              position={{ base: "relative", md: "relative" }}
+              zIndex={4}
             >
-              <Button as="a" href="#" variant="solid">
-                Build on Starknet
+              <Button size="lg" minW="210px" variant="solid">
+                Build on starknet
               </Button>
-              <Button as="a" href="#" variant="outline">
+              <Button size="lg" variant="outline" borderColor="black">
                 Learn the basics
               </Button>
             </Stack>
           </Box>
-        </Box>
-      </Box>
-      <Flex
-        id="image-wrapper"
-        position="absolute"
-        insetX="0"
-        insetY="0"
-        w="full"
-        h="full"
-        overflow="hidden"
-        align="center"
-      >
-        <Box position="relative" w="full" h="full">
-          <Img
-            src="/assets/home/herobackground.svg"
-            alt="Main Image"
-            w="full"
-            h="full"
-            objectFit="cover"
-            objectPosition="top center"
-            position="absolute"
+          <Box
+            zIndex={0}
+            order={{ base: 0, lg: 1 }}
+            boxSize={{ base: "20", lg: "8" }}
           />
-          <Box top="10%" w="50%" h="full" position="absolute" right="0">
-            <Img
-              src="/assets/home/heroimage.svg"
-              alt="Main Image"
-              w="800px"
-              objectFit="cover"
-              objectPosition="center right"
-            />
-          </Box>
-        </Box>
-      </Flex>
+          <Img
+            pos="relative"
+            marginEnd="-7rem"
+            w="37rem"
+            src="/assets/home/hero_cropped.png"
+            alt="Screenshot for Form builder"
+          />
+        </Flex>
+      </Box>
     </Box>
   );
 };

@@ -172,6 +172,7 @@ function CustomHits() {
           if (hit.job.type) tags.push(hit.job.type);
           return (
             <ListCard
+              variant="job"
               key={hit.contact.name}
               startDateTime={hit.contact.name}
               image={hit.contact.logo}

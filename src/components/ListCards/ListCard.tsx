@@ -10,6 +10,7 @@ import {
   Wrap,
   Link,
   BoxProps,
+  Img,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
@@ -21,6 +22,7 @@ import { SiTwitter } from "react-icons/si";
 import { Card } from "../Card/Card";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CardLink } from "src/blocks/cards/CardLink";
+import Image from "next/image";
 type Props = {
   readonly title?: string;
   readonly startDateTime?: string;
@@ -34,7 +36,7 @@ type Props = {
   readonly twitterHandle?: string;
   readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
   readonly type?: string[];
-  readonly rounded?: boolean;
+  readonly isRounded?: boolean;
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
@@ -59,13 +61,20 @@ export const ListCard = (props: Props) => {
             align="flex-start"
           >
             <Stack spacing="4">
-              <Avatar
-                rounded={props.rounded ? "full" : "xl"}
-                bg="black"
-                size="superLg"
-                src={props.image}
-                name={props.title}
-              />
+              <Box
+                width="80px"
+                height="80px"
+                borderRadius="8px"
+                overflow="hidden"
+              >
+                <Img
+                  width="full"
+                  height="full"
+                  src={props.image}
+                  title={props.title}
+                  objectFit="contain"
+                />
+              </Box>
             </Stack>
             <Box>
               {props.startDateTime && (
@@ -101,13 +110,13 @@ export const ListCard = (props: Props) => {
               <Text pb="14px" fontSize="sm" color="list-card-lg-desc-fg">
                 {props.description}
               </Text>
-              {props.variant === "event" && (
+              {/* {props.variant === "event" && (
                 <Box py="8px">
                   <Button variant="outline" size="sm">
                     View event recap
                   </Button>
                 </Box>
-              )}
+              )} */}
               {props.type && (
                 <Wrap pb="20px" pt="4px" shouldWrapChildren>
                   {props.type.map((tag) => (
