@@ -1,5 +1,5 @@
 import { getPageBySlug } from "src/data/pages";
-
+import moment from "moment";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -23,6 +23,7 @@ export default async function Page({
   try {
     const data = await getPageBySlug(slug.join("/"), locale);
     console.log(data);
+    const date = data?.gitlog?.date;
 
     return (
       <Box>
@@ -50,8 +51,8 @@ export default async function Page({
             </>
           }
           pageLastUpdated={
-            data.pageLastUpdated && data.gitlog
-              ? `Page last updated ${data?.gitlog?.date}`
+            data.page_last_updated && date
+              ? `Page last updated ${moment(date).fromNow()}  `
               : null
           }
           main={
