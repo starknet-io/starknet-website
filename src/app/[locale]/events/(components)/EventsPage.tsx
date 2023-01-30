@@ -55,7 +55,7 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
             <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Ecosystem
+                  Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 

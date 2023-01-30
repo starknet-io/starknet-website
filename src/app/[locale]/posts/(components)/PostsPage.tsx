@@ -89,7 +89,6 @@ export function PostsPage({
               </BreadcrumbItem>
             </Breadcrumb>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomTopics topics={topics} />
