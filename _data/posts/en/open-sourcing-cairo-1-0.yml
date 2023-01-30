@@ -1,0 +1,91 @@
+id: a1088d60-d50e-495e-9a1b-9f6099b1b8a7
+post_type: article
+title: Open Sourcing Cairo 1.0!
+published_date: Nov 24th, 2022
+time_to_consume: 5 min read
+image: /assets/1_rszxhxcej7j0c4bpew5lrq-1.png
+category: engineering
+topic:
+  - starknet
+  - cairo
+  - ethereum
+  - open_source
+short_desc: In 2020, we released Cairo, a Turing-complete programming language
+  supporting verifiable computation. Cairo started as an assembly language and
+  gradually became more expressive.
+blocks:
+  - type: markdown
+    body: >-
+      ### TL;DR
+
+
+      * **Cairo 1.0 is open source! This is only the first step towards open-sourcing the StarkNet stack.**
+
+      * We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. You can now start experimenting with basic Cairo 1.0 code
+
+      * Cairo 1.0 at its core is very similar to Rust
+
+      * Consider it a first taste, not a release. More improvements are on the way. The first version of the compiler is planned for early Q1 next year.
+
+      * Cairo 1.0 is not supported on StarkNet, yet. It will be supported on StarkNet in Q1 next year.
+
+
+      ### Intro
+
+
+      In 2020, we released [Cairo](https://eprint.iacr.org/2021/1063.pdf), a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive. Two months ago, we announced [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), which addresses some major issues in the current situation:
+
+
+      * While Cairo’s syntax has seen significant improvement since its inception, the developer experience can always improve. Cairo 1.0 is a rust-inspired fully typed language, making writing the same logic much easier and less error-prone.
+
+      * The existing compiler is developed in the same repo as StarkNet itself, making it harder to track language changes. The Cairo 1.0 compiler is written from the ground up, allowing for faster feature development and for more community involvement.
+
+      * Every computation is now provable. Currently, a Cairo program may fail with specific inputs (e.g. by reaching an \`assert 1=2\` instruction in some computation branch), rendering the computation unprovable. With Cairo 1.0, programs are provable in every possible branch. This is particularly important for DOS protection and censorship resistance in StarkNet.
+
+
+      Today we mark the first milestone in reaching the above goals as we move the development to a public repo, and **open source Cairo 1.0!** Developers can now, for the first time, compile and execute simple Cairo 1.0 programs. This allows developers to start experimenting with Cairo 1.0 and gradually get accustomed to the new features, even if, at this phase, they cannot implement it on StarkNet just yet.
+
+
+      ### Current capabilities
+
+
+      Currently, you can compile and execute basic native Cairo programs. While many of the syntax/language improvements are still underway, this allows getting used to Cairo 1.0 and enjoy upgrades as they come.
+
+
+      **Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
+
+
+      ### Code examples
+
+
+      To illustrate the differences between the old syntax and Cairo 1.0, we have chosen to show a few different implementations/flavors of finding the n’th Fibonacci number.
+
+
+      ### Example I: Match expressions
+
+
+      In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. No longer will you fear if/else statements that may cause reference revocation!
+
+
+      ![](/assets/code01.png)
+
+
+      ### Example II: Data types
+
+
+      While Cairo 0 worked with felts and pointers, in Cairo 1.0 we have native access to complex data types in the language. Below you can find an example that generates an array of the first n Fibonacci numbers.
+
+
+      ![](/assets/code02.png)
+
+
+      As you can see above, rather than working directly with memory pointers, we use the `Array::<felt>\` type and the \`array_append`function.
+
+
+      ### Example III: structs & ownership
+
+
+      The following code illustrates the usage of structs in Cairo 1.0.
+
+
+      ![](/assets/code03.png)
