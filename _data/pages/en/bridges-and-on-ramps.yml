@@ -1,5 +1,5 @@
 id: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
-title: Bridges and on-ramps
+title: Bridges & on-ramps
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: true
@@ -8,9 +8,8 @@ blocks:
   - type: hero
     variant: learn
     title: Bridges & on-ramps
-    description: Starknet sits on top of Ethereum as a layer 2 network. It uses
-      technology called 'STARK Proofs' to securely compress huge amounts of
-      transactions for Ethereum.
+    description: "Deposit fiat directly to Starknet using fiat on-ramps. Transfer
+      funds from other networks using bridges. "
   - type: container
     max_width: "800"
     blocks:
