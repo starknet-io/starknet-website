@@ -8,7 +8,6 @@ import {
   Box,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
-// import { getMessages } from "src/data/i18n/intl";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
 
@@ -22,49 +21,55 @@ export default async function Page({
   params: { locale, slug },
 }: Props): Promise<JSX.Element> {
   try {
-    // const messages = await getMessages(locale);
-    const { title, blocks, template, breadcrumbs, pageLastUpdated } =
-      await getPageBySlug(slug.join("/"), locale);
+    const data = await getPageBySlug(slug.join("/"), locale);
+    console.log(data);
 
     return (
       <Box>
         <PageLayout
           breadcrumbs={
             <>
-              {breadcrumbs ? (
+              {data.breadcrumbs &&
+              data.breadcrumbs_data &&
+              data.breadcrumbs_data.length > 0 ? (
                 <Breadcrumb separator="->">
                   <BreadcrumbItem>
-                    <BreadcrumbLink fontSize="sm" href="#">
-                      Parents
+                    <BreadcrumbLink
+                      fontSize="sm"
+                      href={`/${data.breadcrumbs_data[0].locale}/${data.breadcrumbs_data[0].slug}`}
+                    >
+                      {data.breadcrumbs_data[0].title}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
 
                   <BreadcrumbItem isCurrentPage>
-                    <BreadcrumbLink fontSize="sm" href="#">
-                      {title}
-                    </BreadcrumbLink>
+                    <BreadcrumbLink fontSize="sm">{data.title}</BreadcrumbLink>
                   </BreadcrumbItem>
                 </Breadcrumb>
               ) : null}
             </>
           }
           pageLastUpdated={
-            pageLastUpdated ? "Page last updated 21 Nov 2023" : null
+            data.pageLastUpdated && data.gitlog
+              ? `Page last updated ${data?.gitlog?.date}`
+              : null
           }
           main={
             <Flex
               direction="column"
               gap={{
-                base: template === "content" ? "32px" : "56px",
-                lg: template === "content" ? "32px" : "136px",
+                base: data.template === "content" ? "32px" : "56px",
+                lg: data.template === "content" ? "32px" : "136px",
               }}
             >
-              {blocks.map((block, i) => {
+              {data.blocks.map((block, i) => {
                 return <Block key={i} block={block} locale={locale} />;
               })}
             </Flex>
           }
-          rightAside={<>{template === "content" ? <Box>Hello</Box> : null}</>}
+          rightAside={
+            <>{data.template === "content" ? <Box>Hello</Box> : null}</>
+          }
         />
       </Box>
     );
@@ -73,3 +78,5 @@ export default async function Page({
     notFound();
   }
 }
+
+//replace every h tag with a tag
