@@ -24,7 +24,7 @@ export default async function Index({
       main={
         <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
           <BlockGrouping>
-            {/* <HomepageHero /> */}
+            <HomepageHero />
             <CommunityCard
               description=" This website is a community powered guide to the Starknet
               ecosystem."
