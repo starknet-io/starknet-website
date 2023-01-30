@@ -2,6 +2,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import { notFound } from "next/navigation";
 import { FiBookOpen } from "react-icons/fi";
 import { Block } from "src/blocks/Block";
@@ -34,6 +35,13 @@ export default async function Page({
   try {
     const post = await getPostBySlug(slug, locale);
 
+    let videoId;
+    if (post.post_type === "video") {
+      if (post.video_link) {
+        videoId = post.video_link.split("v=")[1];
+      }
+    }
+
     return (
       <PageLayout
         breadcrumbs={
@@ -61,12 +69,19 @@ export default async function Page({
         pageLastUpdated={"Page last updated 21 Nov 2023"}
         main={
           <Container maxWidth="846px">
-            <Img
-              mb="32px"
-              borderRadius={"8px"}
-              src={post.image}
-              alt={post.title}
-            />
+            {post.post_type === "video" ? (
+              <Flex mb="32px">
+                <YoutubePlayer videoId={videoId} />
+              </Flex>
+            ) : (
+              <Img
+                mb="32px"
+                borderRadius={"8px"}
+                src={post.image}
+                alt={post.title}
+              />
+            )}
+
             <Box mb={"16px"}>
               <Badge variant="stark_at_home" textTransform="capitalize">
                 {post.post_type}
