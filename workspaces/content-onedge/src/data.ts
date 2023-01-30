@@ -23,19 +23,20 @@ export interface Post extends Meta {
   readonly post_date: string;
   readonly time_to_consume: string;
   readonly published_date: string;
+  readonly video_link: string;
   readonly blocks: readonly any[];
 }
 
 export async function fileToPost(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Post> {
   const resourceName = "posts";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename,
+    filename
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -43,7 +44,7 @@ export async function fileToPost(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const sourceFilepath =
@@ -66,6 +67,7 @@ export async function fileToPost(
     post_date: data.post_date,
     published_date: data.published_date,
     time_to_consume: data.time_to_consume,
+    video_link: data.video_link,
     topic: data.topic,
     short_desc: data.short_desc,
     image: data.image,
@@ -96,13 +98,13 @@ export interface Event extends Meta {
 
 export async function fileToEvent(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Event> {
   const resourceName = "events";
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename))
   );
 
   return {
@@ -144,13 +146,13 @@ export interface Job extends Meta {
 
 export async function fileToJob(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Job> {
   const resourceName = "jobs";
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename))
   );
 
   return {
@@ -191,13 +193,13 @@ export interface Tutorial extends Meta {
 
 export async function fileToTutorial(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Tutorial> {
   const resourceName = "tutorials";
 
   const data = await getFirst(
     () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
+    () => yaml(path.join("_data", resourceName, defaultLocale, filename))
   );
 
   return {
@@ -231,14 +233,14 @@ export interface Page extends Meta {
 
 export async function fileToPage(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Page> {
   const resourceName = "pages";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename,
+    filename
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -246,7 +248,7 @@ export async function fileToPage(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const sourceFilepath =

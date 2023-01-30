@@ -78,18 +78,17 @@ export function PostsPage({
             <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
+                  Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Jobs
+                  Blog
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomTopics topics={topics} />
@@ -237,7 +236,6 @@ const categories = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  const isDesktop = useBreakpointValue({ base: false, md: true });
   console.log(hits);
   return (
     <>
