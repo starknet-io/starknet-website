@@ -157,6 +157,7 @@ function CustomHits() {
         {hits.map((hit) => {
           return (
             <ListCard
+              variant="event"
               href={hit.url}
               key={hit?.name}
               startDateTime={hit?.start_date}
