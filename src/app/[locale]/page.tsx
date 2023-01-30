@@ -36,7 +36,7 @@ export default async function Index({
           <BlockGrouping>
             <LargeCard
               orientation="left"
-              image="https://cdn.midjourney.com/08fcc5e8-f866-4582-96b1-030943fccfca/grid_0.png"
+              image="/assets/home/what_is_starknet.png"
               linkHref="/what-is-starknet/"
               linkLabel="What is Starknet"
               title="What is Starknet? "
@@ -44,7 +44,7 @@ export default async function Index({
             />
             <LargeCard
               orientation="right"
-              image="https://cdn.midjourney.com/08fcc5e8-f866-4582-96b1-030943fccfca/grid_0.png"
+              image="/assets/home/how_does_it_scale.png"
               linkHref="/what-is-starknet/"
               linkLabel="How Starknet works"
               title="How does it scale Ethereum?"
@@ -66,7 +66,7 @@ export default async function Index({
           </BlockGrouping>
           <BlockGrouping>
             <LargeCard
-              image="https://cdn.midjourney.com/08fcc5e8-f866-4582-96b1-030943fccfca/grid_0.png"
+              image="/assets/home/what_do_ethereum_and_starkware_unlock.png"
               linkHref="/what-is-starknet/"
               linkLabel="What is now possible"
               title="What do Ethereum + Starknet unlock?"

@@ -4,7 +4,7 @@ const outline = defineStyle({
   // change the appearance of the border
   borderRadius: 4, // remove the border radius
   fontWeight: "medium", // change the font weight
-  fontSize: "14px",
+  fontSize: "16px",
   paddingLeft: "40px",
   paddingRight: "40px",
   color: "btn-outline-fg",
@@ -23,7 +23,21 @@ const outline = defineStyle({
 });
 
 const solid = defineStyle({
+  borderRadius: 4, // remove the border radius
+  fontWeight: "medium", // change the font weight
+  fontSize: "16px",
+  paddingLeft: "40px",
+  paddingRight: "40px",
+  color: "btn-primary-fg",
   bg: "btn-primary-bg",
+  _hover: {
+    bg: "btn-primary-hover-bg",
+    color: "btn-primary-hover-fg",
+  },
+  _active: {
+    bg: "btn-primary-active-bg",
+    color: "btn-primary-active-fg",
+  },
 });
 
 const filter = defineStyle({

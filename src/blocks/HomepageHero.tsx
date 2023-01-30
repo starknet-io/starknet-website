@@ -18,6 +18,7 @@ export const HomepageHero = (props: Props) => {
       bgGradient="linear(0.59deg, #FBECF3 0.97%, #F3EBF7 26.24%, #F0F0FB 54.59%, #E6F0FF 99.96%)"
       borderRadius="24px"
       position="relative"
+      mt="-24px"
     >
       <Box inset={0} position="absolute" opacity="0.6" mixBlendMode="overlay">
         <Img
@@ -30,9 +31,8 @@ export const HomepageHero = (props: Props) => {
           objectFit={{ base: "cover", lg: "cover" }}
         />
       </Box>
-      <Box inset={0} position="absolute" mixBlendMode="color-dodge">
+      <Box zIndex={2} inset={0} position="absolute" mixBlendMode="color-dodge">
         <Img
-          zIndex={1}
           pos="relative"
           w="full"
           h="full"
@@ -41,7 +41,7 @@ export const HomepageHero = (props: Props) => {
           objectFit={{ base: "cover", lg: "cover" }}
         />
       </Box>
-      <Box> </Box>
+
       <Box
         zIndex={2}
         maxW={{ base: "xl", md: "7xl" }}
@@ -54,14 +54,14 @@ export const HomepageHero = (props: Props) => {
           justify="space-between"
           mb="20"
         >
-          <Box flex="1" maxW={{ lg: "xl" }} pt="6">
+          <Box flex="1" maxW={{ lg: "xl" }} pt="6" order={{ base: 1, lg: 0 }}>
             <Heading
               as="h2"
               variant="h2"
               mt="8"
               fontWeight="extrabold"
               lineHeight="1.2"
-              fontSize={{ base: "86px", md: "80px", lg: "96px" }}
+              fontSize={{ base: "72px", md: "80px", lg: "96px" }}
               color="heading-navy-fg"
             >
               ようこそ <br /> to Starknet
@@ -71,21 +71,31 @@ export const HomepageHero = (props: Props) => {
               benefits to the world.
             </Text>
 
-            <Stack direction={{ base: "column", md: "row" }} spacing="4" mt="8">
+            <Stack
+              direction={{ base: "column", md: "row" }}
+              spacing="4"
+              mt="72px"
+              position={{ base: "relative", md: "relative" }}
+              zIndex={4}
+            >
               <Button size="lg" minW="210px" variant="solid">
                 Build on starknet
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" borderColor="black">
                 Learn the basics
               </Button>
             </Stack>
           </Box>
-          <Box boxSize={{ base: "20", lg: "8" }} />
+          <Box
+            zIndex={0}
+            order={{ base: 0, lg: 1 }}
+            boxSize={{ base: "20", lg: "8" }}
+          />
           <Img
             pos="relative"
-            marginEnd="-5rem"
+            marginEnd="-7rem"
             w="37rem"
-            src="/assets/home/heroimage3.png"
+            src="/assets/home/hero_cropped.png"
             alt="Screenshot for Form builder"
           />
         </Flex>
