@@ -55,25 +55,25 @@ const Root = ({ children, ...rest }: RootProps) => {
               <ButtonGroup variant="ghost">
                 <IconButton
                   as="a"
-                  href="#"
+                  href="https://starknet.io/discord"
                   aria-label="Discord"
                   icon={<SiDiscord fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
-                  href="#"
+                  href="https://github.com/starknet-io"
                   aria-label="GitHub"
                   icon={<SiGithub fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
-                  href="#"
+                  href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
                   aria-label="YouTube"
                   icon={<SiYoutube fontSize="1.25rem" />}
                 />
                 <IconButton
                   as="a"
-                  href="#"
+                  href="https://twitter.com/Starknet"
                   aria-label="Twitter"
                   icon={<SiTwitter fontSize="1.25rem" />}
                 />
