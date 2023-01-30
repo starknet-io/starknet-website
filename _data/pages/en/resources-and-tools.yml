@@ -113,8 +113,7 @@ blocks:
       - type: link_list_item
         is_external: true
         label: Starknet node by Infura
-        sub_label: Get free archive access and instant compatibility with ConsenSys dev
-          tools
+        sub_label: Scale your infrastructure
         href: https://www.infura.io/networks/ethereum/starknet
       - type: link_list_item
         is_external: true
