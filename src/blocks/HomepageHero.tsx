@@ -89,13 +89,14 @@ export const HomepageHero = (props: Props) => {
           <Box
             zIndex={0}
             order={{ base: 0, lg: 1 }}
-            boxSize={{ base: "20", lg: "8" }}
+            // boxSize={{ base: "20", lg: "8" }}
           />
           <Img
-            pos="relative"
-            marginEnd="-7rem"
-            w="37rem"
-            src="/assets/home/hero_cropped.png"
+            position="relative"
+            marginRight={{ base: "-200px", lg: "-5rem" }}
+            right={{ base: "-4rem", lg: "auto" }}
+            width={{ base: "100%", lg: "37rem" }}
+            src="/assets/home/hero_cropped2.png"
             alt="Screenshot for Form builder"
           />
         </Flex>
