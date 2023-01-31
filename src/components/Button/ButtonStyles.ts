@@ -40,6 +40,45 @@ const solid = defineStyle({
   },
 });
 
+const solidHero = defineStyle({
+  borderRadius: 4, // remove the border radius
+  fontWeight: "medium", // change the font weight
+  fontSize: "16px",
+  paddingLeft: "40px",
+  paddingRight: "40px",
+  color: "btn-primary-hero-fg",
+  bg: "btn-primary-hero-bg",
+  _hover: {
+    bg: "btn-primary-hero-hover-bg",
+    color: "btn-primary-hero-hover-fg",
+  },
+  _active: {
+    bg: "btn-primary-hero-active-bg",
+    color: "btn-primary-hero-active-fg",
+  },
+});
+const outlineHero = defineStyle({
+  // change the appearance of the border
+  borderRadius: 4, // remove the border radius
+  fontWeight: "medium", // change the font weight
+  fontSize: "16px",
+  paddingLeft: "40px",
+  paddingRight: "40px",
+  color: "btn-outline-hero-fg",
+  borderColor: "btn-outline-hero-border",
+  bg: "btn-outline-hero-bg",
+  _hover: {
+    bg: "btn-outline-hero-hover-bg",
+    color: "btn-outline-hero-hover-fg",
+    borderColor: "btn-outline-hero-hover-border",
+  },
+  _active: {
+    bg: "btn-outline-hero-active-bg",
+    color: "btn-outline-hero-active-fg",
+    borderColor: "btn-outline-hero-active-border",
+  },
+});
+
 const filter = defineStyle({
   // change the appearance of the border
   borderRadius: 4, // remove the border radius
@@ -113,7 +152,16 @@ const categoryActive = defineStyle({
 });
 
 export const buttonTheme = defineStyleConfig({
-  variants: { outline, filter, filterActive, solid, category, categoryActive },
+  variants: {
+    outline,
+    outlineHero,
+    solidHero,
+    filter,
+    filterActive,
+    solid,
+    category,
+    categoryActive,
+  },
 });
 
 // export const ButtonStyles = defineStyleConfig({

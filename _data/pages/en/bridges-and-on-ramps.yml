@@ -6,9 +6,10 @@ breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: hero
-    variant: learn
+    variant: bridges
     title: Bridges & on-ramps
-    description: "Deposit fiat directly to Starknet using fiat on-ramps. Transfer
+    description:
+      "Deposit fiat directly to Starknet using fiat on-ramps. Transfer
       funds from other networks using bridges. "
   - type: container
     max_width: "800"

@@ -2,6 +2,7 @@
 import {
   Box,
   Container,
+  Flex,
   Image,
   Img,
   Spacer,
@@ -25,37 +26,55 @@ type Props = {
     | "community";
 };
 
+const heroStyles = {
+  dapps: {
+    img: "/assets/ecosystem/dapps.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-dapps-a 3.96%, hero-gradient-dapps-b 254.34%)",
+  },
+  block_explorers: {
+    img: "/assets/ecosystem/blockexplorers.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-block-explorers-a 3.96%, hero-gradient-block-explorers-b 254.34%)",
+  },
+  bridges: {
+    img: "/assets/ecosystem/bridges.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-bridges-on-ramps-a 3.96%, hero-gradient-bridges-on-ramps-b 254.34%)",
+  },
+  wallets: {
+    img: "/assets/ecosystem/wallets.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-wallets-a 3.96%, hero-gradient-wallets-b 254.34%)",
+  },
+  learn: {
+    img: "/assets/ecosystem/learn.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-learn-a 3.96%, hero-gradient-learn-b 254.34%)",
+  },
+  build: {
+    img: "/assets/ecosystem/developer.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-developer-a 3.96%, hero-gradient-developer-b 254.34%)",
+  },
+  community: {
+    img: "/assets/ecosystem/community.svg",
+    gradient:
+      "linear(258.76deg, hero-gradient-community-a 3.96%, hero-gradient-community-b 254.34%)",
+  },
+};
+
 export const BlockHeroLines = ({
   title = "Dapps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
   variant = "dapps",
 }: Props) => {
-  const renderImage = () => {
-    switch (variant) {
-      case "dapps":
-        return "/assets/blockHeroLines/wallets.svg";
-      case "block_explorers":
-        return "/assets/blockHeroLines/block_explorers.svg";
-      case "bridges":
-        return "/assets/blockHeroLines/bridges.svg";
-      case "wallets":
-        return "/assets/blockHeroLines/wallets.svg";
-      case "learn":
-        return "/assets/blockHeroLines/wallets.svg";
-      case "build":
-        return "/assets/blockHeroLines/wallets.svg";
-      case "build":
-        return "/assets/blockHeroLines/community.svg";
-      default:
-        return "/assets/blockHeroLines/wallets.svg";
-    }
-  };
   return (
     <Box
       as="section"
       bg="card-bg"
       borderRadius="32px"
-      bgGradient="linear(258.76deg, hero-gradient-1a 3.96%, hero-gradient-1b 254.34%)"
+      bgGradient={heroStyles[variant].gradient}
       position="relative"
       zIndex={0}
       overflow="hidden"
@@ -78,21 +97,18 @@ export const BlockHeroLines = ({
         />
       </Box>
 
-      <Box zIndex={2} position="relative" height={{ lg: "480px" }}>
-        <Container py={{ base: "16", md: "16" }} height="full">
-          <Stack
+      <Box zIndex={2} position="relative" height={{ lg: "420px" }}>
+        <Container py={{ base: "64px", md: "64px" }} height="full">
+          <Flex
             direction={{ base: "column", lg: "row" }}
-            spacing={{ base: "16" }}
             align={{ lg: "center" }}
             height="full"
-            // bg="purple"
-            alignItems="flex-end"
           >
             <Stack spacing={{ base: "8", md: "12" }} order={{ base: 1, lg: 0 }}>
               <Stack spacing="4">
                 <Stack
                   // bg="red"
-                  spacing={{ base: "4", md: "3" }}
+                  // spacing={{ base: "4", md: "3" }}
                   maxW={{ md: "xl", lg: "md", xl: "xl" }}
                 >
                   <Box>
@@ -159,8 +175,7 @@ export const BlockHeroLines = ({
                   </Box>
 
                   <Heading
-                    bgGradient="linear(95.36deg, heading-hero-gradient-1a 1.31%, heading-hero-gradient-1b 169.4%)"
-                    bgClip="text"
+                    color="heading-navy-fg"
                     as="h2"
                     variant="h2"
                     size={useBreakpointValue({ base: "md", md: "lg" })}
@@ -193,11 +208,11 @@ export const BlockHeroLines = ({
               <Image
                 boxSize={{ base: "300px", lg: "250px" }}
                 // objectFit="contain"
-                src={renderImage()}
+                src={heroStyles[variant].img}
                 alt="starknet"
               />
             </Box>
-          </Stack>
+          </Flex>
         </Container>
       </Box>
     </Box>

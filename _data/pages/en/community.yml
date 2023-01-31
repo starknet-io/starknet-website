@@ -8,12 +8,13 @@ blocks:
     title: Community hub
     description: Join a community of thousands of developers, designers,
       technologists and entrepreneurs scaling Ethereum.
-    variant: build
+    variant: community
   - type: group
     blocks:
       - type: large_card
         title: "Why get involved? "
-        description: "Starknet is an open and global community of like minded people
+        description:
+          "Starknet is an open and global community of like minded people
           working together to create something they believe deeply in; unlocking
           the benefits of Ethereum and decentralised technology for everyone,
           everywhere. "
@@ -29,7 +30,8 @@ blocks:
       - type: image_icon_link_card
         color: orange
         title: Online communities
-        description: "Explore the communities where you can connect and collaborate with
+        description:
+          "Explore the communities where you can connect and collaborate with
           Starknet enthusiasts. "
         link_label: View
         link_href: /community/online-communities
