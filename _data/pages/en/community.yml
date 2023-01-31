@@ -6,8 +6,42 @@ page_last_updated: false
 blocks:
   - type: hero
     title: Community hub
-    description: Join a community of thousands of developers, designers, technologists and entrepreneurs scaling Ethereum.
+    description: Join a community of thousands of developers, designers,
+      technologists and entrepreneurs scaling Ethereum.
     variant: build
-  - type: markdown
-    body: >-
-      Community
+  - type: group
+    blocks:
+      - type: large_card
+        title: "Why get involved? "
+        description: "Starknet is an open and global community of like minded people
+          working together to create something they believe deeply in; unlocking
+          the benefits of Ethereum and decentralised technology for everyone,
+          everywhere. "
+        orientation: right
+  - type: flex_layout
+    heading_variant: lg
+    base: 1
+    md: 2
+    lg: 3
+    heading: "How to get involved? "
+    blocks:
+      - type: image_icon_link_card
+        color: orange
+        title: Online communities
+        description: "Explore communities, connect and collaborate with Starknet
+          enthusiasts. "
+        link_label: "View -> "
+        link_href: /community/online-communities
+      - type: image_icon_link_card
+        color: orange
+        title: Community events
+        description: Find events near you to connect with the Starknet community IRL.
+        link_label: View
+        link_href: "/events/ "
+      - type: image_icon_link_card
+        color: orange
+        title: "Jobs in the Starknet ecosystem "
+        description: Work with one of the amazing teams building in the ecosystem.
+        link_label: "View "
+        link_href: /jobs/
+  - type: community_events
