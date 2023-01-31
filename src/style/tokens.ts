@@ -79,8 +79,9 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#5C94FF",
       "kbd-bg": "#cccccc",
       "kbd-fg": "#363636",
-      "hero-gradient-1a": "#FFDAD6",
-      "hero-gradient-1b": "#B6C6FF",
+
+      "hero-gradient-gradient-a": "#FFDAD6",
+      "hero-gradient-gradient-b": "#B6C6FF",
       "heading-hero-gradient-1a": "#0C0C4F",
       "heading-hero-gradient-1b": "#0C0C4F",
       "text-hero-fg": "#000",
@@ -131,6 +132,20 @@ export const tokens = {
       "badge-governance-fg": "#5B21B6",
       "badge-community-and-events-bg": "#FCE7F3",
       "badge-community-and-events-fg": "#9D174D",
+      "hero-gradient-dapps-a": "#FFDAD6",
+      "hero-gradient-dapps-b": "#B6C6FF",
+      "hero-gradient-wallets-a": "#FADAAB",
+      "hero-gradient-wallets-b": "#ECA9FD",
+      "hero-gradient-block-explorers-a": "#B5F6FF",
+      "hero-gradient-block-explorers-b": "#FDF4A9",
+      "hero-gradient-bridges-on-ramps-a": "#B4DBFF",
+      "hero-gradient-bridges-on-ramps-b": "#A9FDB6",
+      "hero-gradient-community-a": "#DDC2FF",
+      "hero-gradient-community-b": "#FFECCF",
+      "hero-gradient-developer-a": "#FFC8CE",
+      "hero-gradient-developer-b": "#FDFAA9",
+      "hero-gradient-learn-a": "#FFDAD6",
+      "hero-gradient-learn-b": "#B6C6FF",
     },
 
     dark: {
@@ -264,6 +279,20 @@ export const tokens = {
       "badge-governance-fg": "#5B21B6",
       "badge-community-and-events-bg": "#FCE7F3",
       "badge-community-and-events-fg": "#9D174D",
+      "hero-gradient-dapps-a": "#213033",
+      "hero-gradient-dapps-b": "#171B31",
+      "hero-gradient-wallets-a": "#213033",
+      "hero-gradient-wallets-b": "#171B31",
+      "hero-gradient-block-explorers-a": "#213033",
+      "hero-gradient-block-explorers-b": "#171B31",
+      "hero-gradient-bridges-on-ramps-a": "#213033",
+      "hero-gradient-bridges-on-ramps-b": "#171B31",
+      "hero-gradient-community-a": "#213033",
+      "hero-gradient-community-b": "#171B31",
+      "hero-gradient-developer-a": "#213033",
+      "hero-gradient-developer-b": "#171B31",
+      "hero-gradient-learn-a": "#213033",
+      "hero-gradient-learn-b": "#171B31",
     },
   },
 };
@@ -584,14 +613,14 @@ export const semanticTokens = {
       default: tokens.colors.light["divider-bg"],
       _dark: tokens.colors.dark["divider-bg"],
     },
-    "hero-gradient-1a": {
-      default: tokens.colors.light["hero-gradient-1a"],
-      _dark: tokens.colors.dark["hero-gradient-1a"],
-    },
-    "hero-gradient-1b": {
-      default: tokens.colors.light["hero-gradient-1b"],
-      _dark: tokens.colors.dark["hero-gradient-1b"],
-    },
+    // "hero-gradient-1a": {
+    //   default: tokens.colors.light["hero-gradient-1a"],
+    //   _dark: tokens.colors.dark["hero-gradient-1a"],
+    // },
+    // "hero-gradient-1b": {
+    //   default: tokens.colors.light["hero-gradient-1b"],
+    //   _dark: tokens.colors.dark["hero-gradient-1b"],
+    // },
     "heading-hero-gradient-1b": {
       default: tokens.colors.light["heading-hero-gradient-1b"],
       _dark: tokens.colors.dark["heading-hero-gradient-1b"],
@@ -791,6 +820,62 @@ export const semanticTokens = {
     "badge-community-and-events-fg": {
       default: tokens.colors.light["badge-community-and-events-fg"],
       _dark: tokens.colors.dark["badge-community-and-events-fg"],
+    },
+    "hero-gradient-dapps-a": {
+      default: tokens.colors.light["hero-gradient-dapps-a"],
+      _dark: tokens.colors.dark["hero-gradient-dapps-a"],
+    },
+    "hero-gradient-dapps-b": {
+      default: tokens.colors.light["hero-gradient-dapps-b"],
+      _dark: tokens.colors.dark["hero-gradient-dapps-b"],
+    },
+    "hero-gradient-wallets-a": {
+      default: tokens.colors.light["hero-gradient-wallets-a"],
+      _dark: tokens.colors.dark["hero-gradient-wallets-a"],
+    },
+    "hero-gradient-wallets-b": {
+      default: tokens.colors.light["hero-gradient-wallets-b"],
+      _dark: tokens.colors.dark["hero-gradient-wallets-b"],
+    },
+    "hero-gradient-block-explorers-a": {
+      default: tokens.colors.light["hero-gradient-block-explorers-a"],
+      _dark: tokens.colors.dark["hero-gradient-block-explorers-a"],
+    },
+    "hero-gradient-block-explorers-b": {
+      default: tokens.colors.light["hero-gradient-block-explorers-b"],
+      _dark: tokens.colors.dark["hero-gradient-block-explorers-b"],
+    },
+    "hero-gradient-bridges-on-ramps-a": {
+      default: tokens.colors.light["hero-gradient-bridges-on-ramps-a"],
+      _dark: tokens.colors.dark["hero-gradient-bridges-on-ramps-a"],
+    },
+    "hero-gradient-bridges-on-ramps-b": {
+      default: tokens.colors.light["hero-gradient-bridges-on-ramps-b"],
+      _dark: tokens.colors.dark["hero-gradient-bridges-on-ramps-b"],
+    },
+    "hero-gradient-community-a": {
+      default: tokens.colors.light["hero-gradient-community-a"],
+      _dark: tokens.colors.dark["hero-gradient-community-a"],
+    },
+    "hero-gradient-community-b": {
+      default: tokens.colors.light["hero-gradient-community-b"],
+      _dark: tokens.colors.dark["hero-gradient-community-b"],
+    },
+    "hero-gradient-developer-a": {
+      default: tokens.colors.light["hero-gradient-developer-a"],
+      _dark: tokens.colors.dark["hero-gradient-developer-a"],
+    },
+    "hero-gradient-developer-b": {
+      default: tokens.colors.light["hero-gradient-developer-b"],
+      _dark: tokens.colors.dark["hero-gradient-developer-b"],
+    },
+    "hero-gradient-learn-a": {
+      default: tokens.colors.light["hero-gradient-learn-a"],
+      _dark: tokens.colors.dark["hero-gradient-learn-a"],
+    },
+    "hero-gradient-learn-b": {
+      default: tokens.colors.light["hero-gradient-learn-b"],
+      _dark: tokens.colors.dark["hero-gradient-learn-b"],
     },
   },
 };
