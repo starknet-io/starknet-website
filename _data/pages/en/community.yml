@@ -18,6 +18,7 @@ blocks:
           the benefits of Ethereum and decentralised technology for everyone,
           everywhere. "
         orientation: right
+        image: /assets/illustration-unlocking.jpg
   - type: flex_layout
     heading_variant: lg
     base: 1
