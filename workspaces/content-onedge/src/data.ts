@@ -1,7 +1,8 @@
 import * as path from "node:path";
-import { defaultLocale } from "./locales";
+import { defaultLocale, locales } from "./locales";
 import { getFirst, slugify, yaml } from "./utils";
 import { DefaultLogFields, simpleGit } from "simple-git";
+import fs from "node:fs/promises";
 
 const git = simpleGit();
 
@@ -81,140 +82,6 @@ export async function fileToPost(
   };
 }
 
-export interface Event extends Meta {
-  readonly name: string;
-  readonly image: string;
-  readonly start_date: Date;
-  readonly end_date: Date;
-  readonly location: string;
-  readonly city: string;
-  readonly venue: string;
-  readonly type: string;
-  readonly url: string;
-  readonly tags: string;
-}
-
-export async function fileToEvent(
-  locale: string,
-  filename: string,
-): Promise<Event> {
-  const resourceName = "events";
-
-  const data = await getFirst(
-    () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
-  );
-
-  return {
-    name: data.name,
-    image: data.image,
-    start_date: data.start_date,
-    end_date: data.end_date,
-    location: data.location,
-    city: data.city,
-    venue: data.venue,
-    tags: data.tags,
-    type: data.type,
-    url: data.url,
-    locale,
-    sourceFilepath: path.join("_data", resourceName, locale, filename),
-  };
-}
-
-export interface Job extends Meta {
-  readonly contact: {
-    readonly name: string;
-    readonly email: string;
-    readonly twitter: string;
-    readonly discord: string;
-    readonly logo: string;
-  };
-  readonly job: {
-    readonly title: string;
-    readonly description: string;
-    readonly role: string;
-    readonly type: string;
-    readonly required_experience: string;
-    readonly scope: string;
-    readonly location: string;
-    readonly how_to_apply: string;
-    readonly apply_url: string;
-  };
-}
-
-export async function fileToJob(
-  locale: string,
-  filename: string,
-): Promise<Job> {
-  const resourceName = "jobs";
-
-  const data = await getFirst(
-    () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
-  );
-
-  return {
-    job: {
-      title: data.job.title,
-      description: data.job.description,
-      role: data.job.role,
-      type: data.job.type,
-      required_experience: data.job.required_experience,
-      scope: data.job.scope,
-      location: data.job.location,
-      how_to_apply: data.job.how_to_apply,
-      apply_url: data.job.apply_url,
-    },
-    contact: {
-      name: data.contact.name,
-      email: data.contact.email,
-      twitter: data.contact.twitter,
-      discord: data.contact.discord,
-      logo: data.contact.logo,
-    },
-    locale,
-    sourceFilepath: path.join("_data", resourceName, locale, filename),
-  };
-}
-
-export interface Tutorial extends Meta {
-  readonly id: string;
-  readonly type: "youtube" | "blog" | "github";
-  readonly url: string;
-  readonly image?: string;
-  readonly title?: string;
-  readonly author?: string;
-  readonly published_at: string;
-  readonly difficulty?: "beginner" | "intermediate" | "advanced";
-  readonly tags?: string;
-}
-
-export async function fileToTutorial(
-  locale: string,
-  filename: string,
-): Promise<Tutorial> {
-  const resourceName = "tutorials";
-
-  const data = await getFirst(
-    () => yaml(path.join("_data", resourceName, locale, filename)),
-    () => yaml(path.join("_data", resourceName, defaultLocale, filename)),
-  );
-
-  return {
-    id: data.id,
-    type: data.type,
-    url: data.url,
-    image: data.image,
-    title: data.title,
-    author: data.author,
-    published_at: data.published_at,
-    difficulty: data.difficulty,
-    tags: data.tags,
-    locale,
-    sourceFilepath: path.join("_data", resourceName, locale, filename),
-  };
-}
-
 export interface Page extends Meta {
   readonly id: string;
   readonly slug: string;
@@ -263,6 +130,7 @@ export async function fileToPage(
   return {
     ...data,
     id: safeID,
+    parent_page: data.parent_page ? slugify(data.parent_page) : undefined,
     slug,
     locale,
     sourceFilepath,
@@ -273,4 +141,128 @@ export async function fileToPage(
         }
       : null,
   };
+}
+
+interface PagesData extends SimpleData<Page> {
+  readonly idMap: Map<string, Page>;
+}
+
+export async function getPages(): Promise<PagesData> {
+  const resourceName = "pages";
+  const filenameMap = new Map<string, Page>();
+  const idMap = new Map<string, Page>();
+
+  const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = await fileToPage(locale.code, filename);
+
+      idMap.set(`${locale.code}:${data.id}`, data);
+      filenameMap.set(`${locale.code}:${filename}`, data);
+    }
+  }
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = filenameMap.get(`${locale.code}:${filename}`)!;
+
+      const breadcrumbs = [];
+      let currentPage = data;
+      while (currentPage.parent_page != null) {
+        currentPage = idMap.get(`${locale.code}:${currentPage.parent_page}`)!;
+
+        breadcrumbs.unshift(currentPage);
+      }
+
+      data.link = [
+        "",
+        locale.code,
+        ...breadcrumbs.map((page) => page.slug),
+        data.slug,
+      ].join("/");
+
+      data.breadcrumbs_data = breadcrumbs;
+    }
+
+    for (const filename of filenames) {
+      const data = filenameMap.get(`${locale.code}:${filename}`)!;
+
+      data.breadcrumbs_data = data.breadcrumbs_data?.map((page) => {
+        return {
+          ...page,
+          blocks: undefined,
+          gitlog: undefined,
+          breadcrumbs_data: undefined,
+        };
+      });
+    }
+  }
+
+  return { filenameMap, idMap, filenames, resourceName };
+}
+
+interface PostsData extends SimpleData<Post> {
+  readonly idMap: Map<string, Post>;
+}
+
+export async function getPosts(): Promise<PostsData> {
+  const resourceName = "posts";
+  const filenameMap = new Map<string, Post>();
+  const idMap = new Map<string, Post>();
+  const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = await fileToPost(locale.code, filename);
+
+      idMap.set(`${locale.code}:${data.id}`, data);
+      filenameMap.set(`${locale.code}:${filename}`, data);
+    }
+  }
+
+  return { filenameMap, filenames, idMap, resourceName };
+}
+
+interface SimpleData<T> {
+  readonly filenameMap: Map<string, T>;
+  readonly filenames: string[];
+  readonly resourceName: string;
+}
+
+export async function getSimpleData<T = {}>(
+  resourceName: string,
+): Promise<SimpleData<T & Meta>> {
+  const filenameMap = new Map<string, T & Meta>();
+  const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const defaultLocaleFilepath = path.join(
+        "_data",
+        resourceName,
+        defaultLocale,
+        filename,
+      );
+      const filepath = path.join("_data", resourceName, locale.code, filename);
+
+      const defaultLocaleData = await yaml(defaultLocaleFilepath);
+
+      const data = await getFirst(
+        () => yaml(filepath),
+        () => defaultLocaleData,
+      );
+
+      const sourceFilepath =
+        defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+
+      filenameMap.set(`${locale.code}:${filename}`, {
+        ...data,
+        locale: locale.code,
+        sourceFilepath,
+      });
+    }
+  }
+
+  return { filenameMap, filenames, resourceName };
 }
