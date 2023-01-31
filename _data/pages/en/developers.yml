@@ -21,3 +21,4 @@ blocks:
         is_external: true
         label: "will be updated "
         sub_label: asdfsad
+  - type: community_events
