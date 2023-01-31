@@ -1,9 +1,9 @@
-id: 02encode01
+id: 02encode02
 type: youtube
-url: https://youtu.be/E4YO11rHMhw
-image: /assets/ecc01.jpeg
-title: "Hackaton launch + Starknet intro "
+url: https://youtu.be/Vgd41wf7-bE
+image: /assets/ecc02.jpeg
+title: "Wallets, accounts & syntax "
 author: "Encode "
 published_at: Mar 1st, 2022
 difficulty: beginner
-tags: hackathon
+tags: "hackathon, accounts, wallets "
