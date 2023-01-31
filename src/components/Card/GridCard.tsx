@@ -21,6 +21,8 @@ import {
   HiOutlineCalendarDays,
   HiOutlineUser,
 } from "react-icons/hi2";
+import { titleCase } from "src/utils/utils";
+import { type } from "os";
 
 type RootProps = {
   children: React.ReactNode;
@@ -29,43 +31,60 @@ type RootProps = {
 
 const Root = ({ children, href }: RootProps) => {
   return (
-    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
-      <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
-        <Box
-          p="0"
-          transition="all 0.2s"
-          height="full"
-          borderRadius="8px"
-          bg="card-bg"
-          maxW="321px"
-          minW="300px"
-        >
-          <Flex
-            direction="column"
-            gap={{ base: "8", lg: "16" }}
-            // justify="space-between"
+    <Flex>
+      <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
+        <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
+          <Box
+            p="0"
+            transition="all 0.2s"
             height="full"
+            borderRadius="8px"
+            bg="card-bg"
+            maxW="318px"
+            w="full"
           >
-            <Flex gap="8" direction="column" flex={1}>
-              {children}
+            <Flex
+              direction="column"
+              gap={{ base: "8", lg: "16" }}
+              // justify="space-between"
+              height="full"
+            >
+              <Flex gap="8" direction="column" flex={1}>
+                {children}
+              </Flex>
             </Flex>
-          </Flex>
+          </Box>
         </Box>
-      </Box>
-    </CardGradientBorder>
+      </CardGradientBorder>
+    </Flex>
   );
 };
 
 type ImageProps = {
   url?: string;
   imageAlt?: string;
+  type: string;
 };
 
-const Image = ({ url, imageAlt }: ImageProps) => {
+const Image = ({ url, imageAlt, type }: ImageProps) => {
+  const renderImage = () => {
+    switch (type) {
+      case "github":
+        return "/assets/tutorials/github.png";
+
+      case "youtube":
+        return url;
+      case "blog":
+        return "/assets/tutorials/blog.png";
+      default:
+        return "/assets/tutorials/blog.png";
+    }
+  };
+
   return (
-    <Box overflow="hidden">
+    <Box overflow="hidden" w="full">
       <ChakraImage
-        src={url}
+        src={renderImage()}
         alt={imageAlt}
         width="full"
         height={{ base: "14rem", lg: "10rem" }}
@@ -82,7 +101,7 @@ type BodyProps = {
 
 const Body = ({ children }: BodyProps) => {
   return (
-    <Flex flex={1} direction="column" pl={6} pr={6}>
+    <Flex flex={1} direction="column" pl={6} pr={6} w="full">
       {children}
     </Flex>
   );
@@ -98,12 +117,16 @@ const Category = ({ category }: any) => {
 
 type ContentProps = {
   title: string;
-  excerpt?: string;
+  date?: string;
+  author?: string;
+  difficulty?: string;
 };
 
-const Content = ({ title, excerpt }: ContentProps) => {
+const Content = ({ title, date, author, difficulty }: ContentProps) => {
+  if (!difficulty) return null;
+  const formattedDifficulty = titleCase(difficulty);
   return (
-    <Flex gap="3" direction="column" flex={1}>
+    <Flex gap="3" direction="column" flex={1} w="full">
       <Text
         color="heading-navy-fg"
         fontSize="18px"
@@ -115,19 +138,19 @@ const Content = ({ title, excerpt }: ContentProps) => {
       <HStack spacing="2">
         <Icon as={HiOutlineCalendarDays} mr={2} boxSize="18px" />
         <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
-          12th Nov, 2003
+          {date}
         </Text>
       </HStack>
       <HStack spacing="2">
         <Icon as={HiOutlineUser} mr={2} boxSize="18px" />
         <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
-          Eli
+          {author}
         </Text>
       </HStack>
       <HStack spacing="2">
         <Icon as={HiOutlineAcademicCap} mr={2} boxSize="18px" />
         <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
-          Beginner
+          {formattedDifficulty}
         </Text>
       </HStack>
     </Flex>
@@ -138,7 +161,11 @@ type FooterProps = {
   children: React.ReactNode;
 };
 const Footer = ({ children }: FooterProps) => {
-  return <Flex p={6}>{children}</Flex>;
+  return (
+    <Flex p={6} w="full">
+      {children}
+    </Flex>
+  );
 };
 
 export { Root, Image, Body, Category, Content, Footer };

@@ -22,7 +22,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
-
+import { titleCase } from "src/utils/utils";
 export interface AutoProps {
   readonly params: {
     readonly locale: string;
@@ -69,8 +69,9 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <CustomDifficulty />
               <CustomType />
+              <CustomCourse />
+              <CustomDifficulty />
             </Box>
           }
           main={
@@ -91,21 +92,24 @@ function CustomDifficulty() {
   });
   console.log("Role", items);
   return (
-    <Box>
+    <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
-        Role
+        Level
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
-          <Button
-            size="sm"
-            variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
-            key={i}
-          >
-            {item.label}
-          </Button>
-        ))}
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+            >
+              {label}
+            </Button>
+          );
+        })}
       </VStack>
     </Box>
   );
@@ -123,16 +127,49 @@ function CustomType() {
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
-          <Button
-            variant={item.isRefined ? "filterActive" : "filter"}
-            size="sm"
-            onClick={() => refine(item.value)}
-            key={i}
-          >
-            {item.label}
-          </Button>
-        ))}
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+            >
+              {label}
+            </Button>
+          );
+        })}
+      </VStack>
+    </Box>
+  );
+}
+
+function CustomCourse() {
+  const { items, refine } = useRefinementList({
+    attribute: "course",
+    sortBy: ["name:asc"],
+  });
+  console.log("type", items);
+  return (
+    <Box mt={8}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+        Courses / series
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+            >
+              {label}
+            </Button>
+          );
+        })}
       </VStack>
     </Box>
   );
@@ -163,22 +200,33 @@ function CustomHits() {
     <>
       <Flex gap={4} direction="row" flex={1} flexWrap="wrap">
         {hits.map((hit, i) => {
-          let tags: string[] = [];
-          if (hit.difficulty) tags.push(hit.difficulty);
-          if (hit.type) tags.push(hit.type);
+          // let tags: string[] = [];
+          // if (hit.difficulty) tags.push(hit.difficulty);
+          // if (hit.type) tags.push(hit.type);
+          let tagsArray = hit.tags ? hit.tags.split(",") : [];
           return (
             <GridCard.Root href={hit.url} key={hit.title}>
-              <GridCard.Image url={hit.image} />
+              <GridCard.Image url={hit.image} type={hit.type} />
               <GridCard.Body>
-                <GridCard.Category
-                  category={{ id: "github", label: "Github" }}
+                {/* <GridCard.Category category={hit.tags} /> */}
+                <GridCard.Content
+                  title={hit.title}
+                  author={hit.author}
+                  date={hit.published_at}
+                  difficulty={hit.difficulty}
                 />
-                <GridCard.Content title={hit.title} />
               </GridCard.Body>
               <GridCard.Footer>
                 <HStack spacing="8px">
-                  <Tag variant="listCard">Ethereum </Tag>
-                  <Tag variant="listCard">Account abstraction </Tag>
+                  {tagsArray.map((tag, i) => {
+                    // only show max 2 tags
+                    if (i > 1) return null;
+                    return (
+                      <Tag key={i} variant="listCard">
+                        {tag}
+                      </Tag>
+                    );
+                  })}
                 </HStack>
               </GridCard.Footer>
             </GridCard.Root>
