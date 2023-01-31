@@ -1,0 +1,88 @@
+id: 5d34ef8d-2541-4444-8a98-5c49a6231b0e
+post_type: article
+title: StarkNet Alpha 4 Release
+published_date: Nov 17th, 2021
+time_to_consume: 2 min read
+image: /assets/1_npu7yslcr2lepvlggffrlw-1.png
+category: engineering
+topic:
+  - starknet
+short_desc: Alpha 4 was released today on Goerli. This version is the Mainnet
+  release candidate and, if everything goes according to plan, will be deployed
+  on Mainnet by the month’s end.
+blocks:
+  - type: markdown
+    body: >-
+      ### Exciting Times Ahead
+
+
+      Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+
+
+      Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+
+
+      Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+
+
+      ### New Features
+
+
+      Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+
+
+      #### Get this contract’s address
+
+
+      Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+
+
+      [Francesco Ceccon.eth on Twitter: "RIP selfie contract: September 2021-November 2021 / Twitter"](https://cdn.embedly.com/widgets/media.html?type=text%2Fhtml&key=a19fcc184b9711e1b4764040d3dc5c07&schema=twitter&url=https%3A//twitter.com/ceccon_me/status/1458410251078836227&image=https%3A//i.embed.ly/1/image%3Furl%3Dhttps%253A%252F%252Fabs.twimg.com%252Ferrors%252Flogo46x38.png%26key%3Da19fcc184b9711e1b4764040d3dc5c07)
+
+
+      [See code example and documentation](https://www.cairo-lang.org/docs/hello_starknet/calling_contracts.html#getting-the-caller-address)
+
+
+      #### Block Hash
+
+
+      Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+
+
+      #### Contract Addresses
+
+
+      This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+
+
+      ```
+
+
+      ```
+
+
+      In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+
+
+      Note that this scheme is very similar to CREATE2.
+
+
+      [See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+
+
+      #### Token Bridges
+
+
+      Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+
+
+      This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+
+
+      ### Join StarkNet
+
+
+      There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+
+
+      **Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
