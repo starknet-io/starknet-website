@@ -67,7 +67,7 @@ export const HomepageHero = (props: Props) => {
         zIndex={2}
         maxW={{ base: "xl", md: "7xl" }}
         mx="auto"
-        px={{ base: "6", md: "48px", lg: "48px", xl: "81px" }}
+        px={{ base: "6", md: "48px", lg: "40px", xl: "81px" }}
       >
         <Flex
           align="flex-start"
@@ -82,7 +82,7 @@ export const HomepageHero = (props: Props) => {
               mt="8"
               fontWeight="extrabold"
               lineHeight="1.2"
-              fontSize={{ base: "56px", md: "80px", lg: "96px" }}
+              fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"
             >
               ようこそ <br /> to Starknet
@@ -120,7 +120,7 @@ export const HomepageHero = (props: Props) => {
           <Img
             position="relative"
             marginRight={{ base: "-200px", lg: "-5rem" }}
-            right={{ base: "-4rem", lg: "auto" }}
+            right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
             width={{ base: "100%", lg: "37rem" }}
             src="/assets/home/hero_cropped2.png"
             alt="Screenshot for Form builder"
