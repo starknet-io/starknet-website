@@ -1,0 +1,9 @@
+id: 0snedu01-medium
+type: blog
+url: https://medium.com/starknet-edu
+image: /assets/blog.png
+title: Starknet Edu Medium Posts
+author: "StarkWare "
+published_at: Aug 5th, 2022
+difficulty: beginner
+tags: cairo, account abstraction, contracts
