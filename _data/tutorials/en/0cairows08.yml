@@ -1,0 +1,9 @@
+id: 0cairows08
+type: youtube
+url: https://youtu.be/JhsGgYS9Kds
+image: /assets/cairows08.jpeg
+title: Setting up a dev environment with Docker
+author: StarkWare
+published_at: Nov 22nd, 2022
+difficulty: beginner
+tags: "cairo, testing "

@@ -9,5 +9,16 @@ blocks:
     description: A manual and dev resource list for builders, by builders.
     variant: build
   - type: markdown
-    body: >-
-      Developers
+    body: Developers
+  - type: flex_layout
+    heading_variant: md
+    base: 1
+    md: 2
+    lg: 3
+    heading: Explore the docs
+    blocks:
+      - type: link_list_item
+        is_external: true
+        label: "will be updated "
+        sub_label: asdfsad
+  - type: community_events

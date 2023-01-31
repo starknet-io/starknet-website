@@ -1,0 +1,114 @@
+id: dd58befe-7e5e-429c-9b5d-b2e6851ea511
+post_type: article
+title: "StarkNet: On to the Next Challenge"
+published_date: Feb 9th, 2022
+time_to_consume: 5 min read
+image: /assets/1_hcc7wxgymohcplclwucdya-1.png
+category: engineering
+topic:
+  - ethereum
+  - starknet
+short_desc: Just a year after plans for StarkNet were first announced, the
+  platform has very good functionality. The developer community is flourishing
+  beyond our wildest expectations, and providing a constant flurry of new L2
+  Native projects.
+blocks:
+  - type: markdown
+    body: >-
+      ### TL;DR
+
+
+      * We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
+
+      * We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
+
+      * We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
+
+      * Next up: Decentralization
+
+
+      Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+
+
+      Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+
+
+      They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+
+
+      Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+
+
+      Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+
+
+      Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+
+
+      ### The Story So Far
+
+
+      StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+
+
+      Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+
+
+      A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+
+
+      The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+
+
+      ### Next Steps
+
+
+      Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+
+
+      To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+
+
+      We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+
+
+      There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+
+
+      This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+
+
+      [StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+
+
+      But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+
+
+      The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+
+
+      ### Next Up: Decentralization
+
+
+      StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+
+
+      Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+
+
+      Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+
+
+      In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+
+
+      A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+
+
+      In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+
+
+      ### Always Improving; Forever Listening
+
+
+      As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.

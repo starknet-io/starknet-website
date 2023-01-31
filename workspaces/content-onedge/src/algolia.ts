@@ -1,12 +1,11 @@
-import fs from "node:fs/promises";
 import * as path from "node:path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 
 import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
-import { defaultLocale, locales } from "./locales";
-import { fileToEvent, fileToJob, fileToPost, fileToTutorial } from "./data";
+
+import { getPages, getPosts, getSimpleData } from "./data";
 
 const dotenvFiles = [".env.local", ".env"];
 
@@ -19,29 +18,18 @@ try {
   );
 
   const resources = [
-    ["posts", fileToPost],
-    ["jobs", fileToJob],
-    ["events", fileToEvent],
-    ["tutorials", fileToTutorial],
+    await getPosts(),
+    await getPages(),
+    await getSimpleData("jobs"),
+    await getSimpleData("events"),
+    await getSimpleData("tutorials"),
   ] as const;
 
-  for (const [resourceName, fileToResource] of resources) {
+  for (const { resourceName, filenameMap } of resources) {
     console.log("resourceName", resourceName);
 
     const indexName = `web_${resourceName}_dev`;
-    const objects = [];
-    const filenames = await fs.readdir(
-      path.join("_data", resourceName, defaultLocale),
-    );
-
-    for (const locale of locales) {
-      for (const filename of filenames) {
-        objects.push({
-          ...(await fileToResource(locale.code, filename)),
-          blocks: undefined,
-        });
-      }
-    }
+    const objects = Array.from(filenameMap.values());
 
     const index = client.initIndex(indexName);
 

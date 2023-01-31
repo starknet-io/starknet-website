@@ -1,0 +1,103 @@
+id: 0e94ccd9-8f3b-4586-97a8-d9594e346fbf
+post_type: article
+title: "Part 2: A Decentralization and Governance Proposal for StarkNet"
+published_date: Jul 13th, 2022
+time_to_consume: 5 min read
+image: /assets/1_mrdbx-inf3bcska9lmnoya-1.png
+category: governance
+topic:
+  - decentralization
+  - starknet
+  - open_source
+short_desc: "Our previous post explained what StarkNet is, how it is
+  progressively being decentralized, and provided a summary of its two
+  decentralization mechanisms. "
+blocks:
+  - type: markdown
+    body: >-
+      Our
+      previous [post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef) explained
+      what StarkNet is, how it is progressively being decentralized, and
+      provided a summary of its two decentralization mechanisms. This post
+      discusses the StarkNet decentralization process, the role of the StarkNet
+      Foundation, and the need for a new native token for StarkNet. Finally, it
+      discusses additional considerations for StarkNet’s governance down the
+      road.
+
+
+      ### Principles of decentralization
+
+
+      [STARK](https://eprint.iacr.org/2018/046.pdf) technology is mature and secure, but thus far it has been implemented and utilized primarily as a centralized service on Ethereum ([StarkEx](https://starkware.co/starkex/)), and an Alpha version of a decentralized service ([StarkNet](https://starkware.co/starknet/)). StarkNet should be available as a truly permissionless public good, like Ethereum, or the Internet. So we are committing to furthering StarkNet’s decentralization and the following four principles to guide the change:
+
+
+      **Liveness.** StarkNet will not rely on a single company as its operator. Companies can cease to exist, or may decide to stop servicing the network. After decentralization, such scenarios will not bring down StarkNet.
+
+
+      **Censorship resistance.** A single company can theoretically decide, or be forced, to censor particular transactions and smart contracts while fulfilling others. StarkNet will employ a decentralized model to protect against such a scenario.
+
+
+      **Transparency.** Software upgrades and maintenance are an inevitable part of any decentralized service. Such actions must be discussed transparently, so the community is informed and in control of the technology. The larger community of StarkNet users, operators and developers must work collectively to determine upgrades and maintenance via a transparent, fair, participatory and inclusive process.
+
+
+      **Creativity.** StarkNet must allow any developer to participate in building its core infrastructure and applications, to prevent monopolization and to increase creative and socially beneficial uses of blockchains at scale.
+
+
+      Decentralization is a hard problem, not to be approached in a rushed manner. StarkNet’s governance proposal, shared here, will likely develop and change over time. What follows is merely its first iteration.
+
+
+      ### Foundation
+
+
+      The Foundation will be a mission-driven non-profit organization, and will be granted StarkNet Tokens (see [next post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)). We anticipate the mission of the Foundation will be to maintain StarkNet as a public good. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between its users, operators, and developers. The Foundation will be dedicated to furthering the decentralization goals outlined above: liveness, censorship-resistance, transparency, and creativity.
+
+
+      StarkNet’s liveness and censorship-resistance are best achieved by permissionless and decentralized consensus through a proof-of-stake leader election for sequencing and proving STARK-compressed transactions. While that mechanism is automated, it relies on well-functioning protocol software run by nodes on the network as well as the validity and ongoing liveness of the underlying Ethereum blockchain. Therefore, the Foundation will also act as a resource for the ongoing development, documentation, and publication of that protocol software, especially as it relates to bug-fixes and efficiency improvements.
+
+
+      Beyond routine maintenance, we anticipate vibrant debates within the community over feature changes or other more fundamental upgrades to the protocol. This is unavoidable in permissionless systems, as evidenced historically by Bitcoin’s block size debate, Ethereum’s proof-of-stake merge, and numerous other examples across the cryptocurrency ecosystem. These software development decisions are more than just objective math and efficiency gains, but rather involve subjective value judgements and feature tradeoffs. In many blockchain communities these decisions are made informally without any clear rules of debate or a process for decision making. Even a non-decision is a decision that favors the status quo. To avoid these issues, the Foundation’s mission will also include developing, testing, and implementing community decision-making processes for resolving essential technological questions. That mechanism will be central to deliberations over protocol updates, dispute resolution, and public goods funding. The Foundation will promote transparency by distributing the information that is needed for making these decisions, and will maintain an archive of such information for future reference.
+
+
+      ### Why token?
+
+
+      StarkNet was always envisioned as a protocol that is run by the community, yet there has been no clear way to define who exactly comprises this community. *The token will allow supporters of the community that perform work that contributed to the success of the ecosystem to play a role in the governance of that ecosystem.*
+
+
+      Additionally, a fair, open, and censorship-resistant service is only possible if several parties show up to compete to perform work that powers the decentralized service, and that can only be guaranteed if those workers are compensated for their role as operators of the network.
+
+
+      Therefore, including tokens as part of a network technology like StarkNet is necessary. And although payment censorship resistance can be achieved by using an existing non-native token, for example Bitcoin or Ether (ETH), we believe such an approach would fail over time to provide the users of the network with a distinct community and a voice in decisions.
+
+
+      A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact StarkNet’s service and its users and providers.
+
+
+      ### What will the token be used for?
+
+
+      The token will be the mechanism for operating the network (fees), maintaining and securing the network (consensus participation), and deciding on its values and strategic goals (governance).
+
+
+      **Transaction fees:** Currently, fees in StarkNet are paid in Ether (ETH). But later on, we anticipate fees will be paid exclusively with the native StarkNet Token. To support good user experience, automated and decentralized on-chain mechanisms will allow users to pay fees in ETH.
+
+
+      **Staking:** Certain services that are critical to the liveness and security of StarkNet may require staking of StarkNet Tokens. These services may include sequencing, reaching temporary L2 consensus before L1 finality is reached, STARK-proving services and data availability provisioning, to name a few examples. We expect these services to be decentralized in 2023.
+
+
+      **Governance:** Proposals for improving StarkNet will require a minimal token support threshold, to be defined later. Voting, either directly or via delegation, will be required for all changes to the protocol that are essential to StarkNet’s liveness, security and maintenance. For example, all major updates to the StarkNet Operating System will require the approval of token holders.
+
+
+      ### Closing reflections on governance
+
+
+      Decentralized governance mechanisms are still in their infancy and no project in this space has provided us with a compelling model for emulation. Is regular and direct voting by all token holders the best path? It is relatively straightforward to design this as a technological mechanism, but it can be unwieldy and may unfairly privilege the holders of a large number of tokens, rather than persons who actively use the network.
+
+
+      When considering the best approach, we suggest considering checks and balances between several separate structures that derive their authority from the community of StarkNet Token holders.
+
+
+      We also recommend that StarkNet Token holders make good use of the expertise of core developers. In all blockchain ecosystems, core developers play a central role in securing, maintaining and advancing the underlying technology. Hence, defining a formal role for them within the governance process is worth consideration.
+
+
+      The [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) in this series describes the design of the StarkNet Token: the key token design considerations, and the different phases of token allocation.

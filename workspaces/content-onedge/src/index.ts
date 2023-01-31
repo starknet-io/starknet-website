@@ -6,149 +6,70 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import { getFirst, slugify, write, yaml } from "./utils";
 import { defaultLocale, locales } from "./locales";
 import { MainMenu } from "./main-menu";
-import { fileToPage, fileToPost, Page, Post } from "./data";
+import { getPages, getPosts, getSimpleData } from "./data";
 
-const datatypes = [
-  "categories",
-  "events",
-  "topics",
-  "dapps",
-  "wallets",
-  "block_explorers",
-  "bridges",
+const simpleDataTypes = [
+  await getSimpleData("categories"),
+  await getSimpleData("events"),
+  await getSimpleData("topics"),
+  await getSimpleData("dapps"),
+  await getSimpleData("wallets"),
+  await getSimpleData("block_explorers"),
+  await getSimpleData("bridges"),
 ];
 
-for (const datatype of datatypes) {
+for (const simpleData of simpleDataTypes) {
   try {
-    await fs.mkdir(`_data/_dynamic/${datatype}`, { recursive: true });
-
-    const filenames = await fs.readdir(`_data/${datatype}/${defaultLocale}`);
+    await fs.mkdir(`_data/_dynamic/${simpleData.resourceName}`, {
+      recursive: true,
+    });
 
     for (const locale of locales) {
-      const data: any[] = [];
+      const data = simpleData.filenames.map((filename) =>
+        simpleData.filenameMap.get(`${locale.code}:${filename}`),
+      );
 
-      for (const filename of filenames) {
-        data.push(
-          await getFirst(
-            () => yaml(`_data/${datatype}/${locale.code}/${filename}`),
-            () => yaml(`_data/${datatype}/${defaultLocale}/${filename}`),
-          ),
-        );
-      }
-
-      await write(`_data/_dynamic/${datatype}/${locale.code}.json`, data);
+      await write(
+        `_data/_dynamic/${simpleData.resourceName}/${locale.code}.json`,
+        data,
+      );
     }
   } catch (err) {
-    console.log("datatype", datatype);
+    console.log("simpleData.resourceName", simpleData.resourceName);
     console.log(err);
   }
 }
 
-const postsIdMap = new Map<string, Post>();
+const posts = await getPosts();
 
-{
-  // posts
-  const filenames = await fs.readdir(`_data/posts/${defaultLocale}`);
-
-  for (const locale of locales) {
-    await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
-
-    for (const filename of filenames) {
-      const data = await fileToPost(locale.code, filename);
-
-      postsIdMap.set(`${locale.code}/${data.id}`, data);
-      postsIdMap.set(`${locale.code}/${filename}`, data);
-
-      await write(
-        `_data/_dynamic/posts/${locale.code}/${data.slug}.json`,
-        data,
-      );
-    }
-  }
+for (const locale of locales) {
+  await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
 }
 
-const pagesIdMap = new Map<string, Page>();
+for (const data of posts.filenameMap.values()) {
+  await write(`_data/_dynamic/posts/${data.locale}/${data.slug}.json`, data);
+}
 
-{
-  // pages
-  const filenames = await fs.readdir(`_data/pages/${defaultLocale}`);
+const pages = await getPages();
 
-  for (const locale of locales) {
-    await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
+for (const locale of locales) {
+  await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
+}
 
-    for (const filename of filenames) {
-      const data = await fileToPage(locale.code, filename);
+for (const data of pages.filenameMap.values()) {
+  await fs.mkdir(
+    path.join(
+      "_data/_dynamic/pages",
+      data.locale,
+      ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
+    ),
+    { recursive: true },
+  );
 
-      pagesIdMap.set(`${locale.code}/${data.id}`, data);
-      pagesIdMap.set(`${locale.code}/${filename}`, data);
-    }
-  }
+  await write(path.join("_data/_dynamic/pages", `${data.link}.json`), data);
 
-  for (const locale of locales) {
-    await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
-
-    for (const filename of filenames) {
-      const data = pagesIdMap.get(`${locale.code}/${filename}`)!;
-
-      const breadcrumbs = [];
-      let currentPage = data;
-
-      while (currentPage.parent_page != null) {
-        currentPage = pagesIdMap.get(
-          `${locale.code}/${slugify(currentPage.parent_page)}`,
-        )!;
-
-        breadcrumbs.unshift(currentPage);
-      }
-
-      data.link = [
-        "",
-        locale.code,
-        ...breadcrumbs.map((page) => page.slug),
-        data.slug,
-      ].join("/");
-
-      data.breadcrumbs_data = breadcrumbs.map((page) => {
-        return {
-          ...page,
-          blocks: undefined,
-          gitlog: undefined,
-        };
-      });
-    }
-  }
-
-  for (const locale of locales) {
-    await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
-
-    for (const filename of filenames) {
-      const data = pagesIdMap.get(`${locale.code}/${filename}`)!;
-
-      await fs.mkdir(
-        path.join(
-          "_data/_dynamic/pages",
-          locale.code,
-          ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
-        ),
-        { recursive: true },
-      );
-
-      await write(
-        path.join(
-          "_data/_dynamic/pages",
-          locale.code,
-          ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
-          `${data.slug}.json`,
-        ),
-        data,
-      );
-
-      await write(
-        `_data/_dynamic/pages/${locale.code}/${data.slug}.json`,
-        data,
-      );
-    }
-  }
+  // TODO stop using this in favor of above
+  await write(`_data/_dynamic/pages/${data.locale}/${data.slug}.json`, data);
 }
 
 // main menu
@@ -165,9 +86,9 @@ for (const locale of locales) {
       for (const block of column.blocks ?? []) {
         for (const item of block.items ?? []) {
           if (item.page != null) {
-            const key = `${locale.code}/${slugify(item.page)}`;
-            if (pagesIdMap.has(key)) {
-              const data = pagesIdMap.get(key)!;
+            const key = `${locale.code}:${slugify(item.page)}`;
+            if (pages.idMap.has(key)) {
+              const data = pages.idMap.get(key)!;
 
               item.page_data = {
                 id: data.id,
@@ -182,9 +103,9 @@ for (const locale of locales) {
           }
 
           if (item.post != null) {
-            const key = `${locale.code}/${slugify(item.post)}`;
-            if (postsIdMap.has(key)) {
-              const data = postsIdMap.get(key)!;
+            const key = `${locale.code}:${slugify(item.post)}`;
+            if (posts.idMap.has(key)) {
+              const data = posts.idMap.get(key)!;
 
               item.post_data = {
                 id: data.id,
