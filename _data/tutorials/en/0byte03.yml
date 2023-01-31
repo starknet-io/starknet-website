@@ -1,9 +1,9 @@
 id: 0byte03
 type: youtube
-url: https://youtu.be/TxIwS6WxmkY
-image: /assets/byte02.jpeg
-title: Account contracts
+url: https://youtu.be/iQdH2CtE-9g
+image: /assets/byte03.jpeg
+title: Starknet contract basic
 author: ByteSized
 published_at: Jan 31st, 2023
 difficulty: beginner
-tags: account contracts
+tags: contracts
