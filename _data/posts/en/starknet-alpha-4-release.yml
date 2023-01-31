@@ -37,10 +37,7 @@ blocks:
       Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
 
 
-      [Francesco Ceccon.eth on Twitter: "RIP selfie contract: September 2021-November 2021 / Twitter"](https://cdn.embedly.com/widgets/media.html?type=text%2Fhtml&key=a19fcc184b9711e1b4764040d3dc5c07&schema=twitter&url=https%3A//twitter.com/ceccon_me/status/1458410251078836227&image=https%3A//i.embed.ly/1/image%3Furl%3Dhttps%253A%252F%252Fabs.twimg.com%252Ferrors%252Flogo46x38.png%26key%3Da19fcc184b9711e1b4764040d3dc5c07)
-
-
-      [See code example and documentation](https://www.cairo-lang.org/docs/hello_starknet/calling_contracts.html#getting-the-caller-address)
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
       #### Block Hash
@@ -57,6 +54,7 @@ blocks:
 
       ```
 
+      Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
 
       ```
 
