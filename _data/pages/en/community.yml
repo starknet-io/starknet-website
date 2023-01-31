@@ -29,14 +29,14 @@ blocks:
       - type: image_icon_link_card
         color: orange
         title: Online communities
-        description: "Explore communities, connect and collaborate with Starknet
-          enthusiasts. "
-        link_label: "View -> "
+        description: "Explore the communities where you can connect and collaborate with
+          Starknet enthusiasts. "
+        link_label: View
         link_href: /community/online-communities
       - type: image_icon_link_card
         color: orange
         title: Community events
-        description: Find events near you to connect with the Starknet community IRL.
+        description: Find events near you and connect with the Starknet community IRL.
         link_label: View
         link_href: "/events/ "
       - type: image_icon_link_card
