@@ -108,9 +108,9 @@ blocks:
       * Improved *if* statements syntax
 
 
-      ```
+      ```python
 
-      Old
+      #Old
 
       if cond != 0 {
         tempvar x = x+1;
@@ -120,7 +120,7 @@ blocks:
 
       __________________________________
 
-      New
+      #New
 
       if cond { x = x + 1; }
 
@@ -169,7 +169,7 @@ blocks:
 
       ```
 
-      Old
+      #Old
 
       If cond1:
         if cond2:
@@ -178,7 +178,7 @@ blocks:
              # Same code
       __________________________________
 
-      New
+      #New
 
       If cond1 && (cond2 || cond3) { … }
 
