@@ -184,17 +184,18 @@ export interface Page extends Meta {
   readonly breadcrumbs: boolean;
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
+  readonly page_last_updated?: string;
   readonly blocks: readonly TopLevelBlock[];
 }
 
 export async function getPageBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {

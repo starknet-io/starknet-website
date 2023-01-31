@@ -78,24 +78,27 @@ export function PostsPage({
             <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
+                  Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Jobs
+                  Blog
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomTopics topics={topics} />
             </Box>
           }
-          main={<CustomHits />}
+          main={
+            <Box>
+              <CustomHits />
+            </Box>
+          }
         />
       </InstantSearch>
     </Box>
@@ -237,34 +240,13 @@ const categories = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  const isDesktop = useBreakpointValue({ base: false, md: true });
   console.log(hits);
   return (
     <>
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, xl: 3 }}
-        rowGap={{ base: "8", md: "12" }}
-        columnGap="8"
-        pt={2}
-      >
+      <Flex pt={2} gap={4} direction="row" flex={1} flexWrap="wrap">
         {hits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
-          // if (i === 0 && isDesktop) {
-          //   return (
-          //     <GridItem colSpan={3} key={i} minH="400px">
-          //       <FeaturedArticleCard
-          //         href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
-          //         imageAlt={hit.title}
-          //         imageUrl={hit.image}
-          //         title={hit.title}
-          //         excerpt={hit.short_desc}
-          //         timeToConsume={hit?.time_to_consume}
-          //         publishedAt={hit.published_date}
-          //         postType={hit.post_type}
-          //       />
-          //     </GridItem>
-          //   );
-          // }
+
           return (
             <ArticleCard.Root
               href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
@@ -290,7 +272,7 @@ function CustomHits() {
             </ArticleCard.Root>
           );
         })}
-      </SimpleGrid>
+      </Flex>
 
       {/* <HStack mt="24">
         <Divider />

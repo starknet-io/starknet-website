@@ -1,15 +1,17 @@
+city: Denver
 type: conference
 name: ETHDenver
-description: ETHDenver is a Community-Owned Innovation Festival.
+description: ETHDenver is a community-owned innovation festival.
 url: https://www.ethdenver.com/
-start_date: 2023-02-24T23:36:39.518Z
-image: https://pbs.twimg.com/profile_images/1453926930646913028/T2HGZdG6_400x400.jpg
+start_date: Feb 24 - Mar 05, 2023
 location: usa
-city: Denver
 country: Usa
+image: /assets/logo_ethdenver_400x400.png
 tags:
   - crypto
   - blockchain
-  - ethereum
-  - starknet
-  - ""
+  - Ethereum
+  - Starknet
+  - Denver
+  - Colorado
+  - USA

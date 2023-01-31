@@ -1,12 +1,12 @@
+city: Barcelona
 type: conference
 name: European Blockchain Week
-description: "Be part of the most influential blockchain event in Europe:"
+description: The most influential blockchain event in Europe.
 url: https://eblockchainconvention.com/
-start_date: 2023-02-15T23:31:45.892Z
-image: https://pbs.twimg.com/profile_images/1570093772024778753/dVwZONhk_400x400.jpg
+start_date: Feb 15 - Feb 17, 2023
 location: europe
-city: Barcelona
 country: Spain
+image: https://pbs.twimg.com/profile_images/1570093772024778753/dVwZONhk_400x400.jpg
 tags:
   - crypto
   - blockchain
@@ -14,3 +14,6 @@ tags:
   - NFTs
   - Web3
   - zkProofs
+  - Barcelona
+  - Spain
+  - Europe

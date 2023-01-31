@@ -51,23 +51,22 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
 
         <PageLayout
           sectionHeaderTitle="Tutorials"
-          sectionHeaderDescription="Learning material for developers, by developers."
+          sectionHeaderDescription="Learn about Starknet by developers, for developers"
           breadcrumbs={
             <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
+                  Developers
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Jobs
+                  Tutorials
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomDifficulty />
@@ -162,7 +161,7 @@ function CustomHits() {
 
   return (
     <>
-      <Flex gap={4} direction="row" flex={1}>
+      <Flex gap={4} direction="row" flex={1} flexWrap="wrap">
         {hits.map((hit, i) => {
           let tags: string[] = [];
           if (hit.difficulty) tags.push(hit.difficulty);

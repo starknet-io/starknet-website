@@ -55,18 +55,17 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
             <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
+                  Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Jobs
+                  Events
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomLocation />
@@ -158,6 +157,7 @@ function CustomHits() {
         {hits.map((hit) => {
           return (
             <ListCard
+              variant="event"
               href={hit.url}
               key={hit?.name}
               startDateTime={hit?.start_date}

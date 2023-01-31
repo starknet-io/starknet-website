@@ -53,7 +53,7 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
             <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
-                  Parent
+                  Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
@@ -64,7 +64,6 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
               </BreadcrumbItem>
             </Breadcrumb>
           }
-          pageLastUpdated="Page last updated 21 Nov 2023"
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomRole />
@@ -173,6 +172,7 @@ function CustomHits() {
           if (hit.job.type) tags.push(hit.job.type);
           return (
             <ListCard
+              variant="job"
               key={hit.contact.name}
               startDateTime={hit.contact.name}
               image={hit.contact.logo}

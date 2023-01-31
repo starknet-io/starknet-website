@@ -1,12 +1,17 @@
 id: 9ef815e0-d670-404f-a97d-c5aebfe80a12
 title: Language resources
 template: content
+parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: page_header
     title: Language resources
   - type: markdown
-    body: >-
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – STARK.
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic.
+    body: StarkNet is a permissionless decentralized Validity-Rollup (also known as
+      a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any
+      dApp to achieve unlimited scale for its computation – without compromising
+      Ethereum’s composability and security, thanks to StarkNet’s reliance on
+      the safest and most scalable cryptographic proof system – STARK. StarkNet
+      Contracts and the StarkNet OS are written in Cairo – supporting the
+      deployment and scaling of any use case, whatever the business logic.

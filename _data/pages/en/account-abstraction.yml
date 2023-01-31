@@ -1,12 +1,14 @@
 id: 5da42b21-bac0-4b75-9744-5202a8b33a3c
 title: Account abstraction
 template: content
+parent_page: /learn/
 breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: page_header
     title: Account abstraction
-    description: "Allows proving the execution of several Cairo programs in the same
+    description:
+      "Allows proving the execution of several Cairo programs in the same
       proof. The Cairo program. "
   - type: markdown
     body: >-
