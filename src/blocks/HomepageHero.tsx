@@ -15,12 +15,24 @@ export const HomepageHero = (props: Props) => {
       pb="16px"
       overflow="hidden"
       bg="#eaeaea"
+      _dark={{
+        bgGradient:
+          "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
+      }}
       bgGradient="linear(0.59deg, #FBECF3 0.97%, #F3EBF7 26.24%, #F0F0FB 54.59%, #E6F0FF 99.96%)"
       borderRadius="24px"
       position="relative"
       mt="-24px"
     >
-      <Box inset={0} position="absolute" opacity="0.6" mixBlendMode="overlay">
+      <Box
+        inset={0}
+        position="absolute"
+        opacity="0.6"
+        mixBlendMode="overlay"
+        _dark={{
+          opacity: 0.3,
+        }}
+      >
         <Img
           zIndex={0}
           pos="relative"
@@ -31,7 +43,16 @@ export const HomepageHero = (props: Props) => {
           objectFit={{ base: "cover", lg: "cover" }}
         />
       </Box>
-      <Box zIndex={2} inset={0} position="absolute" mixBlendMode="color-dodge">
+      <Box
+        zIndex={2}
+        inset={0}
+        position="absolute"
+        mixBlendMode="color-dodge"
+        _dark={{
+          mixBlendMode: "soft-light",
+          opacity: 0.4,
+        }}
+      >
         <Img
           pos="relative"
           w="full"
@@ -66,7 +87,12 @@ export const HomepageHero = (props: Props) => {
             >
               ようこそ <br /> to Starknet
             </Heading>
-            <Text color="#313131" mt="5" fontSize="18px" fontWeight="bold">
+            <Text
+              color="hero-subtitle-fg"
+              mt="5"
+              fontSize="18px"
+              fontWeight="bold"
+            >
               Starknet is the secure scaling technology bringing Ethereum’s
               benefits to the world.
             </Text>
@@ -78,10 +104,10 @@ export const HomepageHero = (props: Props) => {
               position={{ base: "relative", md: "relative" }}
               zIndex={4}
             >
-              <Button size="lg" minW="210px" variant="solid">
+              <Button size="lg" minW="210px" variant="solidHero">
                 Build on starknet
               </Button>
-              <Button size="lg" variant="outline" borderColor="black">
+              <Button size="lg" variant="outlineHero" borderColor="black">
                 Learn the basics
               </Button>
             </Stack>

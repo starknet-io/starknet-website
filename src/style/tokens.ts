@@ -146,6 +146,25 @@ export const tokens = {
       "hero-gradient-developer-b": "#FDFAA9",
       "hero-gradient-learn-a": "#FFDAD6",
       "hero-gradient-learn-b": "#B6C6FF",
+      "hero-subtitle-fg": "#313131",
+      "btn-outline-hero-bg": "transparent",
+      "btn-outline-hero-fg": "#0C0C4F",
+      "btn-outline-hero-border": "#0C0C4F",
+      "btn-outline-hero-hover-bg": "transparent",
+      "btn-outline-hero-hover-fg": "#9EBFFF",
+      "btn-outline-hero-hover-border": "#9EBFFF",
+      "btn-outline-hero-active-bg": "#000000",
+      "btn-outline-hero-active-fg": "#858585",
+      "btn-outline-hero-active-border": "#000000",
+      "btn-primary-hero-bg": "#0C0C4F",
+      "btn-primary-hero-hover-bg": "#131365",
+      "btn-primary-hero-active-bg": "#150E1F",
+      "btn-primary-hero-fg": "#FFFFFF",
+      "btn-primary-hero-hover-fg": "#FFFFFF",
+      "btn-primary-hero-active-fg": "#6B7280",
+      "btn-primary-hero-border": "#0C0C4F",
+      "btn-primary-hero-hover-border": "#0C0C4F",
+      "btn-primary-hero-active-border": "#0C0C4F",
     },
 
     dark: {
@@ -175,6 +194,7 @@ export const tokens = {
       "btn-outline-active-bg": "#000000",
       "btn-outline-active-fg": "#858585",
       "btn-outline-active-border": "#000000",
+
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -293,6 +313,25 @@ export const tokens = {
       "hero-gradient-developer-b": "#171B31",
       "hero-gradient-learn-a": "#213033",
       "hero-gradient-learn-b": "#171B31",
+      "hero-subtitle-fg": "#CCCCCC",
+      "btn-outline-hero-bg": "transparent",
+      "btn-outline-hero-fg": "#ffffff",
+      "btn-outline-hero-border": "#7E7E7E",
+      "btn-outline-hero-hover-bg": "transparent",
+      "btn-outline-hero-hover-fg": "#9EBFFF",
+      "btn-outline-hero-hover-border": "#9EBFFF",
+      "btn-outline-hero-active-bg": "#000000",
+      "btn-outline-hero-active-fg": "#858585",
+      "btn-outline-hero-active-border": "#000000",
+      "btn-primary-hero-bg": "#FFFFFF",
+      "btn-primary-hero-hover-bg": "#5C94FF",
+      "btn-primary-hero-active-bg": "#5C94FF",
+      "btn-primary-hero-fg": "#363636",
+      "btn-primary-hero-hover-fg": "#FFFFFF",
+      "btn-primary-hero-active-fg": "#FFFFFF",
+      "btn-primary-hero-border": "#5C94FF",
+      "btn-primary-hero-hover-border": "#5C94FF",
+      "btn-primary-hero-active-border": "#5C94FF",
     },
   },
 };
@@ -876,6 +915,82 @@ export const semanticTokens = {
     "hero-gradient-learn-b": {
       default: tokens.colors.light["hero-gradient-learn-b"],
       _dark: tokens.colors.dark["hero-gradient-learn-b"],
+    },
+    "hero-subtitle-fg": {
+      default: tokens.colors.light["hero-subtitle-fg"],
+      _dark: tokens.colors.dark["hero-subtitle-fg"],
+    },
+    "btn-outline-hero-bg": {
+      default: tokens.colors.light["btn-outline-hero-bg"],
+      _dark: tokens.colors.dark["btn-outline-hero-bg"],
+    },
+    "btn-outline-hero-fg": {
+      default: tokens.colors.light["btn-outline-hero-fg"],
+      _dark: tokens.colors.dark["btn-outline-hero-fg"],
+    },
+    "btn-outline-hero-border": {
+      default: tokens.colors.light["btn-outline-hero-border"],
+      _dark: tokens.colors.dark["btn-outline-hero-border"],
+    },
+    "btn-outline-hero-hover-bg": {
+      default: tokens.colors.light["btn-outline-hero-hover-bg"],
+      _dark: tokens.colors.dark["btn-outline-hero-hover-bg"],
+    },
+    "btn-outline-hero-hover-fg": {
+      default: tokens.colors.light["btn-outline-hero-hover-fg"],
+      _dark: tokens.colors.dark["btn-outline-hero-hover-fg"],
+    },
+    "btn-outline-hero-hover-border": {
+      default: tokens.colors.light["btn-outline-hero-hover-border"],
+      _dark: tokens.colors.dark["btn-outline-hero-hover-border"],
+    },
+    "btn-outline-hero-active-bg": {
+      default: tokens.colors.light["btn-outline-hero-active-bg"],
+      _dark: tokens.colors.dark["btn-outline-hero-active-bg"],
+    },
+    "btn-outline-hero-active-fg": {
+      default: tokens.colors.light["btn-outline-hero-active-fg"],
+      _dark: tokens.colors.dark["btn-outline-hero-active-fg"],
+    },
+    "btn-outline-hero-active-border": {
+      default: tokens.colors.light["btn-outline-hero-active-border"],
+      _dark: tokens.colors.dark["btn-outline-hero-active-border"],
+    },
+    "btn-primary-hero-bg": {
+      default: tokens.colors.light["btn-primary-hero-bg"],
+      _dark: tokens.colors.dark["btn-primary-hero-bg"],
+    },
+    "btn-primary-hero-hover-bg": {
+      default: tokens.colors.light["btn-primary-hero-hover-bg"],
+      _dark: tokens.colors.dark["btn-primary-hero-hover-bg"],
+    },
+    "btn-primary-hero-active-bg": {
+      default: tokens.colors.light["btn-primary-hero-active-bg"],
+      _dark: tokens.colors.dark["btn-primary-hero-active-bg"],
+    },
+    "btn-primary-hero-fg": {
+      default: tokens.colors.light["btn-primary-hero-fg"],
+      _dark: tokens.colors.dark["btn-primary-hero-fg"],
+    },
+    "btn-primary-hero-hover-fg": {
+      default: tokens.colors.light["btn-primary-hero-hover-fg"],
+      _dark: tokens.colors.dark["btn-primary-hero-hover-fg"],
+    },
+    "btn-primary-hero-active-fg": {
+      default: tokens.colors.light["btn-primary-hero-active-fg"],
+      _dark: tokens.colors.dark["btn-primary-hero-active-fg"],
+    },
+    "btn-primary-hero-border": {
+      default: tokens.colors.light["btn-primary-hero-border"],
+      _dark: tokens.colors.dark["btn-primary-hero-border"],
+    },
+    "btn-primary-hero-hover-border": {
+      default: tokens.colors.light["btn-primary-hero-hover-border"],
+      _dark: tokens.colors.dark["btn-primary-hero-hover-border"],
+    },
+    "btn-primary-hero-active-border": {
+      default: tokens.colors.light["btn-primary-hero-active-border"],
+      _dark: tokens.colors.dark["btn-primary-hero-active-border"],
     },
   },
 };
