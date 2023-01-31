@@ -22,7 +22,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
-
+import { titleCase } from "src/utils/utils";
 export interface AutoProps {
   readonly params: {
     readonly locale: string;
@@ -69,8 +69,9 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <CustomDifficulty />
               <CustomType />
+              <CustomCourse />
+              <CustomDifficulty />
             </Box>
           }
           main={
@@ -91,21 +92,24 @@ function CustomDifficulty() {
   });
   console.log("Role", items);
   return (
-    <Box>
+    <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
-        Role
+        Course / series
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
-          <Button
-            size="sm"
-            variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
-            key={i}
-          >
-            {item.label}
-          </Button>
-        ))}
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+            >
+              {label}
+            </Button>
+          );
+        })}
       </VStack>
     </Box>
   );
@@ -123,16 +127,49 @@ function CustomType() {
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
-          <Button
-            variant={item.isRefined ? "filterActive" : "filter"}
-            size="sm"
-            onClick={() => refine(item.value)}
-            key={i}
-          >
-            {item.label}
-          </Button>
-        ))}
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+            >
+              {label}
+            </Button>
+          );
+        })}
+      </VStack>
+    </Box>
+  );
+}
+
+function CustomCourse() {
+  const { items, refine } = useRefinementList({
+    attribute: "course",
+    sortBy: ["name:asc"],
+  });
+  console.log("type", items);
+  return (
+    <Box mt={8}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+        Type
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+            >
+              {label}
+            </Button>
+          );
+        })}
       </VStack>
     </Box>
   );
