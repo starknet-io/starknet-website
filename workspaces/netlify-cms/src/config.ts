@@ -1172,6 +1172,38 @@ export const config: CmsConfig = {
           ],
         },
         {
+          label: "Belongs to course",
+          name: "course",
+          widget: "select",
+          options: [
+            {
+              label: "Bytesized series",
+              value: "bytesized_series",
+            },
+            {
+              label: "Starknet edu series",
+              value: "starknet_edu",
+            },
+            {
+              label: "Cairo 101",
+              value: "cairo_101",
+            },
+            {
+              label: "Cairo workshops",
+              value: "cairo_workshops",
+            },
+            {
+              label: "Hackathon Feb 22",
+              value: "hackathon_feb_22",
+            },
+            {
+              label: "Hackathon Oct 22",
+              value: "hackathon_oct_22",
+            },
+          ],
+        },
+
+        {
           label: "Tags",
           name: "tags",
           required: false,
