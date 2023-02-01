@@ -7,7 +7,7 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Online communities
-    description: "Join the groups building and driving Starknet forward.s "
+    description: "Join the groups building and driving Starknet forward."
   - type: link_list
     heading: "Social "
     blocks:
