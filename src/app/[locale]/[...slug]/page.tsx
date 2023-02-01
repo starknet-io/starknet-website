@@ -6,8 +6,6 @@ import {
   BreadcrumbLink,
   Flex,
   Box,
-  List,
-  ListItem,
 } from "../../../libs/chakra-ui";
 import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { notFound } from "next/navigation";
@@ -17,7 +15,6 @@ import { Page as PageType } from "src/data/pages";
 import ReactMarkdown from "react-markdown";
 import { slugify } from "src/utils/utils";
 import { Heading } from "@ui/Typography/Heading";
-import { HiBolt } from "react-icons/hi2";
 
 export interface Props {
   readonly params: LocaleParams & {
