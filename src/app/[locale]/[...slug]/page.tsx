@@ -7,7 +7,9 @@ import {
   Flex,
   Box,
   List,
+  ListItem,
 } from "../../../libs/chakra-ui";
+import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
@@ -15,6 +17,7 @@ import { Page as PageType } from "src/data/pages";
 import ReactMarkdown from "react-markdown";
 import { slugify } from "src/utils/utils";
 import { Heading } from "@ui/Typography/Heading";
+import { HiBolt } from "react-icons/hi2";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -91,21 +94,31 @@ Props): JSX.Element {
 
 function TableOfContents({ page }: { page: PageType }) {
   return (
-    <div>
-      <Heading variant="h4">On this page</Heading>
-      <List spacing={3}></List>
+    <Toc.Root spacing={3}>
+      <Heading
+        py="16px"
+        pl="16px"
+        fontSize="14px"
+        textTransform="uppercase"
+        as="h6"
+        variant="h6"
+        color="heading-navy-fg"
+      >
+        On this page
+      </Heading>
       {page.blocks.map((block, i) => {
+        if (block.type === "page_header") return;
         if ("title" in block) {
           return (
-            <a key={i} href={`#toc-${slugify(block.title)}`}>
-              {block.title}
-            </a>
+            <Toc.Item key={i}>
+              <a href={`#toc-${slugify(block.title)}`}>{block.title}</a>
+            </Toc.Item>
           );
         } else if ("heading" in block && block.heading != null) {
           return (
-            <a key={i} href={`#toc-${slugify(block.heading)}`}>
-              {block.heading}
-            </a>
+            <Toc.Item key={i}>
+              <a href={`#toc-${slugify(block.heading)}`}>{block.heading}</a>
+            </Toc.Item>
           );
         } else if (block.type === "markdown") {
           return (
@@ -115,27 +128,27 @@ function TableOfContents({ page }: { page: PageType }) {
               components={{
                 h2: (props) => {
                   return (
-                    <p>
+                    <Toc.Item>
                       <a
                         key={i}
                         href={`#toc-${slugify(props.children.join(" "))}`}
                       >
                         {props.children}
                       </a>
-                    </p>
+                    </Toc.Item>
                   );
                 },
                 h3: (props) => {
                   console.log(props.children);
                   return (
-                    <p>
+                    <Toc.Item subItem isActive>
                       <a
                         key={i}
                         href={`#toc-${slugify(props.children.join(" "))}`}
                       >
                         {props.children}
                       </a>
-                    </p>
+                    </Toc.Item>
                   );
                 },
               }}
@@ -145,7 +158,7 @@ function TableOfContents({ page }: { page: PageType }) {
           );
         }
       })}
-    </div>
+    </Toc.Root>
   );
 }
 

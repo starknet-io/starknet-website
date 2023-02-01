@@ -7,6 +7,7 @@ import {
   ListItem,
   Img,
   Box,
+  Spacer,
 } from "src/libs/chakra-ui";
 import { slugify } from "src/utils/utils";
 
@@ -21,23 +22,35 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
       <ReactMarkdown
         components={{
           h2: (props) => (
-            <Heading
-              as="h2"
-              id={`toc-${slugify(props.children.join(" "))}`}
-              color="heading-navy-fg"
-              variant="h3"
-              {...props}
-            />
+            <>
+              {/* <Spacer
+                height="140px"
+                id={`toc-${slugify(props.children.join(" "))}`}
+              /> */}
+              <Heading
+                id={`toc-${slugify(props.children.join(" "))}`}
+                as="h2"
+                color="heading-navy-fg"
+                variant="h3"
+                {...props}
+              />
+            </>
           ),
           h3: (props) => (
-            <Heading
-              id={`toc-${slugify(props.children.join(" "))}`}
-              color="heading-navy-fg"
-              pb={4}
-              as="h3"
-              variant="h3"
-              {...props}
-            />
+            <>
+              {/* <Spacer
+                height="140px"
+                id={`toc-${slugify(props.children.join(" "))}`}
+              /> */}
+              <Heading
+                color="heading-navy-fg"
+                id={`toc-${slugify(props.children.join(" "))}`}
+                pb={4}
+                as="h3"
+                variant="h3"
+                {...props}
+              />
+            </>
           ),
           h4: (props) => (
             <Heading color="heading-navy-fg" as="h4" variant="h4" {...props} />
