@@ -138,7 +138,7 @@ function TableOfContents({ page }: { page: PageType }) {
                 h3: (props) => {
                   console.log(props.children);
                   return (
-                    <Toc.Item subItem isActive>
+                    <Toc.Item subItem>
                       <a
                         key={i}
                         href={`#toc-${slugify(props.children.join(" "))}`}
