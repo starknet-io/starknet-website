@@ -31,6 +31,7 @@ export default function Navbar({ mainMenu }: Props) {
                 label={mainMenuItem.title}
               >
                 <Flex
+                  // bg="red"
                   maxW="900px"
                   mx="auto"
                   gap="48px"
@@ -60,7 +61,7 @@ export default function Navbar({ mainMenu }: Props) {
                               } else if (item.custom_internal_link) {
                                 link = `/${locale}/${item.custom_internal_link.replace(
                                   /(^\/|\/$)/g,
-                                  "",
+                                  ""
                                 )}`;
                               } else if (item.page_data) {
                                 link = item.page_data.link;
@@ -119,7 +120,7 @@ export default function Navbar({ mainMenu }: Props) {
                                 } else if (item.custom_internal_link) {
                                   link = `/${locale}/${item.custom_internal_link.replace(
                                     /(^\/|\/$)/g,
-                                    "",
+                                    ""
                                   )}`;
                                 } else if (item.page_data) {
                                   link = item.page_data.link;

@@ -53,8 +53,8 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
         <PopoverContent
           bg="navbar-dropdown-bg"
           border={0}
-          px="56px"
-          py="48px"
+          px="32px"
+          py="32px"
           maxH="493px"
           width="auto"
 
