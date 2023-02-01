@@ -3,6 +3,7 @@ import { Tag } from "@ui/Tag/Tag";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
+import moment from "moment";
 import { notFound } from "next/navigation";
 import { FiBookOpen } from "react-icons/fi";
 import { Block } from "src/blocks/Block";
@@ -41,6 +42,7 @@ export default async function Page({
         videoId = post.video_link.split("v=")[1];
       }
     }
+    console.log(post);
 
     return (
       <PageLayout
@@ -66,7 +68,9 @@ export default async function Page({
             </BreadcrumbItem>
           </Breadcrumb>
         }
-        pageLastUpdated={"Page last updated 21 Nov 2023"}
+        pageLastUpdated={`Page last updated ${moment(
+          post && post.gitlog && post.gitlog.date
+        ).fromNow()}`}
         main={
           <Container maxWidth="846px">
             {post.post_type !== "video" ? (
@@ -89,7 +93,7 @@ export default async function Page({
             <Flex mt="16px">
               <HStack>
                 <Text fontSize="sm" color="muted">
-                  {post.published_date} ·
+                  {moment(post.published_date).format("MMM DD,YYYY")} ·
                 </Text>
                 <Text fontSize="sm" color="muted">
                   {post.time_to_consume}

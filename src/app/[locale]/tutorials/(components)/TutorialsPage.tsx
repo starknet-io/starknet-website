@@ -23,6 +23,7 @@ import { Heading } from "@ui/Typography/Heading";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
+import moment from "moment";
 export interface AutoProps {
   readonly params: {
     readonly locale: string;
@@ -200,6 +201,7 @@ function CustomHits() {
     <>
       <Flex gap={4} direction="row" flex={1} flexWrap="wrap">
         {hits.map((hit, i) => {
+          const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
           // if (hit.difficulty) tags.push(hit.difficulty);
           // if (hit.type) tags.push(hit.type);
@@ -212,7 +214,7 @@ function CustomHits() {
                 <GridCard.Content
                   title={hit.title}
                   author={hit.author}
-                  date={hit.published_at}
+                  date={date}
                   difficulty={hit.difficulty}
                 />
               </GridCard.Body>
