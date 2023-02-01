@@ -20,6 +20,7 @@ import { LinkList, LinkListItem } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
+import { HomepageHero } from "./HomepageHero";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -175,6 +176,8 @@ export async function Block({ block, locale }: Props): JSX.Element {
         variant={block.variant}
       />
     );
+  } else if (block.type === "home_hero") {
+    return <HomepageHero />;
   } else if (block.type === "get_involved_card") {
     return (
       <CommunityCard

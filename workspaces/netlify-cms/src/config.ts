@@ -33,6 +33,17 @@ const blocks: CmsFieldList["types"] = [
     ],
   },
   {
+    name: "home_hero",
+    label: "Home Hero",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+    ],
+  },
+  {
     name: "community_events",
     label: "Community events block",
     widget: "object",
