@@ -50,10 +50,23 @@ blocks:
         title: "Starknet ByteSized Series "
         description: Contract writing video series, from simple deployments to L1 to L2
           interactions.
+        link_label: View
+        link_href: /tutorials/
+        icon: /assets/orange.svg
       - type: image_icon_link_card
-        color: orange
+        color: green
+        link_href: /tutorials/
+        link_label: View
+        title: "Cairo 101 "
+        description: Cairo 101 video series, from dev environment to deployment.
+        icon: /assets/green.svg
       - type: image_icon_link_card
-        color: orange
+        color: yellow
+        link_href: /tutorials/
+        link_label: View
+        title: "Starknet Edu "
+        description: Educational developer resources for Starknet and Cairo.
+        icon: /assets/yellow.svg
   - type: flex_layout
     heading_variant: lg
     base: 1
