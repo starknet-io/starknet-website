@@ -44,12 +44,11 @@ const Root = ({ children, ...rest }: RootProps) => {
               <HStack
                 justify={{ base: "space-between", sm: "start" }}
                 width={{ base: "full", sm: "auto" }}
-                spacing="8"
+                spacing="8px"
               >
                 <StarknetLogo height="30" />
                 <Text fontSize="xs" color="subtle">
-                  &copy; {new Date().getFullYear()} Starknet. All rights
-                  reserved.
+                  Built with ✨ by the Starknet community.
                 </Text>
               </HStack>
               <ButtonGroup variant="ghost">

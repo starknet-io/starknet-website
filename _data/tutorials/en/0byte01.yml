@@ -2,9 +2,7 @@ id: 0byte01
 type: youtube
 url: https://youtu.be/Mtq8IMSIIwU
 image: /assets/byte01.jpeg
-title: "Introduction "
-author: "ByteSized "
-published_at: 2021-12-01T00:00:00.000Z
+title: 'Introduction '
+author: 'ByteSized '
+published_at: 2023-01-30T00:00:00+00:00
 difficulty: beginner
-course: bytesized_series
-tags: intro

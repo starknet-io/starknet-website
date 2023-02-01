@@ -19,7 +19,8 @@ export interface Props {
 
 export default async function Page({
   params: { locale, slug },
-}: Props): Promise<JSX.Element> {
+}: // @ts-expect-error
+Props): JSX.Element {
   try {
     const data = await getPageBySlug(slug.join("/"), locale);
     console.log(data);

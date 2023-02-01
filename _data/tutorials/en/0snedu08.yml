@@ -4,7 +4,6 @@ url: https://github.com/starknet-edu/ultimate-env
 image: /assets/github.png
 title: Starknet Edu – Dev environment
 author: "StarkWare "
-published_at: Apr 1st, 2022
+published_at: 2022-04-01T00:00:00+00:00
 difficulty: beginner
-course: starknet_edu
 tags: "cairo, messaging "

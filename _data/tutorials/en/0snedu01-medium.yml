@@ -4,7 +4,6 @@ url: https://medium.com/starknet-edu
 image: /assets/blog.png
 title: Starknet Edu Medium Posts
 author: "StarkWare "
-published_at: 2022-09-12T23:00:00.000Z
+published_at: 2022-08-05T00:00:00+00:00
 difficulty: beginner
-course: starknet_edu
 tags: cairo, account abstraction, contracts

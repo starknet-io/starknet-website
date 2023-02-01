@@ -4,7 +4,6 @@ url: https://github.com/starknet-edu/starknet-erc721
 image: /assets/github.png
 title: Starknet Edu – ERC721
 author: "StarkWare "
-published_at: Jan 31st, 2023
+published_at: 2023-01-31T00:00:00+00:00
 difficulty: beginner
-course: starknet_edu
 tags: cairo, ERC721

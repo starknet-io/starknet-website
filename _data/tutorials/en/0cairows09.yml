@@ -4,7 +4,6 @@ url: https://youtu.be/zdcVo7a35mI
 image: /assets/cairows09.jpeg
 title: "Counterfactual deployment "
 author: StarkWare
-published_at: 2022-12-06T00:00:00.000Z
+published_at: 2022-12-06T00:00:00+00:00
 difficulty: intermediate
-course: cairo_workshops
 tags: "account abstraction "

@@ -12,7 +12,7 @@ export const HomepageHero = (props: Props) => {
     <Box
       as="section"
       pt="48px"
-      pb="16px"
+      pb="0px"
       overflow="hidden"
       bg="#eaeaea"
       _dark={{
