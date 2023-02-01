@@ -33,10 +33,9 @@ try {
 
     const index = client.initIndex(indexName);
 
-    await index.clearObjects().wait();
-
     await index
-      .saveObjects(objects, {
+      .replaceAllObjects(objects, {
+        safe: true,
         autoGenerateObjectIDIfNotExist: true,
       })
       .wait();
