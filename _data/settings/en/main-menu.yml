@@ -54,8 +54,6 @@ items:
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
-              - custom_title: Starknet Playground
-                custom_external_link: https://starknet.io/playground
               - custom_title: Engineering blog
                 custom_internal_link: /posts/engineering
   - title: Ecosystem
@@ -80,9 +78,10 @@ items:
                 custom_title: Events
               - custom_internal_link: /jobs
                 custom_title: Jobs
-              - page: 859ca393-8ae8-4768-8bf9-d6f204b080d2
               - custom_title: Community forum
                 custom_external_link: https://community.starknet.io/
+              - page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
+                custom_title: Online communities
       - blocks:
           - title: BLOG & MEDIA
             items:
