@@ -6,12 +6,69 @@ page_last_updated: false
 blocks:
   - type: hero
     title: Build on Starknet
-    description: A manual and dev resource list for builders, by builders.
+    description: A manual and resource list for builders, by builders.
     variant: build
-  - type: markdown
-    body: Developers
   - type: flex_layout
-    heading_variant: md
+    heading_variant: lg
+    base: 1
+    md: 2
+    lg: 3
+    heading: "Get started "
+    blocks:
+      - type: image_icon_link_card
+        color: orange
+        title: Read the docs
+        description: Read the official Starknet documentation to build your first
+          contracts and dapps.
+        link_label: View
+        link_href: https://docs.starknet.io/
+        icon: /assets/docs.svg
+      - type: image_icon_link_card
+        color: orange
+        title: "Learn through tutorials "
+        description: Learn from Starknet's community of developers and technologists.
+        link_label: View
+        link_href: "/tutorials/ "
+        icon: /assets/tutorials.svg
+      - type: image_icon_link_card
+        color: orange
+        title: "Set up a local environment "
+        description: Learn how to get your dev environment up and running so you can
+          start building.
+        link_label: View
+        link_href: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
+        icon: /assets/developers.svg
+  - type: flex_layout
+    heading_variant: lg
+    base: 1
+    md: 2
+    lg: 3
+    heading: Courses
+    blocks:
+      - type: image_icon_link_card
+        color: orange
+        title: "Starknet ByteSized Series "
+        description: Contract writing video series, from simple deployments to L1 to L2
+          interactions.
+        link_label: View
+        link_href: /tutorials/
+        icon: /assets/orange.svg
+      - type: image_icon_link_card
+        color: green
+        link_href: /tutorials/
+        link_label: View
+        title: "Cairo 101 "
+        description: Cairo 101 video series, from dev environment to deployment.
+        icon: /assets/green.svg
+      - type: image_icon_link_card
+        color: yellow
+        link_href: /tutorials/
+        link_label: View
+        title: "Starknet Edu "
+        description: Educational developer resources for Starknet and Cairo.
+        icon: /assets/yellow.svg
+  - type: flex_layout
+    heading_variant: lg
     base: 1
     md: 2
     lg: 3

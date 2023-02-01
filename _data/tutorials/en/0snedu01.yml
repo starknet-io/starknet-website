@@ -6,4 +6,5 @@ title: "Starknet Edu – Github Repo "
 author: "StarkWare "
 published_at: Jan 31st, 2023
 difficulty: beginner
+course: starknet_edu
 tags: cairo, account abstraction, contracts
