@@ -7,7 +7,11 @@ type Props = {
   tt?: "uppercase" | "lowercase" | "capitalize" | "none";
 };
 
-export const NavbarHeading = ({ tt = "uppercase", children, pt }: Props) => {
+export const NavbarHeading = ({
+  tt = "uppercase",
+  children,
+  pt = "16px",
+}: Props) => {
   return (
     <Heading
       as="h6"
@@ -16,7 +20,6 @@ export const NavbarHeading = ({ tt = "uppercase", children, pt }: Props) => {
       color="heading-navy-fg"
       pl="16px"
       mb="16px"
-      pt="32px"
       pt={pt}
     >
       {children}
