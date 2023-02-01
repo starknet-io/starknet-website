@@ -10,6 +10,9 @@ import {
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
+import { Page as PageType } from "src/data/pages";
+import ReactMarkdown from "react-markdown";
+import { slugify } from "src/utils/utils";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -23,7 +26,6 @@ export default async function Page({
 Props): JSX.Element {
   try {
     const data = await getPageBySlug(slug.join("/"), locale);
-    console.log(data);
     const date = data?.gitlog?.date;
 
     return (
@@ -70,7 +72,11 @@ Props): JSX.Element {
             </Flex>
           }
           rightAside={
-            <>{data.template === "content" ? <Box>Hello</Box> : null}</>
+            <>
+              {data.template === "content" ? (
+                <TableOfContents page={data} />
+              ) : null}
+            </>
           }
         />
       </Box>
@@ -79,6 +85,64 @@ Props): JSX.Element {
     console.log(err);
     notFound();
   }
+}
+
+function TableOfContents({ page }: { page: PageType }) {
+  return (
+    <div>
+      {page.blocks.map((block, i) => {
+        if ("title" in block) {
+          return (
+            <a key={i} href={`#toc-${slugify(block.title)}`}>
+              {block.title}
+            </a>
+          );
+        } else if ("heading" in block && block.heading != null) {
+          return (
+            <a key={i} href={`#toc-${slugify(block.heading)}`}>
+              {block.heading}
+            </a>
+          );
+        } else if (block.type === "markdown") {
+          return (
+            <ReactMarkdown
+              key={i}
+              allowedElements={["h2", "h3"]}
+              components={{
+                h2: (props) => {
+                  return (
+                    <p>
+                      <a
+                        key={i}
+                        href={`#toc-${slugify(props.children.join(" "))}`}
+                      >
+                        {props.children}
+                      </a>
+                    </p>
+                  );
+                },
+                h3: (props) => {
+                  console.log(props.children);
+                  return (
+                    <p>
+                      <a
+                        key={i}
+                        href={`#toc-${slugify(props.children.join(" "))}`}
+                      >
+                        {props.children}
+                      </a>
+                    </p>
+                  );
+                },
+              }}
+            >
+              {block.body}
+            </ReactMarkdown>
+          );
+        }
+      })}
+    </div>
+  );
 }
 
 //replace every h tag with a tag

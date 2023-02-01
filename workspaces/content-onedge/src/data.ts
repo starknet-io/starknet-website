@@ -30,14 +30,14 @@ export interface Post extends Meta {
 
 export async function fileToPost(
   locale: string,
-  filename: string
+  filename: string,
 ): Promise<Post> {
   const resourceName = "posts";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename
+    filename,
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -45,7 +45,7 @@ export async function fileToPost(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData
+    () => defaultLocaleData,
   );
 
   const sourceFilepath =
@@ -100,14 +100,14 @@ export interface Page extends Meta {
 
 export async function fileToPage(
   locale: string,
-  filename: string
+  filename: string,
 ): Promise<Page> {
   const resourceName = "pages";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename
+    filename,
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -115,7 +115,7 @@ export async function fileToPage(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData
+    () => defaultLocaleData,
   );
 
   const sourceFilepath =

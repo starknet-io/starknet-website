@@ -8,6 +8,7 @@ import {
   Img,
   Box,
 } from "src/libs/chakra-ui";
+import { slugify } from "src/utils/utils";
 
 interface Props {
   readonly body: string;
@@ -20,10 +21,17 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
       <ReactMarkdown
         components={{
           h2: (props) => (
-            <Heading as="h2" color="heading-navy-fg" variant="h3" {...props} />
+            <Heading
+              as="h2"
+              id={`toc-${slugify(props.children.join(" "))}`}
+              color="heading-navy-fg"
+              variant="h3"
+              {...props}
+            />
           ),
           h3: (props) => (
             <Heading
+              id={`toc-${slugify(props.children.join(" "))}`}
               color="heading-navy-fg"
               pb={4}
               as="h3"
