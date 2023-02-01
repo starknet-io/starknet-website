@@ -16,6 +16,7 @@ export const NavbarHeading = ({ tt = "uppercase", children, pt }: Props) => {
       color="heading-navy-fg"
       pl="16px"
       mb="16px"
+      pt="32px"
       pt={pt}
     >
       {children}
