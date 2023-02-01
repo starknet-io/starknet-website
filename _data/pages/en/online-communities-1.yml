@@ -4,3 +4,20 @@ template: content
 parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
+blocks:
+  - type: page_header
+    title: Online communities
+    description: "Join the groups building and driving Starknet forward. "
+  - type: link_list
+    heading: "Social "
+    blocks:
+      - type: link_list_item
+        is_external: true
+        label: Discord
+        sub_label: "Join the conversation on discord "
+        href: https://discord.com/invite/QypNMzkHbc
+      - type: link_list_item
+        is_external: true
+        label: Twitter
+        sub_label: Find the community on crypto twitter
+        href: https://twitter.com/Starknet
