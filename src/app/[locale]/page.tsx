@@ -16,9 +16,7 @@ import * as LinkList from "@ui/LinkList/LinkList";
 import * as GridCard from "@ui/Card/GridCard";
 import { Text } from "@ui/Typography/Text";
 import { Tag } from "@ui/Tag/Tag";
-import { MainSearch } from "./(components)/MainSearch";
 import { MainSearch2 } from "./(components)/MainSearch2";
-
 export default async function Index({
   params: { locale },
 }: LocaleProps): Promise<JSX.Element> {
@@ -27,12 +25,6 @@ export default async function Index({
       main={
         <Flex direction="column" gap={{ base: "56px", lg: "136px" }}>
           <MainSearch2
-            env={{
-              ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
-              ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
-            }}
-          />
-          <MainSearch
             env={{
               ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
               ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,

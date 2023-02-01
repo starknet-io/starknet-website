@@ -3,6 +3,7 @@
 import {
   AutocompleteOptions,
   getAlgoliaResults,
+  SourceTemplates,
 } from "@algolia/autocomplete-js";
 import { BaseItem } from "@algolia/autocomplete-core";
 import algoliasearch from "algoliasearch/lite";
@@ -18,6 +19,9 @@ import { createRoot, Root } from "react-dom/client";
 
 import "@algolia/autocomplete-theme-classic/dist/theme.css";
 import { useLocale } from "./ClientLocaleProvider";
+import { ArgumentsType } from "vitest";
+import { Page } from "src/data/pages";
+import { Post } from "src/data/posts";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -62,21 +66,88 @@ export interface Props {
   };
 }
 
+import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
+// import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
+
 export function MainSearch2({ env }: Props): JSX.Element | null {
-  const searchClient = useMemo(() => {
-    return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
+  const data = useMemo(() => {
+    const searchClient = algoliasearch(
+      env.ALGOLIA_APP_ID,
+      env.ALGOLIA_SEARCH_API_KEY
+    );
+
+    const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin({
+      key: "algolia-recent-searches-plugin",
+      limit: 3,
+      transformSource({ source }) {
+        return {
+          ...source,
+          templates: {
+            ...source.templates,
+            header({ state }) {
+              if (state.query) {
+                return <Fragment />;
+              }
+
+              return (
+                <Fragment>
+                  <span className="aa-SourceHeaderTitle">Your searches</span>
+                  <div className="aa-SourceHeaderLine" />
+                </Fragment>
+              );
+            },
+          },
+        };
+      },
+    });
+
+    return { searchClient, recentSearchesPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
 
+  // const querySuggestionsPlugin = createQuerySuggestionsPlugin({
+  //   searchClient,
+  //   indexName: "instant_search_demo_query_suggestions",
+  //   getSearchParams() {
+  //     return recentSearchesPlugin.data!.getAlgoliaSearchParams({
+  //       hitsPerPage: 5,
+  //     });
+  //   },
+  //   transformSource({ source }) {
+  //     return {
+  //       ...source,
+  //       templates: {
+  //         ...source.templates,
+  //         header({ state }) {
+  //           if (state.query) {
+  //             return <Fragment/>;
+  //           }
+
+  //           return (
+  //             <Fragment>
+  //               <span className="aa-SourceHeaderTitle">Popular searches</span>
+  //               <div className="aa-SourceHeaderLine" />
+  //             </Fragment>
+  //           );
+  //         },
+  //       },
+  //     };
+  //   },
+  // });
+
   return (
-    <Autocomplete
+    <Autocomplete<any>
       openOnFocus={true}
+      plugins={[
+        data.recentSearchesPlugin,
+        // data.querySuggestionsPlugin
+      ]}
       getSources={({ query }) => [
         {
-          sourceId: "products",
+          sourceId: "posts",
           getItems() {
             return getAlgoliaResults({
-              searchClient,
+              searchClient: data.searchClient,
               queries: [
                 {
                   params: {
@@ -85,6 +156,27 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
                   indexName: "web_posts_dev",
                   query,
                 },
+              ],
+            });
+          },
+          templates: {
+            header() {
+              return (
+                <Fragment>
+                  <span className="aa-SourceHeaderTitle">posts</span>
+                  <div className="aa-SourceHeaderLine" />
+                </Fragment>
+              );
+            },
+            item: PostItem,
+          },
+        },
+        {
+          sourceId: "pages",
+          getItems() {
+            return getAlgoliaResults({
+              searchClient: data.searchClient,
+              queries: [
                 {
                   params: {
                     facetFilters: [`locale:${locale}`],
@@ -92,6 +184,27 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
                   indexName: "web_pages_dev",
                   query,
                 },
+              ],
+            });
+          },
+          templates: {
+            header() {
+              return (
+                <Fragment>
+                  <span className="aa-SourceHeaderTitle">pages</span>
+                  <div className="aa-SourceHeaderLine" />
+                </Fragment>
+              );
+            },
+            item: PageItem,
+          },
+        },
+        {
+          sourceId: "docs",
+          getItems() {
+            return getAlgoliaResults({
+              searchClient: data.searchClient,
+              queries: [
                 {
                   indexName: "starknet-docs-dev",
                   query,
@@ -100,9 +213,16 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
             });
           },
           templates: {
-            item({ item, components }) {
-              return <ProductItem hit={item} components={components} />;
+            header(data) {
+              console.log(data);
+              return (
+                <Fragment>
+                  <span className="aa-SourceHeaderTitle">docs</span>
+                  <div className="aa-SourceHeaderLine" />
+                </Fragment>
+              );
             },
+            item: DocsItem,
           },
         },
       ]}
@@ -110,12 +230,50 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
   );
 }
 
-export function ProductItem({ hit, components }: any) {
+type ItemProps<T> = ArgumentsType<SourceTemplates<T & BaseItem>["item"]>[0];
+
+export function PageItem({
+  item: hit,
+  components: { Highlight },
+}: ItemProps<Page>) {
+  return (
+    <a href={hit.link} className="aa-ItemLink">
+      <div className="aa-ItemContent">
+        <div className="aa-ItemTitle">
+          <Highlight hit={hit} attribute="title" />
+        </div>
+      </div>
+    </a>
+  );
+}
+
+export function PostItem({
+  item: hit,
+  components: { Highlight },
+}: ItemProps<Post>) {
+  return (
+    <a
+      href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
+      className="aa-ItemLink"
+    >
+      <div className="aa-ItemContent">
+        <div className="aa-ItemTitle">
+          <Highlight hit={hit} attribute="title" />
+        </div>
+      </div>
+    </a>
+  );
+}
+
+export function DocsItem({
+  item: hit,
+  components: { Highlight },
+}: ItemProps<any>) {
   return (
     <a href={hit.url} className="aa-ItemLink">
       <div className="aa-ItemContent">
         <div className="aa-ItemTitle">
-          <components.Highlight hit={hit} attribute="title" />
+          <Highlight hit={hit} attribute="title" />
         </div>
       </div>
     </a>
