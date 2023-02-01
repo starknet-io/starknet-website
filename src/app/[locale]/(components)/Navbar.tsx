@@ -105,9 +105,12 @@ export default function Navbar({ mainMenu }: Props) {
                         <Box key={columnIndex}>
                           {column.blocks?.map((block, blockIndex) => (
                             <>
-                              <NavbarHeading key={blockIndex} pt="24px">
-                                {block.title}
-                              </NavbarHeading>
+                              {block.title && (
+                                <NavbarHeading key={blockIndex} pt="24px">
+                                  {block.title}
+                                </NavbarHeading>
+                              )}
+
                               {block.items?.map((item, itemIndex) => {
                                 let title =
                                   item.custom_title ||
