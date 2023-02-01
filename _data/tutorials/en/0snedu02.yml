@@ -6,4 +6,5 @@ title: Starknet Edu – Accounts
 author: "StarkWare "
 published_at: Jan 1st, 2023
 difficulty: beginner
+course: starknet_edu
 tags: cairo, account abstraction, contracts
