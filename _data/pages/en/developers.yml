@@ -12,7 +12,7 @@ blocks:
     heading_variant: lg
     base: 1
     md: 2
-    lg: 1
+    lg: 3
     heading: "Get started "
     blocks:
       - type: image_icon_link_card
