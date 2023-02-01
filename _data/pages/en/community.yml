@@ -10,7 +10,7 @@ blocks:
       technologists and entrepreneurs building Starknet and scaling Ethereum.
     variant: community
   - type: flex_layout
-    heading_variant: lg
+    heading_variant: md
     base: 1
     md: 2
     lg: 3
