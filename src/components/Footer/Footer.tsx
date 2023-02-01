@@ -48,8 +48,7 @@ const Root = ({ children, ...rest }: RootProps) => {
               >
                 <StarknetLogo height="30" />
                 <Text fontSize="xs" color="subtle">
-                  &copy; {new Date().getFullYear()} Starknet. All rights
-                  reserved.
+                  Built with ✨ by the Starknet community.
                 </Text>
               </HStack>
               <ButtonGroup variant="ghost">
