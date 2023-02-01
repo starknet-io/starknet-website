@@ -4,6 +4,7 @@ template: landing
 breadcrumbs: false
 page_last_updated: false
 blocks:
+  - type: home_hero
   - type: group
     blocks:
       - type: get_involved_card
