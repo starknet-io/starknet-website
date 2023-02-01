@@ -6,6 +6,7 @@ import {
   BreadcrumbLink,
   Flex,
   Box,
+  List,
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -13,6 +14,7 @@ import { Block } from "src/blocks/Block";
 import { Page as PageType } from "src/data/pages";
 import ReactMarkdown from "react-markdown";
 import { slugify } from "src/utils/utils";
+import { Heading } from "@ui/Typography/Heading";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -90,6 +92,8 @@ Props): JSX.Element {
 function TableOfContents({ page }: { page: PageType }) {
   return (
     <div>
+      <Heading variant="h4">On this page</Heading>
+      <List spacing={3}></List>
       {page.blocks.map((block, i) => {
         if ("title" in block) {
           return (
