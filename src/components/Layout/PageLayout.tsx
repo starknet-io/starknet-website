@@ -31,7 +31,7 @@ export const PageLayout = (props: Props) => {
       {/* page layout */}
       <Stack
         direction={{ base: "column", lg: "row" }}
-        spacing={{ base: "12", lg: "16" }}
+        spacing={{ base: "12", lg: "120px" }}
         flex="1"
         pt={10}
         // bg="yellow"
