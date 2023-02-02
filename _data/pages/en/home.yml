@@ -37,7 +37,7 @@ blocks:
     heading_variant: md
     base: 1
     md: 2
-    lg: 2
+    lg: 3
     heading: "Start building "
     blocks:
       - type: image_icon_link_card
@@ -95,9 +95,13 @@ blocks:
   - type: community_events
   - type: ordered_block
     blocks:
-      - type: ordered_item
+      - type: basic_card
+        size: sm
         title: test
-        body: t﻿est
-      - type: ordered_item
+        link_label: test
+        link_href: test
+      - type: basic_card
+        size: sm
         title: test
-        body: t﻿est
+        link_label: test
+        link_href: test
