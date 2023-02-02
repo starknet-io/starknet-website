@@ -6,8 +6,8 @@ page_last_updated: false
 blocks:
   - type: hero
     title: Community hub
-    description: Join a community of thousands of developers, designers,
-      technologists and entrepreneurs building Starknet and scaling Ethereum.
+    description: Join a community of developers, enthusiasts and explorers, working
+      together to build Starknet and scale Ethereum.
     variant: community
   - type: flex_layout
     heading_variant: md
