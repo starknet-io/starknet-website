@@ -26,13 +26,6 @@ blocks:
 
       Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
   - type: link_list
-    heading: Related
-    blocks:
-      - type: link_list_item
-        is_external: false
-        label: Zero-knowledge Proofs
-        href: en/zero-knowlege-proofs
-  - type: link_list
     heading: Further reading
     blocks:
       - type: link_list_item
