@@ -244,7 +244,7 @@ function CustomHits() {
   console.log(hits);
   return (
     <>
-      <Flex pt={2} gap={4} direction="row" flex={1} flexWrap="wrap">
+      <SimpleGrid minChildWidth="250px" spacing="16px">
         {hits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
 
@@ -275,7 +275,7 @@ function CustomHits() {
             </ArticleCard.Root>
           );
         })}
-      </Flex>
+      </SimpleGrid>
 
       {/* <HStack mt="24">
         <Divider />
