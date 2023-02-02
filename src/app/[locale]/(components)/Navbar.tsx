@@ -64,7 +64,7 @@ export default function Navbar({ mainMenu }: Props) {
                               } else if (item.custom_internal_link) {
                                 link = `/${locale}/${item.custom_internal_link.replace(
                                   /(^\/|\/$)/g,
-                                  "",
+                                  ""
                                 )}`;
                               } else if (item.page_data) {
                                 link = item.page_data.link;
@@ -80,7 +80,10 @@ export default function Navbar({ mainMenu }: Props) {
                                   key={itemIndex}
                                   href={link}
                                 >
-                                  {title} {hasIcon && item.custom_icon}
+                                  {title}
+                                  {/* {hasIcon && (
+                                    <Icon as={item.custom_icon } />
+                                  )} */}
                                 </NavBarLink>
                               );
                             })}
@@ -126,7 +129,7 @@ export default function Navbar({ mainMenu }: Props) {
                                 } else if (item.custom_internal_link) {
                                   link = `/${locale}/${item.custom_internal_link.replace(
                                     /(^\/|\/$)/g,
-                                    "",
+                                    ""
                                   )}`;
                                 } else if (item.page_data) {
                                   link = item.page_data.link;

@@ -8,6 +8,7 @@ import {
   Img,
   Box,
   Spacer,
+  Link,
 } from "src/libs/chakra-ui";
 import { slugify } from "src/utils/utils";
 
@@ -75,6 +76,7 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
           li: (props) => <ListItem lineHeight="32px" {...props} />,
           img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
+          a: (props) => <Link variant="standard" {...props} />,
         }}
       >
         {body}

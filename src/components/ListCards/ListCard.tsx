@@ -23,6 +23,7 @@ import { Card } from "../Card/Card";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CardLink } from "src/blocks/cards/CardLink";
 import Image from "next/image";
+import { titleCase } from "src/utils/utils";
 type Props = {
   readonly title?: string;
   readonly startDateTime?: string;
@@ -121,7 +122,7 @@ export const ListCard = (props: Props) => {
                 <Wrap pb="20px" pt="4px" shouldWrapChildren>
                   {props.type.map((tag) => (
                     <Tag key={tag} variant="listCard">
-                      {tag}
+                      {titleCase(tag)}
                     </Tag>
                   ))}
                 </Wrap>

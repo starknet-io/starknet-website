@@ -839,8 +839,8 @@ export const config: CmsConfig = {
               widget: "select",
               options: [
                 {
-                  label: "online / remote",
-                  value: "online_remote",
+                  label: "Remote",
+                  value: "remote",
                 },
                 {
                   label: "USA",
