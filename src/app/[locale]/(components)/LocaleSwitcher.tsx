@@ -24,7 +24,7 @@ export default function LocaleSwitcher() {
       description=" Some copy here that gives a concise summary of the language
               resources as well as how the community is being asked to
               contribute and a link to a dedicated page on the topic."
-      selectedLocale={localeConfig.localName}
+      selectedLocale={localeConfig.code}
     >
       {i18nConfig
         .filter((c) => topLanguages.includes(c.code))

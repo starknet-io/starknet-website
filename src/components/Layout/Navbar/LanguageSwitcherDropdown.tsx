@@ -49,6 +49,7 @@ export const LanguageSwitcherDropdown = ({
             leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
             variant="link"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
+            textTransform="uppercase"
           >
             {selectedLocale}
           </Button>
