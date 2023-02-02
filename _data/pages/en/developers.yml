@@ -67,6 +67,7 @@ blocks:
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
         icon: /assets/yellow.svg
+  - type: community_events
   - type: flex_layout
     heading_variant: lg
     base: 1
@@ -74,8 +75,31 @@ blocks:
     lg: 3
     heading: Explore the docs
     blocks:
-      - type: link_list_item
-        is_external: true
-        label: "will be updated "
-        sub_label: asdfsad
-  - type: community_events
+      - type: link_list
+        heading: test
+        blocks:
+          - is_external: true
+            label: Testing
+            href: /testing
+          - is_external: false
+            label: testing 2
+            href: /asdfsadf
+      - type: link_list
+        heading: Test 2
+        blocks:
+          - is_external: false
+            label: This is a test
+            href: /test
+          - is_external: false
+            label: Another test
+            href: /test
+      - type: link_list
+        heading: testing 3
+        blocks:
+          - is_external: false
+            label: "tessf safsdf "
+            href: /asdfsadfsdf
+          - is_external: false
+            label: asdfsd
+            sub_label: asdf
+            href: asdfsdf
