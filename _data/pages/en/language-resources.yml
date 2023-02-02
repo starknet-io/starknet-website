@@ -8,10 +8,32 @@ blocks:
   - type: page_header
     title: Language resources
   - type: markdown
-    body: StarkNet is a permissionless decentralized Validity-Rollup (also known as
-      a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any
-      dApp to achieve unlimited scale for its computation – without compromising
-      Ethereum’s composability and security, thanks to StarkNet’s reliance on
-      the safest and most scalable cryptographic proof system – STARK. StarkNet
-      Contracts and the StarkNet OS are written in Cairo – supporting the
-      deployment and scaling of any use case, whatever the business logic.
+    body: >-
+      In line with our goal to make the Starknet community accessible and usable
+      to as many people across the globe as possible, we’ve listed a collection
+      of non-English resources below.\
+
+      \
+
+      These are places where you can discover and discuss all things Starknet with other community members in your native language.\
+
+      \
+
+      If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please [open an issue](https://github.com/starknet-io/starknet-website/issues) on Github to get it added.
+  - type: link_list
+    blocks:
+      - type: link_list_item
+        is_external: false
+        label: test
+        sub_label: test
+        href: test
+      - type: link_list_item
+        is_external: false
+        label: test
+        sub_label: test
+        href: test
+      - type: link_list_item
+        is_external: false
+        label: test
+        sub_label: test
+        href: test
