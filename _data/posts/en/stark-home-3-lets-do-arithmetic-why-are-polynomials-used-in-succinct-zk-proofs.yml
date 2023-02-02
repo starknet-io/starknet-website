@@ -1,0 +1,13 @@
+id: c0b2a861-f7cd-44de-bb27-2e1eca648f65
+post_type: video
+title: "STARK @ Home 3: Let's do Arithmetic: Why are polynomials used in
+  succinct ZK proofs?"
+published_date: 2020-04-06T14:07:06.434Z
+time_to_consume: 88 min watch
+video_link: https://youtu.be/iAaSQfZ-2AM
+image: /assets/starkhome03.png
+category: stark-math
+topic:
+  - starknet
+short_desc: This week Eli Ben-Sasson explains the pretty properties of
+  polynomials that make them useful in succinct ZK proofs.
