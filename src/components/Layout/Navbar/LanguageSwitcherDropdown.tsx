@@ -39,7 +39,7 @@ export const LanguageSwitcherDropdown = ({
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
-    offset={[0, 30]}
+    offset={[0, 24]}
   >
     {({ isOpen }) => (
       <>
