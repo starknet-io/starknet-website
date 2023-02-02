@@ -107,34 +107,46 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <LinkList heading={block.heading}>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <LinkListItem
+            key={i}
+            label={block.label}
+            isExternal={block.is_external}
+            href={block.href}
+            subLabel={block.sub_label}
+          />
         ))}
       </LinkList>
     );
-  } else if (block.type === "link_list_item") {
-    return (
-      <LinkListItem
-        label={block.label}
-        isExternal={block.is_external}
-        href={block.href}
-        subLabel={block.sub_label}
-      />
-    );
-  } else if (block.type === "accordion") {
+  }
+  // else if (block.type === "link_list_item") {
+  //   return (
+  //     <LinkListItem
+  //       label={block.label}
+  //       isExternal={block.is_external}
+  //       href={block.href}
+  //       subLabel={block.sub_label}
+  //     />
+  //   );
+  // }
+  else if (block.type === "accordion") {
     return (
       <AccordionRoot heading={block.heading}>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <AccordionItem key={i} label={block.label}>
+            <>{block.body} </>
+          </AccordionItem>
         ))}
       </AccordionRoot>
     );
-  } else if (block.type === "accordion_item") {
-    return (
-      <AccordionItem label={block.label}>
-        <>{block.body} </>
-      </AccordionItem>
-    );
-  } else if (block.type === "ordered_block") {
+  }
+  // else if (block.type === "accordion_item") {
+  //   return (
+  //     <AccordionItem label={block.label}>
+  //       <>{block.body} </>
+  //     </AccordionItem>
+  //   );
+  // }
+  else if (block.type === "ordered_block") {
     let newBlocks = block.blocks;
     // @ts-ignore - will fix types later
     let alphabeticalBlocks = newBlocks.sort((a: any, b: any) => {
@@ -146,17 +158,24 @@ export async function Block({ block, locale }: Props): JSX.Element {
       <OrderedBlock>
         {alphabeticalBlocks.map((block: any, i: number) => {
           console.log(block);
-          return <Block key={i} block={block} locale={locale} />;
+          return (
+            <OrderedBlockItem key={i} title={block.title}>
+              <>{block.body} </>
+            </OrderedBlockItem>
+          );
         })}
       </OrderedBlock>
     );
-  } else if (block.type === "ordered_item") {
-    return (
-      <OrderedBlockItem title={block.title}>
-        <>{block.body} </>
-      </OrderedBlockItem>
-    );
-  } else if (block.type === "page_header") {
+  }
+
+  // else if (block.type === "ordered_item") {
+  //   return (
+  //     <OrderedBlockItem title={block.title}>
+  //       <>{block.body} </>
+  //     </OrderedBlockItem>
+  //   );
+  // }
+  else if (block.type === "page_header") {
     return (
       <PageHeaderBlock title={block.title} description={block.description} />
     );

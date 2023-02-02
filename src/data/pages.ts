@@ -118,7 +118,16 @@ export interface HomeHeroBlock {
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
-  readonly blocks: readonly Block[];
+  readonly blocks: readonly LinkListItem[];
+}
+export interface AccordionBlock {
+  readonly type: "accordion";
+  readonly heading?: string;
+  readonly blocks: readonly AccordionItem[];
+}
+export interface OrderedBlock {
+  readonly type: "ordered_block";
+  readonly blocks: readonly OrderedItem[];
 }
 
 export type Block =
@@ -137,10 +146,9 @@ export type Block =
   | HeroBlock
   | HomeHeroBlock
   | LinkListBlock
-  | LinkListItem
-  | AccordionItem
-  | OrderedItem
-  | PageHeaderBlock;
+  | PageHeaderBlock
+  | AccordionBlock
+  | OrderedBlock;
 
 export interface Container {
   readonly type: "container";
@@ -162,23 +170,7 @@ export interface GroupBlock {
   readonly blocks: readonly Block[];
 }
 
-export interface AccordionBlock {
-  readonly type: "accordion";
-  readonly heading?: string;
-  readonly blocks: readonly Block[];
-}
-export interface OrderedBlock {
-  readonly type: "ordered_block";
-  readonly blocks: readonly Block[];
-}
-
-export type TopLevelBlock =
-  | Block
-  | FlexLayoutBlock
-  | GroupBlock
-  | Container
-  | AccordionBlock
-  | OrderedBlock;
+export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
 
 export interface Page extends Meta {
   readonly id: string;
@@ -195,12 +187,12 @@ export interface Page extends Meta {
 
 export async function getPageBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {

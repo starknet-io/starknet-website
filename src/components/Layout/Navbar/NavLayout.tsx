@@ -39,7 +39,7 @@ export const NavLayout = (props: NavLayoutProps) => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Container py={{ base: "4", lg: "8" }}>
+    <Container py={{ base: "4", lg: "17px" }}>
       <HStack spacing="4" justify="space-between">
         <Link href={`/${locale}/`}>
           <StarknetLogo />
