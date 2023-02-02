@@ -1,105 +1,30 @@
 id: 93b845d7-5662-4cd4-8c13-3730440880c0
-title: What is starknet?
+title: What is Starknet?
 template: content
 parent_page: /learn/
 breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: page_header
-    title: What is starknet
+    title: "What is Starknet? "
   - type: markdown
     body: >-
-      ## I﻿ntroduction 
+      ## I﻿ntroduction
 
 
-      StarkNet is a permissionless decentralized Validity-Rollup (also known as a “ZK-Rollup”). It operates as an L2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum’s composability and security, thanks to StarkNet’s reliance on the safest and most scalable cryptographic proof system – STARK.
+      Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
 
 
-      StarkNet Contracts and the StarkNet OS are written in Cairo – supporting the deployment and scaling of any use case, whatever the business logic.
+      Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
 
 
-      ![this is alt text](/assets/zzs5k5wbzzho7hhqopbpbi7ooe.avif "This is the title")
+      ## H﻿ow it works 
 
 
-      ## Setting up the network
+      With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
 
 
-      One of the key features is its ability to harness the power of a supercomputer for trustless processing inside smart contracts, relying on math instead of game theory and oracles. Scalability is not just about cheap transactions but also about the number of transactions and complexity, StarkNet offers both. With StarkNet, developers no longer need to worry about gas costs for computation, it's like having a vinyl disc with unlimited capacity. This means developers now have access to significantly more computing power, opening up new use cases and possibilities.
-
-
-      ### Choosing a wallet provider
-
-
-      Another innovative feature of StarkNet is its account abstraction, which allows users to link their assets (tokens, NFTs, identities) to a smart contract instead of a private key, providing a safer and more flexible solution. The ability to completely redefine how blockchain UI works with Account Contracts gives developers the freedom to create a more user-friendly experience.
-
-
-      StarkNet also offers a trustless bridging mechanism that relies on math instead of validators, eliminating the need for staking and slashing. This bridge allows for instant withdrawals and data transfer, making cross-chain apps easier to build.
-
-
-      Furthermore, StarkNet provides storage proofs, a cryptographic way of verifying that a value is indeed part of the state, allowing for trustless data transfer from any contract, block or blockchain.
-
-
-      ## Creating an account
-
-
-      Finally, StarkNet's fractal scaling and recursion technology allows for nesting proofs inside of proofs resulting in a smaller final proof, providing cost and latency benefits, and new opportunities for L3 and applicative-recursion for even better performance and cost benefits. The sky's the limit with StarkNet.
-
-
-      ## Transferring Goerli ETH to the account
-
-
-      In order to pay the fees required to deploy the account and execute transactions on StarkNet, you need enough ETH in your L2 account.
-
-
-      You can acquire L2 ETH in the following ways:
-
-
-      1. Use the [StarkNet Faucet](https://faucet.goerli.starknet.io/) to get small amounts of ETH directly to the account you have just created. This should suffice for simple transactions.
-
-      2. Use StarkGate – the StarkNet L2 bridge ([L1 contract](https://goerli.etherscan.io/address/0xc3511006C04EF1d78af4C8E0e74Ec18A6E64Ff9e) / [Web App](https://goerli.starkgate.starknet.io/)) to transfer your existing Goerli L1 ETH to and from the L2 account.
-
-
-      ## Ethereum account structure
-
-
-      Within Ethereum individual user accounts are known as Externally Owned Accounts (EOAs).
-
-
-      EOAs differ from smart contracts in that they are not controlled by code. An EOA is determined by a pair of private and public keys.
-
-
-      ![sdfdf](/assets/1_npu7yslcr2lepvlggffrlw-1.png "sdfsdf")
-
-
-      The account’s address is derived from those keys and only by possessing the private key can you initiate transactions from an account. While Ethereum contracts are "passive", i.e., they can only change if they were called inside a transaction, EOAs can initiate transactions.
-
-
-      While simple, EOAs have a major drawback i.e there’s no flexibility in the account behavior, the Ethereum protocol dictates what it means for a transaction initiated by an EOA to be valid (the signature scheme is fixed). In particular, control over the public key gives complete control over the account. Although this is theoretically a secure method of account management, in practice it has some drawbacks, such as requiring you to keep your seed phrase secure yet accessible to you and limited flexibility surrounding wallet functionality.
-
-
-      EIP-4337, a design proposal for Ethereum outlines *account abstraction* whereby all accounts are managed via a dedicated smart contract on the Ethereum network, as a way to increase flexibility and usability. You can add custom logic on top of the basic EOA functionality, thereby bringing account abstraction into Ethereum.
-
-
-      ### What is Account Abstraction?
-
-
-      The idea behind account abstraction is to allow more flexibility in the management of accounts rather than have their behavior determined at the protocol level. This can be achieved by introducing account contracts - smart contracts with programmable logic that determines the user’s account.
-
-
-      Using account abstraction you can now program how your account functions.
-
-
-      For example, you can:
-
-
-      * Determine what it means for a signature to be valid or what contracts your account is allowed to interact with. This is known as "signature abstraction"
-
-      * Pay transaction fees in different tokens - this is sometimes known as "fee abstraction"
-
-      * Design your own replay protection mechanism and allow sending multiple uncoupled transactions in parallel. Compare this to the sequential nonce solution used in Ethereum, which results in transactions being inherently sequential, i.e., even if you want to send two transactions in parallel, you must wait for some confirmation on the first before sending the second. Otherwise, the second transaction may be rejected due to an invalid nonce. With account abstraction, one can discuss different solutions that bypass the need for a sequential nonce. This is known as "nonce abstraction"
-
-
-      Today, StarkNet offers signature abstraction. In the future, we will enrich the current account abstraction design (see e.g. the [paymaster proposal](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781) for fee abstraction).
+      Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
   - type: link_list
     heading: Related
     blocks:
@@ -112,11 +37,16 @@ blocks:
     blocks:
       - type: link_list_item
         is_external: true
-        label: Zero knowledge proofs 101
-        sub_label: Eli Ben-Sasson
-        href: http://www.google.com
+        label: "Starknet primer "
+        sub_label: drspaceman
+        href: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
       - type: link_list_item
         is_external: true
-        label: Scaling Ethereum with Rollups
-        sub_label: Vitalik Buterin
-        href: http://www.google.com
+        label: "The Starknet stack "
+        sub_label: "drspaceman "
+        href: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
+      - type: link_list_item
+        is_external: true
+        label: "An introduction to Starknet, STARKs and Cairo "
+        sub_label: "Eli-Ben Sasson "
+        href: https://www.youtube.com/watch?v=QPNp8w9rx7o
