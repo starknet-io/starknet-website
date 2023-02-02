@@ -1,45 +1,61 @@
 id: 93b845d7-5662-4cd4-8c13-3730440880c0
-title: "Disclaimers "
+title: "Legal disclaimers "
 template: content
 parent_page: ""
 breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: page_header
-    title: "What is Starknet? "
+    title: Legal disclaimers
   - type: markdown
     body: >-
-      ## I﻿ntroduction
+      ## Privacy policy
 
 
-      Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+      This is the privacy policy (“Privacy Policy”) that governs how we, StarkWare Ltd. (“StarkWare”, “we”, “our” or“us”), use Personal Information (defined below) that we collect, receive and store about individuals in connection withthe use of the website https://starknet.io and any other website that we operate (each, together with its sub-domains, content and services, a “Site”).
 
 
-      Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
-
-
-      ## H﻿ow it works
-
-
-      With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
-
-
-      Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
-  - type: link_list
-    heading: Further reading
-    blocks:
-      - type: link_list_item
-        is_external: true
-        label: "Starknet primer "
-        sub_label: drspaceman
-        href: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
-      - type: link_list_item
-        is_external: true
-        label: "The Starknet stack "
-        sub_label: "drspaceman "
-        href: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
-      - type: link_list_item
-        is_external: true
-        label: "An introduction to Starknet, STARKs and Cairo "
-        sub_label: "Eli-Ben Sasson "
-        href: https://www.youtube.com/watch?v=QPNp8w9rx7o
+      1. Introduction. We have implemented this Privacy Policy because your privacy, and the privacy of other users, isimportant to us. This Privacy Policy explains our online information practices and the choices you can makeabout the way your Personal Information is collected and used in connection with the Site. “PersonalInformation” means any information that may be used, either alone or in combination with other information, to personally identify an individual, including, but not limited to, a first and last name, an email address, physicaladdress, or other contact information.\
+         \
+      2. Terms of Use. This Privacy Policy forms part of our Terms of Use which is available at https://starknet.io/terms/(“Terms”). Any capitalized but undefined term in this Privacy Policy shall have the meaning given to it in theTerms.\
+         \
+      3. Consent and Modification. You are not legally obligated to provide us Personal Information, and you hereby confirm that providing us Personal Information is at your own free will. By using the Site, you consent to the terms of this Privacy Policy and to our collection, processing and sharing of Personal Information for the purposes set forth herein. If you do not agree to this Privacy Policy, please do not access or otherwise use theSite. We reserve the right, at our discretion, to change this Privacy Policy at any time. Such change will be effective ten (10) days following posting of the revised Privacy Policy on the Site, and your continued use of theSite thereafter means that you accept those changes.\
+         \
+      4. What Personal Information We Collect and How We Collect It. We do not currently require you to providePersonal Information in order to have access to general information available on the Site. But, we do receive and/or collect Personal Information from you in the following ways:\
+         \
+         4.1. ‘Contact Us’ Information. If you send us a “Contact Us” request, whether by submitting an online form that we make available or by sending an email to an email address that we display, you may be required to provide us with certain information such as your name, business email address, company, job title and phone number.\
+         4.2. Create Account. If you create an account in order to use certain services provided in the Site, you will be required to provide us your email address, name and user name.\
+         4.3. Third Party Accounts: You may choose to create an Account by clicking on a ‘connect’ or ‘sign-in’ button that we may display on the Site for a designated third party website or service (each a “Third Party Account”), such as GitHub, Discord and Twitter. Doing so will enable you to link your Service Account and your Third PartyAccount. If you choose this option, then you will be required to approve the connection as well as the types of information (which may include Personal Information) that we will obtain from your Third Party Account and the types of activities that we may perform in connection with your Third Party Account. Please note that in order to use this option, you will need to have, and may need to be signed-in to, an existing Third Party Account.\
+         4.4. Log Files. We may make use of log files. The information inside the log files includes internet protocol (IP)addresses, type of browser, Internet Service Provider (ISP), date/time stamp, referring/exit pages, clicked pages and any other information your browser may send to us. We may use such information to analyze trends, administer the Site, track users’ movement around the Site, and gather demographic information.\
+         4.5. Cookies and Other Tracking Technologies. Our Site may utilize “cookies”, anonymous identifiers and other tracking technologies in order for us to provide our Site and present you with information that is customized for you and in order to track users. A “cookie” is a small text file that may be used, for example, to collect information about activity on the Site. Certain cookies and other technologies may serve to recall PersonalInformation, such as an IP address, previously indicated by a user. Most browsers allow you to control cookies, including whether or not to accept them and how to remove them. You may set most browsers to notify you if you receive a cookie, or you may choose to block cookies with your browser.\
+         4.6. The Site may use a tool called “Google Analytics” to collect information about use of the Site. Google Analyticscollects information such as how often users visit this site, what pages they visit when they do so, and what othersites they used prior to coming to this Site. We use the information we get from Google Analytics to maintain\
+         and improve the Site and our products. We do not combine the information collected through the use of GoogleAnalytics with personally identifiable information. Google’s ability to use and share information collected byGoogle Analytics about your visits to this Site is restricted by the Google Analytics Terms of Service, available at http://www.google.com/analytics/terms/us.html, and the Google Privacy Policy, available at http://www.google.com/policies/privacy/. You may learn more about how Google collects and processes data specifically in connection with Google Analytics at http://www.google.com/policies/privacy/partners/. You may prevent your data from being used by Google Analytics by downloading and installing the Google AnalyticsOpt-out Browser Add-on, available at https://tools.google.com/dlpage/gaoptout/.\
+         \
+      5. The Way We Use Personal Information. If you submit or we collect Personal Information through the Site, then we may use such Personal Information in the following ways:\
+         5.1. We may use your Personal Information to provide and improve our Site and services.\
+         5.2. We may use your Personal Information to contact you and to provide you certain offerings and/or programs that you have registered to or that we think may interest you.\
+         5.3. We may use your designated email address to: (i) send you updates or newsletters regarding the Site and our products; and/or (ii) to contact you and/or respond to a “Contact Us”.\
+         \
+      6. How We May Share Your Personal Information.\
+         6.1. We may transfer your Personal Information to our local or foreign subsidiaries or affiliated companies and/or to our third party service providers and partners for the purpose of storing or processing such information on ourbehalf, for our business purposes and to provide our Site to you and other users. Such information may be transferred to other countries. We require that these parties agree to process such information in compliance with our Privacy Policy.\
+         6.2. We may disclose your Personal Information or any information you submitted via the Site if we have a good faith belief that disclosure of such information is helpful or reasonably necessary to: (i) comply with any applicable law, regulation, legal process or governmental request; (ii) enforce our Terms, including investigations of potential violations thereof; (iii) detect, prevent, or otherwise address fraud or security issues;or (iv) protect against harm to the rights, property or safety of StarkWare, our users, yourself or the public.\
+         \
+      7. Use of Anonymous Information. We may use Anonymous Information (as defined below) or disclose it to third party service providers in order to improve our Site and enhance your experience with the Site. We may also disclose Anonymous Information (with or without compensation) to third parties. “Anonymous Information”means information which does not enable identification of an individual user, such as aggregated information about the use of our Site.\
+         \
+      8. Opting Out. You may choose not to receive future promotional, advertising, or other Site-related emails from us by selecting an unsubscribe link at the bottom of each email that we send. Please note that even if you opt out of receiving the foregoing emails, we may still send you a response to any “Contact Us” request and a request to receive demo of our products, that are necessary to facilitate your use of the Site.\
+         \
+      9. Choice. At all times, you may choose whether or not to provide or disclose Personal Information. If you choose not to provide mandatory Personal Information, you may still visit parts of the Site, but you may be unable to access certain options, programs, offers, and services that involve our interaction with you.\
+         \
+      10. Access/Accuracy. To the extent that you do provide us with Personal Information, we wish to maintain accuratePersonal Information. If you would like to delete or correct any of your other Personal Information that we maybe storing, you may submit an access request by sending an email to info@starnet.io. Your email should include adequate details of your request.\
+          \
+      11. Links to and Interaction with Third Party Products. The Site may enable you to interact with or contain links to your Third Party Account and other third party websites, mobile software applications and services that are not owned or controlled by us (each a “Third Party Service”). We are not responsible for the privacy practices or the content of such Third Party Services. Please be aware that Third Party Services may collect PersonalInformation from you. Accordingly, we encourage you to read the terms and conditions and privacy policy of each Third Party Service that you choose to use or interact with.\
+          \
+      12. Children’s Privacy. The Site is not structured to attract children under the age of 13 years. Accordingly, we do not intend to collect Personal Information from anyone we know to be under 13 years. If we learn that we have collected Personal Information from a child under 13 years, we will delete that information as quickly as possible. If you believe that we might have any such information, please contact us at info@starnet.io.\
+          \
+      13. Security. The security of Personal Information is important to us. We follow generally accepted industry standards, including the use of appropriate administrative, physical and technical safeguards, to protect thePersonal Information submitted to us. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure. Therefore, while we strive to use reasonable acceptable means to protect yourPersonal Information, we cannot guarantee its absolute security or confidentiality. If you have any questions about security on the Service, you can contact us at info@starknet.io.\
+          \
+      14. Merger, Sale or Bankruptcy. In the event that we are acquired by or merged with a third party entity, or in the event of bankruptcy or a comparable event, we reserve the right to transfer or assign Personal Information in connection with the foregoing events.\
+          \
+      15. Our California Do Not Track Notice. We may collect personally identifiable information about an individual consumer’s online activities over time and across different web sites when a consumer uses the Site.We do not allow third parties to collect personally identifiable information about an individual consumer’s online activities over time and across different web sites when a consumer uses the Site. \[Please confirm that it’s correct]\
+          \
+      16. Commitment. We are committed to protecting your privacy. Protecting your privacy online is an evolving area, and we are constantly evolving our Service to meet these demands. If you have any comments or questions regarding our Privacy Policy, or your Personal Information that we may be storing and using, please contact us at info@starknet.io.
