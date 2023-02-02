@@ -12,23 +12,101 @@ blocks:
     blocks:
       - type: accordion_item
         label: What will the StarkNet tokens be used for?
-        body:
-          The StarkNet token will be used as a staking token for participation in
-          StarkNet’s consensus mechanisms, as a Governance token, and for paying
-          transaction fees. The rationale for each of these utilities is
-          presented in our [decentralization
-          proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
-          in the section titled  “What will the tokens be used for?”
+        body: The Starknet token will be used for paying transaction fees, participation
+          in the Starknet protocol, and participation in governance. The
+          rationale for each of these utilities is presented in our
+          [decentralization
+          proposal](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
+          in the section titled “What will the tokens be used for?”
       - type: accordion_item
-        body:
-          SHARP (shared prover) is a service that allows proving the execution
-          of **several** Cairo programs in **the same proof**. The Cairo program
-          enforcing the validity of Starknet’s state transition, the StarkNet
-          OS, can make use of SHARP. Namely, proving StarkNet’s state transition
-          can be done together with a bunch of programs that are unrelated to
-          StarkNet, lowering the marginal cost of each participant. Whether or
-          not it is worthwhile for StarkNet to use SHARP or have a dedicated
-          prover depends on several parameters, most prominently the TPS
-          (transactions per second). Large executions might not benefit too much
-          by sharing the proof with much smaller programs.
-        label: How is StarkNet Related to SHARP?
+        label: Where Can I Monitor Starknet’s Transactions?
+        body: "There are several block explorers you can use:
+          [StarkScan](https://starkscan.co/),
+          [Voyager](https://voyager.online/txns),
+          [ViewBlock](https://viewblock.io/starknet)."
+      - type: accordion_item
+        label: I Want to Write my own Contract on Starknet. Where do I Start? Are there
+          any Available Toolkits?
+        body: >-
+          A good place to start is the [Hello Starknet
+          tutorial](https://docs.starknet.io/documentation/), which guides the
+          developer step by step through writing and deploying a simple
+          contract. The [Starknet
+          Playground](https://starknet.io/playground/?lesson=starknet_contract)
+          offers an environment for learning how to write Starknet contracts and
+          test them. 
+
+
+          You can become part of the developers’ community, and support it, by joining the [Starknet Discord](https://discord.com/invite/QypNMzkHbc) server.
+      - type: accordion_item
+        body: SHARP (shared prover) is a service for computing proofs of the correct
+          execution of Cairo programs. It can be used to prove the correct
+          execution of a particular Cairo program which enforces the validity of
+          Starknet state transitions – the Starknet OS (operating system).
+          Currently, Starknet uses SHARP alongside many other customers to
+          amortize proof costs. In the future, Starknet throughput may justify a
+          dedicated prover layer..
+        label: How is Starknet Related to SHARP?
+      - type: accordion_item
+        label: In Starknet, are STARK Proofs Zero-Knowledge Proofs?
+        body: >-
+          Currently not. STARKs are defined as Validity proofs, meaning they
+          prove computational integrity. With Validity proofs (STARKs included),
+          one party can prove to another that a certain computation was
+          performed correctly. Zero-Knowledge is an additional property
+          asserting that the prover does not have to reveal any information
+          included in the computation.
+
+
+          Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
+
+
+          Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+      - type: accordion_item
+        label: Can I Maintain Privacy on Starknet?
+        body: >-
+          Currently, Starknet transactions and their payloads are visible to the
+          network in the same way that they are visible on Ethereum.
+
+
+          It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+  - type: accordion
+    heading: "Cairo "
+    blocks:
+      - type: accordion_item
+        label: What is Cairo?
+        body: Cairo is an overloaded term which stands for three different things.
+          First, Cairo is a CPU architecture. Second, “Cairo” is shorthand for
+          CPU AIR which is an algebraic representation of this CPU architecture.
+          Lastly, Cairo is a Turing complete programming language that enables
+          blockchain developers to harness the power of STARKs. The first two
+          aspects, alongside the instruction set of the language, are outlined
+          in the [whitepaper](https://eprint.iacr.org/2021/1063). For the
+          language, see the [github
+          repo](https://github.com/starkware-libs/cairo).
+      - type: accordion_item
+        label: What is STARK?
+        body: STARK is a proof system. It uses cutting-edge cryptography to provide
+          polylogarithmic verification complexity and proof size, quasilinear
+          proof complexity, and minimal assumptions which are
+          post-quantum-secure. More information
+          [here](https://starkware.co/stark/).
+      - type: accordion_item
+        label: What Is the Difference between Starknet Contracts and Cairo Programs?
+        body: >-
+          [Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) is a
+          Turing-complete language designed for succinctly proving the correct
+          execution of Cairo programs. A Cairo program is stateless, meaning you
+          do not have native access to storage, other Cairo programs, or the L1
+          state (although you can access those, as explained below). 
+
+
+          Starknet contracts, on the other hand, live in the Starknet VM, which has a persistent state that smart contracts can access and modify. These smart contracts can store variables, communicate with other contracts, and send/receive messages to/from L1 ([read more](https://www.cairo-lang.org/docs/hello_starknet/index.html)).
+      - type: accordion_item
+        label: Do I Have to Write My Contract in Cairo to Deploy on Starknet?
+        body: >-
+          No. You have several options for writing a contract, each with its own
+          benefits. 
+
+
+          Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
