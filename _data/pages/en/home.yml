@@ -94,3 +94,10 @@ blocks:
         icon: /assets/deposit-withdraw.svg
   - type: community_events
   - type: ordered_block
+    blocks:
+      - type: ordered_item
+        title: test
+        body: t﻿est
+      - type: ordered_item
+        title: test
+        body: t﻿est
