@@ -176,6 +176,7 @@ function CustomHits() {
           let tags: string[] = [];
           if (hit.job.role) tags.push(hit.job.role);
           if (hit.job.type) tags.push(hit.job.type);
+          if (hit.job.location) tags.push(hit.job.location);
           return (
             <ListCard
               variant="job"
