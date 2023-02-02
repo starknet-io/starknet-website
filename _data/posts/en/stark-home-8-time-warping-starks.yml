@@ -1,0 +1,13 @@
+id: 6f1aaede-eb80-4cf5-9ba4-66b45c6702d9
+post_type: video
+title: STARK @ Home 8 - Time-Warping STARKs
+published_date: 2020-06-21T14:16:22.713Z
+time_to_consume: 90 min watch
+video_link: https://youtu.be/pSQTnD9opTc
+image: /assets/starkhome08.png
+category: stark-math
+topic:
+  - starknet
+short_desc: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
+  stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members Kinneret
+  Segal and Tom Brand.
