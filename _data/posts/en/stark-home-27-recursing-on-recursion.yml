@@ -1,0 +1,12 @@
+id: 247b09d9-8c93-43e6-9f31-0253d4ff777c
+post_type: video
+title: "STARK @ Home 27: Recursing on Recursion"
+published_date: 2022-11-16T16:30:42.081Z
+time_to_consume: 67 min watch
+video_link: https://youtu.be/1QFK2xoOacc
+image: /assets/starkhome27.jpg
+category: stark-math
+topic:
+  - starknet
+short_desc: "Recursive STARKs are now used daily to scale Ethereum, on StarkEx
+  and StarkNet. "
