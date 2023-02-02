@@ -11,7 +11,7 @@ blocks:
     heading: Common questions
     blocks:
       - type: accordion_item
-        label: What will the StarkNet tokens be used for?
+        label: What will the Starknet tokens be used for?
         body: The Starknet token will be used for paying transaction fees, participation
           in the Starknet protocol, and participation in governance. The
           rationale for each of these utilities is presented in our
@@ -19,14 +19,14 @@ blocks:
           proposal](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
           in the section titled “What will the tokens be used for?”
       - type: accordion_item
-        label: Where Can I Monitor Starknet’s Transactions?
+        label: Where can I monitor Starknet’s transactions?
         body: "There are several block explorers you can use:
           [StarkScan](https://starkscan.co/),
           [Voyager](https://voyager.online/txns),
           [ViewBlock](https://viewblock.io/starknet)."
       - type: accordion_item
-        label: I Want to Write my own Contract on Starknet. Where do I Start? Are there
-          any Available Toolkits?
+        label: I want to write my own contract on Starknet. Where do I start? Are there
+          any available toolkits?
         body: >-
           A good place to start is the [Hello Starknet
           tutorial](https://docs.starknet.io/documentation/), which guides the
@@ -46,9 +46,9 @@ blocks:
           Currently, Starknet uses SHARP alongside many other customers to
           amortize proof costs. In the future, Starknet throughput may justify a
           dedicated prover layer..
-        label: How is Starknet Related to SHARP?
+        label: How is Starknet related to SHARP?
       - type: accordion_item
-        label: In Starknet, are STARK Proofs Zero-Knowledge Proofs?
+        label: In Starknet, are STARK proofs zero-knowledge proofs?
         body: >-
           Currently not. STARKs are defined as Validity proofs, meaning they
           prove computational integrity. With Validity proofs (STARKs included),
@@ -63,7 +63,7 @@ blocks:
 
           Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
       - type: accordion_item
-        label: Can I Maintain Privacy on Starknet?
+        label: Can I maintain privacy on Starknet?
         body: >-
           Currently, Starknet transactions and their payloads are visible to the
           network in the same way that they are visible on Ethereum.
@@ -92,7 +92,7 @@ blocks:
           post-quantum-secure. More information
           [here](https://starkware.co/stark/).
       - type: accordion_item
-        label: What Is the Difference between Starknet Contracts and Cairo Programs?
+        label: What Is the difference between Starknet contracts and Cairo programs?
         body: >-
           [Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) is a
           Turing-complete language designed for succinctly proving the correct
@@ -103,7 +103,7 @@ blocks:
 
           Starknet contracts, on the other hand, live in the Starknet VM, which has a persistent state that smart contracts can access and modify. These smart contracts can store variables, communicate with other contracts, and send/receive messages to/from L1 ([read more](https://www.cairo-lang.org/docs/hello_starknet/index.html)).
       - type: accordion_item
-        label: Do I Have to Write My Contract in Cairo to Deploy on Starknet?
+        label: Do I have to write my contract in Cairo to deploy on Starknet?
         body: >-
           No. You have several options for writing a contract, each with its own
           benefits. 
