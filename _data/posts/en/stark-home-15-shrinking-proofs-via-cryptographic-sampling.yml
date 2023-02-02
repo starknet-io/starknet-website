@@ -1,0 +1,11 @@
+id: 09e62cc8-1d46-4c61-ba7e-d0dc4de540f3
+post_type: video
+title: "STARK @ Home 15: Shrinking Proofs via Cryptographic Sampling"
+published_date: 2020-11-15T15:33:16.223Z
+time_to_consume: 74 min watch
+video_link: https://youtu.be/5XCLfCkRmsM
+image: /assets/starkhome15.png
+category: stark-math
+topic:
+  - starknet
+short_desc: Shrinking proofs via cryptographic sampling
