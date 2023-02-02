@@ -1,5 +1,5 @@
 "use client";
-import { Box, Stack, StackDivider } from "@chakra-ui/react";
+import { Box, others, Stack, StackDivider } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "src/data/settings/main-menu";
 import { useLocale } from "./ClientLocaleProvider";
@@ -45,14 +45,23 @@ export const Footer = ({ mainMenu }: Props) => {
 
                           let link: string;
                           let isExternal = false;
-
+                          if (
+                            item.custom_icon ||
+                            item.custom_title === "Engineering posts" ||
+                            item.custom_title === "Community Calls" ||
+                            item.custom_title === "Stark math" ||
+                            item.custom_title === "Stark struck" ||
+                            item.custom_title === "Governance posts" ||
+                            item.custom_title === "Community & Events posts"
+                          )
+                            return;
                           if (item.custom_external_link) {
                             link = item.custom_external_link;
                             isExternal = true;
                           } else if (item.custom_internal_link) {
                             link = `/${locale}/${item.custom_internal_link.replace(
                               /(^\/|\/$)/g,
-                              "",
+                              ""
                             )}`;
                           } else if (item.page_data) {
                             link = item.page_data.link;
