@@ -33,6 +33,13 @@ blocks:
       Another innovative feature of StarkNet is its account abstraction, which allows users to link their assets (tokens, NFTs, identities) to a smart contract instead of a private key, providing a safer and more flexible solution. The ability to completely redefine how blockchain UI works with Account Contracts gives developers the freedom to create a more user-friendly experience.
 
 
+      [![Final video of fixing issues in your code in VS Code]
+
+      (https://img.youtube.com/vi/JLMbpiywVxQ/maxresdefault.jpg)]
+
+      (https://www.youtube.com/watch?v=JLMbpiywVxQ)
+
+
       StarkNet also offers a trustless bridging mechanism that relies on math instead of validators, eliminating the need for staking and slashing. This bridge allows for instant withdrawals and data transfer, making cross-chain apps easier to build.
 
 
