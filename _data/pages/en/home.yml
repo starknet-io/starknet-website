@@ -93,15 +93,30 @@ blocks:
         link_href: /ecosystem/bridges-onramps
         icon: /assets/deposit-withdraw.svg
   - type: community_events
-  - type: ordered_block
+  - type: flex_layout
+    heading_variant: md
     blocks:
       - type: basic_card
         size: sm
-        title: test
-        link_label: test
-        link_href: test
+        title: "View all questions "
+        link_href: /learn/frequently-asked-questions/
+        link_label: View
       - type: basic_card
         size: sm
-        title: test
-        link_label: test
-        link_href: test
+        title: What is STARK?
+        link_label: View
+        link_href: /learn/frequently-asked-questions/
+      - type: basic_card
+        size: sm
+        title: "What is Cairo? "
+        link_label: View
+        link_href: /learn/frequently-asked-questions/
+      - type: basic_card
+        size: sm
+        link_href: /learn/frequently-asked-questions/
+        link_label: View
+        title: "What is Starknet? "
+    base: 2
+    md: 4
+    lg: 4
+    heading: FAQs
