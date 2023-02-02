@@ -19,6 +19,7 @@ import { useHits, useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
+import { titleCase } from "src/utils/utils";
 
 export interface AutoProps {
   readonly params: {
@@ -99,6 +100,7 @@ function CustomRole() {
             variant={item.isRefined ? "filterActive" : "filter"}
             onClick={() => refine(item.value)}
             key={i}
+            justifyContent="flex-start"
           >
             {item.label}
           </Button>
@@ -120,16 +122,20 @@ function CustomType() {
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
-          <Button
-            variant={item.isRefined ? "filterActive" : "filter"}
-            size="sm"
-            onClick={() => refine(item.value)}
-            key={i}
-          >
-            {item.label}
-          </Button>
-        ))}
+        {items.map((item, i) => {
+          const label = titleCase(item.label);
+          return (
+            <Button
+              variant={item.isRefined ? "filterActive" : "filter"}
+              size="sm"
+              onClick={() => refine(item.value)}
+              key={i}
+              justifyContent="flex-start"
+            >
+              {label}
+            </Button>
+          );
+        })}
       </VStack>
     </Box>
   );
