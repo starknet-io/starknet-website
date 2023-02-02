@@ -289,76 +289,6 @@ const blocks: CmsFieldList["types"] = [
     ],
   },
   {
-    name: "link_list_item",
-    label: "Link list item",
-    widget: "object",
-    fields: [
-      {
-        name: "label",
-      },
-      {
-        name: "sub_label",
-      },
-      {
-        name: "href",
-      },
-      {
-        name: "is_external",
-        widget: "boolean",
-        required: false,
-        default: false,
-      },
-    ],
-  },
-  {
-    name: "accordion_item",
-    label: "Accordion item",
-    widget: "object",
-    fields: [
-      {
-        name: "label",
-        label: "Label",
-      },
-      {
-        name: "body",
-        label: "Content",
-        widget: "markdown",
-      },
-    ],
-  },
-  {
-    name: "ordered_item",
-    label: "Ordered item",
-    widget: "object",
-    fields: [
-      {
-        name: "title",
-        label: "Titles",
-      },
-      {
-        name: "body",
-        label: "Content",
-        widget: "markdown",
-      },
-    ],
-  },
-];
-
-const topLevelBlocks: CmsFieldList["types"] = [
-  {
-    name: "group",
-    label: "Block group",
-    widget: "object",
-    fields: [
-      {
-        name: "blocks",
-        label: "Blocks",
-        widget: "list",
-        types: blocks,
-      },
-    ],
-  },
-  {
     name: "link_list",
     label: "LinkList",
     widget: "object",
@@ -372,7 +302,23 @@ const topLevelBlocks: CmsFieldList["types"] = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        fields: [
+          {
+            name: "label",
+          },
+          {
+            name: "sub_label",
+          },
+          {
+            name: "href",
+          },
+          {
+            name: "is_external",
+            widget: "boolean",
+            required: false,
+            default: false,
+          },
+        ],
       },
     ],
   },
@@ -390,13 +336,49 @@ const topLevelBlocks: CmsFieldList["types"] = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        fields: [
+          {
+            name: "label",
+            label: "Label",
+          },
+          {
+            name: "body",
+            label: "Content",
+            widget: "markdown",
+          },
+        ],
       },
     ],
   },
   {
     name: "ordered_block",
     label: "Ordered Block",
+    widget: "object",
+    fields: [
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        fields: [
+          {
+            name: "title",
+            label: "Titles",
+          },
+          {
+            name: "body",
+            label: "Content",
+            widget: "markdown",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const topLevelBlocks: CmsFieldList["types"] = [
+  {
+    name: "group",
+    label: "Block group",
     widget: "object",
     fields: [
       {
