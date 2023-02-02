@@ -31,32 +31,29 @@ type RootProps = {
 
 const Root = ({ children, href }: RootProps) => {
   return (
-    <Flex>
-      <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
-        <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
-          <Box
-            p="0"
-            transition="all 0.2s"
+    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
+      <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
+        <Box
+          p="0"
+          transition="all 0.2s"
+          height="full"
+          borderRadius="8px"
+          bg="card-bg"
+          w="full"
+        >
+          <Flex
+            direction="column"
+            gap={{ base: "8", lg: "16" }}
+            // justify="space-between"
             height="full"
-            borderRadius="8px"
-            bg="card-bg"
-            maxW="318px"
-            w="full"
           >
-            <Flex
-              direction="column"
-              gap={{ base: "8", lg: "16" }}
-              // justify="space-between"
-              height="full"
-            >
-              <Flex gap="8" direction="column" flex={1}>
-                {children}
-              </Flex>
+            <Flex gap="8" direction="column" flex={1}>
+              {children}
             </Flex>
-          </Box>
+          </Flex>
         </Box>
-      </CardGradientBorder>
-    </Flex>
+      </Box>
+    </CardGradientBorder>
   );
 };
 
