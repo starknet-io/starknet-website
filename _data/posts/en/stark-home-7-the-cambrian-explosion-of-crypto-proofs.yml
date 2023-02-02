@@ -1,0 +1,16 @@
+id: 9de79804-ecf9-4198-a2b0-be73927e3505
+post_type: video
+title: "STARK @ Home 7: The Cambrian Explosion of Crypto Proofs"
+published_date: 2020-06-18T14:14:30.593Z
+time_to_consume: 85 min watch
+video_link: https://youtu.be/5y9LyTtUtwE
+image: /assets/starkhome07.png
+category: stark-math
+topic:
+  - starknet
+short_desc: We are in the midst of a Cambrian Explosion in the field of
+  cryptographic proofs of computational integrity (CI). While a couple of years
+  ago there were about 1–3 new systems a year, the rate has picked up so much
+  that today we are seeing this same amount monthly, if not weekly. In this
+  STARK @ Home talk, Eli Ben-Sasson suggests a method to better categorize and
+  understand the different systems.
