@@ -24,8 +24,7 @@ blocks:
       - type: link_list_item
         is_external: true
         label: "Community forum "
-        sub_label: Discuss technical opportunities, share ideas and collaborate on
-          initiatives.
+        sub_label: Share, discuss and collaborate on initiatives.
         href: https://community.starknet.io/
   - type: link_list
     heading: "Telegram groups "
