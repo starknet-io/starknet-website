@@ -24,26 +24,26 @@ blocks:
     blocks:
       - type: link_list_item
         is_external: true
-        label: "Starknet China "
+        label: Starknet China 🇨🇳
         sub_label: ""
         href: " https://t.me/starknet_zh"
       - type: link_list_item
         is_external: true
-        label: "Starknet Paris "
+        label: Starknet Paris 🇫🇷
         sub_label: ""
         href: https://t.me/+wsO2W_-K7HgzZjBk
       - type: link_list_item
         is_external: true
-        label: "Starknet India "
+        label: Starknet India 🇮🇳
         href: https://t.me/starknetindia
       - type: link_list_item
         is_external: true
-        label: Starknet Nairobi
+        label: "Starknet Nairobi 🇿🇦 "
         sub_label: ""
         href: https://t.me/starknetNairobi
       - type: link_list_item
         is_external: true
-        label: "Cairo Vietnam "
+        label: Cairo Vietnam 🇻🇳
         href: https://t.me/+dL-oY6-slrY3NDU1
     heading: "Telegram groups "
   - type: link_list
