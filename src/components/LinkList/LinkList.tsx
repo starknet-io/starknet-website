@@ -25,13 +25,12 @@ type RootProps = {
 
 const Root = (props: RootProps) => {
   return (
-    <Box>
+    <Box mb="80px">
       {props.heading && (
         <Heading
           variant="h3"
           color="heading-navy-fg"
           as="h2"
-          mt="60px"
           id={`toc-${slugify(props.heading)}`}
         >
           {props.heading}
