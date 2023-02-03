@@ -25,6 +25,8 @@ import { Page } from "src/data/pages";
 import { Post } from "src/data/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
+import { Box, Icon } from "@chakra-ui/react";
+import { HiPaperAirplane } from "react-icons/hi2";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -91,7 +93,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
 
               return (
                 <Fragment>
-                  <span className="aa-SourceHeaderTitle">Recent searches</span>
+                  <Box className="aa-SourceHeaderTitle">Recent searches</Box>
                 </Fragment>
               );
             },
@@ -119,7 +121,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
 
               return (
                 <Fragment>
-                  <span className="aa-SourceHeaderTitle">Popular searches</span>
+                  <Box className="aa-SourceHeaderTitle">Popular searches</Box>
                 </Fragment>
               );
             },
@@ -139,6 +141,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
       getSources={({ query }) => [
         {
           sourceId: "posts",
+
           getItems() {
             return getAlgoliaResults({
               searchClient: data.searchClient,
@@ -147,6 +150,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
                 {
                   params: {
                     facetFilters: [`locale:${locale}`],
+                    hitsPerPage: 5,
                   },
                   indexName: "web_posts_dev",
                   query,
@@ -174,6 +178,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
                 {
                   params: {
                     facetFilters: [`locale:${locale}`],
+                    hitsPerPage: 5,
                   },
                   indexName: "web_pages_dev",
                   query,
@@ -199,6 +204,10 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
               searchClient: data.searchClient,
               queries: [
                 {
+                  params: {
+                    hitsPerPage: 5,
+                  },
+
                   indexName: "starknet-docs-dev",
                   query,
                 },
