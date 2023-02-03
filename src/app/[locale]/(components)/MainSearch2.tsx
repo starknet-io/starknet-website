@@ -22,6 +22,8 @@ import { useLocale } from "./ClientLocaleProvider";
 import { ArgumentsType } from "vitest";
 import { Page } from "src/data/pages";
 import { Post } from "src/data/posts";
+import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
+import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -66,9 +68,6 @@ export interface Props {
   };
 }
 
-import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
-// import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
-
 export function MainSearch2({ env }: Props): JSX.Element | null {
   const data = useMemo(() => {
     const searchClient = algoliasearch(
@@ -100,48 +99,44 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
         };
       },
     });
+    const querySuggestionsPlugin = createQuerySuggestionsPlugin({
+      searchClient,
+      indexName: "web_query_suggestions_dev",
+      getSearchParams() {
+        return recentSearchesPlugin.data!.getAlgoliaSearchParams({
+          hitsPerPage: 5,
+        });
+      },
+      transformSource({ source }) {
+        return {
+          ...source,
+          templates: {
+            ...source.templates,
+            header({ state }) {
+              if (state.query) {
+                return <Fragment />;
+              }
 
-    return { searchClient, recentSearchesPlugin };
+              return (
+                <Fragment>
+                  <span className="aa-SourceHeaderTitle">Popular searches</span>
+                  <div className="aa-SourceHeaderLine" />
+                </Fragment>
+              );
+            },
+          },
+        };
+      },
+    });
+
+    return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
-
-  // const querySuggestionsPlugin = createQuerySuggestionsPlugin({
-  //   searchClient,
-  //   indexName: "instant_search_demo_query_suggestions",
-  //   getSearchParams() {
-  //     return recentSearchesPlugin.data!.getAlgoliaSearchParams({
-  //       hitsPerPage: 5,
-  //     });
-  //   },
-  //   transformSource({ source }) {
-  //     return {
-  //       ...source,
-  //       templates: {
-  //         ...source.templates,
-  //         header({ state }) {
-  //           if (state.query) {
-  //             return <Fragment/>;
-  //           }
-
-  //           return (
-  //             <Fragment>
-  //               <span className="aa-SourceHeaderTitle">Popular searches</span>
-  //               <div className="aa-SourceHeaderLine" />
-  //             </Fragment>
-  //           );
-  //         },
-  //       },
-  //     };
-  //   },
-  // });
 
   return (
     <Autocomplete<any>
       openOnFocus={true}
-      plugins={[
-        data.recentSearchesPlugin,
-        // data.querySuggestionsPlugin
-      ]}
+      plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
       getSources={({ query }) => [
         {
           sourceId: "posts",
