@@ -33,7 +33,7 @@ blocks:
         is_external: true
         label: Math for Cairo
         href: https://t.me/+M40ddcHHRDgzZjBk
-        sub_label: "Math nerds unite! "
+        sub_label: ""
       - type: link_list_item
         is_external: true
         label: "Starknet education "
