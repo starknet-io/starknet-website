@@ -6,4 +6,5 @@ title: "Account abstraction "
 author: StarkWare
 published_at: 2023-01-31T00:00:00+00:00
 difficulty: beginner
+course: cairo_workshops
 tags: "contracts, account abstraction "
