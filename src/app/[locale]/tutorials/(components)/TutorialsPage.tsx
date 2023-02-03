@@ -10,6 +10,7 @@ import {
   VStack,
   GridItem,
   HStack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -23,6 +24,7 @@ import { Heading } from "@ui/Typography/Heading";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
+import moment from "moment";
 export interface AutoProps {
   readonly params: {
     readonly locale: string;
@@ -198,8 +200,9 @@ function CustomHits() {
 
   return (
     <>
-      <Flex gap={4} direction="row" flex={1} flexWrap="wrap">
+      <SimpleGrid minChildWidth="280px" spacing="16px">
         {hits.map((hit, i) => {
+          const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
           // if (hit.difficulty) tags.push(hit.difficulty);
           // if (hit.type) tags.push(hit.type);
@@ -212,7 +215,7 @@ function CustomHits() {
                 <GridCard.Content
                   title={hit.title}
                   author={hit.author}
-                  date={hit.published_at}
+                  date={date}
                   difficulty={hit.difficulty}
                 />
               </GridCard.Body>
@@ -232,7 +235,7 @@ function CustomHits() {
             </GridCard.Root>
           );
         })}
-      </Flex>
+      </SimpleGrid>
       {/* {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>
             <ArticleCard.Image url={`/static/${hit.image}`} />

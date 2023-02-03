@@ -7,9 +7,14 @@ import {
   Flex,
   Box,
 } from "../../../libs/chakra-ui";
+import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
+import { Page as PageType } from "src/data/pages";
+import ReactMarkdown from "react-markdown";
+import { slugify } from "src/utils/utils";
+import { Heading } from "@ui/Typography/Heading";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -19,10 +24,10 @@ export interface Props {
 
 export default async function Page({
   params: { locale, slug },
-}: Props): Promise<JSX.Element> {
+}: // @ts-expect-error
+Props): JSX.Element {
   try {
     const data = await getPageBySlug(slug.join("/"), locale);
-    console.log(data);
     const date = data?.gitlog?.date;
 
     return (
@@ -69,7 +74,11 @@ export default async function Page({
             </Flex>
           }
           rightAside={
-            <>{data.template === "content" ? <Box>Hello</Box> : null}</>
+            <>
+              {data.template === "content" ? (
+                <TableOfContents page={data} />
+              ) : null}
+            </>
           }
         />
       </Box>
@@ -78,6 +87,76 @@ export default async function Page({
     console.log(err);
     notFound();
   }
+}
+
+function TableOfContents({ page }: { page: PageType }) {
+  return (
+    <Toc.Root spacing={3}>
+      <Heading
+        py="16px"
+        pl="16px"
+        fontSize="14px"
+        textTransform="uppercase"
+        as="h6"
+        variant="h6"
+        color="heading-navy-fg"
+      >
+        On this page
+      </Heading>
+      {page.blocks.map((block, i) => {
+        if (block.type === "page_header") return;
+        if ("title" in block) {
+          return (
+            <Toc.Item key={i}>
+              <a href={`#toc-${slugify(block.title)}`}>{block.title}</a>
+            </Toc.Item>
+          );
+        } else if ("heading" in block && block.heading != null) {
+          return (
+            <Toc.Item key={i}>
+              <a href={`#toc-${slugify(block.heading)}`}>{block.heading}</a>
+            </Toc.Item>
+          );
+        } else if (block.type === "markdown") {
+          return (
+            <ReactMarkdown
+              key={i}
+              allowedElements={["h2", "h3"]}
+              components={{
+                h2: (props) => {
+                  return (
+                    <Toc.Item>
+                      <a
+                        key={i}
+                        href={`#toc-${slugify(props.children.join(" "))}`}
+                      >
+                        {props.children}
+                      </a>
+                    </Toc.Item>
+                  );
+                },
+                h3: (props) => {
+                  console.log(props.children);
+                  return (
+                    <Toc.Item subItem>
+                      <a
+                        key={i}
+                        href={`#toc-${slugify(props.children.join(" "))}`}
+                      >
+                        {props.children}
+                      </a>
+                    </Toc.Item>
+                  );
+                },
+              }}
+            >
+              {block.body}
+            </ReactMarkdown>
+          );
+        }
+      })}
+    </Toc.Root>
+  );
 }
 
 //replace every h tag with a tag

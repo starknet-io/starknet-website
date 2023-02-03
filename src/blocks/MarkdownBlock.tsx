@@ -7,7 +7,10 @@ import {
   ListItem,
   Img,
   Box,
+  Spacer,
+  Link,
 } from "src/libs/chakra-ui";
+import { slugify } from "src/utils/utils";
 
 interface Props {
   readonly body: string;
@@ -20,16 +23,36 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
       <ReactMarkdown
         components={{
           h2: (props) => (
-            <Heading as="h2" color="heading-navy-fg" variant="h3" {...props} />
+            <>
+              {/* <Spacer
+                height="140px"
+                id={`toc-${slugify(props.children.join(" "))}`}
+              /> */}
+              <Heading
+                id={`toc-${slugify(props.children.join(" "))}`}
+                as="h2"
+                color="heading-navy-fg"
+                variant="h2"
+                fontSize="32px"
+                {...props}
+              />
+            </>
           ),
           h3: (props) => (
-            <Heading
-              color="heading-navy-fg"
-              pb={4}
-              as="h3"
-              variant="h3"
-              {...props}
-            />
+            <>
+              {/* <Spacer
+                height="140px"
+                id={`toc-${slugify(props.children.join(" "))}`}
+              /> */}
+              <Heading
+                color="heading-navy-fg"
+                id={`toc-${slugify(props.children.join(" "))}`}
+                pb={4}
+                as="h3"
+                variant="h3"
+                {...props}
+              />
+            </>
           ),
           h4: (props) => (
             <Heading color="heading-navy-fg" as="h4" variant="h4" {...props} />
@@ -53,6 +76,7 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
           li: (props) => <ListItem lineHeight="32px" {...props} />,
           img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
+          a: (props) => <Link variant="standard" {...props} />,
         }}
       >
         {body}

@@ -31,6 +31,7 @@ export default function Navbar({ mainMenu }: Props) {
                 label={mainMenuItem.title}
               >
                 <Flex
+                  // bg="red"
                   maxW="900px"
                   mx="auto"
                   gap="48px"
@@ -41,8 +42,11 @@ export default function Navbar({ mainMenu }: Props) {
                     mainMenuItem.columns?.map((column, columnIndex) => (
                       <Box key={columnIndex}>
                         {column.blocks?.map((block, blockIndex) => (
-                          <Box mb={22} key={blockIndex}>
-                            <NavbarHeading>{block.title}</NavbarHeading>
+                          <Box mb="24px" key={blockIndex}>
+                            {block.title && (
+                              <NavbarHeading>{block.title}</NavbarHeading>
+                            )}
+
                             {block.items?.map((item, itemIndex) => {
                               let title =
                                 item.custom_title ||
@@ -60,7 +64,7 @@ export default function Navbar({ mainMenu }: Props) {
                               } else if (item.custom_internal_link) {
                                 link = `/${locale}/${item.custom_internal_link.replace(
                                   /(^\/|\/$)/g,
-                                  "",
+                                  ""
                                 )}`;
                               } else if (item.page_data) {
                                 link = item.page_data.link;
@@ -76,7 +80,10 @@ export default function Navbar({ mainMenu }: Props) {
                                   key={itemIndex}
                                   href={link}
                                 >
-                                  {title} {hasIcon && item.custom_icon}
+                                  {title}
+                                  {/* {hasIcon && (
+                                    <Icon as={item.custom_icon } />
+                                  )} */}
                                 </NavBarLink>
                               );
                             })}
@@ -101,9 +108,12 @@ export default function Navbar({ mainMenu }: Props) {
                         <Box key={columnIndex}>
                           {column.blocks?.map((block, blockIndex) => (
                             <>
-                              <NavbarHeading key={blockIndex} pt="24px">
-                                {block.title}
-                              </NavbarHeading>
+                              {block.title && (
+                                <NavbarHeading key={blockIndex} pt="24px">
+                                  {block.title}
+                                </NavbarHeading>
+                              )}
+
                               {block.items?.map((item, itemIndex) => {
                                 let title =
                                   item.custom_title ||
@@ -119,7 +129,7 @@ export default function Navbar({ mainMenu }: Props) {
                                 } else if (item.custom_internal_link) {
                                   link = `/${locale}/${item.custom_internal_link.replace(
                                     /(^\/|\/$)/g,
-                                    "",
+                                    ""
                                   )}`;
                                 } else if (item.page_data) {
                                   link = item.page_data.link;

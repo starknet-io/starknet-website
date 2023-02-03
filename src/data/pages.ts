@@ -112,6 +112,23 @@ export interface HeroBlock {
     | "build"
     | "community";
 }
+export interface HomeHeroBlock {
+  readonly type: "home_hero";
+}
+export interface LinkListBlock {
+  readonly type: "link_list";
+  readonly heading?: string;
+  readonly blocks: readonly LinkListItem[];
+}
+export interface AccordionBlock {
+  readonly type: "accordion";
+  readonly heading?: string;
+  readonly blocks: readonly AccordionItem[];
+}
+export interface OrderedBlock {
+  readonly type: "ordered_block";
+  readonly blocks: readonly OrderedItem[];
+}
 
 export type Block =
   | MarkdownBlock
@@ -127,10 +144,11 @@ export type Block =
   | ImageIconLinkCardBlock
   | GetInvolvedBlock
   | HeroBlock
-  | LinkListItem
-  | AccordionItem
-  | OrderedItem
-  | PageHeaderBlock;
+  | HomeHeroBlock
+  | LinkListBlock
+  | PageHeaderBlock
+  | AccordionBlock
+  | OrderedBlock;
 
 export interface Container {
   readonly type: "container";
@@ -151,29 +169,8 @@ export interface GroupBlock {
   readonly type: "group";
   readonly blocks: readonly Block[];
 }
-export interface LinkListBlock {
-  readonly type: "link_list";
-  readonly heading?: string;
-  readonly blocks: readonly Block[];
-}
-export interface AccordionBlock {
-  readonly type: "accordion";
-  readonly heading?: string;
-  readonly blocks: readonly Block[];
-}
-export interface OrderedBlock {
-  readonly type: "ordered_block";
-  readonly blocks: readonly Block[];
-}
 
-export type TopLevelBlock =
-  | Block
-  | FlexLayoutBlock
-  | GroupBlock
-  | Container
-  | LinkListBlock
-  | AccordionBlock
-  | OrderedBlock;
+export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
 
 export interface Page extends Meta {
   readonly id: string;

@@ -24,7 +24,7 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
-    offset={[0, 20]}
+    offset={[0, 12]}
   >
     {({ isOpen }) => (
       <>
@@ -33,7 +33,7 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
             color={isOpen ? "button-nav-active-fg" : "button-nav-fg"}
             bg={isOpen ? "button-nav-hover-bg" : "button-nav-bg"}
             size="sm"
-            pl="16px "
+            pl="16px"
             pr="8px"
             height="40px"
             variant="link"
@@ -53,8 +53,8 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
         <PopoverContent
           bg="navbar-dropdown-bg"
           border={0}
-          px="56px"
-          py="48px"
+          px="24px"
+          pt="24px"
           maxH="493px"
           width="auto"
 

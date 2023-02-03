@@ -1,0 +1,13 @@
+id: b8a32a4f-3042-4c96-840d-42317cbfb1fd
+post_type: video
+title: "STARK @ Home 25: Warp Away! From Solidity to Cairo"
+published_date: 2022-03-10T16:28:19.240Z
+time_to_consume: 69 min watch
+video_link: https://youtu.be/9zc804NZ0Hs
+image: /assets/starkhome25.png
+category: stark-math
+topic:
+  - starknet
+short_desc: >
+  Starknet is up and running on Mainnet. But is it EVM compatible? Can you
+  deploy your Solidity contract on Starknet? The answer is Yes, with Warp.

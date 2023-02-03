@@ -39,7 +39,7 @@ export const LanguageSwitcherDropdown = ({
     placement="bottom"
     defaultIsOpen={false}
     gutter={12}
-    offset={[0, 30]}
+    offset={[0, 24]}
   >
     {({ isOpen }) => (
       <>
@@ -49,6 +49,7 @@ export const LanguageSwitcherDropdown = ({
             leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
             variant="link"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
+            textTransform="uppercase"
           >
             {selectedLocale}
           </Button>

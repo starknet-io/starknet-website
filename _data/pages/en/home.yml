@@ -4,6 +4,7 @@ template: landing
 breadcrumbs: false
 page_last_updated: false
 blocks:
+  - type: home_hero
   - type: group
     blocks:
       - type: get_involved_card
@@ -19,7 +20,103 @@ blocks:
         description: "Starknet is a decentralised layer-2 network that enables Ethereum
           to scale securely and enables dapps to achieve unlimited scale for
           transactions and computation. "
-        link_label: Learn more
-        link_href: /what-is-starknet/
-        image: /assets/what-is-starknet-small.png
+        link_label: What is Starknet
+        link_href: /learn/what-is-starknet/
+        image: /assets/illustration-how-it-works.png
         orientation: left
+      - type: large_card
+        orientation: right
+        image: /assets/illustration-scaling.png
+        title: "How does Starknet scale Ethereum? "
+        link_label: How does it work
+        link_href: /learn/what-is-starknet/
+        description: Starknet uses math and cryptography to securely scale Ethereum. It
+          is known as a Validity-rollup (or ZK-rollup); meaning it ”rolls” many
+          transactions up to send to Ethereum as a single transaction.
+  - type: flex_layout
+    heading_variant: md
+    base: 1
+    md: 2
+    lg: 3
+    heading: "Start building "
+    blocks:
+      - type: image_icon_link_card
+        color: blue
+        title: "Developer documentation "
+        description: Read the official Starknet documentation to build your first
+          contracts and dapps.
+        link_label: "View docs "
+        link_href: https://docs.starknet.io/
+        icon: /assets/docs.svg
+      - type: image_icon_link_card
+        color: blue
+        title: "Developer tutorials "
+        description: Learn from Starknet's community of developers and technologists.
+        link_label: "View tutorials "
+        link_href: /tutorials/
+        icon: /assets/tutorials.svg
+      - type: image_icon_link_card
+        color: blue
+        title: Tools & resources
+        description: "Find libraries, editor plugins and tooling to help you start
+          building. "
+        link_label: View resources
+        link_href: /developers/tools-resources
+        icon: /assets/1.svg
+  - type: flex_layout
+    heading_variant: md
+    base: 1
+    md: 2
+    lg: 3
+    heading: "Start playing "
+    blocks:
+      - type: image_icon_link_card
+        color: orange
+        title: Discover dapps
+        description: Explore dapps in Starknet ecosystem – from Defi to NFTs to gaming.
+        link_label: Explore
+        link_href: /ecosystem/dapps
+        icon: /assets/dapps.svg
+      - type: image_icon_link_card
+        color: blue
+        title: "Find a wallet "
+        description: Learn about wallets on Starknet and discover the options available.
+        link_label: "View wallets "
+        link_href: /ecosystem/wallets
+        icon: /assets/wallet.svg
+      - type: image_icon_link_card
+        color: blue
+        title: Deposit & withdraw funds
+        description: Learn how to deposit and withdraw funds for use in the Starknet
+          ecosystem.
+        link_label: "View options "
+        link_href: /ecosystem/bridges-onramps
+        icon: /assets/deposit-withdraw.svg
+  - type: community_events
+  - type: flex_layout
+    heading_variant: md
+    blocks:
+      - type: basic_card
+        size: sm
+        title: "View all questions "
+        link_href: /learn/frequently-asked-questions/
+        link_label: View
+      - type: basic_card
+        size: sm
+        title: What is STARK?
+        link_label: View
+        link_href: /learn/frequently-asked-questions/
+      - type: basic_card
+        size: sm
+        title: "What is Cairo? "
+        link_label: View
+        link_href: /learn/frequently-asked-questions/
+      - type: basic_card
+        size: sm
+        link_href: /learn/frequently-asked-questions/
+        link_label: View
+        title: "What is Starknet? "
+    base: 2
+    md: 4
+    lg: 4
+    heading: FAQs

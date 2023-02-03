@@ -1,0 +1,12 @@
+id: 5f8dafd1-d07f-40ad-bce5-228fe1cb0122
+post_type: video
+title: "STARK @ Home 6: Deep FRI Dive"
+published_date: 2020-05-14T14:13:03.275Z
+time_to_consume: 76 min watch
+video_link: https://youtu.be/CBw5d520vqk
+image: /assets/starkhome06.png
+category: stark-math
+topic:
+  - starknet
+short_desc: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and a
+  cool trick at the end).

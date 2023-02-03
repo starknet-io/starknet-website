@@ -25,14 +25,7 @@ const Root = ({ children, href }: RootProps) => {
   return (
     <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
-        <Box
-          p="0"
-          height="full"
-          borderRadius="8px"
-          bg="card-bg"
-          maxW={{ base: "100%", lg: "315px" }}
-          minW={{ base: "100%", lg: "315px" }}
-        >
+        <Box p="0" height="full" borderRadius="8px" bg="card-bg">
           <Flex
             direction="column"
             gap={{ base: "8", lg: "16" }}
@@ -61,7 +54,7 @@ const Image = ({ url, imageAlt }: ImageProps) => {
         src={url}
         alt={imageAlt}
         width="full"
-        height={{ base: "14rem", lg: "10rem" }}
+        height={{ base: "16rem", md: "12rem", lg: "10rem" }}
         objectFit="cover"
         borderTopRadius={8}
       />

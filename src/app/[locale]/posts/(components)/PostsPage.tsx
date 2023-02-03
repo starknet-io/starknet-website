@@ -15,6 +15,7 @@ import {
   useBreakpointValue,
   GridItem,
 } from "@chakra-ui/react";
+import moment from "moment";
 
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import { useMemo } from "react";
@@ -243,9 +244,11 @@ function CustomHits() {
   console.log(hits);
   return (
     <>
-      <Flex pt={2} gap={4} direction="row" flex={1} flexWrap="wrap">
+      <SimpleGrid minChildWidth="250px" spacing="16px">
         {hits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
+
+          const date = moment(hit.published_date).format("MMM DD, YYYY");
 
           return (
             <ArticleCard.Root
@@ -266,13 +269,13 @@ function CustomHits() {
               </ArticleCard.Body>
               <ArticleCard.Footer
                 postType={hit.post_type}
-                publishedAt={hit.published_date}
+                publishedAt={date}
                 timeToConsume={hit?.time_to_consume}
               />
             </ArticleCard.Root>
           );
         })}
-      </Flex>
+      </SimpleGrid>
 
       {/* <HStack mt="24">
         <Divider />

@@ -2,47 +2,12 @@ items:
   - title: Learn
     columns:
       - blocks:
-          - title: START HERE
-            items:
-              - page: /learn/
-                custom_title: Learning hub
-          - title: THE BASICS
-            items:
+          - items:
               - page: 93b845d7-5662-4cd4-8c13-3730440880c0
-              - page: 26b19750-c03e-4c67-b742-15736fa3ad72
-              - page: 7c686e43-afaa-4b10-91a3-64214651bc54
-              - page: 0bef9a7b-1de6-4419-aa04-5cfa2bb5ba68
-              - page: 55498400-e80e-42df-9e7f-d9a470e242ce
-              - page: 267c3eab-eed0-4631-a402-c98a39bc25aa
-              - page: 10e9c4de-5c35-451c-b932-fb4657db68e6
-      - blocks:
-          - title: HOW DOES STARKNET WORK?
-            items:
-              - page: 69026d1e-3e92-477f-9410-b2b0c79a4237
-              - page: 94a917bf-dc9b-4b4d-b890-67d09f8e4c16
-              - page: 902bbe96-f923-4ca1-8b4d-e8caf8f5cd5e
-              - page: f27bfed6-86f4-4410-94c3-515928b5af60
-              - page: b7e5af4c-1ecf-4ef2-bf86-51a8850c2afa
-              - page: ee4399d7-b3fe-4a9f-bcbb-d38c81ba5ee8
-              - page: 859ca393-8ae8-4768-8bf9-d6f204b080d2
-      - blocks:
-          - title: USING STARKNET
-            items:
-              - page: a994f81b-1d6f-44ed-8c3a-cab4ef869020
-              - page: 5da42b21-bac0-4b75-9744-5202a8b33a3c
-              - page: 069eb0c5-3893-466e-8025-7a6bdf87d60b
-              - page: cef51ff2-ebf1-425c-83de-5b7d3f93e415
-              - page: b0089b77-a97a-4120-843b-cbff304758ee
-              - page: da0ce2db-0c09-444b-8ad8-73ee8a971646
-      - blocks:
-          - title: COMMON QUESTIONS
-            items:
               - page: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
               - custom_title: FAQ
                 page: b5689d3a-348b-4ccb-b787-520b64c55e41
-          - title: OTHER
-            items:
-              - page: 630a7343-d7f9-43ac-b34b-24219789ea1d
+
   - title: Developers
     columns:
       - blocks:
@@ -54,8 +19,6 @@ items:
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
-              - custom_title: Starknet Playground
-                custom_external_link: https://starknet.io/playground
               - custom_title: Engineering blog
                 custom_internal_link: /posts/engineering
   - title: Ecosystem
@@ -80,9 +43,10 @@ items:
                 custom_title: Events
               - custom_internal_link: /jobs
                 custom_title: Jobs
-              - page: 859ca393-8ae8-4768-8bf9-d6f204b080d2
               - custom_title: Community forum
                 custom_external_link: https://community.starknet.io/
+              - page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
+                custom_title: Online communities
       - blocks:
           - title: BLOG & MEDIA
             items:

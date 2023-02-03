@@ -17,6 +17,7 @@ import {
   LinkProps,
   Avatar,
 } from "../../libs/chakra-ui";
+import { slugify } from "src/utils/utils";
 
 type RootProps = {
   heading?: string;
@@ -26,7 +27,12 @@ const Root = (props: RootProps) => {
   return (
     <Box>
       {props.heading && (
-        <Heading variant="h3" color="heading-navy-fg" as="h2">
+        <Heading
+          variant="h3"
+          color="heading-navy-fg"
+          as="h2"
+          id={`toc-${slugify(props.heading)}`}
+        >
           {props.heading}
         </Heading>
       )}
