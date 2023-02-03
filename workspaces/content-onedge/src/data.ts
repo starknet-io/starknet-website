@@ -73,7 +73,7 @@ export async function fileToPost(
     topic: data.topic,
     short_desc: data.short_desc,
     image: data.image,
-    blocks: data.blocks,
+    blocks: data.blocks ?? [],
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath: path.join("_data", resourceName, locale, filename),
@@ -133,6 +133,7 @@ export async function fileToPage(
 
   return {
     ...data,
+    blocks: data.block ?? [],
     id: safeID,
     parent_page: data.parent_page ? slugify(data.parent_page) : undefined,
     slug,
