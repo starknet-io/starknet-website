@@ -24,11 +24,6 @@ blocks:
     blocks:
       - type: link_list_item
         is_external: true
-        label: Starknet Nairobi
-        sub_label: ""
-        href: https://t.me/starknetNairobi
-      - type: link_list_item
-        is_external: true
         label: "Starknet China "
         sub_label: ""
         href: " https://t.me/starknet_zh"
@@ -41,6 +36,11 @@ blocks:
         is_external: true
         label: "Starknet India "
         href: https://t.me/starknetindia
+      - type: link_list_item
+        is_external: true
+        label: Starknet Nairobi
+        sub_label: ""
+        href: https://t.me/starknetNairobi
       - type: link_list_item
         is_external: true
         label: "Cairo Vietnam "
@@ -90,7 +90,7 @@ blocks:
         label: Starknet Turkey 🇹🇷
         href: https://twitter.com/StarkNetTurkiye
       - type: link_list_item
-        is_external: false
+        is_external: true
         label: Starknet Poland 🇵🇱
         href: https://twitter.com/StarknetPolska
       - type: link_list_item
