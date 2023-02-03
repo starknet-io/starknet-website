@@ -32,8 +32,7 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
                 id={`toc-${slugify(props.children.join(" "))}`}
                 as="h2"
                 color="heading-navy-fg"
-                variant="h2"
-                fontSize="32px"
+                variant="h3"
                 {...props}
               />
             </>
