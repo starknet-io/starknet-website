@@ -91,8 +91,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
 
               return (
                 <Fragment>
-                  <span className="aa-SourceHeaderTitle">Your searches</span>
-                  <div className="aa-SourceHeaderLine" />
+                  <span className="aa-SourceHeaderTitle">Recent searches</span>
                 </Fragment>
               );
             },
@@ -105,7 +104,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
       indexName: "web_query_suggestions_dev",
       getSearchParams() {
         return recentSearchesPlugin.data!.getAlgoliaSearchParams({
-          hitsPerPage: 5,
+          hitsPerPage: 3,
         });
       },
       transformSource({ source }) {
@@ -121,7 +120,6 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
               return (
                 <Fragment>
                   <span className="aa-SourceHeaderTitle">Popular searches</span>
-                  <div className="aa-SourceHeaderLine" />
                 </Fragment>
               );
             },
@@ -159,8 +157,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
             header() {
               return (
                 <Fragment>
-                  <span className="aa-SourceHeaderTitle">posts</span>
-                  <div className="aa-SourceHeaderLine" />
+                  <span className="aa-SourceHeaderTitle">Posts</span>
                 </Fragment>
               );
             },
@@ -187,8 +184,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
             header() {
               return (
                 <Fragment>
-                  <span className="aa-SourceHeaderTitle">pages</span>
-                  <div className="aa-SourceHeaderLine" />
+                  <span className="aa-SourceHeaderTitle">Pages</span>
                 </Fragment>
               );
             },
@@ -213,8 +209,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
               console.log(data);
               return (
                 <Fragment>
-                  <span className="aa-SourceHeaderTitle">docs</span>
-                  <div className="aa-SourceHeaderLine" />
+                  <span className="aa-SourceHeaderTitle">Documentation</span>
                 </Fragment>
               );
             },
