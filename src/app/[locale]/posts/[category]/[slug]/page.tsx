@@ -68,7 +68,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post?.gitlog?.date
+          post?.gitlog?.date,
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">
