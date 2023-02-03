@@ -1,0 +1,49 @@
+id: 3a9c13ee-9077-41d5-a2bf-e0c40bede3ce
+title: link-testing-page
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: basic_card
+    size: sm
+    title: Hello
+    link:
+      custom_title: Custom title for card
+      page: c1050a37-5af0-4277-aabd-b681ffe2cda5
+  - type: get_involved_card
+    title: Test get involved card
+    description: "test description "
+    link:
+      custom_title: Get involved title
+      custom_external_link: ""
+      custom_internal_link: /tutorials/cairo_101
+  - type: large_card
+    title: Large card title
+    description: This is the description
+    image: /assets/illustration-scaling.png
+    orientation: left
+    link:
+      custom_title: Large card link title
+      page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+  - type: icon_link_card
+    color: blue
+    title: Icon link title
+    link:
+      custom_title: Icon link link title
+      page: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
+    icon: /assets/7.svg
+  - type: image_icon_link_card
+    color: yellow
+    title: Image icon link card Title
+    description: This is the description
+    link:
+      custom_title: Custom link sasda
+      custom_external_link: www.google.com
+    icon: /assets/illustration-unlocking.jpg
+  - type: link_list
+    heading: Link List heading
+    blocks:
+      - is_external: true
+        label: Needs to use a link component here
+        sub_label: sdfsf sd
+        href: www.google.com
