@@ -117,7 +117,7 @@ export async function fileToPage(
 
   return {
     ...data,
-    blocks: data.block ?? [],
+    blocks: data.blocks ?? [],
     id: safeID,
     parent_page: data.parent_page ? slugify(data.parent_page) : undefined,
     slug,
