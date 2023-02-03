@@ -10,6 +10,7 @@ export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
   readonly sourceFilepath: string;
   readonly locale: string;
+  readonly objectID: string;
 }
 
 export interface Post extends Meta {
@@ -74,6 +75,7 @@ export async function fileToPost(
     image: data.image,
     blocks: data.blocks,
     locale,
+    objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath: path.join("_data", resourceName, locale, filename),
     gitlog: log.latest
       ? {
@@ -135,6 +137,7 @@ export async function fileToPage(
     parent_page: data.parent_page ? slugify(data.parent_page) : undefined,
     slug,
     locale,
+    objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: log.latest
       ? {
@@ -261,6 +264,7 @@ export async function getSimpleData<T = {}>(
       filenameMap.set(`${locale.code}:${filename}`, {
         ...data,
         locale: locale.code,
+        objectID: `${resourceName}:${locale.code}:${filename}`,
         sourceFilepath,
       });
     }
