@@ -19,7 +19,7 @@ try {
   const posts = await getPosts();
   const pages = await getPages();
 
-  updateBlocks(pages, posts)
+  updateBlocks(pages, posts);
 
   const resources = [
     posts,

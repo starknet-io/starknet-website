@@ -25,19 +25,19 @@ export interface Post extends Meta {
   readonly time_to_consume: string;
   readonly published_date: string;
   readonly video_link: string;
-  readonly blocks: readonly any[];
+  blocks: readonly any[];
 }
 
 export async function fileToPost(
   locale: string,
-  filename: string
+  filename: string,
 ): Promise<Post> {
   const resourceName = "posts";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename
+    filename,
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -45,17 +45,16 @@ export async function fileToPost(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData
+    () => defaultLocaleData,
   );
 
   const sourceFilepath =
     defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-  const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
 
   return {
-    id: safeID,
+    id: data.id,
     slug,
     title: data.title,
     category: data.category,
@@ -83,7 +82,7 @@ export interface Page extends Meta {
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
   readonly pageLastUpdated: boolean;
-  readonly blocks?: any;
+  blocks?: any;
 
   link?: string;
   breadcrumbs_data?: Page[];
@@ -91,14 +90,14 @@ export interface Page extends Meta {
 
 export async function fileToPage(
   locale: string,
-  filename: string
+  filename: string,
 ): Promise<Page> {
   const resourceName = "pages";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename
+    filename,
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -106,20 +105,19 @@ export async function fileToPage(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData
+    () => defaultLocaleData,
   );
 
   const sourceFilepath =
     defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-  const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
 
   return {
     ...data,
     blocks: data.blocks ?? [],
-    id: safeID,
-    parent_page: data.parent_page ? slugify(data.parent_page) : undefined,
+    id: data.id,
+    parent_page: data.parent_page,
     slug,
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
@@ -155,8 +153,20 @@ export async function getPages(): Promise<PagesData> {
       const breadcrumbs = [];
       let currentPage = data;
       while (currentPage.parent_page != null) {
-        currentPage = idMap.get(`${locale.code}:${currentPage.parent_page}`)!;
+        if (currentPage.parent_page == null) break;
+        if (currentPage.parent_page === "") break;
 
+        const key = `${locale.code}:${currentPage.parent_page}`;
+
+        if (!idMap.has(key)) {
+          console.log(currentPage.parent_page);
+          console.log("currentPage.parent_page not found!");
+          console.log(currentPage);
+
+          break;
+        }
+
+        currentPage = idMap.get(key)!;
         breadcrumbs.unshift(currentPage);
       }
 
@@ -216,7 +226,7 @@ interface SimpleData<T> {
 }
 
 export async function getSimpleData<T = {}>(
-  resourceName: string
+  resourceName: string,
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
   const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
@@ -227,7 +237,7 @@ export async function getSimpleData<T = {}>(
         "_data",
         resourceName,
         defaultLocale,
-        filename
+        filename,
       );
       const filepath = path.join("_data", resourceName, locale.code, filename);
 
@@ -235,7 +245,7 @@ export async function getSimpleData<T = {}>(
 
       const data = await getFirst(
         () => yaml(filepath),
-        () => defaultLocaleData
+        () => defaultLocaleData,
       );
 
       const sourceFilepath =
@@ -257,20 +267,26 @@ export function updateBlocks(pages: PagesData, posts: PostsData) {
   const resources = [pages, posts] as const;
 
   function handleBlocks(locale: string, blocks: any) {
-    for (const block of blocks) {
+    const newBlocks = blocks.map((block: any) => {
+      const newBlock = { ...block };
+
       if (block.blocks) {
-        handleBlocks(locale, block.blocks);
+        newBlock.blocks = handleBlocks(locale, block.blocks);
       }
 
       if (block.link) {
-        handleLink(locale, block.link, pages, posts)
+        newBlock.link = handleLink(locale, block.link, pages, posts);
       }
-    }
+
+      return newBlock;
+    });
+
+    return newBlocks;
   }
 
   for (const { filenameMap } of resources) {
     for (const [, data] of filenameMap) {
-      handleBlocks(data.locale, data.blocks);
+      data.blocks = handleBlocks(data.locale, data.blocks);
     }
   }
 }
@@ -279,14 +295,16 @@ export function handleLink(
   locale: string,
   link: any,
   pages: PagesData,
-  posts: PostsData
-) {
+  posts: PostsData,
+): any {
+  const newLink = { ...link };
+
   if (link.page != null) {
-    const key = `${locale}:${slugify(link.page)}`;
+    const key = `${locale}:${link.page}`;
     if (pages.idMap.has(key)) {
       const data = pages.idMap.get(key)!;
 
-      link.page_data = {
+      newLink.page_data = {
         id: data.id,
         slug: data.slug,
         title: data.title,
@@ -299,11 +317,11 @@ export function handleLink(
   }
 
   if (link.post != null) {
-    const key = `${locale}:${slugify(link.post)}`;
+    const key = `${locale}:${link.post}`;
     if (posts.idMap.has(key)) {
       const data = posts.idMap.get(key)!;
 
-      link.post_data = {
+      newLink.post_data = {
         id: data.id,
         slug: data.slug,
         title: data.title,
@@ -316,4 +334,6 @@ export function handleLink(
       };
     }
   }
+
+  return newLink;
 }

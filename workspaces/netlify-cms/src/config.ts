@@ -48,8 +48,7 @@ const linkFields: CmsField[] = [
     value_field: "id",
     display_fields: ["title"],
   },
-]
-
+];
 
 const blocks: CmsFieldList["types"] = [
   {
@@ -185,9 +184,9 @@ const blocks: CmsFieldList["types"] = [
         name: "description",
       },
       {
-        name: 'link',
-        widget: 'object',
-        fields: linkFields
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "link_label",
@@ -206,9 +205,9 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: 'link',
-        widget: 'object',
-        fields: linkFields
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "link_label",
@@ -234,9 +233,9 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: 'link',
-        widget: 'object',
-        fields: linkFields
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "link_label",
@@ -269,9 +268,9 @@ const blocks: CmsFieldList["types"] = [
         name: "description",
       },
       {
-        name: 'link',
-        widget: 'object',
-        fields: linkFields
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "link_label",
@@ -302,9 +301,9 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: 'link',
-        widget: 'object',
-        fields: linkFields
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "link_label",
