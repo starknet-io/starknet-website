@@ -13,6 +13,8 @@ blocks:
           ecosystem.  "
         link_label: Get involved
         link_href: /community/
+        link:
+          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
   - type: group
     blocks:
       - type: large_card
