@@ -21,7 +21,7 @@ export interface Block {
   readonly items?: BlockItem[] | null;
 }
 
-export interface BlockItem {
+export interface LinkData {
   readonly custom_title?: string;
   readonly custom_icon?: string;
   readonly custom_internal_link?: string;
@@ -31,6 +31,10 @@ export interface BlockItem {
   readonly page_data?: Omit<Page, "blocks">;
   readonly post?: string;
   readonly post_data?: Omit<Post, "blocks" | "body">;
+}
+
+export interface BlockItem extends LinkData {
+  readonly hide_from_footer?: boolean;
 }
 
 export async function getMainMenu(locale: string): Promise<MainMenu> {

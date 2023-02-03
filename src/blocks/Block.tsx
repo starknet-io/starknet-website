@@ -198,14 +198,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
   } else if (block.type === "home_hero") {
     return <HomepageHero />;
   } else if (block.type === "get_involved_card") {
-    return (
-      <CommunityCard
-        linkHref={block.link_href}
-        linkLabel={block.link_label}
-        title={block.title}
-        description={block.description}
-      />
-    );
+    return <CommunityCard {...block} locale={locale} />;
   } else if (block.type === "dapps") {
     return (
       <BlockDapps

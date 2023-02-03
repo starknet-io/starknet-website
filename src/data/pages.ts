@@ -2,6 +2,7 @@ import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
 import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
+import { LinkData } from "./settings/main-menu";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -61,6 +62,7 @@ export interface GetInvolvedBlock {
   readonly type: "get_involved_card";
   readonly title: string;
   readonly description: string;
+  readonly link: LinkData;
   readonly link_label: string;
   readonly link_href: string;
 }

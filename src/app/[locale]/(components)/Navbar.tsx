@@ -11,6 +11,7 @@ import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { Box, Flex, Icon, IconButton } from "@chakra-ui/react";
 import { SiDiscord, SiYoutube, SiTwitter, SiGithub } from "react-icons/si";
+import { getComputedLinkData } from "src/utils/utils";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -48,40 +49,23 @@ export default function Navbar({ mainMenu }: Props) {
                             )}
 
                             {block.items?.map((item, itemIndex) => {
-                              let title =
-                                item.custom_title ||
-                                item.page_data?.title ||
-                                item.post_data?.title;
+                              const { href, label } = getComputedLinkData(
+                                locale,
+                                item,
+                              );
 
-                              let link: string;
-                              let isExternal = false;
-                              let hasIcon = false;
-
-                              if (item.custom_external_link) {
-                                link = item.custom_external_link;
-                                isExternal = true;
-                                if (item.custom_icon) hasIcon = true;
-                              } else if (item.custom_internal_link) {
-                                link = `/${locale}/${item.custom_internal_link.replace(
-                                  /(^\/|\/$)/g,
-                                  "",
-                                )}`;
-                              } else if (item.page_data) {
-                                link = item.page_data.link;
-                              } else if (item.post_data) {
-                                link = `/${locale}/posts/${item.post_data.category}/${item.post_data.slug}`;
-                              } else {
-                                return <span key={itemIndex}>{title}</span>;
+                              if (!href) {
+                                return <span key={itemIndex}>{label}</span>;
                               }
 
                               return (
                                 <NavBarLink
-                                  isExternal={isExternal}
+                                  isExternal={item.custom_external_link != null}
                                   key={itemIndex}
-                                  href={link}
+                                  href={href}
                                 >
-                                  {title}
-                                  {/* {hasIcon && (
+                                  {label}
+                                  {/* {item.custom_icon && (
                                     <Icon as={item.custom_icon } />
                                   )} */}
                                 </NavBarLink>
@@ -115,37 +99,27 @@ export default function Navbar({ mainMenu }: Props) {
                               )}
 
                               {block.items?.map((item, itemIndex) => {
-                                let title =
-                                  item.custom_title ||
-                                  item.page_data?.title ||
-                                  item.post_data?.title;
+                                const { href, label } = getComputedLinkData(
+                                  locale,
+                                  item,
+                                );
 
-                                let link: string;
-                                let isExternal = false;
-
-                                if (item.custom_external_link) {
-                                  link = item.custom_external_link;
-                                  isExternal = true;
-                                } else if (item.custom_internal_link) {
-                                  link = `/${locale}/${item.custom_internal_link.replace(
-                                    /(^\/|\/$)/g,
-                                    "",
-                                  )}`;
-                                } else if (item.page_data) {
-                                  link = item.page_data.link;
-                                } else if (item.post_data) {
-                                  link = `/${locale}/posts/${item.post_data.category}/${item.post_data.slug}`;
-                                } else {
-                                  return <span key={itemIndex}>{title}</span>;
+                                if (!href) {
+                                  return <span key={itemIndex}>{label}</span>;
                                 }
 
                                 return (
                                   <NavBarLink
+                                    isExternal={
+                                      item.custom_external_link != null
+                                    }
                                     key={itemIndex}
-                                    href={link}
-                                    isExternal={isExternal}
+                                    href={href}
                                   >
-                                    {title}
+                                    {label}
+                                    {/* {item.custom_icon && (
+                                      <Icon as={item.custom_icon } />
+                                    )} */}
                                   </NavBarLink>
                                 );
                               })}

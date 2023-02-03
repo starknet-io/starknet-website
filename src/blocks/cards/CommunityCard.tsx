@@ -14,23 +14,17 @@ import NextLink from "next/link";
 import { Heading } from "@ui/Typography/Heading";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CardLink } from "./CardLink";
+import { GetInvolvedBlock } from "src/data/pages";
+import { getComputedLinkData } from "src/utils/utils";
 
-type Props = {
-  linkLabel: string;
-  linkHref: string;
-  title: string;
-  description: string;
-};
+type Props = GetInvolvedBlock & { locale: string };
 
-export const CommunityCard = ({
-  linkHref = "/community/",
-  linkLabel = "Get involved",
-  description,
-  title,
-}: Props) => {
+export const CommunityCard = ({ link, description, title, locale }: Props) => {
+  const { href, label } = getComputedLinkData(locale, link);
+
   return (
     <Container maxW="1104px">
-      <CardLink href={linkHref}>
+      <CardLink href={href}>
         <CardGradientBorder
           borderRadius={{ base: "24px", lg: "104px" }}
           padding="0"
@@ -78,9 +72,9 @@ export const CommunityCard = ({
                       fontSize="16px"
                       as={NextLink}
                       variant="card"
-                      href={linkHref}
+                      href={href}
                     >
-                      {linkLabel} &rarr;
+                      {label} &rarr;
                     </Link>
                   </Text>
                 </Box>

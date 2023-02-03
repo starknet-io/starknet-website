@@ -1306,7 +1306,13 @@ export const config: CmsConfig = {
                           label: "Menu Items",
                           name: "items",
                           widget: "list",
-                          fields: linkFields,
+                          fields: [
+                            ...linkFields,
+                            {
+                              name: "hide_from_footer",
+                              widget: "boolean",
+                            },
+                          ],
                         },
                       ],
                     },
