@@ -48,6 +48,7 @@ export default async function Page({
       <PageLayout
         breadcrumbs={
           <Breadcrumb separator="->">
+            <title>{post.title} - Starknet</title>
             <BreadcrumbItem>
               <BreadcrumbLink fontSize="sm" href="#">
                 <BreadcrumbLink fontSize="sm" href="# " noOfLines={1}>
@@ -69,7 +70,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post && post.gitlog && post.gitlog.date
+          post?.gitlog?.date
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">

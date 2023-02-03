@@ -32,6 +32,8 @@ Props): JSX.Element {
 
     return (
       <Box>
+        <title>{data.title} - Starknet</title>
+
         <PageLayout
           breadcrumbs={
             <>

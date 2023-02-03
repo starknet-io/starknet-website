@@ -60,6 +60,7 @@ export function PostsPage({
 
   return (
     <Box pt="18" minH="100vh">
+      <title>Blog - Starknet</title>
       <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
         <Configure
           hitsPerPage={50}

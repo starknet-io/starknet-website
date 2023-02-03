@@ -103,6 +103,7 @@ function CustomDifficulty() {
           let label = titleCase(item.label);
           return (
             <Button
+              justifyContent="flex-start"
               size="sm"
               variant={item.isRefined ? "filterActive" : "filter"}
               onClick={() => refine(item.value)}
@@ -137,6 +138,7 @@ function CustomType() {
               variant={item.isRefined ? "filterActive" : "filter"}
               onClick={() => refine(item.value)}
               key={i}
+              justifyContent="flex-start"
             >
               {label}
             </Button>
@@ -167,6 +169,40 @@ function CustomCourse() {
               variant={item.isRefined ? "filterActive" : "filter"}
               onClick={() => refine(item.value)}
               key={i}
+              justifyContent="flex-start"
+            >
+              {label}
+            </Button>
+          );
+        })}
+      </VStack>
+    </Box>
+  );
+}
+
+function CustomTags() {
+  const { items, refine } = useRefinementList({
+    attribute: "tags",
+    sortBy: ["name:asc"],
+  });
+  console.log("tags", items);
+
+  return (
+    <Box mt={8} maxHeight="300px" overflowY="auto">
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+        Tags
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+              justifyContent="flex-start"
             >
               {label}
             </Button>

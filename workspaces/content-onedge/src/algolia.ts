@@ -33,13 +33,21 @@ try {
 
     const index = client.initIndex(indexName);
 
-    await index.clearObjects().wait();
+    const objectIDsSet = new Set(objects.map((a) => a.objectID));
+    const deleteObjectIDs: string[] = [];
 
-    await index
-      .saveObjects(objects, {
-        autoGenerateObjectIDIfNotExist: true,
-      })
-      .wait();
+    await index.browseObjects({
+      batch: (batch) => {
+        for (const obj of batch) {
+          if (!objectIDsSet.has(obj.objectID)) {
+            deleteObjectIDs.push(obj.objectID);
+          }
+        }
+      },
+    });
+
+    await index.deleteObjects(deleteObjectIDs).wait();
+    await index.saveObjects(objects).wait();
   }
 } catch (err) {
   console.error(err);

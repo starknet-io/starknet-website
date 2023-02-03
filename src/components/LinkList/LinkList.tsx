@@ -25,7 +25,7 @@ type RootProps = {
 
 const Root = (props: RootProps) => {
   return (
-    <Box>
+    <Box mb="80px">
       {props.heading && (
         <Heading
           variant="h3"

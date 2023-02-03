@@ -1,4 +1,4 @@
-import { Box, Link, LinkOverlay, Stack } from "src/libs/chakra-ui";
+import { Box, GridItem, Link, LinkOverlay, Stack } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
@@ -19,8 +19,8 @@ export const BasicCard = ({
   size = "md",
 }: Props) => {
   return (
-    <CardLink href={linkHref}>
-      <CardGradientBorder>
+    <CardLink href={linkHref} height="100%">
+      <CardGradientBorder height="100%" padding="0">
         <Box
           mx="auto"
           maxW="5xl"
@@ -30,7 +30,8 @@ export const BasicCard = ({
           pl={{ base: size === "sm" ? "32px" : "48px" }}
           pr={{ base: size === "sm" ? "32px" : "48px" }}
           pb={{ base: size === "sm" ? "48px" : "48px" }}
-          pt={{ base: size === "sm" ? "120px" : "80px" }}
+          // pt={{ base: size === "sm" ? "120px" : "80px" }}
+          minHeight={"259px"}
           display="flex"
         >
           <Stack

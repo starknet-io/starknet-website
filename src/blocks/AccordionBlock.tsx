@@ -10,7 +10,7 @@ type Props = {
 
 export const AccordionRoot = ({ heading, children }: Props) => {
   return (
-    <Box>
+    <Box mb="80px">
       <Heading as="h2" variant="h3" color="heading-navy-fg">
         {heading}
       </Heading>
