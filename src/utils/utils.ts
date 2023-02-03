@@ -13,3 +13,31 @@ export function slugify(value: string): string {
     .replace(/[^a-z0-9 ]/g, "") // remove all chars not letters, numbers and spaces (to be replaced)
     .replace(/\s+/g, "-"); // separator
 }
+
+export function youtubeVideoIdFromURL(url: string): string | undefined {
+  const obj = new URL(url);
+
+  if (obj.hostname === "www.youtube.com") {
+    return obj.searchParams.get("v") ?? undefined;
+  } else if (obj.hostname === "youtu.be") {
+    return obj.pathname.slice(1);
+  }
+}
+
+if (import.meta.vitest) {
+  const { it, expect } = import.meta.vitest;
+
+  it("youtubeVideoIdFromURL", () => {
+    expect(
+      youtubeVideoIdFromURL(
+        "https://www.youtube.com/watch?v=-5mPHUVCkZM&ab_channel=ReportingfromUkraine",
+      ),
+    ).toBe("-5mPHUVCkZM");
+    expect(
+      youtubeVideoIdFromURL("https://www.youtube.com/watch?v=-5mPHUVCkZM"),
+    ).toBe("-5mPHUVCkZM");
+    expect(youtubeVideoIdFromURL("https://youtu.be/-5mPHUVCkZM")).toBe(
+      "-5mPHUVCkZM",
+    );
+  });
+}
