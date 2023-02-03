@@ -1,10 +1,9 @@
 import * as path from "node:path";
 import { defaultLocale, locales } from "./locales";
 import { getFirst, slugify, yaml } from "./utils";
-import { DefaultLogFields, simpleGit } from "simple-git";
+import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
-
-const git = simpleGit();
+import { gitlog } from "./git";
 
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
@@ -52,11 +51,6 @@ export async function fileToPost(
   const sourceFilepath =
     defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-  const log = await git.log({
-    file: sourceFilepath,
-    maxCount: 1,
-  });
-
   const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
 
@@ -77,12 +71,7 @@ export async function fileToPost(
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath: path.join("_data", resourceName, locale, filename),
-    gitlog: log.latest
-      ? {
-          ...log.latest,
-          body: "",
-        }
-      : null,
+    gitlog: await gitlog(sourceFilepath),
   };
 }
 
@@ -123,11 +112,6 @@ export async function fileToPage(
   const sourceFilepath =
     defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-  const log = await git.log({
-    file: sourceFilepath,
-    maxCount: 1,
-  });
-
   const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
 
@@ -140,12 +124,7 @@ export async function fileToPage(
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
-    gitlog: log.latest
-      ? {
-          ...log.latest,
-          body: "",
-        }
-      : null,
+    gitlog: await gitlog(sourceFilepath),
   };
 }
 
