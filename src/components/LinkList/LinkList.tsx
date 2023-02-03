@@ -31,6 +31,7 @@ const Root = (props: RootProps) => {
           variant="h3"
           color="heading-navy-fg"
           as="h2"
+          mt="60px"
           id={`toc-${slugify(props.heading)}`}
         >
           {props.heading}
