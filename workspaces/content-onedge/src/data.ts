@@ -30,14 +30,14 @@ export interface Post extends Meta {
 
 export async function fileToPost(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Post> {
   const resourceName = "posts";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename,
+    filename
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -45,7 +45,7 @@ export async function fileToPost(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const sourceFilepath =
@@ -91,14 +91,14 @@ export interface Page extends Meta {
 
 export async function fileToPage(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Page> {
   const resourceName = "pages";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename,
+    filename
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -106,7 +106,7 @@ export async function fileToPage(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const sourceFilepath =
@@ -216,7 +216,7 @@ interface SimpleData<T> {
 }
 
 export async function getSimpleData<T = {}>(
-  resourceName: string,
+  resourceName: string
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
   const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
@@ -227,7 +227,7 @@ export async function getSimpleData<T = {}>(
         "_data",
         resourceName,
         defaultLocale,
-        filename,
+        filename
       );
       const filepath = path.join("_data", resourceName, locale.code, filename);
 
@@ -235,7 +235,7 @@ export async function getSimpleData<T = {}>(
 
       const data = await getFirst(
         () => yaml(filepath),
-        () => defaultLocaleData,
+        () => defaultLocaleData
       );
 
       const sourceFilepath =
@@ -251,4 +251,69 @@ export async function getSimpleData<T = {}>(
   }
 
   return { filenameMap, filenames, resourceName };
+}
+
+export function updateBlocks(pages: PagesData, posts: PostsData) {
+  const resources = [pages, posts] as const;
+
+  function handleBlocks(locale: string, blocks: any) {
+    for (const block of blocks) {
+      if (block.blocks) {
+        handleBlocks(locale, block.blocks);
+      }
+
+      if (block.link) {
+        handleLink(locale, block.link, pages, posts)
+      }
+    }
+  }
+
+  for (const { filenameMap } of resources) {
+    for (const [, data] of filenameMap) {
+      handleBlocks(data.locale, data.blocks);
+    }
+  }
+}
+
+export function handleLink(
+  locale: string,
+  link: any,
+  pages: PagesData,
+  posts: PostsData
+) {
+  if (link.page != null) {
+    const key = `${locale}:${slugify(link.page)}`;
+    if (pages.idMap.has(key)) {
+      const data = pages.idMap.get(key)!;
+
+      link.page_data = {
+        id: data.id,
+        slug: data.slug,
+        title: data.title,
+        template: data.template,
+        breadcrumbs: data.breadcrumbs,
+        pageLastUpdated: data.pageLastUpdated,
+        link: data.link,
+      };
+    }
+  }
+
+  if (link.post != null) {
+    const key = `${locale}:${slugify(link.post)}`;
+    if (posts.idMap.has(key)) {
+      const data = posts.idMap.get(key)!;
+
+      link.post_data = {
+        id: data.id,
+        slug: data.slug,
+        title: data.title,
+        image: data.image,
+        category: data.category,
+        topic: data.topic,
+        short_desc: data.short_desc,
+        locale: data.locale,
+        sourceFilepath: data.sourceFilepath,
+      };
+    }
+  }
 }

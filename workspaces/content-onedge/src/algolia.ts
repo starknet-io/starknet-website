@@ -5,7 +5,7 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
 
-import { getPages, getPosts, getSimpleData } from "./data";
+import { getPages, getPosts, getSimpleData, updateBlocks } from "./data";
 
 const dotenvFiles = [".env.local", ".env"];
 
@@ -16,10 +16,14 @@ try {
     process.env.ALGOLIA_APP_ID!,
     process.env.ALGOLIA_WRITE_API_KEY!,
   );
+  const posts = await getPosts();
+  const pages = await getPages();
+
+  updateBlocks(pages, posts)
 
   const resources = [
-    await getPosts(),
-    await getPages(),
+    posts,
+    pages,
     await getSimpleData("jobs"),
     await getSimpleData("events"),
     await getSimpleData("tutorials"),
