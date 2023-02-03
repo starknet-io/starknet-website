@@ -142,6 +142,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
           getItems() {
             return getAlgoliaResults({
               searchClient: data.searchClient,
+
               queries: [
                 {
                   params: {
