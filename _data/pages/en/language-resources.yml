@@ -15,7 +15,7 @@ blocks:
 
       \
 
-      These are places where you can discover and discuss all things Starknet with other community members in your native language.\
+      These are places where you can discover and discuss all things Starknet with other community members in your native language and/or based on where you live in the world. \
 
       \
 
@@ -23,17 +23,81 @@ blocks:
   - type: link_list
     blocks:
       - type: link_list_item
-        is_external: false
-        label: test
-        sub_label: test
-        href: test
+        is_external: true
+        label: Starknet Nairobi
+        sub_label: ""
+        href: https://t.me/starknetNairobi
+      - type: link_list_item
+        is_external: true
+        label: "Starknet China "
+        sub_label: ""
+        href: " https://t.me/starknet_zh"
+      - type: link_list_item
+        is_external: true
+        label: "Starknet Paris "
+        sub_label: ""
+        href: https://t.me/+wsO2W_-K7HgzZjBk
+      - type: link_list_item
+        is_external: true
+        label: "Starknet India "
+        href: https://t.me/starknetindia
+      - type: link_list_item
+        is_external: true
+        label: "Cairo Vietnam "
+        href: https://t.me/+dL-oY6-slrY3NDU1
+    heading: "Telegram groups "
+  - type: link_list
+    heading: "Twitter profiles "
+    blocks:
+      - type: link_list_item
+        is_external: true
+        label: Starknet Vietnam 🇻🇳
+        href: https://twitter.com/starknetvietnam
+      - type: link_list_item
+        is_external: true
+        label: Starknet Africa 🇿🇦
+        href: https://twitter.com/StarkNetAfrica
+      - type: link_list_item
+        is_external: true
+        label: Starknet Thailand 🇹🇭
+        href: https://twitter.com/ThStarknet
+      - type: link_list_item
+        is_external: true
+        label: Starknet Singapore 🇸🇬
+        href: https://twitter.com/StarkNetSG
+      - type: link_list_item
+        is_external: true
+        label: Starknet India 🇮🇳
+        href: https://twitter.com/StarkNetIndia
+      - type: link_list_item
+        is_external: true
+        label: Starknet China 🇨🇳
+        href: https://twitter.com/StarkNet_ZH
+      - type: link_list_item
+        is_external: true
+        label: Starknet France 🇫🇷
+        href: https://twitter.com/StarknetFr
+      - type: link_list_item
+        is_external: true
+        label: Starknet Indonesia 🇮🇩
+        href: https://twitter.com/StarkNetID
+      - type: link_list_item
+        is_external: true
+        label: Starknet Spain 🇪🇸
+        href: https://twitter.com/StarkNetEs
+      - type: link_list_item
+        is_external: true
+        label: Starknet Turkey 🇹🇷
+        href: https://twitter.com/StarkNetTurkiye
       - type: link_list_item
         is_external: false
-        label: test
-        sub_label: test
-        href: test
+        label: Starknet Poland 🇵🇱
+        href: https://twitter.com/StarknetPolska
       - type: link_list_item
-        is_external: false
-        label: test
-        sub_label: test
-        href: test
+        is_external: true
+        label: Starknet Portugal 🇵🇹
+        href: https://twitter.com/StarknetPt
+      - type: link_list_item
+        is_external: true
+        label: Starknet Germany 🇩🇪
+        href: https://twitter.com/SN_DACH
