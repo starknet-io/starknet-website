@@ -1,6 +1,6 @@
 import { TutorialsPage, Props } from "../(components)/TutorialsPage";
 
-export default function Page(props: Props) {
+export default function Page(props: Omit<Props, "env">) {
   return (
     <>
       <TutorialsPage
