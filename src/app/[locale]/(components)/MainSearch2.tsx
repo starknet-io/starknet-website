@@ -136,6 +136,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
 
   return (
     <Autocomplete<any>
+      detachedMediaQuery=""
       openOnFocus={true}
       plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
       getSources={({ query }) => [
