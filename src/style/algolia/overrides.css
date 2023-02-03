@@ -1,0 +1,9 @@
+:root {
+  /* --aa-icon-size: 16px; */
+}
+
+.aa-Panel {
+  font-size: 14px;
+
+    /* font-size: var(--aa-font-size) ; */
+}

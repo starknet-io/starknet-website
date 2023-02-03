@@ -17,7 +17,8 @@ import React, {
 } from "react";
 import { createRoot, Root } from "react-dom/client";
 
-import "@algolia/autocomplete-theme-classic/dist/theme.css";
+import "../../../style/algolia/theme.css";
+import "../../../style/algolia/overrides.css";
 import { useLocale } from "./ClientLocaleProvider";
 import { ArgumentsType } from "vitest";
 import { Page } from "src/data/pages";
