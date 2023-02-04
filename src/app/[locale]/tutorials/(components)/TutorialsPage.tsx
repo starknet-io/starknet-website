@@ -25,13 +25,12 @@ import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
-export interface AutoProps {
-  readonly params: {
-    readonly locale: string;
-  };
-}
+import { useRouter } from "next/navigation";
 
-export interface Props extends AutoProps {
+export interface Props extends LocaleProps {
+  readonly params: LocaleParams & {
+    readonly course?: string;
+  };
   readonly env: {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
@@ -48,7 +47,10 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
       <InstantSearch searchClient={searchClient} indexName="web_tutorials_dev">
         <Configure
           hitsPerPage={40}
-          facetsRefinements={{ locale: [params.locale] }}
+          facetsRefinements={{
+            locale: [params.locale],
+            course: params.course != null ? [params.course] : [],
+          }}
         />
 
         <PageLayout
@@ -72,7 +74,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomType />
-              <CustomCourse />
+              <CustomCourse params={params} />
               <CustomDifficulty />
             </Box>
           }
@@ -149,25 +151,55 @@ function CustomType() {
   );
 }
 
-function CustomCourse() {
-  const { items, refine } = useRefinementList({
-    attribute: "course",
-    sortBy: ["name:asc"],
-  });
-  console.log("type", items);
+const courses = [
+  {
+    label: "Bytesized series",
+    value: "bytesized_series",
+  },
+  {
+    label: "Starknet edu series",
+    value: "starknet_edu",
+  },
+  {
+    label: "Cairo 101",
+    value: "cairo_101",
+  },
+  {
+    label: "Cairo workshops",
+    value: "cairo_workshops",
+  },
+  {
+    label: "Hackathon Feb 22",
+    value: "hackathon_feb_22",
+  },
+  {
+    label: "Hackathon Oct 22",
+    value: "hackathon_oct_22",
+  },
+];
+
+function CustomCourse({ params }: Pick<Props, "params">) {
+  const router = useRouter();
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Courses / series
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => {
+        {courses.map((item, i) => {
           let label = titleCase(item.label);
           return (
             <Button
               size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
+              variant={item.value === params.course ? "filterActive" : "filter"}
+              onClick={() => {
+                if (item.value === params.course) {
+                  router.replace(`/${params.locale}/tutorials`);
+                } else {
+                  router.replace(`/${params.locale}/tutorials/${item.value}`);
+                }
+              }}
               key={i}
               justifyContent="flex-start"
             >

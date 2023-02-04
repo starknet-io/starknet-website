@@ -6,4 +6,5 @@ title: "Setting up a local environment for testing "
 author: StarkWare
 published_at: 2023-01-24T00:00:00+00:00
 difficulty: beginner
+course: cairo_workshops
 tags: "testing "

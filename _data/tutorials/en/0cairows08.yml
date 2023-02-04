@@ -6,4 +6,5 @@ title: Setting up a dev environment with Docker
 author: StarkWare
 published_at: 2022-11-22T00:00:00+00:00
 difficulty: beginner
+course: cairo_workshops
 tags: "cairo, testing "

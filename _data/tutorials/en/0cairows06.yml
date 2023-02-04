@@ -6,4 +6,5 @@ title: Running a Starknet indexer
 author: StarkWare
 published_at: 2022-10-11T00:00:00+00:00
 difficulty: intermediate
+course: cairo_workshops
 tags: indexers

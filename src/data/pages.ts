@@ -2,6 +2,7 @@ import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
 import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
+import { LinkData } from "./settings/main-menu";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -35,24 +36,21 @@ export interface WalletsBlock {
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
+
   readonly size?: "sm" | "md";
 }
 export interface IconLinkCardBlock {
   readonly type: "icon_link_card";
   readonly title: string;
-
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
   readonly icon: string;
   readonly color?: "orange" | "blue" | "green" | "yellow";
 }
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
   readonly icon: string;
   readonly description: string;
   readonly color?: "orange" | "blue" | "green" | "yellow";
@@ -61,6 +59,7 @@ export interface GetInvolvedBlock {
   readonly type: "get_involved_card";
   readonly title: string;
   readonly description: string;
+  readonly link: LinkData;
   readonly link_label: string;
   readonly link_href: string;
 }
@@ -68,8 +67,7 @@ export interface GetInvolvedBlock {
 export interface LargeCardBlock {
   readonly type: "large_card";
   readonly title: string;
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
   readonly size?: "sm" | "md";
   readonly description: string;
   readonly image: string;

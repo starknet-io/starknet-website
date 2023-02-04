@@ -17,30 +17,23 @@ import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CardLink } from "./CardLink";
+import { getComputedLinkData } from "src/utils/utils";
+import { ImageIconLinkCardBlock } from "src/data/pages";
+import { CustomLink } from "@ui/Link/CustomLink";
 
-type Props = {
-  image?: string;
-  imageAlt?: string;
-  title: string;
-  description: string;
-  linkLabel: string;
-  linkHref: string;
-  icon: string;
-  color?: "orange" | "blue" | "green" | "yellow";
-};
+type Props = ImageIconLinkCardBlock & { locale: string };
 
 export const ImageIconCard = ({
-  image = "/assets/cards/linklist.svg",
-  imageAlt,
   title,
   description,
-  linkLabel,
-  linkHref,
+  link,
   icon,
   color,
+  locale,
 }: Props) => {
+  const { href, label } = getComputedLinkData(locale, link);
   return (
-    <CardLink href={linkHref}>
+    <CardLink href={href}>
       <CardGradientBorder padding="0">
         <Card
           maxW="sm"
@@ -65,8 +58,8 @@ export const ImageIconCard = ({
               transform="translate(-50%, -50%)"
             />
             <Image
-              src={image}
-              alt={imageAlt}
+              src="/assets/cards/linklist.svg"
+              alt={title}
               borderRadius="24px 24px 0 0"
               height="263px"
             />
@@ -83,9 +76,9 @@ export const ImageIconCard = ({
 
             <CardFooter padding="0 40px 32px 32px">
               <ButtonGroup spacing="2">
-                <Link as={NextLink} variant="card" href={linkHref}>
-                  {linkLabel} &rarr;
-                </Link>
+                <CustomLink variant="card" href={href}>
+                  {label} &rarr;
+                </CustomLink>
               </ButtonGroup>
             </CardFooter>
           </Box>

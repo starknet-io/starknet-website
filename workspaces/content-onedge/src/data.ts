@@ -1,10 +1,9 @@
 import * as path from "node:path";
 import { defaultLocale, locales } from "./locales";
 import { getFirst, slugify, yaml } from "./utils";
-import { DefaultLogFields, simpleGit } from "simple-git";
+import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
-
-const git = simpleGit();
+import { gitlog } from "./git";
 
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
@@ -26,7 +25,7 @@ export interface Post extends Meta {
   readonly time_to_consume: string;
   readonly published_date: string;
   readonly video_link: string;
-  readonly blocks: readonly any[];
+  blocks: readonly any[];
 }
 
 export async function fileToPost(
@@ -52,16 +51,10 @@ export async function fileToPost(
   const sourceFilepath =
     defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-  const log = await git.log({
-    file: sourceFilepath,
-    maxCount: 1,
-  });
-
-  const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
 
   return {
-    id: safeID,
+    id: data.id,
     slug,
     title: data.title,
     category: data.category,
@@ -73,16 +66,11 @@ export async function fileToPost(
     topic: data.topic,
     short_desc: data.short_desc,
     image: data.image,
-    blocks: data.blocks,
+    blocks: data.blocks ?? [],
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath: path.join("_data", resourceName, locale, filename),
-    gitlog: log.latest
-      ? {
-          ...log.latest,
-          body: "",
-        }
-      : null,
+    gitlog: await gitlog(sourceFilepath),
   };
 }
 
@@ -94,7 +82,7 @@ export interface Page extends Meta {
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
   readonly pageLastUpdated: boolean;
-  readonly blocks?: any;
+  blocks?: any;
 
   link?: string;
   breadcrumbs_data?: Page[];
@@ -123,28 +111,18 @@ export async function fileToPage(
   const sourceFilepath =
     defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-  const log = await git.log({
-    file: sourceFilepath,
-    maxCount: 1,
-  });
-
-  const safeID = slugify(data.id);
   const slug = slugify(defaultLocaleData.title);
 
   return {
     ...data,
-    id: safeID,
-    parent_page: data.parent_page ? slugify(data.parent_page) : undefined,
+    blocks: data.blocks ?? [],
+    id: data.id,
+    parent_page: data.parent_page,
     slug,
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
-    gitlog: log.latest
-      ? {
-          ...log.latest,
-          body: "",
-        }
-      : null,
+    gitlog: await gitlog(sourceFilepath),
   };
 }
 
@@ -175,8 +153,20 @@ export async function getPages(): Promise<PagesData> {
       const breadcrumbs = [];
       let currentPage = data;
       while (currentPage.parent_page != null) {
-        currentPage = idMap.get(`${locale.code}:${currentPage.parent_page}`)!;
+        if (currentPage.parent_page == null) break;
+        if (currentPage.parent_page === "") break;
 
+        const key = `${locale.code}:${currentPage.parent_page}`;
+
+        if (!idMap.has(key)) {
+          console.log(currentPage.parent_page);
+          console.log("currentPage.parent_page not found!");
+          console.log(currentPage);
+
+          break;
+        }
+
+        currentPage = idMap.get(key)!;
         breadcrumbs.unshift(currentPage);
       }
 
@@ -271,4 +261,79 @@ export async function getSimpleData<T = {}>(
   }
 
   return { filenameMap, filenames, resourceName };
+}
+
+export function updateBlocks(pages: PagesData, posts: PostsData) {
+  const resources = [pages, posts] as const;
+
+  function handleBlocks(locale: string, blocks: any) {
+    const newBlocks = blocks.map((block: any) => {
+      const newBlock = { ...block };
+
+      if (block.blocks) {
+        newBlock.blocks = handleBlocks(locale, block.blocks);
+      }
+
+      if (block.link) {
+        newBlock.link = handleLink(locale, block.link, pages, posts);
+      }
+
+      return newBlock;
+    });
+
+    return newBlocks;
+  }
+
+  for (const { filenameMap } of resources) {
+    for (const [, data] of filenameMap) {
+      data.blocks = handleBlocks(data.locale, data.blocks);
+    }
+  }
+}
+
+export function handleLink(
+  locale: string,
+  link: any,
+  pages: PagesData,
+  posts: PostsData,
+): any {
+  const newLink = { ...link };
+
+  if (link.page != null) {
+    const key = `${locale}:${link.page}`;
+    if (pages.idMap.has(key)) {
+      const data = pages.idMap.get(key)!;
+
+      newLink.page_data = {
+        id: data.id,
+        slug: data.slug,
+        title: data.title,
+        template: data.template,
+        breadcrumbs: data.breadcrumbs,
+        pageLastUpdated: data.pageLastUpdated,
+        link: data.link,
+      };
+    }
+  }
+
+  if (link.post != null) {
+    const key = `${locale}:${link.post}`;
+    if (posts.idMap.has(key)) {
+      const data = posts.idMap.get(key)!;
+
+      newLink.post_data = {
+        id: data.id,
+        slug: data.slug,
+        title: data.title,
+        image: data.image,
+        category: data.category,
+        topic: data.topic,
+        short_desc: data.short_desc,
+        locale: data.locale,
+        sourceFilepath: data.sourceFilepath,
+      };
+    }
+  }
+
+  return newLink;
 }

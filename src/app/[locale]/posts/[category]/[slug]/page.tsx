@@ -22,6 +22,7 @@ import {
   HStack,
   Icon,
 } from "src/libs/chakra-ui";
+import { youtubeVideoIdFromURL } from "src/utils/utils";
 
 export interface Props {
   readonly params: {
@@ -36,13 +37,10 @@ export default async function Page({
   try {
     const post = await getPostBySlug(slug, locale);
 
-    let videoId;
-    if (post.post_type === "video") {
-      if (post.video_link) {
-        videoId = post.video_link.split("v=")[1];
-      }
-    }
-    console.log(post);
+    let videoId =
+      post.post_type === "video" && post.video_link
+        ? youtubeVideoIdFromURL(post.video_link)
+        : undefined;
 
     return (
       <PageLayout
@@ -70,7 +68,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post?.gitlog?.date
+          post?.gitlog?.date,
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">

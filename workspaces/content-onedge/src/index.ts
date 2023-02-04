@@ -3,10 +3,16 @@ import * as path from "node:path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 
-import { getFirst, slugify, write, yaml } from "./utils";
+import { getFirst, write, yaml } from "./utils";
 import { defaultLocale, locales } from "./locales";
 import { MainMenu } from "./main-menu";
-import { getPages, getPosts, getSimpleData } from "./data";
+import {
+  getPages,
+  getPosts,
+  getSimpleData,
+  handleLink,
+  updateBlocks,
+} from "./data";
 
 const simpleDataTypes = [
   await getSimpleData("categories"),
@@ -41,6 +47,9 @@ for (const simpleData of simpleDataTypes) {
 }
 
 const posts = await getPosts();
+const pages = await getPages();
+
+updateBlocks(pages, posts);
 
 for (const locale of locales) {
   await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
@@ -49,8 +58,6 @@ for (const locale of locales) {
 for (const data of posts.filenameMap.values()) {
   await write(`_data/_dynamic/posts/${data.locale}/${data.slug}.json`, data);
 }
-
-const pages = await getPages();
 
 for (const locale of locales) {
   await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
@@ -84,43 +91,9 @@ for (const locale of locales) {
   for (const mainMenuItem of mainMenu.items) {
     for (const column of mainMenuItem.columns ?? []) {
       for (const block of column.blocks ?? []) {
-        for (const item of block.items ?? []) {
-          if (item.page != null) {
-            const key = `${locale.code}:${slugify(item.page)}`;
-            if (pages.idMap.has(key)) {
-              const data = pages.idMap.get(key)!;
-
-              item.page_data = {
-                id: data.id,
-                slug: data.slug,
-                title: data.title,
-                template: data.template,
-                breadcrumbs: data.breadcrumbs,
-                pageLastUpdated: data.pageLastUpdated,
-                link: data.link,
-              };
-            }
-          }
-
-          if (item.post != null) {
-            const key = `${locale.code}:${slugify(item.post)}`;
-            if (posts.idMap.has(key)) {
-              const data = posts.idMap.get(key)!;
-
-              item.post_data = {
-                id: data.id,
-                slug: data.slug,
-                title: data.title,
-                image: data.image,
-                category: data.category,
-                topic: data.topic,
-                short_desc: data.short_desc,
-                locale: data.locale,
-                sourceFilepath: data.sourceFilepath,
-              };
-            }
-          }
-        }
+        block.items = block.items?.map((item) =>
+          handleLink(locale.code, item, pages, posts),
+        );
       }
     }
   }
