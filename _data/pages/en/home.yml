@@ -98,7 +98,7 @@ blocks:
           custom_title: Explore
           page: 0dc3d102-0936-433e-9219-f46e3087e396
       - type: image_icon_link_card
-        color: blue
+        color: cyan
         title: "Find a wallet "
         description: Learn about wallets on Starknet and discover the options available.
         link_label: "View wallets "
@@ -108,7 +108,7 @@ blocks:
           custom_title: View wallets
           page: d202009a-3541-4366-b664-36ef2e492aa3
       - type: image_icon_link_card
-        color: blue
+        color: purple
         title: Deposit & withdraw funds
         description: Learn how to deposit and withdraw funds for use in the Starknet
           ecosystem.
