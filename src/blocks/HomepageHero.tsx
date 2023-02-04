@@ -10,27 +10,21 @@ type Props = {};
 
 export const HomepageHero = (props: Props) => {
   const [messageIndex, setMessageIndex] = useState<number>(0);
-  const welcomeMessage = [
-    "Welcome",
-    "ようこそ",
-    "Welcome3",
-    "Welcome4",
-    "Welcome5",
-  ];
+  const welcomeMessage = ["ようこそ", "", "ברוך הבא", "欢迎", "Bienvenue"];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (messageIndex === welcomeMessage.length - 1) {
-        setMessageIndex(0);
-      } else {
-        setMessageIndex(messageIndex + 1);
-      }
-    }, 3000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     if (messageIndex === welcomeMessage.length - 1) {
+  //       setMessageIndex(0);
+  //     } else {
+  //       setMessageIndex(messageIndex + 1);
+  //     }
+  //   }, 3000);
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [messageIndex, welcomeMessage]);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, [messageIndex, welcomeMessage]);
 
   return (
     <Box
