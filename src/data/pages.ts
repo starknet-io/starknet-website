@@ -36,24 +36,21 @@ export interface WalletsBlock {
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
+
   readonly size?: "sm" | "md";
 }
 export interface IconLinkCardBlock {
   readonly type: "icon_link_card";
   readonly title: string;
-
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
   readonly icon: string;
   readonly color?: "orange" | "blue" | "green" | "yellow";
 }
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
   readonly icon: string;
   readonly description: string;
   readonly color?: "orange" | "blue" | "green" | "yellow";
@@ -70,8 +67,7 @@ export interface GetInvolvedBlock {
 export interface LargeCardBlock {
   readonly type: "large_card";
   readonly title: string;
-  readonly link_label: string;
-  readonly link_href: string;
+  readonly link: LinkData;
   readonly size?: "sm" | "md";
   readonly description: string;
   readonly image: string;
@@ -189,12 +185,12 @@ export interface Page extends Meta {
 
 export async function getPageBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {

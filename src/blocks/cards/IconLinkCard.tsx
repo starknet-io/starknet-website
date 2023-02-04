@@ -4,22 +4,20 @@ import { Text } from "@ui/Typography/Text";
 import React from "react";
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { IconLinkCardBlock } from "src/data/pages";
+import { getComputedLinkData } from "src/utils/utils";
+import { CardLink } from "./CardLink";
 
-type Props = {
-  title: string;
-  linkLabel: string;
-  linkHref: string;
-  color?: "orange" | "blue" | "green" | "yellow";
-  icon: string;
-};
+type Props = IconLinkCardBlock & { locale: string };
 
 export const IconLinkCard = ({
-  title = "Icon link card",
-  linkLabel = "link label",
-  linkHref = "/what-is-starknet/",
+  title,
+  link,
   icon = "/assets/cards/1.svg",
   color = "orange",
+  locale,
 }: Props) => {
+  const { href, label } = getComputedLinkData(locale, link);
   let colors = {};
   const renderColor = () => {
     switch (color) {
@@ -43,37 +41,39 @@ export const IconLinkCard = ({
   renderColor();
 
   return (
-    <CardGradientBorder>
-      <Box
-        w={{ base: "full" }}
-        borderWidth="1px"
-        borderRadius={{ base: "20px" }}
-        pl={{ base: "36px" }}
-        pr={{ base: "44px" }}
-        pb={{ base: "44px" }}
-        pt={{ base: "44px" }}
-        display="flex"
-        {...colors}
-      >
-        <Stack
-          direction={{ base: "column", md: "column" }}
-          spacing={{ base: "8px" }}
-          justify="flex-end"
-          alignItems="flex-start"
+    <CardLink href={href}>
+      <CardGradientBorder>
+        <Box
+          w={{ base: "full" }}
+          borderWidth="1px"
+          borderRadius={{ base: "20px" }}
+          pl={{ base: "36px" }}
+          pr={{ base: "44px" }}
+          pb={{ base: "44px" }}
+          pt={{ base: "44px" }}
+          display="flex"
+          {...colors}
         >
-          <Image src={icon} mb="20px" alt={title} />
-          <Stack spacing="1">
-            <Text color="heading-navy-fg" fontSize="24px" fontWeight="bold">
-              {title}
-            </Text>
+          <Stack
+            direction={{ base: "column", md: "column" }}
+            spacing={{ base: "8px" }}
+            justify="flex-end"
+            alignItems="flex-start"
+          >
+            <Image src={icon} mb="20px" alt={title} />
+            <Stack spacing="1">
+              <Text color="heading-navy-fg" fontSize="24px" fontWeight="bold">
+                {title}
+              </Text>
+            </Stack>
+            <Box>
+              <Link as={NextLink} variant="card" href={href}>
+                {label} &rarr;
+              </Link>
+            </Box>
           </Stack>
-          <Box>
-            <Link as={NextLink} variant="card" href={linkHref}>
-              {linkLabel} &rarr;
-            </Link>
-          </Box>
-        </Stack>
-      </Box>
-    </CardGradientBorder>
+        </Box>
+      </CardGradientBorder>
+    </CardLink>
   );
 };

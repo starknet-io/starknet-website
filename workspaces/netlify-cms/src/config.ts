@@ -210,12 +210,6 @@ const blocks: CmsFieldList["types"] = [
         fields: linkFields,
       },
       {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
-      },
-      {
         name: "size",
         widget: "select",
         required: false,
@@ -236,12 +230,6 @@ const blocks: CmsFieldList["types"] = [
         name: "link",
         widget: "object",
         fields: linkFields,
-      },
-      {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
       },
       {
         name: "icon",
@@ -272,12 +260,7 @@ const blocks: CmsFieldList["types"] = [
         widget: "object",
         fields: linkFields,
       },
-      {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
-      },
+
       {
         name: "icon",
         widget: "image",
@@ -304,12 +287,6 @@ const blocks: CmsFieldList["types"] = [
         name: "link",
         widget: "object",
         fields: linkFields,
-      },
-      {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
       },
       {
         name: "description",

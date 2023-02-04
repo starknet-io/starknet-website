@@ -24,65 +24,63 @@ export const CommunityCard = ({ link, description, title, locale }: Props) => {
 
   return (
     <Container maxW="1104px">
-      <CardLink href={href}>
-        <CardGradientBorder
+      <CardGradientBorder
+        borderRadius={{ base: "24px", lg: "104px" }}
+        padding="0"
+      >
+        <Box
+          bg="card-bg"
+          px={{ base: "24px", md: "48px" }}
+          py="8"
           borderRadius={{ base: "24px", lg: "104px" }}
-          padding="0"
+          // borderWidth="1px"
+          // borderColor="card-br"
+          boxShadow="none"
         >
-          <Box
-            bg="card-bg"
-            px={{ base: "24px", md: "48px" }}
-            py="8"
-            borderRadius={{ base: "24px", lg: "104px" }}
-            // borderWidth="1px"
-            // borderColor="card-br"
-            boxShadow="none"
-          >
-            <Stack spacing="4" direction={{ base: "column", sm: "row" }}>
-              <Flex
-                direction={{ base: "column", md: "row" }}
-                alignItems={{ base: "flex-start", md: "flex-start" }}
-                gap={{ base: "24px", lg: "10" }}
-              >
-                <Image
-                  src="/assets/cards/user-group.svg"
-                  alt="icon"
-                  boxSize={{ base: "72px" }}
-                />
+          <Stack spacing="4" direction={{ base: "column", sm: "row" }}>
+            <Flex
+              direction={{ base: "column", md: "row" }}
+              alignItems={{ base: "flex-start", md: "flex-start" }}
+              gap={{ base: "24px", lg: "10" }}
+            >
+              <Image
+                src="/assets/cards/user-group.svg"
+                alt="icon"
+                boxSize={{ base: "72px" }}
+              />
 
-                <Divider orientation="vertical" />
-                <Box mt={{ base: "-30px", md: 0 }}>
-                  <HStack>
-                    <Heading
-                      color="heading-navy-fg"
-                      mb="0"
-                      variant="h4"
-                      as="h4"
-                      lineHeight="1em"
-                      fontSize="18px"
-                      pb="2"
-                    >
-                      {title}
-                    </Heading>
-                  </HStack>
-                  <Text variant="baseRegular" color="muted" fontSize="sm">
-                    {description}
-                    <Link
-                      ml="8px"
-                      fontSize="16px"
-                      as={NextLink}
-                      variant="card"
-                      href={href}
-                    >
-                      {label} &rarr;
-                    </Link>
-                  </Text>
-                </Box>
-              </Flex>
-            </Stack>
-          </Box>
-        </CardGradientBorder>
-      </CardLink>
+              <Divider orientation="vertical" />
+              <Box mt={{ base: "-30px", md: 0 }}>
+                <HStack>
+                  <Heading
+                    color="heading-navy-fg"
+                    mb="0"
+                    variant="h4"
+                    as="h4"
+                    lineHeight="1em"
+                    fontSize="18px"
+                    pb="2"
+                  >
+                    {title}
+                  </Heading>
+                </HStack>
+                <Text variant="baseRegular" color="muted" fontSize="sm">
+                  {description}
+                  <Link
+                    ml="8px"
+                    fontSize="16px"
+                    as={NextLink}
+                    variant="card"
+                    href={href}
+                  >
+                    {label} &rarr;
+                  </Link>
+                </Text>
+              </Box>
+            </Flex>
+          </Stack>
+        </Box>
+      </CardGradientBorder>
     </Container>
   );
 };
