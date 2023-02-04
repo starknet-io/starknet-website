@@ -1,4 +1,4 @@
-import { CmsConfig, CmsFieldList } from "netlify-cms-core";
+import { CmsConfig, CmsField, CmsFieldList } from "netlify-cms-core";
 
 const locale = "en";
 
@@ -6,6 +6,49 @@ const branch =
   location.pathname === "/" ? "dev" : location.pathname.replace(/^\//, "");
 
 console.log(branch);
+
+const linkFields: CmsField[] = [
+  {
+    label: "Custom Title",
+    required: false,
+    name: "custom_title",
+  },
+  {
+    label: "Custom Icon",
+    required: false,
+    name: "custom_icon",
+  },
+  {
+    label: "Custom Internal Link",
+    required: false,
+    name: "custom_internal_link",
+  },
+  {
+    label: "Custom External Link",
+    required: false,
+    name: "custom_external_link",
+  },
+  {
+    label: "Page",
+    name: "page",
+    required: false,
+    widget: "relation",
+    collection: "pages",
+    search_fields: ["title"],
+    value_field: "id",
+    display_fields: ["title"],
+  },
+  {
+    label: "Post",
+    name: "post",
+    required: false,
+    widget: "relation",
+    collection: "posts",
+    search_fields: ["title"],
+    value_field: "id",
+    display_fields: ["title"],
+  },
+];
 
 const blocks: CmsFieldList["types"] = [
   {
@@ -141,6 +184,11 @@ const blocks: CmsFieldList["types"] = [
         name: "description",
       },
       {
+        name: "link",
+        widget: "object",
+        fields: linkFields,
+      },
+      {
         name: "link_label",
       },
       {
@@ -157,10 +205,9 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "size",
@@ -180,10 +227,9 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "icon",
@@ -210,11 +256,11 @@ const blocks: CmsFieldList["types"] = [
         name: "description",
       },
       {
-        name: "link_label",
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
-      {
-        name: "link_href",
-      },
+
       {
         name: "icon",
         widget: "image",
@@ -238,10 +284,9 @@ const blocks: CmsFieldList["types"] = [
         name: "title",
       },
       {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
+        name: "link",
+        widget: "object",
+        fields: linkFields,
       },
       {
         name: "description",
@@ -1239,45 +1284,10 @@ export const config: CmsConfig = {
                           name: "items",
                           widget: "list",
                           fields: [
+                            ...linkFields,
                             {
-                              label: "Custom Title",
-                              required: false,
-                              name: "custom_title",
-                            },
-                            {
-                              label: "Custom Icon",
-                              required: false,
-                              name: "custom_icon",
-                            },
-                            {
-                              label: "Custom Internal Link",
-                              required: false,
-                              name: "custom_internal_link",
-                            },
-                            {
-                              label: "Custom External Link",
-                              required: false,
-                              name: "custom_external_link",
-                            },
-                            {
-                              label: "Page",
-                              name: "page",
-                              required: false,
-                              widget: "relation",
-                              collection: "pages",
-                              search_fields: ["title"],
-                              value_field: "id",
-                              display_fields: ["title"],
-                            },
-                            {
-                              label: "Post",
-                              name: "post",
-                              required: false,
-                              widget: "relation",
-                              collection: "posts",
-                              search_fields: ["title"],
-                              value_field: "id",
-                              display_fields: ["title"],
+                              name: "hide_from_footer",
+                              widget: "boolean",
                             },
                           ],
                         },

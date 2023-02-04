@@ -2,6 +2,7 @@
 import { Box, others, Stack, StackDivider } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "src/data/settings/main-menu";
+import { getComputedLinkData } from "src/utils/utils";
 import { useLocale } from "./ClientLocaleProvider";
 
 export interface Props {
@@ -38,14 +39,8 @@ export const Footer = ({ mainMenu }: Props) => {
                     {column.blocks?.map((block, blockIndex) => (
                       <Box key={blockIndex}>
                         {block.items?.map((item, itemIndex) => {
-                          let title =
-                            item.custom_title ||
-                            item.page_data?.title ||
-                            item.post_data?.title;
-
-                          let link: string;
-                          let isExternal = false;
                           if (
+                            item.hide_from_footer ||
                             item.custom_icon ||
                             item.custom_title === "Engineering posts" ||
                             item.custom_title === "Community Calls" ||
@@ -53,31 +48,26 @@ export const Footer = ({ mainMenu }: Props) => {
                             item.custom_title === "Stark struck" ||
                             item.custom_title === "Governance posts" ||
                             item.custom_title === "Community & Events posts"
-                          )
+                          ) {
                             return;
-                          if (item.custom_external_link) {
-                            link = item.custom_external_link;
-                            isExternal = true;
-                          } else if (item.custom_internal_link) {
-                            link = `/${locale}/${item.custom_internal_link.replace(
-                              /(^\/|\/$)/g,
-                              "",
-                            )}`;
-                          } else if (item.page_data) {
-                            link = item.page_data.link;
-                          } else if (item.post_data) {
-                            link = `/${locale}/posts/${item.post_data.category}/${item.post_data.slug}`;
-                          } else {
-                            return <span key={itemIndex}>{title}</span>;
+                          }
+
+                          const { href, label } = getComputedLinkData(
+                            locale,
+                            item,
+                          );
+
+                          if (!href) {
+                            return <span key={itemIndex}>{label}</span>;
                           }
 
                           return (
                             <FooterComponent.Link
-                              isExternal={isExternal}
-                              href={link}
+                              isExternal={item.custom_external_link != null}
+                              href={href}
                               key={itemIndex}
                             >
-                              {title}
+                              {label}
                             </FooterComponent.Link>
                           );
                         })}

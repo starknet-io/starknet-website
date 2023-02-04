@@ -1,4 +1,4 @@
-import { TutorialsPage, Props } from "./(components)/TutorialsPage";
+import { TutorialsPage, Props } from "../(components)/TutorialsPage";
 
 export default function Page(props: Omit<Props, "env">) {
   return (

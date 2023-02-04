@@ -30,54 +30,21 @@ interface Props {
 // @ts-expect-error
 export async function Block({ block, locale }: Props): JSX.Element {
   if (block.type === "basic_card") {
-    return (
-      <BasicCard
-        title={block.title}
-        linkLabel={block.link_label}
-        linkHref={block.link_href}
-        size={block.size}
-      />
-    );
+    return <BasicCard {...block} locale={locale} />;
   } else if (block.type === "large_card") {
-    return (
-      <LargeCard
-        title={block.title}
-        linkLabel={block.link_label}
-        linkHref={block.link_href}
-        description={block.description}
-        image={block.image}
-        orientation={block.orientation}
-      />
-    );
+    return <LargeCard {...block} locale={locale} />;
   } else if (block.type === "icon_link_card") {
-    return (
-      <IconLinkCard
-        title={block.title}
-        linkLabel={block.link_label}
-        linkHref={block.link_href}
-        icon={block.icon}
-        color={block.color}
-      />
-    );
+    return <IconLinkCard {...block} locale={locale} />;
   } else if (block.type === "container") {
     return (
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block key={block.type} block={block} locale={locale} />
         ))}
       </Container>
     );
   } else if (block.type === "image_icon_link_card") {
-    return (
-      <ImageIconCard
-        title={block.title}
-        description={block.description}
-        linkLabel={block.link_label}
-        linkHref={block.link_href}
-        icon={block.icon}
-        color={block.color}
-      />
-    );
+    return <ImageIconCard {...block} locale={locale} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} />;
   } else if (block.type === "community_events") {
@@ -99,7 +66,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         headingVariant={block.heading_variant}
       >
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block key={block.type} block={block} locale={locale} />
         ))}
       </BlockCards>
     );
@@ -108,7 +75,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
       <LinkList heading={block.heading}>
         {block.blocks.map((block, i) => (
           <LinkListItem
-            key={i}
+            key={block.type}
             label={block.label}
             isExternal={block.is_external}
             href={block.href}
@@ -132,7 +99,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <AccordionRoot heading={block.heading}>
         {block.blocks.map((block, i) => (
-          <AccordionItem key={i} label={block.label}>
+          <AccordionItem key={block.type} label={block.label}>
             <>{block.body} </>
           </AccordionItem>
         ))}
@@ -149,6 +116,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
   else if (block.type === "ordered_block") {
     let newBlocks = block.blocks;
     // @ts-ignore - will fix types later
+    // rome-ignore lint/suspicious/noExplicitAny: <explanation>
     let alphabeticalBlocks = newBlocks.sort((a: any, b: any) => {
       if (a.title < b.title) {
         return -1;
@@ -156,10 +124,11 @@ export async function Block({ block, locale }: Props): JSX.Element {
     });
     return (
       <OrderedBlock>
+        {/* rome-ignore lint/suspicious/noExplicitAny: <explanation> */}
         {alphabeticalBlocks.map((block: any, i: number) => {
           console.log(block);
           return (
-            <OrderedBlockItem key={i} title={block.title}>
+            <OrderedBlockItem key={block.type} title={block.title}>
               <>{block.body} </>
             </OrderedBlockItem>
           );
@@ -183,7 +152,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <BlockGrouping>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block key={block.type} block={block} locale={locale} />
         ))}
       </BlockGrouping>
     );
@@ -198,14 +167,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
   } else if (block.type === "home_hero") {
     return <HomepageHero />;
   } else if (block.type === "get_involved_card") {
-    return (
-      <CommunityCard
-        linkHref={block.link_href}
-        linkLabel={block.link_label}
-        title={block.title}
-        description={block.description}
-      />
-    );
+    return <CommunityCard {...block} locale={locale} />;
   } else if (block.type === "dapps") {
     return (
       <BlockDapps

@@ -13,6 +13,9 @@ blocks:
           ecosystem.  "
         link_label: Get involved
         link_href: /community/
+        link:
+          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+          custom_title: Get involved
   - type: group
     blocks:
       - type: large_card
@@ -24,6 +27,9 @@ blocks:
         link_href: /learn/what-is-starknet/
         image: /assets/illustration-how-it-works.png
         orientation: left
+        link:
+          page: 93b845d7-5662-4cd4-8c13-3730440880c0
+          custom_title: What is starknet
       - type: large_card
         orientation: right
         image: /assets/illustration-scaling.png
@@ -33,6 +39,9 @@ blocks:
         description: Starknet uses math and cryptography to securely scale Ethereum. It
           is known as a Validity-rollup (or ZK-rollup); meaning it ”rolls” many
           transactions up to send to Ethereum as a single transaction.
+        link:
+          page: 93b845d7-5662-4cd4-8c13-3730440880c0
+          custom_title: How does it work
   - type: flex_layout
     heading_variant: md
     base: 1
@@ -48,6 +57,9 @@ blocks:
         link_label: "View docs "
         link_href: https://docs.starknet.io/
         icon: /assets/docs.svg
+        link:
+          custom_external_link: https://docs.starknet.io/
+          custom_title: View docs
       - type: image_icon_link_card
         color: blue
         title: "Developer tutorials "
@@ -55,6 +67,8 @@ blocks:
         link_label: "View tutorials "
         link_href: /tutorials/
         icon: /assets/tutorials.svg
+        link:
+          custom_internal_link: /tutorials/
       - type: image_icon_link_card
         color: blue
         title: Tools & resources
@@ -63,6 +77,9 @@ blocks:
         link_label: View resources
         link_href: /developers/tools-resources
         icon: /assets/1.svg
+        link:
+          page: 4c40a102-df5b-4f39-98fb-774d6841da9e
+          custom_title: View resources
   - type: flex_layout
     heading_variant: md
     base: 1
@@ -77,6 +94,9 @@ blocks:
         link_label: Explore
         link_href: /ecosystem/dapps
         icon: /assets/dapps.svg
+        link:
+          custom_title: Explore
+          page: 0dc3d102-0936-433e-9219-f46e3087e396
       - type: image_icon_link_card
         color: blue
         title: "Find a wallet "
@@ -84,6 +104,9 @@ blocks:
         link_label: "View wallets "
         link_href: /ecosystem/wallets
         icon: /assets/wallet.svg
+        link:
+          custom_title: View wallets
+          page: d202009a-3541-4366-b664-36ef2e492aa3
       - type: image_icon_link_card
         color: blue
         title: Deposit & withdraw funds
@@ -92,6 +115,9 @@ blocks:
         link_label: "View options "
         link_href: /ecosystem/bridges-onramps
         icon: /assets/deposit-withdraw.svg
+        link:
+          custom_title: View options
+          page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
   - type: community_events
   - type: flex_layout
     heading_variant: md
@@ -101,21 +127,33 @@ blocks:
         title: "View all questions "
         link_href: /learn/frequently-asked-questions/
         link_label: View
+        link:
+          page: b5689d3a-348b-4ccb-b787-520b64c55e41
+          custom_title: View
       - type: basic_card
         size: sm
         title: What is STARK?
         link_label: View
         link_href: /learn/frequently-asked-questions/
+        link:
+          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
+          custom_title: View
       - type: basic_card
         size: sm
         title: "What is Cairo? "
         link_label: View
         link_href: /learn/frequently-asked-questions/
+        link:
+          custom_title: View
+          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
       - type: basic_card
         size: sm
         link_href: /learn/frequently-asked-questions/
         link_label: View
         title: "What is Starknet? "
+        link:
+          custom_title: View
+          page: 93b845d7-5662-4cd4-8c13-3730440880c0
     base: 2
     md: 4
     lg: 4
