@@ -16,7 +16,7 @@ blocks:
     heading: "Get started "
     blocks:
       - type: image_icon_link_card
-        color: orange
+        color: blue
         title: Read the docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
@@ -27,7 +27,7 @@ blocks:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
       - type: image_icon_link_card
-        color: orange
+        color: blue
         title: "Learn through tutorials "
         description: Learn from Starknet's community of developers and technologists.
         link_label: View
@@ -38,7 +38,7 @@ blocks:
           custom_internal_link: /tutorials/
           custom_title: View
       - type: image_icon_link_card
-        color: orange
+        color: blue
         title: "Set up a local environment "
         description: Learn how to get your dev environment up and running so you can
           start building.
@@ -56,7 +56,7 @@ blocks:
     heading: Courses
     blocks:
       - type: image_icon_link_card
-        color: orange
+        color: purple
         title: "Starknet ByteSized Series "
         description: Contract writing video series, from simple deployments to L1 to L2
           interactions.
@@ -67,7 +67,7 @@ blocks:
           custom_title: View
           custom_internal_link: /tutorials/bytesized_series
       - type: image_icon_link_card
-        color: green
+        color: peach
         link_href: /tutorials/
         link_label: View
         title: "Cairo 101 "
@@ -77,7 +77,7 @@ blocks:
           custom_title: View
           custom_internal_link: /tutorials/cairo_101
       - type: image_icon_link_card
-        color: yellow
+        color: cyan
         link_href: /tutorials/
         link_label: View
         title: "Starknet Edu "
