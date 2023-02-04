@@ -21,14 +21,17 @@ import { NavLayout } from "./NavLayout";
 
 type Props = {
   desktopNavItems?: React.ReactNode;
+  // rome-ignore lint/suspicious/noExplicitAny: <explanation>
   mobileNavItems?: any;
   languageSwitcher?: React.ReactElement;
+  search?: React.ReactNode;
 };
 
 export const NavBar = ({
   desktopNavItems,
   mobileNavItems,
   languageSwitcher,
+  search,
 }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
@@ -41,6 +44,7 @@ export const NavBar = ({
         isMenuOpen={isOpen}
         items={desktopNavItems}
         languageSwitcher={languageSwitcher}
+        searchArea={search}
       />
       {isMobile && (
         <Drawer
@@ -55,6 +59,7 @@ export const NavBar = ({
           <DrawerContent>
             <DrawerHeader padding="0">
               <NavLayout
+                searchArea={search}
                 onClickMenu={onClose}
                 isMenuOpen={isOpen}
                 menuButtonRef={menuButtonRef}

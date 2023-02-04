@@ -57,3 +57,10 @@ body[data-theme=dark] {
   position: relative;
   text-align: left
 }
+
+.aa-DetachedSearchButton {
+  min-width: 200px;
+  border-radius: 8px;
+  background-color: #F6F6F6;
+  border:0px;
+}
