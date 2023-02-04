@@ -128,14 +128,14 @@ export const ListCard = (props: Props) => {
                 </Wrap>
               )}
 
-              <Wrap shouldWrapChildren>
+              <Wrap spacingX="24px" shouldWrapChildren>
                 {props.href && (
-                  <Link
-                    isExternal
-                    as={NextLink}
-                    href={`https://www.twitter.com/${props.href}`}
-                  >
-                    <HiGlobeAlt color="list-card-icon-fg" />
+                  <Link isExternal as={NextLink} href={`${props.href}`}>
+                    <Icon
+                      boxSize="18px"
+                      color="list-card-icon-fg"
+                      as={HiGlobeAlt}
+                    />
                   </Link>
                 )}
                 {props.twitterHandle && (
@@ -144,7 +144,11 @@ export const ListCard = (props: Props) => {
                     as={NextLink}
                     href={`https://www.twitter.com/${props.twitterHandle}`}
                   >
-                    <SiTwitter color="list-card-icon-fg" />
+                    <Icon
+                      boxSize="18px"
+                      color="list-card-icon-fg"
+                      as={SiTwitter}
+                    />
                   </Link>
                 )}
 
