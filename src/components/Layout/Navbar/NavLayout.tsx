@@ -54,6 +54,7 @@ export const NavLayout = (props: NavLayoutProps) => {
         )}
 
         <HStack spacing={6}>
+          {/* @ts-ignore */}
           <SearchInput searchArea={props.searchArea} />
           {isDesktop && (
             <>

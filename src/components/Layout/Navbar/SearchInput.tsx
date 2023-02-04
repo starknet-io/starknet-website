@@ -19,8 +19,8 @@ import * as React from "react";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 
 import { Text } from "../../Typography/Text";
-
-export const SearchInput = ({ searchArea }) => {
+//@ts-ignore
+export const SearchInput = ({ searchArea }: React.ReactElement) => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const OverlayOne = () => (
