@@ -16,23 +16,20 @@ import { MainSearch2 } from "./MainSearch2";
 
 export interface Props {
   readonly mainMenu: MainMenu;
+  readonly env: {
+    readonly ALGOLIA_APP_ID: string;
+    readonly ALGOLIA_SEARCH_API_KEY: string;
+  };
 }
 
-export default function Navbar({ mainMenu }: Props) {
+export default function Navbar({ mainMenu, env }: Props) {
   const locale = useLocale();
 
   return (
     <NavbarContainer>
       <NavBar
         languageSwitcher={<LocaleSwitcher />}
-        search={
-          <MainSearch2
-            env={{
-              ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
-              ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
-            }}
-          />
-        }
+        search={<MainSearch2 env={env} />}
         desktopNavItems={
           <>
             {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
