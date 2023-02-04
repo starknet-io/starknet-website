@@ -9,7 +9,7 @@ blocks:
     description: A manual and resource list for builders, by builders.
     variant: build
   - type: flex_layout
-    heading_variant: lg
+    heading_variant: sm
     base: 1
     md: 2
     lg: 3
@@ -23,6 +23,9 @@ blocks:
         link_label: View
         link_href: https://docs.starknet.io/
         icon: /assets/docs.svg
+        link:
+          custom_external_link: https://docs.starknet.io/
+          custom_title: View
       - type: image_icon_link_card
         color: orange
         title: "Learn through tutorials "
@@ -30,6 +33,10 @@ blocks:
         link_label: View
         link_href: "/tutorials/ "
         icon: /assets/tutorials.svg
+        link:
+          custom_external_link: ""
+          custom_internal_link: /tutorials/
+          custom_title: View
       - type: image_icon_link_card
         color: orange
         title: "Set up a local environment "
@@ -38,8 +45,11 @@ blocks:
         link_label: View
         link_href: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
         icon: /assets/developers.svg
+        link:
+          custom_external_link: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
+          custom_title: View
   - type: flex_layout
-    heading_variant: lg
+    heading_variant: sm
     base: 1
     md: 2
     lg: 3
@@ -53,6 +63,9 @@ blocks:
         link_label: View
         link_href: /tutorials/
         icon: /assets/orange.svg
+        link:
+          custom_title: View
+          custom_internal_link: /tutorials/bytesized_series
       - type: image_icon_link_card
         color: green
         link_href: /tutorials/
@@ -60,6 +73,9 @@ blocks:
         title: "Cairo 101 "
         description: Cairo 101 video series, from dev environment to deployment.
         icon: /assets/green.svg
+        link:
+          custom_title: View
+          custom_internal_link: /tutorials/cairo_101
       - type: image_icon_link_card
         color: yellow
         link_href: /tutorials/
@@ -67,9 +83,12 @@ blocks:
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
         icon: /assets/yellow.svg
+        link:
+          custom_title: View
+          custom_internal_link: /tutorials/starknet_edu
   - type: community_events
   - type: flex_layout
-    heading_variant: lg
+    heading_variant: sm
     base: 1
     md: 2
     lg: 3
