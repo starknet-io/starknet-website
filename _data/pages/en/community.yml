@@ -24,6 +24,9 @@ blocks:
         link_label: View
         link_href: /community/online-communities
         icon: /assets/online-communities.svg
+        link:
+          page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
+          custom_title: View
       - type: image_icon_link_card
         color: blue
         title: Community events
@@ -31,6 +34,9 @@ blocks:
         link_label: View
         link_href: "/events/ "
         icon: /assets/community-events.svg
+        link:
+          custom_internal_link: /events/
+          custom_title: View
       - type: image_icon_link_card
         color: blue
         title: "Ecosystem jobs "
@@ -38,4 +44,8 @@ blocks:
         link_label: "View "
         link_href: /jobs/
         icon: /assets/jobs.svg
+        link:
+          custom_icon: ""
+          custom_title: View
+          custom_internal_link: /jobs/
   - type: community_events
