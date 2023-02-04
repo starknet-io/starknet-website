@@ -166,7 +166,7 @@ export const BlockHeroLines = ({
 
                     <Box
                       mixBlendMode="multiply"
-                      opacity="0.4"
+                      opacity="0.2"
                       mt={6}
                       bgGradient="linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)"
                       bgClip="div"
