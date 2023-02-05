@@ -1296,6 +1296,7 @@ export const config: CmsConfig = {
                             {
                               name: "hide_from_footer",
                               widget: "boolean",
+                              required: false,
                             },
                           ],
                         },
