@@ -174,8 +174,8 @@ body[data-theme=dark] {
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
-  padding: 8px;
-  padding: var(--aa-spacing-half)
+  padding: 8px 16px 8px 8px;
+
 }
 
 .aa-Form {
@@ -231,7 +231,7 @@ body[data-theme=dark] {
 .aa-DetachedCancelButton {
   background: none;
   border: 0;
-  border-radius: 3px;
+  border-radius: 4px;
   color: inherit;
   color: #262627;
   color: rgba(var(--aa-text-color-rgb), var(--aa-text-color-alpha));
@@ -240,5 +240,6 @@ body[data-theme=dark] {
   margin: 0 0 0 8px;
   margin: 0 0 0 var(--aa-spacing-half);
   padding: 0 24px;
+  font-size: 14px;
 
 }
