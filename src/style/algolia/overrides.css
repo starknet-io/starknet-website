@@ -128,15 +128,32 @@ body[data-theme=dark] {
   min-width: 200px;
   border-radius: 8px;
   background-color: #F6F6F6;
-  border:0px;
+  border: 0px;
   font-size: 14px;
+}
+[data-theme=dark] .aa-DetachedSearchButton {
+
+    background-color: #000;
+
+
 }
 
 
+@media only screen and (max-width: 600px) {
+.aa-DetachedSearchButton {
+  min-width: 40px;
+    width: 40px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 0px;
+    font-size: 0px;
+    overflow:hidden
+  }
+}
+
 .aa-DetachedSearchButton svg {
- fill:#858585
-
-
+ fill:#858585;
+ width:16px;
 }
 
 .aa-DetachedContainer--modal {
