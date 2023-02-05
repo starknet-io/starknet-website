@@ -1045,8 +1045,8 @@ export const semanticTokens = {
       _dark: tokens.colors.dark["gradient-pink-a"],
     },
     "gradient-blue-default-a": {
-      default: tokens.colors.light["gradient-pink-a"],
-      _dark: tokens.colors.dark["gradient-pink-a"],
+      default: tokens.colors.light["gradient-blue-default-a"],
+      _dark: tokens.colors.dark["gradient-blue-default-a"],
     },
     "gradient-orange-b": {
       default: tokens.colors.light["gradient-orange-b"],
@@ -1072,9 +1072,9 @@ export const semanticTokens = {
       default: tokens.colors.light["gradient-pink-b"],
       _dark: tokens.colors.dark["gradient-pink-b"],
     },
-    "gradient-default-blue-b": {
-      default: tokens.colors.light["gradient-pink-b"],
-      _dark: tokens.colors.dark["gradient-pink-b"],
+    "gradient-blue-default-b": {
+      default: tokens.colors.light["gradient-blue-default-b"],
+      _dark: tokens.colors.dark["gradient-blue-default-b"],
     },
   },
 };

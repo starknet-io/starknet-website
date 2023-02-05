@@ -45,6 +45,10 @@ export const ImageIconCard = ({
       gradient:
         "linear(180.15deg, gradient-blue-a 0.2%, gradient-blue-b 105.43%)",
     },
+    "blue-default": {
+      gradient:
+        "linear(180.15deg, gradient-blue-default-a 0.2%, gradient-blue-default-b 105.43%)",
+    },
     cyan: {
       gradient:
         "linear(181.06deg, gradient-cyan-a 1.25%, gradient-cyan-b 150.79%)",
@@ -78,7 +82,7 @@ export const ImageIconCard = ({
             transform="translate(-50%, -50%)"
             zIndex={1}
             opacity={0.6}
-            mixBlendMode="difference"
+            mixBlendMode={color === "blue-default" ? "multiply" : "difference"}
             _dark={{ mixBlendMode: "color-dodge", opacity: 0.8 }}
 
             // filter={colors[color].gradient}
