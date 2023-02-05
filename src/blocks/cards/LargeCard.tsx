@@ -46,14 +46,20 @@ export const LargeCard = ({
             >
               <Box
                 order={orientation === "right" ? 1 : 0}
-                maxW={{ base: "full", lg: "480px" }}
-                maxH={{ base: "full", lg: "480px" }}
+                // maxW={{ base: "full", lg: "480px" }}
+                // maxH={{ base: "full", lg: "480px" }}
                 borderRadius="16px"
-                overflow="hidden"
+                // overflow="hidden"
               >
                 <Img
-                  boxSize="full"
-                  objectFit="cover"
+                  maxW={{
+                    base: "100%",
+                    md: "200px",
+                    lg: "360px",
+                    xl: "460px",
+                  }}
+                  // boxSize="full"
+                  // objectFit="cover"
                   src={image}
                   alt="starknet"
                 />
