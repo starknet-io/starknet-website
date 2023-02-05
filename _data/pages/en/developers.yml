@@ -44,7 +44,7 @@ blocks:
           start building.
         link_label: View
         link_href: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
-        icon: /assets/developers.svg
+        icon: /assets/local-environment.svg
         link:
           custom_external_link: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
           custom_title: View
