@@ -50,7 +50,7 @@ blocks:
     heading: "Start building "
     blocks:
       - type: image_icon_link_card
-        color: blue
+        color: blue-default
         title: "Developer documentation "
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
@@ -61,7 +61,7 @@ blocks:
           custom_external_link: https://docs.starknet.io/
           custom_title: View docs
       - type: image_icon_link_card
-        color: blue
+        color: blue-default
         title: "Developer tutorials "
         description: Learn from Starknet's community of developers and technologists.
         link_label: "View tutorials "
@@ -70,7 +70,7 @@ blocks:
         link:
           custom_internal_link: /tutorials/
       - type: image_icon_link_card
-        color: blue
+        color: blue-default
         title: Tools & resources
         description: "Find libraries, editor plugins and tooling to help you start
           building. "
@@ -88,7 +88,7 @@ blocks:
     heading: "Start playing "
     blocks:
       - type: image_icon_link_card
-        color: orange
+        color: blue-default
         title: Discover dapps
         description: Explore dapps in Starknet ecosystem – from Defi to NFTs to gaming.
         link_label: Explore
@@ -98,7 +98,7 @@ blocks:
           custom_title: Explore
           page: 0dc3d102-0936-433e-9219-f46e3087e396
       - type: image_icon_link_card
-        color: cyan
+        color: blue-default
         title: "Find a wallet "
         description: Learn about wallets on Starknet and discover the options available.
         link_label: "View wallets "
@@ -108,7 +108,7 @@ blocks:
           custom_title: View wallets
           page: d202009a-3541-4366-b664-36ef2e492aa3
       - type: image_icon_link_card
-        color: purple
+        color: blue-default
         title: Deposit & withdraw funds
         description: Learn how to deposit and withdraw funds for use in the Starknet
           ecosystem.
