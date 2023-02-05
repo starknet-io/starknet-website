@@ -30,6 +30,7 @@ type NavLayoutProps = {
   isMenuOpen: boolean;
   menuButtonRef?: React.RefObject<HTMLButtonElement>;
   languageSwitcher?: React.ReactElement;
+  searchArea: React.ReactNode;
 };
 
 export const NavLayout = (props: NavLayoutProps) => {
@@ -53,7 +54,8 @@ export const NavLayout = (props: NavLayoutProps) => {
         )}
 
         <HStack spacing={6}>
-          <SearchInput />
+          {/* @ts-ignore */}
+          <SearchInput searchArea={props.searchArea} />
           {isDesktop && (
             <>
               <IconButton

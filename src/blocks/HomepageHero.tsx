@@ -1,13 +1,31 @@
+"use client";
 import { Box, Button, Flex, HStack, Img, Stack } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
 import { TextCycle } from "@ui/TextCycle";
 
 type Props = {};
 
 export const HomepageHero = (props: Props) => {
+  const [messageIndex, setMessageIndex] = useState<number>(0);
+  const welcomeMessage = ["ようこそ", "", "ברוך הבא", "欢迎", "Bienvenue"];
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     if (messageIndex === welcomeMessage.length - 1) {
+  //       setMessageIndex(0);
+  //     } else {
+  //       setMessageIndex(messageIndex + 1);
+  //     }
+  //   }, 3000);
+
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, [messageIndex, welcomeMessage]);
+
   return (
     <Box
       as="section"
@@ -67,13 +85,13 @@ export const HomepageHero = (props: Props) => {
         zIndex={2}
         maxW={{ base: "xl", md: "7xl" }}
         mx="auto"
-        px={{ base: "6", md: "48px", lg: "40px", xl: "81px" }}
+        px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
       >
         <Flex
           align="flex-start"
           direction={{ base: "column", lg: "row" }}
           justify="space-between"
-          mb="20"
+          mb="56px"
         >
           <Box flex="1" maxW={{ lg: "xl" }} pt="6" order={{ base: 1, lg: 0 }}>
             <Heading
@@ -82,17 +100,28 @@ export const HomepageHero = (props: Props) => {
               mt="8"
               fontWeight="extrabold"
               lineHeight="1.2"
+              fontSize={{
+                base: "56px",
+                md: "80px",
+                lg: "80px",
+                xl: "92px",
+              }}
+              color="heading-navy-fg"
+            >
+              {welcomeMessage[messageIndex]}
+            </Heading>
+
+            <Heading
+              as="h2"
+              variant="h2"
+              fontWeight="extrabold"
+              lineHeight="1.2"
               fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"
             >
-              ようこそ <br /> to Starknet
+              to Starknet
             </Heading>
-            <Text
-              color="hero-subtitle-fg"
-              mt="5"
-              fontSize="18px"
-              fontWeight="bold"
-            >
+            <Text color="hero-subtitle-fg" mt="5" fontSize="18px">
               Starknet is the secure scaling technology bringing Ethereum’s
               benefits to the world.
             </Text>
@@ -107,7 +136,7 @@ export const HomepageHero = (props: Props) => {
               <Button size="lg" minW="210px" variant="solidHero">
                 Build on starknet
               </Button>
-              <Button size="lg" variant="outlineHero" borderColor="black">
+              <Button size="lg" variant="outlineHero">
                 Learn the basics
               </Button>
             </Stack>
@@ -121,7 +150,7 @@ export const HomepageHero = (props: Props) => {
             position="relative"
             marginRight={{ base: "-200px", lg: "-5rem" }}
             right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
-            width={{ base: "100%", lg: "37rem" }}
+            width={{ base: "100%", lg: "35rem" }}
             src="/assets/home/hero_cropped2.png"
             alt="Screenshot for Form builder"
           />

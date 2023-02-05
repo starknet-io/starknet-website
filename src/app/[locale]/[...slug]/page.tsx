@@ -15,6 +15,7 @@ import { Page as PageType } from "src/data/pages";
 import ReactMarkdown from "react-markdown";
 import { slugify } from "src/utils/utils";
 import { Heading } from "@ui/Typography/Heading";
+import { MainSearch2 } from "../(components)/MainSearch2";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -70,6 +71,14 @@ Props): JSX.Element {
                 lg: data.template === "content" ? "32px" : "136px",
               }}
             >
+              {/* {data.template === "content" ? (
+                <MainSearch2
+                  env={{
+                    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
+                    ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
+                  }}
+                />
+              ) : null} */}
               {data.blocks.map((block, i) => {
                 return <Block key={i} block={block} locale={locale} />;
               })}

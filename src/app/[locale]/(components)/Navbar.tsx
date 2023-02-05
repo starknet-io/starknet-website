@@ -12,18 +12,24 @@ import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { Box, Flex, Icon, IconButton } from "@chakra-ui/react";
 import { SiDiscord, SiYoutube, SiTwitter, SiGithub } from "react-icons/si";
 import { getComputedLinkData } from "src/utils/utils";
+import { MainSearch2 } from "./MainSearch2";
 
 export interface Props {
   readonly mainMenu: MainMenu;
+  readonly env: {
+    readonly ALGOLIA_APP_ID: string;
+    readonly ALGOLIA_SEARCH_API_KEY: string;
+  };
 }
 
-export default function Navbar({ mainMenu }: Props) {
+export default function Navbar({ mainMenu, env }: Props) {
   const locale = useLocale();
 
   return (
     <NavbarContainer>
       <NavBar
         languageSwitcher={<LocaleSwitcher />}
+        search={<MainSearch2 env={env} />}
         desktopNavItems={
           <>
             {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
@@ -51,7 +57,7 @@ export default function Navbar({ mainMenu }: Props) {
                             {block.items?.map((item, itemIndex) => {
                               const { href, label } = getComputedLinkData(
                                 locale,
-                                item,
+                                item
                               );
 
                               if (!href) {
@@ -101,7 +107,7 @@ export default function Navbar({ mainMenu }: Props) {
                               {block.items?.map((item, itemIndex) => {
                                 const { href, label } = getComputedLinkData(
                                   locale,
-                                  item,
+                                  item
                                 );
 
                                 if (!href) {

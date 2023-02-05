@@ -65,6 +65,7 @@ const outlineHero = defineStyle({
   paddingLeft: "40px",
   paddingRight: "40px",
   color: "btn-outline-hero-fg",
+  borderWidth: "1px",
   borderColor: "btn-outline-hero-border",
   bg: "btn-outline-hero-bg",
   _hover: {

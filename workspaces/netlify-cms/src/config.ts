@@ -269,7 +269,7 @@ const blocks: CmsFieldList["types"] = [
         name: "color",
         widget: "select",
         required: false,
-        options: ["orange", "blue", "green", "yellow"],
+        options: ["purple", "peach", "blue", "cyan", "orange", "pink"],
         default: "orange",
       },
     ],

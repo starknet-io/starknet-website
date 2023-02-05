@@ -19,13 +19,13 @@ import * as React from "react";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 
 import { Text } from "../../Typography/Text";
-
-export const SearchInput = () => {
+//@ts-ignore
+export const SearchInput = ({ searchArea }: React.ReactElement) => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const OverlayOne = () => (
-    <ModalOverlay bg="blackAlpha.100" backdropFilter="blur(7px)" />
-  );
+  // const OverlayOne = () => (
+  //   <ModalOverlay bg="blackAlpha.100" backdropFilter="blur(7px)" />
+  // );
 
   if (!isDesktop) {
     return (
@@ -38,7 +38,8 @@ export const SearchInput = () => {
   }
   return (
     <>
-      <InputGroup>
+      {searchArea}
+      {/* <InputGroup>
         <InputLeftElement top="3px">
           <Icon as={HiOutlineMagnifyingGlass} fontSize="lg" />
         </InputLeftElement>
@@ -67,7 +68,7 @@ export const SearchInput = () => {
             /
           </Kbd>
         </InputRightElement>
-      </InputGroup>
+      </InputGroup> */}
     </>
   );
 };
