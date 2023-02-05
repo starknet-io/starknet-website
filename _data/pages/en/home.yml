@@ -4,9 +4,9 @@ template: landing
 breadcrumbs: false
 page_last_updated: false
 blocks:
-  - type: home_hero
   - type: group
     blocks:
+      - type: home_hero
       - type: get_involved_card
         title: "Community led. "
         description: "This website is a community powered guide to the Starknet
