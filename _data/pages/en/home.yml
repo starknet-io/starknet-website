@@ -69,6 +69,7 @@ blocks:
         icon: /assets/tutorials.svg
         link:
           custom_internal_link: /tutorials/
+          custom_title: "View tutorials "
       - type: image_icon_link_card
         color: blue
         title: Tools & resources
