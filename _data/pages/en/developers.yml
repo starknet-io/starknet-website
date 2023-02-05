@@ -88,7 +88,7 @@ blocks:
           custom_internal_link: /tutorials/starknet_edu
   - type: community_events
   - type: flex_layout
-    heading_variant: sm
+    heading_variant: md
     base: 1
     md: 2
     lg: 3
