@@ -177,6 +177,8 @@ export const tokens = {
       "gradient-cyan-b": "  #CCF6E3",
       "gradient-pink-a": " #FFDAD7 ",
       "gradient-pink-b": "  #E8D4E3",
+      "gradient-blue-default-a": " #E9F2F8 ",
+      "gradient-blue-default-b": "  #FBF6F1",
     },
 
     dark: {
@@ -356,6 +358,8 @@ export const tokens = {
       "gradient-cyan-b": "  #1B2034",
       "gradient-pink-a": " #191E31 ",
       "gradient-pink-b": "  #223033",
+      "gradient-blue-default-a": " #252525 ",
+      "gradient-blue-default-b": "  #1B1B1B",
     },
   },
 };
@@ -1040,6 +1044,10 @@ export const semanticTokens = {
       default: tokens.colors.light["gradient-pink-a"],
       _dark: tokens.colors.dark["gradient-pink-a"],
     },
+    "gradient-blue-default-a": {
+      default: tokens.colors.light["gradient-blue-default-a"],
+      _dark: tokens.colors.dark["gradient-blue-default-a"],
+    },
     "gradient-orange-b": {
       default: tokens.colors.light["gradient-orange-b"],
       _dark: tokens.colors.dark["gradient-orange-b"],
@@ -1063,6 +1071,10 @@ export const semanticTokens = {
     "gradient-pink-b": {
       default: tokens.colors.light["gradient-pink-b"],
       _dark: tokens.colors.dark["gradient-pink-b"],
+    },
+    "gradient-blue-default-b": {
+      default: tokens.colors.light["gradient-blue-default-b"],
+      _dark: tokens.colors.dark["gradient-blue-default-b"],
     },
   },
 };

@@ -27,15 +27,15 @@ export const SearchInput = ({ searchArea }: React.ReactElement) => {
   //   <ModalOverlay bg="blackAlpha.100" backdropFilter="blur(7px)" />
   // );
 
-  if (!isDesktop) {
-    return (
-      <IconButton
-        variant="ghost"
-        icon={<Icon as={HiOutlineMagnifyingGlass} fontSize="xl" />}
-        aria-label="Open Menu"
-      />
-    );
-  }
+  // if (!isDesktop) {
+  //   return (
+  //     <IconButton
+  //       variant="ghost"
+  //       icon={<Icon as={HiOutlineMagnifyingGlass} fontSize="xl" />}
+  //       aria-label="Open Menu"
+  //     />
+  //   );
+  // }
   return (
     <>
       {searchArea}

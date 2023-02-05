@@ -53,7 +53,14 @@ export interface ImageIconLinkCardBlock {
   readonly link: LinkData;
   readonly icon: string;
   readonly description: string;
-  readonly color?: "orange" | "blue" | "purple" | "peach" | "cyan" | "pink";
+  readonly color?:
+    | "blue-default"
+    | "orange"
+    | "blue"
+    | "purple"
+    | "peach"
+    | "cyan"
+    | "pink";
 }
 export interface GetInvolvedBlock {
   readonly type: "get_involved_card";
