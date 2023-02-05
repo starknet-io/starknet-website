@@ -29,13 +29,17 @@ export const BlockCards = ({
         return (styles = { fontWeight: "extrabold" });
 
       case "md":
-        return (styles = { fontWeight: "extrabold" });
+        return (styles = {
+          fontWeight: "extrabold",
+          fontSize: "32px",
+          marginBottom: "24px",
+        });
 
       case "lg":
         return (styles = {
           fontWeight: "extrabold",
-          fontSize: "56px",
-          marginBottom: "56px",
+          fontSize: "48px",
+          marginBottom: "48px",
         });
 
       default:
