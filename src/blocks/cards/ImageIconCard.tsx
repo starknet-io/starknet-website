@@ -81,7 +81,7 @@ export const ImageIconCard = ({
             left="50%"
             transform="translate(-50%, -50%)"
             zIndex={1}
-            opacity={0.6}
+            opacity={0.8}
             mixBlendMode={color === "blue-default" ? "multiply" : "difference"}
             _dark={{ mixBlendMode: "color-dodge", opacity: 0.8 }}
 
