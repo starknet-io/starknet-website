@@ -8,31 +8,23 @@ import {
   Box,
   Button,
   Wrap,
-  HStack,
-  Divider,
   Container,
   Flex,
-  useBreakpointValue,
-  GridItem,
 } from "@chakra-ui/react";
 import moment from "moment";
-
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import { useMemo } from "react";
-import algoliasearch, { SearchClient } from "src/libs/algoliasearch/lite";
+import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
   useHits,
   useRefinementList,
-  useInfiniteHits,
 } from "src/libs/react-instantsearch-hooks-web";
-
 import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Topic } from "src/data/topics";
-import { FeaturedArticleCard } from "@ui/ArticleCard/FeaturedArticleCard";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -60,7 +52,6 @@ export function PostsPage({
 
   return (
     <Box pt="18" minH="100vh">
-      <title>Blog - Starknet</title>
       <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
         <Configure
           hitsPerPage={50}
