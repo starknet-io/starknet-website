@@ -57,7 +57,7 @@ export default function Navbar({ mainMenu, env }: Props) {
                             {block.items?.map((item, itemIndex) => {
                               const { href, label } = getComputedLinkData(
                                 locale,
-                                item
+                                item,
                               );
 
                               if (!href) {
@@ -107,7 +107,7 @@ export default function Navbar({ mainMenu, env }: Props) {
                               {block.items?.map((item, itemIndex) => {
                                 const { href, label } = getComputedLinkData(
                                   locale,
-                                  item
+                                  item,
                                 );
 
                                 if (!href) {
