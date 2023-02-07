@@ -3,7 +3,8 @@ type: conference
 name: ETHDenver
 description: ETHDenver is a community-owned innovation festival.
 url: https://www.ethdenver.com/
-start_date: Feb 24 - Mar 05, 2023
+start_date: 2023-02-24T00:00:00+00:00
+end_date: 2023-03-05T00:00:00+00:00
 location: usa
 country: Usa
 image: /assets/logo_ethdenver_400x400.png
