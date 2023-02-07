@@ -1,5 +1,3 @@
-import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
-import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
 import { LinkData } from "./settings/main-menu";
@@ -91,7 +89,7 @@ export interface LinkListItem {
 export interface AccordionItem {
   readonly type: "accordion_item";
   readonly label: string;
-  readonly body: MarkdownBlock;
+  readonly body: string;
 }
 export interface OrderedItem {
   readonly type: "ordered_item";

@@ -2,6 +2,7 @@
 import { Box } from "@chakra-ui/react";
 import * as PageAccordion from "@ui/Accordion/PageAccordion";
 import { Heading } from "@ui/Typography/Heading";
+import { slugify } from "src/utils/utils";
 
 type Props = {
   children: React.ReactNode;
@@ -11,9 +12,16 @@ type Props = {
 export const AccordionRoot = ({ heading, children }: Props) => {
   return (
     <Box mb="80px">
-      <Heading as="h2" variant="h3" color="heading-navy-fg">
-        {heading}
-      </Heading>
+      {heading && (
+        <Heading
+          as="h2"
+          variant="h3"
+          color="heading-navy-fg"
+          id={`toc-${slugify(heading)}`}
+        >
+          {heading}
+        </Heading>
+      )}
       <PageAccordion.Root>{children}</PageAccordion.Root>
     </Box>
   );
