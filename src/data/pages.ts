@@ -91,7 +91,7 @@ export interface LinkListItem {
 export interface AccordionItem {
   readonly type: "accordion_item";
   readonly label: string;
-  readonly body: MarkdownBlock;
+  readonly body: string;
 }
 export interface OrderedItem {
   readonly type: "ordered_item";

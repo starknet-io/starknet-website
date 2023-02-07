@@ -109,17 +109,36 @@ interface HeadingData {
 
 function pageToTableOfContents(page: PageType): readonly HeadingData[] {
   const data = page.blocks.flatMap((block) => {
-    if (block.type === "page_header") return [];
-    if ("title" in block) {
-      return {
-        title: block.title,
-        level: 2,
-      };
-    } else if ("heading" in block && block.heading != null) {
-      return {
-        title: block.heading,
-        level: 2,
-      };
+    if (block.type === "page_header") {
+      return [];
+    } else if (block.type === "ordered_block") {
+      let blocks = Array.from(block.blocks).sort((a, b) => {
+        return a.title.localeCompare(b.title);
+      });
+
+      return blocks.map((block) => {
+        return {
+          title: block.title,
+          level: 2,
+        };
+      });
+    } else if (block.type === "accordion") {
+      return [
+        ...(block.heading != null
+          ? [
+              {
+                title: block.heading,
+                level: 2,
+              },
+            ]
+          : []),
+        // ...block.blocks.map(block => {
+        //   return {
+        //     title: block.label,
+        //     level: 3,
+        //   };
+        // })
+      ];
     } else if (block.type === "markdown") {
       const processor = unified()
         .use(remarkParse)
@@ -145,6 +164,16 @@ function pageToTableOfContents(page: PageType): readonly HeadingData[] {
       const tree = processor.runSync(node);
 
       return tree;
+    } else if ("title" in block) {
+      return {
+        title: block.title,
+        level: 2,
+      };
+    } else if ("heading" in block && block.heading != null) {
+      return {
+        title: block.heading,
+        level: 2,
+      };
     }
 
     return [];

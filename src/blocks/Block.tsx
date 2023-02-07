@@ -84,67 +84,33 @@ export async function Block({ block, locale }: Props): JSX.Element {
         ))}
       </LinkList>
     );
-  }
-  // else if (block.type === "link_list_item") {
-  //   return (
-  //     <LinkListItem
-  //       label={block.label}
-  //       isExternal={block.is_external}
-  //       href={block.href}
-  //       subLabel={block.sub_label}
-  //     />
-  //   );
-  // }
-  else if (block.type === "accordion") {
+  } else if (block.type === "accordion") {
     return (
       <AccordionRoot heading={block.heading}>
         {block.blocks.map((block, i) => (
           <AccordionItem key={block.type} label={block.label}>
-            <>{block.body} </>
+            <MarkdownBlock body={block.body} />
           </AccordionItem>
         ))}
       </AccordionRoot>
     );
-  }
-  // else if (block.type === "accordion_item") {
-  //   return (
-  //     <AccordionItem label={block.label}>
-  //       <>{block.body} </>
-  //     </AccordionItem>
-  //   );
-  // }
-  else if (block.type === "ordered_block") {
-    let newBlocks = block.blocks;
-    // @ts-ignore - will fix types later
-    // rome-ignore lint/suspicious/noExplicitAny: <explanation>
-    let alphabeticalBlocks = newBlocks.sort((a: any, b: any) => {
-      if (a.title < b.title) {
-        return -1;
-      }
+  } else if (block.type === "ordered_block") {
+    let blocks = Array.from(block.blocks).sort((a, b) => {
+      return a.title.localeCompare(b.title);
     });
+
     return (
       <OrderedBlock>
-        {/* rome-ignore lint/suspicious/noExplicitAny: <explanation> */}
-        {alphabeticalBlocks.map((block: any, i: number) => {
-          console.log(block);
+        {blocks.map((block: any, i: number) => {
           return (
-            <OrderedBlockItem key={block.type} title={block.title}>
-              <>{block.body} </>
+            <OrderedBlockItem key={i} title={block.title}>
+              <MarkdownBlock body={block.body} />
             </OrderedBlockItem>
           );
         })}
       </OrderedBlock>
     );
-  }
-
-  // else if (block.type === "ordered_item") {
-  //   return (
-  //     <OrderedBlockItem title={block.title}>
-  //       <>{block.body} </>
-  //     </OrderedBlockItem>
-  //   );
-  // }
-  else if (block.type === "page_header") {
+  } else if (block.type === "page_header") {
     return (
       <PageHeaderBlock title={block.title} description={block.description} />
     );

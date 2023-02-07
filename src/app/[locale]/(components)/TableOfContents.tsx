@@ -54,7 +54,11 @@ export function TableOfContents(props: Props) {
     });
 
     props.headings.forEach((h) => {
-      observer.observe(document.getElementById(`toc-${slugify(h.title)}`)!);
+      const el = document.getElementById(`toc-${slugify(h.title)}`);
+
+      if (el) {
+        observer.observe(el);
+      }
     });
 
     return () => observer.disconnect();
