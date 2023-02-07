@@ -1,11 +1,5 @@
 "use client";
-import {
-  List,
-  ListItem,
-  ListProps,
-  ListItemProps,
-  Box,
-} from "src/libs/chakra-ui";
+import { List, ListItem, ListProps, ListItemProps } from "src/libs/chakra-ui";
 
 const Root = ({ children }: ListProps) => {
   return (
