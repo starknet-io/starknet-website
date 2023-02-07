@@ -219,6 +219,18 @@ export async function getPosts(): Promise<PostsData> {
   return { filenameMap, filenames, idMap, resourceName };
 }
 
+export async function getTutorials(): Promise<SimpleData<Meta>> {
+  const resourceData = await getSimpleData("tutorials");
+
+  resourceData.filenameMap.forEach((data: any) => {
+    if (typeof data.tags === "string") {
+      data.tags = data.tags.split(",").map((t: string) => t.trim());
+    }
+  });
+
+  return resourceData;
+}
+
 interface SimpleData<T> {
   readonly filenameMap: Map<string, T>;
   readonly filenames: string[];

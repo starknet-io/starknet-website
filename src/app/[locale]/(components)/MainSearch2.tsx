@@ -29,7 +29,7 @@ import { Box, Icon } from "@chakra-ui/react";
 import { HiPaperAirplane } from "react-icons/hi2";
 
 export function Autocomplete<TItem extends BaseItem>(
-  props: Partial<AutocompleteOptions<TItem>>
+  props: Partial<AutocompleteOptions<TItem>>,
 ) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const panelRootRef = useRef<Root>();
@@ -75,7 +75,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
   const data = useMemo(() => {
     const searchClient = algoliasearch(
       env.ALGOLIA_APP_ID,
-      env.ALGOLIA_SEARCH_API_KEY
+      env.ALGOLIA_SEARCH_API_KEY,
     );
 
     const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin({

@@ -5,7 +5,6 @@ import { Text } from "@ui/Typography/Text";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { notFound } from "next/navigation";
-import { FiBookOpen } from "react-icons/fi";
 import { Block } from "src/blocks/Block";
 import { getPostBySlug } from "src/data/posts";
 import {
@@ -20,13 +19,11 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   HStack,
-  Icon,
 } from "src/libs/chakra-ui";
 import { youtubeVideoIdFromURL } from "src/utils/utils";
 
 export interface Props {
-  readonly params: {
-    readonly locale: string;
+  readonly params: LocaleParams & {
     readonly slug: string;
   };
 }

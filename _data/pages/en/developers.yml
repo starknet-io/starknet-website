@@ -16,7 +16,7 @@ blocks:
     heading: "Get started "
     blocks:
       - type: image_icon_link_card
-        color: blue
+        color: blue-default
         title: Read the docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
@@ -27,7 +27,7 @@ blocks:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
       - type: image_icon_link_card
-        color: blue
+        color: blue-default
         title: "Learn through tutorials "
         description: Learn from Starknet's community of developers and technologists.
         link_label: View
@@ -38,7 +38,7 @@ blocks:
           custom_internal_link: /tutorials/
           custom_title: View
       - type: image_icon_link_card
-        color: blue
+        color: blue-default
         title: "Set up a local environment "
         description: Learn how to get your dev environment up and running so you can
           start building.

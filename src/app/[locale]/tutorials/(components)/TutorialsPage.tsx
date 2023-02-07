@@ -6,9 +6,7 @@ import {
   Breadcrumb,
   Box,
   Button,
-  Flex,
   VStack,
-  GridItem,
   HStack,
   SimpleGrid,
 } from "@chakra-ui/react";
@@ -212,38 +210,38 @@ function CustomCourse({ params }: Pick<Props, "params">) {
   );
 }
 
-function CustomTags() {
-  const { items, refine } = useRefinementList({
-    attribute: "tags",
-    sortBy: ["name:asc"],
-  });
-  console.log("tags", items);
+// function CustomTags() {
+//   const { items, refine } = useRefinementList({
+//     attribute: "tags",
+//     sortBy: ["name:asc"],
+//   });
+//   console.log("tags", items);
 
-  return (
-    <Box mt={8} maxHeight="300px" overflowY="auto">
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
-        Tags
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => {
-          let label = titleCase(item.label);
+//   return (
+//     <Box mt={8} maxHeight="300px" overflowY="auto">
+//       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+//         Tags
+//       </Heading>
+//       <VStack dir="column" alignItems="stretch">
+//         {items.map((item, i) => {
+//           let label = titleCase(item.label);
 
-          return (
-            <Button
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
-              key={i}
-              justifyContent="flex-start"
-            >
-              {label}
-            </Button>
-          );
-        })}
-      </VStack>
-    </Box>
-  );
-}
+//           return (
+//             <Button
+//               size="sm"
+//               variant={item.isRefined ? "filterActive" : "filter"}
+//               onClick={() => refine(item.value)}
+//               key={i}
+//               justifyContent="flex-start"
+//             >
+//               {label}
+//             </Button>
+//           );
+//         })}
+//       </VStack>
+//     </Box>
+//   );
+// }
 
 type Tutorial = {
   readonly id?: string;
@@ -254,7 +252,7 @@ type Tutorial = {
   readonly author?: string;
   readonly published_at: string;
   readonly difficulty?: "beginner" | "intermediate" | "advanced";
-  readonly tags?: string;
+  readonly tags?: string[];
   readonly locale: string;
   readonly filepath: string;
 };
@@ -264,17 +262,16 @@ type HitProps = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  console.log(hits);
 
   return (
     <>
       <SimpleGrid minChildWidth="280px" spacing="16px">
-        {hits.map((hit, i) => {
+        {hits.map((hit) => {
           const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
           // if (hit.difficulty) tags.push(hit.difficulty);
           // if (hit.type) tags.push(hit.type);
-          let tagsArray = hit.tags ? hit.tags.split(",") : [];
+
           return (
             <GridCard.Root href={hit.url} key={hit.title}>
               <GridCard.Image url={hit.image} type={hit.type} />
@@ -289,7 +286,7 @@ function CustomHits() {
               </GridCard.Body>
               <GridCard.Footer>
                 <HStack spacing="8px">
-                  {tagsArray.map((tag, i) => {
+                  {hit?.tags?.map((tag, i) => {
                     // only show max 2 tags
                     if (i > 1) return null;
                     return (

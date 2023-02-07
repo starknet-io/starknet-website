@@ -12,24 +12,17 @@ blocks:
       the Starknet and Cairo is assumed.
   - type: ordered_block
     blocks:
-      - type: ordered_item
-        Title: Zero knowledge
+      - title: Starknet Users
         body: The users that interact with Starknet sequencer nodes and, if necessary,
           with L1 contracts. These users, whether human or automated, are the
           agents that submit transactions to the Starknet network.
-        title: Starknet Users
-      - type: ordered_item
-        Title: B is what this begins with
+      - title: Application Developers
         body: The users of Starknet that develop Starknet applications. They write and
           deploy Starknet and Ethereum contracts.
-        title: Application Developers
-      - type: ordered_item
-        Title: A Shiny New Sequencer
+      - title: Starknet Application
         body: A collection of contracts (L1 and L2) that collectively implement a
           business flow.
-        title: Starknet Application
-      - type: ordered_item
-        Title: "This is "
+      - title: Starknet Contract
         body: >-
           The program that encodes the implemented application business logic.
           This includes the application data structures and handling of specific
@@ -38,16 +31,13 @@ blocks:
 
 
           * Starknet Account Contracts: Given account abstraction, user accounts are not implemented at the protocol level. Some contracts will, therefore, need to implement the concept of user accounts; these are called Account Contracts. The exact implementation depends on the contract; but, technically, these are Starknet contracts that are implemented in Cairo.
-        title: Starknet Contract
-      - type: ordered_item
-        title: Starknet Transaction
+      - title: Starknet Transaction
         body: An invocation of a specific state-transition logic that’s defined by a
           contract. Syntactically, a transaction has a well-defined structure
           that includes all the necessary metadata and an arbitrary data
           payload. The semantics of the transaction is defined by the invoked
           contract.
-      - type: ordered_item
-        title: Blocks (previously known as batches)
+      - title: Blocks (previously known as batches)
         body: >-
           Ordered sets of Starknet transactions that are run using the Starknet
           OS, resulting in one aggregated state change that is then committed to
@@ -57,14 +47,12 @@ blocks:
           * … a block hash – a unique stable identifier that can be used to query and refer to the block.
 
           * … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
-      - type: ordered_item
-        title: Prover
+      - title: Prover
         body: A separate process (either an online service or internal to the node) that
           receives the output of Cairo programs and generates STARK proofs to be
           verified. The Prover submits the STARK proof to the verifier that
           registers the fact on L1.
-      - type: ordered_item
-        title: Starknet OS
+      - title: Starknet OS
         body: >
           Updates the L2 state of the system based on transactions that are
           received as inputs. Effectively facilitates the execution of the
@@ -73,11 +61,9 @@ blocks:
           STARK-proof system. Specific system operations and functionality
           available for Starknet contracts are available as calls made to the
           OS.
-      - type: ordered_item
-        title: Starknet State
+      - title: Starknet State
         body: The state is composed of contracts’ code and contracts’ storage.
-      - type: ordered_item
-        title: Starknet L1 Core Contract
+      - title: Starknet L1 Core Contract
         body: >-
           This L1 contract defines the state of the system by storing the
           commitment to the L2 state. The contract also stores the Starknet OS
@@ -92,15 +78,13 @@ blocks:
           * It stores the list of allowed verifiers (contracts) that can verify state update transactions
 
           * It facilitates L1 ↔ L2 interaction
-      - type: ordered_item
-        title: Full State Node
+      - title: Full State Node
         body: A node in the Starknet network that is used only for querying the current
           Starknet state. It can independently (i.e., without/o querying
           additional nodes) answer queries about the current state of the
           Starknet network, including the L1 state. It does not batch
           transactions or prove batches.
-      - type: ordered_item
-        title: Starknet Sequencer Node
+      - title: Starknet Sequencer Node
         body: The main node of the Starknet network. It implements the core
           functionality of sequencing transactions submitted to it. It executes
           the Starknet OS Cairo program with the relevant inputs, proves the

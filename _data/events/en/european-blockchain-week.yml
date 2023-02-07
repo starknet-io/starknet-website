@@ -3,7 +3,8 @@ type: conference
 name: European Blockchain Week
 description: The most influential blockchain event in Europe.
 url: https://eblockchainconvention.com/
-start_date: Feb 15 - Feb 17, 2023
+start_date: 2023-02-15T00:00:00+00:00
+end_date: 2023-02-17T00:00:00+00:00
 location: europe
 country: Spain
 image: https://pbs.twimg.com/profile_images/1570093772024778753/dVwZONhk_400x400.jpg
