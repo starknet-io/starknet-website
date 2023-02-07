@@ -748,8 +748,14 @@ export const config: CmsConfig = {
         },
         {
           name: "start_date",
-          label: "Date range",
-          widget: "string",
+          label: "start date",
+          widget: "datetime",
+        },
+        {
+          name: "end_date",
+          label: "end date",
+          widget: "datetime",
+          required: false
         },
         {
           name: "image",
