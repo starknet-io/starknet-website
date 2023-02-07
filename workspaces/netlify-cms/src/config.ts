@@ -755,7 +755,7 @@ export const config: CmsConfig = {
           name: "end_date",
           label: "end date",
           widget: "datetime",
-          required: false
+          required: false,
         },
         {
           name: "image",

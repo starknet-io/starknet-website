@@ -5,6 +5,7 @@ export interface Event {
   readonly name: string;
   readonly image: string;
   readonly start_date: string;
+  readonly end_date?: string;
   readonly location: string;
   readonly city: string;
   readonly venue: string;

@@ -22,6 +22,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { titleCase } from "src/utils/utils";
+import moment from "moment";
 
 export interface AutoProps {
   readonly params: {
@@ -143,6 +144,7 @@ function CustomType() {
 type HitProps = {
   readonly hits: readonly {
     readonly start_date: string;
+    readonly end_date?: string;
     readonly name: string;
     readonly image: string;
     readonly description: string;
@@ -163,7 +165,13 @@ function CustomHits() {
               variant="event"
               href={hit.url}
               key={hit?.name}
-              startDateTime={hit?.start_date}
+              startDateTime={
+                hit?.end_date
+                  ? `${moment(hit?.start_date).format("MMM DD")} - ${moment(
+                      hit?.end_date,
+                    ).format("MMM DD, YYYY")}`
+                  : moment(hit?.start_date).format("MMM DD, YYYY")
+              }
               image={hit.image}
               title={hit.name}
               description={hit.description}
