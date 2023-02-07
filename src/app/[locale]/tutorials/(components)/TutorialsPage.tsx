@@ -254,7 +254,7 @@ type Tutorial = {
   readonly author?: string;
   readonly published_at: string;
   readonly difficulty?: "beginner" | "intermediate" | "advanced";
-  readonly tags?: string;
+  readonly tags?: string[];
   readonly locale: string;
   readonly filepath: string;
 };
@@ -274,7 +274,7 @@ function CustomHits() {
           // let tags: string[] = [];
           // if (hit.difficulty) tags.push(hit.difficulty);
           // if (hit.type) tags.push(hit.type);
-          let tagsArray = hit.tags ? hit.tags.split(",") : [];
+
           return (
             <GridCard.Root href={hit.url} key={hit.title}>
               <GridCard.Image url={hit.image} type={hit.type} />
@@ -289,7 +289,7 @@ function CustomHits() {
               </GridCard.Body>
               <GridCard.Footer>
                 <HStack spacing="8px">
-                  {tagsArray.map((tag, i) => {
+                  {hit?.tags?.map((tag, i) => {
                     // only show max 2 tags
                     if (i > 1) return null;
                     return (
