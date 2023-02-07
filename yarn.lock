@@ -25246,7 +25246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-parse@npm:^10.0.0":
+"remark-parse@npm:^10.0.0, remark-parse@npm:^10.0.1":
   version: 10.0.1
   resolution: "remark-parse@npm:10.0.1"
   dependencies:
@@ -25789,11 +25789,14 @@ __metadata:
     react-youtube: ^10.1.0
     remark-frontmatter: ^4.0.1
     remark-mdx-frontmatter: ^2.1.1
+    remark-parse: ^10.0.1
     rome: ^11.0.0
     simple-git: ^3.16.0
     start-server-and-test: ^1.15.2
     storybook: ^7.0.0-beta.25
     typescript: ^4.9.4
+    unified: ^10.1.2
+    unist-util-index: ^3.0.2
     vite: ^4.0.4
     vite-tsconfig-paths: ^4.0.3
     vitest: ^0.27.0
@@ -28509,7 +28512,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unified@npm:^10.0.0":
+"unified@npm:^10.0.0, unified@npm:^10.1.2":
   version: 10.1.2
   resolution: "unified@npm:10.1.2"
   dependencies:
@@ -28631,6 +28634,16 @@ __metadata:
   version: 2.0.0
   resolution: "unist-util-generated@npm:2.0.0"
   checksum: 3a806793fa24a75190c217740ce706340d6cb0d51eff677134253d628f8e4355ebd8a243fe8045c583463f6bebfd50f902d653161da87c1359fcd1a14b99c8e0
+  languageName: node
+  linkType: hard
+
+"unist-util-index@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "unist-util-index@npm:3.0.2"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-visit: ^4.0.0
+  checksum: 972b1cbc4c858e3b3324e704b8ff9c8c318204aa3fe340fe6912df31ed8e677f4509f5e99cd33a31ab31905ec1f25fe3ca13093e8cf930ae5d669cf2a0947e60
   languageName: node
   linkType: hard
 

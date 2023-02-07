@@ -12,10 +12,12 @@ import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
 import { Page as PageType } from "src/data/pages";
-import ReactMarkdown from "react-markdown";
 import { slugify } from "src/utils/utils";
 import { Heading } from "@ui/Typography/Heading";
-import { MainSearch2 } from "../(components)/MainSearch2";
+import { Index } from "unist-util-index";
+import remarkParse from "remark-parse";
+import { unified } from "unified";
+import { TableOfContents } from "../(components)/TableOfContents";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -87,7 +89,7 @@ Props): JSX.Element {
           rightAside={
             <>
               {data.template === "content" ? (
-                <TableOfContents page={data} />
+                <TableOfContents headings={pageToTableOfContents(data)} />
               ) : null}
             </>
           }
@@ -100,74 +102,53 @@ Props): JSX.Element {
   }
 }
 
-function TableOfContents({ page }: { page: PageType }) {
-  return (
-    <Toc.Root spacing={3}>
-      <Heading
-        py="16px"
-        pl="16px"
-        fontSize="14px"
-        textTransform="uppercase"
-        as="h6"
-        variant="h6"
-        color="heading-navy-fg"
-      >
-        On this page
-      </Heading>
-      {page.blocks.map((block, i) => {
-        if (block.type === "page_header") return;
-        if ("title" in block) {
-          return (
-            <Toc.Item key={i}>
-              <a href={`#toc-${slugify(block.title)}`}>{block.title}</a>
-            </Toc.Item>
-          );
-        } else if ("heading" in block && block.heading != null) {
-          return (
-            <Toc.Item key={i}>
-              <a href={`#toc-${slugify(block.heading)}`}>{block.heading}</a>
-            </Toc.Item>
-          );
-        } else if (block.type === "markdown") {
-          return (
-            <ReactMarkdown
-              key={i}
-              allowedElements={["h2", "h3"]}
-              components={{
-                h2: (props) => {
-                  return (
-                    <Toc.Item>
-                      <a
-                        key={i}
-                        href={`#toc-${slugify(props.children.join(" "))}`}
-                      >
-                        {props.children}
-                      </a>
-                    </Toc.Item>
-                  );
-                },
-                h3: (props) => {
-                  console.log(props.children);
-                  return (
-                    <Toc.Item subItem>
-                      <a
-                        key={i}
-                        href={`#toc-${slugify(props.children.join(" "))}`}
-                      >
-                        {props.children}
-                      </a>
-                    </Toc.Item>
-                  );
-                },
-              }}
-            >
-              {block.body}
-            </ReactMarkdown>
-          );
-        }
-      })}
-    </Toc.Root>
-  );
+interface HeadingData {
+  readonly title: string;
+  readonly level: 2 | 3;
 }
 
-//replace every h tag with a tag
+function pageToTableOfContents(page: PageType): readonly HeadingData[] {
+  const data = page.blocks.flatMap((block) => {
+    if (block.type === "page_header") return [];
+    if ("title" in block) {
+      return {
+        title: block.title,
+        level: 2,
+      };
+    } else if ("heading" in block && block.heading != null) {
+      return {
+        title: block.heading,
+        level: 2,
+      };
+    } else if (block.type === "markdown") {
+      const processor = unified()
+        .use(remarkParse)
+        .use(() => {
+          return (tree: any) => {
+            const typeIndex = new Index("type", tree);
+            const headings = typeIndex.get("heading");
+
+            return headings.map((node: any) => {
+              const textNode = node.children.find((n: any) => {
+                return n.type === "text";
+              });
+
+              return {
+                title: textNode?.value ?? "",
+                level: 2,
+              };
+            });
+          };
+        });
+
+      const node = processor.parse(block.body);
+      const tree = processor.runSync(node);
+
+      return tree;
+    }
+
+    return [];
+  });
+
+  return data;
+}
