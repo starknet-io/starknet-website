@@ -39,7 +39,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
-          <Block key={block.type} block={block} locale={locale} />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </Container>
     );
@@ -66,7 +66,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         headingVariant={block.heading_variant}
       >
         {block.blocks.map((block, i) => (
-          <Block key={block.type} block={block} locale={locale} />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
     );
@@ -75,7 +75,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
       <LinkList heading={block.heading}>
         {block.blocks.map((block, i) => (
           <LinkListItem
-            key={block.type}
+            key={i}
             label={block.label}
             isExternal={block.is_external}
             href={block.href}
@@ -88,7 +88,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <AccordionRoot heading={block.heading}>
         {block.blocks.map((block, i) => (
-          <AccordionItem key={block.type} label={block.label}>
+          <AccordionItem key={i} label={block.label}>
             <MarkdownBlock body={block.body} />
           </AccordionItem>
         ))}
@@ -118,7 +118,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <BlockGrouping>
         {block.blocks.map((block, i) => (
-          <Block key={block.type} block={block} locale={locale} />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </BlockGrouping>
     );
