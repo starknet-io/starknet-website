@@ -5,7 +5,13 @@ process.chdir(path.resolve(__dirname, "../../.."));
 import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
 
-import { getPages, getPosts, getSimpleData, updateBlocks } from "./data";
+import {
+  getPages,
+  getPosts,
+  getSimpleData,
+  getTutorials,
+  updateBlocks,
+} from "./data";
 
 const dotenvFiles = [".env.local", ".env"];
 
@@ -26,7 +32,7 @@ try {
     pages,
     await getSimpleData("jobs"),
     await getSimpleData("events"),
-    await getSimpleData("tutorials"),
+    await getTutorials(),
   ] as const;
 
   for (const { resourceName, filenameMap } of resources) {
