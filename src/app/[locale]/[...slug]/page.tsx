@@ -7,13 +7,10 @@ import {
   Flex,
   Box,
 } from "../../../libs/chakra-ui";
-import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
 import { Page as PageType } from "src/data/pages";
-import { slugify } from "src/utils/utils";
-import { Heading } from "@ui/Typography/Heading";
 import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";

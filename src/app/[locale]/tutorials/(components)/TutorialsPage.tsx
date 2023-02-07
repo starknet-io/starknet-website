@@ -6,9 +6,7 @@ import {
   Breadcrumb,
   Box,
   Button,
-  Flex,
   VStack,
-  GridItem,
   HStack,
   SimpleGrid,
 } from "@chakra-ui/react";
@@ -212,38 +210,38 @@ function CustomCourse({ params }: Pick<Props, "params">) {
   );
 }
 
-function CustomTags() {
-  const { items, refine } = useRefinementList({
-    attribute: "tags",
-    sortBy: ["name:asc"],
-  });
-  console.log("tags", items);
+// function CustomTags() {
+//   const { items, refine } = useRefinementList({
+//     attribute: "tags",
+//     sortBy: ["name:asc"],
+//   });
+//   console.log("tags", items);
 
-  return (
-    <Box mt={8} maxHeight="300px" overflowY="auto">
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
-        Tags
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => {
-          let label = titleCase(item.label);
+//   return (
+//     <Box mt={8} maxHeight="300px" overflowY="auto">
+//       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+//         Tags
+//       </Heading>
+//       <VStack dir="column" alignItems="stretch">
+//         {items.map((item, i) => {
+//           let label = titleCase(item.label);
 
-          return (
-            <Button
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
-              key={i}
-              justifyContent="flex-start"
-            >
-              {label}
-            </Button>
-          );
-        })}
-      </VStack>
-    </Box>
-  );
-}
+//           return (
+//             <Button
+//               size="sm"
+//               variant={item.isRefined ? "filterActive" : "filter"}
+//               onClick={() => refine(item.value)}
+//               key={i}
+//               justifyContent="flex-start"
+//             >
+//               {label}
+//             </Button>
+//           );
+//         })}
+//       </VStack>
+//     </Box>
+//   );
+// }
 
 type Tutorial = {
   readonly id?: string;
@@ -264,12 +262,11 @@ type HitProps = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  console.log(hits);
 
   return (
     <>
       <SimpleGrid minChildWidth="280px" spacing="16px">
-        {hits.map((hit, i) => {
+        {hits.map((hit) => {
           const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
           // if (hit.difficulty) tags.push(hit.difficulty);

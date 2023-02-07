@@ -1,5 +1,3 @@
-import { PageHeaderBlock } from "./../blocks/PageHeaderBlock";
-import { AccordionItem } from "./../blocks/AccordionBlock";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
 import { LinkData } from "./settings/main-menu";
