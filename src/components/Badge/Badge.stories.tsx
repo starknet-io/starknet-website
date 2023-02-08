@@ -23,4 +23,3 @@ export const Primary = () => (
     </Wrap>
   </ThemeProvider>
 );
-Primary.storyName = "Primary";

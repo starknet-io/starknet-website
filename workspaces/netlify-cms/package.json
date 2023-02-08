@@ -9,14 +9,14 @@
     "build": "parcel build"
   },
   "dependencies": {
-    "@parcel/transformer-yaml": "^2.8.2",
+    "@parcel/transformer-yaml": "^2.8.3",
     "@types/uuid": "^9.0.0",
     "netlify-cms-app": "^2.15.72",
     "netlify-cms-core": "^2.55.2",
     "netlify-cms-lib-widgets": "^1.8.1",
     "netlify-cms-ui-default": "^2.15.5",
     "netlify-cms-widget-markdown": "^2.15.1",
-    "parcel": "^2.8.2",
+    "parcel": "^2.8.3",
     "path-browserify": "^1.0.1",
     "uuid": "^9.0.0"
   }
