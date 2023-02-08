@@ -1,6 +1,6 @@
 id: af8f2194-ee5e-4c31-a495-8767dc66d444
 post_type: article
-title: Improving Security and User Experience for Mainstream Crypto Adoption
+title: Account Abstraction
 published_date: 2023-01-23T00:00:00+00:00
 time_to_consume: 5 min read
 image: /assets/1_g1jhsyeqe49zqrxbdbgddw-1.png
@@ -9,9 +9,8 @@ topic:
   - account-abstraction
   - starknet
   - ethereum
-short_desc: "Technological innovation in blockchain has flourished over the last
-  few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge
-  technological achievements. "
+  - 266fa988-350c-4842-b74e-379068ddcf34
+short_desc: Improving security and user experience for mainstream crypto adoption
 blocks:
   - type: markdown
     body: >-
