@@ -1,12 +1,14 @@
 id: how_starknet_is_revolutionizing_crypto_signing
 post_type: article
-title: How StarkNet is revolutionizing crypto signing
+title: How Starknet is Revolutionizing Crypto Signing
 published_date: 2022-10-01T00:00:00+00:00
 time_to_consume: 6 min read
 image: /assets/blog1.webp
 category: engineering
 topic:
   - account-abstraction
+  - 266fa988-350c-4842-b74e-379068ddcf34
+  - starknet
 short_desc: >-
   Out with the complex keys, in with face ID. A case study on Account
   Abstraction.
