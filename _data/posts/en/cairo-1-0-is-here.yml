@@ -1,6 +1,6 @@
 id: 04a34330-8fc2-4718-b1b5-206c0cb5273b
 post_type: article
-title: Cairo 1.0 is Here
+title: Cairo 1.0 is here
 published_date: 2023-01-05T00:00:00+00:00
 time_to_consume: 3 min read
 image: /assets/1_fys2czk_3pogfrhnbsmziw-1.png
@@ -9,10 +9,9 @@ topic:
   - starknet
   - ethereum
   - cairo
-short_desc: We are excited to announce that the first public version of Cairo
-  1.0 is now available. This marks a major milestone in the evolution of Cairo,
-  which was first introduced in 2020 as a Turing-complete programming language
-  for efficiently writing STARK-provable programs.
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: Or, as the ancient Egyptians would say, ‘Hieroglyphics just got a
+  whole lot easier’
 blocks:
   - type: markdown
     body: >-
