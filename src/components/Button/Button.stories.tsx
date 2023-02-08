@@ -19,4 +19,3 @@ export const Primary = () => (
     </HStack>
   </ThemeProvider>
 );
-Primary.storyName = "Primary";
