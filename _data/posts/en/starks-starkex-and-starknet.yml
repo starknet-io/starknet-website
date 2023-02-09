@@ -9,8 +9,8 @@ topic:
   - starknet
   - ethereum
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 8930f558-6756-4e54-93e6-349ca99c158e
   - 4e28457a-74a1-4570-88ec-6ef5817be14f
+  - 9209a571-c351-4a00-92d3-a0139d55cdd3
 short_desc: TARKs (Scalable, Transparent ARgument of Knowledge) are a proof
   system that enables the proving and verification of computations. It allows
   processing a big computation, generating a proof for the computation’s
