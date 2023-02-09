@@ -25,6 +25,11 @@ import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Topic } from "src/data/topics";
+import {
+  usePagination,
+  UsePaginationProps,
+} from 'react-instantsearch-hooks-web';
+
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -90,6 +95,7 @@ export function PostsPage({
           main={
             <Box>
               <CustomHits />
+              <CustomPagination />
             </Box>
           }
         />
@@ -97,6 +103,29 @@ export function PostsPage({
     </Box>
   );
 }
+
+function CustomPagination(props: UsePaginationProps) {
+  const { canRefine, pages, refine, createURL } = usePagination(props);
+
+  return (
+    <ul>
+      {pages.map((page) => (
+        <li key={page}>
+          <a
+            href={createURL(page)}
+            onClick={(event) => {
+              event.preventDefault();
+              refine(page);
+            }}
+          >
+            {page + 1}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function CustomTopics({ topics }: Pick<Props, "topics">) {
   const router = useRouter();
   const pathname = usePathname()!;

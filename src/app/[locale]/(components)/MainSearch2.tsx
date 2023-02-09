@@ -138,94 +138,97 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
       detachedMediaQuery=""
       openOnFocus={true}
       plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
-      getSources={({ query }) => [
-        {
-          sourceId: "posts",
+      getSources={({ query }) => {
+        if (!query) return []
 
-          getItems() {
-            return getAlgoliaResults({
-              searchClient: data.searchClient,
+        return [
+          {
+            sourceId: "posts",
+            getItems() {
+              return getAlgoliaResults({
+                searchClient: data.searchClient,
 
-              queries: [
-                {
-                  params: {
-                    facetFilters: [`locale:${locale}`],
-                    hitsPerPage: 5,
+                queries: [
+                  {
+                    params: {
+                      facetFilters: [`locale:${locale}`],
+                      hitsPerPage: 5,
+                    },
+                    indexName: "web_posts_dev",
+                    query,
                   },
-                  indexName: "web_posts_dev",
-                  query,
-                },
-              ],
-            });
-          },
-          templates: {
-            header() {
-              return (
-                <Fragment>
-                  <span className="aa-SourceHeaderTitle">Posts</span>
-                </Fragment>
-              );
+                ],
+              });
             },
-            item: PostItem,
-          },
-        },
-        {
-          sourceId: "pages",
-          getItems() {
-            return getAlgoliaResults({
-              searchClient: data.searchClient,
-              queries: [
-                {
-                  params: {
-                    facetFilters: [`locale:${locale}`],
-                    hitsPerPage: 5,
-                  },
-                  indexName: "web_pages_dev",
-                  query,
-                },
-              ],
-            });
-          },
-          templates: {
-            header() {
-              return (
-                <Fragment>
-                  <span className="aa-SourceHeaderTitle">Pages</span>
-                </Fragment>
-              );
+            templates: {
+              header() {
+                return (
+                  <Fragment>
+                    <span className="aa-SourceHeaderTitle">Posts</span>
+                  </Fragment>
+                );
+              },
+              item: PostItem,
             },
-            item: PageItem,
           },
-        },
-        {
-          sourceId: "docs",
-          getItems() {
-            return getAlgoliaResults({
-              searchClient: data.searchClient,
-              queries: [
-                {
-                  params: {
-                    hitsPerPage: 5,
+          {
+            sourceId: "pages",
+            getItems() {
+              return getAlgoliaResults({
+                searchClient: data.searchClient,
+                queries: [
+                  {
+                    params: {
+                      facetFilters: [`locale:${locale}`],
+                      hitsPerPage: 5,
+                    },
+                    indexName: "web_pages_dev",
+                    query,
                   },
+                ],
+              });
+            },
+            templates: {
+              header() {
+                return (
+                  <Fragment>
+                    <span className="aa-SourceHeaderTitle">Pages</span>
+                  </Fragment>
+                );
+              },
+              item: PageItem,
+            },
+          },
+          {
+            sourceId: "docs",
+            getItems() {
+              return getAlgoliaResults({
+                searchClient: data.searchClient,
+                queries: [
+                  {
+                    params: {
+                      hitsPerPage: 5,
+                    },
 
-                  indexName: "starknet-docs-dev",
-                  query,
-                },
-              ],
-            });
-          },
-          templates: {
-            header() {
-              return (
-                <Fragment>
-                  <span className="aa-SourceHeaderTitle">Documentation</span>
-                </Fragment>
-              );
+                    indexName: "starknet-docs-dev",
+                    query,
+                  },
+                ],
+              });
             },
-            item: DocsItem,
+            templates: {
+              header() {
+                return (
+                  <Fragment>
+                    <span className="aa-SourceHeaderTitle">Documentation</span>
+                  </Fragment>
+                );
+              },
+              item: DocsItem,
+            },
           },
-        },
-      ]}
+        ]
+      }}
     />
   );
 }
