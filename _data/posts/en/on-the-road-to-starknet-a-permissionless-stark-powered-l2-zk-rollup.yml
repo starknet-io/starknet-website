@@ -10,6 +10,7 @@ topic:
   - starknet
   - zk-proofs
   - decentralization
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: StarkWare is building StarkNet, a decentralized, permissionless and
   censorship-resistant STARK-powered L2 ZK-Rollup that supports
   general-computation over Ethereum. It is based on the Turing-complete Cairo
