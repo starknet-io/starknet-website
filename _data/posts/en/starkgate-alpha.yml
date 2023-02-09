@@ -8,7 +8,9 @@ category: engineering
 topic:
   - starknet
   - ethereum
-  - zk-proofs
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: Excitement! We are thrilled to release StarkGate Alpha, the first
   version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet
   deployment to follow soon.
