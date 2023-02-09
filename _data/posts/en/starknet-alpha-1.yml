@@ -8,12 +8,9 @@ category: engineering
 topic:
   - ethereum
   - starknet
-  - zk-proofs
-short_desc: At the beginning of the year, we announced that StarkWare is
-  building StarkNet, a permissionless decentralized STARK-based ZK-Rollup¹
-  operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve
-  unlimited scale for its computation — without compromising Ethereum’s
-  composability and security.
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+short_desc: Featuring L1 -> L2 interaction and on-chain data
 blocks:
   - type: markdown
     body: >-
