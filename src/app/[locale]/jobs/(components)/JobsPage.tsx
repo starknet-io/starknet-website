@@ -87,7 +87,7 @@ function CustomRole() {
     attribute: "job.role",
     sortBy: ["name:asc"],
   });
-  console.log("Role", items);
+
   return (
     <Box>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -115,7 +115,7 @@ function CustomType() {
     attribute: "job.type",
     sortBy: ["name:asc"],
   });
-  console.log("type", items);
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -167,7 +167,6 @@ type HitProps = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  console.log(hits);
 
   return (
     <>
@@ -180,7 +179,7 @@ function CustomHits() {
           return (
             <ListCard
               variant="job"
-              key={hit.contact.name}
+              key={i}
               startDateTime={hit.contact.name}
               image={hit.contact.logo}
               title={hit.job.title}

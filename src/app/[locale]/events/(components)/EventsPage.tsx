@@ -90,7 +90,7 @@ function CustomLocation() {
     attribute: "location",
     sortBy: ["name:asc"],
   });
-  console.log("location", items);
+
   return (
     <Box>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -118,7 +118,7 @@ function CustomType() {
     attribute: "type",
     sortBy: ["name:asc"],
   });
-  console.log("type", items);
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -154,7 +154,6 @@ type HitProps = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  console.log("hits", hits);
 
   return (
     <>

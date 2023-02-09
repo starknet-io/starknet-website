@@ -92,7 +92,7 @@ function CustomDifficulty() {
     attribute: "difficulty",
     sortBy: ["name:asc"],
   });
-  console.log("Role", items);
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -123,7 +123,7 @@ function CustomType() {
     attribute: "type",
     sortBy: ["name:asc"],
   });
-  console.log("type", items);
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -215,7 +215,6 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 //     attribute: "tags",
 //     sortBy: ["name:asc"],
 //   });
-//   console.log("tags", items);
 
 //   return (
 //     <Box mt={8} maxHeight="300px" overflowY="auto">

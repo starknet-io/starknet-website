@@ -8,7 +8,6 @@ export interface Props {
 }
 
 export const SubNavBlog = ({ categories }: Props) => {
-  console.log(categories);
   return (
     <SubNav.Root>
       {categories.map((category) => (

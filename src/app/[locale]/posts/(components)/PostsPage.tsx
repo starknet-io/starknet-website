@@ -146,7 +146,7 @@ function CustomCategories({
   params,
 }: Pick<Props, "categories" | "params">) {
   const router = useRouter();
-  console.log(params);
+
   return (
     <Flex
       as="ul"
@@ -233,7 +233,7 @@ const categories = {
 };
 function CustomHits() {
   const { hits }: HitProps = useHits();
-  console.log(hits);
+
   return (
     <>
       <SimpleGrid minChildWidth="250px" spacing="16px">

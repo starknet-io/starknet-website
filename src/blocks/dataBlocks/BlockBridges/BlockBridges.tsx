@@ -11,7 +11,7 @@ export default async function BlockBridges({
 }: //@ts-expect-error
 Props): JSX.Element {
   const bridges = await getBridges(locale);
-  console.log("no of items", noOfItems);
+
   return (
     <Box>
       <Container maxW="1062px">

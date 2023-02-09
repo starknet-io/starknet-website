@@ -25,8 +25,7 @@ import { Page } from "src/data/pages";
 import { Post } from "src/data/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
-import { Box, Icon } from "@chakra-ui/react";
-import { HiPaperAirplane } from "react-icons/hi2";
+import { Box } from "@chakra-ui/react";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>,
@@ -216,8 +215,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
             });
           },
           templates: {
-            header(data) {
-              console.log(data);
+            header() {
               return (
                 <Fragment>
                   <span className="aa-SourceHeaderTitle">Documentation</span>

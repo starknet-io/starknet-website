@@ -5,15 +5,11 @@ import {
   Box,
   HStack,
   Image as ChakraImage,
-  Link,
-  Stack,
   Icon,
-  useColorModeValue as mode,
   Flex,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
-import { Heading } from "@ui/Typography/Heading";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 
 type RootProps = {
@@ -75,7 +71,6 @@ const Body = ({ children }: BodyProps) => {
 };
 
 const Category = ({ category }: any) => {
-  console.log("category", category);
   return (
     <Box pb={3}>
       <Badge variant={category?.id}>{category?.label}</Badge>
@@ -116,7 +111,6 @@ const Footer = ({
   publishedAt = "N/A",
   timeToConsume = "5min read",
 }: FooterProps) => {
-  console.log(postType);
   const renderPostTypeIcon = () => {
     switch (postType) {
       case "article":
