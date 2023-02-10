@@ -9,14 +9,16 @@ import {
   VStack,
   HStack,
   SimpleGrid,
+  Divider,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
+  useInfiniteHits,
 } from "src/libs/react-instantsearch-hooks-web";
-import { useHits, useRefinementList } from "react-instantsearch-hooks";
+import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import * as GridCard from "@ui/Card/GridCard";
@@ -256,11 +258,8 @@ type Tutorial = {
   readonly filepath: string;
 };
 
-type HitProps = {
-  readonly hits: readonly Tutorial[];
-};
 function CustomHits() {
-  const { hits }: HitProps = useHits();
+  const { hits, showMore, isLastPage } = useInfiniteHits<Tutorial>();
 
   return (
     <>
@@ -316,13 +315,15 @@ function CustomHits() {
           </ArticleCard.Root>
         ))} */}
 
-      {/* <HStack mt="24">
-        <Divider />
-        <Button flexShrink={0} variant="secondary">
-          View More
-        </Button>
-        <Divider />
-      </HStack> */}
+      {!isLastPage && (
+        <HStack mt="24">
+          <Divider />
+          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+            View More
+          </Button>
+          <Divider />
+        </HStack>
+      )}
     </>
   );
 }

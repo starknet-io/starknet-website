@@ -10,6 +10,8 @@ import {
   Wrap,
   Container,
   Flex,
+  HStack,
+  Divider,
 } from "@chakra-ui/react";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -18,18 +20,13 @@ import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-  useHits,
   useRefinementList,
 } from "src/libs/react-instantsearch-hooks-web";
 import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Topic } from "src/data/topics";
-import {
-  usePagination,
-  UsePaginationProps,
-} from 'react-instantsearch-hooks-web';
-
+import { useInfiniteHits } from "react-instantsearch-hooks-web";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -95,34 +92,11 @@ export function PostsPage({
           main={
             <Box>
               <CustomHits />
-              <CustomPagination />
             </Box>
           }
         />
       </InstantSearch>
     </Box>
-  );
-}
-
-function CustomPagination(props: UsePaginationProps) {
-  const { canRefine, pages, refine, createURL } = usePagination(props);
-
-  return (
-    <ul>
-      {pages.map((page) => (
-        <li key={page}>
-          <a
-            href={createURL(page)}
-            onClick={(event) => {
-              event.preventDefault();
-              refine(page);
-            }}
-          >
-            {page + 1}
-          </a>
-        </li>
-      ))}
-    </ul>
   );
 }
 
@@ -217,21 +191,19 @@ function CustomCategories({
   );
 }
 
-type HitProps = {
-  readonly hits: readonly {
-    readonly id: string;
-    readonly slug: string;
-    readonly title: string;
-    readonly image: string;
-    readonly category: string;
-    readonly topic: string;
-    readonly short_desc: string;
-    readonly locale: string;
-    readonly filepath: string;
-    readonly post_type: string;
-    readonly time_to_consume: string;
-    readonly published_date: string;
-  }[];
+type Hit = {
+  readonly id: string;
+  readonly slug: string;
+  readonly title: string;
+  readonly image: string;
+  readonly category: string;
+  readonly topic: string;
+  readonly short_desc: string;
+  readonly locale: string;
+  readonly filepath: string;
+  readonly post_type: string;
+  readonly time_to_consume: string;
+  readonly published_date: string;
 };
 
 const categories = {
@@ -261,7 +233,7 @@ const categories = {
   },
 };
 function CustomHits() {
-  const { hits }: HitProps = useHits();
+  const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
 
   return (
     <>
@@ -297,14 +269,15 @@ function CustomHits() {
           );
         })}
       </SimpleGrid>
-
-      {/* <HStack mt="24">
-        <Divider />
-        <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
-          View More
-        </Button>
-        <Divider />
-      </HStack> */}
+      {!isLastPage && (
+        <HStack mt="24">
+          <Divider />
+          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+            View More
+          </Button>
+          <Divider />
+        </HStack>
+      )}
     </>
   );
 }

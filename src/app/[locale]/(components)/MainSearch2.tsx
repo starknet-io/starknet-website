@@ -139,7 +139,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
       openOnFocus={true}
       plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
       getSources={({ query }) => {
-        if (!query) return []
+        if (!query) return [];
 
         return [
           {
@@ -227,7 +227,7 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
               item: DocsItem,
             },
           },
-        ]
+        ];
       }}
     />
   );
