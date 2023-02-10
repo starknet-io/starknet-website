@@ -8,16 +8,17 @@ import {
   Button,
   Flex,
   VStack,
+  HStack,
+  Divider,
 } from "@chakra-ui/react";
-
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
+  useInfiniteHits,
 } from "src/libs/react-instantsearch-hooks-web";
-import { useHits, useRefinementList } from "react-instantsearch-hooks";
-
+import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
@@ -90,7 +91,7 @@ function CustomLocation() {
     attribute: "location",
     sortBy: ["name:asc"],
   });
-  console.log("location", items);
+
   return (
     <Box>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -118,7 +119,7 @@ function CustomType() {
     attribute: "type",
     sortBy: ["name:asc"],
   });
-  console.log("type", items);
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -141,20 +142,17 @@ function CustomType() {
   );
 }
 
-type HitProps = {
-  readonly hits: readonly {
-    readonly start_date: string;
-    readonly end_date?: string;
-    readonly name: string;
-    readonly image: string;
-    readonly description: string;
-    readonly tags: string[];
-    readonly url: string;
-  }[];
+type Hit = {
+  readonly start_date: string;
+  readonly end_date?: string;
+  readonly name: string;
+  readonly image: string;
+  readonly description: string;
+  readonly tags: string[];
+  readonly url: string;
 };
 function CustomHits() {
-  const { hits }: HitProps = useHits();
-  console.log("hits", hits);
+  const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
 
   return (
     <>
@@ -180,6 +178,15 @@ function CustomHits() {
           );
         })}
       </Flex>
+      {!isLastPage && (
+        <HStack mt="24">
+          <Divider />
+          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+            View More
+          </Button>
+          <Divider />
+        </HStack>
+      )}
     </>
   );
 }

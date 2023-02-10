@@ -6,14 +6,10 @@ import {
   ButtonGroup,
   Container,
   useColorMode,
-  StackDivider,
-  Divider,
   Box,
-  Flex,
 } from "src/libs/chakra-ui";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import Link from "next/link";
-
 import {
   HiBars3,
   HiOutlineMoon,
@@ -29,7 +25,7 @@ type NavLayoutProps = {
   onToggleMode?: VoidFunction;
   isMenuOpen: boolean;
   menuButtonRef?: React.RefObject<HTMLButtonElement>;
-  languageSwitcher?: React.ReactElement;
+  languageSwitcher?: React.ReactNode;
   searchArea: React.ReactNode;
 };
 

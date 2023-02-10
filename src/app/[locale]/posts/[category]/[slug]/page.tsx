@@ -43,7 +43,6 @@ export default async function Page({
       <PageLayout
         breadcrumbs={
           <Breadcrumb separator="->">
-            <title>{post.title} - Starknet</title>
             <BreadcrumbItem>
               <BreadcrumbLink fontSize="sm" href="#">
                 <BreadcrumbLink fontSize="sm" href="# " noOfLines={1}>

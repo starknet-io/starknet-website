@@ -8,14 +8,17 @@ import {
   Button,
   Flex,
   VStack,
+  HStack,
+  Divider,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
+  useInfiniteHits,
 } from "src/libs/react-instantsearch-hooks-web";
-import { useHits, useRefinementList } from "react-instantsearch-hooks";
+import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
@@ -87,7 +90,7 @@ function CustomRole() {
     attribute: "job.role",
     sortBy: ["name:asc"],
   });
-  console.log("Role", items);
+
   return (
     <Box>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -115,7 +118,7 @@ function CustomType() {
     attribute: "job.type",
     sortBy: ["name:asc"],
   });
-  console.log("type", items);
+
   return (
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
@@ -159,15 +162,13 @@ interface Job {
   type: string;
 }
 
-type HitProps = {
-  readonly hits: readonly {
-    contact: Contact;
-    job: Job;
-  }[];
+type Hit = {
+  contact: Contact;
+  job: Job;
 };
+
 function CustomHits() {
-  const { hits }: HitProps = useHits();
-  console.log(hits);
+  const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
 
   return (
     <>
@@ -180,7 +181,7 @@ function CustomHits() {
           return (
             <ListCard
               variant="job"
-              key={hit.contact.name}
+              key={i}
               startDateTime={hit.contact.name}
               image={hit.contact.logo}
               title={hit.job.title}
@@ -206,13 +207,15 @@ function CustomHits() {
           </ArticleCard.Root>
         ))} */}
 
-      {/* <HStack mt="24">
-        <Divider />
-        <Button flexShrink={0} variant="secondary">
-          View More
-        </Button>
-        <Divider />
-      </HStack> */}
+      {!isLastPage && (
+        <HStack mt="24">
+          <Divider />
+          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+            View More
+          </Button>
+          <Divider />
+        </HStack>
+      )}
     </>
   );
 }

@@ -13,17 +13,14 @@ import {
   useBreakpointValue,
 } from "src/libs/chakra-ui";
 import * as React from "react";
-
 import { HiGlobeAlt, HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import { Button } from "../../Button";
-
 import { NavLayout } from "./NavLayout";
 
 type Props = {
   desktopNavItems?: React.ReactNode;
-  // rome-ignore lint/suspicious/noExplicitAny: <explanation>
-  mobileNavItems?: any;
-  languageSwitcher?: React.ReactElement;
+  mobileNavItems?: React.ReactNode;
+  languageSwitcher?: React.ReactNode;
   search?: React.ReactNode;
 };
 
@@ -37,6 +34,7 @@ export const NavBar = ({
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const { colorMode, toggleColorMode } = useColorMode();
   const isMobile = useBreakpointValue({ base: true, lg: false });
+
   return (
     <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
       <NavLayout

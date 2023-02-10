@@ -11,7 +11,7 @@ export default async function BlockWallets({
 }: //@ts-expect-error
 Props): JSX.Element {
   const wallets = await getWallets(locale);
-  console.log("no of items", noOfItems);
+
   return (
     <Box>
       <Container maxW="1062px">

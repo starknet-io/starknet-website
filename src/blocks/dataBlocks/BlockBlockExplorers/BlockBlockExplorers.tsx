@@ -11,7 +11,7 @@ export default async function BlockBlockExplorers({
 }: //@ts-expect-error
 Props): JSX.Element {
   const blockExplorers = await getBlockExplorers(locale);
-  console.log("no of items", noOfItems);
+
   return (
     <Box>
       <Container maxW="1062px">

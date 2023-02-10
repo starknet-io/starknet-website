@@ -11,7 +11,7 @@ export default async function BlockDapps({
 }: //@ts-expect-error
 Props): JSX.Element {
   const dapps = await getDapps(locale);
-  console.log("no of items", noOfItems);
+
   return (
     <Box>
       <Container maxW="1062px">
