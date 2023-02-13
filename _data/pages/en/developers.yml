@@ -20,8 +20,6 @@ blocks:
         title: Read the docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        link_label: View
-        link_href: https://docs.starknet.io/
         icon: /assets/docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
@@ -30,8 +28,6 @@ blocks:
         color: blue-default
         title: "Learn through tutorials "
         description: Learn from Starknet's community of developers and technologists.
-        link_label: View
-        link_href: "/tutorials/ "
         icon: /assets/tutorials.svg
         link:
           custom_external_link: ""
@@ -42,8 +38,6 @@ blocks:
         title: "Set up a local environment "
         description: Learn how to get your dev environment up and running so you can
           start building.
-        link_label: View
-        link_href: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
         icon: /assets/local-environment.svg
         link:
           custom_external_link: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
@@ -60,16 +54,12 @@ blocks:
         title: "Starknet ByteSized Series "
         description: Contract writing video series, from simple deployments to L1 to L2
           interactions.
-        link_label: View
-        link_href: /tutorials/
         icon: /assets/orange.svg
         link:
           custom_title: View
           custom_internal_link: /tutorials/bytesized_series
       - type: image_icon_link_card
         color: peach
-        link_href: /tutorials/
-        link_label: View
         title: "Cairo 101 "
         description: Cairo 101 video series, from dev environment to deployment.
         icon: /assets/green.svg
@@ -78,8 +68,6 @@ blocks:
           custom_internal_link: /tutorials/cairo_101
       - type: image_icon_link_card
         color: cyan
-        link_href: /tutorials/
-        link_label: View
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
         icon: /assets/yellow.svg

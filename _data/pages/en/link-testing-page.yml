@@ -33,7 +33,7 @@ blocks:
       page: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
     icon: /assets/7.svg
   - type: image_icon_link_card
-    color: yellow
+    color: blue
     title: Image icon link card Title
     description: This is the description
     link:
