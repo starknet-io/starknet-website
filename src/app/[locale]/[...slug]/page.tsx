@@ -27,10 +27,11 @@ export async function generateStaticParams() {
 
     do {
       const dir = dirs.pop() ?? [];
-
-      for (const file of await fs.readdir(path.join(base, ...dir), {
+      const files = await fs.readdir(path.join(base, ...dir), {
         withFileTypes: true,
-      })) {
+      });
+
+      for (const file of files) {
         if (file.isDirectory()) {
           dirs.push([...dir, file.name]);
         } else if (file.isFile()) {
