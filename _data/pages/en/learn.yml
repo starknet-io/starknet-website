@@ -12,8 +12,9 @@ blocks:
     blocks:
       - type: large_card
         title: Starknet 101
-        link_label: Learn
-        link_href: /learn/
+        link:
+          custom_title: Learn
+          custom_internal_link: /learn/
         description:
           Starknet is a layer-2 network that uses math and cryptography to
           securely scale Ethereum. It is known as a Validity-rollup (or

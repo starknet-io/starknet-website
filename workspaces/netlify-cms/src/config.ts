@@ -188,12 +188,6 @@ const blocks: CmsFieldList["types"] = [
         widget: "object",
         fields: linkFields,
       },
-      {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
-      },
     ],
   },
   {

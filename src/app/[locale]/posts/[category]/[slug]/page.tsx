@@ -21,6 +21,30 @@ import {
   HStack,
 } from "src/libs/chakra-ui";
 import { youtubeVideoIdFromURL } from "src/utils/utils";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
+
+export async function generateStaticParams() {
+  const params = [];
+
+  for (const locale of ["en"]) {
+    const files = await fs.readdir(
+      path.join(process.cwd(), "_data/_dynamic/posts", locale),
+    );
+
+    for (const slug of files) {
+      const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
+
+      params.push({
+        locale,
+        slug: post.slug,
+        category: post.category,
+      });
+    }
+  }
+
+  return params;
+}
 
 export interface Props {
   readonly params: LocaleParams & {
