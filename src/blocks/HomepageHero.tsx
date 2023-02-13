@@ -2,35 +2,31 @@
 import { Box, Button, Flex, HStack, Img, Stack } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import React, { useEffect, useState } from "react";
-import { HiChevronRight } from "react-icons/hi2";
-import { TextCycle } from "@ui/TextCycle";
-
+import React, { useEffect, useRef, useState } from "react";
+import TextScramble, { ScrambleTexts } from "@twistezo/react-text-scramble";
 type Props = {};
 
 export const HomepageHero = (props: Props) => {
   const [messageIndex, setMessageIndex] = useState<number>(0);
-  const welcomeMessage = ["ようこそ", "", "ברוך הבא", "欢迎", "Bienvenue"];
+  const headingRef = useRef();
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     if (messageIndex === welcomeMessage.length - 1) {
-  //       setMessageIndex(0);
-  //     } else {
-  //       setMessageIndex(messageIndex + 1);
-  //     }
-  //   }, 3000);
-
-  //   return () => {
-  //     clearInterval(intervalId);
-  //   };
-  // }, [messageIndex, welcomeMessage]);
+  const phrases: ScrambleTexts = [
+    "Welcome",
+    "ようこそ",
+    "Bienvenu",
+    "স্বাগত",
+    "स्वागत",
+    "ברוך הבא ל",
+    "欢迎",
+    "مرحباً",
+    "Bienvenida",
+  ];
 
   return (
     <Box
       as="section"
-      pt="48px"
-      pb="0px"
+      pt="46px"
+      pb="133px"
       overflow="hidden"
       bg="#eaeaea"
       _dark={{
@@ -88,27 +84,32 @@ export const HomepageHero = (props: Props) => {
         px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
       >
         <Flex
-          align="flex-start"
+          align="flex-end"
           direction={{ base: "column", lg: "row" }}
           justify="space-between"
-          mb="56px"
+          // paddingBottom="33px"
+          // mb="56px"
         >
           <Box flex="1" maxW={{ lg: "xl" }} pt="6" order={{ base: 1, lg: 0 }}>
             <Heading
+              ref={headingRef}
               as="h2"
               variant="h2"
               mt="8"
               fontWeight="extrabold"
-              lineHeight="1.2"
-              fontSize={{
-                base: "56px",
-                md: "80px",
-                lg: "80px",
-                xl: "92px",
-              }}
+              // height="98px"
+              lineHeight="1em"
+              overflow="hidden"
+              // letterSpacing="1.8px"
+              fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"
             >
-              {welcomeMessage[messageIndex]}
+              <TextScramble
+                texts={phrases}
+                pauseTime={5000}
+                // nextLetterSpeed={150}
+                // letterSpeed={15}
+              />
             </Heading>
 
             <Heading
