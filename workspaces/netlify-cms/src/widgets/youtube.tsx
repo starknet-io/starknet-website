@@ -14,11 +14,11 @@ function youtubeVideoIdFromURL(url: string): string | undefined {
   }
 }
 
-// const apiURL = "https://starknet-website.vercel.app/api/";
-const apiURL = "http://localhost:3000/api/";
+const API_BASE_URL =
+  process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";
 
 function Control(props: CmsWidgetControlProps & any) {
-  const value = props.value ? props.value.url : "";
+  const value = props.value?.url ?? "";
   const title = props.value?.video?.snippet?.title ?? null;
 
   const [fetching, setFetching] = useState<string | null>(null);
@@ -39,17 +39,18 @@ function Control(props: CmsWidgetControlProps & any) {
         setFetching(id);
 
         const res = await fetch(
-          `${apiURL}youtube?id=${encodeURIComponent(id)}`,
+          `${API_BASE_URL}/youtube?id=${encodeURIComponent(id)}`,
         );
 
-        const data = await res.json();
+        const { data, message } = await res.json();
 
-        if (data.videos[0] == null) throw new Error("Video not found!");
+        if (message != null) throw new Error(message);
+        if (data == null) throw new Error("Video not found!");
 
         setFetching((fetching) => {
           if (fetching !== id) return fetching;
 
-          props.onChange({ ...(props.value ?? {}), video: data.videos[0] });
+          props.onChange({ ...(props.value ?? {}), video: data });
 
           return null;
         });
@@ -73,7 +74,6 @@ function Control(props: CmsWidgetControlProps & any) {
         }}
         type="text"
         id={props.forID}
-        disabled={fetching != null}
         value={value}
         onChange={(e) => {
           props.onChange({ ...(props.value ?? {}), url: e.target.value });

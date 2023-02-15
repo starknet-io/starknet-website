@@ -1,4 +1,9 @@
-import { CmsConfig, CmsField, CmsFieldList, CmsFieldMeta } from "netlify-cms-core";
+import {
+  CmsConfig,
+  CmsField,
+  CmsFieldList,
+  CmsFieldMeta,
+} from "netlify-cms-core";
 
 const locale = "en";
 
@@ -1339,7 +1344,7 @@ export const config: CmsConfig = {
               label: "Youtube",
               name: "youtube_link",
               widget: "youtube",
-            } as CmsFieldMeta
+            } as CmsFieldMeta,
           ],
         },
       ],

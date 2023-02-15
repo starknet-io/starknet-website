@@ -2,14 +2,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { google } from "googleapis";
 import Cors from "cors";
 
-// Initializing the cors middleware
-// You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const cors = Cors({
   methods: ["POST", "GET", "HEAD"],
+  origin: ["https://starknet-website-cms.netlify.app", "http://localhost:1234"],
 });
 
-// Helper method to wait for a middleware to execute before continuing
-// And to throw an error when an error happens in a middleware
 function runMiddleware(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -30,7 +27,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  // Run the middleware
   await runMiddleware(req, res, cors);
 
   const youtube = google.youtube({
@@ -38,12 +34,26 @@ export default async function handler(
     auth: process.env.YOUTUBE_API_KEY,
   });
 
+  if (typeof req.query.id !== "string") {
+    res.status(422).json({ message: "Invalid id provided!" });
+
+    return;
+  }
+
   const { data } = await youtube.videos.list({
-    id: (req.query.id as string).split(","),
+    id: [req.query.id],
     part: ["snippet"],
   });
 
-  const videos = data.items;
+  const item = data?.items?.[0];
 
-  res.status(200).json({ videos });
+  if (item == null) {
+    res.status(404).json({ message: "Video not found!" });
+
+    return;
+  }
+
+  res.status(200).json({
+    data: item,
+  });
 }
