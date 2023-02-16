@@ -20,7 +20,7 @@ export const Intro = () => {
 
   const loopRef = useRef<number>();
 
-  const { ref, replay } = useScramble({
+  const { ref } = useScramble({
     text: texts[index],
     speed: 0.5,
     onAnimationStart: () => {
@@ -39,12 +39,11 @@ export const Intro = () => {
     <Heading
       aria-label={texts[index]}
       ref={ref}
-      onClick={replay}
       as="h2"
       variant="h2"
       mt="8"
       fontWeight="extrabold"
-      lineHeight={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
+      lineHeight={{ base: "1.2em" }}
       overflow="hidden"
       fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
       color="heading-navy-fg"

@@ -115,7 +115,7 @@ export const HomepageHero = (props: Props) => {
           />
           <Img
             position="relative"
-            marginRight={{ base: "-200px", lg: "-5rem" }}
+            marginRight={{ base: "-10px", lg: "-5rem" }}
             right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
             width={{ base: "100%", lg: "35rem" }}
             src="/assets/home/hero_cropped2.png"
