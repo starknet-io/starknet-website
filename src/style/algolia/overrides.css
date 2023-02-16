@@ -288,7 +288,7 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
 }
 
 .aa-ItemActionButtonDanger:hover svg{
-  fill: var(--color-fury-red);
+  fill: #ff4557;
 }
 
 .aa-ItemLink:hover{
