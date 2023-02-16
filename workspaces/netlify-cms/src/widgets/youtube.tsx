@@ -27,7 +27,7 @@ const API_BASE_URL =
 
 function Control(props: CmsWidgetControlProps & any) {
   const valueData =
-    "toJSON" in props.value ? props.value.toJSON() : props.value;
+    props.value && "toJSON" in props.value ? props.value.toJSON() : props.value;
   const value = valueData?.url ?? "";
   const title = valueData?.data?.snippet?.title ?? null;
 
