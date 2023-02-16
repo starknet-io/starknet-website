@@ -3,9 +3,78 @@ post_type: video
 title: "Community Call #1"
 published_date: 2021-11-08T00:00:00+00:00
 time_to_consume: 40 min watch
-video_link: https://youtu.be/gHoaoRxdJ_4
 image: /assets/cc01.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: "Starknet's community call #1"
+video:
+  url: https://youtu.be/gHoaoRxdJ_4
+  id: gHoaoRxdJ_4
+  data:
+    kind: youtube#video
+    etag: THjjY-xzgWhtqAjM5kfgIzWclko
+    id: gHoaoRxdJ_4
+    snippet:
+      publishedAt: 2021-11-24T16:37:53Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community call #1"
+      description: |-
+        StarkNet's community call #1
+        00:00 Call introduction
+        00:38 Upcoming events
+        01:47 Call agenda and community tools to come
+        06:31 Louis on dAMM
+        09:31 Account abstraction on Starknet
+        14:11 Quantum resistance in Starks
+        19:00 Decentralisation in StarkNet
+        23:45 StarkNet and Tally
+        25:54 VeeDo
+        28:10 Builtins
+        29:05 Solidity to Cairo
+        31:10 Live questions
+        32:10 StarkVote
+        36:30 Conclusion
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/gHoaoRxdJ_4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/gHoaoRxdJ_4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/gHoaoRxdJ_4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/gHoaoRxdJ_4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/gHoaoRxdJ_4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community call #1"
+        description: |-
+          StarkNet's community call #1
+          00:00 Call introduction
+          00:38 Upcoming events
+          01:47 Call agenda and community tools to come
+          06:31 Louis on dAMM
+          09:31 Account abstraction on Starknet
+          14:11 Quantum resistance in Starks
+          19:00 Decentralisation in StarkNet
+          23:45 StarkNet and Tally
+          25:54 VeeDo
+          28:10 Builtins
+          29:05 Solidity to Cairo
+          31:10 Live questions
+          32:10 StarkVote
+          36:30 Conclusion
+      defaultAudioLanguage: en-US

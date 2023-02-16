@@ -3,10 +3,51 @@ post_type: video
 title: "Community Call #12 | Starknet’s decentralization"
 published_date: 2022-04-12T14:04:24.552Z
 time_to_consume: 68 min watch
-video_link: https://youtu.be/rQd6xXIQ43g
 image: /assets/cc12.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Join us for our 12th Community Call! Today we are going to have a
   presentation about Starknet’s decentralization by Ohad.
+video:
+  url: https://youtu.be/rQd6xXIQ43g
+  id: rQd6xXIQ43g
+  data:
+    kind: youtube#video
+    etag: 9yUUey31ZkDxOnKOjc82wasrcy0
+    id: rQd6xXIQ43g
+    snippet:
+      publishedAt: 2022-04-13T01:45:13Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #12 | StarkNet’s decentralization"
+      description: Join us for our 12th Community Call! Today we are going to have a
+        presentation about StarkNet’s decentralization by Ohad.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/rQd6xXIQ43g/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/rQd6xXIQ43g/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/rQd6xXIQ43g/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/rQd6xXIQ43g/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/rQd6xXIQ43g/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #12 | StarkNet’s decentralization"
+        description: Join us for our 12th Community Call! Today we are going to have a
+          presentation about StarkNet’s decentralization by Ohad.
+      defaultAudioLanguage: en-US

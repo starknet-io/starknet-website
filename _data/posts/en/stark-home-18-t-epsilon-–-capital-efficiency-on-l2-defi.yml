@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 18: T+epsilon – Capital Efficiency on L2-DeFi"
 published_date: 2021-02-12T15:38:30.955Z
 time_to_consume: 83 min watch
-video_link: https://youtu.be/vDiMYP8vc60
 image: /assets/starkhome18.png
 category: stark-math
 topic:
   - starknet
 short_desc: T+epsilon - capital efficiency on L2-DeFi
+video:
+  url: https://youtu.be/vDiMYP8vc60
+  id: vDiMYP8vc60
+  data:
+    kind: youtube#video
+    etag: w9cnEoVwMwL1AYJR7nLrhGZkK8g
+    id: vDiMYP8vc60
+    snippet:
+      publishedAt: 2021-02-12T05:41:05Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 18: T+epsilon - Capital Efficiency on L2-DeFi"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/vDiMYP8vc60/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/vDiMYP8vc60/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/vDiMYP8vc60/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/vDiMYP8vc60/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/vDiMYP8vc60/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 18: T+epsilon - Capital Efficiency on L2-DeFi"
+        description: ""
+      defaultAudioLanguage: en-US

@@ -1,4 +1,9 @@
-import { CmsConfig, CmsField, CmsFieldList } from "netlify-cms-core";
+import {
+  CmsConfig,
+  CmsField,
+  CmsFieldList,
+  CmsFieldMeta,
+} from "netlify-cms-core";
 
 const locale = "en";
 
@@ -187,12 +192,6 @@ const blocks: CmsFieldList["types"] = [
         name: "link",
         widget: "object",
         fields: linkFields,
-      },
-      {
-        name: "link_label",
-      },
-      {
-        name: "link_href",
       },
     ],
   },
@@ -622,11 +621,11 @@ export const config: CmsConfig = {
           label: "Time to read / watch / listen (in minutes)",
         },
         {
-          name: "video_link",
+          name: "video",
           label: "Video - youtube link",
-          widget: "string",
+          widget: "youtube",
           required: false,
-        },
+        } as CmsFieldMeta,
         {
           name: "image",
           label: "Featured Image",
@@ -1334,19 +1333,6 @@ export const config: CmsConfig = {
               label: "Description",
               name: "description",
             },
-            // {
-            //   label: "Youtube",
-            //   name: "youtube_link",
-            //   widget: 'youtube' as 'object',
-            //   fields: [
-            //     {
-            //       name: 'title'
-            //     },
-            //     {
-            //       name: 'description'
-            //     }
-            //   ]
-            // },
           ],
         },
       ],

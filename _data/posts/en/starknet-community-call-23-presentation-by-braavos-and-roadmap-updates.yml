@@ -3,7 +3,52 @@ post_type: video
 title: "Starknet Community Call #23 | Presentation by Braavos and roadmap updates"
 published_date: 2022-09-20T11:06:23.814Z
 time_to_consume: 55 min watch
-video_link: https://youtu.be/Nx9mycAXcBg
+video:
+  url: https://youtu.be/Nx9mycAXcBg
+  id: Nx9mycAXcBg
+  data:
+    kind: youtube#video
+    etag: qa1CE70mSw5JeAB_7VUcup5dP5g
+    id: Nx9mycAXcBg
+    snippet:
+      publishedAt: 2022-09-21T01:30:00Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
+        updates"
+      description: |-
+        Join us for StarkNet's community call.
+        We will have a presentation by Braavos and talk about roadmap updates.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Nx9mycAXcBg/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Nx9mycAXcBg/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Nx9mycAXcBg/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Nx9mycAXcBg/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Nx9mycAXcBg/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
+          updates"
+        description: |-
+          Join us for StarkNet's community call.
+          We will have a presentation by Braavos and talk about roadmap updates.
+      defaultAudioLanguage: en-US
 image: /assets/cc23.jpg
 category: community-calls
 topic:

@@ -18,8 +18,9 @@ blocks:
     blocks:
       - type: large_card
         title: Community
-        link_label: Get involved
-        link_href: /community/
+        link:
+          custom_title: Get involved
+          custom_internal_link: /community
         description: "Starknet sits on top of Ethereum as a layer 2 network. It uses
           technology called “STARK Proofs” to securely compress huge amounts of
           transactions for Ethereum. "
@@ -29,15 +30,17 @@ blocks:
         size: sm
         title: "Community led. "
         description: This website is a community powered guide to the Starknet ecosystem.
-        link_label: Get involved
-        link_href: /community
+        link:
+          custom_title: Get involved
+          custom_internal_link: /community
       - type: large_card
         title: What do Ethereum + Starknet unlock?
         description: "Together the networks unlock Ethereum’s vision for a fairer and
           more open internet. Decentralised financial systems. Digital assets.
           Trustless systems. "
-        link_label: What is now possible
-        link_href: /what-is-starknet/
+        link:
+          custom_title: What is now possible
+          custom_internal_link: /what-is-starknet/
         image: /assets/cleanshot-2023-01-17-at-14.00.56-2x.png
         orientation: left
   - type: flex_layout
@@ -50,14 +53,16 @@ blocks:
       - type: icon_link_card
         color: orange
         title: Unlimited scale
-        link_label: Learn
-        link_href: /learn/
+        link:
+          custom_title: Learn
+          custom_internal_link: /learn
         icon: /assets/unlimited_scale.svg
       - type: icon_link_card
         color: green
         title: On-chain computation
-        link_label: Learn
-        link_href: /learn/
+        link:
+          custom_title: Learn
+          custom_internal_link: /learn
         icon: /assets/on-chain-computation.svg
   - type: markdown
     body: >-
@@ -73,13 +78,15 @@ blocks:
     blocks:
       - type: basic_card
         title: Scaling transactions
-        link_label: Learn
-        link_href: /learn/
+        link:
+          custom_title: Learn
+          custom_internal_link: /learn
         size: sm
       - type: basic_card
         title: Scaling compute power
-        link_label: Learn
-        link_href: /sequencers/
+        link:
+          custom_title: Sequencers
+          custom_internal_link: /sequencers
         size: sm
   - type: flex_layout
     heading_variant: md
@@ -91,15 +98,17 @@ blocks:
         color: orange
         title: Learn how Starknet works
         description: Learn how the Starknet architecture and tech stack works.
-        link_label: How starknet works
-        link_href: /learn/
+        link:
+          custom_title: How starknet works
+          custom_internal_link: /learn
         icon: /assets/6.svg
       - type: image_icon_link_card
         color: orange
         title: Developer documentation
         description: Read the docs to learn how to build on Starknet and Cairo.
-        link_label: View docs
-        link_href: https://docs.starknet.io
+        link:
+          custom_title: View docs
+          custom_external_link: https://docs.starknet.io
         icon: /assets/7.svg
   - type: dapps
     noOfItems: "1"

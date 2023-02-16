@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 13: Dark Forest Escape Route"
 published_date: 2020-10-04T14:29:08.023Z
 time_to_consume: 77 min watch
-video_link: https://youtu.be/WrieNtiAnyw
 image: /assets/starkhome13.png
 category: stark-math
 topic:
   - starknet
 short_desc: Dark forest escape route
+video:
+  url: https://youtu.be/WrieNtiAnyw
+  id: WrieNtiAnyw
+  data:
+    kind: youtube#video
+    etag: gJHjTP-hnCcAMwp-kJnTBaOjRT4
+    id: WrieNtiAnyw
+    snippet:
+      publishedAt: 2020-10-04T06:30:41Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 13: Dark Forest Escape Route"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/WrieNtiAnyw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/WrieNtiAnyw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/WrieNtiAnyw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/WrieNtiAnyw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/WrieNtiAnyw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 13: Dark Forest Escape Route"
+        description: ""
+      defaultAudioLanguage: en-US

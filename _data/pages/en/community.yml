@@ -21,8 +21,6 @@ blocks:
         title: Online communities
         description: Connect with Starknet enthusiasts in online communities and social
           media.
-        link_label: View
-        link_href: /community/online-communities
         icon: /assets/online-communities.svg
         link:
           page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
@@ -31,8 +29,6 @@ blocks:
         color: blue-default
         title: Community events
         description: Find events near you to connect with the Starknet builders.
-        link_label: View
-        link_href: "/events/ "
         icon: /assets/community-events.svg
         link:
           custom_internal_link: /events/
@@ -41,8 +37,6 @@ blocks:
         color: blue-default
         title: "Ecosystem jobs "
         description: Explore opportunities with teams building in the ecosystem.
-        link_label: "View "
-        link_href: /jobs/
         icon: /assets/jobs.svg
         link:
           custom_icon: ""

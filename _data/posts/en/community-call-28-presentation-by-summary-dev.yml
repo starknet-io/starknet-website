@@ -3,10 +3,63 @@ post_type: video
 title: "Community Call #28 | Presentation by summary.dev"
 published_date: 2022-11-28T12:55:42.501Z
 time_to_consume: 65 min watch
-video_link: https://youtu.be/isqd0YknTJI
 image: /assets/cc28.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Presentation by summary.dev + Performance roadmap update with
   StarkNet Product Manager Ariel Elperin.
+video:
+  url: https://youtu.be/isqd0YknTJI
+  id: isqd0YknTJI
+  data:
+    kind: youtube#video
+    etag: 5NhawM_Ay0Kmn-nv1j_9AGiFeyc
+    id: isqd0YknTJI
+    snippet:
+      publishedAt: 2022-11-30T02:42:25Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #28 | Presentation by summary.dev"
+      description: >-
+        Join us for our #28 StarkNet community call.
+
+        Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/isqd0YknTJI/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/isqd0YknTJI/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/isqd0YknTJI/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/isqd0YknTJI/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/isqd0YknTJI/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #28 | Presentation by summary.dev"
+        description: >-
+          Join us for our #28 StarkNet community call.
+
+          Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
+      defaultAudioLanguage: en-US

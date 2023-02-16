@@ -3,14 +3,315 @@ post_type: video
 title: Super Scaling with StarkWare at Bankless
 published_date: 2021-11-23T16:47:52.507Z
 time_to_consume: 79 min watch
-video_link: https://www.youtube.com/live/7Kq3YWsysc0?feature=share
 image: /assets/interviews05.jpg
 category: ecosystem
 topic:
   - starknet
 short_desc: >
-  Ethereum is scaling. With a recent $50 million raise at a valuation of $2
-  billion, StarkWare is pioneering zkRollups across the Ethereum ecosystem. As
-  it powers dYdX, arguably the most liquid market in the world, StarkWare is
-  continuing to move into new territory, with StarkNet imminently deploying on
-  Ethereum Mainnet.
+  Ethereum is scaling. With a recent $50 million raise at a valuation
+  of $2 billion, StarkWare is pioneering zkRollups across the Ethereum
+  ecosystem. As it powers dYdX, arguably the most liquid market in the world,
+  StarkWare is continuing to move into new territory, with StarkNet imminently
+  deploying on Ethereum Mainnet.
+video:
+  url: https://www.youtube.com/live/7Kq3YWsysc0?feature=share
+  id: 7Kq3YWsysc0
+  data:
+    kind: youtube#video
+    etag: yHBj9OMwhvUY22k97dGKju_eRdU
+    id: 7Kq3YWsysc0
+    snippet:
+      publishedAt: 2021-11-23T20:29:26Z
+      channelId: UCAl9Ld79qaZxp9JzEOwd3aA
+      title: Super Scaling with StarkWare
+      description: >-
+        Ethereum is scaling. With a recent $50 million raise at a valuation
+        of $2 billion, StarkWare is pioneering zkRollups across the Ethereum
+        ecosystem. As it powers dYdX, arguably the most liquid market in the
+        world, StarkWare is continuing to move into new territory, with StarkNet
+        imminently deploying on Ethereum Mainnet.
+
+
+        The goal of StarkWare is simple: 'bring massive scalability to Ethereum while preserving L1 security, permissionless interactions, and decentralization.' 
+
+
+        The ecosystem is growing at an astounding rate, so tune in as core members Uri Kolodny and Eli Ben-Sasson walk us through how StarkWare is bringing Super Scaling to Ethereum.
+
+
+        ------
+
+        📣 OPOLIS | YOUR CRYPTO CAREER
+
+        https://bankless.cc/Opolis
+
+
+        ------
+
+        🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/
+
+        🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/
+
+
+        ------
+
+        BANKLESS SPONSOR TOOLS: 
+
+
+        ⚖️ ARBITRUM | SCALING ETHEREUM
+
+        https://bankless.cc/Arbitrum
+
+
+        🍵 MATCHA | DECENTRALIZED EXCHANGE AGGREGATOR
+
+        https://bankless.cc/Matcha
+
+
+        🔐 LEDGER | SECURE YOUR ASSETS
+
+        https://bankless.cc/Ledger
+
+
+        🧙‍♀️ ALCHEMIX | SELF-PAYING LOANS
+
+        http://bankless.cc/Alchemix
+
+
+        ------
+
+        TOPICS COVERED:
+
+
+        0:00 Intro
+
+        5:00 Eli and Uri of StarkWare
+
+        9:02 StarkEx vs StarkNet
+
+        16:37 StarkEx is Scaling Today
+
+        24:35 Latency & Data Tradeoffs
+
+        32:50 Scaling with Math & Cryptography
+
+        38:21 StarkEx to StarkNet
+
+        43:35 Ahead of Schedule
+
+        47:56 StarkNet Launch
+
+        54:48 StarkWare Roadmap
+
+        1:00:40 Modular & Privacy
+
+        1:04:39 Business Model
+
+        1:11:33 Values & Code
+
+        1:16:15 Closing & Disclaimers
+
+
+        ------
+
+        RESOURCES:
+
+
+        Uri on Twitter:
+
+        https://twitter.com/ukolodny?s=20
+
+
+        Eli on Twitter:
+
+        https://twitter.com/EliBenSasson?s=20
+
+
+        StarkWare on Twitter:
+
+        https://twitter.com/StarkWareLtd?s=20
+
+
+        StarkWare Discord:
+
+        https://discord.gg/uJ9HZTUk2Y
+
+
+        StarkNet Alpha:
+
+        https://medium.com/starkware/starknet-alpha-is-coming-to-mainnet-b825829eaf32
+
+
+        -----
+
+        Not financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research.
+
+
+        Disclosure. From time-to-time I may add links in this newsletter to products I use. I may receive commission if you make a purchase through one of these links. Additionally, the Bankless writers hold crypto assets. See our investment disclosures here:
+
+        https://newsletter.banklesshq.com/p/bankless-disclosures
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/7Kq3YWsysc0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/7Kq3YWsysc0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/7Kq3YWsysc0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/7Kq3YWsysc0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/7Kq3YWsysc0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Bankless Shows
+      tags:
+        - bitcoin
+        - ethereum
+        - defi
+        - bankless
+        - crypto
+        - decentralized finance
+        - crypto finance
+        - open finance
+        - ether
+        - eth
+        - btc
+        - token
+        - tokens
+      categoryId: "24"
+      liveBroadcastContent: none
+      localized:
+        title: Super Scaling with StarkWare
+        description: >-
+          Ethereum is scaling. With a recent $50 million raise at a valuation
+          of $2 billion, StarkWare is pioneering zkRollups across the Ethereum
+          ecosystem. As it powers dYdX, arguably the most liquid market in the
+          world, StarkWare is continuing to move into new territory, with
+          StarkNet imminently deploying on Ethereum Mainnet.
+
+
+          The goal of StarkWare is simple: 'bring massive scalability to Ethereum while preserving L1 security, permissionless interactions, and decentralization.' 
+
+
+          The ecosystem is growing at an astounding rate, so tune in as core members Uri Kolodny and Eli Ben-Sasson walk us through how StarkWare is bringing Super Scaling to Ethereum.
+
+
+          ------
+
+          📣 OPOLIS | YOUR CRYPTO CAREER
+
+          https://bankless.cc/Opolis
+
+
+          ------
+
+          🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/
+
+          🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/
+
+
+          ------
+
+          BANKLESS SPONSOR TOOLS: 
+
+
+          ⚖️ ARBITRUM | SCALING ETHEREUM
+
+          https://bankless.cc/Arbitrum
+
+
+          🍵 MATCHA | DECENTRALIZED EXCHANGE AGGREGATOR
+
+          https://bankless.cc/Matcha
+
+
+          🔐 LEDGER | SECURE YOUR ASSETS
+
+          https://bankless.cc/Ledger
+
+
+          🧙‍♀️ ALCHEMIX | SELF-PAYING LOANS
+
+          http://bankless.cc/Alchemix
+
+
+          ------
+
+          TOPICS COVERED:
+
+
+          0:00 Intro
+
+          5:00 Eli and Uri of StarkWare
+
+          9:02 StarkEx vs StarkNet
+
+          16:37 StarkEx is Scaling Today
+
+          24:35 Latency & Data Tradeoffs
+
+          32:50 Scaling with Math & Cryptography
+
+          38:21 StarkEx to StarkNet
+
+          43:35 Ahead of Schedule
+
+          47:56 StarkNet Launch
+
+          54:48 StarkWare Roadmap
+
+          1:00:40 Modular & Privacy
+
+          1:04:39 Business Model
+
+          1:11:33 Values & Code
+
+          1:16:15 Closing & Disclaimers
+
+
+          ------
+
+          RESOURCES:
+
+
+          Uri on Twitter:
+
+          https://twitter.com/ukolodny?s=20
+
+
+          Eli on Twitter:
+
+          https://twitter.com/EliBenSasson?s=20
+
+
+          StarkWare on Twitter:
+
+          https://twitter.com/StarkWareLtd?s=20
+
+
+          StarkWare Discord:
+
+          https://discord.gg/uJ9HZTUk2Y
+
+
+          StarkNet Alpha:
+
+          https://medium.com/starkware/starknet-alpha-is-coming-to-mainnet-b825829eaf32
+
+
+          -----
+
+          Not financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research.
+
+
+          Disclosure. From time-to-time I may add links in this newsletter to products I use. I may receive commission if you make a purchase through one of these links. Additionally, the Bankless writers hold crypto assets. See our investment disclosures here:
+
+          https://newsletter.banklesshq.com/p/bankless-disclosures
+      defaultAudioLanguage: en-US

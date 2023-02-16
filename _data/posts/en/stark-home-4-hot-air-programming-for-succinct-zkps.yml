@@ -3,10 +3,42 @@ post_type: video
 title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
 published_date: 2020-04-20T14:09:43.156Z
 time_to_consume: 80 min watch
-video_link: https://youtu.be/kHhpIvEbDy0
 image: /assets/starkhome04.png
 category: stark-math
 topic:
   - starknet
 short_desc: How do you map a program to a polynomial? Eli Ben-Sasson waves his
   hands in the air to explain this concept
+video:
+  url: https://youtu.be/kHhpIvEbDy0
+  id: kHhpIvEbDy0
+  data:
+    kind: youtube#video
+    etag: 0tdtpbbUQl6agEafiV6N1hfQxio
+    id: kHhpIvEbDy0
+    snippet:
+      publishedAt: 2020-04-20T15:39:01Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
+      description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
+        hands in the air to explain this concept
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/kHhpIvEbDy0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/kHhpIvEbDy0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/kHhpIvEbDy0/hqdefault.jpg
+          width: 480
+          height: 360
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
+        description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
+          hands in the air to explain this concept

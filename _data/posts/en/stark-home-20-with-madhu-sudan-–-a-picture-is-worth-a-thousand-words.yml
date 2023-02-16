@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 20: With Madhu Sudan – A Picture is Worth a Thousand Words"
 published_date: 2021-04-30T14:41:16.577Z
 time_to_consume: 69 min watch
-video_link: https://youtu.be/1j_kFZbcb8A
 image: /assets/starkhome20.png
 category: stark-math
 topic:
   - starknet
 short_desc: Madhu Sudan - A Picture is Worth a Thousand Words.
+video:
+  url: https://youtu.be/1j_kFZbcb8A
+  id: 1j_kFZbcb8A
+  data:
+    kind: youtube#video
+    etag: UW0P7HEEeBsXBJ7OwpZF1jyNngs
+    id: 1j_kFZbcb8A
+    snippet:
+      publishedAt: 2021-04-30T07:39:03Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 20: with Madhu Sudan - A Picture is Worth a Thousand Words"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/1j_kFZbcb8A/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/1j_kFZbcb8A/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/1j_kFZbcb8A/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/1j_kFZbcb8A/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/1j_kFZbcb8A/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 20: with Madhu Sudan - A Picture is Worth a Thousand Words"
+        description: ""
+      defaultAudioLanguage: en-US

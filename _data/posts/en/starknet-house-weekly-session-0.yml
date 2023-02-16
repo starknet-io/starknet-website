@@ -3,12 +3,78 @@ post_type: video
 title: Starknet House weekly session 0
 published_date: 2022-06-05T15:57:13.652Z
 time_to_consume: 70 min watch
-video_link: https://youtu.be/wFZ_YIetK1o
 image: /assets/sn_house01.jpg
 category: ecosystem
 topic:
   - starknet
 short_desc: >+
-  Starknet House is a virtual educational summer program presented by Topology
-  in collaboration with StarkWare and pioneers in the Starknet ecosystem.
+  Starknet House is a virtual educational summer program presented by
+  Topology in collaboration with StarkWare and pioneers in the Starknet
+  ecosystem.
 
+video:
+  url: https://youtu.be/wFZ_YIetK1o
+  id: wFZ_YIetK1o
+  data:
+    kind: youtube#video
+    etag: ASIYjuMJP02faojDki1ElAHPDk8
+    id: wFZ_YIetK1o
+    snippet:
+      publishedAt: 2022-06-05T19:29:59Z
+      channelId: UCqbWfFjh7mlH1rjoRebHo-g
+      title: 'StarkNet House   Weekly Session 0: "What are zk-STARKs?" By Eli
+        Ben-Sasson'
+      description: >-
+        StarkNet House is a virtual educational summer program presented by
+        Topology in collaboration with StarkWare and pioneers in the StarkNet
+        ecosystem.
+
+
+        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
+
+
+        All sessions will be live-streamed online and available wherever you are in the world!
+
+
+        Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/wFZ_YIetK1o/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/wFZ_YIetK1o/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/wFZ_YIetK1o/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/wFZ_YIetK1o/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/wFZ_YIetK1o/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Topology
+      categoryId: "22"
+      liveBroadcastContent: none
+      localized:
+        title: 'StarkNet House   Weekly Session 0: "What are zk-STARKs?" By Eli
+          Ben-Sasson'
+        description: >-
+          StarkNet House is a virtual educational summer program presented by
+          Topology in collaboration with StarkWare and pioneers in the StarkNet
+          ecosystem.
+
+
+          StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
+
+
+          All sessions will be live-streamed online and available wherever you are in the world!
+
+
+          Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
+      defaultAudioLanguage: en

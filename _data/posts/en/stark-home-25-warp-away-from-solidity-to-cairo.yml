@@ -3,11 +3,80 @@ post_type: video
 title: "STARK @ Home 25: Warp Away! From Solidity to Cairo"
 published_date: 2022-03-10T16:28:19.240Z
 time_to_consume: 69 min watch
-video_link: https://youtu.be/9zc804NZ0Hs
 image: /assets/starkhome25.png
 category: stark-math
 topic:
   - starknet
 short_desc: >
-  Starknet is up and running on Mainnet. But is it EVM compatible? Can you
-  deploy your Solidity contract on Starknet? The answer is Yes, with Warp.
+  Starknet is up and running on Mainnet. But is it EVM compatible? Can
+  you deploy your Solidity contract on Starknet? The answer is Yes, with Warp.
+video:
+  url: https://youtu.be/9zc804NZ0Hs
+  id: 9zc804NZ0Hs
+  data:
+    kind: youtube#video
+    etag: 3sv63m97DBcm_u1We64ssXkPo7A
+    id: 9zc804NZ0Hs
+    snippet:
+      publishedAt: 2022-03-13T15:26:28Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 25: Warp Away! From Solidity to Cairo - with Greg Vardy"
+      description: >-
+        StarkNet is up and running on Mainnet. But is it EVM compatible?
+        Can you deploy your Solidity contract on StarkNet? The answer is Yes,
+        with Warp.
+
+
+        Warp is a Solidity to Cairo transpiler, developed by the Nethermind team. It takes Solidity contracts, translates them into Cairo, and deploys them to StarkNet.
+
+
+        Solidity apps can easily test the water over StarkNet, with Warp shortening your time-to-market.
+
+
+        But how do you transpile a Solidity contract into Cairo? What are the challenges? How were they solved?
+
+
+        In this STARK @ Home episode, Greg Vardy – head of Nethermind’s Warp team, and Jorik Schellekens from the Warp team – will share their team’s experience and insights.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/9zc804NZ0Hs/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/9zc804NZ0Hs/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/9zc804NZ0Hs/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/9zc804NZ0Hs/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/9zc804NZ0Hs/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 25: Warp Away! From Solidity to Cairo - with Greg Vardy"
+        description: >-
+          StarkNet is up and running on Mainnet. But is it EVM compatible?
+          Can you deploy your Solidity contract on StarkNet? The answer is Yes,
+          with Warp.
+
+
+          Warp is a Solidity to Cairo transpiler, developed by the Nethermind team. It takes Solidity contracts, translates them into Cairo, and deploys them to StarkNet.
+
+
+          Solidity apps can easily test the water over StarkNet, with Warp shortening your time-to-market.
+
+
+          But how do you transpile a Solidity contract into Cairo? What are the challenges? How were they solved?
+
+
+          In this STARK @ Home episode, Greg Vardy – head of Nethermind’s Warp team, and Jorik Schellekens from the Warp team – will share their team’s experience and insights.
+      defaultAudioLanguage: en-US

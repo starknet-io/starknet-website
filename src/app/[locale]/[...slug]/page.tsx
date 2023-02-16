@@ -15,6 +15,37 @@ import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { TableOfContents } from "../(components)/TableOfContents";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
+
+export async function generateStaticParams() {
+  const params = [];
+
+  for (const locale of ["en"]) {
+    const base = path.join(process.cwd(), "_data/_dynamic/pages", locale);
+    const dirs: string[][] = [];
+
+    do {
+      const dir = dirs.pop() ?? [];
+      const files = await fs.readdir(path.join(base, ...dir), {
+        withFileTypes: true,
+      });
+
+      for (const file of files) {
+        if (file.isDirectory()) {
+          dirs.push([...dir, file.name]);
+        } else if (file.isFile()) {
+          params.push({
+            locale,
+            slug: [...dir, file.name.replace(/\.json$/, "")],
+          });
+        }
+      }
+    } while (dirs.length > 0);
+  }
+
+  return params;
+}
 
 export interface Props {
   readonly params: LocaleParams & {

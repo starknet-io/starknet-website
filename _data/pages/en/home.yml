@@ -11,8 +11,6 @@ blocks:
         title: "Community led. "
         description: "This website is a community powered guide to the Starknet
           ecosystem.  "
-        link_label: Get involved
-        link_href: /community/
         link:
           page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
           custom_title: Get involved
@@ -23,8 +21,6 @@ blocks:
         description: "Starknet is a decentralised layer-2 network that enables Ethereum
           to scale securely and enables dapps to achieve unlimited scale for
           transactions and computation. "
-        link_label: What is Starknet
-        link_href: /learn/what-is-starknet/
         image: /assets/illustration-how-it-works.png
         orientation: left
         link:
@@ -34,8 +30,6 @@ blocks:
         orientation: right
         image: /assets/illustration-scaling.png
         title: "How does Starknet scale Ethereum? "
-        link_label: How does it work
-        link_href: /learn/what-is-starknet/
         description: Starknet uses math and cryptography to securely scale Ethereum. It
           is known as a Validity-rollup (or ZK-rollup); meaning it ”rolls” many
           transactions up to send to Ethereum as a single transaction.
@@ -54,8 +48,6 @@ blocks:
         title: "Developer documentation "
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        link_label: "View docs "
-        link_href: https://docs.starknet.io/
         icon: /assets/docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
@@ -64,8 +56,6 @@ blocks:
         color: blue-default
         title: "Developer tutorials "
         description: Learn from Starknet's community of developers and technologists.
-        link_label: "View tutorials "
-        link_href: /tutorials/
         icon: /assets/tutorials.svg
         link:
           custom_internal_link: /tutorials/
@@ -75,8 +65,6 @@ blocks:
         title: Tools & resources
         description: "Find libraries, editor plugins and tooling to help you start
           building. "
-        link_label: View resources
-        link_href: /developers/tools-resources
         icon: /assets/1.svg
         link:
           page: 4c40a102-df5b-4f39-98fb-774d6841da9e
@@ -92,8 +80,6 @@ blocks:
         color: blue-default
         title: Discover dapps
         description: Explore dapps in Starknet ecosystem – from Defi to NFTs to gaming.
-        link_label: Explore
-        link_href: /ecosystem/dapps
         icon: /assets/dapps.svg
         link:
           custom_title: Explore
@@ -102,8 +88,6 @@ blocks:
         color: blue-default
         title: "Find a wallet "
         description: Learn about wallets on Starknet and discover the options available.
-        link_label: "View wallets "
-        link_href: /ecosystem/wallets
         icon: /assets/wallet.svg
         link:
           custom_title: View wallets
@@ -113,8 +97,6 @@ blocks:
         title: Deposit & withdraw funds
         description: Learn how to deposit and withdraw funds for use in the Starknet
           ecosystem.
-        link_label: "View options "
-        link_href: /ecosystem/bridges-onramps
         icon: /assets/deposit-withdraw.svg
         link:
           custom_title: View options
@@ -126,31 +108,23 @@ blocks:
       - type: basic_card
         size: sm
         title: "View all questions "
-        link_href: /learn/frequently-asked-questions/
-        link_label: View
         link:
           page: b5689d3a-348b-4ccb-b787-520b64c55e41
           custom_title: View
       - type: basic_card
         size: sm
         title: What is STARK?
-        link_label: View
-        link_href: /learn/frequently-asked-questions/
         link:
           custom_internal_link: /learn/frequently-asked-questions#toc-cairo
           custom_title: View
       - type: basic_card
         size: sm
         title: "What is Cairo? "
-        link_label: View
-        link_href: /learn/frequently-asked-questions/
         link:
           custom_title: View
           custom_internal_link: /learn/frequently-asked-questions#toc-cairo
       - type: basic_card
         size: sm
-        link_href: /learn/frequently-asked-questions/
-        link_label: View
         title: "What is Starknet? "
         link:
           custom_title: View

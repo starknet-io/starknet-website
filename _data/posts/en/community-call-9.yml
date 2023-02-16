@@ -3,9 +3,47 @@ post_type: video
 title: "Community Call #9"
 published_date: 2022-03-01T00:00:00+00:00
 time_to_consume: 50 min watch
-video_link: https://youtu.be/emteinw4NgA
 image: /assets/cc09.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Hosting zkLend
+video:
+  url: https://youtu.be/emteinw4NgA
+  id: emteinw4NgA
+  data:
+    kind: youtube#video
+    etag: tUcrOOM6iVe8lypnZef-hMj9vqE
+    id: emteinw4NgA
+    snippet:
+      publishedAt: 2022-03-02T02:28:46Z
+      channelId: UC9T86o1gsyaS7qAPIBxMbhQ
+      title: "StarkNet community call #9"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/emteinw4NgA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/emteinw4NgA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/emteinw4NgA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/emteinw4NgA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/emteinw4NgA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Henri | StarkWare
+      categoryId: "24"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet community call #9"
+        description: ""

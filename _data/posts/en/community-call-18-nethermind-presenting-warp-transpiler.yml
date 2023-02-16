@@ -3,9 +3,48 @@ post_type: video
 title: "Community call #18 | Nethermind presenting Warp transpiler"
 published_date: 2022-07-15T10:58:07.718Z
 time_to_consume: 49 min watch
-video_link: https://youtu.be/kmUjbDXScyc
 image: /assets/cc18.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Nethermind presenting Warp transpiler.
+video:
+  url: https://youtu.be/kmUjbDXScyc
+  id: kmUjbDXScyc
+  data:
+    kind: youtube#video
+    etag: UqS-XlL4jABcmwgTXsXDFM-QNA8
+    id: kmUjbDXScyc
+    snippet:
+      publishedAt: 2022-07-06T01:23:22Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community call #18 | Nethermind presenting Warp transpiler"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/kmUjbDXScyc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/kmUjbDXScyc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/kmUjbDXScyc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/kmUjbDXScyc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/kmUjbDXScyc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community call #18 | Nethermind presenting Warp transpiler"
+        description: ""
+      defaultAudioLanguage: en-US

@@ -20,7 +20,30 @@ import {
   BreadcrumbLink,
   HStack,
 } from "src/libs/chakra-ui";
-import { youtubeVideoIdFromURL } from "src/utils/utils";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
+
+export async function generateStaticParams() {
+  const params = [];
+
+  for (const locale of ["en"]) {
+    const files = await fs.readdir(
+      path.join(process.cwd(), "_data/_dynamic/posts", locale),
+    );
+
+    for (const slug of files) {
+      const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
+
+      params.push({
+        locale,
+        slug: post.slug,
+        category: post.category,
+      });
+    }
+  }
+
+  return params;
+}
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -34,10 +57,7 @@ export default async function Page({
   try {
     const post = await getPostBySlug(slug, locale);
 
-    let videoId =
-      post.post_type === "video" && post.video_link
-        ? youtubeVideoIdFromURL(post.video_link)
-        : undefined;
+    let videoId = post.post_type === "video" ? post.video?.id : undefined;
 
     return (
       <PageLayout

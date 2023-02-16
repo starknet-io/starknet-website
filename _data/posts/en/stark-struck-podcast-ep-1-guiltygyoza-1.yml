@@ -3,7 +3,6 @@ post_type: video
 title: STARK Struck Podcast | Ep 1 | GuiltyGyoza
 published_date: 2022-08-08T00:00:00+00:00
 time_to_consume: 45 min watch
-video_link: https://youtu.be/YNukaXe1xaU
 image: /assets/starkstruck01.jpg
 category: stark-struck
 topic:
@@ -11,3 +10,87 @@ topic:
 short_desc: Join Henri Lieutaud from the StarkNet team and GuiltyGyoza, on what
   gets them excited about technology in general, blockchain in particular, and
   validity rollups specifically.
+video:
+  url: https://youtu.be/YNukaXe1xaU
+  id: YNukaXe1xaU
+  data:
+    kind: youtube#video
+    etag: Yn299s-7yz8VZrHI1LRFXtthweo
+    id: YNukaXe1xaU
+    snippet:
+      publishedAt: 2022-08-08T05:21:34Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK Struck Podcast | Episode 1 | Henri Lieutaud & GuiltyGyoza
+      description: >-
+        Join Henri Lieutaud from the StarkNet team and GuiltyGyoza, on what
+        gets them excited about technology in general, blockchain in particular,
+        and validity rollups specifically.
+
+
+        Listen on Spotify!
+
+        https://open.spotify.com/show/68rEwnVZ0Z8ujzcy7BJ9vK?si=f2d77208ca0240a9
+
+
+        Listen on Google Podcasts!
+
+        https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9hYjlmNTgwYy9wb2RjYXN0L3Jzcw/episode/NTVkYzU1MGUtMGQ2MC00NjBjLThlMmItYzFmNGQ0YmVkOTU5?sa=X&ved=0CAUQkfYCahcKEwjIn7m-6Nf5AhUAAAAAHQAAAAAQAQ
+
+
+        Twitter:
+
+        @guiltygyoza
+
+        @henrlihenrli
+
+        @Starknet_Intern
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/YNukaXe1xaU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/YNukaXe1xaU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/YNukaXe1xaU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/YNukaXe1xaU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/YNukaXe1xaU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK Struck Podcast | Episode 1 | Henri Lieutaud & GuiltyGyoza
+        description: >-
+          Join Henri Lieutaud from the StarkNet team and GuiltyGyoza, on what
+          gets them excited about technology in general, blockchain in
+          particular, and validity rollups specifically.
+
+
+          Listen on Spotify!
+
+          https://open.spotify.com/show/68rEwnVZ0Z8ujzcy7BJ9vK?si=f2d77208ca0240a9
+
+
+          Listen on Google Podcasts!
+
+          https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9hYjlmNTgwYy9wb2RjYXN0L3Jzcw/episode/NTVkYzU1MGUtMGQ2MC00NjBjLThlMmItYzFmNGQ0YmVkOTU5?sa=X&ved=0CAUQkfYCahcKEwjIn7m-6Nf5AhUAAAAAHQAAAAAQAQ
+
+
+          Twitter:
+
+          @guiltygyoza
+
+          @henrlihenrli
+
+          @Starknet_Intern
+      defaultAudioLanguage: en-US
