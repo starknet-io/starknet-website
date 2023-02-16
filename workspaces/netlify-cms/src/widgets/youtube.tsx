@@ -26,8 +26,10 @@ const API_BASE_URL =
   process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";
 
 function Control(props: CmsWidgetControlProps & any) {
-  const value = props.value?.url ?? "";
-  const title = props.value?.video?.snippet?.title ?? null;
+  const valueData =
+    "toJSON" in props.value ? props.value.toJSON() : props.value;
+  const value = valueData?.url ?? "";
+  const title = valueData?.data?.snippet?.title ?? null;
 
   const [fetching, setFetching] = useState<string | null>(null);
 
@@ -39,7 +41,7 @@ function Control(props: CmsWidgetControlProps & any) {
 
       if (!id) return;
 
-      if (props.value?.id === id) return;
+      if (valueData?.id === id) return;
 
       if (fetching === id) return;
 
@@ -85,7 +87,7 @@ function Control(props: CmsWidgetControlProps & any) {
         id={props.forID}
         value={value}
         onChange={(e) => {
-          props.onChange({ ...(props.value ?? {}), url: e.target.value });
+          props.onChange({ ...(valueData ?? {}), url: e.target.value });
         }}
         onFocus={props.setActiveStyle}
         onBlur={(e) => {
