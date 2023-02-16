@@ -52,6 +52,8 @@ export const NavBar = ({
           onClose={onClose}
           size="full"
           variant="primary"
+          /* set trapFocus to false to make search inside drawer interactive */
+          trapFocus={false}
         >
           <DrawerOverlay />
           <DrawerContent>
