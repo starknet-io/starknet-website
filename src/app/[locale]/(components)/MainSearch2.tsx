@@ -218,6 +218,8 @@ export function MainSearch2({ env }: Props): JSX.Element | null {
                   {
                     params: {
                       hitsPerPage: 5,
+                      attributesToSnippet: ["title:8", "content:10"],
+                      snippetEllipsisText: "...",
                     },
 
                     indexName: "starknet-docs-dev",
@@ -354,6 +356,8 @@ export function DocsItem({
   item: hit,
   components: { Highlight },
 }: ItemProps<any>) {
+  const snippet = hit["_snippetResult"];
+
   return (
     <a href={hit.url} className="aa-ItemLink">
       <div className="aa-ItemContent">
@@ -374,14 +378,20 @@ export function DocsItem({
           </svg>
         </div>
         <div className="aa-ItemContentBody">
-          {hit.content && (
+          {snippet?.content?.value && (
             <div className="aa-ItemTitle">
-              <Highlight hit={hit} attribute="content" />
+              <Highlight
+                hit={hit}
+                attribute={["_snippetResult", "content", "value"]}
+              />
             </div>
           )}
-          {hit.title && (
+          {snippet?.title?.value && (
             <div className="aa-ItemDesc">
-              <Highlight hit={hit} attribute="title" />
+              <Highlight
+                hit={hit}
+                attribute={["_snippetResult", "title", "value"]}
+              />
             </div>
           )}
         </div>
