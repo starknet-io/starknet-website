@@ -63,7 +63,7 @@ function Control(props: CmsWidgetControlProps & any) {
           return null;
         });
       } catch (err) {
-        console.log(err)
+        console.log(err);
         props.onChange({ url: value, id, data: undefined });
       }
 

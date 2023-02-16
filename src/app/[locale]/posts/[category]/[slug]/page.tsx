@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 
   for (const locale of ["en"]) {
     const files = await fs.readdir(
-      path.join(process.cwd(), "_data/_dynamic/posts", locale)
+      path.join(process.cwd(), "_data/_dynamic/posts", locale),
     );
 
     for (const slug of files) {
@@ -84,7 +84,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post?.gitlog?.date
+          post?.gitlog?.date,
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">
