@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 14: One STARK to Rule Them All"
 published_date: 2020-10-23T14:31:05.601Z
 time_to_consume: 68 min watch
-video_link: https://youtu.be/U0_71d7f0Ks
 image: /assets/starkhome14.png
 category: stark-math
 topic:
   - starknet
 short_desc: One STARK to rule them all.
+video:
+  url: https://youtu.be/U0_71d7f0Ks
+  id: U0_71d7f0Ks
+  data:
+    kind: youtube#video
+    etag: 5dNS52DJwbOq8jblQbw2kUIx6AY
+    id: U0_71d7f0Ks
+    snippet:
+      publishedAt: 2020-10-23T07:16:58Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 14: One STARK to Rule Them All"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/U0_71d7f0Ks/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/U0_71d7f0Ks/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/U0_71d7f0Ks/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/U0_71d7f0Ks/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/U0_71d7f0Ks/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 14: One STARK to Rule Them All"
+        description: ""
+      defaultAudioLanguage: en-US

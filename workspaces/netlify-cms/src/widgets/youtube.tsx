@@ -5,12 +5,20 @@ import { WidgetPreviewContainer } from "netlify-cms-ui-default";
 import { CmsWidgetControlProps } from "netlify-cms-core";
 
 function youtubeVideoIdFromURL(url: string): string | undefined {
-  const obj = new URL(url);
+  try {
+    const obj = new URL(url);
 
-  if (obj.hostname === "www.youtube.com") {
-    return obj.searchParams.get("v") ?? undefined;
-  } else if (obj.hostname === "youtu.be") {
-    return obj.pathname.slice(1);
+    if (obj.hostname === "www.youtube.com") {
+      if (obj.searchParams.get("v")) return obj.searchParams.get("v")!;
+
+      if (obj.pathname.startsWith("/live/")) {
+        return obj.pathname.replace("/live/", "");
+      }
+    } else if (obj.hostname === "youtu.be") {
+      return obj.pathname.slice(1);
+    }
+  } catch {
+    console.log("youtubeVideoIdFromURL", url);
   }
 }
 
@@ -31,7 +39,7 @@ function Control(props: CmsWidgetControlProps & any) {
 
       if (!id) return;
 
-      if (props.value?.video?.id === id) return;
+      if (props.value?.id === id) return;
 
       if (fetching === id) return;
 
@@ -50,12 +58,13 @@ function Control(props: CmsWidgetControlProps & any) {
         setFetching((fetching) => {
           if (fetching !== id) return fetching;
 
-          props.onChange({ ...(props.value ?? {}), video: data });
+          props.onChange({ url: value, id, data });
 
           return null;
         });
       } catch (err) {
-        props.onChange({ ...(props.value ?? {}), video: { id, err } });
+        console.log(err)
+        props.onChange({ url: value, id, data: undefined });
       }
 
       setFetching(null);

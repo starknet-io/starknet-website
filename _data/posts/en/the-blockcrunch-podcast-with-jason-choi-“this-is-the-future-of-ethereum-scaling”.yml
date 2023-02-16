@@ -4,7 +4,6 @@ title: "The Blockcrunch Podcast with Jason Choi: “This is the future of Ethere
   scaling”"
 published_date: 2021-09-26T15:43:08.984Z
 time_to_consume: 41 min watch
-video_link: https://youtu.be/w7QdGRCiYfo
 image: /assets/interview02.jpg
 category: ecosystem
 topic:
@@ -12,3 +11,126 @@ topic:
 short_desc: "Why ZK-Rollups are the future vs. other Layer 2s Starkware vs.
   Optimism vs. Arbitrum: who wins? Can Fast Layer 1s like Solana compete with
   Starkware? "
+video:
+  url: https://youtu.be/w7QdGRCiYfo
+  id: w7QdGRCiYfo
+  data:
+    kind: youtube#video
+    etag: k-Re3AiCS14ymx0ribyBTcxI67E
+    id: w7QdGRCiYfo
+    snippet:
+      publishedAt: 2021-09-25T22:24:05Z
+      channelId: UC5irSAibfE6Ads_ReDFrffA
+      title: '"This is the future of Ethereum scaling" - Starkware, Uri Kolodny & Eli
+        Ben-Sasson, Ep 164'
+      description: "Many crypto industry titans - including Vitalik Buterin - believe
+        ZK Rollups are the key to Ethereum's scalability. With DeFi exchange
+        dYdX generating over $2 BILLION in daily volume on Starkware, a ZK
+        Rollup solution, I'm excited to chat with Starkware founders about:\r
+
+        \r
+
+        \  Why ZK-Rollups are the future vs. other Layer 2s Starkware
+        vs. Optimism vs. Arbitrum: who wins? Can Fast Layer 1s like Solana
+        compete with Starkware?  Host: Jason Choi @mrjasonchoi . Not financial
+        advice.\r
+
+        \r
+
+        \ ------------ Sponsors -------------\r
+
+        \r
+
+        \ PARASWAP is the best place to trade your tokens and get the
+        best price in DeFi today. Get started on paraswap.io/blockcrunch\r
+
+        \r
+
+        \ SOLANA: The Solana ecosystem is growing at a rapid pace and
+        it’s a great place to build your project or get involved with the
+        community. Go to solana.com/blockcrunch to learn more!\r
+
+        \r
+
+        \ ------------ Disclosures -------------\r
+
+        \r
+
+        \ Disclaimer: Jason Choi is a General Partner at Spartan
+        Capital, a subsidiary of The Spartan Group. All opinions expressed by
+        Jason and podcast guests are solely their own opinions and do not
+        reflect the opinion of The Spartan Group and any of its subsidiaries"
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/w7QdGRCiYfo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/w7QdGRCiYfo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/w7QdGRCiYfo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/w7QdGRCiYfo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/w7QdGRCiYfo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: The Blockcrunch Podcast
+      tags:
+        - Ethereum
+        - bitcoin
+        - blockchain
+        - crypto
+        - cryptocurrencies
+        - cryptocurrency
+        - investing
+        - investments
+        - venturecapital
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: '"This is the future of Ethereum scaling" - Starkware, Uri Kolodny & Eli
+          Ben-Sasson, Ep 164'
+        description: "Many crypto industry titans - including Vitalik Buterin - believe
+          ZK Rollups are the key to Ethereum's scalability. With DeFi exchange
+          dYdX generating over $2 BILLION in daily volume on Starkware, a ZK
+          Rollup solution, I'm excited to chat with Starkware founders about:\r
+
+          \r
+
+          \  Why ZK-Rollups are the future vs. other Layer 2s
+          Starkware vs. Optimism vs. Arbitrum: who wins? Can Fast Layer 1s like
+          Solana compete with Starkware?  Host: Jason Choi @mrjasonchoi . Not
+          financial advice.\r
+
+          \r
+
+          \ ------------ Sponsors -------------\r
+
+          \r
+
+          \ PARASWAP is the best place to trade your tokens and get
+          the best price in DeFi today. Get started on paraswap.io/blockcrunch\r
+
+          \r
+
+          \ SOLANA: The Solana ecosystem is growing at a rapid pace
+          and it’s a great place to build your project or get involved with the
+          community. Go to solana.com/blockcrunch to learn more!\r
+
+          \r
+
+          \ ------------ Disclosures -------------\r
+
+          \r
+
+          \ Disclaimer: Jason Choi is a General Partner at Spartan
+          Capital, a subsidiary of The Spartan Group. All opinions expressed by
+          Jason and podcast guests are solely their own opinions and do not
+          reflect the opinion of The Spartan Group and any of its subsidiaries"

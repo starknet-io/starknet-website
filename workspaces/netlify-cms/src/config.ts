@@ -626,6 +626,12 @@ export const config: CmsConfig = {
           required: false,
         },
         {
+          name: "video",
+          label: "Video - youtube link",
+          widget: "youtube",
+          required: false,
+        } as CmsFieldMeta,
+        {
           name: "image",
           label: "Featured Image",
           widget: "image",
@@ -1340,11 +1346,6 @@ export const config: CmsConfig = {
               label: "Description",
               name: "description",
             },
-            {
-              label: "Youtube",
-              name: "youtube_link",
-              widget: "youtube",
-            } as CmsFieldMeta,
           ],
         },
       ],

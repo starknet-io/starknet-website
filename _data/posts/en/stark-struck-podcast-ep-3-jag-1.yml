@@ -3,7 +3,6 @@ post_type: video
 title: STARK Struck Podcast | Ep 3 | Jag
 published_date: 2022-09-07T00:00:00+00:00
 time_to_consume: 63 min watch
-video_link: https://youtu.be/fHO9e9OyIyc
 image: /assets/starkstruck03.jpg
 category: stark-struck
 topic:
@@ -11,3 +10,63 @@ topic:
 short_desc: Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
   excited about technology in general, blockchain in particular, and validity
   rollups specifically.
+video:
+  url: https://youtu.be/fHO9e9OyIyc
+  id: fHO9e9OyIyc
+  data:
+    kind: youtube#video
+    etag: 7Ak4XDrzEiPUeTD9ZK08gR4wCDY
+    id: fHO9e9OyIyc
+    snippet:
+      publishedAt: 2022-09-07T11:13:45Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK Struck Podcast | Episode 3 | Henri Lieutaud & Jag
+      description: >-
+        Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
+        excited about technology in general, blockchain in particular, and
+        validity rollups specifically.
+
+
+        Listen on Spotify!
+
+
+
+        Twitter: @jag_lotus @henrlihenrli @Starknet_Intern
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/fHO9e9OyIyc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/fHO9e9OyIyc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/fHO9e9OyIyc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/fHO9e9OyIyc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/fHO9e9OyIyc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK Struck Podcast | Episode 3 | Henri Lieutaud & Jag
+        description: >-
+          Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
+          excited about technology in general, blockchain in particular, and
+          validity rollups specifically.
+
+
+          Listen on Spotify!
+
+
+
+          Twitter: @jag_lotus @henrlihenrli @Starknet_Intern
+      defaultAudioLanguage: en-US

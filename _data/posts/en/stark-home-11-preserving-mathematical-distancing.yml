@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 11: Preserving Mathematical Distancing"
 published_date: 2020-09-09T14:24:36.768Z
 time_to_consume: 77 min watch
-video_link: https://youtu.be/jfsSGn0bvt4
 image: /assets/starkhome11.png
 category: stark-math
 topic:
   - starknet
 short_desc: Preserving mathematical distancing
+video:
+  url: https://youtu.be/jfsSGn0bvt4
+  id: jfsSGn0bvt4
+  data:
+    kind: youtube#video
+    etag: wVIRc3BDHGR-c_WQprIykREXOQM
+    id: jfsSGn0bvt4
+    snippet:
+      publishedAt: 2020-09-09T12:46:10Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 11: Preserving Mathematical Distancing"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/jfsSGn0bvt4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/jfsSGn0bvt4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/jfsSGn0bvt4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/jfsSGn0bvt4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/jfsSGn0bvt4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 11: Preserving Mathematical Distancing"
+        description: ""
+      defaultAudioLanguage: en-US

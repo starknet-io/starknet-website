@@ -3,9 +3,50 @@ post_type: video
 title: "Community Call #7 | Greg from Nethermind and updates on Starknet Roadmap"
 published_date: 2022-02-01T00:00:00+00:00
 time_to_consume: 52 min watch
-video_link: https://youtu.be/4kb4wSDETLM
 image: /assets/cc07.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Greg from Nethermind, updates on Starknet Roadmap, Upcoming Starknet Event
+video:
+  url: https://youtu.be/4kb4wSDETLM
+  id: 4kb4wSDETLM
+  data:
+    kind: youtube#video
+    etag: 1jBO4ELu4Nd4lxS-uxJWSzQV8cM
+    id: 4kb4wSDETLM
+    snippet:
+      publishedAt: 2022-02-07T16:18:53Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
+        StarkNet Roadmap"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/4kb4wSDETLM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/4kb4wSDETLM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/4kb4wSDETLM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/4kb4wSDETLM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/4kb4wSDETLM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
+          StarkNet Roadmap"
+        description: ""
+      defaultAudioLanguage: en-US

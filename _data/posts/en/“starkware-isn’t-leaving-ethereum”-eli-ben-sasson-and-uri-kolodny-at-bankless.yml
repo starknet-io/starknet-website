@@ -3,7 +3,6 @@ post_type: video
 title: “StarkWare isn’t Leaving Ethereum” / Eli Ben-Sasson and Uri Kolodny at Bankless
 published_date: 2022-07-29T15:51:43.013Z
 time_to_consume: 28 min watch
-video_link: https://youtu.be/bKGUXBEOCrw
 image: /assets/interviews07.jpg
 category: ecosystem
 topic:
@@ -11,3 +10,265 @@ topic:
   - ethereum
 short_desc: Covering the recent announcement of the StarkWare token launch, the
   exploding zkEVM ecosystem, and the future of StarkWare.
+video:
+  url: https://youtu.be/bKGUXBEOCrw
+  id: bKGUXBEOCrw
+  data:
+    kind: youtube#video
+    etag: HNfXVbeOXYr7JUvSRohzpHYa1Wg
+    id: bKGUXBEOCrw
+    snippet:
+      publishedAt: 2022-07-28T21:45:09Z
+      channelId: UCAl9Ld79qaZxp9JzEOwd3aA
+      title: "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny |
+        EthCC Experience 2022 #3"
+      description: >-
+        🇫🇷 Welcome to the Bankless EthCC 2022 Experience 🇫🇷
+
+
+        With fantastic guests from all corners of the ecosystem, this 8-part series is an exploration of crypto culture and the current state of Ethereum.
+
+
+        In episode 3, we cover the recent announcement of the StarkWare token launch, the exploding zkEVM ecosystem, and the future of StarkWare.
+
+
+        ------
+
+        📣Rhino.Fi | Massive Mystery Airdrop
+
+        https://bit.ly/3o9trRE
+
+
+        ------
+
+        🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/  
+
+        🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/  
+
+
+        ------
+
+        BANKLESS SPONSOR TOOLS: 
+
+
+        🚀 ROCKET POOL | ETH STAKING
+
+        https://bankless.cc/RocketPool
+
+
+        ⚖️ ARBITRUM | SCALING ETHEREUM
+
+        https://bankless.cc/Arbitrum
+
+
+        ❎ ACROSS | BRIDGE TO LAYER 2
+
+        https://bankless.cc/Across
+
+
+        🦁 BRAVE | THE BROWSER NATIVE WALLET
+
+        https://bankless.cc/Brave
+
+
+        🌴 MAKER DAO | DECENTRALIZED LENDING
+
+        https://bankless.cc/MakerDAO
+
+
+        🔐 LEDGER | SECURE STAKING
+
+        https://bankless.cc/Ledger
+
+
+        ------
+
+        Topics Covered:
+
+
+        0:00 Intro
+
+        2:30 Eli and Uri
+
+        4:52 zkEVM Explosion
+
+        10:30 The StarkWare Approach
+
+        16:20 StarkNet on Ethereum
+
+        19:35 The StarkNet Token
+
+        24:30 Token Models
+
+        26:53 The Future of StarkWare
+
+
+        ------
+
+        Resources:
+
+
+        Eli on Twitter:
+
+        https://twitter.com/EliBenSasson
+
+
+        Uri on Twitter:
+
+        https://twitter.com/ukolodny
+
+
+        StarkWare:
+
+        https://twitter.com/StarkWareLtd
+
+
+        -----
+
+        Not financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/bKGUXBEOCrw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/bKGUXBEOCrw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/bKGUXBEOCrw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/bKGUXBEOCrw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/bKGUXBEOCrw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Bankless Shows
+      tags:
+        - bitcoin
+        - ethereum
+        - defi
+        - bankless
+        - crypto
+        - decentralized finance
+        - crypto finance
+        - open finance
+        - ether
+        - eth
+        - btc
+        - token
+        - tokens
+      categoryId: "24"
+      liveBroadcastContent: none
+      localized:
+        title: "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny |
+          EthCC Experience 2022 #3"
+        description: >-
+          🇫🇷 Welcome to the Bankless EthCC 2022 Experience 🇫🇷
+
+
+          With fantastic guests from all corners of the ecosystem, this 8-part series is an exploration of crypto culture and the current state of Ethereum.
+
+
+          In episode 3, we cover the recent announcement of the StarkWare token launch, the exploding zkEVM ecosystem, and the future of StarkWare.
+
+
+          ------
+
+          📣Rhino.Fi | Massive Mystery Airdrop
+
+          https://bit.ly/3o9trRE
+
+
+          ------
+
+          🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/  
+
+          🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/  
+
+
+          ------
+
+          BANKLESS SPONSOR TOOLS: 
+
+
+          🚀 ROCKET POOL | ETH STAKING
+
+          https://bankless.cc/RocketPool
+
+
+          ⚖️ ARBITRUM | SCALING ETHEREUM
+
+          https://bankless.cc/Arbitrum
+
+
+          ❎ ACROSS | BRIDGE TO LAYER 2
+
+          https://bankless.cc/Across
+
+
+          🦁 BRAVE | THE BROWSER NATIVE WALLET
+
+          https://bankless.cc/Brave
+
+
+          🌴 MAKER DAO | DECENTRALIZED LENDING
+
+          https://bankless.cc/MakerDAO
+
+
+          🔐 LEDGER | SECURE STAKING
+
+          https://bankless.cc/Ledger
+
+
+          ------
+
+          Topics Covered:
+
+
+          0:00 Intro
+
+          2:30 Eli and Uri
+
+          4:52 zkEVM Explosion
+
+          10:30 The StarkWare Approach
+
+          16:20 StarkNet on Ethereum
+
+          19:35 The StarkNet Token
+
+          24:30 Token Models
+
+          26:53 The Future of StarkWare
+
+
+          ------
+
+          Resources:
+
+
+          Eli on Twitter:
+
+          https://twitter.com/EliBenSasson
+
+
+          Uri on Twitter:
+
+          https://twitter.com/ukolodny
+
+
+          StarkWare:
+
+          https://twitter.com/StarkWareLtd
+
+
+          -----
+
+          Not financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research.
+      defaultAudioLanguage: en

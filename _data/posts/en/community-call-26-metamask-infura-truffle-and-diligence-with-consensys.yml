@@ -3,10 +3,115 @@ post_type: video
 title: "Community Call #26 | MetaMask, Infura, Truffle and Diligence with Consensys"
 published_date: 2022-11-02T12:52:57.422Z
 time_to_consume: 54 min watch
-video_link: https://youtu.be/if6yyAWhJj0
 image: /assets/cc26.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Today Consensys will present their Starknet efforts, including
   MetaMask, Infura, Truffle, and Consensys Diligence.
+video:
+  url: https://youtu.be/if6yyAWhJj0
+  id: if6yyAWhJj0
+  data:
+    kind: youtube#video
+    etag: LBqTvvmRfrLKlGq4GNx-i7rAnWw
+    id: if6yyAWhJj0
+    snippet:
+      publishedAt: 2022-11-03T02:28:06Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #26 | MetaMask, Infura, Truffle and Diligence
+        with Consensys"
+      description: >-
+        Join us for our #26 StarkNet community call.
+
+        Today Consensys will present their StarkNet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence.
+
+
+        Here are the next steps that you can take to see how @ConsenSys  can help with your onboarding to StarkNet:
+
+        • Discover Metamask Snaps: https://metamask.io/snaps/
+
+
+        • Find out more about StarkNet and Infura:
+
+        https://infura.io/networks/ethereum/starknet
+
+
+        • Start building with Infura's quick-start NFT tutorial using Infura and StarkNet:
+
+        https://blog.infura.io/post/mint-your-first-nft-with-infura-and-starknet
+
+
+        • Fast-track your L2 builds with Truffle's how-to
+
+        https://trufflesuite.com/blog/how-to-use-truffle-to-build-on-ethereum-layer-2-networks/
+
+
+        • Discover why Diligence is the smart choice for safeguarding your Cairo contracts:
+
+        https://consensys.net/diligence/blog/2022/09/consensys-diligence-partners-with-starkware-to-expand-auditing-services/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/if6yyAWhJj0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/if6yyAWhJj0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/if6yyAWhJj0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/if6yyAWhJj0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/if6yyAWhJj0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #26 | MetaMask, Infura, Truffle and Diligence
+          with Consensys"
+        description: >-
+          Join us for our #26 StarkNet community call.
+
+          Today Consensys will present their StarkNet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence.
+
+
+          Here are the next steps that you can take to see how @ConsenSys  can help with your onboarding to StarkNet:
+
+          • Discover Metamask Snaps: https://metamask.io/snaps/
+
+
+          • Find out more about StarkNet and Infura:
+
+          https://infura.io/networks/ethereum/starknet
+
+
+          • Start building with Infura's quick-start NFT tutorial using Infura and StarkNet:
+
+          https://blog.infura.io/post/mint-your-first-nft-with-infura-and-starknet
+
+
+          • Fast-track your L2 builds with Truffle's how-to
+
+          https://trufflesuite.com/blog/how-to-use-truffle-to-build-on-ethereum-layer-2-networks/
+
+
+          • Discover why Diligence is the smart choice for safeguarding your Cairo contracts:
+
+          https://consensys.net/diligence/blog/2022/09/consensys-diligence-partners-with-starkware-to-expand-auditing-services/
+      defaultAudioLanguage: en-US

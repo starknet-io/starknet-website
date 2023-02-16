@@ -3,10 +3,53 @@ post_type: video
 title: "Community Call #16 | Discussing Starknet and Snapshot partnership"
 published_date: 2022-06-09T10:55:00.240Z
 time_to_consume: 58 min watch
-video_link: https://youtu.be/G6e_wI9zIVA
 image: /assets/cc16.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Hosting Nathan and Orlando from Snapshot and discussing StarkNet and
   Snapshot partnership
+video:
+  url: https://youtu.be/G6e_wI9zIVA
+  id: G6e_wI9zIVA
+  data:
+    kind: youtube#video
+    etag: eqn1lkduBgBv_M2OxkKhpRBJpUw
+    id: G6e_wI9zIVA
+    snippet:
+      publishedAt: 2022-06-10T01:36:31Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
+        partnership"
+      description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
+        and Snapshot partnership
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/G6e_wI9zIVA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/G6e_wI9zIVA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/G6e_wI9zIVA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/G6e_wI9zIVA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/G6e_wI9zIVA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
+          partnership"
+        description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
+          and Snapshot partnership
+      defaultAudioLanguage: en-US

@@ -3,9 +3,48 @@ post_type: video
 title: STARK SPACES | ApeXPro
 published_date: 2022-11-17T13:53:02.656Z
 time_to_consume: 25 min watch
-video_link: https://youtu.be/W2Gz8zd6uUM
 image: /assets/ts03.jpg
 category: stark-math
 topic:
   - starknet
 short_desc: STARK SPACES | ApeXPro
+video:
+  url: https://youtu.be/W2Gz8zd6uUM
+  id: W2Gz8zd6uUM
+  data:
+    kind: youtube#video
+    etag: MpI3ry76zp4_KNlXbwzTqeUcoLY
+    id: W2Gz8zd6uUM
+    snippet:
+      publishedAt: 2022-12-13T17:05:56Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | ApeXPro
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/W2Gz8zd6uUM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/W2Gz8zd6uUM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/W2Gz8zd6uUM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/W2Gz8zd6uUM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/W2Gz8zd6uUM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | ApeXPro
+        description: ""
+      defaultAudioLanguage: en-US

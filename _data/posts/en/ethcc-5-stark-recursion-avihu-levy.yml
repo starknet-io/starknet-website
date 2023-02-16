@@ -3,10 +3,53 @@ post_type: video
 title: "ETHCC (5): Stark Recursion - Avihu Levy "
 published_date: 2022-07-20T12:27:33.521Z
 time_to_consume: 24 min watch
-video_link: https://youtu.be/mBYF5r-J1aw
 image: /assets/vid_events04.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: STARK Recursion is just around the corner! What does it mean? what
   new capabilities will it unlock? which new peaks will we conquer using it?
+video:
+  url: https://youtu.be/mBYF5r-J1aw
+  id: mBYF5r-J1aw
+  data:
+    kind: youtube#video
+    etag: Es3EOT96qrhmNjhLkRuJuP1z3rE
+    id: mBYF5r-J1aw
+    snippet:
+      publishedAt: 2022-07-20T22:10:16Z
+      channelId: UCVgsFxDu5lTqHmpirw5Q69Q
+      title: Avihu Levy - Stark Recursion
+      description: STARK Recursion is just around the corner! What does it mean? what
+        new capabilities will it unlock? which new peaks will we conquer using
+        it?
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/mBYF5r-J1aw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/mBYF5r-J1aw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/mBYF5r-J1aw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/mBYF5r-J1aw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/mBYF5r-J1aw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Amphi Monge
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Avihu Levy - Stark Recursion
+        description: STARK Recursion is just around the corner! What does it mean? what
+          new capabilities will it unlock? which new peaks will we conquer using
+          it?
+      defaultAudioLanguage: zh-Hans

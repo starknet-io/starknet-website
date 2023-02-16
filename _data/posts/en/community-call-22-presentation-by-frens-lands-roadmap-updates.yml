@@ -3,10 +3,53 @@ post_type: video
 title: "Community Call #22 | Presentation by Frens Lands & roadmap updates"
 published_date: 2022-09-06T11:05:02.904Z
 time_to_consume: 34 min watch
-video_link: https://youtu.be/khXAXAl-tvc
 image: /assets/cc22.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Join our 22nd community call for a presentation by Frens Lands and
   roadmap updates.
+video:
+  url: https://youtu.be/khXAXAl-tvc
+  id: khXAXAl-tvc
+  data:
+    kind: youtube#video
+    etag: dDyqJNoVhrotMPK1pF21u-liRv0
+    id: khXAXAl-tvc
+    snippet:
+      publishedAt: 2022-09-07T01:08:52Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
+        updates"
+      description: Join our 22nd community call for a presentation by Frens Lands and
+        roadmap updates.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/khXAXAl-tvc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/khXAXAl-tvc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/khXAXAl-tvc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/khXAXAl-tvc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/khXAXAl-tvc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
+          updates"
+        description: Join our 22nd community call for a presentation by Frens Lands and
+          roadmap updates.
+      defaultAudioLanguage: en-US

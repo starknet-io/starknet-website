@@ -3,10 +3,65 @@ post_type: video
 title: "Community Call #31 | The New Starknet Rust Sequencer"
 published_date: 2023-01-17T13:00:07.686Z
 time_to_consume: 42 min watch
-video_link: https://youtu.be/9IszIArEt1M
 image: /assets/cc31.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Today we will host Elin Tulchinsky and Alon Haramati from StarkWare
   to talk about the new StarkNet Rust Sequencer.
+video:
+  url: https://youtu.be/9IszIArEt1M
+  id: 9IszIArEt1M
+  data:
+    kind: youtube#video
+    etag: SWZgGs9jzfQ_9EtfR4Tckc96B84
+    id: 9IszIArEt1M
+    snippet:
+      publishedAt: 2023-01-18T02:22:43Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #31 | The New StarkNet Rust Sequencer"
+      description: >-
+        Join us today for our 31th StarkNet Community Call.
+
+
+        Today we will host Elin Tulchinsky and Alon Haramati from StarkWare to talk about the new StarkNet Rust Sequencer
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/9IszIArEt1M/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/9IszIArEt1M/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/9IszIArEt1M/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/9IszIArEt1M/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/9IszIArEt1M/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #31 | The New StarkNet Rust Sequencer"
+        description: >-
+          Join us today for our 31th StarkNet Community Call.
+
+
+          Today we will host Elin Tulchinsky and Alon Haramati from StarkWare to talk about the new StarkNet Rust Sequencer
+      defaultAudioLanguage: en-US

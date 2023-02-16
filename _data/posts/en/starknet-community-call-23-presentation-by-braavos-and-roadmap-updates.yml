@@ -3,10 +3,10 @@ post_type: video
 title: "Starknet Community Call #23 | Presentation by Braavos and roadmap updates"
 published_date: 2022-09-20T11:06:23.814Z
 time_to_consume: 55 min watch
-video_link: https://youtu.be/Nx9mycAXcBg
 video:
   url: https://youtu.be/Nx9mycAXcBg
-  video:
+  id: Nx9mycAXcBg
+  data:
     kind: youtube#video
     etag: qa1CE70mSw5JeAB_7VUcup5dP5g
     id: Nx9mycAXcBg

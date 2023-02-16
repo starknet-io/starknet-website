@@ -3,10 +3,55 @@ post_type: video
 title: "Community Call #24 | Presentation by Cartridge"
 published_date: 2022-10-04T11:48:06.184Z
 time_to_consume: 56 min watch
-video_link: https://youtu.be/nxV7-LkKyFs
 image: /assets/cc24.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: On todays community call we have a presentation by Tarrence all
   about Cartridge.
+video:
+  url: https://youtu.be/nxV7-LkKyFs
+  id: nxV7-LkKyFs
+  data:
+    kind: youtube#video
+    etag: 8L3PhO74qWVzTouWZLQfOeLlPIM
+    id: nxV7-LkKyFs
+    snippet:
+      publishedAt: 2022-10-05T01:35:08Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #24 | Presentation by Cartridge"
+      description: |-
+        Join us for StarkNet's community call.
+        Today we will have Tarrence with a presentation about Cartridge.
+        @tarrenceva  @cartridge_gg on Twitter.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/nxV7-LkKyFs/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/nxV7-LkKyFs/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/nxV7-LkKyFs/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/nxV7-LkKyFs/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/nxV7-LkKyFs/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #24 | Presentation by Cartridge"
+        description: |-
+          Join us for StarkNet's community call.
+          Today we will have Tarrence with a presentation about Cartridge.
+          @tarrenceva  @cartridge_gg on Twitter.
+      defaultAudioLanguage: en-US

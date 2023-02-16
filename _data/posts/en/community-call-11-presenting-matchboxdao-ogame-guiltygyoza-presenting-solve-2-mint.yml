@@ -4,9 +4,50 @@ title: "Community Call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
   presenting Solve 2 Mint"
 published_date: 2022-03-29T14:02:42.065Z
 time_to_consume: 58 min watch
-video_link: https://youtu.be/lKgII-UtYP4
 image: /assets/cc11.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Presenting MatchboxDAO, OGame, Guiltygyoza presenting Solve 2 Mint
+video:
+  url: https://youtu.be/lKgII-UtYP4
+  id: lKgII-UtYP4
+  data:
+    kind: youtube#video
+    etag: VOGIp1UG6W5Fs9XuG3TT42DuOXY
+    id: lKgII-UtYP4
+    snippet:
+      publishedAt: 2022-03-30T01:33:53Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
+        presenting Solve 2 Mint"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/lKgII-UtYP4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/lKgII-UtYP4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/lKgII-UtYP4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/lKgII-UtYP4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/lKgII-UtYP4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
+          presenting Solve 2 Mint"
+        description: ""
+      defaultAudioLanguage: en-US

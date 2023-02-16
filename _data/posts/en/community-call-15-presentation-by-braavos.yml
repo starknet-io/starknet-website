@@ -3,9 +3,48 @@ post_type: video
 title: "Community Call #15 | Presentation by Braavos"
 published_date: 2022-05-24T14:07:30.249Z
 time_to_consume: 40 min watch
-video_link: https://youtu.be/rnjkUexnJHw
 image: /assets/cc15.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Join us for our 15th community call - Presentation by Braavos
+video:
+  url: https://youtu.be/rnjkUexnJHw
+  id: rnjkUexnJHw
+  data:
+    kind: youtube#video
+    etag: wj87ezk7tV7ofJtpIB7PMJPNxnc
+    id: rnjkUexnJHw
+    snippet:
+      publishedAt: 2022-05-25T01:18:27Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community call #15 | Presentation by Braavos"
+      description: Join us for our 15th community call - Presentation by Braavos
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/rnjkUexnJHw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/rnjkUexnJHw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/rnjkUexnJHw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/rnjkUexnJHw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/rnjkUexnJHw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community call #15 | Presentation by Braavos"
+        description: Join us for our 15th community call - Presentation by Braavos
+      defaultAudioLanguage: en-US

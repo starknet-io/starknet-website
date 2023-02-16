@@ -3,10 +3,49 @@ post_type: video
 title: STARK SPACES | StarkNet Regenesis
 published_date: 2022-11-30T13:54:13.727Z
 time_to_consume: 46 min watch
-video_link: https://youtu.be/NR-fNmIcUFo
 image: /assets/ts04.jpg
 category: stark-math
 topic:
   - starknet
 short_desc: |
   STARK SPACES | StarkNet Regenesis
+video:
+  url: https://youtu.be/NR-fNmIcUFo
+  id: NR-fNmIcUFo
+  data:
+    kind: youtube#video
+    etag: fWdCcIXwp9LMaPPQe72yDVBkZDo
+    id: NR-fNmIcUFo
+    snippet:
+      publishedAt: 2022-12-13T19:49:37Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | StarkNet Regenesis
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/NR-fNmIcUFo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/NR-fNmIcUFo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/NR-fNmIcUFo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/NR-fNmIcUFo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/NR-fNmIcUFo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | StarkNet Regenesis
+        description: ""
+      defaultAudioLanguage: en-US

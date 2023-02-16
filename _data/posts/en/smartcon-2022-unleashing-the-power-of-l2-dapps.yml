@@ -3,17 +3,119 @@ post_type: video
 title: "SmartCon 2022 | Unleashing the Power of L2 dApps "
 published_date: 2023-02-02T13:19:36.322Z
 time_to_consume: 14 min watch
-video_link: https://youtu.be/d_Za0z5JCsc?t=75
 image: /assets/vid_events02.jpg
 category: community-and-events
 topic:
   - starknet
 short_desc: >-
-  How do layer-2 environments scale blockchains, and what use cases are unlocked
-  by reaching global scale? In this SmartCon 2022 presentation, Gai Ron, product
-  manager and blockchain researcher at StarkWare, explores the limitations of
-  layer-1 dApps, the advantages of layer-2-native dApps, and the path forward
-  for StarkNet.
+  How do layer-2 environments scale blockchains, and what use cases
+  are unlocked by reaching global scale? In this SmartCon 2022 presentation, Gai
+  Ron, product manager and blockchain researcher at StarkWare, explores the
+  limitations of layer-1 dApps, the advantages of layer-2-native dApps, and the
+  path forward for StarkNet.
 
 
   Chainlink is the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.
+video:
+  url: https://youtu.be/d_Za0z5JCsc?t=75
+  id: d_Za0z5JCsc
+  data:
+    kind: youtube#video
+    etag: eww2UUph-A5CvmVCqFRVpBUwFFw
+    id: d_Za0z5JCsc
+    snippet:
+      publishedAt: 2022-11-09T18:00:28Z
+      channelId: UCnjkrlqaWEBSnKZQ71gdyFA
+      title: StarkNet — Unleashing the Power of L2 dApps | SmartCon 2022
+      description: >-
+        How do layer-2 environments scale blockchains, and what use cases
+        are unlocked by reaching global scale? In this SmartCon 2022
+        presentation, Gai Ron, product manager and blockchain researcher at
+        StarkWare, explores the limitations of layer-1 dApps, the advantages of
+        layer-2-native dApps, and the path forward for StarkNet.
+
+
+        Chainlink is the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.
+
+
+        Learn more about Chainlink:
+
+
+        Website: https://chain.link
+
+        Docs: https://docs.chain.link
+
+        Twitter: https://twitter.com/chainlink
+
+
+        #Chainlink
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/d_Za0z5JCsc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/d_Za0z5JCsc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/d_Za0z5JCsc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/d_Za0z5JCsc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/d_Za0z5JCsc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Chainlink
+      tags:
+        - Chainlink
+        - Chain
+        - Link
+        - chainlink
+        - chain
+        - link
+        - "#Chainlink"
+        - CHAINLINK
+        - CHAIN
+        - LINK
+        - "#ChainLink"
+        - "#chainlink"
+        - "#CHAINLINK"
+        - "#Chain"
+        - "#chain"
+        - "#CHAIN"
+        - "#Link"
+        - "#link"
+        - "#LINK"
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: StarkNet — Unleashing the Power of L2 dApps | SmartCon 2022
+        description: >-
+          How do layer-2 environments scale blockchains, and what use cases
+          are unlocked by reaching global scale? In this SmartCon 2022
+          presentation, Gai Ron, product manager and blockchain researcher at
+          StarkWare, explores the limitations of layer-1 dApps, the advantages
+          of layer-2-native dApps, and the path forward for StarkNet.
+
+
+          Chainlink is the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.
+
+
+          Learn more about Chainlink:
+
+
+          Website: https://chain.link
+
+          Docs: https://docs.chain.link
+
+          Twitter: https://twitter.com/chainlink
+
+
+          #Chainlink
+      defaultAudioLanguage: en
