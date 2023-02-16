@@ -3,13 +3,59 @@ post_type: video
 title: "ETHCC (5): Starknet - Next steps - Eli Ben-Sasson "
 published_date: 2022-07-21T12:24:41.336Z
 time_to_consume: 28 min watch
-video_link: https://www.youtube.com/watch?v=4asIQyWwGko
 image: /assets/vid_events04.jpg
 category: community-and-events
 topic:
   - starknet
 short_desc: >
-  Starknet has come a long way since its announcement a year and a half ago. A
-  vibrant community has formed around it, and it’s growing rapidly. This
-  exciting and expanding universe poses new challenges, and requires new tools.
-  This talk will share our vision for the near future of Starknet
+  Starknet has come a long way since its announcement a year and a
+  half ago. A vibrant community has formed around it, and it’s growing rapidly.
+  This exciting and expanding universe poses new challenges, and requires new
+  tools. This talk will share our vision for the near future of Starknet
+video:
+  url: https://www.youtube.com/watch?v=4asIQyWwGko
+  id: 4asIQyWwGko
+  data:
+    kind: youtube#video
+    etag: o7MjIIDYBu2mLKVo8Fgr_3_zO4c
+    id: 4asIQyWwGko
+    snippet:
+      publishedAt: 2022-07-21T21:13:59Z
+      channelId: UC_kOxlaYNOTtNwtwySZ0B8w
+      title: Eli Ben-Sasson - StarkNet - Next steps
+      description: StarkNet has come a long way since its announcement a year and a
+        half ago. A vibrant community has formed around it, and it’s growing
+        rapidly. This exciting and expanding universe poses new challenges, and
+        requires new tools. This talk will share our vision for the near future
+        of StarkNet
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/4asIQyWwGko/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/4asIQyWwGko/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/4asIQyWwGko/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/4asIQyWwGko/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/4asIQyWwGko/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Grand Amphi Théatre
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Eli Ben-Sasson - StarkNet - Next steps
+        description: StarkNet has come a long way since its announcement a year and a
+          half ago. A vibrant community has formed around it, and it’s growing
+          rapidly. This exciting and expanding universe poses new challenges,
+          and requires new tools. This talk will share our vision for the near
+          future of StarkNet

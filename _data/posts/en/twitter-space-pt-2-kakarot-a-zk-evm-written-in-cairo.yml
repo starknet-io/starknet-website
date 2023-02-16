@@ -3,9 +3,10 @@ post_type: video
 title: "Twitter space pt.2: Kakarot, a ZK-EVM written in Cairo"
 published_date: 2022-10-27T12:48:49.002Z
 time_to_consume: 46 min watch
-video_link: https://twitter.com/StarkWareLtd/status/1585645325812830208?s=20&t=RaCxfFqigstk-GsoGgMadw
 image: /assets/ts01.jpg
 category: stark-math
 topic:
   - starknet
 short_desc: Kakarot, a ZK-EVM written in Cairo - Part 2
+video:
+  url: https://twitter.com/StarkWareLtd/status/1585645325812830208?s=20&t=RaCxfFqigstk-GsoGgMadw

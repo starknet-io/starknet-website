@@ -3,7 +3,6 @@ post_type: video
 title: STARK Struck Podcast | Ep 5 | Sean Han from Aspect
 published_date: 2022-10-19T00:00:00+00:00
 time_to_consume: 44 min watch
-video_link: https://youtu.be/3UK4SqUptRw
 image: /assets/starkstruck05.jpg
 category: stark-struck
 topic:
@@ -11,3 +10,51 @@ topic:
 short_desc: "Join Henri Lieutaud from the StarkNet team and Sean Han from
   Aspect, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically. "
+video:
+  url: https://youtu.be/3UK4SqUptRw
+  id: 3UK4SqUptRw
+  data:
+    kind: youtube#video
+    etag: CWrdlakPlQ4SSE53AJAYpqzmVH8
+    id: 3UK4SqUptRw
+    snippet:
+      publishedAt: 2022-10-19T12:29:56Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK Struck Podcast | Episode 5 | Henri Lieutaud with Sean Han from
+        Aspect
+      description: "Join Henri Lieutaud from the StarkNet team and Sean Han from
+        Aspect, on what gets them excited about technology in general,
+        blockchain in particular, and validity rollups specifically.  Twitter:
+        @0xs34n @aspectdotco @StarkscanCo @henrlihenrli @Starknet_Intern"
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/3UK4SqUptRw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/3UK4SqUptRw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/3UK4SqUptRw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/3UK4SqUptRw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/3UK4SqUptRw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "24"
+      liveBroadcastContent: none
+      localized:
+        title: STARK Struck Podcast | Episode 5 | Henri Lieutaud with Sean Han from
+          Aspect
+        description: "Join Henri Lieutaud from the StarkNet team and Sean Han from
+          Aspect, on what gets them excited about technology in general,
+          blockchain in particular, and validity rollups specifically.  Twitter:
+          @0xs34n @aspectdotco @StarkscanCo @henrlihenrli @Starknet_Intern"
+      defaultAudioLanguage: en-US

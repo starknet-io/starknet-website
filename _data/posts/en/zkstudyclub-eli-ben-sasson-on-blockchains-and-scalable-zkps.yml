@@ -3,10 +3,96 @@ post_type: video
 title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
 published_date: 2020-03-19T15:01:07.016Z
 time_to_consume: 74 min watch
-video_link: https://youtu.be/SreeFPVrGYo
 image: /assets/starkhome01.png
 category: stark-math
 topic:
   - starknet
 short_desc: "ZK Study Club is a study group where we cover specific topics in
   the zk space. "
+video:
+  url: https://youtu.be/SreeFPVrGYo
+  id: SreeFPVrGYo
+  data:
+    kind: youtube#video
+    etag: OSqRdtb7YidYO0QW-TwoHXmuI54
+    id: SreeFPVrGYo
+    snippet:
+      publishedAt: 2020-03-19T19:12:49Z
+      channelId: UCYWsYz5cKw4wZ9Mpe4kuM_g
+      title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
+      description: >-
+        ZK Study Club is a study group where we cover specific topics in
+        the zk space. 
+
+
+        This was our first on Crowdcast - you can see the same video with questions and chat here: https://www.crowdcast.io/e/dr--ben-sasson-how-i
+
+
+        Thanks to Eli for presenting this awesome story! 
+
+
+        ----------
+
+
+        To Follow the Zero Knowledge Podcast us at https://www.zeroknowledge.fm
+
+
+        To the listeners of Zero Knowledge Podcast, if you like what we do: 
+
+        - Follow us on Twitter - @zeroknowledgefm
+
+        - Join us on Telegram - https://t.me/joinchat/B_81tQ57-ThZg8y...
+
+        - Support our Gitcoin Grant - https://gitcoin.co/grants/329/zero-kn...
+
+        - Support us on Patreon - https://www.patreon.com/zeroknowledge
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/SreeFPVrGYo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/SreeFPVrGYo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/SreeFPVrGYo/hqdefault.jpg
+          width: 480
+          height: 360
+      channelTitle: Zero Knowledge
+      tags:
+        - Blockchain
+        - zero knowledge
+        - tech education
+        - podcast
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
+        description: >-
+          ZK Study Club is a study group where we cover specific topics in
+          the zk space. 
+
+
+          This was our first on Crowdcast - you can see the same video with questions and chat here: https://www.crowdcast.io/e/dr--ben-sasson-how-i
+
+
+          Thanks to Eli for presenting this awesome story! 
+
+
+          ----------
+
+
+          To Follow the Zero Knowledge Podcast us at https://www.zeroknowledge.fm
+
+
+          To the listeners of Zero Knowledge Podcast, if you like what we do: 
+
+          - Follow us on Twitter - @zeroknowledgefm
+
+          - Join us on Telegram - https://t.me/joinchat/B_81tQ57-ThZg8y...
+
+          - Support our Gitcoin Grant - https://gitcoin.co/grants/329/zero-kn...
+
+          - Support us on Patreon - https://www.patreon.com/zeroknowledge
+      defaultAudioLanguage: en

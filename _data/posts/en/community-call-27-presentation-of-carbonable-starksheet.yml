@@ -3,9 +3,56 @@ post_type: video
 title: "Community Call #27 | Presentation of Carbonable + StarkSheet"
 published_date: 2022-11-15T12:54:11.594Z
 time_to_consume: 59 min watch
-video_link: https://youtu.be/f6V46ZzgaOs
 image: /assets/cc27.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Presentation of Carbonable + StarkSheet
+video:
+  url: https://youtu.be/f6V46ZzgaOs
+  id: f6V46ZzgaOs
+  data:
+    kind: youtube#video
+    etag: w8mw6JXsxkwmviRjI_Z5SpuQAnI
+    id: f6V46ZzgaOs
+    snippet:
+      publishedAt: 2022-11-16T02:38:30Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #27 | Presentaiion of Carbonable + StarkSheet"
+      description: |-
+        Join us for our #27 StarkNet community call.
+        Presentation of Carbonable + StarkSheet.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/f6V46ZzgaOs/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/f6V46ZzgaOs/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/f6V46ZzgaOs/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/f6V46ZzgaOs/sddefault.jpg
+          width: 640
+          height: 480
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #27 | Presentaiion of Carbonable + StarkSheet"
+        description: |-
+          Join us for our #27 StarkNet community call.
+          Presentation of Carbonable + StarkSheet.
+      defaultAudioLanguage: en-US

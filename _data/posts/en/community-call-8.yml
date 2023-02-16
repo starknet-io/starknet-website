@@ -3,9 +3,47 @@ post_type: video
 title: "Community call #8"
 published_date: 2022-02-15T00:00:00+00:00
 time_to_consume: 75 min watch
-video_link: https://youtu.be/s1Ja3EmJPt4
 image: /assets/cc08.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Hosting Guiltygyoza and Kunho Kim
+video:
+  url: https://youtu.be/s1Ja3EmJPt4
+  id: s1Ja3EmJPt4
+  data:
+    kind: youtube#video
+    etag: 4YXmRxQx1xmc5L2OK052yttEsng
+    id: s1Ja3EmJPt4
+    snippet:
+      publishedAt: 2022-02-16T05:17:30Z
+      channelId: UC9T86o1gsyaS7qAPIBxMbhQ
+      title: "StarkNet Community call #8"
+      description: StarkNet community call
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/s1Ja3EmJPt4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/s1Ja3EmJPt4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/s1Ja3EmJPt4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/s1Ja3EmJPt4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/s1Ja3EmJPt4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Henri | StarkWare
+      categoryId: "24"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community call #8"
+        description: StarkNet community call

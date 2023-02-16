@@ -3,10 +3,55 @@ post_type: video
 title: "Community Call #25 | Upcoming versions and Regenesis"
 published_date: 2022-10-18T11:50:52.325Z
 time_to_consume: 55 min watch
-video_link: https://youtu.be/0y5XIjXMkx4
 image: /assets/cc25.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Today we will have Tom Brand from StarkWare talking about the
   upcoming versions and Regenesis.
+video:
+  url: https://youtu.be/0y5XIjXMkx4
+  id: 0y5XIjXMkx4
+  data:
+    kind: youtube#video
+    etag: Qui2Q2I-_pxSLUXcQRZvFL-wvWA
+    id: 0y5XIjXMkx4
+    snippet:
+      publishedAt: 2022-10-19T09:25:55Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #25 | Upcoming versions and Regenesis"
+      description: >-
+        Join us for StarkNet's community call.
+
+        Today we will have Tom Brand from StarkWare talking about the upcoming versions and Regenesis.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/0y5XIjXMkx4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/0y5XIjXMkx4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/0y5XIjXMkx4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/0y5XIjXMkx4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/0y5XIjXMkx4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #25 | Upcoming versions and Regenesis"
+        description: >-
+          Join us for StarkNet's community call.
+
+          Today we will have Tom Brand from StarkWare talking about the upcoming versions and Regenesis.
+      defaultAudioLanguage: en-US

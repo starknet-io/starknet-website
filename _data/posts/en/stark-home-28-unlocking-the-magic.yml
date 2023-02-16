@@ -3,14 +3,77 @@ post_type: video
 title: "STARK @ Home 28: Unlocking the Magic"
 published_date: 2022-12-20T16:31:48.513Z
 time_to_consume: 73 min watch
-video_link: https://youtu.be/j9HwAJ-4YpA
 image: /assets/starkhome28.png
 category: stark-math
 topic:
   - starknet
 short_desc: >-
-  The Magic The Gathering (MTG) saga began long ago, when Dr. Richard Garfield
-  created - while working on his PhD in Combinatorics - the very first trading
-  card game (TCG).
+  The Magic The Gathering (MTG) saga began long ago, when Dr. Richard
+  Garfield created - while working on his PhD in Combinatorics - the very first
+  trading card game (TCG).
 
   Magic The Gathering remains one of the greatest TCGs of all time—beloved by mages, scribes, and adventurers alike. (Blockchain trivia: The now infamous Mt. Gox Exchange crypto exchange started in 2006 as an exchange for MTG cards!).
+video:
+  url: https://youtu.be/j9HwAJ-4YpA
+  id: j9HwAJ-4YpA
+  data:
+    kind: youtube#video
+    etag: X7A8mpDKScKuQnXv_1wMWGxJ3VI
+    id: j9HwAJ-4YpA
+    snippet:
+      publishedAt: 2022-12-21T08:23:56Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 28: Unlocking the Magic: Exploring the Future of Magic The
+        Gathering with StarkNet"
+      description: >-
+        The Magic The Gathering (MTG) saga began long ago, when Dr. Richard
+        Garfield created - while working on his PhD in Combinatorics - the very
+        first trading card game (TCG).
+
+        Magic The Gathering remains one of the greatest TCGs of all time—beloved by mages, scribes, and adventurers alike. (Blockchain trivia: The now infamous Mt. Gox Exchange crypto exchange started in 2006 as an exchange for MTG cards!).
+
+
+        Now, three decades later, Richard and long-time partner and MTG expansion creator Skaff Elias, two legendary game creators,  explore and discuss our backyard —blockchains and validity rollups— musing on their potential to revolutionize the gaming experience and spark newfound possibilities. 
+
+
+        In this STARK @ Home, Richard and Skaff will share the story of Magic The Gathering, examining everything from the past to the present and what blockchains can bring in the future.
+
+        Together, we’ll try to unveil the ways decentralized blockchains (and StarkNet, in particular) can improve gaming and discover the potential for greater innovation, fairness, and value for all.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/j9HwAJ-4YpA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/j9HwAJ-4YpA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/j9HwAJ-4YpA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/j9HwAJ-4YpA/sddefault.jpg
+          width: 640
+          height: 480
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 28: Unlocking the Magic: Exploring the Future of Magic The
+          Gathering with StarkNet"
+        description: >-
+          The Magic The Gathering (MTG) saga began long ago, when Dr. Richard
+          Garfield created - while working on his PhD in Combinatorics - the
+          very first trading card game (TCG).
+
+          Magic The Gathering remains one of the greatest TCGs of all time—beloved by mages, scribes, and adventurers alike. (Blockchain trivia: The now infamous Mt. Gox Exchange crypto exchange started in 2006 as an exchange for MTG cards!).
+
+
+          Now, three decades later, Richard and long-time partner and MTG expansion creator Skaff Elias, two legendary game creators,  explore and discuss our backyard —blockchains and validity rollups— musing on their potential to revolutionize the gaming experience and spark newfound possibilities. 
+
+
+          In this STARK @ Home, Richard and Skaff will share the story of Magic The Gathering, examining everything from the past to the present and what blockchains can bring in the future.
+
+          Together, we’ll try to unveil the ways decentralized blockchains (and StarkNet, in particular) can improve gaming and discover the potential for greater innovation, fairness, and value for all.
+      defaultAudioLanguage: en-US

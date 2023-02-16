@@ -3,10 +3,53 @@ post_type: video
 title: "Community Call #19 | Talking with Mirko from Equilibrium about full-nodes"
 published_date: 2022-07-26T10:59:41.168Z
 time_to_consume: 52 min watch
-video_link: https://youtu.be/OzYbVm536vo
 image: /assets/cc19.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Join us for our 19th Community call. Today we are hosting Mirko from
   Equilibrium and talking about full-nodes
+video:
+  url: https://youtu.be/OzYbVm536vo
+  id: OzYbVm536vo
+  data:
+    kind: youtube#video
+    etag: Rg3AkYyKx5Vk4knYbr7HK9FYAts
+    id: OzYbVm536vo
+    snippet:
+      publishedAt: 2022-07-27T01:26:50Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
+        full-nodes"
+      description: Join us for our 19th Community call. Today we are hosting Mirko
+        from Equilibrium and talking about full-nodes
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/OzYbVm536vo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/OzYbVm536vo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/OzYbVm536vo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/OzYbVm536vo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/OzYbVm536vo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
+          full-nodes"
+        description: Join us for our 19th Community call. Today we are hosting Mirko
+          from Equilibrium and talking about full-nodes
+      defaultAudioLanguage: en-US

@@ -3,9 +3,40 @@ post_type: video
 title: "STARK @ Home 16: Recursive STARKs"
 published_date: 2020-12-10T15:34:32.178Z
 time_to_consume: 79 min watch
-video_link: https://youtu.be/lZa9Zb8wVFc
 image: /assets/starkhome16.png
 category: stark-math
 topic:
   - starknet
 short_desc: Recursive STARKs.
+video:
+  url: https://youtu.be/lZa9Zb8wVFc
+  id: lZa9Zb8wVFc
+  data:
+    kind: youtube#video
+    etag: y0jiqhDO2nYUDj54gYBIuflcpe8
+    id: lZa9Zb8wVFc
+    snippet:
+      publishedAt: 2020-12-10T08:00:18Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK@Home 16: Recursive STARKs"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/lZa9Zb8wVFc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/lZa9Zb8wVFc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/lZa9Zb8wVFc/hqdefault.jpg
+          width: 480
+          height: 360
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK@Home 16: Recursive STARKs"
+        description: ""
+      defaultAudioLanguage: en-US

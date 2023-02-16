@@ -4,7 +4,6 @@ title: Empire podcast – StarkWare, L3s and the ZK Rollup Future | Eli
   Ben-Sasson, Uri Kolodny
 published_date: 2022-10-03T15:53:21.818Z
 time_to_consume: 70 min watch
-video_link: https://youtu.be/TVhjXVeEamo
 image: /assets/interviews08.jpg
 category: ecosystem
 topic:
@@ -13,3 +12,203 @@ short_desc: "In this episode of Empire, Jason and Santi are joined by Eli
   Ben-Sasson and Uri Kolodny to discuss Starkware and the ZK-rollup future. This
   episode is an absolute masterclass on scaling Ethereum using zero-knowledge
   proofs and a fractal architecture. "
+video:
+  url: https://youtu.be/TVhjXVeEamo
+  id: TVhjXVeEamo
+  data:
+    kind: youtube#video
+    etag: JrptMxc-4PVzjJ9annp6DRFOdy4
+    id: TVhjXVeEamo
+    snippet:
+      publishedAt: 2022-10-03T13:00:31Z
+      channelId: UCEOv-8wHvYC6mzsY2Gm5WcQ
+      title: Starkware, L3s and the ZK Rollup Future | Eli Ben-Sasson, Uri Kolodny
+      description: >-
+        In this episode of Empire, Jason and Santi are joined by Eli
+        Ben-Sasson and Uri Kolodny to discuss Starkware and the ZK-rollup
+        future. This episode is an absolute masterclass on scaling Ethereum
+        using zero-knowledge proofs and a fractal architecture. 
+
+
+        We discuss the limits of L1 scaling, ZK vs Optimistic rollups, native L2 programming languages, Layer 3 applications and much more!
+
+
+        - -
+
+        Timestamps:
+
+        00:00 Intro
+
+        00:32 The Limits of L1 Scaling
+
+        05:30 Optimistic vs ZK Rollups
+
+        14:40 Why ZK Rollups Lag Optimistic Rollups in TVL
+
+        19:10 Advantages of the Cairo Programming Language
+
+        26:57 L1 Apps Building for an L2 World
+
+        30:01 Circle Ad
+
+        31:43 dYdX’s Move From Starkware to Cosmos
+
+        37:15 MEV, Bitcoin and Cairo 1.0 Adoption
+
+        46:23 Layer 3 Scaling
+
+        57:38 What Comes Next
+
+
+        - -
+
+        Follow Eli: https://twitter.com/EliBenSasson
+
+        Follow Uri: https://twitter.com/ukolodny
+
+        Follow Jason: https://twitter.com/JasonYanowitz
+
+        Follow Santi: https://twitter.com/santiagoroel
+
+        Follow Empire: https://twitter.com/theempirepod
+
+
+        Subscribe on YouTube: https://tinyurl.com/4fdhhb2j
+
+        Subscribe on Apple: https://tinyurl.com/mv4frfv7
+
+        Subscribe on Spotify: https://tinyurl.com/wbaypprw
+
+        - -
+
+        Resources
+
+
+        Vitalik's post on fractal scaling
+
+        https://vitalik.ca/general/2022/09/17/layer_3.html
+
+
+        Starkware
+
+        https://starkware.co/
+
+        --
+
+        Circle’s USDC has quickly become one of the most trusted and widely used stablecoins because of its composability, stability and reserve transparency. As a seamless, trusted digital currency, USDC is a zero-to-one opportunity for the global financial system. Check out their Transparency Hub at circle.com/transparency that outlines everything from links to USDC weekly reserve reports, monthly attestations, and blog posts written by their executive team highlighting how and why USDC was built the way it is. Learn more at: http://empirepodcast.link/circle
+
+        - - 
+
+        Get top market insights and the latest in crypto news. Subscribe to Blockworks Daily Newsletter: https://blockworks.co/newsletter/
+
+        - - 
+
+        Disclaimer: Nothing said on Empire is a recommendation to buy or sell securities or tokens. This podcast is for informational purposes only, and any views expressed by anyone on the show are solely our opinions, not financial advice. Santiago, Jason, and our guests may hold positions in the companies, funds, or projects discussed.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/TVhjXVeEamo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/TVhjXVeEamo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/TVhjXVeEamo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/TVhjXVeEamo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/TVhjXVeEamo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Empire
+      categoryId: "22"
+      liveBroadcastContent: none
+      localized:
+        title: Starkware, L3s and the ZK Rollup Future | Eli Ben-Sasson, Uri Kolodny
+        description: >-
+          In this episode of Empire, Jason and Santi are joined by Eli
+          Ben-Sasson and Uri Kolodny to discuss Starkware and the ZK-rollup
+          future. This episode is an absolute masterclass on scaling Ethereum
+          using zero-knowledge proofs and a fractal architecture. 
+
+
+          We discuss the limits of L1 scaling, ZK vs Optimistic rollups, native L2 programming languages, Layer 3 applications and much more!
+
+
+          - -
+
+          Timestamps:
+
+          00:00 Intro
+
+          00:32 The Limits of L1 Scaling
+
+          05:30 Optimistic vs ZK Rollups
+
+          14:40 Why ZK Rollups Lag Optimistic Rollups in TVL
+
+          19:10 Advantages of the Cairo Programming Language
+
+          26:57 L1 Apps Building for an L2 World
+
+          30:01 Circle Ad
+
+          31:43 dYdX’s Move From Starkware to Cosmos
+
+          37:15 MEV, Bitcoin and Cairo 1.0 Adoption
+
+          46:23 Layer 3 Scaling
+
+          57:38 What Comes Next
+
+
+          - -
+
+          Follow Eli: https://twitter.com/EliBenSasson
+
+          Follow Uri: https://twitter.com/ukolodny
+
+          Follow Jason: https://twitter.com/JasonYanowitz
+
+          Follow Santi: https://twitter.com/santiagoroel
+
+          Follow Empire: https://twitter.com/theempirepod
+
+
+          Subscribe on YouTube: https://tinyurl.com/4fdhhb2j
+
+          Subscribe on Apple: https://tinyurl.com/mv4frfv7
+
+          Subscribe on Spotify: https://tinyurl.com/wbaypprw
+
+          - -
+
+          Resources
+
+
+          Vitalik's post on fractal scaling
+
+          https://vitalik.ca/general/2022/09/17/layer_3.html
+
+
+          Starkware
+
+          https://starkware.co/
+
+          --
+
+          Circle’s USDC has quickly become one of the most trusted and widely used stablecoins because of its composability, stability and reserve transparency. As a seamless, trusted digital currency, USDC is a zero-to-one opportunity for the global financial system. Check out their Transparency Hub at circle.com/transparency that outlines everything from links to USDC weekly reserve reports, monthly attestations, and blog posts written by their executive team highlighting how and why USDC was built the way it is. Learn more at: http://empirepodcast.link/circle
+
+          - - 
+
+          Get top market insights and the latest in crypto news. Subscribe to Blockworks Daily Newsletter: https://blockworks.co/newsletter/
+
+          - - 
+
+          Disclaimer: Nothing said on Empire is a recommendation to buy or sell securities or tokens. This podcast is for informational purposes only, and any views expressed by anyone on the show are solely our opinions, not financial advice. Santiago, Jason, and our guests may hold positions in the companies, funds, or projects discussed.
+      defaultAudioLanguage: en-US

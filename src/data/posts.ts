@@ -2,6 +2,13 @@ import algoliasearch from "algoliasearch";
 import { defaultLocale } from "./i18n/config";
 import { TopLevelBlock } from "./pages";
 import { getFirst, getJSON, Meta } from "./utils";
+import { youtube_v3 } from "googleapis";
+
+interface VideoMeta {
+  readonly url: string
+  readonly id?: string|undefined
+  readonly data?: youtube_v3.Schema$Video
+}
 
 export interface Post extends Meta {
   readonly id: string;
@@ -15,7 +22,7 @@ export interface Post extends Meta {
   readonly post_date: string;
   readonly time_to_consume: string;
   readonly published_date: string;
-  readonly video_link: string;
+  readonly video?: VideoMeta;
   readonly blocks: readonly TopLevelBlock[];
 }
 

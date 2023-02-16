@@ -3,9 +3,48 @@ post_type: video
 title: "Community Call #20 | Liron Hayman is hosting Jane from zkLend"
 published_date: 2022-08-09T11:01:08.273Z
 time_to_consume: 57 min watch
-video_link: https://youtu.be/aWYIhtCXBYw
 image: /assets/cc20.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Liron Hayman is hosting Jane from zkLend.
+video:
+  url: https://youtu.be/aWYIhtCXBYw
+  id: aWYIhtCXBYw
+  data:
+    kind: youtube#video
+    etag: BQPBqHv6pCR_tmlmMHgsJ8teKE4
+    id: aWYIhtCXBYw
+    snippet:
+      publishedAt: 2022-08-10T01:35:12Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "StarkNet Community Call #20 | Liron Hayman is hosting Jane from zkLend"
+      description: Liron Hayman is hosting Jane from zkLend
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/aWYIhtCXBYw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/aWYIhtCXBYw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/aWYIhtCXBYw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/aWYIhtCXBYw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/aWYIhtCXBYw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "StarkNet Community Call #20 | Liron Hayman is hosting Jane from zkLend"
+        description: Liron Hayman is hosting Jane from zkLend
+      defaultAudioLanguage: en-US

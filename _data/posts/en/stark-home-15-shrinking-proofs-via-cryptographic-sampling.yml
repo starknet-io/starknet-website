@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 15: Shrinking Proofs via Cryptographic Sampling"
 published_date: 2020-11-15T15:33:16.223Z
 time_to_consume: 74 min watch
-video_link: https://youtu.be/5XCLfCkRmsM
 image: /assets/starkhome15.png
 category: stark-math
 topic:
   - starknet
 short_desc: Shrinking proofs via cryptographic sampling
+video:
+  url: https://youtu.be/5XCLfCkRmsM
+  id: 5XCLfCkRmsM
+  data:
+    kind: youtube#video
+    etag: YiSm3zetYwUFAY752cydwuIQjek
+    id: 5XCLfCkRmsM
+    snippet:
+      publishedAt: 2020-11-15T07:31:31Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 15: Shrinking Proofs via Cryptographic Sampling"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/5XCLfCkRmsM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/5XCLfCkRmsM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/5XCLfCkRmsM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/5XCLfCkRmsM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/5XCLfCkRmsM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 15: Shrinking Proofs via Cryptographic Sampling"
+        description: ""
+      defaultAudioLanguage: en-US

@@ -3,7 +3,6 @@ post_type: video
 title: STARK @ Home 8 - Time-Warping STARKs
 published_date: 2020-06-21T14:16:22.713Z
 time_to_consume: 90 min watch
-video_link: https://youtu.be/pSQTnD9opTc
 image: /assets/starkhome08.png
 category: stark-math
 topic:
@@ -11,3 +10,46 @@ topic:
 short_desc: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
   stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members Kinneret
   Segal and Tom Brand.
+video:
+  url: https://youtu.be/pSQTnD9opTc
+  id: pSQTnD9opTc
+  data:
+    kind: youtube#video
+    etag: 1H1coC-5KuEwLck1fVV0t-H1-v0
+    id: pSQTnD9opTc
+    snippet:
+      publishedAt: 2020-06-21T06:03:44Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK @ Home 8 - Time-Warping STARKs
+      description: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
+        stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members
+        Kinneret Segal and Tom Brand.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/pSQTnD9opTc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/pSQTnD9opTc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/pSQTnD9opTc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/pSQTnD9opTc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/pSQTnD9opTc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK @ Home 8 - Time-Warping STARKs
+        description: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
+          stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members
+          Kinneret Segal and Tom Brand.

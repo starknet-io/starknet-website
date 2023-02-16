@@ -3,10 +3,51 @@ post_type: video
 title: "Community Call #10 | Building React apps on StarkNet with Francesco Ceccon"
 published_date: 2022-03-15T00:00:00+00:00
 time_to_consume: 75 min watch
-video_link: https://youtu.be/PSTCTVMmMz4
 image: /assets/cc10.jpg
 category: community-calls
 topic:
   - starknet
 short_desc: Building React apps on Starknet with Francesco Ceccon, AMA about
   Starknet version 0.8
+video:
+  url: https://youtu.be/PSTCTVMmMz4
+  id: PSTCTVMmMz4
+  data:
+    kind: youtube#video
+    etag: cNwRjgge0npn-whR2AluvIiens8
+    id: PSTCTVMmMz4
+    snippet:
+      publishedAt: 2022-03-16T02:43:23Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community call #10 | Building React apps on StarkNet with
+        Francesco Ceccon"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/PSTCTVMmMz4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/PSTCTVMmMz4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/PSTCTVMmMz4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/PSTCTVMmMz4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/PSTCTVMmMz4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community call #10 | Building React apps on StarkNet with
+          Francesco Ceccon"
+        description: ""
+      defaultAudioLanguage: en-US

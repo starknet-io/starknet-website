@@ -3,9 +3,48 @@ post_type: video
 title: "STARK @ Home 24: Fireside chat with Professor Dan Boneh"
 published_date: 2022-01-06T16:26:58.757Z
 time_to_consume: 77 min watch
-video_link: https://youtu.be/QVrpx-0yloo
 image: /assets/starkhome24.png
 category: stark-math
 topic:
   - starknet
 short_desc: Fireside chat with Professor Dan Boneh
+video:
+  url: https://youtu.be/QVrpx-0yloo
+  id: QVrpx-0yloo
+  data:
+    kind: youtube#video
+    etag: LcHbe5YNquBM2EQLzeX_rYZReLE
+    id: QVrpx-0yloo
+    snippet:
+      publishedAt: 2022-01-10T18:47:43Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 24: Fireside chat with Professor Dan Boneh"
+      description: From Elliptic Curves to ZK-SNARKs and Beyond
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/QVrpx-0yloo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/QVrpx-0yloo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/QVrpx-0yloo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/QVrpx-0yloo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/QVrpx-0yloo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 24: Fireside chat with Professor Dan Boneh"
+        description: From Elliptic Curves to ZK-SNARKs and Beyond
+      defaultAudioLanguage: en-US

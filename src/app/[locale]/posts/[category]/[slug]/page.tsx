@@ -20,7 +20,6 @@ import {
   BreadcrumbLink,
   HStack,
 } from "src/libs/chakra-ui";
-import { youtubeVideoIdFromURL } from "src/utils/utils";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 
@@ -29,7 +28,7 @@ export async function generateStaticParams() {
 
   for (const locale of ["en"]) {
     const files = await fs.readdir(
-      path.join(process.cwd(), "_data/_dynamic/posts", locale),
+      path.join(process.cwd(), "_data/_dynamic/posts", locale)
     );
 
     for (const slug of files) {
@@ -58,10 +57,7 @@ export default async function Page({
   try {
     const post = await getPostBySlug(slug, locale);
 
-    let videoId =
-      post.post_type === "video" && post.video_link
-        ? youtubeVideoIdFromURL(post.video_link)
-        : undefined;
+    let videoId = post.post_type === "video" ? post.video?.id : undefined;
 
     return (
       <PageLayout
@@ -88,7 +84,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post?.gitlog?.date,
+          post?.gitlog?.date
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">

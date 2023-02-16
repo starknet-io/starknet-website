@@ -3,9 +3,47 @@ post_type: video
 title: "STARK @ Home 10: Zero-Knowledge – The Known Unknown"
 published_date: 2023-02-02T15:19:38.760Z
 time_to_consume: 84 min watch
-video_link: https://youtu.be/3uSG-Xp5slM
 image: /assets/starkhome10.png
 category: stark-math
 topic:
   - starknet
 short_desc: Zero-Knowledge – The Known Unknown.
+video:
+  url: https://youtu.be/3uSG-Xp5slM
+  id: 3uSG-Xp5slM
+  data:
+    kind: youtube#video
+    etag: RK0-Taa6U5Q5EcoQafFkmHVQZwc
+    id: 3uSG-Xp5slM
+    snippet:
+      publishedAt: 2020-07-27T09:08:21Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 10: Zero Knowledge - The Known Unknown"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/3uSG-Xp5slM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/3uSG-Xp5slM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/3uSG-Xp5slM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/3uSG-Xp5slM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/3uSG-Xp5slM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 10: Zero Knowledge - The Known Unknown"
+        description: ""

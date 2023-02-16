@@ -3,9 +3,63 @@ post_type: video
 title: "StarkNetCC Lisbon | A folk history of Starknet - Sylve Chevet "
 published_date: 2022-11-14T13:11:44.694Z
 time_to_consume: 13 min watch
-video_link: https://youtu.be/Q0LpMwvIMmc
 image: /assets/vid_events01.jpg
 category: community-and-events
 topic:
   - starknet
 short_desc: "A folk history of StarkNet - Sylve Chevet "
+video:
+  url: https://youtu.be/Q0LpMwvIMmc
+  id: Q0LpMwvIMmc
+  data:
+    kind: youtube#video
+    etag: Vr0UIv6eIUKusTlXePC4LRVIf_c
+    id: Q0LpMwvIMmc
+    snippet:
+      publishedAt: 2022-11-14T13:00:15Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: A folk history of StarkNet - Sylve Chevet - StarkNetCC Lisbon
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Q0LpMwvIMmc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Q0LpMwvIMmc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Q0LpMwvIMmc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Q0LpMwvIMmc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Q0LpMwvIMmc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: A folk history of StarkNet - Sylve Chevet - StarkNetCC Lisbon
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en

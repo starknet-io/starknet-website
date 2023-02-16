@@ -4,10 +4,52 @@ title: "STARK @ Home 3: Let's do Arithmetic: Why are polynomials used in
   succinct ZK proofs?"
 published_date: 2020-04-06T14:07:06.434Z
 time_to_consume: 88 min watch
-video_link: https://youtu.be/iAaSQfZ-2AM
 image: /assets/starkhome03.png
 category: stark-math
 topic:
   - starknet
 short_desc: This week Eli Ben-Sasson explains the pretty properties of
   polynomials that make them useful in succinct ZK proofs.
+video:
+  url: https://youtu.be/iAaSQfZ-2AM
+  id: iAaSQfZ-2AM
+  data:
+    kind: youtube#video
+    etag: Z-8kb29zw8MsW8gmfwZsjqKwP6c
+    id: iAaSQfZ-2AM
+    snippet:
+      publishedAt: 2020-04-06T06:06:01Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 3: Let's do Arithmetic: Why are polynomials used in
+        succinct ZK proofs?"
+      description: This week Eli Ben-Sasson explains the pretty properties of
+        polynomials that make them useful in succinct ZK proofs.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/iAaSQfZ-2AM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/iAaSQfZ-2AM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/iAaSQfZ-2AM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/iAaSQfZ-2AM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/iAaSQfZ-2AM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 3: Let's do Arithmetic: Why are polynomials used in
+          succinct ZK proofs?"
+        description: This week Eli Ben-Sasson explains the pretty properties of
+          polynomials that make them useful in succinct ZK proofs.

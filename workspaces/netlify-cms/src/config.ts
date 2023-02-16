@@ -1,4 +1,9 @@
-import { CmsConfig, CmsField, CmsFieldList } from "netlify-cms-core";
+import {
+  CmsConfig,
+  CmsField,
+  CmsFieldList,
+  CmsFieldMeta,
+} from "netlify-cms-core";
 
 const locale = "en";
 
@@ -620,6 +625,12 @@ export const config: CmsConfig = {
           widget: "string",
           required: false,
         },
+        {
+          name: "video",
+          label: "Video - youtube link",
+          widget: "youtube",
+          required: false,
+        } as CmsFieldMeta,
         {
           name: "image",
           label: "Featured Image",
@@ -1335,19 +1346,6 @@ export const config: CmsConfig = {
               label: "Description",
               name: "description",
             },
-            // {
-            //   label: "Youtube",
-            //   name: "youtube_link",
-            //   widget: 'youtube' as 'object',
-            //   fields: [
-            //     {
-            //       name: 'title'
-            //     },
-            //     {
-            //       name: 'description'
-            //     }
-            //   ]
-            // },
           ],
         },
       ],
