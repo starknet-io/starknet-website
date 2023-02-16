@@ -25927,8 +25927,8 @@ __metadata:
     "@storybook/react": ^7.0.0-beta.44
     "@storybook/testing-library": ^0.0.13
     "@testing-library/jest-dom": ^5.16.5
-    "@types/cors": ^2.8.13
     "@twistezo/react-text-scramble": ^1.0.6
+    "@types/cors": ^2.8.13
     "@types/mdx": ^2.0.3
     "@types/negotiator": ^0.6.1
     "@types/node": ^18.13.0
