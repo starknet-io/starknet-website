@@ -25975,6 +25975,7 @@ __metadata:
     typescript: ^4.9.5
     unified: ^10.1.2
     unist-util-index: ^3.0.2
+    use-scramble: ^2.2.12
     vite: ^4.1.1
     vite-tsconfig-paths: ^4.0.5
     vitest: ^0.28.4
@@ -29255,6 +29256,16 @@ __metadata:
     react: 16.8.0 - 18
     react-dom: 16.8.0 - 18
   checksum: 92be0ac34a3b3cf884cd55847c90792b5b44833dc258e96d650152815ad246afe45825aa223332203004d836535a927ab74f18dc0313229e2c7c69510eddf382
+  languageName: node
+  linkType: hard
+
+"use-scramble@npm:^2.2.12":
+  version: 2.2.12
+  resolution: "use-scramble@npm:2.2.12"
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 96abc9c9ceaf822b0d464134e4bae3afb2c6afb84dab3db83cdc1787634c0f53f43392b4a039086302915cd01b876ce37f741c390dea2e92b514796585d09db3
   languageName: node
   linkType: hard
 

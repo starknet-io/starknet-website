@@ -1,27 +1,12 @@
 "use client";
-import { Box, Button, Flex, HStack, Img, Stack } from "src/libs/chakra-ui";
+import { Box, Button, Flex, Img, Stack } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import React, { useEffect, useRef, useState } from "react";
-import TextScramble, { ScrambleTexts } from "@twistezo/react-text-scramble";
+
 type Props = {};
+import { Intro } from "./Intro";
 
 export const HomepageHero = (props: Props) => {
-  const [messageIndex, setMessageIndex] = useState<number>(0);
-  const headingRef = useRef();
-
-  const phrases: ScrambleTexts = [
-    "Welcome",
-    "ようこそ",
-    "Bienvenu",
-    "স্বাগত",
-    "स्वागत",
-    "ברוך הבא ל",
-    "欢迎",
-    "مرحباً",
-    "Bienvenida",
-  ];
-
   return (
     <Box
       as="section"
@@ -91,26 +76,7 @@ export const HomepageHero = (props: Props) => {
           // mb="56px"
         >
           <Box flex="1" maxW={{ lg: "xl" }} pt="6" order={{ base: 1, lg: 0 }}>
-            <Heading
-              ref={headingRef}
-              as="h2"
-              variant="h2"
-              mt="8"
-              fontWeight="extrabold"
-              // height="98px"
-              lineHeight="1em"
-              overflow="hidden"
-              // letterSpacing="1.8px"
-              fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
-              color="heading-navy-fg"
-            >
-              <TextScramble
-                texts={phrases}
-                pauseTime={5000}
-                // nextLetterSpeed={150}
-                // letterSpeed={15}
-              />
-            </Heading>
+            <Intro />
 
             <Heading
               as="h2"
