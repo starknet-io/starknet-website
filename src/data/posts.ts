@@ -5,9 +5,9 @@ import { getFirst, getJSON, Meta } from "./utils";
 import { youtube_v3 } from "googleapis";
 
 interface VideoMeta {
-  readonly url: string
-  readonly id?: string|undefined
-  readonly data?: youtube_v3.Schema$Video
+  readonly url: string;
+  readonly id?: string | undefined;
+  readonly data?: youtube_v3.Schema$Video;
 }
 
 export interface Post extends Meta {
