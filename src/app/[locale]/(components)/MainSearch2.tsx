@@ -252,8 +252,44 @@ export function PageItem({
   return (
     <a href={hit.link} className="aa-ItemLink">
       <div className="aa-ItemContent">
-        <div className="aa-ItemTitle">
-          <Highlight hit={hit} attribute="title" />
+        <div className="aa-ItemIcon aa-ItemIcon--noBorder">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+            />
+          </svg>
+        </div>
+        <div className="aa-ItemContentBody">
+          <div className="aa-ItemTitle">
+            <Highlight hit={hit} attribute="title" />
+          </div>
+        </div>
+      </div>
+      <div className="aa-ItemActions">
+        <div className="aa-ItemActionButton" title="Visit this link">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M9.35103 3.1786C9.69424 3.53815 9.68099 4.10784 9.32144 4.45105L4.34632 9.20003H16.35C19.9122 9.20003 22.8 12.0878 22.8 15.65C22.8 19.2123 19.9122 22.1 16.35 22.1H12.9C12.403 22.1 12 21.6971 12 21.2C12 20.703 12.403 20.3 12.9 20.3H16.35C18.9181 20.3 21 18.2182 21 15.65C21 13.0819 18.9181 11 16.35 11H4.34632L9.32144 15.749C9.68099 16.0922 9.69424 16.6619 9.35103 17.0215C9.00783 17.381 8.43813 17.3943 8.07858 17.051L1.47858 10.751C1.30067 10.5812 1.20001 10.346 1.20001 10.1C1.20001 9.85407 1.30067 9.61883 1.47858 9.44901L8.07858 3.14901C8.43813 2.8058 9.00783 2.81905 9.35103 3.1786Z"
+              fill="currentColor"
+            ></path>
+          </svg>
         </div>
       </div>
     </a>
@@ -270,8 +306,44 @@ export function PostItem({
       className="aa-ItemLink"
     >
       <div className="aa-ItemContent">
-        <div className="aa-ItemTitle">
-          <Highlight hit={hit} attribute="title" />
+        <div className="aa-ItemIcon aa-ItemIcon--noBorder">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+            />
+          </svg>
+        </div>
+        <div className="aa-ItemContentBody">
+          <div className="aa-ItemTitle">
+            <Highlight hit={hit} attribute="title" />
+          </div>
+        </div>
+      </div>
+      <div className="aa-ItemActions">
+        <div className="aa-ItemActionButton" title="Visit this link">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.35103 3.1786C9.69424 3.53815 9.68099 4.10784 9.32144 4.45105L4.34632 9.20003H16.35C19.9122 9.20003 22.8 12.0878 22.8 15.65C22.8 19.2123 19.9122 22.1 16.35 22.1H12.9C12.403 22.1 12 21.6971 12 21.2C12 20.703 12.403 20.3 12.9 20.3H16.35C18.9181 20.3 21 18.2182 21 15.65C21 13.0819 18.9181 11 16.35 11H4.34632L9.32144 15.749C9.68099 16.0922 9.69424 16.6619 9.35103 17.0215C9.00783 17.381 8.43813 17.3943 8.07858 17.051L1.47858 10.751C1.30067 10.5812 1.20001 10.346 1.20001 10.1C1.20001 9.85407 1.30067 9.61883 1.47858 9.44901L8.07858 3.14901C8.43813 2.8058 9.00783 2.81905 9.35103 3.1786Z"
+              fill="currentColor"
+            ></path>
+          </svg>
         </div>
       </div>
     </a>
@@ -285,9 +357,52 @@ export function DocsItem({
   return (
     <a href={hit.url} className="aa-ItemLink">
       <div className="aa-ItemContent">
-        <div className="aa-ItemTitle">
-          <Highlight hit={hit} attribute="title" />
+        <div className="aa-ItemIcon aa-ItemIcon--noBorder">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M19.5999 9.99999C19.5999 15.3019 15.3018 19.6 9.9999 19.6C4.69797 19.6 0.399902 15.3019 0.399902 9.99999C0.399902 4.69806 4.69797 0.399994 9.9999 0.399994C15.3018 0.399994 19.5999 4.69806 19.5999 9.99999ZM17.7961 10.2449C17.6667 14.4394 14.2258 17.8 9.9999 17.8C5.69208 17.8 2.1999 14.3078 2.1999 9.99999C2.1999 6.55187 4.43732 3.62632 7.53954 2.59597L6.31196 4.74422C5.92196 5.42673 6.03701 6.28582 6.59284 6.84165C7.12339 7.37219 7.9339 7.50372 8.60499 7.16818L8.81467 7.06334C8.89798 7.02168 8.98985 6.99999 9.083 6.99999H9.25807C9.48534 6.99999 9.69309 7.1284 9.79473 7.33167C9.87919 7.50058 9.87919 7.69941 9.79473 7.86832L9.76138 7.93502C9.68018 8.09741 9.51421 8.19999 9.33265 8.19999H8.73006C7.82327 8.19999 6.97648 8.65319 6.47348 9.40768L6.42091 9.48654C5.98984 10.1331 5.88144 10.9426 6.12719 11.6798C6.37831 12.4331 6.97335 13.0237 7.72395 13.2739C8.00786 13.3685 8.19971 13.635 8.19971 13.9298V15.1895C8.19971 15.9685 8.8312 16.6 9.61018 16.6C10.0387 16.6 10.4439 16.4052 10.7116 16.0706L12.6452 13.6536C12.8747 13.3667 12.9997 13.0103 12.9997 12.643C12.9997 12.2639 13.1533 11.8949 13.4236 11.6246C13.9704 11.0778 14.0636 10.2141 13.6307 9.56485L13.074 8.72974C13.0256 8.65709 12.9997 8.57174 12.9997 8.48444C12.9997 8.12003 13.4157 7.91201 13.7073 8.13066L14.1185 8.4391C14.4975 8.7233 15.0044 8.76847 15.4274 8.55695C15.6984 8.42147 16.0258 8.47464 16.2395 8.68826L17.7961 10.2449Z"
+              fill="currentColor"
+            ></path>
+          </svg>
         </div>
+        <div className="aa-ItemContentBody">
+          {hit.content && (
+            <div className="aa-ItemTitle">
+              <Highlight hit={hit} attribute="content" />
+            </div>
+          )}
+          {hit.title && (
+            <div className="aa-ItemDesc">
+              <Highlight hit={hit} attribute="title" />
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="aa-ItemActions">
+        <button className="aa-ItemActionButton" title="Visit this link">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.35103 3.1786C9.69424 3.53815 9.68099 4.10784 9.32144 4.45105L4.34632 9.20003H16.35C19.9122 9.20003 22.8 12.0878 22.8 15.65C22.8 19.2123 19.9122 22.1 16.35 22.1H12.9C12.403 22.1 12 21.6971 12 21.2C12 20.703 12.403 20.3 12.9 20.3H16.35C18.9181 20.3 21 18.2182 21 15.65C21 13.0819 18.9181 11 16.35 11H4.34632L9.32144 15.749C9.68099 16.0922 9.69424 16.6619 9.35103 17.0215C9.00783 17.381 8.43813 17.3943 8.07858 17.051L1.47858 10.751C1.30067 10.5812 1.20001 10.346 1.20001 10.1C1.20001 9.85407 1.30067 9.61883 1.47858 9.44901L8.07858 3.14901C8.43813 2.8058 9.00783 2.81905 9.35103 3.1786Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </button>
       </div>
     </a>
   );

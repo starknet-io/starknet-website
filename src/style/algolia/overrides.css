@@ -295,11 +295,17 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
     text-decoration: none;
 }
 
-.aa-Item[aria-selected=true] .hit-title {
-  color: inherit;
+
+.aa-ItemTitle {
+  line-height: 1.7;
+  display: block;
+  line-height: 1.7;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.hit-title {
+.aa-ItemDesc {
     font-size: 12px;
     font-weight: var(--aa-font-weight-medium);
     line-height: 1.5;
@@ -309,16 +315,8 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
     text-overflow: ellipsis;
 }
 
-.hit-desc {
-    line-height: 1.7;
-    display: block;
-    line-height: 1.7;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.aa-Item[aria-selected=true] .hit-desc {
+.aa-Item[aria-selected=true] .aa-ItemTitle,
+.aa-Item[aria-selected=true] .aa-ItemDesc {
   color: inherit;
 }
 
