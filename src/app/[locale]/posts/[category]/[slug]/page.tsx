@@ -22,6 +22,8 @@ import {
 } from "src/libs/chakra-ui";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { getCategories } from "src/data/categories";
+import { getTopics } from "src/data/topics";
 
 export async function generateStaticParams() {
   const params = [];
@@ -56,6 +58,10 @@ export default async function Page({
 }: Props): Promise<JSX.Element> {
   try {
     const post = await getPostBySlug(slug, locale);
+    const categories = await getCategories(locale);
+    const topics = await getTopics(locale);
+
+    const category = categories.find((c) => c.id === post.category);
 
     let videoId = post.post_type === "video" ? post.video?.id : undefined;
 
@@ -72,7 +78,7 @@ export default async function Page({
             </BreadcrumbItem>
             <BreadcrumbItem>
               <BreadcrumbLink fontSize="sm" href="#" noOfLines={1}>
-                {post.category}
+                {category?.name}
               </BreadcrumbLink>
             </BreadcrumbItem>
 
@@ -130,8 +136,8 @@ export default async function Page({
             <Spacer height="32px" />
             <Divider />
             <Flex direction="row" gap="8px" mt="64px">
-              {post.topic.map((item, i) => (
-                <Tag key={i}> {item} </Tag>
+              {post.topic.map((topic, i) => (
+                <Tag key={i}> {topics.find((t) => t.id === topic)?.name} </Tag>
               ))}
             </Flex>
           </Container>

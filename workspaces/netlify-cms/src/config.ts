@@ -670,6 +670,7 @@ export const config: CmsConfig = {
       identifier_field: "id",
       folder: `_data/topics/${locale}`,
       slug: "{{name}}",
+      summary: "{{name}}",
       create: true,
       format: "yml",
       fields: [
@@ -691,6 +692,7 @@ export const config: CmsConfig = {
       identifier_field: "id",
       folder: `_data/categories/${locale}`,
       slug: "{{name}}",
+      summary: "{{name}}",
       create: true,
       format: "yml",
       fields: [
@@ -711,6 +713,7 @@ export const config: CmsConfig = {
       label_singular: "Event",
       folder: `_data/events/${locale}`,
       slug: "{{name}}",
+      summary: "{{name}}",
       create: true,
       format: "yml",
       fields: [
