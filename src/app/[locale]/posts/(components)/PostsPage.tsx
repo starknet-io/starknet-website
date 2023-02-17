@@ -3,7 +3,6 @@
 import {
   BreadcrumbItem,
   BreadcrumbLink,
-  SimpleGrid,
   Breadcrumb,
   Box,
   Button,
@@ -12,6 +11,7 @@ import {
   Flex,
   HStack,
   Divider,
+  Grid,
 } from "@chakra-ui/react";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -227,6 +227,14 @@ const categories = {
     label: "Governance",
     id: "governance",
   },
+  ecosystem: {
+    label: "Ecosystem",
+    id: "ecosystem",
+  },
+  foundation: {
+    label: "Foundation",
+    id: "foundation",
+  },
   "stark-math": {
     label: "Stark Math",
     id: "stark_math",
@@ -237,7 +245,16 @@ function CustomHits() {
 
   return (
     <>
-      <SimpleGrid minChildWidth="250px" spacing="16px">
+      <Grid
+        templateColumns={{
+          base: "repeat(auto-fit, minmax(280px, 1fr))",
+          lg: "repeat(auto-fit, minmax(280px, 1fr))",
+          xl: "repeat(auto-fit, minmax(280px, 299px))",
+        }}
+        templateRows="1fr"
+        columnGap="24px"
+        rowGap="48px"
+      >
         {hits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
 
@@ -245,8 +262,8 @@ function CustomHits() {
 
           return (
             <ArticleCard.Root
-              href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
               key={i}
+              href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
             >
               <ArticleCard.Image url={hit.image} />
 
@@ -268,7 +285,7 @@ function CustomHits() {
             </ArticleCard.Root>
           );
         })}
-      </SimpleGrid>
+      </Grid>
       {!isLastPage && (
         <HStack mt="24">
           <Divider />

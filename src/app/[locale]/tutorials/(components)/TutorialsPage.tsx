@@ -10,6 +10,7 @@ import {
   HStack,
   SimpleGrid,
   Divider,
+  Grid,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -263,7 +264,16 @@ function CustomHits() {
 
   return (
     <>
-      <SimpleGrid minChildWidth="280px" spacing="16px">
+      <Grid
+        templateColumns={{
+          base: "repeat(auto-fit, minmax(280px, 1fr))",
+          lg: "repeat(auto-fit, minmax(280px, 1fr))",
+          xl: "repeat(auto-fit, minmax(280px, 299px))",
+        }}
+        templateRows="1fr"
+        columnGap="24px"
+        rowGap="48px"
+      >
         {hits.map((hit) => {
           const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
@@ -298,7 +308,7 @@ function CustomHits() {
             </GridCard.Root>
           );
         })}
-      </SimpleGrid>
+      </Grid>
       {/* {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>
             <ArticleCard.Image url={`/static/${hit.image}`} />
