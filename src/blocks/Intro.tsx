@@ -31,7 +31,7 @@ export const Intro = () => {
       //@ts-expect-error
       loopRef.current = setTimeout(() => {
         setIndex((index) => (index < texts.length - 1 ? index + 1 : 0));
-      }, 1800);
+      }, 2800);
     },
   });
 

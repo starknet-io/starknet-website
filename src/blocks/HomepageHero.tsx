@@ -85,6 +85,7 @@ export const HomepageHero = (props: Props) => {
               lineHeight="1.2"
               fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"
+              mt="-10px"
             >
               to Starknet
             </Heading>
@@ -118,7 +119,7 @@ export const HomepageHero = (props: Props) => {
             marginRight={{ base: "-10px", lg: "-5rem" }}
             right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
             width={{ base: "100%", lg: "35rem" }}
-            src="/assets/home/hero_cropped2.png"
+            src="/assets/home/hero_illustration.png"
             alt="Screenshot for Form builder"
           />
         </Flex>

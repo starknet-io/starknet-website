@@ -69,7 +69,7 @@ Props): JSX.Element {
               {data.breadcrumbs &&
               data.breadcrumbs_data &&
               data.breadcrumbs_data.length > 0 ? (
-                <Breadcrumb separator="->">
+                <Breadcrumb separator="/">
                   <BreadcrumbItem>
                     <BreadcrumbLink
                       fontSize="sm"

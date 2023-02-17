@@ -58,7 +58,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderTitle="Tutorials"
           sectionHeaderDescription="Learn about Starknet by developers, for developers"
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Developers
