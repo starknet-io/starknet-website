@@ -8877,13 +8877,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"add@npm:^2.0.6":
-  version: 2.0.6
-  resolution: "add@npm:2.0.6"
-  checksum: e2d23d40494565dfed4acd65e478570c444db5ac6c053551ed429c39ea0f2c99d83df63e7befec936df601827d2254d06a2fb6f7dcfd2022e810b25eab818b8c
-  languageName: node
-  linkType: hard
-
 "address@npm:^1.0.1":
   version: 1.2.2
   resolution: "address@npm:1.2.2"
@@ -26015,7 +26008,6 @@ __metadata:
     "@types/react-dom": ^18.0.10
     "@types/youtube-player": ^5.5.7
     "@vitejs/plugin-react": ^3.0.1
-    add: ^2.0.6
     algoliasearch: ^4.14.3
     autoprefixer: ^10.4.13
     browser-lang: 0.1.0
