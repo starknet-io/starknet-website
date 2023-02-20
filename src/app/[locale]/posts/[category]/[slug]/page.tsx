@@ -33,13 +33,16 @@ export async function generateStaticParams() {
       path.join(process.cwd(), "_data/_dynamic/posts", locale)
     );
 
+    const categories = await getCategories(locale);
+
     for (const slug of files) {
       const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
+      const category = categories.find((c) => c.id === post.category)!;
 
       params.push({
         locale,
         slug: post.slug,
-        category: post.category,
+        category: category.slug,
       });
     }
   }
@@ -61,7 +64,7 @@ export default async function Page({
     const categories = await getCategories(locale);
     const topics = await getTopics(locale);
 
-    const category = categories.find((c) => c.id === post.category);
+    const category = categories.find((c) => c.id === post.category)!;
 
     let videoId = post.post_type === "video" ? post.video?.id : undefined;
 
@@ -78,7 +81,7 @@ export default async function Page({
             </BreadcrumbItem>
             <BreadcrumbItem>
               <BreadcrumbLink fontSize="sm" href="#" noOfLines={1}>
-                {category?.name}
+                {category.name}
               </BreadcrumbLink>
             </BreadcrumbItem>
 
