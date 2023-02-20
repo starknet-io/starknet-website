@@ -70,10 +70,16 @@ const Body = ({ children }: BodyProps) => {
   );
 };
 
-const Category = ({ category }: any) => {
+interface CategoryProps {
+  category: import("src/data/categories").Category;
+}
+
+const Category = ({ category }: CategoryProps) => {
   return (
     <Box pb={3}>
-      <Badge variant={category?.id}>{category?.label}</Badge>
+      <Badge variant={category.slug.replaceAll("-", "_")}>
+        {category.name}
+      </Badge>
     </Box>
   );
 };
