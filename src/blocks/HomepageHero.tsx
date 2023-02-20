@@ -5,8 +5,10 @@ import { Text } from "@ui/Typography/Text";
 
 type Props = {};
 import { Intro } from "./Intro";
+import { useRouter } from "next/navigation";
 
 export const HomepageHero = (props: Props) => {
+  const router = useRouter();
   return (
     <Box
       as="section"
@@ -14,6 +16,7 @@ export const HomepageHero = (props: Props) => {
       pb="133px"
       overflow="hidden"
       bg="#eaeaea"
+      minHeight="769px"
       _dark={{
         bgGradient:
           "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
@@ -101,10 +104,19 @@ export const HomepageHero = (props: Props) => {
               position={{ base: "relative", md: "relative" }}
               zIndex={4}
             >
-              <Button size="lg" minW="210px" variant="solidHero">
+              <Button
+                onClick={() => router.push("/en/developers")}
+                size="lg"
+                minW="210px"
+                variant="solidHero"
+              >
                 Build on starknet
               </Button>
-              <Button size="lg" variant="outlineHero">
+              <Button
+                size="lg"
+                variant="outlineHero"
+                onClick={() => router.push("/en/what-is-starknet")}
+              >
                 Learn the basics
               </Button>
             </Stack>
