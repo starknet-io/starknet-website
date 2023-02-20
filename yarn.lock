@@ -25970,6 +25970,7 @@ __metadata:
     remark-parse: ^10.0.1
     rome: ^11.0.0
     simple-git: ^3.16.0
+<<<<<<< HEAD
     start-server-and-test: ^1.15.3
     storybook: ^7.0.0-beta.44
     typescript: ^4.9.5
@@ -25979,6 +25980,16 @@ __metadata:
     vite: ^4.1.1
     vite-tsconfig-paths: ^4.0.5
     vitest: ^0.28.4
+=======
+    start-server-and-test: ^1.15.2
+    storybook: ^7.0.0-beta.25
+    typescript: ^4.9.4
+    unified: ^10.1.2
+    unist-util-index: ^3.0.2
+    vite: ^4.0.4
+    vite-tsconfig-paths: ^4.0.3
+    vitest: ^0.27.0
+>>>>>>> sn/preview-branch
     yaml: ^2.2.1
   languageName: unknown
   linkType: soft
@@ -28825,6 +28836,16 @@ __metadata:
   version: 2.0.1
   resolution: "unist-util-generated@npm:2.0.1"
   checksum: 6221ad0571dcc9c8964d6b054f39ef6571ed59cc0ce3e88ae97ea1c70afe76b46412a5ffaa91f96814644ac8477e23fb1b477d71f8d70e625728c5258f5c0d99
+  languageName: node
+  linkType: hard
+
+"unist-util-index@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "unist-util-index@npm:3.0.2"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-visit: ^4.0.0
+  checksum: 972b1cbc4c858e3b3324e704b8ff9c8c318204aa3fe340fe6912df31ed8e677f4509f5e99cd33a31ab31905ec1f25fe3ca13093e8cf930ae5d669cf2a0947e60
   languageName: node
   linkType: hard
 

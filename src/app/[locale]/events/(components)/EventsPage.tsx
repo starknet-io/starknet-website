@@ -143,6 +143,7 @@ function CustomType() {
   );
 }
 
+<<<<<<< HEAD
 function CustomTags() {
   const { items, refine } = useRefinementList({
     attribute: "tags",
@@ -179,6 +180,18 @@ type Hit = {
   readonly description: string;
   readonly tags: string[];
   readonly url: string;
+=======
+type HitProps = {
+  readonly hits: readonly {
+    readonly start_date: string;
+    readonly end_date?: string;
+    readonly name: string;
+    readonly image: string;
+    readonly description: string;
+    readonly tags: string[];
+    readonly url: string;
+  }[];
+>>>>>>> sn/preview-branch
 };
 function CustomHits() {
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
@@ -194,10 +207,17 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
+<<<<<<< HEAD
                   ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
                       hit?.end_date
                     ).format("ddd MMM DD, YYYY")}`
                   : moment(hit?.start_date).format("ddd MMM DD, YYYY")
+=======
+                  ? `${moment(hit?.start_date).format("MMM DD")} - ${moment(
+                      hit?.end_date,
+                    ).format("MMM DD, YYYY")}`
+                  : moment(hit?.start_date).format("MMM DD, YYYY")
+>>>>>>> sn/preview-branch
               }
               image={hit.image}
               title={hit.name}
