@@ -9,12 +9,9 @@ import {
   Wrap,
   Container,
   Flex,
-<<<<<<< HEAD
   HStack,
   Divider,
   Grid,
-=======
->>>>>>> sn/preview-branch
 } from "@chakra-ui/react";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -29,10 +26,7 @@ import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Topic } from "src/data/topics";
-<<<<<<< HEAD
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
-=======
->>>>>>> sn/preview-branch
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];

@@ -249,10 +249,6 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 //     attribute: "tags",
 //     sortBy: ["name:asc"],
 //   });
-<<<<<<< HEAD
-=======
-//   console.log("tags", items);
->>>>>>> sn/preview-branch
 
 //   return (
 //     <Box mt={8} maxHeight="300px" overflowY="auto">
@@ -295,7 +291,6 @@ type Tutorial = {
 };
 
 function CustomHits() {
-<<<<<<< HEAD
   const { hits, showMore, isLastPage } = useInfiniteHits<Tutorial>();
 
   return (
@@ -310,13 +305,6 @@ function CustomHits() {
         columnGap="24px"
         rowGap="48px"
       >
-=======
-  const { hits }: HitProps = useHits();
-
-  return (
-    <>
-      <SimpleGrid minChildWidth="280px" spacing="16px">
->>>>>>> sn/preview-branch
         {hits.map((hit) => {
           const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
