@@ -1,4 +1,3 @@
-"use client";
 import { Heading } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
@@ -18,17 +17,16 @@ const texts = [
 export const Intro = () => {
   const [index, setIndex] = useState(0);
 
-  const loopRef = useRef<number>();
+  const loopRef = useRef<NodeJS.Timeout>();
 
   const { ref } = useScramble({
     text: texts[index],
     speed: 0.5,
     onAnimationStart: () => {
-      clearInterval(loopRef.current);
+      clearTimeout(loopRef.current);
     },
     onAnimationEnd: () => {
-      clearInterval(loopRef.current);
-      //@ts-expect-error
+      clearTimeout(loopRef.current);
       loopRef.current = setTimeout(() => {
         setIndex((index) => (index < texts.length - 1 ? index + 1 : 0));
       }, 2800);
