@@ -51,6 +51,7 @@ export function PostsPage({
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
 
   const searchParams = useSearchParams();
+  const category = categories.find((c) => c.slug === params.category);
 
   return (
     <Box pt="18" minH="100vh">
@@ -60,7 +61,7 @@ export function PostsPage({
           facetsRefinements={{
             locale: [params.locale],
             topic: searchParams.get("topic")?.split(",") ?? [],
-            category: params.category != null ? [params.category] : [],
+            category: category != null ? [category.id] : [],
           }}
         />
         <Container maxW="container.xl" mb={4}>
@@ -91,7 +92,7 @@ export function PostsPage({
           }
           main={
             <Box>
-              <CustomHits />
+              <CustomHits categories={categories} />
             </Box>
           }
         />
@@ -172,15 +173,15 @@ function CustomCategories({
         </Button>
       </Box>
       {categories.map((category) => (
-        <Box key={category.id}>
+        <Box key={category.slug}>
           <Button
             variant="category"
             as="a"
-            isActive={category.id === params.category}
+            isActive={category.slug === params.category}
             onClick={() => {
-              if (category.id === params.category) return;
+              if (category.slug === params.category) return;
 
-              router.replace(`/${params.locale}/posts/${category.id}`);
+              router.replace(`/${params.locale}/posts/${category.slug}`);
             }}
           >
             <> {category.name}</>
@@ -206,33 +207,7 @@ type Hit = {
   readonly published_date: string;
 };
 
-const categories = {
-  "community-calls": {
-    label: "Community calls",
-    id: "community_calls",
-  },
-  "community-and-events": {
-    label: "Community and events",
-    id: "community_and_events",
-  },
-  "stark-struck": {
-    label: "Stark Struck",
-    id: "stark_struct",
-  },
-  engineering: {
-    label: "Engineering",
-    id: "engineering",
-  },
-  governance: {
-    label: "Governance",
-    id: "governance",
-  },
-  "stark-math": {
-    label: "Stark Math",
-    id: "stark_math",
-  },
-};
-function CustomHits() {
+function CustomHits({ categories }: Pick<Props, "categories">) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
 
   return (
@@ -242,19 +217,17 @@ function CustomHits() {
           // todo: add a featured image once we have image templates in place
 
           const date = moment(hit.published_date).format("MMM DD, YYYY");
+          const category = categories.find((c) => c.id === hit.category)!;
 
           return (
             <ArticleCard.Root
-              href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
+              href={`/${hit.locale}/posts/${category.slug}/${hit.slug}`}
               key={i}
             >
               <ArticleCard.Image url={hit.image} />
 
               <ArticleCard.Body>
-                <ArticleCard.Category
-                  /* @ts-expect-error TODO: fix this */
-                  category={categories[`${hit.category}`]}
-                />
+                <ArticleCard.Category category={category} />
                 <ArticleCard.Content
                   title={hit.title}
                   excerpt={hit.short_desc}

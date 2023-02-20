@@ -50,6 +50,7 @@ export function slugify(value: string): string {
     .replace(/[\u0300-\u036f]/g, "") // remove all previously split accents
     .toLowerCase()
     .trim()
+    .replaceAll("&", "and") // replace "&" with "and"
     .replace(/[^a-z0-9 ]/g, "") // remove all chars not letters, numbers and spaces (to be replaced)
     .replace(/\s+/g, "-"); // separator
 }
