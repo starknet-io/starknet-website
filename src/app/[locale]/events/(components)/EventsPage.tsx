@@ -55,7 +55,7 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderTitle="Events"
           sectionHeaderDescription="Find StarkNet events taking place all over the world and online."
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Community
@@ -73,6 +73,7 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomLocation />
               <CustomType />
+              <CustomTags />
             </Box>
           }
           main={
@@ -124,6 +125,34 @@ function CustomType() {
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Type
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => (
+          <Button
+            justifyContent="flex-start"
+            size="sm"
+            variant={item.isRefined ? "filterActive" : "filter"}
+            onClick={() => refine(item.value)}
+            key={i}
+          >
+            {titleCase(item.label)}
+          </Button>
+        ))}
+      </VStack>
+    </Box>
+  );
+}
+
+function CustomTags() {
+  const { items, refine } = useRefinementList({
+    attribute: "tags",
+    sortBy: ["name:asc"],
+  });
+
+  return (
+    <Box mt={8}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+        Tags
       </Heading>
       <VStack dir="column" alignItems="stretch">
         {items.map((item, i) => (
