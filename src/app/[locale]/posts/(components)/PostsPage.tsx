@@ -70,7 +70,7 @@ export function PostsPage({
           sectionHeaderTitle="Blog"
           sectionHeaderDescription="The latest articles, podcasts and videos on all things StarkNet."
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Community
