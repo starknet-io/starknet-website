@@ -4,12 +4,12 @@ import * as PageAccordion from "@ui/Accordion/PageAccordion";
 import { Heading } from "@ui/Typography/Heading";
 import { slugify } from "src/utils/utils";
 
-type Props = {
+type AccordionRootProps = {
   children: React.ReactNode;
   heading?: string;
 };
 
-export const AccordionRoot = ({ heading, children }: Props) => {
+export const AccordionRoot = ({ heading, children }: AccordionRootProps) => {
   return (
     <Box mb="80px">
       {heading && (
@@ -27,12 +27,12 @@ export const AccordionRoot = ({ heading, children }: Props) => {
   );
 };
 
-type ItemProps = {
+type AccordionItemProps = {
   children: React.ReactNode;
   label: string;
 };
 
-export const AccordionItem = ({ label, children }: ItemProps) => {
+export const AccordionItem = ({ label, children }: AccordionItemProps) => {
   return (
     <PageAccordion.Item label={label}>
       <PageAccordion.Panel>{children}</PageAccordion.Panel>

@@ -5,6 +5,7 @@ import {
   Flex,
   Img,
   Link,
+  LinkOverlay,
   Stack,
   useBreakpointValue,
 } from "src/libs/chakra-ui";

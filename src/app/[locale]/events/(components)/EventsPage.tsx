@@ -192,7 +192,7 @@ function CustomHits() {
               startDateTime={
                 hit?.end_date
                   ? `${moment(hit?.start_date).format("MMM DD")} - ${moment(
-                      hit?.end_date,
+                      hit?.end_date
                     ).format("MMM DD, YYYY")}`
                   : moment(hit?.start_date).format("MMM DD, YYYY")
               }

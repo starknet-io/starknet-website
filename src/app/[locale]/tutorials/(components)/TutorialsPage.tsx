@@ -10,6 +10,7 @@ import {
   HStack,
   SimpleGrid,
   Divider,
+  Grid,
 } from "@chakra-ui/react";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -57,7 +58,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderTitle="Tutorials"
           sectionHeaderDescription="Learn about Starknet by developers, for developers"
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Developers
@@ -76,6 +77,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
               <CustomType />
               <CustomCourse params={params} />
               <CustomDifficulty />
+              <CustomTags />
             </Box>
           }
           main={
@@ -130,6 +132,36 @@ function CustomType() {
     <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Type
+      </Heading>
+      <VStack dir="column" alignItems="stretch">
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+              justifyContent="flex-start"
+            >
+              {label}
+            </Button>
+          );
+        })}
+      </VStack>
+    </Box>
+  );
+}
+function CustomTags() {
+  const { items, refine } = useRefinementList({
+    attribute: "tags",
+    sortBy: ["name:asc"],
+  });
+
+  return (
+    <Box mt={8}>
+      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+        Tags
       </Heading>
       <VStack dir="column" alignItems="stretch">
         {items.map((item, i) => {
@@ -263,7 +295,16 @@ function CustomHits() {
 
   return (
     <>
-      <SimpleGrid minChildWidth="280px" spacing="16px">
+      <Grid
+        templateColumns={{
+          base: "repeat(auto-fit, minmax(280px, 1fr))",
+          lg: "repeat(auto-fit, minmax(280px, 1fr))",
+          xl: "repeat(auto-fit, minmax(280px, 299px))",
+        }}
+        templateRows="1fr"
+        columnGap="24px"
+        rowGap="48px"
+      >
         {hits.map((hit) => {
           const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
@@ -298,7 +339,7 @@ function CustomHits() {
             </GridCard.Root>
           );
         })}
-      </SimpleGrid>
+      </Grid>
       {/* {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>
             <ArticleCard.Image url={`/static/${hit.image}`} />

@@ -406,6 +406,7 @@ const blocks: CmsFieldList["types"] = [
     name: "ordered_block",
     label: "Ordered Block",
     widget: "object",
+
     fields: [
       {
         name: "blocks",
@@ -794,14 +795,6 @@ export const config: CmsConfig = {
             },
           ],
         },
-        // {
-        //   name: "city",
-        //   label: "City",
-        // },
-        // {
-        //   name: "country",
-        //   label: "Country",
-        // },
         {
           name: "tags",
           label: "Tags",

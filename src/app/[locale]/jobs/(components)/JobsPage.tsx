@@ -54,7 +54,7 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderTitle="Jobs"
           sectionHeaderDescription="Find a job with the best teams building on Starknet."
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Community

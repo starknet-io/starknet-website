@@ -3,7 +3,6 @@
 import {
   BreadcrumbItem,
   BreadcrumbLink,
-  SimpleGrid,
   Breadcrumb,
   Box,
   Button,
@@ -12,6 +11,7 @@ import {
   Flex,
   HStack,
   Divider,
+  Grid,
 } from "@chakra-ui/react";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
@@ -71,7 +71,7 @@ export function PostsPage({
           sectionHeaderTitle="Blog"
           sectionHeaderDescription="The latest articles, podcasts and videos on all things StarkNet."
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Community
@@ -212,7 +212,16 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
 
   return (
     <>
-      <SimpleGrid minChildWidth="250px" spacing="16px">
+      <Grid
+        templateColumns={{
+          base: "repeat(auto-fit, minmax(280px, 1fr))",
+          lg: "repeat(auto-fit, minmax(280px, 1fr))",
+          xl: "repeat(auto-fit, minmax(280px, 299px))",
+        }}
+        templateRows="1fr"
+        columnGap="24px"
+        rowGap="48px"
+      >
         {hits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
 
@@ -241,7 +250,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
             </ArticleCard.Root>
           );
         })}
-      </SimpleGrid>
+      </Grid>
       {!isLastPage && (
         <HStack mt="24">
           <Divider />

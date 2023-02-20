@@ -60,7 +60,7 @@ const Root = ({ children, ...rest }: RootProps) => {
                 />
                 <IconButton
                   as="a"
-                  href="https://github.com/starknet-io"
+                  href="https://github.com/starknet-io/starknet-website"
                   aria-label="GitHub"
                   icon={<SiGithub fontSize="1.25rem" />}
                 />

@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 
   for (const locale of ["en"]) {
     const files = await fs.readdir(
-      path.join(process.cwd(), "_data/_dynamic/posts", locale),
+      path.join(process.cwd(), "_data/_dynamic/posts", locale)
     );
 
     const categories = await getCategories(locale);
@@ -71,7 +71,7 @@ export default async function Page({
     return (
       <PageLayout
         breadcrumbs={
-          <Breadcrumb separator="->">
+          <Breadcrumb separator="/">
             <BreadcrumbItem>
               <BreadcrumbLink fontSize="sm" href="#">
                 <BreadcrumbLink fontSize="sm" href="# " noOfLines={1}>
@@ -93,7 +93,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post?.gitlog?.date,
+          post?.gitlog?.date
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">
