@@ -1050,25 +1050,6 @@ export const config: CmsConfig = {
           name: "name",
         },
         {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: [
-            {
-              label: "Browser extension",
-              value: "browser_extension",
-            },
-            {
-              label: "iOS",
-              value: "ios",
-            },
-            {
-              label: "Android",
-              value: "android",
-            },
-          ],
-        },
-        {
           label: "Website url",
           name: "website_url",
         },
@@ -1105,25 +1086,6 @@ export const config: CmsConfig = {
           name: "name",
         },
         {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: [
-            {
-              label: "Browser extension",
-              value: "browser_extension",
-            },
-            {
-              label: "iOS",
-              value: "ios",
-            },
-            {
-              label: "Android",
-              value: "android",
-            },
-          ],
-        },
-        {
           label: "Website url",
           name: "website_url",
         },
@@ -1158,25 +1120,6 @@ export const config: CmsConfig = {
         {
           label: "Name",
           name: "name",
-        },
-        {
-          label: "Type",
-          name: "type",
-          widget: "select",
-          options: [
-            {
-              label: "Browser extension",
-              value: "browser_extension",
-            },
-            {
-              label: "iOS",
-              value: "ios",
-            },
-            {
-              label: "Android",
-              value: "android",
-            },
-          ],
         },
         {
           label: "Website url",

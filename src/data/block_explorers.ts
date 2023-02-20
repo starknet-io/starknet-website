@@ -3,7 +3,6 @@ import { getFirst, getJSON, getYAML } from "./utils";
 
 export interface BlockExplorer {
   readonly name: string;
-  readonly type: string;
   readonly website_url: string;
   readonly image: string;
   readonly company_name: string;
