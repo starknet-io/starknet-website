@@ -1093,9 +1093,64 @@ export const config: CmsConfig = {
       ],
     },
     {
-      label: "Bridges and fiat on ramps",
+      label: "Bridges",
       name: "bridges",
       folder: `_data/bridges/${locale}`,
+      create: true,
+      format: "yml",
+      identifier_field: "name",
+      fields: [
+        {
+          label: "Name",
+          name: "name",
+        },
+        {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: [
+            {
+              label: "Browser extension",
+              value: "browser_extension",
+            },
+            {
+              label: "iOS",
+              value: "ios",
+            },
+            {
+              label: "Android",
+              value: "android",
+            },
+          ],
+        },
+        {
+          label: "Website url",
+          name: "website_url",
+        },
+        {
+          label: "Image",
+          name: "image",
+          widget: "image",
+        },
+        {
+          label: "Company name",
+          name: "company_name",
+        },
+        {
+          label: "Twitter handle",
+          name: "twitter",
+        },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+        },
+      ],
+    },
+    {
+      label: "Fiat on-ramps",
+      name: "fiat-on-ramps",
+      folder: `_data/fiat-on-ramps/${locale}`,
       create: true,
       format: "yml",
       identifier_field: "name",
