@@ -1,7 +1,7 @@
 "use client";
 
-import { Box, Flex, Container } from "src/libs/chakra-ui";
-
+import { Box, Flex, Container, HStack, Divider } from "src/libs/chakra-ui";
+import moment from "moment";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
@@ -12,6 +12,8 @@ import { useHits } from "react-instantsearch-hooks";
 
 import { ListCard } from "@ui/ListCards/ListCard";
 import { Heading } from "@ui/Typography/Heading";
+import { Button } from "@ui/Button";
+import { useRouter } from "next/navigation";
 
 export interface AutoProps {
   readonly params: {
@@ -57,6 +59,7 @@ export function BlockCommunityEventsList({
 type HitProps = {
   readonly hits: readonly {
     readonly start_date: string;
+    readonly end_date?: string;
     readonly name: string;
     readonly image: string;
     readonly description: string;
@@ -65,6 +68,7 @@ type HitProps = {
 };
 function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
   const { hits }: HitProps = useHits();
+  const router = useRouter();
 
   return (
     <>
@@ -75,7 +79,13 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
             return (
               <ListCard
                 key={hit?.name}
-                startDateTime={hit?.start_date}
+                startDateTime={
+                  hit?.end_date
+                    ? `${moment(hit?.start_date).format(
+                        "ddd MMM DD"
+                      )} - ${moment(hit?.end_date).format("ddd MMM DD, YYYY")}`
+                    : moment(hit?.start_date).format("ddd MMM DD, YYYY")
+                }
                 image={hit.image}
                 title={hit.name}
                 description={hit.description}
@@ -85,6 +95,17 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
           }
         })}
       </Flex>
+      <HStack mt="24">
+        <Divider />
+        <Button
+          onClick={() => router.push("/en/events")}
+          flexShrink={0}
+          variant="secondary"
+        >
+          View All
+        </Button>
+        <Divider />
+      </HStack>
     </>
   );
 }
