@@ -72,7 +72,7 @@ export function PostsPage({
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="sm" href="/en/community">
                   Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
