@@ -68,8 +68,7 @@ export function PostsPage({
           <CustomCategories categories={categories} params={params} />
         </Container>
         <PageLayout
-          sectionHeaderTitle="Blog"
-          sectionHeaderDescription="The latest articles, podcasts and videos on all things StarkNet."
+          sectionHeaderTitle={category != null ? category.name : "All posts"}
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
