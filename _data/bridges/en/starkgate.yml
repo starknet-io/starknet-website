@@ -1,5 +1,4 @@
 name: Starkgate
-type: browser_extension
 website_url: https://starkgate.starknet.io/
 image: /assets/starkgate.jpg
 company_name: StarkWare

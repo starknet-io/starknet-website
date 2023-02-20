@@ -24,6 +24,8 @@ import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
+import { Event } from "src/data/events";
+import type { BaseHit } from "instantsearch.js";
 
 export interface AutoProps {
   readonly params: {
@@ -55,7 +57,7 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderTitle="Events"
           sectionHeaderDescription="Find StarkNet events taking place all over the world and online."
           breadcrumbs={
-            <Breadcrumb separator="/">
+            <Breadcrumb separator="->">
               <BreadcrumbItem>
                 <BreadcrumbLink fontSize="sm" href="#">
                   Community
@@ -150,38 +152,33 @@ function CustomTags() {
   });
 
   return (
-    <Box mt={8}>
+    <Box mt={8} maxHeight="300px" overflowY="auto">
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Tags
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
-          <Button
-            justifyContent="flex-start"
-            size="sm"
-            variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
-            key={i}
-          >
-            {titleCase(item.label)}
-          </Button>
-        ))}
+        {items.map((item, i) => {
+          let label = titleCase(item.label);
+
+          return (
+            <Button
+              size="sm"
+              variant={item.isRefined ? "filterActive" : "filter"}
+              onClick={() => refine(item.value)}
+              key={i}
+              justifyContent="flex-start"
+            >
+              {label}
+            </Button>
+          );
+        })}
       </VStack>
     </Box>
   );
 }
 
-type Hit = {
-  readonly start_date: string;
-  readonly end_date?: string;
-  readonly name: string;
-  readonly image: string;
-  readonly description: string;
-  readonly tags: string[];
-  readonly url: string;
-};
 function CustomHits() {
-  const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
+  const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
 
   return (
     <>
@@ -194,10 +191,10 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
-                  ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
+                  ? `${moment(hit?.start_date).format("MMM DD")} - ${moment(
                       hit?.end_date
-                    ).format("ddd MMM DD, YYYY")}`
-                  : moment(hit?.start_date).format("ddd MMM DD, YYYY")
+                    ).format("MMM DD, YYYY")}`
+                  : moment(hit?.start_date).format("MMM DD, YYYY")
               }
               image={hit.image}
               title={hit.name}
@@ -219,67 +216,3 @@ function CustomHits() {
     </>
   );
 }
-
-// import { getEventsPage } from "src/data/settings/events-page";
-// import { getEvents } from "src/data/events";
-// import { PageContentContainer } from "../(components)/PageContentContainer";
-// import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-// import { EventCard } from "@ui/ListCards/EventCard";
-// import {
-//   Breadcrumb,
-//   BreadcrumbItem,
-//   BreadcrumbLink,
-//   Box,
-//   Wrap,
-// } from "../../../libs/chakra-ui";
-// import { PageLayout } from "@ui/Layout/PageLayout";
-
-// export default async function EventsPage({
-//   params: { locale },
-// }: LocaleProps): Promise<JSX.Element> {
-//   const { title, description } = await getEventsPage(locale);
-//   const events = await getEvents(locale);
-
-//   return (
-//     <Box>
-//       <PageLayout
-//         sectionHeaderTitle="Events"
-//         sectionHeaderDescription="Find StarkNet events taking place all over the world and online."
-//         breadcrumbs={
-//           <Breadcrumb separator="->">
-//             <BreadcrumbItem>
-//               <BreadcrumbLink fontSize="sm" href="#">
-//                 Parent
-//               </BreadcrumbLink>
-//             </BreadcrumbItem>
-
-//             <BreadcrumbItem isCurrentPage>
-//               <BreadcrumbLink fontSize="sm" href="#">
-//                 Events
-//               </BreadcrumbLink>
-//             </BreadcrumbItem>
-//           </Breadcrumb>
-//         }
-//         pageLastUpdated="Page last updated 21 Nov 2023"
-//         leftAside={<Box minH="xs">Filters</Box>}
-//         main={
-//           <Box>
-//             <Wrap spacing={4} direction="column">
-//               {events.map((event) => (
-//                 <EventCard
-//                   href="https://www.google.com"
-//                   startDateTime="Fri, Jan 12 • 2:00 PM EST"
-//                   key={event.name}
-//                   description={
-//                     "Basecamp will be a 6-week training program, with 6x 2h online calls + homework."
-//                   }
-//                   title={event.name}
-//                 />
-//               ))}
-//             </Wrap>
-//           </Box>
-//         }
-//       />
-//     </Box>
-//   );
-// }

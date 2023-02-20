@@ -1,6 +1,6 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/ListCards/ListCard";
-import { getBridges } from "src/data/bridges";
+import { getFiatOnRamps } from "src/data/fiat-on-ramps";
 interface Props extends LocaleProps {
   noOfItems?: number;
 }
@@ -10,23 +10,23 @@ export default async function BlockOnRamps({
   params: { locale },
 }: //@ts-expect-error
 Props): JSX.Element {
-  const bridges = await getBridges(locale);
+  const fiatOnRamps = await getFiatOnRamps(locale);
 
   return (
     <Box>
       <Container maxW="1062px">
         <Flex gap={4} direction="column" flex={1}>
-          {bridges.map((bridge, i) => {
+          {fiatOnRamps.map((fiatOnRamp, i) => {
             if (noOfItems && i <= noOfItems) return null;
             return (
               <ListCard
-                href={bridge.website_url}
-                twitterHandle={bridge.twitter}
-                image={bridge.image}
+                href={fiatOnRamp.website_url}
+                twitterHandle={fiatOnRamp.twitter}
+                image={fiatOnRamp.image}
                 // startDateTime="Fri, Jan 12 • 2:00 PM EST"
-                key={bridge.name}
-                description={bridge.description}
-                title={bridge.name}
+                key={fiatOnRamp.name}
+                description={fiatOnRamp.description}
+                title={fiatOnRamp.name}
               />
             );
           })}
