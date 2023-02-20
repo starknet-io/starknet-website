@@ -57,9 +57,9 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderTitle="Events"
           sectionHeaderDescription="Find StarkNet events taking place all over the world and online."
           breadcrumbs={
-            <Breadcrumb separator="->">
+            <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="sm" href="/en/community">
                   Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -191,10 +191,10 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
-                  ? `${moment(hit?.start_date).format("MMM DD")} - ${moment(
-                      hit?.end_date,
-                    ).format("MMM DD, YYYY")}`
-                  : moment(hit?.start_date).format("MMM DD, YYYY")
+                  ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
+                      hit?.end_date
+                    ).format("ddd MMM DD, YYYY")}`
+                  : moment(hit?.start_date).format("ddd MMM DD, YYYY")
               }
               image={hit.image}
               title={hit.name}
