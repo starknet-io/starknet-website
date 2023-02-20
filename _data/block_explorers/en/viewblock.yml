@@ -1,5 +1,4 @@
 name: ViewBlock
-type: browser_extension
 website_url: https://viewblock.io/starknet
 image: /assets/viewblock.jpg
 company_name: "Viewblock "

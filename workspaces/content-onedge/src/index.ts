@@ -22,6 +22,7 @@ const simpleDataTypes = [
   await getSimpleData("wallets"),
   await getSimpleData("block_explorers"),
   await getSimpleData("bridges"),
+  await getSimpleData("fiat-on-ramps"),
 ];
 
 for (const simpleData of simpleDataTypes) {
