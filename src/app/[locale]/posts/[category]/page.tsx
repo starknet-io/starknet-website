@@ -11,7 +11,7 @@ export async function generateStaticParams() {
     for (const category of categories) {
       params.push({
         locale,
-        category: category.id,
+        category: category.slug,
       });
     }
   }
