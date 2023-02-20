@@ -165,10 +165,10 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
-                  ? `${moment(hit?.start_date).format("MMM DD")} - ${moment(
-                      hit?.end_date,
-                    ).format("MMM DD, YYYY")}`
-                  : moment(hit?.start_date).format("MMM DD, YYYY")
+                  ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
+                      hit?.end_date
+                    ).format("ddd MMM DD, YYYY")}`
+                  : moment(hit?.start_date).format("ddd MMM DD, YYYY")
               }
               image={hit.image}
               title={hit.name}
