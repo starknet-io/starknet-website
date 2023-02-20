@@ -27,6 +27,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Topic } from "src/data/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
+import { Heading } from "@ui/Typography/Heading";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -72,7 +73,7 @@ export function PostsPage({
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="sm" href="/en/community">
                   Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -86,6 +87,9 @@ export function PostsPage({
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
+              <Heading mt="48px" color="heading-navy-fg" as="h4" variant="h4">
+                Topics
+              </Heading>
               <CustomTopics topics={topics} />
             </Box>
           }
