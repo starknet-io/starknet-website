@@ -24,7 +24,7 @@ const community_and_events = defineStyle({
   background: "badge-community-and-events-bg",
   color: "badge-community-and-events-fg",
 });
-const stark_struct = defineStyle({
+const stark_struck = defineStyle({
   background: "badge-starkstruck-bg",
   color: "badge-starkstruck-fg",
 });
@@ -54,7 +54,7 @@ export const badgeTheme = defineStyleConfig({
     engineering,
     community_calls,
     stark_math,
-    stark_struct,
+    stark_struck,
     stark_at_home,
     governance,
     community_and_events,
