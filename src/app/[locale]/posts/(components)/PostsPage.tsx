@@ -154,7 +154,7 @@ function CustomCategories({
   return (
     <Flex
       as="ul"
-      sx={{ overflowX: "scroll" }}
+      sx={{ overflowX: "auto" }}
       gap="24px"
       borderBottomWidth="1px"
       borderColor="tabs-main-br"

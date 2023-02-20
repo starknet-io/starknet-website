@@ -5,5 +5,9 @@ type props = {
 } & TagProps;
 
 export const Tag = ({ children, ...rest }: props) => {
-  return <ChakraTag {...rest}>{children}</ChakraTag>;
+  return (
+    <ChakraTag textTransform="capitalize" {...rest}>
+      {children}
+    </ChakraTag>
+  );
 };
