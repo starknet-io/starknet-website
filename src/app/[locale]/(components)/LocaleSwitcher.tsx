@@ -21,9 +21,7 @@ export default function LocaleSwitcher() {
 
   return (
     <LanguageSwitcherDropdown
-      description=" Some copy here that gives a concise summary of the language
-              resources as well as how the community is being asked to
-              contribute and a link to a dedicated page on the topic."
+      description=" As part of the Starknet community’s drive to be globally accessible we’ll be rolling out our translation program soon. We are inviting members of the community to tell us which languages they would like to see available on the site and also to help us with translations. Follow the link below to find out how you can contribute."
       selectedLocale={localeConfig.code}
     >
       {i18nConfig

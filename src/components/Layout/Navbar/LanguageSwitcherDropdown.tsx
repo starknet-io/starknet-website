@@ -19,6 +19,7 @@ import * as React from "react";
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 import { PopoverIcon } from "./PopoverIcon";
+import Link from "next/link";
 
 type Props = {
   title?: string;
@@ -89,7 +90,7 @@ export const LanguageSwitcherDropdown = ({
               {children}
               <Spacer height={3} />
               <Box pl={10}>
-                <Button variant="outline">See all languages</Button>
+                {/* <Button variant="outline">See all languages</Button> */}
               </Box>
             </VStack>
 
@@ -105,6 +106,14 @@ export const LanguageSwitcherDropdown = ({
               </Heading>
 
               <Text variant="cardBody">{description}</Text>
+              <Box height="32px" />
+              <Button
+                as="a"
+                variant="outline"
+                href="/en/community/language-support"
+              >
+                Learn how to contribute
+              </Button>
             </Stack>
           </HStack>
         </PopoverContent>
