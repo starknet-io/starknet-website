@@ -5,7 +5,7 @@ breadcrumbs: true
 page_last_updated: false
 blocks:
   - type: hero
-    title: Build on Starknet
+    title: Developers Hub
     description: A manual and resource list for builders, by builders.
     variant: build
   - type: flex_layout
@@ -52,16 +52,16 @@ blocks:
       - type: image_icon_link_card
         color: purple
         title: "Starknet ByteSized Series "
-        description: Contract writing video series, from simple deployments to L1 to L2
-          interactions.
+        description: A series of short videos that cover the basic concepts of Starknet.
         icon: /assets/orange.svg
         link:
           custom_title: View
           custom_internal_link: /tutorials/bytesized_series
       - type: image_icon_link_card
         color: peach
-        title: "Cairo 101 "
-        description: Cairo 101 video series, from dev environment to deployment.
+        title: Starknet 101
+        description: Get up and running developing on Starknet through this series of
+          video tutorials.
         icon: /assets/green.svg
         link:
           custom_title: View
