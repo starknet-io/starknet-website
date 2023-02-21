@@ -52,10 +52,12 @@ items:
             items:
               - custom_title: Blog home
                 custom_internal_link: /posts/
+              - custom_title: Foundation posts
+                custom_internal_link: /posts/foundation
               - custom_title: Engineering posts
                 custom_internal_link: /posts/engineering
-              - custom_internal_link: /posts/community-calls
-                custom_title: Community Calls
+              - custom_title: Community Calls
+                custom_internal_link: /posts/community-calls
               - custom_title: Stark struck
                 custom_internal_link: /posts/stark-struck
               - custom_title: Stark math
