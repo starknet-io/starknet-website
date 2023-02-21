@@ -95,6 +95,7 @@ export const LargeCard = ({
                           md: "48px",
                         })}
                         mb={0}
+                        fontWeight="bold"
                       >
                         {title}
                       </Heading>
