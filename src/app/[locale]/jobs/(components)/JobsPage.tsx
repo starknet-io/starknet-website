@@ -160,6 +160,7 @@ interface Job {
   scope: string;
   title: string;
   type: string;
+  apply_url: string;
 }
 
 type Hit = {
@@ -187,6 +188,7 @@ function CustomHits() {
               title={hit.job.title}
               description={hit.job.description}
               type={tags}
+              href={hit.job.apply_url}
             />
           );
         })}

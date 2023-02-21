@@ -64,6 +64,7 @@ type HitProps = {
     readonly image: string;
     readonly description: string;
     readonly tags: string[];
+    readonly url: string;
   }[];
 };
 function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
@@ -90,6 +91,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                 title={hit.name}
                 description={hit.description}
                 type={hit.tags}
+                href={hit.url}
               />
             );
           }

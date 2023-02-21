@@ -60,7 +60,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="#">
+                <BreadcrumbLink fontSize="sm" href="/en/developers">
                   Developers
                 </BreadcrumbLink>
               </BreadcrumbItem>
