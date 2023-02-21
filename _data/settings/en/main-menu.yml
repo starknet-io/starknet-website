@@ -7,7 +7,6 @@ items:
               - page: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
               - custom_title: FAQ
                 page: b5689d3a-348b-4ccb-b787-520b64c55e41
-
   - title: Developers
     columns:
       - blocks:
@@ -50,22 +49,24 @@ items:
       - blocks:
           - title: BLOG & MEDIA
             items:
-              - custom_title: Blog home
+              - custom_title: All posts
                 custom_internal_link: /posts/
-              - custom_title: Foundation posts
-                custom_internal_link: /posts/foundation
-              - custom_title: Engineering posts
-                custom_internal_link: /posts/engineering
+              - custom_title: Community & Events
+                custom_internal_link: /posts/community-and-events
               - custom_title: Community Calls
                 custom_internal_link: /posts/community-calls
-              - custom_title: Stark struck
-                custom_internal_link: /posts/stark-struck
-              - custom_title: Stark math
-                custom_internal_link: /posts/stark-math
-              - custom_title: Governance posts
+              - custom_title: Ecosystem
+                custom_internal_link: /posts/ecosystem
+              - custom_title: Engineering
+                custom_internal_link: /posts/engineering
+              - custom_title: Foundation
+                custom_internal_link: /posts/foundation
+              - custom_title: Governance
                 custom_internal_link: /posts/governance
-              - custom_title: Community & Events posts
-                custom_internal_link: /posts/community-and-events
+              - custom_title: Stark Math
+                custom_internal_link: /posts/stark-math
+              - custom_title: Stark Struck
+                custom_internal_link: /posts/stark-struck
       - blocks:
           - title: OTHER
             items:
@@ -84,7 +85,7 @@ items:
                 custom_external_link: https://starknet.io/discord
               - custom_icon: SiGithub
                 custom_title: Github
-                custom_external_link: https://github.com/starkware-libs
+                custom_external_link: https://github.com/starknet-io/starknet-website
               - custom_internal_link: ""
                 custom_icon: SiTwitter
                 custom_title: Twitter

@@ -9,6 +9,7 @@ import {
   Flex,
   Image,
   Link,
+  LinkBox,
   Stack,
 } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
@@ -64,60 +65,77 @@ export const ImageIconCard = ({
   };
 
   return (
-    <CardGradientBorder padding="0" height="100%">
-      <Card overflow="hidden" borderRadius="24px" boxShadow="none" bg="card-bg">
-        <Box
-          margin="8px 8px 0 8px"
-          borderRadius="20px 20px 0 0"
-          position="relative"
-          bgGradient={colors[color].gradient}
-          height="263px"
+    <LinkBox
+      as={NextLink}
+      href={href!}
+      sx={{ textDecoration: "none!important" }}
+    >
+      <CardGradientBorder padding="0" height="100%">
+        <Card
+          overflow="hidden"
+          borderRadius="24px"
+          boxShadow="none"
+          bg="card-bg"
         >
-          <Image
-            alt="icon"
-            src={icon}
-            position="absolute"
-            top="50%"
-            left="50%"
-            transform="translate(-50%, -50%)"
-            zIndex={1}
-            opacity={0.8}
-            mixBlendMode={color === "blue-default" ? "multiply" : "difference"}
-            _dark={{ mixBlendMode: "color-dodge", opacity: 0.8 }}
+          <Box
+            margin="8px 8px 0 8px"
+            borderRadius="20px 20px 0 0"
+            position="relative"
+            bgGradient={colors[color].gradient}
+            height="263px"
+          >
+            <Image
+              alt="icon"
+              src={icon}
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              zIndex={1}
+              opacity={0.8}
+              mixBlendMode={
+                color === "blue-default" ? "multiply" : "difference"
+              }
+              _dark={{ mixBlendMode: "color-dodge", opacity: 0.8 }}
 
-            // filter={colors[color].gradient}
-          />
-          <Image
-            mixBlendMode="overlay"
-            opacity="1"
-            alt="icon"
-            src="/assets/cards/image_icon_card_curves.png"
-            position="absolute"
-            top="50%"
-            left="50%"
-            transform="translate(-50%, -50%)"
-            zIndex={0}
-          />
-        </Box>
-        <Box>
-          <CardBody padding="40px 40px 16px 32px ">
-            <Stack mt="6" spacing="3">
-              <Heading as="h3" variant="h3" lineHeight="1.3em">
-                {title}
-              </Heading>
-              <Text variant="baseRegular">{description}</Text>
-            </Stack>
-          </CardBody>
+              // filter={colors[color].gradient}
+            />
+            <Image
+              mixBlendMode="overlay"
+              opacity="1"
+              alt="icon"
+              src="/assets/cards/image_icon_card_curves.png"
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              zIndex={0}
+            />
+          </Box>
+          <Box>
+            <CardBody padding="40px 40px 16px 32px ">
+              <Stack mt="6" spacing="3">
+                <Heading as="h3" variant="h3" lineHeight="1.3em">
+                  {title}
+                </Heading>
+                <Text variant="baseRegular">{description}</Text>
+              </Stack>
+            </CardBody>
 
-          <CardFooter padding="0 40px 32px 32px">
-            <ButtonGroup spacing="2">
-              <CustomLink variant="card" href={href}>
-                {label} &rarr;
-              </CustomLink>
-            </ButtonGroup>
-          </CardFooter>
-        </Box>
-      </Card>
-    </CardGradientBorder>
+            <CardFooter padding="0 40px 32px 32px">
+              <ButtonGroup spacing="2">
+                <CustomLink
+                  variant="card"
+                  href={href}
+                  _hover={{ textDecoration: "underline!important" }}
+                >
+                  {label} &rarr;
+                </CustomLink>
+              </ButtonGroup>
+            </CardFooter>
+          </Box>
+        </Card>
+      </CardGradientBorder>
+    </LinkBox>
   );
 };

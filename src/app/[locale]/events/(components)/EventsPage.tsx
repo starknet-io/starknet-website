@@ -55,7 +55,7 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
 
         <PageLayout
           sectionHeaderTitle="Events"
-          sectionHeaderDescription="Find StarkNet events taking place all over the world and online."
+          sectionHeaderDescription="Find Starknet events, online or around the world."
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
@@ -192,7 +192,7 @@ function CustomHits() {
               startDateTime={
                 hit?.end_date
                   ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
-                      hit?.end_date,
+                      hit?.end_date
                     ).format("ddd MMM DD, YYYY")}`
                   : moment(hit?.start_date).format("ddd MMM DD, YYYY")
               }
