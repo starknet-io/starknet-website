@@ -152,7 +152,7 @@ function CustomTags() {
   });
 
   return (
-    <Box mt={8} maxHeight="300px" overflowY="auto">
+    <Box mt={8}>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Tags
       </Heading>
@@ -192,7 +192,7 @@ function CustomHits() {
               startDateTime={
                 hit?.end_date
                   ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
-                      hit?.end_date
+                      hit?.end_date,
                     ).format("ddd MMM DD, YYYY")}`
                   : moment(hit?.start_date).format("ddd MMM DD, YYYY")
               }
