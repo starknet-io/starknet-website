@@ -84,13 +84,13 @@ export const HomepageHero = (props: Props) => {
             <Heading
               as="h2"
               variant="h2"
-              fontWeight="extrabold"
+              fontWeight="bold"
               lineHeight="1.2"
               fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"
               mt="-10px"
             >
-              to Starknet
+              Starknet
             </Heading>
             <Text color="hero-subtitle-fg" mt="5" fontSize="18px">
               Starknet is the secure scaling technology bringing Ethereum’s

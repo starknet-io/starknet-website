@@ -3,15 +3,15 @@ import React, { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
 const texts = [
-  "Welcome",
-  "ようこそ",
-  "Bienvenu",
-  "স্বাগত",
-  "स्वागत",
+  "Welcome to",
+  "へようこそ",
+  "Bienvenue à",
   "ברוך הבא ל",
-  "欢迎",
-  "مرحباً",
-  "Bienvenida",
+  "مرحبا بك في",
+  "欢迎来到",
+  "歡迎來到",
+  "Grüezi",
+  "Bienvenida a",
 ];
 
 export const Intro = () => {
@@ -40,10 +40,10 @@ export const Intro = () => {
       as="h2"
       variant="h2"
       mt="8"
-      fontWeight="extrabold"
+      fontWeight="bold"
       lineHeight={{ base: "1.2em" }}
       overflow="hidden"
-      fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
+      fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "80px" }}
       color="heading-navy-fg"
     />
   );
