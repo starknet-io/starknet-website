@@ -84,7 +84,7 @@ export const HomepageHero = (props: Props) => {
             <Heading
               as="h2"
               variant="h2"
-              fontWeight="extrabold"
+              fontWeight="bold"
               lineHeight="1.2"
               fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"

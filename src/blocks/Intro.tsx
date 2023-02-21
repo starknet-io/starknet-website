@@ -40,10 +40,10 @@ export const Intro = () => {
       as="h2"
       variant="h2"
       mt="8"
-      fontWeight="extrabold"
+      fontWeight="bold"
       lineHeight={{ base: "1.2em" }}
       overflow="hidden"
-      fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
+      fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "80px" }}
       color="heading-navy-fg"
     />
   );
