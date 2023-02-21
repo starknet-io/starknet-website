@@ -6,7 +6,7 @@ breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: page_header
-    title: Resources and tools
+    title: Tools & resources
     description: Explore developer tooling and resources available for Starknet
   - type: link_list
     heading: Libraries
@@ -16,11 +16,6 @@ blocks:
         label: starknet.js
         sub_label: A Javascript SDK for Starknet
         href: https://github.com/seanjameshan/starknet.js
-      - type: link_list_item
-        is_external: true
-        label: starknet.php
-        sub_label: "A PHP SDK for Starknet "
-        href: https://github.com/Starknet-php/starknet.php
       - type: link_list_item
         is_external: true
         label: starknet.py
@@ -36,6 +31,11 @@ blocks:
         label: "Caigo "
         sub_label: "A Golang SDK for Starknet "
         href: https://github.com/dontpanicdao/caigo
+      - type: link_list_item
+        is_external: true
+        label: starknet.php
+        sub_label: "A PHP SDK for Starknet "
+        href: https://github.com/Starknet-php/starknet.php
   - type: link_list
     heading: "Editor plugins "
     blocks:
