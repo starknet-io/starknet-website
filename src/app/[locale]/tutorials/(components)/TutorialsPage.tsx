@@ -74,6 +74,9 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
+              <Heading mt="-24px" color="heading-navy-fg" as="h4" variant="h4">
+                Filter
+              </Heading>
               <CustomType />
               <CustomCourse params={params} />
               <CustomDifficulty />
@@ -129,7 +132,7 @@ function CustomType() {
   });
 
   return (
-    <Box mt={8}>
+    <Box>
       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
         Type
       </Heading>
