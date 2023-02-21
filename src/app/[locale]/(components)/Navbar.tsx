@@ -9,11 +9,13 @@ import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { useLocale } from "./ClientLocaleProvider";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch2 } from "./MainSearch2";
 import { usePathname } from "next/navigation";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
+import { Box, ButtonGroup, IconButton } from "src/libs/chakra-ui";
+import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -50,37 +52,72 @@ export default function Navbar({ mainMenu, env }: Props) {
                 {mainMenuItem.columns?.length &&
                   mainMenuItem.columns?.map((column, columnIndex) => (
                     <Box key={columnIndex}>
-                      {column.blocks?.map((block, blockIndex) => (
-                        <Box mb="24px" key={blockIndex}>
-                          {block.title && (
-                            <NavbarHeading>{block.title}</NavbarHeading>
-                          )}
+                      {column.blocks?.map((block, blockIndex) => {
+                        const blocks = block.items?.map((item, itemIndex) => {
+                          const { href, label } = getComputedLinkData(
+                            locale,
+                            item,
+                          );
 
-                          {block.items?.map((item, itemIndex) => {
-                            const { href, label } = getComputedLinkData(
-                              locale,
-                              item,
-                            );
+                          if (!href) {
+                            return <span key={itemIndex}>{label}</span>;
+                          }
 
-                            if (!href) {
-                              return <span key={itemIndex}>{label}</span>;
-                            }
-
+                          if (item.custom_icon) {
                             return (
-                              <NavBarLink
-                                isExternal={item.custom_external_link != null}
-                                key={itemIndex}
+                              <IconButton
+                                // isExternal={item.custom_external_link != null}
                                 href={href}
-                              >
-                                {label}
-                                {/* {item.custom_icon && (
-                                    <Icon as={item.custom_icon } />
-                                  )} */}
-                              </NavBarLink>
+                                key={itemIndex}
+                                as="a"
+                                aria-label={label!}
+                                icon={
+                                  item.custom_icon === "SiDiscord" ? (
+                                    <SiDiscord fontSize="1.25rem" />
+                                  ) : item.custom_icon === "SiGithub" ? (
+                                    <SiGithub fontSize="1.25rem" />
+                                  ) : item.custom_icon === "SiTwitter" ? (
+                                    <SiTwitter fontSize="1.25rem" />
+                                  ) : item.custom_icon === "SiYoutube" ? (
+                                    <SiYoutube fontSize="1.25rem" />
+                                  ) : (
+                                    <React.Fragment />
+                                  )
+                                }
+                              />
                             );
-                          })}
-                        </Box>
-                      ))}
+                          }
+
+                          return (
+                            <NavBarLink
+                              isExternal={item.custom_external_link != null}
+                              key={itemIndex}
+                              href={href}
+                            >
+                              {label}
+                            </NavBarLink>
+                          );
+                        });
+
+                        const iconsOnly = block.items?.every(
+                          (b) => b.custom_icon,
+                        );
+
+                        return (
+                          <Box mb="24px" key={blockIndex}>
+                            {block.title && (
+                              <NavbarHeading>{block.title}</NavbarHeading>
+                            )}
+                            {iconsOnly ? (
+                              <ButtonGroup variant="ghost" mx="16px">
+                                {blocks}
+                              </ButtonGroup>
+                            ) : (
+                              blocks
+                            )}
+                          </Box>
+                        );
+                      })}
                     </Box>
                   ))}
               </Flex>
