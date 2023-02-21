@@ -155,7 +155,7 @@ export const tokens = {
       "btn-outline-hero-hover-border": "##5C94FF",
       "btn-outline-hero-active-bg": "rgba(0, 0, 0, 0.05)",
       "btn-outline-hero-active-fg": "#5C94FF",
-      "btn-outline-hero-active-border": "#000000",
+      "btn-outline-hero-active-border": "#5C94FF",
       "btn-primary-hero-bg": "#0C0C4F",
       "btn-primary-hero-hover-bg": "#5C94FF",
       "btn-primary-hero-active-bg": "#4A76CC",
