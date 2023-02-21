@@ -37,6 +37,24 @@ blocks:
         sub_label: "A PHP SDK for Starknet "
         href: https://github.com/Starknet-php/starknet.php
   - type: link_list
+    heading: Development frameworks
+    blocks:
+      - is_external: true
+        label: "Protostar "
+        sub_label: StarkNet smart contract development toolchain
+        href: https://github.com/software-mansion/protostar
+      - is_external: true
+        label: Hardhat-starknet
+        href: https://github.com/Shard-Labs/starknet-hardhat-plugin
+      - is_external: true
+        href: https://github.com/OpenZeppelin/nile
+        label: Nile
+        sub_label: CLI tool for interacting with Starknet projects
+      - is_external: true
+        sub_label: like Ganache, but for Starknet
+        href: https://github.com/Shard-Labs/starknet-devnet
+        label: "Starknet Devnet "
+  - type: link_list
     heading: "Editor plugins "
     blocks:
       - type: link_list_item
