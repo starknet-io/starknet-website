@@ -2,7 +2,7 @@ id: b5689d3a-348b-4ccb-b787-520b64c55e41
 title: Frequently asked questions
 template: content
 parent_page: /learn/
-breadcrumbs: true
+breadcrumbs: false
 page_last_updated: true
 blocks:
   - type: page_header
