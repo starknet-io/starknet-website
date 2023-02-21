@@ -90,7 +90,7 @@ export const HomepageHero = (props: Props) => {
               color="heading-navy-fg"
               mt="-10px"
             >
-              to Starknet
+              Starknet
             </Heading>
             <Text color="hero-subtitle-fg" mt="5" fontSize="18px">
               Starknet is the secure scaling technology bringing Ethereum’s
