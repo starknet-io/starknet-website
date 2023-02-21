@@ -3,15 +3,15 @@ import React, { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
 const texts = [
-  "Welcome",
-  "ようこそ",
-  "Bienvenu",
-  "স্বাগত",
-  "स्वागत",
+  "Welcome to",
+  "へようこそ",
+  "Bienvenue à",
   "ברוך הבא ל",
-  "欢迎",
-  "مرحباً",
-  "Bienvenida",
+  "مرحبا بك في",
+  "欢迎来到",
+  "歡迎來到",
+  "Grüezi",
+  "Bienvenida a",
 ];
 
 export const Intro = () => {
