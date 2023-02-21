@@ -18,9 +18,9 @@ blocks:
     blocks:
       - type: large_card
         title: What is Starknet?
-        description: "Starknet is a decentralised layer-2 network that enables Ethereum
-          to scale securely and enables dapps to achieve unlimited scale for
-          transactions and computation. "
+        description: Starknet is a decentralized layer-2 network that enables Ethereum
+          to scale securely and dapps to achieve unlimited scale for
+          transactions and computation.
         image: /assets/illustration-how-it-works.png
         orientation: left
         link:
@@ -30,9 +30,9 @@ blocks:
         orientation: right
         image: /assets/illustration-scaling.png
         title: "How does Starknet scale Ethereum? "
-        description: Starknet uses math and cryptography to securely scale Ethereum. It
-          is known as a Validity-rollup (or ZK-rollup); meaning it ”rolls” many
-          transactions up to send to Ethereum as a single transaction.
+        description: 'Starknet uses math and cryptography to securely scale Ethereum. It
+          operates as a Validity-rollup (or ZK-rollup): it "bundles" many
+          transactions and "rolls" them to Ethereum as a single transaction.'
         link:
           page: 93b845d7-5662-4cd4-8c13-3730440880c0
           custom_title: How does it work
@@ -55,7 +55,7 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: "Developer tutorials "
-        description: Learn from Starknet's community of developers and technologists.
+        description: Learn from Starknet's community of developers and builders.
         icon: /assets/tutorials.svg
         link:
           custom_internal_link: /tutorials/
@@ -63,8 +63,8 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Tools & resources
-        description: "Find libraries, editor plugins and tooling to help you start
-          building. "
+        description: Find libraries, editor plugins and developer tools to help you
+          start building.
         icon: /assets/1.svg
         link:
           page: 4c40a102-df5b-4f39-98fb-774d6841da9e
@@ -74,12 +74,12 @@ blocks:
     base: 1
     md: 2
     lg: 3
-    heading: "Start playing "
+    heading: Use Starknet
     blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Discover dapps
-        description: Explore dapps in Starknet ecosystem – from Defi to NFTs to gaming.
+        description: Explore dapps in the Starknet ecosystem – from Defi to NFTs and gaming.
         icon: /assets/dapps.svg
         link:
           custom_title: Explore
