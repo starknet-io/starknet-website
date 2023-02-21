@@ -87,7 +87,7 @@ export function PostsPage({
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <Heading mt="48px" color="heading-navy-fg" as="h4" variant="h4">
+              <Heading mt="-24px" color="heading-navy-fg" as="h4" variant="h4">
                 Topics
               </Heading>
               <CustomTopics topics={topics} />
