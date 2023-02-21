@@ -15,7 +15,7 @@ blocks:
         is_external: true
         label: Discord
         sub_label: "Join the conversation on Discord "
-        href: https://discord.com/invite/QypNMzkHbc
+        href: https://starknet.io/discord
       - type: link_list_item
         is_external: true
         label: Twitter
@@ -26,32 +26,3 @@ blocks:
         label: "Community forum "
         sub_label: Share, discuss and collaborate on initiatives.
         href: https://community.starknet.io/
-  - type: link_list
-    heading: "Telegram groups "
-    blocks:
-      - type: link_list_item
-        is_external: true
-        label: Math for Cairo
-        href: https://t.me/+M40ddcHHRDgzZjBk
-        sub_label: ""
-      - type: link_list_item
-        is_external: true
-        label: "Starknet education "
-        sub_label: ""
-        href: https://t.me/+g3YrPwFimOdkN2Rh
-      - type: link_list_item
-        is_external: true
-        label: Starknet Ecosystem (non-tech)
-        href: https://t.me/+e8IlIwMUsI9kY2E0
-      - type: link_list_item
-        is_external: true
-        label: Index Queries group
-        href: https://t.me/+NcG5Y4M6_kczMDVh
-      - type: link_list_item
-        is_external: true
-        label: "Checkpoint.fyi group "
-        href: https://t.me/+dk7Q7FAVJ1oyMDFl
-      - type: link_list_item
-        is_external: true
-        label: "zkGraph group "
-        href: https://t.me/+b9d7ytd9BQ5lZDA1
