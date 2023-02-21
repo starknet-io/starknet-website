@@ -1,3 +1,4 @@
+import Script from "next/script";
 import React from "react";
 
 interface Props {
@@ -8,6 +9,24 @@ interface Props {
 export default function HeadTags(props: Props) {
   return (
     <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-7Z0075QZ3C"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="gtag"
+        // rome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7Z0075QZ3C');
+          `,
+        }}
+      />
+
       <title>{props.title ? `${props.title} - Starknet` : "Starknet"}</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
 
