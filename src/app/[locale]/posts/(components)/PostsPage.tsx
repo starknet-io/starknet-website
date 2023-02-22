@@ -69,7 +69,7 @@ export function PostsPage({
               // topic: searchParams.get("topic")?.split(",") ?? [],
               category: category != null ? [category.id] : [],
             }),
-            [category, params.locale],
+            [category, params.locale]
           )}
         />
         <Container maxW="container.xl" mb={4}>
@@ -126,10 +126,18 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
   });
 
   return (
-    <Wrap flexWrap="wrap">
+    <Box
+      display="flex"
+      flexWrap="wrap"
+      gap="8px"
+      columnGap="4px"
+      width="100%"
+      mt="-12px"
+    >
       {items.map((topic, i) => (
         <Button
           size="sm"
+          px="8px"
           // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
           variant={topic.isRefined ? "filterActive" : "filter"}
           onClick={() => {
@@ -155,7 +163,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
           {topics.find((a) => a.id === topic.value)?.name}
         </Button>
       ))}
-    </Wrap>
+    </Box>
   );
 }
 

@@ -87,7 +87,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                 startDateTime={
                   hit?.end_date
                     ? `${moment(hit?.start_date).format(
-                        "ddd MMM DD",
+                        "ddd MMM DD"
                       )} - ${moment(hit?.end_date).format("ddd MMM DD, YYYY")}`
                     : moment(hit?.start_date).format("ddd MMM DD, YYYY")
                 }
@@ -96,6 +96,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                 description={hit.description}
                 type={hit.tags}
                 href={hit.url}
+                variant="event"
               />
             );
           }
