@@ -42,8 +42,9 @@ export const Intro = () => {
       mt="8"
       fontWeight="bold"
       lineHeight={{ base: "1.2em" }}
+      height={{ base: "1.2em" }}
       overflow="hidden"
-      fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "80px" }}
+      fontSize={{ base: "48px", md: "70px", lg: "80px", xl: "80px" }}
       color="heading-navy-fg"
     />
   );
