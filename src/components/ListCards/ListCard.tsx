@@ -42,7 +42,6 @@ type Props = {
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
-  console.log(props.href);
   return (
     <Box maxW="5xl">
       <LinkBox
