@@ -13,10 +13,10 @@ export const HomepageHero = (props: Props) => {
     <Box
       as="section"
       pt="46px"
-      pb="133px"
+      pb="93px"
       overflow="hidden"
       bg="#eaeaea"
-      minHeight="769px"
+      minHeight="729px"
       _dark={{
         bgGradient:
           "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
@@ -78,7 +78,14 @@ export const HomepageHero = (props: Props) => {
           // paddingBottom="33px"
           // mb="56px"
         >
-          <Box flex="1" maxW={{ lg: "xl" }} pt="6" order={{ base: 1, lg: 0 }}>
+          <Box
+            top={{ lg: "-64px" }}
+            position="relative"
+            flex="1"
+            maxW={{ lg: "xl" }}
+            pt="0"
+            order={{ base: 1, lg: 0 }}
+          >
             <Intro />
 
             <Heading

@@ -52,7 +52,7 @@ export function PostsPage({
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
 
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const category = categories.find((c) => c.slug === params.category);
 
   return (
@@ -63,11 +63,14 @@ export function PostsPage({
       >
         <Configure
           hitsPerPage={50}
-          facetsRefinements={{
-            locale: [params.locale],
-            topic: searchParams.get("topic")?.split(",") ?? [],
-            category: category != null ? [category.id] : [],
-          }}
+          facetsRefinements={useMemo(
+            () => ({
+              locale: [params.locale],
+              // topic: searchParams.get("topic")?.split(",") ?? [],
+              category: category != null ? [category.id] : [],
+            }),
+            [category, params.locale]
+          )}
         />
         <Container maxW="container.xl" mb={4}>
           <CustomCategories categories={categories} params={params} />
@@ -109,46 +112,58 @@ export function PostsPage({
 }
 
 function CustomTopics({ topics }: Pick<Props, "topics">) {
-  const router = useRouter();
-  const pathname = usePathname()!;
-  const searchParams = useSearchParams();
-  const topicSet = useMemo(() => {
-    return new Set(searchParams.get("topic")?.split(",") ?? []);
-  }, [searchParams]);
+  // const router = useRouter();
+  // const pathname = usePathname()!;
+  // const searchParams = useSearchParams();
+  // const topicSet = useMemo(() => {
+  //   return new Set(searchParams.get("topic")?.split(",") ?? []);
+  // }, [searchParams]);
 
-  const { items } = useRefinementList({
+  const { items, refine } = useRefinementList({
     attribute: "topic",
-    sortBy: ["name:asc"],
+    limit: 50,
+    sortBy: ["count:desc"],
   });
 
   return (
-    <Wrap flexWrap="wrap">
+    <Box
+      display="flex"
+      flexWrap="wrap"
+      gap="8px"
+      columnGap="4px"
+      width="100%"
+      mt="-12px"
+    >
       {items.map((topic, i) => (
         <Button
           size="sm"
-          variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
+          px="8px"
+          // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
+          variant={topic.isRefined ? "filterActive" : "filter"}
           onClick={() => {
-            const params = new URLSearchParams(searchParams);
+            refine(topic.value);
 
-            if (topicSet.has(topic.value)) {
-              topicSet.delete(topic.value);
-            } else {
-              topicSet.add(topic.value);
-            }
+            // const params = new URLSearchParams(searchParams);
 
-            if (topicSet.size === 0) {
-              router.replace(pathname);
-            } else {
-              params.set("topic", Array.from(topicSet.values()).join(","));
-              router.replace(`${pathname}?${params.toString()}`);
-            }
+            // if (topicSet.has(topic.value)) {
+            //   topicSet.delete(topic.value);
+            // } else {
+            //   topicSet.add(topic.value);
+            // }
+
+            // if (topicSet.size === 0) {
+            //   router.replace(pathname);
+            // } else {
+            //   params.set("topic", Array.from(topicSet.values()).join(","));
+            //   router.replace(`${pathname}?${params.toString()}`);
+            // }
           }}
           key={i}
         >
           {topics.find((a) => a.id === topic.value)?.name}
         </Button>
       ))}
-    </Wrap>
+    </Box>
   );
 }
 
