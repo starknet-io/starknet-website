@@ -6,12 +6,13 @@ const texts = [
   "Welcome to",
   "へようこそ",
   "Bienvenue à",
-  "ברוך הבא ל",
+  "ברוכים הבאים ל",
   "مرحبا بك في",
   "欢迎来到",
   "歡迎來到",
-  "Grüezi",
+  "Grüezi tso",
   "Bienvenida a",
+  "Servus zu",
 ];
 
 export const Intro = () => {
