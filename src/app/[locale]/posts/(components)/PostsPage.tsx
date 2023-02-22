@@ -52,7 +52,7 @@ export function PostsPage({
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
 
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const category = categories.find((c) => c.slug === params.category);
 
   return (
@@ -65,7 +65,7 @@ export function PostsPage({
           hitsPerPage={50}
           facetsRefinements={{
             locale: [params.locale],
-            topic: searchParams.get("topic")?.split(",") ?? [],
+            // topic: searchParams.get("topic")?.split(",") ?? [],
             category: category != null ? [category.id] : [],
           }}
         />
@@ -109,14 +109,14 @@ export function PostsPage({
 }
 
 function CustomTopics({ topics }: Pick<Props, "topics">) {
-  const router = useRouter();
-  const pathname = usePathname()!;
-  const searchParams = useSearchParams();
-  const topicSet = useMemo(() => {
-    return new Set(searchParams.get("topic")?.split(",") ?? []);
-  }, [searchParams]);
+  // const router = useRouter();
+  // const pathname = usePathname()!;
+  // const searchParams = useSearchParams();
+  // const topicSet = useMemo(() => {
+  //   return new Set(searchParams.get("topic")?.split(",") ?? []);
+  // }, [searchParams]);
 
-  const { items } = useRefinementList({
+  const { items, refine } = useRefinementList({
     attribute: "topic",
     sortBy: ["name:asc"],
   });
@@ -126,22 +126,25 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
       {items.map((topic, i) => (
         <Button
           size="sm"
-          variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
+          // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
+          variant={topic.isRefined ? "filterActive" : "filter"}
           onClick={() => {
-            const params = new URLSearchParams(searchParams);
+            refine(topic.value);
 
-            if (topicSet.has(topic.value)) {
-              topicSet.delete(topic.value);
-            } else {
-              topicSet.add(topic.value);
-            }
+            // const params = new URLSearchParams(searchParams);
 
-            if (topicSet.size === 0) {
-              router.replace(pathname);
-            } else {
-              params.set("topic", Array.from(topicSet.values()).join(","));
-              router.replace(`${pathname}?${params.toString()}`);
-            }
+            // if (topicSet.has(topic.value)) {
+            //   topicSet.delete(topic.value);
+            // } else {
+            //   topicSet.add(topic.value);
+            // }
+
+            // if (topicSet.size === 0) {
+            //   router.replace(pathname);
+            // } else {
+            //   params.set("topic", Array.from(topicSet.values()).join(","));
+            //   router.replace(`${pathname}?${params.toString()}`);
+            // }
           }}
           key={i}
         >
