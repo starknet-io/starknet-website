@@ -38,7 +38,7 @@ try {
   for (const { resourceName, filenameMap } of resources) {
     console.log("resourceName", resourceName);
 
-    const indexName = `web_${resourceName}_dev`;
+    const indexName = `web_${resourceName}_${process.env.ALGOLIA_INDEX}`;
     const objects = Array.from(filenameMap.values());
 
     const index = client.initIndex(indexName);

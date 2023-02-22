@@ -8,6 +8,5 @@ blocks:
   - type: hero
     variant: block_explorers
     title: Block explorers
-    description: Page header with high level description of section and visual
-      treatment from brand team.
+    description: Explore blocks, transactions, and other metrics of Starknet.
   - type: block_explorers

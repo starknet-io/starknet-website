@@ -23,6 +23,7 @@ export interface AutoProps {
 
 export interface Props extends AutoProps {
   readonly env: {
+    readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
@@ -37,7 +38,10 @@ export function BlockCommunityEventsList({
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
   return (
-    <InstantSearch searchClient={searchClient} indexName="web_events_dev">
+    <InstantSearch
+      searchClient={searchClient}
+      indexName={`web_events_${env.ALGOLIA_INDEX}`}
+    >
       <Configure
         hitsPerPage={hitsPerPage}
         facetsRefinements={{ locale: [params.locale] }}

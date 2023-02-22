@@ -33,6 +33,7 @@ export interface Props extends LocaleProps {
     readonly course?: string;
   };
   readonly env: {
+    readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
@@ -45,7 +46,10 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
 
   return (
     <Box>
-      <InstantSearch searchClient={searchClient} indexName="web_tutorials_dev">
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={`web_tutorials_${env.ALGOLIA_INDEX}`}
+      >
         <Configure
           hitsPerPage={40}
           facetsRefinements={{

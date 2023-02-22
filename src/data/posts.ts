@@ -38,7 +38,9 @@ export async function getPostBySlug(
           process.env.ALGOLIA_APP_ID!,
           process.env.ALGOLIA_SEARCH_API_KEY!,
         );
-        const index = client.initIndex("web_posts_dev");
+        const index = client.initIndex(
+          `web_posts_${process.env.ALGOLIA_INDEX}`,
+        );
 
         const searchResponse = await index.search<Post>("", {
           facetFilters: [`locale:${locale}`, `slug:${slug}`],
