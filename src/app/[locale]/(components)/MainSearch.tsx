@@ -60,7 +60,7 @@ export function Autocomplete<TItem extends BaseItem>(
     };
   }, [props]);
 
-  return <div ref={containerRef} style={{ width: "200px", height: "44px" }} />;
+  return <div ref={containerRef} />;
 }
 
 export interface Props {
