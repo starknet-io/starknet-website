@@ -3636,6 +3636,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/noto-sans-hebrew@npm:^4.5.14":
+  version: 4.5.14
+  resolution: "@fontsource/noto-sans-hebrew@npm:4.5.14"
+  checksum: 7326c86e22461bd7328f0643975cf6cf43c1414530c51181c2dfc70bae176f0af0117e510eeacc296826deebe8bffafcf7565e25eae8ed674eda4c43cdf6c31e
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-jp@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/noto-sans-jp@npm:4.5.12"
+  checksum: f6fefcb42fd10c9c454bb2445ed8ab579260a25a67bc3f9f729d054023b215b92087df2b593b29a9fd9b91ea2cd573bfa81ca5ec3521b06d1b6a387b210295d3
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-sc@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/noto-sans-sc@npm:4.5.12"
+  checksum: ed938e820646c53090542098f77b5de89e92cc44a0f3ccc3dfbca2ff71d1f551d19d7c5610fabb438c42d11231d40dc06558ca1614ebc0d4b627dde485d91ad3
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-tc@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/noto-sans-tc@npm:4.5.12"
+  checksum: f43ced4d0c10c362a2790346a0442dd05f42dfa142cd9d94c654181dbd96c137ba68e0d3c404533ee40900d8600485400992a582c60880bbdc759f04692f3e17
+  languageName: node
+  linkType: hard
+
+"@fontsource/tajawal@npm:^4.5.9":
+  version: 4.5.9
+  resolution: "@fontsource/tajawal@npm:4.5.9"
+  checksum: 6a7ca92279f6d500de2e117fedab5017ddd8f2fd9c4c5687a5ea90739f1a3fd94229ffa6f1ef9b7b31aa5838c4fecda4a4e5fd77037c3337723b8a9c312aa1da
+  languageName: node
+  linkType: hard
+
 "@formatjs/intl-localematcher@npm:^0.2.32":
   version: 0.2.32
   resolution: "@formatjs/intl-localematcher@npm:0.2.32"
@@ -25983,6 +26018,11 @@ __metadata:
     "@emotion/react": ^11.10.5
     "@emotion/styled": ^11.10.5
     "@fontsource/inter": ^4.5.15
+    "@fontsource/noto-sans-hebrew": ^4.5.14
+    "@fontsource/noto-sans-jp": ^4.5.12
+    "@fontsource/noto-sans-sc": ^4.5.12
+    "@fontsource/noto-sans-tc": ^4.5.12
+    "@fontsource/tajawal": ^4.5.9
     "@formatjs/intl-localematcher": ^0.2.32
     "@headlessui/react": ^1.7.10
     "@heroicons/react": ^2.0.14

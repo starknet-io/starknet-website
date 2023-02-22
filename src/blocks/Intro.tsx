@@ -6,12 +6,13 @@ const texts = [
   "Welcome to",
   "へようこそ",
   "Bienvenue à",
-  "ברוך הבא ל",
+  "ברוכים הבאים ל",
   "مرحبا بك في",
   "欢迎来到",
   "歡迎來到",
-  "Grüezi",
+  "Grüezi tso",
   "Bienvenida a",
+  "Servus zu",
 ];
 
 export const Intro = () => {
@@ -42,8 +43,10 @@ export const Intro = () => {
       mt="8"
       fontWeight="bold"
       lineHeight={{ base: "1.2em" }}
+      height={{ base: "1.2em" }}
       overflow="hidden"
-      fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "80px" }}
+      fontSize={{ base: "48px", md: "70px", lg: "80px", xl: "80px" }}
+      fontFamily="InterVariable, Tajawal, Noto Sans Hebrew, Noto Sans JP, Noto Sans TC, Noto Sans SC"
       color="heading-navy-fg"
     />
   );
