@@ -32,6 +32,7 @@ export interface AutoProps {
 
 export interface Props extends AutoProps {
   readonly env: {
+    readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
@@ -44,7 +45,10 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
 
   return (
     <Box>
-      <InstantSearch searchClient={searchClient} indexName="web_jobs_dev">
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={`web_jobs_${env.ALGOLIA_INDEX}`}
+      >
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}

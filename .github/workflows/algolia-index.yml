@@ -1,19 +1,22 @@
-name: update algolia index (web_posts_dev)
+name: update algolia index (web_posts_*)
 
 on:
   push:
     paths:
       - "_data/posts/**"
+      - "_data/pages/**"
       - "_data/jobs/**"
       - "_data/events/**"
       - "_data/tutorials/**"
     branches:
       - dev
+      - production
 
 jobs:
   update-index:
     environment: "dev-algolia-index"
     env:
+      ALGOLIA_INDEX:  ${{ github.ref_name }}
       ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
       ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
       ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}

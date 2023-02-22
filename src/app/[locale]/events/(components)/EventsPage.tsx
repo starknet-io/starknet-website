@@ -35,6 +35,7 @@ export interface AutoProps {
 
 export interface Props extends AutoProps {
   readonly env: {
+    readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
@@ -47,7 +48,10 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
 
   return (
     <Box>
-      <InstantSearch searchClient={searchClient} indexName="web_events_dev">
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={`web_events_${env.ALGOLIA_INDEX}`}
+      >
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
@@ -192,7 +196,7 @@ function CustomHits() {
               startDateTime={
                 hit?.end_date
                   ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
-                      hit?.end_date
+                      hit?.end_date,
                     ).format("ddd MMM DD, YYYY")}`
                   : moment(hit?.start_date).format("ddd MMM DD, YYYY")
               }
