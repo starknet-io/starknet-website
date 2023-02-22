@@ -32,10 +32,7 @@ export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const locale = useLocale();
-  const isDesktop = useBreakpointValue(
-    { base: false, lg: true },
-    { fallback: "lg" },
-  );
+  const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Container py={{ base: "4", lg: "17px" }}>
