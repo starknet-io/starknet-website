@@ -44,6 +44,7 @@ export const Intro = () => {
       lineHeight={{ base: "1.2em" }}
       overflow="hidden"
       fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "80px" }}
+      fontFamily="InterVariable, Tajawal, Noto Sans Hebrew, Noto Sans JP, Noto Sans TC, Noto Sans SC"
       color="heading-navy-fg"
     />
   );
