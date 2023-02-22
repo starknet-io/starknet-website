@@ -110,7 +110,7 @@ export function MainSearch({ env }: Props): JSX.Element | null {
     });
     const querySuggestionsPlugin = createQuerySuggestionsPlugin({
       searchClient,
-      indexName: "web_query_suggestions_dev",
+      indexName: `web_query_suggestions_${env.ALGOLIA_INDEX}`,
       getSearchParams() {
         return recentSearchesPlugin.data!.getAlgoliaSearchParams({
           hitsPerPage: 3,
@@ -141,7 +141,7 @@ export function MainSearch({ env }: Props): JSX.Element | null {
     });
 
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
-  }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
+  }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
 
   return (
