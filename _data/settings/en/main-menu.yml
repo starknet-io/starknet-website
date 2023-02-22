@@ -49,24 +49,32 @@ items:
       - blocks:
           - title: BLOG & MEDIA
             items:
-              - custom_title: All posts
+              - custom_title: All blog posts
                 custom_internal_link: /posts/
               - custom_title: Community & Events
                 custom_internal_link: /posts/community-and-events
+                hide_from_footer: true
               - custom_title: Community Calls
                 custom_internal_link: /posts/community-calls
+                hide_from_footer: true
               - custom_title: Ecosystem
                 custom_internal_link: /posts/ecosystem
+                hide_from_footer: true
               - custom_title: Engineering
                 custom_internal_link: /posts/engineering
+                hide_from_footer: true
               - custom_title: Foundation
                 custom_internal_link: /posts/foundation
+                hide_from_footer: true
               - custom_title: Governance
                 custom_internal_link: /posts/governance
+                hide_from_footer: true
               - custom_title: Stark Math
                 custom_internal_link: /posts/stark-math
+                hide_from_footer: true
               - custom_title: Stark Struck
                 custom_internal_link: /posts/stark-struck
+                hide_from_footer: true
       - blocks:
           - title: OTHER
             items:
