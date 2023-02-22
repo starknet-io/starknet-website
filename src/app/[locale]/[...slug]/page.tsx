@@ -99,14 +99,6 @@ Props): JSX.Element {
                 lg: data.template === "content" ? "32px" : "136px",
               }}
             >
-              {/* {data.template === "content" ? (
-                <MainSearch2
-                  env={{
-                    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
-                    ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
-                  }}
-                />
-              ) : null} */}
               {data.blocks.map((block, i) => {
                 return <Block key={i} block={block} locale={locale} />;
               })}

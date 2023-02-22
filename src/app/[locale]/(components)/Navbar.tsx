@@ -11,7 +11,7 @@ import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { Flex } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
-import { MainSearch2 } from "./MainSearch2";
+import { MainSearch } from "./MainSearch";
 import { usePathname } from "next/navigation";
 import React, { Fragment } from "react";
 import { Box, ButtonGroup, IconButton } from "src/libs/chakra-ui";
@@ -20,6 +20,7 @@ import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 export interface Props {
   readonly mainMenu: MainMenu;
   readonly env: {
+    readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
@@ -34,7 +35,7 @@ export default function Navbar({ mainMenu, env }: Props) {
       <NavBar
         key={pathname}
         languageSwitcher={<LocaleSwitcher />}
-        search={<MainSearch2 env={env} />}
+        search={<MainSearch env={env} />}
         desktopNavItems={mainMenu.items.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown

@@ -36,6 +36,7 @@ export interface Props extends LocaleProps {
     readonly category?: string;
   };
   readonly env: {
+    readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
@@ -56,7 +57,10 @@ export function PostsPage({
 
   return (
     <Box pt="18" minH="100vh">
-      <InstantSearch searchClient={searchClient} indexName="web_posts_dev">
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={`web_posts_${env.ALGOLIA_INDEX}`}
+      >
         <Configure
           hitsPerPage={50}
           facetsRefinements={{
