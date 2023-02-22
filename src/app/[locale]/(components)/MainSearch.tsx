@@ -28,7 +28,7 @@ import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query
 import { Box } from "@chakra-ui/react";
 
 export function Autocomplete<TItem extends BaseItem>(
-  props: Partial<AutocompleteOptions<TItem>>,
+  props: Partial<AutocompleteOptions<TItem>>
 ) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const panelRootRef = useRef<Root>();
@@ -60,7 +60,7 @@ export function Autocomplete<TItem extends BaseItem>(
     };
   }, [props]);
 
-  return <div ref={containerRef} />;
+  return <div ref={containerRef} style={{ width: "200px", height: "44px" }} />;
 }
 
 export interface Props {
@@ -75,7 +75,7 @@ export function MainSearch({ env }: Props): JSX.Element | null {
   const data = useMemo(() => {
     const searchClient = algoliasearch(
       env.ALGOLIA_APP_ID,
-      env.ALGOLIA_SEARCH_API_KEY,
+      env.ALGOLIA_SEARCH_API_KEY
     );
 
     const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin({
@@ -470,7 +470,7 @@ export function RecentSearchesItem({
   onRemove: (itemId: string) => void;
 }) {
   const onSelectItem = (
-    e: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>,
+    e: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
     e.stopPropagation();
