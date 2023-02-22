@@ -33,13 +33,12 @@ export default function Navbar({ mainMenu, env }: Props) {
   return (
     <NavbarContainer>
       <NavBar
-        key={pathname}
         languageSwitcher={<LocaleSwitcher />}
         search={<MainSearch env={env} />}
         desktopNavItems={mainMenu.items.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
-              key={mainMenuItemIndex}
+              key={`${mainMenuItemIndex}-${pathname}}`}
               label={mainMenuItem.title}
             >
               <Flex
