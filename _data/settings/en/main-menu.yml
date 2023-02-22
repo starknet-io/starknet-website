@@ -72,9 +72,9 @@ items:
             items:
               - page: 9ef815e0-d670-404f-a97d-c5aebfe80a12
               - custom_title: Starknet EDU newsletter
-                custom_external_link: /some-link
+                custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet roundup newsletter
-                custom_external_link: /some-link
+                custom_external_link: https://swagtimus.substack.com/
           - title: SOCIAL
             items:
               - custom_title: youtube
