@@ -38,7 +38,7 @@ export default function Navbar({ mainMenu, env }: Props) {
         desktopNavItems={mainMenu.items.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
-              key={`${mainMenuItemIndex}-${pathname}}`}
+              key={`${mainMenuItemIndex}-${pathname}`}
               label={mainMenuItem.title}
             >
               <Flex
