@@ -40,7 +40,7 @@ blocks:
           start building.
         icon: /assets/local-environment.svg
         link:
-          custom_external_link: https://github.com/starknet-io/starknet-docs#building-and-previewing-content-locally
+          custom_external_link: https://docs.starknet.io/documentation/getting_started/setting_up_the_environment/
           custom_title: View
   - type: flex_layout
     heading_variant: md
