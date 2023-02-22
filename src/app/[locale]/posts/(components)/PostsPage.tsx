@@ -63,11 +63,14 @@ export function PostsPage({
       >
         <Configure
           hitsPerPage={50}
-          facetsRefinements={{
-            locale: [params.locale],
-            // topic: searchParams.get("topic")?.split(",") ?? [],
-            category: category != null ? [category.id] : [],
-          }}
+          facetsRefinements={useMemo(
+            () => ({
+              locale: [params.locale],
+              // topic: searchParams.get("topic")?.split(",") ?? [],
+              category: category != null ? [category.id] : [],
+            }),
+            [category, params.locale],
+          )}
         />
         <Container maxW="container.xl" mb={4}>
           <CustomCategories categories={categories} params={params} />
@@ -118,7 +121,8 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
 
   const { items, refine } = useRefinementList({
     attribute: "topic",
-    sortBy: ["name:asc"],
+    limit: 50,
+    sortBy: ["count:desc"],
   });
 
   return (
