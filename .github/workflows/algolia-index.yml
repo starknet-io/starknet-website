@@ -8,6 +8,8 @@ on:
       - "_data/jobs/**"
       - "_data/events/**"
       - "_data/tutorials/**"
+      - "workspaces/content-onedge/**"
+      - ".github/workflows/algolia-index.yml"
     branches:
       - dev
       - production
