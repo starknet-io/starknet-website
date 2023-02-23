@@ -2,6 +2,8 @@ import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { PostsPage } from "./(components)/PostsPage";
 
+export const dynamic = 'force-dynamic'
+
 export default async function Page(props: LocaleProps) {
   const categories = await getCategories(props.params.locale);
   const topics = await getTopics(props.params.locale);
