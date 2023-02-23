@@ -946,198 +946,6 @@ export const config: CmsConfig = {
         },
       ],
     },
-
-    {
-      label: "Dapps",
-      name: "dapps",
-      folder: `_data/dapps/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "name",
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-        },
-        {
-          label: "Image",
-          name: "image",
-          widget: "image",
-        },
-        {
-          label: "Twitter handle",
-          name: "twitter",
-        },
-        {
-          label: "Website url",
-          name: "website_url",
-        },
-        {
-          label: "Description",
-          name: "description",
-          widget: "string",
-        },
-      ],
-    },
-    {
-      label: "Wallets",
-      name: "wallets",
-      folder: `_data/wallets/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "name",
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-        },
-        {
-          label: "Type",
-          name: "type",
-          multiple: true,
-          widget: "select",
-          options: [
-            {
-              label: "Browser extension",
-              value: "browser_extension",
-            },
-            {
-              label: "iOS",
-              value: "ios",
-            },
-            {
-              label: "Android",
-              value: "android",
-            },
-          ],
-        },
-        {
-          label: "Image",
-          name: "image",
-          widget: "image",
-        },
-        {
-          label: "Twitter handle",
-          name: "twitter",
-        },
-        {
-          label: "Website url",
-          name: "website_url",
-        },
-        {
-          label: "Description",
-          name: "body",
-        },
-      ],
-    },
-    {
-      label: "Block explorers",
-      name: "block_explorers",
-      folder: `_data/block_explorers/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "name",
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-        },
-        {
-          label: "Website url",
-          name: "website_url",
-        },
-        {
-          label: "Image",
-          name: "image",
-          widget: "image",
-        },
-        {
-          label: "Company name",
-          name: "company_name",
-        },
-        {
-          label: "Twitter handle",
-          name: "twitter",
-        },
-        {
-          label: "Description",
-          name: "description",
-          widget: "string",
-        },
-      ],
-    },
-    {
-      label: "Bridges",
-      name: "bridges",
-      folder: `_data/bridges/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "name",
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-        },
-        {
-          label: "Website url",
-          name: "website_url",
-        },
-        {
-          label: "Image",
-          name: "image",
-          widget: "image",
-        },
-        {
-          label: "Company name",
-          name: "company_name",
-        },
-        {
-          label: "Twitter handle",
-          name: "twitter",
-        },
-        {
-          label: "Description",
-          name: "description",
-          widget: "string",
-        },
-      ],
-    },
-    {
-      label: "Fiat on-ramps",
-      name: "fiat-on-ramps",
-      folder: `_data/fiat-on-ramps/${locale}`,
-      create: true,
-      format: "yml",
-      identifier_field: "name",
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-        },
-        {
-          label: "Website url",
-          name: "website_url",
-        },
-        {
-          label: "Image",
-          name: "image",
-          widget: "image",
-        },
-        {
-          label: "Company name",
-          name: "company_name",
-        },
-        {
-          label: "Twitter handle",
-          name: "twitter",
-        },
-        {
-          label: "Description",
-          name: "description",
-          widget: "string",
-        },
-      ],
-    },
     {
       label: "Tutorials",
       name: "tutorials",
@@ -1256,6 +1064,217 @@ export const config: CmsConfig = {
       label: "Settings",
       name: "settings",
       files: [
+        {
+          label: "Dapps",
+          name: "dapps",
+          file: `_data/settings/${locale}/dapps.yml`,
+          fields: [
+            {
+              label: "Dapps",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                },
+                {
+                  label: "Twitter handle",
+                  name: "twitter",
+                },
+                {
+                  label: "Website url",
+                  name: "website_url",
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Wallets",
+          name: "wallets",
+          file: `_data/settings/${locale}/wallets.yml`,
+          fields: [
+            {
+              label: "Wallets",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  label: "Type",
+                  name: "type",
+                  multiple: true,
+                  widget: "select",
+                  options: [
+                    {
+                      label: "Browser extension",
+                      value: "browser_extension",
+                    },
+                    {
+                      label: "iOS",
+                      value: "ios",
+                    },
+                    {
+                      label: "Android",
+                      value: "android",
+                    },
+                  ],
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                },
+                {
+                  label: "Twitter handle",
+                  name: "twitter",
+                },
+                {
+                  label: "Website url",
+                  name: "website_url",
+                },
+                {
+                  label: "Description",
+                  name: "body",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Block explorers",
+          name: "block-explorers",
+          file: `_data/settings/${locale}/block-explorers.yml`,
+          fields: [
+            {
+              label: "Block explorers",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  label: "Website url",
+                  name: "website_url",
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                },
+                {
+                  label: "Company name",
+                  name: "company_name",
+                },
+                {
+                  label: "Twitter handle",
+                  name: "twitter",
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Bridges",
+          name: "bridges",
+          file: `_data/settings/${locale}/bridges.yml`,
+          fields: [
+            {
+              label: "Bridges",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  label: "Website url",
+                  name: "website_url",
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                },
+                {
+                  label: "Company name",
+                  name: "company_name",
+                },
+                {
+                  label: "Twitter handle",
+                  name: "twitter",
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Fiat on-ramps",
+          name: "fiat-on-ramps",
+          file: `_data/settings/${locale}/fiat-on-ramps.yml`,
+          fields: [
+            {
+              label: "Fiat on-ramps",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  label: "Website url",
+                  name: "website_url",
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                },
+                {
+                  label: "Company name",
+                  name: "company_name",
+                },
+                {
+                  label: "Twitter handle",
+                  name: "twitter",
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                },
+              ],
+            },
+          ],
+        },
         {
           label: "Main Menu",
           name: "main-menu",

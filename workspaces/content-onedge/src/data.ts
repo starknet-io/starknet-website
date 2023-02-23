@@ -30,14 +30,14 @@ export interface Post extends Meta {
 
 export async function fileToPost(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Post> {
   const resourceName = "posts";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename,
+    filename
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -45,7 +45,7 @@ export async function fileToPost(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const sourceFilepath =
@@ -90,14 +90,14 @@ export interface Page extends Meta {
 
 export async function fileToPage(
   locale: string,
-  filename: string,
+  filename: string
 ): Promise<Page> {
   const resourceName = "pages";
   const defaultLocaleFilepath = path.join(
     "_data",
     resourceName,
     defaultLocale,
-    filename,
+    filename
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
@@ -105,7 +105,7 @@ export async function fileToPage(
 
   const data = await getFirst(
     () => yaml(filepath),
-    () => defaultLocaleData,
+    () => defaultLocaleData
   );
 
   const sourceFilepath =
@@ -238,7 +238,7 @@ interface SimpleData<T> {
 }
 
 export async function getSimpleData<T = {}>(
-  resourceName: string,
+  resourceName: string
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
   const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
@@ -249,7 +249,7 @@ export async function getSimpleData<T = {}>(
         "_data",
         resourceName,
         defaultLocale,
-        filename,
+        filename
       );
       const filepath = path.join("_data", resourceName, locale.code, filename);
 
@@ -257,7 +257,7 @@ export async function getSimpleData<T = {}>(
 
       const data = await getFirst(
         () => yaml(filepath),
-        () => defaultLocaleData,
+        () => defaultLocaleData
       );
 
       const sourceFilepath =
@@ -276,6 +276,57 @@ export async function getSimpleData<T = {}>(
   }
 
   return { filenameMap, filenames, resourceName };
+}
+
+export interface ItemsFile<T> {
+  readonly items: readonly T[]
+}
+
+interface SimpleFiles<T> {
+  readonly localeMap: Map<string, T>;
+  readonly resourceName: string;
+}
+
+export async function getSimpleFiles<T = {}>(
+  resourceName: string
+): Promise<SimpleFiles<T & Meta>> {
+  const localeMap = new Map<string, T & Meta>();
+
+  for (const locale of locales) {
+    const defaultLocaleFilepath = path.join(
+      "_data",
+      "settings",
+      defaultLocale,
+      `${resourceName}.yml`
+    );
+    const filepath = path.join(
+      "_data",
+      "settings",
+      locale.code,
+      `${resourceName}.yml`
+    );
+
+    const defaultLocaleData = await yaml(defaultLocaleFilepath);
+
+    const data = await getFirst(
+      () => yaml(filepath),
+      () => defaultLocaleData
+    );
+
+    const sourceFilepath =
+      defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+
+
+
+    localeMap.set(locale.code, {
+      ...data,
+      locale: locale.code,
+      objectID: `${resourceName}:${locale.code}`,
+      sourceFilepath,
+    });
+  }
+
+  return { localeMap, resourceName };
 }
 
 export function updateBlocks(pages: PagesData, posts: PostsData) {
@@ -310,7 +361,7 @@ export function handleLink(
   locale: string,
   link: any,
   pages: PagesData,
-  posts: PostsData,
+  posts: PostsData
 ): any {
   const newLink = { ...link };
 

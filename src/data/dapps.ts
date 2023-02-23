@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getYAML } from "./utils";
+import { getFirst, getJSON } from "./utils";
 
 export interface Dapp {
   readonly name: string;
@@ -17,22 +17,6 @@ export async function getDapps(locale: string): Promise<readonly Dapp[]> {
     );
   } catch (cause) {
     throw new Error("getDapps failed!", {
-      cause,
-    });
-  }
-}
-
-export async function getDappByFilename(
-  filename: string,
-  locale: string,
-): Promise<Dapp> {
-  try {
-    return await getFirst(
-      () => getYAML(`dapps/${locale}/${filename}.yml`),
-      () => getYAML(`dapps/${defaultLocale}/${filename}.yml`),
-    );
-  } catch (cause) {
-    throw new Error(`Dapp not found! ${filename}`, {
       cause,
     });
   }

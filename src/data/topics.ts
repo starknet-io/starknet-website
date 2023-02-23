@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getYAML } from "./utils";
+import { getFirst, getJSON } from "./utils";
 
 export interface Topic {
   readonly id: string;
@@ -14,22 +14,6 @@ export async function getTopics(locale: string): Promise<readonly Topic[]> {
     );
   } catch (cause) {
     throw new Error("getTopics failed!", {
-      cause,
-    });
-  }
-}
-
-export async function getTopicByFilename(
-  filename: string,
-  locale: string,
-): Promise<Topic> {
-  try {
-    return await getFirst(
-      () => getYAML(`topics/${locale}/${filename}.yml`),
-      () => getYAML(`topics/${defaultLocale}/${filename}.yml`),
-    );
-  } catch (cause) {
-    throw new Error(`Topic not found! ${filename}`, {
       cause,
     });
   }

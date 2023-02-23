@@ -1,0 +1,13 @@
+items:
+  - name: Banxa
+    website_url: https://banxa.com/
+    image: /assets/banxa.jpg
+    company_name: Banxa
+    twitter: https://twitter.com/BanxaOfficial
+    description: Banxa is a fiat to crypto on and off-ramp.
+  - name: Ramp
+    website_url: https://ramp.network/
+    image: /assets/ramp.jpg
+    company_name: Ramp
+    twitter: https://twitter.com/RampNetwork
+    description: Non-custodial fiat to crypto on-ramp.

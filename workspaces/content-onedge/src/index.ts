@@ -10,6 +10,7 @@ import {
   getPages,
   getPosts,
   getSimpleData,
+  getSimpleFiles,
   handleLink,
   updateBlocks,
 } from "./data";
@@ -18,11 +19,6 @@ const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
   await getSimpleData("topics"),
-  await getSimpleData("dapps"),
-  await getSimpleData("wallets"),
-  await getSimpleData("block_explorers"),
-  await getSimpleData("bridges"),
-  await getSimpleData("fiat-on-ramps"),
 ];
 
 for (const simpleData of simpleDataTypes) {
@@ -43,6 +39,34 @@ for (const simpleData of simpleDataTypes) {
     }
   } catch (err) {
     console.log("simpleData.resourceName", simpleData.resourceName);
+    console.log(err);
+  }
+}
+
+const simpleFiles = [
+  await getSimpleFiles("dapps"),
+  await getSimpleFiles("wallets"),
+  await getSimpleFiles("block-explorers"),
+  await getSimpleFiles("bridges"),
+  await getSimpleFiles("fiat-on-ramps"),
+];
+
+for (const simpleFile of simpleFiles) {
+  try {
+    await fs.mkdir(`_data/_dynamic/${simpleFile.resourceName}`, {
+      recursive: true,
+    });
+
+    for (const locale of locales) {
+      const data = simpleFile.localeMap.get(locale.code)
+
+      await write(
+        `_data/_dynamic/${simpleFile.resourceName}/${locale.code}.json`,
+        data,
+      );
+    }
+  } catch (err) {
+    console.log("simpleFile.resourceName", simpleFile.resourceName);
     console.log(err);
   }
 }
