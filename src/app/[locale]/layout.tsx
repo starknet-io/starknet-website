@@ -9,6 +9,8 @@ import React from "react";
 import { i18nConfig } from "src/data/i18n/config";
 import { notFound } from "next/navigation";
 
+export const dynamic = 'force-dynamic'
+
 interface Props extends React.PropsWithChildren<LocaleProps> {}
 
 export default async function LocaleLayout({
