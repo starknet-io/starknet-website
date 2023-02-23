@@ -34,6 +34,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/discord",
+        destination: "https://discord.gg/qypnmzkhbc",
+        permanent: false,
+      },
+      {
         source: "/sequencer-api",
         destination: "/en/developers",
         permanent: false,
