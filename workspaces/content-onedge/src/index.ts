@@ -12,6 +12,7 @@ import {
   getSimpleData,
   getSimpleFiles,
   handleLink,
+  ItemsFile,
   updateBlocks,
 } from "./data";
 
@@ -58,11 +59,11 @@ for (const simpleFile of simpleFiles) {
     });
 
     for (const locale of locales) {
-      const data = simpleFile.localeMap.get(locale.code)
+      const data = simpleFile.localeMap.get(locale.code)!;
 
       await write(
         `_data/_dynamic/${simpleFile.resourceName}/${locale.code}.json`,
-        data,
+        data.items,
       );
     }
   } catch (err) {
