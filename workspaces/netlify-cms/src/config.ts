@@ -1065,6 +1065,56 @@ export const config: CmsConfig = {
       name: "settings",
       files: [
         {
+          label: "Main Menu",
+          name: "main-menu",
+          file: `_data/settings/${locale}/main-menu.yml`,
+          fields: [
+            {
+              label: "Top Level Menu Items",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  label: "Title",
+                  name: "title",
+                },
+                {
+                  label: "Columns",
+                  name: "columns",
+                  widget: "list",
+                  fields: [
+                    {
+                      label: "Blocks",
+                      name: "blocks",
+                      widget: "list",
+                      fields: [
+                        {
+                          label: "Title",
+                          name: "title",
+                          required: false,
+                        },
+                        {
+                          label: "Menu Items",
+                          name: "items",
+                          widget: "list",
+                          fields: [
+                            ...linkFields,
+                            {
+                              name: "hide_from_footer",
+                              widget: "boolean",
+                              required: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
           label: "Dapps",
           name: "dapps",
           file: `_data/settings/${locale}/dapps.yml`,
@@ -1272,86 +1322,6 @@ export const config: CmsConfig = {
                   widget: "string",
                 },
               ],
-            },
-          ],
-        },
-        {
-          label: "Main Menu",
-          name: "main-menu",
-          file: `_data/settings/${locale}/main-menu.yml`,
-          fields: [
-            {
-              label: "Top Level Menu Items",
-              name: "items",
-              widget: "list",
-              fields: [
-                {
-                  label: "Title",
-                  name: "title",
-                },
-                {
-                  label: "Columns",
-                  name: "columns",
-                  widget: "list",
-                  fields: [
-                    {
-                      label: "Blocks",
-                      name: "blocks",
-                      widget: "list",
-                      fields: [
-                        {
-                          label: "Title",
-                          name: "title",
-                          required: false,
-                        },
-                        {
-                          label: "Menu Items",
-                          name: "items",
-                          widget: "list",
-                          fields: [
-                            ...linkFields,
-                            {
-                              name: "hide_from_footer",
-                              widget: "boolean",
-                              required: false,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          label: "Events Page",
-          name: "events-page",
-          file: `_data/settings/${locale}/events-page.yml`,
-          fields: [
-            {
-              label: "Title",
-              name: "title",
-            },
-            {
-              label: "Description",
-              name: "description",
-            },
-          ],
-        },
-        {
-          label: "Tutorials Page",
-          name: "tutorials-page",
-          file: `_data/settings/${locale}/tutorials-page.yml`,
-          fields: [
-            {
-              label: "Title",
-              name: "title",
-            },
-            {
-              label: "Description",
-              name: "description",
             },
           ],
         },

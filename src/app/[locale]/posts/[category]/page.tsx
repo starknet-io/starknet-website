@@ -2,7 +2,7 @@ import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { PostsPage } from "../(components)/PostsPage";
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const params = [];

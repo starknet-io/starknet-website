@@ -18,7 +18,7 @@ import { TableOfContents } from "../(components)/TableOfContents";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const params = [];
