@@ -278,6 +278,55 @@ export async function getSimpleData<T = {}>(
   return { filenameMap, filenames, resourceName };
 }
 
+export interface ItemsFile<T = {}> {
+  readonly items: readonly T[];
+}
+
+interface SimpleFiles<T> {
+  readonly localeMap: Map<string, T>;
+  readonly resourceName: string;
+}
+
+export async function getSimpleFiles<T = ItemsFile>(
+  resourceName: string,
+): Promise<SimpleFiles<T & Meta>> {
+  const localeMap = new Map<string, T & Meta>();
+
+  for (const locale of locales) {
+    const defaultLocaleFilepath = path.join(
+      "_data",
+      "settings",
+      defaultLocale,
+      `${resourceName}.yml`,
+    );
+    const filepath = path.join(
+      "_data",
+      "settings",
+      locale.code,
+      `${resourceName}.yml`,
+    );
+
+    const defaultLocaleData = await yaml(defaultLocaleFilepath);
+
+    const data = await getFirst(
+      () => yaml(filepath),
+      () => defaultLocaleData,
+    );
+
+    const sourceFilepath =
+      defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+
+    localeMap.set(locale.code, {
+      ...data,
+      locale: locale.code,
+      objectID: `${resourceName}:${locale.code}`,
+      sourceFilepath,
+    });
+  }
+
+  return { localeMap, resourceName };
+}
+
 export function updateBlocks(pages: PagesData, posts: PostsData) {
   const resources = [pages, posts] as const;
 

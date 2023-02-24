@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getYAML } from "./utils";
+import { getFirst, getJSON } from "./utils";
 
 export interface Wallet {
   readonly name: string;
@@ -18,22 +18,6 @@ export async function getWallets(locale: string): Promise<readonly Wallet[]> {
     );
   } catch (cause) {
     throw new Error("getWallets failed!", {
-      cause,
-    });
-  }
-}
-
-export async function getWalletByFilename(
-  filename: string,
-  locale: string,
-): Promise<Wallet> {
-  try {
-    return await getFirst(
-      () => getYAML(`wallets/${locale}/${filename}.yml`),
-      () => getYAML(`wallets/${defaultLocale}/${filename}.yml`),
-    );
-  } catch (cause) {
-    throw new Error(`Wallet not found! ${filename}`, {
       cause,
     });
   }

@@ -69,7 +69,7 @@ export function PostsPage({
               // topic: searchParams.get("topic")?.split(",") ?? [],
               category: category != null ? [category.id] : [],
             }),
-            [category, params.locale]
+            [category, params.locale],
           )}
         />
         <Container maxW="container.xl" mb={4}>

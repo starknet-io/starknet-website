@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getYAML } from "./utils";
+import { getFirst, getJSON } from "./utils";
 
 export interface Event {
   readonly name: string;
@@ -23,22 +23,6 @@ export async function getEvents(locale: string): Promise<readonly Event[]> {
     );
   } catch (cause) {
     throw new Error("getEvents failed!", {
-      cause,
-    });
-  }
-}
-
-export async function getEventByFilename(
-  filename: string,
-  locale: string,
-): Promise<Event> {
-  try {
-    return await getFirst(
-      () => getYAML(`events/${locale}/${filename}.yml`),
-      () => getYAML(`events/${defaultLocale}/${filename}.yml`),
-    );
-  } catch (cause) {
-    throw new Error(`Event not found! ${filename}`, {
       cause,
     });
   }
