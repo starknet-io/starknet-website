@@ -26,3 +26,10 @@ blocks:
         label: "Community forum "
         sub_label: Share, discuss and collaborate on initiatives.
         href: https://community.starknet.io/
+  - type: link_list
+    heading: Telegram groups
+    blocks:
+      - is_external: true
+        label: Starknet Version Updates
+        sub_label: https://t.me/+EkT8aCg9R-xjZGU0
+        href: Get notified on Starknet version releases (aimed at core developers)
