@@ -31,5 +31,5 @@ blocks:
     blocks:
       - is_external: true
         label: Starknet Version Updates
-        sub_label: Get notified on Starknet version releases (aimed at core developers)
+        sub_label: Get notified on technical updates to Starknet
         href: https://t.me/+EkT8aCg9R-xjZGU0
