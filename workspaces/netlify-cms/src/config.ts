@@ -10,7 +10,7 @@ const locale = "en";
 const branch =
   location.pathname === "/" ? "dev" : location.pathname.replace(/^\//, "");
 
-console.log(branch);
+console.log("branch", branch);
 
 const linkFields: CmsField[] = [
   {
