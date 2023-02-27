@@ -1,7 +1,5 @@
 import { AutoProps, JobsPage } from "./(components)/JobsPage";
 
-export const dynamic = "force-dynamic";
-
 export default function Page(props: AutoProps) {
   return (
     <>

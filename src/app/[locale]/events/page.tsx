@@ -1,7 +1,5 @@
 import { AutoProps, EventsPage } from "./(components)/EventsPage";
 
-export const dynamic = "force-dynamic";
-
 export default function Page(props: AutoProps) {
   return (
     <>

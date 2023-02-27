@@ -1,7 +1,5 @@
 import React from "react";
 
-export const dynamic = "force-dynamic";
-
 interface Props extends React.PropsWithChildren {}
 
 export default async function RootLayout({

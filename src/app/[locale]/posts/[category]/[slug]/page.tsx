@@ -25,8 +25,6 @@ import * as path from "node:path";
 import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 
-export const dynamic = "force-dynamic";
-
 export async function generateStaticParams() {
   const params = [];
 
