@@ -1,6 +1,8 @@
 import { AutoProps, EventsPage } from "./(components)/EventsPage";
 
-export const dynamic = "force-dynamic";
+export const metadata = {
+  title: "Events",
+};
 
 export default function Page(props: AutoProps) {
   return (

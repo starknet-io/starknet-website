@@ -1,6 +1,8 @@
 import { AutoProps, JobsPage } from "./(components)/JobsPage";
 
-export const dynamic = "force-dynamic";
+export const metadata = {
+  title: "Jobs",
+};
 
 export default function Page(props: AutoProps) {
   return (

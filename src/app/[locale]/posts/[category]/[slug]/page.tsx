@@ -24,8 +24,19 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
+import { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  try {
+    const post = await getPostBySlug(props.params.slug, props.params.locale);
+
+    return {
+      title: post.title,
+    };
+  } catch {
+    return {};
+  }
+}
 
 export async function generateStaticParams() {
   const params = [];
