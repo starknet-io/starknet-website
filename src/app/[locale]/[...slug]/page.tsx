@@ -17,8 +17,22 @@ import { unified } from "unified";
 import { TableOfContents } from "../(components)/TableOfContents";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
+import { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  try {
+    const data = await getPageBySlug(
+      props.params.slug.join("/"),
+      props.params.locale,
+    );
+
+    return {
+      title: data.title,
+    };
+  } catch {
+    return {};
+  }
+}
 
 export async function generateStaticParams() {
   const params = [];

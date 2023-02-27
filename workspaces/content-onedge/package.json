@@ -10,8 +10,8 @@
   "dependencies": {
     "algoliasearch": "^4.14.3",
     "dotenv": "^16.0.3",
-    "simple-git": "^3.16.0",
-    "vite-node": "^0.28.4",
+    "simple-git": "^3.16.1",
+    "vite-node": "^0.29.1",
     "yaml": "^2.2.1"
   }
 }
