@@ -1,5 +1,9 @@
 import { TutorialsPage, Props } from "./(components)/TutorialsPage";
 
+export const metadata = {
+  title: "Tutorials",
+};
+
 export default function Page(props: Omit<Props, "env">) {
   return (
     <>

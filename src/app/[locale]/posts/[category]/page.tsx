@@ -1,6 +1,23 @@
+import { Metadata } from "next";
 import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { PostsPage } from "../(components)/PostsPage";
+
+export interface Props extends LocaleProps {
+  readonly params: LocaleParams & {
+    readonly category?: string;
+  };
+}
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const categories = await getCategories(props.params.locale);
+
+  const category = categories.find((c) => c.id === props.params.category);
+
+  return {
+    title: category?.name,
+  };
+}
 
 export async function generateStaticParams() {
   const params = [];
@@ -19,7 +36,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Page(props: LocaleProps) {
+export default async function Page(props: Props) {
   const categories = await getCategories(props.params.locale);
   const topics = await getTopics(props.params.locale);
 
