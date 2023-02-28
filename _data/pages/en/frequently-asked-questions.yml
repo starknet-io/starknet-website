@@ -128,8 +128,7 @@ blocks:
           4. **Users** – Users will be able to send transactions permissionlessly. As the system will be decentralized, the possibility of censorship will be eliminated.
       - label: What types of dApps can be deployed on Starknet?
         body: Any dApp can be deployed on Starknet. As Cairo allows general computation,
-          this means that any business logic can be implemented and processed
-          over StarkNet.
+          any business logic can be implemented and processed over StarkNet.
       - label: Who can deploy a smart contract on Starknet?
         body: >-
           Anyone can interact with Starknet and deploy contracts.
@@ -157,3 +156,18 @@ blocks:
 
 
           Starknet does not natively support EVM.
+  - type: accordion
+    heading: Starknet and StarkEx
+    blocks:
+      - label: What is the difference between StarkEx and Starknet?
+        body: >-
+          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges
+          that uses the STARK proof system in order to provide massive scaling.
+          Several significant exchanges are already using StarkEx in production
+          on Ethereum Mainnet (read more about StarkEx).
+
+
+          **Starknet** is a general-purpose network where you can write and deploy your own smart contracts, interact with other contracts, and so on, just like Ethereum.
+      - label: What will happen to StarkEx dapps? Will they migrate to Starknet?
+        body: Once Starknet is ready, StarkEx apps may migrate to Starknet if they
+          choose.
