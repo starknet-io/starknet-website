@@ -1,6 +1,6 @@
+<div align="center" style="margin-top: 2em; margin-bottom: 3em;">
+  <h1>Welcome to starknet.io!</h1>
+</div>
 
-<h1 align="center">
-  New Starknet.io website. Currently in development
-</h1>
-
+This is the repo for the [starknet.io](https://starknet.io) website.
 

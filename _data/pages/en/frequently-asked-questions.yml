@@ -110,3 +110,64 @@ blocks:
 
 
           Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
+  - type: accordion
+    heading: Operating on starknet
+    blocks:
+      - label: Who will be able to participate in Starknet?
+        body: >-
+          Starknet is evolving to become fully permissionless, allowing anyone
+          to operate on the network:
+
+
+          1. **Sequencers**  – Anyone will be able to operate a sequencer, i.e., batch transactions and propose new blocks (somewhat analogous to Ethereum miners, without the Proof of Work part).
+
+          2. **Provers** – Anyone will be able to set up a prover and create proofs for the validity of new blocks.
+
+          3. **Developers** – Developers will be able to deploy their smart contracts – permissionlessly.
+
+          4. **Users** – Users will be able to send transactions permissionlessly. As the system will be decentralized, the possibility of censorship will be eliminated.
+      - label: What types of dApps can be deployed on Starknet?
+        body: Any dApp can be deployed on Starknet. As Cairo allows general computation,
+          any business logic can be implemented and processed over StarkNet.
+      - label: Who can deploy a smart contract on Starknet?
+        body: >-
+          Anyone can interact with Starknet and deploy contracts.
+
+
+          During the Alpha phase, developers need to make sure they are aware of the network status as part of the onboarding process.
+      - label: What will decentralization on Starknet look like?
+        body: >-
+          The decentralization of the network has two aspects:
+
+
+          1. The permissionless layer of Sequencers and Provers ensures that the network will be censorship-resistant.
+
+          2. The usage of STARK-proofs ensures that the state is correct, allows everyone to verify the entire Starknet chain with low hardware requirements – regardless of the network’s throughput, and without trusting any external entity.
+      - label: Can I run a Starknet full node?
+        body: >-
+          Yes!
+
+
+          You can take a look at [this tutorial](https://github.com/eqlabs/pathfinder/#readme).
+      - label: Does Starknet support EVM?
+        body: >-
+          The Warp team at Nethermind is developing a Solidity to Cairo
+          transpiler: [Warp](https://github.com/NethermindEth/warp).
+
+
+          Starknet does not natively support EVM.
+  - type: accordion
+    heading: Starknet and StarkEx
+    blocks:
+      - label: What is the difference between StarkEx and Starknet?
+        body: >-
+          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges
+          that uses the STARK proof system in order to provide massive scaling.
+          Several significant exchanges are already using StarkEx in production
+          on Ethereum Mainnet (read more about StarkEx).
+
+
+          **Starknet** is a general-purpose network where you can write and deploy your own smart contracts, interact with other contracts, and so on, just like Ethereum.
+      - label: What will happen to StarkEx dapps? Will they migrate to Starknet?
+        body: Once Starknet is ready, StarkEx apps may migrate to Starknet if they
+          choose.
