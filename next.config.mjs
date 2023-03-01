@@ -144,6 +144,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/docs/sharp.html",
+        destination: "https://www.cairo-lang.org/docs/sharp.html",
+        permanent: false,
+      },
+      {
         source: "/media-kit",
         destination: "/en",
         permanent: false,
