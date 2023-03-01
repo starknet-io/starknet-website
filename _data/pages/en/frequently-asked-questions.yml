@@ -228,3 +228,33 @@ blocks:
         body: No. The circulating supply of tokens will increase over time with the
           minting of new tokens by the protocol. Details on the minting rate and
           mechanism are yet to be defined.
+  - type: accordion
+    heading: Starknet Foundation
+    blocks:
+      - label: What is the Starknet Foundation?
+        body: >-
+          Starknet is a permissionless, decentralized Layer 2 (L2) Validity
+          Rollup intended to scale Ethereum while retaining Ethereum’s security
+          and decentralization. In keeping with that mission, the Foundation was
+          established as an independent entity to advance the shared technology
+          that is Starknet. Additionally, as a not-for-profit entity with a
+          narrow mission: to advance Starknet as a public good for all, and
+          maintain it as such for years to come.
+
+
+          The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of Starknet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+
+
+          For more information on the Foundation’s mission, first steps, and board, see the Foundation’s [“Hello World” post](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) and [StarkWare’s complementary post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).
+  - type: accordion
+    heading: General information
+    blocks:
+      - label: I want to get involved in the Starknet community. How do I do that?
+        body: If you are excited about StarkNet and its decentralization and wish to
+          participate in the process, please join the builders on StarkNet
+          [Discord](https://starknet.io/discord) and [Starknet community
+          forum](https://community.starknet.io/)
+      - label: I came across a fraud attempt. How can I warn others against it?
+        body: You can report scams and check for other reports of scams in the
+          [scam-report](https://discord.gg/qypnmzkhbc) channel on the [Starknet
+          Discord](https://starknet.io/discord) server.
