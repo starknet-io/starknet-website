@@ -1,21 +1,21 @@
-name: Create production promotion pull request
-on:
-  push:
-    branches:
-      - dev
-jobs:
-  productionPromotion:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: production
-      - name: Reset promotion branch
-        run: |
-          git fetch origin dev:dev
-          git reset --hard dev
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: production-promotion
-          token: ${{ secrets.GITHUB_TOKEN }}
+# name: Create production promotion pull request
+# on:
+#   push:
+#     branches:
+#       - dev
+# jobs:
+#   productionPromotion:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: production
+#       - name: Reset promotion branch
+#         run: |
+#           git fetch origin dev:dev
+#           git reset --hard dev
+#       - name: Create Pull Request
+#         uses: peter-evans/create-pull-request@v4
+#         with:
+#           branch: production-promotion
+#           token: ${{ secrets.GITHUB_TOKEN }}
