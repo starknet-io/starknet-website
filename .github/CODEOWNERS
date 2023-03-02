@@ -1,0 +1,4 @@
+# All files not matched by other patterns
+*       @thecotne @robwalsh21
+# All CMS content files
+/_data/ @thorville

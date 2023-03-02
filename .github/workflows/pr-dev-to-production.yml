@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        pr_title: "Merge dev into production"
+        pr_allow_empty: false
+        pr_label: "auto-pr"
+        destination_branch: "production"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
