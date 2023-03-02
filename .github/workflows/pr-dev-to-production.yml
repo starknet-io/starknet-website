@@ -11,5 +11,7 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
+        pr_title: "Merge dev into production"
+        pr_allow_empty: false
         destination_branch: "production"
         github_token: ${{ secrets.GITHUB_TOKEN }}
