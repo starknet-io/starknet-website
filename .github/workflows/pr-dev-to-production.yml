@@ -13,5 +13,6 @@ jobs:
       with:
         pr_title: "Merge dev into production"
         pr_allow_empty: false
+        pr_label: "auto-pr"
         destination_branch: "production"
         github_token: ${{ secrets.GITHUB_TOKEN }}
