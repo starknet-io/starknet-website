@@ -1,0 +1,13 @@
+type: conference
+name: Hacksummit
+description: A Virtual Conference for Blockchain Developers Featuring the
+  pioneers in our industry and supporting good causes.
+url: http://2023.hacksummit.org/
+start_date: 2023-03-31T09:27:04.521Z
+end_date: 2023-04-02T09:27:04.535Z
+image: /assets/hacksummit.jpg
+location: online_remote
+tags:
+  - crypto
+  - blockchain
+  - starknet
