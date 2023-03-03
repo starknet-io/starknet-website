@@ -69,7 +69,7 @@ blocks:
           commitment to the L2 state. The contract also stores the Starknet OS
           program hash – effectively defining the version of Starknet the
           network is running. The committed state on the L1 core contract acts
-          as provides as the consensus mechanism of Starknet, i.e., the system
+          as the consensus mechanism of Starknet, i.e., the system
           is secured by the L1 Ethereum consensus. In addition to maintaining
           the state, the Starknet L1 Core Contract is the main hub of operations
           for Starknet on L1. Specifically:
