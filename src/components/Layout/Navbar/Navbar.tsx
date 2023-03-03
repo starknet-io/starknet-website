@@ -16,6 +16,7 @@ import * as React from "react";
 import { HiGlobeAlt, HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import { Button } from "../../Button";
 import { NavLayout } from "./NavLayout";
+import { usePathname } from "next/navigation";
 
 type Props = {
   desktopNavItems?: React.ReactNode;
@@ -34,6 +35,11 @@ export const NavBar = ({
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const { colorMode, toggleColorMode } = useColorMode();
   const isMobile = useBreakpointValue({ base: true, lg: false });
+  const pathname = usePathname();
+
+  React.useEffect(() => {
+    onClose();
+  }, [onClose, pathname]);
 
   return (
     <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
