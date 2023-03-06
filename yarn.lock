@@ -29724,6 +29724,7 @@ __metadata:
     simple-oauth2: ^5.0.0
     start-server-and-test: ^2.0.0
     storybook: ^7.0.0-beta.64
+    storybook-addon-dark-mode-toggle: ^0.0.6
     typescript: ^4.9.5
     unified: ^10.1.2
     unist-util-index: ^3.0.2
@@ -31048,6 +31049,26 @@ __metadata:
   version: 2.14.2
   resolution: "store2@npm:2.14.2"
   checksum: 6f270fc5bab99b63f45fcc7bd8b99c2714b4adf880f557ed7ffb5ed3987131251165bccde425a00928aaf044870aee79ddeef548576d093c68703ed2edec45d7
+  languageName: node
+  linkType: hard
+
+"storybook-addon-dark-mode-toggle@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "storybook-addon-dark-mode-toggle@npm:0.0.6"
+  peerDependencies:
+    "@storybook/addons": ^6.5.14
+    "@storybook/api": ^6.5.14
+    "@storybook/components": ^6.5.14
+    "@storybook/core-events": ^6.5.14
+    "@storybook/theming": ^6.5.14
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 369524e0c1295463d6f86cf9e877153629e61064ca966a5ed35495cce58b6e50070812ce39f4159760b564b577b75fa8720c0caff3f6b6409fc0091aea7dc4c6
   languageName: node
   linkType: hard
 

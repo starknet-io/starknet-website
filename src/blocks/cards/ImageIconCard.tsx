@@ -115,10 +115,10 @@ export const ImageIconCard = ({
           <Box>
             <CardBody padding="40px 40px 16px 32px ">
               <Stack mt="6" spacing="3">
-                <Heading as="h3" variant="h3" lineHeight="1.3em">
+                <Heading variant="h3" lineHeight="1.3em">
                   {title}
                 </Heading>
-                <Text variant="baseRegular">{description}</Text>
+                <Text variant="cardBody">{description}</Text>
               </Stack>
             </CardBody>
 

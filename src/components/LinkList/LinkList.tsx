@@ -30,8 +30,8 @@ const Root = (props: RootProps) => {
         <Heading
           variant="h3"
           color="heading-navy-fg"
-          as="h2"
           id={`toc-${slugify(props.heading)}`}
+          marginBottom="24px"
         >
           {props.heading}
         </Heading>
@@ -109,7 +109,6 @@ const Item = ({
             <Text
               display={{ base: "none", md: "flex" }}
               color="fg-default"
-              fontWeight="normal"
             >
               •
             </Text>
@@ -118,7 +117,6 @@ const Item = ({
               pl={{ base: "32px", md: "0px" }}
               noOfLines={1}
               color="fg-default"
-              fontWeight="normal"
             >
               {subLabel}
             </Text>

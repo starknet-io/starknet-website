@@ -7,7 +7,6 @@ import {
   ListItem,
   Img,
   Box,
-  Spacer,
   Link,
 } from "src/libs/chakra-ui";
 import { slugify } from "src/utils/utils";
@@ -30,9 +29,9 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
               /> */}
               <Heading
                 id={`toc-${slugify(props.children.join(" "))}`}
-                as="h2"
                 color="heading-navy-fg"
                 variant="h3"
+                marginBottom="24px"
                 {...props}
               />
             </>
@@ -45,29 +44,28 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
               /> */}
               <Heading
                 color="heading-navy-fg"
+                marginBottom="24px"
                 id={`toc-${slugify(props.children.join(" "))}`}
-                pb={4}
-                as="h3"
                 variant="h3"
                 {...props}
               />
             </>
           ),
           h4: (props) => (
-            <Heading color="heading-navy-fg" as="h4" variant="h4" {...props} />
+            <Heading color="heading-navy-fg" variant="h4" {...props} />
           ),
           h5: (props) => (
-            <Heading color="heading-navy-fg" as="h5" variant="h4" {...props} />
+            <Heading color="heading-navy-fg" variant="h4" {...props} />
           ),
           h6: (props) => (
-            <Heading color="heading-navy-fg" as="h6" variant="h6" {...props} />
+            <Heading color="heading-navy-fg" variant="h6" {...props} />
           ),
           p: (props) => (
             <Text
               pt={2}
               pb={4}
               lineHeight="32px"
-              variant="baseRegular"
+              variant="body"
               {...props}
             />
           ),

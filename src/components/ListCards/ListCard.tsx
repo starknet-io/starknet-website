@@ -13,6 +13,7 @@ import {
   Img,
   LinkBox,
 } from "src/libs/chakra-ui";
+import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink, { LinkProps } from "next/link";
 import * as React from "react";
@@ -101,14 +102,12 @@ export const ListCard = (props: Props) => {
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
                 >
-                  <Text
-                    as="h2"
-                    fontWeight="bold"
-                    fontSize="18px"
+                  <Heading
+                    variant="h4"
                     color="list-card-lg-title-fg"
                   >
                     {props.title}
-                  </Text>
+                  </Heading>
                   <HStack fontSize={{ base: "md", md: "xl" }}>
                     {/* <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" /> */}
                     <Icon as={HiArrowUpRight} color="list-card-lg-title-fg" />

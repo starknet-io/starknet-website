@@ -10,12 +10,12 @@ type Props = {
   lg?: number;
   xl?: number;
   heading?: string;
-  headingVariant?: "sm" | "md" | "lg";
+  headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
 export const BlockCards = ({
   heading,
-  headingVariant = "sm",
+  headingVariant = "h3",
   children,
   base = 2,
   md = 2,
@@ -23,23 +23,24 @@ export const BlockCards = ({
   xl,
 }: Props) => {
   let styles = {};
+
   const renderHeadingVariant = () => {
     switch (headingVariant) {
-      case "sm":
+      case "h4":
         return (styles = { fontWeight: "extrabold" });
 
-      case "md":
+      case "h3":
         return (styles = {
           fontWeight: "extrabold",
           fontSize: "32px",
-          marginBottom: "24px",
+          marginBottom: "24px"
         });
 
-      case "lg":
+      case "h2":
         return (styles = {
           fontWeight: "extrabold",
           fontSize: "48px",
-          marginBottom: "48px",
+          marginBottom: "48px"
         });
 
       default:
@@ -50,7 +51,6 @@ export const BlockCards = ({
     <Box>
       {heading && (
         <Heading
-          as="h3"
           variant="h3"
           color="heading-navy-fg"
           sx={renderHeadingVariant()}

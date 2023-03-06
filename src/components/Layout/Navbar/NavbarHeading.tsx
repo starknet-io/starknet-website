@@ -14,7 +14,6 @@ export const NavbarHeading = ({
 }: Props) => {
   return (
     <Heading
-      as="h6"
       variant="h6"
       textTransform={tt}
       color="heading-navy-fg"

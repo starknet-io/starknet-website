@@ -90,7 +90,6 @@ export const LargeCard = ({
                         <Heading
                           marginTop={{ base: "32px", md: "0" }}
                           color="heading-navy-fg"
-                          as="h2"
                           variant="h2"
                           lineHeight={useBreakpointValue({
                             base: "1.2em",
