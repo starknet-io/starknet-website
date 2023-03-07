@@ -46,7 +46,7 @@ export default async function LocaleLayout({
   return (
     <ThemeProvider>
       <ClientLocaleProvider value={{ locale, messages }}>
-        {/* <PageContainer>
+        <PageContainer>
           <Navbar
             mainMenu={mainMenu}
             env={{
@@ -54,10 +54,10 @@ export default async function LocaleLayout({
               ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
               ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
             }}
-          /> */}
-        {children}
-        {/* </PageContainer>
-        <Footer mainMenu={mainMenu} /> */}
+          />
+          {children}
+        </PageContainer>
+        <Footer mainMenu={mainMenu} />
       </ClientLocaleProvider>
     </ThemeProvider>
   );
