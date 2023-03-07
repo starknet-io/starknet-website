@@ -952,7 +952,7 @@ export const config: CmsConfig = {
       folder: `_data/tutorials/${locale}`,
       create: true,
       format: "yml",
-      identifier_field: "id",
+      identifier_field: "title",
       fields: [
         {
           label: "ID",
