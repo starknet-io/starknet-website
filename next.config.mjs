@@ -175,11 +175,6 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/governance",
-        destination: "/en/learn/governance",
-        permanent: false,
-      },
-      {
         source: "/governance/starknet-governance-posts",
         destination: "/en/posts/governance",
         permanent: false,
