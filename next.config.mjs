@@ -269,6 +269,16 @@ const nextConfig = {
         destination: "/en",
         permanent: false,
       },
+      {
+        source: "/delegate",
+        destination: "https://starknet.karmahq.xyz",
+        permanent: false,
+      },
+      {
+        source: "/governance",
+        destination: "https://starknet.karmahq.xyz",
+        permanent: false,
+      },
     ];
   },
   webpack(config, _context) {

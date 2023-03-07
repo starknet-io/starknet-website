@@ -953,6 +953,7 @@ export const config: CmsConfig = {
       create: true,
       format: "yml",
       identifier_field: "id",
+      summary: "{{title}}",
       fields: [
         {
           label: "ID",
