@@ -9,7 +9,7 @@ export default function RootLayout({ children }: Props): JSX.Element {
       <body>{children}</body>
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-7Z0075QZ3C"
+        src="https://www.googletagmanager.com/gtag/js?id=G-WY42TERK5P"
         strategy="afterInteractive"
       />
       <Script
