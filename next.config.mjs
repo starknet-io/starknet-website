@@ -175,11 +175,6 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/governance",
-        destination: "/en/learn/governance",
-        permanent: false,
-      },
-      {
         source: "/governance/starknet-governance-posts",
         destination: "/en/posts/governance",
         permanent: false,
@@ -267,6 +262,16 @@ const nextConfig = {
       {
         source: "/author/marketing",
         destination: "/en",
+        permanent: false,
+      },
+      {
+        source: "/delegate",
+        destination: "https://starknet.karmahq.xyz",
+        permanent: false,
+      },
+      {
+        source: "/governance",
+        destination: "https://starknet.karmahq.xyz",
         permanent: false,
       },
     ];
