@@ -1,13 +1,12 @@
 items:
   - name: Starknet-ecosystem
     image: /assets/sn-ecosystem.jpg
-    twitter: StarkNetEco
+    twitter: https://twitter.com/StarkNetEco
     website_url: https://www.starknet-ecosystem.com/
-    description:
-      Immerse yourself in the StarkNet Ecosystem by discovering projects,
+    description: Immerse yourself in the StarkNet Ecosystem by discovering projects,
       jobs, metrics and learning resources.
   - name: Dappland
     image: /assets/dappland.jpg
-    twitter: "@argentHQ"
+    twitter: https://twitter.com/argentHQ
     website_url: https://www.dappland.com/
     description: Discover and rate the best apps on Starknet.
