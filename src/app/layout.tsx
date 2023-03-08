@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Props): JSX.Element {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-7Z0075QZ3C');
+            gtag('config', 'G-WY42TERK5P');
           `,
         }}
       />
