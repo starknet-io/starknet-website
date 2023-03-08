@@ -18,8 +18,8 @@ node_modules
 /out/
 
 # cypress
-cypress/e2e/1-getting-started/cypress/
-cypress/e2e/2-advanced-examples/cypress/
+/cypress/e2e/1-getting-started/cypress/
+/cypress/e2e/2-advanced-examples/cypress/
 
 # production
 /build
