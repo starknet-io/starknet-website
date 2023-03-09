@@ -24,14 +24,22 @@ export function ChaptersMenu(props: MenuTopProps) {
         pos: "absolute",
         left: 0,
         right: 0,
-        zIndex: 10,
+        zIndex: 5,
         opacity: isControlActive ? 1 : 0,
         transition: "opacity",
         transitionDuration: "0.5s",
         transitionTimingFunction: "ease-in-out",
+        w: "100%",
       }}
     >
-      <Box as="ul" display="flex">
+      <Box
+        as="ul"
+        sx={{
+          display: "flex",
+          padding: 0,
+          margin: 0,
+        }}
+      >
         {chapters.map((chapter) => {
           const isActive = currentChapter === chapter.id;
 
@@ -51,9 +59,10 @@ export function ChaptersMenu(props: MenuTopProps) {
                 py: 2,
                 backdropBlur: "sm",
                 bg: isActive ? "cyan.300" : "rgba(255,255,255, 0.6)",
-                color: "#000",
+                color: "#fff",
                 fontSize: "sm",
                 border: "1px solid gray",
+                cursor: "pointer",
               }}
             >
               <ChapterIcon />

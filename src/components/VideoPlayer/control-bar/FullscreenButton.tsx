@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 import { preventVideoJSHotKeys } from "./utils";
 
@@ -11,7 +12,16 @@ export const FullscreenButton = ({
   toggleFullscreen,
 }: FullscreenButtonProps) => {
   return (
-    <button onClick={toggleFullscreen} onKeyDown={preventVideoJSHotKeys}>
+    <Button
+      onClick={toggleFullscreen}
+      onKeyDown={preventVideoJSHotKeys}
+      sx={{
+        zIndex: 5,
+        bg: "transparent",
+        border: "none",
+        cursor: "pointer",
+      }}
+    >
       {isFullscreen ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +51,6 @@ export const FullscreenButton = ({
           />
         </svg>
       )}
-    </button>
+    </Button>
   );
 };

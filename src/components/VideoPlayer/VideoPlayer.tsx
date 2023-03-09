@@ -50,16 +50,19 @@ type VideoPlayerProps = {
   chapters: { id: string; title: string }[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
+  embeddable?: boolean;
 };
 export function VideoPlayer({
   chapters,
   initialActiveChapter,
   onChapterChange,
+  embeddable,
 }: VideoPlayerProps) {
   const playerRef = React.useRef(null);
   const [bufferPercent, setBufferPercent] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
-  const positionStyle = usePlayerPositionStyle();
+  const embedPositionStyle = usePlayerPositionStyle();
+  const positionStyle = embeddable ? embedPositionStyle : { width: "100%" };
 
   const {
     ref: containerRef,
@@ -147,7 +150,7 @@ export function VideoPlayer({
   return (
     <>
       <VideoMeta path="/custom-control" />
-      <Box position="absolute" inset={0} ref={containerRef}>
+      <Box position="absolute" inset={0} ref={containerRef} bg="#000" w="full">
         <ChaptersMenu
           currentChapter={currentChapter}
           setCurrentChapter={(ch) => goToChapter(ch)}
@@ -172,7 +175,7 @@ export function VideoPlayer({
             bottom: 0,
             left: 0,
             zIndex: 10,
-            w: "full",
+            width: "100%",
             display: "flex",
             flexDir: "column",
             transition: "opacity",

@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 import { SeekStatuses } from "../hooks/useSeek";
 import { preventVideoJSHotKeys } from "./utils";
@@ -9,7 +10,17 @@ export type PlayButtonProps = {
 
 export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
   return (
-    <button onClick={handlePlay} onKeyDown={preventVideoJSHotKeys}>
+    <Button
+      onClick={handlePlay}
+      onKeyDown={preventVideoJSHotKeys}
+      variant="ghost"
+      sx={{
+        zIndex: 5,
+        bg: "transparent",
+        border: "none",
+        cursor: "pointer",
+      }}
+    >
       {playingStatus === "ended" && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +71,6 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
           />
         </svg>
       )}
-    </button>
+    </Button>
   );
 };
