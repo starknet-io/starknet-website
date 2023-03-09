@@ -1,17 +1,20 @@
 items:
-  - name: StarkGate
+  - 
+    name: StarkGate
     website_url: https://starkgate.starknet.io/
     image: /assets/starkgate.jpg
     company_name: StarkWare
     twitter: https://twitter.com/StarkWareLtd
     description: StarkGate is the official bridge between Starknet and Ethereum.
-  - name: Layerswap
+  - 
+    name: Layerswap
     website_url: https://www.layerswap.io/
     image: /assets/layerswap.jpg
     company_name: Layerswap
     twitter: https://twitter.com/layerswap
     description: Layerswap allows users to move crypto between exchanges and layer 2s.
-  - name: Orbiter Finance
+  - 
+    name: Orbiter Finance
     website_url: https://www.orbiter.finance/
     image: /assets/orbiter.jpg
     company_name: Orbiter
