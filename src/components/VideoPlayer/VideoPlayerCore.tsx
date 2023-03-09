@@ -1,7 +1,7 @@
 "use client";
 
 import { Box } from "@chakra-ui/react";
-import React, { Ref, useRef, useState } from "react";
+import React, { Ref, useEffect, useRef, useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 import VideoJS from "./lib/VideoJS";
 
@@ -45,6 +45,7 @@ type VideoPlayerProps = {
   onFullscreen?: () => void;
   onControlActiveChange?: (b: boolean) => void;
   videoContainerRef?: Ref<Element> | null;
+  playerRef?: Ref<Element> | null;
 };
 export function VideoPlayerCore({
   chapters,
@@ -54,17 +55,21 @@ export function VideoPlayerCore({
   onControlActiveChange,
   videoContainerRef,
 }: VideoPlayerProps) {
-  const playerRef = React.useRef(null);
   const [isShareVisible, setIsShareVisible] = useState(false);
   const paused = useRef(false);
+  const playerRef = useRef(null);
 
   const goToChapter = (chapterId: string) => {
     const chapter = chapters.find((p) => p.id === chapterId);
     if (chapterId && chapter) {
-      onChapterChange?.(chapter.id);
+      // setCurrentChapter(chapter.id);
       playerRef.current?.currentTime(chapter.startAt);
     }
   };
+
+  useEffect(() => {
+    goToChapter(currentChapter);
+  }, [currentChapter]);
 
   const onShare = () => {
     if (document?.fullscreenElement) {
@@ -123,7 +128,7 @@ export function VideoPlayerCore({
     player.aspectRatio("16:9");
     createShareButton({ player, onShare });
     createFullscreenButton({ player, onFullscreen });
-    goToChapter(currentChapter);
+    goToChapter?.(currentChapter);
   };
 
   return (
