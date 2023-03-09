@@ -7,48 +7,35 @@ image: /assets/cc26.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: Today Consensys will present their Starknet efforts, including
-  MetaMask, Infura, Truffle, and Consensys Diligence.
+short_desc: Today Consensys will present their Starknet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence.
 video:
   url: https://youtu.be/if6yyAWhJj0
   id: if6yyAWhJj0
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: LBqTvvmRfrLKlGq4GNx-i7rAnWw
     id: if6yyAWhJj0
     snippet:
       publishedAt: 2022-11-03T02:28:06Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #26 | MetaMask, Infura, Truffle and Diligence
-        with Consensys"
+      title: "StarkNet Community Call #26 | MetaMask, Infura, Truffle and Diligence with Consensys"
       description: >-
-        Join us for our #26 StarkNet community call.
+        Join us for our #26 StarkNet community call. 
+        Today Consensys will present their StarkNet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence. 
 
-        Today Consensys will present their StarkNet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence.
+        Here are the next steps that you can take to see how @ConsenSys  can help with your onboarding to StarkNet: 
+        • Discover Metamask Snaps: https://metamask.io/snaps/ 
 
+        • Find out more about StarkNet and Infura: 
+        https://infura.io/networks/ethereum/starknet 
 
-        Here are the next steps that you can take to see how @ConsenSys  can help with your onboarding to StarkNet:
+        • Start building with Infura's quick-start NFT tutorial using Infura and StarkNet: 
+        https://blog.infura.io/post/mint-your-first-nft-with-infura-and-starknet 
 
-        • Discover Metamask Snaps: https://metamask.io/snaps/
+        • Fast-track your L2 builds with Truffle's how-to 
+        https://trufflesuite.com/blog/how-to-use-truffle-to-build-on-ethereum-layer-2-networks/ 
 
-
-        • Find out more about StarkNet and Infura:
-
-        https://infura.io/networks/ethereum/starknet
-
-
-        • Start building with Infura's quick-start NFT tutorial using Infura and StarkNet:
-
-        https://blog.infura.io/post/mint-your-first-nft-with-infura-and-starknet
-
-
-        • Fast-track your L2 builds with Truffle's how-to
-
-        https://trufflesuite.com/blog/how-to-use-truffle-to-build-on-ethereum-layer-2-networks/
-
-
-        • Discover why Diligence is the smart choice for safeguarding your Cairo contracts:
-
+        • Discover why Diligence is the smart choice for safeguarding your Cairo contracts: 
         https://consensys.net/diligence/blog/2022/09/consensys-diligence-partners-with-starkware-to-expand-auditing-services/
       thumbnails:
         default:
@@ -83,35 +70,23 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "StarkNet Community Call #26 | MetaMask, Infura, Truffle and Diligence
-          with Consensys"
+        title: "StarkNet Community Call #26 | MetaMask, Infura, Truffle and Diligence with Consensys"
         description: >-
-          Join us for our #26 StarkNet community call.
+          Join us for our #26 StarkNet community call. 
+          Today Consensys will present their StarkNet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence. 
 
-          Today Consensys will present their StarkNet efforts, including MetaMask, Infura, Truffle, and Consensys Diligence.
+          Here are the next steps that you can take to see how @ConsenSys  can help with your onboarding to StarkNet: 
+          • Discover Metamask Snaps: https://metamask.io/snaps/ 
 
+          • Find out more about StarkNet and Infura: 
+          https://infura.io/networks/ethereum/starknet 
 
-          Here are the next steps that you can take to see how @ConsenSys  can help with your onboarding to StarkNet:
+          • Start building with Infura's quick-start NFT tutorial using Infura and StarkNet: 
+          https://blog.infura.io/post/mint-your-first-nft-with-infura-and-starknet 
 
-          • Discover Metamask Snaps: https://metamask.io/snaps/
+          • Fast-track your L2 builds with Truffle's how-to 
+          https://trufflesuite.com/blog/how-to-use-truffle-to-build-on-ethereum-layer-2-networks/ 
 
-
-          • Find out more about StarkNet and Infura:
-
-          https://infura.io/networks/ethereum/starknet
-
-
-          • Start building with Infura's quick-start NFT tutorial using Infura and StarkNet:
-
-          https://blog.infura.io/post/mint-your-first-nft-with-infura-and-starknet
-
-
-          • Fast-track your L2 builds with Truffle's how-to
-
-          https://trufflesuite.com/blog/how-to-use-truffle-to-build-on-ethereum-layer-2-networks/
-
-
-          • Discover why Diligence is the smart choice for safeguarding your Cairo contracts:
-
+          • Discover why Diligence is the smart choice for safeguarding your Cairo contracts: 
           https://consensys.net/diligence/blog/2022/09/consensys-diligence-partners-with-starkware-to-expand-auditing-services/
       defaultAudioLanguage: en-US
