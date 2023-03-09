@@ -7,13 +7,12 @@ image: /assets/cc24.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: On todays community call we have a presentation by Tarrence all
-  about Cartridge.
+short_desc: On todays community call we have a presentation by Tarrence all about Cartridge.
 video:
   url: https://youtu.be/nxV7-LkKyFs
   id: nxV7-LkKyFs
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: 8L3PhO74qWVzTouWZLQfOeLlPIM
     id: nxV7-LkKyFs
     snippet:
