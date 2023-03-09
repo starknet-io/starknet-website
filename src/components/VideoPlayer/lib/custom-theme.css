@@ -157,35 +157,40 @@
   display: none;
 }
 
-.vjs-top-bar {
-  z-index: 10;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* background-color: rgb(153, 218, 233); */
-  color: #000;
-  /* background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.7) 60%,
-      rgba(0, 0, 0, 0) 100%
-    ); */
-}
-
-.vjs-top-bar ul {
-  display: flex;
-  gap: 10;
-}
-
-.vjs-top-bar ul li {
-  flex: 1;
-}
-.vjs-top-bar {
-  transition: visibility 1s, opacity 1s;
-}
 .vjs-has-started.vjs-user-inactive.vjs-playing .vjs-top-bar {
   opacity: 0;
   visibility: hidden;
 }
+
+/* Big play Button */
+.vjs-theme-custom:hover .vjs-big-play-button {
+  background-color: transparent;
+}
+.vjs-theme-custom .vjs-big-play-button:hover {
+  background-color: transparent;
+  /* background: svg-load("/assets/play-btn.svg", fill=#6fb04e); */
+  /* background-image: url("/assets/play-btn.svg"); */
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.vjs-theme-custom .vjs-big-play-button {
+  width: 88px;
+  height: 88px;
+  background: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assets/play-btn.svg");
+  border: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -44px;
+  margin-left: -44px;
+  /* color: purple; */
+}
+
+.vjs-theme-custom .vjs-big-play-button .vjs-icon-placeholder {
+  display: none;
+}
+
+/* Big play Button end */
