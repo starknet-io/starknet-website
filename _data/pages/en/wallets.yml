@@ -5,9 +5,10 @@ parent_page: /ecosystem/
 breadcrumbs: false
 page_last_updated: true
 blocks:
-  - type: hero
+  - 
+    type: hero
     variant: wallets
     title: Wallets
-    description: "Explore the wallets that allow you to interact with and build in
-      the Starknet ecosystem. "
-  - type: wallets
+    description: "Explore the wallets that allow you to interact with and build in the Starknet ecosystem. "
+  - 
+    type: wallets
