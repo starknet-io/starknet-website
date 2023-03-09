@@ -7,22 +7,19 @@ image: /assets/cc22.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: Join our 22nd community call for a presentation by Frens Lands and
-  roadmap updates.
+short_desc: Join our 22nd community call for a presentation by Frens Lands and roadmap updates.
 video:
   url: https://youtu.be/khXAXAl-tvc
   id: khXAXAl-tvc
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: dDyqJNoVhrotMPK1pF21u-liRv0
     id: khXAXAl-tvc
     snippet:
       publishedAt: 2022-09-07T01:08:52Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
-        updates"
-      description: Join our 22nd community call for a presentation by Frens Lands and
-        roadmap updates.
+      title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap updates"
+      description: Join our 22nd community call for a presentation by Frens Lands and roadmap updates.
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/khXAXAl-tvc/default.jpg
@@ -48,8 +45,6 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
-          updates"
-        description: Join our 22nd community call for a presentation by Frens Lands and
-          roadmap updates.
+        title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap updates"
+        description: Join our 22nd community call for a presentation by Frens Lands and roadmap updates.
       defaultAudioLanguage: en-US
