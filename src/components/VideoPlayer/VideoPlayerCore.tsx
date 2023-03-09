@@ -1,7 +1,7 @@
 "use client";
 
 import { Box } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import React, { Ref, useRef, useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 import VideoJS from "./lib/VideoJS";
 
@@ -44,6 +44,7 @@ type VideoPlayerProps = {
   onChapterChange?: (currentChapter: string) => void;
   onFullscreen?: () => void;
   onControlActiveChange?: (b: boolean) => void;
+  videoContainerRef?: Ref<Element> | null;
 };
 export function VideoPlayerCore({
   chapters,
@@ -51,6 +52,7 @@ export function VideoPlayerCore({
   onChapterChange,
   onFullscreen,
   onControlActiveChange,
+  videoContainerRef,
 }: VideoPlayerProps) {
   const playerRef = React.useRef(null);
   const [isShareVisible, setIsShareVisible] = useState(false);
@@ -124,5 +126,11 @@ export function VideoPlayerCore({
     goToChapter(currentChapter);
   };
 
-  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />;
+  return (
+    <VideoJS
+      options={videoJsOptions}
+      onReady={handlePlayerReady}
+      videoContainerRef={videoContainerRef}
+    />
+  );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Ref } from "react";
 import videojs from "video.js";
 import Player from "video.js/dist/types/player";
 import "video.js/dist/video-js.css";
@@ -7,12 +7,13 @@ import "./custom-theme.css";
 type VideoJSProps = {
   onReady: (player: Player) => void;
   options: any;
+  videoContainerRef?: Ref<Element>;
 };
 
 const VideoJS = (props: VideoJSProps) => {
   const videoRef = React.useRef<HTMLDivElement | null>(null);
   const playerRef = React.useRef<Player | null>(null);
-  const { options, onReady } = props;
+  const { options, onReady, videoContainerRef } = props;
 
   React.useEffect(() => {
     // Make sure Video.js player is only initialized once
@@ -53,7 +54,7 @@ const VideoJS = (props: VideoJSProps) => {
   }, [playerRef]);
 
   return (
-    <div data-vjs-player className="vjs-theme-custom">
+    <div data-vjs-player className="vjs-theme-custom" ref={videoContainerRef}>
       <div ref={videoRef} className="vjs-16-9" />
     </div>
   );
