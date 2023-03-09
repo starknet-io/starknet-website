@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import { playlist } from "@ui/VideoPlayer/utils";
 import { VideoPlayer } from "@ui/VideoPlayer/VideoPlayer";
 
 export const metadata = {
@@ -11,20 +12,14 @@ export default function Page() {
       style={{
         position: "relative",
         paddingBottom: "56.25%",
+        maxWidth: 1000,
+        width: "100%",
+        // marginTop: 100,
+        // marginInline: "auto",
+        overflow: "hidden",
       }}
     >
-      <iframe
-        style={{
-          position: "absolute",
-          left: 0,
-          top: 0,
-          height: "100%",
-          width: "100%",
-        }}
-        src="http://localhost:3000/en/video-embed"
-      >
-        <VideoPlayer />
-      </iframe>
+      <VideoPlayer chapters={playlist} initialActiveChapter={playlist[0].id} />
     </div>
   );
 }

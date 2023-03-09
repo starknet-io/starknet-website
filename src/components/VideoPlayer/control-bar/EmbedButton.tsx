@@ -1,9 +1,18 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 import { preventVideoJSHotKeys } from "./utils";
 
 export const EmbedButton = () => {
   return (
-    <button onKeyDown={preventVideoJSHotKeys}>
+    <Button
+      onKeyDown={preventVideoJSHotKeys}
+      sx={{
+        zIndex: 5,
+        bg: "transparent",
+        border: "none",
+        cursor: "pointer",
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -17,6 +26,6 @@ export const EmbedButton = () => {
           clip-rule="evenodd"
         />
       </svg>
-    </button>
+    </Button>
   );
 };

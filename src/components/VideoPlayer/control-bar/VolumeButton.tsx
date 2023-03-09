@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Scrubber } from "react-scrubber";
 import { preventVideoJSHotKeys } from "./utils";
@@ -28,7 +28,16 @@ export const VolumeButton = ({
   };
   return (
     <Box display="flex" role="group" onKeyDown={preventVideoJSHotKeys}>
-      <button onClick={toggleMute} onKeyDown={preventVideoJSHotKeys}>
+      <Button
+        onClick={toggleMute}
+        onKeyDown={preventVideoJSHotKeys}
+        sx={{
+          zIndex: 5,
+          bg: "transparent",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
         {isMuted ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,14 +60,13 @@ export const VolumeButton = ({
             <path d="M15.932 7.757a.75.75 0 011.061 0 6 6 0 010 8.486.75.75 0 01-1.06-1.061 4.5 4.5 0 000-6.364.75.75 0 010-1.06z" />
           </svg>
         )}
-      </button>
+      </Button>
       <Box
         sx={{
-          w: isScrubbing ? "80px" : 0,
-          ml: 2,
+          w: isScrubbing ? "80px" : "auto",
+          pl: 2,
           pr: 2,
         }}
-        className="volume-slider | w-0 ml-2 pr-2"
         _groupHover={{
           w: "80px",
         }}
