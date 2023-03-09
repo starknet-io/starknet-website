@@ -17,6 +17,7 @@ const videoJsOptions = {
     "https://image.mux.com/UZMwOY6MgmhFNXLbSFXAuPKlRPss5XNA/thumbnail.jpg?time=11",
   controlBar: {
     fullscreenToggle: false,
+    pictureInPictureToggle: false,
   },
   userActions: {
     doubleClick: false,
