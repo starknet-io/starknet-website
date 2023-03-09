@@ -1,5 +1,4 @@
 import { playlist } from "@ui/VideoPlayer/utils";
-import { VideoPlayer } from "@ui/VideoPlayer/VideoPlayerInWebsite";
 import { VideoPlayerEmbed } from "@ui/VideoPlayer/VideoPlayerEmbed";
 
 export const metadata = {

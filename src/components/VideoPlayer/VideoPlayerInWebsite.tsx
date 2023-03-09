@@ -2,7 +2,6 @@
 
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 import { useMeasure } from "react-use";
@@ -18,10 +17,8 @@ type VideoPlayerInWebsiteProps = {
 export function VideoPlayerInWebsite({
   chapters,
   initialActiveChapter,
-  onChapterChange,
 }: VideoPlayerInWebsiteProps) {
   const [isShareVisible, setIsShareVisible] = useState(false);
-  const [isControlActive, setIsControlActive] = useState(false);
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
   const [videoContainerRef, { height }] = useMeasure();
 
@@ -56,18 +53,19 @@ export function VideoPlayerInWebsite({
           overflow: "scroll",
           maxHeight: height,
           display: "grid",
-          gap: "10px",
+          gap: "20px",
         }}
       >
         {chapters.map((chapter) => {
+          const isActive = chapter.id === currentChapter;
           return (
             <Box
               key={chapter.id}
-              as={Link}
-              href={`/${chapter.id}`}
+              onClick={() => setCurrentChapter(chapter.id)}
               sx={{
                 display: "flex",
                 gap: "10px",
+                pointer: "cursor",
               }}
             >
               <Image
@@ -75,6 +73,9 @@ export function VideoPlayerInWebsite({
                 width={142}
                 height={80}
                 alt={chapter.title}
+                style={{
+                  borderBottom: isActive ? "1px solid#EC796B" : "",
+                }}
               />
               <Box>
                 <Box
@@ -82,6 +83,8 @@ export function VideoPlayerInWebsite({
                   sx={{
                     lineHeight: 1,
                     marginBottom: 2,
+                    fontWeight: isActive ? "bold" : "",
+                    color: isActive ? "#fff" : "#949494",
                   }}
                 >
                   {chapter.title}
@@ -93,11 +96,19 @@ export function VideoPlayerInWebsite({
                     fontSize: "12px",
                     lineHeight: 1,
                     marginBottom: 2,
+                    color: isActive ? "#fff" : "#949494",
                   }}
                 >
                   {chapter.description}
                 </Box>
-                <Box as="p" fontSize="12px" lineHeight={1}>
+                <Box
+                  as="p"
+                  fontSize="12px"
+                  lineHeight={1}
+                  sx={{
+                    color: isActive ? "#fff" : "#949494",
+                  }}
+                >
                   00:20
                 </Box>
               </Box>
