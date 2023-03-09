@@ -7,13 +7,12 @@ image: /assets/starkhome27.jpg
 category: stark-math
 topic:
   - starknet
-short_desc: "Recursive STARKs are now used daily to scale Ethereum, on StarkEx
-  and StarkNet. "
+short_desc: "Recursive STARKs are now used daily to scale Ethereum, on StarkEx and StarkNet. "
 video:
   url: https://youtu.be/1QFK2xoOacc
   id: 1QFK2xoOacc
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: LpwpOholXPA_jm1hoqvWB5uIT1o
     id: 1QFK2xoOacc
     snippet:
@@ -21,25 +20,18 @@ video:
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "STARK @ Home 27: Recursing on Recursion"
       description: >-
-        Recursive STARKs are now used daily to scale Ethereum, on StarkEx
-        and StarkNet. 
+        Recursive STARKs are now used daily to scale Ethereum, on StarkEx and StarkNet. 
 
-
-        In this STARK @ Home StarkWare’s Shahar Papini(Cairo co-creator) and Shahar Samocha will join me as we dive into the following topics:
-
+        In this STARK @ Home StarkWare’s Shahar Papini(Cairo co-creator) and Shahar Samocha will join me as we dive into the following topics: 
 
 
         What does recursive proving mean? 
 
+        How do proving time, space, and latency change with recursive proofs? How are verification time and amortized gas cost affected by it? 
 
-        How do proving time, space, and latency change with recursive proofs? How are verification time and amortized gas cost affected by it?
+        How do cryptographic building blocks and commitment schemes affect recursive proving efficiency? 
 
-
-        How do cryptographic building blocks and commitment schemes affect recursive proving efficiency?
-
-
-        What are the limits of recursive proving?
-
+        What are the limits of recursive proving? 
 
 
         For more preparatory information please see our previous episode on recursion and the recent StarkNet Community Call on the topic.
@@ -66,25 +58,18 @@ video:
       localized:
         title: "STARK @ Home 27: Recursing on Recursion"
         description: >-
-          Recursive STARKs are now used daily to scale Ethereum, on StarkEx
-          and StarkNet. 
+          Recursive STARKs are now used daily to scale Ethereum, on StarkEx and StarkNet. 
 
-
-          In this STARK @ Home StarkWare’s Shahar Papini(Cairo co-creator) and Shahar Samocha will join me as we dive into the following topics:
-
+          In this STARK @ Home StarkWare’s Shahar Papini(Cairo co-creator) and Shahar Samocha will join me as we dive into the following topics: 
 
 
           What does recursive proving mean? 
 
+          How do proving time, space, and latency change with recursive proofs? How are verification time and amortized gas cost affected by it? 
 
-          How do proving time, space, and latency change with recursive proofs? How are verification time and amortized gas cost affected by it?
+          How do cryptographic building blocks and commitment schemes affect recursive proving efficiency? 
 
-
-          How do cryptographic building blocks and commitment schemes affect recursive proving efficiency?
-
-
-          What are the limits of recursive proving?
-
+          What are the limits of recursive proving? 
 
 
           For more preparatory information please see our previous episode on recursion and the recent StarkNet Community Call on the topic.
