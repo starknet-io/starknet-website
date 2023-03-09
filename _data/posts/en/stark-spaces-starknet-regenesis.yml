@@ -13,7 +13,7 @@ video:
   url: https://youtu.be/NR-fNmIcUFo
   id: NR-fNmIcUFo
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: fWdCcIXwp9LMaPPQe72yDVBkZDo
     id: NR-fNmIcUFo
     snippet:
