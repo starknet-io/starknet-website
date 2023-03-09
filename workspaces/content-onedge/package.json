@@ -8,10 +8,10 @@
     "build": "yarn update-dynamic-data; rm -rf dist; cp -r ../../_data dist"
   },
   "dependencies": {
-    "algoliasearch": "^4.14.3",
+    "algoliasearch": "^4.15.0",
     "dotenv": "^16.0.3",
-    "simple-git": "^3.16.1",
-    "vite-node": "^0.29.1",
+    "simple-git": "^3.17.0",
+    "vite-node": "^0.29.2",
     "yaml": "^2.2.1"
   }
 }
