@@ -12,7 +12,7 @@ video:
   url: https://youtu.be/95RHzcmbHMo
   id: 95RHzcmbHMo
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: Xs_WCfh8y0J5YHkGhUoSoKFjbg4
     id: 95RHzcmbHMo
     snippet:
