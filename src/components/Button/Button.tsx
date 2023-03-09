@@ -3,6 +3,17 @@ import { Button as ChakraButton, ButtonProps } from "src/libs/chakra-ui";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 
 type props = {
+  variant: "solid" |
+    "outline" |
+    "outlineLight" |
+    "outlineRounded" |
+    "ghost" |
+    "primaryHero" |
+    "secondaryHero" |
+    "switch" |
+    "filter" |
+    "filterActive" |
+    "category",
   children: React.ReactNode;
   toId?: string;
 } & ButtonProps;

@@ -211,7 +211,7 @@ function CustomHits() {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+          <Button onClick={() => showMore()} flexShrink={0} variant="outlineLight">
             View More
           </Button>
           <Divider />

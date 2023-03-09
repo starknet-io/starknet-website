@@ -118,13 +118,13 @@ export const HomepageHero = (props: Props) => {
                 onClick={() => router.push("/en/developers")}
                 size="lg"
                 minW="210px"
-                variant="solidHero"
+                variant="solid"
               >
                 Build on starknet
               </Button>
               <Button
                 size="lg"
-                variant="outlineHero"
+                variant="outline"
                 onClick={() => router.push("/en/what-is-starknet")}
               >
                 Learn the basics
