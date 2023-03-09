@@ -1,0 +1,49 @@
+id: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+title: Community
+template: landing
+breadcrumbs: true
+page_last_updated: false
+blocks:
+  - 
+    type: hero
+    title: Community hub
+    description: Join a community of developers, enthusiasts and explorers, working together to build Starknet and scale Ethereum.
+    variant: community
+  - 
+    type: flex_layout
+    heading_variant: md
+    base: 1
+    md: 2
+    lg: 3
+    heading: "How to get involved? "
+    blocks:
+      - 
+        type: image_icon_link_card
+        color: blue-default
+        title: Online communities
+        description: Connect with Starknet enthusiasts in online communities and social media.
+        icon: /assets/online-communities.svg
+        link:
+          page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
+          custom_title: View
+      - 
+        type: image_icon_link_card
+        color: blue-default
+        title: Community events
+        description: Find events near you to connect with the Starknet builders.
+        icon: /assets/community-events.svg
+        link:
+          custom_internal_link: /events/
+          custom_title: View
+      - 
+        type: image_icon_link_card
+        color: blue-default
+        title: "Ecosystem jobs "
+        description: Explore opportunities with teams building in the ecosystem.
+        icon: /assets/jobs.svg
+        link:
+          custom_icon: ""
+          custom_title: View
+          custom_internal_link: /jobs/
+  - 
+    type: community_events
