@@ -12,14 +12,13 @@ video:
   url: https://youtu.be/4kb4wSDETLM
   id: 4kb4wSDETLM
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: 1jBO4ELu4Nd4lxS-uxJWSzQV8cM
     id: 4kb4wSDETLM
     snippet:
       publishedAt: 2022-02-07T16:18:53Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
-        StarkNet Roadmap"
+      title: "StarkNet Community Call #7 | Greg from Nethermind and updates on StarkNet Roadmap"
       description: ""
       thumbnails:
         default:
@@ -46,7 +45,6 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
-          StarkNet Roadmap"
+        title: "StarkNet Community Call #7 | Greg from Nethermind and updates on StarkNet Roadmap"
         description: ""
       defaultAudioLanguage: en-US
