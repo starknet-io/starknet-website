@@ -12,7 +12,7 @@ video:
   url: https://youtu.be/WrieNtiAnyw
   id: WrieNtiAnyw
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: gJHjTP-hnCcAMwp-kJnTBaOjRT4
     id: WrieNtiAnyw
     snippet:
