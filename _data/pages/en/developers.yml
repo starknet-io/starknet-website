@@ -4,27 +4,30 @@ template: landing
 breadcrumbs: true
 page_last_updated: false
 blocks:
-  - type: hero
+  - 
+    type: hero
     title: Developers Hub
     description: A manual and resource list for builders, by builders.
     variant: build
-  - type: flex_layout
+  - 
+    type: flex_layout
     heading_variant: md
     base: 1
     md: 2
     lg: 3
     heading: "Get started "
     blocks:
-      - type: image_icon_link_card
+      - 
+        type: image_icon_link_card
         color: blue-default
         title: Read the docs
-        description: Read the official Starknet documentation to build your first
-          contracts and dapps.
+        description: Read the official Starknet documentation to build your first contracts and dapps.
         icon: /assets/docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
-      - type: image_icon_link_card
+      - 
+        type: image_icon_link_card
         color: blue-default
         title: "Learn through tutorials "
         description: Learn from Starknet's community of developers and technologists.
@@ -33,23 +36,25 @@ blocks:
           custom_external_link: ""
           custom_internal_link: /tutorials/
           custom_title: View
-      - type: image_icon_link_card
+      - 
+        type: image_icon_link_card
         color: blue-default
         title: "Set up a local environment "
-        description: Learn how to get your dev environment up and running so you can
-          start building.
+        description: Learn how to get your dev environment up and running so you can start building.
         icon: /assets/local-environment.svg
         link:
           custom_external_link: https://docs.starknet.io/documentation/getting_started/setting_up_the_environment/
           custom_title: View
-  - type: flex_layout
+  - 
+    type: flex_layout
     heading_variant: md
     base: 1
     md: 2
     lg: 3
     heading: Courses
     blocks:
-      - type: image_icon_link_card
+      - 
+        type: image_icon_link_card
         color: purple
         title: "Starknet ByteSized Series "
         description: A series of short videos that cover the basic concepts of Starknet.
@@ -57,16 +62,17 @@ blocks:
         link:
           custom_title: View
           custom_internal_link: /tutorials/bytesized_series
-      - type: image_icon_link_card
+      - 
+        type: image_icon_link_card
         color: peach
         title: Starknet 101
-        description: Get up and running developing on Starknet through this series of
-          video tutorials.
+        description: Get up and running developing on Starknet through this series of video tutorials.
         icon: /assets/green.svg
         link:
           custom_title: View
           custom_internal_link: /tutorials/cairo_101
-      - type: image_icon_link_card
+      - 
+        type: image_icon_link_card
         color: cyan
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
@@ -74,60 +80,78 @@ blocks:
         link:
           custom_title: View
           custom_internal_link: /tutorials/starknet_edu
-  - type: community_events
-  - type: flex_layout
+  - 
+    type: community_events
+  - 
+    type: flex_layout
     heading_variant: md
     base: 1
     md: 2
     lg: 3
     heading: Explore the docs
     blocks:
-      - type: link_list
+      - 
+        type: link_list
         heading: "Getting started "
         blocks:
-          - is_external: true
+          - 
+            is_external: true
             label: "Introduction "
             href: https://docs.starknet.io/documentation/
-          - is_external: true
+          - 
+            is_external: true
             label: "Setting up a Starknet account "
             href: https://docs.starknet.io/documentation/getting_started/account_setup/
-          - is_external: true
+          - 
+            is_external: true
             label: Writing Starknet contracts
             href: https://docs.starknet.io/documentation/getting_started/intro/
-          - is_external: true
+          - 
+            is_external: true
             label: "CLI commands "
             href: https://docs.starknet.io/documentation/getting_started/cli/
-          - is_external: true
+          - 
+            is_external: true
             label: "Adding user authentication "
             href: https://docs.starknet.io/documentation/getting_started/user_auth/
-      - type: link_list
+      - 
+        type: link_list
         heading: Architecture & concepts
         blocks:
-          - is_external: true
+          - 
+            is_external: true
             label: Block structure
             href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
-          - is_external: true
+          - 
+            is_external: true
             label: "Transaction lifecycle "
             href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
-          - is_external: true
+          - 
+            is_external: true
             label: "Transaction structure "
             href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
-          - is_external: false
+          - 
+            is_external: false
             label: Contract ABI
             href: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
-          - is_external: true
+          - 
+            is_external: true
             label: "Account abstraction "
             href: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
-      - type: link_list
+      - 
+        type: link_list
         heading: "Tools & resources "
         blocks:
-          - is_external: true
+          - 
+            is_external: true
             label: Starknet block explorers
             href: https://docs.starknet.io/documentation/tools/ref_block_explorers/
-          - is_external: true
+          - 
+            is_external: true
             label: "Starknet CLI reference "
             sub_label: ""
             href: https://docs.starknet.io/documentation/tools/CLI/commands/
-          - is_external: true
+          - 
+            is_external: true
             label: "Starknet compiler reference "
             href: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/
