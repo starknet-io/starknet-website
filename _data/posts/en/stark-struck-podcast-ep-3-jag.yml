@@ -7,26 +7,20 @@ image: /assets/starkstruck04.jpg
 category: stark-struck
 topic:
   - starknet
-short_desc: Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
-  Empiric, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically.
+short_desc: Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from Empiric, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.
 video:
   url: https://youtu.be/xkzX04wzBUw
   id: xkzX04wzBUw
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: QGiEiZFu73zVB-4lp4Fja5YTqgc
     id: xkzX04wzBUw
     snippet:
       publishedAt: 2022-09-22T10:31:28Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from
-        Empiric
+      title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from Empiric
       description: >-
-        Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
-        Empiric, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.
-
+        Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from Empiric, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. 
 
         Twitter: @jonas_nelle @oskarlso @EmpiricNetwork @henrlihenrli @Starknet_Intern
       thumbnails:
@@ -54,13 +48,9 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from
-          Empiric
+        title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from Empiric
         description: >-
-          Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
-          Empiric, on what gets them excited about technology in general,
-          blockchain in particular, and validity rollups specifically.
-
+          Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from Empiric, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. 
 
           Twitter: @jonas_nelle @oskarlso @EmpiricNetwork @henrlihenrli @Starknet_Intern
       defaultAudioLanguage: en-US
