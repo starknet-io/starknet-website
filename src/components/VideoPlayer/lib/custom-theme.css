@@ -1,6 +1,5 @@
 .vjs-theme-custom {
-  --vjs-theme-custom--primary: rgb(45, 255, 233);
-  --vjs-theme-custom--secondary: #fff;
+  --vjs-theme-custom--primary: #ec796b;
 }
 
 .vjs-theme-custom .vjs-control-bar {
