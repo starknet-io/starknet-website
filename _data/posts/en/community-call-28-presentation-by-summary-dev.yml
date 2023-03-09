@@ -7,13 +7,12 @@ image: /assets/cc28.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: Presentation by summary.dev + Performance roadmap update with
-  StarkNet Product Manager Ariel Elperin.
+short_desc: Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin.
 video:
   url: https://youtu.be/isqd0YknTJI
   id: isqd0YknTJI
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: 5NhawM_Ay0Kmn-nv1j_9AGiFeyc
     id: isqd0YknTJI
     snippet:
@@ -21,8 +20,7 @@ video:
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet Community Call #28 | Presentation by summary.dev"
       description: >-
-        Join us for our #28 StarkNet community call.
-
+        Join us for our #28 StarkNet community call. 
         Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
       thumbnails:
         default:
@@ -59,7 +57,6 @@ video:
       localized:
         title: "StarkNet Community Call #28 | Presentation by summary.dev"
         description: >-
-          Join us for our #28 StarkNet community call.
-
+          Join us for our #28 StarkNet community call. 
           Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
       defaultAudioLanguage: en-US
