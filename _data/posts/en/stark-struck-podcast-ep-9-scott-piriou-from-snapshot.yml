@@ -7,26 +7,20 @@ image: /assets/starkstruck09.jpg
 category: stark-struck
 topic:
   - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Scott Piriou from
-  Snapshot, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically.   "
+short_desc: "Join Henri Lieutaud from the StarkNet team and Scott Piriou from Snapshot, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.   "
 video:
   url: https://youtu.be/NPcpug9sQcg
   id: NPcpug9sQcg
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: Rbku5L64ybALTc3vwHq2vVZEqdY
     id: NPcpug9sQcg
     snippet:
       publishedAt: 2023-01-04T14:00:16Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from
-        Snapshot
+      title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from Snapshot
       description: >-
-        Join Henri Lieutaud from the StarkNet team and Scott Piriou from
-        Snapshot, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.    
-
+        Join Henri Lieutaud from the StarkNet team and Scott Piriou from Snapshot, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. 
 
         Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
       thumbnails:
@@ -54,13 +48,9 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from
-          Snapshot
+        title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from Snapshot
         description: >-
-          Join Henri Lieutaud from the StarkNet team and Scott Piriou from
-          Snapshot, on what gets them excited about technology in general,
-          blockchain in particular, and validity rollups specifically.    
-
+          Join Henri Lieutaud from the StarkNet team and Scott Piriou from Snapshot, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. 
 
           Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
