@@ -7,22 +7,19 @@ image: /assets/vid_events04.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: STARK Recursion is just around the corner! What does it mean? what
-  new capabilities will it unlock? which new peaks will we conquer using it?
+short_desc: STARK Recursion is just around the corner! What does it mean? what new capabilities will it unlock? which new peaks will we conquer using it?
 video:
   url: https://youtu.be/mBYF5r-J1aw
   id: mBYF5r-J1aw
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: Es3EOT96qrhmNjhLkRuJuP1z3rE
     id: mBYF5r-J1aw
     snippet:
       publishedAt: 2022-07-20T22:10:16Z
       channelId: UCVgsFxDu5lTqHmpirw5Q69Q
       title: Avihu Levy - Stark Recursion
-      description: STARK Recursion is just around the corner! What does it mean? what
-        new capabilities will it unlock? which new peaks will we conquer using
-        it?
+      description: STARK Recursion is just around the corner! What does it mean? what new capabilities will it unlock? which new peaks will we conquer using it?
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/mBYF5r-J1aw/default.jpg
@@ -49,7 +46,5 @@ video:
       liveBroadcastContent: none
       localized:
         title: Avihu Levy - Stark Recursion
-        description: STARK Recursion is just around the corner! What does it mean? what
-          new capabilities will it unlock? which new peaks will we conquer using
-          it?
+        description: STARK Recursion is just around the corner! What does it mean? what new capabilities will it unlock? which new peaks will we conquer using it?
       defaultAudioLanguage: zh-Hans
