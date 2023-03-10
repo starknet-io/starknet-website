@@ -19,7 +19,6 @@ export const BlockStats = (props: Props) => {
       <Heading
         variant="h2"
         color="heading-navy-fg"
-        as="h2"
         size="xl"
         mb="56px"
         fontWeight="extrabold"

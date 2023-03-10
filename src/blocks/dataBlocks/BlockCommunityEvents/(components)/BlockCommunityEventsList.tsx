@@ -49,7 +49,7 @@ export function BlockCommunityEventsList({
       <Container maxW="1062px">
         <Box>
           <Flex justifyContent="center">
-            <Heading variant="h2" as="h2" color="heading-navy-fg" mb="64px">
+            <Heading variant="h2" color="heading-navy-fg" mb="64px">
               Community Events
             </Heading>
           </Flex>

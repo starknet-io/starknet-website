@@ -38,11 +38,9 @@ export const Intro = () => {
     <Heading
       aria-label={texts[index]}
       ref={ref}
-      as="h2"
       variant="h2"
       mt="8"
       fontWeight="bold"
-      lineHeight={{ base: "1.2em" }}
       height={{ base: "1.2em" }}
       overflow="hidden"
       fontSize={{ base: "48px", md: "70px", lg: "80px", xl: "80px" }}

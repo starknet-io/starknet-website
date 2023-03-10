@@ -89,13 +89,11 @@ export const HomepageHero = (props: Props) => {
             <Intro />
 
             <Heading
-              as="h2"
-              variant="h2"
+              variant="h1"
               fontWeight="bold"
-              lineHeight="1.2"
-              fontSize={{ base: "56px", md: "80px", lg: "80px", xl: "92px" }}
               color="heading-navy-fg"
-              mt="-10px"
+              mt="-20px"
+              fontSize={{ base: "56px", md: "80px", xl: "92px" }}
             >
               Starknet
             </Heading>

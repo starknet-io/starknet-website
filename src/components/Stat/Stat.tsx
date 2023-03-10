@@ -22,9 +22,9 @@ export const Stat = (props: StatProps) => {
       >
         {value}
       </Heading>
-      <Text fontSize="lg" fontWeight="medium" color="muted">
+      <Heading variant="h4" fontWeight="medium" color="muted">
         {label}
-      </Text>
+      </Heading>
     </Stack>
   );
 };

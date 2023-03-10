@@ -9,6 +9,7 @@ import {
   Flex,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
+import { Heading } from "@ui/Typography/Heading";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 
@@ -92,15 +93,15 @@ type ContentProps = {
 const Content = ({ title, excerpt }: ContentProps) => {
   return (
     <Flex gap="3" direction="column" flex={1}>
-      <Text
+      <Heading
         color="heading-navy-fg"
-        fontSize="18px"
-        variant="baseBold"
+        variant="h4"
+        fontWeight="bold"
         noOfLines={2}
       >
         {title}
-      </Text>
-      <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+      </Heading>
+      <Text variant="cardBody" noOfLines={4}>
         {excerpt}
       </Text>
     </Flex>
@@ -192,7 +193,7 @@ export { Root, Image, Body, Category, Content, Footer };
 //                 <Text fontSize="md" variant="baseExtraBold">
 //                   {title}
 //                 </Text>
-//                 <Text fontSize="sm" variant="baseRegular">
+//                 <Text fontSize="sm" variant="cardBody">
 //                   {excerpt}
 //                 </Text>
 //               </Stack>

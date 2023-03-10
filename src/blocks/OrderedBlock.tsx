@@ -25,7 +25,6 @@ export const OrderedBlockItem = ({
     <Flex direction="column" mb="80px">
       <Heading
         id={`toc-${slugify(title)}`}
-        as="h2"
         variant="h3"
         color="heading-navy-fg"
       >

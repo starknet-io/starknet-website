@@ -10,7 +10,7 @@ blocks:
       together to build Starknet and scale Ethereum.
     variant: community
   - type: flex_layout
-    heading_variant: md
+    heading_variant: h3
     base: 1
     md: 2
     lg: 3

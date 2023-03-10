@@ -97,7 +97,7 @@ function CustomRole() {
 
   return (
     <Box>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Role
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -125,7 +125,7 @@ function CustomType() {
 
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">

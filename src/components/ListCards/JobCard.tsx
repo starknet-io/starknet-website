@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   Wrap,
 } from "src/libs/chakra-ui";
+import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import * as React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -51,9 +52,9 @@ export const ListCard = (props: Props) => {
             spacing={{ base: "1", md: "2" }}
             direction={{ base: "column", md: "row" }}
           >
-            <Text as="h2" fontWeight="bold" fontSize="18px">
+            <Heading variant="h4">
               {props.title}
-            </Text>
+            </Heading>
             <HStack fontSize={{ base: "md", md: "xl" }}>
               <Icon as={FiExternalLink} color="fg-default" />
             </HStack>

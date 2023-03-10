@@ -57,15 +57,12 @@ export const CommunityCard = ({ link, description, title, locale }: Props) => {
                       color="heading-navy-fg"
                       mb="0"
                       variant="h4"
-                      as="h4"
-                      lineHeight="1em"
-                      fontSize="18px"
                       pb="2"
                     >
                       {title}
                     </Heading>
                   </HStack>
-                  <Text variant="baseRegular" color="muted" fontSize="sm">
+                  <Text variant="cardBody" color="muted">
                     {description}
                     <Link
                       ml="8px"

@@ -37,7 +37,7 @@ blocks:
           page: 93b845d7-5662-4cd4-8c13-3730440880c0
           custom_title: How does it work
   - type: flex_layout
-    heading_variant: md
+    heading_variant: h3
     base: 1
     md: 2
     lg: 3
@@ -70,7 +70,7 @@ blocks:
           page: 4c40a102-df5b-4f39-98fb-774d6841da9e
           custom_title: View resources
   - type: flex_layout
-    heading_variant: md
+    heading_variant: h3
     base: 1
     md: 2
     lg: 3
@@ -103,7 +103,7 @@ blocks:
           page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
   - type: community_events
   - type: flex_layout
-    heading_variant: md
+    heading_variant: h3
     blocks:
       - type: basic_card
         size: sm

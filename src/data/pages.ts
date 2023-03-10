@@ -165,7 +165,7 @@ export interface FlexLayoutBlock {
   readonly lg?: number;
   readonly xl?: number;
   readonly heading?: string;
-  readonly heading_variant?: "sm" | "md" | "lg";
+  readonly heading_variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   readonly blocks: readonly Block[];
 }
 export interface GroupBlock {
