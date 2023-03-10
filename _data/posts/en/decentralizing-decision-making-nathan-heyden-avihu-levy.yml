@@ -12,14 +12,13 @@ video:
   url: https://www.youtube.com/watch?v=jh6PSiY1-xo
   id: jh6PSiY1-xo
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: ymawfy_D7N88Anj0vvNWe9GRGww
     id: jh6PSiY1-xo
     snippet:
       publishedAt: 2021-10-26T17:38:01Z
       channelId: UCSm6Gic3HQHoFd7k3x8LNkQ
-      title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden &
-        Avihu Levy @ The DAOist Lisbon"
+      title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden & Avihu Levy @ The DAOist Lisbon"
       description: |-
         Presented @ Village Underground, Lisbon 2021
 
@@ -49,8 +48,7 @@ video:
       categoryId: "24"
       liveBroadcastContent: none
       localized:
-        title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden &
-          Avihu Levy @ The DAOist Lisbon"
+        title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden & Avihu Levy @ The DAOist Lisbon"
         description: |-
           Presented @ Village Underground, Lisbon 2021
 
