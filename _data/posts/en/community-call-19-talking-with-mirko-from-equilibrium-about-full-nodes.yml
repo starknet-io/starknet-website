@@ -7,22 +7,19 @@ image: /assets/cc19.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: Join us for our 19th Community call. Today we are hosting Mirko from
-  Equilibrium and talking about full-nodes
+short_desc: Join us for our 19th Community call. Today we are hosting Mirko from Equilibrium and talking about full-nodes
 video:
   url: https://youtu.be/OzYbVm536vo
   id: OzYbVm536vo
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: Rg3AkYyKx5Vk4knYbr7HK9FYAts
     id: OzYbVm536vo
     snippet:
       publishedAt: 2022-07-27T01:26:50Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
-        full-nodes"
-      description: Join us for our 19th Community call. Today we are hosting Mirko
-        from Equilibrium and talking about full-nodes
+      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about full-nodes"
+      description: Join us for our 19th Community call. Today we are hosting Mirko from Equilibrium and talking about full-nodes
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/OzYbVm536vo/default.jpg
@@ -48,8 +45,6 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
-          full-nodes"
-        description: Join us for our 19th Community call. Today we are hosting Mirko
-          from Equilibrium and talking about full-nodes
+        title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about full-nodes"
+        description: Join us for our 19th Community call. Today we are hosting Mirko from Equilibrium and talking about full-nodes
       defaultAudioLanguage: en-US
