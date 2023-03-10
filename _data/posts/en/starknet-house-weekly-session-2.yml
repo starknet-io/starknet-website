@@ -7,38 +7,29 @@ image: /assets/sn_house03.jpg
 category: ecosystem
 topic:
   - starknet
-short_desc: Let's explore Starknet wallets with Julien Niset, Co-Founder of
-  Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As,
-  Co-Founder of Cartridge.
+short_desc: Let's explore Starknet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge.
 video:
   url: https://youtu.be/s-tOVGlrnE0
   id: s-tOVGlrnE0
   data:
-    kind: youtube#video
-    etag: -kawGgmKGHjcGj28XxhaH0RfeDQ
+    kind: 'youtube#video'
+    etag: '-kawGgmKGHjcGj28XxhaH0RfeDQ'
     id: s-tOVGlrnE0
     snippet:
       publishedAt: 2022-06-17T17:00:24Z
       channelId: UCqbWfFjh7mlH1rjoRebHo-g
-      title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by
-        Julien, Yoav & Tarrance'
+      title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by Julien, Yoav & Tarrance'
       description: >-
-        Everything about StarkNet Wallets
+        Everything about StarkNet Wallets 
 
+        Let's explore StarkNet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge. 
 
-        Let's explore StarkNet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge.
+        --- 
+        StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem. 
 
+        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet. 
 
-        ---
-
-        StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem.
-
-
-        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
-
-
-        All sessions will be live-streamed online and available wherever you are in the world!
-
+        All sessions will be live-streamed online and available wherever you are in the world! 
 
         Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
       thumbnails:
@@ -62,25 +53,18 @@ video:
       categoryId: "22"
       liveBroadcastContent: none
       localized:
-        title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by
-          Julien, Yoav & Tarrance'
+        title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by Julien, Yoav & Tarrance'
         description: >-
-          Everything about StarkNet Wallets
+          Everything about StarkNet Wallets 
 
+          Let's explore StarkNet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge. 
 
-          Let's explore StarkNet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge.
+          --- 
+          StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem. 
 
+          StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet. 
 
-          ---
-
-          StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem.
-
-
-          StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
-
-
-          All sessions will be live-streamed online and available wherever you are in the world!
-
+          All sessions will be live-streamed online and available wherever you are in the world! 
 
           Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
       defaultAudioLanguage: en
