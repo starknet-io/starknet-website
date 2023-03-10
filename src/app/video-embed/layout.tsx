@@ -1,3 +1,5 @@
-export default function Layout({ children }) {
+interface Props extends React.PropsWithChildren {}
+
+export default function Layout({ children }: Props) {
   return children;
 }

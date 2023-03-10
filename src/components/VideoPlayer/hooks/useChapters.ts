@@ -1,6 +1,16 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
+import Player from "video.js/dist/types/player";
+import { Chapter } from "../utils";
 
-export function useChapters({ initialActiveChapter, chapters, playerRef }) {
+export function useChapters({
+  initialActiveChapter,
+  chapters,
+  playerRef,
+}: {
+  initialActiveChapter: string;
+  chapters: Chapter[];
+  playerRef: RefObject<Player>;
+}) {
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
 
   const goToChapter = (chapterId: string) => {

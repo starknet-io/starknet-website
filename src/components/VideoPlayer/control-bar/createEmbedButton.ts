@@ -1,4 +1,10 @@
-export const createEmbedButton = ({ player, onClickEmbed }) => {
+export const createEmbedButton = ({
+  player,
+  onClickEmbed,
+}: {
+  player: any;
+  onClickEmbed: () => void;
+}) => {
   // Adding button to the control bar
   const embedButton = player.controlBar.addChild("button", {}, 2);
   embedButton.addClass("vjs-button-embed");

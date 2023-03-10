@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,10 +18,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["vitest/importMeta", "vitest/globals", "@types/mdx"],
+    "types": [
+      "vitest/importMeta",
+      "vitest/globals",
+      "@types/mdx"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["./src/components/*"]
+      "@ui/*": [
+        "./src/components/*"
+      ]
     },
     "plugins": [
       {
@@ -25,13 +35,21 @@
       }
     ]
   },
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
   "include": [
     "env.d.ts",
     "next-env.d.ts",
     "src",
     "workspaces/netlify-cms/src",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "/Users/akrom/Developer/web/starknet-website/.next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

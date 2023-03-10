@@ -6,6 +6,7 @@ import "react-scrubber/lib/scrubber.css";
 import VideoJS from "./lib/VideoJS";
 
 import { createShareButton, createFullscreenButton } from "./control-bar";
+import Player from "video.js/dist/types/player";
 
 const videoJsOptions = {
   autoplay: false,
@@ -45,8 +46,7 @@ type VideoPlayerProps = {
   onChapterChange?: (currentChapter: string) => void;
   onFullscreen?: () => void;
   onControlActiveChange?: (b: boolean) => void;
-  videoContainerRef?: Ref<Element> | null;
-  playerRef?: Ref<Element> | null;
+  videoContainerRef?: Ref<HTMLDivElement>;
 };
 export function VideoPlayerCore({
   chapters,
@@ -58,7 +58,7 @@ export function VideoPlayerCore({
 }: VideoPlayerProps) {
   const [isShareVisible, setIsShareVisible] = useState(false);
   const paused = useRef(false);
-  const playerRef = useRef(null);
+  const playerRef = useRef<Player | null>(null);
 
   const goToChapter = (chapterId: string) => {
     const chapter = chapters.find((p) => p.id === chapterId);
@@ -80,7 +80,7 @@ export function VideoPlayerCore({
     setIsShareVisible(true);
   };
 
-  const handlePlayerReady = (player) => {
+  const handlePlayerReady = (player: any) => {
     playerRef.current = player;
 
     // You can handle player events here, for example:
@@ -114,7 +114,11 @@ export function VideoPlayerCore({
 
     if (onChapterChange) {
       player.on("timeupdate", function () {
-        const currentTime = playerRef.current.currentTime();
+        const currentTime = playerRef.current?.currentTime();
+
+        if (currentTime === undefined) {
+          return;
+        }
 
         const newChapter = chapters.find(
           (p) => currentTime >= p.startAt && currentTime < p.endAt
@@ -128,7 +132,9 @@ export function VideoPlayerCore({
 
     player.aspectRatio("16:9");
     createShareButton({ player, onShare });
-    createFullscreenButton({ player, onFullscreen });
+    if (onFullscreen) {
+      createFullscreenButton({ player, onFullscreen });
+    }
     goToChapter?.(currentChapter);
   };
 

@@ -20,7 +20,7 @@ export function VideoPlayerInWebsite({
 }: VideoPlayerInWebsiteProps) {
   const [isShareVisible, setIsShareVisible] = useState(false);
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
-  const [videoContainerRef, { height }] = useMeasure();
+  const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
 
   return (
     <Box

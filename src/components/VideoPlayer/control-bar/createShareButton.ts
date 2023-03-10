@@ -1,4 +1,10 @@
-export const createShareButton = ({ player, onShare }) => {
+export const createShareButton = ({
+  player,
+  onShare,
+}: {
+  player: any;
+  onShare: () => void;
+}) => {
   // Adding button to the control bar
   const shareButton = player.controlBar.addChild("button", {}, 2);
   shareButton.addClass("vjs-button-share");

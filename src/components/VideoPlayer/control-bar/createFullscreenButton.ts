@@ -1,4 +1,10 @@
-export const createFullscreenButton = ({ player, onFullscreen }) => {
+export const createFullscreenButton = ({
+  player,
+  onFullscreen,
+}: {
+  player: any;
+  onFullscreen: () => void;
+}) => {
   // Adding button to the control bar
   const fullscreenButton = player.controlBar.addChild("button", {}, 2);
   fullscreenButton.addClass("vjs-button-fullscreen");
