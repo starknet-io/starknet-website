@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 import { useMeasure } from "react-use";
+import { useToggleFullscreen } from "./hooks/useVideoFullscreen";
 import { Chapter } from "./utils";
 
 import { VideoPlayerCore } from "./VideoPlayerCore";
@@ -21,6 +22,7 @@ export function VideoPlayerInWebsite({
   const [isShareVisible, setIsShareVisible] = useState(false);
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
   const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
+  const { ref, isFullscreen, toggleFullscreen } = useToggleFullscreen();
 
   return (
     <Box
@@ -29,15 +31,25 @@ export function VideoPlayerInWebsite({
         gap: "20px",
         position: "relative",
       }}
+      flexDir={{ base: "column", lg: "row" }}
     >
-      <div style={{ position: "relative", paddingBottom: "56.25%", flex: 1 }}>
+      <div
+        style={{ position: "relative", paddingBottom: "56.25%", flex: 1 }}
+        ref={ref}
+      >
         <div
           style={{
             position: "absolute",
-            top: 0,
             left: 0,
+            top: 0,
+            // top: isFullscreen ? "50%" : "0",
+            // left: isFullscreen ? "50%" : "0",
+            // transform: isFullscreen
+            //   ? "translateY(-50%) translateX(-50%)"
+            //   : "translateY(0) translateX(0)",
+            // left: 0,
             width: "100%",
-            height: "100%",
+            // ...positionStyle,
           }}
         >
           <VideoPlayerCore
@@ -45,6 +57,7 @@ export function VideoPlayerInWebsite({
             currentChapter={currentChapter}
             onChapterChange={setCurrentChapter}
             videoContainerRef={videoContainerRef}
+            onFullscreen={toggleFullscreen}
           />
         </div>
       </div>
@@ -55,6 +68,7 @@ export function VideoPlayerInWebsite({
           display: "grid",
           gap: "20px",
         }}
+        maxH={{ base: "300px", lg: height }}
       >
         {chapters.map((chapter) => {
           const isActive = chapter.id === currentChapter;
@@ -84,7 +98,7 @@ export function VideoPlayerInWebsite({
                     lineHeight: 1,
                     marginBottom: 2,
                     fontWeight: isActive ? "bold" : "",
-                    color: isActive ? "#fff" : "#949494",
+                    color: isActive ? "heading-navy-fg" : "",
                   }}
                 >
                   {chapter.title}
@@ -96,7 +110,7 @@ export function VideoPlayerInWebsite({
                     fontSize: "12px",
                     lineHeight: 1,
                     marginBottom: 2,
-                    color: isActive ? "#fff" : "#949494",
+                    color: isActive ? "heading-navy-fg" : "",
                   }}
                 >
                   {chapter.description}
@@ -106,7 +120,7 @@ export function VideoPlayerInWebsite({
                   fontSize="12px"
                   lineHeight={1}
                   sx={{
-                    color: isActive ? "#fff" : "#949494",
+                    color: isActive ? "heading-navy-fg" : "",
                   }}
                 >
                   00:20

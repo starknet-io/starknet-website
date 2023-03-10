@@ -11,7 +11,7 @@ import Player from "video.js/dist/types/player";
 const videoJsOptions = {
   autoplay: false,
   controls: true,
-  responsive: true,
+  responsive: false,
   preload: "auto",
   fluid: true,
   poster:

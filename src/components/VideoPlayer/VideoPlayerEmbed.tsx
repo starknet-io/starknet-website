@@ -35,6 +35,24 @@ export function VideoPlayerEmbed({
           transform: "translateX(-50%) translateY(-50%)",
         }}
       >
+        <Box
+          sx={{
+            position: "absolute",
+            padding: "0.5rem 1rem",
+            top: 20,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 5,
+            color: "white",
+            background: "rgba(0, 0, 0, 0.75)",
+            border: "1px solid #333333",
+            borderRadius: 40,
+            opacity: isControlActive ? 1 : 0,
+            visibility: isControlActive ? "visible" : "hidden",
+          }}
+        >
+          Chapter 1
+        </Box>
         <VideoPlayerCore
           chapters={chapters}
           currentChapter={currentChapter}
