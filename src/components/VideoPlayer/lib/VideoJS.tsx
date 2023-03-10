@@ -55,7 +55,7 @@ const VideoJS = (props: VideoJSProps) => {
 
   return (
     <div data-vjs-player className="vjs-theme-custom" ref={videoContainerRef}>
-      DIV <div ref={videoRef} className="vjs-16-9" />
+      <div ref={videoRef} className="vjs-16-9" />
     </div>
   );
 };
