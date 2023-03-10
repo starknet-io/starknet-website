@@ -7,13 +7,12 @@ image: /assets/starkhome01.png
 category: stark-math
 topic:
   - starknet
-short_desc: "ZK Study Club is a study group where we cover specific topics in
-  the zk space. "
+short_desc: "ZK Study Club is a study group where we cover specific topics in the zk space. "
 video:
   url: https://youtu.be/SreeFPVrGYo
   id: SreeFPVrGYo
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: OSqRdtb7YidYO0QW-TwoHXmuI54
     id: SreeFPVrGYo
     snippet:
@@ -21,30 +20,20 @@ video:
       channelId: UCYWsYz5cKw4wZ9Mpe4kuM_g
       title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
       description: >-
-        ZK Study Club is a study group where we cover specific topics in
-        the zk space. 
+        ZK Study Club is a study group where we cover specific topics in the zk space. 
 
-
-        This was our first on Crowdcast - you can see the same video with questions and chat here: https://www.crowdcast.io/e/dr--ben-sasson-how-i
-
+        This was our first on Crowdcast - you can see the same video with questions and chat here: https://www.crowdcast.io/e/dr--ben-sasson-how-i 
 
         Thanks to Eli for presenting this awesome story! 
 
+        ---------- 
 
-        ----------
-
-
-        To Follow the Zero Knowledge Podcast us at https://www.zeroknowledge.fm
-
+        To Follow the Zero Knowledge Podcast us at https://www.zeroknowledge.fm 
 
         To the listeners of Zero Knowledge Podcast, if you like what we do: 
-
-        - Follow us on Twitter - @zeroknowledgefm
-
-        - Join us on Telegram - https://t.me/joinchat/B_81tQ57-ThZg8y...
-
-        - Support our Gitcoin Grant - https://gitcoin.co/grants/329/zero-kn...
-
+        - Follow us on Twitter - @zeroknowledgefm 
+        - Join us on Telegram - https://t.me/joinchat/B_81tQ57-ThZg8y... 
+        - Support our Gitcoin Grant - https://gitcoin.co/grants/329/zero-kn... 
         - Support us on Patreon - https://www.patreon.com/zeroknowledge
       thumbnails:
         default:
@@ -70,29 +59,19 @@ video:
       localized:
         title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
         description: >-
-          ZK Study Club is a study group where we cover specific topics in
-          the zk space. 
+          ZK Study Club is a study group where we cover specific topics in the zk space. 
 
-
-          This was our first on Crowdcast - you can see the same video with questions and chat here: https://www.crowdcast.io/e/dr--ben-sasson-how-i
-
+          This was our first on Crowdcast - you can see the same video with questions and chat here: https://www.crowdcast.io/e/dr--ben-sasson-how-i 
 
           Thanks to Eli for presenting this awesome story! 
 
+          ---------- 
 
-          ----------
-
-
-          To Follow the Zero Knowledge Podcast us at https://www.zeroknowledge.fm
-
+          To Follow the Zero Knowledge Podcast us at https://www.zeroknowledge.fm 
 
           To the listeners of Zero Knowledge Podcast, if you like what we do: 
-
-          - Follow us on Twitter - @zeroknowledgefm
-
-          - Join us on Telegram - https://t.me/joinchat/B_81tQ57-ThZg8y...
-
-          - Support our Gitcoin Grant - https://gitcoin.co/grants/329/zero-kn...
-
+          - Follow us on Twitter - @zeroknowledgefm 
+          - Join us on Telegram - https://t.me/joinchat/B_81tQ57-ThZg8y... 
+          - Support our Gitcoin Grant - https://gitcoin.co/grants/329/zero-kn... 
           - Support us on Patreon - https://www.patreon.com/zeroknowledge
       defaultAudioLanguage: en
