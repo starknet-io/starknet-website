@@ -8,24 +8,18 @@ category: community-calls
 topic:
   - starknet
 short_desc: >-
-  Today we will have Sylve Chevet from Briq, Deven Mathews from
-  Nethermind, and Manor Bareli from StarkWare, talking about StarkNet
-  Governance.
+  Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance. 
 
+  Before watching, we recommend reading StarkNet’s Governance First Phase blog post: 
+  https://medium.com/starknet-foundatio... 
 
-  Before watching, we recommend reading StarkNet’s Governance First Phase blog post:
-
-  https://medium.com/starknet-foundatio...
-
-
-  Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
-
+  Will also be helpful reading the rest of the blog post about StarkNet Governance on this link: 
   https://starknet.io/governance/starkn...
 video:
   url: https://youtu.be/k7soivNSiNU
   id: k7soivNSiNU
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: CMYi5cEJ_2pMCHaKo61KnbMvhQ0
     id: k7soivNSiNU
     snippet:
@@ -33,19 +27,14 @@ video:
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet Community Call #30 | Introducing StarkNet Governance"
       description: >-
-        Join us today for our 30th StarkNet Community Call.
+        Join us today for our 30th StarkNet Community Call. 
 
+        Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance. 
 
-        Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance.
+        Before watching, we recommend reading StarkNet’s Governance First Phase blog post: 
+        https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40 
 
-
-        Before watching, we recommend reading StarkNet’s Governance First Phase blog post:
-
-        https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40
-
-
-        Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
-
+        Will also be helpful reading the rest of the blog post about StarkNet Governance on this link: 
         https://starknet.io/governance/starknet-governance-posts/
       thumbnails:
         default:
@@ -82,18 +71,13 @@ video:
       localized:
         title: "StarkNet Community Call #30 | Introducing StarkNet Governance"
         description: >-
-          Join us today for our 30th StarkNet Community Call.
+          Join us today for our 30th StarkNet Community Call. 
 
+          Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance. 
 
-          Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance.
+          Before watching, we recommend reading StarkNet’s Governance First Phase blog post: 
+          https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40 
 
-
-          Before watching, we recommend reading StarkNet’s Governance First Phase blog post:
-
-          https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40
-
-
-          Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
-
+          Will also be helpful reading the rest of the blog post about StarkNet Governance on this link: 
           https://starknet.io/governance/starknet-governance-posts/
       defaultAudioLanguage: en-US
