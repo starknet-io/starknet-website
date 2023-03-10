@@ -7,25 +7,19 @@ image: /assets/starkstruck07.jpg
 category: stark-struck
 topic:
   - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
-  ZKLend, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically. "
+short_desc: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from ZKLend, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. "
 video:
   url: https://youtu.be/Ugy6mEtHqdA
   id: Ugy6mEtHqdA
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: 5T8DDqojDCaLC5M7CxfnGK6xSQg
     id: Ugy6mEtHqdA
     snippet:
       publishedAt: 2022-12-01T07:15:10Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 7 | Henri Lieutaud with Brian and Jane
-        from ZKLend
-      description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
-        ZKLend, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.   Twitter:
-        @jane0mac @bfu_fubrian @zkLend @henrlihenrli @Starknet_Edu"
+      title: STARK Struck Podcast | Episode 7 | Henri Lieutaud with Brian and Jane from ZKLend
+      description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from ZKLend, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli @Starknet_Edu"
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Ugy6mEtHqdA/default.jpg
@@ -51,11 +45,6 @@ video:
       categoryId: "24"
       liveBroadcastContent: none
       localized:
-        title: STARK Struck Podcast | Episode 7 | Henri Lieutaud with Brian and Jane
-          from ZKLend
-        description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
-          ZKLend, on what gets them excited about technology in general,
-          blockchain in particular, and validity rollups
-          specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli
-          @Starknet_Edu"
+        title: STARK Struck Podcast | Episode 7 | Henri Lieutaud with Brian and Jane from ZKLend
+        description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from ZKLend, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli @Starknet_Edu"
       defaultAudioLanguage: en-US
