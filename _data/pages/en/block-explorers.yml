@@ -5,8 +5,10 @@ parent_page: /ecosystem/
 breadcrumbs: false
 page_last_updated: true
 blocks:
-  - type: hero
+  - 
+    type: hero
     variant: block_explorers
     title: Block explorers
     description: Explore blocks, transactions, and other metrics of Starknet.
-  - type: block_explorers
+  - 
+    type: block_explorers
