@@ -5,28 +5,32 @@ parent_page: /ecosystem/
 breadcrumbs: false
 page_last_updated: true
 blocks:
-  - type: hero
+  - 
+    type: hero
     variant: bridges
     title: Bridges & on-ramps
-    description: Bridge tokens between Starknet and other chains or exchanges, or
-      exchange tokens with fiat through on-ramp services.
-  - type: container
+    description: Bridge tokens between Starknet and other chains or exchanges, or exchange tokens with fiat through on-ramp services.
+  - 
+    type: container
     max_width: "800"
     blocks:
-      - type: markdown
+      - 
+        type: markdown
         body: >-
-          ## What are bridges?
-
+          ## What are bridges? 
 
           Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
-  - type: bridges
-  - type: container
+  - 
+    type: bridges
+  - 
+    type: container
     blocks:
-      - type: markdown
+      - 
+        type: markdown
         body: >-
-          ## What are fiat on-ramps?
-
+          ## What are fiat on-ramps? 
 
           Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
     max_width: "800"
-  - type: on_ramps
+  - 
+    type: on_ramps
