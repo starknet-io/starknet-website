@@ -1,5 +1,6 @@
 items:
-  - name: Argent X
+  - 
+    name: Argent X
     type:
       - browser_extension
     image: /assets/argent.jpg
@@ -7,7 +8,8 @@ items:
     website_url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
     description: Earn, stake and trade with low fees, high speeds & strong security.
     body: Earn, stake and trade with low fees, high speeds & strong security.
-  - name: Braavos
+  - 
+    name: Braavos
     type:
       - browser_extension
       - ios
@@ -15,10 +17,5 @@ items:
     image: /assets/braavos.jpg
     twitter: https://twitter.com/myBraavos
     website_url: https://chrome.google.com/webstore/detail/braavos-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma
-    description: Braavos was created with the goal to make a self-custodial wallet
-      which is easy and reassuring to use as a custodial solution, while not
-      compromising on the huge benefits of decentralization and self-custody of
-      assets.
-    body: Braavos was created with the goal to make a self-custodial wallet which is
-      easy and reassuring to use as a custodial solution, while not compromising
-      on the huge benefits of decentralization and self-custody of assets.
+    description: Braavos was created with the goal to make a self-custodial wallet which is easy and reassuring to use as a custodial solution, while not compromising on the huge benefits of decentralization and self-custody of assets.
+    body: Braavos was created with the goal to make a self-custodial wallet which is easy and reassuring to use as a custodial solution, while not compromising on the huge benefits of decentralization and self-custody of assets.
