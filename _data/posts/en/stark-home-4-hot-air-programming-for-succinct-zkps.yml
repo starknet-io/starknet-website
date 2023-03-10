@@ -7,21 +7,19 @@ image: /assets/starkhome04.png
 category: stark-math
 topic:
   - starknet
-short_desc: How do you map a program to a polynomial? Eli Ben-Sasson waves his
-  hands in the air to explain this concept
+short_desc: How do you map a program to a polynomial? Eli Ben-Sasson waves his hands in the air to explain this concept
 video:
   url: https://youtu.be/kHhpIvEbDy0
   id: kHhpIvEbDy0
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: 0tdtpbbUQl6agEafiV6N1hfQxio
     id: kHhpIvEbDy0
     snippet:
       publishedAt: 2020-04-20T15:39:01Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
-      description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
-        hands in the air to explain this concept
+      description: How do you map a program to a polynomial? Eli Ben-Sasson waves his hands in the air to explain this concept
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/kHhpIvEbDy0/default.jpg
@@ -40,5 +38,4 @@ video:
       liveBroadcastContent: none
       localized:
         title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
-        description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
-          hands in the air to explain this concept
+        description: How do you map a program to a polynomial? Eli Ben-Sasson waves his hands in the air to explain this concept
