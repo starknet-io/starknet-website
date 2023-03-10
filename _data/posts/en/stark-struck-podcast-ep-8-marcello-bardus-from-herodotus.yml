@@ -7,26 +7,20 @@ image: /assets/starkstruck08.jpg
 category: stark-struck
 topic:
   - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
-  Herodotus, on what gets them excited about technology in general, blockchain
-  in particular, and validity rollups specifically.  "
+short_desc: "Join Henri Lieutaud from the StarkNet team and Marcello Bardus from Herodotus, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.  "
 video:
   url: https://youtu.be/ozt6JDaFUbQ
   id: ozt6JDaFUbQ
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: Swehndy23YZ1Zq78NBUdVq8c_Lo
     id: ozt6JDaFUbQ
     snippet:
       publishedAt: 2022-12-15T07:25:30Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus
-        from Herodotus
+      title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus from Herodotus
       description: >-
-        Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
-        Herodotus, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.  
-
+        Join Henri Lieutaud from the StarkNet team and Marcello Bardus from Herodotus, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. 
 
         Twitter: @0xmarcello @HerodotusDev @henrlihenrli @Starknet_Edu
       thumbnails:
@@ -54,13 +48,9 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus
-          from Herodotus
+        title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus from Herodotus
         description: >-
-          Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
-          Herodotus, on what gets them excited about technology in general,
-          blockchain in particular, and validity rollups specifically.  
-
+          Join Henri Lieutaud from the StarkNet team and Marcello Bardus from Herodotus, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. 
 
           Twitter: @0xmarcello @HerodotusDev @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
