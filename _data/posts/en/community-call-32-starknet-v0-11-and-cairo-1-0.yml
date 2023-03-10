@@ -13,7 +13,7 @@ video:
   url: https://youtu.be/CKYM25oicTA
   id: CKYM25oicTA
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: a0CCmPiGsvUjWdWg5txpLAolj7o
     id: CKYM25oicTA
     snippet:
@@ -21,11 +21,8 @@ video:
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet Community Call #32 | StarkNet v0.11 and Cairo 1.0"
       description: >-
-        Join us for the #32 StarkNet Community Call – Builders' council
-        special edition
-
-        Cairo 1 feature parity https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md
-
+        Join us for the #32 StarkNet Community Call – Builders' council special edition 
+        Cairo 1 feature parity https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md 
         Upcoming Starknet version description https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
       thumbnails:
         default:
@@ -62,10 +59,7 @@ video:
       localized:
         title: "StarkNet Community Call #32 | StarkNet v0.11 and Cairo 1.0"
         description: >-
-          Join us for the #32 StarkNet Community Call – Builders' council
-          special edition
-
-          Cairo 1 feature parity https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md
-
+          Join us for the #32 StarkNet Community Call – Builders' council special edition 
+          Cairo 1 feature parity https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md 
           Upcoming Starknet version description https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
       defaultAudioLanguage: en-US
