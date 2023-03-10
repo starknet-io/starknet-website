@@ -7,23 +7,19 @@ image: /assets/cc13.jpg
 category: community-calls
 topic:
   - starknet
-short_desc: Join us for our 13th community call – Presenting New version of
-  Starknet Alpha, upcoming feature on version 0.9, and discussing educational
-  resources for Starknet
+short_desc: Join us for our 13th community call – Presenting New version of Starknet Alpha, upcoming feature on version 0.9, and discussing educational resources for Starknet
 video:
   url: https://youtu.be/csgPYUpjDR4
   id: csgPYUpjDR4
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: GtFBWWLQDo6iegXFnYWvTp2uvJ8
     id: csgPYUpjDR4
     snippet:
       publishedAt: 2022-05-11T01:34:32Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "Starknet Community call #13 | Version updates and educational resources"
-      description: Join us for our 13th community call – Presenting New version of
-        StarkNet Alpha, upcoming feature on version 0.9, and discussing
-        educational resources for StarkNet
+      description: Join us for our 13th community call – Presenting New version of StarkNet Alpha, upcoming feature on version 0.9, and discussing educational resources for StarkNet
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/csgPYUpjDR4/default.jpg
@@ -50,7 +46,5 @@ video:
       liveBroadcastContent: none
       localized:
         title: "Starknet Community call #13 | Version updates and educational resources"
-        description: Join us for our 13th community call – Presenting New version of
-          StarkNet Alpha, upcoming feature on version 0.9, and discussing
-          educational resources for StarkNet
+        description: Join us for our 13th community call – Presenting New version of StarkNet Alpha, upcoming feature on version 0.9, and discussing educational resources for StarkNet
       defaultAudioLanguage: en-US
