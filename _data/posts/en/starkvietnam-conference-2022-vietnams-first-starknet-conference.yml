@@ -8,20 +8,14 @@ category: community-and-events
 topic:
   - starknet
 short_desc: >-
-  STARKVietnam is a developer-oriented conference presented by
-  Topology to help grow the StarkNet ecosystem in Vietnam and greater South East
-  Asia. STARKVietnam is the first StarkNet conference in South East Asia and is
-  honored to kickstart the movement in Vietnam for the first time. The
-  conference is filled with exciting workshops to learn about Cairo and
-  StarkNet.
-
+  STARKVietnam is a developer-oriented conference presented by Topology to help grow the StarkNet ecosystem in Vietnam and greater South East Asia. STARKVietnam is the first StarkNet conference in South East Asia and is honored to kickstart the movement in Vietnam for the first time. The conference is filled with exciting workshops to learn about Cairo and StarkNet. 
 
   Pioneers of the StarkNet ecosystem will be there to share their experiences with ambitious builders from the region.
 video:
   url: https://youtu.be/fwqRqZ-2NaM?t=1176
   id: fwqRqZ-2NaM
   data:
-    kind: youtube#video
+    kind: 'youtube#video'
     etag: KYaklyCgtERwQUTg11TSMsQ4Zk8
     id: fwqRqZ-2NaM
     snippet:
@@ -29,16 +23,9 @@ video:
       channelId: UCqbWfFjh7mlH1rjoRebHo-g
       title: STARKVietnam Conference 2022, Vietnam's First StarkNet Conference
       description: >-
-        STARKVietnam is a developer-oriented conference presented by
-        Topology to help grow the StarkNet ecosystem in Vietnam and greater
-        South East Asia. STARKVietnam is the first StarkNet conference in South
-        East Asia and is honored to kickstart the movement in Vietnam for the
-        first time. The conference is filled with exciting workshops to learn
-        about Cairo and StarkNet.
+        STARKVietnam is a developer-oriented conference presented by Topology to help grow the StarkNet ecosystem in Vietnam and greater South East Asia. STARKVietnam is the first StarkNet conference in South East Asia and is honored to kickstart the movement in Vietnam for the first time. The conference is filled with exciting workshops to learn about Cairo and StarkNet. 
 
-
-        Pioneers of the StarkNet ecosystem will be there to share their experiences with ambitious builders from the region.
-
+        Pioneers of the StarkNet ecosystem will be there to share their experiences with ambitious builders from the region. 
 
         Date: September 25th, 2022
       thumbnails:
@@ -68,16 +55,9 @@ video:
       localized:
         title: STARKVietnam Conference 2022, Vietnam's First StarkNet Conference
         description: >-
-          STARKVietnam is a developer-oriented conference presented by
-          Topology to help grow the StarkNet ecosystem in Vietnam and greater
-          South East Asia. STARKVietnam is the first StarkNet conference in
-          South East Asia and is honored to kickstart the movement in Vietnam
-          for the first time. The conference is filled with exciting workshops
-          to learn about Cairo and StarkNet.
+          STARKVietnam is a developer-oriented conference presented by Topology to help grow the StarkNet ecosystem in Vietnam and greater South East Asia. STARKVietnam is the first StarkNet conference in South East Asia and is honored to kickstart the movement in Vietnam for the first time. The conference is filled with exciting workshops to learn about Cairo and StarkNet. 
 
-
-          Pioneers of the StarkNet ecosystem will be there to share their experiences with ambitious builders from the region.
-
+          Pioneers of the StarkNet ecosystem will be there to share their experiences with ambitious builders from the region. 
 
           Date: September 25th, 2022
       defaultAudioLanguage: en
