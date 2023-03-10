@@ -7,10 +7,7 @@ contact:
   logo: /assets/aspect.jpeg
 job:
   title: Software Engineer
-  description: "Aspect is an NFT marketplace built on StarkNet, the most scalable
-    & secure layer two blockchain on Ethereum. We are looking for a software
-    engineer to work on one or multiple of the following: frontend, backend and
-    smart contracts."
+  description: "Aspect is an NFT marketplace built on StarkNet, the most scalable & secure layer two blockchain on Ethereum. We are looking for a software engineer to work on one or multiple of the following: frontend, backend and smart contracts."
   role: Software engineer
   apply_url: "mailto:jobs@aspect.co "
   type: full_time
