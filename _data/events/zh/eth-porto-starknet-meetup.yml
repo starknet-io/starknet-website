@@ -1,4 +1,4 @@
-type: community_event
+type: 社区事件
 name: Eth Porto Starknet见面会
 description: 加入我们参加葡萄牙的Starknet Meetup首届活动，讨论ZK-Rollups、Starknet新闻以及正在建设中的当前项目。
 url: 网址：https://www.meetup.com/starknet-portugal/events/291772726/
@@ -10,6 +10,6 @@ tags:
   - 加密货币
   - 区块链
   - starknet
-  - portugal
-  - porto
-  - europe
+  - 葡萄牙
+  - 波尔图
+  - 欧洲
