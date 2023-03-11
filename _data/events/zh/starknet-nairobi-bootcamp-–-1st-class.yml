@@ -1,14 +1,14 @@
-type: conference
-name: StarkNet Nairobi Bootcamp – 1st Class
-description: Coming soon
-url: https://docs.google.com/forms/d/e/1FAIpQLSdxbVif8-C2Q4OC36-C17e-fi8MgfqlgTHlCSXeuyx6x_FpAw/viewform
-start_date: 2023-02-27T18:14:14.042Z
+type: 会议
+name: StarkNet Nairobi训练营-第一期班级
+description: 即将开始
+url: 表格报名地址：https://docs.google.com/forms/d/e/1FAIpQLSdxbVif8-C2Q4OC36-C17e-fi8MgfqlgTHlCSXeuyx6x_FpAw/viewform
+start_date: 日期：2023-02-27T18:14:14.042Z
 end_date: ""
 image: /assets/sn.png
-location: online_remote
+location: 在线_远程
 tags:
-  - crypto
-  - blockchain
+  - 加密货币
+  - 区块链
   - Starknet
-  - Nairobi
-  - Africa
+  - 内罗毕
+  - 非洲
