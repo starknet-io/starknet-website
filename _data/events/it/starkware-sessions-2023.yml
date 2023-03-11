@@ -1,0 +1,17 @@
+city: Tel Aviv
+type: conference
+name: Starkware sessions 2023
+description: Bringing together the Ethereum community for a two-day event of talks, panels, workshops, roundtables, showcasing, and more.
+url: https://starkwaresessions.co/
+start_date: 2023-02-05T00:00:00+00:00
+end_date: 2023-02-06T00:00:00+00:00
+location: asia
+country: Israel
+image: /assets/logo_starkware_400x400.png
+tags:
+  - crypto
+  - blockchain
+  - starknet
+  - Tel-Aviv
+  - Israel
+  - Asia
