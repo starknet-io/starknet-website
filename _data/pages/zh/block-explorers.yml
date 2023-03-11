@@ -1,14 +1,14 @@
 id: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
-title: Block explorers
+title: 区块浏览器
 template: landing
-parent_page: /ecosystem/
+parent_page: /生态系统/
 breadcrumbs: false
 page_last_updated: true
 blocks:
   - 
-    type: hero
-    variant: block_explorers
-    title: Block explorers
-    description: Explore blocks, transactions, and other metrics of Starknet.
+    type: 英雄
+    variant: 区块链浏览器
+    title: 区块浏览器
+    description: 探索Starknet的区块、交易和其他指标。
   - 
-    type: block_explorers
+    type: 区块链浏览器
