@@ -1,12 +1,12 @@
-type: 会议
-name: 康奈尔区块链会议 2023
-description: 去年我们的第二届年度会议吸引了超过300位行业领袖、顶尖学者、热情的学生、投资者和监管机构。今年的会议将再次在罗斯福岛上美妙的康奈尔科技校园举行。
-url: 网址：https://www.cornellblockchainconference.com/
-start_date: 时间：2023-03-02T10:31:06.727Z
-end_date: 时间：2023-04-21T09:31:06.731Z
+type: conference
+name: Cornell Blockchain Conference 2023
+description: The second iteration of our annual conference last year attracted over 300 industry leaders, top academics, passionate students, investors, and regulators. This year's conference will once again be held at the wonderful Cornell Tech campus on Roosevelt Island.
+url: https://www.cornellblockchainconference.com/
+start_date: 2023-03-02T10:31:06.727Z
+end_date: 2023-04-21T09:31:06.731Z
 image: /assets/cornell-blockchain-week.jpg
-location: 美国
+location: usa
 tags:
-  - 加密货币
-  - 区块链
-  - 纽约
+  - crypto
+  - blockchain
+  - New york
