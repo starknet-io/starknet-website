@@ -1,16 +1,16 @@
-type: conference
-name: In the name of AA
-description: Several talks on the topic of account abstraction.
-url: https://www.eventbrite.com/e/in-the-name-of-account-abstraction-tickets-532272440197
-start_date: 2023-03-04T18:09:06.003Z
+type: 会议
+name: 以AA的名义：
+description: 关于账户抽象专题的若干次讨论。
+url: 网址：https://www.eventbrite.com/e/in-the-name-of-account-abstraction-tickets-532272440197
+start_date: 时间：2023-03-04T18:09:06.003Z
 end_date: ""
 image: /assets/aa_denver.png
-location: usa
+location: 美国
 tags:
-  - crypto
-  - blockchain
-  - account abstraction
+  - 加密货币
+  - 区块链
+  - 帐户摘要
   - Starknet
-  - Denver
-  - Colorado
-  - USA
+  - 丹佛
+  - 科罗拉多州
+  - 美国
