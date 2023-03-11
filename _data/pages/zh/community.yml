@@ -1,0 +1,49 @@
+id: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+title: 社区
+template: landing
+breadcrumbs: true
+page_last_updated: false
+blocks:
+  - 
+    type: hero
+    title: 社区中心
+    description: 加入一个由开发者、爱好者和探索者组成的社区，共同努力构建Starknet并扩展以太坊。
+    variant: 社区
+  - 
+    type: flex_layout
+    heading_variant: h3
+    base: 1
+    md: 2
+    lg: 3
+    heading: "如何参与？ "
+    blocks:
+      - 
+        type: image_icon_link_card
+        color: blue-default
+        title: 社区线上会议
+        description: 在线上会议和社交媒体中和对Starknet感兴趣的爱好者们互动。
+        icon: /assets/online-communities.svg
+        link:
+          page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
+          custom_title: View
+      - 
+        type: image_icon_link_card
+        color: blue-default
+        title: Community events
+        description: 查找近期的活动，以与Starknet建设者联系。
+        icon: /assets/community-events.svg
+        link:
+          custom_internal_link: /events/
+          custom_title: 查看
+      - 
+        type: image_icon_link_card
+        color: blue-default
+        title: "生态工作 "
+        description: 和构建团队的人一起探索在生态系统中的发展机遇。
+        icon: /assets/jobs.svg
+        link:
+          custom_icon: ""
+          custom_title: View
+          custom_internal_link: /jobs/
+  - 
+    type: community_events
