@@ -1,17 +1,17 @@
 id: 9ea52974-834b-41f7-ab32-d9bcf0c6ebb7
 contact:
-  name: ZKX
-  email: support@zkx.fi?
-  twitter: https://twitter.com/zkxprotocol
-  discord: https://discord.com/invite/7YrNHdwNyu
-  logo: /assets/zkx.jpeg
+  name: 项目名：ZKX
+  email: 邮箱地址：support@zkx.fi?
+  twitter: 推特链接：https://twitter.com/zkxprotocol
+  discord: discrod链接：https://discord.com/invite/7YrNHdwNyu
+  logo: 项目照片：/assets/zkx.jpeg
 job:
   required_experience: ""
   scope: ""
-  location: online_remote
-  role: "Solidity, Cairo "
-  title: Senior Software Developer – Solidity / Cairo
+  location: 在线_远程
+  role: "团结，开罗。 "
+  title: 高级软件开发人员 - Solidity / Cairo
   how_to_apply: ""
-  type: full_time
-  description: ZKX is the first permissionless protocol for derivatives built on StarkNet. We’re building a decentralized exchange that lets users trade derivatives using reward mechanisms, liquidity provisioning, and simplified access to complex trading strategies. We’re passionate about democratizing access to global yields so anyone can invest in them.
-  apply_url: https://apply.workable.com/zkx/?not_found=true
+  type: 全职
+  description: ZKX是建立在StarkNet上的第一个无需许可的衍生品协议。我们正在构建一个去中心化交易所，让用户使用奖励机制、流动性提供和简化的复杂交易策略来交易衍生品。我们热衷于民主化全球收益的获取方式，以便任何人都可以进行投资。
+  apply_url: 网址：https://apply.workable.com/zkx/?not_found=true
