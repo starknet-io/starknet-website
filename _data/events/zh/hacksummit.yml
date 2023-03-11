@@ -1,0 +1,12 @@
+type: 会议
+name: 黑客峰会
+description: 一场区块链开发者的虚拟会议，汇聚了我们行业的先驱，并支持良好事业。
+url: 网址：http://2023.hacksummit.org/
+start_date: 时间：2023-03-31T09:27:04.521Z
+end_date: 时间：2023-04-02T09:27:04.535Z
+image: /assets/hacksummit.jpg
+location: 在线远程连接
+tags:
+  - 加密货币
+  - 区块链
+  - starknet
