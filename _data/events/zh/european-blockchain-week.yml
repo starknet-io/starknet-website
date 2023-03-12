@@ -1,20 +1,20 @@
-city: Barcelona
-type: conference
-name: European Blockchain Week
-description: The most influential blockchain event in Europe.
-url: https://eblockchainconvention.com/
-start_date: 2023-02-15T00:00:00+00:00
-end_date: 2023-02-17T00:00:00+00:00
-location: europe
-country: Spain
-image: https://pbs.twimg.com/profile_images/1570093772024778753/dVwZONhk_400x400.jpg
+city: 巴塞罗那
+type: 会议
+name: 欧洲区块链周
+description: 成为欧洲最有影响力的区块链活动的一部分：
+url: 网址：https://eblockchainconvention.com/
+start_date: 时间：2023-02-15T00:00:00+00:00
+end_date: 时间：2023-02-24T00:00+00:00
+location: 欧洲
+country: 西班牙
+image: 网址：https://pbs.twimg.com/profile_images/1570093772024778753/dVwZONhk_400x400.jpg
 tags:
-  - crypto
-  - blockchain
+  - 加密货币
+  - 区块链
   - DeFi
   - NFTs
-  - Web3
+  - 网站3
   - zkProofs
-  - Barcelona
-  - Spain
-  - Europe
+  - 巴塞罗那
+  - 西班牙
+  - 欧洲
