@@ -1,70 +1,70 @@
 id: c1050a37-5af0-4277-aabd-b681ffe2cda5
-title: Developers
+title: 开发人员
 template: landing
 breadcrumbs: true
 page_last_updated: false
 blocks:
   - 
     type: hero
-    title: Developers Hub
-    description: A manual and resource list for builders, by builders.
-    variant: build
+    title: 开发者兴趣中心
+    description: 构造师的手册和资源清单，由构造师编写。
+    variant: 构建...
   - 
-    type: flex_layout
+    type: 弹性布局
     heading_variant: h3
     base: 1
     md: 2
     lg: 3
-    heading: "Get started "
+    heading: "开始使用 "
     blocks:
       - 
         type: image_icon_link_card
         color: blue-default
-        title: Read the docs
-        description: Read the official Starknet documentation to build your first contracts and dapps.
+        title: 阅读文档
+        description: 阅读官方的Starknet文档，以构建您的第一个合约和dapp。
         icon: /assets/docs.svg
         link:
-          custom_external_link: https://docs.starknet.io/
-          custom_title: View
+          custom_external_link: 表格链接：https://docs.starknet.io/
+          custom_title: 查看
       - 
         type: image_icon_link_card
         color: blue-default
-        title: "Learn through tutorials "
-        description: Learn from Starknet's community of developers and technologists.
+        title: "从教程学习 "
+        description: 从Starknet的开发者和技术人员社区中学习。
         icon: /assets/tutorials.svg
         link:
           custom_external_link: ""
           custom_internal_link: /tutorials/
-          custom_title: View
+          custom_title: 查看
       - 
         type: image_icon_link_card
         color: blue-default
-        title: "Set up a local environment "
-        description: Learn how to get your dev environment up and running so you can start building.
+        title: "设置本地环境 "
+        description: 学习如何搭建开发环境，以便开始构建。
         icon: /assets/local-environment.svg
         link:
-          custom_external_link: https://docs.starknet.io/documentation/getting_started/setting_up_the_environment/
-          custom_title: View
+          custom_external_link: 表格地址：https://docs.starknet.io/documentation/getting_started/setting_up_the_environment/
+          custom_title: 查看
   - 
     type: flex_layout
     heading_variant: h3
     base: 1
     md: 2
     lg: 3
-    heading: Courses
+    heading: 课程
     blocks:
       - 
         type: image_icon_link_card
         color: purple
-        title: "Starknet ByteSized Series "
-        description: A series of short videos that cover the basic concepts of Starknet.
+        title: "Starknet 字节系列 "
+        description: 一系列简短的视频，涵盖了Starknet的基本概念。
         icon: /assets/orange.svg
         link:
-          custom_title: View
+          custom_title: 查看
           custom_internal_link: /tutorials/bytesized_series
       - 
         type: image_icon_link_card
-        color: peach
+        color: 节点数
         title: Starknet 101
         description: Get up and running developing on Starknet through this series of video tutorials.
         icon: /assets/green.svg
