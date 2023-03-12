@@ -1,14 +1,14 @@
-id: 7027c387-6558-475e-97e6-6631442a2bd1
+id: 钥匙：7027c387-6558-475e-97e6-6631442a2bd1
 contact:
-  name: Aspect
-  discord: https://discord.gg/aR2U7KtbgD
-  twitter: https://twitter.com/aspectdotco
-  email: "jobs@aspect.co "
+  name: 项目：Aspect
+  discord: discrod链接：https://discord.gg/aR2U7KtbgD
+  twitter: 推特链接：https://twitter.com/aspectdotco
+  email: "邮箱：jobs@aspect.co "
   logo: /assets/aspect.jpeg
 job:
-  title: Software Engineer
-  description: "Aspect is an NFT marketplace built on StarkNet, the most scalable & secure layer two blockchain on Ethereum. We are looking for a software engineer to work on one or multiple of the following: frontend, backend and smart contracts."
-  role: Software engineer
-  apply_url: "mailto:jobs@aspect.co "
-  type: full_time
-  location: online_remote
+  title: 软件工程师
+  description: "Aspect是一个建立在StarkNet上的NFT市场，它是以太坊上最可扩展和安全的第二层区块链。我们正在寻找一名软件工程师来处理以下一个或多个方面：前端、后端和智能合约。"
+  role: 软件工程师
+  apply_url: "发送邮件至：jobs@aspect.co "
+  type: 全职
+  location: 在线_远程
