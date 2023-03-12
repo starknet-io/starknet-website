@@ -1,16 +1,16 @@
-type: conference
-name: "Interop Summit "
-description: Interop Summit is hosting the ecosystems, applications, founders and builders at the forefront of the interchain future.
-url: https://interopsummit.com/
-start_date: 2023-02-27T17:58:41.577Z
-end_date: 2023-02-28T17:58:41.581Z
+type: 会议
+name: "Interop峰会 "
+description: 机构会议正在举办生态系统、应用程序、创始人和建设者等处于跨链未来前沿的活动。
+url: 网址：https://interopsummit.com/
+start_date: 时间：2023-02-27T17:58:41.577Z
+end_date: 时间：2023-02-28T17：58：41.581Z
 image: /assets/dfs5fefh_400x400.png
-location: usa
+location: 美国
 tags:
-  - crypto
-  - blockchain
-  - Ethereum
+  - 加密货币
+  - 区块链
+  - 以太坊链
   - Starknet
-  - Denver
-  - Colorado
-  - USA
+  - 丹佛
+  - 科罗拉多州
+  - 美国
