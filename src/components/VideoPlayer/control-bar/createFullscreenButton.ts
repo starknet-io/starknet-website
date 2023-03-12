@@ -1,3 +1,5 @@
+import { FULLSCREEN_ORDER } from "./contants";
+
 export const createFullscreenButton = ({
   player,
   onFullscreen,
@@ -6,7 +8,11 @@ export const createFullscreenButton = ({
   onFullscreen: () => void;
 }) => {
   // Adding button to the control bar
-  const fullscreenButton = player.controlBar.addChild("button", {}, 2);
+  const fullscreenButton = player.controlBar.addChild(
+    "button",
+    {},
+    FULLSCREEN_ORDER
+  );
   fullscreenButton.addClass("vjs-button-fullscreen");
 
   // Create our button's DOM Component

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 
 export function useToggleFullscreen<T extends HTMLDivElement>() {
@@ -16,6 +16,22 @@ export function useToggleFullscreen<T extends HTMLDivElement>() {
   };
 
   useHotkeys("f", toggleFullscreen);
+
+  useEffect(() => {
+    const updateFullscreenState = () => {
+      console.log("updateFullscreenState");
+      if (!document.fullscreenElement) {
+        console.log("inside if");
+        setIsFullscreen(false);
+      }
+    };
+
+    document.addEventListener("fullscreenchange", updateFullscreenState);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", updateFullscreenState);
+    };
+  }, []);
 
   return { toggleFullscreen, isFullscreen, ref };
 }

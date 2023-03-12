@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 import { useMeasure } from "react-use";
-import { useToggleFullscreen } from "./hooks/useVideoFullscreen";
+import { usePlayerPositionStyle } from "./hooks/usePlayerPositionStyle";
+import { useToggleFullscreen } from "./hooks/useToggleFullscreen";
 import { Chapter } from "./utils";
 
 import { VideoPlayerCore } from "./VideoPlayerCore";
@@ -23,6 +24,7 @@ export function VideoPlayerInWebsite({
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
   const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
   const { ref, isFullscreen, toggleFullscreen } = useToggleFullscreen();
+  const positionStyle = usePlayerPositionStyle();
 
   return (
     <Box
@@ -34,23 +36,32 @@ export function VideoPlayerInWebsite({
       flexDir={{ base: "column", lg: "row" }}
     >
       <div
-        style={{ position: "relative", paddingBottom: "56.25%", flex: 1 }}
+        style={
+          isFullscreen
+            ? { position: "absolute", inset: 0, flex: 1 }
+            : { position: "relative", paddingBottom: "56.25%", flex: 1 }
+        }
         ref={ref}
       >
         <div
-          style={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            // top: isFullscreen ? "50%" : "0",
-            // left: isFullscreen ? "50%" : "0",
-            // transform: isFullscreen
-            //   ? "translateY(-50%) translateX(-50%)"
-            //   : "translateY(0) translateX(0)",
-            // left: 0,
-            width: "100%",
-            // ...positionStyle,
-          }}
+          style={
+            isFullscreen
+              ? {
+                  position: "absolute",
+                  width: positionStyle.width,
+                  height: positionStyle.height,
+                  top: "50%",
+                  left: "50%",
+                  transform: "translateX(-50%) translateY(-50%)",
+                }
+              : {
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  height: "100%",
+                  width: "100%",
+                }
+          }
         >
           <VideoPlayerCore
             chapters={chapters}

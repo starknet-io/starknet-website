@@ -5,7 +5,7 @@ import { useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 
 import { usePlayerPositionStyle } from "./hooks/usePlayerPositionStyle";
-import { useToggleFullscreen } from "./hooks/useVideoFullscreen";
+import { useToggleFullscreen } from "./hooks/useToggleFullscreen";
 import { VideoPlayerCore } from "./VideoPlayerCore";
 
 type VideoPlayerEmbedProps = {
@@ -22,7 +22,7 @@ export function VideoPlayerEmbed({
   const [isControlActive, setIsControlActive] = useState(false);
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
   const positionStyle = usePlayerPositionStyle();
-  const { ref } = useToggleFullscreen<HTMLDivElement>();
+  const { ref, toggleFullscreen } = useToggleFullscreen<HTMLDivElement>();
 
   return (
     <Box position="absolute" inset={0} ref={ref} bg="#000">
@@ -31,7 +31,8 @@ export function VideoPlayerEmbed({
         top="50%"
         left="50%"
         style={{
-          ...positionStyle,
+          width: positionStyle.width,
+          height: positionStyle.height,
           transform: "translateX(-50%) translateY(-50%)",
         }}
       >
@@ -61,6 +62,7 @@ export function VideoPlayerEmbed({
             onChapterChange?.(ch);
           }}
           onControlActiveChange={(isActive) => setIsControlActive(isActive)}
+          onFullscreen={toggleFullscreen}
         />
       </Box>
     </Box>

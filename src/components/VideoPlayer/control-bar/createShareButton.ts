@@ -1,3 +1,5 @@
+import { SHARE_ORDER } from "./contants";
+
 export const createShareButton = ({
   player,
   onShare,
@@ -6,7 +8,7 @@ export const createShareButton = ({
   onShare: () => void;
 }) => {
   // Adding button to the control bar
-  const shareButton = player.controlBar.addChild("button", {}, 2);
+  const shareButton = player.controlBar.addChild("button", {}, SHARE_ORDER);
   shareButton.addClass("vjs-button-share");
 
   // Create our button's DOM Component
