@@ -1,12 +1,12 @@
-type: conference
-name: Paris Blockchain Week Summit
-description: The Paris Blockchain Week Summit is a two-day event that explores the latest developments in blockchain technology and its potential applications across a range of industries.
-url: 'https://www.parisblockchainweek.com/summit#speakers'
-start_date: 2023-03-20T09:50:05.569Z
-end_date: 2023-03-24T09:50:05.575Z
+type: 会议
+name: 巴黎区块链周首脑会议
+description: 巴黎区块链周峰会是一个为期两天的活动，探讨了区块链技术的最新发展及其在各行业中的潜在应用。
+url: '网址：https://www.parisblockchainweek.com/summit#speakers'
+start_date: 日期：2023-03-20T09:50:05.569Z
+end_date: 日期：2023-03-24T09:50:05.575Z
 image: /assets/paris_blockchain_week-summit-2x.png
-location: europe
+location: 欧洲
 tags:
-  - crypto
-  - blockchain
-  - Paris
+  - 加密货币
+  - 区块链
+  - 巴黎
