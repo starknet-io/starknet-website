@@ -1,13 +1,13 @@
-type: conference
+type: 会议
 name: HBC2023
-description: A top student-run blockchain innovation hub.
-url: https://www.harvardblockchain.xyz/
-start_date: 2023-03-30T09:10:27.037Z
-end_date: 2023-04-02T09:10:27.043Z
+description: 一个由顶尖学生运营的区块链创新中心。
+url: 网址：https://www.harvardblockchain.xyz/
+start_date: 时间：2023-03-30T09:10:27.037Z
+end_date: 时间：2023-04-02T09:10:27.043Z
 image: /assets/hbc23-2x.png
-location: usa
+location: 美国
 tags:
-  - crypto
-  - blockchain
-  - Harvard
+  - 加密货币
+  - 区块链
+  - 哈佛
   - web3
