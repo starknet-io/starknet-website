@@ -1,36 +1,36 @@
 id: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
-title: Bridges & on-ramps
+title: 桥梁和匝道
 template: landing
-parent_page: /ecosystem/
+parent_page: /生态系统/
 breadcrumbs: false
 page_last_updated: true
 blocks:
   - 
-    type: hero
-    variant: bridges
-    title: Bridges & on-ramps
-    description: Bridge tokens between Starknet and other chains or exchanges, or exchange tokens with fiat through on-ramp services.
+    type: 英雄
+    variant: 桥
+    title: 桥梁和匝道
+    description: 在Starknet和其他链或交易所之间桥接代币，或通过入口服务将代币兑换成法定货币。
   - 
-    type: container
+    type: 容器
     max_width: "800"
     blocks:
       - 
         type: markdown
         body: >-
-          ## What are bridges? 
+          ## 什么是桥接？
 
-          Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+          桥接允许用户在加密生态系统之间移动资产，例如区块链或交易所。
   - 
-    type: bridges
+    type: 桥
   - 
-    type: container
+    type: 容器
     blocks:
       - 
         type: markdown
         body: >-
-          ## What are fiat on-ramps? 
+          ## 什么是法定货币兑换通道？
 
-          Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+          法定货币兑换通道是一种服务提供商，可以让人们将法定货币兑换成加密货币。
     max_width: "800"
   - 
-    type: on_ramps
+    type: 入口坡道
