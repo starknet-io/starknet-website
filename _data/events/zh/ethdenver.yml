@@ -1,18 +1,18 @@
-city: Denver
-type: conference
+city: 丹佛
+type: 会议
 name: ETHDenver
-description: ETHDenver is a community-owned innovation festival.
-url: https://www.ethdenver.com/
-start_date: 2023-02-24T00:00:00+00:00
+description: ETHDenver是一个由社区所有的创新节日。
+url: 网址：https://www.ethdenver.com/
+start_date: 2023-02-24T00:00+00:00
 end_date: 2023-03-05T00:00:00+00:00
-location: usa
+location: 美国
 country: Usa
 image: /assets/logo_ethdenver_400x400.png
 tags:
-  - crypto
-  - blockchain
+  - 加密货币
+  - 区块链
   - Ethereum
   - Starknet
-  - Denver
-  - Colorado
-  - USA
+  - 丹佛
+  - 科罗拉多
+  - 美国
