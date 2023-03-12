@@ -1,13 +1,13 @@
 id: 69447136-1854-49d5-8808-5dddb902f94f
 contact:
-  name: Paradigm
-  email: jobs@paradigm.co
-  twitter: https://twitter.com/tradeparadigm
+  name: 项目名：Paradigm
+  email: 邮箱：jobs@paradigm.co
+  twitter: 推特链接：https://twitter.com/tradeparadigm
   logo: /assets/paradigm.jpg
 job:
-  title: Senior Blockchain Developer
-  description: 7+ years of backend engineering experience, ideally building products from ideation to launch with a strong engineering team.
-  role: "Blockchain developer "
-  type: full_time
-  location: online_remote
-  apply_url: https://boards.greenhouse.io/paradigm62/jobs/4495567004
+  title: 高级区块链开发者
+  description: 具有7年以上的后端工程经验，最好能够与强大的工程团队一起从构思到发布构建产品。
+  role: "高级区块链开发者 "
+  type: 全职
+  location: 在线_远程
+  apply_url: 投递简历网址：https://boards.greenhouse.io/paradigm62/jobs/4495567004
