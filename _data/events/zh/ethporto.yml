@@ -1,15 +1,15 @@
-type: 会议
-name: 波尔图——Eth会议
-description: ETHPorto是一个独立组织的活动，包括会议、工作坊和48小时黑客马拉松比赛。
-url: 网址：https://ethporto.org/
-start_date: 时间：2023-03-16T08:24:09.211Z
-end_date: 时间：2023-03-18T08:24:09.219Z
+type: conference
+name: EthPorto
+description: ETHPorto is an independently organized event with a conference, workshops and a 48-hour hackathon running in parallel.
+url: https://ethporto.org/
+start_date: 2023-03-16T08:24:09.211Z
+end_date: 2023-03-18T08:24:09.219Z
 image: /assets/ethporto.jpg
-location: 欧洲
+location: europe
 tags:
-  - 加密货币
-  - 区块链
-  - 以太坊链
-  - 波尔图
-  - 葡萄牙
-  - 欧洲
+  - Crypto
+  - Blockchain
+  - Ethereum
+  - Porto
+  - Portugal
+  - Europe
