@@ -1,7 +1,8 @@
-import { redirect } from "next/navigation";
+import { VideoPlayer } from "@ui/VideoPlayer/VideoPlayer";
+// import { redirect } from "next/navigation";
 
 export default function Index() {
-  redirect("/en");
+  // redirect("/en");
 
-  return <></>;
+  return <VideoPlayer />;
 }
