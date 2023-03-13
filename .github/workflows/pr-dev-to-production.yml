@@ -12,6 +12,26 @@ jobs:
       uses: repo-sync/pull-request@v2
       with:
         pr_title: "Merge dev into production"
+        pr_body: |
+          # Deployment Checklist
+
+          ## Content Review Checklist
+
+          ignore this checklist if there are no content changes
+
+          - [ ]  wait for deployment to finish
+          - [ ]  make sure all content changes are final
+          - [ ]  review content changes
+          - [ ]  check the deployment to see changes are applied correctly
+
+          ## Code Review Checklist
+
+          ignore this checklist if there are only content changes
+
+          - [ ]  wait for deployment to finish
+          - [ ]  review code changes that are pushed directly to dev and have not been reviewed as part of other PR (if any)
+              - [ ]  get a confirmation from author of changes that it's final
+              - [ ]  check the deployment to see changes are applied correctly
         pr_allow_empty: false
         pr_label: "auto-pr"
         destination_branch: "production"
