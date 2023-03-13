@@ -1,9 +1,8 @@
 "use client";
 
-import { Box } from "@chakra-ui/react";
 import React, { Ref, useEffect, useRef, useState } from "react";
 import "react-scrubber/lib/scrubber.css";
-import VideoJS from "./lib/VideoJS";
+import VideoJS from "../lib/VideoJS";
 
 import { createShareButton, createFullscreenButton } from "./control-bar";
 import Player from "video.js/dist/types/player";

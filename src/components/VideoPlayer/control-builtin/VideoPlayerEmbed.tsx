@@ -4,8 +4,8 @@ import { Box } from "@chakra-ui/react";
 import { useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 
-import { usePlayerPositionStyle } from "./hooks/usePlayerPositionStyle";
-import { useToggleFullscreen } from "./hooks/useToggleFullscreen";
+import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
+import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import { VideoPlayerCore } from "./VideoPlayerCore";
 
 type VideoPlayerEmbedProps = {
@@ -25,7 +25,7 @@ export function VideoPlayerEmbed({
   const { ref, toggleFullscreen } = useToggleFullscreen<HTMLDivElement>();
 
   return (
-    <Box position="absolute" inset={0} ref={ref} bg="#000">
+    <Box position="absolute" inset={0} ref={ref} bg="#000" overflow="hidden">
       <Box
         position="absolute"
         top="50%"

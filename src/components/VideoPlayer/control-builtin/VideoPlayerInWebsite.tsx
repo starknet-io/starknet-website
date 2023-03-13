@@ -5,9 +5,9 @@ import Image from "next/image";
 import { useState } from "react";
 import "react-scrubber/lib/scrubber.css";
 import { useMeasure } from "react-use";
-import { usePlayerPositionStyle } from "./hooks/usePlayerPositionStyle";
-import { useToggleFullscreen } from "./hooks/useToggleFullscreen";
-import { Chapter } from "./utils";
+import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
+import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
+import { Chapter } from "../utils";
 
 import { VideoPlayerCore } from "./VideoPlayerCore";
 
