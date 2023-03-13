@@ -12,7 +12,7 @@ export const NavLink = ({ href, label }: Props) => {
   return (
     <Link variant="menu" href={href}>
       <Stack spacing="2" direction="row" p="0">
-        <Text color="navlink-fg" fontSize="sm" fontWeight="medium">
+        <Text color="navlink-fg" variant="cardBody" fontWeight="medium">
           {label}
         </Text>
       </Stack>

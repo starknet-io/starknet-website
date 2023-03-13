@@ -1,5 +1,6 @@
 "use client";
-import { Box, Stack, Divider, Text, Container } from "src/libs/chakra-ui";
+import { Box, Stack, Divider } from "src/libs/chakra-ui";
+import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
 
 import React from "react";
@@ -19,7 +20,6 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
       <Stack spacing="3" pb={6}>
         <Box>
           <Heading
-            as="h2"
             variant="h2"
             fontSize={{ base: "32px", md: "48px" }}
             lineHeight={{ base: "1.5em", md: "1.5em" }}
@@ -30,7 +30,7 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
             {title}
           </Heading>
           {description && (
-            <Text color="muted" fontSize="md" pb={8}>
+            <Text color="muted" variant="body" pb={8}>
               {description}
             </Text>
           )}

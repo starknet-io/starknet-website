@@ -78,7 +78,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <Heading mt="-24px" color="heading-navy-fg" as="h4" variant="h4">
+              <Heading mt="-24px" color="heading-navy-fg" variant="h4">
                 Filter
               </Heading>
               <CustomType />
@@ -106,7 +106,7 @@ function CustomDifficulty() {
 
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Level
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -137,7 +137,7 @@ function CustomType() {
 
   return (
     <Box>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -167,7 +167,7 @@ function CustomTags() {
 
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Tags
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -222,7 +222,7 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Courses / series
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -259,7 +259,7 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 
 //   return (
 //     <Box mt={8} maxHeight="300px" overflowY="auto">
-//       <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+//       <Heading variant="h6" mb={4}>
 //         Tags
 //       </Heading>
 //       <VStack dir="column" alignItems="stretch">

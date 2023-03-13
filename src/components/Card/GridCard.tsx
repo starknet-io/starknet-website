@@ -133,26 +133,27 @@ const Content = ({ title, date, author, difficulty }: ContentProps) => {
       <Text
         color="heading-navy-fg"
         fontSize="18px"
-        variant="baseBold"
+        variant="cardBody"
+        fontWeight="bold"
         noOfLines={2}
       >
         {title}
       </Text>
       <HStack spacing="2">
         <Icon as={HiOutlineCalendarDays} mr={2} boxSize="18px" />
-        <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+        <Text variant="cardBody" noOfLines={4}>
           {date}
         </Text>
       </HStack>
       <HStack spacing="2">
         <Icon as={HiOutlineUser} mr={2} boxSize="18px" />
-        <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+        <Text variant="cardBody" noOfLines={4}>
           {author}
         </Text>
       </HStack>
       <HStack spacing="2">
         <Icon as={HiOutlineAcademicCap} mr={2} boxSize="18px" />
-        <Text fontSize="sm" variant="baseRegular" noOfLines={4}>
+        <Text variant="cardBody" noOfLines={4}>
           {formattedDifficulty}
         </Text>
       </HStack>
@@ -217,7 +218,7 @@ export { Root, Image, Body, Category, Content, Footer };
 //                 <Text fontSize="md" variant="baseExtraBold">
 //                   {title}
 //                 </Text>
-//                 <Text fontSize="sm" variant="baseRegular">
+//                 <Text fontSize="sm" variant="cardBody">
 //                   {excerpt}
 //                 </Text>
 //               </Stack>

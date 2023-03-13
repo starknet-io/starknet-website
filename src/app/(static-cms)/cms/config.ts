@@ -513,7 +513,7 @@ const topLevelBlocks: ListField["types"] = [
       {
         name: "heading_variant",
         widget: "select",
-        options: ["sm", "md", "lg"],
+        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
         required: false,
         default: "sm",
       },
@@ -995,6 +995,7 @@ export const config: Config = {
       create: true,
       format: "yml",
       identifier_field: "id",
+      summary: "{{title}}",
       fields: [
         {
           label: "ID",

@@ -1,74 +1,17 @@
 "use client";
-import { Heading as ChakraHeading, HeadingProps } from "src/libs/chakra-ui";
+import { Heading as ChakraHeading, HeadingProps } from "@chakra-ui/react";
+import { headingTheme } from './HeadingStyles';
 
-type Props = {
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type CustomHeadingProps = {
+  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 } & HeadingProps;
 
-// rome-ignore lint/correctness/noUnusedVariables: <explanation>
-export const Heading = ({ variant, children, as, ...rest }: Props) => {
-  switch (variant) {
-    case "h1":
-      return (
-        <ChakraHeading as="h1" fontWeight="extrabold" fontSize="5rem" {...rest}>
-          {children}
-        </ChakraHeading>
-      );
-    case "h2":
-      return (
-        <ChakraHeading as="h2" fontWeight="extrabold" fontSize="3rem" {...rest}>
-          {children}
-        </ChakraHeading>
-      );
-    case "h3":
-      return (
-        <ChakraHeading
-          as="h3"
-          pb={3}
-          fontWeight="bold"
-          fontSize="1.5rem"
-          lineHeight={"3rem"}
-          {...rest}
-        >
-          {children}
-        </ChakraHeading>
-      );
-    case "h4":
-      return (
-        <ChakraHeading
-          as="h4"
-          py={4}
-          fontWeight="bold"
-          fontSize="1.125rem"
-          {...rest}
-        >
-          {children}
-        </ChakraHeading>
-      );
-    case "h5":
-      return (
-        <ChakraHeading
-          as="h5"
-          py={4}
-          fontWeight="bold"
-          fontSize="1rem"
-          {...rest}
-        >
-          {children}
-        </ChakraHeading>
-      );
-    case "h6":
-      return (
-        <ChakraHeading as="h6" fontSize="0.875rem" lineHeight="1rem" {...rest}>
-          {children}
-        </ChakraHeading>
-      );
-    default:
-      return (
-        <ChakraHeading as="h2" fontSize="1.5rem" {...rest}>
-          {children}
-        </ChakraHeading>
-      );
-  }
+export const Heading: React.FC<CustomHeadingProps> = ({
+  variant,
+  as,
+  ...props
+}) => {
+  const { ...rest } = props;
+  const Tag = variant || "h2";
+  return <ChakraHeading {...headingTheme[Tag as keyof typeof headingTheme]} as={variant as typeof as} {...rest} />;
 };

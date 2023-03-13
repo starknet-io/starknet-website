@@ -80,7 +80,6 @@ export const LanguageSwitcherDropdown = ({
               <Heading
                 pl={10}
                 color="heading-navy-fg"
-                as="h6"
                 variant="h6"
                 mb={3}
                 textTransform="uppercase"
@@ -97,7 +96,6 @@ export const LanguageSwitcherDropdown = ({
             <Stack spacing="1" pb={4}>
               <Heading
                 color="heading-navy-fg"
-                as="h6"
                 variant="h6"
                 textTransform="uppercase"
                 mb={5}

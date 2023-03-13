@@ -23,7 +23,7 @@ export const PageLayout = (props: Props) => {
         <Box>{props.breadcrumbs}</Box>
         <Spacer />
         <Box>
-          <Text variant="baseRegular" fontSize="sm" top="1px" pos="relative">
+          <Text variant="cardBody" top="1px" pos="relative">
             {props.pageLastUpdated}
           </Text>
         </Box>
