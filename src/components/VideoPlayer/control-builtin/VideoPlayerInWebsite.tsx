@@ -27,7 +27,7 @@ export function VideoPlayerInWebsite({
   const positionStyle = usePlayerPositionStyle();
 
   const videoWrapperStyle: CSSProperties = isFullscreen
-    ? { inset: 0, height: "100%", width: "100%" }
+    ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
     : { position: "relative", paddingBottom: "56.25%", flex: 1 };
 
   const videoStyle: CSSProperties = isFullscreen

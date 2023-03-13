@@ -9,7 +9,7 @@ export function useChapters({
 }: {
   initialActiveChapter: string;
   chapters: Chapter[];
-  playerRef: RefObject<Player>;
+  playerRef: RefObject<Player | null>;
 }) {
   const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
 
