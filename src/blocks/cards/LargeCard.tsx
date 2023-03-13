@@ -10,7 +10,7 @@ import {
   Stack,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";

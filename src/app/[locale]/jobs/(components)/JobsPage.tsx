@@ -21,7 +21,7 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/ListCards/ListCard";
+import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
 import Link from "next/link";
 

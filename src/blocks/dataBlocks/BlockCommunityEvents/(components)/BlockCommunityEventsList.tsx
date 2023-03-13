@@ -9,7 +9,7 @@ import {
   Configure,
 } from "src/libs/react-instantsearch-hooks-web";
 import { useHits } from "react-instantsearch-hooks";
-import { ListCard } from "@ui/ListCards/ListCard";
+import { ListCard } from "@ui/Card/ListCard";
 import { Heading } from "@ui/Typography/Heading";
 import { Button } from "@ui/Button";
 import { useRouter } from "next/navigation";

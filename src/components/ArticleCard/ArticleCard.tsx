@@ -11,7 +11,7 @@ import {
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 
 type RootProps = {
   children: React.ReactNode;

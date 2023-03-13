@@ -234,37 +234,40 @@ const blocks: ListField["types"] = [
     ],
   },
   {
-    name: "icon_link_card",
-    label: "Icon link card",
-    widget: "object",
-    fields: [
-      {
-        name: "title",
-        widget: "string",
-      },
-      {
-        name: "link",
-        widget: "object",
-        fields: linkFields,
-      },
-      {
-        name: "icon",
-        widget: "image",
-      },
-      {
-        name: "color",
-        widget: "select",
-        required: false,
-        options: ["orange", "blue", "green", "yellow"],
-        default: "orange",
-      },
-    ],
-  },
-  {
     name: "image_icon_link_card",
     label: "Image Icon link card",
     widget: "object",
     fields: [
+      {
+        name: "variant",
+        label: "Variant (Image icon link card by default)",
+        widget: "select",
+        default: "image_icon_link_card",
+        required: false,
+        options: [
+          { label: "Image icon link card", value: "image_icon_link_card" },
+          { label: "Icon link card", value: "icon_link_card" },
+          { label: "Dapp", value: "dapp" }
+        ],
+      },
+      {
+        name: "size",
+        label: "Size (Large by default)",
+        widget: "select",
+        default: "large",
+        required: false,
+        options: [
+          { label: "Large", value: "large" },
+          { label: "Small", value: "small" }
+        ],
+      },
+      {
+        label: "Background illustration (hidden by default)",
+        name: "withIllustration",
+        widget: "boolean",
+        default: false,
+        required: false,
+      },
       {
         name: "title",
         widget: "string",
@@ -294,9 +297,18 @@ const blocks: ListField["types"] = [
           "cyan",
           "orange",
           "pink",
+          "grey"
         ],
         default: "orange",
       },
+      {
+        name: "columns",
+        label: "Columns (number of cards per row, works only for icon_link_card)",
+        widget: "select",
+        default: "4",
+        required: false,
+        options: ["2", "4"],
+      }
     ],
   },
   {

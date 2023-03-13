@@ -1,31 +1,26 @@
 "use client";
+import { useRef, useEffect, useState, ReactNode, forwardRef } from "react";
 // toDo rebuild this card in to a generalized grid card
 import {
   Badge,
   Box,
   HStack,
   Image as ChakraImage,
-  Link,
-  Stack,
+  Tooltip as ChakraTooltip, TooltipProps,
   Icon,
-  useColorModeValue as mode,
   Flex,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
-import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import {
-  HiCalendar,
-  HiCalendarDays,
   HiOutlineAcademicCap,
   HiOutlineCalendarDays,
   HiOutlineUser,
 } from "react-icons/hi2";
 import { titleCase } from "src/utils/utils";
-import { type } from "os";
 
 type RootProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   href: string;
 };
 
@@ -99,7 +94,7 @@ const Image = ({ url, imageAlt, type }: ImageProps) => {
 };
 
 type BodyProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Body = ({ children }: BodyProps) => {
@@ -162,7 +157,7 @@ const Content = ({ title, date, author, difficulty }: ContentProps) => {
 };
 
 type FooterProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 const Footer = ({ children }: FooterProps) => {
   return (
@@ -172,7 +167,120 @@ const Footer = ({ children }: FooterProps) => {
   );
 };
 
-export { Root, Image, Body, Category, Content, Footer };
+type Props = TooltipProps & {
+  children: ReactNode;
+};
+
+const Tooltip = forwardRef<HTMLDivElement, Props>((props, ref) => {
+  return (
+    <ChakraTooltip
+      ref={ref}
+      shouldWrapChildren
+      hasArrow
+      px={2}
+      py={1}
+      fontSize="sm"
+      rounded="md"
+      {...props}
+    />
+  );
+});
+
+Tooltip.displayName = "Tooltip";
+
+
+interface StringListProps {
+  strings: string[];
+  maxWidth?: string;
+}
+
+const StringList = forwardRef<HTMLDivElement, StringListProps>(
+  ({ strings, maxWidth }, ref) => {
+    const [showAll, setShowAll] = useState(false);
+    const [showTooltip, setShowTooltip] = useState(false);
+    const tooltipRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      if (tooltipRef.current) {
+        setShowTooltip(tooltipRef.current.clientWidth < tooltipRef.current.scrollWidth);
+      }
+    }, [strings]);
+
+    return (
+      <Flex wrap="wrap" ref={ref}>
+        {strings.map((str, index) => {
+          if (showAll || index < strings.length - 1) {
+            return (
+              <Box key={index} mr={2} mb={2}>
+                <Text>{str}</Text>
+              </Box>
+            );
+          }
+          if (index === strings.length - 1) {
+            return (
+              <Box
+                key={index}
+                textAlign="right"
+                mt={2}
+                onClick={() => setShowAll(true)}
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+                ref={tooltipRef}
+              >
+                {showTooltip && (
+                  <Tooltip
+                    label={strings.slice(index).join(", ")}
+                    placement="top"
+                    hasArrow
+                  >
+                    <Text>+{strings.length - index - 1}</Text>
+                  </Tooltip>
+                )}
+                {!showTooltip && <Text>+{strings.length - index - 1}</Text>}
+              </Box>
+            );
+          }
+          return null;
+        })}
+      </Flex>
+    );
+  }
+);
+StringList.displayName = "StringList";
+
+type TagsProps = {
+  tags: Array<string>;
+};
+
+const Tags = ({ tags }: TagsProps) => {
+  const boxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const textElements = Array.from(
+      boxRef.current?.querySelectorAll("div") || []
+    ) as HTMLDivElement[];
+    let textWidth = 0;
+    let i;
+    for (i = 0; i < textElements.length; i++) {
+      const textElement = textElements[i];
+      textWidth += textElement.clientWidth;
+      if (textWidth > boxRef.current!.clientWidth) {
+        break;
+      }
+      // if (i < textElements.length - 1) {
+      //   boxRef.current!.querySelectorAll("div")[i].style.display = "none";
+      // }
+    }
+  }, [boxRef, tags]);
+
+  return (
+    <div ref={boxRef} style={{ maxWidth: "300px" }}>
+      <StringList strings={tags} />
+    </div>
+  );
+};
+
+export { Root, Image, Body, Category, Content, Footer, Tags };
 
 // export const ArticleCard = ({
 //   img,

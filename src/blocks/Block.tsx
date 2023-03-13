@@ -8,7 +8,7 @@ import { BlockHeroLines } from "./BlockHeroLines";
 import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
 import { IconLinkCard } from "./cards/IconLinkCard";
-import { ImageIconCard } from "./cards/ImageIconCard";
+import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
@@ -21,6 +21,7 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
+import { WalletIcon } from "@heroicons/react/20/solid";
 
 interface Props {
   readonly block: TopLevelBlock;

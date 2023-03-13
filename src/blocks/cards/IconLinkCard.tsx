@@ -3,7 +3,7 @@ import { Button } from "@ui/Button";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
 import NextLink from "next/link";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { IconLinkCardBlock } from "src/data/pages";
 import { getComputedLinkData } from "src/utils/utils";
 import { CardLink } from "./CardLink";
@@ -13,7 +13,7 @@ type Props = IconLinkCardBlock & { locale: string };
 export const IconLinkCard = ({
   title,
   link,
-  icon = "/assets/cards/1.svg",
+  icon,
   color = "orange",
   locale,
 }: Props) => {
@@ -60,7 +60,7 @@ export const IconLinkCard = ({
             justify="flex-end"
             alignItems="flex-start"
           >
-            <Image src={icon} mb="20px" alt={title} />
+            {/* <Image src={icon} mb="20px" alt={title} /> */}
             <Stack spacing="1">
               <Text color="heading-navy-fg" fontSize="24px" fontWeight="bold">
                 {title}

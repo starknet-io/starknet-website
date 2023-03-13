@@ -52,6 +52,7 @@ blocks:
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View docs
+        withIllustration: true
       - type: image_icon_link_card
         color: blue-default
         title: "Developer tutorials "
@@ -60,6 +61,7 @@ blocks:
         link:
           custom_internal_link: /tutorials/
           custom_title: "View tutorials "
+        withIllustration: true
       - type: image_icon_link_card
         color: blue-default
         title: Tools & resources
@@ -69,6 +71,7 @@ blocks:
         link:
           page: 4c40a102-df5b-4f39-98fb-774d6841da9e
           custom_title: View resources
+        withIllustration: true
   - type: flex_layout
     heading_variant: h3
     base: 1
@@ -84,6 +87,7 @@ blocks:
         link:
           custom_title: Explore
           page: 0dc3d102-0936-433e-9219-f46e3087e396
+        withIllustration: true
       - type: image_icon_link_card
         color: blue-default
         title: "Find a wallet "
@@ -92,6 +96,7 @@ blocks:
         link:
           custom_title: View wallets
           page: d202009a-3541-4366-b664-36ef2e492aa3
+        withIllustration: true
       - type: image_icon_link_card
         color: blue-default
         title: Deposit & withdraw funds
@@ -101,30 +106,43 @@ blocks:
         link:
           custom_title: View options
           page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
+        withIllustration: true
   - type: community_events
   - type: flex_layout
     heading_variant: h3
     blocks:
-      - type: basic_card
-        size: sm
+      - type: image_icon_link_card
+        variant: icon_link_card
+        size: large
+        withIllustration: false
+        color: orange
         title: "View all questions "
         link:
-          page: b5689d3a-348b-4ccb-b787-520b64c55e41
           custom_title: View
-      - type: basic_card
-        size: sm
+          page: b5689d3a-348b-4ccb-b787-520b64c55e41
+      - type: image_icon_link_card
+        variant: icon_link_card
+        size: large
+        withIllustration: false
+        color: null
         title: What is STARK?
         link:
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
           custom_title: View
-      - type: basic_card
-        size: sm
-        title: "What is Cairo? "
+          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
+      - type: image_icon_link_card
+        variant: icon_link_card
+        size: large
+        withIllustration: false
+        color: orange
+        title: What is Cairo?
         link:
           custom_title: View
           custom_internal_link: /learn/frequently-asked-questions#toc-cairo
-      - type: basic_card
-        size: sm
+      - type: image_icon_link_card
+        variant: icon_link_card
+        size: large
+        withIllustration: false
+        color: orange
         title: "What is Starknet? "
         link:
           custom_title: View

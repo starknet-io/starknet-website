@@ -22,6 +22,18 @@ const cardLink = defineStyle({
     textDecoration: "underline",
   },
 });
+const smallCardLink = defineStyle({
+  textDecoration: "none",
+  color: "card-link-fg",
+  fontSize: "14px",
+  lineHeight: "24px",
+  fontWeight: 400,
+
+  _hover: {
+    color: "card-link-hover-fg",
+    textDecoration: "underline",
+  },
+});
 
 const list = defineStyle({
   textDecoration: "none",
@@ -45,5 +57,5 @@ const standard = defineStyle({
 });
 
 export const linkTheme = defineStyleConfig({
-  variants: { card, list, standard, cardLink },
+  variants: { card, list, standard, cardLink, smallCardLink },
 });

@@ -1,0 +1,17 @@
+/*! @algolia/autocomplete-theme-classic 1.7.4 | MIT License | © Algolia, Inc. and contributors | https://github.com/algolia/autocomplete */
+.chakra-ui-dark .card-image {
+  position: relative;
+  mix-blend-mode: revert;
+}
+.chakra-ui-dark .card-image::after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+}

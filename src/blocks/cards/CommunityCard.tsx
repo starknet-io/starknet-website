@@ -13,7 +13,7 @@ import { Text } from "@ui/Typography/Text";
 
 import NextLink from "next/link";
 import { Heading } from "@ui/Typography/Heading";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { GetInvolvedBlock } from "src/data/pages";
 import { getComputedLinkData } from "src/utils/utils";
 

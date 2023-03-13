@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
 import { LinkData } from "./settings/main-menu";
+import { CardIconProps } from "@ui/Icons/CardIcons/IconInterface";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -59,7 +60,8 @@ export interface ImageIconLinkCardBlock {
     | "purple"
     | "peach"
     | "cyan"
-    | "pink";
+    | "pink"
+    | "grey";
 }
 export interface GetInvolvedBlock {
   readonly type: "get_involved_card";

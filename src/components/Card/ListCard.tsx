@@ -1,6 +1,5 @@
 "use client";
 import {
-  Avatar,
   Box,
   HStack,
   Icon,
@@ -14,16 +13,13 @@ import {
 } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import NextLink, { LinkProps } from "next/link";
+import NextLink from "next/link";
 import * as React from "react";
 
 import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 
-import { Card } from "../Card/Card";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-import { CardLink } from "src/blocks/cards/CardLink";
-import Image from "next/image";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { titleCase } from "src/utils/utils";
 
 interface Type {

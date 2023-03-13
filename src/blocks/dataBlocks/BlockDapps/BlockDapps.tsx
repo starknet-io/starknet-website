@@ -1,5 +1,5 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
-import { ListCard } from "@ui/ListCards/ListCard";
+import { ListCard } from "@ui/Card/ListCard";
 import { getDapps } from "src/data/dapps";
 interface Props extends LocaleProps {
   noOfItems?: number;

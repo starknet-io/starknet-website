@@ -10,7 +10,7 @@ window.CMS = cms;
 // @ts-expect-error
 cms.registerWidget([
   NetlifyCmsWidgetUUID.Widget(),
-  NetlifyCmsWidgetYouTube.Widget(),
+  NetlifyCmsWidgetYouTube.Widget()
 ]);
 
 cms.init({
