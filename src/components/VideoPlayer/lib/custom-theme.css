@@ -193,3 +193,46 @@
 }
 
 /* Big play Button end */
+
+.video-js .vjs-time-control {
+  display: block;
+}
+.video-js .vjs-remaining-time {
+  display: none;
+}
+
+.video-js .vjs-time-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.video-js .vjs-time-control {
+  font-size: 14px;
+  font-weight: 700;
+}
+.vjs-current-time.vjs-time-control.vjs-control {
+  padding-right: 0px;
+  margin-left: 25px;
+}
+.vjs-duration.vjs-time-control.vjs-control {
+  padding-left: 0px;
+}
+.vjs-remaining-time.vjs-time-control.vjs-control {
+  pointer-events: none;
+}
+
+.vjs-theme-custom .vjs-progress-control {
+  top: -3px;
+  background: none;
+  height: 10px;
+}
+
+.vjs-theme-custom .vjs-progress-control .vjs-progress-holder {
+  top: 0px;
+  z-index: 9999;
+}
+.vjs-theme-custom .vjs-control-bar {
+  background: rgba(0, 0, 0, 0.75);
+  height: 60px;
+  padding-top: 8px;
+}

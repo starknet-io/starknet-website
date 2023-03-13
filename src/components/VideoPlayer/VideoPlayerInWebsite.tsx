@@ -38,7 +38,7 @@ export function VideoPlayerInWebsite({
       <div
         style={
           isFullscreen
-            ? { position: "absolute", inset: 0, flex: 1 }
+            ? { inset: 0, height: "100%", width: "100%" }
             : { position: "relative", paddingBottom: "56.25%", flex: 1 }
         }
         ref={ref}
