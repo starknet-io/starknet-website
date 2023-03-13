@@ -8,6 +8,7 @@ concurrency: crowdin-dev
 
 jobs:
   synchronize-with-crowdin:
+    environment: "dev-crowdin"
 
     runs-on: ubuntu-latest
 
