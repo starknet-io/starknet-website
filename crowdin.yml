@@ -1,21 +1,21 @@
 project_id_env: CROWDIN_PROJECT_ID
 api_token_env: CROWDIN_PERSONAL_TOKEN
 files:
-  - source: /_data/categories/en
+  - source: /_data/categories/en/*.yml
     translation: /_data/categories/%two_letters_code%/%original_file_name%
-  - source: /_data/events/en
+  - source: /_data/events/en/*.yml
     translation: /_data/events/%two_letters_code%/%original_file_name%
-  - source: /_data/i18n/en
+  - source: /_data/i18n/en/*.yml
     translation: /_data/i18n/%two_letters_code%/%original_file_name%
-  - source: /_data/jobs/en
+  - source: /_data/jobs/en/*.yml
     translation: /_data/jobs/%two_letters_code%/%original_file_name%
-  - source: /_data/pages/en
+  - source: /_data/pages/en/*.yml
     translation: /_data/pages/%two_letters_code%/%original_file_name%
-  - source: /_data/posts/en
+  - source: /_data/posts/en/*.yml
     translation: /_data/posts/%two_letters_code%/%original_file_name%
-  - source: /_data/settings/en
+  - source: /_data/settings/en/*.yml
     translation: /_data/settings/%two_letters_code%/%original_file_name%
-  - source: /_data/topics/en
+  - source: /_data/topics/en/*.yml
     translation: /_data/topics/%two_letters_code%/%original_file_name%
   - source: /i18n/intl/en.json
     translation: /i18n/intl/%two_letters_code%.json
