@@ -1,0 +1,16 @@
+type: conference
+name: MIT Bitcoin Expo
+description: MIT Bitcoin Expo is the longest-running collegiate conference about
+  blockchain. Celebrating our 10th anniversary, we continue the tradition of
+  technical talks to enhance education on Bitcoin, Ethereum, and other
+  decentralized technologies.
+url: http://mitbitcoinexpo.org/
+start_date: 2023-04-22T06:00:31.815Z
+end_date: 2023-04-23T13:13:00.000Z
+image: /assets/btcmit.jpg
+location: usa
+tags:
+  - crypto
+  - blockchain
+  - starknet
+  - MIT
