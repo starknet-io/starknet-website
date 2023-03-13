@@ -2,7 +2,7 @@ name: Crowdin Action
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ ft/enable_crowdin ]
 
 concurrency: crowdin-dev
 
@@ -25,7 +25,7 @@ jobs:
           create_pull_request: true
           pull_request_title: 'New Crowdin Translations'
           pull_request_body: 'New Crowdin translations by [Crowdin GH Action](https://github.com/crowdin/github-action)'
-          pull_request_base_branch_name: 'dev'
+          pull_request_base_branch_name: 'ft/enable_crowdin'
           base_url: 'https://starkware.crowdin.com'
         env:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
