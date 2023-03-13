@@ -1,0 +1,12 @@
+# https://moonrepo.dev/docs/config/workspace
+$schema: 'https://moonrepo.dev/schemas/workspace.json'
+
+# Require a specific version of moon while running commands, otherwise fail.
+versionConstraint: '>=0.25.4'
+
+projects:
+  - './workspaces/*'
+
+vcs:
+  manager: 'git'
+  defaultBranch: 'dev'
