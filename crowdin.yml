@@ -20,5 +20,5 @@ files:
     translation: /_data/topics/%two_letters_code%/%original_file_name%
   - source: /_data/tutorials/en/*.json
     translation: /_data/tutorials/%two_letters_code%/%original_file_name%
-  - source: /i18n/intl/en.json
-    translation: /i18n/intl/%two_letters_code%.json
+  - source: /_data/i18n/intl/en.json
+    translation: /_data/i18n/intl/%two_letters_code%.json
