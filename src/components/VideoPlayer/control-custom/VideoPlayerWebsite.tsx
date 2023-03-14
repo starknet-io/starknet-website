@@ -142,6 +142,15 @@ export function VideoPlayer({
     player.aspectRatio("16:9");
   };
 
+  const onChapterSelect = (ch: string) => {
+    goToChapter(ch);
+    if (playingStatus === "unstarted") {
+      setPlayingStatus("paused");
+      playerRef.current?.play();
+      playerRef.current?.pause();
+    }
+  };
+
   const videoWrapperStyle: CSSProperties = isFullscreen
     ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
     : { position: "relative", flex: 1, paddingBottom: "56.25%" };
@@ -208,7 +217,7 @@ export function VideoPlayer({
           height={height}
           chapters={chapters}
           currentChapter={currentChapter}
-          onChapterSelect={(ch) => setCurrentChapter(ch)}
+          onChapterSelect={onChapterSelect}
         />
       </Box>
     </>

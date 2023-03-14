@@ -7,7 +7,7 @@ import { playlist } from "@ui/VideoPlayer/utils";
 import { useState } from "react";
 
 export default function VideoPlayerPage({ videoId }: { videoId: string }) {
-  const [builtin, setBuiltin] = useState(true);
+  const [builtin, setBuiltin] = useState(false);
   return (
     <div>
       <Button mb={5} onClick={() => setBuiltin((b) => !b)}>

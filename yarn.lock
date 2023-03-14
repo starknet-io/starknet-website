@@ -28770,6 +28770,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-video-seek-slider@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "react-video-seek-slider@npm:6.0.3"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: b6e28c1ef4650a0a0889880b08049313132087a245f03d8affd3f6290830b16fbc38864c8c46b35705790e17025aedda2d87c88c7a493348d164545ee63c325d
+  languageName: node
+  linkType: hard
+
 "react-virtualized-auto-sizer@npm:1.0.7, react-virtualized-auto-sizer@npm:^1.0.2":
   version: 1.0.7
   resolution: "react-virtualized-auto-sizer@npm:1.0.7"
@@ -29926,6 +29936,7 @@ __metadata:
     react-markdown: ^8.0.5
     react-scrubber: ^1.1.1
     react-use: ^17.4.0
+    react-video-seek-slider: ^6.0.3
     react-youtube: ^10.1.0
     remark-frontmatter: ^4.0.1
     remark-mdx-frontmatter: ^2.1.1

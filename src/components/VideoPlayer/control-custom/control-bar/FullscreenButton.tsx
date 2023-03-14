@@ -1,6 +1,5 @@
-import { Button, IconButton } from "@chakra-ui/react";
 import React from "react";
-import { preventVideoJSHotKeys } from "./utils";
+import ControlButton from "./ControlButton";
 
 export type FullscreenButtonProps = {
   isFullscreen: boolean;
@@ -46,15 +45,10 @@ export const FullscreenButton = ({
     );
   };
   return (
-    <IconButton
-      aria-label="Fullscreen"
+    <ControlButton
+      ariaLabel="Fullscreen"
       onClick={toggleFullscreen}
-      onKeyDown={preventVideoJSHotKeys}
-      bg="transparent"
-      sx={{
-        zIndex: 5,
-      }}
       icon={getIcon()}
-    ></IconButton>
+    />
   );
 };

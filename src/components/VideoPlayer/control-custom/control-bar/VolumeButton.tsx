@@ -1,6 +1,13 @@
-import { Box, Button, IconButton } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  Slider,
+  SliderFilledTrack,
+  SliderThumb,
+  SliderTrack,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Scrubber } from "react-scrubber";
+import ControlButton from "./ControlButton";
 import { preventVideoJSHotKeys } from "./utils";
 
 export type VolumeButtonProps = {
@@ -20,11 +27,9 @@ export const VolumeButton = ({
 
   const onScrubStart = (v: number) => {
     setScrubbing(true);
-    onVolumeChange(v);
   };
   const onScrubEnd = (v: number) => {
     setScrubbing(false);
-    onVolumeChange(v);
   };
 
   const getIcon = () => {
@@ -54,36 +59,45 @@ export const VolumeButton = ({
       </svg>
     );
   };
+
   return (
-    <Box display="flex" role="group" onKeyDown={preventVideoJSHotKeys}>
-      <IconButton
-        bg="transparent"
-        aria-label="Volume"
-        onClick={toggleMute}
-        onKeyDown={preventVideoJSHotKeys}
-        sx={{
-          zIndex: 5,
-        }}
-        icon={getIcon()}
-      ></IconButton>
+    <Box
+      display="flex"
+      role="group"
+      onKeyDown={preventVideoJSHotKeys}
+      alignItems="center"
+    >
+      <ControlButton ariaLabel="Volume" onClick={toggleMute} icon={getIcon()} />
       <Box
         sx={{
-          w: isScrubbing ? "80px" : "auto",
-          // pl: "5px",
-          pr: "5px",
+          w: isScrubbing ? "80px" : "0",
+          opacity: isScrubbing ? 1 : 0,
+          pl: "12px",
+          // pr: "24px",
+          display: "flex",
+          transition: "all 0.5s",
+          position: "relative",
         }}
         _groupHover={{
           w: "80px",
+          opacity: 1,
+          marginRight: "20px",
         }}
       >
-        <Scrubber
+        <Slider
+          aria-label="slider-ex-1"
           min={0}
           max={100}
           value={isMuted ? 0 : volume}
-          onScrubStart={onScrubStart}
-          onScrubEnd={onScrubEnd}
-          onScrubChange={onVolumeChange}
-        />
+          onChangeEnd={onScrubEnd}
+          onChangeStart={onScrubStart}
+          onChange={onVolumeChange}
+        >
+          <SliderTrack>
+            <SliderFilledTrack fill="white" />
+          </SliderTrack>
+          <SliderThumb />
+        </Slider>
       </Box>
     </Box>
   );

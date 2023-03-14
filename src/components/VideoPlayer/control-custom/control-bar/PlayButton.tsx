@@ -1,6 +1,7 @@
 import { Button, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { SeekStatuses } from "../hooks/useSeek";
+import ControlButton from "./ControlButton";
 import { preventVideoJSHotKeys } from "./utils";
 
 export type PlayButtonProps = {
@@ -67,15 +68,10 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
   };
 
   return (
-    <IconButton
-      aria-label="Play Pause"
-      bg="transparent"
+    <ControlButton
+      ariaLabel="Play Pause"
       onClick={handlePlay}
-      onKeyDown={preventVideoJSHotKeys}
       icon={getIcon()}
-      sx={{
-        zIndex: 5,
-      }}
-    ></IconButton>
+    />
   );
 };

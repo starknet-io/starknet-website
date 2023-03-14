@@ -1,16 +1,10 @@
-import { Button, IconButton } from "@chakra-ui/react";
 import React from "react";
-import { preventVideoJSHotKeys } from "./utils";
+import ControlButton from "./ControlButton";
 
 export const ShareButton = () => {
   return (
-    <IconButton
-      aria-label="Share"
-      onKeyDown={preventVideoJSHotKeys}
-      sx={{
-        zIndex: 5,
-      }}
-      bg="transparent"
+    <ControlButton
+      ariaLabel="Share"
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +20,7 @@ export const ShareButton = () => {
           />
         </svg>
       }
-    ></IconButton>
+      onClick={() => {}}
+    />
   );
 };

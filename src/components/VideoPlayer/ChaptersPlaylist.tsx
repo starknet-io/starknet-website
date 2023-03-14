@@ -23,6 +23,7 @@ export default function ChaptersPlaylist({
         maxHeight: height,
         display: "grid",
         gap: "20px",
+        cursor: "pointer",
       }}
       maxH={{ base: "300px", lg: height }}
     >

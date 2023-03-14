@@ -15,17 +15,18 @@ export function useVolume({ playerRef }: UseVolumeProps) {
       return !p;
     });
   };
-  const onVolumeScrubChange = (volume: number) => {
-    if (Number.isNaN(volume)) {
+  const onVolumeScrubChange = (vol: number) => {
+    console.log("volumevolume", vol);
+    if (Number.isNaN(vol)) {
       return;
     }
-    if (volume === 0) {
+    if (vol === 0) {
       setIsMuted(true);
     } else {
       setIsMuted(false);
     }
-    setVolume(volume);
-    const percentAsDecimal = precisionRound(volume / 100, 2);
+    setVolume(vol);
+    const percentAsDecimal = precisionRound(vol / 100, 2);
     playerRef.current.volume(percentAsDecimal);
   };
 

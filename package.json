@@ -91,6 +91,7 @@
     "react-markdown": "^8.0.5",
     "react-scrubber": "^1.1.1",
     "react-use": "^17.4.0",
+    "react-video-seek-slider": "^6.0.3",
     "react-youtube": "^10.1.0",
     "remark-frontmatter": "^4.0.1",
     "remark-mdx-frontmatter": "^2.1.1",

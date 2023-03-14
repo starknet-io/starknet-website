@@ -1,7 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
-import { Scrubber } from "react-scrubber";
-// import { EmbedButton } from "./EmbedButton";
+import "react-video-seek-slider/styles.css";
+import "./VideoSeekSlider.css";
+import { VideoSeekSlider } from "react-video-seek-slider";
+
 import { FullscreenButton } from "./FullscreenButton";
 import { PlayButton } from "./PlayButton";
 import { ShareButton } from "./ShareButton";
@@ -67,31 +69,25 @@ export default function CustomControl(props: CustomControlProps) {
       }}
       opacity={shouldShowControl() ? 1 : 0}
     >
-      <div
-        style={{
-          height: 4,
-          cursor: "pointer",
-        }}
-      >
-        <Scrubber
-          min={0}
-          max={totalDuration}
-          value={currentTime}
-          onScrubStart={(v) => onSeekScrubStart(v)}
-          onScrubEnd={(v) => onSeekScrubEnd(v)}
-          onScrubChange={(v) => onSeekScrubChange(v)}
-          bufferPosition={bufferPosition}
-        />
-      </div>
+      <VideoSeekSlider
+        max={totalDuration * 1000}
+        currentTime={currentTime * 1000}
+        bufferTime={bufferPosition * 1000}
+        onChange={(n) => onSeekScrubEnd(n / 1000)}
+        secondsPrefix="00:"
+        minutesPrefix=""
+        limitTimeTooltipBySides={true}
+      />
+
       <Box
         sx={{
           display: "flex",
-          gap: 5,
+          gap: "4px",
           px: "20px",
           py: "5px",
           bg: "rgba(0, 0, 0, .75)",
           backdropBlur: "sm",
-          alignItems: "baseline",
+          alignItems: "center",
         }}
       >
         <PlayButton playingStatus={playingStatus} handlePlay={onPlayToggle} />
@@ -104,13 +100,27 @@ export default function CustomControl(props: CustomControlProps) {
         <Box
           sx={{
             display: "flex",
+            alignItems: "center",
+            gap: "4px",
+            color: "white",
+            fontSize: "sm",
+            fontWeight: 500,
+            lineHeight: 1,
+          }}
+        >
+          <Box>0:03</Box>
+          <Box>/</Box>
+          <Box>2:20</Box>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
             flex: 1,
-            gap: 5,
+            gap: "4px",
             justifyContent: "flex-end",
           }}
         >
           <ShareButton />
-          {/* <EmbedButton /> */}
           <FullscreenButton
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}
