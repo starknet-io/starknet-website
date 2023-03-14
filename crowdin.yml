@@ -6,7 +6,7 @@ files:
     translation: /_data/categories/%two_letters_code%/%original_file_name%
   - source: /_data/events/en/*.json
     translation: /_data/events/%two_letters_code%/%original_file_name%
-  - source: /_data/i18n/intl/*.json
+  - source: /_data/i18n/intl/en.json
     translation: /_data/i18n/intl/%two_letters_code%.json
   - source: /_data/jobs/en/*.json
     translation: /_data/jobs/%two_letters_code%/%original_file_name%
