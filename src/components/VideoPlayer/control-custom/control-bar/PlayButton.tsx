@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { SeekStatuses } from "../hooks/useSeek";
 import { preventVideoJSHotKeys } from "./utils";
@@ -9,19 +9,9 @@ export type PlayButtonProps = {
 };
 
 export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
-  return (
-    <Button
-      onClick={handlePlay}
-      onKeyDown={preventVideoJSHotKeys}
-      variant="unstyled"
-      sx={{
-        zIndex: 5,
-        bg: "transparent",
-        border: "none",
-        cursor: "pointer",
-      }}
-    >
-      {playingStatus === "ended" && (
+  const getIcon = () => {
+    if (playingStatus === "ended")
+      return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -38,24 +28,10 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
             d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
           />
         </svg>
-      )}
-      {playingStatus === "playing" && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="white"
-          // className="w-5 h-5"
-          width={20}
-          height={20}
-        >
-          <path
-            fill-rule="evenodd"
-            d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      )}
-      {playingStatus === "paused" && (
+      );
+
+    if (playingStatus === "paused")
+      return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -70,7 +46,36 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
             clip-rule="evenodd"
           />
         </svg>
-      )}
-    </Button>
+      );
+
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="white"
+        // className="w-5 h-5"
+        width={20}
+        height={20}
+      >
+        <path
+          fill-rule="evenodd"
+          d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    );
+  };
+
+  return (
+    <IconButton
+      aria-label="Play Pause"
+      bg="transparent"
+      onClick={handlePlay}
+      onKeyDown={preventVideoJSHotKeys}
+      icon={getIcon()}
+      sx={{
+        zIndex: 5,
+      }}
+    ></IconButton>
   );
 };
