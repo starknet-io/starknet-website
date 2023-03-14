@@ -1,0 +1,12 @@
+{
+  "id": "0byte04",
+  "type": "youtube",
+  "url": "https://youtu.be/0LXG1lLdJhQ",
+  "image": "/assets/sddefault.jpeg",
+  "title": "Compile, deploy and interact",
+  "author": "ByteSized",
+  "published_at": "2021-12-04T00:00:00.000Z",
+  "difficulty": "beginner",
+  "course": "bytesized_series",
+  "tags": "Compiling, Deploying"
+}

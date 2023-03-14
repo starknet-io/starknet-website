@@ -1,0 +1,79 @@
+{
+  "id": "d09b7690-9fa8-4077-af56-99280a0e7616",
+  "post_type": "video",
+  "title": "“StarkWare isn’t Leaving Ethereum” / Eli Ben-Sasson and Uri Kolodny at Bankless",
+  "published_date": "2022-07-29T15:51:43.013Z",
+  "time_to_consume": "28 min watch",
+  "image": "/assets/interviews07.jpg",
+  "category": "ecosystem",
+  "topic": [
+    "starknet",
+    "ethereum"
+  ],
+  "short_desc": "Covering the recent announcement of the StarkWare token launch, the exploding zkEVM ecosystem, and the future of StarkWare.",
+  "video": {
+    "url": "https://youtu.be/bKGUXBEOCrw",
+    "id": "bKGUXBEOCrw",
+    "data": {
+      "kind": "youtube#video",
+      "etag": "HNfXVbeOXYr7JUvSRohzpHYa1Wg",
+      "id": "bKGUXBEOCrw",
+      "snippet": {
+        "publishedAt": "2022-07-28T21:45:09Z",
+        "channelId": "UCAl9Ld79qaZxp9JzEOwd3aA",
+        "title": "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny | EthCC Experience 2022 #3",
+        "description": "🇫🇷 Welcome to the Bankless EthCC 2022 Experience 🇫🇷\n\nWith fantastic guests from all corners of the ecosystem, this 8-part series is an exploration of crypto culture and the current state of Ethereum.\n\nIn episode 3, we cover the recent announcement of the StarkWare token launch, the exploding zkEVM ecosystem, and the future of StarkWare.\n\n------\n📣Rhino.Fi | Massive Mystery Airdrop\nhttps://bit.ly/3o9trRE\n\n------\n🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/  \n🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/  \n\n------\nBANKLESS SPONSOR TOOLS: \n\n🚀 ROCKET POOL | ETH STAKING\nhttps://bankless.cc/RocketPool\n\n⚖️ ARBITRUM | SCALING ETHEREUM\nhttps://bankless.cc/Arbitrum\n\n❎ ACROSS | BRIDGE TO LAYER 2\nhttps://bankless.cc/Across\n\n🦁 BRAVE | THE BROWSER NATIVE WALLET\nhttps://bankless.cc/Brave\n\n🌴 MAKER DAO | DECENTRALIZED LENDING\nhttps://bankless.cc/MakerDAO\n\n🔐 LEDGER | SECURE STAKING\nhttps://bankless.cc/Ledger\n\n------\nTopics Covered:\n\n0:00 Intro\n2:30 Eli and Uri\n4:52 zkEVM Explosion\n10:30 The StarkWare Approach\n16:20 StarkNet on Ethereum\n19:35 The StarkNet Token\n24:30 Token Models\n26:53 The Future of StarkWare\n\n------\nResources:\n\nEli on Twitter:\nhttps://twitter.com/EliBenSasson\n\nUri on Twitter:\nhttps://twitter.com/ukolodny\n\nStarkWare:\nhttps://twitter.com/StarkWareLtd\n\n-----\nNot financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bKGUXBEOCrw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bKGUXBEOCrw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bKGUXBEOCrw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bKGUXBEOCrw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bKGUXBEOCrw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bankless Shows",
+        "tags": [
+          "bitcoin",
+          "ethereum",
+          "defi",
+          "bankless",
+          "crypto",
+          "decentralized finance",
+          "crypto finance",
+          "open finance",
+          "ether",
+          "eth",
+          "btc",
+          "token",
+          "tokens"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny | EthCC Experience 2022 #3",
+          "description": "🇫🇷 Welcome to the Bankless EthCC 2022 Experience 🇫🇷\n\nWith fantastic guests from all corners of the ecosystem, this 8-part series is an exploration of crypto culture and the current state of Ethereum.\n\nIn episode 3, we cover the recent announcement of the StarkWare token launch, the exploding zkEVM ecosystem, and the future of StarkWare.\n\n------\n📣Rhino.Fi | Massive Mystery Airdrop\nhttps://bit.ly/3o9trRE\n\n------\n🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/  \n🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/  \n\n------\nBANKLESS SPONSOR TOOLS: \n\n🚀 ROCKET POOL | ETH STAKING\nhttps://bankless.cc/RocketPool\n\n⚖️ ARBITRUM | SCALING ETHEREUM\nhttps://bankless.cc/Arbitrum\n\n❎ ACROSS | BRIDGE TO LAYER 2\nhttps://bankless.cc/Across\n\n🦁 BRAVE | THE BROWSER NATIVE WALLET\nhttps://bankless.cc/Brave\n\n🌴 MAKER DAO | DECENTRALIZED LENDING\nhttps://bankless.cc/MakerDAO\n\n🔐 LEDGER | SECURE STAKING\nhttps://bankless.cc/Ledger\n\n------\nTopics Covered:\n\n0:00 Intro\n2:30 Eli and Uri\n4:52 zkEVM Explosion\n10:30 The StarkWare Approach\n16:20 StarkNet on Ethereum\n19:35 The StarkNet Token\n24:30 Token Models\n26:53 The Future of StarkWare\n\n------\nResources:\n\nEli on Twitter:\nhttps://twitter.com/EliBenSasson\n\nUri on Twitter:\nhttps://twitter.com/ukolodny\n\nStarkWare:\nhttps://twitter.com/StarkWareLtd\n\n-----\nNot financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research."
+        },
+        "defaultAudioLanguage": "en"
+      }
+    }
+  }
+}
