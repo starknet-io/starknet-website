@@ -1,5 +1,6 @@
 "use client";
-import { Box, Button, Flex, Img, Stack } from "src/libs/chakra-ui";
+import { Box, Flex, Img, Stack } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 
@@ -118,13 +119,13 @@ export const HomepageHero = (props: Props) => {
                 onClick={() => router.push("/en/developers")}
                 size="lg"
                 minW="210px"
-                variant="solidHero"
+                variant="primaryHero"
               >
                 Build on starknet
               </Button>
               <Button
                 size="lg"
-                variant="outlineHero"
+                variant="secondaryHero"
                 onClick={() => router.push("/en/what-is-starknet")}
               >
                 Learn the basics

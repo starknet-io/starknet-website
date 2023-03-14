@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   ButtonGroup,
   Card,
   CardBody,
@@ -11,6 +10,7 @@ import {
   Stack,
   Text,
 } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 import React from "react";
 
 type Props = {};

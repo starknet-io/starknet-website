@@ -14,7 +14,8 @@ import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import { usePathname } from "next/navigation";
 import React, { Fragment } from "react";
-import { Box, ButtonGroup, IconButton } from "src/libs/chakra-ui";
+import { Box, ButtonGroup } from "src/libs/chakra-ui";
+import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 
 export interface Props {

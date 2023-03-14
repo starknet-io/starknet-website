@@ -36,7 +36,7 @@ export default function NotFound({ type = "page" }: Props) {
               </Text>
             </Stack>
           </Stack>
-          <Button onClick={() => router.push("/")}>Return to homepage</Button>
+          <Button variant="solid" onClick={() => router.push("/")}>Return to homepage</Button>
         </Stack>
       </Container>
     </Box>
