@@ -14,10 +14,10 @@ export const AccordionRoot = ({ heading, children }: AccordionRootProps) => {
     <Box mb="80px">
       {heading && (
         <Heading
-          as="h2"
           variant="h3"
           color="heading-navy-fg"
           id={`toc-${slugify(heading)}`}
+          marginBottom="24px"
         >
           {heading}
         </Heading>

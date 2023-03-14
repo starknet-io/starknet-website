@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react"
 const theme = require("../src/style/theme");
 
 export const parameters = {
@@ -12,3 +13,11 @@ export const parameters = {
     theme,
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <ChakraProvider theme={theme}>
+      <Story />
+    </ChakraProvider>
+  ),
+]

@@ -49,7 +49,7 @@ export function BlockCommunityEventsList({
       <Container maxW="1062px">
         <Box>
           <Flex justifyContent="center">
-            <Heading variant="h2" as="h2" color="heading-navy-fg" mb="64px">
+            <Heading variant="h2" color="heading-navy-fg" mb="64px">
               Community Events
             </Heading>
           </Flex>
@@ -107,7 +107,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
         <Button
           onClick={() => router.push("/en/events")}
           flexShrink={0}
-          variant="secondary"
+          variant="outlineLight"
         >
           See all events
         </Button>

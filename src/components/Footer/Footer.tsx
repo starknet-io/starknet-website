@@ -1,15 +1,15 @@
 import {
   Box,
   BoxProps as ChakraBoxProps,
-  Button,
   ButtonGroup,
   Container,
   Divider,
   HStack,
-  IconButton,
   Stack,
   Text,
 } from "src/libs/chakra-ui";
+import { IconButton } from "@ui/IconButton";
+import { Button } from "@ui/Button";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
@@ -51,7 +51,7 @@ const Root = ({ children, ...rest }: RootProps) => {
                   Built with ✨ by the Starknet community.
                 </Text>
               </HStack>
-              <ButtonGroup variant="ghost">
+              <ButtonGroup>
                 <IconButton
                   as="a"
                   href="https://starknet.io/discord"

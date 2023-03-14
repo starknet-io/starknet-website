@@ -6,6 +6,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@chakra-ui/storybook-addon",
+    "storybook-addon-dark-mode-toggle"
   ],
   framework: {
     name: "@storybook/nextjs",

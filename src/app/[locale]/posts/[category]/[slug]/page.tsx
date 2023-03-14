@@ -124,7 +124,7 @@ export default async function Page({
                 {post.post_type}
               </Badge>
             </Box>
-            <Heading variant="h2" as="h2" color="heading-navy-fg">
+            <Heading variant="h2" color="heading-navy-fg">
               {post.title}
             </Heading>
             <Flex mt="16px">

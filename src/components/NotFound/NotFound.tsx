@@ -23,11 +23,12 @@ export default function NotFound({ type = "page" }: Props) {
         <Stack spacing={{ base: "8", md: "10" }} align="center">
           <Stack spacing={{ base: "4", md: "6" }} textAlign="center">
             <Stack spacing="3">
-              <Heading as="h1" variant="h1" color="heading-navy-fg">
+              <Heading variant="h1" color="heading-navy-fg">
                 404
               </Heading>
               <Text
-                variant="baseSemibold"
+                variant="cardBody"
+                fontWeight="semibold"
                 fontSize="24px"
                 color="heading-navy-fg"
               >
@@ -35,7 +36,7 @@ export default function NotFound({ type = "page" }: Props) {
               </Text>
             </Stack>
           </Stack>
-          <Button onClick={() => router.push("/")}>Return to homepage</Button>
+          <Button variant="solid" onClick={() => router.push("/")}>Return to homepage</Button>
         </Stack>
       </Container>
     </Box>

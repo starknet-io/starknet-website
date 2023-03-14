@@ -5,12 +5,12 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Button,
   Flex,
   VStack,
   HStack,
   Divider,
 } from "@chakra-ui/react";
+import { Button } from "@ui/Button";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
@@ -101,7 +101,7 @@ function CustomLocation() {
 
   return (
     <Box>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Location
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -129,7 +129,7 @@ function CustomType() {
 
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -157,7 +157,7 @@ function CustomTags() {
 
   return (
     <Box mt={8}>
-      <Heading as="h4" variant={"h6"} fontSize="14px" mb={4}>
+      <Heading variant="h6" mb={4}>
         Tags
       </Heading>
       <VStack dir="column" alignItems="stretch">
@@ -211,7 +211,7 @@ function CustomHits() {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+          <Button onClick={() => showMore()} flexShrink={0} variant="outlineLight">
             View More
           </Button>
           <Divider />

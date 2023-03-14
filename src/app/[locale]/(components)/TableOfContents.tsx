@@ -69,9 +69,7 @@ export function TableOfContents(props: Props) {
       <Heading
         py="16px"
         pl="16px"
-        fontSize="14px"
         textTransform="uppercase"
-        as="h6"
         variant="h6"
         color="heading-navy-fg"
       >

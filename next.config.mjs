@@ -74,6 +74,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/docs",
+        destination: "https://docs.starknet.io",
+        permanent: false,
+      },
+      {
         source: "/privacy-policy",
         destination: "/en/privacy-policy",
         permanent: false,

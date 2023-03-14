@@ -2,7 +2,6 @@
 import {
   Avatar,
   Box,
-  Button,
   HStack,
   Icon,
   Stack,
@@ -13,6 +12,7 @@ import {
   Img,
   LinkBox,
 } from "src/libs/chakra-ui";
+import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink, { LinkProps } from "next/link";
 import * as React from "react";
@@ -101,14 +101,12 @@ export const ListCard = (props: Props) => {
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
                 >
-                  <Text
-                    as="h2"
-                    fontWeight="bold"
-                    fontSize="18px"
+                  <Heading
+                    variant="h4"
                     color="list-card-lg-title-fg"
                   >
                     {props.title}
-                  </Text>
+                  </Heading>
                   <HStack fontSize={{ base: "md", md: "xl" }}>
                     {/* <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" /> */}
                     <Icon as={HiArrowUpRight} color="list-card-lg-title-fg" />
@@ -136,7 +134,7 @@ export const ListCard = (props: Props) => {
                 )}
 
                 <Wrap spacingX="24px" shouldWrapChildren>
-                  {props.href && props.variant !== "event" && (
+                  {props.href && props.variant !== "event" && props.variant !== "job" && (
                     <Link isExternal as={NextLink} href={`${props.href}`}>
                       <Icon
                         boxSize="18px"
@@ -160,17 +158,14 @@ export const ListCard = (props: Props) => {
                   )}
 
                   {/* <IconButton
-              variant="simple"
               aria-label="Website"
               icon={<HiGlobeAlt />}
             />
             <IconButton
-              variant="simple"
               aria-label="Twitter"
               icon={<SiTwitter />}
             />
             <IconButton
-              variant="simple"
               aria-label="Discord"
               icon={<SiDiscord />}
             /> */}
