@@ -135,7 +135,7 @@ export const ListCard = (props: Props) => {
                 )}
 
                 <Wrap spacingX="24px" shouldWrapChildren>
-                  {props.href && props.variant !== "event" && (
+                  {props.href && props.variant !== "event" && props.variant !== "job" && (
                     <Link isExternal as={NextLink} href={`${props.href}`}>
                       <Icon
                         boxSize="18px"
