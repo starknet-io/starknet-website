@@ -3,7 +3,7 @@ import * as path from "node:path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 
-import { getFirst, write, yaml } from "./utils";
+import { getFirst, write, json } from "./utils";
 import { defaultLocale, locales } from "./locales";
 import { MainMenu } from "./main-menu";
 import {
@@ -110,8 +110,8 @@ await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 
 for (const locale of locales) {
   const mainMenu: MainMenu = await getFirst(
-    () => yaml(`_data/settings/${locale.code}/main-menu.yml`),
-    () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
+    () => json(`_data/settings/${locale.code}/main-menu.json`),
+    () => json(`_data/settings/${defaultLocale}/main-menu.json`),
   );
 
   for (const mainMenuItem of mainMenu.items) {

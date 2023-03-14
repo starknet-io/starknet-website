@@ -507,6 +507,11 @@ const topLevelBlocks: CmsFieldList["types"] = [
 ];
 
 export const config: CmsConfig = {
+  slug: {
+    clean_accents: true,
+    encoding: "ascii",
+    sanitize_replacement: "-",
+  },
   backend: {
     name: "github",
     repo: "starknet-io/starknet-website",
@@ -522,7 +527,7 @@ export const config: CmsConfig = {
       identifier_field: "id",
       folder: `_data/pages/${locale}`,
       create: true,
-      format: "yml",
+      format: "json",
       slug: "{{title}}",
       summary: "{{title}}",
       fields: [
@@ -578,7 +583,7 @@ export const config: CmsConfig = {
       identifier_field: "id",
       folder: `_data/posts/${locale}`,
       create: true,
-      format: "yml",
+      format: "json",
       slug: "{{title}}",
       summary: "{{title}}",
       fields: [
@@ -672,7 +677,7 @@ export const config: CmsConfig = {
       slug: "{{name}}",
       summary: "{{name}}",
       create: true,
-      format: "yml",
+      format: "json",
       fields: [
         {
           name: "id",
@@ -694,7 +699,7 @@ export const config: CmsConfig = {
       slug: "{{name}}",
       summary: "{{name}}",
       create: true,
-      format: "yml",
+      format: "json",
       fields: [
         {
           name: "id",
@@ -715,7 +720,7 @@ export const config: CmsConfig = {
       slug: "{{name}}",
       summary: "{{name}}",
       create: true,
-      format: "yml",
+      format: "json",
       fields: [
         {
           name: "type",
@@ -810,7 +815,7 @@ export const config: CmsConfig = {
       label_singular: "Job",
       folder: `_data/jobs/${locale}`,
       create: true,
-      format: "yml",
+      format: "json",
       summary: "{{job.title}}",
       fields: [
         {
@@ -951,7 +956,7 @@ export const config: CmsConfig = {
       name: "tutorials",
       folder: `_data/tutorials/${locale}`,
       create: true,
-      format: "yml",
+      format: "json",
       identifier_field: "id",
       summary: "{{title}}",
       fields: [
@@ -1068,7 +1073,7 @@ export const config: CmsConfig = {
         {
           label: "Main Menu",
           name: "main-menu",
-          file: `_data/settings/${locale}/main-menu.yml`,
+          file: `_data/settings/${locale}/main-menu.json`,
           fields: [
             {
               label: "Top Level Menu Items",
@@ -1118,7 +1123,7 @@ export const config: CmsConfig = {
         {
           label: "Dapps",
           name: "dapps",
-          file: `_data/settings/${locale}/dapps.yml`,
+          file: `_data/settings/${locale}/dapps.json`,
           fields: [
             {
               label: "Dapps",
@@ -1154,7 +1159,7 @@ export const config: CmsConfig = {
         {
           label: "Wallets",
           name: "wallets",
-          file: `_data/settings/${locale}/wallets.yml`,
+          file: `_data/settings/${locale}/wallets.json`,
           fields: [
             {
               label: "Wallets",
@@ -1209,7 +1214,7 @@ export const config: CmsConfig = {
         {
           label: "Block explorers",
           name: "block-explorers",
-          file: `_data/settings/${locale}/block-explorers.yml`,
+          file: `_data/settings/${locale}/block-explorers.json`,
           fields: [
             {
               label: "Block explorers",
@@ -1249,7 +1254,7 @@ export const config: CmsConfig = {
         {
           label: "Bridges",
           name: "bridges",
-          file: `_data/settings/${locale}/bridges.yml`,
+          file: `_data/settings/${locale}/bridges.json`,
           fields: [
             {
               label: "Bridges",
@@ -1289,7 +1294,7 @@ export const config: CmsConfig = {
         {
           label: "Fiat on-ramps",
           name: "fiat-on-ramps",
-          file: `_data/settings/${locale}/fiat-on-ramps.yml`,
+          file: `_data/settings/${locale}/fiat-on-ramps.json`,
           fields: [
             {
               label: "Fiat on-ramps",

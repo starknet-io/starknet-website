@@ -1,6 +1,5 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import YAML from "yaml";
 import { DefaultLogFields } from "simple-git";
 
 export interface Meta {
@@ -25,10 +24,6 @@ export async function getString(filepath: string): Promise<string> {
   );
 
   return file;
-}
-
-export async function getYAML(filepath: string): Promise<any> {
-  return YAML.parse(await getString(filepath));
 }
 
 export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {

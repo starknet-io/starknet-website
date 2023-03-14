@@ -1,6 +1,6 @@
 import * as path from "node:path";
 import { defaultLocale, locales } from "./locales";
-import { getFirst, slugify, yaml } from "./utils";
+import { getFirst, slugify, json } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
 import { gitlog } from "./git";
@@ -41,10 +41,10 @@ export async function fileToPost(
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
-  const defaultLocaleData = await yaml(defaultLocaleFilepath);
+  const defaultLocaleData = await json(defaultLocaleFilepath);
 
   const data = await getFirst(
-    () => yaml(filepath),
+    () => json(filepath),
     () => defaultLocaleData,
   );
 
@@ -101,10 +101,10 @@ export async function fileToPage(
   );
   const filepath = path.join("_data", resourceName, locale, filename);
 
-  const defaultLocaleData = await yaml(defaultLocaleFilepath);
+  const defaultLocaleData = await json(defaultLocaleFilepath);
 
   const data = await getFirst(
-    () => yaml(filepath),
+    () => json(filepath),
     () => defaultLocaleData,
   );
 
@@ -253,10 +253,10 @@ export async function getSimpleData<T = {}>(
       );
       const filepath = path.join("_data", resourceName, locale.code, filename);
 
-      const defaultLocaleData = await yaml(defaultLocaleFilepath);
+      const defaultLocaleData = await json(defaultLocaleFilepath);
 
       const data = await getFirst(
-        () => yaml(filepath),
+        () => json(filepath),
         () => defaultLocaleData,
       );
 
@@ -297,19 +297,19 @@ export async function getSimpleFiles<T = ItemsFile>(
       "_data",
       "settings",
       defaultLocale,
-      `${resourceName}.yml`,
+      `${resourceName}.json`,
     );
     const filepath = path.join(
       "_data",
       "settings",
       locale.code,
-      `${resourceName}.yml`,
+      `${resourceName}.json`,
     );
 
-    const defaultLocaleData = await yaml(defaultLocaleFilepath);
+    const defaultLocaleData = await json(defaultLocaleFilepath);
 
     const data = await getFirst(
-      () => yaml(filepath),
+      () => json(filepath),
       () => defaultLocaleData,
     );
 

@@ -1,5 +1,4 @@
 import fs from "node:fs/promises";
-import YAML from "yaml";
 
 const cache: { [key: string]: any } = {};
 
@@ -11,15 +10,6 @@ export async function json(filepath: string): Promise<any> {
   }
 
   return cache[`json-${filepath}`];
-}
-export async function yaml(filepath: string): Promise<any> {
-  if (cache[`yaml-${filepath}`] == null) {
-    cache[`yaml-${filepath}`] = (async () => {
-      return YAML.parse(await fs.readFile(filepath, { encoding: "utf8" }));
-    })();
-  }
-
-  return cache[`yaml-${filepath}`];
 }
 
 export async function write(filepath: string, data: any): Promise<void> {
