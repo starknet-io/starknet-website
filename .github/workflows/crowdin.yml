@@ -22,6 +22,7 @@ jobs:
           upload_sources: true
           upload_translations: true
           download_translations: true
+          auto_approve_imported: true
           localization_branch_name: dev_l10n
           create_pull_request: true
           pull_request_title: 'New Crowdin Translations'
