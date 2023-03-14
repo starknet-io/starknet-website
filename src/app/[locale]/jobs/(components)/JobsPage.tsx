@@ -5,12 +5,12 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Button,
   Flex,
   VStack,
   HStack,
   Divider,
 } from "@chakra-ui/react";
+import { Button } from "@ui/Button";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {

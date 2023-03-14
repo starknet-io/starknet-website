@@ -11,7 +11,6 @@ import { inputTheme } from "@ui/Input/Input";
 import { kbdTheme } from "@ui/Kbd/Kbd";
 import { dividerTheme } from "@ui/Divider/Divider";
 import { avatarTheme } from "@ui/Avatar/Avatar";
-import { iconButtonTheme } from "@ui/IconButton/IconButton";
 import { linkTheme } from "@ui/Link/Link";
 import { headingTheme } from "../components/Typography/HeadingStyles";
 import { textTheme } from "../components/Typography/TextStyles";
@@ -90,7 +89,6 @@ const theme = extendTheme(proTheme, {
     Accordion: accordionTheme,
     Avatar: avatarTheme,
     Input: inputTheme,
-    IconButton: iconButtonTheme,
     Drawer: {
       parts: ["dialog", "header", "body"],
       variants: {

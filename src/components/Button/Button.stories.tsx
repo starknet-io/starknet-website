@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack, Icon } from "src/libs/chakra-ui";
+import { HStack, Icon as ChakraIcon } from "src/libs/chakra-ui";
 import { Meta } from "@storybook/react";
 import { Button } from "./Button";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";
@@ -10,6 +10,8 @@ import {
   HiGlobeAlt
 } from "react-icons/hi2";
 import { ChevronDownIcon } from "src/libs/heroicons/20/solid";
+import { HiOutlineGlobeAlt } from "react-icons/hi2";
+import { PopoverIcon } from "../../components/Layout/Navbar/PopoverIcon";
 
 export default {
   title: "starknet.io/Button",
@@ -22,13 +24,13 @@ export const Solid = () => (
       <>
         <Button variant="solid">Solid button</Button>
         <Button leftIcon={
-            <Icon
+            <ChakraIcon
               as={HiPlay}
               boxSize="24px"
             />
           } variant="solid">With icon</Button>
         <Button leftIcon={
-            <Icon
+            <ChakraIcon
               as={HiGlobeAlt}
               boxSize="24px"
             />
@@ -44,13 +46,13 @@ export const Outline = () => (
       <>
         <Button variant="outline">Outline button</Button>
         <Button leftIcon={
-            <Icon
+            <ChakraIcon
               as={HiPlay}
               boxSize="24px"
             />
           } variant="outline">With icon</Button>
         <Button leftIcon={
-            <Icon
+            <ChakraIcon
               as={HiGlobeAlt}
               boxSize="24px"
             />
@@ -86,7 +88,7 @@ export const Ghost = () => (
       <>
         <Button variant="ghost">Ghost button</Button>
         <Button rightIcon={
-            <Icon
+            <ChakraIcon
               as={ChevronDownIcon}
               boxSize="24px"
             />
@@ -121,10 +123,10 @@ export const Switch = () => (
     <HStack p={12}>
       <>
         <Button variant="switch">
-          <Icon as={HiOutlineMoon} fontSize="xl" />
+          <ChakraIcon as={HiOutlineMoon} fontSize="xl" />
         </Button>
         <Button variant="switch">
-          <Icon as={HiOutlineSun} fontSize="xl" />
+          <ChakraIcon as={HiOutlineSun} fontSize="xl" />
         </Button>
       </>
     </HStack>
@@ -152,6 +154,23 @@ export const Category = () => (
       <>
         <Button variant="category">
           Category button
+        </Button>
+      </>
+    </HStack>
+  </ThemeProvider>
+);
+
+export const Icon = () => (
+  <ThemeProvider>
+    <HStack p={12}>
+      <>
+        <Button
+          leftIcon={<ChakraIcon as={HiOutlineGlobeAlt} fontSize="xl" />}
+          variant="icon"
+          rightIcon={<PopoverIcon isOpen={false} />}
+          textTransform="uppercase"
+        >
+          AR
         </Button>
       </>
     </HStack>

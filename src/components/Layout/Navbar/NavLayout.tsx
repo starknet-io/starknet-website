@@ -1,13 +1,13 @@
 import {
   HStack,
   Icon,
-  IconButton,
   useBreakpointValue,
   ButtonGroup,
   Container,
   useColorMode,
   Box,
 } from "src/libs/chakra-ui";
+import { IconButton } from "@ui/IconButton";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import Link from "next/link";
 import {
@@ -54,7 +54,6 @@ export const NavLayout = (props: NavLayoutProps) => {
           {isDesktop && (
             <>
               <IconButton
-                variant="ghost"
                 icon={
                   colorMode === "light" ? (
                     <Icon as={HiOutlineMoon} fontSize="xl" />
@@ -85,7 +84,6 @@ export const NavLayout = (props: NavLayoutProps) => {
           {!isDesktop && (
             <IconButton
               ref={menuButtonRef}
-              variant="ghost"
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}

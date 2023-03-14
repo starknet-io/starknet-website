@@ -1,5 +1,6 @@
 "use client";
-import { Box, Button, Flex, Img, Stack } from "src/libs/chakra-ui";
+import { Box, Flex, Img, Stack } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 

@@ -2,7 +2,6 @@
 import {
   Avatar,
   Box,
-  Button,
   HStack,
   Icon,
   Stack,
@@ -159,17 +158,14 @@ export const ListCard = (props: Props) => {
                   )}
 
                   {/* <IconButton
-              variant="simple"
               aria-label="Website"
               icon={<HiGlobeAlt />}
             />
             <IconButton
-              variant="simple"
               aria-label="Twitter"
               icon={<SiTwitter />}
             />
             <IconButton
-              variant="simple"
               aria-label="Discord"
               icon={<SiDiscord />}
             /> */}

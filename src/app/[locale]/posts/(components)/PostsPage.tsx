@@ -5,7 +5,6 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Button,
   Wrap,
   Container,
   Flex,
@@ -13,6 +12,7 @@ import {
   Divider,
   Grid,
 } from "@chakra-ui/react";
+import { Button } from "@ui/Button";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import { useMemo } from "react";
@@ -132,7 +132,6 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
       gap="8px"
       columnGap="4px"
       width="100%"
-      mt="-12px"
     >
       {items.map((topic, i) => (
         <Button

@@ -5,13 +5,13 @@ import {
   Stack,
   Icon,
   HStack,
-  Button,
   VStack,
   Spacer,
   Img,
   Box,
   StackDivider,
 } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 
@@ -48,7 +48,7 @@ export const LanguageSwitcherDropdown = ({
           <Button
             size="sm"
             leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
-            variant="link"
+            variant="icon"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
             textTransform="uppercase"
           >

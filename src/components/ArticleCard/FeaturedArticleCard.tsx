@@ -4,7 +4,6 @@ import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
@@ -14,6 +13,7 @@ import {
   Text,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 
 type Props = {
   title: string;
