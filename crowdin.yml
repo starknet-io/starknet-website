@@ -6,8 +6,8 @@ files:
     translation: /_data/categories/%two_letters_code%/%original_file_name%
   - source: /_data/events/en/*.json
     translation: /_data/events/%two_letters_code%/%original_file_name%
-  - source: /_data/i18n/en/*.json
-    translation: /_data/i18n/%two_letters_code%/%original_file_name%
+  - source: /_data/i18n/intl/*.json
+    translation: /_data/i18n/intl/%two_letters_code%.json
   - source: /_data/jobs/en/*.json
     translation: /_data/jobs/%two_letters_code%/%original_file_name%
   - source: /_data/pages/en/*.json
@@ -20,5 +20,3 @@ files:
     translation: /_data/topics/%two_letters_code%/%original_file_name%
   - source: /_data/tutorials/en/*.json
     translation: /_data/tutorials/%two_letters_code%/%original_file_name%
-  - source: /_data/i18n/intl/en.json
-    translation: /_data/i18n/intl/%two_letters_code%.json
