@@ -349,22 +349,22 @@ const primaryHero = defineStyle({
     },
   },
   _active: {
-    bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), selected.main",
+    bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #5C94FF",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     borderColor: "selected.main",
     outlineWidth: 1,
     _focus: {
-      bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), selected.main",
+      bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #5C94FF",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       borderColor: "selected.main"
     },
     _dark: {
-      bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), selected.100",
+      bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #AFCAFF",
       borderColor: "transparent",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       color: "snNavy",
       _focus: {
-        bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), selected.100",
+        bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #AFCAFF",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
         color: "snNavy",
         borderColor: "transparent"
