@@ -1,8 +1,8 @@
 needs_content_review:
   - any:
-      - /_data/**
-      - /public/assets/**
+      - /_data/**/*
+      - /public/assets/**/*
 needs_code_review:
   - all:
-      - "!/_data/**"
-      - "!/public/assets/**"
+      - "!/_data/**/*"
+      - "!/public/assets/**/*"
