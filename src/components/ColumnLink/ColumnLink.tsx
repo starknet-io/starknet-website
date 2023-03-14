@@ -1,6 +1,5 @@
 "use client";
 import {
-  Button,
   ButtonProps,
   Icon,
   Link,
@@ -8,6 +7,7 @@ import {
   Text,
   TextProps,
 } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 import { HiPlay } from "react-icons/hi2";
 import NextLink from "next/link";
 type Props = {
@@ -19,6 +19,7 @@ export const ColumnLink = ({ active, ...props }: Props) => {
   return (
     <Button
       {...props}
+      variant="solid"
       as={Link}
       leftIcon={
         <Icon

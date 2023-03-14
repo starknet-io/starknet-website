@@ -5,12 +5,12 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Button,
   Flex,
   VStack,
   HStack,
   Divider,
 } from "@chakra-ui/react";
+import { Button } from "@ui/Button";
 import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
@@ -216,7 +216,7 @@ function CustomHits() {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button onClick={() => showMore()} flexShrink={0} variant="secondary">
+          <Button onClick={() => showMore()} flexShrink={0} variant="outlineLight">
             View More
           </Button>
           <Divider />

@@ -2,15 +2,15 @@
 import {
   Avatar,
   Box,
-  Button,
   HStack,
   Icon,
-  IconButton,
   Stack,
   Tag,
   useColorModeValue,
   Wrap,
 } from "src/libs/chakra-ui";
+import { IconButton } from "@ui/IconButton";
+import { Button } from "@ui/Button";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading"
 import * as React from "react";
@@ -106,17 +106,14 @@ export const EventCard = (props: Props) => {
             </Wrap>
             <Wrap shouldWrapChildren>
               <IconButton
-                variant="simple"
                 aria-label="Website"
                 icon={<HiGlobeAlt />}
               />
               <IconButton
-                variant="simple"
                 aria-label="Twitter"
                 icon={<SiTwitter />}
               />
               <IconButton
-                variant="simple"
                 aria-label="Discord"
                 icon={<SiDiscord />}
               />
