@@ -1,0 +1,12 @@
+{
+  "id": "0snedu09",
+  "type": "github",
+  "url": "https://github.com/starknet-edu/remix-game-day",
+  "image": "/assets/github.png",
+  "title": "Starknet Edu – Remix game day ",
+  "author": "StarkWare ",
+  "published_at": "2022-06-15T00:00:00+00:00",
+  "difficulty": "intermediate",
+  "course": "starknet_edu",
+  "tags": "cairo "
+}
