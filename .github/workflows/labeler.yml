@@ -1,6 +1,6 @@
 name: "Pull Request Labeler"
 on:
-  - check_run
+  - pull_request_target
 
 jobs:
   triage:
