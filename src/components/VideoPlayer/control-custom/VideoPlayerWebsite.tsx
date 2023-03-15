@@ -2,8 +2,8 @@
 
 import { Box } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
+import Image from "next/image";
 import React, { CSSProperties, useEffect, useState } from "react";
-import "react-scrubber/lib/scrubber.css";
 import { useMeasure } from "react-use";
 import Player from "video.js/dist/types/player";
 import ChaptersPlaylist from "../ChaptersPlaylist";
@@ -59,6 +59,7 @@ export function VideoPlayer({
   const [totalDuration, setTotalDuration] = useState(0);
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
+  const [bigPlayBtnVisible, setBigPlayBtnVisible] = useState(true);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
@@ -89,6 +90,10 @@ export function VideoPlayer({
   useEffect(() => {
     onChapterChange?.(currentChapter);
   }, [currentChapter, onChapterChange]);
+
+  useEffect(() => {
+    setBigPlayBtnVisible(playingStatus === "unstarted");
+  }, [playingStatus]);
 
   const handlePlayerReady = (player: any) => {
     playerRef.current = player;
@@ -151,6 +156,11 @@ export function VideoPlayer({
     }
   };
 
+  const onBigButtonClick = () => {
+    playerRef.current?.play();
+    setPlayingStatus("playing");
+  };
+
   const videoWrapperStyle: CSSProperties = isFullscreen
     ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
     : { position: "relative", flex: 1, paddingBottom: "56.25%" };
@@ -195,6 +205,33 @@ export function VideoPlayer({
               videoContainerRef={videoContainerRef}
             />
           </div>
+          <Box
+            onClick={onBigButtonClick}
+            sx={{
+              ...videoStyle,
+              height: "100%",
+              width: "100%",
+              display: "grid",
+              placeContent: "center",
+              zIndex: bigPlayBtnVisible ? 9 : 0,
+              opacity: bigPlayBtnVisible ? 1 : 0,
+              visibility: bigPlayBtnVisible ? "visible" : "hidden",
+              cursor: "pointer",
+            }}
+          >
+            <svg
+              width="74"
+              height="74"
+              viewBox="0 0 74 74"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M36.9999 0.333313C16.7599 0.333313 0.333252 16.76 0.333252 37C0.333252 57.24 16.7599 73.6666 36.9999 73.6666C57.2399 73.6666 73.6666 57.24 73.6666 37C73.6666 16.76 57.2399 0.333313 36.9999 0.333313ZM29.6666 53.5V20.5L51.6666 37L29.6666 53.5Z"
+                fill="#EC796B"
+              />
+            </svg>
+          </Box>
           <CustomControl
             playingStatus={playingStatus}
             isControlActive={isControlActive}

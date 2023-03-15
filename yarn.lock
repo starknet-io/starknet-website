@@ -25928,7 +25928,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.fromentries@npm:^2.0.0, object.fromentries@npm:^2.0.6":
+"object.fromentries@npm:^2.0.6":
   version: 2.0.6
   resolution: "object.fromentries@npm:2.0.6"
   dependencies:
@@ -28565,18 +28565,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scrubber@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "react-scrubber@npm:1.1.1"
-  dependencies:
-    object.fromentries: ^2.0.0
-  peerDependencies:
-    react: 16 - 18
-    react-dom: 16 - 18
-  checksum: 684444c413abbb8952535a3541c8f47d1508633782838f57fa7c917689ae11d46cba9754fff1a1f75d3ad13fcd668c324a728ff1abc42e56d396fec96c838233
-  languageName: node
-  linkType: hard
-
 "react-select@npm:^4.0.0":
   version: 4.3.1
   resolution: "react-select@npm:4.3.1"
@@ -29934,7 +29922,6 @@ __metadata:
     react-instantsearch-dom: ^6.39.0
     react-instantsearch-hooks-web: ^6.41.0
     react-markdown: ^8.0.5
-    react-scrubber: ^1.1.1
     react-use: ^17.4.0
     react-video-seek-slider: ^6.0.3
     react-youtube: ^10.1.0

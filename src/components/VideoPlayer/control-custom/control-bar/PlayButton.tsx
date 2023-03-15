@@ -1,8 +1,6 @@
-import { Button, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { SeekStatuses } from "../hooks/useSeek";
 import ControlButton from "./ControlButton";
-import { preventVideoJSHotKeys } from "./utils";
 
 export type PlayButtonProps = {
   handlePlay: () => void;
@@ -18,8 +16,7 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#000"
-          // className="w-5 h-5"
+          stroke="white"
           width={20}
           height={20}
         >
@@ -37,7 +34,6 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="white"
-          // className="w-5 h-5"
           width={20}
           height={20}
         >
@@ -54,7 +50,6 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="white"
-        // className="w-5 h-5"
         width={20}
         height={20}
       >

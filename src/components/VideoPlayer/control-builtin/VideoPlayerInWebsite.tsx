@@ -2,7 +2,6 @@
 
 import { Box } from "@chakra-ui/react";
 import { CSSProperties, useState } from "react";
-import "react-scrubber/lib/scrubber.css";
 import { useMeasure } from "react-use";
 import ChaptersPlaylist from "../ChaptersPlaylist";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";

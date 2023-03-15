@@ -1,7 +1,6 @@
 "use client";
 
 import React, { Ref, useEffect, useRef, useState } from "react";
-import "react-scrubber/lib/scrubber.css";
 import VideoJS from "../lib/VideoJS";
 
 import { createShareButton, createFullscreenButton } from "./control-bar";

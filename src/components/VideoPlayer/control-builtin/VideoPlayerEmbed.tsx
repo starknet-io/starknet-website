@@ -2,7 +2,6 @@
 
 import { Box } from "@chakra-ui/react";
 import { useState } from "react";
-import "react-scrubber/lib/scrubber.css";
 
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
