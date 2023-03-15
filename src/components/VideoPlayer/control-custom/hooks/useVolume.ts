@@ -1,5 +1,5 @@
 import { precisionRound } from "@ui/VideoPlayer/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 
 export type UseVolumeProps = {
@@ -15,20 +15,24 @@ export function useVolume({ playerRef }: UseVolumeProps) {
       return !p;
     });
   };
+
   const onVolumeScrubChange = (vol: number) => {
-    console.log("volumevolume", vol);
     if (Number.isNaN(vol)) {
       return;
     }
-    if (vol === 0) {
-      setIsMuted(true);
-    } else {
-      setIsMuted(false);
-    }
+
     setVolume(vol);
     const percentAsDecimal = precisionRound(vol / 100, 2);
     playerRef.current.volume(percentAsDecimal);
   };
+
+  useEffect(() => {
+    if (volume === 0) {
+      setIsMuted(true);
+    } else {
+      setIsMuted(false);
+    }
+  }, [volume]);
 
   useHotkeys("m", () => toggleMute());
   useHotkeys("UP", () => setVolume((v) => Math.min(v + 5, 100)));

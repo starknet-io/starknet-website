@@ -13,6 +13,7 @@ import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import VideoMeta from "../meta/VideoMeta";
 import { Chapter } from "../utils";
 import CustomControl from "./control-bar/CustomControl";
+import usePreventDefaultHotkeys from "./hooks/usePreventDefaultHotkeys";
 import { useSeek } from "./hooks/useSeek";
 import { useVolume } from "./hooks/useVolume";
 
@@ -86,6 +87,8 @@ export function VideoPlayer({
       initialActiveChapter,
       chapters,
     });
+
+  usePreventDefaultHotkeys();
 
   useEffect(() => {
     onChapterChange?.(currentChapter);
