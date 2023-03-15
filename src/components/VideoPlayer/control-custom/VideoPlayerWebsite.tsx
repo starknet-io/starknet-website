@@ -2,8 +2,7 @@
 
 import { Box } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
-import Image from "next/image";
-import React, { CSSProperties, useEffect, useState } from "react";
+import React, { CSSProperties, useEffect, useRef, useState } from "react";
 import { useMeasure } from "react-use";
 import Player from "video.js/dist/types/player";
 import ChaptersPlaylist from "../ChaptersPlaylist";
@@ -64,7 +63,9 @@ export function VideoPlayer({
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
-  const isControlActive = true;
+  const paused = useRef(false);
+  const [isControlActive, setIsControlActive] = useState(false);
+
   const { volume, isMuted, toggleMute, onVolumeScrubChange, setVolume } =
     useVolume({
       playerRef,
@@ -142,6 +143,25 @@ export function VideoPlayer({
 
     player.one("ended", function () {
       setPlayingStatus("ended");
+    });
+
+    player.on("useractive", () => {
+      setIsControlActive(true);
+    });
+
+    player.on("userinactive", () => {
+      if (!paused.current) {
+        setIsControlActive(false);
+      }
+    });
+
+    player.on("pause", () => {
+      paused.current = true;
+    });
+
+    player.on("play", () => {
+      paused.current = false;
+      setIsControlActive(true);
     });
 
     const volume = player.volume();
