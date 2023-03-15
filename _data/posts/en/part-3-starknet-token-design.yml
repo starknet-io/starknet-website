@@ -13,10 +13,10 @@ topic:
   - ba3700d2-675d-4264-a507-740f5e77f06f
   - f9337f26-ae48-4f38-be86-8fe0c465ea13
 short_desc: >
-  The design of the StarkNet Token is shaped by the need to power a network that
-  is composed of (i) Users of StarkNet, (ii) Operators — people providing the
-  network with computing resources that perform sequencing of transactions,
-  generation of STARK proofs, and long-term storage providers, and
+  The design of the StarkNet Token is shaped by the need to power a
+  network that is composed of (i) Users of StarkNet, (ii) Operators — people
+  providing the network with computing resources that perform sequencing of
+  transactions, generation of STARK proofs, and long-term storage providers, and
   (iii) Developers writing software for its infrastructure and for applications
   running on it.
 blocks:

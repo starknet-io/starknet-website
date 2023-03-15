@@ -50,12 +50,12 @@ blocks:
       - type: accordion_item
         label: In Starknet, are STARK proofs zero-knowledge proofs?
         body: >-
-          Currently not. STARKs are defined as Validity proofs, meaning they
-          prove computational integrity. With Validity proofs (STARKs included),
-          one party can prove to another that a certain computation was
-          performed correctly. Zero-Knowledge is an additional property
-          asserting that the prover does not have to reveal any information
-          included in the computation.
+          Currently not. STARKs are defined as Validity proofs, meaning they prove
+          computational integrity. With Validity proofs (STARKs included), one
+          party can prove to another that a certain computation was performed
+          correctly. Zero-Knowledge is an additional property asserting that the
+          prover does not have to reveal any information included in the
+          computation.
 
 
           Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
@@ -115,8 +115,8 @@ blocks:
     blocks:
       - label: Who will be able to participate in Starknet?
         body: >-
-          Starknet is evolving to become fully permissionless, allowing anyone
-          to operate on the network:
+          Starknet is evolving to become fully permissionless, allowing anyone to
+          operate on the network:
 
 
           1. **Sequencers**  – Anyone will be able to operate a sequencer, i.e., batch transactions and propose new blocks (somewhat analogous to Ethereum miners, without the Proof of Work part).
@@ -161,8 +161,8 @@ blocks:
     blocks:
       - label: What is the difference between StarkEx and Starknet?
         body: >-
-          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges
-          that uses the STARK proof system in order to provide massive scaling.
+          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges that
+          uses the STARK proof system in order to provide massive scaling.
           Several significant exchanges are already using StarkEx in production
           on Ethereum Mainnet (read more about StarkEx).
 
@@ -209,8 +209,8 @@ blocks:
           your wallet at this stage. Beware of scams.
       - label: Where and when can I buy tokens?
         body: >-
-          The Starknet Token is not yet for sale. It cannot be added to your
-          wallet at this stage. Beware of scams.
+          The Starknet Token is not yet for sale. It cannot be added to your wallet
+          at this stage. Beware of scams.
 
 
           The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
@@ -233,9 +233,9 @@ blocks:
     blocks:
       - label: What is the Starknet Foundation?
         body: >-
-          Starknet is a permissionless, decentralized Layer 2 (L2) Validity
-          Rollup intended to scale Ethereum while retaining Ethereum’s security
-          and decentralization. In keeping with that mission, the Foundation was
+          Starknet is a permissionless, decentralized Layer 2 (L2) Validity Rollup
+          intended to scale Ethereum while retaining Ethereum’s security and
+          decentralization. In keeping with that mission, the Foundation was
           established as an independent entity to advance the shared technology
           that is Starknet. Additionally, as a not-for-profit entity with a
           narrow mission: to advance Starknet as a public good for all, and
