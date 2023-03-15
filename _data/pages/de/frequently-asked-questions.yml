@@ -1,0 +1,188 @@
+id: b5689d3a-348b-4ccb-b787-520b64c55e41
+title: Frequently asked questions
+template: content
+parent_page: /learn/
+breadcrumbs: false
+page_last_updated: true
+blocks:
+  - 
+    type: page_header
+    title: Frequently asked questions
+  - 
+    type: accordion
+    heading: Common questions
+    blocks:
+      - 
+        type: accordion_item
+        label: What will the Starknet tokens be used for?
+        body: The Starknet token will be used for paying transaction fees, participation in the Starknet protocol, and participation in governance. The rationale for each of these utilities is presented in our [decentralization proposal](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+      - 
+        type: accordion_item
+        label: Where can I monitor Starknet’s transactions?
+        body: "There are several block explorers you can use: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet)."
+      - 
+        type: accordion_item
+        label: I want to write my own contract on Starknet. Where do I start? Are there any available toolkits?
+        body: >-
+          A good place to start is the [Hello Starknet tutorial](https://docs.starknet.io/documentation/), which guides the developer step by step through writing and deploying a simple contract. The [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) offers an environment for learning how to write Starknet contracts and test them.  
+
+          You can become part of the developers’ community, and support it, by joining the [Starknet Discord](https://discord.com/invite/QypNMzkHbc) server.
+      - 
+        type: accordion_item
+        body: SHARP (shared prover) is a service for computing proofs of the correct execution of Cairo programs. It can be used to prove the correct execution of a particular Cairo program which enforces the validity of Starknet state transitions – the Starknet OS (operating system). Currently, Starknet uses SHARP alongside many other customers to amortize proof costs. In the future, Starknet throughput may justify a dedicated prover layer..
+        label: How is Starknet related to SHARP?
+      - 
+        type: accordion_item
+        label: In Starknet, are STARK proofs zero-knowledge proofs?
+        body: >-
+          Currently not. STARKs are defined as Validity proofs, meaning they prove computational integrity. With Validity proofs (STARKs included), one party can prove to another that a certain computation was performed correctly. Zero-Knowledge is an additional property asserting that the prover does not have to reveal any information included in the computation. 
+
+          Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed). 
+
+          Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+      - 
+        type: accordion_item
+        label: Can I maintain privacy on Starknet?
+        body: >-
+          Currently, Starknet transactions and their payloads are visible to the network in the same way that they are visible on Ethereum. 
+
+          It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+  - 
+    type: accordion
+    heading: "Cairo "
+    blocks:
+      - 
+        type: accordion_item
+        label: What is Cairo?
+        body: Cairo is an overloaded term which stands for three different things. First, Cairo is a CPU architecture. Second, “Cairo” is shorthand for CPU AIR which is an algebraic representation of this CPU architecture. Lastly, Cairo is a Turing complete programming language that enables blockchain developers to harness the power of STARKs. The first two aspects, alongside the instruction set of the language, are outlined in the [whitepaper](https://eprint.iacr.org/2021/1063). For the language, see the [github repo](https://github.com/starkware-libs/cairo).
+      - 
+        type: accordion_item
+        label: What is STARK?
+        body: STARK is a proof system. It uses cutting-edge cryptography to provide polylogarithmic verification complexity and proof size, quasilinear proof complexity, and minimal assumptions which are post-quantum-secure. More information [here](https://starkware.co/stark/).
+      - 
+        type: accordion_item
+        label: What Is the difference between Starknet contracts and Cairo programs?
+        body: >-
+          [Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) is a Turing-complete language designed for succinctly proving the correct execution of Cairo programs. A Cairo program is stateless, meaning you do not have native access to storage, other Cairo programs, or the L1 state (although you can access those, as explained below).  
+
+          Starknet contracts, on the other hand, live in the Starknet VM, which has a persistent state that smart contracts can access and modify. These smart contracts can store variables, communicate with other contracts, and send/receive messages to/from L1 ([read more](https://www.cairo-lang.org/docs/hello_starknet/index.html)).
+      - 
+        type: accordion_item
+        label: Do I have to write my contract in Cairo to deploy on Starknet?
+        body: >-
+          No. You have several options for writing a contract, each with its own benefits.  
+
+          Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
+  - 
+    type: accordion
+    heading: Operating on starknet
+    blocks:
+      - 
+        label: Who will be able to participate in Starknet?
+        body: >-
+          Starknet is evolving to become fully permissionless, allowing anyone to operate on the network: 
+
+          1. **Sequencers**  – Anyone will be able to operate a sequencer, i.e., batch transactions and propose new blocks (somewhat analogous to Ethereum miners, without the Proof of Work part). 
+          2. **Provers** – Anyone will be able to set up a prover and create proofs for the validity of new blocks. 
+          3. **Developers** – Developers will be able to deploy their smart contracts – permissionlessly. 
+          4. **Users** – Users will be able to send transactions permissionlessly. As the system will be decentralized, the possibility of censorship will be eliminated.
+      - 
+        label: What types of dApps can be deployed on Starknet?
+        body: Any dApp can be deployed on Starknet. As Cairo allows general computation, any business logic can be implemented and processed over StarkNet.
+      - 
+        label: Who can deploy a smart contract on Starknet?
+        body: >-
+          Anyone can interact with Starknet and deploy contracts. 
+
+          During the Alpha phase, developers need to make sure they are aware of the network status as part of the onboarding process.
+      - 
+        label: What will decentralization on Starknet look like?
+        body: >-
+          The decentralization of the network has two aspects: 
+
+          1. The permissionless layer of Sequencers and Provers ensures that the network will be censorship-resistant. 
+          2. The usage of STARK-proofs ensures that the state is correct, allows everyone to verify the entire Starknet chain with low hardware requirements – regardless of the network’s throughput, and without trusting any external entity.
+      - 
+        label: Can I run a Starknet full node?
+        body: >-
+          Yes! 
+
+          You can take a look at [this tutorial](https://github.com/eqlabs/pathfinder/#readme).
+      - 
+        label: Does Starknet support EVM?
+        body: >-
+          The Warp team at Nethermind is developing a Solidity to Cairo transpiler: [Warp](https://github.com/NethermindEth/warp). 
+
+          Starknet does not natively support EVM.
+  - 
+    type: accordion
+    heading: Starknet and StarkEx
+    blocks:
+      - 
+        label: What is the difference between StarkEx and Starknet?
+        body: >-
+          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges that uses the STARK proof system in order to provide massive scaling. Several significant exchanges are already using StarkEx in production on Ethereum Mainnet (read more about StarkEx). 
+
+          **Starknet** is a general-purpose network where you can write and deploy your own smart contracts, interact with other contracts, and so on, just like Ethereum.
+      - 
+        label: What will happen to StarkEx dapps? Will they migrate to Starknet?
+        body: Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so choose.
+  - 
+    type: accordion
+    heading: Starknet Token
+    blocks:
+      - 
+        label: Why does Starknet need a token?
+        body: "STARK technology is mature and secure, but Starknet has not yet achieved the status of a public good like Ethereum or the Internet. For Starknet to reach this goal, its governance, operation and development must continue to decentralize. This will be facilitated through two mechanisms: the **Starknet Foundation** and the **Starknet Token**."
+      - 
+        label: What will the Starknet tokens be used for?
+        body: The Starknet token will be used as a staking token for participation in Starknet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in our [decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled  “What will the tokens be used for?”
+      - 
+        label: Why another token, can’t you use Eth?
+        body: A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact Starknet’s service and its users and providers.
+      - 
+        label: Do I need Starknet tokens to use Starknet?
+        body: Currently, no. Fees in Starknet are now paid in Ether (ETH). But later on, we anticipate that in the future, fees will be paid exclusively with the native Starknet Token.
+      - 
+        label: Do I need Starknet tokens to transact on StarkEx?
+        body: No.
+      - 
+        label:
+          How are the tokens distributed? Who has how many tokens? How many tokens are in circulation? How many tokens are there? How many tokens will be minted each year? body: This information can be found in the [blog post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef).
+      - 
+        label: What is the process for adding the token to my wallet?
+        body: The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+      - 
+        label: Where and when can I buy tokens?
+        body: >-
+          The Starknet Token is not yet for sale. It cannot be added to your wallet at this stage. Beware of scams. 
+
+          The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
+      - 
+        label: Is there a lock-up period for the Tokens?
+        body: We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+      - 
+        label: Will the initial token supply of ten billion tokens, remain fixed?
+        body: No. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol. Details on the minting rate and mechanism are yet to be defined.
+  - 
+    type: accordion
+    heading: Starknet Foundation
+    blocks:
+      - 
+        label: What is the Starknet Foundation?
+        body: >-
+          Starknet is a permissionless, decentralized Layer 2 (L2) Validity Rollup intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is Starknet. Additionally, as a not-for-profit entity with a narrow mission: to advance Starknet as a public good for all, and maintain it as such for years to come. 
+
+          The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of Starknet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers. 
+
+          For more information on the Foundation’s mission, first steps, and board, see the Foundation’s [“Hello World” post](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) and [StarkWare’s complementary post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).
+  - 
+    type: accordion
+    heading: General information
+    blocks:
+      - 
+        label: I want to get involved in the Starknet community. How do I do that?
+        body: If you are excited about StarkNet and its decentralization and wish to participate in the process, please join the builders on StarkNet [Discord](https://starknet.io/discord) and [Starknet community forum](https://community.starknet.io/)
+      - 
+        label: I came across a fraud attempt. How can I warn others against it?
+        body: You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [Starknet Discord](https://starknet.io/discord) server.
