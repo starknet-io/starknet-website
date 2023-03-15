@@ -9,6 +9,7 @@ import { PlayButton } from "./PlayButton";
 import { ShareButton } from "./ShareButton";
 import { VolumeButton } from "./VolumeButton";
 import { SeekStatuses } from "../hooks/useSeek";
+import { convertSecondsToMMSS } from "./utils";
 
 type CustomControlProps = {
   playingStatus: SeekStatuses;
@@ -101,16 +102,20 @@ export default function CustomControl(props: CustomControlProps) {
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: "4px",
+            // gap: "8px",
             color: "white",
             fontSize: "sm",
             fontWeight: 500,
             lineHeight: 1,
           }}
         >
-          <Box>0:03</Box>
+          <Box sx={{ minWidth: "45px" }}>
+            {convertSecondsToMMSS(currentTime)}
+          </Box>
           <Box>/</Box>
-          <Box>2:20</Box>
+          <Box sx={{ minWidth: "45px", textAlign: "right" }}>
+            {convertSecondsToMMSS(totalDuration)}
+          </Box>
         </Box>
         <Box
           sx={{
