@@ -7,9 +7,11 @@ export const ARROW_DOWN = 40;
 export default function usePreventDefaultHotkeys() {
   useEffect(() => {
     const preventScrollOnSpace = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      console.log("target.tagName", target.tagName);
       if (
         [SPACE, ARROW_UP, ARROW_DOWN].some((code) => code === e.keyCode) &&
-        e.target == document.body
+        (target == document.body || target.tagName === "VIDEO")
       ) {
         e.preventDefault();
       }

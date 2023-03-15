@@ -93,10 +93,10 @@ export const VolumeButton = ({
           onChangeStart={onScrubStart}
           onChange={onVolumeChange}
         >
-          <SliderTrack>
-            <SliderFilledTrack fill="white" />
+          <SliderTrack bg="#B0B0B0">
+            <SliderFilledTrack bg="white" />
           </SliderTrack>
-          <SliderThumb />
+          <SliderThumb bg="white" />
         </Slider>
       </Box>
     </Box>

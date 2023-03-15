@@ -236,3 +236,8 @@
   height: 60px;
   padding-top: 8px;
 }
+
+.vjs-theme-custom .video-js .vjs-tech,
+.vjs-theme-custom .video-js .vjs-tech:focus-visible {
+  outline: none;
+}
