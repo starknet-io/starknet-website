@@ -1,10 +1,10 @@
-id: 0snedu08
-type: github
-url: https://github.com/starknet-edu/ultimate-env
-image: /assets/github.png
-title: Starknet Edu – Dev environment
+id: "0snedu08"
+type: "github"
+url: "https://github.com/starknet-edu/ultimate-env"
+image: "/assets/github.png"
+title: "Starknet Edu – Dev environment"
 author: "StarkWare "
-published_at: 2022-04-01T00:00:00+00:00
-difficulty: beginner
-course: starknet_edu
+published_at: "2022-04-01T00:00:00+00:00"
+difficulty: "beginner"
+course: "starknet_edu"
 tags: "cairo, messaging "

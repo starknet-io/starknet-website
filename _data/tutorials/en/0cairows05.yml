@@ -1,10 +1,10 @@
-id: 0cairows05
-type: youtube
-url: https://youtu.be/3duFa_5Zq6A
-image: /assets/cairows04.jpeg
-title: Unit testing with Protostar
-author: StarkWare
-published_at: 2022-10-27T00:00:00+00:00
-difficulty: beginner
-course: cairo_workshops
-tags: testing
+id: "0cairows05"
+type: "youtube"
+url: "https://youtu.be/3duFa_5Zq6A"
+image: "/assets/cairows04.jpeg"
+title: "Unit testing with Protostar"
+author: "StarkWare"
+published_at: "2022-10-27T00:00:00+00:00"
+difficulty: "beginner"
+course: "cairo_workshops"
+tags: "testing"
