@@ -11,6 +11,7 @@ type Props = {
   rightAsideSticky?: boolean;
   pageHeader?: React.ReactNode;
   breadcrumbs?: React.ReactNode;
+  alert?: React.ReactNode;
   pageLastUpdated?: string | null;
   sectionHeaderTitle?: string | undefined;
   sectionHeaderDescription?: string | undefined;
@@ -19,6 +20,7 @@ type Props = {
 export const PageLayout = (props: Props) => {
   return (
     <Container py="0" pb="16" flex="1">
+      {props.alert}
       <Flex py="4" direction={{ base: "column", lg: "row" }}>
         <Box>{props.breadcrumbs}</Box>
         <Spacer />

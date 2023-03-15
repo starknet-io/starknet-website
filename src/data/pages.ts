@@ -185,6 +185,7 @@ export interface Page extends Meta {
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly page_last_updated?: string;
+  readonly alert?: string;
   readonly blocks: readonly TopLevelBlock[];
 }
 

@@ -82,6 +82,7 @@ export interface Page extends Meta {
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
   readonly pageLastUpdated: boolean;
+  readonly alert: boolean;
   blocks?: any;
 
   link?: string;
@@ -375,6 +376,7 @@ export function handleLink(
         template: data.template,
         breadcrumbs: data.breadcrumbs,
         pageLastUpdated: data.pageLastUpdated,
+        alert: data.alert,
         link: data.link,
       };
     }

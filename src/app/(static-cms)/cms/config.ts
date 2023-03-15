@@ -438,6 +438,35 @@ const blocks: ListField["types"] = [
       },
     ],
   },
+  {
+    name: "alert",
+    label: "Alert",
+    widget: "object",
+    fields: [
+      {
+        name: "variant",
+        label: "Variant",
+        widget: "select",
+        required: false,
+        options: [
+          "blue",
+          "orange",
+          "red"
+        ],
+        default: "blue"
+      },
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+      },
+      {
+        name: "body",
+        label: "Description",
+        widget: "markdown",
+      }
+    ]
+  }
 ];
 
 const topLevelBlocks: ListField["types"] = [
@@ -589,6 +618,12 @@ export const config: Config = {
           default: true,
         },
         {
+          name: "alert",
+          label: "Show alert",
+          widget: "boolean",
+          default: false,
+        },
+        {
           name: "blocks",
           label: "Blocks",
           widget: "list",
@@ -641,6 +676,35 @@ export const config: Config = {
           name: "published_date",
           label: "Published Date",
           widget: "datetime",
+        },
+        {
+          name: "alert",
+          label: "Alert",
+          widget: "object",
+          fields: [
+            {
+              name: "variant",
+              label: "Variant",
+              widget: "select",
+              required: false,
+              options: [
+                "blue",
+                "orange",
+                "red"
+              ],
+              default: "blue"
+            },
+            {
+              name: "title",
+              label: "Title",
+              widget: "string",
+            },
+            {
+              name: "body",
+              label: "Description",
+              widget: "markdown",
+            }
+          ]
         },
         {
           name: "time_to_consume",
@@ -1400,6 +1464,35 @@ export const config: Config = {
               ],
             },
           ],
+        },
+        {
+          label: "Alert",
+          name: "alert",
+          file: `_data/settings/${locale}/alert.yml`,
+          fields: [
+            {
+              name: "variant",
+              label: "Variant",
+              widget: "select",
+              required: false,
+              options: [
+                "blue",
+                "orange",
+                "red"
+              ],
+              default: "blue"
+            },
+            {
+              name: "title",
+              label: "Title",
+              widget: "string",
+            },
+            {
+              name: "body",
+              label: "Description",
+              widget: "markdown",
+            }
+          ]
         },
       ],
     },

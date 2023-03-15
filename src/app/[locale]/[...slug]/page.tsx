@@ -9,6 +9,7 @@ import {
 } from "../../../libs/chakra-ui";
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { Alert } from "@ui/Alert";
 import { Block } from "src/blocks/Block";
 import { Page as PageType } from "src/data/pages";
 import { Index } from "unist-util-index";
@@ -106,6 +107,9 @@ Props): JSX.Element {
             data.page_last_updated && date
               ? `Page last updated ${moment(date).fromNow()}  `
               : null
+          }
+          alert={
+            data.alert && <Alert variant="blue" title="Title">Description</Alert>
           }
           main={
             <Flex
