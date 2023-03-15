@@ -110,9 +110,14 @@ blocks:
         href: https://docs.empiric.network/
       - type: link_list_item
         is_external: true
-        label: Get-starknet
+        label: get-starknet
         sub_label: Starknet wallet <-> dapp bridge
         href: https://www.npmjs.com/package/get-starknet
+      - type: link_list_item
+        is_external: true
+        label: starknet-deeplink
+        sub_label: StarkNet deeplink generator
+        href: https://www.npmjs.com/package/starknet-deeplink
       - type: link_list_item
         is_external: true
         label: Nile
