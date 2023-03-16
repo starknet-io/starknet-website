@@ -1,0 +1,10 @@
+id: 0cairo004
+type: youtube
+url: https://youtu.be/w5vXARtSPSo
+image: /assets/cairo04.jpeg
+title: Starknet ERC721
+author: StarkWare
+published_at: 2023-01-31T00:00:00+00:00
+difficulty: intermediate
+course: cairo_101
+tags: ERC721
