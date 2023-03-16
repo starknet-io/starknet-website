@@ -12,6 +12,7 @@ import { ShareButton } from "./ShareButton";
 import { VolumeButton } from "./VolumeButton";
 import { SeekStatuses } from "../hooks/useSeek";
 import { convertSecondsToMMSS } from "./utils";
+import { Chapter } from "@ui/VideoPlayer/utils";
 
 type CustomControlProps = {
   playingStatus: SeekStatuses;
@@ -29,6 +30,8 @@ type CustomControlProps = {
   volume: number;
   toggleFullscreen: () => void;
   isFullscreen: boolean;
+  chapter: Chapter;
+  isDisabled?: boolean;
 };
 export default function CustomControl(props: CustomControlProps) {
   const {
@@ -47,6 +50,8 @@ export default function CustomControl(props: CustomControlProps) {
     volume,
     toggleFullscreen,
     isFullscreen,
+    chapter,
+    isDisabled,
   } = props;
 
   const shouldShowControl = () => {
@@ -54,6 +59,12 @@ export default function CustomControl(props: CustomControlProps) {
       return false;
     }
     return isControlActive || playingStatus === "paused";
+  };
+
+  const callIfWithingChapter = (t: number, func: (t: number) => void) => {
+    if (!isDisabled && chapter && t <= chapter.endAt) {
+      func(t);
+    }
   };
 
   return (
@@ -88,12 +99,12 @@ export default function CustomControl(props: CustomControlProps) {
         }}
       >
         <Scrubber
-          min={0}
-          max={totalDuration}
+          min={Math.floor(chapter.startAt)}
+          max={Math.ceil(chapter.endAt)}
           value={currentTime}
-          onScrubStart={(v) => onSeekScrubStart(v)}
-          onScrubEnd={(v) => onSeekScrubEnd(v)}
-          onScrubChange={(v) => onSeekScrubChange(v)}
+          onScrubStart={(v) => callIfWithingChapter(v, onSeekScrubStart)}
+          onScrubEnd={(v) => callIfWithingChapter(v, onSeekScrubEnd)}
+          onScrubChange={(v) => callIfWithingChapter(v, onSeekScrubChange)}
           bufferPosition={bufferPosition}
         />
       </div>
@@ -127,11 +138,11 @@ export default function CustomControl(props: CustomControlProps) {
           }}
         >
           <Box sx={{ minWidth: "45px" }}>
-            {convertSecondsToMMSS(currentTime)}
+            {convertSecondsToMMSS(Math.ceil(currentTime - chapter.startAt))}
           </Box>
           <Box>/</Box>
           <Box sx={{ minWidth: "45px", textAlign: "right" }}>
-            {convertSecondsToMMSS(totalDuration)}
+            {convertSecondsToMMSS(Math.floor(chapter.endAt - chapter.startAt))}
           </Box>
         </Box>
         <Box

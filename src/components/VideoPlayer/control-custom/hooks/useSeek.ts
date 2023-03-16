@@ -24,20 +24,18 @@ export function useSeek({ totalDuration, playerRef }: UseSeekProps) {
     if (!Number.isNaN(time)) {
       _scrubPlayingStatus.current = playingStatus;
       playerRef.current.pause();
-      setPlayingStatus("paused");
       seek(time);
     }
   };
 
   const onSeekScrubChange = (time: number) => {
-    isSeeking.current = true;
     if (!Number.isNaN(time)) {
       seek(time);
     }
   };
 
   const onSeekScrubEnd = (time: number) => {
-    isSeeking.current = true;
+    isSeeking.current = false;
     if (!Number.isNaN(time)) {
       seek(time);
       if (time === totalDuration) {

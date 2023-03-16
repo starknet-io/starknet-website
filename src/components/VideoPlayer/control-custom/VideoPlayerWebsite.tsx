@@ -80,7 +80,6 @@ export function VideoPlayer({
     });
 
   const {
-    isSeeking,
     playingStatus,
     currentTime,
     onPlayToggle,
@@ -176,10 +175,9 @@ export function VideoPlayer({
       if (
         activeChapter &&
         activeChapter?.endAt - playerTime > 0 &&
-        activeChapter?.endAt - playerTime < 0.7 &&
+        activeChapter?.endAt - playerTime < 0.4 &&
         playerTime - lastPlayerTime.current > 0 &&
-        playerTime - lastPlayerTime.current < 0.7 &&
-        !isSeeking.current
+        playerTime - lastPlayerTime.current < 1
       ) {
         playerRef.current?.pause();
         setPlayingStatus("paused");
@@ -306,7 +304,7 @@ export function VideoPlayer({
           <Box
             sx={{
               ...videoPositionStyle,
-              zIndex: 99,
+              zIndex: 9999,
               background: "rgba(0,0,0, .7)",
               display: "grid",
               placeContent: "center",
@@ -339,23 +337,27 @@ export function VideoPlayer({
               isVisible={isControlActive}
             />
           )}
-          <CustomControl
-            playingStatus={playingStatus}
-            isControlActive={isControlActive}
-            totalDuration={totalDuration}
-            currentTime={currentTime}
-            onSeekScrubStart={onSeekScrubStart}
-            onSeekScrubEnd={onSeekScrubEnd}
-            onSeekScrubChange={onSeekScrubChange}
-            bufferPosition={totalDuration * bufferPercent}
-            onPlayToggle={onPlayToggle}
-            isMuted={isMuted}
-            toggleMute={toggleMute}
-            onVolumeScrubChange={onVolumeScrubChange}
-            volume={volume}
-            toggleFullscreen={toggleFullscreen}
-            isFullscreen={isFullscreen}
-          />
+          {chapter && (
+            <CustomControl
+              chapter={chapter}
+              playingStatus={playingStatus}
+              isControlActive={isControlActive}
+              totalDuration={totalDuration}
+              currentTime={currentTime}
+              onSeekScrubStart={onSeekScrubStart}
+              onSeekScrubEnd={onSeekScrubEnd}
+              onSeekScrubChange={onSeekScrubChange}
+              bufferPosition={totalDuration * bufferPercent}
+              onPlayToggle={onPlayToggle}
+              isMuted={isMuted}
+              toggleMute={toggleMute}
+              onVolumeScrubChange={onVolumeScrubChange}
+              volume={volume}
+              toggleFullscreen={toggleFullscreen}
+              isFullscreen={isFullscreen}
+              isDisabled={isChapterChangeModalOpen}
+            />
+          )}
         </div>
         <ChaptersPlaylist
           height={height}
