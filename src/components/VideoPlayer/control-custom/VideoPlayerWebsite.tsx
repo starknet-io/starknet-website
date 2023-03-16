@@ -1,15 +1,9 @@
 "use client";
 
-import { Box } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
-import React, {
-  CSSProperties,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
-import { useMeasure } from "react-use";
+import React, { CSSProperties, useEffect, useRef, useState } from "react";
+import { useMeasure, useInterval } from "react-use";
 import Player from "video.js/dist/types/player";
 import ChaptersPlaylist from "../ChaptersPlaylist";
 import { useChapters } from "../hooks/useChapters";
@@ -69,6 +63,11 @@ export function VideoPlayer({
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
+  const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
+    useState(false);
+  const [isRunning, toggleIsRunning] = useState(false);
+
+  const [chapterTimeoutCount, setChapterTimeoutCount] = React.useState(5);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
@@ -81,6 +80,7 @@ export function VideoPlayer({
     });
 
   const {
+    isSeeking,
     playingStatus,
     currentTime,
     onPlayToggle,
@@ -90,6 +90,8 @@ export function VideoPlayer({
     setCurrentTime,
     setPlayingStatus,
   } = useSeek({ totalDuration, playerRef });
+
+  const lastPlayerTime = useRef(currentTime);
 
   const { currentChapter, setCurrentChapter, goToChapter, getSeekChapter } =
     useChapters({
@@ -102,6 +104,44 @@ export function VideoPlayer({
     chapters,
     currentChapter,
   });
+
+  const playNextChapter = () => {
+    setIsChapterChangeModalOpen(false);
+    toggleIsRunning(false);
+    playerRef.current?.play();
+    setPlayingStatus("playing");
+    const nextChapter = getSeekChapter(playerRef.current!.currentTime() + 2);
+    if (nextChapter) {
+      playerRef.current?.currentTime(nextChapter.startAt);
+      setCurrentChapter(nextChapter.id);
+    }
+  };
+
+  const replayCurrentChapter = () => {
+    setIsChapterChangeModalOpen(false);
+    toggleIsRunning(false);
+
+    const activeChapter = getSeekChapter(playerRef.current!.currentTime() - 1);
+    if (activeChapter) {
+      playerRef.current?.currentTime(activeChapter.startAt);
+      playerRef.current?.play();
+      setPlayingStatus("playing");
+      setCurrentChapter(activeChapter.id);
+    }
+  };
+
+  useInterval(
+    () => {
+      setChapterTimeoutCount((c) => {
+        if (c === 0) {
+          playNextChapter();
+          return c;
+        }
+        return c - 1;
+      });
+    },
+    isRunning ? 1000 : null
+  );
 
   usePreventDefaultHotkeys();
 
@@ -126,17 +166,31 @@ export function VideoPlayer({
     });
 
     player.on("timeupdate", function () {
-      const currentTime = playerRef.current?.currentTime();
-      if (currentTime === undefined) {
+      const playerTime = playerRef.current?.currentTime();
+      if (playerTime === undefined) {
         return;
       }
-      setCurrentTime(currentTime);
 
-      const newChapter = getSeekChapter(currentTime);
+      const activeChapter = getSeekChapter(playerTime);
 
-      if (newChapter && newChapter?.id !== currentChapter) {
-        setCurrentChapter(newChapter.id);
+      if (
+        activeChapter &&
+        activeChapter?.endAt - playerTime > 0 &&
+        activeChapter?.endAt - playerTime < 0.7 &&
+        playerTime - lastPlayerTime.current > 0 &&
+        playerTime - lastPlayerTime.current < 0.7 &&
+        !isSeeking.current
+      ) {
+        playerRef.current?.pause();
+        setPlayingStatus("paused");
+        toggleIsRunning(true);
+        setIsChapterChangeModalOpen(true);
+        setChapterTimeoutCount(5);
+      } else if (activeChapter && activeChapter?.id !== currentChapter) {
+        setCurrentChapter(activeChapter.id);
       }
+      setCurrentTime(playerTime);
+      lastPlayerTime.current = playerTime;
     });
 
     player.on("progress", function () {
@@ -191,6 +245,13 @@ export function VideoPlayer({
       playerRef.current?.play();
       playerRef.current?.pause();
     }
+
+    if (isChapterChangeModalOpen) {
+      setIsChapterChangeModalOpen(false);
+      toggleIsRunning(false);
+      setPlayingStatus("playing");
+      playerRef.current?.play();
+    }
   };
 
   const onBigPlayBtnClick = () => {
@@ -242,6 +303,30 @@ export function VideoPlayer({
               videoContainerRef={videoContainerRef}
             />
           </div>
+          <Box
+            sx={{
+              ...videoPositionStyle,
+              zIndex: 99,
+              background: "rgba(0,0,0, .7)",
+              display: "grid",
+              placeContent: "center",
+              gap: "30px",
+              pointerEvents: isChapterChangeModalOpen ? "auto" : "none",
+              opacity: isChapterChangeModalOpen ? 1 : 0,
+              visibility: isChapterChangeModalOpen ? "visible" : "hidden",
+              transition: "all .5s easy-in-out",
+            }}
+          >
+            <Text textAlign="center" color="white" fontSize="lg">
+              Going to next chapter in {chapterTimeoutCount} seconds
+            </Text>
+            <Flex gap="20px">
+              <Button variant="outline" onClick={replayCurrentChapter}>
+                Replay
+              </Button>
+              <Button onClick={playNextChapter}>Confirm</Button>
+            </Flex>
+          </Box>
           <BigPlayButton
             onClick={onBigPlayBtnClick}
             positionStyle={videoPositionStyle}

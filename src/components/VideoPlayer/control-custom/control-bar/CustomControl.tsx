@@ -3,6 +3,8 @@ import React from "react";
 import "react-video-seek-slider/styles.css";
 import "./VideoSeekSlider.css";
 import { VideoSeekSlider } from "react-video-seek-slider";
+import { Scrubber } from "react-scrubber";
+import "react-scrubber/lib/scrubber.css";
 
 import { FullscreenButton } from "./FullscreenButton";
 import { PlayButton } from "./PlayButton";
@@ -70,7 +72,7 @@ export default function CustomControl(props: CustomControlProps) {
       }}
       opacity={shouldShowControl() ? 1 : 0}
     >
-      <VideoSeekSlider
+      {/* <VideoSeekSlider
         max={totalDuration * 1000}
         currentTime={currentTime * 1000}
         bufferTime={bufferPosition * 1000}
@@ -78,8 +80,23 @@ export default function CustomControl(props: CustomControlProps) {
         secondsPrefix="00:"
         minutesPrefix=""
         limitTimeTooltipBySides={true}
-      />
-
+      /> */}
+      <div
+        style={{
+          height: 4,
+          cursor: "pointer",
+        }}
+      >
+        <Scrubber
+          min={0}
+          max={totalDuration}
+          value={currentTime}
+          onScrubStart={(v) => onSeekScrubStart(v)}
+          onScrubEnd={(v) => onSeekScrubEnd(v)}
+          onScrubChange={(v) => onSeekScrubChange(v)}
+          bufferPosition={bufferPosition}
+        />
+      </div>
       <Box
         sx={{
           display: "flex",

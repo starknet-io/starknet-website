@@ -12,6 +12,7 @@ export function useSeek({ totalDuration, playerRef }: UseSeekProps) {
   const _scrubPlayingStatus = useRef<SeekStatuses>();
   const [playingStatus, setPlayingStatus] = useState<SeekStatuses>("unstarted");
   const [currentTime, setCurrentTime] = useState(0);
+  const isSeeking = useRef(false);
 
   const seek = (time: number) => {
     setCurrentTime(time);
@@ -19,6 +20,7 @@ export function useSeek({ totalDuration, playerRef }: UseSeekProps) {
   };
 
   const onSeekScrubStart = (time: number) => {
+    isSeeking.current = true;
     if (!Number.isNaN(time)) {
       _scrubPlayingStatus.current = playingStatus;
       playerRef.current.pause();
@@ -28,12 +30,14 @@ export function useSeek({ totalDuration, playerRef }: UseSeekProps) {
   };
 
   const onSeekScrubChange = (time: number) => {
+    isSeeking.current = true;
     if (!Number.isNaN(time)) {
       seek(time);
     }
   };
 
   const onSeekScrubEnd = (time: number) => {
+    isSeeking.current = true;
     if (!Number.isNaN(time)) {
       seek(time);
       if (time === totalDuration) {
@@ -67,6 +71,7 @@ export function useSeek({ totalDuration, playerRef }: UseSeekProps) {
   useHotkeys("LEFT", () => seek(Math.max(currentTime - 5, 0)));
 
   return {
+    isSeeking,
     currentTime,
     playingStatus,
     setCurrentTime,
