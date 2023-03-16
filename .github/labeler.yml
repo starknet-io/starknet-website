@@ -1,12 +1,25 @@
 Content Review:
   - any:
       - _data/*
+      - _data/*.*
       - _data/**/*
+      - _data/**/*.*
       - public/assets/*
+      - public/assets/*.*
       - public/assets/**/*
+      - public/assets/**/*.*
 Code Review:
+  - any:
+      - \*
+      - \*.*
+      - \**/*
+      - \**/*.*
   - all:
       - \!_data/*
+      - \!_data/*.*
       - \!_data/**/*
+      - \!_data/**/*.*
       - \!public/assets/*
+      - \!public/assets/*.*
       - \!public/assets/**/*
+      - \!public/assets/**/*.*
