@@ -109,7 +109,7 @@ Props): JSX.Element {
               : null
           }
           alert={
-            data.alert && <Alert variant="blue" title="Title">Description</Alert>
+            data.alert && <Alert variant="info" title="Title ddsadadassd">Description dsadsa</Alert>
           }
           main={
             <Flex

@@ -13,7 +13,7 @@ export const alertTheme = defineStyleConfig({
     }
   },
   variants: {
-    red: {
+    important: {
       container: {
         background: 'linear-gradient(90deg, #CB3E3E 52.15%, #E7442F 91.67%);',
         color: "white",
@@ -24,7 +24,7 @@ export const alertTheme = defineStyleConfig({
         color: 'white'
       }
     },
-    orange: {
+    warning: {
       container: {
         background: 'linear-gradient(90deg, #FFCD9A 52.15%, #FFC49A 91.59%);',
         color: "grey.darkText"
@@ -33,7 +33,7 @@ export const alertTheme = defineStyleConfig({
         color: 'grey.darkText'
       }
     },
-    blue: {
+    info: {
       container: {
         background: 'linear-gradient(90deg, #80DCDA 52.15%, #6DDAF5 91.59%);',
         color: "grey.darkText"

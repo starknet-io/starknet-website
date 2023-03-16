@@ -1,7 +1,25 @@
 items:
-  - type: Type
-  - title: Title
-  - description: Description
-variant: blue
-title: some title
-body: s﻿ome desc
+  - variant: info
+    hasCloseButton: true
+    id: 2880436e-89df-4901-b0ad-555221de078c
+    title: Information
+    body: w﻿ith close button
+    children: i﻿nfo with close icon
+  - variant: info
+    hasCloseButton: false
+    id: d997ea55-a2b8-43cd-b39e-519d75360f65
+    title: Information
+    body: w﻿ithout close button
+    children: i﻿nfo without close icon
+  - variant: warning
+    hasCloseButton: true
+    id: 942fface-750f-4b94-841c-5e86fa5a3d0f
+    title: Warning
+    body: w﻿arning description
+    children: s﻿ome warning
+  - variant: important
+    hasCloseButton: false
+    id: 98af69ed-0687-444a-9313-1159d4783c35
+    title: Important!
+    body: s﻿ome info important
+    children: s﻿ome important info

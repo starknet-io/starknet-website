@@ -21,11 +21,13 @@ import {
 type props = {
   children: React.ReactNode;
   toId?: string;
-  variant?: 'red' | 'blue' | 'orange';
+  variant?: 'important' | 'info' | 'warning';
   title: string;
+  hasCloseButton?: boolean;
+  uuid?: string;
 } & AlertProps;
 
-export const Alert = ({ children, variant = "blue", title, toId, ...rest }: props) => {
+export const Alert = ({ children, uuid, hasCloseButton = true, variant = "info", title, toId, ...rest }: props) => {
   const handleOnClick = () => {
     if (!toId) {
       return;
@@ -34,9 +36,9 @@ export const Alert = ({ children, variant = "blue", title, toId, ...rest }: prop
   };
   const renderIcon = () => {
     switch (variant) {
-      case "red":
+      case "important":
         return HiExclamationTriangle;
-      case "orange":
+      case "warning":
         return HiOutlineCog6Tooth;
       default:
         return HiOutlineMegaphone;
@@ -48,6 +50,10 @@ export const Alert = ({ children, variant = "blue", title, toId, ...rest }: prop
     onClose
   } = useDisclosure({ defaultIsOpen: true })
 
+  const handleClose = () => {
+    localStorage.setItem(`uuid-${uuid}`, "true");
+    onClose();
+  }
 
   return isVisible ? (
     <ChakraAlert status="info" variant={variant} onClick={handleOnClick} {...rest}>
@@ -76,7 +82,7 @@ export const Alert = ({ children, variant = "blue", title, toId, ...rest }: prop
         />
         <AlertTitle>{title}</AlertTitle>
         <AlertDescription>{children}</AlertDescription>
-        <Icon as={IoCloseOutline}
+        {variant === 'info' && !!hasCloseButton && <Icon as={IoCloseOutline}
           width="28px"
           height="28px"
           alignSelf='flex-start'
@@ -84,8 +90,8 @@ export const Alert = ({ children, variant = "blue", title, toId, ...rest }: prop
           right={{ base: "-35px", xl: "15px" }}
           top={{ base: "2px", xl: "-3px" }}
           cursor="pointer"
-          onClick={onClose}
-        />
+          onClick={handleClose}
+        />}
       </Box>
     </ChakraAlert>
   ) : <></>;

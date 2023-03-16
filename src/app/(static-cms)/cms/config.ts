@@ -449,11 +449,22 @@ const blocks: ListField["types"] = [
         widget: "select",
         required: false,
         options: [
-          "blue",
-          "orange",
-          "red"
+          "info",
+          "warning",
+          "important"
         ],
-        default: "blue"
+        default: "info"
+      },
+      {
+        name: "hasCloseButton",
+        label: "Show close icon",
+        widget: "boolean",
+        default: false,
+      },
+      {
+        name: "id",
+        label: "id",
+        widget: "uuid" as "string",
       },
       {
         name: "title",
@@ -461,7 +472,7 @@ const blocks: ListField["types"] = [
         widget: "string",
       },
       {
-        name: "body",
+        name: "children",
         label: "Description",
         widget: "markdown",
       }
@@ -688,11 +699,22 @@ export const config: Config = {
               widget: "select",
               required: false,
               options: [
-                "blue",
-                "orange",
-                "red"
+                "info",
+                "warning",
+                "important"
               ],
-              default: "blue"
+              default: "info"
+            },
+            {
+              name: "hasCloseButton",
+              label: "Show close icon",
+              widget: "boolean",
+              default: false,
+            },
+            {
+              name: "id",
+              label: "id",
+              widget: "uuid" as "string",
             },
             {
               name: "title",
@@ -700,7 +722,7 @@ export const config: Config = {
               widget: "string",
             },
             {
-              name: "body",
+              name: "children",
               label: "Description",
               widget: "markdown",
             }
@@ -1471,30 +1493,48 @@ export const config: Config = {
           file: `_data/settings/${locale}/alert.yml`,
           fields: [
             {
-              name: "variant",
-              label: "Variant",
-              widget: "select",
-              required: false,
-              options: [
-                "blue",
-                "orange",
-                "red"
-              ],
-              default: "blue"
-            },
-            {
-              name: "title",
-              label: "Title",
-              widget: "string",
-            },
-            {
-              name: "body",
-              label: "Description",
-              widget: "markdown",
+              label: "Alert",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  name: "variant",
+                  label: "Variant",
+                  widget: "select",
+                  required: false,
+                  options: [
+                    "info",
+                    "warning",
+                    "important"
+                  ],
+                  default: "info"
+                },
+                {
+                  name: "hasCloseButton",
+                  label: "Show close icon",
+                  widget: "boolean",
+                  default: false,
+                },
+                {
+                  name: "id",
+                  label: "id",
+                  widget: "uuid" as "string",
+                },
+                {
+                  name: "title",
+                  label: "Title",
+                  widget: "string",
+                },
+                {
+                  name: "children",
+                  label: "Description",
+                  widget: "markdown",
+                }
+              ]
             }
           ]
-        },
-      ],
-    },
-  ],
+        }
+      ]
+    }
+  ]
 };

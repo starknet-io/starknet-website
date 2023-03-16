@@ -18,31 +18,31 @@ export default {
   ]
 } as Meta<typeof Alert>;
 
-export const Red = () => (
+export const Important = () => (
   <ThemeProvider>
     <Stack direction={'column'} spacing='24px'>
       <>
-        <Alert variant="red" title="Alert:">Red alert</Alert>
+        <Alert variant="important" title="Alert:">Red alert</Alert>
       </>
     </Stack>
   </ThemeProvider>
 );
 
-export const Orange = () => (
+export const Warning = () => (
   <ThemeProvider>
     <Stack direction={'column'} spacing='24px'>
       <>
-        <Alert variant="orange" title="Information:">Orange alert</Alert>
+        <Alert variant="warning" title="Information:">Orange alert</Alert>
       </>
     </Stack>
   </ThemeProvider>
 );
 
-export const Blue = () => (
+export const GeneralInfo = () => (
   <ThemeProvider>
     <Stack direction={'column'} spacing='24px'>
       <>
-        <Alert variant="blue" title="Information:">This is where you would add some informative copy for the user, links look <a target="_blank" rel="noreferrer" href="https://google.com">like this.</a></Alert>
+        <Alert variant="info" title="Information:">This is where you would add some informative copy for the user, links look <a target="_blank" rel="noreferrer" href="https://google.com">like this.</a></Alert>
       </>
     </Stack>
   </ThemeProvider>
