@@ -1,0 +1,10 @@
+id: 0snedu06
+type: github
+url: https://github.com/starknet-edu/starknet-messaging-bridge
+image: /assets/github.png
+title: Starknet Edu – Messaging bridge
+author: "StarkWare "
+published_at: 2022-09-01T00:00:00+00:00
+difficulty: beginner
+course: starknet_edu
+tags: "cairo, messaging "
