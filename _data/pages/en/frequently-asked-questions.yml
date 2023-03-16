@@ -20,10 +20,7 @@ blocks:
           in the section titled “What will the tokens be used for?”
       - type: accordion_item
         label: Where can I monitor Starknet’s transactions?
-        body: "There are several block explorers you can use:
-          [StarkScan](https://starkscan.co/),
-          [Voyager](https://voyager.online/txns),
-          [ViewBlock](https://viewblock.io/starknet)."
+        body: "There are several block explorers you can use: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet)."
       - type: accordion_item
         label: I want to write my own contract on Starknet. Where do I start? Are there
           any available toolkits?
@@ -50,12 +47,12 @@ blocks:
       - type: accordion_item
         label: In Starknet, are STARK proofs zero-knowledge proofs?
         body: >-
-          Currently not. STARKs are defined as Validity proofs, meaning they
-          prove computational integrity. With Validity proofs (STARKs included),
-          one party can prove to another that a certain computation was
-          performed correctly. Zero-Knowledge is an additional property
-          asserting that the prover does not have to reveal any information
-          included in the computation.
+          Currently not. STARKs are defined as Validity proofs, meaning they prove
+          computational integrity. With Validity proofs (STARKs included), one
+          party can prove to another that a certain computation was performed
+          correctly. Zero-Knowledge is an additional property asserting that the
+          prover does not have to reveal any information included in the
+          computation.
 
 
           Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
@@ -115,8 +112,8 @@ blocks:
     blocks:
       - label: Who will be able to participate in Starknet?
         body: >-
-          Starknet is evolving to become fully permissionless, allowing anyone
-          to operate on the network:
+          Starknet is evolving to become fully permissionless, allowing anyone to
+          operate on the network:
 
 
           1. **Sequencers**  – Anyone will be able to operate a sequencer, i.e., batch transactions and propose new blocks (somewhat analogous to Ethereum miners, without the Proof of Work part).
@@ -161,8 +158,8 @@ blocks:
     blocks:
       - label: What is the difference between StarkEx and Starknet?
         body: >-
-          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges
-          that uses the STARK proof system in order to provide massive scaling.
+          **StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges that
+          uses the STARK proof system in order to provide massive scaling.
           Several significant exchanges are already using StarkEx in production
           on Ethereum Mainnet (read more about StarkEx).
 
@@ -175,11 +172,7 @@ blocks:
     heading: Starknet Token
     blocks:
       - label: Why does Starknet need a token?
-        body: "STARK technology is mature and secure, but Starknet has not yet achieved
-          the status of a public good like Ethereum or the Internet. For
-          Starknet to reach this goal, its governance, operation and development
-          must continue to decentralize. This will be facilitated through two
-          mechanisms: the **Starknet Foundation** and the **Starknet Token**."
+        body: "STARK technology is mature and secure, but Starknet has not yet achieved the status of a public good like Ethereum or the Internet. For Starknet to reach this goal, its governance, operation and development must continue to decentralize. This will be facilitated through two mechanisms: the **Starknet Foundation** and the **Starknet Token**."
       - label: What will the Starknet tokens be used for?
         body: The Starknet token will be used as a staking token for participation in
           Starknet’s consensus mechanisms, as a Governance token, and for paying
@@ -209,8 +202,8 @@ blocks:
           your wallet at this stage. Beware of scams.
       - label: Where and when can I buy tokens?
         body: >-
-          The Starknet Token is not yet for sale. It cannot be added to your
-          wallet at this stage. Beware of scams.
+          The Starknet Token is not yet for sale. It cannot be added to your wallet
+          at this stage. Beware of scams.
 
 
           The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
@@ -233,9 +226,9 @@ blocks:
     blocks:
       - label: What is the Starknet Foundation?
         body: >-
-          Starknet is a permissionless, decentralized Layer 2 (L2) Validity
-          Rollup intended to scale Ethereum while retaining Ethereum’s security
-          and decentralization. In keeping with that mission, the Foundation was
+          Starknet is a permissionless, decentralized Layer 2 (L2) Validity Rollup
+          intended to scale Ethereum while retaining Ethereum’s security and
+          decentralization. In keeping with that mission, the Foundation was
           established as an independent entity to advance the shared technology
           that is Starknet. Additionally, as a not-for-profit entity with a
           narrow mission: to advance Starknet as a public good for all, and

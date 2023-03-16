@@ -1,7 +1,7 @@
 id: 92a274a5-af66-4950-ab46-cf57290a6093
 post_type: video
 title: "STARK @ Home 19: Computational Integrity"
-published_date: 2021-03-29T14:40:01.937Z
+published_date: "2021-03-29T14:40:01.937Z"
 time_to_consume: 85 min watch
 image: /assets/starkhome19.png
 category: stark-math
@@ -16,7 +16,7 @@ video:
     etag: c9jtcCA9Y40Ht5XNjTcYecLuOuk
     id: 3_LkKX7hBBk
     snippet:
-      publishedAt: 2021-03-29T12:47:14Z
+      publishedAt: "2021-03-29T12:47:14Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "STARK @ Home 19: Computational Integrity"
       description: ""

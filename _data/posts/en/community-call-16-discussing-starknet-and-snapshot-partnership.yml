@@ -1,7 +1,7 @@
 id: a9fd7f71-4803-492b-9769-363cbbeebc8c
 post_type: video
 title: "Community Call #16 | Discussing Starknet and Snapshot partnership"
-published_date: 2022-06-09T10:55:00.240Z
+published_date: "2022-06-09T10:55:00.240Z"
 time_to_consume: 58 min watch
 image: /assets/cc16.jpg
 category: community-calls
@@ -17,10 +17,9 @@ video:
     etag: eqn1lkduBgBv_M2OxkKhpRBJpUw
     id: G6e_wI9zIVA
     snippet:
-      publishedAt: 2022-06-10T01:36:31Z
+      publishedAt: "2022-06-10T01:36:31Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
-        partnership"
+      title: "Starknet Community call #16 | Discussing StarkNet and Snapshot partnership"
       description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
         and Snapshot partnership
       thumbnails:
@@ -48,8 +47,7 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
-          partnership"
+        title: "Starknet Community call #16 | Discussing StarkNet and Snapshot partnership"
         description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
           and Snapshot partnership
       defaultAudioLanguage: en-US

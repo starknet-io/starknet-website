@@ -1,7 +1,7 @@
 id: e2f2e94b-04ec-4363-83b7-f8e20d2359c7
 post_type: video
 title: "Starknet Community Call #23 | Presentation by Braavos and roadmap updates"
-published_date: 2022-09-20T11:06:23.814Z
+published_date: "2022-09-20T11:06:23.814Z"
 time_to_consume: 55 min watch
 video:
   url: https://youtu.be/Nx9mycAXcBg
@@ -11,10 +11,9 @@ video:
     etag: qa1CE70mSw5JeAB_7VUcup5dP5g
     id: Nx9mycAXcBg
     snippet:
-      publishedAt: 2022-09-21T01:30:00Z
+      publishedAt: "2022-09-21T01:30:00Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
-        updates"
+      title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap updates"
       description: |-
         Join us for StarkNet's community call.
         We will have a presentation by Braavos and talk about roadmap updates.
@@ -43,8 +42,7 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
-          updates"
+        title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap updates"
         description: |-
           Join us for StarkNet's community call.
           We will have a presentation by Braavos and talk about roadmap updates.

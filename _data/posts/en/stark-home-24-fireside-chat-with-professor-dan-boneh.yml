@@ -1,7 +1,7 @@
 id: efdc8256-cc02-4f87-bf7b-448fef995f88
 post_type: video
 title: "STARK @ Home 24: Fireside chat with Professor Dan Boneh"
-published_date: 2022-01-06T16:26:58.757Z
+published_date: "2022-01-06T16:26:58.757Z"
 time_to_consume: 77 min watch
 image: /assets/starkhome24.png
 category: stark-math
@@ -16,7 +16,7 @@ video:
     etag: LcHbe5YNquBM2EQLzeX_rYZReLE
     id: QVrpx-0yloo
     snippet:
-      publishedAt: 2022-01-10T18:47:43Z
+      publishedAt: "2022-01-10T18:47:43Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "STARK @ Home 24: Fireside chat with Professor Dan Boneh"
       description: From Elliptic Curves to ZK-SNARKs and Beyond

@@ -1,7 +1,7 @@
 id: a96401fa-d7b2-4947-aed4-d2bdc7bc993f
 post_type: video
 title: "Community Call #19 | Talking with Mirko from Equilibrium about full-nodes"
-published_date: 2022-07-26T10:59:41.168Z
+published_date: "2022-07-26T10:59:41.168Z"
 time_to_consume: 52 min watch
 image: /assets/cc19.jpg
 category: community-calls
@@ -17,10 +17,9 @@ video:
     etag: Rg3AkYyKx5Vk4knYbr7HK9FYAts
     id: OzYbVm536vo
     snippet:
-      publishedAt: 2022-07-27T01:26:50Z
+      publishedAt: "2022-07-27T01:26:50Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
-        full-nodes"
+      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about full-nodes"
       description: Join us for our 19th Community call. Today we are hosting Mirko
         from Equilibrium and talking about full-nodes
       thumbnails:
@@ -48,8 +47,7 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
-          full-nodes"
+        title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about full-nodes"
         description: Join us for our 19th Community call. Today we are hosting Mirko
           from Equilibrium and talking about full-nodes
       defaultAudioLanguage: en-US

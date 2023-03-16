@@ -1,7 +1,7 @@
 id: 5f17c56e-3327-4798-bae1-696f44a9a34a
 post_type: video
 title: "Community Call #32 | Starknet v0.11 and Cairo 1.0"
-published_date: 2023-01-26T13:01:25.160Z
+published_date: "2023-01-26T13:01:25.160Z"
 time_to_consume: 69 min watch
 image: /assets/cc32.jpg
 category: community-calls
@@ -17,7 +17,7 @@ video:
     etag: a0CCmPiGsvUjWdWg5txpLAolj7o
     id: CKYM25oicTA
     snippet:
-      publishedAt: 2023-01-27T03:19:59Z
+      publishedAt: "2023-01-27T03:19:59Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet Community Call #32 | StarkNet v0.11 and Cairo 1.0"
       description: >-

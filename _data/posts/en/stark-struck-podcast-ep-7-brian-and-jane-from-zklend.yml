@@ -1,15 +1,13 @@
 id: 35669d5b-9890-410d-80d9-8eb1c6cddbd5
 post_type: video
 title: STARK Struck Podcast | Ep 7 | Brian and Jane from ZKLend
-published_date: 2022-12-01T00:00:00+00:00
+published_date: "2022-12-01T00:00:00+00:00"
 time_to_consume: 51 min watch
 image: /assets/starkstruck07.jpg
 category: stark-struck
 topic:
   - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
-  ZKLend, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically. "
+short_desc: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from ZKLend, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. "
 video:
   url: https://youtu.be/Ugy6mEtHqdA
   id: Ugy6mEtHqdA
@@ -18,14 +16,11 @@ video:
     etag: 5T8DDqojDCaLC5M7CxfnGK6xSQg
     id: Ugy6mEtHqdA
     snippet:
-      publishedAt: 2022-12-01T07:15:10Z
+      publishedAt: "2022-12-01T07:15:10Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: STARK Struck Podcast | Episode 7 | Henri Lieutaud with Brian and Jane
         from ZKLend
-      description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
-        ZKLend, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.   Twitter:
-        @jane0mac @bfu_fubrian @zkLend @henrlihenrli @Starknet_Edu"
+      description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from ZKLend, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli @Starknet_Edu"
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Ugy6mEtHqdA/default.jpg
@@ -53,9 +48,5 @@ video:
       localized:
         title: STARK Struck Podcast | Episode 7 | Henri Lieutaud with Brian and Jane
           from ZKLend
-        description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
-          ZKLend, on what gets them excited about technology in general,
-          blockchain in particular, and validity rollups
-          specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli
-          @Starknet_Edu"
+        description: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from ZKLend, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli @Starknet_Edu"
       defaultAudioLanguage: en-US

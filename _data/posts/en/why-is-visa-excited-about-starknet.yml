@@ -1,17 +1,14 @@
 id: 2ae587d2-5c71-4ad8-bb81-9523b2a5df86
 post_type: video
 title: Why is Visa excited about Starknet?
-published_date: 2022-12-20T16:54:47.934Z
+published_date: "2022-12-20T16:54:47.934Z"
 time_to_consume: 41 min watch
 image: /assets/interviews09.jpg
 category: ecosystem
 topic:
   - starknet
   - defi
-short_desc: "Visa has signalled its long-term bullishness on the potential of
-  the Ethereum blockchain with a paper that explores how to make auto-payments
-  possible for self-custody wallets with Starknet, a Layer 2 blockchain built on
-  top of Ethereum. "
+short_desc: "Visa has signalled its long-term bullishness on the potential of the Ethereum blockchain with a paper that explores how to make auto-payments possible for self-custody wallets with Starknet, a Layer 2 blockchain built on top of Ethereum. "
 video:
   url: https://www.youtube.com/live/nNdY0NFjE7o?feature=share
   id: nNdY0NFjE7o
@@ -20,7 +17,7 @@ video:
     etag: ltuBAgorHkfP3E57V1vdwUe_9x8
     id: nNdY0NFjE7o
     snippet:
-      publishedAt: 2022-12-21T05:51:53Z
+      publishedAt: "2022-12-21T05:51:53Z"
       channelId: UCGXWKlq1Oxr3ddEtmKhAkPg
       title: Visa Explores Crypto Auto-payments on Ethereum + Binance, BlockFi Updates
       description: >-

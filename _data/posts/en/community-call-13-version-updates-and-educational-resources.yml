@@ -1,7 +1,7 @@
 id: 28af3fed-4b39-4278-9fd8-c3ff4dd68db9
 post_type: video
 title: "Community Call #13 | Version updates and educational resources"
-published_date: 2022-05-10T14:06:18.594Z
+published_date: "2022-05-10T14:06:18.594Z"
 time_to_consume: 60 min watch
 image: /assets/cc13.jpg
 category: community-calls
@@ -18,7 +18,7 @@ video:
     etag: GtFBWWLQDo6iegXFnYWvTp2uvJ8
     id: csgPYUpjDR4
     snippet:
-      publishedAt: 2022-05-11T01:34:32Z
+      publishedAt: "2022-05-11T01:34:32Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "Starknet Community call #13 | Version updates and educational resources"
       description: Join us for our 13th community call – Presenting New version of

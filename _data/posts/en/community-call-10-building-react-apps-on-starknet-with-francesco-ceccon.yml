@@ -1,7 +1,7 @@
 id: d5c42c80-0eff-42ba-93ab-e905734b07a2
 post_type: video
 title: "Community Call #10 | Building React apps on StarkNet with Francesco Ceccon"
-published_date: 2022-03-15T00:00:00+00:00
+published_date: "2022-03-15T00:00:00+00:00"
 time_to_consume: 75 min watch
 image: /assets/cc10.jpg
 category: community-calls
@@ -17,10 +17,9 @@ video:
     etag: cNwRjgge0npn-whR2AluvIiens8
     id: PSTCTVMmMz4
     snippet:
-      publishedAt: 2022-03-16T02:43:23Z
+      publishedAt: "2022-03-16T02:43:23Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #10 | Building React apps on StarkNet with
-        Francesco Ceccon"
+      title: "Starknet Community call #10 | Building React apps on StarkNet with Francesco Ceccon"
       description: ""
       thumbnails:
         default:
@@ -47,7 +46,6 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "Starknet Community call #10 | Building React apps on StarkNet with
-          Francesco Ceccon"
+        title: "Starknet Community call #10 | Building React apps on StarkNet with Francesco Ceccon"
         description: ""
       defaultAudioLanguage: en-US

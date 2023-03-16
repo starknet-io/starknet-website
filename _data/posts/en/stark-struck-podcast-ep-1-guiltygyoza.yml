@@ -1,7 +1,7 @@
 id: 41fe84d0-475f-47ab-adae-54213fd45099
 post_type: video
 title: STARK Struck Podcast | Ep 2 |  Sylve & Lancelot from briq
-published_date: 2022-08-22T00:00:00+00:00
+published_date: "2022-08-22T00:00:00+00:00"
 time_to_consume: 54 min watch
 image: /assets/starkstruck02.jpg
 category: stark-struck
@@ -18,7 +18,7 @@ video:
     etag: 3uWzDvp3lsyX96pX_DHO1BBhOY4
     id: _Z9nIoAKQQE
     snippet:
-      publishedAt: 2022-08-22T07:58:15Z
+      publishedAt: "2022-08-22T07:58:15Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: STARK Struck Podcast | Episode 2 | Henri Lieutaud with Sylve & Lancelot
         from briq

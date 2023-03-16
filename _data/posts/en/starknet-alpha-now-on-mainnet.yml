@@ -1,7 +1,7 @@
 id: 8d225e4c-e065-438c-ba96-d91e0a390233
 post_type: article
 title: StarkNet Alpha, Now on Mainnet!
-published_date: 2021-11-29T00:00:00+00:00
+published_date: "2021-11-29T00:00:00+00:00"
 time_to_consume: 4 min read
 image: /assets/1_imedppuciwsh3t9zvsro5q-1.png
 category: engineering
@@ -10,12 +10,7 @@ topic:
   - starknet
   - 8930f558-6756-4e54-93e6-349ca99c158e
   - 951d072d-3e2e-4915-9bb9-b1b50f62fb55
-short_desc: "StarkNet Alpha is launching today on Ethereum Mainnet! StarkNet is
-  a permissionless decentralized Rollup operating as an L2 network over
-  Ethereum. StarkNet allows any dApp to achieve unlimited scale for its
-  computation, without compromising Ethereum’s composability and security,
-  thanks to its reliance on the safest and most scalable cryptographic proof
-  system — STARK. "
+short_desc: "StarkNet Alpha is launching today on Ethereum Mainnet! StarkNet is a permissionless decentralized Rollup operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation, without compromising Ethereum’s composability and security, thanks to its reliance on the safest and most scalable cryptographic proof system — STARK. "
 blocks:
   - type: markdown
     body: >-

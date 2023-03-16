@@ -1,7 +1,7 @@
 id: 247b09d9-8c93-43e6-9f31-0253d4ff777c
 post_type: video
 title: "STARK @ Home 28: Unlocking the Magic"
-published_date: 2022-12-20T16:31:48.513Z
+published_date: "2022-12-20T16:31:48.513Z"
 time_to_consume: 73 min watch
 image: /assets/starkhome28.png
 category: stark-math
@@ -21,10 +21,9 @@ video:
     etag: X7A8mpDKScKuQnXv_1wMWGxJ3VI
     id: j9HwAJ-4YpA
     snippet:
-      publishedAt: 2022-12-21T08:23:56Z
+      publishedAt: "2022-12-21T08:23:56Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 28: Unlocking the Magic: Exploring the Future of Magic The
-        Gathering with StarkNet"
+      title: "STARK @ Home 28: Unlocking the Magic: Exploring the Future of Magic The Gathering with StarkNet"
       description: >-
         The Magic The Gathering (MTG) saga began long ago, when Dr. Richard
         Garfield created - while working on his PhD in Combinatorics - the very
@@ -60,8 +59,7 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "STARK @ Home 28: Unlocking the Magic: Exploring the Future of Magic The
-          Gathering with StarkNet"
+        title: "STARK @ Home 28: Unlocking the Magic: Exploring the Future of Magic The Gathering with StarkNet"
         description: >-
           The Magic The Gathering (MTG) saga began long ago, when Dr. Richard
           Garfield created - while working on his PhD in Combinatorics - the

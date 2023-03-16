@@ -1,7 +1,7 @@
 id: 6355cbbf-9495-4d7f-8c65-6de8f84b7f08
 post_type: video
 title: STARK Struck Podcast | Ep 4 | Oskar & Jonas from Empiric
-published_date: 2022-09-22T00:00:00+00:00
+published_date: "2022-09-22T00:00:00+00:00"
 time_to_consume: 51 min watch
 image: /assets/starkstruck04.jpg
 category: stark-struck
@@ -18,7 +18,7 @@ video:
     etag: QGiEiZFu73zVB-4lp4Fja5YTqgc
     id: xkzX04wzBUw
     snippet:
-      publishedAt: 2022-09-22T10:31:28Z
+      publishedAt: "2022-09-22T10:31:28Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from
         Empiric

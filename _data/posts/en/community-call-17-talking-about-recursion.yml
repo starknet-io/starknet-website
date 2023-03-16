@@ -1,7 +1,7 @@
 id: ef698cb6-e73f-4207-a2eb-b857053ab147
 post_type: video
 title: "Community Call #17 - Talking about Recursion"
-published_date: 2022-06-27T10:56:35.938Z
+published_date: "2022-06-27T10:56:35.938Z"
 time_to_consume: 52 min watch
 image: /assets/cc17.jpg
 category: community-calls
@@ -16,7 +16,7 @@ video:
     etag: Xs_WCfh8y0J5YHkGhUoSoKFjbg4
     id: 95RHzcmbHMo
     snippet:
-      publishedAt: 2022-06-27T09:05:42Z
+      publishedAt: "2022-06-27T09:05:42Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet community call #17 - Talking about Recursion"
       description: ""

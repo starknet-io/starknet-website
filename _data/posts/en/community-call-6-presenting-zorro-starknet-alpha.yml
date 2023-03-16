@@ -1,7 +1,7 @@
 id: 5b39ff42-6cd9-4b91-8eba-0320494345c2
 post_type: video
 title: "Community Call #6 | Presenting Zorro, Starknet Alpha"
-published_date: 2022-01-18T00:00:00+00:00
+published_date: "2022-01-18T00:00:00+00:00"
 time_to_consume: 70 min watch
 image: /assets/cc06.jpg
 category: community-calls
@@ -16,7 +16,7 @@ video:
     etag: wOQqGT-G74gpHtHQaKQiUvXhkec
     id: UoL4KGP_KVA
     snippet:
-      publishedAt: 2022-01-18T18:01:41Z
+      publishedAt: "2022-01-18T18:01:41Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet Community Call #6 | Presenting Zorro, StarkNet Alpha"
       description: >-

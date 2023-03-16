@@ -1,7 +1,7 @@
 id: e9553909-28a6-4a05-a2eb-c87435c7abc2
 post_type: video
 title: Starknet House weekly session 1
-published_date: 2022-06-10T15:58:53.559Z
+published_date: "2022-06-10T15:58:53.559Z"
 time_to_consume: 67 min watch
 image: /assets/sn_house02.jpg
 category: ecosystem
@@ -17,7 +17,7 @@ video:
     etag: JcEOE4hrlgn9k2Br-LGGW0KEqOg
     id: Vv1WTwWylp0
     snippet:
-      publishedAt: 2022-06-10T16:28:36Z
+      publishedAt: "2022-06-10T16:28:36Z"
       channelId: UCqbWfFjh7mlH1rjoRebHo-g
       title: 'StarkNet House Weekly Session 1: "Let’s build on StarkNet - Cairo 101"
         by Lucas Levy'

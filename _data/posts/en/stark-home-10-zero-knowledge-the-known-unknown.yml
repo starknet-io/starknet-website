@@ -1,7 +1,7 @@
 id: 76f99af2-797f-4eab-bdcd-e95ee419530e
 post_type: video
 title: "STARK @ Home 10: Zero-Knowledge – The Known Unknown"
-published_date: 2023-02-02T15:19:38.760Z
+published_date: "2023-02-02T15:19:38.760Z"
 time_to_consume: 84 min watch
 image: /assets/starkhome10.png
 category: stark-math
@@ -16,7 +16,7 @@ video:
     etag: RK0-Taa6U5Q5EcoQafFkmHVQZwc
     id: 3uSG-Xp5slM
     snippet:
-      publishedAt: 2020-07-27T09:08:21Z
+      publishedAt: "2020-07-27T09:08:21Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "STARK @ Home 10: Zero Knowledge - The Known Unknown"
       description: ""

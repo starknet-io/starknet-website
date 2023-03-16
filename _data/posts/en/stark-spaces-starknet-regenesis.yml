@@ -1,7 +1,7 @@
 id: 4161eef7-eac8-421d-8806-7837eb03d7a8
 post_type: video
 title: STARK SPACES | StarkNet Regenesis
-published_date: 2022-11-30T13:54:13.727Z
+published_date: "2022-11-30T13:54:13.727Z"
 time_to_consume: 46 min watch
 image: /assets/ts04.jpg
 category: stark-math
@@ -17,7 +17,7 @@ video:
     etag: fWdCcIXwp9LMaPPQe72yDVBkZDo
     id: NR-fNmIcUFo
     snippet:
-      publishedAt: 2022-12-13T19:49:37Z
+      publishedAt: "2022-12-13T19:49:37Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: STARK SPACES | StarkNet Regenesis
       description: ""

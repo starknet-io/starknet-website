@@ -1,7 +1,7 @@
 id: a903b6cc-a47c-4726-b3ad-2c558d2130a5
 post_type: video
 title: "Community Call #9"
-published_date: 2022-03-01T00:00:00+00:00
+published_date: "2022-03-01T00:00:00+00:00"
 time_to_consume: 50 min watch
 image: /assets/cc09.jpg
 category: community-calls
@@ -16,7 +16,7 @@ video:
     etag: tUcrOOM6iVe8lypnZef-hMj9vqE
     id: emteinw4NgA
     snippet:
-      publishedAt: 2022-03-02T02:28:46Z
+      publishedAt: "2022-03-02T02:28:46Z"
       channelId: UC9T86o1gsyaS7qAPIBxMbhQ
       title: "StarkNet community call #9"
       description: ""

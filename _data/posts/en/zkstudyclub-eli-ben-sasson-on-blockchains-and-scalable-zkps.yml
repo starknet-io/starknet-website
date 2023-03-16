@@ -1,14 +1,13 @@
 id: 6250f02a-bc9c-49a6-8cfb-ce26f143a1a9
 post_type: video
 title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
-published_date: 2020-03-19T15:01:07.016Z
+published_date: "2020-03-19T15:01:07.016Z"
 time_to_consume: 74 min watch
 image: /assets/starkhome01.png
 category: stark-math
 topic:
   - starknet
-short_desc: "ZK Study Club is a study group where we cover specific topics in
-  the zk space. "
+short_desc: "ZK Study Club is a study group where we cover specific topics in the zk space. "
 video:
   url: https://youtu.be/SreeFPVrGYo
   id: SreeFPVrGYo
@@ -17,7 +16,7 @@ video:
     etag: OSqRdtb7YidYO0QW-TwoHXmuI54
     id: SreeFPVrGYo
     snippet:
-      publishedAt: 2020-03-19T19:12:49Z
+      publishedAt: "2020-03-19T19:12:49Z"
       channelId: UCYWsYz5cKw4wZ9Mpe4kuM_g
       title: "ZKStudyClub: Eli Ben-Sasson on Blockchains and Scalable ZKPs"
       description: >-

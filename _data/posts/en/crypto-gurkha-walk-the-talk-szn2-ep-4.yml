@@ -1,7 +1,7 @@
 id: 38dd3a71-77bf-4456-a8c7-eff79e381a4a
 post_type: video
 title: Crypto Gurkha | Walk the Talk SZN2 EP 4
-published_date: 2022-11-22T17:04:11.296Z
+published_date: "2022-11-22T17:04:11.296Z"
 time_to_consume: 17 min watch
 image: /assets/sddefault-1.jpg
 category: ecosystem
@@ -17,10 +17,9 @@ video:
     etag: Ckysa40iEmzQmR5n7XxSn_ZF7cE
     id: 3p9gdwC2x88
     snippet:
-      publishedAt: 2022-11-22T15:31:40Z
+      publishedAt: "2022-11-22T15:31:40Z"
       channelId: UCg_ektsjUiRsiQAFEUv8ppw
-      title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4
-        #StarkNet #MatchboxDao"
+      title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4 #StarkNet #MatchboxDao"
       description: >-
         I met up with Louthing from #Matchboxdao and we had a fire
         conversation on the topics of On-chain #gaming. Louthing is head
@@ -78,8 +77,7 @@ video:
       categoryId: "28"
       liveBroadcastContent: none
       localized:
-        title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4
-          #StarkNet #MatchboxDao"
+        title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4 #StarkNet #MatchboxDao"
         description: >-
           I met up with Louthing from #Matchboxdao and we had a fire
           conversation on the topics of On-chain #gaming. Louthing is head

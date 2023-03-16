@@ -2,7 +2,7 @@ id: f9653cbd-b2b2-46d2-a5c6-839082b79d2d
 post_type: video
 title: Transacting on Starkware's Live ZK-Rollups and Building a Vibrant
   Ecosystem of dApps
-published_date: 2021-10-29T15:46:35.198Z
+published_date: "2021-10-29T15:46:35.198Z"
 time_to_consume: 57 min watch
 image: /assets/interviews04.png
 category: ecosystem
@@ -19,10 +19,9 @@ video:
     etag: 8aYFQvCDakrGbov0xkf9__4Ex80
     id: dz_TSqiljHE
     snippet:
-      publishedAt: 2021-10-29T13:00:15Z
+      publishedAt: "2021-10-29T13:00:15Z"
       channelId: UC9Yy99ZlQIX9-PdG_xHj43Q
-      title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a
-        Vibrant Ecosystem of dApps"
+      title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a Vibrant Ecosystem of dApps"
       description: >-
         The Delphi Podcast Host and GP of Delphi Ventures Tom Shaughnessy
         and Delphi’s Head of Research, Medio Demarco, are joined by Eli
@@ -149,8 +148,7 @@ video:
       categoryId: "24"
       liveBroadcastContent: none
       localized:
-        title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a
-          Vibrant Ecosystem of dApps"
+        title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a Vibrant Ecosystem of dApps"
         description: >-
           The Delphi Podcast Host and GP of Delphi Ventures Tom Shaughnessy
           and Delphi’s Head of Research, Medio Demarco, are joined by Eli

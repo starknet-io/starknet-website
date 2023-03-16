@@ -1,7 +1,7 @@
 id: 822de463-88d2-4455-9e41-191f59be1c97
 post_type: video
 title: "Community call #18 | Nethermind presenting Warp transpiler"
-published_date: 2022-07-15T10:58:07.718Z
+published_date: "2022-07-15T10:58:07.718Z"
 time_to_consume: 49 min watch
 image: /assets/cc18.jpg
 category: community-calls
@@ -16,7 +16,7 @@ video:
     etag: UqS-XlL4jABcmwgTXsXDFM-QNA8
     id: kmUjbDXScyc
     snippet:
-      publishedAt: 2022-07-06T01:23:22Z
+      publishedAt: "2022-07-06T01:23:22Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "Starknet Community call #18 | Nethermind presenting Warp transpiler"
       description: ""

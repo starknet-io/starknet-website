@@ -1,7 +1,7 @@
 id: d09b7690-9fa8-4077-af56-99280a0e7616
 post_type: video
 title: “StarkWare isn’t Leaving Ethereum” / Eli Ben-Sasson and Uri Kolodny at Bankless
-published_date: 2022-07-29T15:51:43.013Z
+published_date: "2022-07-29T15:51:43.013Z"
 time_to_consume: 28 min watch
 image: /assets/interviews07.jpg
 category: ecosystem
@@ -18,10 +18,9 @@ video:
     etag: HNfXVbeOXYr7JUvSRohzpHYa1Wg
     id: bKGUXBEOCrw
     snippet:
-      publishedAt: 2022-07-28T21:45:09Z
+      publishedAt: "2022-07-28T21:45:09Z"
       channelId: UCAl9Ld79qaZxp9JzEOwd3aA
-      title: "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny |
-        EthCC Experience 2022 #3"
+      title: "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny | EthCC Experience 2022 #3"
       description: >-
         🇫🇷 Welcome to the Bankless EthCC 2022 Experience 🇫🇷
 
@@ -165,8 +164,7 @@ video:
       categoryId: "24"
       liveBroadcastContent: none
       localized:
-        title: "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny |
-          EthCC Experience 2022 #3"
+        title: "\"StarkWare isn't Leaving Ethereum\" - Eli Ben-Sasson and Uri Kolodny | EthCC Experience 2022 #3"
         description: >-
           🇫🇷 Welcome to the Bankless EthCC 2022 Experience 🇫🇷
 

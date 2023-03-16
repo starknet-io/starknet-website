@@ -1,7 +1,7 @@
 id: 2298cff1-3790-49e3-b57e-bd544b9906a9
 post_type: video
 title: "Community Call #31 | The New Starknet Rust Sequencer"
-published_date: 2023-01-17T13:00:07.686Z
+published_date: "2023-01-17T13:00:07.686Z"
 time_to_consume: 42 min watch
 image: /assets/cc31.jpg
 category: community-calls
@@ -17,7 +17,7 @@ video:
     etag: SWZgGs9jzfQ_9EtfR4Tckc96B84
     id: 9IszIArEt1M
     snippet:
-      publishedAt: 2023-01-18T02:22:43Z
+      publishedAt: "2023-01-18T02:22:43Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: "StarkNet Community Call #31 | The New StarkNet Rust Sequencer"
       description: >-

@@ -1,15 +1,13 @@
 id: 495055e8-48fd-4474-b551-c29bacf4d8de
 post_type: article
 title: STARK Struck Podcast | Ep 6 | Julien Niset from Argent
-published_date: 2022-11-16T00:00:00+00:00
+published_date: "2022-11-16T00:00:00+00:00"
 time_to_consume: 56 min watch
 image: /assets/starkstruck06.jpg
 category: stark-struck
 topic:
   - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Julien Niset from
-  Argent, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically. "
+short_desc: "Join Henri Lieutaud from the StarkNet team and Julien Niset from Argent, on what gets them excited about technology in general, blockchain in particular, and validity rollups specifically. "
 video:
   url: https://youtu.be/NXa99W1l710
   id: NXa99W1l710
@@ -18,7 +16,7 @@ video:
     etag: 5ejSBHHZAOlrzQdF3FkvxrN2ifM
     id: NXa99W1l710
     snippet:
-      publishedAt: 2022-11-16T14:35:06Z
+      publishedAt: "2022-11-16T14:35:06Z"
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: STARK Struck Podcast | Episode 6 | Henri Lieutaud with Julien Niset from
         Argent

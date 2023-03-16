@@ -1,7 +1,7 @@
 id: 2e0d5ef3-3898-4974-9366-b985d66cd272
 post_type: video
 title: Starknet House weekly session 0
-published_date: 2022-06-05T15:57:13.652Z
+published_date: "2022-06-05T15:57:13.652Z"
 time_to_consume: 70 min watch
 image: /assets/sn_house01.jpg
 category: ecosystem
@@ -20,7 +20,7 @@ video:
     etag: ASIYjuMJP02faojDki1ElAHPDk8
     id: wFZ_YIetK1o
     snippet:
-      publishedAt: 2022-06-05T19:29:59Z
+      publishedAt: "2022-06-05T19:29:59Z"
       channelId: UCqbWfFjh7mlH1rjoRebHo-g
       title: 'StarkNet House   Weekly Session 0: "What are zk-STARKs?" By Eli
         Ben-Sasson'
