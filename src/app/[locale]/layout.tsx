@@ -5,6 +5,7 @@ import { getMessages } from "src/data/i18n/intl";
 import Navbar from "./(components)/Navbar";
 import { Footer } from "./(components)/Footer";
 import { getMainMenu } from "src/data/settings/main-menu";
+import { getAlert } from "src/data/settings/alert";
 import React from "react";
 import { i18nConfig } from "src/data/i18n/config";
 import { notFound } from "next/navigation";
@@ -42,11 +43,12 @@ export default async function LocaleLayout({
 
   const mainMenu = await getMainMenu(locale);
   const messages = await getMessages(locale);
+  const alert = await getAlert(locale);
 
   return (
     <ThemeProvider>
       <ClientLocaleProvider value={{ locale, messages }}>
-        <PageContainer>
+        <PageContainer alert={alert}>
           <Navbar
             mainMenu={mainMenu}
             env={{

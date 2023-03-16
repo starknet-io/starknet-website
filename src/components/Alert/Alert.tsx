@@ -21,7 +21,7 @@ import {
 type props = {
   children: React.ReactNode;
   toId?: string;
-  variant?: string;
+  variant?: 'red' | 'blue' | 'orange';
   title: string;
 } & AlertProps;
 
