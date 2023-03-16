@@ -1,0 +1,10 @@
+id: 0cairo001
+type: youtube
+url: https://youtu.be/DrBJ9LWvsOQ
+image: /assets/cairo001.jpeg
+title: "Starknet 101 workshop "
+author: StarkWare
+published_at: "2023-01-31T00:00:00+00:00"
+difficulty: beginner
+course: cairo_101
+tags: starknet

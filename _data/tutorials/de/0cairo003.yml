@@ -1,0 +1,10 @@
+id: 0cairo003
+type: youtube
+url: https://youtu.be/fpwSdNnzulM
+image: /assets/cairo03.jpeg
+title: Intro to smart contracts
+author: StarkWare
+published_at: "2023-01-31T00:00:00+00:00"
+difficulty: beginner
+course: cairo_101
+tags: contracts
