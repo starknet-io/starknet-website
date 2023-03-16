@@ -2,4 +2,6 @@ items:
   - type: Type
   - title: Title
   - description: Description
-  
+variant: blue
+title: some title
+body: s﻿ome desc
