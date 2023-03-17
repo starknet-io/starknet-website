@@ -25,6 +25,7 @@ import * as path from "node:path";
 import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { Metadata } from "next";
+import { preRenderedLocales } from "src/data/i18n/config";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -41,7 +42,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   const params = [];
 
-  for (const locale of ["en"]) {
+  for (const locale of preRenderedLocales) {
     const files = await fs.readdir(
       path.join(process.cwd(), "_data/_dynamic/posts", locale),
     );
