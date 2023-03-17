@@ -184,7 +184,7 @@ export function VideoPlayer({
         toggleIsRunning(true);
         setIsChapterChangeModalOpen(true);
         setChapterTimeoutCount(5);
-      } else if (activeChapter && activeChapter?.id !== currentChapter) {
+      } else if (activeChapter) {
         setCurrentChapter(activeChapter.id);
       }
       setCurrentTime(playerTime);
@@ -233,6 +233,7 @@ export function VideoPlayer({
     const volume = player.volume();
     setVolume(volume * 100);
     goToChapter(currentChapter);
+    setCurrentChapter(currentChapter);
     player.aspectRatio("16:9");
   };
 

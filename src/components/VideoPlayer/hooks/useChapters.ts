@@ -16,7 +16,7 @@ export function useChapters({
   const goToChapter = (chapterId: string) => {
     const chapter = chapters.find((p) => p.id === chapterId);
     if (chapterId && chapter) {
-      setCurrentChapter(chapter.id);
+      // setCurrentChapter(chapter.id);
       playerRef.current?.currentTime(chapter.startAt);
     }
   };
