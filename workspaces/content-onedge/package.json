@@ -5,6 +5,7 @@
   "scripts": {
     "update-algolia-index": "vite-node src/algolia.ts",
     "update-dynamic-data": "vite-node src/index.ts",
+    "pre-crowdin": "vite-node src/pre-crowdin.ts",
     "build": "yarn update-dynamic-data; rm -rf dist; cp -r ../../_data dist"
   },
   "dependencies": {
