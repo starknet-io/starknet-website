@@ -18,6 +18,7 @@ import { TableOfContents } from "../(components)/TableOfContents";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { Metadata } from "next";
+import { preRenderedLocales } from "src/data/i18n/config";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -37,7 +38,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   const params = [];
 
-  for (const locale of ["en"]) {
+  for (const locale of preRenderedLocales) {
     const base = path.join(process.cwd(), "_data/_dynamic/pages", locale);
     const dirs: string[][] = [];
 
