@@ -30,7 +30,7 @@ jobs:
           download_translations: true
           # download_language: 'de'
           localization_branch_name: ${{ github.ref_name }}_l10n
-          # crowdin_branch_name: 'dev'
+          crowdin_branch_name: dev
           # crowdin_branch_name: ${{ github.ref_name }}
           create_pull_request: true
           pull_request_title: "New Crowdin Translations"
