@@ -29,13 +29,12 @@ jobs:
           upload_translations: false
           download_translations: true
           # download_language: 'de'
-          localization_branch_name: ${{ github.ref_name }}_l10n
+          localization_branch_name: dev_l10n
           crowdin_branch_name: dev
-          # crowdin_branch_name: ${{ github.ref_name }}
           create_pull_request: true
           pull_request_title: "New Crowdin Translations"
           pull_request_body: "New Crowdin translations by [Crowdin GH Action](https://github.com/crowdin/github-action)"
-          pull_request_base_branch_name: ${{ github.ref_name }}
+          pull_request_base_branch_name: dev
           base_url: "https://starkware.crowdin.com"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
