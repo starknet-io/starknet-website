@@ -263,11 +263,11 @@ export async function getSimpleData<T = {}>(
       const sourceFilepath =
         defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-      const dataTitle = data.title ?? data.name;
+      const defaultLocaleTitle = defaultLocaleData.title ?? defaultLocaleData.name;
 
       filenameMap.set(`${locale.code}:${filename}`, {
         ...data,
-        slug: dataTitle ? slugify(dataTitle) : undefined,
+        slug: defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined,
         locale: locale.code,
         objectID: `${resourceName}:${locale.code}:${filename}`,
         sourceFilepath,
