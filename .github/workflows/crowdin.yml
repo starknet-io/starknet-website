@@ -34,7 +34,6 @@ jobs:
           create_pull_request: true
           pull_request_title: "New Crowdin Translations"
           pull_request_body: "New Crowdin translations by [Crowdin GH Action](https://github.com/crowdin/github-action)"
-          pull_request_base_branch_name: ${{ github.ref }}
           base_url: "https://starkware.crowdin.com"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
