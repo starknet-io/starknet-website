@@ -5,43 +5,61 @@ parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Starknet Governance
+    description: Read all about the first phase of Starknet overnance.
   - type: markdown
     body: >-
-      # Starknet Governance: First phase
+      The first phase of Starknet Governance has been launched (more
+      details [here](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)).
+      From now on, community members can participate in shaping Starknet through
+      a further channel, namely voting on protocol changes.
 
 
-      The first phase of Starknet Governance has been launched (more details here). From now on, community members can participate in shaping Starknet through a further channel, namely voting on protocol changes.
+      In its first phase, Starknet governance will focus on Starknet protocol upgrades. Every Starknet version upgrade will be deployed on Goerli Testnet; voters will then have a 6-day period to examine and test the upgraded version as it runs on Goerli. During this time, a Snapshot proposal will be opened, and the community can vote on whether to approve or reject the upgraded version for Mainnet deployment.
 
 
-      In its first phase, Starknet Governance will focus on Starknet protocol upgrades. Every Starknet version upgrade will be deployed on Goerli Testnet; voters will then have a 6-day period to examine and test the upgraded version as it runs on Goerli. During this time, a [Snapshot proposal ](https://snapshot.org/#/starknet.eth)will be opened, and the community can vote on whether to approve or reject the upgraded version for Mainnet deployment.
+      If the proposal gains a majority of ‘YES’ votes during the six-day voting period, the proposal passes and Starknet mainnet will be upgraded accordingly. We expect the vote on [Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect) to be open soon.
 
 
-      If the proposal gains a majority of ‘YES’ votes during the six-day voting period, the proposal passes and Starknet mainnet will be upgraded accordingly. We expect the vote on [Starknet Alpha v0.11.0 ](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)to be open soon.
-
-
-      We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet Community Forum](https://community.starknet.io/).
+      We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
   - type: link_list
-    heading: Further reading
+    heading: Relevant posts on the topic of Starknet goverance
     blocks:
       - is_external: false
-        label: "Starknet’s Governance: First Phase"
+        label: "Starknet’s governance: First phase"
         href: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
+        sub_label: Announcing the next step in Starknet's decentralization process
       - is_external: false
         label: Starknet token is deployed on Ethereum
         href: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
+        sub_label: Explains the token allocation process, and how the deployed token
+          contracts serve two of the token’s three designed utilities - voting
+          and staking
       - is_external: false
         href: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
-        label: Welcome to the World, StarkNet Foundation!
+        label: Welcome to the world, Starknet foundation!
+        sub_label: Introductory announcement from the foundation
   - type: link_list
     heading: Community discussion
     blocks:
       - is_external: true
-        href: https://snapshot.org/#/starknet.eth
-        label: Snapshot
-        sub_label: Starknet on Snapshot
-      - is_external: true
         href: https://community.starknet.io/c/governance/8
         label: Community forum
+        sub_label: Community discussions on the topic of governance
+      - is_external: true
+        label: Discord
+        href: https://discord.com/
+        sub_label: Starknet governance discussion on Discord
       - is_external: true
         label: Karma
         href: https://delegate.starknet.io/
+        sub_label: Helping token holders choose delegates and increase transparency
+          around their contributions
+  - type: link_list
+    heading: Active proposals
+    blocks:
+      - is_external: true
+        label: Snapshot
+        sub_label: View active Starknet proposals on Snapshot
+        href: https://snapshot.org/#/starknet.eth
