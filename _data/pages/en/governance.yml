@@ -7,7 +7,7 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Starknet Governance
-    description: Read all about the first phase of Starknet overnance.
+    description: Read all about the first phase of Starknet governance.
   - type: markdown
     body: >-
       The first phase of Starknet Governance has been launched (more
@@ -24,22 +24,20 @@ blocks:
 
       We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
   - type: link_list
-    heading: Relevant posts on the topic of Starknet goverance
+    heading: Further reading
     blocks:
       - is_external: false
         label: "Starknet’s governance: First phase"
         href: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
-        sub_label: Announcing the next step in Starknet's decentralization process
+        sub_label: ""
       - is_external: false
         label: Starknet token is deployed on Ethereum
         href: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
-        sub_label: Explains the token allocation process, and how the deployed token
-          contracts serve two of the token’s three designed utilities - voting
-          and staking
+        sub_label: ""
       - is_external: false
         href: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
         label: Welcome to the world, Starknet foundation!
-        sub_label: Introductory announcement from the foundation
+        sub_label: ""
   - type: link_list
     heading: Community discussion
     blocks:
@@ -54,8 +52,7 @@ blocks:
       - is_external: true
         label: Karma
         href: https://delegate.starknet.io/
-        sub_label: Helping token holders choose delegates and increase transparency
-          around their contributions
+        sub_label: Helping token holders choose delegates
   - type: link_list
     heading: Active proposals
     blocks:
