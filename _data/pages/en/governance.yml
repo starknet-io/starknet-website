@@ -44,11 +44,7 @@ blocks:
       - is_external: true
         href: https://community.starknet.io/c/governance/8
         label: Community forum
-        sub_label: Community discussions on the topic of governance
-      - is_external: true
-        label: Discord
-        href: https://discord.com/
-        sub_label: Starknet governance discussion on Discord
+        sub_label: Starknet governance discussion on Discourse
       - is_external: true
         label: Karma
         href: https://delegate.starknet.io/
