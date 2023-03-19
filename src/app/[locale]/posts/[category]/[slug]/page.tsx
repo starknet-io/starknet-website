@@ -26,6 +26,7 @@ import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { Metadata } from "next";
 import { preRenderedLocales } from "src/data/i18n/config";
+import Link from "next/link";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -87,18 +88,25 @@ export default async function Page({
         breadcrumbs={
           <Breadcrumb separator="/">
             <BreadcrumbItem>
-              <BreadcrumbLink fontSize="sm" href="#">
-                <BreadcrumbLink fontSize="sm" href="# " noOfLines={1}>
-                  Blog
-                </BreadcrumbLink>
+              <BreadcrumbLink
+                as={Link}
+                href={`/${locale}/posts`}
+                fontSize="sm"
+                noOfLines={1}
+              >
+                Blog
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink fontSize="sm" href="#" noOfLines={1}>
+              <BreadcrumbLink
+                as={Link}
+                href={`/${locale}/posts/${category.slug}`}
+                fontSize="sm"
+                noOfLines={1}
+              >
                 {category.name}
               </BreadcrumbLink>
             </BreadcrumbItem>
-
             <BreadcrumbItem isCurrentPage>
               <BreadcrumbLink fontSize="sm" noOfLines={1}>
                 {post.title}
