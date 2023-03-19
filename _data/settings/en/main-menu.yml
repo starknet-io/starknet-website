@@ -46,6 +46,7 @@ items:
                 custom_external_link: https://community.starknet.io/
               - page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
                 custom_title: Online communities
+              - page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
       - blocks:
           - title: BLOG & MEDIA
             items:
