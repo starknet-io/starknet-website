@@ -63,7 +63,7 @@ export async function fileToPost(
     published_date: data.published_date,
     time_to_consume: data.time_to_consume,
     video: data.video,
-    topic: data.topic,
+    topic: data.topic ?? [],
     short_desc: data.short_desc,
     image: data.image,
     blocks: data.blocks ?? [],
