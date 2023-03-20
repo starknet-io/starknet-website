@@ -23,6 +23,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { titleCase } from "src/utils/utils";
+import Link from "next/link";
 
 export interface AutoProps {
   readonly params: {
@@ -60,15 +61,18 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="/en/community">
+                <BreadcrumbLink
+                  as={Link}
+                  href={`/${params.locale}/community`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
                   Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  Jobs
-                </BreadcrumbLink>
+                <BreadcrumbLink fontSize="sm">Jobs</BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
@@ -216,7 +220,11 @@ function CustomHits() {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button onClick={() => showMore()} flexShrink={0} variant="outlineLight">
+          <Button
+            onClick={() => showMore()}
+            flexShrink={0}
+            variant="outlineLight"
+          >
             View More
           </Button>
           <Divider />

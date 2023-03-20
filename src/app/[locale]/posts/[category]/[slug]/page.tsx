@@ -26,13 +26,36 @@ import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { Metadata } from "next";
 import { preRenderedLocales } from "src/data/i18n/config";
+import Link from "next/link";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
     const post = await getPostBySlug(props.params.slug, props.params.locale);
 
+    const PUBLIC_URL =
+      process.env.VERCEL_URL && process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
+        ? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
+          ? `https://starknet-website-dev.vercel.app`
+          : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
+          ? `https://www.starknet.io`
+          : `https://${process.env.VERCEL_URL}`
+        : "";
+
     return {
       title: post.title,
+      description: post.short_desc,
+      openGraph: {
+        type: "article",
+        title: post.title,
+        description: post.short_desc,
+        images: `${PUBLIC_URL}${post.image}`,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.title,
+        description: post.short_desc,
+        images: `${PUBLIC_URL}${post.image}`,
+      },
     };
   } catch {
     return {};
@@ -44,7 +67,7 @@ export async function generateStaticParams() {
 
   for (const locale of preRenderedLocales) {
     const files = await fs.readdir(
-      path.join(process.cwd(), "_data/_dynamic/posts", locale),
+      path.join(process.cwd(), "_data/_dynamic/posts", locale)
     );
 
     const categories = await getCategories(locale);
@@ -87,18 +110,25 @@ export default async function Page({
         breadcrumbs={
           <Breadcrumb separator="/">
             <BreadcrumbItem>
-              <BreadcrumbLink fontSize="sm" href="#">
-                <BreadcrumbLink fontSize="sm" href="# " noOfLines={1}>
-                  Blog
-                </BreadcrumbLink>
+              <BreadcrumbLink
+                as={Link}
+                href={`/${locale}/posts`}
+                fontSize="sm"
+                noOfLines={1}
+              >
+                Blog
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink fontSize="sm" href="#" noOfLines={1}>
+              <BreadcrumbLink
+                as={Link}
+                href={`/${locale}/posts/${category.slug}`}
+                fontSize="sm"
+                noOfLines={1}
+              >
                 {category.name}
               </BreadcrumbLink>
             </BreadcrumbItem>
-
             <BreadcrumbItem isCurrentPage>
               <BreadcrumbLink fontSize="sm" noOfLines={1}>
                 {post.title}
@@ -107,7 +137,7 @@ export default async function Page({
           </Breadcrumb>
         }
         pageLastUpdated={`Page last updated ${moment(
-          post?.gitlog?.date,
+          post?.gitlog?.date
         ).fromNow()}`}
         main={
           <Container maxWidth="846px">

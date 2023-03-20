@@ -5,7 +5,6 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Wrap,
   Container,
   Flex,
   HStack,
@@ -24,10 +23,11 @@ import {
 } from "src/libs/react-instantsearch-hooks-web";
 import type { Category } from "src/data/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import type { Topic } from "src/data/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
+import Link from "next/link";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -80,15 +80,18 @@ export function PostsPage({
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="/en/community">
+                <BreadcrumbLink
+                  as={Link}
+                  href={`/${params.locale}/community`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
                   Community
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  Blog
-                </BreadcrumbLink>
+              <BreadcrumbItem isCurrentPage fontSize='sm'>
+                <BreadcrumbLink fontSize="sm">Blog</BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
@@ -126,13 +129,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
   });
 
   return (
-    <Box
-      display="flex"
-      flexWrap="wrap"
-      gap="8px"
-      columnGap="4px"
-      width="100%"
-    >
+    <Box display="flex" flexWrap="wrap" gap="8px" columnGap="4px" width="100%">
       {items.map((topic, i) => (
         <Button
           size="sm"
@@ -275,7 +272,11 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button onClick={() => showMore()} flexShrink={0} variant="outlineLight">
+          <Button
+            onClick={() => showMore()}
+            flexShrink={0}
+            variant="outlineLight"
+          >
             View More
           </Button>
           <Divider />
