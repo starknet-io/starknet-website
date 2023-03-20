@@ -71,6 +71,9 @@ items:
                 custom_internal_link: /jobs
                 custom_title: Jobs
               - 
+                page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
+                custom_title: Governance
+              - 
                 custom_title: Community forum
                 custom_external_link: https://community.starknet.io/
               - 
