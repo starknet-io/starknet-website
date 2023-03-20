@@ -33,6 +33,7 @@
     "@algolia/autocomplete-theme-classic": "^1.8.3",
     "@chakra-ui/pro-theme": "^0.0.57",
     "@chakra-ui/react": "^2.4.9",
+    "@crowdin/cli": "^3.10.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/inter": "^4.5.15",
