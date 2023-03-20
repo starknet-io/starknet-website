@@ -7,7 +7,6 @@ import {
   Box,
   VStack,
   HStack,
-  SimpleGrid,
   Divider,
   Grid,
 } from "@chakra-ui/react";
@@ -27,6 +26,7 @@ import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
@@ -64,15 +64,18 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
           breadcrumbs={
             <Breadcrumb separator="/">
               <BreadcrumbItem>
-                <BreadcrumbLink fontSize="sm" href="/en/developers">
+                <BreadcrumbLink
+                  as={Link}
+                  href={`/${params.locale}/developers`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
                   Developers
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" href="#">
-                  Tutorials
-                </BreadcrumbLink>
+                <BreadcrumbLink fontSize="sm">Tutorials</BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
@@ -366,7 +369,11 @@ function CustomHits() {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button onClick={() => showMore()} flexShrink={0} variant="outlineLight">
+          <Button
+            onClick={() => showMore()}
+            flexShrink={0}
+            variant="outlineLight"
+          >
             View More
           </Button>
           <Divider />
