@@ -37,6 +37,9 @@ blocks:
         href: https://community.starknet.io/c/governance/8
         label: Community forum
         sub_label: Starknet governance discussion on Discourse
+  - type: link_list
+    heading: "Delegate discovery "
+    blocks:
       - is_external: true
         label: Karma
         href: https://delegate.starknet.io/
@@ -56,3 +59,15 @@ blocks:
         href: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
         label: Welcome to the world, Starknet foundation!
         sub_label: ""
+      - is_external: false
+        label: "Introducing: The StarkNet Foundation"
+        href: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
+      - is_external: false
+        label: "Part 1: StarkNet sovereignty: A decentralization proposal"
+        href: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
+      - is_external: false
+        label: "Part 2: A Decentralization and governance proposal for Starknet"
+        href: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+      - is_external: false
+        href: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
+        label: "Part 3: Starknet Token Design"
