@@ -37,6 +37,9 @@ blocks:
         href: https://community.starknet.io/c/governance/8
         label: Community forum
         sub_label: Starknet governance discussion on Discourse
+  - type: link_list
+    heading: "Delegate discovery "
+    blocks:
       - is_external: true
         label: Karma
         href: https://delegate.starknet.io/
