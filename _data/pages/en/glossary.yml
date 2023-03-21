@@ -95,3 +95,9 @@ alert:
   variant: warning
   title: Warning!
   children: e﻿xample text
+  items:
+    - variant: warning
+      hasCloseButton: false
+      id: 7f95a24b-36e5-4164-af1a-ee5e1c1ec6cc
+      title: Warning
+      children: text
