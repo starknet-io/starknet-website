@@ -2,7 +2,6 @@
 import {
   Avatar,
   Box,
-  Button,
   HStack,
   Icon,
   Stack,
@@ -135,7 +134,7 @@ export const ListCard = (props: Props) => {
                 )}
 
                 <Wrap spacingX="24px" shouldWrapChildren>
-                  {props.href && props.variant !== "event" && (
+                  {props.href && props.variant !== "event" && props.variant !== "job" && (
                     <Link isExternal as={NextLink} href={`${props.href}`}>
                       <Icon
                         boxSize="18px"
@@ -159,17 +158,14 @@ export const ListCard = (props: Props) => {
                   )}
 
                   {/* <IconButton
-              variant="simple"
               aria-label="Website"
               icon={<HiGlobeAlt />}
             />
             <IconButton
-              variant="simple"
               aria-label="Twitter"
               icon={<SiTwitter />}
             />
             <IconButton
-              variant="simple"
               aria-label="Discord"
               icon={<SiDiscord />}
             /> */}

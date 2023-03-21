@@ -578,6 +578,11 @@ const topLevelBlocks: ListField["types"] = [
 ];
 
 export const config: Config = {
+  slug: {
+    clean_accents: true,
+    encoding: "ascii",
+    sanitize_replacement: "-",
+  },
   backend: {
     name: "github",
     repo: "starknet-io/starknet-website",

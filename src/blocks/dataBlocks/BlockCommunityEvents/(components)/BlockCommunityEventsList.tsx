@@ -107,7 +107,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
         <Button
           onClick={() => router.push("/en/events")}
           flexShrink={0}
-          variant="secondary"
+          variant="outlineLight"
         >
           See all events
         </Button>

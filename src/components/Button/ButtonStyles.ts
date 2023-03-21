@@ -1,89 +1,529 @@
 import { defineStyle, defineStyleConfig } from "src/libs/chakra-ui";
 
 const outline = defineStyle({
-  // change the appearance of the border
-  borderRadius: 4, // remove the border radius
-  fontWeight: "medium", // change the font weight
+  borderRadius: 4,
+  fontWeight: "medium",
   fontSize: "16px",
   paddingLeft: "40px",
   paddingRight: "40px",
-  color: "btn-outline-fg",
-  borderColor: "btn-outline-border",
-  bg: "btn-outline-bg",
+  color: "grey.darkText",
+  borderColor: "grey.morning",
+  bg: "transparent",
+  minWidth: "none",
+  lineHeight: "24px",
+  height: "auto",
+  padding: "12px 24px",
   _hover: {
-    bg: "btn-outline-hover-bg",
+    bg: "transparent",
     color: "btn-outline-hover-fg",
-    borderColor: "btn-outline-hover-border",
+    borderColor: "grey.morning",
+    _dark: {
+      color: "selected.100"
+    }
   },
   _active: {
-    bg: "btn-outline-active-bg",
-    color: "btn-outline-active-fg",
-    borderColor: "btn-outline-active-border",
+    bg: "bg.200",
+    color: "grey.greyDusk",
+    borderColor: "grey.morning",
+    borderWidth: "1px",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+    outlineWidth: 1,
+    _focus: {
+      bg: "bg.200",
+      color: "grey.greyDusk",
+      borderColor: "grey.morning",
+      borderWidth: "1px",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      outlineWidth: 1
+    },
+    _dark: {
+      bg: "black",
+      color: "grey.greyDusk",
+      borderColor: "grey.greyDusk",
+      outlineWidth: 1,
+      _focus: {
+        bg: "black",
+        color: "grey.greyDusk",
+        borderColor: "grey.greyDusk",
+        outlineWidth: 1
+      }
+    }
   },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+  _dark: {
+    border: "1px solid grey.greyDusk",
+    color: "white"
+  }
+});
+
+const outlineLight = defineStyle({
+  borderRadius: 4,
+  fontWeight: "medium",
+  fontSize: "14px",
+  color: "grey.coolerText",
+  borderColor: "grey.line",
+  borderWidth: "1px",
+  bg: "transparent",
+  minWidth: "none",
+  lineHeight: "16px",
+  height: "auto",
+  padding: "16px 40px",
+  _hover: {
+    bg: "transparent",
+    color: "btn-outline-hover-fg",
+    borderColor: "selected.main",
+    _dark: {
+      color: "selected.100",
+      borderColor: "selected.200"
+    }
+  },
+  _active: {
+    bg: "grey.line",
+    color: "grey.coolerText",
+    borderColor: "grey.line",
+    borderWidth: "1px",
+    boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+    outlineWidth: 1,
+    _focus: {
+      bg: "grey.line",
+      color: "grey.coolerText",
+      borderColor: "grey.line",
+      borderWidth: "1px",
+      boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+      outlineWidth: 1
+    },
+    _dark: {
+      bg: "black",
+      color: "btn-outline-active-fg",
+      borderColor: "black",
+      outlineWidth: 1,
+      _focus: {
+        bg: "black",
+        color: "btn-outline-active-fg",
+        borderColor: "black",
+        outlineWidth: 1
+      }
+    }
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+  _dark: {
+    border: "1px solid grey.greyDusk",
+    color: "white"
+  }
+});
+
+const outlineRounded = defineStyle({
+  borderRadius: 24,
+  fontWeight: "medium",
+  fontSize: "14px",
+  color: "grey.coolerText",
+  borderColor: "grey.line",
+  borderWidth: "1px",
+  bg: "transparent",
+  minWidth: "none",
+  lineHeight: "16px",
+  height: "auto",
+  padding: "16px 40px",
+  _hover: {
+    bg: "transparent",
+    color: "btn-outline-hover-fg",
+    borderColor: "selected.main",
+    _dark: {
+      color: "selected.100",
+      borderColor: "selected.200"
+    }
+  },
+  _active: {
+    bg: "grey.line",
+    color: "grey.coolerText",
+    borderColor: "grey.line",
+    borderWidth: "1px",
+    boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+    outlineWidth: 1,
+    _focus: {
+      bg: "grey.line",
+      color: "grey.coolerText",
+      borderColor: "grey.line",
+      borderWidth: "1px",
+      boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+      outlineWidth: 1
+    },
+    _dark: {
+      bg: "black",
+      color: "btn-outline-active-fg",
+      borderColor: "black",
+      outlineWidth: 1,
+      _focus: {
+        bg: "black",
+        color: "btn-outline-active-fg",
+        borderColor: "black",
+        outlineWidth: 1
+      }
+    }
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+  _dark: {
+    border: "1px solid grey.greyDusk",
+    color: "white"
+  }
+});
+
+const ghost = defineStyle({
+  borderRadius: 4,
+  fontWeight: "medium",
+  fontSize: "14px",
+  color: "grey.darkText",
+  borderColor: "transparent",
+  borderWidth: "1px",
+  bg: "transparent",
+  minWidth: "none",
+  minHeight: 42,
+  lineHeight: "100%",
+  height: "auto",
+  padding: "8px 16px",
+  "& svg path": {
+    fill: "grey.morning"
+  },
+  _hover: {
+    bg: "transparent",
+    "& svg path": {
+      fill: "selected.main"
+    },
+    _dark: {
+      color: "white",
+      borderColor: "transparent",
+      bg: "black"
+    }
+  },
+  _active: {
+    bg: "transparent",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+    outlineWidth: 1,
+    color: "grey.greyDusk",
+    borderWidth: "1px",
+    borderColor: "transparent",
+    "& svg path": {
+      fill: "grey.greyDusk"
+    },
+    _focus: {
+      bg: "transparent",
+      color: "grey.greyDusk",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      outlineWidth: 1,
+      borderWidth: "1px",
+      borderColor: "transparent",
+      "& svg path": {
+        fill: "grey.greyDusk"
+      },
+    },
+    _dark: {
+      bg: "black",
+      color: "btn-outline-active-fg",
+      borderColor: "black",
+      outlineWidth: 1,
+      _focus: {
+        bg: "black",
+        color: "btn-outline-active-fg",
+        borderColor: "black",
+        outlineWidth: 1
+      }
+    }
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+  _dark: {
+    borderColor: "transparent",
+    color: "white"
+  }
 });
 
 const solid = defineStyle({
-  borderRadius: 4, // remove the border radius
-  fontWeight: "medium", // change the font weight
+  borderRadius: 4,
+  fontWeight: "medium",
   fontSize: "16px",
-  paddingLeft: "40px",
-  paddingRight: "40px",
-  color: "btn-primary-fg",
+  minWidth: "none",
+  lineHeight: "24px",
+  height: "auto",
+  padding: "12px 24px",
+  color: "white",
   bg: "btn-primary-bg",
+  borderWidth: "1px",
+  borderStyle: "solid",
+  borderColor: "btn-primary-bg",
   _hover: {
     bg: "btn-primary-hover-bg",
     color: "btn-primary-hover-fg",
+    _dark: {
+      bg: "bg.main",
+      color: "grey.darkText",
+    },
   },
   _active: {
     bg: "btn-primary-active-bg",
     color: "btn-primary-active-fg",
+    outlineWidth: 1,
+    _dark: {
+      bg: "grey.morning",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      color: "grey.darkText",
+      _focus: {
+        bg: "grey.morning",
+        boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+        color: "grey.darkText",
+      }
+    },
+  },
+  _dark: {
+    bg: "white",
+    color: "grey.darkText",
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
   },
 });
 
-const solidHero = defineStyle({
-  borderRadius: 4, // remove the border radius
-  fontWeight: "medium", // change the font weight
-  fontSize: "16px",
-  paddingLeft: "40px",
-  paddingRight: "40px",
-  color: "btn-primary-hero-fg",
-  bg: "btn-primary-hero-bg",
+const primaryHero = defineStyle({
+  borderRadius: 4,
+  fontWeight: "medium",
+  fontSize: "14px",
+  minWidth: "none",
+  lineHeight: "16px",
+  height: "auto",
+  padding: "16px 24px",
+  color: "white",
+  bg: "snNavy",
+  borderWidth: "1px",
+  borderStyle: "solid",
+  borderColor: "btn-primary-bg",
   _hover: {
-    bg: "btn-primary-hero-hover-bg",
-    color: "btn-primary-hero-hover-fg",
+    bg: "selected.main",
+    borderColor: "selected.main",
+    _dark: {
+      bg: "selected.100",
+      borderColor: "selected.100",
+      color: "snNavy",
+    },
   },
   _active: {
-    bg: "btn-primary-hero-active-bg",
-    color: "btn-primary-hero-active-fg",
+    bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #5C94FF",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+    borderColor: "selected.main",
+    outlineWidth: 1,
+    _focus: {
+      bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #5C94FF",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      borderColor: "selected.main"
+    },
+    _dark: {
+      bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #AFCAFF",
+      borderColor: "transparent",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      color: "snNavy",
+      _focus: {
+        bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #AFCAFF",
+        boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+        color: "snNavy",
+        borderColor: "transparent"
+      }
+    },
+  },
+  _dark: {
+    bg: "white",
+    borderColor: "white",
+    color: "snNavy",
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
   },
 });
-const outlineHero = defineStyle({
-  // change the appearance of the border
-  borderRadius: 4, // remove the border radius
-  fontWeight: "medium", // change the font weight
-  fontSize: "16px",
-  paddingLeft: "40px",
-  paddingRight: "40px",
-  color: "btn-outline-hero-fg",
+const secondaryHero = defineStyle({
+  borderRadius: 4,
+  fontWeight: "medium",
+  fontSize: "14px",
+  minWidth: "none",
+  lineHeight: "16px",
+  height: "auto",
+  padding: "16px 24px",
+  color: "snNavy",
+  bg: "transparent",
   borderWidth: "1px",
-  borderColor: "btn-outline-hero-border",
-  bg: "btn-outline-hero-bg",
+  borderStyle: "solid",
+  borderColor: "snNavy",
   _hover: {
-    bg: "btn-outline-hero-hover-bg",
-    color: "btn-outline-hero-hover-fg",
-    borderColor: "btn-outline-hero-hover-border",
+    bg: "rgba(255, 255, 255, 0.5)",
+    borderColor: "selected.main",
+    color: "selected.main",
+    _dark: {
+      bg: "rgba(0, 0, 0, 0.2)",
+      borderColor: "selected.100",
+      color: "selected.100",
+    },
   },
   _active: {
-    bg: "btn-outline-hero-active-bg",
-    color: "btn-outline-hero-active-fg",
-    borderColor: "btn-outline-hero-active-border",
+    bg: "rgba(0, 0, 0, 0.05)",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+    borderColor: "selected.main",
+    color: "selected.main",
+    outlineWidth: 1,
+    _focus: {
+      bg: "rgba(0, 0, 0, 0.05)",
+      color: "selected.main",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      borderColor: "selected.main"
+    },
+    _dark: {
+      bg: "rgba(0, 0, 0, 0.4)",
+      borderColor: "selected.100",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      color: "selected.100",
+      _focus: {
+        bg: "rgba(0, 0, 0, 0.4)",
+        boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+        color: "selected.100",
+        borderColor: "selected.100"
+      }
+    },
+  },
+  _dark: {
+    bg: "transparent",
+    borderColor: "white",
+    color: "white",
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+});
+
+const switchButton = defineStyle({
+  height: "auto",
+  padding: "11px",
+  color: "grey.darkText",
+  bg: "transparent",
+  borderColor: "transparent",
+  borderWidth: 1,
+  _hover: {
+    bg: "darkMode.navGrey",
+    color: "white",
+    borderColor: "darkMode.navGrey",
+    borderWidth: 1,
+    _focus: {
+      bg: "darkMode.navGrey",
+      color: "white",
+      borderColor: "darkMode.navGrey",
+      borderWidth: 1,
+    },
+    _dark: {
+      bg: "bg.200",
+      color: "grey.darkText",
+    },
+  },
+  _active: {
+    bg: "bg.200",
+    borderColor: "darkMode.navGrey",
+    borderWidth: 1,
+    color: "grey.greyDusk",
+    outlineWidth: 1,
+    _focus: {
+      bg: "bg.200",
+      color: "grey.greyDusk",
+      borderColor: "darkMode.navGrey",
+      borderWidth: 1,
+      outlineWidth: 1,
+    },
+    _dark: {
+      bg: "grey.morning",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      color: "grey.darkText",
+      _focus: {
+        bg: "grey.morning",
+        boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+        color: "grey.darkText",
+      }
+    },
+  },
+  _dark: {
+    bg: "transparent",
+    color: "white",
+  },
+  _focus: {
+    color: "grey.darkText",
+    bg: "transparent",
+    borderColor: "selected.main",
+    borderWidth: 1,
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
   },
 });
 
 const filter = defineStyle({
-  // change the appearance of the border
-  borderRadius: 4, // remove the border radius
-  fontWeight: "medium", // change the font weight
+  borderRadius: 4,
+  fontWeight: "medium",
   fontSize: "12px",
   lineHeight: "12px",
   padding: "8px 16px",
@@ -99,10 +539,10 @@ const filter = defineStyle({
     color: "btn-filter-active-fg",
   },
 });
+
 const filterActive = defineStyle({
-  // change the appearance of the border
-  borderRadius: 4, // remove the border radius
-  fontWeight: "medium", // change the font weight
+  borderRadius: 4,
+  fontWeight: "medium",
   fontSize: "12px",
   lineHeight: "12px",
   padding: "8px 16px",
@@ -116,9 +556,8 @@ const filterActive = defineStyle({
 
 const category = defineStyle({
   cursor: "pointer",
-  // change the appearance of the border
-  borderRadius: 0, // remove the border radius
-  fontWeight: "medium", // change the font weight
+  borderRadius: 0,
+  fontWeight: "medium",
   fontSize: "14px",
   lineHeight: "14px",
   padding: "8px 0 16px",
@@ -137,64 +576,81 @@ const category = defineStyle({
     borderColor: "tabs-border-active-bg",
   },
 });
-const categoryActive = defineStyle({
-  // change the appearance of the border
-  // borderRadius: 4, // remove the border radius
-  // fontWeight: "medium", // change the font weight
-  // fontSize: "12px",
-  // lineHeight: "12px",
-  // padding: "8px 16px",
-  // bg: "btn-filter-active-bg",
-  // color: "btn-filter-active-fg",
-  // _hover: {
-  //   bg: "btn-filter-active-hover-bg",
-  //   color: "btn-filter-active-hover-fg",
-  // },
+
+const icon = defineStyle({
+  height: "auto",
+  padding: "11px",
+  color: "darkMode.card",
+  bg: "transparent",
+  borderColor: "transparent",
+  borderWidth: 1,
+  _hover: {
+    bg: "bg.200",
+    _focus: {
+      bg: "bg.200",
+      borderColor: "transparent",
+      borderWidth: 1,
+    },
+    _dark: {
+      bg: "black",
+    },
+  },
+  _active: {
+    bg: "transparent",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+    outlineWidth: 1,
+    borderWidth: "1px",
+    borderColor: "transparent",
+    color: "darkMode.card",
+    _focus: {
+      bg: "transparent",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      outlineWidth: 1,
+      borderWidth: "1px",
+      borderColor: "transparent"
+    },
+    _dark: {
+      bg: "black",
+      color: "btn-outline-active-fg",
+      borderColor: "black",
+      outlineWidth: 1,
+      _focus: {
+        bg: "black",
+        color: "grey.greyDusk",
+        borderColor: "black",
+        outlineWidth: 1
+      }
+    }
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+  _dark: {
+    borderColor: "transparent",
+    color: "white"
+  }
 });
 
 export const buttonTheme = defineStyleConfig({
   variants: {
     outline,
-    outlineHero,
-    solidHero,
+    outlineLight,
+    outlineRounded,
+    secondaryHero,
+    primaryHero,
+    solid,
+    ghost,
     filter,
     filterActive,
-    solid,
     category,
-    categoryActive,
+    switch: switchButton,
+    icon
   },
 });
-
-// export const ButtonStyles = defineStyleConfig({
-//   baseStyle: {},
-//   // variants: {
-//   //   primary: {
-//   //     bg: "btn-primary-bg",
-//   //     border: "2px solid",
-//   //     color: "btn-primary-fg",
-//   //     borderColor: "btn-primary-border",
-//   //     _hover: {
-//   //       bg: "btn-primary-hover-bg",
-//   //       color: "btn-primary-hover-fg",
-//   //       borderColor: "btn-primary-hover-border",
-//   //     },
-//   //   },
-
-//   //   tertiary: (props: StyleFunctionProps) => ({
-//   //     size: "xs",
-//   //     border: "0px solid",
-//   //     color: props.colorMode === "dark" ? "brand.primary" : "brand.primary",
-//   //     _hover: {
-//   //       color:
-//   //         props.colorMode === "dark" ? "brand.secondary" : "brand.secondary",
-//   //       borderColor:
-//   //         props.colorMode === "dark" ? "brand.secondary" : "brand.secondary",
-//   //     },
-//   //   }),
-//   // },
-//   // // The default size and variant values
-//   // defaultProps: {
-//   //   size: "md",
-//   //   variant: "outline",
-//   // },
-// });

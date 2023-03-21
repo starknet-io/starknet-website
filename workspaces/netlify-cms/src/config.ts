@@ -544,6 +544,11 @@ const topLevelBlocks: CmsFieldList["types"] = [
 ];
 
 export const config: CmsConfig = {
+  slug: {
+    clean_accents: true,
+    encoding: "ascii",
+    sanitize_replacement: "-",
+  },
   backend: {
     name: "github",
     repo: "starknet-io/starknet-website",
