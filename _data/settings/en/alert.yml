@@ -1,16 +1,4 @@
-items:
-  - variant: info
-    hasCloseButton: true
-    id: 2880436e-89df-4901-b0ad-555221de078c
-    title: Information
-    body: w﻿ith close button
-    children: info without close icon
-  - variant: warning
-    hasCloseButton: false
-    id: bc7fc7fa-f736-4a55-839d-80d6f161545b
-    pages: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
-    title: Caution!
-    children: This is glossary page
+items: []
 variant: info
 id: a435b456-e5c7-4561-ba2d-bb76f3353cc3
 title: Info title

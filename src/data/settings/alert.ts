@@ -7,6 +7,7 @@ export interface Alert {
   readonly toId?: string;
   readonly variant?: 'important' | 'info' | 'warning';
   readonly hasCloseButton?: boolean;
+  readonly page_url?: string;
   readonly id: string;
 }
 

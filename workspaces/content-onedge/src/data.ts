@@ -119,6 +119,7 @@ export async function fileToPage(
     blocks: data.blocks ?? [],
     id: data.id,
     parent_page: data.parent_page,
+    alert: data.alert,
     slug,
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,

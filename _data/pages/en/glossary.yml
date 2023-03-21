@@ -90,14 +90,3 @@ blocks:
           the Starknet OS Cairo program with the relevant inputs, proves the
           result using the Proving Service or some internal STARK prover, and
           eventually updates the network state on the Starknet Core Contract.
-alert:
-  id: b2e6b4a5-d35b-4216-9c21-cdb7ae34269e
-  variant: warning
-  title: Warning!
-  children: e﻿xample text
-  items:
-    - variant: warning
-      hasCloseButton: false
-      id: 7f95a24b-36e5-4164-af1a-ee5e1c1ec6cc
-      title: Warning
-      children: text

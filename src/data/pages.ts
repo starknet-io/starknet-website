@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
 import { LinkData } from "./settings/main-menu";
@@ -175,6 +176,15 @@ export interface GroupBlock {
 
 export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
 
+export interface Alert {
+  title: string;
+  hasCloseButton: boolean;
+  id: string;
+  variant: 'important' | 'info' | 'warning';
+  children: ReactNode;
+  page_url: string;
+}
+
 export interface Page extends Meta {
   readonly id: string;
   readonly slug: string;
@@ -185,7 +195,7 @@ export interface Page extends Meta {
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly page_last_updated?: string;
-  readonly alert?: string;
+  readonly alert?: Alert;
   readonly blocks: readonly TopLevelBlock[];
 }
 

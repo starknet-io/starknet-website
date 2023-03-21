@@ -444,37 +444,45 @@ const blocks: ListField["types"] = [
     widget: "object",
     fields: [
       {
-        name: "variant",
-        label: "Variant",
-        widget: "select",
-        required: false,
-        options: [
-          "info",
-          "warning",
-          "important"
-        ],
-        default: "info"
-      },
-      {
-        name: "hasCloseButton",
-        label: "Show close icon",
-        widget: "boolean",
-        default: false,
-      },
-      {
-        name: "id",
-        label: "id",
-        widget: "uuid" as "string",
-      },
-      {
-        name: "title",
-        label: "Title",
-        widget: "string",
-      },
-      {
-        name: "children",
-        label: "Description",
-        widget: "markdown",
+        label: "Alert",
+        name: "items",
+        widget: "list",
+        fields: [
+          {
+            name: "variant",
+            label: "Variant",
+            widget: "select",
+            required: false,
+            options: [
+              "info",
+              "warning",
+              "important"
+            ],
+            default: "info"
+          },
+          {
+            name: "hasCloseButton",
+            label: "Show close icon",
+            widget: "boolean",
+            default: false,
+            required: false,
+          },
+          {
+            name: "id",
+            label: "id",
+            widget: "uuid" as "string",
+          },
+          {
+            name: "title",
+            label: "Title",
+            widget: "string",
+          },
+          {
+            name: "children",
+            label: "Description",
+            widget: "markdown",
+          }
+        ]
       }
     ]
   }
@@ -694,37 +702,45 @@ export const config: Config = {
           widget: "object",
           fields: [
             {
-              name: "variant",
-              label: "Variant",
-              widget: "select",
-              required: false,
-              options: [
-                "info",
-                "warning",
-                "important"
-              ],
-              default: "info"
-            },
-            {
-              name: "hasCloseButton",
-              label: "Show close icon",
-              widget: "boolean",
-              default: false,
-            },
-            {
-              name: "id",
-              label: "id",
-              widget: "uuid" as "string",
-            },
-            {
-              name: "title",
-              label: "Title",
-              widget: "string",
-            },
-            {
-              name: "children",
-              label: "Description",
-              widget: "markdown",
+              label: "Alert",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  name: "variant",
+                  label: "Variant",
+                  widget: "select",
+                  required: false,
+                  options: [
+                    "info",
+                    "warning",
+                    "important"
+                  ],
+                  default: "info"
+                },
+                {
+                  name: "hasCloseButton",
+                  label: "Show close icon",
+                  widget: "boolean",
+                  default: false,
+                  required: false,
+                },
+                {
+                  name: "id",
+                  label: "id",
+                  widget: "uuid" as "string",
+                },
+                {
+                  name: "title",
+                  label: "Title",
+                  widget: "string",
+                },
+                {
+                  name: "children",
+                  label: "Description",
+                  widget: "markdown",
+                }
+              ]
             }
           ]
         },
@@ -1514,21 +1530,22 @@ export const config: Config = {
                   label: "Show close icon",
                   widget: "boolean",
                   default: false,
+                  required: false,
                 },
                 {
                   name: "id",
                   label: "id",
-                  widget: "uuid" as "string",
+                  widget: "uuid" as "string"
                 },
                 {
                   name: "title",
                   label: "Title",
-                  widget: "string",
+                  widget: "string"
                 },
                 {
                   name: "children",
                   label: "Description",
-                  widget: "markdown",
+                  widget: "markdown"
                 }
               ]
             }
