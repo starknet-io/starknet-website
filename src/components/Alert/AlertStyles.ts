@@ -4,9 +4,7 @@ export const alertTheme = defineStyleConfig({
   baseStyle: {
     container: {
       padding: "18px 56px",
-      borderWidth: '1px',
-      borderStyle: 'solid',
-      borderColor: 'grey.lineOnDark',
+      borderBottom: "1px solid #313131",
       a: {
         textDecoration: "underline"
       }
