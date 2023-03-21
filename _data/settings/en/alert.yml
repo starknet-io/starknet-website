@@ -1,0 +1,6 @@
+items:
+  - variant: info
+    hasCloseButton: false
+    id: f8d4d507-0a65-4d21-95c7-b0ad0317d091
+    title: Information
+    children: T﻿his is an example information alert
