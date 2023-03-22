@@ -9,7 +9,6 @@ import {
   Box
 } from "src/libs/chakra-ui";
 import { scrollIntoView } from "../../utils/scrollIntoView";
-import { AlertProvider } from './AlertContext';
 
 import {
   HiOutlineMegaphone,
@@ -59,46 +58,44 @@ export const Alert = ({ children, uuid, hasCloseButton = true, variant = "info",
   }
 
   return isVisible ? (
-    <AlertProvider>
-      <ChakraAlert status="info" variant={variant} onClick={handleOnClick} {...rest}>
-        <Box
-          style={{
-            maxWidth: "80rem",
-            width: "100%",
-            display: "flex",
-            position: "relative",
-            margin: "0 auto",
-            padding: "0 32px"
-          }}
-          alignItems={{ base: "baseline", xl: "center" }}
-          flexDirection={{ base: "column", xl: "row" }}
-          paddingRight={{
-            base: '0',
-            xl: '50px'
-          }}
-        >
-          <Icon
-            as={renderIcon()}
-            fontSize="xl"
-            marginRight="19px"
-            position={{ base: "absolute", xl: "relative" }}
-            left={{ base: "-35", xl: "auto" }}
-            top={{ base: "2px", xl: "auto" }}
-          />
-          <AlertTitle>{title}</AlertTitle>
-          <AlertDescription>{children}</AlertDescription>
-          {!!hasCloseButton && <Icon as={IoCloseOutline}
-            width="28px"
-            height="28px"
-            alignSelf='flex-start'
-            position='absolute'
-            right={{ base: "-35px", xl: "15px" }}
-            top={{ base: "2px", xl: "-3px" }}
-            cursor="pointer"
-            onClick={handleClose}
-          />}
-        </Box>
-      </ChakraAlert>
-    </AlertProvider>
+    <ChakraAlert status="info" variant={variant} onClick={handleOnClick} {...rest}>
+      <Box
+        style={{
+          maxWidth: "80rem",
+          width: "100%",
+          display: "flex",
+          position: "relative",
+          margin: "0 auto",
+          padding: "0 32px"
+        }}
+        alignItems={{ base: "baseline", xl: "center" }}
+        flexDirection={{ base: "column", xl: "row" }}
+        paddingRight={{
+          base: '0',
+          xl: '50px'
+        }}
+      >
+        <Icon
+          as={renderIcon()}
+          fontSize="xl"
+          marginRight="19px"
+          position={{ base: "absolute", xl: "relative" }}
+          left={{ base: "-35", xl: "auto" }}
+          top={{ base: "2px", xl: "auto" }}
+        />
+        <AlertTitle>{title}</AlertTitle>
+        <AlertDescription>{children}</AlertDescription>
+        {!!hasCloseButton && <Icon as={IoCloseOutline}
+          width="28px"
+          height="28px"
+          alignSelf='flex-start'
+          position='absolute'
+          right={{ base: "-35px", xl: "15px" }}
+          top={{ base: "2px", xl: "-3px" }}
+          cursor="pointer"
+          onClick={handleClose}
+        />}
+      </Box>
+    </ChakraAlert>
   ) : <></>;
 };
