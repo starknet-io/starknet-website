@@ -22,7 +22,7 @@ export default function ChaptersPlaylist({
         overflow: "scroll",
         maxHeight: height,
         display: "grid",
-        gap: "20px",
+        gap: "16px",
         cursor: "pointer",
       }}
       maxH={{ base: "300px", lg: height }}
@@ -35,7 +35,7 @@ export default function ChaptersPlaylist({
             onClick={() => onChapterSelect(chapter.id)}
             sx={{
               display: "flex",
-              gap: "10px",
+              gap: "16px",
               pointer: "cursor",
             }}
           >
@@ -45,16 +45,18 @@ export default function ChaptersPlaylist({
               height={80}
               alt={chapter.title}
               style={{
-                borderBottom: isActive ? "1px solid#EC796B" : "",
+                // borderBottom: isActive ? "1px solid#EC796B" : "",
+                borderRadius: "10px",
               }}
             />
             <Box>
               <Box
                 as="h2"
+                fontSize="sm"
                 sx={{
                   lineHeight: 1,
-                  marginBottom: 2,
-                  fontWeight: isActive ? "bold" : "",
+                  marginBottom: "8px",
+                  fontWeight: isActive ? 700 : "",
                   color: isActive ? "heading-navy-fg" : "",
                 }}
               >
@@ -62,11 +64,11 @@ export default function ChaptersPlaylist({
               </Box>
               <Box
                 as="p"
+                fontSize="xs"
+                marginBottom="8px"
                 sx={{
                   maxW: "200px",
-                  fontSize: "12px",
                   lineHeight: 1,
-                  marginBottom: 2,
                   color: isActive ? "heading-navy-fg" : "",
                 }}
               >
@@ -74,7 +76,7 @@ export default function ChaptersPlaylist({
               </Box>
               <Box
                 as="p"
-                fontSize="12px"
+                fontSize="xs"
                 lineHeight={1}
                 sx={{
                   color: isActive ? "heading-navy-fg" : "",

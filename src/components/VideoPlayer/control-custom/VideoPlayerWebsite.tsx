@@ -12,6 +12,7 @@ import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import VideoMeta from "../meta/VideoMeta";
 import { Chapter } from "../utils";
+import ChapterAutoPlayModal from "./ChapterAutoPlayModal";
 import ChapterTitle from "./ChapterTitle";
 import BigPlayButton from "./control-bar/BigPlayButton";
 import CustomControl from "./control-bar/CustomControl";
@@ -286,7 +287,7 @@ export function VideoPlayer({
       <Box
         sx={{
           display: "grid",
-          gap: "20px",
+          gap: "23px",
           position: "relative",
         }}
         gridTemplateColumns={{
@@ -302,30 +303,13 @@ export function VideoPlayer({
               videoContainerRef={videoContainerRef}
             />
           </div>
-          <Box
-            sx={{
-              ...videoPositionStyle,
-              zIndex: 9999,
-              background: "rgba(0,0,0, .7)",
-              display: "grid",
-              placeContent: "center",
-              gap: "30px",
-              pointerEvents: isChapterChangeModalOpen ? "auto" : "none",
-              opacity: isChapterChangeModalOpen ? 1 : 0,
-              visibility: isChapterChangeModalOpen ? "visible" : "hidden",
-              transition: "all .5s easy-in-out",
-            }}
-          >
-            <Text textAlign="center" color="white" fontSize="lg">
-              Going to next chapter in {chapterTimeoutCount} seconds
-            </Text>
-            <Flex gap="20px">
-              <Button variant="outline" onClick={replayCurrentChapter}>
-                Replay
-              </Button>
-              <Button onClick={playNextChapter}>Confirm</Button>
-            </Flex>
-          </Box>
+          <ChapterAutoPlayModal
+            isOpen={isChapterChangeModalOpen}
+            chapterTimeoutCount={chapterTimeoutCount}
+            onPlayNextChapter={playNextChapter}
+            onReplayCurrentChapter={replayCurrentChapter}
+            positionStyle={videoPositionStyle}
+          />
           <BigPlayButton
             onClick={onBigPlayBtnClick}
             positionStyle={videoPositionStyle}
