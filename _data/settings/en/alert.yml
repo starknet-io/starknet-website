@@ -7,6 +7,6 @@ items:
   - variant: warning
     hasCloseButton: true
     id: bcc08568-1512-4aeb-be18-65d215b058be
-    title: This is warning
+    title: This is warning!
     children: a﻿lso some text
     page_url: developers
