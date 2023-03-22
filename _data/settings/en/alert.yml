@@ -11,6 +11,10 @@ items:
     body: >
       This is some text with a [link in the middle](www.google.com) and some
       other text on the other side. See what I mean, it's quite long isn't it?
+      This is some text with a [link in the middle](www.google.com) and some
+      other text on the other side. See what I mean, it's quite long isn't it?
+      This is some text with a [link in the middle](www.google.com) and some
+      other text on the other side. See what I mean, it's quite long isn't it?
     page_url: developers
   - variant: important
     hasCloseButton: false
