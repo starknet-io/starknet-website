@@ -5,12 +5,12 @@ items:
     title: "Information:"
     children: >
       This is where you would add some informative copy for the user, links
-      [[look like this](https://ethereum.org/en/)](https://ethereum.org/en/).
+      [look like this](https://ethereum.org/en/).
   - variant: warning
     hasCloseButton: true
     id: bcc08568-1512-4aeb-be18-65d215b058be
     title: "Alert:"
     children: >
       This is where you would add some informative copy for the user, links
-      [[look like this](https://ethereum.org/en/)](https://ethereum.org/en/).
+      [look like this](https://ethereum.org/en/).
     page_url: developers
