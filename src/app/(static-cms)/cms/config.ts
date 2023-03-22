@@ -1446,7 +1446,7 @@ export const config: Config = {
                   widget: "string"
                 },
                 {
-                  name: "children",
+                  name: "body",
                   label: "Description",
                   widget: "markdown"
                 },

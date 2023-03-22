@@ -8,6 +8,11 @@ import {
   useDisclosure,
   Box
 } from "src/libs/chakra-ui";
+import {
+  Link,
+} from "src/libs/chakra-ui";
+import ReactMarkdown from "react-markdown";
+import { MarkdownBlock } from "src/blocks/MarkdownBlock";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 
 import {
@@ -20,7 +25,7 @@ import {
 } from "react-icons/io5";
 
 type props = {
-  children: React.ReactNode;
+  body: string;
   toId?: string;
   variant?: 'important' | 'info' | 'warning';
   title: string;
@@ -29,7 +34,7 @@ type props = {
   icon?: string;
 } & AlertProps;
 
-export const Alert = ({ children, uuid, hasCloseButton = true, variant = "info", title, toId, ...rest }: props) => {
+export const Alert = ({ body, uuid, hasCloseButton = true, variant = "info", title, toId, ...rest }: props) => {
   const handleOnClick = () => {
     if (!toId) {
       return;
@@ -84,7 +89,15 @@ export const Alert = ({ children, uuid, hasCloseButton = true, variant = "info",
           top={{ base: "2px", xl: "auto" }}
         />
         <AlertTitle>{title}</AlertTitle>
-        <AlertDescription>{children}</AlertDescription>
+        <AlertDescription>
+        <ReactMarkdown
+        components={{
+          a: (props) => <Link variant="standard" {...props} />,
+        }}
+      >
+        {body}
+      </ReactMarkdown>
+        </AlertDescription>
         {!!hasCloseButton && <Icon as={IoCloseOutline}
           width="28px"
           height="28px"

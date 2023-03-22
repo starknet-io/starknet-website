@@ -22,7 +22,7 @@ export const Important = () => (
   <ThemeProvider>
     <Stack direction={'column'} spacing='24px'>
       <>
-        <Alert variant="important" title="Alert:">Red alert</Alert>
+        <Alert variant="important" title="Alert:" body="Important alert" />
       </>
     </Stack>
   </ThemeProvider>
@@ -32,7 +32,7 @@ export const Warning = () => (
   <ThemeProvider>
     <Stack direction={'column'} spacing='24px'>
       <>
-        <Alert variant="warning" title="Information:">Orange alert</Alert>
+        <Alert variant="warning" title="Information:" body="Warning alert"/>
       </>
     </Stack>
   </ThemeProvider>
@@ -42,7 +42,7 @@ export const GeneralInfo = () => (
   <ThemeProvider>
     <Stack direction={'column'} spacing='24px'>
       <>
-        <Alert variant="info" title="Information:">This is where you would add some informative copy for the user, links look <a target="_blank" rel="noreferrer" href="https://google.com">like this.</a></Alert>
+        <Alert variant="info" title="Information:" body="This is where you would add some informative copy for the user, links look <a target='_blank' rel='noreferrer' href='https://google.com'>like this.</a>" />
       </>
     </Stack>
   </ThemeProvider>

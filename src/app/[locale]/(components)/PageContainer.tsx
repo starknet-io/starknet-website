@@ -30,9 +30,8 @@ export const PageContainer = ({ children, alerts }: Props) => {
           hasCloseButton={result.hasCloseButton}
           uuid={result.id}
           variant={result.variant}
-        >
-          {result.children}
-        </Alert>
+          body={result.body}
+        />
       ) : (
         alerts?.map((alert, i) => {
           if (!alert.page_url && typeof window !== "undefined") {
@@ -44,9 +43,8 @@ export const PageContainer = ({ children, alerts }: Props) => {
                   hasCloseButton={alert.hasCloseButton}
                   uuid={alert.id}
                   variant={alert.variant}
-                >
-                  {alert.children}
-                </Alert>
+                  body={alert.body}
+                  />
               );
             }
           }

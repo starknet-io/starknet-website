@@ -16,7 +16,14 @@ export const alertTheme = defineStyleConfig({
         background: 'linear-gradient(90deg, #CB3E3E 52.15%, #E7442F 91.67%);',
         color: "white",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        a: {
+          color: "white",
+          "&:hover": {
+            color: "white",
+            textDecoration: "none"
+          }
+        }
       },
       title: {
         color: 'white'
@@ -25,7 +32,14 @@ export const alertTheme = defineStyleConfig({
     warning: {
       container: {
         background: 'linear-gradient(90deg, #FFCD9A 52.15%, #FFC49A 91.59%);',
-        color: "grey.darkText"
+        color: "grey.darkText",
+        a: {
+          color: "grey.darkText",
+          "&:hover": {
+            color: "grey.darkText",
+            textDecoration: "none"
+          }
+        }
       },
       title: {
         color: 'grey.darkText'
@@ -34,7 +48,14 @@ export const alertTheme = defineStyleConfig({
     info: {
       container: {
         background: 'linear-gradient(90deg, #80DCDA 52.15%, #6DDAF5 91.59%);',
-        color: "grey.darkText"
+        color: "grey.darkText",
+        a: {
+          color: "grey.darkText",
+          "&:hover": {
+            color: "grey.darkText",
+            textDecoration: "none"
+          }
+        }
       },
       title: {
         color: 'grey.darkText'

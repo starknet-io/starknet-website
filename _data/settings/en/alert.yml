@@ -3,25 +3,16 @@ items:
     hasCloseButton: true
     id: fea19cf8-81f6-48d7-a6ce-babaedb87a74
     title: "Information:"
-    children: >
-      This is where you would add some informative copy for the user, links
-      [look like this](https://ethereum.org/en/).
-    body: t﻿his is [information link](www.google.com)
+    body: t﻿his is [information link](http://www.google.com)
   - variant: warning
     hasCloseButton: true
     id: bcc08568-1512-4aeb-be18-65d215b058be
     title: "Alert:"
-    children: >
-      This is where you would add some informative copy for the user, links
-      [look like this](https://ethereum.org/en/).
     page_url: developers
     body: t﻿ext
   - variant: important
     hasCloseButton: false
     id: 69e11add-5c72-4cfb-b07e-ed51f3bc1ef5
     title: "Governance announcement:"
-    children: >
-      This is where you would add some informative copy for the user, links
-      [look like this](https://ethereum.org/en/).
     page_url: community
     body: s﻿ome text

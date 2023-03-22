@@ -1371,7 +1371,7 @@ export const config: CmsConfig = {
                   widget: "string",
                 },
                 {
-                  name: "children",
+                  name: "body",
                   label: "Description",
                   widget: "markdown",
                 },
