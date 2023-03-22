@@ -14,6 +14,7 @@ import { avatarTheme } from "@ui/Avatar/Avatar";
 import { linkTheme } from "@ui/Link/Link";
 import { headingTheme } from "../components/Typography/HeadingStyles";
 import { textTheme } from "../components/Typography/TextStyles";
+import { alertTheme } from "../components/Alert/AlertStyles";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -116,7 +117,8 @@ const theme = extendTheme(proTheme, {
         ...headingTheme
       },
       sizes: null},
-    Text: textTheme
+    Text: textTheme,
+    Alert: alertTheme
   },
   fonts: {
     heading: "Inter, sans-serif",

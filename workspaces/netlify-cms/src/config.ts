@@ -424,7 +424,7 @@ const blocks: CmsFieldList["types"] = [
         ],
       },
     ],
-  },
+  }
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
@@ -573,8 +573,8 @@ export const config: CmsConfig = {
           label: "Blocks",
           widget: "list",
           types: topLevelBlocks,
-        },
-      ],
+        }
+      ]
     },
     {
       name: "posts",
@@ -1353,7 +1353,62 @@ export const config: CmsConfig = {
             },
           ],
         },
-      ],
-    },
-  ],
+        {
+          label: "Alert",
+          name: "alert",
+          file: `_data/settings/${locale}/alert.yml`,
+          fields: [
+            {
+              label: "Alert",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  name: "variant",
+                  label: "Variant",
+                  widget: "select",
+                  required: false,
+                  options: [
+                    "info",
+                    "warning",
+                    "important"
+                  ],
+                  default: "info"
+                },
+                {
+                  name: "hasCloseButton",
+                  label: "Show close icon",
+                  widget: "boolean",
+                  default: false,
+                  required: false
+                },
+                {
+                  name: "id",
+                  label: "id",
+                  widget: "uuid" as "string",
+                },
+                {
+                  name: "title",
+                  label: "Title",
+                  widget: "string",
+                },
+                {
+                  name: "body",
+                  label: "Description",
+                  widget: "markdown",
+                },
+                {
+                  name: "page_url",
+                  label: "Page url",
+                  hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
+                  required: false,
+                  widget: "string"
+                },
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 };

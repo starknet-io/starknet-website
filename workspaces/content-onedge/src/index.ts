@@ -50,6 +50,7 @@ const simpleFiles = [
   await getSimpleFiles("bridges"),
   await getSimpleFiles("fiat-on-ramps"),
   await getSimpleFiles("redirects"),
+  await getSimpleFiles("alert"),
 ];
 
 for (const simpleFile of simpleFiles) {
