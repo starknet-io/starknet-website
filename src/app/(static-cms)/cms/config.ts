@@ -1449,7 +1449,14 @@ export const config: Config = {
                   name: "children",
                   label: "Description",
                   widget: "markdown"
-                }
+                },
+                {
+                  name: "page_url",
+                  label: "Page url",
+                  hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
+                  required: false,
+                  widget: "string"
+                },
               ]
             }
           ]
