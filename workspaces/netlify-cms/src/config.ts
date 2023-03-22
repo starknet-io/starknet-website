@@ -1121,6 +1121,28 @@ export const config: CmsConfig = {
           ],
         },
         {
+          label: "Redirects",
+          name: "redirects",
+          file: `_data/settings/${locale}/redirects.yml`,
+          fields: [
+            {
+              label: "Redirects",
+              name: "items",
+              widget: "list",
+              fields: [
+                {
+                  name: "source",
+                  widget: "string",
+                },
+                {
+                  name: "destination",
+                  widget: "string",
+                },
+              ],
+            },
+          ],
+        },
+        {
           label: "Dapps",
           name: "dapps",
           file: `_data/settings/${locale}/dapps.yml`,

@@ -1,0 +1,101 @@
+items:
+  - source: /
+    destination: /en
+  - source: /discord
+    destination: "https://discord.gg/qypnmzkhbc"
+  - source: /sequencer-api
+    destination: /en/developers
+  - source: /cairopal
+    destination: /en/developers
+  - source: /cairo-fixed-point-math
+    destination: /en/developers
+  - source: /app-faqs
+    destination: /en/learn/frequently-asked-questions
+  - source: /faq
+    destination: /en/learn/frequently-asked-questions
+  - source: /updates
+    destination: /en
+  - source: /hello-starknet
+    destination: "https://docs.starknet.io"
+  - source: /docs
+    destination: "https://docs.starknet.io"
+  - source: /privacy-policy
+    destination: /en/privacy-policy
+  - source: /terms
+    destination: /en/terms
+  - source: /starknet-terms-of-use
+    destination: /en/terms
+  - source: /glossary
+    destination: /en/learn/glossary
+  - source: "/community/community-jobs/:path*"
+    destination: /en/jobs
+  - source: "/community/community-links/:path*"
+    destination: /en/community
+  - source: /front-page-with-stars-demo
+    destination: /en
+  - source: /community/community-links
+    destination: /en/community
+  - source: /starkgate
+    destination: "https://starkgate.starknet.io"
+  - source: /community/events/starknet-hackathon-amsterdam
+    destination: /en/events
+  - source: /community/community-jobs
+    destination: /en/jobs
+  - source: /community
+    destination: /en/community
+  - source: /building-on-starknet/audit-service-providers
+    destination: "https://docs.starknet.io"
+  - source: /network
+    destination: "https://docs.starknet.io"
+  - source: /docs/sharp.html
+    destination: "https://www.cairo-lang.org/docs/sharp.html"
+  - source: /media-kit
+    destination: /en
+  - source: /building-on-starknet/tutorials
+    destination: /en/tutorials
+  - source: /building-on-starknet/developer-tools
+    destination: /en/developers/tools-and-resources
+  - source: /recorded-talks
+    destination: /en/posts/stark-math
+  - source: /building-on-starknet/versions-release-notes
+    destination: "https://docs.starknet.io/documentation/starknet_versions/version_notes"
+  - source: /governance/starknet-governance-posts
+    destination: /en/posts/governance
+  - source: /what-is-starknet/stark-struck-podcast
+    destination: /en/posts/stark-struck
+  - source: /community/events
+    destination: /en/events
+  - source: /building-on-starknet
+    destination: /en/developers
+  - source: /what-is-starknet
+    destination: /en/tutorials
+  - source: /building-on-starknet/workshops
+    destination: /en/tutorials
+  - source: /what-is-starknet/blog-posts
+    destination: /en/posts
+  - source: /latest-updates
+    destination: "https://docs.starknet.io"
+  - source: /community/events/community-calls
+    destination: /en/posts/community-calls
+  - source: "/faq/:path*"
+    destination: /en/learn/frequently-asked-questions
+  - source: "/blog-posts/:path*"
+    destination: /en/posts
+  - source: "/podcasts/:path*"
+    destination: /en/posts
+  - source: "/community-links/:path*"
+    destination: /en
+  - source: "/bulletin-board/:path*"
+    destination: /en/developers/tools-and-resources
+  - source: "/latest-posts/:path*"
+    destination: /en/posts
+  - source: /category/uncategorized
+    destination: /en
+  - source: /tag/12
+    destination: /en
+  - source: /author/marketing
+    destination: /en
+  - source: /delegate
+    destination: "https://starknet.karmahq.xyz"
+  - source: /governance
+    destination: "https://starknet.karmahq.xyz"
