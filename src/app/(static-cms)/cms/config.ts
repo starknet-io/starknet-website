@@ -437,54 +437,6 @@ const blocks: ListField["types"] = [
         ],
       },
     ],
-  },
-  {
-    name: "alert",
-    label: "Alert",
-    widget: "object",
-    fields: [
-      {
-        label: "Alert",
-        name: "items",
-        widget: "list",
-        fields: [
-          {
-            name: "variant",
-            label: "Variant",
-            widget: "select",
-            required: false,
-            options: [
-              "info",
-              "warning",
-              "important"
-            ],
-            default: "info"
-          },
-          {
-            name: "hasCloseButton",
-            label: "Show close icon",
-            widget: "boolean",
-            default: false,
-            required: false,
-          },
-          {
-            name: "id",
-            label: "id",
-            widget: "uuid" as "string",
-          },
-          {
-            name: "title",
-            label: "Title",
-            widget: "string",
-          },
-          {
-            name: "children",
-            label: "Description",
-            widget: "markdown",
-          }
-        ]
-      }
-    ]
   }
 ];
 
@@ -642,12 +594,6 @@ export const config: Config = {
           default: true,
         },
         {
-          name: "alert",
-          label: "Show alert",
-          widget: "boolean",
-          default: false,
-        },
-        {
           name: "blocks",
           label: "Blocks",
           widget: "list",
@@ -700,54 +646,6 @@ export const config: Config = {
           name: "published_date",
           label: "Published Date",
           widget: "datetime",
-        },
-        {
-          name: "alert",
-          label: "Alert",
-          widget: "object",
-          fields: [
-            {
-              label: "Alert",
-              name: "items",
-              widget: "list",
-              fields: [
-                {
-                  name: "variant",
-                  label: "Variant",
-                  widget: "select",
-                  required: false,
-                  options: [
-                    "info",
-                    "warning",
-                    "important"
-                  ],
-                  default: "info"
-                },
-                {
-                  name: "hasCloseButton",
-                  label: "Show close icon",
-                  widget: "boolean",
-                  default: false,
-                  required: false,
-                },
-                {
-                  name: "id",
-                  label: "id",
-                  widget: "uuid" as "string",
-                },
-                {
-                  name: "title",
-                  label: "Title",
-                  widget: "string",
-                },
-                {
-                  name: "children",
-                  label: "Description",
-                  widget: "markdown",
-                }
-              ]
-            }
-          ]
         },
         {
           name: "time_to_consume",

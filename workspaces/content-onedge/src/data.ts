@@ -82,7 +82,6 @@ export interface Page extends Meta {
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
   readonly pageLastUpdated: boolean;
-  readonly alert: boolean;
   blocks?: any;
 
   link?: string;
@@ -119,7 +118,6 @@ export async function fileToPage(
     blocks: data.blocks ?? [],
     id: data.id,
     parent_page: data.parent_page,
-    alert: data.alert,
     slug,
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
@@ -377,7 +375,6 @@ export function handleLink(
         template: data.template,
         breadcrumbs: data.breadcrumbs,
         pageLastUpdated: data.pageLastUpdated,
-        alert: data.alert,
         link: data.link,
       };
     }

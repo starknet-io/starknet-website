@@ -4,7 +4,6 @@ import {
   CmsFieldList,
   CmsFieldMeta,
 } from "netlify-cms-core";
-import { icons } from 'react-icons/lib/cjs';
 
 const locale = "en";
 
@@ -425,42 +424,6 @@ const blocks: CmsFieldList["types"] = [
         ],
       },
     ],
-  },
-  {
-    name: "alert",
-    label: "Alert",
-    widget: "object",
-    fields: [
-      {
-        label: "Alert",
-        name: "items",
-        widget: "list",
-        fields: [
-          {
-            name: "variant",
-            label: "Variant",
-            widget: "select",
-            required: false,
-            options: [
-              "info",
-              "warning",
-              "important"
-            ],
-            default: "info"
-          },
-          {
-            name: "title",
-            label: "Title",
-            widget: "string",
-          },
-          {
-            name: "children",
-            label: "Description",
-            widget: "markdown",
-          }
-        ]
-      }
-    ]
   }
 ];
 
@@ -657,61 +620,6 @@ export const config: CmsConfig = {
           name: "published_date",
           label: "Published Date",
           widget: "datetime",
-        },
-        {
-          name: "alert",
-          label: "Alert",
-          widget: "object",
-          fields: [
-            {
-              label: "Alert",
-              name: "items",
-              widget: "list",
-              fields: [
-                {
-                  name: "variant",
-                  label: "Variant",
-                  widget: "select",
-                  required: false,
-                  options: [
-                    "info",
-                    "warning",
-                    "important"
-                  ],
-                  default: "info"
-                },
-                {
-                  name: "hasCloseButton",
-                  label: "Show close icon",
-                  widget: "boolean",
-                  default: false,
-                  required: false
-                },
-                {
-                  name: "id",
-                  label: "id",
-                  widget: "uuid" as "string",
-                },
-                {
-                  name: "title",
-                  label: "Title",
-                  widget: "string",
-                },
-                {
-                  name: "children",
-                  label: "Description",
-                  widget: "markdown",
-                },
-                {
-                  name: "page_url",
-                  label: "Page url",
-                  hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
-                  required: false,
-                  widget: "string"
-                },
-              ]
-            }
-          ]
         },
         {
           name: "time_to_consume",

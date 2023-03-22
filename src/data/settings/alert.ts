@@ -4,7 +4,6 @@ import { getFirst, getJSON } from "../utils";
 export interface Alert {
   readonly title: string;
   readonly children: React.ReactNode;
-  readonly toId?: string;
   readonly variant?: 'important' | 'info' | 'warning';
   readonly hasCloseButton?: boolean;
   readonly page_url?: string;

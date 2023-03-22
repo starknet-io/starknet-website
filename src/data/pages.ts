@@ -176,15 +176,6 @@ export interface GroupBlock {
 
 export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
 
-export interface Alert {
-  title: string;
-  hasCloseButton: boolean;
-  id: string;
-  variant: 'important' | 'info' | 'warning';
-  children: ReactNode;
-  page_url: string;
-}
-
 export interface Page extends Meta {
   readonly id: string;
   readonly slug: string;
@@ -195,7 +186,6 @@ export interface Page extends Meta {
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly page_last_updated?: string;
-  readonly alert?: Alert;
   readonly blocks: readonly TopLevelBlock[];
 }
 
