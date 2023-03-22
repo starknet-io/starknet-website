@@ -3,7 +3,9 @@ items:
     hasCloseButton: true
     id: fea19cf8-81f6-48d7-a6ce-babaedb87a74
     title: Some title
-    children: s﻿ome description
+    children: >
+      s﻿ome description and a
+      [[link](https://ethereum.org/en/)](https://ethereum.org/en/)
   - variant: warning
     hasCloseButton: true
     id: bcc08568-1512-4aeb-be18-65d215b058be
