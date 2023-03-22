@@ -2,13 +2,15 @@ items:
   - variant: info
     hasCloseButton: true
     id: fea19cf8-81f6-48d7-a6ce-babaedb87a74
-    title: Some title
+    title: "Information:"
     children: >
-      s﻿ome description and a
-      [[link](https://ethereum.org/en/)](https://ethereum.org/en/)
+      This is where you would add some informative copy for the user, links
+      [[look like this](https://ethereum.org/en/)](https://ethereum.org/en/).
   - variant: warning
     hasCloseButton: true
     id: bcc08568-1512-4aeb-be18-65d215b058be
-    title: This is warning!
-    children: a﻿lso some text
+    title: "Alert:"
+    children: >
+      This is where you would add some informative copy for the user, links
+      [[look like this](https://ethereum.org/en/)](https://ethereum.org/en/).
     page_url: developers
