@@ -15,18 +15,13 @@ export default function ChapterTitle({
     <Box
       sx={{
         position: "absolute",
-        top: "0px",
-        left: "0px",
-        right: "0px",
-        paddingX: "50px",
-        paddingTop: "20px",
-        paddingBottom: "10%",
-        fontWeight: 700,
-        fontSize: "28px",
-        lineHeight: "34px",
-        color: "#FFFFFF",
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent)",
+        top: "16px",
+        left: "16px",
+        padding: "8px 12px",
+        fontWeight: 500,
+        background: "rgba(0, 0, 0, 0.85)",
+        borderRadius: "4px",
+        color: "#D6D6D6",
         pointerEvents: "none",
         zIndex: 1,
         opacity: isVisible ? 1 : 0,
@@ -35,10 +30,7 @@ export default function ChapterTitle({
       }}
     >
       <Box as="p" pointerEvents="auto">
-        {title}
-      </Box>
-      <Box as="p" pointerEvents="auto">
-        Episode {episode}
+        {episode}. {title}
       </Box>
     </Box>
   );
