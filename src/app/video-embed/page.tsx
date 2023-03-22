@@ -1,5 +1,5 @@
+import { VideoPlayerEmbed } from "@ui/VideoPlayer/control-custom/VideoPlayerEmbed";
 import { playlist } from "@ui/VideoPlayer/utils";
-import { VideoPlayerEmbed } from "@ui/VideoPlayer/control-builtin/VideoPlayerEmbed";
 
 export const metadata = {
   title: "Video Tutorials",
