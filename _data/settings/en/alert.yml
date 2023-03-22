@@ -1,6 +1,6 @@
 items:
   - variant: info
-    hasCloseButton: false
+    hasCloseButton: true
     id: fea19cf8-81f6-48d7-a6ce-babaedb87a74
     title: Some title
     children: s﻿ome description
