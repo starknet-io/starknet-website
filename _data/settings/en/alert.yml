@@ -1,1 +1,8 @@
-items: []
+items:
+  - variant: info
+    hasCloseButton: false
+    title: test
+    page_url: learn
+    body: |
+      test1
+    id: 8b9fcbcd-a66f-4aa9-bd83-fdedc6f276c7
