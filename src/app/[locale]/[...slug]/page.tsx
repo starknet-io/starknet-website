@@ -77,7 +77,6 @@ Props): JSX.Element {
   try {
     const data = await getPageBySlug(slug.join("/"), locale);
     const date = data?.gitlog?.date;
-
     return (
       <Box>
         <PageLayout
