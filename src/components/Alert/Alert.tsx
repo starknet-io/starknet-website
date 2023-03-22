@@ -8,6 +8,7 @@ import {
   useDisclosure,
   Box
 } from "src/libs/chakra-ui";
+import { Text } from "@ui/Typography/Text";
 import {
   Link,
 } from "src/libs/chakra-ui";
@@ -66,49 +67,71 @@ export const Alert = ({ body, uuid, hasCloseButton = true, variant = "info", tit
     <ChakraAlert status="info" variant={variant} onClick={handleOnClick} {...rest}>
       <Box
         style={{
-          maxWidth: "80rem",
           width: "100%",
           display: "flex",
           position: "relative",
           margin: "0 auto",
-          padding: "0 32px"
+          alignItems: "center",
+          flexDirection: "row"
         }}
-        alignItems={{ base: "baseline", xl: "center" }}
-        flexDirection={{ base: "column", xl: "row" }}
-        paddingRight={{
-          base: '0',
-          xl: '50px'
-        }}
+        maxW={{ md: "7xl" }}
+        px={{ base: "16px", md: "32px" }}
+        alignItems={{ base: "baseline", md: "center" }}
+        flexDirection={{ base: "column", md: "row" }}
       >
+        <Box
+          style={{
+            width: "100%",
+            display: "flex",
+            position: "relative",
+            margin: "0 auto",
+            padding: "0",
+            flexDirection: "row"
+          }}
+          alignItems={{ base: "flex-start", lg: "center" }}
+        >
         <Icon
           as={renderIcon()}
           fontSize="xl"
           marginRight="19px"
-          position={{ base: "absolute", xl: "relative" }}
-          left={{ base: "-35", xl: "auto" }}
-          top={{ base: "2px", xl: "auto" }}
+          width="24px"
+          height="24px"
         />
-        <AlertTitle>{title}</AlertTitle>
-        <AlertDescription>
-        <ReactMarkdown
-        components={{
-          a: (props) => <Link variant="standard" {...props} />,
-        }}
-      >
-        {body}
-      </ReactMarkdown>
-        </AlertDescription>
-        {!!hasCloseButton && <Icon as={IoCloseOutline}
-          width="28px"
-          height="28px"
-          alignSelf='flex-start'
-          position='absolute'
-          right={{ base: "-35px", xl: "15px" }}
-          top={{ base: "2px", xl: "-3px" }}
-          cursor="pointer"
-          onClick={handleClose}
-        />}
+        <Box
+          style={{
+            width: "100%",
+            display: "flex",
+            position: "relative",
+            margin: "0 auto",
+            padding: "0"
+          }}
+          alignItems={{ base: "baseline", lg: "center" }}
+          flexDirection={{ base: "column", lg: "row" }}  
+        >
+          <AlertTitle>{title}</AlertTitle>
+          <AlertDescription>
+          <Text variant="cardBody"><ReactMarkdown
+            components={{
+              a: (props) => <Link variant="standard" {...props} />,
+            }}
+          >
+            {body}
+          </ReactMarkdown></Text>
+          </AlertDescription>
+        </Box>
       </Box>
+      {!!hasCloseButton && <Icon as={IoCloseOutline}
+        width="28px"
+        height="28px"
+        alignSelf='flex-start'
+        // position='absolute'
+        // right={{ base: "-35px", xl: "32px" }}
+        top={{ base: "2px", xl: "-3px" }}
+        cursor="pointer"
+        onClick={handleClose}
+      />}
+      </Box>
+
     </ChakraAlert>
   ) : <></>;
 };

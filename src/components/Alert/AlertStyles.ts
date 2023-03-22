@@ -3,8 +3,9 @@ import { defineStyleConfig } from "src/libs/chakra-ui";
 export const alertTheme = defineStyleConfig({
   baseStyle: {
     container: {
-      padding: "18px 56px",
+      padding: "18px 0",
       borderBottom: "1px solid #313131",
+      justifyContent: 'space-between',
       a: {
         textDecoration: "underline"
       }
