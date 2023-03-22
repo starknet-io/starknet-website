@@ -14,8 +14,11 @@ items:
       This is where you would add some informative copy for the user, links
       [look like this](https://ethereum.org/en/).
     page_url: developers
-  - variant: info
+  - variant: important
     hasCloseButton: false
     id: 69e11add-5c72-4cfb-b07e-ed51f3bc1ef5
-    title: test title
-    children: test text
+    title: "Governance announcement:"
+    children: >
+      This is where you would add some informative copy for the user, links
+      [look like this](https://ethereum.org/en/).
+    page_url: community
