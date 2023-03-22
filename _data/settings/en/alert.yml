@@ -1,1 +1,7 @@
-items: []
+items:
+  - variant: info
+    hasCloseButton: false
+    id: 523d465d-25df-4e3b-839a-074738ed3195
+    body: Starknet Alpha v0.11.0 is up for a [community governance
+      vote](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)!
+    title: "Announcement:"
