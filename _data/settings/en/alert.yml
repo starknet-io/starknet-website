@@ -9,7 +9,8 @@ items:
     id: bcc08568-1512-4aeb-be18-65d215b058be
     title: "Alert:"
     body: >
-      This is some text with a [[This is a link](www.google.com)](www.google.com)
+      This is some text with a [link in the middle](www.google.com) and some
+      other text on the other side. See what I mean, it's quite long isn't it?
     page_url: developers
   - variant: important
     hasCloseButton: false
