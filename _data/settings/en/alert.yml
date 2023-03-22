@@ -3,16 +3,17 @@ items:
     hasCloseButton: true
     id: fea19cf8-81f6-48d7-a6ce-babaedb87a74
     title: "Information:"
-    body: t﻿his is [information link](http://www.google.com)
+    body: this is [information link](http://www.google.com)
   - variant: warning
     hasCloseButton: true
     id: bcc08568-1512-4aeb-be18-65d215b058be
     title: "Alert:"
+    body: >
+      This is some text with a [[This is a link](www.google.com)](www.google.com)
     page_url: developers
-    body: t﻿ext
   - variant: important
     hasCloseButton: false
     id: 69e11add-5c72-4cfb-b07e-ed51f3bc1ef5
     title: "Governance announcement:"
     page_url: community
-    body: s﻿ome text
+    body: some text
