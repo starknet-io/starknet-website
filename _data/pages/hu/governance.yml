@@ -43,7 +43,7 @@ blocks:
     blocks:
       - 
         is_external: true
-        label: Karma
+        label: Starknet delegate discovery page
         href: https://delegate.starknet.io/
         sub_label: Helping token holders choose delegates
   - 
