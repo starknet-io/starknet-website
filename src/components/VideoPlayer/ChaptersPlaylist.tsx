@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { Chapter } from "./utils";
 
 type ChaptersPlaylistProps = {
@@ -16,6 +16,17 @@ export default function ChaptersPlaylist({
   currentChapter,
   onChapterSelect,
 }: ChaptersPlaylistProps) {
+  useEffect(() => {
+    const chapterElement = document.getElementById(currentChapter);
+    if (chapterElement) {
+      chapterElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    }
+  }, [currentChapter]);
+
   return (
     <Box
       sx={{
@@ -32,6 +43,7 @@ export default function ChaptersPlaylist({
         return (
           <Box
             key={chapter.id}
+            id={chapter.id}
             onClick={() => onChapterSelect(chapter.id)}
             sx={{
               display: "flex",

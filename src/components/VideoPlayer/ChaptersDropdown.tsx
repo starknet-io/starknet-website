@@ -1,6 +1,6 @@
 import { Box, Button } from "@chakra-ui/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { convertSecondsToMMSS } from "./control-custom/control-bar/utils";
 import { Chapter } from "./utils";
 
@@ -21,6 +21,17 @@ export default function ChaptersDropdown({
   onChapterSelect,
 }: ChaptersDropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    const chapterElement = document.getElementById(currentChapter);
+    if (chapterElement) {
+      chapterElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    }
+  }, [currentChapter]);
 
   const toggleExpanded = () => setIsExpanded((b) => !b);
   return (
@@ -86,6 +97,7 @@ export default function ChaptersDropdown({
           visibility: isExpanded ? "visible" : "hidden",
           transition: "opacity 0.5s ease-in-out, visibility 0.5s ease-in-out",
         }}
+        justifyContent={{ base: "flex-start", lg: "center" }}
         pointerEvents={isExpanded ? "auto" : "none"}
       >
         {chapters?.map((chapter) => {
@@ -93,6 +105,7 @@ export default function ChaptersDropdown({
           return (
             <Box
               key={chapter.id}
+              id={chapter.id}
               flexShrink={0}
               maxW="142px"
               role="button"
