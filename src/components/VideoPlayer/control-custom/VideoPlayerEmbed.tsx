@@ -13,7 +13,7 @@ import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import VideoMeta from "../meta/VideoMeta";
 import { Chapter } from "../utils";
 import ChapterAutoPlayModal from "./ChapterAutoPlayModal";
-import ChaptersDropdown from "./ChaptersDropdown";
+import ChaptersDropdown from "../ChaptersDropdown";
 import ChapterTitle from "./ChapterTitle";
 import BigPlayButton from "./control-bar/BigPlayButton";
 import CustomControl from "./control-bar/CustomControl";
@@ -306,6 +306,9 @@ export function VideoPlayerEmbed({
             title={chapter?.title}
             episode={chapterIndex + 1}
             isVisible={isControlActive}
+            chapters={chapters}
+            currentChapter={currentChapter}
+            onChapterSelect={onChapterSelect}
           />
         )}
         {chapter && (
