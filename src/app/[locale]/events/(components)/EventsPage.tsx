@@ -194,6 +194,10 @@ function CustomHits() {
     <>
       <Flex gap={4} direction="column" flex={1}>
         {hits.map((hit) => {
+          let startDate = new Date(hit?.start_date);
+          let endDate = new Date(hit?.end_date ?? '');
+          let hasSameMonth = startDate.getMonth() === endDate.getMonth();
+          let hasSameYear = startDate.getFullYear() === endDate.getFullYear();
           return (
             <ListCard
               variant="event"
@@ -201,15 +205,16 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
-                  ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
+                  ? `${moment(hit?.start_date).format(hasSameMonth ? 'DD' : hasSameYear ? "DD MMM, YYYY" : "MMM DD")} - ${moment(
                       hit?.end_date,
-                    ).format("ddd MMM DD, YYYY")}`
-                  : moment(hit?.start_date).format("ddd MMM DD, YYYY")
+                    ).format("MMM DD, YYYY")}`
+                  : moment(hit?.start_date).format("MMM DD, YYYY")
               }
               image={hit.image}
               title={hit.name}
               description={hit.description}
               type={hit.tags}
+              location={hit.location}
             />
           );
         })}
