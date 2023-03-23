@@ -2,7 +2,11 @@ id: 8fbe17e4-99ae-4b8a-ad15-a39adbaf32cb
 post_type: article
 title: "Starknet Alpha v0.11.0: The Transition to Cairo 1.0 Begins"
 published_date: 2023-03-21T17:00:11.141Z
+time_to_consume: 5 min read
 image: /assets/new-land.png
+category: engineering
+topic:
+  - cairo
 short_desc: Live on Testnet, soon on Mainnet!
 blocks:
   - type: markdown
