@@ -12,7 +12,6 @@ import {
   getSimpleData,
   getSimpleFiles,
   handleLink,
-  ItemsFile,
   updateBlocks,
 } from "./data";
 
@@ -50,6 +49,8 @@ const simpleFiles = [
   await getSimpleFiles("block-explorers"),
   await getSimpleFiles("bridges"),
   await getSimpleFiles("fiat-on-ramps"),
+  await getSimpleFiles("redirects"),
+  await getSimpleFiles("alert"),
 ];
 
 for (const simpleFile of simpleFiles) {
