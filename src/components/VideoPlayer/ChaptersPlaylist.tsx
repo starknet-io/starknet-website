@@ -1,6 +1,7 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import { useWindowSize } from "react-use";
 import { Chapter } from "./utils";
 
 type ChaptersPlaylistProps = {
@@ -16,27 +17,30 @@ export default function ChaptersPlaylist({
   currentChapter,
   onChapterSelect,
 }: ChaptersPlaylistProps) {
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+
   useEffect(() => {
     const chapterElement = document.getElementById(currentChapter);
     if (chapterElement) {
       chapterElement.scrollIntoView({
         behavior: "smooth",
-        block: "center",
-        inline: "center",
+        block: isMobile ? "nearest" : "center",
+        inline: isMobile ? "center" : "nearest",
       });
     }
-  }, [currentChapter]);
+  }, [currentChapter, isMobile]);
 
   return (
     <Box
       sx={{
         overflow: "scroll",
         maxHeight: height,
-        display: "grid",
         gap: "16px",
         cursor: "pointer",
       }}
-      maxH={{ base: "300px", lg: height }}
+      display={{ base: "flex", lg: "grid" }}
+      maxH={{ base: "auto", lg: height }}
+      flexWrap="nowrap"
     >
       {chapters.map((chapter) => {
         const isActive = chapter.id === currentChapter;
@@ -50,17 +54,23 @@ export default function ChaptersPlaylist({
               gap: "16px",
               pointer: "cursor",
             }}
+            minW={{ base: "151px", lg: "auto" }}
+            flexDir={{ base: "column", lg: "row" }}
+            flexWrap="nowrap"
+            padding={{ base: "0px 0px 2rem", lg: "0px 1rem 0px" }}
           >
-            <Image
-              src={chapter.thumbnail}
-              width={142}
-              height={80}
-              alt={chapter.title}
-              style={{
-                // borderBottom: isActive ? "1px solid#EC796B" : "",
-                borderRadius: "10px",
-              }}
-            />
+            <Box maxW={{ base: "151px", lg: "99px", xl: "151px" }}>
+              <Image
+                src={chapter.thumbnail}
+                width={151}
+                height={85}
+                alt={chapter.title}
+                style={{
+                  // borderBottom: isActive ? "1px solid#EC796B" : "",
+                  borderRadius: "10px",
+                }}
+              />
+            </Box>
             <Box>
               <Box
                 as="h2"
