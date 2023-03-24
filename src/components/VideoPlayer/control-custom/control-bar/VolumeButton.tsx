@@ -36,26 +36,45 @@ export const VolumeButton = ({
     if (isMuted)
       return (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          fill="white"
-          height={20}
-          width={20}
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM17.78 9.22a.75.75 0 10-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 001.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L20.56 12l1.72-1.72a.75.75 0 00-1.06-1.06l-1.72 1.72-1.72-1.72z" />
+          <g clip-path="url(#clip0_130_216079)">
+            <path
+              d="M16.5 12C16.5 10.23 15.48 8.71 14 7.97V10.18L16.45 12.63C16.48 12.43 16.5 12.22 16.5 12ZM19 12C19 12.94 18.8 13.82 18.46 14.64L19.97 16.15C20.63 14.91 21 13.5 21 12C21 7.72 18.01 4.14 14 3.23V5.29C16.89 6.15 19 8.83 19 12ZM4.27 3L3 4.27L7.73 9H3V15H7L12 20V13.27L16.25 17.52C15.58 18.04 14.83 18.45 14 18.7V20.76C15.38 20.45 16.63 19.81 17.69 18.95L19.73 21L21 19.73L12 10.73L4.27 3ZM12 4L9.91 6.09L12 8.18V4Z"
+              fill="currentColor"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_130_216079">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
         </svg>
       );
 
     return (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
-        fill="white"
-        height={20}
-        width={20}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM18.584 5.106a.75.75 0 011.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 11-1.06-1.06 8.25 8.25 0 000-11.668.75.75 0 010-1.06z" />
-        <path d="M15.932 7.757a.75.75 0 011.061 0 6 6 0 010 8.486.75.75 0 01-1.06-1.061 4.5 4.5 0 000-6.364.75.75 0 010-1.06z" />
+        <g clip-path="url(#clip0_130_216083)">
+          <path
+            d="M3 8.99998V15H7L12 20V3.99998L7 8.99998H3ZM16.5 12C16.5 10.23 15.48 8.70998 14 7.96998V16.02C15.48 15.29 16.5 13.77 16.5 12ZM14 3.22998V5.28998C16.89 6.14998 19 8.82998 19 12C19 15.17 16.89 17.85 14 18.71V20.77C18.01 19.86 21 16.28 21 12C21 7.71998 18.01 4.13998 14 3.22998Z"
+            fill="currentColor"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_130_216083">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
       </svg>
     );
   };
@@ -72,7 +91,7 @@ export const VolumeButton = ({
         sx={{
           w: isScrubbing ? "80px" : "0",
           opacity: isScrubbing ? 1 : 0,
-          pl: "12px",
+          pl: "4px",
           // pr: "24px",
           display: "flex",
           transition: "all 0.5s",
@@ -93,10 +112,24 @@ export const VolumeButton = ({
           onChangeStart={onScrubStart}
           onChange={onVolumeChange}
         >
-          <SliderTrack bg="#B0B0B0">
-            <SliderFilledTrack bg="white" />
+          <SliderTrack bg="#7E7E7E">
+            <SliderFilledTrack
+              bg="#cccccc"
+              sx={{
+                _hover: {
+                  bg: "white",
+                },
+              }}
+            />
           </SliderTrack>
-          <SliderThumb bg="white" />
+          <SliderThumb
+            bg="#cccccc"
+            sx={{
+              _hover: {
+                bg: "white",
+              },
+            }}
+          />
         </Slider>
       </Box>
     </Box>

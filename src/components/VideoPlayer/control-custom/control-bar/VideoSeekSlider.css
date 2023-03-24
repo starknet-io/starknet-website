@@ -24,3 +24,15 @@
   font-family: inherit;
   font-weight: 500;
 }
+
+/* .scrubber.horizontal .bar {
+  background-color: #160f2e66;
+} */
+.scrubber.horizontal .bar__buffer {
+  background-color: #160f2e66;
+}
+
+.scrubber.horizontal .bar__progress,
+.scrubber.horizontal .bar__thumb {
+  background-color: #ec796b;
+}
