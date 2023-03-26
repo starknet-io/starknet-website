@@ -1,0 +1,16 @@
+type: conference
+name: Prague Blockchain Week
+description: A decentralized gathering of all people interested in
+  cryptocurrencies and related topics. It consists of many independent events
+  across Jun 2 - 11. These events will focus on a variety of different
+  cryptocurrency ecosystems and topics such as hard money, payments, DeFi, Web3,
+  DAOs, CryptoEconomics, NFTs, DeSci, mining, and many more.
+url: https://prgblockweek.com/
+start_date: 2023-06-02T13:14:32.305Z
+end_date: 2023-06-11T13:14:32.310Z
+image: /assets/prague-blockchain-week-2023.jpeg
+location: europe
+tags:
+  - crypto
+  - blockchain
+  - starknet
