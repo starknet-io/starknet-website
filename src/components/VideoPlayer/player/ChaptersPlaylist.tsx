@@ -1,8 +1,7 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import { useWindowSize } from "react-use";
-import { Chapter } from "./utils";
+import { Chapter } from "../constants";
 
 type ChaptersPlaylistProps = {
   height: number;

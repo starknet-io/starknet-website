@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from "react";
 import Player from "video.js/dist/types/player";
-import { Chapter } from "../utils";
+import { Chapter } from "../constants";
 
 export function useChapters({
   initialActiveChapter,

@@ -1,6 +1,5 @@
 import {
   Box,
-  IconButton,
   Slider,
   SliderFilledTrack,
   SliderThumb,

@@ -12,7 +12,7 @@ import { ShareButton } from "./ShareButton";
 import { VolumeButton } from "./VolumeButton";
 import { SeekStatuses } from "../hooks/useSeek";
 import { convertSecondsToMMSS } from "./utils";
-import { Chapter } from "@ui/VideoPlayer/utils";
+import { Chapter } from "@ui/VideoPlayer/constants";
 
 type CustomControlProps = {
   playingStatus: SeekStatuses;

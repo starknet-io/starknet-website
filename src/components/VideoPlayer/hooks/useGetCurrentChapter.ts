@@ -1,5 +1,5 @@
-import React, { useMemo } from "react";
-import { Chapter } from "../utils";
+import { useMemo } from "react";
+import { Chapter } from "../constants";
 
 type UseGetCurrentChapterProps = {
   chapters: Chapter[];

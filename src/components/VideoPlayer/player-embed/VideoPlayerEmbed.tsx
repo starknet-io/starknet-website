@@ -1,24 +1,22 @@
 "use client";
 
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
 import React, { CSSProperties, useEffect, useRef, useState } from "react";
 import { useMeasure, useInterval } from "react-use";
 import Player from "video.js/dist/types/player";
-import ChaptersPlaylist from "../ChaptersPlaylist";
 import { useChapters } from "../hooks/useChapters";
 import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import VideoMeta from "../meta/VideoMeta";
-import { Chapter } from "../utils";
-import ChapterAutoPlayModal from "./ChapterAutoPlayModal";
-import ChapterTitle from "./ChapterTitle";
-import BigPlayButton from "./control-bar/BigPlayButton";
-import CustomControl from "./control-bar/CustomControl";
-import usePreventDefaultHotkeys from "./hooks/usePreventDefaultHotkeys";
-import { useSeek } from "./hooks/useSeek";
-import { useVolume } from "./hooks/useVolume";
+import { Chapter } from "../constants";
+import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
+import ChaptersDropdown from "./ChaptersDropdown";
+import BigPlayButton from "../control-bar/BigPlayButton";
+import CustomControl from "../control-bar/CustomControl";
+import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
+import { useSeek } from "../hooks/useSeek";
+import { useVolume } from "../hooks/useVolume";
 
 const videoJsOptions = {
   autoplay: false,
@@ -47,17 +45,17 @@ const videoJsOptions = {
   ],
 };
 
-type VideoPlayerProps = {
+type VideoPlayerEmbedProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
 };
-export function VideoPlayer({
+export function VideoPlayerEmbed({
   chapters,
   initialActiveChapter,
   onChapterChange,
-}: VideoPlayerProps) {
+}: VideoPlayerEmbedProps) {
   const playerRef = React.useRef<Player | null>(null);
   const [bufferPercent, setBufferPercent] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
@@ -259,98 +257,79 @@ export function VideoPlayer({
     setPlayingStatus("playing");
   };
 
-  const videoWrapperStyle: CSSProperties = isFullscreen
-    ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
-    : { position: "relative", flex: 1, paddingBottom: "56.25%" };
+  const videoWrapperStyle: CSSProperties = {
+    position: "absolute",
+    inset: 0,
+    overflow: "hidden",
+    // height: "100%",
+    // width: "100%",
+  };
 
-  const videoPositionStyle: CSSProperties = isFullscreen
-    ? {
-        position: "absolute",
-        width: positionStyle.width,
-        height: positionStyle.height,
-        top: "50%",
-        left: "50%",
-        transform: "translateX(-50%) translateY(-50%)",
-      }
-    : {
-        position: "absolute",
-        left: 0,
-        top: 0,
-        height: "100%",
-        width: "100%",
-      };
+  const videoPositionStyle: CSSProperties = {
+    position: "absolute",
+    width: positionStyle.width,
+    height: positionStyle.height,
+    top: "50%",
+    left: "50%",
+    transform: "translateX(-50%) translateY(-50%)",
+  };
 
   return (
     <>
       <VideoMeta path="/custom-control" />
 
-      <Box
-        sx={{
-          display: "grid",
-          gap: "23px",
-          position: "relative",
-        }}
-        gridTemplateColumns={{
-          base: "1fr",
-          lg: "1fr auto",
-        }}
-      >
-        <div style={videoWrapperStyle} ref={ref}>
-          <div style={videoPositionStyle} onClick={onPlayToggle}>
-            <VideoJS
-              options={videoJsOptions}
-              onReady={handlePlayerReady}
-              videoContainerRef={videoContainerRef}
-            />
-          </div>
-          <ChapterAutoPlayModal
-            isOpen={isChapterChangeModalOpen}
-            chapterTimeoutCount={chapterTimeoutCount}
-            onPlayNextChapter={playNextChapter}
-            onReplayCurrentChapter={replayCurrentChapter}
-            positionStyle={videoPositionStyle}
+      <div style={videoWrapperStyle} ref={ref}>
+        <div style={videoPositionStyle} onClick={onPlayToggle}>
+          <VideoJS
+            options={videoJsOptions}
+            onReady={handlePlayerReady}
+            videoContainerRef={videoContainerRef}
           />
-          <BigPlayButton
-            onClick={onBigPlayBtnClick}
-            positionStyle={videoPositionStyle}
-            isVisible={isBigPlayBtnVisible}
-          />
-          {chapter && (
-            <ChapterTitle
-              title={chapter?.title}
-              episode={chapterIndex + 1}
-              isVisible={isControlActive}
-            />
-          )}
-          {chapter && (
-            <CustomControl
-              chapter={chapter}
-              playingStatus={playingStatus}
-              isControlActive={isControlActive}
-              totalDuration={totalDuration}
-              currentTime={currentTime}
-              onSeekScrubStart={onSeekScrubStart}
-              onSeekScrubEnd={onSeekScrubEnd}
-              onSeekScrubChange={onSeekScrubChange}
-              bufferPosition={totalDuration * bufferPercent}
-              onPlayToggle={onPlayToggle}
-              isMuted={isMuted}
-              toggleMute={toggleMute}
-              onVolumeScrubChange={onVolumeScrubChange}
-              volume={volume}
-              toggleFullscreen={toggleFullscreen}
-              isFullscreen={isFullscreen}
-              isDisabled={isChapterChangeModalOpen}
-            />
-          )}
         </div>
-        <ChaptersPlaylist
-          height={height}
-          chapters={chapters}
-          currentChapter={currentChapter}
-          onChapterSelect={onChapterSelect}
+        <ChapterAutoPlayModal
+          isOpen={isChapterChangeModalOpen}
+          chapterTimeoutCount={chapterTimeoutCount}
+          onPlayNextChapter={playNextChapter}
+          onReplayCurrentChapter={replayCurrentChapter}
+          positionStyle={videoPositionStyle}
         />
-      </Box>
+        <BigPlayButton
+          onClick={onBigPlayBtnClick}
+          positionStyle={videoPositionStyle}
+          isVisible={isBigPlayBtnVisible}
+        />
+        {chapter && (
+          <ChaptersDropdown
+            title={chapter?.title}
+            episode={chapterIndex + 1}
+            isVisible={isControlActive}
+            chapters={chapters}
+            currentChapter={currentChapter}
+            onChapterSelect={onChapterSelect}
+          />
+        )}
+        {chapter && (
+          <CustomControl
+            chapter={chapter}
+            playingStatus={playingStatus}
+            isControlActive={isControlActive}
+            totalDuration={totalDuration}
+            currentTime={currentTime}
+            onSeekScrubStart={onSeekScrubStart}
+            onSeekScrubEnd={onSeekScrubEnd}
+            onSeekScrubChange={onSeekScrubChange}
+            bufferPosition={totalDuration * bufferPercent}
+            onPlayToggle={onPlayToggle}
+            isMuted={isMuted}
+            toggleMute={toggleMute}
+            onVolumeScrubChange={onVolumeScrubChange}
+            volume={volume}
+            toggleFullscreen={toggleFullscreen}
+            isFullscreen={isFullscreen}
+            isDisabled={isChapterChangeModalOpen}
+          />
+        )}
+      </div>
     </>
   );
 }

@@ -2,7 +2,6 @@ import React, { Ref } from "react";
 import videojs from "video.js";
 import Player from "video.js/dist/types/player";
 import "video.js/dist/video-js.css";
-import "./custom-theme.css";
 
 type VideoJSProps = {
   onReady: (player: Player) => void;
@@ -54,7 +53,7 @@ const VideoJS = (props: VideoJSProps) => {
   }, [playerRef]);
 
   return (
-    <div data-vjs-player className="vjs-theme-custom" ref={videoContainerRef}>
+    <div data-vjs-player ref={videoContainerRef}>
       <div ref={videoRef} className="vjs-16-9" />
     </div>
   );
