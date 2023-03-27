@@ -1,0 +1,15 @@
+type: conference
+name: ETHPrague
+description: The event focuses on the future of Ethereum and potential concepts
+  or applications that do not yet exist. We want to tackle challenges that could
+  arise in the next decade because we believe Ethereum will play a major role in
+  solving problems.
+url: https://ethprague.com/
+start_date: 2023-06-09T14:27:09.182Z
+end_date: 2023-06-11T14:27:09.188Z
+image: /assets/ethprague.jpeg
+location: europe
+tags:
+  - crypto
+  - blockchain
+  - starknet
