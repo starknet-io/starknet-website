@@ -55,9 +55,9 @@ export default function ChaptersDropdown({
         visibility: isControlActive ? "visible" : "hidden",
         transition: "all 0.5s ease-in-out",
         pointerEvents: isExpanded ? "auto" : "none",
-        backgroundColor: isExpanded ? "rgba(0,0,0, .3)" : "",
-        paddingTop: "30px",
+        backgroundColor: isExpanded ? "rgba(0,0,0, .5)" : "",
       }}
+      pt={{ base: "8px", sm: "16px" }}
       onClick={(e) => {
         if (isExpanded) {
           setIsExpanded(false);
@@ -106,7 +106,6 @@ export default function ChaptersDropdown({
       <Box
         sx={{
           display: "flex",
-          marginTop: "2rem",
           gap: "12px",
           paddingInline: "1rem",
           flexWrap: "nowrap",
@@ -118,6 +117,7 @@ export default function ChaptersDropdown({
         }}
         justifyContent={{ base: "flex-start", lg: "center" }}
         pointerEvents={isExpanded ? "auto" : "none"}
+        marginTop={{ base: "8px", sm: "16px" }}
       >
         {chapters?.map((chapter) => {
           const isActive = currentChapter === chapter.id;
