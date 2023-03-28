@@ -32,6 +32,7 @@ type CustomControlProps = {
   isFullscreen: boolean;
   chapter: Chapter;
   isDisabled?: boolean;
+  onShare: () => void;
 };
 export default function CustomControl(props: CustomControlProps) {
   const {
@@ -52,6 +53,7 @@ export default function CustomControl(props: CustomControlProps) {
     isFullscreen,
     chapter,
     isDisabled,
+    onShare,
   } = props;
 
   const shouldShowControl = () => {
@@ -153,7 +155,7 @@ export default function CustomControl(props: CustomControlProps) {
             justifyContent: "flex-end",
           }}
         >
-          <ShareButton />
+          <ShareButton onShare={onShare} />
           <FullscreenButton
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}

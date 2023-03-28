@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "@chakra-ui/react";
+import { Box, useDisclosure } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
 import React, { CSSProperties, useEffect, useRef, useState } from "react";
 import { useMeasure, useInterval } from "react-use";
@@ -19,6 +19,7 @@ import CustomControl from "../control-bar/CustomControl";
 import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
 import { useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
+import ShareModal from "../share/ShareModal";
 
 const videoJsOptions = {
   autoplay: false,
@@ -66,8 +67,12 @@ export function VideoPlayer({
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
   const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
     useState(false);
-
-  const [_, setChapterTimeoutCount] = React.useState(0);
+  const [_, setChapterTimeoutCount] = useState(0);
+  const {
+    isOpen: isShareModalOpen,
+    onClose: onCloseShareModal,
+    onOpen: onOpenShareModal,
+  } = useDisclosure();
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
@@ -296,6 +301,7 @@ export function VideoPlayer({
             positionStyle={videoPositionStyle}
             isVisible={isBigPlayBtnVisible}
           />
+          <ShareModal isOpen={isShareModalOpen} onClose={onCloseShareModal} />
           {chapter && (
             <ChapterTitle
               title={chapter?.title}
@@ -326,6 +332,7 @@ export function VideoPlayer({
               volume={volume}
               toggleFullscreen={toggleFullscreen}
               isFullscreen={isFullscreen}
+              onShare={onOpenShareModal}
               // isDisabled={isChapterChangeModalOpen}
             />
           )}

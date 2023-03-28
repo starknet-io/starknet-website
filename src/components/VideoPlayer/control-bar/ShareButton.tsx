@@ -1,7 +1,7 @@
 import React from "react";
 import ControlButton from "./ControlButton";
 
-export const ShareButton = () => {
+export const ShareButton = ({ onShare }: { onShare: () => void }) => {
   return (
     <ControlButton
       ariaLabel="Share"
@@ -26,7 +26,7 @@ export const ShareButton = () => {
           </defs>
         </svg>
       }
-      onClick={() => {}}
+      onClick={onShare}
     />
   );
 };

@@ -91,6 +91,7 @@
     "react-instantsearch-hooks-web": "^6.41.0",
     "react-markdown": "^8.0.5",
     "react-scrubber": "^1.1.1",
+    "react-share": "^4.4.1",
     "react-use": "^17.4.0",
     "react-video-seek-slider": "^6.0.3",
     "react-youtube": "^10.1.0",

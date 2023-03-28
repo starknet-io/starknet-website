@@ -17,6 +17,8 @@ import CustomControl from "../control-bar/CustomControl";
 import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
 import { SeekStatuses, useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
+import { useDisclosure } from "@chakra-ui/react";
+import ShareModal from "../share/ShareModal";
 
 const videoJsOptions = {
   autoplay: false,
@@ -64,6 +66,11 @@ export function VideoPlayerEmbed({
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
   const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
     useState(false);
+  const {
+    isOpen: isShareModalOpen,
+    onClose: onCloseShareModal,
+    onOpen: onOpenShareModal,
+  } = useDisclosure();
 
   const [_, setChapterTimeoutCount] = React.useState(5);
 
@@ -279,6 +286,7 @@ export function VideoPlayerEmbed({
           positionStyle={videoPositionStyle}
           isVisible={isBigPlayBtnVisible}
         />
+        <ShareModal isOpen={isShareModalOpen} onClose={onCloseShareModal} />
         {chapter && (
           <ChaptersDropdown
             title={chapter?.title}
@@ -309,6 +317,7 @@ export function VideoPlayerEmbed({
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}
             isDisabled={isChapterChangeModalOpen}
+            onShare={onOpenShareModal}
           />
         )}
       </div>
