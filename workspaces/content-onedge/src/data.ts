@@ -4,6 +4,7 @@ import { getFirst, slugify, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
 import { gitlog } from "./git";
+import { getUnixTime, isValid, parseISO } from "date-fns";
 
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
@@ -263,10 +264,24 @@ export async function getSimpleData<T = {}>(
       const sourceFilepath =
         defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-      const defaultLocaleTitle = defaultLocaleData.title ?? defaultLocaleData.name;
+      const defaultLocaleTitle =
+        defaultLocaleData.title ?? defaultLocaleData.name;
+
+      const dates: { [key: string]: number } = {};
+
+      for (const key in data) {
+        if (/(^|_)(at|date)$/.test(key)) {
+          const date = parseISO(data[key]);
+
+          if (isValid(date)) {
+            dates[`${key}_ts`] = getUnixTime(date);
+          }
+        }
+      }
 
       filenameMap.set(`${locale.code}:${filename}`, {
         ...data,
+        ...dates,
         slug: defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined,
         locale: locale.code,
         objectID: `${resourceName}:${locale.code}:${filename}`,

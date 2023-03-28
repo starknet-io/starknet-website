@@ -69,6 +69,7 @@
     "classnames": "^2.3.2",
     "cors": "^2.8.5",
     "cypress": "^12.7.0",
+    "date-fns": "^2.29.3",
     "eslint": "^8.35.0",
     "eslint-config-next": "^13.2.3",
     "framer-motion": "^6.5.1",
