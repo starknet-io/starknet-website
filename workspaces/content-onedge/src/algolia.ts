@@ -58,6 +58,29 @@ try {
 
     await index.deleteObjects(deleteObjectIDs).wait();
     await index.saveObjects(objects).wait();
+
+    if (resourceName === "events") {
+      await index
+        .setSettings({
+          customRanking: ["desc(start_date_ts)"],
+          replicas: [`${indexName}_desc`, `${indexName}_asc`],
+        })
+        .wait();
+
+      const desc = client.initIndex(`${indexName}_desc`);
+      await desc
+        .setSettings({
+          customRanking: ["desc(start_date_ts)"],
+        })
+        .wait();
+
+      const asc = client.initIndex(`${indexName}_asc`);
+      await asc
+        .setSettings({
+          customRanking: ["asc(start_date_ts)"],
+        })
+        .wait();
+    }
   }
 } catch (err) {
   console.error(err);

@@ -14509,6 +14509,7 @@ __metadata:
   resolution: "content-onedge-workspace@workspace:workspaces/content-onedge"
   dependencies:
     algoliasearch: ^4.15.0
+    date-fns: ^2.29.3
     dotenv: ^16.0.3
     simple-git: ^3.17.0
     vite-node: ^0.29.2
@@ -15009,7 +15010,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.29.3":
+"date-fns@npm:2.29.3, date-fns@npm:^2.29.3":
   version: 2.29.3
   resolution: "date-fns@npm:2.29.3"
   checksum: e01cf5b62af04e05dfff921bb9c9933310ed0e1ae9a81eb8653452e64dc841acf7f6e01e1a5ae5644d0337e9a7f936175fd2cb6819dc122fdd9c5e86c56be484
@@ -29759,6 +29760,7 @@ __metadata:
     classnames: ^2.3.2
     cors: ^2.8.5
     cypress: ^12.7.0
+    date-fns: ^2.29.3
     eslint: ^8.35.0
     eslint-config-next: ^13.2.3
     eslint-plugin-storybook: ^0.6.11
