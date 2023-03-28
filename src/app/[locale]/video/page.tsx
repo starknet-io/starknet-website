@@ -1,4 +1,4 @@
-import { playlist } from "@ui/VideoPlayer/utils";
+import { playlist } from "@ui/VideoPlayer/constants";
 import { redirect } from "next/navigation";
 
 export default function Page({ params }: LocaleProps) {

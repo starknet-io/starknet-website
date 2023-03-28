@@ -301,7 +301,11 @@ export function VideoPlayer({
             positionStyle={videoPositionStyle}
             isVisible={isBigPlayBtnVisible}
           />
-          <ShareModal isOpen={isShareModalOpen} onClose={onCloseShareModal} />
+          <ShareModal
+            isOpen={isShareModalOpen}
+            onClose={onCloseShareModal}
+            showEmbed
+          />
           {chapter && (
             <ChapterTitle
               title={chapter?.title}

@@ -17,28 +17,19 @@ import {
   TwitterIcon,
   TwitterShareButton,
 } from "react-share";
-import { useCopyToClipboard } from "react-use";
+import useInputCopy from "../hooks/useInputCopy";
 
 const SocialShare = ({ shareUrl }: { shareUrl: string }) => {
   const title = "Starknet website";
-  const [copied, setCopied] = useState(false);
-  const [state, copyToClipboard] = useCopyToClipboard();
-  const copyTimeout = useRef<NodeJS.Timeout>();
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const onCopy = () => {
-    inputRef.current?.focus();
-    copyToClipboard(shareUrl);
-    setCopied(true);
-    if (copyTimeout.current) {
-      clearTimeout(copyTimeout.current);
-    }
-    copyTimeout.current = setTimeout(() => setCopied(false), 1000);
-  };
+  const { onCopy, state, copied } = useInputCopy();
+  const focusInput = () => inputRef.current?.select();
 
   return (
     <Box display="grid" gap="1rem">
-      <Text fontSize="lg">Share</Text>
+      <Text fontSize="lg" fontWeight={700}>
+        Share
+      </Text>
 
       <InputGroup size="md">
         <Input
@@ -46,18 +37,20 @@ const SocialShare = ({ shareUrl }: { shareUrl: string }) => {
           value={shareUrl}
           readOnly
           ref={inputRef}
-          onClick={() => {
-            inputRef.current?.select();
-          }}
+          onFocus={focusInput}
           fontSize="sm"
         />
         <InputRightElement width="4rem" right={5}>
           <Button
             h="1.75rem"
             size="sm"
-            onClick={onCopy}
+            onClick={() => {
+              onCopy(shareUrl);
+              focusInput();
+            }}
             width="4rem"
             fontSize="xs"
+            textTransform="uppercase"
           >
             {copied && !state.error ? "Copied" : "Copy"}
           </Button>
