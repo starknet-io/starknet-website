@@ -7,18 +7,20 @@ import { Chapter } from "../constants";
 interface ChaptersDropdownProps {
   title: string;
   episode: number;
-  isVisible: boolean;
+  isControlActive: boolean;
   chapters: Chapter[];
   currentChapter: string;
   onChapterSelect: (currentChapter: string) => void;
+  onToggleExpandPlaylist: (isExpanded: boolean) => void;
 }
 export default function ChaptersDropdown({
   title,
   episode,
-  isVisible,
+  isControlActive,
   chapters,
   currentChapter,
   onChapterSelect,
+  onToggleExpandPlaylist,
 }: ChaptersDropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -27,24 +29,40 @@ export default function ChaptersDropdown({
     if (chapterElement) {
       chapterElement.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "nearest",
         inline: "center",
       });
     }
   }, [currentChapter]);
 
-  const toggleExpanded = () => setIsExpanded((b) => !b);
+  const toggleExpanded = () => {
+    setIsExpanded((prevState) => {
+      const newState = !prevState;
+      onToggleExpandPlaylist(newState);
+      return newState;
+    });
+  };
   return (
     <Box
       sx={{
         pos: "absolute",
-        top: "16px",
+        top: 0,
         left: 0,
         right: 0,
-        opacity: isVisible ? 1 : 0,
-        visibility: isVisible ? "visible" : "hidden",
-        transition: "opacity 0.5s ease-in-out, visibility 0.5s ease-in-out",
-        pointerEvents: "none",
+        bottom: 0,
+        opacity: isControlActive ? 1 : 0,
+        zIndex: isControlActive ? 11 : 0,
+        visibility: isControlActive ? "visible" : "hidden",
+        transition: "all 0.5s ease-in-out",
+        pointerEvents: isExpanded ? "auto" : "none",
+        backgroundColor: isExpanded ? "rgba(0,0,0, .3)" : "",
+        paddingTop: "30px",
+      }}
+      onClick={(e) => {
+        if (isExpanded) {
+          setIsExpanded(false);
+          onToggleExpandPlaylist(false);
+        }
       }}
     >
       <Button
@@ -60,6 +78,7 @@ export default function ChaptersDropdown({
           gap: "12px",
           alignItems: "center",
           pointerEvents: "auto",
+          zIndex: 12,
         }}
         onClick={toggleExpanded}
       >
@@ -110,6 +129,7 @@ export default function ChaptersDropdown({
               maxW="142px"
               role="button"
               onClick={() => onChapterSelect(chapter.id)}
+              zIndex={12}
             >
               <Image
                 src={chapter.thumbnail}

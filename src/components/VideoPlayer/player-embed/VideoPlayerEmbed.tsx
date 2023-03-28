@@ -15,7 +15,7 @@ import ChaptersDropdown from "./ChaptersDropdown";
 import BigPlayButton from "../control-bar/BigPlayButton";
 import CustomControl from "../control-bar/CustomControl";
 import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
-import { useSeek } from "../hooks/useSeek";
+import { SeekStatuses, useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
 
 const videoJsOptions = {
@@ -64,13 +64,14 @@ export function VideoPlayerEmbed({
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
   const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
     useState(false);
-  const [isRunning, toggleIsRunning] = useState(false);
+  const [isChapterTimeoutRunning, toggleIsChapterTimeoutRunning] =
+    useState(false);
 
   const [chapterTimeoutCount, setChapterTimeoutCount] = React.useState(5);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
-  const paused = useRef(false);
+  const playingStatusBeforeOpeningPlaylist = useRef<SeekStatuses>();
   const [isControlActive, setIsControlActive] = useState(false);
 
   const { volume, isMuted, toggleMute, onVolumeScrubChange, setVolume } =
@@ -105,7 +106,7 @@ export function VideoPlayerEmbed({
 
   const playNextChapter = () => {
     setIsChapterChangeModalOpen(false);
-    toggleIsRunning(false);
+    toggleIsChapterTimeoutRunning(false);
     playerRef.current?.play();
     setPlayingStatus("playing");
     const nextChapter = getSeekChapter(playerRef.current!.currentTime() + 2);
@@ -117,7 +118,7 @@ export function VideoPlayerEmbed({
 
   const replayCurrentChapter = () => {
     setIsChapterChangeModalOpen(false);
-    toggleIsRunning(false);
+    toggleIsChapterTimeoutRunning(false);
 
     const activeChapter = getSeekChapter(playerRef.current!.currentTime() - 1);
     if (activeChapter) {
@@ -138,7 +139,7 @@ export function VideoPlayerEmbed({
         return c - 1;
       });
     },
-    isRunning ? 1000 : null
+    isChapterTimeoutRunning ? 1000 : null
   );
 
   usePreventDefaultHotkeys();
@@ -179,8 +180,7 @@ export function VideoPlayerEmbed({
         playerTime - lastPlayerTime.current < 1
       ) {
         playerRef.current?.pause();
-        setPlayingStatus("paused");
-        toggleIsRunning(true);
+        toggleIsChapterTimeoutRunning(true);
         setIsChapterChangeModalOpen(true);
         setChapterTimeoutCount(5);
       } else if (activeChapter) {
@@ -215,18 +215,18 @@ export function VideoPlayerEmbed({
     });
 
     player.on("userinactive", () => {
-      if (!paused.current) {
+      if (playingStatus === "playing") {
         setIsControlActive(false);
       }
     });
 
     player.on("pause", () => {
-      paused.current = true;
+      setPlayingStatus("paused");
     });
 
     player.on("play", () => {
-      paused.current = false;
       setIsControlActive(true);
+      setPlayingStatus("playing");
     });
 
     const volume = player.volume();
@@ -238,23 +238,24 @@ export function VideoPlayerEmbed({
 
   const onChapterSelect = (ch: string) => {
     goToChapter(ch);
-    if (playingStatus === "unstarted") {
-      setPlayingStatus("paused");
-      playerRef.current?.play();
-      playerRef.current?.pause();
-    }
-
+    playerRef.current?.play();
     if (isChapterChangeModalOpen) {
       setIsChapterChangeModalOpen(false);
-      toggleIsRunning(false);
-      setPlayingStatus("playing");
+      toggleIsChapterTimeoutRunning(false);
+    }
+  };
+
+  const onToggleExpandPlaylist = (isExpanded: boolean) => {
+    if (isExpanded) {
+      playingStatusBeforeOpeningPlaylist.current = playingStatus;
+      playerRef.current?.pause();
+    } else if (playingStatusBeforeOpeningPlaylist.current === "playing") {
       playerRef.current?.play();
     }
   };
 
   const onBigPlayBtnClick = () => {
     playerRef.current?.play();
-    setPlayingStatus("playing");
   };
 
   const videoWrapperStyle: CSSProperties = {
@@ -302,10 +303,11 @@ export function VideoPlayerEmbed({
           <ChaptersDropdown
             title={chapter?.title}
             episode={chapterIndex + 1}
-            isVisible={isControlActive}
+            isControlActive={isControlActive}
             chapters={chapters}
             currentChapter={currentChapter}
             onChapterSelect={onChapterSelect}
+            onToggleExpandPlaylist={onToggleExpandPlaylist}
           />
         )}
         {chapter && (
