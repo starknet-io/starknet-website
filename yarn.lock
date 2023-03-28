@@ -27900,6 +27900,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-countdown-circle-timer@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "react-countdown-circle-timer@npm:3.2.1"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: df61291c641a6484ae03ab7b57f5b56caf7187e9ba8364f33d7c0e107c8174a2e59e40fa555103258041a6af7563c377ae3b35e2bcbc52aa17b3f13151ec69dc
+  languageName: node
+  linkType: hard
+
 "react-datetime@npm:^3.1.1":
   version: 3.2.0
   resolution: "react-datetime@npm:3.2.0"
@@ -29927,6 +29936,7 @@ __metadata:
     next: ^13.2.3
     postcss: ^8.4.21
     react: ^18.2.0
+    react-countdown-circle-timer: ^3.2.1
     react-dom: ^18.2.0
     react-hotkeys-hook: ^4.3.7
     react-icons: ^4.8.0

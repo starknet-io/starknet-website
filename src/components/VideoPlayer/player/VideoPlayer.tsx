@@ -11,7 +11,7 @@ import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import VideoMeta from "../meta/VideoMeta";
-import { Chapter } from "../constants";
+import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
 import ChapterTitle from "./ChapterTitle";
 import BigPlayButton from "../control-bar/BigPlayButton";
@@ -66,9 +66,8 @@ export function VideoPlayer({
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
   const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
     useState(false);
-  const [isRunning, toggleIsRunning] = useState(false);
 
-  const [chapterTimeoutCount, setChapterTimeoutCount] = React.useState(5);
+  const [_, setChapterTimeoutCount] = React.useState(0);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
@@ -107,7 +106,6 @@ export function VideoPlayer({
 
   const playNextChapter = () => {
     setIsChapterChangeModalOpen(false);
-    toggleIsRunning(false);
     playerRef.current?.play();
     setPlayingStatus("playing");
     const nextChapter = getSeekChapter(playerRef.current!.currentTime() + 2);
@@ -117,30 +115,17 @@ export function VideoPlayer({
     }
   };
 
-  const replayCurrentChapter = () => {
-    setIsChapterChangeModalOpen(false);
-    toggleIsRunning(false);
-
-    const activeChapter = getSeekChapter(playerRef.current!.currentTime() - 1);
-    if (activeChapter) {
-      playerRef.current?.currentTime(activeChapter.startAt);
-      playerRef.current?.play();
-      setPlayingStatus("playing");
-      setCurrentChapter(activeChapter.id);
-    }
-  };
-
   useInterval(
     () => {
       setChapterTimeoutCount((c) => {
-        if (c === 0) {
+        if (c === CHAPTER_CHANGE_TIMEOUT) {
           playNextChapter();
           return c;
         }
-        return c - 1;
+        return c + 1;
       });
     },
-    isRunning ? 1000 : null
+    isChapterChangeModalOpen ? 1000 : null
   );
 
   usePreventDefaultHotkeys();
@@ -182,9 +167,8 @@ export function VideoPlayer({
       ) {
         playerRef.current?.pause();
         setPlayingStatus("paused");
-        toggleIsRunning(true);
         setIsChapterChangeModalOpen(true);
-        setChapterTimeoutCount(5);
+        setChapterTimeoutCount(0);
       } else if (activeChapter) {
         setCurrentChapter(activeChapter.id);
       }
@@ -248,7 +232,6 @@ export function VideoPlayer({
 
     if (isChapterChangeModalOpen) {
       setIsChapterChangeModalOpen(false);
-      toggleIsRunning(false);
       setPlayingStatus("playing");
       playerRef.current?.play();
     }
@@ -305,9 +288,7 @@ export function VideoPlayer({
           </div>
           <ChapterAutoPlayModal
             isOpen={isChapterChangeModalOpen}
-            chapterTimeoutCount={chapterTimeoutCount}
             onPlayNextChapter={playNextChapter}
-            onReplayCurrentChapter={replayCurrentChapter}
             positionStyle={videoPositionStyle}
           />
           <BigPlayButton
@@ -329,7 +310,12 @@ export function VideoPlayer({
               isControlActive={isControlActive}
               totalDuration={totalDuration}
               currentTime={currentTime}
-              onSeekScrubStart={onSeekScrubStart}
+              onSeekScrubStart={(n) => {
+                if (isChapterChangeModalOpen) {
+                  setIsChapterChangeModalOpen(false);
+                }
+                onSeekScrubStart(n);
+              }}
               onSeekScrubEnd={onSeekScrubEnd}
               onSeekScrubChange={onSeekScrubChange}
               bufferPosition={totalDuration * bufferPercent}
@@ -340,7 +326,7 @@ export function VideoPlayer({
               volume={volume}
               toggleFullscreen={toggleFullscreen}
               isFullscreen={isFullscreen}
-              isDisabled={isChapterChangeModalOpen}
+              // isDisabled={isChapterChangeModalOpen}
             />
           )}
         </div>

@@ -64,10 +64,8 @@ export function VideoPlayerEmbed({
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
   const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
     useState(false);
-  const [isChapterTimeoutRunning, toggleIsChapterTimeoutRunning] =
-    useState(false);
 
-  const [chapterTimeoutCount, setChapterTimeoutCount] = React.useState(5);
+  const [_, setChapterTimeoutCount] = React.useState(5);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
@@ -106,26 +104,12 @@ export function VideoPlayerEmbed({
 
   const playNextChapter = () => {
     setIsChapterChangeModalOpen(false);
-    toggleIsChapterTimeoutRunning(false);
     playerRef.current?.play();
     setPlayingStatus("playing");
     const nextChapter = getSeekChapter(playerRef.current!.currentTime() + 2);
     if (nextChapter) {
       playerRef.current?.currentTime(nextChapter.startAt);
       setCurrentChapter(nextChapter.id);
-    }
-  };
-
-  const replayCurrentChapter = () => {
-    setIsChapterChangeModalOpen(false);
-    toggleIsChapterTimeoutRunning(false);
-
-    const activeChapter = getSeekChapter(playerRef.current!.currentTime() - 1);
-    if (activeChapter) {
-      playerRef.current?.currentTime(activeChapter.startAt);
-      playerRef.current?.play();
-      setPlayingStatus("playing");
-      setCurrentChapter(activeChapter.id);
     }
   };
 
@@ -139,7 +123,7 @@ export function VideoPlayerEmbed({
         return c - 1;
       });
     },
-    isChapterTimeoutRunning ? 1000 : null
+    isChapterChangeModalOpen ? 1000 : null
   );
 
   usePreventDefaultHotkeys();
@@ -180,7 +164,6 @@ export function VideoPlayerEmbed({
         playerTime - lastPlayerTime.current < 1
       ) {
         playerRef.current?.pause();
-        toggleIsChapterTimeoutRunning(true);
         setIsChapterChangeModalOpen(true);
         setChapterTimeoutCount(5);
       } else if (activeChapter) {
@@ -241,7 +224,6 @@ export function VideoPlayerEmbed({
     playerRef.current?.play();
     if (isChapterChangeModalOpen) {
       setIsChapterChangeModalOpen(false);
-      toggleIsChapterTimeoutRunning(false);
     }
   };
 
@@ -289,9 +271,7 @@ export function VideoPlayerEmbed({
         </div>
         <ChapterAutoPlayModal
           isOpen={isChapterChangeModalOpen}
-          chapterTimeoutCount={chapterTimeoutCount}
           onPlayNextChapter={playNextChapter}
-          onReplayCurrentChapter={replayCurrentChapter}
           positionStyle={videoPositionStyle}
         />
         <BigPlayButton

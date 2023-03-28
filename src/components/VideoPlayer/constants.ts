@@ -56,3 +56,5 @@ export const playlist: Chapter[] = [
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
   },
 ];
+
+export const CHAPTER_CHANGE_TIMEOUT = 5;
