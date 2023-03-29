@@ -1,0 +1,14 @@
+type: community_event
+name: EthCC - Ethereum Community Conference
+description: The Ethereum Community Conference (EthCC) is the largest annual
+  European Ethereum event focused on technology and community. Four intense days
+  of conferences, networking and learning.
+url: https://www.ethcc.io/
+start_date: 2023-07-17T13:45:09.143Z
+end_date: 2023-07-20T13:45:09.148Z
+image: /assets/ethcc-ethereum-community-conference.jpeg
+location: europe
+tags:
+  - crypto
+  - blockchain
+  - starknet
