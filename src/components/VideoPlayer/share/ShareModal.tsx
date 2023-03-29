@@ -5,7 +5,6 @@ import {
   ModalContent,
   ModalHeader,
   ModalOverlay,
-  Text,
 } from "@chakra-ui/react";
 import React from "react";
 import ShareEmbed from "./ShareEmbed";
@@ -33,7 +32,7 @@ export default function ShareModal({
         <ModalHeader />
         <ModalBody pt={0}>
           <SocialShare shareUrl={shareUrl} />
-          {showEmbed && <ShareEmbed />}
+          {showEmbed && <ShareEmbed currentChapter={currentChapter} />}
         </ModalBody>
       </ModalContent>
     </Modal>

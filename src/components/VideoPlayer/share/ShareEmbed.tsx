@@ -1,9 +1,17 @@
 import { Box, Button, Text, Textarea } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
+import { playlist, playlistObject } from "../constants";
 import useInputCopy from "../hooks/useInputCopy";
 
-const defaultValue = `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EgxqC2Ry65c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-export default function ShareEmbed() {
+export default function ShareEmbed({
+  currentChapter,
+}: {
+  currentChapter: string;
+}) {
+  const chapter = playlistObject[currentChapter] || playlist[0];
+  const videoEmbedUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed`;
+  const defaultValue = `<iframe width="560" height="315" src="${videoEmbedUrl}" title=${chapter.title} frameborder="0" allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>`;
+
   const [value, setValue] = useState(defaultValue);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const { onCopy, state, copied } = useInputCopy();
@@ -16,7 +24,7 @@ export default function ShareEmbed() {
       </Text>
       <Textarea
         fontSize="sm"
-        rows={7}
+        rows={6}
         value={value}
         onChange={(v) => setValue(v.target.value)}
         resize="none"
