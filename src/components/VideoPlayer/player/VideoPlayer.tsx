@@ -270,8 +270,6 @@ export function VideoPlayer({
 
   return (
     <>
-      <VideoMeta path="/custom-control" />
-
       <Box
         sx={{
           display: "grid",

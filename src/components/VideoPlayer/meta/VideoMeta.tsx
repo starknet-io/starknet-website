@@ -1,14 +1,9 @@
-import Head from 'next/head'
-import React from 'react'
+import Head from "next/head";
+import React from "react";
 
-export default function MetaVideo({
-  chapter = '',
-  path,
-}: {
-  chapter?: string
-  path: string
-}) {
-  const videoUrl = `https://education-video-beta.vercel.app${path}${chapter}`
+export default function MetaVideo({ chapter }: { chapter: string }) {
+  const videoUrl = `https://my-video-player-demo.jprq.live/en/video/${chapter}`;
+  const description = "Here is the description of the video";
 
   return (
     <Head>
@@ -25,20 +20,14 @@ export default function MetaVideo({
 
       <title>Starknet | Education Video Tutorial</title>
 
-      <meta
-        name="description"
-        content="Starknet is the secure scaling technology bringing Ethereum’s benefits to the world."
-      />
+      <meta name="description" content={description} />
 
       {/* Start of open graph */}
       <meta property="og:site_name" content="Starknet" />
       <meta property="og:url" content={videoUrl} />
       <meta property="og:type" content="video.other" />
       <meta property="og:title" content="Starknet | education video tutorial" />
-      <meta
-        property="og:description"
-        content="Starknet is the secure scaling technology bringing Ethereum’s benefits to the world."
-      />
+      <meta property="og:description" content={description} />
       <meta
         property="og:image"
         content="https://www.starknet.io/assets/illustration-how-it-works.png"
@@ -64,10 +53,7 @@ export default function MetaVideo({
         name="twitter:title"
         content="Starknet | Starknet education tutorial"
       />
-      <meta
-        name="twitter:description"
-        content="Starknet is the secure scaling technology bringing Ethereum’s benefits to the world."
-      />
+      <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
         content="https://www.starknet.io/assets/illustration-how-it-works.png"
@@ -76,5 +62,5 @@ export default function MetaVideo({
       <meta name="twitter:player:width" content="1280" />
       <meta name="twitter:player:height" content="720" />
     </Head>
-  )
+  );
 }
