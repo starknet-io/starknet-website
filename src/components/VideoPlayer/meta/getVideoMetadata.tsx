@@ -1,24 +1,28 @@
 import { Metadata } from "next";
+import { playlist, playlistObject } from "../constants";
 
-export default function getVideoMetadata(chapter: string) {
-  const videoUrl = `https://my-video-player-demo.jprq.live/en/video/${chapter}`;
-  const description =
-    "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
+export default function getVideoMetadata(chapterId: string) {
+  const chapter = playlistObject[chapterId] || playlist[0];
+  const videoUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed`;
+
+  const title = chapter.title;
+  const description = chapter.description;
+  const imageUrl =
+    "https://www.starknet.io/assets/illustration-how-it-works.png";
 
   const metadata: Metadata = {
-    title: "Starknet | Education Video Tutorial",
+    title,
     description,
     openGraph: {
       siteName: "Starknet",
       url: videoUrl,
       type: "video.other",
-      title: "Starknet | education video tutorial",
+      title,
       description,
       images: [
         {
-          url: "https://www.starknet.io/assets/illustration-how-it-works.png",
-          secureUrl:
-            "https://www.starknet.io/assets/illustration-how-it-works.png",
+          url: imageUrl,
+          secureUrl: imageUrl,
           type: "image/jpg",
           width: 1280,
           height: 720,
@@ -37,11 +41,11 @@ export default function getVideoMetadata(chapter: string) {
     twitter: {
       card: "player",
       site: "@starknet",
-      title: "Starknet | Starknet education tutorial",
+      title,
       description,
       images: [
         {
-          url: "https://www.starknet.io/assets/illustration-how-it-works.png",
+          url: imageUrl,
         },
       ],
       players: [

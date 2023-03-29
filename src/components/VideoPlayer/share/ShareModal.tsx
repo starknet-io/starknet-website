@@ -15,14 +15,16 @@ type ShareModalProps = {
   isOpen: boolean;
   onClose: () => void;
   showEmbed?: boolean;
+  currentChapter: string;
 };
 
 export default function ShareModal({
   isOpen,
   onClose,
   showEmbed,
+  currentChapter,
 }: ShareModalProps) {
-  const shareUrl = `https://education-video-beta.vercel.app`;
+  const shareUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/en/video/${currentChapter}`;
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />

@@ -10,7 +10,6 @@ import { useChapters } from "../hooks/useChapters";
 import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import VideoMeta from "../meta/VideoMeta";
 import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
 import ChapterTitle from "./ChapterTitle";
@@ -269,83 +268,82 @@ export function VideoPlayer({
       };
 
   return (
-    <>
-      <Box
-        sx={{
-          display: "grid",
-          gap: "23px",
-          position: "relative",
-        }}
-        gridTemplateColumns={{
-          base: "1fr",
-          lg: "1fr auto",
-        }}
-      >
-        <div style={videoWrapperStyle} ref={ref}>
-          <div style={videoPositionStyle} onClick={onPlayToggle}>
-            <VideoJS
-              options={videoJsOptions}
-              onReady={handlePlayerReady}
-              videoContainerRef={videoContainerRef}
-            />
-          </div>
-          <ChapterAutoPlayModal
-            isOpen={isChapterChangeModalOpen}
-            onPlayNextChapter={playNextChapter}
-            positionStyle={videoPositionStyle}
+    <Box
+      sx={{
+        display: "grid",
+        gap: "23px",
+        position: "relative",
+      }}
+      gridTemplateColumns={{
+        base: "1fr",
+        lg: "1fr auto",
+      }}
+    >
+      <div style={videoWrapperStyle} ref={ref}>
+        <div style={videoPositionStyle} onClick={onPlayToggle}>
+          <VideoJS
+            options={videoJsOptions}
+            onReady={handlePlayerReady}
+            videoContainerRef={videoContainerRef}
           />
-          <BigPlayButton
-            onClick={onBigPlayBtnClick}
-            positionStyle={videoPositionStyle}
-            isVisible={isBigPlayBtnVisible}
-          />
-          <ShareModal
-            isOpen={isShareModalOpen}
-            onClose={onCloseShareModal}
-            showEmbed
-          />
-          {chapter && (
-            <ChapterTitle
-              title={chapter?.title}
-              episode={chapterIndex + 1}
-              isVisible={isControlActive}
-            />
-          )}
-          {chapter && (
-            <CustomControl
-              chapter={chapter}
-              playingStatus={playingStatus}
-              isControlActive={isControlActive}
-              totalDuration={totalDuration}
-              currentTime={currentTime}
-              onSeekScrubStart={(n) => {
-                if (isChapterChangeModalOpen) {
-                  setIsChapterChangeModalOpen(false);
-                }
-                onSeekScrubStart(n);
-              }}
-              onSeekScrubEnd={onSeekScrubEnd}
-              onSeekScrubChange={onSeekScrubChange}
-              bufferPosition={totalDuration * bufferPercent}
-              onPlayToggle={onPlayToggle}
-              isMuted={isMuted}
-              toggleMute={toggleMute}
-              onVolumeScrubChange={onVolumeScrubChange}
-              volume={volume}
-              toggleFullscreen={toggleFullscreen}
-              isFullscreen={isFullscreen}
-              onShare={onOpenShareModal}
-              // isDisabled={isChapterChangeModalOpen}
-            />
-          )}
         </div>
-        <ChaptersPlaylist
-          height={height}
-          chapters={chapters}
-          currentChapter={currentChapter}
-          onChapterSelect={onChapterSelect}
+        <ChapterAutoPlayModal
+          isOpen={isChapterChangeModalOpen}
+          onPlayNextChapter={playNextChapter}
+          positionStyle={videoPositionStyle}
         />
-      </Box>
-    </>
+        <BigPlayButton
+          onClick={onBigPlayBtnClick}
+          positionStyle={videoPositionStyle}
+          isVisible={isBigPlayBtnVisible}
+        />
+        <ShareModal
+          isOpen={isShareModalOpen}
+          onClose={onCloseShareModal}
+          showEmbed
+          currentChapter={currentChapter}
+        />
+        {chapter && (
+          <ChapterTitle
+            title={chapter?.title}
+            episode={chapterIndex + 1}
+            isVisible={isControlActive}
+          />
+        )}
+        {chapter && (
+          <CustomControl
+            chapter={chapter}
+            playingStatus={playingStatus}
+            isControlActive={isControlActive}
+            totalDuration={totalDuration}
+            currentTime={currentTime}
+            onSeekScrubStart={(n) => {
+              if (isChapterChangeModalOpen) {
+                setIsChapterChangeModalOpen(false);
+              }
+              onSeekScrubStart(n);
+            }}
+            onSeekScrubEnd={onSeekScrubEnd}
+            onSeekScrubChange={onSeekScrubChange}
+            bufferPosition={totalDuration * bufferPercent}
+            onPlayToggle={onPlayToggle}
+            isMuted={isMuted}
+            toggleMute={toggleMute}
+            onVolumeScrubChange={onVolumeScrubChange}
+            volume={volume}
+            toggleFullscreen={toggleFullscreen}
+            isFullscreen={isFullscreen}
+            onShare={onOpenShareModal}
+            // isDisabled={isChapterChangeModalOpen}
+          />
+        )}
+      </div>
+      <ChaptersPlaylist
+        height={height}
+        chapters={chapters}
+        currentChapter={currentChapter}
+        onChapterSelect={onChapterSelect}
+      />
+    </Box>
   );
 }

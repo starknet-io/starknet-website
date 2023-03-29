@@ -8,7 +8,6 @@ import { useChapters } from "../hooks/useChapters";
 import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import VideoMeta from "../meta/VideoMeta";
 import { Chapter } from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
 import ChaptersDropdown from "./ChaptersDropdown";
@@ -265,62 +264,62 @@ export function VideoPlayerEmbed({
   };
 
   return (
-    <>
-      <VideoMeta path="/custom-control" />
-
-      <div style={videoWrapperStyle} ref={ref}>
-        <div style={videoPositionStyle} onClick={onPlayToggle}>
-          <VideoJS
-            options={videoJsOptions}
-            onReady={handlePlayerReady}
-            videoContainerRef={videoContainerRef}
-          />
-        </div>
-        <ChapterAutoPlayModal
-          isOpen={isChapterChangeModalOpen}
-          onPlayNextChapter={playNextChapter}
-          positionStyle={videoPositionStyle}
+    <div style={videoWrapperStyle} ref={ref}>
+      <div style={videoPositionStyle} onClick={onPlayToggle}>
+        <VideoJS
+          options={videoJsOptions}
+          onReady={handlePlayerReady}
+          videoContainerRef={videoContainerRef}
         />
-        <BigPlayButton
-          onClick={onBigPlayBtnClick}
-          positionStyle={videoPositionStyle}
-          isVisible={isBigPlayBtnVisible}
-        />
-        <ShareModal isOpen={isShareModalOpen} onClose={onCloseShareModal} />
-        {chapter && (
-          <ChaptersDropdown
-            title={chapter?.title}
-            episode={chapterIndex + 1}
-            isControlActive={isControlActive}
-            chapters={chapters}
-            currentChapter={currentChapter}
-            onChapterSelect={onChapterSelect}
-            onToggleExpandPlaylist={onToggleExpandPlaylist}
-          />
-        )}
-        {chapter && (
-          <CustomControl
-            chapter={chapter}
-            playingStatus={playingStatus}
-            isControlActive={isControlActive}
-            totalDuration={totalDuration}
-            currentTime={currentTime}
-            onSeekScrubStart={onSeekScrubStart}
-            onSeekScrubEnd={onSeekScrubEnd}
-            onSeekScrubChange={onSeekScrubChange}
-            bufferPosition={totalDuration * bufferPercent}
-            onPlayToggle={onPlayToggle}
-            isMuted={isMuted}
-            toggleMute={toggleMute}
-            onVolumeScrubChange={onVolumeScrubChange}
-            volume={volume}
-            toggleFullscreen={toggleFullscreen}
-            isFullscreen={isFullscreen}
-            isDisabled={isChapterChangeModalOpen}
-            onShare={onOpenShareModal}
-          />
-        )}
       </div>
-    </>
+      <ChapterAutoPlayModal
+        isOpen={isChapterChangeModalOpen}
+        onPlayNextChapter={playNextChapter}
+        positionStyle={videoPositionStyle}
+      />
+      <BigPlayButton
+        onClick={onBigPlayBtnClick}
+        positionStyle={videoPositionStyle}
+        isVisible={isBigPlayBtnVisible}
+      />
+      <ShareModal
+        isOpen={isShareModalOpen}
+        onClose={onCloseShareModal}
+        currentChapter={currentChapter}
+      />
+      {chapter && (
+        <ChaptersDropdown
+          title={chapter?.title}
+          episode={chapterIndex + 1}
+          isControlActive={isControlActive}
+          chapters={chapters}
+          currentChapter={currentChapter}
+          onChapterSelect={onChapterSelect}
+          onToggleExpandPlaylist={onToggleExpandPlaylist}
+        />
+      )}
+      {chapter && (
+        <CustomControl
+          chapter={chapter}
+          playingStatus={playingStatus}
+          isControlActive={isControlActive}
+          totalDuration={totalDuration}
+          currentTime={currentTime}
+          onSeekScrubStart={onSeekScrubStart}
+          onSeekScrubEnd={onSeekScrubEnd}
+          onSeekScrubChange={onSeekScrubChange}
+          bufferPosition={totalDuration * bufferPercent}
+          onPlayToggle={onPlayToggle}
+          isMuted={isMuted}
+          toggleMute={toggleMute}
+          onVolumeScrubChange={onVolumeScrubChange}
+          volume={volume}
+          toggleFullscreen={toggleFullscreen}
+          isFullscreen={isFullscreen}
+          isDisabled={isChapterChangeModalOpen}
+          onShare={onOpenShareModal}
+        />
+      )}
+    </div>
   );
 }

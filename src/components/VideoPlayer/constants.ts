@@ -57,4 +57,8 @@ export const playlist: Chapter[] = [
   },
 ];
 
+export const playlistObject: Record<string, Chapter> = playlist.reduce(
+  (acc, chapter) => ({ [chapter.id]: chapter, ...acc }),
+  {}
+);
 export const CHAPTER_CHANGE_TIMEOUT = 5;
