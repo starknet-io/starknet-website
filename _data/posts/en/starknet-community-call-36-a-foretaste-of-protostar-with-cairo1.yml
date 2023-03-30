@@ -1,0 +1,63 @@
+id: 662a02b3-4725-4df4-92a7-250e8009f40c
+post_type: video
+title: "Starknet Community Call #36 | A foretaste of Protostar with Cairo1"
+published_date: 2023-03-21T12:31:23.991Z
+video:
+  url: https://www.youtube.com/watch?v=VLgYnHaJpq8&list=PLcIyXLwiPilWpAItJqnBgq1cu180i9dPd&index=3
+  id: VLgYnHaJpq8
+  data:
+    kind: youtube#video
+    etag: kiqD_jyuls-StytzfUmOHLdz9ws
+    id: VLgYnHaJpq8
+    snippet:
+      publishedAt: 2023-03-22T04:17:14Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #36 | A foretaste of Protostar with Cairo1"
+      description: Cairo1 support introduces a lot of new changes to the testing flow
+        of Protostar. Are you interested in what the close future is going to
+        look like? See it during this workshop!
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/VLgYnHaJpq8/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/VLgYnHaJpq8/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/VLgYnHaJpq8/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/VLgYnHaJpq8/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/VLgYnHaJpq8/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #36 | A foretaste of Protostar with Cairo1"
+        description: Cairo1 support introduces a lot of new changes to the testing flow
+          of Protostar. Are you interested in what the close future is going to
+          look like? See it during this workshop!
+      defaultAudioLanguage: en-US
+image: /assets/community-calls-36.jpg
+category: community-calls
+topic:
+  - cairo
+short_desc: Cairo1 support introduces a lot of new changes to the testing flow
+  of Protostar. Are you interested in what the close future is going to look
+  like? See it during this workshop!
