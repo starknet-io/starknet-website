@@ -11,7 +11,7 @@ import {
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 
-import NextLink from "next/link";
+
 import { Heading } from "@ui/Typography/Heading";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { GetInvolvedBlock } from "src/data/pages";
@@ -24,7 +24,7 @@ export const CommunityCard = ({ link, description, title, locale }: Props) => {
 
   return (
     <Container maxW="1104px">
-      <LinkBox as={Link} href={href!} sx={{ textDecoration: "none!important" }}>
+      <LinkBox as='a' href={href!} sx={{ textDecoration: "none!important" }}>
         <CardGradientBorder
           borderRadius={{ base: "24px", lg: "104px" }}
           padding="0"
@@ -67,7 +67,6 @@ export const CommunityCard = ({ link, description, title, locale }: Props) => {
                     <Link
                       ml="8px"
                       fontSize="16px"
-                      as={NextLink}
                       variant="card"
                       href={href}
                       _hover={{ textDecoration: "underline!important" }}

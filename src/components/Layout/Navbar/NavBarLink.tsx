@@ -1,5 +1,5 @@
 "use client";
-import NextLink from "next/link";
+
 import { Link, LinkProps, Icon } from "src/libs/chakra-ui";
 import { HiArrowUpRight } from "react-icons/hi2";
 
@@ -37,7 +37,6 @@ export const NavBarLink = (props: Props) => {
       //   },
       // }}
       {...props}
-      as={NextLink}
       href={props.href}
     >
       {props.children}

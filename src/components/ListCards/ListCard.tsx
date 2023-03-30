@@ -14,7 +14,6 @@ import {
 } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import NextLink, { LinkProps } from "next/link";
 import * as React from "react";
 
 import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
@@ -135,7 +134,7 @@ export const ListCard = (props: Props) => {
 
                 <Wrap spacingX="24px" shouldWrapChildren>
                   {props.href && props.variant !== "event" && props.variant !== "job" && (
-                    <Link isExternal as={NextLink} href={`${props.href}`}>
+                    <Link isExternal href={`${props.href}`}>
                       <Icon
                         boxSize="18px"
                         color="list-card-icon-fg"
@@ -146,7 +145,6 @@ export const ListCard = (props: Props) => {
                   {props.twitterHandle && (
                     <Link
                       isExternal
-                      as={NextLink}
                       href={`${props.twitterHandle}`}
                     >
                       <Icon

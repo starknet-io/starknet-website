@@ -4,12 +4,23 @@ import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "src/data/settings/main-menu";
 import { getComputedLinkData } from "src/utils/utils";
 import { useLocale } from "./ClientLocaleProvider";
+import { ThemeProvider } from "src/app/providers/ThemeProvider";
 
 export interface Props {
   readonly mainMenu: MainMenu;
 }
 
 export const Footer = ({ mainMenu }: Props) => {
+  const locale = useLocale();
+
+  return (
+    <ThemeProvider>
+      <Footer_ mainMenu={mainMenu} />
+    </ThemeProvider>
+  );
+};
+
+const Footer_ = ({ mainMenu }: Props) => {
   const locale = useLocale();
 
   return (
@@ -54,7 +65,7 @@ export const Footer = ({ mainMenu }: Props) => {
 
                           const { href, label } = getComputedLinkData(
                             locale,
-                            item,
+                            item
                           );
 
                           if (!href) {

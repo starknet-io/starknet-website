@@ -2,7 +2,7 @@ import { Box, Link, Stack, Image, useColorModeValue } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
-import NextLink from "next/link";
+
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { IconLinkCardBlock } from "src/data/pages";
 import { getComputedLinkData } from "src/utils/utils";
@@ -67,7 +67,7 @@ export const IconLinkCard = ({
               </Text>
             </Stack>
             <Box>
-              <Link as={NextLink} variant="card" href={href}>
+              <Link variant="card" href={href}>
                 {label} &rarr;
               </Link>
             </Box>

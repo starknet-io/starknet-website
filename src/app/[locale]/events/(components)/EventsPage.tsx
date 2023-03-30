@@ -26,7 +26,7 @@ import { titleCase } from "src/utils/utils";
 import moment from "moment";
 import { Event } from "src/data/events";
 import type { BaseHit } from "instantsearch.js";
-import Link from "next/link";
+
 
 export interface AutoProps {
   readonly params: {
@@ -65,7 +65,7 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
             <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  as={Link}
+                  as='a'
                   href={`/${params.locale}/community`}
                   fontSize="sm"
                   noOfLines={1}

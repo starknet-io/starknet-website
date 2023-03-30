@@ -17,7 +17,7 @@ export const Stat = (props: StatProps) => {
   return (
     <Stack spacing="3" textAlign="center" {...stackProps}>
       <Heading
-        size={useBreakpointValue({ base: "lg", md: "xl" })}
+        size={'lg'}
         color="accent"
       >
         {value}

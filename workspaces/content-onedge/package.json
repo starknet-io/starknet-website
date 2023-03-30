@@ -9,11 +9,11 @@
     "build": "yarn update-dynamic-data; rm -rf dist; cp -r ../../_data dist"
   },
   "dependencies": {
-    "algoliasearch": "^4.15.0",
+    "algoliasearch": "^4.16.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
     "simple-git": "^3.17.0",
-    "vite-node": "^0.29.2",
+    "vite-node": "^0.29.8",
     "yaml": "^2.2.1"
   }
 }

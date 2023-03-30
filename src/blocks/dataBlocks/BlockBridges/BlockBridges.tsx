@@ -5,12 +5,12 @@ interface Props extends LocaleProps {
   noOfItems?: number;
 }
 
-export default async function BlockBridges({
+export default function BlockBridges({
   noOfItems,
   params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const bridges = await getBridges(locale);
+}: Props): JSX.Element {
+  const bridges = [];
+  // const bridges = await getBridges(locale);
 
   return (
     <Box>

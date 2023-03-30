@@ -9,7 +9,7 @@ import {
 } from "src/libs/chakra-ui";
 import { IconButton } from "@ui/IconButton";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
-import Link from "next/link";
+
 import {
   HiBars3,
   HiOutlineMoon,
@@ -32,14 +32,14 @@ export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const locale = useLocale();
-  const isDesktop = useBreakpointValue({ base: false, lg: true });
+  const isDesktop = true;
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Container py={{ base: "4", lg: "17px" }}>
       <HStack spacing="4" justify="space-between">
-        <Link href={`/${locale}/`}>
+        <a href={`/${locale}/`}>
           <StarknetLogo />
-        </Link>
+        </a>
         {isDesktop && (
           <>
             <ButtonGroup variant="link" spacing="18px">

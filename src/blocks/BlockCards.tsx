@@ -1,16 +1,16 @@
 "use client";
 import { Box, SimpleGrid } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
-import React from "react";
+import type React from "react";
 
 type Props = {
   children: React.ReactNode;
-  base?: number;
-  md?: number;
-  lg?: number;
-  xl?: number;
-  heading?: string;
-  headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  base?: number |undefined;
+  md?: number |undefined;
+  lg?: number |undefined;
+  xl?: number |undefined;
+  heading?: string |undefined;
+  headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"|undefined;
 };
 
 export const BlockCards = ({

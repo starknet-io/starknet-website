@@ -20,7 +20,7 @@ import {
 import { slugify } from "src/utils/utils";
 
 type RootProps = {
-  heading?: string;
+  heading?: string|undefined;
 } & FlexProps;
 
 const Root = (props: RootProps) => {

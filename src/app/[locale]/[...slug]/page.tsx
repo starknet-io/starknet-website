@@ -1,4 +1,4 @@
-import { getPageBySlug } from "src/data/pages";
+// import { getPageBySlug } from "src/data/pages";
 import moment from "moment";
 import {
   Breadcrumb,
@@ -7,33 +7,34 @@ import {
   Flex,
   Box,
 } from "../../../libs/chakra-ui";
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
-import { Page as PageType } from "src/data/pages";
+import type { Page as PageType } from "src/data/pages";
 import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { TableOfContents } from "../(components)/TableOfContents";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { Metadata } from "next";
+// import type { Metadata } from "next";
 import { preRenderedLocales } from "src/data/i18n/config";
+import { ThemeProvider } from "src/app/providers/ThemeProvider";
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
-  try {
-    const data = await getPageBySlug(
-      props.params.slug.join("/"),
-      props.params.locale,
-    );
+// export async function generateMetadata(props: Props): Promise<Metadata> {
+//   try {
+//     const data = await getPageBySlug(
+//       props.params.slug.join("/"),
+//       props.params.locale
+//     );
 
-    return {
-      title: data.title,
-    };
-  } catch {
-    return {};
-  }
-}
+//     return {
+//       title: data.title,
+//     };
+//   } catch {
+//     return {};
+//   }
+// }
 
 export async function generateStaticParams() {
   const params = [];
@@ -65,75 +66,76 @@ export async function generateStaticParams() {
 }
 
 export interface Props {
-  readonly params: LocaleParams & {
-    readonly slug: readonly string[];
-  };
+  readonly data: PageType;
 }
 
-export default async function Page({
-  params: { locale, slug },
-}: // @ts-expect-error
-Props): JSX.Element {
-  try {
-    const data = await getPageBySlug(slug.join("/"), locale);
-    const date = data?.gitlog?.date;
-    return (
-      <Box>
-        <PageLayout
-          breadcrumbs={
-            <>
-              {data.breadcrumbs &&
-              data.breadcrumbs_data &&
-              data.breadcrumbs_data.length > 0 ? (
-                <Breadcrumb separator="/">
-                  <BreadcrumbItem>
-                    <BreadcrumbLink
-                      fontSize="sm"
-                      href={`/${data.breadcrumbs_data[0].locale}/${data.breadcrumbs_data[0].slug}`}
-                    >
-                      {data.breadcrumbs_data[0].title}
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
+export default function Page({ data }: Props): JSX.Element {
+  return (
+    <ThemeProvider>
+      <Page2 data={data} />
+    </ThemeProvider>
+  );
+}
+export function Page2({ data }: Props): JSX.Element {
+  const date = data?.gitlog?.date;
 
-                  <BreadcrumbItem isCurrentPage>
-                    <BreadcrumbLink fontSize="sm">{data.title}</BreadcrumbLink>
-                  </BreadcrumbItem>
-                </Breadcrumb>
-              ) : null}
-            </>
-          }
-          pageLastUpdated={
-            data.page_last_updated && date
-              ? `Page last updated ${moment(date).fromNow()}  `
-              : null
-          }
-          main={
-            <Flex
-              direction="column"
-              gap={{
-                base: data.template === "content" ? "32px" : "56px",
-                lg: data.template === "content" ? "32px" : "136px",
-              }}
-            >
-              {data.blocks.map((block, i) => {
-                return <Block key={i} block={block} locale={locale} />;
-              })}
-            </Flex>
-          }
-          rightAside={
-            <>
-              {data.template === "content" ? (
-                <TableOfContents headings={pageToTableOfContents(data)} />
-              ) : null}
-            </>
-          }
-        />
-      </Box>
-    );
-  } catch (err) {
-    console.log(err);
-    notFound();
-  }
+  const locale = data.locale;
+
+  return (
+    <Box>
+      <PageLayout
+        breadcrumbs={
+          <>
+            {data.breadcrumbs &&
+            data.breadcrumbs_data &&
+            data.breadcrumbs_data.length > 0 ? (
+              <Breadcrumb separator="/">
+                <BreadcrumbItem>
+                  <BreadcrumbLink
+                    fontSize="sm"
+                    href={`/${data.breadcrumbs_data[0]!.locale}/${
+                      data.breadcrumbs_data[0]!.slug
+                    }`}
+                  >
+                    {data.breadcrumbs_data[0]!.title}
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem isCurrentPage>
+                  <BreadcrumbLink fontSize="sm">{data.title}</BreadcrumbLink>
+                </BreadcrumbItem>
+              </Breadcrumb>
+            ) : null}
+          </>
+        }
+        pageLastUpdated={
+          data.page_last_updated && date
+            ? `Page last updated ${moment(date).fromNow()}  `
+            : null
+        }
+        main={
+          <Flex
+            direction="column"
+            gap={{
+              base: data.template === "content" ? "32px" : "56px",
+              lg: data.template === "content" ? "32px" : "136px",
+            }}
+          >
+            {data.blocks.map((block, i) => {
+              return <Block key={i} block={block} locale={locale} />;
+            })}
+          </Flex>
+        }
+        rightAside={
+          <>
+            {data.template === "content" ? (
+              <TableOfContents headings={pageToTableOfContents(data)} />
+            ) : null}
+          </>
+        }
+      />
+    </Box>
+  );
 }
 
 interface HeadingData {

@@ -5,12 +5,12 @@ interface Props extends LocaleProps {
   noOfItems?: number;
 }
 
-export default async function BlockBlockExplorers({
+export default function BlockBlockExplorers({
   noOfItems,
   params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const blockExplorers = await getBlockExplorers(locale);
+}: Props): JSX.Element {
+  // const blockExplorers = await getBlockExplorers(locale);
+  const blockExplorers = [];
 
   return (
     <Box>

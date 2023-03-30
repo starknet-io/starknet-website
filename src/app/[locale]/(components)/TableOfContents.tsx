@@ -30,7 +30,6 @@ export function TableOfContents(props: Props) {
 
       const visibleHeadings: any[] = [];
       Object.keys(headingElementsRef.current).forEach((key) => {
-        // @ts-expect-error
         const headingElement = headingElementsRef.current[key];
         if (headingElement.isIntersecting) visibleHeadings.push(headingElement);
       });

@@ -5,12 +5,12 @@ interface Props extends LocaleProps {
   noOfItems?: number;
 }
 
-export default async function BlockOnRamps({
+export default function BlockOnRamps({
   noOfItems,
   params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const fiatOnRamps = await getFiatOnRamps(locale);
+}: Props): JSX.Element {
+  // const fiatOnRamps = await getFiatOnRamps(locale);
+  const fiatOnRamps = [];
 
   return (
     <Box>

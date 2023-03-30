@@ -55,7 +55,7 @@ export const FeaturedArticleCard = (props: Props) => {
                 color="heading-navy-fg"
                 lineHeight="1.1"
                 fontWeight="bold"
-                fontSize={useBreakpointValue({ base: "48px" })}
+                fontSize={'48px'}
               >
                 {props.title}
               </Heading>

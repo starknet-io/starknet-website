@@ -5,12 +5,12 @@ interface Props extends LocaleProps {
   noOfItems?: number;
 }
 
-export default async function BlockDapps({
+export default function BlockDapps({
   noOfItems,
   params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const dapps = await getDapps(locale);
+}: Props): JSX.Element {
+  const dapps = [];
+  // const dapps = await getDapps(locale);
 
   return (
     <Box>

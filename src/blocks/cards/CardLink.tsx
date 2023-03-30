@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, BoxProps, LinkBox } from "src/libs/chakra-ui";
-import NextLink from "next/link";
+
 type Props = {
   children: React.ReactNode;
   href?: string | undefined;

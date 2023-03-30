@@ -14,7 +14,7 @@ import {
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 
-import NextLink from "next/link";
+
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CardLink } from "./CardLink";
 import { getComputedLinkData } from "src/utils/utils";
@@ -65,8 +65,8 @@ export const ImageIconCard = ({
 
   return (
     <LinkBox
-      as={NextLink}
       href={href!}
+      as='a'
       sx={{ textDecoration: "none!important" }}
     >
       <CardGradientBorder padding="0" height="100%">

@@ -27,8 +27,7 @@ interface Props {
   readonly locale: string;
 }
 
-// @ts-expect-error
-export async function Block({ block, locale }: Props): JSX.Element {
+export function Block({ block, locale }: Props): JSX.Element {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
   } else if (block.type === "large_card") {

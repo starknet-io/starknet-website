@@ -5,14 +5,14 @@ import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { getComputedLinkData } from "src/utils/utils";
 import { BasicCardBlock } from "src/data/pages";
-import Link from "next/link";
+
 
 type Props = BasicCardBlock & { locale: string };
 
 export const BasicCard = ({ link, title, size = "md", locale }: Props) => {
   const { href, label } = getComputedLinkData(locale, link);
   return (
-    <LinkBox as={Link} href={href!}>
+    <LinkBox as='a' href={href!}>
       <CardGradientBorder height="100%" padding="0">
         <Box
           mx="auto"

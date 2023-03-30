@@ -13,7 +13,7 @@ import {
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import NextLink from "next/link";
+
 import { CardLink } from "./CardLink";
 import { LargeCardBlock } from "src/data/pages";
 import { getComputedLinkData } from "src/utils/utils";
@@ -31,8 +31,8 @@ export const LargeCard = ({
   const { href, label } = getComputedLinkData(locale, link);
   return (
     <LinkBox
-      as={NextLink}
       href={href!}
+      as='a'
       sx={{ textDecoration: "none!important" }}
     >
       <CardGradientBorder padding="0">
@@ -91,14 +91,8 @@ export const LargeCard = ({
                           marginTop={{ base: "32px", md: "0" }}
                           color="heading-navy-fg"
                           variant="h2"
-                          lineHeight={useBreakpointValue({
-                            base: "1.2em",
-                            md: "1.3em",
-                          })}
-                          fontSize={useBreakpointValue({
-                            base: "40px",
-                            md: "48px",
-                          })}
+                          lineHeight={'1.3em'}
+                          fontSize={'48px'}
                           mb={0}
                           fontWeight="bold"
                         >
@@ -120,7 +114,6 @@ export const LargeCard = ({
                   <Stack direction={{ base: "column", md: "row" }} spacing="3">
                     <Link
                       mb="32px"
-                      as={NextLink}
                       variant="card"
                       href={href}
                       _hover={{ textDecoration: "underline!important" }}

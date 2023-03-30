@@ -5,12 +5,13 @@ interface Props extends LocaleProps {
   noOfItems?: number;
 }
 
-export default async function BlockWallets({
+export default function BlockWallets({
   noOfItems,
   params: { locale },
-}: //@ts-expect-error
+}:
 Props): JSX.Element {
-  const wallets = await getWallets(locale);
+  // const wallets = await getWallets(locale);
+  const wallets = []
 
   return (
     <Box>

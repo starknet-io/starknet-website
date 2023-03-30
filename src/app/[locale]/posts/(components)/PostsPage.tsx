@@ -27,7 +27,7 @@ import { useRouter } from "next/navigation";
 import type { Topic } from "src/data/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
-import Link from "next/link";
+
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -81,7 +81,7 @@ export function PostsPage({
             <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  as={Link}
+                  as='a'
                   href={`/${params.locale}/community`}
                   fontSize="sm"
                   noOfLines={1}

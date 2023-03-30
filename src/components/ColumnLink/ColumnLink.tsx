@@ -9,7 +9,7 @@ import {
 } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { HiPlay } from "react-icons/hi2";
-import NextLink from "next/link";
+
 type Props = {
   active?: boolean;
 } & ButtonProps &
@@ -20,7 +20,7 @@ export const ColumnLink = ({ active, ...props }: Props) => {
     <Button
       {...props}
       variant="solid"
-      as={Link}
+      as='a'
       leftIcon={
         <Icon
           color={active ? "columnlink-active-fg" : "columnlink-bg"}

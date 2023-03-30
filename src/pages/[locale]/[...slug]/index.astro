@@ -1,0 +1,42 @@
+---
+import { getPageBySlug } from "src/data/pages";
+// import moment from "moment";
+// import {
+//   Breadcrumb,
+//   BreadcrumbItem,
+//   BreadcrumbLink,
+//   Flex,
+//   Box,
+// } from "../../../libs/chakra-ui";
+// import { notFound } from "next/navigation";
+// import { PageLayout } from "@ui/Layout/PageLayout";
+// import { Block } from "src/blocks/Block";
+// import { Page as PageType } from "src/data/pages";
+// import { Index } from "unist-util-index";
+// import remarkParse from "remark-parse";
+// import { unified } from "unified";
+// import { TableOfContents } from "src/app/[locale]/(components)/TableOfContents";
+// import * as fs from "node:fs/promises";
+// import * as path from "node:path";
+// import { Metadata } from "next";
+// import { preRenderedLocales } from "src/data/i18n/config";
+
+// import { CollectionEntry, getCollection } from "astro:content";
+// import BlogPost from "../../../layouts/BlogPost.astro";
+import Page, { generateStaticParams } from "src/app/[locale]/[...slug]/page";
+import LocaleLayout from '../../../layouts/LocaleLayout.astro'
+
+export async function getStaticPaths() {
+  return generateStaticParams();
+}
+
+const { locale, slug } = Astro.params;
+
+const data = await getPageBySlug(slug!, locale!);
+---
+
+<LocaleLayout>
+  <Page data={data} client:load />
+
+</LocaleLayout>
+

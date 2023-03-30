@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import type React from "react";
 import * as StarkLinkList from "@ui/LinkList/LinkList";
 
 type Props = {
   children: React.ReactNode;
-  heading?: string;
+  heading?: string|undefined;
 };
 
 export const LinkList = (props: Props) => {

@@ -26,7 +26,7 @@ import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
@@ -65,7 +65,7 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
             <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  as={Link}
+                  as='a'
                   href={`/${params.locale}/developers`}
                   fontSize="sm"
                   noOfLines={1}

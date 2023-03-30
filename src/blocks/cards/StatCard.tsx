@@ -2,7 +2,7 @@ import { Box, Link, Stack, useColorModeValue } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
-import NextLink from "next/link";
+
 
 type Props = {
   title: string;

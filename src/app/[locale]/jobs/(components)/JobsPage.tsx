@@ -23,7 +23,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { titleCase } from "src/utils/utils";
-import Link from "next/link";
+
 
 export interface AutoProps {
   readonly params: {
@@ -62,7 +62,7 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
             <Breadcrumb separator="/">
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  as={Link}
+                  as='a'
                   href={`/${params.locale}/community`}
                   fontSize="sm"
                   noOfLines={1}

@@ -177,7 +177,7 @@ export const BlockHeroLines = ({
                   <Heading
                     color="heading-navy-fg"
                     variant="h2"
-                    size={useBreakpointValue({ base: "md", md: "lg" })}
+                    size={'md'}
                   >
                     {title}
                   </Heading>

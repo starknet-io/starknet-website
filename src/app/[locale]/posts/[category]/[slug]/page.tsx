@@ -26,7 +26,7 @@ import { getCategories } from "src/data/categories";
 import { getTopics } from "src/data/topics";
 import { Metadata } from "next";
 import { preRenderedLocales } from "src/data/i18n/config";
-import Link from "next/link";
+
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -35,9 +35,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     const PUBLIC_URL =
       process.env.VERCEL_URL && process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
         ? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
-          ? `https://starknet-website-dev.vercel.app`
+          ? "https://starknet-website-dev.vercel.app"
           : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
-          ? `https://www.starknet.io`
+          ? "https://www.starknet.io"
           : `https://${process.env.VERCEL_URL}`
         : "";
 
@@ -111,7 +111,7 @@ export default async function Page({
           <Breadcrumb separator="/">
             <BreadcrumbItem>
               <BreadcrumbLink
-                as={Link}
+                as='a'
                 href={`/${locale}/posts`}
                 fontSize="sm"
                 noOfLines={1}
@@ -121,7 +121,7 @@ export default async function Page({
             </BreadcrumbItem>
             <BreadcrumbItem>
               <BreadcrumbLink
-                as={Link}
+                as='a'
                 href={`/${locale}/posts/${category.slug}`}
                 fontSize="sm"
                 noOfLines={1}
