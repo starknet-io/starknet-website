@@ -24,7 +24,7 @@ export default function ShareEmbed({
       </Text>
       <Textarea
         fontSize="sm"
-        rows={6}
+        rows={5}
         value={value}
         onChange={(v) => setValue(v.target.value)}
         resize="none"
