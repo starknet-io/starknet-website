@@ -40,7 +40,7 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_130_216067)">
+          <g clipPath="url(#clip0_130_216067)">
             <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
           </g>
           <defs>
@@ -59,7 +59,7 @@ export const PlayButton = ({ handlePlay, playingStatus }: PlayButtonProps) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_130_216066)">
+        <g clipPath="url(#clip0_130_216066)">
           <path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="currentColor" />
         </g>
         <defs>

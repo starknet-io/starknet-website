@@ -1,4 +1,4 @@
-import { useWindowSize } from "react-use";
+import { useWindowSize } from "./useWindowSize";
 
 export const usePlayerPositionStyle = () => {
   const { width = 0, height = 0 } = useWindowSize();

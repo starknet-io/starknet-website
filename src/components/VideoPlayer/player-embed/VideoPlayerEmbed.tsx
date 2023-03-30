@@ -71,6 +71,8 @@ export function VideoPlayerEmbed({
     onOpen: onOpenShareModal,
   } = useDisclosure();
 
+  console.log("positionStyle", positionStyle);
+
   const [_, setChapterTimeoutCount] = React.useState(5);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();

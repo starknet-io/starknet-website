@@ -33,7 +33,7 @@ export const FullscreenButton = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_137_3449)">
+        <g clipPath="url(#clip0_137_3449)">
           <path
             d="M9.33317 18.6667H6.6665V25.3333H13.3332V22.6667H9.33317V18.6667ZM6.6665 13.3333H9.33317V9.33332H13.3332V6.66666H6.6665V13.3333ZM22.6665 22.6667H18.6665V25.3333H25.3332V18.6667H22.6665V22.6667ZM18.6665 6.66666V9.33332H22.6665V13.3333H25.3332V6.66666H18.6665Z"
             fill="currentColor"
