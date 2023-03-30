@@ -5,6 +5,7 @@ import {
   InputGroup,
   InputRightElement,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import {
@@ -42,6 +43,7 @@ const SocialShare = ({ shareUrl }: { shareUrl: string }) => {
         />
         <InputRightElement width="4rem" right={5}>
           <Button
+            variant="unstyled"
             h="1.75rem"
             size="sm"
             onClick={() => {
@@ -51,6 +53,9 @@ const SocialShare = ({ shareUrl }: { shareUrl: string }) => {
             width="4rem"
             fontSize="xs"
             textTransform="uppercase"
+            color="grey.darkText"
+            bg="grey.morning"
+            borderRadius="4px"
           >
             {copied && !state.error ? "Copied" : "Copy"}
           </Button>
