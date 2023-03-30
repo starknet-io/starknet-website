@@ -1,0 +1,56 @@
+id: eab90b4d-4ad7-4ae9-a9fd-db2cb1aef5db
+post_type: video
+title: "Starknet Community Call #37 | Starknet Alpha v0.11.0"
+published_date: 2023-03-22T12:33:52.457Z
+video:
+  url: https://www.youtube.com/watch?v=yh4F7Eii8Lw&list=PLcIyXLwiPilWpAItJqnBgq1cu180i9dPd&index=2
+  id: yh4F7Eii8Lw
+  data:
+    kind: youtube#video
+    etag: caisTHzp_z6K6fyxa60zQh27IdE
+    id: yh4F7Eii8Lw
+    snippet:
+      publishedAt: 2023-03-23T03:46:03Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #37 | Starknet Alpha v0.11.0"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/yh4F7Eii8Lw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/yh4F7Eii8Lw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/yh4F7Eii8Lw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/yh4F7Eii8Lw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/yh4F7Eii8Lw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #37 | Starknet Alpha v0.11.0"
+        description: ""
+      defaultAudioLanguage: en-US
+image: /assets/community-calls-37.jpg
+category: community-calls
+topic:
+  - 3fc1282e-a54b-4932-b14e-a3b3d24a9a1f
