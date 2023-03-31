@@ -43,7 +43,7 @@ type Props = {
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
-  console.log('props ', props)
+
   return (
     <Box maxW="5xl">
       <LinkBox

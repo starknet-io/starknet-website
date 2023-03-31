@@ -196,8 +196,7 @@ function CustomHits() {
         {hits.map((hit) => {
           let startDate = new Date(hit?.start_date);
           let endDate = new Date(hit?.end_date ?? '');
-          let hasBothDates = hit?.end_date && hit?.start_date;
-          let hasSameDay = startDate.getDay() === endDate.getDay();
+          let hasSameDay = startDate.getDate() === endDate.getDate();
           let hasSameMonth = startDate.getMonth() === endDate.getMonth();
           let hasSameYear = startDate.getFullYear() === endDate.getFullYear();
           return (
@@ -207,9 +206,9 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
-                  ? `${moment(hit?.start_date).format(hasSameDay ? 'DD MMM, YYYY' : hasSameMonth ? 'DD' : hasSameYear ? "DD MMM, YYYY" : "MMM DD")} - ${moment(
-                      hit?.end_date,
-                    ).format("MMM DD, YYYY")}`
+                  ? `${moment(hit?.start_date).format(hasSameDay ? 'DD MMM, YYYY' : hasSameMonth ? 'DD' : hasSameYear ? "DD MMM" : "DD MMM, YYYY")}${!hasSameDay ? ' - ' : ''}${!hasSameDay ? moment(
+                      hit?.end_date
+                    ).format("DD MMM, YYYY") : ''}`
                   : moment(hit?.start_date).format("DD MMM, YYYY")
               }
               image={hit.image}
@@ -217,6 +216,8 @@ function CustomHits() {
               description={hit.description}
               type={hit.tags}
               location={hit.location}
+              city={hit.city}
+              country={hit.country}
             />
           );
         })}
