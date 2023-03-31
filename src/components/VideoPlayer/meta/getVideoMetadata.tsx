@@ -3,7 +3,7 @@ import { playlist, playlistObject } from "../constants";
 
 export default function getVideoMetadata(chapterId: string) {
   const chapter = playlistObject[chapterId] || playlist[0];
-  const videoUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed`;
+  const videoUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed?chapter=${chapter.id}`;
 
   const title = chapter.title;
   const description = chapter.description;

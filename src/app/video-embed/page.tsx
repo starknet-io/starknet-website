@@ -1,15 +1,19 @@
-import { VideoPlayerEmbed } from "@ui/VideoPlayer/player-embed/VideoPlayerEmbed";
 import { playlist } from "@ui/VideoPlayer/constants";
+import getVideoMetadata from "@ui/VideoPlayer/meta/getVideoMetadata";
+import { ThemeProvider } from "../providers/ThemeProvider";
+import VideoEmbedPage from "./(components)/VideoEmbedPage";
 
-export const metadata = {
-  title: "Video Tutorials",
-};
+interface VideoParams {
+  searchParams: { chapter: string };
+}
+export async function generateMetadata({
+  searchParams: { chapter = playlist[0].id },
+}: VideoParams) {
+  return getVideoMetadata(chapter);
+}
 
-export default function Page() {
-  return (
-    <VideoPlayerEmbed
-      chapters={playlist}
-      initialActiveChapter={playlist[0].id}
-    />
-  );
+export default function Page({
+  searchParams: { chapter = playlist[0].id },
+}: VideoParams) {
+  return <VideoEmbedPage chapter={chapter} />;
 }

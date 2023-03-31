@@ -9,8 +9,8 @@ export default function ShareEmbed({
   currentChapter: string;
 }) {
   const chapter = playlistObject[currentChapter] || playlist[0];
-  const videoEmbedUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed`;
-  const defaultValue = `<iframe width="560" height="315" src="${videoEmbedUrl}" title=${chapter.title} frameborder="0" allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>`;
+  const videoEmbedUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed?chapter=${chapter.id}`;
+  const defaultValue = `<iframe width="560" height="315" src="${videoEmbedUrl}" title="${chapter.title}" frameborder="0" allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>`;
 
   const [value, setValue] = useState(defaultValue);
   const inputRef = useRef<HTMLTextAreaElement>(null);
