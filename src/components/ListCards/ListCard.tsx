@@ -87,7 +87,7 @@ export const ListCard = (props: Props) => {
                   />
                 </Box>
               </Stack>
-              <Box>
+              <Box flex="1">
                 {props.startDateTime && (
                   <Text
                     mt="2"
