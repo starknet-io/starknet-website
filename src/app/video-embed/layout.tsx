@@ -1,9 +1,5 @@
-import { ThemeProvider } from "../providers/ThemeProvider";
-import { getMessages } from "src/data/i18n/intl";
-import { getMainMenu } from "src/data/settings/main-menu";
 import React from "react";
-import { i18nConfig } from "src/data/i18n/config";
-import { notFound } from "next/navigation";
+import { ThemeProvider } from "../providers/ThemeProvider";
 
 export const metadata = {
   title: {

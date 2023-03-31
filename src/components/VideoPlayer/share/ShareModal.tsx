@@ -8,6 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
+import { useLocale } from "src/app/[locale]/(components)/ClientLocaleProvider";
 import ShareEmbed from "./ShareEmbed";
 import SocialShare from "./SocialShare";
 
@@ -24,7 +25,8 @@ export default function ShareModal({
   showEmbed,
   currentChapter,
 }: ShareModalProps) {
-  const shareUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/en/video/${currentChapter}`;
+  const locale = useLocale();
+  const shareUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/${locale}/video?chapter=${currentChapter}`;
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />

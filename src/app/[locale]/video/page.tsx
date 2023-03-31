@@ -1,7 +1,21 @@
-import { playlist } from "@ui/VideoPlayer/constants";
-import { redirect } from "next/navigation";
+import getVideoMetadata from "@ui/VideoPlayer/meta/getVideoMetadata";
+import VideoPage from "./(components)/VideoPage";
 
-export default function Page({ params }: LocaleProps) {
-  const { locale } = params;
-  redirect(`/${locale}/video/${playlist[0].id}`);
+interface VideoParams {
+  searchParams: { chapter: string };
+  params: { locale: string };
+}
+export async function generateMetadata({
+  searchParams: { chapter },
+}: VideoParams) {
+  return getVideoMetadata(chapter);
+}
+
+interface Props extends VideoParams {}
+
+export default function Page({
+  searchParams: { chapter },
+  params: { locale },
+}: Props) {
+  return <VideoPage chapter={chapter} locale={locale} />;
 }
