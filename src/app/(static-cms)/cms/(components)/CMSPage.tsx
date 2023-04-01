@@ -27,11 +27,11 @@ export default function CMSPage({ backendBranch }: Props) {
 
       await Promise.all([
         loadScript(
-          "https://unpkg.com/@staticcms/core@1.2.12/dist/static-cms-core.js",
+          "https://unpkg.com/@staticcms/core@1.2.14/dist/static-cms-core.js",
         ),
-        loadScript(
-          "https://identity.netlify.com/v1/netlify-identity-widget.js",
-        ),
+        // loadScript(
+        //   "https://identity.netlify.com/v1/netlify-identity-widget.js",
+        // ),
       ]);
 
       // if (process.env.NODE_ENV === "development") {
@@ -54,6 +54,7 @@ export default function CMSPage({ backendBranch }: Props) {
 
   return (
     <style
+      // rome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{
         __html: css,
       }}
