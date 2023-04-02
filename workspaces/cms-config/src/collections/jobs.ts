@@ -22,7 +22,7 @@ export const jobsCollectionConfig = {
       name: "contact",
       label: "Contact",
       widget: "object",
-            fields: [
+      fields: [
         {
           name: "name",
           label: "Name",
@@ -47,14 +47,14 @@ export const jobsCollectionConfig = {
           name: "logo",
           label: "Project Logo",
           widget: "image",
-                  },
+        },
       ],
     },
     {
       name: "job",
       label: "Job",
       widget: "object",
-            fields: [
+      fields: [
         {
           name: "title",
           label: "Title",
@@ -74,7 +74,7 @@ export const jobsCollectionConfig = {
           name: "type",
           label: "Type",
           widget: "select",
-                    options: [
+          options: [
             {
               label: "Full time",
               value: "full_time",
@@ -97,7 +97,7 @@ export const jobsCollectionConfig = {
           name: "location",
           label: "Location",
           widget: "select",
-                    options: [
+          options: [
             {
               label: "Remote",
               value: "remote",
@@ -136,7 +136,7 @@ export const jobsCollectionConfig = {
           name: "required_experience",
           label: "Required experience",
           widget: "text",
-                  },
+        },
         {
           name: "scope",
           label: "Job scope",

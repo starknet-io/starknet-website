@@ -21,7 +21,7 @@ export const tutorialsCollectionConfig = {
       label: "Type",
       name: "type",
       widget: "select",
-            options: [
+      options: [
         {
           label: "Youtube",
           value: "youtube",
@@ -45,7 +45,7 @@ export const tutorialsCollectionConfig = {
       label: "Image",
       name: "image",
       widget: "image",
-            required: false,
+      required: false,
     },
     {
       label: "Title",
@@ -63,12 +63,12 @@ export const tutorialsCollectionConfig = {
       label: "Published at",
       name: "published_at",
       widget: "datetime",
-          },
+    },
     {
       label: "Difficulty",
       name: "difficulty",
       widget: "select",
-            options: [
+      options: [
         {
           label: "Beginner",
           value: "beginner",
@@ -87,7 +87,7 @@ export const tutorialsCollectionConfig = {
       label: "Belongs to course",
       name: "course",
       widget: "select",
-            options: [
+      options: [
         {
           label: "Bytesized series",
           value: "bytesized_series",

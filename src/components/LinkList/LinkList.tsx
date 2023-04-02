@@ -14,7 +14,7 @@ import {
   LinkProps,
   Avatar,
 } from "../../libs/chakra-ui";
-import { slugify } from "src/utils/utils";
+import { slugify } from "@starknet-io/cms-utils/src/index";
 
 type RootProps = {
   heading?: string;

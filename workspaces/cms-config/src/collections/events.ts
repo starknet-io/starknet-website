@@ -17,7 +17,7 @@ export const eventsCollectionConfig = {
       name: "type",
       label: "Type",
       widget: "select",
-            options: [
+      options: [
         {
           label: "Community Event",
           value: "community_event",
@@ -51,23 +51,23 @@ export const eventsCollectionConfig = {
       name: "start_date",
       label: "start date",
       widget: "datetime",
-          },
+    },
     {
       name: "end_date",
       label: "end date",
       widget: "datetime",
-            required: false,
+      required: false,
     },
     {
       name: "image",
       label: "Event Image",
       widget: "image",
-          },
+    },
     {
       name: "location",
       label: "Location",
       widget: "select",
-            options: [
+      options: [
         {
           label: "online / remote",
           value: "online_remote",
@@ -98,7 +98,7 @@ export const eventsCollectionConfig = {
       name: "tags",
       label: "Tags",
       widget: "list",
-            default: ["crypto", "blockchain", "starknet"],
+      default: ["crypto", "blockchain", "starknet"],
     },
   ],
 } satisfies Config["collections"][number] & CmsConfig["collections"][number];

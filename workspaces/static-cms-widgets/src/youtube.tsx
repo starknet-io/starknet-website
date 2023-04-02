@@ -32,11 +32,11 @@ export function YoutubeControl({
   hasErrors,
 }: WidgetControlProps<YoutubeFieldValue, YoutubeField>): JSX.Element {
   const [internalRawValue, setInternalValue] = useState<YoutubeFieldValue>(
-    value ?? { url: "" },
+    value ?? { url: "" }
   );
   const internalValue: YoutubeFieldValue = useMemo(
     () => (isDuplicate ? value ?? { url: "" } : internalRawValue),
-    [internalRawValue, isDuplicate, value],
+    [internalRawValue, isDuplicate, value]
   );
   const [fetching, setFetching] = useState<string | null>(null);
 
@@ -45,13 +45,13 @@ export function YoutubeControl({
       setInternalValue(newValue);
       onChange(newValue);
     },
-    [onChange],
+    [onChange]
   );
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setValue({ ...value, url: e.target.value });
     },
-    [setValue, value],
+    [setValue, value]
   );
 
   const handleBlur = useCallback(async () => {
@@ -70,7 +70,7 @@ export function YoutubeControl({
         setFetching(id);
 
         const res = await fetch(
-          `${API_BASE_URL}/youtube?id=${encodeURIComponent(id)}`,
+          `${API_BASE_URL}/youtube?id=${encodeURIComponent(id)}`
         );
 
         const { data, message } = await res.json();

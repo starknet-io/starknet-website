@@ -18,14 +18,12 @@ export default function App() {
           ...CMSConfig,
           backend: {
             ...CMSConfig.backend,
-            branch: 'tsotne/wip',
+            branch: "tsotne/wip",
           },
         },
       });
     })();
   }, []);
 
-  return (
-    <div />
-  );
+  return <div />;
 }

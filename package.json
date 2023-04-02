@@ -52,6 +52,7 @@
     "@mui/material": "^5.11.15",
     "@netlify/plugin-nextjs": "^4.33.0",
     "@next/mdx": "^13.2.4",
+    "@starknet-io/cms-utils": "workspace:*",
     "@staticcms/core": "^1.2.14",
     "@testing-library/jest-dom": "^5.16.5",
     "@twistezo/react-text-scramble": "^1.0.6",

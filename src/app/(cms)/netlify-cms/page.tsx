@@ -6,7 +6,9 @@ export const metadata = {
   title: "Content Manager",
 };
 
-const NetlifyCMSPage = dynamic(() => import("./NetlifyCMSPage"), { ssr: false });
+const NetlifyCMSPage = dynamic(() => import("./NetlifyCMSPage"), {
+  ssr: false,
+});
 
 export default async function Page() {
   return (

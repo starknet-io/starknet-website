@@ -25,7 +25,7 @@ export function UUIDControl({
   const [internalRawValue, setInternalValue] = useState(value ?? defaultValue);
   const internalValue = useMemo(
     () => (isDuplicate ? value ?? defaultValue : internalRawValue),
-    [defaultValue, internalRawValue, isDuplicate, value],
+    [defaultValue, internalRawValue, isDuplicate, value]
   );
 
   const handleChange = useCallback(
@@ -33,7 +33,7 @@ export function UUIDControl({
       setInternalValue(event.target.value);
       onChange(event.target.value);
     },
-    [onChange],
+    [onChange]
   );
 
   return (

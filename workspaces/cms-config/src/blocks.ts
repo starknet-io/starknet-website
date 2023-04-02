@@ -1,7 +1,7 @@
 import type { Field, ListField } from "@staticcms/core";
 import type { CmsFieldList, CmsField } from "netlify-cms-core";
 
-export const linkFields= [
+export const linkFields = [
   {
     label: "Custom Title",
     required: false,
@@ -46,25 +46,25 @@ export const linkFields= [
     value_field: "id",
     display_fields: ["title"],
   },
-] satisfies (CmsField & Field)[]
+] satisfies (CmsField & Field)[];
 
 export const blocks = [
   {
     name: "markdown",
     label: "Rich Text / Markdown",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "body",
         widget: "markdown",
-              },
+      },
     ],
   },
   {
     name: "page_header",
     label: "Page Header",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -79,33 +79,33 @@ export const blocks = [
     name: "home_hero",
     label: "Home Hero",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
     ],
   },
   {
     name: "community_events",
     label: "Community events block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
     ],
   },
   {
     name: "dapps",
     label: "Dapps block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
       {
         name: "no_of_items",
         required: false,
@@ -117,11 +117,11 @@ export const blocks = [
     name: "block_explorers",
     label: "Block Explorers block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
       {
         name: "no_of_items",
         required: false,
@@ -133,11 +133,11 @@ export const blocks = [
     name: "bridges",
     label: "Bridges block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
       {
         name: "no_of_items",
         required: false,
@@ -149,11 +149,11 @@ export const blocks = [
     name: "on_ramps",
     label: "On-Ramps block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
       {
         name: "no_of_items",
         required: false,
@@ -165,11 +165,11 @@ export const blocks = [
     name: "wallets",
     label: "Wallets block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "type",
         widget: "hidden",
-              },
+      },
       {
         name: "no_of_items",
         required: false,
@@ -181,7 +181,7 @@ export const blocks = [
     name: "get_involved_card",
     label: "Get Involved card",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -193,7 +193,7 @@ export const blocks = [
       {
         name: "link",
         widget: "object",
-                fields: linkFields,
+        fields: linkFields,
       },
     ],
   },
@@ -201,7 +201,7 @@ export const blocks = [
     name: "basic_card",
     label: "Basic card",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -209,12 +209,12 @@ export const blocks = [
       {
         name: "link",
         widget: "object",
-                fields: linkFields,
+        fields: linkFields,
       },
       {
         name: "size",
         widget: "select",
-                required: false,
+        required: false,
         options: ["sm", "md"],
         default: "sm",
       },
@@ -224,7 +224,7 @@ export const blocks = [
     name: "icon_link_card",
     label: "Icon link card",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -232,16 +232,16 @@ export const blocks = [
       {
         name: "link",
         widget: "object",
-                fields: linkFields,
+        fields: linkFields,
       },
       {
         name: "icon",
         widget: "image",
-              },
+      },
       {
         name: "color",
         widget: "select",
-                required: false,
+        required: false,
         options: ["orange", "blue", "green", "yellow"],
         default: "orange",
       },
@@ -251,7 +251,7 @@ export const blocks = [
     name: "image_icon_link_card",
     label: "Image Icon link card",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -263,16 +263,16 @@ export const blocks = [
       {
         name: "link",
         widget: "object",
-                fields: linkFields,
+        fields: linkFields,
       },
       {
         name: "icon",
         widget: "image",
-              },
+      },
       {
         name: "color",
         widget: "select",
-                required: false,
+        required: false,
         options: [
           "blue-default",
           "purple",
@@ -290,7 +290,7 @@ export const blocks = [
     name: "large_card",
     label: "Large card",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -298,7 +298,7 @@ export const blocks = [
       {
         name: "link",
         widget: "object",
-                fields: linkFields,
+        fields: linkFields,
       },
       {
         name: "description",
@@ -307,11 +307,11 @@ export const blocks = [
       {
         name: "image",
         widget: "image",
-              },
+      },
       {
         name: "orientation",
         widget: "select",
-                required: false,
+        required: false,
         options: ["left", "right"],
       },
     ],
@@ -320,7 +320,7 @@ export const blocks = [
     name: "hero",
     label: "Hero",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "title",
         widget: "string",
@@ -332,7 +332,7 @@ export const blocks = [
       {
         name: "variant",
         widget: "select",
-                required: false,
+        required: false,
         options: [
           "wallets",
           "block_explorers",
@@ -350,7 +350,7 @@ export const blocks = [
     name: "link_list",
     label: "LinkList",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "heading",
         label: "Heading",
@@ -361,7 +361,7 @@ export const blocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-                fields: [
+        fields: [
           {
             name: "label",
             widget: "string",
@@ -377,7 +377,7 @@ export const blocks = [
           {
             name: "is_external",
             widget: "boolean",
-                        required: false,
+            required: false,
             default: false,
           },
         ],
@@ -388,7 +388,7 @@ export const blocks = [
     name: "accordion",
     label: "Accordion",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "heading",
         label: "Heading",
@@ -399,7 +399,7 @@ export const blocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-                fields: [
+        fields: [
           {
             name: "label",
             label: "Label",
@@ -409,7 +409,7 @@ export const blocks = [
             name: "body",
             label: "Content",
             widget: "markdown",
-                      },
+          },
         ],
       },
     ],
@@ -418,12 +418,12 @@ export const blocks = [
     name: "ordered_block",
     label: "Ordered Block",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "blocks",
         label: "Blocks",
         widget: "list",
-                fields: [
+        fields: [
           {
             name: "title",
             widget: "string",
@@ -432,31 +432,30 @@ export const blocks = [
             name: "body",
             label: "Content",
             widget: "markdown",
-                      },
+          },
         ],
       },
     ],
   },
-] satisfies CmsFieldList['types'] & ListField['types'];
-
+] satisfies CmsFieldList["types"] & ListField["types"];
 
 export const topLevelBlocks = [
   {
     name: "group",
     label: "Block group",
     widget: "object",
-        fields: [
+    fields: [
       {
         // quickfix for a bug with lists that have only one field
         name: "not-a-field",
         widget: "hidden",
-                required: false,
+        required: false,
       },
       {
         name: "blocks",
         label: "Blocks",
         widget: "list",
-                types: blocks,
+        types: blocks,
         default: [],
       },
     ],
@@ -465,17 +464,17 @@ export const topLevelBlocks = [
     name: "container",
     label: "Container",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "max_width",
         label: "Max width",
         widget: "number",
-              },
+      },
       {
         name: "blocks",
         label: "Blocks",
         widget: "list",
-                types: blocks,
+        types: blocks,
         default: [],
       },
     ],
@@ -484,26 +483,26 @@ export const topLevelBlocks = [
     name: "flex_layout",
     label: "Flex layout",
     widget: "object",
-        fields: [
+    fields: [
       {
         name: "base",
         widget: "number",
-                required: false,
+        required: false,
       },
       {
         name: "md",
         widget: "number",
-                required: false,
+        required: false,
       },
       {
         name: "lg",
         widget: "number",
-                required: false,
+        required: false,
       },
       {
         name: "xl",
         widget: "number",
-                required: false,
+        required: false,
       },
       {
         name: "heading",
@@ -513,7 +512,7 @@ export const topLevelBlocks = [
       {
         name: "heading_variant",
         widget: "select",
-                options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
         required: false,
         default: "sm",
       },
@@ -521,10 +520,10 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-                types: blocks,
+        types: blocks,
         default: [],
       },
     ],
   },
   ...blocks,
-] satisfies CmsFieldList['types'] & ListField['types'];
+] satisfies CmsFieldList["types"] & ListField["types"];

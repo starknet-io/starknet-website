@@ -49,16 +49,16 @@ function renderBody(
   content: {
     token: string;
     provider: string;
-  },
+  }
 ) {
   const authorization = JSON.stringify(
     ["authorization", content.provider, status, JSON.stringify(content)].join(
-      ":",
-    ),
+      ":"
+    )
   );
 
   const authorizing = JSON.stringify(
-    ["authorizing", content.provider].join(":"),
+    ["authorizing", content.provider].join(":")
   );
 
   return `

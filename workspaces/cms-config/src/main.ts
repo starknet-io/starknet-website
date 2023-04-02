@@ -31,6 +31,6 @@ export const CMSConfig = {
     eventsCollectionConfig,
     jobsCollectionConfig,
     tutorialsCollectionConfig,
-    settingsCollectionConfig
-  ]
+    settingsCollectionConfig,
+  ],
 } satisfies CmsConfig & Config;
