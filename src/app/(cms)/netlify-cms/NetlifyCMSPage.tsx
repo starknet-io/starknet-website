@@ -3,9 +3,10 @@
 import * as React from "react";
 // import * as ReactDOM from "react-dom";
 // import { loadScript } from "src/utils/utils";
-import { CMSConfig } from "../(config)/config";
-// import { UUIDWidget } from "../static-cms/widgets/uuid";
-// import { YoutubeWidget } from "../static-cms/widgets/youtube";
+import { CMSConfig } from "@starknet-io/cms-config/src/main";
+import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
+import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/uuid";
+
 
 interface Props {
   readonly backendBranch: string;
@@ -26,10 +27,11 @@ export default function NetlifyCMSPage({ backendBranch }: Props) {
 
       // CMS.registerWidget([UUIDWidget(), YoutubeWidget()]);
 
-      // cms.registerWidget([
-      //   NetlifyCmsWidgetUUID.Widget(),
-      //   NetlifyCmsWidgetYouTube.Widget(),
-      // ]);
+      // @ts-expect-error
+      CMS.registerWidget([
+        NetlifyCmsWidgetUUID.Widget(),
+        NetlifyCmsWidgetYouTube.Widget(),
+      ]);
 
       // // if (process.env.NODE_ENV === "development") {
       // //   config.local_backend = true;

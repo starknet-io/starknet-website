@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { loadScript } from "src/utils/utils";
-import { CMSConfig } from "../(config)/config";
+import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import { UUIDWidget } from "./widgets/uuid";
 import { YoutubeWidget } from "./widgets/youtube";
 

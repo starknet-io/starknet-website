@@ -1,28 +1,42 @@
 {
   "extends": "./tsconfig.projects.json",
   "compilerOptions": {
+    "outDir": ".types",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
-    "types": ["vitest/importMeta", "vitest/globals", "@types/mdx"],
+    "types": [
+      "vitest/importMeta",
+      "vitest/globals",
+      "@types/mdx"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["./src/components/*"]
+      "@ui/*": [
+        "./src/components/*"
+      ]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "strictNullChecks": true
   },
   "include": [
     "_data/i18n/*.json",
     "_data/i18n/intl/*.json",
     "./next-env.d.ts",
     "./src/**/*",
-    "./.next/types/**/*.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "_data/categories",
@@ -44,6 +58,9 @@
   "references": [
     {
       "path": "./workspaces/cms-config"
+    },
+    {
+      "path": "./workspaces/netlify-cms-widgets"
     }
     // {
     //   "path": "./workspaces/content-onedge"

@@ -1,5 +1,5 @@
 {
-  "name": "@starknet-io/cms-config",
+  "name": "@starknet-io/netlify-cms-widgets",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -7601,7 +7601,14 @@ __metadata:
   resolution: "@starknet-io/cms-config@workspace:workspaces/cms-config"
   dependencies:
     typescript: ^5.0.3
-    vite: ^4.2.1
+  languageName: unknown
+  linkType: soft
+
+"@starknet-io/netlify-cms-widgets@workspace:workspaces/netlify-cms-widgets":
+  version: 0.0.0-use.local
+  resolution: "@starknet-io/netlify-cms-widgets@workspace:workspaces/netlify-cms-widgets"
+  dependencies:
+    typescript: ^5.0.3
   languageName: unknown
   linkType: soft
 
