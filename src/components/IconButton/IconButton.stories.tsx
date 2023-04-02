@@ -4,11 +4,12 @@ import { ThemeProvider } from "src/app/providers/ThemeProvider";
 import {
   SiTwitter
 } from "react-icons/si";
+import { Meta } from "@storybook/react";
 
 export default {
   title: "starknet.io/IconButton",
   component: IconButton,
-};
+} as Meta<typeof IconButton>;
 
 export const Default = () => (
   <ThemeProvider>
