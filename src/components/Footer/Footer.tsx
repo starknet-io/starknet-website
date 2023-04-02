@@ -9,7 +9,6 @@ import {
   Text,
 } from "src/libs/chakra-ui";
 import { IconButton } from "@ui/IconButton";
-import { Button } from "@ui/Button";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";

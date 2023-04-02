@@ -1,12 +1,8 @@
 import {
-  Box,
   Button,
   Popover,
   PopoverContent,
   PopoverTrigger,
-  SimpleGrid,
-  Stack,
-  Text,
 } from "src/libs/chakra-ui";
 import * as React from "react";
 

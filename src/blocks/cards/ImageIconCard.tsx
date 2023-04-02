@@ -4,10 +4,7 @@ import {
   Card,
   CardBody,
   CardFooter,
-  Divider,
-  Flex,
   Image,
-  Link,
   LinkBox,
   Stack,
 } from "src/libs/chakra-ui";
@@ -16,7 +13,6 @@ import { Text } from "@ui/Typography/Text";
 
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-import { CardLink } from "./CardLink";
 import { getComputedLinkData } from "src/utils/utils";
 import { ImageIconLinkCardBlock } from "src/data/pages";
 import { CustomLink } from "@ui/Link/CustomLink";

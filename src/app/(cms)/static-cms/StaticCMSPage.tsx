@@ -3,9 +3,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { loadScript } from "src/utils/utils";
-import { config } from "../config";
-import { UUIDWidget } from "../widgets/uuid";
-import { YoutubeWidget } from "../widgets/youtube";
+import { CMSConfig } from "../(config)/config";
+import { UUIDWidget } from "./widgets/uuid";
+import { YoutubeWidget } from "./widgets/youtube";
 
 interface Props {
   readonly backendBranch: string;
@@ -42,9 +42,9 @@ export default function CMSPage({ backendBranch }: Props) {
 
       window.CMS!.init({
         config: {
-          ...config,
+          ...CMSConfig,
           backend: {
-            ...config.backend,
+            ...CMSConfig.backend,
             branch: backendBranch,
           },
         },

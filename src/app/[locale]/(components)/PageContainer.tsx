@@ -20,6 +20,8 @@ export const PageContainer = ({ children, alerts }: Props) => {
         return result;
       }
     }
+
+    return null
   }, [path, alerts]);
 
   return (
@@ -48,6 +50,8 @@ export const PageContainer = ({ children, alerts }: Props) => {
               );
             }
           }
+
+          return null
         })
       )}
       {children}

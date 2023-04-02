@@ -1,9 +1,7 @@
 "use client";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import React from "react";
 import {
-  HiArrowRightCircle,
   HiArrowUpRight,
   HiOutlineArrowRightCircle,
 } from "react-icons/hi2";
@@ -12,7 +10,6 @@ import {
   Icon,
   Flex,
   FlexProps,
-  HStack,
   Link,
   LinkProps,
   Avatar,

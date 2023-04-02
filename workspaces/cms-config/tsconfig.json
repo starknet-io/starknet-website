@@ -1,0 +1,12 @@
+{
+  // Extend the root compiler options
+  "extends": "../../tsconfig.projects.json",
+  "compilerOptions": {
+    // Declarations are written here
+    "outDir": "lib"
+  },
+  // Include files in the project
+  "include": ["src/**/*"],
+  // Depends on other projects
+  "references": []
+}

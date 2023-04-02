@@ -2,7 +2,6 @@
 
 import { Container, Stack } from "@chakra-ui/react";
 import { Main } from "@ui/Layout/Main";
-import { Sidebar } from "@ui/Layout/Sidebar";
 
 type Props = {
   children: React.ReactNode;

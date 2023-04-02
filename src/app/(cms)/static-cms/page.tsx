@@ -6,7 +6,7 @@ export const metadata = {
   title: "Content Manager",
 };
 
-const CMSPage = dynamic(() => import("./(components)/CMSPage"), { ssr: false });
+const CMSPage = dynamic(() => import("./StaticCMSPage"), { ssr: false });
 
 export default async function Page() {
   return (

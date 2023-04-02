@@ -1,17 +1,11 @@
 "use client";
 
-import { Fragment } from "react";
-import React from "react";
-import classnames from "classnames";
-import { Menu, Transition } from "src/libs/headlessui";
-import { ChevronDownIcon } from "src/libs/heroicons/20/solid";
 import { usePathname } from "next/navigation";
-import NextLink from "next/link";
 import { i18nConfig } from "src/data/i18n/config";
 import { useLocale } from "./ClientLocaleProvider";
 import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDropdown";
 import { ColumnLink, ColumnLinkDescription } from "@ui/ColumnLink/ColumnLink";
-import { Box, HStack } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();

@@ -1,7 +1,5 @@
-import { Box, Link, Stack, Image, useColorModeValue } from "src/libs/chakra-ui";
-import { Button } from "@ui/Button";
+import { Box, Link, Stack, Image } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
-import React from "react";
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { IconLinkCardBlock } from "src/data/pages";

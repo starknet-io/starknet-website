@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { defaultLocale } from "./i18n/config";
 import { getFirst, getJSON, Meta } from "./utils";
 import { LinkData } from "./settings/main-menu";

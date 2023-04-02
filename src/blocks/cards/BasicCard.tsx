@@ -1,6 +1,5 @@
-import { Box, GridItem, LinkBox, LinkOverlay, Stack } from "src/libs/chakra-ui";
+import { Box, LinkBox, Stack } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
-import React from "react";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { getComputedLinkData } from "src/utils/utils";

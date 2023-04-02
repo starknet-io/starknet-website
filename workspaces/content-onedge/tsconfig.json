@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+  },
+  "include": [
+    "src/**/*",
+  ],
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.lib.json"
+  //   }
+  // ]
+}
