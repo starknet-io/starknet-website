@@ -1,13 +1,10 @@
 {
-  "name": "@starknet-io/netlify-cms-widgets",
+  "name": "@starknet-io/cms-utils",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "build": "tsc"
-  },
-  "dependencies": {
-    "@starknet-io/cms-utils": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.0.3"

@@ -3,24 +3,7 @@ import { useState } from "react";
 // @ts-expect-error
 import { WidgetPreviewContainer } from "netlify-cms-ui-default";
 import { CmsWidgetControlProps } from "netlify-cms-core";
-
-function youtubeVideoIdFromURL(url: string): string | undefined | void {
-  try {
-    const obj = new URL(url);
-
-    if (obj.hostname === "www.youtube.com") {
-      if (obj.searchParams.get("v")) return obj.searchParams.get("v")!;
-
-      if (obj.pathname.startsWith("/live/")) {
-        return obj.pathname.replace("/live/", "");
-      }
-    } else if (obj.hostname === "youtu.be") {
-      return obj.pathname.slice(1);
-    }
-  } catch {
-    console.log("youtubeVideoIdFromURL", url);
-  }
-}
+import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/index";
 
 const API_BASE_URL =
   process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";

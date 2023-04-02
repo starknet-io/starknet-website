@@ -1,11 +1,11 @@
 {
-  "name": "static-cms",
+  "name": "@starknet-io/static-cms",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {

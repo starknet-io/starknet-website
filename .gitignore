@@ -57,3 +57,4 @@ next-env.d.ts
 .vscode/settings.json
 
 .types
+.types-*

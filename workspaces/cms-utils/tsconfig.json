@@ -2,8 +2,6 @@
   "extends": "../../tsconfig.projects.json",
   "compilerOptions": {
     "outDir": ".types",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "jsx": "preserve"
   },
   "include": ["src/**/*"]
 }

@@ -1,4 +1,4 @@
-import fs, { mkdir } from "node:fs/promises";
+import fs from "node:fs/promises";
 import * as path from "node:path";
 import * as dotenv from "dotenv";
 import YAML from "yaml";

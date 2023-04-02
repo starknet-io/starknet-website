@@ -20,7 +20,7 @@ jobs:
       #     node-version: 18
       #     cache: yarn
       # - run: yarn
-      # - run: yarn workspace content-onedge-workspace pre-crowdin
+      # - run: yarn workspace @starknet-io/cms-scripts pre-crowdin
 
       - name: crowdin action
         uses: crowdin/github-action@v1

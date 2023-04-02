@@ -9,26 +9,10 @@ import type {
 import { youtube_v3 } from "googleapis";
 import type { ChangeEvent } from "react";
 import { useCallback, useMemo, useState } from "react";
+import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/index";
 
-const API_BASE_URL = "/api";
-
-function youtubeVideoIdFromURL(url: string): string | undefined | void {
-  try {
-    const obj = new URL(url);
-
-    if (obj.hostname === "www.youtube.com") {
-      if (obj.searchParams.get("v")) return obj.searchParams.get("v")!;
-
-      if (obj.pathname.startsWith("/live/")) {
-        return obj.pathname.replace("/live/", "");
-      }
-    } else if (obj.hostname === "youtu.be") {
-      return obj.pathname.slice(1);
-    }
-  } catch {
-    console.log("youtubeVideoIdFromURL", url);
-  }
-}
+const API_BASE_URL =
+  process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";
 
 export interface YoutubeField extends BaseField {
   readonly widget: "youtube";

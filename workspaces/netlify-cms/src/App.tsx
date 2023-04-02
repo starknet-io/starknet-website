@@ -1,8 +1,8 @@
 import * as React from "react";
-import CMS from "@staticcms/core";
+import CMS from "netlify-cms-app";
 import { CMSConfig } from "@starknet-io/cms-config/src/main";
-import { UUIDWidget } from "@starknet-io/static-cms-widgets/src/uuid";
-import { YoutubeWidget } from "@starknet-io/static-cms-widgets/src/youtube";
+import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
+import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/uuid";
 
 export default function App() {
   React.useEffect(() => {
@@ -11,7 +11,11 @@ export default function App() {
       //   config.local_backend = true;
       // }
 
-      CMS.registerWidget([UUIDWidget(), YoutubeWidget()]);
+      // @ts-expect-error
+      CMS.registerWidget([
+        NetlifyCmsWidgetUUID.Widget(),
+        NetlifyCmsWidgetYouTube.Widget(),
+      ]);
 
       CMS.init({
         config: {

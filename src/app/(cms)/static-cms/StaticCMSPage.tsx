@@ -4,8 +4,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { loadScript } from "src/utils/utils";
 import { CMSConfig } from "@starknet-io/cms-config/src/main";
-import { UUIDWidget } from "./widgets/uuid";
-import { YoutubeWidget } from "./widgets/youtube";
+import { UUIDWidget } from "@starknet-io/static-cms-widgets/src/uuid";
+import { YoutubeWidget } from "@starknet-io/static-cms-widgets/src/youtube";
 
 interface Props {
   readonly backendBranch: string;
@@ -25,14 +25,9 @@ export default function CMSPage({ backendBranch }: Props) {
       window["react"] = React;
       window["react-dom"] = ReactDOM;
 
-      await Promise.all([
-        loadScript(
-          "https://unpkg.com/@staticcms/core@1.2.14/dist/static-cms-core.js",
-        ),
-        // loadScript(
-        //   "https://identity.netlify.com/v1/netlify-identity-widget.js",
-        // ),
-      ]);
+      await loadScript(
+        "https://unpkg.com/@staticcms/core@1.2.14/dist/static-cms-core.js"
+      );
 
       // if (process.env.NODE_ENV === "development") {
       //   config.local_backend = true;

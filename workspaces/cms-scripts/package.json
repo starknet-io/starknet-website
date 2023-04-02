@@ -1,12 +1,12 @@
 {
-  "name": "content-onedge-workspace",
+  "name": "@starknet-io/cms-scripts",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "update-algolia-index": "vite-node src/algolia.ts",
     "update-dynamic-data": "vite-node src/index.ts",
     "pre-crowdin": "vite-node src/pre-crowdin.ts",
-    "build": "yarn update-dynamic-data; rm -rf dist; cp -r ../../_data dist"
+    "build": "tsc"
   },
   "dependencies": {
     "algoliasearch": "^4.16.0",

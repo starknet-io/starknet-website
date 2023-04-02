@@ -17,9 +17,10 @@
     "test:e2e": "start-server-and-test 'yarn dev' 3000 'yarn cy:open'",
     "test:e2e:ci": "start-server-and-test 'yarn dev' 3000 'yarn cy:run'",
     "typecheck": "tsc --noEmit",
-    "cms": "yarn workspace netlify-cms-workspace dev",
-    "data": "yarn workspace content-onedge-workspace update-dynamic-data",
-    "update:algolia": "yarn workspace content-onedge-workspace update-algolia-index",
+    "cms": "yarn workspace @starknet-io/static-cms dev",
+    "netlify-cms": "yarn workspace @starknet-io/netlify-cms dev",
+    "data": "yarn workspace @starknet-io/cms-scripts update-dynamic-data",
+    "update:algolia": "yarn workspace @starknet-io/cms-scripts update-algolia-index",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "theme": "chakra-cli tokens src/style/theme.ts",
@@ -79,7 +80,6 @@
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "negotiator": "^0.6.3",
-    "netlify-cli": "^13.2.2",
     "netlify-cms-app": "^2.15.72",
     "netlify-cms-core": "^2.55.2",
     "netlify-cms-lib-widgets": "^1.8.1",
@@ -119,7 +119,10 @@
     "./workspaces/*"
   ],
   "resolutions": {
-    "netlify-cms-widget-markdown/unified": "^10.0.0"
+    "netlify-cms-widget-markdown/unified": "^10.0.0",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "vite": "^4.2.1"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.3.0",

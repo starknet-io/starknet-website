@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
@@ -8,10 +7,8 @@
     "experimentalDecorators": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "lib": [
-      "esnext"
-    ],
-    "module": "esnext",
+    "lib": ["ESNext"],
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
@@ -24,7 +21,7 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "strict": true,
-    "target": "es2022",
+    "target": "ES2022",
     "verbatimModuleSyntax": false
   }
 }
