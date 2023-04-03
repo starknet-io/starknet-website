@@ -77,6 +77,7 @@ export const ListCard = (props: Props) => {
                   borderRadius="8px"
                   overflow="hidden"
                   marginTop={{ base: "0px", md: "24px" }}
+                  marginBottom={{ base: "16px", md: "0" }}
                 >
                   <Img
                     width="full"
