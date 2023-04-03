@@ -246,6 +246,12 @@ export function VideoPlayer({
     setPlayingStatus("playing");
   };
 
+  const validateSeekRange = (t: number, func: (t: number) => void) => {
+    if (!isChapterChangeModalOpen && chapter && t <= chapter.endAt) {
+      func(t);
+    }
+  };
+
   const videoWrapperStyle: CSSProperties = isFullscreen
     ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
     : { position: "relative", flex: 1, paddingBottom: "56.25%" };
@@ -315,8 +321,9 @@ export function VideoPlayer({
             chapter={chapter}
             playingStatus={playingStatus}
             isControlActive={isControlActive}
-            totalDuration={totalDuration}
+            totalDuration={chapter.endAt - chapter.startAt}
             currentTime={currentTime}
+            currentDisplayTime={Math.ceil(currentTime - chapter.startAt)}
             onSeekScrubStart={(n) => {
               if (isChapterChangeModalOpen) {
                 setIsChapterChangeModalOpen(false);
@@ -334,6 +341,9 @@ export function VideoPlayer({
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}
             onShare={onOpenShareModal}
+            scrubMin={Math.floor(chapter.startAt)}
+            scrubMax={Math.ceil(chapter.endAt)}
+            validateSeekRange={validateSeekRange}
             // isDisabled={isChapterChangeModalOpen}
           />
         )}

@@ -18,6 +18,7 @@ import { SeekStatuses, useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
 import { useDisclosure } from "@chakra-ui/react";
 import ShareModal from "../share/ShareModal";
+import { convertSecondsToMMSS } from "../control-bar/utils";
 
 const videoJsOptions = {
   autoplay: false,
@@ -246,6 +247,12 @@ export function VideoPlayerEmbed({
     playerRef.current?.play();
   };
 
+  const validateSeekRange = (t: number, func: (t: number) => void) => {
+    if (!isChapterChangeModalOpen && chapter && t <= chapter.endAt) {
+      func(t);
+    }
+  };
+
   const videoWrapperStyle: CSSProperties = {
     position: "absolute",
     inset: 0,
@@ -296,6 +303,7 @@ export function VideoPlayerEmbed({
           currentChapter={currentChapter}
           onChapterSelect={onChapterSelect}
           onToggleExpandPlaylist={onToggleExpandPlaylist}
+          timeDisplay={convertSecondsToMMSS(chapter.startAt)}
         />
       )}
       {chapter && (
@@ -303,8 +311,9 @@ export function VideoPlayerEmbed({
           chapter={chapter}
           playingStatus={playingStatus}
           isControlActive={isControlActive}
-          totalDuration={totalDuration}
+          totalDuration={chapter.endAt - chapter.startAt}
           currentTime={currentTime}
+          currentDisplayTime={Math.ceil(currentTime - chapter.startAt)}
           onSeekScrubStart={onSeekScrubStart}
           onSeekScrubEnd={onSeekScrubEnd}
           onSeekScrubChange={onSeekScrubChange}
@@ -318,6 +327,9 @@ export function VideoPlayerEmbed({
           isFullscreen={isFullscreen}
           isDisabled={isChapterChangeModalOpen}
           onShare={onOpenShareModal}
+          scrubMin={Math.floor(chapter.startAt)}
+          scrubMax={Math.ceil(chapter.endAt)}
+          validateSeekRange={validateSeekRange}
         />
       )}
     </div>

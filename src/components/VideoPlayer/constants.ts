@@ -5,6 +5,7 @@ export type Chapter = {
   endAt: number;
   thumbnail: string;
   description: string;
+  videoId: string;
 };
 export const playlist: Chapter[] = [
   {
@@ -14,6 +15,7 @@ export const playlist: Chapter[] = [
     startAt: 0,
     endAt: 24,
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
+    videoId: "e137ccdba732ebfe87a792d9066730c3",
   },
   {
     id: "starknet",
@@ -22,6 +24,7 @@ export const playlist: Chapter[] = [
     startAt: 25,
     endAt: 50,
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
+    videoId: "89f18f763dc367c248ddb647bc93ade3",
   },
   {
     id: "sequencer",
@@ -30,6 +33,7 @@ export const playlist: Chapter[] = [
     startAt: 51,
     endAt: 74,
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
+    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
   },
   {
     id: "prover",
@@ -38,6 +42,7 @@ export const playlist: Chapter[] = [
     startAt: 75,
     endAt: 89,
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
+    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
   },
   {
     id: "eth-settlement",
@@ -46,6 +51,7 @@ export const playlist: Chapter[] = [
     startAt: 90,
     endAt: 110,
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
+    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
   },
   {
     id: "builders",
@@ -54,6 +60,7 @@ export const playlist: Chapter[] = [
     startAt: 111,
     endAt: 136,
     thumbnail: "/assets/video-thumbnail-placeholder.jpg",
+    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
   },
 ];
 

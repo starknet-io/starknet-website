@@ -12,6 +12,7 @@ interface ChaptersDropdownProps {
   currentChapter: string;
   onChapterSelect: (currentChapter: string) => void;
   onToggleExpandPlaylist: (isExpanded: boolean) => void;
+  timeDisplay: string;
 }
 export default function ChaptersDropdown({
   title,
@@ -21,6 +22,7 @@ export default function ChaptersDropdown({
   currentChapter,
   onChapterSelect,
   onToggleExpandPlaylist,
+  timeDisplay,
 }: ChaptersDropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -161,9 +163,7 @@ export default function ChaptersDropdown({
                 >
                   {chapter.title}
                 </Box>
-                <Box fontWeight={500}>
-                  {convertSecondsToMMSS(chapter.startAt)}
-                </Box>
+                <Box fontWeight={500}>{timeDisplay}</Box>
               </Box>
             </Box>
           );

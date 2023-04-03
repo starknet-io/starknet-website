@@ -19,6 +19,7 @@ type CustomControlProps = {
   isControlActive: boolean;
   totalDuration: number;
   currentTime: number;
+  currentDisplayTime: number;
   onSeekScrubStart: (val: number) => void;
   onSeekScrubEnd: (val: number) => void;
   onSeekScrubChange: (val: number) => void;
@@ -33,6 +34,9 @@ type CustomControlProps = {
   chapter: Chapter;
   isDisabled?: boolean;
   onShare: () => void;
+  scrubMin: number;
+  scrubMax: number;
+  validateSeekRange?: (t: number, func: (t: number) => void) => void;
 };
 export default function CustomControl(props: CustomControlProps) {
   const {
@@ -40,6 +44,7 @@ export default function CustomControl(props: CustomControlProps) {
     isControlActive,
     totalDuration,
     currentTime,
+    currentDisplayTime,
     onSeekScrubStart,
     onSeekScrubEnd,
     onSeekScrubChange,
@@ -51,9 +56,11 @@ export default function CustomControl(props: CustomControlProps) {
     volume,
     toggleFullscreen,
     isFullscreen,
-    chapter,
     isDisabled,
     onShare,
+    scrubMin,
+    scrubMax,
+    validateSeekRange,
   } = props;
 
   const shouldShowControl = () => {
@@ -64,7 +71,9 @@ export default function CustomControl(props: CustomControlProps) {
   };
 
   const callIfWithingChapter = (t: number, func: (t: number) => void) => {
-    if (!isDisabled && chapter && t <= chapter.endAt) {
+    if (validateSeekRange) {
+      validateSeekRange(t, func);
+    } else {
       func(t);
     }
   };
@@ -101,8 +110,8 @@ export default function CustomControl(props: CustomControlProps) {
         }}
       >
         <Scrubber
-          min={Math.floor(chapter.startAt)}
-          max={Math.ceil(chapter.endAt)}
+          min={scrubMin}
+          max={scrubMax}
           value={currentTime}
           onScrubStart={(v) => callIfWithingChapter(v, onSeekScrubStart)}
           onScrubEnd={(v) => callIfWithingChapter(v, onSeekScrubEnd)}
@@ -140,11 +149,11 @@ export default function CustomControl(props: CustomControlProps) {
           }}
         >
           <Box sx={{ minWidth: "45px" }}>
-            {convertSecondsToMMSS(Math.ceil(currentTime - chapter.startAt))}
+            {convertSecondsToMMSS(currentDisplayTime)}
           </Box>
           <Box>/</Box>
           <Box sx={{ minWidth: "45px", textAlign: "right" }}>
-            {convertSecondsToMMSS(Math.floor(chapter.endAt - chapter.startAt))}
+            {convertSecondsToMMSS(totalDuration)}
           </Box>
         </Box>
         <Box
