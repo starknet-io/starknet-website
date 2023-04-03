@@ -1,7 +1,7 @@
 import algoliasearch from "algoliasearch";
 import { defaultLocale } from "./i18n/config";
 import { TopLevelBlock } from "./pages";
-import { getFirst, getJSON, Meta } from "./utils";
+import { getFirst, getJSON, Meta } from "@starknet-io/cms-utils/src/index";
 import { youtube_v3 } from "googleapis";
 
 interface VideoMeta {

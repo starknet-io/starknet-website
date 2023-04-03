@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { i18nConfig } from "src/data/i18n/config";
+import { i18nConfig } from "@starknet-io/cms-data/src/i18n/config";
 import { useLocale } from "./ClientLocaleProvider";
 import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDropdown";
 import { ColumnLink, ColumnLinkDescription } from "@ui/ColumnLink/ColumnLink";

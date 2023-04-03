@@ -14,7 +14,7 @@ import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import { Heading } from "@ui/Typography/Heading";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-import { GetInvolvedBlock } from "src/data/pages";
+import { GetInvolvedBlock } from "@starknet-io/cms-data/src/pages";
 import { getComputedLinkData } from "src/utils/utils";
 
 type Props = GetInvolvedBlock & { locale: string };

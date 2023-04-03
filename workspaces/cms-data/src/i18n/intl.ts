@@ -16,12 +16,17 @@
 //   }
 // }
 
-export type MessagesType = typeof import("_data/i18n/intl/en.json");
+export type MessagesType = {
+  "search": "Search"
+};
 
 export async function getMessages(locale: string): Promise<MessagesType> {
-  try {
-    return (await import(`_data/i18n/intl/${locale}.json`)).default;
-  } catch {}
+  return {
+    "search": "Search"
+  };
+  // try {
+  //   return (await import(`_data/i18n/intl/${locale}.json`)).default;
+  // } catch {}
 
-  return (await import("_data/i18n/intl/en.json")).default;
+  // return (await import("_data/i18n/intl/en.json")).default;
 }

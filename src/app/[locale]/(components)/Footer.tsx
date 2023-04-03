@@ -1,7 +1,7 @@
 "use client";
 import { Box, Stack, StackDivider } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
-import type { MainMenu } from "src/data/settings/main-menu";
+import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { getComputedLinkData } from "src/utils/utils";
 import { useLocale } from "./ClientLocaleProvider";
 

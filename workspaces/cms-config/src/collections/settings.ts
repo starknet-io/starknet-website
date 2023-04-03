@@ -2,8 +2,6 @@ import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 import { linkFields } from "../blocks";
 
-const locale = "en";
-
 export const settingsCollectionConfig = {
   label: "Settings",
   name: "settings",
@@ -11,7 +9,7 @@ export const settingsCollectionConfig = {
     {
       label: "Main Menu",
       name: "main-menu",
-      file: `_data/settings/${locale}/main-menu.yml`,
+      file: `_data/settings/main-menu.yml`,
       fields: [
         {
           label: "Top Level Menu Items",
@@ -70,7 +68,7 @@ export const settingsCollectionConfig = {
     {
       label: "Redirects",
       name: "redirects",
-      file: `_data/settings/${locale}/redirects.yml`,
+      file: `_data/settings/redirects.yml`,
       fields: [
         {
           label: "Redirects",
@@ -92,7 +90,7 @@ export const settingsCollectionConfig = {
     {
       label: "Dapps",
       name: "dapps",
-      file: `_data/settings/${locale}/dapps.yml`,
+      file: `_data/settings/dapps.yml`,
       fields: [
         {
           label: "Dapps",
@@ -131,7 +129,7 @@ export const settingsCollectionConfig = {
     {
       label: "Wallets",
       name: "wallets",
-      file: `_data/settings/${locale}/wallets.yml`,
+      file: `_data/settings/wallets.yml`,
       fields: [
         {
           label: "Wallets",
@@ -190,7 +188,7 @@ export const settingsCollectionConfig = {
     {
       label: "Block explorers",
       name: "block-explorers",
-      file: `_data/settings/${locale}/block-explorers.yml`,
+      file: `_data/settings/block-explorers.yml`,
       fields: [
         {
           label: "Block explorers",
@@ -234,7 +232,7 @@ export const settingsCollectionConfig = {
     {
       label: "Bridges",
       name: "bridges",
-      file: `_data/settings/${locale}/bridges.yml`,
+      file: `_data/settings/bridges.yml`,
       fields: [
         {
           label: "Bridges",
@@ -278,7 +276,7 @@ export const settingsCollectionConfig = {
     {
       label: "Fiat on-ramps",
       name: "fiat-on-ramps",
-      file: `_data/settings/${locale}/fiat-on-ramps.yml`,
+      file: `_data/settings/fiat-on-ramps.yml`,
       fields: [
         {
           label: "Fiat on-ramps",
@@ -322,7 +320,7 @@ export const settingsCollectionConfig = {
     {
       label: "Alert",
       name: "alert",
-      file: `_data/settings/${locale}/alert.yml`,
+      file: `_data/settings/alert.yml`,
       fields: [
         {
           label: "Alert",

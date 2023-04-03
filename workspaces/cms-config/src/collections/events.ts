@@ -1,13 +1,11 @@
 import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 
-const locale = "en";
-
 export const eventsCollectionConfig = {
   name: "events",
   label: "Events",
   label_singular: "Event",
-  folder: `_data/events/${locale}`,
+  folder: '_data/events',
   slug: "{{name}}",
   summary: "{{name}}",
   create: true,

@@ -1,4 +1,4 @@
-import { LinkData } from "src/data/settings/main-menu";
+import { LinkData } from "@starknet-io/cms-data/src/settings/main-menu";
 
 export const titleCase = (s: string) => {
   return s

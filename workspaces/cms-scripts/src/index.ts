@@ -4,7 +4,7 @@ import * as path from "node:path";
 process.chdir(path.resolve(__dirname, "../../.."));
 
 import { getFirst, write, yaml } from "./utils";
-import { defaultLocale, locales } from "./locales";
+import { defaultLocale, locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
   getPages,
@@ -29,11 +29,11 @@ for (const simpleData of simpleDataTypes) {
 
     for (const locale of locales) {
       const data = simpleData.filenames.map((filename) =>
-        simpleData.filenameMap.get(`${locale.code}:${filename}`),
+        simpleData.filenameMap.get(`${locale}:${filename}`),
       );
 
       await write(
-        `_data/_dynamic/${simpleData.resourceName}/${locale.code}.json`,
+        `_data/_dynamic/${simpleData.resourceName}/${locale}.json`,
         data,
       );
     }
@@ -60,10 +60,10 @@ for (const simpleFile of simpleFiles) {
     });
 
     for (const locale of locales) {
-      const data = simpleFile.localeMap.get(locale.code)!;
+      const data = simpleFile.localeMap.get(locale)!;
 
       await write(
-        `_data/_dynamic/${simpleFile.resourceName}/${locale.code}.json`,
+        `_data/_dynamic/${simpleFile.resourceName}/${locale}.json`,
         data.items,
       );
     }
@@ -79,7 +79,7 @@ const pages = await getPages();
 updateBlocks(pages, posts);
 
 for (const locale of locales) {
-  await fs.mkdir(`_data/_dynamic/posts/${locale.code}`, { recursive: true });
+  await fs.mkdir(`_data/_dynamic/posts/${locale}`, { recursive: true });
 }
 
 for (const data of posts.filenameMap.values()) {
@@ -87,7 +87,7 @@ for (const data of posts.filenameMap.values()) {
 }
 
 for (const locale of locales) {
-  await fs.mkdir(`_data/_dynamic/pages/${locale.code}`, { recursive: true });
+  await fs.mkdir(`_data/_dynamic/pages/${locale}`, { recursive: true });
 }
 
 for (const data of pages.filenameMap.values()) {
@@ -111,7 +111,7 @@ await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 
 for (const locale of locales) {
   const mainMenu: MainMenu = await getFirst(
-    () => yaml(`_data/settings/${locale.code}/main-menu.yml`),
+    () => yaml(`_data/settings/${locale}/main-menu.yml`),
     () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
   );
 
@@ -119,11 +119,11 @@ for (const locale of locales) {
     for (const column of mainMenuItem.columns ?? []) {
       for (const block of column.blocks ?? []) {
         block.items = block.items?.map((item) =>
-          handleLink(locale.code, item, pages, posts),
+          handleLink(locale, item, pages, posts),
         );
       }
     }
   }
 
-  await write(`_data/_dynamic/main-menu/${locale.code}.json`, mainMenu);
+  await write(`_data/_dynamic/main-menu/${locale}.json`, mainMenu);
 }

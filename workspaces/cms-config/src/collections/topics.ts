@@ -1,14 +1,12 @@
 import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 
-const locale = "en";
-
 export const topicsCollectionConfig = {
   name: "topics",
   label: "Blog - Topics",
   label_singular: "Topic",
   identifier_field: "id",
-  folder: `_data/topics/${locale}`,
+  folder: '_data/topics',
   slug: "{{name}}",
   summary: "{{name}}",
   create: true,

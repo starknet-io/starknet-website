@@ -2,14 +2,12 @@ import type { Config } from "@staticcms/core";
 import { topLevelBlocks } from "../blocks";
 import type { CmsConfig } from "netlify-cms-core";
 
-const locale = "en";
-
 export const postsCollectionConfig = {
   name: "posts",
   label: "Blog - Posts",
   label_singular: "Post",
   identifier_field: "id",
-  folder: `_data/posts/${locale}`,
+  folder: '_data/posts',
   create: true,
   format: "yml",
   slug: "{{title}}",

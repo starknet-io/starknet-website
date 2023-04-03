@@ -1,5 +1,5 @@
 import * as path from "node:path";
-import { defaultLocale, locales } from "./locales";
+import { defaultLocale, locales } from "@starknet-io/cms-data/src/i18n/config";
 import { getFirst, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
@@ -141,16 +141,16 @@ export async function getPages(): Promise<PagesData> {
 
   for (const locale of locales) {
     for (const filename of filenames) {
-      const data = await fileToPage(locale.code, filename);
+      const data = await fileToPage(locale, filename);
 
-      idMap.set(`${locale.code}:${data.id}`, data);
-      filenameMap.set(`${locale.code}:${filename}`, data);
+      idMap.set(`${locale}:${data.id}`, data);
+      filenameMap.set(`${locale}:${filename}`, data);
     }
   }
 
   for (const locale of locales) {
     for (const filename of filenames) {
-      const data = filenameMap.get(`${locale.code}:${filename}`)!;
+      const data = filenameMap.get(`${locale}:${filename}`)!;
 
       const breadcrumbs = [];
       let currentPage = data;
@@ -158,7 +158,7 @@ export async function getPages(): Promise<PagesData> {
         if (currentPage.parent_page == null) break;
         if (currentPage.parent_page === "") break;
 
-        const key = `${locale.code}:${currentPage.parent_page}`;
+        const key = `${locale}:${currentPage.parent_page}`;
 
         if (!idMap.has(key)) {
           console.log(currentPage.parent_page);
@@ -174,7 +174,7 @@ export async function getPages(): Promise<PagesData> {
 
       data.link = [
         "",
-        locale.code,
+        locale,
         ...breadcrumbs.map((page) => page.slug),
         data.slug,
       ].join("/");
@@ -183,7 +183,7 @@ export async function getPages(): Promise<PagesData> {
     }
 
     for (const filename of filenames) {
-      const data = filenameMap.get(`${locale.code}:${filename}`)!;
+      const data = filenameMap.get(`${locale}:${filename}`)!;
 
       data.breadcrumbs_data = data.breadcrumbs_data?.map((page) => {
         return {
@@ -211,10 +211,10 @@ export async function getPosts(): Promise<PostsData> {
 
   for (const locale of locales) {
     for (const filename of filenames) {
-      const data = await fileToPost(locale.code, filename);
+      const data = await fileToPost(locale, filename);
 
-      idMap.set(`${locale.code}:${data.id}`, data);
-      filenameMap.set(`${locale.code}:${filename}`, data);
+      idMap.set(`${locale}:${data.id}`, data);
+      filenameMap.set(`${locale}:${filename}`, data);
     }
   }
 
@@ -253,7 +253,7 @@ export async function getSimpleData<T = {}>(
         defaultLocale,
         filename
       );
-      const filepath = path.join("_data", resourceName, locale.code, filename);
+      const filepath = path.join("_data", resourceName, locale, filename);
 
       const defaultLocaleData = await yaml(defaultLocaleFilepath);
 
@@ -280,12 +280,12 @@ export async function getSimpleData<T = {}>(
         }
       }
 
-      filenameMap.set(`${locale.code}:${filename}`, {
+      filenameMap.set(`${locale}:${filename}`, {
         ...data,
         ...dates,
         slug: defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined,
-        locale: locale.code,
-        objectID: `${resourceName}:${locale.code}:${filename}`,
+        locale: locale,
+        objectID: `${resourceName}:${locale}:${filename}`,
         sourceFilepath,
       });
     }
@@ -318,7 +318,7 @@ export async function getSimpleFiles<T = ItemsFile>(
     const filepath = path.join(
       "_data",
       "settings",
-      locale.code,
+      locale,
       `${resourceName}.yml`
     );
 
@@ -332,10 +332,10 @@ export async function getSimpleFiles<T = ItemsFile>(
     const sourceFilepath =
       defaultLocaleData === data ? defaultLocaleFilepath : filepath;
 
-    localeMap.set(locale.code, {
+    localeMap.set(locale, {
       ...data,
-      locale: locale.code,
-      objectID: `${resourceName}:${locale.code}`,
+      locale: locale,
+      objectID: `${resourceName}:${locale}`,
       sourceFilepath,
     });
   }

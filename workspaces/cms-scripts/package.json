@@ -9,6 +9,8 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@starknet-io/cms-config": "workspace:*",
+    "@starknet-io/cms-data": "workspace:*",
     "@starknet-io/cms-utils": "workspace:*",
     "algoliasearch": "^4.16.0",
     "date-fns": "^2.29.3",

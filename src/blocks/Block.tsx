@@ -1,4 +1,4 @@
-import { TopLevelBlock } from "src/data/pages";
+import { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
 
 import { MarkdownBlock } from "./MarkdownBlock";

@@ -1,14 +1,12 @@
 import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 
-const locale = "en";
-
 export const jobsCollectionConfig = {
   name: "jobs",
   label: "Jobs",
   identifier_field: "id",
   label_singular: "Job",
-  folder: `_data/jobs/${locale}`,
+  folder: '_data/jobs',
   create: true,
   format: "yml",
   summary: "{{job.title}}",

@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "./utils";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface Category {
   readonly id: string;

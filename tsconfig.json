@@ -47,6 +47,9 @@
       "path": "./workspaces/cms-config"
     },
     {
+      "path": "./workspaces/cms-data"
+    },
+    {
       "path": "./workspaces/cms-scripts"
     },
     {

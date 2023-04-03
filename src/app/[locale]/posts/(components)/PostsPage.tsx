@@ -21,10 +21,10 @@ import {
   Configure,
   useRefinementList,
 } from "src/libs/react-instantsearch-hooks-web";
-import type { Category } from "src/data/categories";
+import type { Category } from "@starknet-io/cms-data/src/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { useRouter } from "next/navigation";
-import type { Topic } from "src/data/topics";
+import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
 import Link from "next/link";

@@ -13,7 +13,7 @@ import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
-import { LargeCardBlock } from "src/data/pages";
+import { LargeCardBlock } from "@starknet-io/cms-data/src/pages";
 import { getComputedLinkData } from "src/utils/utils";
 
 type Props = LargeCardBlock & { locale: string };

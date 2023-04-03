@@ -5701,10 +5701,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@starknet-io/cms-config@workspace:workspaces/cms-config":
+"@starknet-io/cms-config@workspace:*, @starknet-io/cms-config@workspace:workspaces/cms-config":
   version: 0.0.0-use.local
   resolution: "@starknet-io/cms-config@workspace:workspaces/cms-config"
   dependencies:
+    typescript: ^5.0.3
+  languageName: unknown
+  linkType: soft
+
+"@starknet-io/cms-data@workspace:*, @starknet-io/cms-data@workspace:workspaces/cms-data":
+  version: 0.0.0-use.local
+  resolution: "@starknet-io/cms-data@workspace:workspaces/cms-data"
+  dependencies:
+    "@starknet-io/cms-utils": "workspace:*"
     typescript: ^5.0.3
   languageName: unknown
   linkType: soft
@@ -5713,6 +5722,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@starknet-io/cms-scripts@workspace:workspaces/cms-scripts"
   dependencies:
+    "@starknet-io/cms-config": "workspace:*"
+    "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     algoliasearch: ^4.16.0
     date-fns: ^2.29.3
@@ -23437,6 +23448,7 @@ __metadata:
     "@mui/material": ^5.11.15
     "@netlify/plugin-nextjs": ^4.33.0
     "@next/mdx": ^13.2.4
+    "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     "@staticcms/core": ^1.2.14
     "@storybook/addon-essentials": ^7.0.0

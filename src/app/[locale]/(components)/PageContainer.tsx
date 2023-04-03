@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 import { Alert } from "@ui/Alert";
 import { Flex } from "@chakra-ui/react";
-import type { Alert as AlertType } from "src/data/settings/alert";
+import type { Alert as AlertType } from "@starknet-io/cms-data/src/settings/alert";
 import { usePathname } from "next/navigation";
 
 type Props = {

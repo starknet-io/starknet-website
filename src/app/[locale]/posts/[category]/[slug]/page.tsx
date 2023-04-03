@@ -6,7 +6,7 @@ import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { notFound } from "next/navigation";
 import { Block } from "src/blocks/Block";
-import { getPostBySlug } from "src/data/posts";
+import { getPostBySlug } from "@starknet-io/cms-data/src/posts";
 import {
   Container,
   Flex,
@@ -22,10 +22,10 @@ import {
 } from "src/libs/chakra-ui";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { getCategories } from "src/data/categories";
-import { getTopics } from "src/data/topics";
+import { getCategories } from "@starknet-io/cms-data/src/categories";
+import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { Metadata } from "next";
-import { preRenderedLocales } from "src/data/i18n/config";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import Link from "next/link";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {

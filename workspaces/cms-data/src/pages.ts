@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, Meta } from "./utils";
+import { getFirst, getJSON, Meta } from "@starknet-io/cms-utils/src/index";
 import { LinkData } from "./settings/main-menu";
 
 export interface MarkdownBlock {

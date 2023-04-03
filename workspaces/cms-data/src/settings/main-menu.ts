@@ -1,7 +1,7 @@
 import { defaultLocale } from "../i18n/config";
 import { Page } from "../pages";
 import { Post } from "../posts";
-import { getFirst, getJSON } from "../utils";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface MainMenu {
   readonly items: MainMenuItem[];
