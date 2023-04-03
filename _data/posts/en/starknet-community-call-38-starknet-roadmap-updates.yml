@@ -1,0 +1,59 @@
+id: c718061f-46d1-45e1-a863-98be56c51147
+post_type: video
+title: "Starknet Community Call #38 | Starknet Roadmap Updates"
+published_date: 2023-03-28T06:10:49.843Z
+video:
+  url: https://www.youtube.com/watch?v=IDd8CBHVKUo&list=PLcIyXLwiPilWpAItJqnBgq1cu180i9dPd&index=1
+  id: IDd8CBHVKUo
+  data:
+    kind: youtube#video
+    etag: mv04_IlyajlzUkkM2qpO6fXFS2Q
+    id: IDd8CBHVKUo
+    snippet:
+      publishedAt: 2023-03-29T01:19:14Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #38 | Starknet Roadmap Updates"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/IDd8CBHVKUo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/IDd8CBHVKUo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/IDd8CBHVKUo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/IDd8CBHVKUo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/IDd8CBHVKUo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #38 | Starknet Roadmap Updates"
+        description: ""
+      defaultAudioLanguage: en-US
+image: /assets/community-calls-38.jpg
+category: community-calls
+topic:
+  - cairo
+  - 3fc1282e-a54b-4932-b14e-a3b3d24a9a1f
+short_desc: "Join us for the 38th Community Call with Ariel Elperin from
+  StarkWare, to learn about Starknet's recent updates! "
