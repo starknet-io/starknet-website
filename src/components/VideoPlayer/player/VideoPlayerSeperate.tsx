@@ -3,14 +3,19 @@
 import { Box, useDisclosure } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
 import React, { CSSProperties, useEffect, useRef, useState } from "react";
-import { useMeasure, useInterval } from "react-use";
+import { useMeasure, useInterval, useUpdate, useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
 import ChaptersPlaylist from "./ChaptersPlaylist";
 import { useChapters } from "../hooks/useChapters";
 import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
+import {
+  Chapter,
+  CHAPTER_CHANGE_TIMEOUT,
+  playlist,
+  playlistObject,
+} from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
 import ChapterTitle from "./ChapterTitle";
 import BigPlayButton from "../control-bar/BigPlayButton";
@@ -47,6 +52,9 @@ const videoJsOptions = {
   ],
 };
 
+const getVideoSrc = (id: string) => {
+  return `${process.env.NEXT_PUBLIC_CF_STREAM_URL}/${id}/manifest/video.m3u8`;
+};
 type VideoPlayerSeperateProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
@@ -96,12 +104,11 @@ export function VideoPlayerSeperate({
 
   const lastPlayerTime = useRef(currentTime);
 
-  const { currentChapter, setCurrentChapter, goToChapter, getSeekChapter } =
-    useChapters({
-      playerRef,
-      initialActiveChapter,
-      chapters,
-    });
+  const { currentChapter, setCurrentChapter, getSeekChapter } = useChapters({
+    playerRef,
+    initialActiveChapter,
+    chapters,
+  });
 
   const { chapter, chapterIndex } = useGetCurrentChapter({
     chapters,
@@ -110,13 +117,11 @@ export function VideoPlayerSeperate({
 
   const playNextChapter = () => {
     setIsChapterChangeModalOpen(false);
-    playerRef.current?.play();
-    setPlayingStatus("playing");
-    const nextChapter = getSeekChapter(playerRef.current!.currentTime() + 2);
-    if (nextChapter) {
-      playerRef.current?.currentTime(nextChapter.startAt);
-      setCurrentChapter(nextChapter.id);
-    }
+    const currentChapterIndex = chapters.findIndex(
+      (ch) => ch.id === currentChapter
+    );
+    const nextChapter = chapters[currentChapterIndex + 1] || chapters[0];
+    setCurrentChapter(nextChapter.id);
   };
 
   useInterval(
@@ -134,9 +139,18 @@ export function VideoPlayerSeperate({
 
   usePreventDefaultHotkeys();
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     onChapterChange?.(currentChapter);
-  }, [currentChapter, onChapterChange]);
+  }, [currentChapter]);
+
+  useUpdateEffect(() => {
+    const chapter = playlistObject[currentChapter] || playlist[0];
+    playerRef.current?.src({
+      src: getVideoSrc(chapter.videoId),
+      type: "application/x-mpegURL",
+    });
+    playerRef.current?.autoplay(true);
+  }, [currentChapter]);
 
   useEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
@@ -160,22 +174,6 @@ export function VideoPlayerSeperate({
         return;
       }
 
-      const activeChapter = getSeekChapter(playerTime);
-
-      if (
-        activeChapter &&
-        activeChapter?.endAt - playerTime > 0 &&
-        activeChapter?.endAt - playerTime < 0.4 &&
-        playerTime - lastPlayerTime.current > 0 &&
-        playerTime - lastPlayerTime.current < 1
-      ) {
-        playerRef.current?.pause();
-        setPlayingStatus("paused");
-        setIsChapterChangeModalOpen(true);
-        setChapterTimeoutCount(0);
-      } else if (activeChapter) {
-        setCurrentChapter(activeChapter.id);
-      }
       setCurrentTime(playerTime);
       lastPlayerTime.current = playerTime;
     });
@@ -189,15 +187,18 @@ export function VideoPlayerSeperate({
       toggleFullscreen();
     });
 
-    player.one("loadedmetadata", function () {
+    player.on("durationchange", function () {
       if (playerRef.current) {
         const duration = playerRef.current.duration();
+        setCurrentTime(0);
         setTotalDuration(duration);
       }
     });
 
-    player.one("ended", function () {
+    player.on("ended", function () {
       setPlayingStatus("ended");
+      setIsChapterChangeModalOpen(true);
+      setChapterTimeoutCount(0);
     });
 
     player.on("useractive", () => {
@@ -212,44 +213,28 @@ export function VideoPlayerSeperate({
 
     player.on("pause", () => {
       paused.current = true;
+      setPlayingStatus("paused");
     });
 
     player.on("play", () => {
+      setPlayingStatus("playing");
       paused.current = false;
       setIsControlActive(true);
     });
 
     const volume = player.volume();
     setVolume(volume * 100);
-    goToChapter(currentChapter);
+    // goToChapter(currentChapter);
     setCurrentChapter(currentChapter);
     player.aspectRatio("16:9");
   };
 
   const onChapterSelect = (ch: string) => {
-    goToChapter(ch);
-    if (playingStatus === "unstarted") {
-      setPlayingStatus("paused");
-      playerRef.current?.play();
-      playerRef.current?.pause();
-    }
-
-    if (isChapterChangeModalOpen) {
-      setIsChapterChangeModalOpen(false);
-      setPlayingStatus("playing");
-      playerRef.current?.play();
-    }
+    setCurrentChapter(ch);
   };
 
   const onBigPlayBtnClick = () => {
     playerRef.current?.play();
-    setPlayingStatus("playing");
-  };
-
-  const validateSeekRange = (t: number, func: (t: number) => void) => {
-    if (!isChapterChangeModalOpen && chapter && t <= chapter.endAt) {
-      func(t);
-    }
   };
 
   const videoWrapperStyle: CSSProperties = isFullscreen
@@ -321,9 +306,9 @@ export function VideoPlayerSeperate({
             chapter={chapter}
             playingStatus={playingStatus}
             isControlActive={isControlActive}
-            totalDuration={chapter.endAt - chapter.startAt}
+            totalDuration={totalDuration}
             currentTime={currentTime}
-            currentDisplayTime={Math.ceil(currentTime - chapter.startAt)}
+            currentDisplayTime={currentTime}
             onSeekScrubStart={(n) => {
               if (isChapterChangeModalOpen) {
                 setIsChapterChangeModalOpen(false);
@@ -341,9 +326,8 @@ export function VideoPlayerSeperate({
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}
             onShare={onOpenShareModal}
-            scrubMin={Math.floor(chapter.startAt)}
-            scrubMax={Math.ceil(chapter.endAt)}
-            validateSeekRange={validateSeekRange}
+            scrubMin={0}
+            scrubMax={totalDuration}
             // isDisabled={isChapterChangeModalOpen}
           />
         )}

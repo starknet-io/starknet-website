@@ -3,7 +3,7 @@
 import { Box, useDisclosure } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
 import React, { CSSProperties, useEffect, useRef, useState } from "react";
-import { useMeasure, useInterval } from "react-use";
+import { useMeasure, useInterval, useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
 import ChaptersPlaylist from "./ChaptersPlaylist";
 import { useChapters } from "../hooks/useChapters";
@@ -134,11 +134,11 @@ export function VideoPlayer({
 
   usePreventDefaultHotkeys();
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     onChapterChange?.(currentChapter);
-  }, [currentChapter, onChapterChange]);
+  }, [currentChapter]);
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
   }, [playingStatus]);
 
