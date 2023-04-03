@@ -1,8 +1,10 @@
 "use client";
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Button, Container } from "@chakra-ui/react";
 import { playlist } from "@ui/VideoPlayer/constants";
 import { VideoPlayer } from "@ui/VideoPlayer/player/VideoPlayer";
+import { VideoPlayerSeperate } from "@ui/VideoPlayer/player/VideoPlayerSeperate";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 interface Props {
   chapter: string;
@@ -10,20 +12,41 @@ interface Props {
 }
 
 export default function VideoPage({ chapter, locale }: Props) {
+  const [seperateVideos, setSeperateVideos] = useState(false);
   const router = useRouter();
   const onChapterChange = (chapterId: string) => {
     router.push(`/${locale}/video?chapter=${chapterId}`);
   };
   return (
     <Container py={{ base: "4", lg: "17px" }}>
-      <Box as="h1" fontSize="lg" mb={10}>
-        Video tutorial
+      <Box mb={10}>
+        <Box as="h1" fontSize="lg">
+          Video tutorial
+        </Box>
+        <Button my="4" onClick={() => setSeperateVideos((b) => !b)}>
+          {seperateVideos
+            ? "Use single video for all chapters"
+            : "Use seperate videos for each chapter"}
+        </Button>
+        <Box as="h1" fontSize="lg">
+          {seperateVideos
+            ? "Now, video player has different videos for each chapter"
+            : "Now, video player has a single video for all chapters"}
+        </Box>
       </Box>
-      <VideoPlayer
-        chapters={playlist}
-        initialActiveChapter={chapter}
-        onChapterChange={onChapterChange}
-      />
+      {seperateVideos ? (
+        <VideoPlayerSeperate
+          chapters={playlist}
+          initialActiveChapter={chapter}
+          onChapterChange={onChapterChange}
+        />
+      ) : (
+        <VideoPlayer
+          chapters={playlist}
+          initialActiveChapter={chapter}
+          onChapterChange={onChapterChange}
+        />
+      )}
     </Container>
   );
 }
