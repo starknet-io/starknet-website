@@ -2,20 +2,21 @@
 
 import { Box, useDisclosure } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
-import React, { CSSProperties, useEffect, useRef, useState } from "react";
-import { useMeasure, useInterval, useUpdate, useUpdateEffect } from "react-use";
+import React, {
+  CSSProperties,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { useMeasure, useInterval, useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
 import ChaptersPlaylist from "./ChaptersPlaylist";
 import { useChapters } from "../hooks/useChapters";
 import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import {
-  Chapter,
-  CHAPTER_CHANGE_TIMEOUT,
-  playlist,
-  playlistObject,
-} from "../constants";
+import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
 import ChapterTitle from "./ChapterTitle";
 import BigPlayButton from "../control-bar/BigPlayButton";
@@ -24,6 +25,12 @@ import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
 import { useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
 import ShareModal from "../share/ShareModal";
+import {
+  getChapterById,
+  getNextChapter,
+  getVideoSrc,
+  isFinalChapter,
+} from "../utils";
 
 const videoJsOptions = {
   autoplay: false,
@@ -40,21 +47,8 @@ const videoJsOptions = {
   },
   poster:
     "https://image.mux.com/UZMwOY6MgmhFNXLbSFXAuPKlRPss5XNA/thumbnail.jpg?time=11",
-  sources: [
-    {
-      src: process.env.NEXT_PUBLIC_CUSTOMER_URL,
-      type: "application/x-mpegURL",
-    },
-    // {
-    //   src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
-    //   type: "video/mp4",
-    // },
-  ],
 };
 
-const getVideoSrc = (id: string) => {
-  return `${process.env.NEXT_PUBLIC_CF_STREAM_URL}/${id}/manifest/video.m3u8`;
-};
 type VideoPlayerSeperateProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
@@ -104,7 +98,7 @@ export function VideoPlayerSeperate({
 
   const lastPlayerTime = useRef(currentTime);
 
-  const { currentChapter, setCurrentChapter, getSeekChapter } = useChapters({
+  const { currentChapter, setCurrentChapter } = useChapters({
     playerRef,
     initialActiveChapter,
     chapters,
@@ -116,11 +110,7 @@ export function VideoPlayerSeperate({
   });
 
   const playNextChapter = () => {
-    setIsChapterChangeModalOpen(false);
-    const currentChapterIndex = chapters.findIndex(
-      (ch) => ch.id === currentChapter
-    );
-    const nextChapter = chapters[currentChapterIndex + 1] || chapters[0];
+    const nextChapter = getNextChapter(chapters, currentChapter);
     setCurrentChapter(nextChapter.id);
   };
 
@@ -141,16 +131,27 @@ export function VideoPlayerSeperate({
 
   useUpdateEffect(() => {
     onChapterChange?.(currentChapter);
+    playerRef.current?.play();
   }, [currentChapter]);
 
   useUpdateEffect(() => {
-    const chapter = playlistObject[currentChapter] || playlist[0];
-    playerRef.current?.src({
-      src: getVideoSrc(chapter.videoId),
-      type: "application/x-mpegURL",
-    });
-    playerRef.current?.autoplay(true);
-  }, [currentChapter]);
+    if (playingStatus !== "ended") {
+      setIsChapterChangeModalOpen(false);
+    }
+  }, [currentChapter, playingStatus]);
+
+  const videojsOptionsWithSrc = useMemo(() => {
+    const chapter = getChapterById(chapters, currentChapter) || chapters[0];
+    return {
+      ...videoJsOptions,
+      sources: [
+        {
+          src: getVideoSrc(chapter.videoId),
+          type: "application/x-mpegURL",
+        },
+      ],
+    };
+  }, [currentChapter, chapters]);
 
   useEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
@@ -197,8 +198,13 @@ export function VideoPlayerSeperate({
 
     player.on("ended", function () {
       setPlayingStatus("ended");
-      setIsChapterChangeModalOpen(true);
-      setChapterTimeoutCount(0);
+      setCurrentChapter((chapter) => {
+        if (!isFinalChapter(chapters, chapter)) {
+          setIsChapterChangeModalOpen(true);
+          setChapterTimeoutCount(0);
+        }
+        return chapter;
+      });
     });
 
     player.on("useractive", () => {
@@ -224,7 +230,6 @@ export function VideoPlayerSeperate({
 
     const volume = player.volume();
     setVolume(volume * 100);
-    // goToChapter(currentChapter);
     setCurrentChapter(currentChapter);
     player.aspectRatio("16:9");
   };
@@ -273,7 +278,7 @@ export function VideoPlayerSeperate({
       <div style={videoWrapperStyle} ref={ref}>
         <div style={videoPositionStyle} onClick={onPlayToggle}>
           <VideoJS
-            options={videoJsOptions}
+            options={videojsOptionsWithSrc}
             onReady={handlePlayerReady}
             videoContainerRef={videoContainerRef}
           />
@@ -315,7 +320,13 @@ export function VideoPlayerSeperate({
               }
               onSeekScrubStart(n);
             }}
-            onSeekScrubEnd={onSeekScrubEnd}
+            onSeekScrubEnd={(time) => {
+              if (playingStatus === "ended") {
+                setPlayingStatus("paused");
+              }
+
+              onSeekScrubEnd(time);
+            }}
             onSeekScrubChange={onSeekScrubChange}
             bufferPosition={totalDuration * bufferPercent}
             onPlayToggle={onPlayToggle}

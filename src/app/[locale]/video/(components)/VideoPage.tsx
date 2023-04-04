@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function VideoPage({ chapter, locale }: Props) {
-  const [seperateVideos, setSeperateVideos] = useState(false);
+  const [seperateVideos, setSeperateVideos] = useState(true);
   const router = useRouter();
   const onChapterChange = (chapterId: string) => {
     router.push(`/${locale}/video?chapter=${chapterId}`);
@@ -25,13 +25,13 @@ export default function VideoPage({ chapter, locale }: Props) {
         </Box>
         <Button my="4" onClick={() => setSeperateVideos((b) => !b)}>
           {seperateVideos
-            ? "Use single video for all chapters"
+            ? "Use a single video for all chapters"
             : "Use seperate videos for each chapter"}
         </Button>
         <Box as="h1" fontSize="lg">
           {seperateVideos
-            ? "Now, video player has different videos for each chapter"
-            : "Now, video player has a single video for all chapters"}
+            ? "Player is now using seperate videos for each chapter"
+            : "Player is now using a single video for all chapters"}
         </Box>
       </Box>
       {seperateVideos ? (
