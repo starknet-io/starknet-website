@@ -168,8 +168,20 @@ const blocks: ListField["types"] = [
     widget: "object",
     fields: [
       {
-        name: "type",
-        widget: "hidden",
+        label: "List of Links",
+        name: "links",
+        widget: "list",
+        fields: [
+          {
+            label: "Link Text",
+            name: "text",
+            widget: "string"
+          },
+          {
+            label: "Link URL",
+            name: "url",
+            widget: "string"
+        }]
       },
       {
         name: "no_of_items",
@@ -1264,23 +1276,34 @@ export const config: Config = {
                 },
                 {
                   label: "Type",
-                  name: "type",
-                  multiple: true,
-                  widget: "select",
-                  options: [
+                  name: "type_list",
+                  widget: "list",
+                  fields: [
                     {
-                      label: "Browser extension",
-                      value: "browser_extension",
+                      label: "Type icon",
+                      name: "type",
+                      widget: "select",
+                      options: [
+                        {
+                          label: "Browser extension",
+                          value: "browser_extension",
+                        },
+                        {
+                          label: "iOS",
+                          value: "ios",
+                        },
+                        {
+                          label: "Android",
+                          value: "android",
+                        },
+                      ],
                     },
                     {
-                      label: "iOS",
-                      value: "ios",
-                    },
-                    {
-                      label: "Android",
-                      value: "android",
-                    },
-                  ],
+                      label: "Link URL",
+                      name: "url",
+                      widget: "string",
+                      required: false
+                  }]
                 },
                 {
                   label: "Image",
@@ -1291,6 +1314,12 @@ export const config: Config = {
                   label: "Twitter handle",
                   name: "twitter",
                   widget: "string",
+                },
+                {
+                  label: "Discord handle",
+                  name: "discord",
+                  widget: "string",
+                  required: false
                 },
                 {
                   label: "Website url",
