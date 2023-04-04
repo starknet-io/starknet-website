@@ -23,7 +23,7 @@ export default function ChaptersPlaylist({
     if (chapterElement) {
       chapterElement.scrollIntoView({
         behavior: "smooth",
-        block: isMobile ? "nearest" : "center",
+        block: "nearest",
         inline: isMobile ? "center" : "nearest",
       });
     }

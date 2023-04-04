@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import "react-video-seek-slider/styles.css";
-import "./VideoSeekSlider.css";
-import { VideoSeekSlider } from "react-video-seek-slider";
+// import "./VideoSeekSlider.css";
+// import { VideoSeekSlider } from "react-video-seek-slider";
 import { Scrubber } from "react-scrubber";
 import "react-scrubber/lib/scrubber.css";
 
@@ -67,7 +67,11 @@ export default function CustomControl(props: CustomControlProps) {
     if (playingStatus === "unstarted") {
       return false;
     }
-    return isControlActive || playingStatus === "paused";
+
+    if (playingStatus === "paused" || playingStatus === "ended") {
+      return true;
+    }
+    return isControlActive;
   };
 
   const callIfWithingChapter = (t: number, func: (t: number) => void) => {

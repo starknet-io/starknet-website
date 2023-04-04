@@ -16,7 +16,11 @@ import { useChapters } from "../hooks/useChapters";
 import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
+import {
+  Chapter,
+  CHAPTER_CHANGE_TIMEOUT,
+  VIDEOJS_INACTIVITY_TIMEOUT,
+} from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
 import ChapterTitle from "./ChapterTitle";
 import BigPlayButton from "../control-bar/BigPlayButton";
@@ -31,6 +35,7 @@ import {
   getVideoSrc,
   isFinalChapter,
 } from "../utils";
+import "../player-overrides.css";
 
 const videoJsOptions = {
   autoplay: false,
@@ -38,6 +43,7 @@ const videoJsOptions = {
   responsive: true,
   preload: "auto",
   fluid: true,
+  inactivitytimeout: VIDEOJS_INACTIVITY_TIMEOUT,
   userActions: {
     hotkeys: {
       playPauseKey: function () {},
@@ -74,6 +80,8 @@ export function VideoPlayerSeperate({
     onClose: onCloseShareModal,
     onOpen: onOpenShareModal,
   } = useDisclosure();
+
+  const playerStatusTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
@@ -157,6 +165,14 @@ export function VideoPlayerSeperate({
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
   }, [playingStatus]);
 
+  const changePlayerControlToActive = () => {
+    setIsControlActive(true);
+    if (playerStatusTimeout.current) {
+      clearTimeout(playerStatusTimeout.current);
+    }
+    setTimeout(() => setIsControlActive(false), VIDEOJS_INACTIVITY_TIMEOUT);
+  };
+
   const handlePlayerReady = (player: any) => {
     playerRef.current = player;
 
@@ -209,11 +225,17 @@ export function VideoPlayerSeperate({
 
     player.on("useractive", () => {
       setIsControlActive(true);
+      if (playerStatusTimeout.current) {
+        clearTimeout(playerStatusTimeout.current);
+      }
     });
 
     player.on("userinactive", () => {
       if (!paused.current) {
         setIsControlActive(false);
+      }
+      if (playerStatusTimeout.current) {
+        clearTimeout(playerStatusTimeout.current);
       }
     });
 
@@ -225,7 +247,7 @@ export function VideoPlayerSeperate({
     player.on("play", () => {
       setPlayingStatus("playing");
       paused.current = false;
-      setIsControlActive(true);
+      changePlayerControlToActive();
     });
 
     const volume = player.volume();

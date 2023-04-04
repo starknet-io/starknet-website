@@ -69,3 +69,5 @@ export const playlistObject: Record<string, Chapter> = playlist.reduce(
   {}
 );
 export const CHAPTER_CHANGE_TIMEOUT = 5;
+
+export const VIDEOJS_INACTIVITY_TIMEOUT = 3000;

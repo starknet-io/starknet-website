@@ -1,3 +1,12 @@
+/* Start of "videojs" overrides */
+
+.video-js .vjs-tech:focus-visible {
+  outline: none;
+}
+
+/* End of "videojs" overrides */
+
+/* Start of "video-seek-slider" overrides */
 .ui-video-seek-slider .thumb {
   display: none;
 }
@@ -24,6 +33,9 @@
   font-family: inherit;
   font-weight: 500;
 }
+/* End of "video-seek-slider" overrides */
+
+/* Start of "Scrubber" library overrides */
 
 /* .scrubber.horizontal .bar {
   background-color: #160f2e66;
@@ -36,3 +48,5 @@
 .scrubber.horizontal .bar__thumb {
   background-color: #ec796b;
 }
+
+/* End of "Scrubber" library overrides */

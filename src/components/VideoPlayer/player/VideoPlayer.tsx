@@ -19,6 +19,7 @@ import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
 import { useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
 import ShareModal from "../share/ShareModal";
+import "../player-overrides.css";
 
 const videoJsOptions = {
   autoplay: false,

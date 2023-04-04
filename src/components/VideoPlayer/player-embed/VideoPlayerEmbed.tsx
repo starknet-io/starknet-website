@@ -19,6 +19,7 @@ import { useVolume } from "../hooks/useVolume";
 import { useDisclosure } from "@chakra-ui/react";
 import ShareModal from "../share/ShareModal";
 import { convertSecondsToMMSS } from "../control-bar/utils";
+import "../player-overrides.css";
 
 const videoJsOptions = {
   autoplay: false,
