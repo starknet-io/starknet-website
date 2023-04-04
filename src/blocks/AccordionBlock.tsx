@@ -2,7 +2,7 @@
 import { Box } from "@chakra-ui/react";
 import * as PageAccordion from "@ui/Accordion/PageAccordion";
 import { Heading } from "@ui/Typography/Heading";
-import { slugify } from "@starknet-io/cms-utils/src/index";
+import { slugify } from "@starknet-io/cms-utils/src/browser";
 
 type AccordionRootProps = {
   children: React.ReactNode;

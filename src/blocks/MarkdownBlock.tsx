@@ -9,7 +9,7 @@ import {
   Box,
   Link,
 } from "src/libs/chakra-ui";
-import { slugify } from "@starknet-io/cms-utils/src/index";
+import { slugify } from "@starknet-io/cms-utils/src/browser";
 
 interface Props {
   readonly body: string;

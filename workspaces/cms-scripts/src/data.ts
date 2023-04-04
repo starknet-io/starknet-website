@@ -5,7 +5,7 @@ import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
-import { slugify } from "@starknet-io/cms-utils/src/index";
+import { slugify } from "@starknet-io/cms-utils/src/node";
 
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;

@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/node";
 
 export interface Wallet {
   readonly name: string;

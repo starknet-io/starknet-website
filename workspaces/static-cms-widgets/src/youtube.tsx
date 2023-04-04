@@ -9,7 +9,7 @@ import type {
 import { youtube_v3 } from "googleapis";
 import type { ChangeEvent } from "react";
 import { useCallback, useMemo, useState } from "react";
-import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/index";
+import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/browser";
 
 const API_BASE_URL =
   process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";
