@@ -67,6 +67,8 @@ type HitProps = {
     readonly end_date?: string;
     readonly name: string;
     readonly image: string;
+    readonly city: string;
+    readonly country: string;
     readonly description: string;
     readonly tags: string[];
     readonly url: string;

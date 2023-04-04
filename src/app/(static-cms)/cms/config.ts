@@ -845,6 +845,16 @@ export const config: Config = {
           ],
         },
         {
+          name: "city",
+          label: "City",
+          widget: "string",
+        },
+        {
+          name: "country",
+          label: "Country (State if USA)",
+          widget: "string",
+        },
+        {
           name: "tags",
           label: "Tags",
           widget: "list",
@@ -1017,7 +1027,7 @@ export const config: Config = {
         {
           label: "ID",
           name: "id",
-          widget: "string",
+          widget: "uuid" as "string",
         },
         {
           label: "Type",

@@ -40,6 +40,7 @@ type Props = {
   readonly href: string;
   readonly tags?: string[];
   readonly city?: string;
+  readonly country?: string;
   readonly venue?: string;
   readonly twitterHandle?: string;
   readonly discordHandle?: string;
@@ -88,6 +89,8 @@ export const ListCard = (props: Props) => {
                   height="80px"
                   borderRadius="8px"
                   overflow="hidden"
+                  marginTop={{ base: "0px", md: "24px" }}
+                  marginBottom={{ base: "16px", md: "0" }}
                 >
                   <Img
                     width="full"
@@ -98,22 +101,39 @@ export const ListCard = (props: Props) => {
                   />
                 </Box>
               </Stack>
-              <Box>
+              <Box flex="1">
                 {props.startDateTime && (
                   <Text
                     mt="2"
                     fontSize="xs"
                     fontWeight="extrabold"
                     color="list-card-sm-title-fg"
+                    display="flex"
+                    flexDirection={{ base: "column", md: "row" }}
+                    justifyContent="space-between"
+                    alignItems={{ base: "flex-start", md: "center" }}
+                    margin="0"
                   >
                     {props.startDateTime}
+                    <Text
+                      mt="2"
+                      fontSize="xs"
+                      fontWeight="extrabold"
+                      color="list-card-sm-title-fg"
+                      paddingBottom="4px"
+                      as="span"
+                    >
+                      {/* {props.city} */}
+                      {props.city && `${props.city}, `}{props.country && props.country}
+                    </Text>
                   </Text>
                 )}
-
                 <Stack
                   spacing={{ base: "1", md: "2" }}
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
+                  borderTop="1px solid #E6E6E6"
+                  paddingTop="12px"
                 >
                   <Heading
                     variant="h4"
@@ -146,7 +166,10 @@ export const ListCard = (props: Props) => {
                     ))}
                   </Wrap>
                 ) : props.type && (
-                  <Wrap pb="20px" pt="4px" shouldWrapChildren>
+                  <Wrap pt="4px" shouldWrapChildren>
+                    {props.location && (<Tag variant="listCard">
+                      {titleCase(props.location)}
+                    </Tag>)}
                     {props.type.map((tag) => (
                       <Tag key={tag} variant="listCard">
                         {titleCase(tag)}
