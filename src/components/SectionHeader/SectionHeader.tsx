@@ -30,7 +30,7 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
             {title}
           </Heading>
           {description && (
-            <Text color="muted" variant="body" pb={8}>
+            <Text color="muted" variant="body" pb={{ base: 4, lg: 8 }}>
               {description}
             </Text>
           )}

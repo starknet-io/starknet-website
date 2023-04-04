@@ -8,6 +8,7 @@ export interface Event {
   readonly end_date?: string;
   readonly location: string;
   readonly city: string;
+  readonly country: string;
   readonly venue: string;
   readonly type: string;
   readonly url: string;

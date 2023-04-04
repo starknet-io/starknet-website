@@ -33,7 +33,7 @@ export const PageLayout = (props: Props) => {
         direction={{ base: "column", lg: "row" }}
         spacing={{ base: "12", lg: "100px" }}
         flex="1"
-        pt={10}
+        pt={{ base: 2, lg: 10 }}
         // bg="yellow"
       >
         {props.leftAside && (
@@ -50,7 +50,7 @@ export const PageLayout = (props: Props) => {
           </Box>
         )}
 
-        <Box as="main" role="main" width="full">
+        <Box as="main" role="main" width="full" mt="0 !important">
           <Box minH="lg">
             {props.sectionHeaderTitle && (
               <SectionHeader
