@@ -18,6 +18,13 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  transpilePackages: [
+    "@starknet-io/cms-config",
+    "@starknet-io/cms-data",
+    "@starknet-io/cms-utils",
+    "@starknet-io/netlify-cms-widgets",
+    "@starknet-io/static-cms-widgets",
+  ],
   images: {
     domains: [
       "tailwindui.com",
