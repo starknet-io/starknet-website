@@ -4,7 +4,7 @@ import * as path from "node:path";
 process.chdir(path.resolve(__dirname, "../../.."));
 
 import { getFirst, write, yaml } from "./utils";
-import { defaultLocale, locales } from "@starknet-io/cms-data/src/i18n/config";
+import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
   getPages,
@@ -111,8 +111,8 @@ await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 
 for (const locale of locales) {
   const mainMenu: MainMenu = await getFirst(
-    () => yaml(`_data/settings/${locale}/main-menu.yml`),
-    () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
+    () => yaml(`_data/settings/main-menu.yml`),
+    // () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
   );
 
   for (const mainMenuItem of mainMenu.items) {

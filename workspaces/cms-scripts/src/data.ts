@@ -1,6 +1,6 @@
 import * as path from "node:path";
-import { defaultLocale, locales } from "@starknet-io/cms-data/src/i18n/config";
-import { getFirst, yaml } from "./utils";
+import {  locales } from "@starknet-io/cms-data/src/i18n/config";
+import { yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
 import { gitlog } from "./git";
@@ -35,25 +35,14 @@ export async function fileToPost(
   filename: string
 ): Promise<Post> {
   const resourceName = "posts";
-  const defaultLocaleFilepath = path.join(
-    "_data",
-    resourceName,
-    defaultLocale,
-    filename
-  );
-  const filepath = path.join("_data", resourceName, locale, filename);
 
-  const defaultLocaleData = await yaml(defaultLocaleFilepath);
+  const filepath = path.join("_data", resourceName, filename);
 
-  const data = await getFirst(
-    () => yaml(filepath),
-    () => defaultLocaleData
-  );
+  const data = await yaml(filepath);
 
-  const sourceFilepath =
-    defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+  const sourceFilepath = filepath;
 
-  const slug = slugify(defaultLocaleData.title);
+  const slug = slugify(data.title);
 
   return {
     id: data.id,
@@ -95,25 +84,14 @@ export async function fileToPage(
   filename: string
 ): Promise<Page> {
   const resourceName = "pages";
-  const defaultLocaleFilepath = path.join(
-    "_data",
-    resourceName,
-    defaultLocale,
-    filename
-  );
-  const filepath = path.join("_data", resourceName, locale, filename);
 
-  const defaultLocaleData = await yaml(defaultLocaleFilepath);
+  const filepath = path.join("_data", resourceName, filename);
 
-  const data = await getFirst(
-    () => yaml(filepath),
-    () => defaultLocaleData
-  );
+  const data = await yaml(filepath);
 
-  const sourceFilepath =
-    defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+  const sourceFilepath = filepath;
 
-  const slug = slugify(defaultLocaleData.title);
+  const slug = slugify(data.title);
 
   return {
     ...data,
@@ -137,7 +115,7 @@ export async function getPages(): Promise<PagesData> {
   const filenameMap = new Map<string, Page>();
   const idMap = new Map<string, Page>();
 
-  const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
+  const filenames = await fs.readdir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -207,7 +185,7 @@ export async function getPosts(): Promise<PostsData> {
   const resourceName = "posts";
   const filenameMap = new Map<string, Post>();
   const idMap = new Map<string, Post>();
-  const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
+  const filenames = await fs.readdir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -243,30 +221,17 @@ export async function getSimpleData<T = {}>(
   resourceName: string
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
-  const filenames = await fs.readdir(`_data/${resourceName}/${defaultLocale}`);
+  const filenames = await fs.readdir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
-      const defaultLocaleFilepath = path.join(
-        "_data",
-        resourceName,
-        defaultLocale,
-        filename
-      );
-      const filepath = path.join("_data", resourceName, locale, filename);
+      const filepath = path.join("_data", resourceName, filename);
 
-      const defaultLocaleData = await yaml(defaultLocaleFilepath);
+      const data = await yaml(filepath);
 
-      const data = await getFirst(
-        () => yaml(filepath),
-        () => defaultLocaleData
-      );
+      const sourceFilepath = filepath;
 
-      const sourceFilepath =
-        defaultLocaleData === data ? defaultLocaleFilepath : filepath;
-
-      const defaultLocaleTitle =
-        defaultLocaleData.title ?? defaultLocaleData.name;
+      const defaultLocaleTitle = data.title ?? data.name;
 
       const dates: { [key: string]: number } = {};
 
@@ -309,28 +274,15 @@ export async function getSimpleFiles<T = ItemsFile>(
   const localeMap = new Map<string, T & Meta>();
 
   for (const locale of locales) {
-    const defaultLocaleFilepath = path.join(
-      "_data",
-      "settings",
-      defaultLocale,
-      `${resourceName}.yml`
-    );
     const filepath = path.join(
       "_data",
       "settings",
-      locale,
       `${resourceName}.yml`
     );
 
-    const defaultLocaleData = await yaml(defaultLocaleFilepath);
+    const data = await yaml(filepath);
 
-    const data = await getFirst(
-      () => yaml(filepath),
-      () => defaultLocaleData
-    );
-
-    const sourceFilepath =
-      defaultLocaleData === data ? defaultLocaleFilepath : filepath;
+    const sourceFilepath = filepath;
 
     localeMap.set(locale, {
       ...data,
