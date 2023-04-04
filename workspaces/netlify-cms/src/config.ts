@@ -973,6 +973,7 @@ export const config: CmsConfig = {
         {
           label: "ID",
           name: "id",
+          widget: "uuid" as "string",
         },
         {
           label: "Type",
