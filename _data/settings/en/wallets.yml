@@ -28,7 +28,4 @@ items:
       - ios
       - android
     image: /assets/braavos.jpg
-    description: Braavos was created with the goal to make a self-custodial wallet
-      which is easy and reassuring to use as a custodial solution, while not
-      compromising on the huge benefits of decentralization and self-custody of
-      assets.
+    description: Braavos Smart Wallet offers an unparalleled UX and advance security via its Hardware Signer 2-factor authentication and multi-signer 3-factor authentication capabilities.
