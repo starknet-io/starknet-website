@@ -833,6 +833,16 @@ export const config: Config = {
           ],
         },
         {
+          name: "city",
+          label: "City",
+          widget: "string",
+        },
+        {
+          name: "country",
+          label: "Country (State if USA)",
+          widget: "string",
+        },
+        {
           name: "tags",
           label: "Tags",
           widget: "list",
