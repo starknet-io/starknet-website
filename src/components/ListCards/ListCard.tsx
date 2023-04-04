@@ -18,13 +18,19 @@ import NextLink, { LinkProps } from "next/link";
 import * as React from "react";
 
 import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
-import { SiTwitter } from "react-icons/si";
+import { SiTwitter, SiDiscord } from "react-icons/si";
 
 import { Card } from "../Card/Card";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CardLink } from "src/blocks/cards/CardLink";
 import Image from "next/image";
 import { titleCase } from "src/utils/utils";
+
+interface Type {
+  readonly type: string;
+  readonly url: string;
+}
+
 type Props = {
   readonly title?: string;
   readonly startDateTime?: string;
@@ -36,12 +42,20 @@ type Props = {
   readonly city?: string;
   readonly venue?: string;
   readonly twitterHandle?: string;
+  readonly discordHandle?: string;
   readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
+  readonly type_list?: Type[];
   readonly type?: string[];
   readonly isRounded?: boolean;
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
+  const handleTypeClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, type: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(type);
+  }
+
   return (
     <Box maxW="5xl">
       <LinkBox
@@ -123,7 +137,15 @@ export const ListCard = (props: Props) => {
                   </Button>
                 </Box>
               )} */}
-                {props.type && (
+                {props.type_list ? (
+                  <Wrap pb="20px" pt="4px" shouldWrapChildren>
+                    {props.type_list.map((tag) => (
+                      <Tag key={tag.type} variant="listCard" onClick={(e) => handleTypeClick(e, tag.url)}>
+                        {tag.type !== "ios" ? titleCase(tag.type) : "iOS"}
+                      </Tag>
+                    ))}
+                  </Wrap>
+                ) : props.type && (
                   <Wrap pb="20px" pt="4px" shouldWrapChildren>
                     {props.type.map((tag) => (
                       <Tag key={tag} variant="listCard">
@@ -156,7 +178,19 @@ export const ListCard = (props: Props) => {
                       />
                     </Link>
                   )}
-
+                  {props.discordHandle && (
+                    <Link
+                      isExternal
+                      as={NextLink}
+                      href={`${props.discordHandle}`}
+                    >
+                      <Icon
+                        boxSize="18px"
+                        color="list-card-icon-fg"
+                        as={SiDiscord}
+                      />
+                    </Link>
+                  )}
                   {/* <IconButton
               aria-label="Website"
               icon={<HiGlobeAlt />}
