@@ -48,17 +48,17 @@ const videoJsOptions = {
   ],
 };
 
-type VideoPlayerEmbedProps = {
+type VideoPlayerEmbedSeperateProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
 };
-export function VideoPlayerEmbed({
+export function VideoPlayerEmbedSeperate({
   chapters,
   initialActiveChapter,
   onChapterChange,
-}: VideoPlayerEmbedProps) {
+}: VideoPlayerEmbedSeperateProps) {
   const playerRef = React.useRef<Player | null>(null);
   const [bufferPercent, setBufferPercent] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
