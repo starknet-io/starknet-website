@@ -1,17 +1,17 @@
 import React, { RefObject, useEffect, useState } from "react";
 
-export function useAutoHideToolbar(ref: RefObject<HTMLDivElement> | null) {
-  const [isControlActive, setIsControlActive] = useState(true);
+export function usePlayerActive(ref: RefObject<HTMLDivElement> | null) {
+  const [isPlayerActive, setIsPlayerActive] = useState(true);
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
     const onMouseEnter = () => {
-      setIsControlActive((prev: boolean) => {
+      setIsPlayerActive((prev: boolean) => {
         if (prev === false) {
           if (timeout) {
             clearTimeout(timeout);
           }
-          timeout = setTimeout(() => setIsControlActive(false), 4000);
+          timeout = setTimeout(() => setIsPlayerActive(false), 4000);
         }
         return true;
       });
@@ -20,7 +20,7 @@ export function useAutoHideToolbar(ref: RefObject<HTMLDivElement> | null) {
       if (timeout) {
         clearTimeout(timeout);
       }
-      setIsControlActive(false);
+      setIsPlayerActive(false);
     };
     if (!ref?.current) return;
 
@@ -34,7 +34,7 @@ export function useAutoHideToolbar(ref: RefObject<HTMLDivElement> | null) {
         clearTimeout(timeout);
       }
     };
-  }, [setIsControlActive, ref]);
+  }, [setIsPlayerActive, ref]);
 
-  return isControlActive;
+  return isPlayerActive;
 }

@@ -10,6 +10,7 @@ import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import ChaptersPlaylist from "./ChaptersPlaylist";
 import { VideoPlayerCore } from "../lib/VideoPlayerCore";
 import "../player-overrides.css";
+import ChapterTitle from "./ChapterTitle";
 
 type VideoPlayerSeperateProps = {
   chapters: Chapter[];
@@ -90,6 +91,7 @@ export function VideoPlayerSeperate({
       }}
     >
       <VideoPlayerCore
+        playerRef={playerRef}
         embeddable={false}
         videoWrapperStyle={videoWrapperStyle}
         videoPositionStyle={videoPositionStyle}
@@ -99,6 +101,13 @@ export function VideoPlayerSeperate({
         onContainerHeightChange={onContainerHeightChange}
         currentChapter={currentChapter}
         setCurrentChapter={setCurrentChapter}
+        renderChapter={({ chapter, episode, isVisible }) => (
+          <ChapterTitle
+            title={chapter?.title}
+            episode={episode}
+            isVisible={isVisible}
+          />
+        )}
       />
       <ChaptersPlaylist
         height={videoContainerHeight}

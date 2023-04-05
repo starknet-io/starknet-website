@@ -15,11 +15,10 @@ import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
 import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
 import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
-import ChapterTitle from "../player/ChapterTitle";
 import BigPlayButton from "../control-bar/BigPlayButton";
 import CustomControl from "../control-bar/CustomControl";
 import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
-import { useSeek } from "../hooks/useSeek";
+import { SeekStatuses, useSeek } from "../hooks/useSeek";
 import { useVolume } from "../hooks/useVolume";
 import ShareModal from "../share/ShareModal";
 import {
@@ -29,7 +28,7 @@ import {
   isFinalChapter,
 } from "../utils";
 import "../player-overrides.css";
-import { useAutoHideToolbar } from "../hooks/useAutoHideToolbar";
+import { usePlayerActive } from "../hooks/usePlayerActive";
 
 const videoJsOptions = {
   autoplay: false,
@@ -49,6 +48,7 @@ const videoJsOptions = {
 };
 
 type VideoPlayerCoreProps = {
+  playerRef: React.MutableRefObject<Player | null>;
   currentChapter: string;
   setCurrentChapter: (chapter: string) => void;
   chapters: Chapter[];
@@ -57,10 +57,17 @@ type VideoPlayerCoreProps = {
   embeddable?: boolean;
   videoWrapperStyle: CSSProperties;
   videoPositionStyle: CSSProperties;
-  onFullscreenChange: (isFullscreen: boolean) => void;
-  onContainerHeightChange: (height: number) => void;
+  onFullscreenChange?: (isFullscreen: boolean) => void;
+  onContainerHeightChange?: (height: number) => void;
+  onPlayingStatusChange?: (playingStatus: SeekStatuses) => void;
+  renderChapter: (options: {
+    chapter: Chapter;
+    episode: number;
+    isVisible: boolean;
+  }) => React.ReactNode;
 };
 export function VideoPlayerCore({
+  playerRef,
   chapters,
   currentChapter,
   setCurrentChapter,
@@ -70,8 +77,9 @@ export function VideoPlayerCore({
   embeddable,
   onFullscreenChange,
   onContainerHeightChange,
+  onPlayingStatusChange,
+  renderChapter,
 }: VideoPlayerCoreProps) {
-  const playerRef = React.useRef<Player | null>(null);
   const [bufferPercent, setBufferPercent] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
   const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
@@ -89,13 +97,9 @@ export function VideoPlayerCore({
     ref: videoWrapperRef,
     toggleFullscreen,
     isFullscreen,
-  } = useToggleFullscreen({ onFullscreenChange });
+  } = useToggleFullscreen();
 
   const currentChapterRef = useRef(currentChapter);
-
-  useEffect(() => {
-    onContainerHeightChange(height);
-  }, [height, onContainerHeightChange]);
 
   const paused = useRef(false);
 
@@ -175,12 +179,22 @@ export function VideoPlayerCore({
     };
   }, [currentChapter, chapters]);
 
-  const isControlActive =
-    useAutoHideToolbar(videoWrapperRef) || isInteractingWithVolume;
+  const isPlayerActive = usePlayerActive(videoWrapperRef);
 
   useEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
   }, [playingStatus]);
+
+  useEffect(() => {
+    onFullscreenChange?.(isFullscreen);
+  }, [isFullscreen, onFullscreenChange]);
+  useEffect(() => {
+    onContainerHeightChange?.(height);
+  }, [height, onContainerHeightChange]);
+
+  useEffect(() => {
+    onPlayingStatusChange?.(playingStatus);
+  }, [playingStatus, onPlayingStatusChange]);
 
   const handlePlayerReady = (player: any) => {
     playerRef.current = player;
@@ -249,6 +263,17 @@ export function VideoPlayerCore({
     playerRef.current?.play();
   };
 
+  const isContralVisible = useMemo(() => {
+    if (playingStatus === "unstarted") {
+      return false;
+    }
+
+    if (playingStatus === "paused" || playingStatus === "ended") {
+      return true;
+    }
+    return isPlayerActive || isInteractingWithVolume;
+  }, [isInteractingWithVolume, isPlayerActive, playingStatus]);
+
   return (
     <div style={videoWrapperStyle} ref={videoWrapperRef}>
       <div style={videoPositionStyle} onClick={onPlayToggle}>
@@ -274,18 +299,17 @@ export function VideoPlayerCore({
         showEmbed={!embeddable}
         currentChapter={currentChapter}
       />
-      {embeddable && chapter && (
-        <ChapterTitle
-          title={chapter?.title}
-          episode={chapterIndex + 1}
-          isVisible={isControlActive}
-        />
-      )}
+      {chapter &&
+        renderChapter({
+          chapter,
+          episode: chapterIndex + 1,
+          isVisible: isContralVisible,
+        })}
       {chapter && (
         <CustomControl
           chapter={chapter}
           playingStatus={playingStatus}
-          isControlActive={isControlActive}
+          isControlVisible={isContralVisible}
           totalDuration={totalDuration}
           currentTime={currentTime}
           currentDisplayTime={currentTime}

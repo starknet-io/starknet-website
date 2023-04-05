@@ -16,7 +16,7 @@ import { Chapter } from "@ui/VideoPlayer/constants";
 
 type CustomControlProps = {
   playingStatus: SeekStatuses;
-  isControlActive: boolean;
+  isControlVisible: boolean;
   totalDuration: number;
   currentTime: number;
   currentDisplayTime: number;
@@ -44,7 +44,7 @@ type CustomControlProps = {
 export default function CustomControl(props: CustomControlProps) {
   const {
     playingStatus,
-    isControlActive,
+    isControlVisible,
     totalDuration,
     currentTime,
     currentDisplayTime,
@@ -69,17 +69,6 @@ export default function CustomControl(props: CustomControlProps) {
     validateSeekRange,
   } = props;
 
-  const shouldShowControl = () => {
-    if (playingStatus === "unstarted") {
-      return false;
-    }
-
-    if (playingStatus === "paused" || playingStatus === "ended") {
-      return true;
-    }
-    return isControlActive;
-  };
-
   const callIfWithingChapter = (t: number, func: (t: number) => void) => {
     if (validateSeekRange) {
       validateSeekRange(t, func);
@@ -102,7 +91,7 @@ export default function CustomControl(props: CustomControlProps) {
         transitionDuration: "0.5s",
         transitionTimingFunction: "ease-in-out",
       }}
-      opacity={shouldShowControl() ? 1 : 0}
+      opacity={isControlVisible ? 1 : 0}
     >
       {/* <VideoSeekSlider
         max={totalDuration * 1000}

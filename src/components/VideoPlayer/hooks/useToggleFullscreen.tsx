@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 
-export function useToggleFullscreen<T extends HTMLDivElement>({
-  onFullscreenChange,
-}: {
-  onFullscreenChange?: (isFullscreen: boolean) => void;
-}) {
+export function useToggleFullscreen<T extends HTMLDivElement>() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const ref = useRef<T>(null);
 
@@ -36,10 +32,6 @@ export function useToggleFullscreen<T extends HTMLDivElement>({
       document.removeEventListener("fullscreenchange", updateFullscreenState);
     };
   }, []);
-
-  useEffect(() => {
-    onFullscreenChange?.(isFullscreen);
-  }, [isFullscreen, onFullscreenChange]);
 
   return { toggleFullscreen, isFullscreen, ref };
 }
