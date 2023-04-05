@@ -10,36 +10,7 @@ const dotenvFiles = [".env.local", ".env"];
 dotenvFiles.forEach((path) => dotenv.config({ path }));
 
 import { yaml } from "./utils";
-
-type JsonFile = {
-  type: "json";
-  data: { [key: string]: string };
-  filepath: string;
-};
-
-type MarkdownFile = {
-  type: "markdown";
-  data: string;
-  filepath: string;
-};
-
-type Files = JsonFile | MarkdownFile;
-
-type Collection = (typeof collections)[number];
-type CollectionWithFields = Extract<Collection, { fields: any }>;
-type Fields = CollectionWithFields["fields"];
-
-type FieldWithTypes = Extract<Fields[number], { types: any }>;
-type FieldWithTypesFields = FieldWithTypes["types"][number]["fields"][number];
-type FieldWithTypesWithFields = Extract<
-  Fields[number] | FieldWithTypesFields,
-  { fields: any }
->;
-
-type Field =
-  | Fields[number]
-  | FieldWithTypes["types"][number]["fields"][number]
-  | FieldWithTypesWithFields["fields"][number];
+import { Field, Files, handleFields } from "./crowdin";
 
 const files: Files[] = [];
 
@@ -49,19 +20,21 @@ for (const collection of collections) {
       const data = await yaml(collectionFile.file);
 
       handleFields(
+        files,
         data,
         collectionFile.fields as Field[],
         path.join(collection.name, path.basename(collectionFile.file, ".yml"))
       );
     }
   } else if ("folder" in collection) {
-    const filenames = await fs.readdir(collection.folder);
+    const filenames = await fs.readdir(path.join("_data", collection.name));
 
     for (const filename of filenames) {
-      const filepath = path.join(collection.folder, filename);
+      const filepath = path.join("_data", collection.name, filename);
       const data = await yaml(filepath);
 
       handleFields(
+        files,
         data,
         collection.fields,
         path.join(collection.name, path.basename(filename, ".yml"))
@@ -100,89 +73,4 @@ for (const file of files) {
       }
     );
   }
-
-
-}
-
-function handleFields(data: any, fields: Field[], filepath: string) {
-  const jsonFile: JsonFile = {
-    type: "json",
-    data: {},
-    filepath,
-  };
-
-  files.push(jsonFile);
-
-  fields.forEach((field) => {
-    // console.log(field.widget, field.name);
-    // console.log(data[field.name]);
-
-    switch (field.widget) {
-      case "number":
-      case "boolean":
-      case "datetime":
-      case "image":
-      case "relation":
-      case "select":
-      case "hidden":
-        // we don't translate this
-        break;
-
-      case "text":
-      case "string":
-        jsonFile.data[field.name] = data[field.name];
-        break;
-
-      case "object":
-        if ("fields" in field) {
-          handleFields(
-            data[field.name],
-            field.fields,
-            filepath + "_" + field.name
-          );
-        }
-        break;
-
-      case "markdown":
-        files.push({
-          type: "markdown",
-          data: data[field.name],
-          filepath: filepath + "_" + field.name,
-        });
-        break;
-
-      case "list":
-        if (Array.isArray(data[field.name])) {
-          (data[field.name] as any[]).forEach((data: any, index) => {
-            if ("types" in field) {
-              const type = field.types.find(
-                (type) => type.name === data["type"]
-              );
-
-              if (type != null) {
-                // console.log(type)
-                handleFields(
-                  data,
-                  type.fields,
-                  filepath + "_" + field.name + "_" + index
-                );
-              } else {
-                console.log("type not found");
-              }
-            } else if ("fields" in field) {
-              handleFields(
-                data,
-                field.fields,
-                filepath + "_" + field.name + "_" + index
-              );
-            }
-          });
-        }
-
-        break;
-
-      default:
-        field satisfies never;
-    }
-  });
 }

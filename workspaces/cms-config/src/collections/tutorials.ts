@@ -13,7 +13,7 @@ export const tutorialsCollectionConfig = {
     {
       label: "ID",
       name: "id",
-      widget: "string",
+      widget: "uuid" as "string",
     },
     {
       label: "Type",

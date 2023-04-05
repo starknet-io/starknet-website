@@ -14,6 +14,7 @@ import {
   handleLink,
   updateBlocks,
 } from "./data";
+import { translateFile } from "./crowdin";
 
 const simpleDataTypes = [
   await getSimpleData("categories"),
@@ -110,10 +111,7 @@ for (const data of pages.filenameMap.values()) {
 await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
 
 for (const locale of locales) {
-  const mainMenu: MainMenu = await getFirst(
-    () => yaml(`_data/settings/main-menu.yml`),
-    // () => yaml(`_data/settings/${defaultLocale}/main-menu.yml`),
-  );
+  const mainMenu: MainMenu = await translateFile(locale, "settings", 'main-menu.yml');
 
   for (const mainMenuItem of mainMenu.items) {
     for (const column of mainMenuItem.columns ?? []) {

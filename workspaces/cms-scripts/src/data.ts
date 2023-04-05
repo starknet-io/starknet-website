@@ -1,11 +1,12 @@
 import * as path from "node:path";
-import {  locales } from "@starknet-io/cms-data/src/i18n/config";
+import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
 import { slugify } from "@starknet-io/cms-utils/src/node";
+import { translateFile } from "./crowdin";
 
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
@@ -36,13 +37,12 @@ export async function fileToPost(
 ): Promise<Post> {
   const resourceName = "posts";
 
-  const filepath = path.join("_data", resourceName, filename);
+  const sourceFilepath = path.join("_data", resourceName, filename);
+  const sourceData = await yaml(sourceFilepath);
 
-  const data = await yaml(filepath);
+  const data = await translateFile(locale, resourceName, filename);
 
-  const sourceFilepath = filepath;
-
-  const slug = slugify(data.title);
+  const slug = slugify(sourceData.title);
 
   return {
     id: data.id,
@@ -60,7 +60,7 @@ export async function fileToPost(
     blocks: data.blocks ?? [],
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
-    sourceFilepath: path.join("_data", resourceName, locale, filename),
+    sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
   };
 }
@@ -85,13 +85,12 @@ export async function fileToPage(
 ): Promise<Page> {
   const resourceName = "pages";
 
-  const filepath = path.join("_data", resourceName, filename);
+  const sourceFilepath = path.join("_data", resourceName, filename);
+  const sourceData = await yaml(sourceFilepath);
 
-  const data = await yaml(filepath);
+  const data = await translateFile(locale, resourceName, filename);
 
-  const sourceFilepath = filepath;
-
-  const slug = slugify(data.title);
+  const slug = slugify(sourceData.title);
 
   return {
     ...data,
@@ -225,13 +224,13 @@ export async function getSimpleData<T = {}>(
 
   for (const locale of locales) {
     for (const filename of filenames) {
-      const filepath = path.join("_data", resourceName, filename);
+      const sourceFilepath = path.join("_data", resourceName, filename);
+      const sourceData = await yaml(sourceFilepath);
+      const data = await translateFile(locale, resourceName, filename);
 
-      const data = await yaml(filepath);
+      const defaultLocaleTitle = sourceData.title ?? sourceData.name;
 
-      const sourceFilepath = filepath;
-
-      const defaultLocaleTitle = data.title ?? data.name;
+      const slug = defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined;
 
       const dates: { [key: string]: number } = {};
 
@@ -248,7 +247,7 @@ export async function getSimpleData<T = {}>(
       filenameMap.set(`${locale}:${filename}`, {
         ...data,
         ...dates,
-        slug: defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined,
+        slug,
         locale: locale,
         objectID: `${resourceName}:${locale}:${filename}`,
         sourceFilepath,
@@ -271,18 +270,15 @@ interface SimpleFiles<T> {
 export async function getSimpleFiles<T = ItemsFile>(
   resourceName: string
 ): Promise<SimpleFiles<T & Meta>> {
+  const collectionName = "settings";
+  const filename = `${resourceName}.yml`;
+
   const localeMap = new Map<string, T & Meta>();
 
   for (const locale of locales) {
-    const filepath = path.join(
-      "_data",
-      "settings",
-      `${resourceName}.yml`
-    );
+    const sourceFilepath = path.join("_data", collectionName, filename);
 
-    const data = await yaml(filepath);
-
-    const sourceFilepath = filepath;
+    const data = await translateFile(locale, collectionName, filename);
 
     localeMap.set(locale, {
       ...data,
