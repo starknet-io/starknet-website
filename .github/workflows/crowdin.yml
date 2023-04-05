@@ -11,31 +11,23 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+      CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 18
-      #     cache: yarn
-      # - run: yarn
-      # - run: yarn workspace @starknet-io/cms-scripts pre-crowdin
-
-      - name: crowdin action
-        uses: crowdin/github-action@v1
+      - uses: actions/setup-node@v3
         with:
-          upload_sources: true
-          upload_translations: false
-          download_translations: true
-          # download_language: 'de'
-          localization_branch_name: ${{ github.ref_name }}_l10n
-          crowdin_branch_name: dev
-          create_pull_request: true
-          pull_request_title: "New Crowdin Translations"
-          pull_request_body: "New Crowdin translations by [Crowdin GH Action](https://github.com/crowdin/github-action)"
-          base_url: "https://starkware.crowdin.com"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          node-version: 18
+          cache: yarn
+      - run: yarn
+      - run: yarn workspace @starknet-io/cms-scripts pre-crowdin
+      - run: yarn crowdin upload -b ${{ github.ref_name }}
+      - run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
+      - uses: actions/cache/save@v3
+        with:
+          path: _crowdin
+          key: crowdin-cache-${{ github.ref_name }}

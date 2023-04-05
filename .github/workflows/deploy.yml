@@ -1,0 +1,35 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - dev
+      - production
+      - tsotne/wip
+
+jobs:
+  build:
+    environment: "dev-deploy"
+    env:
+      ALGOLIA_INDEX: ${{ github.ref_name }}
+      ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+      ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+      ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - uses: actions/cache/restore@v3
+        with:
+          path: _crowdin
+          key: crowdin-cache-${{ github.ref_name }}
+      - run: yarn
+      - run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
+      - run: yarn workspace @starknet-io/cms-scripts update-algolia-index
+      - run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}

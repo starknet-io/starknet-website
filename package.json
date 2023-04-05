@@ -112,6 +112,7 @@
     "unist-util-index": "^3.0.2",
     "use-scramble": "^2.2.12",
     "uuid": "^9.0.0",
+    "vercel": "latest",
     "vite": "^4.2.1",
     "vite-tsconfig-paths": "^4.0.7",
     "vitest": "^0.29.8",
