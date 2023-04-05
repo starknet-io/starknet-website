@@ -13,23 +13,21 @@ export type VolumeButtonProps = {
   isMuted: boolean;
   toggleMute: () => void;
   volume: number;
-  onVolumeChange: (vol: number) => void;
+  onVolumeScrubStart: (vol: number) => void;
+  onVolumeScrubChange: (vol: number) => void;
+  onVolumeScrubEnd: (vol: number) => void;
+  isInteractingWithVolume: boolean;
 };
 
 export const VolumeButton = ({
   isMuted,
   toggleMute,
   volume,
-  onVolumeChange,
+  onVolumeScrubStart,
+  onVolumeScrubChange,
+  onVolumeScrubEnd,
 }: VolumeButtonProps) => {
   const [isScrubbing, setScrubbing] = useState(false);
-
-  const onScrubStart = (v: number) => {
-    setScrubbing(true);
-  };
-  const onScrubEnd = (v: number) => {
-    setScrubbing(false);
-  };
 
   const getIcon = () => {
     if (isMuted)
@@ -107,9 +105,9 @@ export const VolumeButton = ({
           min={0}
           max={100}
           value={isMuted ? 0 : volume}
-          onChangeEnd={onScrubEnd}
-          onChangeStart={onScrubStart}
-          onChange={onVolumeChange}
+          onChangeEnd={onVolumeScrubEnd}
+          onChangeStart={onVolumeScrubStart}
+          onChange={onVolumeScrubChange}
         >
           <SliderTrack bg="#7E7E7E">
             <SliderFilledTrack

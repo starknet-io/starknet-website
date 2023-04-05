@@ -8,12 +8,20 @@ export type UseVolumeProps = {
 export function useVolume({ playerRef }: UseVolumeProps) {
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0);
+  const [isInteractingWithVolume, setIsInteractingWithVolume] = useState(false);
 
   const toggleMute = () => {
     setIsMuted((p) => {
       playerRef.current?.muted(!p);
       return !p;
     });
+  };
+
+  const onVolumeScrubStart = (v: number) => {
+    setIsInteractingWithVolume(true);
+  };
+  const onVolumeScrubEnd = (v: number) => {
+    setIsInteractingWithVolume(false);
   };
 
   const onVolumeScrubChange = (vol: number) => {
@@ -40,8 +48,11 @@ export function useVolume({ playerRef }: UseVolumeProps) {
 
   return {
     toggleMute,
+    onVolumeScrubStart,
     onVolumeScrubChange,
+    onVolumeScrubEnd,
     setVolume,
+    isInteractingWithVolume,
     isMuted,
     volume,
   };

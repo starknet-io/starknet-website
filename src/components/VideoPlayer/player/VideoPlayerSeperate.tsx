@@ -36,6 +36,7 @@ import {
   isFinalChapter,
 } from "../utils";
 import "../player-overrides.css";
+import { useAutoHideToolbar } from "../hooks/useAutoHideToolbar";
 
 const videoJsOptions = {
   autoplay: false,
@@ -81,17 +82,26 @@ export function VideoPlayerSeperate({
     onOpen: onOpenShareModal,
   } = useDisclosure();
 
-  const playerStatusTimeout = useRef<NodeJS.Timeout | null>(null);
-
-  const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
+  const {
+    ref: videoWrapperRef,
+    toggleFullscreen,
+    isFullscreen,
+  } = useToggleFullscreen();
 
   const paused = useRef(false);
-  const [isControlActive, setIsControlActive] = useState(false);
 
-  const { volume, isMuted, toggleMute, onVolumeScrubChange, setVolume } =
-    useVolume({
-      playerRef,
-    });
+  const {
+    volume,
+    isMuted,
+    toggleMute,
+    onVolumeScrubStart,
+    onVolumeScrubChange,
+    onVolumeScrubEnd,
+    isInteractingWithVolume,
+    setVolume,
+  } = useVolume({
+    playerRef,
+  });
 
   const {
     playingStatus,
@@ -161,17 +171,12 @@ export function VideoPlayerSeperate({
     };
   }, [currentChapter, chapters]);
 
+  const isControlActive =
+    useAutoHideToolbar(videoWrapperRef) || isInteractingWithVolume;
+
   useEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
   }, [playingStatus]);
-
-  const changePlayerControlToActive = () => {
-    setIsControlActive(true);
-    if (playerStatusTimeout.current) {
-      clearTimeout(playerStatusTimeout.current);
-    }
-    setTimeout(() => setIsControlActive(false), VIDEOJS_INACTIVITY_TIMEOUT);
-  };
 
   const handlePlayerReady = (player: any) => {
     playerRef.current = player;
@@ -223,22 +228,6 @@ export function VideoPlayerSeperate({
       });
     });
 
-    player.on("useractive", () => {
-      setIsControlActive(true);
-      if (playerStatusTimeout.current) {
-        clearTimeout(playerStatusTimeout.current);
-      }
-    });
-
-    player.on("userinactive", () => {
-      if (!paused.current) {
-        setIsControlActive(false);
-      }
-      if (playerStatusTimeout.current) {
-        clearTimeout(playerStatusTimeout.current);
-      }
-    });
-
     player.on("pause", () => {
       paused.current = true;
       setPlayingStatus("paused");
@@ -247,7 +236,6 @@ export function VideoPlayerSeperate({
     player.on("play", () => {
       setPlayingStatus("playing");
       paused.current = false;
-      changePlayerControlToActive();
     });
 
     const volume = player.volume();
@@ -297,7 +285,7 @@ export function VideoPlayerSeperate({
         lg: "1fr auto",
       }}
     >
-      <div style={videoWrapperStyle} ref={ref}>
+      <div style={videoWrapperStyle} ref={videoWrapperRef}>
         <div style={videoPositionStyle} onClick={onPlayToggle}>
           <VideoJS
             options={videojsOptionsWithSrc}
@@ -355,6 +343,9 @@ export function VideoPlayerSeperate({
             isMuted={isMuted}
             toggleMute={toggleMute}
             onVolumeScrubChange={onVolumeScrubChange}
+            onVolumeScrubStart={onVolumeScrubStart}
+            onVolumeScrubEnd={onVolumeScrubEnd}
+            isInteractingWithVolume={isInteractingWithVolume}
             volume={volume}
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}

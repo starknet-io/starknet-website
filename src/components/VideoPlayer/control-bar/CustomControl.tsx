@@ -28,6 +28,9 @@ type CustomControlProps = {
   isMuted: boolean;
   toggleMute: () => void;
   onVolumeScrubChange: (v: number) => void;
+  onVolumeScrubStart: (v: number) => void;
+  onVolumeScrubEnd: (v: number) => void;
+  isInteractingWithVolume: boolean;
   volume: number;
   toggleFullscreen: () => void;
   isFullscreen: boolean;
@@ -52,7 +55,10 @@ export default function CustomControl(props: CustomControlProps) {
     onPlayToggle,
     isMuted,
     toggleMute,
+    onVolumeScrubStart,
     onVolumeScrubChange,
+    onVolumeScrubEnd,
+    isInteractingWithVolume,
     volume,
     toggleFullscreen,
     isFullscreen,
@@ -138,7 +144,10 @@ export default function CustomControl(props: CustomControlProps) {
         <VolumeButton
           isMuted={isMuted}
           toggleMute={toggleMute}
-          onVolumeChange={onVolumeScrubChange}
+          onVolumeScrubStart={onVolumeScrubStart}
+          onVolumeScrubEnd={onVolumeScrubEnd}
+          onVolumeScrubChange={onVolumeScrubChange}
+          isInteractingWithVolume={isInteractingWithVolume}
           volume={volume}
         />
         <Box
