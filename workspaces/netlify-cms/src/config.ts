@@ -973,6 +973,7 @@ export const config: CmsConfig = {
         {
           label: "ID",
           name: "id",
+          widget: "uuid" as "string",
         },
         {
           label: "Type",
@@ -1204,23 +1205,34 @@ export const config: CmsConfig = {
                 },
                 {
                   label: "Type",
-                  name: "type",
-                  multiple: true,
-                  widget: "select",
-                  options: [
+                  name: "type_list",
+                  widget: "list",
+                  fields: [
                     {
-                      label: "Browser extension",
-                      value: "browser_extension",
+                      label: "Type icon",
+                      name: "type",
+                      widget: "select",
+                      options: [
+                        {
+                          label: "Browser extension",
+                          value: "browser_extension",
+                        },
+                        {
+                          label: "iOS",
+                          value: "ios",
+                        },
+                        {
+                          label: "Android",
+                          value: "android",
+                        },
+                      ],
                     },
                     {
-                      label: "iOS",
-                      value: "ios",
-                    },
-                    {
-                      label: "Android",
-                      value: "android",
-                    },
-                  ],
+                      label: "Link URL",
+                      name: "url",
+                      widget: "string",
+                      required: false
+                  }]
                 },
                 {
                   label: "Image",
@@ -1230,6 +1242,12 @@ export const config: CmsConfig = {
                 {
                   label: "Twitter handle",
                   name: "twitter",
+                },
+                {
+                  label: "Discord handle",
+                  name: "discord",
+                  widget: "string",
+                  required: false
                 },
                 {
                   label: "Website url",
