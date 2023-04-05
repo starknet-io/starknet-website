@@ -1,15 +1,15 @@
 name: Crowdin Action
 
 on:
-  - workflow_dispatch
+  workflow_dispatch:
 
 concurrency: crowdin-dev
 
 jobs:
-  synchronize-with-crowdin:
+  synchronize_with_crowdin:
+    name: Synchronize with Crowdin
     environment: "dev-crowdin"
-
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -17,17 +17,29 @@ jobs:
       CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js and cache dependencies
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: yarn
-      - run: yarn
-      - run: yarn workspace @starknet-io/cms-scripts pre-crowdin
-      - run: yarn crowdin upload -b ${{ github.ref_name }}
-      - run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
-      - uses: actions/cache/save@v3
+
+      - name: Install project dependencies
+        run: yarn
+
+      - name: Run pre-Crowdin script for file preparation
+        run: yarn workspace @starknet-io/cms-scripts pre-crowdin
+
+      - name: Upload source files to Crowdin project
+        run: yarn crowdin upload -b ${{ github.ref_name }}
+
+      - name: Download approved translations from Crowdin
+        run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
+
+      - name: Cache Crowdin files for future workflow runs
+        uses: actions/cache@v3
         with:
           path: _crowdin
           key: crowdin-cache-${{ github.ref_name }}
