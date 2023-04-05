@@ -3,7 +3,7 @@ import { Text } from "@ui/Typography/Text";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { getComputedLinkData } from "src/utils/utils";
-import { BasicCardBlock } from "@starknet-io/cms-data/src/pages";
+import type { BasicCardBlock } from "@starknet-io/cms-data/src/pages";
 import Link from "next/link";
 
 type Props = BasicCardBlock & { locale: string };

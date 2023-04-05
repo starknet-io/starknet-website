@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/node";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface Event {
   readonly name: string;
@@ -18,8 +18,10 @@ export interface Event {
 export async function getEvents(locale: string): Promise<readonly Event[]> {
   try {
     return await getFirst(
-      () => getJSON(`_dynamic/events/${locale}.json`),
-      () => getJSON(`_dynamic/events/${defaultLocale}.json`),
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          (await fetch(`/data/events/${value}.json`)).json()
+      )
     );
   } catch (cause) {
     throw new Error("getEvents failed!", {

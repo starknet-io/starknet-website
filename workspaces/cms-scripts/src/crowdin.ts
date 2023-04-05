@@ -1,7 +1,7 @@
-import * as path from "node:path";
+import path from "node:path";
 import { collections } from "@starknet-io/cms-config/src/collections";
 import { yaml } from "./utils";
-import { getFirst, getJSON, getString } from "@starknet-io/cms-utils/src/node";
+import fs from "node:fs/promises";
 
 export type JsonFile = {
   type: "json";
@@ -87,13 +87,18 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
       case "text":
       case "string":
         if (translatedData == null) {
-          translatedData = await getFirst(
-            () => getJSON("../" + filepath + ".json"),
-            async () => ({})
-          );
+          try {
+            const file = await fs.readFile(
+              path.join(process.cwd(), filepath + ".json"),
+              "utf8",
+            );
+
+            translatedData = JSON.parse(file);
+            console.log(translatedData)
+          } catch {}
         }
 
-        data[field.name] = translatedData[field.name] ?? data[field.name];
+        data[field.name] = translatedData?.[field.name] ?? data[field.name];
 
         break;
 
@@ -108,10 +113,13 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
         break;
 
       case "markdown":
-        data[field.name] = await getFirst(
-          () => getString("../" + filepath + "_" + field.name + ".md"),
-          () => data[field.name]
-        );
+        try {
+          data[field.name] = await fs.readFile(
+            path.join(process.cwd(), filepath + ".json"),
+            "utf8",
+          );
+        } catch {}
+
         break;
 
       case "list":

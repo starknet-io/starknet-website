@@ -14,7 +14,7 @@ import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { getComputedLinkData } from "src/utils/utils";
-import { ImageIconLinkCardBlock } from "@starknet-io/cms-data/src/pages";
+import type { ImageIconLinkCardBlock } from "@starknet-io/cms-data/src/pages";
 import { CustomLink } from "@ui/Link/CustomLink";
 
 type Props = ImageIconLinkCardBlock & { locale: string };

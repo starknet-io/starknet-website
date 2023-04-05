@@ -35,7 +35,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
   },
   async redirects() {
-    const data = JSON.parse(await fs.readFile("_data/_dynamic/redirects/en.json", { encoding: "utf8" }))
+    const data = JSON.parse(await fs.readFile("public/data/redirects/en.json", { encoding: "utf8" }))
 
     return data.map((item) => ({ ...item, permanent: false }));
   },

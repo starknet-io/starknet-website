@@ -1,7 +1,7 @@
 import algoliasearch from "algoliasearch";
 import { defaultLocale } from "./i18n/config";
-import { TopLevelBlock } from "./pages";
-import { getFirst, getJSON, Meta } from "@starknet-io/cms-utils/src/node";
+import type { TopLevelBlock } from "./pages";
+import { getFirst, Meta } from "@starknet-io/cms-utils/src/index";
 import { youtube_v3 } from "googleapis";
 
 interface VideoMeta {
@@ -28,18 +28,21 @@ export interface Post extends Meta {
 
 export async function getPostBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Post> {
   try {
     return (await getFirst(
-      () => getJSON(`_dynamic/posts/${locale}/${slug}.json`),
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          (await fetch(`/data/posts/${locale}/${slug}.json`)).json()
+      ),
       async () => {
         const client = algoliasearch(
           process.env.ALGOLIA_APP_ID!,
-          process.env.ALGOLIA_SEARCH_API_KEY!,
+          process.env.ALGOLIA_SEARCH_API_KEY!
         );
         const index = client.initIndex(
-          `web_posts_${process.env.ALGOLIA_INDEX}`,
+          `web_posts_${process.env.ALGOLIA_INDEX}`
         );
 
         const searchResponse = await index.search<Post>("", {
@@ -53,8 +56,7 @@ export async function getPostBySlug(
         }
 
         return post;
-      },
-      () => getJSON(`_dynamic/posts/${defaultLocale}/${slug}.json`),
+      }
     )) as Post;
   } catch (cause) {
     throw new Error(`Post not found! ${slug}`, {

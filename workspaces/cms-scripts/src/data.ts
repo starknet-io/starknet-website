@@ -5,7 +5,7 @@ import { DefaultLogFields } from "simple-git";
 import fs from "node:fs/promises";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
-import { slugify } from "@starknet-io/cms-utils/src/node";
+import { slugify } from "@starknet-io/cms-utils/src/index";
 import { translateFile } from "./crowdin";
 
 export interface Meta {

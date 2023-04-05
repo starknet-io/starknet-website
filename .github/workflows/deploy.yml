@@ -12,10 +12,7 @@ jobs:
     name: Build and Deploy
     environment: "dev-deploy"
     env:
-      ALGOLIA_INDEX: ${{ github.ref_name }}
-      ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-      ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-      ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
+      GITHUB_REF_NAME: ${{ github.ref_name }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     runs-on: ubuntu-22.04
@@ -38,11 +35,18 @@ jobs:
       - name: Install project dependencies
         run: yarn
 
-      - name: Update dynamic data in workspace
+      - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
 
-      - name: Update Algolia search index in workspace
-        run: yarn workspace @starknet-io/cms-scripts update-algolia-index
+      - name: Update Algolia search index
+        run: |
+          export ALGOLIA_INDEX=${GITHUB_REF_NAME/\//-}
+          yarn workspace @starknet-io/cms-scripts update-algolia-index
+
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
 
       - name: Prepare Vercel environment and build project
         run: |

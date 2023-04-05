@@ -3,7 +3,7 @@ import * as path from "node:path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 
-import { getFirst, write, yaml } from "./utils";
+import { write } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
@@ -24,7 +24,7 @@ const simpleDataTypes = [
 
 for (const simpleData of simpleDataTypes) {
   try {
-    await fs.mkdir(`_data/_dynamic/${simpleData.resourceName}`, {
+    await fs.mkdir(`public/data/${simpleData.resourceName}`, {
       recursive: true,
     });
 
@@ -34,7 +34,7 @@ for (const simpleData of simpleDataTypes) {
       );
 
       await write(
-        `_data/_dynamic/${simpleData.resourceName}/${locale}.json`,
+        `public/data/${simpleData.resourceName}/${locale}.json`,
         data,
       );
     }
@@ -56,7 +56,7 @@ const simpleFiles = [
 
 for (const simpleFile of simpleFiles) {
   try {
-    await fs.mkdir(`_data/_dynamic/${simpleFile.resourceName}`, {
+    await fs.mkdir(`public/data/${simpleFile.resourceName}`, {
       recursive: true,
     });
 
@@ -64,7 +64,7 @@ for (const simpleFile of simpleFiles) {
       const data = simpleFile.localeMap.get(locale)!;
 
       await write(
-        `_data/_dynamic/${simpleFile.resourceName}/${locale}.json`,
+        `public/data/${simpleFile.resourceName}/${locale}.json`,
         data.items,
       );
     }
@@ -80,35 +80,35 @@ const pages = await getPages();
 updateBlocks(pages, posts);
 
 for (const locale of locales) {
-  await fs.mkdir(`_data/_dynamic/posts/${locale}`, { recursive: true });
+  await fs.mkdir(`public/data/posts/${locale}`, { recursive: true });
 }
 
 for (const data of posts.filenameMap.values()) {
-  await write(`_data/_dynamic/posts/${data.locale}/${data.slug}.json`, data);
+  await write(`public/data/posts/${data.locale}/${data.slug}.json`, data);
 }
 
 for (const locale of locales) {
-  await fs.mkdir(`_data/_dynamic/pages/${locale}`, { recursive: true });
+  await fs.mkdir(`public/data/pages/${locale}`, { recursive: true });
 }
 
 for (const data of pages.filenameMap.values()) {
   await fs.mkdir(
     path.join(
-      "_data/_dynamic/pages",
+      "public/data/pages",
       data.locale,
       ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
     ),
     { recursive: true },
   );
 
-  await write(path.join("_data/_dynamic/pages", `${data.link}.json`), data);
+  await write(path.join("public/data/pages", `${data.link}.json`), data);
 
   // TODO stop using this in favor of above
-  await write(`_data/_dynamic/pages/${data.locale}/${data.slug}.json`, data);
+  await write(`public/data/pages/${data.locale}/${data.slug}.json`, data);
 }
 
 // main menu
-await fs.mkdir("_data/_dynamic/main-menu", { recursive: true });
+await fs.mkdir("public/data/main-menu", { recursive: true });
 
 for (const locale of locales) {
   const mainMenu: MainMenu = await translateFile(locale, "settings", 'main-menu.yml');
@@ -123,5 +123,5 @@ for (const locale of locales) {
     }
   }
 
-  await write(`_data/_dynamic/main-menu/${locale}.json`, mainMenu);
+  await write(`public/data/main-menu/${locale}.json`, mainMenu);
 }

@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/node";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface Wallet {
   readonly name: string;
@@ -13,8 +13,10 @@ export interface Wallet {
 export async function getWallets(locale: string): Promise<readonly Wallet[]> {
   try {
     return await getFirst(
-      () => getJSON(`_dynamic/wallets/${locale}.json`),
-      () => getJSON(`_dynamic/wallets/${defaultLocale}.json`),
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          (await fetch(`/data/wallets/${locale}.json`)).json()
+      )
     );
   } catch (cause) {
     throw new Error("getWallets failed!", {

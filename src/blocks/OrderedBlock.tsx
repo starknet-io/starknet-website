@@ -2,7 +2,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import React from "react";
-import { slugify } from "@starknet-io/cms-utils/src/browser";
+import { slugify } from "@starknet-io/cms-utils/src/index";
 
 type OrderedBlockProps = {
   children: React.ReactNode;

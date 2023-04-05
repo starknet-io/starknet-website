@@ -1,6 +1,8 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, Meta } from "@starknet-io/cms-utils/src/node";
-import { LinkData } from "./settings/main-menu";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
+
+import type { Meta } from "@starknet-io/cms-utils/src/index";
+import type { LinkData } from "./settings/main-menu";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -190,13 +192,15 @@ export interface Page extends Meta {
 
 export async function getPageBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
-    return (await getFirst(
-      () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
-    )) as Page;
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          (await fetch(`/data/pages/${locale}/${slug}.json`)).json()
+      )
+    );
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
       cause,

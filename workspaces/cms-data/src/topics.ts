@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/node";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface Topic {
   readonly id: string;
@@ -9,8 +9,10 @@ export interface Topic {
 export async function getTopics(locale: string): Promise<readonly Topic[]> {
   try {
     return await getFirst(
-      () => getJSON(`_dynamic/topics/${locale}.json`),
-      () => getJSON(`_dynamic/topics/${defaultLocale}.json`),
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          (await fetch(`/data/topics/${locale}.json`)).json()
+      )
     );
   } catch (cause) {
     throw new Error("getTopics failed!", {

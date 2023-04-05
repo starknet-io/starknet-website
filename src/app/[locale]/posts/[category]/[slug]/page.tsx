@@ -20,12 +20,12 @@ import {
   BreadcrumbLink,
   HStack,
 } from "src/libs/chakra-ui";
-import * as fs from "node:fs/promises";
-import * as path from "node:path";
+// import * as fs from "node:fs/promises";
+// import * as path from "node:path";
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { Metadata } from "next";
-import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+// import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import Link from "next/link";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
@@ -62,30 +62,30 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
-export async function generateStaticParams() {
-  const params = [];
+// export async function generateStaticParams() {
+//   const params = [];
 
-  for (const locale of preRenderedLocales) {
-    const files = await fs.readdir(
-      path.join(process.cwd(), "_data/_dynamic/posts", locale)
-    );
+//   for (const locale of preRenderedLocales) {
+//     const files = await fs.readdir(
+//       path.join(process.cwd(), "public/data/posts", locale)
+//     );
 
-    const categories = await getCategories(locale);
+//     const categories = await getCategories(locale);
 
-    for (const slug of files) {
-      const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
-      const category = categories.find((c) => c.id === post.category)!;
+//     for (const slug of files) {
+//       const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
+//       const category = categories.find((c) => c.id === post.category)!;
 
-      params.push({
-        locale,
-        slug: post.slug,
-        category: category.slug,
-      });
-    }
-  }
+//       params.push({
+//         locale,
+//         slug: post.slug,
+//         category: category.slug,
+//       });
+//     }
+//   }
 
-  return params;
-}
+//   return params;
+// }
 
 export interface Props {
   readonly params: LocaleParams & {

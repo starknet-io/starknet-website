@@ -21,7 +21,7 @@ import "../../../style/algolia/theme.css";
 import "../../../style/algolia/overrides.css";
 import { useLocale } from "./ClientLocaleProvider";
 import { ArgumentsType } from "vitest";
-import { Page } from "@starknet-io/cms-data/src/pages";
+import type { Page } from "@starknet-io/cms-data/src/pages";
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";

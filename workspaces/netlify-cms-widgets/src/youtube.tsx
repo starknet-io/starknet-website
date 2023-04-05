@@ -3,7 +3,7 @@ import { useState } from "react";
 // @ts-expect-error
 import { WidgetPreviewContainer } from "netlify-cms-ui-default";
 import { CmsWidgetControlProps } from "netlify-cms-core";
-import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/browser";
+import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/index";
 
 const API_BASE_URL =
   process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";

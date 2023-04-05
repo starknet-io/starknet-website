@@ -2,7 +2,7 @@ import { Box, Link, Stack, Image } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-import { IconLinkCardBlock } from "@starknet-io/cms-data/src/pages";
+import type { IconLinkCardBlock } from "@starknet-io/cms-data/src/pages";
 import { getComputedLinkData } from "src/utils/utils";
 import { CardLink } from "./CardLink";
 
