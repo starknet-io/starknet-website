@@ -56,9 +56,9 @@ jobs:
       - name: Deploy prebuilt project to Vercel
         run: |
           export VERCEL_DEPLOYMENT_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
+          echo $VERCEL_DEPLOYMENT_URL
 
       - name: Assign a custom domain to a Vercel preview deployment
         run: |
           export REF_NAME=${GITHUB_REF_NAME/\//-}
-          vercel alias set $VERCEL_DEPLOYMENT_URL starknet-website-${REF_NAME}.yukilabs.xyz\
-            --token=${{ secrets.VERCEL_TOKEN }}
+          vercel alias set $VERCEL_DEPLOYMENT_URL starknet-website-${REF_NAME}.yukilabs.xyz --token=${{ secrets.VERCEL_TOKEN }}
