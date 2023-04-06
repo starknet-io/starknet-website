@@ -27,7 +27,7 @@ jobs:
           cache: yarn
 
       - name: Restore Crowdin cache
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: _crowdin
           key: crowdin-cache-${{ github.ref_name }}

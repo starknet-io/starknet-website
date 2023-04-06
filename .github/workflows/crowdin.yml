@@ -39,7 +39,7 @@ jobs:
         run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
 
       - name: Cache Crowdin files for future workflow runs
-        uses: actions/cache@v3
+        uses: actions/cache/save@v3
         with:
           path: _crowdin
           key: crowdin-cache-${{ github.ref_name }}
