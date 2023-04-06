@@ -8,44 +8,24 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { useMeasure, useInterval, useUpdateEffect } from "react-use";
+import { useMeasure, useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
-import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
-import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
 import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
+import { Chapter } from "../constants";
 import BigPlayButton from "../control-bar/BigPlayButton";
 import CustomControl from "../control-bar/CustomControl";
+import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
+import { usePlayerActive } from "../hooks/usePlayerActive";
+import usePlayNextChapter from "../hooks/usePlayNextChapter";
 import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
 import { SeekStatuses, useSeek } from "../hooks/useSeek";
-import { useVolume } from "../hooks/useVolume";
-import ShareModal from "../share/ShareModal";
-import {
-  getChapterById,
-  getNextChapter,
-  getVideoSrc,
-  isFinalChapter,
-} from "../utils";
-import "../player-overrides.css";
-import { usePlayerActive } from "../hooks/usePlayerActive";
 import useShareModal from "../hooks/useShareModal";
-
-const videoJsOptions = {
-  autoplay: false,
-  controls: false,
-  responsive: true,
-  preload: "auto",
-  fluid: true,
-  userActions: {
-    hotkeys: {
-      playPauseKey: function () {},
-      muteKey: function () {},
-      toggleKey: function () {},
-    },
-  },
-  poster:
-    "https://image.mux.com/UZMwOY6MgmhFNXLbSFXAuPKlRPss5XNA/thumbnail.jpg?time=11",
-};
+import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
+import useVideoJSOptions from "../hooks/useVideoJSOptions";
+import { useVolume } from "../hooks/useVolume";
+import "../player-overrides.css";
+import ShareModal from "../share/ShareModal";
+import { isFinalChapter } from "../utils";
 
 export type PlayerRef = React.MutableRefObject<Player | null>;
 
@@ -86,9 +66,7 @@ export function VideoPlayerCore({
   const [totalDuration, setTotalDuration] = useState(0);
   const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
-  const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
-    useState(false);
-  const [_, setChapterTimeoutCount] = useState(0);
+  const currentChapterRef = useRef(currentChapter);
 
   const {
     ref: videoWrapperRef,
@@ -97,7 +75,6 @@ export function VideoPlayerCore({
   } = useToggleFullscreen();
 
   const isPlayerActive = usePlayerActive(videoWrapperRef);
-  const currentChapterRef = useRef(currentChapter);
 
   const {
     volume,
@@ -134,23 +111,22 @@ export function VideoPlayerCore({
     currentChapter,
   });
 
-  const playNextChapter = () => {
-    const nextChapter = getNextChapter(chapters, currentChapter);
-    setCurrentChapter(nextChapter.id);
-  };
+  const {
+    isPlayNextModalOpen,
+    openPlayNextModal,
+    closePlayNextModal,
+    playNextChapter,
+  } = usePlayNextChapter({
+    chapters,
+    currentChapter,
+    playingStatus,
+    setCurrentChapter,
+  });
 
-  useInterval(
-    () => {
-      setChapterTimeoutCount((c) => {
-        if (c === CHAPTER_CHANGE_TIMEOUT) {
-          playNextChapter();
-          return c;
-        }
-        return c + 1;
-      });
-    },
-    isChapterChangeModalOpen ? 1000 : null
-  );
+  const videojsOptions = useVideoJSOptions({
+    chapters,
+    currentChapter,
+  });
 
   usePreventDefaultHotkeys();
 
@@ -159,25 +135,6 @@ export function VideoPlayerCore({
     playerRef.current?.play();
     currentChapterRef.current = currentChapter;
   }, [currentChapter]);
-
-  useUpdateEffect(() => {
-    if (playingStatus !== "ended") {
-      setIsChapterChangeModalOpen(false);
-    }
-  }, [currentChapter, playingStatus]);
-
-  const videojsOptionsWithSrc = useMemo(() => {
-    const chapter = getChapterById(chapters, currentChapter) || chapters[0];
-    return {
-      ...videoJsOptions,
-      sources: [
-        {
-          src: getVideoSrc(chapter.videoId),
-          type: "application/x-mpegURL",
-        },
-      ],
-    };
-  }, [currentChapter, chapters]);
 
   useEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
@@ -235,8 +192,7 @@ export function VideoPlayerCore({
     player.on("ended", function () {
       setPlayingStatus("ended");
       if (!isFinalChapter(chapters, currentChapterRef.current)) {
-        setIsChapterChangeModalOpen(true);
-        setChapterTimeoutCount(0);
+        openPlayNextModal();
       }
     });
 
@@ -273,13 +229,13 @@ export function VideoPlayerCore({
     <div style={videoWrapperStyle} ref={videoWrapperRef}>
       <div style={videoPositionStyle} onClick={onPlayToggle}>
         <VideoJS
-          options={videojsOptionsWithSrc}
+          options={videojsOptions}
           onReady={handlePlayerReady}
           videoContainerRef={videoContainerRef}
         />
       </div>
       <ChapterAutoPlayModal
-        isOpen={isChapterChangeModalOpen}
+        isOpen={isPlayNextModalOpen}
         onPlayNextChapter={playNextChapter}
         positionStyle={videoPositionStyle}
       />
@@ -309,8 +265,8 @@ export function VideoPlayerCore({
           currentTime={currentTime}
           currentDisplayTime={currentTime}
           onSeekScrubStart={(n) => {
-            if (isChapterChangeModalOpen) {
-              setIsChapterChangeModalOpen(false);
+            if (isPlayNextModalOpen) {
+              closePlayNextModal();
             }
             onSeekScrubStart(n);
           }}
