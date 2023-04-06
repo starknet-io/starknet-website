@@ -17,7 +17,7 @@ export async function getBridges(locale: string): Promise<readonly Bridge[]> {
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`_crowdin/data/bridges/${value}.json`, "utf8")
+            await fs.readFile(`${process.cwd()}/_crowdin/data/bridges/${value}.json`, "utf8")
           )
       )
     );

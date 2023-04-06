@@ -200,7 +200,7 @@ export async function getPageBySlug(
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              `_crowdin/data/pages/${locale}/${slug}.json`,
+              `${process.cwd()}/_crowdin/data/pages/${locale}/${slug}.json`,
               "utf8"
             )
           )

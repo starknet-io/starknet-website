@@ -44,7 +44,7 @@ export async function getMainMenu(locale: string): Promise<MainMenu> {
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`_crowdin/data/main-menu/${value}.json`, "utf8")
+            await fs.readFile(`${process.cwd()}/_crowdin/data/main-menu/${value}.json`, "utf8")
           )
       )
     );

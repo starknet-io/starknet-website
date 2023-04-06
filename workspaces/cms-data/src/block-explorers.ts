@@ -17,7 +17,7 @@ export async function getBlockExplorers(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(value => async () => JSON.parse(await fs.readFile(
-        `_crowdin/data/block-explorers/${value}.json`,
+        `${process.cwd()}/_crowdin/data/block-explorers/${value}.json`,
         "utf8",
       )))
     );

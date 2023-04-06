@@ -17,7 +17,7 @@ export async function getWallets(locale: string): Promise<readonly Wallet[]> {
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`_crowdin/data/wallets/${locale}.json`, "utf8")
+            await fs.readFile(`${process.cwd()}/_crowdin/data/wallets/${locale}.json`, "utf8")
           )
       )
     );

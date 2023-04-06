@@ -22,7 +22,7 @@ export async function getEvents(locale: string): Promise<readonly Event[]> {
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`_crowdin/data/events/${value}.json`, "utf8")
+            await fs.readFile(`${process.cwd()}/_crowdin/data/events/${value}.json`, "utf8")
           )
       )
     );

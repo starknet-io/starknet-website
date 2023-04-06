@@ -13,7 +13,7 @@ export async function getTopics(locale: string): Promise<readonly Topic[]> {
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`_crowdin/data/topics/${locale}.json`, "utf8")
+            await fs.readFile(`${process.cwd()}/_crowdin/data/topics/${locale}.json`, "utf8")
           )
       )
     );

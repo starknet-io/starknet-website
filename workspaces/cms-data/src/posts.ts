@@ -37,7 +37,7 @@ export async function getPostBySlug(
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              `_crowdin/data/posts/${locale}/${slug}.json`,
+              `${process.cwd()}/_crowdin/data/posts/${locale}/${slug}.json`,
               "utf8"
             )
           )

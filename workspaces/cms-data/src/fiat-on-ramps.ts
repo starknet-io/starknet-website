@@ -20,7 +20,7 @@ export async function getFiatOnRamps(
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              `_crowdin/data/fiat-on-ramps/${value}.json`,
+              `${process.cwd()}/_crowdin/data/fiat-on-ramps/${value}.json`,
               "utf8"
             )
           )
