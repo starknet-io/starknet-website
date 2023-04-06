@@ -60,7 +60,7 @@ export function VideoPlayerEmbedSeperate({
   return (
     <VideoPlayerCore
       playerRef={playerRef}
-      embeddable={true}
+      embedded={true}
       videoWrapperStyle={videoWrapperStyle}
       videoPositionStyle={videoPositionStyle}
       chapters={chapters}

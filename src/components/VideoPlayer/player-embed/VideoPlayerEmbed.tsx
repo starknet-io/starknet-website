@@ -75,7 +75,7 @@ export function VideoPlayerEmbed({
 
   const [_, setChapterTimeoutCount] = React.useState(5);
 
-  const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen({});
+  const { ref, toggleFullscreen, isFullscreen } = useToggleFullscreen();
 
   const playingStatusBeforeOpeningPlaylist = useRef<SeekStatuses>();
   const [isControlActive, setIsControlActive] = useState(false);
@@ -302,6 +302,7 @@ export function VideoPlayerEmbed({
         isOpen={isShareModalOpen}
         onClose={onCloseShareModal}
         currentChapter={currentChapter}
+        embedded
       />
       {chapter && (
         <ChaptersDropdown
@@ -319,7 +320,7 @@ export function VideoPlayerEmbed({
         <CustomControl
           chapter={chapter}
           playingStatus={playingStatus}
-          isControlActive={isControlActive}
+          isControlVisible={isControlActive}
           totalDuration={chapter.endAt - chapter.startAt}
           currentTime={currentTime}
           currentDisplayTime={Math.ceil(currentTime - chapter.startAt)}

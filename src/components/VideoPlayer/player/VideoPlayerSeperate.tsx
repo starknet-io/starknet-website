@@ -92,7 +92,6 @@ export function VideoPlayerSeperate({
     >
       <VideoPlayerCore
         playerRef={playerRef}
-        embeddable={false}
         videoWrapperStyle={videoWrapperStyle}
         videoPositionStyle={videoPositionStyle}
         chapters={chapters}

@@ -15,26 +15,27 @@ import SocialShare from "./SocialShare";
 type ShareModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  showEmbed?: boolean;
+  embedded?: boolean;
   currentChapter: string;
 };
 
 export default function ShareModal({
   isOpen,
   onClose,
-  showEmbed,
+  embedded,
   currentChapter,
 }: ShareModalProps) {
   const locale = useLocale();
   const shareUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/${locale}/video?chapter=${currentChapter}`;
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} onClose={onClose} isCentered={embedded}>
       <ModalOverlay />
       <ModalContent
-        paddingBottom="2rem"
+        margin={embedded ? 0 : undefined}
+        paddingBottom={{ base: "1rem", sm: "2rem" }}
         bg={useColorModeValue("#FBFBFC", "#1B1B1B")}
         color={useColorModeValue("grey.darkText", "grey.morning")}
-        top={{ base: "3rem", md: "4rem", lg: "5rem" }}
+        top={embedded ? undefined : { base: "3rem", md: "4rem", lg: "5rem" }}
         borderRadius="0.5rem"
         boxShadow="0px 4px 24px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.1)"
         border="1px solid"
@@ -45,7 +46,7 @@ export default function ShareModal({
         <ModalHeader />
         <ModalBody pt={0}>
           <SocialShare shareUrl={shareUrl} />
-          {showEmbed && <ShareEmbed currentChapter={currentChapter} />}
+          {!embedded && <ShareEmbed currentChapter={currentChapter} />}
         </ModalBody>
       </ModalContent>
     </Modal>

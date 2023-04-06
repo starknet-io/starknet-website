@@ -79,10 +79,18 @@ export function VideoPlayer({
   const paused = useRef(false);
   const [isControlActive, setIsControlActive] = useState(false);
 
-  const { volume, isMuted, toggleMute, onVolumeScrubChange, setVolume } =
-    useVolume({
-      playerRef,
-    });
+  const {
+    volume,
+    isMuted,
+    toggleMute,
+    onVolumeScrubStart,
+    onVolumeScrubChange,
+    onVolumeScrubEnd,
+    setVolume,
+    isInteractingWithVolume,
+  } = useVolume({
+    playerRef,
+  });
 
   const {
     playingStatus,
@@ -307,7 +315,6 @@ export function VideoPlayer({
         <ShareModal
           isOpen={isShareModalOpen}
           onClose={onCloseShareModal}
-          showEmbed
           currentChapter={currentChapter}
         />
         {chapter && (
@@ -321,7 +328,7 @@ export function VideoPlayer({
           <CustomControl
             chapter={chapter}
             playingStatus={playingStatus}
-            isControlActive={isControlActive}
+            isControlVisible={isControlActive}
             totalDuration={chapter.endAt - chapter.startAt}
             currentTime={currentTime}
             currentDisplayTime={Math.ceil(currentTime - chapter.startAt)}
@@ -337,7 +344,10 @@ export function VideoPlayer({
             onPlayToggle={onPlayToggle}
             isMuted={isMuted}
             toggleMute={toggleMute}
+            onVolumeScrubStart={onVolumeScrubStart}
             onVolumeScrubChange={onVolumeScrubChange}
+            onVolumeScrubEnd={onVolumeScrubEnd}
+            isInteractingWithVolume={isInteractingWithVolume}
             volume={volume}
             toggleFullscreen={toggleFullscreen}
             isFullscreen={isFullscreen}

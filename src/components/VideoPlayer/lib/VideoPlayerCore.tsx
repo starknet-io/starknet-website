@@ -1,6 +1,5 @@
 "use client";
 
-import { useDisclosure } from "@chakra-ui/react";
 import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
 import React, {
   CSSProperties,
@@ -29,6 +28,7 @@ import {
 } from "../utils";
 import "../player-overrides.css";
 import { usePlayerActive } from "../hooks/usePlayerActive";
+import useShareModal from "../hooks/useShareModal";
 
 const videoJsOptions = {
   autoplay: false,
@@ -47,14 +47,16 @@ const videoJsOptions = {
     "https://image.mux.com/UZMwOY6MgmhFNXLbSFXAuPKlRPss5XNA/thumbnail.jpg?time=11",
 };
 
+export type PlayerRef = React.MutableRefObject<Player | null>;
+
 type VideoPlayerCoreProps = {
-  playerRef: React.MutableRefObject<Player | null>;
+  playerRef: PlayerRef;
   currentChapter: string;
   setCurrentChapter: (chapter: string) => void;
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
-  embeddable?: boolean;
+  embedded?: boolean;
   videoWrapperStyle: CSSProperties;
   videoPositionStyle: CSSProperties;
   onFullscreenChange?: (isFullscreen: boolean) => void;
@@ -74,7 +76,7 @@ export function VideoPlayerCore({
   onChapterChange,
   videoWrapperStyle,
   videoPositionStyle,
-  embeddable,
+  embedded,
   onFullscreenChange,
   onContainerHeightChange,
   onPlayingStatusChange,
@@ -87,11 +89,6 @@ export function VideoPlayerCore({
   const [isChapterChangeModalOpen, setIsChapterChangeModalOpen] =
     useState(false);
   const [_, setChapterTimeoutCount] = useState(0);
-  const {
-    isOpen: isShareModalOpen,
-    onClose: onCloseShareModal,
-    onOpen: onOpenShareModal,
-  } = useDisclosure();
 
   const {
     ref: videoWrapperRef,
@@ -99,9 +96,8 @@ export function VideoPlayerCore({
     isFullscreen,
   } = useToggleFullscreen();
 
+  const isPlayerActive = usePlayerActive(videoWrapperRef);
   const currentChapterRef = useRef(currentChapter);
-
-  const paused = useRef(false);
 
   const {
     volume,
@@ -127,7 +123,11 @@ export function VideoPlayerCore({
     setPlayingStatus,
   } = useSeek({ totalDuration, playerRef });
 
-  const lastPlayerTime = useRef(currentTime);
+  const { onShareModalClose, onShareModalOpen, isShareModalOpen } =
+    useShareModal({
+      playerRef,
+      playingStatus,
+    });
 
   const { chapter, chapterIndex } = useGetCurrentChapter({
     chapters,
@@ -179,8 +179,6 @@ export function VideoPlayerCore({
     };
   }, [currentChapter, chapters]);
 
-  const isPlayerActive = usePlayerActive(videoWrapperRef);
-
   useEffect(() => {
     setIsBigPlayBtnVisible(playingStatus === "unstarted");
   }, [playingStatus]);
@@ -215,7 +213,6 @@ export function VideoPlayerCore({
       }
 
       setCurrentTime(playerTime);
-      lastPlayerTime.current = playerTime;
     });
 
     player.on("progress", function () {
@@ -244,13 +241,11 @@ export function VideoPlayerCore({
     });
 
     player.on("pause", () => {
-      paused.current = true;
       setPlayingStatus("paused");
     });
 
     player.on("play", () => {
       setPlayingStatus("playing");
-      paused.current = false;
     });
 
     const volume = player.volume();
@@ -263,7 +258,7 @@ export function VideoPlayerCore({
     playerRef.current?.play();
   };
 
-  const isContralVisible = useMemo(() => {
+  const isControlVisible = useMemo(() => {
     if (playingStatus === "unstarted") {
       return false;
     }
@@ -295,21 +290,21 @@ export function VideoPlayerCore({
       />
       <ShareModal
         isOpen={isShareModalOpen}
-        onClose={onCloseShareModal}
-        showEmbed={!embeddable}
+        onClose={onShareModalClose}
         currentChapter={currentChapter}
+        embedded={embedded}
       />
       {chapter &&
         renderChapter({
           chapter,
           episode: chapterIndex + 1,
-          isVisible: isContralVisible,
+          isVisible: isControlVisible,
         })}
       {chapter && (
         <CustomControl
           chapter={chapter}
           playingStatus={playingStatus}
-          isControlVisible={isContralVisible}
+          isControlVisible={isControlVisible}
           totalDuration={totalDuration}
           currentTime={currentTime}
           currentDisplayTime={currentTime}
@@ -338,7 +333,7 @@ export function VideoPlayerCore({
           volume={volume}
           toggleFullscreen={toggleFullscreen}
           isFullscreen={isFullscreen}
-          onShare={onOpenShareModal}
+          onShare={onShareModalOpen}
           scrubMin={0}
           scrubMax={totalDuration}
         />
