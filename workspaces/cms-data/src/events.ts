@@ -1,5 +1,6 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface Event {
   readonly name: string;
@@ -20,7 +21,9 @@ export async function getEvents(locale: string): Promise<readonly Event[]> {
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/events/${value}.json`)).json()
+          JSON.parse(
+            await fs.readFile(`_crowdin/data/events/${value}.json`, "utf8")
+          )
       )
     );
   } catch (cause) {

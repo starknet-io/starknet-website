@@ -3,6 +3,7 @@ import { defaultLocale } from "./i18n/config";
 import type { TopLevelBlock } from "./pages";
 import { getFirst, Meta } from "@starknet-io/cms-utils/src/index";
 import { youtube_v3 } from "googleapis";
+import fs from "node:fs/promises";
 
 interface VideoMeta {
   readonly url: string;
@@ -34,7 +35,12 @@ export async function getPostBySlug(
     return (await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/posts/${locale}/${slug}.json`)).json()
+          JSON.parse(
+            await fs.readFile(
+              `_crowdin/data/posts/${locale}/${slug}.json`,
+              "utf8"
+            )
+          )
       ),
       async () => {
         const client = algoliasearch(

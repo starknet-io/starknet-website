@@ -2,6 +2,7 @@ import { defaultLocale } from "../i18n/config";
 import type { Page } from "../pages";
 import type { Post } from "../posts";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface MainMenu {
   readonly items: MainMenuItem[];
@@ -42,7 +43,9 @@ export async function getMainMenu(locale: string): Promise<MainMenu> {
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/main-menu/${value}.json`)).json()
+          JSON.parse(
+            await fs.readFile(`_crowdin/data/main-menu/${value}.json`, "utf8")
+          )
       )
     );
   } catch (cause) {

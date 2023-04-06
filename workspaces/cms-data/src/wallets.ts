@@ -1,5 +1,6 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface Wallet {
   readonly name: string;
@@ -15,7 +16,9 @@ export async function getWallets(locale: string): Promise<readonly Wallet[]> {
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/wallets/${locale}.json`)).json()
+          JSON.parse(
+            await fs.readFile(`_crowdin/data/wallets/${locale}.json`, "utf8")
+          )
       )
     );
   } catch (cause) {

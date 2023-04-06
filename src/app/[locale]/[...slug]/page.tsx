@@ -15,10 +15,10 @@ import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { TableOfContents } from "../(components)/TableOfContents";
-// import * as fs from "node:fs/promises";
-// import * as path from "node:path";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
 import { Metadata } from "next";
-// import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -35,34 +35,34 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
-// export async function generateStaticParams() {
-//   const params = [];
+export async function generateStaticParams() {
+  const params = [];
 
-//   for (const locale of preRenderedLocales) {
-//     const base = path.join(process.cwd(), "public/data/pages", locale);
-//     const dirs: string[][] = [];
+  for (const locale of preRenderedLocales) {
+    const base = path.join(process.cwd(), "_crowdin/data/pages", locale);
+    const dirs: string[][] = [];
 
-//     do {
-//       const dir = dirs.pop() ?? [];
-//       const files = await fs.readdir(path.join(base, ...dir), {
-//         withFileTypes: true,
-//       });
+    do {
+      const dir = dirs.pop() ?? [];
+      const files = await fs.readdir(path.join(base, ...dir), {
+        withFileTypes: true,
+      });
 
-//       for (const file of files) {
-//         if (file.isDirectory()) {
-//           dirs.push([...dir, file.name]);
-//         } else if (file.isFile()) {
-//           params.push({
-//             locale,
-//             slug: [...dir, file.name.replace(/\.json$/, "")],
-//           });
-//         }
-//       }
-//     } while (dirs.length > 0);
-//   }
+      for (const file of files) {
+        if (file.isDirectory()) {
+          dirs.push([...dir, file.name]);
+        } else if (file.isFile()) {
+          params.push({
+            locale,
+            slug: [...dir, file.name.replace(/\.json$/, "")],
+          });
+        }
+      }
+    } while (dirs.length > 0);
+  }
 
-//   return params;
-// }
+  return params;
+}
 
 export interface Props {
   readonly params: LocaleParams & {

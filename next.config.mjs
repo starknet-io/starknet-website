@@ -14,6 +14,7 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
   reactStrictMode: false,
   experimental: {
     appDir: true,
@@ -35,7 +36,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
   },
   async redirects() {
-    const data = JSON.parse(await fs.readFile("public/data/redirects/en.json", { encoding: "utf8" }))
+    const data = JSON.parse(await fs.readFile("_crowdin/data/redirects/en.json", { encoding: "utf8" }))
 
     return data.map((item) => ({ ...item, permanent: false }));
   },

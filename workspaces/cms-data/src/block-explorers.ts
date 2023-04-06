@@ -1,5 +1,6 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface BlockExplorer {
   readonly name: string;
@@ -11,14 +12,14 @@ export interface BlockExplorer {
 }
 
 export async function getBlockExplorers(
-  locale: string
+  locale: string,
 ): Promise<readonly BlockExplorer[]> {
   try {
     return await getFirst(
-      ...[locale, defaultLocale].map(
-        (value) => async () =>
-          (await fetch(`/data/block-explorers/${value}.json`)).json()
-      )
+      ...[locale, defaultLocale].map(value => async () => JSON.parse(await fs.readFile(
+        `_crowdin/data/block-explorers/${value}.json`,
+        "utf8",
+      )))
     );
   } catch (cause) {
     throw new Error("getBlockExplorers failed!", {

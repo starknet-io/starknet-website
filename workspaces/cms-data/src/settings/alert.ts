@@ -1,5 +1,6 @@
 import { defaultLocale } from "../i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface Alert {
   readonly title: string;
@@ -14,7 +15,10 @@ export async function getAlerts(locale: string): Promise<Alert[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => (await fetch(`/data/alert/${value}.json`)).json()
+        (value) => async () =>
+          JSON.parse(
+            await fs.readFile(`_crowdin/data/alert/${value}.json`, "utf8")
+          )
       )
     );
   } catch (cause) {

@@ -1,8 +1,8 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
-
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 import type { LinkData } from "./settings/main-menu";
+import fs from "node:fs/promises";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -198,7 +198,12 @@ export async function getPageBySlug(
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/pages/${locale}/${slug}.json`)).json()
+          JSON.parse(
+            await fs.readFile(
+              `_crowdin/data/pages/${locale}/${slug}.json`,
+              "utf8"
+            )
+          )
       )
     );
   } catch (cause) {

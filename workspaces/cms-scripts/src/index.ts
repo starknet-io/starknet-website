@@ -24,7 +24,7 @@ const simpleDataTypes = [
 
 for (const simpleData of simpleDataTypes) {
   try {
-    await fs.mkdir(`public/data/${simpleData.resourceName}`, {
+    await fs.mkdir(`_crowdin/data/${simpleData.resourceName}`, {
       recursive: true,
     });
 
@@ -34,7 +34,7 @@ for (const simpleData of simpleDataTypes) {
       );
 
       await write(
-        `public/data/${simpleData.resourceName}/${locale}.json`,
+        `_crowdin/data/${simpleData.resourceName}/${locale}.json`,
         data,
       );
     }
@@ -56,7 +56,7 @@ const simpleFiles = [
 
 for (const simpleFile of simpleFiles) {
   try {
-    await fs.mkdir(`public/data/${simpleFile.resourceName}`, {
+    await fs.mkdir(`_crowdin/data/${simpleFile.resourceName}`, {
       recursive: true,
     });
 
@@ -64,7 +64,7 @@ for (const simpleFile of simpleFiles) {
       const data = simpleFile.localeMap.get(locale)!;
 
       await write(
-        `public/data/${simpleFile.resourceName}/${locale}.json`,
+        `_crowdin/data/${simpleFile.resourceName}/${locale}.json`,
         data.items,
       );
     }
@@ -80,35 +80,35 @@ const pages = await getPages();
 updateBlocks(pages, posts);
 
 for (const locale of locales) {
-  await fs.mkdir(`public/data/posts/${locale}`, { recursive: true });
+  await fs.mkdir(`_crowdin/data/posts/${locale}`, { recursive: true });
 }
 
 for (const data of posts.filenameMap.values()) {
-  await write(`public/data/posts/${data.locale}/${data.slug}.json`, data);
+  await write(`_crowdin/data/posts/${data.locale}/${data.slug}.json`, data);
 }
 
 for (const locale of locales) {
-  await fs.mkdir(`public/data/pages/${locale}`, { recursive: true });
+  await fs.mkdir(`_crowdin/data/pages/${locale}`, { recursive: true });
 }
 
 for (const data of pages.filenameMap.values()) {
   await fs.mkdir(
     path.join(
-      "public/data/pages",
+      "_crowdin/data/pages",
       data.locale,
       ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
     ),
     { recursive: true },
   );
 
-  await write(path.join("public/data/pages", `${data.link}.json`), data);
+  await write(path.join("_crowdin/data/pages", `${data.link}.json`), data);
 
   // TODO stop using this in favor of above
-  await write(`public/data/pages/${data.locale}/${data.slug}.json`, data);
+  await write(`_crowdin/data/pages/${data.locale}/${data.slug}.json`, data);
 }
 
 // main menu
-await fs.mkdir("public/data/main-menu", { recursive: true });
+await fs.mkdir("_crowdin/data/main-menu", { recursive: true });
 
 for (const locale of locales) {
   const mainMenu: MainMenu = await translateFile(locale, "settings", 'main-menu.yml');
@@ -123,5 +123,5 @@ for (const locale of locales) {
     }
   }
 
-  await write(`public/data/main-menu/${locale}.json`, mainMenu);
+  await write(`_crowdin/data/main-menu/${locale}.json`, mainMenu);
 }

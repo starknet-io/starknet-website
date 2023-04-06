@@ -1,5 +1,6 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface Topic {
   readonly id: string;
@@ -11,7 +12,9 @@ export async function getTopics(locale: string): Promise<readonly Topic[]> {
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/topics/${locale}.json`)).json()
+          JSON.parse(
+            await fs.readFile(`_crowdin/data/topics/${locale}.json`, "utf8")
+          )
       )
     );
   } catch (cause) {

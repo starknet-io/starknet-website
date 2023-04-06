@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { getCategories } from "@starknet-io/cms-data/src/categories";
-// import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PostsPage } from "../(components)/PostsPage";
 
@@ -20,22 +20,22 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   };
 }
 
-// export async function generateStaticParams() {
-//   const params = [];
+export async function generateStaticParams() {
+  const params = [];
 
-//   for (const locale of preRenderedLocales) {
-//     const categories = await getCategories(locale);
+  for (const locale of preRenderedLocales) {
+    const categories = await getCategories(locale);
 
-//     for (const category of categories) {
-//       params.push({
-//         locale,
-//         category: category.slug,
-//       });
-//     }
-//   }
+    for (const category of categories) {
+      params.push({
+        locale,
+        category: category.slug,
+      });
+    }
+  }
 
-//   return params;
-// }
+  return params;
+}
 
 export default async function Page(props: Props) {
   const categories = await getCategories(props.params.locale);

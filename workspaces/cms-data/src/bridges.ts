@@ -1,5 +1,6 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
+import fs from "node:fs/promises";
 
 export interface Bridge {
   readonly name: string;
@@ -15,7 +16,9 @@ export async function getBridges(locale: string): Promise<readonly Bridge[]> {
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          (await fetch(`/data/bridges/${value}.json`)).json()
+          JSON.parse(
+            await fs.readFile(`_crowdin/data/bridges/${value}.json`, "utf8")
+          )
       )
     );
   } catch (cause) {
