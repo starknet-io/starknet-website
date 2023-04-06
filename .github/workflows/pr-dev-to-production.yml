@@ -15,7 +15,7 @@ jobs:
         pr_body: |
           ## How to approve and merge this pull request
 
-          As a non-technical team member, follow these steps to review, approve, and merge this pull request:
+          As a content contributor, follow these steps to review, approve, and merge this pull request:
 
             - [ ] 1. Review the changes made in this pull request by looking at the "Files changed" tab. Make sure everything looks correct and as expected.
             - [ ] 2. Visit the live preview of the changes at [https://starknet-website-dev.vercel.app/](https://starknet-website-dev.vercel.app/). Ensure the changes are properly implemented and everything is working as expected.
