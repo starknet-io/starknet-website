@@ -9,6 +9,7 @@ export default function Page(props: AutoProps) {
     <>
       <EventsPage
         {...props}
+        mode="UPCOMING_EVENTS"
         env={{
           ALGOLIA_INDEX: process.env.ALGOLIA_INDEX!,
           ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
