@@ -70,7 +70,7 @@ function renderBody(
         if (message.data === ${authorizing}) {
           window.opener.postMessage(
             ${authorization},
-            message.origin
+            window.location.origin
           );
 
           window.removeEventListener("message", receiveMessage, false);
@@ -79,7 +79,7 @@ function renderBody(
 
       window.addEventListener("message", receiveMessage, false);
 
-      window.opener.postMessage(${authorizing}, "*");
+      window.opener.postMessage(${authorizing}, window.location.origin);
     </script>
     </body>
     </html>

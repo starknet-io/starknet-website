@@ -11,8 +11,7 @@ import type { ChangeEvent } from "react";
 import { useCallback, useMemo, useState } from "react";
 import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/index";
 
-const API_BASE_URL =
-  process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";
+const API_BASE_URL = process.env.API_BASE_URL ?? "/api";
 
 export interface YoutubeField extends BaseField {
   readonly widget: "youtube";
