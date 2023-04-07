@@ -3,6 +3,7 @@ import { getFirst } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 import type { LinkData } from "./settings/main-menu";
 import fs from "node:fs/promises";
+import path from "node:path";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -200,7 +201,12 @@ export async function getPageBySlug(
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              `${process.cwd()}/_crowdin/data/pages/${locale}/${slug}.json`,
+              path.join(
+                process.cwd(),
+                "_crowdin/data/pages",
+                value,
+                slug + ".json"
+              ),
               "utf8"
             )
           )

@@ -1,6 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
 import fs from "node:fs/promises";
+import path from "node:path";
 
 export interface Category {
   readonly id: string;
@@ -16,7 +17,14 @@ export async function getCategories(
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`${process.cwd()}/_crowdin/data/categories/${value}.json`, "utf8")
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/categories",
+                value + ".json"
+              ),
+              "utf8"
+            )
           )
       )
     );

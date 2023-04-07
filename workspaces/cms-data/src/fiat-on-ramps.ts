@@ -1,6 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
 import fs from "node:fs/promises";
+import path from "node:path";
 
 export interface FiatOnRamp {
   readonly name: string;
@@ -20,7 +21,11 @@ export async function getFiatOnRamps(
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              `${process.cwd()}/_crowdin/data/fiat-on-ramps/${value}.json`,
+              path.join(
+                process.cwd(),
+                "_crowdin/data/fiat-on-ramps",
+                value + ".json"
+              ),
               "utf8"
             )
           )

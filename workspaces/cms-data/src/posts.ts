@@ -4,6 +4,7 @@ import type { TopLevelBlock } from "./pages";
 import { getFirst, Meta } from "@starknet-io/cms-utils/src/index";
 import { youtube_v3 } from "googleapis";
 import fs from "node:fs/promises";
+import path from "node:path";
 
 interface VideoMeta {
   readonly url: string;
@@ -32,12 +33,17 @@ export async function getPostBySlug(
   locale: string
 ): Promise<Post> {
   try {
-    return (await getFirst(
+    return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              `${process.cwd()}/_crowdin/data/posts/${locale}/${slug}.json`,
+              path.join(
+                process.cwd(),
+                "_crowdin/data/posts",
+                value,
+                slug + ".json"
+              ),
               "utf8"
             )
           )
@@ -63,7 +69,7 @@ export async function getPostBySlug(
 
         return post;
       }
-    )) as Post;
+    );
   } catch (cause) {
     throw new Error(`Post not found! ${slug}`, {
       cause,

@@ -1,3 +1,4 @@
+import path from "node:path";
 import { defaultLocale } from "../i18n/config";
 import type { Page } from "../pages";
 import type { Post } from "../posts";
@@ -44,7 +45,14 @@ export async function getMainMenu(locale: string): Promise<MainMenu> {
       ...[locale, defaultLocale].map(
         (value) => async () =>
           JSON.parse(
-            await fs.readFile(`${process.cwd()}/_crowdin/data/main-menu/${value}.json`, "utf8")
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/main-menu",
+                value + ".json"
+              ),
+              "utf8"
+            )
           )
       )
     );
