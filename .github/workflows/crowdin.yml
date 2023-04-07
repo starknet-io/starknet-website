@@ -26,6 +26,28 @@ jobs:
           node-version: 18
           cache: yarn
 
+      - uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            .yarn/install-state.gz
+            .eslintcache
+            **/tsconfig.tsbuildinfo
+            **/.types/**
+            **/.types-*/**
+          key: build-cache-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            build-cache-
+
+      - name: Install project dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Cache Crowdin files for future workflow runs
+        uses: actions/cache/save@v3
+        with:
+          path: _crowdin
+          key: crowdin-cache-${{ github.ref_name }}
+
       - name: Install project dependencies
         run: yarn
 
