@@ -5,9 +5,12 @@ breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: markdown
-    body: "![](/assets/sn_logo_mediakit.png)"
+    body: |-
+      #### Starknet logo kit
+
+      ![](/assets/group-10.png)
   - type: link_list
-    heading: Starknet logo kit
+    heading: ""
     blocks:
       - is_external: false
         label: SVG only
