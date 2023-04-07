@@ -5,7 +5,6 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Container,
   Flex,
   VStack,
   HStack,
@@ -17,8 +16,7 @@ import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-  useInfiniteHits,
-  SortBy,
+  useInfiniteHits
 } from "src/libs/react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
