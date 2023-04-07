@@ -46,29 +46,29 @@ jobs:
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
 
-      - name: Update Algolia search index
-        run: |
-          export ALGOLIA_INDEX=${GITHUB_REF_NAME/\//-}
-          yarn workspace @starknet-io/cms-scripts update-algolia-index
+      # - name: Update Algolia search index
+      #   run: |
+      #     export ALGOLIA_INDEX=${GITHUB_REF_NAME/\//-}
+      #     yarn workspace @starknet-io/cms-scripts update-algolia-index
 
-        env:
-          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-          ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-          ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
+      #   env:
+      #     ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+      #     ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+      #     ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
 
-      - name: Prepare Vercel environment and build project
-        run: |
-          vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
-          vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Prepare Vercel environment
+      #   run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy prebuilt project to Vercel
-        run: |
-          export VERCEL_DEPLOYMENT_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
-          echo $VERCEL_DEPLOYMENT_URL
+      # - name: Build project
+      #   run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Assign a custom domain to a Vercel preview deployment
-        run: |
-          export REF_NAME=${GITHUB_REF_NAME/\//-}
-          vercel alias set $VERCEL_DEPLOYMENT_URL starknet-website-${REF_NAME}.yukilabs.xyz\
-            --token=${{ secrets.VERCEL_TOKEN }}\
-            --scope yuki-labs
+      # - name: Deploy prebuilt project to Vercel
+      #   id: vercel-deploy
+      #   run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} >> $GITHUB_OUTPUT
+
+      # - name: Assign a custom domain to a Vercel preview deployment
+      #   run: |
+      #     export REF_NAME=${GITHUB_REF_NAME/\//-}
+      #     vercel alias set ${{ steps.vercel-deploy.outputs }} starknet-website-${REF_NAME}.yukilabs.xyz\
+      #       --token=${{ secrets.VERCEL_TOKEN }}\
+      #       --scope yuki-labs
