@@ -12,7 +12,7 @@ export const CMSConfig = {
     name: "github",
     repo: "starknet-io/starknet-website",
     branch: "dev",
-    base_url: "/",
+    base_url: "https://starknet-website-cms-auth-api.vercel.app",
   },
   media_folder: "public/assets",
   public_folder: "/assets",
