@@ -5,6 +5,7 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
+  Container,
   Flex,
   VStack,
   HStack,
@@ -17,6 +18,7 @@ import {
   InstantSearch,
   Configure,
   useInfiniteHits,
+  SortBy,
 } from "src/libs/react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -27,6 +29,7 @@ import moment from "moment";
 import { Event } from "@starknet-io/cms-data/src/events";
 import type { BaseHit } from "instantsearch.js";
 import Link from "next/link";
+import { getUnixTime, startOfDay } from "date-fns";
 
 export interface AutoProps {
   readonly params: {
@@ -40,9 +43,10 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
 }
 
-export function EventsPage({ params, env }: Props): JSX.Element | null {
+export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -51,11 +55,20 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
     <Box>
       <InstantSearch
         searchClient={searchClient}
-        indexName={`web_events_${env.ALGOLIA_INDEX}`}
+        indexName={
+          mode === "UPCOMING_EVENTS"
+            ? `web_events_${env.ALGOLIA_INDEX}_asc`
+            : `web_events_${env.ALGOLIA_INDEX}_desc`
+        }
       >
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
+          filters={
+            mode === "UPCOMING_EVENTS"
+              ? `start_date_ts > ${getUnixTime(startOfDay(new Date()))}`
+              : `start_date_ts < ${getUnixTime(startOfDay(new Date()))}`
+          }
         />
 
         <PageLayout
@@ -90,6 +103,37 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
           }
           main={
             <Box>
+              <Flex
+                as="ul"
+                sx={{ overflowX: "auto" }}
+                gap="24px"
+                borderBottomWidth="1px"
+                borderColor="tabs-main-br"
+                width="100%"
+                mb={4}
+              >
+                <Box>
+                  <Button
+                    variant="category"
+                    as={Link}
+                    isActive={mode === "UPCOMING_EVENTS"}
+                    href={`/${params.locale}/events`}
+                  >
+                    Upcoming events
+                  </Button>
+                </Box>
+                <Box>
+                  <Button
+                    variant="category"
+                    as={Link}
+                    isActive={mode === "PAST_EVENTS"}
+                    href={`/${params.locale}/events/past`}
+                  >
+                    Past events
+                  </Button>
+                </Box>
+              </Flex>
+
               <CustomHits />
             </Box>
           }
@@ -194,6 +238,11 @@ function CustomHits() {
     <>
       <Flex gap={4} direction="column" flex={1}>
         {hits.map((hit) => {
+          let startDate = new Date(hit?.start_date);
+          let endDate = new Date(hit?.end_date ?? "");
+          let hasSameDay = startDate.getDate() === endDate.getDate();
+          let hasSameMonth = startDate.getMonth() === endDate.getMonth();
+          let hasSameYear = startDate.getFullYear() === endDate.getFullYear();
           return (
             <ListCard
               variant="event"
@@ -201,15 +250,28 @@ function CustomHits() {
               key={hit?.name}
               startDateTime={
                 hit?.end_date
-                  ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
-                      hit?.end_date,
-                    ).format("ddd MMM DD, YYYY")}`
-                  : moment(hit?.start_date).format("ddd MMM DD, YYYY")
+                  ? `${moment(hit?.start_date).format(
+                      hasSameDay
+                        ? "DD MMM, YYYY"
+                        : hasSameMonth
+                        ? "DD"
+                        : hasSameYear
+                        ? "DD MMM"
+                        : "DD MMM, YYYY"
+                    )}${!hasSameDay ? " - " : ""}${
+                      !hasSameDay
+                        ? moment(hit?.end_date).format("DD MMM, YYYY")
+                        : ""
+                    }`
+                  : moment(hit?.start_date).format("DD MMM, YYYY")
               }
               image={hit.image}
               title={hit.name}
               description={hit.description}
               type={hit.tags}
+              location={hit.location}
+              city={hit.city}
+              country={hit.country}
             />
           );
         })}

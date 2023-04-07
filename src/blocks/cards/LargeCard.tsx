@@ -71,7 +71,7 @@ export const LargeCard = ({
                 </Box>
                 <Stack
                   pl={{ base: "0", md: orientation === "right" ? "0" : "80px" }}
-                  order={orientation === "right" ? 0 : 1}
+                  order={1}
                   spacing={{ base: "8", md: "12" }}
                 >
                   <Flex>

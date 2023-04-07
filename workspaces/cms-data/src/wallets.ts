@@ -3,11 +3,16 @@ import { getFirst } from "@starknet-io/cms-utils/src/index";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+export interface Type {
+  readonly type: string;
+  readonly url: string;
+}
 export interface Wallet {
   readonly name: string;
-  readonly type: string[];
+  readonly type_list: Type[];
   readonly image: string;
   readonly twitter: string;
+  readonly discord?: string;
   readonly website_url: string;
   readonly description: string;
 }

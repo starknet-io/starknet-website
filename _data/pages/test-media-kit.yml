@@ -1,0 +1,20 @@
+id: 575c22e7-477f-4a7e-9b90-7406b802176f
+title: test_media_kit
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: "![](/assets/sn_logo_mediakit.png)"
+  - type: link_list
+    heading: Starknet logo kit
+    blocks:
+      - is_external: false
+        label: SVG only
+        sub_label: ""
+      - is_external: false
+        label: PNG only
+        href: https://www.starknet.io/en
+      - is_external: false
+        label: Complete kit
+        href: https://www.starknet.io/en

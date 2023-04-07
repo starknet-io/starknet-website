@@ -16,10 +16,16 @@ import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 
 import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
-import { SiTwitter } from "react-icons/si";
+import { SiTwitter, SiDiscord } from "react-icons/si";
 
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { titleCase } from "src/utils/utils";
+
+interface Type {
+  readonly type: string;
+  readonly url: string;
+}
+
 type Props = {
   readonly title?: string;
   readonly startDateTime?: string;
@@ -29,14 +35,23 @@ type Props = {
   readonly href: string;
   readonly tags?: string[];
   readonly city?: string;
+  readonly country?: string;
   readonly venue?: string;
   readonly twitterHandle?: string;
+  readonly discordHandle?: string;
   readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
+  readonly type_list?: Type[];
   readonly type?: string[];
   readonly isRounded?: boolean;
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
+  const handleTypeClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, type: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(type);
+  }
+
   return (
     <Box maxW="5xl">
       <LinkBox
@@ -69,6 +84,8 @@ export const ListCard = (props: Props) => {
                   height="80px"
                   borderRadius="8px"
                   overflow="hidden"
+                  marginTop={{ base: "0px", md: "24px" }}
+                  marginBottom={{ base: "16px", md: "0" }}
                 >
                   <Img
                     width="full"
@@ -79,22 +96,39 @@ export const ListCard = (props: Props) => {
                   />
                 </Box>
               </Stack>
-              <Box>
+              <Box flex="1">
                 {props.startDateTime && (
                   <Text
                     mt="2"
                     fontSize="xs"
                     fontWeight="extrabold"
                     color="list-card-sm-title-fg"
+                    display="flex"
+                    flexDirection={{ base: "column", md: "row" }}
+                    justifyContent="space-between"
+                    alignItems={{ base: "flex-start", md: "center" }}
+                    margin="0"
                   >
                     {props.startDateTime}
+                    <Text
+                      mt="2"
+                      fontSize="xs"
+                      fontWeight="extrabold"
+                      color="list-card-sm-title-fg"
+                      paddingBottom="4px"
+                      as="span"
+                    >
+                      {/* {props.city} */}
+                      {props.city && `${props.city}, `}{props.country && props.country}
+                    </Text>
                   </Text>
                 )}
-
                 <Stack
                   spacing={{ base: "1", md: "2" }}
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
+                  borderTop="1px solid #E6E6E6"
+                  paddingTop="12px"
                 >
                   <Heading
                     variant="h4"
@@ -118,8 +152,19 @@ export const ListCard = (props: Props) => {
                   </Button>
                 </Box>
               )} */}
-                {props.type && (
+                {props.type_list ? (
                   <Wrap pb="20px" pt="4px" shouldWrapChildren>
+                    {props.type_list.map((tag) => (
+                      <Tag key={tag.type} variant="listCard" onClick={(e) => handleTypeClick(e, tag.url)}>
+                        {tag.type !== "ios" ? titleCase(tag.type) : "iOS"}
+                      </Tag>
+                    ))}
+                  </Wrap>
+                ) : props.type && (
+                  <Wrap pt="4px" shouldWrapChildren>
+                    {props.location && (<Tag variant="listCard">
+                      {titleCase(props.location)}
+                    </Tag>)}
                     {props.type.map((tag) => (
                       <Tag key={tag} variant="listCard">
                         {titleCase(tag)}
@@ -151,7 +196,19 @@ export const ListCard = (props: Props) => {
                       />
                     </Link>
                   )}
-
+                  {props.discordHandle && (
+                    <Link
+                      isExternal
+                      as={NextLink}
+                      href={`${props.discordHandle}`}
+                    >
+                      <Icon
+                        boxSize="18px"
+                        color="list-card-icon-fg"
+                        as={SiDiscord}
+                      />
+                    </Link>
+                  )}
                   {/* <IconButton
               aria-label="Website"
               icon={<HiGlobeAlt />}
