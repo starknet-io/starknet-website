@@ -1,0 +1,60 @@
+id: 3dc5f736-7516-4f66-a252-2d73770d98f9
+post_type: video
+title: "STARK @ Home 30: Why Cairo 1.0?"
+published_date: 2023-04-05T09:33:38.188Z
+video:
+  url: https://www.youtube.com/watch?v=uW2tTR53J7o
+  id: uW2tTR53J7o
+  data:
+    kind: youtube#video
+    etag: W6EkWpmnl1WWPrDFDGbDLvewDOM
+    id: uW2tTR53J7o
+    snippet:
+      publishedAt: 2023-04-05T04:33:15Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "STARK @ Home 30: Why Cairo 1.0?"
+      description: In this session of STARK @ Home, we invited Vitalik Buterin to
+        discuss the creation of new programming languages. We'll review Cairo
+        1.0 and answer the questions of why it was created, what one should pay
+        attention to when creating a new language, and which special features it
+        has.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/uW2tTR53J7o/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/uW2tTR53J7o/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/uW2tTR53J7o/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/uW2tTR53J7o/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/uW2tTR53J7o/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "STARK @ Home 30: Why Cairo 1.0?"
+        description: In this session of STARK @ Home, we invited Vitalik Buterin to
+          discuss the creation of new programming languages. We'll review Cairo
+          1.0 and answer the questions of why it was created, what one should
+          pay attention to when creating a new language, and which special
+          features it has.
+      defaultAudioLanguage: en-US
+image: /assets/stark-at-home-cairo-1.0-2.jpg
+category: stark-math
+topic:
+  - cairo
+short_desc: In this session of STARK @ Home, we invited Vitalik Buterin to
+  discuss the creation of new programming languages. We'll review Cairo 1.0 and
+  answer the questions of why it was created, what one should pay attention to
+  when creating a new language, and which special features it has.
