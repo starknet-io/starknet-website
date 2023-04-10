@@ -2,25 +2,25 @@
 
 import React, { CSSProperties, useRef, useState } from "react";
 import Player from "video.js/dist/types/player";
-import { Chapter } from "../constants";
-import { convertSecondsToMMSS } from "../control-bar/utils";
+import ChaptersDropdown from "./ChaptersDropdown";
+import { convertSecondsToMMSS } from "../player-core/control-bar/utils";
 import { useChapters } from "../hooks/useChapters";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
-import { SeekStatuses } from "../hooks/useSeek";
-import { VideoPlayerCore } from "../lib/VideoPlayerCore";
-import ChaptersDropdown from "./ChaptersDropdown";
+import { SeekStatuses } from "../player-core/hooks/useSeek";
+import { VideoPlayerCore } from "../player-core/VideoPlayerCore";
+import { Chapter } from "../constants";
 
-type EmbedVideoPlayerProps = {
+type VideoPlayerEmbedProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
 };
-export function EmbedVideoPlayer({
+export function VideoPlayerEmbed({
   chapters,
   initialActiveChapter,
   onChapterChange,
-}: EmbedVideoPlayerProps) {
+}: VideoPlayerEmbedProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
   const { currentChapter, setCurrentChapter } = useChapters({

@@ -4,24 +4,24 @@ import { Box } from "@chakra-ui/react";
 import React, { CSSProperties, useCallback, useState } from "react";
 import { useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
-import { Chapter } from "../constants";
-import { useChapters } from "../hooks/useChapters";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import ChaptersPlaylist from "./ChaptersPlaylist";
-import { VideoPlayerCore } from "../lib/VideoPlayerCore";
 import ChapterTitle from "./ChapterTitle";
+import { VideoPlayerCore } from "../player-core/VideoPlayerCore";
+import { Chapter } from "../constants";
+import { useChapters } from "../hooks/useChapters";
 
-type WebsiteVideoPlayerProps = {
+type VideoPlayerWebsiteProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
 };
-export function WebsiteVideoPlayer({
+export function VideoPlayerWebsite({
   chapters,
   initialActiveChapter,
   onChapterChange,
-}: WebsiteVideoPlayerProps) {
+}: VideoPlayerWebsiteProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerHeight, setVideoContainerHeightChange] = useState(0);

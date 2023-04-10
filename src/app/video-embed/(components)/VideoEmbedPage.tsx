@@ -1,6 +1,6 @@
 "use client";
 import { playlist } from "@ui/VideoPlayer/constants";
-import { EmbedVideoPlayer } from "@ui/VideoPlayer/player-embed/EmbedVideoPlayer";
+import { VideoPlayerEmbed } from "@ui/VideoPlayer/player-embed/VideoPlayerEmbed";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";
@@ -16,7 +16,7 @@ export default function VideoEmbedPage({ chapter }: VideoEmbedPageProps) {
 
   return (
     <ThemeProvider>
-      <EmbedVideoPlayer
+      <VideoPlayerEmbed
         chapters={playlist}
         initialActiveChapter={chapter}
         onChapterChange={onChapterChange}

@@ -1,4 +1,4 @@
-import { precisionRound } from "@ui/VideoPlayer/utils";
+import { precisionRound } from "@ui/VideoPlayer/player-core/utils";
 import { useEffect, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 

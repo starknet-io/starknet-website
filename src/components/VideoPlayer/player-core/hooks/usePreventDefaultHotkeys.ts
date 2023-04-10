@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 export const SPACE = 32;
 export const ARROW_UP = 38;

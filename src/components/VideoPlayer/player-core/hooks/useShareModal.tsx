@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { PlayerRef } from "../lib/VideoPlayerCore";
+import { PlayerRef } from "../VideoPlayerCore";
 import { SeekStatuses } from "./useSeek";
 
 export default function useShareModal({

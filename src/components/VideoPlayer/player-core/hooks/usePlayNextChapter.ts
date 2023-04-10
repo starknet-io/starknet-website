@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useInterval, useUpdateEffect } from "react-use";
-import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../constants";
+import { Chapter, CHAPTER_CHANGE_TIMEOUT } from "../../constants";
 import { getNextChapter } from "../utils";
 import { SeekStatuses } from "./useSeek";
 

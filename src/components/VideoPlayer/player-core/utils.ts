@@ -1,4 +1,4 @@
-import { Chapter } from "./constants";
+import { Chapter } from "../constants";
 
 export function precisionRound(number: number, precision = 2) {
   var factor = Math.pow(10, precision);

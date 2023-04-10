@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { playlist, playlistObject } from "../constants";
+import { playlist, playlistObject } from "./constants";
 
 export default function getVideoMetadata(chapterId: string) {
   const chapter = playlistObject[chapterId] || playlist[0];

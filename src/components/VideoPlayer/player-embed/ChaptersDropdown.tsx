@@ -1,7 +1,6 @@
 import { Box, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { convertSecondsToMMSS } from "../control-bar/utils";
 import { Chapter } from "../constants";
 
 interface ChaptersDropdownProps {

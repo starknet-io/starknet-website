@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useLocale } from "src/app/[locale]/(components)/ClientLocaleProvider";
-import { Chapter } from "../constants";
+import { Chapter } from "../../constants";
 import ShareEmbed from "./ShareEmbed";
 import SocialShare from "./SocialShare";
 

@@ -1,5 +1,5 @@
 import { playlist } from "@ui/VideoPlayer/constants";
-import getVideoMetadata from "@ui/VideoPlayer/meta/getVideoMetadata";
+import getVideoMetadata from "@ui/VideoPlayer/getVideoMetadata";
 import { ThemeProvider } from "../providers/ThemeProvider";
 import VideoEmbedPage from "./(components)/VideoEmbedPage";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import VideoJS from "@ui/VideoPlayer/lib/VideoJS";
+import VideoJS from "@ui/VideoPlayer/player-core/VideoJS";
 import React, {
   CSSProperties,
   useEffect,
@@ -10,22 +10,22 @@ import React, {
 } from "react";
 import { useMeasure, useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
-import ChapterAutoPlayModal from "../ChapterAutoPlayModal";
+import ChapterAutoPlayModal from "./ChapterAutoPlayModal";
 import { Chapter } from "../constants";
-import BigPlayButton from "../control-bar/BigPlayButton";
-import CustomControl from "../control-bar/CustomControl";
-import useGetCurrentChapter from "../hooks/useGetCurrentChapter";
-import { usePlayerActive } from "../hooks/usePlayerActive";
-import usePlayNextChapter from "../hooks/usePlayNextChapter";
-import usePreventDefaultHotkeys from "../hooks/usePreventDefaultHotkeys";
-import { SeekStatuses, useSeek } from "../hooks/useSeek";
-import useShareModal from "../hooks/useShareModal";
-import { useToggleFullscreen } from "../hooks/useToggleFullscreen";
-import useVideoJSOptions from "../hooks/useVideoJSOptions";
-import { useVolume } from "../hooks/useVolume";
-import "../player-overrides.css";
-import ShareModal from "../share/ShareModal";
-import { isFinalChapter } from "../utils";
+import BigPlayButton from "./control-bar/BigPlayButton";
+import CustomControl from "./control-bar/CustomControl";
+import useGetCurrentChapter from "./hooks/useGetCurrentChapter";
+import { usePlayerActive } from "./hooks/usePlayerActive";
+import usePlayNextChapter from "./hooks/usePlayNextChapter";
+import usePreventDefaultHotkeys from "./hooks/usePreventDefaultHotkeys";
+import { SeekStatuses, useSeek } from "./hooks/useSeek";
+import useShareModal from "./hooks/useShareModal";
+import { useToggleFullscreen } from "./hooks/useToggleFullscreen";
+import useVideoJSOptions from "./hooks/useVideoJSOptions";
+import { useVolume } from "./hooks/useVolume";
+import ShareModal from "./share/ShareModal";
+import { isFinalChapter } from "./utils";
+import "./player-overrides.css";
 
 export type PlayerRef = React.MutableRefObject<Player | null>;
 

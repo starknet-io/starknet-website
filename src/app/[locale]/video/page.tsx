@@ -1,5 +1,5 @@
 import { playlist } from "@ui/VideoPlayer/constants";
-import getVideoMetadata from "@ui/VideoPlayer/meta/getVideoMetadata";
+import getVideoMetadata from "@ui/VideoPlayer/getVideoMetadata";
 import VideoPage from "./(components)/VideoPage";
 
 interface VideoParams {

@@ -5,9 +5,8 @@ import {
   InputGroup,
   InputRightElement,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import {
   FacebookIcon,
   FacebookShareButton,

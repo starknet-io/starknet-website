@@ -1,7 +1,7 @@
 "use client";
 import { Box, Container } from "@chakra-ui/react";
 import { playlist } from "@ui/VideoPlayer/constants";
-import { WebsiteVideoPlayer } from "@ui/VideoPlayer/player/WebsiteVideoPlayer";
+import { VideoPlayerWebsite } from "@ui/VideoPlayer/player-website/VideoPlayerWebsite";
 import { useRouter } from "next/navigation";
 
 interface Props {
@@ -21,7 +21,7 @@ export default function VideoPage({ chapter, locale }: Props) {
           Video tutorial
         </Box>
       </Box>
-      <WebsiteVideoPlayer
+      <VideoPlayerWebsite
         chapters={playlist}
         initialActiveChapter={chapter}
         onChapterChange={onChapterChange}

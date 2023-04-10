@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 
 export function usePlayerActive(ref: RefObject<HTMLDivElement> | null) {
   const [isPlayerActive, setIsPlayerActive] = useState(true);

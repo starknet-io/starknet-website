@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from "react";
+import { RefObject, useState } from "react";
 import Player from "video.js/dist/types/player";
 import { Chapter } from "../constants";
 
