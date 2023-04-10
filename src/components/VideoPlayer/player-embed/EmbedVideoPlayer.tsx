@@ -8,20 +8,19 @@ import { useChapters } from "../hooks/useChapters";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { SeekStatuses } from "../hooks/useSeek";
 import { VideoPlayerCore } from "../lib/VideoPlayerCore";
-import "../player-overrides.css";
 import ChaptersDropdown from "./ChaptersDropdown";
 
-type VideoPlayerEmbedSeperateProps = {
+type EmbedVideoPlayerProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
 };
-export function VideoPlayerEmbedSeperate({
+export function EmbedVideoPlayer({
   chapters,
   initialActiveChapter,
   onChapterChange,
-}: VideoPlayerEmbedSeperateProps) {
+}: EmbedVideoPlayerProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
   const { currentChapter, setCurrentChapter } = useChapters({

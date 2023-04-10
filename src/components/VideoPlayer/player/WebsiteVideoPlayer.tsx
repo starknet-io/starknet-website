@@ -9,20 +9,19 @@ import { useChapters } from "../hooks/useChapters";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import ChaptersPlaylist from "./ChaptersPlaylist";
 import { VideoPlayerCore } from "../lib/VideoPlayerCore";
-import "../player-overrides.css";
 import ChapterTitle from "./ChapterTitle";
 
-type VideoPlayerSeperateProps = {
+type WebsiteVideoPlayerProps = {
   chapters: Chapter[];
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
 };
-export function VideoPlayerSeperate({
+export function WebsiteVideoPlayer({
   chapters,
   initialActiveChapter,
   onChapterChange,
-}: VideoPlayerSeperateProps) {
+}: WebsiteVideoPlayerProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerHeight, setVideoContainerHeightChange] = useState(0);

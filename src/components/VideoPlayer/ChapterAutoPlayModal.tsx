@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  CircularProgress,
-  Flex,
-  IconButton,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { CSSProperties } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
@@ -18,18 +11,13 @@ type ChapterAutoPlayModalProps = {
 export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
   const { onPlayNextChapter, isOpen } = props;
 
-  // const isOpen = true;
-
   return (
     <Box
       sx={{
-        // ...positionStyle,
         position: "absolute",
         bottom: "100px",
         right: "100px",
         zIndex: 9999,
-        // display: "grid",
-        // placeContent: "center",
         gap: "30px",
         pointerEvents: isOpen ? "auto" : "none",
         opacity: isOpen ? 1 : 0,
@@ -59,7 +47,6 @@ export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
               isPlaying={isOpen}
               duration={5}
               colors="#313132"
-              // colorsTime={[10, 6, 3, 0]}
               onComplete={() => ({ shouldRepeat: true, delay: 1 })}
               trailColor="#ffffff"
               size={16}
