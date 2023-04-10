@@ -6,18 +6,35 @@ page_last_updated: true
 blocks:
   - type: markdown
     body: |-
-      #### Starknet logo kit
+      ## Starknet logo kit
 
-      ![](/assets/group-10.png)
+      ![](/assets/sn_logo_banner.png)
   - type: link_list
     heading: ""
     blocks:
       - is_external: false
         label: SVG only
         sub_label: ""
+        href: /assets/Starknet-logos-svg.zip
       - is_external: false
         label: PNG only
-        href: https://www.starknet.io/en
+        href: /assets/Starknet-logos-png.zip
+      - is_external: true
+        label: Complete kit
+        href: /assets/Starknet-logos-complete.zip
+  - type: markdown
+    body: |-
+      ## Cairo logo kit
+
+      ![](/assets/cairo_logo_banner.png)
+  - type: link_list
+    blocks:
+      - is_external: false
+        label: SVG only
+        href: /assets/Cairo-logos-svg.zip
+      - is_external: false
+        label: PNG only
+        href: /assets/Cairo-logos-png.zip
       - is_external: false
         label: Complete kit
-        href: https://www.starknet.io/en
+        href: /assets/Cairo-logos-complete.zip
