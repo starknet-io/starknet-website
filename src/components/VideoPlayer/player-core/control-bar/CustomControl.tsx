@@ -19,7 +19,6 @@ type CustomControlProps = {
   isControlVisible: boolean;
   totalDuration: number;
   currentTime: number;
-  currentDisplayTime: number;
   onSeekScrubStart: (val: number) => void;
   onSeekScrubEnd: (val: number) => void;
   onSeekScrubChange: (val: number) => void;
@@ -37,9 +36,6 @@ type CustomControlProps = {
   chapter: Chapter;
   isDisabled?: boolean;
   onShare: () => void;
-  scrubMin: number;
-  scrubMax: number;
-  validateSeekRange?: (t: number, func: (t: number) => void) => void;
 };
 export default function CustomControl(props: CustomControlProps) {
   const {
@@ -47,7 +43,6 @@ export default function CustomControl(props: CustomControlProps) {
     isControlVisible,
     totalDuration,
     currentTime,
-    currentDisplayTime,
     onSeekScrubStart,
     onSeekScrubEnd,
     onSeekScrubChange,
@@ -62,20 +57,8 @@ export default function CustomControl(props: CustomControlProps) {
     volume,
     toggleFullscreen,
     isFullscreen,
-    isDisabled,
     onShare,
-    scrubMin,
-    scrubMax,
-    validateSeekRange,
   } = props;
-
-  const callIfWithingChapter = (t: number, func: (t: number) => void) => {
-    if (validateSeekRange) {
-      validateSeekRange(t, func);
-    } else {
-      func(t);
-    }
-  };
 
   return (
     <Box
@@ -109,12 +92,12 @@ export default function CustomControl(props: CustomControlProps) {
         }}
       >
         <Scrubber
-          min={scrubMin}
-          max={scrubMax}
+          min={0}
+          max={totalDuration}
           value={currentTime}
-          onScrubStart={(v) => callIfWithingChapter(v, onSeekScrubStart)}
-          onScrubEnd={(v) => callIfWithingChapter(v, onSeekScrubEnd)}
-          onScrubChange={(v) => callIfWithingChapter(v, onSeekScrubChange)}
+          onScrubStart={onSeekScrubStart}
+          onScrubEnd={onSeekScrubEnd}
+          onScrubChange={onSeekScrubChange}
           bufferPosition={bufferPosition}
         />
       </div>
@@ -143,7 +126,6 @@ export default function CustomControl(props: CustomControlProps) {
           sx={{
             display: "flex",
             alignItems: "center",
-            // gap: "8px",
             color: "white",
             fontSize: "sm",
             fontWeight: 500,
@@ -151,7 +133,7 @@ export default function CustomControl(props: CustomControlProps) {
           }}
         >
           <Box sx={{ minWidth: "45px" }}>
-            {convertSecondsToMMSS(currentDisplayTime)}
+            {convertSecondsToMMSS(currentTime)}
           </Box>
           <Box>/</Box>
           <Box sx={{ minWidth: "45px", textAlign: "right" }}>

@@ -263,7 +263,6 @@ export function VideoPlayerCore({
           isControlVisible={isControlVisible}
           totalDuration={totalDuration}
           currentTime={currentTime}
-          currentDisplayTime={currentTime}
           onSeekScrubStart={(n) => {
             if (isPlayNextModalOpen) {
               closePlayNextModal();
@@ -290,8 +289,6 @@ export function VideoPlayerCore({
           toggleFullscreen={toggleFullscreen}
           isFullscreen={isFullscreen}
           onShare={onShareModalOpen}
-          scrubMin={0}
-          scrubMax={totalDuration}
         />
       )}
     </div>

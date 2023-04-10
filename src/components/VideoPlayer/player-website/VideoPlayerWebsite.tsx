@@ -9,7 +9,6 @@ import ChaptersPlaylist from "./ChaptersPlaylist";
 import ChapterTitle from "./ChapterTitle";
 import { VideoPlayerCore } from "../player-core/VideoPlayerCore";
 import { Chapter } from "../constants";
-import { useChapters } from "../hooks/useChapters";
 
 type VideoPlayerWebsiteProps = {
   chapters: Chapter[];
@@ -26,12 +25,7 @@ export function VideoPlayerWebsite({
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerHeight, setVideoContainerHeightChange] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
-
-  const { currentChapter, setCurrentChapter } = useChapters({
-    playerRef,
-    initialActiveChapter,
-    chapters,
-  });
+  const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
 
   useUpdateEffect(() => {
     onChapterChange?.(currentChapter);

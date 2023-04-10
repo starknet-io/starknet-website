@@ -4,7 +4,6 @@ import React, { CSSProperties, useRef, useState } from "react";
 import Player from "video.js/dist/types/player";
 import ChaptersDropdown from "./ChaptersDropdown";
 import { convertSecondsToMMSS } from "../player-core/control-bar/utils";
-import { useChapters } from "../hooks/useChapters";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { SeekStatuses } from "../player-core/hooks/useSeek";
 import { VideoPlayerCore } from "../player-core/VideoPlayerCore";
@@ -23,11 +22,7 @@ export function VideoPlayerEmbed({
 }: VideoPlayerEmbedProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
-  const { currentChapter, setCurrentChapter } = useChapters({
-    playerRef,
-    initialActiveChapter,
-    chapters,
-  });
+  const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
 
   const [playingStatus, setPlayingStatus] = useState<SeekStatuses>("unstarted");
   const playingStatusBeforeOpeningPlaylist = useRef<SeekStatuses>();
@@ -77,7 +72,7 @@ export function VideoPlayerEmbed({
           currentChapter={currentChapter}
           onChapterSelect={setCurrentChapter}
           onToggleExpandPlaylist={onToggleExpandPlaylist}
-          timeDisplay={convertSecondsToMMSS(chapter.startAt)}
+          timeDisplay={convertSecondsToMMSS(chapter.duration)}
         />
       )}
     />
