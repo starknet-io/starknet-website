@@ -247,7 +247,7 @@ export function VideoPlayerCore({
       <ShareModal
         isOpen={isShareModalOpen}
         onClose={onShareModalClose}
-        currentChapter={currentChapter}
+        chapter={chapter || chapters[0]}
         embedded={embedded}
       />
       {chapter &&

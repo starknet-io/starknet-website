@@ -20,8 +20,13 @@ import {
 } from "react-share";
 import useInputCopy from "../hooks/useInputCopy";
 
-const SocialShare = ({ shareUrl }: { shareUrl: string }) => {
-  const title = "Starknet website";
+const SocialShare = ({
+  shareUrl,
+  title,
+}: {
+  shareUrl: string;
+  title: string;
+}) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const { onCopy, state, copied } = useInputCopy();
   const focusInput = () => inputRef.current?.select();

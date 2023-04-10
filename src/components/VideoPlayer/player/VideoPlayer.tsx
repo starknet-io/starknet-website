@@ -315,7 +315,7 @@ export function VideoPlayer({
         <ShareModal
           isOpen={isShareModalOpen}
           onClose={onCloseShareModal}
-          currentChapter={currentChapter}
+          chapter={chapter || chapters[0]}
         />
         {chapter && (
           <ChapterTitle

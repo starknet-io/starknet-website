@@ -1,14 +1,9 @@
 import { Box, Button, Text, Textarea } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
-import { playlist, playlistObject } from "../constants";
+import { Chapter, playlist, playlistObject } from "../constants";
 import useInputCopy from "../hooks/useInputCopy";
 
-export default function ShareEmbed({
-  currentChapter,
-}: {
-  currentChapter: string;
-}) {
-  const chapter = playlistObject[currentChapter] || playlist[0];
+export default function ShareEmbed({ chapter }: { chapter: Chapter }) {
   const videoEmbedUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/video-embed?chapter=${chapter.id}`;
   const defaultValue = `<iframe width="560" height="315" src="${videoEmbedUrl}" title="${chapter.title}" frameborder="0" allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>`;
 

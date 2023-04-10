@@ -301,7 +301,7 @@ export function VideoPlayerEmbed({
       <ShareModal
         isOpen={isShareModalOpen}
         onClose={onCloseShareModal}
-        currentChapter={currentChapter}
+        chapter={chapter || chapters[0]}
         embedded
       />
       {chapter && (

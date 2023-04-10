@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useLocale } from "src/app/[locale]/(components)/ClientLocaleProvider";
+import { Chapter } from "../constants";
 import ShareEmbed from "./ShareEmbed";
 import SocialShare from "./SocialShare";
 
@@ -16,17 +17,18 @@ type ShareModalProps = {
   isOpen: boolean;
   onClose: () => void;
   embedded?: boolean;
-  currentChapter: string;
+  chapter: Chapter;
 };
 
 export default function ShareModal({
   isOpen,
   onClose,
   embedded,
-  currentChapter,
+  chapter,
 }: ShareModalProps) {
   const locale = useLocale();
-  const shareUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/${locale}/video?chapter=${currentChapter}`;
+  const shareUrl = `https://starknet-website-git-user-education-video-builtin-yuki-labs.vercel.app/${locale}/video?chapter=${chapter.id}`;
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered={embedded}>
       <ModalOverlay />
@@ -45,8 +47,8 @@ export default function ShareModal({
         <ModalCloseButton />
         <ModalHeader />
         <ModalBody pt={0}>
-          <SocialShare shareUrl={shareUrl} />
-          {!embedded && <ShareEmbed currentChapter={currentChapter} />}
+          <SocialShare shareUrl={shareUrl} title={chapter.title} />
+          {!embedded && <ShareEmbed chapter={chapter} />}
         </ModalBody>
       </ModalContent>
     </Modal>
