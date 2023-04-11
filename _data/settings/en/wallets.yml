@@ -1,14 +1,16 @@
 items:
-  - name: Argent X
+  - body: Earn, stake and trade with low fees, high speeds & strong security.
+    type_list:
+      - type: browser_extension
+        url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
+    name: Argent X
+    website_url: https://www.argent.xyz/argent-x/
+    discord: https://discord.gg/8yVmtsgtgm
+    twitter: https://twitter.com/argentHQ
     type:
       - browser_extension
     image: /assets/argent.jpg
-    twitter: https://twitter.com/argentHQ
-    website_url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
     description: Earn, stake and trade with low fees, high speeds & strong security.
-    body: Earn, stake and trade with low fees, high speeds & strong security.
-    type_list:
-      - type: browser_extension
   - body: Braavos Smart Wallet offers an unparalleled UX and advance security via
       its Hardware Signer 2-factor authentication and multi-signer 3-factor
       authentication capabilities.
@@ -20,7 +22,7 @@ items:
       - type: android
         url: https://play.google.com/store/apps/details?id=app.braavos.wallet
     name: Braavos
-    website_url: https://chrome.google.com/webstore/detail/braavos-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma
+    website_url: https://braavos.app
     discord: https://discord.com/invite/bFvwjYhuqp
     twitter: https://twitter.com/myBraavos
     type:
@@ -28,4 +30,6 @@ items:
       - ios
       - android
     image: /assets/braavos.jpg
-    description: Braavos Smart Wallet offers an unparalleled UX and advance security via its Hardware Signer 2-factor authentication and multi-signer 3-factor authentication capabilities.
+    description: Braavos Smart Wallet offers an unparalleled UX and advance security
+      via its Hardware Signer 2-factor authentication and multi-signer 3-factor
+      authentication capabilities.
