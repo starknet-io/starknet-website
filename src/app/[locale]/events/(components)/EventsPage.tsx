@@ -46,6 +46,17 @@ export interface Props extends AutoProps {
   readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
 }
 
+const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
+  if (mode === "UPCOMING_EVENTS") {
+    return `start_date_ts > ${getUnixTime(
+      startOfDay(new Date())
+    )} OR end_date_ts > ${getUnixTime(startOfDay(new Date()))}`;
+  }
+  return `start_date_ts < ${getUnixTime(
+    startOfDay(new Date("April 1, 2023"))
+  )} AND end_date_ts < ${getUnixTime(startOfDay(new Date("April 1, 2023")))}`;
+};
+
 export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
@@ -64,11 +75,7 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
-          filters={
-            mode === "UPCOMING_EVENTS"
-              ? `start_date_ts > ${getUnixTime(startOfDay(new Date()))}`
-              : `start_date_ts < ${getUnixTime(startOfDay(new Date()))}`
-          }
+          filters={getEventFilter(mode)}
         />
 
         <PageLayout
