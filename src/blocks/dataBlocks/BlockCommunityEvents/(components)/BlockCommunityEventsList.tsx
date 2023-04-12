@@ -45,7 +45,9 @@ export function BlockCommunityEventsList({
       <Configure
         hitsPerPage={hitsPerPage}
         facetsRefinements={{ locale: [params.locale] }}
-        filters={`start_date_ts > ${getUnixTime(startOfDay(new Date()))}`}
+        filters={`start_date_ts > ${getUnixTime(
+          startOfDay(new Date())
+        )} AND type: community_event`}
       />
       <Container maxW="1062px">
         <Box>
