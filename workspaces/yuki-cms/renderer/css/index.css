@@ -1,0 +1,42 @@
+@import "./reset.css";
+@import "./links.css";
+@import "./code.css";
+@import "./page-transition-loading-animation.css";
+
+html {
+  overflow-y: scroll;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#page-view {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#page-layout {
+  display: flex;
+  width: 900px;
+  margin: auto;
+  flex-grow: 1;
+}
+
+#page-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#page-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

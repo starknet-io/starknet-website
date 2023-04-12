@@ -1,0 +1,3 @@
+name = "cms-auth-cf-worker"
+main = "src/index.ts"
+compatibility_date = "2023-04-08"

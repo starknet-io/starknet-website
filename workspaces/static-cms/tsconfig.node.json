@@ -1,7 +1,0 @@
-{
-  "extends": "../../tsconfig.projects.json",
-  "compilerOptions": {
-    "outDir": ".types-node",
-  },
-  "include": ["vite.config.ts", "vitest.config.ts"]
-}

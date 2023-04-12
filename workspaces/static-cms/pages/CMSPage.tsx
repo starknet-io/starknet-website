@@ -4,7 +4,7 @@ import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import { UUIDWidget } from "@starknet-io/static-cms-widgets/src/uuid";
 import { YoutubeWidget } from "@starknet-io/static-cms-widgets/src/youtube";
 
-export default function App() {
+export default function CMSPage() {
   React.useEffect(() => {
     void (async () => {
       // if (process.env.NODE_ENV === "development") {

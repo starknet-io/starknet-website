@@ -68,6 +68,9 @@
       "path": "./workspaces/static-cms-widgets"
     },
     {
+      "path": "./workspaces/yuki-cms"
+    },
+    {
       "path": "./tsconfig.node.json"
     }
   ]

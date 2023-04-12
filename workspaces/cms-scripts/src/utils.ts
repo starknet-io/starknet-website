@@ -15,6 +15,12 @@ export async function write(filepath: string, data: any): Promise<void> {
   });
 }
 
+export async function writeYAML(filepath: string, data: any): Promise<void> {
+  await fs.writeFile(filepath, YAML.stringify(data), {
+    encoding: "utf8",
+  });
+}
+
 export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
   let cause = [];
 
