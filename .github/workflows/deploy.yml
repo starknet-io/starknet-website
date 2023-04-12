@@ -44,7 +44,7 @@ jobs:
             build-cache-
 
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn
 
       - name: Update Algolia search index
         run: |
