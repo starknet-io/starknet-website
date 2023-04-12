@@ -57,7 +57,7 @@ jobs:
           ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
 
       - name: Build storybook
-        run: yarn storybook build
+        run: yarn exec storybook build
 
       - name: Deploy storybook
         uses: cloudflare/pages-action@1
@@ -72,7 +72,7 @@ jobs:
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
 
       - name: Build project
-        run: yarn next build
+        run: yarn exec next build
 
       # there are issues with file upload limits on vercel
       # so deploy is disabled here and is done from vercel for now
