@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: ./actions/node.yml
+      - uses: ./.github/actions/node.yml
       - name: Update Algolia search index
         run: yarn workspace @starknet-io/cms-scripts update-algolia-index
         env:
