@@ -27,12 +27,6 @@ export const settingsCollectionConfig = {
               summary: "Column",
               fields: [
                 {
-                  // quickfix for a bug with lists that have only one field
-                  name: "not-a-field",
-                  widget: "hidden",
-                  required: false,
-                },
-                {
                   label: "Blocks",
                   name: "blocks",
                   widget: "list",

@@ -39,6 +39,8 @@ jobs:
 
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
+        env:
+          VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
 
       - name: Deploy Netlify CMS
         uses: cloudflare/pages-action@1

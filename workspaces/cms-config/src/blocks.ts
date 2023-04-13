@@ -445,12 +445,6 @@ export const topLevelBlocks = [
     widget: "object",
     fields: [
       {
-        // quickfix for a bug with lists that have only one field
-        name: "not-a-field",
-        widget: "hidden",
-        required: false,
-      },
-      {
         name: "blocks",
         label: "Blocks",
         widget: "list",

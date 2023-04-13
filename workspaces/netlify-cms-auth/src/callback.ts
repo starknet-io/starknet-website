@@ -1,8 +1,6 @@
 import { OAuthApp } from "@octokit/oauth-app";
 import { Env } from "./env";
 
-const frontendOrigin = "*.starknet-netlify-cms.pages.dev";
-
 export async function callback(
   request: Request,
   env: Env,
@@ -26,9 +24,7 @@ export async function callback(
     return new Response(
       postMessageHTML({
         status: "success",
-        provider,
         data: { token, provider },
-        origin: frontendOrigin,
       }),
       {
         headers: {
@@ -40,9 +36,7 @@ export async function callback(
     return new Response(
       postMessageHTML({
         status: "error",
-        provider,
         data: e,
-        origin: frontendOrigin,
       }),
       {
         headers: {
@@ -54,43 +48,33 @@ export async function callback(
 }
 
 interface PostMessageHTMLArgs {
-  status: string;
-  provider: string;
+  status: "success" | "error";
   data: any;
-  origin: string;
 }
 
-function postMessageHTML({
-  status,
-  provider,
-  data,
-  origin,
-}: PostMessageHTMLArgs) {
-  const authorization = JSON.stringify(
-    ["authorization", provider, status, JSON.stringify(data)].join(":")
-  );
-
-  const authorizing = JSON.stringify(["authorizing", provider].join(":"));
-
+function postMessageHTML({ status, data }: PostMessageHTMLArgs) {
   return `
     <!DOCTYPE html>
     <html>
     <body>
     <script>
       function receiveMessage (message) {
-        if (message.data === ${authorizing}) {
-          window.opener.postMessage(
-            ${authorization},
-            message.origin
-          );
+        if (!/^https:\/\/[-_\w]+\.starknet-netlify-cms\.pages\.dev$/.test(message.origin)) return;
+        if (message.data !== "authorizing:github") return;
 
-          window.removeEventListener("message", receiveMessage, false);
-        }
+        window.opener.postMessage(
+          ${JSON.stringify(
+            `authorization:github:${status}:${JSON.stringify(data)}`
+          )},
+          message.origin
+        );
+
+        window.removeEventListener("message", receiveMessage, false);
       }
 
       window.addEventListener("message", receiveMessage, false);
 
-      window.opener.postMessage(${authorizing}, ${JSON.stringify(origin)});
+      window.opener.postMessage("authorizing:github", "*");
     </script>
     </body>
     </html>

@@ -11,7 +11,6 @@ export const CMSConfig = {
     name: "github",
     repo: "starknet-io/starknet-website",
     branch: "dev",
-    // base_url: "https://netlify-cms-auth.yukilabs.workers.dev",
     base_url: "https://netlify-cms-auth.yukilabs.workers.dev",
   },
   media_folder: "public/assets",

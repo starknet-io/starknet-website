@@ -16,13 +16,16 @@ export default function App() {
         NetlifyCmsWidgetUUID.Widget(),
         NetlifyCmsWidgetYouTube.Widget(),
       ]);
+      const branch = import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch
+
+      console.log('branch', branch)
 
       CMS.init({
         config: {
           ...CMSConfig,
           backend: {
             ...CMSConfig.backend,
-            branch: 'tsotne/wip',
+            branch,
           },
         },
       });
