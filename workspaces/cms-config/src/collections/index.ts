@@ -1,4 +1,3 @@
-import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 import { categoriesCollectionConfig } from "./categories";
 import { eventsCollectionConfig } from "./events";
@@ -18,4 +17,4 @@ export const collections =  [
   jobsCollectionConfig,
   tutorialsCollectionConfig,
   settingsCollectionConfig,
-] satisfies CmsConfig['collections'] & Config['collections'];
+] satisfies CmsConfig['collections'];

@@ -1,4 +1,3 @@
-import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 
 export const eventsCollectionConfig = {
@@ -99,4 +98,4 @@ export const eventsCollectionConfig = {
       default: ["crypto", "blockchain", "starknet"],
     },
   ],
-} satisfies Config["collections"][number] & CmsConfig["collections"][number];
+} satisfies CmsConfig["collections"][number];

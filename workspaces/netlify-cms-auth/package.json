@@ -1,0 +1,20 @@
+{
+  "name": "@starknet-io/netlify-cms-auth",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230404.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.29.8",
+    "wrangler": "2.14.0"
+  },
+  "dependencies": {
+    "@octokit/oauth-app": "^4.2.0"
+  }
+}

@@ -1,4 +1,3 @@
-import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 import { linkFields } from "../blocks";
 
@@ -369,4 +368,4 @@ export const settingsCollectionConfig = {
       ],
     },
   ],
-} satisfies Config["collections"][number] & CmsConfig["collections"][number];
+} satisfies CmsConfig["collections"][number];

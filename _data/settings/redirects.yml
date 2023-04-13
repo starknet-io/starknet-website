@@ -1,8 +1,6 @@
 items:
   - source: /
     destination: /en
-  - source: /cms
-    destination: /static-cms
   - source: /discord
     destination: "https://discord.gg/qypnmzkhbc"
   - source: /sequencer-api

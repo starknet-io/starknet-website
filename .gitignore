@@ -60,3 +60,4 @@ next-env.d.ts
 .types-*
 _crowdin
 *.vars
+*.__*

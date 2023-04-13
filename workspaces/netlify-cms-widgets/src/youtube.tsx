@@ -5,7 +5,7 @@ import { WidgetPreviewContainer } from "netlify-cms-ui-default";
 import { CmsWidgetControlProps } from "netlify-cms-core";
 import { youtubeVideoIdFromURL } from "@starknet-io/cms-utils/src/index";
 
-const API_BASE_URL = process.env.API_BASE_URL ?? "/api";
+const API_BASE_URL = process.env.API_BASE_URL ?? "https://starknet-website.vercel.app/api";
 
 function Control(props: CmsWidgetControlProps & any) {
   const valueData =

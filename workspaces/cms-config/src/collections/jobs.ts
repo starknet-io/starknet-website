@@ -1,4 +1,3 @@
-import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 
 export const jobsCollectionConfig = {
@@ -153,4 +152,4 @@ export const jobsCollectionConfig = {
       ],
     },
   ],
-} satisfies Config["collections"][number] & CmsConfig["collections"][number];
+} satisfies CmsConfig["collections"][number];

@@ -1,4 +1,3 @@
-import type { Config } from "@staticcms/core";
 import type { CmsConfig } from "netlify-cms-core";
 
 export const categoriesCollectionConfig = {
@@ -23,4 +22,4 @@ export const categoriesCollectionConfig = {
       widget: "string",
     },
   ],
-} satisfies Config["collections"][number] & CmsConfig["collections"][number];
+} satisfies CmsConfig["collections"][number];

@@ -1,4 +1,3 @@
-import type { Field, ListField } from "@staticcms/core";
 import type { CmsFieldList, CmsField } from "netlify-cms-core";
 
 export const linkFields = [
@@ -46,7 +45,7 @@ export const linkFields = [
     value_field: "id",
     display_fields: ["title"],
   },
-] satisfies (CmsField & Field)[];
+] satisfies CmsField[];
 
 export const blocks = [
   {
@@ -437,7 +436,7 @@ export const blocks = [
       },
     ],
   },
-] satisfies CmsFieldList["types"] & ListField["types"];
+] satisfies CmsFieldList["types"];
 
 export const topLevelBlocks = [
   {
@@ -526,4 +525,4 @@ export const topLevelBlocks = [
     ],
   },
   ...blocks,
-] satisfies CmsFieldList["types"] & ListField["types"];
+] satisfies CmsFieldList["types"];

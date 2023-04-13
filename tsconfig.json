@@ -59,16 +59,10 @@
       "path": "./workspaces/netlify-cms"
     },
     {
+      "path": "./workspaces/netlify-cms-auth"
+    },
+    {
       "path": "./workspaces/netlify-cms-widgets"
-    },
-    {
-      "path": "./workspaces/static-cms"
-    },
-    {
-      "path": "./workspaces/static-cms-widgets"
-    },
-    {
-      "path": "./workspaces/yuki-cms"
     },
     {
       "path": "./tsconfig.node.json"

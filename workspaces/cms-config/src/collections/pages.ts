@@ -1,4 +1,3 @@
-import type { Config } from "@staticcms/core";
 import { topLevelBlocks } from "../blocks";
 import type { CmsConfig } from "netlify-cms-core";
 
@@ -58,4 +57,4 @@ export const pagesCollectionConfig = {
       types: topLevelBlocks,
     },
   ],
-} satisfies CmsConfig["collections"][number] & Config["collections"][number];
+} satisfies CmsConfig["collections"][number];
