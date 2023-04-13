@@ -1,4 +1,4 @@
-name: Deploy
+name: Build and Deploy Netlify CMS Auth
 
 on:
   push:
