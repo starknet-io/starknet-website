@@ -30,7 +30,7 @@ jobs:
             **/tsconfig.tsbuildinfo
             **/.types/**
             **/.types-*/**
-          key: build-cache-${{ hashFiles('**/yarn.lock') }}
+          key: build-cache-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             build-cache-
 
