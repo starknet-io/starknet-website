@@ -2,6 +2,9 @@ name: Deploy
 
 on:
   push:
+    branches:
+      - deploy/netlify-cms-auth
+      - tsotne/wip2
 
 jobs:
   build_and_deploy:
