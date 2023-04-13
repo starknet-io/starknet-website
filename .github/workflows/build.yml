@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: ./.github/actions/node.yml
+      - uses: ./.github/actions/node
 
       - name: Restore Crowdin Cache
         uses: actions/cache/restore@v3
