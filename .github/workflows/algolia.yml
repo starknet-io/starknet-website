@@ -1,0 +1,27 @@
+name: update algolia index
+
+on:
+  push:
+    paths:
+      - "_data/**"
+      - "workspaces/cms-*/**"
+      - ".github/workflows/algolia.yml"
+    branches:
+      - dev
+      - production
+
+jobs:
+  update-index:
+    runs-on: ubuntu-22.04
+    environment: "dev-algolia-index"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: ./actions/node.yml
+      - name: Update Algolia search index
+        run: yarn workspace @starknet-io/cms-scripts update-algolia-index
+        env:
+          ALGOLIA_INDEX:  ${{ github.ref_name }}
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}

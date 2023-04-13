@@ -6,61 +6,38 @@ on:
 concurrency: crowdin-dev
 
 jobs:
-  synchronize_with_crowdin:
+  synchronize-with-crowdin:
     name: Synchronize with Crowdin
     environment: "dev-crowdin"
     runs-on: ubuntu-22.04
 
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-      CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
+      - uses: ./actions/node.yml
 
-      - name: Setup Node.js and cache dependencies
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: yarn
-
-      - uses: actions/cache@v3
-        with:
-          path: |
-            .yarn/cache
-            .yarn/install-state.gz
-            .eslintcache
-            **/tsconfig.tsbuildinfo
-            **/.types/**
-            **/.types-*/**
-          key: build-cache-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            build-cache-
-
-      - name: Install project dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
-
-      - name: Cache Crowdin files for future workflow runs
-        uses: actions/cache/save@v3
+      - name: Restore Crowdin Cache
+        uses: actions/cache/restore@v3
         with:
           path: _crowdin
           key: crowdin-cache-${{ github.ref_name }}
-
-      - name: Install project dependencies
-        run: yarn
 
       - name: Run pre-Crowdin script for file preparation
         run: yarn workspace @starknet-io/cms-scripts pre-crowdin
 
       - name: Upload source files to Crowdin project
         run: yarn crowdin upload -b ${{ github.ref_name }}
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Download approved translations from Crowdin
         run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
-      - name: Cache Crowdin files for future workflow runs
+      - name: Save Crowdin Cache
         uses: actions/cache/save@v3
         with:
           path: _crowdin

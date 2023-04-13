@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    environment: "netlify-cms-auth"
+    permissions:
+      contents: read
+      deployments: write
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: ./actions/node.yml
+
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: workspaces/netlify-cms-auth

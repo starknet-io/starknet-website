@@ -1,0 +1,29 @@
+name: Build and Deploy Netlify CMS
+
+on:
+  push:
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    environment: "netlify-cms"
+    permissions:
+      contents: read
+      deployments: write
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: ./actions/node.yml
+
+      - name: Build Netlify CMS
+        run: yarn workspace @starknet-io/netlify-cms build
+
+      - name: Deploy Netlify CMS
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: starknet-netlify-cms
+          directory: workspaces/netlify-cms/dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
