@@ -44,6 +44,17 @@ export interface Props extends AutoProps {
   readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
 }
 
+const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
+  if (mode === "UPCOMING_EVENTS") {
+    return `start_date_ts > ${getUnixTime(
+      startOfDay(new Date())
+    )} OR end_date_ts > ${getUnixTime(startOfDay(new Date()))}`;
+  }
+  return `start_date_ts < ${getUnixTime(
+    startOfDay(new Date())
+  )} AND end_date_ts < ${getUnixTime(startOfDay(new Date()))}`;
+};
+
 export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
@@ -62,11 +73,7 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
-          filters={
-            mode === "UPCOMING_EVENTS"
-              ? `start_date_ts > ${getUnixTime(startOfDay(new Date()))}`
-              : `start_date_ts < ${getUnixTime(startOfDay(new Date()))}`
-          }
+          filters={getEventFilter(mode)}
         />
 
         <PageLayout
@@ -232,48 +239,83 @@ function CustomTags() {
 function CustomHits() {
   const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
 
+  const hitsByMonth = useMemo(() => {
+    let hitsByMonthDict: Record<string, typeof hits> = {};
+
+    hits.forEach((hit) => {
+      let startDate = new Date(hit?.start_date);
+      let month = startDate.getMonth();
+      let year = startDate.getFullYear();
+      let key = `${year}-${month + 1}`;
+      if (!hitsByMonthDict[key]) {
+        hitsByMonthDict[key] = [];
+      }
+      hitsByMonthDict[key].push(hit);
+    });
+    return hitsByMonthDict;
+  }, [hits]);
+
   return (
     <>
-      <Flex gap={4} direction="column" flex={1}>
-        {hits.map((hit) => {
-          let startDate = new Date(hit?.start_date);
-          let endDate = new Date(hit?.end_date ?? "");
-          let hasSameDay = startDate.getDate() === endDate.getDate();
-          let hasSameMonth = startDate.getMonth() === endDate.getMonth();
-          let hasSameYear = startDate.getFullYear() === endDate.getFullYear();
-          return (
-            <ListCard
-              variant="event"
-              href={hit.url}
-              key={hit?.name}
-              startDateTime={
-                hit?.end_date
-                  ? `${moment(hit?.start_date).format(
-                      hasSameDay
-                        ? "DD MMM, YYYY"
-                        : hasSameMonth
-                        ? "DD"
-                        : hasSameYear
-                        ? "DD MMM"
-                        : "DD MMM, YYYY"
-                    )}${!hasSameDay ? " - " : ""}${
-                      !hasSameDay
-                        ? moment(hit?.end_date).format("DD MMM, YYYY")
-                        : ""
-                    }`
-                  : moment(hit?.start_date).format("DD MMM, YYYY")
-              }
-              image={hit.image}
-              title={hit.name}
-              description={hit.description}
-              type={hit.tags}
-              location={hit.location}
-              city={hit.city}
-              country={hit.country}
-            />
-          );
-        })}
-      </Flex>
+      {Object.keys(hitsByMonth).map((key) => {
+        const monthHits = hitsByMonth[key];
+
+        return (
+          <Box key={key}>
+            <Heading
+              variant="h6"
+              fontWeight={700}
+              fontSize="lg"
+              lineHeight={1.5}
+              mt="2.5rem"
+              mb="1rem"
+            >
+              {moment(key, "YYYY-MM").format("MMMM YYYY")}
+            </Heading>
+            <Flex gap={4} direction="column" flex={1}>
+              {monthHits.map((hit) => {
+                let startDate = new Date(hit?.start_date);
+                let endDate = new Date(hit?.end_date ?? "");
+                let hasSameDay = startDate.getDate() === endDate.getDate();
+                let hasSameMonth = startDate.getMonth() === endDate.getMonth();
+                let hasSameYear =
+                  startDate.getFullYear() === endDate.getFullYear();
+                return (
+                  <ListCard
+                    variant="event"
+                    href={hit.url}
+                    key={hit?.name}
+                    startDateTime={
+                      hit?.end_date
+                        ? `${moment(hit?.start_date).format(
+                            hasSameDay
+                              ? "DD MMM, YYYY"
+                              : hasSameMonth
+                              ? "DD"
+                              : hasSameYear
+                              ? "DD MMM"
+                              : "DD MMM, YYYY"
+                          )}${!hasSameDay ? " - " : ""}${
+                            !hasSameDay
+                              ? moment(hit?.end_date).format("DD MMM, YYYY")
+                              : ""
+                          }`
+                        : moment(hit?.start_date).format("DD MMM, YYYY")
+                    }
+                    image={hit.image}
+                    title={hit.name}
+                    description={hit.description}
+                    type={hit.tags}
+                    location={hit.location}
+                    city={hit.city}
+                    country={hit.country}
+                  />
+                );
+              })}
+            </Flex>
+          </Box>
+        );
+      })}
       {!isLastPage && (
         <HStack mt="24">
           <Divider />

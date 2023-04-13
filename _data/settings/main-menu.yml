@@ -81,6 +81,7 @@ items:
           - title: OTHER
             items:
               - page: 9ef815e0-d670-404f-a97d-c5aebfe80a12
+              - page: 575c22e7-477f-4a7e-9b90-7406b802176f
               - custom_title: Starknet EDU newsletter
                 custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet roundup newsletter
