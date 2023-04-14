@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": ".types",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client"],
     "jsx": "preserve"
   },
   "include": ["src/**/*"],
