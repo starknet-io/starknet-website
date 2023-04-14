@@ -51,12 +51,6 @@ type Props = {
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
-  const handleTypeClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, type: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    window.open(type);
-  }
-
   return (
     <Box maxW="5xl">
       <LinkBox
@@ -132,7 +126,7 @@ export const ListCard = (props: Props) => {
                   spacing={{ base: "1", md: "2" }}
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
-                  borderTop="1px solid #E6E6E6"
+                  borderTop={!props.startDateTime ? "none" : "1px solid #E6E6E6"}
                   paddingTop="12px"
                 >
                   <Heading
@@ -160,9 +154,11 @@ export const ListCard = (props: Props) => {
                 {props.type_list ? (
                   <Wrap pb="20px" pt="4px" shouldWrapChildren>
                     {props.type_list.map((tag) => (
-                      <Tag key={tag.type} variant="listCard" onClick={(e) => handleTypeClick(e, tag.url)}>
-                        {tag.type !== "ios" ? titleCase(tag.type) : "iOS"}
-                      </Tag>
+                      <Link key={tag.type} isExternal as={NextLink} href={tag.url}>
+                        <Tag variant="listCard">
+                          {tag.type !== "ios" ? titleCase(tag.type) : "iOS"}
+                        </Tag>
+                      </Link>
                     ))}
                   </Wrap>
                 ) : props.type && (
