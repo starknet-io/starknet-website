@@ -1,18 +1,11 @@
 "use client";
-import { createContext, useContext, useMemo } from "react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { HiArrowUpRight, HiOutlineArrowRightCircle } from "react-icons/hi2";
+import { createContext, useContext } from "react";
+import { HiOutlineArrowRightCircle } from "react-icons/hi2";
 import { slugify } from "src/utils/utils";
-import {
-  Avatar,
-  Box,
-  Flex,
-  FlexProps,
-  Icon,
-  Link,
-  LinkProps,
-} from "../../libs/chakra-ui";
+import { Avatar, Box, Flex, FlexProps, Icon, Link } from "../../libs/chakra-ui";
+import { ArrowUpIcon } from "./ArrowUpIcon";
 
 export type ListSize = "sm" | "md" | "lg";
 
@@ -58,23 +51,24 @@ const Root = (props: RootProps) => {
 };
 
 type ItemProps = {
-  label?: string;
-  avatarTitle?: string;
-  avatarUrl?: string;
-  subLabel?: string;
-  hasIcon?: boolean;
-} & LinkProps;
+  avatar?: {
+    title?: string;
+    displayTitle?: boolean;
+    url?: string;
+  };
+  subLabel?: {
+    label: string;
+    boldLabel?: string;
+  };
+  link?: {
+    label: string;
+    href: string;
+    hasIcon?: boolean;
+    isExternal?: boolean;
+  };
+};
 
-const Item = ({
-  label,
-  subLabel,
-  avatarTitle,
-  hasIcon = true,
-  avatarUrl,
-  isExternal,
-  href,
-  ...rest
-}: ItemProps) => {
+const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
   const { listSize } = useContext(ListContext);
 
   const height = {
@@ -89,17 +83,15 @@ const Item = ({
   };
 
   return (
-    <Link
+    <Box
       {...rest}
-      color="listLink-fg"
       fontWeight="700"
       textDecoration="none"
       height={{ base: "auto", md: height[listSize] }}
       display="flex"
       alignItems="center"
-      px={padding[listSize]}
-      py={{ base: padding[listSize], md: "0px" }}
-      isExternal={isExternal}
+      px="24px"
+      py={{ base: "24px", md: "0px" }}
       _hover={{ textDecoration: "none" }}
       borderTopWidth="0px!important"
       borderBottomWidth="1px!important"
@@ -109,43 +101,67 @@ const Item = ({
     >
       <Flex
         direction={{ base: "column", md: "row" }}
-        gap="8px"
-        alignItems="center"
+        gap="16px"
+        alignItems={{ md: "center" }}
       >
-        <Flex
-          gap="8px"
-          alignItems="center"
-          direction="row"
-          _hover={{ textDecoration: "underline" }}
-        >
-          {!avatarUrl && hasIcon && (
-            <Icon boxSize="24px" as={HiOutlineArrowRightCircle} />
-          )}
-          {avatarUrl && (
-            <Avatar name={avatarTitle || "N/A "} src={avatarUrl} size="sm" />
-          )}
-          {label}{" "}
-          {isExternal && (
-            <Icon fontWeight="bold" boxSize="12px" as={HiArrowUpRight} />
-          )}
-        </Flex>
+        {avatar && (
+          <Flex alignItems="center" gap="8px">
+            <Avatar name={avatar.title || "N/A "} src={avatar.url} size="sm" />
+            {avatar.displayTitle && avatar.title && <Text>{avatar.title}</Text>}
+          </Flex>
+        )}
+
+        {link && (
+          <Link
+            href={link.href}
+            isExternal={link.isExternal}
+            display="flex"
+            gap="8px"
+            color="listLink-fg"
+            _hover={{ textDecoration: "underline" }}
+          >
+            {(link.hasIcon ?? true) && (
+              <Icon boxSize="24px" as={HiOutlineArrowRightCircle} />
+            )}
+            {link.label}{" "}
+            {link.isExternal && (
+              <Icon
+                fontWeight="bold"
+                boxSize="24px"
+                as={ArrowUpIcon}
+                height="24px"
+              />
+            )}
+          </Link>
+        )}
         {subLabel && (
-          <Flex gap="8px">
+          <Flex
+            gap="12px"
+            direction={{
+              base: "column",
+              md: "row",
+            }}
+          >
             <Text display={{ base: "none", md: "flex" }} color="fg-default">
               •
             </Text>
-
-            <Text
-              pl={{ base: "32px", md: "0px" }}
-              noOfLines={1}
-              color="fg-default"
-            >
-              {subLabel}
+            <Text noOfLines={1} color="fg-default">
+              {subLabel.label}
             </Text>
+            {subLabel.boldLabel && (
+              <Text
+                // pl={{ base: "32px", md: "0px" }}
+                noOfLines={1}
+                color="subnav-fg-accent"
+                fontWeight={700}
+              >
+                {subLabel.boldLabel}
+              </Text>
+            )}
           </Flex>
         )}
       </Flex>
-    </Link>
+    </Box>
   );
 };
 

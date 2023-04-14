@@ -10,24 +10,32 @@ export const Basic = () => (
       <>
         <Root heading="Basic example">
           <Item
-            label="Documentation 2"
-            isExternal
-            href="https://docs.starknet.io/documentation/"
+            link={{
+              isExternal: true,
+              label: "Documentation 2",
+              href: "https://docs.starknet.io/documentation/",
+            }}
           />
           <Item
-            label="Documentation"
-            href="https://docs.starknet.io/documentation/"
+            link={{
+              label: "Documentation",
+              href: "https://docs.starknet.io/documentation/",
+            }}
           />
           <Item
-            hasIcon={false}
-            label="Documentation 3"
-            isExternal
-            href="https://docs.starknet.io/documentation/"
+            link={{
+              hasIcon: false,
+              label: "Documentation 3",
+              isExternal: true,
+              href: "https://docs.starknet.io/documentation/",
+            }}
           />
           <Item
-            hasIcon={false}
-            label="Documentation 4"
-            href="https://docs.starknet.io/documentation/"
+            link={{
+              hasIcon: false,
+              label: "Documentation 4",
+              href: "https://docs.starknet.io/documentation/",
+            }}
           />
         </Root>
       </>
@@ -41,15 +49,34 @@ export const WithAvatar = () => (
       <>
         <Root heading="Link list with an avatar">
           <Item
-            label="Documentation 3"
-            avatarTitle="Dan Abrahmov"
-            avatarUrl="https://bit.ly/dan-abramov"
+            avatar={{
+              title: "Dan Abrahmov",
+              url: "https://bit.ly/dan-abramov",
+              displayTitle: true,
+            }}
           />
           <Item
-            label="Documentation 3"
-            avatarTitle="Dan Abrahmov"
-            avatarUrl="https://bit.ly/dan-abramov"
-            isExternal
+            link={{
+              label: "Documentation 3",
+              href: "https://docs.starknet.io/documentation/",
+              isExternal: true,
+            }}
+            avatar={{
+              title: "Dan Abrahmov",
+              url: "https://bit.ly/dan-abramov",
+            }}
+          />
+          <Item
+            link={{
+              label: "React tutorial",
+              href: "https://docs.starknet.io/documentation/",
+              isExternal: true,
+            }}
+            avatar={{
+              title: "Dan Abrahmov",
+              url: "https://bit.ly/dan-abramov",
+              displayTitle: true,
+            }}
           />
         </Root>
       </>
@@ -62,18 +89,41 @@ export const WithSubLabel = () => (
     <HStack>
       <>
         <Root heading="Link list with a sublabel">
-          <Item label="Documentation 1" subLabel="This is a sub label" />
           <Item
-            label="Documentation 2"
-            isExternal
-            subLabel="This is a sub label"
+            link={{
+              label: "Documentation 1",
+              href: "https://docs.starknet.io/documentation/",
+            }}
+            subLabel={{
+              label: "This is a sub label",
+              boldLabel: "This is a bold sub label",
+            }}
           />
           <Item
-            label="React tutorial"
-            avatarTitle="Dan Abrahmov"
-            avatarUrl="https://bit.ly/dan-abramov"
-            hasIcon={false}
-            subLabel="This is a sub label"
+            link={{
+              label: "Documentation 2",
+              href: "https://docs.starknet.io/documentation/",
+              isExternal: true,
+            }}
+            subLabel={{
+              label: "This is a sub label",
+            }}
+          />
+          <Item
+            link={{
+              label: "React tutorial",
+              href: "https://docs.starknet.io/documentation/",
+              isExternal: true,
+            }}
+            avatar={{
+              title: "Dan Abrahmov",
+              url: "https://bit.ly/dan-abramov",
+              displayTitle: true,
+            }}
+            subLabel={{
+              label: "This is a sub label",
+              boldLabel: "This is a bold sub label",
+            }}
           />
         </Root>
       </>
@@ -97,13 +147,26 @@ export const Sizes = () => {
         </Stack>
       </RadioGroup>
       <Root heading="List with different sizes" listSize={size}>
-        <Item label="Documentation" subLabel="This is a sub label" />
         <Item
-          label="React tutorial"
-          avatarTitle="Dan Abrahmov"
-          avatarUrl="https://bit.ly/dan-abramov"
-          hasIcon={false}
-          subLabel="This is a sub label"
+          link={{
+            label: "React tutorial",
+            href: "https://docs.starknet.io/documentation/",
+            isExternal: true,
+          }}
+        />
+        <Item
+          link={{
+            label: "React tutorial",
+            href: "https://docs.starknet.io/documentation/",
+            isExternal: true,
+          }}
+          avatar={{
+            title: "Dan Abrahmov",
+            url: "https://bit.ly/dan-abramov",
+          }}
+          subLabel={{
+            label: "This is a sub label",
+          }}
         />
       </Root>
     </ThemeProvider>
