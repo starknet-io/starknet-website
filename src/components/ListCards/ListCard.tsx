@@ -121,7 +121,7 @@ export const ListCard = (props: Props) => {
                   spacing={{ base: "1", md: "2" }}
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
-                  borderTop="1px solid #E6E6E6"
+                  borderTop={!props.startDateTime ? "none" : "1px solid #E6E6E6"}
                   paddingTop="12px"
                 >
                   <Heading
