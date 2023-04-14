@@ -27,19 +27,26 @@ blocks:
       Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
   - type: link_list
     heading: Further reading
+    listSize: lg
     blocks:
       - type: link_list_item
-        is_external: true
-        label: "Starknet primer "
-        sub_label: drspaceman
-        href: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
+        link:
+          isExternal: true
+          label: "Starknet primer "
+          href: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
+        subLabel:
+          label: drspaceman
       - type: link_list_item
-        is_external: true
-        label: "The Starknet stack "
-        sub_label: "drspaceman "
-        href: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
+        link:
+          isExternal: true
+          label: "The Starknet stack "
+          href: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
+        subLabel:
+          label: "drspaceman "
       - type: link_list_item
-        is_external: true
-        label: "An introduction to Starknet, STARKs and Cairo "
-        sub_label: "Eli-Ben Sasson "
-        href: https://www.youtube.com/watch?v=QPNp8w9rx7o
+        link:
+          isExternal: true
+          label: "An introduction to Starknet, STARKs and Cairo "
+          href: https://www.youtube.com/watch?v=QPNp8w9rx7o
+        subLabel:
+          label: "Eli-Ben Sasson "
