@@ -72,14 +72,13 @@ export async function Block({ block, locale }: Props): JSX.Element {
     );
   } else if (block.type === "link_list") {
     return (
-      <LinkList heading={block.heading}>
-        {block.blocks.map((block, i) => (
+      <LinkList heading={block.heading} listSize={block.listSize}>
+        {block.blocks.map((item, i) => (
           <LinkListItem
             key={i}
-            label={block.label}
-            isExternal={block.is_external}
-            href={block.href}
-            subLabel={block.sub_label}
+            link={item.link}
+            subLabel={item.subLabel}
+            avatar={item.avatar}
           />
         ))}
       </LinkList>

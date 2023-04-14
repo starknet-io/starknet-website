@@ -175,13 +175,14 @@ const blocks: ListField["types"] = [
           {
             label: "Link Text",
             name: "text",
-            widget: "string"
+            widget: "string",
           },
           {
             label: "Link URL",
             name: "url",
-            widget: "string"
-        }]
+            widget: "string",
+          },
+        ],
       },
       {
         name: "no_of_items",
@@ -371,27 +372,80 @@ const blocks: ListField["types"] = [
         widget: "string",
       },
       {
+        name: "listSize",
+        label: "List Size",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",
         fields: [
           {
-            name: "label",
-            widget: "string",
+            name: "link",
+            widget: "object",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                widget: "string",
+              },
+              {
+                name: "href",
+                label: "Href",
+                widget: "string",
+              },
+              {
+                name: "isExternal",
+                label: "Is external",
+                widget: "boolean",
+              },
+              {
+                name: "hasIcon",
+                label: "Has icon",
+                widget: "boolean",
+                default: true,
+              },
+            ],
           },
           {
-            name: "sub_label",
-            widget: "string",
+            name: "subLabel",
+            widget: "object",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                widget: "string",
+              },
+              {
+                name: "boldLabel",
+                label: "Bold Label",
+                widget: "string",
+              },
+            ],
           },
           {
-            name: "href",
-            widget: "string",
-          },
-          {
-            name: "is_external",
-            widget: "boolean",
-            required: false,
-            default: false,
+            name: "avatar",
+            widget: "object",
+            fields: [
+              {
+                name: "url",
+                label: "URL",
+                widget: "string",
+              },
+              {
+                name: "title",
+                label: "Title",
+                widget: "string",
+              },
+              {
+                name: "displayTitle",
+                label: "Display title",
+                widget: "boolean",
+                required: false,
+              },
+            ],
           },
         ],
       },
@@ -449,7 +503,7 @@ const blocks: ListField["types"] = [
         ],
       },
     ],
-  }
+  },
 ];
 
 const topLevelBlocks: ListField["types"] = [
@@ -1302,8 +1356,9 @@ export const config: Config = {
                       label: "Link URL",
                       name: "url",
                       widget: "string",
-                      required: false
-                  }]
+                      required: false,
+                    },
+                  ],
                 },
                 {
                   label: "Image",
@@ -1319,7 +1374,7 @@ export const config: Config = {
                   label: "Discord handle",
                   name: "discord",
                   widget: "string",
-                  required: false
+                  required: false,
                 },
                 {
                   label: "Website url",
@@ -1482,12 +1537,8 @@ export const config: Config = {
                   label: "Variant",
                   widget: "select",
                   required: false,
-                  options: [
-                    "info",
-                    "warning",
-                    "important"
-                  ],
-                  default: "info"
+                  options: ["info", "warning", "important"],
+                  default: "info",
                 },
                 {
                   name: "hasCloseButton",
@@ -1499,30 +1550,30 @@ export const config: Config = {
                 {
                   name: "id",
                   label: "id",
-                  widget: "uuid" as "string"
+                  widget: "uuid" as "string",
                 },
                 {
                   name: "title",
                   label: "Title",
-                  widget: "string"
+                  widget: "string",
                 },
                 {
                   name: "body",
                   label: "Description",
-                  widget: "markdown"
+                  widget: "markdown",
                 },
                 {
                   name: "page_url",
                   label: "Page url",
                   hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
                   required: false,
-                  widget: "string"
+                  widget: "string",
                 },
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };

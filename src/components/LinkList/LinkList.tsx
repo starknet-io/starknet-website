@@ -57,12 +57,12 @@ type ItemProps = {
     url?: string;
   };
   subLabel?: {
-    label: string;
+    label?: string;
     boldLabel?: string;
   };
   link?: {
-    label: string;
-    href: string;
+    label?: string;
+    href?: string;
     hasIcon?: boolean;
     isExternal?: boolean;
   };

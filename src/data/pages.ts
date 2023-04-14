@@ -81,10 +81,20 @@ export interface LargeCardBlock {
 }
 export interface LinkListItem {
   readonly type: "link_list_item";
-  readonly label?: string;
-  readonly href?: string;
-  readonly sub_label?: string;
-  readonly is_external?: boolean;
+  readonly link?: {
+    readonly label?: string;
+    readonly href?: string;
+    readonly isExternal?: boolean;
+  };
+  readonly subLabel?: {
+    readonly label?: string;
+    readonly boldLabel?: string;
+  };
+  readonly avatar?: {
+    readonly title?: string;
+    readonly displayTitle?: boolean;
+    readonly url?: string;
+  };
 }
 
 export interface AccordionItem {
@@ -122,6 +132,7 @@ export interface HomeHeroBlock {
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
+  readonly listSize?: "sm" | "md" | "lg";
   readonly blocks: readonly LinkListItem[];
 }
 export interface AccordionBlock {
@@ -191,12 +202,12 @@ export interface Page extends Meta {
 
 export async function getPageBySlug(
   slug: string,
-  locale: string,
+  locale: string
 ): Promise<Page> {
   try {
     return (await getFirst(
       () => getJSON(`_dynamic/pages/${locale}/${slug}.json`),
-      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`),
+      () => getJSON(`_dynamic/pages/${defaultLocale}/${slug}.json`)
     )) as Page;
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
