@@ -1,26 +1,28 @@
 "use client";
+import { createContext, useContext, useMemo } from "react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import React from "react";
+import { HiArrowUpRight, HiOutlineArrowRightCircle } from "react-icons/hi2";
+import { slugify } from "src/utils/utils";
 import {
-  HiArrowRightCircle,
-  HiArrowUpRight,
-  HiOutlineArrowRightCircle,
-} from "react-icons/hi2";
-import {
+  Avatar,
   Box,
-  Icon,
   Flex,
   FlexProps,
-  HStack,
+  Icon,
   Link,
   LinkProps,
-  Avatar,
 } from "../../libs/chakra-ui";
-import { slugify } from "src/utils/utils";
+
+export type ListSize = "sm" | "md" | "lg";
+
+const ListContext = createContext<{ listSize: ListSize }>({
+  listSize: "md",
+});
 
 type RootProps = {
   heading?: string;
+  listSize?: ListSize;
 } & FlexProps;
 
 const Root = (props: RootProps) => {
@@ -45,9 +47,11 @@ const Root = (props: RootProps) => {
         borderColor="card-br"
         overflow="hidden"
         direction="column"
-        gap="12px"
+        // gap="12px"
       >
-        {props.children}
+        <ListContext.Provider value={{ listSize: props.listSize || "md" }}>
+          {props.children}
+        </ListContext.Provider>
       </Flex>
     </Box>
   );
@@ -68,19 +72,33 @@ const Item = ({
   hasIcon = true,
   avatarUrl,
   isExternal,
+  href,
   ...rest
 }: ItemProps) => {
+  const { listSize } = useContext(ListContext);
+
+  const height = {
+    sm: "64px",
+    md: "72px",
+    lg: "80px",
+  };
+  const padding = {
+    sm: "16px",
+    md: "20px",
+    lg: "24px",
+  };
+
   return (
     <Link
       {...rest}
       color="listLink-fg"
       fontWeight="700"
       textDecoration="none"
-      height={{ base: "auto", md: "80px" }}
+      height={{ base: "auto", md: height[listSize] }}
       display="flex"
       alignItems="center"
-      py={{ base: "16px", md: "0px" }}
-      px={{ base: "16px", md: "24px" }}
+      px={padding[listSize]}
+      py={{ base: padding[listSize], md: "0px" }}
       isExternal={isExternal}
       _hover={{ textDecoration: "none" }}
       borderTopWidth="0px!important"
@@ -89,16 +107,23 @@ const Item = ({
       _first={{ borderTopWidth: "0px!important" }}
       _last={{ borderBottomWidth: "0px!important" }}
     >
-      <Flex direction={{ base: "column", md: "row" }} gap="8px">
-        {avatarUrl && <Avatar name={avatarTitle || "N/A "} src={avatarUrl} />}
-
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        gap="8px"
+        alignItems="center"
+      >
         <Flex
           gap="8px"
           alignItems="center"
           direction="row"
           _hover={{ textDecoration: "underline" }}
         >
-          {hasIcon && <Icon boxSize="24px" as={HiOutlineArrowRightCircle} />}
+          {!avatarUrl && hasIcon && (
+            <Icon boxSize="24px" as={HiOutlineArrowRightCircle} />
+          )}
+          {avatarUrl && (
+            <Avatar name={avatarTitle || "N/A "} src={avatarUrl} size="sm" />
+          )}
           {label}{" "}
           {isExternal && (
             <Icon fontWeight="bold" boxSize="12px" as={HiArrowUpRight} />
@@ -106,10 +131,7 @@ const Item = ({
         </Flex>
         {subLabel && (
           <Flex gap="8px">
-            <Text
-              display={{ base: "none", md: "flex" }}
-              color="fg-default"
-            >
+            <Text display={{ base: "none", md: "flex" }} color="fg-default">
               •
             </Text>
 
