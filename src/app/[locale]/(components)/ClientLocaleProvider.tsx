@@ -1,8 +1,8 @@
 "use client";
 
 import React, { createContext, useContext } from "react";
-import { defaultLocale } from "src/data/i18n/config";
-import { MessagesType } from "src/data/i18n/intl";
+import { defaultLocale } from "@starknet-io/cms-data/src/i18n/config";
+import { MessagesType } from "@starknet-io/cms-data/src/i18n/intl";
 
 interface State {
   readonly locale: string;

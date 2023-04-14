@@ -4,7 +4,11 @@ import Cors from "cors";
 
 const cors = Cors({
   methods: ["POST", "GET", "HEAD"],
-  origin: ["https://starknet-website-cms.netlify.app", "http://localhost:1234"],
+  origin: [
+    "https://starknet-website-cms.netlify.app",
+    "http://localhost:1234",
+    /^https:\/\/[-_\w]+\.starknet-netlify-cms\.pages\.dev$/,
+  ],
 });
 
 function runMiddleware(

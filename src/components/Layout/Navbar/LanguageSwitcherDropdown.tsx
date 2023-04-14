@@ -7,7 +7,6 @@ import {
   HStack,
   VStack,
   Spacer,
-  Img,
   Box,
   StackDivider,
 } from "src/libs/chakra-ui";
@@ -19,7 +18,6 @@ import * as React from "react";
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 import { PopoverIcon } from "./PopoverIcon";
-import Link from "next/link";
 
 type Props = {
   title?: string;
