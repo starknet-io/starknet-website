@@ -3,22 +3,33 @@
 import { useLocalStorage, useMedia } from "react-use";
 import { useEffect } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
-import React from "react";
 
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
+
+export {};
 type StorageTheme = "dark" | "light" | "system";
+
+const sendThemeChangeToGA = (mode: StorageTheme) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "theme_change", {
+      event_category: "engagement",
+      event_label: mode,
+    });
+  }
+};
 
 export default function ThemeSwitcher() {
   const osTheme = useMedia("(prefers-color-scheme: dark)") ? "dark" : "light";
   const [storageTheme, setStorageTheme] = useLocalStorage<StorageTheme>(
     "app-theme",
-    "system",
+    "system"
   );
-  const theme = storageTheme === "system" ? osTheme : storageTheme;
+  const theme = (storageTheme === "system" ? osTheme : storageTheme) || osTheme;
   const isDarkTheme = theme === "dark";
-
-  function updateTheme(theme: "dark" | "light") {
-    setStorageTheme(theme === osTheme ? "system" : theme);
-  }
 
   useEffect(() => {
     if (isDarkTheme) {
@@ -27,6 +38,16 @@ export default function ThemeSwitcher() {
       document.body.classList.remove("dark");
     }
   }, [isDarkTheme]);
+
+  // Add this useEffect to send the current theme mode on initial render
+  useEffect(() => {
+    sendThemeChangeToGA(theme);
+  }, [theme]);
+
+  function updateTheme(theme: "dark" | "light") {
+    setStorageTheme(theme === osTheme ? "system" : theme);
+    sendThemeChangeToGA(theme);
+  }
 
   return (
     <button
