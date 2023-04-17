@@ -4,5 +4,7 @@ export interface CardIconProps {
     filter?: string;
     borderRadius?: string;
     alt?: string;
+    imagePadding?: string;
+    communityCardPadding?: object;
     icon?: any;
 }

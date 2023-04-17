@@ -16,7 +16,7 @@ import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import * as React from "react";
 
-import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
+import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
@@ -96,7 +96,7 @@ export const ListCard = (props: Props) => {
                   <Text
                     mt="2"
                     fontSize="xs"
-                    fontWeight="extrabold"
+                    fontWeight="bold"
                     color="list-card-sm-title-fg"
                     display="flex"
                     flexDirection={{ base: "column", md: "row" }}
@@ -108,7 +108,7 @@ export const ListCard = (props: Props) => {
                     <Text
                       mt="2"
                       fontSize="xs"
-                      fontWeight="extrabold"
+                      fontWeight="bold"
                       color="list-card-sm-title-fg"
                       paddingBottom="4px"
                       as="span"
@@ -127,17 +127,17 @@ export const ListCard = (props: Props) => {
                 >
                   <Heading
                     variant="h4"
-                    color="list-card-lg-title-fg"
+                    color="heading-hero-gradient-1a"
                   >
                     {props.title}
                   </Heading>
                   <HStack fontSize={{ base: "md", md: "xl" }}>
                     {/* <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" /> */}
-                    <Icon as={HiArrowUpRight} color="list-card-lg-title-fg" />
+                    <Icon as={HiArrowTopRightOnSquare} color="list-card-sm-title-link-fg" />
                   </HStack>
                 </Stack>
 
-                <Text pb="14px" fontSize="sm" color="list-card-lg-desc-fg">
+                <Text pb="12px" fontSize="sm" color="list-card-lg-desc-fg">
                   {props.description}
                 </Text>
                 {/* {props.variant === "event" && (
@@ -148,7 +148,7 @@ export const ListCard = (props: Props) => {
                 </Box>
               )} */}
                 {props.type_list ? (
-                  <Wrap pb="20px" pt="4px" shouldWrapChildren>
+                  <Wrap shouldWrapChildren>
                     {props.type_list.map((tag) => (
                       <Link key={tag.type} isExternal as={NextLink} href={tag.url}>
                         <Tag variant="listCard">
@@ -158,7 +158,7 @@ export const ListCard = (props: Props) => {
                     ))}
                   </Wrap>
                 ) : props.type && (
-                  <Wrap pt="4px" shouldWrapChildren>
+                  <Wrap shouldWrapChildren>
                     {props.location && (<Tag variant="listCard">
                       {titleCase(props.location)}
                     </Tag>)}
@@ -172,7 +172,7 @@ export const ListCard = (props: Props) => {
 
                 <Wrap spacingX="24px" shouldWrapChildren>
                   {props.href && props.variant !== "event" && props.variant !== "job" && (
-                    <Link isExternal as={NextLink} href={`${props.href}`}>
+                    <Link mt="20px" isExternal as={NextLink} href={`${props.href}`}>
                       <Icon
                         boxSize="18px"
                         color="list-card-icon-fg"
@@ -183,6 +183,7 @@ export const ListCard = (props: Props) => {
                   {props.twitterHandle && (
                     <Link
                       isExternal
+                      mt="20px"
                       as={NextLink}
                       href={`${props.twitterHandle}`}
                     >
@@ -196,6 +197,7 @@ export const ListCard = (props: Props) => {
                   {props.discordHandle && (
                     <Link
                       isExternal
+                      mt="20px"
                       as={NextLink}
                       href={`${props.discordHandle}`}
                     >

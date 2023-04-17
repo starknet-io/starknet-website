@@ -6,6 +6,7 @@ import { Heading } from "@ui/Typography/Heading";
 import * as GridCard from "./GridCard";
 import { ImageIconCard } from "./ImageIconCard";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";
+import { Tag } from "@ui/Tag/Tag";
 import {
   Grid,
   Flex
@@ -52,6 +53,7 @@ export default {
         "/assets/blog.svg",
         "/assets/github.svg",
         "/assets/tools-and-resources.svg",
+        "/assets/illustration-scaling.png",
       ],
       control: { type: 'select' },
     },
@@ -59,12 +61,16 @@ export default {
       options: ["large", "small"],
       control: { type: 'select' },
     },
+    orientation: {
+      options: ["left", "right"],
+      control: { type: 'select' },
+    },
     withIllustration: {
       options: [true, false],
       control: { type: 'select' },
     },
     variant: {
-      options: ["image_icon_link_card", "icon_link_card", "dapp"],
+      options: ["image_icon_link_card", "icon_link_card", "dapp", "large_card", "community_card"],
       control: { type: 'select' },
     },
     columns: {
@@ -88,136 +94,133 @@ export const Basic = () => (
 
 const hits = [
   {
-      "id": "0snedu03",
-      "type": "github",
-      "url": "https://github.com/starknet-edu/starknet-erc721",
-      "image": "fsadasdasasdasdasds",
-      "title": "Starknet Edu – ERC721",
-      "author": "StarkWare ",
-      "published_at": "2023-01-31T00:00:00+00:00",
-      "difficulty": "beginner",
-      "course": "starknet_edu",
-      "tags": [
-          "cairo",
-          "ERC722",
-          "ERC721",
-          "ERC723",
-          "ERC724",
-          "ERC725"
-      ],
-      "slug": "starknet-edu-erc721",
-      "locale": "en",
-      "sourceFilepath": "_data/tutorials/en/0snedu03.yml",
-      "objectID": "tutorials:en:0snedu03.yml",
-      "_highlightResult": {
-          "title": {
-              "value": "Starknet Edu – ERC721",
-              "matchLevel": "none",
-              "matchedWords": []
-          },
-          "published_at": {
-              "value": "2023-01-31T00:00:00+00:00",
-              "matchLevel": "none",
-              "matchedWords": []
-          }
-      },
-      "__position": 1
+    "id": "b7cb9a4a-e51b-41d8-a04e-a67eaee97c66",
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=HJP5LVkulBw&list=PLcIyXLwiPilV5RBZj43AX1FY4FJMWHFTY&index=14",
+    "image": "/assets/cairo-workshop-11.jpg",
+    "title": "StarkNet Workshop #11: All about storage proofs with Herodotus",
+    "published_at": "2023-03-14T13:27:19.395Z",
+    "difficulty": "intermediate",
+    "tags": [
+        "Storage Proofs"
+    ],
+    "published_at_ts": 1678800439,
+    "slug": "starknet-workshop-11-all-about-storage-proofs-with-herodotus",
+    "locale": "en",
+    "sourceFilepath": "_data/tutorials/b7cb9a4a-e51b-41d8-a04e-a67eaee97c66.yml",
+    "objectID": "tutorials:en:b7cb9a4a-e51b-41d8-a04e-a67eaee97c66.yml",
+    "_highlightResult": {
+        "title": {
+            "value": "StarkNet Workshop #11: All about storage proofs with Herodotus",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "published_at": {
+            "value": "2023-03-14T13:27:19.395Z",
+            "matchLevel": "none",
+            "matchedWords": []
+        }
+    },
+    "__position": 1
   },
   {
-      "id": "0snedu01",
-      "type": "github",
-      "url": "https://github.com/starknet-edu",
-      "image": "/assets/github.png",
-      "title": "Starknet Edu – Github Repo ",
-      "author": "StarkWare ",
-      "published_at": "2023-01-31T00:00:00+00:00",
-      "difficulty": "beginner",
-      "course": "starknet_edu",
-      "tags": [
-          "cairo",
-          "account abstraction",
-          "contracts"
-      ],
-      "slug": "starknet-edu-github-repo",
-      "locale": "en",
-      "sourceFilepath": "_data/tutorials/en/0snedu01.yml",
-      "objectID": "tutorials:en:0snedu01.yml",
-      "_highlightResult": {
-          "title": {
-              "value": "Starknet Edu – Github Repo ",
-              "matchLevel": "none",
-              "matchedWords": []
-          },
-          "published_at": {
-              "value": "2023-01-31T00:00:00+00:00",
-              "matchLevel": "none",
-              "matchedWords": []
-          }
-      },
-      "__position": 2
+    "id": "0cairows11",
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=MUzfvHeqXZs",
+    "image": "/assets/10_-first-steps-to-contribute-to-kakarot-zkevm.png",
+    "title": "First steps to contribute to Kakarot ZKEVM",
+    "author": "StarkWare",
+    "published_at": "2023-02-21T00:00:00.000Z",
+    "difficulty": "beginner",
+    "course": "cairo_workshops",
+    "tags": [
+        "testing"
+    ],
+    "published_at_ts": 1676937600,
+    "slug": "first-steps-to-contribute-to-kakarot-zkevm",
+    "locale": "en",
+    "sourceFilepath": "_data/tutorials/0cairows11.yml",
+    "objectID": "tutorials:en:0cairows11.yml",
+    "_highlightResult": {
+        "title": {
+            "value": "First steps to contribute to Kakarot ZKEVM",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "published_at": {
+            "value": "2023-02-21T00:00:00.000Z",
+            "matchLevel": "none",
+            "matchedWords": []
+        }
+    },
+    "__position": 2
   },
   {
-      "id": "0cairows03",
-      "type": "youtube",
-      "url": "https://youtu.be/SA28R690pTA",
-      "image": "/assets/cairows03.jpeg",
-      "title": "Diving into Cairo ",
-      "author": "StarkWare",
-      "published_at": "2023-01-31T00:00:00+00:00",
-      "difficulty": "beginner",
-      "course": "cairo_workshops",
-      "tags": [
-          "cairo"
-      ],
-      "slug": "diving-into-cairo",
-      "locale": "en",
-      "sourceFilepath": "_data/tutorials/en/0cairows03.yml",
-      "objectID": "tutorials:en:0cairows03.yml",
-      "_highlightResult": {
-          "title": {
-              "value": "Diving into Cairo ",
-              "matchLevel": "none",
-              "matchedWords": []
-          },
-          "published_at": {
-              "value": "2023-01-31T00:00:00+00:00",
-              "matchLevel": "none",
-              "matchedWords": []
-          }
-      },
-      "__position": 3
+    "id": "0snedu03",
+    "type": "github",
+    "url": "https://github.com/starknet-edu/starknet-erc721",
+    "image": "/assets/github.png",
+    "title": "Starknet Edu – ERC721",
+    "author": "StarkWare ",
+    "published_at": "2023-01-31T00:00:00+00:00",
+    "difficulty": "beginner",
+    "course": "starknet_edu",
+    "tags": [
+        "cairo",
+        "ERC721"
+    ],
+    "published_at_ts": 1675123200,
+    "slug": "starknet-edu-erc721",
+    "locale": "en",
+    "sourceFilepath": "_data/tutorials/0snedu03.yml",
+    "objectID": "tutorials:en:0snedu03.yml",
+    "_highlightResult": {
+        "title": {
+            "value": "Starknet Edu – ERC721",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "published_at": {
+            "value": "2023-01-31T00:00:00+00:00",
+            "matchLevel": "none",
+            "matchedWords": []
+        }
+    },
+    "__position": 3
   },
   {
-      "id": "0cairows02",
-      "type": "youtube",
-      "url": "https://youtu.be/51Qb3TLpNro",
-      "image": "/assets/cairows02.jpeg",
-      "title": "Account abstraction ",
-      "author": "StarkWare",
-      "published_at": "2023-01-31T00:00:00+00:00",
-      "difficulty": "beginner",
-      "course": "cairo_workshops",
-      "tags": [
-          "Contracts",
-          "Accounts"
-      ],
-      "slug": "account-abstraction",
-      "locale": "en",
-      "sourceFilepath": "_data/tutorials/en/0cairows02.yml",
-      "objectID": "tutorials:en:0cairows02.yml",
-      "_highlightResult": {
-          "title": {
-              "value": "Account abstraction ",
-              "matchLevel": "none",
-              "matchedWords": []
-          },
-          "published_at": {
-              "value": "2023-01-31T00:00:00+00:00",
-              "matchLevel": "none",
-              "matchedWords": []
-          }
-      },
-      "__position": 4
+    "id": "0snedu01",
+    "type": "github",
+    "url": "https://github.com/starknet-edu",
+    "image": "/assets/github.png",
+    "title": "Starknet Edu – Github Repo ",
+    "author": "StarkWare ",
+    "published_at": "2023-01-31T00:00:00+00:00",
+    "difficulty": "beginner",
+    "course": "starknet_edu",
+    "tags": [
+        "cairo",
+        "account abstraction",
+        "contracts"
+    ],
+    "published_at_ts": 1675123200,
+    "slug": "starknet-edu-github-repo",
+    "locale": "en",
+    "sourceFilepath": "_data/tutorials/0snedu01.yml",
+    "objectID": "tutorials:en:0snedu01.yml",
+    "_highlightResult": {
+        "title": {
+            "value": "Starknet Edu – Github Repo ",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "published_at": {
+            "value": "2023-01-31T00:00:00+00:00",
+            "matchLevel": "none",
+            "matchedWords": []
+        }
+    },
+    "__position": 4
   }
 ];
 
@@ -396,21 +399,36 @@ export const Gridcard = () => (
         columnGap="24px"
         rowGap="48px"
       >
-        {hits.map(hit => <GridCard.Root href={hit.url} key={hit.title}>
-          <GridCard.Image url={hit.image} type={hit.type} />
-          <GridCard.Body>
-            {/* <GridCard.Category category={hit.tags} /> */}
-            <GridCard.Content
-              title={hit.title}
-              author={hit.author}
-              date="12.03.2023"
-              difficulty={hit.difficulty}
-            />
-          </GridCard.Body>
-          <GridCard.Footer>
-            <GridCard.Tags tags={hit?.tags} />
-          </GridCard.Footer>
-        </GridCard.Root>)}
+        {hits.map(hit => {
+          const date = moment(hit.published_at).format("MMM DD, YYYY");
+          return (
+            <GridCard.Root href={hit.url} key={hit.title}>
+              <GridCard.Image url={hit.image} type={hit.type} />
+              <GridCard.Body>
+                {/* <GridCard.Category category={hit.tags} /> */}
+                <GridCard.Content
+                  title={hit.title}
+                  author={hit.author}
+                  date={date}
+                  difficulty={hit.difficulty}
+                />
+              </GridCard.Body>
+              <GridCard.Footer>
+                <HStack spacing="8px">
+                  {hit?.tags?.map((tag, i) => {
+                    // only show max 2 tags
+                    if (i > 1) return null;
+                    return (
+                      <Tag key={i} variant="listCard">
+                        {tag}
+                      </Tag>
+                    );
+                  })}
+                </HStack>
+              </GridCard.Footer>
+            </GridCard.Root>
+          )
+        })}
     </Grid>
   </ThemeProvider>
 );
@@ -447,7 +465,7 @@ export const Listcard = () => (
   </ThemeProvider>
 );
 
-export const ImageIcon = (args: { variant?: "image_icon_link_card" | "icon_link_card" | "dapp";
+export const ImageIcon = (args: { variant?: "image_icon_link_card" | "icon_link_card" | "dapp" | "large_card" | "community_card";
 title: string;
 linkText?: string;
 icon?: string;
@@ -457,6 +475,7 @@ size?: "large" | "small",
 withIllustration?: boolean,
 withBackground?: boolean,
 columns?: number,
+orientation?: "left",
 color?:
 | "blue-default"
 | "orange"
@@ -474,14 +493,15 @@ color?:
     size,
     withIllustration,
     variant,
-    columns
+    columns,
+    orientation
   } = args;
   return (
     <ThemeProvider>
       <Flex gap={4} direction="column" flex={1}>
           <Heading variant="h2">ImageIconCard component</Heading>
           <Heading variant="h4">Use knobs to play with the component</Heading>
-          <Grid gap="10px" gridTemplateColumns="repeat(3, minmax(0, 1fr))" paddingBottom="40px">
+          <Grid gap="10px" gridTemplateColumns={(variant === "large_card" || variant === "community_card") ? "1" : "repeat(3, minmax(0, 1fr))"} paddingBottom="40px">
             <ImageIconCard
               variant={variant}
               color={color}
@@ -496,10 +516,56 @@ color?:
               withIllustration={withIllustration}
               size={size}
               columns={columns}
+              orientation={orientation}
             />
           </Grid>
           <hr/>
         <Heading variant="h2">Showcase</Heading>
+        <Heading variant="h3">Community ImageIconCard</Heading>
+        <Heading variant="h4">(community_card variant)</Heading>
+        <Grid gap="10px" gridTemplateColumns="repeat(1, minmax(0, 1fr))" paddingBottom="40px">
+          <ImageIconCard
+            variant="community_card"
+            title="Community led."
+            size="large"
+            description="This website is a community powered guide to the Starknet ecosystem."
+            link={{
+              custom_title: 'Get involved',
+              custom_internal_link: '/tutorials/cairo_101'
+            }}
+            locale="en"
+            orientation="left"
+          />
+        </Grid>
+        <Heading variant="h3">Large ImageIconCard</Heading>
+        <Heading variant="h4">(large_card variant, default orientation)</Heading>
+        <Grid gap="10px" gridTemplateColumns="repeat(1, minmax(0, 1fr))" paddingBottom="40px">
+          <ImageIconCard
+            variant="large_card"
+            title="Starknet 101"
+            size="large"
+            description="Get up and running developing on Starknet through this series of video tutorials."
+            icon="/assets/illustration-scaling.png"
+            link={{
+              custom_title: 'View',
+              custom_internal_link: '/tutorials/cairo_101'
+            }}
+            locale="en"
+            orientation="left"
+          />
+          <ImageIconCard
+            variant="large_card"
+            title="Starknet 101"
+            description="Get up and running developing on Starknet through this series of video tutorials."
+            icon="/assets/illustration-scaling.png"
+            link={{
+              custom_title: 'View',
+              custom_internal_link: '/tutorials/cairo_101'
+            }}
+            locale="en"
+            orientation="right"
+          />
+        </Grid>
         <Heading variant="h3">Large ImageIconCard</Heading>
         <Heading variant="h4">(image_icon_link_card variant, large size)</Heading>
         <Grid gap="10px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" paddingBottom="40px">
@@ -766,5 +832,6 @@ ImageIcon.args = {
   size: "large",
   withIllustration: true,
   variant: "image_icon_link_card",
-  columns: 4
+  columns: 4,
+  orientation: "left"
 }

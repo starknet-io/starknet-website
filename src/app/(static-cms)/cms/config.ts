@@ -247,7 +247,9 @@ const blocks: ListField["types"] = [
         options: [
           { label: "Image icon link card", value: "image_icon_link_card" },
           { label: "Icon link card", value: "icon_link_card" },
-          { label: "Dapp", value: "dapp" }
+          { label: "Dapp", value: "dapp" },
+          { label: "Large card", value: "large_card" },
+          { label: "Community card", value: "community_card" }
         ],
       },
       {
@@ -308,6 +310,14 @@ const blocks: ListField["types"] = [
         default: "4",
         required: false,
         options: ["2", "4"],
+      },
+      {
+        name: "orientation",
+        label: "Orientation (for large cards only)",
+        widget: "select",
+        default: "left",
+        required: false,
+        options: ["left", "right"],
       }
     ],
   },

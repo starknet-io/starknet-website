@@ -7,35 +7,51 @@ blocks:
   - type: group
     blocks:
       - type: home_hero
-      - type: get_involved_card
+      - size: large
+        color: orange
+        variant: community_card
+        orientation: left
+        withIllustration: false
         title: "Community led. "
+        type: image_icon_link_card
+        link:
+          custom_title: Get involved
+          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
         description: "This website is a community powered guide to the Starknet
           ecosystem.  "
-        link:
-          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
-          custom_title: Get involved
+        columns: "4"
   - type: group
     blocks:
-      - type: large_card
+      - size: large
+        color: orange
+        variant: large_card
+        orientation: left
+        withIllustration: false
         title: What is Starknet?
+        icon: /assets/illustration-how-it-works.png
+        type: image_icon_link_card
+        link:
+          page: 93b845d7-5662-4cd4-8c13-3730440880c0
+          custom_title: What is Starknet?
         description: Starknet is a decentralized layer-2 network that enables Ethereum
           to scale securely and dapps to achieve unlimited scale for
           transactions and computation.
-        image: /assets/illustration-how-it-works.png
-        orientation: left
-        link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: What is starknet
-      - type: large_card
+        columns: "4"
+      - size: large
+        color: orange
+        variant: large_card
         orientation: right
-        image: /assets/illustration-scaling.png
-        title: "How does Starknet scale Ethereum? "
-        description: 'Starknet uses math and cryptography to securely scale Ethereum. It
-          operates as a Validity-rollup (or ZK-rollup): it "bundles" many
-          transactions and "rolls" them to Ethereum as a single transaction.'
+        withIllustration: false
+        title: How does Starknet scale Ethereum?
+        icon: /assets/illustration-scaling.png
+        type: image_icon_link_card
         link:
           page: 93b845d7-5662-4cd4-8c13-3730440880c0
           custom_title: How does it work
+        description: 'Starknet uses math and cryptography to securely scale Ethereum. It
+          operates as a Validity-rollup (or ZK-rollup): it "bundles" many
+          transactions and "rolls" them to Ethereum as a single transaction.'
+        columns: "4"
   - type: flex_layout
     heading_variant: h3
     base: 1

@@ -63,24 +63,7 @@ export interface ImageIconLinkCardBlock {
     | "pink"
     | "grey";
 }
-export interface GetInvolvedBlock {
-  readonly type: "get_involved_card";
-  readonly title: string;
-  readonly description: string;
-  readonly link: LinkData;
-  readonly link_label: string;
-  readonly link_href: string;
-}
 
-export interface LargeCardBlock {
-  readonly type: "large_card";
-  readonly title: string;
-  readonly link: LinkData;
-  readonly size?: "sm" | "md";
-  readonly description: string;
-  readonly image: string;
-  readonly orientation?: "left" | "right";
-}
 export interface LinkListItem {
   readonly type: "link_list_item";
   readonly label?: string;
@@ -145,10 +128,8 @@ export type Block =
   | OnRampsBlock
   | WalletsBlock
   | BasicCardBlock
-  | LargeCardBlock
   | IconLinkCardBlock
   | ImageIconLinkCardBlock
-  | GetInvolvedBlock
   | HeroBlock
   | HomeHeroBlock
   | LinkListBlock

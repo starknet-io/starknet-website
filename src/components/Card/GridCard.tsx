@@ -135,19 +135,19 @@ const Content = ({ title, date, author, difficulty }: ContentProps) => {
         {title}
       </Text>
       <HStack spacing="2">
-        <Icon as={HiOutlineCalendarDays} mr={2} boxSize="18px" />
+        <Icon as={HiOutlineCalendarDays} boxSize="18px" />
         <Text variant="cardBody" noOfLines={4}>
           {date}
         </Text>
       </HStack>
       <HStack spacing="2">
-        <Icon as={HiOutlineUser} mr={2} boxSize="18px" />
+        <Icon as={HiOutlineUser} boxSize="18px" />
         <Text variant="cardBody" noOfLines={4}>
           {author}
         </Text>
       </HStack>
       <HStack spacing="2">
-        <Icon as={HiOutlineAcademicCap} mr={2} boxSize="18px" />
+        <Icon as={HiOutlineAcademicCap} boxSize="18px" />
         <Text variant="cardBody" noOfLines={4}>
           {formattedDifficulty}
         </Text>

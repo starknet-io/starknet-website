@@ -110,6 +110,8 @@ export const ImageIconBox = ({
     gradientColor2: colors[color]?.iconGradientColor2,
     filter: variant === "dapp" ? "drop-shadow(28.0494px 28.0494px 52.5926px rgba(0, 0, 0, 0.25)) drop-shadow(7.01235px 10.5185px 24.5432px rgba(0, 0, 0, 0.25))" : "none",
     borderRadius: variant === "dapp" ? "28.0494px" : "0px",
+    imagePadding: variant === "large_card" ? "0px" : "40px 0 0 32px",
+    communityCardPadding: {base: "0", md: "24px 0px 24px 36px"},
     icon: icon ?? '',
     alt: title ?? ''
   }
@@ -227,8 +229,13 @@ export const ImageIconBox = ({
           height="292px"
         />}
       </Box> : icon &&
-      <Box padding="40px 0 0 32px">
-        <ComponentToRender {...iconProps} />
+      <Box
+        padding={variant === "community_card" ? iconProps.communityCardPadding : iconProps.imagePadding}
+        {...(variant === "large_card" && { flex: "100%" })}
+      >
+        <ComponentToRender
+          {...iconProps}
+        />
       </Box>}
     </>
   );
