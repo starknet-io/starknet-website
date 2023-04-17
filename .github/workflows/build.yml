@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            .yarn/install-state.gz
+            .eslintcache
+            **/tsconfig.tsbuildinfo
+            **/.types/**
+            **/.types-*/**
+          key: build-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            build-cache-
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Restore Crowdin Cache
+        uses: actions/cache/restore@v3
+        with:
+          path: _crowdin
+          key: crowdin-cache-dev
+
+      - name: Update dynamic data
+        run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
+
+      - name: Build project
+        run: yarn exec next build

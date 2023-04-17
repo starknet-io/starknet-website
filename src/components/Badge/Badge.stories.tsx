@@ -1,5 +1,4 @@
-import React from "react";
-import { Flex, HStack, Wrap } from "src/libs/chakra-ui";
+import { Wrap } from "src/libs/chakra-ui";
 import { Meta } from "@storybook/react";
 import { Badge } from "./Badge";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";

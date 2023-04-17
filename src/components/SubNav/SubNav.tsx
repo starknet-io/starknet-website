@@ -7,7 +7,6 @@ import {
   TabIndicator,
   TabList,
   Tabs,
-  Container,
   TabProps,
 } from "src/libs/chakra-ui";
 import React from "react";

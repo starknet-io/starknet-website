@@ -1,6 +1,5 @@
-import { TopLevelBlock } from "src/data/pages";
+import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
-
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";

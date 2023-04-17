@@ -5,24 +5,17 @@ import {
   Box,
   HStack,
   Image as ChakraImage,
-  Link,
-  Stack,
   Icon,
-  useColorModeValue as mode,
   Flex,
 } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
-import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import {
-  HiCalendar,
-  HiCalendarDays,
   HiOutlineAcademicCap,
   HiOutlineCalendarDays,
   HiOutlineUser,
 } from "react-icons/hi2";
 import { titleCase } from "src/utils/utils";
-import { type } from "os";
 
 type RootProps = {
   children: React.ReactNode;
