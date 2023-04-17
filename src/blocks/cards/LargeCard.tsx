@@ -6,7 +6,6 @@ import {
   Img,
   Link,
   LinkBox,
-  LinkOverlay,
   Stack,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
@@ -14,8 +13,7 @@ import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
-import { CardLink } from "./CardLink";
-import { LargeCardBlock } from "src/data/pages";
+import type { LargeCardBlock } from "@starknet-io/cms-data/src/pages";
 import { getComputedLinkData } from "src/utils/utils";
 
 type Props = LargeCardBlock & { locale: string };

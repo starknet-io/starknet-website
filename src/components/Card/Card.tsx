@@ -1,6 +1,5 @@
 "use client";
-import { Box, BoxProps, useColorModeValue } from "src/libs/chakra-ui";
-import * as React from "react";
+import { Box, BoxProps } from "src/libs/chakra-ui";
 
 type Props = {
   href?: string;

@@ -1,7 +1,3 @@
-import { Metadata } from "next";
-import { getCategories } from "src/data/categories";
-import { preRenderedLocales } from "src/data/i18n/config";
-import { getTopics } from "src/data/topics";
 import { AutoProps, EventsPage } from "../(components)/EventsPage";
 
 export const metadata = {
@@ -9,9 +5,6 @@ export const metadata = {
 };
 
 export default async function Page(props: AutoProps) {
-  const categories = await getCategories(props.params.locale);
-  const topics = await getTopics(props.params.locale);
-
   return (
     <>
       <EventsPage

@@ -1,15 +1,7 @@
 {
+  "extends": "./tsconfig.projects.json",
   "compilerOptions": {
-    "composite": true,
-    "strict": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "target": "ESNext",
-    "allowSyntheticDefaultImports": true
+    "outDir": ".types-node",
   },
-  "include": [
-    "vite.config.ts",
-    "vite-env.d.ts",
-    "workspaces/content-onedge/src"
-  ]
+  "include": ["vite.config.ts", "vitest.config.ts"]
 }

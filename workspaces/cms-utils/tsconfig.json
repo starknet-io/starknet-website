@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.projects.json",
+  "compilerOptions": {
+    "outDir": ".types",
+  },
+  "include": ["src/**/*"]
+}
