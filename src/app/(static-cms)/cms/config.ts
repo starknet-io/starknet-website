@@ -378,6 +378,13 @@ const blocks: ListField["types"] = [
         options: ["sm", "md", "lg"],
       },
       {
+        name: "listGap",
+        label: "List Gap",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+        required: false,
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",

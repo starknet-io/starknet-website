@@ -43,6 +43,58 @@ export const Basic = () => (
   </ThemeProvider>
 );
 
+export const Seperated = () => {
+  const [size, setSize] = useState<ListSize>("md");
+
+  return (
+    <ThemeProvider>
+      <RadioGroup
+        onChange={(v) => setSize(v as ListSize)}
+        value={size}
+        mb="2rem"
+      >
+        <Stack direction="row">
+          <Radio value="sm">Small</Radio>
+          <Radio value="md">Medium</Radio>
+          <Radio value="lg">Large</Radio>
+        </Stack>
+      </RadioGroup>
+      <HStack>
+        <Root heading="List with seperated items" listGap={size}>
+          <Item
+            link={{
+              isExternal: true,
+              label: "Documentation 2",
+              href: "https://docs.starknet.io/documentation/",
+            }}
+          />
+          <Item
+            link={{
+              label: "Documentation",
+              href: "https://docs.starknet.io/documentation/",
+            }}
+          />
+          <Item
+            link={{
+              hasIcon: false,
+              label: "Documentation 3",
+              isExternal: true,
+              href: "https://docs.starknet.io/documentation/",
+            }}
+          />
+          <Item
+            link={{
+              hasIcon: false,
+              label: "Documentation 4",
+              href: "https://docs.starknet.io/documentation/",
+            }}
+          />
+        </Root>
+      </HStack>
+    </ThemeProvider>
+  );
+};
+
 export const WithAvatar = () => (
   <ThemeProvider>
     <HStack>
@@ -146,29 +198,31 @@ export const Sizes = () => {
           <Radio value="lg">Large</Radio>
         </Stack>
       </RadioGroup>
-      <Root heading="List with different sizes" listSize={size}>
-        <Item
-          link={{
-            label: "React tutorial",
-            href: "https://docs.starknet.io/documentation/",
-            isExternal: true,
-          }}
-        />
-        <Item
-          link={{
-            label: "React tutorial",
-            href: "https://docs.starknet.io/documentation/",
-            isExternal: true,
-          }}
-          avatar={{
-            title: "Dan Abrahmov",
-            url: "https://bit.ly/dan-abramov",
-          }}
-          subLabel={{
-            label: "This is a sub label",
-          }}
-        />
-      </Root>
+      <HStack>
+        <Root heading="List with different sizes" listSize={size}>
+          <Item
+            link={{
+              label: "React tutorial",
+              href: "https://docs.starknet.io/documentation/",
+              isExternal: true,
+            }}
+          />
+          <Item
+            link={{
+              label: "React tutorial",
+              href: "https://docs.starknet.io/documentation/",
+              isExternal: true,
+            }}
+            avatar={{
+              title: "Dan Abrahmov",
+              url: "https://bit.ly/dan-abramov",
+            }}
+            subLabel={{
+              label: "This is a sub label",
+            }}
+          />
+        </Root>
+      </HStack>
     </ThemeProvider>
   );
 };

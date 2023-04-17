@@ -9,41 +9,53 @@ import { ArrowUpIcon } from "./ArrowUpIcon";
 
 export type ListSize = "sm" | "md" | "lg";
 
-const ListContext = createContext<{ listSize: ListSize }>({
-  listSize: "md",
-});
+const ListContext = createContext<{ listSize: ListSize; isSeperated: boolean }>(
+  {
+    listSize: "md",
+    isSeperated: false,
+  }
+);
 
 type RootProps = {
   heading?: string;
   listSize?: ListSize;
+  listGap?: ListSize;
 } & FlexProps;
 
 const Root = (props: RootProps) => {
+  const { listSize, listGap, heading, children, ...rest } = props;
+  const gap: Record<ListSize, string> = {
+    sm: "8px",
+    md: "16px",
+    lg: "24px",
+  };
   return (
     <Box mb="80px">
-      {props.heading && (
+      {heading && (
         <Heading
           variant="h3"
           color="heading-navy-fg"
-          id={`toc-${slugify(props.heading)}`}
+          id={`toc-${slugify(heading)}`}
           marginBottom="24px"
         >
-          {props.heading}
+          {heading}
         </Heading>
       )}
       <Flex
-        {...props}
+        {...rest}
         as="ul"
-        bg="card-bg"
-        borderRadius="16px"
+        bg={listGap ? "transparent" : "card-bg"}
+        borderRadius={listGap ? "0px" : "16px"}
         borderWidth="1px"
-        borderColor="card-br"
+        borderColor={listGap ? "transparent" : "card-br"}
         overflow="hidden"
         direction="column"
-        // gap="12px"
+        gap={gap[listGap as ListSize] || "0px"}
       >
-        <ListContext.Provider value={{ listSize: props.listSize || "md" }}>
-          {props.children}
+        <ListContext.Provider
+          value={{ listSize: listSize || "md", isSeperated: !!listGap }}
+        >
+          {children}
         </ListContext.Provider>
       </Flex>
     </Box>
@@ -69,17 +81,12 @@ type ItemProps = {
 };
 
 const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
-  const { listSize } = useContext(ListContext);
+  const { listSize, isSeperated } = useContext(ListContext);
 
   const height = {
     sm: "64px",
     md: "72px",
     lg: "80px",
-  };
-  const padding = {
-    sm: "16px",
-    md: "20px",
-    lg: "24px",
   };
 
   return (
@@ -92,12 +99,12 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
       alignItems="center"
       px="24px"
       py={{ base: "24px", md: "0px" }}
-      _hover={{ textDecoration: "none" }}
-      borderTopWidth="0px!important"
+      borderTopWidth={isSeperated ? "1px" : "0px"}
       borderBottomWidth="1px!important"
       borderColor="card-br!important"
-      _first={{ borderTopWidth: "0px!important" }}
-      _last={{ borderBottomWidth: "0px!important" }}
+      backgroundColor="card-bg"
+      _hover={{ textDecoration: "none" }}
+      _last={{ borderBottomWidth: isSeperated ? "1px" : "0px" }}
     >
       <Flex
         direction={{ base: "column", md: "row" }}
