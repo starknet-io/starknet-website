@@ -351,24 +351,83 @@ const blocks: CmsFieldList["types"] = [
         required: false,
       },
       {
+        name: "listSize",
+        label: "List Size",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",
         fields: [
           {
-            name: "label",
+            name: "link",
+            widget: "object",
+            label: "Link",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                widget: "string",
+              },
+              {
+                name: "href",
+                label: "Href",
+                widget: "string",
+              },
+              {
+                name: "isExternal",
+                label: "Is external",
+                widget: "boolean",
+              },
+              {
+                name: "hasIcon",
+                label: "Has icon",
+                widget: "boolean",
+                default: true,
+              },
+            ],
           },
           {
-            name: "sub_label",
+            name: "subLabel",
+            widget: "object",
+            label: "Sub Label",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                widget: "string",
+              },
+              {
+                name: "boldLabel",
+                label: "Bold Label",
+                widget: "string",
+              },
+            ],
           },
           {
-            name: "href",
-          },
-          {
-            name: "is_external",
-            widget: "boolean",
-            required: false,
-            default: false,
+            name: "avatar",
+            widget: "object",
+            label: "Avatar",
+            fields: [
+              {
+                name: "url",
+                label: "URL",
+                widget: "string",
+              },
+              {
+                name: "title",
+                label: "Title",
+                widget: "string",
+              },
+              {
+                name: "displayTitle",
+                label: "Display title",
+                widget: "boolean",
+                required: false,
+              },
+            ],
           },
         ],
       },
@@ -424,7 +483,7 @@ const blocks: CmsFieldList["types"] = [
         ],
       },
     ],
-  }
+  },
 ];
 
 const topLevelBlocks: CmsFieldList["types"] = [
@@ -573,8 +632,8 @@ export const config: CmsConfig = {
           label: "Blocks",
           widget: "list",
           types: topLevelBlocks,
-        }
-      ]
+        },
+      ],
     },
     {
       name: "posts",
@@ -1231,8 +1290,9 @@ export const config: CmsConfig = {
                       label: "Link URL",
                       name: "url",
                       widget: "string",
-                      required: false
-                  }]
+                      required: false,
+                    },
+                  ],
                 },
                 {
                   label: "Image",
@@ -1247,7 +1307,7 @@ export const config: CmsConfig = {
                   label: "Discord handle",
                   name: "discord",
                   widget: "string",
-                  required: false
+                  required: false,
                 },
                 {
                   label: "Website url",
@@ -1396,19 +1456,15 @@ export const config: CmsConfig = {
                   label: "Variant",
                   widget: "select",
                   required: false,
-                  options: [
-                    "info",
-                    "warning",
-                    "important"
-                  ],
-                  default: "info"
+                  options: ["info", "warning", "important"],
+                  default: "info",
                 },
                 {
                   name: "hasCloseButton",
                   label: "Show close icon",
                   widget: "boolean",
                   default: false,
-                  required: false
+                  required: false,
                 },
                 {
                   name: "id",
@@ -1430,13 +1486,13 @@ export const config: CmsConfig = {
                   label: "Page url",
                   hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
                   required: false,
-                  widget: "string"
+                  widget: "string",
                 },
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
