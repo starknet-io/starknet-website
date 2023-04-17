@@ -1,7 +1,7 @@
 "use client";
 
 import * as NavAccordian from "../../../components/Layout/Navbar/NavAccordion";
-import type { MainMenu } from "src/data/settings/main-menu";
+import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { getCategories } from "src/data/categories";
-import { preRenderedLocales } from "src/data/i18n/config";
-import { getTopics } from "src/data/topics";
+import { getCategories } from "@starknet-io/cms-data/src/categories";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PostsPage } from "../(components)/PostsPage";
 
 export interface Props extends LocaleProps {

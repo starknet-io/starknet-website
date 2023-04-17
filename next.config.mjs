@@ -14,10 +14,16 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
   reactStrictMode: false,
   experimental: {
     appDir: true,
   },
+  transpilePackages: [
+    "@starknet-io/cms-config",
+    "@starknet-io/cms-data",
+    "@starknet-io/cms-utils",
+  ],
   images: {
     domains: [
       "tailwindui.com",
@@ -28,7 +34,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
   },
   async redirects() {
-    const data = JSON.parse(await fs.readFile("_data/_dynamic/redirects/en.json", { encoding: "utf8" }))
+    const data = JSON.parse(await fs.readFile(`${process.cwd()}/_crowdin/data/redirects/en.json`, { encoding: "utf8" }))
 
     return data.map((item) => ({ ...item, permanent: false }));
   },

@@ -1,13 +1,13 @@
 import { PageContainer } from "./(components)/PageContainer";
 import { ThemeProvider } from "../providers/ThemeProvider";
 import { ClientLocaleProvider } from "./(components)/ClientLocaleProvider";
-import { getMessages } from "src/data/i18n/intl";
+import { getMessages } from "@starknet-io/cms-data/src/i18n/intl";
 import Navbar from "./(components)/Navbar";
 import { Footer } from "./(components)/Footer";
-import { getMainMenu } from "src/data/settings/main-menu";
-import { getAlerts } from "src/data/settings/alert";
+import { getMainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
+import { getAlerts } from "@starknet-io/cms-data/src/settings/alert";
 import React from "react";
-import { i18nConfig } from "src/data/i18n/config";
+import { i18nConfig } from "@starknet-io/cms-data/src/i18n/config";
 import { notFound } from "next/navigation";
 
 export const metadata = {
