@@ -1,5 +1,4 @@
 import React from "react";
-import { HStack } from "src/libs/chakra-ui";
 import { Meta } from "@storybook/react";
 import theme from "src/style/theme";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";
