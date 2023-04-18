@@ -14,23 +14,20 @@ blocks:
     blocks:
       - type: link_list_item
         link:
-          isExternal: true
-          label: Discord
-          href: https://starknet.io/discord
+          custom_title: Discord
+          custom_external_link: https://starknet.io/discord
         subLabel:
           label: "Join the conversation on Discord "
       - type: link_list_item
         link:
-          isExternal: true
-          label: Twitter
-          href: https://twitter.com/Starknet
+          custom_title: Twitter
+          custom_external_link: https://twitter.com/Starknet
         subLabel:
           label: The official Starknet community account on Twitter
       - type: link_list_item
         link:
-          isExternal: true
-          label: "Community forum "
-          href: https://community.starknet.io/
+          custom_title: "Community forum "
+          custom_external_link: https://community.starknet.io/
         subLabel:
           label: Share, discuss and collaborate on initiatives.
   - type: link_list
@@ -38,8 +35,7 @@ blocks:
     listSize: lg
     blocks:
       - link:
-          isExternal: true
-          label: Starknet Version Updates
-          href: https://t.me/+EkT8aCg9R-xjZGU0
+          custom_title: Starknet Version Updates
+          custom_external_link: https://t.me/+EkT8aCg9R-xjZGU0
         subLabel:
           label: Get notified on technical updates to Starknet

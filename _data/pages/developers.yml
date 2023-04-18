@@ -90,61 +90,49 @@ blocks:
         listSize: "lg"
         blocks:
           - link:
-              label: "Introduction "
-              href: https://docs.starknet.io/documentation/
-              isExternal: true
+              custom_title: "Introduction "
+              custom_external_link: https://docs.starknet.io/documentation/
           - link:
-              label: "Setting up a Starknet account "
-              href: https://docs.starknet.io/documentation/getting_started/account_setup/
+              custom_title: "Setting up a Starknet account "
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/account_setup/
           - link:
-              isExternal: true
-              label: Writing Starknet contracts
-              href: https://docs.starknet.io/documentation/getting_started/intro/
+              custom_title: Writing Starknet contracts
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/intro/
           - link:
-              isExternal: true
-              label: "CLI commands "
-              href: https://docs.starknet.io/documentation/getting_started/cli/
+              custom_title: "CLI commands "
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/cli/
           - link:
-              isExternal: true
-              label: "Adding user authentication "
-              href: https://docs.starknet.io/documentation/getting_started/user_auth/
+              custom_title: "Adding user authentication "
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/user_auth/
       - type: link_list
         heading: Architecture & concepts
         listSize: "lg"
         blocks:
           - link:
-              isExternal: true
-              label: Block structure
-              href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
+              custom_title: Block structure
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
           - link:
-              isExternal: true
-              label: "Transaction lifecycle "
-              href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
+              custom_title: "Transaction lifecycle "
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
           - link:
-              isExternal: true
-              label: "Transaction structure "
-              href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
+              custom_title: "Transaction structure "
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
           - link:
-              isExternal: false
-              label: Contract ABI
-              href: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
+              custom_title: Contract ABI
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
           - link:
-              isExternal: true
-              label: "Account abstraction "
-              href: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
+              custom_title: "Account abstraction "
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
       - type: link_list
         heading: "Tools & resources "
         listSize: "lg"
         blocks:
           - link:
-              isExternal: true
-              label: Starknet block explorers
-              href: https://docs.starknet.io/documentation/tools/ref_block_explorers/
+              custom_title: Starknet block explorers
+              custom_external_link: https://docs.starknet.io/documentation/tools/ref_block_explorers/
           - link:
-              isExternal: true
-              label: "Starknet CLI reference "
-              href: https://docs.starknet.io/documentation/tools/CLI/commands/
+              custom_title: "Starknet CLI reference "
+              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
           - link:
-              isExternal: true
-              label: "Starknet compiler reference "
-              href: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/
+              custom_title: "Starknet compiler reference "
+              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/

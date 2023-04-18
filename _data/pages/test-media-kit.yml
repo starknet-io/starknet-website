@@ -15,17 +15,14 @@ blocks:
     listSize: "lg"
     blocks:
       - link:
-          isExternal: false
-          label: SVG only
-          href: /assets/starknet-logos-svg.zip
+          custom_title: SVG only
+          custom_internal_link: /assets/starknet-logos-svg.zip
       - link:
-          isExternal: false
-          label: PNG only
-          href: /assets/starknet-logos-png.zip
+          custom_title: PNG only
+          custom_internal_link: /assets/starknet-logos-png.zip
       - link:
-          isExternal: false
-          label: Complete kit
-          href: /assets/starknet-logos-complete.zip
+          custom_title: Complete kit
+          custom_internal_link: /assets/starknet-logos-complete.zip
   - type: markdown
     body: |-
       ## Cairo logo kit
@@ -35,14 +32,11 @@ blocks:
     listSize: "lg"
     blocks:
       - link:
-          isExternal: false
-          label: SVG only
-          href: /assets/cairo-logos-svg.zip
+          custom_title: SVG only
+          custom_internal_link: /assets/cairo-logos-svg.zip
       - link:
-          isExternal: false
-          label: PNG only
-          href: /assets/cairo-logos-png.zip
+          custom_title: PNG only
+          custom_internal_link: /assets/cairo-logos-png.zip
       - link:
-          isExternal: false
-          label: Complete kit
-          href: /assets/cairo-logos-complete.zip
+          custom_title: Complete kit
+          custom_internal_link: /assets/cairo-logos-complete.zip

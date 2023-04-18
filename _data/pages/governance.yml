@@ -28,9 +28,8 @@ blocks:
     heading: Active proposals
     blocks:
       - link:
-          isExternal: true
-          label: Snapshot
-          href: https://snapshot.org/#/starknet.eth
+          custom_title: Snapshot
+          custom_external_link: https://snapshot.org/#/starknet.eth
         subLabel:
           label: View active Starknet proposals on Snapshot
   - type: link_list
@@ -38,9 +37,8 @@ blocks:
     heading: Community discussion
     blocks:
       - link:
-          isExternal: true
-          href: https://community.starknet.io/c/governance/8
-          label: Community forum
+          custom_title: https://community.starknet.io/c/governance/8
+          custom_external_link: Community forum
         subLabel:
           label: Starknet governance discussion on Discourse
   - type: link_list
@@ -48,9 +46,8 @@ blocks:
     heading: "Delegate discovery "
     blocks:
       - link:
-          isExternal: true
-          label: Starknet delegate discovery page
-          href: https://delegate.starknet.io/
+          custom_title: Starknet delegate discovery page
+          custom_external_link: https://delegate.starknet.io/
         subLabel:
           label: Helping token holders choose delegates
   - type: link_list
@@ -58,30 +55,23 @@ blocks:
     heading: Further reading
     blocks:
       - link:
-          isExternal: false
-          label: "Starknet’s governance: First phase"
-          href: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
+          custom_title: "Starknet’s governance: First phase"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
       - link:
-          isExternal: false
-          label: Starknet token is deployed on Ethereum
-          href: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
+          custom_title: Starknet token is deployed on Ethereum
+          custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
       - link:
-          isExternal: false
-          href: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
-          label: Welcome to the world, Starknet foundation!
+          custom_title: Welcome to the world, Starknet foundation!
+          custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
       - link:
-          isExternal: false
-          label: "Introducing: The StarkNet Foundation"
-          href: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
+          custom_title: "Introducing: The StarkNet Foundation"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
       - link:
-          isExternal: false
-          label: "Part 1: StarkNet sovereignty: A decentralization proposal"
-          href: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
+          custom_title: "Part 1: StarkNet sovereignty: A decentralization proposal"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
       - link:
-          isExternal: false
-          label: "Part 2: A Decentralization and governance proposal for Starknet"
-          href: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+          custom_title: "Part 2: A Decentralization and governance proposal for Starknet"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
       - link:
-          isExternal: false
-          href: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
-          label: "Part 3: Starknet Token Design"
+          custom_title: "Part 3: Starknet Token Design"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design

@@ -25,29 +25,24 @@ blocks:
     blocks:
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet China 🇨🇳
-          href: " https://t.me/starknet_zh"
+          custom_title: Starknet China 🇨🇳
+          custom_external_link: " https://t.me/starknet_zh"
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Paris 🇫🇷
-          href: https://t.me/+wsO2W_-K7HgzZjBk
+          custom_title: Starknet Paris 🇫🇷
+          custom_external_link: https://t.me/+wsO2W_-K7HgzZjBk
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet India 🇮🇳
-          href: https://t.me/starknetindia
+          custom_title: Starknet India 🇮🇳
+          custom_external_link: https://t.me/starknetindia
       - type: link_list_item
         link:
-          isExternal: true
-          label: "Starknet Nairobi 🇿🇦 "
-          href: https://t.me/starknetNairobi
+          custom_title: "Starknet Nairobi 🇿🇦 "
+          custom_external_link: https://t.me/starknetNairobi
       - type: link_list_item
         link:
-          isExternal: true
-          label: Cairo Vietnam 🇻🇳
-          href: https://t.me/+dL-oY6-slrY3NDU1
+          custom_title: Cairo Vietnam 🇻🇳
+          custom_external_link: https://t.me/+dL-oY6-slrY3NDU1
     heading: "Telegram groups "
   - type: link_list
     heading: "Twitter profiles "
@@ -55,66 +50,53 @@ blocks:
     blocks:
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Vietnam 🇻🇳
-          href: https://twitter.com/starknetvietnam
+          custom_title: Starknet Vietnam 🇻🇳
+          custom_external_link: https://twitter.com/starknetvietnam
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Africa 🇿🇦
-          href: https://twitter.com/StarkNetAfrica
+          custom_title: Starknet Africa 🇿🇦
+          custom_external_link: https://twitter.com/StarkNetAfrica
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Thailand 🇹🇭
-          href: https://twitter.com/ThStarknet
+          custom_title: Starknet Thailand 🇹🇭
+          custom_external_link: https://twitter.com/ThStarknet
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Singapore 🇸🇬
-          href: https://twitter.com/StarkNetSG
+          custom_title: Starknet Singapore 🇸🇬
+          custom_external_link: https://twitter.com/StarkNetSG
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet India 🇮🇳
-          href: https://twitter.com/StarkNetIndia
+          custom_title: Starknet India 🇮🇳
+          custom_external_link: https://twitter.com/StarkNetIndia
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet China 🇨🇳
-          href: https://twitter.com/StarkNet_ZH
+          custom_title: Starknet China 🇨🇳
+          custom_external_link: https://twitter.com/StarkNet_ZH
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet France 🇫🇷
-          href: https://twitter.com/StarknetFr
+          custom_title: Starknet France 🇫🇷
+          custom_external_link: https://twitter.com/StarknetFr
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Indonesia 🇮🇩
-          href: https://twitter.com/StarkNetID
+          custom_title: Starknet Indonesia 🇮🇩
+          custom_external_link: https://twitter.com/StarkNetID
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Spain 🇪🇸
-          href: https://twitter.com/StarkNetEs
+          custom_title: Starknet Spain 🇪🇸
+          custom_external_link: https://twitter.com/StarkNetEs
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Turkey 🇹🇷
-          href: https://twitter.com/StarkNetTurkiye
+          custom_title: Starknet Turkey 🇹🇷
+          custom_external_link: https://twitter.com/StarkNetTurkiye
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Poland 🇵🇱
-          href: https://twitter.com/StarknetPolska
+          custom_title: Starknet Poland 🇵🇱
+          custom_external_link: https://twitter.com/StarknetPolska
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Portugal 🇵🇹
-          href: https://twitter.com/StarknetPt
+          custom_title: Starknet Portugal 🇵🇹
+          custom_external_link: https://twitter.com/StarknetPt
       - type: link_list_item
         link:
-          isExternal: true
-          label: Starknet Germany 🇩🇪
-          href: https://twitter.com/SN_DACH
+          custom_title: Starknet Germany 🇩🇪
+          custom_external_link: https://twitter.com/SN_DACH

@@ -61,6 +61,16 @@ const Root = (props: RootProps) => {
   );
 };
 
+export type linkFieldsKeys = {
+  custom_title?: string;
+  custom_icon?: string;
+  custom_internal_link?: string;
+  custom_external_link?: string;
+  page?: string;
+  post?: string;
+  hasIcon?: boolean;
+};
+
 type ItemProps = {
   avatar?: {
     title?: string;
@@ -71,16 +81,16 @@ type ItemProps = {
     label?: string;
     boldLabel?: string;
   };
-  link?: {
-    label?: string;
-    href?: string;
-    hasIcon?: boolean;
-    isExternal?: boolean;
-  };
+  link?: linkFieldsKeys;
 };
 
+const getLinkIcon = (iconName?: string) => {
+  // TODO add what custom icons we want to support for links
+  return HiOutlineArrowRightCircle;
+};
 const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
   const { listSize, isSeperated } = useContext(ListContext);
+  const isLinkisExternal = !!link?.custom_external_link;
 
   const height = {
     sm: "64px",
@@ -119,18 +129,22 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
 
         {link && (
           <Link
-            href={link.href}
-            isExternal={link.isExternal}
+            href={
+              isLinkisExternal
+                ? link.custom_external_link
+                : link.custom_internal_link
+            }
+            isExternal={isLinkisExternal}
             display="flex"
             gap="8px"
             color="listLink-fg"
             _hover={{ textDecoration: "underline" }}
           >
             {(link.hasIcon ?? true) && (
-              <Icon boxSize="24px" as={HiOutlineArrowRightCircle} />
+              <Icon boxSize="24px" as={getLinkIcon(link.custom_icon)} />
             )}
-            {link.label}{" "}
-            {link.isExternal && (
+            {link.custom_title}{" "}
+            {isLinkisExternal && (
               <Icon
                 fontWeight="bold"
                 boxSize="24px"

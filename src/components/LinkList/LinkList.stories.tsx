@@ -11,30 +11,28 @@ export const Basic = () => (
         <Root heading="Basic example">
           <Item
             link={{
-              isExternal: true,
-              label: "Documentation 2",
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation 2",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
           <Item
             link={{
-              label: "Documentation",
-              href: "https://docs.starknet.io/documentation/",
-            }}
-          />
-          <Item
-            link={{
-              hasIcon: false,
-              label: "Documentation 3",
-              isExternal: true,
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
           <Item
             link={{
               hasIcon: false,
-              label: "Documentation 4",
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation 3",
+              custom_external_link: "https://docs.starknet.io/documentation/",
+            }}
+          />
+          <Item
+            link={{
+              hasIcon: false,
+              custom_title: "Documentation 4",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
         </Root>
@@ -63,30 +61,28 @@ export const Seperated = () => {
         <Root heading="List with seperated items" listGap={size}>
           <Item
             link={{
-              isExternal: true,
-              label: "Documentation 2",
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation 2",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
           <Item
             link={{
-              label: "Documentation",
-              href: "https://docs.starknet.io/documentation/",
-            }}
-          />
-          <Item
-            link={{
-              hasIcon: false,
-              label: "Documentation 3",
-              isExternal: true,
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
           <Item
             link={{
               hasIcon: false,
-              label: "Documentation 4",
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation 3",
+              custom_external_link: "https://docs.starknet.io/documentation/",
+            }}
+          />
+          <Item
+            link={{
+              hasIcon: false,
+              custom_title: "Documentation 4",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
         </Root>
@@ -109,9 +105,8 @@ export const WithAvatar = () => (
           />
           <Item
             link={{
-              label: "Documentation 3",
-              href: "https://docs.starknet.io/documentation/",
-              isExternal: true,
+              custom_title: "Documentation 3",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
             avatar={{
               title: "Dan Abrahmov",
@@ -120,9 +115,8 @@ export const WithAvatar = () => (
           />
           <Item
             link={{
-              label: "React tutorial",
-              href: "https://docs.starknet.io/documentation/",
-              isExternal: true,
+              custom_title: "React tutorial",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
             avatar={{
               title: "Dan Abrahmov",
@@ -143,8 +137,8 @@ export const WithSubLabel = () => (
         <Root heading="Link list with a sublabel">
           <Item
             link={{
-              label: "Documentation 1",
-              href: "https://docs.starknet.io/documentation/",
+              custom_title: "Documentation 1",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
             subLabel={{
               label: "This is a sub label",
@@ -153,9 +147,8 @@ export const WithSubLabel = () => (
           />
           <Item
             link={{
-              label: "Documentation 2",
-              href: "https://docs.starknet.io/documentation/",
-              isExternal: true,
+              custom_title: "Documentation 2",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
             subLabel={{
               label: "This is a sub label",
@@ -163,9 +156,8 @@ export const WithSubLabel = () => (
           />
           <Item
             link={{
-              label: "React tutorial",
-              href: "https://docs.starknet.io/documentation/",
-              isExternal: true,
+              custom_title: "React tutorial",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
             avatar={{
               title: "Dan Abrahmov",
@@ -202,16 +194,14 @@ export const Sizes = () => {
         <Root heading="List with different sizes" listSize={size}>
           <Item
             link={{
-              label: "React tutorial",
-              href: "https://docs.starknet.io/documentation/",
-              isExternal: true,
+              custom_title: "React tutorial",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
           />
           <Item
             link={{
-              label: "React tutorial",
-              href: "https://docs.starknet.io/documentation/",
-              isExternal: true,
+              custom_title: "React tutorial",
+              custom_external_link: "https://docs.starknet.io/documentation/",
             }}
             avatar={{
               title: "Dan Abrahmov",
