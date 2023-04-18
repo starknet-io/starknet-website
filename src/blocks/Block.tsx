@@ -18,7 +18,6 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
-import { WalletIcon } from "@heroicons/react/20/solid";
 
 interface Props {
   readonly block: TopLevelBlock;
