@@ -1,4 +1,4 @@
-import { Box, Link, Stack, Image } from "src/libs/chakra-ui";
+import { Box, Link, Stack } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
