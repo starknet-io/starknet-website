@@ -3,7 +3,7 @@ import { BasicCard } from "./cards/BasicCard";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
-import { BlockHeroLines } from "./BlockHeroLines";
+import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
 import { IconLinkCard } from "./cards/IconLinkCard";
@@ -123,7 +123,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
     );
   } else if (block.type === "hero") {
     return (
-      <BlockHeroLines
+      <HeroImage
         title={block.title}
         description={block.description}
         variant={block.variant}

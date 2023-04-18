@@ -64,7 +64,7 @@ const heroStyles = {
   },
 };
 
-export const BlockHeroLines = ({
+export const HeroImage = ({
   title = "Dapps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
   variant = "dapps",
@@ -87,6 +87,7 @@ export const BlockHeroLines = ({
         zIndex={1}
         opacity={0.5}
         mixBlendMode="soft-light"
+        marginLeft="-80px"
       >
         <Img
           src="/lines.svg"
@@ -98,13 +99,13 @@ export const BlockHeroLines = ({
       </Box>
 
       <Box zIndex={2} position="relative" height={{ lg: "420px" }}>
-        <Container py={{ base: "64px", md: "64px" }} height="full">
+        <Container py={{ base: "64px", lg: "0" }} px={{ base: "1rem", lg: "0" }} pr={{ base: "64px", md: "64px" }} height="full" maxW="none">
           <Flex
             direction={{ base: "column", lg: "row" }}
             align={{ lg: "center" }}
             height="full"
           >
-            <Stack spacing={{ base: "8", md: "12" }} order={{ base: 1, lg: 0 }}>
+            <Stack order={{ base: 1, lg: 0 }}>
               <Stack spacing="4">
                 <Stack
                   // bg="red"
@@ -167,7 +168,7 @@ export const BlockHeroLines = ({
                     <Box
                       mixBlendMode="multiply"
                       opacity="0.2"
-                      mt={6}
+                      mt={4}
                       bgGradient="linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)"
                       bgClip="div"
                       height="1px"
@@ -184,6 +185,7 @@ export const BlockHeroLines = ({
                   <Text
                     fontSize={{ base: "lg", md: "lg" }}
                     color="text-hero-fg"
+                    variant="body"
                   >
                     {description}
                   </Text>
@@ -206,6 +208,7 @@ export const BlockHeroLines = ({
             >
               <Image
                 boxSize={{ base: "300px", lg: "250px" }}
+                maxW="90%"
                 // objectFit="contain"
                 src={heroStyles[variant].img}
                 alt="starknet"
