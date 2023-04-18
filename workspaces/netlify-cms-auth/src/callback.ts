@@ -59,7 +59,12 @@ function postMessageHTML({ status, data }: PostMessageHTMLArgs) {
     <body>
     <script>
       function receiveMessage (message) {
-        if (!/^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms\\.pages\\.dev$/.test(message.origin)) return;
+        const allowedOrigin = (
+          message.origin === 'http://localhost:1234' ||
+          /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms\\.pages\\.dev$/.test(message.origin)
+        );
+
+        if (!allowedOrigin) return;
         if (message.data !== "authorizing:github") return;
 
         window.opener.postMessage(
