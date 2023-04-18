@@ -661,7 +661,16 @@
     }
   },
   "dark": {},
-  "$themes": [],
+  "$themes": [
+    {
+      "id": "50e24fd6874982b985407810b586f1111a35944c",
+      "name": "light",
+      "selectedTokenSets": {
+        "light": "source"
+      },
+      "$figmaStyleReferences": {}
+    }
+  ],
   "$metadata": {
     "tokenSetOrder": [
       "typography",
