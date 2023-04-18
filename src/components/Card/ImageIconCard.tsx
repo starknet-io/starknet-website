@@ -15,7 +15,7 @@ import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { getComputedLinkData } from "src/utils/utils";
 import { CustomLink } from "@ui/Link/CustomLink";
-import { LinkData } from "src/data/settings/main-menu";
+import { LinkData } from "@starknet-io/cms-data/src/settings/main-menu";
 
 type Props = {
   variant?: "image_icon_link_card" | "icon_link_card" | "dapp" | "large_card" | "community_card";
