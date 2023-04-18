@@ -1,6 +1,6 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
-import { getBlockExplorers } from "src/data/block-explorers";
+import { getBlockExplorers } from "@starknet-io/cms-data/src/block-explorers";
 interface Props extends LocaleProps {
   noOfItems?: number;
 }

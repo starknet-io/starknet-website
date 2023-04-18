@@ -14,11 +14,8 @@ import {
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
-import * as React from "react";
-
 import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
-
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { titleCase } from "src/utils/utils";
 

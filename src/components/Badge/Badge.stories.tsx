@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, HStack, VStack } from "src/libs/chakra-ui";
+import { VStack } from "src/libs/chakra-ui";
 import { Meta } from "@storybook/react";
 import { Badge } from "./Badge";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";

@@ -1,3 +1,5 @@
+name: Open PR to merge dev into production
+
 on:
   push:
     branches:

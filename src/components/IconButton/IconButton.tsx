@@ -2,7 +2,7 @@
 import { defineStyle } from "src/libs/chakra-ui";
 import { IconButton as ChakraIconButton, IconButtonProps } from "src/libs/chakra-ui";
 import { scrollIntoView } from "../../utils/scrollIntoView";
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 const iconButtonTheme = defineStyle({
   height: "auto",
@@ -65,12 +65,12 @@ const iconButtonTheme = defineStyle({
   }
 });
 
-interface props extends IconButtonProps {
+export interface Props extends IconButtonProps {
   toId?: string;
   href?: string;
 };
 
-export const IconButton = forwardRef<HTMLButtonElement, props>(({ href, toId, ...rest }, ref) => {
+export const IconButton = forwardRef<HTMLButtonElement, Props>(({ href, toId, ...rest }, ref) => {
   const handleOnClick = () => {
     if (!toId) {
       return;

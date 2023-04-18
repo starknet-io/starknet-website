@@ -1,10 +1,10 @@
-import { Box, GridItem, LinkBox, LinkOverlay, Stack } from "src/libs/chakra-ui";
+import { Box, LinkBox, Stack } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
 import React from "react";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { getComputedLinkData } from "src/utils/utils";
-import { BasicCardBlock } from "src/data/pages";
+import type { BasicCardBlock } from "@starknet-io/cms-data/src/pages";
 import Link from "next/link";
 
 type Props = BasicCardBlock & { locale: string };

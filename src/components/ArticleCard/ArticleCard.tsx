@@ -12,6 +12,7 @@ import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
+import { Category } from "@starknet-io/cms-data/src/categories";
 
 type RootProps = {
   children: React.ReactNode;
@@ -72,7 +73,7 @@ const Body = ({ children }: BodyProps) => {
 };
 
 interface CategoryProps {
-  category: import("src/data/categories").Category;
+  category: Category;
 }
 
 const Category = ({ category }: CategoryProps) => {

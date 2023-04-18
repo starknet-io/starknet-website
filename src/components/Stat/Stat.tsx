@@ -2,10 +2,8 @@ import {
   Heading,
   Stack,
   StackProps,
-  Text,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
-import * as React from "react";
 
 interface StatProps extends StackProps {
   label: string;

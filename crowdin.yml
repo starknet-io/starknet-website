@@ -3,21 +3,26 @@ project_id_env: CROWDIN_PROJECT_ID
 api_token_env: CROWDIN_PERSONAL_TOKEN
 preserve_hierarchy: true
 files:
-  - source: /_data/categories/en/*.yml
-    translation: /_data/categories/%two_letters_code%/%original_file_name%
-  - source: /_data/events/en/*.yml
-    translation: /_data/events/%two_letters_code%/%original_file_name%
-  - source: /_data/i18n/intl/en.json
-    translation: /_data/i18n/intl/%two_letters_code%.json
-  - source: /_data/jobs/en/*.yml
-    translation: /_data/jobs/%two_letters_code%/%original_file_name%
-  - source: /_data/pages/en/*.yml
-    translation: /_data/pages/%two_letters_code%/%original_file_name%
-  - source: /_data/posts/en/*.yml
-    translation: /_data/posts/%two_letters_code%/%original_file_name%
-  - source: /_data/settings/en/*.yml
-    translation: /_data/settings/%two_letters_code%/%original_file_name%
-  - source: /_data/topics/en/*.yml
-    translation: /_data/topics/%two_letters_code%/%original_file_name%
-  - source: /_data/tutorials/en/*.yml
-    translation: /_data/tutorials/%two_letters_code%/%original_file_name%
+  - source: /_crowdin/source/categories/*
+    translation: /_crowdin/translation/%two_letters_code%/categories/%original_file_name%
+
+  - source: /_crowdin/source/events/*
+    translation: /_crowdin/translation/%two_letters_code%/events/%original_file_name%
+
+  - source: /_crowdin/source/jobs/*
+    translation: /_crowdin/translation/%two_letters_code%/jobs/%original_file_name%
+
+  - source: /_crowdin/source/pages/*
+    translation: /_crowdin/translation/%two_letters_code%/pages/%original_file_name%
+
+  - source: /_crowdin/source/posts/*
+    translation: /_crowdin/translation/%two_letters_code%/posts/%original_file_name%
+
+  - source: /_crowdin/source/settings/*
+    translation: /_crowdin/translation/%two_letters_code%/settings/%original_file_name%
+
+  - source: /_crowdin/source/topics/*
+    translation: /_crowdin/translation/%two_letters_code%/topics/%original_file_name%
+
+  - source: /_crowdin/source/tutorials/*
+    translation: /_crowdin/translation/%two_letters_code%/tutorials/%original_file_name%
