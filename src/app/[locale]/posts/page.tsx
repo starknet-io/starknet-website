@@ -1,5 +1,5 @@
-import { getCategories } from "src/data/categories";
-import { getTopics } from "src/data/topics";
+import { getCategories } from "@starknet-io/cms-data/src/categories";
+import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PostsPage } from "./(components)/PostsPage";
 
 export const metadata = {

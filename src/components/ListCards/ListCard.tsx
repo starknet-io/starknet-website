@@ -1,6 +1,5 @@
 "use client";
 import {
-  Avatar,
   Box,
   HStack,
   Icon,
@@ -14,16 +13,12 @@ import {
 } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import NextLink, { LinkProps } from "next/link";
-import * as React from "react";
+import NextLink from "next/link";
 
 import { HiArrowUpRight, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 
-import { Card } from "../Card/Card";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-import { CardLink } from "src/blocks/cards/CardLink";
-import Image from "next/image";
 import { titleCase } from "src/utils/utils";
 
 interface Type {
@@ -126,7 +121,7 @@ export const ListCard = (props: Props) => {
                   spacing={{ base: "1", md: "2" }}
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
-                  borderTop="1px solid #E6E6E6"
+                  borderTop={!props.startDateTime ? "none" : "1px solid #E6E6E6"}
                   paddingTop="12px"
                 >
                   <Heading

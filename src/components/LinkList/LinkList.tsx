@@ -1,10 +1,10 @@
 "use client";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { createContext, useContext } from "react";
 import { HiOutlineArrowRightCircle } from "react-icons/hi2";
-import { slugify } from "src/utils/utils";
-import { Avatar, Box, Flex, FlexProps, Icon, Link } from "../../libs/chakra-ui";
+import { Box, Icon, Flex, FlexProps, Link, Avatar } from "../../libs/chakra-ui";
+import { slugify } from "@starknet-io/cms-utils/src/index";
+import { createContext, useContext } from "react";
 import { ArrowUpIcon } from "./ArrowUpIcon";
 
 export type ListSize = "sm" | "md" | "lg";
@@ -15,7 +15,6 @@ const ListContext = createContext<{ listSize: ListSize; isSeperated: boolean }>(
     isSeperated: false,
   }
 );
-
 type RootProps = {
   heading?: string;
   listSize?: ListSize;

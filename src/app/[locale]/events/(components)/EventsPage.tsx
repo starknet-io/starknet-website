@@ -5,7 +5,6 @@ import {
   BreadcrumbLink,
   Breadcrumb,
   Box,
-  Container,
   Flex,
   VStack,
   HStack,
@@ -17,8 +16,7 @@ import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-  useInfiniteHits,
-  SortBy,
+  useInfiniteHits
 } from "src/libs/react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -26,7 +24,7 @@ import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
-import { Event } from "src/data/events";
+import { Event } from "@starknet-io/cms-data/src/events";
 import type { BaseHit } from "instantsearch.js";
 import Link from "next/link";
 import { getUnixTime, startOfDay } from "date-fns";

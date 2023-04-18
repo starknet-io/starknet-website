@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { slugify } from "src/utils/utils";
+import { slugify } from "@starknet-io/cms-utils/src/index";
 import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { Heading } from "@ui/Typography/Heading";
 

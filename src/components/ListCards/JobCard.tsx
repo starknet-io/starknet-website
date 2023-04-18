@@ -11,8 +11,6 @@ import {
 } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import * as React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
 import { Card } from "../Card/Card";

@@ -13,7 +13,6 @@ import {
   Link,
 } from "src/libs/chakra-ui";
 import ReactMarkdown from "react-markdown";
-import { MarkdownBlock } from "src/blocks/MarkdownBlock";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 
 import {
@@ -106,7 +105,7 @@ export const Alert = ({ body, uuid, hasCloseButton = true, variant = "info", tit
             padding: "0"
           }}
           alignItems={{ base: "baseline", lg: "center" }}
-          flexDirection={{ base: "column", lg: "row" }}  
+          flexDirection={{ base: "column", lg: "row" }}
         >
           <AlertTitle>{title}</AlertTitle>
           <AlertDescription>

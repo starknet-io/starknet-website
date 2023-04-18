@@ -9,11 +9,10 @@ import {
 } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { HiPlay } from "react-icons/hi2";
-import NextLink from "next/link";
-type Props = {
+
+type Props = (ButtonProps & LinkProps) & {
   active?: boolean;
-} & ButtonProps &
-  LinkProps;
+};
 
 export const ColumnLink = ({ active, ...props }: Props) => {
   return (

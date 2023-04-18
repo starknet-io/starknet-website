@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.projects.json",
+  "compilerOptions": {
+    "outDir": ".types",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  },
+  "include": ["src/**/*"],
+  "references": [{ "path": "../cms-utils" }]
+}
