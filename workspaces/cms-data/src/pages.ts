@@ -84,9 +84,13 @@ export interface LargeCardBlock {
 export interface LinkListItem {
   readonly type: "link_list_item";
   readonly link?: {
-    readonly label?: string;
-    readonly href?: string;
-    readonly isExternal?: boolean;
+    custom_title?: string;
+    custom_icon?: string;
+    custom_internal_link?: string;
+    custom_external_link?: string;
+    page?: string;
+    post?: string;
+    hasIcon?: boolean;
   };
   readonly subLabel?: {
     readonly label?: string;
