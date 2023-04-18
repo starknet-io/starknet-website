@@ -61,6 +61,7 @@ function postMessageHTML({ status, data }: PostMessageHTMLArgs) {
       function receiveMessage (message) {
         const allowedOrigin = (
           message.origin === 'http://localhost:1234' ||
+          message.origin === 'http://127.0.0.1:1234' ||
           /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms\\.pages\\.dev$/.test(message.origin)
         );
 

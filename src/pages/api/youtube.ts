@@ -6,6 +6,7 @@ const cors = Cors({
   methods: ["POST", "GET", "HEAD"],
   origin: [
     "https://starknet-website-cms.netlify.app",
+    "http://127.0.0.1:1234",
     "http://localhost:1234",
     /^https:\/\/[-_\w]+\.starknet-netlify-cms\.pages\.dev$/,
   ],
