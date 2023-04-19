@@ -131,6 +131,8 @@ export interface HeroBlock {
     | "learn"
     | "build"
     | "community";
+  readonly buttonText?: string;
+  readonly buttonUrl?: string;
 }
 export interface HomeHeroBlock {
   readonly type: "home_hero";
