@@ -103,7 +103,6 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomLocation />
               <CustomType />
-              {/* <CustomTags /> */}
             </Box>
           }
           main={
@@ -273,7 +272,7 @@ function CustomHits() {
                     image={hit.image}
                     title={hit.name}
                     description={hit.description}
-                    type={hit.tags}
+                    type={[hit.type]}
                     location={hit.location}
                     city={hit.city}
                     country={hit.country}
