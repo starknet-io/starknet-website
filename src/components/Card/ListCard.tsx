@@ -124,7 +124,10 @@ export const ListCard = (props: Props) => {
                 >
                   <Heading
                     variant="h4"
-                    color="heading-hero-gradient-1a"
+                    color="btn-primary-bg"
+                    _dark={{
+                      color: "button-nav-fg"
+                    }}
                   >
                     {props.title}
                   </Heading>
