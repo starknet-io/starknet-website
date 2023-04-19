@@ -343,6 +343,18 @@ export const blocks = [
         ],
         default: "learn",
       },
+      {
+        name: "buttonText",
+        label: "Button text",
+        required: false,
+        widget: "string",
+      },
+      {
+        name: "buttonUrl",
+        label: "Button url",
+        required: false,
+        widget: "string",
+      },
     ],
   },
   {

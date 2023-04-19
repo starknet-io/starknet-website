@@ -10,6 +10,7 @@ import {
   Text,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
+import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import React from "react";
 
@@ -24,6 +25,8 @@ type Props = {
     | "learn"
     | "build"
     | "community";
+  buttonText?: string;
+  buttonUrl?: string;
 };
 
 const heroStyles = {
@@ -68,6 +71,8 @@ export const HeroImage = ({
   title = "Dapps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
   variant = "dapps",
+  buttonText,
+  buttonUrl
 }: Props) => {
   return (
     <Box
@@ -201,6 +206,7 @@ export const HeroImage = ({
                   >
                     {description}
                   </Text>
+                  {!!buttonText && <Button variant="solid" style={{alignSelf:"flex-start"}} href={buttonUrl}>{buttonText}</Button>}
                 </Stack>
               </Stack>
               {/* <Stack direction={{ base: "column", md: "row" }} spacing="3">

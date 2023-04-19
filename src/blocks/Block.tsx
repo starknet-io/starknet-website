@@ -127,6 +127,8 @@ export async function Block({ block, locale }: Props): JSX.Element {
         title={block.title}
         description={block.description}
         variant={block.variant}
+        buttonText={block.buttonText}
+        buttonUrl={block.buttonUrl}
       />
     );
   } else if (block.type === "home_hero") {

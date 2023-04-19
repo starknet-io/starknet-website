@@ -15,6 +15,8 @@ type HeroImageProps = {
     | "dapps"
     | "build"
     | "community";
+  buttonText?: string;
+  buttonUrl?: string;
 };
 
 export default {
@@ -24,7 +26,7 @@ export default {
     title: { control: "text" },
     description: { control: "text" },
     variant: {
-      options: ["wallets", "block_explorers", "bridges", "dapps", "learn", "build", "community"],
+      options: ["wallets", "block_explorers", "bridges", "dapps", "build", "community"],
       control: { type: "select" }
     }
   },
@@ -38,57 +40,30 @@ export default {
 
 } as Meta<typeof HeroImage>;
 
-export const Wallets = (args: HeroImageProps) => (
+export const All = (args: HeroImageProps) => {
+  const {
+    variant,
+    title,
+    description,
+    buttonText,
+    buttonUrl
+  } = args;
+  return (
   <ThemeProvider>
     <HeroImage
-      variant="wallets"
-      title="Wallets"
-      description="Explore the wallets that allow you to interact with and build in the Starknet ecosystem."
+      variant={variant}
+      title={title}
+      description={description}
+      buttonText={buttonText}
+      buttonUrl={buttonUrl}
     />
   </ThemeProvider>
-);
-export const BlockExplorers = (args: HeroImageProps) => (
-  <ThemeProvider>
-    <HeroImage
-      variant="block_explorers"
-      title="Block explorers"
-      description="Explore blocks, transactions, and other metrics of Starknet."
-    />
-  </ThemeProvider>
-);
-export const Bridges = (args: HeroImageProps) => (
-  <ThemeProvider>
-    <HeroImage
-      variant="bridges"
-      title="Bridges & fiat on-ramps"
-      description="Explore blocks, transactions, and other metrics of Starknet."
-    />
-  </ThemeProvider>
-);
-export const Dapps = (args: HeroImageProps) => (
-  <ThemeProvider>
-     <HeroImage
-      variant="dapps"
-      title="Dapps"
-      description="Explore blocks, transactions, and other metrics of Starknet."
-    />
-  </ThemeProvider>
-);
-export const Build = (args: HeroImageProps) => (
-  <ThemeProvider>
-    <HeroImage
-      variant="build"
-      title="Developer hub"
-      description="Explore blocks, transactions, and other metrics of Starknet."
-    />
-  </ThemeProvider>
-);
-export const Community = (args: HeroImageProps) => (
-  <ThemeProvider>
-    <HeroImage
-      variant="community"
-      title="Community hub"
-      description="Explore blocks, transactions, and other metrics of Starknet."
-    />
-  </ThemeProvider>
-);
+)
+};
+All.args = {
+  variant: "community",
+  title: "Community hub",
+  description: "Explore blocks, transactions, and other metrics of Starknet.",
+  buttonText: "Explore community",
+  buttonUrl: "/community",
+}
