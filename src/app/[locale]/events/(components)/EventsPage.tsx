@@ -16,7 +16,7 @@ import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-  useInfiniteHits
+  useInfiniteHits,
 } from "src/libs/react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -103,7 +103,7 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomLocation />
               <CustomType />
-              <CustomTags />
+              {/* <CustomTags /> */}
             </Box>
           }
           main={
@@ -199,38 +199,6 @@ function CustomType() {
             {titleCase(item.label)}
           </Button>
         ))}
-      </VStack>
-    </Box>
-  );
-}
-
-function CustomTags() {
-  const { items, refine } = useRefinementList({
-    attribute: "tags",
-    sortBy: ["name:asc"],
-  });
-
-  return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
-        Tags
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => {
-          let label = titleCase(item.label);
-
-          return (
-            <Button
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
-              key={i}
-              justifyContent="flex-start"
-            >
-              {label}
-            </Button>
-          );
-        })}
       </VStack>
     </Box>
   );
