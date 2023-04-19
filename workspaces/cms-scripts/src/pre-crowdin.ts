@@ -9,7 +9,7 @@ const dotenvFiles = [".env.local", ".env"];
 
 dotenvFiles.forEach((path) => dotenv.config({ path }));
 
-import { yaml } from "./utils";
+import { scandir, yaml } from "./utils";
 import { Files, handleFields } from "./crowdin";
 import { CmsField } from "netlify-cms-core";
 
@@ -28,7 +28,7 @@ for (const collection of collections) {
       );
     }
   } else if ("folder" in collection) {
-    const filenames = await fs.readdir(path.join("_data", collection.name));
+    const filenames = await scandir(path.join("_data", collection.name));
 
     for (const filename of filenames) {
       const filepath = path.join("_data", collection.name, filename);
