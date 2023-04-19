@@ -6,7 +6,6 @@ import { forwardRef } from 'react';
 
 const iconButtonTheme = defineStyle({
   height: "auto",
-  padding: "11px",
   color: "darkMode.card",
   bg: "transparent",
   borderColor: "transparent",
@@ -68,9 +67,12 @@ const iconButtonTheme = defineStyle({
 export interface Props extends IconButtonProps {
   toId?: string;
   href?: string;
+  size?: | "default" | "small";
 };
 
-export const IconButton = forwardRef<HTMLButtonElement, Props>(({ href, toId, ...rest }, ref) => {
+export const IconButton = forwardRef<HTMLButtonElement, Props>(({ href, toId, size, ...rest }, ref) => {
+  const paddingValue = size === "small" ? "0" : "11px";
+  const minWidthValue = size === "small" ? "auto" : "2.5rem";
   const handleOnClick = () => {
     if (!toId) {
       return;
@@ -79,7 +81,15 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(({ href, toId, ..
     scrollIntoView(toId);
   };
   return (
-    <ChakraIconButton href={href} ref={ref} sx={iconButtonTheme} onClick={handleOnClick} {...rest} />
+    <ChakraIconButton
+      href={href}
+      ref={ref}
+      sx={iconButtonTheme}
+      onClick={handleOnClick}
+      padding={paddingValue}
+      minWidth={minWidthValue}
+      {...rest}
+    />
   );
 });
 
