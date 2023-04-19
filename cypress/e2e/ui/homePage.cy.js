@@ -1,15 +1,11 @@
 import {} from "../../support/command";
 
-import { LoginPage } from "../../pageObjects/home.po.js";
-
-//import { getCards } from "../../pageObjects/home.po.js";
+import { HomePage } from "../../pageObjects/home.po.js";
 
 describe("home page", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.location("pathname").should("eq", "/en");
-    //cy.waitForAllNextjsStackFrameRequests();
-    //cy.waitForNextjsStackFrameRequests();
   });
 
   it("checks links on the page return 200", () => {
@@ -23,7 +19,6 @@ describe("home page", () => {
   });
 
   it.only("checks all cards have a parent link", () => {
-    LoginPage.getCards().closest("a").should("have.class", "chakra-linkbox");
-    //getCards().closest("a").should("have.class", "chakra-linkbox");
+    HomePage.getCards().closest("a").should("have.class", "chakra-linkbox");
   });
 });

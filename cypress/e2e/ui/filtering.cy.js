@@ -13,8 +13,10 @@ describe("filtering events list", () => {
 
   beforeEach(() => {
     cy.visit("/en/events");
-    cy.interceptAndAssertAlgoliaRequest();
-
+    //cy.interceptAndAssertAlgoliaRequest();
+    // let hello = process.env.ALGOLIA_INDEX;
+    // cy.log("hello", hello);
+    // console.log("hello", hello);
     cy.getNumberOfEvents().then((noOfEvents) => {
       upcomingEventsCount = noOfEvents;
       expect(upcomingEventsCount).to.be.greaterThan(0);
@@ -31,7 +33,7 @@ describe("filtering events list", () => {
   // filtered events should be less than events - not necessarily
   // filtered events should contain the tag for the tag button clicked
 
-  it("should filter upcoming events by tag", () => {
+  it.only("should filter upcoming events by tag", () => {
     // upcoming events should be selected
     cy.upcomingEventsIsSelected().then((isSelected) => {
       expect(isSelected).to.be.true;

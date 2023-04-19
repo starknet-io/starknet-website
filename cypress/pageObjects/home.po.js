@@ -1,9 +1,5 @@
-export const LoginPage = {
+export const HomePage = {
   getCards() {
     return cy.get(".chakra-card.css-1onecx3");
   },
 };
-
-// export function getCards() {
-//   return cy.get(".chakra-card.css-1onecx3");
-// }

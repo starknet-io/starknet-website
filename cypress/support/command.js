@@ -385,6 +385,8 @@ Cypress.Commands.add("getTagCountOnEvents", (buttonIndex) => {
 //     .should("eq", 200);
 // });
 
+// doesn't work
+//CypressError: `cy.as()` can only accept a string.
 Cypress.Commands.add("waitForAllNextjsStackFrameRequests", () => {
   const requests = [];
 
@@ -441,13 +443,14 @@ Cypress.Commands.add("interceptAlgoliaRequest", () => {
 Cypress.Commands.add("interceptAndAssertAlgoliaRequest", () => {
   cy.intercept(
     "POST",
-    "https://vhyjo45ti4-dsn.algolia.net/1/indexes/*/queries?**",
+    `https://vhyjo45ti4-dsn.algolia.net/1/indexes/${process.env.ALGOLIA_INDEX}/queries?**`,
     (req) => {
       req.headers["x-custom-header"] = "custom-value";
     }
   ).as("algoliaPostRequest");
 
   cy.wait("@algoliaPostRequest", { timeout: 10000 }).then((interception) => {
+    cy.log(interception);
     expect(interception.response.statusCode).to.eq(200);
   });
 });

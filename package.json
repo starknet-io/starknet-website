@@ -69,12 +69,8 @@
     "browser-lang": "0.1.0",
     "classnames": "^2.3.2",
     "cors": "^2.8.5",
-<<<<<<< Updated upstream
-    "cypress": "^12.9.0",
-=======
     "cypress": "^12.7.0",
     "cypress-wait-until": "^1.7.2",
->>>>>>> Stashed changes
     "date-fns": "^2.29.3",
     "eslint": "^8.37.0",
     "eslint-config-next": "^13.2.4",

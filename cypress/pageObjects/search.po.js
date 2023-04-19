@@ -1,80 +1,47 @@
-export function getSearchBtn() {
-  return cy.get(".aa-DetachedSearchButton");
-}
-
-export function getCancelSearchBtn() {
-  return cy.get(".aa-DetachedCancelButton");
-}
-
-export function getClearBtn() {
-  return cy.get(".aa-ClearButton");
-}
-
-export function getListOfPages() {
-  return cy.get("[data-autocomplete-source-id='pages'] ul");
-}
-
-export function getPopularSearches() {
-  return cy.get(
-    "[data-autocomplete-source-id='querySuggestionsPlugin'] .aa-List .aa-Item .aa-ItemContentTitle"
-  );
-}
-
-export function getRecentSearches() {
-  return cy.get(
-    "[data-autocomplete-source-id='recentSearchesPlugin'] .aa-List .aa-Item .aa-ItemContentTitle"
-  );
-}
-
-export function getRemoveThisSearchBtns(searchTerm) {
-  return cy.get(
-    "[data-autocomplete-source-id='recentSearchesPlugin'] button[title='Remove this search']"
-  );
-}
-
-export function getSearchInput() {
-  return cy.get(".aa-Input");
-}
-
-export function getSearchModal() {
-  return cy.get(".aa-DetachedContainer--modal");
-}
-
-export function getSearchResultsFromPosts() {
-  return cy.get("[data-autocomplete-source-id='posts']");
-}
-
-export function getSearchResultsFromDocumentation() {
-  return cy.get("[data-autocomplete-source-id='docs']");
-}
-
-export function getFillQueryBtnFromRecentSearch() {
-  return cy.get(
-    "[data-autocomplete-source-id='recentSearchesPlugin'] button[title^='Fill query with']"
-  );
-}
-
-export function getFillQueryBtnFromPopularSearch() {
-  return cy.get(
-    "[data-autocomplete-source-id='querySuggestionsPlugin'] button"
-  );
-}
-
-export function clearSearchInput() {
-  getSearchInput()
-    .then(($input) => {
+export const SearchPage = {
+  clearSearchInput() {
+    SearchPage.getSearchInput().then(($input) => {
       if ($input.val().length > 0) {
-        getClearBtn().should("be.visible").click();
+        SearchPage.getClearBtn().should("be.visible").click();
       }
-    })
-    .should(($input) => {
-      expect($input.val()).to.equal("");
     });
-}
-
-export function performSearch(searchTerm) {
-  getSearchBtn().should("be.visible").click();
-  getSearchModal().should("be.visible");
-  getSearchInput().type(searchTerm).type("{enter}");
-  getSearchModal().should("not.exist");
-}
+  },
+  getBtnsOnSearchResultsItems(sourceId, title) {
+    return cy
+      .get(`[data-autocomplete-source-id='${sourceId}']`)
+      .find(`[title^='${title}']`);
+  },
+  getCancelSearchBtn() {
+    return cy.get(".aa-DetachedCancelButton");
+  },
+  getClearBtn() {
+    return cy.get(".aa-ClearButton");
+  },
+  getSearchBtn() {
+    return cy.get(".aa-DetachedSearchButton");
+  },
+  getSearchInput() {
+    return cy.get(".aa-Input");
+  },
+  getSearchModal() {
+    return cy.get(".aa-DetachedContainer--modal");
+  },
+  getSearchResultsSection(sourceId) {
+    return cy.get(`[data-autocomplete-source-id='${sourceId}']`);
+  },
+  getSearchResultItems(sourceId) {
+    return cy
+      .get(`[data-autocomplete-source-id='${sourceId}']`)
+      .find(".aa-Item");
+  },
+  openSearch() {
+    SearchPage.getSearchBtn().should("be.visible").click();
+    SearchPage.getSearchModal().should("be.visible");
+  },
+  performSearch(searchTerm) {
+    SearchPage.getSearchBtn().should("be.visible").click();
+    SearchPage.getSearchModal().should("be.visible");
+    SearchPage.getSearchInput().type(searchTerm).type("{enter}");
+    SearchPage.getSearchModal().should("not.exist");
+  },
+};
