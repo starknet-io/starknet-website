@@ -12,30 +12,31 @@ blocks:
       ![](/assets/sn_logo_banner.png)
   - type: link_list
     heading: ""
+    listSize: "lg"
     blocks:
-      - is_external: false
-        label: SVG only
-        sub_label: ""
-        href: /assets/starknet-logos-svg.zip
-      - is_external: false
-        label: PNG only
-        href: /assets/starknet-logos-png.zip
-      - is_external: false
-        label: Complete kit
-        href: /assets/starknet-logos-complete.zip
+      - link:
+          custom_title: SVG only
+          custom_internal_link: /assets/starknet-logos-svg.zip
+      - link:
+          custom_title: PNG only
+          custom_internal_link: /assets/starknet-logos-png.zip
+      - link:
+          custom_title: Complete kit
+          custom_internal_link: /assets/starknet-logos-complete.zip
   - type: markdown
     body: |-
       ## Cairo logo kit
 
       ![](/assets/cairo_logo_banner.png)
   - type: link_list
+    listSize: "lg"
     blocks:
-      - is_external: false
-        label: SVG only
-        href: /assets/cairo-logos-svg.zip
-      - is_external: false
-        label: PNG only
-        href: /assets/cairo-logos-png.zip
-      - is_external: false
-        label: Complete kit
-        href: /assets/cairo-logos-complete.zip
+      - link:
+          custom_title: SVG only
+          custom_internal_link: /assets/cairo-logos-svg.zip
+      - link:
+          custom_title: PNG only
+          custom_internal_link: /assets/cairo-logos-png.zip
+      - link:
+          custom_title: Complete kit
+          custom_internal_link: /assets/cairo-logos-complete.zip

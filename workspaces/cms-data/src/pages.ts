@@ -83,10 +83,24 @@ export interface LargeCardBlock {
 }
 export interface LinkListItem {
   readonly type: "link_list_item";
-  readonly label?: string;
-  readonly href?: string;
-  readonly sub_label?: string;
-  readonly is_external?: boolean;
+  readonly link?: {
+    custom_title?: string;
+    custom_icon?: string;
+    custom_internal_link?: string;
+    custom_external_link?: string;
+    page?: string;
+    post?: string;
+    hasIcon?: boolean;
+  };
+  readonly subLabel?: {
+    readonly label?: string;
+    readonly boldLabel?: string;
+  };
+  readonly avatar?: {
+    readonly title?: string;
+    readonly displayTitle?: boolean;
+    readonly url?: string;
+  };
 }
 
 export interface AccordionItem {
@@ -124,6 +138,7 @@ export interface HomeHeroBlock {
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
+  readonly listSize?: "sm" | "md" | "lg";
   readonly blocks: readonly LinkListItem[];
 }
 export interface AccordionBlock {
