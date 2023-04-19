@@ -58,7 +58,6 @@ export const IconLinkCard = ({
             justify="flex-end"
             alignItems="flex-start"
           >
-            {/* <Image src={icon} mb="20px" alt={title} /> */}
             <Stack spacing="1">
               <Text color="heading-navy-fg" fontSize="24px" fontWeight="bold">
                 {title}

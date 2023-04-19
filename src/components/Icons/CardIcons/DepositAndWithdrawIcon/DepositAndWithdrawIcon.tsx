@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // 3.svg, deposit-withdraw.svg
 const DepositAndWithdrawIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} width="106" height="104" viewBox="0 0 106 104" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 20C5.1439 20 0.666748 15.5228 0.666748 9.99999C0.666748 4.47715 5.1439 0 10.6667 0C15.8521 0 20.1157 3.94668 20.6174 9H35.6667C40.6373 9 44.6667 13.0294 44.6667 18V25H42.6667V18C42.6667 14.134 39.5327 11 35.6667 11H20.6174C20.1156 16.0533 15.8521 20 10.6667 20ZM13.4601 9.99956L8.8132 14.6464L9.5203 15.3536L14.8743 9.99956L9.5203 4.64557L8.8132 5.35268L13.4601 9.99956Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

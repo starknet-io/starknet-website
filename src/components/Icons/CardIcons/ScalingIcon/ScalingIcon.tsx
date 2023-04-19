@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // unlimited_scale.svg
 const ScalingIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} xmlns="http://www.w3.org/2000/svg" width="102" height="102" viewBox="0 0 102 102" fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M90.8787 20.293C92.7686 22.1829 96 20.8444 96 18.1717V9.00015C96 7.34329 94.6569 6.00015 93 6.00015L83.8284 6.00015C81.1557 6.00015 79.8172 9.23157 81.7071 11.1215L90.8787 20.293ZM94 18.1717C94 19.0626 92.9229 19.5088 92.2929 18.8788L83.1213 9.70725C82.4914 9.07729 82.9375 8.00015 83.8284 8.00015L93 8.00015C93.5523 8.00015 94 8.44786 94 9.00015V18.1717Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

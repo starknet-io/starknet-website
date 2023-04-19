@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // on-chain-computation.svg
 const OnChainComputationIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} xmlns="http://www.w3.org/2000/svg" width="103" height="106" viewBox="0 0 103 106" fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M50 21C50 24.3137 52.6863 27 56 27C59.3137 27 62 24.3137 62 21C62 17.6863 59.3137 15 56 15C52.6863 15 50 17.6863 50 21ZM52 21C52 23.2091 53.7909 25 56 25C58.2091 25 60 23.2091 60 21C60 18.7909 58.2091 17 56 17C53.7909 17 52 18.7909 52 21Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

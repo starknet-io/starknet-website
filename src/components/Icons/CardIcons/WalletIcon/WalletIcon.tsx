@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // 2.svg, wallet.svg
 const WalletIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} width="106" height="104" viewBox="0 0 106 104" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M74.3334 52C74.3334 63.0457 65.3791 72 54.3334 72C43.2877 72 34.3334 63.0457 34.3334 52C34.3334 40.9543 43.2877 32 54.3334 32C65.3791 32 74.3334 40.9543 74.3334 52ZM55.3334 43.4134L63.6267 51.7067L65.0409 50.2925L56.4542 41.7058C55.2826 40.5343 53.3831 40.5343 52.2116 41.7058L43.6249 50.2925L45.0391 51.7067L53.3334 43.4125V61.0706H55.3334V43.4134Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

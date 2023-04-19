@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 
 const OnrampIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104" fill="none">
       <path d="M81.2681 76C82.0379 74.6667 83.9624 74.6667 84.7322 76L92.5264 89.5C93.2962 90.8333 92.334 92.5 90.7944 92.5H75.2059C73.6663 92.5 72.7041 90.8333 73.4739 89.5L81.2681 76Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

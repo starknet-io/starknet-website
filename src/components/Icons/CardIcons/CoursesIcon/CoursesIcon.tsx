@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // yellow.svg, orange.svg, green.svg
 const CoursesIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} xmlns="http://www.w3.org/2000/svg" width="92" height="97" viewBox="0 0 92 97" fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0.0136542C3.76201 0.273095 0 4.19722 0 9V16C0 18.7614 2.23858 21 5 21H14V19H5C3.34315 19 2 17.6569 2 16V9C2 5.13401 5.13401 2 9 2C12.866 2 16 5.13401 16 9V88C16 92.8028 19.762 96.7269 24.5 96.9863V97H83C87.9706 97 92 92.9706 92 88V80C92 77.2386 89.7614 75 87 75H37C34.2386 75 32 77.2386 32 80V88C32 91.866 28.866 95 25 95C21.134 95 18 91.866 18 88V9C18 6.17273 16.6963 3.64996 14.6573 2H73C76.866 2 80 5.13401 80 9V73H82V9C82 4.02944 77.9706 0 73 0H8.5V0.0136542ZM30.6573 95H83C86.866 95 90 91.866 90 88V80C90 78.3431 88.6569 77 87 77H37C35.3431 77 34 78.3431 34 80V88C34 90.8273 32.6963 93.35 30.6573 95Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

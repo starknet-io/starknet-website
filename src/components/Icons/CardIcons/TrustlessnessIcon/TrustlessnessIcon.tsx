@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // trustlessness.svg
 const TrustlessnessIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106" fill="none">
       <path d="M92 26C92 32.6274 86.6274 38 80 38C73.3726 38 68 32.6274 68 26C68 19.3726 73.3726 14 80 14C86.6274 14 92 19.3726 92 26Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

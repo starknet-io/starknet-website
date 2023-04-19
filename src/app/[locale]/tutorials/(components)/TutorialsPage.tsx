@@ -302,7 +302,7 @@ type Tutorial = {
 
 function CustomHits() {
   const { hits, showMore, isLastPage } = useInfiniteHits<Tutorial>();
-console.log('hits ', hits)
+
   return (
     <>
       <Grid

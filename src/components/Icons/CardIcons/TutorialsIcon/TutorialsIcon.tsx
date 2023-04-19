@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // 7.svg, tutorials.svg
 const TutorialsIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} width="113" height="105" viewBox="0 0 113 105" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M9.66675 14C8.56218 14 7.66675 14.8954 7.66675 16C7.66675 17.1046 8.56218 18 9.66675 18H35.6667C36.7713 18 37.6667 17.1046 37.6667 16C37.6667 14.8954 36.7713 14 35.6667 14H9.66675Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>

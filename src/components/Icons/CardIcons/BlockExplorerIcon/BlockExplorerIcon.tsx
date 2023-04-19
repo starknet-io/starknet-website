@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { CardIconProps } from "../IconInterface";
 // dapps.svg
 const BlockExplorerIcon: React.FC<CardIconProps> = ({ gradientColor1, gradientColor2, filter, borderRadius }, props) => {
-  const gradientIdPrefix = `gradient-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const gradientIdPrefix = `gradient-${id}`;
   return (
     <svg filter={filter} border-radius={borderRadius} xmlns="http://www.w3.org/2000/svg" width="86" height="97" viewBox="0 0 86 97" fill="none">
       <path d="M43.8398 11.299C43.4458 10.6896 42.5542 10.6896 42.1602 11.299L41.1571 12.8506C41.0222 13.0593 40.8144 13.2103 40.5742 13.2741L38.7886 13.7486C38.0872 13.935 37.8117 14.7829 38.2696 15.346L39.4352 16.7794C39.592 16.9723 39.6714 17.2166 39.6579 17.4647L39.5574 19.3096C39.5179 20.0342 40.2392 20.5583 40.9162 20.2968L42.6397 19.6312C42.8716 19.5416 43.1284 19.5416 43.3603 19.6312L45.0838 20.2968C45.7608 20.5583 46.4821 20.0342 46.4426 19.3096L46.3421 17.4647C46.3286 17.2166 46.408 16.9723 46.5648 16.7794L47.7304 15.346C48.1883 14.7829 47.9128 13.935 47.2114 13.7486L45.4258 13.2741C45.1856 13.2103 44.9778 13.0593 44.8429 12.8506L43.8398 11.299Z" fill={`url(#${`${gradientIdPrefix}-paint0_linear`})`}/>
