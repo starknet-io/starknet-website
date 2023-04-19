@@ -172,6 +172,18 @@ export const HeroImage = ({
                       bgGradient="linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)"
                       bgClip="div"
                       height="1px"
+                      position="relative"
+                      _after={{
+                          position: "absolute",
+                          content: `""`,
+                          bottom: "-1.5px",
+                          right: 0,
+                          width: 0,
+                          height: 0,
+                          borderTop: "2px solid transparent",
+                          borderBottom: "2px solid transparent",
+                          borderLeft: "5px solid #D672EF"
+                      }}
                     />
                   </Box>
 
