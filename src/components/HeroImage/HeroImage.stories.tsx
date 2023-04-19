@@ -13,7 +13,6 @@ type HeroImageProps = {
     | "block_explorers"
     | "bridges"
     | "dapps"
-    | "learn"
     | "build"
     | "community";
 };
@@ -71,15 +70,6 @@ export const Dapps = (args: HeroImageProps) => (
      <HeroImage
       variant="dapps"
       title="Dapps"
-      description="Explore blocks, transactions, and other metrics of Starknet."
-    />
-  </ThemeProvider>
-);
-export const Learn = (args: HeroImageProps) => (
-  <ThemeProvider>
-    <HeroImage
-      variant="learn"
-      title="Learn"
       description="Explore blocks, transactions, and other metrics of Starknet."
     />
   </ThemeProvider>
