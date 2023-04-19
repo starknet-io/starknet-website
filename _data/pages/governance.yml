@@ -24,50 +24,54 @@ blocks:
 
       We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
   - type: link_list
+    listSize: lg
     heading: Active proposals
     blocks:
-      - is_external: true
-        label: Snapshot
-        sub_label: View active Starknet proposals on Snapshot
-        href: https://snapshot.org/#/starknet.eth
+      - link:
+          custom_title: Snapshot
+          custom_external_link: https://snapshot.org/#/starknet.eth
+        subLabel:
+          label: View active Starknet proposals on Snapshot
   - type: link_list
+    listSize: lg
     heading: Community discussion
     blocks:
-      - is_external: true
-        href: https://community.starknet.io/c/governance/8
-        label: Community forum
-        sub_label: Starknet governance discussion on Discourse
+      - link:
+          custom_title: https://community.starknet.io/c/governance/8
+          custom_external_link: Community forum
+        subLabel:
+          label: Starknet governance discussion on Discourse
   - type: link_list
+    listSize: lg
     heading: "Delegate discovery "
     blocks:
-      - is_external: true
-        label: Starknet delegate discovery page
-        href: https://delegate.starknet.io/
-        sub_label: Helping token holders choose delegates
+      - link:
+          custom_title: Starknet delegate discovery page
+          custom_external_link: https://delegate.starknet.io/
+        subLabel:
+          label: Helping token holders choose delegates
   - type: link_list
+    listSize: lg
     heading: Further reading
     blocks:
-      - is_external: false
-        label: "Starknet’s governance: First phase"
-        href: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
-        sub_label: ""
-      - is_external: false
-        label: Starknet token is deployed on Ethereum
-        href: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
-        sub_label: ""
-      - is_external: false
-        href: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
-        label: Welcome to the world, Starknet foundation!
-        sub_label: ""
-      - is_external: false
-        label: "Introducing: The StarkNet Foundation"
-        href: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
-      - is_external: false
-        label: "Part 1: StarkNet sovereignty: A decentralization proposal"
-        href: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
-      - is_external: false
-        label: "Part 2: A Decentralization and governance proposal for Starknet"
-        href: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
-      - is_external: false
-        href: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
-        label: "Part 3: Starknet Token Design"
+      - link:
+          custom_title: "Starknet’s governance: First phase"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
+      - link:
+          custom_title: Starknet token is deployed on Ethereum
+          custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
+      - link:
+          custom_title: Welcome to the world, Starknet foundation!
+          custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
+      - link:
+          custom_title: "Introducing: The StarkNet Foundation"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
+      - link:
+          custom_title: "Part 1: StarkNet sovereignty: A decentralization proposal"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
+      - link:
+          custom_title: "Part 2: A Decentralization and governance proposal for Starknet"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+      - link:
+          custom_title: "Part 3: Starknet Token Design"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design

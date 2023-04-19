@@ -10,26 +10,32 @@ blocks:
     description: Join the groups building and driving Starknet forward.
   - type: link_list
     heading: "Official Starknet communities "
+    listSize: lg
     blocks:
       - type: link_list_item
-        is_external: true
-        label: Discord
-        sub_label: "Join the conversation on Discord "
-        href: https://starknet.io/discord
+        link:
+          custom_title: Discord
+          custom_external_link: https://starknet.io/discord
+        subLabel:
+          label: "Join the conversation on Discord "
       - type: link_list_item
-        is_external: true
-        label: Twitter
-        sub_label: The official Starknet community account on Twitter
-        href: https://twitter.com/Starknet
+        link:
+          custom_title: Twitter
+          custom_external_link: https://twitter.com/Starknet
+        subLabel:
+          label: The official Starknet community account on Twitter
       - type: link_list_item
-        is_external: true
-        label: "Community forum "
-        sub_label: Share, discuss and collaborate on initiatives.
-        href: https://community.starknet.io/
+        link:
+          custom_title: "Community forum "
+          custom_external_link: https://community.starknet.io/
+        subLabel:
+          label: Share, discuss and collaborate on initiatives.
   - type: link_list
     heading: Telegram groups
+    listSize: lg
     blocks:
-      - is_external: true
-        label: Starknet Version Updates
-        sub_label: Get notified on technical updates to Starknet
-        href: https://t.me/+EkT8aCg9R-xjZGU0
+      - link:
+          custom_title: Starknet Version Updates
+          custom_external_link: https://t.me/+EkT8aCg9R-xjZGU0
+        subLabel:
+          label: Get notified on technical updates to Starknet
