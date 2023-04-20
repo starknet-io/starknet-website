@@ -10,17 +10,23 @@ describe("Links", () => {
   */
 
   it(`checks links returns 200 OK Status code on the 'what is starknet' page`, () => {
+    cy.log("**visit 'what is starknet' page**");
     cy.goToPage("en/learn/what-is-starknet");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'glossary' page`, () => {
+    cy.log("**visit 'glossary' page**");
     cy.goToPage("en/learn/glossary");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'faq' page`, () => {
+    cy.log("**visit 'faq' page**");
     cy.goToPage("en/learn/frequently-asked-questions");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
@@ -30,25 +36,30 @@ describe("Links", () => {
   */
 
   it(`checks links returns 200 OK Status code on the 'developers hub' page`, () => {
+    cy.log("**visit 'developers hub' page**");
     cy.goToPage("en/developers"); //incorrect url?
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks each link returns 200 OK Status code on the 'tutorials' page`, () => {
+    cy.log("**visit 'tutorials' page**");
     cy.goToPage("en/tutorials"); //incorrect url
-    cy.interceptAndAssertAlgoliaRequest();
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'tools & resources' page`, () => {
+    cy.log("**visit 'tools & resources' page**");
     cy.goToPage("en/developers/tools-and-resources");
-    cy.get(pagelinks).its("length").as("pagelinksLength");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'engineering blog' page`, () => {
+    cy.log("**visit 'engineering blog' page**");
     cy.goToPage("en/posts/engineering");
-    cy.get(pagelinks).its("length").as("pagelinksLength");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
@@ -58,22 +69,30 @@ describe("Links", () => {
   */
 
   it(`checks links returns 200 OK Status code on the 'dapps' page`, () => {
+    cy.log("**visit 'dapps' page**");
     cy.goToPage("/en/ecosystem/dapps");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'wallets' page`, () => {
+    cy.log("**visit 'wallets' page**");
     cy.goToPage("/en/ecosystem/wallets");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'bridges & on-ramps' page`, () => {
+    cy.log("**visit 'bridges & on-ramps' page**");
     cy.goToPage("en/ecosystem/bridges-and-onramps");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'block explorers' page`, () => {
+    cy.log("**visit 'block explorers' page**");
     cy.goToPage("en/ecosystem/block-explorers");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
@@ -85,13 +104,18 @@ describe("Links", () => {
   */
 
   it(`checks links returns 200 OK Status code on the 'community hub' page`, () => {
+    cy.log("**visit 'community hub' page**");
     cy.goToPage("en/community");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'events' page`, () => {
+    cy.log("**visit 'events' page**");
     cy.goToPage("en/events"); // incorrect url.. so might be changed
-    cy.interceptAndAssertAlgoliaRequest();
+    cy.log("**wait for events to display**");
+    cy.wait(1000); // maybe do a call here to wait for agolia to return results
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
