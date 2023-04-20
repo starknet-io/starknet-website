@@ -45,6 +45,8 @@ describe("Links", () => {
   it(`checks each link returns 200 OK Status code on the 'tutorials' page`, () => {
     cy.log("**visit 'tutorials' page**");
     cy.goToPage("en/tutorials"); //incorrect url
+    cy.log("**wait for tutorials to display**");
+    cy.wait(2000); // maybe do a call here to wait for agolia to return results
     cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
@@ -114,35 +116,47 @@ describe("Links", () => {
     cy.log("**visit 'events' page**");
     cy.goToPage("en/events"); // incorrect url.. so might be changed
     cy.log("**wait for events to display**");
-    cy.wait(1000); // maybe do a call here to wait for agolia to return results
+    cy.wait(2000); // maybe do a call here to wait for agolia to return results
     cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'jobs' page`, () => {
+    cy.log("**visit 'jobs' page**");
     cy.goToPage("en/jobs"); // incorrect url.. so might be changed
-    cy.interceptAndAssertAlgoliaRequest();
+    cy.log("**wait for jobs to display**");
+    cy.wait(2000); // maybe do a call here to wait for agolia to return results
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'governance' page`, () => {
+    cy.log("**visit 'governance' page**");
     cy.goToPage("en/community/governance");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'online communities' page`, () => {
+    cy.log("**visit 'online communities' page**");
     cy.goToPage("en/community/online-communities");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'all blog posts' page`, () => {
+    cy.log("**visit 'all blog posts' page**");
     cy.goToPage("en/posts"); // incorrect url.. so might be changed
-    cy.interceptAndAssertAlgoliaRequest();
+    cy.log("**wait for blog posts to display**");
+    cy.wait(2000); // maybe do a call here to wait for agolia to return results
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 
   it(`checks links returns 200 OK Status code on the 'language support' page`, () => {
+    cy.log("**visit 'language support' page**");
     cy.goToPage("en/community/language-support");
+    cy.log("**check all links on the page return 200**");
     cy.checkLinksBySelector(pagelinks);
   });
 });

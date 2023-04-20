@@ -12,11 +12,13 @@ describe("filtering events list", () => {
   let upcomingEventsCount;
 
   beforeEach(() => {
+    cy.log("**visit events page**");
     cy.visit("/en/events");
-    //cy.interceptAndAssertAlgoliaRequest();
-    // let hello = process.env.ALGOLIA_INDEX;
-    // cy.log("hello", hello);
-    // console.log("hello", hello);
+    cy.log("**check path is correct**");
+    cy.location("pathname").should("eq", "/en/events");
+    cy.log("**check the page is loaded**");
+    // wait for events to load
+    cy.log("**check events display**");
     cy.getNumberOfEvents().then((noOfEvents) => {
       upcomingEventsCount = noOfEvents;
       expect(upcomingEventsCount).to.be.greaterThan(0);
@@ -34,29 +36,28 @@ describe("filtering events list", () => {
   // filtered events should contain the tag for the tag button clicked
 
   it.only("should filter upcoming events by tag", () => {
-    // upcoming events should be selected
-    cy.upcomingEventsIsSelected().then((isSelected) => {
+    cy.log("**check upcoming events link is selected**");
+    cy.upcomingEventsLinkIsSelected().then((isSelected) => {
       expect(isSelected).to.be.true;
     });
-
-    // upcoming events should display
+    cy.log("**check events display**");
     let upcomingEventsCount;
     cy.getNumberOfEvents().then((noOfEvents) => {
       upcomingEventsCount = noOfEvents;
       expect(upcomingEventsCount).to.be.greaterThan(0);
     });
-
+    // does not work - refactor
     cy.interceptAlgoliaRequest();
-
-    // first tag button in the navigation should be clicked
-    // and appear as selected
+    cy.log("**click first tag button**");
     cy.clickTagButtonByIndex(0);
+    cy.log("**check first tag button is selected**");
     cy.get("@tagBtn").should("not.have.class", "css-1umf0ha");
 
-    // wait for post request to return 200
+    // does not work - refactor
     cy.algoliaPostRequestReturnsStatusOk();
 
-    // events should display
+    cy.log("**check filtered events display**");
+    cy.log("**check filtered events are less than events**");
     let filteredUpcomingEventsByTagCount;
     cy.getNumberOfEvents().then((noOfEvents) => {
       filteredUpcomingEventsByTagCount = noOfEvents;
@@ -66,7 +67,9 @@ describe("filtering events list", () => {
       );
     });
 
-    // first tag button text should be visible on events
+    cy.log(
+      "**check filtered events contain the tag for the tag button clicked**"
+    );
     cy.getTagCountOnEvents(0).then((tagCount) => {
       expect(tagCount).to.be.greaterThan(0);
     });
