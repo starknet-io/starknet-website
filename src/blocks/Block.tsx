@@ -3,7 +3,7 @@ import { BasicCard } from "./cards/BasicCard";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
-import { BlockHeroLines } from "./BlockHeroLines";
+import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
 import { CommunityCard } from "./cards/CommunityCard";
 import { IconLinkCard } from "./cards/IconLinkCard";
@@ -71,14 +71,13 @@ export async function Block({ block, locale }: Props): JSX.Element {
     );
   } else if (block.type === "link_list") {
     return (
-      <LinkList heading={block.heading}>
-        {block.blocks.map((block, i) => (
+      <LinkList heading={block.heading} listSize={block.listSize}>
+        {block.blocks.map((item, i) => (
           <LinkListItem
             key={i}
-            label={block.label}
-            isExternal={block.is_external}
-            href={block.href}
-            subLabel={block.sub_label}
+            link={item.link}
+            subLabel={item.subLabel}
+            avatar={item.avatar}
           />
         ))}
       </LinkList>
@@ -123,10 +122,12 @@ export async function Block({ block, locale }: Props): JSX.Element {
     );
   } else if (block.type === "hero") {
     return (
-      <BlockHeroLines
+      <HeroImage
         title={block.title}
         description={block.description}
         variant={block.variant}
+        buttonText={block.buttonText}
+        buttonUrl={block.buttonUrl}
       />
     );
   } else if (block.type === "home_hero") {

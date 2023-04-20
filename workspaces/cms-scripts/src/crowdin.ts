@@ -2,6 +2,7 @@ import path from "node:path";
 import { collections } from "@starknet-io/cms-config/src/collections";
 import { yaml } from "./utils";
 import fs from "node:fs/promises";
+import { CmsField } from "netlify-cms-core";
 
 export type JsonFile = {
   type: "json";
@@ -16,25 +17,6 @@ export type MarkdownFile = {
 };
 
 export type Files = JsonFile | MarkdownFile;
-
-export type Collection = (typeof collections)[number];
-export type FileCollection = Extract<Collection, { files: any }>;
-export type CollectionFile = FileCollection["files"][0];
-export type CollectionWithFields = Extract<Collection, { fields: any }>;
-export type Fields = CollectionWithFields["fields"];
-
-export type FieldWithTypes = Extract<Fields[number], { types: any }>;
-export type FieldWithTypesFields =
-  FieldWithTypes["types"][number]["fields"][number];
-export type FieldWithTypesWithFields = Extract<
-  Fields[number] | FieldWithTypesFields,
-  { fields: any }
->;
-
-export type Field =
-  | Fields[number]
-  | FieldWithTypes["types"][number]["fields"][number]
-  | FieldWithTypesWithFields["fields"][number];
 
 export async function translateFile(
   locale: string,
@@ -59,7 +41,7 @@ export async function translateFile(
 
     return translateFields(
       data,
-      collectionFile.fields as Field[],
+      collectionFile.fields as CmsField[],
       translationFilepath
     );
   } else if ("folder" in collection) {
@@ -69,7 +51,7 @@ export async function translateFile(
   }
 }
 
-async function translateFields(data: any, fields: Field[], filepath: string) {
+async function translateFields(data: any, fields: CmsField[], filepath: string) {
   let translatedData: any = null;
 
   for (const field of fields) {
@@ -98,17 +80,19 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
           } catch {}
         }
 
-        data[field.name] = translatedData?.[field.name] ?? data[field.name];
+        data[field.name] = translatedData?.[field.name] ?? data?.[field.name];
 
         break;
 
       case "object":
         if ("fields" in field) {
-          data[field.name] = await translateFields(
-            data[field.name],
-            field.fields,
-            filepath + "_" + field.name
-          );
+          if (data[field.name] != null) {
+            data[field.name] = await translateFields(
+              data[field.name],
+              field.fields,
+              filepath + "_" + field.name
+            );
+          }
         }
         break;
 
@@ -128,7 +112,7 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
         if (Array.isArray(fieldData)) {
           for (const index of fieldData.keys()) {
             if ("types" in field) {
-              const type = field.types.find(
+              const type = field.types?.find(
                 (type) => type.name === fieldData[index]["type"]
               );
 
@@ -144,7 +128,7 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
             } else if ("fields" in field) {
               fieldData[index] = await translateFields(
                 fieldData[index],
-                field.fields,
+                field.fields ?? [],
                 filepath + "_" + field.name + "_" + index
               );
             }
@@ -152,9 +136,6 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
         }
 
         break;
-
-      default:
-        field satisfies never;
     }
   }
 
@@ -164,7 +145,7 @@ async function translateFields(data: any, fields: Field[], filepath: string) {
 export function handleFields(
   files: Files[],
   data: any,
-  fields: Field[],
+  fields: CmsField[],
   filepath: string
 ) {
   const jsonFile: JsonFile = {
@@ -194,12 +175,14 @@ export function handleFields(
 
       case "object":
         if ("fields" in field) {
-          handleFields(
-            files,
-            data[field.name],
-            field.fields,
-            filepath + "_" + field.name
-          );
+          if (data[field.name] != null) {
+            handleFields(
+              files,
+              data[field.name],
+              field.fields,
+              filepath + "_" + field.name
+            );
+          }
         }
         break;
 
@@ -215,7 +198,7 @@ export function handleFields(
         if (Array.isArray(data[field.name])) {
           (data[field.name] as any[]).forEach((data: any, index) => {
             if ("types" in field) {
-              const type = field.types.find(
+              const type = field.types?.find(
                 (type) => type.name === data["type"]
               );
 
@@ -234,7 +217,7 @@ export function handleFields(
               handleFields(
                 files,
                 data,
-                field.fields,
+                field.fields ?? [],
                 filepath + "_" + field.name + "_" + index
               );
             }
@@ -242,9 +225,6 @@ export function handleFields(
         }
 
         break;
-
-      default:
-        field satisfies never;
     }
   });
 }

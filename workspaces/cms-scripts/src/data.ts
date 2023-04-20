@@ -1,8 +1,7 @@
 import * as path from "node:path";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
-import { yaml } from "./utils";
+import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
-import fs from "node:fs/promises";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
 import { slugify } from "@starknet-io/cms-utils/src/index";
@@ -114,7 +113,7 @@ export async function getPages(): Promise<PagesData> {
   const filenameMap = new Map<string, Page>();
   const idMap = new Map<string, Page>();
 
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await scandir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -184,7 +183,7 @@ export async function getPosts(): Promise<PostsData> {
   const resourceName = "posts";
   const filenameMap = new Map<string, Post>();
   const idMap = new Map<string, Post>();
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await scandir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -220,7 +219,7 @@ export async function getSimpleData<T = {}>(
   resourceName: string
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await scandir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {

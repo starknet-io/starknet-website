@@ -343,6 +343,18 @@ export const blocks = [
         ],
         default: "learn",
       },
+      {
+        name: "buttonText",
+        label: "Button text",
+        required: false,
+        widget: "string",
+      },
+      {
+        name: "buttonUrl",
+        label: "Button url",
+        required: false,
+        widget: "string",
+      },
     ],
   },
   {
@@ -357,27 +369,77 @@ export const blocks = [
         widget: "string",
       },
       {
+        name: "listSize",
+        label: "List Size",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+      },
+      {
+        name: "listGap",
+        label: "List Gap",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+        required: false,
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",
         fields: [
           {
-            name: "label",
-            widget: "string",
+            name: "link",
+            widget: "object",
+            label: "Link",
+            fields: [
+              {
+                name: "hasIcon",
+                label: "Has Icon",
+                widget: "boolean",
+                required: true,
+                default: true,
+              },
+              ...linkFields,
+            ],
           },
           {
-            name: "sub_label",
-            widget: "string",
+            name: "subLabel",
+            widget: "object",
+            label: "Sub Label",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                widget: "string",
+              },
+              {
+                name: "boldLabel",
+                label: "Bold Label",
+                widget: "string",
+              },
+            ],
           },
           {
-            name: "href",
-            widget: "string",
-          },
-          {
-            name: "is_external",
-            widget: "boolean",
-            required: false,
-            default: false,
+            name: "avatar",
+            widget: "object",
+            label: "Avatar",
+            fields: [
+              {
+                name: "url",
+                label: "URL",
+                widget: "string",
+              },
+              {
+                name: "title",
+                label: "Title",
+                widget: "string",
+              },
+              {
+                name: "displayTitle",
+                label: "Display title",
+                widget: "boolean",
+                required: false,
+              },
+            ],
           },
         ],
       },

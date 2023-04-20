@@ -197,15 +197,16 @@ blocks:
     heading: "Further reading:"
     blocks:
       - type: link_list_item
-        is_external: true
-        label: Starknet’s community council post on Starknet community forum
-        href: https://community.starknet.io/t/starknet-builders-council-mission-statement/4045
+        link:
+          custom_title: Starknet’s community council post on Starknet community forum
+          custom_external_link: https://community.starknet.io/t/starknet-builders-council-mission-statement/4045
       - type: link_list_item
-        is_external: true
-        label: Starknet delegation post on Starknet community forum
-        href: https://community.starknet.io/t/delegate-onboarding-announcement/4047
+        link:
+          custom_title: Starknet delegation post on Starknet community forum
+          custom_external_link: https://community.starknet.io/t/delegate-onboarding-announcement/4047
       - type: link_list_item
-        is_external: true
-        sub_label: Recommended to sign up for votes notifications
-        label: Starknet’s Snapshot space
-        href: https://snapshot.org/#/starknet.eth
+        link:
+          custom_title: Starknet’s Snapshot space
+          custom_external_link: https://snapshot.org/#/starknet.eth
+        subLabel:
+          label: Recommended to sign up for votes notifications

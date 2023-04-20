@@ -21,6 +21,16 @@ export async function writeYAML(filepath: string, data: any): Promise<void> {
   });
 }
 
+export async function scandir(path: string): Promise<string[]> {
+  const files = await fs.readdir(path, {
+    withFileTypes: true,
+  });
+
+  return files
+    .filter((f) => f.isFile() && f.name.endsWith(".yml"))
+    .map((f) => f.name);
+}
+
 export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
   let cause = [];
 

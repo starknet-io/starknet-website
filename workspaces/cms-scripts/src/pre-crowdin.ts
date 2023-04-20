@@ -9,8 +9,9 @@ const dotenvFiles = [".env.local", ".env"];
 
 dotenvFiles.forEach((path) => dotenv.config({ path }));
 
-import { yaml } from "./utils";
-import { Field, Files, handleFields } from "./crowdin";
+import { scandir, yaml } from "./utils";
+import { Files, handleFields } from "./crowdin";
+import { CmsField } from "netlify-cms-core";
 
 const files: Files[] = [];
 
@@ -22,12 +23,12 @@ for (const collection of collections) {
       handleFields(
         files,
         data,
-        collectionFile.fields as Field[],
+        collectionFile.fields as CmsField[],
         path.join(collection.name, path.basename(collectionFile.file, ".yml"))
       );
     }
   } else if ("folder" in collection) {
-    const filenames = await fs.readdir(path.join("_data", collection.name));
+    const filenames = await scandir(path.join("_data", collection.name));
 
     for (const filename of filenames) {
       const filepath = path.join("_data", collection.name, filename);
