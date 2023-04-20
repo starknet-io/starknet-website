@@ -79,7 +79,8 @@ Cypress.Commands.add("checkImagesDisplay", () => {
 //     .should("have.attr", "data-active", "");
 // });
 
-Cypress.Commands.add("upcomingEventsIsSelected", () => {
+// refactor this - should be in the test or page object, not here
+Cypress.Commands.add("upcomingEventsLinkIsSelected", () => {
   return cy
     .contains("a", "Upcoming events")
     .should("be.visible")

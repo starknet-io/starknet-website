@@ -4,30 +4,36 @@ import { SearchPage } from "../../pageObjects/search.po";
 
 describe("Search", () => {
   beforeEach(() => {
+    cy.log("**visit home page**");
     cy.visit("/");
+    cy.log("**check the page is loaded**");
     cy.location("pathname").should("eq", "/en");
     cy.wait(2000); // need to wait for the search to display
+    cy.log("**peform search**");
     SearchPage.performSearch("cairo");
   });
 
   it("opens and cancels search", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // cancel search
+    cy.log("**cancel search**");
     SearchPage.getCancelSearchBtn().trigger("mouseover").click();
+    cy.log("**check search is closed**");
     SearchPage.getSearchModal().should("not.exist");
   });
 
   it("finds items in recent searches", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // get search value
+    cy.log("**gets search term used in search**");
     SearchPage.getSearchInput().invoke("val").as("searchTerm");
+    cy.log("**clear search input**");
     SearchPage.getSearchInput().clear().should("have.value", "");
-    // checks for recent search items
+    cy.log("**checks recent search items exist**");
     SearchPage.getSearchResultItems("recentSearchesPlugin")
       .as("recentSearchItems")
       .should("have.length.at.least", 1);
+    cy.log("**checks recent search items contain search term**");
     cy.get("@searchTerm").then((searchTerm) => {
       const regexp = new RegExp(searchTerm, "i");
       cy.get("@recentSearchItems").each(($el) => {
@@ -37,45 +43,45 @@ describe("Search", () => {
   });
 
   it("removes recent searches", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // clear search input and check it's empty
+    cy.log("**clear search input**");
     SearchPage.getSearchInput().clear().should("have.value", "");
-    // checks recent search items exist
+    cy.log("**checks recent search items exist**");
     SearchPage.getSearchResultItems("recentSearchesPlugin").should(
       "have.length.at.least",
       1
     );
-    // checks remove this search buttons are visible
+    cy.log("**checks remove search buttons on recent search items display**");
     SearchPage.getSearchResultItems("recentSearchesPlugin")
       .find("button[title^='Remove']")
       .as("removeThisSearchBtns")
       .should("be.visible");
-    // clicks on remove this search buttons
+    cy.log("**clicks on remove search buttons**");
     cy.get("@removeThisSearchBtns").each(($btn) => {
       cy.wrap($btn).click();
     });
-    // checks recent search items do not exist
+    cy.log("**checks recent search items do not exist**");
     SearchPage.getSearchResultsSection("recentSearchesPlugin").should(
       "not.exist"
     );
   });
 
   it("populates the search input with a recent search", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // clear search input and check it's empty
+    cy.log("**clears search input**");
     SearchPage.getSearchInput().clear().should("have.value", "");
-    // checks for recent search items
+    cy.log("**checks recent search items exist**");
     SearchPage.getSearchResultItems("recentSearchesPlugin").should(
       "have.length.at.least",
       1
     );
-    // clicks on fill query button in first recent search item
+    cy.log("**clicks on fill query button in first recent search item**");
     SearchPage.getBtnsOnSearchResultsItems("recentSearchesPlugin", "Fill query")
       .first()
       .click();
-    // checks search input is not empty
+    cy.log("**checks search input is not empty**");
     SearchPage.getSearchInput()
       .invoke("val")
       .then((actualValue) => {
@@ -84,22 +90,23 @@ describe("Search", () => {
   });
 
   it("populates the search input with a popular search", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // clear search input and check's its empty
+    cy.log("**clears search input**");
     SearchPage.getSearchInput().clear().should("have.value", "");
-    // checks for popular search items
+    cy.log("**checks popular search items exist**");
     SearchPage.getSearchResultItems("querySuggestionsPlugin").should(
       "have.length.at.least",
       1
     );
+    cy.log("**clicks on fill query button in first popular search item**");
     SearchPage.getBtnsOnSearchResultsItems(
       "querySuggestionsPlugin",
       "Fill query"
     )
       .first()
       .click();
-    // checks search input is not empty
+    cy.log("**checks search input is not empty**");
     SearchPage.getSearchInput()
       .invoke("val")
       .then((actualValue) => {
@@ -108,26 +115,26 @@ describe("Search", () => {
   });
 
   it("checks that 'pages' contains links to pages", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // check search input is not empty
+    cy.log("**checks search input is not empty**");
     SearchPage.getSearchInput().invoke("val").should("not.be.empty");
-    // find items under pages
+    cy.log("**checks there items listed under pages**");
     SearchPage.getSearchResultItems("pages").should("have.length.at.least", 1);
   });
 
   it("checks 'post' search results have search term", () => {
-    // opens search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // check search input is not empty
+    cy.log("**checks search input is not empty**");
     SearchPage.getSearchInput().invoke("val").should("not.be.empty");
-    // get search term value
+    cy.log("**gets search term used in search**");
     SearchPage.getSearchInput().invoke("val").as("searchTerm");
-    // check there are search results in posts
+    cy.log("**checks there are search results in posts**");
     SearchPage.getSearchResultItems("posts")
       .as("postItems")
       .should("have.length.at.least", 1);
-    // find search term in search results in posts
+    cy.log("**checks search term displays in search results in posts**");
     cy.get("@searchTerm").then((searchTerm) => {
       const regexp = new RegExp(searchTerm, "i");
       cy.get("@postItems").each(($el) => {
@@ -137,15 +144,17 @@ describe("Search", () => {
   });
 
   it("checks 'documentation' search results have search term", () => {
-    // open search
+    cy.log("**open search**");
     SearchPage.openSearch();
-    // check search input is not empty
+    cy.log("**checks search input is not empty**");
     SearchPage.getSearchInput().invoke("val").should("not.be.empty");
-    // get search term used in search
+    cy.log("**gets search term used in search**");
     SearchPage.getSearchInput().invoke("val").as("searchTerm");
-    // check there are search results in documentation
+    cy.log("**checks there are search results in documentation**");
     SearchPage.getSearchResultItems("docs").should("have.length.at.least", 1);
-    // find search term in documentation search results
+    cy.log(
+      "**checks search term displays in search results in documentation**"
+    );
     cy.get("@searchTerm").then((searchTerm) => {
       const regexp = new RegExp(searchTerm, "i");
       SearchPage.getSearchResultItems("docs").each(($el) => {
