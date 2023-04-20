@@ -119,7 +119,7 @@ describe("Search", () => {
     SearchPage.openSearch();
     cy.log("**checks search input is not empty**");
     SearchPage.getSearchInput().invoke("val").should("not.be.empty");
-    cy.log("**checks there items listed under pages**");
+    cy.log("**checks pages display**");
     SearchPage.getSearchResultItems("pages").should("have.length.at.least", 1);
   });
 
@@ -161,5 +161,57 @@ describe("Search", () => {
         cy.wrap($el).invoke("text").should("match", regexp);
       });
     });
+  });
+
+  it("checks pages contain 'visit this link' links", () => {
+    cy.log("**open search**");
+    SearchPage.openSearch();
+    cy.log("**checks search input is not empty**");
+    SearchPage.getSearchInput().invoke("val").should("not.be.empty");
+    cy.log("**checks there are search results in posts**");
+    cy.log("**checks pages display**");
+    SearchPage.getSearchResultItems("pages")
+      .as("pageItems")
+      .should("have.length.at.least", 1);
+    cy.log("**checks pages contain a 'visit this link' link");
+    cy.get("@pageItems").find(".aa-ItemLink").should("have.attr", "href");
+    cy.get("@pageItems")
+      .find(".aa-ItemActionButton")
+      .should("exist")
+      .should("have.attr", "title", "Visit this link");
+  });
+
+  it("checks documentation contain 'visit this link' links", () => {
+    cy.log("**open search**");
+    SearchPage.openSearch();
+    cy.log("**checks search input is not empty**");
+    SearchPage.getSearchInput().invoke("val").should("not.be.empty");
+    cy.log("**checks there are search results in posts**");
+    SearchPage.getSearchResultItems("docs")
+      .as("docItems")
+      .should("have.length.at.least", 1);
+    cy.log("**checks docs contain a 'visit this link' link");
+    cy.get("@docItems").find(".aa-ItemLink").should("have.attr", "href");
+    cy.get("@docItems")
+      .find(".aa-ItemActionButton")
+      .should("exist")
+      .should("have.attr", "title", "Visit this link");
+  });
+
+  it.only("checks posts contain 'visit this link' links", () => {
+    cy.log("**open search**");
+    SearchPage.openSearch();
+    cy.log("**checks search input is not empty**");
+    SearchPage.getSearchInput().invoke("val").should("not.be.empty");
+    cy.log("**checks there are search results in posts**");
+    SearchPage.getSearchResultItems("posts")
+      .as("postItems")
+      .should("have.length.at.least", 1);
+    cy.log("**checks posts contain a 'visit this link' link");
+    cy.get("@postItems").find(".aa-ItemLink").should("have.attr", "href");
+    cy.get("@postItems")
+      .find(".aa-ItemActionButton")
+      .should("exist")
+      .should("have.attr", "title", "Visit this link");
   });
 });
