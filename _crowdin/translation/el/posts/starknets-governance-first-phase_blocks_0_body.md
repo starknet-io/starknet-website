@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Είμαστε ενθουσιασμένοι να ανακοινώσουμε το επόμενο βήμα στη διαδικασία αποκέντρωσης του StarkNet – ψηφίζοντας για αλλαγές πρωτοκόλλου.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+Τις τελευταίες εβδομάδες, η StarkNet έλαβε σημαντικά μέτρα για την περαιτέρω αποκέντρωση με την ίδρυση[του Ιδρύματος StarkNet](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59). εγκαινιάζοντας το[Διακριτικό STRK στο Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), και από[ανοιχτού κώδικα Κάιρο 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Η θέση αυτή θα επεκταθεί στο επόμενο βήμα, δηλαδή στην πρώτη φάση της διακυβέρνησης του StarkNet, η οποία θα διαρκέσει τους επόμενους μήνες.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Η πρώτη ψηφοφορία που θα εγκρίνει ή απορρίψει προτεινόμενες αλλαγές στο πρωτόκολλο StarkNet θα λάβει χώρα σύντομα
+* Οι συμμετέχοντες στις ψηφοφορίες κατά τη διάρκεια της πρώτης φάσης θα είναι:\
+  — Κάτοχοι Token\
+  — Εκπρόσωποι επιλεγμένοι από κατόχους συμβολαίων που προτιμούν να εκχωρούν τα δικαιώματα ψήφου τους\
+  — Εκπρόσωποι που θα επιλεγούν από το Ίδρυμα StarkNet για να ασκήσουν ορισμένα από τα δικαιώματα ψήφου του\
+  — Συμβούλιο επαγγελματιών δημιουργών, set by the StarkNet Foundation
+* Όλοι καλούνται να οριστούν ως αντιπρόσωποι στη διακυβέρνηση του StarkNet
+* Οι συζητήσεις θα διεξαχθούν στο[StarkNet Community Forum](https://community.starknet.io/)
 
-### Background
+### Φόντο
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Δύο διαδικασίες προωθούνται ταυτόχρονα προκειμένου να εκπληρωθεί το όραμα του StarkNet για να γίνει ένα δημόσιο δίκτυο ανθεκτικό στη λογοκρισία: i) αποκέντρωση των στοιχείων συστήματος[StarkNet](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671). ., sequencers and provers, and (ii) εφαρμογή μηχανισμών διακυβέρνησης σχετικά με τις αλλαγές πρωτοκόλλου.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Η οικοδόμηση μηχανισμών ποιοτικής διακυβέρνησης που θα επιτρέψουν σε μια ανοικτή κοινότητα να διαχειριστεί αναβαθμίσεις πρωτοκόλλων αποτελεί σοβαρή πρόκληση. Είναι μια σταδιακή και διερευνητική διαδικασία που απαιτεί ευρεία κοινοτική συνεργασία.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+Για τον σχεδιασμό και την ενορχήστρωση των πρώτων φάσεων της διακυβέρνησης του StarkNet, το Ίδρυμα StarkNet ίδρυσε επιτροπή διακυβέρνησης. Το Ίδρυμα θα δημοσιεύσει περισσότερες λεπτομέρειες σχετικά με το πεδίο εφαρμογής και την αποστολή της επιτροπής σε ξεχωριστή θέση. Τα μέλη της επιτροπής είναι Deven Matthews (Nethermind), Manor Bareli (StarkWare) και Sylve Chevet (briq). Ακολουθεί το σχέδιο για την πρώτη φάση της διακυβέρνησης του StarkNet, διατυπώνεται από τα μέλη της επιτροπής μαζί με διάφορους συνεισφέροντες από το οικοσύστημα StarkNet και εγκρίνεται από το συμβούλιο του Ιδρύματος.
 
-### Starknet’s governance first phase plan
+### Σχέδιο πρώτης φάσης διακυβέρνησης της Starknet
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+Η πρώτη φάση της διακυβέρνησης του StarkNet έχει ξεκινήσει. Από δω και στο εξής, τα μέλη της κοινότητας θα μπορούν να συμμετέχουν στη διαμόρφωση του StarkNet μέσω ενός περαιτέρω καναλιού, δηλαδή στην ψηφοφορία για τις αλλαγές του πρωτοκόλλου. Αυτό είναι μόνο το πρώτο στάδιο της κυβέρνησης του StarkNet· καθώς η StarkNet προχωρά στις επόμενες φάσεις, το φάσμα των μηχανισμών διακυβέρνησης και των συμμετεχόντων θα επεκταθεί. Εδώ είναι οι λεπτομέρειες της**πρώτης φάσης**:
 
-#### Voting subject
+#### Θέμα ψηφοφορίας
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Προτεινόμενες αναβαθμίσεις στο πρωτόκολλο του StarkNet. Όλες οι αναβαθμίσεις, σε αυτό το στάδιο, θα προτείνονται από το Ίδρυμα. Οι προτάσεις θα αντικατοπτρίζουν τις συζητήσεις, τις ιδέες και τα σχόλια που διατυπώθηκαν στο Κοινοτικό Φόρουμ StarkNet.
 
-#### Voting type
+#### Τύπος ψηφοφορίας
 
-Off-chain signal vote (Via Snapshot)
+Off-chain ψήφος σήματος (Via Snapshot)
 
-#### Voting process
+#### Διαδικασία ψηφοφορίας
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Το Ίδρυμα θα αναπτύξει μια ενημερωμένη έκδοση του StarkNet στο Goerli.
+2. Οι ψηφοφόροι θα έχουν περίοδο 6 ημερών για να εξετάσουν την αναβαθμισμένη έκδοση καθώς τρέχει στο Γκέρλι. Κατά τη διάρκεια αυτής της περιόδου, μπορούν να ψηφίσουν εάν θα την εγκρίνουν για την ανάπτυξη του Mainnet.
+3. Εάν μια πρόταση εγκριθεί από τους ψηφοφόρους, τότε θα υπάρξει καθυστέρηση 24 + ωρών πριν από την εφαρμογή της αναβάθμισης στο Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Ανακοινώσεις για αυτές τις ενημερώσεις θα γίνουν στον[λογαριασμό Twitter του Ιδρύματος StarkNet](https://twitter.com/StarkNetFndn), καθώς και στο[StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Όριο και απαιτούμενη απαρτία
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Το όριο είναι μια απλή πλειοψηφία (δηλαδή, το όριο είναι 50% των ψήφων)
+* Δεν απαιτείται απαρτία, πράγμα που σημαίνει ότι δεν υπάρχει ελάχιστο επίπεδο συμμετοχής για να ισχύει η ψηφοφορία
 
-### First phase voting participants
+### Συμμετέχοντες σε ψηφοφορία πρώτης φάσης
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Εδώ είναι η λίστα εκείνων που θα είναι σε θέση να συμμετάσχουν στην πρώτη φάση της διαδικασίας διακυβέρνησης:
 
-#### Token holders
+#### Υποδοχές συμβόλων
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* Στην πρώτη φάση της διακυβέρνησης του StarkNet, οι περισσότεροι κάτοχοι συμβολαίων είναι πρώιμοι βασικοί συνεισφέροντες και επενδυτές που δημιούργησαν και υποστήριξαν το δίκτυο στα αρχικά του στάδια ([διαβάστε αυτό το άρθρο για περισσότερες λεπτομέρειες](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Με την πάροδο του χρόνου, το διακριτικό θα διανέμεται σε προγραμματιστές και άλλα μέρη που εκτελούν εργασίες για τη συντήρηση και αναβάθμιση του δικτύου. Ως εκ τούτου, τα εν λόγω μέρη θα είναι σε θέση να εξασφαλίσουν το δίκτυο, να το χρησιμοποιήσουν, να το λειτουργήσουν και να συμμετάσχουν στη διακυβέρνησή του.
 
-#### Delegates
-
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
-
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
-
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
-
-**Operation**:
-
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
-
-#### The StarkNet builders’ council
-
-A professional committee, appointed by the Foundation.
+#### Αντιπρόσωποι
 
 **Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+Η αντιπροσωπεία εξουσίας ψήφου δίνει τη δυνατότητα στους κατόχους συμβολαίων να εκχωρήσουν την εντολή διακυβέρνησής τους για να συμμετάσχουν, ενημερωμένα και επαγγελματικά μέλη της κοινότητας. Χάρη σε αυτό:
 
-**Responsibilities**:
+* Οι κάτοχοι διακριτικών μπορούν να επιλέξουν να αποτελέσουν μέρος της διαδικασίας λήψης αποφάσεων μέσω της αντιπροσωπευτικής και όχι της άμεσης δημοκρατίας.
+* Αφιερωμένα, ταλαντούχα μέλη της κοινότητας μπορούν να αναλάβουν σημαντικό ρόλο στη διακυβέρνηση αξιοποιώντας τη φήμη τους. Δεν υπάρχει καμία ανάγκη να έχετε μάρκες για να υποβάλετε τον εαυτό σας ως αντιπρόσωπος.
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+**Αρμοδιότητες**:\
+Πραγματοποιήστε μια σοβαρή διαδικασία μάθησης για κάθε απόφαση, που θα οδηγήσει σε βάσιμες, ανεξάρτητες αποφάσεις που θα ωφελήσουν την StarkNet και το μακροπρόθεσμο όραμά της.
 
-**Operation**:
+**Λειτουργία**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Πρώτον και κύριο, για να στεφθεί με επιτυχία ο μηχανισμός των αντιπροσωπειών, απαιτείται μια ομάδα εκπροσώπων ποιότητας.
+* Ο δρόμος για να γίνετε αντιπρόσωπος είναι χωρίς άδεια — δεν υπάρχουν προϋποθέσεις — αλλά για όσους επιθυμούν, έχει δημιουργηθεί μια ενότητα στο φόρουμ όπου οι υποψήφιοι αντιπρόσωποι μπορούν να δημοσιεύσουν προφίλ ([σε αυτόν τον σύνδεσμο](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Οι κάτοχοι συμβολαίων μπορούν να επιλέξουν ελεύθερα οποιαδήποτε διεύθυνση Ethereum L1 επιθυμούν να εκχωρήσουν τη δύναμη ψήφου τους.
+* Για περισσότερες λεπτομέρειες, διαβάστε το[dedicated post στο StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+#### Το συμβούλιο του StarkNet
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+Μια επαγγελματική επιτροπή, που διορίζεται από το Ίδρυμα.
 
-The voting power distribution in the **first phase** will be:
+**Rationale**:\
+Εφαρμογή μηχανισμών διακυβέρνησης που βασίζονται στην κοινοτική συμμετοχή και την επαγγελματική φήμη, και όχι μόνο βάσει της εκμετάλλευσης.
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+**Ευθύνες**:
 
-### First vote — StarkNet’s 0.11 version
+* Διεξαγωγή μιας σοβαρής διαδικασίας μάθησης και συζήτησης για κάθε απόφαση, η οποία θα οδηγήσει σε καλά τεκμηριωμένες αποφάσεις που ωφελούν την StarkNet και το μακροπρόθεσμο όραμά της
+* Συμμετοχή σε συζητήσεις και ψηφοφορίες κατά την πρώτη φάση
+* Διασφάλιση της διαφάνειας των συζητήσεών τους και των διαδικασιών λήψης αποφάσεων
+* Να είσαι προσβάσιμος στην κοινότητα μέσω ανοικτών συζητήσεων σχετικά με το κοινοτικό φόρουμ του StarkNet
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+**Λειτουργία**:
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+* 17 μέλη της επιτροπής που διορίζονται από το Ίδρυμα
+* Περίοδος εντολής — Πρώτη φάση διακυβέρνησης StarkNet (αρκετοί μήνες)
+* Για περισσότερες λεπτομέρειες, διαβάστε το[dedicated post στο StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+
+### Ισχύς ψήφου πρώτης φάσης
+
+Κατά τη διάρκεια της πρώτης φάσης διακυβέρνησης του StarkNet, το StarkWare δεν θα συμμετάσχει στις ψηφοφορίες. Το Ίδρυμα StarkNet θα εκχωρήσει δικαίωμα ψήφου στο Συμβούλιο Κατασκευαστών και σε αρκετούς αντιπροσώπους από την πισίνα, και δεν θα ψηφίσει άμεσα.
+
+Η κατανομή ισχύος ψήφου στο**πρώτο στάδιο**θα είναι:
+
+* Επενδυτές: 33.3%
+* Οι πρώιμοι βασικοί συνεισφέροντες της StarkNet (εκτός από την StarkWare): 33,3%
+* Εκπρόσωποι του Ιδρύματος: 33,3%\
+  — Συμβούλιο Κατασκευαστών StarkNet 23,3%\
+  — Εκπρόσωποι ψηφίζοντας εξ ονόματος του Ιδρύματος: 10%
+
+### Πρώτη ψήφος — Έκδοση του StarkNet 0.11
+
+Η πρώτη ψηφοφορία θα διεξαχθεί τις επόμενες εβδομάδες. Η ψηφοφορία θα αφορά στο εάν θα αναβαθμιστεί η StarkNet Alpha στην έκδοση 0.11.
+
+Η ψηφοφορία θα ξεκινήσει λίγο μετά την κυκλοφορία του Goerli και θα ανακοινωθεί μέσω των επίσημων καναλιών: λογαριασμός Twitter του[StarkNet Foundation](https://twitter.com/StarkNetFndn)και[StarkNet Community Forum](https://community.starknet.io/). Μείνετε συντονισμένοι!

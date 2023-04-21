@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+مجموعات طلبات من معاملات Starknet التي يتم تشغيلها باستخدام نظام Starknet OS ونتج عن ذلك تغيير إجمالي واحد في الحالة يلتزم بعد ذلك بعقد Starknet L1 الأساسي. تحتوي الكتلة على:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … تجزئة كتلة - معرف مستقر فريد يمكن استخدامه للاستعلام والرجوع إلى الكتلة.
+* … رقم كتلة - رقم عادي يمثل موقع الكتلة في تسلسل الكتل المقبولة في Starknet. ملاحظة، قد يتغير رقم الكتلة مع مرور الوقت. كذلك يمكن أن يشير عدد معين إلى كتل مختلفة في نقاط زمنية مختلفة، مثل في حالة إعادة ترتيب سلسلة L1.

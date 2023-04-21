@@ -1,77 +1,77 @@
 ### TL;DR
 
-* **Cairo 1.0 is open source! This is only the first step towards open-sourcing the StarkNet stack.**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. You can now start experimenting with basic Cairo 1.0 code
-* Cairo 1.0 at its core is very similar to Rust
-* Consider it a first taste, not a release. More improvements are on the way. The first version of the compiler is planned for early Q1 next year.
-* Cairo 1.0 is not supported on StarkNet, yet. It will be supported on StarkNet in Q1 next year.
+* **Cairo 1.0 はオープンソースです! これはStarkNetスタックをオープンソース化するための最初のステップに過ぎません。**
+* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. これで、基本的なカイロ1.0コードの実験を開始できます。
+* カイロ1.0のコアはRustによく似ています
+* リリースではなく、最初の味を考えてみましょう。 さらなる改善が進んでいます。 最初のバージョンのコンパイラは来年のQ1の初めに予定されています。
+* Cairo 1.0 は StarkNet ではまだサポートされていません。 来年のQ1でStarkNetでサポートされる予定です。
 
-### Intro
+### はじめに
 
-In 2020, we released [Cairo](https://eprint.iacr.org/2021/1063.pdf), a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive. Two months ago, we announced [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), which addresses some major issues in the current situation:
+2020年には、確認可能な計算をサポートするターニングコンプリートプログラミング言語である[Cairo](https://eprint.iacr.org/2021/1063.pdf)をリリースしました。 カイロはアセンブリ言語として始まり、次第に表現力豊かになりました。 2ヶ月前に、現在の状況でいくつかの大きな問題に対処する[Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)を発表しました。
 
-* While Cairo’s syntax has seen significant improvement since its inception, the developer experience can always improve. Cairo 1.0 is a rust-inspired fully typed language, making writing the same logic much easier and less error-prone.
-* The existing compiler is developed in the same repo as StarkNet itself, making it harder to track language changes. The Cairo 1.0 compiler is written from the ground up, allowing for faster feature development and for more community involvement.
-* Every computation is now provable. Currently, a Cairo program may fail with specific inputs (e.g. by reaching an \`assert 1=2\` instruction in some computation branch), rendering the computation unprovable. With Cairo 1.0, programs are provable in every possible branch. This is particularly important for DOS protection and censorship resistance in StarkNet.
+* Cairoの構文は創業以来著しく改善されてきましたが、開発者の経験はいつでも改善されます。 カイロ1.0は錆びた完全に型付けされた言語であり、同じロジックを書くことがはるかに簡単で、エラーが発生しやすくなります。
+* 既存のコンパイラは StarkNet 自体と同じリポジトリで開発されているため、言語の変更を追跡することが困難になります。 Cairo 1.0 コンパイラは一から書かれており、機能開発の高速化とコミュニティへの関与を促進します。
+* すべての計算が証明できるようになりました 現在、Cairo プログラムは特定の入力で失敗する可能性があります (例えば、いくつかの計算ブランチで \`assert 1=2\` 命令に達することによって)、計算を証明できません。 Cairo 1.0 では、あらゆるブランチでプログラムが証明可能です。 これはStarkNetのDOS保護と検閲抵抗のために特に重要です。
 
-Today we mark the first milestone in reaching the above goals as we move the development to a public repo, and **open source Cairo 1.0!** Developers can now, for the first time, compile and execute simple Cairo 1.0 programs. This allows developers to start experimenting with Cairo 1.0 and gradually get accustomed to the new features, even if, at this phase, they cannot implement it on StarkNet just yet.
+本日、我々は、開発を公的レポに移行する上記の目標に達するための最初のマイルストーンをマークします。 そして**オープンソースのカイロ 1. ! ****開発者は、初めて、簡単なカイロ1.0プログラムをコンパイルして実行することができます。 これにより、開発者はCairo 1の実験を開始することができます。 そして、この段階ではまだStarkNetでは実装できない場合でも、徐々に新機能に慣れていきます。</p>
 
-### Current capabilities
+### 現在の機能
 
-Currently, you can compile and execute basic native Cairo programs. While many of the syntax/language improvements are still underway, this allows getting used to Cairo 1.0 and enjoy upgrades as they come.
+現在、基本的なネイティブカイロプログラムをコンパイルし、実行することができます。 構文/言語の改良の多くはまだ進んでいますが、これによりカイロ1.0に慣れ、来るにつれてアップグレードを楽しむことができます。
 
 **Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
 
-### Code examples
+### コードの例
 
-To illustrate the differences between the old syntax and Cairo 1.0, we have chosen to show a few different implementations/flavors of finding the n’th Fibonacci number.
+古い構文とカイロ1の違いを説明する。 では、n’s Fibonacci 番号を見つけるためのいくつかの異なる実装/フレーバーを表示します。
 
-### Example I: Match expressions
+### 例 I: 一致する式
 
-In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. No longer will you fear if/else statements that may cause reference revocation!
+Cairo 1.0 では、rustlike[match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match)を使うことができます。 参照失効を引き起こす可能性のある/else文の場合、あなたはもはや恐れません!
 
 ![](/assets/code01.png)
 
-### Example II: Data types
+### 例 II: データ型
 
-While Cairo 0 worked with felts and pointers, in Cairo 1.0 we have native access to complex data types in the language. Below you can find an example that generates an array of the first n Fibonacci numbers.
+Cairo 0はフェルトとポインタを扱っていましたが、Cairo 1.0では言語内の複雑なデータ型にネイティブでアクセスすることができます。 以下に、最初のn個のフィボナッチ数の配列を生成する例を示します。
 
 ![](/assets/code02.png)
 
-As you can see above, rather than working directly with memory pointers, we use the `Array::<felt>\` type and the \`array_append\`function.
+上記のように、メモリポインタを直接操作するのではなく、 `Array:: を使用します。<felt>\`型と\`array_append\`関数。
 
-### Example III: structs & ownership
+### 例 III: structs & ownership
 
-The following code illustrates the usage of structs in Cairo 1.0.
+次のコードは、カイロ1.0における構造体の使用法を示しています。
 
 ![](/assets/code03.png)
 
-> The following paragraph is meant for the Rustaceans among the audience. Cairo 1.0 manages memory in a similar way to rust. In particular, it uses the concepts of [ownership and borrowing](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Thus, By accessing a member of the \`FibResult\` struct (in this case, \`result.value\`), we’ve moved \`result\`, which means that unless FibResult is copyable, we can’t access it again in \`result.index\`. To overcome this, we add the \`#\[derive(Copy)]\` attribute of the \`FibResult\` type. In future versions, we will add auto deconstruction for structs. This will allow moving ownership of one member without touching the others (in particular, the above code would compile even if \`FibResult\` didn’t have the copy attribute).
+> 次の段落は、観客の間でRustaceansのために意味されています。 カイロ1.0は錆と同様の方法でメモリを管理します。 特に、[所有権と借りる](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)の概念を使用します。 したがって、 \`FibResult\` 構造体のメンバにアクセスすることにより、 (この場合は \`result. alue\`), 私たちは \`result\` を移動しました。つまり、 FibResult がコピー可能でない限り、 \`result.index\` 内で再びアクセスできないということです。 これを克服するために、\`FibResult\` 型の \`#\[derive(Copy)\` 属性を追加します。 将来のバージョンでは、構造体の自動解体を追加します。 これにより、他のメンバーに触れることなく、あるメンバーの所有権を移動することができます。 上記のコードは、 \`FibResult\` が copy 属性を持っていなくてもコンパイルされます。
 
-**In particular, note that Cairo 1.0 is completely abstracting away the original (none deterministic read-only) memory model of Cairo.**
+**特に、カイロ1.0はカイロのオリジナルのメモリモデル(確定的な読み取り専用のみ)を完全に抽象化していることに注意してください。**
 
-## Example IV: Error propagation
+## 例 IV: 伝播エラー
 
-The following code computes the n’th Fibonacci number, but unlike the previous examples, all the inputs are of the type uint128. Note that this solves a major pain point of handling uints in Cairo 0. Here, uint128 (and in the future uint256) are native types.
+次のコードはn’s Fibonacci 数を計算しますが、前の例とは異なり、すべての入力は uint128 型です。 これはカイロ0でUintを扱う大きな痛みを解決することに注意してください。 ここで、uint128 (および将来の uint256) はネイティブの型です。
 
 ![](/assets/0_s8bhjf_ade3carmi.png)
 
-The addition of two 128 bit integers can cause an overflow. The above code uses the [Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html) and the [question mark operator](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html) to handle the case of overflow in one of the intermediate additions. Compare this to the [current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31) uint256 addition syntax, where the \`unit256_check\` function had to be called to guarantee soundness. In addition, in the near future, we will add the concept of \`panic\` to the language (similar to the [panic](https://doc.rust-lang.org/rust-by-example/std/panic.html) macro in rust), and simple errors like addition overflow will be uncatchable and propagated automatically, which means that you won’t have to use \`Option\` or \`?\` when adding uints.
+128 ビットの整数を2つ追加すると、オーバーフローを引き起こす可能性があります。 上記のコードでは、[Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html)と[question mark operator](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)を使用して、中間追加のいずれかのオーバーフローの場合を処理します。 サウンドを保証するために \`unit256_check\` 関数を呼び出す必要があった[現在の](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31)uint256 追加構文と比較します。 また、近い将来には、 言語に \`panic\` という概念を追加します(rustの[punic](https://doc.rust-lang.org/rust-by-example/std/panic.html)マクロに似ています)。 そして、追加のオーバーフローのような単純なエラーは自動的にキャッチ不能になり、自動的に伝播されます。つまり、\`Option\`または\`を使用する必要はありませんか？ ` uintsを追加するとき。
 
-## Try it yourself
+## 自分で試してみてください
 
-You can now compile and run currently supported Cairo 1.0 programs! Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. Note that under the hood, the [Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), developed by [Lambdaclass](https://lambdaclass.com/), is used for execution.
+現在サポートされているCairo 1.0プログラムをコンパイルして実行できるようになりました。 \`cairo-run\` コマンドの使い方については、以下の[手順](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner)に従ってください。 内部では、[Lambdaclass](https://github.com/lambdaclass/cairo-rs)によって開発された[Rust Cairo VM](https://lambdaclass.com/)が実行に使用されていることに注意してください。
 
-You can find more examples to help you get started [here](https://github.com/starkware-libs/cairo2/tree/main/examples). Note that this is only the first peek into the compiler development; in the coming weeks, we will improve the CLI alongside the compiler.
+[を始めるのに役立つ例はこちら](https://github.com/starkware-libs/cairo2/tree/main/examples) にあります。 これはコンパイラ開発の最初の試みに過ぎないことに注意してください。今後数週間で、コンパイラと一緒にCLIを改善します。
 
-## Future Plans
+## 今後の予定
 
-The focus of the first version of the Compiler, which is planned for early Q1, is supporting all existing functionality of StarkNet in Cairo 1.0. Additionally, we’re working on extending the capabilities of the Cairo 1.0 compiler. In the coming weeks, you can expect:
+Q1の初めに予定されているコンパイラの最初のバージョンの焦点は、カイロ1.0のStarkNetの既存のすべての機能をサポートしています。 さらに、Cairo 1.0 コンパイラの機能拡張にも取り組んでいます。 今後数週間で、あなたは期待できます:
 
-* StarkNet capabilities — writing smart contracts and using system calls.
-* Loops
-* New library functions
-* Improved language server
-* A native notion of StarkNet gas
+* StarkNet 機能 — スマートコントラクトを作成し、システムコールを使用しています。
+* ループ
+* 新しいライブラリ関数
+* 改善された言語サーバー
+* StarkNetガスのネイティブな概念
 
-Make sure to stay tuned and track the compiler progress!
+必ずコンパイラの進行状況を確認してください！

@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Konto Abstraktion Forbedringer i EIP-4337 ånden
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Validér — Udfør adskillelse
+2. Transaktionen entydighed er nu sikret i protokollen (Nonce)
 
-* The fee mechanism is extended to include:
+* Gebyrmekanismen udvides til at omfatte:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 Beskeder
+2. Erklære Transaktioner
 
-* Few Cairo syntax changes
+* Kun få ændringer i Kairo syntaks
 
-### Intro
+### Introduktion
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Vi er glade for at præsentere StarkNet Alpha 0.10.0. Denne version er endnu et skridt i retning af skalering Ethereum uden at gå på kompromis med sikkerhed og decentralisering.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Dette blogindlæg beskriver kort de vigtigste funktioner i denne version. For den fuldstændige liste over ændringer skal du kontrollere[udgivelsesbemærkningerne](https://github.com/starkware-libs/cairo-lang/releases). For mere detaljerede oplysninger, tjek[dokumentation](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Konto Abstraktionsændringer
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Vi bevæger os fremad med[StarkNet’s kontoabstraktion](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Denne version introducerer ændringer inspireret af[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### Validering/Udfør Adskillelse
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Indtil nu var kontoens \_\_execute\_\_ funktion ansvarlig for både validering og udførelse af transaktionen. I 0.10.0 bryder vi denne kobling og introducerer en separat \_\_validate\__ funktion på konti. Ved modtagelse af en transaktion, vil kontokontrakten først kalde \_\_validate\_\__, og derefter, hvis den lykkes, gå videre til \_\_execute\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Validate/execute separation giver en protokol-niveau skelnen mellem ugyldige og tilbageførte (endnu gyldige) transaktioner. Takket være det, sequencers vil være i stand til at opkræve gebyrer for udførelsen af en gyldig transaktion, uanset om den blev tilbageført eller ej.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+I version 0.10.0 tilføjes et nonce felt for at håndhæve transaktionens entydighed på protokolniveau. Indtil nu blev nonces håndteret på kontokontraktniveau, hvilket betød, at en transaktion med samme hash kunne udføres to gange teoretisk.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+På samme måde som Ethereum, indeholder hver kontrakt nu en nonce, som tæller antallet af gennemførte transaktioner fra denne konto. Konto kontrakter vil kun acceptere transaktioner med en matchende nonce, dvs. hvis den aktuelle nonce af kontoen er X, så vil det kun acceptere transaktioner med nonce X.
 
-#### New Transaction Version
+#### Ny Transaktionsversion
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+For at tillade bagudkompatibilitet vil vi introducere disse to ændringer via en ny transaktionsversion —[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Disse ændringer vil kun gælde for den nye version, og ældre konti vil stadig kunne udføre version 0-transaktioner.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Note — Transaktionen v0 er nu forældet og vil blive fjernet i StarkNet Alpha v0.11.0. Kontroller, at du opgraderer for at bruge den nye transaktionsversion.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+Læs venligst[dokumentationen](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C) for mere detaljeret information om transaktionsversionen.
 
-#### Fees Mechanism
+#### Gebyrer Mekanisme
 
-The new version allows to include fees for two required components:
+Den nye version gør det muligt at medtage gebyrer for to nødvendige komponenter:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2-meddelelse](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Deklare transaktion](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Disse gebyrer vil ikke være obligatoriske i denne version og vil kun blive håndhævet starter StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### Ændringer I Kairo Syntaks
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+Til fordel for gradvise fremskridt mod en opgradering af Cairo,[Cairo 1,0](https://www.youtube.com/watch?v=Ny4Rv6ztINU)indeholder denne version flere syntaksændringer.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+For at minimere ulejligheden, vil versionsudgivelsen indeholde et[migrationsscript](https://www.youtube.com/watch?v=kXs59zaQrsc), der automatisk anvender ovenstående ændringer. Du kan finde flere detaljer[her](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Hvad Er Næste?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Om et par uger planlægger vi at indføre parallelisering i sequencer, hvilket muliggør hurtigere blok produktion (V0.10.1)
+* Vi vil snart færdiggøre den sidste del, der skal være inkluderet i gebyret betaling — Indsættelse af konto
+* Cairo 1.0 udgivelse! Mere info om det i et kommende indlæg.
 
-### How Can I Be More Engaged?
+### Hvordan Kan jeg Være Mere Engaged?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Gå til[starknet.io](https://starknet.io/)for alle StarkNet oplysninger, dokumentation, vejledninger og opdateringer.
+* Deltag i[StarkNet Discord](http://starknet.io/discord)for dev support, økosystem annonceringer og blive en del af fællesskabet.
+* Besøg[StarkNet Forum](http://community.starknet.io/)for at holde dig opdateret og deltage i StarkNet forskningsdiskussioner.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Vi er altid glade for at modtage feedback på vores[dokumentation](https://docs.starknet.io/)!

@@ -1,61 +1,61 @@
 ### TL;DR
 
-* The first version of StarkNet Bridge, StarkGate Alpha, is live on **[Testnet](https://goerli.starkgate.starknet.io/)**, and on **[Mainnet](https://starkgate.starknet.io/)**!
-* We await community feedback on how things can be improved. You can send your feedback for both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
-* Mainnet deployment will follow soon (update, May 9th 2022: StarkGate is live on Mainnet)
+* StarkNet Bridge, StarkGate Alpha, 第一个版本在**[Testnet](https://goerli.starkgate.starknet.io/)**, 并在**[Mainnet](https://starkgate.starknet.io/)** 上直播！
+* 我们期待着社区就如何改善情况提出反馈意见。 您可以发送您对[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)和[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx) 的反馈。
+* Mainnet 部署将很快完成(更新，2022年5月9日：StarkGate 已在Mainnet上运行)
 
-Excitement! We are thrilled to release StarkGate Alpha, the first version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet deployment to follow soon.*
+激动！ 我们很想要释放StarkNet桥的第一版StarkGate Alpha，现在住在Goerli testnet上，即将部署Mainnet。*
 
-\*(update, May 9th 2022: StarkGate is live on Mainnet)
+\*(更新，2022年5月9日：StarkGate在Mainnet上在线
 
-**Important disclaimer: this is an alpha version on StarkGate Alpha (read the fine print below!).**
+**重要的免责声明：这是StarkGate Alpha 上的 Alpha 版本 (请阅读下面的精细打印!)。**
 
 ![](/assets/starkgate_01.png)
 
-Before you continue, go check it out! [StarkGate Testnet](https://goerli.starkgate.starknet.io/), [StarkGate Mainnet](https://starkgate.starknet.io/)
+在你继续之前，去看看吧！ [StarkGate 测试网](https://goerli.starkgate.starknet.io/),[StarkGate Mainnet](https://starkgate.starknet.io/)
 
-StarkGate serves as a gateway between Ethereum and [StarkNet](https://starknet.io/), and allows users to do everything they can expect from a bridge.
+StarkGate充当Etherum和[StarkNet](https://starknet.io/)之间的网关，允许用户做他们可以从桥上期望的一切。
 
-#### **Where can I find information on how StarkGate works?**
+#### **从哪里可以找到StarkGate如何工作的信息？**
 
-To understand how StarkGate works, read the [technical documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) and take a look at the [code](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Note that this is the first version, and we invite your feedback and suggestions on how to improve both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+要了解StarkGate 如何工作，请阅读[技术文档](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)并查看[代码](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)。 注意这是第一个版本， 我们邀请您就如何改进[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)和[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx) 的反馈和建议。
 
-#### **Which tokens will be supported by StarkGate?**
+#### **StarkGate将支持哪个代币？**
 
-* StarkGate Alpha on Goerli supports ETH and a few other ERC-20 tokens. The full list and the relevant contract addresses, both on Ethereum and StarkNet, are available in this [repo](https://github.com/starkware-libs/starknet-addresses).
-* On Mainnet, initially, StarkGate Alpha will only support ETH to allow use of the fee mechanism. Later on, we will add support for WBTC, USDC, USDT, and DAI. You can see the relevant contract addresses in this [repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
+* StarkGate Alpha on Goerli支持ETH和其他几个ERC-20代币。 完整列表和相关的合同地址，无论是在Ethereum 还是StarkNet上，都可以在此[repo](https://github.com/starkware-libs/starknet-addresses) 中找到。
+* 在Mainnet上，StarkGate Alpha将只支持ETH，允许使用收费机制。 稍后，我们将增加对WBTC、USDC、USDT和DAI的支持。 您可以在此[repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json) 中看到相关的合约地址。
 
-Further down the road, we will publish the mechanism for adding support for additional tokens.
+在更远的道路上，我们将公布增加对额外令牌的支持的机制。
 
-#### **What safety limitations will StarkGate Alpha have on Mainnet?**
+#### **StarkGate Alpha 对Mainnet有什么安全限制？**
 
-StarkGate Alpha on Mainnet is launched with two limitations — in order to reduce the risks involved in using an Alpha version:
+StarkGate Alpha on Mainnet有两个限制——为了减少使用Alpha 版本所涉及的风险：
 
-1. The total value locked (TVL) in the bridge on L1 will limit the amount of each token type.
-2. The maximum amount in each transaction sent from L1 to L2 (Ethereum→StarkNet) via StarkGate will be limited.
+1. L1桥中已锁定的总值 (TVL) 将限制每个令牌类型的数量。
+2. 通过StarkGate从L1到L2(因此——StarkNet)发送的每笔交易的最大金额将是有限的。
 
-We plan to gradually ease these limitations and lift them completely as confidence grows. The updated parameters can be found in StarkGate’s [documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
+我们计划随着信心的增强而逐步减轻这些限制并完全取消这些限制。 更新的参数可以在 StarkGate 的[文档](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) 中找到。
 
 ![](/assets/starkgate_02.png)
 
-### Alpha and What It Means
+### 阿尔法和它意味着什么
 
-As always, we remind you that StarkNet is currently in its **Alpha** stage:
+一如既往，我们提醒您StarkNet目前处于**Alpha**阶段：
 
-* Things can break. If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
-* Both StarkNet Alpha and StarkGate contracts can be upgraded without a timelock. While we expect to announce such upgrades well ahead of time, in the case of imminent security risks (for example, if a critical bug is found), the upgrade may be applied with little or no warning.
-* The code of the bridge, as well as portions of StarkNet Alpha, have not yet been audited. The ABDK and Nethermind audits of StarkGate Alpha will be completed soon.
+* 事情可以打破。 If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
+* StarkNet Alpha 和 StarkGate 的合同都可以在没有时限的情况下升级。 虽然我们期望提前很长时间宣布这种升级，但是在安全风险迫在眉睫的情况下（例如： 如果发现了一个关键错误，升级可能会在几乎没有或没有警告的情况下应用。
+* 桥的代码以及StarkNet Alpha的部分内容尚未得到审计。 ABDK和荷兰将很快完成StarkGate Alpha的审计工作。
 
-We encourage all users to help improve the bridge by providing their feedback using one of the following platforms:
+我们鼓励所有用户通过使用以下平台之一提供反馈来帮助改善桥梁：
 
-1. [StarkGate frontend repo](https://github.com/starkware-libs/starkgate-frontend)
-2. [StarkGate Contracts repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
+1. [StarkGate 前端repo](https://github.com/starkware-libs/starkgate-frontend)
+2. [StarkGate 合同](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
 3. [StarkNet Shamans](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+对于问题和开发支持, 加入[StarkNet Discord 服务器](https://discord.gg/uJ9HZTUk2Y)。
 
-### Disclaimer
+### 免责声明
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. The same applies to the StarkNet Bridge. Like all complex software systems, both StarkNet and the bridge may contain bugs that, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***StarkNet Alpha是一个新的复杂系统，尚未得到充分审计。 StarkNet 桥也是如此。 像所有复杂的软件系统一样，StarkNet和桥都可能包含的 bug 在极端情况下，可能导致你们所有资金的损失。 所以,***树木很精心, 并且很舒适!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*StarkNet生态系统是一组庞大和迅速成长的独立小组和个人，StarkWare对此没有监督，也没有责任。 生态系统成员开发的任何一个项目都可能含有在极端情况下可能导致您所有资金损失的漏洞。 此外，随着更多智能合约的部署，出现意外的有害缺陷甚至恶意的故障和废墟拉动的可能性增加。 因此，当您处理太空智能合同时，处理StarkNet上的所有智能合同， 并且只使用那些你有充分理由信任的安全者。*

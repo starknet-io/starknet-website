@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* StarkNet Token (STRK) este acum instalat pe Ethereum Mainnet
+* **Aveți grijă de escrocheri!**Tokenurile StarkNet nu sunt oferite spre vânzare
+* Va fi nevoie de timp pentru ca Fundația să stabilească mecanismul de distribuire a jetoanelor sale
+* Token-uri deţinute de acţionarii StarkWare, angajaţii şi dezvoltatorii de software parteneri independenţi sunt blocaţi pentru o perioadă de patru ani, cu eliberare treptată începând după un an
+* Tokenul va continua descentralizarea StarkNet, datorită utilizării sale pentru a vota, a pune în joc și a plăti taxe
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+Astăzi,[StarkNet](https://starknet.io/)face încă un pas către descentralizare. Token-ul StarkNet este acum[pe Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recuperare rapidă: STRK va fi folosit ca un token important pentru participarea la mecanismele de consens ale StarkNet, ca jeton pentru guvernanţă, şi pentru plata taxelor de tranzacţie. Motivul pentru fiecare dintre aceste utilități este prezentat în[propunerea noastră de descentralizare](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), în secțiunea intitulată „Pentru ce vor fi folosite tokeni?”
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***Fii atent la înșelătorii:**la momentul scrierii nu există nicio modalitate de a cumpăra StarkNet Tokens; această perioadă de interdicție va rămâne în vigoare până la o nouă notificare de către[Fundația StarkNet](https://twitter.com/StarkNetFndn); urmați comunicarea oficială a Fundației StarkNet pentru a afla despre orice actualizări ale statutului STRK. Poți raporta escrocherii și verifica alte rapoarte de escrocherii în canalul[raport de înșelătorie](https://discord.gg/qypnmzkhbc)de pe serverul[StarkNet Discord](http://starknet.io/discord).*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+Această postare explică procesul de alocare a tokenurilor, precum și modul în care contractele tokenuri implementate deservesc două dintre cele trei utilități concepute ale tokenului, și anume votul și participarea. A treia utilitate – plata taxelor StarkNet – va fi discutată ulterior.
 
-### Planning the token allocation process
+### Planificarea procesului de alocare token
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+Am propus anterior un[plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)pentru alocarea inițială a token-urilor. Tokeni alocați acționarilor, angajaților și dezvoltatorilor de software independenți sunt blocați timp de patru ani, cu un program de lansare treptată începând de la un an. Tokeni blocați pot fi utilizați pentru vot și miză, dar nu pot fi transferați sau tranzacționați. Unele jetoane sunt blocate printr-un contract inteligent dedicat pentru Ethereum, în timp ce alte tokeni sunt blocați prin intermediul custozilor.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+Separat, 50,1 % din tokenurile existente StarkNet sunt alocate Fundației StarkNet, pentru a fi utilizate pentru a îndeplini obiectivele[](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(cf.[Postul lui StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). Aceste jetoane nu sunt blocate. Cu toate acestea, fundația va avea nevoie de timp pentru a formula mecanismul exact pentru a aloca în continuare acele jetoane și își va împărtăși planurile în timp util.
 
-#### Why lockup?
+#### De ce să blocați?
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+Blocarea jetoanelor pentru perioada menționată anterior asigură alinierea contribuitorilor actuali cu stimulentele pe termen lung ale StarkNet. Acesta descurajează de asemenea speculaţiile asupra tokenului, înaintea utilizării pe scară largă a acestuia în scopurile avute în vedere: asigurarea reţelei, plata taxelor şi descentralizarea guvernării.
 
-Next, we explain how the token implementation supports voting and staking.
+În continuare, explicăm modul în care punerea în aplicare a tokenului sprijină votul și participarea.
 
-### Voting
+### Votare
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+Fundația va fi responsabilă de facilitarea bunei guvernanțe și de formularea mecanismelor de vot. Simbolul StarkNet a fost conceput pentru a permite atât votarea directă, cât şi o serie de mecanisme de delegare.
 
-#### L1 voting
+#### Votul L1
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+Implementarea ERC-20 implementată acum include**opțional**utilizarea modulului[de delegare al compusului](https://docs.compound.finance/v2/governance/). Acest modul este utilizat pe scară largă pentru votarea în lanț. Motivul pentru care este opţional pe StarkNet şi a devenit implicit rentabil. A porni înseamnă că fiecare transfer al Token-urilor StarkNet pe L1 necesită gaze suplimentare necesare doar în scopul urmăririi deplasărilor în puterea de vot.
 
 #### Non-L1 voting
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+Alternativele la votarea în lanț L1 cu modulul pentru delegații Compound includ votarea în afara lanțului, precum și sistemele de votare în lanț StarkNet(ca de exemplu[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). Aceste alternative, care reduc semnificativ consumul de gaze pentru transferurile L1, nu necesită sprijin explicit din partea codului ERC-20 implementat în prezent, fiind astfel sprijinite în mod inerent.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+După cum s-a menționat mai sus, toate jetoanele – blocate și deblocate – vor putea fi utilizate în mecanismul de vot al StarkNet.
 
-### Staking
+### Mâncărimi
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+Operațiunea fără permisiune și rezistentă la cenzură a StarkNet-ului necesită selecția aleatorie a secvențelor. Probabilitatea ca un nod să fie selectat pentru secvențiere și propunerea unui bloc este proporțională cu numărul de StarkNet Tokens care node miza. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+Ca și în cazul votării, tokeni pot fi utilizați pentru a se implica chiar și atunci când sunt blocați. Acest lucru contribuie la diversitatea operatorilor StarkNet și la reziliența sistemului StarkNet.
 
 ### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+Desfășurarea contractelor StarkNet Token pe Ethereum reprezintă încă un pas în descentralizarea StarkNet.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+Îndemnăm dezvoltatorii şi utilizatorii să fie atenţi la înşelători! La momentul publicării, niciun simbol nu este tranzacționabil, iar acest statut de interdicție comercială va rămâne în vigoare până la o nouă notificare din partea Fundației StarkNet.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+Pentru mai multe întrebări, poți merge la canalul[Token-discussions](https://discord.gg/qypnmzkhbc)de pe serverul[StarkNet Discord](http://starknet.io/discord).

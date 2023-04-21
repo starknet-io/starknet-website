@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* Το StarkNet Alpha 0.8.0 παρουσιάζει την αρχική έκδοση του μηχανισμού χρέωσης (προαιρετικό μέχρι το StarkNet Alpha 0.9.0.)
+* Νέες κλήσεις API για την εκτίμηση της προμήθειας συναλλαγής για την απόκτηση του ίχνους της συναλλαγής, επιτρέποντας καλύτερη ορατότητα και δυνατότητες εντοπισμού σφαλμάτων
+* Βελτίωση των επιδόσεων στον αλληλουχία StarkNet
+* L1→L2 ακύρωση μηνύματος
 
-### Intro
+### Εισαγωγή
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+Όπως μοιραζόμαστε στο[χάρτη πορείας](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), ακολουθώντας την τελευταία προσθήκη στη λειτουργικότητα και τα χαρακτηριστικά του StarkNet, η προσοχή μας μετατοπίζεται προς βελτιώσεις απόδοσης και σχεδιασμό πρωτοκόλλου (συμπεριλαμβανομένων αμοιβών, αφαίρεσης λογαριασμού, αποκέντρωσης κ.λπ.). Το StarkNet Alpha 0.8.0 ξεκινά τη διαδικασία της προσθήκης τελών συναλλαγών και της βελτίωσης της απόδοσης του sequencer.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+Ο οδικός χάρτης για το StarkNet περιλαμβάνει μηχανισμό χρέωσης, και προχωρώντας με αυτή την έκδοση κάνουμε ένα σημαντικό βήμα πιο κοντά στην πλήρη απόδοση για την πλατφόρμα.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+Η προσθήκη του μηχανισμού τελών αποτελεί ουσιαστικό μέρος του σχεδιασμού απόδοσης της StarkCet. Χωρίς ελάχιστη αμοιβή, κινδυνεύουμε να αντιμετωπίσουμε άπειρες συναλλαγές: η οποία θα καταστήσει αδύνατο για το σύστημα να εκτελεί, ανεξάρτητα από τις βελτιστοποιήσεις αλληλουχίας.
 
-### Features
+### Χαρακτηριστικά
 
-#### Fee Support
+#### Υποστήριξη Αμοιβής
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+Η StarkNet Alpha υποστηρίζει τώρα την πρώτη έκδοση του μηχανισμού χρέωσης. Αυτός ο μηχανισμός είναι απαραίτητος ακόμη και σε αυτό το πρώιμο στάδιο, ακόμη και στο Testnet, για δύο κύριους λόγους:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Επιτρέπει στους προγραμματιστές να αρχίσουν να βελτιστοποιούν τις συμβάσεις τους σύμφωνα με το μοντέλο κόστους της StarkCet.
+2. Είναι ένα κρίσιμο αντίβαρο για τη βελτίωση της απόδοσης του συστήματος, καθώς αποτρέπει το spamming στέλνοντας αμέτρητες συναλλαγές.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Αυτή η έκδοση εισάγει τα στοιχεία που είναι απαραίτητα για τους προγραμματιστές για να ενσωματώσουν τις πληρωμές τελών στα εργαλεία και τις εφαρμογές τους. Οι προγραμματιστές μπορούν τώρα να εκτιμήσουν την αμοιβή συναλλαγής καλώντας το τελικό σημείο \`estimate_fee\` και να κάνουν την πληρωμή της προμήθειας ως μέρος της εκτέλεσης της συναλλαγής.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Δεδομένου ότι αυτό το χαρακτηριστικό δεν είναι συμβατό προς τα πίσω, δεν θα επιβάλουμε την πληρωμή τελών σε αυτό το σημείο, αλλά μόνο από την έκδοση 0. .0, η οποία αναμένεται να κυκλοφορήσει σε λίγες εβδομάδες. Αυτή η σταδιακή μετάβαση θα επιτρέψει στους χρήστες και τους προγραμματιστές να προσαρμοστούν στο νέο μοντέλο.
 
-#### Fee Structure on 0.8.0
+#### Χρέωση Δομής στο 0.8.0
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+Στις 0.8.0, τα τέλη θα συλλέγονται μόνο σύμφωνα με την υπολογιστική πολυπλοκότητα, ενώ το StarkWare θα εξακολουθεί να επιχορηγεί το κόστος επικοινωνίας L1. Θα ενημερώσουμε τον μηχανισμό τελών για να συμπεριλάβουμε αυτά τα έξοδα λειτουργίας L1 και επικοινωνίας μέσα στις επόμενες εβδομάδες. Η πληρωμή θα εισπραχθεί ατομικά με την εκτέλεση της συναλλαγής στο StarkNet L2. Δείτε την τεκμηρίωση[τελών](https://starknet.io/documentation/fee-mechanism/)για μια λεπτομερή περιγραφή.
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+Είναι σημαντικό να σημειωθεί ότι θα συνεργαστούμε στενά με την κοινότητα των προγραμματιστών για να τροποποιήσουμε και να αναπτύξουμε τον μηχανισμό τελών καθώς εξελίσσεται το StarkNet.
 
 #### L2 Goerli ETH Faucet
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Ξεκινήσαμε τη[L2 Goerli ETH Στρόφιγγα](https://faucet.goerli.starknet.io/)για να δώσουμε τη δυνατότητα στους χρήστες να πληρώσουν τέλη στο Testnet. Αυτή η Στρόφιγγα στέλνει μικρά ποσά της L2 Goerli ETH στη διεύθυνση λογαριασμού σας στο StarkNet Goerli που μπορείτε να χρησιμοποιήσετε για την πληρωμή του τέλους συναλλαγής.
 
 #### Trace API
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+Προσθέσαμε τη δυνατότητα να ανακτήσουμε το ίχνος εκτέλεσης μιας συναλλαγής στο API του StarkNet. Μέσα στο ίχνος της συναλλαγής, όλες οι εσωτερικές κλήσεις είναι ορατές, συνοδευόμενες από πληροφορίες όπως οι πόροι εκτέλεσης που καταναλώνονται, η τιμή επιστροφής, τα εκπεμπόμενα γεγονότα και τα μηνύματα που αποστέλλονται. Αυτή η νέα κλήση απλοποιεί την κατανόηση της συμπεριφοράς ή των συναλλαγών εντοπισμού σφαλμάτων ενός συμβολαίου. Επιπλέον, εργαλεία όπως ο[Voyager](https://voyager.online/)ή[StarkTx](https://starktx.info/)θα μπορούσαν να ενσωματώσουν αυτά τα δεδομένα· παροχή λεπτομερέστερης ανάλυσης στους χρήστες, ιδίως για την αλληλεπίδραση των συμβολαίων λογαριασμού.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+Για να αποκτήσετε το ίχνος, μπορείτε να χρησιμοποιήσετε το \`get_transaction_trace\` στο CLI του Starknet. Για να δείτε ένα παράδειγμα για το πώς να το χρησιμοποιήσετε, ελέγξτε το[φροντιστήριο](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Ακύρωση Μηνύματος
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+Ένα πρόσθετο χαρακτηριστικό αυτής της έκδοσης είναι η δυνατότητα ακύρωσης μηνυμάτων L1→L2. Γιατί είναι αυτό χρήσιμο? Φανταστείτε ένα σενάριο όπου ένας χρήστης μεταβιβάζει ένα περιουσιακό στοιχείο από το L1 στο L2. Η ροή ξεκινά με τον χρήστη να στέλνει το περιουσιακό στοιχείο σε μια γέφυρα StarkNet και την αντίστοιχη παραγωγή μηνυμάτων L1→L2. Τώρα, φανταστείτε ότι η κατανάλωση μηνυμάτων L2 δεν λειτουργεί (αυτό μπορεί να συμβεί λόγω ενός σφάλματος στο συμβόλαιο του Καΐρου dApps). Αυτό θα μπορούσε να έχει ως αποτέλεσμα ο χρήστης να χάσει την επιμέλεια πάνω από το περιουσιακό του στοιχείο για πάντα.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Για τον μετριασμό αυτού του κινδύνου, επιτρέπουμε στο συμβόλαιο που ξεκίνησε το μήνυμα L1→L2 να το ακυρώσει — αφού δηλώσει την πρόθεση να το κάνει και να περιμένει ένα κατάλληλο χρονικό διάστημα (βλ. την τεκμηρίωση[](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Βελτιώσεις Απόδοσης
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Αυτή η έκδοση μειώνει σημαντικά το χρόνο που ένας sequencer πρέπει να εκτελέσει μια ροή εισερχόμενων συναλλαγών στο Κάιρο.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+Αυτό είναι μόνο το πρώτο βήμα! Το επόμενο σημαντικό ορόσημο απόδοσης, που θα εισαχθεί σύντομα (0.9.0), είναι η παράλληλη εκτέλεση του sequencer, και πολλές περισσότερες βελτιστοποιήσεις αναμένονται κάτω από το δρόμο.
 
-### What now?
+### Τι τώρα?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Διαβάστε την τεχνική τεκμηρίωση[εδώ](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Πηγαίνετε στο[starknet.io](https://starknet.io/), για όλες τις πληροφορίες StarkNet, τεκμηρίωση, φροντιστήρια και ενημερώσεις.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Γίνετε μέλος του[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)για υποστήριξη από προγραμματιστές, ανακοινώσεις οικοσυστήματος και γίνετε μέρος της κοινότητας.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Επισκεφθείτε το[StarkNet Shamans](https://community.starknet.io/)για να μείνετε ενημερωμένοι και να συμμετάσχετε σε όλες τις ερευνητικές συζητήσεις του StarkNet.

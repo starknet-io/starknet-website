@@ -1,11 +1,11 @@
-## I﻿ntroduction
+## 引言
 
-Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+Starknet 是一个验证图层2。 它提供了高输送量、低气体成本，并且保留了Etherum Layer 1安全等级。
 
-Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+在一个sudoku 关卡中，验证解决方案比从零开始解决更容易。 如果我们的目标是使人们相信“这个难题已经解决”的说法， 我们可以通过由一个人计算一个解决方案，然后传播它供其他人验证来保存很多计算结果。 在这项战略中，每次计算解决办法都是一次性的，不需要社会复制。 同样，Starknet比额表以较轻的方式取代重型L1计算(低价！) L1 校验使用STARK校验计算出的离链。
 
-## H﻿ow it works
+## 如何工作
 
-With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
+考虑到上述类比，某些术语的时机已经成熟。 Starknet是一个无权限的有效滚动(又称为“ZK-Rollup”)，它支持一般计算，并且目前在以Ethereer为上传的L2网络的生产中运行。 Starknet的最终L1安全通过使用最安全和最可扩展的密码防护系统—— [STARK](https://starkware.co/stark/) 来确保。
 
-Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
+Starknet合同(大部分合同)是用开罗语写的——这是一种为STARK证明设计的一种精彩完整的编程语言。

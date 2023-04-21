@@ -1,88 +1,88 @@
 ### TL;DR
 
 * Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* Cairo 1.0 va oferi dezvoltatorilor un limbaj de programare mai sigur, mai simplu și mai utilizabil
+* În centrul Cairo 1.0 va fi**Sierra**, un strat de reprezentare intermediar care promite o stabilitate mai mare pe termen lung pentru programele Cairo
+* Sierra avansează Cairo pentru a servi într-o rețea fără permisiuni:\
+  -**Protejarea rețelei**: permite o protecție DoS mai robustă\
+  -**Protejarea utilizatorului**: permite rezistența la cenzură în sens EthereCairo 1. va afecta StarkNet în multe feluri. De asemenea, va afecta[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). Vom publica mai multe informaţii despre Regenesis în săptămânile următoare.
 
-### Introduction
+### Introducere
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
+În 2020 l-am publicat pe Cairo, un limbaj de programare Turing-complete și am făcut un pas important spre susținerea calculelor verificabile folosind STARKs. Astăzi, anunțăm**Cairo 1.0**, cel mai mare progres al Cairo de până acum. Acesta va introduce un limbaj îmbunătățit, cu caracteristici care vor spori gradul de utilizare, siguranța și confortabilitatea. Acesta este conceput pentru a sprijini cerințele StarkNet ca o rețea fără permisiuni, permițând protocolului să devină mai simplu și mai sigur.\
+Dezvoltarea este deja în desfășurare și ne așteptăm ca prima versiune să se întâmple în curând.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
+În acest post vom descrie călătoria lui Cairo până acum și vom împărtăși detalii despre caracteristicile viitoare.
 
-### The Cairo Journey
+### Călătoria din Cairo
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+Până în 2020, trebuiau cunoștințe de nișă pentru a construi programe STARK care să poată fi dovedite pentru calculul general. Era posibil doar pentru cei care au înţeles matematica complexă din spatele STARK-urilor. Mai precis, pentru fiecare logică a afacerii: fiecare calcul, unul necesar pentru a genera o Reprezentaţie Algebrică Intermediară (AIR) – un set de constrângeri polinomiale care reprezintă calculul specific.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+Cairo s-a născut din realizarea că un calcul verificabil ar trebui pus la dispoziția dezvoltatorilor de pretutindeni. Cairo face posibilă exploatarea de către dezvoltatori a puterii STARK-urilor.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
+Între timp, comunitatea dezvoltatorilor a confiscat oraşul Cairo pentru a se construi cu entuziasm. Totul din ecosistemul StarkNet înfloritor de azi se bazează pe Cairo. Între[StarkNet](https://starkware.co/starknet/)și[StarkEx](https://starkware.co/starkex/), aplicațiile Cairo-motorizate au procesat peste 220M tranzacții, Am făcut tranzacții în valoare de peste 65M NFT, și au gestionat tranzacții în valoare de 700B și toate au decontat pe Ethereum.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
+În timp ce Cairo a făcut STARKs accesibil, acesta a fost proiectat inițial ca limbă de asamblare, și ca atare a fost scris ca un limbaj de nivel scăzut.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+![Un exemplu pentru programele timpurii care au fost scrise în Cairo](/assets/cairocode_01.png "Un exemplu pentru programele timpurii care au fost scrise în Cairo")
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+Promptat de feedback-ul din partea dezvoltatorilor și de dezvoltarea[StarkNet](https://starkware.co/starknet/), am făcut Cairo mai expresiv și mai prietenos cu dezvoltatorul.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+![Un exemplu din contractul ERC-20 Cairo care demonstrează sprijinul variabilelor în cazul declarațiilor, al erorilor și al bibliotecii UINT256](/assets/cairocode_02.png "Un exemplu din contractul ERC-20 Cairo care demonstrează sprijinul variabilelor în cazul declarațiilor, al erorilor și al bibliotecii UINT256")
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+Dar, în curând, am ajuns la concluzia că este timpul să facem un mare pas înainte şi în loc de îmbunătățiri treptate aduse Cairo, mergeți la o transformare mai îndrăzneață.
 
 ### Cairo 1.0
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+Pentru Cairo 1. am construit un nou compilator de la zero, care va oferi dezvoltatorilor caracteristici de siguranță, și le va permite să scrie contractele într-un mod mai simplu și mai expresiv.
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+#### Introducerea Sierra: demonstrarea faptului că fiecare cursă Cairo poate fi dovedită
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+Principalul adaos la Cairo 1. este Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion). Sierra constituie un nou strat intermediar de reprezentare între codul Cairo 1.0 şi codul octet Cairo. Obiectivul Sierra este de a se asigura că fiecare rulare Cairo – adică un program Cairo și contribuțiile sale – poate fi dovedit (a se vedea mai jos).
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+Sierra promite Cairo devs un cod mai bun rezistent la viitor. Stabilitatea sporită este asigurată de faptul că contractele StarkNet nu vor trebui recompilate în cazul îmbunătățirii sistemului de bază (e. ., modificări ale arhitecturii AIR a procesului, îmbunătăţiri ale traducerii finale din Sierra în codul de byte Cairo).
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
+**Dovada fiecărei rulări Cairo.**În vechiul Cairo, o operație Cairo poate avea ca rezultat trei cazuri — TRUE, FALSE sau eșec. Executările eșuate nu pot fi dovedite. Sierra, asigură că o cursă Cairo nu va da niciodată greș și poate avea ca rezultat doar TRUE sau FALSE. Acest lucru asigură, la rândul său, că fiecare rulare a Cairo poate fi dovedită.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
+Această introducere a Sierra are implicaţii importante pentru StarkNet ca o reţea fără permisiuni. Sierra asigură posibilitatea includerii tranzacţiilor inversate în blocurile StarkNet. Această proprietate va permite protocolului StarkNet să rămână slab și simplu fără a fi nevoie să adăugați mecanisme cripto-economice complexe.\
+Două exemple semnificative:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+1. Sequencerii vor putea colecta taxe pentru tranzacțiile inversate, permițând lui StarkNet să prevină Sequencer DoS într-un mod bine stabilit.
+2. Implementarea tranzacțiilor L1 forțate va fi posibilă, permițând lui StarkNet să moștenească rezistența totală la cenzură a lui Ethereum.
 
-### **Language Features**
+### **Caracteristici Limbă**
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
+Cairo 1.0 va oferi multe îmbunătățiri limbajului de programare în sine. Nu toate cele enumerate mai jos vor face parte din prima lansare, dar fac parte din foaia de parcurs.
 
-#### **Improved syntax**
+#### **Sintaxă îmbunătățită**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+* Nu mai sunt*locale*şi*tempvar*. Acum avem nevoie doar*let*to rule them all variables.
+* Îmbunătățiți*dacă*sintaxa declarațiilor
 
 ```python
-#Old
-if cond != 0 {
+#Vechea
+dacă contează ! 0 {
   tempvar x = x+1;
 } else {
   tempvar x = x;
 }
 __________________________________
 #New
-if cond { x = x + 1; }
+dacă cond { x = x + 1; }
 ```
 
-#### **Type safety guarantees**
+#### **Garanții de securitate de tip**
 
-The compiler will use strong typing to improve the security of the code. For example:
+Compilatorul va folosi tastarea puternică pentru a îmbunătăți securitatea codului. De exemplu:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
+* Indicatorii vor indica întotdeauna memoria inițializată.
+* Dicţionarele vor fi întotdeauna distruse, spre deosebire de a lăsa responsabilitatea de a apela squash_dict în seama programatorului.
 
-#### **Easier to use language constructs**
+#### **Ușor de folosit construcțiile lingvistice**
 
-For example:
+De exemplu:
 
-* For loops
+* Pentru bucle
 
 ```
 let sum = 0
@@ -91,67 +91,67 @@ for x in iter {
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+* Expresii booleene
+* Integrări (cu diviziunea obișnuită de număr întreg 👯)
+* Protecție suplimentară pentru tipurile relevante
+* Afecţiuni booleene
 
 ```
 #Old
-If cond1:
+Dacă cond1:
   if cond2:
-       # Some code
-  else if cond3:
-       # Same code
+       # Un cod
+  altfel dacă cond3:
+       # Același cod
 __________________________________
 #New
-If cond1 && (cond2 || cond3) { … }
+Dacă cond1 && (cond2 <unk> cond3) { … }
 ```
 
-#### **A fully fledged type system**
+#### **Un sistem de tip complet**
 
-* Abstract data types (i.e. Rust-like enum)
+* Tipuri de date abstracte (de ex. Numarul de divertisment)
 
 ```
-enum Option<T> {
+Opţiunea enum<T> {
  Some: T,
- None,
+ Niciunul,
 }
-match result {
+potrivire rezultat {
  Some(r) => {..},
- None => {..},
+ Nici unul => {..},
 }
 ```
 
-* Traits
+* Trăsături
 
 ```
-trait Add<Uint256> {
+trăsătură Adaugă<Uint256> {
     fn add(…) { … }
 }
 
 let a: Uint256 = 1;
 let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+a + b; // Evaluată la 5 din tipul Uint256.
 ```
 
-#### **More intuitive libraries**
+#### **Biblioteci mai intuitive**
 
-(e.g. dict, arrays)
+(de exemplu, dict, matrici)
 
 * Dict<Uint256, MyStruct>;
 * Array<MyOtherStruct>;
 
-#### **More optimized code**
+#### **Cod mai optimizat**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+Nu este nevoie să se prevadă în mod explicit alocarea variabilelor locale – auto detectate și efectuate automat.
 
-#### **Better compiler integration**
+#### **O mai bună compilare a integrării**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+Facilitarea unui sprijin mai bun pentru IDDE, gestionarea pachetelor şi facilitarea mai bună a contribuţiilor comunitare.
 
-### **Conclusion**
+### **Concluzii**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+La doi ani după ce Cairo a fost folosit pentru prima dată în producţie, dezvoltăm Cairo 1.0, care va asigura o mai bună expresivitate, securitate şi sintaxă. Aceasta va duce mai departe şi va permite dezvoltatorilor să îşi scrie mai uşor contractele StarkNet.
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+Într-o altă funcţie, în curând, vom împărtăşi mai multe detalii despre cum va fi Cairo 1. va avea efect asupra regenezei StarkNet și asupra modului în care dezvoltatorii ar trebui să se pregătească pentru lansarea sa.

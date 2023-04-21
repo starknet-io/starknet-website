@@ -1,49 +1,49 @@
 ### TL;DR
 
-* StarkNet Alpha 0.7.0 released to Goerli; packed with improvements
-* Contracts can now be upgraded using the Proxy Upgrade Pattern
-* Contracts can now emit Events
-* Support for the long-awaited Block Number and Block Timestamp system calls
+* StarkNet Alpha 0.7.0 випущений в Goerli; запаковані поліпшеннями
+* Тепер контракти можна оновити за допомогою проксі Upgrade шаблона
+* Контракти можуть тепер запускати події
+* Підтримка довгоочікуваних номерів та дзвінків Блоку
 
-### Intro
+### Вступ
 
-We are happy to release Alpha 0.7.0, a version packed with new features and improvements. One of the best stimulants to StarkNet over the last few months has been the increased involvement of the community in shaping StarkNet’s future. This version addresses some of the community’s burning needs.
+Ми раді випустити Альфа 0.7.0, версію, упаковану з новими можливостями і покращеннями. Один з найкращих стимуляторів «СтаркНет» протягом останніх кількох місяців був посиленою участю громади у формуванні майбутнього StarkNett. Ця версія стосується деяких потреб у спалюванні громади.
 
-#### Changes to Naming Convention
+#### Зміни іменної конвенції
 
-The observant reader might have noticed that the previous StarkNet Alpha release was named Alpha 4, whereas we are now releasing Alpha 0.7.0. We decided to omit the dedicated Alpha version number and rely instead only on the associated cairo-lang version.
+Читач спостережень міг би помітив, що попередній реліз StarkNet Alpha 4 імені Альфа у той час як зараз ми випускаємо альфа 0.7.0. Ми вирішили пропустити присвячений номер версії Альфи та покластися лише на пов'язану версію опорного тексту.
 
-### New Features
+### Нові можливості
 
-#### Contract Upgradeability
+#### Покращення контракту
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. The Proxy pattern is the common method to enable contract upgrades over Ethereum. Alpha 0.7.0 enables this pattern over StarkNet.
+OpenZeppelin[Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)тепер повністю підтримується для оновлення контрактів в StarkNet. Шаблон проксі - це загальний спосіб для забезпечення оновлення контрактів над Ethereum. Альфа 0.7.0 вмикає цей шаблон за допомогою StarkNet.
 
-We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+Ми зробили короткий[підручник](https://starknet.io/docs/hello_starknet/default_entrypoint.html)для демонстрації базової реалізації шаблону, і OpenZeppelin вже важко здійснити стандартний контракт на проксі-сервер; дивитися прототип[.](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
 
-#### Block Number and Block Timestamp
+#### Блокувати часову позначку часу
 
-Alpha 0.7.0 adds two new system calls that many devs have been asking for. These calls allow a contract to access the block number and the block timestamp. The block number returns the number of the current executed block. The block timestamp returns the timestamp given by the Sequencer at the creation of the block.
+Альфа 0.7.0 додає два нові системні виклики, про які просили багато людей. Ці виклики дозволяють договору отримати доступ до блокування номера та тимчасової мітки. Блок повертає кількість виконаного блоку. Марка часу блоку повертає позначку часу під час створення блоку.
 
-You can see an example of how to use these features in the [tutorial](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
+Ви можете побачити приклад того, як користуватися цими функціями у[підручнику](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
 
-#### Events
+#### Події
 
-Surprise! A feature that was planned for a future version has sneaked its way into this earlier one.
+Сюрприз! Функція, яка планувалась для майбутніх версій, прокралася шлях до перша.
 
-StarkNet contracts now support defining and emitting events, allowing them to expose execution information for off-chain applications to consume. Ethereum developers will find the semantics and syntax very similar to Solidity. You can read the [documentation](https://starknet.io/documentation/events/), or follow the [tutorial](https://starknet.io/docs/hello_starknet/events.html), that explains this feature.
+StarkNet договори тепер підтримують визначення та створення подій, що дозволяє їм викрити їх виконання інформації для програм з мережі Wi-Fi для їх використання. Розробники Ethereum знайдуть семантику та синтаксис дуже схожими на солідарність. Ви можете прочитати[документацію](https://starknet.io/documentation/events/), або перейти до[підручника](https://starknet.io/docs/hello_starknet/events.html), який пояснює цю функцію.
 
-#### Removed %builtins Directive
+#### Вилучено %bдиректив uiltins
 
-The %builtin directive is no longer needed in StarkNet contracts. This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). It significantly simplifies the usability of this extensibility pattern.
+Директива %bбільше не потрібна в StarkNet контрактах. Ця зміна слідувала за дискусією про[шаблон розширення контрактів](https://community.starknet.io/t/contract-extensibility-pattern/210)на[StarkNet Shamans](https://community.starknet.io/). Це значно спрощує використання шаблону розширеності цього поширення.
 
-For example, the following contract will be changed from:
+Наприклад, наступний контракт буде змінено з:
 
 ```
 %lang starknet
 
-# This is the "%builtins" directive.
-# It is not needed anymore.
+# Це "%builtins" директива.
+# Це більше не потрібно.
 %builtins range_check
 
 @view
@@ -52,7 +52,7 @@ return (res=x + y)
 end
 ```
 
-To this:
+На такий:
 
 ```
 %lang starknet
@@ -62,50 +62,50 @@ return (res=x + y)
 end
 ```
 
-You can check out the [ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token) standard contracts, which use the new pattern.
+Ви можете перевірити[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)стандартних договорів, які використовують новий шаблон.
 
-#### External Functions Support Arrays of Structs
+#### Зовнішні функції підтримки масивів споруд
 
-Alpha 0.7.0 supports passing and returning arrays of structs in external functions. This additional functionality allows Account Contracts to better support [multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
+Альфа 0.7.0 підтримує передачу та повертаючи масиви структур зовнішніх функцій. Ця додаткова функціональність дозволяє Обліковому запису контракти краще використовувати[багатогодинники](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
 
-Multicall is a powerful feature of Account Abstraction that allows an account to make multiple calls in a single transaction. An obvious use-case is that of creating a **single transaction** that calls allowance and then transferFrom.
+Multicall є потужною функцією запису запису запису для здійснення кількох викликів в одній транзакції. Очевидним використанням є створення**однієї транзакції**, яка викликає дозвіл і переказ.
 
-We look forward to seeing what the community does with it.
+Ми сподіваємось побачити що робить громада.
 
-#### Improvements to StarkNet CLI
+#### Поліпшення StarkNet CLI
 
-**Support for Pending Blocks**
+**Підтримка чеканих блоків**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. This version includes support for querying those blocks via the StarkNet CLI.
+[Блоки очікування](https://starknet.io/documentation/block-structure-and-hash/#pending_block)були[введені](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)в останню незначну версію (v0.6.2) і запропонували швидше підтвердження при транзакціях. Ця версія містить підтримку для запитів до цих блоків через StarkNet CLI.
 
-To use it, in every CLI command that takes block_number as an argument (contract_call/get_block/get_code/get_storage_at), we can query the StarkNet with respect to the pending block by specifying block_number=pending.
+Щоб використовувати це, в кожній команді CLI, яка приймає блок_номер як аргумент (contract_call/get_block/get_code/get_storage_at), ми можемо вимагати StarkNet щодо блоку, вказуючи block_number=pending.
 
-**Support for Account Contracts**
+**Підтримка контрактів**
 
-StarkNet uses account abstraction, i.e., all accounts are implemented as smart contracts. The first implementations of account contracts were done by [Argent](https://github.com/argentlabs/argent-contracts-starknet) and [OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), but we expect many more to come.
+StarkNet використовує аккаунт абстракція, тобто всі рахунки реалізовані як смарт-контракти. Перші реалізації договорів рахунку виконані[Аргентом](https://github.com/argentlabs/argent-contracts-starknet)і[OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), але ми очікуємо на попереднє числення.
 
-In StarkNet, all transactions must go through an account contract, and the CLI now allows interaction with StarkNet Alpha directly via account contracts. See the [tutorial](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account) on how to set it up.
+В StarkNet, усі транзакції повинні пройти через контракт облікового запису, і CLI тепер дозволяє взаємодіяти з StarkNet Alpha безпосередньо через контракти на аккаунті. Дивіться[підручник](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account)про те, як його встановити.
 
-Similar functionality was also added to [StarkNet.py](https://github.com/software-mansion/starknet.py/) and to [Nile](https://github.com/OpenZeppelin/nile) in the last month.
+Схожі функціональності також були додані до[StarkNet.py](https://github.com/software-mansion/starknet.py/)та до[Nile](https://github.com/OpenZeppelin/nile)за останній місяць.
 
-#### L1<>L2 Messaging in the Testing Framework
+#### L1<>L2 Повідомлення в тестовому фреймворку тестування
 
-Alpha 0.7.0 introduces the Postman. The Postman enables developers to use the testing framework to test more complicated flows.
+Альфа 0.7.0 знайомить з Postman. Postman дозволяє розробникам використовувати тестовий фреймворк для тестування більш складних потоків.
 
-At a high level — it mocks the StarkNet Sequencer’s responsibility of passing messages from L1 to L2 and L2 to L1. It makes sure messages that are sent via the Solidity messaging contract will appear at the destination StarkNet contract and messages sent from a StarkNet contract will appear in the Solidity messaging contract.
+На високому рівні - імітує відповідальність StarkNet Sequencer за передачу повідомлень від L1 до L2 і L2 в L1. Він переконує в тому, що повідомлення, які відправляються через контракт про договору про бездіяльність, будуть з'являтися в пункті призначення в StarkNet (скороченому контракті про договору про солідність (StarkNet).
 
-#### And More Features
+#### І додаткові можливості
 
-Alpha 0.7.0 provides many more features and changes, like the addition of an efficient square root function to the math common library. A full list appears in the [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
+Альфа 0.7.0 надає ще багато функцій і змін, як, наприклад, додавання ефективного квадратного кореня в загальну бібліотеку математики. Повний список з'явиться в[журнал змін](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
 
-### Next Up?
+### Наступне згодом?
 
-Initial [Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29) support will be released in a matter of weeks, as a sub-version of StarkNet.
+Початкова[операція "Механізм"](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)буде опублікована за лічені тижні, як підверсія StarkNet.
 
-### More Information?
+### Детальніше?
 
-[starknet.io](https://starknet.io/): for all StarkNet information, tutorials and updates.
+[starknet.io](https://starknet.io/): для всієї інформації StarkNet та оновлень.
 
-[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): join to get answers to your questions, get dev support and become a part of the community.
+[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): приєднуйтесь до відповіді на Ваші запитання, отримуйте підтримку dev і станьте частиною спільноти.
 
-[StarkNet Shamans](https://community.starknet.io/): join to follow (and participate!) in StarkNet research discussions.
+[StarkNet Shamans](https://community.starknet.io/): приєднуйтесь до обговорення досліджень (та участі!)

@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Olemme innoissamme voidessamme ilmoittaa seuraavasta askeleesta StarkNetin hajauttamisprosessissa – äänestämisestä protokollan muutoksista.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+Viime viikkoina StarkNet ryhtyi merkittäviin toimiin hajauttamisen edistämiseksi perustamalla[StarkNet-säätiön](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), käynnistää[STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), ja[avoimeen hankintaan Kairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Tämä virka laajenee seuraavaan vaiheeseen eli StarkNetin hallinnon ensimmäiseen vaiheeseen, joka ulottuu tulevien kuukausien aikana.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Ensimmäinen StarkNet-pöytäkirjaan ehdotettujen muutosten hyväksymistä tai hylkäämistä koskeva äänestys toimitetaan pian
+* Ensimmäisen vaiheen äänestyksiin osallistuneet:\
+  — Tokenin haltijat\
+  — Tokenin omistajien valitsemat valtuuskunnat, jotka haluavat siirtää äänioikeutensa\
+  — StarkNet-säätiön valitsemat valtuuskunnat käyttävät joitakin äänioikeuksiaan\
+  — Ammattimainen Builders’ Council, StarkNet-säätiön asettama
+* Kaikkia pyydetään nimeämään itsensä StarkNetin hallintoon valtuutetuksi henkilöksi
+* Keskustelut käydään[StarkNet-yhteisön foorumissa](https://community.starknet.io/)
 
-### Background
+### Tausta
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Kaksi prosessia etenee samanaikaisesti StarkNetin vision saavuttamiseksi sensuurikestäväksi julkiseksi verkoksi: i)[StarkNetin järjestelmäkomponenttien hajauttaminen](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e. ., sekvensserit ja sananpaikat sekä ii) protokollan muutoksia koskevien hallintomekanismien täytäntöönpano.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Laadukkaiden hallintomekanismien luominen, joiden avulla avoin yhteisö voi hallita protokollan päivityksiä, on vakava haaste. Se on asteittainen ja tutkiva prosessi, joka edellyttää laajaa yhteisön yhteistyötä.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+StarkNet-säätiö on perustanut hallintokomitean, jonka tehtävänä on suunnitella ja järjestää StarkNet-hallinnon ensimmäiset vaiheet. Säätiö julkaisee yksityiskohtaisempia tietoja komitean toimialasta ja tehtävästä erillisessä tehtävässä. Valiokunnan jäseniä ovat Deven Matthews (Alankomaat), Manor Bareli (StarkWare) ja Sylve Chevet (briq). Alla on StarkNet-hallinnon ensimmäisen vaiheen suunnitelma, komitean jäsenten yhdessä StarkNet-ekosysteemin eri osallistujien kanssa laatima ja säätiön hallituksen hyväksymä.
 
-### Starknet’s governance first phase plan
+### Starknet'n hallinnon ensimmäisen vaiheen suunnitelma
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+StarkNet-hallinnon ensimmäinen vaihe on käynnistetty. Tästä lähtien yhteisön jäsenet voivat osallistua Starknetin muokkaamiseen uuden kanavan eli protokollan muutoksia koskevan äänestyksen kautta. Tämä on vasta StarkNetin hallinnon ensimmäinen vaihe, ja StarkNet-järjestelmän eteneminen seuraaviin vaiheisiin laajenee ja hallintorakenteiden ja osallistujien kirjo laajenee. Tässä ovat yksityiskohdat**ensimmäinen vaihe**:
 
-#### Voting subject
+#### Äänestys aiheesta
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Ehdotetut päivitykset StarkNet-protokollaan. Säätiö ehdottaa tässä vaiheessa kaikkia päivityksiä. Ehdotuksissa otetaan huomioon keskustelut, ajatukset ja palaute, jotka tuotiin esiin yhteisön StarkNet-foorumissa.
 
-#### Voting type
+#### Äänestyksen tyyppi
 
-Off-chain signal vote (Via Snapshot)
+Ketjujen ulkopuolisen signaalin ääni (Via Snapshot)
 
-#### Voting process
+#### Äänestys
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Säätiö ottaa käyttöön päivitetyn StarkNet-version Goerliin asti.
+2. Äänestäjillä on kuusi päivää aikaa tutkia päivitettyä versiota, koska se toimii Goerlissa. Tänä aikana he voivat äänestää siitä, hyväksytäänkö se Mainnetin lähettämistä varten.
+3. Jos äänestäjät hyväksyvät ehdotuksen, myöhästyminen on 24 + tuntia ennen päivityksen hakemista Mainnettiin.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Ilmoitukset näistä päivityksistä tehdään[Twitter tilille StarkNet Foundation](https://twitter.com/StarkNetFndn), sekä[StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Kynnys ja vaadittu päätösvaltaisuus
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Kynnysarvo on yksinkertainen enemmistö (eli kynnys on 50 % annetuista äänistä)
+* Ei vaadittu päätösvaltaisuutta, mikä tarkoittaa, että osallistuminen ei ole vähimmäistasoa, jotta äänestys olisi pätevä
 
-### First phase voting participants
+### Ensimmäisessä vaiheessa äänestäneet osallistujat
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Tässä on luettelo niistä, jotka voivat osallistua hallintoprosessin ensimmäiseen vaiheeseen:
 
-#### Token holders
+#### Pääsymerkin haltijat
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* StarkNetin hallinnon ensimmäisessä vaiheessa, useimmat tunnuksen haltijat ovat alkuvaiheessa keskeisiä osallistujia ja sijoittajia, jotka rakensivat ja tukivat verkostoa alkuvaiheissaan ([lue tämä viesti saadaksesi lisätietoja](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Ajan myötä tunnus jaetaan kehittäjille ja muille osapuolille, jotka tekevät työtä ylläpitääkseen ja parantaakseen verkkoa. Näin nämä osapuolet voivat turvata verkoston, käyttää sitä, käyttää sitä ja osallistua sen hallintoon.
 
-#### Delegates
+#### Edustajat
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+**Perustelut**:\
+Äänestäminen valtuutus valtuuttaa tunnuksen haltijat valtuuttamaan hallintovaltuutensa osallistujille, tiedoille ja ammattimaisille yhteisön jäsenille. Kiitos että:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+* Tokenien haltijat voivat olla osa päätöksentekoa pikemminkin edustuksellisella kuin suoralla demokratialla.
+* Omistautuneilla ja lahjakkailla yhteisön jäsenillä voi olla merkittävä rooli hallinnossa maineensa ansiosta. Ei ole mitään tarvetta omistaa kuponkia voidakseen esittää itseäsi valtuutettuna.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+**Vastuut**:\
+Suorita vakava oppimisprosessi kunkin päätöksen osalta, joka johtaa hyvin perusteltuihin ja riippumattomiin päätöksiin, jotka hyödyttävät StarkNettia ja sen pitkän aikavälin visiota.
 
-**Operation**:
+**Toiminta**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Jotta säädösvallan siirron mekanismi olisi onnistunut, tarvitaan ennen kaikkea joukko laadukkaita edustajia.
+* Tie valtuutetuksi on luvaton — ei ole mitään edellytyksiä — mutta niille, jotka haluavat, foorumi on luotu osioon, jossa mahdolliset nimetyt voivat julkaista profiileja ([tässä linkissä](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Token haltijat voivat vapaasti valita minkä tahansa Ethereum L1 osoite he haluavat siirtää äänivaltaa.
+* Tarkempia tietoja saat osoitteesta[StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+#### StarkNet'n rakentajien neuvosto
 
-A professional committee, appointed by the Foundation.
+Säätiön nimittämä ammattimainen komitea.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+**Perustelut**:\
+Sellaisten hallintomekanismien käyttöönotto, jotka perustuvat yhteisön osallistumiseen ja ammattimaiseen maineeseen, eikä ainoastaan rahakkeella pitämisen perusteella.
 
-**Responsibilities**:
+**Vastuut**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* Vakavan oppimis- ja keskusteluprosessin toteuttaminen jokaisessa päätöksessä, mikä johtaa hyvin perusteltuihin päätöksiin, jotka hyödyttävät StarkNettia ja sen pitkän aikavälin visiota
+* Osallistuminen aktiivisesti ensimmäisessä vaiheessa käytäviin keskusteluihin ja äänestyksiin
+* Varmistetaan, että niiden keskustelu- ja päätöksentekoprosessit ovat avoimia
+* Yhteisöllä on mahdollisuus osallistua avoimiin keskusteluihin yhteisön StarkNet-foorumista
 
-**Operation**:
+**Toiminta**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 17 säätiön nimittämää komitean jäsentä
+* Toimikausi – StarkNet-hallinnon ensimmäinen vaihe (useita kuukausia)
+* Tarkempia tietoja saat osoitteesta[StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+### Ensimmäisen vaiheen äänestysvalta
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+StarkNetin hallinnon ensimmäisen vaiheen aikana StarkWare ei osallistu äänestyksiin. StarkNet-säätiö siirtää äänivallan Buildersin neuvostolle ja useille poolin edustajille, eikä se äänestä suoraan.
 
-The voting power distribution in the **first phase** will be:
+Äänestysvallan jakautuminen**ensimmäisessä vaiheessa**on seuraava:
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* Sijoittajat: 33,3
+* StarkNet-verkoston varhaisvaiheen tietolähteet (lukuun ottamatta StarkWare): 33,3 %
+* Säätiön edustajat: 33,3 %\
+  – StarkNet Buildersin neuvosto: 23,3 %\
+  – Säätiön puolesta äänestävät valtuuskunnat 10 %
 
-### First vote — StarkNet’s 0.11 version
+### Ensimmäinen äänestys — StarkNetin 0.11 versio
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+Ensimmäinen äänestys toimitetaan tulevina viikkoina. Äänestys koskee sitä, päivitetäänkö StarkNet Alpha versioon 0.11.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+Äänestys alkaa pian Goerlin julkaisun jälkeen, ja se julkistetaan virallisten kanavien kautta:[StarkNet-säätiön Twitter-tili](https://twitter.com/StarkNetFndn)ja[StarkNet Community Forum](https://community.starknet.io/). Pysy kuulolla!

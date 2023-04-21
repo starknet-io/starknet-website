@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Teknisk innovation i blockchain har blomstrat under de senaste åren — STARKs, SNARKs, EIP-1559, Ethereum Merge — är alla enorma tekniska landvinningar. Dock har UX och UI design misslyckats med att hänga med. Människor fastnar fortfarande på 16 ord fröfraser, och att komma in i DeFi utan en centraliserad mellanhand är fortfarande alltför skrämmande för många. Att ombord på nästa miljard användare i Web3, att förbättra användarens upplevelse ombord är kritiskt.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Som FTX demonstrerade (och Gemini, Celsius och Mt. Gox) är det ytterst viktigt att behålla sin egen vårdnad om sina tillgångar. Men tills nyligen, självförvarade plånböcker har varit klumpiga och förvirrande för den genomsnittliga användaren. De flesta människor glömmer sina Web2 lösenord på en månatlig grund; hur förväntas användare att hålla sina seed phrase och privata nycklar säkra i evigheten?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Enkelt uttryckt, det är en säkerhet mardröm. Som vi har sett otaliga gånger, ett felaktigt drag, vare sig initierat av dåliga aktörer eller försumlighet, kan resultera i förlust av miljontals dollar.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Som första kontaktpunkt för nya kryptoanvändare måste Ethereum plånböcker vara lätt att använda, säkra och anpassningsbara för att passa varje användares behov. Detta kräver utvecklare att integrera enkelheten i Web2 finansiella produkter med funktionerna i Web3.
 
-This is exactly what account abstraction achieves.
+Detta är exakt vad kontoutdrag åstadkommer.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Kontoabstraktionen förbättrar säkerheten och säkerheten för självförvarade plånboksprodukter genom att ta bort användarnas beroende av den privata nyckeln och göra plånböckerna mer programmerbara. Med denna förbättrade UX kan icke-förmyndarplånböcker slutligen skala till miljontals vanliga kryptoanvändare.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Men för att till fullo förstå effekterna av kontoabstraktion måste vi fräscha upp oss på hur Ethereums räkenskaper fungerar.
 
-### The basics of Ethereum accounts
+### Grunderna i Ethereum konton
 
-There are two types of Ethereum accounts:
+Det finns två typer av Ethereum konton:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Externt ägda konton (EOA)
+2. Kontraktskonton (CA)
 
-Let’s break each down a bit further.
+Låt oss bryta ner varje lite längre.
 
-### Externally owned accounts
+### Externt ägda konton
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Externt ägda konton, som MetaMask och Coinbase Wallet, är den typiska kontotypen för Ethereum-användare. Varje EOA består av en privat och offentlig nyckel, som kallas ett nyckelpar.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Alla transaktioner är auktoriserade och signerade av privata nycklar. När en transaktion är signerad verifierar EVM att signaturen är giltig med EOA:s kontoadress. Den hårdkodade logiken i EVM innebär att kontot (objektet som håller dina tokens) och den privata nyckeln (undertecknare) är kopplade som ett.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Att förlora din privata nyckel innebär att förlora dina pengar, eller ens kontroll över ditt konto, för evigt.
 
-### Contract accounts
+### Kontraktskonton
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Samtidigt kontraktskonton, synonymt med kontosumning, är smarta kontrakt som distribueras på Ethereum blockchain. Dessa kontrakt styrs av kodlogik och kräver inga privata nycklar. Till skillnad från EOA kan kontraktskonton inte initiera transaktioner. Istället utlöses deras transaktioner av instruktioner från EOA.
 
-### Why account abstraction matters
+### Varför kontots abstraktion spelar roll
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Konto abstraktion innebär att abstrahera den hårdkodade auktoriseringslogiken från EOA, förvandla varje konto till ett programmerbart smart kontrakt som kan skräddarsys för att möta behoven hos alla individer.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Som förklaras av Argent medgrundare och Chief Science Officer Julien Niset i en nyligen[Stark @ Home Event](https://www.crowdcast.io/e/7olimxqv), denna flexibla auktoriseringslogik ger utvecklare frihet att spela runt med kontofunktioner som…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Hårdvarusigners:**Använda en iPhone eller Android säker enklav för att förvandla någon smartphone till en hårdvaruplånbok. Därifrån kan användare verifiera transaktioner med hjälp av biometriska data som ett fingeravtryck eller Apple Face ID. Vi har redan börjat se självförvarade plånböcker som Braavos[rulla ut denna funktion.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**Tillåt användare att betala gasavgifter i valfri form eller till och med ha en tredjepartsdesignad mekanism som betalar för transaktioner.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Social Recovery:**I händelse av att en privat nyckel förloras eller äventyras kan användare godkänna en ny nyckel som legitim plånboksägare. Detta kan omfatta en mängd olika återvinningsmetoder genom betrodda kontakter, hårdvaruplånböcker eller tjänster från tredje part. Tanken är att återfå åtkomst till ditt konto lika enkelt som att återställa lösenordet till ditt bankkonto via ett e-postmeddelande.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Multifactor Autentisering:**Liknande den vanliga Web2 2FA metoder, användare kan ställa in två (eller flera) autentiseringsmetoder för sina kryptoplånböcker, där en transaktion endast signeras när en användare bekräftar godkännandet via ett andra alternativ som e-post eller SMS. Användare kan också ställa in dagliga överföringsgränser eller listor över kontoadresser som plånboken automatiskt blockeras från att interagera.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Kvantresistenta och gaseffektiva signaturer:**Ethereums nuvarande signatursystem, ECDSA, är beräkningsmässigt omfattande (läs: högre gasavgifter) och kan brytas av kvantdatorer. Genom signaturabstraktion använder olika kontoavtal effektivare och kvantsäkra signatursystem. StarkNet använder en egen STARK-vänlig kurva.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Dessa funktioner ger inte bara användarna större säkerhet och mer flexibilitet, utan ännu viktigare, resultera i en mycket**bättre**användarupplevelse.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Vitalik Buterin listas av Vitalik Buterin som en “lång tids dröm” för utvecklargemenskapen, innovationer kring kontoabstraktion, främst EIP-2938 och EIP-3074, har virvlat sedan 2020. Båda krävde dock kompromisser kring säkerhet och genomförande. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), den mest lovande utvecklingen hittills, föreslår en version av kontoabstraktion utan att kräva ändringar i Ethereum-protokollet.
 
-### **Account abstraction and Starknet**
+### **Konto abstraktion och Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Till skillnad från Bitcoin och Ethereum som eftermonterar sina nuvarande protokoll för att stödja kontoabstraktion,[StarkNet](https://starkware.co/starknet/)har implementerat kontoabstraktion sedan dag ett. I kombination med skalbarheten och kapaciteten hos våra STARK-bevis är potentialen för plånboksinnovation obegränsad. Det är därför som nästa generation av självförvarade plånböcker, som Argent och Braavos, för närvarande byggs ovanpå vårt nätverk.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+StarkNet’s tillvägagångssätt liknar EIP-4337,[Att erkänna att](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)fullständig kontoabstraktion fortfarande skulle resultera i förvirrande UX och[kunde öppna dörren](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)för attacker mot sequencers. Snarare syftar det till att uppnå både signatur abstraktion och betalning abstraktion genom att mutualisera en del av de krav på och utanför kedjans infrastruktur.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+Och medan det fortfarande finns mycket mer arbete att göra, redovisningsabstraktion vinner dragkraft bortom en liten cirkel av kryptoinfödda. I december föreslog[Visa idén](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)att använda kontoutdrag för att ställa in automatiska återkommande betalningar på StarkNet. Genom att använda ett delegerat konto kan användare bevilja tillstånd att inleda en betalning till ett förgodkänt smart kontrakt. Därifrån kommer det smarta kontraktet att programmeras för att dra av ett fastställt betalningsbelopp på en viss dag, under en bestämd tidsperiod. Medan visum ännu inte har avslöjat sina planer för sina egna tjänster, bara intresset talar volymer, och kan förebåda en värld där stora tekniska prenumerationsplattformar som Netflix och Spotify kan omfamna kryptoadoption.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+När det gäller vad framtiden håller så kommer bara tiden att berätta. Men en sak är säker. Genom att göra plånböcker enklare och säkrare att använda, kontoabstraktion kommer att fungera som en kraftfull katalysator för självförvarade blockkedjeplånböcker för att skala till miljontals vanliga kryptoanvändare. Vi kommer att fortsätta bygga under tiden.

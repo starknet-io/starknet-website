@@ -1,5 +1,5 @@
 {
-  "title": "Starknet: Decentralized and Permissionless ZK-Rollups",
-  "time_to_consume": "16 min watch",
-  "short_desc": "In this SmartCon presentation and live demo, StarkWare’s Tom Brand and Alon Shtaierman introduce Starknet—a decentralized and permissionless ZK-Rollup—that allows smart contract developers to deploy contracts for arbitrary computation in a permissionless manner as well as send transactions to the network. "
+  "title": "Starknet: 分散型および権限のないZKロールアップ",
+  "time_to_consume": "16分間ウォッチ",
+  "short_desc": "このSmartConプレゼンテーションとライブデモで StarkWareのTom BrandとAlon Shtaiermanは、分散型無許可のZKロールアップであるStarknetを導入し、スマートコントラクト開発者は無許可の方法で任意の計算のための契約を展開し、トランザクションをネットワークに送信することを可能にします。 "
 }

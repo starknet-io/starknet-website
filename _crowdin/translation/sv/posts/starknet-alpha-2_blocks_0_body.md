@@ -1,44 +1,44 @@
 ### TL;DR
 
-* StarkNet now supports composability, the main feature defining StarkNet’s Constellations phase.
-* We are releasing a testing framework for StarkNet — developers can now test their contracts locally and effectively.
-* This release includes several notable performance improvements, such as support for Merkle-Patricia Tries and a builtin for bitwise operations.
-* Ecosystem front:
+* StarkNet stödjer nu kompositören, den viktigaste funktionen som definierar Starknets konstellationsfas.
+* Vi släpper ett testramverk för StarkNet – utvecklare kan nu testa sina kontrakt lokalt och effektivt.
+* Denna utgåva innehåller flera anmärkningsvärda prestandaförbättringar, såsom stöd för Merkle-Patricia Tries och en inbyggd för bitwise operationer.
+* Ekosystemets framsida:
 
-1. **Standardized Contracts**: OpenZeppelin will be developing standardized contracts for StarkNet, as they did for Ethereum!
-2. **EVM->Cairo Compiler**: the Warp team @ Nethermind demonstrated compilation of ERC-20 Solidity code to StarkNet contracts
+1. **Standardiserade kontrakt**: OpenZeppelin kommer att utveckla standardiserade kontrakt för StarkNet som de gjorde för Ethereum!
+2. **EVM->Kairo Compiler**: Warp team @ Nethermind demonstrerade sammanställning av ERC-20 Solidity kod till StarkNet kontrakt
 
-### Background
+### Bakgrund
 
-StarkNet is a permissionless decentralized Validity-Rollup (aka a “ZK-Rollup”). We announced its [roadmap](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880) at the beginning of the year. The [Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), currently running on a public Ethereum testnet, already supports permissionless deployment of smart contracts implementing any business logic, with L1<>L2 messaging and on-chain data. Furthermore, it allows any user to send transactions to the network permissionlessly, Ethereum-style.
+StarkNet är ett tillståndsfritt decentraliserat Validity-Rollup (även kallat ZK-Rollup). Vi tillkännagav sin[färdplan](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880)i början av året. [Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), som för närvarande körs på ett offentligt Ethereum testnet, stöder redan tillåten distribution av smarta kontrakt genomföra någon affärslogik, med L1<>L2 meddelanden och on-chain data. Dessutom gör det möjligt för alla användare att skicka transaktioner till nätverket behörighet, Ethereum-stil.
 
-This release: StarkNet Alpha 2, includes the core feature that allows us to advance from Planets to Constellations: composability between deployed smart contracts.
+Denna utgåva: StarkNet Alpha 2, innehåller kärnfunktionen som gör det möjligt för oss att avancera från planeter till konstellationer: sammansättning mellan distribuerade smarta kontrakt.
 
-### Features
+### Funktioner
 
-StarkNet Alpha 2 introduces the following features:
+StarkNet Alpha 2 introducerar följande funktioner:
 
-* **Composability:** StarkNet Alpha now supports interaction between smart contracts — ahead of schedule! The beauty of this upgrade is that developers can expect almost the same experience as Ethereum; calls are synchronous and can be used as function calls. We eagerly await the new applications that will benefit from both unlimited computational scale and contract composability, as unleashed by StarkNet. To understand how to use this feature, you can start by following this [tutorial](https://www.cairo-lang.org/docs/hello_starknet/calling_contracts.html). We would love to hear your feedback and see what you’re building on the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y).
-* **Local Testing Framework:** you asked, and we delivered — a [better testing framework](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/starknet/testing). This will allow developers to expedite their dApp development by testing their StarkNet contract deployments and interactions locally — without any external dependencies. This version includes only L2 interaction, next versions will expand the functionality and ease of use. Check the tutorial [here](https://www.cairo-lang.org/docs/hello_starknet/unit_tests.html), and we would love to hear your feedback on that feature.
-* **Performance Improvements:**
+* **Komposabilitet:**StarkNet Alpha stödjer nu interaktion mellan smarta kontrakt – före tidtabellen! Skönheten i denna uppgradering är att utvecklare kan förvänta sig nästan samma erfarenhet som Ethereum; anrop är synkrona och kan användas som funktionsanrop. Vi väntar ivrigt på de nya applikationer som kommer att gynnas av både obegränsad beräkningsskala och kontraktskompatibilitet, som utlöstes av StarkNet. För att förstå hur du använder den här funktionen kan du börja med att följa denna[handledning](https://www.cairo-lang.org/docs/hello_starknet/calling_contracts.html). Vi vill gärna höra din feedback och se vad du bygger på[StarkNet discord](https://discord.gg/uJ9HZTUk2Y).
+* **Lokala testramar:**du frågade och vi levererade — ett[bättre testramverk](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/starknet/testing). Detta gör det möjligt för utvecklare att påskynda sin dApp utveckling genom att testa sina StarkNet kontrakt distributioner och interaktioner lokalt — utan några externa beroenden. Denna version innehåller endast L2 interaktion, nästa versioner kommer att utöka funktionaliteten och användarvänligheten. Kontrollera handledningen[här](https://www.cairo-lang.org/docs/hello_starknet/unit_tests.html), och vi skulle älska att höra din feedback på den funktionen.
+* **Förbättringar av prestanda:**
 
-**Patricia Trees:** we’ve improved StarkNet’s design to support higher throughputs and shorter proof generation time by moving to Merkle-Patricia Tree state commitment ([documentation](https://github.com/starkware-libs/cairo-lang/blob/master/src/starkware/cairo/common/patricia_utils.py)). This change allows the creation of much larger blocks, thus lowering the cost per transaction. The move to a more sophisticated state commitment was enabled by Cairo, the ZKP language — a core component of the StarkNet operating system.
+**Patricia Trees:**Vi har förbättrat StarkNet’s design för att stödja högre genomströmningar och kortare säker genereringstid genom att flytta till Merkle-Patricia Tree statliga åtagande ([dokumentation](https://github.com/starkware-libs/cairo-lang/blob/master/src/starkware/cairo/common/patricia_utils.py)). Denna förändring gör det möjligt att skapa mycket större block, vilket sänker kostnaden per transaktion. Flytten till ett mer sofistikerat statligt åtagande möjliggjordes av Kairo, ZKP språk — en kärnkomponent i StarkNet operativsystem.
 
-**Bitwise Operations:** we’ve added a [builtin](https://www.cairo-lang.org/docs/how_cairo_works/builtins.html) to support much more efficient bitwise operations in StarkNet contracts ([documentation](https://www.cairo-lang.org/docs/reference/common_library.html#common-library-bitwise)).
+**Bitwise Operations:**vi har lagt till en[inbyggd](https://www.cairo-lang.org/docs/how_cairo_works/builtins.html)för att stödja mycket effektivare bitwise operationer i StarkNet-kontrakt ([dokumentation](https://www.cairo-lang.org/docs/reference/common_library.html#common-library-bitwise)).
 
-* **Goerli:** StarkNet is moving from Ropsten to [Goerli](https://goerli.etherscan.io/address/0xee02F29aE9A4988aE064940bF11954d6eafE26Ac)! At last, we’ve freed our system from the whims of the Ropsten Gods. Alpha 2 will now be running over a more stable development environment.
+* **Goerli:**StarkNet flyttar från Ropsten till[Goerli](https://goerli.etherscan.io/address/0xee02F29aE9A4988aE064940bF11954d6eafE26Ac)! Äntligen har vi befriat vårt system från Ropstens gudars nycker. Alpha 2 kommer nu att köra över en stabilare utvecklingsmiljö.
 
-### Ecosystem
+### Ekosystem
 
-The StarkNet ecosystem is constantly growing, and we are happy to share the latest news:
+StarkNet ekosystem växer ständigt, och vi är glada att dela de senaste nyheterna:
 
-* **Standardized Contracts**: we’re honored to be working with OpenZeppelin on StarkNet’s standard contracts library. Their canonical work on Ethereum’s standardized contracts serves us all daily, and we are confident they will be as impactful here.
-* **EVM->Cairo Compiler**: Nethermind’s Warp team [demonstrated](https://medium.com/nethermind-eth/warp-your-way-to-starknet-ddd6856875e0) transpilation of an ERC-20 contract from EVM bytecode to a StarkNet contract and deployment on StarkNet. This effort is moving quickly, and our next target is the transpilation of arbitrary smart contracts from Yul to Cairo.
-* **Maker-on-StarkNet**: a [proposal](https://forum.makerdao.com/t/mip39c2-sp19-adding-the-starknet-engineering-core-unit-sne-001/9745) was submitted to the Maker DAO to implement the Maker protocol over StarkNet. The first phase proposes a DAI bridge from Ethereum to StarkNet with minting DAI on StarkNet to follow.
-* **StarkNet/Cairo Auditing Services**: we are engaging multiple audit firms to provide StarkNet smart contract and Cairo programs auditing services.
+* **Standardiserade kontrakt**: vi är hedrade över att arbeta med OpenZeppelin på StarkNet’s standard kontrakt bibliotek. Deras kanoniska arbete med Ethereums standardiserade kontrakt betjänar oss alla dagligen, och vi är övertygade om att de kommer att bli lika effektiva här.
+* **EVM->Cairo Compiler**: Nederländernas Warp team[demonstrerade](https://medium.com/nethermind-eth/warp-your-way-to-starknet-ddd6856875e0)transpilering av ett ERC-20-kontrakt från EVM bytecode till ett StarkNet kontrakt och distribution på StarkNet. Denna insats går snabbt framåt och vårt nästa mål är införlivandet av godtyckliga smarta kontrakt från Yul till Kairo.
+* **Maker-on-StarkNet**: ett[förslag](https://forum.makerdao.com/t/mip39c2-sp19-adding-the-starknet-engineering-core-unit-sne-001/9745)lämnades till Maker DAO för att genomföra Maker protokollet över StarkNet. Den första fasen föreslår en DAI-bro från Ethereum till StarkNet med tryckning DAI på StarkNet att följa.
+* **StarkNet/Cairo Auditing Services**: Vi engagerar flera revisionsföretag för att tillhandahålla StarkNet smarta kontrakt och Kairo program revisionstjänster.
 
-### Mainnet Around the Corner
+### Mainnet runt hörnet
 
-We are getting ready for the StarkNet Alpha Mainnet launch, starting gradually with a whitelisted set of applications. Several projects are underway and more are actively added by the day. To join the party, you are invited to reach out via [discord](https://discord.gg/uJ9HZTUk2Y).
+Vi gör oss redo för StarkNet Alpha Mainnet lansering, börjar gradvis med en vitlistad uppsättning applikationer. Flera projekt pågår och fler läggs till för varje dag. För att gå med i festen är du inbjuden att nå ut via[discord](https://discord.gg/uJ9HZTUk2Y).
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Uppdatering (nov 2021):**StarkNet Alpha live på Ethereum Mainnet

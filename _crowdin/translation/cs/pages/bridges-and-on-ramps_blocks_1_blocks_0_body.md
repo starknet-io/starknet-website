@@ -1,3 +1,3 @@
-## What are bridges?
+## Co jsou mosty?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Mosty umožňují uživatelům přesouvat aktiva mezi krypto ekosystémy, jako jsou blockchainy nebo burzy.

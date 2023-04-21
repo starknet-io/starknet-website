@@ -1,3 +1,3 @@
-## What are bridges?
+## 什么是桥梁？
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+桥梁允许用户在加密生态系统之间移动资产，如区块链或交换。

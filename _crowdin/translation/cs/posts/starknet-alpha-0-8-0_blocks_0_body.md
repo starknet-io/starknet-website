@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* StarkNet Alpha 0.8.0 představuje původní verzi mechanismu poplatků (volitelné až do StarkNet Alpha 0.9.0.)
+* Nové API volání k odhadu transakčního poplatku pro získání transakční trasy, což umožní lepší viditelnost a ladění
+* Zlepšení výkonnosti posloupnosti StarkNet
+* L1→zrušení zprávy L2
 
-### Intro
+### Úvod
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+Jak je sdíleno v naší[cestovní mapě](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51)a v souladu s nejnovějším doplňkem k funkcím a funkcím StarkNet, Naše pozornost posune směrem k vylepšení výkonu a návrhu protokolu (včetně poplatků, abstrakce účtů, decentralizace atd.). StarkNet Alpha 0.8.0 spustí proces přidávání transakčních poplatků a zlepšení výsledků posloupnosti.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+Plán pro StarkNet zahrnuje mechanismus poplatků, a pokračováním v této verzi učiníme důležitý krok blíže k plnému výkonu platformy.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+Přidání mechanismu poplatků je nezbytnou součástí výkonnostního návrhu StarkNet. Bez minimálního poplatku riskujeme, že budeme čelit nekonečným transakcím: což by znemožnilo provedení systému, bez ohledu na optimalizaci posloupnosti.
 
-### Features
+### Vlastnosti
 
-#### Fee Support
+#### Podpora poplatků
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+StarkNet Alpha nyní podporuje první verzi mechanismu poplatku. Tento mechanismus je nezbytný i v této rané fázi, a dokonce i v testnetu, ze dvou hlavních důvodů:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Umožňuje vývojářům začít optimalizovat své kontrakty podle nákladového modelu StarkNet.
+2. Je to klíčový protějšek zlepšení výkonu systému, neboť brání spamování tím, že vysílá bezpočet transakcí.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Tato verze zavádí komponenty potřebné k tomu, aby vývojáři začlenili platby poplatků do svých nástrojů a aplikací. Vývojáři nyní mohou odhadnout transakční poplatek tím, že zavolají koncový bod \`estimate_fee\` a provedou platbu poplatku v rámci provedení transakce.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Vzhledem k tomu, že tato funkce není zpětně kompatibilní, nebudeme v tomto okamžiku vymáhat platbu poplatku, ale pouze od verze 0. .0, které má být uvolněno za několik týdnů. Tento postupný přechod umožní uživatelům a vývojářům přizpůsobit se novému modelu.
 
-#### Fee Structure on 0.8.0
+#### Struktura poplatku na 0.8.0
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+V případě 0.8.0 budou poplatky vybírány pouze podle výpočetní složitosti, zatímco StarkWare bude nadále dotovat náklady na komunikaci L1. Mechanismus poplatků aktualizujeme tak, aby zahrnoval tyto náklady na provoz a komunikaci L1 v příštích několika týdnech. Platba bude vybrána na základě provedení transakce na StarkNet L2. Podrobný popis viz[dokumentace o poplatcích](https://starknet.io/documentation/fee-mechanism/).
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+Je důležité si uvědomit, že budeme úzce spolupracovat s vývojářskou komunitou na vylepšení a vývoji mechanismu poplatků, jak se vyvíjí StarkNet.
 
 #### L2 Goerli ETH Faucet
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Zahájili jsme[L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/), aby uživatelé mohli platit poplatky na Testnet. Tato Faucet posílá malé částky L2 Goerli ETH na vaši adresu na StarkNet Goerli, kterou můžete použít pro zaplacení transakčního poplatku.
 
 #### Trace API
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+Přidali jsme možnost získat stopu provedení transakce do API StarkNet. V rámci sledování transakce jsou viditelná všechna interní volání spolu s informacemi, jako jsou spotřebované zdroje exekuce, návratová hodnota, emitované události a odeslané zprávy. Tento nový hovor zjednodušuje pochopení chování smlouvy nebo ladění transakcí. Kromě toho by tyto údaje mohly zahrnovat nástroje jako[Voyager](https://voyager.online/)nebo[StarkTx](https://starktx.info/); poskytuje uživatelům podrobnější analýzu, zejména pokud jde o interakci se smlouvami o účtu.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+K získání trasy můžete použít \`get_transaction_trace\` v CLI StarkNet. Chcete-li vidět příklad jak jej použít, podívejte se na[tutoriál](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Zrušení zprávy
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+Další funkcí této verze je schopnost zrušit zprávy L1→L2. Proč je to užitečné? Představte si scénář, kdy uživatel převádí aktivum z L1 na L2. Tok začíná tím, že uživatel odešle aktivum na most StarkNet a odpovídající generaci zpráv L1→L2. Představte si, že spotřeba zpráv L2 nefunguje (k tomu může dojít kvůli chybě ve smlouvě dApps). To by mohlo vést k tomu, že uživatel navždy ztratí úschovu nad svým aktivem.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Aby se toto riziko zmírnilo, dovolíme, aby smlouva, která iniciovala zprávu L1→L2, zrušila ji – poté, co vyhlásí záměr a čeká na přiměřenou dobu (viz[dokumentace](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Vylepšení výkonu
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Tato verze výrazně zkracuje čas, kdy sekvencer potřebuje provést proud příchozích transakcí v Káhiře.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+To je jen první krok! Náš další velký výkonový milník, který bude brzy zaveden (0.9.0), je paralelní popravou sekvencí, a očekává se, že po cestě půjde mnohem více optimalizací.
 
-### What now?
+### Co teď?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Přečtěte si technickou dokumentaci[zde](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Přejděte na[starknet.io](https://starknet.io/), pro všechny informace od StarkNet , dokumentaci, návody a aktualizace.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Připojte se k[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)pro podporu vývojáře, ekosystémová oznámení a staňte se součástí komunity.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Navštivte[StarkNet Shamans](https://community.starknet.io/)abyste zůstali aktualizováni a zúčastnili se všech diskusí o výzkumu StarkNet.

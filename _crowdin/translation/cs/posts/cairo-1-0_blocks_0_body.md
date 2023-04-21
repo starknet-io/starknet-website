@@ -1,100 +1,100 @@
 ### TL;DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* Káhira 1.0 je první velké vydání po[zavedení Káhiry](https://medium.com/starkware/hello-cairo-3cb43b13b209)před dvěma lety
+* Kairo 1.0 poskytne vývojářům bezpečnější, jednodušší a použitelnější programovací jazyk
+* V srdci Káhiry 1.0 bude**Sierra**, zprostředkující vrstva zastoupení, která slibuje větší dlouhodobou stabilitu programů Káhira
+* Sierra postupuje v Káhiře, aby sloužila v bezpovolené síti:\
+  -**Ochrana sítě**: umožňuje robustnější DoS ochranu\
+  -**ochranu uživatele**: umožňuje cenzuru Ethereum-grade resistanceKairo 1. v mnoha ohledech se projeví StarkNet. Bude mít také vliv[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). Budeme zveřejňovat více informací o Regenesis v nadcházejících týdnech.
 
-### Introduction
+### Úvod
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
+V roce 2020 jsme vydali Cairo, Turing-kompletní programovací jazyk a udělali velký krok k podpoře ověřitelných výpočtů pomocí STARKů. Dnes oznamujeme**Káhira 1.0**, což je zatím největší pokrok Káhiry. Zavede vylepšený jazyk s prvky, které zvýší použitelnost, bezpečnost a pohodlí. Je navržen tak, aby podporoval požadavky StarkNetu jako nepřípustnou síť, což umožní jednodušší a bezpečnější protokol.\
+Vývoj již probíhá a očekáváme, že se první vydání stane brzy.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
+Na tomto místě budeme popsat cestu Káhiry až dosud a sdílet podrobnosti o nadcházejících funkcích.
 
-### The Cairo Journey
+### Káhirská cesta
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+Až do roku 2020 byly zapotřebí specializované znalosti k vybudování programů pro všeobecný výpočetní program STARK. Bylo to možné pouze pro ty, kdo pochopili složitou matematiku STARKů. Konkrétně pro každou podnikatelskou logiku, tj. každý výpočet, jeden potřebný k vytvoření Algebraické meziodvětvové reprezentace (AIR) – soubor polynomických omezení, která představují specifický výpočet.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+Káhira se zrodila z pochopení, že ověřitelný výpočet by měl být zpřístupněn vývojářům všude na světě. Káhira umožňuje vývojářům využít sílu STARKů.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
+Vývojářská komunita od té doby využila Káhiru k nadšené výstavbě. Vše v prosperujícím ekosystému StarkNet je dnes založeno na Káhiře. Mezi[StarkNet](https://starkware.co/starknet/)a[StarkEx](https://starkware.co/starkex/), aplikace na Cairo-powered zpracovávají více než 220M transakcí, vytěžil více než 65M NFT a objednal obchody v hodnotě $700B, vše bylo vypořádáno na Ethereu.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
+Zatímco Káhira STARKům zpřístupnila, byla původně navržena jako montážní jazyk a jako taková byla napsána jako nízký jazyk.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+![Příklad raných programů, které byly napsány v Káhiře](/assets/cairocode_01.png "Příklad raných programů, které byly napsány v Káhiře")
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+Na základě zpětné vazby od vývojářů a vzestupu[StarkNet](https://starkware.co/starknet/)jsme postupně učinili Káhiru výraznější a přátelštější vývojáře.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+![Příklad z Káhiry smlouvy ERC-20 prokazující podporu proměnných, pokud jsou vyjádření, chyby a knihovna UINT256](/assets/cairocode_02.png "Příklad z Káhiry smlouvy ERC-20 prokazující podporu proměnných, pokud jsou vyjádření, chyby a knihovna UINT256")
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+Brzy jsme však dospěli k závěru, že nastal čas udělat velký skok vpřed, a místo přírůstkových vylepšení v Káhiře, přejděte na tučnější transformaci.
 
 ### Cairo 1.0
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+Pro Káhiru 1. Vytvořili jsme celý nový kompilátor ze země, který poskytne vývojářům bezpečnostní prvky, a umožní jim psát smlouvy jednodušším a výraznějším způsobem.
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+#### Zavedení Sierra: zajištění každého kairského běhu lze prokázat
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+Hlavní dodatek v Káhiře 1. je Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion). Sierra představuje novou přechodovou reprezentační vrstvu mezi Káhirou 1.0 a Káhirou byte kód. Sierra si klade za cíl zajistit, aby každý běh Káhiry – tj. program Káhira a jeho vstup – mohl být prokázán (viz více níže).
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+Sierra slibuje Káhiru lepší kód pro budoucnost. Další stabilitu zajišťuje skutečnost, že smlouvy StarkNet nebudou v případě zlepšení základního systému nutné přepracovávat. ., CPU AIR architecture changes, vylepšení konečného překladu z Sierry do Cairo byte code).
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
+**Prokázání každého běhu v Káhiře.**Ve staré Káhiře může běh v Káhiře vyústit ve tři případy – TRUE, FALSE, nebo selhání. Selhalo běhy nelze provést. Sierra zajišťuje, že běh v Káhiře nikdy neselže, a může mít za následek pouze TRUE nebo FALSE. To zase zajišťuje, že každý běh v Káhiře může být prokázán.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
+Toto zavedení Sierry má důležité důsledky pro StarkNet jako nepovolenou síť. Sierra zajišťuje, že i vrácené transakce mohou být zahrnuty do bloků StarkNet. Tato vlastnost umožní, aby protokol StarkNet zůstal jednoduchý a nemusel přidávat komplexní krypto-ekonomické mechanismy.\
+Dva smysluplné příklady:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+1. Sekvencery budou moci vybírat poplatky za stornované transakce, což StarkNet umožní zabránit Sequencer DoS zavedeným způsobem.
+2. Zavedení nucených transakcí L1 bude možné, což společnosti StarkNet umožní zdědit plnou cenzurní rezistenci Ethereum.
 
-### **Language Features**
+### **Vlastnosti jazyka**
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
+Káhira 1.0 nabídne mnoho vylepšení samotného programovacího jazyka. Ne vše uvedené níže bude součástí prvního vydání, ale je součástí plánu.
 
-#### **Improved syntax**
+#### **Vylepšená syntaxe**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+* Žádné další*lokální*a*tempvar*. Nyní potřebujeme pouze*let*k tomu, abychom jim vládli všechny proměnné.
+* Vylepšená*pokud*syntaxe výkazů
 
 ```python
-#Old
-if cond != 0 {
+#Starý
+pokud je cond ! 0 {
   tempvar x = x+1;
 } else {
   tempvar x = x;
 }
 __________________________________
 #New
-if cond { x = x + 1; }
+, pokud cond { x = x + 1; }
 ```
 
-#### **Type safety guarantees**
+#### **Typové záruky**
 
-The compiler will use strong typing to improve the security of the code. For example:
+Kompilátor bude používat silné psaní pro zvýšení bezpečnosti kódu. Například:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
+* Ukazatele budou vždy ukazovat na inicializovanou paměť.
+* Dictionaries budou vždy shazovány na rozdíl od toho, že odpovědnost za volání squash_dict na programátora.
 
-#### **Easier to use language constructs**
+#### **Snadnější používat jazykové konstrukce**
 
-For example:
+Například:
 
-* For loops
+* Pro cykly
 
 ```
-let sum = 0
-for x in iter {
-  sum = sum + x;
+let součet = 0
+pro x in iter {
+  součet = součet + x;
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+* Logické výrazy
+* Celá čísla (s pravidelnou divizí integer 👯)
+* Ochrana před nadměrným tokem pro příslušné typy
+* Logické podmínky
 
 ```
 #Old
@@ -108,50 +108,50 @@ __________________________________
 If cond1 && (cond2 || cond3) { … }
 ```
 
-#### **A fully fledged type system**
+#### **Systém plnohodnotného typu**
 
-* Abstract data types (i.e. Rust-like enum)
+* Abstraktní typy dat (tj. Rustově podobný enum)
 
 ```
-enum Option<T> {
- Some: T,
- None,
+enum Možnost<T> {
+ Některá: T,
+ žádná,
 }
-match result {
- Some(r) => {..},
+shodit výsledek {
+ Some(r) => {..}
  None => {..},
 }
 ```
 
-* Traits
+* Vlastnosti
 
 ```
-trait Add<Uint256> {
+znak Přidat<Uint256> {
     fn add(…) { … }
 }
 
 let a: Uint256 = 1;
 let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+a + b; // Vyhodnoceno podle 5 typu Uint256.
 ```
 
-#### **More intuitive libraries**
+#### **Více intuitivních knihoven**
 
-(e.g. dict, arrays)
+(např. dikt, pole)
 
-* Dict<Uint256, MyStruct>;
-* Array<MyOtherStruct>;
+* Dikt<Uint256, MyStruct>
+* Pole<MyOtherStruct>;
 
-#### **More optimized code**
+#### **Více optimalizovaný kód**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+Není třeba výslovně uvádět přidělování místních proměnných – automaticky zjišťováno a prováděno automaticky.
 
-#### **Better compiler integration**
+#### **Lepší integrace kompilátoru**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+Umožňuje lepší podporu IDE, správu balíčků a lepší podporu příspěvků komunity.
 
-### **Conclusion**
+### **Závěr**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+Dva roky po prvním použití Káhiry ve výrobě vyvíjíme Káhiru 1.0, která přinese lepší vyjádření, bezpečnost a syntaxi. Bude to vyžadovat velký krok vpřed, což umožní vývojářům snáze psát své kontrakty StarkNet.
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+V jiném příspěvku, který přijde brzy, budeme sdílet více podrobností o tom, jak Káhira 1. bude mít vliv na regenezi StarkNetu a na to, jak by se vývojáři měli připravit na jeho vydání.

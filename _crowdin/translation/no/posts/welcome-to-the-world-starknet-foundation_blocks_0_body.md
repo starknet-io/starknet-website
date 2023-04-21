@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+I dag ønsker vi velkommen**StarkNet Foundation**, et nytt samfunnfundament organisert for å gi en uavhengig samfunnsstruktur som støtter prosjektet StarkNet
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+StarkNet er en tillatelsesløs opptrapping av desentralisert gyldighet som et L2-nettverk over Ethereum, hvis alle dApp kan oppnå en enormt økt skala for databehandlingen til Ethereums komponistevne og sikkerhet. For mer om StarkNet, ta en titt[her](https://starknet.io/). For å være virkelig ansvarlig og tilgjengelig for fellesskapet av utviklere og brukere, StarkNet trenger en uavhengig tilrettelegger for kommunerettet styring for hele StarkNet økosystemet.
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+De nyopprettede StarkNet Foundation, med støtte og ressurser fra en bred del av samfunnsmedlemmene, skal fremme forskning, utvikling av forskning. og utvidelse av StarkNeton-nettverket og støtteteknologien, fremmer bruk og innføring av StarkNet-nettverket og drivstoff StarkNet community deltakelse og prosjektstyring. Stiftelsen skal bidra til å finansiere og organisere konferanser for bruker og utviklere, og koordinere samarbeidet med allierte samfunn og tilhørende samfunn.
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+Stiftelsen skal være styrt av en første styre på sju styre, med tverrfaglige bakgrunner fra hele verden. Kort sagt:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me)— Teknisk politikk, digitale rettigheter, gründer og ekspert på egenstyring
+* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders)— StarkWare co-founder/President, co-inventor i STARKs
+* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))— Independent blockchain researcher og trodde leder
+* [HeatherMeeker](http://www.heathermeeker.com/)- Ekspert på åpen kildekode programvarelisens
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)– professor i matematikk og teoretisk informatikkfag, og kjernebidragsyter til den matematiske undergravende STARK-ene
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockcha-ingeniør og -administrerende direktør i Nederland, et av de største lagene som bygger på StarkNet
+* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders)— StarkWare medgrunnlegger og CEO
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+Det er skapt et StarkNet token for å belønne StarkNet utviklere og operatører for arbeidet de utfører for å vedlikeholde og drive nettverket. Stiftelsen innehar 50. % av den første gruvevirksomheten på 10B-token, der fordelingen skal forvaltes av stiftelsen til beste for brukerne, operatører og utviklere i StarkNet samfunn, som beskrevet[her](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). De gjenværende tokene er underlagt en fireårig lockup og eies av eksisterende StarkNet kjernebidragsytere og investorer i StarkNet utvikling.
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+StarkNet Foundation board har begynt å arbeide, før formalisering og drift, rekruttering til direktør, og begynte å danne ad hoc-fellesskapskomiteer for å fremme noen grunnleggende prosjekter som å finne hvilke / hvor / hvordan / når StarkNet token skal stemme.
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+Vi ønsker at hele StarkNetto har suksess og vi er stolte og glade for å jobbe med lanseringen av StarkNet Foundation.
 
 
 
-### Here is what our board has to say:
+### Her er hva tavlen vår skal si:
 
 **Andrew:**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> Hva som får StarkNet til å stride for meg er at det er for meg - den mest lovende og teknologisk overbevisende innsatsen for å gjøre Ethereum (og andre blokk-kjeder) en virkelig skalerbar, sikker og privat stasjonløs global datastamme. Med rock-solid vitenskap og et talentfullt team bak seg. StarkNet er en sentral del av å oppnå den brede nytten som har vært like langt over horisonten i det eksisterende blokkjedesystemet.
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> Som medlem av grunnleggeren har jeg som mål å fokusere på godt styresett og effektiv verdensomspennende bygging. StarkNet Foundation vil være en ideell oppstart, med et oppdrag om å bygge ut et samfunn av byggere og brukere som engasjerer, mangler, og som har myndighet til å styre seg selv. Som organisasjon må stiftelsen selv være åpen, åpen, oversiktlig, ansvarlig og pålitelig og etisk. Som et eksempel på samfunnsegenstyring Jeg håper at stiftelsen skal drive opprettelsen av StarkNet-drevne styringsverktøy og -tjenester som er objektivt intuitive og nyttige – og som tilgjengelig for andre siden de er for oss.
 
 **Eli:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> Første suksess i StarkNet (og STARKer) fanget meg av overraskelse. Det som startet som en senter i StarkWare, er nå et blomstrende og raskt voksende økosystem. Yahoo!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> Styresmakten er hardt, noe som har krenket menneskelige samfunn i hele historien. StarkNets styring, herunder nødvendige kontroller og balanser, mekanismer for konfliktløsning, har ennå ikke trådt ut og krystallisere. Derfor ydmykes mine følelser av spenning og optimisme av utfordringene som kommer. Det er klart for meg at StarkNet ikke skal styres av en enkelt part. Jeg ser derfor den viktigste delen av oppdraget med å lytte til det brede og utvide økosystemet til StarkNet-utviklere og bidra til å gå foran den.
 
 **Eric:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> Rulleteknologier er den klart mest lovende svar på spørsmålet om hvordan man kan skalere misjonsløse midler til millioner av brukere. STARKer gir muligheten til å verifisere den generelle databeregningen, og kan dermed forlenge egenskapene og verdiene til Ethereum baselayer til lagene ovenfor. StarkNet er kanskje den viktigste installasjonen av dette konseptet, og det er ydmyk at jeg aksepterer oppgaven med å bidra til å sikre både dens integritet og suksess.
 
-**Heather:**
+**Varse:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> Jeg er begeistret for å bli en del av StarkNet Foundation.
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> I snart tre tiår har jeg jobbet med å hjelpe folk med å forstå åpen kildekode-lisens. Jeg er advokat, derfor har jeg selvsagt brukt mye på denne tiden for å hjelpe kundene med å lære om åpen kildesensitisering og utvikling. Men i disse tiårene Hele teknologiindustrien har jobbet med å forstå bedre hvordan vi kan samarbeide - det er gaven på utviklingsmodellen med åpen kildekode. Jeg har vært spesielt heldig, siden jeg har arbeidet mye med andre – ikke bare mine kunder – ta del i regler og paradigmer til samarbeid. Jeg har på en måte hatt den store formuen til å være så mye lærer som rådgivere.
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> Jeg ser frem til å jobbe med StarkNet Foundation for å flytte inn i den neste epoken i Ethereum og blokkjede og støtte den voksende StarkNet community.
 
-*(Heather is an advisor to StarkWare.)*
+*(Varmeer en rådgiver for StarkWare.)*
 
 **Shubhangi:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> Jeg er en forsker i de teoretiske grunnleggerne av informatikk. Personlig, Jeg har blitt fantastisk over hvordan noen av de spennende teoretiske utviklingstrekkene på feltet fra de siste tiårene er kommet sammen for å skape den teknologien som gir STARK-bevis.
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> Jeg tror at formålet om å skape skalabilitet via STARKS gjennom en desentralisert offentlig plattform, der utviklere har en sentral rolle i styresett og design har potensial til å utvide rekkevidden til blokkjedeteknologiene. Som styremedlem er jeg også opptatt av at StarkNet skal kunne stimulere, og dra nytte av en moderne forskning i teoretisk datavitenskap. Jeg ser fram til å være en del av dette.
 
-*(Shubangi is an advisor to StarkWare.)*
+*(Shubangi er en rådgiver for StarkWare.)*
 
 **Tomasz:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> StarkNet går inn i en viktig fase av utviklingen – en når den blir mer åpen, sammensatt, pålitelig og mer tillitsfull. Jeg ser på min rolle i stiftelsen som en mulighet til å fremme samarbeid, og støtte et trekk mot fremtiden med desentraliserte og tillatede kjeder drevet av STARKer.
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> Husk min vei i Nederland som et énstiftelsesgaranti og forståelse av både utfordringer og muligheter byggere møter, Jeg ønsker velkommen muligheten til å sikre at ledelsen ved StarkNet Foundation bygger et økosystem hvor byggerne føler seg trygge, og drar nytte av forsknings- og utviklingsarbeidet mens de bygger folk om StarkNet som godt. Jeg gleder meg til å se de neste generasjonene av bygningsmenn, og lokalsamfunn opplever sin rolle som uavhengige medeiere av StarkNet.
 
 **Uri:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> Som medgrunnlegger & CEO på StarkWare, har jeg siden 2018 en relativ nykommer! , og dypt involvert i å bygge skaleringsløsninger for Ethereum. Programverktøyet for programmeringsintegritet som vi startet med å utvikle på StarkWare blir nå plassert hos utviklere over hele verden. Oppdraget er klart: Disse verktøyene må legges i hendene på noen interesserte utvikler i verden, disse verktøyene må forbedres. StarkNet Foundation vil spille en viktig og spennende rolle i å fylle dette oppdraget, i desentralisere Starknet.

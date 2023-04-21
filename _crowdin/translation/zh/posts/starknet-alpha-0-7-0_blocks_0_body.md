@@ -1,111 +1,111 @@
 ### TL;DR
 
-* StarkNet Alpha 0.7.0 released to Goerli; packed with improvements
-* Contracts can now be upgraded using the Proxy Upgrade Pattern
-* Contracts can now emit Events
-* Support for the long-awaited Block Number and Block Timestamp system calls
+* StarkNet Alpha 0.7.0释放到Goerli；装有改进
+* 合同现在可以通过代理升级模式升级
+* 合同现在可以发布事件
+* 支持期待已久的方块编号和方块时间戳系统调用
 
-### Intro
+### 简介
 
-We are happy to release Alpha 0.7.0, a version packed with new features and improvements. One of the best stimulants to StarkNet over the last few months has been the increased involvement of the community in shaping StarkNet’s future. This version addresses some of the community’s burning needs.
+我们很乐意释放Alpha 0.7.0, 这是一个带有新功能和改进内容的版本。 在过去几个月中，StarkNet的最佳刺激因素之一是社区更多地参与了StarkNet的未来的形成。 这个版本解决了社区的一些迫切需要。
 
-#### Changes to Naming Convention
+#### 更改命名公约
 
-The observant reader might have noticed that the previous StarkNet Alpha release was named Alpha 4, whereas we are now releasing Alpha 0.7.0. We decided to omit the dedicated Alpha version number and rely instead only on the associated cairo-lang version.
+观测器可能已经注意到，先前的StarkNet Alpha 版本叫做Alpha 4，我们现在正在释放Alpha 0.7.0。 我们决定省略专用的 Alpha 版本号，而只依靠相关的 cairolang版本。
 
-### New Features
+### 新功能
 
-#### Contract Upgradeability
+#### 合同可升级性
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. The Proxy pattern is the common method to enable contract upgrades over Ethereum. Alpha 0.7.0 enables this pattern over StarkNet.
+OpenZepelin's[Proxy 升级模式](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)现在完全支持StarkNet的合同升级。 代理模式是在Etherum上启用合同升级的常见方法。 Alpha 0.7.0 通过 StarkNet启用此模式。
 
 We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
 
-#### Block Number and Block Timestamp
+#### 阻止号码和方块时间戳
 
-Alpha 0.7.0 adds two new system calls that many devs have been asking for. These calls allow a contract to access the block number and the block timestamp. The block number returns the number of the current executed block. The block timestamp returns the timestamp given by the Sequencer at the creation of the block.
+Alpha 0.7.0添加了两个新的系统调用，许多开发者一直在要求这样做。 这些通话允许合同访问方块编号和方块时间戳。 方块编号返回当前已执行方块的数量。 方块时间戳返回由序列器在创建方块时给出的时间戳。
 
-You can see an example of how to use these features in the [tutorial](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
+你可以看到一个如何在[教程](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp) 中使用这些功能的例子。
 
 #### 事件
 
-Surprise! A feature that was planned for a future version has sneaked its way into this earlier one.
+惊喜！ 计划用于未来版本的一个功能已经深入到这个早期版本。
 
-StarkNet contracts now support defining and emitting events, allowing them to expose execution information for off-chain applications to consume. Ethereum developers will find the semantics and syntax very similar to Solidity. You can read the [documentation](https://starknet.io/documentation/events/), or follow the [tutorial](https://starknet.io/docs/hello_starknet/events.html), that explains this feature.
+StarkNet合同现在支持定义和排放事件，使它们能够揭露非链应用的执行信息。 以太坊开发者会发现语义和语法非常类似于Solid。 您可以阅读[文档](https://starknet.io/documentation/events/), 或者按照[教程](https://starknet.io/docs/hello_starknet/events.html), 来解释这个功能。
 
-#### Removed %builtins Directive
+#### 已删除 %builtins 指令
 
-The %builtin directive is no longer needed in StarkNet contracts. This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). It significantly simplifies the usability of this extensibility pattern.
+StarkNet合同不再需要 %builtin指令。 This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). 它大大简化了这种扩展模式的可用性。
 
-For example, the following contract will be changed from:
+例如，下列合同将从以下来源更改：
 
 ```
 %lang starknet
 
-# This is the "%builtins" directive.
-# It is not needed anymore.
+# 这是"%builtins"指令。
+# 不再需要。
 %builtins range_check
 
 @view
-func add(x : felt, y : felt) -> (res : felt):
+func add(x : felt, y: felt) -> (res : felt):
 return (res=x + y)
 end
 ```
 
-To this:
+这里：
 
 ```
 %lang starknet
 @view
-func add(x : felt, y : felt) -> (res : felt):
+真菌添加(fx : felt, y: felt) -> (res : felt):
 return (res=x + y)
 end
 ```
 
-You can check out the [ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token) standard contracts, which use the new pattern.
+您可以签出[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)标准合约，使用新的模式。
 
-#### External Functions Support Arrays of Structs
+#### 外部函数支持结构数组
 
-Alpha 0.7.0 supports passing and returning arrays of structs in external functions. This additional functionality allows Account Contracts to better support [multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
+Alpha 0.7.0支持外部函数中结构的通过和返回数组。 这个附加功能可以让账户合约更好地支持[多任务类](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751)。
 
-Multicall is a powerful feature of Account Abstraction that allows an account to make multiple calls in a single transaction. An obvious use-case is that of creating a **single transaction** that calls allowance and then transferFrom.
+Multicall是帐户摘要的一个强大功能，允许帐户在一次交易中多次呼叫。 一个明显的用例是创建一个**单笔交易**来调用，然后传输From。
 
-We look forward to seeing what the community does with it.
+我们期待着看到社区对它做些什么。
 
-#### Improvements to StarkNet CLI
+#### StarkNet CLI 的改进
 
-**Support for Pending Blocks**
+**支持待定块**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. This version includes support for querying those blocks via the StarkNet CLI.
+[待处理块](https://starknet.io/documentation/block-structure-and-hash/#pending_block)[已在最后一个次要版本 (v0.6.2) 中介绍](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)，并提供了更快的交易确认。 此版本包括支持通过 StarkNet CLI 查询这些块。
 
-To use it, in every CLI command that takes block_number as an argument (contract_call/get_block/get_code/get_storage_at), we can query the StarkNet with respect to the pending block by specifying block_number=pending.
+若要使用它，每个CLI 命令将block_number 作为参数(contract_call/get_block/get_code/get_storage_at)， 我们可以指定 block_number =pended 来查询StarkNet有关待处理方块的信息。
 
-**Support for Account Contracts**
+**账户合同支持**
 
-StarkNet uses account abstraction, i.e., all accounts are implemented as smart contracts. The first implementations of account contracts were done by [Argent](https://github.com/argentlabs/argent-contracts-starknet) and [OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), but we expect many more to come.
+StarkNet使用账户抽象，即所有账户都作为智能合约执行。 账户合约的第一次实现由[Argent](https://github.com/argentlabs/argent-contracts-starknet)and[OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo)完成，但我们期望更多的完成。
 
-In StarkNet, all transactions must go through an account contract, and the CLI now allows interaction with StarkNet Alpha directly via account contracts. See the [tutorial](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account) on how to set it up.
+在StarkNet中，所有交易都必须通过账户合约，CLI现在允许直接通过账户合约与StarkNet Alpha互动。 关于如何设置它，请参阅[教程](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account)。
 
-Similar functionality was also added to [StarkNet.py](https://github.com/software-mansion/starknet.py/) and to [Nile](https://github.com/OpenZeppelin/nile) in the last month.
+上个月，[StarkNet.py](https://github.com/software-mansion/starknet.py/)and[Nile](https://github.com/OpenZeppelin/nile)也添加了类似的功能。
 
-#### L1<>L2 Messaging in the Testing Framework
+#### L1<>L2 测试框架中的消息
 
-Alpha 0.7.0 introduces the Postman. The Postman enables developers to use the testing framework to test more complicated flows.
+Alpha 0.7.0 引入了邮政官。 Postman让开发者能够使用测试框架来测试更复杂的流量。
 
-At a high level — it mocks the StarkNet Sequencer’s responsibility of passing messages from L1 to L2 and L2 to L1. It makes sure messages that are sent via the Solidity messaging contract will appear at the destination StarkNet contract and messages sent from a StarkNet contract will appear in the Solidity messaging contract.
+在高级别 — 它模拟StarkNet 序列器将消息从L1传递到 L2 和 L2 传递到 L1的责任。 它确保通过团结电文合同发送的电文将出现在目的地StarkNet合同中，StarkNet合同发送的电文将出现在团结电文合同中。
 
-#### And More Features
+#### 以及更多功能
 
-Alpha 0.7.0 provides many more features and changes, like the addition of an efficient square root function to the math common library. A full list appears in the [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
+Alpha 0.7.0 提供了更多的功能和更改，例如在数学共同库中添加了一个有效的方根函数。 完整列表出现在[更新日志](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0) 中。
 
-### Next Up?
+### 下一步？
 
-Initial [Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29) support will be released in a matter of weeks, as a sub-version of StarkNet.
+最初的[手续费机制](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)支持将在几周内释放，作为StarkNet的子版本。
 
-### More Information?
+### 更多信息？
 
-[starknet.io](https://starknet.io/): for all StarkNet information, tutorials and updates.
+[starknet.io](https://starknet.io/): 所有StarkNet 信息、教程和更新。
 
-[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): join to get answers to your questions, get dev support and become a part of the community.
+[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): 加入以获得您的问题的答案, 获得开发支持并成为社区的一部分。
 
-[StarkNet Shamans](https://community.starknet.io/): join to follow (and participate!) in StarkNet research discussions.
+[StarkNet Shamans](https://community.starknet.io/): 加入关注(并参与!) StarkNet的研究讨论。

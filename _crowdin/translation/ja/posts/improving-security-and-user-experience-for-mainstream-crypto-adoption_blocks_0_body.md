@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+ブロックチェーンの技術革新は、過去数年間で繁栄してきました。STARKs、SNARKs、EIP-1559、Ethereum Merge はすべて巨大な技術成果です。 しかし、UXとUIのデザインは維持できませんでした。 人々はまだ16ワードのシードフレーズで立ち往生し、集中仲介者なしでDeFiに入ることは多くの人にとってはまだあまりにも威圧的です。 次の10億人のユーザーをWeb3に搭載するには、ユーザーのオンボーディング体験を向上させることが重要です。
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+FTXが示したように(そしてジェミニ、摂氏、ゴックス山)、1つの資産の上に自己保管を維持することは非常に重要です。 しかし、最近まで、自己保管財布は一般的なユーザーにとって不器用で混乱していました。 ほとんどの人は毎月Web2パスワードを忘れています。ユーザーはシードフレーズと秘密鍵を恒久的に安全に保つことをどのように期待していますか?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+簡単に言えば、それはセキュリティの悪夢です。 何度も見てきたように悪いアクターであろうと過失であろうと 何百万ドルもの損失をもたらす可能性があります
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+新しい暗号ユーザーの最初の連絡先として、Ethereumウォレットは各ユーザーのニーズに合わせて使いやすく、安全でカスタマイズできる必要があります。 これにより、開発者はWeb2金融商品のシンプルさとWeb3の機能を統合する必要があります。
 
-This is exactly what account abstraction achieves.
+これはまさに抽象化が成し遂げたものです。
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+アカウントの抽象化は、ユーザーの秘密鍵への依存を取り除き、ウォレットをプログラム可能にすることによって、自己管理ウォレット製品の安全性とセキュリティを向上させます。 この改善されたUXにより、非保管財布は最終的に何百万もの主流の暗号ユーザーに拡張することができます。
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+しかし、アカウント抽象化の影響を完全に理解するには、Ethereumアカウントの動作にリフレッシュする必要があります。
 
-### The basics of Ethereum accounts
+### Ethereumアカウントの基本
 
-There are two types of Ethereum accounts:
+Ethereumアカウントには2種類あります:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. 外部所有アカウント (EOA)
+2. 契約アカウント (CA)
 
-Let’s break each down a bit further.
+それぞれをもう少し分解しましょう。
 
-### Externally owned accounts
+### 外部所有のアカウント
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+MetaMaskやCoinbase Walletのような外部所有のアカウントは、Ethereumユーザーの典型的なアカウントタイプです。 各EOAは、キーペアと呼ばれる秘密鍵と公開鍵で構成されています。
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+すべてのトランザクションは、秘密鍵によって承認および署名されます。 トランザクションが署名されると、EVMはEOAのアカウントアドレスを使用して署名が有効であることを確認します。 EVM内のハードコードされたロジックは、アカウント(トークンを保持しているオブジェクト)と秘密鍵(シグナー)が1つとして結合されていることを意味します。
 
-Losing your private key means losing your funds, or even control of your account, forever.
+秘密鍵を失うことは、あなたの資金を失うこと、あるいはアカウントの管理さえも永久に失うことを意味します。
 
-### Contract accounts
+### コントラクトアカウント
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+一方、アカウント抽象化と同義のコントラクトアカウントは、Ethereumブロックチェーンにデプロイされたスマートコントラクトです。 これらのコントラクトはコードロジックによって制御され、秘密鍵は必要ありません。 EOAとは異なり、コントラクトアカウントは取引を開始できません。 代わりに、それらのトランザクションはEOAからの指示によってトリガーされます。
 
-### Why account abstraction matters
+### アカウントの抽象化が重要な理由
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+アカウントの抽象化には、EOAから離れてハードコードされた認証ロジックを抽象化する必要があります。 それぞれのアカウントをプログラム可能なスマートコントラクトに変えることで 個人のニーズを満たすことができます
 
 As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**ハードウェア署名者:**iPhoneまたはAndroidの安全な飛び地を使用して、スマートフォンをハードウェアウォレットに変えます。 そこから、ユーザーは指紋やApple Face IDなどの生体認証データを使用してトランザクションを確認できます。 私たちはすでにブラヴォスのような自己管理ウォレットを見始めています。[この機能をロールアウトします。](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**ユーザーが任意のトークンでガス料金を支払うことを許可したり、サードパーティー設計のメカニズムがトランザクションに支払うことさえできます。
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Social Recovery:**秘密鍵が紛失または侵害された場合、ユーザーは新しい鍵を正当なウォレット所有者として認可できます。 これには、信頼できる連絡先、ハードウェア財布、またはサードパーティのサービスを通じて、さまざまなリカバリ方法が含まれます。 このアイデアは、電子メールを介して銀行口座のパスワードを回復するのと同じくらい簡単にアカウントへのアクセスを回復することです。
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**多因子認証:**一般的な Web2 2FA プラクティスと同様に、 ユーザーは暗号ウォレットに2つ(またはそれ以上の)認証方法を設定できます トランザクションは、ユーザーが電子メールやSMSなどの2つ目のオプションを介して承認を確認した後にのみ署名されます。 ユーザーはまた、ウォレットが自動的に相互作用からブロックされるアカウントアドレスの毎日の送金制限またはリストを設定することができます。
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Quantum Resistant and Gas-Efficient Signatures:**Ethereumの現在のシグネチャスキーム, ECDSAは、計算的に広範な(読み取り:より高いガス料金)であり、量子コンピュータによって壊れる可能性があります。 署名抽象化を通じて、異なるアカウント契約はより効率的で量子セキュアな署名スキームを使用します。 StarkNetは独自のSTARKに優しい曲線を使用しています。
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+これらの機能は、より高いセキュリティと柔軟性をユーザーに提供するだけでなく、より重要なこととして、****ユーザーエクスペリエンスを向上させます。
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Vitalik ButerinがEthereum開発者コミュニティの「長期夢」としてリストされており、主にEIP-2938とEIP-3074のアカウント抽象化に関するイノベーションは、2020以降に渦巻いています。 しかし、セキュリティと実装に関するトレードオフが必要でした。 [これまで最も有望な開発であるEIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md)は、Ethereumプロトコルの変更を必要とせずに、アカウント抽象化のバージョンを提案している。
 
-### **Account abstraction and Starknet**
+### **アカウント抽象化とStarknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+アカウント抽象化をサポートするために現在のプロトコルを改良しているBitcoinやEthereumとは異なり、[StarkNet](https://starkware.co/starknet/)は初日からアカウント抽象化を実装しています。 STARK証明のスケーラビリティと能力と組み合わせると、財布の革新の可能性は無限大です。 これが、ArgentやBraavosのような次世代の自己管理財布が現在、私たちのネットワーク上で構築されている理由です。
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+StarkNetのアプローチはEIP-4337に似ています[は、](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)完全なアカウントの抽象化が依然としてUXを混乱させ、[シーケンサーに対する攻撃への扉](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)を開く可能性があることを認めている。 むしろ、署名抽象化と決済抽象化の両方を実現することを目指しています。
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+そして、まだまだまだやるべきことがありますが、アカウント抽象化は暗号原住民の小さな輪を超えて牽引力を得ています。 12月に、[VisaはStarkNetで自動定期支払いを設定するためにアカウントの抽象化を使用するというアイデア](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)を提案しました。 委任されたアカウントを使用して、ユーザーは事前に承認されたスマートコントラクトに支払いを開始する権限を与えることができます。 そこから、スマートコントラクトは、特定の日に設定された支払額を一定の期間にわたって差し引くようにプログラムされます。 Visaはまだ独自のサービスの計画を明らかにしていないが、関心だけでは多くのことを話している。 NetflixやSpotifyのようなビッグテックのサブスクリプションプラットフォームが暗号化を採用できる世界を予見するかもしれません。
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+未来が何を持っているかについては、時間だけが語るでしょう。 しかし一つ確かなことがあります。 ウォレットを簡単かつ安全に使用することによって。 アカウントの抽象化は、数百万の主流暗号ユーザーに拡張するための自己管理ブロックチェーン財布のための強力な触媒として役立ちます。 私たちはその間に建造を続けます。

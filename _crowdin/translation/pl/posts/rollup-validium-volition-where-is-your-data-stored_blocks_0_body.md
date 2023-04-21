@@ -1,49 +1,49 @@
 ### TL;DR
 
-* StarkWare offers a range of Data Availability (DA) modes for customers to choose from, according to their priority
-* There are three approaches to Data Availability for STARK proofs, all of them are already available in production:\
-  — **Rollup**: the ledger is published directly on the blockchain\
-  — **Validium**: a Data Availability Committee secures the ledger, with only a hash being stored on-chain\
-  — **Volition**: apps can let users choose their DA mode — Rollup or Validium — for each and every transaction
-* No matter which DA is used — the validity of all transactions is guaranteed by STARKs
+* StarkWare oferuje klientom różne tryby dostępności danych (DA) w zależności od ich priorytetu
+* Istnieją trzy podejścia do dostępności danych dla dowodów STARK, wszystkie z nich są już dostępne w produkcji:\
+  —**Rollup**: księga jest publikowana bezpośrednio w łańcuchu bloków\
+  —**Validium**: Komitet ds. Dostępności Danych zabezpiecza księgę, tylko przy hashu przechowywanym w łańcuchu\
+  —**Volition**: aplikacje mogą pozwolić użytkownikom wybrać tryb DA — Rollup lub Validium — dla każdej transakcji
+* Bez względu na to, z którego korzysta się DA – ważność wszystkich transakcji jest gwarantowana przez STARK
 
-### Introduction
+### Wprowadzanie
 
-As of November 2022, [StarkEx](https://starkware.co/starkex/) has settled over $750 billion of trading volume, and over 270m transactions on Ethereum. In the NFT space, powering apps such as ImmutableX and Sorare, StarkEx has minted over 85 million NFTs at a price that is 1000x cheaper than doing this directly on Ethereum. STARK-based technology is scaling Ethereum. For example, in a single week, StarkEx ran 1.6x the number of transactions as Ethereum (12m on StarkEx vs 7.5m on Ethereum) while taking up less than 0.1% of Ethereum blockspace. And it does all of this while giving users the same level of security as if they were settling directly on Ethereum.
+Od listopada 2022 r.[StarkEx](https://starkware.co/starkex/)rozlicza ponad 750 mld USD wolumenu obrotu i ponad 270 mln transakcji na Ethereum. W przestrzeni NFT zasilają aplikacje takie jak ImmutableX i Sorare, StarkEx wybił ponad 85 milionów NFT po cenie 1000 razy tańszej niż robić to bezpośrednio na Ethereum. Technologia oparta na STARK skaluje Ethereum. Na przykład w ciągu jednego tygodnia StarkEx prowadził 1,6x liczby transakcji jako Ethereum (12m na StarkEx vs 7. na Ethereum) przyjmując mniej niż 0,1% przestrzeni blokowej Ethereum. I to wszystko robi, dając użytkownikom taki sam poziom bezpieczeństwa, jak gdyby mogli oni osiedlić się bezpośrednio na Ethereum.
 
-### How does StarkWare achieve this?
+### Jak to osiąga StarkWare?
 
-Users send transactions on Layer 2 (either StarkEx or StarkNet), which are batched and sent to a STARK prover. This STARK prover knows the state of the ledger before and after these transactions have been processed. The prover produces a STARK proof that attests to the validity of the new state of the ledger after these transactions have been executed. The new state and the STARK proof are sent to the on-chain STARK verifier. The verification of this proof happens autonomously via an immutable smart contract on Ethereum.
+Użytkownicy wysyłają transakcje na warstwie 2 (StarkEx lub StarkNet), które są wgrywane i wysyłane do Provera STARK. Ten dowód STARK zna stan księgi przed i po przetworzeniu tych transakcji. Dowód STARK stanowi dowód potwierdzający ważność nowej księgi po przeprowadzeniu tych transakcji. Nowy stan i dowód STARK są wysyłane do weryfikatora STARK w łańcuchu dostaw. Weryfikacja tego dowodu odbywa się w sposób autonomiczny za pomocą niezmiennego inteligentnego kontraktu na Ethereum.
 
-This architecture provides the best of both worlds: we can have low transaction costs, while still having Ethereum in the middle as a neutral arbitrator. Ethereum as an arbitrator is not just a nice-to-have; it provides critical security to the end user. A user transacting can now be confident that their funds are secured by Ethereum, and transactions are immutable once they are verified on Ethereum. The user also has complete self-custody of their funds. Self-custody is important because it ensures that the user has access to their funds at all times, without relying on any third party.
+Ta architektura zapewnia najlepsze z obu światów: możemy mieć niskie koszty transakcyjne, a jednocześnie Ethereum w środku będzie neutralnym arbitrem. Ethereum jako arbiter nie jest jedynie miłym, ale zapewnia krytyczne bezpieczeństwo użytkownikowi końcowemu. Transakcja użytkownika może być teraz pewna, że jego środki są zabezpieczone przez Ethereum, a transakcje są niezmienne, gdy zostaną zweryfikowane na Ethereum. Użytkownik posiada również pełną kontrolę nad swoimi środkami. Opieka nad samodzielnością jest ważna, ponieważ zapewnia użytkownikowi dostęp do swoich środków przez cały czas bez konieczności polegania na jakiejkolwiek osobie trzeciej.
 
-### Where does data availability fit into all of this?
+### Gdzie jest w tym wszystkim dostępność danych?
 
-It’s important to emphasize both what this proof is doing as well as what it’s *not* doing. The proof is attesting to the validity of the new state, but it’s not telling you what the new state is. For that, you need data availability. If we only have the proof, then the blockchain knows that what was submitted is valid, but it doesn’t know what the new state (eg. ledger balance) is! Consumers of this data include users who have transactions within these proofs. The data should be made available to them if they want to withdraw funds on Ethereum without needing to trust the Layer 2 operator. This gives users full self-custody of their funds.
+Ważne jest, aby podkreślić zarówno to, co robi ten dowód jak i to, co*nie robi*. Dowód potwierdza ważność nowego stanu, ale nie mówi Panu, czym jest nowy stan. W tym celu potrzebne są dostępne dane. Jeśli mamy tylko dowód, to blockchain wie, że to, co zostało przesłane, jest ważne, ale nie wie, jaki jest nowy stan (np. Saldo księgi) jest! Do konsumentów tych danych należą użytkownicy, którzy zawarli transakcje w ramach tych dowodów. Dane te powinny być im udostępniane, jeżeli chcą wypłacić środki na Ethereum bez konieczności ufania operatorowi warstwy 2. Zapewnia to użytkownikom pełną kontrolę nad swoimi środkami.
 
-One analogy for this is your high-school teacher asking you to prove that x equals x. This is trivial to prove. What’s more difficult to answer: what is x actually equal to? For that, you need a separate piece of information. It could be that x equals 5, or another value. Likewise, on the blockchain, a STARK proof can be submitted to a STARK verifier smart contract for verification. And the verifier can attest that the proof is valid (that x=x). But you need a separate input to tell you what x (the new ledger balance) is.
+Jedną z analogii dla tego jest Twój nauczyciel w szkole średniej, prosząc cię o udowodnienie, że x równa się x. Jest to niezmiernie do udowodnienia. Trudniej jest odpowiedzieć: co jest x tak naprawdę równe? W tym celu potrzebne są osobne informacje. Może to być wartość x równa 5 lub inna wartość. Podobnie w blockchain, dowód STARK może zostać przekazany do inteligentnego kontraktu weryfikatora STARK do weryfikacji. Weryfikator może potwierdzić, że dowód jest ważny (czyli x=x). Potrzebujesz jednak osobnego wejścia, aby powiedzieć co x (nowe saldo księgi).
 
-There are three approaches to make this data available:
+Istnieją trzy sposoby udostępniania tych danych:
 
-#### Rollup Mode
+#### Tryb Rollup
 
-Rollup mode ensures that the state of the ledger is stored on Ethereum together with the proofs. Rollup mode is currently used by [dYdX](https://dydx.exchange/) in production, and is also used by the [Public StarkNet](http://starknet.io/) L2 network. The benefits here are clear: one can recreate the state of the ledger by only interacting with the Ethereum blockchain. The implication of this is that you, as an end-user, can trustlessly talk to the relevant smart contract on Ethereum, and withdraw your funds even if the Layer 2 system shuts down.
+Tryb Rollup gwarantuje, że stan księgi jest przechowywany na Ethereum wraz z dowodami. Tryb Rollup jest obecnie używany przez[dYdX](https://dydx.exchange/)w produkcji i jest również używany przez[publiczną sieć StarkNet](http://starknet.io/)L2. Korzyści są jasne: można odtworzyć stan księgi jedynie poprzez interakcję z blockchainem Ethereum. Skutkiem tego jest to, że jako użytkownik końcowy możecie bez wątpienia rozmawiać z odpowiednim inteligentnym kontraktem na Ethereum, i wypłacić środki nawet jeśli system warstwy 2 zostanie wyłączony.
 
-#### Validium
+#### Walidacja
 
-Under Rollup Mode, the majority of Ethereum gas costs go to Data Availability, and not proof verification. This is because it is very gas-intensive to store data on the blockchain. In Validium mode, the ledger information is not sent to Ethereum. Rather, it is stored off-chain with a Data Availability Committee. Ethereum stores a hash of this ledger information. This Data Availability Committee consists of a quorum of independent members that oversee the correct state update as well as keep a copy of the data that was processed. Each StarkEx instance can create their own quorum. Quorum members for existing apps running on StarkEx include entities like [Consensys](https://consensys.net/), [Nethermind](https://nethermind.io/), [Iqlusion](https://iqlusion.io/) and [Cephalopod](https://cephalopod.equipment/).
+W trybie Rollup większość kosztów gazu Ethereum trafia do dostępności danych, a nie do weryfikacji dowodów. Dzieje się tak dlatego, że przechowywanie danych w blockchain jest bardzo gazochłonne. W trybie walidacji informacje o księdze nie są wysyłane do Ethereum. Jest on raczej przechowywany poza łańcuchem dostaw przez Komitet ds. Dostępności Danych. Ethereum przechowuje hash tych informacji o księdze. Komitet ds. Dostępności Danych składa się z kworum niezależnych członków, którzy nadzorują prawidłową aktualizację stanu oraz przechowują kopię przetwarzanych danych. Każda instancja StarkEx może utworzyć własne kworum. Członkowie kworum dla istniejących aplikacji działających na StarkEx obejmują takie podmioty, jak[Konsensys](https://consensys.net/),[Omdlenie](https://nethermind.io/),[Iqlusion](https://iqlusion.io/)i[Głowonogi](https://cephalopod.equipment/).
 
-The benefits here are clear. There is no need to pay Ethereum gas fees to store the ledger information on-chain. Rather, the only thing stored on Ethereum is a single hash of the ledger information. If you want to trustlessly withdraw funds from Layer 2 by talking to Ethereum, you merely require the digital signature of one of the members of the Data Availability Committee. The DAC members will use cryptography to prove that you have ownership of those funds.
+Korzyści w tym zakresie są oczywiste. Nie ma potrzeby wnoszenia opłat za gaz Ethereum w celu przechowywania informacji księgowych w łańcuchu dostaw. Jedyną rzeczą przechowywaną w Ethereum jest raczej pojedynczy skrót informacji o księdze. Jeśli chcesz bez zaufania wycofać środki z warstwy 2 rozmawiając z Ethereum, Wymagają Państwo jedynie podpisu cyfrowego jednego z członków Komitetu ds. Dostępności Danych. Członkowie DAC będą korzystać z kryptografii, aby udowodnić, że posiadasz własność tych funduszy.
 
-Another hidden benefit of Validium Data Availability is confidentiality from people reading the blockchain. Under Rollup Mode, the balance of each account at the time that each proof is submitted is known to the public. With Validium, this data is hidden from the blockchain — only the Data Availability Committee is aware of this, because it’s kept off-chain. This level of confidentiality enables a wide variety of use cases where obfuscating the transactions data is important.
+Inną ukrytą zaletą dostępności danych walidacyjnych jest poufność osób czytających blockchain. W trybie Rollup saldo każdego rachunku w momencie przedkładania każdego dowodu jest znane opinii publicznej. Z poprawnością, dane te są ukryte w łańcuchu bloków — tylko Komitet ds. Dostępności Danych jest tego świadomy, ponieważ są one przechowywane poza łańcuchem. Taki poziom poufności umożliwia szeroki wachlarz przypadków, w których istotne jest utrudnienie danych dotyczących transakcji.
 
-#### Volition
+#### Zmienność
 
-Volition is a data availability architecture that provides the choice between Validium and Rollup Mode at the transaction level. It does this by keeping one ledger on-chain, and another ledger with a Data Availability Committee. Users can choose between Validium and Rollup mode for each individual transaction.
+Walidacja jest architekturą dostępności danych, która zapewnia wybór pomiędzy trybem walidacji a trybem skręcania na poziomie transakcji. Prowadzi to do tego, utrzymując jedną księgę na łańcuch, a drugą księgę wraz z Komitetem ds. Dostępności Danych. Użytkownicy mogą wybierać pomiędzy trybem walidacji i Rollup dla każdej transakcji.
 
-Imagine that you purchase a really expensive NFT like a Bored Ape or a Cryptopunk, on an app running on StarkEx. You may want to use Rollup Mode to secure the data for that NFT, because you want a record of that specific transaction stored on Ethereum. However, you may then purchase a really cheap NFT (e.g. a cloak for your character in a blockchain game), and in that circumstance you will be happy to save money by using Validium.
+Wyobraź sobie, że kupujesz naprawdę drogie NFT jak Bored małp lub Cryptopunk, w aplikacji uruchomionej na StarkEx. Możesz użyć trybu Rollup do zabezpieczenia danych dla tego NFT, ponieważ chcesz, aby zapisy tej konkretnej transakcji były przechowywane w Ethereum. Jednak wtedy możesz kupić naprawdę tanie NFT (np. płaszcz dla swojej postaci w grze blockchain) i w tej sytuacji chętnie zaoszczędzisz pieniądze za pomocą Validium.
 
-If you are interested in the scale achieved by STARK proofs, then please come and build on us.
+Jeśli jesteś zainteresowany skalą uzyskaną dzięki dowodom STARK, proszę przyjść i budować na nas.
 
 
 

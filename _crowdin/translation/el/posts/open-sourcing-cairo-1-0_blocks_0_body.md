@@ -1,77 +1,77 @@
 ### TL;DR
 
-* **Cairo 1.0 is open source! This is only the first step towards open-sourcing the StarkNet stack.**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. You can now start experimenting with basic Cairo 1.0 code
-* Cairo 1.0 at its core is very similar to Rust
-* Consider it a first taste, not a release. More improvements are on the way. The first version of the compiler is planned for early Q1 next year.
-* Cairo 1.0 is not supported on StarkNet, yet. It will be supported on StarkNet in Q1 next year.
+* **Κάιρο 1.0 είναι ανοιχτού κώδικα! Αυτό είναι μόνο το πρώτο βήμα προς τον ανοικτό εφοδιασμό της στοίβας StarkNet.**
+* Παρουσιάζουμε τώρα μια[πρώτη ματιά](https://github.com/starkware-libs/cairo)στο μεταγλωττιστή του Καΐρου 1.0. Τώρα μπορείτε να αρχίσετε να πειραματίζεστε με τον βασικό κώδικα του Καΐρου 1.0
+* Το Κάιρο 1,0 στον πυρήνα του είναι πολύ παρόμοιο με το Rust
+* Σκεφτείτε το ένα πρώτο γούστο, όχι μια κυκλοφορία. Περισσότερες βελτιώσεις βρίσκονται σε εξέλιξη. Η πρώτη έκδοση του μεταγλωττιστή έχει προγραμματιστεί για τις αρχές του Q1 το επόμενο έτος.
+* Το Κάιρο 1.0 δεν υποστηρίζεται στο StarkNet, ακόμα. Θα υποστηριχθεί στο StarkNet το επόμενο έτος.
 
-### Intro
+### Εισαγωγή
 
-In 2020, we released [Cairo](https://eprint.iacr.org/2021/1063.pdf), a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive. Two months ago, we announced [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), which addresses some major issues in the current situation:
+Το 2020, κυκλοφορήσαμε το[Κάιρο](https://eprint.iacr.org/2021/1063.pdf), μια εξαντλητική γλώσσα προγραμματισμού που υποστηρίζει επαληθεύσιμη υπολογισμό. Το Κάιρο ξεκίνησε ως γλώσσα συναρμολόγησης και σταδιακά έγινε πιο εκφραστικό. Πριν από δύο μήνες, ανακοινώσαμε το[Κάιρο 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), το οποίο αντιμετωπίζει κάποια σημαντικά ζητήματα στην τρέχουσα κατάσταση:
 
-* While Cairo’s syntax has seen significant improvement since its inception, the developer experience can always improve. Cairo 1.0 is a rust-inspired fully typed language, making writing the same logic much easier and less error-prone.
-* The existing compiler is developed in the same repo as StarkNet itself, making it harder to track language changes. The Cairo 1.0 compiler is written from the ground up, allowing for faster feature development and for more community involvement.
-* Every computation is now provable. Currently, a Cairo program may fail with specific inputs (e.g. by reaching an \`assert 1=2\` instruction in some computation branch), rendering the computation unprovable. With Cairo 1.0, programs are provable in every possible branch. This is particularly important for DOS protection and censorship resistance in StarkNet.
+* Ενώ η σύνταξη του Κάιρο έχει δει σημαντική βελτίωση από την έναρξή της, η εμπειρία του προγραμματιστή μπορεί πάντα να βελτιωθεί. Το Κάιρο 1.0 είναι μια πλήρως δακτυλογραφημένη γλώσσα εμπνευσμένη από τη σκουριά, κάνοντας τη γραφή της ίδιας λογικής πολύ ευκολότερη και λιγότερο επιρρεπής σε σφάλμα.
+* Ο υπάρχων μεταγλωττιστής αναπτύσσεται στο ίδιο repo με το ίδιο το StarkNet καθιστώντας δυσκολότερη την παρακολούθηση των αλλαγών γλώσσας. Ο μεταγλωττιστής του Καΐρου 1.0 γράφεται από το προσκήνιο, επιτρέποντας την ταχύτερη ανάπτυξη των δυνατοτήτων και για περισσότερη συμμετοχή της κοινότητας.
+* Κάθε υπολογισμός είναι πλέον αποδεδειγμένος. Επί του παρόντος, ένα πρόγραμμα του Καΐρου μπορεί να αποτύχει με συγκεκριμένες εισόδους (π.χ. φτάνοντας σε μια εντολή \`assert 1=2\` σε κάποιο κλάδο υπολογισμού), καθιστώντας τον υπολογισμό μη αποδεδειγμένο. Με το Κάιρο 1.0, τα προγράμματα μπορούν να αποδειχθούν σε κάθε πιθανό κλάδο. Αυτό είναι ιδιαίτερα σημαντικό για την προστασία και την αντίσταση λογοκρισίας DOS στο StarkNet.
 
-Today we mark the first milestone in reaching the above goals as we move the development to a public repo, and **open source Cairo 1.0!** Developers can now, for the first time, compile and execute simple Cairo 1.0 programs. This allows developers to start experimenting with Cairo 1.0 and gradually get accustomed to the new features, even if, at this phase, they cannot implement it on StarkNet just yet.
+Σήμερα σηματοδοτούμε το πρώτο ορόσημο για την επίτευξη των παραπάνω στόχων, καθώς κινούμαστε την ανάπτυξη σε δημόσιο ρεμπόρ, και**ανοικτού κώδικα Κάιρο 1. !**Οι προγραμματιστές μπορούν τώρα, για πρώτη φορά, να συντάξουν και να εκτελέσουν απλά προγράμματα του Καΐρου 1.0. Αυτό επιτρέπει στους προγραμματιστές να αρχίσουν να πειραματίζονται με το Κάιρο 1. και σταδιακά να εξοικειωθούν με τα νέα χαρακτηριστικά, ακόμη και αν, σε αυτό το στάδιο, δεν μπορούν να το εφαρμόσουν στο StarkNet μόλις ακόμα.
 
-### Current capabilities
+### Τρέχουσες δυνατότητες
 
-Currently, you can compile and execute basic native Cairo programs. While many of the syntax/language improvements are still underway, this allows getting used to Cairo 1.0 and enjoy upgrades as they come.
+Επί του παρόντος, μπορείτε να συντάξετε και να εκτελέσετε βασικά εγγενή προγράμματα του Καΐρου. Ενώ πολλές από τις βελτιώσεις σύνταξης/γλώσσας είναι ακόμα σε εξέλιξη, αυτό επιτρέπει να συνηθίσει στο Κάιρο 1.0 και να απολαύσετε αναβαθμίσεις όπως έρχονται.
 
-**Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
+**Σημειώστε ότι η εγγραφή συμβάσεων του StarkNet εξακολουθεί να μην υποστηρίζεται.**Η σύνταξη StarkNet (μεταβλητές αποθήκευσης / συμβάσεις κλήσεων / εκδηλώσεις και άλλες κλήσεις συστήματος) θα προστεθεί τις επόμενες εβδομάδες.
 
-### Code examples
+### Παραδείγματα κώδικα
 
-To illustrate the differences between the old syntax and Cairo 1.0, we have chosen to show a few different implementations/flavors of finding the n’th Fibonacci number.
+Για να δείτε τις διαφορές μεταξύ της παλιάς σύνταξης και του Καΐρου 1. , έχουμε επιλέξει να δείξει μερικές διαφορετικές εφαρμογές / γεύσεις της εύρεσης του n’th Fibonacci αριθμό.
 
-### Example I: Match expressions
+### Παράδειγμα Ι: Αντιστοίχιση εκφράσεων
 
-In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. No longer will you fear if/else statements that may cause reference revocation!
+Στο Κάιρο 1.0, μπορείτε να χρησιμοποιήσετε εκφράσεις που ταιριάζουν με[match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match). Δεν θα φοβάστε πλέον εάν/άλλες δηλώσεις που μπορεί να προκαλέσουν ανάκληση αναφοράς!
 
 ![](/assets/code01.png)
 
-### Example II: Data types
+### Παράδειγμα II: Τύποι δεδομένων
 
-While Cairo 0 worked with felts and pointers, in Cairo 1.0 we have native access to complex data types in the language. Below you can find an example that generates an array of the first n Fibonacci numbers.
+Ενώ το Κάιρο 0 συνεργάστηκε με πιλήματα και δείκτες, στο Κάιρο 1.0 έχουμε εγγενή πρόσβαση σε σύνθετους τύπους δεδομένων στη γλώσσα. Παρακάτω μπορείτε να βρείτε ένα παράδειγμα που δημιουργεί μια σειρά από τους πρώτους αριθμούς n Fibonacci.
 
 ![](/assets/code02.png)
 
-As you can see above, rather than working directly with memory pointers, we use the `Array::<felt>\` type and the \`array_append\`function.
+Όπως μπορείτε να δείτε παραπάνω, αντί να δουλεύουμε απευθείας με δείκτες μνήμης, χρησιμοποιούμε το «Array::<felt>\` τον τύπο και τη συνάρτηση \`array_append\`.
 
-### Example III: structs & ownership
+### Παράδειγμα III: δομές & ιδιοκτησία
 
-The following code illustrates the usage of structs in Cairo 1.0.
+Ο παρακάτω κώδικας απεικονίζει τη χρήση δομών στο Κάιρο 1.0.
 
 ![](/assets/code03.png)
 
-> The following paragraph is meant for the Rustaceans among the audience. Cairo 1.0 manages memory in a similar way to rust. In particular, it uses the concepts of [ownership and borrowing](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Thus, By accessing a member of the \`FibResult\` struct (in this case, \`result.value\`), we’ve moved \`result\`, which means that unless FibResult is copyable, we can’t access it again in \`result.index\`. To overcome this, we add the \`#\[derive(Copy)]\` attribute of the \`FibResult\` type. In future versions, we will add auto deconstruction for structs. This will allow moving ownership of one member without touching the others (in particular, the above code would compile even if \`FibResult\` didn’t have the copy attribute).
+> Η ακόλουθη παράγραφος προορίζεται για τους Rustaceans μεταξύ του κοινού. Το Κάιρο 1.0 διαχειρίζεται τη μνήμη με παρόμοιο τρόπο με τη σκουριά. Συγκεκριμένα, χρησιμοποιεί τις έννοιες της[ιδιοκτησίας και του δανεισμού](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Έτσι, με την πρόσβαση σε ένα μέλος της δομής \`FibResult\` (σε αυτή την περίπτωση, \`result. alue\`), έχουμε μετακινήσει το \`result\`, πράγμα που σημαίνει ότι εκτός αν το FibResult είναι αντιγραφό, δεν μπορούμε να το έχουμε ξανά πρόσβαση στο \`result.index\`. Για να ξεπεράσουμε αυτό, προσθέτουμε το χαρακτηριστικό \`#\[derive(Copy)]\` του τύπου \`FibResult\`. Σε μελλοντικές εκδόσεις, θα προσθέσουμε αυτόματη αποδόμηση για δομές. Αυτό θα επιτρέψει τη μετακίνηση της ιδιοκτησίας ενός μέλους χωρίς να αγγίξει τα άλλα (συγκεκριμένα, ο παραπάνω κώδικας θα μεταγλωττίσει ακόμα και αν το \`FibResult\` δεν είχε το χαρακτηριστικό αντιγραφής).
 
-**In particular, note that Cairo 1.0 is completely abstracting away the original (none deterministic read-only) memory model of Cairo.**
+**Ειδικότερα, σημειώστε ότι το Κάιρο 1.0 είναι εντελώς αφαιρετικά μακριά το πρωτότυπο (μη ντετερμινιστική μόνο ανάγνωση) μοντέλο μνήμης του Καΐρου.**
 
-## Example IV: Error propagation
+## Παράδειγμα IV: Διάδοση σφαλμάτων
 
-The following code computes the n’th Fibonacci number, but unlike the previous examples, all the inputs are of the type uint128. Note that this solves a major pain point of handling uints in Cairo 0. Here, uint128 (and in the future uint256) are native types.
+Ο παρακάτω κώδικας υπολογίζει τον αριθμό n’th Fibonacci, αλλά σε αντίθεση με τα προηγούμενα παραδείγματα, όλες οι είσοδοι είναι του τύπου uint128. Σημειώστε ότι αυτό λύνει ένα σημαντικό σημείο πόνου στο χειρισμό uints στο Κάιρο 0. Εδώ, uint128 (και στο μέλλον uint256) είναι ντόπιοι τύποι.
 
 ![](/assets/0_s8bhjf_ade3carmi.png)
 
-The addition of two 128 bit integers can cause an overflow. The above code uses the [Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html) and the [question mark operator](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html) to handle the case of overflow in one of the intermediate additions. Compare this to the [current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31) uint256 addition syntax, where the \`unit256_check\` function had to be called to guarantee soundness. In addition, in the near future, we will add the concept of \`panic\` to the language (similar to the [panic](https://doc.rust-lang.org/rust-by-example/std/panic.html) macro in rust), and simple errors like addition overflow will be uncatchable and propagated automatically, which means that you won’t have to use \`Option\` or \`?\` when adding uints.
+Η προσθήκη δύο ακέραιων 128 bit μπορεί να προκαλέσει υπερχείλιση. Ο παραπάνω κωδικός χρησιμοποιεί το[Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html)και τον[διαχειριστή ερωτηματικού](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)για να χειριστεί την περίπτωση υπερχείλισης σε μία από τις ενδιάμεσες προσθήκες. Σύγκριση με την[τρέχουσα](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31)uint256 σύνταξη προσθήκης, όπου η συνάρτηση \`unit256_check\` έπρεπε να κληθεί για να εγγυηθεί την ευρωστία. Επιπλέον, στο εγγύς μέλλον θα προσθέσουμε την έννοια του \`panic\` στη γλώσσα (παρόμοια με την[μακροεντολή πανικού](https://doc.rust-lang.org/rust-by-example/std/panic.html)σε σκουριά), και απλά λάθη όπως υπερχείλιση προσθήκης θα είναι αδιάκριτα και θα διαδίδονται αυτόματα, πράγμα που σημαίνει ότι δεν θα χρειαστεί να χρησιμοποιήσετε \`Option\` ή \`? ` κατά την προσθήκη uints.
 
-## Try it yourself
+## Δοκιμάστε το μόνοι σας
 
-You can now compile and run currently supported Cairo 1.0 programs! Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. Note that under the hood, the [Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), developed by [Lambdaclass](https://lambdaclass.com/), is used for execution.
+Τώρα μπορείτε να μεταγλωττίσετε και να εκτελέσετε προγράμματα που υποστηρίζονται από το Κάιρο 1.0! Ακολουθήστε αυτές τις[οδηγίες](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner)σχετικά με τον τρόπο χρήσης της εντολής \`cairo-run\`. Σημειώστε ότι κάτω από την κουκούλα, το[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), που αναπτύχθηκε από[Lambdaclass](https://lambdaclass.com/), χρησιμοποιείται για εκτέλεση.
 
-You can find more examples to help you get started [here](https://github.com/starkware-libs/cairo2/tree/main/examples). Note that this is only the first peek into the compiler development; in the coming weeks, we will improve the CLI alongside the compiler.
+Μπορείτε να βρείτε περισσότερα παραδείγματα που θα σας βοηθήσουν να ξεκινήσετε[εδώ](https://github.com/starkware-libs/cairo2/tree/main/examples). Σημειώστε ότι αυτό είναι μόνο η πρώτη ματιά στην ανάπτυξη του μεταγλωττιστή · στις επόμενες εβδομάδες θα βελτιώσουμε το CLI μαζί με τον μεταγλωττιστή.
 
-## Future Plans
+## Μελλοντικά Σχέδια
 
-The focus of the first version of the Compiler, which is planned for early Q1, is supporting all existing functionality of StarkNet in Cairo 1.0. Additionally, we’re working on extending the capabilities of the Cairo 1.0 compiler. In the coming weeks, you can expect:
+Το επίκεντρο της πρώτης έκδοσης του μεταγλωττιστή, το οποίο έχει προγραμματιστεί για τις αρχές του Q1, υποστηρίζει όλες τις υπάρχουσες λειτουργίες του StarkNet στο Κάιρο 1.0. Επιπλέον, εργαζόμαστε για την επέκταση των δυνατοτήτων του μεταγλωττιστή του Καΐρου 1.0. Τις επόμενες εβδομάδες, μπορείτε να περιμένετε:
 
-* StarkNet capabilities — writing smart contracts and using system calls.
-* Loops
-* New library functions
-* Improved language server
-* A native notion of StarkNet gas
+* Δυνατότητες StarkNet — συγγραφή έξυπνων συμβάσεων και χρήση κλήσεων συστήματος.
+* Βρόχοι
+* Νέες λειτουργίες βιβλιοθήκης
+* Βελτιωμένος διακομιστής γλώσσας
+* Μια εγγενής έννοια του αερίου StarkNet
 
-Make sure to stay tuned and track the compiler progress!
+Φροντίστε να μείνετε συντονισμένοι και να παρακολουθείτε την πρόοδο του μεταγλωττιστή!

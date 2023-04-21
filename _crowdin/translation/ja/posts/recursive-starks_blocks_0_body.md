@@ -1,118 +1,118 @@
 ### TL;DR
 
-* Recursive Proving is live on Mainnet, scaling StarkEx apps as well as StarkNet with a single proof
-* It boosts scale, and delivers benefit in cost, and latency (a rare and exciting occurrence of scale and latency moving in tandem, and not being a tradeoff)
-* It sets the stage for L3 and other benefitsGo read the blog post on [Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). It’s cool stuff 😉
+* 再帰的な証明は Mainnet 上でライブで行われ、StarkEx アプリと StarkNet を単一の証明でスケーリングします。
+* 規模を向上させ、コストで利益をもたらします。 そして待ち伏せ（まれでエキサイティングなスケールとレイテンシーがタンデムで移動し、トレードオフではありません）
+* これは、L3とその他の利点のための段階を設定しますGoは、[再帰的な証明](https://medium.com/@starkware/recursive-starks-78f8dd401025)のブログ記事を読んでください。 それはクールなもの 😉
 
-### Scaling up!
+### 拡大縮小！
 
-Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof.
+再帰的な証明ーカイロの一般的な計算によって動作します。 これにより、STARKのL2スケーリングのパワーが大幅に向上しました。 単一の証拠を介してEthereumに書き込むことができるトランザクションの数を迅速に増やすことができます。
 
-Until now, STARK scaling has worked by “rolling up” tens or even hundreds of thousands of transactions into a single proof, which was written to Ethereum. With recursion, many such proofs can be “rolled up” into a single proof.
+これまで、STARKスケーリングは数十、数十万件のトランザクションを単一の証明に「ロールアップ」してきました。 Ethereumに書かれていました 再帰的になると、多くのそのような証明が単一の証明に「ロールアップ」されることがあります。
 
-This method is now in production for a multitude of Cairo-based applications: apps running on StarkEx, StarkWare’s SaaS scaling engine, and StarkNet, the permissionless rollup.
+この方法は、現在、Cairoベースの多数のアプリケーションで使用されています。StarkEx、StarkWareのSaaSスケーリングエンジン、および権限なしのロールアップであるStarkNetで実行されているアプリケーションです。
 
-### The story so far
+### これまでの話
 
-Since the first proof on Mainnet, in March 2020, the following developments have shaped how STARKs are used.
+2020年3月には、Mainnetでの最初の証拠として、以下のような展開がありました。
 
-### STARK-based scaling
+### STARKベースの拡大縮小
 
-In June 2020 the first STARK-based scaling solution — [StarkEx](https://youtu.be/P-qoPVoneQA) — was deployed on Ethereum Mainnet. StarkEx has a Prover that performs large computations off-chain and produces a STARK-proof for their correctness, and a Verifier that verifies this proof on-chain. The constraints for this first deployment were “hand-written” by StarkWare’s engineers, thus greatly limiting feature velocity for StarkEx. We concluded that a programming language to support proving general computation is needed — Cairo.
+2020年6月には、最初のSTARKベースのスケーリングソリューション ([StarkEx](https://youtu.be/P-qoPVoneQA)) がEthereum Mainnetにデプロイされました。 StarkExには、大規模な計算をオフチェーンで実行し、その正確性のためにSTARKプルーフを生成するプロバーと、この証明をオンチェーンで検証するVerifierがあります。 この最初のデプロイの制約は、StarkWareのエンジニアによる「手書き」であり、StarkExの機能速度を大幅に制限していました。 一般的な計算を証明するためのプログラミング言語が必要であると結論付けました — カイロ。
 
 #### Cairo
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo stands for CPU Algebraic Intermediate Representation (AIR), and includes a single AIR that verifies the instruction set of this “CPU”. It opened up the door for coding proofs for more complex business logic, for arbitrary computational statements, and for doing so in a faster and safer manner. A Cairo program can prove the execution of a single application’s logic. But a Cairo program can also be a concatenation of multiple such applications — SHARP.
+2020年の夏、カイロはEthereum Mainnetで[初登場](https://medium.com/starkware/hello-cairo-3cb43b13b209)しました。 Cairo は CPU 代数中級表現 (AIR) の略で、この "CPU" の命令セットを検証する単一の AIR が含まれています。 それはより複雑なビジネスロジックのためのコーディング証明のためのドアを開けました。 より速く安全な方法で行うことができます Cairo プログラムは、単一のアプリケーションのロジックの実行を証明することができます。 しかし、カイロのプログラムは、複数のそのようなアプリケーションの連結にもなり得ます - SHARP。
 
-#### SHARP
+#### 共有
 
-SHARP — a SHARed Prover — takes transactions from several separate apps, and proves them all in one single STARK-proof. Apps combine their batches of transactions, filling up the capacity of a STARK-proofs faster. Transactions are processed at an improved rate and latency. The next frontier: Recursive Proofs, but not merely for some hard-coded logic, but rather for **general computation**.
+SHARP(SHARPプローバー)は、いくつかの別々のアプリからトランザクションを取得し、1つのSTARKプルーフでそれらすべてを証明します。 アプリは、より速くSTARK-プルーフの容量を埋めるトランザクションのバッチを組み合わせます。 トランザクションは、速度とレイテンシの向上で処理されます。 次のフロンティア: 再帰的な証明ですが、単にハードコードされたロジックだけではなく、**一般的な計算** のためのものです。
 
-To understand the full benefit of Recursive Proving it is worth understanding a little bit more about how (non-recursive) proving was performed by SHARP up until now. Drawing 1 depicts a typical non-recursive flow:
+再帰証明の完全な利点を理解するためには、これまでSHARPによってどのように(非再帰的)証明が行われたかについてもう少し理解する価値があります。 典型的な非再帰フローを図1に描画します。
 
-![Drawing 1: A typical non-recursive proving flow](/assets/recursive_starks_01.png "Drawing 1: A typical non-recursive proving flow")
+![図面1: 典型的な非再帰的な証明フロー](/assets/recursive_starks_01.png "図面1: 典型的な非再帰的な証明フロー")
 
-Here, statements arrive over time. When a certain capacity (or time) threshold is reached, a large combined statement (a.k.a Train) is generated. This combined statement is proven only once all the individual statements have been received. This proof takes a long time to prove (roughly the sum of time it takes to prove each statement individually).
+ここでは、ステートメントは時間をかけて到着します。 一定の容量(または時間)しきい値に達すると、大きな複合ステートメント(列車)が生成されます。 この組み合わせ文は、すべての個々の文が受信された後にのみ証明されます。 この証明書は証明するのに長い時間がかかります(それぞれの声明を個別に証明するのにかかる時間の概算)。
 
-Proving extremely large statements is eventually limited by available compute resources such as memory. Prior to recursion, this was effectively the limiting scalability barrier of STARK proving.
+非常に大きなステートメントを証明することは、メモリなどの利用可能なコンピューティングリソースによって最終的に制限されます。 再帰に先立ち、これは事実上STARK証明の限界スケーラビリティ障壁でした。
 
-### What is Recursive Proving?
+### 再帰プロビングとは何ですか?
 
-With STARK proofs, the time it takes to prove a statement is roughly linear with the time it takes to execute the statement. In addition, if proving a statement takes T time, then verifying the proof takes roughly log(T) time, which is typically called “logarithmic compression”. In other words, with STARKs you spend much less time on verifying the statement than on calculating it.
+STARK証明では、ステートメントを実行するのにかかる時間は、大体直線的であることを証明します。 さらに、ステートメントを証明するにはTに時間がかかる場合、証明を証明するには、大体のログ(T)時間がかかります。これは通常、「対数圧縮」と呼ばれます。 言い換えれば、STARKsでは、それを計算するよりもステートメントを検証するのにはるかに少ない時間を費やす。
 
-[Cairo](https://starkware.co/cairo/) allows expressing general computational statements that can be proven by STARK proofs and verified by the corresponding STARK verifiers.
+[Cairo](https://starkware.co/cairo/)は、STARK証明書で証明し、対応するSTARK検証器で検証できる一般的な計算文を表現することができます。
 
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. We can generate a single proof attesting to the validity of multiple “up-stream” proofs. This is what we call Recursive Proving.
+ここで、[再帰](https://en.wikipedia.org/wiki/Recursion)を実行する機会が始まります: 私たちが数千の取引の正しさを証明するカイロプログラムを書くのと同じように。 また、複数のSTARK証明を検証するカイロプログラムを書くこともできます。 複数の「上流」証明の有効性を証明する単一の証明を生成することができます。 これは私たちが「再現的な証明」と呼んでいるものです
 
-Because of the logarithmic compression and roughly linear proving time, proving a verification of a STARK proof takes relatively short time (expected to be just a few minutes in the near future).
+対数圧縮とほぼ直線的な証明時間のために。 STARK証明を証明するには、比較的短い時間がかかります(近い将来、わずか数分であることが予想されます)。
 
-When implementing Recursion, SHARP can prove statements upon their arrival. Their proofs can be merged over and over into recursive proofs in various patterns until, at a certain point, the resulting proof is submitted to an on-chain verifier contract. A typical pattern is depicted in Drawing 2:
+再帰を実装する場合、SHARPは到着時に声明を証明することができます。 それらの証明は、さまざまなパターンの再帰的な証明に何度もマージすることができます。 ある時点でその証明書は チェーン上の検証契約に提出されます 典型的なパターンは図2に示されています。
 
-![Drawing 2: A typical recursive proving flow.](/assets/recursive_starks_02.png "Drawing 2: A typical recursive proving flow.")
+![Drawing 2: 典型的な再帰的な証明フロー。](/assets/recursive_starks_02.png "Drawing 2: 典型的な再帰的な証明フロー。")
 
-### Immediate Benefits of Recursive Proving
+### 再帰証明の即時利点
 
-#### Reduced On-chain Cost
+#### チェーン内コストの削減
 
-Off the bat, we achieve “compression” of multiple proofs into one, which implies lower on-chain verification cost per transaction (where each statement may include many transactions).
+コウモリを離れて、複数の証明の「圧縮」を1つにします。 これは、トランザクションあたりのオンチェーン検証コストを下げることを意味します(各ステートメントには多くのトランザクションが含まれる場合があります)。
 
-With recursion, the computational resources barrier (e.g. memory) that limited proofs size up until now, is eliminated, since each limited size statement can be proven separately. Hence, when using recursion, the effective Train size of recursion is almost unlimited, and the cost per transaction can be reduced by orders of magnitude.
+再帰では、計算リソースバリア（例えば、 それぞれの限られたサイズステートメントは別々に証明することができるので、これまでの限られた証明のサイズが削除されます。 したがって、再帰を使用する場合、再帰の実効列車サイズはほぼ制限されておらず、トランザクションあたりのコストを桁違いに削減することができます。
 
-In practical terms, the reduction depends on the acceptable latency (and the rate at which transactions arrive). In addition, since each proof is typically also accompanied by some output such as on-chain data, there are limits to the amount of data that can be written on-chain together with a single proof. Nevertheless, reducing cost by an order of magnitude and even better is trivially achievable.
+実用的な用語では、減少は許容待ち時間(およびトランザクションが到着する速度)によって異なります。 さらに、各プルーフは通常、オンチェーンデータなどのいくつかの出力を伴うので。 1つの証拠と一緒にチェーンに書き込めるデータの量に制限がある それにもかかわらず、コストを一桁削減し、さらに良いことは些細なことに達成できます。
 
-#### Reduced Latency
+#### レイテンシの減少
 
-The Recursive Proving pattern reduces the latency of proving large Trains of statements. This is the result of two factors:
+再帰的な証明パターンは、大規模な文の列を証明するレイテンシを低減します。 これは 2 つの要因の結果です:
 
-1. Incoming statements can be proven **in parallel** (as opposed to proving an extremely large combined statement).
-2. There is no need to wait until the last statement in the Train arrives to begin proving. Rather, proofs can be combined with new statements as they arrive. This means that the latency of the last statement joining a Train, is roughly the time it takes to prove that very last statement plus the time it takes to prove a Recursive Verifier statement (which attests to all those statements that have already “onboarded” this particular Train).
+1. 受信文は**を並列で証明することができます**(非常に大きな複合文を証明するのとは対照的です)。
+2. 列車内の最後の声明が証明し始めるまで待つ必要はありません。 むしろ、証明は到着時に新しい声明と組み合わせることができます。 これは、Trainに参加する最後のステートメントのレイテンシーを意味します。 は、繰り返し検証明書が発行されるまでにかかる時間に加えて、完全に最後の文であることを証明するのにかかる時間です(この列車に搭載されているすべての文に証明されます)。
 
-We are actively developing and optimizing the latency of proving the Recursive Verifier statement. We expect this to reach the order of a few minutes within a few months. Hence, a highly efficient SHARP can offer latencies from a few minutes up to a few hours, depending on the tradeoff versus on-chain cost per transaction. This represents a meaningful improvement to SHARP’s latency.
+私たちは、再帰検証明書の遅延を積極的に開発し、最適化しています。 私達は、これが数ヶ月以内に数分の順序に達すると予想します。 したがって、効率的なSHARPは数分から数時間までの待ち時間を提供することができます。 取引ごとのトレードオフとチェーンコストに応じて異なります これは、SHARPのレイテンシに有意義な改善をもたらします。
 
-#### Facilitating L3
+#### L3を容易にする
 
-The development of the Recursive Verifier statement in Cairo also opens up the possibility of submitting proofs to StarkNet, as that statement can be baked into a StarkNet smart contract. This allows building [L3 deployments on top of the public StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) (an L2 network).
+カイロでの再帰検証明書の開発はまたStarkNetに証明を提出する可能性を開きます。 その声明はStarkNetスマートコントラクトに焼くことができるように。 これにより、パブリックStarkNet[(L2ネットワーク) 上に](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f)L3デプロイメントを構築することができます。
 
-The recursive pattern also applies to the aggregation of proofs from L3, to be verified by a single proof on L2. Hence, hyper-scaling is achieved there too.
+再帰的なパターンは、L3からの証明の集計にも適用され、L2上の単一の証明によって検証されます。 したがって、ハイパースケーリングも達成されます。
 
-### More Subtle Benefits
+### もっと豪華な利点
 
-#### Applicative Recursion
+#### 適用される再帰性
 
-Recursion opens up even more opportunities for platforms and applications wishing to further scale their cost and performance.
+再帰は、さらにコストとパフォーマンスを拡大したいと考えているプラットフォームやアプリケーションにさらに多くの機会を開きます。
 
-Each STARK proof attests to the validity of a statement applied to some input known as the “public input” (or “program output” in Cairo terms). Conceptually, STARK recursion compresses two proofs with *two* inputs into *one* proof with two inputs. In other words, while the number of proofs is reduced, the number of inputs is kept constant. These inputs are then typically used by an application in order to update some state on L1 (e.g. to update a state root or perform an on-chain withdrawal).
+各 STARK 証明書は、「公開入力」(またはカイロの用語で「プログラム出力」)と呼ばれるいくつかの入力に適用される文の有効性を証明します。 概念的に、STARKは2つの証明を*2つの*入力を2つの*入力を1つの*プルーフに圧縮します。 言い換えれば、証明の数が減る一方で、入力の数は一定に保たれます。 これらの入力は通常、L1の状態を更新するためにアプリケーションによって使用されます(e. をクリックします。
 
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. The resulting statement attests to the validity of the input combination based on the application semantics, hence the name Applicative Recursion (see Drawing 3, for an example)..
+If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. 生成された文は、アプリケーションのセマンティクスに基づく入力の組み合わせの妥当性を証明します。 したがって、Applicative Recursionという名前です (例えば図面3を参照してください)。
 
-![Drawing 3: Applicative Recursion example](/assets/recursive_starks_03.png "Drawing 3: Applicative Recursion example")
+![図面3: 適用再帰の例](/assets/recursive_starks_03.png "図面3: 適用再帰の例")
 
-Here, Statement 1 attests to a state update from A to B and Statement 2 attests to a further update from B to C. Proofs of Statement 1 and Statement 2 may be combined into a third statement, attesting to the direct update from A to C. By applying similar logic recursively, one can reduce the cost of state updates very significantly up to the finality latency requirement.
+ここで、ステートメント1はAからBへの状態アップデートを証明し、ステートメント2はBからCへのさらなるアップデートを証明します。 ステートメント1およびステートメント2の校正は、AからCへの直接の更新を証明する、3番目のステートメントに結合することができます。 同様のロジックを再帰的に適用することで、ステートアップデートのコストを最終待ち時間要件まで大幅に削減できます。
 
-Another important example of Applicative Recursion is to compress rollup data from multiple proofs. For example, for a Validity Rollup such as StarkNet, every storage update on L2 is also included as transmission data on L1, to ensure data availability. However, there is no need to send multiple updates for the same storage element, as only the final value of transactions attested to by the proof verified is required for data availability. This optimization is already performed within a *single* StarkNet block. However, by generating a proof per block, Applicative Recursion may compress this rollup data across *multiple* L2 blocks. This can result in significant cost reduction, enabling shorter block intervals on L2, without sacrificing the scalability of L1 updates.
+Applicative Recursion のもう一つの重要な例は、複数の証明から積み上げデータを圧縮することです。 たとえば、StarkNetなどの妥当性ロールアップの場合。 L2のすべてのストレージアップデートは、データの可用性を確保するためにL1の伝送データとしても含まれています。 ただし、同じストレージ要素に複数の更新を送信する必要はありません。 証明された証明によって証明された取引の最終的な価値のみがデータの可用性に必要とされるので。 この最適化はすでに*単一の*StarkNetブロック内で実行されています。 しかし、ブロックごとの証明を生成することによって、Applicative Recursion は、この積み上げデータを**L2ブロックにわたって圧縮する可能性があります。 これにより、L1アップデートのスケーラビリティを犠牲にすることなく、大幅なコスト削減を実現し、L2上のブロック間隔を短縮することができます。
 
-Worth noting: Applicative Recursion may be combined with application-agnostic recursion as depicted earlier. These two optimizations are independent.
+注目すべき点: 応用再帰は、前述のようにアプリケーション不可知論的再帰と組み合わせることができる。 この２つの最適化は独立しています
 
-#### Reduced On-chain Verifier Complexity
+#### チェーン上での確認の複雑さの減少
 
-The complexity of the STARK verifier depends on the kind of statements it is designed to verify. In particular, for Cairo statements, the verifier complexity depends on the specific elements allowed in the Cairo language, and, more specifically, the supported built-ins (if we use the CPU metaphor for Cairo, then built-ins are the equivalent of micro-circuits in a CPU: computations performed so frequently that they require their own optimized computation).
+STARK 検証機の複雑さは、検証するために設計された文の種類によって異なります。 特に、Cairo 文の場合、検証の複雑さは、Cairo 言語で許可される特定の要素に依存します。 さらに具体的には、サポートされている組み込みイン(CairoにCPUメタファーを使用する場合) 次に、内蔵されたインは、CPU内のマイクロ回路と同等のものです:非常に頻繁に行われる計算は、独自の最適化された計算を必要とします)。
 
-The Cairo language continues to evolve and offer more and more useful built-ins. On the other hand, the Recursive Verifier only requires using a small subset of these built-ins. Hence, a recursive SHARP can successfully support any statement in Cairo by supporting the full language in the recursive verifiers. Specifically, the L1 Solidity Verifier need only verify recursive proofs, and thus can be limited to a more stable subset of the Cairo language: The L1 Verifier need not keep up with the latest and greatest built-ins. In other words, verification of ever-evolving complex statements is relegated to L2, leaving the L1 Verifier to verify simpler and more stable statements.
+カイロ言語は進化を続けており、ますます便利なビルトインを提供しています。 一方、Recursive Verifierでは、これらの組み込みインの小さなサブセットを使用するだけです。 したがって、再帰的なSHARPは、再帰的な検証器で完全な言語をサポートすることによって、カイロのあらゆる文をうまくサポートすることができます。 具体的には、L1 Solidity Verifierは再帰的な証明を検証するだけです。 したがって、カイロ言語のより安定したサブセットに限定することができます。L1検証器は、最新かつ最大の組み込みインに追いつく必要はありません。 言い換えれば、進化し続ける複雑な文の検証はL2に追いやられ、L1検証器はよりシンプルで安定した文を検証します。
 
-#### Reduced Compute Footprint
+#### 縮小された足跡の計算
 
-Before recursion, the ability to aggregate multiple statements into one proof was limited by the maximal size of the statement that could be proved on available compute instances (and the time it could take to generate such proofs).
+再帰の前 複数の文を1つの証明に集約する能力は、利用可能な計算インスタンス(およびそのような証明を生成するのにかかる時間)で証明できる文の最大サイズによって制限されました。
 
-With recursion, there is no longer a need to prove such extremely large statements. As a result, smaller, less expensive and more available compute instances can be used (though more of those may be needed than with large monolithic provers). This allows deployment of prover instances in more physical and virtual environments than previously possible.
+再帰では、このような極めて大きな文を証明する必要はなくなりました。 結果として、小さく、 より安価で利用可能なコンピューティングインスタンスを使用することができます(ただし、それらの多くは大きなモノリシックな諺よりも必要になる可能性があります)。 これにより、従来よりも物理的および仮想的な環境におけるprover インスタンスのデプロイが可能になります。
 
 ### Summary
 
-Recursive proofs of general computation now serve multiple production systems, including StarkNet, on Mainnet Ethereum.
+全般的な計算の再帰的な証明は、Mainnet EthereumでStarkNetを含む複数の生産システムに使用されるようになりました。
 
-The benefits of recursion will be realized gradually, as it continues to allow for new improvements, and it will soon deliver hyper-scale, cut gas fees, and improve latency by unlocking the potential of parallelization.
+再帰の利点は、新たな改善を引き続き可能にするため、徐々に実現されるでしょう。 そしてまもなく、並列化の可能性を解放することで、ハイパースケールのガス料金を削減し、レイテンシを向上させることになります。
 
-It will bring significant cost and latency benefits with it, together with new opportunities such as L3 and applicative-recursion. Further optimization of the Recursive Verifier is on-going and even better performance and cost benefits are expected to be provided over time.
+それは、L3やアプリケーション再帰などの新しい機会とともに、大きなコストとレイテンシの利点をもたらします。 再帰検証器のさらなる最適化は進行中であり、より優れた性能とコスト面でのメリットが時間の経過とともに提供されることが期待されます。
 
 
 
-**Gidi Kaempfer**, Head of Core Engineering, StarkWare
+**Gidi Kaempfer**, コアエンジニアリングヘッド, StarkWare

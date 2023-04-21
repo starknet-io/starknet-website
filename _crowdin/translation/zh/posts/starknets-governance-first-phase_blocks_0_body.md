@@ -1,114 +1,130 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+我们很高兴宣布StarkNet权力下放进程中的下一步——投票支持更改协议。
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+在过去几周中，StarkNet设立了[StarkNet基金会](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)，为进一步下放权力采取了重大步骤。 在以太坊启动[STRK 令牌](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c)和[开源开罗1。](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+这个员额将在下一步骤，即StarkNet治理的第一阶段，在今后几个月内扩展。
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* 批准或否决StarkNet 协议拟议修改的第一次投票将很快进行
+* 第一阶段参加投票者将是：\
+  — 令牌持有者\
+  — 由代币持有者选出的代表，这些代币持有者愿意授予他们的表决权\
+  — StarkNet基金会挑选的代表行使其部分表决权\
+  — — 一个专业建筑师理事会， 由 StarkNet 基金会设置
+* 所有人都被邀请在StarkNet的治理中指定自己的代表
+* 讨论将在[StarkNet社区论坛](https://community.starknet.io/) 中进行。
 
-### Background
+### 二. 背景
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+正在同时推进两个进程，以实现StarkNet的远见，使其成为一个抵制审查的公共网络：(一)[StarkNet的系统组件](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e。 ㈡ 关于协议变更的治理机制的实施。
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+建立高质量的管理机制，使开放的社区能够管理更新礼宾，这是一个严重的挑战。 这是一个渐进和探索性的过程，需要广泛的社区合作。
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+为了规划和协调StarkNet治理的第一阶段，StarkNet基金会设立了一个治理委员会。 基金会将另行公布关于委员会范围和任务的更多细节。 委员会成员为：Deven Matthews（荷兰）、Manor Bareli（StarkWare）和Sylve Chevet（布里克）。 以下是StarkNet治理第一阶段的计划。 由委员会成员与StarkNet生态系统的各捐助方共同制定，并经基金会董事会核准。
 
-### Starknet’s governance first phase plan
+### Starknet的治理第一阶段计划
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+StarkNet治理的第一阶段已经启动。 从现在起，社区成员将能够通过另一个渠道参与StarkNet的形成，即就协议变更进行表决。 这只是StarkNet治理的第一阶段；随着StarkNet向下一阶段推进，治理机制和参与者的范围将扩大。 下面是**第一阶段** 的详细信息：
 
-#### Voting subject
+#### D. 表决问题
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+StarkNet协议的拟议升级。 现阶段的所有升级将由基金会提出。 这些提议将反映StarkNet社区论坛上提出的讨论、想法和反馈。
 
-#### Voting type
+#### 投票类型
 
-Off-chain signal vote (Via Snapshot)
+离链信号投票(Via Snapshot)
 
-#### Voting process
+#### 投票过程
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. 基金会将把StarkNet的最新版本部署到Goerli。
+2. 在Goerli运行时，选民将有6天时间检查升级版本。 在这段时间里，他们可以就是否批准维持网的部署进行表决。
+3. 如果某项提案获得选民的批准，则在向Mainnet申请升级之前将会延迟24小时以上。
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+这些更新将在StarkNet Foundation</a>的
 
-#### Threshold and required quorum
+Twitter 帐户上发布， 以及[StarkNet 社区论坛](https://community.starknet.io/)</p> 
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
 
-### First phase voting participants
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+#### 门槛值和所需法定多数
 
-#### Token holders
+* 门槛值是简单多数（即门槛值是所投票的50％）
+* 没有规定的法定人数，意味着投票没有最低参加级别的有效票数。
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
 
-#### Delegates
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+### 第一阶段投票参与者
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+以下是能够参与第一阶段治理进程的人员名单：
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
 
-**Operation**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
+#### 代币所有者
+
+* 在StarkNet治理的第一阶段， 大多数代币持有者是早期的核心贡献者和投资者，他们在网络的早期阶段创建和支持网络([阅读此帖以了解更多详情](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6))。
+* 随着时间的推移，这个令牌将分发给正在执行维护和升级网络工作的开发人员和其他当事方。 因此，这些当事方将能够保障网络的安全，使用该网络，运作该网络并参与其治理。
+
+
+
+#### 代表
+
+**理由**:\
+投票权力授权使令牌持有者能够将他们的治理授权授予参与者、知情者和专业社区成员。 多亏了：
+
+* 代币持有者可以选择通过代表制而不是直接民主参与决策。
+* 有献身精神和才华的社区成员可以根据其声誉在治理中发挥重要作用。 没有必要拥有代币才能让自己成为代表。
+
+**责任**:\
+为每个决定进行认真的学习过程 这将导致作出有充分根据和独立的决定，使StarkNet及其长期远景受益。
+
+**操作**:
+
+* 首先，为了使代表团机制取得成功，需要一批高素质的代表。
+* 成为代表的道路是没有许可的——没有先决条件——而是对那些愿意这样做的人来说是如此。 在论坛中创建了一个版块，未来的代表可以发布个人资料([在这个链接](https://community.starknet.io/t/delegate-profile-thread/4049) 中)。
+* 代币持有者可以自由选择他们想要授予投票权的任何Ethereum L1地址。
 * For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
 
-A professional committee, appointed by the Foundation.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+#### StarkNet 生成器的理事会
 
-**Responsibilities**:
+由基金会任命的专业委员会。
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+**理由**:\
+基于社区参与和专业声誉的治理机制的实施 而不仅仅是凭证持有者。
 
-**Operation**:
+**责任**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
+* 为每项决定开展认真的学习和讨论进程，这将导致作出有充分根据的有利于StarkNet及其长期远景的决定
+* 在第一阶段积极参加讨论和投票
+* 确保其讨论和决策过程透明度
+* 通过关于StarkNet社区论坛的公开讨论使社区能够使用
+
+**操作**:
+
+* 17 委员会成员由基金会任命。
+* 任务期间——StarkNet治理第一阶段（几个月）
 * For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
 
-The voting power distribution in the **first phase** will be:
+### 第一阶段投票权
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+在StarkNet的治理第一阶段，StarkWare将不参加投票。 StarkNet基金会将把表决权授予建筑师理事会和人才库的若干代表，不直接投票。
 
-### First vote — StarkNet’s 0.11 version
+**第一阶段**的投票电力分配将是：
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+* 投资者：33.3%
+* StarkNet的早期核心贡献者(不包括StarkWare)：33.3%
+* 基金会代表: 33.3%\
+  — StarkNet Builders' Council: 23.3%\
+  — 代表基金会投票: 10%
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+
+
+### 第一次投票 — StarkNets 0.11版本
+
+第一次投票将在今后几周内进行。 投票将涉及是否将StarkNet Alpha升级到0.11版本。
+
+Goerli发布后不久将开始投票，并将通过官方渠道宣布：[StarkNet基金会的Twitter账户](https://twitter.com/StarkNetFndn)和[StarkNet社区论坛](https://community.starknet.io/) 保持关注！

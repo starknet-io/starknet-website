@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* アカウント抽象化の精神向上 EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Validate — 分離を実行
+2. トランザクションの一意性がプロトコル(非表示)で保証されました
 
-* The fee mechanism is extended to include:
+* 料金の仕組みが次のように拡張されます:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2メッセージ
+2. 取引を宣言する
 
-* Few Cairo syntax changes
+* カイロの構文の変更はほとんどありません
 
-### Intro
+### はじめに
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+私たちはStarkNet Alpha 0.10.0を紹介することに興奮しています。 このバージョンは、セキュリティと分散化を損なうことなく、Ethereumをスケーリングするためのもう一つのステップです。
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+このブログ記事では、このバージョンの主な機能について簡単に説明します。 変更の完全なリストについては、[リリース ノート](https://github.com/starkware-libs/cairo-lang/releases) を確認してください。 詳細については、[ドキュメント](https://docs.starknet.io/) を参照してください。
 
-### Account Abstraction Changes
+### アカウント抽象化の変更
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+[StarkNetのアカウント抽象化](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781) を進めます。 このバージョンでは、[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337) に触発された変更を紹介します。
 
-#### Validate/Execute Separation
+#### 区切りを検証/実行
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+これまで、アカウントの\_\_execute\__関数はトランザクションの検証と実行の両方を担当していました。 0.10.0 では、このカップリングを壊し、別の \_\__validate\__ 関数をアカウントに導入します。 トランザクションを受信したら、最初に \_\_validate\__ を呼び出し、成功した場合は \_\_execute\__ に進みます。
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+検証/実行の分離は、不正な(まだ有効な)トランザクションと元の(まだ)トランザクションの間のプロトコルレベルの区別を提供します。 そのおかげで、シーケンサーは、元に戻したかどうかにかかわらず、有効なトランザクションを実行するための手数料を請求することができます。
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+バージョン 0.10.0 では、プロトコルレベルでトランザクションの一意性を強化するために nonce フィールドが追加されました。 これまでは、同じハッシュを持つトランザクションが理論的に2回実行されることを意味する、口座契約レベルでnonceが処理されていました。
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Ethereumと同様に、すべての契約には、このアカウントから実行されたトランザクションの数をカウントするnonceが含まれています。 口座契約は一致するnonceの取引のみ受け付けます。 アカウントの現在のnonceがXの場合、nonce Xでのトランザクションのみ受け付けます。
 
-#### New Transaction Version
+#### 新しいトランザクションバージョン
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+後方互換性を可能にするために、新しいトランザクションバージョン ([v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C)) を介してこれらの2つの変更を紹介します。 これらの変更は新しいバージョンにのみ適用され、古いアカウントはバージョン 0 トランザクションを実行することができます。
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+メモ — トランザクションv0は非推奨になり、StarkNet Alpha v0.11.0で削除されます。 新しいトランザクションバージョンを使用するにはアップグレードしてください。
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+トランザクションのバージョンの詳細については、[ドキュメント](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C) をご覧ください。
 
-#### Fees Mechanism
+#### 手数料の仕組み
 
-The new version allows to include fees for two required components:
+新しいバージョンでは、2つの必要なコンポーネントの料金を含めることができます:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2メッセージ](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [取引を宣言する](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+このバージョンではこれらの料金は必須ではなく、StarkNet Alpha v0.11.0 のみ適用されます。
 
-#### Cairo Syntax Changes
+#### カイロの構文変更
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+カイロのアップグレードに向けて徐々に進歩することを支持しています、[カイロ 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), このバージョンにはいくつかの構文変更が含まれています。
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+不便を最小限に抑えるため、バージョンリリースには上記の変更を自動的に適用する[移行スクリプト](https://www.youtube.com/watch?v=kXs59zaQrsc)が含まれます。 詳細は[こちら](https://github.com/starkware-libs/cairo-lang/releases) をご覧ください。
 
-### What’s Next?
+### 次は何ですか？
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* 数週間後にはシーケンサーに並列化を導入し、より高速なブロック生成(V0.10.1)を可能にする予定です。
+* 手数料の支払いに含まれる必要がある最後の部分をすぐに完了します — アカウントのデプロイメント
+* カイロ 1.0 リリース! 今後の投稿でそれに関する詳細情報。
 
-### How Can I Be More Engaged?
+### どのように私はもっとエンゲージされますか?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* StarkNetのすべての情報、ドキュメント、チュートリアル、およびアップデートについては、[starknet.io](https://starknet.io/)にアクセスしてください。
+* 開発者のサポート、エコシステムの発表、コミュニティの一員となるために、[StarkNet Discord](http://starknet.io/discord)に参加しましょう。
+* [StarkNet Forum](http://community.starknet.io/)を訪問して最新の状態に保ち、StarkNet の研究に関する議論に参加してください。
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+私たちは[ドキュメント](https://docs.starknet.io/) についてのフィードバックをいつでも受け取ることができます!

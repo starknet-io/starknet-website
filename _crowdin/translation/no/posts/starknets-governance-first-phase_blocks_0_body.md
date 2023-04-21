@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Vi er glade for å kunngjøre neste steg i StarkNetts desentraliseringsprosess - stemmegivning for protokollendringer.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+I løpet av de siste ukene tok StarkNet vesentlige steg for videre desentralisering ved å etablere[StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), Åpner[STRK Token på Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), og av[åpen kairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Denne posten vil utvide i neste steg, nemlig første fase av StarkNetts Governance, som vil dekke de kommende månedene.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
+* Første stemme som godkjenner eller avviser forslag til endringer i StarkNet protokollen vil skje snart
 * The participants in the votes during the first phase will be:\
   — Token holders\
   — Delegates selected by token holders who prefer to delegate their voting rights\
   — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
   — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Alle inviteres til å utnevne seg som delegat for Starknetts styring
+* Diskusjoner vil bli gjennomført i[StarkNet Community Forum](https://community.starknet.io/)
 
-### Background
+### Bakgrunn
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+To prosesser avanserte parallelt for å oppfylle målene til Starknetts visjon om å bli et sensoritetsresistent offentlig nettverk: (i) desentralisering av[StarkNets systemkomponenter](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671). sekvenser og vern, og (ii) implementering av styringsmekanismer vedrørende protokollendringer.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Å bygge mekanismer for virksomhetsstyring som gjør det mulig for et åpent samfunn å håndtere protokolloppgraderinger, er en alvorlig utfordring. Det er en gradvis og utforskende prosess som krever bredt samfunnssamarbeid.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+For å kunne planlegge og eventuelt orktere de første fasene i StarkNetts regjering, etablerte StarkNet Foundation et styringskomite. Stiftelsen vil offentliggjøre flere detaljer om utvalgets omfang og misjon i en egen stilling. Komiteens medlemmer er Deven Matthews (Nedermin), Manor Bareli (StarkWare) og Sylve Chevet (briq). Under er planen for den første fasen av StarkNet Governance, Utarbeider av komitémedlemmene sammen med ulike bidragsytere fra StarkNet ecosystem og godkjent av stiftelsesstyret.
 
-### Starknet’s governance first phase plan
+### Styrets plan om styring av første fase
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+Første fase av StarkNet Governance er lansert. Samfunnets medlemmer vil fra nå kunne delta i utformingen av StarkNet gjennom en annen kanal, nemlig å stemme på protokollendringer. Dette er bare det første trinnet i StarkNetts regjering, slik StarkNet er planlagt til neste fase, med flere styringsmekanismer og deltakere vil vokse. Her er detaljene for**første fase**:
 
-#### Voting subject
+#### Stemmegivning emne
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Foreslått oppgradering til StarkNet protokollen. Alle oppgraderinger på dette stadiet, vil bli foreslått av stiftelsen. Forslagene vil reflektere diskusjoner, ideer, og tilbakemeldinger kommer inn i StarkNet Community Forum.
 
-#### Voting type
+#### Type stemmegivning
 
-Off-chain signal vote (Via Snapshot)
+Off-chain signal stemme (Via Snapshot)
 
-#### Voting process
+#### Prosessen for avstemning
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Stiftelsen vil distribuere en oppdatert versjon av StarkNet to Goerli.
+2. En 6-dagers periode for å undersøke den oppgraderte versjonen når den kjører på Goerli. I denne perioden kan de stemme på om de skal godkjenne dette for Mainnet distribusjon.
+3. Hvis et forslag godkjennes av velgere, vil det gå minst 24 timer før oppgraderingen tas i bruk for Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Kunngjøringer for disse oppdateringene vil bli gjort på[Twitter-kontoen til StarkNet Foundation](https://twitter.com/StarkNetFndn), samt på[StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Terskel og nødvendig quorum
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Terskel er et enkelt flertall (dvs. terskelen er 50% av avgåtte stemmer)
+* Ingen krav til beslutningsdyktighet, noe som betyr at det ikke er et minimumsnivå av stemmegivning
 
-### First phase voting participants
+### Deltakere i første fase
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Her er listen over de som kan delta i den første fasen av styringsprosessen:
 
-#### Token holders
+#### Konsulentbevis for symboler
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* I første fase av StarkNetts regjering, de fleste innehavere er tidlige kjernebidragsytere og investorer som bygget og støttet nettverket på sine tidlige faser ([les dette innlegget for mer detaljer](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Over tid vil nøkkelen distribueres til utviklere og andre aktører som arbeider for å opprettholde og oppgradere nettverket. Slik sett vil partene kunne sikre nettverket, bruke det til å drive det og delta i dets styring.
 
-#### Delegates
+#### Delegater
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+**Begrunnelse**:\
+Stemmegivning om kraft-delegering gir brukeren mulighet til å delegere sin styringsmandat til involverte, informerte og profesjonelle samfunnsmedlemmer. Takk til:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+* Eiere av Token kan velge å delta i vedtaket gjennom representativ heller enn direkte demokrati.
+* Dedikerte, talentfulle samfunnsmedlemmer kan få en betydelig rolle i styringen ved å benytte sitt omdømme. Det er ikke behov for å eie tokens for å fremme deg som delegat.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+**Ansvar**:\
+Gjennomføre en alvorlig læringsprosess for hver beslutning. som fører til velfunderte, uavhengige beslutninger som er til nytte for StarkNet og dens langsiktighet.
 
-**Operation**:
+**Operasjon**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Det er først og fremst behov for en samling av kvalitetdelegater for å lykkes med delegeringsmekanismen.
+* Veien til å bli en delegat er tillatelsesløs – det finnes ingen forutsetninger – men for dem som ønsker, en seksjon er opprettet i forumet hvor prospektive delegater kan legge inn profiler ([i denne linken](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Konsulentinnehavere kan fritt velge hvilke som helst Ethereum L1 redegjørelse de ønsker å delegere sin stemmakt.
+* For mer informasjon, les[dedikert innlegget på StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+#### StarkNet byggeråd
 
-A professional committee, appointed by the Foundation.
+Ein fagutval, oppnemnd av stiftelsen.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+**Begrunnelse**:\
+Implementering av styringsmekanismer som er basert på samfunnsengasjement og profesjonelt omdømme, og ikke bare på basis av token-eieren.
 
-**Responsibilities**:
+**Ansvar**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* Gjennomføre en alvorlig lærings- og diskusjonsprosess for hvert vedtak som gir velbegrunnede beslutninger som gagner StarkNet og dens langsiktige visjon
+* Deltakelse i diskusjoner og stemmer i løpet av første fase
+* Sikre at deres diskusjoner og beslutningsprosesser er åpne
+* Å være tilgjengelig for samfunnet via åpne diskusjoner på StarkNet community forumet
 
-**Operation**:
+**Operasjon**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 17 komitémedlemmer oppnevnt av stiftelsen
+* Mandatperiode – Første fase (flere måneder) StarkNet governance
+* For mer informasjon, les[dedikert innlegget på StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+### Stemmeeffekt første fase
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+Under 1. fase i Starknetts styringsfase vil ikke StarkWare være med i stemmene. Stiftelsen StarkNet Foundation vil delegere stemmeretten til byggernes råd og til flere delegater fra bassenget og vil ikke stemme direkte.
 
 The voting power distribution in the **first phase** will be:
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* Investorer: 33,3%
+* StarkNetts tidlige kjernebidragsytere (unntatt StarkWare): 33,3
+* Representanter for Stiftet: 33,3 %\
+  — StarkNet Builders’ Council: 23,3 %\
+  – delegerer stemme på vegne av stiftelsen: 10 %
 
-### First vote — StarkNet’s 0.11 version
+### Første stemme – StarkNetts 0.11 versjon
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+Den første avstemningen vil finne sted i de kommende ukene. Avstemningen vil bekymre seg for å oppgradere StarkNet Alpha til versjon 0.11.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+Stemmegivningen vil starte kort tid etter Göerli-lanseringen og vil bli annonsert gjennom de offisielle kanalene:[StarkNet Foundation’s Twitter-konto](https://twitter.com/StarkNetFndn)og[StarkNet Community Forum](https://community.starknet.io/). Følg med!

@@ -1,43 +1,43 @@
 ### TL;DR
 
-* STARKs enable blockchain scaling by efficiently proving the integrity of computations
-* StarkEx is an application-specific scaling engine
-* StarkNet is a permissionless, smart contract Layer 2 network
+* STARKY umožňují škálování blockchainu účinným prokázáním integrity výpočtů
+* StarkEx je aplikačně specifický motor pro škálování
+* StarkNet je síť inteligentních smluvních vrstev 2 bez povolení
 
-### **STARKs**
+### **STARKY**
 
-STARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps.
+STARKY (Scalable, Transparent ARgument of Knowledge) jsou důkazním systémem, který umožňuje prokazování a ověřování výpočtů. Umožňuje zpracovat velký výpočet, vytvořit důkaz o správnosti výpočtu, a pak ověřit důkaz ve velmi malém počtu kroků.
 
-STARKs can play a key role in blockchain scalability by allowing large computations to be done off-chain, where it is cheaper, leaving only the verification, which requires a fraction of the computation, to be done on-chain. In other words, by performing very few steps on-chain, the verifier asserts the integrity of a much larger computation that was done off-chain.
+STARKY mohou hrát klíčovou roli v škálovatelnosti blockchainu tím, že umožní provádění velkých výpočtů mimo řetězec, pokud je levnější, ponechá se pouze ověření, které vyžaduje zlomek výpočtu, a to v řetězci. Jinými slovy, provedením velmi malého počtu kroků v řetězci ověřovatel prosazuje integritu mnohem většího výpočtu, který byl proveden mimo řetězec.
 
-Using STARKs, layer 2 solutions batch together and compute thousands of transactions, and then verify their validity on-chain with a single STARK proof. The cost of the on-chain process is split between **all** transactions in the batch. This results in Ethereum security and low gas cost per transaction.
+Pomocí STARKů, vrstva 2 řešení dohromady a spočítat tisíce transakcí a pak ověřit jejich platnost v řetězci s jediným důkazem STARK. Náklady na proces v řetězci jsou rozděleny mezi**všechny**transakce v dávce. To má za následek zabezpečení Ethereum a nízké náklady na plyn na transakci.
 
-The low computational cost will usher in a new class of applications that were previously not feasible on-chain. These properties make STARKs an excellent building block for improving user experience and reducing gas costs, all while maintaining the security of the Ethereum settlement layer.
+Nízké výpočetní náklady přinesou novou třídu aplikací, které dříve nebyly proveditelné v řetězci. Tyto vlastnosti činí ze STARKů vynikající stavební kámen pro zlepšení uživatelských zkušeností a snížení nákladů na plyn. všechny při zachování bezpečnosti vrstvy vypořádání v Ethereu.
 
-StarkWare provides two solutions to scale Ethereum with STARKs: StarkEx and StarkNet.
+StarkWare nabízí dvě řešení pro rozsah Ethereum se STARKy: StarkEx a StarkNet.
 
 ### **StarkEx**
 
-[StarkEx](https://starkware.co/starkex/) is a framework for creating permissioned, application-specific scaling solutions. StarkEx is a toolbox of useful [application flows](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows) that projects can use to achieve cheap off-chain computation. A STARK proof, attesting to the correctness of execution, is generated off-chain. Such a proof can include up to 12,000–500,000 transactions (depending on the transaction type). The proof is then sent to the STARK Verifier to be accepted on-chain. This means one verification for all the transactions — for an incredibly low amortized gas cost per transaction.
+[StarkEx](https://starkware.co/starkex/)je rámec pro vytváření povolených řešení škálování specifických pro danou aplikaci. StarkEx je soubor užitečných[toků aplikací,](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows), které mohou projekty využít k dosažení levných výpočtů mimo řetězec. Ve výchozím řetězci je generován důkaz STARK o správnosti provedení. U swapů s proměnlivou sazbou se kupóny považují za podkladové aktivum s proměnlivou sazbou. Důkaz je pak zaslán ověřovateli STARK, aby byl přijat on-line. To znamená jedno ověření všech transakcí – u neuvěřitelně nízkých nákladů na plyn na jednu transakci.
 
-A few examples of the applications deployed on StarkEx are dYdX (perpetuals trading), Immutable and Sorare (NFTs — minting and trading), DeversiFi (spot trading), and Celer (DeFi Pooling).
+Několik příkladů aplikací používaných na StarkEx jsou dYdX (obchodování s perpetuály), Nemutovatelné a Sorare (NFTs – těžba a obchodování), DeversiFi (spotové obchodování) a Celer (DeFi Pooling).
 
-StarkWare is continuously adding more application flows to StarkEx, following the market and its customers’ needs.
+StarkWare neustále přidává více aplikačních toků do StarkEx, což odpovídá potřebám trhu a jeho zákazníků.
 
 ### **StarkNet**
 
-*[StarkNet](https://starkware.co/starknet/) is a permissionless layer 2 network where any user or developer can deploy smart contracts developed in the Cairo language.*
+*[StarkNet](https://starkware.co/starknet/)je bezplatná síť druhé vrstvy, kde každý uživatel nebo vývojář může aplikovat chytré smlouvy vytvořené v Káhirském jazyce.*
 
-Comparable to the Ethereum smart-contract experience, inside of the StarkNet ecosystem, your contract can interact with any other contract deployed on StarkNet, allowing for richly composable protocols. StarkNet contracts can also interact with Ethereum contracts via asynchronous message passing.
+Srovnatelné se zkušenostmi s chytrými smlouvami Etherea, uvnitř ekosystému StarkNet, Vaše smlouva může komunikovat s jakoukoliv jinou smlouvou zavedenou na StarkNet, která umožňuje bohaté kompozovatelné protokoly. Smlouvy StarkNet mohou také komunikovat se smlouvami z Ethereum prostřednictvím asynchronní zprávy.
 
-Unlike StarkEx, where applications are responsible for submitting transactions, StarkNet sequencers batch transactions and send them to be processed and proved. (StarkNet’s sequencers are currently operated by StarkWare with future plans to decentralize.) This means once applications deploy their Cairo contracts, they do not have to worry about running additional Operator infrastructure. StarkNet supports the Rollup data availability mode, meaning the state of the rollup is written to Ethereum along with the STARK proofs.
+Na rozdíl od StarkEx, kde jsou aplikace zodpovědné za předkládání transakcí, StarkNet posloupnosti dávají transakce a odesílají je ke zpracování a prokazování. (StarkNetovy posloupnosti jsou v současné době provozovány společností StarkWare s budoucími plány na decentralizaci.) To znamená, že jakmile aplikace rozmístí své smlouvy v Káhiře, nemusí se obávat provozování další infrastruktury operátorů. StarkNet podporuje režim dostupnosti dat Rollup, což znamená, že stav rollup je zapsán do Ethereum spolu s důkazy STARK.
 
-A huge developer community is deeply engaged with the StarkNet ecosystem, building apps, tools and infrastructure. Dozens of applications are already live on testnet — DeFi, games, voting, AI and more. More over, developer tools such as block explorer, local testing environment and framework, SDK’s in several languages and more, are being built by the StarkNet Community. In addition, active discussions take place in the [Shamans’ platform](https://community.starknet.io/), featuring suggestions for improvements, potential features and best practices.
+Obrovská vývojářská komunita je hluboce zapojena do ekosystému StarkNet, budování aplikací, nástrojů a infrastruktury. Desítky aplikací již žijí na testnetu - DeFi, hry, hlasování, AI a další. Nástroje vývojáře jako například průzkumník bloků, lokální testovací prostředí a rámec, SDK, v několika jazycích a více, buduje Společenství StarkNet. Kromě toho se na[Shamansově platformě](https://community.starknet.io/)konají aktivní diskuse, které obsahují návrhy na zlepšení, potenciální funkce a osvědčené postupy.
 
-### **To Sum It Up**
+### **K souhrnu**
 
-Both [StarkEx](https://youtu.be/P-qoPVoneQA) and StarkNet are STARK-based scaling solutions. Both provide scalability, low gas costs, and Security, but have different operating requirements and interoperability patterns. StarkEx might be the right solution for an application that is largely self-contained and fits into the APIs that StarkEx provides. StarkNet might be better suited for a protocol that requires interacting synchronously with other protocols or has needs that go beyond what StarkEx offers.
+[StarkEx](https://youtu.be/P-qoPVoneQA)i StarkNet jsou škálovací řešení založená na STARKu. Obě poskytují škálovatelnost, nízké náklady na plyn a bezpečnost, ale mají různé provozní požadavky a modely interoperability. StarkEx může být správným řešením pro aplikaci, která je do značné míry soběstačná a zapadá do API, které StarkEx poskytuje. StarkNet by mohl být vhodnější pro protokol, který vyžaduje synchronizaci s jinými protokoly nebo má potřeby, které jdou nad rámec toho, co StarkEx nabízí.
 
-STARKs have revolutionized how applications can be built on Ethereum. StarkEx and StarkNet will continue to enable applications that were previously unviable and push the limits of what is possible on the blockchain.
+STARKy revolučně změnily způsob, jakým mohou být aplikace postaveny na Ethereu. StarkEx a StarkNet budou nadále umožňovat aplikace, které byly dříve neživotaschopné, a budou tlačit limity toho, co je možné na blockchainu.
 
-This article was written in collaboration by [Tim Gestson](https://twitter.com/IcemanTim) and the [StarkWare](https://starkware.co/) team
+Tento článek byl napsán ve spolupráci[Tim Gestson](https://twitter.com/IcemanTim)a tým[StarkWare](https://starkware.co/)

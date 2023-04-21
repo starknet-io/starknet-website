@@ -1,111 +1,111 @@
 ### TL;DR
 
-* StarkNet Alpha 0.7.0 released to Goerli; packed with improvements
-* Contracts can now be upgraded using the Proxy Upgrade Pattern
-* Contracts can now emit Events
-* Support for the long-awaited Block Number and Block Timestamp system calls
+* StarkNet Alpha 0,7,0 frigitt til Goerli; pakket med forbedringer
+* Kontrakter kan nå oppgraderes ved hjelp av OppgraderingsMønsteret for mellomtjener
+* Kontrakter kan nå avgi arrangement
+* Støtte for langvarige numre og blokkerte tidsstempel-systemsamtaler
 
-### Intro
+### Introduksjon
 
-We are happy to release Alpha 0.7.0, a version packed with new features and improvements. One of the best stimulants to StarkNet over the last few months has been the increased involvement of the community in shaping StarkNet’s future. This version addresses some of the community’s burning needs.
+Vi lanserer gjerne Alfa 0.7.0, en versjon pakket med nye funksjoner og forbedringer. En av de beste stimulansene til StarkNet de siste månedene har vært den økte interessen til samfunnet i å forme StarkNets fremtid. Denne versjonen tar for seg noen av samfunnets brennende behov.
 
-#### Changes to Naming Convention
+#### Endringer i navngivingskonvensjonen
 
-The observant reader might have noticed that the previous StarkNet Alpha release was named Alpha 4, whereas we are now releasing Alpha 0.7.0. We decided to omit the dedicated Alpha version number and rely instead only on the associated cairo-lang version.
+Observantleseren kunne ha lagt merke til at den forrige utgaven av StarkNet Alpha var navngitt Alfa 4, mens vi nå frigir Alfa 0,7,0. Vi bestemte oss for å utelate det dedikerte Alpha versjonsnummeret og avhengige i stedet kun på den tilknyttede ciro-lang versjonen.
 
-### New Features
+### Nye funksjoner
 
-#### Contract Upgradeability
+#### Kontraktsoppgraderbarhet
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. The Proxy pattern is the common method to enable contract upgrades over Ethereum. Alpha 0.7.0 enables this pattern over StarkNet.
+OpenZeppelins[Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)er nå fullt støttet for kontraktsoppgraderinger i StarkNet. Proxy-mønsteret er den felles metoden for å muliggjøre oppgraderinger av kontrakten på Ethereum. Alfa 0.7.0 aktiverer dette mønsteret over StarkNet.
 
-We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+Vi laget en kort[veiledning](https://starknet.io/docs/hello_starknet/default_entrypoint.html)for å demonstrere en grunnleggende implementering av mønsteret, og OpenZeppelin er allerede godt på jobb å implementere en standardkontrakt for proxymønsteret, se[prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
 
-#### Block Number and Block Timestamp
+#### Antall blokker og tidsstempel for blokk
 
-Alpha 0.7.0 adds two new system calls that many devs have been asking for. These calls allow a contract to access the block number and the block timestamp. The block number returns the number of the current executed block. The block timestamp returns the timestamp given by the Sequencer at the creation of the block.
+Alfa 0.7.0 tillegg til to nye systemanrop som mange utviklere har bedt om. Disse samtalene gir deg en kontrakt for tilgang til blokknummer og tidsstempel. Blokknummeret returnerer antallet som ble utført med den aktive blokken. Tidsstempelet i blokken returnerer tidsstempelet gitt av Sequencer ved etableringen av blokken.
 
-You can see an example of how to use these features in the [tutorial](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
+Du kan se et eksempel på hvordan du bruker disse funksjonene i[veiledningen](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
 
-#### Events
+#### Hendelser
 
-Surprise! A feature that was planned for a future version has sneaked its way into this earlier one.
+Overraskelse! En funksjon som var planlagt for en fremtidig versjon, har sniket seg inn i denne tidligere en.
 
-StarkNet contracts now support defining and emitting events, allowing them to expose execution information for off-chain applications to consume. Ethereum developers will find the semantics and syntax very similar to Solidity. You can read the [documentation](https://starknet.io/documentation/events/), or follow the [tutorial](https://starknet.io/docs/hello_starknet/events.html), that explains this feature.
+Starknett-kontrakter støtter nå at det defineres og sendes ut forslag som gjør at de kan utsette utførelsesinformasjon for søknader til fri kjede. Ethereum-utviklere vil finne den semantiske og syntaksen som ligner Soliditet. Du kan lese[dokumentasjon](https://starknet.io/documentation/events/), eller følge[opplæring](https://starknet.io/docs/hello_starknet/events.html), som forklarer denne funksjonen.
 
-#### Removed %builtins Directive
+#### Fjernet %builtin-direktiv
 
-The %builtin directive is no longer needed in StarkNet contracts. This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). It significantly simplifies the usability of this extensibility pattern.
+%builitin-direktivet er ikke lenger nødvendig i StarkNet kontrakter. Denne endringen fulgte en diskusjon mellom samfunnene om[utvidbarhetsmønster for kontrakten](https://community.starknet.io/t/contract-extensibility-pattern/210)på[StarkNet Shamans](https://community.starknet.io/). Den gjør det vesentlig enklere å benytte dette mønsteret som er basert på bruk av avsetninger.
 
-For example, the following contract will be changed from:
+For eksempel vil følgende kontrakt endres fra:
 
 ```
 %lang starknet
 
-# This is the "%builtins" directive.
-# It is not needed anymore.
+# Dette er "%builitt"-direktivet.
+# Den er ikke nødvendig lenger.
 %builtins range_check
 
 @view
 func add(x : felt, y : felt) -> (res : felt):
-return (res=x + y)
-end
+retur (res=x + y)
+ende
 ```
 
-To this:
+Til dette:
 
 ```
 %lang starknet
 @view
-func add(x : felt, y : felt) -> (res : felt):
-return (res=x + y)
-end
+funk add(x : felt, y : felt) -> (res : felt):
+returner (res=x + y)
+slutt
 ```
 
-You can check out the [ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token) standard contracts, which use the new pattern.
+Du kan sjekke ut[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)standard kontrakter, som bruker det nye mønsteret.
 
-#### External Functions Support Arrays of Structs
+#### Støtte for eksterne funksjoner Lister av konstruksjoner
 
-Alpha 0.7.0 supports passing and returning arrays of structs in external functions. This additional functionality allows Account Contracts to better support [multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
+Alfa 0.7.0 støtter passering og returnering av konstruksjoner i eksterne funksjoner. Denne tilleggsfunksjonaliteten gjør at kontokontrakter bedre kan støtte[multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
 
-Multicall is a powerful feature of Account Abstraction that allows an account to make multiple calls in a single transaction. An obvious use-case is that of creating a **single transaction** that calls allowance and then transferFrom.
+Multicall er en kraftig funksjon for konto Abstraksjon som lar en konto foreta flere samtaler i en enkelt transaksjon. En åpenbar brukssak er at det er å opprette en**enkelt transaksjon**som kaller allowance og deretter transferFrom.
 
-We look forward to seeing what the community does with it.
+Vi ser fram til å se hva samfunnet gjør med den.
 
-#### Improvements to StarkNet CLI
+#### Forbedringer i StarkNet CLI
 
-**Support for Pending Blocks**
+**Støtte for ventende blokker**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. This version includes support for querying those blocks via the StarkNet CLI.
+[Ventende blokker](https://starknet.io/documentation/block-structure-and-hash/#pending_block)ble[introdusert](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)i den siste mindre versjonen (v0.6.2) og tilbudte raskere bekreftelser på transaksjoner. Denne versjonen inkluderer støtte for spørring av disse blokkene via StarkNet CLI.
 
-To use it, in every CLI command that takes block_number as an argument (contract_call/get_block/get_code/get_storage_at), we can query the StarkNet with respect to the pending block by specifying block_number=pending.
+For å bruke det i hver CLI-kommando som krever block_number som argument (contract_call/get_block/get_code/get_storage_at), vi kan spørre StarkNet om den ventende blokken ved å angi block_number=ventende.
 
-**Support for Account Contracts**
+**Støtte for kontokontrakter**
 
-StarkNet uses account abstraction, i.e., all accounts are implemented as smart contracts. The first implementations of account contracts were done by [Argent](https://github.com/argentlabs/argent-contracts-starknet) and [OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), but we expect many more to come.
+StarkNet bruker abstraction, dvs. alle kontoer er implementert som smartkontrakter. De første implementeringene av kontonranser ble utført av[Argent](https://github.com/argentlabs/argent-contracts-starknet)og[OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), men vi forventer at flere vil komme.
 
-In StarkNet, all transactions must go through an account contract, and the CLI now allows interaction with StarkNet Alpha directly via account contracts. See the [tutorial](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account) on how to set it up.
+I StarkNet må alle transaksjoner gå gjennom en kontontrakt, og CLI tillater nå samhandling med StarkNet Alpha direkte via avtalekontrakter. Se[veiledningen](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account)om hvordan du setter den opp.
 
-Similar functionality was also added to [StarkNet.py](https://github.com/software-mansion/starknet.py/) and to [Nile](https://github.com/OpenZeppelin/nile) in the last month.
+Liknende funksjonalitet ble også lagt til[StarkNet.py](https://github.com/software-mansion/starknet.py/)og[Nile](https://github.com/OpenZeppelin/nile)den siste måneden.
 
-#### L1<>L2 Messaging in the Testing Framework
+#### L1<>L2 meldinger i testingsrammeverket
 
-Alpha 0.7.0 introduces the Postman. The Postman enables developers to use the testing framework to test more complicated flows.
+Alfa 0.7.0 introduserer innlegget. Postmannen gjør det mulig for utviklerne å bruke testrammeverket for å teste mer kompliserte flyter.
 
-At a high level — it mocks the StarkNet Sequencer’s responsibility of passing messages from L1 to L2 and L2 to L1. It makes sure messages that are sent via the Solidity messaging contract will appear at the destination StarkNet contract and messages sent from a StarkNet contract will appear in the Solidity messaging contract.
+På et høyt nivå - det preger StarkNet Sequencers ansvar å overføre meldinger fra L1 til L2 og L2 til L1. Det sørger for at meldinger som sendes via Soliditetsmeldingskontrakten dukker opp på destination StarkNet kontrakt og meldinger som sendes fra en StarkNet kontrakt vil dukke opp i Soliditetsmeldingen.
 
-#### And More Features
+#### Og flere funksjoner
 
-Alpha 0.7.0 provides many more features and changes, like the addition of an efficient square root function to the math common library. A full list appears in the [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
+Alfa 0.7.0 gir mange flere funksjoner og endringer, som å legge til en effektiv firkant-rot-funksjon til det matematiske fellesbiblioteket. En komplett liste vises i[changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
 
-### Next Up?
+### Neste opp?
 
-Initial [Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29) support will be released in a matter of weeks, as a sub-version of StarkNet.
+Første[Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)støtte utgis i løpet av uker som en underversjon av StarkNet.
 
-### More Information?
+### Mer informasjon?
 
-[starknet.io](https://starknet.io/): for all StarkNet information, tutorials and updates.
+[starknet.io](https://starknet.io/): for all informasjon om StarkNet og oppdatering.
 
-[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): join to get answers to your questions, get dev support and become a part of the community.
+[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): Bli med for å få svar på dine spørsmål, få hjelp og bli en del av fellesskapet.
 
-[StarkNet Shamans](https://community.starknet.io/): join to follow (and participate!) in StarkNet research discussions.
+[StarkNet Shamans](https://community.starknet.io/): Bli med i å følge (og delta!) i StarkNet forskningsdiskusjoner.

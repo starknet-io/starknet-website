@@ -1,50 +1,50 @@
 ### TL;DR
 
-* StarkWare offers a range of Data Availability (DA) modes for customers to choose from, according to their priority
-* There are three approaches to Data Availability for STARK proofs, all of them are already available in production:\
-  — **Rollup**: the ledger is published directly on the blockchain\
-  — **Validium**: a Data Availability Committee secures the ledger, with only a hash being stored on-chain\
-  — **Volition**: apps can let users choose their DA mode — Rollup or Validium — for each and every transaction
-* No matter which DA is used — the validity of all transactions is guaranteed by STARKs
+* StarkWare يوفر مجموعة من أنماط توفر البيانات (DA) للعملاء للاختيار منها، وفقا لأولويتهم
+* وهناك ثلاثة نُهج لتوافر البيانات لإثبات ستارك، جميعها متوفرة بالفعل في الإنتاج:\
+  —**Rollup**: يتم نشر دفتر الأستاذ مباشرة على بلوكشين\
+  —**Validium**: لجنة توفر البيانات تؤمن دفتر الأستاذ ، مع تجزئة فقط يتم تخزينها على السلسلة\
+  -**Volition**: يمكن للتطبيقات أن تسمح للمستخدمين باختيار وضع DA الخاص بهم - Rollup أو Validium - لكل معاملة من المعاملات
+* وبصرف النظر عن ماهية المعاملة التي تستخدمها، فإن صلاحية جميع المعاملات مضمونة من قبل قاعدة البيانات الخاصة بالأصول والخصوم (STARKs)
 
-### Introduction
+### مقدمة
 
-As of November 2022, [StarkEx](https://starkware.co/starkex/) has settled over $750 billion of trading volume, and over 270m transactions on Ethereum. In the NFT space, powering apps such as ImmutableX and Sorare, StarkEx has minted over 85 million NFTs at a price that is 1000x cheaper than doing this directly on Ethereum. STARK-based technology is scaling Ethereum. For example, in a single week, StarkEx ran 1.6x the number of transactions as Ethereum (12m on StarkEx vs 7.5m on Ethereum) while taking up less than 0.1% of Ethereum blockspace. And it does all of this while giving users the same level of security as if they were settling directly on Ethereum.
+اعتبارا من نوفمبر 2022، قام[StarkEx](https://starkware.co/starkex/)بتسوية أكثر من 750 مليار دولار من حجم التداول وأكثر من 270 مليون معاملة على إيثيريوم. في مساحة NFT، تشغيل التطبيقات مثل ImutableX و Sorare، استخرجت StarkEx أكثر من 85 مليون منتج نووي بسعر أرخص 1000x من القيام بذلك مباشرة على إيثيريوم. وتقوم التكنولوجيا القائمة على ستارك بتوسيع نطاق الإيثيريوم. فعلى سبيل المثال، في أسبوع واحد، أجرت StarkEx 1.6x عدد المعاملات تحت عنوان Ethereum (12 متر على StarkEx مقابل 7. (م) على إيثيريوم) في حين أنها تستحوذ على أقل من 0.1% من مساحة كتل إيثيريوم. وهو يقوم بكل هذا بينما يعطي المستخدمين نفس مستوى الأمان كما لو كانوا يستقرون مباشرة على إيثيريوم.
 
-### How does StarkWare achieve this?
+### كيف يمكن لـ StarkWare أن يحقق هذا؟
 
-Users send transactions on Layer 2 (either StarkEx or StarkNet), which are batched and sent to a STARK prover. This STARK prover knows the state of the ledger before and after these transactions have been processed. The prover produces a STARK proof that attests to the validity of the new state of the ledger after these transactions have been executed. The new state and the STARK proof are sent to the on-chain STARK verifier. The verification of this proof happens autonomously via an immutable smart contract on Ethereum.
+يرسل المستخدمون معاملات على الطبقة 2 (إما StarkEx أو StarkNet)، التي يتم دفعها وإرسالها إلى مدير STARK. وهذا الوكيل يعرف حالة دفتر الأستاذ قبل معالجة هذه المعاملات وبعدها. ويقدم المحيل دليلا على أن ستارك يشهد على صحة الحالة الجديدة لدفتر الأستاذ بعد تنفيذ هذه المعاملات. وترسل الحالة الجديدة وأدلة ستارك إلى محقق ستارك في السلسلة. التحقق من هذا الدليل يحدث بشكل مستقل من خلال عقد ذكي ثابت على إيثيريوم.
 
-This architecture provides the best of both worlds: we can have low transaction costs, while still having Ethereum in the middle as a neutral arbitrator. Ethereum as an arbitrator is not just a nice-to-have; it provides critical security to the end user. A user transacting can now be confident that their funds are secured by Ethereum, and transactions are immutable once they are verified on Ethereum. The user also has complete self-custody of their funds. Self-custody is important because it ensures that the user has access to their funds at all times, without relying on any third party.
+ويوفر هذا الهيكل أفضل ما في العالمين: يمكننا أن نتحمل تكاليف معاملات منخفضة، بينما لا يزال إيثيريوم في وسط تحكّم محايد. فالإيثيريوم كمحكّم ليس مجرد حَكَم، بل إنه يوفر ضمانا بالغ الأهمية للمستخدم النهائي. ويمكن الآن أن تكون أي معاملة للمستخدم على ثقة من أن أمواله تؤمن بواسطة الإيثيريوم، وأن المعاملات لا يمكن تغييرها بمجرد التحقق من صحتها على الإيثيريوم. ويحتفظ المستعمل أيضا بنفسه تماما بأمواله. فالوصاية الذاتية مهمة لأنها تكفل حصول المستعمل على أمواله في جميع الأوقات، دون الاعتماد على أي طرف ثالث.
 
-### Where does data availability fit into all of this?
+### أين يتلاءم توافر البيانات مع كل هذا؟
 
-It’s important to emphasize both what this proof is doing as well as what it’s *not* doing. The proof is attesting to the validity of the new state, but it’s not telling you what the new state is. For that, you need data availability. If we only have the proof, then the blockchain knows that what was submitted is valid, but it doesn’t know what the new state (eg. ledger balance) is! Consumers of this data include users who have transactions within these proofs. The data should be made available to them if they want to withdraw funds on Ethereum without needing to trust the Layer 2 operator. This gives users full self-custody of their funds.
+من المهم التأكيد على ما يفعله هذا الدليل وكذلك على ما لا يفعله**. والدليل يشهد على صحة الدولة الجديدة، ولكنه لا يخبرك بما هي الحالة الجديدة. لذلك تحتاج إلى توفر البيانات. إذا كان لدينا الدليل فقط، فعندئذ تعرف سلسلة الكتل أن ما تم تقديمه صحيح، ولكنها لا تعرف ما هي الحالة الجديدة (على سبيل المثال). رصيد دفتر الأستاذ هو! ويشمل مستهلكي هذه البيانات المستعملين الذين لديهم معاملات في إطار هذه الأدلة. وينبغي إتاحة البيانات لهم إذا أرادوا سحب الأموال من إيثيريوم دون الحاجة إلى الثقة في مشغل الطبقة 2. وهذا يعطي المستعملين مسؤولية ذاتية كاملة عن أموالهم.
 
-One analogy for this is your high-school teacher asking you to prove that x equals x. This is trivial to prove. What’s more difficult to answer: what is x actually equal to? For that, you need a separate piece of information. It could be that x equals 5, or another value. Likewise, on the blockchain, a STARK proof can be submitted to a STARK verifier smart contract for verification. And the verifier can attest that the proof is valid (that x=x). But you need a separate input to tell you what x (the new ledger balance) is.
+أحد المقاييس لهذا هو أن معلمك في المدرسة الثانوية يطلب منك إثبات أن x يساوي x. وهذا أمر يصعب إثباته. ما الأصعب الإجابة عليه: ما يساوي x في الحقيقة؟ لذلك تحتاج إلى جزء منفصل من المعلومات. يمكن أن يكون x يساوي 5 أو قيمة أخرى. وبالمثل، في سلسلة الكتل، يمكن تقديم إثبات STARK إلى عقد أذكي للتحقق من ستارك. ويمكن للمتحقق أن يشهد بأن الدليل صالح (تلك x=x). لكنك تحتاج إلى مدخل منفصل لإخبارك ما هو x (رصيد دفتر الأستاذ الجديد).
 
-There are three approaches to make this data available:
+وهناك ثلاثة نُهج لإتاحة هذه البيانات:
 
-#### Rollup Mode
+#### وضع التدوير
 
-Rollup mode ensures that the state of the ledger is stored on Ethereum together with the proofs. Rollup mode is currently used by [dYdX](https://dydx.exchange/) in production, and is also used by the [Public StarkNet](http://starknet.io/) L2 network. The benefits here are clear: one can recreate the state of the ledger by only interacting with the Ethereum blockchain. The implication of this is that you, as an end-user, can trustlessly talk to the relevant smart contract on Ethereum, and withdraw your funds even if the Layer 2 system shuts down.
+يضمن وضع التدوير أن حالة دفتر الأستاذ تخزن على إيثيريوم مع الأدلة. يتم حاليا استخدام وضع Rollup من قبل[dYdX](https://dydx.exchange/)في الإنتاج، كما يتم استخدامه من قبل[شبكة StarkNet العامة](http://starknet.io/)L2. الفوائد هنا واضحة: يمكن للمرء أن يعيد إنشاء حالة دفتر الأستاذ فقط بالتفاعل مع بلوكشين إيثيريوم. ومعنى هذا أنكم كمستعمل نهائي، يمكنكم التحدث بلا ثقة إلى العقد الذكي ذي الصلة على إيثيريوم، وسحب أموالك حتى لو توقف نظام الطبقة 2.
 
-#### Validium
+#### فاليديوم
 
-Under Rollup Mode, the majority of Ethereum gas costs go to Data Availability, and not proof verification. This is because it is very gas-intensive to store data on the blockchain. In Validium mode, the ledger information is not sent to Ethereum. Rather, it is stored off-chain with a Data Availability Committee. Ethereum stores a hash of this ledger information. This Data Availability Committee consists of a quorum of independent members that oversee the correct state update as well as keep a copy of the data that was processed. Each StarkEx instance can create their own quorum. Quorum members for existing apps running on StarkEx include entities like [Consensys](https://consensys.net/), [Nethermind](https://nethermind.io/), [Iqlusion](https://iqlusion.io/) and [Cephalopod](https://cephalopod.equipment/).
+وفي إطار نمط الدوران فإن معظم تكاليف غاز إيثيريوم تذهب إلى توافر البيانات، وليس إلى التحقق من الأدلة. هذا لأن تخزين البيانات على البلوكشين كثيف الاستخدام للغاز جدا. في وضع فاليديوم، لا ترسل معلومات دفتر الأستاذ إلى إيثيريوم. وبدلا من ذلك، فإنها مخزنة خارج السلسلة مع لجنة لتوفير البيانات. تخزن إيثيريوم تجزئة معلومات دفتر الأستاذ هذا. وتتألف هذه اللجنة المعنية بتوافر البيانات من نصاب الأعضاء المستقلين الذين يشرفون على الاستكمال الصحيح للحالة فضلا عن الاحتفاظ بنسخة من البيانات التي تم تجهيزها. يمكن لكل مثيل StarkEx إنشاء نصابه الخاص به. أعضاء النصاب للتطبيقات الحالية التي تعمل على StarkEx تشمل كيانات مثل[توافق الآراء](https://consensys.net/)،[هولندا](https://nethermind.io/)و[إيكلوشن](https://iqlusion.io/)و[سيفالوبود](https://cephalopod.equipment/).
 
-The benefits here are clear. There is no need to pay Ethereum gas fees to store the ledger information on-chain. Rather, the only thing stored on Ethereum is a single hash of the ledger information. If you want to trustlessly withdraw funds from Layer 2 by talking to Ethereum, you merely require the digital signature of one of the members of the Data Availability Committee. The DAC members will use cryptography to prove that you have ownership of those funds.
+والمنافع هنا واضحة. وليست هناك حاجة إلى دفع رسوم غاز إيثريوم لتخزين معلومات دفتر الأستاذ في السلسلة. بل إن الشيء الوحيد المخزن على إيثيريوم هو تجزئة واحدة من معلومات دفتر الأستاذ إذا كنت ترغب في سحب الأموال بدون ثقة من الطبقة 2 بالتحدث إلى إيثيريوم، لا تحتاج إلا إلى توقيع رقمي من أحد أعضاء لجنة إتاحة البيانات. سوف يستخدم أعضاء لجنة المساعدة الإنمائية التشفير لإثبات أن لديك ملكية لتلك الأموال.
 
-Another hidden benefit of Validium Data Availability is confidentiality from people reading the blockchain. Under Rollup Mode, the balance of each account at the time that each proof is submitted is known to the public. With Validium, this data is hidden from the blockchain — only the Data Availability Committee is aware of this, because it’s kept off-chain. This level of confidentiality enables a wide variety of use cases where obfuscating the transactions data is important.
+ميزة مخفية أخرى لتوفر بيانات Validium هي السرية من الناس الذين يقرأون سلسلة الكتل. وفي إطار وضع التدوير يكون رصيد كل حساب في الوقت الذي يقدم فيه كل دليل معروفا للجمهور. مع فاليديوم، هذه البيانات مخفية من سلسلة الكتل - لجنة توفر البيانات هي فقط على علم بذلك، لأنها تبقى خارج السلسلة. ويتيح هذا المستوى من السرية طائفة واسعة من حالات الاستخدام التي يكون فيها التشويش على بيانات المعاملات أمرا هاما.
 
-#### Volition
+#### فوليكي
 
-Volition is a data availability architecture that provides the choice between Validium and Rollup Mode at the transaction level. It does this by keeping one ledger on-chain, and another ledger with a Data Availability Committee. Users can choose between Validium and Rollup mode for each individual transaction.
+Volition هي بنية توفر البيانات التي توفر الاختيار بين Validium و Rollup Mode على مستوى المعاملة. وهي تقوم بذلك عن طريق الاحتفاظ بدفتر أستاذ واحد على السلسلة، ودفتر أستاذ آخر مع لجنة توفر البيانات. يمكن للمستخدمين الاختيار بين Validium و Rollup لكل معاملة فردية.
 
-Imagine that you purchase a really expensive NFT like a Bored Ape or a Cryptopunk, on an app running on StarkEx. You may want to use Rollup Mode to secure the data for that NFT, because you want a record of that specific transaction stored on Ethereum. However, you may then purchase a really cheap NFT (e.g. a cloak for your character in a blockchain game), and in that circumstance you will be happy to save money by using Validium.
+تخيل أنك تشتري NFT باهظ الثمن مثل القردة البولية أو Cryptopunk، على تطبيق يعمل على StarkEx. قد ترغب في استخدام وضع التدوير لتأمين البيانات لهذا NFT ، لأنك تريد سجلا لتلك المعاملة المحددة المخزنة في إيثيريوم. ومع ذلك، يمكنك بعد ذلك شراء NFT رخيصة جداً (على سبيل المثال. قماش لشخصيتك في لعبة بلوكشين)، وفي هذه الحالة سيكون من دواعي سرورك توفير المال باستخدام Validium.
 
-If you are interested in the scale achieved by STARK proofs, then please come and build on us.
+إذا كنت مهتما بالمقياس الذي حققته أدلة ستارك، فيرجى المجيء والبناء علينا.
 
 
 
-You can always email [info@starkware.co](mailto:info@starkware.co) and a human will get to your email.
+يمكنك دائماً إرسال بريد إلكتروني[info@starkware.co](mailto:info@starkware.co)وسوف يصل الإنسان إلى بريدك الإلكتروني.

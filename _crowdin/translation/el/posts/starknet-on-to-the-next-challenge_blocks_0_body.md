@@ -1,64 +1,64 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Κατασκευάζουμε το StarkNet σε βήματα, ξεκινώντας με την καθιέρωση**χρηστικότητας**, στη συνέχεια τη βελτίωση της απόδοσης****, και τέλος, τη μετάβαση στην**αποκέντρωση**
+* Επιτύχαμε τον πρώτο μας στόχο: τη χρηστικότητα. Αυτό σημαίνει ότι παραδώσαμε γενικό υπολογισμό σε μια κατάσταση που μοιάζει με Ethereum (χρόνια πριν θεωρούνταν εφικτό)
+* Τώρα κινούμαστε στο στάδιο 2 του τριμερούς κτιριακού μας σχεδίου: απόδοση, με επίκεντρο τη μεταφορά, το κόστος των συναλλαγών και την καθυστέρηση.
+* Επόμενο επόμενο: αποκέντρωση
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+Μόλις ένα χρόνο μετά την πρώτη ανακοίνωση σχεδίων για το[StarkNet](https://starknet.io/), η πλατφόρμα έχει πολύ καλή λειτουργικότητα. Η κοινότητα των προγραμματιστών ανθεί πέρα από τις πιο άγριες προσδοκίες μας, και παρέχει μια συνεχή αναταραχή των νέων εγγενών έργων L2.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Προτεραιότητά μας κατά τη διάρκεια του περασμένου έτους ήταν να επιτρέψουμε ακριβώς αυτό, δημιουργώντας ένα λειτουργικό StarkNet με ένα ταχέως διευρυνόμενο φάσμα χαρακτηριστικών, που επιτρέπει στους προγραμματιστές να βουτήξουν κατ 'ευθείαν.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+Έχουν κάνει αυτό σε μεγάλους αριθμούς. Ένα καλό βαρόμετρο είναι ο αριθμός λήψεων για τη βιβλιοθήκη[JavaScript για το StarkNet](https://www.starknetjs.com/): ήδη στο 5k από τότε που έγινε διαθέσιμο πριν από 4 μήνες.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Ωστόσο, ενώ το StarkNet παραδίδει τη μαγεία συμπίεσης που υποσχεθήκαμε, αυτή τη στιγμή, it’s far from being able to do so for enough dApps with enough throughpuput, και αυτό μπορεί να αποδειχθεί μια πηγή απογοήτευσης για τους προγραμματιστές βραχυπρόθεσμα.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Η τεχνολογία πυρήνα που δοκιμάζεται από τη μάχη, η STARK αποδεικνύει πολλές συναλλαγές και συμπιέζει τις αποδείξεις, πρέπει να προηγηθεί από τη μαζική ή αλληλουχία των συναλλαγών. Είναι μια διαδικασία που η ομάδα StarkWare έχει ήδη τελειοποιηθεί μια φορά για τη μηχανή κλίμακας[StarkEx](https://starkware.co/starkex/), και αυτή τη στιγμή εργαζόμαστε για να το κάνουμε ξανά για τις ανάγκες του StarkNet.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Τώρα που πολλοί από τους στόχους χρηστικότητας μας έχουν επιτευχθεί, μετατοπίζουμε την εστίαση για να κάνουμε αυτό πρώτη μας προτεραιότητα. Είναι όλο το κομμάτι του χάρτη πορείας μας σε 3 στάδια:**χρηστικότητα**, ακολουθούμενη από την**απόδοση του δικτύου**, και στη συνέχεια**αποκέντρωση**. Ένα έτος μέσα, θέλουμε να σας δώσουμε μια ματιά κάτω από την κουκούλα - ένα περίγραμμα του τι κομμάτια είναι στη θέση τους και τι εξακολουθεί να είναι ένα έργο σε εξέλιξη.
 
-### The Story So Far
+### Η Ιστορία Τόσο Μακριά
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+Το StarkNet Alpha κυκλοφόρησε στο δημόσιο testnet τον Ιούνιο και στο Mainnet το Νοέμβριο. Την εποχή της ανάπτυξης του Mainnet, η StarkNet παρείχε ήδη γενικό υπολογισμό σε μια κατάσταση τύπου Ethereum, η οποία θεωρήθηκε ευρέως ότι απέχει χρόνια.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+Καθ' όλη τη διάρκεια της ανάπτυξης επιλέξαμε μια προσέγγιση που επικεντρώθηκε πρώτα στις πιο σημαντικές λειτουργίες και τις κυκλοφόρησε μόλις καταστούν διαθέσιμες. ουσιαστικά μοιράζονται τη διαδικασία εξέλιξης με την κοινότητα. Το StarkNet απέχει πολύ από το να είναι ολοκληρωμένο, αλλά ακόμα και τώρα, οι προγραμματιστές μπορούν ήδη να δημιουργήσουν σημαντικές και σύνθετες εφαρμογές. Σήμερα, έχουμε εκατοντάδες προγραμματιστές[χτίζοντας στο StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)δεκάδες dApps, και πάνω από δώδεκα εξωτερικές ομάδες που αναπτύσσουν εργαλεία και υποδομές για το οικοσύστημα StarkNet.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+Μια συμβολοσειρά αναβαθμίσεων έχει προσφέρει πολλά σημαντικά χαρακτηριστικά, όπως L1<>L2 μηνύματα, on-chain δεδομένα και υποστήριξη για τη δυνατότητα σύνταξης, υποστήριξη εκδηλώσεων, βασικό μηχανισμό χρέωσης, συμβάσεις αναβάθμισης, αφαίρεσης λογαριασμού, πλαίσιο δοκιμών, εργαλεία για προγραμματιστές, γρήγορη επιβεβαίωση, αριθμός μπλοκ, timestamp, υποστήριξη για συμβόλαια λογαριασμού.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+Η κοινότητα των προγραμματιστών ενδιαφέρεται βαθύτατα για το StarkNet και στην πραγματικότητα για την ανάπτυξή της. Ήδη, τα χαρακτηριστικά έχουν εισαχθεί με βάση τα σχόλια για προγραμματιστές. Η υιοθέτηση θα μπορούσε κάλλιστα να ξεπεράσει την αύξηση της απόδοσης, και αυτός είναι ο λόγος για τον οποίο αυτή η ώθηση αποτελεί τη μεγάλη μας προτεραιότητα τώρα.
 
-### Next Steps
+### Επόμενα Βήματα
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Τώρα που έχουμε φτάσει στη χρηστικότητα, είναι καιρός να βελτιώσουμε την απόδοση του συστήματος. Το σύστημα, στην τρέχουσα κατάστασή του, είναι ικανό να υποστηρίξει την περιορισμένη διακίνηση των συναλλαγών. Ο τρόπος για να επιλυθεί αυτό είναι με τη βελτίωση της απόδοσης του Sequencer Node, που είναι ισοδύναμο του StarkNet ενός ανθρακωρύχου. Είναι το “μηχάνημα” που οι αλληλουχίες συναλλαγές μετά την υποβολή τους. Όταν βελτιστοποιηθεί αυτό, η απόδοση θα ουράνει πύραυλο.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+Για το σκοπό αυτό, αναλύουμε ταυτόχρονα πού βρίσκονται τα σημεία συμφόρησης και αντιμετωπίζοντάς τα ένα προς ένα. Επί του παρόντος, όλα τα σημεία συμφόρησης σχετίζονται με τη διαδικασία αλληλουχίας, η οποία έρχεται πριν επικαλεστούμε τους παροχείς της STARK. Το δοκιμασμένο από τη μάχη prover-stack είναι έτοιμο να υποστηρίξει την απόδοση StarkEx-στο StarkNet.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Περιμένουμε η βελτιστοποίηση του sequencer να είναι μια διαδικασία που διαρκεί λίγους μήνες, με βαθμιαίες βελτιώσεις σε όλη την H1/22. Στόχος μας είναι να φθάσουμε, μέχρι τις αρχές του δεύτερου μισού του 2022, τουλάχιστον μία τάξη μεγέθους υψηλότερου TPS από το Ethereum, σε κόστος που είναι τουλάχιστον δύο τάξεις μεγέθους μικρότερο από το Ethereum. Και αυτό είναι μόνο η αρχή.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+Υπάρχει καλός λόγος ότι αυτή η φάση βελτιστοποίησης είναι απαραίτητη, and that StarkNet was not launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Αντί να ξεκινήσουμε από το μηδέν και να οικοδομήσουμε ένα εντελώς νέο sequencer, χρησιμοποιήσαμε το batcher από το StarkEx ως κεντρικό στοιχείο.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+Αυτός ήταν ένας πολύ καλός τρόπος για να οικοδομήσουμε. Δεν ήταν απλά παραδώσει γρήγορα; αυτό σήμαινε ότι είμαστε σίγουροι ότι κατασκευάσαμε σε γερά θεμέλια. StarkEx ουσιαστικά δοκιμαστεί η βασική λειτουργικότητα που οδηγεί StarkNet, καθώς εγκοπεί εκατοντάδες δισεκατομμύρια δολάρια σε σωρευτικές συναλλαγές.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[Το StarkEx](https://starkware.co/starkex/)είναι ο κινητήρας κλιμάκωσης για μερικά από τα πιο επιτυχημένα dApps χρησιμοποιώντας L2: dYdX (διαρκείς συμβάσεις), DeversiFi (συναλλαγές spot και πληρωμές), καθώς και για Immutable και Sorare (NFT minting και trading).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+Αλλά το sequencer που χτίστηκε για αυτούς και άλλους πελάτες StarkEx μπορεί να λάβει μόνο StarkNet μέχρι στιγμής. Κάθε ένας από αυτούς χειρίζεται σε γενικές γραμμές το ίδιο είδος συναλλαγής κάθε μέρα. Το StarkNet αφορά τον**γενικό υπολογισμό**, οπότε οι ανάγκες του είναι ανοιχτές. Όταν αλληλουχία λαμβάνει συναλλαγές από το mempool, που έρχονται σε διάφορα σχήματα και μεγέθη. Επιπλέον, το StarkNet είναι επίσης ένα ανοικτό δίκτυο που σημαίνει ότι υπάρχει επιπλέον υπολογιστική εναέρια γραμμή που δεν συναντάται στο StarkEx.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+Η τρέχουσα πρόκληση, δηλαδή η βελτιστοποίηση της αλληλουχίας για αυτές τις νέες ανάγκες, είναι ένα σημαντικό εγχείρημα, αλλά έχουμε μια ισχυρή κατανόηση της διαδρομής που απαιτείται, στη βάση της επιτυχημένης ανάπτυξης StarkEx.
 
-### Next Up: Decentralization
+### Επόμενο Πάνω: Αποκεντρωση
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+Το StarkNet πρόκειται να είναι ένα πλήρως αποκεντρωμένο δίκτυο χωρίς δικαιώματα, πλήρες με μηχανισμούς εκλογής και διακυβέρνησης. Η επίτευξη αυτού του στόχου θα γίνει η κύρια εστίασή μας μόλις μαζευτούν τα ύψη και τις πτώσεις κόστους, και ελπίζουμε να έχουμε μια πρώτη αποκεντρωμένη έκδοση μέχρι το τέλος του 2022. Αναμένουμε να μοιραστούμε δημόσια το σχέδιο αποκέντρωσης τους επόμενους μήνες.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+Όπως και η σημερινή περιορισμένη απόδοση αντιπροσωπεύει μια ενδιάμεση φάση στην ανάπτυξη του StarkNet, το τρέχον επίπεδο συμμετοχής του StarkWare είναι επίσης προσωρινό. Βλέπουμε τους εαυτούς μας ως σκαλωσιές ειδών, που εξυπηρετεί μια σημαντική λειτουργία κατά τη φάση της κατασκευής, αλλά γυρίζει πίσω εν ευθέτω χρόνω.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+Πλήρης ανάπτυξη του κόμβου, ένα συναρπαστικό πρώτο βήμα προς την αποκέντρωση, βρίσκεται ήδη σε εξέλιξη. Οι πλήρεις κόμβοι θα επιτρέψουν σε οποιονδήποτε να κρατήσει και να επαληθεύσει την κατάσταση του δικτύου τοπικά, παρακολουθώντας ακριβώς τι συμβαίνει. Τρεις ομάδες —*Erigon, Nethermind και Equilibrium*— αναπτύσσουν πλήρεις κόμβους και δυνητικά θα ξεκινήσουν περισσότερες εξελίξεις στο μέλλον.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+Σε μια παράλληλη ανάπτυξη, οι προετοιμασίες βρίσκονται σε εξέλιξη για να ανοίξουν αλληλουχία και να αποδείξουν το λογισμικό στο κοινό. Ο καθένας θα είναι σε θέση να συμμετάσχει ως sequencer ή ένας prover στο StarkNet.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+Θα αναπτυχθεί μια δομή που θα ενθαρρύνει τους ανθρώπους να συμμετάσχουν, μεταξύ των οποίων και οι οικονομικές ανταμοιβές. Τα τέλη του StarkNet θα διοχετευθούν εν μέρει σε αλληλουχίες και παροχές.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Μεσοπρόθεσμα αναμένουμε να καταστήσουμε τον αλληλουχία μας διαθέσιμο σε τρίτους, και μακροπρόθεσμα αναμένουμε να δούμε διάφορες ομάδες να χτίσουν sequencers που θα είναι αλληλουχία για StarkNet.
 
-### Always Improving; Forever Listening
+### Πάντα Βελτίωση; Πάντα Ακούγοντας
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Ως στροφή εστίασης στην επόμενη πρόκληση, θα συνεχίσουμε να βελτιώνουμε τα επιτεύγματα του παρελθόντος. Και συνεχίζοντας να δουλεύουμε σε όλους τους τομείς του[StarkNet](https://starknet.io/), τα αυτιά μας θα παραμείνουν πάντα ανοιχτά σε ολόκληρη την κοινότητα των προγραμματιστών. Συμμετέχετε λοιπόν στη συζήτηση, μέσω του[Discord](https://discord.com/invite/uJ9HZTUk2Y), της κοινότητας[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8),[Twitter](https://twitter.com/Starknet_Intern)ή άλλη διαδρομή, και να βοηθήσει να διαμορφώσει το μέλλον της κλίμακας blockchain.

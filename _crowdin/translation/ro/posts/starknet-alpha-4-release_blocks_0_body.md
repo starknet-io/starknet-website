@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Excitent timp înainte
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4 a fost lansată astăzi pe Goerli. Această versiune este candidatul la lansarea Mainnet și, dacă totul merge conform planului, va fi instalată pe Mainnet până la sfârșitul lunii.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4 urmează eliberarea de Alpha 3, ambalată în cutii de caracteristici, care cuprinde, printre altele, îmbunătățiri pentru timpii de compilare Cairo, constructori contractuali și multe altele (a se vedea[notele de lansare completă](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Important de remarcat: aceasta este încă o versiune Alpha – pentru a implementa contractul privind implementarea Mainnet, te rugăm să urmezi liniile directoare[de înregistrare](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)ale aplicațiilor.
 
-### New Features
+### Caracteristici noi
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Deși această versiune se concentrează în principal pe pregătirea pentru implementarea rețelei multinaționale, ea include, de asemenea, mai multe caracteristici noi:
 
-#### Get this contract’s address
+#### Obțineți adresa acestui contract
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+Contractele pot obține acum propria adresă prin intermediul noii syscall \`get_contract_address\`. În cele din urmă, putem pune contractul cu selfie să se odihnească.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Contractul de selfie prin RIP: septembrie 2021-noiembrie 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">noiembrie 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Hash Bloc
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Blocurile sunt acum identificate mai degrabă prin hash decât prin Id. Aceasta urmează celei mai recente tranziții către hash-urile noastre. Toate API au fost actualizate în consecință. Vom publica în curând documentaţia tehnică completă a sistemului, care va include şi specificaţia structurii pe bloc.
 
-#### Contract Addresses
+#### Adrese contractuale
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Această versiune introduce o modificare în modul în care sunt calculate adresele contractului. Adresa este un hash Pedersen pe adresa apelantului, o sare (aleatorie sau aleasă de implementator), codul contractual și hash-ul argumentelor constructorului, toate atașate de un prefix.
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash(PREFIX, caller_address, sare, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+În versiunea actuală, adresa apelantului este întotdeauna egală cu 0, dar, în versiunile viitoare, acest lucru va permite desfășurarea de contracte direct din contractele existente.
 
-Note that this scheme is very similar to CREATE2.
+Trebuie remarcat faptul că această schemă este foarte asemănătoare cu CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Vezi notele complete de lansare](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### Punți simbolice
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Podurile token reprezintă o parte esențială a infrastructurii StarkNet. Permite transferul de fonduri către şi de la StarkNet. Podul nu este utilizat în momentul publicării, dar ar trebui să fie disponibil în câteva zile – împreună cu documentarea completă a funcționalității și utilizării sale. Un lucru important de notat este că podul folosește protocolul[L1<>L2 pentru mesagerie](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). Ca atare, oferă termene scurte de retragere – odată ce o retragere este inclusă în lot și acceptată în lotul L1; fondurile sunt disponibile instantaneu utilizatorului pe L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Aceasta este prima versiune a podurilor tokene, și ne-ar plăcea să primim feedback de la ecosistem cu privire la asta.
 
-### Join StarkNet
+### Alătură-te StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Nu a existat niciodată un moment mai bun pentru a se alătura comunităţii StarkNet în creştere. Poți să te alături conversației în[discordul StarkNet](https://discord.gg/uJ9HZTUk2Y), să participi la un[workshop online](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), sau folosește unul dintre[tutorialele](https://www.cairo-lang.org/docs/hello_starknet/index.html)pentru a începe construirea primei tale aplicații.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Actualizare (Nov. 2021):**StarkNet Alpha este live pe Ethereum Mainnet

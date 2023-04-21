@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* De StarkNet Token (STRK) is nu geïmplementeerd op Ethereum-Mainnet
+* **Pas op voor scams!**StarkNet Tokens worden niet aangeboden voor de verkoop
+* Het zal tijd kosten voordat de Stichting het mechanisme voor de distributie van haar tokens vaststelt
+* Tokens van StarkWare aandeelhouders, werknemers en onafhankelijke partner softwareontwikkelaars zijn geblokkeerd voor een periode van vier jaar. met een geleidelijke release die begint na een jaar
+* De token zal verdere decentralisatie van StarkNet, dankzij het gebruik voor stemmen, staking en betalen van kosten
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+Vandaag zet[StarkNet](https://starknet.io/)nog een stap in de richting van decentralisatie. Het StarkNet token is nu[op Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Snel: STRK zal worden gebruikt als een staking token voor deelname aan de consensusmechanismen van StarkNet, als Governance token, en voor het betalen van transactiekosten. De reden voor elk van deze hulpprogramma's wordt weergegeven in[ons decentralisatievoorstel](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in de sectie met de titel "Waar worden de tokens voor gebruikt?"
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***Pas op voor scams:**op het moment van schrijven is er geen manier om StarkNet Tokens te kopen; deze no-sale periode blijft van kracht tot verdere kennisgeving door de[StarkNet Foundation](https://twitter.com/StarkNetFndn); volg de officiële communicatie van de StarkNet Foundation om te leren van eventuele updates over de status van STRK. Je kunt oplichtingen rapporteren en controleren op andere oplichtingsrapporten in het[scam-rapport](https://discord.gg/qypnmzkhbc)kanaal op de[StarkNet Discord](http://starknet.io/discord)server.*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+Deze post legt het token toewijzingsproces uit en hoe de gebruikte token contracten twee van de drie ontworpen nutsvoorzieningen van de token, namelijk stemmen en staken, dienen. De derde hulpbron - waarmee StarkNet-kosten worden betaald - zal later worden besproken.
 
-### Planning the token allocation process
+### Plannen van het toewijzingsproces voor token
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+We hebben eerder een[plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)voorgesteld voor de eerste toewijzing van de tokens. Tokens toegewezen aan aandeelhouders, werknemers en onafhankelijke softwareontwikkelaars zijn vier jaar vastgezet, met een geleidelijk vrijgavingsplan dat na een jaar begint. Vergrendelde tokens kunnen worden gebruikt voor stemmen en verblijven, maar kunnen niet worden verplaatst of verhandeld. Sommige van de tokens zijn vergrendeld via een specifiek smart contract op Ethereum en andere tokens zijn vergrendeld via bewakers.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+Scheid, 50.1% van de bestaande StarkNet tokens worden toegewezen aan de StarkNet Foundation, om te worden gebruikt om haar[doelen](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(cf.[StarkWare is post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). Deze tokens worden niet vergrendeld. De stichting zal echter tijd nodig hebben om precies het mechanisme te formuleren om die tokens verder toe te wijzen en zal haar plannen op tijd delen.
 
-#### Why lockup?
+#### Waarom vergrendelen?
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+Het vergrendelen van de tokens voor bovengenoemde periode zorgt ervoor dat de huidige bijdragers in overeenstemming zijn met de langetermijnprikkels van StarkNet. Het ontmoedigt ook speculaties over het token voordat het wijdverbreide gebruik voor de beoogde doeleinden wordt gebruikt: het waarborgen van het netwerk, het betalen van vergoedingen en het decentraliseren van het bestuur.
 
-Next, we explain how the token implementation supports voting and staking.
+Vervolgens leggen we uit hoe de token implementatie stemming en inzet ondersteunt.
 
-### Voting
+### Stemmen
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+De stichting is belast met het faciliteren van goed bestuur en het formuleren van stemmechanismen. De StarkNet Token was ontworpen om zowel rechtstreekse als verschillende delegatiemechanismen toe te staan.
 
-#### L1 voting
+#### L1 stem
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+De ERC-20 implementatie omvat nu**optioneel**gebruik van Compound's[delegatiemodule](https://docs.compound.finance/v2/governance/). Deze module wordt op grote schaal gebruikt voor stemmen in on-chain De reden dat het optioneel is op StarkNet en standaard is uitgeschakeld, is kostenbeoordeling. Het inschakelen betekent dat elke overdracht van de StarkNet Tokens op L1 extra gas nodig heeft om verschuivingen in het stemvermogen te kunnen volgen.
 
 #### Non-L1 voting
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+Alternatieven voor L1 on-chain stemmen met Compound's delegatiemodule omvatten off-chain stemmen, evenals StarkNetbased on-chain stemsysteem (zoals[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). Deze alternatieven, die het gasverbruik voor de overdracht van L1 beduidend verminderen, hebben geen expliciete steun nodig van de ERC-20-code die momenteel wordt toegepast, en worden dus intrinsiek ondersteund.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+Zoals hierboven vermeld, zullen alle tokens – vergrendeld en ontgrendeld – bruikbaar zijn in het stemmechanisme van StarkNet.
 
-### Staking
+### Uitzetten
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+StarkNet's toegestane en censuur-resistente operatie vereist een willekeurige selectie van sequenties. De kans dat een node wordt geselecteerd voor volgorde en een blok wordt voorgesteld, is evenredig met het aantal StarkNet Tokens dat het knooppunt maakt. De reden voor het gebruik van StarkNet Tokens (in plaats van bijvoorbeeld Ethereum of Bitcoin) wordt uitgelegd in het[governance voorstel](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), en de exacte gegevens van het verblijven, het maken van een reeks en blok op StarkNet wordt momenteel[besproken door de gemeenschap](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), en is nog niet afgerond.
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+Net als bij stemmen kunnen tokens worden gebruikt voor staking zelfs wanneer ze vergrendeld zijn. Dit draagt bij aan de diversiteit van de Starknet-exploitanten en de veerkracht van StarkNet.
 
 ### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+De inzet van de StarkNet Token contracten over Ethereum is een volgende stap in de decentralisatie StarkNet.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+We dringen er bij ontwikkelaars en gebruikers op aan om voorzichtig te zijn met zwendel! Op het moment van bekendmaking zijn er geen tokens verhandelbaar, en deze handelsstatus blijft van kracht tot nader inzicht door de StarkNet-stichting.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+Voor meer vragen kan je naar het[Token-discussie](https://discord.gg/qypnmzkhbc)kanaal gaan op de[StarkNet Discord](http://starknet.io/discord)server.

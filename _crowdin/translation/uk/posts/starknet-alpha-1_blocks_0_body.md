@@ -1,62 +1,62 @@
 ### TL;DR
 
-StarkNet Alpha 1 has two new features:
+StarkNet Alpha 1 має дві нові функції:
 
-* L1<>L2 interaction
-* On-chain data
+* L1<>L2 взаємодія
+* Дані ланцюжка
 
-### Introduction
+### Вступ
 
-At the beginning of the year, we announced that StarkWare is building [StarkNet](https://starkware.co/product/starknet/), a permissionless decentralized STARK-based ZK-Rollup¹ operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation — without compromising Ethereum’s composability and security.
+На початку року ми оголосили, що StarkWare будує[StarkNet](https://starkware.co/product/starknet/), децентралізована мережа на основі STK-Rollup1, яка працює як L2 мережа над Ethereum. StarkNet дозволяє будь-якому додатку досягти необмежених масштабів для його обчислення - не загрожуючи складові та безпеці Ethereum.
 
-Last month, [StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95) was released to the world. For the first time, developers are able to [write](https://kobi.one/2021/07/14/stardrop.html) any smart contract and deploy it, permissionlessly, to a ZK-Rollup. Users are able to send transactions to the network, Ethereum-style.
+Минулого місяця[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)було випущено у світ. Вперше розробники можуть[записати](https://kobi.one/2021/07/14/stardrop.html)будь-який розумний контракт і розгорнути його, бездопустимо в ZK-Rollup. Користувачі можуть надсилати транзакції в мережу, стилем Ethereum-версії.
 
-Today we are releasing a new version; Alpha 1. We are releasing features on a rolling basis to allow developers to interact with new features as soon as possible. We anticipate that this will tighten the feedback cycle and allow community feedback to quickly improve StarkNet.
+Сьогодні ми випускаємо нову версію; Альфа 1. На основі цього процесу ми випускаємо функції, щоб розробники могли взаємодіяти з новими функціями. Ми очікуємо, що це посилить зворотній зв'язок і дозволить зворотньому зв'язку швидко покращити StarkNet.
 
-### **Alpha 1 Features**
+### **Альфа 1 функції**
 
-#### L1<>L2 Interaction
+#### L1<>L2 взаємодія
 
-Alpha 1 includes an L1<>L2 messaging protocol, which allows developers to implement seamless transaction flows between L1 and L2. Developers can now send messages from contracts on L1 to contracts on L2 and vice versa.
+Альфа 1 включає L1<>L2 протокол обміну повідомленнями, який дозволяє розробникам реалізувати плавні трансакційні потоки між L1 і L2. Розробники можуть тепер надсилати повідомлення від контрактів по L1 до контрактів на L2 і навпаки.
 
-One of the beauties of ZK-Rollups is that state updates are final, without any delay. This means that messages that were sent from L2 to L1 can be immediately forwarded to their destination contract. This opens the way to build apps that are truly interoperable between the layers.
+Одна з особливостей ZK-Rollups - це те, що державні оновлення є останніми, без затримок. Це означає, що повідомлення, відправлені з L2 до L1 можуть негайно переадресуватися до контракту про призначення. Це відкриває шлях до створення додатків, які дійсно взаємодіють між шарами.
 
-Interested in trying it out? The best way to get started is to follow the tutorial [here](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html).
+Хочете його спробувати? Найкращий спосіб розпочати - дотримуватися посібника[ось тут](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html).
 
-Our L1<>L2 protocol owes much to other L2s (specifically Optimism and Arbitrum) whose previous work in this area influenced our design.
+Наш протокол L1<>L2 багато в чому зобов'язаний іншим L2s (спеціально оптимізмом і Arbitrum), попередня робота якого вплинула на наш дизайн.
 
-#### On-Chain Data-Availability
+#### Доступність On-ланцюгів
 
-StarkNet’s state update is now also published as on-chain data on Ethereum. This allows any user to fully construct StarkNet’s state from L1 data. Each state update includes the state diff, i.e., what storage was changed and its new value.
+StarkNet-оновлення також публікується як дані про режим ланцюга на Ethereum. Це дозволить будь-якому користувачеві повністю сконструювати стан StarkNeta із даних L1. При оновленні кожного стану стан стан відрізняється, тобто те, що було змінено і його нове значення.
 
-Here also, ZK-Rollup shows its strength. In contrast to Optimistic Rollups, in which the full transactions’ data must be sent on-chain, in ZK-Rollups, only the absolute minimum data required to derive the state diff is sent on-chain.
+Тут також помітно свою силу. На відміну від оптимістичних заворушень, в яких необхідно надсилати дані повних транзакцій за ланцюгом, в ZK-Rollups надіслано лише абсолютні мінімальні дані, необхідні для отримання різниці штату.
 
-Consider a prime example, price oracles. A transaction to update a price oracle usually contains multiple transactions but updates only one storage cell; the pair’s price. The on-chain data required for a state update containing price oracle transactions in an Optimistic Rollup grows linearly with the number of updates, while in a ZK-Rollup, it will always be a single storage update.
+Розглянемо простий приклад, цінові корали. Операція для оновлення цінового випробування зазвичай містить кілька транзакцій, але оновлення лише один накопичувач; ціна пари. Дані на ланцюжку для оновлення стану, що містять цінові або рівні транзакцій у оптимістичному режимі Rollup росте лінією кількості оновлень, поки ви ZK-Rollup, це завжди буде оновлення для одного зберігання.
 
-Moreover, compression algorithms can be applied to the published data, and their validity will be attested to by the STARK proof, further reducing the on-chain footprint. Future versions of StarkNet will introduce innovative optimizations in this area.
+Крім того, алгоритми стиснення можуть бути застосовані до опублікованих даних, і їх достовірність буде засвідчено доказом STARK, подальшого зменшення навантаження на ланцюг. Майбутні версії StarkNet будуть представляти інноваційні оптимізації в цій галузі.
 
 #### StarkNet OS
 
-We are also releasing the StarkNet Operating System code. The StarkNet OS is the Cairo program that runs StarkNet. The OS handles everything which is done on the network — contract deployment, transaction execution, L1<>L2 messages and more. The StarkNet OS architecture and design will be explained in detail in a separate post.
+Ми також випускаємо код операційної системи StarkNet. StarkNet OS - це программа Каїра, яка запускає StarkNet. OS обробляє все, що робиться в мережі - розгортання в контрактах, виконання транзакцій, L1<>L2 повідомлення та інше. Архітектура та дизайн StarkNet OS будуть детально описані в окремому пості.
 
-#### Extra Features
+#### Додаткові функції
 
-Not only has StarkNet Alpha evolved, we are also constantly improving Cairo. For a full description of the new features in Cairo v0.3.0, check the release notes [here](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
+Мало того, що StarkNet Alpha розвивається, ми також постійно вдосконалюємо Каїр. Для повного опису нових можливостей в Каїрі v0.3.0, перевірте примітки до випуску[](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
 
-### The Ecosystem is Growing
+### Екосистема зростає
 
-Aside from the constant work on StarkNet Core, the ecosystem’s work on StarkNet is continuously expanding. We are thrilled to be collaborating with some of the most talented teams from the ecosystem.
+Окрім постійної роботи на StarkNet Core, екосистема над StarkNet постійно розширюється. Ми страшенно співпрацюємо з деякими найталановитішими командами з екосистеми.
 
-Fermion, StarkNet’s first Full Node effort, is developed by the Erigon (formerly TurboGeth) team. Based on their enormous knowledge gained from working on Ethereum, we are able to work with them to build a powerful Full Node, which incorporates many lessons learned while building for Ethereum, while benefiting from the scale offered by STARK proofs.
+Ферміон, перші зусилля повного вузла StarkNet, розроблені командою Erigon (раніше TurboGeth). Виходячи з їхніх величезних знань, отриманих від роботи над Ethereum, ми можемо працювати з ними, щоб побудувати потужний Full Node, який включає багато уроків, отриманих під час будівництва Ethereum, водночас виграючи з масштабу, запропонованого доказами STARK.
 
-Nethermind are working on Warp, a compiler from EVM to Cairo. Bound by our culture of presenting new tools only once they are ready, all we can say is, expect exciting news on this front very soon! We can say, though, that they are moving at warp speed.
+Нідерланди працюють над Warp, компілятор з EVM в Каїр. Зв'язок нашої культури з представленням нових інструментів лише після того, як вони будуть готові, Все, що ми можемо сказати, це очікувати захоплюючих новин на цьому фронті! Проте ми можемо сказати, що вони рухаються зі швидкістю.
 
-### What the Future Holds
+### Про що зберігається майбутнє
 
-The next stop on our road to StarkNet will be composability — allowing contracts to interact with one another. Stay tuned.
+Наступною зупинкою на нашій дорозі до StarkNet стане здатність - що дозволить контрактам взаємодіяти один з одним. Будьте в курсі.
 
 [StarkWare](https://starkware.co/)
 
-1 As we’ve said previously, ZK-Rollup is by now a commonly used term, yet very misleading: these solutions do not (currently) offer zero-knowledge.
+Як ми вже казали раніше, ZK-Rollup є зазвичай використаний термін, але дуже оманливим: ці рішення не (в даний час) пропонують нульові знання.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Оновлення (Новин. 2021):**StarkNet Alpha активована на Ethereum Mainnet

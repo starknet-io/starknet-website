@@ -1,117 +1,117 @@
 ### TL;DR
 
-* Recursive Proving is live on Mainnet, scaling StarkEx apps as well as StarkNet with a single proof
-* It boosts scale, and delivers benefit in cost, and latency (a rare and exciting occurrence of scale and latency moving in tandem, and not being a tradeoff)
-* It sets the stage for L3 and other benefitsGo read the blog post on [Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). It’s cool stuff 😉
+* Rekursiv Proving er live på Mainnet, skalering StarkEx apps samt StarkNet med et enkelt bevis
+* Det øger skalaen, og leverer fordele i omkostninger, og latens-tid (en sjælden og spændende forekomst af skala og latens-tid bevæger sig i tandem, og ikke at være en tradeoff)
+* Det sætter scenen for L3 og andre fordeleGo læse blogindlægget på[Rekursiv Beving](https://medium.com/@starkware/recursive-starks-78f8dd401025). Det er cool ting 😉
 
-### Scaling up!
+### Skalering op!
 
-Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof.
+Rekursive beviser — drevet af Cairos generelle beregning — er nu i produktion. Dette markerer et stort løft til kraften i L2 skalering med STARKs. Det vil hurtigt levere en flerfoldig stigning i antallet af transaktioner, der kan skrives til Ethereum via et enkelt bevis.
 
-Until now, STARK scaling has worked by “rolling up” tens or even hundreds of thousands of transactions into a single proof, which was written to Ethereum. With recursion, many such proofs can be “rolled up” into a single proof.
+Indtil nu har STARK skalering arbejdet ved at “rulle op” tiere eller endda hundredtusinder af transaktioner til et enkelt bevis, som er skrevet til Ethereum. Med rekursion, mange sådanne beviser kan “rulles op” til et enkelt bevis.
 
-This method is now in production for a multitude of Cairo-based applications: apps running on StarkEx, StarkWare’s SaaS scaling engine, and StarkNet, the permissionless rollup.
+Denne metode er nu i produktion til en lang række Cairo-baserede applikationer: apps, der kører på StarkEx, StarkWare’s SaaS-skaleringsmotor og StarkNet, den tilladelsesfri rullefrit.
 
-### The story so far
+### Historien indtil videre
 
-Since the first proof on Mainnet, in March 2020, the following developments have shaped how STARKs are used.
+Siden det første bevis på Mainnet i marts 2020 har følgende udvikling formet, hvordan STARKs anvendes.
 
-### STARK-based scaling
+### STARK-baseret skalering
 
-In June 2020 the first STARK-based scaling solution — [StarkEx](https://youtu.be/P-qoPVoneQA) — was deployed on Ethereum Mainnet. StarkEx has a Prover that performs large computations off-chain and produces a STARK-proof for their correctness, and a Verifier that verifies this proof on-chain. The constraints for this first deployment were “hand-written” by StarkWare’s engineers, thus greatly limiting feature velocity for StarkEx. We concluded that a programming language to support proving general computation is needed — Cairo.
+I juni 2020 blev den første STARK-baserede skaleringsløsning —[StarkEx](https://youtu.be/P-qoPVoneQA)— implementeret på Ethereum Mainnet. StarkEx har en Prover, der udfører store beregninger uden for kæden og producerer et STARK-bevis for deres korrekthed, og en verifikator, der verificerer dette bevis på kæden. De begrænsninger for denne første implementering var “håndskrevet” af StarkWare ingeniører, hvilket i høj grad begrænser funktionen hastighed for StarkEx. Vi konkluderede, at et programmeringssprog til støtte for at bevise generel beregning er nødvendig — Cairo.
 
 #### Cairo
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo stands for CPU Algebraic Intermediate Representation (AIR), and includes a single AIR that verifies the instruction set of this “CPU”. It opened up the door for coding proofs for more complex business logic, for arbitrary computational statements, and for doing so in a faster and safer manner. A Cairo program can prove the execution of a single application’s logic. But a Cairo program can also be a concatenation of multiple such applications — SHARP.
+I sommeren 2020 Kairo gjorde sin[første optræden på Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo står for CPU Algebraisk Intermediate Representation (AIR), og omfatter en enkelt AIR, der verificerer instruktionen sæt af denne “CPU”. Det åbnede døren for kodning beviser for mere komplekse business logik, for vilkårlige beregninger og for at gøre det på en hurtigere og sikrere måde. Et Kairo program kan bevise udførelsen af en enkelt applikations logik. Men et Kairo program kan også være en sammenkædning af flere sådanne applikationer — SHARP.
 
-#### SHARP
+#### DEL
 
-SHARP — a SHARed Prover — takes transactions from several separate apps, and proves them all in one single STARK-proof. Apps combine their batches of transactions, filling up the capacity of a STARK-proofs faster. Transactions are processed at an improved rate and latency. The next frontier: Recursive Proofs, but not merely for some hard-coded logic, but rather for **general computation**.
+SHARP — en SHARed Prover — tager transaktioner fra flere separate apps, og beviser dem alle i en enkelt STARK-bevis. Apps kombinerer deres partier af transaktioner, fylder kapaciteten af en STARK-beviser hurtigere. Transaktionerne behandles med en forbedret hastighed og forsinkelse. Den næste grænse: Rekursive Proofs, men ikke kun for nogle hårdtkodede logik, men snarere for**generel beregning**.
 
-To understand the full benefit of Recursive Proving it is worth understanding a little bit more about how (non-recursive) proving was performed by SHARP up until now. Drawing 1 depicts a typical non-recursive flow:
+For at forstå den fulde fordel ved rekursiv bevise det er værd at forstå en lille smule mere om, hvordan (ikke-rekursive) bevise blev udført af SHARP indtil nu. Tegning 1 viser en typisk ikke-rekursiv strømning:
 
-![Drawing 1: A typical non-recursive proving flow](/assets/recursive_starks_01.png "Drawing 1: A typical non-recursive proving flow")
+![Tegning 1: Et typisk ikke-rekursivt flow](/assets/recursive_starks_01.png "Tegning 1: Et typisk ikke-rekursivt flow")
 
-Here, statements arrive over time. When a certain capacity (or time) threshold is reached, a large combined statement (a.k.a Train) is generated. This combined statement is proven only once all the individual statements have been received. This proof takes a long time to prove (roughly the sum of time it takes to prove each statement individually).
+Her kommer der erklæringer over tid. Når en bestemt kapacitetstærskel (eller tid) er nået, genereres en stor kombineret erklæring (alias: et tog). Denne kombinerede erklæring er kun bevist, når alle de individuelle udtalelser er modtaget. Dette bevis tager lang tid at bevise (omtrent summen af tid det tager at bevise hver erklæring individuelt).
 
-Proving extremely large statements is eventually limited by available compute resources such as memory. Prior to recursion, this was effectively the limiting scalability barrier of STARK proving.
+Beviser ekstremt store udsagn er i sidste ende begrænset af tilgængelige beregninger ressourcer såsom hukommelse. Forud for rekursion var dette effektivt den begrænsende skalerbarhedsbarriere af STARK beviser.
 
-### What is Recursive Proving?
+### Hvad er rekursiv frembringelse?
 
-With STARK proofs, the time it takes to prove a statement is roughly linear with the time it takes to execute the statement. In addition, if proving a statement takes T time, then verifying the proof takes roughly log(T) time, which is typically called “logarithmic compression”. In other words, with STARKs you spend much less time on verifying the statement than on calculating it.
+Med STARK beviser, den tid det tager at bevise en erklæring er omtrent lineær med den tid det tager at udføre erklæringen. Desuden, hvis bevise en erklæring tager T tid, derefter kontrollere beviset tager groft log(T) tid, som typisk kaldes “logaritmisk komprimering”. Med andre ord, med STARKs bruger du meget mindre tid på at kontrollere erklæringen end ved beregning af den.
 
-[Cairo](https://starkware.co/cairo/) allows expressing general computational statements that can be proven by STARK proofs and verified by the corresponding STARK verifiers.
+[Cairo](https://starkware.co/cairo/)giver mulighed for at udtrykke generelle beregningserklæringer, der kan bevises af STARK-beviser og verificeres af de tilsvarende STARK-verifikatorer.
 
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. We can generate a single proof attesting to the validity of multiple “up-stream” proofs. This is what we call Recursive Proving.
+Det er her, muligheden for at udføre[rekursion](https://en.wikipedia.org/wiki/Recursion)sparker i: På samme måde som vi skriver et Kairo-program, der beviser rigtigheden af tusindvis af transaktioner, Vi kan også skrive et Cairo program, der verificerer flere STARK beviser. Vi kan generere et enkelt bevis for validiteten af flere “up-stream” beviser. Det er det, vi kalder rekursiv fremgang.
 
-Because of the logarithmic compression and roughly linear proving time, proving a verification of a STARK proof takes relatively short time (expected to be just a few minutes in the near future).
+På grund af logaritmisk komprimering og nogenlunde lineær bevise tid, at bevise en verifikation af en STARK bevis tager relativt kort tid (forventes at være blot et par minutter i den nærmeste fremtid).
 
-When implementing Recursion, SHARP can prove statements upon their arrival. Their proofs can be merged over and over into recursive proofs in various patterns until, at a certain point, the resulting proof is submitted to an on-chain verifier contract. A typical pattern is depicted in Drawing 2:
+Når du implementerer Recursion, kan SHARP bevise erklæringer ved deres ankomst. Deres beviser kan fusioneres igen og igen i rekursive beviser i forskellige mønstre indtil, på et bestemt tidspunkt forelægges den resulterende dokumentation for en kontrakt om verifikator for en kædeverifikator. Et typisk mønster er afbildet i Tegning 2:
 
-![Drawing 2: A typical recursive proving flow.](/assets/recursive_starks_02.png "Drawing 2: A typical recursive proving flow.")
+![Tegning 2: En typisk rekursiv gennemstrømning.](/assets/recursive_starks_02.png "Tegning 2: En typisk rekursiv gennemstrømning.")
 
-### Immediate Benefits of Recursive Proving
+### Øjeblikkelige fordele ved rekursiv bevise
 
-#### Reduced On-chain Cost
+#### Reduceret On-chain Omkostning
 
-Off the bat, we achieve “compression” of multiple proofs into one, which implies lower on-chain verification cost per transaction (where each statement may include many transactions).
+Fra flagermus, vi opnår “komprimering” af flere beviser til én, hvilket indebærer lavere omkostninger til kontrol af kæden pr. transaktion (hvor hver opgørelse kan omfatte mange transaktioner).
 
-With recursion, the computational resources barrier (e.g. memory) that limited proofs size up until now, is eliminated, since each limited size statement can be proven separately. Hence, when using recursion, the effective Train size of recursion is almost unlimited, and the cost per transaction can be reduced by orders of magnitude.
+Med rekursion af beregningsmæssige ressourcer barriere (f.eks. hukommelse), at begrænsede beviser størrelse indtil nu, elimineres, da hver begrænset størrelse udsagn kan bevises separat. Når der anvendes rekursion, er den effektive togstørrelse af rekursion næsten ubegrænset, og omkostningerne pr. transaktion kan reduceres ved størrelsesordener.
 
-In practical terms, the reduction depends on the acceptable latency (and the rate at which transactions arrive). In addition, since each proof is typically also accompanied by some output such as on-chain data, there are limits to the amount of data that can be written on-chain together with a single proof. Nevertheless, reducing cost by an order of magnitude and even better is trivially achievable.
+I praksis afhænger reduktionen af den acceptable latenstid (og den sats, hvormed transaktionerne ankommer). Desuden, da hvert bevis typisk også ledsages af nogle output såsom on-chain data, der er grænser for mængden af data, der kan skrives på kæden sammen med et enkelt bevis. Ikke desto mindre er det trivielt muligt at reducere omkostningerne med en størrelsesorden og endnu bedre.
 
-#### Reduced Latency
+#### Reduceret Latens
 
-The Recursive Proving pattern reduces the latency of proving large Trains of statements. This is the result of two factors:
+Den rekursive Beving mønster reducerer latenstiden af at bevise store tog af udsagn. Dette er resultatet af to faktorer:
 
-1. Incoming statements can be proven **in parallel** (as opposed to proving an extremely large combined statement).
-2. There is no need to wait until the last statement in the Train arrives to begin proving. Rather, proofs can be combined with new statements as they arrive. This means that the latency of the last statement joining a Train, is roughly the time it takes to prove that very last statement plus the time it takes to prove a Recursive Verifier statement (which attests to all those statements that have already “onboarded” this particular Train).
+1. Indgående udsagn kan bevises**parallelt**(i modsætning til at bevise en ekstremt stor kombineret udsagn).
+2. Der er ingen grund til at vente til den sidste erklæring i toget ankommer for at begynde at bevise. Tværtimod kan beviser kombineres med nye udsagn, når de ankommer. Det betyder, at latenstiden af den sidste erklæring tiltræder et tog, er omtrent den tid, det tager at bevise, at allersidste erklæring plus den tid, det tager at bevise en rekursiv verifikator erklæring (som attesterer til alle de udtalelser, der allerede har “onboarde” dette særlige tog).
 
-We are actively developing and optimizing the latency of proving the Recursive Verifier statement. We expect this to reach the order of a few minutes within a few months. Hence, a highly efficient SHARP can offer latencies from a few minutes up to a few hours, depending on the tradeoff versus on-chain cost per transaction. This represents a meaningful improvement to SHARP’s latency.
+Vi er aktivt ved at udvikle og optimere latenstiden for at bevise den rekursive verifikator erklæring. Vi forventer, at dette vil nå op på et par minutter i løbet af et par måneder. Derfor kan en meget effektiv SHARP tilbyde latencies fra et par minutter op til et par timer, afhængigt af afvejning versus on-chain omkostninger per transaktion. Dette er en meningsfuld forbedring af SHARP's latens.
 
-#### Facilitating L3
+#### Lettere L3
 
-The development of the Recursive Verifier statement in Cairo also opens up the possibility of submitting proofs to StarkNet, as that statement can be baked into a StarkNet smart contract. This allows building [L3 deployments on top of the public StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) (an L2 network).
+Udviklingen af den rekursive verifikatorerklæring i Cairo åbner også mulighed for at indsende beviser til StarkNet, som denne erklæring kan bages i en StarkNet smart kontrakt. Dette gør det muligt at bygge[L3 installationer på toppen af det offentlige StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f)(et L2 netværk).
 
-The recursive pattern also applies to the aggregation of proofs from L3, to be verified by a single proof on L2. Hence, hyper-scaling is achieved there too.
+Den rekursive mønster gælder også for sammenlægning af beviser fra L3, der skal kontrolleres ved en enkelt bevis på L2. Derfor er der også opnået hyperskalering.
 
-### More Subtle Benefits
+### Flere Subtile Fordele
 
-#### Applicative Recursion
+#### Applikativ Rekursion
 
-Recursion opens up even more opportunities for platforms and applications wishing to further scale their cost and performance.
+Rekursion åbner endnu flere muligheder for platforme og applikationer, der ønsker at skalere deres omkostninger og præstationer yderligere.
 
-Each STARK proof attests to the validity of a statement applied to some input known as the “public input” (or “program output” in Cairo terms). Conceptually, STARK recursion compresses two proofs with *two* inputs into *one* proof with two inputs. In other words, while the number of proofs is reduced, the number of inputs is kept constant. These inputs are then typically used by an application in order to update some state on L1 (e.g. to update a state root or perform an on-chain withdrawal).
+Hver STARK bevis bekræfter gyldigheden af en erklæring, der anvendes på nogle input kendt som den “offentlige input” (eller “program output” i Cairo udtryk). Begrebet komprimerer STARK rekursion to beviser med*to*indgange i*et*bevis med to indgange. Med andre ord, mens antallet af beviser er reduceret, antallet af input holdes konstant. Disse input bruges derefter typisk af et program for at opdatere en vis tilstand på L1 (f. eks. . for at opdatere en tilstandsrod eller udføre en on-chain tilbagetrækning).
 
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. The resulting statement attests to the validity of the input combination based on the application semantics, hence the name Applicative Recursion (see Drawing 3, for an example)..
+Hvis den rekursive erklæring er tilladt at være*application-aware*, dvs. anerkender selve applikationens semantik det kan begge komprimere to beviser i én*samt*kombinere de to input i én. Den resulterende erklæring attesterer gyldigheden af inputkombinationen baseret på applikationssemantik dermed navnet Applicative Recursion (se Tegning 3, for et eksempel)..
 
-![Drawing 3: Applicative Recursion example](/assets/recursive_starks_03.png "Drawing 3: Applicative Recursion example")
+![Tegning 3: Applicative Recursion eksempel](/assets/recursive_starks_03.png "Tegning 3: Applicative Recursion eksempel")
 
-Here, Statement 1 attests to a state update from A to B and Statement 2 attests to a further update from B to C. Proofs of Statement 1 and Statement 2 may be combined into a third statement, attesting to the direct update from A to C. By applying similar logic recursively, one can reduce the cost of state updates very significantly up to the finality latency requirement.
+Her attesteres erklæring 1 til en statusopdatering fra A til B og erklæring 2 til en yderligere opdatering fra B til C. Bevis for erklæring 1 og erklæring 2 kan kombineres i en tredje erklæring, der attesterer den direkte opdatering fra A til C. Ved at anvende lignende logik rekursivt, kan man reducere omkostningerne ved statslige opdateringer meget væsentligt op til finality latens-tid krav.
 
-Another important example of Applicative Recursion is to compress rollup data from multiple proofs. For example, for a Validity Rollup such as StarkNet, every storage update on L2 is also included as transmission data on L1, to ensure data availability. However, there is no need to send multiple updates for the same storage element, as only the final value of transactions attested to by the proof verified is required for data availability. This optimization is already performed within a *single* StarkNet block. However, by generating a proof per block, Applicative Recursion may compress this rollup data across *multiple* L2 blocks. This can result in significant cost reduction, enabling shorter block intervals on L2, without sacrificing the scalability of L1 updates.
+Et andet vigtigt eksempel på Applicative Recursion er at komprimere rollup data fra flere beviser. For eksempel for en Gyldighed Rollup såsom StarkNet, alle lagringsopdateringer på L2 er også inkluderet som transmissionsdata på L1 for at sikre datatilgængelighed. Der er dog ingen grund til at sende flere opdateringer til det samme lagerelement, da kun den endelige værdi af transaktioner, der attesteres ved beviset, er nødvendig for datatilgængelighed. Denne optimering er allerede udført i en*enkelt*StarkNet blok. Ved at generere et bevis pr. blok, kan Applicative Recursion dog komprimere denne rollup data på tværs af*flere*L2 blokke. Dette kan resultere i en betydelig omkostningsreduktion, hvilket muliggør kortere blokintervaller på L2, uden at ofre skalerbarheden af L1 opdateringer.
 
-Worth noting: Applicative Recursion may be combined with application-agnostic recursion as depicted earlier. These two optimizations are independent.
+Værd at bemærke: Applicative Recursion kan kombineres med application-agnostic rekursion som afbildet tidligere. Disse to optimeringer er uafhængige.
 
-#### Reduced On-chain Verifier Complexity
+#### Reduceret Bekræftelseskompleksitet På Kæde
 
-The complexity of the STARK verifier depends on the kind of statements it is designed to verify. In particular, for Cairo statements, the verifier complexity depends on the specific elements allowed in the Cairo language, and, more specifically, the supported built-ins (if we use the CPU metaphor for Cairo, then built-ins are the equivalent of micro-circuits in a CPU: computations performed so frequently that they require their own optimized computation).
+Kompleksiteten af STARK verifikator afhænger af den slags udsagn, det er designet til at verificere. Navnlig afhænger verifikatorens kompleksitet af de specifikke elementer, der er tilladt på Kairo-sproget, for så vidt angår Cairo-erklæringerne. og, mere specifikt, de understøttede indbyggere (hvis vi bruger CPU-metaforen for Cairo derefter indbygninger svarer til mikrokredsløb i en CPU: beregninger udført så ofte, at de kræver deres egen optimeret beregning).
 
-The Cairo language continues to evolve and offer more and more useful built-ins. On the other hand, the Recursive Verifier only requires using a small subset of these built-ins. Hence, a recursive SHARP can successfully support any statement in Cairo by supporting the full language in the recursive verifiers. Specifically, the L1 Solidity Verifier need only verify recursive proofs, and thus can be limited to a more stable subset of the Cairo language: The L1 Verifier need not keep up with the latest and greatest built-ins. In other words, verification of ever-evolving complex statements is relegated to L2, leaving the L1 Verifier to verify simpler and more stable statements.
+Kairo sproget fortsætter med at udvikle sig og tilbyder flere og mere nyttige indbyggere. På den anden side kræver rekursiv verifikator kun en lille delmængde af disse indbyggere. Derfor kan en rekursiv SHARP med held støtte enhver erklæring i Cairo ved at støtte det fulde sprog i rekursive verifikatorer. Specifikt, L1 Solidity Verifier behøver kun kontrollere rekursive beviser, og dermed kan begrænses til en mere stabil delmængde af Cairo sprog: L1 verifikatoren behøver ikke holde trit med de nyeste og største indbyggere. Med andre ord er verifikation af stadigt udviklende komplekse udsagn henvist til L2, hvilket efterlader L1 verifikatoren til at verificere enklere og mere stabile udsagn.
 
-#### Reduced Compute Footprint
+#### Reduceret Beregn Fodaftryk
 
-Before recursion, the ability to aggregate multiple statements into one proof was limited by the maximal size of the statement that could be proved on available compute instances (and the time it could take to generate such proofs).
+Før recursion evnen til at samle flere udsagn i ét bevis var begrænset af den maksimale størrelse af den erklæring, der kunne bevises på tilgængelige beregninger tilfælde (og den tid det kunne tage at generere sådanne beviser).
 
-With recursion, there is no longer a need to prove such extremely large statements. As a result, smaller, less expensive and more available compute instances can be used (though more of those may be needed than with large monolithic provers). This allows deployment of prover instances in more physical and virtual environments than previously possible.
+Med rekursion er der ikke længere behov for at bevise så meget store udtalelser. Som et resultat, mindre, billigere og mere tilgængelige beregningstilfælde kan bruges (selvom flere af dem kan være nødvendige end med store monolitiske provers). Dette giver mulighed for indsættelse af prover forekomster i mere fysiske og virtuelle miljøer end tidligere muligt.
 
 ### Summary
 
-Recursive proofs of general computation now serve multiple production systems, including StarkNet, on Mainnet Ethereum.
+Rekursive beviser for generel beregning nu tjene flere produktionssystemer, herunder StarkNet, på Mainnet Ethereum.
 
-The benefits of recursion will be realized gradually, as it continues to allow for new improvements, and it will soon deliver hyper-scale, cut gas fees, and improve latency by unlocking the potential of parallelization.
+Fordelene ved rekursion vil blive realiseret gradvist, da det fortsat giver mulighed for nye forbedringer, og det vil snart levere hyper-skala, skære gas gebyrer, og forbedre latens-tid ved at frigøre potentialet for parallelisering.
 
-It will bring significant cost and latency benefits with it, together with new opportunities such as L3 and applicative-recursion. Further optimization of the Recursive Verifier is on-going and even better performance and cost benefits are expected to be provided over time.
+Det vil medføre betydelige omkostninger og latensydelser sammen med nye muligheder som L3 og anvendelig-rekursion. Yderligere optimering af rekursiv verifikator er igangværende og endnu bedre ydeevne og omkostningsfordele forventes at blive givet over tid.
 
 
 

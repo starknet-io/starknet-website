@@ -1,83 +1,85 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+Koncem roku 2022 bylo oznámeno [zahájení činnosti Nadace Starknet](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb). Nadace je nezávislá organizace věnovaná realizaci vize Starknetu stát se prosperující, decentralizovanou a nepřípustnou vrstvou 2 (L2) Validity Rollup (také známa jako ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+se silnou [interdisciplinární deskou](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) u kormidla, Nadace Starknet má dobrou pozici, aby sledovala svůj cíl podporovat a rozšiřovat komunitu Starknet, dohled nad pokračujícím rozvojem sítě, rozvíjení nepřípustných mechanismů řízení a plné decentralizace ekosystému Starknet. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Nadace je dnes nadšením veřejně oznámit jmenování pěti výborů. každý z nich byl pověřen zvláštním mandátem, který je v souladu s posláním a prioritami Starknetu. Mandát každého výboru není pevně zakotven a bude podrobován běžným hodnocením, přičemž podle potřeby budou provedeny úpravy a pozměňovací návrhy.
 
-The committees are:
+Výbory jsou:
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* Výbor pro ustanovení
+* Výbor pro granty s časným osvojením
+* Výbor pro partnerství pro vývojáře
+* Řídící výbor
+* Zastupující výbor pro ekosystém
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+Dále budeme sdílet více podrobností ve výborech, včetně jejich mandátu, činnosti a počátečních členů.
 
-## Introducing the Starknet Foundation Committees 
+## Zavedení výborů nadace Starknet 
 
-### Provisions Committee
+### Výbor pro ustanovení
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Výbor pro ustanovení je odpovědný za plánování, dohled nad nimi a provádění poskytování žetonu pro ekosystém Starknet – STRK. Společnost STRK bude použita jako žeton pro účast v mechanismu shody společnosti Starknet. Bude rovněž sloužit jako žeton sítě a jako plynárenský žeton pro platbu transakčních poplatků sítě. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Výbor pro ustanovení má zásadní význam pro zajištění spravedlivého, decentralizovaného a transparentního rozdělení žetonu, který bude pohánět ekosystém Starknet. Výbor dohlíží na poskytování žetonů STRK, kteří jsou povinni platit poplatky za používání Starknet. Výbor posoudí a poskytne nadaci Starknet doporučení pro kvalifikační skupiny založené na cílech spravedlnosti, transparentnosti a decentralizace. Tyto plány budou oznámeny, jakmile budou připraveny.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Výbor pro ustanovení lze kontaktovat na: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### Výbor pro granty s časným osvojením
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Výbor pro granty s časným přijímáním je odhodlán podporovat růst ekosystému Starknet poskytováním grantů inovačním týmům budujícím řetězové aplikace na Starknetu. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Cílem výboru EAG je usnadnit rozšíření a vitalitu ekosystému prostřednictvím nasazení v řetězci. Výbor brzy učiní oznámení, že stanoví kritéria pro první kolo žádostí, které se zpětně zaměří na týmy, které již začaly stavět na Starknetu. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Výbor pro granty s časným osvojením se zavázal k transparentnosti a zveřejní všechny grantové částky.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Výbor pro granty pro předčasné adopce lze kontaktovat na adrese: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Výbor pro partnerství pro vývojáře
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+Výbor pro partnerství pro rozvoj hraje v ekosystému Starknet zásadní úlohu tím, že podporuje a dohlíží na nová strategická partnerství pro vývojáře, která mají být začleněna do ekosystému Starknet. Za spolupráce na klíčových částech infrastruktury, která je klíčová pro úspěch Starknetu, se považují zejména partnerství strategických vývojářů.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+Hlavní povinnosti výboru zahrnují zefektivnění procesu předkládání návrhů pro partnerství vývojářů, důkladnou hloubkovou kontrolu a schvalování předložených návrhů. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Výbor má zásadní význam pro podporu robustního ekosystému tím, že určuje a podporuje vývojové týmy, které vybudovaly nebo aktivně budují základní vrstvu infrastruktury sítě. Jejich úsilí zajišťuje, aby týmy postavené za účelem zabezpečení a rozšíření infrastruktur Starknet byly udělovány decentralizovaným a transparentním způsobem. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Výbor pro partnerství pro vývojáře lze kontaktovat na: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### Řídící výbor
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Řídící výbor má zásadní úlohu v probíhající decentralizaci ekosystému Starknet. Výbor je odpovědný za výzkum, plánování a provádění počátečních fází řízení pomocí Starknetu. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+se zaměřením na decentralizaci a na dosažení rovnováhy mezi účastí společenství a aktivním pokračujícím rozvojem; Cílem výboru je vytvořit, zavést a dohlížet na původní pilíře řízení společnosti Starknet. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Řídící výbor vypracuje a zavede základní mechanismy, které udržují transparentní, spravedlivé, a decentralizovaná struktura, která podporuje zapojení společenství a zajišťuje trvalý růst a decentralizovanou účast v ekosystému. Za účelem dosažení těchto cílů, výbor vymezí usnesení, o nichž se má hlasovat a o nichž se má hlasovat, a schválí společenství Starknet, a stanoví řádný postup pro diskusi a hlasování o správě. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Výbor již zahájil [první fázi řízení Starknetu](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Pro jakékoliv dotazy týkající se prvního hlasování, prosím, kontaktujte: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Výbor pro správu a řízení lze kontaktovat také na: [Governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Chcete-li se dozvědět více o práci výboru a plánu řízení, podívejte se na [tuto stránku](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### Zastupující výbor pro ekosystém
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Za posílení a integraci nových vývojářů a členů komunity do ekosystému Starknet je zodpovědný výbor pro ekosystém Ecosystem. To zahrnuje identifikaci, posílení pravomoci a podporu velvyslanců Starknet, udělování grantů pro přispěvatele ekosystémů a talentované skupiny, a organizování a sponzorování všeobecné kadence událostí a vzdělávacích partnerství, která podporují účast komunity v ekosystému Starknetu. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+velvyslanci budou respektováni a ustaveni členové komunity Starknet, kteří jsou odhodláni organizovat, účastnit se a hovořit na akcích, podpora rozvoje komunit, vytváření obsahu, hledání vzájemně prospěšných sponzorů a přesvědčování přislíbených jednotlivců a týmů, aby stavěli na Starknetu.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Výbor pro ekoznačku má odlišné hlavní zaměření než Výbor pro granty pro rané adopce. Zatímco cílem výboru EAG je zavést a udělit prvotní nabyvatelé Starknetu, Evropský výbor pro ekosystém zdůrazňuje pokračující a trvalý růst a rozvoj ekosystému na úrovni prostých lidí. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Zasedání Ecosystému může být kontaktováno na: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Nadcházející milníky
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Se jmenováním těchto výborů se Nadace Starknet chystá na vzrušující cestu vpřed. Každý výbor se věnuje podpoře konkrétního aspektu ekosystému a společně, Spolu s nadací bude usilovat o prosperující, decentralizovaný a nepřípustný ekosystém vrstvy 2.  
 
-Here is what’s coming next: 
+Zde je to, co se chystá dál: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* [hlasování o první správě](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) se uskuteční dne 21. března 2023;
+* první oznámení výboru EAG a podrobnosti pro první kolo žádostí budou zveřejněny na [blogu nadace StarkNet](https://www.starknet.io/en/posts/foundation) dne 21. března 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Sledujte
+
+blog [ StarkNet nadace](https://www.starknet.io/en/posts/foundation) a sociální kanály pro nejnovější aktualizace a příležitosti.</p> 
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Pro všechny další informace o Starknet nadaci sledujte aktualizace a návrhy Starknet na [Twitter](https://twitter.com/Starknet). připojte se k našemu [Discordu](http://starknet.io/discord)a přečtěte si [Komunitní fórum.](https://community.starknet.io/)**

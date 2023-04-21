@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* De Starknet prover zal open source zijn onder de Apache 2.0 licentie
+* De zet zal de toegankelijkheid voor ontwikkelaars vergroten, samenwerking binnen de gemeenschap bevorderen en andere voordelen bieden
+* Deze aankondiging volgt op de open-sourcing van Cairo 1.0, Papyrus Full Node, en de nieuwe sequencer van Starknet
 
-### Intro
+### Introductie
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Opvallend nieuws: Starknet Prover zal open source zijn!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Dit is een mijlpaal in de evolutie van Starknet. Ontdek de keuze voor open source de Starknet-prover en verken de voordelen van het Starknet-ecosysteem. Als publiek goed staat de toegankelijkheid voorop, waardoor meer samenwerking en innovatie op het gebied van de technische stack mogelijk is.
 
-### Open Sourcing the Starknet Prover
+### Open het Starknet Prover
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha gelanceerd op Mainnet in november 2021. Vanaf het begin van Starknet werd het overwogen als een netwerk dat eigendom zou zijn van de gemeenschap en laat het toe om te profiteren van de kracht van STARK-schaaling. Een jaar na het lanceren op Mainnet was de tijd rijp om de hele Starknetstack open te zetten.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Elementen die al open source zijn, zijn[Caïro 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), en de nieuwe StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Wanneer de Starknet Prover onder Apache 2.0 wordt geplaatst, zal het open-source proces voltooid zijn. Dit zal gebeuren in de laatste fase van het decentraliseren van Starknet.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Het belang van Open-Sourcing de Starknet Prover
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+Op-sourced STARK software stelt de gemeenschap in staat om het netwerk onafhankelijk te onderhouden en te ontwikkelen, en biedt dus de meest oprechte weg om Starknet als gedecentraliseerd openbaar goed op te bouwen. Het zal de gemeenschap ook meer vrijheid geven om bij te dragen aan de ontwikkeling van de prover, en dus van Starknet. Daarnaast zal open-sourcing van de Starknet Prover meer ogen mogelijk maken om de code te herzien, de kwaliteit ervan te verbeteren, fouten te detecteren en transparantie te bieden.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Kortom, open sourcing van de Starknet-technologiestack betekent meer samenwerking, betere kwaliteit, innovatie en onafhankelijkheid. Al deze waarden kunnen Starknet helpen zijn volledige potentieel te bereiken.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+De codebase waarop we de Starknet Prover zullen bouwen is gebaseerd op de prover die sinds juni 2020 wordt gebruikt. bewijzen van transacties van dApps aangedreven door[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)(zoals Immutable X, Sorare, dYdX en meer). In deze rol heeft het 327 miljoen transacties verwerkt en 95 miljoen NFT's gedolven en ongeveer $824 mrd.
 
 ### Summary
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+We zijn blij om de Starknet Prover aan te kondigen zal open source zijn, beschikbaar onder Apache 2.0. Open-sourcing van de Starknet Prover zal plaatsvinden vlak voordat Starknet klaar is voor volledige decentralisatie. Op deze manier wordt de Starknetstack volledig open sourced, zoals geschikt is voor een gedecentraliseerd, permissief Lyer 2-netwerk.

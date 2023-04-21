@@ -1,11 +1,11 @@
-## I﻿ntroduction
+## Úvod
 
-Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+Starknet je Validity Rollup Layer 2. Poskytuje vysoký výkon, nízké náklady na plyn a zachovává úroveň bezpečnosti Ethereum Layer 1.
 
-Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+Daný sudoku hádanka, ověření řešení je snazší než řešení od nuly. Pokud je naším cílem přesvědčit lidi o prohlášení „tato hádanka byla vyřešena“, spoustu výpočtů můžeme ušetřit tím, že jeden člověk spočítá řešení a poté je šíří a ověřuje ostatní. V této strategii se každý výpočet řešení stává jednorázovou událostí, která nevyžaduje replikaci ze strany společnosti. V podobném duchu se Starknet šupiny Ethereum nahradí těžkým výpočtem L1 zapalovačem (proto levnější!) L1 ověření pomocí průkazů STARK vypočtené mimo řetězec.
 
-## H﻿ow it works
+## Chápu, že to funguje
 
-With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
+S ohledem na výše uvedenou analogii je čas zralý na nějaký jargon. Starknet je nepřípustná validity-Rollup (známá také jako „ZK-Rollup“), která podporuje obecný výpočet a v současné době působí ve výrobě jako síť L2 přes Ethereum. Konečné zabezpečení softwaru Starknet L1 je zajištěno použitím nejbezpečnějšího a nejškálovatelnějšího kryptografického důkazního systému – [STARK](https://starkware.co/stark/).
 
-Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
+Starknet kontrakty jsou (z větší části) napsané v Káhiře – Turing kompletní programovací jazyk navržený pro důkazy STARK.

@@ -1,5 +1,5 @@
 {
-  "title": "STARKs, StarkEx, and StarkNet",
-  "time_to_consume": "3 min read",
-  "short_desc": "TARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps."
+  "title": "STARKs, StarkEx, og StarkNet",
+  "time_to_consume": "3 min. læst",
+  "short_desc": "Tark (Scalable, Transparent ARgument of Knowledge) er et bevis system, der gør det muligt at bevise og verificere beregninger. Det gør det muligt at behandle en stor beregning, generere et bevis for beregningens korrekthed, og derefter kontrollere beviset i meget få trin."
 }

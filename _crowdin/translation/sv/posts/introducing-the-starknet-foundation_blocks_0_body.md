@@ -1,68 +1,68 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* StarkNet Foundation lanseras officiellt
+* Den är dedikerad till att stödja en blomstrande StarkNet
+* Stark tvärvetenskaplig styrelse leder stiftelsen
+* Stiftelsen är oberoende av StarkWare
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)tar ett stort steg mot sin framtida samhällsstyrningsstruktur, med inrättandet av StarkNet Foundation.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+I denna post beskrivs stiftelsens uppdrag, presenterar dess direktörer, och kort diskuterar de erfarenheter och värderingar som de ger till bordet.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+Stiftelsen har inrättats för att uppfylla visionen om Starknets[decentraliseringsförslag](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), som publicerades i juli 2022, och har publicerat sin egen “Hello World” inlägg[här](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### Vidarebefordra Starknets vision
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet är ett tillståndsfritt, decentraliserat lager 2 (L2) Giltighet Rollup (ofta kallad ZK-Rollup), avsett att skala Ethereum samtidigt behålla Ethereums säkerhet och decentralisering. I enlighet med detta uppdrag grundades stiftelsen som en oberoende enhet för att främja den gemensamma tekniken som är StarkNet. Dessutom, som en icke-vinstdrivande enhet med ett smalt uppdrag: att avancera StarkNet som en offentlig nytta för alla, och vidmakthålla den som sådan i åratal framöver.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+Stiftelsen lanserar med 50. % av den ursprungliga Token leverans för att säkerställa att nätverkets resurser är effektivt distribueras mot följande mål: underhåll och säkerhet för StarkNet som en offentlig nyttighet; fortsatt utveckling och utbyggnad av nätverket, samt stöd för en kultur av konstruktivt samarbete mellan utvecklare.
 
-#### **The foundation’s priorities will include:**
+#### **Stiftelsens prioriteringar kommer att innefatta:**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**Främjande av samhället**StarkNet-användare, utvecklare och forskare när de andas liv i StarkNet genom att bygga infrastruktur, verktyg, applikationer och mer.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**Utöka gemenskapen**genom att utbilda om StarkNet och dess teknik, och hjälpa utvecklare att få kompetens att bygga Starknets infrastruktur, liksom dApps som utnyttjar kraften i STARKs.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**Övervaka den fortsatta utvecklingen av nätverket och främja forskning,**som är viktiga delar för att hjälpa nätverket att förverkliga sin vision.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**Vidare StarkNet decentralisering**genom att utveckla StarkNet styrningsmekanismer, och inrätta decentraliserad sekvensering och provning.
 
-### **Introducing the board**
+### **Introducerar tavlan**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+En sjusaledamot styrelse styr stiftelsen. Styrelsemedlemmarna kommer från olika bakgrunder och skapar balans, oberoende och ett tvärvetenskapligt kompetensområde till bordet. Varje medlem har kompetens och erfarenhet som kommer att hjälpa StarkNet att uppnå sin potential som en långvarig gemensam nytta. I sitt ”[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” inlägg ger de sin inblick i vad som motiverar dem att engagera sig i StarkNet. De presenteras i alfabetisk ordning enligt förnamn.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)Tidigare vice Chief Technology Officer i USA; tidigare vice VD och Chief Policy Officer på ICANN, det oberoende organ som hanterar infrastrukturen på Internet.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)**Matematiker och datavetare; StarkWare VD och medgrundare; Meduppfinnare av protokollen STARK, FRI och Zerocash och en grundande forskare av Zcash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockkedja tankeledare och visselblåsare, känd för att exponera systematiska brister i högprofilerade kryptotillgångsprojekt; rådgivare för kryptovaluta till Human Rights Foundation, tidigare investeringsdirektör på Arcane Assets.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Prisbelönt advokat, expert på programvara med öppen källkod och författare till ”Open Source for Business”, General Partner på OSS Capital och legal rådgivare till StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Matematiker och datavetare; kärnbidragsgivare till matematik som ligger till grund för STARK-bevis; Biträdande professor vid University of Toronto; Vetenskaplig rådgivare till StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stan<unk> czak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockkedje-utvecklare som har byggt kärnkomponenter i Ethereum; Grundare i Nederländerna, ett av de största teamen som bygger på Ethereum och StarkNet.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)Entreprenör; StarkWare VD och medgrundare. Innan StarkWare grundade han företag som utvecklar en rad tekniska produkter, inklusive optiska fibrer, datavisualiseringsverktyg etc.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+Bakgrunden till dessa medlemmar ger en utmärkt verktygslåda av kompetens samt betydande erfarenhet som rustar stiftelsen väl för framtiden.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+Andrew och Heather har starka meriter från offentliga projekt med öppen källkod. Heather är känd för att förespråka fri och öppen programvara licensiering. Andrew var en central figur i många år i ICANN, organisationen som hjälpte till att forma internet, under dess tidiga år, som en decentraliserad gemenskap bra. Det gjorde man genom nedifrån, konsensusbaserade processer. Bara en sådan process behövs för att StarkNet ska leverera på målen i Web3.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+Styrelsen speglar också betydande kryptoerfarenhet i många kedjor. Tomasz har arbetat med att utveckla kärnkomponenterna i Ethereum och StarkNet. Eli var en grundande forskare på Zcash innan banbrytande tekniken bakom StarkNet, och Andrew sitter idag i styrelsen för Electric Coin Company, som bygger och stöder Zcash teknik.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+Styrelsen har affärs- och VD-erfarenhet, från Tomasz och Uri, och den har expertis inom datavetenskap och matematik – och specifikt STARKs – från Shubhangi och Eli. Tre styrelseledamöter, Tomasz, Uri och Eli har varit djupt involverade i byggandet av StarkNet.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+Alla medlemmar står upp för vad de tror. Eric gick så långt som att lämna en senior roll på Nasdaq-ägda Cinnober då den hotade att begränsa hans självständighet till posten hans åsikter angående crypto. Som en stiftelse populariserande teknik som levererar[integritet till beräkning,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)är det lämpligt att sätta ihop en styrelse med sådan integritet.
 
-### **An Independent Foundation**
+### **En oberoende stiftelse**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+Stiftelsen är en oberoende enhet som kommer att stödja de som bygger, använder och upprätthåller ett allmänt bästa, nämligen StarkNet-protokollet. Som med Internet, Bitcoin, och Ethereum, StarkNet är en delad teknik som är byggd som ett decentraliserat censurskyddsnätverk där vem som helst kan delta och utvecklas fritt och på ett tillståndsfritt sätt, utan att behöva lita på någon tredje part.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+Den nybildade stiftelsen är en icke-vinstdrivande enhet som bildades särskilt för att främja och upprätthålla StarkNet som en allmännyttig nyttighet. Stiftelsen, tillsammans med en inkluderande uppsättning oberoende utvecklare, nystartade företag, användare och allmänheten i stort kommer alltid att vara fri att använda och förbättra StarkNet för sina egna ändamål och för den som vill säkert interagera och transaktionera genom det.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+Stiftelsen är oberoende, och fri att ta de positioner som den väljer när det gäller StarkNet. Beslut ska fattas med enkel majoritet, eller med fem av sju i särskilda fall som att ta bort och utse stiftelsens styrelsemedlemmar. I beslut där styrelsemedlemmarnas externa ställning utgör en intressekonflikt ska stiftelsen kräva att sådana ledamöter återkallar sig själva från rösterna.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+Stiftelsen har betydande medel för att utföra sitt uppdrag: 5.01 miljarder StarkNet Tokens har tilldelats stiftelsen, det vill säga 50. % av den ursprungliga Token leverans av 10 miljarder Tokens (se[del 3 i vårt styrningsförslag](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)för mer information).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+Det finns många detaljer att besluta som kommer att forma den framtida riktningen för StarkNet. Lyckligtvis ger inrättandet av stiftelsen fler röster från ett växande samhälle. StarkWare är fortfarande en engagerad del av denna gemenskap och vi är glada att välkomna det större StarkNet ekosystem att ta mer ägande av nätverkets framtid. Starknets resa ligger nu i händerna på en decentraliserad besättning, och stiftelsen kommer att spela en viktig roll i att bidra till att säkerställa att det är en smidig en. Alla på StarkWare önskar det nya organet stor framgång i sitt uppdrag.

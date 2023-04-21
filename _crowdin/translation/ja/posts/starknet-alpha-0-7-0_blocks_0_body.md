@@ -1,49 +1,49 @@
 ### TL;DR
 
-* StarkNet Alpha 0.7.0 released to Goerli; packed with improvements
-* Contracts can now be upgraded using the Proxy Upgrade Pattern
-* Contracts can now emit Events
-* Support for the long-awaited Block Number and Block Timestamp system calls
+* StarkNet Alpha 0.7.0 がGoerliにリリースされました。改善点が満載です
+* Proxy Upgrade Pattern を使用して契約をアップグレードできるようになりました。
+* 契約はイベントを発行できるようになりました
+* 待望のブロック番号とブロックタイムスタンプシステムコールのサポート
 
-### Intro
+### はじめに
 
-We are happy to release Alpha 0.7.0, a version packed with new features and improvements. One of the best stimulants to StarkNet over the last few months has been the increased involvement of the community in shaping StarkNet’s future. This version addresses some of the community’s burning needs.
+Alpha 0.7.0は新機能と改善点が満載のバージョンです。 過去数ヶ月間のStarkNetへの最高の刺激の一つは、StarkNetの将来を形作るためのコミュニティの関与の増加でした。 このバージョンはコミュニティの燃焼ニーズのいくつかに対応しています。
 
-#### Changes to Naming Convention
+#### 命名条約の変更
 
-The observant reader might have noticed that the previous StarkNet Alpha release was named Alpha 4, whereas we are now releasing Alpha 0.7.0. We decided to omit the dedicated Alpha version number and rely instead only on the associated cairo-lang version.
+観測的な読者は、以前のStarkNet AlphaリリースがAlpha 4と呼ばれているのに対し、Alpha 0.7.0をリリースしていることに気づいたかもしれません。 私たちは、専用のアルファ版番号を省略し、代わりに関連付けられたカイロラング版に依存することにしました。
 
-### New Features
+### 新機能
 
-#### Contract Upgradeability
+#### 契約のアップグレード
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. The Proxy pattern is the common method to enable contract upgrades over Ethereum. Alpha 0.7.0 enables this pattern over StarkNet.
+OpenZeppelinの[Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)が StarkNet でのコントラクトアップグレードで完全にサポートされるようになりました。 Proxy パターンは、Ethereum上での契約のアップグレードを可能にする一般的な方法です。 Alpha 0.7.0 では、StarkNet 上でこのパターンを有効にします。
 
 We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
 
-#### Block Number and Block Timestamp
+#### ブロック番号とブロックのタイムスタンプ
 
-Alpha 0.7.0 adds two new system calls that many devs have been asking for. These calls allow a contract to access the block number and the block timestamp. The block number returns the number of the current executed block. The block timestamp returns the timestamp given by the Sequencer at the creation of the block.
+Alpha 0.7.0 では、多くの開発者が求めてきた2つの新しいシステムコールが追加されました。 これらの呼び出しにより、コントラクトはブロック番号とブロックタイムスタンプにアクセスできます。 ブロック番号は、現在実行されているブロックの数を返します。 ブロックタイムスタンプは、ブロックの作成時にシーケンサーから与えられたタイムスタンプを返します。
 
-You can see an example of how to use these features in the [tutorial](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
+これらの機能の使用方法の例は、[チュートリアル](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp) で見ることができます。
 
-#### Events
+#### イベント
 
-Surprise! A feature that was planned for a future version has sneaked its way into this earlier one.
+びっくり! 将来のバージョンに向けて計画された機能は、この前のバージョンにその方法を忍び込ませています。
 
-StarkNet contracts now support defining and emitting events, allowing them to expose execution information for off-chain applications to consume. Ethereum developers will find the semantics and syntax very similar to Solidity. You can read the [documentation](https://starknet.io/documentation/events/), or follow the [tutorial](https://starknet.io/docs/hello_starknet/events.html), that explains this feature.
+StarkNet契約は、イベントの定義と発生をサポートし、オフチェーンアプリケーションが消費する実行情報を公開できるようになりました。 Ethereum開発者は、Solidityと非常によく似たセマンティクスと構文を見つけるでしょう。 [ドキュメント](https://starknet.io/documentation/events/)を読むか、[チュートリアル](https://starknet.io/docs/hello_starknet/events.html)に従ってこの機能を説明できます。
 
-#### Removed %builtins Directive
+#### %builtins Directive を削除しました
 
-The %builtin directive is no longer needed in StarkNet contracts. This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). It significantly simplifies the usability of this extensibility pattern.
+StarkNet契約で %builtin ディレクティブはもう必要ありません。 この変更は、[StarkNet Shamans](https://community.starknet.io/t/contract-extensibility-pattern/210)の[コントラクト拡張パターン](https://community.starknet.io/) についてのコミュニティディスカッションに続いたものです。 この拡張性パターンの使いやすさを大幅に簡素化します。
 
-For example, the following contract will be changed from:
+たとえば、次のコントラクトが変更されます。
 
 ```
 %lang starknet
 
-# This is the "%builtins" directive.
-# It is not needed anymore.
+# これは "%builtins" ディレクティブです。
+# それはもう必要ありません。
 %builtins range_check
 
 @view
@@ -52,7 +52,7 @@ return (res=x + y)
 end
 ```
 
-To this:
+以下に説明します:
 
 ```
 %lang starknet
@@ -62,50 +62,50 @@ return (res=x + y)
 end
 ```
 
-You can check out the [ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token) standard contracts, which use the new pattern.
+新しいパターンを使用する[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)標準コントラクトを確認できます。
 
-#### External Functions Support Arrays of Structs
+#### 外部関数は、構造の配列をサポートします。
 
-Alpha 0.7.0 supports passing and returning arrays of structs in external functions. This additional functionality allows Account Contracts to better support [multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
+Alpha 0.7.0 は外部関数での構造体の配列の渡しと返却をサポートしています。 この追加機能により、アカウント契約は[マルチコール](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751)をより良くサポートできるようになります。
 
-Multicall is a powerful feature of Account Abstraction that allows an account to make multiple calls in a single transaction. An obvious use-case is that of creating a **single transaction** that calls allowance and then transferFrom.
+Multicall は Account Abstraction の強力な機能で、1 つのトランザクションで複数の呼び出しを行うことができます。 明らかなユースケースは、許容値を呼び出す**単一トランザクション**を作成し、次にtransferFromを作成することです。
 
-We look forward to seeing what the community does with it.
+コミュニティが何をしているのか楽しみにしています。
 
-#### Improvements to StarkNet CLI
+#### StarkNet CLI の改善
 
-**Support for Pending Blocks**
+**ペンディングブロックのサポート**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. This version includes support for querying those blocks via the StarkNet CLI.
+[ペンディングブロック](https://starknet.io/documentation/block-structure-and-hash/#pending_block)は、最後のマイナーバージョン (v0.6.2) で[](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)を導入し、トランザクションの確認を高速化しました。 このバージョンには、StarkNet CLI 経由でこれらのブロックをクエリするサポートが含まれています。
 
-To use it, in every CLI command that takes block_number as an argument (contract_call/get_block/get_code/get_storage_at), we can query the StarkNet with respect to the pending block by specifying block_number=pending.
+これを使用するには、すべての CLI コマンドで block_number を引数とします (contract_call/get_block/get_code/get_storage_at) block_number=pending を指定することで、StarkNet に保留中のブロックを照会できます。
 
-**Support for Account Contracts**
+**アカウント契約のサポート**
 
-StarkNet uses account abstraction, i.e., all accounts are implemented as smart contracts. The first implementations of account contracts were done by [Argent](https://github.com/argentlabs/argent-contracts-starknet) and [OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), but we expect many more to come.
+StarkNetはアカウント抽象化を使用します。すなわち、すべてのアカウントはスマートコントラクトとして実装されます。 口座契約の最初の実装は、[Argent](https://github.com/argentlabs/argent-contracts-starknet)と[OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo)によって行われましたが、さらに多くの人が来ることを期待しています。
 
-In StarkNet, all transactions must go through an account contract, and the CLI now allows interaction with StarkNet Alpha directly via account contracts. See the [tutorial](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account) on how to set it up.
+StarkNetでは、すべてのトランザクションがアカウント契約を通過する必要があり、CLIはアカウント契約を通じてStarkNet Alphaと直接やり取りを可能にします。 設定方法については、[チュートリアル](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account)を参照してください。
 
-Similar functionality was also added to [StarkNet.py](https://github.com/software-mansion/starknet.py/) and to [Nile](https://github.com/OpenZeppelin/nile) in the last month.
+先月の[StarkNet.py](https://github.com/software-mansion/starknet.py/)と[ナイル](https://github.com/OpenZeppelin/nile)にも同様の機能が追加されました。
 
-#### L1<>L2 Messaging in the Testing Framework
+#### テストフレームワークの L1<>L2 メッセージ
 
-Alpha 0.7.0 introduces the Postman. The Postman enables developers to use the testing framework to test more complicated flows.
+Alpha 0.7.0 ではPostman が導入されます。 Postmanにより、開発者はテストフレームワークを使用してより複雑なフローをテストすることができます。
 
-At a high level — it mocks the StarkNet Sequencer’s responsibility of passing messages from L1 to L2 and L2 to L1. It makes sure messages that are sent via the Solidity messaging contract will appear at the destination StarkNet contract and messages sent from a StarkNet contract will appear in the Solidity messaging contract.
+高いレベルでは、StarkNet SequencerのL1からL2、L2へのメッセージの受け渡し責任を嘲笑します。 Solidityメッセージングコントラクトを介して送信されるメッセージが宛先StarkNetコントラクトに表示され、StarkNetコントラクトから送信されるメッセージがSolidityメッセージングコントラクトに表示されます。
 
-#### And More Features
+#### その他の機能
 
-Alpha 0.7.0 provides many more features and changes, like the addition of an efficient square root function to the math common library. A full list appears in the [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
+Alpha 0.7.0 は、数学共通ライブラリに効率的な平方根関数を追加するなど、より多くの機能と変更を提供します。 [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0) に完全なリストが表示されます。
 
-### Next Up?
+### 次へ？
 
-Initial [Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29) support will be released in a matter of weeks, as a sub-version of StarkNet.
+初期の[手数料メカニズム](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)のサポートは、StarkNetのサブバージョンとして数週間でリリースされます。
 
-### More Information?
+### 詳しい情報は？
 
-[starknet.io](https://starknet.io/): for all StarkNet information, tutorials and updates.
+[starknet.io](https://starknet.io/): すべての StarkNet 情報、チュートリアル、アップデート用。
 
-[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): join to get answers to your questions, get dev support and become a part of the community.
+[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): あなたの質問への回答を得るために参加し、開発者のサポートを受けてコミュニティの一員になりましょう。
 
-[StarkNet Shamans](https://community.starknet.io/): join to follow (and participate!) in StarkNet research discussions.
+[StarkNet Shamans](https://community.starknet.io/): StarkNet の研究に関する議論に参加(そして参加)しましょう。

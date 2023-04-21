@@ -1,6 +1,6 @@
 Wir freuen uns, den nächsten Schritt im Dezentralisierungsprozess von StarkNet ankündigen zu können – für Protokolländerungen zu stimmen.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+In den letzten Wochen hat StarkNet bedeutende Schritte zur weiteren Dezentralisierung unternommen, indem es[die StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)gegründet hat, startet den[STRK Token auf Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c)und von[Open-Sourcing Kairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
 Dieser Beitrag wird sich auf den nächsten Schritt ausdehnen, nämlich die erste Phase der StarkNet-Regierung, die sich in den kommenden Monaten erstrecken wird.
 
@@ -12,103 +12,103 @@ Dieser Beitrag wird sich auf den nächsten Schritt ausdehnen, nämlich die erste
   — Delegierte ausgewählt von Kennzeicheninhabern, die ihre Stimmrechte lieber delegieren möchten\
   — Delegierte, die von der StarkNet Stiftung ausgewählt wurden, um einige ihrer Stimmrechte auszuüben:\
   — Ein professioneller Baumeisterrat. von der StarkNet Stiftung gesetzt
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Alle sind eingeladen, sich als Delegierter in StarkNet’s Governance zu nominieren
+* Diskussionen werden im[StarkNet Community Forum](https://community.starknet.io/)
 
-### Background
+### Hintergrund
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Zwei Prozesse werden gleichzeitig weiterentwickelt, um die Vision von StarkNet zu einem zensurresistenten öffentlichen Netzwerk zu erfüllen: (i) Dezentralisierung von[StarkNets Systemkomponenten](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e. ., Sequenzer und Beweise, und (ii) Umsetzung von Governance-Mechanismen in Bezug auf Protokolländerungen.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Die Schaffung von Mechanismen zur Qualitätskontrolle, die es einer offenen Gemeinschaft ermöglichen, die Verbesserung der Protokolle zu verwalten, ist eine ernste Herausforderung. Es ist ein schrittweiser und Sondierungsprozess, der eine breite Zusammenarbeit der Gemeinschaft erfordert.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+Um die ersten Phasen der StarkNet-Regierung zu planen und zu orchestrieren, hat die StarkNet-Stiftung einen Governance-Ausschuss eingerichtet. Die Stiftung wird in einem separaten Posten weitere Details über den Umfang und die Mission des Ausschusses veröffentlichen. Die Mitglieder des Komitees sind Deven Matthews (Nethermind), Manor Bareli (StarkWare) und Sylve Chevet (Briq). Unten ist der Plan für die erste Phase von StarkNet Governance, von den Ausschussmitgliedern zusammen mit verschiedenen Mitwirkenden des Ökosystems StarkNet formuliert und vom Stiftungsrat gebilligt.
 
-### Starknet’s governance first phase plan
+### Starknets Plan für die erste Phase der Regierungsführung
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+Die erste Phase von StarkNet Governance wurde gestartet. Von nun an werden Community-Mitglieder über einen weiteren Kanal an der Gestaltung von StarkNet teilnehmen können, nämlich über Protokolländerungen. Dies ist erst die erste Stufe von StarkNet’s Governance; da sich StarkNet auf die nächsten Phasen zubewegt, wird sich die Palette der Governance-Mechanismen und Teilnehmer erweitern. Hier sind die Details der ersten**Phase**:
 
-#### Voting subject
+#### Abstimmungsgegenstand
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Vorgeschlagene Upgrades auf das StarkNet-Protokoll. Alle Upgrades werden zu diesem Zeitpunkt von der Foundation vorgeschlagen. Die Vorschläge spiegeln Diskussionen, Ideen und Feedback wider, die im StarkNet Community Forum vorgebracht wurden.
 
-#### Voting type
+#### Abstimmungsart
 
-Off-chain signal vote (Via Snapshot)
+Off-Ketten-Signal (Via Snapshot)
 
-#### Voting process
+#### Abstimmungsprozess
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Die Foundation wird eine aktualisierte Version von StarkNet für Goerli bereitstellen.
+2. Die Wähler werden einen Zeitraum von 6 Tagen haben, um die aktualisierte Version zu prüfen, wie sie auf Goerli läuft. Während dieser Zeit können sie darüber abstimmen, ob sie dem Einsatz von Mainnet zustimmen sollen.
+3. Wenn ein Vorschlag von den Wählern angenommen wird, kommt es dann zu einer Verzögerung von 24 Stunden vor der Anwendung des Upgrades auf Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Ankündigungen für diese Updates werden auf dem[Twitter-Konto der StarkNet Foundation](https://twitter.com/StarkNetFndn)gemacht , sowie im[StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Grenzwert und Quorum erforderlich
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Grenzwert ist eine einfache Mehrheit (d.h. die Schwelle beträgt 50% der abgegebenen Stimmen)
+* Keine erforderliche Beschlussfähigkeit bedeutet, dass es keine Mindestteilnehmerzahl für eine gültige Abstimmung gibt
 
-### First phase voting participants
+### Abstimmungsteilnehmer der ersten Phase
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Hier ist die Liste derer, die in der Lage sein werden, an der ersten Phase des Governance-Prozesses teilzunehmen:
 
-#### Token holders
+#### Token-Halter
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* In der ersten Phase der Regierungsführung von StarkNet die meisten Tokeninhaber sind frühe Mitwirkende und Investoren, die das Netzwerk in seinen frühen Phasen aufgebaut und unterstützt haben ([lesen Sie diesen Beitrag für weitere Details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Im Laufe der Zeit wird das Token an Entwickler und andere Personen verteilt, die Arbeit leisten, um das Netzwerk zu pflegen und zu aktualisieren. Als solche werden diese Parteien in der Lage sein, das Netzwerk zu sichern, es zu nutzen und es zu betreiben und sich an seiner Verwaltung zu beteiligen.
 
-#### Delegates
+#### Delegierte
 
 **Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+Die Delegation der Wahlmacht ermöglicht es Tokeninhabern, ihr Governance-Mandat an teilnehmende, informierte und professionelle Community-Mitglieder zu delegieren. Danke:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+* Die Inhaber von Kennzeichen können sich für eine Beteiligung an der Entscheidungsfindung durch repräsentative statt direkte Demokratie entscheiden.
+* Engagierte, begabte Mitglieder der Gemeinschaft können eine bedeutende Rolle bei der Regierungsführung übernehmen, wenn sie ihren Ruf verdienen. Um sich als Delegierter zu präsentieren, brauchen Sie keine eigenen Tokens zu besitzen.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+**Verantwortlichkeiten**:\
+Führe für jede Entscheidung einen ernsthaften Lernprozess aus die zu fundierten, unabhängigen Entscheidungen führen wird, die StarkNet und seiner langfristigen Vision zugute kommen.
 
 **Operation**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Um den Delegationsmechanismus erfolgreich zu gestalten, ist vor allem ein Pool von Qualitätsdelegaten erforderlich.
+* Der Weg zum Delegierten ist unzulässig – es gibt keine Voraussetzungen –, aber für diejenigen, die es wünschen, ein Abschnitt wurde im Forum erstellt, in dem potentielle Delegierte Profile posten können ([in diesem Link](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Spielsteininhaber können beliebig jede Ethereum L1 Adresse wählen, die sie ihr Stimmrecht übertragen möchten.
+* Für weitere Details lesen Sie den[Beitrag im StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+#### Der StarkNet-Bauerrat
 
-A professional committee, appointed by the Foundation.
+Ein professioneller Ausschuss, der von der Stiftung eingesetzt wurde.
 
 **Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+Implementierung von Governance-Mechanismen, die auf Community-Engagement und professionellem Ruf beruhen und nicht nur auf der Basis von Token-Holding.
 
-**Responsibilities**:
+**Verantwortlichkeiten**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* Durchführung eines ernsthaften Lern- und Diskussionsprozesses für jede Entscheidung, was zu begründeten Entscheidungen zum Nutzen von StarkNet und seiner langfristigen Vision führen wird
+* In der ersten Phase aktiv an Diskussionen und Abstimmungen teilnehmen
+* Sicherstellen, dass ihre Diskussionen und Entscheidungsprozesse transparent sind
+* Für die Community zugänglich zu sein durch offene Diskussionen im StarkNet-Community-Forum
 
 **Operation**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 17 von der Stiftung ernannte Ausschussmitglieder
+* Mandatsperiode — StarkNet Governance erste Phase (mehrere Monate)
+* Für weitere Details lesen Sie den[Beitrag im StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+### Stimmrecht in der ersten Phase
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+Während der ersten Phase der StarkNet-Regierungsführung wird StarkWare nicht an den Abstimmungen teilnehmen. Die StarkNet Stiftung wird die Stimmrechte an den Baumeisterrat und an mehrere Delegierte aus dem Pool delegieren und nicht direkt abstimmen.
 
-The voting power distribution in the **first phase** will be:
+Die Stimmenverteilung in der ersten**Phase**lautet:
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* Investoren: 33,3%
+* StarkNets frühe Mitwirkende (ohne StarkWare): 33,3%
+* Vertreter der Stiftung: 33,3%\
+  — StarkNet Baumeisterrat: 23,3%\
+  — Delegierte stimmen im Namen der Stiftung ab: 10%
 
-### First vote — StarkNet’s 0.11 version
+### Erste Abstimmung — StarkNets Version 0.11
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+Die erste Abstimmung findet in den kommenden Wochen statt. Bei der Abstimmung geht es darum, ob StarkNet Alpha auf Version 0.11 aktualisiert werden soll.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+Die Abstimmung wird kurz nach der Veröffentlichung von Goerli beginnen und über die offiziellen Kanäle bekanntgegeben werden:[das Twitter-Konto der StarkNet Foundation](https://twitter.com/StarkNetFndn)und[das StarkNet Community Forum](https://community.starknet.io/). Bleib dran!

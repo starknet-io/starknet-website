@@ -1,3 +1,3 @@
-## What are bridges?
+## Hvad er broer?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Broer giver brugerne mulighed for at flytte aktiver mellem krypto økosystemer, såsom blockchains eller exchanges.

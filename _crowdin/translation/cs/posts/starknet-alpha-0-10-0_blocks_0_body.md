@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Zlepšení Abstrakce účtu v duchu EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Validate – Provést oddělení
+2. Jedinečnost transakcí je nyní zajištěna v protokolu (jednou)
 
-* The fee mechanism is extended to include:
+* Mechanismus poplatků se rozšiřuje na tyto oblasti:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 zprávy
+2. Vyhlásit transakce
 
-* Few Cairo syntax changes
+* Jen málo změn v Káhiře
 
-### Introduction
+### Úvod
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Jsme rádi, že jsme představili Alfa StarkNet 0.10.0. Tato verze je dalším krokem ke skalování Etherea, aniž by byla ohrožena bezpečnost a decentralizace.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Tento příspěvek stručně popisuje hlavní vlastnosti této verze. Pro úplný seznam změn se podívejte na[poznámky k vydání](https://github.com/starkware-libs/cairo-lang/releases). Podrobnější informace naleznete v[dokumentaci](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Změny Abstrakce účtu
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Postupujeme kupředu s abstrakcí účtu[StarkNet.](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Tato verze zavádí změny inspirované[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### Ověření/vykonání oddělení
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Až dosud byla funkce účtu \_\_execute\_\_ odpovědná za ověření i provedení transakce. V 0.10.0 rozbijeme tuto spojovací zařízení a do účtů zavedeme samostatnou funkci \_\_\_validate\_\_. Po obdržení transakce smlouva o účtu nejprve zavolá \_\_validate\_\_\_, a pokud uspějete, pokračujte do \_\_execute\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Potvrdit/spustit oddělení poskytuje rozlišení na úrovni protokolu mezi neplatnými a (dosud platnými) transakcemi. Díky tomu budou následníci moci účtovat poplatky za provedení platné transakce bez ohledu na to, zda byla zrušena či nikoli.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+Ve verzi 0.10.0 je přidáno nonce pole pro vynucení jedinečnosti transakcí na úrovni protokolu. Dosud byly na úrovni smlouvy o účtu vyřízeny, což znamenalo, že transakce se stejnou hash mohla být provedena dvakrát teoreticky.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Podobně jako v případě Ethereum každý kontrakt nyní obsahuje žádný obchod, který počítá počet provedených obchodů z tohoto účtu. Smlouvy o účtu budou přijímat pouze transakce s odpovídajícími žádnými, tj. pokud je aktuální nonce účtu X, pak bude přijímat pouze transakce s nonce X.
 
-#### New Transaction Version
+#### Nová verze transakce
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+Chcete-li povolit zpětnou kompatibilitu, zavedeme tyto dvě změny prostřednictvím nové transakce —[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Tyto změny se budou vztahovat pouze na novou verzi a starší účty budou moci provádět transakce s verzí 0.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Poznámka – transakce v0 je nyní zastaralá a bude odstraněna ve StarkNet Alpha v0.11.0. Ujistěte se, že jste aktualizovali pro použití nové verze transakce.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+Pro podrobnější informace o verzi transakce si prosím přečtěte[dokumentaci](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### Mechanismus poplatků
 
-The new version allows to include fees for two required components:
+Nová verze umožňuje zahrnout poplatky za dva požadované komponenty:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2 zpráva](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Vyhlásit transakci](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Tyto poplatky nebudou v této verzi povinné a budou vynuceny pouze spustit StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### Změny syntaxe Káhiry
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+Ve prospěch postupného postupu při aktualizaci Káhiry[Káhira 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU)obsahuje tato verze několik změn syntaxe.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Pro minimalizaci nepříjemností bude vydání verze obsahovat[migrační skript](https://www.youtube.com/watch?v=kXs59zaQrsc), který automaticky aplikuje výše uvedené změny. Více informací[naleznete zde](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Co další?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Za několik týdnů plánujeme zavést paralelizaci do sekvenčního nástroje umožňující rychlejší produkci bloků (V0.10.1)
+* Brzy vyplníme poslední část, která musí být zahrnuta do platby poplatku – nasazení účtu
+* Káhira 1.0 release! Více informací o tom v nadcházejícím příspěvku.
 
-### How Can I Be More Engaged?
+### Jak se mohu více zapojit?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Přejděte na[starknet.io](https://starknet.io/)pro všechny informace od StarkNet, dokumentaci, návody a aktualizace.
+* Připojte se k[StarkNet Discord](http://starknet.io/discord)pro podporu vývojáře, ekosystémová oznámení a staňte se součástí komunity.
+* Navštivte[Fórum StarkNet](http://community.starknet.io/)abyste zůstali aktuální a účastnili se diskusí o výzkumu StarkNet.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Jsme vždy rádi, že obdržíme zpětnou vazbu na naši[dokumentaci](https://docs.starknet.io/)!

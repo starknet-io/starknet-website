@@ -1,97 +1,97 @@
 ### TL;DR
 
-* Alpha is live on Mainnet
-* It supports general computation and composability
-* Fast-growing community, developing tooling, and applications
-* Additional features to be rolled out on an ongoing basis in the coming weeks
-* Disclaimer: this is an Alpha version (read the fine print below)
+* Alfa jest żywa w Mainnet
+* Wspiera ogólne obliczanie i kompozycja
+* Szybko rozwijająca się społeczność, opracowywanie narzędzi i aplikacji
+* Dodatkowe elementy, które należy wprowadzić na bieżąco w nadchodzących tygodniach
+* Zastrzeżenie: jest to wersja Alfa (przeczytaj drobny wydruk poniżej)
 
-### Introduction
+### Wprowadzanie
 
-StarkNet Alpha is launching today on Ethereum Mainnet!
+StarkNet Alpha uruchamia się dzisiaj na Ethereum Mainnet!
 
-StarkNet is a permissionless decentralized Rollup operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation, without compromising Ethereum’s composability and security, thanks to its reliance on the safest and most scalable cryptographic proof system — [STARK](https://starkware.co/stark/). StarkNet is built on the [Cairo](https://starkware.co/cairo/) programming language, the first production-grade Turing complete von-Neumann verifier on Ethereum. Both Cairo and STARK were developed in-house by StarkWare and have powered all our production-grade applications, which have settled over 50M txs and $250B since Summer 2020.
+StarkNet to zdecentralizowany rollup działający jako sieć L2 przez Ethereum. StarkNet umożliwia dApp osiągnięcie nieograniczonej skali dla jego obliczeń, bez narażania na szwank kompozycji i bezpieczeństwa Ethereum, dzięki jego poleganiu na najbezpieczniejszym i najbardziej skalowalnym systemie odpornym na kryptografię —[STARK](https://starkware.co/stark/). StarkNet jest zbudowany na[Kair](https://starkware.co/cairo/)języku programowania, pierwszym kompletnym weryfikatorem von-Neumann na Ethereum. Zarówno Kair, jak i STARK zostały opracowane przez StarkWare i napędzały wszystkie nasze aplikacje klasy produkcyjnej. który od lata 2020 r. dokonał rozliczenia ponad 50 mln ton txów i 250 mld USD.
 
-Among other features, StarkNet Alpha enables general computation smart contracts that support composability, both with other StarkNet contracts and via L1<>L2 messaging with L1 contracts. StarkNet Alpha operates in a Rollup mode, meaning all the state diff data is sent on-chain.
+Wśród innych elementów StarkNet Alpha umożliwia ogólne obliczanie inteligentnych kontraktów, które obsługują kompozycję, zarówno z innymi kontraktami StarkNet, jak i z wykorzystaniem komunikatów L1<>L2 z kontraktami L1. StarkNet Alpha działa w trybie Rollup, co oznacza, że wszystkie dane różnicy stanów są wysyłane w łańcuchu.
 
-Back in January, we shared the StarkNet [roadmap](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880). In June, StarkNet Alpha went live on a public testnet, and has been updated with new features on a rolling basis. We are delighted to be ahead of schedule, thanks, in part, to our reliance on our production-grade battle-hardened STARK/Cairo software stack.
+Już w styczniu udostępniliśmy mapę drogową StarkNet[](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880). W czerwcu StarkNet Alpha działała w publicznej sieci testowej i została zaktualizowana o nowe funkcje na bieżąco. Cieszymy się, że wyprzedzamy harmonogram, częściowo dziękujemy za poleganie na naszym stosie oprogramowania STARK/Kaira pod względem jakości produkcyjnej.
 
-### How Should you Treat StarkNet Alpha?
+### Jak należy traktować StarkNet Alpha?
 
-First, with great care, as the “Alpha” label is there for a reason. Expect changes, fixes, and improvements to come. StarkNet Alpha has yet to be audited, and we may delay such an audit till the network matures some more (read the disclaimer at the end of this post for more information).
+Po pierwsze, z wielką ostrożnością, jak znak "Alfa" jest tam z powodu. Oczekiwanie na zmiany, poprawki i ulepszenia. StarkNet Alpha nie została jeszcze skontrolowana, i możemy opóźnić taki audyt do czasu, gdy sieć dojdzie do jeszcze większej dojrzałości (aby uzyskać więcej informacji przeczytaj zastrzeżenie na końcu tego stanowiska).
 
-Generally, we follow the cautious and sensible path defined by our Optimistic Rollup colleagues, namely, Arbitrum and Optimism: launch the network with a single sequencer, and whitelist applications in order to ensure their developers understand the risks involved. We continue to be fully committed to a complete decentralization of StarkNet.
+Ogólnie rzecz biorąc, podążamy ostrożną i rozsądną ścieżką określoną przez naszych optymistycznych kolegów z Rollup, a mianowicie: Arbitrum i Optymalizacja: uruchom sieć za pomocą jednej aplikacji sekwencyjnej i białej listy w celu zapewnienia, aby ich deweloperzy zrozumieli związane z tym zagrożenia. Nadal jesteśmy w pełni zaangażowani w całkowitą decentralizację StarkNet.
 
-And how should you treat StarkNet Alpha’s economics? The Alpha will start out with no transaction fees. The next upgrade, only a few weeks away, will introduce a fee mechanism — we will share more details in a separate post.
+I jak należy traktować ekonomię StarkNet Alfa? Alfa rozpocznie się bez opłat transakcyjnych. Następna aktualizacja, zaledwie kilka tygodni, wprowadzi mechanizm opłat. Będziemy udostępniać więcej szczegółów na osobnym stanowisku.
 
-### Start Building
+### Rozpocznij budynek
 
-We invite you to start writing your own applications over StarkNet by either checking the (new!) [website](http://starknet.io/), or jumping directly to the [tutorial](https://starknet.io/docs/).
+Zapraszamy Cię do pisania własnych aplikacji przez StarkNet poprzez sprawdzenie (nowej!) [strona](http://starknet.io/)lub skocz bezpośrednio do[samouczka](https://starknet.io/docs/).
 
-If you are ready to deploy, please follow this [onboarding process](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu); created to ensure all developers are well aware of the preliminary state of the system.
+Jeśli jesteś gotowy do wdrożenia, wykonaj ten[proces wdrażania](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu); stworzone w celu zapewnienia, aby wszyscy deweloperzy byli dobrze świadomi wstępnego stanu systemu.
 
-### Ecosystem
+### Ekosystem
 
-Over the past couple of months, we have seen amazing growth in the size and activity of the StarkNet community, which congregates on the [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y). Dozens of developers — teams and individuals — across the blockchain ecosystem are contributing to this effort. (See the disclaimer at the end of this post)
+W ciągu ostatnich kilku miesięcy byliśmy świadkami niesamowitego wzrostu wielkości i aktywności społeczności StarkNet, który konsoliduje się na[Discordzie StarkNet](https://discord.gg/uJ9HZTUk2Y). Do tych wysiłków przyczyniają się dziesiątki twórców – zespoły i jednostki – w całym ekosystemie blockchain. (Patrz: zastrzeżenie na końcu tego stanowiska)
 
-#### Developer Tools
+#### Narzędzia deweloperskie
 
-* OpenZeppelin is defining the standard contracts. Their [repo](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts) and [discussions](https://github.com/OpenZeppelin/cairo-contracts/discussions) are worth following
-* The [Warp](https://github.com/NethermindEth/warp) Solidity–>Cairo transpiler, developed by Nethermind
-* Shard Labs’ [HardHat plugin](https://github.com/Shard-Labs/starknet-hardhat-plugin) and [StarkNet Devnet](https://github.com/Shard-Labs/starknet-devnet)
-* Argent is developing tooling, including its joint effort on StarkNet.js, alongside [Sean Han](https://twitter.com/seanjameshan), its creator
+* OpenZeppelin definiuje umowy standardowe. Ich[repozytorium](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts)i[dyskusje](https://github.com/OpenZeppelin/cairo-contracts/discussions)są warte obserwacji
+* [Warp](https://github.com/NethermindEth/warp)Solidity–>transpiler Kaira, opracowany przez Nethermind
+* Odłamek Labs’[wtyczka HardHat](https://github.com/Shard-Labs/starknet-hardhat-plugin)i[Devnet StarkNet](https://github.com/Shard-Labs/starknet-devnet)
+* Argent opracowuje narzędzia, w tym wspólne wysiłki na StarkNet.js, obok[Sean Han](https://twitter.com/seanjameshan), jego twórca
 
-#### Infrastructure
+#### Infrastruktura
 
-**Block explorer**:
+**Eksplorator bloków**:
 
-* [The Voyager](http://voyager.online/) project by Nethermind
-* [Eth.tx](https://ethtx.info/) will offer support analysis and a detailed view of StarkNet transactions
+* [Projekt Voyager](http://voyager.online/)wykonany przez Nethermind
+* [Eth.tx](https://ethtx.info/)zaoferuje analizę wsparcia i szczegółowy widok transakcji StarkNet
 
-**Full nodes**: two efforts underway: one is the Fermion project led by Erigon, the other is the [Pathfinder](https://github.com/eqlabs/pathfinder) project, led by Equilibrium
+**Pełne węzły**: dwa trwające wysiłki: jeden z nich to projekt Fermion prowadzony przez Erigon, drugi to projekt[Pathfinder](https://github.com/eqlabs/pathfinder)prowadzony przez Equilibrium
 
-**Wallets**:
+**Portfele**:
 
-* [ArgentX](https://github.com/argentlabs/argent-x) is a browser extension developed by Argent, already available to devs
-* Torus key management solution is StarkNet ready
-* Ledger is developing a native StarkNet app; to be made available before the end of the year
+* [ArgentX](https://github.com/argentlabs/argent-x)jest rozszerzeniem przeglądarki opracowanym przez Argent, już dostępnym do devs
+* Rozwiązanie zarządzania kluczem Torus jest gotowe do StarkNet
+* Ledger opracowuje natywną aplikację StarkNet; zostanie udostępniona przed końcem roku
 
-**Cairo Audits**: ConsenSys Diligence, Trail of Bits, Peckshield, and ABDK are either conducting Cairo audits already, or about to start soon
+**Audyty Kaira**: ConsenSys Diligence, Ślad Bits, Peckshield i ABDK albo przeprowadzają już audyty Kaira lub wkrótce rozpoczną się
 
-**API Services**: after a StarkNet full node is made available, API services will be offered by Figment, Chainstack, and Infura
+**API Services**: po udostępnieniu pełnego węzła StarkNet usługi API będą oferowane przez Figment, Chainstack i Infurę
 
-**Indexer**: we will be working on integrating TheGraph to work with StarkNet, together with the Figment team
+**Indekser**: będziemy pracować nad integracją teGraph do pracy z StarkNet, wraz z zespołem Figment
 
-### The Road Ahead
+### Droga na przyszłość
 
-In the weeks and months to come, we will upgrade the Alpha with the following capabilities:
+W nadchodzących tygodniach i miesiącach ulepszymy Alfa z następującymi możliwościami:
 
-* Contract upgradability mechanism
-* Fee Mechanism
-* Events
-* Addition of missing syscalls (get_block_number, get_block_timestamp, and more)
-* Skeletal version of Volition
-* And much more …
+* Mechanizm udoskonalania umów
+* Mechanizm opłat
+* Wydarzenia
+* Dodanie brakujących syscalls (get_block_numer, get_block_timestamp, i więcej)
+* Szkieletowa wersja Volition
+* I wiele więcej …
 
-To monitor this effort on an ongoing basis, see the features’ [tentative roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51).
+Aby stale monitorować te wysiłki, zobacz[wstępny plan działania](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51).
 
-Looking further out, we continue to invest heavily in active research on multiple fronts (come join the [Shamans](https://community.starknet.io/) effort):
+Patrząc dalej, nadal intensywnie inwestujemy w aktywne badania na wielu frontach (dołącz do wysiłków[Szamanów](https://community.starknet.io/)):
 
-* Decentralization
-* Scaling
-* Data availability
-* Permissionless incentivization
+* Decentralizacja
+* Skalowanie
+* Dostępność danych
+* Zachęty bez uprawnień
 
-### Call to Action
+### Wezwanie do akcji
 
-* Start writing contracts on the permissionless StarkNet testnet on Goerli
-* Join the [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)
-* Join the community calls
-* Attend the first [StarkNet Ecosystem Summit](https://www.eventbrite.com/e/starknet-ecosystem-summit-2022-tickets-206671880157) (Jan 27–28 2022, Stanford CA)
-* Join the [StarkNet Shamans](https://community.starknet.io/) for a deeper dive into research challenges
+* Zacznij pisać umowy na bezpodstawnej sieci testowej StarkNet na Goerli
+* Dołącz do[Discorda StarkNet](https://discord.gg/uJ9HZTUk2Y)
+* Dołącz do rozmów społecznościowych
+* Weź udział w pierwszym[Szczycie Ekosystemów StarkNet](https://www.eventbrite.com/e/starknet-ecosystem-summit-2022-tickets-206671880157)(Jan 27–28 2022, Stanford CA)
+* Dołącz do[Szamanów StarkNet](https://community.starknet.io/)dla głębszego nurku w wyzwaniach badawczych
 
-### Disclaimer
+### Zastrzeżenie
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. Like all complex software systems, the StarkNet system may contain bugs which, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***StarkNet Alpha jest nowym i złożonym systemem, który nie został w pełni skontrolowany. Podobnie jak wszystkie złożone systemy oprogramowania, system StarkNet może zawierać błędy, które w skrajnych przypadkach mogą doprowadzić do utraty wszystkich Twoich środków. Więc***bieżnika ostrożnie i zapamiętać!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*Ekosystem StarkNet jest dużym i szybko rozwijającym się zbiorem niezależnych zespołów i jednostek, nad którymi StarkWare nie sprawuje nadzoru i nie ponosi odpowiedzialności. Każdy projekt opracowany przez członków ekosystemu może zawierać błędy, które w skrajnych przypadkach mogą doprowadzić do utraty wszystkich funduszy. Ponadto wraz z wprowadzeniem większej liczby inteligentnych kontraktów wzrasta potencjał niezamierzonych szkodliwych błędów, a nawet złośliwych oszustw i wykopów. Tak więc traktuje wszystkie inteligentne kontrakty na StarkNet, traktując inteligentne kontrakty na Ethereum, i używaj tylko tych, których masz uzasadnione powody, aby zaufać jako bezpieczne.*

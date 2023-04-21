@@ -1,3 +1,3 @@
-## What are bridges?
+## Wat zijn bridges?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Bridges staan gebruikers toe om activa te verplaatsen tussen crypto ecosystemen, zoals blockchains of uitwisselingen.

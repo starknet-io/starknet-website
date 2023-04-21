@@ -1,49 +1,49 @@
 ### TL;DR
 
-L2-native dApps can now flourish free of traditional L1 gas restrictions
+L2-原生dapps现在可以在不受传统L1气体限制的情况下蓬勃发展。
 
 ### 导 言
 
-dApp developers have always faced severe constraints due to Ethereum’s (L1) block gas limit. It limits not only *how* those dApps operate but also *what* those dApps are capable of doing.
+由于Etherum(L1)块气体限制，dApp 开发者总是面临严重的限制。 It limits not only *how* those dApps operate but also *what* those dApps are capable of doing.
 
-Layer 2 (L2) offers dApp developers a computational greenfield, free of this gas glass ceiling. We believe that the vast majority of dApps will be L2-native within a couple of years: they will have been built from the ground up on L2 to benefit from this computational degree of freedom.
+第二层 (L2) 为开发者提供一个可计算的绿地，无此气体玻璃天花板。 我们认为，绝大多数的dapps在几年内将是L2-土著的：它们将是从L2基础上建立起来的，以便从这种计算自由程度中获益。
 
-### L1 gas limits shape L1-native dApps
+### L1 气体限制形状L1-原生dapps
 
-*Let us consider two examples of popular dApps whose design is profoundly shaped by L1 gas constraints: AMMs and DEX aggregators.*
+*让我们想一想两个受L1气体约束影响设计的流行飞毛腿的例子：AMM和DEX聚合器。*
 
-An Automated Market Maker (AMM) is essentially a low-gas approximation of an order-book-based exchange. Instead of allowing users to place and remove limits, stop loss, or a variety of other order types, L1 AMMs only allow for simple swaps with a central underlying liquidity pool — to accommodate the intense computational cost of L1.
+自动化市场制造商(AMM)基本上是基于订单簿的交易所的低气体近似值。 不允许用户放置和移除限制、停止丢失或其他各种订单类型， L1 AMM仅允许使用中央基本流动资金池进行简单的互换——以满足L1的大量计算成本。
 
-DEX aggregators ideally need access to all possible liquidity pools, even the smallest liquidity pool, to leverage the best prices for users. However, because of the cost of querying many different pools, it is simply not worth transacting over L1. It is justifiable to access pools and pay the associated transaction fees only when liquidity pools have sufficiently deep liquidity. In a similar vein, liquidations in lending/borrowing and other collateral-based dApps could be much more accurate if the difference between liquidation discount and transaction fee was much smaller.
+在理想的情况下，DEX总汇必须能够利用所有可能的流动资金池，即使是最小的流动资金池，才能使用户获得最佳价格。 然而，由于查询许多不同集合的成本，根本不值得在L1上进行交易。 只有当流动性集合拥有足够大的流动性时，才有理由使用联合资金并支付相关的交易费。 本着同样的精神， 如果清算折扣和交易费之间的差额要小得多，借贷/借贷和其他以抵押品为基础的舞台应用软件的清算就会更加准确。
 
-The limited functionality and design of many L1 dApps directly result from developers optimizing their code to abide by Ethereum’s gas constraints. Why, you may ask, do we say Ethereum? Can’t Solidity code run on many L1s and even some L2s? Indeed, but of these, Ethereum is the most expensive (and, therefore, secure) environment. Solidity dApps are designed for “the most expensive link”, i.e., Ethereum. Hence, they do not benefit from the computational advantage afforded by less expensive runtime environments. To unlock functionality foregone by designing a dApp for the most expensive runtime environment, the dApp’s code must be adapted.
+许多L1 dapps功能和设计的有限直接来自开发人员优化他们的代码以遵守Etherum的气体限制。 为什么你可能要问，我们要说以太斯姆吗？ 无法在许多L1s甚至一些L2上运行团结代码？ 事实上，除非如此，以太坊是最昂贵的（因而也是安全的）环境。 联合应用软件是为了“最昂贵的链接”，即以太坊设计的。 因此，他们不能受益于费用较低的运行环境所提供的计算优势。 为了解锁功能，为最昂贵的运行环境设计一个 dApp 来解锁功能，必须修改dApp的代码。
 
-### The rise of L2-native dApps
+### L2-本机应用程序出厂情况
 
-Validity Rollups (aka ZK-Rollups) enable extremely cheap computation. Unlike any other scaling solution — the L2 computation can grow exponentially with only a small impact on the on-chain verification gas cost. In addition, a Validity Rollup processes inputs to the computations — “witness data” — without consuming additional L1 resources, allowing for computations with many inputs.
+Validity Rollup(aka ZK-Rollups) 启用了极其廉价的计算方法。 与任何其他缩放解决方案不同——L2计算方法能够成指数增长，只会对链上核查气体成本产生小小的影响。 此外，一个有效率的滚动处理对计算的投入——“证人数据”——，而不需要额外的L1资源，可以用许多投入进行计算。
 
-Coding dApps natively on L2 in **[Cairo](https://www.cairo-lang.org/)** (a Turing-complete language to scale dApps via STARK proofs) unlocks a vast realm of possibilities for developers. It enables them to use significant amounts of data — both computational and witness data — that they couldn’t use before.
+Coding dApps natively on L2 in **[Cairo](https://www.cairo-lang.org/)** (a Turing-complete language to scale dApps via STARK proofs) unlocks a vast realm of possibilities for developers. 它使他们能够使用他们以前无法使用的大量数据——包括计算数据和证人数据。
 
-Let’s explore such L2-native dApps and their new, enriched capabilities.
+我们来探索这种L2-本地的应用程序及其新的、丰富的功能。
 
 #### DeFi
 
-Before onboarding to StarkEx, StarkWare’s Validity Rollup, dYdX operated as an L1 dApp on Ethereum. It offered its users leverage of x10 on synthetic assets and supported positions with only one synthetic asset. Rebuilding dYdX in Cairo as an L2-native dApp provides a dramatically more scalable, cheaper, and efficient DeFi platform:
+在登入StarkEx之前，StarkWare的有效性滚动，dYdX在 Etherum上作为L1 dApp 操作。 它为其用户提供了合成资产x10的杠杆，并且只为一个合成资产的位置提供了支持。 在开罗重建dYdX作为L2-本机应用程序提供了一个更可缩放、更便宜和效率更高的 DeFi平台：
 
-* Oracle price updates: Such updates typically include dozens of prices and signatures from various sources to calculate a median. A Validity Rollup provides exponential scaling of the price oracle logic (signature verification and calculation of the median price) — without reporting that witness data to L1. Compare this to dYdX’s L1 implementation, where every price oracle update cost about 300K gas and was, therefore, limited in its frequency and the size of the set of price reporters.
-* Leverage: An accurate price feed allows dYdX to estimate the risk of a position in real-time and offer higher leverage for users. Thanks to the improved oracle price updates, dYdX increased leverage from x10 on L1 to x25 on L2.
-* Cross-margin: With dYdX on L2, market makers can put long/short orders on many assets using the same collateral. The average settlement on dYdX’s L2 involves positions with more than 10 different synthetic assets! By comparison, having this cross-margin ability on L1 would have more than doubled the on-chain gas cost.
+* Oracle价格更新：这种更新通常包括数十种价格和各种来源的签名来计算一个中间值。 Rollup的有效性使得价格摩拉克逻辑（签字核实和中位价格的计算）呈指数尺度，而没有向L1报告这些见证人的数据。 将此与dYdX的L1实现相比较，每次更新花费大约300K气体的花费。 因此，价格报告的频率和数量有限。
+* 杠杆：准确的价格饲料允许dYdX实时估计位置的风险，并为用户提供更高的杠杆。 由于改进了oracle price update, dYdX 提高了L1上的 x10 倍的杠杆作用到 x25 上的 L2。
+* 交叉溢价：在L2上有dYdX, 市场制造商可以使用同一种抵押品对许多资产下出长/短订单。 dYdXL2上的平均结算涉及10个以上合成资产的位置！ 与此相对照，如果在L1上具备这种跨余值能力，则连锁气体成本将增加一倍以上。
 
-#### Gaming and Generative Art
+#### 游戏和生成Art
 
-The current crop of L1-native games typically store game assets on L1 while implementing the entire game logic in a trusted off-chain application. This pattern is a direct result of L1’s gas limitations. Thanks to cheap computation on L2, developers of L2-native gaming dApps can now implement the game logic in a smart contract and manipulate the game assets trustlessly, rather than just storing them. Bringing game logic into the realm of trustless computation is a significant step towards a much richer world of blockchain-based games. L2-native games are already being developed on StarkNet, StarkWare’s permissionless network (e.g., [Dope Wars](https://github.com/dopedao/RYO) and [Influence](https://medium.com/influenceth/influence-to-launch-on-starknet-afd3c26ea25a)).
+当前L1-本机游戏的作物通常在 L1 上存储游戏资产，同时在受信任的非链应用程序中实现整个游戏逻辑。 这种模式是L1气体限制的直接结果。 感谢您在 L2 上的便宜计算 L2-本机游戏dApp的开发者现在可以在智能合同中实现游戏逻辑，并且无需信任地操纵游戏资产， 而不是仅仅储存它们。 将游戏逻辑带入不可信的计算领域，是朝着一个基于区块链的游戏更加丰富的世界迈出的重要一步。 L2-本机游戏已经在StarkNet、StarkWare无权限网络上开发(如[Dope Wars](https://github.com/dopedao/RYO)and[Influence](https://medium.com/influenceth/influence-to-launch-on-starknet-afd3c26ea25a))。
 
-But, how complex can a blockchain-based game really be? For example, handling graphics directly on-chain seems impossible — [or is it](https://twitter.com/guiltygyoza/status/1449637155001798657)? Solving differential equations and simulating planar motion in a smart contract represents a significant step towards what in the future could be a blockchain physics engine. The implications are huge. Imagine a competitive multiplayer game like Counter-Strike. If one could simulate the game logic on-chain, many dreaded hacks would become a thing of the past — players could enjoy a provably fair game.
+但是，基于区块链的游戏真的会是多么复杂？ 例如，在链上直接处理图形似乎是不可能的 —[还是是](https://twitter.com/guiltygyoza/status/1449637155001798657)？ 在智能合约中解决差分方程和模拟行星动作是朝着将来可以成为区块链物理引擎迈出的重要一步。 其影响是巨大的。 想象一种多人游戏，如反击游戏。 如果可以在链上模拟游戏逻辑， 许多可怕的黑人将成为过去的事情——玩家可能会享受一场经证明是公平的游戏。
 
-Generative Art uses computation, randomness, and other data to create blockchain-based art. The more complex logic and computation an artist can use trustlessly, the more options exist to generate unique singular pieces of art. [WhaleStreet DAO](https://blog.whalestreet.xyz/whalestreet-dao-to-launch-gen-art-ecosystem-on-ethereum-with-starknet/) is launching one of the first Gen Art projects on StarkNet, taking advantage of StarkNet’s unlimited computational resources.
+常规艺术使用计算、随机性和其他数据创建基于 blockchain 的艺术。 一个艺术家可以不信任地使用越复杂的逻辑和计算方法，就会有更多的选项来生成独特的单个艺术块。 [WhaleStreet DAO](https://blog.whalestreet.xyz/whalestreet-dao-to-launch-gen-art-ecosystem-on-ethereum-with-starknet/)正在StarkNet上启动首批Gen Art 项目，利用StarkNet的无限计算资源。
 
-### What’s next?
+### 接下来是什么？
 
-Validity Rollups — and Cairo-powered StarkEx and StarkNet, in particular — provide an environment where one can develop and operate dApps that consume a lot of computation or witness data. With all the benefits of distributed ledger technology, we predict an immensely exciting future for L2-native dApps.
+有效率滚动-和开罗驱动的StarkEx 和 StarkNet， 特别是——提供了一种环境，使人们能够开发和操作消耗大量计算或证人数据的dapps。 由于分配的分类账技术带来的所有好处，我们预测L2-本机应用软件将有一个非常令人振奋的未来。
 
 What can *you* create with general computation supported by composability, trustlessness, and decentralization?

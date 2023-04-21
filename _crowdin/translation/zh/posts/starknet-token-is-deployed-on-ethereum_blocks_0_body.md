@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* StarkNet Token (STRK) 现在部署在Ethereum Mainnet上
+* **正在注意故障！**StarkNet 令牌未被出售。
+* 基金会需要时间来决定其代币的分配机制
+* StarkWare股东、雇员和独立伙伴软件开发者持有的令牌被锁定四年。 一年后开始逐步发布
+* 由于StarkNet用于投票、订购和支付费用，代币将会进一步放权。
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+今天，[StarkNet](https://starknet.io/)正在向权力下放迈出另一步。 StarkNet 令牌现在是[在 Etherum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766) 上。 快速重新设计：STRK将被用作参与StarkNet的协商一致机制、作为施政令牌和支付交易费的一种标记。 我们在[我们的权力下放提案](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)中提出了每个实用工具的基本原理。 在题为“代币将用于什么？”
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***正在了解故障:**写入时无法购买 StarkNet 令牌; 在[StarkNet 基金会](https://twitter.com/StarkNetFndn)发出进一步通知之前，这种无销售期将保持不变； 根据StarkNet基金会的官方来函，了解关于STRK状况的任何更新。 您可以在[StarkNet Discord 上的[scam-report](https://discord.gg/qypnmzkhbc)通道上报告垃圾邮件并检查其他垃圾邮件报告。](http://starknet.io/discord)服务器。*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+这个帖子解释了token分配过程，以及部署的token合约是如何为代币三个设计的公用事业中的两个，即投票和标记。 第三个公用事业——支付StarkNet的费用——将在以后讨论。
 
-### Planning the token allocation process
+### 正在规划令牌分配进程
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. 分配给股东、员工和独立软件开发者的代币被锁定4年，一年后开始逐步发布计划。 锁定的令牌可以用于投票和标记，但不能转移或交易。 有些代币是通过专门的智能合同在 Ethereum 上锁定的，而其他代币是通过保管人锁定的。
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+另外，现有StarkNet 令牌的50.1%分配给StarkNet 基金会，用于实现其[目标](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(参见)。[StarkWare的帖子](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)。 这些代币未被锁定。 然而，基金会将需要时间来制定确切的机制来进一步分配这些代币，并将适时分享其计划。
 
-#### Why lockup?
+#### 为什么锁定？
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+锁定上述期间的令牌确保当前贡献者符合StarkNet的长期激励措施。 它还阻止为预定目的广泛使用代币投机：确保网络、支付费用和分散治理。
 
-Next, we explain how the token implementation supports voting and staking.
+接下来，我们解释象征性的实现如何支持投票和标记。
 
-### Voting
+### 表 决
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+基金会将负责促进健全的治理和制定投票机制。 StarkNet令牌旨在允许直接投票和一系列代表团机制。
 
-#### L1 voting
+#### L1 投票
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+现在安装的 ERC-20 实现包括**可选的**使用Compound's[授权模块](https://docs.compound.finance/v2/governance/)。 此模块广泛用于在链中投票。 它在 StarkNet上是可选的，默认情况下是关闭的原因是成本考虑。 转而讲，这意味着每次传输L1StarkNet 令牌都需要额外的气体，只是为了跟踪投票力的变化而需要额外的气体。
 
 #### Non-L1 voting
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+与Compound的授权模块进行L1在链上投票的替代办法包括超链投票以及基于StarkNet的链上投票系统(例如[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU))。 这些替代品大大减少了L1转让的气体消耗，无需目前安装的ERC-20代码的明确支持，因此得到了内在支持。
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+如上文所述，所有令牌——锁定和解锁——将可在StarkNet的投票机制中使用。
 
-### Staking
+### 加载中
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+StarkNet没有权限，阻止检查的操作需要随机选择测序器。 某个节点被选中来排序和提出一个方块的概率与节点触发的 StarkNet 令牌的数目成比例。 使用 StarkNet 令牌的原理(例如以太币或比特币为单位) 已在[施政提案](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)中作了解释， 以及标记的确切细节， StarkNet上的顺序和区块创建正在进行[社区](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671)的讨论，尚未完成。
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+如同投票一样，代币即使被锁定，也可以被用作藏匿。 这有助于StarkNet运营商的多样性和StarkNet的复原力。
 
 ### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+将StarkNet Token合同部署到Etherum是StarkNet权力下放的另一个步骤。
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+我们促请开发者和用户警惕故障！ 在出版时，没有任何代币可以交易，在StarkNet基金会发出进一步通知之前，这种非贸易地位将保持不变。
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+欲了解更多问题，您可以前往[StarkNet Discord 上的[Token-discord](https://discord.gg/qypnmzkhbc)频道](http://starknet.io/discord)服务器。

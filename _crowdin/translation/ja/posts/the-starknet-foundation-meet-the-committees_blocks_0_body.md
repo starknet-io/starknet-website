@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+2022年11月下旬、スタークネット財団 [の](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) 立ち上げが発表されました。 財団は、繁栄し、分散化され、許可のない層2(L2)の妥当性ロールアップ(別名、Starknet)のビジョンを実現することに専念する独立した組織です。 ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+強力な [学際的なボード](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) を実現。 Starknet財団は、Starknetコミュニティの育成と拡大という目標を追求するために十分に位置しています。 ネットワークの継続的な発展を監督し、許可のないガバナンスメカニズムを開発し、Starknetエコシステムの完全な分散化を実行します。 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+本日、財団は、5つの委員会の任命を公表することに興奮しています。 それぞれStarknetの任務と優先順位に合う特定の任務を委ねられてる 各委員会の任務は石に設定されておらず、必要に応じて調整と修正を行い、定期的な評価を受けます。
 
-The committees are:
+委員会は次のとおりです。
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* 規定委員会
+* 早期採用補助金委員会
+* 開発者パートナーシップ委員会
+* ガバナンス委員会
+* エコシステムオンボーディング委員会
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+以下では、委員会の任務、運営および初期メンバーを含む、委員会の詳細を共有します。
 
-## Introducing the Starknet Foundation Committees 
+## Starknet財団委員会の紹介 
 
-### Provisions Committee
+### 規定委員会
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Provisions Committeeは、StarknetエコシステムトークンSTRKの提供を計画、監督、実行する責任があります。 STRKは、Starknetのコンセンサスメカニズムへの参加のためのステーキングトークンとして使用されます。 ネットワークのガバナンストークンとして、またネットワークのトランザクション手数料の支払いのためのガストークンとしても機能します。 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Provisions Committeeは、Starknetエコシステムに電力を供給するトークンの公正で分散化された透明な配布を確保するために不可欠です。 委員会はStarknetの使用料を支払うために必要とされるSTRKトークンを持つユーザーのプロビジョニングを監督します。 委員会は公平性、透明性、および地方分権の目的に基づいて資格グループのためのStarknet財団に評価し、勧告を提供します。 これらの計画は、準備ができたら発表されます。
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Provisions Committee に連絡することができます: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### 早期採用補助金委員会
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+初期採用補助金(EAG)委員会は、Starknet上のオンチェーンアプリケーションを構築する革新的なチームに助成金を提供することにより、Starknetエコシステムの成長を促進することにコミットしています。 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+EAG委員会の目的は、オンチェーン展開を通じてエコシステムの拡大と活力を促進することです。 委員会は、すでにStarknet上で構築し始めているチームに遡及的に焦点を当てるアプリケーションの彼らの最初のラウンドの基準を設定するためにすぐに発表を行います. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+早期採用補助金委員会は透明性にコミットし、すべての助成金額を公開する。
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+早期採用助成金委員会に連絡することができます: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### 開発者パートナーシップ委員会
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+開発者パートナーシップ委員会は、Starknetエコシステムに導入される新しい戦略的開発者パートナーシップを促進し、監督することによって、Starknetエコシステムにおいて重要な役割を果たしています。 特に、戦略的開発パートナーシップは、Starknetの成功に不可欠なインフラストラクチャの重要な部分についてのコラボレーションであると考えられています。
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+この委員会の主な責務には、開発者との提出プロセスの合理化、徹底したデューデリジェンスの実施、提出された提案の承認などが含まれます。 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+この委員会は、ネットワークの中核となるインフラレイヤを積極的に構築または構築している開発チームを特定し、支援することで、堅牢なエコシステムを育成する上で極めて重要です。 彼らの努力は、Starknetのインフラストラクチャレールを確保し、拡大するためにチームが分散化された透明な方法で授与されることを保証します。 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+開発者パートナーシップ委員会に連絡することができます: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### ガバナンス委員会
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+ガバナンス委員会は、Starknetエコシステムの現在進行中の分散化において重要な役割を担っています。 委員会は、Starknetガバナンスの初期段階の研究、計画、実行を担当しています。 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+地方分権化とコミュニティ参加と積極的に進行中の開発のバランスをとることに焦点を当てて。 委員会はStarknetガバナンスの最初の柱を作成、実施、監督することを目指しています。 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+ガバナンス委員会は、透明で公正なものを維持する中核的なメカニズムを策定し、設置する。 コミュニティの関与を促進し、生態系への継続的な成長と分散型の参加を保証する分散型の構造です これらの目標を達成するために 委員会はStarknetコミュニティによって投票され承認される決議を定義し、ガバナンス投票の議論と実施のための適正なプロセスを確立します。 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+委員会はすでにスタークネットのガバナンスの [第一段階](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820)を開始しています。 最初の投票に関するお問い合わせは、 [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org) までお問い合わせください。
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+ガバナンス委員会にも連絡することができます: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+ガバナンス委員会の仕事とロードマップの詳細については、 [このページ](https://www.starknet.io/en/posts/governance) を参照してください。
 
-### Ecosystem Onboarding Committee
+### エコシステムオンボーディング委員会
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+エコシステムオンボーディング委員会は、新しい開発者やコミュニティメンバーをStarknetエコシステムに強化し、統合する責任があります。 これには、Starknetアンバサダーの特定、エンパワーメント、サポート、エコシステム貢献者と人材プールへの助成金の授与が含まれます。 スタークネットのエコシステムへのコミュニティの参加を促進するために、イベントや教育パートナーシップの一般的なリズムを整理し、後援しています。 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+アンバサダーは、イベントの組織化、参加、および講演に取り組んでいる Starknet コミュニティのメンバーを尊重し、確立されます。 コミュニティ開発を促進し、コンテンツを作成し、互いに有益なスポンサーシップを求め、有望な個人やチームをStarknet上に構築するよう説得する。
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+エコシステムオンボーディング委員会は、早期採取委員会とは主に異なる焦点を当てています。 EAG委員会はスタークネットの初期採用者を立ち上げ、賞を与えることを目指しています。 エコシステムオンボーディング委員会は、草の根レベルでの生態系の継続的かつ持続的な成長と発展を強調する。 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+エコシステムオンボーディング委員会に連絡することができます: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## 今後のマイルストーン
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+これらの委員会の任命により、Starknet財団はエキサイティングな旅に出る準備ができています。 各委員会は、生態系の特定の側面を促進し、一緒に取り組んでいます。 財団と並び、繁栄し、分散化され、許可のないレイヤ2エコシステムに向けて活動します。  
 
-Here is what’s coming next: 
+次の予定は次の通りです： 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) は2023年3月21日に開催されます。
+* EAG委員会の最初の発表と最初の申請の詳細は、2023年3月21日のStarkNet財団の [ブログ](https://www.starknet.io/en/posts/foundation) に掲載されます。
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+StarkNet Foundationの [ブログ](https://www.starknet.io/en/posts/foundation) やソーシャルメディアチャンネルから最新のアップデートと機会をご覧ください。
 
 **\
 For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**

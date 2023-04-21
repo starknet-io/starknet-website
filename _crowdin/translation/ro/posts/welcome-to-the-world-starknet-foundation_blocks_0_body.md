@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+Azi întâmpinăm Fundaţia**StarkNet**, o nouă fundaţie comunitară organizată pentru a oferi o structură comunitară independentă pentru sprijinirea proiectului StarkNet.
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+StarkNet este un rollup de validitate descentralizat fără permisiune, operând ca o rețea L2 prin Ethereum, unde orice dApp poate atinge o scară mult mai mare pentru calculul său, fără a compromite compozabilitatea și securitatea lui Ethereum. Pentru mai multe despre StarkNet, aruncaţi o privire[aici](https://starknet.io/). să fie cu adevărat responsabil și accesibil în fața comunității dezvoltatorilor și utilizatorilor săi, StarkNet are nevoie de un facilitator independent pentru guvernarea orientată spre comunitate pentru întregul ecosistem StarkNet.
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+Noua Fundaţie StarkNet, cu sprijin şi resurse de la o largă secţiune de membri ai comunităţii, va promova cercetarea, dezvoltarea, şi extinderea reţelei StarkNet şi a tehnologiei de sprijin, promovarea utilizării şi adoptării reţelei StarkNet şi a participării comunităţii de combustibil StarkNet şi guvernarea proiectelor. Fundația va contribui la finanțarea și organizarea de conferințe ale utilizatorilor și dezvoltatorilor, precum și la coordonarea cooperării cu comunitățile aliate și conexe.
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+Fundaţia va fi condusă iniţial de un consiliu format din şapte directori, cu contexte multidisciplinare din întreaga lume. Pe scurt:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me)— Politică tehnologică, drepturi digitale, antreprenor și expert în autonomie comunitară
+* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders)— co-fondator/președinte StarkWare, co-inventator al STARKs
+* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))- Cercetător independent blockchain și lider de gândire
+* [Heather Meeker](http://www.heathermeeker.com/)- Expert în licența software-ului open-source
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)- Profesor de matematică și informatică teoretică și colaborator de bază la matematica ce stă la baza STARK-urilor
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)- inginer și lider Blockchain și CEO al Nethermind, una dintre cele mai mari echipe care construiesc pe StarkNet
+* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders)— co-fondator StarkWare și CEO
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+A fost creat un simbol StarkNet pentru a-i recompensa pe dezvoltatorii StarkNet și pe operatori pentru munca pe care o desfășoară pentru a întreține și avansa rețeaua. Fundaţia deţine 50. % din monetăria iniţială a tokenurilor 10B, a căror alocare va fi administrată de Fundaţie în beneficiul utilizatorilor; operatorii și dezvoltatorii din comunitatea StarkNet, așa cum a fost stabilit[aici](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). Celelalte jetoane sunt supuse unei blocări de patru ani şi sunt deţinute de contribuitorii de bază StarkNet şi de investitorii în dezvoltarea StarkNet.
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+Consiliul Fundaţiei StarkNet a început să lucreze, pregătindu-se pentru oficializare şi operaţiuni, recrutând pentru un director executiv, și să înceapă să formeze comitete comunitare ad hoc pentru a avansa unele proiecte esențiale, cum ar fi identificarea unei/unde/momentului primului vot pentru deținătorii de chei StarkNet.
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+Îi dorim întregii comunităţi StarkNet succes şi suntem mândri şi entuziasmaţi să lucrăm la lansarea Fundaţiei StarkNet.
 
 
 
-### Here is what our board has to say:
+### Iată ce are de spus consiliul nostru:
 
 **Andrew:**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> Ceea ce mă face foarte convingător pe StarkNet este că, în opinia mea, efortul cel mai promițător și mai convingător din punct de vedere tehnologic de a face din Ethereum (și alte blockchainuri) o platformă globală de calcul cu adevărat scalabilă, sigură și fără permisiuni privată. Cu o știință solidă și o echipă talentată în spatele ei, StarkNet este o parte esențială a realizării utilității la scară largă care s-a aflat puțin peste orizontul ecosistemului blockchain dominant.
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> În calitate de membru al comitetului de instituire, doresc să mă concentrez asupra bunei guvernanțe și asupra consolidării eficiente a comunității globale. Fundația StarkNet va fi o pornire non-profit, cu misiunea de a construi o comunitate de constructori şi utilizatori implicaţi, diverşi şi împuterniciţi să se guverneze. Ca organizaţie, Fundaţia însăşi trebuie să fie deschisă, transparentă, responsabilă, fiabilă şi etică. Ca exemplu de autoguvernare a comunității, Sper ca Fundația să conducă la crearea unor instrumente și servicii de guvernanță alimentate de StarkNet, care să fie intuitive și utile în mod obiectiv - și care să fie la dispoziția celorlalți precum noi.
 
 **Eli:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> Succesul iniţial al lui StarkNet (şi STARK-uri) m-a surprins. Ceea ce a început ca un efort centrat pe StarkWar este acum un ecosistem înfloritor şi care se extinde rapid. Yahoo!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> Guvernanța este un subiect dur, unul care a sufocat societățile umane de-a lungul istoriei. Guvernanța StarkNET, inclusiv verificările și bilanțurile necesare, mecanismele de soluționare a conflictelor etc., nu a ieșit încă și nu s-a cristalizat. Şi astfel, sentimentele mele de entuziasm şi optimism sunt umbrite de provocările viitoare. Îmi este clar că StarkNet nu ar trebui să fie guvernat de un singur partid. Prin urmare, consider că cea mai importantă parte a misiunii noastre este aceea de a asculta ecosistemul larg extins şi în expansiune al dezvoltatorilor StarkNet şi de a-i ajuta să deschidă calea.
 
 **Eric:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> Tehnologiile de rulare reprezintă de departe cel mai promițător răspuns la întrebarea cum să se extindă finanțarea permisivă a milioanelor de utilizatori. STARK-uri oferă capacitatea de a verifica succint calculul general și astfel pot extinde calitățile și valorile nivelului de referință Ethereum la nivelurile de mai sus. StarkNet este poate cea mai importantă instalare a acestui concept, şi accept cu modestie sarcina de a contribui la asigurarea integrităţii şi a succesului acesteia.
 
 **Heather:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> Sunt încântată să fac parte din Fundaţia StarkNet.
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> Timp de aproape trei decenii, am lucrat pentru a ajuta oamenii să înțeleagă licențele pentru surse deschise. Sunt avocat, așa că am petrecut o grămadă de timp ajutându-mi clienții să învețe despre licențiere și dezvoltare cu sursă deschisă. Dar în aceste decenii, întreaga industrie tehnologică a depus eforturi pentru a înțelege mai bine modul de colaborare – acesta este darul modelului de dezvoltare open source. Am fost deosebit de norocos, pentru că o mare parte din munca mea i-a ajutat pe alţii - nu numai pe clienţii mei - să afle despre regulile şi paradigmele de colaborare. Într-un fel, am avut marea avere de a fi la fel de mult profesor ca un consilier.
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> Aştept cu nerăbdare să lucrez cu Fundaţia StarkNet pentru a trece în următoarea eră a Ethereum şi blockchain-ului şi pentru a sprijini comunitatea StarkNet în creştere.
 
-*(Heather is an advisor to StarkWare.)*
+*(Heather este un consilier al lui StarkWare.)*
 
 **Shubhangi:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> Sunt cercetător în bazele teoretice ale informaticii. Personal, Am fost uimit de felul în care unele dintre dezvoltările teoretice interesante din domeniu din ultimele decenii s-au reunit pentru a crea tehnologia care exploatează dovezile STARK.
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> Cred că misiunea de a aduce scalabilitatea prin STARKS printr-o platformă publică descentralizată, unde dezvoltatorii joacă un rol central în guvernanță și proiectare au potențialul de a extinde considerabil sfera tehnologiilor blockchain. În calitate de membru al consiliului de administraţie, doresc, de asemenea, să dau posibilitatea ca StarkNet să stimuleze, și pentru a beneficia de cercetarea modernă în informatică teoretică. Aştept cu nerăbdare să fac parte din această situaţie.
 
-*(Shubangi is an advisor to StarkWare.)*
+*(Shubangi este un consilier al lui StarkWare.)*
 
 **Tomasz:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> StarkNet intră într-o fază importantă a dezvoltării sale – o fază în care devine mai deschisă, mai compozită, mai încrezătoare și mai încrezătoare. Consider că rolul meu la fundație este o oportunitate de a încuraja colaborarea, și să sprijine trecerea la viitorul lanțurilor descentralizate și permise, alimentate de STARKs.
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> Amintindu-mi drumul la Nethermind ca donator al Fundaţiei Ethereum şi înţelegând atât provocările cât şi oportunităţile cu care se confruntă constructorii, Salut oportunitatea de a ne asigura că echipa executivă de la Fundaţia StarkNet construieşte un ecosistem în care constructorii se simt împuterniciţi, să beneficieze de pe urma eforturilor lor de cercetare şi dezvoltare, construind în acelaşi timp StarkNet ca un bun public. Aştept cu nerăbdare să văd că generaţiile următoare de constructori şi comunităţi îşi vor găsi rolul de coproprietari independenţi ai reţelei StarkNet.
 
 **Uri:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> În calitate de cofondator & CEO la StarkWare, observ spațiul blockchain din 2018 (un relativ nou comerț! , și profund implicat în construirea soluțiilor pe scară largă pentru Ethereum. Instrumentele software pentru integritatea computațională pe care am început să le dezvoltăm la StarkWare sunt acum puse în mâinile dezvoltatorilor din întreaga lume. Misiunea este clară: aceste instrumente trebuie puse în mâinile oricărui dezvoltator din lume interesat; aceste instrumente trebuie îmbunătățite. Fundaţia StarkNet va juca un rol important şi interesant în îndeplinirea acestei misiuni, în descentralizarea StarkNet.

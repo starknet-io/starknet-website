@@ -1,64 +1,64 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Construim StarkNet în pași, începând cu stabilirea**utilizabilității**, apoi îmbunătățește**performanța**, și în cele din urmă, trecând la**descentralizarea**
+* Ne-am atins primul obiectiv: utilitatea. Asta înseamnă că am livrat un calcul general în stare asemănătoare Ethereum (cu ani înainte ca el să fie crezut posibil)
+* Trecem acum la etapa a 2-a a planului nostru de construcție cu 3 părți: performanța, concentrarea asupra tranzacţiilor, costurile de tranzacţie şi întârzierea.
+* Următorul pas: Descentralizare
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+La doar un an după ce planurile pentru[StarkNet](https://starknet.io/)au fost anunțate prima dată, platforma are funcționalitate foarte bună. Comunitatea dezvoltatorilor înflorește peste așteptările noastre cele mai sălbatice și oferă o grămadă constantă de noi proiecte L2.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Prioritatea noastră faţă de ultimul an a fost să permitem exact acest lucru. prin crearea unui StarkNet care funcționează cu o gamă de caracteristici în expansiune rapidă, care permite dezvoltatorilor să se scufunde direct în ea.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+Au făcut asta în număr mare. Un barometru bun este numărul de descărcări pentru[librăria JavaScript pentru StarkNet](https://www.starknetjs.com/): deja la 5k de când a devenit disponibilă acum 4 luni.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Cu toate acestea, în timp ce StarkNet oferă magia de compresie pe care am promis-o în acest moment, este departe de a fi în măsură să facă acest lucru pentru destule dApps cu un flux suficient, iar acest lucru se poate dovedi a fi o sursă de frustrare pentru dezvoltatori pe termen scurt.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Tehnologia noastră de bază, testată de luptă, care atestă STARK-ul și comprimă dovezile, trebuie să fie precedată de batching sau secvențierea tranzacțiilor. Este un proces pe care echipa StarkWare l-a perfecționat o dată pentru motorul de scalare[StarkEx](https://starkware.co/starkex/), iar în prezent lucrăm din nou la acest lucru pentru nevoile lui StarkNet.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Acum, că multe dintre obiectivele noastre de utilizare au fost atinse, ne deplasăm atenţia pentru a face din aceasta prioritatea noastră principală. Este o parte a foii noastre de parcurs în 3 etape:**utilizabilitatea**, urmată de performanța**a rețelei**, și apoi**descentralizarea**. Un an în: vrem să îți oferim o privire sub cucerire — o prezentare a ceea ce sunt piesele și ceea ce este încă în desfășurare.
 
-### The Story So Far
+### Povestea atât de departe
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+StarkNet Alpha a fost pus la testnet public în iunie şi la Mainnet în noiembrie. La momentul instalării rețelei Mainnet, StarkNet oferea deja un calcul general într-un stat similar Ethereum, despre care se credea că va mai dura câţiva ani.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+Pe tot parcursul dezvoltării am ales o abordare care s-a concentrat în primul rând asupra celor mai importante funcționalități și le-a eliberat de îndată ce au devenit disponibile, partajează în mod esențial procesul evoluției cu comunitatea. StarkNet este departe de a fi complet funcțional, dar chiar și acum, dezvoltatorii pot deja să construiască aplicații semnificative și complexe. Astăzi avem sute de dezvoltatori[care construiesc pe StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)zeci de dApps, şi peste douăsprezece echipe externe care dezvoltă instrumente şi infrastructură pentru ecosistemul StarkNet.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+Un șir de actualizări a furnizat multe caracteristici importante, inclusiv mesajele L1<>L2, datele în lanț și suportul pentru compozabilitate, suport pentru evenimente, mecanism de comision de bază, actualizare contractelor, captarea contului, cadru de testare, instrumente pentru dezvoltatori, confirmare rapidă, număr blocare, marcare temporală, suport pentru contractele de cont.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+Comunitatea dezvoltatorilor este deopotrivă profund interesată de StarkNet, şi de modelarea dezvoltării sale. Deja au fost introduse caracteristici bazate pe feedback-ul dezvoltatorilor. Adoptarea ar putea foarte bine să depășească creșterea volumului de resurse, motiv pentru care acest impuls reprezintă în prezent principala noastră prioritate.
 
-### Next Steps
+### Pașii următori
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Acum că am devenit utilizabili, este timpul să îmbunătățim performanța sistemului. Acest sistem, în starea sa actuală, este capabil să sprijine un flux limitat de tranzacţii. Modul de a rezolva acest lucru este prin îmbunătăţirea performanţei Nodului Sequencer care este echivalentul unui miner al StarkNet. „Mașina” este cea care secvenționează tranzacțiile după ce sunt depuse. Când acest lucru este optimizat, traseul va schia racheta.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+În acest scop, analizăm simultan unde sunt blocajele și le eliminăm una câte una. În prezent, toate blocajele sunt legate de procesul de secvenţiere, care vine înainte de a apela la proverşii STARK. Bătălia testată este gata să sprijine strălucirea lui StarkEx, ca a lui StarkNet.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Ne aşteptăm ca optimizarea secvenţialului să fie un proces care durează câteva luni, cu îmbunătăţiri treptate pe tot parcursul H1/22. Scopul nostru este de a atinge, până la începutul celei de-a doua jumătăți a anului 2022, cel puțin un ordin de mărime mai mare decât Ethereum, la un cost cu cel puțin două ordine de mărime mai mic decât cel al Ethereum. Şi acesta este doar începutul.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+Există un motiv întemeiat pentru ca această fază de optimizare să fie necesară, iar acel StarkNet nu a fost lansat cu un secvenţier optimizat gata: StarkNet a reuşit să obţină o utilizare atât de rapidă pentru că am pornit cu capul. În loc să începem de la zero şi să construim un secvenţier complet nou, l-am folosit pe batcher de la StarkEx ca o componentă centrală.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+A fost un mod grozav de a construi. Nu doar că a livrat repede; înseamnă că suntem siguri că am construit pe fundații robuste. StarkEx a testat în esenţă funcţionalitatea de bază care conduce StarkNet, după cum a observat sute de miliarde de dolari în comerţul cumulat.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[StarkEx](https://starkware.co/starkex/)este motorul de scalare pentru unele dintre cele mai de succes dApps folosind L2: dYdX (contracte perpetue), DeversiFi (tranzacționare la fața locului și plăți), precum și pentru operațiunile Immutable și Sorare (monetăria și comerțul NFT).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+Dar secvenţialul construit pentru ei şi alţi clienţi StarkEx îl pot lua doar pe StarkNet până acum. Fiecare dintre ele efectuează în fiecare zi acelaşi tip de tranzacţie. StarkNet este despre**calcule generale**, deci nevoile sale sunt deschise. Atunci când secvenţialul face tranzacţii din mempool, ele vin în diferite forme şi mărime. În plus, StarkNet este, de asemenea, o rețea deschisă, ceea ce înseamnă că există cheltuieli de calcul suplimentare care nu sunt întâlnite în StarkEx.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+Provocarea actuală, și anume optimizarea succesiunii în funcție de aceste noi necesități, este un angajament semnificativ, dar înţelegem foarte bine calea care trebuie urmată, pe baza dezvoltării noastre de succes StarkEx.
 
-### Next Up: Decentralization
+### Următoarea Up: Descentralizare
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+StarkNet va fi o reţea complet descentralizată fără permisiuni, cu mecanisme de alegere a liderului şi de guvernare. Realizarea acestor obiective va deveni principala noastră preocupare de îndată ce vom trece cu rachete și se vor reduce costurile, şi sperăm să avem o primă versiune descentralizată până la sfârşitul anului 2022. Anticipăm împărţirea publică a planului nostru de descentralizare în lunile următoare.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+La fel cum fluxul actual limitat reprezintă o etapă intermediară în dezvoltarea StarkNet, nivelul actual de implicare a lui StarkWare este, de asemenea, temporar. Ne vedem ca pe un fel de schelă, care serveşte o funcţie importantă în timpul fazei de construcţie, dar este rulată înapoi în timp util.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+Dezvoltarea nodului complet, un prim pas interesant către descentralizare, este deja în curs de desfăşurare. Nodurile complete vor permite oricui să țină și să verifice starea rețelei la nivel local, urmărind exact ceea ce se întâmplă. Trei echipe —*Erigon, Nethermind și Eilibrium*— dezvoltă noduri complete, și poate chiar mai multe vor începe dezvoltarea în viitor.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+În paralel, se pregătesc deschiderea secvenţelor şi a programelor informatice destinate publicului. Oricine va putea să participe ca un secvenţial sau ca un prover pe StarkNet.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+Va fi dezvoltată o structură care să stimuleze implicarea oamenilor, inclusiv recompensele economice. Taxele StarkNet vor merge parţial, la secvenţieri şi protestatari.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Pe termen mediu, ne aşteptăm să punem secvenţialul nostru la dispoziţia terţilor, și pe termen lung ne așteptăm să vedem diverse echipe care să construiască secvențiere pentru StarkNet.
 
-### Always Improving; Forever Listening
+### Îmbunătățire întotdeauna; Ascultare pentru totdeauna
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Pe măsură ce atenția se îndreaptă către următoarea provocare, vom continua să îmbunătățim realizările din trecut. Şi continuând să lucrăm în toate domeniile[StarkNet](https://starknet.io/), urechile noastre vor rămâne întotdeauna deschise întregii comunităţi de dezvoltatori. Așa că participați la discuție, prin[Discord](https://discord.com/invite/uJ9HZTUk2Y), comunitatea[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8),[Twitter](https://twitter.com/Starknet_Intern), sau o altă rută și ajută la modelarea viitorului scalării blockchain.

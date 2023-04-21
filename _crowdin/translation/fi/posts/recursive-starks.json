@@ -1,5 +1,5 @@
 {
-  "title": "Recursive STARKs",
-  "time_to_consume": "9. min read",
-  "short_desc": "Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof."
+  "title": "Rekursiiviset STARkit",
+  "time_to_consume": "9. min luettu",
+  "short_desc": "Rekursiiviset vedokset – joita käytetään Kairossa yleisessä laskennassa – ovat nyt tuotannossa. Tämä on merkittävä sysäys L2:n mittakaavassa STARKSIN kanssa. Se nopeasti tuottaa moninkertainen kasvu määrä tapahtumia, jotka voidaan kirjoittaa Ethereum kautta yhden todisteen."
 }

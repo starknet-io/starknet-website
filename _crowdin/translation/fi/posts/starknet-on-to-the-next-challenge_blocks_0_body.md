@@ -1,64 +1,64 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Rakennamme StarkNettia vaiheittain, alkaen**käytettävyys**, sitten parantaa**suorituskykyä**ja lopuksi siirtyä**hajauttaminen**
+* Olemme saavuttaneet ensimmäisen tavoitteemme: käytettävyyden. Tämä tarkoittaa, että olemme toimittaneet yleisen laskennan Ethereum-kaltaisessa tilassa (vuosia ennen kuin se oli ajateltu mahdolliseksi)
+* Siirrymme nyt 3-osaisen rakennussuunnitelmamme vaiheeseen 2: suorituskyky, keskittyminen läpimenoon, liiketoimen kustannuksiin ja latenssiin.
+* Seuraava ylös: Hajauttaminen
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+Vain vuosi sen jälkeen, kun[StarkNet](https://starknet.io/)-suunnitelmat oli ensimmäisen kerran julkaistu, alustalla on erittäin hyvät toiminnot. Kehittäjäyhteisö kukoistaa villeimpiä odotuksiamme pidemmälle ja tarjoaa jatkuvasti uusia L2 Native -projekteja.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Ensisijaisena tavoitteenamme viime vuoden aikana oli juuri tämän mahdollistaminen. Luomalla toimiva StarkNet-sovellus, jossa on nopeasti laajeneva valikoima ominaisuuksia, joiden avulla devs sukeltaa suoraan sisään.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+He ovat tehneet tämän suurella määrällä. Hyvä ilmamittari on Starknetin[JavaScript -kirjaston latausmäärä](https://www.starknetjs.com/): jo klo 5 sen jälkeen, kun 4 kuukautta sitten tuli saataville.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Silti, kun StarkNet toimittaa kompressio magic olemme luvanneet, tällä hetkellä. se on kaukana siitä, että se voi tehdä niin tarpeeksi dApps tarpeeksi läpimenoa, ja tämä voi osoittautua kehittäjien turhautumisen lähteeksi lyhyellä aikavälillä.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Taisteluilla testattu ydintekniikkamme, STARK todistaa monia tapahtumia ja tiivistää todisteita, on ennen erittelyä tai sekvensointia. Se on prosessi StarkWare-tiimi on jo viimeistellyt kerran[StarkExille](https://starkware.co/starkex/)skaalauksen moottorille, ja teemme parhaillaan työtä sen eteen, että StarkNetin tarpeet otetaan jälleen huomioon.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Nyt kun monet käyttökelpoisuutta koskevat tavoitteemme on saavutettu, siirrämme painopistettä siihen, että tämä on ensisijainen tavoitteemme. Se on osa kolmivaiheista etenemissuunnitelmaamme:**käytettävyyttä**, seurasi verkon**suorituskyky**, ja sitten**hajauttaminen**. Vuosi sisällä haluamme antaa sinulle kurkistaa hupun alla – hahmotella mitä palaset ovat olemassa ja mikä on vielä työn alla.
 
-### The Story So Far
+### Tarina Niin Kauas
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+StarkNet Alpha julkaistiin julkisessa testnet kesäkuussa ja Mainnet marraskuussa. Mainnet'n käyttöönoton aikaan StarkNet tuotti jo yleistä laskentaa Ethereumin kaltaisessa tilassa, jonka yleisesti ajateltiin olevan vuosien päässä.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+Kehityksen aikana olemme valinneet lähestymistavan, jossa keskitytään ensin tärkeimpiin toimintoihin ja vapautettiin ne heti kun ne tulivat saataville, pohjimmiltaan evoluutioprosessin jakaminen yhteisön kanssa. StarkNet on kaikkea muuta kuin täydellinen, mutta jo nyt kehittäjät voivat rakentaa mielekkäitä ja monimutkaisia sovelluksia. Nykyään meillä on satoja kehittäjiä[StarkNetin päälle,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)kymmeniä dAppsia, ja yli kymmenkunta ulkoista tiimiä, jotka kehittävät työkaluja ja infrastruktuuria StarkNet-ekosysteemille.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+Päivitysten merkkijono on tuottanut monia tärkeitä ominaisuuksia, kuten L1<>L2 viestiä, ketjudataa ja kompostoituvuuden, tapahtumien tuen, perusmaksumekanismin, sopimusten ajantasaistaminen, tilin abstraktio, testauskehys, kehittäjien työkalut, nopea vahvistus, lohkon numero, lohkon aikaleima, tuki tilisopimuksiin.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+Kehittäjäyhteisö on sekä syvästi kiinnostunut StarkNetista että itse asiassa muokkaa sen kehitystä. Kehittäjien palautteen perusteella on jo otettu käyttöön ominaisuuksia. Hyväksyminen voisi hyvinkin ylittää koko ajan saavutetun kasvun, minkä vuoksi tämä sysäys on nyt ensisijainen tavoitteemme.
 
-### Next Steps
+### Seuraavat Vaiheet
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Nyt kun olemme saavuttaneet käytettävyyden, on aika parantaa järjestelmän suorituskykyä. Järjestelmä pystyy nykyisessä tilassaan tukemaan rajoitettua liiketoimien käsittelyä. Tämä ratkaisu voidaan ratkaista parantamalla Sequencer Node, joka on StarkNetin kaivostoimintaa vastaava taso. Se on kone, joka sekvenssit liiketoimet sen jälkeen, kun ne on toimitettu. Kun tämä on optimoitu, läpivienti taivaanraketti.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+Tätä varten analysoimme samanaikaisesti, missä pullonkaulat ovat ja käsittelemme niitä yksitellen. Tällä hetkellä kaikki pullonkaulat liittyvät sekvensointiprosessiin, joka tulee ennen kuin vetoamme STARK-sananaloihin. Taistelussa testattu sananpino on valmis tukemaan StarkNetin StarkExin kaltaista ulostuloa.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Odotamme optimointi sekvensseri on prosessi, joka kestää muutaman kuukauden, asteittaisia parannuksia koko H1/22. Tavoitteenamme on saavuttaa vuoden 2022 toisen puoliskon alussa vähintään yksi suuruusluokka korkeampi TPS kuin Ethereum, kustannuksella, joka on vähintään kaksi suuruusluokkaa pienempi kuin Ethereum’s. Ja se on vasta alku.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+On olemassa hyvä syy siihen, että tätä optimointivaihetta tarvitaan. ja että StarkNet ei ollut laukaistu valmiiksi optimoidulla sekvensserillä: StarkNet pystyi saavuttamaan käytettävyyden niin nopeasti, koska saimme päähän. Sen sijaan, että aloitamme tyhjästä ja rakennamme täysin uuden sekvensserin, käytimme StarkExin erästä keskeisenä osana.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+Tämä oli hieno tapa rakentaa. Se ei vain toimittaa nopeasti, se tarkoitti olemme varmoja, että rakennamme tukevia säätiöt. StarkEx lähinnä taistelun testattu ydintoiminto, joka ajaa StarkNet, koska se lovitti satoja miljardeja dollareita kumulatiivisessa kaupankäynnissä.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[StarkEx](https://starkware.co/starkex/)on skaalauksen moottori joillekin kaikkein onnistuneimmista dApps käyttäen L2: dYdX (ikuiset sopimukset), DeversiFi (spot-kauppa ja maksut) sekä Immutable ja Sorare (NFT kaivostoiminta ja kauppa).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+Mutta sekvensseri rakennettu heille ja muut StarkEx asiakkaat voivat vain ottaa StarkNet toistaiseksi. Jokainen niistä käsittelee suurin piirtein samantyyppisiä liiketoimia joka päivä. StarkNetissä on kyse**yleisestä laskennasta**, joten sen tarpeet ovat avoimia. Kun sen sekvensseri ottaa tapahtumia mempool, ne tulevat eri muotoja ja kokoja. Lisäksi StarkNet on myös avoin verkosto, mikä tarkoittaa, että StarkExissa ei ole ylimääräistä laskennallista ylärajaa.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+Tämänhetkinen haaste, nimittäin näiden uusien tarpeiden järjestyksen optimointi, on merkittävä sitoumus. mutta meillä on vahva ymmärrys tarvittavasta reitistä, joka perustuu menestyksekkääseen StarkEx-kehitykseen.
 
-### Next Up: Decentralization
+### Seuraava Ylös: Hajauttaminen
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+StarkNet on täysin hajautettu ja luvaton verkosto, joka on täydellinen johtajaliikkeiden ja hallintomekanismien avulla. Tämän saavuttamisesta tulee meidän tärkein painopisteemme kun läpikäyä skyrockets ja kustannusten lasku, ja toivomme saada ensimmäisen hajautetun version vuoden 2022 loppuun mennessä. Ennakoimme, että hajauttamissuunnitelmamme on julkisesti jaettu tulevina kuukausina.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+Yhtä lailla kuin nykyinen rajallinen tuotantokapasiteetti on väliaikainen vaihe StarkNetin kehittämisessä, myös StarkWare-hankkeen nykyinen taso on väliaikainen. Näemme itsemme rakennustelineinä, jotka palvelevat tärkeää tehtävää rakennusvaiheen aikana, mutta jotka on rullattu takaisin aikanaan.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+Täydellinen solmukohtien kehitys, jännittävä ensimmäinen askel kohti hajauttamista, on jo käynnissä. Täysi solmut mahdollistavat sen, että kuka tahansa voi pitää ja tarkistaa verkon tilan paikallisesti, pitää kirjaa siitä, mitä tapahtuu. Kolme työryhmää –*Erigon, Nethermind ja Equilibrium*– kehittävät täyttä solmua ja voivat aloittaa kehityksen tulevaisuudessa.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+Samanaikaisesti on käynnissä valmisteluja, joiden tarkoituksena on avata sekvensointi ja todistaa ohjelmistoja yleisölle. Kuka tahansa voi osallistua sekvensserinä tai proverina StarkNetissa.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+Tarkoituksena on kehittää rakenne, jolla kannustetaan ihmisiä osallistumaan toimintaan, johon kuuluu myös taloudellisia palkintoja. StarkNet-maksut menevät osittain sekvensseihin ja sananaloihin.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Keskipitkällä aikavälillä odotamme saavamme sekvensserimme kolmansille osapuolille, ja pitkällä aikavälillä odotamme myös nähdä eri joukkueet rakentaa sekvenssejä, jotka ovat sekvensointi StarkNet.
 
-### Always Improving; Forever Listening
+### Aina Pareminen; Ikuisesti Kuunteleminen
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Kun painopiste siirtyy seuraavaan haasteeseen, parannamme edelleen aiempia saavutuksia. Ja kun jatkamme työtä kaikilla[StarkNet](https://starknet.io/)alueilla, korvat pysyvät aina avoinna koko kehittäjäyhteisölle. Joten osallistua keskusteluun, kautta[Discord](https://discord.com/invite/uJ9HZTUk2Y),[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8),[Twitter](https://twitter.com/Starknet_Intern), tai toinen reitti ja auttaa muokkaamaan tulevaisuuden lohkoketjujen skaalaus.

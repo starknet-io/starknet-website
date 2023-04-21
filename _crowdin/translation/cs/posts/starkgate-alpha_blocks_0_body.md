@@ -1,61 +1,61 @@
 ### TL;DR
 
-* The first version of StarkNet Bridge, StarkGate Alpha, is live on **[Testnet](https://goerli.starkgate.starknet.io/)**, and on **[Mainnet](https://starkgate.starknet.io/)**!
-* We await community feedback on how things can be improved. You can send your feedback for both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
-* Mainnet deployment will follow soon (update, May 9th 2022: StarkGate is live on Mainnet)
+* První verze StarkNet Bridge, StarkGate Alpha, je živá na**[Testnet](https://goerli.starkgate.starknet.io/)**a na**[Mainnet](https://starkgate.starknet.io/)**!
+* Čekáme na zpětnou vazbu komunity ohledně toho, jak lze věci zlepšit. Svou zpětnou vazbu můžete odeslat jak[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh), tak[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+* Nasazení Mainnet bude brzy následovat (aktualizace, 9. května 2022: StarkGate je živý na Mainnet)
 
-Excitement! We are thrilled to release StarkGate Alpha, the first version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet deployment to follow soon.*
+Vzrušení! Jsme nadšeni vydáním StarkGate Alpha, první verze StarkNetu Bridge, nyní žije na Goerli testnet, kde bude brzy následovat Mainnet.*
 
-\*(update, May 9th 2022: StarkGate is live on Mainnet)
+\*(update, 9. května 2022: StarkGate je živý na Mainnet)
 
-**Important disclaimer: this is an alpha version on StarkGate Alpha (read the fine print below!).**
+**Důležité upozornění: Toto je alfa verze na Alfa StarkGate (přečtěte si jemný tisk níže!).**
 
 ![](/assets/starkgate_01.png)
 
-Before you continue, go check it out! [StarkGate Testnet](https://goerli.starkgate.starknet.io/), [StarkGate Mainnet](https://starkgate.starknet.io/)
+Než budete pokračovat, jděte na to! [StarkGate Testnet](https://goerli.starkgate.starknet.io/),[StarkGate Mainnet](https://starkgate.starknet.io/)
 
-StarkGate serves as a gateway between Ethereum and [StarkNet](https://starknet.io/), and allows users to do everything they can expect from a bridge.
+StarkGate slouží jako brána mezi Ethereem a[StarkNet](https://starknet.io/)a umožňuje uživatelům dělat vše, co mohou očekávat od mostu.
 
-#### **Where can I find information on how StarkGate works?**
+#### **Kde najdu informace o tom, jak funguje StarkGate?**
 
-To understand how StarkGate works, read the [technical documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) and take a look at the [code](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Note that this is the first version, and we invite your feedback and suggestions on how to improve both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+Abychom pochopili, jak funguje StarkGate, přečtěte si[technickou dokumentaci](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)a podívejte se na kód[](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Všimněte si, že se jedná o první verzi, a zveme Vaše názory a návrhy, jak zlepšit jak[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)a[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
 
-#### **Which tokens will be supported by StarkGate?**
+#### **Které tokeny podpoří StarkGat?**
 
-* StarkGate Alpha on Goerli supports ETH and a few other ERC-20 tokens. The full list and the relevant contract addresses, both on Ethereum and StarkNet, are available in this [repo](https://github.com/starkware-libs/starknet-addresses).
-* On Mainnet, initially, StarkGate Alpha will only support ETH to allow use of the fee mechanism. Later on, we will add support for WBTC, USDC, USDT, and DAI. You can see the relevant contract addresses in this [repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
+* StarkGate Alpha na Goerli podporuje ETH a několik dalších žetonů ERC-20. Úplný seznam a příslušné adresy smlouvy, jak na Ethereu, tak na StarkNet, jsou k dispozici v tomto[repo](https://github.com/starkware-libs/starknet-addresses).
+* Na Mainnet bude StarkGate Alpha zpočátku podporovat pouze ETH, aby bylo možné použít mechanismus poplatku. Později přidáme podporu pro WBTC, USDC, USDT a DAI. V tomto[repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json) můžete vidět příslušné smluvní adresy.
 
-Further down the road, we will publish the mechanism for adding support for additional tokens.
+Dále po silnici, zveřejníme mechanismus pro přidávání podpory pro další tokeny.
 
-#### **What safety limitations will StarkGate Alpha have on Mainnet?**
+#### **Jaká bezpečnostní omezení budou mít StarkGate Alpha na Mainnet?**
 
-StarkGate Alpha on Mainnet is launched with two limitations — in order to reduce the risks involved in using an Alpha version:
+StarkGate Alpha on Mainnet je spuštěn se dvěma omezeními – za účelem snížení rizik spojených s používáním alfa verze:
 
-1. The total value locked (TVL) in the bridge on L1 will limit the amount of each token type.
-2. The maximum amount in each transaction sent from L1 to L2 (Ethereum→StarkNet) via StarkGate will be limited.
+1. Celková uzamčená hodnota (TVL) v mostě na L1 omezí množství každého typu tokenu.
+2. Maximální částka v každé transakci odeslané z L1 do L2 (Ethereum→StarkNet) přes StarkGate bude omezená.
 
-We plan to gradually ease these limitations and lift them completely as confidence grows. The updated parameters can be found in StarkGate’s [documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
+Plánujeme tato omezení postupně zmírnit a úplně je pozvednout s rostoucí důvěrou. Aktualizované parametry naleznete v[dokumentaci StarkGate’s](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
 
 ![](/assets/starkgate_02.png)
 
-### Alpha and What It Means
+### Alfa a co to znamená
 
-As always, we remind you that StarkNet is currently in its **Alpha** stage:
+Jako vždy vám připomínáme, že StarkNet je v současné době ve fázi**Alpha**:
 
-* Things can break. If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
-* Both StarkNet Alpha and StarkGate contracts can be upgraded without a timelock. While we expect to announce such upgrades well ahead of time, in the case of imminent security risks (for example, if a critical bug is found), the upgrade may be applied with little or no warning.
-* The code of the bridge, as well as portions of StarkNet Alpha, have not yet been audited. The ABDK and Nethermind audits of StarkGate Alpha will be completed soon.
+* Věci se mohou rozpadnout. Pokud katastrofálně selžou, vaše prostředky by mohly být ztraceny (**přečtěte si prohlášení pod**!).
+* Bez časového rámce lze smlouvy StarkNet Alpha i StarkGate modernizovat. I když očekáváme, že taková vylepšení vyhlásíme dlouho dopředu, v případě bezprostředních bezpečnostních rizik (například například: pokud je zjištěna kritická chyba, může být aktualizace provedena s malým nebo žádným varováním.
+* Kodex mostu a části Alfa StarkNet ještě nebyly auditovány. Audity ABDK a nepaměti StarkGate Alpha budou brzy dokončeny.
 
-We encourage all users to help improve the bridge by providing their feedback using one of the following platforms:
+Doporučujeme všem uživatelům, aby pomohli vylepšit most poskytnutím jejich zpětné vazby pomocí jedné z následujících platforem:
 
-1. [StarkGate frontend repo](https://github.com/starkware-libs/starkgate-frontend)
-2. [StarkGate Contracts repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
+1. [Repozitář StarkGate frontend](https://github.com/starkware-libs/starkgate-frontend)
+2. [Repozitář smluv StarkGate](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
 3. [StarkNet Shamans](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+Pro otázky a podporu vývojáře se připojte k[StarkNet discord serveru](https://discord.gg/uJ9HZTUk2Y).
 
-### Disclaimer
+### Odmítnutí odpovědnosti
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. The same applies to the StarkNet Bridge. Like all complex software systems, both StarkNet and the bridge may contain bugs that, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***StarkNet Alpha je nový a komplexní systém, který nebyl plně auditován. Totéž platí pro StarkNet Bridge. Stejně jako všechny komplexní softwarové systémy i StarkNet mohou obsahovat chyby, které: v extrémních případech by mohlo vést ke ztrátě všech vašich prostředků. Takže***běhoun opatrně a chovat se!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*StarkNet ekosystém je velkým a rychle rostoucím souborem nezávislých týmů a jednotlivců, nad nimiž StarkWare nemá dohled a nepřevezme žádnou odpovědnost. Kterýkoli z projektů vyvinutých členy ekosystému může obsahovat chyby, které by v extrémních případech mohly vést ke ztrátě všech vašich prostředků. Navíc vzhledem k tomu, že se zavádějí chytrější smlouvy, zvyšuje se potenciál nechtěných škodlivých chyb a dokonce i škodlivých podvodů a tahání koberců. Takže přistupujte ke všem chytrým smlouvám na StarkNet jako k chytrým smlouvám na Ethereu a používejte pouze ty, kterým máte dobrý důvod důvěřovat jako bezpečné.*

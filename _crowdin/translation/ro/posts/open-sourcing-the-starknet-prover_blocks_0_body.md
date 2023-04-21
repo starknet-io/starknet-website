@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* Prover Starknet va fi open-source sub licența Apache 2.0
+* Măsura va spori accesibilitatea pentru dezvoltatori, va promova colaborarea în cadrul comunității și va oferi și alte beneficii
+* Acest anunț urmează noii secvențe de secvențe a lui Cairo 1.0, Papyrus Full Node, și a lui Starknet
 
-### Intro
+### Introducere
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Știri excitante în viitor: Prover Starknet va fi open-source!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Aceasta este o piatră de hotar în evoluţia Starknet. Descoperă decizia de a oferi profitului Starknet open-source și explorează beneficiile pe care le aduce ecosistemului Starknet. Fiind un bun public, accesibilitatea se află în avangardă, permițând o mai mare colaborare și inovare în domeniul tehnologiei.
 
-### Open Sourcing the Starknet Prover
+### Sursa deschisa Prover Starknet
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha a lansat pe Mainnet în noiembrie 2021. De la începutul programului Starknet, acesta a fost conceput ca o rețea deținută de comunitate, și să îi permită să beneficieze de puterea scării STARK. La un an de la lansarea pe Mainnet, a venit momentul să începem open-sourcing întreaga stivă Starknet.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Elementele care au fost deja open-sourced includ[Cairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), și noul StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Când Prover Starknet va fi plasat sub Apache 2.0, procesul open-source va fi complet. Acest lucru se va întâmpla în faza finală a descentralizării Starknet.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Importanța Open-Sourcing a Prover Starknet
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+Software-ul STARK cu sursă deschisă va permite comunității să întrețină și să dezvolte rețeaua în mod independent, şi, prin urmare, oferă cea mai autentică cale de a construi Starknet ca bun public descentralizat. De asemenea, va permite comunităţii să aibă mai multă libertate în a contribui la dezvoltarea proverbului şi, prin urmare, a lui Starknet. În plus, open-sourcing the Starknet Prover va permite mai multor ochi să revizuiască codul, să îi îmbunătățească calitatea, să ajute la detectarea erorilor și să ofere transparență.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Pe scurt, externalizarea deschisă a stivei tehnologice Starknet înseamnă mai multă colaborare, o mai bună calitate, inovare și independență. Toate aceste valori pot ajuta Starknet să-şi atingă întregul potenţial.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+Codebaza pe care vom construi Prover Starknet se bazează pe proverbul care a fost utilizat din iunie 2020, dovezi de tranzacții de la dApps alimentate de[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)(cum ar fi Immutable X, Sorare, dYdX și multe altele). În acest rol, a procesat 327 de milioane de tranzacţii şi a bătut 95 de milioane de IFN-uri şi a decontat 824 de miliarde de dolari.
 
 ### Summary
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Suntem entuziasmați să anunțăm că Prover Starknet va fi open-sourced, disponibil sub Apache 2.0. Sursa deschisă, Prover Starknet va avea loc chiar înainte ca Starknet să fie pregătit pentru descentralizare completă. În acest fel, stiva Starknet va fi complet open-sourced, potrivit pentru o rețea de nivel 2 descentralizată, fără permisiuni.

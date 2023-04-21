@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### 引发性的前期时间
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4今天在戈尔利获释。 这个版本是Mainnet版本的候选版本，如果一切按照计划进行，将在本月底之前在 Mainnet上部署。
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4遵循了Alpha 3的包装释放特征，其中除其他外包括： 开罗编译时间的改进，合同构造者，以及更多的(见[完整版注释](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0))。
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+注意：这仍然是一个 Alpha 版本——用于在Mainnet部署时部署您的合同 请遵循新应用程式的[在船上](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)指南。
 
-### New Features
+### 新功能
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+虽然这个版本的主要重点是为Mainnet部署做好准备，但它也包括几个新功能：
 
-#### Get this contract’s address
+#### 获取此合同的地址
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+合约现在可以通过新的 syscall \`get_contract_address\`获取他们自己的地址。 最后，我们可以结束自私合同。
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie合同： 2021年9月21日至11月</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### 块哈希值
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+区块现在是通过散列而不是Id来识别的。 这是在我们最近向交易哈希转换之后进行的。 所有API都已相应更新。 我们很快将发布该系统的全部技术文件，其中还将包括区块结构的具体规定。
 
-#### Contract Addresses
+#### 合同地址
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+此版本对合同地址的计算方式作了修改。 地址是调用地址上的Pedersen 散列，一个盐(随机或由部署者选择)。 合同代码和构造商参数的散列都附有一个前缀。
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+哈希(PREFIX, caller_address, Salt, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+在当前版本中，调用地址总是等于0，但在未来版本中，这将使得能够直接根据现有合同部署合同。
 
-Note that this scheme is very similar to CREATE2.
+请注意，这一计划与CREATE2非常相似。
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[查看完整版本便笺](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### 令牌桥接
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Token桥是StarkNet基础设施的一个关键部分。 它们允许向StarkNet和从StarkNet转移资金。 这座桥在出版时尚未部署。 但应该在几天内提供——连同关于其功能和用途的全部文件。 需要注意的一件事是，桥使用[L1<>L2 消息](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)协议。 因此，它提供了短暂的退约时间——一旦退约被包括在一批退约中并在L1上被接受。 L1上的用户可以即时获得资金。
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+这是代币桥的第一个版本，我们很想从它上的生态系统得到反馈。
 
-### Join StarkNet
+### 加入 StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+加入日益壮大的StarkNet社区的时机从未好过。 您可以在[StarkNet discord](https://discord.gg/uJ9HZTUk2Y)中加入对话，参加[在线讲习班](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)或者使用[教程中的一个](https://www.cairo-lang.org/docs/hello_starknet/index.html)来开始构建您自己的第一个应用程序。
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**更新 (Nov. 2021):**StarkNet Alpha 在Ethereum Mainnet上

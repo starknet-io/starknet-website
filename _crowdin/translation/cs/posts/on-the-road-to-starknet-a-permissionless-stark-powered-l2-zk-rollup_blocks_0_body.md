@@ -1,106 +1,106 @@
 #### **TL;DR**
 
-We’re building StarkNet in four steps:
+Vytváříme StarkNet ve čtyřech krocích:
 
-* Step 0 — Foundations (completed*)
-* Step I — Planets: Single-App Rollups
-* Step II — Constellations: Multi-App Rollups
-* Step III — Universe: A Decentralized Rollup
+* Krok 0 – Základy (dokončené*)
+* Krok I – Planety: Jednoaplikační Rollupy
+* Krok II – Konsteliva: Víceaplikační kolejnice
+* Krok III – Univers: Decentralizovaný Rollup
 
-We expect to have Step I deployed in a few short months, and be well on our way to Steps II & III by the end of 2021.
+Očekáváme, že během několika krátkých měsíců jsem rozmístil krok, a buďte na naší cestě k krokům II & III do konce roku 2021.
 
-### **Introduction**
+### **Úvod**
 
-StarkWare is building StarkNet, a decentralized, permissionless and censorship-resistant STARK-powered L2 ZK-Rollup that supports general-computation over Ethereum. It is based on the Turing-complete [Cairo language](https://www.cairo-lang.org/).
+StarkWare buduje StarkNet, decentralizovaný, nepřípustný a cenzurovaný STARK-powered L2 ZK-Rollup, který podporuje všeobecný výpočet přes Ethereum. Je založen na Turingově kompletním[Káhiře](https://www.cairo-lang.org/).
 
-Developers, users and StarkNet nodes will be able to do everything one would expect from a permissionless L2 Rollup: Developers may build applications implementing their own business logic and deploy them on StarkNet. Users may send transactions to StarkNet to be executed, just like they interact with Ethereum today. StarkNet nodes and participants will be crypto-economically incentivized to ensure the network operates efficiently and fairly.
+vývojáři, uživatelé a uzly StarkNet budou moci udělat vše, co by člověk očekával od nepřípustného L2 Rollup: Vývojáři mohou vytvářet aplikace implementující vlastní obchodní logiku a nasadit je na StarkNet. Uživatelé mohou posílat transakce na StarkNet a tak jako dnes komunikují s Ethereem. StarkNet uzly a účastníci budou kryptograficky ekonomicky motivováni, aby zajistili, že síť bude fungovat efektivně a spravedlivě.
 
-All StarkNet transactions will be periodically batched, and their validity will be proven in a STARK proof, to be verified on Ethereum. As the computational effort required to verify STARK proofs is exponentially small compared to the computation proven, StarkNet will scale Ethereum by orders of magnitude.
+Všechny transakce StarkNet budou pravidelně dávkovány a jejich platnost bude prokázána v důkazu STARK, který bude ověřen na Ethereu. Vzhledem k tomu, že výpočetní úsilí potřebné k ověření důkazů STARK je ve srovnání s prokázaným výpočtem exponenciálně malé, provede StarkNet měřítko Ethereum podle řádů velikosti.
 
-Since all StarkNet state transitions will be STARK-proven, only valid ones will be accepted on Ethereum. All data required to reconstruct the full StarkNet state will be published on-chain. Anyone will be able to run their own StarkNet node. These properties will make StarkNet as secure and permissionless as Ethereum.
+Protože všechny přechody ve stavu StarkNet budou STARK-prokázány, na Ethereu budou přijaty pouze platné. Všechna data potřebná k rekonstrukci celého stavu StarkNet budou publikována v řetězci. Každý bude moci spustit svůj vlastní uzel StarkNet. Tyto vlastnosti učiní StarkNet bezpečným a nepřípustným jako Ethereum.
 
-We’ve been at it for three years, and have already achieved some remarkable milestones in turning “Moon Math” into production-grade and efficient software running on Ethereum. The way StarkWare does things is tackle the hard problems first, build the core technology, and then release it to production in piecemeal fashion. We will continue to build in this manner as we bring StarkNet to completion.
+Jsme u nás tři roky, a již dosáhly některých pozoruhodných milníků tím, že proměnily „Měsíc math“ v výrobní stupeň a efektivní software běžící na Ethereu. StarkWare se snaží řešit problémy nejdřív a poté je uvolnit do výroby postupným způsobem. Budeme i nadále stavět tímto způsobem, jak dovést StarkNet do konce.
 
 ![](/assets/ontheroad_02.png)
 
-**Step 0 — Foundations**
+**Krok 0 – Základy**
 
-StarkWare has completed laying down some important foundations for StarkNet.
+StarkWare dokončil položení některých důležitých základů pro StarkNet.
 
 #### **Cairo**
 
-[Cairo](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20) is our Turing-Complete High-Level Language & framework for producing STARK proofs for general computation. Instead of hand-crafting complex “circuits” or AIRs, an application developer may use Cairo to define any business logic, have it proven off-chain, and verified on-chain. Cairo is [in production on Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20), and is also [available to developers](http://cairo-lang.org/).
+[Káhira](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20)je náš Turing-Complete High-Level Language & framework pro výrobu STARK důkazů pro všeobecné výpočty. Namísto ruční výroby komplexních „obvodů“ nebo AIR, může vývojář aplikací použít Káhiru k definování jakékoliv obchodní logiky, prokázat se mimo řetězec a ověřit v řetězci. Káhira je ve výrobě[na Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20)a je také[k dispozici vývojářům](http://cairo-lang.org/).
 
-In a couple of weeks we will launch on a public Ethereum testnet an Alpha version of Cairo’s Generic Proof Service (GPS). *This will allow developers to build their own applications using Cairo, implementing whatever business logic they wish. They will send their Cairo code to the GPS to be proven, and then verified on-chain.*
+Za několik týdnů spustíme veřejnou Ethereum testnet alfa verzi Káhirské obecné Proof Service (GPS). *To umožní vývojářům vytvářet si vlastní aplikace pomocí Káhiry a realizovat jakoukoliv obchodní logiku, kterou si přejí. Zasílají svůj Káhirový kód na GPS, který má být prokázán, a poté ověří on-chain.*
 
-GPS enables a single proof to assert the integrity of execution of altogether separate and independent applications, thereby giving those applications the ability to amortize the gas expense of proof verification amongst them.
+GPS umožňuje jediný důkaz o bezúhonnosti provádění oddělených a nezávislých aplikací, Tím se těmto žádostem dává možnost odepisovat mezi sebou náklady na ověřování důkazu na plyn.
 
-Cairo and GPS are the basis of StarkNet — our decision to externalize both to developers provides them with early exposure to this technology, not only so they can start building on top of it, but also so they may influence StarkNet’s evolution.
+Kairo a GPS jsou základem StarkNet – naše rozhodnutí externalizovat obě vývojáře jim poskytuje včasné vystavení této technologii, nejen proto, aby mohli začít stavět na vrcholu, ale také proto, aby mohli ovlivnit vývoj StarkNetu.
 
-We shall continue developing Cairo based on the needs and feedback of the developer community. We shall enhance this language with new features, syntax, and builtins that improve its usability, and we shall continue to develop and improve Cairo tooling: compilers, tracer/debugger, and integrations to common IDEs.
+Budeme pokračovat v rozvoji Káhiry na základě potřeb a zpětné vazby developerské komunity. Vylepšíme tento jazyk s novými funkcemi, syntaxí a vestavěnými prvky, které zlepší jeho použitelnost, a budeme pokračovat ve vývoji a zdokonalování nástrojů Káhiro: kompilátorů, vypalovačů/odladění a integrace společných IDE.
 
-StarkNet will have Cairo running under the hood.
+StarkNet bude mít klima pod hoškou.
 
-#### **The STARK Software Stack**
+#### **Sada softwaru STARK**
 
-StarkWare has developed the most powerful proof system in the ecosystem, and it’s been [live on Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0) for months. StarkWare has also developed [ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), our open-source prover, which is 20X faster than any other prover; it offers both [zero-knowledge and post-quantum-secure signatures](https://twitter.com/StarkWareLabs/status/1331930111227080709).
+StarkWare vyvinul nejvýkonnější důkazní systém v ekosystému a je[živý na Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0)již měsíce. StarkWare také vyvinul[ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), našeho operátora s otevřeným zdrojem, který je o 20X rychlejší než kterýkoli jiný provizor; nabízí[bezvědomosti a podpisy po kvantu zabezpečené](https://twitter.com/StarkWareLabs/status/1331930111227080709).
 
-Our scaling *measurements* — not extrapolations, nor promises — include the processing of 300K transactions in a single proof on Mainnet, achieving [the world record in Rollup throughput: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). In the process, we’ve achieved the world record for Rollup gas efficiency: 315 gas/tx, orders of magnitude cheaper than transactions on Ethereum L1.
+Naše měřítko*měření*– ne extrapolace, ani sliby – zahrnuje zpracování 300K transakcí v jediném důkazu na Mainnet, dosažení[světového rekordu v Rollup propustnosti: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). Při tomto procesu jsme dosáhli světového rekordu pro účinnost plynu Rollup: 315 plyn/tx, řádově levnější než transakce s Ethereum L1.
 
-This technology will be the cornerstone of the decentralized Proving Layer of StarkNet, and hence we shall release additional and enhanced provers as part of StarkNet’s development (more on that in an upcoming blog post).
+Tato technologie bude úhelným kamenem decentralizované provizorní vrstvy StarkNet, a proto uvolníme další a lepší provenience v rámci vývoje StarkNetu (více na tom v nadcházejícím blogu post).
 
 #### **StarkEx**
 
-StarkEx is our L2 scalability engine. It has been serving [DeversiFi](https://twitter.com/deversifi)’s customers on Mainnet since June 2020. It will power both [dYdX ](https://twitter.com/dydxprotocol)and [ImmutableX](https://twitter.com/Immutable) starting in a few short weeks. StarkEx can handle complex trading logic (spot trading, derivatives, NFTs) as well as payments.
+StarkEx je náš nástroj pro škálovatelnost L2. Od června 2020 slouží zákazníkům[DeversiFi](https://twitter.com/deversifi)v Mainnetu. Vypne[dYdX](https://twitter.com/dydxprotocol)a[ImmutableX](https://twitter.com/Immutable)počínaje za několik krátkých týdnů. StarkEx dokáže zpracovat komplexní obchodní logiku (spotové obchodování, deriváty, NFT) i platby.
 
-Developing StarkEx was our way of dogfooding our toolchain and testing it against real-world needs. There’s nothing like the demands of actual applications and live users to help tools mature and evolve. It also helps us understand which elements need to be addressed to better serve the ecosystem — for example, integrations with wallets and block explorers.
+Rozvoj StarkEx byl naším způsobem, jak stravovat náš řetězec nástrojů a testovat jej proti potřebám reálného světa. Neexistuje nic podobného požadavkům na aktuální aplikace a živé uživatele, kteří by pomohli zraje a vyvíjet nástroje. Pomáhá nám také pochopit, které prvky je třeba řešit, aby lépe sloužily ekosystému – například integrace s peněženkami a blokování průzkumníků.
 
-StarkEx is a live example of the ability to scale applications using a STARK-based ZK-Rollup, and is the first application in production on Mainnet written in Cairo. As such, it will also be one of the applications running on StarkNet.
+StarkEx je živý příklad schopnosti měřit aplikace pomocí ZK-Rollup se sídlem v ZK-STARKu. a je prvním použitím při výrobě na Mainnet napsaném v Káhiře. Jako taková bude také jednou z aplikací, které běží na StarkNet.
 
 ![](/assets/ontheroad_03.png)
 
-### **The Road Ahead**
+### **Cesta vpřed**
 
-#### **Step I — Planets: Single-App Rollups**
+#### **Krok I – Planety: Jednoaplikační Rollupy**
 
-This step will enable developers to build and deploy their own scalable applications on StarkNet.
+Tento krok umožní vývojářům vytvářet a nasazovat vlastní škálovatelné aplikace na StarkNet.
 
-At this point, each StarkNet instance will be able to run a single application. Different instances may run different applications.\
-The StarkNet framework will include the following:
+V tomto okamžiku bude každá instance StarkNet moci spustit jednu aplikaci. Různé instance mohou spouštět různé aplikace.\
+StarkNet framework bude obsahovat následující:
 
-* Mechanisms needed to generate STARK proofs for arbitrary Cairo logic, and then submit and verify them on Ethereum.
-* Interactions with L1 Ethereum: deposits and withdrawals of L1 tokens, publishing of the on-chain data, Escape Mechanisms protecting StarkNet users from malicious StarkNet operators, etc.
-* Management of the L2 user balances, and of the application’s storage and memory.
+* Mechanismy potřebné k vytvoření STARK důkazů pro svévolnou logiku Káhira a pak je odešlete a ověřte na Ethereu.
+* Interakce s L1 Ethereum: vklady a výběry žetonů L1, zveřejnění údajů o řetězu, Escape Mechanisms ochrany uživatelů StarkNet před škodlivými operátory StarkNet atd.
+* Správa zůstatků uživatelů L2 a uchovávání a paměti aplikace.
 
-Developers will be able to focus solely on building their application’s business logic, and then move into production: deploy and run it at scale on StarkNet.
+Vývojáři se budou moci zaměřit výhradně na budování obchodní logiky svých aplikací, a pak přejít do produkce: rozmístit a spustit ji v měřítku na StarkNet.
 
-What enables us to build a general-computation scalable ZK-Rollup is the combination of:
+To, co nám umožňuje vytvořit všeobecný výpočetní škálovatelný ZK-Rollup je kombinace:
 
-* Cairo, which is a general-purpose Turing-complete programming language
-* Our strong STARK stack (prover and verifier), that enables bundling enormous computations into a single proof
+* Káhira, což je univerzální Turing-kompletní programovací jazyk
+* Náš silný STARK stack (proveďte a ověřovatel), který umožňuje propojit obrovské výpočty do jediného důkazu
 
-#### **Step II — Constellations: Multi-App Rollups**
+#### **Krok II – Konsteliva: Víceaplikační kolejnice**
 
-The next step will support multiple applications running on the same StarkNet instance and accessing the same global L2 state. This will enable interoperability between different applications, as well as reduced gas cost due to improved economies of scale.
+Další krok bude podporovat více aplikací běžících na stejné instanci StarkNet a přístup ke stejnému globálnímu stavu L2. To umožní interoperabilitu mezi různými aplikacemi a také snížení nákladů na plyn díky vyšším úsporám z rozsahu.
 
-Cairo, the powerful STARK stack, and GPS amplify StarkNet’ competitive advantage in supporting a multi-app Rollup.
+Káhira, výkonný STARK stack a GPS zesilují konkurenční výhodu StarkNetu při podpoře vícejazyčného Rollup.
 
-At this stage, StarkNet will be a fully functional framework for running *multiple* applications with any arbitrary business logic on top of Ethereum, with each instance run by a single operator.
+V této fázi StarkNet bude plně funkční rámec pro běh*více*aplikací s libovolnou obchodní logikou vedle Etherea, s každou jednotlivou instancí provozovanou jedním provozovatelem.
 
-An operator may now spin up a StarkNet node, and application developers may deploy their contracts on it. From the users’ perspective, StarkNet now looks and feels like Ethereum, with a higher scale.
+Provozovatel může nyní vytrhnout uzel StarkNet a vývojáři aplikací na něj mohou své smlouvy uzavřít. Z pohledu uživatelů teď StarkNet vypadá a cítí se jako Ethereum s vyšším stupnicí.
 
-#### **Step III — Universe: Decentralized Rollup**
+#### **Krok III – Univers: Decentralized Rollup**
 
-The last step in the evolution of StarkNet is decentralizing its operation.
+Posledním krokem ve vývoji StarkNet je decentralizace jeho provozu.
 
-Intriguing R&D questions we’re now tackling that affect this stage include (i) using ZK-Rollups to improve consensus-reaching mechanisms, and (ii) designing crypto-economic mechanisms to incentivize the decentralized StarkNet contributors and operators (transaction sequencers, provers, etc.) to function efficiently, fairly and securely.
+Intriguing R&D otázky, které nyní řešíme a které ovlivňují tuto fázi, zahrnují i) využití ZK-Rollups ke zlepšení konsensuálních mechanismů, a ii) navrhování kryptografických ekonomických mechanismů, které by motivovaly decentralizované přispěvatele a operátory StarkNet (posloupnosti transakcí, provize, atd. efektivně, spravedlivě a bezpečně fungovat.
 
-### **Conclusion**
+### **Závěr**
 
-StarkWare is building StarkNet, a decentralized permissionless STARK-powered L2 ZK-Rollup over Ethereum, that supports general-computation based on the Cairo language.
+StarkWare buduje StarkNet, decentralizovaný nepřípustný STARK-powered L2 ZK-Rollup přes Ethereum, který podporuje všeobecné výpočty založené na klirském jazyce.
 
-StarkNet will enable applications to scale without compromising security, users to pay reasonable transaction fees, and the entire ecosystem to grow substantially and fulfill its promise.
+StarkNet umožní aplikacím měřítko, aniž by došlo k ohrožení bezpečnosti, uživatelé platí rozumné transakční poplatky a celý ekosystém, aby podstatně rostl a splnil svůj slib.
 
-We gladly invite the developer community to [join us](https://twitter.com/StarkWareLtd) on this journey.
+Rádi pozveme vývojářskou komunitu, aby se na této cestě[připojila](https://twitter.com/StarkWareLtd)k nám.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Aktualizace (Nov. 2021):**StarkNet Alpha je živá na Ethereum Mainnet

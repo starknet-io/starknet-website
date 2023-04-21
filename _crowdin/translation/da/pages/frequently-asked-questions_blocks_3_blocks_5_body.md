@@ -1,3 +1,3 @@
-The Warp team at Nethermind is developing a Solidity to Cairo transpiler: [Warp](https://github.com/NethermindEth/warp).
+The Warp team at Nethermind er ved at udvikle en Solidity til Cairo transpiler:[Warp](https://github.com/NethermindEth/warp).
 
-Starknet does not natively support EVM.
+Starknet understøtter ikke EVM.

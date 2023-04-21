@@ -1,5 +1,5 @@
 {
-  "title": "StarkNet Alpha 2 – New Phase: Composability",
-  "time_to_consume": "3 min read",
-  "short_desc": "StarkNet is a permissionless decentralized Validity-Rollup (aka a “ZK-Rollup”). We announced its roadmap at the beginning of the year. The Alpha, currently running on a public Ethereum testnet, already supports permissionless deployment of smart contracts implementing any business logic, with L1<>L2 messaging and on-chain data."
+  "title": "StarkNet Alpha 2 – nowy etap: Kompozycja",
+  "time_to_consume": "3 minuty czytania",
+  "short_desc": "StarkNet to bezpermisyjna zdecentralizowana walidacja-Rollup (znana jako „ZK-Rollup”). Zapowiedziliśmy swój plan działania na początku roku. Alfa aktualnie działająca na publicznej sieci testowej Ethereum, już teraz obsługuje bezwarunkowe wdrażanie inteligentnych kontraktów wdrażających dowolną logikę biznesową, z wiadomościami L1<>L2 i danymi on-chain."
 }

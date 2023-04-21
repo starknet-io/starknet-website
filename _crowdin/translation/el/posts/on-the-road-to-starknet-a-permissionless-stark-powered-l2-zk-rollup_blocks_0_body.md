@@ -1,106 +1,106 @@
 #### **TL;DR**
 
-We’re building StarkNet in four steps:
+Χτίζουμε το StarkNet σε τέσσερα βήματα:
 
-* Step 0 — Foundations (completed*)
-* Step I — Planets: Single-App Rollups
-* Step II — Constellations: Multi-App Rollups
-* Step III — Universe: A Decentralized Rollup
+* Βήμα 0 — Βάσεις (ολοκληρώθηκε*)
+* Βήμα I — Πλανήτες: Ενιαία Εφαρμογή Rollups
+* Βήμα Ii — Αστερισμοί: Πολυ-App Rollups
+* Βήμα III — Σύμπαν: Μια Αποκεντρωμένη Συνάθροιση
 
-We expect to have Step I deployed in a few short months, and be well on our way to Steps II & III by the end of 2021.
+Αναμένουμε να έχουμε το Βήμα που έχω αναπτύξει σε λίγους μικρούς μήνες, and be well on our way to Steps II & III by the end of 2021.
 
-### **Introduction**
+### **Εισαγωγή**
 
-StarkWare is building StarkNet, a decentralized, permissionless and censorship-resistant STARK-powered L2 ZK-Rollup that supports general-computation over Ethereum. It is based on the Turing-complete [Cairo language](https://www.cairo-lang.org/).
+Το StarkWare κατασκευάζει το StarkNet, ένα αποκεντρωμένο, permissionless και ανθεκτικό στη λογοκρισία ZK-Rollup του STARK-powered L2 που υποστηρίζει γενικευμένο υπολογισμό πάνω από το Ethereum. Βασίζεται στη Turing-complete[γλώσσα του Καΐρου](https://www.cairo-lang.org/).
 
-Developers, users and StarkNet nodes will be able to do everything one would expect from a permissionless L2 Rollup: Developers may build applications implementing their own business logic and deploy them on StarkNet. Users may send transactions to StarkNet to be executed, just like they interact with Ethereum today. StarkNet nodes and participants will be crypto-economically incentivized to ensure the network operates efficiently and fairly.
+Προγραμματιστές, Οι χρήστες και οι κόμβοι StarkNet θα είναι σε θέση να κάνουν ό, τι θα περίμενε κανείς από ένα χωρίς άδεια L2 Rollup: Οι προγραμματιστές μπορούν να δημιουργήσουν εφαρμογές που εφαρμόζουν τη δική τους επιχειρηματική λογική και να τους αναπτύξουν στο StarkNet. Οι χρήστες μπορούν να στείλουν συναλλαγές στο StarkNet για εκτέλεση, ακριβώς όπως αλληλεπιδρούν με το Ethereum σήμερα. Οι κόμβοι StarkNet και οι συμμετέχοντες θα παρέχουν οικονομικά κίνητρα για να εξασφαλίσουν ότι το δίκτυο λειτουργεί αποτελεσματικά και δίκαια.
 
-All StarkNet transactions will be periodically batched, and their validity will be proven in a STARK proof, to be verified on Ethereum. As the computational effort required to verify STARK proofs is exponentially small compared to the computation proven, StarkNet will scale Ethereum by orders of magnitude.
+Όλες οι συναλλαγές του StarkNet θα πραγματοποιούνται σε τακτά χρονικά διαστήματα και η ισχύς τους θα αποδειχθεί σε απόδειξη STARK, που θα επαληθευτεί στο Ethereum. Δεδομένου ότι η υπολογιστική προσπάθεια που απαιτείται για την επαλήθευση των αποδείξεων STARK είναι εκθετικά μικρή σε σύγκριση με τον υπολογισμό που αποδείχθηκε, StarkNet θα κλιμακώσει το Ethereum κατά παραγγελίες μεγέθους.
 
-Since all StarkNet state transitions will be STARK-proven, only valid ones will be accepted on Ethereum. All data required to reconstruct the full StarkNet state will be published on-chain. Anyone will be able to run their own StarkNet node. These properties will make StarkNet as secure and permissionless as Ethereum.
+Δεδομένου ότι όλες οι μεταβάσεις StarkNet θα αποδειχθούν STARK, μόνο έγκυρες θα γίνουν δεκτές στο Ethereum. Όλα τα δεδομένα που απαιτούνται για την ανακατασκευή του πλήρους κράτους StarkNet θα δημοσιευθούν στην αλυσίδα. Ο καθένας θα είναι σε θέση να τρέξει το δικό του κόμβο StarkNet. Αυτές οι ιδιότητες θα καταστήσουν το StarkNet ασφαλή και χωρίς δικαιώματα όπως το Ethereum.
 
-We’ve been at it for three years, and have already achieved some remarkable milestones in turning “Moon Math” into production-grade and efficient software running on Ethereum. The way StarkWare does things is tackle the hard problems first, build the core technology, and then release it to production in piecemeal fashion. We will continue to build in this manner as we bring StarkNet to completion.
+Είμαστε σε αυτό για τρία χρόνια, και έχουν ήδη επιτύχει αξιόλογα ορόσημα στη μετατροπή του “Moon Math” σε παραγωγικό και αποδοτικό λογισμικό που λειτουργεί στο Ethereum. Ο τρόπος με τον οποίο το StarkWare κάνει τα πράγματα είναι να αντιμετωπίσει πρώτα τα δύσκολα προβλήματα, να χτίσει τον πυρήνα της τεχνολογίας και στη συνέχεια να το απελευθερώσει στην παραγωγή με αποσπασματικό τρόπο. Θα συνεχίσουμε να χτίζουμε με αυτόν τον τρόπο καθώς φέρνουμε το StarkNet στην ολοκλήρωση.
 
 ![](/assets/ontheroad_02.png)
 
-**Step 0 — Foundations**
+**Βήμα 0 — Βάσεις**
 
-StarkWare has completed laying down some important foundations for StarkNet.
+Το StarkWare έχει ολοκληρώσει τον καθορισμό ορισμένων σημαντικών θεμελίων για το StarkNet.
 
 #### **Cairo**
 
-[Cairo](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20) is our Turing-Complete High-Level Language & framework for producing STARK proofs for general computation. Instead of hand-crafting complex “circuits” or AIRs, an application developer may use Cairo to define any business logic, have it proven off-chain, and verified on-chain. Cairo is [in production on Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20), and is also [available to developers](http://cairo-lang.org/).
+[Κάιρο](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20)είναι η Turing-Complete High-Level Γλώσσα & πλαίσιο για την παραγωγή STARK proofs για γενικό υπολογισμό. Αντί για χειροτεχνία πολύπλοκα «κυκλώματα» ή AIRs, ένας προγραμματιστής εφαρμογών μπορεί να χρησιμοποιήσει το Κάιρο για να καθορίσει οποιαδήποτε επιχειρηματική λογική, έχει αποδειχθεί off-chain, και επαληθεύεται on-chain. Το Κάιρο είναι[σε παραγωγή στο Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20), και είναι επίσης[διαθέσιμο για προγραμματιστές](http://cairo-lang.org/).
 
-In a couple of weeks we will launch on a public Ethereum testnet an Alpha version of Cairo’s Generic Proof Service (GPS). *This will allow developers to build their own applications using Cairo, implementing whatever business logic they wish. They will send their Cairo code to the GPS to be proven, and then verified on-chain.*
+Σε μερικές εβδομάδες θα ξεκινήσουμε σε ένα δημόσιο Ethereum testnet μια έκδοση Alpha της Γενικής Υπηρεσίας Παροχής Υπηρεσιών του Καΐρου (GPS). *Αυτό θα επιτρέψει στους προγραμματιστές να χτίσουν τις δικές τους εφαρμογές χρησιμοποιώντας το Κάιρο, εφαρμόζοντας οποιαδήποτε επιχειρηματική λογική επιθυμούν. Θα στείλουν τον κωδικό τους στο Κάιρο στο GPS για να αποδειχθούν, και στη συνέχεια θα επαληθευτούν on-chain.*
 
-GPS enables a single proof to assert the integrity of execution of altogether separate and independent applications, thereby giving those applications the ability to amortize the gas expense of proof verification amongst them.
+Το GPS επιτρέπει σε μια ενιαία απόδειξη για να επιβεβαιώσει την ακεραιότητα της εκτέλεσης εντελώς ξεχωριστών και ανεξάρτητων εφαρμογών, παρέχοντας έτσι στις αιτήσεις αυτές τη δυνατότητα απόσβεσης μεταξύ τους των δαπανών για το φυσικό αέριο από την επαλήθευση της απόδειξης.
 
-Cairo and GPS are the basis of StarkNet — our decision to externalize both to developers provides them with early exposure to this technology, not only so they can start building on top of it, but also so they may influence StarkNet’s evolution.
+Το Κάιρο και το GPS είναι η βάση του StarkNet - η απόφασή μας να εξωτερικεύσουμε και τους δύο προγραμματιστές τους παρέχει πρόωρη έκθεση σε αυτή την τεχνολογία, όχι μόνο έτσι μπορούν να αρχίσουν να χτίζονται πάνω από αυτό, αλλά και έτσι μπορούν να επηρεάσουν την εξέλιξη του StarkNet.
 
-We shall continue developing Cairo based on the needs and feedback of the developer community. We shall enhance this language with new features, syntax, and builtins that improve its usability, and we shall continue to develop and improve Cairo tooling: compilers, tracer/debugger, and integrations to common IDEs.
+Θα συνεχίσουμε να αναπτύσσουμε το Κάιρο με βάση τις ανάγκες και την ανατροφοδότηση της κοινότητας των προγραμματιστών. Θα ενισχύσουμε αυτή τη γλώσσα με νέα χαρακτηριστικά, σύνταξη και χτίστες που βελτιώνουν τη χρηστικότητά της, and we will continue to develop and improve Cairo tooling: compilers, tracer/debugger, and integrations to common IDEs.
 
-StarkNet will have Cairo running under the hood.
+Το StarkNet θα έχει το Κάιρο να λειτουργεί κάτω από την κουκούλα.
 
-#### **The STARK Software Stack**
+#### **Η Στοίβα Λογισμικού STARK**
 
-StarkWare has developed the most powerful proof system in the ecosystem, and it’s been [live on Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0) for months. StarkWare has also developed [ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), our open-source prover, which is 20X faster than any other prover; it offers both [zero-knowledge and post-quantum-secure signatures](https://twitter.com/StarkWareLabs/status/1331930111227080709).
+Το StarkWare έχει αναπτύξει το πιο ισχυρό σύστημα απόδειξης στο οικοσύστημα και είναι[ζωντανό στο Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0)για μήνες. Το StarkWare έχει αναπτύξει επίσης[ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), το prover ανοιχτού κώδικα, το οποίο είναι 20X γρηγορότερο από οποιοδήποτε άλλο prover; προσφέρει τόσο[μηδενική γνώση όσο και post-quantum-secure υπογραφές](https://twitter.com/StarkWareLabs/status/1331930111227080709).
 
-Our scaling *measurements* — not extrapolations, nor promises — include the processing of 300K transactions in a single proof on Mainnet, achieving [the world record in Rollup throughput: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). In the process, we’ve achieved the world record for Rollup gas efficiency: 315 gas/tx, orders of magnitude cheaper than transactions on Ethereum L1.
+Η κλιμάκωση*μετρήσεων μας*— όχι παρεκτάσεις, ούτε υποσχέσεις, — περιλαμβάνουν την επεξεργασία των συναλλαγών 300K σε μια ενιαία απόδειξη στο Mainnet, επίτευξη[το παγκόσμιο ρεκόρ στο Rollup throughput: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). Κατά τη διαδικασία, έχουμε επιτύχει το παγκόσμιο ρεκόρ για την αποδοτικότητα αερίου Rollup: 315 αέριο/tx, τάξεις μεγέθους φθηνότερα από τις συναλλαγές στο Ethereum L1.
 
-This technology will be the cornerstone of the decentralized Proving Layer of StarkNet, and hence we shall release additional and enhanced provers as part of StarkNet’s development (more on that in an upcoming blog post).
+Αυτή η τεχνολογία θα είναι ο ακρογωνιαίος λίθος του αποκεντρωμένου Proving Layer του StarkNet, και ως εκ τούτου, θα κυκλοφορήσει επιπλέον και ενισχυμένη provers ως μέρος της ανάπτυξης του StarkNet (περισσότερα σχετικά με αυτό σε ένα επερχόμενο blog post).
 
 #### **StarkEx**
 
-StarkEx is our L2 scalability engine. It has been serving [DeversiFi](https://twitter.com/deversifi)’s customers on Mainnet since June 2020. It will power both [dYdX ](https://twitter.com/dydxprotocol)and [ImmutableX](https://twitter.com/Immutable) starting in a few short weeks. StarkEx can handle complex trading logic (spot trading, derivatives, NFTs) as well as payments.
+Το StarkEx είναι η μηχανή κλιμάκωσης L2. Έχει εξυπηρετήσει τους πελάτες[DeversiFi](https://twitter.com/deversifi)στο Mainnet από τον Ιούνιο του 2020. Θα τροφοδοτήσει τόσο[dYdX](https://twitter.com/dydxprotocol)όσο και[ImmutableX](https://twitter.com/Immutable)ξεκινώντας σε μερικές σύντομες εβδομάδες. Το StarkEx μπορεί να χειριστεί πολύπλοκη λογική συναλλαγών (συναλλαγές άμεσης παράδοσης, παράγωγα, NFT) καθώς και πληρωμές.
 
-Developing StarkEx was our way of dogfooding our toolchain and testing it against real-world needs. There’s nothing like the demands of actual applications and live users to help tools mature and evolve. It also helps us understand which elements need to be addressed to better serve the ecosystem — for example, integrations with wallets and block explorers.
+Η ανάπτυξη του StarkEx ήταν ο τρόπος μας για να κατασκηνώσουμε την αλυσίδα εργαλείων μας και να την δοκιμάσουμε ενάντια στις πραγματικές ανάγκες του κόσμου. Δεν υπάρχει τίποτα σαν τις απαιτήσεις των πραγματικών εφαρμογών και των ζωντανών χρηστών για να βοηθήσει τα εργαλεία ώριμα και εξελισσόμενα. Επίσης, μας βοηθά να κατανοήσουμε ποια στοιχεία πρέπει να απευθύνονται για την καλύτερη εξυπηρέτηση του οικοσυστήματος — για παράδειγμα, την ενσωμάτωση με πορτοφόλια και την φραγή εξερευνητών.
 
-StarkEx is a live example of the ability to scale applications using a STARK-based ZK-Rollup, and is the first application in production on Mainnet written in Cairo. As such, it will also be one of the applications running on StarkNet.
+Το StarkEx αποτελεί ζωντανό παράδειγμα της ικανότητας κλιμάκωσης εφαρμογών χρησιμοποιώντας ZK-Rollup βασισμένο σε STARK, and is the first application in production on Mainnet written in CairoΚάιρο. Ως εκ τούτου, θα είναι επίσης μία από τις εφαρμογές που εκτελούνται στο StarkNet.
 
 ![](/assets/ontheroad_03.png)
 
-### **The Road Ahead**
+### **Ο Δρόμος Μπροστά**
 
-#### **Step I — Planets: Single-App Rollups**
+#### **Βήμα I — Πλανήτες: Ενιαία Εφαρμογή Rollups**
 
-This step will enable developers to build and deploy their own scalable applications on StarkNet.
+Αυτό το βήμα θα επιτρέψει στους προγραμματιστές να δημιουργήσουν και να αναπτύξουν τις δικές τους επεκτάσιμες εφαρμογές στο StarkNet.
 
-At this point, each StarkNet instance will be able to run a single application. Different instances may run different applications.\
-The StarkNet framework will include the following:
+Σε αυτό το σημείο, κάθε περίπτωση StarkNet θα είναι σε θέση να τρέξει μια ενιαία εφαρμογή. Διαφορετικές περιπτώσεις ενδέχεται να εκτελούν διαφορετικές εφαρμογές.\
+Το πλαίσιο StarkNet θα περιλαμβάνει τα ακόλουθα:
 
-* Mechanisms needed to generate STARK proofs for arbitrary Cairo logic, and then submit and verify them on Ethereum.
-* Interactions with L1 Ethereum: deposits and withdrawals of L1 tokens, publishing of the on-chain data, Escape Mechanisms protecting StarkNet users from malicious StarkNet operators, etc.
-* Management of the L2 user balances, and of the application’s storage and memory.
+* Μηχανισμοί που απαιτούνται για τη δημιουργία αποδείξεων STARK για αυθαίρετη λογική του Καΐρου και στη συνέχεια υποβολή και επαλήθευση τους στο Ethereum.
+* Αλληλεπιδράσεις με το L1 Ethereum: καταθέσεις και αναλήψεις νομισμάτων L1, δημοσίευση δεδομένων σε αλυσίδα, Διαφυγές Μηχανισμοί που προστατεύουν τους χρήστες StarkNet από κακόβουλους φορείς της StarkNet κ.λπ.
+* Διαχείριση των υπολοίπων χρηστών L2 και αποθήκευσης και μνήμης της εφαρμογής.
 
-Developers will be able to focus solely on building their application’s business logic, and then move into production: deploy and run it at scale on StarkNet.
+Οι προγραμματιστές θα είναι σε θέση να επικεντρωθούν αποκλειστικά στην οικοδόμηση επιχειρηματική λογική της εφαρμογής τους, και στη συνέχεια να προχωρήσουμε στην παραγωγή: αναπτύξετε και να το εκτελέσετε σε κλίμακα σε StarkNet.
 
-What enables us to build a general-computation scalable ZK-Rollup is the combination of:
+Αυτό που μας επιτρέπει να οικοδομήσουμε ένα γενικευμένο υπολογισμό επεκτάσιμη ZK-Rollup είναι ο συνδυασμός των:
 
-* Cairo, which is a general-purpose Turing-complete programming language
-* Our strong STARK stack (prover and verifier), that enables bundling enormous computations into a single proof
+* Κάιρο, το οποίο είναι μια γενική γλώσσα προγραμματισμού Turing-complete
+* Μας ισχυρή στοίβα STARK (prover και επαληθευτής), που επιτρέπει τη ομαδοποίηση τεράστιων υπολογισμών σε μια ενιαία απόδειξη
 
-#### **Step II — Constellations: Multi-App Rollups**
+#### **Βήμα Ii — Αστερισμοί: Πολυ-App Rollups**
 
-The next step will support multiple applications running on the same StarkNet instance and accessing the same global L2 state. This will enable interoperability between different applications, as well as reduced gas cost due to improved economies of scale.
+Το επόμενο βήμα θα υποστηρίξει πολλαπλές εφαρμογές που εκτελούνται στην ίδια περίπτωση του StarkNet και πρόσβαση στην ίδια παγκόσμια κατάσταση L2. Αυτό θα επιτρέψει τη διαλειτουργικότητα μεταξύ διαφορετικών εφαρμογών, καθώς και τη μείωση του κόστους του φυσικού αερίου λόγω της βελτίωσης των οικονομιών κλίμακας.
 
-Cairo, the powerful STARK stack, and GPS amplify StarkNet’ competitive advantage in supporting a multi-app Rollup.
+Κάιρο, το ισχυρό STARK stack, και GPS ενισχύουν το ανταγωνιστικό πλεονέκτημα StarkNet για την υποστήριξη μιας πολυ-app Rollup.
 
-At this stage, StarkNet will be a fully functional framework for running *multiple* applications with any arbitrary business logic on top of Ethereum, with each instance run by a single operator.
+Σε αυτό το στάδιο, Το StarkNet θα είναι ένα πλήρως λειτουργικό πλαίσιο για τη λειτουργία*πολλαπλών*εφαρμογών με οποιαδήποτε αυθαίρετη επιχειρηματική λογική στην κορυφή του Ethereum, με κάθε παρουσία που εκτελείται από έναν μόνο χειριστή.
 
-An operator may now spin up a StarkNet node, and application developers may deploy their contracts on it. From the users’ perspective, StarkNet now looks and feels like Ethereum, with a higher scale.
+Ένας φορέας εκμετάλλευσης μπορεί τώρα να περιστρέψει έναν κόμβο StarkNet και οι προγραμματιστές εφαρμογών μπορούν να αναπτύξουν τα συμβόλαια τους σε αυτόν. Από την οπτική γωνία των χρηστών, το StarkNet τώρα φαίνεται και αισθάνεται σαν το Ethereum, με υψηλότερη κλίμακα.
 
-#### **Step III — Universe: Decentralized Rollup**
+#### **Βήμα III — Σύμπαντο: Αποκεντρωμένη Συνάθροιση**
 
-The last step in the evolution of StarkNet is decentralizing its operation.
+Το τελευταίο βήμα στην εξέλιξη του StarkNet είναι η αποκέντρωση της λειτουργίας του.
 
-Intriguing R&D questions we’re now tackling that affect this stage include (i) using ZK-Rollups to improve consensus-reaching mechanisms, and (ii) designing crypto-economic mechanisms to incentivize the decentralized StarkNet contributors and operators (transaction sequencers, provers, etc.) to function efficiently, fairly and securely.
+Intriguing R&D ερωτήσεις που αντιμετωπίζουμε τώρα που επηρεάζουν αυτό το στάδιο περιλαμβάνουν (i) τη χρήση ZK-Rollups για τη βελτίωση της συναίνεσης - φθάνοντας μηχανισμούς, Η StarkNet συνεισφέρονταν σε μεγάλο βαθμό από το γεγονός ότι η StarkNet συνεισφέροντες και η StarkNet συνεισφέρονταν σε μια αποκεντρωμένη επιχείρηση (αλληλουχία συναλλαγών, παροχές, κ.λπ. να λειτουργεί αποτελεσματικά, δίκαια και με ασφάλεια.
 
-### **Conclusion**
+### **Συμπέρασμα**
 
-StarkWare is building StarkNet, a decentralized permissionless STARK-powered L2 ZK-Rollup over Ethereum, that supports general-computation based on the Cairo language.
+Το StarkWare χτίζει το StarkNet, μια αποκεντρωμένη άδεια χρήσης του STARK-powered L2 ZK-Rollup πάνω από το Ethereum, που υποστηρίζει γενικός-υπολογισμούς με βάση τη γλώσσα του Καΐρου.
 
-StarkNet will enable applications to scale without compromising security, users to pay reasonable transaction fees, and the entire ecosystem to grow substantially and fulfill its promise.
+Το StarkNet θα επιτρέπει την κλιμάκωση των εφαρμογών χωρίς να διακυβεύεται η ασφάλεια, οι χρήστες να πληρώσουν λογικές χρεώσεις συναλλαγών, και ολόκληρο το οικοσύστημα να αναπτυχθεί ουσιαστικά και να εκπληρώσει την υπόσχεσή του.
 
-We gladly invite the developer community to [join us](https://twitter.com/StarkWareLtd) on this journey.
+Καλούμε ευχαρίστως την κοινότητα προγραμματιστών να[ενώσει μαζί μας](https://twitter.com/StarkWareLtd)σε αυτό το ταξίδι.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Ενημέρωση (Νοέμβριος 2021):**Το StarkNet Alpha είναι ζωντανό στο Ethereum Mainnet

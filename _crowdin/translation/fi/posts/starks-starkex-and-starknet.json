@@ -1,5 +1,5 @@
 {
-  "title": "STARKs, StarkEx, and StarkNet",
-  "time_to_consume": "3 min read",
-  "short_desc": "TARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps."
+  "title": "STARKs, StarkEx, ja StarkNet",
+  "time_to_consume": "3 min luettu",
+  "short_desc": "Tarkeet (Skaalattava, Läpinäkyvä tiedon argument of Knowledge) ovat todiste järjestelmästä, joka mahdollistaa laskennan osoittamisen ja todentamisen. Sen avulla voidaan käsitellä iso laskenta, tuottaa todiste laskenta oikeellisuutta, ja sitten todentamalla todiste hyvin harvoissa vaiheissa."
 }

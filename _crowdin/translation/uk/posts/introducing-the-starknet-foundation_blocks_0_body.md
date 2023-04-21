@@ -1,68 +1,68 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* StarkNet Foundation офіційно запущений
+* Він присвячений підтримці процвітаючого StarkNet
+* Сильна міждисциплінарна рада очолить Фонд
+* Фундація незалежна від StarkWare
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)робить вагомий крок до своєї майбутньої структури управління громадами з створенням StarkNet Foundation.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+Це опублікує місію Фундації, запроваджує її директорів та коротко обговорює досвід і цінності, які вони привносять до столу.
 
 The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### Передовище Starknet-носіїв
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet є допустимим, децентралізований прошарок 2 (L2) Роллап (який часто називають ZK-Rollup), призначений для масштабування Ethereum під час збереження безпеки та децентралізації Ethereum. Не маючи цієї місії, Фундація була створена як незалежна особа для просування спільних технологій, тобто StarkNet. Крім того, як некомерційна особа з вузькою місією: просування StarkNet як суспільне користь, і підтримуй його, як такі на довгі роки.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+Фундамент розпочинається з 50. % від початкового токена, який забезпечить ефективне використання ресурсів мережі до наступних цілей: обслуговування та забезпечення StarkNet як суспільного блага; продовження розвитку та розширення мережі; та підтримка культури конструктивної співпраці між розробниками.
 
-#### **The foundation’s priorities will include:**
+#### **Пріоритети фонду включатиме:**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**Сприяння спільноті**користувачів StarkNet, розробників та дослідників, коли вони вдихають життя в StarkNet будуючи інфраструктуру, інструменти, додатки та багато іншого.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**Розширюйте співтовариство**, навчаючись про StarkNet та свою технологію, та допомога розробникам отримала навички для побудови інфраструктури StarkNet, а також додатки, які сприяють потужності STARK.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**Змінюючи подальшу розробку мережі та впроваджуючи дослідження,**які є ключовими елементами допомоги мережі реалізувати своє бачення.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**Подальша децентралізація StarkNet's**розробляючи механізми управління StarkNet та запровадивши децентралізовану послідовність та доведення.
 
-### **Introducing the board**
+### **Представляємо плату**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+Сім учасників ради керуватимуть фундаментом. Члени ради приїжджають із різноманітних походів і несуть баланс, незалежність, мультидисциплінарне коло навичок до столу. Кожен член має досвід та досвід, які допоможуть StarkNet досягти свого потенціалу як довготривалого загального блага. У їхньому блоці[Привіт світ](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59), вони дають своє уявлення про те, що мотивує їх брати участь у StarkNet. Вони представлені в алфавітному порядку відповідно до перших імен.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Ендрю МакЛофлін**:](https://andrew.mclaughl.in/about-me)Колишній начальник начальника видатних технологій Сполучених Штатів; колишній віце-президент та головний офіцер політики ICANN - незалежний орган, який керує інфраструктурою Інтернету.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Проф. Ілі Бен-Сассон:](https://starkware.co/media-kit/?founder=Eli#founders)**Математик і науковець з комп'ютерних наук: Старквер-президент і Співзасновник; Співвинахідник СТАР, ФРТ і протоколи Zerocash і науковців Zccash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Ерік Стіна](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Помірний керівник і винищувач, відомий викриттям системних недоліків у висококваліфікованих проектах криптоактивів; радник з криптовалюти Фонду прав людини; колишній керівник інвестиційного офіцеру в наданні Аркане.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, що є експертом з відкритого програмного забезпечення і автором «Open Source for Business»; Генеральний партнер на OSS Capital та правовий радник StarkWare.
 
 **[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Томаш Стен́чак](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Забудник Blockchain який побудував основні компоненти Ethereum; Засновник у Нідерландах, один з найбільших команд який будує на Ethereum та StarkNet.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Урі-Колодний**:](https://starkware.co/media-kit/?founder=Uri#founders)Підприємництво; Директор StarkWare і Співзасновник. Перед початком StarkWare, він співпрацював з компаніями, що розробляють цілий ряд технічних продуктів, включаючи оптичні кулаки, інструменти для візуалізації даних, і т.д.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+Фон цих членів надає відмінний інструмент навичок, а також значний досвід, який оснащує Фонд добре для майбутнього.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+Ендрю та Гезер приносять сильні облікові дані з публічних та відкритих вихідних проектів. Хізер відомий тим, що виступає за вільне та відкрите програмне забезпечення. Ендрю роками була центральною фігурою в ІКААНН, організація, яка допомогла формувати інтернет у перші роки, як корисне для децентралізованого співтовариства. Це було завдяки процесам, заснованим на консенсусі. Такий процес потрібен для досягнення цілей Web3.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+Дошка також відображає значний досвід крипто-доступу через численні ланцюги. Томаш працював над розробкою основних компонентів Ethereum - і StarkNet. Ілій був науковцем у Zcash до того, як започаткувати технологію StarkNet, і Ендрю сьогодні сидить на раді Electric Coin Company, яка будує і підтримує Zcash technology.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+Дошка має бізнес та головний досвід, роботу Томаса та Урі, і в ній є експертиза з інформатики та математики, а також спеціально — з Шубхангі та Елі. Три члени правління Томаса, Урі та Ілі були глибоко залучені до будівництва StarkNet.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+Усі члени виступають за те, в що вони вірять. Ерік пішов так далеко, щоб залишити старшу роль у невинному місті Насдак, коли він погрожував обмежити свою незалежність, щоб розмістити свої думки щодо крипто. Як Фундація популярною технологією, яка забезпечує[цілісність обчислень,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)робить її доступним для складання ради з такою цілісністю.
 
-### **An Independent Foundation**
+### **Незалежний фундамент**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+Фундація є незалежним органом, який підтримуватиме будівлі, використання та підтримку громадського блага, а саме StarkNet Protocol. Як і в Інтернеті, Біткойні, і в Ethereum, StarkNet - це спільна технологія, створена як децентралізована цензурна мережа, де кожен може брати участь та розвивати вільно, без необхідності довіри третьої сторони.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+новостворений фонд - це некомерційна організація, яка була створена особливо для просування та підтримки StarkNet як суспільне благо. Фундація разом з інклюзивним набором незалежних розробників, стартапами, корпоративних користувачів, і громадськість у великих місцях завжди буде вільно користуватися і вдосконалювати StarkNet для своїх власних цілей, а також на благо кожного, хто хоче безпечно взаємодіяти та взаємодіяти з ними.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+Фундація є незалежною і вільна взяти будь-які посади, які обрав щодо StarkNet. Рішення робити простою більшістю або п’ятьма з семи у особливих випадках, таких як видалення та призначення членів правління Фонду. У рішеннях, де зовнішні позиції членів правління представляють інтерес, Фонд повинен вимагати від таких членів відмовитися від голосування.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+Фонд має чималі засоби для виконання своєї місії: 5.01 мільярд StarkNet токени було виділено для Фундації, тобто 50. % від початкового постачання 10 мільярдів токенів (див.[частина нашої пропозиції управління](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)для отримання додаткової інформації).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+Є багато деталей, які потрібно вирішити, що формуватиме майбутній напрямок StarkNet. На щастя, заснування фонду надає більше голосів зростаючій спільноті. StarkWare залишається відданою частиною цієї спільноти, і ми з радістю вітаємо більшу екосистему StarkNet, щоб зайняти більше власності на майбутнє. Подорож StarkNet, зараз знаходиться в руках децентралізованої команди, і Фундація зіграє важливу роль, допомагаючи забезпечити її гладкою. Все в StarkWare бажає новому тілу успіху в його місії.

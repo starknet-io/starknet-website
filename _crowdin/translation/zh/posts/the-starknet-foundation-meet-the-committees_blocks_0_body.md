@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+2022年11月下旬，宣布 [发射Starknet基金会](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)。 基金会是一个独立的组织，致力于实现Starknet成为一个繁荣、分散和无权限的第二层(L2) Validity Rollup (a.ka.a)的愿景。 ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+在头盔上有很强的 [跨学科棋盘](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) Starknet基金会完全能够实现其培养和扩大Starknet社区的目标， 监督网络的继续发展，建立无权限的治理机制，并对Starknet生态系统进行全面分散管理。 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+今天，基金会很高兴公开宣布任命五个委员会； 每个受托的任务都与Starknet的任务和优先事项相吻合。 每个委员会的任务不是固定的，将进行例行评估，并视需要进行调整和修正。
 
-The committees are:
+这些委员会是：
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* 条款委员会
+* 早期领养补助金委员会
+* 开发者伙伴关系委员会
+* 治理委员会
+* 生态系统在线委员会
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+在下文中，我们将更详细地介绍各委员会的情况，包括它们的任务、运作和最初的成员。
 
-## Introducing the Starknet Foundation Committees 
+## 设立Starknet基金会委员会 
 
-### Provisions Committee
+### 条款委员会
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+条款委员会负责规划、监督和执行Starknet生态系统令牌——STRK。 STRK 将被用作Starknet共识机制参与的标记。 它还将作为网络管理令牌和支付网络交易费的气体令牌。 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+条款委员会对于确保公平、分散和透明地分配代币是至关重要的，这种代币将为Starknet生态系统提供权力。 该委员会监督使用STRK 令牌的用户的配置。 这些令牌必须支付使用Starknet的费用。 该委员会将根据公平、透明和权力下放的目标，评估合格团体并向Starknet基金会提出建议。 这些计划一旦准备就绪将予以宣布。
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+可通过 [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org) 联系条款委员会。
 
-### Early Adopter Grants Committee
+### 早期领养补助金委员会
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+早期领养补助金委员会致力于促进Starknet生态系统的发展，向在Starknet上建造链上应用程序的创新小组提供赠款。 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+EAG 委员会的目的是通过在链上部署，促进生态系统的扩大和活力。 委员会将很快宣布制定其第一轮申请的标准，追溯性地侧重于已经开始在Starknet建造大楼的小组。 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+早期领养补助金委员会致力于提高透明度，并将所有赠款金额公之于众。
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+早期收养赠款委员会可通过以下网址联系： [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org)。
 
-### Developer Partnerships Committee
+### 开发者伙伴关系委员会
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+开发者伙伴关系委员会在Starknet生态系统中发挥着重要作用，促进和监督将纳入Starknet生态系统的新的战略开发者伙伴关系。 特别是，战略开发者伙伴关系被认为是在对Starknet的成功至关重要的关键基础设施方面的协作。
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+该委员会的主要职责包括简化开发者伙伴关系的提交程序，尽职尽责，批准提交的提案。 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+该委员会通过查明和支持已经建立或正在积极建立网络核心基础设施的开发者团队，对促进强有力的生态系统至关重要。 他们的努力确保以分散和透明的方式提供使Starknet的基础设施铁轨得到保障和扩大的队伍。 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+可以联系开发者伙伴关系委员会： [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org)。
 
-### Governance Committee
+### 治理委员会
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+施政委员会的任务是在Starknet生态系统的权力下放方面发挥关键作用。 该委员会负责研究、规划和执行Starknet治理的初步阶段。 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+注重权力下放并在社区参与和积极的持续发展之间取得平衡； 该委员会旨在建立、执行和监督Starknet治理的最初支柱。 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+治理委员会将发展和建立保持透明、公平的核心机制。 (b) 促进社区参与并确保持续增长和分散参与生态系统的结构。 为了实现这些目标， 委员会将确定将由Starknet社区表决和批准的决议，并确定讨论和执行治理投票的适当程序。 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+该委员会已经启动了 [Starknet治理第一阶段](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820)。 有关第一次投票的任何查询，请联系： [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org)。
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+还可以通过 [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org) 与治理委员会联系。 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+要了解更多关于治理委员会工作和路线图的信息，请参阅 [此页](https://www.starknet.io/en/posts/governance)。
 
-### Ecosystem Onboarding Committee
+### 生态系统在线委员会
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+生态系统开放委员会负责赋予新开发者和社区成员权力并使其融入Starknet生态系统。 这包括确定、增强和支持Starknet大使，向生态系统贡献者和人才库提供赠款， 并组织和赞助一种促进社区参与Starknet生态系统的活动和教育伙伴关系。 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+各位大使将受到尊敬，成为Starknet社区的正式成员，他们致力于组织、出席并在活动上发言。 • 促进社区发展，创造内容，寻求互利的赞助，并说服有前途的个人和团队在Starknet基础上再接再厉。
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+生态系统上网委员会的主要重点与早期领养补助委员会不同。 欧亚经济共同体委员会旨在启动并颁发Starknet首批收养人奖， 生态系统在线委员会强调了在基层一级生态系统的持续和持续增长与发展。 
 
 The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## 即将到来的里程碑
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+随着这些委员会的任命，Starknet基金会准备走上令人振奋的道路。 每个委员会致力于进一步推动生态系统的某个具体方面并共同开展工作。 与基金会一道，将努力建设一个繁荣、分散和无许可的第二层生态系统。  
 
-Here is what’s coming next: 
+下一步： 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* [第一次治理投票](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) 将在2023年3月21日进行；
+* EAG 委员会的第一个通知和第一轮应用程序的详细信息将于2023年3月21日在StarkNet基金会的 [博客](https://www.starknet.io/en/posts/foundation) 上公布。
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+关注StarkNet基金会的 [博客](https://www.starknet.io/en/posts/foundation) 和社交媒体频道以获取最新的更新和机会。
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+对于所有附加的Starknet基金会信息、更新和建议，请在 [Twitter](https://twitter.com/Starknet)上跟随Starknet， 加入我们 [Discord](http://starknet.io/discord), 并阅读 [社区论坛。](https://community.starknet.io/)**

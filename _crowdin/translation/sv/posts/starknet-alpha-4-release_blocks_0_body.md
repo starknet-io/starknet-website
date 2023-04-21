@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Spännande tider framåt
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4 släpptes idag på Goerli. Denna version är Mainnet release kandidat och, om allt går enligt planen, kommer att distribueras på Mainnet vid månadens slut.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4 följer den funktionspackade utgåvan av Alpha 3, som bland annat inkluderade förbättringar av Kairo sammanställningstider, kontraktskonstruktörer och mycket mer (se[fullständiga versionsfakta](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Viktigt att notera: detta är fortfarande en Alpha-version — för att distribuera ditt kontrakt på Mainnet-distributionen, följ de nya apps’[onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)riktlinjer.
 
-### New Features
+### Nya funktioner
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Även om denna version huvudsakliga fokus är att göra sig redo för Mainnet distribution, det innehåller också flera nya funktioner:
 
-#### Get this contract’s address
+#### Få det här kontraktets adress
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+Kontrakt kan nu få sin egen adress via den nya syscall \`get_contract_address\`. Slutligen kan vi lägga selfie-kontraktet i vila.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie kontrakt: september 2021-november 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10 november, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Blockera Hash
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Blocken identifieras nu via hash snarare än Id. Detta följer vår senaste övergång till transaktionshash. Alla API:er har uppdaterats därefter. Vi kommer snart att släppa full teknisk dokumentation av systemet, som också kommer att omfatta specifikationen av blockstrukturen.
 
-#### Contract Addresses
+#### Kontrakt Adresser
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Denna version introducerar en ändring av hur kontraktsadresser beräknas. Adressen är en Pedersen hash på den uppringande adressen, ett salt (slumpmässigt eller valt av utplaceraren), kontraktskoden hash, och hashen av konstruktorns argument, alla läggs till av ett prefix.
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash(PREFIX, samtalsadress, salt, kontrakt_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+I den nuvarande versionen är den uppringande adressen alltid lika med 0, men i framtida versioner kommer detta att göra det möjligt att använda kontrakt direkt från befintliga kontrakt.
 
-Note that this scheme is very similar to CREATE2.
+Observera att detta system är mycket likt CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Se fullständig versionsinformation](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
 #### Token Bridges
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Token bridges är en viktig del av StarkNet infrastruktur. De tillåter överföring av medel till och från StarkNet. Bron är inte utplacerad vid tidpunkten för publicering, men den bör vara tillgänglig inom några dagar — tillsammans med den fullständiga dokumentationen av dess funktionalitet och användning. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. Som sådan, erbjuder det korta uttagstider - när ett uttag ingår i ett parti och accepteras på L1, de medel som är tillgängliga direkt för användaren på L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Detta är den första versionen av symboliska broar, och vi skulle älska att få feedback från ekosystemet på det.
 
-### Join StarkNet
+### Gå med i StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Det har aldrig funnits en bättre tid att gå med i den växande StarkNet-gemenskapen. Du kan delta i konversationen i[StarkNet discord](https://discord.gg/uJ9HZTUk2Y), delta i en[online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), eller använd en av[tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html)för att börja bygga din första egen app.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Uppdatering (nov 2021):**StarkNet Alpha live på Ethereum Mainnet

@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+本日は、StarkNetプロジェクトを支援するための独立したコミュニティ構造を提供するために組織された**StarkNet Foundation**を歓迎します。
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+StarkNetは、Ethereum上でL2ネットワークとして動作する権限のない分散型有効性ロールアップです。 Ethereumの構成性とセキュリティを損なうことなく、dAppが計算のために大幅にスケールを増やすことができます。 StarkNetの詳細については、こちらをご覧ください[](https://starknet.io/). 開発者やユーザーのコミュニティに真に責任を負い、アクセスできるようにする。 StarkNetには、StarkNetエコシステム全体のためのコミュニティ指向のガバナンスのための独立したファシリテーターが必要です。
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+新しく作られたStarkNet財団は、コミュニティメンバーの幅広い断面からの支援とリソースを伴い、研究開発を促進します。 StarkNetネットワークの拡張と技術支援、StarkNetネットワークの使用と採用、およびStarkNetコミュニティの参加とプロジェクトガバナンスを推進します。 財団は、ユーザーや開発者の会議に資金を提供し、組織化し、連合社会および関連するコミュニティとの協力を調整します。
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+財団は、世界中の学際的な背景を持つ7人の取締役会によって支配されます。 要するに:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me)— テクノロジーポリシー、デジタル権利、起業家、コミュニティのセルフガバナンスの専門家
+* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders)— StarkWare 共同設立者/代表取締役社長, STARKの共同発明者
+* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))— 独立ブロックチェーン研究者兼ソートリーダー
+* [Heather Meeker](http://www.heathermeeker.com/)— オープンソースソフトウェアライセンスの専門家
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)— 数学と理論計算科学の教授、およびSTARKを支える数学のコア貢献者
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— StarkNetに構築されている最大のチームの1つであるNethermineのブロックチェーンエンジニアとリーダー兼CEO。
+* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders)— StarkWare 共同設立者兼CEO
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+StarkNetトークンは、ネットワークを維持し、進めるために行う作業に対してStarkNet開発者とオペレータに報酬を与えるために作成されました。 財団は50を保持しています。 10Bトークンの最初の鋳造の割合は、ユーザーの利益のために財団によって管理されます。 StarkNetコミュニティのオペレータと開発者は、[ここ](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) を設定します。 残りのトークンは4年間のロックアップの対象となり、StarkNet開発の既存のStarkNetコア貢献者と投資家が所有します。
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+StarkNet財団理事会は、正式化と運営のための準備、エグゼクティブディレクターの採用を開始しました。 そして、StarkNetトークン保有者の最初の投票の内容/場所/方法/方法を把握するなど、いくつかの重要なプロジェクトを進めるために、アドホックコミュニティ委員会を設立し始めました。
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+私たちはStarkNetコミュニティ全体の成功を願っており、StarkNet財団の立ち上げに取り組んでいることを誇りに思っており、興奮しています。
 
 
 
-### Here is what our board has to say:
+### 私たちのボードが言いたいことは次のとおりです:
 
-**Andrew:**
+**アンドリュー：**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> 私にとってStarkNetの魅力的な点は、私の判断であるということです。 Ethereum(およびその他のブロックチェーン)を本当にスケーラブルで安全でプライベートな許可のないグローバルコンピューティングプラットフォームにするための最も有望で技術的に説得力のある取り組みです。 確固とした科学とその背後にある才能のあるチームと StarkNetは、一般的なブロックチェーンエコシステムの地平線上にある広範なユーティリティを達成する上で重要な部分です。
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> 私は、創立委員会の一員として、良いガバナンスと効果的なグローバルなコミュニティ構築に焦点を当てることを目指しています。 StarkNet財団は非営利のスタートアップになります 建築家と利用者のコミュニティを構築し、関与し、多様な、そして自らを支配する権限を与えるという使命を持って。 組織として、財団自体は開放的で、透明性があり、説明責任があり、信頼性があり、倫理的である必要があります。 コミュニティの自己ガバナンスの例として 私は財団が客観的に直感的で便利なStarkNetを動力とするガバナンスツールとサービスの創造を推進することを期待しています。
 
 **Eli:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> StarkNet(およびSTARK)の最初の成功は私を驚かせました。 StarkWare中心の取り組みとして始まったのは、今では繁栄し、急速に拡大するエコシステムです。 Yahoo!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> ガバナンスは難しい話題です歴史を通じて人類社会を困惑させてきました 必要なチェックとバランス、紛争解決メカニズムなどを含むStarkNetのガバナンスはまだ出現しておらず、結晶化していません。 そして、私の興奮と楽観主義の気持ちは、今後の課題に謙虚にさせられます。 StarkNetが単一の当事者によって支配されるべきではないことは私にとって明らかです。 したがって、私たちの使命の最も重要な部分は、StarkNet開発者の幅広く拡大するエコシステムに耳を傾け、彼らが先導するのを助けることであると考えています。
 
-**Eric:**
+**エリック:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> ロールアップ技術は、権限のない資金を数百万人のユーザーにどのように拡張するかという問題に対する最も有望な答えです。 STARKsは一般的な計算を簡潔に検証する能力を提供し、したがってEthereumベースレイヤの品質と値を上記のレイヤに拡張することができます。 StarkNetはおそらくこの概念の最も重要なインストールです そして謙虚さをもって、私はその完全性とその成功を確実にするために支援するという任務を受け入れています。
 
 **Heather:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> 私はStarkNet財団に参加することに興奮しています。
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> 30年近くにわたり、オープンソースライセンスの理解を深めるために取り組んできました。 私は弁護士ですから、もちろんその多くの時間をクライアントがオープンソースのライセンスと開発について学ぶのに費やしてきました。 しかしそれらの数十年の間に テクノロジー業界全体がコラボレーションの方法をより深く理解するために取り組んでいます — それはオープンソース開発モデルの贈り物です。 私は特に幸運でした なぜなら、私の作品の多くは、クライアントだけでなく、他の人々を助けてきたからです。コラボレーションのルールやパラダイムについて学びましょう。 ある意味では、私はカウンセラーと同じくらい教師になる幸運がありました。
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> 私はStarkNet財団と協力して、Ethereumとブロックチェーンの次の時代に移行し、成長しているStarkNetコミュニティを支援することを楽しみにしています。
 
-*(Heather is an advisor to StarkWare.)*
+*(ヘザーはStarkWareのアドバイザーです。*
 
 **Shubhangi:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> 私はコンピュータサイエンスの理論的基礎の研究者です。 個人的に 過去数十年間の分野におけるエキサイティングな理論的発展のいくつかが、STARK証明に力を与える技術を生み出すためにどのように協力してきたかに驚かされました。
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> 分散型パブリックプラットフォームを通じてSTARKSを活用したスケーラビリティをもたらすという使命があると思います。 開発者がガバナンスとデザインにおいて中心的な役割を果たす場合、ブロックチェーン技術のリーチを大幅に拡大する可能性があります。 取締役会の一員として、私はStarkNetの刺激的な手段を可能にしたいと考えています。 理論計算機科学の現代的な研究の恩恵を受けることができます 私はこの一員になることを楽しみにしています。
 
-*(Shubangi is an advisor to StarkWare.)*
+*（首番義はStarkWareの顧問）*
 
 **Tomasz:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> StarkNetは、その開発の重要な段階に入ります。それは、よりオープンで、構成可能で、信頼性が高くなった時です。 基金での私の役割は、コラボレーションを促進する機会として捉えています STARKsを搭載した分散型許可チェーンの未来への動きを支援する。
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> Ethereum財団の助成金としてオランダでの私の道を思い出して、ビルダーが直面している課題と機会の両方を理解してください 私はStarkNet Foundationのエグゼクティブチームがビルダーが力を与えられたと感じるエコシステムを構築することを確実にする機会を歓迎します 公共財としてStarkNetを構築しながら、彼らの研究開発の努力から恩恵を受けます。 私はStarkNetの独立した共同所有者としての彼らの役割を見つけるビルダーとコミュニティの次の世代を見て楽しみにしています.
 
 **Uri:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> StarkWareの共同設立者 & CEOとして、私は2018年からブロックチェーンスペースを観察しています(親戚の新人! Ethereumのスケーリングソリューションの構築に深く関わっています。 StarkWareで開発を開始した計算整合性のためのソフトウェアツールは現在、世界中の開発者の手に委ねられています。 使命は明白です:これらのツールは、世界の興味のある開発者の手に委ねる必要があります。 これらのツールを改善する必要があります StarkNet財団は、StarkNetを分散化することで、この使命を果たす上で重要でエキサイティングな役割を果たします。

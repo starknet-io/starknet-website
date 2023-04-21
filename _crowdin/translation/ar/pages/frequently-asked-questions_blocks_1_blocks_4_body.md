@@ -1,5 +1,5 @@
-Currently not. STARKs are defined as Validity proofs, meaning they prove computational integrity. With Validity proofs (STARKs included), one party can prove to another that a certain computation was performed correctly. Zero-Knowledge is an additional property asserting that the prover does not have to reveal any information included in the computation.
+حاليا ليس كذلك. وتُعرَّف هذه المعايير بأنها أدلة صلاحيّة، مما يعني أنها تثبت سلامة الحساب. ومع وجود أدلة على صحة البيانات (تشمل هذه الأدلة)، يمكن لأحد الطرفين أن يثبت لطرف آخر أن حساباً معيناً قد أُجري على نحو صحيح. ويعتبر صفر المعرفة من الممتلكات الإضافية التي تؤكد أن المحقق ليس عليه أن يكشف عن أي معلومات مدرجة في الحساب.
 
-Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
+معظم قطع ZK-Rolups ليست في الحقيقة معرفة صفرية. ويأتي الخطأ من الخلط بين أدلة الصحة (يضمن سلامة الحسابات) وأدلة عدم المعرفة (يؤكد عدم الكشف عن أي معلومات).
 
-Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+تستخدم Starknet أدلة صحة STARK. ومن الجدير بالملاحظة أن استخراج المعلومات من الأدلة أمر بالغ الصعوبة ــ وهو شبه مستحيل من الناحية العملية.

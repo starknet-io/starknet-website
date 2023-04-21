@@ -1,69 +1,69 @@
 ### TL;DR
 
-* We are sharing a detailed plan for Regenesis, which has been shaped by extensive discussions with the StarkNet community. Special thanks to Kuba@SWM.
-* Regenesis will follow the release of Cairo 1.0, making the system more secure by allowing simpler and safer StarkNet contracts
-* Users should be prepared to update their wallet during the transition phase
-* Developers will be required to port their contracts to Cairo 1.0
+* Ми поширюємо детальний план Регенезу, який був сформований завдяки широким обговоренням зі StarkNet спільнотою. Особлива подяка Kuba@SWM.
+* Регенезис буде слідувати за випуском Каїра 1.0, що зробить систему більш захищеною, дозволяючи простішу і безпечну договори StarkNet
+* Користувачі повинні бути готові оновити свій гаманець під час перехідної фази
+* Розробникам потрібно буде портувати свої контракти для Каїра 1.0
 
-### Introduction
+### Вступ
 
-StarkNet Alpha is progressing towards Regenesis, an important step towards production. In this update we want to share more details on the main motivation for Regenesis — [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) — and to start explaining what it will require from users and developers. After Regenesis, StarkNet will work only with Cairo 1.0-based contracts, and will start from a new genesis block with the existing state.
+StarkNet Alpha просувається до Регенезису, що є важливим кроком у напрямку виробництва. У цьому оновлення ми хочемо поділитися подробицями про головну мотивацію до Регенезису —[Каїр 1.](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)- і почати пояснювати те, чого вона потребуватиме від користувачів і розробників. Після того, як регенезу, StarkNet працюватиме лише з угодами на базі 1.0 та розпочнеться з нового блоку генів з існуючою державою.
 
-What will Regenesis require from users? A simple update of their wallet. What will it require from the builders of StarkNet’s dapps? Porting their contracts to Cairo 1.0, and following a simple upgrade guideline. Specifically, there will be no restart from a clean state and we will stay with the same StarkNet instance, meaning there will be no need for a migration**.**
+Чого вимагатиме генезис від користувачів? Просте оновлення їхнього гаманця. Що знадобиться від будівельників StarkNet? Портування їх контрактів у Каїро 1.0 і нижче простої системи оновлення. Зокрема, з чистим статусом не буде перезавантаження, і ми залишимося з тим самим StarkNet екземпляром, значення для міграції**і не буде потреби.**
 
-The Regenesis plan is to fully preserve the state of applications and to not incur any downtime to the applications. Thus, applications that follow the guidelines we’ll provide will be able to launch on StarkNet Alpha Mainnet right away without any disturbance to their operation and their users during the Regenesis process.We are committed to work with the community and provide all the support needed to make this process as smooth as possible.
+Регенезис полягає в тому, щоб повністю зберегти стан додатків і не понизити будь-який час у застосуванні. Таким чином, додатки, які дотримуються вказівок, ми надамо їм, зможуть запустити програму на StarkNet Alpha Mainnet без будь-яких порушень для їх роботи та користувачів під час процесу Regenesis. e зобов’язане працювати з спільнотою та надавати всю підтримку, необхідну для того, щоб зробити цей процес якомога плавнішим.
 
-We are taking this direction as a result of extensive discussions with the community, which included an important suggestion by the Software Mansion team.
+Ми приймаємо цей напрямок в результаті широких дискусій із спільнотою, що включала важливу пропозицію команди Програм.
 
-### Why Regenesis?
+### Чому регенези?
 
-#### Cairo 1.0 and Sierra
+#### Каїр 1.0 і Сьєрра
 
-The main motivation for Regenesis is capitalizing on the new possibilities brought about by Cairo 1.0 — namely sequencers DOS protection, censorship resistance and gas metering, which are essential for StarkNet as a decentralized network.
+Основною мотивацією для Регенезу є використання нових можливостей, які надає Каїр 1. — а саме послідовники DOS, протидія цензури та збір газу, що має важливе значення для StarkNet як децентралізованої мережі.
 
-Cairo 1.0 will ensure that every transaction can be proven. This will allow StarkNet to include reverted transactions in blocks, and generate a proof of their execution. This mechanism will allow sequencers to be paid on the execution of reverted transactions, increasing DOS protection against malicious actors. In addition, Cairo 1.0 will support gas metering, which will enable StarkNet to transition to a more intuitive fee market. Lastly, this will allow StarkNet to introduce forced transactions from L1, and will enhance the censorship resistance capabilities of the network.
+Каїр 1.0 забезпечить, щоб кожна транзакція була доведена. Це дозволить StarkNet включати зворотні транзакції в блоки, і генерувати доказ їх виконання. Цей механізм дозволить сиквентарям виплачувати за виконанням зворотних транзакцій, збільшуючи захист DOS від шкідливих суб'єктів. Крім того, в Каїрі 1.0 підтримуватиме обмеження газу, що дозволить StarkNet перейти на більш інтуїтивний ринок зарплат. В кінці, це дозволить StarkNet запровадити примусові транзакції у L1, а також підвищить стійкість до цензури у мережі.
 
-To reap these benefits, Cairo v0 and Cairo 1.0 contracts cannot be mixed. Incorrect statements can’t be proven to be incorrect, nor can gas tracking happen, if we have bits of Cairo v0 contracts. To that end, we will need to phase out Cairo v0 code completely from StarkNet state, ergo Regenesis.
+Щоб скористатися цими перевагами, Каїр v0 і Каїр 1.0 договори не можна змішати. Невірні заяви не можна виявити, що є некоректними, і також не можуть трактувати газове відстеження, якщо ми маємо біти договорів Каїра v0. Для цього нам потрібно буде фазити код Каїра v0 повністю з штату StarkNet (StarkNes).
 
-**After Regenesis, we will have a Starknet system fully based on Cairo 1.0.**
+**Після регенезу, ми будемо повністю використовувати систему Starknet, засновану на Каїрі 1.0.**
 
-#### Simplifying the code and protocol
+#### Спрощення коду і протоколу
 
-StarkNet, while still in Alpha, already underwent many changes. Every version so far altered the StarkNet OS, blocks and transactions structure. This caused some of the code to be obsolete. Yet, full nodes and infrastructure providers (such as indexers and state explorers) need to be aware, and implement, all the past behaviors of StarkNet Alpha versions in order to sync with the state trustlessly. Without Regenesis, this burden might be a major deterrent for developers who would consider building such services for StarkNet.
+StarkNet, поки ще в Альфі, вже пройшли багато змін. Кожна версія досі змінила StarkNet OS, блоки та структуру транзакцій. Це призвело до того, що частина коду застаріла. Однак необхідно знати всі вузли та постачальники інфраструктури (наприклад, індексації та дослідники держав) і реалізація, всі минулі моделі StarkNet Alpha, щоб синхронізувати з станом надійно. Без регенезису цей тягар може бути головним стримуючим фактором для розробників, який би розглядав можливість будувати такі послуги для StarkNet.
 
-Therefore, before going to production, and as a preparation to a decentralized world with many infrastructure tools implementations, we intend to reduce the protocol’s complexity. We would achieve this by not requiring future infrastructure to execute any StarkNet 0.x code, and mark the first block after the transition period as the genesis point.
+Тому, перш ніж піти на виробництво і як підготовка до децентралізованого світу з багатьма реалізаціями інфраструктури, ми маємо намір зменшити складність протоколу. Ми б цього досягли, не вимагаючи майбутньої інфраструктури виконувати будь-який StarkNet 0. код, і відзначте перший блок після перехідного періоду як точка генезису.
 
-### Wen Regenesis? The overall timeline
+### Вене Регенези? Загальна стрічка
 
-Regenesis will follow the release of Cairo 1.0, which is planned to take place by the end of 2022. During Q1 of 2023, StarkNet will be updated to support Cairo 1.0, and we aim to migrate to a fully Cairo 1.0-based network by the end of Q1.
+Регенезис буде слідувати за випуском Каїра 1.0, що заплановано відбутися до кінця 2022. Протягом Q1 з 2023, StarkNet буде оновлено для підтримки Каїра 1. , і ми прагнемо перейти до повністю каїра 1.0-основної мережі до кінця Q1.
 
-**Users and applications will have to make the transition during this period.**
+**Користувачам і програмам доведеться здійснити перехід протягом цього періоду.**
 
 ![](/assets/1_ef85shzd2uudwex-cy8wdg-1.png)
 
-### So What Do I Need to Know?
+### Так що ж мені потрібно знати?
 
-Application developers need to be aware of the following aspects around Regenesis:
+Розробникам необхідно знати наступні аспекти навколо Regenese:
 
-1. Ensure your contract is ready for the upgrade. The full technicalities of the plan are shared in the [StarkNet Community Forum](https://community.starknet.io/t/regenesis-state-migration-current-suggestion/2080). Once the details will be finalized, we will share a concise guideline.
-2. Ensure you are ready to port your code to Cairo 1.0. See next section for all the latest details.
+1. Переконайтеся, що ваш контракт готовий до оновлення. Повні технічні характеристики плану поділилися[StarkNet Спільнотою на форумі](https://community.starknet.io/t/regenesis-state-migration-current-suggestion/2080). Після завершення деталей ми поділимося з чіткою інструкцією.
+2. Переконайтеся, що ви готові до порту свій код в Каїр 1.0. Перегляньте наступний розділ для всіх останніх подробиць.
 
-#### Porting Your Contract to Cairo 1.0
+#### Портація контракту в Каїр 1.0
 
-Cairo 1.0 holds great promise for StarkNet developers. An improvement on existing Cairo that will be safer, better and easier for writing contracts, with improved syntax, fully fledged type system (native uint256 anyone?) and more. Developers will be required to port their existing StarkNet contracts to Cairo 1.0 syntax. However, as the logic and code structure will stay the same, this effort is expected to be negligible compared to the effort it took to develop the app in the first place.
+Каїр 1.0 має великі обіцянки для розробників StarkNet. Покращений в існуючому Каїрі, що буде безпечнішим, кращим та легшим для написання договорів, з покращеним синтаксисом, повністю сформованою системою типів (носіїв uint256 кожен? і т. д. Розробникам потрібно буде портувати свої існуючі контракти StarkNet для Каїру 1.0 синтаксису. Однак, в міру того, як логіка і структура коду залишаться незмінними, очікується, що ці зусилля будуть незначними порівняно з роботами, які потребували для розробки додатку в першу чергу.
 
-In this context, it is worthwhile to note that you may choose to re-audit the Cairo 1.0 version of your app. If your app was already audited in the past, the re-audit process will be significantly cheaper and more straightforward, since the auditors are already familiar with your logic.
+У цьому контексті варто зазначити, що ви можете обрати повторно аудит до каїро 1.0 версії вашого додатку. Якщо ваша програма вже пройшла перевірку в минулому, процес повторного аудиту буде значно дешевшим і зрозумілішим, так як аудитори вже знайомі із вашою логікою.
 
-We will release all documentation around Cairo 1.0, along with tutorials and workshops during Q4 of 2022.
+Ми випустимо усю документацію в Каїрі 1.0, разом з підручниками та майстернями під час Q4 з 2022.
 
-### I’m a StarkNet User. What Should I Do?
+### Я - користувач StarkNet. Що мені робити?
 
-As a user, you will likely have to take a few actions during Regenesis. At the very least, you’ll have to upgrade your account contract. Not doing that over the (few months long) transition period will result in the loss of your account. Depending on the upgrade path chosen by the developers of the StarkNet apps you are using, you may have to take extra steps.
+Як користувач, швидше за все, доведеться прийняти кілька дій під час Регенезу. Принаймні, вам доведеться оновити контракт на ваш аккаунт. Якщо не робити цього протягом (кількох місяців довго) періоду переходу це призведе до втрати вашого рахунку. В залежності від шляху оновлення, обраного розробниками програм StarkNet додатків, якими ви використовуєте, може знадобитися додатковий крок.
 
-We remind everyone that StarkNet is still in Alpha phase, and users are required to stay attentive to communications of StarkNet and apps they are using. It is your responsibility to make sure you upgrade early to the new system. *Being an early adopter is not always easy, and we count on you to do your part!*
+Ми нагадуємо усім, що StarkNet досі у фазі Альфа, і користувачам потрібно бути уважними до комунікацій StarkNet та додатків, якими вони користуються. Обов'язково переконайтеся в тому, що ви швидко оновилися до нової системи. *Раннім послідовником не завжди є легко, і ми розраховуємо на вашу частину!*
 
-### To Conclude
+### Завершення
 
-Cairo 1.0 is just around the corner, providing many exciting benefits and improvements for StarkNet and its developers. To reap these, a Regenesis event of the network is needed. Luckily, we have a design in mind which makes this process minimally disruptive — completely seamless for users, and quite simple for applications.
+Каїр 1.0 знаходиться за рогом, забезпечуючи безліч захоплюючих переваг та вдосконалення для StarkNet та його розробників. Для того, щоб отримати ці гроші, необхідна подія генезису мережі. На щастя, у нас є задум, який створює цей процес мінімально руйнівним - абсолютно безшовно для користувачів, і досить просто для програм.
 
-We urge you to participate in the [community discussion](https://community.starknet.io/t/regenesis-state-migration-current-suggestion/2080) and share your comments and concerns, as well as stay up to date regarding the steps you’ll need to take as an application developer on StarkNet.
+Ми закликаємо вас взяти участь в[спільному обговоренні](https://community.starknet.io/t/regenesis-state-migration-current-suggestion/2080)та поділитися коментарями та проблемами, Також будьте в курсі подій, стосовно кроків, які будуть пред'явлені розробникам програм на StarkNet.

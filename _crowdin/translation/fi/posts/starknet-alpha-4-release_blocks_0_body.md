@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Jännittävä Ajat Edessä
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4 julkaistiin tänään Goerlissa. Tämä versio on Mainnet release ehdokas ja, jos kaikki menee suunnitelmien mukaan, otetaan käyttöön Mainnet kuukauden loppuun.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4 seuraa ominaisuuksia-pakattua vapauttamista Alpha 3, joka sisälsi muun muassa parannuksia Kairo kooste ajat, sopimusrakentajat, ja paljon muuta (katso[täydellinen julkaisutiedot](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Tärkeää huomata, että tämä on edelleen Alpha versio — jotta voit ottaa sopimuksen käyttöön Mainnet'ssa, noudata uusien sovellusten[perehdytys](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)ohjeita.
 
-### New Features
+### Uudet Ominaisuudet
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Vaikka tämän version tärkein painopiste on valmistautuminen Mainnet'n käyttöönottoon, se sisältää myös useita uusia ominaisuuksia:
 
-#### Get this contract’s address
+#### Hanki tämän sopimuksen osoite
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+Sopimukset voivat nyt saada oman osoitteensa uuden syscall \`get_contract_address\`. Lopuksi voimme panna selfien sopimuksen lepoon.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie sopimus: syyskuu 2021 marraskuu 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10. marraskuuta 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Estä Hash
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Lohkot on nyt tunnistettu tiivistyksen kautta mieluummin kuin Id. Tämä on seurausta viimeisestä siirtymisestämme transaktioiden vaiheeseen. Kaikki API on päivitetty vastaavasti. Tulemme pian julkaisemaan järjestelmän täydelliset tekniset asiakirjat, jotka sisältävät myös lohkon rakenteen eritelmän.
 
-#### Contract Addresses
+#### Sopimuksen Osoitteet
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Tässä versiossa tehdään muutos tapaan, jolla sopimuksen osoitteet lasketaan. Osoite on Pedersenin hash soittajan osoitteessa, suola (satunnainen tai lähettäjä valitsee sen). sopimuskoodin hash ja rakentajan argumenttien tiivistelmä, jotka on liitetty etuliitteeseen.
 
 ```
 Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+Nykyisessä versiossa soittajan osoite on aina sama kuin 0, mutta tulevissa versioissa tämä mahdollistaa sopimusten tekemisen suoraan olemassa olevista sopimuksista.
 
-Note that this scheme is very similar to CREATE2.
+Huomaa, että tämä järjestelmä on hyvin samanlainen kuin CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Katso täydelliset julkaisutiedot](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### Tokenin Sillat
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Tokenin sillat ovat olennainen osa StarkNet-infrastruktuuria. Ne sallivat varojen siirtämisen StarkNetiin ja sieltä pois. Sillaa ei ole otettu käyttöön julkaisuhetkellä. mutta sen pitäisi olla saatavilla muutaman päivän kuluessa – sekä täydellinen dokumentaatio sen toimivuudesta ja käytöstä. Yksi tärkeä asia on se, että silta käyttää[L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)-protokollaa. Näin ollen se tarjoaa lyhyet varoajat – kun peruuttaminen sisältyy erään ja hyväksytään L1:een, varat ovat välittömästi käyttäjän käytettävissä L1:n kautta.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Tämä on merkki siltojen ensimmäinen versio, ja me haluaisimme saada siitä palautetta.
 
-### Join StarkNet
+### Liity StarkNettiin
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Ei ole koskaan ollut parempaa aikaa liittyä kasvavaan StarkNet-yhteisöön. Voit liittyä keskusteluun[StarkNet discord](https://discord.gg/uJ9HZTUk2Y), osallistua[online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), tai käytä jotakin[tutoriaaleista](https://www.cairo-lang.org/docs/hello_starknet/index.html)aloittaaksesi ensimmäisen oman sovelluksesi.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Päivitys (marraskuu 2021):**StarkNet Alpha elää Ethereum Mainnetissa

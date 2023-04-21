@@ -1,3 +1,3 @@
-The Starknet Token is not yet for sale. It cannot be added to your wallet at this stage. Beware of scams.
+De Starknet Token is nog niet te koop. Het kan in dit stadium niet aan uw portemonnee worden toegevoegd. Pas op voor oplichters.
 
-The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
+Het Starknet token werd gelanceerd op Ethereum Mainnet in november 2022. De Starknet Foundation zal op een later tijdstip de details van de Communautaire Rebates en de Communautaire Voorzieningen aankondigen, maar op het moment van het schrijven van deze details moeten nog worden vastgesteld. Pas op voor zwendel om Starknet Tokens te verkopen.

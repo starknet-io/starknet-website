@@ -1,118 +1,118 @@
 ### TL;DR
 
-* Recursive Proving is live on Mainnet, scaling StarkEx apps as well as StarkNet with a single proof
-* It boosts scale, and delivers benefit in cost, and latency (a rare and exciting occurrence of scale and latency moving in tandem, and not being a tradeoff)
-* It sets the stage for L3 and other benefitsGo read the blog post on [Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). It’s cool stuff 😉
+* 递归Proving 已在Mainnet上运行，正在缩放 StarkEx 应用程序以及StarkNet，只要有一个验证就可以使用
+* 它提高了规模，提供了成本效益。 和延迟(偶尔出现规模和延迟同时移动而令人兴奋的情况，而不是交易)
+* 它为 L3 和其他福利升级了[递归Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025) 的博客文章设置了舞台。 这是很酷的 :winking_face：
 
-### Scaling up!
+### 正在缩放！
 
-Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof.
+递归证明——由开罗的一般计算提供动力——现在正在生产。 这标志着使用STARK的L2缩放功率大大提高。 它将很快使可通过单一证据写入以太坊的交易数量增加成倍多。
 
-Until now, STARK scaling has worked by “rolling up” tens or even hundreds of thousands of transactions into a single proof, which was written to Ethereum. With recursion, many such proofs can be “rolled up” into a single proof.
+直到现在，STARK的规模已经通过将几十、甚至几十万笔交易“升级”成了一个单一的证据， 该文件已写入以太坊。 随着复发，许多这类证据可以“推倒”为单一证据。
 
-This method is now in production for a multitude of Cairo-based applications: apps running on StarkEx, StarkWare’s SaaS scaling engine, and StarkNet, the permissionless rollup.
+这个方法正在为许多基于开罗的应用程序进行生产：在StarkEx运行的应用，StarkWare的SaaS 扩充引擎，以及无权限滚动的StarkNet。
 
-### The story so far
+### 迄今的故事
 
-Since the first proof on Mainnet, in March 2020, the following developments have shaped how STARKs are used.
+自2020年3月在Mainnet上出具第一份证据以来，下列事态发展形成了如何使用STARK的方式。
 
-### STARK-based scaling
+### 基于STARK的缩放
 
-In June 2020 the first STARK-based scaling solution — [StarkEx](https://youtu.be/P-qoPVoneQA) — was deployed on Ethereum Mainnet. StarkEx has a Prover that performs large computations off-chain and produces a STARK-proof for their correctness, and a Verifier that verifies this proof on-chain. The constraints for this first deployment were “hand-written” by StarkWare’s engineers, thus greatly limiting feature velocity for StarkEx. We concluded that a programming language to support proving general computation is needed — Cairo.
+20年6月，第一个以STARK为基础的缩放解决方案——[StarkEx](https://youtu.be/P-qoPVoneQA)——被部署在以太坊主网上。 StarkEx有一个超链进行大型计算并为其正确性提供STARK证明的Prover，以及一个验证器在链上验证这个证据。 首次部署的制约因素是StarkWare的工程师“手写”，从而大大限制StarkEx的功能速度。 我们的结论是，需要一种编程语言来证明一般计算——开罗。
 
 #### 开罗
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo stands for CPU Algebraic Intermediate Representation (AIR), and includes a single AIR that verifies the instruction set of this “CPU”. It opened up the door for coding proofs for more complex business logic, for arbitrary computational statements, and for doing so in a faster and safer manner. A Cairo program can prove the execution of a single application’s logic. But a Cairo program can also be a concatenation of multiple such applications — SHARP.
+In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). 开罗是指CPU 代数代表制，包括单一的AIR 来核实这个“CPU”的成套指令。 它为更复杂的商业逻辑的编码证明打开了大门， - 任意计算报表，并且以更快和更安全的方式这样做。 开罗方案可以证明单一应用程序的执行情况。 但是，开罗方案也可以是多项这类应用——SHARP——的集合。
 
-#### SHARP
+#### 斯哈尔克
 
-SHARP — a SHARed Prover — takes transactions from several separate apps, and proves them all in one single STARK-proof. Apps combine their batches of transactions, filling up the capacity of a STARK-proofs faster. Transactions are processed at an improved rate and latency. The next frontier: Recursive Proofs, but not merely for some hard-coded logic, but rather for **general computation**.
+SHARP——一个SHARed Prover——从几个不同的应用获取交易，并用一个单独的STARK证明来证明所有这些交易。 应用集成了一批交易，更快地填充了STARK的验证能力。 交易的处理速度和延迟性都有所提高。 下一个边框：递归证明，但不仅仅是一些硬编码的逻辑，而是**一般计算**。
 
-To understand the full benefit of Recursive Proving it is worth understanding a little bit more about how (non-recursive) proving was performed by SHARP up until now. Drawing 1 depicts a typical non-recursive flow:
+为了了解递归性探索的全部好处，值得对SHARP直到现在如何进行(非递归性)检验有一点更多的了解。 绘制1描述了典型的非递归流量：
 
-![Drawing 1: A typical non-recursive proving flow](/assets/recursive_starks_01.png "Drawing 1: A typical non-recursive proving flow")
+![绘图1：典型的非递归性验证流程](/assets/recursive_starks_01.png "绘图1：典型的非递归性验证流程")
 
-Here, statements arrive over time. When a certain capacity (or time) threshold is reached, a large combined statement (a.k.a Train) is generated. This combined statement is proven only once all the individual statements have been received. This proof takes a long time to prove (roughly the sum of time it takes to prove each statement individually).
+在这方面，发言是随着时间而来的。 当达到某个容量(或时间)阈值时，会产生一个大的综合语句(a.k.a Train)。 这种合并发言只有在收到所有单独发言之后才能得到证明。 这种证明需要很长时间才能证明(单独证明每一份陈述所需的时间大致是多长时间的)。
 
-Proving extremely large statements is eventually limited by available compute resources such as memory. Prior to recursion, this was effectively the limiting scalability barrier of STARK proving.
+证明极其大的语句最终受到现有的计算资源如内存的限制。 在复发之前，这实际上是STARK证明的限制伸缩性障碍。
 
-### What is Recursive Proving?
+### 什么是递归验证？
 
-With STARK proofs, the time it takes to prove a statement is roughly linear with the time it takes to execute the statement. In addition, if proving a statement takes T time, then verifying the proof takes roughly log(T) time, which is typically called “logarithmic compression”. In other words, with STARKs you spend much less time on verifying the statement than on calculating it.
+有了STARK的证据，证明一项发言所需的时间大致与执行这项发言所需的时间是直线的。 此外，如果证明书需要T时间，则核实证据需要大致的log(T)时间，这通常称为“对数压缩”。 换言之，对于STARK，您用来验证报表的时间要比用来计算报表的时间少得多。
 
-[Cairo](https://starkware.co/cairo/) allows expressing general computational statements that can be proven by STARK proofs and verified by the corresponding STARK verifiers.
+[开罗](https://starkware.co/cairo/)允许表示一般的计算报表，这些报表可以由STARK证明并由相应的STARK核查器核实。
 
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. We can generate a single proof attesting to the validity of multiple “up-stream” proofs. This is what we call Recursive Proving.
+这是执行[递归](https://en.wikipedia.org/wiki/Recursion)踢出的机会：就像我们写一个证明数以千计的交易正确的开罗程序一样。 我们还可以写一个开罗方案，核查多个STARK证明。 我们可以拿出单一证据，证明多个“上游”证明是正确的。 这就是我们所说的递归证明书。
 
-Because of the logarithmic compression and roughly linear proving time, proving a verification of a STARK proof takes relatively short time (expected to be just a few minutes in the near future).
+由于对数压缩和大致为线性证明时间， 证明核查STARK证据需要相对较短的时间(预计在不久的将来只需几分钟)。
 
-When implementing Recursion, SHARP can prove statements upon their arrival. Their proofs can be merged over and over into recursive proofs in various patterns until, at a certain point, the resulting proof is submitted to an on-chain verifier contract. A typical pattern is depicted in Drawing 2:
+在执行递延时，SHARP可以在抵达时证明报表。 它们的证明可以在各种模式中被合并为递归的证明，直到： 在某一时刻，所产生的证据将提交给在链上核查的合同。 绘图2描述了典型的模式：
 
-![Drawing 2: A typical recursive proving flow.](/assets/recursive_starks_02.png "Drawing 2: A typical recursive proving flow.")
+![绘制2: 典型的递归性验证流程。](/assets/recursive_starks_02.png "绘制2: 典型的递归性验证流程。")
 
-### Immediate Benefits of Recursive Proving
+### 递归分析的直接利益
 
-#### Reduced On-chain Cost
+#### 降低链上的成本
 
-Off the bat, we achieve “compression” of multiple proofs into one, which implies lower on-chain verification cost per transaction (where each statement may include many transactions).
+在小球上，我们实现了多个证据的“压缩”成一只。 这意味着每笔交易在链上的核查费用较低(每份报表可包括许多交易)。
 
-With recursion, the computational resources barrier (e.g. memory) that limited proofs size up until now, is eliminated, since each limited size statement can be proven separately. Hence, when using recursion, the effective Train size of recursion is almost unlimited, and the cost per transaction can be reduced by orders of magnitude.
+在重复的情况下，计算资源障碍(例如) 由于每个有限的大小说明都可以单独证明，因此去掉了直到现在为止有限的证明尺寸的尺寸。 因此，当使用循环时，有效的回归法术的大小几乎是无限的，每笔交易的成本可以通过数量级的订单来降低。
 
-In practical terms, the reduction depends on the acceptable latency (and the rate at which transactions arrive). In addition, since each proof is typically also accompanied by some output such as on-chain data, there are limits to the amount of data that can be written on-chain together with a single proof. Nevertheless, reducing cost by an order of magnitude and even better is trivially achievable.
+实际上，减让取决于可接受的延迟（和交易到达的速度）。 此外，由于每一种证据通常还附有某些产出，例如在链上的数据。 可以连同单一证据一并填写的数据数量是有限的。 然而，降低成本的规模甚至更好是微不足道的。
 
-#### Reduced Latency
+#### 减少延迟
 
-The Recursive Proving pattern reduces the latency of proving large Trains of statements. This is the result of two factors:
+递归Pro模式减少了证明大型列车语句的延迟。 这是两个因素造成的：
 
-1. Incoming statements can be proven **in parallel** (as opposed to proving an extremely large combined statement).
-2. There is no need to wait until the last statement in the Train arrives to begin proving. Rather, proofs can be combined with new statements as they arrive. This means that the latency of the last statement joining a Train, is roughly the time it takes to prove that very last statement plus the time it takes to prove a Recursive Verifier statement (which attests to all those statements that have already “onboarded” this particular Train).
+1. 传入的语句可以同时证明****(而不是证明一个极其庞大的语句)。
+2. 没有必要等到贸易中的最后一项声明到达后才开始打捞。 相反，证据可以与新的言论结合起来。 这意味着最后一项声明会延迟加入火车队， 现在大约需要时间来证明最后一次发言，再加上证明递归式核查声明所需的时间(这证明了所有已经“延伸”这个特定训练班的说法)。
 
-We are actively developing and optimizing the latency of proving the Recursive Verifier statement. We expect this to reach the order of a few minutes within a few months. Hence, a highly efficient SHARP can offer latencies from a few minutes up to a few hours, depending on the tradeoff versus on-chain cost per transaction. This represents a meaningful improvement to SHARP’s latency.
+我们正在积极发展和优化证明递归核查声明的延迟。 我们预计这将在几个月内达到几分钟左右。 因此，高效率的SHARP可以提供几分钟的延迟，最多几个小时。 取决于交易与每笔交易的链上成本。 这标志着SHARP的延迟有意义的改进。
 
-#### Facilitating L3
+#### 便利L3
 
-The development of the Recursive Verifier statement in Cairo also opens up the possibility of submitting proofs to StarkNet, as that statement can be baked into a StarkNet smart contract. This allows building [L3 deployments on top of the public StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) (an L2 network).
+在开罗拟订递归核查声明也为向StarkNet提交证据提供了可能性。 因为这份声明可以被包成StarkNet智能合同。 这将允许在公共StarkNet上端建造[L3 部署](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f)(L2 网络)。
 
-The recursive pattern also applies to the aggregation of proofs from L3, to be verified by a single proof on L2. Hence, hyper-scaling is achieved there too.
+递归模式也适用于从L3汇集的证据，并由L2上的单一证据加以核实。 因此，在那里也实现了超尺度。
 
-### More Subtle Benefits
+### 更多微妙的福利
 
-#### Applicative Recursion
+#### 应用递归化
 
-Recursion opens up even more opportunities for platforms and applications wishing to further scale their cost and performance.
+循环为希望进一步扩大其成本和性能的平台和应用程序提供了更多的机会。
 
-Each STARK proof attests to the validity of a statement applied to some input known as the “public input” (or “program output” in Cairo terms). Conceptually, STARK recursion compresses two proofs with *two* inputs into *one* proof with two inputs. In other words, while the number of proofs is reduced, the number of inputs is kept constant. These inputs are then typically used by an application in order to update some state on L1 (e.g. to update a state root or perform an on-chain withdrawal).
+每一“STARK”证据都证明适用于某些被称为“公共投入”（或开罗术语中的“程序产出”）的输入的声明是有效的。 从概念上讲，STARK递归压缩了两种证据，并用*两种*输入到*一个*的两种输入证明。 换言之，虽然证明的数量有所减少，但投入的数量保持不变。 这些输入通常用来更新L1上的某些状态(e)。 。更新状态根或执行链上提款)。
 
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. The resulting statement attests to the validity of the input combination based on the application semantics, hence the name Applicative Recursion (see Drawing 3, for an example)..
+If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. 结果的语句证明了基于应用程序语义的输入组合的有效性。 因此名称为应用程序递归化(例如参见绘图3)...
 
-![Drawing 3: Applicative Recursion example](/assets/recursive_starks_03.png "Drawing 3: Applicative Recursion example")
+![绘图3：应用递归示例](/assets/recursive_starks_03.png "绘图3：应用递归示例")
 
-Here, Statement 1 attests to a state update from A to B and Statement 2 attests to a further update from B to C. Proofs of Statement 1 and Statement 2 may be combined into a third statement, attesting to the direct update from A to C. By applying similar logic recursively, one can reduce the cost of state updates very significantly up to the finality latency requirement.
+在此，声明1证明了A到B的最新情况，声明2证明了B到C的进一步更新。 报表1和报表2的证明可以合并为第三份说明，证明了从A到C的直接更新。 通过递归采用类似的逻辑，我们可以大大降低状态更新的成本，直至最终延迟要求。
 
-Another important example of Applicative Recursion is to compress rollup data from multiple proofs. For example, for a Validity Rollup such as StarkNet, every storage update on L2 is also included as transmission data on L1, to ensure data availability. However, there is no need to send multiple updates for the same storage element, as only the final value of transactions attested to by the proof verified is required for data availability. This optimization is already performed within a *single* StarkNet block. However, by generating a proof per block, Applicative Recursion may compress this rollup data across *multiple* L2 blocks. This can result in significant cost reduction, enabling shorter block intervals on L2, without sacrificing the scalability of L1 updates.
+应用循环的另一个重要例子是从多个证据中压缩滚动数据。 例如，对于诸如StarkNet之类的Validity Rollup L2上的每次储存更新都作为L1上的传输数据列入，以确保数据可得。 然而，没有必要为同一个存储单元发送多次更新。 因为只有经核实的交易的最终价值才能获得数据。 This optimization is already performed within a *single* StarkNet block. 然而，通过每个区块生成一个证明，应用递归化可能会在*多个*L2 区块中压缩这个滚动数据。 这可以大大降低成本，从而能够在L2上缩短区块间隔，同时又不损害L1更新的可扩展性。
 
-Worth noting: Applicative Recursion may be combined with application-agnostic recursion as depicted earlier. These two optimizations are independent.
+值得注意：如上文所述，应用递归可能与应用-不可知递归结合起来。 这两种优化是独立的。
 
-#### Reduced On-chain Verifier Complexity
+#### 降低在链验证器的复杂性
 
-The complexity of the STARK verifier depends on the kind of statements it is designed to verify. In particular, for Cairo statements, the verifier complexity depends on the specific elements allowed in the Cairo language, and, more specifically, the supported built-ins (if we use the CPU metaphor for Cairo, then built-ins are the equivalent of micro-circuits in a CPU: computations performed so frequently that they require their own optimized computation).
+“STARK”核查器的复杂性取决于它打算核查的那种说法。 尤其是，就开罗声明而言，核查的复杂性取决于开罗语言所允许的具体内容。 更具体地说，支持的内置(如果我们为开罗使用CPU比喻) 然后内置即相当于CPU中的微电路：计算频繁，需要自己优化的计算）。
 
-The Cairo language continues to evolve and offer more and more useful built-ins. On the other hand, the Recursive Verifier only requires using a small subset of these built-ins. Hence, a recursive SHARP can successfully support any statement in Cairo by supporting the full language in the recursive verifiers. Specifically, the L1 Solidity Verifier need only verify recursive proofs, and thus can be limited to a more stable subset of the Cairo language: The L1 Verifier need not keep up with the latest and greatest built-ins. In other words, verification of ever-evolving complex statements is relegated to L2, leaving the L1 Verifier to verify simpler and more stable statements.
+开罗语言继续演变，提供了越来越有用的内在。 另一方面，递归验证器只需要使用这些内置子集。 因此，一个递归的“飞毛腿”能够通过支持递归核查员的全部语言而成功地支持在开罗的任何声明。 具体而言，L1团结验证器只需要验证递归证据， 因此可以限制在开罗语言的一个更稳定的子集：L1验证器不需要跟上最新和最大的内置内容。 换言之，核查不断演变的复杂报表的工作被归类为L2，留下L1核查器核查更简单和更稳定的报表。
 
-#### Reduced Compute Footprint
+#### 已减少计算足迹
 
-Before recursion, the ability to aggregate multiple statements into one proof was limited by the maximal size of the statement that could be proved on available compute instances (and the time it could take to generate such proofs).
+在重复之前， 由于可以在现有计算实例中证明的声明的最大尺寸(以及产生这种证明可能需要的时间)，将多份声明合成一份证据的能力受到限制。
 
-With recursion, there is no longer a need to prove such extremely large statements. As a result, smaller, less expensive and more available compute instances can be used (though more of those may be needed than with large monolithic provers). This allows deployment of prover instances in more physical and virtual environments than previously possible.
+一再重复，已不再需要证明这么大的说法。 因此，规模较小， 可以使用更便宜和更容易获得的计算实例（尽管可能需要的是多于大型单一计算法）。 这使得能够在比以往任何时候都更多的物理和虚拟环境中部署派生实例。
 
 ### Summary
 
-Recursive proofs of general computation now serve multiple production systems, including StarkNet, on Mainnet Ethereum.
+一般计算的递归证明现在在Mainnet Etherum上服务于多个生产系统，包括StarkNet。
 
-The benefits of recursion will be realized gradually, as it continues to allow for new improvements, and it will soon deliver hyper-scale, cut gas fees, and improve latency by unlocking the potential of parallelization.
+递归的好处将逐步实现，因为这种好处将继续得到新的改善。 而且它很快将提供超尺度，削减气费，并通过挖掘平行化的潜力来改善延迟。
 
-It will bring significant cost and latency benefits with it, together with new opportunities such as L3 and applicative-recursion. Further optimization of the Recursive Verifier is on-going and even better performance and cost benefits are expected to be provided over time.
+它将带来巨大的成本和潜在好处，同时带来新的机会，如L3和应用复制。 正在进一步优化递归核查程序，预计随着时间的推移甚至会提供更好的业绩和成本效益。
 
 
 
-**Gidi Kaempfer**, Head of Core Engineering, StarkWare
+**Gidi Kaempfer**, StarkWare核心工程主任

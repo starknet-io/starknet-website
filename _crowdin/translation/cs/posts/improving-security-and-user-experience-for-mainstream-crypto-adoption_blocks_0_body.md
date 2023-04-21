@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Technologické inovace v blockchainu se v posledních několika letech rozvíjely – STARKs, SNARKs, EIP-1559, Ethereum Merge – to vše jsou obrovské technologické úspěchy. UX a UI design však nedokázaly udržet krok. Lidé stále uvíznou na šestnácti slovných slovech a dostat se do DeFi bez centralizovaného zprostředkovatele je pro mnoho lidí stále příliš zastrašující. Pro zapojení příští miliardy uživatelů do Web3 je zlepšení uživatelského zážitku zapojení klíčové.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Jak ukázala FTX (a Gemini, Celsius a Mt. Gox), zachování sebepéče nad vlastním majetkem je nesmírně důležité. Nicméně až donedávna byly samoobslužné peněženky pro průměrného uživatele nepříjemné a matoucí. Většina lidí zapomíná na svá hesla na Web2 měsíčně; jak se očekává, že uživatelé budou mít svá klíčová slova a soukromé klíče bezpečné pro eternit?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Jednoduše řečeno je to bezpečnostní noční můra. Jak jsme viděli bezpočet dob, jeden chybný krok, ať už byl iniciován špatnými aktéry nebo nedbalostí, může vyústit ve ztrátu milionů dolarů.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Jako první kontaktní místo pro nové uživatele kryptografů musí být peněženky Ethereum snadno použitelné, bezpečné a přizpůsobitelné tak, aby vyhovovaly potřebám každého uživatele. To vyžaduje, aby vývojáři integrovali jednoduchost finančních produktů Web2 s funkcemi Web3.
 
-This is exactly what account abstraction achieves.
+Přesně to je to, čeho se dosahuje abstrakce.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Abstrakce účtu zlepšuje bezpečnost a zabezpečení produktů peněženky s vlastní vazbou tím, že odstraňuje závislost uživatelů na soukromém klíči a činí peněženky programovatelnějšími. Pomocí tohoto vylepšeného UX se mohou peněženky bez úschovy konečně zvětšit na miliony uživatelů hlavního proudu.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Abychom však plně pochopili dopad abstrakce účtů, musíme se obnovit na to, jak fungují účty Ethereum.
 
-### The basics of Ethereum accounts
+### Základy účtů Ethereum
 
-There are two types of Ethereum accounts:
+Existují dva typy účtů Ethereum:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Externě vlastněné účty
+2. Smluvní účty (CA)
 
-Let’s break each down a bit further.
+Rozeberme se o něco dále.
 
-### Externally owned accounts
+### Externí účty
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Externě vlastněné účty, jako jsou MetaMask a Coinbase Wallet, jsou typickým typem účtu pro uživatele Ethereum. Každá EOA se skládá ze soukromého a veřejného klíče, nazývaného párem klíčů.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Všechny transakce jsou autorizovány a podepsány soukromými klíči. Jakmile je transakce podepsána, ověřuje EVM, že podpis je platný pomocí adresy účtu EOA. Pevně kódovaná logika v EVM znamená, že účet (objekt držící váš token) a soukromý klíč (podpis) jsou jako jeden spojeny.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Ztráta vašeho soukromého klíče znamená ztrátu Vašich prostředků, nebo dokonce kontrolu nad vaším účtem navždy.
 
-### Contract accounts
+### Smluvní účty
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Mezitím jsou smluvní účty, synonymem abstrakce účtu, chytré kontrakty uplatňované na blockchainu Ethereum. Tyto smlouvy jsou kontrolovány logikou kódu a nevyžadují soukromé klíče. Na rozdíl od EOA nemohou smluvní účty iniciovat transakce. Místo toho se jejich transakce uskutečňují na základě pokynů od EOA.
 
-### Why account abstraction matters
+### Proč je důležité abstrakce účtu
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Abstrakce účtu vede k abstrakci abstrakce těžce kódované autorizační logiky vzdálené od EOA, přeměnit každý účet na programovatelnou chytrou smlouvu, která může být šitá na míru potřebám každého jednotlivce.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Jak vysvětluje spoluzakladatel Argentu a vrchní vědecký úředník Julien Niset v nedávné události[Stark @ Home](https://www.crowdcast.io/e/7olimxqv)Tato pružná autorizační logika dává vývojářům možnost hrát si s funkcemi účtu, jako je…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Hardwarové signátory:**Pomocí zabezpečeného rozhraní iPhone nebo Androidu, aby se jakýkoli chytrý telefon změnil v hardwarovou peněženku. Odtud mohou uživatelé ověřovat transakce pomocí biometrických údajů, jako je otisk prstu nebo Apple Face ID. Již jsme začali vidět samoobslužné peněženky, jako je Braavos[tuto funkci.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**Povolit uživatelům platit poplatky za plyn v libovolném žetonu nebo dokonce mít mechanismus navržený třetí stranou za transakce.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Obnovení sociálních sítí:**V případě ztráty nebo kompromitování soukromého klíče mohou uživatelé autorizovat nový klíč jako legitimní majitel peněženky. To může zahrnovat různé metody obnovy prostřednictvím důvěryhodných kontaktů, hardwarových peněženek nebo služeb třetích stran. Myšlenka je zajistit, aby obnova přístupu k vašemu účtu byla tak snadná jako obnovení hesla k vašemu bankovnímu účtu prostřednictvím e-mailu.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Multifactor Authentication:**Podobné běžným Web2 2FA postupům, uživatelé mohou nastavit dvě (nebo více) metody ověřování pro své kryptoměny, pokud je transakce podepsána pouze tehdy, když uživatel potvrdí schválení prostřednictvím druhé možnosti jako je e-mail nebo SMS. Uživatelé mohou také nastavit denní limity transferů nebo seznamy adres účtu, z nichž je peněženka automaticky zablokována v interakci.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Prostřednictvím abstrakce podpisů využívají různé smlouvy na účtu účinnější a kvantově bezpečnější podpisové systémy. StarkNet používá svou vlastní vlastní křivku přátelskou ke STARKu.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Nejenže tyto funkce poskytují uživatelům větší bezpečnost a větší flexibilitu, ale co je důležitější, vedou k mnohem lepšímu****uživatelům.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Na seznamu Vitalika Buterina jako „dlouholetý sen“ pro vývojářskou komunitu Etherea, inovace kolem abstrakce účtů, zejména EIP-2938 a EIP-3074, se od roku 2020 prudce zvýšily. Oba požadované kompromisy týkající se bezpečnosti a provádění. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), zatím nejslibnější vývoj, navrhuje verzi abstrakce účtu bez nutnosti změn Ethereum protokolu.
 
-### **Account abstraction and Starknet**
+### **Abstrakce účtu a Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Na rozdíl od Bitcoinu a Etherea, které doplňují své současné protokoly na podporu abstrakce účtu,[StarkNet](https://starkware.co/starknet/)od prvního dne provedl abstrakci účtu. Pokud je spolu s škálovatelností a schopnostmi našich důkazů STARK, potenciál inovací peněženky je neomezený. Proto se na naší síti v současné době buduje další generace samozásobitelských peněženek, jako Argent a Braavos.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+Přístup StarkNetu je podobný EIP-4337,[uznává, že](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)kompletní abstrakce účtu by stále vedla k záměně UX a[by mohly otevřít dveře](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)útokům na sekvence. Spíše se snaží dosáhnout jak abstrakce podpisů, tak abstrakce plateb vzájemným sdílením některé z požadovaných infrastruktur v řetězci, tak mimo něj.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+A přestože je ještě třeba vykonat ještě mnoho práce, abstrakce účtů nabývají na síle mimo malý kruh kryptoměnců. V prosinci[Visa navrhl](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)použít abstrakci účtu k nastavení automatických opakujících se plateb na StarkNet. Pomocí pověřeného účtu mohou uživatelé udělit povolení k iniciování platby pro předem schválenou chytrou smlouvu. Odtud bude chytrá smlouva naprogramována tak, aby odečetla nastavenou částku platby na konkrétní den, po stanovenou dobu trvání. Přestože Visa ještě neodhalila své plány na vlastní služby, samotný zájem hovoří o svazcích, a může se stát předstíráním světa, kde by platformy pro předplatné velkých technologií, jako je Netflix a Spotify mohly přijmout přijetí kryptoměn.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Co se týče toho, co drží budoucnost, jen čas ukáže. Jedna věc je však jistá. Usnadněním a bezpečností používání peněženek abstrakce účtu bude sloužit jako silný katalyzátor pro samoobslužné peněženky blockchainu, aby se zvětšily na miliony uživatelů hlavního proudu. Do té doby budeme dál stavět.

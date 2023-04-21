@@ -1,3 +1,3 @@
-## What are bridges?
+## Mitä siltoja on?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Sillat antavat käyttäjille mahdollisuuden siirtää resursseja salausekosysteemien välillä, kuten lohkoketjuja tai vaihtoja.

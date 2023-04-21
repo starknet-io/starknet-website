@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* 本着EIP-4337的精神账户摘要改进
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. 验证 - 执行分隔符
+2. 交易的唯一性现已在协议中确保(无)
 
-* The fee mechanism is extended to include:
+* 收费机制扩大到包括：
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1- L2 消息
+2. 申报交易
 
-* Few Cairo syntax changes
+* 几乎没有开罗语法变化
 
 ### 导 言
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+我们很高兴看到StarkNet Alpha 0.10.0。 这个版本是在不影响安全和权力下放的情况下缩放以太坊的又一个步骤。
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+这篇文章简要描述了这个版本的主要特征。 对于更改的完整列表, 请检查[发布笔记](https://github.com/starkware-libs/cairo-lang/releases)。 欲了解更多详细信息，请查看[文档](https://docs.starknet.io/)。
 
-### Account Abstraction Changes
+### 账户摘要更改
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+我们正在移动[StarkNet的账户抽象](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)。 此版本引入了由[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337) 启发的更改。
 
-#### Validate/Execute Separation
+#### 验证/执行分隔符
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+直到现在，帐户的 \_\_execute\_\_ 函数同时负责交易验证和执行。 在 0.10.0 中，我们打破了这个连接，并在帐户中引入了一个独立的 \_validate\_\_ 函数。 收到交易时，帐户合同将首先调用 \_\_validate\_\_，然后如果成功，请继续 \_\_execute\_\_。
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+验证/执行分隔提供协议级别对无效和还原(尚有效)交易的区分。 由于这种情况，序列器将能够收取执行有效交易的费用，而不论是否恢复。
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+在 0.10.0 版本中，为了在协议级别强制执行事务的独特性，添加了一个nonce 字段。 到目前为止，未交易是在账户合同一级处理的，这意味着在理论上可以两次执行具有相同散列的交易。
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+与以太坊类似，每一项合同现在都包括一个非交易，计算该账户完成交易的数量。 帐户合约只能接受没有匹配的交易, 例如: 如果当前帐户的 nonce 是 X，那么它将只接受与 nonce X 的交易。
 
-#### New Transaction Version
+#### 新交易版本
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+为了允许向后兼容，我们将通过新的交易版本进行这两项更改 —[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C)。 这些更改将仅适用于新版本，旧账户仍然能够执行版本0交易。
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+注意——交易v0现已废弃，并将被删除在 StarkNet Alpha v0.11.0。 请确保您升级以使用新的交易版本。
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+欲了解更多交易版本详细信息，请阅读[文档](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C)。
 
-#### Fees Mechanism
+#### 收费机制
 
-The new version allows to include fees for two required components:
+新版本允许收取两个必需组件的费用：
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1- L2 消息](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [申报交易](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+在这个版本中，这些费用将不是强制性的，并且只能从 StarkNet Alpha v0.11.0开始。
 
-#### Cairo Syntax Changes
+#### 开罗语法更改
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+支持逐步升级开罗，[Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), 此版本包含几个语法更改。
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+为了最大限度地减少不便，版本发布将包含一个[迁移脚本](https://www.youtube.com/watch?v=kXs59zaQrsc)自动适用上述更改。 You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### 下一步是什么？
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* 几周后，我们计划对测序器进行平行化，使区块生产速度更快(V0.10.1)
+* 我们很快将完成必须包括在费用支付中的最后一部分——帐户部署
+* 开罗1.0 发布！ 在即将发布的帖子中更多关于这个问题的信息。
 
-### How Can I Be More Engaged?
+### 如何更多地参与？
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* 访问[starknet.io](https://starknet.io/)获取所有StarkNet 信息、文档、教程和更新。
+* 加入[StarkNet Discord](http://starknet.io/discord)以获取开发支持、生态系统通知并成为社区的一部分。
+* 访问[StarkNet论坛](http://community.starknet.io/)了解最新情况并参与StarkNet的研究讨论。
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+我们总是很高兴收到关于我们的[文档](https://docs.starknet.io/) 的反馈！

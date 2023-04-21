@@ -1,77 +1,77 @@
 ### TL;DR
 
-* **Cairo 1.0 is open source! This is only the first step towards open-sourcing the StarkNet stack.**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. You can now start experimenting with basic Cairo 1.0 code
-* Cairo 1.0 at its core is very similar to Rust
-* Consider it a first taste, not a release. More improvements are on the way. The first version of the compiler is planned for early Q1 next year.
-* Cairo 1.0 is not supported on StarkNet, yet. It will be supported on StarkNet in Q1 next year.
+* **Cairo 1.0 er open source! Dette er kun det første skridt mod open-sourcing StarkNet stack.**
+* Vi præsenterer nu et[første kig](https://github.com/starkware-libs/cairo)ind i Cairo 1.0 compileren. Du kan nu begynde at eksperimentere med grundlæggende Cairo 1,0-kode
+* Cairo 1.0 i sin kerne er meget lig Rust
+* Overvej det en første smag, ikke en udgivelse. Der er flere forbedringer på vej. Den første version af compileren er planlagt til begyndelsen af Q1 næste år.
+* Cairo 1.0 understøttes ikke på StarkNet, endnu. Det vil blive støttet på StarkNet i første kvartal næste år.
 
-### Intro
+### Introduktion
 
-In 2020, we released [Cairo](https://eprint.iacr.org/2021/1063.pdf), a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive. Two months ago, we announced [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), which addresses some major issues in the current situation:
+I 2020 har vi udgivet[Cairo](https://eprint.iacr.org/2021/1063.pdf), et Turing-komplet programmeringssprog, der understøtter verificerbar beregning. Kairo startede som et samlesprog og blev gradvist mere ekspressiv. For to måneder siden annoncerede vi[Cairo 1,0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), som behandler nogle store problemer i den aktuelle situation:
 
-* While Cairo’s syntax has seen significant improvement since its inception, the developer experience can always improve. Cairo 1.0 is a rust-inspired fully typed language, making writing the same logic much easier and less error-prone.
-* The existing compiler is developed in the same repo as StarkNet itself, making it harder to track language changes. The Cairo 1.0 compiler is written from the ground up, allowing for faster feature development and for more community involvement.
-* Every computation is now provable. Currently, a Cairo program may fail with specific inputs (e.g. by reaching an \`assert 1=2\` instruction in some computation branch), rendering the computation unprovable. With Cairo 1.0, programs are provable in every possible branch. This is particularly important for DOS protection and censorship resistance in StarkNet.
+* Mens Cairos syntaks har set betydelige forbedringer siden sin begyndelse, kan udvikleroplevelsen altid forbedres. Cairo 1.0 er et rust-inspireret fuldt indtastet sprog, hvilket gør det meget lettere at skrive den samme logik og mindre fejlbehæftet.
+* Den eksisterende compiler er udviklet i samme repo som StarkNet selv, hvilket gør det sværere at spore sprogændringer. Den Cairo 1.0 compiler er skrevet fra bunden op, giver mulighed for hurtigere funktion udvikling og for mere fællesskab involvering.
+* Alle beregninger kan nu bevises. I øjeblikket, et Cairo program kan mislykkes med specifikke input (fx ved at nå en \`hævde 1=2\` instruktion i nogle beregningsgrene, hvilket gør beregningen unprovable. Med Cairo 1.0, programmer er bevisligt i alle mulige gren. Dette er især vigtigt for DOS beskyttelse og censur modstand i StarkNet.
 
-Today we mark the first milestone in reaching the above goals as we move the development to a public repo, and **open source Cairo 1.0!** Developers can now, for the first time, compile and execute simple Cairo 1.0 programs. This allows developers to start experimenting with Cairo 1.0 and gradually get accustomed to the new features, even if, at this phase, they cannot implement it on StarkNet just yet.
+I dag markerer vi den første milepæl i at nå ovenstående mål, når vi flytter udviklingen til en offentlig repo, og**open source Cairo 1. !**Udviklere kan nu, for første gang, kompilere og udføre simple Cairo 1.0 programmer. Dette giver udviklere mulighed for at begynde at eksperimentere med Cairo 1. og gradvist vænne sig til de nye funktioner, selv om de i denne fase, de ikke kan gennemføre det på StarkNet endnu.
 
-### Current capabilities
+### Aktuelle kapaciteter
 
-Currently, you can compile and execute basic native Cairo programs. While many of the syntax/language improvements are still underway, this allows getting used to Cairo 1.0 and enjoy upgrades as they come.
+I øjeblikket kan du kompilere og udføre grundlæggende indfødte Cairo-programmer. Mens mange af de syntaks/sprogforbedringer stadig er i gang, giver dette mulighed for at vænne sig til Cairo 1.0 og nyde opgraderinger, som de kommer.
 
-**Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
+**Bemærk, at skrivning af StarkNet kontrakter stadig er uunderstøttet.**StarkNet syntaks (lagervariabler / opkaldskontrakter / begivenheder og andre systemopkald) vil blive tilføjet i de kommende uger.
 
-### Code examples
+### Eksempler på kode
 
-To illustrate the differences between the old syntax and Cairo 1.0, we have chosen to show a few different implementations/flavors of finding the n’th Fibonacci number.
+For at illustrere forskellene mellem den gamle syntaks og Kairo 1. , Vi har valgt at vise et par forskellige implementeringer / varianter af at finde den n'th Fibonacci nummer.
 
-### Example I: Match expressions
+### Eksempel I: Match udtryk
 
-In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. No longer will you fear if/else statements that may cause reference revocation!
+I Cairo 1.0, kan du bruge rust-lignende[match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match)udtryk. Ikke længere vil du frygte, hvis/ellers udsagn, der kan forårsage henvisning tilbagekaldelse!
 
 ![](/assets/code01.png)
 
-### Example II: Data types
+### Eksempel II: Datatyper
 
-While Cairo 0 worked with felts and pointers, in Cairo 1.0 we have native access to complex data types in the language. Below you can find an example that generates an array of the first n Fibonacci numbers.
+Mens Cairo 0 arbejdede med filt og pointers, har vi i Cairo 1.0 indbygget adgang til komplekse datatyper på sproget. Nedenfor kan du finde et eksempel, der genererer en række af de første n Fibonacci-numre.
 
 ![](/assets/code02.png)
 
-As you can see above, rather than working directly with memory pointers, we use the `Array::<felt>\` type and the \`array_append\`function.
+Som du kan se ovenfor, i stedet for at arbejde direkte med hukommelse pointers, vi bruger `Array::<felt>\` type og funktionen \`array_append\`.
 
-### Example III: structs & ownership
+### Eksempel III: Bygninger & ejerforhold
 
-The following code illustrates the usage of structs in Cairo 1.0.
+Følgende kode illustrerer brugen af strukturer i Cairo 1.0.
 
 ![](/assets/code03.png)
 
-> The following paragraph is meant for the Rustaceans among the audience. Cairo 1.0 manages memory in a similar way to rust. In particular, it uses the concepts of [ownership and borrowing](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Thus, By accessing a member of the \`FibResult\` struct (in this case, \`result.value\`), we’ve moved \`result\`, which means that unless FibResult is copyable, we can’t access it again in \`result.index\`. To overcome this, we add the \`#\[derive(Copy)]\` attribute of the \`FibResult\` type. In future versions, we will add auto deconstruction for structs. This will allow moving ownership of one member without touching the others (in particular, the above code would compile even if \`FibResult\` didn’t have the copy attribute).
+> Følgende afsnit er beregnet til rustaceanerne blandt publikum. Cairo 1.0 styrer hukommelsen på samme måde som rust. Den anvender navnlig begreberne[ejerskab og låntagning](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Således ved at få adgang til et medlem af \`FibResult\` struct (i dette tilfælde, \`resultat. alue\`), vi har flyttet \`result\`, hvilket betyder, at medmindre FibResult kan kopieres, kan vi ikke få adgang til det igen i \`result.index\`. For at overvinde dette, tilføjer vi \`#\[derive(Copy)]\` attribut for \`FibResult\` typen. I fremtidige versioner, vil vi tilføje auto-dekonstruktion for konstruktioner. Dette vil gøre det muligt at flytte ejerskabet til et medlem uden at røre ved de andre (især ovenstående kode ville kompilere, selvom \`FibResult\` ikke har kopi-attributten).
 
-**In particular, note that Cairo 1.0 is completely abstracting away the original (none deterministic read-only) memory model of Cairo.**
+**Bemærk især, at Cairo 1.0 er helt abstraherende væk den oprindelige (ingen deterministiske read-only) hukommelse model af Cairo.**
 
-## Example IV: Error propagation
+## Eksempel IV: Fejludbredelse
 
-The following code computes the n’th Fibonacci number, but unlike the previous examples, all the inputs are of the type uint128. Note that this solves a major pain point of handling uints in Cairo 0. Here, uint128 (and in the future uint256) are native types.
+Den følgende kode beregner n'th Fibonacci nummer, men i modsætning til de tidligere eksempler, alle input er af typen uint128. Bemærk, at dette løser et stort smertepunkt for håndtering af uints i Kairo 0. Her er uint128 (og i fremtiden uint256) hjemmehørende typer.
 
 ![](/assets/0_s8bhjf_ade3carmi.png)
 
-The addition of two 128 bit integers can cause an overflow. The above code uses the [Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html) and the [question mark operator](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html) to handle the case of overflow in one of the intermediate additions. Compare this to the [current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31) uint256 addition syntax, where the \`unit256_check\` function had to be called to guarantee soundness. In addition, in the near future, we will add the concept of \`panic\` to the language (similar to the [panic](https://doc.rust-lang.org/rust-by-example/std/panic.html) macro in rust), and simple errors like addition overflow will be uncatchable and propagated automatically, which means that you won’t have to use \`Option\` or \`?\` when adding uints.
+Tilføjelsen af to 128 bit heltal kan forårsage et overløb. Ovenstående kode bruger[Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html)og[spørgsmålsoperatøren](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)til at håndtere tilfælde af overløb i en af de mellemliggende tilføjelser. Sammenlign dette med den[aktuelle](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31)uint256 tilføjelsessyntaks, hvor \`unit256_check\` funktionen skulle kaldes for at garantere lydstyrken. Desuden i den nærmeste fremtid vi vil tilføje begrebet \`panik\` til sproget (svarende til[panik](https://doc.rust-lang.org/rust-by-example/std/panic.html)makro i rust), og enkle fejl som addition overløb vil være uncatchable og formeres automatisk, hvilket betyder, at du ikke behøver at bruge \`Option\` eller \`? ` når du tilføjer uints.
 
-## Try it yourself
+## Prøv det selv
 
-You can now compile and run currently supported Cairo 1.0 programs! Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. Note that under the hood, the [Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), developed by [Lambdaclass](https://lambdaclass.com/), is used for execution.
+Du kan nu kompilere og køre aktuelt understøttede Cairo 1.0-programmer! Følg disse[instruktioner](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner)om, hvordan du bruger \`cairo-run\` kommandoen. Bemærk, at under hætten,[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), udviklet af[Lambdaclass](https://lambdaclass.com/), anvendes til udførelse.
 
-You can find more examples to help you get started [here](https://github.com/starkware-libs/cairo2/tree/main/examples). Note that this is only the first peek into the compiler development; in the coming weeks, we will improve the CLI alongside the compiler.
+Du kan finde flere eksempler til at hjælpe dig i gang[her](https://github.com/starkware-libs/cairo2/tree/main/examples). Bemærk, at dette kun er den første kig ind i compiler udvikling; i de kommende uger, vil vi forbedre CLI sammen med compileren.
 
-## Future Plans
+## Fremtidige Planer
 
-The focus of the first version of the Compiler, which is planned for early Q1, is supporting all existing functionality of StarkNet in Cairo 1.0. Additionally, we’re working on extending the capabilities of the Cairo 1.0 compiler. In the coming weeks, you can expect:
+Fokus for den første version af Compileren, som er planlagt til begyndelsen af 1. kvartal, understøtter alle eksisterende funktionalitet af StarkNet i Cairo 1.0. Derudover arbejder vi på at udvide funktionerne i Cairo 1.0 compiler. I de kommende uger kan du forvente:
 
-* StarkNet capabilities — writing smart contracts and using system calls.
-* Loops
-* New library functions
-* Improved language server
-* A native notion of StarkNet gas
+* StarkNet kapaciteter — skrive smarte kontrakter og bruge systemopkald.
+* Løkker
+* Nye biblioteks funktioner
+* Forbedret sprogserver
+* Et indfødt begreb om StarkNet gas
 
-Make sure to stay tuned and track the compiler progress!
+Sørg for at holde sig tunet og spore compiler fremskridt!

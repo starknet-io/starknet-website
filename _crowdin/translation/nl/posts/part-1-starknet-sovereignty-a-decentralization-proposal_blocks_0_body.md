@@ -1,44 +1,52 @@
 ### TL;DR
 
-* StarkNet’s decentralization involves a native token and a new foundation.
-* The StarkNet token is used for governance and as the network’s payment and staking asset.
-* Ten billion tokens have been minted and their allocation has begun.
-* The StarkNet Foundation, now being set up, will have a mission to maintain StarkNet as a public good.
+* Bij de decentralisatie van StarkNetwork gaat het om een eigen token en een nieuwe basis.
+* De StarkNet token wordt gebruikt voor governance en als betaal- en stakingsmiddel van het netwerk.
+* Tien miljard pennen zijn gedolven en de verdeling ervan is begonnen.
+* De StarkNet Foundation, die nu wordt opgericht, zal een missie hebben om StarkNet als een publiek goed te onderhouden.
 
-StarkNet is a permissionless decentralized Layer 2 (L2) validity rollup, built to allow Ethereum to scale via cryptographic protocols called STARKs, without compromising Ethereum’s core principles of decentralization, transparency, inclusivity and security.
+StarkNet is een toegestane gedecentraliseerde Layer 2 (L2) validatie rollup, gebouwd om Ethereum te laten schalen via cryptografische protocollen genaamd STARKs, zonder afbreuk te doen aan de kernbeginselen van decentralisatie, transparantie, inclusiviteit en veiligheid.
 
-StarkNet’s Alpha launched on Mainnet in November 2021. Less than one year in, an ecosystem is forming, with dozens of teams worldwide working on it. Now is the time to advance the decentralization of the network, so it achieves the liveness, censorship resistance, transparency and inclusivity demanded of an L2 on Ethereum.
+Alpha van StarkNet's lanceerde in november 2021 op Mainnet. Minder dan een jaar per jaar wordt er een ecosysteem gevormd waaraan wereldwijd tientallen teams werken. Het is nu tijd om de decentralisatie van het netwerk te bevorderen en zo de levensverwachting te realiseren. censuurweerstand, transparantie en inclusiviteit eisten van een L2 over Ethereum.
 
-Decentralization means the network’s operation and evolution will not rely on any single entity, including StarkWare. A permissionless proof-of-stake leader election mechanism and on-chain payment of transaction fees, both using a native token, will enable the network to operate reliably as an L2 on Ethereum even should StarkWare cease to exist. Decisions regarding the ongoing maintenance of StarkNet will shift from StarkWare to the community. A StarkNet Token and Foundation will be key elements of this effort.
+Decentralisatie betekent dat de werking en ontwikkeling van het netwerk niet afhankelijk is van één entiteit, met inbegrip van StarkWare. Een toegeeflijke proof-of-stake-leider verkiezingsmechanisme en on-chain betaling van transactiekosten, beide door gebruik te maken van een native token, zal het netwerk zelfs in staat stellen om als L2 op Ethereum betrouwbaar te functioneren als StarkWare zou moeten ophouden. Besluiten met betrekking tot het voortdurende onderhoud van StarkNet zullen van StarkWare naar de gemeenschap verschuiven. Een StarkNet Token en de stichting zullen sleutelelementen zijn van deze inspanning.
 
-This post, the first of three published simultaneously, summarizes StarkNet’s journey thus far and introduces the StarkNet Token and the StarkNet Foundation. The [next post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) discusses the StarkNet governance model and the [third](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) focuses on StarkNet’s token model.
+Dit bericht, de eerste van drie gelijktijdig gepubliceerd, vat de reis van StarkNets samen en introduceert de StarkNet Token en de StarkNet Foundation. Het[volgende bericht](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)bespreekt het StarkNet bestuursmodel en het[derde](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)richt zich op het tokenmodel van StarkNet.
 
-*We thank the following StarkNet supporters (alphabetically ordered) for their comments on a draft of these posts: Guily_Gioza (Topology), Itamar Lesuisse (Argent), Jonas Nelle (Pontis), Martin Triay (OpenZeppelin), Polynya, Sylve Chevet (Briq), and Tomasz Stańczak (Nethermind).*
+*Wij danken de volgende StarkNet-aanhangers (alfabetisch geordend) voor hun commentaar op een ontwerp van deze posten: Guily_Gioza (Topology), Itamar Lesuisse (Argentinië), Jonas Nelle (Pontis), Martin Triay (OpenZeppelin), Polynya, Sylve Chevet (Briq) en Tomasz StanPut czak (Nederland).*
 
-### The story so far
+### Het verhaal tot nu toe
 
-[StarkNet](https://starknet.io/) is built from cryptography and an open ecosystem. The **cryptography** is **[STARKs](https://eprint.iacr.org/2018/046.pdf)**. These are protocols based on math that scale Ethereum by orders of magnitude. They require no trusted setup, are post-quantum secure, and can be deployed succinctly at any scale. The ecosystem is composed of core developers who have wanted for years to build infrastructure and tools for scaling blockchain technology, as well as new and creative application domains that become possible when the computational power of Ethereum is expanded.
+[StarkNet](https://starknet.io/)is gebouwd op cryptografie en een open ecosysteem. De**cryptografie**is**
 
-StarkNet gives all developers and users access to the scale and security benefits of STARKs, for the purpose of scaling Ethereum while maintaining Ethereum’s core values. STARKs were invented by co-founders of StarkWare, who first used them to build the [StarkEx](https://starkware.co/starkex/) scaling solution for clients. Subsequently, StarkWare and other developer teams (collectively “Core Contributors”) built [StarkNet](https://starkware.co/starknet/), a public, decentralized, and permissionless infrastructure, to ensure that these scaling technologies are accessible to all in perpetuity.
+[ STARKs](https://eprint.iacr.org/2018/046.pdf)</strong>. Dit zijn protocollen gebaseerd op wiskunde die Ethereum op orders van de grootte schalen. Ze vereisen geen vertrouwde instelling, zijn veilig na quantum en kunnen op elke schaal beknopt worden ingezet. Het ecosysteem bestaat uit kernontwikkelaars die al jaren infrastructuur en gereedschappen voor het schalen van blockchain-technologie willen bouwen. evenals nieuwe en creatieve toepassingsdomeinen die mogelijk worden wanneer de rekenkracht van Ethereum is uitgebreid.</p> 
 
-The launch of StarkNet Alpha nearly a year ago prompted the emergence of a larger ecosystem that is committed to build and nurture StarkNet. There are numerous teams of developers worldwide building its core infrastructure, as well as new applications on it.
+StarkNet geeft alle ontwikkelaars en gebruikers toegang tot de schaal en veiligheidsvoordelen van STARKs, voor het schalen van Ethereum met behoud van de kernwaarden van Ethereum. STARK's zijn uitgevonden door medeoprichters van StarkWare, die ze eerst hebben gebruikt om de[StarkEx](https://starkware.co/starkex/)schaaloplossing voor klanten te bouwen. Vervolgens hebben StarkWare en andere ontwikkelaarsteams (gezamenlijk "Core Contributors" )[StarkNet](https://starkware.co/starknet/)gebouwd, een openbaar. gedecentraliseerde, en permissieloze infrastructuur om ervoor te zorgen dat deze schalen technologieën voor eeuwig toegankelijk zijn voor iedereen.
 
-### **The way to decentralize**
+De lancering van StarkNet Alpha bijna een jaar geleden veroorzaakte de opkomst van een groter ecosysteem dat vastbesloten is om Starknet te bouwen en te koesteren. Er zijn tal van teams van ontwikkelaars over de hele wereld die hun kerninfrastructuur bouwen, evenals nieuwe toepassingen.
 
-STARK technology is mature and secure, but StarkNet has not achieved the status of a public good like Ethereum or the Internet. For StarkNet to reach this goal, its governance, operation and development must continue to decentralize. This will be facilitated through two mechanisms: the **StarkNet Foundation** and the **StarkNet Token**.
 
-#### Foundation
 
-As a non-profit, the Foundation’s mission will be to maintain StarkNet as a public good — a commodity or service that is made available to all members of society. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between users.
+### **De manier om te decentraliseren**
 
-The Foundation will be funded by a one-time grant of StarkNet Tokens. It will encourage the development of bottom-up mechanisms for community decision-making on essential technological questions, such as protocol updates, dispute resolution, and public goods funding.
+Start-technologie is volwassen en veilig, maar StarkNet heeft de status van een publiek goed als Ethereum of het internet niet bereikt. Om dit doel te bereiken moeten het bestuur, de werking en de ontwikkeling van StarkNet gedecentraliseerd blijven. Dit zal worden vergemakkelijkt door twee mechanismen: de**StarkNet Foundation**en de**StarkNet Token**.
+
+
+
+#### Fundering
+
+Als non-profit de missie van de Stichting zal zijn om StarkNet te handhaven als een publiek goed - een product of dienst die beschikbaar wordt gesteld aan alle leden van de samenleving. StarkNet is toegestane infrastructuur die voor iedereen beschikbaar zou moeten zijn. Om veilig en efficiënt voor het openbaar gebruik te kunnen zijn, moet het goed worden onderhouden. Het mag ook geen onderscheid maken tussen gebruikers.
+
+De Stichting zal worden gefinancierd door een eenmalige subsidie van StarkNet Tokens. Het zal de ontwikkeling bevorderen van mechanismen van onderaf voor communautaire besluitvorming over essentiële technologische kwesties, zoals protocolupdates, geschillenbeslechting en financiering van publieke goederen.
+
+
 
 #### Token
 
-The StarkNet Token is needed to operate the ecosystem, maintain and secure it, decide on its values and strategic goals, and direct its evolution. This token will be required for (i) governance, (ii) payment of transaction fees on StarkNet, and (iii) participation in StarkNet’s consensus mechanism.
+De StarkNet Token is nodig om het ecosysteem te beheren, te onderhouden en te beveiligen, zijn waarden en strategische doelen te bepalen en de ontwikkeling ervan te sturen. Deze token zal vereist zijn voor (i) governance, (ii) betaling van transactiekosten op StarkNet, en (iii) deelname aan het consensusmechanisme van StarkNet.
 
-We have minted an initial ten billion tokens which are being allocated to Core Contributors of the StarkNet ecosystem including StarkWare and StarkWare’s investors, to StarkNet software developer partners, and to the Foundation. Soon (target: September 2022) the token will go on Ethereum as an ERC-20 token and be requested for use in governance and voting on network upgrades. Later, StarkNet fees will be paid only in this token, while ensuring good user experience for users interested in paying fees in ETH. Later still, automatic minting of additional StarkNet Tokens will commence, (i.e., the number of circulating tokens will be greater than ten billion).
+We hebben een eerste tien miljard pennen gemineerd die worden toegewezen aan Core Contributors van het StarkNet ecosysteem, waaronder de investeerders van StarkWare en StarkWare, aan StarkNet ontwikkelaarspartners van software, en aan de Stichting. Binnenkort (target: September 2022) zal het token Ethereum gebruiken als een ERC-20-token en worden gevraagd om te gebruiken in governance en te stemmen over upgrades van het netwerk. Later zal StarkNet kosten alleen in dit token worden betaald, terwijl er wordt gezorgd voor een goede gebruikerservaring voor gebruikers die geïnteresseerd zijn in het betalen van kosten in ETH. Later nog: het automatisch minen van extra StarkNet Tokens zal beginnen, d.w.z. het aantal circulerende tokens zal groter zijn dan tien miljard).
 
-The StarkNet Token model emphasizes compensating developers for their work. A portion of new minting and transaction fees — fees assessed for use of StarkNet — will be granted to core infrastructure developers and smart contract developers for the work they have done to design and launch the protocol, in addition to compensating StarkNet operators for the work they have done to operate it.
+Het StarkNet Token legt de nadruk op het compenseren van ontwikkelaars voor hun werk. Een deel van de nieuwe mining- en transactiekosten - kosten die worden berekend voor het gebruik van StarkNet - zal worden toegekend aan kerninfrastructuurontwikkelaars en slimme contractontwikkelaars voor het werk dat zij hebben gedaan om het protocol te starten en te ontwerpen, naast het compenseren van Starknet-exploitanten voor het werk dat zij hebben verricht om het te exploiteren.
 
-The full rationale behind a new and dedicated StarkNet Token is explained in our [second post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the StarkNet Token design principles and initial allocation are discussed in the [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6).
+De volledige motivatie achter een nieuwe en toegewijde StarkNet Token is uitgelegd in onze[tweede post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), en de StarkNet Token ontwerpprincipes en de eerste toewijzing worden besproken in de[derde post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6).

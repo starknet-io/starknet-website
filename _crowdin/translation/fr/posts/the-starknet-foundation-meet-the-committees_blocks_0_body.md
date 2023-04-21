@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+Fin novembre 2022, le lancement de la [Fondation Starknet](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) a été annoncé. La Fondation est une organisation indépendante dédiée à la réalisation de la vision de Starknet de devenir un Rollup de Validity (L2) prospère, décentralisé et sans permission. ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+Avec un solide conseil interdisciplinaire [](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) à la barre, la Fondation Starknet est bien placée pour poursuivre son objectif de favoriser et d'étendre la communauté Starknet, superviser le développement continu du réseau, développer des mécanismes de gouvernance sans autorisation, et mettre en œuvre la décentralisation complète de l’écosystème Starknet. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Aujourd'hui, la Fondation est heureuse d'annoncer publiquement la nomination de cinq comités, chacun confié un mandat spécifique qui s’aligne sur la mission et les priorités de Starknet. Le mandat de chaque comité n’est pas gravé dans le piège et fera l’objet d’évaluations courantes, avec des ajustements et des modifications au besoin.
 
-The committees are:
+Les commissions sont :
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* Comité des provisions
+* Comité de subventions pour les adopteurs précoces
+* Comité de partenariat des développeurs
+* Comité de gouvernance
+* Comité d'intégration écosystémique
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+Ci-dessous, nous partagerons plus de détails sur les comités, y compris leur mandat, leurs opérations et leurs membres initiaux.
 
-## Introducing the Starknet Foundation Committees 
+## Présentation des comités de la fondation Starknet 
 
-### Provisions Committee
+### Comité des provisions
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Le Comité des dispositions est responsable de la planification, de la supervision et de l’exécution de la fourniture du jeton de l’écosystème Starknet – STRK. STRK sera utilisé comme le jeton de la participation au mécanisme de consensus de Starknet. Il servira également de jeton de gouvernance du réseau et de jeton de gaz pour le paiement des frais de transaction du réseau. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Le Comité des dispositions est essentiel pour assurer une distribution équitable, décentralisée et transparente du jeton qui alimentera l’écosystème Starknet. Le comité supervise le provisionnement des utilisateurs avec des jetons STRK qui sont tenus de payer des frais pour l'utilisation de Starknet. Le comité évaluera et soumettra des recommandations à la Fondation Starknet pour les groupes qualifiés, en fonction des objectifs d'équité, de transparence et de décentralisation. Ces plans seront annoncés dès qu'ils seront prêts.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Le comité des dispositions peut être contacté à l'adresse suivante : [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### Comité de subventions pour les adopteurs précoces
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Le Comité des subventions précoces (EAG) s’est engagé à favoriser la croissance de l’écosystème Starknet en accordant des subventions à des équipes innovantes qui construisent des applications en chaîne sur Starknet. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Le Comité EAG a pour objectif de faciliter l’expansion et la vitalité de l’écosystème par le biais de déploiements sur chaîne. Le comité fera bientôt une annonce pour définir les critères pour leur première série de candidatures qui se concentreront rétroactivement sur les équipes qui ont déjà commencé à construire sur Starknet. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Le Comité des subventions pour adoption anticipée est déterminé à assurer la transparence et à rendre publiques toutes les sommes de subventions.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Le comité des subventions pour les adopteurs précoces peut être contacté à : [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Comité de partenariat des développeurs
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+Le Comité des Partenariats des Développeurs joue un rôle vital dans l'écosystème Starknet en encourageant et en supervisant les nouveaux partenariats stratégiques de développement à intégrer dans l'écosystème Starknet. En particulier, les partenariats de développement stratégique sont considérés comme des collaborations sur des éléments clés de l'infrastructure essentiels à la réussite de Starknet.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+Les principales responsabilités du comité comprennent la rationalisation du processus de présentation des propositions pour les partenariats avec les promoteurs, la diligence raisonnable et l’approbation des propositions soumises. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Le comité est crucial pour favoriser un écosystème robuste en identifiant et en soutenant les équipes de développeurs qui ont construit ou sont en train de construire activement la première couche d'infrastructure du réseau. Leurs efforts font en sorte que les équipes construites pour sécuriser et étendre les rails d'infrastructure de Starknet soient attribuées de manière décentralisée et transparente. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Le Comité des partenariats avec les développeurs peut être contacté à l'adresse suivante : [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### Comité de gouvernance
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Le comité de gouvernance est chargé de jouer un rôle essentiel dans la décentralisation en cours de l'écosystème Starknet. Le comité est responsable de la recherche, de la planification et de l'exécution des phases initiales de la gouvernance de Starknet. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+En mettant l'accent sur la décentralisation et en trouvant un équilibre entre la participation de la communauté et le développement actif en cours ; le comité vise à créer, mettre en œuvre et superviser les piliers initiaux de la gouvernance de Starknet. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Le comité de gouvernance développera et mettra en place des mécanismes fondamentaux qui maintiendront une transparence et une équité, et une structure décentralisée qui favorise la participation de la communauté et assure une croissance continue et une participation décentralisée à l'écosystème. Pour atteindre ces objectifs, le comité définira les résolutions qui seront votées et approuvées par la communauté Starknet et établira une procédure appropriée pour la discussion et la mise en œuvre des votes de gouvernance. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Le comité a déjà lancé la [première phase de la gouvernance de Starknet](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Pour toute demande de renseignements concernant le premier vote, veuillez contacter : [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Le comité de gouvernance peut également être contacté à l'adresse suivante : [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Pour en savoir plus sur le travail et la feuille de route du comité de gouvernance, veuillez vous référer à [cette page](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### Comité d'intégration écosystémique
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Le Comité d’intégration écosystème est chargé d’autonomiser et d’intégrer de nouveaux développeurs et membres de la communauté dans l’écosystème Starknet. Cela inclut l'identification, l'autonomisation et le soutien des ambassadeurs Starknet, l'attribution de subventions aux contributeurs écosystémiques et aux groupes de talents, et organiser et parrainer une cadence générale d’événements et de partenariats éducatifs qui favorisent la participation de la communauté à l’écosystème de Starknet. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+Les ambassadeurs seront respectés et les membres établis de la communauté Starknet qui s'engagent à organiser, assister et parler lors d'événements, encourager le développement de la communauté, la création de contenus, la recherche de commandites mutuellement bénéfiques et persuader des individus et des équipes prometteurs de construire sur Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Le Comité d’intégration écosystémique a une orientation différente de celle du Comité des subventions pour les adopteurs précoces. Alors que le comité EAG vise à amorcer et à attribuer les premiers adopteurs de Starknet, le Comité d'intégration des écosystèmes met l'accent sur la croissance et le développement continu et soutenu de l'écosystème au niveau de la base. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Le comité d'intégration écosystème peut être contacté à : [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Jalons à venir
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Avec la nomination de ces comités, la fondation Starknet est prête à faire un voyage passionnant. Chaque commission est déterminée à promouvoir un aspect spécifique de l'écosystème et, ensemble, à côté de la Fondation, travaillera vers un écosystème de la couche 2 florissant, décentralisé et sans permission.  
 
-Here is what’s coming next: 
+Voici ce qui va venir : 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* le [Premier Vote de Gouvernance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) aura lieu le 21 mars 2023 ;
+* la première annonce du Comité EAG et les détails de la première série de candidatures seront publiés sur le blog [de la Fondation StarkNet](https://www.starknet.io/en/posts/foundation) le 21 mars 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Gardez un œil sur le blog [de la Fondation StarkNet](https://www.starknet.io/en/posts/foundation) et sur les réseaux sociaux pour connaître les dernières mises à jour et les dernières opportunités.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Pour toutes les informations supplémentaires de Starknet Foundation, mises à jour et propositions, suivez Starknet sur [Twitter](https://twitter.com/Starknet), rejoignez notre [Discord](http://starknet.io/discord), et lisez le [Forum Communautaire.](https://community.starknet.io/)**

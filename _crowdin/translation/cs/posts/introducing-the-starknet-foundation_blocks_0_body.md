@@ -1,68 +1,68 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* StarkNet nadace je oficiálně spuštěna
+* Je věnován podpoře vzkvétajícího StarkNet
+* Silná mezioborová komise povede nadaci
+* Nadace je nezávislá na StarkWare
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)činí velký krok směrem ke své budoucí struktuře řízení komunit se zřízením nadace StarkNet.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+Tato pošta nastiňuje poslání nadace, zavádí její ředitele a stručně diskutuje o zkušenostech a hodnotách, které přinášejí na stůl.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+Nadace byla zřízena, aby naplnila vizi[decentralizačního návrhu StarkNetu](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), jak bylo zveřejněno v červenci 2022 a zveřejnilo svůj vlastní post “Hello World”[zde](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### Pokročilá vize Starknetu
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet je bezpřípustná decentralizovaná vrstva 2 (L2) Validity Rollup (často označovaná jako ZK-Rollup), která má rozšiřovat Ethereum při zachování bezpečnosti a decentralizace Ethereum. V souladu s tímto posláním byla nadace založena jako nezávislý subjekt, který má rozvíjet sdílenou technologii StarkNet. Kromě toho jako nezisková jednotka s úzkým posláním: prosazovat StarkNet jako veřejný statek pro všechny, a udržujte ji jako takovou po léta následující.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+Nadace zahajuje s padesáti. % původních tokenů dodávek, aby bylo zajištěno, že zdroje sítě budou účinně využity k dosažení těchto cílů: údržba a bezpečnost StarkNet jako veřejného statku; pokračující rozvoj a rozšiřování sítě a podpora kultury konstruktivní spolupráce mezi vývojáři.
 
-#### **The foundation’s priorities will include:**
+#### **Tyto prostředky jsou určeny na pokrytí výdajů na zaměstnance a správních výdajů agentury (hlavy 1 a 2) a provozních výdajů na pracovní program (hlava 3).**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**Podpora komunity**uživatelů StarkNet, vývojářů a výzkumných pracovníků, kteří vdechnou život do StarkNet budováním infrastruktury, nástrojů, aplikací a dalších.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**Rozšiřování komunity**vzděláním o StarkNet a jeho technologiích, a pomoci vývojářům získat dovednosti pro vybudování infrastruktury StarkNet, stejně jako dApps využívající sílu STARK.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**Dohled nad pokračujícím rozvojem sítě a pokračujícím výzkumem,**, které jsou klíčovými prvky pomoci síti při realizaci její vize.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**Dále decentralizaci StarkNetu**vyvíjením mechanismů řízení StarkNet a vytvořením decentralizovaného sekvenování a dokazování.
 
-### **Introducing the board**
+### **Představujeme tabuli**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+Nadaci bude vládnout sedmičlenná rada. Členové představenstva pocházejí z různých prostředí a přinášejí vyváženost, nezávislost a víceoborovou škálu dovedností k stolu. Každý člen má odborné znalosti a zkušenosti, které pomohou StarkNet dosáhnout svého potenciálu jako dlouhodobého společného dobra. Ve svém příspěvku „[Dobrý svět](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)“ dávají přehled o tom, co je motivuje k tomu, aby se podíleli na StarkNet. Jsou prezentovány v abecedním pořadí podle jmen.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)bývalý zástupce hlavního technologického pracovníka Spojených států; bývalý viceprezident a vedoucí politický ředitel ICANN, nezávislý orgán, který spravuje infrastrukturu internetu.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)**matematik a informatika; StarkWare President a spoluzakladatel; Spoluvynálezce STARK, FRI a Zerocash protokolů a zakládající vědce Zcash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain think leader and whistleblower, známý jako odhalení systémových nedostatků v vysoce profilovaných kryptoměnách projektů; poradce pro kryptoměnu nadaci pro lidská práva; bývalý hlavní investiční úředník u Arcane Assets.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning právník, expert na open source software a autor „Open Source for Business“; Hlavní partner OSS Capital a právní poradce společnosti StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Matthematician a informatika; hlavní přispěvatel na podporu důkazů STARK, Propojte profesora na Univerzitě v Toronto; Vědecký poradce StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stan<unk> czak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain vývojář, který vytvořil základní komponenty Ethereum; Zakladatel v nethermánku, jeden z největších týmů postavených na Ethereu a StarkNet.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)Podnikatel; StarkWare generální ředitel a spoluzakladatel. Před společností StarkWare spoluzaložil společnosti vyvíjející řadu technologických produktů, včetně optických vláken, nástrojů vizualizace dat atd.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+Pozadí těchto členů představuje skvělý soubor dovedností i značné zkušenosti, které nadaci do budoucna vybavují.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+Andrew and Heather přináší silné přihlašovací údaje z veřejně prospěšných a open source projektů. Společnost Heather je známá jako zastánce bezplatné a otevřené licence na software. Andrew byl po léta stěžejní postavou v ICANN, což byla organizace, která v prvních letech pomohla formovat internet jako decentralizovaný komunitní dobro. Učinilo tak prostřednictvím konsenzuálních procesů založených na principu zdola nahoru. Právě takový proces je potřebný k tomu, aby StarkNet splnil cíle Web3.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+Tabule také odráží významné zkušenosti s kryptem v mnoha řetězcích. Tomasz pracoval na vývoji základních složek Ethereum – a StarkNet. Eli byl zakládající vědce v Zcash před průkopníkem technologie za StarkNet, a Andrew dnes sedí na představenstvo společnosti Electric Coin Company, která buduje a podporuje Zcash technologii.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+Představenstvo má ze společnosti Tomasz a Uri zkušenosti generálního ředitele, a má odborné znalosti v oblasti informatiky a matematiky – a zejména STARK– od Shubhangi a Eli. Tři členové představenstva Tomasz, Uri a Eli se do budování StarkNetu hluboce zapojili.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+Všichni členové se postaví za to, co věří. Eric se dostal tak daleko, že v Cinnobru vlastněném Nasdakem opustil přední roli, když pohrozil, že omezí svou nezávislost, aby vyslal své názory na krypto. Jako nadace popularizující technologie, která poskytuje[integritu pro výpočet,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)je vhodné sestavit desku s takovou integritou.
 
-### **An Independent Foundation**
+### **Nezávislá nadace**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+Nadace je nezávislým subjektem, který bude podporovat tyto budovy, využívat a udržovat veřejné statky, konkrétně protokol StarkNet. Stejně jako v případě internetu, Bitcoinu a Etherea, StarkNet je sdílená technologie, která je postavena jako decentralizovaná cenzurovaná síť odolná vůči cenzuře, kde se může každý svobodně a nepřípustně rozvíjet, bez nutnosti důvěřovat jakékoli třetí straně.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+Nově vytvořená nadace je nezisková jednotka, která byla zřízena zejména proto, aby podporovala a udržovala StarkNet jako veřejný statek. Nadace spolu se souhrnným souborem nezávislých vývojářů, začínajících podniků, uživatelů podniků, a veřejnost na svobodě bude mít vždy možnost používat a zlepšovat StarkNet pro své vlastní účely a pro dobro každého, kdo chce bezpečně interagovat a uskutečňovat skrze něj.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+Nadace je nezávislá a může se svobodně ujmout jakýchkoli postojů vůči StarkNetu. Rozhodnutí mají být přijímána prostou většinou nebo pěti ze sedmi ve zvláštních případech, jako je odvolání členů rady a jmenování členů nadace. V rozhodnutích, v nichž vnější pozice členů rady představují střet zájmů, požaduje nadace, aby se tito členové znovu vrátili z hlasování.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+Nadace má značné prostředky k plnění svého poslání: 5.01 Biliion StarkNet Tokens byl přidělen nadaci, tj. 50. % z počátečního množství tokenů ve výši 10 miliard tokenů (více informací viz[část 3 našeho návrhu správy](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+Je třeba rozhodnout o mnoha podrobnostech, které budou utvářet budoucí směr StarkNet. Zřízení nadace naštěstí přináší více hlasů ze strany rostoucího společenství. StarkWare zůstává odhodlanou součástí této komunity a s radostí vítáme větší ekosystém StarkNet, který bude více vlastnit budoucnost sítě. Cesta StarkNetu je nyní v rukou decentralizované posádky, a nadace bude hrát důležitou úlohu při zajišťování hladkého fungování nadace. Všechny na StarkWare popřejí nové tělo mnoho úspěchů ve svém poslání.

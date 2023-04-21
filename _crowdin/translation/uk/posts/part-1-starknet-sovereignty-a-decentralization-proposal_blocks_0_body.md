@@ -1,44 +1,44 @@
 ### TL;DR
 
-* StarkNet’s decentralization involves a native token and a new foundation.
-* The StarkNet token is used for governance and as the network’s payment and staking asset.
-* Ten billion tokens have been minted and their allocation has begun.
-* The StarkNet Foundation, now being set up, will have a mission to maintain StarkNet as a public good.
+* StarkNet-децентралізація включає рідний токен і новий фундамент.
+* Токен StarkNet використовується для управління та як платіж у мережі та виконання активів.
+* Десять мільярдів токенів було видобуто, і почалася їхня розмова.
+* StarkNet Foundation, який зараз встановлений, матиме місію підтримувати StarkNet як суспільного блага.
 
-StarkNet is a permissionless decentralized Layer 2 (L2) validity rollup, built to allow Ethereum to scale via cryptographic protocols called STARKs, without compromising Ethereum’s core principles of decentralization, transparency, inclusivity and security.
+StarkNet - це децентралізований шар 2 (L2) розгортання дійсності, створене для того, щоб Ethereum могла масштабувати за допомогою криптографічних протоколів під назвою STARK, не загрожуючи основним принципам децентралізації, прозорості, всеосяжності та безпеки.
 
-StarkNet’s Alpha launched on Mainnet in November 2021. Less than one year in, an ecosystem is forming, with dozens of teams worldwide working on it. Now is the time to advance the decentralization of the network, so it achieves the liveness, censorship resistance, transparency and inclusivity demanded of an L2 on Ethereum.
+StarkNet, запущений в Майннет у листопаді 2021 року. Менш ніж рік формується екосистема, де десятки команд у всьому світі працюють над нею. Настав час просуватися децентралізації мережі, тому він досягає відповідальності, цензура опору, прозорість та інклюзивність вимагали L2 на Ethereum.
 
-Decentralization means the network’s operation and evolution will not rely on any single entity, including StarkWare. A permissionless proof-of-stake leader election mechanism and on-chain payment of transaction fees, both using a native token, will enable the network to operate reliably as an L2 on Ethereum even should StarkWare cease to exist. Decisions regarding the ongoing maintenance of StarkNet will shift from StarkWare to the community. A StarkNet Token and Foundation will be key elements of this effort.
+Децентралізація означає, що операція та еволюція мережі не покладаються на будь-який суб'єкт, включаючи StarkWare. Бездопустимий механізм виборів коректури і частково платіжний платіж за транзакції, як з місцевим токеном, буде дозволяти мережі працювати надійно, як L2 на Ethereum навіть якщо StarkWare перестане існувати. Рішення щодо поточного обслуговування StarkNet перейдуть від StarkWare до спільноти. StarkNet Token та Foundation - це ключові елементи цих зусиль.
 
-This post, the first of three published simultaneously, summarizes StarkNet’s journey thus far and introduces the StarkNet Token and the StarkNet Foundation. The [next post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) discusses the StarkNet governance model and the [third](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) focuses on StarkNet’s token model.
+Це повідомлення, перший із трьох опублікованих одночасно, підсумовує подорож StarkNet, і знайомить StarkNet Token і StarkNet Foundation. [наступний пост](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)обговорює модель управління StarkNet і[третій](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)фокусується на моделі токенів StarkNet.
 
-*We thank the following StarkNet supporters (alphabetically ordered) for their comments on a draft of these posts: Guily_Gioza (Topology), Itamar Lesuisse (Argent), Jonas Nelle (Pontis), Martin Triay (OpenZeppelin), Polynya, Sylve Chevet (Briq), and Tomasz Stańczak (Nethermind).*
+*Ми дякуємо наступним прихильникам StarkNet (в алфавітному порядку) за коментарі на проект цих повідомлень: Guily_Gioza (Топологія), Ітамар Лесуїсс (Аргентина), Джонас Нелле (Понтиз), Мартин Трій (OpenZeppelin), Поліна, Сильва Чевет (Брік) та Томаш Стенчак (Нідерланд).*
 
-### The story so far
+### Ця історія досі
 
-[StarkNet](https://starknet.io/) is built from cryptography and an open ecosystem. The **cryptography** is **[STARKs](https://eprint.iacr.org/2018/046.pdf)**. These are protocols based on math that scale Ethereum by orders of magnitude. They require no trusted setup, are post-quantum secure, and can be deployed succinctly at any scale. The ecosystem is composed of core developers who have wanted for years to build infrastructure and tools for scaling blockchain technology, as well as new and creative application domains that become possible when the computational power of Ethereum is expanded.
+[StarkNet](https://starknet.io/)побудовано з криптографії і відкритої екосистеми. Криптографія****на**[СПОРТ](https://eprint.iacr.org/2018/046.pdf)**. Це протоколи на основі математики, в яких масштаби Ethereum через низки чисел. Вони не вимагають довіреної установки, є постквантовими безпеками і можуть бути успішно розгорнуті в будь-якому масштабі. Екосистема складається з основних розробників, які бажали років для створення інфраструктури та інструментів для масштабування блокчейн технологій, також і нові творчі веб-домени, які стають можливими, коли розширюється обчислювальна потужність Ethereum.
 
-StarkNet gives all developers and users access to the scale and security benefits of STARKs, for the purpose of scaling Ethereum while maintaining Ethereum’s core values. STARKs were invented by co-founders of StarkWare, who first used them to build the [StarkEx](https://starkware.co/starkex/) scaling solution for clients. Subsequently, StarkWare and other developer teams (collectively “Core Contributors”) built [StarkNet](https://starkware.co/starknet/), a public, decentralized, and permissionless infrastructure, to ensure that these scaling technologies are accessible to all in perpetuity.
+StarkNet надає усім розробникам та користувачам доступ до переваг по масштабам і безпеці, що відбувається на сторонньому сервері, для розширення масштабу Ethereum зберігаючи основні цінності Ethereum. СПОРТ були винайдені співзасновниками StarkWare, які вперше створили рішення[StarkEx](https://starkware.co/starkex/)для клієнтів. Згодом, StarkWare та інші команди розробників (разом з їх створенням[StarkNet](https://starkware.co/starknet/), публікацією, децентралізована, і допустима інфраструктура, щоб забезпечити доступ до всіх цих масштабних технологій доступними для всіх.
 
-The launch of StarkNet Alpha nearly a year ago prompted the emergence of a larger ecosystem that is committed to build and nurture StarkNet. There are numerous teams of developers worldwide building its core infrastructure, as well as new applications on it.
+Запуск СтаркНета Альфа майже рік тому спонукав до появи більшої екосистеми, яка спрямована на будівництво та парування StarkNet. Існує багато команд розробників по всьому світу, які будують свою базову інфраструктуру, а також нові додатки.
 
-### **The way to decentralize**
+### **Шлях до децентралізації**
 
-STARK technology is mature and secure, but StarkNet has not achieved the status of a public good like Ethereum or the Internet. For StarkNet to reach this goal, its governance, operation and development must continue to decentralize. This will be facilitated through two mechanisms: the **StarkNet Foundation** and the **StarkNet Token**.
+Технологія STARK є зрілою, але StarkNet не досягла статусу хорошого, як Ethereum чи Інтернет. Щоб StarkNet досягла цієї мети, її управління, операція та розвиток повинні продовжувати децентралізувати. This will be facilitated through two mechanisms: the **StarkNet Foundation** and the **StarkNet Token**.
 
-#### Foundation
+#### Фундамент
 
-As a non-profit, the Foundation’s mission will be to maintain StarkNet as a public good — a commodity or service that is made available to all members of society. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between users.
+Як некомерційне, Місія Фонду буде підтримувати StarkNet як суспільне благо - товаром чи послугою, яка надається для всіх членів суспільства. StarkNet - це бездозволу інфраструктура, яка повинна бути доступною для всіх. Він повинен бути добре збережений, щоб бути безпечним та ефективним для використання громадськості. Вони також не повинні дискримінацію між користувачами.
 
-The Foundation will be funded by a one-time grant of StarkNet Tokens. It will encourage the development of bottom-up mechanisms for community decision-making on essential technological questions, such as protocol updates, dispute resolution, and public goods funding.
+Фонд фінансується одноразовим грантом StarkNet Tokens. Це сприятиме розвитку механізмів знизу вгору для прийняття рішень у громадах на основних технологічних питаннях, таких як оновлення протоколу, вирішення суперечок та фінансування суспільних благ.
 
-#### Token
+#### Маркер
 
-The StarkNet Token is needed to operate the ecosystem, maintain and secure it, decide on its values and strategic goals, and direct its evolution. This token will be required for (i) governance, (ii) payment of transaction fees on StarkNet, and (iii) participation in StarkNet’s consensus mechanism.
+StarkNet Token необхідний для роботи екосистеми, підтримки та забезпечення її, рішення про її цінності та стратегічні цілі, і спрямування її еволюції. Цей токен буде необхідний для управління (i) владою (ii) оплату за транзакцію на StarkNet та (iii) участь у механізмі консенсусу StarkNet.
 
-We have minted an initial ten billion tokens which are being allocated to Core Contributors of the StarkNet ecosystem including StarkWare and StarkWare’s investors, to StarkNet software developer partners, and to the Foundation. Soon (target: September 2022) the token will go on Ethereum as an ERC-20 token and be requested for use in governance and voting on network upgrades. Later, StarkNet fees will be paid only in this token, while ensuring good user experience for users interested in paying fees in ETH. Later still, automatic minting of additional StarkNet Tokens will commence, (i.e., the number of circulating tokens will be greater than ten billion).
+Ми знайшли перші десять мільярдів токенів, які виділяються на основі компонентів екосистеми StarkNet, включаючи розробників StarkWare і інвесторів StarkWare і StarkWare, StarkNet для розробників розробників розробників і до Foundation. Незабаром (ціль: вересень 2022) токен перейде на Ethereum в якості токену ERC-20 і просить використання в управлінні та голосуванні за оновлення мережі. Пізніше, StarkNet плату буде виплачено лише з цього токену, гарантуючи при цьому хороші користувацькі враження від користувачів, які зацікавлені в сплаті платних зборів у ETH. Потім автоматичний видобуток токенів StarkNet розпочнеться (тобто кількість токен, що циркулює більше десяти мільярдів).
 
-The StarkNet Token model emphasizes compensating developers for their work. A portion of new minting and transaction fees — fees assessed for use of StarkNet — will be granted to core infrastructure developers and smart contract developers for the work they have done to design and launch the protocol, in addition to compensating StarkNet operators for the work they have done to operate it.
+Модель StarkNet Token підкреслює компенсацію розробникам для їхньої роботи. Частина нових внесків по видобутку та транзакціях - збори, зафіксовані за використання StarkNet - буде надано основним розробникам інфраструктури та розумним розробникам контрагентів для роботи, яку вони зробили для розробки та запуску протоколу, на додачу до компенсації операторам StarkNet для роботи, яку вони виконали для роботи.
 
-The full rationale behind a new and dedicated StarkNet Token is explained in our [second post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the StarkNet Token design principles and initial allocation are discussed in the [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6).
+Обгрунтування нового та спеціального StarkNet Token пояснюється в нашому[другому пості](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), і принципи проектування StarkNet Token і початковий розподіл обговорюються в[третьому повідомленні](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6).

@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+Eind november 2022 werd de [lancering van Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) aangekondigd. De stichting is een onafhankelijke organisatie die gewijd is aan het verwezenlijken van Starknet's visie om een bloeiende, gedecentraliseerde en permissieveloze Layer 2 (L2) Geldigheid Rollup (a.k.a. te worden. ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+Met een sterk [interdisciplinair bord](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) aan het roer, de Starknet Foundation bevindt zich in een goede positie om haar doel van het bevorderen en uitbreiden van de Starknet-gemeenschap, na te streven toezicht op de verdere ontwikkeling van het netwerk, de ontwikkeling van soepelere bestuursmechanismen en de volledige decentralisatie van het Starknet-ecosysteem. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+De Stichting is er vandaag op gebrand de benoeming van vijf comités publiekelijk aan te kondigen. elk heeft een specifiek mandaat gekregen dat in overeenstemming is met de missie en prioriteiten van Starknet. Het mandaat van elke commissie wordt niet in steen gebeiteld en zal routinematig worden geëvalueerd, met aanpassingen en zo nodig wijzigingen.
 
-The committees are:
+De commissies zijn:
 
-* Provisions Committee
+* Bepalingen commissie
 * Early Adopter Grants Committee
-* Developer Partnerships Committee
+* Comité van ontwikkelaarspartnerschappen
 * Governance Committee
-* Ecosystem Onboarding Committee
+* Onboardingcommissie ecosysteem
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+Hieronder zullen we meer details delen over de commissies, inclusief het mandaat, de operaties en de aanvankelijke leden.
 
-## Introducing the Starknet Foundation Committees 
+## Introductie van de Starknet Foundation Comités 
 
-### Provisions Committee
+### Bepalingen commissie
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+De Commissie juridische zaken en rechten van de burger is verantwoordelijk voor de planning, het toezicht op en de uitvoering van de levering van het ecosysteem Starknet - STRK. STRK zal worden gebruikt als staandtoken voor deelname aan het consensusmechanisme van Starknet. Het zal ook dienen als het governance-token van het netwerk en als gastoken voor de betaling van de transactiekosten van het netwerk. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+De Commissie juridische zaken en rechten van de burger is van cruciaal belang voor een eerlijke, gedecentraliseerde en transparante verdeling van het token waarmee het ecosysteem van Starknet macht krijgt. De commissie ziet toe op de voorziening van gebruikers met STRK-tokens die moeten betalen voor het gebruik van Starknet. Het comité zal de Starknet-stichting beoordelen en aanbevelingen doen voor kwalificatiegroepen die gebaseerd zijn op de doelstellingen eerlijkheid, transparantie en decentralisatie. Deze plannen zullen eenmaal worden aangekondigd.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+De Provisies-commissie kan worden benaderd op: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
 ### Early Adopter Grants Committee
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Het comité van vroegtijdige Adopter Grants (EAG) heeft zich ertoe verbonden de groei van het Starknet-ecosysteem te bevorderen door subsidies te bieden aan innovatieve teams die on-chain applicaties bouwen op Starknet. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Het doel van de Commissie economische en monetaire zaken is de uitbreiding en de vitaliteit van het ecosysteem te faciliteren door middel van de plaatsing van de on-ketens. De commissie zal binnenkort een mededeling doen waarin zij de criteria uiteenzet voor de eerste ronde van toepassingen die met terugwerkende kracht gericht zullen zijn op teams die al zijn begonnen met het bouwen aan Starknet. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+De commissie voor vroegtijdige steunverlening voor voortijdige Adopter heeft zich sterk gemaakt voor transparantie en zal alle subsidiebedragen openbaar maken.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Het Early Adopter Grants Comité kan gecontacteerd worden op: [vroegtijdig adoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Comité van ontwikkelaarspartnerschappen
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+De Commissie voor Ontwikkelingspartnerschappen speelt een vitale rol in het Starknet-ecosysteem door nieuwe strategische partnerschappen voor ontwikkelaars te bevorderen en te bewaken die in het Starknet-ecosysteem moeten worden opgenomen. Met name strategische ontwikkelingspartnerschappen worden beschouwd als samenwerking op belangrijke onderdelen van de infrastructuur die cruciaal zijn voor het succes van Starket.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+De belangrijkste verantwoordelijkheden van de commissie zijn onder andere het stroomlijnen van het indieningsproces van ontwikkelingspartnerschappen, het uitvoeren van grondige zorgvuldigheidseisen en het goedkeuren van ingediende voorstellen. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+De commissie is van cruciaal belang voor het bevorderen van een robuust ecosysteem door het identificeren en ondersteunen van ontwikkelingsteams die de kernlaag van het netwerk hebben gebouwd of actief aan het bouwen zijn. Dankzij hun inspanningen kunnen teams die de infrastructuur van Starknet willen veiligstellen en uitbreiden, op gedecentraliseerde en transparante wijze worden uitgereikt. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+De Commissie ontwikkelaarspartnerschappen kan worden gecontacteerd op: [developerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
 ### Governance Committee
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Het Comité van bestuur is belast met een kritische rol in de lopende decentralisatie van het Starknet-ecosysteem. De commissie is verantwoordelijk voor het onderzoek, de planning en de uitvoering van de eerste fasen van het bestuur van Starknet. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+Met nadruk op decentralisatie en het vinden van een evenwicht tussen deelname van de gemeenschap en actieve duurzame ontwikkeling; De commissie is erop gericht de eerste pijlers van het Starknet-bestuur te creëren, te implementeren en te bewaken. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Het Comité van bestuur zal kernmechanismen ontwikkelen en invoeren die een transparante en eerlijke benadering in stand houden. en gedecentraliseerde structuur die de betrokkenheid van de gemeenschap bevordert en een blijvende groei en gedecentraliseerde deelname aan het ecosysteem garandeert. Om deze doelen te bereiken de commissie zal resoluties opstellen die door de Starknet-gemeenschap in stemming zullen worden gebracht en goedgekeurd en zal een passende procedure vaststellen voor de bespreking en tenuitvoerlegging van de stemmingen over bestuur. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+De commissie heeft al de eerste fase van het bestuur van Starknet van [](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Voor vragen met betrekking tot de eerste stemming, neem contact op met [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Het Comité van bestuur kan ook worden benaderd op: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Raadpleeg [deze pagina](https://www.starknet.io/en/posts/governance) voor meer informatie over het werk en de roadmap van de governancecommissie.
 
-### Ecosystem Onboarding Committee
+### Onboardingcommissie ecosysteem
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+De commissie Onboarding Ecosystem is verantwoordelijk voor de versterking en integratie van nieuwe ontwikkelaars en leden van de gemeenschap in het Starknet ecosysteem. Dit omvat identificatie, empowerment en ondersteuning van Starknet-ambassadeurs, het toekennen van subsidies aan bijdragers van ecosysteem en talent pools, en het organiseren en sponsoren van een algemene evenementen en educatieve partnerschappen die de deelname van de gemeenschap aan het ecosysteem van Starknet bevorderen. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+Ambassadeurs zullen worden gerespecteerd en gevestigde leden van de Starknet-gemeenschap die zich inzetten voor het organiseren, bijwonen en spreken van evenementen, het stimuleren van gemeenschapsontwikkeling, het maken van inhoud, het zoeken naar wederzijds voordelige sponsors, en het overhalen van veelbelovende individuen en teams om te bouwen op Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Het Comité van onboarding heeft een ander zwaartepunt dan het Early Adopter Grants Comité. Terwijl de Commissie EAG ernaar streeft de initiële adopteurs van Starknet op te starten en toe te kennen, de commissie onboarding van het ecosysteem benadrukt de aanhoudende en duurzame groei en ontwikkeling van het ecosysteem op het niveau van de basis. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Het ecosysteem Onboarding Committee kan worden gecontacteerd op: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Aankomende Mijlpalen
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Met de benoeming van deze comités staat de Starknet-stichting op het punt een spannende reis te maken. Elke commissie zet zich samen in voor de bevordering van een specifiek aspect van het ecosysteem naast de Stichting zal ook gewerkt worden aan een bloeiend, gedecentraliseerd en permissief Layer 2 ecosysteem.  
 
-Here is what’s coming next: 
+Hier volgt de volgende stap: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* de [Eerste stemming over governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) vindt plaats op 21 maart 2023;
+* de eerste aankondiging en details van de EAG van de eerste toepassingsronde van de StarkNet Foundation zullen worden gepubliceerd op de [blog](https://www.starknet.io/en/posts/foundation) op 21 maart 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Houd de [blog](https://www.starknet.io/en/posts/foundation) en sociale media kanalen van de StarkNet Foundation in de gaten voor de nieuwste updates en mogelijkheden.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Voor alle extra Starknet Foundation informatie, updates en voorstellen, volg Starknet op [Twitter](https://twitter.com/Starknet), doe mee met onze [Discord](http://starknet.io/discord)en lees het [Community Forum.](https://community.starknet.io/)**

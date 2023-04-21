@@ -1,64 +1,64 @@
 ### TL;DR
 
 * We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* 私たちは最初の目標を達成しました:ユーザビリティ。 これは、Ethereumのような状態で一般的な計算を行ったことを意味します(可能であると考えられる数年前)
+* 現在、3部構成の構築計画の第2段階に移行しています:スループット、トランザクションコスト、およびレイテンシに焦点を当てたパフォーマンス。
+* 次へ：分割化
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+[StarkNet](https://starknet.io/)の計画が最初に発表されてからわずか1年後、プラットフォームは非常に優れた機能を持っています。 開発者コミュニティは、私たちの最も驚くべき期待を超えて繁栄し、新しいL2ネイティブプロジェクトを絶えず提供しています。
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+昨年の私たちの優先課題は、これを正確に実現することでした。 すぐに拡張された機能を備えた StarkNet を作成することで、開発者はまっすぐに飛び込むことができます。
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+彼らはこれを大量に行ってきました。 良いバロメーターは、StarkNet 用の[JavaScript ライブラリのダウンロード数です。](https://www.starknetjs.com/): 4 ヶ月前に利用可能になってから 5k です。
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+まだStarkNetが圧縮魔法を提供しながら、今のところ、私たちは約束しました。 十分なスループットを持つ十分なdAppのためにそうすることはできません。 これは短期的には開発者にとって不満の原因になるかもしれません
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+私たちの戦闘テストされたコアテクノロジー, 多くのトランザクションを証明し、証明を圧縮するSTARKは、トランザクションのバッチまたはシーケンシングによって先行する必要があります。 これは、StarkWareチームが[StarkEx](https://starkware.co/starkex/)スケーリングエンジンのためにすでに1回完成させたプロセスです。 私たちは現在、StarkNetのニーズに応えるために再び取り組んでいます。
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+多くのユーザビリティ目標が達成された今、私たちはこれを最優先事項にするために焦点を変更しています。 それはすべて私たちの3段階のロードマップの一部です:**使いやすさ**、続いてネットワークの**パフォーマンス**、そして**分散化**。 年 フードの下を覗いてみましょう ピースが何に使われているのか まだ進行中の作品の概要です
 
-### The Story So Far
+### これまでのストーリー
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+StarkNet Alpha は 6 月に testnet に、11 月に Mainnet にリリースされました。 Mainnetの導入時までに、StarkNetはEthereumのような状態ですでに一般的な計算を提供していました。
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+開発を通じて、我々は最初に最も重要な機能に焦点を当て、それらが利用可能になった時点でそれらをリリースするアプローチを選択しました。 基本的には進化過程をコミュニティと共有しています StarkNetは機能の完成にはほど遠いですが、今でも、開発者はすでに意味のある複雑なアプリケーションを構築することができます。 今日、StarkNetに数百人の開発者[が](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)数十のdAppsを構築しています。 StarkNetエコシステムのためのツールとインフラストラクチャを開発している外部チームは、数十を超える。
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+一連のアップグレードにより、L1<>L2メッセージ、チェーン上のデータ、複合性のサポート、イベントサポート、基本料金メカニズムなど、多くの重要な機能が提供されています。 契約のアップグレード、アカウントの抽象化、テストフレームワーク、開発者ツール、高速確認、ブロック番号、ブロックタイムスタンプ、アカウント契約のサポート。
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+開発者コミュニティは、StarkNetに深く関心を持ち、実際に開発を形作っています。 既に、開発者のフィードバックに基づいて機能が導入されています。 スループットの向上を大きく上回る可能性があります。そのため、今回のブーストが私たちの大きな優先事項です。
 
-### Next Steps
+### 次のステップ
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+使いやすさに達したので、システムのパフォーマンスを向上させる時が来ました。 このシステムは、現在の状態では、トランザクションのスループットが限られています。 これを解決する方法は、StarkNetの鉱山労働者に相当するSequencer Nodeのパフォーマンスを向上させることです。 トランザクションが送信された後にシーケンスされるのは「マシン」です。 これが最適化されると、スループットはロケットを空にします。
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+この目的のために、ボトルネックがどこにあるのかを同時に分析し、それらに対処しています。 現在、すべてのボトルネックはシーケンシングプロセスに関連しており、これは STARK-prover を呼び出す前に発生します。 戦いでテストされたことわざスタックはStarkNetのStarkExライクなスループットをサポートする準備ができています。
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+シーケンサーの最適化は数ヶ月間続くと予想され、H1/22全体で徐々に改善されます。 私たちの目標は、2022の後半の初めまでに、Ethereumよりも少なくとも1つの大きなTPSに到達することです。 Ethereumより少なくとも2桁低いコストで。 それはまだ始まったばかりです
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+この最適化フェーズが必要な理由は正当です。 StarkNetは既に最適化されたシーケンサーでは立ち上げられませんでした。StarkNetはヘッドスタートができたため、非常に迅速にユーザビリティを達成することができました。 ゼロから始めて全く新しいシーケンサーを構築する代わりに、StarkExのバッチャーを中心コンポーネントとして使用しました。
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+これは、構築するのに最適な方法でした。 それはただ迅速に届けるだけではなく、頑丈な基盤を構築していることを意味します。 StarkExは、実質的にStarkNetを動かすコア機能をテストしました。それは累積取引で数千億ドルを獲得しました。
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[StarkEx](https://starkware.co/starkex/)は、L2 を使用した最も成功したdAppsのスケーリングエンジンです: dYdX (永久契約) DeversiFi(スポット取引と支払い)、およびイミュータブルとソラーレ(NFTミントと取引)のために。
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+しかし、彼らと他のStarkExクライアントのために構築されたシーケンサーは、これまでStarkNetのみを取ることができます。 それらのそれぞれは、毎日同じタイプのトランザクションを広く処理しています。 StarkNet は**一般的な計算**についてすべてであるため、そのニーズはオープンエンドです。 シーケンサーがmempoolからトランザクションを受け取ると、それらはさまざまな形やサイズになります。 さらに、StarkNetはオープンネットワークでもあり、StarkExでは発生しない追加の計算オーバーヘッドがあることを意味します。
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+現在の課題、すなわちこれらの新しいニーズに合わせてシーケンサーを最適化することは重要な課題です。 しかし、StarkExの成功に基づいて、必要なルートを強く理解しています。
 
-### Next Up: Decentralization
+### 次回：分割化
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+StarkNetは、リーダー選挙とガバナンスのメカニズムを備えた完全な分散型許可なしネットワークであることになります。 これを達成することは、スループットが急増しコストが低下すると、私たちの主な焦点になります。 2022年末までに最初の分散版を手に入れたいと思っています 今後数ヶ月以内に分散計画を公に共有することを期待しています。
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+現在の限られたスループットが StarkNetの開発における中間段階を表しているように、現在のStarkWareの関与レベルも一時的です。 私たちは、自分自身を、建設段階で重要な機能を果たすような種類の足場と見なしていますが、当然、ロールバックされています。
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+完全なノード開発は、分散化に向けたエキサイティングな第一歩であり、すでに進行中です。 フルノードを使用すると、誰でもネットワークの状態をローカルに保持し、検証することができ、何が起こっているかを正確に把握できます。 *Erigon, Nethermind and Equilibrium*の3つのチームがフルノードを開発しており、将来的により多くの開発が開始される可能性があります。
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+並列開発では、シーケンスを開き、ソフトウェアを公開する準備が進められています。 誰でもStarkNetでシーケンサーやプロバーとして参加できます。
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+人々が関与するように奨励するための構造が開発され、経済的な報酬が含まれます。 StarkNetの料金は、部分的にシーケンサーと諺に行きます。
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+中期的には、シーケンサーを第三者に提供する予定です。 そして長期的には、StarkNetのシーケンサーをシーケンサーとするさまざまなチームが構築されることを期待しています。
 
-### Always Improving; Forever Listening
+### 常に改善; 永遠に聴き続ける
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+次のチャレンジにフォーカスが移行するにつれて、私たちは過去の成果を改善し続けます。 そして、[StarkNet](https://starknet.io/)のすべての分野で作業を続ける中で、私たちの耳は常に開発者コミュニティ全体に開かれたままです。 So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.

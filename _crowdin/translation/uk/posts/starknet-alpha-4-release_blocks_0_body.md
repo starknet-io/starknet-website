@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Наближається час вперед
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Альфа 4 була випущена сьогодні на Герлі. Ця версія є кандидатом у випуск в мережі Меннет, і якщо все пройде згідно плану, буде розміщено на Мейннет до кінця місяця.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Альфа 4 підтримує реліз Альфа-3, в якому включено до іншого, вдосконалення в Каїрські часи для компіляції, контракторів та багато іншого (див.[повну інформацію про реліз](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Важливо зауважити: ця альфа-версія - для розгортання контракту на мережі будь ласка, слідкуйте за наступними додатками[при адаптації](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)керівних принципах.
 
-### New Features
+### Нові можливості
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Хоча основна увага цієї версії в тому, щоб підготуватися до розгортання в Mainnet, вона також включає в себе кілька нових функцій:
 
-#### Get this contract’s address
+#### Отримати адресу цього договору
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+В цих контрактах можна отримати власну адресу через новий syscall \`get_contract_address \`. Ми можемо, нарешті, встановити селфі контракт на відпочинки.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Селфі договір: Вересень 2021-листопада 2021 року</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10 листопада, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Блок хеш
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Тепер Блоки ідентифікуються за допомогою хеша, а не в I. Це слідує нашому останньому переходу до хеша транзакцій. Всі API були оновлені відповідно. Незабаром ми випустимо повну технічну документацію системи, яка також міститиме специфікацію структури блоків.
 
-#### Contract Addresses
+#### Адреси договору
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+У цій версії введено зміни до розрахунку контрактних адрес. Адреса - це hash на адресу абонента, сіль (випадковий чи обраний розгортання), хеш коду контракту та хеша аргументів конструктора, усі додавані префіксом.
 
 ```
 Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+У поточній версії телефонна адреса завжди дорівнює 0, але у майбутніх версіях це дозволить розгортання контрактів безпосередньо з існуючих договорів.
 
-Note that this scheme is very similar to CREATE2.
+Зверніть увагу, що ця схема дуже схожа на CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Перегляньте всі нотатки щодо випуску](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### Токен мости
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Токен мости є важливою частиною інфраструктури StarkNet. Вони дозволяють переводити кошти на та з StarkNet. Міст не розгортається на момент публікації, але він повинен бути доступний через кілька днів - разом з повною документацією його функціональності і використання. Важливо зазначити, що міст використовує[L1<>L2 обміну повідомленнями](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)протокол. Таким чином, він пропонує короткі виведення разів - як тільки виведення буде включений в партію і прийнятий у L1, кошти доступні миттєво користувачеві в L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Це перша версія жестових мостів, і ми хотіли б отримати зворотній зв'язок з екосистемою.
 
-### Join StarkNet
+### Приєднатися до StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Ніколи не було кращого часу приєднатися до зростаючої спільноти StarkNet. Ви можете приєднатися до розмови в[StarkNet discord](https://discord.gg/uJ9HZTUk2Y), взяти участь в[онлайн майстерні](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)або скористайтеся одним з[підручників](https://www.cairo-lang.org/docs/hello_starknet/index.html)для початку створення вашого першого власного додатку.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Оновлення (Новин. 2021):**StarkNet Alpha активована на Ethereum Mainnet

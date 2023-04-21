@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+لقد ازدهر الابتكار التكنولوجي في سلسلة الكتل على مدى السنوات القليلة الماضية - ستاركس، SNARK، EIP-1559، دمج إيثيريوم - كلها إنجازات تكنولوجية هائلة. ومع ذلك، فشل تصميم UX و UI في المواكبة. ولا يزال الناس يعلقون على عبارات بذور مكونة من 16 كلمة، والدخول إلى ديفي بدون وسيط مركزي لا يزال مخيفا للكثيرين جدا. تحسين تجربة المستخدم على الشبكة العنكبوتية (الإنترنت) في المليار مستخدم القادم، أمر حاسم.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+وكما بينت FTX (وجيميني وسيلسيوس وجوت غوكس) فإن الاحتفاظ بالوصاية الذاتية على أصول المرء أمر بالغ الأهمية. ومع ذلك، وحتى وقت قريب، كانت المحافظ الذاتية الحراسة مذهلة ومثيرة للارتباك للمستخدم العادي. معظم الناس ينسون كلمات المرور الخاصة بهم على شبكة الإنترنت على أساس شهري؛ كيف يتوقع من المستخدمين أن يحافظوا على حزمة البذور والمفاتيح الخاصة بأمان للأبد؟
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+ببساطة، إنه كابوس أمني. وكما رأينا مرات لا تحصى، فإن خطوة خاطئة واحدة، سواء بدأتها جهات فاعلة سيئة أو إهمال، يمكن أن تؤدي إلى فقدان ملايين الدولارات.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+كأول نقطة اتصال للمستخدمين المشفرين الجدد، يجب أن تكون محافظ إيثريوم سهلة الاستخدام، آمنة، وقابلة للتخصيص لتتناسب مع احتياجات كل مستخدم. يتطلب هذا من المطورين دمج بساطة المنتجات المالية على شبكة الويب 2 مع ميزات الويب 3.
 
-This is exactly what account abstraction achieves.
+هذا بالضبط ما يحققه تجريد الحساب.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+يؤدي تجريد الحساب إلى تحسين سلامة وأمن منتجات المحفظة الذاتية الحراسة عن طريق إزالة اعتماد المستخدمين على المفتاح الخاص وجعل المحافظ أكثر قابلية للبرمجة. مع هذا التحسين UX، يمكن للمحافظ غير الإشرافية أن تتوسع أخيراً لتشمل الملايين من مستخدمي التشفير السائدين.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+ولكن لكي نفهم تماما تأثير تجريد الحساب، يجب علينا أن ننقح أنفسنا حول كيفية عمل حسابات الإيثيريوم.
 
-### The basics of Ethereum accounts
+### أساسيات حسابات إيثيريوم
 
-There are two types of Ethereum accounts:
+وهناك نوعان من حسابات الإيثيريوم:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. الحسابات المملوكة خارجيا
+2. حسابات العقود
 
-Let’s break each down a bit further.
+دعونا نفصّل كل منهما أكثر قليلا.
 
-### Externally owned accounts
+### الحسابات المملوكة خارجيا
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+الحسابات المملوكة خارجيا، مثل MetaMask و Coinbase Wallet، هي نوع الحساب النموذجي لمستخدمي إيثيريوم. ويتألف كل قانون من مفاتيح خاصة وعامة تسمى زوج المفاتيح.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+جميع المعاملات مرخص بها وموقعة بواسطة مفاتيح خاصة. بمجرد توقيع المعاملة، تتحقق EVM من صحة التوقيع باستخدام عنوان حساب EOA. المنطق المتشدد في EVM يعني أن الحساب (الكائن الذي يحتفظ بالعملات الخاصة بك) والمفتاح الخاص (الموقع) مقترنان كواحد.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+فقدان المفتاح الخاص بك يعني فقدان أموالك، أو حتى السيطرة على حسابك إلى الأبد.
 
-### Contract accounts
+### حسابات العقود
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+وفي الوقت نفسه، فإن حسابات العقد، المرادفة مع تجريد الحساب، هي عقود ذكية منشورة على سلسلة كتل إيثيريوم. وتخضع هذه العقود لمنطق الرموز ولا تتطلب مفاتيح خاصة. وخلافا لتقييم الأداء، لا يمكن لحسابات العقود أن تبدأ المعاملات. وبدلا من ذلك، تبدأ معاملاتهم بتعليمات من اتفاقات الشراكة الاقتصادية.
 
-### Why account abstraction matters
+### لماذا يهم تجريد الحساب
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+يستتبع تجريد الحساب تجريد منطق الترخيص المشفر بعيداً عن EOs، تحويل كل حساب إلى عقد ذكي قابل للبرمجة يمكن تصميمه لتلبية احتياجات أي فرد.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+كما أوضحه مؤسس آرفن المشارك وكبير موظفي العلوم جوليان نيسيت في حدث[Stark @ المنزلي مؤخراً](https://www.crowdcast.io/e/7olimxqv)، هذا المنطق المرن للترخيص يعطي حرية للمطورين للعب مع ميزات الحساب مثل…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**توقيع الأجهزة:**استخدام أيفون أو جيب أندرويد الآمن لتحويل أي هاتف ذكي إلى محفظة أجهزة. ومن هناك، يمكن للمستخدمين التحقق من المعاملات باستخدام بيانات القياس الحيوي مثل بصمة الأصابع أو معرف أبل فايس. لقد بدأنا بالفعل في مشاهدة محافظ الوصاية الذاتية مثل برافوس[نشر هذه الميزة.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**بايتار:**السماح للمستخدمين بدفع رسوم الغاز في أي عملة، أو حتى أن لديهم آلية مصمَّمة من طرف ثالث لدفع قيمة المعاملات.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**التعافي الاجتماعي:**في حالة فقدان أو تعريض مفتاح خاص للخطر، يمكن للمستخدمين أن يأذنوا بمفتاح جديد كمالك مشروع للمحفظة. ويمكن أن يشمل ذلك مجموعة متنوعة من طرق الاسترداد من خلال جهات الاتصال الموثوقة، أو محافظ الأجهزة، أو خدمات طرف ثالث. الفكرة هي جعل الوصول إلى حسابك بسهولة مثل استرداد كلمة مرور حسابك البنكي من خلال البريد الإلكتروني.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**المصادقة المتعددة العوامل:**مشابهة لممارسات Web2 الشائعة، 2FA يمكن للمستخدمين إعداد طريقتين (أو أكثر) مصادقة لمحافظ العملات المشفرة الخاصة بهم، عندما يتم توقيع المعاملة فقط بمجرد تأكيد المستخدم الموافقة عبر خيار ثان مثل البريد الإلكتروني أو الرسائل القصيرة. يمكن للمستخدمين أيضا وضع حدود نقل يومية أو قوائم عناوين الحساب التي يتم منعها تلقائيا من التفاعل.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**التوقيعات المقاومة للكمية وكفاءة الغاز:**مخطط التوقيع الحالي لـ Ethereum، وهذا النظام واسع النطاق من الناحية الحسابية (كما يلي: رسوم الغاز الأعلى) ويمكن كسره بواسطة الحواسيب الكمية. ومن خلال استخراج التوقيعات، تستخدم عقود حساب مختلفة مخططات توقيع أكثر كفاءة وأكثر ضمانا من حيث الكم. يستخدم StarkNet منحنى خاص به صديق لستارك.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+لا توفر هذه الميزات للمستخدمين المزيد من الأمان والمرونة فحسب، ولكن الأهم من ذلك أن تسفر عن تجربة مستخدم**أفضل**كثيرًا.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+وقد اختلفت الابتكارات حول خلاصة الحساب، ولا سيما EIP-2938 و EIP-3074، منذ عام 2020، بعد أن أدرجها فيتاليك بوترين على أنه ”حلم طويل“ لمجتمع مطوري إيثيريوم. غير أن كليهما يتطلبان مقايضة بشأن الأمن والتنفيذ. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md)، وهو أكثر تطور واعد حتى الآن ، يقترح نسخة من تجريد الحساب دون الحاجة إلى إدخال تغييرات على بروتوكول إيثيريوم.
 
-### **Account abstraction and Starknet**
+### **تجريد الحساب و Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+على عكس بيتكوين و إيثيريوم اللذين يعدلان بروتوكولاتهما الحالية لتجريد حساب الدعم، قام[StarkNet](https://starkware.co/starknet/)بتنفيذ تجريد الحساب منذ اليوم الأول. عندما يقترن ذلك بإمكانية توسيع نطاق براهين ستارك وقدراتنا، فإن إمكانية ابتكار المحفظة لا حدود لها. هذا هو السبب في أن الجيل القادم من المحافظ الذاتية الحراسة، مثل آرنت وبرافوس يتم بناؤها حالياً على رأس شبكتنا.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+نهج StarkNet، شبيه بـ EIP-4337،[الاعتراف بأن](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)تجريد الحساب الكامل سيظل يؤدي إلى الخلط بين UX و[يمكن أن يفتح الباب](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)للهجمات على المتسلسلين. بل إنه يهدف إلى تحقيق كل من تجريد التوقيع وتجريد المدفوعات عن طريق تبادل بعض الهياكل الأساسية المطلوبة في سلاسل الإنتاج وخارجها.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+وفي حين أنه لا يزال هناك الكثير من العمل الذي يتعين القيام به، فإن التجريد من الحساب يكتسب زخماً يتجاوز دائرة صغيرة من السكان المحليين. في كانون الأول/ديسمبر[اقترحت فيزا فكرة](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)استخدام تجريد الحساب لإعداد الدفعات المتكررة التلقائية على StarkNet. باستخدام حساب قابل للتفويض، يمكن للمستخدمين منح الإذن لبدء الدفع إلى عقد ذكي موافق عليه مسبقاً. من هناك، سيتم برمجة العقد الذكي لخصم مبلغ دفع محدد في يوم معين، على مدى فترة زمنية محددة. وفي حين أن تأشيرة الدخول لم تكشف بعد عن خططها المتعلقة بخدماتها، فإن الاهتمام بها وحده يتكلم أحجاما، وقد تتوقع عالما حيث يمكن لمنصات اشتراك التكنولوجيا الكبيرة مثل Netflix و Spotify أن تشمل اعتماد التشفير.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+أما فيما يتعلق بما يحمله المستقبل، فإن الوقت وحده هو الذي سيخبره. ولكن هناك شيء واحد مؤكد. من خلال جعل المحافظ أسهل وآمنة للاستخدام، ستعمل خلاصة الحساب كمحفز قوي لمحافظ البلوكشين ذات الوصاية الذاتية لتصل إلى الملايين من مستخدمي التشفير السائدين. سنستمر في البناء في غضون ذلك.

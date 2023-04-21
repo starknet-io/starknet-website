@@ -1,3 +1,3 @@
-## What are bridges?
+## ما هي الجسور؟
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+تسمح الجسور للمستخدمين بنقل الأصول بين النظم الإيكولوجية المشفرة مثل البلوكشين أو التبادلات.

@@ -1,11 +1,11 @@
-## I﻿ntroduction
+## I﻿Ntroduction
 
-Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+Starknet ist ein Validity-Rollup Layer 2. Es bietet hohen Durchsatz, niedrige Gaskosten und hält das Sicherheitsniveau von Ethereum Ebene 1 beibehalten
 
-Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+Angesichts eines Sudoku-Puzzles ist es einfacher, eine Lösung zu überprüfen als von Grund auf zu lösen. Wenn unser Ziel darin besteht, die Leute von der Aussage „dieses Rätsel ist gelöst“ zu überzeugen. wir können eine Menge von Berechnungen speichern, indem wir eine Person eine Lösung berechnen und sie dann für andere zu verifizieren. In dieser Strategie wird jede Berechnung einer Lösung zu einem einmaligen Ereignis, das keine Replikation durch die Gesellschaft erfordert. In ähnlicher Weise skaliert Starknet Ethereum, indem es die schwere L1-Berechnung durch leichtere (daher billiger!) ersetzt. L1-Verifizierung mit STARK-Proofs berechnet off-chain.
 
-## H﻿ow it works
+## H﻿ow es funktioniert
 
-With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
+Im Hinblick auf die oben genannte Analogie ist die Zeit reif für einige Jargon. Starknet ist ein unberechtigter Validity-Rollup (auch bekannt als „ZK-Rollup“, der allgemeine Berechnungen unterstützt und derzeit als L2-Netzwerk über Ethereum in der Produktion arbeitet. Die letztendliche L1-Sicherheit von Starknet wird durch die Verwendung des sichersten und skalierbarsten kryptographischen Systems gewährleistet – [STARK](https://starkware.co/stark/).
 
-Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
+Starknet-Verträge sind (mehrheitlich) in Kairoer Sprache geschrieben – Eine Turing-Programmiersprache, die für STARK-Beweise entwickelt wurde.

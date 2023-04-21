@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### 今後のエキサイティング時間
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4は今日Goerliでリリースされました。 このバージョンは Mainnet リリースの候補者であり、計画通りに進めば月末までには、Mainnet にデプロイされます。
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4は、とりわけ含まれるAlpha 3の機能満載のリリースに続きます。 カイロのコンパイル時間、コントラクトのコンストラクタなどの改善については、[全リリースノート](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0) をご覧ください。
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+重要な注意事項: これはまだアルファ版です — コントラクトを Mainnet 展開にデプロイするためのものです。 新しいアプリの[初期登録](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)ガイドラインに従ってください。
 
-### New Features
+### 新機能
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+このバージョンの主な焦点は、Mainnet 展開の準備にありますが、いくつかの新機能も含まれています。
 
-#### Get this contract’s address
+#### この契約の住所を取得する
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+コントラクトは新しい syscall \`get_contract_address\` で独自のアドレスを取得できるようになりました。 最後に、セルフィー契約を休ませることができます。
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIPselfie契約：2021年9月～2021年11月</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">2021年11月10日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### ブロックハッシュ
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+ブロックが Id ではなくハッシュで識別されるようになりました。 これは、トランザクションハッシュへの当社の最新の移行に続くものです。 すべての API はそれに応じて更新されました。 ブロック構造の仕様も含め、システムの完全な技術文書をまもなくリリースする予定です。
 
-#### Contract Addresses
+#### 契約アドレス
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+このバージョンでは、コントラクトアドレスの計算方法に変更が導入されました。 アドレスは呼び出し元のアドレス、ソルト(デプロイによってランダムまたは選択された)に対するPedersenハッシュです。 コントラクトコードのハッシュとコンストラクタ引数のハッシュはすべてプレフィックスによって追加されます
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash(PREFIX, caller_address, salt contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+現在のバージョンでは、発信者アドレスは常に0になりますが、将来のバージョンでは、これは既存の契約から直接コントラクトの展開を可能にします。
 
-Note that this scheme is very similar to CREATE2.
+このスキームは CREATE2 によく似ていることに注意してください。
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[全てのリリースノートを見る](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### トークンブリッジ
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+トークンブリッジはStarkNetインフラストラクチャの重要な部分です。 彼らはStarkNetとの間とから資金を移すことを可能にします。 この橋は出版時には配備されていません しかし、それは数日で入手可能になるはずです — その機能と使用方法の完全なドキュメントと共に。 重要なことは、ブリッジが[L1<>L2メッセージング](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)プロトコルを使用していることです。 そのため、短い引き出し時間を提供します。一度引き出しがバッチに含まれ、L1に受け入れられます。 資金は、L1のユーザーに即座に利用可能です。
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+これがトークンブリッジの最初のバージョンであり、エコシステムからのフィードバックを得たいと思います。
 
-### Join StarkNet
+### StarkNetに参加
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+成長を続けるStarkNetコミュニティに参加するのに最適な時期はありませんでした。 You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Update (2021年11月):**StarkNet Alpha is live on Ethereum Mainnet

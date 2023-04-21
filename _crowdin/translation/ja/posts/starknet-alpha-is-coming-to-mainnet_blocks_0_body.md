@@ -1,97 +1,97 @@
 ### TL;DR
 
-* *StarkNet Alpha is launching on Mainnet Ethereum by November*
-* The time to build on StarkNet is now
+* *StarkNet Alphaは11月までにMainnet Ethereumでローンチします*
+* StarkNetで構築する時間は今
 
-### A Brief History
+### 略歴
 
 We announced our vision for [StarkNet](https://starkware.co/product/starknet/) at the beginning of the year: to bring massive scalability to Ethereum while preserving L1 security, permissionless interactions, and decentralization.\
-We released **[StarkNet Alpha](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)** on a public testnet in June. This version supported fully permissionless general computation smart contracts. We’ve since upgraded it twice: first to **Alpha 1** — providing [L1<>L2 messaging and on-chain data](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), and then to **Alpha 2** — supporting [composability](https://medium.com/starkware/starknet-alpha-2-4aa116f0ecfc).
+We released **[StarkNet Alpha](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)** on a public testnet in June. このバージョンでは、完全な権限なしの一般的な計算スマートコントラクトをサポートしています。 We’ve since upgraded it twice: first to **Alpha 1** — providing [L1<>L2 messaging and on-chain data](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), and then to **Alpha 2** — supporting [composability](https://medium.com/starkware/starknet-alpha-2-4aa116f0ecfc).
 
-StarkNet Alpha 2 now supports composable smart contracts of general computation in an Ethereum-like state, with the ability for L1 and L2 contracts to interact with each other. Read more [here](https://www.cairo-lang.org/docs/hello_starknet/index.html).
+StarkNet Alpha 2はEthereumのような状態で一般的な計算の複合スマートコントラクトをサポートするようになりました L1とL2の契約が互いに相互作用する能力を備えています。 もっと読む[ここ](https://www.cairo-lang.org/docs/hello_starknet/index.html).
 
-### What is StarkNet Alpha on Mainnet?
+### メインネット上のStarkNet Alphaとは何ですか?
 
-StarkNet Alpha on Mainnet will support similar features to those currently available on the Goerli public testnet.
+MainnetのStarkNet Alphaは、Goerliパブリックテストネットで現在利用可能な機能と同様の機能をサポートします。
 
-#### **What to Expect**
+#### **期待するもの**
 
-Because StarkNet is still under development, we want to introduce capabilities in a stepwise fashion and ensure developer expectations are met at every single step. Two particularly important aspects we’d like to emphasize are:
+StarkNetはまだ開発中ですので、段階的な方法で機能を導入し、開発者の期待がすべてのステップで満たされるようにしたいと考えています。 特に重要な点は次のとおりです。
 
-* **Permissioned smart contract deployment**: We will follow the sensible playbook introduced by our Optimistic Rollup colleagues: start with *permissioned* contract deployment. The protocol specifying how to request the inclusion of your smart contract in this initial whitelist will be published in the coming weeks.
-* **No guarantee for backward compatibility**: we expect the future transition from StarkNet Alpha to StarkNet Beta to include regenesis of the state. The network will begin from block 0, and applications will have to redeploy their contracts. Furthermore, developers and users should note that the expected StarkNet Beta might not be backward compatible with StarkNet Alpha, e.g. developers might need to modify their contracts. Obviously, we will try to allow an easy transition for applications, with minimal required changes.
+* **許可されたスマートコントラクトのデプロイ**: 楽観的なロールアップの同僚によって導入された賢明なプレイブックに従います:*許可された*契約の展開から始めます。 この最初のホワイトリストにスマートコントラクトを含める方法を指定するプロトコルは、今後数週間で公開されます。
+* **下位互換性の保証なし**: StarkNet Alpha から StarkNet Beta への将来の移行には、状態の回帰が含まれることを期待しています。 ネットワークはブロック 0 から始まり、アプリケーションは契約を再デプロイする必要があります。 さらに、開発者とユーザーは、予想されるStarkNetベータがStarkNet Alphaと下位互換性がないかもしれないことに注意する必要があります。 をクリックします。 明らかに、必要な変更を最小限に抑えながら、アプリケーションの簡単な移行を可能にしようとしています。
 
-#### Additional Near-Term Features
+#### 追加の近期機能
 
-As part of the transition of StarkNet Alpha from testnet to Mainnet, we will:
+StarkNet AlphaのtestnetからMainnetへの移行の一環として、以下を行います。
 
-1. Add constructors to contracts.
-2. Improve the testing framework.
-3. For blocks and transactions, move from using an ID to using a hash.
+1. コントラクトにコンストラクタを追加します。
+2. テストフレームワークを改善します。
+3. ブロックとトランザクションの場合は、IDを使用することからハッシュを使用することに移動します。
 
-We plan to continue the deployment of new features at a regular cadence, just as we’ve done on the public testnet. In the near term, we plan the following upgrades:
+公開テストネットで行ったように、定期的に新機能の導入を継続する予定です。 近い将来、以下のアップグレードを計画しています。
 
-1. Account Contracts and Token Contracts — opening the way for DeFi applications to interact with StarkNet the way they are familiar with.
-2. Improved Contract Functionality — supporting contract upgradability and events.
-3. Warp: the Solidity-to-Cairo compiler developed by Nethermind will allow a smooth transition from Solidity smart contracts to StarkNet smart contracts.
-4. Ethereum Signatures: native support for ECDSA over secp256k1 will allow easier integration with existing wallets.
-5. StarkNet Full Node: a Full Node will allow users to participate in the network with hardware requirements on par with those of an Ethereum Full Node.
+1. アカウント契約とトークン契約 — DeFiアプリケーションがStarkNetと親しみやすいやり取りを可能にします。
+2. コントラクト機能の改善 — コントラクトのアップグレードとイベントをサポートします。
+3. Warp: Nethermindが開発したSolidity-to-Cairo コンパイラは、SolidityスマートコントラクトからStarkNetスマートコントラクトへのスムーズな移行を可能にします。
+4. Ethereum署名:secp256k1を介したECDSAのネイティブサポートにより、既存のウォレットとの統合が容易になります。
+5. StarkNetフルノード:フルノードは、ユーザーがEthereumフルノードと同等のハードウェア要件でネットワークに参加することを可能にします。
 
-#### Fee Mechanism
+#### 手数料メカニズム
 
-The fee mechanism will be turned on as soon as account contracts and token contracts are added to StarkNet Alpha.
+StarkNet Alphaにアカウント契約とトークン契約が追加されるとすぐに料金メカニズムが有効になります。
 
-All transactions submitted to StarkNet will incur a fee designed to cover L1 and off-chain costs. The fee will initially be charged in ETH. The cost of a single transaction will decrease as StarkNet increases its scale (as is the case on all existing STARK-based systems). When crafting the initial fee mechanisms, we favor simplicity over accurately pricing transactions according to the resources they consume. Expect this mechanism to be refined and improved over time.
+StarkNetに送信されたすべての取引には、L1とオフチェーンコストをカバーするように設計された手数料がかかります。 料金はETHで最初に請求されます。 StarkNetが規模を拡大するにつれて、単一のトランザクションのコストは減少します(既存のすべてのSTARKベースのシステムの場合と同様)。 最初の手数料メカニズムを作成するとき、私たちは、彼らが消費するリソースに応じて正確に取引を価格設定するよりもシンプルにすることを好みます。 このメカニズムは時間の経過とともに改良されることを期待してください。
 
-With an eye towards making StarkNet a sustainable network and incentivizing its operators and developers, a portion of the revenues collected from the fees will be distributed to application developers and StarkNet core developers.
+StarkNetを持続可能なネットワークにし、オペレータと開発者にインセンティブを与えることを目指しています。 料金から収入の一部はアプリケーション開発者とStarkNetのコア開発者に配布されます。
 
-#### Security
+#### セキュリティ
 
-StarkNet Alpha’s security model on Mainnet will follow the current model on testnet:
+MainnetのStarkNet Alphaのセキュリティモデルは、testnetの現在のモデルに従います：
 
-* Every state transition is backed by a STARK proof, thus is ensured to be valid.
-* All state data will be published on-chain so the state will be fully constructible from L1.
-* There will be a single sequencer.
-* The network will be upgradable without any time delays.
+* すべての状態遷移は、STARK証明書に裏付けられているため、有効であることが保証されています。
+* すべての状態データはチェーン上で公開されるため、状態はL1から完全に構築可能になります。
+* 単一のシーケンサーがあります。
+* ネットワークは、任意の時間遅延なしでアップグレードできます。
 
-### The StarkNet Ecosystem is Growing
+### StarkNetエコシステムは成長中
 
-Opening StarkNet to the world attracted a massive wave of developers interested in learning Cairo and developing over StarkNet. They provided invaluable feedback, and it was a true delight to see vibrant discussions on the StarkNet [Discord](https://discord.gg/uJ9HZTUk2Y).
+StarkNetを世界に展開すると、カイロを学び、StarkNetで開発することに関心を持つ開発者の大規模な波が集まりました。 彼らは非常に貴重なフィードバックを提供し、StarkNet[Discord](https://discord.gg/uJ9HZTUk2Y) で活発な議論を見ることは本当に喜びでした。
 
-Moreover, StarkNet is being developed not only by the StarkWare team but also by some of the strongest teams in the blockchain ecosystem:
+さらに、StarkNetはStarkWareチームだけでなく、ブロックチェーンエコシステムで最も強力なチームによっても開発されています。
 
-* Nethermind is working on two projects:
+* ネザーマインドは2つのプロジェクトに取り組んでいます:
 
-1. **[Warp](https://github.com/NethermindEth/warp)**: a Solidity to Cairo compiler
+1. **[ワープ](https://github.com/NethermindEth/warp)**: カイロコンパイラへの不安定度
 
-2. **[Voyager](https://voyager.online/)**: a StarkNet block explorer
+2. **[ボイジャー](https://voyager.online/)**: StarkNet ブロックエクスプローラー
 
-* Open Zeppelin is working on a [Standard Contracts](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts) implementation for StarkNet and also started working on a developer’s environment: [Nile](https://github.com/martriay/nile).
-* ShardLabs is working on a [StarkNet HardHat plugin](https://github.com/Shard-Labs/starknet-hardhat-plugin) and on a better testing framework.
-* The Erigon team is working on expanding their Ethereum Full Node to support StarkNet (codename: Fermion). They are working with us on designing core mechanisms of StarkNet.
-* Equilibrium is working on a StarkNet Full Node implementation in Rust,
-* Cairo audit services: In the coming months, ABDK, ConsenSys Diligence, Peckshield, and Trail of Bits will be conducting Cairo audits.
-* StarkNet audits: we started out with auditing the network’s foundations:
+* Open ZeppelinはStarkNetの[標準契約](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts)の実装に取り組んでおり、開発者の環境でも作業を開始しました:[ナイル](https://github.com/martriay/nile)。
+* ShardLabsは[StarkNet HardHatプラグイン](https://github.com/Shard-Labs/starknet-hardhat-plugin)とより良いテストフレームワークに取り組んでいます。
+* Erigonチームは、StarkNet(コードネーム:Fermion)をサポートするために、Ethereumフルノードの拡張に取り組んでいます。 彼らはStarkNetのコアメカニズムの設計に私たちと協力しています。
+* 平衡はRustのStarkNetフルノード実装に取り組んでいます
+* カイロ監査サービス:今後数ヶ月間、ABDK、ConsenSys Diligence、Peckshield、Trail of Bitsがカイロ監査を実施します。
+* StarkNet監査：ネットワークの基盤を監査することから始めました。
 
-1. **CryptoExperts** will be conducting an audit of the Cairo Solidity Verifier.
-2. A formal **LEAN proof** of the Cairo specs was recently completed and published as a [paper](https://arxiv.org/abs/2109.14534) and a GitHub [repo](https://github.com/starkware-libs/formal-proofs).
+1. **Crypto専門家**は、カイロのSolidity Verifierの監査を実施します。
+2. カイロ仕様の正式な**LEAN proof**が最近完成し、[paper](https://arxiv.org/abs/2109.14534)と GitHub[repo](https://github.com/starkware-libs/formal-proofs) として公開された。
 
-Expect many more interesting collaborations to be published in the coming months!
+今後数ヶ月でさらに多くの興味深いコラボレーションが発表されることを期待してください!
 
-### STARKs are Scaling Today
+### STARKsは今日スケーリング中
 
-We approach the launch of StarkNet Alpha with confidence, as StarkEx, our standalone scaling SaaS, has demonstrated how STARKs can massively scale Ethereum applications. We launched StarkEx for [dYdX](https://dydx.exchange/) (perpetual contracts), [DeversiFi](https://www.deversifi.com/) (spot trading and payments), as well as for [Immutable](https://www.immutable.com/) and [Sorare](https://sorare.com/) (NFT minting and trading). We saw their gas/tx costs reduced by 100X–200X, to about 650 gas/tx in Validium (off-chain data), and 1100 gas/tx for a ZK-Rollup.
+スタンドアロンスケーリングSaaSであるStarkNet Alphaの発売に自信を持ってアプローチすることで、STARKがEthereumアプリケーションを大規模に拡張できる方法を実証しました。 We launched StarkEx for [dYdX](https://dydx.exchange/) (perpetual contracts), [DeversiFi](https://www.deversifi.com/) (spot trading and payments), as well as for [Immutable](https://www.immutable.com/) and [Sorare](https://sorare.com/) (NFT minting and trading). これらのガス/txコストは100X-200X、バリウム(オフチェーンデータ)では650ガス/tx、ZK-ロールアップでは1100ガス/txとなりました。
 
-To date, StarkEx has settled $80B in trades and over 27M transactions, far eclipsing any other L2 solution — and all of them combined.
+今日まで、StarkExは、取引で$ 80Bを決済し、27M以上の取引を行っています。他のL2ソリューションを大幅に上回っています。
 
-### Act Now
+### 今すぐ実行
 
-There has never been a better time to join the growing StarkNet ecosystem by building either your next dApp or useful developer tools.
+次のdAppまたは有用な開発ツールを構築することによって、StarkNetエコシステムに参加するのが良い時期ではありませんでした。
 
-We invite you to:
+あなたを招待します：
 
-1. Join the [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y), where you can meet and engage the StarkNet community.
-2. [Start learning](https://www.cairo-lang.org/docs/hello_starknet/index.html) how to write StarkNet smart contracts.
-3. [DM us](https://twitter.com/StarkWareLtd) — our team is eager to help your ideas and initiatives come to life.
+1. [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)に参加し、StarkNetコミュニティに参加しましょう。
+2. [StarkNetスマートコントラクトの書き方](https://www.cairo-lang.org/docs/hello_starknet/index.html)の学習を開始します。
+3. [DM 私たち](https://twitter.com/StarkWareLtd)— 私たちのチームは、あなたのアイデアやイニシアチブが実現するのを助けたいと思っています。
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Update (2021年11月):**StarkNet Alpha is live on Ethereum Mainnet

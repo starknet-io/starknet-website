@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* Η Starknet prover θα είναι ανοιχτού κώδικα στο πλαίσιο της άδειας Apache 2.0
+* Η κίνηση θα ενισχύσει την προσβασιμότητα στους προγραμματιστές, θα προωθήσει τη συνεργασία εντός της κοινότητας και θα προσφέρει άλλα οφέλη
+* Η ανακοίνωση αυτή ακολουθεί το open-sourcing του Καΐρου 1.0, του Papyrus Full Node, και του νέου sequencer του Starknet
 
-### Intro
+### Εισαγωγή
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Συναρπαστικά νέα: Starknet Prover θα είναι ανοιχτού κώδικα!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Αυτό είναι ένα ορόσημο στην εξέλιξη του Starknet. Ανακαλύψτε την απόφαση να ανοιχτεί η Starknet prover και να διερευνήσει τα οφέλη που προσφέρει στο οικοσύστημα Starknet. Ως δημόσιο αγαθό, η προσβασιμότητα βρίσκεται στο προσκήνιο, επιτρέποντας μεγαλύτερη συνεργασία και καινοτομία στο τεχνολογικό στοίβα.
 
-### Open Sourcing the Starknet Prover
+### Ανοιχτός εφοδιασμός με το Starknet Prover
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Το Starknet Alpha ξεκίνησε στο Mainnet το Νοέμβριο του 2021. Από την αρχή της Starknet, προβλέφθηκε ως δίκτυο που θα ανήκε στην κοινότητα, και να του επιτρέψει να επωφεληθεί από τη δύναμη της κλίμακας STARK. Ένα χρόνο μετά το λανσάρισμα στο Mainnet, η ώρα ήταν κατάλληλη για να ξεκινήσει το open-sourcing ολόκληρη τη στοίβα Starknet.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Στοιχεία που έχουν ήδη ανοιχτής προέλευσης περιλαμβάνουν το[Κάιρο 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Όταν το Starknet Prover θα τοποθετηθεί στο Apache 2.0, η διαδικασία ανοιχτού κώδικα θα ολοκληρωθεί. Αυτό θα συμβεί στην τελική φάση της αποκέντρωσης του Starknet.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Η σημασία του Open-Sourcing το Starknet Prover
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+Το λογισμικό STARK ανοικτού κώδικα θα επιτρέψει στην κοινότητα να διατηρήσει και να αναπτύξει το δίκτυο ανεξάρτητα, και ως εκ τούτου παρέχει την πιο γνήσια πορεία για την οικοδόμηση Starknet ως αποκεντρωμένο δημόσιο αγαθό. Θα επιτρέψει επίσης στην κοινότητα να έχει περισσότερη ελευθερία συμβάλλοντας στην ανάπτυξη του παροχέα και, κατά συνέπεια, του Starknet. Επιπλέον, το Starknet Prover θα επιτρέψει περισσότερα μάτια να επανεξετάσουν τον κώδικα, να βελτιώσουν την ποιότητά του, να βοηθήσουν στην ανίχνευση σφαλμάτων και να παρέχουν διαφάνεια.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Εν ολίγοις, η τεχνολογική στοίβα Starknet ανοιχτού κώδικα σημαίνει περισσότερη συνεργασία, καλύτερη ποιότητα, καινοτομία και ανεξαρτησία. Όλες αυτές οι τιμές μπορούν να βοηθήσουν το Starknet να φτάσει στο πλήρες δυναμικό του.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+Το codebase στο οποίο θα οικοδομήσουμε το Starknet Prover βασίζεται στον προβολέα που χρησιμοποιείται από τον Ιούνιο του 2020, απόδειξη συναλλαγών από dApps που τροφοδοτούνται από[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)(όπως Immutable X, Sorare, dYdX, και πολλά άλλα). Σε αυτό το ρόλο έχει επεξεργαστεί 327 εκατομμύρια συναλλαγές και έκοψε 95 εκατομμύρια NFT, και εγκαταστάθηκαν περίπου 824 δισεκατομμύρια δολάρια.
 
 ### Summary
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Είμαστε ενθουσιασμένοι να ανακοινώσουμε ότι το Starknet Prover θα είναι ανοιχτού κώδικα, διαθέσιμο στο Apache 2.0. Open-sourcing το Starknet Prover θα λάβει χώρα αμέσως πριν το Starknet να είναι έτοιμο για πλήρη αποκέντρωση. Με αυτόν τον τρόπο, η στοίβα Starknet θα είναι πλήρως ανοιχτού κώδικα, όπως αρμόζει σε ένα αποκεντρωμένο δίκτυο χωρίς δικαιώματα Layer 2.

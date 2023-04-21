@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+La sfârșitul lunii noiembrie 2022, a fost anunțată [lansarea Fundației Starknet](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb). Fundaţia este o organizaţie independentă dedicată realizării viziunii lui Starknet de a deveni un Layer 2 prosperă descentralizat şi fără permisiuni (L2) Validity Rollup (a.k.a. ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+Cu un tablou interdisciplinar [puternic](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) la cârmă, Fundaţia Starknet este bine poziţionată pentru a-şi atinge obiectivul de a încuraja şi extinde comunitatea Starknet, supravegherea dezvoltării continue a rețelei, dezvoltarea unor mecanisme de guvernanță fără permisiuni și realizarea unei descentralizări depline a ecosistemului Starknet. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Astăzi, Fundaţia este încântată să anunţe în mod public numirea a cinci comitete, fiecăreia i s-a încredințat un mandat specific care să se alinieze la misiunea și prioritățile Starknet. Mandatul fiecărui comitet nu este întemeiat și va face obiectul unor evaluări de rutină, ajustările și modificările fiind necesare.
 
-The committees are:
+Comitetele sunt:
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* Comitetul pentru dispoziții
+* Comitetul pentru subvenții pentru adopții timpurii
+* Comitetul de parteneriate pentru dezvoltare
+* Comitetul de guvernanță
+* Comitetul de înregistrare a ecosistemelor
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+În cele ce urmează vom face schimb de mai multe detalii în cadrul comisiilor, inclusiv în ceea ce priveşte mandatul, funcţionarea şi membrii iniţiali ai acestora.
 
-## Introducing the Starknet Foundation Committees 
+## Prezentarea comitetelor fundaţiei Starknet 
 
-### Provisions Committee
+### Comitetul pentru dispoziții
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Comitetul pentru dispoziții este responsabil de planificarea, supravegherea și executarea furnizării de jetoane pentru ecosistemul Starknet – STRK. STRK va fi utilizat ca simbol de bază pentru participarea la mecanismul de consens Starknet. Ea va servi, de asemenea, drept token de guvernanță al rețelei și ca simbol al gazului pentru plata taxelor de tranzacție ale rețelei. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Comitetul pentru dispoziții este esențial pentru asigurarea unei distribuții echitabile, descentralizate și transparente a tokenului care va alimenta ecosistemul Starknet. Comitetul supraveghează prevederea utilizatorilor cu jetoane STRK care trebuie să plătească taxe pentru utilizarea Starknet. Comitetul va evalua şi va oferi recomandări Fundaţiei Starknet pentru grupurile eligibile, pe baza obiectivelor de echitate, transparenţă şi descentralizare. Aceste planuri vor fi anunțate imediat ce vor fi finalizate.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Comisia pentru dispoziții poate fi contactată la adresa: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### Comitetul pentru subvenții pentru adopții timpurii
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Comitetul pentru granturi adoptate timpuriu (EAG) se angajează să stimuleze creșterea ecosistemului Starknet prin acordarea de granturi echipelor inovatoare care dezvoltă aplicații în lanț pe Starknet. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Obiectivul Comitetului EBC este de a facilita extinderea și vitalitatea ecosistemului prin implementarea în lanț a acestuia. Comitetul va face în curând un anunţ de stabilire a criteriilor pentru prima lor rundă de candidaturi, care se va concentra retroactiv asupra echipelor care au început deja să se bazeze pe Starknet. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Comitetul pentru granturi adoptate timpuriu se angajează să asigure transparența și va face publice toate sumele nerambursabile.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Comitetul pentru granturi adoptive timpurii poate fi contactat la: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Comitetul de parteneriate pentru dezvoltare
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+Comitetul pentru parteneriate pentru dezvoltare joacă un rol vital în ecosistemul Starknet, prin încurajarea şi supravegherea unor noi parteneriate strategice de dezvoltare care să fie incluse în ecosistemul Starknet. În special, parteneriatele de dezvoltare strategică sunt considerate a fi colaborări în ceea ce privește elemente-cheie de infrastructură esențiale pentru succesul programului Starknet.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+Printre principalele responsabilități ale comitetului se numără raționalizarea procesului de depunere a cererilor pentru parteneriatele de dezvoltare, depunerea de eforturi temeinice și aprobarea propunerilor prezentate. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Comitetul este esențial pentru promovarea unui ecosistem solid prin identificarea și sprijinirea echipelor de dezvoltatori care au construit sau construiesc în mod activ stratul central de infrastructură al rețelei. Eforturile lor garantează faptul că echipele care construiesc şi extind şinele de infrastructură ale Starknet vor fi acordate într-un mod descentralizat şi transparent. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Comitetul pentru parteneriate pentru dezvoltare poate fi contactat la: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### Comitetul de guvernanță
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Comitetul pentru guvernanță are sarcina de a juca un rol esențial în descentralizarea aflată în curs de desfășurare a ecosistemului Starknet. Comitetul este responsabil cu cercetarea, planificarea şi executarea etapelor iniţiale ale guvernării Starknet. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+accentul pus pe descentralizare şi pe echilibrul dintre participarea comunităţii şi dezvoltarea activă în curs de dezvoltare; comitetul îşi propune să creeze, să pună în aplicare şi să supravegheze pilonii iniţiali ai guvernării Starknet. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Comitetul pentru guvernanță va elabora și va institui mecanisme de bază care să mențină un sistem transparent, echitabil, structura descentralizată care favorizează implicarea comunității și asigură o creștere continuă și participarea descentralizată la ecosistem. Atingerea acestor obiective, comisia va defini rezoluțiile care urmează să fie votate și aprobate de comunitatea Starknet și va stabili procesul adecvat pentru discutarea și punerea în aplicare a voturilor în materie de guvernanță. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Comitetul a lansat deja [prima fază a guvernanței Starknet](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Pentru orice întrebări legate de primul vot, vă rugăm să contactați: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+De asemenea, Comitetul pentru Guvernare poate fi contactat la adresa: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Pentru a afla mai multe despre activitatea și foaia de parcurs a comitetului de guvernanță, vă rugăm să consultați [această pagină](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### Comitetul de înregistrare a ecosistemelor
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Comitetul de monitorizare a ecosistemelor este responsabil de responsabilizarea și integrarea noilor dezvoltatori și membri ai comunității în ecosistemul Starknet. Aceasta include identificarea, responsabilizarea și sprijinirea ambasadorilor Starknet, acordarea de granturi pentru contribuitorii ecosistemelor și grupurile de talente; organizarea și sponsorizarea unei cadențe generale de evenimente și de parteneriate educaționale care să promoveze participarea comunității la ecosistemul Starknet. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+Ambasadorii vor fi respectați și vor fi consacrați membri ai comunității Starknet care se angajează să organizeze, să participe și să ia cuvântul la evenimente, promovarea dezvoltării comunităţilor, crearea de conţinut, obţinerea de sponsorizări reciproc avantajoase şi convingerea indivizilor şi echipelor promiţătoare să construiască pe baza programului Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Comitetul de înregistrare a ecosistemelor are o abordare principală diferită de cea a Comitetului pentru subvenții pentru adopția timpurie. În timp ce Comitetul EAG doreşte să bootstrap şi să îi decerneze pe primii adoptori ai Starknet, Comitetul de monitorizare a ecosistemelor subliniază creşterea şi dezvoltarea continuă şi susţinută a ecosistemului la nivelul populaţiei. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Comitetul pentru înregistrarea ecosistemelor poate fi contactat la: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Etapele următoare
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Odată cu numirea acestor comisii, Fundaţia Starknet este pregătită pentru o călătorie captivantă în viitor. Fiecare comitet este dedicat promovării unui aspect specific al ecosistemului și, împreună, Alături de Fundaţie, va depune eforturi pentru realizarea unui ecosistem de nivel 2 prosper descentralizat şi fără permisiune.  
 
-Here is what’s coming next: 
+Iată ce urmează: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* [Primul vot de guvernare](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) va avea loc la 21 martie 2023;
+* primul anunț și detaliile primei runde de aplicații a Comitetului EAG vor fi publicate pe blogul [al Fundației StarkNet](https://www.starknet.io/en/posts/foundation) la 21 martie 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Mențineți un ochi pe blogul [al Fundației StarkNet](https://www.starknet.io/en/posts/foundation) și pe canalele social media pentru cele mai recente actualizări și oportunități.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Pentru toate informațiile, actualizările și propunerile suplimentare ale Fundației Starknet, urmează Starknet pe [Twitter](https://twitter.com/Starknet), alătură-te [Discord](http://starknet.io/discord)al nostru și citește forumul comunității [.](https://community.starknet.io/)**

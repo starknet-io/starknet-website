@@ -1,77 +1,77 @@
 ### TL;DR
 
-* **Cairo 1.0 is open source! This is only the first step towards open-sourcing the StarkNet stack.**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. You can now start experimenting with basic Cairo 1.0 code
-* Cairo 1.0 at its core is very similar to Rust
-* Consider it a first taste, not a release. More improvements are on the way. The first version of the compiler is planned for early Q1 next year.
-* Cairo 1.0 is not supported on StarkNet, yet. It will be supported on StarkNet in Q1 next year.
+* **Káhira 1.0 je open source! Toto je pouze první krok k otevřenému získávání zásobníku StarkNet.**
+* Nyní představíme[první pohled](https://github.com/starkware-libs/cairo)do Káhiry 1.0. Nyní můžete začít experimentovat se základním Káhirou 1.0 kódem
+* Káhira 1.0 v jádře je velmi podobná Rust
+* Považujte to za první chuť, ne za vydání. Další zlepšení jsou na cestě. První verze kompilátoru je naplánována na začátku prvního Q1 příštího roku.
+* Káhira 1.0 zatím není na StarkNet podporována. Bude v příštím roce podporována na StarkNet v Q1.
 
-### Intro
+### Úvod
 
-In 2020, we released [Cairo](https://eprint.iacr.org/2021/1063.pdf), a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive. Two months ago, we announced [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), which addresses some major issues in the current situation:
+V roce 2020 jsme vydali[Káhira](https://eprint.iacr.org/2021/1063.pdf), Turing-kompletní programovací jazyk podporující ověřitelný výpočet. Káhira začala jako montážní jazyk a postupně se projevila. Před dvěma měsíci jsme oznámili[Káhira 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), která se zabývá některými důležitými problémy v současné situaci:
 
-* While Cairo’s syntax has seen significant improvement since its inception, the developer experience can always improve. Cairo 1.0 is a rust-inspired fully typed language, making writing the same logic much easier and less error-prone.
-* The existing compiler is developed in the same repo as StarkNet itself, making it harder to track language changes. The Cairo 1.0 compiler is written from the ground up, allowing for faster feature development and for more community involvement.
-* Every computation is now provable. Currently, a Cairo program may fail with specific inputs (e.g. by reaching an \`assert 1=2\` instruction in some computation branch), rendering the computation unprovable. With Cairo 1.0, programs are provable in every possible branch. This is particularly important for DOS protection and censorship resistance in StarkNet.
+* Káhirská syntaxe sice od svého vzniku zaznamenala významné zlepšení, avšak zkušenosti vývojářů se vždy mohou zlepšit. Káhira 1.0 je inspirovaný plně psaný jazyk, díky čemuž je psaní stejné logiky mnohem jednodušší a méně náchylné k chybám.
+* Stávající kompilátor je vyvinut ve stejném repozitáři jako StarkNet samotný, takže je těžší sledovat změny jazyka. Káhira 1.0 kompilátor je napsán od země nahoru, což umožňuje rychlejší vývoj funkcí a větší zapojení komunity.
+* Každý výpočet je nyní prokazatelný. V současné době může program Káhira selhat se specifickými vstupy (např. dosažením \`assert 1=2\` instrukce v některé výpočetní větvi), což činí výpočet neproveditelným. S Káhirou 1.0 jsou programy prokazatelné ve všech možných větvích. To je důležité zejména pro ochranu DOS a cenzurní odpor v StarkNetu.
 
-Today we mark the first milestone in reaching the above goals as we move the development to a public repo, and **open source Cairo 1.0!** Developers can now, for the first time, compile and execute simple Cairo 1.0 programs. This allows developers to start experimenting with Cairo 1.0 and gradually get accustomed to the new features, even if, at this phase, they cannot implement it on StarkNet just yet.
+Dnes si připomínáme první milník při dosahování výše uvedených cílů, když posuneme vývoj k veřejnému repou, a**open source Káhira 1. !**Vývojáři nyní mohou poprvé zkompilovat a spustit jednoduché programy v Káhiře. To umožňuje vývojářům začít experimentovat s Káhirou 1. a postupně si zvykněte na nové funkce, i když ji v této fázi ještě nemohou implementovat na StarkNet.
 
-### Current capabilities
+### Aktuální možnosti
 
-Currently, you can compile and execute basic native Cairo programs. While many of the syntax/language improvements are still underway, this allows getting used to Cairo 1.0 and enjoy upgrades as they come.
+V současné době můžete kompilovat a spustit základní programy z Káhiry. Zatímco mnoho vylepšení syntaxe/jazyka stále probíhá, to umožňuje zvyknout se na Káhiru 1.0 a vychutnat si aktualizace tak, jak přicházejí.
 
-**Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
+**Všimněte si, že psaní smluv StarkNet stále není podporováno.**Syntaxe StarkNet (proměnné pro ukládání / smlouvy o volání / události a další systémové hovory) bude přidána v nadcházejících týdnech.
 
-### Code examples
+### Příklady kódů
 
-To illustrate the differences between the old syntax and Cairo 1.0, we have chosen to show a few different implementations/flavors of finding the n’th Fibonacci number.
+Pro ilustraci rozdílů mezi starou syntaxí a Káhirou 1. , rozhodli jsme se ukázat několik různých implementací/variant pro nalezení čísla n’th Fibonacci.
 
-### Example I: Match expressions
+### Příklad I: Shoda výrazů
 
-In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. No longer will you fear if/else statements that may cause reference revocation!
+V Káhiře 1.0 můžete použít retenční[shodu](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match)výrazů. Už se nebudete obávat, pokud by jinak prohlášení, která mohou způsobit referenční odvolání!
 
 ![](/assets/code01.png)
 
-### Example II: Data types
+### Příklad II: Druhy dat
 
-While Cairo 0 worked with felts and pointers, in Cairo 1.0 we have native access to complex data types in the language. Below you can find an example that generates an array of the first n Fibonacci numbers.
+Zatímco Káhira 0 spolupracovala s pijavci a ukazateli, v Káhiře 1.0 máme původní přístup ke komplexním datovým typům v jazyce. Níže můžete najít příklad, který generuje pole prvních n Fibonacci čísel.
 
 ![](/assets/code02.png)
 
-As you can see above, rather than working directly with memory pointers, we use the `Array::<felt>\` type and the \`array_append\`function.
+Jak vidíte výše, místo abychom pracovali přímo s ukazateli paměti, používáme `pole::<felt>\` zadejte a \`array_append\`funkci.
 
-### Example III: structs & ownership
+### Příklad III: struktury & vlastnictví
 
-The following code illustrates the usage of structs in Cairo 1.0.
+Následující kód ilustruje použití konstrukcí v Káhiře 1.0.
 
 ![](/assets/code03.png)
 
-> The following paragraph is meant for the Rustaceans among the audience. Cairo 1.0 manages memory in a similar way to rust. In particular, it uses the concepts of [ownership and borrowing](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Thus, By accessing a member of the \`FibResult\` struct (in this case, \`result.value\`), we’ve moved \`result\`, which means that unless FibResult is copyable, we can’t access it again in \`result.index\`. To overcome this, we add the \`#\[derive(Copy)]\` attribute of the \`FibResult\` type. In future versions, we will add auto deconstruction for structs. This will allow moving ownership of one member without touching the others (in particular, the above code would compile even if \`FibResult\` didn’t have the copy attribute).
+> Následující odstavec je určen pro Rustaceany mezi publiky. Káhira 1.0 spravuje paměť podobným způsobem jako rust. Používá zejména pojmy[vlastnictví a půjčky](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Proto přístupem k členovi \`FibResult\` strukce (v tomto případě \`výsledek. alue\`), přesunuli jsme \`výsledek\`, což znamená, že pokud FibResult není autorizovatelný, nemůžeme k němu znovu přistupovat v \`result.index\`. Abychom to překonali, přidáváme atribut \`#\[derive(Copy)]\` typu \`FibResult\`. V budoucích verzích přidáme pro stavby automatickou dekonstrukci. To umožní přesunout vlastnictví jednoho člena, aniž by se dotkl ostatních členů (zejména výše uvedený kód by zkompiloval i v případě, že \`FibResult\` nemá atribut kopírování).
 
-**In particular, note that Cairo 1.0 is completely abstracting away the original (none deterministic read-only) memory model of Cairo.**
+**Zejména všimněte si, že Káhira 1.0 zcela abstrahuje původní (žádný deterministický model jen pro čtení) paměťový model Káhiry.**
 
-## Example IV: Error propagation
+## Příklad IV: Rozšíření chyb
 
-The following code computes the n’th Fibonacci number, but unlike the previous examples, all the inputs are of the type uint128. Note that this solves a major pain point of handling uints in Cairo 0. Here, uint128 (and in the future uint256) are native types.
+Následující kód počítá n’th Fibonacci číslo, ale na rozdíl od předchozích příkladů jsou všechny vstupy typu uint128. Všimněte si, že to řeší velkou bolest v Káhiře 0. Zde uint128 (a v budoucnu uint256) jsou rodné typy.
 
 ![](/assets/0_s8bhjf_ade3carmi.png)
 
-The addition of two 128 bit integers can cause an overflow. The above code uses the [Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html) and the [question mark operator](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html) to handle the case of overflow in one of the intermediate additions. Compare this to the [current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31) uint256 addition syntax, where the \`unit256_check\` function had to be called to guarantee soundness. In addition, in the near future, we will add the concept of \`panic\` to the language (similar to the [panic](https://doc.rust-lang.org/rust-by-example/std/panic.html) macro in rust), and simple errors like addition overflow will be uncatchable and propagated automatically, which means that you won’t have to use \`Option\` or \`?\` when adding uints.
+Přidání dvou 128 bitových celých čísel může způsobit přetížení. Výše uvedený kód používá[možnost](https://doc.rust-lang.org/rust-by-example/std/option.html)a operátor[otazníku](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)pro zvládnutí případu přetečení v jednom z mezilehlých přírůstků. Porovnejte to s[aktuální syntaxí](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31)uint256, kde \`unit256_check\` musí být volána pro zaručení zvuku. Kromě toho v blízké budoucnosti přidáme pojem \`panic\` do jazyka (podobné[panické](https://doc.rust-lang.org/rust-by-example/std/panic.html)makro) a jednoduché chyby, jako je přídavné překrytí, budou automaticky nesmazatelné a propagované, což znamená, že nebudete muset používat \`Option\` nebo \`? ` při přidávání uintů.
 
-## Try it yourself
+## Vyzkoušejte to sami
 
-You can now compile and run currently supported Cairo 1.0 programs! Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. Note that under the hood, the [Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), developed by [Lambdaclass](https://lambdaclass.com/), is used for execution.
+Nyní můžete zkompilovat a spustit aktuálně podporované programy Káhira 1.0! Postupujte podle těchto[instrukcí](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner)jak použít \`cairo-run\` příkaz. Všimněte si, že pod holem se k provedení používá[VM Rust Cairo](https://github.com/lambdaclass/cairo-rs), vyvinutý[Lambdaclass](https://lambdaclass.com/).
 
-You can find more examples to help you get started [here](https://github.com/starkware-libs/cairo2/tree/main/examples). Note that this is only the first peek into the compiler development; in the coming weeks, we will improve the CLI alongside the compiler.
+Další příklady, které vám pomohou začít[zde](https://github.com/starkware-libs/cairo2/tree/main/examples). Všimněte si, že se jedná pouze o první pohled do vývoje kompilátoru; v nadcházejících týdnech zdokonalíme CLI vedle kompilátoru.
 
-## Future Plans
+## Budoucí plány
 
-The focus of the first version of the Compiler, which is planned for early Q1, is supporting all existing functionality of StarkNet in Cairo 1.0. Additionally, we’re working on extending the capabilities of the Cairo 1.0 compiler. In the coming weeks, you can expect:
+Soustředění první verze Compiler, která je plánována na počátku Q1, podporuje všechny existující funkce StarkNet v Káhiře 1.0. Kromě toho pracujeme na rozšíření schopností Káhiry 1.0. V nadcházejících týdnech můžete očekávat:
 
-* StarkNet capabilities — writing smart contracts and using system calls.
-* Loops
-* New library functions
-* Improved language server
-* A native notion of StarkNet gas
+* Funkce StarkNet – psaní inteligentních smluv a používání systémových hovorů.
+* Cykly
+* Nové funkce knihovny
+* Vylepšený jazykový server
+* Domácí pojem StarkNet plyn
 
-Make sure to stay tuned and track the compiler progress!
+Ujistěte se, že zůstanete naladěni a sledujte postup kompilátoru!

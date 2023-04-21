@@ -1,64 +1,74 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* 我们正在构建StarkNet，先建立**可用性**， 然后改进**性能**，最后转向**放权**
+* 我们实现了我们的第一个目标：可用性。 这意味着我们提供了类似于以太空状态的一般计算(在被认为有可能之前的年份)
+* 我们现在正进入我们三部分建设计划的第二阶段：业绩，重点是产出、交易成本和延迟。
+* 下一步：放权化
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+在[StarkNet](https://starknet.io/)计划刚刚宣布一年后，平台功能就很好。 开发者社区正在超越我们最可怕的期望，并且不断提供新的L2本地项目。
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+我们在过去一年中的优先事项是使这一点能够做到这一点。 通过创建一个工作的 StarkNet，它具有快速扩展的功能，从而使得开发人员能够直接潜入。
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+他们已经做了大量工作。 一个很好的气压计是StarkNet[JavaScript 库](https://www.starknetjs.com/)的下载次数：自从4个月前启用以来，已经有5k了。
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+然而，当StarkNet送达压缩魔法时，我们目前作出了承诺。 它还远远不能够做到足够的传输量的 dapp ， 而且这可能在短期内使开发人员感到沮丧。
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+我们经过战时测试的核心技术，STARK证明了许多交易并压缩了证据，在此之前需要进行批处理或排序交易。 这是一个
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+StarkWare 团队已经完成了 [ StarkEx](https://starkware.co/starkex/)缩放引擎一次完善的过程。 我们目前正在为StarkNet的需要再次这样做。</p> 
 
-### The Story So Far
+既然我们的许多可用性目标已经实现，我们正在将重点转移到我们的最优先事项上。 这是我们三级路线图的全部部分：**可用性**, 然后是网络**性能**, 然后是**分散化**。 年 我们想让你们在这个问题上有一个印象——一个已经存在和仍在进行的工作的概要。
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+### 这么远的故事
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+StarkNet Alpha于6月向公共测试网开放，并于11月向Mainnet开放。 在Mainnet部署时，StarkNet已经在一个类似于Etherum的状态下提供了一般计算，这种状态被普遍认为已经过去了多年。
 
-### Next Steps
+在整个发展过程中，我们选择了一种方法，首先侧重于最重要的功能，一旦具备这些功能，就立即予以公布。 主要是与社区分享发展进程。 StarkNet的功能还远远没有完备，但即使现在，开发者已经可以建立有意义和复杂的应用程序。 今天，我们有数百名开发者[建筑在StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)数十个dApp， 还有十多个外部团队为StarkNet生态系统开发工具和基础设施。
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+一串升级提供了许多重要的功能，包括L1<>L2消息、链上的数据和支持复合、事件支持、基本费用机制。 合同升级、帐户抽象、测试框架、开发者工具、快速确认、块编号、 块时间戳、支持帐户合同。
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+开发者社区既对StarkNet感兴趣，也对其发展产生实际影响。 已经根据开发者的反馈引入了一些功能。 采用的速度可能远远超过产量的增长，这就是为什么这种增长现在成为我们的高度优先事项。
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+### 以后的步骤
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+现在我们已经可以使用，现在是提高系统性能的时候了。 该系统目前的状况能够支持有限的交易量。 解决这个问题的方法是提高序列器节点的性能，因为它相当于一个矿工。 提交交易之后的顺序是“机器”。 当这个优化时，通量将会飞星。
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+为此目的，我们同时分析瓶颈所在，并逐一加以解决。 目前，所有这些瓶颈都与先后顺序进程有关，这一进程是在我们援引“STARK”原则之前出现的。 战斗测试的抗议堆栈已准备好支持StarkEx式的吞吐。
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+我们期望排序器的最佳化将是一个持续几个月的进程，H1/22期间将逐步改进。 我们的目标是在2022年下半年初达到比以往至少比以往高一个数量级。 费用至少比以太坊少两个数量级的订单。 这只是开始。
 
-### Next Up: Decentralization
+有很好的理由需要这个优化阶段。 并且StarkNet不是用一个现成优化的序列器发射的：StarkNet能够如此快地实现可用性，因为我们已经开始了头开始。 我们不是从零开始建设一个全新的测序器，而是把StarkEx的批处理器作为一个中心组件。
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+这是一个伟大的建设途径。 它不仅仅是很快地交付；这意味着我们确信我们是在坚固的基础上建造的。 StarkEx本质上测试了驱动StarkNet的核心功能，因为它在累积交易中节省了数千亿美元。
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+[StarkEx](https://starkware.co/starkex/)是一些使用 L2: dYdX (永久合同)最成功的 dapp 的缩放引擎。 DeversiFi (现货交易和付款)以及Immutable and Sorare (NFT mining and trading)。
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+但为他们和其他StarkEx客户端建立的测序器到目前为止只能使用StarkNet。 每个公司每天都在处理大致相同类型的交易。 StarkNet是关于**常规计算**的所有内容，所以它的需要是无限的。 当它的序列器从记忆库进行交易时，它们以不同的形式和大小出现。 Plus, StarkNet也是一个开放的网络，这意味着StarkEx没有遇到额外的计算费用。
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+目前的挑战，即优化满足这些新需要的顺序，是一项重大的任务， 但我们在成功发展StarkEx的基础上对所需的路线有着深刻的了解。
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
 
-### Always Improving; Forever Listening
+### 下一步：放权化
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+StarkNet将成为一个完全分散的无许可网络，配备领导选举和治理机制。 一旦通过天空火箭和降低成本，实现这一目标将成为我们的主要重点。 我们希望在2022年年底之前有第一个分散的版本。 我们预计今后几个月将公开分享我们的权力下放计划。
+
+正如目前有限的输送代表StarkNet开发中的一个临时阶段一样，StarkWare当前的参与水平也是暂时的。 我们把自己看作是一种支架，它在施工阶段起着重要的作用，但在适当的时候又回滚。
+
+全面节点开发是向权力下放迈出的令人振奋的第一步，已经在进行之中。 完整的节点将使任何人能够保持和验证网络的本地状态，不断跟踪正在发生的情况。 三个团队——*Erigon, Netherlands and Equilibrium*——正在开发完整的节点，今后可能有更多的团队将开始发展。
+
+与此同时，正在为向公众开放序列和证明软件做准备。 任何人都可以在StarkNet上作为测序器或探险家参与。
+
+将建立一种激励人们参与的结构，其中包括经济奖励。 StarkNet费用将部分转到序列器和属性上。
+
+从中期来看，我们期望向第三方提供我们的测序器。 从长远来看，我们还期望看到各种团队建立序列器，这些序列器将成为StarkNet的序列器。
+
+
+
+### 总是改进; 永远收听中
+
+随着重点转向下一个挑战，我们将继续改进过去的成就。 如果继续在[StarkNet](https://starknet.io/)的所有领域，我们的耳朵将始终对整个开发者社区开放。 所以通过[Discord](https://discord.com/invite/uJ9HZTUk2Y)、[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8)社区参与讨论。[Twitter](https://twitter.com/Starknet_Intern)或其他路径，帮助塑造区块链缩放的未来。

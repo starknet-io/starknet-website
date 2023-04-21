@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+في أواخر نوفمبر 2022، تم الإعلان عن إطلاق [مؤسسة Starknet](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) والمؤسسة منظمة مستقلة مكرسة لتحقيق رؤية ستاركنت المتمثلة في التحول إلى طبقة مزدهرة لا مركزية ولا تتمتع بحق الصالح الثاني (L2) (ويعرف أيضاً باسم .a. ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+مع [مجلس متعدد التخصصات](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) قوي على رأس اللعبة، مؤسسة Starknet هي في وضع جيد يسمح لها بمتابعة هدفها المتمثل في تعزيز وتوسيع مجتمع Starknet، • الإشراف على التطوير المستمر للشبكة، ووضع آليات حكم لا تصرح لها بالصلاحيات، وتحقيق اللامركزية الكاملة للنظام الإيكولوجي لستاركينت. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+واليوم، فإن المؤسسة متحمسة لإعلان تعيين خمس لجان علناً، كل منها مكلف بولاية محددة تتماشى مع مهمة ستاركنت وأولوياتها. إن ولاية كل لجنة ليست محصورة في حجر، وسوف تخضع لتقييمات روتينية، مع إدخال التعديلات والتعديلات عند الضرورة.
 
-The committees are:
+وهذه اللجان هي:
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* لجنة المخصصات
+* اللجنة الأولى لمنح التبني
+* لجنة شراكات المطورين
+* لجنة الحوكمة
+* لجنة النظام الإيكولوجي
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+وسنتشاطر أدناه المزيد من التفاصيل عن اللجان، بما في ذلك ولايتها وعملياتها وأعضائها الأوليين.
 
-## Introducing the Starknet Foundation Committees 
+## تقديم لجان مؤسسة Starknet 
 
-### Provisions Committee
+### لجنة المخصصات
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+ولجنة المخصصات مسؤولة عن التخطيط والإشراف والتنفيذ لتوفير رمز النظام الإيكولوجي Starknet - STRK. ستستخدم STRK كرمز للمشاركة في آلية إجماع Starknet. كما أنها ستستخدم كرمز لإدارة الشبكة وكعملة غاز لدفع رسوم المعاملات الخاصة بالشبكة. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+وتتسم لجنة المخصصات بأهمية حاسمة لضمان التوزيع العادل واللامركزي والشفاف للعملة الرمزية التي ستمكن النظام الإيكولوجي لشبكة ستاركينت. وتشرف اللجنة على تزويد المستخدمين بالعملات المميزة STRK التي يتعين عليها دفع رسوم استخدام Starnet. وستقوم اللجنة بتقييم وتقديم توصيات إلى مؤسسة ستارنيت بشأن المجموعات المؤهلة استناداً إلى أهداف الإنصاف والشفافية واللامركزية. وسيتم الإعلان عن هذه الخطط بمجرد تجهيزها.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+يمكن الاتصال بلجنة الأحكام على العنوان التالي: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### اللجنة الأولى لمنح التبني
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+ولجنة المنح الأولى للتبنّي ملتزمة بتعزيز نمو النظام الإيكولوجي لستارنيت عن طريق تقديم منح للأفرقة المبتكرة التي تبني تطبيقات على السلسلة في ستاركنت. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+إن الغرض من لجنة فريق التكنولوجيا والتقييم الاقتصادي يتلخص في تيسير التوسع والحيوية في النظام الإيكولوجي من خلال عمليات الانتشار في السلسلة. وستعلن اللجنة عما قريب عن وضع المعايير للجولة الأولى من الطلبات التي ستركز بأثر رجعي على الأفرقة التي بدأت بالفعل في البناء على موقع Starnet. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+وتلتزم لجنة منح التبني المبكر بالشفافية وستعلن عن جميع مبالغ المنح.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+يمكن الاتصال بلجنة منح التبني الأولى على العنوان التالي: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### لجنة شراكات المطورين
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+وتضطلع لجنة الشراكات القائمة على التطوير بدور حيوي في النظام الإيكولوجي لشبكة ستارنيت عن طريق تعزيز الشراكات الاستراتيجية الجديدة في مجال التطوير والإشراف عليها لإدخالها في النظام الإيكولوجي لشبكة ستاركينت. وعلى وجه الخصوص، تُعتبر شراكات المطورين الاستراتيجيين بمثابة تعاون بشأن قطع رئيسية من الهياكل الأساسية ذات الأهمية الحاسمة لنجاح ستاركنت.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+وتشمل المسؤوليات الرئيسية للجنة تبسيط عملية تقديم الطلبات لشراكات المطورين، وإجراء العناية الواجبة على النحو الواجب، والموافقة على المقترحات المقدمة. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+وتتسم اللجنة بأهمية حاسمة في تعزيز نظام إيكولوجي قوي من خلال تحديد ودعم أفرقة المطورين التي قامت ببناء الطبقة الأساسية للشبكة أو تقوم بإنشائها بنشاط. وتكفل جهودهم منح الأفرقة التي تعمل على تأمين وتوسيع نطاق الهياكل الأساسية للسكك الحديدية في ستارنيت بطريقة لا مركزية وشفافة. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+يمكن الاتصال بلجنة شراكات المطورين على العنوان التالي: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### لجنة الحوكمة
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+ولجنة الحوكمة مكلفة بدور حاسم في عملية اللامركزية الجارية في النظام الإيكولوجي لستاركينت. واللجنة مسؤولة عن البحث والتخطيط وتنفيذ المراحل الأولية لإدارة ستارنيت. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+مع التركيز على اللامركزية وتحقيق التوازن بين المشاركة المجتمعية والتنمية النشطة الجارية؛ وتهدف اللجنة إلى وضع الأسس الأولية لإدارة ستارنيت وتنفيذها والإشراف عليها. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+وستقوم لجنة الحوكمة بوضع وإنشاء آليات أساسية تحافظ على شفافية وعدالة وعدل. والهيكل اللامركزي الذي يعزز مشاركة المجتمعات المحلية ويكفل استمرار النمو والمشاركة اللامركزية في النظام الإيكولوجي. ولتحقيق هذه الأهداف، وستحدد اللجنة القرارات التي ستصوت عليها جماعة ستارنيت وستوافق عليها وستضع الإجراءات القانونية الواجبة لمناقشة وتنفيذ عمليات التصويت على الحكم. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+لقد بدأت اللجنة بالفعل المرحلة الأولى [من حكم Starknet](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). للحصول على أي استفسارات تتعلق بالتصويت الأول، يرجى الاتصال بـ: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+يمكن أيضا الاتصال بلجنة الإدارة على: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+لمعرفة المزيد عن عمل لجنة الحكم وخريطة الطريق، يرجى الرجوع إلى [هذه الصفحة](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### لجنة النظام الإيكولوجي
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+وتتولى لجنة النظام الإيكولوجي مسؤولية تمكين المدمجين الجدد وأعضاء المجتمع المحلي الجدد وإدماجهم في النظام الإيكولوجي لستاركينت. ويشمل ذلك تحديد سفراء ستارنيت وتمكينهم ودعمهم، ومنح المنح للمساهمين في النظام الإيكولوجي ومجمعات المواهب، وتنظيم ورعاية مجموعة عامة من الأحداث والشراكات التعليمية التي تعزز مشاركة المجتمع في النظام البيئي لستاركنت. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+وسيحظى السفراء بالاحترام وسيكونون أعضاء ثابتين في مجتمع ستاركيت يلتزمون بتنظيم المناسبات وحضورها والتحدث فيها. • تعزيز التنمية المجتمعية، وإيجاد المحتوى، والتماس الرعاية ذات المنفعة المتبادلة، وإقناع الأفراد والفرق الواعدين بالبناء على قاعدة ستارنيت.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+وللجنة النظام الإيكولوجي الداخلية تركيز رئيسي مختلف عن لجنة منح التبني المبكر. وفي حين أن لجنة المجموعة تهدف إلى تمهيد الطريق ومنح المتبنين الأوليين لشركة Starkne، وتشدد لجنة النظام الإيكولوجي الداخلي على استمرار النمو والتنمية المستدامين للنظام الإيكولوجي على مستوى القاعدة الشعبية. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+يمكن الاتصال بلجنة النظام الإيكولوجي على العنوان التالي: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## المعالم القادمة
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+وبتعيين هذه اللجان، فإن مؤسسة ستاركينيت على استعداد للقيام برحلة مثيرة في المستقبل. وتكرس كل لجنة جهودها لتعزيز جانب محدد من جوانب النظام الإيكولوجي معا، وستعمل المؤسسة، جنبا إلى جنب مع المؤسسة، على إقامة نظام إيكولوجي من الطبقة الثانية مزدهر ولا مركزي ولا يسمح له بذلك.  
 
-Here is what’s coming next: 
+إليك ما يلي: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* سيتم إجراء [التصويت الأول للحكم](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) في 21 مارس 2023؛
+* سيتم نشر الإعلان الأول للجنة EAG وتفاصيل الجولة الأولى من التطبيقات على [مدونة مؤسسة StarkNet](https://www.starknet.io/en/posts/foundation) في 21 مارس 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+الحفاظ على نظرة على [المدونة](https://www.starknet.io/en/posts/foundation) لمؤسسة StarkNet وقنوات وسائل الإعلام الاجتماعية لآخر التحديثات والفرص.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+للحصول على جميع معلومات مؤسسة Starknet الإضافية، التحديثات والمقترحات، اتبع Starknet على [تويتر](https://twitter.com/Starknet)، انضم إلى [ديسكورد](http://starknet.io/discord)، وقراءة منتدى المجتمع [.](https://community.starknet.io/)**

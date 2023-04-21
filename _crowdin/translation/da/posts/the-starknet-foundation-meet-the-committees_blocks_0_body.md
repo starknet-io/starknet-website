@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+I slutningen af november 2022 blev [lanceringen af Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) annonceret. Fonden er en uafhængig organisation dedikeret til at realisere Starknets vision om at blive en blomstrende, decentraliseret og tilladelsesfri lag 2 (L2) Validity Rollup (alias ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+Med en stærk [interdisciplinær bestyrelse](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) ved roret, Starknet Foundation er godt positioneret til at forfølge sit mål om at fremme og udvide Starknet samfund, føre tilsyn med den fortsatte udvikling af netværket, udvikling af tilladelsesfrie styringsmekanismer og gennemførelse af fuld decentralisering af Starknet-økosystemet. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+I dag er instituttet spændt på offentligt at annoncere udnævnelsen af fem udvalg — hver især har fået et specifikt mandat, der er i overensstemmelse med Starknets mission og prioriteter. Hvert udvalgs mandat er ikke begrænset og vil gennemgå rutinemæssige evalueringer med eventuelle tilpasninger og ændringer.
 
-The committees are:
+Udvalgene er:
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* Udvalget For Bestemmelser
+* Udvalget For Tidlige Tilskud
+* Udviklerpartnerskabskomité
+* Forvaltningsudvalg
+* Udvalget For Onboarding Af Økosystemet
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+Nedenfor vil vi dele flere detaljer om udvalgene, herunder deres mandat, operationer og indledende medlemmer.
 
-## Introducing the Starknet Foundation Committees 
+## Indledning af Starknet Foundation Komitéer 
 
-### Provisions Committee
+### Udvalget For Bestemmelser
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Bestemmelsesudvalget er ansvarlig for planlægning, tilsyn og udførelse af leveringen af Starknet økosystem token - STRK. STRK vil blive brugt som staking token for deltagelse i Starknets konsensusmekanisme. Det vil også tjene som netværkets styring token og som gas token for betaling af nettets transaktionsgebyrer. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Bestemmelsesudvalget er afgørende for at sikre en retfærdig, decentraliseret og gennemsigtig fordeling af det token, der vil drive Starknet-økosystemet. Komitéen fører tilsyn med leveringen af brugere med STRK tokens som er forpligtet til at betale gebyrer for brug af Starknet. Udvalget vil vurdere og fremsætte henstillinger til Starknet Foundation for kvalificerede grupper baseret på målsætningerne om retfærdighed, gennemsigtighed og decentralisering. Disse planer vil blive bekendtgjort, når de er færdige.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Bestemmelsesudvalget kan kontaktes på: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### Udvalget For Tidlige Tilskud
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Early Adopter Grants (EAG) Committee er forpligtet til at fremme væksten af Starknet økosystemet ved at yde tilskud til innovative teams, der bygger on-chain applikationer på Starknet. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Formålet med EAG-udvalget er at lette udvidelsen og vitaliteten af økosystemet ved hjælp af on-chain implementeringer. Udvalget vil snart afgive en meddelelse om at fastsætte kriterierne for deres første ansøgningsrunde, som med tilbagevirkende kraft vil fokusere på hold, der allerede er begyndt at bygge på Starknet. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Udvalget for Tilskud til Tidlige Tilskud går ind for gennemsigtighed og vil offentliggøre alle tilskud.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Udvalget for tidlige Adopter Grants kan kontaktes på: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Udviklerpartnerskabskomité
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+Udviklerpartnerskabskomitéen spiller en afgørende rolle i Starknet-økosystemet ved at fremme og føre tilsyn med nye strategiske udviklingspartnerskaber, der skal indføres i Starknet-økosystemet. Navnlig betragtes strategiske udviklingspartnerskaber som samarbejde om centrale infrastrukturer, der er afgørende for Starknets succes.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+Udvalgets hovedansvarsområder omfatter strømlining af indsendelse af forslag til udviklerpartnerskaber, gennemførelse af grundig due diligence og godkendelse af fremlagte forslag. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Udvalget er afgørende for at fremme et robust økosystem ved at identificere og støtte udviklerhold, der har bygget eller aktivt bygger netværkets kernelag af infrastruktur. Deres indsats sikrer, at hold bygning til at sikre og udvide infrastrukturelle skinner af Starknet tildeles på en decentraliseret og gennemsigtig måde. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Udviklerpartnerskabskomitéen kan kontaktes på: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### Forvaltningsudvalg
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Styringskomitéen har til opgave at spille en afgørende rolle i den igangværende decentralisering af Starknet-økosystemet. Udvalget er ansvarligt for forskning, planlægning og gennemførelse af de indledende faser af Starknet-styring. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+Med fokus på decentralisering og slående balancen mellem samfundets deltagelse og aktiv løbende udvikling; Formålet med udvalget er at skabe, gennemføre og føre tilsyn med de første søjler for styringen af Starknet. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Styringskomitéen vil udvikle og indføre centrale mekanismer, der opretholder en gennemsigtig, retfærdig og decentraliseret struktur, der fremmer samfundets engagement og sikrer fortsat vækst og decentraliseret deltagelse i økosystemet. For at nå disse mål Udvalget fastlægger de beslutninger, der skal stemmes om og godkendes af Starknet-samfundet, og fastlægger en passende procedure for drøftelse og gennemførelse af afstemninger om god regeringsførelse. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Udvalget har allerede lanceret den [første fase af Starknets ledelse](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For eventuelle henvendelser vedrørende den første afstemning, kontakt venligst: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Styringskomitéen kan også kontaktes på: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+For at få mere at vide om styrelsesudvalgets arbejde og køreplan, henvises til [denne side](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### Udvalget For Onboarding Af Økosystemet
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Ecosystem Onboarding Committee er ansvarlig for at styrke og integrere nye udviklere og fællesskabsmedlemmer i Starknet-økosystemet. Dette omfatter identificering, bemyndigelse og støtte til Starknet-ambassadører, tildeling af tilskud til økosystembidragydere og talentpuljer og arrangere og sponsorere en generel kadence af begivenheder og uddannelsesmæssige partnerskaber, der fremmer samfundets deltagelse i Starknets økosystem. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+Ambassadører vil blive respekteret og etableret medlemmer af Starknet samfund, der er forpligtet til at organisere, deltage og tale ved arrangementer, at fremme udviklingen af fællesskabet, skabe indhold, søge gensidigt fordelagtige sponsorater, og overtale lovende enkeltpersoner og teams til at bygge videre på Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Ecosystem Onboarding Committee har et andet primært fokus end Early Adopter Grants Committee . Mens EAG-udvalget har til formål at bootstrap og tildele de oprindelige vedtagere af Starknet, Ecosystem Onboarding Committee understreger fortsat og vedvarende vækst og udvikling af økosystemet på græsrodsniveau. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Ecosystem Onboarding Committee kan kontaktes på: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Kommende Milepæle
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Med udnævnelsen af disse udvalg er Starknet Foundation klar til en spændende rejse forude. Hvert udvalg er dedikeret til at fremme et specifikt aspekt af økosystemet og sammen vil sammen med fonden arbejde hen imod et blomstrende, decentraliseret og tilladelsesfri lag 2 økosystem.  
 
-Here is what’s coming next: 
+Her er hvad der kommer næste: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* afstemningen om [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) finder sted den 21. marts 2023
+* EAG-udvalgets første meddelelse og detaljer for den første runde af ansøgninger vil blive offentliggjort på StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) den 21. marts 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Hold øje med StarkNet Foundations [blog](https://www.starknet.io/en/posts/foundation) og sociale mediekanaler for de seneste opdateringer og muligheder.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+For alle yderligere Starknet Foundation oplysninger, opdateringer og forslag, følg Starknet på [Twitter](https://twitter.com/Starknet), deltag i vores [Discord](http://starknet.io/discord)og læs [Community Forum.](https://community.starknet.io/)**

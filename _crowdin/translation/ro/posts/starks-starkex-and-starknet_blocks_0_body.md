@@ -1,43 +1,43 @@
 ### TL;DR
 
-* STARKs enable blockchain scaling by efficiently proving the integrity of computations
-* StarkEx is an application-specific scaling engine
-* StarkNet is a permissionless, smart contract Layer 2 network
+* STARK-uri permit scalarea blockchain prin demonstrarea eficientă a integrității calculelor
+* StarkEx este un motor de dimensionare specific aplicaţiei
+* StarkNet este o rețea de nivel 2 fără permisiune, contract inteligent
 
-### **STARKs**
+### **STARK-uri**
 
-STARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps.
+STARK-uri (ARK-uri Cale, Transparente ale Cunoașterii) sunt un sistem de dovezi care permite dovedirea și verificarea calculelor. Permite procesarea unei calcule mari, generarea unei dovezi pentru corectitudinea calculului, şi apoi verificarea dovezii în foarte puţini paşi.
 
-STARKs can play a key role in blockchain scalability by allowing large computations to be done off-chain, where it is cheaper, leaving only the verification, which requires a fraction of the computation, to be done on-chain. In other words, by performing very few steps on-chain, the verifier asserts the integrity of a much larger computation that was done off-chain.
+STARK-uri pot juca un rol cheie în scalabilitatea blockchain, permițând calculelor mari să fie făcute în afara lanțului, atunci când este mai ieftin, numai verificarea, care necesită o parte din calcul, trebuie efectuată în lanț. Cu alte cuvinte, efectuând foarte puțini pași în lanț, verificatorul afirmă integritatea unui calcul mult mai mare care a fost făcut în afara lanțului.
 
-Using STARKs, layer 2 solutions batch together and compute thousands of transactions, and then verify their validity on-chain with a single STARK proof. The cost of the on-chain process is split between **all** transactions in the batch. This results in Ethereum security and low gas cost per transaction.
+Folosind STARK-uri, stratul 2 de soluţii grupează împreună şi calculează mii de tranzacţii, şi apoi verifică valabilitatea acestora în lanţ cu o singură dovadă de STARK. Costul procesului în lanț este împărțit între**toate**tranzacțiile din lot. Acest lucru duce la securitate Ethereum și la costuri scăzute ale gazului pe tranzacție.
 
-The low computational cost will usher in a new class of applications that were previously not feasible on-chain. These properties make STARKs an excellent building block for improving user experience and reducing gas costs, all while maintaining the security of the Ethereum settlement layer.
+Costurile de calcul scăzute vor atrage după sine o nouă clasă de aplicații care anterior nu erau fezabile în lanț. Aceste proprietăți fac din STARK-uri un excelent element de bază pentru îmbunătățirea experienței utilizatorilor și reducerea costurilor gazelor, păstrând în acelaşi timp siguranţa stratului de decontare Ethereum.
 
-StarkWare provides two solutions to scale Ethereum with STARKs: StarkEx and StarkNet.
+StarkWare oferă două soluţii pentru a scala Ethereum cu STARKs: StarkEx şi StarkNet.
 
 ### **StarkEx**
 
-[StarkEx](https://starkware.co/starkex/) is a framework for creating permissioned, application-specific scaling solutions. StarkEx is a toolbox of useful [application flows](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows) that projects can use to achieve cheap off-chain computation. A STARK proof, attesting to the correctness of execution, is generated off-chain. Such a proof can include up to 12,000–500,000 transactions (depending on the transaction type). The proof is then sent to the STARK Verifier to be accepted on-chain. This means one verification for all the transactions — for an incredibly low amortized gas cost per transaction.
+[StarkEx](https://starkware.co/starkex/)este un cadru pentru crearea soluțiilor permise, specifice aplicației. StarkEx este un set de unelte de[aplicații utile fluxează](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows)pe care proiectele le pot utiliza pentru a realiza calculul off-chain ieftin. O dovadă STARK, care atestă corectitudinea execuției, este generată în afara lanțului. O astfel de dovadă poate include până la 12 000–500 000 de tranzacții (în funcție de tipul de tranzacție). Dovada este apoi trimisă către verificatorul STARK pentru a fi acceptată în lanț. Aceasta înseamnă o verificare pentru toate tranzacțiile — pentru un cost al gazului amortizat incredibil de scăzut per tranzacție.
 
-A few examples of the applications deployed on StarkEx are dYdX (perpetuals trading), Immutable and Sorare (NFTs — minting and trading), DeversiFi (spot trading), and Celer (DeFi Pooling).
+Câteva exemple de aplicații utilizate pe StarkEx sunt dYdX (comerț cu perpetuate), Immutable and Sorare (NFT – mintea și tranzacționarea), DeversiFi (spot trading) și Celer (DeFi pooling).
 
-StarkWare is continuously adding more application flows to StarkEx, following the market and its customers’ needs.
+StarkWare adaugă continuu mai multe aplicații la StarkEx, urmărind piața și nevoile clienților săi.
 
 ### **StarkNet**
 
-*[StarkNet](https://starkware.co/starknet/) is a permissionless layer 2 network where any user or developer can deploy smart contracts developed in the Cairo language.*
+*[StarkNet](https://starkware.co/starknet/)este o rețea fără permisiuni 2 unde orice utilizator sau dezvoltator poate implementa contracte inteligente dezvoltate în limba Cairo.*
 
-Comparable to the Ethereum smart-contract experience, inside of the StarkNet ecosystem, your contract can interact with any other contract deployed on StarkNet, allowing for richly composable protocols. StarkNet contracts can also interact with Ethereum contracts via asynchronous message passing.
+Comparabil cu experiența contractuală inteligentă Ethereum, în cadrul ecosistemului StarkNet, contractul dumneavoastră poate interacționa cu orice alt contract implementat pe StarkNet, permițând protocoale compozite bogat. Contractele StarkNet pot interacţiona cu contractele Ethereum prin intermediul mesajelor asincrone.
 
-Unlike StarkEx, where applications are responsible for submitting transactions, StarkNet sequencers batch transactions and send them to be processed and proved. (StarkNet’s sequencers are currently operated by StarkWare with future plans to decentralize.) This means once applications deploy their Cairo contracts, they do not have to worry about running additional Operator infrastructure. StarkNet supports the Rollup data availability mode, meaning the state of the rollup is written to Ethereum along with the STARK proofs.
+Spre deosebire de StarkEx, unde cererile sunt responsabile pentru trimiterea de tranzacții, secvențierii StarkNet fac tranzacții multiple și le trimit pentru a fi procesate și dovedite. (secvențierele StarkNet, operate în prezent de StarkWare, cu planuri viitoare de descentralizare.) Aceasta înseamnă că, odată ce aplicațiile își implementează contractele de la Cairo, acestea nu trebuie să se îngrijoreze cu privire la funcționarea infrastructurii operatorilor suplimentari. StarkNet suportă modul de disponibilitate a datelor Rollup, ceea ce înseamnă că starea rostului este scrisă pe Ethereum împreună cu dovezile STARK.
 
-A huge developer community is deeply engaged with the StarkNet ecosystem, building apps, tools and infrastructure. Dozens of applications are already live on testnet — DeFi, games, voting, AI and more. More over, developer tools such as block explorer, local testing environment and framework, SDK’s in several languages and more, are being built by the StarkNet Community. In addition, active discussions take place in the [Shamans’ platform](https://community.starknet.io/), featuring suggestions for improvements, potential features and best practices.
+O comunitate de dezvoltatori uriaşi este profund angajată de ecosistemul StarkNet, construind aplicaţii, unelte şi infrastructură. Zeci de aplicații sunt deja live pe o plasă testată — DeFi, jocuri, votare, IA și multe altele. Mai mult, instrumente de dezvoltare, cum ar fi exploratorul de blocaje, mediul și cadrul de testare locală; SDK în mai multe limbi şi mai multe sunt construite de Comunitatea StarkNet. În plus, au loc discuții active în cadrul platformei[Shamanss](https://community.starknet.io/), cu sugestii pentru îmbunătățiri, caracteristici potențiale și bune practici.
 
-### **To Sum It Up**
+### **Pentru a o umple sus**
 
-Both [StarkEx](https://youtu.be/P-qoPVoneQA) and StarkNet are STARK-based scaling solutions. Both provide scalability, low gas costs, and Security, but have different operating requirements and interoperability patterns. StarkEx might be the right solution for an application that is largely self-contained and fits into the APIs that StarkEx provides. StarkNet might be better suited for a protocol that requires interacting synchronously with other protocols or has needs that go beyond what StarkEx offers.
+Atât[StarkEx](https://youtu.be/P-qoPVoneQA)cât şi StarkNet sunt soluţii de scalare STARK. Ambele oferă scalabilitate, costuri scăzute ale gazelor și securitate, dar au cerințe de operare și modele de interoperabilitate diferite. StarkEx ar putea fi soluţia potrivită pentru o cerere care este în mare parte autonomă şi se încadrează în API-urile pe care le oferă StarkEx. StarkNet ar putea fi mai potrivit pentru un protocol care necesită interacțiunea sincronă cu alte protocoale sau care are nevoi ce depășesc ceea ce oferă StarkEx.
 
-STARKs have revolutionized how applications can be built on Ethereum. StarkEx and StarkNet will continue to enable applications that were previously unviable and push the limits of what is possible on the blockchain.
+STARK-uri au revoluționat modul în care pot fi construite aplicațiile pe Ethereum. StarkEx și StarkNet vor continua să activeze aplicații care anterior erau neviabile și vor împinge limitele a ceea ce este posibil în blockchain.
 
-This article was written in collaboration by [Tim Gestson](https://twitter.com/IcemanTim) and the [StarkWare](https://starkware.co/) team
+Acest articol a fost scris în colaborare de[Tim Gestson](https://twitter.com/IcemanTim)și echipa[StarkWare](https://starkware.co/)

@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+We zijn erg blij om de volgende stap in het decentralisatieproces van StarkNets aan te kondigen - stemmen voor protocolwijzigingen.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+StarkNet heeft de afgelopen weken belangrijke stappen ondernomen om verder te decentraliseren door[de StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)op te richten, lanceer de[STRK Token op Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), en door[open-sourcing Cairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Deze post zal zich uitbreiden tot de volgende stap, namelijk de eerste fase van het bestuur van StarkNet, die de komende maanden zal duren.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* De eerste stemming om de voorgestelde wijzigingen van het StarkNet protocol goed te keuren of te verwerpen vindt binnenkort plaats
+* De deelnemers aan de stemmen tijdens de eerste fase zullen worden:\
+  - Token houders\
+  - Delegaten geselecteerd door token houders die hun stemrechten verkiezen\
+  — Delegaten geselecteerd door de StarkNet Foundation om een deel van hun stemrechten uit te oefenen\
+  — Een professionele bouwer Raad, ingesteld door de StarkNet Foundation
+* Alle zijn uitgenodigd om zichzelf te nomineren als afgevaardigde in het bestuur van StarkNet.
+* Discussies zullen worden gevoerd in het[StarkNet Community Forum](https://community.starknet.io/)
 
-### Background
+### Achtergrond
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Om aan het zicht van StarkNets te voldoen zijn twee processen tegelijkertijd in ontwikkeling om een censuurbestendig openbaar netwerk te worden: (i) decentralisatie van[StarkNet's systeemcomponenten](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e. ., sequencers en provers en (ii) implementatie van governance-mechanismen met betrekking tot protocolwijzigingen.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Het creëren van kwaliteitsgovernance-mechanismen die een open gemeenschap in staat stellen protocolupgrades te beheren is een serieuze uitdaging. Het is een geleidelijk en verkennend proces dat een brede samenwerking van de gemeenschap vereist.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+Om de eerste fasen van het bestuur van StarkNet te plannen en te organiseren, heeft de StarkNet Foundation een bestuurscomité ingesteld. De Stichting zal meer details publiceren over het bereik en de missie van de commissie in een afzonderlijke post. De leden van de commissie zijn Deven Matthews (Nederland), Manor Bareli (StarkWare) en Sylve Chevet (briq). Hieronder staat het plan voor de eerste fase van StarkNet-bestuur, De leden van de commissie hebben samen met verschillende medewerkers van het StarkNet ecosysteem geformuleerd en goedgekeurd door de stichtingsraad.
 
-### Starknet’s governance first phase plan
+### Starknet governance eerste faseplan
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+De eerste fase van het Starknet-bestuur is in gang gezet. Vanaf nu kunnen leden van de community deelnemen aan het vormgeven van StarkNet via een ander kanaal, namelijk stemmen over wijzigingen in het protocol. Dit is slechts de eerste fase van het bestuur van StarkNet; naarmate StarkNet vordert naar de volgende fasen, zal het bereik van bestuursmechanismen en de deelnemers zich uitbreiden. Hier zijn de details van de**eerste fase**:
 
-#### Voting subject
+#### Stemming onderwerp
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Voorgestelde upgrades naar het StarkNet-protocol. Alle verbeteringen zullen in dit stadium worden voorgesteld door de Stichting. De voorstellen zullen discussies, ideeën en feedback weerspiegelen in het StarkNet Community Forum.
 
-#### Voting type
+#### Soort stemming
 
-Off-chain signal vote (Via Snapshot)
+Off-chain signaal stemmen (Via Snapshot)
 
-#### Voting process
+#### Stemmen proces
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. De Stichting zal een bijgewerkte versie van StarkNet naar Goerli implementeren.
+2. De kiezers hebben een periode van 6 dagen om de bijgewerkte versie te onderzoeken terwijl deze op Goerli draait. In de tussentijd kunnen zij stemmen over de goedkeuring van het ontwerp voor Mainnet-implementatie.
+3. Als een voorstel wordt goedgekeurd door de kiezers, komt er een vertraging van meer dan 24 uur voordat de upgrade wordt toegepast op Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Aankondigingen voor deze updates zullen worden gemaakt op de[Twitter-account van de StarkNet Foundation](https://twitter.com/StarkNetFndn), evenals op het[StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Drempel en vereist quorum
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Drempel is een eenvoudige meerderheid (d.w.z. de drempel is 50% van de uitgebrachte stem)
+* Er is geen quorum nodig, wat betekent dat er geen minimumniveau voor deelname is om de stemming geldig te laten zijn
 
-### First phase voting participants
+### Eerste fase stemgerechtigde deelnemers
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Hier is de lijst van degenen die kunnen deelnemen aan de eerste fase van het bestuursproces:
 
-#### Token holders
+#### Token houders
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* In de eerste fase van het bestuur van StarkNet, De meeste token houders zijn vroege core contributors en investeerders die het netwerk in zijn vroege stadia hebben gebouwd en ondersteund ([lees deze post voor meer details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Na verloop van tijd zal het token worden verdeeld onder ontwikkelaars en andere partijen die werk verrichten om het netwerk te onderhouden en te upgraden. Op die manier kunnen deze partijen het netwerk veiligstellen, het gebruiken, beheren en deelnemen aan het bestuur.
 
-#### Delegates
+#### Gedelegeerden
+
+**Doelstelling**:\
+Voting power delegatie stelt token houders in staat hun governance mandaat te delegeren aan betrokken en professionele leden van de gemeenschap. Dankzij dat:
+
+* Token kunnen kiezen voor deelname aan de besluitvorming door middel van een representatieve in plaats van een directe democratie.
+* Speciale getalenteerde gemeenschapsleden kunnen een belangrijke rol spelen in governance door hun reputatie te verdienen. Er is geen behoefte aan eigen tokens om jezelf voor te dragen als afgevaardigde.
+
+**Verantwoordelijkheden**:\
+Voer een serieus leerproces uit voor elke beslissing. wat zal leiden tot goed gefundeerde, onafhankelijke besluiten ten voordele van StarkNet en zijn langetermijnvisie.
+
+**Operatie**:
+
+* In de eerste plaats is er voor het welslagen van het delegatiemechanisme een pool van kwaliteitsvertegenwoordigers nodig.
+* De weg om een gedelegeerde te worden is vrijblijvend - er zijn geen voorwaarden - maar voor degenen die dat willen, een sectie is gemaakt in het forum waar potentiële gedelegeerden profielen kunnen posten ([in deze link](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Token houders kunnen vrij kiezen voor elk Ethereum L1-adres dat ze hun stemrecht willen delegeren.
+* Voor meer details lees het[speciale bericht op StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+
+#### De Raad van de StarkNet bouwers
+
+Een professionele commissie, aangesteld door de Stichting.
 
 **Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+Implementatie van governance mechanismen die zijn gebaseerd op betrokkenheid van de gemeenschap en professionele reputatie, en niet alleen op basis van tokenbezit.
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+**Verantwoordelijkheden**:
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+* Het voeren van een serieus leer- en discussieproces voor elk besluit, dat zal leiden tot goed gefundeerde beslissingen ten gunste van StarkNet en zijn langetermijnvisie.
+* Een actieve deelname nemen aan discussies en stemmingen gedurende de eerste fase
+* Zorg ervoor dat hun discussies en besluitvormingsprocessen transparant zijn
+* Toegang tot de community via open discussies op het StarkNet community forum
 
-**Operation**:
+**Operatie**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 17 commissieleden benoemd door de Stichting
+* Mandaatperiode - StarkNet governance eerste fase (enkele maanden)
+* Voor meer details lees het[speciale bericht op StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+### Vermogen eerste fase stemrecht
 
-A professional committee, appointed by the Foundation.
+Tijdens het bestuur van StarkNet, zal StarkWare niet deelnemen aan de stemmingen. De StarkNet Foundation verleent stembevoegdheid aan de bouwersraad en aan verschillende afgevaardigden uit de pool, en zal niet rechtstreeks stemmen.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+De verdeling van het stemvermogen in de**eerste fase**zal zijn:
 
-**Responsibilities**:
+* Beleggers: 33,3%
+* StarkNet’s early core bijdragers (exclusief StarkWare): 33.3%
+* Vertegenwoordigers van de Stichting: 33.3%\
+  - StarkNet Builders' Council: 23,3%\
+  - Delegeert stemmen namens de Stichting: 10%
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+### Eerste stem — StarkNet's 0.11 versie
 
-**Operation**:
+De eerste stemming vindt in de komende weken plaats. De stemming zal gaan over het upgraden van StarkNet Alpha naar versie 0.11.
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
-
-### First phase voting power
-
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
-
-The voting power distribution in the **first phase** will be:
-
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
-
-### First vote — StarkNet’s 0.11 version
-
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
-
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+Stemmen zal beginnen kort na de vrijgave van Goerli en worden aangekondigd via de officiële kanalen:[StarkNet Foundation's Twitter account](https://twitter.com/StarkNetFndn)en[StarkNet Community Forum](https://community.starknet.io/). Blijf op de hoogte!

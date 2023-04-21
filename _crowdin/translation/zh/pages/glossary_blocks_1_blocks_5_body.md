@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+使用Starknet OS运行的Starknet 交易集订购。 结果产生了一个合并的状态变化，然后承诺执行Starknet L1核心合同。 一个方块已经：
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … 块哈希——一个唯一的稳定标识符，可用来查询和引用方块。
+* … 一个方块编号 — — 一个普通数字代表方块在Starknet中被接受方块序列中的位置。 请注意，块的编号可能会随着时间而变化。 另外，某个号码可能会在不同时间点指不同的区块，例如在L1链重定订单的情况下。

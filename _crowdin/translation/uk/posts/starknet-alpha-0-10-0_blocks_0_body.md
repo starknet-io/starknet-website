@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Підтвердження викликів облікового запису в дусі EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Перевірка - Виконати розділення
+2. Транзакція унікальність тепер забезпечується в протоколі (Небесний)
 
-* The fee mechanism is extended to include:
+* Механізм платежів продовжується до включення:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 повідомлення
+2. Оголошення Операцій
 
-* Few Cairo syntax changes
+* Кілька внесків синтаксису в Каїрі
 
-### Introduction
+### Вступ
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Ми з радістю пропонуємо StarkNet Alpha 0.10.0. Ця версія - ще один крок до масштабування Ethereum без шкоди для безпеки та децентралізації.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Цей пост коротко описує основні функції цієї версії. Для повного списку змін перевірте[примітки до випуску](https://github.com/starkware-libs/cairo-lang/releases). Для отримання більш докладної інформації зверніться до[документації](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Зміни протидії облікового запису
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Ця версія запроваджує зміни, натхненні[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### Підтвердження/Виконання роздільника
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+До цього часу, функція облікового запису \ _execute\_\_ несе відповідальність за перевірку транзакції та виконання. Через 0.10.0 ми розбиваємо цей батарейку і додамо окрему функцію \_валідної\_, що відмічається. При отриманні транзакції, контракт на рахунок буде першим зателефонувати з\_підтвердження\_, а потім, якщо успішно, продовжуйте з\_виконання\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Затвердження/виконання розрізнення на рівні протоколу між недійсними та підтвердженими (ще дійсними) транзакціями. Завдяки цьому сиквенсери зможуть стягувати плату за виконання діючої транзакції незалежно від того, чи було це повернуто чи ні.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+У версії 0.10.0 вiдновi поле додається для того, щоб гарантувати унікальність транзакцій на рівні протоколу. До цих пір носи розглядаються на рівні договорів рахунків, що означало, що транзакція з тим же гешем може бути виконана двічі .
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Аналогічно Ethereum, кожен контракт тепер включає в себе даний час, який враховує кількість виконаних транзакцій з цього рахунку. Договори по рахунку будуть приймати транзакції лише з відповідним носом, тобто з відповідними транзакціями. якщо поточний одноразовий рахунок рівний Х, то він приймає тільки транзакції з nonce X.
 
-#### New Transaction Version
+#### Нова версія транзакції
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+Щоб дозволити зворотню сумісність, ми представимо ці два зміни через нову версію транзакції -[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Ці зміни застосовуватимуться лише до нової версії, а старіші акаунти все ще зможуть виконати операції з версії 0.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Зверніть увагу - транзакція v0 зараз застаріла і буде видалена в StarkNet Alpha v0.11.0. Будь ласка, переконайтеся, що ви оновили програму для використання нової версії транзакцій.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+Для отримання більш докладної інформації про версію транзакції, будь ласка, прочитайте[документацію](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### Фейс-механізм
 
-The new version allows to include fees for two required components:
+Нова версія дозволяє включати комісії для двох необхідних компонентів:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2 повідомлення](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Оголосити транзакцію](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Ці платежі не будуть обов'язковими для цієї версії і будуть примушені тільки стартувати StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### Змінення синтаксису в Каїрі
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+На користь поступового прогресу для оновлення Каїру,[Каїр 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU)у цій версії є декілька синтаксичних змін.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Щоб звести до мінімуму незручності, реліз версії буде включений[міграційний скрипт](https://www.youtube.com/watch?v=kXs59zaQrsc), який автоматично застосовується вище змін. Ви можете знайти більше деталей[тут](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Що далі?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Через кілька тижнів ми плануємо вводити розпаралелення у послідовність, що дозволяє прискорити виробництво блоків (V0.10.1)
+* Незабаром ми завершимо останню частину, яка повинна бути включена до сплати - розгортання рахунку
+* Версія програми airo 1.0! Детальніше про це у майбутньому повідомленні.
 
-### How Can I Be More Engaged?
+### Як я можу бути зацікавленим?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Перейдіть на[starknet.io](https://starknet.io/)для всієї інформації StarkNet, документації, підручників і оновлень.
+* Приєднуйтесь до[StarkNet Discord](http://starknet.io/discord)для підтримки розробників, оголошень про екосистему та стати частиною спільноти.
+* Відвідайте[StarkNet форум, щоб залишатися в курсі досліджень StarkNet](http://community.starknet.io/).
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Ми завжди раді отримати відгуки про нашу[документацію](https://docs.starknet.io/)!

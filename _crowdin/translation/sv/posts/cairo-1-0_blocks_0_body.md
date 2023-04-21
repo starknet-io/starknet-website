@@ -1,67 +1,67 @@
 ### TL;DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* Kairo 1.0 är den första stora versionen efter[införandet av Kairo](https://medium.com/starkware/hello-cairo-3cb43b13b209)för två år sedan
+* Cairo 1.0 kommer att ge utvecklare ett säkrare, enklare, mer användbart programmeringsspråk
+* I hjärtat av Kairo 1.0 kommer att vara**Sierra**, ett mellanliggande representationslager som lovar större långsiktig stabilitet för Kairo program
+* Sierra avancerar Kairo för att fungera i ett behörighetslöst nätverk:\
+  -**Skydda nätverket**: det tillåter mer robust DoS-skydd\
+  -**Skydda användaren**: det tillåter Ethereum-grad censur motståndKairo 1. kommer att påverka StarkNet på många sätt. Det kommer också att påverka[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). Vi kommer att lägga upp mer information om Regenesis under de kommande veckorna.
 
-### Introduction
+### Introduktion
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
+År 2020 släppte vi Kairo, en Turing-komplett programmeringsspråk, och tog ett stort steg mot att stödja verifierbar beräkning med STARKs. Idag tillkännager vi**Kairo 1.0**, den största utvecklingen av Kairo hittills. Det kommer att införa ett förbättrat språk, med funktioner som kommer att förbättra användbarhet, säkerhet och bekvämlighet. Den är utformad för att stödja Starknets krav som ett behörighetslöst nätverk, vilket gör att protokollet blir enklare och säkrare.\
+Utvecklingen pågår redan, och vi förväntar oss att den första versionen kommer att ske snart.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
+I det här inlägget kommer vi att beskriva Kairo resa hittills och dela detaljer om de kommande funktionerna.
 
-### The Cairo Journey
+### Kairo resa
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+Fram till 2020 behövdes nischkunskap för att bygga STARK-bevisbara program för allmän beräkning. Det var bara möjligt för dem som förstod den komplexa matematik som låg bakom STARKEN. Specifikt, för varje affärslogik, dvs varje beräkning, en som behövs för att generera en algebraisk mellanliggande representation (AIR) - en uppsättning polynom begränsningar som representerar den specifika beräkningen.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+Kairo föddes ur insikten att verifierbara beräkningar bör göras tillgängliga för utvecklare överallt. Kairo gör det möjligt för utvecklare att utnyttja kraften i STARKs.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
+Utvecklarsamhället har sedan dess beslagtagit Kairo för att bygga entusiastiskt. Allt i det blomstrande StarkNet-ekosystemet idag är baserat på Kairo. Mellan[StarkNet](https://starkware.co/starknet/)och[StarkEx](https://starkware.co/starkex/)har Cairo-drivna applikationer behandlat över 220M transaktioner, präglade mer än 65M NFTs, och hanterade $700B värde av affärer, alla bosatte sig på Ethereum.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
+Medan Kairo gjorde STARKs tillgänglig, var det ursprungligen utformad som ett monteringsspråk, och som sådan var det skrivet som ett lågt språk nivå.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+![Ett exempel för de tidiga program som skrevs i Kairo](/assets/cairocode_01.png "Ett exempel för de tidiga program som skrevs i Kairo")
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+Förstärkt av feedback från utvecklare och ökningen av[StarkNet](https://starkware.co/starknet/), Vi gjorde Kairo gradvis mer uttrycksfull och mer utvecklarvänlig.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+![Ett exempel från ERC-20 Kairo kontraktet visar stöd för variabler, om uttalanden, fel, och UINT256 bibliotek](/assets/cairocode_02.png "Ett exempel från ERC-20 Kairo kontraktet visar stöd för variabler, om uttalanden, fel, och UINT256 bibliotek")
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+Men vi kom snart fram till att det är dags att ta ett stort steg framåt och, istället för inkrementella förbättringar till Kairo, gå för en djärvare omvandling.
 
 ### Cairo 1.0
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+För Kairo 1. vi har byggt en helt ny kompilator från grunden, som kommer att ge utvecklare med säkerhetsfunktioner, och kommer att tillåta dem att skriva kontrakt på ett enklare och mer uttrycksfullt sätt.
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+#### Vi presenterar Sierra: att se till att varje Kairo kör kan bevisas
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+Huvudtillägget i Kairo 1. är Sierra (**S**har**I**nt**e**rmediate**R**ep**r**esent**a**tion). Sierra utgör ett nytt mellanliggande representationslager mellan Kairo 1.0 och Kairo byte kod. Sierras mål är att se till att varje Kairo kör - dvs. ett Kairo program och dess ingång - kan bevisas (se mer nedan).
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+Sierra lovar Kairo devs bättre framtidssäker kod. Ytterligare stabilitet tillhandahålls av det faktum att StarkNet kontrakt inte kommer att behöva kompilera om i fallet med förbättringar av det underliggande systemet (e. ., CPU AIR arkitektur förändringar, förbättringar av den slutliga översättningen från Sierra till Kairo byte kod).
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
+**Bevisa varje Kairo körning.**I gamla Kairo kan en Kairo köra resultera i tre fall — TRUE, FALSE, eller misslyckande. Misslyckade körningar kan inte bevisas. Sierra, ser till att en Kairo kör aldrig kommer att misslyckas, och kan bara resultera i TRUE eller FALSE. Detta i sin tur, ser till att varje Kairo kör kan bevisas.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
+Denna introduktion av Sierra har viktiga konsekvenser för StarkNet som ett behörighetslöst nätverk. Sierra ser till att även återställda transaktioner kan inkluderas i StarkNet block. Denna egenskap gör det möjligt för StarkNet protokollet att förbli mager och enkel utan att behöva lägga till komplexa kryptoekonomiska mekanismer.\
+Två meningsfulla exempel:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+1. Sequencers kommer att kunna samla in avgifter på återställda transaktioner, vilket gör det möjligt för StarkNet att förhindra Sequencer DoS på ett väletablerat sätt.
+2. Det kommer att bli möjligt att genomföra påtvingade L1-transaktioner, vilket gör det möjligt för StarkNet att ärva Ethereums fulla censurmotstånd.
 
-### **Language Features**
+### **Språk funktioner**
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
+Kairo 1.0 kommer att erbjuda många förbättringar av programmeringsspråket i sig. Inte allt som listas nedan kommer att vara en del av den första utgåvan, men det är en del av färdplanen.
 
-#### **Improved syntax**
+#### **Förbättrad syntax**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+* Inga fler*lokala*och*tempvar*. Vi behöver nu bara*låta*styra dem alla variabler.
+* Förbättrad*om*-uttryckssyntax
 
 ```python
-#Old
-if cond != 0 {
+#Gammal
+om cond ! 0 {
   tempvar x = x+1;
 } else {
   tempvar x = x;
@@ -71,30 +71,30 @@ __________________________________
 if cond { x = x + 1; }
 ```
 
-#### **Type safety guarantees**
+#### **Typ av säkerhetsgaranti**
 
-The compiler will use strong typing to improve the security of the code. For example:
+Kompilatorn kommer att använda stark skrivande för att förbättra säkerheten för koden. Till exempel:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
+* Pekare kommer alltid peka på initierat minne.
+* Ordböcker kommer alltid att krossas, i motsats till att överlåta ansvaret att ringa squash_dict till programmeraren.
 
-#### **Easier to use language constructs**
+#### **Lättare att använda språkkonstruktioner**
 
-For example:
+Till exempel:
 
-* For loops
+* För slingor
 
 ```
 let sum = 0
-for x in iter {
-  sum = sum + x;
+för x i iter {
+  summa = summa + x;
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+* Boolska uttryck
+* Heltal (med regelbunden heltal division 👯)
+* Överflödesskydd för relevanta typer
+* Booleska förhållanden
 
 ```
 #Old
@@ -102,56 +102,56 @@ If cond1:
   if cond2:
        # Some code
   else if cond3:
-       # Same code
+       # Samma kod
 __________________________________
 #New
-If cond1 && (cond2 || cond3) { … }
+If cond1 && (cond2 <unk> cond3) { … }
 ```
 
-#### **A fully fledged type system**
+#### **Ett fullfjädrat typsystem**
 
-* Abstract data types (i.e. Rust-like enum)
+* Abstrakta datatyper (dvs Rostliknande enum)
 
 ```
-enum Option<T> {
- Some: T,
- None,
+enum Alternativ<T> {
+ Några: T,
+ Ingen,
 }
-match result {
+matchningsresultat {
  Some(r) => {..},
- None => {..},
+ Ingen => {..},
 }
 ```
 
-* Traits
+* Egenskaper
 
 ```
-trait Add<Uint256> {
+Egenskap Lägg till<Uint256> {
     fn add(…) { … }
 }
 
-let a: Uint256 = 1;
-let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+låt a: Uint256 = 1;
+låt b: Uint256 = 4;
+a + b; // Utvärderas till 5 av typ Uint256.
 ```
 
-#### **More intuitive libraries**
+#### **Mer intuitiva bibliotek**
 
-(e.g. dict, arrays)
+(t.ex. dikter, arrayer)
 
-* Dict<Uint256, MyStruct>;
+* Dikt<Uint256, MyStruct>
 * Array<MyOtherStruct>;
 
-#### **More optimized code**
+#### **Mer optimerad kod**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+Inget behov av att explicit tillståndsfördelning av lokala variabler — automatisk upptäckt och görs automatiskt.
 
-#### **Better compiler integration**
+#### **Bättre kompileringsintegrering**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+Möjliggöra bättre IDE-stöd, pakethantering och bättre underlättande av bidrag från samhället.
 
-### **Conclusion**
+### **Slutsats**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+Två år efter det att Kairo först användes i produktionen, utvecklar vi Kairo 1.0, som kommer att leverera förbättrad uttryckbarhet, säkerhet och syntax. Det kommer att ta ett stort steg framåt, vilket gör det möjligt för utvecklare att lättare skriva sina StarkNet-kontrakt.
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+I ett annat inlägg, kommer snart, kommer vi att dela mer information om hur Kairo 1. kommer att påverka StarkNet regenesis, och hur utvecklare bör förbereda sig för sin utgivning.

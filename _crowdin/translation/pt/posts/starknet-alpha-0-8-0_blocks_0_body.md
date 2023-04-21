@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* StarkNet Alpha 0.8.0 apresenta a versão inicial do mecanismo de taxa (opcional até StarkNet Alfa 0.9.0.)
+* Novas chamadas de API para estimar a taxa de transação para obter o rastreamento de transação, permitindo uma melhor visibilidade e capacidade de depuração
+* Melhorias de desempenho no sequenciador StarkNet
+* Cancelamento de mensagem L1→L2
 
-### Intro
+### Introdução
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+Como compartilhado no nosso[roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), seguindo a última adição à funcionalidade e recursos da StarkNet, nossa atenção se desloca para aprimoramentos de desempenho e design do protocolo (incluindo taxas, abstração da conta, descentralização, etc.). StarkNet Alpha 0.8.0 inicia o processo de adicionar taxas de transação e melhorar o desempenho do sequenciador.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+O roteiro para StarkNet inclui um mecanismo de taxas, e ao progredir com essa versão, estamos dando um passo importante mais próximo do desempenho total da plataforma.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+Adicionar o mecanismo de taxas é uma parte essencial do projeto de desempenho da StarkNet. Sem uma taxa mínima, arriscamo-nos a enfrentar transações infinitas: o que tornaria impossível o desempenho do sistema, independente das otimizações sequenciais.
 
-### Features
+### Funcionalidades
 
-#### Fee Support
+#### Suporte de tarifas
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+StarkNet Alpha suporta agora a primeira versão do mecanismo de taxas. Este mecanismo é essencial, mesmo nesta fase inicial, e até mesmo na Testnet, por duas razões principais:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Ele permite que os desenvolvedores comecem a otimizar seus contratos de acordo com o modelo de custo da StarkNet.
+2. É uma contrapartida crucial melhorar o desempenho do sistema, pois impede o spamming através do envio de inúmeras transações.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Esta versão introduz os componentes necessários para os desenvolvedores incorporarem taxas em suas ferramentas e aplicativos. Os desenvolvedores agora podem estimar a taxa de transação chamando o endpoint \`estimate_fee\` e fazer o pagamento de taxa como parte da execução da transação.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Uma vez que este recurso não é compatível com versões anteriores, não aplicaremos o pagamento de taxas neste momento, mas apenas da versão 0. .0, que deverá ser libertado dentro de algumas semanas. Esta transição gradual permitirá que usuários e desenvolvedores se adaptem ao novo modelo.
 
-#### Fee Structure on 0.8.0
+#### Estrutura em 0.8.0
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+No 0.8.0, as taxas serão cobradas apenas de acordo com a complexidade computacional, enquanto a StarkWare ainda subsidiará o custo de comunicação L1. Vamos atualizar o mecanismo de taxas para incluir os custos de operação L1 e comunicação nas próximas semanas. O pagamento será coletado atomicamente com a execução da transação na StarkNet L2. Veja a documentação de[taxas](https://starknet.io/documentation/fee-mechanism/)para uma descrição profunda.
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+É importante notar que trabalharemos em estreita colaboração com a comunidade de desenvolvedores para ajustar e desenvolver o mecanismo de taxas à medida que a StarkNet evoluir.
 
 #### L2 Goerli ETH Faucet
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Nós lançamos o[L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/)para permitir que os usuários paguem taxas no Testnet. Este Faucet envia pequenas quantidades de L2 Goerli ETH para o endereço da sua conta no StarkNet Goerli que você pode usar para pagar a taxa de transação.
 
 #### Trace API
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+Adicionamos a capacidade de recuperar o traço de execução de uma transação na API da StarkNet. Dentro do rastreamento da transação, todas as chamadas internas são visíveis, acompanhadas de informações como recursos de execução consumidos, valor de retorno, eventos emitidos e mensagens enviadas. Esta nova chamada simplifica a compreensão do comportamento do contrato ou a depuração de transações. Além disso, ferramentas como[Voyager](https://voyager.online/)ou[StarkTx](https://starktx.info/)podem incorporar estes dados; fornecendo análises mais detalhadas aos usuários, em particular para interação de contrato da conta.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+Para obter o traço, você pode usar \`get_transaction_trace\` na CLI do StarkNet. Para ver um exemplo de como usá-lo, verifique o[tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Cancelamento de mensagem
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+Uma característica adicional desta versão é a capacidade de cancelar as mensagens L1→L2. Por que isso é útil? Imagine um cenário onde um usuário transfere um ativo do L1 para o L2. O fluxo começa com o usuário enviando o ativo para uma ponte StarkNet e a geração L1→L2 de mensagem. Agora, imagine que o consumo da mensagem de L2 não funciona (isso pode acontecer devido a um bug no contrato do Cairo do dApps). Isso pode resultar em o usuário perder custódia sobre seu ativo para sempre.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Para mitigar esse risco, permitimos que o contrato que iniciou a mensagem L1→L2 o cancele — depois de declarar a intenção de fazer isso e esperar pela quantidade de tempo adequada (consulte a[documentação](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Melhorias de desempenho
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Esta versão diminui significativamente o tempo que um sequenciador precisa para executar um fluxo de transações recebidas do Cairo.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+Este é apenas o primeiro passo! Nosso próximo grande marco de desempenho, a ser introduzido em breve (0.9.0), é a execução paralela do sequenciador e muito mais otimizações são esperadas no fundo da estrada.
 
-### What now?
+### E agora?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Leia a documentação técnica[aqui](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Vá para[starknet.io](https://starknet.io/), para todas as informações do StarkNet, documentação, tutoriais e atualizações.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Participe do[Discord StarkNet](https://discord.gg/uJ9HZTUk2Y)para suporte a desenvolvedores, anúncios de ecossistema, e se torne parte da comunidade.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Visite[StarkNet Shamans](https://community.starknet.io/)para ficar atualizado e participar de todas as discussões de pesquisa da StarkNet.

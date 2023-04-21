@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* تم الآن نشر رمز StarkNet (STRK) على ماين إيثيريوم
+* **تحذير من الاحتيال!**عملات StarkNet غير متوفرة للبيع
+* وسوف يستغرق الأمر وقتاً لكي تحدد المؤسسة آلية توزيع الرموز المميزة لها.
+* العملات الرمزية التي يحوزها حملة أسهم شركة StarkWare وموظفوها ومطوري البرمجيات الشركاء المستقلين مقفولة لمدة أربع سنوات. مع الإفراج التدريجي الذي يبدأ بعد سنة واحدة
+* العملة الرمزية سوف تزيد من لامركزية StarkNet، وذلك بفضل استخدامها للتصويت، والتصميم ودفع الرسوم
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+اليوم،[StarkNet](https://starknet.io/)يتخذ خطوة أخرى نحو اللامركزية. رمز StarkNet هو الآن[على إيثيريوم](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). إعادة النظر بسرعة: ستستخدم STRK كرمز للمشاركة في آليات إجماع StarkNet، كرمز للإدارة، ولدفع رسوم المعاملات. المبرر لكل من هذه المنافع معروض في[اقتراحنا اللامركزية](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)، في القسم المعنون "ماذا ستستخدم الرموز المميزة؟"
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***تحذير من الاحتيالات:**في وقت الكتابة لا توجد طريقة لشراء عملات StarkNet Tokens; وتظل فترة عدم البيع هذه سارية حتى إشعار آخر من قبل[مؤسسة StarkNet](https://twitter.com/StarkNetFndn)؛ متابعة الرسالة الرسمية من مؤسسة StarkNet للاطلاع على أي معلومات مستكملة عن حالة STRK. يمكنك الإبلاغ عن الاحتيالات والتحقق من التقارير الأخرى عن الاحتيالات في قناة[تقرير الاحتيال](https://discord.gg/qypnmzkhbc)على خادم[StarkNet Discord](http://starknet.io/discord).*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+ويفسر هذا المنصب عملية توزيع الرمز، وكيف تخدم العقود الرمزية المنشورة اثنتين من المنافع الرمزية الثلاثة المصممة، وهما بالتحديد التصويت والتصديق. أما المرفق الثالث - دفع رسوم StarkNet - فسوف يناقش في وقت لاحق.
 
-### Planning the token allocation process
+### تخطيط عملية تخصيص العملات الرمزية
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+لقد سبق أن اقترحنا[خطة](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)للتوزيع الأولي للرموز. والرموز المخصصة للمساهمين والموظفين ومطوري البرمجيات المستقلين مقفولة لمدة أربع سنوات، ويبدأ جدول الإصدار التدريجي بعد سنة واحدة. يمكن استخدام الرموز المميزة المقفلة للتصويت والتصويت، ولكن لا يمكن نقلها أو الاتجار بها. بعض العملات الرمزية مقفلة عن طريق عقد ذكي مخصص على إيثيريوم في حين أن العملات الرمزية الأخرى مقفلة عن طريق الحراسة.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+بشكل منفصل، 50.1 في المائة من عملات StarkNet الحالية مخصصة لمؤسسة StarkNet ، لاستخدامها في تحقيق[أهدافها](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(قارن[مشاركة StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). هذه الرموز غير مقفلة. بيد أن المؤسسة ستحتاج إلى وقت لصياغة آلية دقيقة لمواصلة تخصيص تلك الرموز وستشارك خططها في الوقت المناسب.
 
-#### Why lockup?
+#### لماذا حجز؟
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+إن إغلاق الرموز للفترة المذكورة آنفا يضمن اتساق المساهمين الحاليين مع الحوافز الطويلة الأجل لـ StarkNet. كما يعمل على تثبيط المضاربة بشأن الرموز المميزة مسبقاً للاستخدام الواسع النطاق للأغراض المقصودة منها: تأمين الشبكة، ورسوم الدفع، وتطبيق اللامركزية في الحكم.
 
-Next, we explain how the token implementation supports voting and staking.
+وبعد ذلك، نوضح كيف يدعم تنفيذ الرموز الرمزية التصويت والتصويت.
 
-### Voting
+### التصويت
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+وستكون المؤسسة مسؤولة عن تيسير الإدارة السليمة وصياغة آليات التصويت. وصُممت رمز StarkNet (StarkNet Token) بحيث يسمح بالتصويت المباشر ومجموعة من آليات التفويض.
 
-#### L1 voting
+#### تصويت L1
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+يتضمن تطبيق ERC-20 الذي تم نشره الآن**اختياري**استخدام[وحدة التفويض](https://docs.compound.finance/v2/governance/) الخاصة بالمركب. هذه الوحدة النمطية تستخدم على نطاق واسع للتصويت في السلسلة. السبب في أنه اختياري على StarkNet، و إيقاف التشغيل بشكل افتراضي، هو اعتبار التكلفة. والانتقال إلى ذلك يعني أن كل عملية نقل لرموز StarkNet على L1 تتطلب غازا إضافيا مطلوبا لغرض وحيد هو تتبع التحولات في قوة التصويت.
 
 #### Non-L1 voting
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+وتشمل بدائل التصويت على سلسلة L1 مع وحدة الوفود المركبة التصويت من خارج السلسلة، فضلاً عن أنظمة التصويت على سلسلة StarkNet (مثل[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). وهذه البدائل، التي تقلل إلى حد كبير من استهلاك الغاز في عمليات النقل L1، لا تتطلب دعماً صريحاً من رمز ERC-20 المنشور حالياً، ومن ثم فهي مدعومة بطبيعتها.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+وكما ذكر أعلاه، فإن جميع الرموز المميزة - المقفلة والمفتوحة - ستكون قابلة للاستخدام في آلية تصويت StarkNet.
 
-### Staking
+### التقاط
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+يتطلب تشغيل StarkNet، بدون إذن ومقاومة للرقابة، اختيار عشوائي من تسلسل. احتمال اختيار عقدة للتسلسل واقتراح كتلة يتناسب مع عدد رموز StarkNet التي تهم العقدة. يتم شرح الأساس المنطقي لاستخدام عملات StarkNet Tokens (بدلاً من ذلك، ولنقل Ethereum أو Bitcoin) في مقترح الإدارة[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)، والتفاصيل الدقيقة للمخاطر: التسلسل وإنشاء الكتل على StarkNet جاري[مناقشة من قبل المجتمع](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671)، ولم يتم الانتهاء من ذلك بعد.
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+كما هو الحال بالنسبة للتصويت، يمكن استخدام الرموز المميزة للتنصيب حتى عندما تكون مقفلة. وهذا يسهم في تنوع مشغلي شبكة StarkNet وفي قدرة شركة StarkNet على الصمود.
 
 ### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+ويشكل نشر عقود ستارك نيت توكين على إيثيريوم خطوة أخرى في تطبيق اللامركزية في ستاركنيت.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+نحن نحث المطورين والمستخدمين على التحلي بالحذر من الاحتيال! وفي وقت النشر، لا يمكن المتاجرة بأي عملات، وسيظل هذا الوضع غير التجاري قائما إلى أن تصدر مؤسسة StarkNet إشعارا آخر.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+لمزيد من الأسئلة يمكنك الذهاب إلى قناة[Token-discussions](https://discord.gg/qypnmzkhbc)على[StarkNet Discord](http://starknet.io/discord).

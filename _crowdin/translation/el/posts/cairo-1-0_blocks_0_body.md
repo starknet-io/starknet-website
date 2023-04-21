@@ -1,157 +1,157 @@
 ### TL;DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* Το Κάιρο 1.0 είναι η πρώτη μεγάλη απελευθέρωση μετά την[εισαγωγή του Καΐρου](https://medium.com/starkware/hello-cairo-3cb43b13b209)πριν από δύο χρόνια
+* Το Κάιρο 1.0 θα δώσει στους προγραμματιστές μια ασφαλέστερη, απλούστερη, χρησιμότερη γλώσσα προγραμματισμού
+* Στην καρδιά του Καΐρου 1.0 θα είναι η**Σιέρα**, ένα ενδιάμεσο στρώμα αναπαράστασης που υπόσχεται μεγαλύτερη μακροπρόθεσμη σταθερότητα για τα προγράμματα του Καΐρου
+* Η Sierra προωθεί το Κάιρο για να εξυπηρετεί σε ένα δίκτυο χωρίς άδεια:\
+  -**Προστασία του δικτύου**: επιτρέπει την πιο ισχυρή προστασία DoS\
+  -**Προστασία του χρήστη**: επιτρέπει την αντίσταση λογοκρισίας Ethereum-grade. Κάιρο 1. θα επηρεάσει το StarkNet με πολλούς τρόπους. Θα επηρεάσει επίσης την[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). Θα δημοσιεύσουμε περισσότερες πληροφορίες σχετικά με την Regenesis τις επόμενες εβδομάδες.
 
-### Introduction
+### Εισαγωγή
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
+Το 2020 κυκλοφορήσαμε το Κάιρο, μια Turing-complete γλώσσα προγραμματισμού, και κάναμε ένα μεγάλο βήμα προς την υποστήριξη επαληθεύσιμων υπολογισμών χρησιμοποιώντας STARKs. Σήμερα, ανακοινώνουμε**Κάιρο 1.0**, τη μεγαλύτερη πρόοδο του Καΐρου μέχρι σήμερα. Θα εισαγάγει μια βελτιωμένη γλώσσα, με χαρακτηριστικά που θα ενισχύσουν τη χρηστικότητα, την ασφάλεια και την ευκολία. Έχει σχεδιαστεί για να υποστηρίζει τις απαιτήσεις του StarkNet ως δίκτυο χωρίς δικαιώματα, επιτρέποντας στο πρωτόκολλο να γίνει απλούστερο και ασφαλέστερο.\
+Η ανάπτυξη είναι ήδη σε εξέλιξη, και αναμένουμε η πρώτη κυκλοφορία να συμβεί σύντομα.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
+Σε αυτό το post θα περιγράψουμε το ταξίδι του Καΐρου μέχρι στιγμής και θα μοιραστούμε λεπτομέρειες για τα επερχόμενα χαρακτηριστικά.
 
-### The Cairo Journey
+### Το Ταξίδι Του Καΐρου
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+Μέχρι το 2020, χρειαζόταν εξειδικευμένη γνώση για να χτίσει το STARK αποδεδειγμένα προγράμματα γενικής υπολογισμού. Ήταν δυνατό μόνο για όσους κατανόησαν τα σύνθετα μαθηματικά πίσω από τα STARKs. Συγκεκριμένα, για κάθε επιχειρηματική λογική, δηλ. κάθε υπολογισμό, που απαιτείται για τη δημιουργία μιας αλγεβρικής ενδιάμεσης αναπαράστασης (AIR), ένα σύνολο πολυνομικών περιορισμών που αναπαριστά τον συγκεκριμένο υπολογισμό.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+Το Κάιρο γεννήθηκε από τη συνειδητοποίηση ότι ο επαληθεύσιμος υπολογισμός θα πρέπει να είναι διαθέσιμος στους προγραμματιστές παντού. Το Κάιρο επιτρέπει στους προγραμματιστές να αξιοποιήσουν τη δύναμη των STARKs.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
+Η κοινότητα των προγραμματιστών έχει έκτοτε κατασχεθεί στο Κάιρο για να χτίσει με ενθουσιασμό. Τα πάντα στο ακμάζον οικοσύστημα StarkNet σήμερα βασίζονται στο Κάιρο. Μεταξύ[StarkNet](https://starkware.co/starknet/)και[StarkEx](https://starkware.co/starkex/), οι εφαρμογές που κινούνται με το Κάιρο έχουν επεξεργαστεί μέσω συναλλαγών 220M, έκοψε περισσότερα από 65M NFT, και χειρίστηκε $ 700B αξίας των συναλλαγών, όλα εγκαταστάθηκαν στο Ethereum.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
+Ενώ το Κάιρο έκανε προσιτές τις STARKs αρχικά σχεδιάστηκε ως γλώσσα συναρμολόγησης, και ως εκ τούτου γράφτηκε ως γλώσσα χαμηλού επιπέδου.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+![Ένα παράδειγμα για τα πρώιμα προγράμματα που γράφτηκαν στο Κάιρο](/assets/cairocode_01.png "Ένα παράδειγμα για τα πρώιμα προγράμματα που γράφτηκαν στο Κάιρο")
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+Προκλήθηκε από την ανατροφοδότηση από τους προγραμματιστές και την άνοδο του[StarkNet](https://starkware.co/starknet/), κάναμε σταδιακά το Κάιρο πιο εκφραστικό και πιο φιλικό προς τον προγραμματιστή.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+![Ένα παράδειγμα από τη σύμβαση ERC-20 Κάιρο που αποδεικνύει την υποστήριξη μεταβλητών, αν δηλώσεις, λάθη και UINT256 βιβλιοθήκη](/assets/cairocode_02.png "Ένα παράδειγμα από τη σύμβαση ERC-20 Κάιρο που αποδεικνύει την υποστήριξη μεταβλητών, αν δηλώσεις, λάθη και UINT256 βιβλιοθήκη")
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+Αλλά σύντομα καταλήξαμε στο συμπέρασμα ότι είναι καιρός να κάνουμε ένα μεγάλο άλμα προς τα εμπρός και, αντί για σταδιακές βελτιώσεις στο Κάιρο, πηγαίνετε για πιο τολμηρή μεταμόρφωση.
 
 ### Cairo 1.0
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+Για Το Κάιρο 1. έχουμε χτίσει ένα εντελώς νέο μεταγλωττιστή από το έδαφος, το οποίο θα παρέχει στους προγραμματιστές χαρακτηριστικά ασφαλείας, και θα τους επιτρέψει να γράψουν συμβάσεις με απλούστερο και πιο εκφραστικό τρόπο.
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+#### Παρουσίαση Sierra: η εξασφάλιση κάθε λειτουργίας του Καΐρου μπορεί να αποδειχθεί
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+Η κύρια προσθήκη στο Κάιρο 1. είναι η Σιέρα (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion). Η Σιέρα αποτελεί ένα νέο ενδιάμεσο επίπεδο αναπαράστασης μεταξύ του κώδικα του Καΐρου 1.0 και του ψηφιολέξεων του Καΐρου. Στόχος της Sierra είναι να διασφαλίσει ότι κάθε τρέξιμο του Καΐρου — δηλαδή ένα πρόγραμμα του Καΐρου και η εισαγωγή του - μπορεί να αποδειχθεί (δείτε περισσότερα παρακάτω).
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+Η Σιέρα υπόσχεται καλύτερο μελλοντικό κώδικα για το Κάιρο. Περαιτέρω σταθερότητα παρέχεται από το γεγονός ότι οι συμβάσεις της StarkNet δεν θα χρειαστεί να ανασυνταχθούν σε περίπτωση βελτίωσης του υποκείμενου συστήματος (π. χ. ., CPU AIR αρχιτεκτονική αλλαγές, βελτιώσεις της τελικής μετάφρασης από τη Σιέρα στον κώδικα byte του Καΐρου).
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
+**Αποδεικνύοντας κάθε τρέξιμο του Καΐρου.**Στο παλιό Κάιρο, μια διαδρομή Κάιρο μπορεί να οδηγήσει σε τρεις περιπτώσεις — ΑΛΗΘΕΙ, ΦΑΛΕΙΑ ή αποτυχία. Αποτυχία εκτέλεσης δεν μπορεί να αποδειχθεί. Η Σιέρρα, εξασφαλίζει ότι ένα τρέξιμο του Καΐρου δεν θα αποτύχει ποτέ, και μπορεί να οδηγήσει μόνο σε TRUE ή FALSE. Αυτό με τη σειρά του, εξασφαλίζει ότι κάθε τρέξιμο του Καΐρου μπορεί να αποδειχθεί.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
+Αυτή η εισαγωγή της Σιέρα έχει σημαντικές επιπτώσεις για το StarkNet ως άχρηστο δίκτυο. Η Sierra διασφαλίζει ότι ακόμη και οι επανακτημένες συναλλαγές μπορούν να συμπεριληφθούν στα μπλοκ του StarkNet. Αυτή η ιδιότητα θα επιτρέψει στο πρωτόκολλο StarkNet να παραμείνει άπαχο και απλό χωρίς την ανάγκη προσθήκης πολύπλοκων κρυπτο-οικονομικών μηχανισμών.\
+Δύο σημαντικά παραδείγματα:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+1. Οι αλληλουχίες θα είναι σε θέση να εισπράττουν τέλη για επανακτημένες συναλλαγές, επιτρέποντας στο StarkNet να αποτρέψει το Sequencer DoS με καθιερωμένο τρόπο.
+2. Η εφαρμογή αναγκαστικών συναλλαγών L1 θα είναι δυνατή, επιτρέποντας στην StarkNet να κληρονομήσει την πλήρη αντίσταση λογοκρισίας του Ethereum.
 
-### **Language Features**
+### **Χαρακτηριστικά Γλώσσας**
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
+Το Κάιρο 1.0 θα προσφέρει πολλές βελτιώσεις στη γλώσσα προγραμματισμού. Δεν είναι όλα που αναφέρονται παρακάτω θα είναι μέρος της πρώτης κυκλοφορίας, αλλά είναι μέρος του οδικού χάρτη.
 
-#### **Improved syntax**
+#### **Βελτιωμένη σύνταξη**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+* Δεν υπάρχει πλέον*τοπικό*και*tempvar*. Τώρα χρειαζόμαστε μόνο*αφήστε*για να τους κυβερνήσετε όλες τις μεταβλητές.
+* Βελτιώθηκε*εάν*σύνταξη δηλώσεων
 
 ```python
-#Old
-if cond != 0 {
+#Παλιό
+αν cond ! 0 {
   tempvar x = x+1;
 } else {
   tempvar x = x;
 }
 __________________________________
 #New
-if cond { x = x + 1; }
+εάν cond {x = x + 1; }
 ```
 
-#### **Type safety guarantees**
+#### **Εγγυήσεις ασφάλειας τύπου**
 
-The compiler will use strong typing to improve the security of the code. For example:
+Ο μεταγλωττιστής θα χρησιμοποιήσει ισχυρή πληκτρολόγηση για να βελτιώσει την ασφάλεια του κώδικα. Για παράδειγμα:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
+* Οι δείκτες θα δείχνουν πάντα την αρχικοποίηση της μνήμης.
+* Τα λεξικά θα είναι πάντα σκουριασμένα, σε αντίθεση με το να αφήσετε την ευθύνη να καλέσετε squash_dict στον προγραμματιστή.
 
-#### **Easier to use language constructs**
+#### **Ευκολότερη χρήση γλωσσικών κατασκευών**
 
-For example:
+Για παράδειγμα:
 
-* For loops
+* Για βρόγχους
 
 ```
 let sum = 0
-for x in iter {
+for x in iter ↑
   sum = sum + x;
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+* Δυαδικές εκφράσεις
+* Ακέραιοι αριθμοί (με κανονικό ακέραιο τμήμα 👯)
+* Προστασία υπερχείλισης για τους σχετικούς τύπους
+* Δυαδικές συνθήκες
 
 ```
-#Old
-If cond1:
+#Παλιό
+Αν cond1:
   if cond2:
        # Some code
   else if cond3:
        # Same code
 __________________________________
 #New
-If cond1 && (cond2 || cond3) { … }
+If cond1 && (cond2 - cond3) mptom … }
 ```
 
-#### **A fully fledged type system**
+#### **Ένα πλήρες σύστημα τύπου**
 
-* Abstract data types (i.e. Rust-like enum)
+* Τύποι αφηρημένων δεδομένων (π.χ. Σκωρόχρωμος ήλιος)
 
 ```
-enum Option<T> {
+enum Option<T> mptom
  Some: T,
  None,
 }
-match result {
- Some(r) => {..},
- None => {..},
+αποτέλεσμα αντιστοίχισης {
+ Κάποιος (r) => {..},
+ Κανένα => {..},
 }
 ```
 
 * Traits
 
 ```
-trait Add<Uint256> {
+trait Add<Uint256> mptom
     fn add(…) { … }
 }
 
 let a: Uint256 = 1;
 let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+a + b; // Αξιολογήθηκε σε 5 του τύπου Uint256.
 ```
 
-#### **More intuitive libraries**
+#### **Περισσότερες διαισθητικές βιβλιοθήκες**
 
-(e.g. dict, arrays)
+(π.χ. dict, arrays)
 
-* Dict<Uint256, MyStruct>;
-* Array<MyOtherStruct>;
+* Dict<Uint256, MyStruct>
+* Διάταξη<MyOtherStruct>;
 
-#### **More optimized code**
+#### **Πιο βελτιστοποιημένος κώδικας**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+Δεν χρειάζεται να δηλώσει ρητά την κατανομή των τοπικών μεταβλητών - αυτόματη ανίχνευση και να γίνει αυτόματα.
 
-#### **Better compiler integration**
+#### **Καλύτερη ενσωμάτωση μεταγλωττιστή**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+Ενεργοποίηση καλύτερης υποστήριξης IDE, διαχείρισης πακέτων και καλύτερη διευκόλυνση των κοινοτικών συνεισφορών.
 
-### **Conclusion**
+### **Συμπέρασμα**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+Δύο χρόνια μετά το Κάιρο χρησιμοποιήθηκε για πρώτη φορά στην παραγωγή, αναπτύσσουμε το Κάιρο 1.0, το οποίο θα προσφέρει βελτιωμένη εκφραστικότητα, ασφάλεια και σύνταξη. Θα πάρει ένα μεγάλο άλμα προς τα εμπρός, επιτρέποντας στους προγραμματιστές να γράψουν ευκολότερα τα συμβόλαια StarkNet τους.
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+Σε μια άλλη ανάρτηση, ερχόμενη σύντομα, θα μοιραστούμε περισσότερες λεπτομέρειες για το πώς το Κάιρο 1. θα επηρεάσει την αναγέννηση του StarkNet και πώς οι προγραμματιστές πρέπει να προετοιμαστούν για την απελευθέρωσή του.

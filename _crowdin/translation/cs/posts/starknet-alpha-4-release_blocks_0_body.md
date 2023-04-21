@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Vzrušující časy vpřed
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alfa 4 byla dnes vydána na Goerli. Tato verze je kandidátem na vydání Mainnet, a pokud vše půjde podle plánu, bude do konce měsíce nasazena na Mainnet.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alfa 4 sleduje vydání alfa 3 v balení, které mimo jiné zahrnuje vylepšení v Káhiře kompilační doby, smluvních konstruktorů a mnohem více (viz[poznámky k plnému vydání](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
 Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
 
-### New Features
+### Nové funkce
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Přestože se tato verze zaměřuje především na připravenost na nasazení Mainnet, obsahuje také několik nových funkcí:
 
-#### Get this contract’s address
+#### Získat adresu této smlouvy
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+Smlouvy mohou nyní získat svou vlastní adresu prostřednictvím nového syscall \`get_contract_address\`. Konečně můžeme přestat uzavírat smlouvu o soběstačnosti.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Selektivní neproporcionální zajištění (pojištění majetku)</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10. listopadu, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Hash bloku
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Bloky jsou nyní identifikovány spíše pomocí hash než Id. To následuje po posledním přechodu na hashy transakcí. Všechny schválené systémy pro uveřejňování informací byly odpovídajícím způsobem aktualizovány. Brzy zveřejníme úplnou technickou dokumentaci systému, která bude zahrnovat také specifikaci blokové struktury.
 
-#### Contract Addresses
+#### Adresa kontraktu
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Tato verze zavádí změnu způsobu výpočtu smluvních adres. Adresa je hash Pedersen na adrese volajícího, sůl (náhodně nebo vybraná nasazovatelem), kód smlouvy hash a hash argumentů konstruktoru, všechny připojené prefixem.
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash(PREFIX, caller_adresa, sůl, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+V současné verzi se adresa volajícího vždy rovná 0, ale v budoucích verzích umožní nasazení smluv přímo ze stávajících smluv.
 
-Note that this scheme is very similar to CREATE2.
+Je třeba poznamenat, že tento režim je velmi podobný CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Viz poznámky k úplnému vydání](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### Tokenské mosty
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Tokenské mosty jsou klíčovou součástí infrastruktury StarkNet. Umožňují převod finančních prostředků na StarkNet. Most není v době zveřejnění nasazen, ale měl by být k dispozici během několika dnů – spolu s úplnou dokumentací jeho funkčnosti a používání. Jedna věc důležitá je to, že most používá protokol[L1<>L2 zprávy](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). Jako taková nabízí krátké lhůty pro výběr – jakmile je stažení zahrnuto do šarže a přijato na úrovni L1, finanční prostředky jsou okamžitě k dispozici uživateli na L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Toto je první verze symbolických mostů a rádi bychom na ni získali zpětnou vazbu od ekosystému.
 
-### Join StarkNet
+### Připojit se k StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Nikdy nebyl lepší čas na připojení se k rostoucí komunitě StarkNet. Můžete se připojit ke konverzaci v[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y), zúčastnit se[online workshopu](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8). nebo použijte jeden z[výukových kurzů](https://www.cairo-lang.org/docs/hello_starknet/index.html), abyste začali vytvářet svou první vlastní aplikaci.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Aktualizace (Nov. 2021):**StarkNet Alpha je živá na Ethereum Mainnet

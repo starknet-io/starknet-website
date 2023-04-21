@@ -1,49 +1,49 @@
 ### TL;DR
 
-L2-native dApps can now flourish free of traditional L1 gas restrictions
+L2-native dApps poate acum să înflorească fără restricții tradiționale de gaze L1
 
-### Introduction
+### Introducere
 
-dApp developers have always faced severe constraints due to Ethereum’s (L1) block gas limit. It limits not only *how* those dApps operate but also *what* those dApps are capable of doing.
+dezvoltatorii dApp s-au confruntat întotdeauna cu constrângeri severe din cauza blocului de gaze Ethereum (L1). Aceasta limitează nu numai*modul în care*acele dApps funcționează, ci și*ce*acele dApps sunt capabile să facă.
 
-Layer 2 (L2) offers dApp developers a computational greenfield, free of this gas glass ceiling. We believe that the vast majority of dApps will be L2-native within a couple of years: they will have been built from the ground up on L2 to benefit from this computational degree of freedom.
+Nivelul 2 (L2) oferă dezvoltatorilor dApp un greenfield computațional, fără acest tavan de sticlă. Credem că marea majoritate a dApps va fi L2-nativ în câţiva ani: acestea vor fi fost construite de pe pământ în sus pe L2 pentru a beneficia de acest grad de libertate computațională.
 
-### L1 gas limits shape L1-native dApps
+### L1 formă L1-native dApps
 
-*Let us consider two examples of popular dApps whose design is profoundly shaped by L1 gas constraints: AMMs and DEX aggregators.*
+*Haideţi să luăm în considerare două exemple de aplicaţii dApps populare, a căror proiectare este profund modelată de constrângerile de gaze L1: agregatori AMM şi DEX.*
 
-An Automated Market Maker (AMM) is essentially a low-gas approximation of an order-book-based exchange. Instead of allowing users to place and remove limits, stop loss, or a variety of other order types, L1 AMMs only allow for simple swaps with a central underlying liquidity pool — to accommodate the intense computational cost of L1.
+Un producător automatizat de piață (AMM) este în esență o aproximare mică de gaze a unui schimb de ordine pe bază de carte. În loc să permită utilizatorilor să plaseze și să elimine limite, stop loss, sau o varietate de alte tipuri de ordine, L1 AMM permit doar swapuri simple cu un portofoliu central de lichidități subiacent – pentru a ține cont de costurile de calcul intense ale L1.
 
-DEX aggregators ideally need access to all possible liquidity pools, even the smallest liquidity pool, to leverage the best prices for users. However, because of the cost of querying many different pools, it is simply not worth transacting over L1. It is justifiable to access pools and pay the associated transaction fees only when liquidity pools have sufficiently deep liquidity. In a similar vein, liquidations in lending/borrowing and other collateral-based dApps could be much more accurate if the difference between liquidation discount and transaction fee was much smaller.
+În mod ideal, agregatorii DEX au nevoie de acces la toate pool-urile de lichidități posibile, chiar și la cel mai mic portofoliu de lichidități, pentru a obține cele mai bune prețuri pentru utilizatori. Cu toate acestea, din cauza costului de a interoga mai multe pool-uri diferite, pur și simplu nu merită să fie transferat peste L1. Este justificabil să se acceseze pool-urile și să se plătească comisioanele de tranzacție asociate numai atunci când fondurile de lichidități au lichidități suficient de mari. Într-o venă similară, lichidările în domeniul împrumuturilor/împrumuturilor și alte dApps bazate pe garanții reale ar putea fi mult mai precise dacă diferența dintre reducerea de lichidare și comisionul de tranzacție ar fi mult mai mică.
 
-The limited functionality and design of many L1 dApps directly result from developers optimizing their code to abide by Ethereum’s gas constraints. Why, you may ask, do we say Ethereum? Can’t Solidity code run on many L1s and even some L2s? Indeed, but of these, Ethereum is the most expensive (and, therefore, secure) environment. Solidity dApps are designed for “the most expensive link”, i.e., Ethereum. Hence, they do not benefit from the computational advantage afforded by less expensive runtime environments. To unlock functionality foregone by designing a dApp for the most expensive runtime environment, the dApp’s code must be adapted.
+Funcționalitatea limitată și designul multor dApps L1 rezultă direct de la dezvoltatori care își optimizează codul pentru a respecta constrângerile legate de gaz ale lui Ethereum. De ce, ați putea întreba, noi spunem Ethereum? Nu se poate rula codul de soliditate pe multe L1s și chiar L2? Într-adevăr, dar dintre acestea, Ethereum este cel mai scump (și, prin urmare, sigur) mediu. DApps soliditar sunt proiectate pentru „cea mai scumpă legătură”, adică Ethereum. Prin urmare, ele nu beneficiază de avantajul computațional pe care îl oferă mediile mai puțin costisitoare. Pentru a debloca funcționalitatea a fost ignorată prin proiectarea unei dApp pentru cel mai scump mediu rulant, codul dApp trebuie adaptat.
 
-### The rise of L2-native dApps
+### Creșterea dApp-ului L2-nativ
 
-Validity Rollups (aka ZK-Rollups) enable extremely cheap computation. Unlike any other scaling solution — the L2 computation can grow exponentially with only a small impact on the on-chain verification gas cost. In addition, a Validity Rollup processes inputs to the computations — “witness data” — without consuming additional L1 resources, allowing for computations with many inputs.
+Validitatea Rollups (aka ZK-Rollups) permite un calcul extrem de ieftin. Spre deosebire de orice altă soluție de scalare – calculul L2 poate crește exponențial, cu doar un impact mic asupra costului gazului de verificare în lanț. În plus, o Validity Rollup procesează intrări în calcule – „date ale martorilor” – fără a consuma resurse suplimentare de nivel 1, permițând calcule cu multe intrări.
 
-Coding dApps natively on L2 in **[Cairo](https://www.cairo-lang.org/)** (a Turing-complete language to scale dApps via STARK proofs) unlocks a vast realm of possibilities for developers. It enables them to use significant amounts of data — both computational and witness data — that they couldn’t use before.
+Codificarea dApps nativ pe L2 în**[Cairo](https://www.cairo-lang.org/)**(o limbă completă la scară dApps prin intermediul dovezilor STARK) deblochează un vast domeniu de posibilități pentru dezvoltatori. Aceasta le permite să utilizeze cantități semnificative de date – atât date de calcul, cât și date referitoare la martori – pe care nu le-au putut utiliza înainte.
 
-Let’s explore such L2-native dApps and their new, enriched capabilities.
+Hai să explorăm astfel de aplicații L2-native și noile lor capacități îmbogățite.
 
 #### DeFi
 
-Before onboarding to StarkEx, StarkWare’s Validity Rollup, dYdX operated as an L1 dApp on Ethereum. It offered its users leverage of x10 on synthetic assets and supported positions with only one synthetic asset. Rebuilding dYdX in Cairo as an L2-native dApp provides a dramatically more scalable, cheaper, and efficient DeFi platform:
+Înainte de a te înscrie pe StarkEx, Validitatea StarkWare Rollup, dYdX a funcționat ca un dApp L1 pe Ethereum. Acesta a oferit utilizatorilor săi un efect de levier de x10 pe active sintetice și poziții sprijinite cu un singur activ sintetic. Reconstruirea dYdX în Cairo ca L2-native dApp oferă o platformă DeFi mult mai scalabilă, mai ieftină și mai eficientă:
 
-* Oracle price updates: Such updates typically include dozens of prices and signatures from various sources to calculate a median. A Validity Rollup provides exponential scaling of the price oracle logic (signature verification and calculation of the median price) — without reporting that witness data to L1. Compare this to dYdX’s L1 implementation, where every price oracle update cost about 300K gas and was, therefore, limited in its frequency and the size of the set of price reporters.
-* Leverage: An accurate price feed allows dYdX to estimate the risk of a position in real-time and offer higher leverage for users. Thanks to the improved oracle price updates, dYdX increased leverage from x10 on L1 to x25 on L2.
-* Cross-margin: With dYdX on L2, market makers can put long/short orders on many assets using the same collateral. The average settlement on dYdX’s L2 involves positions with more than 10 different synthetic assets! By comparison, having this cross-margin ability on L1 would have more than doubled the on-chain gas cost.
+* Actualizări ale prețului oracului: Astfel de actualizări includ de obicei zeci de prețuri și semnături din diferite surse pentru a calcula un median. Un Rollup Validity oferă o scalare exponențială a logicii oracolului de preț (verificarea semnăturii și calcularea prețului mediu) – fără a raporta aceste date ale martorilor la L1. Compară acest lucru cu implementarea L1 a dYdX, unde fiecare oracle de preț actualizează costă aproximativ 300 K gaz și era, prin urmare, limitată ca frecvenţă şi ca mărime a setului de raportori de preţuri.
+* Levier: Un flux de preț precis permite dYdX să estimeze riscul unei poziții în timp real și să ofere un efect de levier mai mare pentru utilizatori. Datorită îmbunătățirii actualizărilor de preț ale oracelelor, dYdX a crescut efectul de levier de la x10 la L1 x 25 la L2.
+* Margine întreagă: Cu dYdX pe L2, formatorii de piață pot plasa ordine lungi/scurte pe multe active utilizând aceeași garanție. Tranzacția medie pe L2 dYdX implică poziții cu mai mult de 10 active sintetice diferite! Prin comparație, această capacitate a marjei încrucișate pe L1 ar fi fost mai mare decât dublul costului gazului în lanț.
 
-#### Gaming and Generative Art
+#### Jocuri și artă generativă
 
-The current crop of L1-native games typically store game assets on L1 while implementing the entire game logic in a trusted off-chain application. This pattern is a direct result of L1’s gas limitations. Thanks to cheap computation on L2, developers of L2-native gaming dApps can now implement the game logic in a smart contract and manipulate the game assets trustlessly, rather than just storing them. Bringing game logic into the realm of trustless computation is a significant step towards a much richer world of blockchain-based games. L2-native games are already being developed on StarkNet, StarkWare’s permissionless network (e.g., [Dope Wars](https://github.com/dopedao/RYO) and [Influence](https://medium.com/influenceth/influence-to-launch-on-starknet-afd3c26ea25a)).
+Cultura curentă a jocurilor L1-native stochează de obicei activele jocului pe L1 în timp ce implementezi întreaga logică a jocului într-o aplicație de încredere în afara lanțului. Acest model este rezultatul direct al limitării gazului din L1. Datorită calculelor ieftine pe L2, dezvoltatorii de L2-native dApps de gaming pot implementa acum logica jocului într-un contract inteligent și manipula activele jocului fără încredere, în loc să le stocheze. Introducerea logicii jocurilor în domeniul calculelor fără încredere este un pas semnificativ către o lume mult mai bogată a jocurilor bazate pe blockchain. Jocurile L2-native sunt deja dezvoltate pe StarkNet, rețeaua fără permisiuni a StarkWare (de exemplu,[Dope Wars](https://github.com/dopedao/RYO)și[Influență](https://medium.com/influenceth/influence-to-launch-on-starknet-afd3c26ea25a)).
 
-But, how complex can a blockchain-based game really be? For example, handling graphics directly on-chain seems impossible — [or is it](https://twitter.com/guiltygyoza/status/1449637155001798657)? Solving differential equations and simulating planar motion in a smart contract represents a significant step towards what in the future could be a blockchain physics engine. The implications are huge. Imagine a competitive multiplayer game like Counter-Strike. If one could simulate the game logic on-chain, many dreaded hacks would become a thing of the past — players could enjoy a provably fair game.
+Dar cât de complex poate fi cu adevărat un joc bazat pe blockchain? De exemplu, manipularea graficelor direct în lanț pare imposibilă -[sau este](https://twitter.com/guiltygyoza/status/1449637155001798657)? Rezolvarea ecuațiilor diferențiate și simularea unei mișcări planare într-un contract inteligent reprezintă un pas important către ceea ce în viitor ar putea fi un motor fizic. Implicaţiile sunt imense. Imaginați-vă un joc multijucător competitiv precum Counter-Strike. Dacă cineva ar putea simula logica jocului în lanț, multe hack-uri temute ar deveni ceva de trecut - jucătorii s-ar putea bucura de un joc potrivit pentru totdeauna.
 
-Generative Art uses computation, randomness, and other data to create blockchain-based art. The more complex logic and computation an artist can use trustlessly, the more options exist to generate unique singular pieces of art. [WhaleStreet DAO](https://blog.whalestreet.xyz/whalestreet-dao-to-launch-gen-art-ecosystem-on-ethereum-with-starknet/) is launching one of the first Gen Art projects on StarkNet, taking advantage of StarkNet’s unlimited computational resources.
+Generative Art folosește calculul, aleatoriu și alte date pentru a crea artă bazată pe blockchain. Logica mai complexă și computația pe care un artist le poate folosi fără încredere, cu cât există mai multe opțiuni pentru a genera piese unice de artă. [WhaleStreet DAO](https://blog.whalestreet.xyz/whalestreet-dao-to-launch-gen-art-ecosystem-on-ethereum-with-starknet/)lansează unul dintre primele proiecte de artă Gen pe StarkNet, profitând de resursele computaționale nelimitate ale StarkNet.
 
-### What’s next?
+### Ce urmează?
 
-Validity Rollups — and Cairo-powered StarkEx and StarkNet, in particular — provide an environment where one can develop and operate dApps that consume a lot of computation or witness data. With all the benefits of distributed ledger technology, we predict an immensely exciting future for L2-native dApps.
+Validity Rollups — and Cairo-powered StarkEx and StarkNet, în special — oferă un mediu în care se pot dezvolta și exploata aplicații dApps care consumă o mulțime de date de calcul sau de martori. Cu toate beneficiile tehnologiei de registru distribuite, prezicem un viitor extrem de interesant pentru L2-native dApps.
 
-What can *you* create with general computation supported by composability, trustlessness, and decentralization?
+Ce puteți**crea cu calcule generale susținute de compozabilitate, neîncredere și descentralizare?

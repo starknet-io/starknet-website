@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Řazené sady transakcí Starknet, které se provádějí pomocí systému Starknet, To vede k jedné souhrnné změně stavu, která je poté zavázána k hlavní smlouvě Starknet L1. Blok:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … hash bloku - jedinečný stabilní identifikátor, který lze použít k dotazu a odkazovat na blok.
+* … číslo bloku – pořadové číslo představující umístění bloku v posloupnosti přijatých bloků v Starknetu. Pozor, číslo bloku se může časem měnit. Zadané číslo se také může vztahovat na různé bloky v různých okamžicích, např. v případě řetězových objednávek typu L1.

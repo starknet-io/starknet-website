@@ -1,68 +1,68 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* StarkNet Foundation è ufficialmente lanciato
+* È dedicato a sostenere una fiorente StarkNet
+* Il forte consiglio interdisciplinare guiderà la Fondazione
+* La Fondazione è indipendente da StarkWare
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)sta compiendo un passo importante verso la sua futura struttura di governance della comunità, con l'istituzione della Fondazione StarkNet.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+Questo post delinea la missione della Fondazione, introduce i suoi registi, e discute brevemente l'esperienza e i valori che portano al tavolo.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+La Fondazione è stata creata per soddisfare la visione della[proposta di decentramento](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)di StarkNet, come pubblicato nel luglio 2022, e ha pubblicato il proprio “Ciao Mondo” post[qui](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### Avanzare la visione di Starknet
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet è un Rollup di Validità dello Strato 2 (L2) decentralizzato senza permesso (spesso denominato ZK-Rollup), destinato a scalare Ethereum pur mantenendo la sicurezza e il decentramento di Ethereum. In linea con tale missione, la Fondazione è stata istituita come entità indipendente per promuovere la tecnologia condivisa che è StarkNet. Inoltre, come entità senza scopo di lucro con una missione ristretta: far avanzare StarkNet come bene pubblico per tutti, e mantenerlo in quanto tale per gli anni a venire.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+La Fondazione lancia con 50. % della fornitura iniziale di Token per garantire che le risorse della rete siano effettivamente impiegate per conseguire i seguenti obiettivi: la manutenzione e la sicurezza di StarkNet come bene pubblico; il proseguimento dello sviluppo e dell'espansione della rete e il sostegno a una cultura di collaborazione costruttiva tra gli sviluppatori.
 
-#### **The foundation’s priorities will include:**
+#### **Le priorità della fondazione comprenderanno:**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**Promuovere la comunità**di utenti StarkNet, sviluppatori e ricercatori mentre danno vita a StarkNet costruendo infrastrutture, strumenti, applicazioni e altro ancora.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**Espandere la comunità**educando su StarkNet e la sua tecnologia, aiutare gli sviluppatori ad acquisire le competenze per costruire l'infrastruttura di StarkNet, così come dApps che sfruttano il potere di STARKs.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**Controllare lo sviluppo continuo della rete e promuovere la ricerca,**che sono elementi chiave per aiutare la rete a realizzare la sua visione.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**Promuovere il decentramento di StarkNet**sviluppando meccanismi di governance di StarkNet e istituendo sequenziamenti e dimostrazioni decentralizzate.
 
-### **Introducing the board**
+### **Introduzione del consiglio di amministrazione**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+Un consiglio di amministrazione di sette membri governerà la Fondazione. I membri del consiglio di amministrazione provengono da contesti diversi e portano equilibrio, indipendenza e una gamma multidisciplinare di competenze al tavolo. Ogni membro ha esperienza ed esperienza che aiuterà StarkNet a realizzare il suo potenziale come un bene comune duraturo. Nel loro post «[Ciao mondo](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)», danno la loro visione di ciò che li motiva ad essere coinvolti in StarkNet. Essi sono presentati in ordine alfabetico secondo i nomi.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)Ex vicecapo capo della tecnologia degli Stati Uniti; ex vicepresidente e direttore generale dell'ICANN, l'organo indipendente che gestisce le infrastrutture di Internet.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)**Matematico e informatico; Presidente di StarkWare e Co-fondatore; Co-inventore dei protocolli STARK, FRI e Zerocash e uno scienziato fondatore di Zcash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: leader del pensiero Blockchain e whistleblower, noto per aver esposto difetti sistemici in progetti di cryptoasset ad alto profilo; consulente in materia di criptovalute presso la Human Rights Foundation; ex Chief Investment Officer presso Arcane Assets.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’. Partner generale presso OSS Capital e consulente legale di StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Matematico e informatico; contributore di base alla matematica su cui si basano le prove STARK; Professore associato presso l'Università di Toronto; Consulente scientifico di StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stanжczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: sviluppatore Blockchain che ha costruito componenti di base di Ethereum; Fondatore di Nizza, una delle più grandi squadre che costruiscono su Ethereum e StarkNet.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)Entrepreneur; StarkWare CEO e Co-fondatore. Prima di StarkWare, ha co-fondato aziende che sviluppano una gamma di prodotti tecnologici, tra cui fibre ottiche, strumenti di visualizzazione dati, ecc.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+Gli sfondi di questi membri forniscono un eccellente toolbox di competenze e una notevole esperienza che equipaggia bene la Fondazione per il futuro.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+Andrew e Heather portano forti credenziali dal bene pubblico e progetti open source. Heather è rinomata per aver sostenuto la licenza di software libero e aperto. Andrew è stata una figura centrale per anni in ICANN, l'organizzazione che ha contribuito a plasmare internet, nei suoi primi anni, come una comunità decentralizzata buona. Lo ha fatto attraverso processi dal basso verso l'alto, basati sul consenso. Proprio un tale processo è necessario per StarkNet per raggiungere gli obiettivi di Web3.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+La scheda riflette anche la significativa esperienza di cripto attraverso numerose catene. Tomasz ha lavorato su sviluppo dei componenti principali di Ethereum — e di StarkNet. Eli era uno scienziato fondatore a Zcash prima di pioneggiare la tecnologia dietro StarkNet, e Andrew oggi siede sul bordo della Electric Coin Company, che costruisce e supporta la tecnologia Zcash .
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+Il consiglio ha esperienza di business e CEO, da Tomasz e Uri, e ha esperienza in informatica e matematica — e in particolare STARK — da Shubhangi e Eli. Tre membri del consiglio di amministrazione, Tomasz, Uri e Eli sono stati profondamente coinvolti nella costruzione di StarkNet.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+Tutti i membri si battono per quello che credono. Eric è andato al punto di lasciare un ruolo senior a Nasdaq-posseduto Cinnober quando ha minacciato di limitare la sua indipendenza per pubblicare le sue opinioni riguardo crypto. Come una tecnologia di divulgazione della Fondazione che offre[integrità al calcolo,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)è adatto per assemblare una scheda con tale integrità.
 
-### **An Independent Foundation**
+### **Una Fondazione Indipendente**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+La Fondazione è un'entità indipendente che sosterrà coloro che costruiscono, utilizzano e mantengono un bene pubblico, vale a dire il Protocollo di StarkNet. Come per Internet, Bitcoin ed Ethereum, StarkNet è una tecnologia condivisa che è costruita come una rete decentrata resistente alla censura dove chiunque può partecipare e sviluppare liberamente e in modo permissionistico, senza la necessità di fidarsi di terzi.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+La nuova fondazione è un'entità senza scopo di lucro che è stata istituita soprattutto per far avanzare e mantenere StarkNet come bene pubblico. La Fondazione, insieme a un insieme inclusivo di sviluppatori indipendenti, start-up, utenti aziendali, e il pubblico in generale sarà sempre libero di usare e migliorare StarkNet per i propri scopi e per il bene di chiunque voglia interagire e transagire in modo sicuro.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+La Fondazione è indipendente e libera di assumere qualsiasi posizione scelga per quanto riguarda StarkNet. Le decisioni devono essere prese a maggioranza semplice, o a cinque su sette in casi speciali, come la rimozione e la nomina dei membri del consiglio di fondazione. Nelle decisioni in cui le posizioni esterne dei membri del consiglio di amministrazione presentano un conflitto di interessi, la Fondazione impone a tali membri di ritirarsi dal voto.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+La Fondazione dispone di notevoli mezzi per svolgere la sua missione: 5.01 miliardi di StarkNet Tokens sono stati assegnati alla Fondazione, vale a dire 50. % della fornitura iniziale di Token di 10 miliardi di Token (vedi[parte 3 della nostra proposta di governance](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)per maggiori informazioni).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+Ci sono molti dettagli da decidere che plasmeranno la direzione futura di StarkNet. Fortunatamente, l'istituzione della Fondazione porta più voci da una comunità in crescita. StarkWare rimane una parte impegnata di questa comunità e siamo lieti di accogliere il grande ecosistema StarkNet per acquisire più proprietà del futuro della rete. Il viaggio di StarkNet è ora nelle mani di un equipaggio decentralizzato, e la Fondazione svolgerà un ruolo importante nel contribuire a garantire che sia fluida. Tutti a StarkWare augurano al nuovo corpo grande successo nella sua missione.

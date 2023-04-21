@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+Marraskuun 2022 lopulla ilmoitettiin [Starknet-säätiön](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) käynnistämisestä. Säätiö on riippumaton organisaatio, joka on omistautunut ymmärtämään Starknet'n näkemyksen kehittymisestä kukoistavaksi, hajautetuksi ja luvattomaksi Layer 2 (L2) Validity Rollup (alias ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+Johtimessa on vahva [poikkitieteellinen johtokunta](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) Starknet-säätiö on hyvässä asemassa, jotta se voi edistää ja laajentaa Starknet-yhteisöä, verkon jatkuvan kehittämisen valvonta, luvattomien hallintomekanismien kehittäminen ja Starknet-ekosysteemin täysimääräisen hajauttamisen toteuttaminen. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Säätiö on tänään innoissaan siitä, että se julkistaa viiden komitean nimittämisen. kullakin tehtävällä on erityinen toimeksianto, joka vastaa Starknetin tehtävää ja ensisijaisia tavoitteita. Kunkin valiokunnan toimikausi ei ole kivinen ja sille tehdään rutiiniluonteisia arviointeja, joihin tehdään tarvittaessa muutoksia ja tarkistuksia.
 
-The committees are:
+Komiteat ovat seuraavat:
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* Varauksia Käsittelevä Komitea
+* Varhaisten Hyväksyttävien Avustusten Komitea
+* Kehittäjien Kumppanuuskomitea
+* Hallinto- Ja Ohjauskomitea
+* Ekosystem Onboarding -komitea
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+Jäljempänä jaamme valiokuntia koskevia yksityiskohtia, kuten niiden toimivaltuuksia, operaatioita ja alkuperäisiä jäseniä.
 
-## Introducing the Starknet Foundation Committees 
+## Starknet'n säätiön komiteoiden käyttöönotto 
 
-### Provisions Committee
+### Varauksia Käsittelevä Komitea
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Määräyskomitea vastaa Starknet-ekosysteemin käytön suunnittelusta, seurannasta ja toteutuksesta – STRK – Starknet-ekosysteemin tarjoamisesta. STRK:a käytetään panoksena Starknetin konsensuksen mekanismiin osallistumiseen. Se toimii myös verkoston hallintotunnusmerkkinä, ja se on kaasumerkki verkon maksutapahtumien maksamista varten. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Sääntelykomitea on ratkaisevan tärkeä, jotta voidaan varmistaa Starknet-ekosysteemin valtaapitävän merkin oikeudenmukainen ja avoin jakautuminen. Valiokunta valvoo Starknetin käytöstä perittävien maksujen suorittamista STRK-rahakkeilla, joiden on maksettava maksut. Valiokunta arvioi ja antaa Starknet-säätiölle suosituksia vaatimukset täyttäville ryhmille oikeudenmukaisuuden, avoimuuden ja hajauttamisen tavoitteiden mukaisesti. Nämä suunnitelmat ilmoitetaan kerran valmiina.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Varauskomiteaan voi ottaa yhteyttä osoitteessa [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### Varhaisten Hyväksyttävien Avustusten Komitea
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Varhaiset Adopter Grants (EAG) -komitea on sitoutunut edistämään Starknet-ekosysteemin kasvua myöntämällä avustuksia innovatiivisille tiimeille, jotka rakentavat Starknet-sovelluksia ketjuun. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+EMG-komitean tarkoituksena on helpottaa ekosysteemin laajenemista ja elinvoimaisuutta hyödyntämällä sitä ketjun sisällä. Valiokunta ilmoittaa piakkoin, että se laatii kriteerit ensimmäiselle hakukierrokselleen, jossa keskitytään takautuvasti ryhmiin, jotka ovat jo alkaneet rakentaa Starknettia. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Varhaisten tukien komitea on sitoutunut avoimuuteen ja julkistaa kaikki avustusten määrät.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Varhainen Adopter Grants Committee voi ottaa yhteyttä osoitteeseen [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Kehittäjien Kumppanuuskomitea
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+Kehittäjäkumppanuuskomitealla on keskeinen rooli Starknet-ekosysteemissä, koska se edistää ja valvoo uusia strategisia kehittäjäkumppanuuksia, jotka on tarkoitus tuoda Starknet-ekosysteemiin. Erityisesti strategisia kehittäjäkumppanuuksia pidetään yhteistyönä keskeisissä infrastruktuurissa, jotka ovat ratkaisevan tärkeitä Starknetin menestyksen kannalta.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+Komitean päätehtävänä on muun muassa yksinkertaistaa kehittäjien kumppanuuksien toimittamisprosessia, toteuttaa perusteellinen huolellisuus ja hyväksyä esitetyt ehdotukset. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Valiokunta on ratkaisevan tärkeä, jotta voidaan edistää vankkaa ekosysteemiä tunnistamalla ja tukemalla kehittäjäryhmiä, jotka ovat rakentaneet tai rakentavat aktiivisesti verkoston peruskerrosta. Niiden pyrkimykset takaavat, että Starknetin infrastruktuuriraiteiden turvaamiseksi ja laajentamiseksi rakennetut tiimit jaetaan hajautetusti ja avoimesti. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Kehittäjien kumppanuuskomiteaan voi ottaa yhteyttä [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### Hallinto- Ja Ohjauskomitea
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Hallinto- ja ohjauskomitean tehtävänä on olla kriittinen rooli Starknetin ekosysteemin hajauttamisessa. Valiokunta vastaa Starknetin hallinnon alkuvaiheen tutkimisesta, suunnittelusta ja toteuttamisesta. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+Painopiste on hajauttamisessa ja yhteisön osallistumisen ja jatkuvan kehityksen välisen tasapainon löytämisessä. komitean tavoitteena on luoda, panna täytäntöön ja valvoa Starknetin hallinnon alkuperäisiä pilareita. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Hallinto- ja ohjauskomitea kehittää ja ottaa käyttöön keskeisiä mekanismeja, joilla säilytetään avoin, oikeudenmukainen ja tasapuolinen ja hajautettu rakenne, joka edistää yhteisön osallistumista ja takaa jatkuvan kasvun ja hajautetun osallistumisen ekosysteemiin. Näiden tavoitteiden saavuttaminen, valiokunta määrittelee päätöslauselmat, joista Starknet-yhteisön on äänestettävä ja jotka hyväksytään, ja käynnistää asianmukainen prosessi hallintotapaa koskevien äänestysten käsittelyä ja täytäntöönpanoa varten. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Valiokunta on jo käynnistänyt Starknetin hallinnon [ensimmäisen vaiheen](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Jos sinulla on kysyttävää ensimmäiseen äänestykseen, ota yhteyttä: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Hallinto- ja ohjauskomiteaan voi ottaa yhteyttä myös osoitteessa [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Lisätietoja hallintokomitean työstä ja etenemissuunnitelmasta on saatavilla [tällä sivulla](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### Ekosystem Onboarding -komitea
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Ekosystem Onboarding -komitea vastaa uusien kehittäjien ja yhteisön jäsenten voimaannuttamisesta ja integroimisesta Starknet-ekosysteemiin. Tähän sisältyy Starknet-suurlähettiläiden tunnistaminen, voimaannuttaminen ja tukeminen sekä avustusten myöntäminen ekosysteemien rahoittajille ja lahjakkuuksien lähteille, ja järjestää ja sponsoroida yleisiä tapahtumia ja koulutuskumppanuuksia, jotka edistävät yhteisön osallistumista Starknet'n ekosysteemiin. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+Suurlähettiläitä kunnioitetaan ja perustetaan Starknet-yhteisön jäseniä, jotka ovat sitoutuneet järjestämään, osallistumaan ja puhumaan tapahtumissa. edistetään yhteisöllistä kehitystä, luodaan sisältöä, etsitään molempia osapuolia hyödyttäviä sponsorointeja ja taivutetaan lupaavia yksilöitä ja ryhmiä rakentamaan Starknettia.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Ekosystem Onboarding -komitealla on erilainen pääpaino kuin varhaisvaiheen Adopter Grants -komitealla. EMAS-komitean tavoitteena on käynnistää Starknetin alkuvaiheen adoptiot ja antaa niille hyväksyntä, ympäristöjärjestelmän sisäiseen käyttöön liittyvä komitea korostaa ekosysteemin jatkuvaa ja kestävää kasvua ja kehitystä ruohonjuuritasolla. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Ekosystem Onboarding -komiteaan voi ottaa yhteyttä [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Tulevat Merkkipaalut
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Näiden komiteoiden nimittämisen myötä Starknet-säätiö on valmis jatkamaan jännittävää matkaa. Kukin valiokunta on sitoutunut edistämään ekosysteemiin liittyvää erityistä näkökohtaa ja yhdessä, Säätiön rinnalla pyritään kukoistavaan, hajautettuun ja luvattomaan Layer 2 -ekosysteemiin.  
 
-Here is what’s coming next: 
+Tässä on mitä seuraavaksi tulee: 
 
 * the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* EMG-komitean ensimmäinen ilmoitus ja ensimmäisen hakukierroksen yksityiskohdat julkaistaan StarkNet-säätiön [-blogissa](https://www.starknet.io/en/posts/foundation) 21 päivänä maaliskuuta 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Pidä silmällä StarkNet-säätiön [-blogia](https://www.starknet.io/en/posts/foundation) ja sosiaalisen median kanavia uusimpia päivityksiä ja mahdollisuuksia.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Seuraa Starknet-säätiön lisätietoja, päivityksiä ja -ehdotuksia, [Twitterissä](https://twitter.com/Starknet), Liity [Discord](http://starknet.io/discord), ja lue [Community Forum.](https://community.starknet.io/)**

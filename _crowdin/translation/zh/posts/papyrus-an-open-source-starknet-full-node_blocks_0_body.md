@@ -1,7 +1,7 @@
 # Papyrus：一个开源的StarkNet全节点
 ## Papyrus将成为分散的StarkNet基础设施的关键组成部分。
 **TL;DR**
-* Papyrus is a Rust implementation of a StarkNet full node * It will provide foundations for the new StarkNet Sequencer, which will dramatically enhance StarkNet’s throughput * Papyrus will help advance performance and decentralization. 现在StarkNet已经实现了出色的可用性，以下是它的主要开发重点。
+* Papyrus 是StarkNet 完整节点的神秘实现* 它将为新的StarkNet 序列提供基础， 这将极大地提升StarkNet的通过量 * Papyrus 将有助于提高性能和放权。 现在StarkNet已经实现了出色的可用性，以下是它的主要开发重点。
 ## 导 言
 今天我们介绍Papyrus，这是一个用Rust实现的StarkNet全节点，它将有助于铺平通向大规模使用StarkNet的道路。 Papyrus全节点将跟踪StarkNet随时间演变的状态，并允许用户和开发人员通过StarkNet的JSON-RPC查询此状态。 Papyrus将为新的StarkNet Sequencer提供基础，这将在几个月内显著增强StarkNet的吞吐量。 Papyrus加入了其他StarkNet全节点——Pathfinder和Juno——它们负责与StarkNet同步并维护其状态。 为了配合我们持续推进开源 StarkNet 技术栈的计划，Papyrus 已经在 Apache 2.0 许可证下开源。
 ## Papyrus - 优化序列控制器的基础

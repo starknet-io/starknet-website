@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* El Token de StarkNet (STRK) ahora está desplegado en Ethereum Mainnet
+* **¡Cuidado con las estafas!**No se ofrecen tokens StarkNet a la venta
+* La Fundación tardará tiempo en determinar el mecanismo de distribución de sus tokens
+* Tokens en poder de los accionistas StarkWare, empleados y desarrolladores de software asociados independientes están bloqueados por un período de cuatro años. con una versión gradual que comienza después de un año
+* La ficha continuará la descentralización de StarkNet gracias a su uso para votar, apostar y pagar honorarios
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+Hoy,[StarkNet](https://starknet.io/)está dando otro paso hacia la descentralización. El token StarkNet ahora está[en Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recuperando rápidamente: STRK se utilizará como señal de apuesta para la participación en los mecanismos de consenso de StarkNet, como ficha de gobernanza, y para el pago de tasas de transacción. La racionalidad para cada una de estas utilidades se presenta en[nuestra propuesta de descentralización](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), en la sección titulada “¿Para qué se usarán las fichas?”
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***Cuidado con las estafas:**en el momento de escribir no hay forma de comprar los tokens de StarkNet; este período de no venta permanecerá en su lugar hasta que la[Fundación StarkNet](https://twitter.com/StarkNetFndn)no; seguir la comunicación oficial de la Fundación StarkNet para conocer cualquier actualización del estado de STRK. Puedes reportar estafas y comprobar si hay otros informes de estafas en el canal[scam-report](https://discord.gg/qypnmzkhbc)en el servidor[StarkNet Discord](http://starknet.io/discord).*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+Este puesto explica el proceso de asignación de tokens, y cómo los contratos de tokens desplegados sirven a dos de las tres utilidades diseñadas, a saber, el voto y la apuesta. La tercera utilidad – pagando los honorarios de StarkNet – será discutida más adelante.
 
-### Planning the token allocation process
+### Planeando el proceso de asignación de tokens
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+previamente hemos propuesto un[plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)para la asignación inicial de los tokens. Los tokens asignados a los accionistas, empleados y desarrolladores de software independientes están bloqueados durante cuatro años, con un programa de liberación gradual que comienza después de un año. Los tokens bloqueados pueden ser usados para votar y apuestas, pero no pueden ser transferidos o intercambiados. Algunos de los tokens están cerrados a través de un contrato inteligente dedicado en Ethereum mientras que otros tokens están bloqueados a través de los custodianos.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+Por separado, el 50.1% de los tokens StarkNet existentes se asignan a la Fundación StarkNet, que se utilizará para cumplir con sus objetivos[](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(cf.[la publicación de StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). Estas fichas no están bloqueadas. Sin embargo, la Fundación necesitará tiempo para formular el mecanismo exacto para seguir asignando esas fichas y compartirá sus planes a su debido tiempo.
 
-#### Why lockup?
+#### ¿Por qué bloquear?
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+El bloqueo de las fichas por el período más temprano garantiza que los contribuyentes actuales se alinean con los incentivos a largo plazo de StarkNet. También desalienta la especulación sobre el tope antes de un uso generalizado para sus fines previstos: asegurar la red, pagar honorarios y descentralizar la gobernanza.
 
-Next, we explain how the token implementation supports voting and staking.
+A continuación, explicamos cómo la implementación del token apoya la votación y la apuesta.
 
-### Voting
+### Votaciones
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+La Fundación se encargará de facilitar una buena gobernanza y de formular los mecanismos de votación. El StarkNet Token fue diseñado para permitir tanto la votación directa como una serie de mecanismos de delegación.
 
-#### L1 voting
+#### L1 voto
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+La implementación desplegada ahora incluye**uso**opcional del módulo[delegación de Compound](https://docs.compound.finance/v2/governance/) de Compound. Este módulo es ampliamente utilizado para votar en cadena. La razón por la que es opcional en StarkNet, y girada por defecto, es la consideración de costo. Encenderlo significa que cada transferencia de los tokens StarkNet en L1 requiere que se necesite gas adicional únicamente para rastrear los cambios en el poder de voto.
 
 #### Non-L1 voting
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+Las alternativas a la votación en cadena L1 con el módulo de delegación de Compound incluyen la votación fuera de cadena, así como los sistemas de votación en cadena basados en StarkNetwork (como[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). Estas alternativas, que reducen significativamente el consumo de gas para transferencias de L1, no requieren el apoyo explícito del código ERC actualmente desplegado, y por lo tanto son soportadas de manera inherente.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+Como se mencionó anteriormente, todas las fichas — bloqueadas y desbloqueadas — serán usables en el mecanismo de votación de StarkNet.
 
-### Staking
+### Tomando
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+La operación sin permisos y resistente a la censura de StarkNet requiere una selección aleatoria de secuenciadores. La probabilidad de que un nodo sea seleccionado para secuenciar y proponer un bloque es proporcional al número de fichas StarkNet que el nodo aposta. La clasificación para usar StarkNet Tokens (en vez de, digamos, Ethereum o Bitcoin) se explica en la propuesta de gobernanza[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), y los detalles exactos de la apuesta, la secuenciación y creación de bloques en StarkNet están siendo debatidas en curso[por la comunidad](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671)y aún están por finalizar.
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+Como en el caso de las votaciones, las fichas se pueden utilizar para apostar incluso cuando están bloqueadas. Esto contribuye a la diversidad de los operadores StarkNet y a la resistencia de StarkNet.
 
 ### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+El despliegue de los contratos StarkNet Token en Ethereum es otro paso en la descentralización de StarkNet.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+¡Instamos a los desarrolladores y a los usuarios a ser cautelosos con las estafas! En el momento de la publicación, no hay fichas comercializables, y este estado de no comercio permanecerá vigente hasta que la Fundación StarkNet lo note.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+Para más preguntas puedes ir al canal[de discusiones](https://discord.gg/qypnmzkhbc)en el servidor[StarkNet Discord](http://starknet.io/discord).

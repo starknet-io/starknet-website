@@ -1,68 +1,68 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* StarkNet Foundationは正式にローンチされました
+* それは繁栄するStarkNetのサポートに捧げられています
+* 学際的な強力な基盤が財団を率います
+* 財団はStarkWareから独立しています
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)は、StarkNet Foundationの設立により、将来のコミュニティガバナンス体制に向けた大きな一歩を踏み出しています。
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+この記事では、財団の使命を概説し、ディレクターを紹介し、彼らがテーブルにもたらす経験と価値観について簡単に説明します。
 
 The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### Starknet のビジョンを進化させる
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNetは、Ethereumのセキュリティと分散化を維持しながらEthereumを拡張することを目的とした、権限のない分散層2(L2)有効性ロールアップ(多くの場合、ZKロールアップと呼ばれます)です。 その使命に応じて、財団はStarkNetという共有技術を発展させるために独立した事業体として設立されました。 また、狭い使命を持つ非営利団体として:すべてのための公共財としてStarkNetを進めるために。 これから何年も続けていこうとしています
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+財団は50で起動します。 ネットワークのリソースが以下の目標に向けて効果的に展開されるようにするための最初のトークン供給の%。公共財としてのStarkNetのメンテナンスとセキュリティ。 ネットワークの継続的な開発と拡大そして開発者間の建設的なコラボレーションの文化を支援します
 
-#### **The foundation’s priorities will include:**
+#### **財団の優先順位は次のとおりです。**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**StarkNetユーザー、開発者、研究者のコミュニティ**を育成するために、インフラ、ツール、アプリケーションなどを構築することでStarkNetに命を吹き込む。
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**StarkNetとその技術について教育することによって**コミュニティを拡大する そして、StarkNetのインフラストラクチャを構築するスキルと、STARKのパワーを活用するdAppsを開発者に提供します。
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**ネットワークの継続的な発展と研究の進展を監督する**これは、ネットワークがそのビジョンを実現するための重要な要素である。
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**StarkNetのガバナンスメカニズムを開発し、分散型シーケンシングと証明を開始することによって、StarkNetの地方分権化**をさらに進める。
 
-### **Introducing the board**
+### **ボードの紹介**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+7名の理事会が財団を統治します。 取締役会メンバーは多様なバックグラウンドから来て、バランス、独立性、および多分野のスキルをテーブルにもたらします。 各メンバーには、StarkNetが長期的な共通の利益としてその可能性を達成するのに役立つ専門知識と経験があります。 「[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)」の投稿では、StarkNetに関わる動機を知ることができます。 それらは名前に従ってアルファベット順に表示されます。
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)米国の元副最高技術責任者; インターネットのインフラを管理する独立機関ICANNの前副社長兼最高政策責任者。
 
 **[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: 有名な暗号資産プロジェクトのシステム上の欠陥を暴くことで有名なブロックチェーンのソートリーダーと内部告発者。 人権財団への暗号侵害のアドバイザー、不可解な資産の元最高投資責任者。
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: 受賞歴のある弁護士、オープンソースソフトウェアの専門家、「ビジネスのためのオープンソース」の著者。 OSSキャピタルのゼネラルパートナーであり、StarkWareの法律顧問。
 
 **[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Ethereumのコアコンポーネントを構築したブロックチェーン開発者; Nethermineの創設者、EthereumとStarkNetに構築されている最大のチームの1つ。
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)起業家; StarkWare CEO兼共同創設者。 StarkWare以前は、光ファイバー、データ可視化ツールなど、さまざまな技術製品を開発する企業を共同設立しました。
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+これらのメンバーの背景は、スキルの優れたツールボックスと、将来のために財団を十分に装備するかなりの経験を提供します。
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+アンドリューとヘザーは、公共の良いオープンソースプロジェクトから強力な資格情報をもたらします。 ヘザーはフリーでオープンなソフトウェアライセンスを提唱していることで有名です。 AndrewはICANNの中心人物であり、ICANNの初期にインターネットを形成する上で役立った組織であり、分散型コミュニティの良い役割を果たしました。 ボトムアップのコンセンサスベースのプロセスを通じてそうなりました。 StarkNetがWeb3の目標を達成するためには、ちょうどそのようなプロセスが必要です。
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+ボードはまた、数多くのチェーンにわたって重要な暗号体験を反映しています。 TomaszはEthereumとStarkNetのコアコンポーネントの開発に取り組んでいます。 EliはStarkNetの背後にある技術を開拓する前にZcashの設立科学者でした。 Andrewは今日、Zcash技術を構築し、サポートするElectric Coin Companyの取締役会に座っています。
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+取締役会は、TomaszとUriのビジネスとCEOの経験を持っています コンピュータサイエンスと数学、特にSTARTの専門知識を持っています Shubhangi と Eli. 取締役3名、Tomasz、Uri、Eliの3名は、StarkNetの構築に深く関わっています。
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+メンバー全員が自分の信じることに賛成しています。 エリックは、ナスダックが所有するCinnoberの上級役割を辞めるまで、彼の独立性を暗号に関する彼の意見を投稿すると脅したときに、これまでに行った。 計算に[インテグリティを提供する財団の普及技術として、](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)そのようなインテグリティを持つボードを組み立てるのに適しています。
 
-### **An Independent Foundation**
+### **独立した財団**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+財団は、公共の利益、すなわちStarkNetプロトコルを使用し、維持、それらの構築をサポートする独立した組織です。 インターネット、Bitcoin、Ethereumと同様に。 StarkNetは、誰もが自由かつ許可のない方法で参加し、開発することができる分散型検閲耐性ネットワークとして構築されている共有技術です。 第三者を信用する必要がなくなったのです
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+新しく形成された財団は公共財としてStarkNetを進め、維持するために特に設立された非営利団体です。 財団は、独立した開発者、スタートアップ、エンタープライズユーザーの包括的なセットとともに、 そして一般の人々は、自分の目的のために、そして安全にやりとりし、取引したい人のために、StarkNetを自由に使用して改善することができます。
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+財団は独立しており、StarkNetに関する任意のポジションを自由に取ることができます。 決定は、単純な過半数によって行われます, または特別な場合には7のうちの5によって、財団理事会のメンバーを除去し、任命するなど. 理事会の外部の役職が利害の対立を提示する決定には、財団はそのような会員に対して投票から再利用することを要求する。
 
 The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+StarkNetの将来の方向性を形作ることが決定される多くの詳細があります。 幸いなことに、財団の設立は、成長しているコミュニティからのより多くの声をもたらします。 StarkWareはこのコミュニティのコミットメントの一部であり、ネットワークの将来のより多くの所有権を取るためにStarkNetエコシステムを歓迎します。 StarkNetの旅は今、分散型乗組員の手に委ねられています そして財団はそれが円滑なものであることを保証するために重要な役割を果たします。 StarkWareのすべての任務で新しい体の大成功を願っています。

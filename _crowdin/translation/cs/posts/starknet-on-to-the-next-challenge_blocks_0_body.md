@@ -1,64 +1,64 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Stavíme StarkNet v krocích, počínaje stanovením**použitelnosti**, pak zlepšení**výkonu**a konečně přechod na**decentralizaci**
+* Dosáhli jsme svého prvního cíle: použitelnosti. To znamená, že jsme dodali obecný výpočet ve stavu podobném Ethereu (roky před tím, než se to považovalo za možné)
+* Nyní přejdeme do druhé etapy našeho třídílného stavebního plánu: výkonnost, zaměření na prostor, transakční náklady a zpoždění.
+* Další nahoru: Decentralizace
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+Jen rok poté, co byly poprvé oznámeny plány pro[StarkNet](https://starknet.io/), má platforma velmi dobrou funkčnost. Vývojářská komunita kvete nad naše nejdivočejší očekávání a poskytuje neustálý vzkříšení nových Nativních projektů.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Naší prioritou před minulým rokem bylo právě toto umožnit, vytvořením fungujícího StarkNet s rychle se rozšiřujícím rozsahem funkcí, který umožní devům se dostat rovnou rovinou.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+Udělali to ve velkém počtu. Dobrý barometr je počet stahování pro[JavaScript knihovnu pro StarkNet](https://www.starknetjs.com/): již na 5k od doby, kdy byla k dispozici před 4 měsíci.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Přestože StarkNet zajišťuje kompresní magii, kterou jsme v tuto chvíli slíbili. zdaleka to není schopno udělat pro dostatek dApps s dostatkem výkonu, a to může být krátkodobým zdrojem frustrace pro vývojáře.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Našim bojově testovaným jádrovým technologiím STARK, která dokazuje mnoho transakcí a komprimuje důkazy, musí předcházet dávkování nebo sekvenování transakcí. Je to proces, který už tým StarkWare jednou dokončí pro škálovací motor[StarkEx](https://starkware.co/starkex/), a v současné době na tom znovu pracujeme pro potřeby StarkNet.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Teď když bylo splněno mnoho našich cílů využitelnosti, přesouváme pozornost k tomu, aby se tato priorita stala naší nejvyšší prioritou. Je součástí naší 3-fázové mapy:**použitelnost**, po níž následuje výkon sítě****a poté**decentralizace**. rok v: chceme vám dát náhled pod kapotou — nástin toho, co je na místě a co stále probíhá.
 
-### The Story So Far
+### Příběh tak daleko
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+StarkNet Alpha byla v červnu uvolněna do veřejného testnetu a v listopadu do Mainnetu. V době zavedení systému Mainnet už StarkNet poskytoval všeobecné výpočty ve státě podobném Ethereu, který byl všeobecně pokládán za roky vzdálený.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+V průběhu vývoje jsme zvolili přístup, který se nejprve zaměřil na nejdůležitější funkce a uvolnil je, jakmile budou k dispozici, v zásadě sdílí evoluční proces s komunitou. StarkNet zdaleka není kompletní, ale i nyní mohou vývojáři vytvářet smysluplné a složité aplikace. Dnes máme stovky vývojářů[na StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)desítky dApps, a více než tucet externích týmů vyvíjejících nástroje a infrastrukturu pro ekosystém StarkNet.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+Řetězec vylepšení přinesl mnoho důležitých funkcí, včetně L1<>L2 zpráv, online dat a podpory skladby, podpory událostí, mechanismu základního poplatku, aktualizovatelnost kontraktu, abstrakce účtu, rámec testování, nástroje vývojářů, rychlé potvrzení, číslo bloku, časové razítko, podpora pro smlouvy na účet.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+Vývojářská komunita má hluboký zájem o StarkNet a ve skutečnosti utvářejí jeho vývoj. Funkce již byly zavedeny na základě zpětné vazby vývojáře. Přijetí by mohlo docela dobře předstihnout nárůst propustnosti, a proto je toto posílení naší hlavní prioritou nyní.
 
-### Next Steps
+### Další kroky
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Teď když jsme dosáhli použitelnosti, nastal čas zlepšit výkon systému. Systém je ve svém současném stavu schopen podporovat omezené množství transakcí. Způsob, jak to vyřešit, spočívá ve zlepšení výkonu Sequencer Node, který je ekvivalentem StarkNetu horníka. Je to „stroj“, že posloupnosti transakcí po jejich předložení. Jakmile bude optimalizováno, průchodnost bude raketa obloha.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+Za tímto účelem zároveň analyzujeme, kde jsou překážky a jak je řešit jeden po druhém. V současné době všechny překážky souvisejí s postupným postupem, který přichází před tím, než se odvoláme na provincie STARK. Bojovně testovaný provokační štos je připraven podpořit výkony podobné StarkExu na StarkNet.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Očekáváme, že optimalizace posloupnosti bude proces, který trvá několik měsíců, s postupnými zlepšeními napříč H1/22. Naším cílem je dosáhnout na začátku druhé poloviny roku 2022 alespoň o jeden řád vyššího TPS než Ethereum, za cenu, která je nejméně o dva řády nižší než Ethereum. A to je jen začátek.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+Existuje dobrý důvod, proč je tato fáze optimalizace potřebná, a že StarkNet nebyl spuštěn s hotově optimalizovaným sekvenčním vybavením: StarkNet dokázal dosáhnout použitelnosti tak rychle, protože jsme dostali head-start. Místo abychom začali od nuly a stavěli jsme zcela novou sekvenci, použili jsme jako ústřední složku batcher ze StarkEx.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+To byl skvělý způsob, jak postavit. Nepřineslo to jen rychle; znamenalo to, že jsme vybudovali na stabilních základech. StarkEx v podstatě otestoval stěžejní funkčnost, která vede StarkNet, neboť v kumulativním obchodování zaznamenala stamiliardy dolarů.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[StarkEx](https://starkware.co/starkex/)je nástroj pro škálování některých z nejúspěšnějších dApps pomocí L2: dYdX (trvalé smlouvy), DeversiFi (spotové obchodování a platby), stejně jako pro neměnitelné a Sorare (NFT těžba a obchodování).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+Řetězec vytvořený pro ně a další klienty StarkEx však může až dosud použít StarkNet. Každý z nich přistupuje ke stejnému typu transakcí každý den. StarkNet je o**obecných výpočtech**, takže jeho potřeby jsou otevřené. Když její posloupnost provádí transakce z mempoolu, jsou v různých tvarech a velikostech. Plus, StarkNet je také otevřená síť, což znamená, že existují další výpočetní režijní náklady, které se nezabývají ve StarkEx.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+Současná výzva, totiž optimalizace posloupnosti těchto nových potřeb, je významným podnikem, na základě našeho úspěšného vývoje StarkEx však dobře rozumíme potřebné cestě.
 
-### Next Up: Decentralization
+### Další nahoru: Decentralizace
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+StarkNet má být plně decentralizovanou bezpřípustnou sítí doplněnou o mechanismy voleb a vládnutí. Dosažení tohoto cíle se stane naším hlavním zaměřením, jakmile se raketové rakety a propady nákladů, a doufáme, že do konce roku 2022 budeme mít první decentralizovanou verzi. V nadcházejících měsících očekáváme veřejné sdílení našeho plánu decentralizace.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+Stejně jako současná omezená kapacita představuje přechodnou fázi vývoje StarkNet, je i současná míra angažovanosti StarkWare dočasná. Sami sebe vnímáme jako lešení druhu, které ve fázi výstavby plní důležitou funkci, ale v pravý čas se opět otočí.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+Úplný vývoj uzlu, vzrušující první krok k decentralizaci, již probíhá. Kompletní uzly umožní každému, aby držel a ověřoval stav sítě lokálně, přičemž bude sledovat přesně to, co se děje. Tři týmy –*Erigon, Nethermind a equilibrium*– vyvíjejí plné uzly a potenciálně více se v budoucnu začne vyvíjet.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+V paralelním vývoji probíhají přípravy na sekvenování a prokazování softwaru veřejnosti. Každý se bude moci účastnit jako posloupník nebo provize StarkNet.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+Bude vytvořena struktura, která bude motivovat lidi k účasti na životě, což bude zahrnovat ekonomické odměny. StarkNet poplatky budou částečně směřovat k následovníkům a provinýrům.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Ve střednědobém horizontu očekáváme, že naše posloupnost zpřístupníme třetím stranám, a v dlouhodobém horizontu očekáváme, že uvidíme také různé týmové sekvence, které budou sekvencovat pro StarkNet.
 
-### Always Improving; Forever Listening
+### Vždy zlepšovat; navždy poslouchat
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Až se zaměříme na další výzvu, budeme se i nadále zlepšovat při minulých úspěších. A při další práci na všech oblastech[StarkNet](https://starknet.io/)budou naše uši vždy otevřeny celé vývojářské komunitě. Takže se zapojte do diskuse, prostřednictvím[Discord](https://discord.com/invite/uJ9HZTUk2Y), komunity[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8),[Twitter](https://twitter.com/Starknet_Intern)nebo jiná trasa a pomoci utvářet budoucnost škálování blockchainu.

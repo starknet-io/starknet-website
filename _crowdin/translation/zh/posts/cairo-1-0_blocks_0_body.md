@@ -1,100 +1,100 @@
 ### TL;DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* 开罗1.0是两年前[引入开罗](https://medium.com/starkware/hello-cairo-3cb43b13b209)之后的第一个主要版本
+* Cairo 1.0 将为开发者提供一个更安全、更简单、更易使用的编程语言
+* 开罗1.0的中心将是**Sierra**，它是一个中间代表层，为开罗方案带来更大的长期稳定。
+* Sierra lease Cairo to service in a permissions without network:\
+  -**Protecting the network**: it allows more strong DoS protection\
+  -**Protecting the user**: it allows Easud level registance resistance Cairo 1。 将以多种方式实现StarkNet。 它也会影响[基因组](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae)。 我们将在今后几周内发布更多有关雷杰尼斯的信息。
 
 ### 导 言
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
+2020年，我们发行了开罗，它是一种完整的编程语言，并在支持使用STARK进行可核查的计算方面迈出了一大步。 今天，我们宣布**Cairo 1.0**，是迄今为止开罗取得的最大进步。 它将采用一种经过改进的语言，其特点将提高可用性、安全性和方便性。 它旨在支持StarkNet作为无权限网络的要求，使协议变得更简单、更安全。\
+开发已经在进行中，我们预计第一次发布将很快完成。
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
+在这个职位上，我们将描述开罗迄今的旅程，并详细介绍即将到来的特点。
 
-### The Cairo Journey
+### 开罗之旅：
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+在2020年之前，建立一般计算的STARK可证明的程序需要特殊知识。 只有那些理解STARK背后的复杂数学的人才能做到。 具体而言，就每项业务逻辑而言，即： 每次计算都需要生成代数介质表示器——代表特定计算的一组多项约束器。
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+开罗之所以诞生，是因为认识到应向各地的开发商提供可核查的计算方法。 开罗使开发人员能够利用STARK的力量。
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
+自那时以来，开发界一直在开罗积极地建设起来。 今天在蓬勃发展的StarkNet生态系统中的一切都以开罗为基础。 [StarkNet](https://starkware.co/starknet/)and[StarkEx](https://starkware.co/starkex/)之间，开罗驱动的应用程序已经处理了超过220M的交易。 挖掘了超过65M的NFT，处理了价值700B的贸易，所有这些交易都在以太坊结算。
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
+虽然开罗国家统计数据库开放，但它原先是作为一种集合语言设计的，因此是作为一种低级语言撰写的。
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+![开罗编写的早期方案示例](/assets/cairocode_01.png "开罗编写的早期方案示例")
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+由于开发人员的反馈和[StarkNet](https://starkware.co/starknet/)的上升，我们逐渐使开罗变得更加明确，对开发人员更加友好。
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+![ERC-20开罗合同中的一个例子表明如果声明、错误和UINT256图书馆支持变量](/assets/cairocode_02.png "ERC-20开罗合同中的一个例子表明如果声明、错误和UINT256图书馆支持变量")
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+但我们很快就得出结论，现在是向前迈出一大步的时候了。 不但不能逐步改善开罗，反而进行更大胆的改革。
 
 ### Cairo 1.0
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+开罗1 我们已经从头建立了一个完整的编译器，它将为开发人员提供安全功能。 并使他们能够以更简单、更明确的方式编写合同。
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+#### 引进Sierra：确保每个开罗运行都能够被证明是正确的
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+在开罗增加的主要部分。 是塞拉利昂(**S**afe**I**nt**e**rmediate**R**ep**r**ent**a**). 塞拉利昂构成开罗1.0至开罗字节代码之间新的中间代表层。 Sierra的目标是确保每次开罗运行——即开罗方案及其投入——都能得到证明（见下文）。
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+塞拉利昂许诺开罗会议将制定更好的未来防灾守则。 由于StarkNet的合同在改进基本系统的情况下不必重新编纂（e），这使得情况更加稳定。 ，CPU AIR structure change, 改进最终翻译从塞拉里昂到开罗字节代码)。
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
+**验证每一个开罗的运行。**在老的开罗，开罗的运行可能导致三种情况——TRUE、FALSE或失败。 无法验证失败的运行。 Sierra确保开罗的运行永远不会失败，只能导致TRUE或FALSE。 这反过来又确保每次开罗会议都能得到证明。
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
+塞拉利昂的这种引进对作为无许可网络的StarkNet具有重要影响。 塞拉利昂确保甚至恢复的交易都可以列入StarkNet区块。 此属性将使StarkNet协议能够保持简洁而无需添加复杂的加密经济机制。\
+两个有意义的示例：
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+1. 序列器将能够在恢复交易时收取费用，从而允许StarkNet以既定方式防止序列器DoS。
+2. 执行强行的L1交易将是可能的，允许StarkNet继承Etherum的全部抵制性。
 
-### **Language Features**
+### **语言特性**
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
+开罗1.0将为编程语言本身提供许多改进。 并非下面列出的所有内容都是第一次发布的一部分，但它是路径图的一部分。
 
-#### **Improved syntax**
+#### **改进语法**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+* 没有*本地*和*节奏*。 We now only need *let* to rule them all variables.
+* 如果</em>语句语法改进了*</li> </ul>
 
 ```python
-#Old
-if cond != 0 {
+#旧的
+如果是cond ！ 0 请注意，
   tempvar x = x+1;
-} else {
+其他，
   tempvar x = x;
 }
 __________________________________
 #New
-if cond { x = x + 1; }
+if cond Power x = x + 1; }
 ```
 
-#### **Type safety guarantees**
+#### **类型安全担保**
 
-The compiler will use strong typing to improve the security of the code. For example:
+编译器将使用强大的打字来提高代码的安全性。 例如：
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
+* 指针总是指向初始化内存。
+* 词典总是会被挥舞，而不是让程序员来调用squash_dict。
 
-#### **Easier to use language constructs**
+#### **使用语言构造更加容易。**
 
-For example:
+例如：
 
-* For loops
+* 用于循环
 
 ```
-let sum = 0
-for x in iter {
-  sum = sum + x;
+让和 = 0
+for x in iter 密切相关,
+  和 = 和 + x;
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+* 布尔表达式
+* 整数(普通整数除以 👯)
+* 相关类型的过度保护
+* 布尔条件
 
 ```
 #Old
@@ -108,9 +108,9 @@ __________________________________
 If cond1 && (cond2 || cond3) { … }
 ```
 
-#### **A fully fledged type system**
+#### **一个完整的类型系统**
 
-* Abstract data types (i.e. Rust-like enum)
+* 摘要数据类型（即： 按次列数)
 
 ```
 enum Option<T> {
@@ -123,35 +123,35 @@ match result {
 }
 ```
 
-* Traits
+* 特性
 
 ```
-trait Add<Uint256> {
+特性添加<Uint256> ·
     fn add(…) { … }
-}
+
 
 let a: Uint256 = 1;
 let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+a + b; // 评价为5型Uint256。
 ```
 
-#### **More intuitive libraries**
+#### **更直观的库**
 
-(e.g. dict, arrays)
+(如，二维数组)
 
 * Dict<Uint256, MyStruct>;
-* Array<MyOtherStruct>;
+* 数组<MyOtherStruct>;
 
-#### **More optimized code**
+#### **更优化的代码**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+无需明确指定本地变量的状态分配——自动检测到并自动完成。
 
-#### **Better compiler integration**
+#### **更好的编译器集成**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+促进更好的发展教育支助、一揽子管理和更好地促进社区贡献。
 
-### **Conclusion**
+### **五. 结论**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+在开罗首次用于生产两年之后，我们正在开发开罗1.0版，这将提供更好的表达性、安全性和语法。 它将取得很大进展，使开发人员更容易写入StarkNet合同。
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+在另一篇文章中，我们将很快介绍开罗1的情况。 StarkNet的regenesis将产生效果，开发者将如何为其发布做好准备。

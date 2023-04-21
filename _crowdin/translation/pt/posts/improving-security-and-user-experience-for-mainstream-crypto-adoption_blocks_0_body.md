@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+A inovação tecnológica em blockchain tem prosperado nos últimos anos — STARKs, SNARKs, EIP-1559, a Ethereum Merge — são todas enormes realizações tecnológicas. No entanto, UX e design da interface falharam ao se manter. As pessoas ainda ficam presas em frases de 16 palavras, e entrar no DeFi sem um intermediário centralizado ainda é demasiado intimidado para muitos . Para integrar os próximos bilhões de usuários na Web3, melhorar a experiência de integração do usuário é crucial.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Como o FTX demonstrou (e Gemini, Celsius e Mt. Gox), manter a autocustódia sobre os seus ativos é extremamente importante. No entanto, até há pouco tempo, carteiras autoprivativas têm sido desajeitadas e confusas para o utilizador médio. A maioria das pessoas esquece suas senhas Web2 mensal; como se espera que os usuários mantenham sua semente e chaves privadas seguras para eternidade?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Simplificando, é um pesadelo de segurança. Como vimos inúmeras vezes, um movimento errado, seja iniciado por maus atores ou negligência, pode resultar na perda de milhões de dólares.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Como primeiro ponto de contato para novos usuários de criptomoedas, as carteiras Ethereum devem ser fáceis de usar, seguras e personalizáveis para atender às necessidades de cada usuário. Isto requer que os desenvolvedores integrem a simplicidade dos produtos financeiros Web2 com os recursos da Web3.
 
-This is exactly what account abstraction achieves.
+É exatamente isso que a abstração de conta faz.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+A abstração da conta melhora a segurança dos produtos de carteira autocustódia ao remover a dependência da chave privada dos usuários e tornar as carteiras mais programáveis. Com esta UX, carteiras não-privativas de custódia podem finalmente escalar para milhões de usuários de criptomoedas.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Mas para entender completamente o impacto da abstração da conta, devemos nos atualizar sobre como as contas Ethereum funcionam.
 
-### The basics of Ethereum accounts
+### O básico das contas Ethereum
 
-There are two types of Ethereum accounts:
+Existem dois tipos de contas Ethereum:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Contas detidas externamente (EOA)
+2. Contas de contrato (CA)
 
-Let’s break each down a bit further.
+Vamos dividir cada um um pouco mais.
 
-### Externally owned accounts
+### Contas de propriedade externa
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Contas de propriedade externa, como a MetaMask e a Coinbase, são o tipo de conta típico para usuários Ethereum. Cada AEOA consiste numa chave privada e pública, chamada de "pai" chave.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Todas as transações são autorizadas e assinadas por chaves privadas. Uma vez assinada uma transação, o EVM verifica que a assinatura é válida usando o endereço da conta da EOA. A lógica codificada no EVM significa que a conta (o objeto que mantém seus tokens) e a chave privada (assinante) estão associadas a uma.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Perder sua chave privada significa perder fundos ou até mesmo controlar sua conta para sempre.
 
-### Contract accounts
+### Contas de contrato
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Enquanto isso, contas de contratos, sinónimo de abstração de conta, são contratos inteligentes implementados na blockchain Ethereum. Esses contratos são controlados pela lógica do código e não exigem chaves privadas. Ao contrário da EOA, as contas de contrato não podem iniciar transações. Em vez disso, suas transações são acionadas por instruções da EOA.
 
-### Why account abstraction matters
+### Porquê a abstração de conta importa
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Abstração de conta implica abstração da lógica de autorização codificada longe dos EOA, transformando cada conta em um contrato inteligente programável que pode ser adaptado para atender às necessidades de qualquer indivíduo.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Como explicado pelo co-fundador da Argent e Diretor da Ciência Científica Julien Niset num recente evento[Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), essa lógica de autorização flexível dá liberdade aos desenvolvedores para jogarem com os recursos de conta como…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Assinantes de hardware:**Usando o enclave seguro de um iPhone ou Android para transformar qualquer smartphone em uma carteira de hardware. A partir daí, os usuários podem verificar transações usando dados biométricos, como uma impressão digital ou o Face ID da Apple. Já começamos a ver carteiras de autocustódia como Braavos[ampliam esse recurso.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Pagadores:**Permite que os usuários paguem taxas de gás em qualquer token, ou até mesmo que tenham um mecanismo projetado por terceiros para transações.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Recuperação social:**No caso de uma chave privada ser perdida ou comprometida, os usuários podem autorizar uma nova chave como dono legítimo da carteira. Isto pode incluir uma variedade de métodos de recuperação através de contatos confiáveis, carteiras de hardware ou serviços de terceiros. A ideia é recuperar o acesso à sua conta de forma tão fácil como recuperar a senha da sua conta bancária por meio de um e-mail.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Autenticação multifator:**Semelhante às práticas de 2FA do Web2 usuários podem configurar dois (ou mais) métodos de autenticação para suas carteiras de criptomoedas, onde uma transação só é assinada quando um usuário confirma a aprovação através de uma segunda opção, como e-mail ou SMS. Os usuários também podem criar limites diários de transferência ou listas de endereços de conta dos quais a carteira é bloqueada automaticamente de interagir.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Sinais de Resistência Quântica e de Assinaturas Gas-Efficientes:**Esquema de assinatura atual da Ethereum, ECDSA, é extensa em termos computacionais (lida: taxas de gás mais elevadas) e pode ser quebrada por computadores quânticos. Através da abstração de assinaturas, diferentes contratos de conta usam esquemas de assinatura mais eficientes e quânticas. StarkNet usa sua própria curva STARK-friendly proprietária.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Não apenas esses recursos fornecem aos usuários maior segurança e mais flexibilidade, mas, o que é mais importante, resultam em uma**melhor experiência de usuário**.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Listado por Vitalik Buterin como um "sonho de longa duração" para a comunidade de desenvolvedores do Ethereum, inovações em torno da abstração da conta, principalmente EIP-2938 e EIP-3074, mudaram desde 2020. No entanto, ambas as compensações necessárias em torno da segurança e implementação. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), o desenvolvimento mais promissor até agora, propõe uma versão de abstração de conta sem precisar de alterações no protocolo Ethereum.
 
-### **Account abstraction and Starknet**
+### **Abstração de conta e Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Ao contrário do Bitcoin e do Ethereum, que estão reajustando seus protocolos atuais para suportar a abstração da conta, o[StarkNet](https://starkware.co/starknet/)implementou a abstração da conta desde o primeiro dia. Quando combinado com a escalabilidade e as capacidades de nossas provas STARK, o potencial de inovação em carteiras é ilimitado. É por isso que a próxima geração de carteiras autoprivativas, como Argent e Braavos, está actualmente a ser construída sobre a nossa rede.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+A abordagem da StkNet's é semelhante à EIP-4337,[reconhecer que](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)a abstração completa da conta ainda resultaria em confusão de UX e[poderia abrir a porta](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)para ataques em sequenciadores. Em vez disso, visa alcançar tanto a abstração da assinatura como a abstração de pagamentos, através da mutualização de algumas das infra-estruturas necessárias e fora da cadeia.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+E enquanto ainda há muito mais trabalho a fazer, a abstração da conta está ganhando tração além de um pequeno círculo de cripto nativos. Em dezembro[Visa propôs a ideia](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)de usar a abstração de conta para configurar pagamentos recorrentes automáticos no StarkNet. Usando uma conta delegável, os usuários podem conceder permissão para iniciar um pagamento com um contrato inteligente pré-aprovado. A partir de lá, o contrato inteligente será programado para deduzir um valor de pagamento definido em um dia específico, por um período de tempo definido. Embora a Visa ainda não tenha revelado seus planos para seus próprios serviços, o interesse só fala por si, e pode prefigurar um mundo onde plataformas de assinatura de grande tecnologia como a Netflix e o Spotify podem abraçar a adoção de cripto.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Quanto ao que o futuro nos reserva, só o tempo o dirá. Mas uma coisa é certa. Ao tornar as carteiras mais fáceis e seguras de usar, abstração de conta servirá como um poderoso catalisador das carteiras de blockchain autocustodionais para dimensionar para milhões de usuários de criptomoedas. Continuaremos construindo enquanto isso.

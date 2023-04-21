@@ -1,5 +1,5 @@
 {
-  "title": "STARKs, StarkEx, and StarkNet",
-  "time_to_consume": "3 min read",
-  "short_desc": "TARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps."
+  "title": "STARK, StarkEx, i StarkNet",
+  "time_to_consume": "3 minuty czytania",
+  "short_desc": "TARK (skalowalne, przezroczyste ARGumenty wiedzy) są systemem dowodowym, który umożliwia udowodnienie i weryfikację obliczeń. Umożliwia przetwarzanie dużych obliczeń, generując dowód poprawności obliczeń, a następnie weryfikację dowodu w bardzo nielicznych krokach."
 }

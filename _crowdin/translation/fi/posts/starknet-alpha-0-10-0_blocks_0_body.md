@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Tilien Abstraktio EIP-4337:n hengen parannukset
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Validointi – Suoritus erottamisesta
+2. Tapahtuman ainutkertaisuus varmistetaan nyt protokollassa (ei)
 
-* The fee mechanism is extended to include:
+* Maksumekanismi laajennetaan kattamaan seuraavat seikat:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 -viestit
+2. Hylkää Tapahtumat
 
-* Few Cairo syntax changes
+* Muutama Kairon syntaksin muutos
 
-### Introduction
+### Johdanto
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Olemme innoissamme esitellä StarkNet Alpha 0.10.0. Tämä versio on toinen askel kohti skaalaus Ethereum vaarantamatta turvallisuutta ja hajauttamista.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Tässä blogikirjoituksessa kuvataan lyhyesti tämän version pääpiirteitä. Täydellinen luettelo muutoksista, tarkista[julkaisutiedot](https://github.com/starkware-libs/cairo-lang/releases). Tarkempia tietoja varten tarkista[dokumentaatio](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Tilin Abstraktio Muutokset
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Siirrymme eteenpäin[StarkNetin tilin abstraktilla](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Tämä versio tuo mukanaan[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337) innoittamia muutoksia.
 
-#### Validate/Execute Separation
+#### Validaatti/koodauserottelu
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Tähän asti tilin \_\_execute\_\_ toiminto oli vastuussa sekä tapahtuman validoinnista että suorittamisesta. Jakamme tämän kytkennän 0.10.0 kohdassa ja otamme tileille erillisen \_\_validate\_\_ toiminnon. Kun tilisopimus on saatu, se soittaa ensin \_\_validate\_\_, ja sen jälkeen siirry \_\_execute\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Validoija/toteutus erotetaan toisistaan protokollan tasolla virheelliset ja peruutetut (vielä pätevät) liiketoimet. Tämän ansiosta sekvenssit voivat periä maksuja voimassa olevan liiketoimen toteuttamisesta riippumatta siitä, onko se peruttu vai ei.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+Versiossa 0.10.0 lisätään nonce -kenttä, jotta voidaan varmistaa tapahtuman ainutlaatuisuus protokollan tasolla. Tähän asti luottotappioita käsiteltiin tilisopimustasolla, mikä tarkoitti sitä, että samaa tiivistettä sisältävä liiketoimi voitaisiin toteuttaa teoriassa kaksi kertaa.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Samoin kuin Ethereum, jokaiseen sopimukseen sisältyy nyt nonce, joka laskee toteutettujen liiketoimien määrän tältä tililtä. Tilisopimukset hyväksyvät vain sellaiset tapahtumat, joissa on vastaavuus (nonce), eli jos tilin nonce -arvo on X, se hyväksyy vain tapahtumat, joissa on nonce X.
 
-#### New Transaction Version
+#### Uusi Tapahtumaversio
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+Jotta yhteensopivuus voidaan taata, otamme nämä kaksi muutosta käyttöön uuden siirtotapahtuman version kautta —[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Nämä muutokset koskevat vain uutta versiota, ja vanhemmat tilit voivat silti suorittaa version 0 tapahtumia.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Huomautus – liiketoimi v0 on nyt vanhentunut, ja se poistetaan StarkNet Alpha v0.11.0. Varmista, että päivität päivityksen käyttääksesi uutta tapahtumaversiota.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+Jos haluat yksityiskohtaisempia tietoja tapahtuman versiosta, lue[dokumentaatio](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### Maksumekanismi
 
-The new version allows to include fees for two required components:
+Uudessa versiossa voidaan ottaa huomioon kahden vaaditun komponentin maksut:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2 Viesti](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Hylkää tapahtuma](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Nämä maksut eivät ole pakollisia tässä versiossa, ja ne pannaan täytäntöön vain StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### Kairon Syntaksimuutokset
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+Kannattaen asteittaista etenemistä kohti Kairon[Kairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), tähän versioon sisältyy useita syntaksin muutoksia.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Epämukavuuden minimoimiseksi versiojulkaisu sisältää[migraatioskriptin](https://www.youtube.com/watch?v=kXs59zaQrsc), joka käyttää automaattisesti yllä olevia muutoksia. Löydät lisätietoja[täältä](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Mitä Seuraavaksi?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Muutaman viikon kuluttua aiomme ottaa käyttöön rinnakkaistuotannon sekvensseriin mahdollistaen nopeamman lohkotuotannon (V0.10.1)
+* Saamme pian valmiiksi viimeisen osan, joka on sisällytettävä maksu - Tilin käyttöönotto
+* Kairo 1.0:n julkaisu! Lisää tietoa siitä tulevassa viestissä.
 
-### How Can I Be More Engaged?
+### Miten Voin Olla Enemmän Käyttöön?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Mene[starknet.io](https://starknet.io/)kaikille StarkNet-tiedoille, dokumentaatioille, oppaille ja päivityksille.
+* Liity[StarkNet Discordiin](http://starknet.io/discord)dev-tuelle, ekosysteemien ilmoituksille ja tule osaksi yhteisöä.
+* Vieraile[StarkNet Forumissa](http://community.starknet.io/)pysyäksesi ajan tasalla ja osallistuaksesi StarkNet-tutkimuskeskusteluihin.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Olemme aina iloisia saadessamme palautetta[dokumentaatiostamme](https://docs.starknet.io/)!

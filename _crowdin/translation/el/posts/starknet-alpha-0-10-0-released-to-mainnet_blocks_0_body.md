@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Απομάκρυνση Λογαριασμού Βελτιώσεις στο πνεύμα του EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Επικύρωση — Εκτέλεση διαχωρισμού
+2. Η μοναδικότητα της συναλλαγής διασφαλίζεται τώρα στο πρωτόκολλο (μια φορά)
 
-* The fee mechanism is extended to include:
+* Ο μηχανισμός τελών επεκτείνεται για να περιλαμβάνει:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 Μηνύματα
+2. Δηλώσεις Συναλλαγών
 
-* Few Cairo syntax changes
+* Λίγες αλλαγές σύνταξης του Καΐρου
 
-### Intro
+### Εισαγωγή
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Είμαστε ενθουσιασμένοι να παρουσιάσουμε StarkNet Alpha 0.10.0. Αυτή η έκδοση είναι ένα ακόμη βήμα προς την κλιμάκωση του Ethereum χωρίς να διακυβεύεται η ασφάλεια και η αποκέντρωση.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Αυτό το blog post περιγράφει εν συντομία τα κύρια χαρακτηριστικά αυτής της έκδοσης. Για τον πλήρη κατάλογο των αλλαγών, ελέγξτε τις[σημειώσεις έκδοσης](https://github.com/starkware-libs/cairo-lang/releases). Για πιο λεπτομερείς πληροφορίες, ελέγξτε την τεκμηρίωση[](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Αλλαγές Περίληψης Λογαριασμού
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Προχωρούμε στην περίληψη του λογαριασμού[StarkNet](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Αυτή η έκδοση εισάγει αλλαγές εμπνευσμένες από[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### Επικύρωση/Εκτέλεση Διαχωρισμού
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Μέχρι τώρα, η συνάρτηση \_\_execute\_\_ του λογαριασμού ήταν υπεύθυνη τόσο για την επικύρωση όσο και για την εκτέλεση της συναλλαγής. Σε 0.10.0 σπάσουμε αυτήν τη σύνδεση και εισάγουμε μια ξεχωριστή \_\_validate\_\_ συνάρτηση σε λογαριασμούς. Μόλις ληφθεί μια συναλλαγή, το συμβόλαιο λογαριασμού θα καλέσει πρώτα \_\_validate\_\_, και στη συνέχεια, εάν είναι επιτυχής, προχωρήστε στο \_\_execute\_\_\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Ο διαχωρισμός επικύρωσης/εκτέλεσης παρέχει μια διάκριση σε επίπεδο πρωτοκόλλου μεταξύ μη έγκυρων και αναστρεφόμενων (αλλά έγκυρων) συναλλαγών. Χάρη σε αυτό, οι αλληλουχίες θα είναι σε θέση να χρεώνουν τέλη για την εκτέλεση μιας έγκυρης συναλλαγής, ανεξάρτητα από το αν επεστράφη ή όχι.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+Στην έκδοση 0.10.0 προστίθεται ένα πεδίο nonce προκειμένου να επιβληθεί η μοναδικότητα της συναλλαγής σε επίπεδο πρωτοκόλλου. Μέχρι τώρα οι επιχειρήσεις δεν διεκπεραιώνονταν σε επίπεδο συμβολαίου λογαριασμού, πράγμα που σήμαινε ότι μια συναλλαγή με το ίδιο hash θα μπορούσε να εκτελεστεί δύο φορές θεωρητικά.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Όπως και με το Ethereum, κάθε συμβόλαιο περιλαμβάνει πλέον μια μη συμμετοχή, η οποία μετρά τον αριθμό των εκτελεσμένων συναλλαγών από αυτόν τον λογαριασμό. Τα συμβόλαια λογαριασμού θα δέχονται συναλλαγές μόνο με μια μη αντιστοίχιση, δηλ. αν η τρέχουσα nonce του λογαριασμού είναι X, τότε θα αποδεχθεί μόνο συναλλαγές με nonce X.
 
-#### New Transaction Version
+#### Νέα Έκδοση Συναλλαγής
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+Για να επιτρέψουμε την προς τα πίσω συμβατότητα, θα εισαγάγουμε αυτές τις δύο αλλαγές μέσω μιας νέας έκδοσης συναλλαγών —[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Αυτές οι αλλαγές θα ισχύουν μόνο για τη νέα έκδοση και οι παλαιότεροι λογαριασμοί θα μπορούν να εκτελούν συναλλαγές έκδοσης 0.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Σημείωση — η συναλλαγή v0 είναι πλέον παρωχημένη και θα αφαιρεθεί στο StarkNet Alpha v0.11.0. Παρακαλώ βεβαιωθείτε ότι έχετε αναβαθμίσει για να χρησιμοποιήσετε τη νέα έκδοση συναλλαγής.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+Για περισσότερες πληροφορίες σχετικά με την έκδοση της συναλλαγής, διαβάστε την τεκμηρίωση[](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### Μηχανισμός Τέλη
 
-The new version allows to include fees for two required components:
+Η νέα έκδοση επιτρέπει τη συμπερίληψη τελών για δύο απαιτούμενα στοιχεία:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2 Μήνυμα](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Δηλώστε τη συναλλαγή](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Αυτές οι χρεώσεις δεν θα είναι υποχρεωτικές σε αυτήν την έκδοση και θα επιβληθούν μόνο ξεκινώντας το StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### Αλλαγές Σύνταξης Κάιρο
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+Προς όφελος της σταδιακής προόδου προς την αναβάθμιση του Καΐρου,[Κάιρο 1,0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), αυτή η έκδοση περιλαμβάνει πολλές αλλαγές σύνταξης.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Για να ελαχιστοποιήσετε την ταλαιπωρία, η έκδοση θα περιλαμβάνει ένα[σενάριο μετανάστευσης](https://www.youtube.com/watch?v=kXs59zaQrsc)που εφαρμόζει αυτόματα τις παραπάνω αλλαγές. Μπορείτε να βρείτε περισσότερες λεπτομέρειες[εδώ](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Τι Επόμενη?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Σε λίγες εβδομάδες, σκοπεύουμε να εισαγάγουμε την παραλληλισμό στο sequencer, επιτρέποντας την ταχύτερη παραγωγή φραγμών (V0.10.1)
+* Σύντομα θα ολοκληρώσουμε το τελευταίο μέρος που πρέπει να συμπεριληφθεί στην πληρωμή τελών — Ανάπτυξη λογαριασμού
+* Cairo 1.0 απελευθέρωση! Περισσότερες πληροφορίες για αυτό σε μια επερχόμενη ανάρτηση.
 
-### How Can I Be More Engaged?
+### Πώς Μπορώ Να Είμαι Πιο Συμμετέχοντας?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Πηγαίνετε στο[starknet.io](https://starknet.io/)για όλες τις πληροφορίες του StarkNet, τεκμηρίωση, φροντιστήρια και ενημερώσεις.
+* Γίνετε μέλος του[StarkNet Discord](http://starknet.io/discord)για υποστήριξη από προγραμματιστές, ανακοινώσεις οικοσυστήματος και γίνετε μέρος της κοινότητας.
+* Επισκεφθείτε το[Φόρουμ StarkNet](http://community.starknet.io/)για να είστε ενημερωμένοι και να συμμετάσχετε στις συζητήσεις για την έρευνα στο StarkNet.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Είμαστε πάντα στην ευχάριστη θέση να λάβουμε σχόλια σχετικά με την[τεκμηρίωση μας](https://docs.starknet.io/)!

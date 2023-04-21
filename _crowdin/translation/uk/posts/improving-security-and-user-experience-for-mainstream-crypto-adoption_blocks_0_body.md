@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Технологічні інновації в блокчейні розвивалися протягом останніх кількох років - STARK, SNARK, EIP-1559, Об'єднання Ethereum — це все величезні технологічні досягнення. Тим не менш, дизайн інтерфейсу та інтерфейсу не вдалося зберегти. Люди все ще застрягають на 16-ти словесних фраз і потрапляють у воду без централізованого посередника все ще занадто лякає для багатьох. На борту наступного мільярда користувачів в Web3 важливо, щоб покращити досвід залучення користувачів.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Як показав FTX (і Геміні, Цельсій і Mt. Gox), збереження самодовіри до активів є критично важливим. Однак, до недавнього часу, самолюбні гаманці були незграбними і заплутаними для середньостатистичного користувача. Більшість людей запам'ятовують свої паролі в Інтернеті щомісячно; як очікуються користувачі зберігати фраза насіння та приватні ключі, в безпеці назавжди?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Простіше кажучи, це кошмар безпеки. Як ми бачили незліченну кількість разів, неправильний крок, будь то ініційовані поганими суб'єктами чи недбалою, можуть призвести до втрати мільйонів доларів.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Як перший контактний момент для нових користувачів криптовалют, Ethereum гаманці повинні бути легкими для використання, захищеними та забезпеченими, щоб пристосуватися до потреб кожного користувача. Для інтегрування фінансових продуктів Web2 з функціями Web3.
 
-This is exactly what account abstraction achieves.
+Це саме те, чого досягає абстракція рахунку.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Уточнення абстракцій покращує безпеку та безпеку продуктів самонабору гаманців, видаливши залежність користувачів від приватного ключа та зробивши гаманці більш запрограмованими. Завдяки цій вдосконаленій UX, некустонабір гаманців може нарешті масштабувати до мільйонів основних крипто-користувачів.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Але щоб повністю зрозуміти вплив доповідей абстракції, ми повинні оновити себе до того, як працюють рахунки Ethereum.
 
-### The basics of Ethereum accounts
+### Основи рахунків Ethereum
 
-There are two types of Ethereum accounts:
+Існує два типи облікових записів Ethereum:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Зовнішні облікові записи (EOA)
+2. Облікові записи контракту (CA)
 
-Let’s break each down a bit further.
+Давайте розберемо кожен з нас трохи далі.
 
-### Externally owned accounts
+### Зовнішні рахунки
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Зовнішні облікові записи, такі як MetaMask і Coinbase Wallet, є типовим типом облікового запису для користувачів Ethereum. Кожен ЕОА складається з приватного та відкритого ключа, що називається гострим повітрям.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Всі транзакції авторизовані і підписані приватними ключами. Після підписання трансакції, EVM перевіряє, що підпис дійсний за допомогою адреси облікового запису EOA. Логіка, що закодована в EVM твердить, що обліковий запис (об'єкт з вашими токенами) і приватний ключ (signer) з'єднані в якості одиниці.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Втрата власного ключа означає втрату коштів або навіть контроль над вашим аккаунтом назавжди.
 
-### Contract accounts
+### Договірні рахунки
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Тим часом контрагенти, синонімні з абстракцією облікового запису, є розумні договори, розгорнуті на blockchain. Ці договори контролюються кодовою логікою і не потребують приватних ключів. На відміну від EOAs, контракти не можуть починати операції. Натомість їх операції спрацьовують інструкції з EOAs.
 
-### Why account abstraction matters
+### Чому обліковий запис абстракції має значення
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+абстракція облікового запису тягне за собою обробку логіки авторизації окремо від EOAs, перетворення кожного рахунку в розумний контракт який можна пристосувати, щоб задовольнити потреби будь-якої особи.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Як пояснюється Аргентом співзасновником та головним науковим офіцер Джуліен Нізет в недавньому[Подія Старк @ Home](https://www.crowdcast.io/e/7olimxqv), ця гнучка логіка авторизації дає свободу розробникам гратися з можливостями облікового запису, такими як…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Апаратні підписи:**Використання захищеного анклаву iPhone або Android для перетворення будь-якого смартфона в апаратний гаманець. Звідси користувачі можуть перевірити транзакції за допомогою біометричних даних, таких як відбиток пальця чи ідентифікатор Apple Face ID. Ми вже почали бачити самокупні гаманці, такі як Braavos[, розкривають цю функцію](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**Дозволяє користувачам оплачувати плату за газ в будь-якому токені, або навіть мати механізм оплати в третіх сторін для транзакцій.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Соціальне відновлення:**У разі втрати або компрометованого закритого ключа користувачі можуть авторизувати новий ключ як законний власник гаманця. Це може включати різні методи відновлення через довірені контакти, апаратні гаманці або сторонні сервіси. Ідея полягає у тому, щоб полегшити відновлення доступу до Вашого облікового запису так само як відновлення паролю для вашого банківського рахунку за допомогою електронної пошти.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Мультифакторна аутентифікація:**Подібно до загальноприйнятої практики Web2 2FA. користувачі можуть налаштувати два (або більше) методи аутентифікації для своїх крипто-гаманців, де транзакція підписана лише тоді, коли користувач підтверджує затвердження через другий варіант, наприклад, електронну пошту або SMS. Користувачі можуть також налаштувати обмеження щоденних переказів або списки адрес облікових записів, при яких гаманець автоматично блокується взаємодію.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Квантова стійка до гас-ефективні сигнали:**Схема поточного підпису Ethereum, ECDSA - це обчислювальна широка (читання: вища плата за газ) і може бути порушена квантовими комп'ютерами. Через абстракцію підпису різні договори облікового запису використовують більш ефективні та безпечні схеми підписів. StarkNet використовує свою власну прієтну криву, сприятливу до СТАР.
 
 Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Слухав Віталік Бутерін як "давню мрію" для розробників Ethereum інновацій навколо абстракції, головним чином EIP-2938 та EIP-3074, проходили з 2020 року. Однак обидва необхідні компроміси навколо безпеки та реалізації. [ЕIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), найбільш перспективний розвиток досі, пропонує версію абстракції облікового запису, не вимагаючи змін в протоколі Ethereum.
 
-### **Account abstraction and Starknet**
+### **Докладна абстракція та Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+На відміну від Bitcoin і Ethereum, які переробляють свої поточні протоколи для підтримки абстракції облікових записів,[StarkNet](https://starkware.co/starknet/)реалізували бухгалтерську абстракцію з першого дня. У поєднанні з масштабованими можливостями нашого доведення до СТАР, потенціал для інновацій гаманця обмежений. Ось чому наступне покоління самовпевнених гаманців, таких як Аргент та Браавос, зараз будуються на нашій мережі.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+Підхід StarkNett схожий на EIP-4337,[визнаючи, що](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)повна абстракція аккаунта все одно призведе до заплутаного UX і[може відкрити двері](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)для нападу на послідовників. Це, скоріше, спрямовано на досягнення як абстракції підписів, так і платіжної абстракції, шляхом муталізації деяких необхідних на та позаланцюгову інфраструктуру.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+І хоча ще більше роботи потрібно робити, абстракція облікового запису набирає силу за межами малого кола криптовалют. У грудні[Visa запропонувала ідею](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)використання реконструкції облікового запису для встановлення автоматичних повторюваних платежів на StarkNet. Використання делегативного облікового запису, користувачі можуть надати дозвіл, щоб ініціювати платіж перед затвердженим розумним договором. Звідти розумний контракт буде запрограмовано на вирахування встановленої суми платежу на певний день, протягом зазначеного періоду часу. Хоча Візовий досі не розкрив своїх планів щодо власних послуг, лише інтерес говорить про томи, і може передбачити світ, де такі платформи, як Netflix та Spotify можуть використовувати криптовалюту.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Що скажете, що буде на майбутнє, то лише час покаже. Але одне є впевненим. Шляхом полегшення та безпечне використання, абстракція облікового запису буде служити потужним каталізатором для самонабору блокчейнських гаманців для масштабування мільйонів крипто-користувачів. Ми будемо продовжувати будувати тим часом.

@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* Starknet Prover 将在 Apache 2.0 许可下开源
+* 此举将增加开发者的无障碍环境, 促进社区内的协作, 并提供其他的惠益
+* 这项宣布是在开罗1.0版、帕皮鲁斯全节点和Starknet的新测序器开源之后宣布的。
 
-### Intro
+### 简介
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+前面令人兴奋的消息：Starknet Prover 将是开源的 ！
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+这是Starknet演变过程中的一个里程碑。 发现开源Starknet Prover的决定并探索它给Starknet生态系统带来的好处。 作为一种公益品，无障碍环境是最重要的，可以在技术堆栈方面进行更大的协作和创新。
 
-### Open Sourcing the Starknet Prover
+### 打开Starknet Prover 源
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha于2021年11月在Mainnet上发射。 从Starknet一开始，它就被设想为社区拥有的网络。 使它能够受益于STARK的强度。 在 Mainnett 上启动一年后，现在是开始打开整个Starknet 堆栈的时候了。
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+已经公开来源的元素包括[Cair1。](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus 全节点](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), 和新星网[序列器](https://starkware.medium.com/starknets-new-sequencer-339e63845003). 当Starknet Prover将被置于Apache 2.0之下，开源过程将完成。 这将在Starknet权力下放的最后阶段进行。
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Starknet Prover公开源码的重要性
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+开放源码软件将使社区能够独立维护和发展网络。 因此，这是建设Starknet作为一种分散的公益物的最真正途径。 它还将使社区能够有更多的自由来促进代言人的发展，从而促进Starknet的发展。 此外，开源Starknet Prover将使更多的眼睛能够审查代码，提高其质量，帮助检测缺陷，并提供透明度。
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+简而言之，开源Starknet技术堆栈意味着更多的协作、更好的质量、创新和独立。 所有这些数值都能帮助Starknet充分发挥其潜力。
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+我们构建Starknet Prover的代码库是基于自2020年6月以来一直在使用的模型。 证明由[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)驱动的 dApps 交易(例如Immutable X、Sorare、dYdX等)。 在这一作用中，它处理了3.27亿笔交易，吸引了9 500万个国家联络点，并结清了大约8 240亿美元。
 
 ### Summary
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+我们很高兴宣布Starknet Prover 将是开源的，可在 Apache 2.0 下使用。 Starknet Prover的公开来源将在Starknet完全权力下放之前进行。 这样，Starknet 堆栈将完全开源，适合于分散的、无权限的第二层网络。

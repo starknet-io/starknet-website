@@ -1,61 +1,61 @@
 ### TL;DR
 
-* The first version of StarkNet Bridge, StarkGate Alpha, is live on **[Testnet](https://goerli.starkgate.starknet.io/)**, and on **[Mainnet](https://starkgate.starknet.io/)**!
-* We await community feedback on how things can be improved. You can send your feedback for both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
-* Mainnet deployment will follow soon (update, May 9th 2022: StarkGate is live on Mainnet)
+* Den første version af StarkNet Bridge, StarkGate Alpha, er live på**[Testnet](https://goerli.starkgate.starknet.io/)**og på**[Mainnet](https://starkgate.starknet.io/)**!
+* Vi venter på fællesskabsfeedback om, hvordan tingene kan forbedres. Du kan sende din feedback til både[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)og[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+* Mainnet implementering vil følge snart (opdatering, 9. maj 2022: StarkGate er live på Mainnet)
 
-Excitement! We are thrilled to release StarkGate Alpha, the first version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet deployment to follow soon.*
+Spænding! Vi er begejstret for at frigive StarkGate Alpha, den første version af StarkNet ‘ s Bridge, nu live på Goerli testnet, med Mainnet implementering til at følge snart.*
 
-\*(update, May 9th 2022: StarkGate is live on Mainnet)
+\*(opdatering, 9. maj 2022: StarkGate er live på Mainnet)
 
-**Important disclaimer: this is an alpha version on StarkGate Alpha (read the fine print below!).**
+**Vigtig ansvarsfraskrivelse: dette er en alfa-version på StarkGate Alpha (læs de fine print nedenfor!).**
 
 ![](/assets/starkgate_01.png)
 
-Before you continue, go check it out! [StarkGate Testnet](https://goerli.starkgate.starknet.io/), [StarkGate Mainnet](https://starkgate.starknet.io/)
+Før du fortsætter, så tjek det ud! [StarkGate Testnet](https://goerli.starkgate.starknet.io/)[StarkGate Mainnet](https://starkgate.starknet.io/)
 
-StarkGate serves as a gateway between Ethereum and [StarkNet](https://starknet.io/), and allows users to do everything they can expect from a bridge.
+StarkGate fungerer som en gateway mellem Ethereum og[StarkNet](https://starknet.io/), og giver brugerne mulighed for at gøre alt, hvad de kan forvente af en bro.
 
-#### **Where can I find information on how StarkGate works?**
+#### **Hvor kan jeg finde oplysninger om, hvordan StarkGate virker?**
 
-To understand how StarkGate works, read the [technical documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) and take a look at the [code](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Note that this is the first version, and we invite your feedback and suggestions on how to improve both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+For at forstå, hvordan StarkGate fungerer, læs den[tekniske dokumentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)og tag et kig på[koden](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Bemærk, at dette er den første version, og vi inviterer din feedback og forslag til, hvordan du forbedrer både[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)og[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
 
-#### **Which tokens will be supported by StarkGate?**
+#### **Hvilke tokens vil blive understøttet af StarkGate?**
 
-* StarkGate Alpha on Goerli supports ETH and a few other ERC-20 tokens. The full list and the relevant contract addresses, both on Ethereum and StarkNet, are available in this [repo](https://github.com/starkware-libs/starknet-addresses).
-* On Mainnet, initially, StarkGate Alpha will only support ETH to allow use of the fee mechanism. Later on, we will add support for WBTC, USDC, USDT, and DAI. You can see the relevant contract addresses in this [repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
+* StarkGate Alpha på Goerli understøtter ETH og et par andre ERC-20 tokens. Den fuldstændige liste og de relevante kontraktadresser, både på Ethereum og StarkNet, er tilgængelige i dette[repo](https://github.com/starkware-libs/starknet-addresses).
+* På Mainnet vil StarkGate Alpha i første omgang kun støtte ETH for at tillade brug af gebyrmekanismen. Senere vil vi tilføje støtte til WBTC, USDC, USDT, og DAI. Du kan se de relevante kontraktadresser i dette[repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
 
-Further down the road, we will publish the mechanism for adding support for additional tokens.
+Længere nede på vejen, vil vi offentliggøre mekanismen for tilføjelse af støtte til yderligere tokens.
 
-#### **What safety limitations will StarkGate Alpha have on Mainnet?**
+#### **Hvilke sikkerhedsbegrænsninger vil StarkGate Alpha have på Mainnet?**
 
-StarkGate Alpha on Mainnet is launched with two limitations — in order to reduce the risks involved in using an Alpha version:
+StarkGate Alpha på Mainnet lanceres med to begrænsninger — for at reducere de risici, der er forbundet med at bruge en Alpha version:
 
-1. The total value locked (TVL) in the bridge on L1 will limit the amount of each token type.
-2. The maximum amount in each transaction sent from L1 to L2 (Ethereum→StarkNet) via StarkGate will be limited.
+1. Den samlede værdi låst (TVL) i broen på L1 vil begrænse mængden af hver token-type.
+2. Det maksimale beløb i hver transaktion sendt fra L1 til L2 (Ethereum→StarkNet) via StarkGate vil være begrænset.
 
-We plan to gradually ease these limitations and lift them completely as confidence grows. The updated parameters can be found in StarkGate’s [documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
+Vi planlægger gradvist at lette disse begrænsninger og løfte dem fuldstændigt, efterhånden som tilliden vokser. De opdaterede parametre kan findes i StarkGate’s[dokumentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
 
 ![](/assets/starkgate_02.png)
 
-### Alpha and What It Means
+### Alfa og hvad det betyder
 
-As always, we remind you that StarkNet is currently in its **Alpha** stage:
+Som altid minder vi dig om, at StarkNet er i øjeblikket i sin**Alpha**fase:
 
-* Things can break. If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
-* Both StarkNet Alpha and StarkGate contracts can be upgraded without a timelock. While we expect to announce such upgrades well ahead of time, in the case of imminent security risks (for example, if a critical bug is found), the upgrade may be applied with little or no warning.
-* The code of the bridge, as well as portions of StarkNet Alpha, have not yet been audited. The ABDK and Nethermind audits of StarkGate Alpha will be completed soon.
+* Tingene kan brydes. Hvis de fejler katastrofalt, kan dine midler gå tabt (**læs ansvarsfraskrivelse nedenfor**!).
+* Både StarkNet Alpha og StarkGate kontrakter kan opgraderes uden en timelock. Mens vi forventer at annoncere sådanne opgraderinger i god tid i tilfælde af overhængende sikkerhedsrisici (f.eks. hvis en kritisk fejl er fundet), kan opgraderingen anvendes med lidt eller ingen advarsel.
+* Koden for broen samt dele af StarkNet Alpha, er endnu ikke blevet revideret. ABDK og Nethermind audits af StarkGate Alpha vil blive afsluttet snart.
 
-We encourage all users to help improve the bridge by providing their feedback using one of the following platforms:
+Vi opfordrer alle brugere til at hjælpe med at forbedre broen ved at give deres feedback ved hjælp af en af følgende platforme:
 
 1. [StarkGate frontend repo](https://github.com/starkware-libs/starkgate-frontend)
-2. [StarkGate Contracts repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
-3. [StarkNet Shamans](http://community.starknet.io/)
+2. [StarkGate Kontrakter repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
+3. [StarkNet Shamaner](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+For spørgsmål og dev support, deltage i[StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
 
-### Disclaimer
+### Ansvarsfraskrivelse
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. The same applies to the StarkNet Bridge. Like all complex software systems, both StarkNet and the bridge may contain bugs that, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***StarkNet Alpha er et nyt og komplekst system, der ikke er blevet fuldt revideret. Det samme gælder for StarkNet-broen. Ligesom alle komplekse software-systemer, både StarkNet og broen kan indeholde fejl, der, i ekstreme tilfælde kan føre til et tab af alle dine midler. Så***træde forsigtigt og pas på!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*Økosystemet StarkNet er et stort og hurtigt voksende sæt af uafhængige hold og enkeltpersoner, som StarkWare ikke har noget overblik over og påtager sig intet ansvar. Enhver af de projekter, der er udviklet af økosystemmedlemmer, kan indeholde fejl, der i ekstreme tilfælde kan føre til et tab af alle dine midler. Endvidere, som mere smart kontrakter er implementeret, potentialet for utilsigtede skadelige bugs og endda ondsindede svindel og tæppe trækker stiger. Så behandl alle smarte kontrakter på StarkNet som du behandler smarte kontrakter på Ethereum, og brug kun dem, som du har god grund til at stole på som sikker.*

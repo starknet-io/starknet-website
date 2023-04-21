@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* التحسينات المجردة للحساب بروح EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. التحقق - تنفيذ الفصل
+2. ويكفل البروتوكول الآن الطابع الفريد للمعاملات (مرة واحدة)
 
-* The fee mechanism is extended to include:
+* وتم توسيع نطاق آلية الرسوم لتشمل ما يلي:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1<unk> L2 رسائل
+2. اعلان المعاملات
 
-* Few Cairo syntax changes
+* عدد قليل من تغييرات بناء الجملة بالقاهرة
 
-### Introduction
+### مقدمة
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+نحن متحمسون لتقديم StarkNet Alpha 0.10.0. هذه النسخة خطوة أخرى نحو توسيع نطاق الإيثيريوم دون المساس بالأمن واللامركزية.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+هذا المنشور في المدونة يصف باختصار السمات الرئيسية لهذا الإصدار. للحصول على القائمة الكاملة للتغييرات، راجع[ملاحظات الإصدار](https://github.com/starkware-libs/cairo-lang/releases). للحصول على معلومات أكثر تفصيلا، راجع الوثائق[](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### تغييرات تجريد الحساب
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+نحن نمضي قدماً مع[StarkNet's account تجريد](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). يقدم هذا الإصدار تغييرات مستوحاة من[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### المصادقة/تنفيذ الفصل
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+حتى الآن، كانت دالة الحساب \_\_execute\_\__ مسؤولة عن كل من التحقق من صحة المعاملة وتنفيذها. في 0.10.0 كسرنا هذا التقريب ونقدم دالة \_\_validate\_\_ منفصلة في الحسابات. عند تلقي المعاملة، سوف يقوم عقد الحساب أولاً بالاتصال \_\_validate\_\_، ثم انتقل في حالة نجاحه، إلى \_execute\_\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+يوفر التحقق من صحة / تنفيذ الإنفصال تمييزا على مستوى البروتوكول بين المعاملات غير الصحيحة والمعاملات المعاكسة (حتى الآن). وبفضل ذلك، سيتمكن واضعو التسلسل من فرض رسوم على تنفيذ معاملة سارية بصرف النظر عما إذا كان قد تم الرجوع عنها أم لا.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+في الإصدار 0.10.0 يتم إضافة حقل غير حادي من أجل فرض التفرد في المعاملة على مستوى البروتوكول. وحتى الآن كان يتم التعامل مع هذه الحالات على مستوى عقد الحساب، مما يعني أنه يمكن إجراء معاملة بنفس التجزئة مرتين من الناحية النظرية.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+وعلى غرار إيثيريوم، فإن كل عقد يتضمن الآن عدم وجود عدد من المعاملات المنفذة من هذا الحساب. عقود الحساب سوف تقبل فقط المعاملات مع عدم مطابقة، أي إذا كان الرقم اللاعصري الحالي للحساب هو X، فإنه لن يقبل إلا المعاملات مع الرقم X.
 
-#### New Transaction Version
+#### إصدار المعاملة الجديدة
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+للسماح بالتوافق الخلفي، سوف نقدم هذين التغييرين عن طريق إصدار معاملة جديدة -[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). وستنطبق هذه التغييرات على النسخة الجديدة فقط، وستظل الحسابات القديمة قادرة على تنفيذ معاملات الإصدار 0.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+ملاحظة - المعاملات v0 مهملة الآن وسيتم إزالتها في StarkNet Alpha v0.11.0. الرجاء التأكد من الترقية لاستخدام إصدار المعاملة الجديد.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+للحصول على معلومات أكثر تفصيلاً حول إصدار المعاملة، يرجى قراءة[المستندات](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### آلية الرسوم
 
-The new version allows to include fees for two required components:
+وتسمح النسخة الجديدة بإدراج رسوم لعنصرين مطلوبين:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [رسالة L1<unk> L2](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [إعلان المعاملة](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+لن تكون هذه الرسوم إلزامية في هذا الإصدار وسيتم إنفاذها فقط عند بدء StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### تغييرات بناء الجملة بالقاهرة
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+لصالح التقدم التدريجي نحو ترقية القاهرة،[القاهرة 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU)، تتضمن هذه النسخة عدة تغييرات في بناء الجملة.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+لتقليل الإزعاج، سيتضمن إصدار الإصدار[سكريبت ترحيل](https://www.youtube.com/watch?v=kXs59zaQrsc)الذي يطبق تلقائياً التغييرات أعلاه. يمكنك العثور على المزيد من التفاصيل[هنا](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### ما التالي؟
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* في غضون بضعة أسابيع، نخطط لإدخال التوازي في تسلسل التسلسل، مما يمكن من إنتاج كتل أسرع (V0.10.1)
+* وسنستكمل قريبا الجزء الأخير الذي يجب إدراجه في دفع الرسوم - نشر الحساب
+* إصدار 1.0 القاهرة! المزيد من المعلومات عن ذلك في المشاركة القادمة.
 
-### How Can I Be More Engaged?
+### كيف يمكنني أن أكون أكثر مشاركة؟
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* انتقل إلى[starknet.io](https://starknet.io/)لجميع معلومات StarkNet، الوثائق، الدروس، والتحديثات.
+* انضم إلى[StarkNet Discord](http://starknet.io/discord)للحصول على دعم ديف، وإعلانات النظام الإيكولوجي، و تصبح جزءا من المجتمع.
+* قم بزيارة[منتدى StarkNet](http://community.starknet.io/)للبقاء على علم بآخر المستجدات والمشاركة في مناقشات البحث StarkNet.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+نحن دائما سعداء بتلقي تعليقات على[وثائقنا](https://docs.starknet.io/)!

@@ -1,118 +1,118 @@
 ### TL;DR
 
-* Recursive Proving is live on Mainnet, scaling StarkEx apps as well as StarkNet with a single proof
-* It boosts scale, and delivers benefit in cost, and latency (a rare and exciting occurrence of scale and latency moving in tandem, and not being a tradeoff)
-* It sets the stage for L3 and other benefitsGo read the blog post on [Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). It’s cool stuff 😉
+* Rekurentní Proving je živý na Mainnet, škálování aplikací StarkEx i StarkNet s jedním důkazem
+* Zvyšuje rozsah a přináší prospěch nákladům, a latence (vzácný a vzrušující výskyt rozsahu a latence se pohybují v tandemu a nejsou kompromisem)
+* Nastavuje scénu pro L3 a další výhody Go přečtěte si blogový příspěvek na[Rekurentní Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). Je to skvělé věci 😉
 
-### Scaling up!
+### Škálování!
 
-Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof.
+Rekurentní důkazy – poháněné všeobecným výpočtem Káhiry – jsou nyní ve výrobě. To znamená výrazné zvýšení síly škálování L2 pomocí STARKů. Rychle přinese mnohonásobný nárůst počtu transakcí, které lze do Ethereum zapsat prostřednictvím jediného důkazu.
 
-Until now, STARK scaling has worked by “rolling up” tens or even hundreds of thousands of transactions into a single proof, which was written to Ethereum. With recursion, many such proofs can be “rolled up” into a single proof.
+Škálování STARK až dosud fungovalo tím, že „valí nahoru“ desítky nebo dokonce statisíce transakcí do jediného důkazu, který byl napsán do Etherea. S rekurzivou lze mnoho takových důkazů „přenést na jediný důkaz“.
 
-This method is now in production for a multitude of Cairo-based applications: apps running on StarkEx, StarkWare’s SaaS scaling engine, and StarkNet, the permissionless rollup.
+Tato metoda je nyní ve výrobě pro řadu počítačových aplikací: aplikace běžící na StarkEx, součinitel SaaS a nepřípustný rollup StarkWare's a StarkNet.
 
-### The story so far
+### Dosud tento příběh
 
-Since the first proof on Mainnet, in March 2020, the following developments have shaped how STARKs are used.
+Od prvního důkazu o Mainnetu v březnu 2020 tento vývoj formoval způsob používání STARKů.
 
-### STARK-based scaling
+### Škálování na základě STARKU
 
-In June 2020 the first STARK-based scaling solution — [StarkEx](https://youtu.be/P-qoPVoneQA) — was deployed on Ethereum Mainnet. StarkEx has a Prover that performs large computations off-chain and produces a STARK-proof for their correctness, and a Verifier that verifies this proof on-chain. The constraints for this first deployment were “hand-written” by StarkWare’s engineers, thus greatly limiting feature velocity for StarkEx. We concluded that a programming language to support proving general computation is needed — Cairo.
+V červnu 2020 bylo v Ethereum Mainnet, zavedeno první scaling řešení založené na STARKu –[StarkEx](https://youtu.be/P-qoPVoneQA). StarkEx má Prover, který provádí velké výpočty mimo řetězec a produkuje STARK-proof pro jejich správnost, a ověřovatel, který ověřuje tento důkaz v řetězci. Omezení pro toto první nasazení byla „ručně psaná“ od inženýrů Hvězdné flotily a tím značně omezovala rychlost rysu StarkEx. Dospěli jsme k závěru, že programovací jazyk, který by podpořil prokázání celkového výpočtu, je zapotřebí – Káhira.
 
 #### Cairo
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo stands for CPU Algebraic Intermediate Representation (AIR), and includes a single AIR that verifies the instruction set of this “CPU”. It opened up the door for coding proofs for more complex business logic, for arbitrary computational statements, and for doing so in a faster and safer manner. A Cairo program can prove the execution of a single application’s logic. But a Cairo program can also be a concatenation of multiple such applications — SHARP.
+In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Kairo znamená CPU Algebraic Intermediate Representation (AIR) a zahrnuje jeden AIR, který ověřuje sadu instrukcí tohoto „CPU“. Otevřela dveře pro kódování důkazů pro složitější obchodní logiku, pro svévolná výpočetní prohlášení, a to rychleji a bezpečněji. Program Káhira může prokázat provedení logiky jediné aplikace. Ale program Káhira může být také spojením několika takových aplikací – SHARP.
 
 #### SHARP
 
-SHARP — a SHARed Prover — takes transactions from several separate apps, and proves them all in one single STARK-proof. Apps combine their batches of transactions, filling up the capacity of a STARK-proofs faster. Transactions are processed at an improved rate and latency. The next frontier: Recursive Proofs, but not merely for some hard-coded logic, but rather for **general computation**.
+SHARP – SHARed Prover – provádí transakce z několika různých aplikací a potvrzuje je v jediném důkazu STARKu. Aplikace zkombinují své transakce, čímž rychleji naplní kapacitu odolnosti proti STARKu. Transakce se zpracovávají se zvýšeným tempem a zpožděním. Další hranice: rekurentní důkazy, ale nejen pro nějakou tvrdou logiku, ale spíše pro**obecný výpočet**.
 
-To understand the full benefit of Recursive Proving it is worth understanding a little bit more about how (non-recursive) proving was performed by SHARP up until now. Drawing 1 depicts a typical non-recursive flow:
+Abychom rozuměli plnému přínosu rekurentního poskytování, stojí za to trochu více porozumět tomu, jak (rekurentní) dokázala společnost SHARP až doposud. Výkres 1 znázorňuje typický nerekurentní tok:
 
-![Drawing 1: A typical non-recursive proving flow](/assets/recursive_starks_01.png "Drawing 1: A typical non-recursive proving flow")
+![Výkres 1: Typický nerekurentní prokazující tok](/assets/recursive_starks_01.png "Výkres 1: Typický nerekurentní prokazující tok")
 
-Here, statements arrive over time. When a certain capacity (or time) threshold is reached, a large combined statement (a.k.a Train) is generated. This combined statement is proven only once all the individual statements have been received. This proof takes a long time to prove (roughly the sum of time it takes to prove each statement individually).
+Zde přicházejí výpovědi postupem času. Pokud je dosaženo určité prahové hodnoty kapacity (nebo času), vygeneruje se velké kombinované prohlášení (též Train). Toto kombinované prohlášení je prokázáno až po obdržení všech jednotlivých prohlášení. Tento důkaz trvá dlouhou dobu, než se prokáže (zhruba součet času potřebného k prokázání každého prohlášení jednotlivě).
 
-Proving extremely large statements is eventually limited by available compute resources such as memory. Prior to recursion, this was effectively the limiting scalability barrier of STARK proving.
+Prokázání extrémně velkých prohlášení je nakonec omezeno dostupnými výpočetními zdroji, jako je paměť. Před rekurzí to byla fakticky omezená bariéra škálovatelnosti u provinění STARK.
 
-### What is Recursive Proving?
+### Co je rekurentní poskytování?
 
-With STARK proofs, the time it takes to prove a statement is roughly linear with the time it takes to execute the statement. In addition, if proving a statement takes T time, then verifying the proof takes roughly log(T) time, which is typically called “logarithmic compression”. In other words, with STARKs you spend much less time on verifying the statement than on calculating it.
+S důkazy STARK je doba, po kterou je potvrzení potvrzení vyžadováno, přibližně lineární s časem, který trvá na provedení výpisu. Kromě toho, pokud prokázání prohlášení trvá T čas, pak ověření důkazu trvá zhruba čas log(T), což se obvykle nazývá „logaritmická komprese“. Jinými slovy, se STARKy trávíte mnohem méně času ověřováním prohlášení než jeho výpočtem.
 
-[Cairo](https://starkware.co/cairo/) allows expressing general computational statements that can be proven by STARK proofs and verified by the corresponding STARK verifiers.
+[Kairo](https://starkware.co/cairo/)umožňuje vyjádřit obecná výpočetní prohlášení, která mohou být doložena důkazy STARK a ověřena příslušnými ověřovateli STARK.
 
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. We can generate a single proof attesting to the validity of multiple “up-stream” proofs. This is what we call Recursive Proving.
+Zde se vybírá příležitost k provedení[opakování](https://en.wikipedia.org/wiki/Recursion)v: stejným způsobem, jakým napíšeme program Káhira, který dokazuje správnost tisíců transakcí, můžeme také napsat program Káhira, který ověřuje více důkazů STARK. Můžeme vygenerovat jediný důkaz potvrzující platnost více důkazů „proti vysílání“. To nazýváme rekurentním poskytováním.
 
-Because of the logarithmic compression and roughly linear proving time, proving a verification of a STARK proof takes relatively short time (expected to be just a few minutes in the near future).
+Kvůli logaritmickému stlačení a přibližně lineárnímu čase prokazování prokázání ověření STARK důkazu trvá relativně krátký čas (v blízké budoucnosti se očekává jen pár minut).
 
-When implementing Recursion, SHARP can prove statements upon their arrival. Their proofs can be merged over and over into recursive proofs in various patterns until, at a certain point, the resulting proof is submitted to an on-chain verifier contract. A typical pattern is depicted in Drawing 2:
+Při zavádění rekurence může SHARP prokázat výpovědi při příjezdu. Jejich důkazy mohou být znovu a znovu sloučeny do rekurentních důkazů v různých vzorech, dokud v určitém okamžiku je výsledný důkaz předložen k dohodě o ověřovateli řetězu. Typický vzor je znázorněn v výkresu 2:
 
-![Drawing 2: A typical recursive proving flow.](/assets/recursive_starks_02.png "Drawing 2: A typical recursive proving flow.")
+![Výkres 2: Typický rekurentní prokazující tok.](/assets/recursive_starks_02.png "Výkres 2: Typický rekurentní prokazující tok.")
 
-### Immediate Benefits of Recursive Proving
+### Okamžité přínosy rekurentního poskytování
 
-#### Reduced On-chain Cost
+#### Snížené náklady na On-chain
 
-Off the bat, we achieve “compression” of multiple proofs into one, which implies lower on-chain verification cost per transaction (where each statement may include many transactions).
+Mimo chod, docílíme „komprese“ několika důkazních prostředků do jednoho, z toho vyplývá nižší náklady na ověření transakcí v řetězci (pokud může každé prohlášení zahrnovat mnoho transakcí).
 
-With recursion, the computational resources barrier (e.g. memory) that limited proofs size up until now, is eliminated, since each limited size statement can be proven separately. Hence, when using recursion, the effective Train size of recursion is almost unlimited, and the cost per transaction can be reduced by orders of magnitude.
+Při rekurzi překážka ve výpočetních zdrojích (např. paměť), že až dosud byla odstraněna omezená velikost důkazů, protože každá omezená velikost může být prokázána samostatně. Proto při použití rekurence je efektivní velikost vlaku rekurze téměř neomezená, a náklady na transakci lze snížit o příkazy velikosti.
 
-In practical terms, the reduction depends on the acceptable latency (and the rate at which transactions arrive). In addition, since each proof is typically also accompanied by some output such as on-chain data, there are limits to the amount of data that can be written on-chain together with a single proof. Nevertheless, reducing cost by an order of magnitude and even better is trivially achievable.
+V praxi to znamená, že snížení závisí na přijatelné latenci (a na sazbě transakcí). Navíc vzhledem k tomu, že každý důkaz je obvykle doprovázen i některými výstupy, jako jsou údaje v řetězci, množství údajů, které lze psát on-chain spolu s jedním důkazem, je omezeno. Nicméně snížení nákladů o řádově velké množství a ještě lépe je triviálně dosažitelné.
 
-#### Reduced Latency
+#### Snížená odezva
 
-The Recursive Proving pattern reduces the latency of proving large Trains of statements. This is the result of two factors:
+Rekurentní předváděcí schéma snižuje latenci prokazování velkých vlaků v prohlášeních. To je důsledkem dvou faktorů:
 
-1. Incoming statements can be proven **in parallel** (as opposed to proving an extremely large combined statement).
-2. There is no need to wait until the last statement in the Train arrives to begin proving. Rather, proofs can be combined with new statements as they arrive. This means that the latency of the last statement joining a Train, is roughly the time it takes to prove that very last statement plus the time it takes to prove a Recursive Verifier statement (which attests to all those statements that have already “onboarded” this particular Train).
+1. Příchozí prohlášení lze prokázat**souběžně**(na rozdíl od prokázání extrémně velkého kombinovaného prohlášení).
+2. Není třeba čekat až do posledního výpisu v příjezdu vlaku, aby začal prokazovat. Důkazy lze spíše zkombinovat s novými prohlášeními, která přijíždí. To znamená, že doba platnosti posledního výpovědi pro vlak je zhruba doba, kterou je třeba prokázat, že velmi poslední prohlášení a doba, kterou potřebuje k prokázání prohlášení rekurentního ověřovatele (které potvrzuje všechna prohlášení, která již „zapojila“ tento konkrétní vlak).
 
-We are actively developing and optimizing the latency of proving the Recursive Verifier statement. We expect this to reach the order of a few minutes within a few months. Hence, a highly efficient SHARP can offer latencies from a few minutes up to a few hours, depending on the tradeoff versus on-chain cost per transaction. This represents a meaningful improvement to SHARP’s latency.
+Aktivně vyvíjíme a optimalizujeme latenci dokazování prohlášení rekurentního ověřovatele. Očekáváme, že během několika měsíců dosáhneme řádu několika minut. Proto může vysoce efektivní SHARP nabídnout zpoždění od několika minut do několika hodin, v závislosti na kompromisu a nákladech v řetězci na transakci. To představuje smysluplné zlepšení latence SHARP.
 
-#### Facilitating L3
+#### Usnadnění L3
 
-The development of the Recursive Verifier statement in Cairo also opens up the possibility of submitting proofs to StarkNet, as that statement can be baked into a StarkNet smart contract. This allows building [L3 deployments on top of the public StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) (an L2 network).
+Vývoj prohlášení rekurentního ověřovatele v Káhiře rovněž otevírá možnost předložit důkazy společnosti StarkNet, vzhledem k tomu, že toto prohlášení lze upadnout do chytré kontrakce StarkNet. To umožňuje stavbu[L3 nasazení nad veřejnou StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f)(síť L2).
 
-The recursive pattern also applies to the aggregation of proofs from L3, to be verified by a single proof on L2. Hence, hyper-scaling is achieved there too.
+Rekurentní schéma se vztahuje také na shromažďování důkazů z L3, které musí být ověřeno jediným důkazem na L2. Proto se zde také dosahuje hyperškálování.
 
-### More Subtle Benefits
+### Další výhody
 
-#### Applicative Recursion
+#### Recirkulace
 
-Recursion opens up even more opportunities for platforms and applications wishing to further scale their cost and performance.
+Recenze otevírá ještě více příležitostí pro platformy a aplikace, které si přejí dále své náklady a výkon.
 
-Each STARK proof attests to the validity of a statement applied to some input known as the “public input” (or “program output” in Cairo terms). Conceptually, STARK recursion compresses two proofs with *two* inputs into *one* proof with two inputs. In other words, while the number of proofs is reduced, the number of inputs is kept constant. These inputs are then typically used by an application in order to update some state on L1 (e.g. to update a state root or perform an on-chain withdrawal).
+Každý důkaz STARK potvrzuje platnost prohlášení, které se použije na některé vstupy známé jako „veřejný vstup“ (nebo „programový výstup“ za Káhiry). Koncepční rekurze STARK komprimuje dva důkazy s*dvěma*vstupy do*jednoho*důkazu se dvěma vstupy. Jinými slovy, zatímco se počet důkazů snižuje, počet vstupů se udržuje konstantně. Tyto vstupy pak obvykle používá aplikace k aktualizaci určitého stavu na L1 (např. . pro aktualizaci kořene stavu nebo provedení online stahování).
 
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. The resulting statement attests to the validity of the input combination based on the application semantics, hence the name Applicative Recursion (see Drawing 3, for an example)..
+Je-li rekurzivní tvrzení povoleno*aplikací-vědět*, tj. uznává sémantiku aplikace samotné, může obě komprimovat dva důkazy do jednoho*a*kombinovat oba vstupy do jedné. výsledné prohlášení potvrzuje platnost vstupní kombinace na základě sémantiky aplikace, název Aplikující Recurze (viz například Drawing 3).
 
-![Drawing 3: Applicative Recursion example](/assets/recursive_starks_03.png "Drawing 3: Applicative Recursion example")
+![Výkres 3: Příklad aplikační rekurze](/assets/recursive_starks_03.png "Výkres 3: Příklad aplikační rekurze")
 
-Here, Statement 1 attests to a state update from A to B and Statement 2 attests to a further update from B to C. Proofs of Statement 1 and Statement 2 may be combined into a third statement, attesting to the direct update from A to C. By applying similar logic recursively, one can reduce the cost of state updates very significantly up to the finality latency requirement.
+Zde se osvědčuje prohlášení 1 o aktualizaci stavu z osvědčení A na B a prohlášení 2 na další aktualizaci z B na C. Doklady o prohlášení 1 a prohlášení 2 lze kombinovat do třetího prohlášení, které potvrzuje přímou aktualizaci z A na C. Uplatňováním podobné logiky rekurentně lze snížit náklady na aktualizace stavu velmi významně až na požadavek na latenci finality.
 
-Another important example of Applicative Recursion is to compress rollup data from multiple proofs. For example, for a Validity Rollup such as StarkNet, every storage update on L2 is also included as transmission data on L1, to ensure data availability. However, there is no need to send multiple updates for the same storage element, as only the final value of transactions attested to by the proof verified is required for data availability. This optimization is already performed within a *single* StarkNet block. However, by generating a proof per block, Applicative Recursion may compress this rollup data across *multiple* L2 blocks. This can result in significant cost reduction, enabling shorter block intervals on L2, without sacrificing the scalability of L1 updates.
+Dalším důležitým příkladem aplikační rekurze je komprimace údajů o rollupu z více důkazů. Například pro Validity Rollup jako StarkNet, každá aktualizace úložiště na L2 je rovněž zahrnuta jako údaje o přenosu na L1, aby byla zajištěna dostupnost dat. Není však nutné zasílat více aktualizací pro stejný úložný prvek, vzhledem k tomu, že pro dostupnost údajů se vyžaduje pouze konečná hodnota transakcí potvrzená důkazem. Tato optimalizace je již prováděna v rámci*jednoho*bloku StarkNet. Generování důkazu pro každý blok však může aplikační rekurze komprimovat tato data přes*více*bloků L2. To může vést k výraznému snížení nákladů, což umožní kratší intervaly bloků na L2 bez obětování škálovatelnosti aktualizací L1.
 
-Worth noting: Applicative Recursion may be combined with application-agnostic recursion as depicted earlier. These two optimizations are independent.
+Pozn.: Aplikační rekurze může být kombinována s rekurzí aplikací-agnostickou, jak je znázorněno dříve. Tyto dvě optimalizace jsou nezávislé.
 
-#### Reduced On-chain Verifier Complexity
+#### Snížená složitost On-chain ověřovatele
 
-The complexity of the STARK verifier depends on the kind of statements it is designed to verify. In particular, for Cairo statements, the verifier complexity depends on the specific elements allowed in the Cairo language, and, more specifically, the supported built-ins (if we use the CPU metaphor for Cairo, then built-ins are the equivalent of micro-circuits in a CPU: computations performed so frequently that they require their own optimized computation).
+Složitost ověřovatele STARK závisí na druhu prohlášení, které má ověřovat. Zejména u prohlášení v Káhiře závisí složitost ověřovatele na konkrétních prvcích povolených v Káhiře, a přesněji řečeno, podporované vestavěné soubory (pokud používáme metaforu CPU pro Káhiru, pak jsou vestavěné mikroobvody v procesoru ekvivalentní: výpočty se provádějí tak často, že vyžadují vlastní optimalizovaný výpočet).
 
-The Cairo language continues to evolve and offer more and more useful built-ins. On the other hand, the Recursive Verifier only requires using a small subset of these built-ins. Hence, a recursive SHARP can successfully support any statement in Cairo by supporting the full language in the recursive verifiers. Specifically, the L1 Solidity Verifier need only verify recursive proofs, and thus can be limited to a more stable subset of the Cairo language: The L1 Verifier need not keep up with the latest and greatest built-ins. In other words, verification of ever-evolving complex statements is relegated to L2, leaving the L1 Verifier to verify simpler and more stable statements.
+Káhirský jazyk se nadále vyvíjí a nabízí stále více užitečnějších vestavěných. Na druhé straně rekurentní ověřovatel vyžaduje pouze použití malé podmnožiny těchto vestavěných. Rekurentní SHARP proto může úspěšně podpořit jakékoli prohlášení v Káhiře tím, že podpoří celý jazyk rekurentních ověřovatelů. Ověřovatel solidarity L1 musí ověřovat pouze rekurentní důkazy, a proto může být omezena na stabilnější podmnožinu Káhiry: Ověřovatel L1 nemusí držet krok s nejnovějšími a největšími vestavěnými prvky. Jinými slovy, ověření stále se vyvíjejících složitých prohlášení je odloženo na L2, takže ověřovatel L1 ověřuje jednodušší a stabilnější prohlášení.
 
-#### Reduced Compute Footprint
+#### Snížená informativní stopa
 
-Before recursion, the ability to aggregate multiple statements into one proof was limited by the maximal size of the statement that could be proved on available compute instances (and the time it could take to generate such proofs).
+před rekurencí, schopnost sloučit vícenásobná prohlášení do jednoho důkazu byla omezena maximální velikostí prohlášení, která by mohla být prokázána v dostupných výpočtových instancích (a dobou, kterou by bylo možné získat k získání takových důkazů).
 
-With recursion, there is no longer a need to prove such extremely large statements. As a result, smaller, less expensive and more available compute instances can be used (though more of those may be needed than with large monolithic provers). This allows deployment of prover instances in more physical and virtual environments than previously possible.
+S rekurzivou již není třeba dokazovat tak mimořádně velká prohlášení. V důsledku toho je menší lze použít méně nákladné a dostupnější výpočetní instance (i když jich může být zapotřebí více než u velkých monolitických provenienců). To umožňuje nasazení provinčních instancí ve více fyzických a virtuálních prostředích, než bylo dříve možné.
 
 ### Summary
 
-Recursive proofs of general computation now serve multiple production systems, including StarkNet, on Mainnet Ethereum.
+Rekurentní důkazy všeobecného výpočetního výkonu nyní slouží k mnoha výrobním systémům, včetně StarkNet, na Mainnet Ethereum.
 
-The benefits of recursion will be realized gradually, as it continues to allow for new improvements, and it will soon deliver hyper-scale, cut gas fees, and improve latency by unlocking the potential of parallelization.
+Přínosy zotavení budou realizovány postupně, neboť i nadále umožňují nová zlepšení, a brzy dodá hyperměřítko, sníží poplatky za plyn a zlepší latenci uvolněním potenciálu paralelizace.
 
-It will bring significant cost and latency benefits with it, together with new opportunities such as L3 and applicative-recursion. Further optimization of the Recursive Verifier is on-going and even better performance and cost benefits are expected to be provided over time.
+Přináší spolu s ní značné přínosy v oblasti nákladů a latinky, společně s novými příležitostmi, jako je L3 a rekurence aplikací. Další optimalizace rekurentního ověřovatele probíhá a očekává se, že bude v průběhu času poskytován ještě lepší výkon a nákladové přínosy.
 
 
 
-**Gidi Kaempfer**, Head of Core Engineering, StarkWare
+**Gidi Kaempfer**, vedoucí hlavní inženýrství, StarkWare

@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Τεχνολογική καινοτομία στο blockchain έχει ακμάσει τα τελευταία χρόνια - STARKs, SNARKs, EIP-1559, το Ethereum Merge - είναι όλα τεράστια τεχνολογικά επιτεύγματα. Ωστόσο, ο σχεδιασμός UX και UI απέτυχε να συνεχίσει. Οι άνθρωποι εξακολουθούν να κολλήσει στις 16-λέξεις σπόρου-φράσεις, και να πάρει σε DeFi χωρίς ένα κεντρικό μεσάζοντα εξακολουθεί να είναι πάρα πολύ εκφοβισμό για πολλούς . Για να επιβιβαστούν στους επόμενους δισεκατομμύριο χρήστες στο Web3, η βελτίωση της εμπειρίας του χρήστη κατά την επιβίβαση είναι κρίσιμη.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Όπως απέδειξε ο FTX (και ο Gemini, ο Κελσίου και ο Όρος Gox), η διατήρηση της αυτοκατοχής επί των περιουσιακών στοιχείων ενός είναι εξαιρετικά σημαντική. Ωστόσο, μέχρι πρόσφατα, τα αυτο-θεματοφύλακα πορτοφόλια ήταν αδέξια και μπερδεμένα για τον μέσο χρήστη. Οι περισσότεροι άνθρωποι ξεχνούν τους κωδικούς πρόσβασης Web2 σε μηνιαία βάση; πώς οι χρήστες αναμένεται να κρατήσει τη φράση σπόρων τους και τα ιδιωτικά κλειδιά ασφαλή για την αιωνιότητα?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Με απλά λόγια, είναι ένας εφιάλτης ασφαλείας. Όπως έχουμε δει αμέτρητες φορές, μια λάθος κίνηση, είτε ξεκίνησε από κακούς παράγοντες ή αμέλεια, μπορεί να οδηγήσει στην απώλεια εκατομμυρίων δολαρίων.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Ως το πρώτο σημείο επαφής για νέους χρήστες κρυπτονομισμάτων, τα πορτοφόλια Ethereum πρέπει να είναι εύκολα στη χρήση, ασφαλή και προσαρμόσιμα ώστε να ταιριάζουν στις ανάγκες κάθε χρήστη. Αυτό απαιτεί από τους προγραμματιστές να ενσωματώσουν την απλότητα των οικονομικών προϊόντων Web2 με τα χαρακτηριστικά του Web3.
 
-This is exactly what account abstraction achieves.
+Αυτό ακριβώς επιτυγχάνει η αφαίρεση του λογαριασμού.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Η αφαίρεση του λογαριασμού βελτιώνει την ασφάλεια και την ασφάλεια των προϊόντων του πορτοφολιού αυτο-θεματοφύλακα αφαιρώντας την εξάρτηση των χρηστών από το ιδιωτικό κλειδί και καθιστώντας τα πορτοφόλια πιο προγραμματιστά. Με αυτό το βελτιωμένο UX, τα μη-θεματοφύλακες πορτοφόλια μπορούν τελικά να κλιμακωθούν σε εκατομμύρια mainstream κρυπτο-χρήστες.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Αλλά για να κατανοήσουμε πλήρως τον αντίκτυπο της αφαίρεσης λογαριασμού, πρέπει να ανανεωθούμε για το πώς λειτουργούν οι λογαριασμοί του Ethereum.
 
-### The basics of Ethereum accounts
+### Τα βασικά στοιχεία των λογαριασμών του Ethereum
 
-There are two types of Ethereum accounts:
+Υπάρχουν δύο τύποι λογαριασμών Ethereum:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Εξωτερική Ιδιοκτησία Λογαριασμών (EOA)
+2. Λογαριασμοί Συμβολαίου (CA)
 
-Let’s break each down a bit further.
+Ας σπάσουμε το καθένα λίγο περισσότερο.
 
-### Externally owned accounts
+### Εξωτερικοί λογαριασμοί
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Εξωτερικά ιδιόκτητοι λογαριασμοί, όπως MetaMask και Coinbase Wallet, είναι ο τυπικός τύπος λογαριασμού για τους χρήστες του Ethereum. Κάθε EOA αποτελείται από ένα ιδιωτικό και δημόσιο κλειδί, που ονομάζεται keypair.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Όλες οι συναλλαγές επιτρέπονται και υπογράφονται από ιδιωτικά κλειδιά. Μόλις υπογραφεί μια συναλλαγή, η EVM επαληθεύει ότι η υπογραφή είναι έγκυρη χρησιμοποιώντας τη διεύθυνση λογαριασμού της EOA. Η σκληρή κωδικοποιημένη λογική στο EVM σημαίνει ότι ο λογαριασμός (το αντικείμενο που περιέχει τα tokens σας) και το ιδιωτικό κλειδί (signer) συνδέονται ως ένα.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Χάνοντας το ιδιωτικό σας κλειδί σημαίνει ότι χάνετε τα χρήματά σας, ή ακόμα και τον έλεγχο του λογαριασμού σας, για πάντα.
 
-### Contract accounts
+### Λογαριασμοί συμβολαίου
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Εν τω μεταξύ, οι συμβατικοί λογαριασμοί, συνώνυμοι με την αφαίρεση λογαριασμού, είναι έξυπνες συμβάσεις που αναπτύσσονται στο blockchain του Ethereum. Οι συμβάσεις αυτές ελέγχονται από τη λογική του κώδικα και δεν απαιτούν ιδιωτικά κλειδιά. Σε αντίθεση με την EOAs, οι συμβασιούχοι λογαριασμοί δεν μπορούν να ξεκινήσουν συναλλαγές. Αντ' αυτού, οι συναλλαγές τους προκαλούνται από οδηγίες από τις ΕΑΑ.
 
-### Why account abstraction matters
+### Γιατί η αφαίρεση του λογαριασμού έχει σημασία
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Η αφαίρεση του λογαριασμού συνεπάγεται την αφαίρεση της λογικής εξουσιοδότησης με σκληρό κώδικα μακριά από το EOAs, μετατρέποντας κάθε λογαριασμό σε ένα προγραμματιζόμενο έξυπνο συμβόλαιο που μπορεί να προσαρμοστεί για να καλύψει τις ανάγκες οποιουδήποτε ατόμου.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Όπως εξήγησε ο συνιδρυτής της Argent και Διευθύνων Σύμβουλος Επιστημών Julien Niset σε μια πρόσφατη εκδήλωση[Stark @ Home](https://www.crowdcast.io/e/7olimxqv), αυτή η ευέλικτη λογική εξουσιοδότησης δίνει ελευθερία στους προγραμματιστές να παίξουν με χαρακτηριστικά λογαριασμού όπως…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Υπογραφείς υλικού:**Χρησιμοποιώντας έναν ασφαλή θύλακα iPhone ή Android για να μετατρέψετε οποιοδήποτε smartphone σε πορτοφόλι υλικού. Από εκεί, οι χρήστες μπορούν να επαληθεύσουν τις συναλλαγές χρησιμοποιώντας βιομετρικά δεδομένα όπως δακτυλικό αποτύπωμα ή Apple Face ID. Έχουμε ήδη αρχίσει να βλέπουμε πορτοφόλια αυτο-θεματοφύλακα όπως το Braavos[να ξεδιπλώνει αυτό το χαρακτηριστικό.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**Επιτρέπουν στους χρήστες να πληρώνουν τέλη φυσικού αερίου σε οποιοδήποτε νόμισμα, ή ακόμη και να έχουν ένα μηχανισμό που έχει σχεδιαστεί από τρίτους πληρώνουν για τις συναλλαγές.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Κοινωνική Ανάκτηση:**Σε περίπτωση που ένα ιδιωτικό κλειδί χαθεί ή παραβιαστεί, οι χρήστες μπορούν να εξουσιοδοτήσουν ένα νέο κλειδί ως νόμιμο ιδιοκτήτη πορτοφολιού. Αυτό μπορεί να περιλαμβάνει μια ποικιλία μεθόδων ανάκτησης μέσω αξιόπιστων επαφών, πορτοφολιών υλικού ή υπηρεσιών τρίτων. Η ιδέα είναι να κάνετε την ανάκτηση της πρόσβασης στο λογαριασμό σας τόσο εύκολη όσο η ανάκτηση του κωδικού πρόσβασης τραπεζικού λογαριασμού σας μέσω ηλεκτρονικού ταχυδρομείου.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Έλεγχος ταυτότητας πολλαπλών παραγόντων:**Παρόμοια με τις συνηθισμένες πρακτικές Web2 2FA, οι χρήστες μπορούν να δημιουργήσουν δύο (ή περισσότερες) μεθόδους ελέγχου ταυτότητας για τα κρυπτοπορτοφόλια τους, όταν μια συναλλαγή υπογράφεται μόνο όταν ένας χρήστης επιβεβαιώνει την έγκριση μέσω μιας δεύτερης επιλογής, όπως το email ή το SMS. Οι χρήστες μπορούν επίσης να ορίσουν ημερήσια όρια μεταφοράς ή λίστες διευθύνσεων λογαριασμού των οποίων το πορτοφόλι αποκλείεται αυτόματα από αλληλεπίδραση.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Quantum Resistant and Gas-Efficient Signatures:**Το τρέχον σχέδιο υπογραφής του Ethereum, ECDSA, είναι υπολογιστικά εκτεταμένο (διάβαζε: υψηλότερα τέλη αερίου) και μπορεί να σπάσει από κβαντικούς υπολογιστές. Μέσω της αφαίρεσης υπογραφών, οι διάφορες συμβάσεις λογαριασμών χρησιμοποιούν αποτελεσματικότερα και ασφαλέστερα συστήματα υπογραφής. Το StarkNet χρησιμοποιεί τη δική του ιδιόκτητη καμπύλη φιλική προς το STARK.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Όχι μόνο αυτές οι δυνατότητες παρέχουν στους χρήστες μεγαλύτερη ασφάλεια και περισσότερη ευελιξία, αλλά το πιο σημαντικό, έχουν ως αποτέλεσμα μια πολύ**καλύτερη**εμπειρία χρήστη.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Οι καινοτομίες γύρω από την αφαίρεση λογαριασμών, κυρίως το EIP-2938 και το EIP-3074, χαρακτηρίζονται από ένα «όνειρο για μεγάλο χρονικό διάστημα» για την κοινότητα των προγραμματιστών του Ethereum, έχουν στραφεί από το 2020. Ωστόσο, και οι δύο απαιτούμενες ανταλλαγές γύρω από την ασφάλεια και την εφαρμογή. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), η πιο ελπιδοφόρα εξέλιξη μέχρι στιγμής, προτείνει μια έκδοση της αφαίρεσης του λογαριασμού χωρίς να απαιτεί αλλαγές στο πρωτόκολλο του Ethereum.
 
-### **Account abstraction and Starknet**
+### **Αφαίρεσης λογαριασμού και Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Σε αντίθεση με το Bitcoin και το Ethereum που προσαρμόζουν εκ των υστέρων τα τρέχοντα πρωτόκολλά τους για την υποστήριξη της αφαίρεσης λογαριασμού, το[StarkNet](https://starkware.co/starknet/)έχει εφαρμόσει την αφαίρεση λογαριασμού από την πρώτη ημέρα. Όταν συνδυάζεται με την επεκτασιμότητα και τις δυνατότητες των αποδείξεων STARK μας, η δυνατότητα για καινοτομία πορτοφολιού είναι απεριόριστη. Αυτός είναι ο λόγος για τον οποίο η επόμενη γενιά αυτοφυλακών πορτοφολιών, όπως οι Argent και Braavos, χτίζονται αυτή τη στιγμή στην κορυφή του δικτύου μας.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+Η προσέγγιση της StarkNet είναι παρόμοια με την προσέγγιση EIP-4337,[αναγνωρίζοντας ότι](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)πλήρης αφαίρεση του λογαριασμού θα εξακολουθούσε να οδηγεί σε σύγχυση UX και[θα μπορούσε να ανοίξει την πόρτα](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)σε επιθέσεις σε sequencers. Αντίθετα, στοχεύει στην επίτευξη τόσο της αφαίρεσης της υπογραφής όσο και της αφαίρεσης των πληρωμών, με την αμοιβαία αξιοποίηση ορισμένων από τις απαιτούμενες υποδομές σε και εκτός αλυσίδας.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+Και ενώ υπάρχει ακόμα πολύ περισσότερη δουλειά να κάνουμε, αφηρημένη λογαριασμό κερδίζει έλξη πέρα από ένα μικρό κύκλο των κρυπτο-ντόπιων. Τον Δεκέμβριο, η[Visa πρότεινε την ιδέα](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)της χρήσης της αφαίρεσης του λογαριασμού για τη δημιουργία αυτόματων επαναλαμβανόμενων πληρωμών στο StarkNet. Με τη χρήση αναδόχου λογαριασμού, οι χρήστες μπορούν να χορηγήσουν άδεια για την έναρξη μιας πληρωμής σε ένα προεγκεκριμένο έξυπνο συμβόλαιο. Από εκεί, το έξυπνο συμβόλαιο θα προγραμματιστεί να αφαιρέσει ένα καθορισμένο ποσό πληρωμής σε μια συγκεκριμένη ημέρα, κατά τη διάρκεια μιας καθορισμένης χρονικής διάρκειας. Ενώ η Visa δεν έχει ακόμη αποκαλύψει τα σχέδιά της για τις δικές της υπηρεσίες, το ενδιαφέρον από μόνο του μιλάει τόμους, και μπορεί να προμηνύσει έναν κόσμο όπου οι πλατφόρμες συνδρομής, όπως το Netflix και το Spotify θα μπορούσαν να αγκαλιάσουν την κρυπτο-υιοθεσία.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Όσο για το τι κρατάει το μέλλον, μόνο ο χρόνος θα πει. Αλλά ένα πράγμα είναι σίγουρο. Κάνοντας τα πορτοφόλια ευκολότερα και ασφαλή στη χρήση, η αφαίρεση λογαριασμού θα χρησιμεύσει ως ένας ισχυρός καταλύτης για πορτοφόλια blockchain αυτο-θεματοφυλακή για να κλιμακωθεί σε εκατομμύρια κύριους χρήστες κρυπτονομισμάτων. Θα συνεχίσουμε να χτίζουμε εν τω μεταξύ.

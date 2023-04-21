@@ -1,54 +1,54 @@
 ### **TL;DR**
 
-* [StarkNet Planets Alpha](https://voyager.online/) — the first step on our road to Mainnet — is now live on Testnet!
-* [StarkNet](https://starkware.co/product/starknet/) is a permissionless Turing-complete ZK-Rollup¹.
-* Developers can implement their business logic of choice in a smart contract and deploy it permissionlessly on StarkNet.
-* The state transitions of StarkNet are proven off-chain and then verified on-chain.
-* Much like Ethereum, users can interact directly with these smart contracts.
+* [StarkNet Planets Alpha](https://voyager.online/)— ensimmäinen askel tiellämme Mainnet — on nyt elää Testnetissä!
+* [StarkNet](https://starkware.co/product/starknet/)on luvaton kääntö- täydellinen ZK-Rollup1.
+* Kehittäjät voivat toteuttaa valintansa liiketoimintalogiikkaa älykkäässä sopimuksessa ja ottaa sen käyttöön StarkNetissa.
+* StarkNetin osavaltion siirtymät ovat todistettu ketjun ulkopuolisiksi ja todennetut ketjussa.
+* Kuten Ethereum, käyttäjät voivat olla suoraan vuorovaikutuksessa näiden älykkäiden sopimusten kanssa.
 
-### **Introduction**
+### **Johdanto**
 
-We [announced](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880) the roadmap for [StarkNet](https://starkware.co/product/starknet/) in Jan 2021. The Holy Grail of scalability solutions would support (i) arbitrary smart contracts, with (ii) composability, (iii) operated over a decentralized network. Today we announce the deployment on testnet of Step 1: StarkNet Planets Alpha. The Alpha system supports arbitrary smart contracts. Composability will be supported later this year, with decentralization to follow.
+Ilmoitimme[](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880)[StarkNet](https://starkware.co/product/starknet/)-tiekartan tammikuussa 2021. Graalin skaalautuvuusratkaisut tukisivat i) mielivaltaisia älykkäitä sopimuksia, ii) kompostoitavuutta, iii) toimivat hajautetun verkon kautta. Tänään ilmoitamme käyttöönoton testnet vaihe 1: StarkNet Planets Alpha. Alpha järjestelmä tukee mielivaltaisia älykkäitä sopimuksia. Myöhemmin tänä vuonna tuetaan säveltämistä, jonka jälkeen hajauttaminen jatkuu.
 
-It is very important for us to be fully transparent and set expectations properly. The purpose of this post is to clearly list what’s already supported, and what functionalities are still missing. What we’re releasing today is Work in Progress on testnet. We believe that this early release will help the formation of a healthy ecosystem around StarkNet and its tooling. We’re eager to involve developers in building the network with us, and to get continuous feedback from the community.
+On erittäin tärkeää, että toimimme täysin avoimesti ja asetamme odotukset asianmukaisesti. Tämän julkaisun tarkoituksena on luetella selkeästi, mitä on jo tuettu, ja mitä toimintoja vielä puuttuu. Tänään julkaisemme Work in Progress on testnet. Uskomme, että tämä varhainen julkaiseminen auttaa luomaan terveellisen ekosysteemin StarkNet-järjestelmän ja sen työkalujen ympärille. Olemme innokkaita ottamaan kehittäjät mukaan verkoston rakentamiseen kanssamme ja saamaan jatkuvaa palautetta yhteisöltä.
 
-### **What’s in the StarkNet Planets Alpha?**
+### **Mitä StarkNet Planets Alpha?**
 
-**Functionality:** The Alpha allows developers to write and deploy StarkNet contracts for general computation. There is no whitelisting — any developer can write and deploy whatever contract they wish. Users can interact with these contracts, by sending transactions to them, and inspecting their state. All contracts exist in a single state². Updates to this state are proven off-chain, and verified on-chain — in the Alpha, verification is done on testnet.
+**Toiminnallisuus:**Alpha sallii kehittäjien kirjoittaa ja ottaa käyttöön StarkNet-sopimuksia yleisestä laskennasta. Ei ole valkoista - kuka tahansa kehittäjä voi kirjoittaa ja ottaa käyttöön mitä tahansa sopimusta he haluavat. Käyttäjät voivat olla vuorovaikutuksessa näiden sopimusten kanssa lähettämällä niille tapahtumia ja tarkastamalla niiden tilan. Kaikki sopimukset ovat olemassa yhdessä valtiossa2. Päivitykset tähän tilaan ovat todistettu ketjun ulkopuolella, ja todennettu ketjun - Alpha, todentaminen tehdään testnet .
 
-**StarkNet OS:** The above functionality is supported by a new “operating system” we call StarkNet OS. It offers *provable* state transitions on StarkNet. Ethereum developers may think of it as the equivalent of the EVM: it is responsible for invoking smart contract functions, handling contracts’ storage, etc. We will publish a separate post detailing the architecture of the StarkNet OS.
+**StarkNet OS:**Edellä olevaa toimintoa tukee uusi ”käyttöjärjestelmä”, jota kutsumme StarkNet OS:ksi. Se tarjoaa*todistettavissa*valtion siirtymiä StarkNetissa. Ethereum kehittäjät voivat ajatella sitä vastaavaksi EVM: se on vastuussa vedota älykäs sopimustoimintoja, käsittely sopimusten varastointiin jne. Julkaisemme erillisen postin, jossa kerrotaan StarkNet OS:n arkkitehtuurista.
 
-**What’s not in the Alpha?** The Alpha is still missing some key capabilities, such as L1<>L2 interaction, on-chain data, and composability. More on these below.
+**Mitä ei ole Alpha?**Alpha puuttuu vielä joitakin avaimia, kuten L1<>L2 vuorovaikutus, on-chain data ja säveltettävyys. Lisää näistä jäljempänä.
 
-#### **Getting Your Feet Wet**
+#### **Saada Jalkojen Märkä**
 
-Start out with our [tutorial and documentation](https://www.cairo-lang.org/docs/hello_starknet/).
+Aloita meidän[opetusohjelma ja dokumentaatio](https://www.cairo-lang.org/docs/hello_starknet/).
 
-Then, you can read through the [sample AMM smart contract](http://cairo-lang.org/docs/hello_starknet/amm.html) we’ve written and deployed on StarkNet. It is a simple AMM, and you can interact with it [here](https://starkware-amm-demo.netlify.app/swap). You are now ready to write and deploy smart contracts on StarkNet. The block explorer for StarkNet — [Voyager](https://voyager.online/) — allows anyone to inspect StarkNet’s state.\
-By getting your feet wet, we believe you will be better prepared to build on StarkNet, as we continue to roll out additional features. We are already busy planning a first hackathon, as well as workshops for developers.
+Sitten voit lukea[näytteen AMM älykäs sopimus](http://cairo-lang.org/docs/hello_starknet/amm.html)olemme kirjoittaneet ja ottaneet käyttöön StarkNetissa. Se on yksinkertainen AMM, ja voit olla vuorovaikutuksessa sen kanssa[täällä](https://starkware-amm-demo.netlify.app/swap). Olet nyt valmis kirjoittamaan ja ottamaan käyttöön älykkäitä sopimuksia StarkNetissa. StarkNet –[Voyager](https://voyager.online/)-lohkon tutkimusmatkailija sallii kenen tahansa tarkastaa StarkNetin tilan.\
+Asettumalla jalat märkäksi uskomme, että olet paremmin valmistautunut rakentamaan StarkNetiä, kun jatkamme uusien ominaisuuksien käyttöönottoa. Olemme jo kiireisiä suunnittelemassa ensimmäistä hackathonia sekä työpajoja kehittäjille.
 
-### **Next Steps for StarkNet**
+### **Seuraavat vaiheet StarkNetissä**
 
-The key capabilities still missing in the Alpha will be rolled out starting in the coming weeks. These are:
+Keskeiset kyvyt vielä puuttuu Alpha tullaan ottamaan käyttöön alkaen tulevina viikkoina. Ne ovat:
 
-* L1<>L2 Interaction, e.g. the ability to deposit and withdraw funds in L1.
-* On-chain data: publishing all storage changes on Ethereum.
-* Composability: allowing contracts to communicate with one another.
+* L1<>L2 Vuorovaikutus, esim. kyky tallettaa ja nostaa varoja L1:een.
+* Ketjun sisäiset tiedot: kaikkien varastojen muutosten julkaiseminen Ethereumissa.
+* Composability: mahdollistaa sopimusten kommunikoinnin keskenään.
 
-With these features in place, we will be ready to bring StarkNet to Ethereum Mainnet. We call this step in StarkNet’s evolution Constellations, and when we reach it, you will be able to build and permissionlessly deploy on Ethereum Mainnet scalable L2 dApps.
+Näiden ominaisuuksien kanssa, olemme valmiita tuomaan StarkNet Ethereum Mainnet. Kutsumme tätä askelta StarkNetin evoluutiotesteissä, ja kun saavutamme sen, voit rakentaa ja luvattomasti ottaa käyttöön Ethereum Mainnet skaalautuva L2 dApps.
 
-#### **The StarkNet Ecosystem**
+#### **Starknetin Ekosysteemi**
 
-We are very excited by the ecosystem that’s forming around StarkNet so we’ll pause to thank our collaborators thus far.
+Olemme erittäin innoissamme ekosysteemistä, joka muodostaa StarkNetin, joten pysähdymme kiittämään yhteistyökumppaneitamme tähän mennessä.
 
-We’re working closely with [Nethermind](https://twitter.com/nethermindeth) and the Nubia team, [Alexey Akhunov](https://twitter.com/realLedgerwatch) (Erigon) & [Igor Mandrigin](https://twitter.com/mandrigin) (gateway.fm), [Iddo Bentov](https://www.cs.cornell.edu/~iddo/), [dOrg](https://twitter.com/dOrg_tech), [Prof. Tim Roughgarden](https://twitter.com/algo_class), [Prof. Jeremy Avigad](https://www.andrew.cmu.edu/user/avigad/) & Yoav Seginer, last but not least — the [Paradigm](https://twitter.com/paradigm) team.\
-Our early partners — [dYdX](https://twitter.com/dydxprotocol), [Immutable](https://twitter.com/Immutable), [DeversiFi](https://twitter.com/deversifi), as well as [Sorare](https://twitter.com/SorareHQ), [Celer](https://twitter.com/CelerNetwork), and others — have been providing us with invaluable input from Day One, and allow us to build a production-grade network for real users.\
-We continue to be amazed by the quality of content created by the community, by people such as [Bobbin Threadbare](https://twitter.com/bobbinth), [Daniel Kroni](https://github.com/danielkroeni/cairo-playground/blob/main/anon-bank/README.md), [Adrian Hamelink](https://twitter.com/adr1anh), [perama](https://twitter.com/eth_worm), [Francesco Ceccon](https://twitter.com/ceccon_me), [Ilian Malchev](http://twitter.com/imalchev), and the [Alexandria team](https://blockchainpartner.fr/).
+Teemme läheistä yhteistyötä[Nethermind](https://twitter.com/nethermindeth)ja Nubia tiimin kanssa,[Alexey Akhunov](https://twitter.com/realLedgerwatch)(Erigon) &[Igor Mandrigin](https://twitter.com/mandrigin)(yhdyskäytävä. m),[Iddo Bentov](https://www.cs.cornell.edu/~iddo/),[dOrg](https://twitter.com/dOrg_tech),[Prof. Tim Roughgarden](https://twitter.com/algo_class),[Prof. Jeremy Avigad](https://www.andrew.cmu.edu/user/avigad/)& Yoav Seginer, viimeisenä mutta ei vähiten —[Paradigma](https://twitter.com/paradigm)joukkue.\
+Varhaiset kumppanimme —[dYdX](https://twitter.com/dydxprotocol),[Immutable](https://twitter.com/Immutable),[DeversiFi](https://twitter.com/deversifi), sekä[Sorare](https://twitter.com/SorareHQ),[Celer](https://twitter.com/CelerNetwork)ja muut – ovat antaneet meille korvaamattoman panoksen päivästä yksi, ja anna meidän rakentaa tuotanto-laatuinen verkko todellisia käyttäjiä.\
+Olemme edelleen hämmästyneitä yhteisön luoman sisällön laadusta, esimerkiksi[Bobbin Threadbare](https://twitter.com/bobbinth),[Daniel Kroni](https://github.com/danielkroeni/cairo-playground/blob/main/anon-bank/README.md),[Adrian Hamelink](https://twitter.com/adr1anh),[perama](https://twitter.com/eth_worm),[Francesco Ceccon](https://twitter.com/ceccon_me),[Ilian Malchev](http://twitter.com/imalchev), ja[Aleksandria joukkue](https://blockchainpartner.fr/).
 
-We are eager to see what the community will create on all fronts: developer tools, content, and of course StarkNet applications they will build. Let’s keep the conversation going in your favorite media of choice: [discord](https://discord.gg/uJ9HZTUk2Y), [Twitter](https://twitter.com/CairoLang), [email](mailto:info@starkware.co), and soon using the most decentralized of communication forms: f2f.
+Olemme innokkaita näkemään, mitä yhteisö luo kaikilla rintamilla: kehittäjien työkaluilla, sisällöllä ja tietenkin StarkNet-sovelluksilla, joita ne rakentavat. Let's keep the discussion going in your favorite media of choice:[discord](https://discord.gg/uJ9HZTUk2Y),[Twitter](https://twitter.com/CairoLang),[email](mailto:info@starkware.co), ja pian käyttämällä hajautetuin viestintälomakkeet: f2f.
 
-¹ We are not fans of the term ZK-Rollup, as — mathematically speaking — it is not zero-knowledge, but you all know what we mean
+1 Me emme ole termin ZK-Rollup faneja, sillä — matemaattisesti puhuvina — se ei ole nollatietoa, mutta te kaikki tiedätte, mitä tarkoitamme
 
-² Unlike the separate state maintained for current StarkEx deployments on Mainnet
+2 Toisin kuin erillisessä tilassa, jota ylläpidetään nykyisissä StarkEx-lähetyksissä Mainnetissa
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Päivitys (marraskuu 2021):**StarkNet Alpha elää Ethereum Mainnetissa

@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Teknologinen innovaatio lohkoketjussa on kukoistanut viime vuosina – STARKs, SNARKs, EIP-1559, Ethereum Merge – ovat kaikki valtavia teknologisia saavutuksia. UX- ja UI-suunnittelu eivät kuitenkaan ole pysyneet entisellään. Ihmiset juuttuvat yhä 16-sanan siemenlauseisiin, ja ilman keskitettyä välittäjää joutuminen Defiin on edelleen liian pelottavaa monille. Ottaa seuraava miljardi käyttäjää Web3, parantaa käyttäjän perehdytys kokemus on kriittinen.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Kuten FTX osoitti (ja Gemini, Celsius ja Mt. Gox), säilyttää itse säilytys oman omaisuuden on ratkaisevan tärkeää. Kuitenkin viime aikoihin asti omaehtoiset lompakot ovat olleet pakkomielteisiä ja hämmentäviä keskivertokäyttäjille. Useimmat ihmiset unohtavat Web2 salasanat kuukausittain; miten käyttäjien odotetaan pitävän heidän seed phrase ja yksityiset avaimet turvallisia ikuisuutta?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Yksinkertaisesti sanottuna, se on turvallisuus painajainen. Kuten olemme nähneet lukemattomia kertoja, yksi väärä siirto, olipa se aloitettu huonojen toimijoiden tai huolimattomuuden, voi johtaa miljoonien dollarien menetykseen.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Ensimmäisenä yhteyspisteenä uusille kryptokäyttäjille, Ethereum lompakojen on oltava helppokäyttöisiä, turvallisia ja muokattavissa kunkin käyttäjän tarpeiden mukaan. Tämä edellyttää kehittäjät integroida yksinkertaisuus Web2 rahoitustuotteiden kanssa ominaisuuksia Web3.
 
-This is exactly what account abstraction achieves.
+Tämä on juuri sitä, mitä tilinpäätöksen abstraktilla saavutetaan.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Tilin abstraktio parantaa omatoimisten lompakkotuotteiden turvallisuutta ja turvallisuutta poistamalla käyttäjien riippuvuuden yksityisestä avaimesta ja tekemällä lompakoista ohjelmoitavampia. Parannetun UX:n avulla muut lompakot kuin omaisuudenhoitajat voivat lopulta skaalata miljoonat valtavirran salauskäyttäjät.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Mutta täysin ymmärtää vaikutuksia tilien abstraktio, meidän on virkistää itseämme siitä, miten Ethereum tilit toimivat.
 
-### The basics of Ethereum accounts
+### Perusteet Ethereum tilien
 
-There are two types of Ethereum accounts:
+On olemassa kahdenlaisia Ethereum tilejä:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Ulkomaiset Omistustilit (EOA)
+2. Sopimustilit (CA)
 
-Let’s break each down a bit further.
+Rikkotaan jokainen alas hieman pidemmälle.
 
-### Externally owned accounts
+### Ulkomaan omistuksessa olevat tilit
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Ulkopuolisesti omistamat tilit, kuten MetaMask ja Coinbase Wallet, ovat tyypillisiä Ethereum käyttäjille. Jokainen EOA koostuu yksityisestä ja julkisesta avaimesta, jota kutsutaan avainpariksi.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Kaikki tapahtumat on valtuutettu ja allekirjoitettu yksityisillä avaimilla. Kun tapahtuma on allekirjoitettu, EVM tarkistaa, että allekirjoitus on voimassa EOA:n tiliosoitetta käyttäen. EVM:n kovalla koodattu logiikka tarkoittaa sitä, että tili (kohde jolla on tunnisteitasi) ja yksityinen avain (allekirjoittaja) kytketään yhteen.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Yksityisen avaimen menettäminen tarkoittaa lopullisesti varojen menettämistä tai jopa tilin hallintaa.
 
-### Contract accounts
+### Sopimuksen tilit
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Samaan aikaan sopimustilit, synonyymi tilin abstraktio, ovat älykkäitä sopimuksia otetaan käyttöön Ethereum blockchain. Nämä sopimukset ovat käytännesääntöjen mukaisia eivätkä vaadi yksityisiä avaimia. Toisin kuin EOA:t, sopimustilit eivät voi käynnistää tapahtumia. Sen sijaan niiden liiketoimet laukeavat eurooppalaisten standardointielinten ohjeet.
 
-### Why account abstraction matters
+### Miksi tilin abstraktilla on merkitystä
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Tilin abstraktioon sisältyy kovalla koodilla varustetun valtuutuslogiikan käyttö pois eurooppalaisista standardointielimistä, kääntämällä jokainen tili ohjelmoitava älykäs sopimus, joka voidaan räätälöidä vastaamaan yksilöiden tarpeisiin.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Kuten Argent yhdessä perustaja ja Chief Science Officer Julien Niset viime[Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), tämä joustava valtuutuksen logiikka antaa kehittäjille vapauden pelata ympäri tiliominaisuuksia, kuten…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Laitteiston allekirjoittajat:**Käyttämällä iPhonea tai Androidin suojattua erillisaluetta muuttaaksesi minkä tahansa älypuhelimen laitteistolompakkoksi. Sieltä käyttäjät voivat tarkistaa tapahtumat biometrisillä tiedoilla, kuten sormenjälkillä tai Apple Face ID:llä. Olemme jo alkaneet nähdä omia lompakkoja, kuten Braavos[roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**Käyttäjät voivat maksaa kaasumaksuja mihin hyvänsä, tai heillä on jopa kolmannen osapuolen suunnittelema mekanismi, joka maksaa maksutapahtumista.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Sosiaalinen palautus:**Jos yksityinen avain on kadonnut tai vaarantunut, käyttäjät voivat valtuuttaa uuden avaimen lailliseksi lompakon omistajaksi. Tämä voi sisältää erilaisia palautusmenetelmiä luotetut yhteystiedot, laitteiston lompakot tai kolmannen osapuolen palvelut. Ideana on tehdä takaisin pääsy tilillesi yhtä helppoa kuin palauttaa pankkitilin salasanan sähköpostitse.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Multifactor Authentication:**Samanlainen kuin tavallinen Web2 2FA käytäntöjä, käyttäjät voivat määrittää kaksi (tai useampaa) autentikointimenetelmää salauslompakkoihinsa, jos tapahtuma on allekirjoitettu vasta, kun käyttäjä vahvistaa hyväksynnän toisella vaihtoehdolla, kuten sähköpostilla tai tekstiviestillä. Käyttäjät voivat myös asettaa päivittäisiä siirtorajoja tai listoja tiliosoitteista, joista lompakko on automaattisesti estetty vuorovaikutukselta.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Quantum Resistant ja Gas-Efficient Signatures:**Ethereumin nykyinen allekirjoitusjärjestelmä, ECDSA, on laskennallisesti laaja (luku: korkeammat kaasumaksut) ja se voidaan rikkoa kvanttitietokoneilla. Allekirjoituksen abstraktilla erilaiset tilisopimukset käyttävät tehokkaampia ja kvanttisuojattuja allekirjoitusjärjestelmiä. StarkNet käyttää omaa STARK-ystävällistä käyräänsä.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Nämä ominaisuudet eivät ainoastaan tarjoa käyttäjille parempaa turvallisuutta ja joustavuutta, vaan mikä vielä tärkeämpää, johtavat paljon**parempaan**käyttökokemukseen.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Luetellut Vitalik Buterin kuin “pitkäaikainen unelma” Ethereum kehittäjä yhteisö, innovaatioita ympäri tilitietojen abstraktio, lähinnä EIP-2938 ja EIP-3074, ovat pyörittäneet vuodesta 2020. Kumpikin kuitenkin vaati kompromisseja turvallisuuden ja täytäntöönpanon osalta. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), lupaavin kehitys tähän mennessä ehdottaa versio tilin abstraktio ilman muutoksia Ethereum protokolla.
 
-### **Account abstraction and Starknet**
+### **Tilin vedenotto ja Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Toisin kuin Bitcoin ja Ethereum jotka jälkiasentavat niiden nykyiset protokollat tukemaan tilin abstraktio,[StarkNet](https://starkware.co/starknet/)on ottanut käyttöön tilin abstraktio vuodesta yksi. Kun yhdistettynä STARK-näyttöjemme skaalautuvuuteen ja ominaisuuksiin, lompakon innovaatioiden mahdollisuudet ovat rajattomat. Tästä syystä seuraavan sukupolven omavaraisuuden lompakkoja, kuten Argent ja Braavos, rakennetaan parhaillaan verkkomme päälle.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+StarkNetin lähestymistapa on samanlainen kuin EIP-4337,[myöntää, että](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)täydellinen tilin abstraktio johtaisi silti sekavaan UX:iin ja[voisi avata oven](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)sekvensseihin kohdistuville hyökkäyksille. Pikemminkin sillä pyritään saamaan aikaan sekä allekirjoitusten abstraktio että maksujen abstraktio yhdistämällä osa tarvittavista infrastruktuuriin ja sen ulkopuoliseen infrastruktuuriin.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+Ja vaikka on vielä paljon enemmän työtä, huomioon abstraktio on saamassa vetovoimaa yli pienen ympyrän crypto alkuasukkaat. Joulukuussa[Visa ehdotti ajatusta](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)tilin abstraktin käyttämisestä StarkNetin automaattisten toistuvien maksujen perustamiseen. Käyttämällä siirrettävää tiliä käyttäjät voivat myöntää luvan maksun aloittamiseen ennalta hyväksytylle älykkäälle sopimukselle. Sieltä käsin toimiva sopimus ohjelmoidaan siten, että se vähentää tietyn maksumäärän tiettynä päivänä, tietyn ajan kuluessa. Vaikka Visa ei ole vielä paljastanut suunnitelmiaan omille palveluilleen, kiinnostus puhuu yksin, ja voi ennakoida maailmaa, jossa big-tech tilausalustojen, kuten Netflix ja Spotify voisivat omaksua krypto-adoptio.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Mitä tulee tulevaisuuteen, vain aika näyttää. Yksi asia on kuitenkin varma. Tekemällä lompakot helpommiksi ja turvallisiksi käyttää, tilin abstraktio toimii tehokkaana katalysaattorina omatoimiselle lohkoketjujen lompakoille, jotka mittaavat miljoonia valtavirran salausta käyttäjiä. Me jatkamme rakentamista sillä välin.

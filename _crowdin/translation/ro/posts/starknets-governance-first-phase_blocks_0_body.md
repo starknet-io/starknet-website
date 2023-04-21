@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Suntem încântați să anunțăm următorul pas în procesul de descentralizare al StarkNet: votarea modificărilor de protocol.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+În ultimele săptămâni, StarkNet a luat măsuri semnificative pentru continuarea descentralizării prin stabilirea[Fundaţiei StarkNet,](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), lansează[STRK Token pe Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), și prin[open-sourcing Cairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Acest post va aprofunda pasul următor, și anume prima fază a guvernanței StarkNET, care se va desfășura în lunile următoare.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Primul vot pentru aprobarea sau respingerea modificărilor propuse la protocolul StarkNet va avea loc în curând
+* Participanții la voturile din prima fază vor fi:\
+  — deținuți de tokeni\
+  — Delegați selectați de deținătorii de tokeni care preferă să își delege drepturile de vot\
+  — Delegați selectați de Fundația StarkNet pentru a-și exercita unele dintre drepturile de vot\
+  — un Consiliu profesionist al constructorilor, setat de Fundația StarkNet
+* Toți sunt invitați să se desemneze ca delegat în guvernanța StarkNet;
+* Discuțiile se vor desfășura în[Forumul comunității StarkNet](https://community.starknet.io/)
 
-### Background
+### Context
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Două procese sunt avansate simultan pentru a îndeplini viziunea StarkNet, pentru a deveni o rețea publică rezistentă la cenzură: (i) descentralizarea componentelor de sistem[StarkNet](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671). ., secvenţiali şi avocaţi şi (ii) punerea în aplicare a mecanismelor de guvernanţă privind modificările de protocol.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Construirea unor mecanisme de guvernanță a calității care vor permite unei comunități deschise să gestioneze actualizările protocolului reprezintă o provocare serioasă. Este vorba de un proces de explorare și progresivă care necesită o colaborare vastă la nivel comunitar.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+Pentru a planifica și a orchestra primele faze ale guvernanței StarkNet, Fundația StarkNet a înființat un comitet de guvernanță. Fundaţia va publica mai multe detalii privind domeniul de aplicare şi misiunea comitetului într-un post separat. Membrii comitetului sunt Deven Matthews (Nethermind), Manor Bareli (StarkWare) și Sylve Chevet (briq). Mai jos este planul pentru prima fază a guvernării StarkNet, formulată de membrii comitetului împreună cu diferiţi participanţi din ecosistemul StarkNet şi aprobată de consiliul Fundaţiei.
 
-### Starknet’s governance first phase plan
+### Planul de guvernanță al Starknet în prima fază
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+A fost lansată prima fază a guvernanței StarkNet. De acum înainte, membrii comunităţii vor putea participa la modelarea StarkNet printr-un canal suplimentar, şi anume votarea modificărilor protocolului. Aceasta este doar prima etapă a guvernanței StarkNet; pe măsură ce StarkNet avansează, în etapele următoare, gama de mecanisme de guvernanță și de participanți se va extinde. Aici sunt detaliile**primei faze**:
 
-#### Voting subject
+#### Subiectul votului
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Propuneri de actualizare la protocolul StarkNet. Toate actualizările, în acest stadiu, vor fi propuse de Fundaţie. Propunerile vor reflecta discuţiile, ideile şi reacţiile formulate în cadrul Forumului comunitar StarkNet.
 
-#### Voting type
+#### Tipul de vot
 
-Off-chain signal vote (Via Snapshot)
+Vot de semnal în afara lanţului (Via Snapshot)
 
-#### Voting process
+#### Procesul de votare
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Fundaţia va implementa o versiune actualizată a StarkNet la Goerli.
+2. Alegătorii vor avea o perioadă de 6 zile pentru a examina versiunea actualizată în timp ce rulează pe Goerli. În această perioadă, ei pot vota dacă să o aprobe sau nu pentru amplasarea Mainnet.
+3. Dacă o propunere este aprobată de alegători, atunci va exista o întârziere de 24 de ore înainte de a aplica upgradarea la Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Anunțurile pentru aceste actualizări vor fi făcute pe[contul Twitter al Fundației StarkNet,](https://twitter.com/StarkNetFndn), precum şi pe[Forumul comunitar StarkNet](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Pragul și cvorumul necesar
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Pragul este o majoritate simplă (de exemplu, pragul este de 50% din voturile exprimate)
+* Nu este necesar cvorum, ceea ce înseamnă că nu există un nivel minim de participare pentru ca votul să fie valid
 
-### First phase voting participants
+### Participanții la vot din prima fază
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Iată lista celor care vor putea participa la prima fază a procesului de guvernanță:
 
-#### Token holders
+#### Titulari de jetoane
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* în prima fază a guvernanţei StarkNet; cei mai mulți deținători de jetoane sunt contributori de bază timpurii și investitori care au construit și sprijinit rețeaua în etapele sale inițiale ([citiți acest post pentru mai multe detalii](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* De-a lungul timpului, tokenul va fi distribuit dezvoltatorilor și altor părți care efectuează lucrări de întreținere și modernizare a rețelei. Astfel, aceste părți vor putea să asigure rețeaua, să o utilizeze și să o exploateze și să participe la guvernanța sa.
 
-#### Delegates
-
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
-
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
-
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
-
-**Operation**:
-
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
-
-#### The StarkNet builders’ council
-
-A professional committee, appointed by the Foundation.
+#### Delegați
 
 **Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+Delegarea puterii de vot permite posesorilor de tokeni să delege mandatul lor de guvernare membrilor implicați, informați și profesioniști ai comunității. Datorită faptului că:
 
-**Responsibilities**:
+* Titularii de tokeni pot opta să facă parte din procesul decizional prin intermediul democrației reprezentative, mai degrabă decât al democrației directe.
+* Membrii specializați și talentați ai comunității pot juca un rol semnificativ în guvernanță, meritând reputația lor. Nu este nevoie să avem jetoane pentru a vă prezenta în calitate de delegat.
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+**Responsabilitățile**:\
+Efectuează un proces de învățare serios pentru fiecare decizie, ceea ce va conduce la decizii bine fondate şi independente, de care beneficiază StarkNet şi viziunea sa pe termen lung.
 
-**Operation**:
+**Operație**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* În primul rând, pentru ca mecanismul de delegare să aibă succes, este nevoie de o rezervă de delegați de calitate.
+* Calea de a deveni delegat este inadmisibilă – nu există condiții prealabile – ci pentru cei care doresc, a fost creată o secțiune în forumul unde potențialii delegați pot posta profiluri ([în acest link](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Deținătorii de simboluri pot alege liber orice adresă Ethereum L1 pe care doresc să își delege puterea de vot.
+* Pentru mai multe detalii, citiți[postarea dedicată pe Forumul comunității StarkNet](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+#### Consiliul constructorilor de la StarkNet
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+Un comitet profesional numit de fundaţie.
 
-The voting power distribution in the **first phase** will be:
+**Motivare**:\
+Implementarea mecanismelor de guvernanță bazate pe implicarea comunității și reputația profesională, şi nu numai pe bază de token-holding.
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+**Responsabilități**:
 
-### First vote — StarkNet’s 0.11 version
+* Efectuează un proces serios de învățare și dezbatere pentru fiecare decizie, ceea ce va duce la decizii bine fondate care aduc beneficii StarkNet și viziunii sale pe termen lung.
+* Participarea activă la discuții și voturi în prima fază
+* Garantarea transparenței discuțiilor și proceselor decizionale ale acestora
+* Accesul la comunitate prin discuţii deschise pe forumul comunităţii StarkNet
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+**Operație**:
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+* 17 membri ai comitetului numiţi de Fundaţie
+* Perioada de mandat — prima fază a guvernanței StarkNet (mai multe luni)
+* Pentru mai multe detalii, citiți[postarea dedicată pe Forumul comunității StarkNet](https://community.starknet.io/t/delegate-profile-thread/4049).
+
+### Puterea de vot în prima fază
+
+În prima fază a guvernării StarkNet, StarkWare nu va participa la voturi. Fundaţia StarkNet va delega puterea de vot Consiliului Constructorilor şi mai multor delegaţi din grupare şi nu va vota direct.
+
+Distribuția puterii de vot în**prima fază**va fi:
+
+* Investitori: 33,3
+* Corespondenți de bază StarkNet, cu excepția StarkWare): 33,3
+* Reprezentanții Fundației: 33,3%\
+  — Consiliul Constructorilor StarkNet: 23,3%\
+  — Delegați votează în numele Fundației: 10
+
+### Primul vot — Versiunea StarkNet's 0.11
+
+Primul vot va avea loc în săptămânile următoare. Votul se va concentra dacă să actualizeze StarkNet Alpha la versiunea 0.11.
+
+Votarea va începe la scurt timp după lansarea Goerli și va fi anunțată prin intermediul canalelor oficiale:[Contul Twitter al Fundației StarkNet](https://twitter.com/StarkNetFndn)și[Forumul comunității StarkNet](https://community.starknet.io/). Rămâi pe fază!

@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* StarkNet Alpha 0.8.0 prezintă versiunea iniţială a mecanismului de taxare (opţional până la StarkNet Alpha 0.9.0.)
+* Noi apeluri API pentru estimarea taxei de tranzacție pentru obținerea traseului tranzacției, permițând o mai bună vizibilitate și capacități de depanare
+* Îmbunătățiri ale performanțelor la secvențialul StarkNet
+* L1→L2 anularea mesajelor
 
-### Intro
+### Introducere
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+Ca partajat în[foaia noastră de parcurs](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), urmând ultima completare la funcționalitatea și funcțiile StarkNet, atenţia noastră se îndreaptă către îmbunătăţirea performanţei şi proiectarea protocolului (inclusiv onorarii, abstractizarea contului, descentralizare etc.). StarkNet Alpha 0.8.0 începe procesul de adăugare a taxelor de tranzacție și de îmbunătățire a performanței secvențatorului.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+Foaia de parcurs pentru StarkNet include un mecanism de taxe, și progresând cu această versiune facem un pas important mai aproape de performanța completă a platformei.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+Adăugarea mecanismului de taxe este o parte esențială a designului performanței StarkNet. Fără o taxă minimă, riscăm să ne confruntăm cu tranzacții infinite: ceea ce ar face imposibilă performanța sistemului, indiferent de optimizările secvențiale.
 
-### Features
+### Caracteristici
 
-#### Fee Support
+#### Suport comision
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+StarkNet Alpha suportă acum prima versiune a mecanismului de taxe. Acest mecanism este esențial chiar și în acest stadiu incipient, chiar și în ceea ce privește Testnet, din două motive principale:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Acesta permite dezvoltatorilor să înceapă optimizarea contractelor în conformitate cu modelul costului StarkNet.
+2. Aceasta este o contrapartidă esențială pentru îmbunătățirea performanței sistemului, deoarece previne spamarea prin trimiterea a nenumărate tranzacții.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Această versiune introduce componentele necesare pentru ca dezvoltatorii să încorporeze plățile de taxe în instrumentele și aplicațiile lor. Dezvoltatorii pot estima acum taxa de tranzacție prin apelarea obiectivului \`estimate_fee\` și să facă plata taxei ca parte din execuția tranzacției.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Deoarece această caracteristică nu este compatibilă pentru înapoi, nu vom impune plata taxei în acest moment, ci doar din versiunea 0. .0, care urmează să fie eliberat în câteva săptămâni. Această tranziție treptată va permite utilizatorilor și dezvoltatorilor să se adapteze la noul model.
 
-#### Fee Structure on 0.8.0
+#### Structură Taxă pe 0.8.0
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+La 0.8.0, taxele vor fi colectate numai în funcție de complexitatea calculului, în timp ce StarkWare va subvenționa în continuare costurile de comunicare L1. Vom actualiza mecanismul de taxe pentru a include aceste costuri de operare L1 și de comunicare în următoarele săptămâni. Plata va fi colectată atomic cu execuţia tranzacţiei pentru StarkNet L2. Vezi[documentația privind taxele](https://starknet.io/documentation/fee-mechanism/)pentru o descriere detaliată.
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+Este important de remarcat că vom colabora îndeaproape cu comunitatea dezvoltatorilor pentru a ajusta și dezvolta mecanismul de taxare pe măsură ce StarkNet evoluează.
 
 #### L2 Goerli ETH Faucet
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Am lansat[Faucet L2 Goerli ETH](https://faucet.goerli.starknet.io/)pentru a permite utilizatorilor să plătească taxe pe Testnet. Acest Faucet trimite sume mici de L2 Goerli ETH la adresa contului tău de pe StarkNet Goerli, pe care le poți utiliza pentru plata taxei de tranzacție.
 
 #### Trace API
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+Am adăugat abilitatea de a recupera urma de execuție a tranzacției la API-ul StarkNet. În cadrul traseului tranzacției, toate apelurile interne sunt vizibile, însoțite de informații precum resursele executate consumate, valoarea returnării, evenimentele emise și mesajele trimise. Acest nou apel simplifică înțelegerea comportamentului unui contract sau depanarea tranzacțiilor. În plus, instrumente precum[Voyager](https://voyager.online/)sau[StarkTx](https://starktx.info/)ar putea încorpora aceste date; furnizarea către utilizatori a unei analize mai detaliate, în special în ceea ce privește interacțiunea contractului de cont.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+Pentru a obține urmărirea, poți folosi \`get_transaction_trace\` în CLI-ul StarkNets. Pentru a vedea un exemplu de utilizare a acestuia, verificați tutorialul[](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Anulare mesaj
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+O caracteristică suplimentară a acestei versiuni este capacitatea de a anula mesajele L1→L2. De ce este util? Imaginați-vă un scenariu în care un utilizator transferă un activ din L1 în L2. Fluxul începe cu trimiterea de către utilizator a activului către un pod StarkNet şi către generaţia corespunzătoare de mesaje L1→L2. Acum, imaginați-vă că consumul de mesaje L2 nu funcționează (acest lucru s-ar putea întâmpla din cauza unei erori în contractul Cairo al dApps). Acest lucru ar putea duce la pierderea pentru totdeauna de către utilizator a custodiei.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Pentru a reduce acest risc, permitem contractului care a inițiat mesajul L1→L2 să-l anuleze — după ce și-a declarat intenția de a face acest lucru și după ce a așteptat o perioadă de timp potrivită (a se vedea[documentația](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Îmbunătățiri ale performanței
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Această versiune scade semnificativ timpul pe care un secvenţial trebuie să-l execute un flux de tranzacţii Cairo primite.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+Acesta este doar primul pas! Următoarea noastră etapă importantă de performanță, care urmează să fie introdusă în curând (0,9.0), este execuția paralelă a secvențierului și se așteaptă mult mai multe optimizări pe drum.
 
-### What now?
+### Ce se întâmplă acum?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Citiți documentația tehnică[aici](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Accesați[starknet.io](https://starknet.io/), pentru toate informațiile StarkNet, documentație, tutoriale și actualizări.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Alătură-te[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)pentru a sprijini dezvoltatorii, anunțuri despre ecosistem și a deveni o parte a comunității.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Vizitați[StarkNet Shamans](https://community.starknet.io/)pentru a rămâne actualizat și a participa la toate discuțiile de cercetare StarkNet.

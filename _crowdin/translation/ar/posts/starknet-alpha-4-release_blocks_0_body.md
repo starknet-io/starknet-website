@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### أوقات مثيرة للأمام
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+وقد أطلق سراح ألفا 4 اليوم في غويرلي. هذه النسخة هي مرشح الإصدار ماين إنترنت، وإذا سار كل شيء وفقا للخطة، سيتم نشرها على ماين إنترنت بحلول نهاية الشهر.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+ألفا 4 يتبع إطلاق ألفا 3 المعبأة من المميزات، والتي شملت، في جملة أمور، تحسينات على مرات التجميع في القاهرة، والبناء التعاقدي، والمزيد من ذلك (أنظر[ملاحظات الإصدار الكامل](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+وتجدر الإشارة إلى أن هذه لا تزال نسخة من ألفا - لنشر عقدك في نشر مينينت، الرجاء اتباع المبادئ التوجيهية للتطبيقات الجديدة[onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)
 
-### New Features
+### ميزات جديدة
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+وعلى الرغم من أن التركيز الرئيسي لهذا الإصدار ينصب على الاستعداد لنشر مينينت، فإنه يتضمن أيضا العديد من الميزات الجديدة:
 
-#### Get this contract’s address
+#### احصل على عنوان هذا العقد
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+يمكن للعقود الآن الحصول على عنوانها الخاص عن طريق سيكل جديد \`get_contract_address\`. ويمكننا أخيراً أن نستعيد عقد سيلفي
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">عقد سيلفي في آيلول/سبتمبر 2021-تشرين الثاني/نوفمبر 2021</p>&mdash; فرانشيسكو سيكون (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10 تشرين الثاني/نوفمبر 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### حجب التجزئة
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+يتم تحديد الكتل الآن عن طريق التجزئة بدلاً من رقم التعريف. ويأتي هذا في أعقاب تحولنا الأخير إلى تجزئة المعاملات. تم تحديث جميع واجهات برمجة التطبيقات وفقاً لذلك. وسنصدر قريبا وثائق تقنية كاملة عن النظام، ستشمل أيضا تحديد هيكل الكتلة.
 
-#### Contract Addresses
+#### عناوين العقد
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+تقدم هذه النسخة تغييرا في الطريقة التي يتم بها حساب عناوين العقد. العنوان هو تجزئة Pedersen على عنوان المتصل، ملح (عشوائي أو مختار من قبل المستخدم)، شفرة العقد، و تجزئة حجة الإنشاء، كلها ملحقة بالبادئة.
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+هاش (PREFIX، المتصل_عنوان، ملح، عقد_هاش، ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+في النسخة الحالية، عنوان المتصل يساوي دائما 0، ولكن في الإصدارات المقبلة، سيمكن ذلك من نشر العقود مباشرة من العقود القائمة.
 
-Note that this scheme is very similar to CREATE2.
+لاحظ أن هذا المخطط شبيه جدا بـ CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[راجع ملاحظات الإصدار الكامل](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### جسر الرمز المميز
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+والجسور الرمزية جزء هام من بنية StarkNet الأساسية. وهي تسمح بتحويل الأموال إلى شركة StarkNet ومنها. لم يتم نشر الجسر في وقت النشر، غير أنه ينبغي أن يكون متاحا في غضون بضعة أيام - إلى جانب التوثيق الكامل لوظيفته واستخدامه. من المهم ملاحظة أن الجسر يستخدم بروتوكول[L1<>>L2 المراسلة](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). وعلى هذا النحو، فإنه يتيح مهلة قصيرة للانسحاب - حالما يُدرج الانسحاب في دفعة ويُقبل في الوثيقة L.1، وتتاح الأموال على الفور للمستخدم في L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+هذه هي النسخة الأولى من الجسور الرمزية، ونريد أن نحصل على تغذية مرتدة من النظام الإيكولوجي عليها.
 
-### Join StarkNet
+### الانضمام إلى StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+ولم يكن هناك أبدا وقت أفضل للانضمام إلى مجتمع StarkNet المتنامي. يمكنك الانضمام إلى المحادثة في[Discord StarkNet](https://discord.gg/uJ9HZTUk2Y)، والمشاركة في[ورشة عمل على الإنترنت](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)، أو استخدم أحد الدروس[](https://www.cairo-lang.org/docs/hello_starknet/index.html)لبدء بناء أول تطبيق خاص بك.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**تحديث (نوفمبر 2021):**StarkNet Alpha حية على ماين إيثيريوم

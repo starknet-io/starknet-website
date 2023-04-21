@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* StarkNet Token (STRK) on nyt käytössä Ethereum Mainnetissa
+* **Varokaa huijauksia!**StarkNet Tokeneita ei ole tarjolla myyntiin
+* Säätiön on aika määrittää mekanismi, jonka avulla se voi jakaa kuponkiaan.
+* StarkWaren osakkeenomistajien, työntekijöiden ja riippumattomien kumppaniohjelmistojen kehittäjien omistuksessa olevat rahakkeet on lukittu neljän vuoden ajaksi, jonka vähittäinen vapauttaminen alkaa vuoden kuluttua
+* Tunnus lisää StarkNetin hajauttamista sen käytön ansiosta, että se äänestää ja maksaa palkkioita
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+Tänään,[StarkNet](https://starknet.io/)ottaa jälleen askeleen kohti hajauttamista. StarkNet tunnus on nyt[Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Nopeasti uudelleentarkastelu tapahtuu seuraavasti: STRK:a käytetään panoksena StarkNetin konsensusmekanismeihin osallistumiseen, joka on hallintotapa ja joka maksaa transaktiomaksuja. Kunkin hyödykkeen perustelut on esitetty[hajauttamista koskevassa ehdotuksessamme](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), kohdassa otsikko “Mitä kuponkia käytetään?”
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***Varokaa huijauksista:**kirjoitushetkellä ei ole mitään keinoa ostaa StarkNet Tokens; tämä myyntikiellon määräaika pysyy voimassa, kunnes[StarkNet-säätiön ilmoitus](https://twitter.com/StarkNetFndn); seuraa StarkNet-säätiön virallista yhteydenpitoa ja opi kaikista STRK:n tilan päivityksistä. Voit raportoida huijauksista ja tarkistaa muut huijauksista[-huijausraportissa](https://discord.gg/qypnmzkhbc)kanavalla[StarkNet Discord](http://starknet.io/discord)-palvelimella.*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+Tässä virassa selitetään token jakomenettely ja miten käytetyt token sopimukset palvelevat kahta symbolin kolmesta suunnitelluista laitoksista eli äänestystä ja panostamista. Kolmas yhteisö, joka maksaa StarkNet-maksuja, keskustelee asiasta myöhemmin.
 
-### Planning the token allocation process
+### Tokenin käyttöoikeuden myöntämisprosessin suunnittelu
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+Olemme aiemmin ehdottaneet[suunnitelmaa](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)rahakkeiden alustavasta jakamisesta. Osakkeenomistajille, työntekijöille ja riippumattomille ohjelmistokehittäjille osoitetut osoitteet on lukittu neljään vuoteen, ja vähittäinen julkaisuaikataulu alkaa vuoden kuluttua. Lukittuja kuponkeja voidaan käyttää äänestämiseen ja panostamiseen, mutta ei voi siirtää tai käydä kauppaa. Jotkut kuponkia ovat lukittu kautta omistettu älykäs sopimus Ethereum kun taas muut kuponkia ovat lukittu kautta säilyttäjille.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+Erillisesti 50,1 prosenttia nykyisistä StarkNet-kuponkeista on kohdennettu StarkNet-säätiölle, jotta se voi saavuttaa[tavoitteensa](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(vrt.[StarkWare's post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). Näitä kuponkia ei ole lukittu. Säätiö tarvitsee kuitenkin aikaa muotoilla täsmällinen mekanismi näiden rahakkeiden jakamiseksi edelleen ja jakaa suunnitelmansa hyvissä ajoin.
 
-#### Why lockup?
+#### Miksi työsulku?
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+Kansioiden lukitseminen edellä mainitulle ajanjaksolle takaa, että nykyiset tietolähteet ovat StarkNetin pitkän aikavälin kannustimien mukaisia. Se lannistaa myös keinottelua ennen kuin sitä käytetään laajasti aiottuihin tarkoituksiin: verkon turvaaminen, maksujen maksaminen ja hallinnon hajauttaminen.
 
-Next, we explain how the token implementation supports voting and staking.
+Seuraavaksi kerromme, miten toteutus tukee äänestystä ja panostamista.
 
-### Voting
+### Äänestys
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+Säätiö vastaa siitä, että se helpottaa moitteetonta hallintoa ja muotoilee äänestysjärjestelmiä. StarkNet Tokenin tarkoituksena oli mahdollistaa sekä suora äänestys että joukko valtuutusmekanismeja.
 
-#### L1 voting
+#### L1 äänestys
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+ERC-20:n täytäntöönpanoon sisältyy nyt**valinnainen**yhdistetyn yhdisteen[valtuutusmoduuli](https://docs.compound.finance/v2/governance/). Tätä moduulia käytetään laajalti ketjuäänestyksessä. Syy, miksi se on valinnainen StarkNetissa, ja käännetään oletusarvoisesti, on kustannusten huomioon ottaminen. Sen käyttöönotto tarkoittaa, että jokainen StarkNet Tokensin siirto L1 vaatii ylimääräistä kaasua, jota tarvitaan ainoastaan äänivallan siirtymien seuraamiseksi.
 
 #### Non-L1 voting
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+Vaihtoehtoisia vaihtoehtoja L1-ketjun äänestykselle Compoundin valtuutusmoduulin kanssa ovat ketjun ulkopuoliset äänestykset sekä StarkNet-pohjaiset ketjuiset äänestysjärjestelmät (kuten[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). Nämä vaihtoehdot, jotka vähentävät merkittävästi kaasun kulutusta L1-siirtoissa, eivät edellytä nimenomaista tukea tällä hetkellä käyttöön otetusta ERC-20-säännöstöstä, joten niitä tuetaan luonnostaan.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+Kuten edellä mainittiin, kaikki tunnisteet – lukitut ja avatut – ovat käytettävissä StarkNet-äänestysmekanismissa.
 
-### Staking
+### Pinoaminen
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+StarkNetin luvaton ja sensuroinnin kestävä toiminta edellyttää satunnaista sekvensserien valintaa. Todennäköisyys, että solmu on valittu järjestykseen ja ehdottaa lohko on verrannollinen määrä StarkNet Tokens, että solmu panoksia. Peruste käyttää StarkNet Tokens (pikemminkin kuin vaikkapa Ethereum tai Bitcoin) on selitetty[hallintoehdotus](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), ja tarkkoja tietoja panostaminen, sekvensointi ja lohkojen luominen StarkNetissä ovat käynnissä[yhteisön keskustelu](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), ja ne on vielä viimeisteltävä.
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+Kuten äänestäminen, kuponkia voidaan käyttää panostamiseen vaikka ne ovat lukittuja. Tämä edistää StarkNet-operaattoreiden moninaisuutta ja StarkNet-järjestelmän häiriönsietokykyä.
 
 ### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+StarkNet Token -sopimusten käyttöönotto Ethereum on toinen askel StarkNet-hajautuksessa.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+Kehotamme kehittäjiä ja käyttäjiä olemaan pelottavia huijauksia! Julkaisun aikana ei ole poletteja vaihdettavissa, ja tämä ei-kaupallinen asema pysyy voimassa kunnes StarkNet-säätiö ilmoittaa asiasta myöhemmin.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+Lisää kysymyksiä voit mennä[Token-keskustelut](https://discord.gg/qypnmzkhbc)kanava[StarkNet Discord](http://starknet.io/discord)palvelimella.

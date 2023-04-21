@@ -1,44 +1,44 @@
 ### TL;DR
 
-* StarkNet’s decentralization involves a native token and a new foundation.
-* The StarkNet token is used for governance and as the network’s payment and staking asset.
-* Ten billion tokens have been minted and their allocation has begun.
-* The StarkNet Foundation, now being set up, will have a mission to maintain StarkNet as a public good.
+* Descentralizarea StarkNet-ului implică un token nativ și o nouă fundație.
+* Tokenul StarkNet este utilizat pentru guvernanță și ca activ de plată și participare al rețelei.
+* Zece miliarde de jetoane au fost bătute şi alocarea lor a început.
+* Fundaţia StarkNet, în curs de înfiinţare, va avea misiunea de a menţine StarkNet ca bun public.
 
-StarkNet is a permissionless decentralized Layer 2 (L2) validity rollup, built to allow Ethereum to scale via cryptographic protocols called STARKs, without compromising Ethereum’s core principles of decentralization, transparency, inclusivity and security.
+StarkNet este un rollup de validitate descentralizat fără permisiune, construit pentru a permite Ethereum să se dimensioneze prin protocoale criptografice numite STARKs, fără a compromite principiile fundamentale ale descentralizării, transparenței, incluziunii și securității.
 
-StarkNet’s Alpha launched on Mainnet in November 2021. Less than one year in, an ecosystem is forming, with dozens of teams worldwide working on it. Now is the time to advance the decentralization of the network, so it achieves the liveness, censorship resistance, transparency and inclusivity demanded of an L2 on Ethereum.
+StarkNet's Alpha a lansat pe Mainnet în noiembrie 2021. La mai puţin de un an se formează un ecosistem, zeci de echipe lucrând la el. Acum este momentul să avansăm descentralizarea reţelei, astfel încât să se obţină bunăvoinţa; rezistența la cenzură, transparența și caracterul favorabil incluziunii cerute de un L2 pe Ethereum.
 
-Decentralization means the network’s operation and evolution will not rely on any single entity, including StarkWare. A permissionless proof-of-stake leader election mechanism and on-chain payment of transaction fees, both using a native token, will enable the network to operate reliably as an L2 on Ethereum even should StarkWare cease to exist. Decisions regarding the ongoing maintenance of StarkNet will shift from StarkWare to the community. A StarkNet Token and Foundation will be key elements of this effort.
+Descentralizare înseamnă că operarea și evoluția rețelei nu se va baza pe nicio entitate, inclusiv pe StarkWare. Un mecanism de alegere a liderului fără permisiune şi plata în lanţ a taxelor de tranzacţie, ambele folosind un token nativ, va permite rețelei să funcționeze în mod fiabil ca un L2 pe Ethereum, chiar dacă StarkWare încetează să mai existe. Deciziile privind întreţinerea în curs a lui StarkNet se vor transfera de la StarkWare la comunitate. Un StarkNet Token și o fundație vor fi elemente-cheie ale acestui efort.
 
-This post, the first of three published simultaneously, summarizes StarkNet’s journey thus far and introduces the StarkNet Token and the StarkNet Foundation. The [next post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) discusses the StarkNet governance model and the [third](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) focuses on StarkNet’s token model.
+Acest post, primul dintre cele trei publicate simultan, rezumă călătoria lui StarkNet până acum și prezintă Simbolul StarkNet și Fundația StarkNet. [Postul următor](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)discută modelul de guvernanță StarkNet și[al treilea](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)se concentrează pe modelul token StarkNet.
 
-*We thank the following StarkNet supporters (alphabetically ordered) for their comments on a draft of these posts: Guily_Gioza (Topology), Itamar Lesuisse (Argent), Jonas Nelle (Pontis), Martin Triay (OpenZeppelin), Polynya, Sylve Chevet (Briq), and Tomasz Stańczak (Nethermind).*
+*Le mulțumim suporterilor StarkNet (ordine alfabetică) pentru observațiile lor cu privire la un proiect al acestor posturi: Guily_Gioza (Topologie), Itamar Lesuisse (Argent), Jonas Nelle (Pontis), Martin Triay (OpenZeppelin), Polynya, Sylve Chevet (Briq) și Tomasz Stanud czak (Nethermind).*
 
-### The story so far
+### Povestirea de până acum
 
-[StarkNet](https://starknet.io/) is built from cryptography and an open ecosystem. The **cryptography** is **[STARKs](https://eprint.iacr.org/2018/046.pdf)**. These are protocols based on math that scale Ethereum by orders of magnitude. They require no trusted setup, are post-quantum secure, and can be deployed succinctly at any scale. The ecosystem is composed of core developers who have wanted for years to build infrastructure and tools for scaling blockchain technology, as well as new and creative application domains that become possible when the computational power of Ethereum is expanded.
+[StarkNet](https://starknet.io/)este construit din criptografie și un ecosistem deschis. **Criptografia**este**[STARK-uri](https://eprint.iacr.org/2018/046.pdf)**. Acestea sunt protocoale bazate pe matematică care măsoară Ethereum în funcţie de ordinele de magnitudine. Acestea nu necesită o configurare de încredere, sunt sigure după cuantum și pot fi implementate succint la orice scară. Ecosistemul este compus din dezvoltatori de bază care au dorit ani de zile să construiască infrastructură și instrumente pentru extinderea tehnologiei blockchain, precum și domeniile de aplicare noi și creative care devin posibile atunci când puterea computațională a Ethereum este extinsă.
 
-StarkNet gives all developers and users access to the scale and security benefits of STARKs, for the purpose of scaling Ethereum while maintaining Ethereum’s core values. STARKs were invented by co-founders of StarkWare, who first used them to build the [StarkEx](https://starkware.co/starkex/) scaling solution for clients. Subsequently, StarkWare and other developer teams (collectively “Core Contributors”) built [StarkNet](https://starkware.co/starknet/), a public, decentralized, and permissionless infrastructure, to ensure that these scaling technologies are accessible to all in perpetuity.
+StarkNet oferă tuturor dezvoltatorilor și utilizatorilor acces la avantajele de scară și securitate ale STARK-urilor, în scopul scalării Ethereum, menținând în același timp valorile principale ale Ethereum. STARK-uri au fost inventate de co-fondatorii lui StarkWare, care l-au folosit prima dată pentru a construi soluția de scalare[StarkEx](https://starkware.co/starkex/)pentru clienți. Ulterior, StarkWare și alte echipe de dezvoltatori (colectiv “Contribuitori de bază”) au construit[StarkNet](https://starkware.co/starknet/), un public, infrastructură descentralizată şi fără permisiuni, pentru a garanta că aceste tehnologii de scalare sunt accesibile tuturor în permanenţă.
 
-The launch of StarkNet Alpha nearly a year ago prompted the emergence of a larger ecosystem that is committed to build and nurture StarkNet. There are numerous teams of developers worldwide building its core infrastructure, as well as new applications on it.
+Lansarea StarkNet Alpha în urmă cu aproape un an a dus la apariţia unui ecosistem mai mare care s-a angajat să construiască şi să cultive StarkNet. Există numeroase echipe de dezvoltatori care îşi construiesc infrastructura de bază, precum şi noi aplicaţii pe aceasta.
 
-### **The way to decentralize**
+### **Calea spre descentralizare**
 
-STARK technology is mature and secure, but StarkNet has not achieved the status of a public good like Ethereum or the Internet. For StarkNet to reach this goal, its governance, operation and development must continue to decentralize. This will be facilitated through two mechanisms: the **StarkNet Foundation** and the **StarkNet Token**.
+Tehnologia STARK este matură și sigură, dar StarkNet nu a obținut statutul de bun public precum Ethereum sau internetul. Pentru ca StarkNet să atingă acest obiectiv, guvernanţa, funcţionarea şi dezvoltarea sa trebuie să continue descentralizarea. Acest lucru va fi facilitat prin intermediul a două mecanisme:**Fundația StarkNet**și**StarkNet Token**.
 
-#### Foundation
+#### Fundație
 
-As a non-profit, the Foundation’s mission will be to maintain StarkNet as a public good — a commodity or service that is made available to all members of society. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between users.
+ca non-profit, misiunea fundaţiei va fi aceea de a menţine StarkNet ca bun public – o marfă sau un serviciu care este pus la dispoziţia tuturor membrilor societăţii. StarkNet este o infrastructură fără permisiuni, care ar trebui să fie disponibilă tuturor. Trebuie să fie bine întreţinută pentru a fi sigură şi eficientă pentru uzul public. De asemenea, nu trebuie să facă discriminări între utilizatori.
 
-The Foundation will be funded by a one-time grant of StarkNet Tokens. It will encourage the development of bottom-up mechanisms for community decision-making on essential technological questions, such as protocol updates, dispute resolution, and public goods funding.
+Fundația va fi finanțată printr-o bursă unică acordată de StarkNet Tokens. Aceasta va încuraja dezvoltarea unor mecanisme de jos în sus pentru luarea deciziilor comunitare cu privire la aspectele tehnologice esențiale, cum ar fi actualizările protocolului, soluționarea litigiilor și finanțarea bunurilor publice.
 
 #### Token
 
-The StarkNet Token is needed to operate the ecosystem, maintain and secure it, decide on its values and strategic goals, and direct its evolution. This token will be required for (i) governance, (ii) payment of transaction fees on StarkNet, and (iii) participation in StarkNet’s consensus mechanism.
+StarkNet Token este necesar pentru a gestiona ecosistemul, pentru a-l menţine şi asigura, pentru a decide cu privire la valorile şi obiectivele sale strategice şi pentru a direcţiona evoluţia acestuia. Acest token va fi necesar pentru (i) guvernanță, (ii) plata taxelor de tranzacție pentru StarkNet și (iii) participarea la mecanismul de consens al StarkNet.
 
-We have minted an initial ten billion tokens which are being allocated to Core Contributors of the StarkNet ecosystem including StarkWare and StarkWare’s investors, to StarkNet software developer partners, and to the Foundation. Soon (target: September 2022) the token will go on Ethereum as an ERC-20 token and be requested for use in governance and voting on network upgrades. Later, StarkNet fees will be paid only in this token, while ensuring good user experience for users interested in paying fees in ETH. Later still, automatic minting of additional StarkNet Tokens will commence, (i.e., the number of circulating tokens will be greater than ten billion).
+Am bătut iniţial zece miliarde de tokeni care sunt alocaţi colaboratorilor de bază ai ecosistemului StarkNet, inclusiv investitorilor StarkWare şi StarkWare, la partenerii de dezvoltare software StarkNet şi la Fundaţie. În curând (țintă: septembrie 2022) tokenul va merge pe Ethereum ca un token ERC-20 și va fi solicitat pentru utilizare în guvernanță și vot în actualizările rețelei. Ulterior, taxele StarkNet vor fi achitate numai în acest token, asigurând, în același timp, o bună experiență a utilizatorilor interesați să plătească taxe în ETH. Ulterior, va începe o mentalitate automată de StarkNet Tokens adiţional (de exemplu, numărul de jetoane circulante va fi mai mare de 10 miliarde).
 
-The StarkNet Token model emphasizes compensating developers for their work. A portion of new minting and transaction fees — fees assessed for use of StarkNet — will be granted to core infrastructure developers and smart contract developers for the work they have done to design and launch the protocol, in addition to compensating StarkNet operators for the work they have done to operate it.
+Modelul StarkNet Token pune accentul pe compensarea dezvoltatorilor pentru munca lor. O parte din noile taxe de procesare și de tranzacționare – taxe evaluate pentru utilizarea StarkNet – vor fi acordate dezvoltatorilor de infrastructură de bază și dezvoltatorilor de contracte inteligente pentru activitatea pe care au desfășurat-o în vederea conceperii și lansării protocolului; pe lângă despăgubirea operatorilor de la StarkNet pentru munca pe care au depus-o în vederea exploatării.
 
 The full rationale behind a new and dedicated StarkNet Token is explained in our [second post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the StarkNet Token design principles and initial allocation are discussed in the [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6).
