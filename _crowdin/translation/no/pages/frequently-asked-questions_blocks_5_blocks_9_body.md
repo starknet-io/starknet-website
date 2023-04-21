@@ -1,0 +1,1 @@
+Nr. Den sirkulerende leveransen av tokens vil øke over tid med utvunnet av nye tokens i henhold til protokollen. Detaljer om mineringsgrad og mekanisme er ennå ikke definert.

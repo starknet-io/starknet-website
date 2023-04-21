@@ -1,0 +1,1 @@
+De staat bestaat uit contractencode en de opslag van contracten.

@@ -1,0 +1,1 @@
+Enhver dApp kan implementeres på Starknet. Da Cairo tillader generel beregning, enhver forretningslogik kan gennemføres og behandles over StarkNet.

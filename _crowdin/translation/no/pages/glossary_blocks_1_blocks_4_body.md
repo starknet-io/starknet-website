@@ -1,0 +1,1 @@
+En innhenting av en spesifikk stats-overgang logikk som er definert av en kontrakt. Syntaktisk har en transaksjon en veldefinert struktur som omfatter alle nødvendige metadata og en vilkårlig betaling av data. semantikken til transaksjonen er definert i den påberopte kontrakten.

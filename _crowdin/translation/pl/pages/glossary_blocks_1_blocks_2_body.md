@@ -1,0 +1,1 @@
+Zbiór umów (L1 i L2), które wspólnie realizują przepływy handlowe.

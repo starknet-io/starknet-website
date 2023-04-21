@@ -1,0 +1,1 @@
+Os usuários que interagem com nós de sequenciador Starknet e, se necessário, com contratos L1. Esses usuários, humanos ou automatizados, são os agentes que submetem transações à rede Starknet.

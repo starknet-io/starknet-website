@@ -1,0 +1,1 @@
+Un nod din rețeaua Starknet care este folosit doar pentru a interoga starea actuală Starknet. Aceasta poate răspunde în mod independent (adică fără a interoga noduri suplimentare) la întrebările despre starea actuală a reţelei Starknet, inclusiv starea L1. Aceasta nu face tranzacții multiple sau nu dovedește loturi.

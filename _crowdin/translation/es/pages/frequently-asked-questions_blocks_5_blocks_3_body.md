@@ -1,0 +1,1 @@
+En la actualidad, no. Las cuotas en Starknet ahora se pagan en Éter (ETH). Pero más adelante, anticiparemos que en el futuro, las comisiones se pagarán exclusivamente con el Nativo Starknet Token.

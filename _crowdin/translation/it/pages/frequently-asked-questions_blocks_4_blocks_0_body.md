@@ -1,0 +1,3 @@
+**StarkEx**è un SAAS standalone, personalizzabile Layer-2 per gli scambi che utilizza il sistema di prova STARK al fine di fornire una scala massiccia. Diversi scambi significativi stanno già utilizzando StarkEx in produzione su Ethereum Mainnet (Per saperne di più su StarkEx).
+
+**Starknet**è una rete generale dove puoi scrivere e distribuire i tuoi smart contract, interagire con altri contratti, e così via, proprio come Ethereum.

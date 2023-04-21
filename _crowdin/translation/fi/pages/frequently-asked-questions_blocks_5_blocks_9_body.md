@@ -1,0 +1,1 @@
+Nro Kiertokuponkien tarjonta lisääntyy ajan mittaan siten, että protokollassa otetaan käyttöön uusia rahakkeita. Kaivosnopeutta ja -mekanismia koskevia tietoja ei ole vielä määritelty.

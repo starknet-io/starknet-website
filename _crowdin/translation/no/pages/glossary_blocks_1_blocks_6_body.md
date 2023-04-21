@@ -1,0 +1,1 @@
+En separat prosess (enten en online-tjeneste eller intern til nodet) som mottar resultatet av Cairo-programmer og genererer STARK-bekreftelser. Prover sender STARK-bevis for kontroll av at dette registrerer faktum på L1.

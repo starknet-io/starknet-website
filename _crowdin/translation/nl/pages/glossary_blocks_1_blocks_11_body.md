@@ -1,0 +1,1 @@
+Het hoofdknooppunt van het Starknet-netwerk. Het implementeert de kernfunctionaliteit van sequentietransacties die eraan worden toegevoegd. Het voert het Starknet OS Cairo programma uit met de relevante invoer, bewijst dat het resultaat is met behulp van de Proving Service of een interne STARK-prover, en werkt de netwerkstatus uiteindelijk bij op de Starknet Core Contract.

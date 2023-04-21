@@ -1,0 +1,1 @@
+Elke dApp kan worden ingezet op Starknet. Aangezien Caïro algemene berekeningen toestaat, kan elke bedrijfslogica worden geïmplementeerd en verwerkt via StarkNet.

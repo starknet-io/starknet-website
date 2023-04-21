@@ -1,0 +1,1 @@
+Nej. Det cirkulerande utbudet av polletter kommer att öka över tid med präglingen av nya polletter genom protokollet. Detaljer om präglingshastigheten och mekanismen är ännu inte definierade.

@@ -1,0 +1,1 @@
+A node in the Starknet network that is used only for querying the current Starknet state. It can independently (i.e., without/o querying additional nodes) answer queries about the current state of the Starknet network, including the L1 state. It does not batch transactions or prove batches.

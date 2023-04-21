@@ -1,0 +1,1 @@
+Domácí žeton, který odměňuje členy komunity, kteří vyvíjejí síť, posune ekosystém do takové míry, že používání nerodilých žetonů nikoliv. Pokud je token mimo domov, hospodářské šoky vyplývající z rozhodnutí v jiných ekosystémech by mohly mít dopad na službu Starknetu a její uživatele a poskytovatelé.

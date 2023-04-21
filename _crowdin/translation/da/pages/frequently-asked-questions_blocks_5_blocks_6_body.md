@@ -1,0 +1,1 @@
+Den Starknet Token er endnu ikke tilgængelig til salg. Det kan ikke tilføjes til din tegnebog på dette stadium. Pas på svindel.

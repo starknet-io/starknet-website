@@ -1,0 +1,1 @@
+The main node of the Starknet network. It implements the core functionality of sequencing transactions submitted to it. It executes the Starknet OS Cairo program with the relevant inputs, proves the result using the Proving Service or some internal STARK prover, and eventually updates the network state on the Starknet Core Contract.

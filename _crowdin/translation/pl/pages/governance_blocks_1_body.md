@@ -1,0 +1,7 @@
+Pierwsza faza zarządzania Starknet została uruchomiona (więcej szczegółów[tutaj](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). Od teraz członkowie społeczności mogą uczestniczyć w kształtowaniu Starknet za pośrednictwem kolejnego kanału, a mianowicie w głosowaniu nad zmianami protokołu.
+
+W pierwszej fazie zarządzania Starknet skupi się na modernizacji protokołu Starknet. Każda aktualizacja wersji Starknet zostanie uruchomiona w Goerli Testnet; Następnie wyborcy będą mieli 6-dniowy okres na zbadanie i przetestowanie zaktualizowanej wersji w trakcie jej funkcjonowania na Goerli. W tym czasie wniosek o zrzut ekranu zostanie otwarty, a społeczność może głosować nad zatwierdzeniem lub odrzuceniem zaktualizowanej wersji dla wdrożenia Mainnet.
+
+Jeżeli wniosek uzyska większość głosów „TAK” w ciągu sześciu dni głosowania, wniosek zostanie przyjęty, a sieć główna Starknet zostanie odpowiednio zaktualizowana. Oczekujemy, że głosowanie[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)zostanie wkrótce otwarte.
+
+Zachęcamy do przeczytania wszystkich szczegółów w następujących wpisach i angażowania się w dyskusje na[forum społeczności Starknet](https://community.starknet.io/).

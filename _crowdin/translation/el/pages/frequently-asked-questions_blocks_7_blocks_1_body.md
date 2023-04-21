@@ -1,0 +1,1 @@
+Μπορείτε να αναφέρετε απάτες και να ελέγξετε για άλλες αναφορές απάτης στο [κανάλι απάτη-αναφορά](https://discord.gg/qypnmzkhbc) στο διακομιστή [Starknet Discord](https://starknet.io/discord).

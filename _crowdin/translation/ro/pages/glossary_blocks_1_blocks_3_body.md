@@ -1,0 +1,3 @@
+Programul care codifică logica de afaceri a aplicaţiilor implementate. Acestea includ structurile de date ale aplicațiilor și gestionarea tranzacțiilor specifice trimise de utilizatori. Concret, contractul Starknet codează tranziţiile valide pentru cerere.
+
+* Conturile de cont Starknet: Date fiind captarea contului, conturile de utilizator nu sunt implementate la nivel de protocol. Prin urmare, unele contracte vor trebui să pună în aplicare conceptul de conturi de utilizator; acestea se numesc contracte de cont. Punerea în aplicare exactă depinde de contract; dar, din punct de vedere tehnic, acestea sunt contracte Starknet, care sunt puse în aplicare în Cairo.

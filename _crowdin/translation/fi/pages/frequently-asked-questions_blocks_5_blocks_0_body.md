@@ -1,0 +1,1 @@
+STARK-tekniikka on kypsä ja turvallinen, mutta Starknet ei ole vielä saavuttanut yleistä hyvää, kuten Ethereum tai Internet. Jotta Starknet voisi saavuttaa tämän tavoitteen, sen hallinnon, toiminnan ja kehityksen on jatkettava hajauttamista. Tätä helpotetaan kahdella tavalla: **Starknet Foundation** ja **Starknet Token**.

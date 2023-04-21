@@ -1,0 +1,4 @@
+Ta umowa L1 określa stan systemu poprzez przechowywanie zobowiązania wobec państwa L2. Kontrakt przechowuje również skrót programu Starknet OS – skuteczne zdefiniowanie wersji Starknet, w której uruchomiona jest sieć. Zobowiązane państwo w sprawie umowy podstawowej L1 działa jako mechanizm konsensusu Starknet, tj. system jest zabezpieczony konsensusem L1 Ethereum. Oprócz utrzymania stanu państwa, głównym ośrodkiem działalności Starknet L1 jest umowa podstawowa Starknet L1. W szczególności:
+
+* Przechowuje listę dozwolonych weryfikatorów (umowy), którzy mogą weryfikować transakcje aktualizacji stanu
+* Ułatwia to interakcję L1 ↔️ L2

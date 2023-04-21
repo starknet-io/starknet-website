@@ -1,0 +1,1 @@
+Valtio muodostuu sopimusten koodista ja sopimusten varastoinnista.

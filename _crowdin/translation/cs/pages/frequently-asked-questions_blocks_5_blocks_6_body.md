@@ -1,0 +1,1 @@
+Starknet Token ještě není k dispozici. Nemůže být v této fázi přidán do vaší peněženky. Pozor na podvody.

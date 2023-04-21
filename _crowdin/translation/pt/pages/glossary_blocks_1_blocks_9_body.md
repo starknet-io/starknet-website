@@ -1,0 +1,4 @@
+Este contrato L1 define o estado do sistema armazenando o compromisso com o estado L2. O contrato também armazena o hash do programa Starknet OS – definindo efetivamente a versão do Starknet a rede está em execução. O estado comprometido no contrato central L1 age como o mecanismo de consenso de Starknet, ou seja, o sistema é garantido pelo consenso de Ethereum L1. Além de manter o estado, o Contrato de Núcleo Starknet L1 é o principal centro de operações para Starknet no L1. Especificamente:
+
+* Armazena a lista de verificadores (contratos permitidos) que podem verificar transações de atualização estaduais
+* Facilita L1 ↔️ interação L2

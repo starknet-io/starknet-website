@@ -1,0 +1,1 @@
+De brugere, der interagerer med Starknet sequencer knudepunkter og om nødvendigt med L1 kontrakter. Disse brugere, uanset om de er menneskelige eller automatiske, er de agenter, der sender transaktioner til Starknet-netværket.

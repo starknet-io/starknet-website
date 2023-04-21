@@ -1,0 +1,1 @@
+Een node in het Starknet netwerk dat alleen wordt gebruikt om de huidige Starknet status op te vragen. Het kan onafhankelijk (d.w.z. zonder aanvullende knooppunten te vragen) antwoorden op vragen over de huidige status van het Starknet-netwerk, inclusief de L1-staat. Er worden geen batchtransacties uitgevoerd of partijen bewijzen.

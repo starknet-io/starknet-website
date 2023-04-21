@@ -1,0 +1,1 @@
+Brukerne som samhandler med Starknet sekvenseringsnoder og, hvis nødvendig, med L1-kontrakter. Disse brukerne, enten de er menneskelige eller automatiserte, er midlene som sender transaksjoner til Starknet-nettverket.

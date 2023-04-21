@@ -1,0 +1,1 @@
+Nu. Oferta circulantă de tokeni va crește în timp, odată cu mentarea de noi tokeni prin protocol. Detaliile privind rata de cultivare şi mecanismul trebuie încă definite.

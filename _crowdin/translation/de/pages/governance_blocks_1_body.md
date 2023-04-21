@@ -1,0 +1,7 @@
+Die erste Phase von Starknet Governance wurde gestartet (weitere Details[hier](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). Von nun an können Community-Mitglieder über einen weiteren Kanal an der Gestaltung von Starknet teilnehmen, nämlich über Protokolländerungen.
+
+In der ersten Phase wird sich Starknet Governance auf die Aktualisierung des Starknet Protokolls konzentrieren. Jedes Starknet-Upgrade wird auf Goerli Testnet bereitgestellt; Die Wähler werden dann einen Zeitraum von 6 Tagen haben, um die aktualisierte Version zu prüfen und zu testen, wie sie auf Goerli läuft. Während dieser Zeit wird ein Snapshot-Vorschlag geöffnet, und die Community kann darüber abstimmen, ob sie die aktualisierte Version für die Mainnet-Installation genehmigen oder ablehnen soll.
+
+Wenn der Vorschlag während der sechstägigen Wahlperiode eine Mehrheit mit „Ja“ erhält, wird der Vorschlag angenommen und das Starknet-Netz entsprechend aktualisiert. Wir erwarten, dass die Abstimmung über[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)bald offen sein wird.
+
+Wir empfehlen Ihnen, alle Details in den folgenden Beiträgen zu lesen und sich mit den Diskussionen im[Starknet Community Forum](https://community.starknet.io/) zu befassen.

@@ -1,0 +1,1 @@
+Kun Starknet on valmis, StarkEx sovellukset voivat siirtyä StarkNet jos he niin haluavat.

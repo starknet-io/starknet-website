@@ -1,0 +1,4 @@
+{
+  "title": "Miten Starknet scale Ethereum? ",
+  "description": "Starknet käyttää matematiikkaa ja kryptografiaa turvalliseen mittakaavaan Ethereum. Se toimii valididity-rollup (tai ZK-rollup): se \"niput\" monia tapahtumia ja \"rullat\" ne Ethereum yhtenä tapahtumana."
+}

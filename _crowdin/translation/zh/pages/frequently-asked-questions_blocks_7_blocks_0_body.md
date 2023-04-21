@@ -1,0 +1,1 @@
+如果你对StarkNet及其权力下放感到兴奋，并希望参与这一过程， 请加入StarkNet [Discord](https://starknet.io/discord) and [Starknet 社区论坛](https://community.starknet.io/)

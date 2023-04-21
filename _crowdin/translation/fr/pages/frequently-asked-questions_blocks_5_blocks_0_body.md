@@ -1,0 +1,1 @@
+La technologie STARK est mature et sécurisée, mais Starknet n'a pas encore atteint le statut de bien public comme Ethereum ou Internet. Pour que Starknet atteigne cet objectif, sa gouvernance, son exploitation et son développement doivent continuer à se décentraliser. Cela sera facilité par deux mécanismes : la **Fondation Starknet** et le **Jeton Starknet**.

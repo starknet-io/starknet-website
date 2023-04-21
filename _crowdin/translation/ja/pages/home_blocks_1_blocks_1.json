@@ -1,0 +1,4 @@
+{
+  "title": "StarknetはどのようにEthereumを拡張しますか? ",
+  "description": "Starknetは、数学と暗号を使用してEthereumを安全にスケールします。 これは、Validity-rollup(またはZK-rollup)として動作します:それは多くのトランザクションを「バンドル」し、単一のトランザクションとしてEthereumに「ロール」します。"
+}

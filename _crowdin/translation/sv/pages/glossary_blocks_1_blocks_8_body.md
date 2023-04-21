@@ -1,0 +1,1 @@
+Staten består av kontraktens kod och kontraktslagring.

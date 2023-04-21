@@ -1,0 +1,1 @@
+Mikä tahansa dApp voidaan ottaa käyttöön Starknetissa. Koska Kairo mahdollistaa yleisen laskennan, kaikki liiketoimintalogiikka voidaan toteuttaa ja käsitellä StarkNetissa.

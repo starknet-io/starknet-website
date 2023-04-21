@@ -1,0 +1,1 @@
+En separat proces (enten en online-tjeneste eller intern til node), der modtager output af Cairo programmer og genererer STARK beviser, der skal verificeres. Leverandøren fremlægger STARK-beviset for verifikatoren, der registrerer det faktum på L1.

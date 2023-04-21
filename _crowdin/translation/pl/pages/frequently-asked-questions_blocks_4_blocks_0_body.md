@@ -1,0 +1,3 @@
+**StarkEx**to samodzielny, konfigurowalny system SAAS warstwy 2 dla wymian, który używa systemu odpornego na STARK w celu zapewnienia ogromnego skalowania. Kilka znaczących giełd wykorzystuje już StarkEx w produkcji na Ethereum Mainnet (zobacz więcej na temat StarkEx).
+
+**Starknet**to sieć ogólnego przeznaczenia, w której możesz pisać i wdrażać własne inteligentne kontrakty, współdziałają z innymi umowami i tak dalej, podobnie jak Ethereum.

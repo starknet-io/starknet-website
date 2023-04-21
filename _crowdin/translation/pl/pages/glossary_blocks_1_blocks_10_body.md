@@ -1,0 +1,1 @@
+Węzeł w sieci Starknet, który jest używany tylko do zapytania bieżącego stanu Starknet. Może ona niezależnie (tj. bez zapytania dodatkowych węzłów) odpowiadać na pytania dotyczące aktualnego stanu sieci Starknet, w tym stanu L1. Nie zawiera transakcji wsadowych ani nie dowodzi partii.

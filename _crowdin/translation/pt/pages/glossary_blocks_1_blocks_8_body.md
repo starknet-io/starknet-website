@@ -1,0 +1,1 @@
+O estado é composto pelo código dos contratos e pelo armazenamento dos contratos.

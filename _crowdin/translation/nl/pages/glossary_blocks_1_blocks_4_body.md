@@ -1,0 +1,1 @@
+Een oproep tot een specifieke overgangslogica van de staat die wordt gedefinieerd door een contract. Syntactisch gezien heeft een transactie een goed gedefinieerde structuur die alle benodigde metadata en een willekeurige data-betaling bevat. De semantiek van de transactie wordt gedefinieerd door het aangevochten contract.

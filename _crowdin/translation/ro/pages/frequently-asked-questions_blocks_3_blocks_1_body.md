@@ -1,0 +1,1 @@
+Orice dApp poate fi instalată pe Starknet. Întrucât Cairo permite calculul general, orice logică de afaceri poate fi implementată și procesată prin intermediul StarkNet.

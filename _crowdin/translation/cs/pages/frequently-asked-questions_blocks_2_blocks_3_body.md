@@ -1,0 +1,3 @@
+Ne. Máte několik možností pro psaní smlouvy, z nichž každá má svůj vlastní prospěch. 
+
+Káhira je rodným jazykem smlouvy Starknet, která si nejvíc plně uvědomuje potenciál škálování Starknetu. Na druhé straně vyvíjí několik týmů do Káhiry průkopníky z jiných programovacích jazyků (zejména ze Solidarity. Takové proměny usnadňují rychlé nasazení stávajících smluv na Starknet.**[Podívejte se na náš nejnovější vývojový nástroj](/developers/tools-resources).**

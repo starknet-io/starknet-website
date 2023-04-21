@@ -1,0 +1,1 @@
+Puedes reportar estafas y comprobar si hay otros informes de estafas en el canal [scam-report](https://discord.gg/qypnmzkhbc) en el servidor [Starknet Discord](https://starknet.io/discord).

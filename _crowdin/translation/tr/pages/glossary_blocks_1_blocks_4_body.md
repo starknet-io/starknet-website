@@ -1,0 +1,1 @@
+An invocation of a specific state-transition logic that’s defined by a contract. Syntactically, a transaction has a well-defined structure that includes all the necessary metadata and an arbitrary data payload. The semantics of the transaction is defined by the invoked contract.

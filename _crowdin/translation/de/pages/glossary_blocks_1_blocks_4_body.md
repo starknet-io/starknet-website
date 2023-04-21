@@ -1,0 +1,1 @@
+Ein Aufruf einer durch einen Vertrag definierten spezifischen staatlichen Übergangslogik. Syntaktisch hat eine Transaktion eine genau definierte Struktur, die alle notwendigen Metadaten und eine beliebige Daten-Nutzlast beinhaltet. Die Semantik der Transaktion wird durch den aufgerufenen Vertrag definiert.

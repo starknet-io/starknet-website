@@ -1,0 +1,1 @@
+Erillinen prosessi (joko verkkopalvelu tai solmun sisäinen prosessi), joka vastaanottaa Kairon ohjelmien tuotoksen ja tuottaa STARK-vedoksia tarkistettavaksi. Todistaja toimittaa todentajalle STARKin todisteet, jotka rekisteröivät tosiasian L1:een.

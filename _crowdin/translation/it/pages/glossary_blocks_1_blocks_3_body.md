@@ -1,0 +1,3 @@
+Il programma che codifica la logica applicativa implementata. Ciò include le strutture dei dati applicativi e la gestione di specifiche transazioni inviate dagli utenti. In particolare, il contratto Starknet codifica transizioni di stato valide per l'applicazione.
+
+* Contratti account Starknet: dati l'astrazione dell'account, gli account utente non sono implementati a livello di protocollo. Alcuni contratti dovranno quindi attuare il concetto di account utente; questi sono denominati Conti Clienti. L'esecuzione esatta dipende dal contratto; ma, tecnicamente, questi sono contratti Starknet che sono attuati al Cairo.

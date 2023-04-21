@@ -1,0 +1,1 @@
+Um nó na rede Starknet que é usado apenas para consultar o estado atual do Starknet. Ele pode responder de forma independente (ou seja, sem consultar nós adicionais) a consultas sobre o estado atual da rede Starknet, incluindo o estado L1. Não processa transações em lote ou prova lotes.

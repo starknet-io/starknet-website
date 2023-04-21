@@ -1,0 +1,1 @@
+Główny węzeł sieci Starknet. Wdraża ona podstawową funkcję przekazywanych jej transakcji sekwencyjnych. Wykonuje program Starknet OS Cairo za pomocą odpowiednich danych wejściowych, dowodzi rezultatu za pomocą Proving Service lub kilku wewnętrznych dowodów STARK, i ostatecznie uaktualnia stan sieci w umowie bazowej Starknet.

@@ -1,0 +1,1 @@
+O invocare a unei logici specifice a tranziției de stat care este definită printr-un contract. Din punct de vedere sintactic, o tranzacție are o structură bine definită, care include toate metadatele necesare și o încărcătură de date arbitrare. Materialele semantice ale tranzacției sunt definite de contractul invocat.

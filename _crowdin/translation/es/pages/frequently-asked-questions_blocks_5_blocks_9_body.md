@@ -1,0 +1,1 @@
+No. El suministro circulante de tokens aumentará con el tiempo con la mintado de nuevos tokens por el protocolo. Todavía no se han definido los detalles sobre la tasa de mintado y el mecanismo.

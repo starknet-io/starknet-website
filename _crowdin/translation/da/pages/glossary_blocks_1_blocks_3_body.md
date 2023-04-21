@@ -1,0 +1,3 @@
+Det program, der koder den implementerede ansøgning business logik. Dette omfatter applikationsdatastrukturer og håndtering af specifikke transaktioner, der sendes af brugerne. Specifikt den Starknet kontrakt koder gyldige statslige overgange til ansøgningen.
+
+* Starknet Konto Kontrakter: I betragtning af konto abstraktion, brugerkonti er ikke implementeret på protokolniveau. Nogle kontrakter skal derfor gennemføre begrebet brugerkonti. Disse kaldes kontoaftaler. Den nøjagtige gennemførelse afhænger af kontrakten, men teknisk set er det Starknet-kontrakter, der gennemføres i Cairo.

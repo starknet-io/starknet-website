@@ -1,0 +1,1 @@
+O Token Starknet ainda não está disponível para venda. Ele não pode ser adicionado à sua carteira neste estágio. Cuidado com as fraudes.

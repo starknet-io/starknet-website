@@ -1,0 +1,1 @@
+Wenn Sie von StarkNet und seiner Dezentralisierung begeistert sind und am Prozess teilnehmen möchten bitte betrete die Builder auf StarkNet [Discord](https://starknet.io/discord) und [Starknet Community Forum](https://community.starknet.io/)

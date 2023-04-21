@@ -1,0 +1,3 @@
+Nro Sinulla on useita vaihtoehtoja sopimuksen kirjoittamiseen, joista jokaisella on omat etunsa. 
+
+Kairo on äidinkielenään Starknet-sopimus, joka parhaiten ymmärtää Starknetin skaalautuvan potentiaalin. Toisaalta useat ryhmät kehittävät transpilotteja muista ohjelmointikielistä (erityisesti yhteisvastuullisuudesta) Kairoon. Tällaiset muuntajat helpottavat olemassa olevien sopimusten nopeaa käyttöönottoa Starknetissa.**[Katso uusin kehitystyökalumme](/developers/tools-resources).**

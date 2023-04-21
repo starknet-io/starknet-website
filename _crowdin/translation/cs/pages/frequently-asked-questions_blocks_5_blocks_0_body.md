@@ -1,0 +1,1 @@
+Technologie STARK je zralá a bezpečná, ale Starknet dosud nedosáhl stavu veřejného statku, jako je Ethereum nebo internet. Aby Starknet tohoto cíle dosáhl, musí jeho řízení, provoz a rozvoj pokračovat v decentralizaci. To bude usnadněno prostřednictvím dvou mechanismů: **Starknet Foundation** a **Starknet Token**.

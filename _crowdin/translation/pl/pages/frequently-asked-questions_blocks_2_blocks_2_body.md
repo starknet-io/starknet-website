@@ -1,0 +1,3 @@
+[Kair](https://medium.com/starkware/hello-cairo-3cb43b13b209) jest językiem pełnoletnim zaprojektowanym do poprawnego udowodnienia prawidłowego wykonywania programów Kairo. Program Cairo jest bezpaństwowcowy, co oznacza, że nie masz rodzimego dostępu do pamięci, inne programy Cairo lub stan L1 (chociaż można uzyskać do nich dostęp, jak wyjaśniono poniżej). 
+
+Z drugiej strony kontrakty Starknet znajdują się na platformie wirtualnej Starknet, w której stale stwierdza się, że inteligentne kontrakty mogą mieć dostęp do i modyfikować. Te inteligentne kontrakty mogą przechowywać zmienne, komunikować się z innymi kontraktami i wysyłać/odbierać wiadomości do/z L1 ([czytaj więcej](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

@@ -1,0 +1,3 @@
+Un buon punto di partenza è il tutorial [Hello Starknet](https://docs.starknet.io/documentation/), che guida lo sviluppatore passo dopo passo attraverso la scrittura e la distribuzione di un semplice contratto. Il [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) offre un ambiente per imparare a scrivere contratti Starknet e testarli. 
+
+Puoi diventare parte della comunità degli sviluppatori e supportarla, unendoti al server [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

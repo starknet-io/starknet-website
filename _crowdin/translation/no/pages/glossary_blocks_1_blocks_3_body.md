@@ -1,0 +1,3 @@
+Programmet som koder den implementerte forretningslogikken for programmet. Dette omfatter programdatastrukturer og håndtering av spesifikke transaksjoner som brukere sender ut. Spesifikt gjelder de Starknet kontraktskodene som er gyldige statlige overganger for søknaden.
+
+* Starknet konto kontrakter: Forutsatt abstraksjon på kontoen, blir brukerkontoer ikke implementert på protokollnivå. Noen kontrakter vil derfor måtte implementere begrepet brukerkontoer. Disse kalles kontokontrakter. Den nøyaktige implementeringen avhenger av kontrakten; men teknisk er disse Starknett-kontraktene som implementeres i Cairo.

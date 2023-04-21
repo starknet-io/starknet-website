@@ -1,0 +1,1 @@
+Starknet-tunnusta käytetään maksutapahtumamaksujen maksamiseen, osallistumiseen Starknet-pöytäkirjaan ja osallistumiseen hallinnon alalla. Kunkin hyödykkeen perustelut on esitetty [hajauttamista koskevassa ehdotuksessamme](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), kohdassa otsikko “Mitä kuponkia käytetään?”

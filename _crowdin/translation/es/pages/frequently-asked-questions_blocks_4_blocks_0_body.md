@@ -1,0 +1,3 @@
+**StarkEx**es un SAAS de Capa 2 independiente y personalizable para intercambios que utilizan el sistema de prueba STARK para proporcionar escalas masivas. Varios intercambios significativos ya están utilizando StarkEx en producción en Ethereum Mainnet (leer más sobre StarkEx).
+
+**Starknet**es una red de uso general donde puedes escribir e implementar tus propios contratos inteligentes, interactuar con otros contratos, y así sucesivamente, al igual que Ethereum.

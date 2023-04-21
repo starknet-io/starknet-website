@@ -1,0 +1,4 @@
+Dieser L1-Vertrag definiert den Zustand des Systems durch die Speicherung der Verpflichtung auf den L2-Staat. Der Vertrag speichert auch den Starknet-OS-Hash, der effektiv die Version von Starknet definiert, in der das Netzwerk läuft. Der verpflichtete Staat des L1-Kernvertrags fungiert als Konsensmechanismus von Starknet, d.h. das System wird durch den Konsens L1 Ethereum gesichert. Zusätzlich zur Aufrechterhaltung des Zustands ist der Starknet L1 Core Contract der Hauptknotenpunkt für Starknet auf L1. Konkret:
+
+* Es speichert die Liste der zugelassenen Überprüfer (Verträge), die die Statusaktualisierung der Transaktionen überprüfen können
+* Es erleichtert L1 :links-rechts-Pfeil: L2 Interaktion

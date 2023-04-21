@@ -1,0 +1,1 @@
+Starknet token skal brukes til å betale transaksjonsavgifter, deltakelse i Starknet protokollen og deltakelse i styresett. Begrunnelsen for hver av disse brukes presenteres i vårt [desentraliseringsforslag](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), i seksjonen med tittelen ”Hva skal tokenene brukes til?”

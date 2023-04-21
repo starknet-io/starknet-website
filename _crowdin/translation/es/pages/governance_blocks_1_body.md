@@ -1,0 +1,7 @@
+Se ha lanzado la primera fase de la Gobernanza de Starknet (más detalles[aquí](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). A partir de ahora, los miembros de la comunidad pueden participar en la configuración de Starknet a través de otro canal, a saber, la votación de cambios de protocolo.
+
+En su primera fase, la gobernanza de Starknet se centrará en las actualizaciones del protocolo Starknet. Cada actualización de la versión Starknet se desplegará en Goerli Testnet; Los votantes tendrán entonces un período de 6 días para examinar y poner a prueba la versión actualizada en Goerli. Durante este tiempo, se abrirá una propuesta de instantánea, y la comunidad puede votar sobre si aprobar o rechazar la versión actualizada para el despliegue de Mainnet.
+
+Si la propuesta obtiene una mayoría de votos «YES» durante el período de votación de seis días, la propuesta pasa y Starknet mainnet se actualizará en consecuencia. Esperamos que la votación sobre[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)esté abierta pronto.
+
+Te animamos a leer todos los detalles en los siguientes mensajes y a participar en las discusiones en el[foro de la comunidad Starknet](https://community.starknet.io/).

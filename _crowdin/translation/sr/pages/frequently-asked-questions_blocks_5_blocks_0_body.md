@@ -1,0 +1,1 @@
+STARK technology is mature and secure, but Starknet has not yet achieved the status of a public good like Ethereum or the Internet. For Starknet to reach this goal, its governance, operation and development must continue to decentralize. This will be facilitated through two mechanisms: the **Starknet Foundation** and the **Starknet Token**.

@@ -1,0 +1,1 @@
+Nee. Het verkeer van tokens zal met het slaan van nieuwe tokens in het protocol toenemen in de tijd. De details van de mijnbouw en het mechanisme moeten nog worden gedefinieerd.

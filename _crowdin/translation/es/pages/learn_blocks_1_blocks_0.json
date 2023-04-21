@@ -1,0 +1,4 @@
+{
+  "title": "Starknet 101",
+  "description": "Starknet es una red de capa 2 que utiliza matemáticas y criptografía para escalar Ethereum de forma segura. Es conocido como un rollup de validación (o ZK-rollup); \"rolls\" muchas transacciones hasta enviar a Ethereum como una sola transacción. Siga leyendo para aprender los fundamentos."
+}

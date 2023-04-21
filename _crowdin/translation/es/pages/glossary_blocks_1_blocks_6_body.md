@@ -1,0 +1,1 @@
+Un proceso separado (ya sea un servicio en línea o interno del nodo) que recibe la salida de los programas de El Cairo y genera pruebas STARK para ser verificado. La Prover envía la prueba STARK al verificador que registra el hecho en L1.

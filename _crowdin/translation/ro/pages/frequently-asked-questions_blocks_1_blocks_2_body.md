@@ -1,0 +1,3 @@
+Un loc bun de început este tutorialul [Hello Starknet](https://docs.starknet.io/documentation/), care ghidează pas cu pas dezvoltatorul prin redactarea și implementarea unui contract simplu. [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) oferă un mediu pentru a învăţa cum să scrii contracte Starknet şi să le testezi. 
+
+Poți deveni parte din comunitatea dezvoltatorilor și să o susții alăturându-te serverului [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

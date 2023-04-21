@@ -1,0 +1,1 @@
+En samling av kontrakter (L1 og L2) som til sammen innfører en forretningsstrøm.

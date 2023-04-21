@@ -1,0 +1,1 @@
+Starknet 令牌将用于支付交易费、参与Starknet协议和参与治理。 我们的 [分权提案](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)介绍了每个工具的基本原理。 在题为“代币将用于什么？”

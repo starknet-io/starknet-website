@@ -1,0 +1,1 @@
+Můžeš nahlásit podvody a zkontrolovat další hlášení podvodů v kanálu [scam-report](https://discord.gg/qypnmzkhbc) na serveru [Starknet Discord](https://starknet.io/discord).

@@ -1,0 +1,1 @@
+[Starknet Discord](https://discord.gg/qypnmzkhbc) サーバーの [詐欺レポート](https://starknet.io/discord) チャンネルで、詐欺を報告し、他の詐欺の報告を確認できます。

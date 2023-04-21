@@ -1,0 +1,1 @@
+A collection of contracts (L1 and L2) that collectively implement a business flow.

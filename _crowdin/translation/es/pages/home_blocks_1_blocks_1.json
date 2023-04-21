@@ -1,0 +1,4 @@
+{
+  "title": "¿Cómo escala Starknet Ethereum? ",
+  "description": "Starknet utiliza matemáticas y criptografía para escalar de forma segura Ethereum. Funciona como un rollup de validación (o ZK-rollup): \"bundles\" muchas transacciones y \"rolls\" a Ethereum como una sola transacción."
+}

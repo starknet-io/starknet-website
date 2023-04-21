@@ -1,0 +1,1 @@
+V současné době ne. Poplatky v Starknet jsou nyní placeny v Etheru (ETH). Později však očekáváme, že v budoucnu budou poplatky hrazeny výhradně domorodým Starknet Tokenem.

@@ -1,0 +1,1 @@
+Un proces separat (fie un serviciu online, fie unul intern nodului) care primește rezultatul programelor Cairo și generează dovezi STARK pentru a fi verificat. Prover prezintă dovada STARK verificatorului care înregistrează acest fapt pe L1.

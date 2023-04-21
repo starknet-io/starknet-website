@@ -1,0 +1,1 @@
+STARK er et bevis system. Det bruger banebrydende kryptografi til at give polylogaritmisk verifikation kompleksitet og sikker størrelse, kvasilineær bevis kompleksitet, og minimale antagelser, som er post-quantum-sikker. Mere information [her](https://starkware.co/stark/).

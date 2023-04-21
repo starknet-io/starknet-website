@@ -1,0 +1,3 @@
+Het programma dat de bedrijfslogica van de geïmplementeerde applicatie maakt. Dit omvat de applicatiegegevensstructuren en het afhandelen van specifieke transacties verzonden door gebruikers. Concreet gezien wordt het Starknet-contract voor de toepassing van geldige staatsovergangen gecodeerd.
+
+* Starknet account contracten: Gegeven account abstractie, worden gebruikersaccounts niet geïmplementeerd op protocolniveau. Sommige contracten zullen dus het concept van gebruikersaccounts ten uitvoer moeten leggen; dat zijn account-contracten. De precieze uitvoering hangt af van het contract, maar technisch gezien gaat het om Starknet-contracten die in Caïro worden uitgevoerd.

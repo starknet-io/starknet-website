@@ -1,0 +1,1 @@
+Statul este compus din codul contractelor și din stocarea contractelor.

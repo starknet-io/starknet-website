@@ -1,0 +1,3 @@
+Token Starknet nie jest jeszcze do sprzedaży. Nie można go dodać do Twojego portfela na tym etapie. Uważaj na oszustwa.
+
+Token Starknet został uruchomiony na Ethereum Mainnet w listopadzie 2022 r. Fundacja Starknet ogłosi w późniejszym terminie szczegółowe informacje na temat planów wspólnotowych biur i przepisów wspólnotowych, ale w momencie sporządzania tych szczegółów nie zostały jeszcze określone. Uważaj na oszustwa stwarzające możliwość sprzedaży tokenów Starknet.

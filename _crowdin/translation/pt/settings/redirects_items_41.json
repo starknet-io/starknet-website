@@ -1,0 +1,4 @@
+{
+  "source": "/podcasts/:path*",
+  "destination": "/en/posts"
+}

@@ -1,0 +1,1 @@
+Hvis du er begejstret for StarkNet og dens decentralisering og ønsker at deltage i processen, vær med i bygherrerne på StarkNet [Discord](https://starknet.io/discord) og [Starknet community forum](https://community.starknet.io/)

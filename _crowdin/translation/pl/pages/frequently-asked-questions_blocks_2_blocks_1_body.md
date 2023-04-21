@@ -1,0 +1,1 @@
+STARK jest systemem odpornym. Wykorzystuje ona najnowocześniejszą kryptografię w celu zapewnienia złożoności weryfikacji polilogarytmicznej i wielkości dowodu, quasiliniowej złożoności i minimalnych założeń, które są zabezpieczone ilościowo. Więcej informacji [tutaj](https://starkware.co/stark/).

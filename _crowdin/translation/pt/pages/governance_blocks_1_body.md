@@ -1,0 +1,7 @@
+A primeira fase da governança Starknet foi lançada (mais detalhes[aqui](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). De agora em diante, os membros da comunidade podem participar de uma Starknet através de um outro canal, nomeadamente votação em alterações no protocolo.
+
+Em sua primeira fase, a governança Starknet irá se concentrar nas atualizações de protocolo Starknet. Cada atualização da versão do Starknet será implementada no Goerli Testnet; Os eleitores terão então um período de 6 dias para examinar e testar a versão atualizada conforme é executado no Goerli. Durante este tempo, uma proposta de Snapshot será aberta, e a comunidade pode votar sobre se deve aprovar ou rejeitar a versão atualizada para a implantação principal da rede.
+
+Se a proposta conseguir uma maioria de votos “SIM” durante o período de votação de seis dias, a proposta passa e a rede principal Starknet será actualizada em conformidade. Esperamos que a votação sobre[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)seja aberta em breve.
+
+Nós o encorajamos a ler todos os detalhes nos seguintes posts e a se envolver com as discussões no[fórum da comunidade Starknet](https://community.starknet.io/).

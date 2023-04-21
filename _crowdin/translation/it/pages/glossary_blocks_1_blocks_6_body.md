@@ -1,0 +1,1 @@
+Un processo separato (un servizio online o interno al nodo) che riceve l'output dei programmi Cairo e genera prove STARK da verificare. Il Prover presenta la prova STARK al verificatore che registra il fatto su L1.

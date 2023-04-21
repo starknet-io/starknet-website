@@ -1,0 +1,7 @@
+تم إطلاق المرحلة الأولى من إدارة Starknet (المزيد من التفاصيل[هنا](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). ومن الآن فصاعدا، يمكن لأفراد المجتمع المحلي أن يشاركوا في تشكيل Starknet من خلال قناة أخرى، أي التصويت على تغييرات البروتوكول.
+
+في مرحلتها الأولى، ستركز إدارة Starknet على ترقيات بروتوكول Starknet. سيتم نشر كل ترقية لـ Starknet على Goerli Testnet؛ وسيتاح للناخبين بعد ذلك فترة ستة أيام لفحص واختبار النسخة المحسنة أثناء تشغيلها على غويرلي. وخلال هذه الفترة، سيفتح اقتراح لقطة سريعة، ويمكن للمجتمع أن يصوت على الموافقة على النسخة المحسنة أو رفضها لنشر مينينت.
+
+وإذا حصل الاقتراح على أغلبية أصوات "نعم" خلال فترة التصويت التي تدوم ستة أيام، فإن الاقتراح ينجح وسيتم ترقية الشبكة الرئيسية (Starknet) تبعا لذلك. نتوقع أن يكون التصويت على[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)مفتوحا قريبا.
+
+We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).

@@ -1,0 +1,1 @@
+开罗是一个过于繁重的术语，代表三种不同的东西。 第一，开罗是一个国家方案股结构。 第二，Cairo是CPU AIR的缩写，它是CPU 结构的代数表示。 最后，开罗是一种完整的编程语言，它使区块链开发者能够利用STARK的力量。 前两个方面，加上语言的教学集，概括在 [白皮书](https://eprint.iacr.org/2021/1063) 中。 关于语言，请参阅 [github repo](https://github.com/starkware-libs/cairo)。

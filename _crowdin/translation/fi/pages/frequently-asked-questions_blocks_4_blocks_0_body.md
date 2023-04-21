@@ -1,0 +1,3 @@
+**StarkEx**on itsenäinen, muokattavissa oleva Layer-2 SAAS vaihtoihin, jotka käyttävät STARK-näyttöjärjestelmää massiivisen skaalauksen aikaansaamiseksi. Useat merkittävät vaihdot käyttävät jo StarkExia tuotannossa Ethereum Mainnetissa (lue lisää Starkexistä).
+
+**Starknet**on yleiskäyttöinen verkosto, jossa voit kirjoittaa ja ottaa käyttöön omia älykkäitä sopimuksiasi, vuorovaikutuksessa muiden sopimusten kanssa ja niin edelleen, aivan kuten Ethereum.

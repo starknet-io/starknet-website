@@ -1,0 +1,1 @@
+目前是否。 Starknet的费用现在以Ether (ETH)支付。 但稍后我们预计，今后将只向土著Starknet Token支付费用。

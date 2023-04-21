@@ -1,0 +1,1 @@
+Los usuarios que interactúan con los nodos del secuenciador Starknet y, si es necesario, con los contratos L1. Estos usuarios, ya sean humanos o automatizados, son los agentes que envían transacciones a la red Starknet.

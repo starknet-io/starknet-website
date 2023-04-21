@@ -1,0 +1,1 @@
+Du kan rapportera bedrägerier och söka efter andra rapporter av bedrägerier i [bluffrapport-kanalen](https://discord.gg/qypnmzkhbc) på [Starknet Discord](https://starknet.io/discord) -servern.

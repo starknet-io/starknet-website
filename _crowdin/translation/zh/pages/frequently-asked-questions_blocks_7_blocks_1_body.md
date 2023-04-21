@@ -1,0 +1,1 @@
+您可以在 [Starknet Discord 上的 [scam-report](https://discord.gg/qypnmzkhbc) 通道上报告垃圾邮件，并检查其他垃圾邮件报告。](https://starknet.io/discord) 服务器。

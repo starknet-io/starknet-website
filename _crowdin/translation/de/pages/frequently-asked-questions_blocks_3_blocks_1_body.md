@@ -1,0 +1,1 @@
+Jede dApp kann auf Starknet eingesetzt werden. Da Kairo allgemeine Berechnungen ermöglicht, kann jede Geschäftslogik über StarkNet implementiert und verarbeitet werden.

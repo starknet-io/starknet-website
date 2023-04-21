@@ -1,0 +1,1 @@
+Solmun Starknet verkossa, jota käytetään vain kyselyyn nykyisen Starknet valtion. Se voi itsenäisesti (eli kysymättä / kyselemällä lisää solmuja) vastata kyselyihin nykyisestä tilasta Starknet-verkossa, mukaan lukien L1 osavaltio. Se ei sisällä erää eikä todista eriä.

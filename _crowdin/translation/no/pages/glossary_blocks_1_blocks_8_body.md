@@ -1,0 +1,1 @@
+Staten består av kontrakters kode- og kontraktskrav.

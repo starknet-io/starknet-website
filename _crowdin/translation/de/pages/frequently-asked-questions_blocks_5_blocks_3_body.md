@@ -1,0 +1,1 @@
+Derzeit nein. Die Gebühren in Starknet werden jetzt in Ether (ETH) bezahlt. Aber später rechnen wir damit, dass in Zukunft die Gebühren ausschließlich mit dem Starknet Token.

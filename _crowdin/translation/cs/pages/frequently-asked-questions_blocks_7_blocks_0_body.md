@@ -1,0 +1,1 @@
+Pokud jste nadšeni StarkNet a jeho decentralizací a chcete se do procesu zapojit, prosím, připojte se ke stavitelům na StarkNet [Discord](https://starknet.io/discord) a [fóru Starknet](https://community.starknet.io/)

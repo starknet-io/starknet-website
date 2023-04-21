@@ -1,0 +1,3 @@
+The program that encodes the implemented application business logic. This includes the application data structures and handling of specific transactions sent by users. Specifically, the Starknet contract encodes valid state transitions for the application.
+
+* Starknet Account Contracts: Given account abstraction, user accounts are not implemented at the protocol level. Some contracts will, therefore, need to implement the concept of user accounts; these are called Account Contracts. The exact implementation depends on the contract; but, technically, these are Starknet contracts that are implemented in Cairo.

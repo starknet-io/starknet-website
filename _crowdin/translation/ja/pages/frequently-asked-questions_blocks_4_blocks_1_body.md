@@ -1,0 +1,1 @@
+Starknet の準備ができたら、StarkEx アプリは StarkNet に移行します。

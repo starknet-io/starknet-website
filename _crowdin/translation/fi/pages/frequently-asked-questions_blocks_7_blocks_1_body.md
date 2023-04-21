@@ -1,0 +1,1 @@
+Voit raportoida huijauksista ja tarkistaa muita raportteja huijauksista [huijausraportissa](https://discord.gg/qypnmzkhbc) kanavalla [Starknet Discord](https://starknet.io/discord) -palvelimella.

@@ -1,0 +1,3 @@
+[Kairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) on Turing-täydellinen kieli, joka on suunniteltu ytimekkäästi osoittamaan Kairo ohjelmien oikea suorittaminen. Kairo ohjelma on kansalaisuudettomia, eli sinulla ei ole natiivi pääsy varastointiin, muut Kairo ohjelmat, tai L1 tila (vaikka voit käyttää niitä, kuten alla). 
+
+Starknet-sopimukset sen sijaan elävät Starknet-VM:ssä, jonka pitkäjänteinen valtio on se, että älykkäillä sopimuksilla on mahdollisuus käyttää ja muokata. Nämä älykkäät sopimukset voivat tallentaa muuttujia, kommunikoida muiden sopimusten kanssa ja lähettää / vastaanottaa viestejä L1 ([Lue lisää](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

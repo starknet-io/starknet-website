@@ -1,0 +1,5 @@
+Starknet er en tilladelsesfri, decentraliseret lag 2 (L2) Gyldighed Rollup beregnet til at skalere Ethereum samtidig bevare Ethereum sikkerhed og decentralisering. I overensstemmelse med denne mission blev fonden oprettet som en uafhængig enhed til at fremme den fælles teknologi, der er Starknet. Derudover, som en non-for-profit virksomhed med en smal mission: at fremme Starknet som et offentligt gode for alle, og vedligeholde det som sådan i de kommende år.
+
+Fonden lancerer med 50. % af den oprindelige Token-forsyning for at sikre, at nettets ressourcer anvendes effektivt til følgende mål: vedligeholdelse og sikkerhed af Starknet som et offentligt gode. fortsat udvikling og udvidelse af netværket og støtte til en kultur af konstruktivt samarbejde mellem udviklere.
+
+For mere information om instituttets mission, første trin og bestyrelse. se fondens [“Hej Verden” indlæg](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) og [StarkWare's supplerende indlæg](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

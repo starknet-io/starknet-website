@@ -1,0 +1,1 @@
+Non. La circulation de l'offre de jetons augmentera au fil du temps avec la création de nouveaux jetons par le protocole. Les détails sur le taux et le mécanisme d'émission des jetons doivent encore être définis.

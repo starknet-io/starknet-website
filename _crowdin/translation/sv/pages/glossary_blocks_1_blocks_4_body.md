@@ -1,0 +1,1 @@
+En åberopande av en specifik state-transition logik som definieras av ett kontrakt. Syntaktiskt sett har en transaktion en väldefinierad struktur som innehåller alla nödvändiga metadata och en godtycklig nyttolast för data. Semantiken av transaktionen definieras av det åberopade avtalet.

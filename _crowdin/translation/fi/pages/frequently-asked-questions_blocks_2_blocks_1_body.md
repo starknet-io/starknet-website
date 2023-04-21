@@ -1,0 +1,1 @@
+STARK on kestävä järjestelmä. Se käyttää huippuluokan kryptografia tarjota polylogaritminen todentaminen monimutkaisuus ja todiste koko, quasilinear kestävä kompleksisuus, ja minimaalisia oletuksia, jotka ovat post-kvantti-turvallisia. Lisää tietoa [täältä](https://starkware.co/stark/).

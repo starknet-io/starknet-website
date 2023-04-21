@@ -1,0 +1,1 @@
+o colecție de contracte (L1 și L2) care pun în aplicare în mod colectiv un flux comercial.

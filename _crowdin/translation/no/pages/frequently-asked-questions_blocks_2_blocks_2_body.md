@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) er et skyteferdig-språk laget for å verifisere korrekt utførelse av Cairo-programmer. Et Cairo program er stateless, noe som betyr at du ikke har innfødt tilgang til lagring, andre Kairo programmer eller L1 tilstand (selv om du har tilgang til dem, som forklart nedenfor). 
+
+Starknet-kontrakter, derimot, lever i Starknet VM, som har en vedvarende tilstand at smarte kontrakter har tilgang og modifisering. Disse smarte kontraktene kan lagre variabler, kommunisere med andre kontrakter og sende/motta meldinger til/fra L1 ([les mer](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

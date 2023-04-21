@@ -1,0 +1,1 @@
+Puoi segnalare truffe e controllare altri rapporti di truffe nel canale [truffa-report](https://discord.gg/qypnmzkhbc) sul server [Starknet Discord](https://starknet.io/discord).

@@ -1,0 +1,1 @@
+De Starknet Token is nog niet te koop. Het kan in dit stadium niet aan uw portemonnee worden toegevoegd. Pas op voor oplichters.

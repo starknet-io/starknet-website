@@ -1,0 +1,1 @@
+Aktualnie nr Opłaty w Starknet są obecnie uiszczane w Ether (ETH). Ale później przewidujemy, że w przyszłości opłaty będą uiszczane wyłącznie z natywnym tokenem Starknet.

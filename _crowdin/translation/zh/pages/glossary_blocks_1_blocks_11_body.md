@@ -1,0 +1,1 @@
+Starknet 网络的主要节点。 它执行对提交给它的交易进行排序的核心功能。 它利用相关的投入执行Starknet OS 开罗方案，利用Proving Service或一些内部STARK属性来证明其结果。 并最终更新Starknet 核心合同上的网络状态。

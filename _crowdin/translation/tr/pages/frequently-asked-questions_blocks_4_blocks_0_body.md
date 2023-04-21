@@ -1,0 +1,3 @@
+**StarkEx** is a standalone, customizable Layer-2 SAAS for exchanges that uses the STARK proof system in order to provide massive scaling. Several significant exchanges are already using StarkEx in production on Ethereum Mainnet (read more about StarkEx).
+
+**Starknet** is a general-purpose network where you can write and deploy your own smart contracts, interact with other contracts, and so on, just like Ethereum.

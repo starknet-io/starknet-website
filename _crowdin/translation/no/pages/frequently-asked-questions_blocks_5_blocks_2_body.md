@@ -1,0 +1,1 @@
+Et naturlig tegn som belønner medlemmer av samfunnet som utvikler nettverket, vil i en grad flytte økosystemet ut fra et ikke-nasjonalt token til det. Hvis tokenet ikke er naturlige og økonomiske sjokk fra beslutninger fattet i andre økosystemer, kan også påvirke Starknets tjeneste og dets brukere og leverandører.

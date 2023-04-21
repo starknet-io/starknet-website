@@ -1,0 +1,3 @@
+Nee. Je hebt verschillende opties voor het schrijven van een contract, elk met zijn eigen voordelen. 
+
+Cairo is de moedertaal van een Starknet contract, dat het schaalpotentieel van Starknet het meest volledig realiseert. Aan de andere kant ontwikkelen verschillende teams transpilers van andere programmeertalen (met name Solidity) naar Cairo. Zulke transpilers vergemakkelijken snelle implementatie van bestaande contracten op Starknet.**[Bekijk onze nieuwste ontwikkelingshulpmiddelen](/developers/tools-resources).**

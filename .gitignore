@@ -58,7 +58,8 @@ next-env.d.ts
 
 .types
 .types-*
-_crowdin
+_crowdin/data
+_crowdin/source
 !_crowdin/translation
 *.vars
 *.__*

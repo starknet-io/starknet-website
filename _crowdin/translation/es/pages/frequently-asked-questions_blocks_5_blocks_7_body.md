@@ -1,0 +1,3 @@
+El Starknet Token todavía no está en venta. No se puede añadir a su cartera en esta etapa. Cuidado con las estafas.
+
+El token Starknet fue lanzado en Ethereum Mainnet en noviembre de 2022. La Fundación Starknet anunciará en una fecha posterior los detalles de los planes de los reembolsos comunitarios y las provisiones comunitarias, pero en el momento de escribir estos detalles todavía están por determinar. Cuidado con las estafas que posan para vender los tokens Starknet.

@@ -1,0 +1,3 @@
+**StarkEx**este un standalone, personalizabil Layer-2 SAAS pentru schimburi care folosesc sistemul rezistent STARK pentru a oferi scalare masivă. Mai multe schimburi semnificative folosesc deja StarkEx în producția de pe Ethereum Mainnet (a se citi mai multe despre StarkEx).
+
+**Starknet**este o rețea cu scop general unde poți scrie și implementa propriile contracte inteligente, interacționează cu alte contracte, și așa mai departe, la fel ca Ethereum.

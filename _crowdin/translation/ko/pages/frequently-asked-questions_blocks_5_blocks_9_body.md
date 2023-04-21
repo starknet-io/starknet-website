@@ -1,0 +1,1 @@
+No. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol. Details on the minting rate and mechanism are yet to be defined.

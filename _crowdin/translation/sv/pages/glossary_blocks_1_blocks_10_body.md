@@ -1,0 +1,1 @@
+En nod i Starknet nätverket som endast används för att fråga den aktuella Starknet tillstånd. Det kan självständigt (dvs, utanför/o frågande ytterligare noder) svara på frågor om det aktuella tillståndet i Starknet nätverket, inklusive L1 tillstånd. Det inte parti transaktioner eller bevisa partier.

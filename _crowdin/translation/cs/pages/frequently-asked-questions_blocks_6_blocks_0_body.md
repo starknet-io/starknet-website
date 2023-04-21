@@ -1,0 +1,5 @@
+Starknet je bezpřípustná decentralizovaná vrstva 2 (L2) Validity Rollup určená pro měřítko Ethereum při zachování bezpečnosti a decentralizace Ethereum. V souladu s tímto posláním byla nadace založena jako nezávislý subjekt, který má rozvíjet sdílenou technologii Starknet. Kromě toho jako nezisková jednotka s úzkým posláním: prosazovat Starknet jako veřejný statek pro všechny, a udržujte ji jako takovou po léta následující.
+
+Nadace zahajuje s padesáti. % původních tokenských zásob, aby bylo zajištěno, že zdroje sítě budou účinně využity k dosažení těchto cílů: údržba a bezpečnost Starknet jako veřejného statku; pokračující rozvoj a rozšiřování sítě a podpora kultury konstruktivní spolupráce mezi vývojáři.
+
+Pro více informací o poslání nadace, prvních krocích a představenstvu viz [“Hello World” post](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) a [Doplňkový post StarkWare” nadace](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

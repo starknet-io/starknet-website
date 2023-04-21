@@ -1,0 +1,1 @@
+Vauhdittaminen tietyn valtion siirtymä logiikka, joka on määritelty sopimuksen. Syntaktisesti tapahtumassa on hyvin määritelty rakenne, joka sisältää kaikki tarvittavat metatiedot ja mielivaltaisen datan hyötykuorman. Liiketoimen semantiikka on määritelty vedotussa sopimuksessa.

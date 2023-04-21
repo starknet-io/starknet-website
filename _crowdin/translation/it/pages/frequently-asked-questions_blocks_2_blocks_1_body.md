@@ -1,0 +1,1 @@
+STARK è un sistema di prova. Utilizza la crittografia all'avanguardia per fornire complessità polilogaritmica di verifica e dimensioni della prova, complessità quasilineare, e ipotesi minime che sono post-quanto-sicure. Maggiori informazioni [qui](https://starkware.co/stark/).

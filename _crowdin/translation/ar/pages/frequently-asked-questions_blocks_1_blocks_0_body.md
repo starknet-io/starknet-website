@@ -1,0 +1,1 @@
+سيتم استخدام رمز Starknet في دفع رسوم المعاملات، والمشاركة في بروتوكول Starknet، والمشاركة في الحكم. يتم عرض الأساس المنطقي لكل من هذه المنافع في اقتراحنا [للامركزية](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)، في القسم المعنون "ماذا ستستخدم الرموز المميزة؟"

@@ -1,0 +1,3 @@
+El programa que codifica la lógica de negocio de la aplicación implementada. Esto incluye las estructuras de datos de la aplicación y el manejo de transacciones específicas enviadas por los usuarios. Específicamente, el contrato Starknet codifica las transiciones de estado válidas para la aplicación.
+
+* Contratos de la cuenta Starknet: Dada la abstracción de la cuenta, las cuentas de usuario no se implementan a nivel de protocolo. Por lo tanto, algunos contratos tendrán que implementar el concepto de cuentas de usuario; estos se llaman Contratos de Cuentas. La implementación exacta depende del contrato; pero, técnicamente, se trata de contratos Starknet que se implementan en Cairo.

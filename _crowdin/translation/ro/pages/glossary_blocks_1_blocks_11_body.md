@@ -1,0 +1,1 @@
+Nodul principal al rețelei Starknet. Aceasta implementează funcționalitatea de bază a tranzacțiilor de secvențiere care îi sunt prezentate. Acesta execută programul Starknet OS Cairo cu intrările relevante, dovedește rezultatul folosind Serviciul de Proving sau un prover intern STARK, și în cele din urmă actualizează starea rețelei pe Contractul central Starknet.

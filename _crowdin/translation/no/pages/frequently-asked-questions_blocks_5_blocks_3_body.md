@@ -1,0 +1,1 @@
+Nå, nei. Gebyr i Starknet betales nå i Ether (ETH). Men senere forventer vi at honorarer betales utelukkende med den innfødte Starknet Token.

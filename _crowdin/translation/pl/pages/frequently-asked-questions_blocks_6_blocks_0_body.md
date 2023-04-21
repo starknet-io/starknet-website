@@ -1,0 +1,5 @@
+Starknet jest bezpodstawną permisją, zdecentralizowaną warstwą 2 (L2) Walidaż ważności przeznaczony do skali Ethereum przy zachowaniu bezpieczeństwa i decentralizacji Ethereum. Zgodnie z tą misją Fundacja została utworzona jako niezależny podmiot w celu rozwoju wspólnej technologii, jaką jest Starknet. Ponadto jako podmiot nienastawiony na zysk o wąskiej misji: zaliczyć Starknet jako dobro publiczne dla wszystkich, i zachowywać ją jako taką przez kolejne lata.
+
+Fundacja rozpoczyna się z 50. % początkowych dostaw tokenów w celu zapewnienia skutecznego wykorzystania zasobów sieci do realizacji następujących celów: utrzymanie i bezpieczeństwo Starknet jako dobra publicznego; dalszy rozwój i rozbudowa sieci oraz wspieranie kultury konstruktywnej współpracy między wykonawcami.
+
+Więcej informacji na temat misji Fundacji, pierwszych kroków i rady, zobacz [wpis "Hello World" Fundacji](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) i [uzupełniający wpis StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

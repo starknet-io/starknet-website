@@ -1,0 +1,3 @@
+[Kairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) ist eine Turing-vollständige Sprache, die entwickelt wurde, um die korrekte Ausführung von Kairoer Programmen zu beweisen. Ein Kairoer Programm ist staatenlos, was bedeutet, dass Sie keinen native Zugriff auf die Speicherung haben, andere Kairoer Programme oder den L1-Status (obwohl Sie auf diese zugreifen können, wie unten erklärt). 
+
+Starknet-Verträge hingegen leben in der Starknet-VM, die einen anhaltenden Zustand hat, auf den intelligente Verträge zugreifen und modifizieren können. Diese intelligenten Verträge können Variablen speichern, mit anderen Verträgen kommunizieren und Nachrichten an oder von L1 senden ([lesen Sie mehr](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

@@ -1,0 +1,1 @@
+هناك العديد من مستكشفي الكتل التي يمكنك استخدامها: [StarkSsc](https://starkscan.co/)، [Voyager](https://voyager.online/txns)، [ViewBlock](https://viewblock.io/starknet).

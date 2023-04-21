@@ -1,0 +1,1 @@
+Una raccolta di contratti (L1 e L2) che attuano collettivamente un flusso aziendale.

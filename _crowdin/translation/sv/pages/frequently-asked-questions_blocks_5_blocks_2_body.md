@@ -1,0 +1,1 @@
+En inhemsk token som belönar medlemmar i samhället som utvecklar nätverket kommer att främja ekosystemet i en grad som användning av en icke-infödda token inte. Dessutom, om tecknet är icke-infödda, ekonomiska chocker från beslut som fattas i andra ekosystem kan påverka Starknets tjänst och dess användare och leverantörer.

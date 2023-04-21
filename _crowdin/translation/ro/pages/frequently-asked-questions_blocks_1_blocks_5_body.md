@@ -1,0 +1,3 @@
+În prezent, tranzacțiile Starknet și sarcinile lor salariale sunt vizibile pentru rețea în același mod în care sunt vizibile pe Ethereum.
+
+Este posibil să se implementeze diverse protocoale de confidențialitate pe Starknet, care vor oferi confidențialitate deplină tuturor participanților la rețea. Deoarece aceste protocoale necesită, de obicei, o mulţime de calcule, ele vor beneficia în mare măsură de scalabilitatea Starknet.

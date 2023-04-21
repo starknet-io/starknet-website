@@ -1,0 +1,1 @@
+Kotoisin merkki, joka palkitsee yhteisön jäseniä, jotka kehittävät verkostoa, edistää ekosysteemiä siinä määrin, että ei-kotoperäisen tunnuksen käyttö ei tule tapahtumaan. Jos tunnus on ei-syntyperäinen, muissa ekosysteemeissä tehdyistä päätöksistä johtuvat taloudelliset sokit voivat vaikuttaa Starknetin palveluun ja sen käyttäjiin ja palveluntarjoajiin.

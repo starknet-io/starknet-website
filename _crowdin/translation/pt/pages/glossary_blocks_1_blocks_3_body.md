@@ -1,0 +1,3 @@
+O programa que codifica a lógica de negócios implementada. Isto inclui as estruturas de dados do aplicativo e o tratamento de transações específicas enviadas pelos usuários. Especificamente, o código do contrato Starknet codifica transições de estado válidas para o aplicativo.
+
+* Contratos de conta Starknet: Dado a abstração da conta, as contas de usuário não são implementadas no nível do protocolo. Alguns contratos terão, portanto, de implementar o conceito de contabilidade dos utilizadores; estes são chamados Contratos de Contrato. A implementação exacta depende do contrato; mas, tecnicamente, trata-se de contratos Starknet que são implementados no Cairo.

@@ -1,0 +1,1 @@
+Een verzameling van contracten (L1 en L2) die gezamenlijk een bedrijfsstroom implementeren.

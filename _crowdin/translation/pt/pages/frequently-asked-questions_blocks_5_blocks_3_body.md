@@ -1,0 +1,1 @@
+No momento, não. Taxas em Starknet agora são pagas em Ether (ETH). Mas, mais tarde, prevemos que, no futuro, as taxas serão pagas exclusivamente com o Token Starknet.

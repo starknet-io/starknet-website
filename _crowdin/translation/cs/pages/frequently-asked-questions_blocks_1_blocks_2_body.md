@@ -1,0 +1,3 @@
+Dobrým místem pro začátek je [Ahoj Starknet tutoriál](https://docs.starknet.io/documentation/), který vede vývojáře krok za krokem psaním a nasazením jednoduché smlouvy. [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) nabízí prostředí pro učení se jak psát smlouvy Starknet a testovat je. 
+
+Můžete se stát součástí komunity vývojářů a podpořit ji připojením k [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

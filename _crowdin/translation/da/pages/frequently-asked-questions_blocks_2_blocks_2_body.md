@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) er et Turing-komplet sprog designet til kortfattet at bevise den korrekte udførelse af Kairo programmer. Et Kairo program er statsløs, hvilket betyder at du ikke har indbygget adgang til opbevaring, andre Cairo programmer, eller L1 tilstand (selvom du kan få adgang til dem, som forklaret nedenfor). 
+
+Starknet kontrakter, på den anden side, bor i Starknet VM, som har en vedvarende tilstand, at smart kontrakter kan få adgang til og ændre. Disse smarte kontrakter kan lagre variabler, kommunikere med andre kontrakter og sende / modtage beskeder til/fra L1 ([Læs mere](https://www.cairo-lang.org/docs/hello_starknet/index.html)).
