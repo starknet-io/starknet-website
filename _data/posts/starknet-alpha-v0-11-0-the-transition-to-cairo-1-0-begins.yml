@@ -7,6 +7,9 @@ image: /assets/new-land.png
 category: engineering
 topic:
   - cairo
+  - starknet
+  - 63d577bc-fbb2-432c-8d43-ce4472c82338
+  - 7c52b28e-f718-4982-872d-e05bbc220677
 short_desc: Live on Testnet, soon on Mainnet!
 blocks:
   - type: markdown
@@ -185,4 +188,4 @@ blocks:
       * Offchain [DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! In this version, we handled the computational component of the transaction’s cost. In upcoming versions, we will handle the on-chain data costs, which are today the dominant cost for average transactions.
 
 
-      ![](https://miro.medium.com/v2/resize:fit:1400/0*FA_-i3GZLkKx4R9q)
+      ![](/assets/starknet-alpha-v0.11.0-diagram.png)
