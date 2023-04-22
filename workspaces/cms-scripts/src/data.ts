@@ -202,7 +202,7 @@ export async function getTutorials(): Promise<SimpleData<Meta>> {
 
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
-      data.tags = data.tags.split(",").map((t: string) => t.trim());
+      data.tags = data.tags.replace(/,\s*$/, "").split(",").map((t: string) => t.trim());
     }
   });
 
