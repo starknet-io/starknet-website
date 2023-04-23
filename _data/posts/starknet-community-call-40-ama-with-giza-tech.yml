@@ -1,0 +1,63 @@
+id: 9dac0c05-fed5-40ef-84cd-a5a504b0d2b3
+post_type: video
+title: "Starknet Community Call #40 | AMA with Giza tech"
+published_date: 2023-04-23T08:34:02.316Z
+time_to_consume: 43:15
+video:
+  url: https://www.youtube.com/live/TJDTWJNLkbw?feature=share
+  id: TJDTWJNLkbw
+  data:
+    kind: youtube#video
+    etag: fQHAfiwtCB3gcMfT0ZJsaVOwXZ8
+    id: TJDTWJNLkbw
+    snippet:
+      publishedAt: 2023-04-19T01:31:02Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #40 | AMA with Giza tech"
+      description: Giza is a permissionless protocol in Starknet for deploying machine
+        learning models on-chain, performing verifiable inferences, and enabling
+        an open AI economy.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/TJDTWJNLkbw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/TJDTWJNLkbw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/TJDTWJNLkbw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/TJDTWJNLkbw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/TJDTWJNLkbw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #40 | AMA with Giza tech"
+        description: Giza is a permissionless protocol in Starknet for deploying machine
+          learning models on-chain, performing verifiable inferences, and
+          enabling an open AI economy.
+      defaultAudioLanguage: en-US
+image: /assets/communitycall-40-ama-with-giza-tech-youtube.png
+category: community-calls
+topic: []
+short_desc: Giza is a permissionless protocol in Starknet for deploying machine
+  learning models on-chain, performing verifiable inferences, and enabling an
+  open AI economy.
