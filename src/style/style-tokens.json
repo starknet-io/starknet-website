@@ -414,7 +414,7 @@
         "type": "color"
       },
       "background": {
-        "value": "#afcaff",
+        "value": "#CCDDFF",
         "type": "color"
       },
       "background-strong": {
@@ -781,7 +781,7 @@
         "type": "color"
       },
       "background": {
-        "value": "#46587c",
+        "value": "#3E4B65",
         "type": "color"
       },
       "border": {
