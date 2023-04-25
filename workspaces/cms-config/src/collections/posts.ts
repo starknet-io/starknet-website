@@ -11,6 +11,7 @@ export const postsCollectionConfig = {
   format: "yml",
   slug: "{{title}}",
   summary: "{{title}}",
+  sortable_fields: ["published_date", "title"],
   fields: [
     {
       name: "id",
@@ -41,6 +42,11 @@ export const postsCollectionConfig = {
       name: "title",
       label: "Post Title",
       widget: "string",
+    },
+    {
+      name: "toc",
+      label: "Table of contents",
+      widget: "boolean"
     },
     {
       name: "published_date",
