@@ -9,7 +9,7 @@ StarkNet Alpha 1 hat zwei neue Features:
 
 Anfang des Jahres haben wir angekündigt, dass StarkWare[StarkNet](https://starkware.co/product/starknet/)baut , ein permissionless dezentralisiertes STARK-basiertes ZK-Rollup1, das als L2-Netzwerk über Ethereum arbeitet. StarkNet ermöglicht es jeder dApp, eine unbegrenzte Skala für seine Berechnung zu erreichen — ohne Ethereums Verbundbarkeit und Sicherheit zu beeinträchtigen.
 
-Letzten Monat wurde[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)in die Welt veröffentlicht. For the first time, developers are able to [write](https://kobi.one/2021/07/14/stardrop.html) any smart contract and deploy it, permissionlessly, to a ZK-Rollup. Benutzer können Transaktionen ins Netzwerk versenden, Ethereum-Stil.
+Letzten Monat wurde[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)in die Welt veröffentlicht. Zum ersten Mal können Entwickler jeden Smart Contract[schreiben](https://kobi.one/2021/07/14/stardrop.html)und ihn ohne Genehmigung in einem ZK-Rollup bereitstellen. Benutzer können Transaktionen ins Netzwerk versenden, Ethereum-Stil.
 
 Heute gibt es eine neue Version, Alpha 1. Wir veröffentlichen Funktionen auf einer rollenden Basis, um Entwicklern die Möglichkeit zu geben, so bald wie möglich mit neuen Funktionen zu interagieren. Wir gehen davon aus, dass dies den Feedback-Zyklus verkürzen und Community-Feedback ermöglichen wird, StarkNet schnell zu verbessern.
 

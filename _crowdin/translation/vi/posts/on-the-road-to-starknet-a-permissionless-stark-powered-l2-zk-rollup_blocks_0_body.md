@@ -1,106 +1,106 @@
-#### **TL;DR**
+#### **TL; DR**
 
-We’re building StarkNet in four steps:
+Chúng tôi đang xây dựng StarkNet theo bốn bước:
 
-* Step 0 — Foundations (completed*)
-* Step I — Planets: Single-App Rollups
-* Step II — Constellations: Multi-App Rollups
-* Step III — Universe: A Decentralized Rollup
+* Bước 0 — Nền tảng (đã hoàn thành*)
+* Bước I — Các hành tinh: Tổng hợp một ứng dụng
+* Bước II — Chòm sao: Tổng hợp nhiều ứng dụng
+* Bước III — Vũ trụ: Tổng hợp phi tập trung
 
-We expect to have Step I deployed in a few short months, and be well on our way to Steps II & III by the end of 2021.
+Chúng tôi hy vọng sẽ triển khai Bước I trong một vài tháng ngắn ngủi và đang trên đường đến Bước II & III vào cuối năm 2021.
 
-### **Introduction**
+### **Giới thiệu**
 
-StarkWare is building StarkNet, a decentralized, permissionless and censorship-resistant STARK-powered L2 ZK-Rollup that supports general-computation over Ethereum. It is based on the Turing-complete [Cairo language](https://www.cairo-lang.org/).
+StarkWare đang xây dựng StarkNet, một L2 ZK-Rollup phi tập trung, không được phép và chống kiểm duyệt do STARK cung cấp, hỗ trợ tính toán chung trên Ethereum. Nó dựa trên ngôn ngữ Turing-đầy đủ[Cairo](https://www.cairo-lang.org/).
 
-Developers, users and StarkNet nodes will be able to do everything one would expect from a permissionless L2 Rollup: Developers may build applications implementing their own business logic and deploy them on StarkNet. Users may send transactions to StarkNet to be executed, just like they interact with Ethereum today. StarkNet nodes and participants will be crypto-economically incentivized to ensure the network operates efficiently and fairly.
+Các nhà phát triển, người dùng và các nút StarkNet sẽ có thể thực hiện mọi thứ mà người ta mong đợi từ Bản tổng hợp L2 không được phép: Các nhà phát triển có thể xây dựng các ứng dụng triển khai logic nghiệp vụ của riêng họ và triển khai chúng trên StarkNet. Người dùng có thể gửi giao dịch tới StarkNet để được thực thi, giống như họ tương tác với Ethereum ngày nay. Các nút và người tham gia StarkNet sẽ được khuyến khích về mặt kinh tế bằng tiền điện tử để đảm bảo mạng hoạt động hiệu quả và công bằng.
 
-All StarkNet transactions will be periodically batched, and their validity will be proven in a STARK proof, to be verified on Ethereum. As the computational effort required to verify STARK proofs is exponentially small compared to the computation proven, StarkNet will scale Ethereum by orders of magnitude.
+Tất cả các giao dịch StarkNet sẽ được thực hiện theo đợt theo định kỳ và tính hợp lệ của chúng sẽ được chứng minh bằng bằng chứng STARK, sẽ được xác minh trên Ethereum. Vì nỗ lực tính toán cần thiết để xác minh các bằng chứng của STARK là nhỏ theo cấp số nhân so với tính toán đã được chứng minh, StarkNet sẽ mở rộng quy mô Ethereum theo các cấp độ lớn.
 
-Since all StarkNet state transitions will be STARK-proven, only valid ones will be accepted on Ethereum. All data required to reconstruct the full StarkNet state will be published on-chain. Anyone will be able to run their own StarkNet node. These properties will make StarkNet as secure and permissionless as Ethereum.
+Vì tất cả các chuyển đổi trạng thái của StarkNet sẽ được chứng minh bằng STARK nên chỉ những chuyển đổi hợp lệ mới được chấp nhận trên Ethereum. Tất cả dữ liệu cần thiết để tái tạo lại trạng thái StarkNet đầy đủ sẽ được xuất bản trên chuỗi. Bất kỳ ai cũng có thể chạy nút StarkNet của riêng họ. Các thuộc tính này sẽ làm cho StarkNet trở nên an toàn và không cần cấp phép như Ethereum.
 
-We’ve been at it for three years, and have already achieved some remarkable milestones in turning “Moon Math” into production-grade and efficient software running on Ethereum. The way StarkWare does things is tackle the hard problems first, build the core technology, and then release it to production in piecemeal fashion. We will continue to build in this manner as we bring StarkNet to completion.
+Chúng tôi đã làm việc đó được ba năm và đã đạt được một số cột mốc đáng chú ý trong việc biến “Moon Math” thành phần mềm cấp sản xuất và hiệu quả chạy trên Ethereum. Cách mà StarkWare thực hiện là giải quyết các vấn đề khó khăn trước tiên, xây dựng công nghệ cốt lõi, sau đó đưa nó vào sản xuất theo kiểu từng phần. Chúng tôi sẽ tiếp tục xây dựng theo cách này khi chúng tôi hoàn thành StarkNet.
 
 ![](/assets/ontheroad_02.png)
 
-**Step 0 — Foundations**
+**Bước 0 — Cơ sở**
 
-StarkWare has completed laying down some important foundations for StarkNet.
+StarkWare đã hoàn thành việc đặt một số nền tảng quan trọng cho StarkNet.
 
-#### **Cairo**
+#### **Cairô**
 
-[Cairo](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20) is our Turing-Complete High-Level Language & framework for producing STARK proofs for general computation. Instead of hand-crafting complex “circuits” or AIRs, an application developer may use Cairo to define any business logic, have it proven off-chain, and verified on-chain. Cairo is [in production on Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20), and is also [available to developers](http://cairo-lang.org/).
+[Cairo](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20)là khung Ngôn ngữ cấp cao hoàn chỉnh Turing & của chúng tôi để tạo ra các bằng chứng STARK cho tính toán chung. Thay vì chế tạo thủ công các “mạch” hoặc AIR phức tạp, nhà phát triển ứng dụng có thể sử dụng Cairo để xác định bất kỳ logic kinh doanh nào, đã được chứng minh ngoài chuỗi và đã được xác minh trên chuỗi. Cairo là[trong sản xuất trên Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20)và cũng là[có sẵn cho các nhà phát triển](http://cairo-lang.org/).
 
-In a couple of weeks we will launch on a public Ethereum testnet an Alpha version of Cairo’s Generic Proof Service (GPS). *This will allow developers to build their own applications using Cairo, implementing whatever business logic they wish. They will send their Cairo code to the GPS to be proven, and then verified on-chain.*
+Trong vài tuần nữa, chúng tôi sẽ ra mắt trên mạng thử nghiệm Ethereum công khai, phiên bản Alpha của Dịch vụ Bằng chứng Chung (GPS) của Cairo. *Điều này sẽ cho phép các nhà phát triển xây dựng các ứng dụng của riêng họ bằng cách sử dụng Cairo, triển khai bất kỳ logic nghiệp vụ nào họ muốn. Họ sẽ gửi mã Cairo của mình tới GPS để được xác minh và sau đó được xác minh trên chuỗi.*
 
-GPS enables a single proof to assert the integrity of execution of altogether separate and independent applications, thereby giving those applications the ability to amortize the gas expense of proof verification amongst them.
+GPS cho phép một bằng chứng duy nhất khẳng định tính toàn vẹn của việc thực thi các ứng dụng hoàn toàn riêng biệt và độc lập, do đó cung cấp cho các ứng dụng đó khả năng phân bổ chi phí gas cho việc xác minh bằng chứng giữa chúng.
 
-Cairo and GPS are the basis of StarkNet — our decision to externalize both to developers provides them with early exposure to this technology, not only so they can start building on top of it, but also so they may influence StarkNet’s evolution.
+Cairo và GPS là nền tảng của StarkNet — quyết định của chúng tôi để đưa cả hai ra bên ngoài cho các nhà phát triển giúp họ tiếp xúc sớm với công nghệ này, không chỉ để họ có thể bắt đầu xây dựng dựa trên nó mà còn để họ có thể ảnh hưởng đến quá trình phát triển của StarkNet.
 
-We shall continue developing Cairo based on the needs and feedback of the developer community. We shall enhance this language with new features, syntax, and builtins that improve its usability, and we shall continue to develop and improve Cairo tooling: compilers, tracer/debugger, and integrations to common IDEs.
+Chúng tôi sẽ tiếp tục phát triển Cairo dựa trên nhu cầu và phản hồi của cộng đồng nhà phát triển. Chúng tôi sẽ nâng cao ngôn ngữ này với các tính năng, cú pháp và nội dung mới để cải thiện khả năng sử dụng của nó, đồng thời chúng tôi sẽ tiếp tục phát triển và cải thiện công cụ Cairo: trình biên dịch, trình theo dõi/trình gỡ lỗi và tích hợp với các IDE phổ biến.
 
-StarkNet will have Cairo running under the hood.
+StarkNet sẽ có Cairo chạy ngầm.
 
-#### **The STARK Software Stack**
+#### **Ngăn xếp phần mềm STARK**
 
-StarkWare has developed the most powerful proof system in the ecosystem, and it’s been [live on Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0) for months. StarkWare has also developed [ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), our open-source prover, which is 20X faster than any other prover; it offers both [zero-knowledge and post-quantum-secure signatures](https://twitter.com/StarkWareLabs/status/1331930111227080709).
+StarkWare đã phát triển hệ thống bằng chứng mạnh mẽ nhất trong hệ sinh thái và nó đã[hoạt động trên Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0)trong nhiều tháng. StarkWare cũng đã phát triển[ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), trình chứng thực mã nguồn mở của chúng tôi, nhanh hơn 20 lần so với bất kỳ trình chứng minh nào khác; nó cung cấp cả[chữ ký không kiến thức và bảo mật hậu lượng tử](https://twitter.com/StarkWareLabs/status/1331930111227080709).
 
-Our scaling *measurements* — not extrapolations, nor promises — include the processing of 300K transactions in a single proof on Mainnet, achieving [the world record in Rollup throughput: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). In the process, we’ve achieved the world record for Rollup gas efficiency: 315 gas/tx, orders of magnitude cheaper than transactions on Ethereum L1.
+Phép đo tỷ lệ**của chúng tôi — không phải phép ngoại suy, cũng không phải lời hứa — bao gồm việc xử lý 300K giao dịch trong một bằng chứng duy nhất trên Mainnet, đạt[kỷ lục thế giới về Thông lượng cuộn: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). Trong quá trình này, chúng tôi đã đạt được kỷ lục thế giới về hiệu quả sử dụng gas Rollup: 315 gas/tx, đơn đặt hàng rẻ hơn nhiều so với giao dịch trên Ethereum L1.
 
-This technology will be the cornerstone of the decentralized Proving Layer of StarkNet, and hence we shall release additional and enhanced provers as part of StarkNet’s development (more on that in an upcoming blog post).
+Công nghệ này sẽ là nền tảng của Lớp chứng minh phi tập trung của StarkNet và do đó chúng tôi sẽ phát hành các chứng minh bổ sung và nâng cao như một phần trong quá trình phát triển của StarkNet (thêm về điều đó trong một bài đăng trên blog sắp tới).
 
 #### **StarkEx**
 
-StarkEx is our L2 scalability engine. It has been serving [DeversiFi](https://twitter.com/deversifi)’s customers on Mainnet since June 2020. It will power both [dYdX ](https://twitter.com/dydxprotocol)and [ImmutableX](https://twitter.com/Immutable) starting in a few short weeks. StarkEx can handle complex trading logic (spot trading, derivatives, NFTs) as well as payments.
+StarkEx là công cụ có khả năng mở rộng L2 của chúng tôi. Nó đã phục vụ[khách hàng của DeversiFi](https://twitter.com/deversifi)trên Mainnet kể từ tháng 6 năm 2020. Nó sẽ cung cấp năng lượng cho cả[dYdX](https://twitter.com/dydxprotocol)và[ImmutableX](https://twitter.com/Immutable)bắt đầu sau vài tuần nữa. StarkEx có thể xử lý logic giao dịch phức tạp (giao dịch giao ngay, công cụ phái sinh, NFT) cũng như các khoản thanh toán.
 
-Developing StarkEx was our way of dogfooding our toolchain and testing it against real-world needs. There’s nothing like the demands of actual applications and live users to help tools mature and evolve. It also helps us understand which elements need to be addressed to better serve the ecosystem — for example, integrations with wallets and block explorers.
+Phát triển StarkEx là cách chúng tôi dogfood chuỗi công cụ của mình và thử nghiệm nó với các nhu cầu trong thế giới thực. Không có gì giống như nhu cầu của các ứng dụng thực tế và người dùng trực tiếp để giúp các công cụ hoàn thiện và phát triển. Nó cũng giúp chúng tôi hiểu những yếu tố nào cần được giải quyết để phục vụ hệ sinh thái tốt hơn — ví dụ: tích hợp với ví và trình khám phá khối.
 
-StarkEx is a live example of the ability to scale applications using a STARK-based ZK-Rollup, and is the first application in production on Mainnet written in Cairo. As such, it will also be one of the applications running on StarkNet.
+StarkEx là một ví dụ trực tiếp về khả năng mở rộng ứng dụng bằng cách sử dụng ZK-Rollup dựa trên STARK và là ứng dụng đầu tiên được sản xuất trên Mainnet được viết ở Cairo. Như vậy, nó cũng sẽ là một trong những ứng dụng chạy trên StarkNet.
 
 ![](/assets/ontheroad_03.png)
 
-### **The Road Ahead**
+### **Con đường phía trước**
 
-#### **Step I — Planets: Single-App Rollups**
+#### **Bước I — Các hành tinh: Tổng hợp một ứng dụng**
 
-This step will enable developers to build and deploy their own scalable applications on StarkNet.
+Bước này sẽ cho phép các nhà phát triển xây dựng và triển khai các ứng dụng có thể mở rộng của riêng họ trên StarkNet.
 
-At this point, each StarkNet instance will be able to run a single application. Different instances may run different applications.\
-The StarkNet framework will include the following:
+Tại thời điểm này, mỗi phiên bản StarkNet sẽ có thể chạy một ứng dụng. Các phiên bản khác nhau có thể chạy các ứng dụng khác nhau.\
+Khung StarkNet sẽ bao gồm những điều sau đây:
 
-* Mechanisms needed to generate STARK proofs for arbitrary Cairo logic, and then submit and verify them on Ethereum.
-* Interactions with L1 Ethereum: deposits and withdrawals of L1 tokens, publishing of the on-chain data, Escape Mechanisms protecting StarkNet users from malicious StarkNet operators, etc.
-* Management of the L2 user balances, and of the application’s storage and memory.
+* Các cơ chế cần thiết để tạo bằng chứng STARK cho logic Cairo tùy ý, sau đó gửi và xác minh chúng trên Ethereum.
+* Tương tác với L1 Ethereum: gửi và rút mã thông báo L1, xuất bản dữ liệu trên chuỗi, Cơ chế thoát bảo vệ người dùng StarkNet khỏi các nhà khai thác StarkNet độc hại, v.v.
+* Quản lý số dư người dùng L2 cũng như bộ nhớ và bộ nhớ của ứng dụng.
 
-Developers will be able to focus solely on building their application’s business logic, and then move into production: deploy and run it at scale on StarkNet.
+Các nhà phát triển sẽ có thể chỉ tập trung vào việc xây dựng logic nghiệp vụ của ứng dụng, sau đó chuyển sang sản xuất: triển khai và chạy ứng dụng đó trên quy mô lớn trên StarkNet.
 
-What enables us to build a general-computation scalable ZK-Rollup is the combination of:
+Điều cho phép chúng tôi xây dựng một ZK-Rollup có khả năng mở rộng tính toán chung là sự kết hợp của:
 
-* Cairo, which is a general-purpose Turing-complete programming language
-* Our strong STARK stack (prover and verifier), that enables bundling enormous computations into a single proof
+* Cairo, một ngôn ngữ lập trình hoàn chỉnh Turing có mục đích chung
+* Ngăn xếp STARK mạnh mẽ của chúng tôi (người chứng minh và người xác minh), cho phép gộp các phép tính khổng lồ vào một bằng chứng duy nhất
 
-#### **Step II — Constellations: Multi-App Rollups**
+#### **Bước II — Chòm sao: Tổng hợp nhiều ứng dụng**
 
-The next step will support multiple applications running on the same StarkNet instance and accessing the same global L2 state. This will enable interoperability between different applications, as well as reduced gas cost due to improved economies of scale.
+Bước tiếp theo sẽ hỗ trợ nhiều ứng dụng chạy trên cùng một phiên bản StarkNet và truy cập cùng một trạng thái L2 toàn cầu. Điều này sẽ cho phép khả năng tương tác giữa các ứng dụng khác nhau, cũng như giảm chi phí gas do quy mô kinh tế được cải thiện.
 
-Cairo, the powerful STARK stack, and GPS amplify StarkNet’ competitive advantage in supporting a multi-app Rollup.
+Cairo, ngăn xếp STARK mạnh mẽ và GPS khuếch đại lợi thế cạnh tranh của StarkNet trong việc hỗ trợ Tổng hợp nhiều ứng dụng.
 
-At this stage, StarkNet will be a fully functional framework for running *multiple* applications with any arbitrary business logic on top of Ethereum, with each instance run by a single operator.
+Ở giai đoạn này, StarkNet sẽ là một khung đầy đủ chức năng để chạy*nhiều*ứng dụng với bất kỳ logic kinh doanh tùy ý nào trên Ethereum, với mỗi phiên bản được điều hành bởi một nhà điều hành duy nhất.
 
-An operator may now spin up a StarkNet node, and application developers may deploy their contracts on it. From the users’ perspective, StarkNet now looks and feels like Ethereum, with a higher scale.
+Giờ đây, một nhà điều hành có thể tạo ra một nút StarkNet và các nhà phát triển ứng dụng có thể triển khai các hợp đồng của họ trên đó. Từ quan điểm của người dùng, StarkNet giờ đây trông giống như Ethereum, với quy mô cao hơn.
 
-#### **Step III — Universe: Decentralized Rollup**
+#### **Bước III — Vũ trụ: Tổng hợp phi tập trung**
 
-The last step in the evolution of StarkNet is decentralizing its operation.
+Bước cuối cùng trong quá trình phát triển của StarkNet là phi tập trung hóa hoạt động của nó.
 
-Intriguing R&D questions we’re now tackling that affect this stage include (i) using ZK-Rollups to improve consensus-reaching mechanisms, and (ii) designing crypto-economic mechanisms to incentivize the decentralized StarkNet contributors and operators (transaction sequencers, provers, etc.) to function efficiently, fairly and securely.
+Các câu hỏi R&D hấp dẫn mà chúng tôi hiện đang giải quyết có ảnh hưởng đến giai đoạn này bao gồm (i) sử dụng ZK-Rollups để cải thiện các cơ chế đạt được sự đồng thuận và (ii) thiết kế các cơ chế kinh tế tiền điện tử để khuyến khích những người đóng góp và nhà điều hành StarkNet phi tập trung (trình tự giao dịch, chứng minh, v.v.) để hoạt động hiệu quả, công bằng và an toàn.
 
-### **Conclusion**
+### **Phần kết luận**
 
-StarkWare is building StarkNet, a decentralized permissionless STARK-powered L2 ZK-Rollup over Ethereum, that supports general-computation based on the Cairo language.
+StarkWare đang xây dựng StarkNet, một L2 ZK-Rollup phi tập trung do STARK cung cấp trên Ethereum, hỗ trợ tính toán chung dựa trên ngôn ngữ Cairo.
 
-StarkNet will enable applications to scale without compromising security, users to pay reasonable transaction fees, and the entire ecosystem to grow substantially and fulfill its promise.
+StarkNet sẽ cho phép các ứng dụng mở rộng quy mô mà không ảnh hưởng đến bảo mật, người dùng trả phí giao dịch hợp lý và toàn bộ hệ sinh thái sẽ phát triển đáng kể và thực hiện lời hứa của nó.
 
-We gladly invite the developer community to [join us](https://twitter.com/StarkWareLtd) on this journey.
+Chúng tôi vui mừng mời cộng đồng nhà phát triển[gia](https://twitter.com/StarkWareLtd)chúng tôi trên hành trình này.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Update (tháng 11 năm 2021):**StarkNet Alpha hoạt động trên Ethereum Mainnet

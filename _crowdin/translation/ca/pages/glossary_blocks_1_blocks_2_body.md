@@ -1,1 +1,1 @@
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+Col·lecció de contractes (L1 i L2) que implementen col·lectivament un flux empresarial.

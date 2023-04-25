@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+Bu yazıda, StarkNet Token'ın tasarımına, basım programına ve beklenen zaman çizelgesine daha derinlemesine iniyoruz.
 
-### Considerations
+### Hususlar
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+StarkNet Jetonunun tasarımı, (i)**StarkNet Kullanıcısı**, (ii)**Operatör**— ağa işlemlerin sırasını gerçekleştiren bilgi işlem kaynakları sağlayan kişilerden oluşan bir ağa güç sağlama ihtiyacıyla şekillenir. STARK kanıtları ve uzun vadeli depolama sağlayıcıları ve (iii) altyapısı ve üzerinde çalışan uygulamalar için**Geliştirici**yazılım yazma.
 
-Mechanisms for fee structure and token minting should be:
+Ücret yapısı ve belirteç basımı için mekanizmalar şöyle olmalıdır:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Önemli ölçüde insan müdahalesine dayalı olmanın aksine, büyük ölçüde otomatikleştirilmiş
+* Diğer blockchain sistemlerinde bilinen ve test edilen
+* Analiz etmesi ve açıklaması basit; şeffaf
+* Spekülatif manipülasyona ve değer yaratmayan oyunlaştırmaya dirençli
+* İyi bir kullanıcı deneyimine (UX) sahip olduğu kabul edilir
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Bu tercihler, Kullanıcılar tarafından ödenen yeni basım ve işlem ücretlerinden token tahsis etme mekanizmasını şekillendirecektir:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Operatörler**StarkNet'in devam eden canlılığını güvence altına alır ve Kullanıcıların talep ettiği protokolün yüksek kaliteli performansını sunar.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Geliştiriciler**Operatörler tarafından ağın güvenliğini sağlamak için kullanılan yazılımı oluşturur ve sürdürürler ve kullanıcılar için ağın işlevselliğini geliştiren uygulamalar oluştururlar. Sonuç olarak, ücretlerin bir kısmı ve yeni basım, aşağıdaki şekilde Akıllı Sözleşme Geliştiricilerine ve Temel Geliştiricilere gidecektir:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Akıllı Sözleşme Geliştiricileri:**StarkNet protokolü, bu sözleşmelerin Kullanıcıları tarafından ödenen L1 ve L2 ücretleri aracılığıyla akıllı sözleşmeler tarafından sağlanan değeri otomatik olarak ölçebilir. StarkNet protokolü, Akıllı Sözleşme Geliştiricilerine otomatik olarak ücretlerin ve devam eden yeni basımların bir kısmını tahsis edecektir. Kullanıcılara daha fazla değer sunan akıllı sözleşmeler - onlar için ödenen ücretlerle ölçülür - bu amaç için tahsis edilen tokenlerin daha büyük bir kısmını alacaktır.
+* **Temel Geliştiriciler:**StarkNet protokolünün kanıtlayıcılar, sıralayıcılar, tam düğümler vb. için kod yazanlar gibi Temel Geliştiricilerin katkısını ölçmenin otomatik bir yolu yoktur. Sonuç olarak, katkıları protokol tarafından ölçülemeyen bu tür Temel Geliştiricilere ve diğer katkıda bulunanlara belirteç tahsisi, mutlaka bir miktar insan takdirini gerektirir. Bunun yerelleşme hedefiyle tutarlı bir şekilde uygulanması için bir model oluşturulacaktır.
+* Her iki Geliştirici türüne de yeni basım ve ücretlerden belirteç tahsis etmek için kesin mekanizma henüz belirlenmemiştir. Tasarım ilkeleri, oyunlaştırma karşıtı ve şeffaflığı içerecektir.
 
-### Initial allocation of StarkNet Tokens
+### StarkNet Jetonlarının ilk tahsisi
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+StarkWare tarafından zincir dışında on milyar token basıldı. Açıklığa kavuşturmak için: bu StarkNet Jetonları, StarkWare'de eşitliği temsil etmez ve StarkWare'de herhangi bir katılım hakkı sağlamaz veya StarkWare'den herhangi bir talep hakkı vermez. Dolaşımdaki token arzı, daha sonra topluluk tarafından belirlenecek bir program uyarınca, protokol tarafından yeni tokenlerin basılmasıyla zaman içinde artacaktır.\
+*Dolaşımdaki arz bu nedenle sabit kalmayabilir.*
 
-The allocation is thus:
+Tahsis şu şekildedir:
 
-**17%** — StarkWare Investors
+**%17**— StarkWare Yatırımcıları
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**%32,9**— Başlıca Katkıda Bulunanlar: StarkWare ve çalışanları, danışmanları ve StarkNet yazılım geliştirici ortakları
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**%50,1**StarkWare tarafından Vakfa aşağıdaki şekilde tahsis edilmiştir:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **%9**— Topluluk Hükümleri — StarkNet için çalışan ve örneğin StarkEx L2 sistemlerini geçmişte kullanarak temel teknolojisine güç veren veya geliştirenler için. En önemlisi, tüm Topluluk Hükümleri geçmişte gerçekleştirilen doğrulanabilir çalışmalara dayalı olacaktır. Örneğin, Topluluk Hükümlerinin geçmiş StarkEx</strong>verileceği ölçüde, tahsisler, StarkEx teknolojisinin**Haziran 2022'den önce gerçekleşen doğrulanabilir kullanımına dayalı olarak belirlenecektir.1</li>
+* **%9**— Topluluk İndirimleri — StarkNet Jetonlarındaki indirimler kısmen****Ethereum'dan StarkNet'e katılma maliyetlerini karşılar. Oyunlaştırmayı önlemek</strong>, Topluluk İndirimleri yalnızca indirim mekanizması duyurulduktan**sonra gerçekleşen işlemler için geçerli olacaktır.</li>
+* **%12**— StarkNet protokolünü geliştirmek, test etmek, dağıtmak ve sürdürmek için yapılan araştırma ve çalışmalar için hibeler
+* **%10**— bu dizinin önceki[gönderisinde](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)açıklandığı gibi Vakfın misyonuyla uyumlu ekosistem faaliyetlerini finanse etmek için stratejik bir rezerv.
+* **%2**— StarkNet Token sahipleri ve Vakıf tarafından kararlaştırılan üniversiteler, STK'lar vb. gibi saygın kurum ve kuruluşlara yapılan bağışlar.
+* **%8,1**Tahsis Edilmemiş — Vakfın tahsis edilmemiş hazinesi, topluluk tarafından karar verilecek şekilde StarkNet topluluğunu daha fazla desteklemek için mevcuttur.</ul>
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+Temel Katkıda Bulunanların ve Yatırımcıların uzun vadeli teşviklerini StarkNet topluluğunun çıkarlarıyla uyumlu hale getirmek ve merkezi olmayan ekosistemlerdeki yaygın uygulamayı takiben, Temel Katkıda Bulunanlar ve Yatırımcılara tahsis edilen tüm tokenler, 4 yıllık bir kilitlenme süresine tabi olacaktır. doğrusal sürüm ve bir yıllık bir uçurum.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### StarkNet Jetonlarını almanın bir yolu var mı?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+Kısa cevap evet, ancak jeton almanın kısayolları yok.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+StarkNet Token tahsisi ve ücret piyasası ve yeni basım tasarımı, ekosistemin güvenliğine ve sağlığına katkıda bulunan diğerlerinin yanı sıra çekirdek altyapı ve dApp'lerin geliştiricilerine öncelik verir. Bu, belirteçle ilgili olarak pratik olarak ne anlama geliyor?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Bir geliştiriciyseniz ve zaten StarkNet altyapısı veya akıllı bir sözleşme için gerçekten değer verilen ve StarkNet son kullanıcıları tarafından kullanılan yazılımlar yazdıysanız, o zaman protokol aracılığıyla otomatik olarak belirteç almayı bekleyebilirsiniz. Bu mekanizmanın oyunlaştırılmasına karşı birçok güvenceden biri, geliştiriciler tarafından alınan ücretlerin, kullanıcılar tarafından ödenen ücretlerden kesinlikle daha düşük olmasıdır.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+Geliştiriciler ayrıca StarkNet protokolünü geliştirmek, test etmek ve sürdürmek için yapılan çalışmalar için belirteç hibeleri alabilirler. Bu tür hibeler, Vakfın misyonuna uygun olarak zamanı geldiğinde belirlenecektir.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+StarkNet'in Ethereum'un ölçeklendirme ihtiyaçlarına cevap olduğuna inanan bir blockchain geliştiricisiyseniz,[StarkNet](https://starknet.io/)ve programlama dili[Cairo](https://www.cairo-lang.org/)hakkında daha fazla bilgi edinmenizi ve kendi akıllı sözleşmelerinizi geliştirmeye başlamanızı öneririz.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Son kullanıcıysanız, StarkNet'i kullanın - ancak yalnızca bugünkü gereksinimlerinize hizmet ettiği ölçüde. Değer verdiğiniz işlemler ve uygulamalar için kullanın, gelecekte StarkNet Jetonlarından herhangi bir ödül*.*Topluluk Hükümleri duyurulduğunda, yalnızca duyuru tarihinden önce meydana gelen anlık görüntülere atıfta bulunacak ve o adreste mevcut olan bilgilere göre ağın kötüye kullanılması ve oyunlaştırılması olarak gördüğü kullanımı filtreleyecek ve hariç tutacaktır. zaman noktası. Topluluk İndirimleri başlatıldığında, indirim duyurulmadan önce gerçekleşen işlemlere asla uygulanmayacaktır, bu nedenle, gelecekte bir indirim beklentisiyle bugün işlem yapmak boşunadır.
 
-### Closing remarks
+### Kapanış konuşmaları
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+Açık bir ağ oluşturmak, bilinmeyeni kucaklamak demektir. İnternet, Bitcoin ve Ethereum, araçlarının dünyayı değiştirebileceğine inanan, ancak nasıl olduğunu tam olarak bilmeyen yenilikçiler tarafından icat edildi. Alçakgönüllülükle, StarkNet'in blok zincirlerini ölçeklendirme yeteneğinin Ethereum için ve merkezi olmayan bir web için iyi olacağını umuyoruz. Ne inşa edileceğini bilemeyiz. Ancak, StarkNet'in yaratıcı bir topluluğun ellerine dikkate değer bir teknolojik yetenek verdiğine inanıyoruz ve bu topluluğun bunu, çoğu henüz hayal bile edilemeyen sayısız şekilde kullandığını görmeyi umuyoruz.

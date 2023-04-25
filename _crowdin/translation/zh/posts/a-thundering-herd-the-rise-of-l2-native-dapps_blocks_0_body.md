@@ -4,7 +4,7 @@ L2-原生dapps现在可以在不受传统L1气体限制的情况下蓬勃发展�
 
 ### 导 言
 
-由于Etherum(L1)块气体限制，dApp 开发者总是面临严重的限制。 It limits not only *how* those dApps operate but also *what* those dApps are capable of doing.
+由于Etherum(L1)块气体限制，dApp 开发者总是面临严重的限制。 它不仅限制了*这些 dApp 的操作方式，还限制了*这些 dApp 能够做**。
 
 第二层 (L2) 为开发者提供一个可计算的绿地，无此气体玻璃天花板。 我们认为，绝大多数的dapps在几年内将是L2-土著的：它们将是从L2基础上建立起来的，以便从这种计算自由程度中获益。
 
@@ -22,7 +22,7 @@ L2-原生dapps现在可以在不受传统L1气体限制的情况下蓬勃发展�
 
 Validity Rollup(aka ZK-Rollups) 启用了极其廉价的计算方法。 与任何其他缩放解决方案不同——L2计算方法能够成指数增长，只会对链上核查气体成本产生小小的影响。 此外，一个有效率的滚动处理对计算的投入——“证人数据”——，而不需要额外的L1资源，可以用许多投入进行计算。
 
-Coding dApps natively on L2 in **[Cairo](https://www.cairo-lang.org/)** (a Turing-complete language to scale dApps via STARK proofs) unlocks a vast realm of possibilities for developers. 它使他们能够使用他们以前无法使用的大量数据——包括计算数据和证人数据。
+在**[Cairo](https://www.cairo-lang.org/)**中在 L2 上本地编码 dApp（一种通过 STARK 证明扩展 dApp 的图灵完备语言）为开发人员解锁了广阔的可能性领域。 它使他们能够使用他们以前无法使用的大量数据——包括计算数据和证人数据。
 
 我们来探索这种L2-本地的应用程序及其新的、丰富的功能。
 
@@ -46,4 +46,4 @@ Coding dApps natively on L2 in **[Cairo](https://www.cairo-lang.org/)** (a Tur
 
 有效率滚动-和开罗驱动的StarkEx 和 StarkNet， 特别是——提供了一种环境，使人们能够开发和操作消耗大量计算或证人数据的dapps。 由于分配的分类账技术带来的所有好处，我们预测L2-本机应用软件将有一个非常令人振奋的未来。
 
-What can *you* create with general computation supported by composability, trustlessness, and decentralization?
+*你*可以通过可组合性、免信任和去中心化支持的通用计算创建什么？

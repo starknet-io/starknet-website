@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## Fiat rampaları nelerdir?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+Fiat rampaları, kripto para birimleri için itibari para birimlerinin değiş tokuşuna izin veren hizmet sağlayıcılardır.

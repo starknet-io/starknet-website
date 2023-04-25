@@ -1,1 +1,1 @@
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+Bir iş akışını toplu olarak uygulayan bir sözleşmeler koleksiyonu (L1 ve L2).

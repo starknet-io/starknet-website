@@ -1,4 +1,4 @@
 {
-  "source": "/community/community-jobs/:path*",
-  "destination": "/en/jobs"
+  "source": "/community/community-Jobs/:path*",
+  "destination": "/de/jobs"
 }

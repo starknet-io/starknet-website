@@ -1,3 +1,3 @@
-## Cairo logo kit
+## Kaïro-logo-stel
 
 ![](/assets/cairo_logo_banner.png)

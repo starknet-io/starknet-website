@@ -1,67 +1,67 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **Testnet上的费用是强制性的，很快就在Mainnet上**
+* 合同工厂模式现在是可能的！
+* StarkNet正在引入合同类
+* 代用呼叫已被替换为库调用
 
-### Intro
+### 简介
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+我们很高兴介绍StarkNet Alpha 0.9.0！ 这是一个重要的版本，StarkNet为成熟迈出了重要的一步，功能和协议设计都有大量增加。
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**费用是强制性的**(目前只在 Testnet上使用，直到版本 0.9)。 任何繁荣的L2都必须有自己的独立收费制度。 在0.8版本中引入收费作为可选功能后， 现在，我们有信心将其作为议定书的核心组成部分，并使其成为强制性的。 更多细节如下。
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+协议一级的另一个重大变化是采用合同类别和班级/班级分离。 这允许更直接地使用 \`delegate_call\` 功能和现有合约的部署，从而启用了StarkNet上的出厂模式。
 
-### Contract Classes
+### 合同类
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+我们从面向对象的编程中得到启发，对合同代码及其实施加以区分。 我们这样做是将合同分为班级和班级。
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+**合同类**是合同的定义：其开罗字节代码。 提示信息、入境点名称以及明确界定其语义所需的一切。 每个类通过其类散列来识别(类似于来自OOP 语言的类名称)。
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+**合同实例**，或只是一项合同，是与某些类相应的部署合同。 请注意，只有合同实例作为合同行事，即有自己的储存，并可通过交易/其他合同收回。 合同类不一定在StarkNet有一个部署的实例。 课程的引入伴随着协议的一些修改。
 
-#### ‘Declare’ Transaction
+#### “申报”交易
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+我们正在向StarkNet引入一种新类型的交易：['声明'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)交易，允许申报一个合同**类。**与\`depu\`交易不同，这不会部署该类的实例。 StarkNet状态将包括一个已声明的类列表。 新类可以通过新的 \`声明\` 交易添加。
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### “部署”系统呼叫和合同工厂。
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+一旦一个类被申报，即对应的 \`declarre\` 交易被接受，我们可以部署该类的新实例。 为此目的，我们使用新的 \`depu\` 系统调用，它需要以下参数：
 
-* The class hash
-* Salt
-* Constructor arguments
+* 类哈希值
+* 盐类
+* 构造器参数
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+“部署”系统后会部署一个新的合同类实例， 其[地址](https://docs.starknet.io/docs/Contracts/contract-address)将由上述三个参数和部署器地址 (调用系统调用的合同) 来确定。
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+在调用交易中包括部署可以让我们对部署的价格和收费，而不必以不同的方式对待部署和调用。 欲了解更多关于部署费用的信息，请参阅[文档](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts)。
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+此功能将合同工厂引入StarkNet, 因为任何合同都可以使用 \`deposit\` syscall, 创建新合同。
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### 从'Delegate Call'移动到'Library Call'
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+引入类使我们能够解决Etherum的授权呼叫机制中一个众所周知的问题：当合同执行另一个合同时， 它只需要它的类(其代码)，而不是一个实际实例(其存储)。 因此，在给代表打电话时必须指定具体的合同实例是错误的做法(实际上是如此) 它导致了以太坊合同中的几个bug——只需要具体规定类别。
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+旧的 \`delegate_call\` 系统调用现在已被废弃(已经部署的旧合同将继续运行) 但**合同使用 \`delegate_call\` 将不再编译**， 并且被一个新的 libr_calls 系统调用取代，它可以获取类散列(以前声明的类) 而不是合同实例地址。 请注意，图书馆电话只涉及一项实际合同，因此我们避免了电话合同和执行合同之间的模糊性。
 
-#### New API endpoints
+#### 新 API 端点
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+我们为 API 添加了两个新的终点，允许检索类相关数据：
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: 返回给定类哈希的类定义
+* \`get_class_hash_at\`: 根据合同地址返回部署合同的类哈希
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+注意直接获得部署合同类别，而不是采用上述两种方法， 你可以使用旧的 \`get_full_contract\` 端点，它将在未来的版本中重新命名。 上述所有端点也可从[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands) 使用。
 
-#### Fees
+#### 费用
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+我们着手将费用并入StarkNet，使其成为 ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invotke-function)\` 交易的必填项 (首先在 Testnet, 然后也在 Mainnet) 。 \`声明\`交易在此点不需要费用。 同样，\`部署`` 交易也不需要收费，但注意这种交易类型很可能在未来的版本中被废弃。
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+在这方面仍然存在若干未决问题，其中最突出的问题是如何对合同申报和StarkNet账户的部署收取费用。 我们将在今后的版本中处理这些问题。
 
-### What’s Next?
+### 下一步是什么？
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+根据我们的[于2月](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717)宣布的路线图，我们致力于提高StarkNet的总体性能。 以及序列器的性能，特别是为了让用户更快地反馈他们的交易。 在下一版本中，我们计划在序列器中引入平行化，使区块生产更快。
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+StarkNet的下一个主要版本将以StarkNet账户的结构为重点，其方式类似于[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)。 这样，我们将完成StarkNet账户的运作方式，朝着大规模收养迈出又一大步！

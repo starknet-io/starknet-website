@@ -41,4 +41,4 @@ StarkWareやStarkWareの投資家を含むStarkNetエコシステムのコア貢
 
 StarkNetトークンモデルは、彼らの仕事に対する補償開発者を強調しています。 新しい鋳造料および取引手数料の一部(StarkNetの使用のために評価された手数料)は、プロトコルを設計および立ち上げるために行った仕事に対して、コアインフラストラクチャ開発者およびスマートコントラクト開発者に付与されます。 StarkNet事業者がそれを操作するために行った作業を補償することに加えて。
 
-The full rationale behind a new and dedicated StarkNet Token is explained in our [second post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the StarkNet Token design principles and initial allocation are discussed in the [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6).
+新しい専用の StarkNet トークンの背後にある完全な理論的根拠は、[秒の投稿](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)で説明され、StarkNet トークンの設計原則と初期割り当てについては、[番目の投稿](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)で説明されています。

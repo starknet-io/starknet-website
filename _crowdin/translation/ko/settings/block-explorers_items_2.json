@@ -1,7 +1,7 @@
 {
-  "name": "Voyager",
+  "name": "보이저",
   "website_url": "https://voyager.online",
-  "company_name": "Nethermind",
+  "company_name": "네더마인드",
   "twitter": "https://twitter.com/0xvoyageronline",
-  "description": "Block explorer and analytics for Starknet. "
+  "description": "Starknet에 대한 블록 탐색기 및 분석. "
 }

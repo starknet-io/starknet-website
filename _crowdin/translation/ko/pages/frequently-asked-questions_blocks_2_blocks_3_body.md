@@ -1,3 +1,3 @@
-No. You have several options for writing a contract, each with its own benefits. 
+아니요. 계약서 작성에는 여러 가지 옵션이 있으며 각 옵션에는 고유한 이점이 있습니다. 
 
-Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
+카이로는 Starknet 계약의 모국어이며 Starknet의 확장 가능성을 가장 완벽하게 구현합니다. 한편, 몇몇 팀은 다른 프로그래밍 언어(특히 Solidity)에서 Cairo로의 트랜스파일러를 개발하고 있습니다. 이러한 트랜스파일러는 Starknet에서 기존 계약의 빠른 배포를 용이하게 합니다.**[최신 개발 도구 참조](/developers/tools-resources).**

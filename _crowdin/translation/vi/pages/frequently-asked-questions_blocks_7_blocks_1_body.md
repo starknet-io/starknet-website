@@ -1,1 +1,1 @@
-You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [Starknet Discord](https://starknet.io/discord) server.
+Bạn có thể báo cáo lừa đảo và kiểm tra các báo cáo lừa đảo khác trong kênh [báo cáo lừa đảo](https://discord.gg/qypnmzkhbc) trên máy chủ [Starknet Discord](https://starknet.io/discord).

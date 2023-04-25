@@ -1,1 +1,1 @@
-The state is composed of contracts’ code and contracts’ storage.
+상태는 계약의 코드와 계약의 저장소로 구성됩니다.

@@ -1,5 +1,5 @@
 {
-  "title": "Open-sourcing Cairo 1.0!",
-  "time_to_consume": "5 min read",
-  "short_desc": "In 2020, we released Cairo, a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive."
+  "title": "오픈 소싱 카이로 1.0!",
+  "time_to_consume": "5분 읽기",
+  "short_desc": "2020년에는 검증 가능한 계산을 지원하는 Turing-complete 프로그래밍 언어인 Cairo를 출시했습니다. Cairo는 어셈블리 언어로 시작하여 점차 표현력이 향상되었습니다."
 }

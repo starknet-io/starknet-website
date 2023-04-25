@@ -1,3 +1,3 @@
-## Cairo logo kit
+## Набор логотипа "Каир"
 
 ![](/assets/cairo_logo_banner.png)

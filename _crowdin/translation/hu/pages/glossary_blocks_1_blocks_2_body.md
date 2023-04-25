@@ -1,1 +1,1 @@
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+Szerződések gyűjteménye (L1 és L2), amelyek együttesen valósítanak meg egy üzleti folyamatot.

@@ -1,72 +1,72 @@
-### TL;DR
+### TL; DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Cải thiện trừu tượng hóa tài khoản theo tinh thần của EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Xác thực - Thực hiện phân tách
+2. Tính duy nhất của giao dịch hiện được đảm bảo trong giao thức (Nonce)
 
-* The fee mechanism is extended to include:
+* Cơ chế phí được mở rộng để bao gồm:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. Tin nhắn L1 → L2
+2. Khai báo giao dịch
 
-* Few Cairo syntax changes
+* Ít thay đổi cú pháp Cairo
 
-### Introduction
+### Giới thiệu
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Chúng tôi rất vui mừng được giới thiệu StarkNet Alpha 0.10.0. Phiên bản này là một bước nữa để mở rộng quy mô Ethereum mà không ảnh hưởng đến bảo mật và phân cấp.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Bài đăng trên blog này mô tả ngắn gọn các tính năng chính của phiên bản này. Để biết danh sách đầy đủ các thay đổi, hãy kiểm tra[ghi chú phát hành](https://github.com/starkware-libs/cairo-lang/releases). Để biết thêm thông tin chi tiết, hãy xem tài liệu[](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Thay đổi trừu tượng hóa tài khoản
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Chúng tôi tiếp tục với[tóm tắt tài khoản của StarkNet](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Phiên bản này giới thiệu các thay đổi lấy cảm hứng từ[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### Xác thực/Thực hiện phân tách
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Cho đến bây giờ, chức năng \_\_execute\_\_ của tài khoản chịu trách nhiệm cho cả việc xác thực và thực hiện giao dịch. Trong 0.10.0, chúng tôi ngắt kết nối này và giới thiệu một hàm \_\_validate\_\_ riêng biệt cho các tài khoản. Khi nhận được một giao dịch, trước tiên, hợp đồng tài khoản sẽ gọi \_\_validate\_\_, sau đó, nếu thành công, hãy chuyển sang \_\_execute\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Việc phân tách xác thực/thực thi cung cấp sự phân biệt ở cấp độ giao thức giữa các giao dịch không hợp lệ và được hoàn nguyên (chưa hợp lệ). Nhờ đó, các trình sắp xếp thứ tự sẽ có thể tính phí cho việc thực hiện một giao dịch hợp lệ bất kể giao dịch đó có được hoàn nguyên hay không.
 
-#### Nonce
+#### nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+Trong phiên bản 0.10.0, một trường nonce được thêm vào để thực thi tính duy nhất của giao dịch ở cấp độ giao thức. Cho đến nay, nonce được xử lý ở cấp độ hợp đồng tài khoản, điều đó có nghĩa là một giao dịch có cùng hàm băm có thể được thực hiện hai lần về mặt lý thuyết.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Tương tự như Ethereum, mọi hợp đồng hiện bao gồm một nonce, đếm số lượng giao dịch được thực hiện từ tài khoản này. Hợp đồng tài khoản sẽ chỉ chấp nhận các giao dịch có nonce phù hợp, nghĩa là nếu nonce hiện tại của tài khoản là X, thì nó sẽ chỉ chấp nhận các giao dịch với nonce X.
 
-#### New Transaction Version
+#### Phiên bản giao dịch mới
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+Để cho phép khả năng tương thích ngược, chúng tôi sẽ giới thiệu hai thay đổi đó thông qua phiên bản giao dịch mới —[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Những thay đổi đó sẽ chỉ áp dụng cho phiên bản mới và các tài khoản cũ hơn sẽ vẫn có thể thực hiện các giao dịch phiên bản 0.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Lưu ý — giao dịch v0 hiện không được dùng nữa và sẽ bị xóa trong StarkNet Alpha v0.11.0. Vui lòng đảm bảo bạn nâng cấp để sử dụng phiên bản giao dịch mới.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+Để biết thêm thông tin chi tiết về phiên bản giao dịch, vui lòng đọc tài liệu[](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### Cơ chế phí
 
-The new version allows to include fees for two required components:
+Phiên bản mới cho phép gộp phí cho 2 thành phần bắt buộc:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [Thông điệp L1→L2](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Khai báo giao dịch](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Các khoản phí này sẽ không bắt buộc trong phiên bản này và sẽ chỉ được thực thi kể từ StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### Thay đổi cú pháp Cairo
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+Để dần dần nâng cấp Cairo,[Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), phiên bản này bao gồm một số thay đổi cú pháp.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Để giảm thiểu sự bất tiện, phiên bản phát hành sẽ bao gồm tập lệnh di chuyển[](https://www.youtube.com/watch?v=kXs59zaQrsc)tự động áp dụng các thay đổi trên. Bạn có thể tìm thêm chi tiết[tại đây](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Cái gì tiếp theo?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Trong một vài tuần nữa, chúng tôi dự định giới thiệu tính năng song song hóa vào trình sắp xếp thứ tự, cho phép sản xuất khối nhanh hơn (V0.10.1)
+* Chúng tôi sẽ sớm hoàn thành phần cuối cùng phải có trong thanh toán phí — Triển khai tài khoản
+* Cairo 1.0 phát hành! Thông tin thêm về điều đó trong một bài viết sắp tới.
 
-### How Can I Be More Engaged?
+### Làm thế nào tôi có thể tham gia nhiều hơn?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Truy cập[starknet.io](https://starknet.io/)để biết tất cả thông tin, tài liệu, hướng dẫn và cập nhật về StarkNet.
+* Tham gia[StarkNet Discord](http://starknet.io/discord)để được hỗ trợ nhà phát triển, thông báo về hệ sinh thái và trở thành một phần của cộng đồng.
+* Truy cập[Diễn đàn StarkNet](http://community.starknet.io/)để cập nhật thông tin và tham gia các cuộc thảo luận nghiên cứu về StarkNet.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Chúng tôi luôn sẵn lòng nhận phản hồi về tài liệu[](https://docs.starknet.io/)của chúng tôi!

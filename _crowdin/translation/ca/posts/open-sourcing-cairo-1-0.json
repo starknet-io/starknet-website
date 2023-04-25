@@ -1,5 +1,5 @@
 {
-  "title": "Open-sourcing Cairo 1.0!",
-  "time_to_consume": "5 min read",
-  "short_desc": "In 2020, we released Cairo, a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive."
+  "title": "El Caire 1.0 de codi obert!",
+  "time_to_consume": "5 minuts de lectura",
+  "short_desc": "El 2020 vam llançar Cairo, un llenguatge de programació complet de Turing que admet càlculs verificables. El Caire va començar com un llenguatge assemblador i a poc a poc es va anar fent més expressiu."
 }

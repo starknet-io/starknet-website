@@ -1,1 +1,1 @@
-Currently, no. Fees in Starknet are now paid in Ether (ETH). But later on, we anticipate that in the future, fees will be paid exclusively with the native Starknet Token.
+Hiện tại, không. Phí trong Starknet hiện được thanh toán bằng Ether (ETH). Nhưng sau này, chúng tôi dự đoán rằng trong tương lai, các khoản phí sẽ được thanh toán độc quyền bằng Mã thông báo Starknet gốc.

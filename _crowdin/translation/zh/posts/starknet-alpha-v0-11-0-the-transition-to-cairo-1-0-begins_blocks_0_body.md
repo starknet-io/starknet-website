@@ -105,7 +105,7 @@ Starknet所使用的确切版本和参数可以在这里找到[](https://docs.st
 既然所有开罗1.0相关基础设施已经建立，你就可以期待：
 
 * 在开罗进一步改进语言 1.0
-* Performance improvements: [as promised](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), we keep moving forward towards significantly increasing the TPS. 行进图中的下一步是过渡到[Rust 测序器](https://github.com/starkware-libs/blockifier)， 它是在 Apache 2 下的开放式开发的。 许可协议。 新的序列器将使用[rust CairroVM](https://github.com/lambdaclass/cairo-rs)and[Papyrus](https://github.com/starkware-libs/papyrus)完整节点，形成性能三角。
+* 性能改进：[正如承诺的那样](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)，我们继续朝着显着提高 TPS 的方向前进。 行进图中的下一步是过渡到[Rust 测序器](https://github.com/starkware-libs/blockifier)， 它是在 Apache 2 下的开放式开发的。 许可协议。 新的序列器将使用[rust CairroVM](https://github.com/lambdaclass/cairo-rs)and[Papyrus](https://github.com/starkware-libs/papyrus)完整节点，形成性能三角。
 * Offchain[DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! 在这个版本中，我们处理了交易成本的计算组件。 在即将到来的版本中，我们将处理链上的数据成本，这是今天平均交易的主要成本。
 
 ![](/assets/starknet-alpha-v0.11.0-diagram.png)

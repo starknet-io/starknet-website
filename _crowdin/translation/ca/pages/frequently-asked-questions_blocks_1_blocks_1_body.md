@@ -1,1 +1,1 @@
-There are several block explorers you can use: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).
+Hi ha diversos exploradors de blocs que podeu utilitzar: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).

@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+在这个帖子中，我们深入探索StarkNet Token的设计，它的采掘时间表和预期的时间表。
 
-### Considerations
+### 考虑因素
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+StarkNet 令牌的设计因为需要为一个由星网的 (i)**个用户**组成的网络提供电力而形成。 (ii)**运营商**- 为网络提供计算资源以进行交易排序的人员， 生成STARK证明和长期存储供应商， 和 (iii)**开发者**为其基础设施和运行的应用程序编写软件。
 
-Mechanisms for fee structure and token minting should be:
+收费结构和标记打字的机制应该是：
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* 主要是自动化的，而不是以重大的人的干预为基础
+* 在其他区块链系统中已知并测试
+* 简单的分析和解释；透明度
+* 抵制投机操纵和非创造价值的赌博。
+* 被认为拥有良好的用户体验(UX)
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+这些偏好将影响从用户支付的新挖掘和交易费用中分配代币的机制：
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**运算符**确保StarkNet的持续活跃性，并提供用户所需要的协议的高质量性能。
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**开发者**构建并维护操作员用于保护网络安全的软件， 并且他们创建能够增强网络功能的应用程序。 因此，一部分费用和新挖掘费用将由智能合同开发者和核心开发者支付，具体如下：
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **智能合同开发者：**StarkNet 协议可以自动测量智能合同提供的值。 通过这些合同的用户支付的L1和L2费用。 StarkNet协议将自动为智能合同开发者分配一小部分费用和正在进行的新挖掘。 智能合同能够为用户提供更多的价值——以支付给他们的费用来衡量——将获得更大比例的为此目的分配的代币。
+* **核心开发者：**StarkNet 协议没有自动量化核心开发者贡献的方式。 例如正在写入程序代码、序列器、完整节点等。 因此，为这类核心开发者和其他贡献者分配象征性的资金，这些贡献在协议中是无法衡量的，这必然需要人的酌处权。 将建立一种模式，以符合权力下放目标的方式实施这项工作。
+* 两种开发者从新挖掘和收费中分配代币的确切机制尚待确定。 设计原则将包括反赌博和透明度。
 
-### Initial allocation of StarkNet Tokens
+### StarkNet 令牌的初始分配
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+StarkWare公司已经开采了100亿代币。 澄清：StarkNet Tokens 并不代表StarkWare公司的股份，也不提供StarkWare公司的任何参与权，也不给予StarkWare公司的任何索赔权。 随着时间的推移，代币的循环供应将随着该协议的新代币的开采而增加。 将由社区在稍后阶段确定的时间安排。\
+*循环供应可能因此无法保持固定。*
 
-The allocation is thus:
+这种分配方式是：
 
-**17%** — StarkWare Investors
+**17%**— StarkWare投资者
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32.9%**— 核心贡献者：StarkWare及其员工和咨询师，以及StarkNet软件开发者合作伙伴
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50.1%**由 StarkWare 授予基金会，指定用途如下：
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**— 社区条款——供那些为StarkNet工作并为其提供动力或开发其基础技术的人使用。 。通过过去使用StarkEx L2 系统。 至关重要的是，所有共同体条款都将以过去所做的可核查工作为基础。 例如，如果社区规定将提供给过去的 StarkEx 用户，分配将根据 2022 年 6 月 1 日之前**发生的 StarkEx 技术的可验证使用来确定**
+* **9%**— 社区退款— StarkNet 代币的退款给**部分**支付从Etherum上登入StarkNet的费用。 为防止游戏化，社区返利将仅适用于在返利机制宣布</strong>后**发生的交易。</li>
+* **12%**— — 用于开发、测试、部署和维护StarkNet协议的研究和工作的补助金
+* **10%**— — 战略储备， 如本系列中[上一个帖子](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)所述，为符合基金会任务的生态系统活动提供资金。
+* **2%**— 按照StarkNet Token 持有人和基金会的决定，向受到高度尊重的机构和组织，如大学、非政府组织等提供捐款。
+* **8. %**未分配 — 基金会的未分配金库已经到位，以进一步支持StarkNet社区，其方式由社区决定。</ul>
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+将核心捐助方和投资方的长期激励措施与StarkNet社区的利益结合起来，并遵循分散的生态系统中的共同做法； 分配给核心贡献者和投资者的所有代币都将被锁定4年时间，即线性释放和一年客户端。
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### 是否有方法接收StarkNet 令牌？
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+简短的答案是肯定的，但没有接收令牌的捷径。
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+StarkNet Token 分配及其收费市场和新挖掘设计优先考虑核心基础设施和dApp的开发者， 以及为生态系统的安全和健康作出贡献的其他人。 对于代币，这实际上意味着什么？
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+如果您是开发者，您已经为StarkNet基础设施或智能合约写了软件， StarkNet 终端用户真正珍视和使用的代码，然后您可以通过协议自动接收令牌。 防止这种机制进行赌博的许多保障措施之一是，开发者收到的费用将严格低于用户支付的费用。
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+开发者也可能会收到用于开发、测试和维护StarkNet协议的令牌赠款。 任何此类赠款将在适当时候由基金会根据其任务决定。
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+如果你是一个区块链开发者，它认为StarkNet是以太空的缩放需要的答案， 我们鼓励您了解更多关于[StarkNet](https://starknet.io/)及其编程语言。[开罗](https://www.cairo-lang.org/), 并开始开发您自己的智能合同。
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+如果您是最终用户，请使用 StarkNet，但仅限于满足您今天的需要。 使用它来进行您珍视的交易和应用，*不期望未来的StarkNet 令牌奖励。*当宣布社区条款时，它们将仅指在通知日期之前发生的快照。 并将筛选和排除被认为是网络滥用和赌博的使用， 根据当时掌握的资料。 当社区回归机构成立时，它们将永远不会适用于在回归宣布之前发生的交易。 因此，今天的交易是为了预期未来的回扣是徒劳的。
 
-### Closing remarks
+### 结束语
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+建立一个开放的网络意味着接受未知的网络。 互联网、比特币和艾瑟姆是由创新者发明的，他们认为自己的工具可能会改变世界，但并不完全知道如何改变世界。 我们谦恭地希望StarkNet能够缩放区块链，对于Ethereum 来说是好的，对于一个分散的网络来说也是好的。 我们不知道将会建立什么。 但我们确实认为，StarkNet将出色的技术能力掌握在一个创造性社区的手中， 我们希望看到这个社区以多种方式使用它，其中许多方法尚未想到。

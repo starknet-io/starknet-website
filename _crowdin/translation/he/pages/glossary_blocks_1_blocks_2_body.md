@@ -1,1 +1,1 @@
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+אוסף של חוזים (L1 ו-L2) המיישמים ביחד תזרים עסקי.

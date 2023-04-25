@@ -1,3 +1,3 @@
-## Starknet logo kit
+## ערכת לוגו של Starknet
 
 ![](/assets/sn_logo_banner.png)

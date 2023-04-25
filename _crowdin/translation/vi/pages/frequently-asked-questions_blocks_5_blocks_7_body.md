@@ -1,3 +1,3 @@
-The Starknet Token is not yet for sale. It cannot be added to your wallet at this stage. Beware of scams.
+Mã thông báo Starknet chưa được bán. Nó không thể được thêm vào ví của bạn ở giai đoạn này. Cẩn thận với những trò gian lận.
 
-The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
+Mã thông báo Starknet đã được ra mắt trên Ethereum Mainnet vào tháng 11 năm 2022. Tổ chức Starknet sẽ công bố vào một ngày sau đó các chi tiết của kế hoạch Giảm giá cộng đồng và Điều khoản cộng đồng nhưng tại thời điểm viết những chi tiết này vẫn chưa được xác định. Cảnh giác với những trò gian lận giả vờ bán Starknet Tokens.

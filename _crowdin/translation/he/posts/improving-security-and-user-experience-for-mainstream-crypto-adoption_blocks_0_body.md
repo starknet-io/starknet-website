@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+חדשנות טכנולוגית בבלוקצ'יין שגשגה במהלך השנים האחרונות - STARKs, SNARKs, EIP-1559, Ethereum Merge - כולם הישגים טכנולוגיים ענקיים. עם זאת, עיצוב UX ו-UI לא הצליחו לעמוד בקצב. אנשים עדיין נתקעים על ביטויי בסיס של 16 מילים, והכניסה ל-DeFi ללא מתווך מרכזי עדיין מאיימת מדי עבור רבים. כדי להכניס את מיליארד המשתמשים הבאים ל-Web3, שיפור חווית הכניסה למשתמש הוא קריטי.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+כפי שהוכיחה FTX (וגם ג'מיני, צלסיוס והר גוקס), שמירה על משמורת עצמית על הנכסים היא חשובה ביותר. עם זאת, עד לאחרונה, ארנקים לשמירה עצמית היו מסורבלים ומבלבלים עבור המשתמש הממוצע. רוב האנשים שוכחים את סיסמאות ה-Web2 שלהם על בסיס חודשי; כיצד מצפים מהמשתמשים לשמור על ביטוי המקור והמפתחות הפרטיים שלהם בטוחים לנצח?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+במילים פשוטות, זה סיוט ביטחוני. כפי שראינו אינספור פעמים, מהלך שגוי אחד, בין אם יזום על ידי שחקנים גרועים או רשלנות, יכול לגרום לאובדן של מיליוני דולרים.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+כנקודת המגע הראשונה למשתמשי קריפטו חדשים, ארנקי Ethereum חייבים להיות קלים לשימוש, מאובטחים וניתנים להתאמה אישית כדי להתאים לצרכיו של כל משתמש. זה דורש מהמפתחים לשלב את הפשטות של מוצרים פיננסיים של Web2 עם התכונות של Web3.
 
-This is exactly what account abstraction achieves.
+זה בדיוק מה שהפשטת חשבון משיגה.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+הפשטת חשבונות משפרת את הבטיחות והאבטחה של מוצרי ארנק לשמירה עצמית על ידי הסרת התלות של המשתמשים במפתח הפרטי והפיכת הארנקים לניתנים יותר לתכנות. עם UX משופר זה, ארנקים שאינם משמורנים יכולים סוף סוף להתרחב למיליוני משתמשי קריפטו מיינסטרים.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+אבל כדי להבין היטב את ההשפעה של הפשטת חשבונות, עלינו לרענן את עצמנו כיצד פועלים חשבונות Ethereum.
 
-### The basics of Ethereum accounts
+### היסודות של חשבונות Ethereum
 
-There are two types of Ethereum accounts:
+ישנם שני סוגים של חשבונות Ethereum:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. חשבונות בבעלות חיצונית (EOA)
+2. חשבונות חוזה (CA)
 
-Let’s break each down a bit further.
+בואו נפרק כל אחד קצת יותר.
 
-### Externally owned accounts
+### חשבונות בבעלות חיצונית
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+חשבונות בבעלות חיצונית, כמו MetaMask ו-Coinbase Wallet, הם סוג החשבון הטיפוסי למשתמשי Ethereum. כל EOA מורכב ממפתח פרטי וציבורי, הנקרא צמד מפתחות.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+כל העסקאות מאושרות וחתומות על ידי מפתחות פרטיים. לאחר חתימת עסקה, ה-EVM מוודא שהחתימה תקפה באמצעות כתובת החשבון של ה-EOA. ההיגיון המקודד ב-EVM מציין שהחשבון (האובייקט שמחזיק את האסימונים שלך) והמפתח הפרטי (החותם) מחוברים כאחד.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+אובדן המפתח הפרטי שלך פירושו אובדן הכספים שלך, או אפילו שליטה בחשבון שלך, לנצח.
 
-### Contract accounts
+### חשבונות חוזה
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+בינתיים, חשבונות חוזים, שם נרדף להפשטת חשבונות, הם חוזים חכמים הפרוסים ב-Ethereum blockchain. חוזים אלו נשלטים על ידי לוגיקה קוד ואינם דורשים מפתחות פרטיים. שלא כמו EOAs, חשבונות חוזה לא יכולים ליזום עסקאות. במקום זאת, העסקאות שלהם מופעלות על ידי הוראות של EOAs.
 
-### Why account abstraction matters
+### למה הפשטת חשבון חשובה
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+הפשטת חשבון כרוכה בהפשטה של היגיון ההרשאה המקודד הרחק מ-EOAs, והפיכת כל חשבון לחוזה חכם הניתן לתכנות שניתן להתאים לצרכים של כל אדם.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+כפי שהוסבר על ידי מייסד שותף של ארגנט וקצין המדע הראשי ג'וליאן ניסט באירוע[Stark @ Home](https://www.crowdcast.io/e/7olimxqv)לאחרונה, הגיון ההרשאה הגמיש הזה נותן חופש למפתחים לשחק עם תכונות חשבון כמו…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**חותמי חומרה:**שימוש במובלעת המאובטחת של אייפון או אנדרואיד כדי להפוך כל סמארטפון לארנק חומרה. משם, משתמשים יכולים לאמת עסקאות באמצעות נתונים ביומטריים כמו טביעת אצבע או Apple Face ID. כבר התחלנו לראות ארנקים לשמירה עצמית כמו Braavos[מוציאים את התכונה הזו.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**מנהלי תשלום:**אפשר למשתמשים לשלם דמי דלק בכל אסימון, או אפילו לקבל מנגנון שתוכנן של צד שלישי לשלם עבור עסקאות.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**שחזור חברתי:**במקרה שמפתח פרטי אבד או נפגע, משתמשים יכולים לאשר מפתח חדש כבעל ארנק לגיטימי. זה יכול לכלול מגוון שיטות שחזור באמצעות אנשי קשר מהימנים, ארנקי חומרה או שירותי צד שלישי. הרעיון הוא להפוך את שחזור הגישה לחשבון שלך לקלה כמו שחזור סיסמת חשבון הבנק שלך באמצעות דואר אלקטרוני.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**אימות רב-גורמי:**בדומה לנוהלי Web2 2FA הנפוצים, משתמשים יכולים להגדיר שתי (או יותר) שיטות אימות עבור ארנקי הקריפטו שלהם, כאשר עסקה נחתמת רק ברגע שמשתמש מאשר את האישור באמצעות אפשרות שנייה כמו דואר אלקטרוני או SMS. משתמשים יכולים גם להגדיר מגבלות העברה יומיות או רשימות של כתובות חשבון שהארנק חסום באופן אוטומטי מאינטראקציה.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**חתימות עמידות קוונטיות ויעילות בגז:**תוכנית החתימה הנוכחית של Ethereum, ECDSA, היא נרחבת מבחינה חישובית (קרא: עמלות גז גבוהות יותר) וניתן לשבור אותה על ידי מחשבים קוונטיים. באמצעות הפשטת חתימות, חוזי חשבונות שונים משתמשים בסכימות חתימה יעילות ומאובטחות יותר. StarkNet משתמשת בעקומה הקניינית הידידותית ל-STARK.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+לא רק שהתכונות הללו מספקות למשתמשים אבטחה רבה יותר וגמישות רבה יותר, אלא יותר מכך, מביאות</strong>משתמש**בהרבה.</p>
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+רשום על ידי Vitalik Buterin כ"חלום ותיק" עבור קהילת מפתחי Ethereum, חידושים סביב הפשטת חשבונות, בעיקר EIP-2938 ו-EIP-3074, הסתחררו מאז 2020. עם זאת, שניהם דרשו פשרות סביב אבטחה ויישום. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), הפיתוח המבטיח ביותר עד כה, מציע גרסה של הפשטת חשבון מבלי לדרוש שינויים בפרוטוקול Ethereum.
 
-### **Account abstraction and Starknet**
+### **הפשטת חשבון ו-Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+בניגוד לביטקוין ו-Ethereum אשר משנים את הפרוטוקולים הנוכחיים שלהם כדי לתמוך בהפשטת חשבונות,[StarkNet](https://starkware.co/starknet/)יישמה הפשטת חשבונות מהיום הראשון. בשילוב עם המדרגיות והיכולות של הוכחות STARK שלנו, הפוטנציאל לחדשנות בארנק הוא בלתי מוגבל. זו הסיבה שהדור הבא של ארנקים לשמירה עצמית, כמו ארגנט ובראבוס, נבנה כעת על גבי הרשת שלנו.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+הגישה של StarkNet דומה ל-EIP-4337,[מכירה בכך שהפשטה מלאה של חשבון](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)עדיין תגרום לבלבול UX ו[עשויה לפתוח דלת](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)להתקפות על סיקוונסרים. במקום זאת, היא שואפת להשיג הפשטת חתימות והפשטת תשלום על ידי הדדיות של חלק מהתשתיות הנדרשות ברשת ומחוץ לשרשרת.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+ולמרות שיש עוד הרבה עבודה לעשות, הפשטת חשבונות צוברת אחיזה מעבר למעגל קטן של ילידי קריפטו. בדצמבר,[Visa הציעה רעיון](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)של שימוש בהפשטת חשבון כדי להגדיר תשלומים חוזרים אוטומטיים ב-StarkNet. באמצעות חשבון הניתן להאצלה, משתמשים יכולים להעניק הרשאה ליזום תשלום לחוזה חכם שאושר מראש. משם, החוזה החכם יתכנת לנכות סכום תשלום מוגדר ביום מסוים, לאורך זמן מוגדר. בעוד ש-Visa עדיין לא חשפה את התוכניות שלה לשירותים משלה, ההתעניינות לבדה מדברת רבות, ועשויה לבשר על עולם שבו פלטפורמות מנויי טכנולוגיות גדולות כמו נטפליקס וספוטיפיי יכולות לאמץ אימוץ קריפטו.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+לגבי מה צופן העתיד, רק הזמן יגיד. אבל דבר אחד בטוח. על ידי הפיכת הארנקים לקלים ובטוחים יותר לשימוש, הפשטת חשבונות תשמש כזרז רב עוצמה לארנקי בלוקצ'יין המאפשרים שמירה עצמית כדי להתאים למיליוני משתמשי קריפטו מיינסטרים. אנחנו נמשיך לבנות בינתיים.

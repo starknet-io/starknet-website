@@ -1,4 +1,4 @@
-The decentralization of the network has two aspects:
+Die desentralisasie van die netwerk het twee aspekte:
 
-1. The permissionless layer of Sequencers and Provers ensures that the network will be censorship-resistant.
-2. The usage of STARK-proofs ensures that the state is correct, allows everyone to verify the entire Starknet chain with low hardware requirements – regardless of the network’s throughput, and without trusting any external entity.
+1. Die toestemminglose laag Sequencers en Provers verseker dat die netwerk sensuurbestand sal wees.
+2. Die gebruik van STARK-bewyse verseker dat die toestand korrek is, laat almal toe om die hele Starknet-ketting met lae hardewarevereistes te verifieer – ongeag die netwerk se deurset, en sonder om enige eksterne entiteit te vertrou.

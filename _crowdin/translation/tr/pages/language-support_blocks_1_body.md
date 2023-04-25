@@ -1,11 +1,11 @@
-### Starknet translation program
+### Starknet çeviri programı
 
-The [Starknet translation program](https://starkware.crowdin.com/starknet-web) aims to make the content on starknet.io available in as many languages as possible. Please read our simple steps below for how you can contribute and help us achieve these goals:
+[Starknet çeviri programı](https://starkware.crowdin.com/starknet-web) starknet.io'daki içeriği mümkün olduğu kadar çok dilde kullanılabilir hale getirmeyi amaçlar. Nasıl katkıda bulunabileceğinizi ve bu hedeflere ulaşmamıza nasıl yardımcı olabileceğinizi öğrenmek için lütfen aşağıdaki basit adımlarımızı okuyun:
 
-1. Sign up for a [CrowdIn](https://crowdin.com/) account (or log in if you already have one).
-2. [Select your chosen language](https://starkware.crowdin.com/starknet-web) for translation.
-3. Contribute!
+1. [CrowdIn](https://crowdin.com/) hesabı için kaydolun (veya zaten varsa giriş yapın).
+2. [Çeviri için seçtiğiniz dili](https://starkware.crowdin.com/starknet-web) seçin.
+3. Katkı yapmak!
 
-Note: Submitted translations will undergo a short review process before being published so there will be a delay before your work appears on the site.
+Not: Gönderilen çeviriler yayınlanmadan önce kısa bir inceleme sürecinden geçeceğinden çalışmanızın sitede görünmesi biraz gecikecektir.
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+Ayrıca [ile ilgili toplulukların ve kaynakların bir listesini birden çok dilde](/en/community/language-resources)düzenliyor ve sürdürüyoruz .

@@ -1,64 +1,64 @@
-### TL;DR
+### TL; DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Chúng tôi đang xây dựng StarkNet theo từng bước, bắt đầu bằng việc thiết lập**khả năng sử dụng**, sau đó cải thiện**hiệu suất**và cuối cùng chuyển sang**phân cấp**
+* Chúng tôi đã đạt được mục tiêu đầu tiên: khả năng sử dụng. Điều này có nghĩa là chúng tôi đã cung cấp khả năng tính toán chung ở trạng thái giống như Ethereum (nhiều năm trước khi người ta cho rằng điều đó là khả thi)
+* Chúng tôi hiện đang chuyển sang giai đoạn 2 của kế hoạch xây dựng gồm 3 phần: hiệu suất, tập trung vào thông lượng, chi phí giao dịch và độ trễ.
+* Tiếp theo: Phân quyền
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+Chỉ một năm sau khi các kế hoạch cho[StarkNet](https://starknet.io/)lần đầu tiên được công bố, nền tảng này có chức năng rất tốt. Cộng đồng nhà phát triển đang phát triển vượt xa mong đợi của chúng tôi và cung cấp một loạt các dự án L2 Native mới.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Ưu tiên của chúng tôi trong năm qua là kích hoạt chính xác điều này, bằng cách tạo ra một StarkNet đang hoạt động với nhiều tính năng mở rộng nhanh chóng, cho phép các nhà phát triển tham gia trực tiếp.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+Họ đã làm điều này với số lượng lớn. Một phong vũ biểu tốt là số lượt tải xuống cho[thư viện JavaScript cho StarkNet](https://www.starknetjs.com/): đã ở mức 5k kể từ khi có sẵn 4 tháng trước.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Tuy nhiên, mặc dù StarkNet cung cấp phép thuật nén mà chúng tôi đã hứa, nhưng hiện tại, nó còn lâu mới có thể làm được như vậy đối với đủ dApp với đủ thông lượng và điều này có thể gây ra sự thất vọng cho các nhà phát triển trong thời gian ngắn.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Công nghệ cốt lõi đã được thử nghiệm trong trận chiến của chúng tôi, chứng minh nhiều giao dịch bằng STARK và nén các bằng chứng, cần được thực hiện trước bằng cách gộp hoặc sắp xếp thứ tự các giao dịch. Đó là một quá trình mà nhóm StarkWare đã hoàn thiện một lần cho công cụ mở rộng quy mô[StarkEx](https://starkware.co/starkex/)và chúng tôi hiện đang làm việc để thực hiện lại điều đó cho nhu cầu của StarkNet.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Giờ đây, nhiều mục tiêu về khả năng sử dụng của chúng tôi đã đạt được, chúng tôi đang chuyển trọng tâm sang ưu tiên hàng đầu cho mục tiêu này. Tất cả đều là một phần trong lộ trình 3 giai đoạn của chúng tôi:**khả năng sử dụng**, tiếp theo là**hiệu suất của mạng**và sau đó là**phân cấp**. Sau một năm, chúng tôi muốn cung cấp cho bạn thông tin chi tiết — bản phác thảo về những phần đã sẵn sàng và những phần vẫn đang trong quá trình hoàn thiện.
 
-### The Story So Far
+### Câu chuyện cho đến nay
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+StarkNet Alpha đã được phát hành ra mạng thử nghiệm công khai vào tháng 6 và lên Mainnet vào tháng 11. Vào thời điểm triển khai Mainnet, StarkNet đã cung cấp khả năng tính toán chung ở trạng thái giống như Ethereum, điều mà nhiều người cho rằng phải mất nhiều năm nữa.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+Trong suốt quá trình phát triển, chúng tôi đã chọn cách tiếp cận tập trung đầu tiên vào các chức năng quan trọng nhất và phát hành chúng ngay khi chúng khả dụng, về cơ bản là chia sẻ quá trình phát triển với cộng đồng. StarkNet còn lâu mới hoàn thiện về tính năng nhưng ngay cả bây giờ, các nhà phát triển đã có thể xây dựng các ứng dụng phức tạp và có ý nghĩa. Ngày nay, chúng tôi có hàng trăm nhà phát triển[đang xây dựng trên StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)chục ứng dụng dApp và hơn chục nhóm bên ngoài đang phát triển công cụ và cơ sở hạ tầng cho hệ sinh thái StarkNet.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+Một chuỗi nâng cấp đã cung cấp nhiều tính năng quan trọng, bao gồm nhắn tin L1<>L2, dữ liệu trên chuỗi và hỗ trợ khả năng kết hợp, hỗ trợ sự kiện, cơ chế phí cơ bản, khả năng nâng cấp hợp đồng, trừu tượng hóa tài khoản, khung thử nghiệm, công cụ dành cho nhà phát triển, xác nhận nhanh, số khối , chặn dấu thời gian, hỗ trợ hợp đồng tài khoản.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+Cộng đồng nhà phát triển vừa quan tâm sâu sắc đến StarkNet vừa thực sự định hình sự phát triển của nó. Hiện tại, các tính năng đã được giới thiệu dựa trên phản hồi của nhà phát triển. Việc áp dụng có thể vượt xa mức tăng thông lượng, đó là lý do tại sao việc tăng này là ưu tiên lớn của chúng tôi hiện nay.
 
-### Next Steps
+### Bước tiếp theo
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Bây giờ chúng ta đã đạt đến khả năng sử dụng, đã đến lúc cải thiện hiệu suất của hệ thống. Hệ thống, ở trạng thái hiện tại, có khả năng hỗ trợ thông lượng giao dịch hạn chế. Cách để giải quyết vấn đề này là cải thiện hiệu suất của Nút Sequencer, tương đương với công cụ khai thác của StarkNet. Đó là “máy” sắp xếp các giao dịch sau khi chúng được gửi. Khi điều này được tối ưu hóa, thông lượng sẽ tăng vọt.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+Để đạt được mục tiêu này, chúng tôi đang đồng thời phân tích xem các nút thắt cổ chai nằm ở đâu và giải quyết từng vấn đề một. Hiện tại, tất cả các tắc nghẽn đều liên quan đến quy trình giải trình tự, diễn ra trước khi chúng tôi gọi trình chứng minh STARK. Ngăn xếp chứng minh được thử nghiệm trong trận chiến đã sẵn sàng để hỗ trợ thông lượng giống như StarkEx trên StarkNet.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Chúng tôi hy vọng việc tối ưu hóa trình sắp xếp thứ tự sẽ là một quá trình kéo dài vài tháng, với những cải tiến dần dần trong suốt H1/22. Mục tiêu của chúng tôi là đạt được, vào đầu nửa cuối năm 2022, TPS cao hơn ít nhất một bậc so với Ethereum, với chi phí thấp hơn ít nhất hai bậc so với Ethereum. Và đó mới chỉ là khởi đầu.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+Có lý do chính đáng để giai đoạn tối ưu hóa này cần thiết và StarkNet không được khởi chạy với trình sắp xếp thứ tự được tối ưu hóa sẵn sàng: StarkNet có thể đạt được khả năng sử dụng nhanh như vậy vì chúng tôi đã có một khởi đầu thuận lợi. Thay vì bắt đầu lại từ đầu và xây dựng một bộ giải trình tự hoàn toàn mới, chúng tôi đã sử dụng bộ xử lý từ StarkEx làm thành phần trung tâm.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+Đây là một cách tuyệt vời để xây dựng. Nó không chỉ giao hàng nhanh chóng; nó có nghĩa là chúng tôi chắc chắn rằng chúng tôi đã xây dựng trên nền tảng vững chắc. Về cơ bản, StarkEx đã thử nghiệm chức năng cốt lõi điều khiển StarkNet, vì nó đã thu được hàng trăm tỷ đô la trong giao dịch tích lũy.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[StarkEx](https://starkware.co/starkex/)là công cụ mở rộng quy mô cho một số dApp thành công nhất sử dụng L2: dYdX (hợp đồng vĩnh viễn), DeversiFi (giao dịch và thanh toán giao ngay), cũng như cho Immutable và Sorare (đúc và giao dịch NFT).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+Nhưng trình sắp xếp thứ tự được xây dựng cho họ và các ứng dụng khách StarkEx khác chỉ có thể sử dụng StarkNet cho đến nay. Mỗi người trong số họ đang xử lý rộng rãi cùng một loại giao dịch mỗi ngày. StarkNet là tất cả về**tính toán chung**, vì vậy nhu cầu của nó là không giới hạn. Khi trình sắp xếp thứ tự của nó nhận các giao dịch từ mempool, chúng có nhiều hình dạng và kích cỡ khác nhau. Ngoài ra, StarkNet cũng là một mạng mở, điều đó có nghĩa là có thêm chi phí tính toán không gặp phải trong StarkEx.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+Thách thức hiện tại, cụ thể là tối ưu hóa trình sắp xếp thứ tự cho những nhu cầu mới này, là một công việc quan trọng, nhưng chúng tôi hiểu rõ về lộ trình cần thiết, trên cơ sở phát triển thành công StarkEx của chúng tôi.
 
-### Next Up: Decentralization
+### Tiếp theo: Phân quyền
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+StarkNet sẽ trở thành một mạng hoàn toàn phi tập trung, hoàn chỉnh với các cơ chế quản trị và bầu chọn lãnh đạo. Đạt được điều này sẽ trở thành trọng tâm chính của chúng tôi sau khi thông lượng tăng vọt và chi phí giảm xuống, đồng thời chúng tôi hy vọng sẽ có phiên bản phi tập trung đầu tiên vào cuối năm 2022. Chúng tôi dự đoán sẽ chia sẻ công khai kế hoạch phi tập trung hóa của mình trong những tháng tới.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+Giống như thông lượng hạn chế hiện tại đại diện cho một giai đoạn tạm thời trong quá trình phát triển của StarkNet, mức độ tham gia của StarkWare hiện tại cũng chỉ là tạm thời. Chúng tôi coi mình như một loại giàn giáo, phục vụ một chức năng quan trọng trong giai đoạn xây dựng, nhưng sẽ bị lùi lại khi đến hạn.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+Quá trình phát triển nút đầy đủ, bước đầu tiên thú vị hướng tới phân cấp, đã được tiến hành. Các nút đầy đủ sẽ cho phép mọi người nắm giữ và xác minh trạng thái của mạng cục bộ, theo dõi chính xác những gì đang xảy ra. Ba nhóm —*Erigon, Nethermind và Equilibrium*— đang phát triển các nút đầy đủ và có khả năng nhiều nút khác sẽ bắt đầu phát triển trong tương lai.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+Trong một quá trình phát triển song song, các công việc chuẩn bị đang được tiến hành để mở phần mềm giải trình tự và chứng minh cho công chúng. Bất kỳ ai cũng có thể tham gia với tư cách là người giải trình tự hoặc người chứng thực trên StarkNet.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+Một cấu trúc sẽ được phát triển để khuyến khích mọi người tham gia, bao gồm các phần thưởng kinh tế. Một phần phí của StarkNet sẽ được chuyển đến các trình sắp xếp thứ tự và chứng minh.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Trong trung hạn, chúng tôi hy vọng sẽ cung cấp trình sắp xếp thứ tự của chúng tôi cho các bên thứ ba và về lâu dài, chúng tôi cũng hy vọng sẽ thấy các nhóm khác nhau xây dựng trình sắp xếp thứ tự sẽ sắp xếp trình tự cho StarkNet.
 
-### Always Improving; Forever Listening
+### Luôn Cải tiến; Mãi Lắng Nghe
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Khi trọng tâm chuyển sang thử thách tiếp theo, chúng tôi sẽ tiếp tục cải thiện những thành tích trong quá khứ. Và trong việc tiếp tục làm việc trên tất cả các lĩnh vực của[StarkNet](https://starknet.io/), chúng tôi sẽ luôn lắng nghe toàn bộ cộng đồng nhà phát triển. Vì vậy, hãy tham gia vào cuộc thảo luận, thông qua[Discord](https://discord.com/invite/uJ9HZTUk2Y), cộng đồng[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8),[Twitter](https://twitter.com/Starknet_Intern)hoặc một lộ trình khác và giúp định hình tương lai của quy mô chuỗi khối.

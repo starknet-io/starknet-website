@@ -1,5 +1,5 @@
 {
-  "title": "Part 3: Starknet Token Design",
-  "time_to_consume": "5 min read",
-  "short_desc": "The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) Users of StarkNet, (ii) Operators — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) Developers writing software for its infrastructure and for applications running on it.\n"
+  "title": "Phần 3: Thiết kế mã thông báo Starknet",
+  "time_to_consume": "5 phút đọc",
+  "short_desc": "Thiết kế của Mã thông báo StarkNet được định hình bởi nhu cầu cung cấp năng lượng cho mạng bao gồm (i) Người dùng StarkNet, (ii) Người vận hành — những người cung cấp cho mạng tài nguyên máy tính thực hiện trình tự giao dịch, tạo bằng chứng STARK và nhà cung cấp dịch vụ lưu trữ dài hạn và (iii) Nhà phát triển viết phần mềm cho cơ sở hạ tầng của nó và cho các ứng dụng chạy trên nó.\n"
 }

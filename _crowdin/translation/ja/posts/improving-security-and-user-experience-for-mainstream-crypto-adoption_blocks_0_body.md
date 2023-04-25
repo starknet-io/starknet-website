@@ -37,7 +37,7 @@ MetaMaskやCoinbase Walletのような外部所有のアカウントは、Ethere
 
 アカウントの抽象化には、EOAから離れてハードコードされた認証ロジックを抽象化する必要があります。 それぞれのアカウントをプログラム可能なスマートコントラクトに変えることで 個人のニーズを満たすことができます
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+最近の[Stark @ Home イベント](https://www.crowdcast.io/e/7olimxqv)で、Argent の共同創設者で最高科学責任者の Julien Niset が説明したように、この柔軟な承認ロジックにより、開発者は次のようなアカウント機能を自由に試すことができます…
 
 **ハードウェア署名者:**iPhoneまたはAndroidの安全な飛び地を使用して、スマートフォンをハードウェアウォレットに変えます。 そこから、ユーザーは指紋やApple Face IDなどの生体認証データを使用してトランザクションを確認できます。 私たちはすでにブラヴォスのような自己管理ウォレットを見始めています。[この機能をロールアウトします。](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 

@@ -1,44 +1,44 @@
 ### TL;DR
 
-* StarkNet now supports composability, the main feature defining StarkNet’s Constellations phase.
-* We are releasing a testing framework for StarkNet — developers can now test their contracts locally and effectively.
-* This release includes several notable performance improvements, such as support for Merkle-Patricia Tries and a builtin for bitwise operations.
-* Ecosystem front:
+* A StarkNet mostantól támogatja a kompozíciót, amely a StarkNet Csillagképek fázisát meghatározó fő funkció.
+* Kiadunk egy tesztelési keretrendszert a StarkNet számára – a fejlesztők mostantól helyben és hatékonyan tesztelhetik szerződéseiket.
+* Ez a kiadás számos figyelemre méltó teljesítményjavítást tartalmaz, mint például a Merkle-Patricia Tries támogatása és egy beépített bitenkénti műveletek.
+* Ökoszisztéma front:
 
-1. **Standardized Contracts**: OpenZeppelin will be developing standardized contracts for StarkNet, as they did for Ethereum!
-2. **EVM->Cairo Compiler**: the Warp team @ Nethermind demonstrated compilation of ERC-20 Solidity code to StarkNet contracts
+1. **Szabványosított szerződések**: Az OpenZeppelin szabványos szerződéseket fog fejleszteni a StarkNet számára, ahogyan az Ethereum esetében is!
+2. **EVM->Cairo Compiler**: a Warp csapata @ Nethermind bemutatta az ERC-20 Solidity kód összeállítását StarkNet szerződésekhez
 
-### Background
+### Háttér
 
-StarkNet is a permissionless decentralized Validity-Rollup (aka a “ZK-Rollup”). We announced its [roadmap](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880) at the beginning of the year. The [Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), currently running on a public Ethereum testnet, already supports permissionless deployment of smart contracts implementing any business logic, with L1<>L2 messaging and on-chain data. Furthermore, it allows any user to send transactions to the network permissionlessly, Ethereum-style.
+A StarkNet egy engedély nélküli decentralizált Validity-Rollup (más néven „ZK-Rollup”). [útitervét](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880)az év elején hirdettük meg. A jelenleg nyilvános Ethereum teszthálózaton futó[Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f)már támogatja az intelligens szerződések engedély nélküli telepítését, bármilyen üzleti logikát megvalósítva, L1<>L2 üzenetkezeléssel és láncon belüli adatokkal. Ezenkívül lehetővé teszi bármely felhasználó számára, hogy Ethereum-stílusban engedély nélkül küldjön tranzakciókat a hálózatra.
 
-This release: StarkNet Alpha 2, includes the core feature that allows us to advance from Planets to Constellations: composability between deployed smart contracts.
+Ez a StarkNet Alpha 2 kiadás tartalmazza azt az alapvető funkciót, amely lehetővé teszi számunkra, hogy a bolygókról a Constellations felé haladjunk: a telepített intelligens szerződések közötti kompozíció.
 
-### Features
+### Jellemzők
 
-StarkNet Alpha 2 introduces the following features:
+A StarkNet Alpha 2 a következő funkciókat vezeti be:
 
-* **Composability:** StarkNet Alpha now supports interaction between smart contracts — ahead of schedule! The beauty of this upgrade is that developers can expect almost the same experience as Ethereum; calls are synchronous and can be used as function calls. We eagerly await the new applications that will benefit from both unlimited computational scale and contract composability, as unleashed by StarkNet. To understand how to use this feature, you can start by following this [tutorial](https://www.cairo-lang.org/docs/hello_starknet/calling_contracts.html). We would love to hear your feedback and see what you’re building on the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y).
-* **Local Testing Framework:** you asked, and we delivered — a [better testing framework](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/starknet/testing). This will allow developers to expedite their dApp development by testing their StarkNet contract deployments and interactions locally — without any external dependencies. This version includes only L2 interaction, next versions will expand the functionality and ease of use. Check the tutorial [here](https://www.cairo-lang.org/docs/hello_starknet/unit_tests.html), and we would love to hear your feedback on that feature.
-* **Performance Improvements:**
+* **Összeállíthatóság:**A StarkNet Alpha mostantól támogatja az intelligens szerződések közötti interakciót – a határidő előtt! Ennek a frissítésnek az a szépsége, hogy a fejlesztők szinte ugyanolyan élményre számíthatnak, mint az Ethereum; a hívások szinkronok és funkcióhívásként használhatók. Kíváncsian várjuk az új alkalmazásokat, amelyek a korlátlan számítási léptékből és a szerződéses kompozícióból egyaránt profitálnak, amint azt a StarkNet felszabadította. A funkció használatának megértéséhez először kövesse ezt a[oktatóanyagot](https://www.cairo-lang.org/docs/hello_starknet/calling_contracts.html). Szeretnénk hallani visszajelzését, és látni, hogy mit épít a[StarkNet diszkordon](https://discord.gg/uJ9HZTUk2Y).
+* **Helyi tesztelési keretrendszer:**Ön kérte, és mi leszállítottunk –[jobb tesztelési keretrendszert](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/starknet/testing). Ez lehetővé teszi a fejlesztők számára, hogy felgyorsítsák dApp-fejlesztésüket azáltal, hogy helyileg tesztelik StarkNet szerződéses telepítéseiket és interakcióikat – külső függőségek nélkül. Ez a verzió csak az L2 interakciót tartalmazza, a következő verziók bővítik a funkcionalitást és a könnyű használatot. Tekintse meg az oktatóanyagot[itt](https://www.cairo-lang.org/docs/hello_starknet/unit_tests.html), és szeretnénk hallani visszajelzését erről a funkcióról.
+* **Teljesítményfejlesztések:**
 
-**Patricia Trees:** we’ve improved StarkNet’s design to support higher throughputs and shorter proof generation time by moving to Merkle-Patricia Tree state commitment ([documentation](https://github.com/starkware-libs/cairo-lang/blob/master/src/starkware/cairo/common/patricia_utils.py)). This change allows the creation of much larger blocks, thus lowering the cost per transaction. The move to a more sophisticated state commitment was enabled by Cairo, the ZKP language — a core component of the StarkNet operating system.
+**Patricia Trees:**továbbfejlesztettük a StarkNet tervezését, hogy támogassa a nagyobb átviteli sebességet és a rövidebb próbagenerálási időt, áttérve a Merkle-Patricia Tree állam kötelezettségvállalására ([dokumentáció](https://github.com/starkware-libs/cairo-lang/blob/master/src/starkware/cairo/common/patricia_utils.py)). Ez a változtatás lehetővé teszi sokkal nagyobb blokkok létrehozását, így csökkentve a tranzakciónkénti költséget. A kifinomultabb állami elkötelezettség felé való elmozdulást a Kairó, a ZKP nyelv tette lehetővé, amely a StarkNet operációs rendszer alapvető összetevője.
 
-**Bitwise Operations:** we’ve added a [builtin](https://www.cairo-lang.org/docs/how_cairo_works/builtins.html) to support much more efficient bitwise operations in StarkNet contracts ([documentation](https://www.cairo-lang.org/docs/reference/common_library.html#common-library-bitwise)).
+**Bitenkénti műveletek:**hozzáadtunk egy[beépített](https://www.cairo-lang.org/docs/how_cairo_works/builtins.html), hogy támogassa a sokkal hatékonyabb bitenkénti műveleteket a StarkNet szerződésekben ([dokumentáció](https://www.cairo-lang.org/docs/reference/common_library.html#common-library-bitwise)).
 
-* **Goerli:** StarkNet is moving from Ropsten to [Goerli](https://goerli.etherscan.io/address/0xee02F29aE9A4988aE064940bF11954d6eafE26Ac)! At last, we’ve freed our system from the whims of the Ropsten Gods. Alpha 2 will now be running over a more stable development environment.
+* **Goerli:**StarkNet költözik Ropstenből[Goerli](https://goerli.etherscan.io/address/0xee02F29aE9A4988aE064940bF11954d6eafE26Ac)ba! Végre megszabadítottuk rendszerünket a Ropsten-istenek szeszélyeitől. Az Alpha 2 mostantól egy stabilabb fejlesztői környezetben fut majd.
 
-### Ecosystem
+### Ökoszisztéma
 
-The StarkNet ecosystem is constantly growing, and we are happy to share the latest news:
+A StarkNet ökoszisztémája folyamatosan növekszik, és örömmel osztjuk meg a legfrissebb híreket:
 
-* **Standardized Contracts**: we’re honored to be working with OpenZeppelin on StarkNet’s standard contracts library. Their canonical work on Ethereum’s standardized contracts serves us all daily, and we are confident they will be as impactful here.
-* **EVM->Cairo Compiler**: Nethermind’s Warp team [demonstrated](https://medium.com/nethermind-eth/warp-your-way-to-starknet-ddd6856875e0) transpilation of an ERC-20 contract from EVM bytecode to a StarkNet contract and deployment on StarkNet. This effort is moving quickly, and our next target is the transpilation of arbitrary smart contracts from Yul to Cairo.
-* **Maker-on-StarkNet**: a [proposal](https://forum.makerdao.com/t/mip39c2-sp19-adding-the-starknet-engineering-core-unit-sne-001/9745) was submitted to the Maker DAO to implement the Maker protocol over StarkNet. The first phase proposes a DAI bridge from Ethereum to StarkNet with minting DAI on StarkNet to follow.
-* **StarkNet/Cairo Auditing Services**: we are engaging multiple audit firms to provide StarkNet smart contract and Cairo programs auditing services.
+* **Szabványos szerződések**: Megtiszteltetés számunkra, hogy az OpenZeppelinnel együtt dolgozhatunk a StarkNet szabványos szerződések könyvtárában. Az Ethereum szabványosított szerződéseivel kapcsolatos kanonikus munkájuk mindennap mindannyiunkat szolgálja, és biztosak vagyunk benne, hogy itt is ugyanolyan hatásosak lesznek.
+* **EVM->Cairo Compiler**: A Nethermind's Warp[csapata](https://medium.com/nethermind-eth/warp-your-way-to-starknet-ddd6856875e0)ERC-20 szerződés transzpilációját EVM bájtkódról StarkNet szerződésre mutatta be, és telepítést StarkNeten. Ez az erőfeszítés gyorsan halad, és a következő célunk az önkényes intelligens szerződések átvitele Yulból Kairóba.
+* **Maker-on-StarkNet**: egy[javaslatot](https://forum.makerdao.com/t/mip39c2-sp19-adding-the-starknet-engineering-core-unit-sne-001/9745)nyújtottak be a Maker DAO-nak a Maker protokoll StarkNeten keresztüli megvalósítására. Az első fázis DAI-híd létrehozását javasolja az Ethereum és a StarkNet között, majd a DAI-t a StarkNet-en verik.
+* **StarkNet/Cairo Auditing Services**: több könyvvizsgáló céget bízunk meg a StarkNet intelligens szerződések és a kairói programok könyvvizsgálati szolgáltatásaival.
 
-### Mainnet Around the Corner
+### Mainnet a sarkon
 
-We are getting ready for the StarkNet Alpha Mainnet launch, starting gradually with a whitelisted set of applications. Several projects are underway and more are actively added by the day. To join the party, you are invited to reach out via [discord](https://discord.gg/uJ9HZTUk2Y).
+Készülünk a StarkNet Alpha Mainnet elindítására, fokozatosan kezdve az alkalmazások engedélyezési listájával. Számos projekt van folyamatban, és napról napra újabbak bővülnek. Ha csatlakozni szeretne a bulihoz, lépjen kapcsolatba[discord](https://discord.gg/uJ9HZTUk2Y)en keresztül.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Frissítés (2021. november):**StarkNet Alpha élőben az Ethereum Mainnet oldalon

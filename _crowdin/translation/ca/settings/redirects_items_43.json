@@ -1,4 +1,4 @@
 {
   "source": "/bulletin-board/:path*",
-  "destination": "/en/developers/tools-and-resources"
+  "destination": "/ca/desenvolupadors/eines-i-recursos"
 }

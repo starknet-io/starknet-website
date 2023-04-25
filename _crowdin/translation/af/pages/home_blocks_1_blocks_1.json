@@ -1,4 +1,4 @@
 {
-  "title": "How does Starknet scale Ethereum? ",
-  "description": "Starknet uses math and cryptography to securely scale Ethereum. It operates as a Validity-rollup (or ZK-rollup): it \"bundles\" many transactions and \"rolls\" them to Ethereum as a single transaction."
+  "title": "Hoe skaal Starknet Ethereum? ",
+  "description": "Starknet gebruik wiskunde en kriptografie om Ethereum veilig te skaal. Dit funksioneer as 'n Geldigheidsoprol (of ZK-opsomming): dit \"bondel\" baie transaksies en \"rol\" dit na Ethereum as 'n enkele transaksie."
 }

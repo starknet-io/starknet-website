@@ -1,4 +1,4 @@
 {
-  "source": "/latest-posts/:path*",
-  "destination": "/en/posts"
+  "source": "/laatste-posts/:path*",
+  "destination": "/nl/posts"
 }

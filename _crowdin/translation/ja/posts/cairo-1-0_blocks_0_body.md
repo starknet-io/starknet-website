@@ -38,7 +38,7 @@ Cairo は、検証可能な計算をあらゆる場所の開発者が利用で�
 
 #### Sierraの紹介:すべてのカイロの実行を確実に実証することができます
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierraは、Cairo 1.0とCairo バイトコードの間の新しい中間表現層を構成する。 Sierraの目標は、すべてのCairo - すなわち、Cairo プログラムとその入力を確実に実行することができるようにすることです(詳細は下記を参照)。
+Cairo 1.0 での主な追加機能は Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion) です。 Sierraは、Cairo 1.0とCairo バイトコードの間の新しい中間表現層を構成する。 Sierraの目標は、すべてのCairo - すなわち、Cairo プログラムとその入力を確実に実行することができるようにすることです(詳細は下記を参照)。
 
 Sierraは、カイロ開発者により良い将来性のあるコードを約束します。 基盤となるシステムの改善の場合、StarkNet契約は再コンパイルする必要がないという事実によって、さらなる安定性が提供されます(e. , CPU AIRアーキテクチャの変更, シエラからカイロのバイトコードへの最終的な翻訳の改善).
 
@@ -60,14 +60,14 @@ Sierraのこの導入は許可のないネットワークとしてStarkNetに重
 * *文の構文が*の場合に改善されました
 
 ```python
-#Old
+#古い
 if cond != 0 {
   tempvar x = x+1;
 } else {
   tempvar x = x;
 }
 __________________________________
-#New
+#新しい
 if cond { x = x + 1; }
 ```
 
@@ -113,11 +113,11 @@ If cond1 && (cond2 || cond3) { … }
 * 抽象データ型（例） Rust-like enum)
 
 ```
-enum Option<T> {
+enum オプション<T> {
  Some: T,
  None,
 }
-match result {
+一致結果 {
  Some(r) => {..},
  None => {..},
 }
@@ -132,7 +132,7 @@ trait Add<Uint256> {
 
 let a: Uint256 = 1;
 let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+a + b; // Uint256 型の 5 に評価されます。
 ```
 
 #### **より直感的なライブラリ**

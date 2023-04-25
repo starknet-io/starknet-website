@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+Nesta publicação, mergulhamos mais fundo no design do StarkNet Token, seu cronograma de cunhagem e cronograma esperado.
 
-### Considerations
+### Considerações
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+O design do Token StarkNet é moldado pela necessidade de energizar uma rede composta por (i)**Usuários**do StarkNet, (ii)**Operadores**— pessoas fornecendo à rede recursos de computação que executam uma sequência de transações, geração de provas STARK e provedores de armazenamento a longo prazo, e (iii)**Desenvolvedores**escrevendo software para sua infraestrutura e para aplicativos executados nele.
 
-Mechanisms for fee structure and token minting should be:
+Mecanismos para estrutura de taxas e cunhagem de tokens devem ser:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Grandes automatizados, em oposição a base de uma intervenção humana significativa
+* Conhecido e testado em outros sistemas blockchain
+* Simples de analisar e explicar; transparente
+* Resistência à manipulação especulativa e à gamificação não geradora de valor
+* Considerado ter uma boa experiência de usuário (UX)
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Estas preferências moldarão o mecanismo para alocar tokens de novas taxas de cunhagem e transações pagas pelos usuários:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Operadores**protegem a vida contínua do StarkNet e fornecem o desempenho de alta qualidade do protocolo que os usuários exigem.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Desenvolvedores**criam e mantêm o software usado pelos Operadores para proteger a rede, e eles criam apps que melhoram a funcionalidade da rede para os usuários. Consequentemente, uma parte das taxas e nova cunagem irá para Desenvolvedores de Contrato Inteligentes e Desenvolvedores Básicos, da seguinte forma:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Desenvolvedores de Contrato Inteligentes:**O protocolo StarkNet pode medir automaticamente o valor fornecido por contratos inteligentes, através das tarifas L1 e L2 pagas pelos Usuários destes contratos. O protocolo StarkNet atribuirá automaticamente uma fração de taxas e nova cunagem em curso para os desenvolvedores de Contrato Inteligente. Os contratos inteligentes que oferecem mais valor para os Usuários — medidos pelas taxas pagas por eles — receberão uma parte maior dos tokens alocados para este propósito.
+* **Desenvolvedores principais:**O protocolo StarkNet não tem uma forma automática de quantificar a contribuição dos Desenvolvedores Núcleos, tais como aqueles que escrevem código para provadores, sequenciamentos, nós completos, etc. Consequentemente, a alocação de token para esses Desenvolvedores Básicos e outros contribuidores cuja contribuição não é mensurável pelo protocolo requer necessariamente algum critério humano. Será criado um modelo para a aplicação de uma forma consistente com o objectivo da descentralização.
+* O mecanismo exato para alocar tokens de novas cunhagem e taxas a ambos os tipos de desenvolvedores ainda não foi determinado. Os princípios de design incluirão a anti-gamificação e a transparência.
 
-### Initial allocation of StarkNet Tokens
+### Alocação inicial de Tokens StarkNet
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+Dez bilhões de fichas foram cunhadas fora da cadeia por StarkWare. Para esclarecer: estes Tokens StarkNet não representam capital em StarkWare nem proporcionam qualquer direito de participação em StarkWare ou concedem qualquer direito de reivindicação a StarkWare. O fornecimento de tokens em circulação aumentará ao longo do tempo com a cunhagem de novos tokens pelo protocolo, de acordo com um cronograma que será determinado pela comunidade em um ponto posterior.\
+*A oferta em circulação não pode, portanto, ser corrigida.*
 
-The allocation is thus:
+A alocação é a seguinte:
 
-**17%** — StarkWare Investors
+**17%**— Investidores StarkWare
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32.9%**— Contribuidores principais: StarkWare e seus funcionários e consultores, e parceiros de desenvolvimento de software StarkNet
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50.1%**concedido pela StarkWare à Fundação, reservado da seguinte forma:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**— Provisões da Comunidade — para aqueles que realizaram trabalho pela StarkNet e fortaleceram ou desenvolveram sua tecnologia subjacente. . através do uso anterior dos sistemas StarkEx L2. Fundamentalmente, todas as disposições comunitárias assentarão num trabalho verificável que foi realizado no passado. Por exemplo, na medida em que as disposições comunitárias serão dadas aos antigos usuários da StarkEx, As alocações serão determinadas com base no uso verificável da tecnologia da StarkEx, que ocorreu**antes de 1 de junho de 2022.**
+* **9%**— Descontos comunitários — descontos em Tokens StarkNet para**parcialmente**cobrem os custos de integração com StarkNet da Ethereum. Para impedir gamificação, os descontos da Comunidade serão aplicados apenas a transações que ocorrem**após**o mecanismo de desconto ser anunciado.
+* **12%**— Conceder pesquisa e trabalho feito para desenvolver, testar, implantar e manter o protocolo StarkNet
+* **10%**— uma reserva estratégica, para financiar atividades do ecossistema que estão alinhadas com a missão da Fundação, conforme explicado no[post anterior](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)desta série.
+* **2%**— Doações para instituições e organizações altamente conceituadas, como universidades, ONG, etc., conforme decidido por StarkNet Token e a Fundação.
+* **8. %**Não alocado — o Tesouro não alocado da Fundação está em vigor para apoiar ainda mais a comunidade StarkNet de uma forma que seja decidida pela comunidade.
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+Para alinhar os incentivos a longo prazo dos Colaboradores Principais e Investidores com os interesses da comunidade StarkNet e seguindo a prática comum em ecossistemas descentralizados. todos os tokens alocados aos Colaboradores Principais e Investidores estarão sujeitos a um período de bloqueio de 4 anos, com lançamento linear e um penhasco de um ano.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### Existe alguma forma de receber Tokens Starknet?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+A resposta curta é sim, mas não há atalhos para receber tokens.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+A alocação de token StarkNet e o seu mercado de taxas e o novo design cunhante dão prioridade aos desenvolvedores da infraestrutura central e dApps, assim como outras pessoas que contribuem para a segurança e saúde do ecossistema. O que significa isto praticamente em relação ao token?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Se você é um desenvolvedor e já escreveu software para a infraestrutura StarkNet ou para um contrato inteligente, que são genuinamente valorizados e usados por usuários finais StarkNet, então você poderá receber tokens automaticamente através do protocolo. Uma das muitas salvaguardas contra a gamificação deste mecanismo é que as taxas recebidas pelos desenvolvedores serão estritamente inferiores às tarifas pagas pelos usuários.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+Os desenvolvedores também podem receber bolsas de tokens para o trabalho feito para desenvolver, testar e manter o protocolo StarkNet. Quaisquer subvenções deste tipo serão decididas oportunamente pela Fundação em conformidade com a sua missão.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+Se você é um desenvolvedor de blockchain que acredita que StarkNet é a resposta para as necessidades de escala da Ethereum, nós encorajamos você a aprender mais sobre a[StarkNet](https://starknet.io/)e sua linguagem de programação.[Cairo](https://www.cairo-lang.org/)e começar a desenvolver seus próprios contratos inteligentes.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Se você é um usuário final, use o StarkNet — mas apenas como ele atende às suas necessidades hoje. Use para as transações e aplicativos que você avalia,*não na expectativa de qualquer recompensa futura de Tokens StarkNet.*Quando as Provisões da Comunidade são anunciadas, elas irão se referir apenas a snapshots que ocorreram anteriores à data de anúncio, e irá filtrar e excluir o uso que ele considera ser um abuso e uma gamificação da rede, com base nas informações disponíveis nesse momento. Quando os descontos comunitários forem instituídos, nunca serão aplicados a transações que ocorreram antes do anúncio do desconto, então transacionar hoje em antecipação de um desconto futuro é fútil.
 
-### Closing remarks
+### Observações finais
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+Construir uma rede aberta significa incluir o desconhecido. A Internet, o Bitcoin e o Ethereum, foram inventados por inovadores que acreditavam que suas ferramentas poderiam mudar o mundo, mas não sabiam como. Humanamente, esperamos que a capacidade da StarkNet de dimensionar blockchains seja boa para Ethereum e boa para uma web descentralizada. Não sabemos o que vai ser construído. Mas acreditamos que StarkNet coloca uma capacidade tecnológica notável nas mãos de uma comunidade criativa. e esperamos ver essa comunidade a usar de inúmeras maneiras, muitas delas até mesmo inimagináveis.

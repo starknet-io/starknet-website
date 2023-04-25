@@ -1,67 +1,69 @@
-### TL;DR
+### TL; DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **Fooie is nou verpligtend op Testnet, binnekort op Mainnet**
+* Kontrakfabriekspatroon is nou moontlik!
+* StarkNet stel kontrakklasse bekend
+* Gedelegeerde oproep word vervang met biblioteek oproep
 
-### Intro
+### Inleiding
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+Ons stel graag StarkNet Alpha 0.9.0 bekend! Dit is 'n belangrike weergawe waarin StarkNet beduidende stappe in die rigting van volwassenheid maak, met aansienlike toevoegings tot beide funksionaliteit en protokolontwerp.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**Fooie is verpligtend**(tans net op Testnet, totdat weergawe 0.9.0 regstreeks op Mainnet sal wees) — enige vooruitstrewende L2 moet sy eie onafhanklike stelsel van fooie hê. Nadat ons fooie as 'n opsionele kenmerk in weergawe 0.8.0 ingestel het, voel ons nou vol vertroue om dit as 'n kernkomponent van die protokol in te sluit en verpligtend te maak. Meer besonderhede hieronder.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+Nog 'n beduidende verandering op protokolvlak is die bekendstelling van Kontrakklasse en die klas/instansie-skeiding. Dit laat 'n meer eenvoudige gebruik van die \`delegate_call\`-funksionaliteit en ontplooiings van bestaande kontrakte toe, wat die fabriekspatroon op StarkNet moontlik maak.
 
-### Contract Classes
+### Kontrakklasse
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+Met inspirasie uit objekgeoriënteerde programmering, onderskei ons tussen die kontrakkode en die implementering daarvan. Ons doen dit deur kontrakte in klasse en gevalle te skei.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+'n**kontrakklas**is die definisie van die kontrak: Die Kaïro-greepkode, wenkinligting, toegangspuntname en alles wat nodig is om die semantiek daarvan ondubbelsinnig te definieer. Elke klas word geïdentifiseer deur sy klas-hash (analoog aan 'n klasnaam uit OOP-tale).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+'n**kontrakgeval**, of bloot 'n kontrak, is 'n ontplooide kontrak wat ooreenstem met een of ander klas. Let daarop dat slegs kontrakgevalle optree as kontrakte, dit wil sê, het hul eie stoorplek en kan opgeroep word deur transaksies/ander kontrakte. 'n Kontrakklas het nie noodwendig 'n ontplooide instansie in StarkNet nie. Die bekendstelling van klasse kom met verskeie protokolveranderings.
 
-#### ‘Declare’ Transaction
+#### 'Verklaar' Transaksie
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+Ons stel 'n nuwe tipe transaksie aan StarkNet bekend: die['verklaar'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)transaksie, wat dit moontlik maak om 'n kontrak**klas te verklaar.**Anders as die \`ontplooi\`-transaksie, ontplooi dit nie 'n instansie van daardie klas nie. Die toestand van StarkNet sal 'n lys van verklaarde klasse insluit. Nuwe klasse kan bygevoeg word via die nuwe \`declare\`-transaksie.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### Die 'Ontplooi'-stelseloproep- en kontrakfabrieke.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+Sodra 'n klas verklaar is, dit wil sê die ooreenstemmende \`declare\`-transaksie is aanvaar, kan ons nuwe gevalle van daardie klas ontplooi. Vir hierdie doel gebruik ons die nuwe \`deploy\`-stelseloproep, wat die volgende argumente neem:
 
-* The class hash
-* Salt
-* Constructor arguments
+* Die klas hash
+* Sout
+* Konstruktor argumente
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+Die 'ontplooi'-stelseloproep sal dan 'n nuwe instansie van daardie kontrakklas ontplooi, waarvan die[adres](https://docs.starknet.io/docs/Contracts/contract-address)bepaal sal word deur die drie parameters hierbo en die ontplooieradres (die kontrak wat die stelseloproep opgeroep het).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+Deur ontplooiings binne 'n oproeptransaksie in te sluit, stel ons in staat om pryse en fooie vir ontplooiings te hef, sonder om ontplooiings en oproepe anders te hanteer. Vir meer inligting oor ontplooiingsfooie, sien[die dokumente](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+Hierdie kenmerk stel kontrakfabrieke in StarkNet bekend, aangesien enige kontrak die \`ontplooi\`-stelsel kan oproep, wat nuwe kontrakte skep.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### Beweeg van 'Delegeer-oproep' na 'Biblioteek-oproep'
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+Die bekendstelling van klasse stel ons in staat om 'n bekende probleem in Ethereum se afgevaardigde-oproepmeganisme aan te spreek: Wanneer 'n kontrak 'n afgevaardigde-oproep na 'n ander kontrak uitvoer, benodig dit net sy klas (sy kode) eerder as 'n werklike instansie (sy berging). Om 'n spesifieke kontrakgeval te spesifiseer wanneer 'n afgevaardigde-oproep gedoen word, is dus slegte praktyk (dit het inderdaad gelei tot 'n paar foute in Ethereum-kontrakte) - net die klas moet gespesifiseer word.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+Die ou \`delegate_call\`-stelseloproep word nou opgeskort (ou kontrakte wat reeds ontplooi is sal aanhou funksioneer, maar**kontrakte wat \`delegate_call\` gebruik sal nie meer**saamstel nie), en word vervang deur 'n nuwe library_call-stelseloproep wat kry die klas-hash (van 'n voorheen verklaarde klas) in plaas van 'n kontrakinstansieadres. Let daarop dat slegs een werklike kontrak by 'n biblioteekoproep betrokke is, dus vermy ons die onduidelikheid tussen die oproepkontrak en die implementeringskontrak.
 
-#### New API endpoints
+#### Nuwe API-eindpunte
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+Ons het twee nuwe eindpunte by die API gevoeg, wat die herwinning van klasverwante data moontlik maak:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: gee die klasdefinisie terug gegewe die klas-hash
+* \`get_class_hash_at\`: gee die klas-hash van 'n ontplooide kontrak terug met die kontrakadres
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+Let daarop dat om die klas van 'n ontplooide kontrak direk te verkry, eerder as om deur die twee metodes hierbo te gaan, kan jy die ou \`get_full_contract\` eindpunt gebruik, wat in toekomstige weergawes hernoem sal word. Al die eindpunte hierbo genoem is ook bruikbaar vanaf die[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### Fooie
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+Ons gaan voort om fooie by StarkNet in te sluit, wat dit verpligtend maak (eers op Testnet, en later ook op Mainnet) vir ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transaksies. Die \`verklaar\`-transaksie sal nie op hierdie stadium fooie vereis nie. Net so sal \`ontplooi`` transaksies ook nie 'n fooi vereis nie, maar let daarop dat hierdie transaksietipe heel waarskynlik in toekomstige weergawes afgekeur sal word.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+Verskeie oop vrae bly in hierdie area, die mees prominente is hoe om fooie te hef vir kontrakverklarings en StarkNet-rekeninge-ontplooiing. Ons sal hierdie kwessies in toekomstige weergawes aanpak.
 
-### What’s Next?
+### Wat is volgende?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+Na aanleiding van ons padkaart wat ons</a>
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+aangekondig het, is ons daartoe verbind om StarkNet se werkverrigting in die algemeen, en die sekwenseerder se werkverrigting in die besonder, te verbeter om gebruikers vinniger terugvoer oor hul transaksies te kry. In die volgende weergawe beplan ons om parallelisering in die volgordehouer in te voer, wat vinniger blokproduksie moontlik maak.</p> 
+
+Die volgende groot weergawe van StarkNet sal op die struktuur van StarkNet se rekeninge fokus, op 'n manier wat soortgelyk is aan[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). Hiermee sal ons die manier waarop StarkNet-rekeninge optree gefinaliseer het, wat nog 'n groot stap in die rigting van massa-aanneming neem!

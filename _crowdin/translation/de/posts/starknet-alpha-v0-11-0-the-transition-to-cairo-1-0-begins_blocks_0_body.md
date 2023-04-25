@@ -17,7 +17,7 @@ Eine weitere wichtige Verbesserung, die in dieser Version eintritt, ist eine 5x 
 
 ## Bereit für Regenesis
 
-Starknet alpha v0.11.0 markiert den Beginn der Übergangsperiode, die eine Vorbereitung vor der Starknet-Regenese ermöglicht. Starknet’s Regenesis plan was [published](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4) a few months ago, and it focuses on transitioning from a system based on Cairo 0 to a system based on Cairo 1.0.
+Starknet alpha v0.11.0 markiert den Beginn der Übergangsperiode, die eine Vorbereitung vor der Starknet-Regenese ermöglicht. Der Regenesis-Plan von Starknet wurde vor einigen Monaten[veröffentlicht](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)und konzentriert sich auf den Übergang von einem System, das auf Cairo 0 basiert, zu einem System, das auf Cairo 1.0 basiert.
 
 Während des Übergangszeitraums haben bestehende Verträge von Kairo 0 (wenn sie erweiterbar sind) die Möglichkeit, ihre Adresse und ihre Speicherung beizubehalten, und nahtlos ihre Umsetzung nach Kairo 1 übergehen. (siehe nächster Abschnitt).
 
@@ -98,7 +98,7 @@ Wie bei früheren Starknet-Versionen hat auch ein Upgrade Auswirkungen auf unser
 * \`get_class_by_hash\` gibt beide Klassen von Kairo 0 / Kairo 1.0 zurück (abhängig von dem angeforderten Hash)
 * \`get_state_update\` hat einen neuen Abschnitt für ersetzte Klassen und Deklarationen werden zwischen Kairo 0 und Kairo 1 Klassen aufgeteilt.
 * \`schätzen_fee\` und \`simulate_tx\` können jetzt die Validierung überspringen
-* A [new](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1) Starknet JSON-RPC version
+* Eine[neue](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1)Starknet JSON-RPC-Version
 
 ## Was kommt als Nächstes?
 

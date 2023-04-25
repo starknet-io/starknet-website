@@ -1,64 +1,64 @@
-### TL;DR
+### TL; DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Ons bou StarkNet in stappe, begin met die vestiging van**bruikbaarheid**, verbeter dan**werkverrigting**, en gaan uiteindelik voort na**desentralisasie**
+* Ons het ons eerste doelwit bereik: bruikbaarheid. Dit beteken dat ons algemene berekeninge in 'n Ethereum-agtige toestand gelewer het (jare voordat dit moontlik gedink is)
+* Ons beweeg nou na fase 2 van ons 3-delige bouplan: prestasie, fokus op deurset, transaksiekoste en latensie.
+* Volgende: Desentralisasie
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+Net 'n jaar nadat planne vir[StarkNet](https://starknet.io/)die eerste keer aangekondig is, het die platform baie goeie funksionaliteit. Die ontwikkelaargemeenskap floreer bo ons stoutste verwagtinge en bied 'n konstante vlaag nuwe L2 Naturelle-projekte.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Ons prioriteit oor die afgelope jaar was om presies dit moontlik te maak, deur 'n werkende StarkNet te skep met 'n vinnig-uitbreidende reeks kenmerke, wat ontwikkelaars in staat stel om reguit in te duik.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+Hulle het dit in groot getalle gedoen. 'n Goeie barometer is die aflaaitelling vir die[JavaScript-biblioteek vir StarkNet](https://www.starknetjs.com/): reeds op 5k sedert dit 4 maande gelede beskikbaar geword het.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Alhoewel StarkNet die kompressie-magie lewer wat ons belowe het, is dit op die oomblik nog lank nie in staat om dit te doen vir genoeg dApps met genoeg deurset nie, en dit kan op kort termyn 'n bron van frustrasie vir ontwikkelaars wees.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Ons stryd-getoetste kerntegnologie, wat baie transaksies bewys en die bewyse saamdruk deur STARK, moet voorafgegaan word deur groepering of volgorde van transaksies. Dit is 'n proses wat die StarkWare-span reeds een keer vir die[StarkEx](https://starkware.co/starkex/)skaalenjin vervolmaak het, en ons werk tans daaraan om dit weer te doen vir die behoeftes van StarkNet.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Noudat baie van ons bruikbaarheidsteikens bereik is, verskuif ons die fokus om dit ons topprioriteit te maak. Dit is alles deel van ons 3-fase padkaart:**bruikbaarheid**, gevolg deur die netwerk se**werkverrigting**, en dan**desentralisasie**. 'n Jaar later wil ons jou 'n blik onder die enjinkap gee - 'n uiteensetting van watter stukke in plek is en wat nog 'n werk aan die gang is.
 
-### The Story So Far
+### Die storie so ver
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+StarkNet Alpha is in Junie aan die publieke toetsnet vrygestel en in November aan Mainnet. Teen die tyd van die Mainnet-ontplooiing het StarkNet reeds algemene berekeninge in 'n Ethereum-agtige toestand gelewer, wat algemeen gedink is dat dit jare weg is.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+Deur die ontwikkeling het ons 'n benadering gekies wat eers op die belangrikste funksies gefokus het en dit vrygestel het sodra dit beskikbaar geword het, en in wese die evolusieproses met die gemeenskap gedeel. StarkNet is nog lank nie funksie voltooi nie, maar selfs nou kan ontwikkelaars reeds betekenisvolle en komplekse toepassings bou. Vandag het ons[ontwikkelaars wat op StarkNet bou,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)tientalle dApps, en meer as 'n dosyn eksterne spanne wat gereedskap en infrastruktuur vir die StarkNet-ekosisteem ontwikkel.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+'n String opgraderings het baie belangrike kenmerke gelewer, insluitend L1<>L2-boodskappe, on-ketting data en ondersteuning vir saamstelbaarheid, gebeurtenisondersteuning, basiese fooimeganisme, kontrakte-opgradeerbaarheid, rekeningabstraksie, toetsraamwerk, ontwikkelaarnutsgoed, vinnige bevestiging, bloknommer , blok tydstempel, ondersteuning vir rekeningkontrakte.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+Die ontwikkelaargemeenskap stel beide diep belang in StarkNet, en vorm eintlik die ontwikkeling daarvan. Kenmerke is reeds bekendgestel op grond van ontwikkelaarterugvoer. Aanneming kan heel moontlik die toename in deurset oortref, en daarom is hierdie hupstoot nou ons groot prioriteit.
 
-### Next Steps
+### Volgende stappe
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Noudat ons bruikbaarheid bereik het, is dit tyd om die stelsel se werkverrigting te verbeter. Die stelsel, in sy huidige toestand, is in staat om beperkte deurvloei van transaksies te ondersteun. Die manier om dit op te los is deur die werkverrigting van die Sequencer Node te verbeter, wat StarkNet se ekwivalent van 'n mynwerker is. Dit is die "masjien" wat transaksies orden nadat dit ingedien is. Wanneer dit geoptimaliseer is, sal deurset die hoogte inskiet.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+Vir hierdie doel ontleed ons terselfdertyd waar die knelpunte is en spreek dit een vir een aan. Tans hou al die knelpunte verband met die volgordebepalingsproses, wat kom voordat ons die STARK-bewysers oproep. Die stryd-getoetsde proefstapel is gereed om StarkEx-agtige deurset op StarkNet te ondersteun.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Ons verwag dat die optimalisering van die sequencer 'n proses sal wees wat 'n paar maande duur, met geleidelike verbeterings regdeur H1/22. Ons doel is om teen die begin van die tweede helfte van 2022 ten minste een orde van grootte hoër TPS as Ethereum te bereik, teen 'n koste wat ten minste twee ordes van grootte laer as Ethereum s'n is. En dit is net die begin.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+Daar is goeie rede dat hierdie optimaliseringsfase nodig is, en dat StarkNet nie met 'n gereed-geoptimaliseerde volgorder bekendgestel is nie: StarkNet kon so vinnig bruikbaarheid bereik omdat ons 'n voorsprong gekry het. In plaas daarvan om van nuuts af te begin en 'n totaal nuwe volgorde te bou, het ons die batcher van StarkEx as 'n sentrale komponent gebruik.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+Dit was 'n goeie manier om te bou. Dit het nie net vinnig afgelewer nie; dit het beteken ons is seker dat ons op stewige fondamente gebou het. StarkEx het in wese die kernfunksies wat StarkNet dryf, getoets, aangesien dit honderde miljarde dollars in kumulatiewe verhandeling opgedoen het.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[StarkEx](https://starkware.co/starkex/)is die skaalenjin vir sommige van die suksesvolste dApps wat L2 gebruik: dYdX (ewigdurende kontrakte), DeversiFi (spothandel en betalings), sowel as vir Onveranderlike en Sorare (NFT-muntmaak en verhandeling).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+Maar die sequencer wat vir hulle en ander StarkEx-kliënte gebou is, kan StarkNet tot dusver net neem. Elkeen van hulle hanteer min of meer dieselfde tipe transaksie elke dag. StarkNet gaan alles oor**algemene berekening**, so sy behoeftes is oop. Wanneer sy sequencer transaksies uit die mempool neem, kom dit in verskillende vorms en groottes voor. Plus, StarkNet is ook 'n oop netwerk wat beteken dat daar bykomende berekeningsbokoste is wat nie in StarkEx teëgekom word nie.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+Die huidige uitdaging, naamlik die optimalisering van die volgordebepaling vir hierdie nuwe behoeftes, is 'n beduidende onderneming, maar ons het 'n sterk begrip van die roete wat nodig is, op grond van ons suksesvolle StarkEx-ontwikkeling.
 
-### Next Up: Decentralization
+### Volgende: Desentralisasie
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+StarkNet moet 'n volledig gedesentraliseerde netwerk sonder toestemming wees, kompleet met leierverkiesing en bestuursmeganismes. Om dit te bereik, sal ons hooffokus word sodra deurset die hoogte inskiet en koste daal, en ons hoop om 'n eerste gedesentraliseerde weergawe teen die einde van 2022 te hê. Ons verwag om ons desentralisasieplan in die komende maande in die openbaar te deel.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+Net soos die huidige beperkte deurset 'n tussentydse fase in StarkNet se ontwikkeling verteenwoordig, is die huidige vlak van StarkWare-betrokkenheid ook tydelik. Ons sien onsself as 'n soort steierwerk wat tydens die konstruksiefase 'n belangrike funksie dien, maar mettertyd teruggerol word.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+Volle nodusontwikkeling, 'n opwindende eerste stap na desentralisasie, is reeds aan die gang. Volle nodusse sal enigiemand in staat stel om die toestand van die netwerk plaaslik vas te hou en te verifieer, om tred te hou met presies wat gebeur. Drie spanne -*Erigon, Nethermind en Equilibrium*- is besig om volledige nodusse te ontwikkel, en moontlik sal meer ontwikkel in die toekoms.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+In 'n parallelle ontwikkeling is voorbereidings aan die gang om opeenvolging en bewys van sagteware aan die publiek oop te maak. Enigiemand sal as 'n opeenvolger of 'n toetser op StarkNet kan deelneem.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+’n Struktuur sal ontwikkel word om mense aan te spoor om betrokke te raak, wat ekonomiese belonings sal insluit. StarkNet-fooie sal deels aan opvolgers en toetsers gaan.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Op mediumtermyn verwag ons om ons sequencer aan derde partye beskikbaar te stel, en op lang termyn verwag ons om ook te sien dat verskeie spanne reekse bou wat opeenvolging vir StarkNet sal maak.
 
-### Always Improving; Forever Listening
+### Altyd verbeter; Vir ewig luister
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Namate fokus na die volgende uitdaging verskuif, sal ons voortgaan om te verbeter op vorige prestasies. En deur aan te hou werk aan alle areas van[StarkNet](https://starknet.io/), sal ons ore altyd oop bly vir die hele ontwikkelaargemeenskap. Raak dus betrokke by die bespreking, via[Discord](https://discord.com/invite/uJ9HZTUk2Y), die[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8)gemeenskap,[Twitter](https://twitter.com/Starknet_Intern), of 'n ander roete, en help om die toekoms van blokkettingskaal te vorm.

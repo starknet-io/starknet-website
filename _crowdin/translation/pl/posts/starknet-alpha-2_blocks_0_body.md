@@ -34,7 +34,7 @@ Ekosystem StarkNet nieustannie rośnie i z przyjemnością podzielamy się najno
 
 * **Standaryzowane umowy**: mamy zaszczyt współpracować z OpenZeppelin w standardowej bibliotece umów StarkNet. Ich kanoniczna praca nad znormalizowanymi kontraktami Ethereum służy nam wszystkim codziennie i jesteśmy pewni, że będą one miały taki wpływ.
 * **EVM->Kompilator Kaira**: Zespół Warp Nethermind’s[zademonstrował](https://medium.com/nethermind-eth/warp-your-way-to-starknet-ddd6856875e0)przeszczep umowy ERC-20 z bajtecode EVM do umowy StarkNet i rozmieszczenia na StarkNet. Wysiłki te szybko ruszą, a naszym kolejnym celem jest przetaczanie arbitralnych inteligentnych kontraktów z Yula do Kaira.
-* **Maker-on-StarkNet**: a [proposal](https://forum.makerdao.com/t/mip39c2-sp19-adding-the-starknet-engineering-core-unit-sne-001/9745) was submitted to the Maker DAO to implement the Maker protocol over StarkNet. W pierwszej fazie proponuje się most DAI od Ethereum do StarkNet z rozkopaniem DAI na StarkNet.
+* **Maker-on-StarkNet**:[propozycja](https://forum.makerdao.com/t/mip39c2-sp19-adding-the-starknet-engineering-core-unit-sne-001/9745)została złożona do Maker DAO w celu wdrożenia protokołu Maker przez StarkNet. W pierwszej fazie proponuje się most DAI od Ethereum do StarkNet z rozkopaniem DAI na StarkNet.
 * **Usługi rewizji finansowej StarkNet/Kairo**: angażujemy wiele firm audytorskich w celu świadczenia usług rewizji inteligentnego kontraktu StarkNet oraz usług rewizji programów Cairo.
 
 ### Główna sieć wokół narożnika

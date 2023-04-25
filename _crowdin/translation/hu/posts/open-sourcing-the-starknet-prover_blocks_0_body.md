@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* A Starknet prover nyílt forráskódú lesz az Apache 2.0 licenc alatt
+* A lépés javítani fogja a fejlesztők hozzáférését, elősegíti a közösségen belüli együttműködést, és egyéb előnyöket kínál
+* Ez a bejelentés a Cairo 1.0, a Papyrus Full Node és a Starknet új szekvenszerének nyílt forráskódú beszerzését követi.
 
 ### Intro
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Izgalmas hírek előtt áll: a Starknet Prover nyílt forráskódú lesz!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Ez mérföldkő a Starknet fejlődésében. Fedezze fel a döntést a nyílt forráskódú Starknet-próba mellett, és fedezze fel, milyen előnyökkel jár a Starknet ökoszisztémája számára. Közjóként a hozzáférhetőség áll az élen, ami lehetővé teszi a nagyobb együttműködést és innovációt a technológiai halmazban.
 
-### Open Sourcing the Starknet Prover
+### A Starknet Prover nyílt forráskódja
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+A Starknet Alpha 2021 novemberében indult a Mainneten. A Starknet kezdettől fogva a közösség tulajdonában lévő hálózatként képzelték el, és lehetővé teszi számára, hogy hasznot húzzon a STARK skálázás erejéből. Egy évvel a Mainneten való megjelenés után elérkezett az idő, hogy elkezdjük a teljes Starknet stack nyílt forráskódú beszerzését.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+A már nyílt forráskódú elemek közé tartozik[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)és az új StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Amikor a Starknet Prover az Apache 2.0 alá kerül, a nyílt forráskódú folyamat befejeződik. Ez a Starknet decentralizálásának utolsó szakaszában fog megtörténni.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### A Starknet Prover nyílt forráskódú beszerzésének jelentősége
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+A nyílt forráskódú STARK szoftver lehetővé teszi a közösség számára, hogy önállóan karbantartsa és fejlessze a hálózatot, és így a legvalódibb utat kínálja a Starknet decentralizált közjószágként való felépítéséhez. Ez azt is lehetővé teszi, hogy a közösség nagyobb szabadságot kapjon a prover, és így a Starknet fejlesztésében. Ezenkívül a Starknet Prover nyílt forráskódú használata lehetővé teszi több szem számára a kód áttekintését, javítja a minőségét, segít a hibák észlelésében és átláthatóságot biztosít.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Röviden, a Starknet technológiai halmaz nyílt forrású beszerzése több együttműködést, jobb minőséget, innovációt és függetlenséget jelent. Mindezek az értékek segíthetik a Starknetet teljes potenciáljának elérésében.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+A kódbázis, amelyre a Starknet Prover-t fel fogjuk építeni, a 2020 júniusa óta használt bebizonyítón alapul, amely bizonyítja a[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)által üzemeltetett dApp-okból származó tranzakciókat (mint például az Immutable X, Sorare, dYdX stb.). Ebben a szerepkörben 327 millió tranzakciót dolgozott fel, 95 millió NFT-t vertett, és mintegy 824 milliárd dollárt számolt el.
 
-### Summary
+### Összegzés
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Örömmel jelentjük be, hogy a Starknet Prover nyílt forráskódú lesz, és Apache 2.0 alatt érhető el. A Starknet Prover nyílt forráskódú beszerzésére közvetlenül azelőtt kerül sor, hogy a Starknet készen állna a teljes decentralizációra. Így a Starknet verem teljesen nyílt forráskódú lesz, ahogy az egy decentralizált, engedély nélküli Layer 2 hálózathoz illik.

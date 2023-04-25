@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* Starknet kanıtlayıcı, Apache 2.0 lisansı altında açık kaynaklı olacak
+* Hareket, geliştiricilerin erişilebilirliğini artıracak, topluluk içinde işbirliğini teşvik edecek ve başka avantajlar sunacak.
+* Bu duyuru, Cairo 1.0, Papyrus Full Node ve Starknet'in yeni sıralayıcısının açık kaynak kullanımını takip ediyor
 
-### Intro
+### Giriş
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Önümüzdeki heyecan verici haberler: Starknet Prover açık kaynaklı olacak!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Bu, Starknet'in evriminde bir dönüm noktasıdır. Starknet kanıtlayıcısını açık kaynaklı hale getirme kararını keşfedin ve Starknet ekosistemine getirdiği faydaları keşfedin. Bir kamu malı olarak erişilebilirlik ön plandadır ve teknoloji yığınında daha fazla işbirliğine ve yeniliğe olanak tanır.
 
-### Open Sourcing the Starknet Prover
+### Starknet Prover'ı Açık Kaynakla Kullanma
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha, Kasım 2021'de Mainnet'te kullanıma sunuldu. Starknet en başından beri, topluluğa ait olacak ve STARK ölçeklendirmesinin gücünden yararlanmasını sağlayacak bir ağ olarak tasavvur edildi. Mainnet'te piyasaya sürüldükten bir yıl sonra, tüm Starknet yığınının açık kaynak kullanımına başlamanın tam zamanıydı.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Halihazırda açık kaynaklı olan öğeler arasında[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)ve yeni StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003)yer alır. Starknet Prover, Apache 2.0 altına yerleştirildiğinde, açık kaynak işlemi tamamlanmış olacaktır. Bu, Starknet'i merkezileştirmenin son aşamasına doğru gerçekleşecek.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Açık Kaynak Kullanımının Önemi Starknet Prover
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+Açık kaynaklı STARK yazılımı, topluluğun ağı bağımsız olarak sürdürmesine ve geliştirmesine izin verecek ve bu nedenle Starknet'i merkezi olmayan bir kamu malı olarak inşa etmek için en gerçek yolu sağlayacaktır. Ayrıca topluluğun kanıtlayıcının ve dolayısıyla Starknet'in gelişimine katkıda bulunma konusunda daha fazla özgürlüğe sahip olmasını sağlayacaktır. Ek olarak, Starknet Prover'ın açık kaynak olması, kodu daha fazla gözetleme, kalitesini iyileştirme, hataları tespit etmeye yardımcı olma ve şeffaflık sağlama olanağı sağlayacaktır.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Kısacası, Starknet teknoloji yığınını açık kaynak yapmak, daha fazla işbirliği, daha iyi kalite, yenilik ve bağımsızlık anlamına gelir. Tüm bu değerler, Starknet'in tam potansiyeline ulaşmasına yardımcı olabilir.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+Starknet Prover'ı üzerine kuracağımız kod tabanı, Haziran 2020'den beri kullanımda olan ve[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)tarafından desteklenen dApp'lerden (Immutable X, Sorare, dYdX ve daha fazlası gibi) işlemleri kanıtlayan kanıtlayıcıya dayanmaktadır. Bu rolde 327 milyon işlem gerçekleştirmiş, 95 milyon NFT basmış ve yaklaşık 824 milyar dolarlık anlaşma yapmıştır.
 
-### Summary
+### Özet
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Starknet Prover'ın Apache 2.0 altında açık kaynaklı olacağını duyurmaktan heyecan duyuyoruz. Starknet Prover'ın açık kaynak kullanımı, Starknet tam merkezsizleşmeye hazır hale gelmeden hemen önce gerçekleşecek. Bu şekilde, Starknet yığını, merkezi olmayan, izinsiz bir Katman 2 ağı için uygun olduğu üzere tamamen açık kaynaklı olacaktır.

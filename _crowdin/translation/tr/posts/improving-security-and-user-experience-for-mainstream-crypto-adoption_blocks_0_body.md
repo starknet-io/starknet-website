@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Blockchain'deki teknolojik yenilikler son birkaç yılda gelişti - STARK'lar, SNARK'lar, EIP-1559, Ethereum Birleşmesi - hepsi çok büyük teknolojik başarılar. Ancak, UX ve UI tasarımı ayak uyduramadı. İnsanlar hala 16 kelimelik temel ifadelere takılıp kalıyor ve merkezi bir aracı olmadan DeFi'ye girmek birçok kişi için hala çok korkutucu. Bir sonraki milyar kullanıcıyı Web3'e dahil etmek için, kullanıcı katılım deneyimini iyileştirmek çok önemlidir.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+FTX'in (ve İkizler, Celsius ve Mt. Gox) gösterdiği gibi, kişinin varlıkları üzerinde nefsine hakim olması kritik derecede önemlidir. Bununla birlikte, yakın zamana kadar, kişisel cüzdanlar, ortalama bir kullanıcı için hantal ve kafa karıştırıcıydı. Çoğu kişi Web2 parolalarını aylık olarak unutur; Kullanıcıların tohum cümlelerini ve özel anahtarlarını sonsuza kadar güvende tutmaları nasıl bekleniyor?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Basitçe söylemek gerekirse, bu bir güvenlik kabusu. Sayısız kez gördüğümüz gibi, ister kötü aktörler ister ihmaller olsun, tek bir yanlış hareket milyonlarca dolarlık zarara yol açabilir.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Yeni kripto kullanıcıları için ilk iletişim noktası olan Ethereum cüzdanlarının kullanımı kolay, güvenli ve her kullanıcının ihtiyaçlarına göre özelleştirilebilir olması gerekir. Bu, geliştiricilerin Web2 finansal ürünlerinin basitliğini Web3'ün özellikleriyle entegre etmelerini gerektirir.
 
-This is exactly what account abstraction achieves.
+Bu tam olarak hesap soyutlamanın başardığı şeydir.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Hesap soyutlama, kullanıcıların özel anahtara olan güvenini ortadan kaldırarak ve cüzdanları daha programlanabilir hale getirerek kendi kendine saklama cüzdan ürünlerinin güvenliğini ve güvenliğini artırır. Bu iyileştirilmiş kullanıcı deneyimi ile, gözetim dışı cüzdanlar nihayet milyonlarca ana akım kripto kullanıcısına ölçeklenebilir.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Ancak hesap soyutlamanın etkisini tam olarak anlamak için Ethereum hesaplarının nasıl çalıştığı konusunda kendimizi yenilememiz gerekiyor.
 
-### The basics of Ethereum accounts
+### Ethereum hesaplarının temelleri
 
-There are two types of Ethereum accounts:
+İki tür Ethereum hesabı vardır:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Harici Sahipli Hesaplar (EOA)
+2. Sözleşme Hesapları (CA)
 
-Let’s break each down a bit further.
+Her birini biraz daha parçalayalım.
 
-### Externally owned accounts
+### Harici sahip olunan hesaplar
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+MetaMask ve Coinbase Wallet gibi harici sahipli hesaplar, Ethereum kullanıcıları için tipik hesap türüdür. Her EOA, anahtar çifti adı verilen özel ve genel bir anahtardan oluşur.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Tüm işlemler özel anahtarlarla yetkilendirilir ve imzalanır. Bir işlem imzalandıktan sonra EVM, EOA'nın hesap adresini kullanarak imzanın geçerli olduğunu doğrular. EVM'deki sabit kodlanmış mantık, hesabın (belirteçlerinizi tutan nesne) ve özel anahtarın (imzalayan) tek olarak birleştirildiğini gösterir.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Özel anahtarınızı kaybetmek, fonlarınızı ve hatta hesabınızın kontrolünü sonsuza kadar kaybetmek anlamına gelir.
 
-### Contract accounts
+### Sözleşme hesapları
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Bu arada, hesap soyutlaması ile eşanlamlı olan sözleşme hesapları, Ethereum blok zincirinde dağıtılan akıllı sözleşmelerdir. Bu sözleşmeler kod mantığı ile kontrol edilir ve özel anahtar gerektirmez. EOA'ların aksine, sözleşme hesapları işlem başlatamaz. Bunun yerine, işlemleri EOA'lardan gelen talimatlarla tetiklenir.
 
-### Why account abstraction matters
+### Hesap soyutlama neden önemlidir?
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Hesap soyutlama, sabit kodlanmış yetkilendirme mantığını EOA'lardan soyutlamayı, her hesabı herhangi bir bireyin ihtiyaçlarını karşılayacak şekilde uyarlanabilen programlanabilir bir akıllı sözleşmeye dönüştürmeyi gerektirir.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Yakın tarihli bir[Stark @ Home etkinliğinde](https://www.crowdcast.io/e/7olimxqv)Argent'in kurucu ortağı ve Baş Bilim Sorumlusu Julien Niset tarafından açıklandığı gibi, bu esnek yetkilendirme mantığı, geliştiricilere…gibi hesap özellikleriyle oynama özgürlüğü verir.
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Donanım İmzacısı:**Herhangi bir akıllı telefonu bir donanım cüzdanına dönüştürmek için bir iPhone veya Android'in güvenli bölgesini kullanma. Oradan, kullanıcılar parmak izi veya Apple Face ID gibi biyometrik verileri kullanarak işlemleri doğrulayabilir. Braavos[gibi kendi kendini koruyan cüzdanların bu özelliği sunduğunu görmeye başladık bile.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymaster'lar:**Kullanıcıların gas ücretini herhangi bir jetonla ödemesine veya hatta işlemler için üçüncü taraf tarafından tasarlanmış bir ödeme mekanizmasına sahip olmasına izin verin.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Sosyal Kurtarma:**Özel bir anahtarın kaybolması veya güvenliğinin ihlal edilmesi durumunda, kullanıcılar yeni bir anahtarı meşru bir cüzdan sahibi olarak yetkilendirebilir. Bu, güvenilir kişiler, donanım cüzdanları veya üçüncü taraf hizmetleri aracılığıyla çeşitli kurtarma yöntemlerini içerebilir. Buradaki fikir, hesabınıza erişimi kurtarmayı, bir e-posta yoluyla banka hesabı şifrenizi kurtarmak kadar kolay hale getirmektir.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Çok Faktörlü Kimlik Doğrulama:**Yaygın Web2 2FA uygulamalarına benzer şekilde, kullanıcılar kripto cüzdanları için iki (veya daha fazla) kimlik doğrulama yöntemi ayarlayabilirler; burada bir işlem yalnızca bir kullanıcı e-posta veya SMS gibi ikinci bir seçenek aracılığıyla onayı onayladığında imzalanır. Kullanıcılar ayrıca cüzdanın otomatik olarak etkileşime girmesi engellenen günlük transfer limitleri veya hesap adresleri listesi ayarlayabilir.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Kuantuma Dayanıklı ve Gaz Verimli İmzalar:**Ethereum'un mevcut imza şeması ECDSA, hesaplama açısından kapsamlıdır (okuma: daha yüksek gaz ücretleri) ve kuantum bilgisayarlar tarafından kırılabilir. İmza soyutlama yoluyla, farklı hesap sözleşmeleri daha verimli ve kuantum açısından güvenli imza şemaları kullanır. StarkNet, kendi tescilli STARK dostu eğrisini kullanır.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Bu özellikler kullanıcılara yalnızca daha fazla güvenlik ve esneklik sağlamakla kalmaz, daha da önemlisi,**daha iyi**kullanıcı deneyimi sağlar.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Vitalik Buterin tarafından Ethereum geliştirici topluluğu için "uzun süredir devam eden bir rüya" olarak listelenen hesap soyutlama konusundaki yenilikler, özellikle EIP-2938 ve EIP-3074, 2020'den bu yana hızla arttı. Ancak, her ikisi de güvenlik ve uygulama konusunda tavizler gerektiriyordu. Şimdiye kadarki en umut verici gelişme olan [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), Ethereum protokolünde değişiklik gerektirmeden bir hesap soyutlama sürümü önermektedir.
 
-### **Account abstraction and Starknet**
+### **Hesap soyutlama ve Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Hesap soyutlamasını desteklemek için mevcut protokollerini güçlendiren Bitcoin ve Ethereum'un aksine,[StarkNet](https://starkware.co/starknet/)ilk günden beri hesap soyutlamayı uygulamıştır. STARK kanıtlarımızın ölçeklenebilirliği ve yetenekleriyle birleştiğinde, cüzdan yeniliği potansiyeli sınırsızdır. Bu nedenle, Argent ve Braavos gibi yeni nesil kişisel cüzdanlar şu anda ağımızın üzerinde inşa ediliyor.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+StarkNet'in yaklaşımı EIP-4337'ye benzer,[,](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)tam hesap soyutlamanın yine de UX'in kafa karıştırıcı olmasına neden olacağını ve[sıralayıcılara saldırılara kapı](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)açabileceğini kabul ediyor. Bunun yerine, gerekli zincir içi ve zincir dışı altyapının bir kısmını karşılıklı hale getirerek hem imza soyutlamayı hem de ödeme soyutlamasını gerçekleştirmeyi amaçlar.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+Hâlâ yapılacak çok iş varken, hesap soyutlama, kripto yerlilerinden oluşan küçük bir çevrenin ötesinde ilgi görüyor. Aralık ayında[Visa, StarkNet'te otomatik yinelenen ödemeleri ayarlamak için hesap soyutlamayı kullanma fikrini](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)önerdi. Kullanıcılar, devredilebilir bir hesap kullanarak, önceden onaylanmış bir akıllı sözleşmeye ödeme başlatma izni verebilir. Buradan akıllı sözleşme, belirli bir günde, belirli bir süre boyunca belirli bir ödeme tutarını düşecek şekilde programlanacaktır. Visa henüz kendi hizmetlerine yönelik planlarını açıklamamış olsa da, ilgi tek başına çok şey ifade ediyor ve Netflix ve Spotify gibi büyük teknoloji abonelik platformlarının kripto benimsemeyi kucaklayabileceği bir dünyanın habercisi olabilir.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Geleceğin ne getireceğine gelince, sadece zaman gösterecek. Ama bir şey kesindir. Hesap soyutlama, cüzdanların kullanımını daha kolay ve güvenli hale getirerek, kendi kendini koruyan blockchain cüzdanlarının milyonlarca ana akım kripto kullanıcısına ölçeklenmesi için güçlü bir katalizör görevi görecek. Bu arada inşaata devam edeceğiz.

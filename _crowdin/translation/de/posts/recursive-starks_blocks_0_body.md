@@ -22,7 +22,7 @@ Im Juni 2020 wurde die erste STARK-basierte Skalierungslösung –[StarkEx](http
 
 #### Cairo
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Kairo steht für CPU Algebraic Intermediate Representation (AIR) und enthält eine einzige AIR, die den Befehlssatz dieser „CPU“ überprüft. Es öffnete die Tür für Codierungsfahnen für komplexere Geschäftslogik, für beliebige Rechenanweisungen, und dafür auf schnellere und sicherere Weise. Ein Kairoer Programm kann die Ausführung der Logik einer einzelnen Anwendung beweisen. Aber ein Kairoer Programm kann auch eine Verkettung mehrerer solcher Anwendungen sein – SHARP.
+Im Sommer 2020 erschien Cairo zum[Mal im Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Kairo steht für CPU Algebraic Intermediate Representation (AIR) und enthält eine einzige AIR, die den Befehlssatz dieser „CPU“ überprüft. Es öffnete die Tür für Codierungsfahnen für komplexere Geschäftslogik, für beliebige Rechenanweisungen, und dafür auf schnellere und sicherere Weise. Ein Kairoer Programm kann die Ausführung der Logik einer einzelnen Anwendung beweisen. Aber ein Kairoer Programm kann auch eine Verkettung mehrerer solcher Anwendungen sein – SHARP.
 
 #### SHARP
 
@@ -42,7 +42,7 @@ Bei STARK-Proofs dauert die Zeit für den Nachweis einer Anweisung grob linear m
 
 [Kairo](https://starkware.co/cairo/)erlaubt das Ausdrücken allgemeiner Rechenanweisungen, die von STARK-Proofs nachgewiesen und von den entsprechenden STARK-Prüfern überprüft werden können.
 
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. Wir können einen einzigen Nachweis erstellen, der die Gültigkeit mehrerer „Upstream“-Beweise bestätigt. Das nennen wir Rekursive Proving.
+Hier setzt die Möglichkeit ein,[Rekursion](https://en.wikipedia.org/wiki/Recursion)durchzuführen: So wie wir ein Cairo-Programm schreiben, das die Korrektheit von Tausenden von Transaktionen beweist, können wir auch ein Cairo-Programm schreiben, das mehrere STARK-Beweise verifiziert. Wir können einen einzigen Nachweis erstellen, der die Gültigkeit mehrerer „Upstream“-Beweise bestätigt. Das nennen wir Rekursive Proving.
 
 Wegen der logarithmischen Komprimierung und grob linearer Probezeit Der Nachweis eines STARK-Nachweises dauert relativ kurze Zeit (in naher Zukunft nur wenige Minuten).
 

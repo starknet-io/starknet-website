@@ -1,1 +1,1 @@
-The state is composed of contracts’ code and contracts’ storage.
+המדינה מורכבת מקוד חוזים ומאחסון חוזים.

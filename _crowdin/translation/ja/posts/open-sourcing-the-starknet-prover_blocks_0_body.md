@@ -14,7 +14,7 @@
 
 Starknet Alphaは2021年11月にMainnetで発売されました。 Starknetの最初から、それはコミュニティが所有するネットワークとして想定されていました。 そして、STARKスケーリングのパワーの恩恵を受けることができます。 Mainnetでローンチして1年後、Starknetのスタック全体をオープンソースにするのが正しい時期でした。
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Starknet Prover を Apache 2.0 以下に置くと、オープンソースプロセスは完了します。 これはStarknetの分散化の最終段階に向けて起こります。
+すでにオープンソース化されている要素には[[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)、および新しい StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003)が含まれます。 Starknet Prover を Apache 2.0 以下に置くと、オープンソースプロセスは完了します。 これはStarknetの分散化の最終段階に向けて起こります。
 
 ### Starknet証明書のオープンソースの重要性
 

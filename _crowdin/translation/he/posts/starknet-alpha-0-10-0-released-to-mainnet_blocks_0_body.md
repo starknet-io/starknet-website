@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* שיפורים בהפשטת חשבון ברוח EIP-4337
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. אימות - בצע הפרדה
+2. הייחודיות של העסקה מובטחת כעת בפרוטוקול (Nonce)
 
-* The fee mechanism is extended to include:
+* מנגנון העמלות מורחב כך שיכלול:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 הודעות
+2. הצהר על עסקאות
 
-* Few Cairo syntax changes
+* מעט שינויים בתחביר קהיר
 
-### Intro
+### הקדמה
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+אנו נרגשים להציג את StarkNet Alpha 0.10.0. גרסה זו היא צעד נוסף לקראת קנה המידה של Ethereum מבלי להתפשר על אבטחה וביזור.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+פוסט זה בבלוג מתאר בקצרה את המאפיינים העיקריים של גרסה זו. לרשימת השינויים המלאה, עיין ב[הערות המהדורה](https://github.com/starkware-libs/cairo-lang/releases). למידע מפורט יותר, עיין בתיעוד[](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### שינויים בהפשטת חשבון
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+אנו מתקדמים עם[הפשטת החשבון של StarkNet](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). גרסה זו מציגה שינויים בהשראת[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
-#### Validate/Execute Separation
+#### אימות/ביצוע הפרדה
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+עד כה, הפונקציה \_\_execute\_\_ של החשבון הייתה אחראית הן לאימות העסקה והן לביצוע. ב-0.10.0 אנו מפרקים את הצימוד הזה ומכניסים לחשבונות פונקציה נפרדת \_\_validate\_\_. לאחר קבלת עסקה, חוזה החשבון יקרא תחילה \_\_validate\_\_, ולאחר מכן, אם יצליח, המשך ל-\_\_execute\_\_.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+ההפרדה לאמת/ביצוע מספקת הבחנה ברמת הפרוטוקול בין עסקאות לא חוקיות לטרנזקציות שהוחזרו (עדיין תקפות). הודות לכך, הסיקוונסרים יוכלו לגבות עמלות עבור ביצוע עסקה תקפה ללא קשר לשאלה אם היא הוחזרה או לא.
 
-#### Nonce
+#### לא
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+בגרסה 0.10.0 מתווסף שדה nonce על מנת לאכוף ייחודיות עסקה ברמת הפרוטוקול. עד כה איסורים טופלו ברמת חוזה החשבון, מה שאומר שניתן לבצע עסקה עם אותו hash פעמיים באופן תיאורטי.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+בדומה ל-Ethereum, כל חוזה כולל כעת ביטול, הסופר את מספר העסקאות שבוצעו מחשבון זה. חוזי חשבון יקבלו רק עסקאות עם אי התאמה תואמת, כלומר, אם האי נוכחי של החשבון הוא X, אז הוא יקבל רק עסקאות עם nonce X.
 
-#### New Transaction Version
+#### גרסת עסקה חדשה
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+כדי לאפשר תאימות לאחור, נציג את שני השינויים הללו באמצעות גרסת עסקה חדשה -[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). שינויים אלה יחולו רק על הגרסה החדשה, וחשבונות ישנים יותר עדיין יוכלו לבצע עסקאות בגרסה 0.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+הערה - טרנזקציה v0 הוצאה משימוש והיא תוסר ב-StarkNet Alpha v0.11.0. אנא הקפד לשדרג לשימוש בגרסת העסקאות החדשה.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+למידע מפורט יותר על גרסת העסקה, אנא קרא את התיעוד[](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### מנגנון עמלות
 
-The new version allows to include fees for two required components:
+הגרסה החדשה מאפשרת לכלול עמלות עבור שני רכיבים נדרשים:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [הודעה L1→L2](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [להצהיר על עסקה](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+עמלות אלו לא יהיו חובה בגרסה זו וייאכפו רק החל מ-StarkNet Alpha v0.11.0.
 
-#### Cairo Syntax Changes
+#### שינויים בתחביר קהיר
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+לטובת התקדמות הדרגתית לקראת שדרוג של קהיר,[Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), גרסה זו כוללת מספר שינויים תחביר.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+כדי למזער את אי הנוחות, מהדורת הגרסה תכלול סקריפט העברה[](https://www.youtube.com/watch?v=kXs59zaQrsc)המחיל באופן אוטומטי את השינויים שלעיל. אתה יכול למצוא פרטים נוספים[כאן](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### מה הלאה?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* בעוד מספר שבועות, אנו מתכננים להכניס מקבילות לרצף, המאפשר ייצור בלוק מהיר יותר (V0.10.1)
+* בקרוב נשלים את החלק האחרון שיש לכלול בתשלום העמלה - פריסת חשבון
+* שחרור קהיר 1.0! מידע נוסף על כך בפוסט הקרוב.
 
-### How Can I Be More Engaged?
+### איך אוכל להיות מעורב יותר?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* עבור אל[starknet.io](https://starknet.io/)לקבלת כל המידע, התיעוד, ההדרכות והעדכונים של StarkNet.
+* הצטרף ל[StarkNet Discord](http://starknet.io/discord)לתמיכה במפתחים, הכרזות של מערכות אקולוגיות והפיכה לחלק מהקהילה.
+* בקר ב[StarkNet Forum](http://community.starknet.io/)כדי להישאר מעודכן ולהשתתף בדיוני מחקר של StarkNet.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+אנו תמיד שמחים לקבל משוב על התיעוד[שלנו](https://docs.starknet.io/)!

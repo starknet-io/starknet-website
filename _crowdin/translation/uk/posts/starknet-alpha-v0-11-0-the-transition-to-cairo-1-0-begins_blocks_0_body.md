@@ -84,7 +84,7 @@ Starknet alpha 0.11.0 використовуватиметься[Каїр 1.0-al
 
 [Poseidon](https://www.poseidon-hash.info/)— це сім'я геш-функцій, розроблена для створення дуже ефективних алгебраїчних схем. Таким чином, вони можуть бути дуже корисними для систем доведення ZK, таких як Контрагенти і SNARK. Станом на адресу Starknet-альфа v0.11.0, розробники зможуть використовувати Poseidon. Крім того, деякі хеш-розрахунки, які є частиною протоколу Starknet, будуть переходити до Poseidon (зокрема, хеша класу, скомпільований клас хеш і частини вашого занять будуть використовувати Poseidon, див.[документацію](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash)для більш докладної інформації). В майбутньому, більше внутрішніх компонентів перейдуть до використання функції хешування Poseidon.
 
-The exact version and parameters that are used in Starknet can be found [here](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
+Точну версію та параметри, які використовуються в Starknet, можна знайти[тут](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
 
 ### Інші зміни
 

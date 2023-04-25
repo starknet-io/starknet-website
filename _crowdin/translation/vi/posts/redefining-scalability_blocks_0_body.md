@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+Khả năng mở rộng chuỗi khối luôn là một chủ đề nóng. Gần như mọi mạng blockchain đều chào mời số lượng giao dịch mỗi giây (TPS) cao như một điểm bán hàng. Tuy nhiên, TPS không phải là thước đo hợp lệ để so sánh các mạng blockchain với — khiến việc đánh giá hiệu suất tương đối của chúng trở thành một thách thức. Hơn nữa, số lượng TPS lớn thường phải trả giá — điều này đặt ra câu hỏi: các mạng này có thực sự mở rộng quy mô hay chúng chỉ tăng thông lượng?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Vì vậy, hãy xem xét cách xác định khả năng mở rộng, sự cân bằng nào được thực hiện để đạt được nó và tại sao Bản tổng hợp hiệu lực là giải pháp khả năng mở rộng cuối cùng.
 
-### Not all Transactions are Made Equal
+### Không phải tất cả các giao dịch đều được thực hiện bình đẳng
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+Đầu tiên, chúng ta cần thiết lập khẳng định của mình rằng số liệu đơn giản và thuận tiện của TPS không phải là thước đo chính xác về khả năng mở rộng.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+Để đền bù cho các nút thực hiện giao dịch (và để ngăn chặn người dùng spam mạng bằng tính toán không cần thiết), các chuỗi khối tính phí tỷ lệ thuận với gánh nặng tính toán áp dụng cho chuỗi khối. Trong Ethereum, độ phức tạp của gánh nặng tính toán được đo bằng*gas.*Bởi vì gas là một thước đo rất thuận tiện về độ phức tạp của giao dịch, thuật ngữ này sẽ được sử dụng trong suốt bài viết này cho cả các chuỗi khối không phải Ethereum, mặc dù nó thường dành riêng cho Ethereum.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+Các giao dịch khác nhau đáng kể về độ phức tạp và do đó, chúng tiêu thụ bao nhiêu gas. Bitcoin, đồng tiền tiên phong của các giao dịch ngang hàng không tin cậy, chỉ hỗ trợ tập lệnh Bitcoin thô sơ. Những lần chuyển đơn giản này từ địa chỉ này sang địa chỉ khác sử dụng ít gas. Ngược lại, các chuỗi hợp đồng thông minh như Ethereum hoặc Solana hỗ trợ một máy ảo và các ngôn ngữ lập trình hoàn chỉnh Turing cho phép thực hiện các giao dịch phức tạp hơn nhiều. Do đó, các dApp như Uniswap cần nhiều gas hơn.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+Đây là lý do tại sao không có ý nghĩa gì khi so sánh TPS của các chuỗi khối khác nhau. Thay vào đó, những gì chúng ta nên so sánh là khả năng tính toán — hoặc thông lượng.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Tất cả các Chuỗi khối đều có kích thước khối (có thể thay đổi) và thời gian tạo khối để xác định số lượng*đơn vị tính toán*có thể được xử lý trên mỗi khối và tốc độ**một khối mới có thể được thêm vào. Cùng với nhau, hai biến này xác định*thông lượng*của một chuỗi khối.
 
-### What Constrains Scalability?
+### Điều gì hạn chế khả năng mở rộng?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+Các chuỗi khối cố gắng trở thành các mạng toàn diện, phi tập trung tối đa. Để đạt được điều này, hai thuộc tính cơ bản phải được kiểm tra.
 
-#### **1. Hardware Requirements**
+#### **1. yêu cầu phần cứng**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+Sự phân cấp của mạng chuỗi khối được xác định bởi khả năng của nút yếu nhất trong mạng để xác minh chuỗi khối và giữ trạng thái của nó. Do đó, chi phí để chạy một nút (phần cứng, băng thông và lưu trữ) nên được giữ ở mức thấp nhất có thể để cho phép càng nhiều cá nhân càng tốt trở thành người tham gia không được phép trong mạng không tin cậy.
 
-#### 2**.** State Growth
+#### 2**.**Tăng trưởng Nhà nước
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Tăng trưởng trạng thái đề cập đến việc blockchain phát triển nhanh như thế nào. Thông lượng mà một chuỗi khối cho phép xảy ra trên mỗi đơn vị thời gian càng nhiều thì chuỗi khối đó càng phát triển nhanh hơn. Các nút đầy đủ lưu trữ lịch sử của mạng và chúng phải có khả năng xác thực trạng thái của mạng. Trạng thái của Ethereum được lưu trữ và tham chiếu bằng cách sử dụng các cấu trúc hiệu quả như cây cối. Khi trạng thái phát triển, các lá và nhánh mới được thêm vào nó, khiến việc thực hiện một số hành động nhất định trở nên phức tạp và tốn thời gian hơn bao giờ hết. Khi chuỗi phát triển về quy mô, nó sẽ làm xấu đi khả năng thực thi trong trường hợp xấu nhất của các nút, dẫn đến thời gian xác thực các khối mới ngày càng dài. Theo thời gian, điều này cũng làm tăng tổng thời gian cần thiết để một nút đầy đủ đồng bộ hóa.
 
-### Detrimental Impacts of Increasing Throughput
+### Tác động bất lợi của việc tăng thông lượng
 
-#### 1. Node Count
+#### 1. Đếm nút
 
-The minimum requirements to run a node and node counts are:
+Các yêu cầu tối thiểu để chạy một nút và số lượng nút là:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin¹: Dung lượng ổ cứng 350 GB, kết nối 5 Mbit/s, RAM 1 GB, CPU >1 Ghz. **Số nút: ~10.000**
+* Ethereum²: Dung lượng đĩa SSD 500GB+, kết nối 25 Mbit/s, RAM 4–8GB, CPU 2–4 lõi. **Số nút: ~6.000**
+* Solana³: Dung lượng đĩa 1,5TB+ SSD, kết nối 300 Mbit/s, RAM 128GB CPU 12+ lõi. **Số nút: ~1.200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Lưu ý rằng các yêu cầu về CPU, băng thông và lưu trữ đối với các nút cần thiết cho thông lượng của chuỗi khối càng lớn thì càng có ít nút trên mạng — dẫn đến khả năng phân cấp yếu hơn và mạng ít toàn diện hơn.
 
-#### 2. Time to Sync a Full Node
+#### 2. Đã đến lúc đồng bộ hóa một nút đầy đủ
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Khi chạy một nút lần đầu tiên, nó phải đồng bộ hóa với tất cả các nút hiện có, tải xuống và xác thực, trạng thái của mạng từ khối gốc đến đầu chuỗi. Quá trình này phải nhanh và hiệu quả nhất có thể để cho phép bất kỳ ai đóng vai trò là người tham gia giao thức mà không được phép.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Lấy[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)và[2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/)của Jameson Lopp làm chỉ báo, Bảng 1 so sánh thời gian cần thiết để đồng bộ hóa một nút đầy đủ của Bitcoin so với Ethereum so với Solana trên PC cấp người tiêu dùng trung bình.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Bảng 1. So sánh thông lượng chuỗi khối và đồng bộ hóa nút](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Bảng 1. So sánh thông lượng chuỗi khối và đồng bộ hóa nút")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Bảng 1 chứng minh rằng việc tăng thông lượng dẫn đến thời gian đồng bộ hóa lâu hơn vì ngày càng nhiều dữ liệu cần được xử lý và lưu trữ.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Mặc dù các cải tiến đối với phần mềm nút liên tục được thực hiện để giảm thiểu thách thức của chuỗi khối đang phát triển (giảm dung lượng đĩa, tốc độ đồng bộ hóa nhanh hơn, khả năng phục hồi sự cố mạnh hơn, mô đun hóa một số thành phần, v.v.), các nút rõ ràng vẫn không thể theo kịp tốc độ tăng đến thông lượng.
 
-### How Should Scalability be defined?
+### Khả năng mở rộng nên được xác định như thế nào?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+Khả năng mở rộng là thuật ngữ bị xuyên tạc nhiều nhất trong không gian chuỗi khối. Mặc dù việc tăng thông lượng là mong muốn, nhưng đó chỉ là một phần của bài toán.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***Khả năng mở rộng**có nghĩa là có thêm**giao dịch**cho**phần cứng giống nhau**.*
 
-For that reason, scalability can be separated into two categories.
+Vì lý do đó, khả năng mở rộng có thể được chia thành hai loại.
 
-#### Sequencer scalability
+#### khả năng mở rộng trình tự
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+Trình tự mô tả hành động đặt hàng và xử lý các giao dịch trong mạng. Như đã được thiết lập trước đây, bất kỳ chuỗi khối nào cũng có thể tăng thông lượng của nó một cách đáng kể bằng cách tăng kích thước khối và rút ngắn thời gian tạo khối của nó — cho đến khi tác động tiêu cực đến sự phân cấp của nó được coi là quá đáng kể. Tuy nhiên, việc điều chỉnh các tham số đơn giản này không mang lại những cải tiến cần thiết. Về lý thuyết, EVM của Ethereum có thể[xử lý tới ~2.000 TPS](https://twitter.com/dankrad/status/1459607325854121989), không đủ để phục vụ nhu cầu không gian khối dài hạn. Để mở rộng quy mô trình tự, Solana đã thực hiện một số đổi mới ấn tượng: tận dụng môi trường thực thi có thể song song hóa và cơ chế đồng thuận thông minh, cho phép thông lượng hiệu quả hơn nhiều. Tuy nhiên, bất chấp những cải tiến của nó, nó không đủ và cũng không thể mở rộng. Khi Solana tăng thông lượng, chi phí phần cứng để chạy một nút và xử lý các giao dịch cũng tăng lên.
 
-#### Verification scalability
+#### khả năng mở rộng xác minh
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*Khả năng mở rộng xác minh mô tả các phương pháp giúp tăng thông lượng mà không gây gánh nặng cho các nút với chi phí phần cứng ngày càng tăng.*Cụ thể, nó đề cập đến những đổi mới về mật mã như Bằng chứng về tính hợp lệ. Chúng là lý do tại sao Bản tổng hợp hiệu lực có thể mở rộng quy mô chuỗi khối một cách bền vững.
 
-**What’s a Validity Rollup?**
+**Rollup hiệu lực là gì?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+Bản tổng hợp hiệu lực (còn được gọi là “ZK-Rollups”) di chuyển tính toán và lưu trữ trạng thái ngoài chuỗi nhưng giữ một lượng nhỏ dữ liệu nhất định trên chuỗi. Một hợp đồng thông minh trên chuỗi khối cơ bản duy trì trạng thái gốc của Rollup. Trong Rollup, một loạt các giao dịch được nén ở mức độ cao, cùng với trạng thái gốc hiện tại, được gửi đến một Prover ngoài chuỗi. Prover tính toán các giao dịch, tạo bằng chứng hợp lệ của kết quả và gốc trạng thái mới, đồng thời gửi nó đến Trình xác minh trên chuỗi. Người xác minh xác minh bằng chứng hợp lệ và hợp đồng thông minh duy trì trạng thái của Rollup sẽ cập nhật nó sang trạng thái mới do Người chứng minh cung cấp.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**Làm thế nào để các Rollup hợp lệ mở rộng quy mô với cùng yêu cầu phần cứng?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+Mặc dù các Prover yêu cầu phần cứng cao cấp, nhưng chúng không ảnh hưởng đến tính phi tập trung của chuỗi khối; bởi vì tính hợp lệ của các giao dịch được đảm bảo bằng các bằng chứng có thể kiểm chứng về mặt toán học.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Điều quan trọng là các yêu cầu để xác minh bằng chứng. Do dữ liệu liên quan được nén ở mức độ cao và phần lớn được trừu tượng hóa thông qua tính toán nên tác động của nó đối với các nút của chuỗi khối cơ bản là tối thiểu*.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+Trình xác minh (các nút Ethereum) không yêu cầu phần cứng cao cấp và kích thước của lô không làm tăng yêu cầu phần cứng. Chỉ các chuyển đổi trạng thái và một lượng nhỏ dữ liệu cuộc gọi cần được xử lý và lưu trữ bởi các nút. Điều này cho phép tất cả các nút Ethereum xác minh các đợt Rollup hợp lệ bằng phần cứng hiện có của chúng.
 
-**The more transactions, the cheaper it gets**
+**Giao dịch càng nhiều càng rẻ**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+Trong các chuỗi khối truyền thống, càng nhiều giao dịch xảy ra, mọi người càng tốn kém hơn khi không gian khối được lấp đầy — và người dùng cần trả giá cao hơn nhau trong một thị trường phí để có được các giao dịch của họ.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+Đối với Tổng số hiệu lực, động này bị đảo ngược. Xác minh một loạt giao dịch trên Ethereum có một chi phí nhất định. Khi số lượng giao dịch trong một đợt tăng lên, chi phí để xác minh lô đó tăng với tốc độ chậm hơn theo cấp số nhân. Việc thêm nhiều giao dịch hơn vào một lô dẫn đến phí giao dịch rẻ hơn mặc dù chi phí xác minh lô tăng lên — bởi vì nó được phân bổ dần trong số tất cả các giao dịch trong lô. Tổng số hiệu lực muốn có càng nhiều giao dịch càng tốt trong một đợt — để phí xác minh có thể được chia sẻ giữa tất cả người dùng. Khi kích thước lô tăng lên vô hạn, phí khấu hao trên mỗi giao dịch hội tụ về 0, nghĩa là càng nhiều giao dịch trên một Rollup hiệu lực, nó càng rẻ cho mọi người.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX, một dApp được cung cấp bởi Bản tổng hợp hiệu lực, thường thấy kích thước lô trên 12.000 giao dịch. So sánh mức tiêu thụ gas của cùng một giao dịch trên Mainnet so với trên Rollup hiệu lực minh họa lợi ích về khả năng mở rộng:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+Giải quyết giao dịch dYdX trên Ethereum Mainnet:**200.000 gas**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+Giải quyết giao dịch dYdX trên StarkEx:**<500 gas**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+Một cách khác để xem xét: Chi phí chính của Rollup hiệu lực tỷ lệ tuyến tính với số lượng người dùng trong cùng một đợt.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### Tại sao Bản tổng hợp lạc quan không có khả năng mở rộng như người ta có thể nghĩ
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+Về lý thuyết, Tổng số lạc quan cung cấp các lợi ích về khả năng mở rộng gần giống như Tổng số hợp lệ. Nhưng có một điểm khác biệt quan trọng: Tổng số lạc quan tối ưu hóa cho trường hợp trung bình, trong khi Tổng số hiệu lực tối ưu hóa cho trường hợp xấu nhất. Bởi vì các hệ thống chuỗi khối hoạt động trong các điều kiện cực kỳ bất lợi, tối ưu hóa cho trường hợp xấu nhất là cách duy nhất để đạt được bảo mật.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+Trong trường hợp xấu nhất của Bản tổng hợp lạc quan, các giao dịch của người dùng sẽ không được kiểm tra bởi những người kiểm tra gian lận. Vì vậy, để chống gian lận, người dùng phải đồng bộ hóa nút đầy đủ Ethereum, nút đầy đủ L2 và tự tính toán giao dịch đáng ngờ.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+Trong trường hợp xấu nhất của Rollup hợp lệ, người dùng chỉ cần đồng bộ hóa một nút đầy đủ của Ethereum để xác minh bằng chứng hợp lệ, tiết kiệm cho họ gánh nặng tính toán.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+Trái ngược với Rollup hợp lệ, chi phí của Rollup lạc quan tỷ lệ tuyến tính với số lượng giao dịch thay vì số lượng người dùng, khiến chúng đắt hơn.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### Mảnh ghép cuối cùng — Truy cập không cần cấp phép vào trạng thái Rollup
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+Để đảm bảo tính hợp lệ của các giao dịch, người dùng chỉ cần chạy một nút Ethereum. Tuy nhiên, người dùng và nhà phát triển có thể muốn xem và chạy trạng thái cũng như quá trình thực thi Tổng số cho các mục đích khác nhau. Nút L2 lập chỉ mục**đáp ứng nhu cầu này một cách hoàn hảo. Nó không chỉ cho phép người dùng xem các giao dịch trong mạng mà còn là một phần cơ sở hạ tầng quan trọng cần thiết để cơ sở hạ tầng hệ sinh thái hoạt động. Những người lập chỉ mục như The Graph, Alchemy, Infura; Các mạng của Oracle như Chainlink và trình khám phá khối, tất cả những mạng này đều được hỗ trợ đầy đủ bởi một nút L2 lập chỉ mục, không được phép.
 
-### Conclusion
+### Phần kết luận
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+Nhiều cách tiếp cận để giải quyết khả năng mở rộng của chuỗi khối tập trung sai vào việc tăng thông lượng**. Tuy nhiên, điều này bỏ qua tác động của thông lượng đối với các nút: yêu cầu phần cứng ngày càng tăng để xử lý các khối và lưu trữ lịch sử mạng cũng như cách điều đó ngăn cản sự phân cấp của mạng.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Với sự ra đời của mật mã chứng minh tính hợp lệ, một chuỗi khối có thể đạt được**khả năng mở rộng thực sự**mà không gây gánh nặng cho các nút với chi phí ngày càng tăng và cho phép phân cấp rộng rãi. Giờ đây, có thể thực hiện nhiều giao dịch hơn với các tính toán mạnh mẽ và phức tạp hơn cho cùng một phần cứng, đảo ngược tình thế tiến thoái lưỡng nan của thị trường phí trong quy trình — càng nhiều hoạt động trên Bản tổng hợp hiệu lực thì càng rẻ!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)và[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+¹ Từ<https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+² Từ<https://ethereum.org/en/developers/docs/nodes-and-clients/>
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+³ Từ<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+⁴ Được đơn giản hóa và điều chỉnh mạnh mẽ cho các kích thước khối động trung bình

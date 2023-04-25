@@ -1,1 +1,1 @@
-A separate process (either an online service or internal to the node) that receives the output of Cairo programs and generates STARK proofs to be verified. The Prover submits the STARK proof to the verifier that registers the fact on L1.
+Egy külön folyamat (akár online szolgáltatás, akár belső a csomóponton), amely fogadja a kairói programok kimenetét, és STARK-bizonyítékokat állít elő, amelyeket ellenőrizni kell. A Prover benyújtja a STARK igazolást annak az ellenőrzőnek, aki a tényt az L1-en regisztrálja.

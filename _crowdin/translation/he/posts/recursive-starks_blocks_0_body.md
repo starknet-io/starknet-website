@@ -1,118 +1,118 @@
 ### TL;DR
 
-* Recursive Proving is live on Mainnet, scaling StarkEx apps as well as StarkNet with a single proof
-* It boosts scale, and delivers benefit in cost, and latency (a rare and exciting occurrence of scale and latency moving in tandem, and not being a tradeoff)
-* It sets the stage for L3 and other benefitsGo read the blog post on [Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). It’s cool stuff 😉
+* הוכחה רקורסיבית פעילה ב-Mainnet, ומרחיבה את אפליקציות StarkEx כמו גם StarkNet עם הוכחה אחת
+* זה מגביר את קנה המידה, ומספק תועלת בעלות ובהשהיה (אירוע נדיר ומרגש של קנה מידה והשהייה נעים במקביל, ואינם מהווה פשרה)
+* זה מכין את הבמה ל-L3 והטבות אחרות. קרא את הפוסט בבלוג ב[Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). זה דברים מגניבים 😉
 
-### Scaling up!
+### מתגבר!
 
-Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof.
+הוכחות רקורסיביות - המופעלות על ידי החישוב הכללי של קהיר - נמצאות כעת בייצור. זה מסמן דחיפה משמעותית לעוצמת קנה המידה של L2 עם STARKs. זה יספק במהירות גידול פי שניים במספר העסקאות שניתן לכתוב ל-Ethereum באמצעות הוכחה אחת.
 
-Until now, STARK scaling has worked by “rolling up” tens or even hundreds of thousands of transactions into a single proof, which was written to Ethereum. With recursion, many such proofs can be “rolled up” into a single proof.
+עד כה, קנה המידה של STARK עבד על ידי "גלגול" של עשרות או אפילו מאות אלפי עסקאות להוכחה אחת, שנכתבה ל-Ethereum. בעזרת רקורסיה, ניתן "לגלגל" הוכחות רבות כאלה להוכחה אחת.
 
-This method is now in production for a multitude of Cairo-based applications: apps running on StarkEx, StarkWare’s SaaS scaling engine, and StarkNet, the permissionless rollup.
+שיטה זו נמצאת כעת בייצור עבור מספר רב של יישומים מבוססי קהיר: אפליקציות הפועלות על StarkEx, מנוע קנה המידה של SaaS של StarkWare ו-StarkNet, האוסף חסר ההרשאות.
 
-### The story so far
+### הסיפור עד כה
 
-Since the first proof on Mainnet, in March 2020, the following developments have shaped how STARKs are used.
+מאז ההוכחה הראשונה ב-Mainnet, במרץ 2020, ההתפתחויות הבאות עיצבו את אופן השימוש ב-STARKs.
 
-### STARK-based scaling
+### קנה מידה מבוסס STARK
 
-In June 2020 the first STARK-based scaling solution — [StarkEx](https://youtu.be/P-qoPVoneQA) — was deployed on Ethereum Mainnet. StarkEx has a Prover that performs large computations off-chain and produces a STARK-proof for their correctness, and a Verifier that verifies this proof on-chain. The constraints for this first deployment were “hand-written” by StarkWare’s engineers, thus greatly limiting feature velocity for StarkEx. We concluded that a programming language to support proving general computation is needed — Cairo.
+ביוני 2020 פתרון קנה המידה הראשון מבוסס STARK -[StarkEx](https://youtu.be/P-qoPVoneQA)- נפרס על Ethereum Mainnet. ל-StarkEx יש Prover שמבצע חישובים גדולים מחוץ לשרשרת ומייצר הוכחת STARK לנכונותם, ו-Verifier שמאמת את ההוכחה הזו על-שרשרת. האילוצים לפריסה ראשונה זו נכתבו בכתב יד על ידי המהנדסים של StarkWare, ובכך הגבילו מאוד את מהירות התכונה עבור StarkEx. הגענו למסקנה שיש צורך בשפת תכנות שתתמוך בהוכחת חישוב כללי - קהיר.
 
-#### Cairo
+#### קהיר
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo stands for CPU Algebraic Intermediate Representation (AIR), and includes a single AIR that verifies the instruction set of this “CPU”. It opened up the door for coding proofs for more complex business logic, for arbitrary computational statements, and for doing so in a faster and safer manner. A Cairo program can prove the execution of a single application’s logic. But a Cairo program can also be a concatenation of multiple such applications — SHARP.
+בקיץ 2020 קהיר הופיעה[ב-Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). קהיר מייצג CPU Algebraic Intermediate Representation (AIR), וכולל AIR יחיד המאמת את ערכת ההוראות של "CPU" זה. זה פתח את הדלת לקידוד הוכחות ללוגיקה עסקית מורכבת יותר, להצהרות חישוביות שרירותיות ולעשות זאת בצורה מהירה ובטוחה יותר. תוכנית קהיר יכולה להוכיח את ביצוע ההיגיון של יישום יחיד. אבל תוכנית קהיר יכולה להיות גם שרשור של מספר יישומים כאלה - SHARP.
 
-#### SHARP
+#### חַד
 
-SHARP — a SHARed Prover — takes transactions from several separate apps, and proves them all in one single STARK-proof. Apps combine their batches of transactions, filling up the capacity of a STARK-proofs faster. Transactions are processed at an improved rate and latency. The next frontier: Recursive Proofs, but not merely for some hard-coded logic, but rather for **general computation**.
+SHARP - SHARed Prover - לוקח עסקאות מכמה אפליקציות נפרדות, ומוכיח את כולן בהוכחת STARK אחת. אפליקציות משלבות את קבוצות העסקאות שלהן, וממלאות את הקיבולת של הוכחות STARK מהר יותר. עסקאות מעובדות בקצב משופר ובאיחור. הגבול הבא: הוכחות רקורסיביות, אבל לא רק עבור לוגיקה מקודדת קשה, אלא עבור**חישוב כללי**.
 
-To understand the full benefit of Recursive Proving it is worth understanding a little bit more about how (non-recursive) proving was performed by SHARP up until now. Drawing 1 depicts a typical non-recursive flow:
+כדי להבין את התועלת המלאה של הוכחה רקורסיבית, כדאי להבין קצת יותר כיצד הוכחה (לא רקורסיבית) בוצעה על ידי SHARP עד כה. ציור 1 מתאר זרימה טיפוסית לא רקורסיבית:
 
-![Drawing 1: A typical non-recursive proving flow](/assets/recursive_starks_01.png "Drawing 1: A typical non-recursive proving flow")
+![ציור 1: זרימת הוכחה אופיינית לא רקורסיבית](/assets/recursive_starks_01.png "ציור 1: זרימת הוכחה אופיינית לא רקורסיבית")
 
-Here, statements arrive over time. When a certain capacity (or time) threshold is reached, a large combined statement (a.k.a Train) is generated. This combined statement is proven only once all the individual statements have been received. This proof takes a long time to prove (roughly the sum of time it takes to prove each statement individually).
+כאן מגיעות הצהרות עם הזמן. כאשר מגיעים לסף קיבולת (או זמן) מסוים, נוצרת הצהרה משולבת גדולה (המכונה גם Train). הצהרה משולבת זו מוכחת רק לאחר שהתקבלו כל ההצהרות הבודדות. להוכחה זו לוקח הרבה זמן להוכיח (בערך סכום הזמן שלוקח להוכיח כל משפט בנפרד).
 
-Proving extremely large statements is eventually limited by available compute resources such as memory. Prior to recursion, this was effectively the limiting scalability barrier of STARK proving.
+הוכחת הצהרות גדולות במיוחד מוגבלת בסופו של דבר על ידי משאבי מחשוב זמינים כגון זיכרון. לפני הרקורסיה, זה היה למעשה מחסום המדרגיות המגביל של הוכחת STARK.
 
-### What is Recursive Proving?
+### מהי הוכחה רקורסיבית?
 
-With STARK proofs, the time it takes to prove a statement is roughly linear with the time it takes to execute the statement. In addition, if proving a statement takes T time, then verifying the proof takes roughly log(T) time, which is typically called “logarithmic compression”. In other words, with STARKs you spend much less time on verifying the statement than on calculating it.
+עם הוכחות STARK, הזמן שלוקח להוכיח הצהרה הוא ליניארי בערך עם הזמן שלוקח לביצוע ההצהרה. בנוסף, אם הוכחת משפט לוקח זמן T, אז אימות ההוכחה לוקח בערך זמן log(T), אשר נקרא בדרך כלל "דחיסה לוגריתמית". במילים אחרות, עם STARKs אתה משקיע הרבה פחות זמן על אימות ההצהרה מאשר על חישובה.
 
-[Cairo](https://starkware.co/cairo/) allows expressing general computational statements that can be proven by STARK proofs and verified by the corresponding STARK verifiers.
+[Cairo](https://starkware.co/cairo/)מאפשר להביע הצהרות חישוביות כלליות שניתן להוכיח על ידי הוכחות STARK ולאימות על ידי מאמת STARK המקבילים.
 
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. We can generate a single proof attesting to the validity of multiple “up-stream” proofs. This is what we call Recursive Proving.
+כאן מתחילה ההזדמנות לבצע[רקורסיה](https://en.wikipedia.org/wiki/Recursion): באותו אופן שבו אנו כותבים תוכנית קהיר שמוכיחה את נכונותן של אלפי עסקאות, נוכל לכתוב גם תוכנית קהיר שמאמתת מספר הוכחות STARK. אנו יכולים ליצור הוכחה אחת המעידה על תקפותן של הוכחות "במעלה הזרם" מרובות. זה מה שאנו מכנים הוכחה רקורסיבית.
 
-Because of the logarithmic compression and roughly linear proving time, proving a verification of a STARK proof takes relatively short time (expected to be just a few minutes in the near future).
+בגלל הדחיסה הלוגריתמית וזמן ההוכחה ליניארי בערך, הוכחת אימות של הוכחה STARK לוקחת זמן קצר יחסית (צפוי להיות דקות ספורות בזמן הקרוב).
 
-When implementing Recursion, SHARP can prove statements upon their arrival. Their proofs can be merged over and over into recursive proofs in various patterns until, at a certain point, the resulting proof is submitted to an on-chain verifier contract. A typical pattern is depicted in Drawing 2:
+בעת יישום רקורסיה, SHARP יכול להוכיח הצהרות עם הגעתם. ניתן למזג את ההוכחות שלהם שוב ושוב להוכחות רקורסיביות בדפוסים שונים עד שבשלב מסוים ההוכחה המתקבלת מוגשת לחוזה מאמת על שרשרת. תבנית טיפוסית מתוארת בשרטוט 2:
 
-![Drawing 2: A typical recursive proving flow.](/assets/recursive_starks_02.png "Drawing 2: A typical recursive proving flow.")
+![ציור 2: זרימת הוכחה רקורסיבית טיפוסית.](/assets/recursive_starks_02.png "ציור 2: זרימת הוכחה רקורסיבית טיפוסית.")
 
-### Immediate Benefits of Recursive Proving
+### יתרונות מיידיים של הוכחה רקורסיבית
 
-#### Reduced On-chain Cost
+#### עלות רשת מופחתת
 
-Off the bat, we achieve “compression” of multiple proofs into one, which implies lower on-chain verification cost per transaction (where each statement may include many transactions).
+באופן קבוע, אנו משיגים "דחיסה" של מספר הוכחות לאחת, מה שמרמז על עלות אימות בשרשרת נמוכה יותר לכל עסקה (כאשר כל הצהרה עשויה לכלול עסקאות רבות).
 
-With recursion, the computational resources barrier (e.g. memory) that limited proofs size up until now, is eliminated, since each limited size statement can be proven separately. Hence, when using recursion, the effective Train size of recursion is almost unlimited, and the cost per transaction can be reduced by orders of magnitude.
+עם הרקורסיה, מחסום המשאבים החישוביים (למשל זיכרון) שהגביל את גודל ההוכחות עד כה, מתבטל, מכיוון שניתן להוכיח כל הצהרת גודל מוגבל בנפרד. מכאן שכאשר משתמשים ברקורסיה, גודל הרכבת האפקטיבי של הרקורסיה הוא כמעט בלתי מוגבל, וניתן להפחית את העלות לעסקה בסדרי גודל.
 
-In practical terms, the reduction depends on the acceptable latency (and the rate at which transactions arrive). In addition, since each proof is typically also accompanied by some output such as on-chain data, there are limits to the amount of data that can be written on-chain together with a single proof. Nevertheless, reducing cost by an order of magnitude and even better is trivially achievable.
+מבחינה מעשית, ההפחתה תלויה בהשהייה המקובלת (ובקצב הגעת העסקאות). בנוסף, מכיוון שלרוב כל הוכחה מלווה גם בפלט כלשהו כגון נתונים על השרשרת, יש מגבלות לכמות הנתונים שניתן לכתוב על השרשרת יחד עם הוכחה אחת. עם זאת, הפחתת עלויות בסדר גודל ואף טוב יותר היא ניתנת להשגה טריוויאלית.
 
-#### Reduced Latency
+#### חביון מופחת
 
-The Recursive Proving pattern reduces the latency of proving large Trains of statements. This is the result of two factors:
+דפוס ההוכחה הרקורסי מפחית את ההשהיה של הוכחת רכבות גדולות של הצהרות. זו תוצאה של שני גורמים:
 
-1. Incoming statements can be proven **in parallel** (as opposed to proving an extremely large combined statement).
-2. There is no need to wait until the last statement in the Train arrives to begin proving. Rather, proofs can be combined with new statements as they arrive. This means that the latency of the last statement joining a Train, is roughly the time it takes to prove that very last statement plus the time it takes to prove a Recursive Verifier statement (which attests to all those statements that have already “onboarded” this particular Train).
+1. ניתן להוכיח הצהרות נכנסות**במקביל**(בניגוד להוכחת משפט משולב גדול במיוחד).
+2. אין צורך לחכות עד שתגיע ההצהרה האחרונה ברכבת כדי להתחיל להוכיח. במקום זאת, ניתן לשלב הוכחות עם הצהרות חדשות כשהן מגיעות. משמעות הדבר היא שההשהיה של ההצהרה האחרונה שמצטרפת לרכבת, היא בערך הזמן שלוקח להוכיח את ההצהרה האחרונה שלו בתוספת הזמן שלוקח להוכיח הצהרה רקורסיבית (מה שמעיד על כל ההצהרות שכבר "עלו לסיפון" זה רכבת מסוימת).
 
-We are actively developing and optimizing the latency of proving the Recursive Verifier statement. We expect this to reach the order of a few minutes within a few months. Hence, a highly efficient SHARP can offer latencies from a few minutes up to a few hours, depending on the tradeoff versus on-chain cost per transaction. This represents a meaningful improvement to SHARP’s latency.
+אנו מפתחים ומייעלים באופן פעיל את זמן האחזור של הוכחת הצהרת ה-Recursive Verifier. אנו מצפים שזה יגיע לסדר של כמה דקות בתוך כמה חודשים. לפיכך, SHARP יעיל ביותר יכול להציע השהיות ממספר דקות עד כמה שעות, בהתאם לשינוי מול עלות השרשרת לעסקה. זה מייצג שיפור משמעותי לזמן האחזור של SHARP.
 
-#### Facilitating L3
+#### מקל על L3
 
-The development of the Recursive Verifier statement in Cairo also opens up the possibility of submitting proofs to StarkNet, as that statement can be baked into a StarkNet smart contract. This allows building [L3 deployments on top of the public StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) (an L2 network).
+הפיתוח של הצהרת ה-Recursive Verifier בקהיר פותחת גם את האפשרות להגיש הוכחות ל-StarkNet, מכיוון שניתן לאפות את ההצהרה הזו בחוזה חכם של StarkNet. זה מאפשר לבנות[פריסות L3 על גבי ה-StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f)הציבורי (רשת L2).
 
-The recursive pattern also applies to the aggregation of proofs from L3, to be verified by a single proof on L2. Hence, hyper-scaling is achieved there too.
+הדפוס הרקורסי חל גם על צבירה של הוכחות מ-L3, שיאומת על ידי הוכחה יחידה ב-L2. מכאן שגם שם מושגת קנה מידה יתר.
 
-### More Subtle Benefits
+### יתרונות עדינים יותר
 
-#### Applicative Recursion
+#### רקורסיה אפליקטיבית
 
-Recursion opens up even more opportunities for platforms and applications wishing to further scale their cost and performance.
+הרקורסיה פותחת עוד יותר הזדמנויות לפלטפורמות ויישומים המעוניינים להרחיב את העלות והביצועים שלהם.
 
-Each STARK proof attests to the validity of a statement applied to some input known as the “public input” (or “program output” in Cairo terms). Conceptually, STARK recursion compresses two proofs with *two* inputs into *one* proof with two inputs. In other words, while the number of proofs is reduced, the number of inputs is kept constant. These inputs are then typically used by an application in order to update some state on L1 (e.g. to update a state root or perform an on-chain withdrawal).
+כל הוכחה STARK מעידה על תקפותה של הצהרה שהושמה על קלט כלשהו המכונה "קלט ציבורי" (או "פלט תוכנית" במונחי קהיר). מבחינה קונספטואלית, רקורסיה של STARK דוחסת שתי הוכחות עם*שתי כניסות*ל*הוכחה אחת*עם שתי כניסות. במילים אחרות, בעוד שמספר ההוכחות מצטמצם, מספר התשומות נשמר קבוע. כניסות אלה משמשות אז בדרך כלל על ידי יישום על מנת לעדכן מצב כלשהו ב-L1 (למשל כדי לעדכן שורש מצב או לבצע משיכה על השרשרת).
 
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. The resulting statement attests to the validity of the input combination based on the application semantics, hence the name Applicative Recursion (see Drawing 3, for an example)..
+אם מותר להצהרה הרקורסיבית להיות*app-aware*, כלומר מזהה את הסמנטיקה של היישום עצמו, היא יכולה גם לדחוס שתי הוכחות ל*אחת וגם*לשלב את שני הקלטים לאחד. ההצהרה המתקבלת מעידה על תקפות שילוב הקלט בהתבסס על סמנטיקה של היישום, ומכאן השם רקורסיה אפליקטיבית (ראה ציור 3, לדוגמא).
 
-![Drawing 3: Applicative Recursion example](/assets/recursive_starks_03.png "Drawing 3: Applicative Recursion example")
+![ציור 3: דוגמה לרקורסיה אפליקטיבית](/assets/recursive_starks_03.png "ציור 3: דוגמה לרקורסיה אפליקטיבית")
 
-Here, Statement 1 attests to a state update from A to B and Statement 2 attests to a further update from B to C. Proofs of Statement 1 and Statement 2 may be combined into a third statement, attesting to the direct update from A to C. By applying similar logic recursively, one can reduce the cost of state updates very significantly up to the finality latency requirement.
+כאן, הצהרה 1 מעידה על עדכון מצב מ-A ל-B והצהרה 2 מעידה על עדכון נוסף מ-B ל-C. ניתן לשלב הוכחות של הצהרה 1 והצהרה 2 להצהרה שלישית, המעידה על העדכון הישיר מ-A ל-C על ידי יישום לוגיקה דומה באופן רקורסיבי, ניתן להפחית את העלות של עדכוני מצב באופן משמעותי עד לדרישת ההשהיה הסופית.
 
-Another important example of Applicative Recursion is to compress rollup data from multiple proofs. For example, for a Validity Rollup such as StarkNet, every storage update on L2 is also included as transmission data on L1, to ensure data availability. However, there is no need to send multiple updates for the same storage element, as only the final value of transactions attested to by the proof verified is required for data availability. This optimization is already performed within a *single* StarkNet block. However, by generating a proof per block, Applicative Recursion may compress this rollup data across *multiple* L2 blocks. This can result in significant cost reduction, enabling shorter block intervals on L2, without sacrificing the scalability of L1 updates.
+דוגמה חשובה נוספת לרקורסיה אפליקטיבית היא דחיסת נתוני אוסף ממספר הוכחות. לדוגמה, עבור אוסף תוקף כגון StarkNet, כל עדכון אחסון ב-L2 כלול גם כנתוני שידור ב-L1, כדי להבטיח זמינות נתונים. עם זאת, אין צורך לשלוח עדכונים מרובים עבור אותו רכיב אחסון, מכיוון שרק הערך הסופי של העסקאות המעיד על ידי ההוכחה המאומתת נדרש לזמינות הנתונים. אופטימיזציה זו כבר מבוצעת בתוך*בלוק יחיד*StarkNet. עם זאת, על ידי יצירת הוכחה לכל בלוק, רקורסיה אפליקטיבית עשויה לדחוס את נתוני האוסף הזה על פני*מספר בלוקים*L2. זה יכול לגרום להפחתת עלויות משמעותית, ולאפשר מרווחי חסימה קצרים יותר ב-L2, מבלי להקריב את המדרגיות של עדכוני L1.
 
-Worth noting: Applicative Recursion may be combined with application-agnostic recursion as depicted earlier. These two optimizations are independent.
+ראוי לציין: רקורסיה אפליקטיבית עשויה להיות משולבת עם רקורסיה אפליקטיבית-אגנוסטית כפי שתואר קודם לכן. שתי האופטימיזציות הללו אינן תלויות.
 
-#### Reduced On-chain Verifier Complexity
+#### מורכבות מופחתת של מאמת על שרשרת
 
-The complexity of the STARK verifier depends on the kind of statements it is designed to verify. In particular, for Cairo statements, the verifier complexity depends on the specific elements allowed in the Cairo language, and, more specifically, the supported built-ins (if we use the CPU metaphor for Cairo, then built-ins are the equivalent of micro-circuits in a CPU: computations performed so frequently that they require their own optimized computation).
+המורכבות של מאמת STARK תלויה בסוג ההצהרות שהוא נועד לאמת. בפרט, עבור הצהרות קהיר, מורכבות המאמת תלויה באלמנטים הספציפיים המותרים בשפת קהיר, וליתר דיוק, המובנים הנתמכים (אם אנו משתמשים במטאפורת ה-CPU עבור קהיר, אז המובנים הם מקבילים למיקרו -מעגלים במעבד: חישובים המבוצעים בתדירות כה גבוהה שהם דורשים חישוב אופטימלי משלהם).
 
-The Cairo language continues to evolve and offer more and more useful built-ins. On the other hand, the Recursive Verifier only requires using a small subset of these built-ins. Hence, a recursive SHARP can successfully support any statement in Cairo by supporting the full language in the recursive verifiers. Specifically, the L1 Solidity Verifier need only verify recursive proofs, and thus can be limited to a more stable subset of the Cairo language: The L1 Verifier need not keep up with the latest and greatest built-ins. In other words, verification of ever-evolving complex statements is relegated to L2, leaving the L1 Verifier to verify simpler and more stable statements.
+שפת קהיר ממשיכה להתפתח ולהציע יותר ויותר מובנים מובנים. מצד שני, ה-Recursive Verifier דורש רק שימוש בתת-קבוצה קטנה של המובנים הללו. לפיכך, SHARP רקורסיבי יכול לתמוך בהצלחה בכל הצהרה בקהיר על ידי תמיכה בשפה המלאה במאמתים רקורסיביים. באופן ספציפי, L1 Solidity Verifier צריך רק לאמת הוכחות רקורסיביות, ולכן ניתן להגביל אותו לתת-קבוצה יציבה יותר של שפת קהיר: L1 Verifier לא צריך להתעדכן עם המובנים העדכניים והטובים ביותר. במילים אחרות, אימות של הצהרות מורכבות המתפתחות ללא הרף נדחק ל-L2, מה שמשאיר את L1 Verifier לאמת הצהרות פשוטות ויציבות יותר.
 
-#### Reduced Compute Footprint
+#### טביעת רגל מחשוב מופחתת
 
-Before recursion, the ability to aggregate multiple statements into one proof was limited by the maximal size of the statement that could be proved on available compute instances (and the time it could take to generate such proofs).
+לפני הרקורסיה, היכולת לצבור הצהרות מרובות להוכחה אחת הוגבלה על ידי הגודל המקסימלי של ההצהרה שניתן להוכיח במופעי מחשוב זמינים (והזמן שעלול לקחת ליצירת הוכחות כאלה).
 
-With recursion, there is no longer a need to prove such extremely large statements. As a result, smaller, less expensive and more available compute instances can be used (though more of those may be needed than with large monolithic provers). This allows deployment of prover instances in more physical and virtual environments than previously possible.
+עם הרקורסיה, אין עוד צורך להוכיח אמירות כה גדולות. כתוצאה מכך, ניתן להשתמש במופעי מחשוב קטנים יותר, פחות יקרים וזמינים יותר (אם כי ייתכן שיהיה צורך ביותר מאלה מאשר עם מוכיחים מונוליטיים גדולים). זה מאפשר פריסה של מופעי מוכח בסביבות פיזיות ווירטואליות יותר ממה שהיה אפשר בעבר.
 
-### Summary
+### סיכום
 
-Recursive proofs of general computation now serve multiple production systems, including StarkNet, on Mainnet Ethereum.
+הוכחות רקורסיביות של חישוב כללי משרתות כעת מערכות ייצור מרובות, כולל StarkNet, ב- Mainnet Ethereum.
 
-The benefits of recursion will be realized gradually, as it continues to allow for new improvements, and it will soon deliver hyper-scale, cut gas fees, and improve latency by unlocking the potential of parallelization.
+היתרונות של הרקורסיה יתממשו בהדרגה, ככל שהיא תמשיך לאפשר שיפורים חדשים, והיא תספק בקרוב קנה מידה יתר, תקצץ בעמלות הגז ותשפר את השהייה על ידי פתיחת פוטנציאל ההקבלה.
 
-It will bring significant cost and latency benefits with it, together with new opportunities such as L3 and applicative-recursion. Further optimization of the Recursive Verifier is on-going and even better performance and cost benefits are expected to be provided over time.
+זה יביא איתו יתרונות משמעותיים בעלות והשהייה, יחד עם הזדמנויות חדשות כמו L3 ורקורסיה אפליקטיבית. אופטימיזציה נוספת של ה-Recursive Verifier נמשכת, וביצועים טובים יותר ויתרונות עלות צפויים להינתן לאורך זמן.
 
 
 
-**Gidi Kaempfer**, Head of Core Engineering, StarkWare
+**Gidi Kaempfer**, ראש תחום הנדסת ליבה, StarkWare

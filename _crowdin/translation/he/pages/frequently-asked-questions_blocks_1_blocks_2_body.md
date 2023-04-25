@@ -1,3 +1,3 @@
-A good place to start is the [Hello Starknet tutorial](https://docs.starknet.io/documentation/), which guides the developer step by step through writing and deploying a simple contract. The [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) offers an environment for learning how to write Starknet contracts and test them. 
+מקום טוב להתחיל בו הוא המדריך [Hello Starknet](https://docs.starknet.io/documentation/), המנחה את המפתח צעד אחר צעד בכתיבה ופריסה של חוזה פשוט. מגרש המשחקים [Starknet](https://starknet.io/playground/?lesson=starknet_contract) מציע סביבה ללימוד כיצד לכתוב חוזי Starknet ולבדוק אותם. 
 
-You can become part of the developers’ community, and support it, by joining the [Starknet Discord](https://discord.com/invite/QypNMzkHbc) server.
+אתה יכול להיות חלק מקהילת המפתחים, ולתמוך בה, על ידי הצטרפות לשרת [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

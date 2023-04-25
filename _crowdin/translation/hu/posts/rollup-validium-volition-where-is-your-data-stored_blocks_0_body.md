@@ -1,50 +1,50 @@
 ### TL;DR
 
-* StarkWare offers a range of Data Availability (DA) modes for customers to choose from, according to their priority
-* There are three approaches to Data Availability for STARK proofs, all of them are already available in production:\
-  — **Rollup**: the ledger is published directly on the blockchain\
-  — **Validium**: a Data Availability Committee secures the ledger, with only a hash being stored on-chain\
-  — **Volition**: apps can let users choose their DA mode — Rollup or Validium — for each and every transaction
-* No matter which DA is used — the validity of all transactions is guaranteed by STARKs
+* A StarkWare számos adatelérhetőségi (DA) módot kínál az ügyfelek számára, amelyek közül választhatnak prioritásuk szerint
+* Három megközelítés létezik a -bizonyítások</strong>vonatkozóan**mindegyik már elérhető a termelésben:\
+  —**Rollup**: a főkönyvet közvetlenül a\
+  teszik közzé. csak egy**van **\
+  </p></li>
+* Függetlenül attól, hogy melyik DA-t használják – az összes tranzakció érvényességét a STARK-ok garantálják</ul>
 
-### Introduction
+### Bevezetés
 
-As of November 2022, [StarkEx](https://starkware.co/starkex/) has settled over $750 billion of trading volume, and over 270m transactions on Ethereum. In the NFT space, powering apps such as ImmutableX and Sorare, StarkEx has minted over 85 million NFTs at a price that is 1000x cheaper than doing this directly on Ethereum. STARK-based technology is scaling Ethereum. For example, in a single week, StarkEx ran 1.6x the number of transactions as Ethereum (12m on StarkEx vs 7.5m on Ethereum) while taking up less than 0.1% of Ethereum blockspace. And it does all of this while giving users the same level of security as if they were settling directly on Ethereum.
+2022 novemberéig[StarkEx](https://starkware.co/starkex/)több mint 750 milliárd dollárnyi kereskedést és több mint 270 millió tranzakciót bonyolított le az Ethereumon. Az olyan NFT-területen, amely olyan alkalmazásokat működtet, mint az ImmutableX és a Sorare, a StarkEx több mint 85 millió NFT-t vert ki olyan áron, amely 1000-szer olcsóbb, mintha ezt közvetlenül az Ethereumon tenné. A STARK-alapú technológia méretezi az Ethereumot. Például egyetlen hét alatt a StarkEx 1,6-szor annyi tranzakciót bonyolított le Ethereum néven (12 millió StarkEx, vs 7,5 millió Ethereum), miközben az Ethereum blokkterületének kevesebb mint 0,1%-át foglalta el. Mindezt úgy teszi, hogy a felhasználók számára ugyanolyan szintű biztonságot nyújt, mintha közvetlenül az Ethereumon telepednének le.
 
-### How does StarkWare achieve this?
+### Hogyan éri el ezt a StarkWare?
 
-Users send transactions on Layer 2 (either StarkEx or StarkNet), which are batched and sent to a STARK prover. This STARK prover knows the state of the ledger before and after these transactions have been processed. The prover produces a STARK proof that attests to the validity of the new state of the ledger after these transactions have been executed. The new state and the STARK proof are sent to the on-chain STARK verifier. The verification of this proof happens autonomously via an immutable smart contract on Ethereum.
+A felhasználók a 2. rétegen (StarkEx vagy StarkNet) küldenek tranzakciókat, amelyeket kötegelt formában küldenek el egy STARK-ellenőrzőnek. Ez a STARK prover ismeri a főkönyv állapotát a tranzakciók feldolgozása előtt és után. A bizonyító STARK bizonyítványt állít elő, amely igazolja a főkönyv új állapotának érvényességét a tranzakciók végrehajtása után. Az új állapot és a STARK igazolás elküldésre kerül a láncon belüli STARK ellenőrzőnek. Ennek a bizonyítéknak az ellenőrzése önállóan történik egy megváltoztathatatlan intelligens szerződésen keresztül az Ethereumon.
 
-This architecture provides the best of both worlds: we can have low transaction costs, while still having Ethereum in the middle as a neutral arbitrator. Ethereum as an arbitrator is not just a nice-to-have; it provides critical security to the end user. A user transacting can now be confident that their funds are secured by Ethereum, and transactions are immutable once they are verified on Ethereum. The user also has complete self-custody of their funds. Self-custody is important because it ensures that the user has access to their funds at all times, without relying on any third party.
+Ez az architektúra mindkét világból a legjobbat nyújtja: alacsonyak lehetnek a tranzakciós költségek, miközben az Ethereum továbbra is a közepén áll, mint semleges választottbíró. Az Ethereum mint döntőbíró nem csak egy jó, ha megvan; kritikus biztonságot nyújt a végfelhasználó számára. A tranzakciót folytató felhasználó most biztos lehet abban, hogy pénzeszközeit az Ethereum biztosítja, és a tranzakciók megváltoztathatatlanok, miután ellenőrizték őket az Ethereumon. A felhasználó teljes körűen kezelheti pénzeszközeit. Az önőrzés azért fontos, mert biztosítja, hogy a felhasználó mindenkor hozzáférjen pénzeszközeihez anélkül, hogy harmadik félre támaszkodna.
 
-### Where does data availability fit into all of this?
+### Hol illeszkedik mindehhez az adatok elérhetősége?
 
-It’s important to emphasize both what this proof is doing as well as what it’s *not* doing. The proof is attesting to the validity of the new state, but it’s not telling you what the new state is. For that, you need data availability. If we only have the proof, then the blockchain knows that what was submitted is valid, but it doesn’t know what the new state (eg. ledger balance) is! Consumers of this data include users who have transactions within these proofs. The data should be made available to them if they want to withdraw funds on Ethereum without needing to trust the Layer 2 operator. This gives users full self-custody of their funds.
+Fontos hangsúlyozni mind azt, amit ez a bizonyítás csinál, és azt is, amit*nem*tesz. A bizonyíték az új állapot érvényességét tanúsítja, de nem árulja el, hogy mi az új állapot. Ehhez adatok rendelkezésre állása szükséges. Ha csak a bizonyítványunk van, akkor a blokklánc tudja, hogy a leadott érvényes, de nem tudja, hogy mi az új állapot (pl. főkönyvi egyenleg)! Ezen adatok fogyasztói közé tartoznak azok a felhasználók, akiknek tranzakciói vannak ezeken a bizonyítékokon belül. Az adatokat elérhetővé kell tenni számukra, ha pénzt szeretnének felvenni az Ethereumon anélkül, hogy megbízniuk kellene a Layer 2 üzemeltetőjében. Ez lehetővé teszi a felhasználók számára, hogy teljes mértékben kezeljék pénzeszközeiket.
 
-One analogy for this is your high-school teacher asking you to prove that x equals x. This is trivial to prove. What’s more difficult to answer: what is x actually equal to? For that, you need a separate piece of information. It could be that x equals 5, or another value. Likewise, on the blockchain, a STARK proof can be submitted to a STARK verifier smart contract for verification. And the verifier can attest that the proof is valid (that x=x). But you need a separate input to tell you what x (the new ledger balance) is.
+Ennek egyik analógiája az, hogy a középiskolai tanárod arra kér, bizonyítsd be, hogy x egyenlő x-szel. Ezt triviális bizonyítani. Mire nehezebb válaszolni: valójában mivel egyenlő x? Ehhez külön információra van szüksége. Lehet, hogy x egyenlő 5-tel, vagy egy másik érték. Hasonlóképpen, a blokkláncon a STARK igazolás benyújtható egy STARK hitelesítő intelligens szerződéshez ellenőrzés céljából. És az ellenőrző tanúsíthatja, hogy a bizonyíték érvényes (hogy x=x). De külön bemenetre van szükség, hogy megtudja, mi az x (az új főkönyvi egyenleg).
 
-There are three approaches to make this data available:
+Három megközelítés létezik az adatok elérhetővé tételére:
 
-#### Rollup Mode
+#### Összegző mód
 
-Rollup mode ensures that the state of the ledger is stored on Ethereum together with the proofs. Rollup mode is currently used by [dYdX](https://dydx.exchange/) in production, and is also used by the [Public StarkNet](http://starknet.io/) L2 network. The benefits here are clear: one can recreate the state of the ledger by only interacting with the Ethereum blockchain. The implication of this is that you, as an end-user, can trustlessly talk to the relevant smart contract on Ethereum, and withdraw your funds even if the Layer 2 system shuts down.
+Az összesítő mód biztosítja, hogy a főkönyv állapotát a bizonyítványokkal együtt az Ethereum tárolja. Az összesítő módot jelenleg[dYdX](https://dydx.exchange/)használja a termelésben, és a[Public StarkNet](http://starknet.io/)L2 hálózat is használja. Az előnyök itt egyértelműek: csak az Ethereum blokklánccal való interakcióval lehet újra létrehozni a főkönyv állapotát. Ennek az a következménye, hogy Ön, mint végfelhasználó, bizalmatlanul beszélhet a vonatkozó intelligens szerződéssel az Ethereumon, és akkor is kiveheti a pénzét, ha a Layer 2 rendszer leáll.
 
 #### Validium
 
-Under Rollup Mode, the majority of Ethereum gas costs go to Data Availability, and not proof verification. This is because it is very gas-intensive to store data on the blockchain. In Validium mode, the ledger information is not sent to Ethereum. Rather, it is stored off-chain with a Data Availability Committee. Ethereum stores a hash of this ledger information. This Data Availability Committee consists of a quorum of independent members that oversee the correct state update as well as keep a copy of the data that was processed. Each StarkEx instance can create their own quorum. Quorum members for existing apps running on StarkEx include entities like [Consensys](https://consensys.net/), [Nethermind](https://nethermind.io/), [Iqlusion](https://iqlusion.io/) and [Cephalopod](https://cephalopod.equipment/).
+Összegző módban az Ethereum gázköltségeinek többsége az adatok elérhetőségére, nem pedig a bizonyíték ellenőrzésére irányul. Ennek az az oka, hogy nagyon gázigényes az adatok tárolása a blokkláncon. Validium módban a főkönyvi információkat nem küldi el az Ethereum. Inkább a láncon kívül, egy adatelérhetőségi bizottsággal tárolják. Az Ethereum ezekből a főkönyvi információkból kivonatot tárol. Ez az Adatelérhetőségi Bizottság határozatképes független tagokból áll, akik felügyelik a helyes állapotfrissítést, valamint megőrzik a feldolgozott adatok másolatát. Minden StarkEx-példány létrehozhatja a saját kvórumát. A StarkEx-en futó alkalmazások kvórumának tagjai közé olyan entitások tartoznak, mint a[Consensys](https://consensys.net/),[Nethermind](https://nethermind.io/),[Iqlusion](https://iqlusion.io/)és[Cephalopod](https://cephalopod.equipment/).
 
-The benefits here are clear. There is no need to pay Ethereum gas fees to store the ledger information on-chain. Rather, the only thing stored on Ethereum is a single hash of the ledger information. If you want to trustlessly withdraw funds from Layer 2 by talking to Ethereum, you merely require the digital signature of one of the members of the Data Availability Committee. The DAC members will use cryptography to prove that you have ownership of those funds.
+Az előnyök itt egyértelműek. Nem kell Ethereum gázdíjat fizetni a főkönyvi információk láncon belüli tárolásához. Inkább az egyetlen dolog, amit az Ethereum tárol, a főkönyvi információk egyetlen hash-je. Ha bizalmatlanul szeretne pénzt kivenni a 2. rétegből az Ethereummal beszélve, csak az Adatelérhetőségi Bizottság egyik tagjának digitális aláírására van szüksége. A DAC-tagok titkosítást fognak használni annak bizonyítására, hogy Ön birtokolja ezeket az alapokat.
 
-Another hidden benefit of Validium Data Availability is confidentiality from people reading the blockchain. Under Rollup Mode, the balance of each account at the time that each proof is submitted is known to the public. With Validium, this data is hidden from the blockchain — only the Data Availability Committee is aware of this, because it’s kept off-chain. This level of confidentiality enables a wide variety of use cases where obfuscating the transactions data is important.
+A Validium Data Availability másik rejtett előnye a blokkláncot olvasó emberek bizalmas kezelése. Az összesítő módban az egyes számlák egyenlege az egyes igazolások benyújtásakor ismert a nyilvánosság számára. A Validium esetében ezek az adatok el vannak rejtve a blokklánc elől – ezt csak az Adatelérhetőségi Bizottság tudja, mert a láncon kívül marad. Ez a titkossági szint sokféle használati esetet tesz lehetővé, ahol fontos a tranzakciós adatok elhomályosítása.
 
-#### Volition
+#### Akarat
 
-Volition is a data availability architecture that provides the choice between Validium and Rollup Mode at the transaction level. It does this by keeping one ledger on-chain, and another ledger with a Data Availability Committee. Users can choose between Validium and Rollup mode for each individual transaction.
+A Volition egy olyan adatelérhetőségi architektúra, amely tranzakciós szinten biztosítja a választást a Validium és az Összegző mód között. Ezt úgy teszi, hogy egy főkönyvet a láncban tart, egy másik főkönyvet pedig egy adatelérhetőségi bizottsággal. A felhasználók minden egyes tranzakciónál választhatnak a Validium és az Összegzés mód között.
 
-Imagine that you purchase a really expensive NFT like a Bored Ape or a Cryptopunk, on an app running on StarkEx. You may want to use Rollup Mode to secure the data for that NFT, because you want a record of that specific transaction stored on Ethereum. However, you may then purchase a really cheap NFT (e.g. a cloak for your character in a blockchain game), and in that circumstance you will be happy to save money by using Validium.
+Képzelje el, hogy vásárol egy nagyon drága NFT-t, például egy Bored Ape-t vagy egy Cryptopunkot egy StarkEx-en futó alkalmazásban. Érdemes lehet az összesítő módot használni az adott NFT-hez tartozó adatok védelmére, mert szeretné az adott tranzakció rekordját az Ethereumon tárolni. Ekkor azonban vásárolhat egy igazán olcsó NFT-t (pl. egy köpenyt karakterének egy blokklánc játékban), és ebben az esetben szívesen spórolhat a Validium használatával.
 
-If you are interested in the scale achieved by STARK proofs, then please come and build on us.
+Ha érdekli a STARK bizonyítások által elért lépték, akkor gyere és építs ránk.
 
 
 
-You can always email [info@starkware.co](mailto:info@starkware.co) and a human will get to your email.
+Mindig írhat e-mailt[info@starkware.co](mailto:info@starkware.co)címre, és egy ember eljut az Ön e-mailjéhez.

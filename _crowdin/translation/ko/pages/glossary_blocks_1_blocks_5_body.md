@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Starknet OS를 사용하여 실행되는 정렬된 Starknet 트랜잭션 세트로, 그 결과 Starknet L1 핵심 계약에 커밋되는 하나의 집계된 상태 변경이 발생합니다. 블록에는 다음이 있습니다.
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … 블록 해시 – 블록을 쿼리하고 참조하는 데 사용할 수 있는 고유하고 안정적인 식별자입니다.
+* … 블록 번호 – Starknet에서 승인된 블록의 순서에서 블록의 위치를 나타내는 서수. 블록 번호는 시간이 지남에 따라 변경될 수 있습니다. 또한 주어진 숫자는 예를 들어 L1 체인 재정렬의 경우와 같이 서로 다른 시점에서 서로 다른 블록을 참조할 수 있습니다.

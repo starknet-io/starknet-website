@@ -1,3 +1,3 @@
-The Starknet Token is not yet for sale. It cannot be added to your wallet at this stage. Beware of scams.
+El testimoni Starknet encara no està a la venda. No es pot afegir a la vostra cartera en aquesta fase. Compte amb les estafes.
 
-The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
+El testimoni Starknet es va llançar a Ethereum Mainnet el novembre de 2022. La Fundació Starknet anunciarà més endavant els detalls dels plans de bonificacions i provisions comunitàries, però en el moment d'escriure aquests detalls encara no s'han determinat. Aneu amb compte amb les estafes que es plantegen per vendre fitxes Starknet.

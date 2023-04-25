@@ -1,53 +1,69 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* StarkNet Token (STRK) artık Ethereum Mainnet'te konuşlandırıldı
+* **Dolandırıcılığa dikkat!**StarkNet Jetonu satışa sunulmadı
+* Vakfın tokenlerini dağıtma mekanizmasını belirlemesi zaman alacaktır.
+* StarkWare hissedarları, çalışanları ve bağımsız ortak yazılım geliştiricileri tarafından tutulan belirteçler, bir yıldan sonra kademeli olarak serbest bırakılmak üzere dört yıllık bir süre için kilitlenir.
+* Belirteç, oylama, staking ve ücret ödeme için kullanımı sayesinde StarkNet'in ademi merkeziyetçiliğini daha da ileriye taşıyacak.
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+Bugün,[StarkNet](https://starknet.io/)merkezsizleşmeye doğru bir adım daha atıyor. StarkNet belirteci artık Ethereum</a>
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+. Hızlı bir şekilde özetleme: STRK, StarkNet'in mutabakat mekanizmalarına katılım için bir Staking belirteci olarak, bir Yönetişim belirteci olarak ve işlem ücretlerini ödemek için kullanılacaktır. Bu yardımcı programların[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)mantığı, "Belirteçler ne için kullanılacak?"</p> 
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+***Dolandırıcılığa dikkat edin:**bu yazıyı yazarken StarkNet Jetonlarını satın almanın bir yolu yoktur; bu satış dışı dönem,[StarkNet Foundation](https://twitter.com/StarkNetFndn)tarafından bir sonraki duyuruya kadar yürürlükte kalacaktır; STRK'nın durumundaki herhangi bir güncellemeyi öğrenmek için StarkNet Foundation'dan gelen resmi iletişimi takip edin. [StarkNet Discord](http://starknet.io/discord)sunucusundaki[scam-report](https://discord.gg/qypnmzkhbc)kanalında dolandırıcılığı bildirebilir ve diğer dolandırıcılık raporlarını kontrol edebilirsiniz.*
 
-### Planning the token allocation process
+Bu gönderi, belirteç tahsis sürecini ve dağıtılan belirteç sözleşmelerinin, belirtecin tasarlanmış üç yardımcı programından ikisine, yani oylama ve staking'e nasıl hizmet ettiğini açıklar. Üçüncü hizmet - StarkNet ücretlerini ödemek - daha sonra tartışılacaktır.
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
 
-#### Why lockup?
+### Belirteç tahsis sürecini planlama
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+Daha önce belirteçlerin ilk tahsisi için bir[planı](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)önerdik. Hissedarlara, çalışanlara ve bağımsız yazılım geliştiricilere tahsis edilen jetonlar, bir yıldan sonra başlayan kademeli bir serbest bırakma programı ile dört yıl süreyle kilitlenir. Kilitli jetonlar, oylama ve staking için kullanılabilir, ancak transfer edilemez veya alınıp satılamaz. Jetonlardan bazıları, Ethereum üzerindeki özel bir akıllı sözleşme ile kilitlenirken, diğer jetonlar emanetçiler tarafından kilitlenir.
 
-Next, we explain how the token implementation supports voting and staking.
+Ayrı olarak, mevcut StarkNet jetonlarının %50,1'i,[hedefine](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)ulaşmak için kullanılmak üzere StarkNet Foundation'a tahsis edilmiştir (bkz[StarkWare'in gönderisi](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). Bu jetonlar kilitli değildir. Ancak, Vakfın bu belirteçleri daha fazla tahsis etmek için kesin mekanizmayı formüle etmesi için zamana ihtiyacı olacak ve planlarını zamanında paylaşacaktır.
 
-### Voting
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
 
-#### L1 voting
+#### Neden kilit?
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+Belirteçleri yukarıda belirtilen süre için kilitlemek, mevcut katkıda bulunanların StarkNet'in uzun vadeli teşvikleriyle uyumlu olmasını sağlar. Ayrıca, amaçlanan amaçlar için yaygın kullanımdan önce belirteç üzerindeki spekülasyonları caydırır: ağı güvence altına almak, ücretleri ödemek ve yönetişimi merkezden uzaklaştırmak.
 
-#### Non-L1 voting
+Ardından, belirteç uygulamasının oylamayı ve staking'i nasıl desteklediğini açıklıyoruz.
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+
+### oylama
+
+Vakıf, sağlam yönetişimi kolaylaştırmaktan ve oylama mekanizmalarını formüle etmekten sorumlu olacaktır. StarkNet Jetonu, hem doğrudan oylamaya hem de bir dizi delegasyon mekanizmasına izin verecek şekilde tasarlanmıştır.
+
+
+
+#### L1 oylama
+
+[</strong>modülünün](https://docs.compound.finance/v2/governance/)isteğe bağlı**kullanımını içermektedir. Bu modül, zincir üzerinde oylama için yaygın olarak kullanılır. StarkNet'te isteğe bağlı olmasının ve varsayılan olarak kapalı olmasının nedeni, maliyetin dikkate alınmasıdır. Açmak, L1'deki her StarkNet Token transferinin, yalnızca oylama gücündeki değişimleri izlemek amacıyla ihtiyaç duyulan ekstra gaz gerektirdiği anlamına gelir.</p> 
+
+
+
+#### L1 dışı oylama
+
+Compound'un delegasyon modülüyle L1 on-chain oylamanın alternatifleri, zincir dışı oylamanın yanı sıra StarkNet tabanlı zincir içi oylama sistemlerini ([SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)gibi) içerir. L1 aktarımları için gaz tüketimini önemli ölçüde azaltan bu alternatifler, şu anda kullanılan ERC-20 kodundan açık destek gerektirmez ve bu nedenle doğal olarak desteklenir.
+
+Yukarıda bahsedildiği gibi, kilitli ve kilidi açılmış tüm jetonlar StarkNet'in oylama mekanizmasında kullanılabilecektir.
+
+
 
 ### Staking
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+StarkNet'in izinsiz ve sansüre dayanıklı çalışması, sıralayıcıların rastgele seçilmesini gerektirir. Bir bloğu sıralamak ve önermek için bir düğümün seçilme olasılığı, düğümün stake ettiği StarkNet Jetonlarının sayısıyla orantılıdır. StarkNet Jetonlarını kullanmanın mantığı (örneğin, Ethereum veya Bitcoin yerine)[yönetişim teklifinde](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)açıklanmaktadır ve StarkNet'te staking, sıralama ve blok oluşturmanın kesin ayrıntıları topluluk</a>tarafından devam edentartışma altındadır ve henüz kesinleşmedi.</p> 
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+Oylamada olduğu gibi, tokenlar kilitli olsalar bile staking için kullanılabilir. Bu, StarkNet operatörlerinin çeşitliliğine ve StarkNet'in dayanıklılığına katkıda bulunur.
 
-### Summary
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+### Özet
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+StarkNet Token sözleşmelerinin Ethereum üzerinde konuşlandırılması, StarkNet ademi merkeziyetçiliğinde bir başka adımdır.
+
+Geliştiricileri ve kullanıcıları dolandırıcılıklara karşı dikkatli olmaya davet ediyoruz! Yayınlandığı tarihte, hiçbir jeton takas edilemez ve bu ticaret yasağı durumu, StarkNet Vakfı tarafından bir sonraki duyuruya kadar yürürlükte kalacaktır.
+
+Daha fazla soru için[StarkNet Discord](http://starknet.io/discord)sunucusundaki[Token-tartışmalar](https://discord.gg/qypnmzkhbc)kanalına gidebilirsiniz.

@@ -19,7 +19,7 @@ Alpha 0.7.0は新機能と改善点が満載のバージョンです。 過去�
 
 OpenZeppelinの[Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)が StarkNet でのコントラクトアップグレードで完全にサポートされるようになりました。 Proxy パターンは、Ethereum上での契約のアップグレードを可能にする一般的な方法です。 Alpha 0.7.0 では、StarkNet 上でこのパターンを有効にします。
 
-We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+パターンの基本的な実装を示す短い[チュートリアル](https://starknet.io/docs/hello_starknet/default_entrypoint.html)を作成しました。OpenZeppelin は、プロキシ パターンの標準コントラクトの実装にすでに取り組んでいます。[プロトタイプ](https://github.com/OpenZeppelin/cairo-contracts/pull/129)を参照してください。
 
 #### ブロック番号とブロックのタイムスタンプ
 
@@ -57,7 +57,7 @@ end
 ```
 %lang starknet
 @view
-func add(x : felt, y : felt) -> (res : felt):
+func add(x : フェルト, y : フェルト) -> (res : フェルト):
 return (res=x + y)
 end
 ```

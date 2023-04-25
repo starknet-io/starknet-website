@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+Scalabilitatea lanțului Blockchain a fost dintotdeauna un subiect încins. Aproape fiecare rețea blockchain duce la un număr mare de tranzacții pe secundă (TPS) ca punct de vânzare. Cu toate acestea, STP nu este o măsură valabilă pentru a compara rețelele blockchain cu – ceea ce reprezintă o provocare pentru evaluarea performanței lor relative. În plus, numerele TPS mari sunt de obicei la un cost – ceea ce ridică întrebarea: se realizează cu adevărat aceste rețele, sau doar măreşte cantitatea de carburanţi?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Așa că haideți să examinăm cum să definim scalabilitatea, care sunt compromisurile făcute pentru a le realiza, și de ce Validity Rollups sunt soluția finală a scalabilității.
 
-### Not all Transactions are Made Equal
+### Nu toate Tranzacțiile sunt realizate egal
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+În primul rând, trebuie să ne stabilim afirmaţia că o măsură simplă şi convenabilă a TPS nu este o măsură exactă a scalabilităţii.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+Compensarea nodurilor pentru executarea tranzacțiilor (și descurajarea utilizatorilor de a spamura rețeaua cu ajutorul unor calcule inutile), blockchain-uri percep o taxă proporțională cu sarcina computațională impusă pe blockchain. În Ethereum, complexitatea sarcinii de calcul este măsurată în*gaz.*Deoarece gazul este o măsură convenabilă a complexității tranzacțiilor, termenul va fi utilizat în tot acest articol și pentru blockchain-urile care nu sunt legate de Ethereum, chiar dacă este de obicei specific pentru Ethereum.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+Tranzacțiile diferă semnificativ din punct de vedere al complexității și, prin urmare, al cantității de gaz consumat. Bitcoin, pionierul tranzacțiilor nesigure peer-to-peer, suportă doar scriptul rudimentar Bitcoin. Aceste transferuri simple de la adrese pentru a aborda utilizarea gazului mic. Spre deosebire de acestea, lanţurile inteligente de contracte precum Ethereum sau Solana sprijină un limbaj de programare virtual şi complet Turing-complete care permite tranzacţii mult mai complexe. Prin urmare, dApps ca Uniswap necesită mult mai mult gaz.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+De aceea nu are niciun sens să comparăm TPS al diferitelor blockchain-uri. Ceea ce ar trebui să comparăm în schimb este capacitatea de calcul - sau a tranzitului.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Toate Blockchain-urile au o (variabilă) dimensiune a blocului și timp de bloc care determină câte*unități de calcul*pot fi procesate per bloc și cum*rapid*poate fi adăugat un nou bloc. Împreună, aceste două variabile determină*tranzitul*al unui blockchain.
 
-### What Constrains Scalability?
+### Ce constrânge Scalabilitatea?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+Blockchain-urile se străduiesc să fie cât mai descentralizate și mai favorabile incluziunii. În acest scop, trebuie ţinute sub control două proprietăţi fundamentale.
 
-#### **1. Hardware Requirements**
+#### **1. Cerințe hardware**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+Descentralizarea unei rețele blockchain este determinată de capacitatea celui mai slab nod din rețea de a verifica blockchain-ul și de a-i păstra starea. Prin urmare, costurile de exploatare a unui nod (hardware, lățime de bandă; și stocare) ar trebui să fie menținut cât mai jos posibil, pentru a permite unui număr cât mai mare de persoane să devină participanți fără permisiune în rețeaua fără încredere.
 
-#### 2**.** State Growth
+#### 2**.**Creștere de stat
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Creșterea statului se referă la cât de repede crește blocajul. Cu cât trece mai mult un blockchain permite să se întâmple pe unitate de timp, cu atât mai repede va crește blockchain-ul. Nodurile complete stochează istoricul rețelei și trebuie să poată valida starea rețelei. Starea lui Ethereum este stocată și menționată utilizând structuri eficiente, cum ar fi copacii. Pe măsură ce statul crește, i se adaugă noi frunze și ramuri, ceea ce face ca efectuarea anumitor acțiuni să fie din ce în ce mai complexă și mai îndelungată. Pe măsură ce lanţul creşte în dimensiune, acesta înrăutăţeşte execuţia cea mai proastă a cazurilor prin noduri, ceea ce duce la o creştere continuă a timpului de validare a noilor blocuri. În timp, acest lucru crește și timpul total necesar pentru sincronizarea unui nod complet.
 
-### Detrimental Impacts of Increasing Throughput
+### Impacturi dăunătoare ale creșterii pe întregul teritoriu
 
-#### 1. Node Count
+#### 1. Numărul de module
 
-The minimum requirements to run a node and node counts are:
+Cerințele minime pentru rularea unui nod și numărul de noduri sunt:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin1: spaţiu 350GB HDD disc, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Număr de noduri: ~10.000**
+* Ethereum2: spațiu de disc 500GB+ SSD, conexiune 25 Mbit/s, 4–8GB RAM, CPU 2-4 nuclee. **Număr de noduri: ~6,000**
+* Solana3: spațiu disc de 1,5 TB+ SSD, 300 Mbit/s conectat, 128GB RAM CPU 12 + nuclee. **Număr de noduri: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Observă că cu cât CPU, lățimea de bandă și cerințele de stocare sunt mai mari pentru nodurile necesare pentru trecerea unui blockchain, reducerea numărului de noduri din rețea – ceea ce duce la o descentralizare mai slabă și la o rețea mai puțin favorabilă incluziunii.
 
-#### 2. Time to Sync a Full Node
+#### 2. Este timpul să sincronizăm un modul complet
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Când rulează un nod pentru prima dată, trebuie să se sincronizeze cu toate nodurile existente, descarcă, și validează, starea rețelei până la vârful lanțului, de la blocul genesis. Acest proces ar trebui să fie cât mai rapid şi mai eficient cu putinţă, pentru a permite oricui să participe necondiţionat la protocol.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Luând ca indicator testele Jameson Lopp[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)și[2021 Node Sync Testele](https://blog.lopp.net/2021-altcoin-node-sync-tests/)Tabelul 1 compară timpul necesar pentru sincronizarea unui nod complet de Bitcoin vs. Ethereum vs. Solana în medie la un PC de grad de consumator.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Tabelul 1. Comparație fluxuri blockchain și node-sync](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Tabelul 1. Comparație fluxuri blockchain și node-sync")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Tabelul 1 demonstrează că o creștere a fluxului duce la timpi de sincronizare mai lungi, deoarece din ce în ce mai multe date trebuie prelucrate și stocate.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Deși se realizează în mod constant îmbunătățiri ale software-ului nod pentru a atenua provocarea reprezentată de creșterea blockchain-ului (scăderea amprentei pe disc, viteze sincronizate mai rapide, rezistență mai mare la erori, modularizarea anumitor componente etc. , este evident că nodurile încă nu pot ține pasul cu creșterea fluxului.
 
-### How Should Scalability be defined?
+### Cum ar trebui definită calitatea?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+Scalabilitatea este termenul cel mai greșit din spațiul blockchain. În timp ce creșterea fluxului este de dorit, aceasta este doar o parte a problemei.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***Scalabilitatea**înseamnă**mai multe tranzacții**pentru**același hardware**.*
 
-For that reason, scalability can be separated into two categories.
+Din acest motiv, scalabilitatea poate fi separată în două categorii.
 
-#### Sequencer scalability
+#### scalabilitatea ulcerului
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+Sequencing descrie acțiunea de ordonare și procesare a tranzacțiilor într-o rețea. Așa cum s-a stabilit anterior, orice blockchain ar putea să își mărească trivial fluxul mărind dimensiunea blocului și scurtând timpul acestuia - până la un punct în care impactul negativ asupra descentralizării este considerat prea semnificativ. Dar, modificarea acestor parametri simpli nu oferă îmbunătățirile necesare. Ethereum EVM poate, teoretic,[să gestioneze până la ~2.000 TPS](https://twitter.com/dankrad/status/1459607325854121989), care este insuficient pentru a deservi cererea de blocare a spațiului pe termen lung. La scară secvenţială, Solana a făcut câteva inovaţii impresionante: profitând de un mediu de execuţie paralel şi de un mecanism de consens inteligent. care permite o trecere mult mai eficientă. Dar, în ciuda îmbunătăţirilor făcute, nu este nici suficientă, nici scalabilă. Pe măsură ce Solana îşi măreşte tranzitul, costurile hardware pentru administrarea unui nod şi procesarea tranzacţiilor cresc, de asemenea.
 
-#### Verification scalability
+#### Verificare scalabilitate
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*Verificarea scalabilității descrie abordările care cresc cantitatea de noduri fără a împovăra costurile hardware.*Mai precis, se referă la inovații criptografice cum ar fi dovezile validității. Ele sunt motivul pentru care Validity Rollups poate dimensiona un blockchain în mod durabil.
 
-**What’s a Validity Rollup?**
+**Ce este Validity Rollup?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+Valabilitatea Rollups (cunoscută și sub denumirea de „ZK-Rollups”) mută calculul și depozitarea de către stat în afara lanțului, dar păstrează o cantitate mică de anumite date în lanț. Un contract inteligent pe blockchain-ul subiacent menține rădăcina statului Rollup. Pe Rollup, un lot de tranzacții puternic comprimate, împreună cu actualul rădăcină de stat, sunt trimise la un Prover în afara lanțului. Prover calculează tranzacțiile, generează o dovadă de validitate a rezultatelor și a noii rădăcini de stat și o trimite unui Verifier în lanț. Verificatorul verifică validitatea dovezii și contractul inteligent care menține starea Rollup îl actualizează la noua stare furnizată de Prover.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**Cum se poate scara Validity Rollups cu aceleași cerințe hardware?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+Chiar dacă Provers are nevoie de echipamente de vârf, ele nu afectează descentralizarea unui blockchain; deoarece valabilitatea tranzacțiilor este garantată prin dovezi care pot fi verificate matematic.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Ceea ce contează sunt cerințele pentru verificarea dovezilor. Deoarece datele implicate sunt puternic comprimate și în mare parte abstractate prin calcul, impactul său asupra nodurilor blockchain-ului subiacent este minim*.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+Verificatorii (Ethereum nodes) nu necesită echipamente hardware de vârf, iar dimensiunea loturilor nu crește cerințele hardware. Doar tranzițiile de stat și o cantitate mică de date de apel trebuie să fie procesate și stocate de noduri. Acest lucru permite tuturor nodurilor Ethereum să verifice loturile de valabilitate Rollup folosind echipamentele lor existente.
 
-**The more transactions, the cheaper it gets**
+**Cu cât sunt mai multe tranzacții, cu atât mai ieftine**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+În blockchain-urile tradiționale, cu cât se întâmplă mai multe tranzacții, cu cât este mai scump pentru toată lumea, pe măsură ce spațiul din bloc se completează — iar utilizatorii trebuie să se depășească pe o piață de taxe pentru a putea include tranzacțiile.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+Pentru o Validity Rollup, această dinamică este inversată. Verificarea unui lot de tranzacții pe Ethereum are un anumit cost. Pe măsură ce numărul de tranzacţii din interiorul unui lot creşte, costul pentru a verifica că lotul creşte exponenţial la o rată mai mică. Adăugarea mai multor tranzacții la un lot duce la taxe de tranzacționare mai ieftine, chiar dacă costurile de verificare a lotului cresc — deoarece sunt amortizate între toate tranzacțiile din lot. Valabilitatea Rollups dorește cât mai multe tranzacții în interiorul unui lot — astfel încât taxa de verificare să poată fi partajată între toți utilizatorii. Pe măsură ce mărimea lotului crește la infinit, taxa amortizată per tranzacție converge la zero, i. ., cu cât sunt mai multe tranzacții pe Validity Rollup, cu atât mai ieftin este pentru toată lumea.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX, un dApp alimentat de un Validity Rollup, vede frecvent mărimi în lot de peste 12 000 de tranzacții. Compararea consumului de gaze pentru aceleași tranzacții pe Mainnet cu cel de Validity Rollup ilustrează creșterea scalabilității:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+Setarea unei tranzacții dYdX pe ethereum Mainnet:**200,000 gaz**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+Setarea unei tranzacții dYdX pe StarkEx:**<500 gaz**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+O altă modalitate de a privi astfel: Validity Rollups - principalele scări de costuri sunt liniare cu numărul de utilizatori din același lot.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### De ce Rollups optimist nu sunt la fel de scalabile cum ar putea crede cineva
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+Teoretic, Rollups-urile optimiste oferă aproape aceleași beneficii de scalabilitate ca Rollups-ul validității. Dar există o distincție importantă: Rollups optimist optimizează pentru cazul mediu, în timp ce Validity Rollups se optimizează pentru cel mai rău caz. Deoarece sistemele blockchain funcționează în condiții extrem de dificile, optimizarea în cel mai rău caz este singura modalitate de a obține securitate.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+În cel mai rău caz al Rollup optimist, tranzacțiile unui utilizator nu vor fi verificate de verificatorii de fraudă. Deci, pentru a contesta frauda, utilizatorul trebuie să sincronizeze un nod complet Ethereum, un nod complet L2 și să calculeze singuri tranzacția suspectă.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+În cel mai rău caz Validity Rollup, un utilizator ar trebui doar să sincronizeze un nod complet Ethereum pentru a verifica validitatea, să economisească sarcinile de calcul.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+Spre deosebire de Validity Rollups, costurile Rollup optimist sunt liniare cu numărul de tranzacții în loc de numărul de utilizatori, făcându-le mai scumpe.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### Piesa finală din Puzzle — Acces fără permisiuni în statul Rollup
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+Pentru a garanta validitatea tranzacțiilor, utilizatorii trebuie să execute doar un nod Ethereum. Cu toate acestea, utilizatorii și dezvoltatorii pot dori să vizioneze și să ruleze, starea și executarea Rollup în diferite scopuri. Un*modul de indexare L2*completează perfect acest lucru. Nu numai că permite utilizatorilor să vadă tranzacțiile în rețea, este însă și o componentă esențială a infrastructurii, necesară pentru funcționarea infrastructurii ecosistemice. Indexări ca The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all are supports all by a permissioness, indexing L2.
 
-### Conclusion
+### Concluzii
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+Multe abordări pentru a aborda scalabilitatea blockchain se concentrează fals pe creșterea*fluxului*. Dar, acest lucru neglijează impactul fluxurilor asupra nodurilor: cerințele hardware tot mai mari pentru a procesa blocurile și a stoca istoricul rețelei, şi cum împiedică aceasta descentralizarea unei reţele.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Odată cu apariția criptografiei care nu poate fi validată, un blockchain poate atinge**adevărata scalabilitate**care nu împovărează nodurile cu costuri din ce în ce mai mari și permite descentralizarea pe scară largă. Acum sunt posibile mai multe tranzacții cu calcule puternice și mai complexe pentru același hardware, inversarea dilemei pieței de taxe în acest proces - cu cât mai multă activitate pe un Rollup validitate, cu atât mai ieftin va fi mai ieftin!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)și[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+1 De la<https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+2 De la<https://ethereum.org/en/developers/docs/nodes-and-clients/>
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+3 Din<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+4 Simplificat și ajustat cu fermitate pentru dimensiunile medii dinamice ale blocului

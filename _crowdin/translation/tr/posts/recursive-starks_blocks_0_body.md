@@ -1,118 +1,143 @@
 ### TL;DR
 
-* Recursive Proving is live on Mainnet, scaling StarkEx apps as well as StarkNet with a single proof
-* It boosts scale, and delivers benefit in cost, and latency (a rare and exciting occurrence of scale and latency moving in tandem, and not being a tradeoff)
-* It sets the stage for L3 and other benefitsGo read the blog post on [Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025). It’s cool stuff 😉
+* Özyinelemeli Kanıtlama, Mainnet'te yayında, StarkEx uygulamalarının yanı sıra StarkNet'i tek bir kanıtla ölçeklendiriyor
+* Ölçeği artırır ve maliyet ve gecikme süresinde fayda sağlar (bir arada hareket eden ve bir değiş tokuş olmayan ölçek ve gecikmenin nadir ve heyecan verici bir oluşumu)
+* L3 ve diğer avantajlar için sahneyi hazırlar.[Recursive Proving](https://medium.com/@starkware/recursive-starks-78f8dd401025)hakkındaki blog gönderisini okuyun. Harika şeyler 😉
 
-### Scaling up!
+### Ölçeklendirme!
 
-Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof.
+Kahire'nin genel hesaplamasıyla desteklenen yinelemeli ispatlar artık üretimde. Bu, STARK'larla L2 ölçeklemenin gücünde büyük bir artışı işaret ediyor. Tek bir kanıtla Ethereum'a yazılabilecek işlem sayısında hızlı bir şekilde çok kat artış sağlayacaktır.
 
-Until now, STARK scaling has worked by “rolling up” tens or even hundreds of thousands of transactions into a single proof, which was written to Ethereum. With recursion, many such proofs can be “rolled up” into a single proof.
+Şimdiye kadar, STARK ölçeklendirme, Ethereum'a yazılan onlarca hatta yüzbinlerce işlemi tek bir kanıta "toplayarak" çalıştı. Özyineleme ile, bu tür birçok kanıt tek bir kanıtta "toplanabilir".
 
-This method is now in production for a multitude of Cairo-based applications: apps running on StarkEx, StarkWare’s SaaS scaling engine, and StarkNet, the permissionless rollup.
+Bu yöntem şu anda çok sayıda Kahire tabanlı uygulama için üretim aşamasındadır: StarkEx üzerinde çalışan uygulamalar, StarkWare'in SaaS ölçeklendirme motoru ve izinsiz toplama olan StarkNet.
 
-### The story so far
+### Hikaye şimdiye kadar
 
-Since the first proof on Mainnet, in March 2020, the following developments have shaped how STARKs are used.
+Mart 2020'de Mainnet'teki ilk kanıttan bu yana, aşağıdaki gelişmeler STARK'ların nasıl kullanıldığını şekillendirdi.
 
-### STARK-based scaling
+### STARK tabanlı ölçeklendirme
 
-In June 2020 the first STARK-based scaling solution — [StarkEx](https://youtu.be/P-qoPVoneQA) — was deployed on Ethereum Mainnet. StarkEx has a Prover that performs large computations off-chain and produces a STARK-proof for their correctness, and a Verifier that verifies this proof on-chain. The constraints for this first deployment were “hand-written” by StarkWare’s engineers, thus greatly limiting feature velocity for StarkEx. We concluded that a programming language to support proving general computation is needed — Cairo.
+Haziran 2020'de ilk STARK tabanlı ölçeklendirme çözümü —[StarkEx](https://youtu.be/P-qoPVoneQA)— Ethereum Mainnet üzerinde konuşlandırıldı. StarkEx, zincir dışında büyük hesaplamalar gerçekleştiren ve bunların doğruluğu için bir STARK kanıtı üreten bir Kanıtlayıcıya ve bu kanıtı zincir üzerinde doğrulayan bir Doğrulayıcıya sahiptir. Bu ilk dağıtımın kısıtlamaları, StarkWare'in mühendisleri tarafından "elle yazılmıştı", bu nedenle StarkEx için özellik hızını büyük ölçüde sınırladı. Genel hesaplamayı kanıtlamayı desteklemek için bir programlama dilinin gerekli olduğu sonucuna vardık - Kahire.
 
-#### Cairo
+#### Kahire
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Cairo stands for CPU Algebraic Intermediate Representation (AIR), and includes a single AIR that verifies the instruction set of this “CPU”. It opened up the door for coding proofs for more complex business logic, for arbitrary computational statements, and for doing so in a faster and safer manner. A Cairo program can prove the execution of a single application’s logic. But a Cairo program can also be a concatenation of multiple such applications — SHARP.
-
-#### SHARP
-
-SHARP — a SHARed Prover — takes transactions from several separate apps, and proves them all in one single STARK-proof. Apps combine their batches of transactions, filling up the capacity of a STARK-proofs faster. Transactions are processed at an improved rate and latency. The next frontier: Recursive Proofs, but not merely for some hard-coded logic, but rather for **general computation**.
-
-To understand the full benefit of Recursive Proving it is worth understanding a little bit more about how (non-recursive) proving was performed by SHARP up until now. Drawing 1 depicts a typical non-recursive flow:
-
-![Drawing 1: A typical non-recursive proving flow](/assets/recursive_starks_01.png "Drawing 1: A typical non-recursive proving flow")
-
-Here, statements arrive over time. When a certain capacity (or time) threshold is reached, a large combined statement (a.k.a Train) is generated. This combined statement is proven only once all the individual statements have been received. This proof takes a long time to prove (roughly the sum of time it takes to prove each statement individually).
-
-Proving extremely large statements is eventually limited by available compute resources such as memory. Prior to recursion, this was effectively the limiting scalability barrier of STARK proving.
-
-### What is Recursive Proving?
-
-With STARK proofs, the time it takes to prove a statement is roughly linear with the time it takes to execute the statement. In addition, if proving a statement takes T time, then verifying the proof takes roughly log(T) time, which is typically called “logarithmic compression”. In other words, with STARKs you spend much less time on verifying the statement than on calculating it.
-
-[Cairo](https://starkware.co/cairo/) allows expressing general computational statements that can be proven by STARK proofs and verified by the corresponding STARK verifiers.
-
-This is where the opportunity to perform [recursion](https://en.wikipedia.org/wiki/Recursion) kicks in: In the same way that we write a Cairo program that proves the correctness of thousands of transactions, we can also write a Cairo program that verifies multiple STARK proofs. We can generate a single proof attesting to the validity of multiple “up-stream” proofs. This is what we call Recursive Proving.
-
-Because of the logarithmic compression and roughly linear proving time, proving a verification of a STARK proof takes relatively short time (expected to be just a few minutes in the near future).
-
-When implementing Recursion, SHARP can prove statements upon their arrival. Their proofs can be merged over and over into recursive proofs in various patterns until, at a certain point, the resulting proof is submitted to an on-chain verifier contract. A typical pattern is depicted in Drawing 2:
-
-![Drawing 2: A typical recursive proving flow.](/assets/recursive_starks_02.png "Drawing 2: A typical recursive proving flow.")
-
-### Immediate Benefits of Recursive Proving
-
-#### Reduced On-chain Cost
-
-Off the bat, we achieve “compression” of multiple proofs into one, which implies lower on-chain verification cost per transaction (where each statement may include many transactions).
-
-With recursion, the computational resources barrier (e.g. memory) that limited proofs size up until now, is eliminated, since each limited size statement can be proven separately. Hence, when using recursion, the effective Train size of recursion is almost unlimited, and the cost per transaction can be reduced by orders of magnitude.
-
-In practical terms, the reduction depends on the acceptable latency (and the rate at which transactions arrive). In addition, since each proof is typically also accompanied by some output such as on-chain data, there are limits to the amount of data that can be written on-chain together with a single proof. Nevertheless, reducing cost by an order of magnitude and even better is trivially achievable.
-
-#### Reduced Latency
-
-The Recursive Proving pattern reduces the latency of proving large Trains of statements. This is the result of two factors:
-
-1. Incoming statements can be proven **in parallel** (as opposed to proving an extremely large combined statement).
-2. There is no need to wait until the last statement in the Train arrives to begin proving. Rather, proofs can be combined with new statements as they arrive. This means that the latency of the last statement joining a Train, is roughly the time it takes to prove that very last statement plus the time it takes to prove a Recursive Verifier statement (which attests to all those statements that have already “onboarded” this particular Train).
-
-We are actively developing and optimizing the latency of proving the Recursive Verifier statement. We expect this to reach the order of a few minutes within a few months. Hence, a highly efficient SHARP can offer latencies from a few minutes up to a few hours, depending on the tradeoff versus on-chain cost per transaction. This represents a meaningful improvement to SHARP’s latency.
-
-#### Facilitating L3
-
-The development of the Recursive Verifier statement in Cairo also opens up the possibility of submitting proofs to StarkNet, as that statement can be baked into a StarkNet smart contract. This allows building [L3 deployments on top of the public StarkNet](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) (an L2 network).
-
-The recursive pattern also applies to the aggregation of proofs from L3, to be verified by a single proof on L2. Hence, hyper-scaling is achieved there too.
-
-### More Subtle Benefits
-
-#### Applicative Recursion
-
-Recursion opens up even more opportunities for platforms and applications wishing to further scale their cost and performance.
-
-Each STARK proof attests to the validity of a statement applied to some input known as the “public input” (or “program output” in Cairo terms). Conceptually, STARK recursion compresses two proofs with *two* inputs into *one* proof with two inputs. In other words, while the number of proofs is reduced, the number of inputs is kept constant. These inputs are then typically used by an application in order to update some state on L1 (e.g. to update a state root or perform an on-chain withdrawal).
-
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. The resulting statement attests to the validity of the input combination based on the application semantics, hence the name Applicative Recursion (see Drawing 3, for an example)..
-
-![Drawing 3: Applicative Recursion example](/assets/recursive_starks_03.png "Drawing 3: Applicative Recursion example")
-
-Here, Statement 1 attests to a state update from A to B and Statement 2 attests to a further update from B to C. Proofs of Statement 1 and Statement 2 may be combined into a third statement, attesting to the direct update from A to C. By applying similar logic recursively, one can reduce the cost of state updates very significantly up to the finality latency requirement.
-
-Another important example of Applicative Recursion is to compress rollup data from multiple proofs. For example, for a Validity Rollup such as StarkNet, every storage update on L2 is also included as transmission data on L1, to ensure data availability. However, there is no need to send multiple updates for the same storage element, as only the final value of transactions attested to by the proof verified is required for data availability. This optimization is already performed within a *single* StarkNet block. However, by generating a proof per block, Applicative Recursion may compress this rollup data across *multiple* L2 blocks. This can result in significant cost reduction, enabling shorter block intervals on L2, without sacrificing the scalability of L1 updates.
-
-Worth noting: Applicative Recursion may be combined with application-agnostic recursion as depicted earlier. These two optimizations are independent.
-
-#### Reduced On-chain Verifier Complexity
-
-The complexity of the STARK verifier depends on the kind of statements it is designed to verify. In particular, for Cairo statements, the verifier complexity depends on the specific elements allowed in the Cairo language, and, more specifically, the supported built-ins (if we use the CPU metaphor for Cairo, then built-ins are the equivalent of micro-circuits in a CPU: computations performed so frequently that they require their own optimized computation).
-
-The Cairo language continues to evolve and offer more and more useful built-ins. On the other hand, the Recursive Verifier only requires using a small subset of these built-ins. Hence, a recursive SHARP can successfully support any statement in Cairo by supporting the full language in the recursive verifiers. Specifically, the L1 Solidity Verifier need only verify recursive proofs, and thus can be limited to a more stable subset of the Cairo language: The L1 Verifier need not keep up with the latest and greatest built-ins. In other words, verification of ever-evolving complex statements is relegated to L2, leaving the L1 Verifier to verify simpler and more stable statements.
-
-#### Reduced Compute Footprint
-
-Before recursion, the ability to aggregate multiple statements into one proof was limited by the maximal size of the statement that could be proved on available compute instances (and the time it could take to generate such proofs).
-
-With recursion, there is no longer a need to prove such extremely large statements. As a result, smaller, less expensive and more available compute instances can be used (though more of those may be needed than with large monolithic provers). This allows deployment of prover instances in more physical and virtual environments than previously possible.
-
-### Summary
-
-Recursive proofs of general computation now serve multiple production systems, including StarkNet, on Mainnet Ethereum.
-
-The benefits of recursion will be realized gradually, as it continues to allow for new improvements, and it will soon deliver hyper-scale, cut gas fees, and improve latency by unlocking the potential of parallelization.
-
-It will bring significant cost and latency benefits with it, together with new opportunities such as L3 and applicative-recursion. Further optimization of the Recursive Verifier is on-going and even better performance and cost benefits are expected to be provided over time.
+2020 yazında Kahire, Ethereum Mainnet</a>
 
 
 
-**Gidi Kaempfer**, Head of Core Engineering, StarkWare
+ilk görünümünü yaptı. Kahire, CPU Cebirsel Ara Temsili (AIR) anlamına gelir ve bu "CPU"nun komut setini doğrulayan tek bir AIR içerir. Daha karmaşık iş mantığı, keyfi hesaplama ifadeleri ve bunu daha hızlı ve daha güvenli bir şekilde yapmak için kanıtları kodlamak için kapıyı açtı. Bir Kahire programı, tek bir uygulamanın mantığının yürütülmesini kanıtlayabilir. Ancak bir Kahire programı, bu tür birden çok uygulamanın bir birleşimi de olabilir - SHARP.</p> 
+
+
+
+#### KESKİN
+
+SHARP - bir SHARed Prover - birkaç ayrı uygulamadan işlem alır ve hepsini tek bir STARK-proofunda kanıtlar. Uygulamalar, işlem gruplarını birleştirerek bir STARK'ın kapasitesini daha hızlı doldurur. İşlemler, geliştirilmiş bir hız ve gecikmeyle işlenir. Bir sonraki sınır: Özyinelemeli Kanıtlar, ancak yalnızca bazı sabit kodlanmış mantıklar için değil, daha çok**genel hesaplama için**.
+
+Özyinelemeli Kanıtlamanın tüm faydasını anlamak için, SHARP tarafından şimdiye kadar (özyinelemesiz) kanıtlamanın nasıl gerçekleştirildiğini biraz daha anlamaya değer. Çizim 1 tipik bir özyinelemeli olmayan akışı göstermektedir:
+
+![Çizim 1: Tipik bir yinelemesiz kanıtlama akışı](/assets/recursive_starks_01.png "Çizim 1: Tipik bir yinelemesiz kanıtlama akışı")
+
+Burada ifadeler zamanla gelir. Belirli bir kapasite (veya zaman) eşiğine ulaşıldığında, büyük bir birleşik ifade (Tren olarak da bilinir) oluşturulur. Bu birleşik ifade, yalnızca tüm bireysel ifadeler alındığında kanıtlanmıştır. Bu kanıtın kanıtlanması uzun zaman alır (kabaca her ifadeyi ayrı ayrı kanıtlamak için geçen sürenin toplamı).
+
+Son derece büyük ifadelerin kanıtlanması, sonunda bellek gibi kullanılabilir bilgi işlem kaynaklarıyla sınırlıdır. Özyinelemeden önce, bu, STARK kanıtlamanın sınırlayıcı ölçeklenebilirlik engeliydi.
+
+
+
+### Özyinelemeli Kanıtlama Nedir?
+
+STARK kanıtlarıyla, bir ifadeyi kanıtlamak için geçen süre, ifadeyi yürütmek için geçen süre ile kabaca doğrusaldır. Ek olarak, bir ifadenin kanıtlanması T süresi alıyorsa, ispatın doğrulanması kabaca log(T) süresi alır ve bu genellikle "logaritmik sıkıştırma" olarak adlandırılır. Başka bir deyişle, STARK'larla, ifadeyi doğrulamak için onu hesaplamaktan çok daha az zaman harcarsınız.
+
+[Kahire](https://starkware.co/cairo/)STARK kanıtlarıyla kanıtlanabilen ve karşılık gelen STARK doğrulayıcıları tarafından doğrulanabilen genel hesaplamalı ifadelerin ifade edilmesine izin verir.
+
+İşte burada[özyineleme](https://en.wikipedia.org/wiki/Recursion)gerçekleştirme fırsatı devreye giriyor: Binlerce işlemin doğruluğunu kanıtlayan bir Kahire programı yazdığımız gibi, çoklu STARK kanıtlarını doğrulayan bir Kahire programı da yazabiliriz. Birden çok "yukarı akış" kanıtın geçerliliğini kanıtlayan tek bir kanıt üretebiliriz. Yinelemeli İspatlama dediğimiz şey budur.
+
+Logaritmik sıkıştırma ve kabaca doğrusal kanıtlama süresi nedeniyle, bir STARK kanıtının doğrulanması nispeten kısa sürer (yakın gelecekte yalnızca birkaç dakika olması beklenmektedir).
+
+Özyinelemeyi uygularken, SHARP ifadeleri geldiklerinde kanıtlayabilir. Kanıtları, belirli bir noktada, ortaya çıkan kanıt bir zincir üstü doğrulayıcı sözleşmesine sunulana kadar çeşitli modellerde tekrar tekrar tekrar tekrar birleştirilebilir. Tipik bir model Çizim 2'de gösterilmektedir:
+
+![Çizim 2: Tipik bir yinelemeli kanıtlama akışı.](/assets/recursive_starks_02.png "Çizim 2: Tipik bir yinelemeli kanıtlama akışı.")
+
+
+
+### Özyinelemeli Kanıtlamanın Anlık Faydaları
+
+
+
+#### Azaltılmış Zincir Maliyeti
+
+Yarasadan, birden çok kanıtın "sıkıştırılmasını" bir hale getiriyoruz, bu da işlem başına daha düşük zincir içi doğrulama maliyeti anlamına geliyor (burada her ifade birçok işlemi içerebilir).
+
+Özyineleme ile, her bir sınırlı boyut ifadesi ayrı ayrı kanıtlanabildiğinden, şimdiye kadar ispat boyutlarını sınırlayan hesaplama kaynakları engeli (örn. bellek) ortadan kalkar. Bu nedenle, özyineleme kullanılırken, yinelemenin etkili Train boyutu neredeyse sınırsızdır ve işlem başına maliyet büyüklük sırasına göre azaltılabilir.
+
+Pratik açıdan, azalma kabul edilebilir gecikme süresine (ve işlemlerin ulaşma hızına) bağlıdır. Ek olarak, her kanıta tipik olarak zincir üstü veriler gibi bazı çıktılar da eşlik ettiğinden, tek bir kanıtla birlikte zincir üzerine yazılabilecek veri miktarının sınırları vardır. Bununla birlikte, maliyeti bir büyüklük sırasına göre azaltmak ve hatta daha iyisi önemsiz bir şekilde başarılabilir.
+
+
+
+#### Azaltılmış Gecikme
+
+Özyinelemeli Kanıtlama modeli, büyük ifade dizilerini ispatlama gecikmesini azaltır. Bu iki faktörün sonucudur:
+
+1. Gelen ifadeler paralel</strong>**olarak kanıtlanabilir (son derece büyük bir birleşik ifadenin kanıtlanmasının aksine).</li> 
+   
+   2 Kanıtlamaya başlamak için Trendeki son ifadenin gelmesini beklemeye gerek yok. Aksine, kanıtlar geldikçe yeni ifadelerle birleştirilebilir. Bu, bir Trene katılan son ifadenin gecikme süresinin, kabaca bu son ifadeyi kanıtlamak için geçen süre artı bir Özyinelemeli Doğrulayıcı ifadesini kanıtlamak için geçen süre olduğu anlamına gelir (bu, bu ifadeye halihazırda "katılmış" tüm ifadeleri doğrular) belirli Tren).</ol> 
+
+Özyinelemeli Doğrulayıcı deyimini kanıtlama gecikmesini aktif olarak geliştiriyor ve optimize ediyoruz. Bunun birkaç ay içinde birkaç dakika mertebesine ulaşmasını bekliyoruz. Bu nedenle, oldukça verimli bir SHARP, işlem başına zincir içi maliyete karşı takasa bağlı olarak birkaç dakikadan birkaç saate kadar gecikmeler sunabilir. Bu, SHARP'ın gecikme süresinde anlamlı bir gelişmeyi temsil eder.
+
+
+
+#### Kolaylaştırıcı L3
+
+Kahire'de Özyinelemeli Doğrulayıcı bildiriminin geliştirilmesi, aynı zamanda, bu ifade bir StarkNet akıllı sözleşmesine dönüştürülebileceğinden, kanıtların StarkNet'e sunulması olasılığını da açar. Bu, halka açık StarkNet</a>(bir L2 ağı) üzerindeL3 konuşlandırması oluşturmaya izin verir.</p> 
+
+Özyinelemeli model, L2'deki tek bir kanıtla doğrulanacak olan L3'teki kanıtların toplanması için de geçerlidir. Dolayısıyla, burada da hiper ölçeklendirme elde edilir.
+
+
+
+### Daha İnce Avantajlar
+
+
+
+#### Uygulamalı Özyineleme
+
+Yineleme, maliyet ve performanslarını daha da ölçeklendirmek isteyen platformlar ve uygulamalar için daha da fazla fırsat açar.
+
+Her STARK ispatı, "kamusal girdi" (veya Kahire terimleriyle "program çıktısı") olarak bilinen bazı girdilere uygulanan bir ifadenin geçerliliğini tasdik eder. Kavramsal olarak, STARK özyinelemesi,*iki*girişli iki ispatı, iki girişli*bir*ispata sıkıştırır. Yani ispat sayısı azaltılırken girdi sayısı sabit tutulmaktadır. Bu girişler daha sonra tipik olarak bir uygulama tarafından L1'deki bazı durumları güncellemek için kullanılır (örneğin, bir durum kökünü güncellemek veya zincir üzerinde bir geri çekme gerçekleştirmek için).
+
+Özyinelemeli ifadenin*application-aware*olmasına izin verilirse, yani uygulamanın semantiğini tanırsa, hem iki ispatı bir*sıkıştırabilir hem de*iki girişi bir hale getirebilir. Ortaya çıkan ifade, uygulama anlambilimine dayalı girdi kombinasyonunun geçerliliğini doğrular, bu nedenle Uygulamalı Özyineleme adı verilir (bir örnek için bkz. Çizim 3).
+
+![Çizim 3: Uygulamalı Özyineleme örneği](/assets/recursive_starks_03.png "Çizim 3: Uygulamalı Özyineleme örneği")
+
+Burada, İfade 1, A'dan B'ye bir durum güncellemesini tasdik eder ve İfade 2, B'den C'ye bir sonraki güncellemeyi tasdik eder. Beyan 1 ve Beyan 2'nin Kanıtları, A'dan C'ye doğrudan güncellemeyi tasdik eden üçüncü bir beyanda birleştirilebilir. • Benzer mantığı yinelemeli olarak uygulayarak, durum güncellemelerinin maliyeti, kesinlik gecikmesi gereksinimine kadar çok önemli ölçüde azaltılabilir.
+
+Uygulamalı Özyinelemenin bir başka önemli örneği, birden çok kanıttan toplama verilerini sıkıştırmaktır. Örneğin, StarkNet gibi bir Validity Rollup için L2'deki her depolama güncellemesi, veri kullanılabilirliğini sağlamak için L1'de iletim verileri olarak dahil edilir. Ancak, aynı depolama öğesi için birden fazla güncelleme göndermeye gerek yoktur, çünkü veri kullanılabilirliği için yalnızca doğrulanan kanıt tarafından tasdik edilen işlemlerin nihai değeri gereklidir. Bu optimizasyon zaten*tek*StarkNet bloğu içinde gerçekleştirilir. Bununla birlikte, Applicative Recursion, blok başına bir kanıt üreterek, bu toplama verilerini*çoklu*L2 blok boyunca sıkıştırabilir. Bu, L1 güncellemelerinin ölçeklenebilirliğinden ödün vermeden L2'de daha kısa blok aralıkları sağlayarak önemli ölçüde maliyet düşüşü sağlayabilir.
+
+Kayda değer: Uygulamalı Özyineleme, daha önce gösterildiği gibi uygulamadan bağımsız özyineleme ile birleştirilebilir. Bu iki optimizasyon bağımsızdır.
+
+
+
+#### Azaltılmış On-chain Doğrulayıcı Karmaşıklığı
+
+STARK doğrulayıcının karmaşıklığı, doğrulamak için tasarlandığı ifadelerin türüne bağlıdır. Özellikle, Kahire ifadeleri için doğrulayıcı karmaşıklığı, Kahire dilinde izin verilen belirli öğelere ve daha spesifik olarak desteklenen yerleşiklere bağlıdır (Kahire için CPU mecazını kullanırsak, yerleşikler mikronun eşdeğeridir. -bir CPU'daki devreler: kendi optimize edilmiş hesaplamalarını gerektirecek kadar sık gerçekleştirilen hesaplamalar).
+
+Kahire dili gelişmeye ve giderek daha kullanışlı yerleşikler sunmaya devam ediyor. Öte yandan, Özyinelemeli Doğrulayıcı, bu yerleşiklerin yalnızca küçük bir alt kümesinin kullanılmasını gerektirir. Dolayısıyla özyinelemeli bir SHARP, özyinelemeli doğrulayıcılarda tüm dili destekleyerek Kahire'deki herhangi bir ifadeyi başarıyla destekleyebilir. Spesifik olarak, L1 Solidity Verifier'ın yalnızca özyinelemeli ispatları doğrulaması gerekir ve bu nedenle Kahire dilinin daha istikrarlı bir alt kümesiyle sınırlandırılabilir: L1 Verifier'ın en son ve en büyük yerleşiklerle ayak uydurması gerekmez. Başka bir deyişle, sürekli gelişen karmaşık ifadelerin doğrulanması L2'ye devredilir ve L1 Doğrulayıcı daha basit ve daha kararlı ifadeleri doğrulamaya bırakılır.
+
+
+
+#### Azaltılmış Bilgi İşlem Ayak İzi
+
+Yinelemeden önce, birden çok ifadeyi tek bir kanıtta toplama yeteneği, ifadenin mevcut bilgi işlem örneklerinde kanıtlanabilecek maksimum boyutuyla (ve bu tür kanıtları oluşturmak için gereken süreyle) sınırlıydı.
+
+Özyineleme ile, artık bu kadar büyük ifadeleri kanıtlamaya gerek yoktur. Sonuç olarak, daha küçük, daha ucuz ve daha fazla kullanılabilir bilgi işlem bulut sunucuları kullanılabilir (yine de büyük yekpare kanıtlayıcılardan daha fazlasına ihtiyaç duyulabilir). Bu, kanıtlayıcı örneklerinin daha önce mümkün olandan daha fazla fiziksel ve sanal ortamda konuşlandırılmasına izin verir.
+
+
+
+### Özet
+
+Genel hesaplamanın özyinelemeli kanıtları artık Mainnet Ethereum'da StarkNet dahil olmak üzere birden fazla üretim sistemine hizmet ediyor.
+
+Özyinelemenin faydaları, yeni iyileştirmelere izin vermeye devam ettikçe kademeli olarak fark edilecek ve kısa süre içinde paralelleştirme potansiyelinin kilidini açarak hiper ölçek, indirim ücretleri ve gecikmeyi iyileştirecek.
+
+L3 ve aplicative-recursion gibi yeni fırsatlarla birlikte önemli maliyet ve gecikme avantajları getirecektir. Özyinelemeli Doğrulayıcı'nın daha fazla optimizasyonu devam etmektedir ve zaman içinde daha da iyi performans ve maliyet avantajlarının sağlanması beklenmektedir.
+
+**Gidi Kaempfer**, Temel Mühendislik Başkanı, StarkWare

@@ -40,7 +40,7 @@ După cum s-a menționat mai sus, toate jetoanele – blocate și deblocate – 
 
 ### Mâncărimi
 
-Operațiunea fără permisiune și rezistentă la cenzură a StarkNet-ului necesită selecția aleatorie a secvențelor. Probabilitatea ca un nod să fie selectat pentru secvențiere și propunerea unui bloc este proporțională cu numărul de StarkNet Tokens care node miza. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+Operațiunea fără permisiune și rezistentă la cenzură a StarkNet-ului necesită selecția aleatorie a secvențelor. Probabilitatea ca un nod să fie selectat pentru secvențiere și propunerea unui bloc este proporțională cu numărul de StarkNet Tokens care node miza. Motivul utilizării jetoanelor StarkNet (mai degrabă decât, să zicem, Ethereum sau Bitcoin) este explicat în propunerea de guvernare[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), iar detaliile exacte despre miza, secvențierea și crearea blocurilor pe StarkNet sunt în curs de discuții[de către comunitate](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), și sunt încă de finalizat.
 
 Ca și în cazul votării, tokeni pot fi utilizați pentru a se implica chiar și atunci când sunt blocați. Acest lucru contribuie la diversitatea operatorilor StarkNet și la reziliența sistemului StarkNet.
 

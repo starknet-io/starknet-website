@@ -47,4 +47,4 @@ Jeśli jesteś zainteresowany skalą uzyskaną dzięki dowodom STARK, proszę pr
 
 
 
-You can always email [info@starkware.co](mailto:info@starkware.co) and a human will get to your email.
+Zawsze możesz wysłać wiadomość e-mail na adres[info@starkware.co](mailto:info@starkware.co), a człowiek dostanie się na Twój adres e-mail.

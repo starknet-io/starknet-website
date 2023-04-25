@@ -74,7 +74,7 @@ Näiden komiteoiden nimittämisen myötä Starknet-säätiö on valmis jatkamaan
 
 Tässä on mitä seuraavaksi tulee: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
+* [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) järjestetään 21. maaliskuuta 2023;
 * EMG-komitean ensimmäinen ilmoitus ja ensimmäisen hakukierroksen yksityiskohdat julkaistaan StarkNet-säätiön [-blogissa](https://www.starknet.io/en/posts/foundation) 21 päivänä maaliskuuta 2023.
 
 Pidä silmällä StarkNet-säätiön [-blogia](https://www.starknet.io/en/posts/foundation) ja sosiaalisen median kanavia uusimpia päivityksiä ja mahdollisuuksia.

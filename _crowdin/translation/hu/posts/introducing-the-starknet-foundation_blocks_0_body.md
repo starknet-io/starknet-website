@@ -1,68 +1,78 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* A StarkNet Alapítvány hivatalosan is elindul
+* Célja egy virágzó StarkNet támogatása
+* Erős interdiszciplináris testület fogja vezetni az alapítványt
+* Az Alapítvány független a StarkWare-től
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[A StarkNet](https://starknet.io/)nagy lépést tesz jövőbeli közösségi irányítási struktúrája felé a StarkNet Alapítvány létrehozásával.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+Ez a bejegyzés felvázolja az alapítvány küldetését, bemutatja igazgatóit, és röviden kitér az általuk terítékre hozott tapasztalatokra és értékekre.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+Az Alapítványt azért hozták létre, hogy megvalósítsa</a>StarkNet[decentralizációs javaslatának](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)2022 júliusában közzétett elképzelését, és itt tette közzé saját „Hello World” bejegyzését
 
-### Advancing Starknet's vision
+.</p> 
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
 
-#### **The foundation’s priorities will include:**
+### Starknet víziójának előmozdítása
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+A StarkNet egy engedély nélküli, decentralizált Layer 2 (L2) Validity Rollup (gyakran ZK-Rollup néven is emlegetik), amelynek célja az Ethereum méretezése az Ethereum biztonságának és decentralizáltságának megőrzése mellett. E küldetésnek megfelelően az alapítványt független entitásként hozták létre a megosztott technológia, a StarkNet fejlesztésére. Ezen túlmenően, non-profit szervezetként, amelynek szűk küldetése: a StarkNet mindenki számára közjóként való népszerűsítése, és az elkövetkező éveken keresztül történő fenntartása.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+Az alapítvány a kezdeti Token készlet 50,1%-ával indít, hogy biztosítsa a hálózat erőforrásainak hatékony felhasználását a következő célok érdekében: a StarkNet, mint közjószág fenntartása és biztonsága; a hálózat folyamatos fejlesztése és bővítése; valamint a fejlesztők közötti konstruktív együttműködés kultúrájának támogatása.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
 
-### **Introducing the board**
+#### **Az alapítvány prioritásai a következők lesznek:**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+**A StarkNet-felhasználók, fejlesztők és kutatók közösségének**támogatása infrastruktúra, eszközök, alkalmazások és egyebek kiépítésével életet lehelnek a StarkNetbe.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+**A közösség bővítése**a StarkNetről és technológiájáról szóló oktatással, valamint a fejlesztők segítésével a StarkNet infrastruktúrájának, valamint a STARK-ok erejét kihasználó dApp-k kiépítéséhez szükséges készségek megszerzésében.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**A hálózat folyamatos fejlesztésének felügyelete és a kutatás előmozdítása,**amelyek kulcsfontosságú elemei a hálózat jövőképének megvalósításában.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**A StarkNet decentralizációjának előmozdítása**a StarkNet irányítási mechanizmusainak fejlesztésével, valamint a decentralizált szekvenálás és bizonyítás bevezetésével.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+### **A tábla bemutatása**
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+Az alapítványt héttagú kuratórium irányítja. Az igazgatótanács tagjai változatos hátterűek, és egyensúlyt, függetlenséget és multidiszciplináris készségeket kínálnak az asztalra. Minden tag rendelkezik olyan szakértelemmel és tapasztalattal, amely segít a StarkNetnek abban, hogy kiteljesítse a benne rejlő potenciált, mint egy hosszú távú közjó. „[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” bejegyzésükben betekintést nyújtanak abba, hogy mi motiválja őket a StarkNetben való részvételre. A keresztnevek szerinti ABC sorrendben jelennek meg.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)Az Egyesült Államok korábbi technológiai vezérigazgató-helyettese; Az ICANN, az internet infrastruktúráját kezelő független testület volt alelnöke és politikai igazgatója.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)**Matematikus és informatikus; StarkWare elnöke és társalapítója; A STARK, FRI és Zerocash protokollok társfeltalálója és a Zcash alapító tudósa.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: A blokklánc gondolatvezetője és bejelentője, aki arról híres, hogy feltárja a nagy horderejű kriptoeszköz-projektek rendszerhibáit; a Human Rights Foundation kriptovalutával kapcsolatos tanácsadója; az Arcane Assets korábbi befektetési igazgatója.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Díjnyertes jogász, a nyílt forráskódú szoftverek szakértője és az „Open Source for Business” szerzője; Az OSS Capital általános partnere és a StarkWare jogi tanácsadója.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: matematikus és informatikus; alapvető közreműködő a STARK bizonyításokat alátámasztó matematikában; a Torontói Egyetem docense; A StarkWare tudományos tanácsadója.
 
-### **An Independent Foundation**
+**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain fejlesztő, aki elkészítette az Ethereum alapvető összetevőit; A Nethermind alapítója, az egyik legnagyobb Ethereum és StarkNet alapú csapat.
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)Vállalkozó; A StarkWare vezérigazgatója és társalapítója. A StarkWare előtt olyan vállalatokat alapított, amelyek számos technológiai terméket fejlesztenek, beleértve az optikai szálakat, az adatvizualizációs eszközöket stb.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+Ezeknek a tagoknak a háttere a készségek kiváló eszköztárát, valamint jelentős tapasztalatot biztosít, amely jól felkészíti az Alapítványt a jövőre nézve.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+Andrew és Heather erős hitelesítést hoznak a közhasznú és nyílt forráskódú projektekből. Heather híres arról, hogy támogatja az ingyenes és nyílt szoftverlicencelést. Andrew éveken át központi figura volt az ICANN-ban, abban a szervezetben, amely a kezdeti években az internetet decentralizált közösségi javakká alakította. Ezt alulról felfelé építkező, konszenzuson alapuló folyamatokon keresztül tette. Éppen ilyen folyamatra van szükség ahhoz, hogy a StarkNet elérje a Web3 céljait.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+A tábla számos láncon keresztül is jelentős kriptográfiai tapasztalatokat tükröz. Tomasz az Ethereum – és a StarkNet – alapvető összetevőinek fejlesztésén dolgozott. Eli a Zcash alapító tudósa volt, mielőtt a StarkNet mögötti technológia úttörője lett volna, Andrew pedig ma a Zcash technológiát építő és támogató Electric Coin Company igazgatósági tagja.
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+Az igazgatóságnak van üzleti és vezérigazgatói tapasztalata Tomasztól és Uritól, valamint számítástechnikai és matematikai – és különösen STARK-szakértelemmel – Shubhangitól és Elitől. Három igazgatósági tag, Tomasz, Uri és Eli mélyen részt vett a StarkNet felépítésében.
+
+Minden tag kiáll amellett, amit hisz. Eric odáig ment, hogy elhagyta vezető szerepét a Nasdaq tulajdonában lévő Cinnobernél, amikor az függetlenségének korlátozásával fenyegetőzött, hogy közzé tegye a kriptoval kapcsolatos véleményét. Mint egy alapítvány, amely népszerűsíti a technológiát, amely[integritást biztosít a számításokhoz,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)illik egy ilyen integritású táblát összeállítani.
+
+
+
+### **Független Alapítvány**
+
+Az Alapítvány egy független szervezet, amely egy közjó, nevezetesen a StarkNet Protokoll építését, használatát és fenntartását támogatja. Az Internethez, a Bitcoinhoz és az Ethereumhoz hasonlóan a StarkNet is egy megosztott technológia, amely decentralizált, cenzúraálló hálózatként épül fel, ahol bárki szabadon és engedély nélkül részt vehet és fejlődhet anélkül, hogy harmadik félben kellene megbíznia.
+
+Az újonnan alakult alapítvány egy non-profit szervezet, amelyet kifejezetten a StarkNet közjóként való előmozdítása és fenntartása érdekében hoztak létre. Az Alapítvány, valamint a független fejlesztők, induló vállalkozások, vállalati felhasználók és a nagyközönség befogadó csoportja mindig szabadon használhatja és fejlesztheti a StarkNetet saját céljaira, és mindenki javára, aki biztonságosan szeretne kapcsolatba lépni és tranzakciókat folytatni. azon keresztül.
+
+Az alapítvány független, és a StarkNettel kapcsolatban bármilyen pozíciót megválaszthat. A döntéseket egyszerű szótöbbséggel, vagy hétből öttel kell meghozni olyan különleges esetekben, mint az Alapítvány kuratóriumi tagjainak visszahívása és kinevezése. Azokban a döntésekben, amelyekben a kuratóriumi tagok külső beosztása összeférhetetlenséget jelent, az alapítvány köteles a tagokat a szavazástól való visszalépésre kötelezni.
+
+Az alapítvány jelentős eszközökkel rendelkezik küldetésének teljesítéséhez: 5,01 milliárd StarkNet Token került az alapítványhoz, azaz a kezdeti 10 milliárd Token Token készlet 50,1%-a (további információért lásd</a>irányítási javaslatunk3. részét).</p> 
+
+Sok olyan részletet kell eldönteni, amelyek meghatározzák a StarkNet jövőbeli irányát. Szerencsére az alapítvány létrehozása egyre több hangot hoz a növekvő közösségből. A StarkWare továbbra is elkötelezett része ennek a közösségnek, és örömmel üdvözöljük a StarkNet nagyobb ökoszisztémáját, amely nagyobb felelősséget vállal a hálózat jövőjéért. A StarkNet útja most egy decentralizált legénység kezében van, és az Alapítvány fontos szerepet fog játszani a zökkenőmentes lebonyolításban. A StarkWare minden tagja sok sikert kíván az új testnek küldetése során.

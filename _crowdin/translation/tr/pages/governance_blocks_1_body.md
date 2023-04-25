@@ -1,7 +1,7 @@
-The first phase of Starknet Governance has been launched (more details [here](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). From now on, community members can participate in shaping Starknet through a further channel, namely voting on protocol changes.
+Starknet Yönetişiminin ilk aşaması başlatıldı (daha fazla ayrıntı[burada](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). Şu andan itibaren, topluluk üyeleri, Starknet'i başka bir kanal aracılığıyla şekillendirmeye, yani protokol değişikliklerini oylamaya katılabilirler.
 
-In its first phase, Starknet governance will focus on Starknet protocol upgrades. Every Starknet version upgrade will be deployed on Goerli Testnet; voters will then have a 6-day period to examine and test the upgraded version as it runs on Goerli. During this time, a Snapshot proposal will be opened, and the community can vote on whether to approve or reject the upgraded version for Mainnet deployment.
+Starknet yönetişimi, ilk aşamasında Starknet protokol yükseltmelerine odaklanacak. Her Starknet sürüm yükseltmesi, Goerli Testnet'te konuşlandırılacaktır; seçmenlerin daha sonra Yükseltilmiş sürümü Goerli'de çalışırken incelemek ve test etmek için 6 günlük bir süresi olacak. Bu süre zarfında, bir Anlık Görüntü teklifi açılır ve topluluk, Mainnet dağıtımı için yükseltilmiş sürümü onaylama veya reddetme konusunda oy kullanabilir.
 
-If the proposal gains a majority of ‘YES’ votes during the six-day voting period, the proposal passes and Starknet mainnet will be upgraded accordingly. We expect the vote on [Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect) to be open soon.
+Teklif, altı günlük oylama döneminde 'EVET' oylarının çoğunluğunu alırsa, teklif geçer ve Starknet ana ağı buna göre yükseltilir. [Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)oylamanın yakında açılmasını bekliyoruz.
 
-We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
+Aşağıdaki gönderilerdeki tüm ayrıntıları okumanızı ve[Starknet topluluk forumundaki tartışmalara katılmanızı öneririz](https://community.starknet.io/).

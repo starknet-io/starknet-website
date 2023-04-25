@@ -1,11 +1,11 @@
-## I﻿ntroduction
+## Bevezetés
 
-Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+A Starknet egy 2. érvényességi összesítő réteg. Nagy áteresztőképességet, alacsony gázköltséget biztosít, és megőrzi az Ethereum Layer 1 biztonsági szintjét
 
-Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+Adott egy sudoku rejtvény, a megoldás ellenőrzése könnyebb, mint a semmiből. Ha az a célunk, hogy meggyőzzük az embereket a „ez a rejtvény megoldódott” kijelentésről, sok számítási időt megspórolhatunk, ha egy személy kiszámítja a megoldást, majd továbbadja másoknak, hogy ellenőrizzék. Ebben a stratégiában a megoldás minden egyes számítása egyszeri eseménnyé válik, amely nem igényel replikációt a társadalom részéről. Hasonló módon a Starknet az Ethereumot úgy méretezi, hogy a nehéz L1 számításokat könnyebbre (tehát olcsóbbra) cseréli. L1-ellenőrzés a láncon kívüli STARK-bizonyítékokkal.
 
-## H﻿ow it works
+## Hogy működik
 
-With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
+A fenti hasonlatot szem előtt tartva, megérett az idő egy kis zsargonra. A Starknet egy engedély nélküli Validity-Rollup (más néven „ZK-Rollup”), amely támogatja az általános számításokat, és jelenleg L2 hálózatként működik az Ethereumon keresztül. A Starknet végső L1 biztonságát a legbiztonságosabb és leginkább méretezhető kriptográfiai bizonyítási rendszer – [STARK](https://starkware.co/stark/)használata biztosítja.
 
-Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
+A Starknet szerződések (többnyire) Kairó nyelven íródnak – ez egy teljes Turing programozási nyelv, amelyet STARK bizonyításra terveztek.

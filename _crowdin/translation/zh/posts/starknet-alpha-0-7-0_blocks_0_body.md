@@ -19,7 +19,7 @@
 
 OpenZepelin's[Proxy 升级模式](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)现在完全支持StarkNet的合同升级。 代理模式是在Etherum上启用合同升级的常见方法。 Alpha 0.7.0 通过 StarkNet启用此模式。
 
-We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+我们制作了一个简短的[教程](https://starknet.io/docs/hello_starknet/default_entrypoint.html)来演示该模式的基本实现，并且 OpenZeppelin 已经在努力实现代理模式的标准契约；参见[原型](https://github.com/OpenZeppelin/cairo-contracts/pull/129)。
 
 #### 阻止号码和方块时间戳
 
@@ -35,7 +35,7 @@ StarkNet合同现在支持定义和排放事件，使它们能够揭露非链应
 
 #### 已删除 %builtins 指令
 
-StarkNet合同不再需要 %builtin指令。 This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). 它大大简化了这种扩展模式的可用性。
+StarkNet合同不再需要 %builtin指令。 此更改是在[StarkNet Shamans](https://community.starknet.io/)上关于[合同可扩展性模式](https://community.starknet.io/t/contract-extensibility-pattern/210)社区讨论之后进行的。 它大大简化了这种扩展模式的可用性。
 
 例如，下列合同将从以下来源更改：
 

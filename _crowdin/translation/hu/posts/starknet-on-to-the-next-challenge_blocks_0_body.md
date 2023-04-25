@@ -1,64 +1,64 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* Lépésben építjük fel a StarkNet-et, kezdve**használhatóság megteremtésével**, majd**teljesítmény javításával**és végül továbblépve a**decentralizációra**
+* Elértük első célunkat: a használhatóságot. Ez azt jelenti, hogy általános számításokat végeztünk Ethereum-szerű állapotban (évekkel azelőtt, hogy lehetségesnek hitték volna)
+* Most haladunk a 3 részből álló építési tervünk 2. szakaszához: a teljesítmény, az átviteli sebességre, a tranzakciós költségekre és a késleltetésre összpontosítva.
+* Következő: Decentralizáció
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+Alig egy évvel[StarkNet](https://starknet.io/)terveinek első bejelentése után a platform nagyon jó funkcionalitással rendelkezik. A fejlesztői közösség a legmerészebb várakozásainkon felül virágzik, és folyamatosan új L2 Native projekteket kínál.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+Az elmúlt évben az volt a prioritásunk, hogy pontosan ezt tegyük lehetővé egy működő StarkNet létrehozásával a funkciók gyorsan bővülő skálájával, amely lehetővé teszi a fejlesztők számára, hogy azonnal belemerüljenek.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+Ezt nagy számban megtették. Jó barométer a[JavaScript-könyvtár letöltési száma a StarkNet](https://www.starknetjs.com/)hez: már 5 ezernél tart, mióta 4 hónappal ezelőtt elérhetővé vált.
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+Noha a StarkNet biztosítja az általunk megígért tömörítési varázslatot, pillanatnyilag távolról sem képes erre elegendő átviteli sebességű dApps számára, és ez rövid távon frusztrációt okozhat a fejlesztők számára.
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+Harcban tesztelt alaptechnológiánkat, amely a STARK-val számos tranzakciót bizonyít és tömöríti a bizonyítékokat, a tranzakciók kötegelésnek vagy sorrendbe állításának kell megelőznie. Ez egy olyan folyamat, amelyet a StarkWare csapata már egyszer tökéletesített a[StarkEx](https://starkware.co/starkex/)skálázómotorhoz, és jelenleg is dolgozunk azon, hogy a StarkNet igényeinek megfelelően újra megtegyük.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+Most, hogy sok használhatósági célunkat elértük, áthelyezzük a hangsúlyt, hogy ez legyen a legfontosabb prioritásunk. Mindez a 3 szakaszból álló ütemtervünk része:**használhatóság**, ezt követi a hálózat**teljesítménye**, majd**a decentralizáció**. Egy év múlva szeretnénk egy pillantást vetni a motorháztető alá – egy vázlatot arról, hogy mely darabok vannak a helyükön, és mi az, ami még folyamatban van.
 
-### The Story So Far
+### Az eddigi történet
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
+A StarkNet Alpha júniusban jelent meg a nyilvános testneten, novemberben pedig a Mainnet-en. A Mainnet bevezetésekor a StarkNet már Ethereum-szerű állapotban végezte az általános számításokat, amiről széles körben azt hitték, hogy évek múlva van.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
+A fejlesztés során olyan megközelítést választottunk, amely először a legfontosabb funkciókra összpontosított, és amint elérhetővé váltak, azonnal kiadtuk őket, lényegében megosztva az evolúciós folyamatot a közösséggel. A StarkNet még korántsem teljes körű, de a fejlesztők még most is tudnak értelmes és összetett alkalmazásokat készíteni. Ma már több száz fejlesztőnk[épít a StarkNetre,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)tíz dApps, és több mint tucat külső csapatunk fejleszt eszközöket és infrastruktúrát a StarkNet ökoszisztéma számára.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+A frissítések sorozata számos fontos funkciót biztosított, beleértve az L1<>L2 üzenetküldést, a láncon belüli adatokat és az összeállítás támogatását, az események támogatását, az alapdíj-mechanizmust, a szerződések frissíthetőségét, a fiókok absztrakcióját, a tesztelési keretrendszert, a fejlesztői eszközöket, a gyors megerősítést, a blokkszámot. , blokk időbélyegzője, számlaszerződések támogatása.
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+A fejlesztői közösség mélyen érdeklődik a StarkNet iránt, és valójában alakítja annak fejlesztését. A fejlesztői visszajelzések alapján már bevezettek funkciókat. Az átvétel jóval meghaladhatja az átviteli sebesség növekedését, ezért ez a fellendítés most kiemelten fontos számunkra.
 
-### Next Steps
+### Következő lépések
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+Most, hogy elértük a használhatóságot, ideje javítani a rendszer teljesítményét. A rendszer jelenlegi állapotában képes a tranzakciók korlátozott átvitelére. A probléma megoldásának módja a Sequencer Node teljesítményének javítása, amely a StarkNet egy bányásznak felel meg. Ez a „gép”, amely sorrendbe állítja a tranzakciókat azok benyújtása után. Ha ez optimalizálva van, az átviteli sebesség rakéta lesz.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+Ennek érdekében egyszerre elemezzük, hol vannak a szűk keresztmetszetek, és egyenként kezeljük azokat. Jelenleg az összes szűk keresztmetszet a szekvenálási folyamathoz kapcsolódik, amely még azelőtt következik be, hogy meghívnánk a STARK-próbákat. A csatákban tesztelt prover-stack készen áll a StarkEx-szerű átviteli sebesség támogatására a StarkNeten.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
+Arra számítunk, hogy a szekvenszer optimalizálása néhány hónapig tartó folyamat lesz, fokozatosan javulva az első félévben. Célunk, hogy 2022 második felének elejére legalább egy nagyságrenddel magasabb TPS-t érjünk el, mint az Ethereum, olyan költséggel, amely legalább két nagyságrenddel alacsonyabb, mint az Ethereumé. És ez még csak a kezdet.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
+Jó oka van annak, hogy szükség van erre az optimalizálási fázisra, és hogy a StarkNet nem egy készen optimalizált szekvenszerrel indult: a StarkNet azért tudta ilyen gyorsan elérni a használhatóságot, mert előrébb jutottunk. Ahelyett, hogy a nulláról kezdtük volna, és egy teljesen új szekvenszert építettünk volna, a StarkEx adagolóját használtuk központi komponensként.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+Ez nagyszerű módja volt az építkezésnek. Nem csak gyorsan szállított; ez azt jelentette, hogy biztosak vagyunk abban, hogy erős alapokra építkeztünk. A StarkEx lényegében harcban tesztelte a StarkNetet hajtó alapvető funkciókat, mivel több százmilliárd dolláros kumulatív kereskedést termelt.
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+[A StarkEx](https://starkware.co/starkex/)az L2-t használó legsikeresebb dApp-ok skálázómotorja: dYdX (örökös szerződések), DeversiFi (spot kereskedés és fizetés), valamint az Immutable és Sorare (NFT pénzverés és kereskedés).
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+De a nekik és más StarkEx-klienseknek épített szekvenszer csak eddig tudja elvinni a StarkNet-et. Mindegyikük nagyjából ugyanazt a típusú tranzakciót bonyolítja le minden nap. A StarkNet**általános számításról szól**, tehát igényei nyílt végűek. Amikor a szekvenszere tranzakciókat vesz át a mempoolból, azok különböző formájú és méretűek lehetnek. Ráadásul a StarkNet egy nyílt hálózat is, ami azt jelenti, hogy további számítási többletterhelések vannak, amelyekkel a StarkEx nem találkozik.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+A jelenlegi kihívás, nevezetesen a szekvenszer optimalizálása ezekre az új igényekre, jelentős vállalkozás, de a sikeres StarkEx fejlesztésünk alapján jól ismerjük a szükséges útvonalat.
 
-### Next Up: Decentralization
+### Következő: Decentralizáció
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+A StarkNet egy teljesen decentralizált, engedély nélküli hálózat lesz, vezetőválasztási és irányítási mechanizmusokkal kiegészítve. Ennek elérése lesz a fő célunk, amint az átviteli sebesség az egekbe szökik és a költségek csökkennek, és reméljük, hogy 2022 végére elkészül az első decentralizált verzió. Arra számítunk, hogy a következő hónapokban nyilvánosan megosztjuk decentralizációs tervünket.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+Ahogyan a jelenlegi korlátozott átviteli sebesség a StarkNet fejlesztésének egy átmeneti szakaszát jelenti, a StarkWare részvételének jelenlegi szintje is átmeneti. Egyfajta állványzatnak tekintjük magunkat, amely fontos funkciót tölt be az építési szakaszban, de idővel visszagurul.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+A csomópontok teljes fejlesztése, amely izgalmas első lépés a decentralizáció felé, már folyamatban van. A teljes csomópontok lehetővé teszik, hogy bárki megőrizze és ellenőrizze a hálózat állapotát helyben, pontosan nyomon követve, mi történik. Három csapat –*Erigon, Nethermind és Equilibrium*– fejleszti a teljes csomópontokat, és a jövőben várhatóan többen is megkezdik a fejlesztést.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+Ezzel párhuzamosan folynak az előkészületek a szekvenáló és bizonyító szoftverek nyilvános megnyitására. Bárki részt vehet szekvenszerként vagy proverként a StarkNeten.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
+Kidolgoznak egy olyan struktúrát, amely ösztönzi az embereket a részvételre, amely magában foglalja a gazdasági jutalmakat is. A StarkNet díjai részben a szekvenszereket és a provereket terhelik.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
+Középtávon azt várjuk, hogy a szekvenszerünket harmadik felek számára is elérhetővé tegyük, hosszú távon pedig arra is számítunk, hogy különböző csapatok szekvenszereket építenek majd a StarkNet számára.
 
-### Always Improving; Forever Listening
+### Mindig fejlődik; Örökké hallgatni
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+Ahogy a hangsúly a következő kihívásra helyeződik, továbbra is javítani fogunk a korábbi eredményeken. És ha folytatjuk a munkát[StarkNet](https://starknet.io/)minden területén, fülünk mindig nyitva marad az egész fejlesztői közösség előtt. Tehát vegyen részt a vitában[Discord](https://discord.com/invite/uJ9HZTUk2Y), a[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8)közösség,[Twitter](https://twitter.com/Starknet_Intern)vagy más útvonalon keresztül, és segítsen a blokklánc-skálázás jövőjének kialakításában.

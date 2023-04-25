@@ -1,3 +1,3 @@
-## What are bridges?
+## Mik azok a hidak?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+A hidak lehetővé teszik a felhasználók számára, hogy eszközöket mozgassanak kripto-ökoszisztémák, például blokkláncok vagy tőzsdék között.

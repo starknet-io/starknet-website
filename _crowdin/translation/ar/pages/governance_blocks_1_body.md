@@ -4,4 +4,4 @@
 
 وإذا حصل الاقتراح على أغلبية أصوات "نعم" خلال فترة التصويت التي تدوم ستة أيام، فإن الاقتراح ينجح وسيتم ترقية الشبكة الرئيسية (Starknet) تبعا لذلك. نتوقع أن يكون التصويت على[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)مفتوحا قريبا.
 
-We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
+نحن نشجعك على قراءة جميع التفاصيل الواردة في المنشورات التالية والمشاركة في المناقشات في[منتدى مجتمع Starknet](https://community.starknet.io/).

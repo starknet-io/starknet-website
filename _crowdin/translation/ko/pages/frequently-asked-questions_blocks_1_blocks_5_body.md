@@ -1,3 +1,3 @@
-Currently, Starknet transactions and their payloads are visible to the network in the same way that they are visible on Ethereum.
+현재 Starknet 트랜잭션 및 해당 페이로드는 Ethereum에서 볼 수 있는 것과 동일한 방식으로 네트워크에서 볼 수 있습니다.
 
-It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+Starknet에 다양한 개인 정보 보호 프로토콜을 배포할 수 있으며 모든 네트워크 참여자로부터 완전한 개인 정보 보호를 제공합니다. 이러한 프로토콜은 일반적으로 많은 계산이 필요하기 때문에 Starknet 확장성에서 큰 이점을 얻을 수 있습니다.

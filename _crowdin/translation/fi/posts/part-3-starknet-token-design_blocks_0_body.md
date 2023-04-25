@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+Tässä postauksessa sukeltamme syvemmälle StarkNet Tokenin suunnitteluun, sen lyöntiaikatauluun ja odotettuun aikatauluun.
 
-### Considerations
+### Huomiot
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+StarkNet Tokenin rakenne on muotoiltu sen perusteella, että on tarpeen käyttää verkkoa, joka koostuu i)**Käyttäjistä**StarkNetista, (ii)**Operaattorit**– henkilöt, jotka tarjoavat verkolle laskentaresursseja, jotka suorittavat liiketoimien jaksottamista, STARK-vedokset ja pitkän aikavälin varastojen tarjoajat, ja (iii)**Kehittäjät**kirjoittamalla ohjelmistoja sen infrastruktuuriin ja sovelluksiin.
 
-Mechanisms for fee structure and token minting should be:
+Maksurakenteiden ja rahapajojen mekanismien olisi oltava:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Laajasti automatisoitu, kun se perustuu merkittävään ihmisen toimintaan
+* Tunnettu ja testattu muissa lohkoketjujärjestelmissä
+* Yksinkertainen analysoida ja selittää; läpinäkyvä
+* Spekulatiivisen manipuloinnin ja arvottomuutta luovan pelillistämisen sieto
+* Katsotaan, että on hyvä käyttäjäkokemus (UX)
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Nämä asetukset muotoilevat mekanismin, jolla tunnisteet jaetaan käyttäjien maksamien uusien kaivos- ja tapahtumamaksujen kautta:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Operaattorit**turvaavat StarkNet-järjestelmän jatkuvan livenssin ja tarjoavat käyttäjien vaatiman protokollan laadukkaan suorituskyvyn.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Kehittäjät**rakentaa ja ylläpitää ohjelmisto, jota Operaattorit käyttävät verkon turvaamiseksi, ja ne luovat sovelluksia, jotka parantavat verkon toimivuutta käyttäjille. Näin ollen osa maksuista ja uudesta kaivostoiminnasta käytetään älykkäiden sopimuskehittäjien ja keskeisten kehittäjien hyväksi seuraavasti:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Älykkäiden sopimusten kehittäjät:**StarkNet-protokolla voi automaattisesti mitata älykkäiden sopimusten tarjoamaa arvoa, Näiden sopimusten käyttäjien maksamien L1- ja L2-maksujen kautta. StarkNet-protokolla varataan automaattisesti murto-osa maksuista ja käynnissä oleva uusi kaivostoiminta älykkäiden sopimuskehittäjien käyttöön. Älykkäät sopimukset, jotka tarjoavat käyttäjille enemmän arvoa – niistä maksetuilla maksuilla mitattuna – saavat suuremman osan tähän tarkoitukseen osoitetuista rahakkeista.
+* **Keskeiset kehittäjät:**StarkNet-protokollalla ei ole automaattista tapaa mitata keskeisten kehittäjien osuutta, kuten ne, jotka kirjoittavat koodia sananlaskut, sekvensserit, koko solmut, jne. Näin ollen tällaisten keskeisten kehittäjien ja muiden rahoittajien, joiden panos ei ole mitattavissa pöytäkirjalla, on välttämättä oltava inhimillistä harkintavaltaa. Tätä varten luodaan malli, joka on johdonmukainen hajauttamisen tavoitteen kanssa.
+* Tarkka mekanismi rahakkeiden jakamiseksi uudesta kaivostoiminnasta ja maksuista molemmille kehittäjille ei ole vielä määritelty. Suunnitteluperiaatteisiin kuuluu pelottelun estäminen ja avoimuus.
 
-### Initial allocation of StarkNet Tokens
+### StarkNet-rahakkeiden alkuperäinen kohdentaminen
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+StarkWare on lyönyt kymmenen miljardia rahaketta ketjun ulkopuolelta. Selventää: nämä StarkNet Tokens eivät edusta omaa pääomaa StarkWaressa eivätkä ne tarjoa mitään omistusoikeutta StarkWaressa tai myönnä mitään oikeutta StarkWaren saataviin. Kiertokuponkien tarjonta lisääntyy ajan mittaan siten, että protokollan avulla louhitaan uusia rahakkeita, niiden aikataulujen mukaisesti, jotka yhteisö määrittää myöhemmässä vaiheessa.\
+*Kiertovirta ei näin ollen ole kiinteä.*
 
-The allocation is thus:
+Määrärahat ovat seuraavat:
 
-**17%** — StarkWare Investors
+**17 %**— StarkWare Investors
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32,9%**– Keskeiset osallistujat: StarkWare ja sen työntekijät ja konsultit sekä StarkNet-ohjelmistokehittäjäkumppanit
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50,1 %**, jonka StarkWare on myöntänyt säätiölle seuraavasti:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9 %**– Yhteisön säännökset – niille, jotka tekivät työtä StarkNetissa ja hyödynsivät tai kehittivät sen perustana olevaa teknologiaa. . kautta aiempaan käyttöön StarkEx L2 järjestelmiä. Mikä tärkeintä, kaikki yhteisön säännökset perustuvat todennettavissa olevaan työhön, jota on tehty aikaisemmin. Esimerkiksi siltä osin kuin yhteisön säännöksiä annetaan StarkExin aiemmille käyttäjille, allokoinnit määritetään StarkExin teknologian todennettavissa olevan käytön perusteella, joka tapahtui**ennen 1 päivää kesäkuuta 2022.**
+* **9 %**– Yhteisön alennukset – StarkNet Tokensin alennukset**osittain**kattavat StarkNet-yhtiölle Ethere-yhtiöstä perehdyttämisestä aiheutuvat kustannukset. Epäilyttämisen estämiseksi yhteisön hyvityksiä sovelletaan ainoastaan liiketoimiin, jotka tapahtuvat**sen jälkeen, kun**hyvitysjärjestelmästä on ilmoitettu.
+* **12 %**— Avustukset StarkNet-protokollan kehittämiseen, tutkimiseen, käyttöön ja ylläpitoon tehtävään tutkimukseen ja työhön
+* **10 %**– strateginen varaus, rahoittaa ekosysteemitoimintaa, joka on linjassa säätiön tehtävän kanssa, kuten tässä sarjassa on selitetty[edellisessä postitse](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778).
+* **2%**— Lahjoitukset arvostetuille laitoksille ja organisaatioille, kuten yliopistoille, kansalaisjärjestöille jne. StarkNet Tokenin omistajien ja säätiön päätöksen mukaisesti.
+* **8. %**Kohdentamaton — Säätiön kohdentamaton kassa on käytössä tukemaan edelleen StarkNet-yhteisöä tavalla, josta yhteisön on päätettävä.
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+Tarkoituksena on sovittaa yhteen Ydinosallistujien ja Sijoittajien pitkän aikavälin kannustimet StarkNet-yhteisön etujen kanssa ja noudattaa hajautettujen ekosysteemien yleistä käytäntöä, kaikkiin Core Contributoreille ja Investors -yhtiölle osoitettuihin rahakkeisiin sovelletaan neljän vuoden lukkojaksoa, jossa on lineaarinen luovutus ja yhden vuoden kallio.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### Onko olemassa tapa vastaanottaa StarkNet Tokens?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+Lyhyt vastaus on kyllä, mutta ei ole oikoteitä vastaanottamiseen kuponkia.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+StarkNet Token allokointi ja sen maksumarkkinat sekä uusi kaivostoiminta ovat ensisijaisia ydininfrastruktuurin ja dAppsin kehittäjille, sekä muut ekosysteemin turvallisuutta ja terveyttä edistävät tekijät. Mitä tämä tarkoittaa käytännössä suhteessa kuponkiin?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Jos olet kehittäjä ja olet jo kirjoittanut ohjelmiston joko StarkNet-infrastruktuuriin tai älykkääseen sopimukseen, joita StarkNet todella arvostaa ja käyttää loppukäyttäjät, niin voit odottaa saada rahakkeita automaattisesti läpi protokollan. Yksi monista suojakeinoista tämän mekanismin pelottamista vastaan on se, että kehittäjien saamat maksut ovat ehdottomasti pienemmät kuin käyttäjien maksamat maksut.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+Kehittäjät voivat myös saada apurahoja StarkNet-protokollan kehittämiseen, testaamiseen ja ylläpitoon tehtävään työhön. Säätiö määrittää aikanaan kaikki tällaiset avustukset sen tehtävän mukaisesti.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+Jos olet lohkoketjun kehittäjä, joka uskoo, että StarkNet on vastaus Ethereumin skaalaustarpeisiin, rohkaisemme sinua oppimaan lisää[StarkNetista](https://starknet.io/)ja sen ohjelmointikielestä,[Kairo](https://www.cairo-lang.org/), ja alkaa kehittää omia älykkäitä sopimuksia.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Jos olet loppukäyttäjä, käytä Starknettia - mutta vain sillä tavalla kuin se palvelee tarpeitasi tänään. Käytä sitä niille liiketoimille ja sovelluksille, joita arvostat,*ei odoteta tulevan StarkNet Tokensin palkitsemista.*Kun yhteisön säännöksistä ilmoitetaan, ne viittaavat vain kuvakaappauksiin, jotka ovat tapahtuneet ennen ilmoituspäivää, ja suodattaa ja sulkee pois käytön, jonka katsotaan olevan verkon väärinkäyttöä ja pelillistämistä, edellä mainitussa kohdassa käytettävissä olevien tietojen perusteella. Kun yhteisöalennukset otetaan käyttöön, niitä ei koskaan sovelleta liiketoimiin, jotka tapahtuivat ennen alennuksen ilmoittamista. niin kaupankäynti tänään ennakoiden tulevaa alennusta on turhaa.
 
-### Closing remarks
+### Päättää huomautukset
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+Avoimen verkon rakentaminen tarkoittaa tuntemattoman omaksumista. Internet, Bitcoin ja Ethereum, keksivät innovoijat, jotka uskoivat niiden työkalut voivat muuttaa maailmaa, mutta ei aivan tiedä miten. Humbly, Toivomme, että StarkNet kyky skaalata blockchains on hyvä Ethereum ja hyvä hajautettu verkko. Emme voi tietää, mitä rakennetaan. Mutta uskomme, että StarkNet asettaa merkittävän teknologisen kyvykkyyden luovan yhteisön käsiin, ja toivomme näkevämme, että yhteisö käyttää sitä lukemattomilla tavoilla, joista monet ovat vielä käsittämättömiä.

@@ -1,4 +1,4 @@
 {
   "source": "/faq/:path*",
-  "destination": "/en/learn/frequently-asked-questions"
+  "destination": "/sv/learn/frequently-asked-questions"
 }

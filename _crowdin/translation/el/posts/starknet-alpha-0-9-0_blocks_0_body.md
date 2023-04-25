@@ -1,67 +1,67 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **Τα τέλη είναι πλέον υποχρεωτικά στο Testnet, σύντομα στο Mainnet**
+* Συμβόλαιο μοτίβο εργοστάσιο είναι τώρα δυνατό!
+* Το StarkNet εισάγει μαθήματα συμβάσεων
+* Η κλήση αντιπροσωπείας αντικαθίσταται από κλήση βιβλιοθήκης
 
-### Intro
+### Εισαγωγή
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+Είμαστε στην ευχάριστη θέση να εισαγάγει το StarkNet Alpha 0.9.0! Αυτή είναι μια σημαντική έκδοση στην οποία το StarkNet κάνει σημαντικά βήματα προς την κατεύθυνση της ωριμότητας, με ουσιαστικές προσθήκες τόσο στη λειτουργικότητα όσο και στο σχεδιασμό πρωτοκόλλου.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**Τα τέλη είναι υποχρεωτικά**(προς το παρόν μόνο στο Testnet, μέχρι την έκδοση 0.9. θα είναι ζωντανά στο Mainnet) — κάθε ευημερούσα L2 πρέπει να έχει δικό του ανεξάρτητο σύστημα τελών. Μετά την εισαγωγή των τελών ως προαιρετικό χαρακτηριστικό στην έκδοση 0.8. , αισθανόμαστε τώρα αυτοπεποίθηση να τα συμπεριλάβουμε ως βασικό στοιχείο του πρωτοκόλλου και να τα καταστήσουμε υποχρεωτικά. Περισσότερες λεπτομέρειες παρακάτω.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+Μια άλλη σημαντική αλλαγή στο επίπεδο του πρωτοκόλλου είναι η εισαγωγή των Τάξεων Συμβολαίου και ο διαχωρισμός τάξης/περίπτωσης. Αυτό επιτρέπει μια πιο απλή χρήση της λειτουργικότητας \`delegate_call\` και των αναπτύξεων από υπάρχουσες συμβάσεις, ενεργοποιώντας το μοτίβο εργοστασίου στο StarkNet.
 
-### Contract Classes
+### Κατηγορίες Συμβολαίου
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+Λαμβάνοντας έμπνευση από τον αντικειμενικό προγραμματισμό, διακρίνουμε μεταξύ του συμβατικού κώδικα και της υλοποίησής του. Αυτό το κάνουμε διαχωρίζοντας τις συμβάσεις σε τάξεις και περιπτώσεις.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+Μια**συμβατική κλάση**είναι ο ορισμός της σύμβασης: τον bytecode του Καΐρου, υποδείξτε πληροφορίες, ονόματα σημείων εισόδου, και όλα όσα είναι απαραίτητα για τον σαφή ορισμό της σημασιολογίας της. Κάθε τάξη προσδιορίζεται από το κατακερματισμό της τάξης (ανάλογα με ένα όνομα κλάσης από τις γλώσσες OOP).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+Ένα**παράδειγμα σύμβασης**, ή απλά μια σύμβαση, είναι μια αναπτυγμένη σύμβαση που αντιστοιχεί σε κάποια κλάση. Σημειώστε ότι μόνο συμβόλαια συμπεριφέρονται ως συμβόλαια, δηλαδή έχουν δική τους αποθήκευση και μπορούν να κληθούν από συναλλαγές/άλλες συμβάσεις. Μια κατηγορία σύμβασης δεν έχει απαραίτητα ένα ανεπτυγμένο παράδειγμα στο StarkNet. Η εισαγωγή των κλάσεων έρχεται με αρκετές αλλαγές πρωτοκόλλου.
 
-#### ‘Declare’ Transaction
+#### «Δηλωθείτε» Συναλλαγή
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+Εισάγουμε ένα νέο είδος συναλλαγής στην StarkNet: τη συναλλαγή[«δήλωση»](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction), η οποία επιτρέπει την δήλωση μιας κλάσης σύμβασης**.**Σε αντίθεση με τη συναλλαγή \`deploy\`, αυτό δεν αναπτύσσει μια παρουσία αυτής της κλάσης. Η κατάσταση του StarkNet θα περιλαμβάνει κατάλογο δηλωμένων τάξεων. Οι νέες τάξεις μπορούν να προστεθούν μέσω της νέας συναλλαγής \`declare\`.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### Το «Deploy» Σύστημα Τηλεφωνικών και Συμβολαίων Factories.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+Μόλις δηλωθεί μια κλάση, δηλαδή έγινε δεκτή η αντίστοιχη συναλλαγή \`declare\`, μπορούμε να αναπτύξουμε νέες περιπτώσεις αυτής της κλάσης. Για το σκοπό αυτό, χρησιμοποιούμε τη νέα κλήση συστήματος \`deploy\`, η οποία λαμβάνει τα ακόλουθα επιχειρήματα:
 
-* The class hash
-* Salt
-* Constructor arguments
+* Το κατακερματισμό της τάξης
+* Αλάτι
+* Όρθια κατασκευαστή
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+Η κλήση syscall «αναπτύσσεται» θα αναπτύξει ένα νέο παράδειγμα της εν λόγω κλάσης σύμβασης, του οποίου η[διεύθυνση](https://docs.starknet.io/docs/Contracts/contract-address)θα καθοριστεί από τις τρεις παραπάνω παραμέτρους και τη διεύθυνση του αποστολέα (η σύμβαση που επικαλέστηκε την κλήση του συστήματος).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+Συμπεριλαμβανομένων των αναπτύξεων στο εσωτερικό μιας συναλλαγής επίκλησης, μας επιτρέπει να τιμολογούμε και να χρεώνουμε τέλη για αναπτύξεις, χωρίς να χρειάζεται να μεταχειριζόμαστε τις αποστολές και τις προσκλήσεις διαφορετικά. Για περισσότερες πληροφορίες σχετικά με τα τέλη ανάπτυξης, ανατρέξτε[στα έγγραφα](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+Αυτό το χαρακτηριστικό εισάγει εργοστάσια συμβολαίων στο StarkNet, καθώς κάθε σύμβαση μπορεί να επικαλεστεί το \`deploy\` syscall, δημιουργώντας νέες συμβάσεις.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### Μετακίνηση από την «Αντιπροσωπεία Κλήσης» στην «Βιβλιοθήκη»
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+Η εισαγωγή των κλάσεων μας επιτρέπει να αντιμετωπίσουμε ένα πολύ γνωστό πρόβλημα στο μηχανισμό κλήσης του Ethereum: Όταν μια σύμβαση εκτελεί μια ανάδοχη κλήση σε άλλη σύμβαση, χρειάζεται μόνο την κλάση (τον κωδικό της) και όχι μια πραγματική παρουσία (την αποθήκευσή της). Ως εκ τούτου, είναι εσφαλμένη πρακτική να πρέπει να διευκρινίζεται μια συγκεκριμένη περίπτωση σύμβασης κατά τη διεξαγωγή μιας ανάθεσης (μάλιστα, έχει οδηγήσει σε μερικά σφάλματα στις συμβάσεις του Ethereum) - μόνο η κατηγορία πρέπει να προσδιοριστεί.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+Η παλιά κλήση συστήματος \`delegate_call\` γίνεται πλέον παρωχημένη (τα παλιά συμβόλαια που έχουν ήδη αναπτυχθεί θα συνεχίσουν να λειτουργούν, αλλά**συμβάσεις που χρησιμοποιούν \`delegate_call\` δεν θα μεταγλωττίζουν πλέον**), και αντικαθίσταται από μια νέα κλήση του συστήματος βιβλιοθήκης_κλήσης, η οποία παίρνει το κατακερματισμό κλάσης (μιας προηγουμένως δηλωμένης κλάσης) αντί μιας διεύθυνσης υποδείγματος σύμβασης. Σημειώστε ότι μόνο ένα πραγματικό συμβόλαιο εμπλέκεται σε μια κλήση βιβλιοθήκης, έτσι αποφεύγουμε την ασάφεια μεταξύ της σύμβασης κλήσης και της σύμβασης εκτέλεσης.
 
-#### New API endpoints
+#### Νέα endpoints API
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+Προσθέσαμε δύο νέα τελικά σημεία στο API, επιτρέποντας την ανάκτηση δεδομένων που σχετίζονται με την τάξη:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: επιστρέφει τον ορισμό κλάσης λόγω του κατακερματισμού κλάσης
+* \`get_class_hash_at\`: επιστρέφει το κατακερματισμό κλάσης ενός αναπτυγμένου συμβολαίου, δεδομένης της διεύθυνσης συμβολαίου
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+Σημειώστε ότι για να αποκτήσετε την κλάση μιας εκτελούμενης σύμβασης άμεσα, αντί να περνάτε από τις δύο παραπάνω μεθόδους, μπορείτε να χρησιμοποιήσετε το παλιό τελικό σημείο \`get_full_contract\`, το οποίο θα μετονομαστεί σε μελλοντικές εκδόσεις. Όλα τα τελικά σημεία που αναφέρθηκαν παραπάνω μπορούν επίσης να χρησιμοποιηθούν από την[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### Τέλη
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+Προχωρούμε στην ενσωμάτωση τελών στο StarkNet, καθιστώντας τα υποχρεωτικά (πρώτα στο Testnet, και αργότερα στο Mainnet) για ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` συναλλαγές. Η συναλλαγή \`declare\` δεν θα απαιτεί τέλη σε αυτό το σημείο. Ομοίως, οι συναλλαγές \`deploy`` δεν απαιτούν επίσης χρέωση, ωστόσο, σημειώστε ότι αυτός ο τύπος συναλλαγής πιθανότατα θα καταργηθεί σε μελλοντικές εκδόσεις.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+Αρκετά ανοικτά ερωτήματα παραμένουν σε αυτόν τον τομέα, τα πλέον εξέχοντα ζητήματα είναι ο τρόπος χρέωσης των τελών για τις δηλώσεις συμβάσεων και την ανάπτυξη λογαριασμών StarkNet. Θα αντιμετωπίσουμε αυτά τα ζητήματα σε μελλοντικές εκδόσεις.
 
-### What’s Next?
+### Τι Επόμενη?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+Ακολουθώντας τον οδικό μας χάρτη που[ανακοινώσαμε τον Φεβρουάριο](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717)δεσμευόμαστε για τη βελτίωση της απόδοσης του StarkNet γενικά, και την απόδοση του sequencer, ειδικότερα, για να πάρει τους χρήστες πιο γρήγορα ανατροφοδότηση σχετικά με τις συναλλαγές τους. Στην επόμενη έκδοση, σκοπεύουμε να εισαγάγουμε την παραλληλισμό στο sequencer, επιτρέποντας την ταχύτερη παραγωγή μπλοκ.
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+Η επόμενη σημαντική έκδοση της StarkNet θα επικεντρωθεί στη δομή των λογαριασμών της StarkNet κατά τρόπο παρόμοιο με το[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). Με αυτό, θα έχουμε οριστικοποιήσει τον τρόπο που συμπεριφέρονται οι λογαριασμοί StarkNet, κάνοντας ένα ακόμη σημαντικό βήμα προς τη μαζική υιοθεσία!

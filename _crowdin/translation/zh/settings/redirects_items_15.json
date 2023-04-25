@@ -1,4 +1,4 @@
 {
-  "source": "/community/community-links/:path*",
-  "destination": "/en/community"
+  "source": "/community/community links/:path*",
+  "destination": "/zh/zh-community"
 }

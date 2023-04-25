@@ -1,111 +1,111 @@
-## TL;DR
+## TL; DR
 
-* Starknet alpha v0.11.0 is out and live on Testnet
-* You can now deploy and interact with Cairo 1.0 contracts on Starknet Testnet!
-* Computation on Starknet is 5x cheaper!
-* For the first time, the Mainnet upgrade to Starknet alpha v0.11.0 will be put to a governance vote
-* This marks the beginning of the transition period before [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)
-* Deploying Cairo 1.0 contracts on Mainnet will be enabled only after a few weeks of running on Testnet, once we ensure the new system runs smoothly.
+* Starknet alpha v0.11.0 đã ra mắt và hoạt động trên Testnet
+* Giờ đây, bạn có thể triển khai và tương tác với các hợp đồng Cairo 1.0 trên Starknet Testnet!
+* Tính toán trên Starknet rẻ hơn gấp 5 lần!
+* Lần đầu tiên, bản nâng cấp Mainnet lên Starknet alpha v0.11.0 sẽ được bỏ phiếu quản trị
+* Điều này đánh dấu sự khởi đầu của giai đoạn chuyển tiếp trước[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)
+* Việc triển khai các hợp đồng Cairo 1.0 trên Mainnet sẽ chỉ được kích hoạt sau vài tuần chạy trên Testnet, sau khi chúng tôi đảm bảo hệ thống mới hoạt động trơn tru.
 
-## Introduction
+## Giới thiệu
 
-We are excited to announce that the much-awaited Starknet alpha v0.11.0 is live on Testnet! Why is this a big step for Starknet? In Starknet v0.11.0, you can declare, deploy and run [Cairo 1.0](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038) smart contracts. We also introduce a new system call that allows a smooth transitioning of existing contracts to a Cairo 1.0 implementation.
+Chúng tôi rất vui mừng thông báo rằng Starknet alpha v0.11.0 rất được chờ đợi đã có mặt trên Testnet! Tại sao đây là một bước tiến lớn đối với Starknet? Trong Starknet v0.11.0, bạn có thể khai báo, triển khai và chạy[hợp đồng thông minh Cairo 1.0](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038). Chúng tôi cũng giới thiệu một lệnh gọi hệ thống mới cho phép chuyển đổi suôn sẻ các hợp đồng hiện tại sang triển khai Cairo 1.0.
 
-Cairo 1.0 improves Starknet in two different aspects. First, it improves the development experience by offering a richer programming language, which introduces (among other things) types/generics/traits/error handling to Cairo. Second, Cairo 1.0 plays a key role in Starknet’s decentralization journey: Cairo 1.0 contracts sent in Starknet alpha v0.11.0 compile to Sierra. Sierra guarantees that every contract execution is provable, which is a crucial property in a decentralized Starknet.
+Cairo 1.0 cải thiện Starknet ở hai khía cạnh khác nhau. Đầu tiên, nó cải thiện trải nghiệm phát triển bằng cách cung cấp một ngôn ngữ lập trình phong phú hơn, ngôn ngữ này giới thiệu (trong số những thứ khác) các loại/điểm chung/đặc điểm/xử lý lỗi cho Cairo. Thứ hai, Cairo 1.0 đóng một vai trò quan trọng trong hành trình phân cấp của Starknet: các hợp đồng Cairo 1.0 được gửi trong bản biên dịch Starknet alpha v0.11.0 tới Sierra. Sierra đảm bảo rằng mọi việc thực hiện hợp đồng đều có thể chứng minh được, đây là một tài sản quan trọng trong Starknet phi tập trung.
 
-Another important improvement that is coming in this version is a 5x cost reduction for computation. This will make Starknet even more friendly to computationally intensive applications. More details below.
+Một cải tiến quan trọng khác sắp có trong phiên bản này là giảm chi phí tính toán gấp 5 lần. Điều này sẽ làm cho Starknet trở nên thân thiện hơn với các ứng dụng chuyên sâu về tính toán. Thêm chi tiết dưới đây.
 
-## Getting Ready for Regenesis
+## Sẵn sàng cho Tái sinh
 
-Starknet alpha v0.11.0 marks the beginning of the Transition period, which will allow preparation ahead of Starknet’s Regenesis. Starknet’s Regenesis plan was [published](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4) a few months ago, and it focuses on transitioning from a system based on Cairo 0 to a system based on Cairo 1.0.
+Starknet alpha v0.11.0 đánh dấu sự khởi đầu của Giai đoạn chuyển đổi, giai đoạn này sẽ cho phép chuẩn bị trước quá trình Tái tạo của Starknet. Kế hoạch Tái tạo của Starknet là[được xuất bản](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)vài tháng trước và nó tập trung vào việc chuyển đổi từ một hệ thống dựa trên Cairo 0 sang một hệ thống dựa trên Cairo 1.0.
 
-During the Transition period, existing Cairo 0 contracts (if they’re upgradable) have the opportunity to maintain their address and storage, and seamlessly transition their implementation to Cairo 1.0 (see next section).
+Trong giai đoạn Chuyển đổi, các hợp đồng Cairo 0 hiện tại (nếu chúng có thể nâng cấp được) có cơ hội duy trì địa chỉ và bộ nhớ của chúng, đồng thời chuyển đổi liền mạch việc triển khai của chúng sang Cairo 1.0 (xem phần tiếp theo).
 
-As a Starknet user, this means that you only need to upgrade your wallet once the new Cairo 1.0 implementation of your account is released (you’ll be able to do it any time up to the Regenesis itself). No downtime is expected, all the dapps in the system will continue to operate as usual.
+Là người dùng Starknet, điều này có nghĩa là bạn chỉ cần nâng cấp ví của mình sau khi triển khai Cairo 1.0 mới cho tài khoản của bạn được phát hành (bạn sẽ có thể thực hiện việc này bất kỳ lúc nào cho đến chính Regenesis). Dự kiến sẽ không có thời gian ngừng hoạt động, tất cả các dapp trong hệ thống sẽ tiếp tục hoạt động như bình thường.
 
-After the Regenesis, Starknet will stop supporting the remaining Cairo 0 contracts throughout the system. This will be well communicated in advance, and developers will be given sufficient time to migrate their contracts. The transition period is expected to last a few months, and dapp developers can already start migrating their implementation to Cairo 1.0. At the end of the Transition period, the Regenesis will happen.
+Sau Regenesis, Starknet sẽ ngừng hỗ trợ các hợp đồng Cairo 0 còn lại trên toàn hệ thống. Điều này sẽ được thông báo trước và các nhà phát triển sẽ có đủ thời gian để di chuyển hợp đồng của họ. Giai đoạn chuyển đổi dự kiến sẽ kéo dài vài tháng và các nhà phát triển dapp đã có thể bắt đầu chuyển việc triển khai của họ sang Cairo 1.0. Khi kết thúc giai đoạn Chuyển đổi, Quá trình Tái tạo sẽ xảy ra.
 
-## Smooth Migration to Cairo 1.0
+## Di chuyển suôn sẻ đến Cairo 1.0
 
-With the transition to Cairo 1.0, existing Cairo 0 contracts are deprecated and will no longer be supported upon Regenesis. To allow upgradable Cairo 0 contracts to continue operating, even after the Regenesis, and keep the state constructed up until that time, we added a new system call — ['replace_class'](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#replace_class_syscall). Upgradable contracts have no issue with upgrading to a Cairo 1.0 implementation, but the underlying proxy (the contract that holds the actual state) will still be stuck with the Cairo 0 implementation. The \`replace_class\` syscall solves this problem by allowing the proxy contract to replace its underlying class, i.e. keep the same address and storage, but replace the implementation.
+Với quá trình chuyển đổi sang Cairo 1.0, các hợp đồng Cairo 0 hiện có không được dùng nữa và sẽ không còn được hỗ trợ khi Regenesis. Để cho phép các hợp đồng Cairo 0 có thể nâng cấp tiếp tục hoạt động, ngay cả sau khi Regenesis và duy trì trạng thái được xây dựng cho đến thời điểm đó, chúng tôi đã thêm một lệnh gọi hệ thống mới — ['replace_class'](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#replace_class_syscall). Các hợp đồng có thể nâng cấp không có vấn đề gì với việc nâng cấp lên triển khai Cairo 1.0, nhưng proxy cơ bản (hợp đồng nắm giữ trạng thái thực tế) sẽ vẫn bị kẹt với triển khai Cairo 0. Toà nhà chọc trời \`replace_class\` giải quyết vấn đề này bằng cách cho phép hợp đồng proxy thay thế lớp bên dưới của nó, tức là giữ nguyên địa chỉ và bộ nhớ, nhưng thay thế việc triển khai.
 
-## Computation is Now 5x Cheaper!
+## Tính toán bây giờ rẻ hơn gấp 5 lần!
 
-Today, Starknet transaction fees have two major components: Computation and on-chain data. The computational element of the Starknet transaction fee is determined by the marginal cost of verifying its proof on L1 (see the [docs](https://docs.starknet.io/documentation/architecture_and_concepts/Fees/fee-mechanism/) for more details).
+Ngày nay, phí giao dịch Starknet có hai thành phần chính: Tính toán và dữ liệu trên chuỗi. Yếu tố tính toán của phí giao dịch Starknet được xác định bởi chi phí cận biên của việc xác minh bằng chứng của nó trên L1 (xem[tài liệu](https://docs.starknet.io/documentation/architecture_and_concepts/Fees/fee-mechanism/)để biết thêm chi tiết).
 
-Originally, our 200m Cairo steps in a proof that requires 5m gas for verification led to a naive estimation of 0.05 gas per Cairo step. Since then, we have moved to [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025) which allow for a significant reduction in L1 verification cost (only the root of a recursion tree reaches L1). It is now time to update our original estimates accordingly — the price of each Cairo-step on L2 will be reduced by 5x, and will now cost 0.01 gas.
+Ban đầu, các bước 200m ở Cairo của chúng tôi trong một bằng chứng yêu cầu 5 triệu khí để xác minh dẫn đến ước tính ngây thơ là 0,05 khí cho mỗi bước ở Cairo. Kể từ đó, chúng tôi đã chuyển sang[bằng chứng đệ quy](https://medium.com/starkware/recursive-starks-78f8dd401025)cho phép giảm đáng kể chi phí xác minh L1 (chỉ gốc của cây đệ quy đạt đến L1). Bây giờ là lúc để cập nhật các ước tính ban đầu của chúng tôi cho phù hợp — giá của mỗi bậc thang Cairo trên L2 sẽ giảm 5 lần và hiện sẽ tiêu tốn 0,01 gas.
 
-This cost reduction is significant for computationally intensive applications, e.g. account contracts with non-native signatures. Simple transactions will see a minor cost reduction (~ 5%). In future versionss, we will handle the second component: on-chain data costs. Once alternatives to on-chain data are introduced to Starknet (aka Volition), the cost reduction will be felt all across the board.
+Việc giảm chi phí này là đáng kể đối với các ứng dụng chuyên sâu về tính toán, chẳng hạn như các hợp đồng tài khoản có chữ ký không phải bản địa. Các giao dịch đơn giản sẽ giảm một chút chi phí (~5%). Trong các phiên bản sau, chúng tôi sẽ xử lý thành phần thứ hai: chi phí dữ liệu trên chuỗi. Sau khi các lựa chọn thay thế cho dữ liệu trên chuỗi được giới thiệu với Starknet (hay còn gọi là Volition), việc giảm chi phí sẽ được cảm nhận trên toàn diện.
 
-## Starknet Governance First Vote
+## Bầu chọn đầu tiên về quản trị Starknet
 
-The first phase of Starknet Governance has launched (more details [here](https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40)). Community members are now able to participate in shaping Starknet through an additional channel, namely voting on protocol changes.
+Giai đoạn đầu tiên của Quản trị Starknet đã ra mắt (chi tiết khác[tại đây](https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40)). Các thành viên cộng đồng hiện có thể tham gia định hình Starknet thông qua một kênh bổ sung, cụ thể là bỏ phiếu về các thay đổi giao thức.
 
-Starknet Governance first phases will focus on Starknet protocol upgrades. Every Starknet version upgrade will first be deployed on Testnet; voters will have a 6-day period to examine and test the upgraded version as it runs on Goerli. During this time, a Snapshot proposal will be opened, and the community can vote on whether to approve the new version for Mainnet deployment.
+Các giai đoạn đầu tiên của Quản trị Starknet sẽ tập trung vào nâng cấp giao thức Starknet. Mọi bản nâng cấp phiên bản Starknet trước tiên sẽ được triển khai trên Testnet; người bình chọn sẽ có khoảng thời gian 6 ngày để kiểm tra và thử nghiệm phiên bản nâng cấp khi phiên bản này chạy trên Goerli. Trong thời gian này, một đề xuất Ảnh chụp nhanh sẽ được mở và cộng đồng có thể bỏ phiếu về việc có phê duyệt phiên bản mới để triển khai Mainnet hay không.
 
-If the proposal gains a majority of ‘YES’ votes during the 6-day voting period, the proposal passes and Starknet Mainnet will be upgraded accordingly.
+Nếu đề xuất nhận được đa số phiếu bầu 'CÓ' trong thời gian bỏ phiếu 6 ngày, thì đề xuất được thông qua và Starknet Mainnet sẽ được nâng cấp tương ứng.
 
-Starknet alpha v0.11.0 is the first Starknet version which is up for a vote. The Starknet alpha v0.11.0 vote will be open for six days starting from the Testnet deployment.
+Starknet alpha v0.11.0 là phiên bản Starknet đầu tiên được bình chọn. Bình chọn Starknet alpha v0.11.0 sẽ mở trong sáu ngày kể từ khi triển khai Testnet.
 
-Relevant links:
+Liên kết có liên quan:
 
-* [Snapshot space](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
-* [Delegation discovery page](https://delegate.starknet.io/)
-* Starknet alpha v0.11.0 discussion thread on the [Community forum](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)
+* [không gian chụp nhanh](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
+* [Trang khám phá ủy quyền](https://delegate.starknet.io/)
+* Chuỗi thảo luận Starknet alpha v0.11.0 trên[Diễn đàn cộng đồng](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)
 
-## Cairo 1.0 and Sierra
+## Cairo 1.0 và Sierra
 
-Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion) is an intermediate representation that compiles to Cairo assembly (CASM). Pre Starknet alpha v0.11.0, a developer would compile Cairo 0 into CASM and send the result to the Starknet sequencer. With Cairo 1.0, developers compile their code to Sierra, and send this intermediate representation to the sequencer. The sequencer will then compile it to CASM. Sierra is guaranteed to compile to “safe CASM”, i.e. a subset of CASM that cannot fail, making each and every execution provable. This guarantees that the sequencer will be able to charge fees even for reverted transactions, protecting from DOS. For more information, see [the docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/).
+Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion) là một biểu diễn trung gian biên dịch thành Cairo assembly (CASM). Trước Starknet alpha v0.11.0, một nhà phát triển sẽ biên dịch Cairo 0 thành CASM và gửi kết quả tới trình giải mã Starknet. Với Cairo 1.0, các nhà phát triển biên dịch mã của họ sang Sierra và gửi biểu diễn trung gian này tới trình sắp xếp thứ tự. Trình sắp xếp thứ tự sau đó sẽ biên dịch nó thành CASM. Sierra được đảm bảo biên dịch thành “CAM an toàn”, tức là một tập hợp con của CASM không thể bị lỗi, làm cho mỗi và mọi lần thực thi đều có thể chứng minh được. Điều này đảm bảo rằng trình sắp xếp chuỗi sẽ có thể tính phí ngay cả đối với các giao dịch được hoàn nguyên, bảo vệ khỏi DOS. Để biết thêm thông tin, hãy xem[tài liệu](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/).
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*KsAwaJTIsOuCsJIe)
 
-Starknet alpha 0.11.0 will use the [Cairo 1.0-alpha.6 version](https://github.com/starkware-libs/cairo/releases/tag/v1.0.0-alpha.6). This version is close to [feature parity](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md) with Cairo 0, with all Starknet system calls already present.
+Starknet alpha 0.11.0 sẽ sử dụng phiên bản[Cairo 1.0-alpha.6](https://github.com/starkware-libs/cairo/releases/tag/v1.0.0-alpha.6). Phiên bản này gần bằng[tính năng tương đương](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)với Cairo 0, với tất cả các cuộc gọi hệ thống Starknet đã có mặt.
 
-Note that the Starknet sequencer uses a fixed compiler version, which means language improvements may not be immediately available in Starknet, and will be available only after a Starknet version update. Specifically, while improvements that affect the Cairo 1.0 → Sierra compilation may take effect immediately, changes to the Sierra → CASM compiler (see the [docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/) for more details) will need to wait for a Starknet upgrade.
+Lưu ý rằng trình sắp xếp chuỗi Starknet sử dụng phiên bản trình biên dịch cố định, có nghĩa là các cải tiến ngôn ngữ có thể không khả dụng ngay lập tức trong Starknet và sẽ chỉ khả dụng sau khi cập nhật phiên bản Starknet. Cụ thể, trong khi những cải tiến ảnh hưởng đến quá trình biên dịch Cairo 1.0 → Sierra có thể có hiệu lực ngay lập tức, thì những thay đổi đối với trình biên dịch Sierra → CASM (xem[tài liệu](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/)để biết thêm chi tiết) sẽ cần đợi bản nâng cấp Starknet.
 
-## What Else is New?
+## Cái nào là mới?
 
-### New Transaction Type — Declare v2
+### Loại giao dịch mới — Khai báo v2
 
-We’re adding [a new transaction type](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/#declare_v2_cairo_1_0) for declaring Cairo 1.0 classes.
+Chúng tôi đang thêm[một loại giao dịch mới](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/#declare_v2_cairo_1_0)để khai báo các lớp Cairo 1.0.
 
-This new \`declare\` transaction version is similar to the existing \`declare\`, with two important distinctions:
+Phiên bản giao dịch \`declare\` mới này tương tự như \`declare\` hiện có, với hai điểm khác biệt quan trọng:
 
-* The class object being sent now represents Sierra rather than CASM, i.e. the class’s semantics is defined by the Sierra representation.
-* The user is also signing the compiled class hash. This is a crucial step until Sierra→CASM compilation will be proven as part of the Starknet OS.
+* Đối tượng lớp đang được gửi hiện đại diện cho Sierra chứ không phải CASM, tức là ngữ nghĩa của lớp được xác định bởi biểu diễn Sierra.
+* Người dùng cũng đang ký mã băm lớp đã biên dịch. Đây là một bước quan trọng cho đến khi quá trình biên dịch Sierra→CASM được chứng minh là một phần của Hệ điều hành Starknet.
 
-For more details, see [the docs](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect).
+Để biết thêm chi tiết, hãy xem[tài liệu](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect).
 
-From the developer’s point of view, the experience remains the same. After writing your Cairo 1.0 code, you can use the CLI to declare the class.
+Theo quan điểm của nhà phát triển, trải nghiệm vẫn như cũ. Sau khi viết mã Cairo 1.0, bạn có thể sử dụng CLI để khai báo lớp.
 
-**Note that initially, \`declare v2\` transactions will not be accepted on Starknet Mainnet. After a period of experimenting on Testnet, the new transaction type will be enabled on Mainnet, and Cairo 1.0 classes will become available.**
+**Lưu ý rằng ban đầu, các giao dịch \`declare v2\` sẽ không được chấp nhận trên Starknet Mainnet. Sau một thời gian thử nghiệm trên Testnet, loại giao dịch mới sẽ được kích hoạt trên Mainnet và các lớp Cairo 1.0 sẽ khả dụng.**
 
-### Poseidon is Here
+### Poseidon ở đây
 
-[Poseidon](https://www.poseidon-hash.info/) is a family of hash functions designed for having very efficient algebraic circuits. As such, they may be very useful in ZK proving systems such as STARKs and SNARKs. As of Starknet alpha v0.11.0, developers will be able to use Poseidon. Additionally, some of the hash computations that are part of the Starknet protocol will transition to Poseidon (specifically, the class hash, compiled class hash, and parts of the state commitment will use Poseidon, see [the docs](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash) for more details). In the future, more internal components will transition to using the Poseidon hash function.
+[Poseidon](https://www.poseidon-hash.info/)là một họ các hàm băm được thiết kế để có các mạch đại số rất hiệu quả. Do đó, chúng có thể rất hữu ích trong các hệ thống chứng minh ZK như STARK và SNARK. Kể từ Starknet alpha v0.11.0, các nhà phát triển sẽ có thể sử dụng Poseidon. Ngoài ra, một số tính toán hàm băm là một phần của giao thức Starknet sẽ chuyển sang Poseidon (cụ thể là hàm băm lớp, hàm băm lớp đã biên dịch và các phần của cam kết trạng thái sẽ sử dụng Poseidon, xem[tài liệu](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash)để biết thêm chi tiết). Trong tương lai, nhiều thành phần bên trong sẽ chuyển sang sử dụng hàm băm Poseidon.
 
-The exact version and parameters that are used in Starknet can be found [here](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
+Bạn có thể tìm thấy phiên bản và tham số chính xác được sử dụng trong Starknet[tại đây](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
 
-### Miscellaneous changes
+### thay đổi linh tinh
 
-Like previous Starknet versions, an upgrade also has implications for our APIs and other low-level components. Below we list those and address the specific changes that were made:
+Giống như các phiên bản Starknet trước đây, bản nâng cấp cũng có ý nghĩa đối với các API của chúng tôi và các thành phần cấp thấp khác. Dưới đây chúng tôi liệt kê những điều đó và giải quyết những thay đổi cụ thể đã được thực hiện:
 
-* v0 invoke/declare transactions are no longer supported
-* L1→L2 messages now require [fees](https://docs.starknet.io/documentation/architecture_and_concepts/L1-L2_Communication/messaging-mechanism/#l1-l2_message_fees). That is, messages sent with zero fee will not be processed by the Starknet sequencer
-* The on-chain data format is [changed](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/#on_chain_data_post_v0_11_0)
-* [API changes](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#api_changes) (not all changes are listed here, please refer to the docs for an exhaustive list) :
-* added a new \`get_compiled_class_by_class_hash\` endpoint
-* \`get_class_by_hash\` returns both Cairo 0 / Cairo 1.0 classes (depending on the requested hash)
-* \`get_state_update\` has a new section for replaced classes, and declarations are split between Cairo 0 and Cairo 1 classes.
-* \`estimate_fee\` and \`simulate_tx\` can now skip validation
-* A [new](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1) Starknet JSON-RPC version
+* giao dịch gọi/khai báo v0 không còn được hỗ trợ
+* Tin nhắn L1→L2 hiện yêu cầu[phí](https://docs.starknet.io/documentation/architecture_and_concepts/L1-L2_Communication/messaging-mechanism/#l1-l2_message_fees). Nghĩa là, các tin nhắn được gửi với mức phí bằng 0 sẽ không được xử lý bởi trình sắp xếp chuỗi Starknet
+* Định dạng dữ liệu trên chuỗi là[thay đổi](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/#on_chain_data_post_v0_11_0)
+* [API thay đổi](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#api_changes)(không phải tất cả các thay đổi đều được liệt kê ở đây, vui lòng tham khảo tài liệu để biết danh sách đầy đủ):
+* đã thêm điểm cuối \`get_compiled_class_by_class_hash\` mới
+* \`get_class_by_hash\` trả về cả hai lớp Cairo 0 / Cairo 1.0 (tùy thuộc vào hàm băm được yêu cầu)
+* \`get_state_update\` có một phần mới dành cho các lớp được thay thế và các khai báo được phân chia giữa các lớp Cairo 0 và Cairo 1.
+* \`estimate_fee\` và \`simulate_tx\` hiện có thể bỏ qua xác thực
+* A[mới](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1)phiên bản JSON-RPC của Starknet
 
-## What’s coming next?
+## Điều gì sắp tới?
 
-Now that all the Cairo 1.0-related infrastructure has been put into place, you can expect:
+Hiện tại, tất cả cơ sở hạ tầng liên quan đến Cairo 1.0 đã được đưa vào sử dụng, bạn có thể mong đợi:
 
-* Further language improvements to Cairo 1.0
-* Performance improvements: [as promised](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), we keep moving forward towards significantly increasing the TPS. The next step in the roadmap is transitioning to the [Rust sequenencer](https://github.com/starkware-libs/blockifier), which is developed in the open under the Apache 2.0 license. The new sequencer will make use of the [rust CairoVM](https://github.com/lambdaclass/cairo-rs) and the [Papyrus](https://github.com/starkware-libs/papyrus) full node, forming the Performance Trio.
-* Offchain [DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! In this version, we handled the computational component of the transaction’s cost. In upcoming versions, we will handle the on-chain data costs, which are today the dominant cost for average transactions.
+* Cải tiến ngôn ngữ hơn nữa cho Cairo 1.0
+* Cải thiện hiệu suất:[như đã hứa](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), chúng tôi tiếp tục hướng tới việc tăng đáng kể TPS. Bước tiếp theo trong lộ trình là chuyển đổi sang trình tự sắp xếp thứ tự[Rust](https://github.com/starkware-libs/blockifier), được phát triển mở theo giấy phép Apache 2.0. Trình sắp xếp thứ tự mới sẽ sử dụng nút đầy đủ[Rust CairoVM](https://github.com/lambdaclass/cairo-rs)và nút đầy đủ[Papyrus](https://github.com/starkware-libs/papyrus), tạo thành Bộ ba hiệu suất.
+* Ngoại tuyến[DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! Trong phiên bản này, chúng tôi đã xử lý thành phần tính toán của chi phí giao dịch. Trong các phiên bản sắp tới, chúng tôi sẽ xử lý chi phí dữ liệu trên chuỗi, hiện là chi phí chiếm ưu thế đối với các giao dịch trung bình.
 
 ![](/assets/starknet-alpha-v0.11.0-diagram.png)

@@ -1,1 +1,1 @@
-Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so choose.
+Un cop Starknet estigui llest, les aplicacions StarkEx poden migrar a StarkNet si així ho volen.

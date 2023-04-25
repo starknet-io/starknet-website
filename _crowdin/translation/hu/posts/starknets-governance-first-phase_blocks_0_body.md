@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Izgatottan várjuk, hogy bejelenthessük a StarkNet decentralizációs folyamatának következő lépését – a protokollmódosítások megszavazását.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+Az elmúlt néhány hét során a StarkNet jelentős lépéseket tett a további decentralizáció érdekében: létrehozta[a StarkNet Foundationt](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), elindította a[STRK Tokent az Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c)on, és[nyílt forráskódú Cairo 1.0-t](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Ez a bejegyzés a következő lépéssel, nevezetesen a StarkNet kormányzásának első szakaszával foglalkozik, amely az elkövetkező hónapokra terjed ki.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Hamarosan lezajlik az első szavazás a StarkNet protokoll javasolt módosításainak jóváhagyásáról vagy elutasításáról
+* Az első szakaszban a szavazás résztvevői:\
+  — Token birtokosok\
+  — A szavazati jogaikat inkább átruházó tokentulajdonosok által kiválasztott küldöttek\
+  — A StarkNet Alapítvány által kiválasztott küldöttek szavazati jogai egy részének gyakorlására\
+  — A StarkNet Alapítvány által létrehozott professzionális Építőipari Tanács
+* Mindenkit felkérnek, hogy jelölje ki magát a StarkNet irányításába
+* A megbeszélések a[StarkNet közösségi fórumon](https://community.starknet.io/)zajlanak
 
-### Background
+### Háttér
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Két folyamatot fejlesztenek egyszerre annak érdekében, hogy a StarkNet cenzúraálló nyilvános hálózattá váljon: (i) a StarkNet rendszerelemeinek[decentralizálása](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), pl. a szekvencerek és proversek, és (ii) a protokollmódosításokkal kapcsolatos irányítási mechanizmusok megvalósítása.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Komoly kihívást jelent olyan minőségirányítási mechanizmusok kiépítése, amelyek lehetővé teszik egy nyitott közösség számára a protokollfrissítések kezelését. Ez egy fokozatos és feltáró folyamat, amely széles körű közösségi együttműködést igényel.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+A StarkNet irányításának első szakaszainak megtervezése és lebonyolítása érdekében a StarkNet Alapítvány irányító bizottságot hozott létre. Az Alapítvány további részleteket a bizottság hatásköréről és küldetéséről külön bejegyzésben tesz közzé. A bizottság tagjai Deven Matthews (Nethermind), Manor Bareli (StarkWare) és Sylve Chevet (briq). Az alábbiakban látható a StarkNet Governance első szakaszának terve, amelyet a bizottság tagjai a StarkNet ökoszisztéma különböző közreműködőivel együtt fogalmaztak meg, és amelyet az Alapítvány igazgatósága hagyott jóvá.
 
-### Starknet’s governance first phase plan
+### A Starknet irányítási első fázisának terve
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+Elindult a StarkNet Governance első szakasza. Ezentúl a közösség tagjai egy további csatornán, mégpedig a protokollmódosítások szavazásán keresztül vehetnek részt a StarkNet alakításában. Ez csak az első szakasza a StarkNet irányításának; ahogy a StarkNet a következő fázisba lép, az irányítási mechanizmusok és a résztvevők köre bővülni fog. Íme a**első**fázis részletei:
 
-#### Voting subject
+#### Szavazás tárgya
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Javasolt frissítések a StarkNet protokollhoz. Ebben a szakaszban minden frissítést az Alapítvány javasol. A javaslatok tükrözik a StarkNet közösségi fórumon felvetett vitákat, ötleteket és visszajelzéseket.
 
-#### Voting type
+#### Szavazás típusa
 
-Off-chain signal vote (Via Snapshot)
+Láncon kívüli jelszavazás (pillanatfelvételen keresztül)
 
-#### Voting process
+#### Szavazási folyamat
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Az Alapítvány a StarkNet frissített verzióját telepíti a Goerlire.
+2. A szavazóknak 6 nap áll rendelkezésükre, hogy megvizsgálják a frissített verziót, mivel az fut a Goerli-n. Ez idő alatt szavazhatnak arról, hogy jóváhagyják-e a Mainnet telepítését.
+3. Ha a szavazók jóváhagynak egy javaslatot, akkor több mint 24 órás késéssel kell alkalmazni a frissítést a Mainnetre.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Ezekről a frissítésekről a StarkNet Foundation[Twitter-fiókjában, valamint](https://twitter.com/StarkNetFndn)[StarkNet Community Forum](https://community.starknet.io/)ban kerül sor.
 
-#### Threshold and required quorum
+#### Küszöb és szükséges határozatképesség
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* A küszöb az egyszerű többség (azaz a küszöb a leadott szavazatok 50%-a)
+* Határozatképességhez nincs szükség, ami azt jelenti, hogy nincs minimális részvételi szint a szavazás érvényességéhez
 
-### First phase voting participants
+### Az első szakasz szavazás résztvevői
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Íme azoknak a listája, akik részt vehetnek az irányítási folyamat első szakaszában:
 
-#### Token holders
+#### Zsetontartók
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* A StarkNet kormányzásának első szakaszában a legtöbb token-tulajdonos korai központi közreműködő és befektető, akik felépítették és támogatták a hálózatot annak korai szakaszában ([további részletekért olvassa el ezt a bejegyzést](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Idővel a tokent kiosztják a fejlesztőknek és más feleknek, akik a hálózat karbantartásán és frissítésén dolgoznak. Mint ilyenek, ezek a felek biztosíthatják a hálózatot, használhatják, működtethetik és részt vehetnek annak irányításában.
 
-#### Delegates
+#### Küldöttek
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+**Indoklás**:\
+A szavazati jog átruházása lehetővé teszi a tokentulajdonosok számára, hogy irányítási mandátumukat a közösség érintett, tájékozott és szakmai tagjaira ruházzák át. Ennek köszönhetően:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+* A token-tulajdonosok dönthetnek úgy, hogy a közvetlen demokrácia helyett a képviseleti demokrácia révén részt vesznek a döntéshozatalban.
+* Az elhivatott, tehetséges közösség tagjai hírnevük alapján jelentős szerepet vállalhatnak a kormányzásban. Nincs szükség token birtoklására ahhoz, hogy küldöttként kiállhassa magát.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+**Felelősségek**:\
+Végezzen komoly tanulási folyamatot minden döntésnél, amely megalapozott, önálló döntések meghozatalához vezet, amelyek a StarkNet és annak hosszú távú jövőképét szolgálják.
 
-**Operation**:
+****művelet:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Mindenekelőtt a delegálási mechanizmus sikeres működéséhez minőségi küldöttek csoportjára van szükség.
+* A delegálttá válás útja engedély nélküli – nincs előfeltétele –, de azoknak, akik szeretnék, létrehoztak egy szekciót a fórumban, ahol a leendő delegáltak profilokat tehetnek közzé ([ezen a linken](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* A token tulajdonosok szabadon választhatnak bármely Ethereum L1 címet, amellyel szavazati jogukat át kívánják ruházni.
+* További részletekért olvassa el a[dedikált bejegyzést a StarkNet közösségi fórumon](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+#### A StarkNet építői tanácsa
 
-A professional committee, appointed by the Foundation.
+Az Alapítvány által kijelölt szakmai bizottság.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+**Indoklás**:\
+Olyan irányítási mechanizmusok megvalósítása, amelyek a közösségi részvételen és a szakmai hírnéven alapulnak, nem csak a token-tartáson.
 
-**Responsibilities**:
+**Felelősségek**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* Minden döntésnél komoly tanulási és vitafolyamat lefolytatása, amely megalapozott döntésekhez vezet, amelyek a StarkNet és annak hosszú távú jövőképének javát szolgálják.
+* Aktív részvétel a vitákban és szavazásokban az első szakaszban
+* Megbeszéléseik és döntéshozatali folyamataik átláthatóságának biztosítása
+* Elérhető a közösség számára a StarkNet közösségi fórumon folyó nyílt beszélgetéseken keresztül
 
-**Operation**:
+****művelet:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Az Alapítvány által kijelölt 17 bizottsági tag
+* Mandátumidő – StarkNet irányítási első szakasz (több hónap)
+* További részletekért olvassa el a[dedikált bejegyzést a StarkNet közösségi fórumon](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+### Az első fázis szavazati joga
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+A StarkNet Governance első szakaszában a StarkWare nem vesz részt a szavazásban. A StarkNet Alapítvány a szavazati jogot az Építőipari Tanácsra és a csoport több küldöttére ruházza át, és nem szavaz közvetlenül.
 
-The voting power distribution in the **first phase** will be:
+A szavazati erő megoszlása a**első fázisban**a következő lesz:
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* Befektetők: 33,3%
+* A StarkNet korai fő közreműködői (a StarkWare kivételével): 33,3%
+* Az Alapítvány képviselői: 33,3%\
+  — StarkNet Építőipari Tanács: 23,3%\
+  — Az Alapítvány nevében szavazó küldöttek: 10%
 
-### First vote — StarkNet’s 0.11 version
+### Első szavazás – a StarkNet 0.11-es verziója
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+Az első szavazásra a következő hetekben kerül sor. A szavazás a StarkNet Alpha 0.11-es verziójára való frissítésére vonatkozik.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+A szavazás nem sokkal a Goerli megjelenése után kezdődik, és a hivatalos csatornákon keresztül lesz bejelentve:[StarkNet Foundation Twitter fiókja](https://twitter.com/StarkNetFndn)és[StarkNet Community Forum](https://community.starknet.io/). Maradjon velünk!

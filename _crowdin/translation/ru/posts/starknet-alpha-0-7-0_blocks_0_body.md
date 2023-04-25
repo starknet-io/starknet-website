@@ -76,7 +76,7 @@ Multicall - это мощная функция абстракции аккаун
 
 **Поддержка ожидающих блоков**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. Эта версия включает поддержку запроса этих блоков через StarkNet CLI.
+[Блоки ожидания](https://starknet.io/documentation/block-structure-and-hash/#pending_block)были[введены](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)в последней минорной версии (v0.6.2) и предлагали более быстрые подтверждения транзакций. Эта версия включает поддержку запроса этих блоков через StarkNet CLI.
 
 Чтобы использовать его, в команде CLI, которая принимает block_number в качестве аргумента (contract_call/get_block/get_code/get_storage_at), мы можем запросить StarkNet относительно текущего блока, указав block_number=pending.
 

@@ -1,62 +1,62 @@
-### TL;DR
+### TL; DR
 
-StarkNet Alpha 1 has two new features:
+StarkNet Alpha 1 het twee nuwe kenmerke:
 
-* L1<>L2 interaction
-* On-chain data
+* L1<>L2 interaksie
+* On-ketting data
 
-### Introduction
+### Inleiding
 
-At the beginning of the year, we announced that StarkWare is building [StarkNet](https://starkware.co/product/starknet/), a permissionless decentralized STARK-based ZK-Rollup¹ operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation — without compromising Ethereum’s composability and security.
+Aan die begin van die jaar het ons aangekondig dat StarkWare[StarkNet](https://starkware.co/product/starknet/)bou, 'n toestemminglose gedesentraliseerde STARK-gebaseerde ZK-Rollup¹ wat as 'n L2-netwerk oor Ethereum werk. StarkNet laat enige dApp toe om onbeperkte skaal vir sy berekening te bereik - sonder om Ethereum se saamstelbaarheid en sekuriteit te benadeel.
 
-Last month, [StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95) was released to the world. For the first time, developers are able to [write](https://kobi.one/2021/07/14/stardrop.html) any smart contract and deploy it, permissionlessly, to a ZK-Rollup. Users are able to send transactions to the network, Ethereum-style.
+Verlede maand is[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)aan die wêreld vrygestel. Vir die eerste keer kan ontwikkelaars enige slim kontrak[skryf en dit sonder toestemming na 'n ZK](https://kobi.one/2021/07/14/stardrop.html)Rollup ontplooi. Gebruikers kan transaksies na die netwerk stuur, Ethereum-styl.
 
-Today we are releasing a new version; Alpha 1. We are releasing features on a rolling basis to allow developers to interact with new features as soon as possible. We anticipate that this will tighten the feedback cycle and allow community feedback to quickly improve StarkNet.
+Vandag stel ons 'n nuwe weergawe vry; Alfa 1. Ons stel kenmerke op 'n deurlopende basis vry om ontwikkelaars in staat te stel om so gou as moontlik met nuwe kenmerke te kommunikeer. Ons verwag dat dit die terugvoersiklus sal verskerp en gemeenskapsterugvoer sal toelaat om StarkNet vinnig te verbeter.
 
-### **Alpha 1 Features**
+### **Alpha 1 kenmerke**
 
-#### L1<>L2 Interaction
+#### L1<>L2 Interaksie
 
-Alpha 1 includes an L1<>L2 messaging protocol, which allows developers to implement seamless transaction flows between L1 and L2. Developers can now send messages from contracts on L1 to contracts on L2 and vice versa.
+Alpha 1 sluit 'n L1<>L2-boodskapprotokol in, wat ontwikkelaars in staat stel om naatlose transaksievloei tussen L1 en L2 te implementeer. Ontwikkelaars kan nou boodskappe stuur vanaf kontrakte op L1 na kontrakte op L2 en omgekeerd.
 
-One of the beauties of ZK-Rollups is that state updates are final, without any delay. This means that messages that were sent from L2 to L1 can be immediately forwarded to their destination contract. This opens the way to build apps that are truly interoperable between the layers.
+Een van die skoonhede van ZK-Rollups is dat staatsopdaterings finaal is, sonder enige vertraging. Dit beteken dat boodskappe wat van L2 na L1 gestuur is, onmiddellik na hul bestemmingskontrak aangestuur kan word. Dit maak die weg oop om toepassings te bou wat werklik interoperabel is tussen die lae.
 
-Interested in trying it out? The best way to get started is to follow the tutorial [here](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html).
+Stel jy belang om dit te probeer? Die beste manier om te begin is om die tutoriaal[hier](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)te volg.
 
-Our L1<>L2 protocol owes much to other L2s (specifically Optimism and Arbitrum) whose previous work in this area influenced our design.
+Ons L1<>L2-protokol is baie te danke aan ander L2's (spesifiek Optimisme en Arbitrum) wie se vorige werk op hierdie gebied ons ontwerp beïnvloed het.
 
-#### On-Chain Data-Availability
+#### On-chain data-beskikbaarheid
 
-StarkNet’s state update is now also published as on-chain data on Ethereum. This allows any user to fully construct StarkNet’s state from L1 data. Each state update includes the state diff, i.e., what storage was changed and its new value.
+StarkNet se staatsopdatering word nou ook as on-chain data op Ethereum gepubliseer. Dit laat enige gebruiker toe om StarkNet se toestand volledig uit L1-data te konstrueer. Elke staatopdatering sluit die staatsverskil in, dit wil sê watter berging verander is en die nuwe waarde daarvan.
 
-Here also, ZK-Rollup shows its strength. In contrast to Optimistic Rollups, in which the full transactions’ data must be sent on-chain, in ZK-Rollups, only the absolute minimum data required to derive the state diff is sent on-chain.
+Ook hier wys ZK-Rollup sy krag. In teenstelling met Optimistic Rollups, waarin die volledige transaksies se data aan die ketting gestuur moet word, word in ZK-Rollups slegs die absolute minimum data wat nodig is om die staatsverskil af te lei, aan die ketting gestuur.
 
-Consider a prime example, price oracles. A transaction to update a price oracle usually contains multiple transactions but updates only one storage cell; the pair’s price. The on-chain data required for a state update containing price oracle transactions in an Optimistic Rollup grows linearly with the number of updates, while in a ZK-Rollup, it will always be a single storage update.
+Beskou 'n uitstekende voorbeeld, prys-orakels. 'n Transaksie om 'n prysorakel by te werk, bevat gewoonlik veelvuldige transaksies, maar werk slegs een stoorsel op; die paar se prys. Die on-chain data wat benodig word vir 'n staatsopdatering wat prysorakeltransaksies in 'n Optimistic Rollup bevat, groei lineêr met die aantal opdaterings, terwyl dit in 'n ZK-Rollup altyd 'n enkele stooropdatering sal wees.
 
-Moreover, compression algorithms can be applied to the published data, and their validity will be attested to by the STARK proof, further reducing the on-chain footprint. Future versions of StarkNet will introduce innovative optimizations in this area.
+Boonop kan kompressie-algoritmes op die gepubliseerde data toegepas word, en die geldigheid daarvan sal deur die STARK-bewys getuig word, wat die on-ketting-voetspoor verder verminder. Toekomstige weergawes van StarkNet sal innoverende optimaliserings op hierdie gebied bekendstel.
 
 #### StarkNet OS
 
-We are also releasing the StarkNet Operating System code. The StarkNet OS is the Cairo program that runs StarkNet. The OS handles everything which is done on the network — contract deployment, transaction execution, L1<>L2 messages and more. The StarkNet OS architecture and design will be explained in detail in a separate post.
+Ons stel ook die StarkNet-bedryfstelselkode vry. Die StarkNet OS is die Kaïro-program wat StarkNet bestuur. Die bedryfstelsel hanteer alles wat op die netwerk gedoen word - kontrakontplooiing, uitvoering van transaksies, L1<>L2-boodskappe en meer. Die StarkNet OS-argitektuur en -ontwerp sal in 'n aparte pos in detail verduidelik word.
 
-#### Extra Features
+#### Ekstra kenmerke
 
-Not only has StarkNet Alpha evolved, we are also constantly improving Cairo. For a full description of the new features in Cairo v0.3.0, check the release notes [here](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
+StarkNet Alpha het nie net ontwikkel nie, ons verbeter ook voortdurend Kaïro. Vir 'n volledige beskrywing van die nuwe kenmerke in Cairo v0.3.0, kyk na die vrystellingnotas[hier](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
 
-### The Ecosystem is Growing
+### Die ekosisteem groei
 
-Aside from the constant work on StarkNet Core, the ecosystem’s work on StarkNet is continuously expanding. We are thrilled to be collaborating with some of the most talented teams from the ecosystem.
+Afgesien van die konstante werk aan StarkNet Core, brei die ekosisteem se werk op StarkNet voortdurend uit. Ons is verheug om saam te werk met van die mees talentvolle spanne uit die ekosisteem.
 
-Fermion, StarkNet’s first Full Node effort, is developed by the Erigon (formerly TurboGeth) team. Based on their enormous knowledge gained from working on Ethereum, we are able to work with them to build a powerful Full Node, which incorporates many lessons learned while building for Ethereum, while benefiting from the scale offered by STARK proofs.
+Fermion, StarkNet se eerste Full Node-poging, word ontwikkel deur die Erigon (voorheen TurboGeth)-span. Op grond van hul enorme kennis wat opgedoen is deur aan Ethereum te werk, kan ons saam met hulle werk om 'n kragtige Full Node te bou, wat baie lesse insluit wat geleer is tydens die bou vir Ethereum, terwyl ons voordeel trek uit die skaal wat deur STARK-bewyse aangebied word.
 
-Nethermind are working on Warp, a compiler from EVM to Cairo. Bound by our culture of presenting new tools only once they are ready, all we can say is, expect exciting news on this front very soon! We can say, though, that they are moving at warp speed.
+Nethermind werk aan Warp, 'n samesteller van EVM na Kaïro. Gebonde aan ons kultuur om nuwe gereedskap aan te bied net sodra hulle gereed is, al wat ons kan sê is, verwag baie gou opwindende nuus op hierdie front! Ons kan egter sê dat hulle teen skeefspoed beweeg.
 
-### What the Future Holds
+### Wat die toekoms inhou
 
-The next stop on our road to StarkNet will be composability — allowing contracts to interact with one another. Stay tuned.
+Die volgende stop op ons pad na StarkNet sal saamstelbaarheid wees – wat kontrakte toelaat om met mekaar te kommunikeer. Bly ingeskakel.
 
 [StarkWare](https://starkware.co/)
 
-1 As we’ve said previously, ZK-Rollup is by now a commonly used term, yet very misleading: these solutions do not (currently) offer zero-knowledge.
+1 Soos ons voorheen gesê het, is ZK-Rollup nou 'n algemeen gebruikte term, maar tog baie misleidend: hierdie oplossings bied nie (tans) geen kennis nie.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Opdatering (Nov. 2021):**StarkNet Alpha is regstreeks op Ethereum Mainnet

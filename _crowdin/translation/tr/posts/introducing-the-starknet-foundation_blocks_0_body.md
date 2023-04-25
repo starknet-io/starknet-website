@@ -1,68 +1,70 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* StarkNet Vakfı resmen başlatıldı
+* Gelişen bir StarkNet'i desteklemeye adanmıştır.
+* Disiplinlerarası güçlü bir kurul Vakfa liderlik edecek
+* Vakıf, StarkWare'den bağımsızdır
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)StarkNet Vakfı'nın kurulmasıyla gelecekteki topluluk yönetişim yapısına doğru büyük bir adım atıyor.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+Bu gönderi, Vakfın misyonunu ana hatlarıyla belirtir, yöneticilerini tanıtır ve masaya getirdikleri deneyim ve değerleri kısaca tartışır.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+Vakıf, Temmuz 2022'de yayınlanan StarkNet'in[ademi merkeziyet önerisi](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)vizyonunu gerçekleştirmek için kuruldu ve kendi “Merhaba Dünya” gönderisini[burada](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)yayınladı.
 
-### Advancing Starknet's vision
+### Starknet'in vizyonunu geliştirmek
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet izinsiz, merkezi olmayan bir Katman 2 (L2) Validity Rollup'tır (genellikle ZK-Rollup olarak anılır), Ethereum'un güvenliğini ve ademi merkeziyetini korurken Ethereum'u ölçeklendirmeyi amaçlar. Vakıf, bu misyona uygun olarak, paylaşılan teknolojiyi StarkNet'i ilerletmek için bağımsız bir varlık olarak kuruldu. Ek olarak, dar bir misyona sahip, kar amacı gütmeyen bir kuruluş olarak: StarkNet'i herkes için bir kamu malı olarak ilerletmek ve gelecek yıllar boyunca bu şekilde sürdürmek.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+Vakıf, ağın kaynaklarının aşağıdaki hedeflere yönelik etkin bir şekilde konuşlandırılmasını sağlamak için ilk Token tedarikinin %50,1'iyle başlar: StarkNet'in bir kamu malı olarak bakımı ve güvenliği; ağın sürekli gelişimi ve genişlemesi; ve geliştiriciler arasında yapıcı bir işbirliği kültürü için destek.
 
-#### **The foundation’s priorities will include:**
+#### **Vakfın öncelikleri şunları içerecektir:**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**Altyapı, araçlar, uygulamalar ve daha fazlasını inşa ederek StarkNet'e hayat veren StarkNet kullanıcıları, geliştiricileri ve araştırmacılarından oluşan topluluğu**desteklemek.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**StarkNet ve teknolojisi hakkında eğitim vererek ve geliştiricilerin StarkNet'in altyapısını ve STARK'ların gücünden yararlanan dApp'leri oluşturma becerileri kazanmalarına yardımcı olarak topluluğu genişletme**.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**Ağın vizyonunu gerçekleştirmesine yardımcı olmanın temel unsurları olan**ağın sürekli gelişimini ve ilerleyen araştırmayı denetlemek.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**StarkNet yönetişim mekanizmalarını geliştirerek ve merkezi olmayan sıralama ve kanıtlamayı tesis ederek StarkNet'in ademi merkeziyetçiliğini**ilerletmek.
 
-### **Introducing the board**
+### **tahta tanıtımı**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+Vakfı yedi kişilik bir yönetim kurulu yönetecek. Yönetim kurulu üyeleri farklı geçmişlerden gelir ve denge, bağımsızlık ve çok disiplinli bir dizi beceriyi masaya getirir. Her üye, StarkNet'in uzun vadeli bir ortak fayda olarak potansiyeline ulaşmasına yardımcı olacak uzmanlığa ve deneyime sahiptir. "[Merhaba Dünya](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)" gönderilerinde, onları StarkNet'e katılmaya motive eden şeyin ne olduğuna dair içgörülerini veriyorlar. İlk isimlere göre alfabetik sırayla sunulurlar.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)Amerika Birleşik Devletleri Eski Teknolojiden Sorumlu Başkan Yardımcısı; İnternet altyapısını yöneten bağımsız kuruluş olan ICANN'in eski Başkan Yardımcısı ve Baş Politika Sorumlusu.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)**Matematikçi ve bilgisayar bilimcisi; StarkWare Başkanı ve Kurucu Ortağı; STARK, FRI ve Zerocash protokollerinin ortak mucidi ve Zcash'in Kurucu Bilim Adamı.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Yüksek profilli kripto varlık projelerinde sistemik kusurları ortaya çıkarmakla tanınan Blockchain düşünce lideri ve muhbir; İnsan Hakları Vakfı'na kripto para birimi danışmanı; Arcane Assets'in eski Baş Yatırım Sorumlusu.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Ödüllü avukat, açık kaynak yazılım uzmanı ve 'Open Source for Business' yazarı; OSS Capital'in Genel Ortağı ve StarkWare'in hukuk danışmanı.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Matematikçi ve bilgisayar bilimcisi; STARK ispatlarının temelini oluşturan matematiğe temel katkıda bulunan kişi; Toronto Üniversitesi'nde Doçent; StarkWare'in bilimsel danışmanı.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Ethereum'un temel bileşenlerini oluşturan Blockchain geliştiricisi; Ethereum ve StarkNet üzerine kurulu en büyük ekiplerden biri olan Nethermind'in kurucusu.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)Girişimci; StarkWare CEO'su ve Kurucu Ortağı. StarkWare'den önce, optik fiberler, veri görselleştirme araçları vb. dahil olmak üzere bir dizi teknoloji ürünü geliştiren şirketlerin kurucu ortağı oldu.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+Bu üyelerin geçmişleri, Vakfı gelecek için iyi bir şekilde donatan önemli bir deneyimin yanı sıra mükemmel bir beceri araç kutusu sağlar.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+Andrew ve Heather, kamu yararına ve açık kaynak projelerinden güçlü referanslar getiriyor. Heather, ücretsiz ve açık yazılım lisanslamayı savunmasıyla ünlüdür. Andrew, ilk yıllarında merkezi olmayan bir topluluk malı olarak interneti şekillendirmeye yardımcı olan kuruluş olan ICANN'de yıllarca merkezi bir figürdü. Bunu aşağıdan yukarıya, fikir birliğine dayalı süreçler aracılığıyla yaptı. StarkNet'in Web3'ün hedeflerini gerçekleştirmesi için tam da böyle bir süreç gereklidir.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+Kurul ayrıca çok sayıda zincirdeki önemli kripto deneyimini de yansıtıyor. Tomasz, Ethereum'un ve StarkNet'in temel bileşenlerinin geliştirilmesi üzerinde çalıştı. Eli, StarkNet'in arkasındaki teknolojiye öncülük etmeden önce Zcash'te Kurucu Bilim Adamıydı ve Andrew bugün Zcash teknolojisini geliştiren ve destekleyen Electric Coin Company'nin yönetim kurulunda yer alıyor.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+Kurul, Tomasz ve Uri'den iş ve CEO deneyimine sahiptir ve Shubhangi ve Eli'den bilgisayar bilimi ve matematik - ve özellikle STARK'lar - uzmanlığına sahiptir. Üç yönetim kurulu üyesi, Tomasz, Uri ve Eli, StarkNet'in kurulmasına derinden dahil oldular.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+Tüm üyeler inandıkları şey için ayağa kalkar. Eric, kripto ile ilgili görüşlerini yayınlamak için bağımsızlığını sınırlamakla tehdit ettiğinde, Nasdaq'ın sahibi olduğu Cinnober'de üst düzey bir rol bırakacak kadar ileri gitti. Hesaplamaya[bütünlük 1 sağlayan teknolojiyi yaygınlaştıran](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)Temel olarak, böyle bir bütünlüğe sahip bir pano monte etmek uygundur.
 
-### **An Independent Foundation**
+### **Bağımsız Bir Vakıf**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+Vakıf, bir kamu malını, yani StarkNet Protokolünü inşa eden, kullanan ve sürdürenleri destekleyecek bağımsız bir varlıktır. İnternet, Bitcoin ve Ethereum'da olduğu gibi StarkNet, herhangi bir üçüncü tarafa güvenmeye ihtiyaç duymadan herkesin özgürce ve izinsiz bir şekilde katılabileceği ve geliştirebileceği merkezi olmayan, sansüre dayanıklı bir ağ olarak oluşturulmuş paylaşılan bir teknolojidir.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+Yeni kurulan Vakıf, özellikle StarkNet'i bir kamu malı olarak ilerletmek ve sürdürmek için kurulmuş, kar amacı gütmeyen bir kuruluştur. Vakıf, kapsayıcı bir dizi bağımsız geliştirici, start-up, kurumsal kullanıcı ve genel olarak halkla birlikte, StarkNet'i kendi amaçları ve güvenli bir şekilde etkileşim ve işlem yapmak isteyen herkesin iyiliği için kullanmakta ve geliştirmekte her zaman özgür olacaktır. içinden.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+Vakıf bağımsızdır ve StarkNet ile ilgili olarak istediği pozisyonu almakta özgürdür. Kararlar basit çoğunlukla, Vakıf yönetim kurulu üyelerinin görevden alınması ve atanması gibi özel durumlarda yedide beşi ile alınır. Yönetim kurulu üyelerinin harici konumlarının çıkar çatışması teşkil ettiği kararlarda, Vakıf bu üyelerin oylamadan çekilmelerini talep eder.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+Vakfın misyonunu gerçekleştirmek için önemli araçları vardır: 5.01 Milyar StarkNet Tokenı Vakfa tahsis edilmiştir, yani, 10 Milyar Tokenlik ilk Token arzının %50.1'i (daha fazla bilgi için yönetim önerimiz</a>
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+bölüm 3'üne bakın).</p> 
+
+StarkNet'in gelecekteki yönünü şekillendirecek karar verilmesi gereken birçok detay var. Neyse ki, Vakfın kurulması büyüyen bir topluluktan daha fazla ses getiriyor. StarkWare, bu topluluğun kararlı bir parçası olmaya devam ediyor ve daha büyük StarkNet ekosisteminin ağın geleceğini daha fazla sahiplenmesini memnuniyetle karşılıyoruz. StarkNet'in yolculuğu artık merkezi olmayan bir ekibin ellerinde ve Vakıf, yolculuğun sorunsuz geçmesinde önemli bir rol oynayacak. StarkWare'deki herkes yeni bedene görevinde büyük başarılar diler.

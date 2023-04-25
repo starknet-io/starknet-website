@@ -1,3 +1,3 @@
-The Starknet Token is not yet for sale. It cannot be added to your wallet at this stage. Beware of scams.
+Starknet 토큰은 아직 판매되지 않습니다. 이 단계에서는 지갑에 추가할 수 없습니다. 사기에 주의하세요.
 
-The Starknet token was launched on Ethereum Mainnet in November 2022. The Starknet Foundation will announce at a later date the details of the Community Rebates and Community Provisions plans but at time of writing these details are yet to be determined. Beware of scams posing to sell Starknet Tokens.
+Starknet 토큰은 2022년 11월 이더리움 메인넷에서 출시되었습니다. Starknet 재단은 나중에 커뮤니티 리베이트 및 커뮤니티 조항 계획의 세부 사항을 발표할 예정이지만 이 세부 사항은 아직 결정되지 않았습니다. Starknet 토큰 판매를 위장한 사기에 주의하십시오.

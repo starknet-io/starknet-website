@@ -1,83 +1,99 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+2022. november végén bejelentették</a>
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+. Az Alapítvány egy független szervezet, amelynek célja, hogy megvalósítsa Starknet azon elképzelését, hogy egy virágzó, decentralizált és engedély nélküli Layer 2 (L2) Validity Rollup (más néven) legyen. ZK-Rollup). </p> 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Erős [interdiszciplináris testülettel](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) az élen a Starknet Alapítvány jó helyzetben van ahhoz, hogy megvalósítsa célját, a Starknet közösség támogatását és bővítését, a hálózat folyamatos fejlesztésének felügyeletét, az engedély nélküli irányítási mechanizmusok kidolgozását, és a szervezet teljes decentralizálását. Starknet ökoszisztéma. 
 
-The committees are:
+A mai napon az Alapítvány örömmel jelenti be, hogy nyilvánosan bejelenti öt bizottság kinevezését, amelyek mindegyike meghatározott mandátummal rendelkezik, amely összhangban van Starknet küldetésével és prioritásaival. Az egyes bizottságok mandátuma nincs kőbe vésve, és rutinszerű értékeléseken esnek át, szükség szerint kiigazításokkal és módosításokkal.
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+A bizottságok a következők:
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+* Rendelkezések Bizottsága
+* Korai Örökbefogadási Támogatási Bizottság
+* Fejlesztői Partnerségi Bizottság
+* Irányító Bizottság
+* Ökoszisztéma Bevezető Bizottság
 
-## Introducing the Starknet Foundation Committees 
+Az alábbiakban további részleteket osztunk meg a bizottságokkal, ideértve mandátumukat, működésüket és kezdeti tagjaikat.
 
-### Provisions Committee
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+## Bemutatjuk a Starknet Alapítvány bizottságait 
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+### Rendelkezések Bizottsága
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+A Céltartalék Bizottság felelős a Starknet ökoszisztéma token – STRK – biztosításának tervezéséért, felügyeletéért és végrehajtásáért. Az STRK-t a Starknet konszenzusmechanizmusában való részvétel tétjeként fogják használni. Ez egyben a hálózat irányítási tokenjeként és gáztokenként is szolgál majd a hálózat tranzakciós díjainak kifizetéséhez. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+A Céltartalékok Bizottsága kritikus fontosságú a Starknet ökoszisztémát hajtó token igazságos, decentralizált és átlátható elosztásának biztosításában. A bizottság felügyeli a felhasználók STRK tokenekkel való ellátását, akiknek díjat kell fizetniük a Starknet használatáért. A bizottság értékeli és ajánlásokat ad a Starknet Alapítványnak a minősített csoportok számára a méltányosság, az átláthatóság és a decentralizáció célkitűzései alapján. Ezeket a terveket amint elkészülnek, bejelentik.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+A Céltartalék Bizottság a következő címen érhető el: [rendelkezések@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Developer Partnerships Committee
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+### Korai Örökbefogadási Támogatási Bizottság
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Az Early Adopter Grants (EAG) bizottság elkötelezett a Starknet ökoszisztéma növekedésének előmozdítása mellett azáltal, hogy támogatásokat nyújt a Starkneten láncon belüli alkalmazásokat építő innovatív csapatoknak. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Az EAG Bizottság célja, hogy elősegítse az ökoszisztéma terjeszkedését és vitalitását a láncon belüli telepítések révén. A bizottság hamarosan bejelentést tesz, hogy meghatározza az első pályázati kör kritériumait, amelyek visszamenőleges hatállyal azokra a csapatokra összpontosítanak, amelyek már megkezdték a Starknet építését. 
 
-### Governance Committee
+A Korai Örökbefogadási Támogatási Bizottság elkötelezett az átláthatóság mellett, és minden támogatási összeget nyilvánosságra hoz.
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Az Early Adopter Grants Bizottság a következő címen érhető el: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+### Fejlesztői Partnerségi Bizottság
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+A Fejlesztői Partnerségi Bizottság létfontosságú szerepet játszik a Starknet ökoszisztémában azáltal, hogy elősegíti és felügyeli a Starknet ökoszisztémába bevezetendő új stratégiai fejlesztői partnerségeket. A stratégiai fejlesztői partnerségek különösen a Starknet sikere szempontjából kritikus infrastruktúra kulcsfontosságú elemein való együttműködésnek minősülnek.
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+A bizottság fő feladatai közé tartozik a fejlesztői partnerségek benyújtási folyamatának egyszerűsítése, alapos átvilágítás és a benyújtott javaslatok jóváhagyása. 
 
-### Ecosystem Onboarding Committee
+A bizottság kulcsfontosságú a robusztus ökoszisztéma előmozdításában azáltal, hogy azonosítja és támogatja azokat a fejlesztői csapatokat, akik kiépítették vagy aktívan építik a hálózat infrastruktúrájának alaprétegét. Erőfeszítéseik biztosítják, hogy a Starknet infrastrukturális síneinek biztosítására és bővítésére építő csapatokat decentralizált és átlátható módon ítéljék oda. 
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+A Fejlesztői Partnerségi Bizottság a következő címen érhető el: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+### Irányító Bizottság
 
-## Upcoming Milestones
+A Kormányzási Bizottság kritikus szerepet tölt be a Starknet ökoszisztéma folyamatban lévő decentralizálásában. A bizottság felelős a Starknet irányítás kezdeti szakaszainak kutatásáért, tervezéséért és végrehajtásáért. 
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+A decentralizációra összpontosítva, és egyensúlyt teremtve a közösségi részvétel és az aktív, folyamatos fejlesztés között; a bizottság célja a Starknet irányításának kezdeti pillérei létrehozása, végrehajtása és felügyelete. 
 
-Here is what’s coming next: 
+A Kormányzási Bizottság olyan alapvető mechanizmusokat dolgoz ki és vezet be, amelyek átlátható, tisztességes és decentralizált struktúrát tartanak fenn, amely elősegíti a közösség részvételét, valamint biztosítja a folyamatos növekedést és az ökoszisztémában való decentralizált részvételt. E célok elérése érdekében a bizottság meghatározza a Starknet közösség által megszavazandó és jóváhagyandó határozatokat, valamint megfelelő eljárást alakít ki az irányítási szavazatok megvitatására és végrehajtására. 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+A bizottság már elindította a Starknet irányításának [első szakaszát](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Az első szavazással kapcsolatos kérdéseivel forduljon a következő címre: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Az Irányító Bizottság a következő címen is elérhető: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+
+Ha többet szeretne megtudni az irányító bizottság munkájáról és ütemtervéről, kérjük, tekintse meg a [oldalt](https://www.starknet.io/en/posts/governance).
+
+
+
+### Ökoszisztéma Bevezető Bizottság
+
+Az ökoszisztéma bevezető bizottsága felelős az új fejlesztők és közösségi tagok felhatalmazásáért és a Starknet ökoszisztémába való integrálásáért. Ez magában foglalja a Starknet nagyköveteinek azonosítását, felhatalmazását és támogatását, támogatások odaítélését az ökoszisztéma közreműködőinek és tehetséggondozóinak, valamint olyan események és oktatási partnerségek általános ütemének megszervezését és szponzorálását, amelyek elősegítik a közösség részvételét a Starknet ökoszisztémájában. 
+
+A nagykövetek a Starknet közösség megbecsült és elismert tagjai lesznek, akik elkötelezettek a rendezvények szervezése, részvétele és felszólalása, a közösségfejlesztés előmozdítása, a tartalom létrehozása, a kölcsönösen előnyös szponzorok keresése, valamint az ígéretes egyének és csapatok meggyőzése iránt, hogy építsenek a Starknetre.
+
+Az Ökoszisztéma Bevezető Bizottság elsődleges fókusza eltér a Korai Örökbefogadási Támogatási Bizottságtól. Míg az EAG Bizottság célja a Starknet első alkalmazóinak beindítása és díjazása, az Ökoszisztéma Bevezető Bizottsága az ökoszisztéma folyamatos és tartós növekedését és fejlődését hangsúlyozza az alulról építkező szinten. 
+
+Az ökoszisztéma bevezető bizottságával a következő címen lehet kapcsolatba lépni: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+
+
+
+## Közelgő mérföldkövek
+
+E bizottságok kinevezésével a Starknet Alapítvány izgalmas utazás előtt áll. Mindegyik bizottság az ökoszisztéma egy adott aspektusának előmozdítása mellett dolgozik, és az alapítvánnyal együtt egy virágzó, decentralizált és engedély nélküli 2. rétegű ökoszisztéma kialakításán fognak dolgozni.  
+
+Íme, ami ezután következik: 
+
+* a [első kormányzási szavazásra](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) 2023. március 21-én kerül sor;
+* Az EAG Bizottság első közleménye és az első pályázati kör részletei a StarkNet Alapítvány [blogján](https://www.starknet.io/en/posts/foundation) 2023. március 21-én jelennek meg.
+
+Tartsa szemmel a StarkNet Alapítvány [blogját](https://www.starknet.io/en/posts/foundation) és a közösségi média csatornáit a legújabb frissítésekért és lehetőségekért.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Minden további Starknet Foundation információért, frissítésért és javaslatért kövesse a Starknetet a [Twitteren](https://twitter.com/Starknet), csatlakozzon [Discord](http://starknet.io/discord)hoz, és olvassa el a [közösségi fórumot.](https://community.starknet.io/)**

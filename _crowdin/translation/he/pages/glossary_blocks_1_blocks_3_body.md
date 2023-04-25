@@ -1,3 +1,3 @@
-The program that encodes the implemented application business logic. This includes the application data structures and handling of specific transactions sent by users. Specifically, the Starknet contract encodes valid state transitions for the application.
+התוכנית המקודדת את ההיגיון העסקי של היישום המיושם. זה כולל את מבני הנתונים של האפליקציה וטיפול בעסקאות ספציפיות שנשלחו על ידי משתמשים. באופן ספציפי, חוזה Starknet מקודד מעברי מדינה תקפים עבור האפליקציה.
 
-* Starknet Account Contracts: Given account abstraction, user accounts are not implemented at the protocol level. Some contracts will, therefore, need to implement the concept of user accounts; these are called Account Contracts. The exact implementation depends on the contract; but, technically, these are Starknet contracts that are implemented in Cairo.
+* חוזי חשבון Starknet: בהתחשב בהפשטה של חשבון, חשבונות משתמש אינם מיושמים ברמת הפרוטוקול. חוזים מסוימים יצטרכו, לפיכך, ליישם את הרעיון של חשבונות משתמש; אלה נקראים חוזי חשבון. הביצוע המדויק תלוי בחוזה; אבל, טכנית, אלה הם חוזי Starknet שמיושמים בקהיר.

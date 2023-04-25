@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* StarkNet Alpha 0.8.0, ücret mekanizmasının ilk sürümünü sunar (StarkNet Alpha 0.9.0'a kadar isteğe bağlıdır).
+* İşlem izini elde etmek için işlem ücretinin tahmin edilmesini gerektiren yeni API, daha iyi görünürlük ve hata ayıklama yetenekleri sağlar
+* StarkNet sıralayıcıda performans iyileştirmeleri
+* L1→L2 mesaj iptali
 
-### Intro
+### Giriş
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+[yol haritamızda](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51)paylaşıldığı gibi, StarkNet'in işlevsellik ve özelliklerine yapılan son eklemenin ardından, dikkatimiz performans geliştirmelerine ve protokol tasarımına (ücretler, hesap soyutlama, merkezden uzaklaştırma, vb. dahil) kayıyor. StarkNet Alpha 0.8.0, işlem ücretleri ekleme ve sıralayıcının performansını artırma sürecini başlatır.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+StarkNet'in yol haritası bir ücret mekanizması içeriyor ve bu sürümde ilerleyerek platformun tam performansına önemli bir adım daha yaklaşıyoruz.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+Ücret mekanizmasının eklenmesi, StarkNet'in performans tasarımının önemli bir parçasıdır. Minimum bir ücret olmadan, sonsuz işlemlerle karşı karşıya kalma riskini alıyoruz: bu da sıralayıcı optimizasyonlarından bağımsız olarak sistemin performans göstermesini imkansız hale getirir.
 
-### Features
+### Özellikler
 
-#### Fee Support
+#### Ücret Desteği
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+StarkNet Alpha artık ücret mekanizmasının ilk sürümünü destekliyor. Bu mekanizma, bu erken aşamada ve hatta Testnet'te bile iki ana nedenden dolayı önemlidir:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Geliştiricilerin sözleşmelerini StarkNet'in maliyet modeline göre optimize etmeye başlamasına olanak tanır.
+2. Sayısız işlem göndererek istenmeyen e-postaları önlediğinden, sistemin performansını iyileştirmenin çok önemli bir karşılığıdır.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Bu sürüm, geliştiricilerin ücret ödemelerini araçlarına ve uygulamalarına dahil etmeleri için gerekli bileşenleri sunar. Geliştiriciler artık \`estimate_fee\` uç noktasını arayarak işlem ücretini tahmin edebilir ve işlem yürütmenin bir parçası olarak ücret ödemesini yapabilir.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Bu özellik geriye dönük uyumlu olmadığından, bu noktada ücret ödemesini zorunlu kılmayacağız, yalnızca birkaç hafta içinde piyasaya sürülecek olan 0.9.0 sürümünden itibaren uygulayacağız. Bu kademeli geçiş, kullanıcıların ve geliştiricilerin yeni modele uyum sağlamasına olanak tanıyacak.
 
-#### Fee Structure on 0.8.0
+#### 0.8.0'daki Ücret Yapısı
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+0.8.0'da, ücretler yalnızca hesaplama karmaşıklığına göre toplanırken, StarkWare yine de L1 iletişim maliyetini sübvanse edecektir. Önümüzdeki birkaç hafta içinde bu L1 operasyon ve iletişim maliyetlerini içerecek şekilde ücret mekanizmasını güncelleyeceğiz. Ödeme, işlemin StarkNet L2'de gerçekleştirilmesiyle otomatik olarak tahsil edilecektir. Kapsamlı bir açıklama için[ücret belgelerine](https://starknet.io/documentation/fee-mechanism/)bakın.
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+StarkNet geliştikçe ücret mekanizmasını değiştirmek ve geliştirmek için geliştirici topluluğuyla yakın bir şekilde çalışacağımızı belirtmek önemlidir.
 
-#### L2 Goerli ETH Faucet
+#### L2 Görli ETH Musluğu
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Kullanıcıların Testnet'te ücret ödemelerini sağlamak için[L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/)piyasaya sürdük. Bu Musluk, işlem ücretini ödemek için kullanabileceğiniz StarkNet Goerli'deki hesap adresinize küçük miktarlarda L2 Goerli ETH gönderir.
 
-#### Trace API
+#### İzleme API'sı
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+Bir işlemin yürütme izini alma özelliğini StarkNet'in API'sine ekledik. İşlemin izinde, tüketilen yürütme kaynakları, dönüş değeri, yayılan olaylar ve gönderilen mesajlar gibi bilgilerle birlikte tüm dahili çağrılar görünür. Bu yeni çağrı, bir sözleşmenin davranışını anlamayı veya işlemlerde hata ayıklamayı basitleştirir. Ek olarak,[Voyager](https://voyager.online/)veya[StarkTx](https://starktx.info/)gibi araçlar bu verileri içerebilir; kullanıcılara, özellikle hesap sözleşmesi etkileşimi için daha ayrıntılı analiz sağlamak.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+İzi elde etmek için StarkNet'in CLI'sinde \`get_transaction_trace\` kullanabilirsiniz. Nasıl kullanılacağına dair bir örnek görmek için[eğitimine bakın](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Mesaj İptali
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+Bu sürümün ek bir özelliği de L1→L2 mesajlarını iptal etme yeteneğidir. Bu neden yararlıdır? Bir kullanıcının bir varlığı L1'den L2'ye aktardığı bir senaryo düşünün. Akış, kullanıcının varlığı bir StarkNet köprüsüne göndermesi ve karşılık gelen L1→L2 mesaj oluşturmasıyla başlar. Şimdi, L2 mesaj tüketiminin çalışmadığını hayal edin (bu, dApp'lerin Kahire sözleşmesindeki bir hata nedeniyle olabilir). Bu, kullanıcının varlıkları üzerindeki velayetini sonsuza kadar kaybetmesine neden olabilir.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Bu riski azaltmak için, L1→L2 mesajını başlatan sözleşmenin, niyetini beyan ettikten ve uygun bir süre bekledikten sonra mesajı iptal etmesine izin veriyoruz (bkz.[dokümantasyonu](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Performans geliştirmeleri
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Bu sürüm, bir sıralayıcının gelen Kahire işlemleri akışını yürütmek için ihtiyaç duyduğu süreyi önemli ölçüde azaltır.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+Bu sadece ilk adım! Yakında (0.9.0) tanıtılacak olan bir sonraki önemli performans dönüm noktamız, sıralayıcının paralel çalıştırılmasıdır ve ileride çok daha fazla optimizasyon yapılması beklenmektedir.
 
-### What now?
+### Şimdi ne var?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Teknik belgeleri[buradan okuyun](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Tüm StarkNet bilgileri, belgeleri, eğitimleri ve güncellemeleri için[starknet.io](https://starknet.io/)adresine gidin.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Geliştirici desteği, ekosistem duyuruları ve topluluğun bir parçası olmak için[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)katılın.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Gelişmelerden haberdar olmak ve tüm StarkNet araştırma tartışmalarına katılmak için[StarkNet Shamans](https://community.starknet.io/)ziyaret edin.

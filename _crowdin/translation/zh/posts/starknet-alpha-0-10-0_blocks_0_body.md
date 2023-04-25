@@ -55,7 +55,7 @@
 
 支持逐步升级开罗，[Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), 此版本包含几个语法更改。
 
-为了最大限度地减少不便，版本发布将包含一个[迁移脚本](https://www.youtube.com/watch?v=kXs59zaQrsc)自动适用上述更改。 You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+为了最大限度地减少不便，版本发布将包含一个[迁移脚本](https://www.youtube.com/watch?v=kXs59zaQrsc)自动适用上述更改。 您可以在[此处](https://github.com/starkware-libs/cairo-lang/releases)找到更多详细信息。
 
 ### 下一步是什么？
 

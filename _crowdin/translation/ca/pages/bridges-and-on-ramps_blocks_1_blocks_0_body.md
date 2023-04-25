@@ -1,3 +1,3 @@
-## What are bridges?
+## Què són els ponts?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Els ponts permeten als usuaris moure actius entre ecosistemes criptogràfics, com ara blockchains o intercanvis.

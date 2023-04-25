@@ -1,7 +1,7 @@
 {
-  "name": "ViewBlock",
+  "name": "Görüntüleme Bloğu",
   "website_url": "https://viewblock.io/starknet",
-  "company_name": "Viewblock ",
+  "company_name": "Görüntü bloğu ",
   "twitter": "https://twitter.com/viewblock",
-  "description": "Block explorer and analytics for multiple networks including Starknet. "
+  "description": "Starknet dahil birden fazla ağ için blok gezgini ve analitik. "
 }

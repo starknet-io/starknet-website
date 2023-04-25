@@ -4,7 +4,7 @@ Alfa 4 byla dnes vydána na Goerli. Tato verze je kandidátem na vydání Mainne
 
 Alfa 4 sleduje vydání alfa 3 v balení, které mimo jiné zahrnuje vylepšení v Káhiře kompilační doby, smluvních konstruktorů a mnohem více (viz[poznámky k plnému vydání](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Důležité upozornění: toto je stále verze Alpha – pro nasazení vaší smlouvy v mainnetu postupujte podle pokynů[pro nové aplikace](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu).
 
 ### Nové funkce
 

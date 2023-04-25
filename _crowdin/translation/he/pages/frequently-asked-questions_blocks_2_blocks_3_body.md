@@ -1,3 +1,3 @@
-No. You have several options for writing a contract, each with its own benefits. 
+לא. עומדות בפניכם מספר אפשרויות לכתיבת חוזה, שלכל אחת יתרונות משלה. 
 
-Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
+קהיר היא שפת האם של חוזה Starknet, אשר מממש באופן מלא את פוטנציאל ההרחבה של Starknet. מצד שני, מספר צוותים מפתחים מתנגבים משפות תכנות אחרות (בעיקר Solidity) לקהיר. טרנספילרים כאלה מאפשרים פריסה מהירה של חוזים קיימים ב-Starknet.**[ראה את כלי הפיתוח העדכניים ביותר שלנו](/developers/tools-resources).**

@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+Blockchain skalerbarhed har altid været et opvarmet emne. Næsten alle blockchain netværket rører et stort antal transaktioner pr. sekund (TPS) som et salgssted. TPS er imidlertid ikke en gyldig metrisk metode til at sammenligne blockchain netværk med — hvilket gør det til en udfordring at evaluere deres relative ydeevne. Desuden store TPS numre normalt kommer til en pris — hvilket rejser spørgsmålet: gøre disse netværk faktisk skalere, eller øger de bare deres gennemløb?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Så lad os undersøge, hvordan man definerer skalerbarhed, hvilke tradeoffs der er lavet for at opnå det, og hvorfor Validity Rollups er den ultimative skalerbarhed løsning.
 
-### Not all Transactions are Made Equal
+### Ikke alle transaktioner er gjort lige store
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+For det første er vi nødt til at fastslå vores påstand om, at den enkle og bekvemme måling af TPS ikke er et præcist mål for skalerbarhed.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+For at kompensere noder for udførelse af transaktioner (og for at afskrække brugere fra at spamme netværket med unødvendig beregning), blockchains opkræver et gebyr i forhold til den beregningsbyrde, der pålægges blockchain. I Ethereum måles kompleksiteten af beregningsbyrden i*gas.*Fordi gas er en meget praktisk måling af transaktionskompleksiteten, udtrykket vil blive anvendt i hele denne artikel for ikke-Ethereum blockchains samt, selv om det typisk Ethereum-specifik.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+Transaktionerne varierer betydeligt i kompleksitet, og derfor hvor meget gas, de forbruger. Bitcoin, pioner inden for troværdige peer-to-peer-transaktioner, understøtter kun det rudimentære Bitcoin-script. Disse enkle overførsler fra adresse til adresse bruger lidt gas. I modsætning hertil understøtter smarte kontraktkæder som Ethereum eller Solana en virtuel maskine og Turing-komplette programmeringssprog, der giver mulighed for meget mere komplekse transaktioner. Derfor kræver dApps som Uniswap meget mere gas.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+Derfor giver det ingen mening at sammenligne TPS for forskellige blockchainer. Det, vi bør sammenligne i stedet, er evnen til beregning - eller gennemløb.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Alle blokkæder har en (variabel) blokstørrelse og bloktid, der bestemmer, hvor mange*regneenheder*kan behandles pr. blok, og hvor*hurtig*en ny blok kan tilføjes. Tilsammen bestemmer disse to variabler*gennemstrømningen*af en blockchain.
 
-### What Constrains Scalability?
+### Hvad Stammer Skalerbarhed?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+Blokkæder stræber efter at være maksimalt decentraliserede, inklusive netværk. For at opnå dette skal to grundlæggende egenskaber holdes i skak.
 
-#### **1. Hardware Requirements**
+#### **1. Krav Til Hardware**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+decentraliseringen af et blockchain netværk er bestemt af den svageste node i netværket til at kontrollere blockchain og holde sin stat. Derfor omkostninger til at køre en knude (hardware, båndbredde og opbevaring) bør holdes så lavt som muligt for at gøre det muligt for så mange individer som muligt at blive tilladelsesfrie deltagere i det troværdige netværk.
 
-#### 2**.** State Growth
+#### 2**.**Statsvækst
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Statsvæksten henviser til, hvor hurtigt blokkæden vokser. Jo mere gennemløb en blockchain gør det muligt at ske pr. tidsenhed, jo hurtigere blokkæden vokser. Fulde knudepunkter gemmer netværkets historie, og de skal kunne validere tilstanden af netværket. Ethereum tilstand gemmes og refereres ved hjælp af effektive strukturer såsom træer. Efterhånden som staten vokser, tilføjes nye blade og grene til den, hvilket gør det stadig mere kompliceret og tidskrævende at udføre visse handlinger. Når kæden vokser i størrelse, det forværrer den værst tænkelige udførelse af knuder, hvilket fører til en stadigt voksende tid til at validere nye blokke. Over tid, dette øger også den samlede tid det tager for en fuld node at synkronisere.
 
-### Detrimental Impacts of Increasing Throughput
+### Ubehagelige virkninger af stigende gennemstrømning
 
-#### 1. Node Count
+#### 1. Indholdselement Antal
 
-The minimum requirements to run a node and node counts are:
+Minimumskravene til at køre et indholdselement og indholdselementer er:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin1: 350GB HDD-diskplads, 5 Mbit/s forbindelse, 1GB RAM, CPU >1 Ghz. **Antal indholdselementer: ~10.000**
+* Ethereum2: 500GB+ SSD-diskplads, 25 Mbit/s forbindelse, 4–8GB RAM, CPU 2-4 kerner. **Antal indholdselementer: ~6.000**
+* Solana3: 1.5TB+ SSD-diskplads, 300 Mbit/s forbindelse, 128GB RAM CPU 12+ kerner. **Antal indholdselementer: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Bemærk, at jo større CPU, båndbredde og opbevaring krav til knudepunkter kræves for gennemstrømning af en blockchain, de færre knudepunkter på netværket — hvilket fører til svagere decentralisering og et mindre inkluderende netværk.
 
-#### 2. Time to Sync a Full Node
+#### 2. Tid til at synkronisere en fuld node
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Når du kører et indholdselement for første gang, skal det synkroniseres med alle eksisterende indholdselementer, downloades og validere, status af netværket hele vejen fra genese blok til spidsen af kæden. Denne proces bør være så hurtig og effektiv som muligt for at give nogen mulighed for at fungere som en tilladelsesfri deltager i protokollen.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Tager Jameson Lopps[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)og[2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/)som indikator, Tabel 1 sammenligner den tid, det tager at synkronisere en fuld node af Bitcoin vs. Ethereum vs. Solana i gennemsnit forbrugerkvalitet PC.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Tabel 1. Sammenligning af blokkæde gennemløb og node-sync](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Tabel 1. Sammenligning af blokkæde gennemløb og node-sync")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Tabel 1 viser, at stigende gennemstrømning fører til længere synkroniseringstider, fordi flere og flere data skal behandles og gemmes.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Mens forbedringer af node software er konstant foretaget for at afbøde udfordringen i den voksende blockchain (sænkning af disk fodaftryk, hurtigere synkroniseringshastigheder, stærkere nedbrud elasticitet, modularisering af visse komponenter osv. , knudepunkterne åbenbart stadig ikke kan holde trit med stigninger til gennemløb.
 
-### How Should Scalability be defined?
+### Hvordan skal skalerbarhed defineres?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+Skalerbarhed er det mest misrepræsenterede udtryk i blockchain rummet. Mens stigende gennemløb er ønskeligt, det er kun en del af puslespillet.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***Skalerbarhed**betyder**flere transaktioner**for den**samme hardware**.*
 
-For that reason, scalability can be separated into two categories.
+Derfor kan skalerbarhed opdeles i to kategorier.
 
-#### Sequencer scalability
+#### Sequencer skalerbarhed
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+Sequencing beskriver handlingen af bestilling og behandling af transaktioner i et netværk. Som tidligere fastslået enhver blokkæde kan trivielt øge sin gennemstrømning ved at hæve blokkens størrelse og afkorte blokkens tid — indtil det tidspunkt, hvor den negative indvirkning på dens decentralisering anses for at være for betydelig. Men tweaking disse enkle parametre giver ikke de nødvendige forbedringer. Ethereum’s EVM kan, i teorien,[håndtere op til ~2.000 TPS](https://twitter.com/dankrad/status/1459607325854121989), hvilket er utilstrækkeligt til at servicere langsigtet blokering plads efterspørgsel. For at skalere sekventering, Solana lavet nogle imponerende innovationer: drage fordel af et paralleliserbart udførelsesmiljø og en smart konsensusmekanisme, som giver mulighed for langt mere effektiv gennemgang. Men til trods for forbedringerne er den hverken tilstrækkelig eller skalerbar. Efterhånden som Solana øger sin gennemgang, øges hardwareomkostningerne til at køre en knude og procestransaktioner.
 
-#### Verification scalability
+#### Verifikation skalerbarhed
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*Verifikation skalerbarhed beskriver tilgange, der øger gennemstrømningen uden at bebyrde knudepunkter med stadigt stigende hardwareomkostninger.*Specifikt, det refererer til kryptografiske innovationer som Validity proofs. De er grunden til, at Validity Rollups kan skalere en blockchain bæredygtigt.
 
-**What’s a Validity Rollup?**
+**Hvad er et gyldighedsvalg?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+Gyldighed Rollups (også kendt som “ZK-Rollups”) flytte beregning og tilstand opbevaring off-chain men holde en lille mængde af visse data on-chain. En smart kontrakt på den underliggende blockchain opretholder statskassen i Rollup. På Rollup sendes et parti af højt komprimerede transaktioner, sammen med den nuværende statslige rod, til en off-chain Prover. Leverandøren beregner transaktionerne, genererer et validitetsbevis for resultaterne og den nye statslige rod, og sender det til en on-chain Verifier. Verifikatoren verificerer validitetsbeviset, og den smarte kontrakt, der opretholder tilstanden af Rollup opdaterer det til den nye stat, som Prover.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**Hvordan skalerer Validity Rollups med de samme hardwarekrav?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+Selv om Provers kræver high-end hardware, påvirker de ikke decentraliseringen af en blockchain; fordi gyldigheden af transaktioner er garanteret af matematisk verificerbare beviser.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Hvad der betyder noget er kravene til at kontrollere beviserne. Fordi de involverede data er meget komprimeret og stort set abstraheret væk gennem beregning, dens indvirkning på knudepunkter i den underliggende blockchain er minimal*.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+Verifikatorer (Ethereum nodes) kræver ikke high-end hardware, og størrelsen af partierne øger ikke hardwarekrav. Kun statslige overgange og en lille mængde af opkaldsdata skal behandles og lagres af knudepunkter. Dette tillader alle Ethereum noder til at kontrollere Validity Rollup batches ved hjælp af deres eksisterende hardware.
 
-**The more transactions, the cheaper it gets**
+**Jo flere transaktioner, jo billigere bliver det**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+I traditionelle blockchains, jo flere transaktioner sker, jo dyrere det bliver for alle, som blokken rummet bliver fyldt op — og brugerne har brug for at overbyde hinanden i et gebyr marked for at få deres transaktioner inkluderet.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+For en Gyldighed Rollup, denne dynamik er omvendt. Verifikation af et parti transaktioner på Ethereum har en vis pris. Da antallet af transaktioner inde i et parti vokser, omkostningerne til at kontrollere batchen vokser med en eksponentielt langsommere hastighed. Tilføjelse af flere transaktioner til et parti fører til billigere transaktionsgebyrer, selvom batch-verifikation omkostninger stiger — fordi det er amortiseret blandt alle transaktioner inde i partiet. Gyldighed Rollups ønsker så mange transaktioner som muligt inde i et parti — så verifikation gebyr kan deles blandt alle brugere. Som batch størrelse vokser til uendelighed, amortiseret gebyr per transaktion konvergerer til nul, i. ., jo flere transaktioner på en Validity Rollup, jo billigere det får for alle.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX, en dApp drevet af en Validity Rollup, ser ofte batchstørrelser på over 12.000 transaktioner. Sammenligning af gasforbruget for de samme transaktioner på Mainnet i forhold til en Validity Rollup illustrerer skalabilitetsgevinsterne:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+Afvikling af en dYdX-transaktion på Ethereum Mainnet:**200.000 gas**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+Afvikling af en dYdX-transaktion på StarkEx:**<500 gas**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+En anden måde at se på det: Validity Rollups’ vigtigste omkostningsskalaer lineært med antallet af brugere inden for samme batch.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### Hvorfor Optimistiske Rollups er ikke så skalerbar som man kan tænke
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+I teorien giver Optimistiske Rollups næsten de samme skalerbarhedsfordele som Validity Rollups. Men der er en vigtig forskel: Optimistiske Rollups optimerer til det gennemsnitlige tilfælde, mens Validity Rollups optimerer til det værste. Fordi blockchain systemer fungerer under ekstremt modstridende forhold, optimering til det værst tænkelige tilfælde er den eneste måde at opnå sikkerhed.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+I den Optimistiske Rollup værste tilfælde, en brugers transaktioner vil ikke blive kontrolleret af svig checkere. Så, for at bestride svig, brugeren har til at synkronisere en Ethereum fuld node, en L2 fuld node, og beregne den mistænkelige transaktion selv.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+I Validity Rollups værst tænkelige tilfælde behøver en bruger kun at synkronisere en Ethereum fuld node for at verificere validitetsbeviset, gemme sig selv beregningsbyrden.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+I modsætning til Validity Rollups, Optimistic Rollups’ omkostningsskalaer lineært med antallet af transaktioner i stedet for antal brugere, hvilket gør dem dyrere.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### Endelige stykke af puslespillet - Tilladelsesfri adgang til Rollup staten
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+For at sikre transaktionernes gyldighed skal brugerne kun køre en Ethereum-node. Men, brugere og udviklere kan ønske at se, og køre, tilstand og udførelse af Rollup til forskellige formål. En*indeksering L2 node*udfylder dette behov perfekt. Ikke alene giver det brugerne mulighed for at se transaktionerne i netværket, men det er også en kritisk infrastruktur, der er nødvendig for, at økosysteminfrastrukturen kan fungere. Indekser som The Graph, Alchemy, Infura; Oracle netværk som Chainlink, og blokere Explorers, alle disse er fuldt understøttet af en tilladelsesfri indeksering L2 node.
 
-### Conclusion
+### Konklusion
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+Mange tilgange til at håndtere blockchain skalerbarhed fejlagtigt fokusere på at øge*gennemstrømning*. Men dette forsømmer gennemløb’ indvirkning på noder: de stadigt stigende hardwarekrav til at behandle blokke og gemme netværkshistorik og hvordan det hæmmer decentraliseringen af et netværk.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Med fremkomsten af Gyldighed-bevis kryptografi, en blockchain kan opnå**sand skalerbarhed**, der ikke belaster knudepunkter med stadigt stigende omkostninger og giver mulighed for bred decentralisering. Flere transaktioner med kraftfulde og mere komplekse beregninger for den samme hardware er nu muligt, invertering af gebyr marked dilemma i processen - jo mere aktivitet på en Validity Rollup, jo billigere det bliver!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)og[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+1 Fra[https://bitcoin.org/da/bitcoin-core/features/requirements](https://bitcoin.org/en/bitcoin-core/features/requirements)
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+2 Fra[https://ethereum.org/da/developers/docs/nodes-and-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+3 Fra<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+4 Stærkt forenklet og justeret for gennemsnitlige dynamiske blokstørrelser

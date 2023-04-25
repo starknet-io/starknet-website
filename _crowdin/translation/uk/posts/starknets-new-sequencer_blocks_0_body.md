@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* Додано розробку нового StarkNet
+* Доступно з відкритим вихідним кодом під ліцензією Apache 2.0
+* Перша мета - збільшити пропуск StarkNet.
 
-### A shiny new sequencer
+### Блискучий новий сиквенсер
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+Ми з радістю повідомляємо про новий ведучий StarkNet Sequer в роботах. Коли стек StarkNet's переходить у режим відкритого вихідного коду, слідуючи[Каїр 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)та[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), ми тепер продовжимо з новим послідовником StarkNet. Відкритий код буде доступний за ліцензією Apache 2.0, і ви можете обрати[репозиторій](https://github.com/starkware-libs/blockifier)зараз!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+Створення нового секвенсора є частиною[StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), яку ми представили кілька місяців тому. Реалізація нового послідовника почнеться із заміною**Blockifier**, цей модуль в межах послідовного виконання, який виконує виконання блоків. Як описано в дорожній карті, очікується, що вона принесе переваги для продуктивності StarkNet.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+Наш підхід до створення цього сиквенсера є таким самим підходом, який керував нами в StarkNet Alpha. Секвенсер**буде реалізований в стадіях**, і ми розділяємо його перший модуль. З часом нові компоненти послідовника будуть завершені, поки в кінцевому підсумку послідовність сиквенсера на основі Python цілком не замінить.
 
-### What does the sequencer do?
+### Що робить сиквенсер?
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+На StarkNet, після того, як користувачі здійснювали транзакції, перша зупинка в поїздці транзакції - це послідовності. У StarkNet протоколі послідовники відповідальні за замовлення транзакцій і виробництво блоків. Після цього блоку створюється послідовник, і затверджений протоколом консенсусу, прихильники переймають і створюють доказ для L1.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
-### Open-Sourcing
+### Відкритий вихідний текст
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+StarkNet Alpha запущений у Майннет у листопаді 2021 року. З самого початку він був зобов'язаний розподіляти силу масштабування STARK із світом.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+Сьогодні ми випускаємо перше з рядків нових модулів послідовника з відкритим вихідним кодом. Це займе кілька місяців для розміщення всіх модулів і підмодулів. Відкрите джерело, що дає змогу членам спільноти вносити свій внесок у розвиток та перевіряти кодову базу.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+СтаркНет наблизиться до точки децентралізованого безрезультатного послідовності. Зараз ми розробляємо децентралізований протокол StarkNet, і ми заохочуємо спільноту взяти участь у[дослідженнях і дискусіях](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
 
-### Performance
+### Продуктивність
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+Початковий сикатор StarkNet's є значною мірою адаптацією інфраструктури StarkEx. Необхідна інфраструктура, яка побудована особливо для вимог децентралізованої високоефективної мережі.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+Побудований в Расті, новий послідовник розроблений та розроблений на швидкодії з врахуванням. Новий послідовник також складається з суцільних фундаментів: папірус, новий[StarkNet повний вузол,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)буде працювати з управлінням станами та Каїро-рс, новим Каїро-VM LambdaClass, прискорить Каїрську страту. Ми очікуємо, що новий сиквенсер буде поліпшуватися при існуючому послідовнику в кожній особі. Очікується, що пропускна здатність і затримка мережі значно покращиться завдяки інтеграції цього послідовника в StarkNet.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+Ми також очікуємо, що інші інструменти інфраструктури та розвитку зможуть використати новий послідовник для поліпшення досвіду розвитку. Очікується повна продуктивність вузлу, як і всі тестові фреймворки.
 
 ### Summary
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+Ми з радістю повідомляємо сьогодні про новий послідовник відкритого вихідного коду. Її перший модуль вже доступний для спільноти, і він буде слідувати за більшою кількістю модулей в наступні місяці. Ми також із задоволенням зробити ще один крок у нашій дорожній карті для покращення результатів StarkNet. Ми прагнемо зробити мережу більш ефективною та доступною, і ми цінуємо підтримку кожного, хто приєднався до нас під час цієї поїздки.

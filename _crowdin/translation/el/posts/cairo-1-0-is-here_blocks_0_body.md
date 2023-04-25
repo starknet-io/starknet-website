@@ -1,38 +1,38 @@
 ### TL;DR
 
-* Cairo 1.0 first release is here!
-* Developers can start writing and testing Cairo 1.0 programs
-* Feature parity with the older version of Cairo will be reached in the coming weeks
-* Support for StarkNet contracts will be added in the upcoming StarkNet Alpha version
+* Κάιρο 1.0 πρώτη κυκλοφορία είναι εδώ!
+* Οι προγραμματιστές μπορούν να αρχίσουν να γράφουν και να δοκιμάζουν προγράμματα του Καΐρου 1.0
+* Η ισοτιμία με την παλαιότερη έκδοση του Καΐρου θα επιτευχθεί τις επόμενες εβδομάδες
+* Η υποστήριξη των συμβάσεων της StarkNet θα προστεθεί στην επερχόμενη έκδοση του StarkNet Alpha
 
-### Background
+### Φόντο
 
-We are excited to announce that the first public version of Cairo 1.0 is now available. This marks a major milestone in the evolution of Cairo, which was first introduced in 2020 as a Turing-complete programming language for efficiently writing STARK-provable programs. Cairo 1.0 is a Rust-like high-level language. Like Rust, it is intended to allow developers to easily write code that is efficient and safe.
+Είμαστε ενθουσιασμένοι να ανακοινώσουμε ότι η πρώτη δημόσια έκδοση του Καΐρου 1.0 είναι τώρα διαθέσιμη. Αυτό σηματοδοτεί ένα σημαντικό ορόσημο στην εξέλιξη του Καΐρου, που εισήχθη για πρώτη φορά το 2020 ως Turing-πλήρης γλώσσα προγραμματισμού για την αποτελεσματική συγγραφή STARK-αποδείξιμα προγράμματα. Το Κάιρο 1.0 είναι μια γλώσσα υψηλού επιπέδου. Όπως Rust, έχει ως στόχο να επιτρέψει στους προγραμματιστές να γράψουν εύκολα κώδικα που είναι αποτελεσματικός και ασφαλής.
 
-Since its inception, Cairo has been used to build Layer-2 applications that have [handled](https://dashboard.starkware.co/starkex) over $790 billion worth of trades, processed over 300 million transactions and minted more than 90 million NFTs, all performed off-chain and settled on Ethereum with the mathematical integrity guaranteed by STARK proofs. Cairo became the 4th most used programming language in the blockchain [ecosystem](https://defillama.com/languages) at large. With the release of Cairo 1.0, we aim to make the language even more accessible and user-friendly while also introducing new features that enhance safety and convenience.
+Από την ίδρυσή του, το Κάιρο έχει χρησιμοποιηθεί για την κατασκευή εφαρμογών Layer-2 που έχουν[χειριστεί](https://dashboard.starkware.co/starkex)πάνω από $790 δισεκατομμύρια σε συναλλαγές, επεξεργάστηκε πάνω από 300 εκατ. συναλλαγές και έκοψε πάνω από 90 εκατ. NFT, όλα εκτελούνται εκτός αλυσίδας και εγκαταστάθηκαν στο Ethereum με τη μαθηματική ακεραιότητα που εγγυάται η STARK αποδείξεις. Το Κάιρο έγινε η 4η πιο χρησιμοποιούμενη γλώσσα προγραμματισμού στο blockchain[οικοσύστημα](https://defillama.com/languages)γενικότερα. Με την απελευθέρωση του Καΐρου 1. , στόχος μας είναι να κάνουμε τη γλώσσα ακόμα πιο προσιτή και φιλική προς το χρήστη, εισάγοντας επίσης νέα χαρακτηριστικά που ενισχύουν την ασφάλεια και την ευκολία.
 
-One of the most significant changes in Cairo 1.0 is the syntax. We have taken inspiration from **Rust** to create a more developer-friendly language that is easier to read and write. The new version of Cairo allows writing safer code (strongly typed, ownership and borrowing, etc.), while also being more expressive.
+Μία από τις πιο σημαντικές αλλαγές στο Κάιρο 1.0 είναι η σύνταξη. Έχουμε εμπνευστεί από την**Rust**για να δημιουργήσουμε μια πιο φιλική προς τον προγραμματιστή γλώσσα που είναι πιο εύκολο να διαβαστεί και να γραφτεί. Η νέα έκδοση του Καΐρου επιτρέπει την εγγραφή ασφαλέστερου κώδικα (έντονα πληκτρολογημένο, ιδιοκτησιακό και δανεισμό κλπ), ενώ παράλληλα είναι πιο εκφραστική.
 
-Cairo 1.0 also introduces Sierra, a new intermediate representation that ensures **every** Cairo run can be proven. This makes Cairo 1.0 particularly well-suited for use in a permissionless network like StarkNet, where it can provide robust DoS protection and censorship resistance. You can read more about Sierra in our [previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) post.
+Το Κάιρο 1.0 εισάγει επίσης τη Σιέρρα, μια νέα ενδιάμεση αναπαράσταση που εξασφαλίζει**κάθε**τρέξιμο του Καΐρου μπορεί να αποδειχθεί. Αυτό καθιστά το Κάιρο 1.0 ιδιαίτερα κατάλληλο για χρήση σε ένα δίκτυο χωρίς δικαιώματα όπως το StarkNet, όπου μπορεί να παρέχει ισχυρή προστασία DoS και αντίσταση λογοκρισίας. Μπορείτε να διαβάσετε περισσότερα για τη Σιέρα στην[προηγούμενη](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)ανάρτησή μας.
 
-## First taste!
+## Πρώτη γεύση!
 
-### What can you do today?
+### Τι μπορείτε να κάνετε σήμερα?
 
-Developers can start writing, compiling, and testing Cairo 1.0 programs! We encourage developers to start experimenting with Cairo 1.0 and getting accustomed to the new syntax and features.
+Οι προγραμματιστές μπορούν να αρχίσουν να γράφουν, να μεταγλωττίσουν και να δοκιμάσουν προγράμματα Cairo 1.0! Ενθαρρύνουμε τους προγραμματιστές να αρχίσουν να πειραματίζονται με το Κάιρο 1.0 και να εξοικειωθούν με τη νέα σύνταξη και χαρακτηριστικά.
 
-Since Cairo 1.0 is still actively developed, and new features are constantly added, check out the [Cairo repository](https://github.com/starkware-libs/cairo/) for the latest updates.
+Από το Κάιρο 1.0 εξακολουθεί να αναπτύσσεται ενεργά και νέες λειτουργίες προστίθενται συνεχώς, ελέγξτε το[αποθετήριο του Καΐρου](https://github.com/starkware-libs/cairo/)για τις τελευταίες ενημερώσεις.
 
-### What's next?
+### Τι είναι το επόμενο?
 
-At the moment, Cairo 1.0 is still missing some of the features supported in the older version of Cairo ([see this table for details](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Our next milestone, expected in the next few weeks, will provide Cairo 1.0 feature parity with the older version. You can track the progress toward that milestone [here](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
+Προς το παρόν, το Κάιρο 1. εξακολουθεί να λείπει μερικά από τα χαρακτηριστικά που υποστηρίζονται στην παλαιότερη έκδοση του Κάιρου ([δείτε αυτόν τον πίνακα για λεπτομέρειες](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Το επόμενο ορόσημο μας, που αναμένεται τις επόμενες εβδομάδες, θα παρέχει στο Κάιρο 1,0 ισοτιμία χαρακτηριστικό με την παλαιότερη έκδοση. Μπορείτε να παρακολουθείτε την πρόοδο προς αυτό το ορόσημο[εδώ](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
 
-### Starknet support
+### Υποστήριξη Starknet
 
-Writing StarkNet contracts in Cairo 1.0 is supported (although certain features are still missing). However, StarkNet does not yet support the deployment and execution of Cairo 1.0 contracts. StarkNet Alpha V0.11.0, planned in the upcoming weeks, will introduce the ability to deploy and run Cairo 1.0 contracts. The upgrade to v0.11.0 will mark the beginning of the Transition Period towards a system that runs only Cairo 1.0 contracts. This Transition Period will end with the [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), expected a few months later.
+Υποστηρίζεται η συγγραφή συμβάσεων StarkNet στο Κάιρο 1.0 (αν και ορισμένες λειτουργίες εξακολουθούν να λείπουν). Ωστόσο, η StarkNet δεν υποστηρίζει ακόμη την ανάπτυξη και εκτέλεση συμβάσεων του Καΐρου 1.0. Το StarkNet Alpha V0.11.0, προγραμματισμένο κατά τις προσεχείς εβδομάδες, θα εισαγάγει τη δυνατότητα ανάπτυξης και εκτέλεσης συμβάσεων στο Κάιρο 1.0. Η αναβάθμιση σε v0.11.0 θα σηματοδοτήσει την έναρξη της Μεταβατικής Περιόδου προς ένα σύστημα που εκτελεί μόνο συμβάσεις του Κάιρο 1.0. Αυτή η μεταβατική περίοδος θα λήξει με την[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), η οποία αναμένεται λίγους μήνες αργότερα.
 
 ![](/assets/0_odxbxeacqdwizlfw.jpg)
 
-### Let's build!
+### Ας χτιστούμε!
 
-The goal of StarkNet is to exponentially scale Ethereum using the mathematical integrity of STARKs, and the goal of Cairo is to make this exponential scale accessible to developers. Accessibility means a programming language that is efficient, easy to read and write, and safe to use. We hope the release of Cairo 1.0 will inspire even more developers to join StarkNet and scale Ethereum to meet global demand.
+Στόχος του StarkNet είναι η εκθετική κλίμακα του Ethereum χρησιμοποιώντας τη μαθηματική ακεραιότητα των STARKs, και ο στόχος του Καΐρου είναι να κάνει αυτή την εκθετική κλίμακα προσβάσιμη στους προγραμματιστές. Προσβασιμότητα σημαίνει μια γλώσσα προγραμματισμού που είναι αποτελεσματική, ευανάγνωστη και γραφή, και ασφαλής στη χρήση. Ελπίζουμε ότι η απελευθέρωση του Καΐρου 1.0 θα εμπνεύσει ακόμα περισσότερους προγραμματιστές για να ενταχθούν στο StarkNet και την κλίμακα Ethereum για να καλύψουν την παγκόσμια ζήτηση.

@@ -1,5 +1,5 @@
 {
-  "title": "Open-sourcing Cairo 1.0!",
-  "time_to_consume": "5 min read",
-  "short_desc": "In 2020, we released Cairo, a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive."
+  "title": "Nyílt forráskódú Cairo 1.0!",
+  "time_to_consume": "5 perc olvasás",
+  "short_desc": "2020-ban kiadtuk a Cairo-t, egy Turing-komplett programozási nyelvet, amely támogatja az ellenőrizhető számításokat. Kairó assembly nyelvnek indult, és fokozatosan kifejezőbbé vált."
 }

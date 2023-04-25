@@ -1,5 +1,5 @@
 {
   "title": "Cairo 1.0",
-  "time_to_consume": "5 min read",
-  "short_desc": "In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce Cairo 1.0, the biggest advancement of Cairo to date."
+  "time_to_consume": "5 phút đọc",
+  "short_desc": "Vào năm 2020, chúng tôi đã phát hành Cairo, một ngôn ngữ lập trình hoàn chỉnh của Turing và đã tiến một bước lớn hướng tới việc hỗ trợ tính toán có thể kiểm chứng bằng STARK. Hôm nay, chúng tôi công bố Cairo 1.0, tiến bộ lớn nhất của Cairo cho đến nay."
 }

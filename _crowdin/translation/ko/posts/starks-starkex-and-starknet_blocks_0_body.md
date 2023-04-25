@@ -1,43 +1,43 @@
-### TL;DR
+### TL; DR
 
-* STARKs enable blockchain scaling by efficiently proving the integrity of computations
-* StarkEx is an application-specific scaling engine
-* StarkNet is a permissionless, smart contract Layer 2 network
+* STARK는 계산의 무결성을 효율적으로 증명하여 블록체인 확장을 가능하게 합니다.
+* StarkEx는 애플리케이션별 스케일링 엔진입니다.
+* StarkNet은 무허가 스마트 계약 레이어 2 네트워크입니다.
 
 ### **STARKs**
 
-STARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps.
+STARK(Scalable, Transparent ARgument of Knowledge)는 계산의 증명 및 검증을 가능하게 하는 증명 시스템입니다. 이를 통해 대규모 계산을 처리하고 계산의 정확성에 대한 증명을 생성한 다음 매우 적은 단계로 증명을 검증할 수 있습니다.
 
-STARKs can play a key role in blockchain scalability by allowing large computations to be done off-chain, where it is cheaper, leaving only the verification, which requires a fraction of the computation, to be done on-chain. In other words, by performing very few steps on-chain, the verifier asserts the integrity of a much larger computation that was done off-chain.
+STARK는 블록체인 확장성에서 중요한 역할을 할 수 있습니다. 대량 계산을 더 저렴하게 오프체인에서 수행할 수 있고, 계산의 일부가 필요한 검증만 온체인에서 수행하도록 할 수 있습니다. 즉, 온체인에서 아주 적은 단계를 수행함으로써 검증자는 오프체인에서 수행된 훨씬 더 큰 계산의 무결성을 주장합니다.
 
-Using STARKs, layer 2 solutions batch together and compute thousands of transactions, and then verify their validity on-chain with a single STARK proof. The cost of the on-chain process is split between **all** transactions in the batch. This results in Ethereum security and low gas cost per transaction.
+STARK를 사용하여 레이어 2 솔루션은 수천 건의 트랜잭션을 일괄 처리하고 계산한 다음 단일 STARK 증명으로 온체인에서 유효성을 확인합니다. 온체인 프로세스의 비용은 배치에서**모든**트랜잭션 간에 분할됩니다. 이로 인해 이더리움 보안이 유지되고 거래당 가스 비용이 낮아집니다.
 
-The low computational cost will usher in a new class of applications that were previously not feasible on-chain. These properties make STARKs an excellent building block for improving user experience and reducing gas costs, all while maintaining the security of the Ethereum settlement layer.
+낮은 계산 비용은 이전에는 온체인에서 실현할 수 없었던 새로운 종류의 애플리케이션을 도입할 것입니다. 이러한 속성 덕분에 STARK는 이더리움 결제 계층의 보안을 유지하면서 사용자 경험을 개선하고 가스 비용을 줄이는 훌륭한 빌딩 블록이 됩니다.
 
-StarkWare provides two solutions to scale Ethereum with STARKs: StarkEx and StarkNet.
+StarkWare는 STARK로 Ethereum을 확장하는 StarkEx 및 StarkNet의 두 가지 솔루션을 제공합니다.
 
-### **StarkEx**
+### **스타크엑스**
 
-[StarkEx](https://starkware.co/starkex/) is a framework for creating permissioned, application-specific scaling solutions. StarkEx is a toolbox of useful [application flows](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows) that projects can use to achieve cheap off-chain computation. A STARK proof, attesting to the correctness of execution, is generated off-chain. Such a proof can include up to 12,000–500,000 transactions (depending on the transaction type). The proof is then sent to the STARK Verifier to be accepted on-chain. This means one verification for all the transactions — for an incredibly low amortized gas cost per transaction.
+[StarkEx](https://starkware.co/starkex/)승인된 애플리케이션별 확장 솔루션을 만들기 위한 프레임워크입니다. StarkEx는 프로젝트가 저렴한 오프 체인 계산을 달성하는 데 사용할 수 있는 유용한[애플리케이션 흐름](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows)도구 상자입니다. 실행의 정확성을 증명하는 STARK 증명이 오프체인에서 생성됩니다. 이러한 증명에는 최대 12,000~500,000건의 거래가 포함될 수 있습니다(거래 유형에 따라 다름). 그런 다음 증명은 STARK Verifier로 전송되어 온체인에서 승인됩니다. 이것은 모든 거래에 대해 하나의 검증을 의미합니다. 즉 거래당 매우 낮은 상각 가스 비용입니다.
 
-A few examples of the applications deployed on StarkEx are dYdX (perpetuals trading), Immutable and Sorare (NFTs — minting and trading), DeversiFi (spot trading), and Celer (DeFi Pooling).
+StarkEx에 배포된 애플리케이션의 몇 가지 예는 dYdX(영구 거래), Immutable 및 Sorare(NFT — 발행 및 거래), DeversiFi(현물 거래) 및 Celer(DeFi 풀링)입니다.
 
-StarkWare is continuously adding more application flows to StarkEx, following the market and its customers’ needs.
+StarkWare는 시장과 고객의 요구에 따라 StarkEx에 더 많은 애플리케이션 흐름을 지속적으로 추가하고 있습니다.
 
-### **StarkNet**
+### **스타크넷**
 
-*[StarkNet](https://starkware.co/starknet/) is a permissionless layer 2 network where any user or developer can deploy smart contracts developed in the Cairo language.*
+*[StarkNet](https://starkware.co/starknet/)모든 사용자 또는 개발자가 카이로 언어로 개발된 스마트 계약을 배포할 수 있는 무허가 계층 2 네트워크입니다.*
 
-Comparable to the Ethereum smart-contract experience, inside of the StarkNet ecosystem, your contract can interact with any other contract deployed on StarkNet, allowing for richly composable protocols. StarkNet contracts can also interact with Ethereum contracts via asynchronous message passing.
+StarkNet 생태계 내에서 이더리움 스마트 계약 경험과 비교할 때 귀하의 계약은 StarkNet에 배포된 다른 계약과 상호 작용할 수 있으므로 풍부하게 구성 가능한 프로토콜을 허용합니다. StarkNet 계약은 비동기 메시지 전달을 통해 Ethereum 계약과 상호 작용할 수도 있습니다.
 
-Unlike StarkEx, where applications are responsible for submitting transactions, StarkNet sequencers batch transactions and send them to be processed and proved. (StarkNet’s sequencers are currently operated by StarkWare with future plans to decentralize.) This means once applications deploy their Cairo contracts, they do not have to worry about running additional Operator infrastructure. StarkNet supports the Rollup data availability mode, meaning the state of the rollup is written to Ethereum along with the STARK proofs.
+응용 프로그램이 트랜잭션 제출을 담당하는 StarkEx와 달리 StarkNet 시퀀서는 트랜잭션을 일괄 처리하고 전송하여 처리 및 증명합니다. (StarkNet의 시퀀서는 현재 StarkWare에서 운영하고 있으며 향후 분산화할 계획입니다.) 즉, 애플리케이션이 카이로 계약을 배포하면 추가 오퍼레이터 인프라 실행에 대해 걱정할 필요가 없습니다. StarkNet은 롤업 데이터 가용성 모드를 지원합니다. 즉, 롤업 상태가 STARK 증명과 함께 이더리움에 기록됩니다.
 
-A huge developer community is deeply engaged with the StarkNet ecosystem, building apps, tools and infrastructure. Dozens of applications are already live on testnet — DeFi, games, voting, AI and more. More over, developer tools such as block explorer, local testing environment and framework, SDK’s in several languages and more, are being built by the StarkNet Community. In addition, active discussions take place in the [Shamans’ platform](https://community.starknet.io/), featuring suggestions for improvements, potential features and best practices.
+거대한 개발자 커뮤니티는 StarkNet 생태계에 깊이 관여하여 앱, 도구 및 인프라를 구축합니다. DeFi, 게임, 투표, AI 등 수십 개의 애플리케이션이 이미 테스트넷에서 실행 중입니다. 또한 블록 탐색기, 로컬 테스트 환경 및 프레임워크, 여러 언어로 된 SDK 등과 같은 개발자 도구가 StarkNet 커뮤니티에서 구축되고 있습니다. 또한[Shamans의 플랫폼](https://community.starknet.io/)에서 활발한 토론이 이루어지며 개선 사항, 잠재적인 기능 및 모범 사례에 대한 제안을 제공합니다.
 
-### **To Sum It Up**
+### **그것을 요 약하기**
 
-Both [StarkEx](https://youtu.be/P-qoPVoneQA) and StarkNet are STARK-based scaling solutions. Both provide scalability, low gas costs, and Security, but have different operating requirements and interoperability patterns. StarkEx might be the right solution for an application that is largely self-contained and fits into the APIs that StarkEx provides. StarkNet might be better suited for a protocol that requires interacting synchronously with other protocols or has needs that go beyond what StarkEx offers.
+[StarkEx](https://youtu.be/P-qoPVoneQA)과 StarkNet은 모두 STARK 기반 스케일링 솔루션입니다. 둘 다 확장성, 낮은 가스 비용 및 보안을 제공하지만 운영 요구 사항과 상호 운용성 패턴이 다릅니다. StarkEx는 대체로 독립적이고 StarkEx가 제공하는 API에 적합한 애플리케이션에 적합한 솔루션일 수 있습니다. StarkNet은 다른 프로토콜과 동기식으로 상호 작용해야 하거나 StarkEx가 제공하는 것 이상의 요구 사항이 있는 프로토콜에 더 적합할 수 있습니다.
 
-STARKs have revolutionized how applications can be built on Ethereum. StarkEx and StarkNet will continue to enable applications that were previously unviable and push the limits of what is possible on the blockchain.
+STARK는 이더리움에서 애플리케이션을 구축하는 방법에 혁명을 일으켰습니다. StarkEx와 StarkNet은 이전에는 실행 불가능했던 응용 프로그램을 계속 활성화하고 블록체인에서 가능한 것의 한계를 뛰어 넘을 것입니다.
 
-This article was written in collaboration by [Tim Gestson](https://twitter.com/IcemanTim) and the [StarkWare](https://starkware.co/) team
+이 기사는[Tim Gestson](https://twitter.com/IcemanTim)과[StarkWare](https://starkware.co/)팀이 공동으로 작성했습니다.

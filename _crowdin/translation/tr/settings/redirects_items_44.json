@@ -1,4 +1,4 @@
 {
-  "source": "/latest-posts/:path*",
-  "destination": "/en/posts"
+  "source": "/son gönderiler/:yol*",
+  "destination": "/tr/yazılar"
 }

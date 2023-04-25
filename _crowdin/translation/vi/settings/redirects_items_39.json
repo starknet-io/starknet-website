@@ -1,4 +1,4 @@
 {
-  "source": "/faq/:path*",
-  "destination": "/en/learn/frequently-asked-questions"
+  "source": "/faq/:đường dẫn*",
+  "destination": "/vi/tìm hiểu/câu hỏi thường gặp"
 }

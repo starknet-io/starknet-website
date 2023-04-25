@@ -49,7 +49,7 @@ Ethereum 帐户有两种类型：
 
 **Quantum Resistant and Gas-Executive Signatures：**Etherum当前的签名方案。 ECDSA在计算上很广（即：较高的气体费），可以用定量电脑打破。 通过签字抽象，不同账户合同使用更有效率和数量安全的签字办法。 StarkNet使用自己专有的STARK友好曲线。
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+这些功能不仅为用户提供了更高的安全性和更大的灵活性，而且更重要的是，带来了**更好的**用户体验。
 
 Vitalik Buterin列为以太坊开发者社区的“长期梦想”，自2020年以来围绕着账户抽象的创新，主要是EIP-2938和EIP-3074。 然而，这两方面都需要在安全和执行方面进行权衡。 [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md)，是迄今最有希望的发展，它提出了一个账户抽象版本，而不需要修改以太坊协议。
 
@@ -59,6 +59,6 @@ Vitalik Buterin列为以太坊开发者社区的“长期梦想”，自2020年�
 
 StarkNet的方法类似于EIP-4337。[承认](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)完整账户抽取仍会导致UX混淆，[可能会打开对序列器攻击的门](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) 相反，它的目的是通过相互提供某些必要的环节基础设施和超链基础设施来实现签字抽象和付款抽取。
 
-虽然还有更多的工作要做，但账户抽取正在超越一小圈子的加密本土。 In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. 使用可授权帐户，用户可以授予对预先批准的智能合约进行付款的权限。 从那里，这项智能合同将被编入程序，以便在规定的时间内在某一特定日期扣除一定的付款额。 虽然签证尚未公布其自己的服务计划，但仅有兴趣就能讲出很多内容， 并且可能预示着一个高科技订阅平台如Netflix 和 Spotify 可以采用加密技术的世界。
+虽然还有更多的工作要做，但账户抽取正在超越一小圈子的加密本土。 12 月，[Visa 提出了使用账户抽象在 StarkNet 上设置自动循环支付的想法](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)。 使用可授权帐户，用户可以授予对预先批准的智能合约进行付款的权限。 从那里，这项智能合同将被编入程序，以便在规定的时间内在某一特定日期扣除一定的付款额。 虽然签证尚未公布其自己的服务计划，但仅有兴趣就能讲出很多内容， 并且可能预示着一个高科技订阅平台如Netflix 和 Spotify 可以采用加密技术的世界。
 
 至于将来的情况，只有时间才能告诉我们。 但有一点是肯定的。 使钱包更容易和更安全地使用， 账户抽象将成为一个强大的催化剂，可将自保管区块链钱包扩大到数以百万计的主流加密用户。 与此同时我们将继续建造。

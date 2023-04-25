@@ -1,1 +1,1 @@
-The users of Starknet that develop Starknet applications. They write and deploy Starknet and Ethereum contracts.
+Starknet 응용 프로그램을 개발하는 Starknet 사용자입니다. 그들은 Starknet 및 Ethereum 계약을 작성하고 배포합니다.

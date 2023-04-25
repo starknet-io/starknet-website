@@ -1,1 +1,1 @@
-Currently, no. Fees in Starknet are now paid in Ether (ETH). But later on, we anticipate that in the future, fees will be paid exclusively with the native Starknet Token.
+Şu anda hayır. Starknet'teki ücretler artık Ether (ETH) cinsinden ödeniyor. Ancak daha sonra, ücretlerin yalnızca yerel Starknet Token ile ödeneceğini tahmin ediyoruz.

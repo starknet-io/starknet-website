@@ -17,7 +17,7 @@ O altă îmbunătăţire importantă care apare în această versiune este o red
 
 ## Pregătirea pentru regeneză
 
-Starknet alfa v0.11.0 marchează începutul perioadei de tranziţie, ceea ce va permite prepararea înaintea Regenezei Starknet. Starknet’s Regenesis plan was [published](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4) a few months ago, and it focuses on transitioning from a system based on Cairo 0 to a system based on Cairo 1.0.
+Starknet alfa v0.11.0 marchează începutul perioadei de tranziţie, ceea ce va permite prepararea înaintea Regenezei Starknet. Planul Regenesis al lui Starknet a fost publicat[acum câteva luni și se concentrează pe tranziția de la un sistem bazat pe Cairo 0 la un sistem bazat pe](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)1.0.
 
 În perioada de tranziție, contractele existente de la Cairo 0 (dacă sunt modernizabile) au posibilitatea de a-și păstra adresa și depozitarea; și să treacă în mod continuu la Cairo 1. (vezi punctul următor).
 

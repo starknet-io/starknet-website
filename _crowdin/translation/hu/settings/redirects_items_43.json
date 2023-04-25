@@ -1,4 +1,4 @@
 {
-  "source": "/bulletin-board/:path*",
+  "source": "/hirdetőtábla/:útvonal*",
   "destination": "/en/developers/tools-and-resources"
 }

@@ -1,114 +1,144 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+우리는 StarkNet의 탈중앙화 프로세스의 다음 단계인 프로토콜 변경에 대한 투표를 발표하게 되어 기쁩니다.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+지난 몇 주 동안 StarkNet은[StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)설립하고</a>Ethereum에서
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+STRK 토큰을 출시하고[오픈 소스 Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)통해 추가 분산화를 위한 중요한 조치를 취했습니다.</p> 
 
-### TL;DR
+이 게시물은 다음 단계, 즉 앞으로 몇 개월에 걸쳐 진행될 StarkNet 거버넌스의 첫 번째 단계로 확장됩니다.
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
 
-### Background
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+### TL; DR
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+* StarkNet 프로토콜에 대한 제안된 변경 사항을 승인하거나 거부하는 첫 번째 투표가 곧 진행될 예정입니다.
+* 첫 번째 단계에서 투표 참가자는 다음과 같습니다.\
+  — 토큰 보유자\
+  — 의결권 위임을 선호하는 토큰 보유자가 선택한 대리인\
+  — 일부 투표권을 행사하기 위해 StarkNet Foundation이 선택한 대리인\
+  — StarkNet Foundation에서 설립한 전문 빌더 위원회
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+* 모두가 StarkNet의 거버넌스에서 자신을 대리인으로 추천하도록 초대됩니다.
 
-### Starknet’s governance first phase plan
+* 토론은[StarkNet Community Forum](https://community.starknet.io/)에서 진행됩니다.
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
 
-#### Voting subject
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+### 배경
 
-#### Voting type
+검열에 저항하는[네트워크가 되려는 StarkNet의 비전을 실현하기 위해 두 가지](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671)가 동시에 진행되고 있습니다.
 
-Off-chain signal vote (Via Snapshot)
+개방형 커뮤니티가 프로토콜 업그레이드를 관리할 수 있도록 품질 거버넌스 메커니즘을 구축하는 것은 심각한 과제입니다. 광범위한 커뮤니티 협력이 필요한 점진적이고 탐색적인 프로세스입니다.
 
-#### Voting process
+스타크넷 거버넌스의 첫 번째 단계를 계획하고 조율하기 위해 스타크넷 재단은 거버넌스 위원회를 설립했습니다. 재단은 위원회의 범위와 사명에 대한 자세한 내용을 별도의 게시물에 게시할 예정입니다. 위원회 구성원은 Deven Matthews(Nethermind), Manor Bareli(StarkWare) 및 Sylve Chevet(briq)입니다. 아래는 스타크넷 생태계의 다양한 기여자들과 함께 위원회 구성원들이 공식화하고 재단 이사회에서 승인한 스타크넷 거버넌스의 첫 번째 단계에 대한 계획입니다.
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+### Starknet의 거버넌스 1단계 계획
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+스타크넷 거버넌스의 첫 번째 단계가 시작되었습니다. 이제부터 커뮤니티 구성원은 추가 채널, 즉 프로토콜 변경에 대한 투표를 통해 StarkNet 형성에 참여할 수 있습니다. 이것은 StarkNet 거버넌스의 첫 번째 단계일 뿐입니다. StarkNet이 다음 단계로 진행됨에 따라 거버넌스 메커니즘과 참가자의 범위가 확장될 것입니다. **첫 번째 단계**의 세부 사항은 다음과 같습니다.
 
-### First phase voting participants
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
 
-#### Token holders
+#### 투표 대상
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+StarkNet 프로토콜에 대한 제안된 업그레이드. 이 단계에서 모든 업그레이드는 재단에서 제안합니다. 제안은 StarkNet 커뮤니티 포럼에서 제기된 토론, 아이디어 및 피드백을 반영합니다.
 
-#### Delegates
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+#### 투표 유형
+
+오프체인 신호 투표(스냅샷을 통해)
+
+
+
+#### 투표 절차
+
+1. 재단은 업데이트된 StarkNet 버전을 Goerli에 배포할 것입니다.
+2. 유권자는 Goerli에서 실행되는 업그레이드된 버전을 검토할 수 있는 6일의 기간을 갖게 됩니다. 이 기간 동안 메인넷 배포 승인 여부에 대해 투표할 수 있습니다.
+3. 유권자가 제안을 승인하면 업그레이드를 메인넷에 적용하기 전에 24시간 이상 지연됩니다.
+
+이러한 업데이트에 대한 발표는[스타크넷 재단](https://twitter.com/StarkNetFndn)트위터 계정과[스타크넷 커뮤니티 포럼](https://community.starknet.io/)에서 이루어집니다.
+
+
+
+#### 임계값 및 필수 쿼럼
+
+* 임계값은 단순 다수결입니다(즉, 임계값은 투표의 50%입니다).
+* 필수 정족수 없음, 투표가 유효하기 위한 최소 참여 수준이 없음을 의미
+
+
+
+### 1단계 투표 참여자
+
+거버넌스 프로세스의 첫 번째 단계에 참여할 수 있는 사람들의 목록은 다음과 같습니다.
+
+
+
+#### 토큰 소지자
+
+* StarkNet 거버넌스의 첫 번째 단계에서 대부분의 토큰 보유자는 초기 단계에서 네트워크를 구축하고 지원한 초기 핵심 기여자 및 투자자입니다([자세한 내용은 이 게시물을 읽으십시오](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* 시간이 지남에 따라 토큰은 네트워크 유지 및 업그레이드 작업을 수행하는 개발자 및 기타 당사자에게 배포됩니다. 따라서 해당 당사자는 네트워크를 보호하고, 사용하고, 운영하고, 거버넌스에 참여할 수 있습니다.
+
+
+
+#### 대의원
+
+**이론적 근거**:\
+의결권 위임을 통해 토큰 보유자는 거버넌스 권한을 참여하고 정보를 제공하며 전문적인 커뮤니티 구성원에게 위임할 수 있습니다. 덕분에:
+
+* 토큰 소유자는 직접 민주주의가 아닌 대표를 통해 의사 결정에 참여하도록 선택할 수 있습니다.
+* 헌신적이고 재능 있는 커뮤니티 구성원은 명성에 따라 거버넌스에서 중요한 역할을 할 수 있습니다. 자신을 대리인으로 내세우기 위해 토큰을 소유할 필요가 없습니다.
 
 **Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+각 결정에 대해 진지한 학습 프로세스를 수행하여 StarkNet과 그 장기 비전에 도움이 되는 근거 있고 독립적인 결정으로 이어질 것입니다.
 
-**Operation**:
+**작업**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 무엇보다도 위임 메커니즘이 성공하려면 우수한 위임자 풀이 필요합니다.
+* 대리인이 되기 위한 경로는 허가가 필요하지 않습니다. 전제 조건이 없습니다. 그러나 원하는 사람들을 위해 예비 대리인이 프로필을 게시할 수 있는 섹션이 포럼에 생성되었습니다( 이 링크의[](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* 토큰 보유자는 투표권을 위임하려는 이더리움 L1 주소를 자유롭게 선택할 수 있습니다.
+* 자세한 내용은 StarkNet Community Forum</a>의전용 게시물을 참조하십시오.</li> </ul> 
+  
+  
 
-#### The StarkNet builders’ council
+#### 스타크넷 빌더 협의회
 
-A professional committee, appointed by the Foundation.
+재단이 임명한 전문 위원회.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+**이론적 근거**:\
+토큰 보유를 기반으로 할 뿐만 아니라 커뮤니티 참여 및 전문가 평판을 기반으로 하는 거버넌스 메커니즘 구현.
 
-**Responsibilities**:
+**책임**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* 각 결정에 대해 진지한 학습 및 토론 프로세스를 수행하여 StarkNet과 장기적인 비전에 도움이 되는 근거 있는 결정으로 이어집니다.
+* 첫 번째 단계에서 토론 및 투표에 적극적으로 참여
+* 토론 및 의사 결정 프로세스가 투명하도록 보장
+* StarkNet 커뮤니티 포럼의 공개 토론을 통해 커뮤니티에 액세스 가능
 
-**Operation**:
+**작업**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 재단이 위촉하는 위원 17명
+* 위임 기간 — StarkNet 거버넌스 1단계(수개월)
+* 자세한 내용은 StarkNet Community Forum</a>의전용 게시물을 참조하십시오.</li> </ul> 
+  
+  
 
-### First phase voting power
+### 1단계 투표권
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+StarkNet의 거버넌스 첫 번째 단계에서 StarkWare는 투표에 참여하지 않습니다. StarkNet 재단은 투표권을 Builders' Council과 풀의 여러 대표에게 위임할 것이며 직접 투표하지는 않을 것입니다.
 
-The voting power distribution in the **first phase** will be:
+**첫 번째 단계**의 투표권 분배는 다음과 같습니다.
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* 투자자: 33.3%
+* StarkNet의 초기 핵심 기여자(StarkWare 제외): 33.3%
+* 재단 대표: 33.3%\
+  — StarkNet Builders' Council: 23.3%\
+  — 재단을 대신하여 투표하는 대의원: 10%
 
-### First vote — StarkNet’s 0.11 version
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+### 첫 번째 투표 — StarkNet의 0.11 버전
+
+첫 번째 투표는 앞으로 몇 주 안에 진행될 예정입니다. 투표는 StarkNet Alpha를 버전 0.11로 업그레이드할지 여부에 관한 것입니다.
+
+투표는 Goerli 출시 직후 시작되며 공식 채널을 통해 발표됩니다:[StarkNet Foundation의 트위터 계정](https://twitter.com/StarkNetFndn)및[StarkNet 커뮤니티 포럼](https://community.starknet.io/). 계속 지켜봐!

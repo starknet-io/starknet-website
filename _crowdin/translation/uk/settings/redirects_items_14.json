@@ -1,4 +1,4 @@
 {
-  "source": "/community/community-jobs/:path*",
+  "source": "/спільнота/спільнотства/завдання/:path*",
   "destination": "/en/jobs"
 }

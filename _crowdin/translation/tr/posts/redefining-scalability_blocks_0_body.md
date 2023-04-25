@@ -1,123 +1,133 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+Blockchain ölçeklenebilirliği her zaman hararetli bir konu olmuştur. Neredeyse her blockchain ağı, bir satış noktası olarak saniyede yüksek sayıda işlem (TPS) sunar. Bununla birlikte, TPS, blockchain ağlarını karşılaştırmak için geçerli bir metrik değildir - bu da göreceli performanslarını değerlendirmeyi zorlaştırır. Ayrıca, büyük TPS sayılarının genellikle bir maliyeti vardır - bu da şu soruyu ortaya çıkarır: Bu ağlar gerçekten ölçekleniyor mu, yoksa sadece iş hacmini mi artırıyorlar?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Öyleyse, ölçeklenebilirliğin nasıl tanımlanacağını, bunu başarmak için hangi tavizlerin verildiğini ve Validity Rollups'ın neden nihai ölçeklenebilirlik çözümü olduğunu inceleyelim.
 
-### Not all Transactions are Made Equal
+### Tüm İşlemler Eşit Yapılmaz
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+İlk olarak, TPS'nin basit ve kullanışlı metriğinin doğru bir ölçeklenebilirlik ölçüsü olmadığı iddiamızı oluşturmamız gerekiyor.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+İşlemleri yürütmek için düğümleri telafi etmek (ve kullanıcıları gereksiz hesaplama ile ağa spam göndermekten caydırmak için), blok zincirleri, blok zincirine uygulanan hesaplama yüküyle orantılı bir ücret alır. Ethereum'da, hesaplama yükünün karmaşıklığı*gazıyla ölçülür.*Gaz, işlem karmaşıklığının çok uygun bir ölçüsü olduğu için, bu makale boyunca terim, tipik olarak Ethereum'a özgü olsa da, Ethereum olmayan blok zincirleri için de kullanılacaktır.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+İşlemler, karmaşıklık ve dolayısıyla ne kadar gaz tükettikleri bakımından önemli ölçüde farklılık gösterir. Güvene dayalı olmayan eşler arası işlemlerin öncüsü olan Bitcoin, yalnızca ilkel Bitcoin betiğini destekler. Adresten adrese yapılan bu basit transferler çok az gaz kullanır. Buna karşılık, Ethereum veya Solana gibi akıllı sözleşme zincirleri, sanal bir makineyi ve çok daha karmaşık işlemlere izin veren Turing-complete programlama dillerini destekler. Bu nedenle, Uniswap gibi dApp'ler çok daha fazla gaz gerektirir.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+Bu nedenle, farklı blok zincirlerinin TPS'sini karşılaştırmanın bir anlamı yoktur. Bunun yerine karşılaştırmamız gereken, hesaplama kapasitesi veya verimdir.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Tüm Blockchain'lerin</em>blok başına kaç tane*hesaplama*biriminin işlenebileceğini ve yeni bir bloğun ne kadar hızlı*eklenebileceğini belirleyen (değişken) bir blok boyutu ve blok süresi vardır. Birlikte, bu iki değişken bir blok zincirinin*verimini*belirler.</p>
 
-### What Constrains Scalability?
+### Ölçeklenebilirliği Ne Kısıtlar?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+Blok zincirleri, maksimum düzeyde merkezi olmayan, kapsayıcı ağlar olmaya çalışır. Bunu başarmak için iki temel özellik kontrol altında tutulmalıdır.
 
-#### **1. Hardware Requirements**
+#### **1. Donanım Gereksinimleri**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+Bir blok zincir ağının merkezsizleştirilmesi, ağdaki en zayıf düğümün blok zinciri doğrulama ve durumunu koruma yeteneği ile belirlenir. Bu nedenle, bir düğümü çalıştırma maliyetleri (donanım, bant genişliği ve depolama), mümkün olduğu kadar çok kişinin güvene dayalı olmayan ağda izinsiz katılımcı olmasını sağlamak için mümkün olduğunca düşük tutulmalıdır.
 
-#### 2**.** State Growth
+#### 2**.**Eyalet Büyümesi
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Durum büyümesi, blok zincirinin ne kadar hızlı büyüdüğünü ifade eder. Bir blok zinciri birim zaman başına ne kadar fazla iş hacmi sağlarsa, blok zinciri o kadar hızlı büyür. Tam düğümler, ağın geçmişini saklar ve ağın durumunu doğrulayabilmeleri gerekir. Ethereum'un durumu, ağaçlar gibi verimli yapılar kullanılarak depolanır ve referans alınır. Devlet büyüdükçe, ona yeni yapraklar ve dallar eklenerek, belirli eylemlerin gerçekleştirilmesi daha karmaşık ve zaman alıcı hale gelir. Zincirin boyutu büyüdükçe, düğümler tarafından en kötü durum yürütmesini kötüleştirir, bu da yeni blokları doğrulamak için sürekli büyüyen bir süreye yol açar. Zamanla bu, tam bir düğümün eşitlenmesi için geçen toplam süreyi de artırır.
 
-### Detrimental Impacts of Increasing Throughput
+### Verim Artışının Zararlı Etkileri
 
-#### 1. Node Count
+#### 1. Düğüm Sayısı
 
-The minimum requirements to run a node and node counts are:
+Bir düğümü çalıştırmak için minimum gereksinimler ve düğüm sayıları şunlardır:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin¹: 350 GB HDD disk alanı, 5 Mbit/s bağlantı, 1 GB RAM, CPU >1 Ghz. **Düğüm sayısı: ~10.000**
+* Ethereum²: 500 GB+ SSD disk alanı, 25 Mbit/s bağlantı, 4–8 GB RAM, CPU 2–4 çekirdeği. **Düğüm sayısı: ~6.000**
+* Solana³: 1,5 TB+ SSD disk alanı, 300 Mbit/s bağlantı, 128 GB RAM CPU 12+ çekirdek. **Düğüm sayısı: ~1.200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Bir blok zincirinin verimi için gereken düğümler için CPU, bant genişliği ve depolama gereksinimleri ne kadar büyükse, ağdaki düğümlerin o kadar az olduğuna dikkat edin - bu da daha zayıf merkezsizleşmeye ve daha az kapsayıcı bir ağa yol açar.
 
-#### 2. Time to Sync a Full Node
+#### 2. Tam Bir Düğümü Senkronize Etme Zamanı
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Bir düğümü ilk kez çalıştırırken, başlangıç bloğundan zincirin ucuna kadar ağın durumunu mevcut tüm düğümlerle senkronize etmesi, indirmesi ve doğrulaması gerekir. Bu süreç, herhangi birinin protokolün izinsiz bir katılımcısı olarak hareket etmesine izin vermek için mümkün olduğunca hızlı ve verimli olmalıdır.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Jameson Lopp'un[2020 Bitcoin Düğüm](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)ve[2021 Düğüm Senkronizasyon Testleri](https://blog.lopp.net/2021-altcoin-node-sync-tests/)bir gösterge olarak alan Tablo 1, ortalama bir tüketici sınıfı bilgisayarda tam bir Bitcoin ile Ethereum ve Solana düğümünün senkronize edilmesi için gereken süreyi karşılaştırır.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Tablo 1. Blockchain verimi ve düğüm senkronizasyonu karşılaştırması](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Tablo 1. Blockchain verimi ve düğüm senkronizasyonu karşılaştırması")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Tablo 1, giderek daha fazla verinin işlenmesi ve depolanması gerektiğinden, artan verimin daha uzun senkronizasyon sürelerine yol açtığını göstermektedir.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Büyüyen blok zincirinin zorluklarını hafifletmek için düğüm yazılımında sürekli iyileştirmeler yapılırken (disk ayak izinin düşürülmesi, daha yüksek senkronizasyon hızları, daha güçlü kilitlenme direnci, belirli bileşenlerin modülerleştirilmesi, vb.), düğümlerin hala artışlara ayak uyduramadığı açıktır. verim için.
 
-### How Should Scalability be defined?
+### Ölçeklenebilirlik nasıl tanımlanmalı?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+Ölçeklenebilirlik, blockchain alanındaki en yanlış ifade edilen terimdir. Verimi artırmak istense de, yapbozun yalnızca bir parçasıdır.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***Ölçeklenebilirlik****aynı donanım**için**işlem daha**anlamına gelir.*
 
-For that reason, scalability can be separated into two categories.
+Bu nedenle ölçeklenebilirlik iki kategoriye ayrılabilir.
 
-#### Sequencer scalability
+#### Sıralayıcı ölçeklenebilirliği
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+Sıralama, bir ağda işlemlerin sıralanması ve işlenmesi eylemini tanımlar. Daha önce belirlendiği gibi, herhangi bir blok zinciri, blok boyutunu artırarak ve blok süresini kısaltarak - ademi merkeziyetçiliği üzerindeki olumsuz etkinin çok önemli olduğu bir noktaya kadar - verimini önemsiz bir şekilde artırabilir. Ancak, bu basit parametreleri değiştirmek gerekli iyileştirmeleri sağlamaz. Ethereum'un EVM'si teorik olarak ~2.000</a>kadar
 
-#### Verification scalability
+, bu da uzun vadeli blok alanı talebini karşılamak için yetersizdir. Solana dizilemeyi ölçeklendirmek için bazı etkileyici yenilikler yaptı: paralelleştirilebilir bir yürütme ortamından ve çok daha verimli iş hacmine izin veren akıllı bir fikir birliği mekanizmasından yararlanarak. Ancak iyileştirmelere rağmen, ne yeterli ne de ölçeklenebilir. Solana iş hacmini artırdıkça, bir düğümü çalıştırmak ve işlemleri işlemek için gereken donanım maliyetleri de artar.</p> 
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
 
-**What’s a Validity Rollup?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+#### Doğrulama ölçeklenebilirliği
 
-**How do Validity Rollups scale with the same hardware requirements?**
+*Doğrulama ölçeklenebilirliği, düğümleri sürekli artan donanım maliyetleriyle zorlamadan verimi artıran yaklaşımları tanımlar.*Spesifik olarak, Geçerlilik kanıtları gibi kriptografik yenilikleri ifade eder. Validity Rollups'ın bir blok zincirini sürdürülebilir bir şekilde ölçeklendirmesinin nedeni bunlardır.
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+**Geçerlilik Özeti nedir?**
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Geçerlilik Toplamaları ("ZK Toplamaları" olarak da bilinirler), hesaplamayı ve durum depolamayı zincir dışına taşır ancak az miktarda belirli veriyi zincir üzerinde tutar. Temel blok zincirindeki bir akıllı sözleşme, Toplamanın durum kökünü korur. Toplamada, geçerli durum köküyle birlikte bir dizi yüksek oranda sıkıştırılmış işlem, zincir dışı bir Prover'a gönderilir. Prover, işlemleri hesaplar, sonuçların geçerlilik kanıtını ve yeni durum kökünü oluşturur ve bunu zincir üstü bir Doğrulayıcıya gönderir. Doğrulayıcı, geçerlilik kanıtını doğrular ve Toplamanın durumunu koruyan akıllı sözleşme, Kanıtlayıcı tarafından sağlanan yeni duruma günceller.
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+**Geçerlilik Toplamaları aynı donanım gereksinimleriyle nasıl ölçeklenir?**
 
-**The more transactions, the cheaper it gets**
+Provers, üst düzey donanım gerektirse de, bir blok zincirinin merkezsizleştirilmesini etkilemez; çünkü işlemlerin geçerliliği matematiksel olarak doğrulanabilir kanıtlarla garanti edilmektedir.
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+Önemli olan delilleri doğrulamak için gerekli şartlardır. İlgili veriler yüksek oranda sıkıştırıldığından ve hesaplama yoluyla büyük ölçüde soyutlandığından, temeldeki blok zincirinin düğümleri üzerindeki etkisi minimum*.*
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+Doğrulayıcılar (Ethereum düğümleri) üst düzey donanım gerektirmez ve partilerin boyutu donanım gereksinimlerini artırmaz. Düğümler tarafından yalnızca durum geçişlerinin ve az miktarda çağrı verisinin işlenmesi ve saklanması gerekir. Bu, tüm Ethereum düğümlerinin mevcut donanımlarını kullanarak Validity Rollup partilerini doğrulamasını sağlar.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+**Ne kadar çok işlem olursa o kadar ucuzlar**
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+Geleneksel blok zincirlerinde, ne kadar çok işlem gerçekleşirse, blok alanı dolduğunda herkes için o kadar pahalı olur ve kullanıcıların işlemlerini dahil etmek için bir ücret piyasasında birbirlerinden daha yüksek teklif vermeleri gerekir.
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+Geçerlilik Toplaması için bu dinamik tersine çevrilir. Ethereum'da bir grup işlemi doğrulamanın belirli bir maliyeti vardır. Bir parti içindeki işlemlerin sayısı arttıkça, partiyi doğrulama maliyeti katlanarak daha yavaş bir oranda artar. Toplu işleme daha fazla işlem eklemek, toplu doğrulama maliyeti artsa bile daha ucuz işlem ücretlerine yol açar - çünkü toplu iş içindeki tüm işlemler arasında amortismana tabi tutulur. Validity Rollups, doğrulama ücretinin tüm kullanıcılar arasında paylaşılabilmesi için bir toplu iş içinde mümkün olduğunca çok işlem ister. Toplu iş boyutu sonsuza kadar büyüdükçe, işlem başına amorti edilmiş ücret sıfıra yaklaşır, yani bir Geçerlilik Toplaması üzerinde ne kadar çok işlem olursa, herkes için o kadar ucuz olur.
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+Validity Rollup tarafından desteklenen bir dApp olan dYdX, sıklıkla 12.000'den fazla işlemin toplu boyutlarını görür. Ana ağdaki aynı işlemlerin gaz tüketimi ile Geçerlilik Toplamasındaki gaz tüketiminin karşılaştırılması, ölçeklenebilirlik kazanımlarını gösterir:
 
-#### Why Optimistic Rollups are not as scalable as one may think
+Ethereum Mainnet'te bir dYdX işlemi gerçekleştirme:**200.000 gaz**
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+StarkEx'te bir dYdX işlemi gerçekleştirme:**<500 gas**
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+Buna bakmanın başka bir yolu: Validity Rollups'ın ana maliyeti, aynı toplu iş içindeki kullanıcı sayısıyla doğrusal olarak ölçeklenir.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+#### İyimser Toplamalar neden sanıldığı kadar ölçeklenebilir değil?
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+Teorik olarak, İyimser Toplamalar, Geçerlilik Toplamaları ile neredeyse aynı ölçeklenebilirlik avantajlarını sağlar. Ancak önemli bir ayrım vardır: İyimser Toplamalar ortalama durum için optimize ederken Geçerlilik Toplamaları en kötü durum için optimize eder. Blockchain sistemleri son derece çekişmeli koşullarda çalıştığından, güvenliği sağlamanın tek yolu en kötü durum için optimizasyon yapmaktır.
 
-### Conclusion
+İyimser Toplama'nın en kötü durumunda, bir kullanıcının işlemleri dolandırıcılık denetçileri tarafından kontrol edilmeyecektir. Bu nedenle, dolandırıcılığa itiraz etmek için kullanıcının bir Ethereum tam düğümünü, bir L2 tam düğümünü senkronize etmesi ve şüpheli işlemi kendisinin hesaplaması gerekir.
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+Validity Rollup'ın en kötü durumunda, bir kullanıcının geçerlilik kanıtını doğrulamak için yalnızca bir Ethereum tam düğümünü senkronize etmesi gerekir ve bu da kendisini hesaplama yükünden kurtarır.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Geçerlilik Toplamalarının aksine, İyimser Toplamaların maliyeti, kullanıcı sayısı yerine işlem sayısıyla doğrusal olarak ölçeklenir ve bu da onları daha pahalı hale getirir.
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+### Bulmacanın Son Parçası — Toplama Durumuna İzinsiz Erişim
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+İşlemlerin geçerliliğini garanti etmek için kullanıcıların yalnızca bir Ethereum düğümü çalıştırması gerekir. Bununla birlikte, kullanıcılar ve geliştiriciler, çeşitli amaçlarla Toplama'nın durumunu ve yürütülmesini görüntülemek ve çalıştırmak isteyebilir. *indeksleme L2 düğümü*bu ihtiyacı mükemmel bir şekilde karşılar. Kullanıcıların ağdaki işlemleri görmesini sağlamakla kalmaz, aynı zamanda ekosistem altyapısının çalışması için gerekli olan kritik bir altyapı parçasıdır. The Graph, Alchemy, Infura gibi indeksleyiciler; Chainlink gibi Oracle ağları ve blok kaşifler, bunların tümü, izinsiz, indeksleme L2 düğümü tarafından tamamen desteklenir.
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+
+
+### Çözüm
+
+Blok zinciri ölçeklenebilirliğini ele almaya yönelik birçok yaklaşım, yanlış bir şekilde*çıktıyı*artırmaya odaklanır. Ancak bu, iş hacminin düğümler üzerindeki etkisini göz ardı eder: blokları işlemek ve ağ geçmişini depolamak için sürekli artan donanım gereksinimleri ve bunun bir ağın dağıtılmasını nasıl engellediği.
+
+Geçerlilik-kanıtlı kriptografinin ortaya çıkmasıyla, bir blok zinciri, düğümleri sürekli artan maliyetlerle zorlamayan ve geniş bir ademi merkeziyetçiliğe izin veren**gerçek ölçeklenebilirlik**elde edebilir. Aynı donanım için güçlü ve daha karmaşık hesaplamalara sahip daha fazla işlem artık mümkün, bu da süreçteki ücret piyasası ikilemini tersine çeviriyor — Validity Rollup'ta ne kadar çok etkinlik olursa, o kadar ucuz oluyor!
+
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)ve[Louis Guthmann](https://twitter.com/GuthL)
+
+¹<https://bitcoin.org/en/bitcoin-core/features/requirements>
+
+²<https://ethereum.org/en/developers/docs/nodes-and-clients/>
+
+³<https://docs.solana.com/running-validator/validator-reqs>
+
+⁴ Büyük ölçüde basitleştirilmiş ve ortalama dinamik blok boyutları için ayarlanmıştır

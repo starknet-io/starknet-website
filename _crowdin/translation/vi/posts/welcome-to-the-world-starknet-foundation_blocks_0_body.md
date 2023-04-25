@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+Hôm nay chúng ta chào mừng**StarkNet Foundation**, một quỹ cộng đồng mới được tổ chức để cung cấp một cấu trúc cộng đồng độc lập nhằm hỗ trợ dự án StarkNet.
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+StarkNet là một bản tổng hợp hợp lệ phi tập trung, không được phép hoạt động như một mạng L2 trên Ethereum, nơi bất kỳ ứng dụng dApp nào cũng có thể đạt được quy mô tăng đáng kể cho tính toán của mình mà không ảnh hưởng đến khả năng kết hợp và bảo mật của Ethereum. Để biết thêm về StarkNet, hãy xem[tại đây](https://starknet.io/). Để thực sự có trách nhiệm giải trình và có thể tiếp cận được với cộng đồng các nhà phát triển và người dùng của mình, StarkNet cần một người hỗ trợ độc lập để quản trị theo định hướng cộng đồng cho toàn bộ hệ sinh thái StarkNet.
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+Quỹ StarkNet mới được thành lập, với sự hỗ trợ và nguồn lực từ nhiều thành viên trong cộng đồng, sẽ thúc đẩy nghiên cứu, phát triển và mở rộng mạng StarkNet cũng như công nghệ hỗ trợ, thúc đẩy việc sử dụng và áp dụng mạng StarkNet, đồng thời thúc đẩy cộng đồng StarkNet tham gia và quản trị dự án. Quỹ sẽ giúp tài trợ và tổ chức các hội nghị người dùng và nhà phát triển, đồng thời điều phối hợp tác với các cộng đồng đồng minh và liên quan.
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+Quỹ sẽ được điều hành bởi một hội đồng ban đầu gồm bảy giám đốc, với nền tảng đa ngành từ khắp nơi trên thế giới. Nói ngắn gọn:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me)— Chính sách công nghệ, quyền kỹ thuật số, doanh nhân và chuyên gia tự quản cộng đồng
+* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders)— Đồng sáng lập/Chủ tịch StarkWare, đồng phát minh ra STARK
+* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))— Nhà nghiên cứu chuỗi khối độc lập và nhà lãnh đạo tư tưởng
+* [Heather Meeker](http://www.heathermeeker.com/)— Chuyên gia cấp phép phần mềm mã nguồn mở
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)— Giáo sư toán học và khoa học máy tính lý thuyết, đồng thời là người đóng góp cốt lõi cho nền tảng toán học STARKs
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Kỹ sư chuỗi khối, lãnh đạo và CEO của Nethermind, một trong những nhóm lớn nhất xây dựng trên StarkNet
+* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders)— Đồng sáng lập và CEO của StarkWare
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+Mã thông báo StarkNet đã được tạo để thưởng cho các nhà phát triển và nhà điều hành StarkNet vì công việc họ thực hiện để duy trì và phát triển mạng. Tổ chức nắm giữ 50,1% số tiền đúc ban đầu của 10B mã thông báo, việc phân bổ số tiền này sẽ do Tổ chức quản lý vì lợi ích của người dùng, nhà khai thác và nhà phát triển trong cộng đồng StarkNet, như đã nêu[tại đây](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). Các mã thông báo còn lại có thể bị khóa trong bốn năm và được sở hữu bởi những người đóng góp và nhà đầu tư cốt lõi hiện tại của StarkNet trong quá trình phát triển StarkNet.
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+Hội đồng quản trị của StarkNet Foundation đã bắt đầu làm việc, chuẩn bị cho việc chính thức hóa và vận hành, tuyển dụng giám đốc điều hành và bắt đầu thành lập các ủy ban cộng đồng đặc biệt để thúc đẩy một số dự án thiết yếu như xác định cái gì / ở đâu / như thế nào / khi nào của cuộc bỏ phiếu đầu tiên của mã thông báo StarkNet người nắm giữ.
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+Chúng tôi chúc toàn bộ cộng đồng StarkNet thành công và chúng tôi tự hào cũng như vui mừng được làm việc để ra mắt Quỹ StarkNet.
 
 
 
-### Here is what our board has to say:
+### Đây là những gì hội đồng quản trị của chúng tôi phải nói:
 
 **Andrew:**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> Điều khiến StarkNet hấp dẫn đối với tôi là, theo đánh giá của tôi, đó là nỗ lực thuyết phục và hứa hẹn nhất về mặt công nghệ để biến Ethereum (và các chuỗi khối khác) trở thành một nền tảng điện toán toàn cầu thực sự có thể mở rộng, an toàn và riêng tư. Với khoa học vững chắc và một đội ngũ tài năng đằng sau nó, StarkNet là một phần quan trọng trong việc đạt được tiện ích quy mô rộng vừa mới xuất hiện trong hệ sinh thái chuỗi khối hiện hành.
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> Với tư cách là thành viên của hội đồng sáng lập, tôi đặt mục tiêu tập trung vào quản trị tốt và xây dựng cộng đồng toàn cầu hiệu quả. Quỹ StarkNet sẽ là một công ty khởi nghiệp phi lợi nhuận, với sứ mệnh xây dựng một cộng đồng gồm những người xây dựng và người dùng gắn bó, đa dạng và được trao quyền để tự quản lý. Là một tổ chức, bản thân Quỹ cần cởi mở, minh bạch, có trách nhiệm giải trình, đáng tin cậy và có đạo đức. Như một ví dụ về sự tự quản của cộng đồng, tôi hy vọng sẽ thấy Tổ chức thúc đẩy việc tạo ra các công cụ và dịch vụ quản trị do StarkNet cung cấp, trực quan và hữu ích một cách khách quan — và sẵn có cho những người khác cũng như chúng sẵn có cho chúng tôi.
 
-**Eli:**
+**Ê-li:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> Thành công ban đầu của StarkNet (và các STARK) khiến tôi ngạc nhiên. Những gì bắt đầu như một nỗ lực tập trung vào StarkWare giờ đây là một hệ sinh thái phát triển mạnh và mở rộng nhanh chóng. Yahoo!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> Quản trị là một chủ đề khó, một chủ đề đã gây trở ngại cho xã hội loài người trong suốt lịch sử. Quản trị của StarkNet, bao gồm kiểm tra và cân bằng cần thiết, cơ chế giải quyết xung đột, v.v., vẫn chưa xuất hiện và kết tinh. Và vì vậy, cảm giác phấn khích và lạc quan của tôi bị thu nhỏ bởi những thách thức phía trước. Tôi thấy rõ ràng rằng StarkNet không nên bị cai trị bởi bất kỳ bên nào. Vì vậy, tôi xem phần thiết yếu nhất trong sứ mệnh của chúng tôi là lắng nghe hệ sinh thái rộng lớn và ngày càng mở rộng của các nhà phát triển StarkNet và giúp họ dẫn đường.
 
 **Eric:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> Các công nghệ tổng hợp cho đến nay là câu trả lời hứa hẹn nhất cho câu hỏi làm thế nào để mở rộng quy mô tài chính không được phép cho hàng triệu người dùng. STARK cung cấp khả năng xác minh ngắn gọn tính toán chung và do đó có thể mở rộng chất lượng và giá trị của lớp cơ sở Ethereum cho các lớp ở trên. StarkNet có lẽ là bản cài đặt quan trọng nhất của khái niệm này và với sự khiêm tốn, tôi chấp nhận nhiệm vụ giúp đảm bảo tính toàn vẹn cũng như thành công của nó.
 
-**Heather:**
+**cây thạch thảo:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> Tôi rất vui mừng được trở thành một phần của StarkNet Foundation.
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> Trong gần ba thập kỷ, tôi đã làm việc để giúp mọi người hiểu về cấp phép nguồn mở. Tôi là một luật sư, vì vậy, tất nhiên, tôi đã dành nhiều thời gian để giúp khách hàng của mình tìm hiểu về việc cấp phép và phát triển nguồn mở. Nhưng trong suốt những thập kỷ đó, toàn bộ ngành công nghệ đã làm việc để hiểu rõ hơn về cách cộng tác — đó là món quà của mô hình phát triển nguồn mở. Tôi đặc biệt may mắn vì rất nhiều công việc của tôi đã giúp những người khác — không chỉ khách hàng của tôi — tìm hiểu về các quy tắc và mô hình cộng tác. Theo một cách nào đó, tôi đã có may mắn lớn khi vừa là một giáo viên vừa là một cố vấn.
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> Tôi mong muốn được hợp tác với StarkNet Foundation để chuyển sang kỷ nguyên tiếp theo của Ethereum và chuỗi khối, đồng thời hỗ trợ cộng đồng StarkNet đang phát triển.
 
-*(Heather is an advisor to StarkWare.)*
+*(Heather là cố vấn của StarkWare.)*
 
 **Shubhangi:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> Tôi là một nhà nghiên cứu về cơ sở lý thuyết của khoa học máy tính. Cá nhân tôi đã rất ngạc nhiên về cách một số phát triển lý thuyết thú vị trong lĩnh vực này từ vài thập kỷ qua đã kết hợp với nhau để tạo ra công nghệ cung cấp khả năng chống lại STARK.
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> Tôi nghĩ rằng sứ mệnh mang lại khả năng mở rộng thông qua STARKS thông qua một nền tảng công khai phi tập trung, nơi các nhà phát triển đóng vai trò trung tâm trong quản trị và thiết kế có tiềm năng mở rộng đáng kể phạm vi tiếp cận của công nghệ chuỗi khối. Với tư cách là thành viên của hội đồng quản trị, tôi cũng mong muốn tạo điều kiện cho StarkNet kích thích và hưởng lợi từ nghiên cứu hiện đại về khoa học máy tính lý thuyết. Tôi rất mong được trở thành một phần của điều này.
 
-*(Shubangi is an advisor to StarkWare.)*
+*(Shubangi là cố vấn cho StarkWare.)*
 
 **Tomasz:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> StarkNet bước vào một giai đoạn quan trọng trong quá trình phát triển của nó — một giai đoạn khi nó trở nên cởi mở hơn, có thể kết hợp được, không tin cậy và đáng tin cậy hơn. Tôi coi vai trò của mình tại quỹ là một cơ hội để thúc đẩy sự hợp tác và hỗ trợ hướng tới tương lai của các chuỗi phi tập trung và được phép do STARK cung cấp.
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> Ghi nhớ con đường của tôi tại Nethermind với tư cách là người nhận tài trợ của Ethereum Foundation và hiểu cả những thách thức và cơ hội mà các nhà xây dựng đang phải đối mặt, tôi hoan nghênh cơ hội để đảm bảo rằng nhóm điều hành tại StarkNet Foundation xây dựng một hệ sinh thái nơi các nhà xây dựng cảm thấy được trao quyền và hưởng lợi từ những nỗ lực nghiên cứu và phát triển của họ trong khi xây dựng StarkNet như một hàng hóa công cộng. Tôi rất mong được thấy các thế hệ nhà xây dựng và cộng đồng tiếp theo tìm thấy vai trò của họ với tư cách là những người đồng sở hữu độc lập của StarkNet.
 
 **Uri:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> Với tư cách là người đồng sáng lập & CEO tại StarkWare, tôi đã quan sát không gian blockchain từ năm 2018 (một người tương đối mới!) và tham gia sâu vào việc xây dựng các giải pháp mở rộng quy mô cho Ethereum. Các công cụ phần mềm cho tính toàn vẹn của máy tính mà chúng tôi bắt đầu phát triển tại StarkWare hiện đang được trao cho các nhà phát triển trên toàn thế giới. Nhiệm vụ rất rõ ràng: những công cụ này cần được trao cho bất kỳ nhà phát triển nào quan tâm trên thế giới; những công cụ này cần phải được cải thiện. Tổ chức StarkNet sẽ đóng một vai trò quan trọng và thú vị trong việc hoàn thành sứ mệnh này, trong việc phi tập trung hóa StarkNet.

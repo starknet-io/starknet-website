@@ -1,53 +1,53 @@
-Our previous [post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef) explained what StarkNet is, how it is progressively being decentralized, and provided a summary of its two decentralization mechanisms. This post discusses the StarkNet decentralization process, the role of the StarkNet Foundation, and the need for a new native token for StarkNet. Finally, it discusses additional considerations for StarkNet’s governance down the road.
+شرحت مشاركتنا[السابقة](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)ما هو "StarkNet"، كيف يتم تدريجيا تطبيق اللامركزية، وقدمت ملخصا لآليتي اللامركزية. يناقش هذا المنصب عملية تطبيق اللامركزية على StarkNet ودور مؤسسة StarkNet والحاجة إلى رمز أصلي جديد لـ StarkNet. وأخيرا، يناقش التقرير اعتبارات إضافية لحكم ستاركيت على الطريق.
 
-### Principles of decentralization
+### مبادئ اللامركزية
 
-[STARK](https://eprint.iacr.org/2018/046.pdf) technology is mature and secure, but thus far it has been implemented and utilized primarily as a centralized service on Ethereum ([StarkEx](https://starkware.co/starkex/)), and an Alpha version of a decentralized service ([StarkNet](https://starkware.co/starknet/)). StarkNet should be available as a truly permissionless public good, like Ethereum, or the Internet. So we are committing to furthering StarkNet’s decentralization and the following four principles to guide the change:
+[StRK](https://eprint.iacr.org/2018/046.pdf)التكنولوجيا ناضجة وآمنة، ولكن حتى الآن تم تنفيذها واستخدامها في المقام الأول كخدمة مركزية على إيثيريوم ([StarkEx](https://starkware.co/starkex/))، و نسخة ألفا من الخدمة اللامركزية ([StarkNet](https://starkware.co/starknet/)). يجب أن يكون StarkNet متاحاً كمنفعة عامة لا تصرح لها حقاً، مثل إيثيريوم أو الإنترنت. لذا فنحن ملتزمون بتعزيز اللامركزية في نظام StarkNet، والمبادئ الأربعة التالية لتوجيه التغيير:
 
-**Liveness.** StarkNet will not rely on a single company as its operator. Companies can cease to exist, or may decide to stop servicing the network. After decentralization, such scenarios will not bring down StarkNet.
+**Liveny.**StarkNet لن تعتمد على شركة واحدة كمشغل. وقد تتوقف الشركات عن الوجود، أو قد تقرر وقف خدمة الشبكة. وبعد تطبيق اللامركزية، لن تؤدي هذه السيناريوهات إلى إسقاط StarkNet.
 
-**Censorship resistance.** A single company can theoretically decide, or be forced, to censor particular transactions and smart contracts while fulfilling others. StarkNet will employ a decentralized model to protect against such a scenario.
+**مقاومة الرقابة.**يمكن لشركة واحدة أن تقرر، نظرياً، أو أن تُجبر على فرض رقابة على معاملات بعينها وعلى عقود ذكية أثناء تنفيذ عقود أخرى. وستستخدم StarkNet نموذجا لامركزيا للحماية من مثل هذا السيناريو.
 
-**Transparency.** Software upgrades and maintenance are an inevitable part of any decentralized service. Such actions must be discussed transparently, so the community is informed and in control of the technology. The larger community of StarkNet users, operators and developers must work collectively to determine upgrades and maintenance via a transparent, fair, participatory and inclusive process.
+**الشفافية.**ترقية البرامج والصيانة هي جزء لا مفر منه من أي خدمة لامركزية. ويجب مناقشة هذه الإجراءات بشفافية، حتى يكون المجتمع المحلي على علم بالتكنولوجيا ومراقبتها. ويجب على المجتمع الأكبر من مستخدمي شركة StarkNet ومشغليها ومطوري الشبكة أن يعملوا بصورة جماعية لتحديد التحسينات والصيانة من خلال عملية شفافة وعادلة وقائمة على المشاركة وشاملة.
 
-**Creativity.** StarkNet must allow any developer to participate in building its core infrastructure and applications, to prevent monopolization and to increase creative and socially beneficial uses of blockchains at scale.
+**الإبداع.**StarkNet يجب أن يسمح لأي مطور بالمشاركة في بناء بنيته التحتية الأساسية وتطبيقاته، لمنع الاحتكار وزيادة الاستخدامات الإبداعية والمفيدة اجتماعياً للبلوكشين على نطاق واسع.
 
-Decentralization is a hard problem, not to be approached in a rushed manner. StarkNet’s governance proposal, shared here, will likely develop and change over time. What follows is merely its first iteration.
+فاللامركزية مشكلة صعبة، لا ينبغي التعامل معها بطريقة متسرعة. ومن المرجح أن يتطور اقتراح حكم StarkNet، الذي تم تقاسمه هنا، وتتغير بمرور الوقت. وما يلي هو مجرد تكراره الأول.
 
-### Foundation
+### مؤسسة
 
-The Foundation will be a mission-driven non-profit organization, and will be granted StarkNet Tokens (see [next post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)). We anticipate the mission of the Foundation will be to maintain StarkNet as a public good. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between its users, operators, and developers. The Foundation will be dedicated to furthering the decentralization goals outlined above: liveness, censorship-resistance, transparency, and creativity.
+ستكون المؤسسة منظمة غير ربحية مدفوعة بالمهمة وسيتم منحها رمز StarkNet (انظر[بعد ذلك](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)). ونتوقع أن تكون مهمة المؤسسة هي الحفاظ على شبكة StarkNet بوصفها منفعة عامة. StarkNet هي بنية تحتية لا صلاحية لها ويجب أن تكون متاحة للجميع. ولا بد من الحفاظ عليها بشكل جيد لكي تكون آمنة وفعالة للاستخدام العام. كما يجب ألا يميز بين مستخدميه ومشغليه ومطوري برامجه. وستكرس المؤسسة نفسها لتعزيز أهداف اللامركزية المبينة أعلاه: الحياة، والمقاومة الرقابية، والشفافية، والإبداع.
 
-StarkNet’s liveness and censorship-resistance are best achieved by permissionless and decentralized consensus through a proof-of-stake leader election for sequencing and proving STARK-compressed transactions. While that mechanism is automated, it relies on well-functioning protocol software run by nodes on the network as well as the validity and ongoing liveness of the underlying Ethereum blockchain. Therefore, the Foundation will also act as a resource for the ongoing development, documentation, and publication of that protocol software, especially as it relates to bug-fixes and efficiency improvements.
+إن أفضل وسيلة لتحقيق حياة StarkNet، ومقاومتها للرقابة، تتلخص في الإجماع الذي لا يسمح له ولا مركزي من خلال انتخاب قادة إثبات الحصة من أجل التسلسل وإثبات المعاملات المضغوطة في STARK. وفي حين أن تلك الآلية آلية، يعتمد على برمجيات بروتوكول تعمل بشكل جيد وتشغلها العقدات على الشبكة وكذلك على صحة سلسلة الكتل الأساسية في إيثريوم وحياتها المستمرة. ولذلك، ستعمل المؤسسة أيضا كمورد للتطوير الجاري، الوثائق، ونشر برامج البروتوكول تلك، خاصة من حيث صلتها بإصلاح الأخطاء وتحسين الكفاءة.
 
-Beyond routine maintenance, we anticipate vibrant debates within the community over feature changes or other more fundamental upgrades to the protocol. This is unavoidable in permissionless systems, as evidenced historically by Bitcoin’s block size debate, Ethereum’s proof-of-stake merge, and numerous other examples across the cryptocurrency ecosystem. These software development decisions are more than just objective math and efficiency gains, but rather involve subjective value judgements and feature tradeoffs. In many blockchain communities these decisions are made informally without any clear rules of debate or a process for decision making. Even a non-decision is a decision that favors the status quo. To avoid these issues, the Foundation’s mission will also include developing, testing, and implementing community decision-making processes for resolving essential technological questions. That mechanism will be central to deliberations over protocol updates, dispute resolution, and public goods funding. The Foundation will promote transparency by distributing the information that is needed for making these decisions, and will maintain an archive of such information for future reference.
+وبعيداً عن الصيانة الروتينية، نتوقع إجراء مناقشات نشطة داخل المجتمع بشأن التغييرات في الميزات أو أي تحسينات أخرى أكثر جوهرية للبروتوكول. هذا أمر لا مفر منه في الأنظمة التي لا تصرح لها بالصلاحيات، كما يتضح تاريخيا من مناقشة حجم كتل Bitcoin، ودمج إثبات الحصة في Ethereum، والعديد من الأمثلة الأخرى عبر النظام الإيكولوجي للعملات المشفرة. وهذه القرارات المتعلقة بتطوير البرمجيات هي أكثر من مجرد رياضيات موضوعية ومكاسب تتعلق بالكفاءة، ولكنها تنطوي على أحكام قيمية ذاتية ومقايضات بينية. في العديد من مجتمعات البلوكشين يتم اتخاذ هذه القرارات بشكل غير رسمي بدون أي قواعد واضحة للمناقشة أو عملية لصنع القرار. وحتى عدم اتخاذ قرار هو قرار يفضل الوضع الراهن. ولتجنب هذه القضايا، سوف تشتمل مهمة المؤسسة أيضاً على تطوير واختبار وتنفيذ عمليات صنع القرار في المجتمعات المحلية لحل القضايا التكنولوجية الأساسية. وستكون تلك الآلية محورية للمداولات بشأن استكمال البروتوكول، وحل المنازعات، وتمويل المنافع العامة. وستعمل المؤسسة على تعزيز الشفافية عن طريق توزيع المعلومات اللازمة لاتخاذ هذه القرارات، وستحتفظ بأرشيف هذه المعلومات للرجوع إليها في المستقبل.
 
-### Why token?
+### لماذا الرمز؟
 
-StarkNet was always envisioned as a protocol that is run by the community, yet there has been no clear way to define who exactly comprises this community. *The token will allow supporters of the community that perform work that contributed to the success of the ecosystem to play a role in the governance of that ecosystem.*
+وكان من المتوخى دائماً أن يكون بروتوكول يديره المجتمع، ومع ذلك لم تكن هناك طريقة واضحة لتحديد من يشمل هذا المجتمع بالضبط. *الرمز المميز سيسمح لمؤيدي المجتمع الذين يؤدون أعمالا أسهمت في نجاح النظام الإيكولوجي أن يلعبوا دورا في إدارة ذلك النظام الإيكولوجي.*
 
-Additionally, a fair, open, and censorship-resistant service is only possible if several parties show up to compete to perform work that powers the decentralized service, and that can only be guaranteed if those workers are compensated for their role as operators of the network.
+وبالإضافة إلى ذلك، لا يمكن تقديم خدمة عادلة ومفتوحة ومقاومة للرقابة، إلا إذا حضرت عدة أحزاب للتنافس على أداء عمل يخوِّل الخدمة اللامركزية. ولا يمكن ضمان ذلك إلا إذا حصل هؤلاء العمال على تعويض عن دورهم كمشغلين للشبكة.
 
-Therefore, including tokens as part of a network technology like StarkNet is necessary. And although payment censorship resistance can be achieved by using an existing non-native token, for example Bitcoin or Ether (ETH), we believe such an approach would fail over time to provide the users of the network with a distinct community and a voice in decisions.
+لذلك، فإن إدراج الرموز المميزة كجزء من تكنولوجيا الشبكة مثل StarkNet أمر ضروري. وعلى الرغم من أن مقاومة الرقابة على الدفع يمكن تحقيقها باستخدام عملة غير محلية موجودة، على سبيل المثال البيتكوين أو إيثر (ETH)، ونعتقد أن هذا النهج قد يفشل بمرور الوقت في تزويد مستخدمي الشبكة بمجتمع متميز وصوت في القرارات.
 
-A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact StarkNet’s service and its users and providers.
+الرمز المميز الأصلي الذي يكافئ أعضاء المجتمع الذين يطورون الشبكة سوف ينهض بالنظام الإيكولوجي إلى درجة أن استخدام الرمز المميز غير الأصلي لن يفعل ذلك. وأيضا، إذا كان الرمز المميز غير أصلي، فإن الصدمات الاقتصادية الناجمة عن القرارات المتخذة في نظم إيكولوجية أخرى قد تؤثر على خدمة StarkNet، ومستخدميها ومورديها.
 
-### What will the token be used for?
+### ماذا سيتم استخدام الرمز المميز لها؟
 
-The token will be the mechanism for operating the network (fees), maintaining and securing the network (consensus participation), and deciding on its values and strategic goals (governance).
+وسيكون الرمز المميز هو آلية تشغيل الشبكة (الرسوم)، الحفاظ على الشبكة وتأمينها (المشاركة بتوافق الآراء) والبت في قيمها وأهدافها الاستراتيجية (الإدارة).
 
-**Transaction fees:** Currently, fees in StarkNet are paid in Ether (ETH). But later on, we anticipate fees will be paid exclusively with the native StarkNet Token. To support good user experience, automated and decentralized on-chain mechanisms will allow users to pay fees in ETH.
+**رسوم المعاملة:**حالياً، يتم دفع الرسوم في StarkNet في Ether (ETH). ولكن لاحقاً، نتوقع أن تدفع الرسوم حصراً مع رمز StarkNet الأصلي. ولدعم تجربة المستخدم الجيدة، ستسمح آليات التشغيل الآلي واللامركزي للمستخدمين بدفع الرسوم في النظام الإلكتروني للمستخدمين.
 
-**Staking:** Certain services that are critical to the liveness and security of StarkNet may require staking of StarkNet Tokens. These services may include sequencing, reaching temporary L2 consensus before L1 finality is reached, STARK-proving services and data availability provisioning, to name a few examples. We expect these services to be decentralized in 2023.
+**Staking:**قد تتطلب بعض الخدمات ذات الأهمية الحاسمة لحياة وأمان StarkNet الحصول على ستار من StarkNet Tokens. وقد تشمل هذه الخدمات تحديد التسلسل والتوصل إلى توافق مؤقت في الآراء بشأن المستوى الثاني قبل التوصل إلى اللمسات الأخيرة على المستوى L1، وخدمات إثبات ستارك وتوفير البيانات، على سبيل المثال لا الحصر. ونتوقع أن تكون هذه الخدمات لامركزية في عام 2023.
 
-**Governance:** Proposals for improving StarkNet will require a minimal token support threshold, to be defined later. Voting, either directly or via delegation, will be required for all changes to the protocol that are essential to StarkNet’s liveness, security and maintenance. For example, all major updates to the StarkNet Operating System will require the approval of token holders.
+**الإدارة:**الاقتراحات لتحسين StarkNet سوف تتطلب حد أدنى من عتبة دعم العملات الرمزية، ليتم تحديدها لاحقا. سوف يكون التصويت مطلوبا، سواء بشكل مباشر أو من خلال الوفد، من أجل كل التغييرات التي تدخل على البروتوكول والتي تشكل ضرورة أساسية لحياة شركة ستاركنيت وأمنها وصيانتها. فعلى سبيل المثال، ستتطلب جميع التحديثات الرئيسية لنظام التشغيل StarkNet موافقة حاملي الرمز المميز.
 
-### Closing reflections on governance
+### ألف - الأفكار الختامية بشأن الإدارة
 
-Decentralized governance mechanisms are still in their infancy and no project in this space has provided us with a compelling model for emulation. Is regular and direct voting by all token holders the best path? It is relatively straightforward to design this as a technological mechanism, but it can be unwieldy and may unfairly privilege the holders of a large number of tokens, rather than persons who actively use the network.
+ولا تزال آليات الحكم اللامركزي في بدايتها، ولم يوفر لنا أي مشروع في هذا المجال نموذجا ملحا للمحاكاة. هل التصويت العادي والمباشر من قبل جميع حاملي العملات الرمزية هو أفضل طريق؟ ومن السهل نسبياً تصميم هذه الآلية كآلية تكنولوجية، ولكنها قد تكون غير عملية وقد تمنح امتيازات غير عادلة لحاملي عدد كبير من الرموز، بدلا من الأشخاص الذين يستخدمون الشبكة بشكل نشط.
 
-When considering the best approach, we suggest considering checks and balances between several separate structures that derive their authority from the community of StarkNet Token holders.
+وعند النظر في النهج الأفضل، ونقترح النظر في الضوابط والتوازنات بين عدة هياكل منفصلة تستمد سلطتها من مجتمع حاملي الرمز المميز StarkNet.
 
-We also recommend that StarkNet Token holders make good use of the expertise of core developers. In all blockchain ecosystems, core developers play a central role in securing, maintaining and advancing the underlying technology. Hence, defining a formal role for them within the governance process is worth consideration.
+ونوصي أيضا بأن يستفيد حاملو StarkNet Token بشكل جيد من خبرة مطوري الأساس. في جميع النظم الإيكولوجية للبلوكشين، يلعب المطورين الأساسيين دورا محوريا في تأمين التكنولوجيا الأساسية والحفاظ عليها والنهوض بها. ومن ثم فإن تحديد دور رسمي لهم في عملية الإدارة أمر جدير بالنظر فيه.
 
-The [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) in this series describes the design of the StarkNet Token: the key token design considerations, and the different phases of token allocation.
+[المشاركة الثالثة](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)في هذه السلسلة تصف تصميم الرمز المميز StarkNet Token: اعتبارات تصميم الرمز المميز، و المراحل المختلفة لتوزيع العملات الرمزية.

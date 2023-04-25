@@ -1,68 +1,68 @@
-### TL;DR
+### TL; DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* Quỹ StarkNet chính thức ra mắt
+* Nó được dành riêng để hỗ trợ StarkNet phát triển mạnh
+* Ban liên ngành mạnh sẽ lãnh đạo Quỹ
+* Tổ chức độc lập với StarkWare
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)đang thực hiện một bước quan trọng đối với cấu trúc quản trị cộng đồng trong tương lai, với việc thành lập Quỹ StarkNet.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+Bài đăng này phác thảo sứ mệnh của Quỹ, giới thiệu các giám đốc của nó và thảo luận ngắn gọn về kinh nghiệm và giá trị mà họ mang lại.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+Quỹ đã được thành lập để thực hiện tầm nhìn về đề xuất phi tập trung hóa[của StarkNet](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), được xuất bản vào tháng 7 năm 2022 và đã xuất bản bài đăng “Xin chào thế giới”[của riêng mình tại đây](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### Nâng cao tầm nhìn của Starknet
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet là một Rollup hiệu lực Lớp 2 (L2) phi tập trung, không được phép (thường được gọi là ZK-Rollup), nhằm mở rộng quy mô Ethereum trong khi vẫn duy trì tính bảo mật và phân cấp của Ethereum. Để phù hợp với sứ mệnh đó, Tổ chức được thành lập như một thực thể độc lập để phát triển công nghệ dùng chung là StarkNet. Ngoài ra, với tư cách là một tổ chức phi lợi nhuận với sứ mệnh hẹp: phát triển StarkNet như một lợi ích chung cho tất cả mọi người và duy trì nó như vậy trong nhiều năm tới.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+Quỹ ra mắt với 50,1% nguồn cung cấp Mã thông báo ban đầu để đảm bảo tài nguyên của mạng được triển khai hiệu quả cho các mục tiêu sau: duy trì và bảo mật StarkNet như một hàng hóa công cộng; việc tiếp tục phát triển và mở rộng mạng lưới; và hỗ trợ cho văn hóa hợp tác mang tính xây dựng giữa các nhà phát triển.
 
-#### **The foundation’s priorities will include:**
+#### **Các ưu tiên của nền tảng sẽ bao gồm:**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**Thúc đẩy cộng đồng**của người dùng, nhà phát triển và nhà nghiên cứu StarkNet khi họ thổi sức sống vào StarkNet bằng cách xây dựng cơ sở hạ tầng, công cụ, ứng dụng, v.v.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**Mở rộng cộng đồng**bằng cách giáo dục về StarkNet và công nghệ của nó, đồng thời giúp các nhà phát triển có được kỹ năng xây dựng cơ sở hạ tầng của StarkNet, cũng như các dApp khai thác sức mạnh của STARK.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**Giám sát sự phát triển liên tục của mạng và thúc đẩy nghiên cứu,**là những yếu tố chính giúp mạng hiện thực hóa tầm nhìn của mình.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**Đẩy mạnh hơn nữa tính phi tập trung của StarkNet**bằng cách phát triển các cơ chế quản trị StarkNet, đồng thời thiết lập trình tự và chứng minh phi tập trung.
 
-### **Introducing the board**
+### **giới thiệu bảng**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+Một hội đồng gồm bảy thành viên sẽ điều hành Quỹ. Các thành viên hội đồng quản trị đến từ các nền tảng khác nhau và mang lại sự cân bằng, độc lập và nhiều kỹ năng đa ngành cho bàn. Mỗi thành viên đều có chuyên môn và kinh nghiệm sẽ giúp StarkNet đạt được tiềm năng của mình như một lợi ích chung lâu dài. Trong bài đăng “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)”, họ đưa ra thông tin chi tiết về động cơ thúc đẩy họ tham gia vào StarkNet. Chúng được trình bày theo thứ tự bảng chữ cái theo tên.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)Nguyên Phó Giám đốc Công nghệ Hoa Kỳ; cựu Phó Chủ tịch và Giám đốc Chính sách của ICANN, cơ quan độc lập quản lý cơ sở hạ tầng của Internet.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Giáo sư Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)**Nhà toán học và khoa học máy tính; Chủ tịch kiêm đồng sáng lập StarkWare; Đồng phát minh ra các giao thức STARK, FRI và Zerocash và là Nhà khoa học sáng lập của Zcash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Nhà lãnh đạo tư tưởng chuỗi khối và người tố giác, nổi tiếng vì đã phơi bày các lỗ hổng hệ thống trong các dự án tài sản tiền điện tử nổi tiếng; cố vấn về tiền điện tử cho Tổ chức Nhân quyền; cựu Giám đốc đầu tư tại Arcane Assets.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: Luật sư từng đoạt giải thưởng, chuyên gia về phần mềm nguồn mở và là tác giả của 'Nguồn mở cho doanh nghiệp'; Đối tác chung tại OSS Capital và cố vấn pháp lý cho StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[GS Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Nhà toán học và khoa học máy tính; người đóng góp cốt lõi cho các bằng chứng STARK dựa trên toán học; Phó Giáo sư tại Đại học Toronto; Cố vấn khoa học cho StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Nhà phát triển chuỗi khối, người đã xây dựng các thành phần cốt lõi của Ethereum; Người sáng lập tại Nethermind, một trong những nhóm lớn nhất xây dựng trên Ethereum và StarkNet.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders)Doanh nhân; Giám đốc điều hành và đồng sáng lập của StarkWare. Trước StarkWare, ông đồng sáng lập các công ty phát triển nhiều sản phẩm công nghệ, bao gồm cáp quang, công cụ trực quan hóa dữ liệu, v.v.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+Nền tảng của các thành viên này cung cấp một hộp công cụ tuyệt vời về các kỹ năng cũng như kinh nghiệm đáng kể giúp trang bị tốt cho Tổ chức trong tương lai.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+Andrew và Heather mang đến thông tin xác thực mạnh mẽ từ các dự án mã nguồn mở và hàng hóa công cộng. Heather nổi tiếng vì ủng hộ việc cấp phép phần mềm tự do và mở. Andrew là nhân vật trung tâm trong nhiều năm ở ICANN, tổ chức đã giúp định hình Internet, trong những năm đầu tiên, với tư cách là một cộng đồng phi tập trung. Nó đã làm như vậy thông qua các quy trình dựa trên sự đồng thuận từ dưới lên. Chỉ một quy trình như vậy là cần thiết để StarkNet thực hiện các mục tiêu của Web3.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+Bảng cũng phản ánh trải nghiệm quan trọng về tiền điện tử trên nhiều chuỗi. Tomasz đã làm việc để phát triển các thành phần cốt lõi của Ethereum — và của StarkNet. Eli là Nhà khoa học sáng lập tại Zcash trước khi đi tiên phong trong công nghệ đằng sau StarkNet và Andrew hiện đang ngồi trong hội đồng quản trị của Electric Coin Company, công ty xây dựng và hỗ trợ công nghệ Zcash.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+Hội đồng quản trị có kinh nghiệm kinh doanh và CEO từ Tomasz và Uri, đồng thời có chuyên môn về khoa học máy tính và toán học — và đặc biệt là STARK — từ Shubhangi và Eli. Ba thành viên hội đồng quản trị, Tomasz, Uri và Eli đã tham gia sâu vào việc xây dựng StarkNet.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+Tất cả các thành viên đứng lên cho những gì họ tin tưởng. Eric đã đi xa đến mức rời khỏi vai trò cấp cao tại Cinnober thuộc sở hữu của Nasdaq khi nó đe dọa hạn chế quyền độc lập của anh ấy trong việc đăng ý kiến của anh ấy về tiền điện tử. Là một công nghệ phổ biến của Tổ chức mang lại tính toàn vẹn bằng[cho tính toán,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)việc lắp ráp một bảng có tính toàn vẹn như vậy là phù hợp.
 
-### **An Independent Foundation**
+### **Một quỹ độc lập**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+Tổ chức là một thực thể độc lập sẽ hỗ trợ những người đó xây dựng, sử dụng và duy trì hàng hóa công cộng, cụ thể là Giao thức StarkNet. Cũng như Internet, Bitcoin và Ethereum, StarkNet là một công nghệ dùng chung được xây dựng như một mạng chống kiểm duyệt phi tập trung, nơi mọi người có thể tham gia và phát triển tự do và không cần xin phép mà không cần phải tin tưởng bất kỳ bên thứ ba nào.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+Tổ chức mới thành lập là một tổ chức phi lợi nhuận được thành lập đặc biệt để thúc đẩy và duy trì StarkNet như một hàng hóa công cộng. Tổ chức, cùng với một nhóm bao gồm các nhà phát triển độc lập, công ty khởi nghiệp, người dùng doanh nghiệp và công chúng nói chung sẽ luôn được tự do sử dụng và cải thiện StarkNet cho mục đích riêng của họ và vì lợi ích của bất kỳ ai muốn tương tác và giao dịch một cách an toàn qua đó.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+Tổ chức độc lập và tự do đảm nhận bất kỳ vị trí nào mà nó chọn liên quan đến StarkNet. Các quyết định phải được đưa ra theo đa số đơn giản, hoặc năm trên bảy người trong các trường hợp đặc biệt như bãi nhiệm và bổ nhiệm các thành viên hội đồng quản trị của Tổ chức. Trong các quyết định mà các vị trí bên ngoài của các thành viên hội đồng quản trị có xung đột lợi ích, Quỹ sẽ yêu cầu các thành viên đó tự rút khỏi cuộc bỏ phiếu.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+Tổ chức có các phương tiện đáng kể để thực hiện sứ mệnh của mình: 5,01 tỷ Mã thông báo StarkNet đã được phân bổ cho Tổ chức, tức là 50,1% nguồn cung cấp Mã thông báo ban đầu là 10 tỷ Mã thông báo (xem[phần 3 của đề xuất quản trị](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)của chúng tôi để biết thêm thông tin).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+Có nhiều chi tiết cần được quyết định sẽ định hình hướng đi trong tương lai của StarkNet. Đáng mừng là sự ra đời của Quỹ mang lại nhiều tiếng nói hơn từ một cộng đồng đang phát triển. StarkWare vẫn là một phần cam kết của cộng đồng này và chúng tôi rất vui mừng được chào đón hệ sinh thái StarkNet lớn hơn để nắm quyền sở hữu nhiều hơn đối với tương lai của mạng. Hành trình của StarkNet hiện nằm trong tay của một nhóm phi tập trung và Tổ chức sẽ đóng một vai trò quan trọng trong việc giúp đảm bảo hành trình diễn ra suôn sẻ. Tất cả tại StarkWare chúc cơ thể mới thành công rực rỡ trong sứ mệnh của mình.

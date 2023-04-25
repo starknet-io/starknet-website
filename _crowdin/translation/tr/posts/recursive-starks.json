@@ -1,5 +1,5 @@
 {
-  "title": "Recursive STARKs",
-  "time_to_consume": "9. min read",
-  "short_desc": "Recursive proofs — powered by Cairo’s general computation — are now in production. This marks a major boost to the power of L2 scaling with STARKs. It will quickly deliver a multifold increase in the number of transactions that can be written to Ethereum via a single proof."
+  "title": "Özyinelemeli STARK'lar",
+  "time_to_consume": "9.dakika okuma",
+  "short_desc": "Kahire'nin genel hesaplamasıyla desteklenen yinelemeli ispatlar artık üretimde. Bu, STARK'larla L2 ölçeklemenin gücünde büyük bir artışı işaret ediyor. Tek bir kanıtla Ethereum'a yazılabilecek işlem sayısında hızlı bir şekilde çok kat artış sağlayacaktır."
 }

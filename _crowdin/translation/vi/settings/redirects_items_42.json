@@ -1,4 +1,4 @@
 {
-  "source": "/community-links/:path*",
-  "destination": "/en"
+  "source": "/liên kết cộng đồng/:đường dẫn*",
+  "destination": "/vi"
 }

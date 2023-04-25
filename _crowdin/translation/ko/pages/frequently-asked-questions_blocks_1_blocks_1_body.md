@@ -1,1 +1,1 @@
-There are several block explorers you can use: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).
+사용할 수 있는 여러 블록 탐색기가 있습니다: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).

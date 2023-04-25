@@ -1,1 +1,1 @@
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+비즈니스 흐름을 집합적으로 구현하는 계약 모음(L1 및 L2)입니다.

@@ -1,1 +1,1 @@
-The state is composed of contracts’ code and contracts’ storage.
+Trạng thái bao gồm mã hợp đồng và lưu trữ hợp đồng.

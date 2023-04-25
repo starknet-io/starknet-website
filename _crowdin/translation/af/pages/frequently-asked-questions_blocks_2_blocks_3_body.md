@@ -1,3 +1,3 @@
-No. You have several options for writing a contract, each with its own benefits. 
+Geen. Jy het verskeie opsies om 'n kontrak te skryf, elk met sy eie voordele. 
 
-Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
+Kaïro is die moedertaal vir 'n Starknet-kontrak, wat die skaalpotensiaal van Starknet ten volle besef. Aan die ander kant ontwikkel verskeie spanne transpileerders van ander programmeertale (veral Solidity) na Kaïro. Sulke transpileerders fasiliteer vinnige ontplooiing van bestaande kontrakte op Starknet.**[Sien ons nuutste ontwikkelingsgereedskap](/developers/tools-resources).**

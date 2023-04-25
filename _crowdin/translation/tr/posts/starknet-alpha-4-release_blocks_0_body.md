@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Önümüzdeki Heyecanlı Zamanlar
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4 bugün Görli'de yayınlandı. Bu sürüm, Mainnet yayın adayıdır ve her şey plana göre giderse, ay sonuna kadar Mainnet'te konuşlandırılacaktır.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4, diğer şeylerin yanı sıra Kahire derleme sürelerindeki iyileştirmeler, sözleşmeli kurucular ve çok daha fazlasını içeren özelliklerle dolu Alpha 3 sürümünü takip eder ([tam sürüm notlarına bakın](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Unutulmaması gereken önemli nokta: Bu hâlâ bir Alfa sürümüdür — sözleşmenizi Mainnet dağıtımında dağıtmak için lütfen yeni uygulamaların[katılım](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)yönergelerini izleyin.
 
-### New Features
+### Yeni özellikler
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Bu sürümün ana odak noktası Mainnet dağıtımına hazırlanmak olsa da, birkaç yeni özellik de içerir:
 
-#### Get this contract’s address
+#### Bu sözleşmenin adresini al
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+Sözleşmeler artık yeni sistem çağrısı \`get_contract_address\` aracılığıyla kendi adreslerini alabilir. Sonunda selfie sözleşmesini rafa kaldırabiliriz.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie sözleşmesi: Eylül 2021-Kasım 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">Kasım 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Blok Karması
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Bloklar artık kimlik yerine karma yoluyla tanımlanıyor. Bu, işlem karmalarına son geçişimizi takip eder. Tüm API'ler buna göre güncellendi. Blok yapısının özelliklerini de içerecek olan sistemin tam teknik dokümantasyonunu yakında yayınlayacağız.
 
-#### Contract Addresses
+#### Sözleşme Adresleri
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Bu sürüm, sözleşme adreslerinin hesaplanma biçiminde bir değişiklik getirmektedir. Adres, arayan adresinde bir Pedersen karması, bir salt (rastgele veya konuşlandıran tarafından seçilen), sözleşme kodu karması ve yapıcı bağımsız değişkenlerinin karması olup, tümü bir önekle eklenir.
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash(PREFIX, arayan_adresi, tuz, sözleşme_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+Mevcut sürümde arayan adresi her zaman 0'a eşittir, ancak gelecekteki sürümlerde bu, doğrudan mevcut sözleşmelerden sözleşmelerin konuşlandırılmasını sağlayacaktır.
 
-Note that this scheme is very similar to CREATE2.
+Bu şemanın CREATE2'ye çok benzer olduğuna dikkat edin.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Tam sürüm notlarına bakın](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### Token Köprüleri
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Token köprüleri, StarkNet altyapısının çok önemli bir parçasıdır. StarkNet'e ve StarkNet'ten para transferine izin veriyorlar. Köprü, yayınlandığı sırada konuşlandırılmamıştır, ancak birkaç gün içinde, işlevselliği ve kullanımına ilişkin eksiksiz belgelerle birlikte kullanıma sunulacaktır. Unutulmaması gereken önemli bir nokta, köprünün[L1<>L2 mesajlaşma](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)protokolünü kullanmasıdır. Bu nedenle, kısa para çekme süreleri sunar — para çekme bir partiye dahil edildiğinde ve L1'de kabul edildiğinde, fonlar anında L1'de kullanıcıya sunulur.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Bu, belirteç köprülerinin ilk versiyonu ve ekosistemden bununla ilgili geri bildirim almayı çok isteriz.
 
-### Join StarkNet
+### StarkNet'e Katılın
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Büyüyen StarkNet topluluğuna katılmak için bundan daha iyi bir zaman olamaz. İlk kendi uygulamanızı oluşturmaya başlamak için[StarkNet anlaşmazlığında](https://discord.gg/uJ9HZTUk2Y)sohbete katılabilir, çevrimiçi bir[çalıştaya](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)katılabilir veya[eğitimden](https://www.cairo-lang.org/docs/hello_starknet/index.html)birini kullanabilirsiniz.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Güncelleme (Kasım 2021):**StarkNet Alpha, Ethereum Mainnet'te yayında

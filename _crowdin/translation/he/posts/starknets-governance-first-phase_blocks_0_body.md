@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+אנו נרגשים להכריז על השלב הבא בתהליך הביזור של StarkNet - הצבעה לשינויי פרוטוקול.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+במהלך השבועות האחרונים, StarkNet נקטה צעדים משמעותיים להמשך הביזור על ידי הקמת[StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), השקת[STRK Token על Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c)ועל ידי[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)במקור פתוח.
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+פוסט זה ירחיב על השלב הבא, כלומר השלב הראשון של הממשל של StarkNet, שיתפרש על פני החודשים הקרובים.
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* ההצבעה הראשונה לאישור או דחיית שינויים מוצעים בפרוטוקול StarkNet תתקיים בקרוב
+* המשתתפים בהצבעות במהלך השלב הראשון יהיו:\
+  — בעלי אסימונים\
+  — נציגים שנבחרו על ידי בעלי אסימון המעדיפים להאציל את זכויות ההצבעה שלהם\
+  — נציגים שנבחרו על ידי קרן StarkNet למימוש חלק מזכויות ההצבעה שלה\
+  - מועצת בונים מקצועית, שהוקמה על ידי קרן סטארקנט
+* כולם מוזמנים להציע את עצמם כנציג בממשל של StarkNet
+* הדיונים יתנהלו בפורום הקהילה[StarkNet](https://community.starknet.io/)
 
-### Background
+### רקע כללי
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+שני תהליכים מתקדמים בו זמנית על מנת להגשים את החזון של StarkNet להפוך לרשת ציבורית עמידה לצנזורה: (i) ביזור של רכיבי המערכת של[StarkNet](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), למשל, רצפים ומוכיחים, ו-(ii) הטמעת מנגנוני ממשל בנוגע לשינויי פרוטוקול.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+בניית מנגנוני ממשל איכותיים שיאפשרו לקהילה פתוחה לנהל שדרוגי פרוטוקולים היא אתגר רציני. זהו תהליך הדרגתי וחקרני הדורש שיתוף פעולה קהילתי רחב.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+על מנת לתכנן ולתזמר את השלבים הראשונים של הממשל של StarkNet, קרן StarkNet הקימה ועדת ממשל. הקרן תפרסם פרטים נוספים על היקף הוועדה ומשימתה בפוסט נפרד. חברי הוועדה הם Deven Matthews (Nethermind), מנור Bareli (StarkWare), ו-Sylve Chevet (briq). להלן התוכנית לשלב הראשון של ממשל StarkNet, שגובשה על ידי חברי הוועדה יחד עם תורמים שונים מהאקוסיסטם של StarkNet ואושרה על ידי מועצת המנהלים של הקרן.
 
-### Starknet’s governance first phase plan
+### תוכנית הממשל השלב הראשון של סטארקנט
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+השלב הראשון של StarkNet Governance הושק. מעתה ואילך, חברי הקהילה יוכלו להשתתף בעיצוב StarkNet דרך ערוץ נוסף, כלומר הצבעה על שינויי פרוטוקול. זהו רק השלב הראשון של הממשל של StarkNet; ככל שתתקדם StarkNet לשלבים הבאים, מגוון מנגנוני הממשל והמשתתפים יתרחב. להלן הפרטים של**שלב**הראשון:
 
-#### Voting subject
+#### נושא ההצבעה
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+שדרוגים מוצעים לפרוטוקול StarkNet. כל השדרוגים, בשלב זה, יוצעו על ידי הקרן. ההצעות ישקפו דיונים, רעיונות ומשוב שהועלו בפורום הקהילה של StarkNet.
 
-#### Voting type
+#### סוג הצבעה
 
-Off-chain signal vote (Via Snapshot)
+הצבעת איתות מחוץ לשרשרת (באמצעות תמונת מצב)
 
-#### Voting process
+#### תהליך ההצבעה
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. הקרן תפרוס גרסה מעודכנת של StarkNet ל-Goerli.
+2. לבוחרים תהיה פרק זמן של 6 ימים לבחון את הגרסה המשודרגת כפי שהיא פועלת על Goerli. במהלך תקופה זו, הם יכולים להצביע אם לאשר אותו לפריסת Mainnet.
+3. אם הצעה תאושר על ידי הבוחרים, אז יהיה עיכוב של 24+ שעות לפני החלת השדרוג ל- Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+הודעות על עדכונים אלה יתפרסמו בחשבון הטוויטר[של StarkNet Foundation](https://twitter.com/StarkNetFndn), כמו גם ב[StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### סף ומניין נדרש
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* הסף הוא רוב רגיל (כלומר, הסף הוא 50% מהקולות).
+* אין מניין חובה, כלומר אין רמת השתתפות מינימלית כדי שההצבעה תהיה תקפה
 
-### First phase voting participants
+### משתתפי ההצבעה בשלב ראשון
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+להלן רשימת אלו שיוכלו להשתתף בשלב הראשון של תהליך הממשל:
 
-#### Token holders
+#### מחזיקי אסימונים
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* בשלב הראשון של הממשל של StarkNet, רוב מחזיקי האסימונים הם תורמי ליבה מוקדמים ומשקיעים שבנו ותמכו ברשת בשלביה המוקדמים ([קרא את הפוסט הזה לפרטים נוספים](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* עם הזמן, האסימון יחולק למפתחים ולגורמים נוספים המבצעים עבודות לתחזוקה ושדרוג הרשת. ככאלה, אותם גורמים יוכלו לאבטח את הרשת, להשתמש בה, להפעיל אותה ולהשתתף בניהולה.
 
-#### Delegates
+#### נציגים
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+**נימוק**:\
+האצלת כוח הצבעה מאפשרת לבעלי אסימונים להאציל את מנדט הממשל שלהם לחברי קהילה מעורבים, מושכלים ומקצועיים. תודה על זה:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+* בעלי אסימונים יכולים לבחור להיות חלק מקבלת ההחלטות באמצעות דמוקרטיה ייצוגית ולא ישירה.
+* חברי קהילה מסורים ומוכשרים יכולים לקחת תפקיד משמעותי בממשל בזכות המוניטין שלהם. אין צורך להחזיק באסימונים כדי להציג את עצמך כנציג.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+**אחריות**:\
+בצע תהליך למידה רציני עבור כל החלטה, שיוביל להחלטות מבוססות ועצמאיות שיועילו ל-StarkNet ולחזונה לטווח ארוך.
 
-**Operation**:
+**פעולה**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* בראש ובראשונה, כדי שמנגנון האצלה יצליח, יש צורך במאגר של צירים איכותי.
+* הדרך להפוך לנציג היא ללא רשות - אין תנאים מוקדמים - אבל למי שרוצה, נוצר מדור בפורום שבו נציגים פוטנציאליים יכולים לפרסם פרופילים ([בקישור הזה](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* בעלי אסימון יכולים לבחור בחופשיות כל כתובת Ethereum L1 שהם רוצים להאציל את כוח ההצבעה שלהם.
+* לפרטים נוספים, קרא את הפוסט הייעודי[בפורום הקהילה של StarkNet](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+#### מועצת בוני StarkNet
 
-A professional committee, appointed by the Foundation.
+ועדה מקצועית, מונתה על ידי הקרן.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+**נימוק**:\
+יישום מנגנוני ממשל המבוססים על מעורבות קהילתית ומוניטין מקצועי, ולא רק על בסיס החזקת אסימונים.
 
-**Responsibilities**:
+**אחריות**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* ביצוע תהליך למידה ודיון רציני לכל החלטה, שיוביל להחלטות מבוססות שיועילו ל-StarkNet ולחזונה לטווח ארוך.
+* נטילת חלק פעיל בדיונים ובהצבעות בשלב הראשון
+* להבטיח שהדיונים ותהליכי קבלת ההחלטות שלהם שקופים
+* להיות נגיש לקהילה באמצעות דיונים פתוחים בפורום הקהילה StarkNet
 
-**Operation**:
+**פעולה**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 17 חברי ועד שמונו על ידי הקרן
+* תקופת המנדט - ממשל StarkNet השלב הראשון (מספר חודשים)
+* לפרטים נוספים, קרא את הפוסט הייעודי[בפורום הקהילה של StarkNet](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+### כוח הצבעה בשלב ראשון
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+במהלך השלב הראשון של הממשל של StarkNet, StarkWare לא תשתתף בהצבעות. קרן StarkNet תעביר את כוח ההצבעה למועצת הבונים ולמספר נציגים מהמאגר, ולא תצביע ישירות.
 
-The voting power distribution in the **first phase** will be:
+</strong>**:</p>
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* משקיעים: 33.3%
+* תורמי הליבה המוקדמים של StarkNet (לא כולל StarkWare): 33.3%
+* נציגי הקרן: 33.3%\
+  — מועצת בוני StarkNet: 23.3%\
+  — נציגים המצביעים מטעם הקרן: 10%
 
-### First vote — StarkNet’s 0.11 version
+### הצבעה ראשונה - גרסת 0.11 של StarkNet
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+ההצבעה הראשונה תתקיים בשבועות הקרובים. ההצבעה תעסוק באם לשדרג את StarkNet Alpha לגרסה 0.11.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+ההצבעה תתחיל זמן קצר לאחר השחרור של Goerli ותוכרז דרך הערוצים הרשמיים:[חשבון הטוויטר של StarkNet Foundation](https://twitter.com/StarkNetFndn)ו[StarkNet Community Forum](https://community.starknet.io/). המשך לעקוב!

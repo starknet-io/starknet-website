@@ -1,4 +1,4 @@
 {
   "title": "Starknet 101",
-  "description": "Starknet is a layer-2 network that uses math and cryptography to securely scale Ethereum. It is known as a Validity-rollup (or ZK-rollup); it ”rolls” many transactions up to send to Ethereum as a single transaction. Read on to learn the fundamentals."
+  "description": "Starknet is 'n laag-2-netwerk wat wiskunde en kriptografie gebruik om Ethereum veilig te skaal. Dit staan bekend as 'n Geldigheidsoprol (of ZK-opsomming); dit \"rol\" baie transaksies op om as 'n enkele transaksie na Ethereum te stuur. Lees verder om die grondbeginsels te leer."
 }

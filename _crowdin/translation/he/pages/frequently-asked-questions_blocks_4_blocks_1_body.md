@@ -1,1 +1,1 @@
-Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so choose.
+ברגע ש-Starknet תהיה מוכנה, אפליקציות StarkEx עשויות לעבור ל-StarkNet אם יבחרו בכך.

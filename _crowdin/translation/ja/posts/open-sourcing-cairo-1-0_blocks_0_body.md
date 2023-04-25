@@ -1,7 +1,7 @@
 ### TL;DR
 
 * **Cairo 1.0 はオープンソースです! これはStarkNetスタックをオープンソース化するための最初のステップに過ぎません。**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. これで、基本的なカイロ1.0コードの実験を開始できます。
+* Cairo 1.0 コンパイラに[first look](https://github.com/starkware-libs/cairo)を提示します。 これで、基本的なカイロ1.0コードの実験を開始できます。
 * カイロ1.0のコアはRustによく似ています
 * リリースではなく、最初の味を考えてみましょう。 さらなる改善が進んでいます。 最初のバージョンのコンパイラは来年のQ1の初めに予定されています。
 * Cairo 1.0 は StarkNet ではまだサポートされていません。 来年のQ1でStarkNetでサポートされる予定です。
@@ -20,7 +20,7 @@
 
 現在、基本的なネイティブカイロプログラムをコンパイルし、実行することができます。 構文/言語の改良の多くはまだ進んでいますが、これによりカイロ1.0に慣れ、来るにつれてアップグレードを楽しむことができます。
 
-**Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
+**StarkNet コントラクトの作成はまだサポートされていないことに注意してください。**StarkNet 構文 (ストレージ変数 / 呼び出しコントラクト / イベントおよびその他のシステム コール) は、今後数週間で追加されます。
 
 ### コードの例
 

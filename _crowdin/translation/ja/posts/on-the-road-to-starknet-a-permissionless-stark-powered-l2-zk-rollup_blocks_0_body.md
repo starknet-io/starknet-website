@@ -43,9 +43,9 @@ StarkNetは、カイロをボンネットの下で走らせる。
 
 #### **STARKソフトウェアスタック**
 
-StarkWareはエコシステムの中で最も強力な証明システムを開発し、[Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0)で数ヶ月間稼働しています。 StarkWare has also developed [ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20), our open-source prover, which is 20X faster than any other prover; it offers both [zero-knowledge and post-quantum-secure signatures](https://twitter.com/StarkWareLabs/status/1331930111227080709).
+StarkWareはエコシステムの中で最も強力な証明システムを開発し、[Mainnet](https://medium.com/starkware/starks-over-mainnet-b83e63db04c0)で数ヶ月間稼働しています。 StarkWare はまた、オープンソースの証明プログラムである[ethSTARK](https://twitter.com/StarkWareLtd/status/1264911004099543040?s=20)を開発しました。これは、他のどの証明プログラムよりも 20 倍高速です。[ゼロ知識署名とポスト量子安全署名の両方を提供します](https://twitter.com/StarkWareLabs/status/1331930111227080709)。
 
-Our scaling *measurements* — not extrapolations, nor promises — include the processing of 300K transactions in a single proof on Mainnet, achieving [the world record in Rollup throughput: 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20). この過程で、Rollupガス効率の世界記録を達成しました:315 gas/tx、Ethereum L1でのトランザクションよりも大きく安い。
+当社のスケーリング*測定値*— 外挿でも約束でもありません — には、メインネット上の 1 回のプルーフで 300K トランザクションの処理が含まれており、[ロールアップ スループットの世界記録である 3K tps](https://twitter.com/StarkWareLtd/status/1287770381525422082?s=20)を達成しています。 この過程で、Rollupガス効率の世界記録を達成しました:315 gas/tx、Ethereum L1でのトランザクションよりも大きく安い。
 
 この技術は、StarkNetの分散型証明層の礎となります。 それゆえ、StarkNetの開発の一環として追加的で強化されたプロバーをリリースします(詳細は今後のブログ記事でご覧ください)。
 

@@ -28,7 +28,7 @@ Um die Unterschiede zwischen der alten Syntax und Kairo 1 zu illustrieren. , hab
 
 ### Beispiel I: Passende Ausdrücke
 
-In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. Nicht mehr fürchten Sie, wenn / sonst Anweisungen, die Referenzentzug verursachen können!
+In Cairo 1.0 können Sie rostähnliche[Match-](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match)Ausdrücke verwenden. Nicht mehr fürchten Sie, wenn / sonst Anweisungen, die Referenzentzug verursachen können!
 
 ![](/assets/code01.png)
 
@@ -60,7 +60,7 @@ Das Hinzufügen von zwei 128-Bit-Integern kann zu einem Überlauf führen. Der o
 
 ## Probieren Sie es selbst
 
-Sie können jetzt kompilieren und laufen derzeit unterstützten Cairo 1.0 Programme! Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. Beachten Sie, dass unter der Haube der[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), entwickelt von[Lambdaclass](https://lambdaclass.com/), zur Ausführung verwendet wird.
+Sie können jetzt kompilieren und laufen derzeit unterstützten Cairo 1.0 Programme! Befolgen Sie diese[Anweisungen](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner)zur Verwendung des Befehls \`cairo-run\`. Beachten Sie, dass unter der Haube der[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), entwickelt von[Lambdaclass](https://lambdaclass.com/), zur Ausführung verwendet wird.
 
 Weitere Beispiele für den Start von[finden Sie hier](https://github.com/starkware-libs/cairo2/tree/main/examples). Beachten Sie, dass dies nur der erste Blick in die Entwicklung des Compilers ist; in den kommenden Wochen werden wir den CLI neben dem Compiler verbessern.
 

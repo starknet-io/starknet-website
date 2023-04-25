@@ -1,5 +1,5 @@
-Currently not. STARKs are defined as Validity proofs, meaning they prove computational integrity. With Validity proofs (STARKs included), one party can prove to another that a certain computation was performed correctly. Zero-Knowledge is an additional property asserting that the prover does not have to reveal any information included in the computation.
+Tans nie. STARKs word gedefinieer as Geldigheidsbewyse, wat beteken dat hulle rekenaarintegriteit bewys. Met Geldigheidsbewyse (STARK's ingesluit), kan een party aan 'n ander bewys dat 'n sekere berekening korrek uitgevoer is. Zero-Knowledge is 'n bykomende eiendom wat beweer dat die bewyser nie enige inligting wat in die berekening ingesluit hoef te openbaar nie.
 
-Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
+Die meeste ZK-Rollups is nie regtig Zero-Knowledge nie. Die fout kom van die verwarring tussen Geldigheidsbewyse (verseker berekeningsintegriteit) en Zero-Kennis-bewyse (verseker geen inligting word geopenbaar nie).
 
-Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+Starknet gebruik STARK Geldigheidsbewyse. Dit is opmerklik dat dit uiters moeilik is om inligting uit die bewys te onttrek – in die praktyk amper onmoontlik.

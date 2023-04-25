@@ -1,29 +1,29 @@
-### TL;DR
+### TL; DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* Die Starknet-bewyser sal oopbron onder die Apache 2.0-lisensie wees
+* Die stap sal toeganklikheid vir ontwikkelaars bevorder, samewerking binne die gemeenskap bevorder en ander voordele bied
+* Hierdie aankondiging volg op die oopbronverkryging van Cairo 1.0, Papyrus Full Node en Starknet se nuwe sequencer
 
-### Intro
+### Inleiding
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Opwindende nuus wat voorlê: Starknet Prover sal oopbron wees!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Dit is 'n mylpaal in die evolusie van Starknet. Ontdek die besluit om die Starknet-bewyser oop te maak en verken die voordele wat dit vir die Starknet-ekosisteem inhou. As 'n openbare goed is toeganklikheid op die voorgrond, wat groter samewerking en innovasie in die tegnologiestapel moontlik maak.
 
-### Open Sourcing the Starknet Prover
+### Open Sourcing die Starknet Prover
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha is in November 2021 op Mainnet bekendgestel. Van Starknet se begin af is dit in die vooruitsig gestel as 'n netwerk wat deur die gemeenskap besit sou word, en dit in staat stel om voordeel te trek uit die krag van STARK-skaal. Een jaar nadat dit op Mainnet bekendgestel is, was die tyd reg om die hele Starknet-stapel oopsourc te begin.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Elemente wat reeds oopbron verkry is, sluit in[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), en die nuwe StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Wanneer die Starknet Prover onder Apache 2.0 geplaas sal word, sal die oopbronproses voltooi wees. Dit sal gebeur in die rigting van die finale fase van desentralisering van Starknet.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Die belangrikheid daarvan om die Starknet Prover oop te verkry
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+Oopbron-STARK-sagteware sal die gemeenskap in staat stel om die netwerk onafhanklik te onderhou en te ontwikkel, en bied dus die mees opregte pad om Starknet as 'n gedesentraliseerde openbare goed te bou. Dit sal ook die gemeenskap toelaat om meer vryheid te hê om by te dra tot die ontwikkeling van die bewys, en dus van Starknet. Daarbenewens sal open source die Starknet Prover meer oë toelaat om die kode te hersien, die kwaliteit daarvan te verbeter, te help om foute op te spoor en deursigtigheid te verskaf.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Kortom, open-sourcing van die Starknet-tegnologie-stapel beteken meer samewerking, beter gehalte, innovasie en onafhanklikheid. Al hierdie waardes kan Starknet help om sy volle potensiaal te bereik.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+Die kodebasis waarop ons die Starknet Prover sal bou, is gebaseer op die bewyser wat sedert Junie 2020 in gebruik is, en bewys transaksies vanaf dApps aangedryf deur[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)(soos Immutable X, Sorare, dYdX, en meer). In hierdie rol het dit 327 miljoen transaksies verwerk en 95 miljoen NFT's gemunt, en sowat $824 miljard vereffen.
 
-### Summary
+### Opsomming
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Ons is opgewonde om aan te kondig dat die Starknet Prover oopbron beskikbaar sal wees onder Apache 2.0. Open-sourcing van die Starknet Prover sal plaasvind net voordat Starknet gereed sal wees vir volle desentralisasie. Op hierdie manier sal die Starknet-stapel ten volle oopbron verkry word, soos gepas is vir 'n gedesentraliseerde, toestemminglose Laag 2-netwerk.

@@ -56,7 +56,7 @@
 
 #### **改进语法**
 
-* 没有*本地*和*节奏*。 We now only need *let* to rule them all variables.
+* 没有*本地*和*节奏*。 我们现在只需要*让*来统治他们所有的变量。
 * 如果</em>语句语法改进了*</li> </ul>
 
 ```python
@@ -117,7 +117,7 @@ enum Option<T> {
  Some: T,
  None,
 }
-match result {
+匹配结果 {
  Some(r) => {..},
  None => {..},
 }

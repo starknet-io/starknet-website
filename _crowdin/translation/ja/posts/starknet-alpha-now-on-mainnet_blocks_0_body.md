@@ -48,7 +48,7 @@ StarkNet Alphaの経済学をどのように扱うべきですか？ アルフ�
 * [The Voyager](http://voyager.online/)project by Nethermind
 * [Eth.tx](https://ethtx.info/)は StarkNet トランザクションのサポート分析と詳細なビューを提供します
 
-**Full nodes**: two efforts underway: one is the Fermion project led by Erigon, the other is the [Pathfinder](https://github.com/eqlabs/pathfinder) project, led by Equilibrium
+**フル ノード**: 2 つの取り組みが進行中です。1 つは Erigon が率いる Fermion プロジェクト、もう 1 つは Equilibrium が率いる[Pathfinder](https://github.com/eqlabs/pathfinder)プロジェクトです。
 
 **財布**:
 

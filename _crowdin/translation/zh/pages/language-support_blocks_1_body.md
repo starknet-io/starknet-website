@@ -8,4 +8,4 @@
 
 注意：提交的翻译将在发布前经过一个简短的审核过程，因此您的工作出现在网站上之前会出现延误。
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+我们还以多种语言</a>策划和维护与 Starknet 相关的 社区和资源列表。</p>

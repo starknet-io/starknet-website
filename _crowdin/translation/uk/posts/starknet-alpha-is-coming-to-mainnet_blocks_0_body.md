@@ -74,7 +74,7 @@ StarkNet Alpha в Mainnet підтримає подібні можливості
 * StarkNet аудитів: ми почали з аудиту підстав мережі:
 
 1. **Криптоексперти**проводяться за аудитом Каїра Верифікатора солідності.
-2. A formal **LEAN proof** of the Cairo specs was recently completed and published as a [paper](https://arxiv.org/abs/2109.14534) and a GitHub [repo](https://github.com/starkware-libs/formal-proofs).
+2. Формальний**LEAN доказ**специфікацій Cairo нещодавно був завершений і опублікований як[стаття](https://arxiv.org/abs/2109.14534)і GitHub[репо](https://github.com/starkware-libs/formal-proofs).
 
 Очікується, що в найближчі місяці буде опубліковано набагато цікавіше!
 

@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* Un nou secvenţial StarkNet este în curs de dezvoltare
+* Este open-source sub licența Apache 2.0
+* Primul obiectiv este să mărești tranzitul StarkNet-ului
 
-### A shiny new sequencer
+### Un nou secvenţial strălucitor
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+Suntem bucuroşi să anunţăm un nou Sequencer StarkNet este în lucru. Cum stiva tehnologică StarkNet's se mișcă spre open-source, urmând[Cairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)și[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), acum continuăm cu noul secvențial StarkNet. Va fi open-source, disponibil sub licența Apache 2.0, și puteți verifica[repo](https://github.com/starkware-libs/blockifier)acum!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+Construirea unui nou Sequencer face parte din[Foaia de parcurs StarkNet](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)pe care am prezentat-o acum câteva luni. Implementarea noului secvenţial va începe cu înlocuirea**Blockifier**, modulul din cadrul secvenţialului care efectuează execuţia blocului. După cum se explică în foaia de parcurs, se preconizează că aceasta va aduce beneficii performanței StarkNet.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+Abordarea noastră de a construi acest secvenţial este aceeaşi abordare care ne-a ghidat în StarkNet Alpha. Succesiunea**va fi implementată în etapele**, iar astăzi distribuim primul său modul. De-a lungul timpului, noi componente ale secvenţialului vor fi finalizate, până în cele din urmă un ulcer bazat pe Rust, va înlocui în întregime secvenţialul actual bazat pe Python.
 
-### What does the sequencer do?
+### Ce face secvenţialul?
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+Pe StarkNet, după ce utilizatorii trimit tranzacții, prima oprire din călătoria tranzacției la scara STARK este secvențierii. În protocolul StarkNet, secvențierii sunt responsabili pentru ordonarea tranzacțiilor și producerea blocurilor. După ce blocul este creat de un secvențiator și aprobat de protocolul consensual, proverii preiau și generează o dovadă pentru L1.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
 ### Open-Sourcing
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+StarkNet Alpha a lansat pe Mainnet în noiembrie 2021. Încă de la început, aceasta a fost hotărâtă să împartă puterea STARK pe scara mondială.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+Astăzi lansăm prima într-o linie de module a noului secvenţial open-source. Va dura câteva luni pentru ca toate modulele și submodulele să fie implementate. O sursă deschisă de aprovizionare va permite membrilor comunităţii să contribuie la dezvoltarea codului şi să auditeze codebaza.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+Acest lucru va împinge StarkNet mai aproape de un punct de secvenţiere descentralizată fără permisiuni. Acum proiectăm protocolul descentralizat al lui StarkNet, și încurajăm comunitatea să participe la[cercetarea și discuția](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
 
-### Performance
+### Performanță
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+Parametrul original al lui StarkNet, este în mare parte o adaptare a infrastructurii Starkex. Acum, este nevoie de o infrastructură construită în special pentru cerinţele unei reţele descentralizate cu performanţe înalte.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+Construit în Rust, noul secvenţial este proiectat şi dezvoltat ţinând cont de performanţă. Noul secvențial se bazează, de asemenea, pe fundații solide: Papyrus, noul[Nod complet StarkNet,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)se va ocupa de managementul de stat, iar cairo-rs, noul Cairo-VM de LambdaClass, va accelera execuţia Cairo. Ne aşteptăm ca noul secvenţial să se îmbunătăţească la secvenţialul existent în fiecare aspect. Se preconizează că ritmul și latența rețelei se vor îmbunătăți dramatic odată cu integrarea acestui secvențial în StarkNet.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+De asemenea, ne aşteptăm ca alte infrastructuri şi instrumente de dezvoltare să poată utiliza noul secvenţial pentru a îmbunătăţi experienţa de dezvoltare. Se preconizează că performanța completă a nodului se va îmbunătăți, precum și toate cadrele de testare.
 
 ### Summary
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+Suntem încântaţi să anunţăm astăzi noul secvenţial open-source. Primul său modul este deja disponibil pentru a fi revizuit de comunitate, și va fi urmărit cu mai multe module în următoarele luni. De asemenea, suntem bucuroși să facem încă un pas în foaia noastră de parcurs pentru îmbunătățirea performanței StarkNet. Scopul nostru este de a face reţeaua mai eficientă şi mai accesibilă şi apreciem sprijinul tuturor celor care ni s-au alăturat în această călătorie.

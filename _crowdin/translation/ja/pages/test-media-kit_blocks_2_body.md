@@ -1,3 +1,3 @@
-## Cairo logo kit
+## カイロのロゴキット
 
 ![](/assets/cairo_logo_banner.png)

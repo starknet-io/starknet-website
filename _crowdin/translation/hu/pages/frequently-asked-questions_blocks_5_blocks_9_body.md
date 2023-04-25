@@ -1,1 +1,1 @@
-No. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol. Details on the minting rate and mechanism are yet to be defined.
+Nem. A keringő tokenek mennyisége idővel növekedni fog a protokoll által új tokenek verésével. A pénzverési arány és a mechanizmus részleteit még nem határozták meg.

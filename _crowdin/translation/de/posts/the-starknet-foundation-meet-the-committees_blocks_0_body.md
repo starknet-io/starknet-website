@@ -75,7 +75,7 @@ Mit der Ernennung dieser Ausschüsse steht die Starknet-Stiftung vor einer spann
 Hier ist das, was als nächstes kommt: 
 
 * die [First Governance Abstimmung](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) findet am 21. März 2023 statt;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* Die erste Ankündigung des EAG-Ausschusses und Details für die erste Bewerbungsrunde werden am 21. März 2023 im [Blog](https://www.starknet.io/en/posts/foundation) der StarkNet Foundation veröffentlicht.
 
 Behalte den Blick auf den [Blog der StarkNet Foundation](https://www.starknet.io/en/posts/foundation) und die Social Media Kanäle für die neuesten Updates und Möglichkeiten.
 

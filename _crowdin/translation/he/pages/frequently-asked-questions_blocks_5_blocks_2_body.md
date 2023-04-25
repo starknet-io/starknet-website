@@ -1,1 +1,1 @@
-A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact Starknet’s service and its users and providers.
+אסימון מקורי שמתגמל את חברי הקהילה שמפתחים את הרשת יקדם את המערכת האקולוגית במידה שהשימוש בטוקן שאינו מקורי לא יעשה זאת. כמו כן, אם האסימון אינו מקורי, זעזועים כלכליים מהחלטות שהתקבלו במערכות אקולוגיות אחרות עלולים להשפיע על השירות של Starknet ועל המשתמשים והספקים שלו.

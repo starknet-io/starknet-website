@@ -1,11 +1,11 @@
-### Starknet translation program
+### Starknet fordítóprogram
 
-The [Starknet translation program](https://starkware.crowdin.com/starknet-web) aims to make the content on starknet.io available in as many languages as possible. Please read our simple steps below for how you can contribute and help us achieve these goals:
+A [Starknet fordítóprogram](https://starkware.crowdin.com/starknet-web) célja, hogy a starknet.io tartalma a lehető legtöbb nyelven elérhető legyen. Kérjük, olvassa el az alábbi egyszerű lépéseinket, hogy hogyan járulhat hozzá, és hogyan segíthet nekünk elérni ezeket a célokat:
 
-1. Sign up for a [CrowdIn](https://crowdin.com/) account (or log in if you already have one).
-2. [Select your chosen language](https://starkware.crowdin.com/starknet-web) for translation.
-3. Contribute!
+1. Regisztráljon egy [CrowdIn](https://crowdin.com/) fiókot (vagy jelentkezzen be, ha már rendelkezik ilyennel).
+2. [Válassza ki a választott nyelvet](https://starkware.crowdin.com/starknet-web) a fordításhoz.
+3. Hozzájárul!
 
-Note: Submitted translations will undergo a short review process before being published so there will be a delay before your work appears on the site.
+Megjegyzés: A beküldött fordításokat a közzététel előtt egy rövid felülvizsgálati folyamatnak vetjük alá, így a munkája késéssel jelenik meg a webhelyen.
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+Ezenkívül összeállítjuk és karbantartjuk a [kapcsolódó közösségek és erőforrások listáját több nyelven](/en/community/language-resources).

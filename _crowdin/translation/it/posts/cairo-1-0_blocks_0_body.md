@@ -1,6 +1,6 @@
 ### TL;DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
+* Cairo 1.0 è la prima major release dopo l'[di Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209)due anni fa
 * Il Cairo 1.0 darà agli sviluppatori un linguaggio di programmazione più sicuro, più semplice e più utilizzabile
 * Al centro del Cairo 1.0 sarà**Sierra**, uno strato di rappresentazione intermedia che promette una maggiore stabilità a lungo termine per i programmi del Cairo
 * Sierra avanza il Cairo per servire in una rete senza permesso:\

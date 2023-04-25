@@ -1,1 +1,1 @@
-No. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol. Details on the minting rate and mechanism are yet to be defined.
+아니요. 토큰의 순환 공급은 프로토콜에 의한 새로운 토큰 발행과 함께 시간이 지남에 따라 증가할 것입니다. 주조 속도 및 메커니즘에 대한 세부 사항은 아직 정의되지 않았습니다.

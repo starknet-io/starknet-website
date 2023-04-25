@@ -1,3 +1,3 @@
-Anyone can interact with Starknet and deploy contracts.
+Qualsevol persona pot interactuar amb Starknet i desplegar contractes.
 
-During the Alpha phase, developers need to make sure they are aware of the network status as part of the onboarding process.
+Durant la fase alfa, els desenvolupadors han d'assegurar-se que són conscients de l'estat de la xarxa com a part del procés d'incorporació.

@@ -8,7 +8,7 @@
 
 Сегодня[StarkNet](https://starknet.io/)предпринимает еще один шаг в направлении децентрализации. Токен StarkNet теперь[на Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Быстрое восстановление: STRK будет использоваться в качестве ключа для участия в механизмах «StarkNet» на основе консенсуса в качестве ключа управления, а также для выплаты комиссионных за сделки. Причина каждого из этих коммунальных услуг изложена в[нашем предложении о децентрализации](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), в разделе «Что будут использоваться токены?»
 
-***Остерегайтесь мошенников:**во время написания нельзя купить токены StarkNet; этот непродажный период будет оставаться в силе до последующего уведомления фонда[StarkNet](https://twitter.com/StarkNetFndn); следите за официальным сообщением от Фонда StarkNet, чтобы узнать о любых обновлениях статуса STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***Остерегайтесь мошенников:**во время написания нельзя купить токены StarkNet; этот непродажный период будет оставаться в силе до последующего уведомления фонда[StarkNet](https://twitter.com/StarkNetFndn); следите за официальным сообщением от Фонда StarkNet, чтобы узнать о любых обновлениях статуса STRK. Вы можете сообщить о мошенничестве и проверить наличие других сообщений о мошенничестве в канале[scam-report](https://discord.gg/qypnmzkhbc)на сервере[StarkNet Discord](http://starknet.io/discord).*
 
 Этот пост объясняет процесс распределения токенов, а также то, как контракты с размещенным токеном обслуживают два из трех сервисов токена, а именно: голосование и размещение. Третья утилита — оплата комиссии StarkNet — будет обсуждаться позднее.
 
@@ -50,4 +50,4 @@
 
 Мы настоятельно призываем разработчиков и пользователей быть бдительными мошенниками! На момент публикации токены не являются торговыми, и этот статус не будет оставаться в силе до последующего уведомления Фонда StarkNet.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+Чтобы задать дополнительные вопросы, вы можете перейти на канал[Token-discussions](https://discord.gg/qypnmzkhbc)на сервере[StarkNet Discord](http://starknet.io/discord).

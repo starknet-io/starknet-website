@@ -1,7 +1,7 @@
 ### TL;DR
 
 * **Cairo 1.0 是开源！ 这只是打开StarkNet 堆栈的第一步。**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. 您现在可以开始实验基本的 Cairo 1.0 代码
+* 我们现在向 Cairo 1.0 编译器展示一个[first look](https://github.com/starkware-libs/cairo)。 您现在可以开始实验基本的 Cairo 1.0 代码
 * 开罗1.0的核心非常类似于Rust
 * 认为它是第一个口味，而不是一个释放。 正在进行更多的改进。 第一版编译器计划于明年初提出Q1。
 * StarkNet尚不支持开罗1.0。 明年将在StarkNet上提供支持。
@@ -56,11 +56,11 @@
 
 ![](/assets/0_s8bhjf_ade3carmi.png)
 
-添加两个128位整数可能导致溢出。 上面的代码使用[选项](https://doc.rust-lang.org/rust-by-example/std/option.html)和[问题标记运算符](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)来处理中间添加的溢出情况。 Compare this to the [current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31) uint256 addition syntax, where the \`unit256_check\` function had to be called to guarantee soundness. 此外，在不久的将来， 我们会将 \`panic\` 的概念添加到语言中 (类似于rust中的[恐慌](https://doc.rust-lang.org/rust-by-example/std/panic.html)宏), 像添加溢出这样的简单错误将会被取消和自动传播，这意味着您将不需要使用 \`Option\` 或 \`？ 添加uints时
+添加两个128位整数可能导致溢出。 上面的代码使用[选项](https://doc.rust-lang.org/rust-by-example/std/option.html)和[问题标记运算符](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)来处理中间添加的溢出情况。 将此与[current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31)uint256 加法语法进行比较，其中必须调用 \`unit256_check\` 函数以保证稳健性。 此外，在不久的将来， 我们会将 \`panic\` 的概念添加到语言中 (类似于rust中的[恐慌](https://doc.rust-lang.org/rust-by-example/std/panic.html)宏), 像添加溢出这样的简单错误将会被取消和自动传播，这意味着您将不需要使用 \`Option\` 或 \`？ 添加uints时
 
 ## 试试你自己
 
-您现在可以编译和运行当前支持的 Cairo 1.0 方案！ Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. 请注意，由[兰巴克拉斯](https://lambdaclass.com/)开发的[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs)正在被执行中。
+您现在可以编译和运行当前支持的 Cairo 1.0 方案！ 按照这些[说明](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner)了解如何使用 \`cairo-run\` 命令。 请注意，由[兰巴克拉斯](https://lambdaclass.com/)开发的[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs)正在被执行中。
 
 您可以找到更多的示例来帮助您开始[这里](https://github.com/starkware-libs/cairo2/tree/main/examples)。 请注意，这只是编译器开发的第一条线；在今后几个星期里，我们将与编译器一起改进CLI。
 

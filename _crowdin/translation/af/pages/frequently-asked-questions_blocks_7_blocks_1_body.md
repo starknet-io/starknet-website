@@ -1,1 +1,1 @@
-You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [Starknet Discord](https://starknet.io/discord) server.
+Jy kan swendelary rapporteer en kyk vir ander verslae van swendelary in die [swendelary-verslag](https://discord.gg/qypnmzkhbc) kanaal op die [Starknet Discord](https://starknet.io/discord) bediener.

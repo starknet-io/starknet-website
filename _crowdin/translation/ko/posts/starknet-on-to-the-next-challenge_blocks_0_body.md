@@ -1,64 +1,74 @@
-### TL;DR
+### TL; DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
-* We have achieved our first goal: usability. This means we delivered general computation in an Ethereum-like state (years before it was thought possible)
-* We are now moving to stage 2 of our 3-part building plan: performance, focusing on throughput, transaction cost, and latency.
-* Next up: Decentralization
+* 우리는 StarkNet을 단계별로 구축하고 있습니다.**사용성**확립한 다음**성능**개선하고 마지막으로**탈중앙화**로 이동합니다.
+* 첫 번째 목표인 유용성을 달성했습니다. 이것은 우리가 이더리움과 같은 상태에서 일반 계산을 제공했음을 의미합니다(가능하다고 생각되기 몇 년 전).
+* 이제 성능, 처리량, 트랜잭션 비용 및 대기 시간에 중점을 둔 3단계 구축 계획의 2단계로 이동하고 있습니다.
+* 다음: 탈중앙화
 
-Just a year after plans for [StarkNet](https://starknet.io/) were first announced, the platform has very good functionality. The developer community is flourishing beyond our wildest expectations, and providing a constant flurry of new L2 Native projects.
+[StarkNet](https://starknet.io/)에 대한 계획이 처음 발표된 지 불과 1년 만에 이 플랫폼은 매우 우수한 기능을 갖추고 있습니다. 개발자 커뮤니티는 우리의 가장 큰 기대 이상으로 번성하고 있으며 새로운 L2 네이티브 프로젝트를 지속적으로 제공하고 있습니다.
 
-Our priority over the last year was to enable exactly this, by creating a working StarkNet with a quickly-expanding range of features, that enables devs to dive straight in.
+작년에 우리의 우선 순위는 빠르게 확장되는 기능 범위로 작동하는 StarkNet을 만들어 개발자가 바로 뛰어들 수 있도록 함으로써 정확히 이것을 가능하게 하는 것이었습니다.
 
-They’ve done this in large numbers. A good barometer is the download count for the [JavaScript library for StarkNet](https://www.starknetjs.com/): already at 5k since becoming available 4 months ago.
+그들은 이것을 대량으로 해왔습니다. 좋은 바로미터는 StarkNet</a>용
 
-Yet while StarkNet delivers the compression magic we promised, at the moment, it’s far from being able to do so for enough dApps with enough throughput, and this may prove a source of frustration for developers in the short term.
+JavaScript 라이브러리의 다운로드 수입니다. 4개월 전에 사용할 수 있게 된 이후 이미 5k입니다.</p> 
 
-Our battle-tested core technology, STARK-proving many transactions and compressing the proofs, needs to be preceded by batching or sequencing of transactions. It’s a process the StarkWare team has already perfected once for the [StarkEx](https://starkware.co/starkex/) scaling engine, and we are currently working on doing so again for the needs of StarkNet.
+그러나 StarkNet은 우리가 약속한 압축 마법을 제공하지만 현재 충분한 처리량을 가진 충분한 dApp에 대해 그렇게 할 수 있는 것과는 거리가 멀고 이는 단기적으로 개발자에게 좌절의 원인이 될 수 있습니다.
 
-Now that many of our usability targets have been achieved, we’re shifting the focus to make this our top priority. It’s all part of our 3-stage roadmap: **usability**, followed by the network’s **performance**, and then **decentralization**. A year in, we want to give you a peek under the hood — an outline of what pieces are in place and what is still a work in progress.
+전투 테스트를 거친 우리의 핵심 기술인 STARK는 많은 트랜잭션을 증명하고 증명을 압축하기 전에 트랜잭션의 일괄 처리 또는 순서 지정이 선행되어야 합니다. StarkWare 팀이[StarkEx](https://starkware.co/starkex/)스케일링 엔진에 대해 이미 한 번 완성한 프로세스이며 현재 StarkNet의 요구에 따라 다시 작업하고 있습니다.
 
-### The Story So Far
+이제 우리의 사용성 목표 중 많은 부분이 달성되었으므로 이를 최우선 순위로 삼도록 초점을 전환하고 있습니다. 그것은 모두 우리의 3단계 로드맵의 일부입니다:**사용성**, 네트워크의**성능**, 그리고**탈중앙화**. 1년이 지난 지금, 어떤 부분이 준비되어 있고 아직 진행 중인 작업이 무엇인지에 대한 개요인 내부 정보를 제공하고자 합니다.
 
-StarkNet Alpha was released to public testnet in June, and to Mainnet in November. By the time of the Mainnet deployment, StarkNet was already delivering general computation in an Ethereum-like state, which was widely thought to be years away.
 
-Throughout development we have chosen an approach that first focused on the most important functionalities and released them as soon as they became available, essentially sharing the evolution process with the community. StarkNet is far from being feature complete but even now, developers can already build meaningful and complex applications. Today, we have hundreds of developers [building on StarkNet,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682) tens of dApps, and more than a dozen external teams developing tooling and infrastructure for the StarkNet ecosystem.
 
-A string of upgrades has delivered many important features, including L1<>L2 messaging, on-chain data and support for composability, events support, basic fee mechanism, contracts upgradeability, account abstraction, testing framework, developers tools, fast confirmation, block number, block timestamp, support for account contracts.
+### 지금까지의 이야기
 
-The developer community is both deeply interested in StarkNet, and actually shaping its development. Already, features have been introduced based on developer feedback. Adoption could well outpace the increase in throughput, which is why this boost is our big priority now.
+StarkNet Alpha는 6월에 퍼블릭 테스트넷에, 11월에 메인넷에 출시되었습니다. 메인넷 배포 시점에 StarkNet은 이미 수년이 걸릴 것으로 널리 알려진 이더리움과 같은 상태에서 일반 계산을 제공하고 있었습니다.
 
-### Next Steps
+개발 전반에 걸쳐 우리는 가장 중요한 기능에 먼저 초점을 맞추고 사용 가능하게 되는 즉시 릴리스하는 접근 방식을 선택했으며 기본적으로 커뮤니티와 진화 과정을 공유했습니다. StarkNet은 완전한 기능과는 거리가 멀지만 지금도 개발자는 이미 의미 있고 복잡한 애플리케이션을 구축할 수 있습니다. 오늘날 우리는 StarkNet에서 구축하는[명의 개발자,](https://starkware.notion.site/Projects-Building-on-StarkNet-a33dee55778a4515a9be9bdae02ee682)수십 개의 dApp, 그리고 StarkNet 생태계를 위한 도구 및 인프라를 개발하는 12개 이상의 외부 팀을 보유하고 있습니다.
 
-Now that we’ve reached usability, it is time to improve the system’s performance. The system, in its current state, is capable of supporting limited throughput of transactions. The way to solve this is by improving the performance of the Sequencer Node, which is StarkNet’s equivalent of a miner. It is the “machine” that sequences transactions after they are submitted. When this is optimized, throughput will sky rocket.
+일련의 업그레이드를 통해 L1<>L2 메시징, 온체인 데이터 및 구성 가능성 지원, 이벤트 지원, 기본 수수료 메커니즘, 계약 업그레이드 가능성, 계정 추상화, 테스트 프레임워크, 개발자 도구, 빠른 확인, 블록 번호 등 많은 중요한 기능을 제공했습니다. , 블록 타임스탬프, 계정 계약 지원.
 
-To this end, we are simultaneously analyzing where the bottlenecks are and addressing them one by one. Currently, all of the bottlenecks are related to the sequencing process, which comes before we invoke the STARK-provers. The battle-tested prover-stack is ready to support StarkEx-like throughput on StarkNet.
+개발자 커뮤니티는 StarkNet에 깊은 관심을 갖고 있으며 실제로 개발을 형성하고 있습니다. 이미 개발자 피드백을 기반으로 기능이 도입되었습니다. 채택은 처리량 증가를 훨씬 능가할 수 있으며, 이것이 바로 지금 이 향상이 우리의 최우선 순위인 이유입니다.
 
-We expect the optimization of the sequencer to be a process that lasts a few months, with gradual improvements throughout H1/22. Our aim is to reach, by the beginning of the second half of 2022, at least one order of magnitude higher TPS than Ethereum, at a cost that is at least two orders of magnitude lower than Ethereum’s. And that’s just the start.
 
-There is good reason that this optimization phase is needed, and that StarkNet wasn’t launched with a ready-optimized sequencer: StarkNet was able to achieve usability so quickly because we got a head-start. Instead of starting from scratch and building a totally new sequencer, we used the batcher from StarkEx as a central component.
 
-This was a great way to build. It didn’t just deliver quickly; it meant we’re sure that we constructed on sturdy foundations. StarkEx essentially battle-tested the core functionality that drives StarkNet, as it notched up hundreds of billions of dollars in cumulative trading.
+### 다음 단계
 
-[StarkEx](https://starkware.co/starkex/) is the scaling engine for some of the most successful dApps using L2: dYdX (perpetual contracts), DeversiFi (spot trading and payments), as well as for Immutable and Sorare (NFT minting and trading).
+사용성에 도달했으므로 이제 시스템 성능을 개선할 때입니다. 현재 상태에서 시스템은 제한된 트랜잭션 처리량을 지원할 수 있습니다. 이를 해결하는 방법은 StarkNet의 채굴기에 해당하는 Sequencer Node의 성능을 개선하는 것입니다. 트랜잭션이 제출된 후 순서를 지정하는 것은 "기계"입니다. 이것이 최적화되면 처리량이 급증합니다.
 
-But the sequencer built for them and other StarkEx clients can only take StarkNet so far. Each of them is handling broadly the same type of transaction every day. StarkNet is all about **general computation**, so its needs are open-ended. When its sequencer takes transactions from the mempool, they come in various shapes and sizes. Plus, StarkNet is also an open network which means there is additional computational overhead that isn’t encountered in StarkEx.
+이를 위해 병목 지점이 어디인지 동시에 분석하고 하나씩 해결하고 있습니다. 현재 모든 병목 현상은 STARK-provers를 호출하기 전에 발생하는 시퀀싱 프로세스와 관련이 있습니다. 전투 테스트를 거친 증명 스택은 StarkNet에서 StarkEx와 같은 처리량을 지원할 준비가 되었습니다.
 
-The current challenge, namely optimizing the sequencer for these new needs, is a significant undertaking, but we have a strong understanding of the route needed, on the basis of our successful StarkEx development.
+시퀀서의 최적화는 H1/22 동안 점진적인 개선과 함께 몇 달 동안 지속되는 프로세스가 될 것으로 예상합니다. 우리의 목표는 2022년 하반기 초까지 이더리움보다 최소 2배 낮은 비용으로 이더리움보다 최소 1배 높은 TPS에 도달하는 것입니다. 그리고 그것은 시작에 불과합니다.
 
-### Next Up: Decentralization
+이 최적화 단계가 필요하고 StarkNet이 이미 최적화된 시퀀서와 함께 시작되지 않은 데에는 타당한 이유가 있습니다. StarkNet은 우리가 유리한 출발을 했기 때문에 유용성을 매우 빠르게 달성할 수 있었습니다. 처음부터 시작하여 완전히 새로운 시퀀서를 구축하는 대신 StarkEx의 배처를 중심 구성 요소로 사용했습니다.
 
-StarkNet is to be a fully decentralized permissionless network, complete with leader election and governance mechanisms. Achieving this will become our main focus once throughput skyrockets and cost drops, and we hope to have a first decentralized version by the end of 2022. We anticipate publicly sharing our decentralization plan in the coming months.
+이것은 훌륭한 구축 방법이었습니다. 그것은 단지 빨리 전달된 것이 아닙니다. 그것은 우리가 튼튼한 기초 위에 지었다는 것을 확신한다는 것을 의미했습니다. StarkEx는 본질적으로 누적 거래에서 수천억 달러를 기록하면서 StarkNet을 구동하는 핵심 기능을 전투 테스트했습니다.
 
-Just as the current limited throughput represents an interim phase in StarkNet’s development, the current level of StarkWare involvement is temporary too. We see ourselves as a scaffolding of sorts, that serves an important function during the construction phase, but is rolled back in due course.
+[StarkEx](https://starkware.co/starkex/)은 dYdX(영구 계약), DeversiFi(현물 거래 및 결제), Immutable 및 Sorare(NFT 발행 및 거래)와 같이 L2를 사용하는 가장 성공적인 dApp 중 일부를 위한 확장 엔진입니다.
 
-Full node development, an exciting first step towards decentralization, is already underway. Full nodes will enable anybody to hold and verify the state of the network locally, keeping track of exactly what is happening. Three teams — *Erigon, Nethermind and Equilibrium* — are developing full nodes, and potentially more will begin development in the future.
+그러나 그들과 다른 StarkEx 클라이언트를 위해 구축된 시퀀서는 지금까지 StarkNet만 사용할 수 있습니다. 그들 각각은 매일 광범위하게 동일한 유형의 거래를 처리하고 있습니다. StarkNet은 모두**일반 계산**에 관한 것이므로 그 요구 사항은 제한이 없습니다. 시퀀서가 mempool에서 트랜잭션을 가져오면 다양한 모양과 크기로 나타납니다. 또한 StarkNet은 StarkEx에서 발생하지 않는 추가 계산 오버헤드가 있음을 의미하는 개방형 네트워크이기도 합니다.
 
-In a parallel development, preparations are underway to open sequencing and proving software to the public. Anybody will be able to participate as a sequencer or a prover on StarkNet.
+이러한 새로운 요구에 맞게 시퀀서를 최적화하는 현재의 과제는 중요한 작업이지만 성공적인 StarkEx 개발을 기반으로 필요한 경로를 잘 이해하고 있습니다.
 
-A structure will be developed to incentivize people to get involved, which will include economic rewards. StarkNet fees will go, in part, to sequencers and provers.
 
-In the medium term we expect to make our sequencer available to third parties, and in the long term we expect to also see various teams build sequencers that will be sequencing for StarkNet.
 
-### Always Improving; Forever Listening
+### 다음 단계: 탈중앙화
 
-As focus shifts to the next challenge, we’ll continue to improve upon past achievements. And in continuing to work on all areas of [StarkNet](https://starknet.io/), our ears will always remain open to the whole developer community. So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+StarkNet은 리더 선출 및 거버넌스 메커니즘을 갖춘 완전히 분산된 무허가 네트워크입니다. 처리량이 급증하고 비용이 떨어지면 이를 달성하는 것이 우리의 주요 초점이 될 것이며 2022년 말까지 첫 번째 분산 버전을 갖기를 희망합니다. 우리는 앞으로 몇 달 안에 탈중앙화 계획을 공개적으로 공유할 것으로 예상합니다.
+
+현재 제한된 처리량이 StarkNet 개발의 중간 단계를 나타내는 것처럼 현재 StarkWare 참여 수준도 일시적입니다. 우리는 우리 자신을 건설 단계에서 중요한 기능을 하지만 때가 되면 롤백되는 일종의 발판으로 생각합니다.
+
+탈중앙화를 향한 흥미진진한 첫 걸음인 전체 노드 개발이 이미 진행 중입니다. 풀 노드를 사용하면 누구나 로컬에서 네트워크 상태를 유지하고 확인할 수 있으므로 무슨 일이 일어나고 있는지 정확하게 추적할 수 있습니다. *Erigon, Nethermind 및 Equilibrium*의 세 팀이 전체 노드를 개발하고 있으며 향후 더 많은 팀이 개발을 시작할 가능성이 있습니다.
+
+병렬 개발에서 시퀀싱을 공개하고 대중에게 소프트웨어를 증명하기 위한 준비가 진행 중입니다. 누구나 StarkNet에서 시퀀서 또는 증명자로 참여할 수 있습니다.
+
+경제적 보상을 포함하여 참여하도록 사람들에게 인센티브를 제공하는 구조가 개발될 것입니다. StarkNet 수수료는 부분적으로 시퀀서와 증명자에게 전달됩니다.
+
+중기적으로 우리는 시퀀서를 제3자에게 제공할 것으로 예상하고 장기적으로는 다양한 팀이 StarkNet용 시퀀서를 구축할 시퀀서를 구축하는 것을 볼 수 있을 것으로 기대합니다.
+
+
+
+### 항상 개선; 영원히 듣기
+
+초점이 다음 도전으로 이동함에 따라 우리는 과거의 성과를 계속 개선할 것입니다. 그리고[StarkNet](https://starknet.io/)의 모든 영역에서 계속 작업하면서 우리의 귀는 항상 전체 개발자 커뮤니티에 열려 있습니다. 따라서[Discord](https://discord.com/invite/uJ9HZTUk2Y),[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8)커뮤니티,[Twitter](https://twitter.com/Starknet_Intern)또는 다른 경로를 통해 토론에 참여하고 블록체인 확장의 미래를 형성하는 데 도움을 주십시오.

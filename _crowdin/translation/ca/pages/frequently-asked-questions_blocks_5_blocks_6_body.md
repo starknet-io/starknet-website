@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+El testimoni Starknet encara no està disponible per a la venda. No es pot afegir a la vostra cartera en aquesta fase. Compte amb les estafes.

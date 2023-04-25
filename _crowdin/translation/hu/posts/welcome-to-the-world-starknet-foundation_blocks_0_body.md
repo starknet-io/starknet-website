@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+Ma üdvözöljük a**StarkNet Alapítványt**, egy új közösségi alapítványt, amelyet azért szerveztek, hogy független közösségi struktúrát biztosítson a StarkNet projekt támogatásához.
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+A StarkNet egy engedély nélküli, decentralizált érvényességi összesítő, amely L2 hálózatként működik Ethereumon keresztül, ahol bármely dApp jelentősen megnövelt számítási skálát érhet el anélkül, hogy veszélyeztetné az Ethereum kompozícióját és biztonságát. Ha többet szeretne megtudni a StarkNetről, nézze meg[itt](https://starknet.io/). Ahhoz, hogy valóban elszámoltatható legyen és elérhető legyen fejlesztői és felhasználói közössége számára, a StarkNetnek független segítőre van szüksége a közösség-orientált kormányzáshoz a teljes StarkNet ökoszisztéma számára.
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+Az újonnan létrehozott StarkNet Alapítvány a közösség tagjainak széles körének támogatásával és forrásaival elősegíti a kutatást, a fejlesztést és a StarkNet hálózat és a támogató technológia kiterjesztését, elősegíti a StarkNet hálózat használatát és elfogadását, és táplálja a StarkNet közösséget. részvétel és projektirányítás. Az alapítvány segíti a felhasználói és fejlesztői konferenciák finanszírozását és szervezését, valamint a szövetséges és rokon közösségekkel való együttműködés koordinálását.
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+Az alapítványt egy kezdetben hét igazgatóból álló igazgatóság fogja irányítani, akik multidiszciplináris háttérrel rendelkeznek a világ minden tájáról. Röviden:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me)– Technikai politika, digitális jogok, vállalkozó és közösségi önkormányzati szakértő
+* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders)– A StarkWare társalapítója/elnöke, a STARK-ok társfeltalálója
+* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))– Független blokklánc-kutató és gondolatvezető
+* [Heather Meeker](http://www.heathermeeker.com/)— A nyílt forráskódú szoftverlicencelés szakértője
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)– A matematika és az elméleti számítástechnika professzora, valamint a STARK-ok alapjául szolgáló matematika fő közreműködője
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain mérnök, a Nethermind vezetője és vezérigazgatója, az egyik legnagyobb StarkNeten építő csapat
+* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders)– A StarkWare társalapítója és vezérigazgatója
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+A StarkNet tokent a StarkNet fejlesztőinek és üzemeltetőinek jutalmazza a hálózat karbantartása és fejlesztése érdekében végzett munkájukért. Az Alapítvány birtokában van a 10B token kezdeti pénzverésének 50,1%-a, amelyek kiosztását az alapítvány kezeli a StarkNet közösség felhasználóinak, üzemeltetőinek és fejlesztőinek javára, amint az itt[szerepel](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). A fennmaradó tokenek négy évre szóló zárolás alá esnek, és a StarkNet meglévő fő közreműködői és a StarkNet fejlesztésében részt vevő befektetők tulajdonában vannak.
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+A StarkNet Alapítvány igazgatósága megkezdte a munkát, előkészíti a formalizálást és a műveleteket, felveszi az ügyvezető igazgatót, és elkezdett ad hoc közösségi bizottságokat létrehozni néhány alapvető projekt előmozdítása érdekében, mint például a StarkNet token első szavazásának kiderítése, hogy mit / hol / hogyan / mikor tartók.
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+Sok sikert kívánunk az egész StarkNet közösségnek, és büszkék vagyunk és izgatottak vagyunk, hogy a StarkNet Alapítvány elindításán dolgozhatunk.
 
 
 
-### Here is what our board has to say:
+### Íme a testületünk mondanivalója:
 
-**Andrew:**
+**András:**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> Számomra a StarkNet az teszi vonzóvá, hogy véleményem szerint ez a legígéretesebb és technológiailag legmeggyőzőbb erőfeszítés arra, hogy az Ethereumot (és más blokkláncokat) valóban méretezhető, biztonságos és privát, engedély nélküli globális számítástechnikai platformmá tegyük. A sziklaszilárd tudománnyal és egy tehetséges csapattal a háta mögött a StarkNet kulcsfontosságú része annak a széles körű hasznosságnak, amely az uralkodó blokklánc-ökoszisztéma horizontján túl volt.
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> Az alapító testület tagjaként a jó kormányzásra és a hatékony globális közösségépítésre kívánok összpontosítani. A StarkNet Alapítvány egy non-profit startup lesz, amelynek küldetése egy elkötelezett, sokszínű és önmaga kormányzására felhatalmazott építői és felhasználói közösség kialakítása. Az Alapítványnak, mint szervezetnek nyitottnak, átláthatónak, elszámoltathatónak, megbízhatónak és etikusnak kell lennie. A közösségi önkormányzás példájaként remélem, hogy az Alapítvány olyan StarkNet-alapú irányítási eszközöket és szolgáltatásokat hoz létre, amelyek objektíven intuitívak és hasznosak – és éppoly elérhetőek mások számára, mint nekünk.
 
 **Eli:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> A StarkNet (és a STARK-ok) kezdeti sikere meglepett. Ami StarkWare-központú erőfeszítésnek indult, mára virágzó és gyorsan bővülő ökoszisztéma. Jehu!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> A kormányzás nehéz téma, amely a történelem során zavarba hozta az emberi társadalmakat. A StarkNet irányítása, beleértve a szükséges fékeket és ellensúlyokat, konfliktusmegoldó mechanizmusokat stb., még nem alakult ki és nem kristályosodott ki. Így izgatottságomat és optimizmusomat alázatosítják az előttünk álló kihívások. Egyértelmű számomra, hogy a StarkNetet nem szabad egyetlen pártnak sem irányítania. Ezért küldetésünk leglényegesebb részének azt tekintem, hogy figyeljünk a StarkNet fejlesztőinek széles és bővülő ökoszisztémájára, és segítsük őket az útmutatásban.
 
 **Eric:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> Az összesítő technológiák messze a legígéretesebb válasz arra a kérdésre, hogyan lehet az engedély nélküli finanszírozást a felhasználók millióihoz skálázni. A STARK-ok lehetővé teszik az általános számítások tömör ellenőrzését, és így kiterjeszthetik az Ethereum alapréteg minőségét és értékeit a fenti rétegekre. A StarkNet talán ennek a koncepciónak a legfontosabb installációja, és alázattal fogadom azt a feladatot, hogy hozzájáruljak integritásának és sikerének biztosításához.
 
-**Heather:**
+**Hanga:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> Örülök, hogy a StarkNet Alapítvány tagja lehetek.
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> Közel három évtizede azon dolgozom, hogy segítsek az embereknek megérteni a nyílt forráskódú licencelést. Jogász vagyok, ezért természetesen sok időt azzal töltöttem, hogy segítsem ügyfeleimnek a nyílt forráskódú licencelés és fejlesztés megismerésében. De ezekben az évtizedekben az egész technológiai ipar azon dolgozott, hogy jobban megértse az együttműködés módját – ez a nyílt forráskódú fejlesztési modell ajándéka. Különösen szerencsés voltam, mert a munkám nagy része segített másoknak – nem csak az ügyfeleimnek – megismerni az együttműködés szabályait és paradigmáit. Bizonyos értelemben nagy szerencsém volt tanárnak és tanácsadónak lenni.
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> Várom, hogy együtt dolgozhassak a StarkNet Alapítvánnyal, hogy átléphessek az Ethereum és a blokklánc következő korszakába, és támogassuk a növekvő StarkNet közösséget.
 
-*(Heather is an advisor to StarkWare.)*
+*(Heather a StarkWare tanácsadója.)*
 
 **Shubhangi:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> A számítástechnika elméleti alapjainak kutatója vagyok. Engem személy szerint lenyűgözött, hogy az elmúlt néhány évtized izgalmas elméleti fejlesztései hogyan jöttek létre a STARK-biztosok technológiájának megteremtésében.
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> Úgy gondolom, hogy az a küldetés, hogy a STARKS-on keresztül skálázhatóságot biztosítsanak egy decentralizált nyilvános platformon keresztül, ahol a fejlesztők központi szerepet játszanak az irányításban és a tervezésben, nagyban bővítheti a blokklánc-technológiák hatókörét. Az igazgatótanács tagjaként azt is szeretném elérni, hogy a StarkNet ösztönözze az elméleti számítástechnika modern kutatását, és hasznot húzzon belőle. Már alig várom, hogy részese lehessek ennek.
 
-*(Shubangi is an advisor to StarkWare.)*
+*(Shubangi a StarkWare tanácsadója.)*
 
 **Tomasz:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> A StarkNet fejlődésének egy fontos szakaszába lép – abba, amikor nyitottabbá, összeegyeztethetőbbé, megbízhatatlanabbá és bizalomteljesebbé válik. Az alapítványnál betöltött szerepemet lehetőségnek tekintem az együttműködés elősegítésére, és a STARK-ok által működtetett decentralizált és engedélyezett láncok jövője felé történő elmozdulás támogatására.
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> Emlékezve a Nethermindnél az Ethereum Alapítvány ösztöndíjasaként végzett utamra, és megértve az építők előtt álló kihívásokat és lehetőségeket, üdvözlöm a lehetőséget, hogy biztosítsam, hogy a StarkNet Alapítvány vezetői csapata olyan ökoszisztémát építsen, amelyben az építők felhatalmazva érzik magukat, és részesülnek kutatási és fejlesztési erőfeszítéseikből. miközben a StarkNet közjószágként építi fel. Kíváncsian várom, hogy az építők és közösségek következő generációi megtalálják a StarkNet független társtulajdonosainak szerepét.
 
 **Uri:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> A StarkWare társalapítójaként & vezérigazgatójaként 2018 óta figyelem a blokklánc teret (relatíve újonc!), és mélyen részt veszek az Ethereum méretezési megoldásainak kidolgozásában. A számítási integritást biztosító szoftvereszközök, amelyeket a StarkWare-nél kezdtünk el fejleszteni, most világszerte a fejlesztők kezébe kerülnek. A küldetés egyértelmű: ezeket az eszközöket a világ bármely érdeklődő fejlesztőjének a kezébe kell adnia; ezeket az eszközöket javítani kell. A StarkNet Alapítvány fontos és izgalmas szerepet fog játszani e küldetés teljesítésében, a StarkNet decentralizálásában.

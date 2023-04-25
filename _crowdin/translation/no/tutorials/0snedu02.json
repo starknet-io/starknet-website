@@ -1,6 +1,6 @@
 {
   "url": "https://github.com/starknet-edu/starknet-accounts",
-  "title": "Starknet Edu – Accounts",
+  "title": "Starknet Edu – kontoer",
   "author": "StarkWare ",
-  "tags": "cairo, account abstraction, contracts"
+  "tags": "cairo, konto-abstraction, kontrakter"
 }

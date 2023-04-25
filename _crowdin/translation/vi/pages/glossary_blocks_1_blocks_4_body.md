@@ -1,1 +1,1 @@
-An invocation of a specific state-transition logic that’s defined by a contract. Syntactically, a transaction has a well-defined structure that includes all the necessary metadata and an arbitrary data payload. The semantics of the transaction is defined by the invoked contract.
+Một lời gọi logic chuyển đổi trạng thái cụ thể được xác định bởi một hợp đồng. Về mặt cú pháp, một giao dịch có cấu trúc được xác định rõ ràng bao gồm tất cả siêu dữ liệu cần thiết và tải trọng dữ liệu tùy ý. Ngữ nghĩa của giao dịch được xác định bởi hợp đồng được gọi.

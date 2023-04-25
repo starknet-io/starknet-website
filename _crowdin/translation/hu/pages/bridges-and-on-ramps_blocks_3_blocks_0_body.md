@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## Mik azok a fiat rámpák?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+A Fiat on-ramps olyan szolgáltató, amely lehetővé teszi a fiat valuták kriptovalutákra történő cseréjét.

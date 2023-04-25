@@ -1,4 +1,4 @@
-This L1 contract defines the state of the system by storing the commitment to the L2 state. The contract also stores the Starknet OS program hash – effectively defining the version of Starknet the network is running. The committed state on the L1 core contract acts as the consensus mechanism of Starknet, i.e., the system is secured by the L1 Ethereum consensus. In addition to maintaining the state, the Starknet L1 Core Contract is the main hub of operations for Starknet on L1. Specifically:
+Hợp đồng L1 này xác định trạng thái của hệ thống bằng cách lưu trữ cam kết với trạng thái L2. Hợp đồng cũng lưu trữ hàm băm chương trình Starknet OS – xác định hiệu quả phiên bản Starknet mà mạng đang chạy. Trạng thái cam kết trên hợp đồng lõi L1 đóng vai trò là cơ chế đồng thuận của Starknet, nghĩa là hệ thống được bảo đảm bằng sự đồng thuận L1 Ethereum. Ngoài việc duy trì trạng thái, Hợp đồng lõi L1 của Starknet là trung tâm hoạt động chính của Starknet trên L1. Đặc biệt:
 
-* It stores the list of allowed verifiers (contracts) that can verify state update transactions
-* It facilitates L1 ↔ L2 interaction
+* Nó lưu trữ danh sách các trình xác minh được phép (hợp đồng) có thể xác minh các giao dịch cập nhật trạng thái
+* Nó tạo điều kiện cho tương tác L1 ↔ L2

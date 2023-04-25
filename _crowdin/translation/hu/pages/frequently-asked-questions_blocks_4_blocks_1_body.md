@@ -1,1 +1,1 @@
-Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so choose.
+Amint a Starknet készen áll, a StarkEx alkalmazások áttérhetnek a StarkNetre, ha úgy döntenek.

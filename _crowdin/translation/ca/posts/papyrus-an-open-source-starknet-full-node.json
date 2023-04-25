@@ -1,5 +1,5 @@
 {
-  "title": "Papyrus: An open-source Starknet full node",
-  "time_to_consume": "3 min read",
-  "short_desc": "Today we are introducing Papyrus, a Rust implementation of a Starknet full node, which will help pave the way to mass use of Starknet."
+  "title": "Papyrus: un node complet Starknet de codi obert",
+  "time_to_consume": "3 minuts de lectura",
+  "short_desc": "Avui presentem Papyrus, una implementació Rust d'un node complet de Starknet, que ajudarà a preparar el camí per a l'ús massiu de Starknet."
 }

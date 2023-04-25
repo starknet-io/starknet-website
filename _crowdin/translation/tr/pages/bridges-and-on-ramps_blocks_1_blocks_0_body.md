@@ -1,3 +1,3 @@
-## What are bridges?
+## Köprüler nedir?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Köprüler, kullanıcıların varlıkları blok zincirleri veya borsalar gibi kripto ekosistemleri arasında taşımasına olanak tanır.

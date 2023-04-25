@@ -14,7 +14,7 @@
 
 Starknet Alpha запущений в Майннет у листопаді 2021 року. Від самого запуску Starknet, було розглянуто як мережу, яка б належала спільноті, і дайте йому можливість скористатися потужністю масштабування STARK. Рік після запуску в Майннеті, настав час почати пошук всього стеку Starknet.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Коли Starknet Prover буде розміщено під Apache 2.0, процес відкритого вихідного коду буде завершено. Це відбудеться до фінальної фази децентралізації Starknet.
+Серед елементів, які вже є відкритими, є[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)і новий StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Коли Starknet Prover буде розміщено під Apache 2.0, процес відкритого вихідного коду буде завершено. Це відбудеться до фінальної фази децентралізації Starknet.
 
 ### Пріоритет відкриття початкового проекту Starknet Prover
 

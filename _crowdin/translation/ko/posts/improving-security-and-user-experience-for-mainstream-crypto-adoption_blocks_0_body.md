@@ -1,64 +1,66 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+STARKs, SNARKs, EIP-1559, Ethereum Merge 등 블록체인의 기술 혁신은 지난 몇 년 동안 번성했습니다. 모두 엄청난 기술적 성과입니다. 그러나 UX와 UI 디자인은 따라잡지 못했습니다. 사람들은 여전히 16단어 시드 문구에 갇혀 있고 중앙 집중식 중개자 없이 DeFi에 들어가는 것은 여전히 많은 사람들에게 너무 위협적입니다. 다음 10억 명의 사용자를 Web3에 온보딩하려면 사용자 온보딩 경험을 개선하는 것이 중요합니다.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+FTX(및 Gemini, Celsius 및 Mt. Gox)가 입증한 것처럼 자신의 자산에 대한 자기 양육권을 유지하는 것이 매우 중요합니다. 그러나 최근까지 셀프 커스터디 지갑은 일반 사용자에게 투박하고 혼란스러웠습니다. 대부분의 사람들은 매달 자신의 Web2 암호를 잊어버립니다. 사용자는 자신의 시드 문구와 개인 키를 어떻게 영원히 안전하게 보관해야 합니까?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+간단히 말해서 보안 악몽입니다. 우리가 수없이 보아왔듯이 나쁜 행위자나 부주의에 의해 시작된 잘못된 조치는 수백만 달러의 손실을 초래할 수 있습니다.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+새로운 암호화 사용자의 첫 번째 접점으로서 이더리움 지갑은 사용하기 쉽고 안전하며 각 사용자의 요구에 맞게 사용자 정의할 수 있어야 합니다. 이를 위해서는 개발자가 Web2 금융 상품의 단순성을 Web3의 기능과 통합해야 합니다.
 
-This is exactly what account abstraction achieves.
+이것이 바로 계정 추상화가 달성하는 것입니다.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+계정 추상화는 개인 키에 대한 사용자의 의존도를 제거하고 지갑을 보다 프로그래밍 가능하게 만들어 자체 수탁 지갑 제품의 안전과 보안을 향상시킵니다. 이 개선된 UX를 통해 비수탁 지갑은 마침내 수백만 명의 주류 암호화 사용자로 확장될 수 있습니다.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+그러나 계정 추상화의 영향을 완전히 이해하려면 Ethereum 계정이 작동하는 방식을 새로 고쳐야 합니다.
 
-### The basics of Ethereum accounts
+### 이더리움 계정의 기초
 
-There are two types of Ethereum accounts:
+이더리움 계정에는 두 가지 유형이 있습니다.
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. 외부 소유 계정(EOA)
+2. 계약 계정(CA)
 
-Let’s break each down a bit further.
+각각을 좀 더 세분화해 보겠습니다.
 
-### Externally owned accounts
+### 외부 소유 계정
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+MetaMask 및 Coinbase Wallet과 같은 외부 소유 계정은 Ethereum 사용자의 일반적인 계정 유형입니다. 각 EOA는 키 쌍이라고 하는 개인 키와 공개 키로 구성됩니다.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+모든 트랜잭션은 개인 키로 승인되고 서명됩니다. 트랜잭션이 서명되면 EVM은 EOA의 계정 주소를 사용하여 서명이 유효한지 확인합니다. EVM의 하드 코딩된 논리는 계정(토큰을 보유하는 개체)과 개인 키(서명자)가 하나로 연결되어 있음을 나타냅니다.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+개인 키를 잃는다는 것은 자금 또는 계정에 대한 통제권을 영원히 잃는다는 것을 의미합니다.
 
-### Contract accounts
+### 계약 계정
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+한편, 계정 추상화와 동의어인 계약 계정은 이더리움 블록체인에 배포된 스마트 계약입니다. 이러한 계약은 코드 논리에 의해 제어되며 개인 키가 필요하지 않습니다. EOA와 달리 계약 계정은 거래를 시작할 수 없습니다. 대신, 그들의 트랜잭션은 EOA의 지시에 의해 트리거됩니다.
 
-### Why account abstraction matters
+### 계정 추상화가 중요한 이유
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+계정 추상화는 하드 코딩된 인증 논리를 EOA에서 추상화하여 각 계정을 모든 개인의 요구를 충족하도록 조정할 수 있는 프로그래밍 가능한 스마트 계약으로 전환하는 것을 수반합니다.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+최근[Stark @ Home 이벤트](https://www.crowdcast.io/e/7olimxqv)에서 Argent 공동 창립자이자 최고 과학 책임자인 Julien Niset이 설명한 바와 같이 이 유연한 권한 부여 논리는 개발자가…와 같은 계정 기능을 자유롭게 사용할 수 있도록 합니다.
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**하드웨어 서명자:**iPhone 또는 Android의 보안 영역을 사용하여 모든 스마트폰을 하드웨어 지갑으로 전환합니다. 여기에서 사용자는 지문이나 Apple Face ID와 같은 생체 인식 데이터를 사용하여 거래를 확인할 수 있습니다. 우리는 이미 Braavos[과 같은 자체 수탁 지갑이 이 기능을 출시하는 것을 보기 시작했습니다.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**사용자가 모든 토큰으로 가스 요금을 지불하거나 제3자가 설계한 메커니즘을 통해 거래를 지불할 수 있습니다.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**소셜 복구:**개인 키가 분실되거나 손상된 경우 사용자는 새 키를 합법적인 지갑 소유자로 인증할 수 있습니다. 여기에는 신뢰할 수 있는 연락처, 하드웨어 지갑 또는 타사 서비스를 통한 다양한 복구 방법이 포함될 수 있습니다. 아이디어는 이메일을 통해 은행 계좌 비밀번호를 복구하는 것처럼 쉽게 계정에 대한 액세스 권한을 복구하는 것입니다.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**다단계 인증:**일반적인 Web2 2FA 관행과 유사하게 사용자는 암호화 지갑에 대해 두 가지(또는 그 이상)의 인증 방법을 설정할 수 있습니다. 여기서 거래는 사용자가 이메일이나 SMS와 같은 두 번째 옵션을 통해 승인을 확인한 후에만 서명됩니다. 사용자는 일일 이체 한도 또는 지갑이 자동으로 차단되는 계정 주소 목록을 설정할 수도 있습니다.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**양자 저항 및 가스 효율적인 서명:**이더리움의 현재 서명 체계인 ECDSA는 계산적으로 광범위하며(읽기: 더 높은 가스 요금) 양자 컴퓨터에 의해 깨질 수 있습니다. 서명 추상화를 통해 다양한 계정 계약이 보다 효율적이고 양자 보안 서명 체계를 사용합니다. StarkNet은 자체 독점 STARK 친화적인 곡선을 사용합니다.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+이러한 기능은 사용자에게 더 나은 보안과 유연성을 제공할 뿐만 아니라 더 중요한 것은**더 나은**경험을 제공한다는 것입니다.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Vitalik Buterin이 이더리움 개발자 커뮤니티의 "오랜 꿈"으로 나열한 계정 추상화와 관련된 혁신, 주로 EIP-2938 및 EIP-3074는 2020년부터 소용돌이쳤습니다. 그러나 두 가지 모두 보안과 구현에 대한 장단점이 필요했습니다. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md)지금까지 가장 유망한 개발은 이더리움 프로토콜을 변경할 필요 없이 계정 추상화 버전을 제안합니다.
 
-### **Account abstraction and Starknet**
+### **계정 추상화 및 Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+계정 추상화를 지원하기 위해 현재 프로토콜을 개조하는 비트코인 및 이더리움과 달리[StarkNet](https://starkware.co/starknet/)첫날부터 계정 추상화를 구현했습니다. STARK 증명의 확장성 및 기능과 결합하면 지갑 혁신의 잠재력은 무한합니다. 이것이 바로 Argent 및 Braavos와 같은 차세대 자체 수탁 지갑이 현재 우리 네트워크 위에 구축되고 있는 이유입니다.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+StarkNet의 접근 방식은 EIP-4337과 유사합니다. 완전한 계정 추상화</a>는 여전히 혼란스러운 UX를 초래하고
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+[에 대한 공격의 문](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)열 수 있음을 인정합니다. 오히려 필요한 온체인 및 오프체인 인프라의 일부를 상호화하여 서명 추상화와 지불 추상화를 모두 달성하는 것을 목표로 합니다.</p> 
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+그리고 아직 해야 할 일이 더 많지만 계정 추상화는 소수의 암호화 네이티브 그룹을 넘어 견인력을 얻고 있습니다. 12월에[Visa는 계정 추상화를 사용하여 StarkNet에서 자동 반복 지불을 설정하는 아이디어](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)을 제안했습니다. 위임 가능한 계정을 사용하여 사용자는 사전 승인된 스마트 계약에 대한 지불을 시작할 수 있는 권한을 부여할 수 있습니다. 거기에서 스마트 계약은 정해진 기간 동안 특정 날짜에 정해진 지불 금액을 공제하도록 프로그래밍됩니다. Visa는 아직 자체 서비스에 대한 계획을 밝히지 않았지만 관심만으로도 많은 것을 말하며 Netflix 및 Spotify와 같은 거대 기술 구독 플랫폼이 암호화 채택을 수용할 수 있는 세상을 예고할 수 있습니다.
+
+미래가 어떻게 될지는 시간만이 말해 줄 것입니다. 하지만 한 가지는 확실합니다. 지갑을 더 쉽고 안전하게 사용함으로써 계정 추상화는 자체 수탁 블록체인 지갑이 수백만 명의 주류 암호화 사용자로 확장되는 강력한 촉매 역할을 할 것입니다. 그 동안 계속 건물을 지을 것입니다.

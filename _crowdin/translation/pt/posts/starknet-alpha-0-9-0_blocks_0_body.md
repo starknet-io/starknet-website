@@ -1,67 +1,67 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **Taxas agora são obrigatórias no Testnet, em breve no Mainnet**
+* Padrão de fábrica de contrato agora é possível!
+* StarkNet está introduzindo classes de contrato
+* Delegar chamada é substituído pela chamada da biblioteca
 
-### Intro
+### Introdução
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+Estamos felizes em introduzir o StarkNet Alpha 0.9.0! Esta é uma versão importante na qual StarkNet dá passos significativos no sentido da maturidade, com complementos substanciais tanto à funcionalidade como à concepção do protocolo.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**Taxas são obrigatórias**(atualmente apenas no Testnet, até a versão 0.9. viverá na Mainnet) — qualquer prosperação L2 deve ter seu próprio sistema independente de taxas. Após introduzir taxas como um recurso opcional na versão 0.8. , agora nos sentimos confiantes em incluí-los como componente central do protocolo, e torná-los obrigatórios. Mais detalhes abaixo.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+Outra mudança significativa a nível do protocolo é a introdução de Classes de Contrato e a separação de classe/instância. Isto permite uma utilização mais simples da funcionalidade \`delegate_call\` e implantações de contratos existentes, permitindo o padrão de fábrica no StarkNet.
 
-### Contract Classes
+### Aulas do contrato
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+Levando inspiração da programação orientada para objetos, distinguimos entre o código do contrato e sua implementação. Fazemo-lo separando os contratos em classes e instâncias.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+Uma classe de contrato de****é a definição do contrato: Seu código Cairo informação de dicas, nomes de entrada e tudo o que for necessário para definir inequivocamente sua semântica. Cada classe é identificada pelo seu hash de classe (analógico ao nome de uma classe de idiomas OPP).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+Uma instância de contrato****, ou simplesmente um contrato, é um contrato implantado correspondente a alguma classe. Observe que apenas instâncias de contrato se comportam como contratos, ou seja, têm seu próprio armazenamento e são callable por transações/outros contratos. Uma classe de contrato não tem necessariamente uma instância implantada no StarkNet. A introdução de classes vem com várias alterações de protocolo.
 
-#### ‘Declare’ Transaction
+#### Declarar Transação
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+Apresentamos um novo tipo de transação para StarkNet: a transação['declarada'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction), que permite declarar a classe de um contrato**.**Ao contrário da transação \`deploy\`, isso não faz deploy de uma instância dessa classe. O estado do StarkNet incluirá uma lista de classes declaradas. Novas classes podem ser adicionadas através da nova transação \`declare\`.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### A “Implantar” System Call e Fábricas do Contrato.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+Uma vez que uma classe é declarada, ou seja, a transação correspondente \`declare\` foi aceita, podemos implantar novas instâncias dessa classe. Para esse fim, usamos o novo sistema de chamada \`deploy\`, que tem os seguintes argumentos:
 
-* The class hash
-* Salt
-* Constructor arguments
+* O hash da classe
+* Sal
+* Argumentos estruturais
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+O syscall 'deploy' irá então implantar uma nova instância da classe contratada, cujo endereço[](https://docs.starknet.io/docs/Contracts/contract-address)será determinado pelos três parâmetros acima e o endereço da implantação (o contrato que invocou a chamada do sistema).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+Incluir deploys em uma chamada transação nos permite pagar e cobrar taxas pelas implantações, sem ter que tratar deploys e invocações de forma diferente. Para obter mais informações sobre as taxas de implantação, consulte[a documentação](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+Este recurso introduz fábricas de contrato na StarkNet, já que qualquer contrato pode invocar a sistematização \`deploy\`, criando novos contratos.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### Movendo de 'Delegar Call' para 'Biblioteca Chamada'
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+A introdução de classes nos permite resolver um problema bem conhecido no mecanismo de chamadas delegadas da Ethereum: Quando um contrato executa uma chamada delegada para outro contrato, ele só precisa de sua classe (seu código) ao invés de uma instância real (seu armazenamento). Ter que especificar uma instância específica do contrato ao fazer uma chamada delegada é, portanto, uma prática ruim (na verdade, isso levou a alguns bugs nos contratos Ethereum) - apenas a classe precisa ser especificada.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+O sistema antigo \`delegate_call\` chamada agora fica obsoleto (contratos antigos que já foram implantados continuarão a funcionar, mas**contratos usando \`delegate_call\` não compilarão mais**), e é substituído por uma nova chamada do sistema library_call que obtém o hash da classe (de uma classe anteriormente declarada) em vez de um endereço de instância do contrato. Observe que apenas um contrato real está envolvido em uma chamada da biblioteca, portanto evitamos a ambiguidade entre o contrato de chamada e o contrato de implementação.
 
-#### New API endpoints
+#### Novos endpoints de API
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+Adicionamos dois novos endpoints à API, permitindo a recuperação de dados relacionados à classe:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: retorna a definição da classe dada o hash da classe
+* \`get_class_hash_at\`: retorna o hash da classe de um contrato implantado de acordo com o endereço do contrato
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+Note que para obter a classe de um contrato implantado diretamente, ao invés de passar pelos dois métodos acima, você pode usar o endpoint antigo \`get_full_contract\`, que será renomeado em versões futuras. Todos os endpoints mencionados acima também são utilizáveis da[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### Tarifas
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+Vamos incorporar taxas na StarkNet, tornando-as obrigatórias (primeiro no Testnet e, mais tarde, também no Mainnet) para as transações ``[invoke](https://docs.starknet.io/docs/Blocks/transações#invoke-function)\`. A transação \`declarada \` não exigirá taxas neste momento. Da mesma forma, \`implantar as transações`` também não exigirá uma taxa, no entanto, note que esse tipo de transação provavelmente será descontinuado em versões futuras.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+Subsistem várias questões em aberto neste domínio, sendo as mais importantes a forma de cobrar taxas pelas declarações de contratos e pela distribuição das contas de StarkNet. Abordaremos estas questões em versões futuras.
 
-### What’s Next?
+### E agora?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+Seguindo nosso roteiro que[anunciamos em fevereiro](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), estamos empenhados em melhorar o desempenho da StarkNety, em geral, e o desempenho do sequenciador, em particular, para obter os usuários feedback mais rápido sobre suas transações. Na próxima versão, planejamos introduzir a paralelização no sequenciador, permitindo uma produção mais rápida de blocos.
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+A próxima versão principal do StarkNet irá se concentrar na estrutura das contas do StarkNet, de uma forma semelhante ao[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). Com isso, teremos concluído o comportamento das contas StarkNet, dando mais um passo importante no sentido da adopção em massa!

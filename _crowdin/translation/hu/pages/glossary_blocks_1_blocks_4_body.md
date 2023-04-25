@@ -1,1 +1,1 @@
-An invocation of a specific state-transition logic that’s defined by a contract. Syntactically, a transaction has a well-defined structure that includes all the necessary metadata and an arbitrary data payload. The semantics of the transaction is defined by the invoked contract.
+Egy szerződésben meghatározott állapotátmeneti logika meghívása. Szintaktikailag egy tranzakció jól meghatározott szerkezettel rendelkezik, amely tartalmazza az összes szükséges metaadatot és tetszőleges adatterhelést. A tranzakció szemantikáját a meghívott szerződés határozza meg.

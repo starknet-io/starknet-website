@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+이 게시물에서는 StarkNet 토큰의 디자인, 발행 일정 및 예상 타임라인에 대해 자세히 알아봅니다.
 
-### Considerations
+### 고려 사항
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+StarkNet 토큰의 설계는 (i) StarkNet 사용자**명**명, (ii) 운영자**명**— 네트워크에 트랜잭션 순서 지정을 수행하는 컴퓨팅 리소스를 제공하는 사람, STARK 증명, 장기 스토리지 제공자, (iii)**개발자**인프라 및 그 위에서 실행되는 애플리케이션을 위한 소프트웨어 작성.
 
-Mechanisms for fee structure and token minting should be:
+수수료 구조 및 토큰 발행 메커니즘은 다음과 같아야 합니다.
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* 중요한 사람의 개입을 기반으로 하는 것과 달리 대부분 자동화됨
+* 다른 블록체인 시스템에서 알려지고 테스트됨
+* 분석 및 설명이 간단합니다. 투명한
+* 투기적 조작 및 가치를 창출하지 않는 게임화에 저항
+* 사용자 경험(UX)이 좋은 것으로 간주됨
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+이러한 기본 설정은 사용자가 지불한 새로운 발행 및 거래 수수료에서 토큰을 할당하는 메커니즘을 형성합니다.
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Operators**StarkNet의 지속적인 활성을 확보하고 사용자가 요구하는 프로토콜의 고품질 성능을 제공합니다.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**개발자**네트워크 보안을 위해 운영자가 사용하는 소프트웨어를 구축 및 유지 관리하고 사용자를 위해 네트워크 기능을 향상시키는 앱을 만듭니다. 결과적으로 수수료 및 신규 채굴의 일부는 다음과 같이 스마트 계약 개발자 및 핵심 개발자에게 전달됩니다.
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **스마트 계약 개발자:**StarkNet 프로토콜은 이러한 계약의 사용자가 지불한 L1 및 L2 수수료를 통해 스마트 계약이 제공하는 가치를 자동으로 측정할 수 있습니다. StarkNet 프로토콜은 수수료의 일부를 자동으로 할당하고 스마트 계약 개발자에게 지속적으로 새로운 채굴을 할 것입니다. 사용자에게 더 많은 가치를 제공하는 스마트 계약(사용자에 대해 지불한 수수료로 측정)은 이 목적을 위해 할당된 토큰의 더 많은 부분을 받게 됩니다.
+* **핵심 개발자:**StarkNet 프로토콜에는 검증자, 시퀀서, 전체 노드 등에 대한 코드 작성과 같은 핵심 개발자의 기여도를 정량화하는 자동 방법이 없습니다. 결과적으로 프로토콜에서 기여도를 측정할 수 없는 핵심 개발자 및 기타 기여자에게 토큰을 할당하려면 반드시 사람의 재량이 필요합니다. 탈중앙화의 목표와 일치하는 방식으로 이를 적용하기 위한 모델이 수립될 것입니다.
+* 두 유형의 개발자에게 새로운 채굴 및 수수료에서 토큰을 할당하는 정확한 메커니즘은 아직 결정되지 않았습니다. 디자인 원칙에는 반게임화와 투명성이 포함됩니다.
 
-### Initial allocation of StarkNet Tokens
+### StarkNet 토큰의 초기 할당
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+StarkWare는 오프체인에서 100억 개의 토큰을 발행했습니다. 명확히 하기 위해: 이러한 StarkNet 토큰은 StarkWare의 지분을 나타내지 않으며 StarkWare에 대한 참여 권한을 제공하거나 StarkWare로부터 청구권을 부여하지 않습니다. 토큰의 순환 공급은 나중에 커뮤니티에서 결정하는 일정에 따라 프로토콜에 의한 새 토큰 발행과 함께 시간이 지남에 따라 증가할 것입니다.\
+*따라서 순환 공급이 고정되지 않을 수 있습니다.*
 
-The allocation is thus:
+따라서 할당은 다음과 같습니다.
 
-**17%** — StarkWare Investors
+**17%**— StarkWare 투자자
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32.9%**— 핵심 기여자: StarkWare와 직원 및 컨설턴트, StarkNet 소프트웨어 개발자 파트너
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50.1%**StarkWare가 다음과 같이 재단에 부여했습니다.
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**— 커뮤니티 조항 — StarkNet을 위해 작업을 수행하고 StarkEx L2 시스템의 과거 사용을 통해 기반 기술을 구동하거나 개발한 사람들을 위한 것입니다. 결정적으로 모든 커뮤니티 조항은 과거에 수행된 검증 가능한 작업을 기반으로 합니다. 예를 들어, 커뮤니티 조항이 과거 StarkEx 사용자에게 제공되는 범위 내에서 할당은 2022년 6월**일 이전에 발생한 StarkEx 기술의 검증 가능한 사용을 기반으로 결정됩니다**
+* **9%**— 커뮤니티 리베이트 — 스타크넷 토큰 리베이트**부분**이더리움에서 스타크넷 온보딩 비용을 충당합니다. 게임화를</strong>하기 위해 커뮤니티 리베이트는 리베이트 메커니즘이 발표된 후**에서 발생하는 거래에만 적용됩니다.</li>
+* **12%**— StarkNet 프로토콜을 개발, 테스트, 배포 및 유지하기 위해 수행한 연구 및 작업에 대한 보조금
+* **10%**— 이 시리즈의[이전 게시물](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)에서 설명한 바와 같이 재단의 사명과 일치하는 생태계 활동에 자금을 지원하기 위한 전략적 준비금입니다.
+* **2%**— StarkNet 토큰 보유자와 재단이 결정한 대학, NGO 등과 같이 높이 평가되는 기관 및 조직에 대한 기부.
+* **8.1%**할당되지 않음 — 재단의 할당되지 않은 재무부는 커뮤니티에서 결정하는 방식으로 StarkNet 커뮤니티를 추가로 지원하기 위해 있습니다.</ul>
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+핵심 기여자와 투자자의 장기 인센티브를 StarkNet 커뮤니티의 이익과 일치시키고 분산 생태계의 일반적인 관행에 따라 핵심 기여자와 투자자에게 할당된 모든 토큰은 4년의 락업 기간이 적용됩니다. 선형 릴리스 및 1년 절벽.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### 스타크넷 토큰을 받을 수 있는 방법이 있나요?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+짧은 대답은 '예'이지만 토큰을 받는 데 지름길은 없습니다.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+StarkNet 토큰 할당 및 수수료 시장과 새로운 채굴 설계는 핵심 인프라 및 dApp 개발자뿐만 아니라 생태계의 보안 및 건강에 기여하는 다른 개발자에게 우선권을 부여합니다. 이것은 토큰과 관련하여 실질적으로 무엇을 의미합니까?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+개발자이고 이미 StarkNet 인프라 또는 스마트 계약을 위한 소프트웨어를 작성했으며 StarkNet 최종 사용자가 진정으로 평가하고 사용하는 경우 프로토콜을 통해 자동으로 토큰을 받을 수 있습니다. 이 메커니즘의 게임화에 대한 많은 보호 장치 중 하나는 개발자가 받는 수수료가 사용자가 지불하는 수수료보다 엄격히 적다는 것입니다.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+개발자는 StarkNet 프로토콜을 개발, 테스트 및 유지하기 위해 수행한 작업에 대해 토큰 보조금을 받을 수도 있습니다. 그러한 보조금은 재단의 임무에 따라 적시에 결정될 것입니다.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+StarkNet이 Ethereum의 확장 요구에 대한 해답이라고 믿는 블록체인 개발자라면[StarkNet](https://starknet.io/)및 해당 프로그래밍 언어인[Cairo](https://www.cairo-lang.org/)에 대해 자세히 알아보고 자신만의 스마트 계약 개발을 시작하는 것이 좋습니다.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+귀하가 최종 사용자라면 StarkNet을 사용하십시오. 그러나 현재 귀하의 요구 사항을 충족하는 경우에만 사용하십시오. StarkNet 토큰의 향후 보상을 기대하지*소중한 거래 및 응용 프로그램에 사용하십시오.*커뮤니티 조항이 발표되면 발표일 이전에 발생한 스냅샷만 참조하며, 해당 정보를 기반으로 네트워크 남용 및 게임화로 간주되는 사용을 필터링하고 제외합니다. 시점. 커뮤니티 리베이트가 도입되면 리베이트가 발표되기 전에 발생한 거래에는 적용되지 않으므로 미래의 리베이트를 예상하여 오늘 거래하는 것은 소용이 없습니다.
 
-### Closing remarks
+### 맺음말
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+개방형 네트워크를 구축한다는 것은 미지의 것을 포용하는 것을 의미합니다. 인터넷, 비트코인 및 이더리움은 자신의 도구가 세상을 바꿀 수 있다고 믿었지만 그 방법을 잘 몰랐던 혁신가들이 발명했습니다. 겸허하게 우리는 스타크넷의 블록체인 확장 능력이 이더리움과 탈중앙화 웹에 도움이 되기를 바랍니다. 우리는 무엇이 지어질지 알 수 없습니다. 그러나 우리는 StarkNet이 창조적인 커뮤니티의 손에 놀라운 기술 역량을 부여한다고 믿으며, 커뮤니티가 이를 무수히 많은 방식으로 사용하는 것을 보기를 희망합니다.

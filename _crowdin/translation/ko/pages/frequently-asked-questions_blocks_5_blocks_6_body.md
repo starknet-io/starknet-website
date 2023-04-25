@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+Starknet 토큰은 아직 판매할 수 없습니다. 이 단계에서는 지갑에 추가할 수 없습니다. 사기에 주의하세요.

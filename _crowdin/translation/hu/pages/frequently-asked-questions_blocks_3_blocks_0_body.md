@@ -1,6 +1,6 @@
-Starknet is evolving to become fully permissionless, allowing anyone to operate on the network:
+A Starknet teljesen jogosulatlanná fejlődik, így bárki működhet a hálózaton:
 
-1. **Sequencers**  – Anyone will be able to operate a sequencer, i.e., batch transactions and propose new blocks (somewhat analogous to Ethereum miners, without the Proof of Work part).
-2. **Provers** – Anyone will be able to set up a prover and create proofs for the validity of new blocks.
-3. **Developers** – Developers will be able to deploy their smart contracts – permissionlessly.
-4. **Users** – Users will be able to send transactions permissionlessly. As the system will be decentralized, the possibility of censorship will be eliminated.
+1. **Sequencers**– Bárki képes lesz szekvenszert működtetni, azaz kötegelt tranzakciókat végezni és új blokkokat javasolni (az Ethereum bányászokhoz némileg analóg, a Proof of Work rész nélkül).
+2. **Provers**– Bárki beállíthat egy bizonyítót, és létrehozhat bizonyítást az új blokkok érvényességére.
+3. **Fejlesztők**– A fejlesztők engedély nélkül telepíthetik intelligens szerződéseiket.
+4. **Felhasználó**– A felhasználók engedély nélkül küldhetnek tranzakciókat. Mivel a rendszer decentralizált lesz, megszűnik a cenzúra lehetősége.

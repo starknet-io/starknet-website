@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## Wat is fiat-opritte?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+Fiat-opritte is diensverskaffers wat die uitruil van fiat-geldeenhede vir kripto-geldeenhede moontlik maak.

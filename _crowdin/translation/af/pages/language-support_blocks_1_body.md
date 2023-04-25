@@ -1,11 +1,11 @@
-### Starknet translation program
+### Starknet vertaalprogram
 
-The [Starknet translation program](https://starkware.crowdin.com/starknet-web) aims to make the content on starknet.io available in as many languages as possible. Please read our simple steps below for how you can contribute and help us achieve these goals:
+Die [Starknet-vertaalprogram](https://starkware.crowdin.com/starknet-web) het ten doel om die inhoud op starknet.io in soveel tale moontlik beskikbaar te maak. Lees asseblief ons eenvoudige stappe hieronder vir hoe jy kan bydra en ons help om hierdie doelwitte te bereik:
 
-1. Sign up for a [CrowdIn](https://crowdin.com/) account (or log in if you already have one).
-2. [Select your chosen language](https://starkware.crowdin.com/starknet-web) for translation.
-3. Contribute!
+1. Sluit aan vir 'n [CrowdIn](https://crowdin.com/) -rekening (of meld aan as jy reeds een het).
+2. [Kies jou gekose taal](https://starkware.crowdin.com/starknet-web) vir vertaling.
+3. Dra by!
 
-Note: Submitted translations will undergo a short review process before being published so there will be a delay before your work appears on the site.
+Let wel: Ingediende vertalings sal 'n kort hersieningsproses ondergaan voordat dit gepubliseer word, so daar sal 'n vertraging wees voordat jou werk op die webwerf verskyn.
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+Ons stel ook 'n lys saam met Starknet-verwante [gemeenskappe en hulpbronne in veelvuldige tale](/en/community/language-resources).

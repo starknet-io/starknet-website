@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### זמנים מרגשים לפנינו
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+אלפא 4 שוחרר היום ב-Goerli. גרסה זו היא המועמדת לשחרור Mainnet, ואם הכל יתנהל לפי התוכנית, היא תיפרס על Mainnet עד סוף החודש.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+אלפא 4 עוקב אחר המהדורה עמוסת התכונות של אלפא 3, שכללה, בין היתר, שיפורים לזמני ההידור בקהיר, בוני חוזים ועוד הרבה יותר (ראה את[הערות השחרור המלאות](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+חשוב לציין: זו עדיין גרסת אלפא - כדי לפרוס את החוזה שלך בפריסה של Mainnet, אנא עקוב אחר הנחיות[onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)של האפליקציות החדשות.
 
-### New Features
+### תכונות חדשות
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+למרות שההתמקדות העיקרית של גרסה זו היא בהתכוננות לפריסת Mainnet, היא כוללת גם מספר תכונות חדשות:
 
-#### Get this contract’s address
+#### קבל את הכתובת של החוזה הזה
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+חוזים יכולים כעת לקבל כתובת משלהם באמצעות ה-syscall החדשה \`get_contract_address\`. סוף סוף נוכל להפסיק את חוזה הסלפי.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">חוזה סלפי RIP: ספטמבר 2021-נובמבר 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10 בנובמבר 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### חסום Hash
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+בלוקים מזוהים כעת באמצעות hash ולא ID. זה בא בעקבות המעבר האחרון שלנו ל-hashs של עסקאות. כל ממשקי ה-API עודכנו בהתאם. בקרוב נפרסם תיעוד טכני מלא של המערכת, שיכלול גם את מפרט מבנה הבלוק.
 
-#### Contract Addresses
+#### כתובות חוזה
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+גרסה זו מציגה שינוי באופן החישוב של כתובות חוזים. הכתובת היא גיבוב של Pedersen בכתובת המתקשר, מלח (אקראי או שנבחר על ידי המפיץ), ה-hash של קוד החוזה וה-hash של ארגומנטי הבנאי, כולם מצורף בקידומת.
 
 ```
 Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+בגרסה הנוכחית, כתובת המתקשר תמיד שווה ל-0, אך בגרסאות עתידיות הדבר יאפשר פריסת חוזים ישירות מחוזים קיימים.
 
-Note that this scheme is very similar to CREATE2.
+שימו לב שהסכמה הזו דומה מאוד ל-CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[ראה את הערות השחרור המלאות](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### גשרים אסימונים
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+גשרי אסימונים הם חלק מכריע מתשתית StarkNet. הם מאפשרים העברת כספים אל StarkNet וממנה. הגשר אינו נפרס בזמן הפרסום, אך הוא אמור להיות זמין בעוד מספר ימים - יחד עם התיעוד המלא של הפונקציונליות והשימוש בו. דבר אחד שחשוב לציין הוא שהגשר משתמש בפרוטוקול[L1<>L2 הודעות](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). ככזה, הוא מציע זמני משיכה קצרים - ברגע שהמשיכה נכללת באצווה ומתקבלת ב-L1, הכספים זמינים באופן מיידי למשתמש ב-L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+זוהי הגרסה הראשונה של גשרי האסימונים, ונשמח לקבל עליה משוב מהמערכת האקולוגית.
 
-### Join StarkNet
+### הצטרף ל-StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+מעולם לא היה זמן טוב יותר להצטרף לקהילת StarkNet ההולכת וגדלה. אתה יכול להצטרף לשיחה בדיסקורד[StarkNet](https://discord.gg/uJ9HZTUk2Y), להשתתף בסדנה מקוונת[](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), או להשתמש באחד[ההדרכות](https://www.cairo-lang.org/docs/hello_starknet/index.html)כדי להתחיל לבנות את האפליקציה הראשונה שלך.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**עדכון (נובמבר 2021):**StarkNet Alpha פעיל ב-Ethereum Mainnet

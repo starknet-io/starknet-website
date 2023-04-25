@@ -1,3 +1,3 @@
-No. You have several options for writing a contract, each with its own benefits. 
+KHÔNG. Bạn có một số tùy chọn để viết hợp đồng, mỗi tùy chọn đều có những lợi ích riêng. 
 
-Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
+Cairo là ngôn ngữ mẹ đẻ của hợp đồng Starknet, hợp đồng này nhận ra đầy đủ nhất tiềm năng mở rộng của Starknet. Mặt khác, một số nhóm đang phát triển bộ chuyển đổi từ các ngôn ngữ lập trình khác (đặc biệt là Solidity) sang Cairo. Những bộ chuyển đổi như vậy tạo điều kiện triển khai nhanh chóng các hợp đồng hiện có trên Starknet.**[Xem công cụ phát triển mới nhất của chúng tôi](/developers/tools-resources).**

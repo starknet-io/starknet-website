@@ -1,29 +1,29 @@
 ### TL;DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* El provador Starknet serà de codi obert sota la llicència Apache 2.0
+* El moviment augmentarà l'accessibilitat per als desenvolupadors, promourà la col·laboració dins de la comunitat i oferirà altres avantatges
+* Aquest anunci segueix l'open-sourcing de Cairo 1.0, Papyrus Full Node i el nou seqüenciador de Starknet
 
-### Intro
+### Introducció
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Notícies emocionants per endavant: Starknet Prover serà de codi obert!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Aquesta és una fita en l'evolució de Starknet. Descobriu la decisió d'obrir el provador Starknet i exploreu els beneficis que aporta a l'ecosistema Starknet. Com a bé públic, l'accessibilitat està al capdavant, la qual cosa permet una major col·laboració i innovació a la pila tecnològica.
 
-### Open Sourcing the Starknet Prover
+### Open Sourcing de Starknet Prover
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha es va llançar a Mainnet el novembre de 2021. Des dels inicis de Starknet, es va plantejar com una xarxa que seria propietat de la comunitat i li permetria beneficiar-se del poder de l'escalat de STARK. Un any després de llançar-se a Mainnet, era el moment adequat per començar a utilitzar de codi obert tota la pila de Starknet.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Els elements que ja han estat de codi obert inclouen[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)i el nou StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). Quan Starknet Prover es col·loqui a Apache 2.0, el procés de codi obert s'haurà completat. Això passarà cap a la fase final de descentralització de Starknet.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### La importància de l'open-sourcing del Starknet Prover
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+El programari STARK de codi obert permetrà a la comunitat mantenir i desenvolupar la xarxa de manera independent i, per tant, proporciona el camí més genuí per construir Starknet com un bé públic descentralitzat. També permetrà que la comunitat tingui més llibertat per contribuir al desenvolupament del provador i, per tant, de Starknet. A més, el codi obert de Starknet Prover permetrà a més ulls revisar el codi, millorar-ne la qualitat, ajudar a detectar errors i proporcionar transparència.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+En resum, l'obtenció de la pila tecnològica de Starknet significa més col·laboració, millor qualitat, innovació i independència. Tots aquests valors poden ajudar a Starknet a assolir tot el seu potencial.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+La base de codi sobre la qual construirem el Starknet Prover es basa en el provador que s'utilitza des del juny de 2020, que demostra les transaccions de dApps amb tecnologia[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)(com ara Immutable X, Sorare, dYdX i més). En aquest paper, ha processat 327 milions de transaccions i encunyat 95 milions de NFT, i ha liquidat uns 824.000 milions de dòlars.
 
-### Summary
+### Resum
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Ens complau anunciar que Starknet Prover serà de codi obert, disponible amb Apache 2.0. L'obtenció de codi obert de Starknet Prover es farà just abans que Starknet estigui llest per a la descentralització total. D'aquesta manera, la pila Starknet serà totalment de codi obert, com és apropiat per a una xarxa de capa 2 descentralitzada i sense permís.

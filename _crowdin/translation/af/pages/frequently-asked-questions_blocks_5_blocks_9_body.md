@@ -1,1 +1,1 @@
-No. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol. Details on the minting rate and mechanism are yet to be defined.
+Geen. Die sirkulerende aanbod van tokens sal mettertyd toeneem met die munt van nuwe tokens deur die protokol. Besonderhede oor die muntkoers en meganisme moet nog gedefinieer word.

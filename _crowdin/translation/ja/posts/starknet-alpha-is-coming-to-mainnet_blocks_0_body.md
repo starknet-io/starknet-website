@@ -5,8 +5,8 @@
 
 ### 略歴
 
-We announced our vision for [StarkNet](https://starkware.co/product/starknet/) at the beginning of the year: to bring massive scalability to Ethereum while preserving L1 security, permissionless interactions, and decentralization.\
-We released **[StarkNet Alpha](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)** on a public testnet in June. このバージョンでは、完全な権限なしの一般的な計算スマートコントラクトをサポートしています。 We’ve since upgraded it twice: first to **Alpha 1** — providing [L1<>L2 messaging and on-chain data](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), and then to **Alpha 2** — supporting [composability](https://medium.com/starkware/starknet-alpha-2-4aa116f0ecfc).
+今年の初めに[StarkNet](https://starkware.co/product/starknet/)のビジョンを発表しました。それは、L1 セキュリティ、パーミッションレス インタラクション、および分散化を維持しながら、イーサリアムに大規模なスケーラビリティをもたらすことです。\
+6 月に公開テストネットで**[StarkNet Alpha](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)**をリリースしました。 このバージョンでは、完全な権限なしの一般的な計算スマートコントラクトをサポートしています。 最初は**アルファ 1**—[L1<>L2 メッセージングとオンチェーン データ](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f)を提供し、次に**アルファ 2**— サポート[コンポーザビリティ](https://medium.com/starkware/starknet-alpha-2-4aa116f0ecfc)にアップグレードしました。
 
 StarkNet Alpha 2はEthereumのような状態で一般的な計算の複合スマートコントラクトをサポートするようになりました L1とL2の契約が互いに相互作用する能力を備えています。 もっと読む[ここ](https://www.cairo-lang.org/docs/hello_starknet/index.html).
 
@@ -80,7 +80,7 @@ StarkNetを世界に展開すると、カイロを学び、StarkNetで開発す�
 
 ### STARKsは今日スケーリング中
 
-スタンドアロンスケーリングSaaSであるStarkNet Alphaの発売に自信を持ってアプローチすることで、STARKがEthereumアプリケーションを大規模に拡張できる方法を実証しました。 We launched StarkEx for [dYdX](https://dydx.exchange/) (perpetual contracts), [DeversiFi](https://www.deversifi.com/) (spot trading and payments), as well as for [Immutable](https://www.immutable.com/) and [Sorare](https://sorare.com/) (NFT minting and trading). これらのガス/txコストは100X-200X、バリウム(オフチェーンデータ)では650ガス/tx、ZK-ロールアップでは1100ガス/txとなりました。
+スタンドアロンスケーリングSaaSであるStarkNet Alphaの発売に自信を持ってアプローチすることで、STARKがEthereumアプリケーションを大規模に拡張できる方法を実証しました。 StarkEx は[dYdX](https://dydx.exchange/)(無期限契約)、[DeversiFi](https://www.deversifi.com/)(スポット取引と支払い)、および[Immutable](https://www.immutable.com/)と[Sorare](https://sorare.com/)(NFT のミンティングと取引) 用に立ち上げました。 これらのガス/txコストは100X-200X、バリウム(オフチェーンデータ)では650ガス/tx、ZK-ロールアップでは1100ガス/txとなりました。
 
 今日まで、StarkExは、取引で$ 80Bを決済し、27M以上の取引を行っています。他のL2ソリューションを大幅に上回っています。
 

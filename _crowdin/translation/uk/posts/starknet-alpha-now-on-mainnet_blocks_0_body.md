@@ -73,7 +73,7 @@ StarkNet - це дозволена децентралізована Rollup фу�
 * Скелетна версія Volition
 * І багато іншого …
 
-To monitor this effort on an ongoing basis, see the features’ [tentative roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51).
+Щоб постійно контролювати ці зусилля, перегляньте орієнтовну дорожню карту функцій[](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51).
 
 Дивлячись далі, ми продовжуємо інвестувати в активні дослідження на кілька фронтів (приєднайтеся до зусиль[шаманів](https://community.starknet.io/)з цього приводу):
 

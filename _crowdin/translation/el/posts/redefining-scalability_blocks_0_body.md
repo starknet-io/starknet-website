@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+Blockchain επεκτασιμότητα ήταν πάντα ένα θερμαινόμενο θέμα. Σχεδόν κάθε δίκτυο blockchain αγγίζει τον υψηλό αριθμό συναλλαγών ανά δευτερόλεπτο (TPS) ως σημείο πώλησης. Ωστόσο, η TPS δεν είναι μια έγκυρη μετρική για να συγκρίνει τα δίκτυα blockchain με - καθιστώντας την πρόκληση να αξιολογήσει τη σχετική απόδοσή τους. Επιπλέον, οι μεγάλοι αριθμοί TPS συνήθως κοστίζουν - πράγμα που θέτει το ερώτημα: τα εν λόγω δίκτυα στην πραγματικότητα αυξάνονται, or do they just increase theirδικα τους throughputδιεκπεραίωσης?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Έτσι, ας εξετάσουμε πώς να καθορίσει την επεκτασιμότητα, η οποία εμπορεύονται γίνονται για να το επιτύχουν, και γιατί Validity Rollups είναι η τελική λύση επεκτασιμότητας.
 
-### Not all Transactions are Made Equal
+### Δεν είναι όλες οι Συναλλαγές γίνονται Ίσες
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+Πρώτον, πρέπει να εδραιώσουμε τον ισχυρισμό μας ότι η απλή και βολική μετρική του TPS δεν είναι ένα ακριβές μέτρο της επεκτασιμότητας.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+Για την αντιστάθμιση κόμβων για την εκτέλεση συναλλαγών (και για την αποτροπή των χρηστών από το spamming του δικτύου με περιττό υπολογισμό), blockchains χρεώνουν μια αμοιβή ανάλογη με το υπολογιστικό βάρος που επιβάλλεται στο blockchain. Στο Ethereum, η πολυπλοκότητα του υπολογιστικού βάρους μετράται στο*αέριο.*Επειδή το αέριο είναι ένα πολύ βολικό μέτρο της πολυπλοκότητας των συναλλαγών, ο όρος θα χρησιμοποιηθεί σε όλο αυτό το άρθρο για blockchains μη-Ethereum καθώς, ακόμη και αν είναι συνήθως Ethereum-συγκεκριμένο.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+Οι συναλλαγές διαφέρουν σημαντικά ως προς την πολυπλοκότητα και, επομένως, πόσο φυσικό αέριο καταναλώνουν. Bitcoin, ο πρωτοπόρος των αξιόπιστων συναλλαγών peer-to-peer, υποστηρίζει μόνο το υποτυπώδες σενάριο Bitcoin. Αυτές οι απλές μεταφορές από τη διεύθυνση για την αντιμετώπιση της χρήσης μικρού αερίου. Αντίθετα, έξυπνες αλυσίδες συμβολαίων όπως το Ethereum ή το Solana υποστηρίζουν μια εικονική μηχανή και Turing-complete γλώσσες προγραμματισμού που επιτρέπουν πολύ πιο σύνθετες συναλλαγές. Ως εκ τούτου, dApps όπως Uniswap απαιτούν πολύ περισσότερο φυσικό αέριο.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+Αυτός είναι ο λόγος για τον οποίο δεν έχει νόημα να συγκρίνετε το TPS διαφορετικών blockchain. Αυτό που θα πρέπει να συγκρίνουμε, αντίθετα, είναι η ικανότητα για υπολογισμό, ή απόδοση.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Όλα τα Blockchains έχουν ένα (μεταβλητό) μέγεθος μπλοκ και χρόνο μπλοκ που καθορίζουν πόσες*μονάδες υπολογισμού*μπορούν να υποβληθούν σε επεξεργασία ανά μπλοκ και πόσο*γρήγορα*μπορεί να προστεθεί ένα νέο μπλοκ. Μαζί, αυτές οι δύο μεταβλητές καθορίζουν την*απόδοση*ενός blockchain.
 
-### What Constrains Scalability?
+### Τι Περιορισμοί Επιτάχυνση?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+Τα Blockchains προσπαθούν να είναι μέγιστα αποκεντρωμένα, συμπεριλαμβανομένων δικτύων. Για να επιτευχθεί αυτό, πρέπει να τεθούν υπό έλεγχο δύο θεμελιώδεις ιδιότητες.
 
-#### **1. Hardware Requirements**
+#### **1. Απαιτήσεις Υλικού**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+Η αποκέντρωση ενός δικτύου blockchain καθορίζεται από την ικανότητα του ασθενέστερου κόμβου του δικτύου να επαληθεύει το blockchain και να κρατά την κατάστασή του. Ως εκ τούτου, το κόστος εκτέλεσης ενός κόμβου (υλικό, εύρος ζώνης, και η αποθήκευσή τους) θα πρέπει να διατηρούνται όσο το δυνατόν πιο χαμηλά ώστε να μπορούν όσο το δυνατόν περισσότερα άτομα να γίνουν άχρηστοι συμμετέχοντες στο δίκτυο χωρίς εμπιστοσύνη.
 
-#### 2**.** State Growth
+#### 2**.**Αύξηση του κράτους
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Η ανάπτυξη της κατάστασης αναφέρεται στο πόσο γρήγορα αναπτύσσεται το blockchain. Όσο περισσότερη απόδοση ένα blockchain επιτρέπει να συμβαίνει ανά μονάδα του χρόνου, τόσο πιο γρήγορα αυξάνεται το blockchain. Πλήρης κόμβοι αποθηκεύουν το ιστορικό του δικτύου και πρέπει να είναι σε θέση να επικυρώσουν την κατάσταση του δικτύου. Η κατάσταση του Ethereum αποθηκεύεται και αναφέρεται χρησιμοποιώντας αποτελεσματικές δομές όπως τα δέντρα. Καθώς το κράτος αναπτύσσεται, νέα φύλλα και κλαδιά προστίθενται σε αυτό, καθιστώντας το όλο και πιο περίπλοκο και χρονοβόρο να εκτελέσει ορισμένες ενέργειες. Καθώς η αλυσίδα μεγαλώνει σε μέγεθος, επιδεινώνει την χειρότερη εκτέλεση από τους κόμβους, γεγονός που οδηγεί σε έναν συνεχώς αυξανόμενο χρόνο για την επικύρωση νέων μπλοκ. Με την πάροδο του χρόνου, αυτό αυξάνει επίσης το συνολικό χρόνο που χρειάζεται για να συγχρονιστεί ένας πλήρης κόμβος.
 
-### Detrimental Impacts of Increasing Throughput
+### Καταστροφικές επιπτώσεις της αύξησης σε όλη τη διάρκεια
 
-#### 1. Node Count
+#### 1. Πλήθος Κόμβων
 
-The minimum requirements to run a node and node counts are:
+Οι ελάχιστες απαιτήσεις για την εκτέλεση ενός αριθμού κόμβων και κόμβων είναι:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin1: 350GB χώρος δίσκων HDD, σύνδεση 5 Mbit/s, 1GB RAM, CPU >1 Ghz. **Αριθμός κόμβων: ~10,000**
+* Ethereum2: 500GB+ SSD χώρος δίσκων, σύνδεση 25 Mbit/s, 4-8GB RAM, CPU 2-4 πυρήνες. **Αριθμός κόμβων: ~6,000**
+* Solana3: χώρος δίσκων 1.5TB+ SSD, σύνδεση 300 Mbit/s, πυρήνες 12+ RAM 128GB. **Αριθμός κόμβων: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Παρατήρησε ότι όσο μεγαλύτερος είναι ο CPU, το εύρος ζώνης και οι απαιτήσεις αποθήκευσης για τους κόμβους που απαιτούνται για την απόδοση ενός blockchain, όσο λιγότεροι κόμβοι στο δίκτυο — οδηγώντας σε ασθενέστερη αποκέντρωση και σε λιγότερο περιεκτικό δίκτυο.
 
-#### 2. Time to Sync a Full Node
+#### 2. Ώρα συγχρονισμού ενός πλήρους κόμβου
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Όταν εκτελείται ένας κόμβος για πρώτη φορά, πρέπει να συγχρονιστεί με όλους τους υπάρχοντες κόμβους, να γίνει λήψη, και να επικυρώσει, την κατάσταση του δικτύου σε όλη τη διαδρομή από το μπλοκ της γένεσης έως την άκρη της αλυσίδας. Αυτή η διαδικασία θα πρέπει να είναι όσο το δυνατόν γρηγορότερη και αποτελεσματικότερη ώστε να επιτρέπει σε οποιονδήποτε να ενεργεί ως άτομος συμμετέχων στο πρωτόκολλο.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Λαμβάνοντας ως ένδειξη τον Jameson Lopp[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)και[2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/)Ο πίνακας 1 συγκρίνει το χρόνο που χρειάζεται για να συγχρονιστεί ένας πλήρης κόμβος Bitcoin vs. Ethereum vs. Solana κατά μέσο όρο PC ποιότητας καταναλωτή.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Πίνακας 1. Επίδοση blockchain και σύγκριση κόμβου-συγχρονισμού](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Πίνακας 1. Επίδοση blockchain και σύγκριση κόμβου-συγχρονισμού")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Ο πίνακας 1 δείχνει ότι η αύξηση της ροής οδηγεί σε μεγαλύτερους χρόνους συγχρονισμού, επειδή όλο και περισσότερα δεδομένα πρέπει να υποβληθούν σε επεξεργασία και να αποθηκευτούν.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Ενώ οι βελτιώσεις στο λογισμικό κόμβων γίνονται συνεχώς για να μετριαστεί η πρόκληση του αναπτυσσόμενου blockchain (μείωση του αποτυπώματος δίσκου, ταχύτερες ταχύτητες συγχρονισμού, ισχυρότερη ανθεκτικότητα συντριβής, διαμόρφωση ορισμένων εξαρτημάτων, κ.λπ. , οι κόμβοι προφανώς ακόμα δεν μπορούν να συμβαδίσουν με αυξήσεις στην απόδοση.
 
-### How Should Scalability be defined?
+### Πώς θα πρέπει να καθοριστεί κλιμακωσιμότητα?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+Η κλιμάκωση είναι ο πιο παραπλανητικός όρος στον χώρο blockchain. Ενώ η αύξηση της ροής είναι επιθυμητή, είναι μόνο ένα μέρος του παζλ.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***Κλιμάκωση**σημαίνει**περισσότερες συναλλαγές**για το**ίδιο υλικό**.*
 
-For that reason, scalability can be separated into two categories.
+Για το λόγο αυτό, η δυνατότητα κλιμάκωσης μπορεί να διαχωριστεί σε δύο κατηγορίες.
 
-#### Sequencer scalability
+#### Αλληλουχία επεκτασιμότητα
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+Η αλληλουχία περιγράφει την πράξη της παραγγελίας και της επεξεργασίας συναλλαγών σε ένα δίκτυο. Όπως διαπιστώθηκε προηγουμένως, κάθε blockchain θα μπορούσε να αυξήσει ασήμαντα την απόδοση αυξάνοντας το μέγεθος του block και μειώνοντας τον χρόνο αποκλεισμού του — μέχρι ένα σημείο όπου η αρνητική επίπτωση στην αποκέντρωσή του θεωρείται πολύ σημαντική. Αλλά, τροποποιώντας αυτές τις απλές παραμέτρους δεν παρέχει τις απαιτούμενες βελτιώσεις. Η EVM της Ethereum μπορεί, θεωρητικά,[να χειριστεί έως και ~2.000 TPS](https://twitter.com/dankrad/status/1459607325854121989), η οποία δεν επαρκεί για την εξυπηρέτηση της μακροπρόθεσμης ζήτησης χώρου φραγής. Για να κλιμακωθεί η αλληλουχία, ο Σολάνα έκανε μερικές εντυπωσιακές καινοτομίες: εκμεταλλευόμενος ένα παράλληλο περιβάλλον εκτέλεσης και έναν έξυπνο μηχανισμό συναίνεσης, που επιτρέπει πολύ πιο αποδοτική απόδοση. Όμως, παρά τις βελτιώσεις της, δεν είναι ούτε επαρκής ούτε επεκτάσιμη. Καθώς ο Solana αυξάνει την απόδοσή του, αυξάνει επίσης το κόστος του υλικού για τη λειτουργία ενός κόμβου και τη διαδικασία συναλλαγών.
 
-#### Verification scalability
+#### Ευαισθητοποίηση επαλήθευσης
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*Η δυνατότητα επαλήθευσης περιγράφει προσεγγίσεις που αυξάνουν την απόδοση χωρίς να επιβαρύνουν τους κόμβους με συνεχώς αυξανόμενο κόστος υλικού*Συγκεκριμένα, αναφέρεται σε κρυπτογραφικές καινοτομίες όπως αποδείξεις εγκυρότητας. Είναι ο λόγος για τον οποίο Validity Rollups μπορεί να κλιμακώσει ένα blockchain με βιώσιμο τρόπο.
 
-**What’s a Validity Rollup?**
+**Ποιο είναι το Validity Rollup?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+Επαλήθευση εγκυρότητας (επίσης γνωστή ως “ZK-Rollups”) κίνηση υπολογισμός και κατάσταση αποθήκευσης εκτός αλυσίδας, αλλά να κρατήσει ένα μικρό ποσό ορισμένων δεδομένων on-chain. Ένα έξυπνο συμβόλαιο στο βασικό blockchain διατηρεί τη ρίζα της κατάστασης του Rollup. Στο Rollup, μια παρτίδα των εξαιρετικά συμπιεσμένων συναλλαγών, μαζί με την τρέχουσα ρίζα κατάσταση, αποστέλλονται σε ένα off-chain Prover. Το Prover υπολογίζει τις συναλλαγές, δημιουργεί μια απόδειξη εγκυρότητας των αποτελεσμάτων και της νέας κρατικής ρίζας, και το στέλνει σε έναν on-chain Verifier. Ο ελεγκτής επαληθεύει την απόδειξη εγκυρότητας, και το έξυπνο συμβόλαιο που διατηρεί την κατάσταση του Rollup το ενημερώνει για τη νέα κατάσταση που παρέχεται από τον Prover.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**Πώς Validity Rollups κλίμακα με τις ίδιες απαιτήσεις υλικού?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+Παρόλο που οι Provers χρειάζονται υλικό υψηλών προδιαγραφών, δεν επηρεάζουν την αποκέντρωση ενός blockchain. επειδή η εγκυρότητα των συναλλαγών εξασφαλίζεται από μαθηματικά επαληθεύσιμες αποδείξεις.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Αυτό που έχει σημασία είναι οι απαιτήσεις για την επαλήθευση των αποδείξεων. Επειδή τα δεδομένα που εμπλέκονται είναι ιδιαίτερα συμπιεσμένα και σε μεγάλο βαθμό αφαιρεθεί από τον υπολογισμό, η επίδρασή του στους κόμβους του υποκείμενου blockchain είναι ελάχιστη*.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+Οι ελεγκτές (Ethereum nodes) δεν απαιτούν high-end υλικό, και το μέγεθος των παρτίδων δεν αυξάνει τις απαιτήσεις υλικού. Μόνο οι μεταβάσεις κατάστασης και μια μικρή ποσότητα δεδομένων κλήσεων πρέπει να υποβάλλονται σε επεξεργασία και να αποθηκεύονται από τους κόμβους. Αυτό επιτρέπει σε όλους τους κόμβους Ethereum να επαληθεύσουν παρτίδες κύρωσης Rollup χρησιμοποιώντας το υπάρχον υλικό τους.
 
-**The more transactions, the cheaper it gets**
+**Όσο περισσότερες συναλλαγές, τόσο φθηνότερα παίρνει**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+Στα παραδοσιακά blockchains, όσο περισσότερες συναλλαγές συμβαίνουν, το πιο ακριβό παίρνει για όλους, καθώς ο χώρος φραγμών γεμίζει - και οι χρήστες πρέπει να ξεπεράσουν ο ένας τον άλλο σε μια αγορά αμοιβών για να συμπεριληφθούν οι συναλλαγές τους.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+Για μια συνάθροιση εγκυρότητας, αυτή η δυναμική αντιστρέφεται. Η επαλήθευση μιας παρτίδας συναλλαγών στο Ethereum έχει ένα ορισμένο κόστος. Καθώς ο αριθμός των συναλλαγών εντός μιας παρτίδας αυξάνεται, το κόστος για την επαλήθευση της παρτίδας αυξάνεται με εκθετικά βραδύτερο ρυθμό. Η προσθήκη περισσότερων συναλλαγών σε μια παρτίδα οδηγεί σε φθηνότερα τέλη συναλλαγής, ακόμη και αν το κόστος επαλήθευσης παρτίδας αυξάνεται — επειδή αποσβένεται μεταξύ όλων των συναλλαγών εντός της παρτίδας. Επαλήθευση εγκυρότητας θέλουν όσο το δυνατόν περισσότερες συναλλαγές μέσα σε μια παρτίδα - έτσι ώστε το τέλος επαλήθευσης μπορεί να μοιραστεί μεταξύ όλων των χρηστών. Καθώς το μέγεθος της παρτίδας αυξάνεται στο άπειρο, το αποσβεσμένο τέλος ανά συναλλαγή συγκλίνει στο μηδέν, δηλαδή ., όσο περισσότερες συναλλαγές σε μια Κύρωση Rollup, τόσο φθηνότερα παίρνει για όλους.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX, ένα dApp που τροφοδοτείται από ένα κύρος Rollup, συχνά βλέπει τα μεγέθη των παρτίδων άνω των 12.000 συναλλαγών. Η σύγκριση της κατανάλωσης φυσικού αερίου από τις ίδιες συναλλαγές στο Mainnet έναντι μιας Ρεύματος Ισχύος απεικονίζει τα κέρδη επεκτασιμότητας:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+Διευθέτηση μιας συναλλαγής dYdX στο Ethereum Mainnet:**200.000 φυσικό αέριο**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+Διευθέτηση συναλλαγής dYdX στο StarkEx:**<500 φυσικό αέριο**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+Ένας άλλος τρόπος για να το εξετάσουμε: Validity Rollups κύρια κλίμακες κόστους γραμμικά με τον αριθμό των χρηστών στην ίδια παρτίδα.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### Γιατί οι αισιόδοξοι επαναληπτικοί κύλινδροι δεν είναι τόσο επεκτάσιμοι όσο μπορεί κάποιος να σκεφτεί
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+Θεωρητικά, οι Optimistic Rollups παρέχουν σχεδόν τα ίδια οφέλη κλιμακωσιμότητας όπως οι Validity Rollups. Αλλά υπάρχει μια σημαντική διάκριση: Βελτιστοποιητικές Rollups βελτιστοποιούν για τη μέση περίπτωση, ενώ Validity Rollups βελτιστοποιούν για τη χειρότερη περίπτωση. Επειδή τα συστήματα blockchain λειτουργούν σε εξαιρετικά αντίστροφες συνθήκες, η βελτιστοποίηση για τη χειρότερη περίπτωση είναι ο μόνος τρόπος για να επιτευχθεί ασφάλεια.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+Στη χειρότερη περίπτωση του Optimistic Rollup, οι συναλλαγές ενός χρήστη δεν θα ελέγχονται από τους ελεγκτές απάτης. Έτσι, για να αμφισβητήσει την απάτη, ο χρήστης πρέπει να συγχρονίσει έναν πλήρη κόμβο Ethereum, έναν πλήρη κόμβο L2, και να υπολογίσει τον εαυτό του ύποπτη συναλλαγή.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+Στη χειρότερη περίπτωση Validity Rollup, ένας χρήστης θα πρέπει μόνο να συγχρονίσει έναν πλήρη κόμβο Ethereum για να επαληθεύσει την απόδειξη εγκυρότητας, αποθηκεύοντας τον εαυτό του το υπολογιστικό βάρος.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+Σε αντίθεση με την Validity Rollups, Βελτιστοποιητικές κλίμακες κόστους Rollups γραμμικά με τον αριθμό των συναλλαγών αντί για τον αριθμό των χρηστών, καθιστώντας τους πιο ακριβά.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### Τελικό κομμάτι του παζλ — Άδεια πρόσβασης στο κράτος ανάληψης
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+Για να εγγυηθεί την εγκυρότητα των συναλλαγών, οι χρήστες πρέπει να τρέξει έναν κόμβο Ethereum μόνο. Ωστόσο, οι χρήστες και οι προγραμματιστές μπορεί να θέλουν να δουν και να τρέξουν, την κατάσταση και την εκτέλεση του Rollup για διάφορους σκοπούς. Ένας*κόμβος ευρετηρίασης L2*γεμίζει τέλεια αυτή την ανάγκη. Όχι μόνο επιτρέπει στους χρήστες να βλέπουν τις συναλλαγές στο δίκτυο, αλλά είναι επίσης ένα κρίσιμο κομμάτι υποδομής που είναι απαραίτητο για τη λειτουργία της οικοσυστημικής υποδομής. Δείκτες όπως το The Graph, Alchemy, Infura; δίκτυα Oracle όπως Chainlink, και εξερευνητές μπλοκ, όλα αυτά υποστηρίζονται πλήρως από έναν ακατάλληλο, ευρετηρίαση L2 κόμβο.
 
-### Conclusion
+### Συμπέρασμα
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+Πολλές προσεγγίσεις για την αντιμετώπιση της επεκτασιμότητας του blockchain επικεντρώνονται λανθασμένα στην αύξηση της*ροής*. Αλλά, αυτό παραμελεί την επίδραση των ροών στους κόμβους: τις συνεχώς αυξανόμενες απαιτήσεις υλικού για την επεξεργασία φραγμών και την αποθήκευση ιστορικού δικτύου, και πώς αυτό αναστέλλει την αποκέντρωση ενός δικτύου.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Με την έλευση της εγκυρότητας-απόδειξη κρυπτογράφησης, ένα blockchain μπορεί να επιτύχει**πραγματική επεκτασιμότητα**που δεν επιβαρύνει τους κόμβους με συνεχώς αυξανόμενο κόστος και επιτρέπει ευρεία αποκέντρωση. Περισσότερες συναλλαγές με ισχυρούς και πιο σύνθετους υπολογισμούς για το ίδιο υλικό είναι πλέον δυνατές, αντιστρέφοντας το δίλημμα της αγοράς αμοιβών στη διαδικασία - τόσο περισσότερη δραστηριότητα σε κύρος Rollup, τόσο φθηνότερα παίρνει!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)και[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+1 Από το<https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+2 από το<https://ethereum.org/en/developers/docs/nodes-and-clients/>
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+3 Από το<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+4 Ισχυρά απλοποιημένη και προσαρμοσμένη για τα μέσα δυναμικά μεγέθη φραγμών

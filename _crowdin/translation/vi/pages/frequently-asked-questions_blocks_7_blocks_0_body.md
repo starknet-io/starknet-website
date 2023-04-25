@@ -1,1 +1,1 @@
-If you are excited about StarkNet and its decentralization and wish to participate in the process, please join the builders on StarkNet [Discord](https://starknet.io/discord) and [Starknet community forum](https://community.starknet.io/)
+Nếu bạn hào hứng với StarkNet và tính phi tập trung của nó và muốn tham gia vào quá trình này, vui lòng tham gia cùng những người xây dựng trên StarkNet [Discord](https://starknet.io/discord) và [Diễn đàn cộng đồng Starknet](https://community.starknet.io/)

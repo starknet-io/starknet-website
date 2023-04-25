@@ -36,7 +36,7 @@ Observera att detta system är mycket likt CREATE2.
 
 #### Token Bridges
 
-Token bridges är en viktig del av StarkNet infrastruktur. De tillåter överföring av medel till och från StarkNet. Bron är inte utplacerad vid tidpunkten för publicering, men den bör vara tillgänglig inom några dagar — tillsammans med den fullständiga dokumentationen av dess funktionalitet och användning. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. Som sådan, erbjuder det korta uttagstider - när ett uttag ingår i ett parti och accepteras på L1, de medel som är tillgängliga direkt för användaren på L1.
+Token bridges är en viktig del av StarkNet infrastruktur. De tillåter överföring av medel till och från StarkNet. Bron är inte utplacerad vid tidpunkten för publicering, men den bör vara tillgänglig inom några dagar — tillsammans med den fullständiga dokumentationen av dess funktionalitet och användning. En sak som är viktig att notera är att bryggan använder protokollet[L1<>L2 meddelandehantering](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). Som sådan, erbjuder det korta uttagstider - när ett uttag ingår i ett parti och accepteras på L1, de medel som är tillgängliga direkt för användaren på L1.
 
 Detta är den första versionen av symboliska broar, och vi skulle älska att få feedback från ekosystemet på det.
 

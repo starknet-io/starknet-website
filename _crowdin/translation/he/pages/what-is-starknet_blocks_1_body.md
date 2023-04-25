@@ -1,11 +1,11 @@
-## I﻿ntroduction
+## מבוא
 
-Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+Starknet היא שכבת אוסף תוקף 2. הוא מספק תפוקה גבוהה, עלויות גז נמוכות ושומר על רמות אבטחה בשכבת Ethereum 1
 
-Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+בהינתן חידת סודוקו, אימות פתרון קל יותר מאשר פתרון מאפס. אם המטרה שלנו היא לשכנע אנשים בהצהרה "הפאזל הזה נפתר", נוכל לחסוך הרבה חישובים על ידי כך שאדם אחד יחשב פתרון ואז יפיץ אותו לאחרים כדי לאמת. באסטרטגיה זו, כל חישוב של פתרון הופך לאירוע חד פעמי שאינו דורש שכפול על ידי החברה. ברוח דומה, Starknet מדרג את Ethereum על ידי החלפת חישוב L1 כבד בקל יותר (ולכן זול יותר!) אימות L1 באמצעות הוכחות STARK מחושבות מחוץ לשרשרת.
 
-## H﻿ow it works
+## איך זה עובד
 
-With the above analogy in mind, the time is ripe for some jargon. Starknet is a permissionless Validity-Rollup (also known as a “ZK-Rollup”) that supports general computation and currently operates in production as an L2 network over Ethereum. The eventual L1 security of Starknet is ensured by its use of the safest and most scalable cryptographic proof system – [STARK](https://starkware.co/stark/).
+בהתחשב באנלוגיה לעיל, הגיע הזמן לקצת ז'רגון. Starknet הוא Validity-Rollup ללא רשות (הידוע גם בשם "ZK-Rollup") התומך בחישוב כללי ופועל כיום בייצור כרשת L2 על Ethereum. אבטחת ה-L1 הסופית של Starknet מובטחת על ידי השימוש שלה במערכת ההוכחה ההצפנה הבטוחה והניתנת להרחבה ביותר - [STARK](https://starkware.co/stark/).
 
-Starknet contracts are (for the most part) written in the Cairo language – A Turing complete programming language designed for STARK proofs.
+חוזי Starknet כתובים (ברובם) בשפת קהיר - שפת תכנות מלאה של Turing המיועדת להוכחות STARK.

@@ -1,67 +1,67 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **Taxele sunt acum obligatorii pentru Testnet, în curând pe Mainnet**
+* Modelul de fabrică al contractului este acum posibil!
+* StarkNet introduce clase de contracte
+* Apelul de delegare este înlocuit cu apelul din bibliotecă
 
-### Intro
+### Introducere
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+Suntem bucuroşi să-l introducem pe StarkNet Alpha 0.9.0! Aceasta este o versiune importantă în care StarkNet face paşi semnificativi către maturitate, cu adăugiri substanţiale atât la funcţionalitate, cât şi la conceperea protocolului.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**Taxele sunt obligatorii**(în prezent numai pe Testnet, până la versiunea 0.9. va fi în viață pe Mainnet) – orice L2 prosper trebuie să aibă un sistem propriu de taxe. După introducerea taxelor ca o caracteristică opțională în versiunea 0.8. ne simțim acum încrezători să le includem ca o componentă esențială a protocolului și să le facem obligatorii. Mai multe detalii mai jos.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+O altă modificare semnificativă la nivelul protocolului este introducerea claselor de contracte și a separării clasei/instanței. Acest lucru permite o utilizare mai simplă a funcționalității \`delegate_call\` și a implementărilor din contractele existente, permițând modelul de fabrică de pe StarkNet.
 
-### Contract Classes
+### Clase de contracte
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+Ca sursă de inspirație din programarea orientată spre obiecte, facem distincția între codul contractului și punerea sa în aplicare. Facem acest lucru prin separarea contractelor în clase şi instanţe.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+O**clasă contractuală**este definiția contractului: Cairo bytecode, indicați informații, numele punctelor de intrare și tot ceea ce este necesar pentru a defini fără echivoc semanticii sale. Fiecare clasă este identificată prin hash (analog cu numele clasei din limbile OOP).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+Un**caz contractual**, sau pur și simplu un contract, este un contract de implementare care corespunde unor clase. Țineți cont că numai cazurile de contract se comportă sub formă de contracte, adică au propria stocare și sunt apelabile prin tranzacții/alte contracte. O clasă contractuală nu are în mod necesar un exemplu implementat în StarkNet. Introducerea claselor vine cu mai multe modificări ale protocolului.
 
-#### ‘Declare’ Transaction
+#### Tranzacție „declarare”
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+Introducem un nou tip de tranzacție în StarkNet: tranzacția["declarare"](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction), care permite declararea clasei**a contractului.**Spre deosebire de tranzacția \`deploy\`, aceasta nu implementează o instanță din acea clasă. Starea StarkNet va include o listă a claselor declarate. Noile clase pot fi adăugate prin noua tranzacţie \`declarare\`.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### Sistemul de gestionare a apelurilor și a uzinelor contractuale.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+Odată ce o clasă este declarată, adică, tranzacția \`declare\` corespunzătoare a fost acceptată, putem desfășura noi instanțe din acea clasă. În acest scop, folosim noul apel de sistem \`deploy\`, care ia următoarele argumente:
 
-* The class hash
-* Salt
-* Constructor arguments
+* Hash clasa
+* Sare
+* Argumente constructoare
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+Ulterior, sinscall „implementat” va desfășura o nouă instanță a acestei clase de contracte, a cărui adresă[](https://docs.starknet.io/docs/Contracts/contract-address)va fi determinată de cei trei parametri de mai sus și de adresa implementatorului (contractul care a invocat apelul de sistem).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+Includerea trimiterilor în interiorul unei tranzacții de invocare ne permite să prețuim și să percepem taxe pentru implementări, fără a fi nevoiți să tratăm implementările și invocările în mod diferit. Pentru mai multe informații despre taxele de implementare, a se vedea[documentele](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+Această caracteristică introduce fabricile de contracte în StarkNet, deoarece orice contract poate invoca sinovia \`deploy\`, creând noi contracte.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### Trecerea de la „Delegate Apel” la „Bibliotecă apel”
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+Introducerea claselor ne permite să abordăm o problemă binecunoscută în mecanismul de apel delegat al Ethereum: atunci când un contract execută un apel la un alt contract, are nevoie doar de clasa sa (codul său) și nu de o instanță reală (stocarea acesteia). Prin urmare, faptul de a preciza o anumită situație contractuală atunci când efectuează o cerere de propuneri de delegare este o practică proastă (într-adevăr, a dus la câteva erori în contractele Ethereum – doar clasa trebuie specificată.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+Vechiul apel de sistem \`delegate_call\` devine învechit (vechile contracte care sunt deja implementate vor continua să funcționeze, dar**contractele care folosesc \`delegate_call\` nu vor mai compila**), și este înlocuit cu un nou apel de sistem library_call care primește hash (dintr-o clasă declarată anterior) în locul unei adrese de instanță a contractului. Reţineţi că un singur contract real este implicat într-un apel la bibliotecă, astfel încât să evităm ambiguitatea dintre contractul apelant şi contractul de execuţie.
 
-#### New API endpoints
+#### Obiective noi API
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+Am adăugat două criterii noi la API, permiţând recuperarea datelor legate de clasă:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: returnează definiția clasei dată fiind hash clasa
+* \`get_class_hash_at\\`: returnează hash-ul clasei unui contract implementat având în vedere adresa contractului
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+Rețineți că, pentru a obține direct clasa unui contract mobilizat, în loc să parcurgeți cele două metode de mai sus, poți folosi obiectivul \`get_full_contract\`, care va fi redenumit în versiunile viitoare. Toate punctele finale menționate mai sus sunt utilizabile din[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### Taxe
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+Vom introduce taxe în StarkNet, făcându-le obligatorii (prima pe Testnet, și mai târziu, de asemenea pe Mainnet) pentru ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` (https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\`. Tranzacția \`declare\` nu va necesita taxe în acest moment. In mod similar, \`implementare`` tranzacţii nu vor necesita nici o taxă, dar reţineţi că acest tip de tranzacţie va fi cel mai probabil descurajat în versiunile viitoare.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+În acest domeniu rămân câteva întrebări deschise, cele mai importante fiind modul de percepere a taxelor pentru declaraţiile de contract şi pentru desfăşurarea conturilor StarkNet. Vom aborda aceste probleme în versiunile viitoare.
 
-### What’s Next?
+### Ce urmează?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+Pe baza foii de parcurs pe care am anunțat-o[în februarie](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), ne angajăm să îmbunătățim performanța StarkNet, în general, și, în special, performanța secvențatorului, pentru a obține feedback mai rapid din partea utilizatorilor cu privire la tranzacțiile lor. În versiunea următoare, intenționăm să introducem paralelizarea în secvențier, permițând o producție mai rapidă a blocurilor.
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+Următoarea versiune majoră a StarkNet se va concentra asupra structurii conturilor StarkNet într-un mod similar cu[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). Prin aceasta, ne vom fi finalizat modul în care se comportă conturile StarkNet, făcând încă un pas important către adoptarea în masă!

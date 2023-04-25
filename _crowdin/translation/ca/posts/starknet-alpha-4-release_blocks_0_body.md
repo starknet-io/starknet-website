@@ -1,47 +1,62 @@
-### Exciting Times Ahead
+### Temps emocionants per davant
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4 s'ha llançat avui a Goerli. Aquesta versió és la candidata al llançament de Mainnet i, si tot va segons el previst, es desplegarà a Mainnet a finals de mes.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4 segueix el llançament ple de funcions d'Alpha 3, que incloïa, entre altres coses, millores en els temps de compilació del Caire, constructors de contractes i molt més (vegeu les notes de la versió[completes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+És important</a>
 
-### New Features
+les noves aplicacions.</p> 
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
 
-#### Get this contract’s address
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+### Noves característiques
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+Tot i que l'objectiu principal d'aquesta versió és preparar-se per al desplegament Mainnet, també inclou diverses funcions noves:
 
-#### Block Hash
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
 
-#### Contract Addresses
+#### Obteniu l'adreça d'aquest contracte
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Els contractes ara poden obtenir la seva pròpia adreça mitjançant el nou syscall \`get_contract_address\`. Podem, finalment, posar fi al contracte de selfie.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Contracte de selfie RIP: setembre de 2021-novembre de 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">10 de novembre de 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+#### Bloqueja Hash
+
+Els blocs ara s'identifiquen mitjançant hash en lloc d'Id. Això segueix la nostra darrera transició als hash de transaccions. Totes les API s'han actualitzat en conseqüència. Aviat publicarem la documentació tècnica completa del sistema, que també inclourà l'especificació de l'estructura del bloc.
+
+
+
+#### Adreces del contracte
+
+Aquesta versió introdueix un canvi en la forma en què es calculen les adreces dels contractes. L'adreça és un hash de Pedersen a l'adreça de la persona que truca, un salt (aleatori o escollit pel desplegador), el hash del codi del contracte i el hash dels arguments del constructor, tots afegits per un prefix.
+
+
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash (PREFIX, caller_address, sal, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
 
-Note that this scheme is very similar to CREATE2.
+En la versió actual, l'adreça de la persona que truca sempre és igual a 0, però en futures versions, això permetrà el desplegament de contractes directament des dels contractes existents.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+Tingueu en compte que aquest esquema és molt semblant a CREATE2.
 
-#### Token Bridges
+[Consulteu les notes completes de la versió](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
 
-### Join StarkNet
+#### Ponts de fitxes
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Els ponts testimonis són una part crucial de la infraestructura de StarkNet. Permeten transferir fons cap a i des de StarkNet. El pont no està desplegat en el moment de la publicació, però hauria d'estar disponible en pocs dies, juntament amb la documentació completa de la seva funcionalitat i ús. Una cosa important a tenir en compte és que el pont utilitza el protocol de missatgeria[L1<>L2](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). Com a tal, ofereix temps de retirada curts: un cop s'inclou una retirada en un lot i s'accepta a L1, els fons estan disponibles a l'instant per a l'usuari a L1.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+Aquesta és la primera versió dels ponts testimonis i ens agradaria rebre comentaris de l'ecosistema.
+
+
+
+### Uneix-te a StarkNet
+
+Mai hi ha hagut un millor moment per unir-se a la creixent comunitat StarkNet. Podeu unir-vos a la conversa al[StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participar en un taller en línia[](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)o utilitzar un dels[tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html)per començar a crear la vostra primera aplicació.
+
+Actualització **(novembre de 2021):**StarkNet Alpha està en directe a Ethereum Mainnet

@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Khoảng thời gian thú vị phía trước
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Alpha 4 đã được phát hành hôm nay trên Goerli. Phiên bản này là ứng cử viên phát hành Mainnet và, nếu mọi thứ diễn ra theo đúng kế hoạch, sẽ được triển khai trên Mainnet vào cuối tháng.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Alpha 4 tuân theo bản phát hành đầy đủ tính năng của Alpha 3, bao gồm các cải tiến về thời gian biên dịch Cairo, trình tạo hợp đồng, v.v. (xem[ghi chú phát hành đầy đủ](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Điều quan trọng cần lưu ý: đây vẫn là phiên bản Alpha — để triển khai hợp đồng của bạn khi triển khai Mainnet, vui lòng tuân theo nguyên tắc[tích hợp](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)của ứng dụng mới.
 
-### New Features
+### Các tính năng mới
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Mặc dù trọng tâm chính của phiên bản này là sẵn sàng cho việc triển khai Mainnet, nhưng nó cũng bao gồm một số tính năng mới:
 
-#### Get this contract’s address
+#### Lấy địa chỉ của hợp đồng này
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+Giờ đây, các hợp đồng có thể nhận địa chỉ của riêng chúng thông qua tòa nhà chọc trời mới \`get_contract_address\`. Cuối cùng, chúng ta có thể tạm dừng hợp đồng chụp ảnh tự sướng.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hợp đồng chụp ảnh tự sướng RIP: Tháng 9 năm 2021 - Tháng 11 năm 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">ngày 10 tháng 11 năm 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### khối băm
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+Các khối hiện được xác định thông qua hàm băm thay vì Id. Điều này tuân theo quá trình chuyển đổi mới nhất của chúng tôi sang băm giao dịch. Tất cả các API đã được cập nhật tương ứng. Chúng tôi sẽ sớm phát hành tài liệu kỹ thuật đầy đủ của hệ thống, bao gồm cả thông số kỹ thuật của cấu trúc khối.
 
-#### Contract Addresses
+#### Địa chỉ hợp đồng
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Phiên bản này giới thiệu một sự thay đổi đối với cách tính địa chỉ hợp đồng. Địa chỉ là hàm băm Pedersen trên địa chỉ người gọi, một muối (ngẫu nhiên hoặc do người triển khai chọn), hàm băm mã hợp đồng và hàm băm của các đối số hàm tạo, tất cả đều được thêm vào bởi một tiền tố.
 
 ```
 Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+Trong phiên bản hiện tại, địa chỉ người gọi luôn bằng 0, nhưng trong các phiên bản sau này, điều này sẽ cho phép triển khai các hợp đồng trực tiếp từ các hợp đồng hiện có.
 
-Note that this scheme is very similar to CREATE2.
+Lưu ý rằng lược đồ này rất giống với CREATE2.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Xem ghi chú phát hành đầy đủ](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
-#### Token Bridges
+#### Cầu mã thông báo
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+Cầu mã thông báo là một phần quan trọng của cơ sở hạ tầng StarkNet. Chúng cho phép chuyển tiền đến và đi từ StarkNet. Cầu không được triển khai tại thời điểm xuất bản, nhưng nó sẽ có sẵn sau vài ngày nữa — cùng với tài liệu đầy đủ về chức năng và cách sử dụng của nó. Một điều quan trọng cần lưu ý là cây cầu sử dụng giao thức[L1 <> L2 nhắn tin](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html). Do đó, nó cung cấp thời gian rút tiền ngắn — sau khi một lần rút tiền được đưa vào một đợt và được chấp nhận trên L1, tiền sẽ có sẵn ngay lập tức cho người dùng trên L1.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Đây là phiên bản đầu tiên của cầu nối mã thông báo và chúng tôi rất muốn nhận được phản hồi từ hệ sinh thái về nó.
 
-### Join StarkNet
+### Tham gia StarkNet
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Chưa bao giờ có thời điểm tốt hơn để tham gia cộng đồng StarkNet đang phát triển. Bạn có thể tham gia cuộc trò chuyện trong[StarkNet discord](https://discord.gg/uJ9HZTUk2Y), tham gia hội thảo trực tuyến[](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)hoặc sử dụng một trong[hướng dẫn](https://www.cairo-lang.org/docs/hello_starknet/index.html)để bắt đầu xây dựng ứng dụng đầu tiên của riêng bạn.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Update (tháng 11 năm 2021):**StarkNet Alpha hoạt động trên Ethereum Mainnet

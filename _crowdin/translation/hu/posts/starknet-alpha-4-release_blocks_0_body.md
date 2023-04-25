@@ -1,47 +1,47 @@
-### Exciting Times Ahead
+### Izgalmas idők előtt
 
-Alpha 4 was released today on Goerli. This version is the Mainnet release candidate and, if everything goes according to plan, will be deployed on Mainnet by the month’s end.
+Az Alpha 4 ma megjelent a Goerli-n. Ez a verzió a Mainnet kiadás jelöltje, és ha minden a terveknek megfelelően alakul, a hónap végéig a Mainnet-en kerül forgalomba.
 
-Alpha 4 follows the features-packed release of Alpha 3, which included, among other things, improvements to the Cairo compilation times, contract constructors, and much more (see the [full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
+Az Alpha 4 az Alpha 3 funkciókkal teli kiadását követi, amely többek között a kairói fordítási idők javítását, a szerződéses konstruktőröket és még sok mást tartalmazott (lásd a[teljes kiadási megjegyzéseket](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.5.0)).
 
-Important to note: this is still an Alpha version — to deploy your contract on the Mainnet deployment, please follow the new apps’ [onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu) guidelines.
+Fontos megjegyezni: ez még mindig egy Alpha verzió – a szerződés Mainnet rendszeren történő telepítéséhez kövesse az új alkalmazások[onboarding](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu)irányelveit.
 
-### New Features
+### Új funkciók
 
-Although this version’s main focus is on getting ready for the Mainnet deployment, it also includes several new features:
+Bár ennek a verziónak a fő célja a Mainnet bevezetésre való felkészülés, számos új funkciót is tartalmaz:
 
-#### Get this contract’s address
+#### Szerezze meg a szerződés címét
 
-Contracts can now get their own address via the new syscall \`get_contract_address\`. We can, finally, put the selfie contract to rest.
+A szerződések mostantól megkaphatják saját címüket az új \`get_contract_address\` syscall segítségével. Végül leállíthatjuk a szelfiszerződést.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP selfie contract: September 2021-November 2021</p>&mdash; Francesco Ceccon (@ceccon_me) <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RIP szelfi szerződés: 2021. szeptember – 2021. november</p>&mdash; Francesco Ceccon (@ceccon_me) 2021. november <a href="https://twitter.com/ceccon_me/status/1458410251078836227?ref_src=twsrc%5Etfw">1.</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-#### Block Hash
+#### Hash blokkolása
 
-Blocks are now identified via hash rather than Id. This follows our latest transition to transaction hashes. All APIs have been updated accordingly. We will soon release full technical documentation of the system, which will also include the specification of the block structure.
+A blokkokat immár hash segítségével azonosítják, nem pedig azonosítóval. Ez a tranzakciós hashekre való legutóbbi átállásunkat követi. Az összes API-t ennek megfelelően frissítettük. Hamarosan kiadjuk a rendszer teljes műszaki dokumentációját, amely a blokkszerkezet specifikációját is tartalmazza.
 
-#### Contract Addresses
+#### Szerződési címek
 
-This version introduces a change to the way contract addresses are calculated. The address is a Pedersen hash on the caller address, a salt (random or chosen by the deployer), the contract code hash, and the hash of the constructor arguments, all appended by a prefix.
+Ez a verzió megváltoztatja a szerződési címek kiszámításának módját. A cím egy Pedersen-kivonat a hívó címén, egy só (véletlenszerű vagy a telepítő által választott), a szerződéskód-kivonat és a konstruktor argumentumainak hash-je, mindegyik előtaggal hozzáfűzve.
 
 ```
-Hash(PREFIX, caller_address, salt, contract_hash, ctr_args_hash)
+Hash(PREFIX, hívó_címe, só, szerződés_kivonat, ctr_args_hash)
 ```
 
-In the current version, the caller address always equals 0, but in future versions, this will enable the deployment of contracts directly from existing contracts.
+A jelenlegi verzióban a hívó címe mindig 0, de a jövőbeli verziókban ez lehetővé teszi a szerződések közvetlenül a meglévő szerződésekből történő telepítését.
 
-Note that this scheme is very similar to CREATE2.
+Vegye figyelembe, hogy ez a séma nagyon hasonlít a CREATE2-hez.
 
-[See the full release notes](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
+[Tekintse meg a teljes kiadási megjegyzéseket](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.6.0)
 
 #### Token Bridges
 
-Token bridges are a crucial part of StarkNet infrastructure. They allow transferring funds to and from StarkNet. The bridge is not deployed at the time of publication, but it should be available in a few days — along with the full documentation of its functionality and usage. One thing important to note is that the bridge uses the [L1<>L2 messaging](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html) protocol. As such, it offers short withdrawal times — once a withdrawal is included in a batch and accepted on L1, the funds are available instantly to the user on L1.
+A token hidak a StarkNet infrastruktúra kulcsfontosságú részét képezik. Lehetővé teszik pénzeszközök átutalását a StarkNetbe és onnan. A hidat a közzététel időpontjában még nem telepítették, de néhány napon belül elérhető lesz – a funkcionalitásának és használatának teljes dokumentációjával együtt. Egy dolgot fontos megjegyezni, hogy a híd a[L1<>L2 üzenetküldő](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)protokollt használja. Mint ilyen, rövid kifizetési időket kínál – amint a kifizetés egy kötegbe kerül, és az L1-en elfogadásra kerül, az alap azonnal elérhető a felhasználó számára az L1-en.
 
-This is the first version of the token bridges, and we would love to get feedback from the ecosystem on it.
+Ez a token hidak első verziója, és szeretnénk visszajelzést kapni az ökoszisztémától.
 
-### Join StarkNet
+### Csatlakozz a StarkNethez
 
-There has never been a better time to join the growing StarkNet community. You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+Soha nem volt jobb alkalom a növekvő StarkNet közösséghez való csatlakozásra. Csatlakozhat a beszélgetéshez a[StarkNet diszcordban](https://discord.gg/uJ9HZTUk2Y), részt vehet egy[online workshopon](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), vagy használhatja a[oktatóanyag egyikét](https://www.cairo-lang.org/docs/hello_starknet/index.html)az első saját alkalmazás elkészítéséhez.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Frissítés (2021. november):**StarkNet Alpha élőben az Ethereum Mainnet oldalon

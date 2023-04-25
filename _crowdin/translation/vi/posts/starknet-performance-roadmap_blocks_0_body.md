@@ -1,79 +1,79 @@
-### TL;DR
+### TL; DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* Các bản tổng hợp hiệu lực không bị giới hạn về thông lượng giống như L1. Điều này dẫn đến TPS có khả năng cao hơn nhiều đối với các bản tổng hợp hợp lệ L2.
+* Lộ trình hiệu suất của StarkNet đề cập đến một yếu tố chính trong hệ thống: trình sắp xếp thứ tự.
+* Chúng tôi trình bày ở đây lộ trình cải tiến hiệu suất:\
+  — Song song hóa trình sắp xếp thứ tự\
+  — Triển khai gỉ mới cho VM Cairo\
+  — Triển khai lại trình sắp xếp trong gỉ\
+* Các nhà cung cấp dịch vụ, đã được thử nghiệm trong trận chiến như hiện tại, không phải là nút cổ chai và có thể xử lý nhiều hơn những gì họ làm bây giờ!
 
-### Intro
+### giới thiệu
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+StarkNet đã ra mắt trên Mainnet gần một năm trước. Chúng tôi bắt đầu xây dựng StarkNet bằng cách tập trung vào chức năng. Bây giờ, chúng tôi chuyển trọng tâm sang cải thiện hiệu suất bằng một loạt các bước sẽ giúp nâng cao trải nghiệm StarkNet.
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+Trong bài đăng này, chúng tôi giải thích lý do tại sao có nhiều loại tối ưu hóa chỉ áp dụng được trong các bản tổng hợp hợp lệ và chúng tôi sẽ chia sẻ kế hoạch của mình để triển khai các bước này trên StarkNet. Một số bước này đã được triển khai trong StarkNet Alpha 0.10.2, được phát hành trên Testnet vào ngày 16 tháng 11 và hôm qua trên Mainnet. Nhưng trước khi thảo luận về các giải pháp, chúng ta hãy xem lại những hạn chế và nguyên nhân của chúng.
 
-### Block limitations: validity rollups versus L1
+### Giới hạn khối: rollup hợp lệ so với L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+Một cách tiếp cận tiềm năng để tăng khả năng mở rộng chuỗi khối và tăng TPS sẽ là dỡ bỏ các giới hạn khối (về gas/kích thước) trong khi vẫn giữ thời gian khối không đổi. Điều này sẽ đòi hỏi nhiều nỗ lực hơn từ các nhà sản xuất khối (trình xác thực trên L1, trình sắp xếp theo trình tự trên L2) và do đó yêu cầu triển khai các thành phần đó hiệu quả hơn. Để đạt được mục tiêu này, bây giờ chúng tôi chuyển trọng tâm sang tối ưu hóa trình sắp xếp chuỗi StarkNet, chúng tôi sẽ mô tả chi tiết hơn trong các phần sau.
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+Một câu hỏi tự nhiên phát sinh ở đây. Tại sao việc tối ưu hóa trình tự trình tự bị giới hạn đối với các bản tổng hợp hợp lệ, nghĩa là tại sao chúng ta không thể triển khai các cải tiến tương tự trên L1 và tránh hoàn toàn sự phức tạp của các bản tổng hợp hợp lệ? Trong phần tiếp theo, chúng tôi khẳng định rằng có sự khác biệt cơ bản giữa hai loại này, cho phép một loạt các tối ưu hóa trên L2 không áp dụng được cho L1.
 
-### Why is L1 throughput limited?
+### Tại sao thông lượng L1 bị hạn chế?
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+Thật không may, việc dỡ bỏ các giới hạn khối trên L1 gặp phải một cạm bẫy lớn. Bằng cách tăng tốc độ tăng trưởng của chuỗi, chúng tôi cũng tăng nhu cầu từ các nút đầy đủ, những người đang cố gắng theo kịp trạng thái gần đây nhất. Vì các nút đầy đủ L1 phải thực hiện lại tất cả lịch sử, nên kích thước khối tăng cao (về gas) gây áp lực đáng kể lên chúng, một lần nữa dẫn đến các máy yếu hơn rời khỏi hệ thống và không có khả năng chạy các nút đầy đủ chỉ cho các thực thể đủ lớn. Do đó, người dùng sẽ không thể tự xác minh trạng thái và tham gia vào mạng một cách đáng tin cậy.
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+Điều này khiến chúng tôi hiểu rằng thông lượng L1 nên bị hạn chế, để duy trì một hệ thống an toàn và phi tập trung thực sự.
 
-### Why don’t the same barriers affect validity rollups?
+### Tại sao các rào cản tương tự không ảnh hưởng đến các bản tổng hợp hợp lệ?
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**Chỉ khi xem xét phối cảnh nút đầy đủ, chúng ta mới thấy sức mạnh thực sự do các bản tổng hợp hợp lệ mang lại.**Nút đầy đủ L1 cần thực hiện lại toàn bộ lịch sử để đảm bảo tính chính xác của trạng thái hiện tại. Các nút StarkNet chỉ cần xác minh bằng chứng STARK và việc xác minh này cần lượng tài nguyên tính toán thấp hơn theo cấp số nhân. Cụ thể, việc đồng bộ hóa từ đầu không nhất thiết phải thực thi; một nút có thể nhận kết xuất trạng thái hiện tại từ các đồng nghiệp của nó và chỉ xác minh thông qua bằng chứng STARK rằng trạng thái này hợp lệ. Điều này cho phép chúng tôi tăng thông lượng của mạng mà không cần tăng các yêu cầu từ nút đầy đủ.
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+Do đó, chúng tôi kết luận rằng trình sắp xếp thứ tự L2 tuân theo toàn bộ phạm vi tối ưu hóa không thể thực hiện được trên L1.
 
-### Performance roadmap ahead
+### Lộ trình hiệu suất phía trước
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+Trong các phần tiếp theo, chúng ta sẽ thảo luận về những phần nào hiện đang được lên kế hoạch cho trình sắp xếp chuỗi StarkNet.
 
-### Sequencer parallelization
+### song song hóa trình tự
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+Bước đầu tiên trong lộ trình của chúng tôi là giới thiệu song song hóa việc thực hiện giao dịch. Điều này đã được giới thiệu trong StarkNet alpha 0.10.2, được phát hành hôm qua trên Mainnet. Bây giờ chúng ta đi sâu vào việc song song hóa là gì (đây là phần bán kỹ thuật, để tiếp tục lộ trình, hãy chuyển sang phần tiếp theo).
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+Vậy “song song hóa giao dịch” nghĩa là gì? Một cách ngây thơ, việc thực hiện song song một khối các giao dịch là không thể vì các giao dịch khác nhau có thể phụ thuộc vào nhau. Điều này được minh họa trong ví dụ sau đây. Hãy xem xét một khối có ba giao dịch từ cùng một người dùng:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* Giao dịch A: đổi USDC lấy ETH
+* Giao dịch B: trả ETH cho một NFT
+* Giao dịch C: đổi USDT lấy BTC
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+Rõ ràng, Tx A phải xảy ra trước Tx B, nhưng Tx C hoàn toàn độc lập với cả hai và có thể được thực hiện song song. Nếu mỗi giao dịch cần 1 giây để thực hiện, thì thời gian sản xuất khối có thể giảm từ 3 giây xuống 2 giây bằng cách giới thiệu song song hóa.
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+Mấu chốt của vấn đề là chúng ta không biết trước các phụ thuộc của giao dịch. Trong thực tế, chỉ khi chúng tôi thực hiện giao dịch B từ ví dụ của chúng tôi, chúng tôi mới thấy rằng nó phụ thuộc vào những thay đổi được thực hiện bởi giao dịch A. Chính thức hơn, sự phụ thuộc xuất phát từ thực tế là giao dịch B đọc từ các ô lưu trữ mà giao dịch A đã ghi vào. Chúng ta có thể coi các giao dịch giống như một biểu đồ phụ thuộc, trong đó có một cạnh từ giao dịch A đến giao dịch B nếu A ghi vào một ô lưu trữ được B đọc và do đó phải được thực thi trước B. Hình dưới đây cho thấy một ví dụ về biểu đồ phụ thuộc như vậy:
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+Trong ví dụ trên, mỗi cột có thể được thực hiện song song và đây là cách sắp xếp tối ưu (trong khi ngây thơ, chúng ta sẽ thực hiện các giao dịch 1–9 theo tuần tự).
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+Để khắc phục thực tế là biểu đồ phụ thuộc không được biết trước, chúng tôi giới thiệu***song song hóa lạc quan***, theo tinh thần của[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)do Aptos Labs phát triển, cho trình giải trình tự StarkNet. Theo mô hình này, chúng tôi cố gắng chạy các giao dịch song song một cách lạc quan và thực hiện lại khi tìm thấy xung đột. Ví dụ: chúng tôi có thể thực hiện song song các giao dịch 1–4 từ hình 1, chỉ để sau đó phát hiện ra rằng Tx4 phụ thuộc vào Tx1. Do đó, việc thực thi của nó là vô ích (chúng tôi đã chạy nó tương ứng với cùng trạng thái mà chúng tôi đã chạy Tx1, trong khi lẽ ra chúng tôi nên chạy nó với trạng thái do áp dụng Tx1). Trong trường hợp đó, chúng tôi sẽ thực hiện lại Tx4.
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+Lưu ý rằng chúng ta có thể thêm nhiều tối ưu hóa trên song song hóa lạc quan. Ví dụ, thay vì ngây thơ chờ đợi mỗi lần thực thi kết thúc, chúng ta có thể hủy bỏ một lần thực thi ngay khi chúng ta tìm thấy một phụ thuộc làm mất hiệu lực của nó.
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+Một ví dụ khác là tối ưu hóa lựa chọn thực hiện lại giao dịch nào. Giả sử rằng một khối bao gồm tất cả các giao dịch từ hình 1 được đưa vào một trình sắp xếp thứ tự có năm lõi CPU. Đầu tiên, chúng tôi cố gắng thực hiện song song các giao dịch 1–5. Nếu thứ tự hoàn thành là Tx2, Tx3, Tx4, Tx1 và cuối cùng là Tx5, thì chúng ta sẽ tìm thấy phụ thuộc Tx1→Tx4 chỉ sau khi Tx4 đã được thực thi — cho biết rằng nó sẽ được thực hiện lại. Một cách ngây thơ, chúng tôi cũng có thể muốn thực thi lại Tx5 vì nó có thể hoạt động khác đi khi thực thi Tx4 mới. Tuy nhiên, thay vì chỉ thực hiện lại tất cả các giao dịch sau Tx4 hiện đã bị vô hiệu hóa, chúng ta có thể duyệt qua biểu đồ phụ thuộc được tạo từ các giao dịch mà việc thực thi của chúng đã kết thúc và chỉ thực hiện lại các giao dịch phụ thuộc vào Tx4.
 
-### A new Rust implementation for the Cairo-VM
+### Một triển khai Rust mới cho Cairo-VM
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+Hợp đồng thông minh trong StarkNet được viết ở Cairo và được thực thi bên trong Cairo-VM, thông số kỹ thuật này xuất hiện trong bài báo[Cairo](https://eprint.iacr.org/2021/1063.pdf). Hiện tại, trình sắp xếp thứ tự đang sử dụng triển khai[python](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)của Cairo-VM. Để tối ưu hóa hiệu suất triển khai VM, chúng tôi đã đưa ra nỗ lực viết lại VM trong tình trạng rỉ sét. Nhờ vào công việc tuyệt vời của[Lambdaclass](https://lambdaclass.com/), những người hiện là một nhóm vô giá trong hệ sinh thái StarkNet, nỗ lực này sẽ sớm thành hiện thực.
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+Việc triển khai rỉ sét của VM,[cairo-rs](https://github.com/lambdaclass/cairo-rs), hiện có thể thực thi mã Cairo gốc. Bước tiếp theo là xử lý việc thực thi hợp đồng thông minh và tích hợp với trình sắp xếp chuỗi Pythonic. Sau khi được tích hợp với cairo-rs, hiệu suất của trình sắp xếp thứ tự dự kiến sẽ cải thiện đáng kể.
 
-### Sequencer re-implementation in Rust
+### Triển khai lại trình tự sắp xếp trong Rust
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+Sự thay đổi của chúng tôi từ python sang gỉ để cải thiện hiệu suất không chỉ giới hạn ở Cairo VM. Bên cạnh những cải tiến được đề cập ở trên, chúng tôi dự định viết lại trình sắp xếp theo trình tự từ đầu. Ngoài các lợi thế bên trong của Rust, điều này tạo cơ hội cho các tối ưu hóa khác cho trình sắp xếp thứ tự. Liệt kê một vài, chúng ta có thể tận hưởng những lợi ích của cairo-rs mà không cần giao tiếp với python-rust và chúng ta có thể thiết kế lại hoàn toàn cách lưu trữ và truy cập trạng thái (ngày nay dựa trên cấu trúc[Patricia-Trie](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
 
-### What about provers?
+### Còn những câu tục ngữ thì sao?
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+Trong suốt bài đăng này, chúng tôi đã không đề cập đến yếu tố có lẽ nổi tiếng nhất về tính hợp lệ - câu tục ngữ. Người ta có thể tưởng tượng rằng là thành phần được cho là phức tạp nhất của kiến trúc, nó phải là nút thắt cổ chai và do đó, là trọng tâm của việc tối ưu hóa. Thật thú vị, chính các thành phần “tiêu chuẩn” hơn hiện là nút thắt cổ chai của StarkNet. Ngày nay, đặc biệt với[bằng chứng đệ quy](https://medium.com/starkware/recursive-starks-78f8dd401025), chúng tôi có thể đưa nhiều giao dịch hơn lưu lượng truy cập hiện tại trên Testnet/Mainnet vào một bằng chứng. Trên thực tế, ngày nay, các khối StarkNet được chứng minh cùng với các giao dịch StarkEx, trong đó các khối sau đôi khi có thể phát sinh vài trăm nghìn NFT.
 
-### Summary
+### Bản tóm tắt
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+Song song hóa, Rust, v.v. — chuẩn bị tinh thần để có TPS được cải thiện trong các phiên bản StarkNet sắp tới.

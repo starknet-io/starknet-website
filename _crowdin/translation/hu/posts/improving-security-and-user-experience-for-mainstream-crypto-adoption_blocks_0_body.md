@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+A blokklánc technológiai innovációja virágzott az elmúlt néhány évben – a STARK-ok, a SNARK-ok, az EIP-1559, az Ethereum Merge – mind hatalmas technológiai vívmányok. Az UX és a felhasználói felület kialakítása azonban nem tudott lépést tartani. Az emberek még mindig leragadnak a 16 szavas mag-kifejezéseknél, és a DeFi-be való belépés központi közvetítő nélkül még mindig túlságosan megfélemlítő sokak számára. A következő egymilliárd felhasználó Web3-ba való bekapcsolásához elengedhetetlen a felhasználói beépítési élmény javítása.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Ahogy az FTX (és a Gemini, a Celsius és a Mt. Gox) bebizonyította, a vagyon feletti öngondnok megőrzése rendkívül fontos. Mindazonáltal egészen a közelmúltig az öngondoskodó pénztárcák nehézkesek és zavaróak voltak az átlagfelhasználók számára. A legtöbb ember havonta elfelejti a Web2 jelszavát; hogyan várják el a felhasználóktól, hogy az örökkévalóságig biztonságban tartsák magfrázisukat és privát kulcsaikat?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Egyszerűen fogalmazva, ez egy biztonsági rémálom. Amint azt számtalanszor láthattuk, egyetlen rossz lépés, akár rossz színészek, akár hanyagság kezdeményezte, dollármilliók elvesztését eredményezheti.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Az új kriptográfiai felhasználók első kapcsolati pontjaként az Ethereum pénztárcáknak könnyen használhatónak, biztonságosnak és személyre szabhatónak kell lenniük, hogy megfeleljenek az egyes felhasználók igényeinek. Ez megköveteli a fejlesztőktől, hogy integrálják a Web2 pénzügyi termékek egyszerűségét a Web3 szolgáltatásaival.
 
-This is exactly what account abstraction achieves.
+A fiókabsztrakció pontosan ezt éri el.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+A fiókabsztrakció javítja az önmegőrző pénztárcatermékek biztonságát azáltal, hogy megszünteti a felhasználók magánkulcstól való függőségét, és programozhatóbbá teszi a pénztárcákat. Ezzel a továbbfejlesztett felhasználói élménynek köszönhetően a nem őrizetbe vett pénztárcák végre több millió mainstream kripto-felhasználóhoz is méretezhetők.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+De ahhoz, hogy teljes mértékben megértsük a fiókabsztrakció hatását, fel kell frissítenünk magunkat az Ethereum-fiókok működésére.
 
-### The basics of Ethereum accounts
+### Az Ethereum-fiókok alapjai
 
-There are two types of Ethereum accounts:
+Kétféle Ethereum-fiók létezik:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Külső tulajdonú fiókok (EOA)
+2. Szerződéses számlák (CA)
 
-Let’s break each down a bit further.
+Bontsuk mindegyiket egy kicsit tovább.
 
-### Externally owned accounts
+### Külső tulajdonú fiókok
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+A külső tulajdonú fiókok, mint például a MetaMask és a Coinbase Wallet, a tipikus fióktípusok az Ethereum-felhasználók számára. Minden EOA egy privát és egy nyilvános kulcsból, úgynevezett kulcspárból áll.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Minden tranzakciót privát kulcsok engedélyeznek és írnak alá. A tranzakció aláírását követően az EVM az EOA számlacímével ellenőrzi, hogy az aláírás érvényes-e. Az EVM keménykódolt logikája azt jelenti, hogy a fiók (a tokeneket tároló objektum) és a privát kulcs (aláíró) egyként van összekapcsolva.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+A privát kulcs elvesztése azt jelenti, hogy örökre elveszíti pénzeszközeit, vagy akár a fiókja feletti ellenőrzést is.
 
-### Contract accounts
+### Szerződéses számlák
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Eközben a szerződéses számlák, amelyek a fiókabsztrakció szinonimája, az Ethereum blokkláncon telepített intelligens szerződések. Ezeket a szerződéseket kódlogika vezérli, és nem igényelnek privát kulcsot. Az EOA-kkal ellentétben a szerződéses számlák nem kezdeményezhetnek tranzakciókat. Ehelyett tranzakcióikat az EOA-k utasításai váltják ki.
 
-### Why account abstraction matters
+### Miért számít a fiókabsztrakció?
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+A fiókabsztrakció azt jelenti, hogy a kemény kódolt engedélyezési logikát el kell távolítani az EOA-któl, és minden fiókot programozható intelligens szerződéssé alakítanak, amely bármely személy igényeihez igazítható.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Amint azt Argent társalapítója és tudományos igazgató, Julien Niset kifejtette a közelmúltban egy[Stark @ Home eseményben](https://www.crowdcast.io/e/7olimxqv), ez a rugalmas engedélyezési logika szabadságot ad a fejlesztőknek, hogy kijátszhassanak olyan fiókfunkciókkal, mint például….
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Hardveres aláíró:**iPhone vagy Android biztonságos enklávéjával bármilyen okostelefont hardveres pénztárcává alakíthat. Innen a felhasználók biometrikus adatok, például ujjlenyomat vagy Apple Face ID segítségével ellenőrizhetik a tranzakciókat. Már láttuk, hogy a Braavos[hoz hasonló önvédelmi pénztárcák bevezetik ezt a funkciót.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Fizetősök:**Lehetővé teszi a felhasználók számára, hogy bármilyen tokenben fizessenek gázdíjat, vagy akár egy harmadik fél által tervezett fizetési mechanizmust kérjenek a tranzakciókért.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Közösségi helyreállítás:**Abban az esetben, ha egy privát kulcs elveszik vagy feltört, a felhasználók új kulcsot engedélyezhetnek a pénztárca törvényes tulajdonosaként. Ez magában foglalhat különféle helyreállítási módszereket megbízható kapcsolatokon, hardveres pénztárcákon vagy harmadik féltől származó szolgáltatásokon keresztül. Az ötlet az, hogy a fiókjához való hozzáférés helyreállítása olyan egyszerű legyen, mint a bankszámlajelszó visszaállítása e-mailben.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Többtényezős hitelesítés:**A szokásos Web2 2FA gyakorlatokhoz hasonlóan a felhasználók két (vagy több) hitelesítési módszert állíthatnak be kriptopénztárcájukhoz, ahol a tranzakciót csak akkor írják alá, ha a felhasználó megerősíti a jóváhagyást egy második lehetőséggel, például e-mailben vagy SMS-ben. A felhasználók napi átutalási limiteket vagy számlacímlistákat is beállíthatnak, amelyekkel a pénztárca automatikusan blokkolva van.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Kvantumellenálló és gázhatékony aláírások:**Az Ethereum jelenlegi aláírási rendszere, az ECDSA számításilag kiterjedt (értsd: magasabb gázdíjak), és a kvantumszámítógépek feltörhetik. Az aláírás-absztrakció révén a különböző számlaszerződések hatékonyabb és kvantumbiztonságosabb aláírási sémákat használnak. A StarkNet saját szabadalmaztatott STARK-barát görbéjét használja.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Ezek a funkciók nemcsak nagyobb biztonságot és nagyobb rugalmasságot biztosítanak a felhasználóknak, de ami még fontosabb, sokkal****felhasználói élményt eredményeznek.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Vitalik Buterin az Ethereum fejlesztői közösség „régi álmaként” szerepelt, és a fiókabsztrakcióval kapcsolatos innovációk, főként az EIP-2938 és az EIP-3074, 2020 óta kavarognak. Azonban mindkettő kompromisszumot igényelt a biztonság és a megvalósítás körül. [Az EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), az eddigi legígéretesebb fejlesztés, a fiókabsztrakció egy változatát javasolja anélkül, hogy az Ethereum protokollon módosítani kellene.
 
-### **Account abstraction and Starknet**
+### **Fiókabsztrakció és Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Ellentétben a Bitcoinnal és az Ethereummal, amelyek utólag módosítják jelenlegi protokolljaikat, hogy támogassák a számlaabsztrakciót, a[StarkNet](https://starkware.co/starknet/)az első nap óta alkalmazza a fiókabsztrakciót. STARK proofjaink méretezhetőségével és képességeivel párosítva a pénztárca innovációjának lehetősége határtalan. Ez az oka annak, hogy az öngondozó pénztárcák következő generációja, mint például az Argent és a Braavos, jelenleg hálózatunk tetejére épül.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+A StarkNet megközelítése hasonló az EIP-4337-hez,[elismerve, hogy](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)teljes fiókabsztrakció továbbra is zavaros UX-hez vezet,[pedig megnyithatja az ajtót](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)a szekvenszerek elleni támadások előtt. Inkább az aláírás-absztrakciót és a fizetési elvonást kívánja elérni a szükséges láncon belüli és azon kívüli infrastruktúrák egyesítése révén.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+És bár még mindig sok a tennivaló, a fiókabsztrakció egyre nagyobb teret hódít a kriptobennszülöttek szűk körében. Decemberben a[Visa azt az ötletet](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)javasolta, hogy számlaabsztrakciót alkalmazzanak az automatikus ismétlődő fizetések beállítására a StarkNeten. Egy átruházható fiók használatával a felhasználók engedélyt adhatnak fizetés kezdeményezésére egy előre jóváhagyott intelligens szerződés alapján. Innentől kezdve az intelligens szerződés úgy lesz programozva, hogy egy meghatározott napon, meghatározott időtartamon keresztül levonjon egy meghatározott fizetési összeget. Bár a Visa még nem fedte fel saját szolgáltatásaival kapcsolatos terveit, az érdeklődés önmagában sokat mond, és előrevetítheti azt a világot, ahol a nagytechnológiás előfizetési platformok, például a Netflix és a Spotify felkarolhatják a kriptográfiai átvételt.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Hogy mit hoz a jövő, azt csak az idő fogja megmondani. De egy dolog biztos. A pénztárcák egyszerűbbé és biztonságosabbá tételével a fiókabsztrakció hatékony katalizátorként fog szolgálni az önőrző blokklánc-pénztárcák számára, amelyek több millió mainstream kripto-felhasználóhoz is eljuthatnak. Addig is folytatjuk az építkezést.

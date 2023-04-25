@@ -1,62 +1,62 @@
-### TL;DR
+### TL; DR
 
-StarkNet Alpha 1 has two new features:
+StarkNet Alpha 1 có hai tính năng mới:
 
-* L1<>L2 interaction
-* On-chain data
+* Tương tác L1<>L2
+* Dữ liệu trên chuỗi
 
-### Introduction
+### Giới thiệu
 
-At the beginning of the year, we announced that StarkWare is building [StarkNet](https://starkware.co/product/starknet/), a permissionless decentralized STARK-based ZK-Rollup¹ operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation — without compromising Ethereum’s composability and security.
+Vào đầu năm, chúng tôi đã thông báo rằng StarkWare đang xây dựng[StarkNet](https://starkware.co/product/starknet/), một ZK-Rollup¹ dựa trên STARK phi tập trung không được phép hoạt động như một mạng L2 trên Ethereum. StarkNet cho phép bất kỳ dApp nào đạt được quy mô không giới hạn cho tính toán của nó — mà không ảnh hưởng đến khả năng kết hợp và bảo mật của Ethereum.
 
-Last month, [StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95) was released to the world. For the first time, developers are able to [write](https://kobi.one/2021/07/14/stardrop.html) any smart contract and deploy it, permissionlessly, to a ZK-Rollup. Users are able to send transactions to the network, Ethereum-style.
+Tháng trước,[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)đã được phát hành ra thế giới. Lần đầu tiên, các nhà phát triển có thể viết[bất](https://kobi.one/2021/07/14/stardrop.html)hợp đồng thông minh nào và triển khai nó một cách không cần xin phép vào ZK-Rollup. Người dùng có thể gửi các giao dịch đến mạng, theo kiểu Ethereum.
 
-Today we are releasing a new version; Alpha 1. We are releasing features on a rolling basis to allow developers to interact with new features as soon as possible. We anticipate that this will tighten the feedback cycle and allow community feedback to quickly improve StarkNet.
+Hôm nay chúng tôi sẽ phát hành một phiên bản mới; Anpha 1. Chúng tôi đang phát hành các tính năng trên cơ sở cuốn chiếu để cho phép các nhà phát triển tương tác với các tính năng mới sớm nhất có thể. Chúng tôi dự đoán rằng điều này sẽ thắt chặt chu kỳ phản hồi và cho phép phản hồi của cộng đồng để nhanh chóng cải thiện StarkNet.
 
-### **Alpha 1 Features**
+### **Tính năng Alpha 1**
 
-#### L1<>L2 Interaction
+#### Tương tác L1<>L2
 
-Alpha 1 includes an L1<>L2 messaging protocol, which allows developers to implement seamless transaction flows between L1 and L2. Developers can now send messages from contracts on L1 to contracts on L2 and vice versa.
+Alpha 1 bao gồm một giao thức nhắn tin L1<>L2, cho phép các nhà phát triển triển khai các luồng giao dịch liền mạch giữa L1 và L2. Các nhà phát triển hiện có thể gửi tin nhắn từ hợp đồng trên L1 đến hợp đồng trên L2 và ngược lại.
 
-One of the beauties of ZK-Rollups is that state updates are final, without any delay. This means that messages that were sent from L2 to L1 can be immediately forwarded to their destination contract. This opens the way to build apps that are truly interoperable between the layers.
+Một trong những điểm hay của ZK-Rollups là các cập nhật trạng thái là cuối cùng, không có bất kỳ sự chậm trễ nào. Điều này có nghĩa là các tin nhắn được gửi từ L2 đến L1 có thể được chuyển tiếp ngay lập tức đến hợp đồng đích của chúng. Điều này mở ra cách xây dựng các ứng dụng thực sự có thể tương tác giữa các lớp.
 
-Interested in trying it out? The best way to get started is to follow the tutorial [here](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html).
+Quan tâm đến việc thử nó ra? Cách tốt nhất để bắt đầu là làm theo hướng dẫn[tại đây](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html).
 
-Our L1<>L2 protocol owes much to other L2s (specifically Optimism and Arbitrum) whose previous work in this area influenced our design.
+Giao thức L1<>L2 của chúng tôi phụ thuộc rất nhiều vào các L2 khác (cụ thể là Chủ nghĩa lạc quan và Arbitrum) mà công việc trước đây trong lĩnh vực này đã ảnh hưởng đến thiết kế của chúng tôi.
 
-#### On-Chain Data-Availability
+#### Tính khả dụng của dữ liệu trên chuỗi
 
-StarkNet’s state update is now also published as on-chain data on Ethereum. This allows any user to fully construct StarkNet’s state from L1 data. Each state update includes the state diff, i.e., what storage was changed and its new value.
+Bản cập nhật trạng thái của StarkNet hiện cũng được xuất bản dưới dạng dữ liệu trực tuyến trên Ethereum. Điều này cho phép bất kỳ người dùng nào xây dựng đầy đủ trạng thái của StarkNet từ dữ liệu L1. Mỗi cập nhật trạng thái bao gồm khác biệt trạng thái, nghĩa là bộ nhớ nào đã được thay đổi và giá trị mới của nó.
 
-Here also, ZK-Rollup shows its strength. In contrast to Optimistic Rollups, in which the full transactions’ data must be sent on-chain, in ZK-Rollups, only the absolute minimum data required to derive the state diff is sent on-chain.
+Ở đây cũng vậy, ZK-Rollup cho thấy sức mạnh của nó. Ngược lại với Bản tổng hợp lạc quan, trong đó dữ liệu của giao dịch đầy đủ phải được gửi trên chuỗi, trong ZK-Rollups, chỉ dữ liệu tối thiểu tuyệt đối cần thiết để lấy được độ khác biệt trạng thái mới được gửi trên chuỗi.
 
-Consider a prime example, price oracles. A transaction to update a price oracle usually contains multiple transactions but updates only one storage cell; the pair’s price. The on-chain data required for a state update containing price oracle transactions in an Optimistic Rollup grows linearly with the number of updates, while in a ZK-Rollup, it will always be a single storage update.
+Hãy xem xét một ví dụ điển hình, tiên tri về giá. Một giao dịch để cập nhật dự đoán giá thường chứa nhiều giao dịch nhưng chỉ cập nhật một ô lưu trữ; giá của cặp. Dữ liệu trên chuỗi cần thiết cho một bản cập nhật trạng thái có chứa các giao dịch tiên tri về giá trong Bản tổng hợp lạc quan tăng tuyến tính với số lượng bản cập nhật, trong khi ở bản ZK-Rollup, nó sẽ luôn là một bản cập nhật lưu trữ duy nhất.
 
-Moreover, compression algorithms can be applied to the published data, and their validity will be attested to by the STARK proof, further reducing the on-chain footprint. Future versions of StarkNet will introduce innovative optimizations in this area.
+Ngoài ra, các thuật toán nén có thể được áp dụng cho dữ liệu đã xuất bản và tính hợp lệ của chúng sẽ được chứng thực bằng bằng chứng STARK, giúp giảm thêm dấu chân trên chuỗi. Các phiên bản tương lai của StarkNet sẽ giới thiệu các tối ưu hóa sáng tạo trong lĩnh vực này.
 
-#### StarkNet OS
+#### Hệ điều hành StarkNet
 
-We are also releasing the StarkNet Operating System code. The StarkNet OS is the Cairo program that runs StarkNet. The OS handles everything which is done on the network — contract deployment, transaction execution, L1<>L2 messages and more. The StarkNet OS architecture and design will be explained in detail in a separate post.
+Chúng tôi cũng đang phát hành mã Hệ điều hành StarkNet. Hệ điều hành StarkNet là chương trình Cairo chạy StarkNet. Hệ điều hành xử lý mọi thứ được thực hiện trên mạng — triển khai hợp đồng, thực hiện giao dịch, thông báo L1<>L2, v.v. Kiến trúc và thiết kế của hệ điều hành StarkNet sẽ được giải thích chi tiết trong một bài đăng riêng.
 
-#### Extra Features
+#### Tính năng bổ sung
 
-Not only has StarkNet Alpha evolved, we are also constantly improving Cairo. For a full description of the new features in Cairo v0.3.0, check the release notes [here](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
+Không chỉ phát triển StarkNet Alpha, chúng tôi còn không ngừng cải tiến Cairo. Để biết mô tả đầy đủ về các tính năng mới trong Cairo v0.3.0, hãy xem ghi chú phát hành[tại đây](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
 
-### The Ecosystem is Growing
+### Hệ sinh thái đang phát triển
 
-Aside from the constant work on StarkNet Core, the ecosystem’s work on StarkNet is continuously expanding. We are thrilled to be collaborating with some of the most talented teams from the ecosystem.
+Ngoài công việc liên tục trên StarkNet Core, công việc của hệ sinh thái trên StarkNet không ngừng mở rộng. Chúng tôi rất vui mừng được cộng tác với một số nhóm tài năng nhất từ hệ sinh thái.
 
-Fermion, StarkNet’s first Full Node effort, is developed by the Erigon (formerly TurboGeth) team. Based on their enormous knowledge gained from working on Ethereum, we are able to work with them to build a powerful Full Node, which incorporates many lessons learned while building for Ethereum, while benefiting from the scale offered by STARK proofs.
+Fermion, nỗ lực Full Node đầu tiên của StarkNet, được phát triển bởi nhóm Erigon (trước đây là TurboGeth). Dựa trên kiến thức khổng lồ của họ thu được khi làm việc trên Ethereum, chúng tôi có thể hợp tác với họ để xây dựng một Full Node mạnh mẽ, kết hợp nhiều bài học kinh nghiệm trong khi xây dựng Ethereum, đồng thời hưởng lợi từ quy mô do STARK cung cấp.
 
-Nethermind are working on Warp, a compiler from EVM to Cairo. Bound by our culture of presenting new tools only once they are ready, all we can say is, expect exciting news on this front very soon! We can say, though, that they are moving at warp speed.
+Nethermind đang làm việc trên Warp, một trình biên dịch từ EVM sang Cairo. Bị ràng buộc bởi văn hóa của chúng tôi là chỉ trình bày các công cụ mới khi chúng đã sẵn sàng, tất cả những gì chúng tôi có thể nói là, hãy sớm mong đợi những tin tức thú vị về mặt này! Tuy nhiên, chúng ta có thể nói rằng chúng đang di chuyển với tốc độ chóng mặt.
 
-### What the Future Holds
+### Những mục tiêu trong tương lai là gì
 
-The next stop on our road to StarkNet will be composability — allowing contracts to interact with one another. Stay tuned.
+Điểm dừng tiếp theo trên con đường đến với StarkNet của chúng tôi sẽ là khả năng kết hợp — cho phép các hợp đồng tương tác với nhau. Giữ nguyên.
 
 [StarkWare](https://starkware.co/)
 
-1 As we’ve said previously, ZK-Rollup is by now a commonly used term, yet very misleading: these solutions do not (currently) offer zero-knowledge.
+1 Như chúng tôi đã nói trước đây, ZK-Rollup hiện là một thuật ngữ được sử dụng phổ biến, nhưng rất dễ gây hiểu lầm: các giải pháp này (hiện tại) không cung cấp kiến thức bằng không.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**Update (tháng 11 năm 2021):**StarkNet Alpha hoạt động trên Ethereum Mainnet

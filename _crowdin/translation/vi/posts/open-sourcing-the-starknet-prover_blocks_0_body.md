@@ -1,29 +1,29 @@
-### TL;DR
+### TL; DR
 
-* The Starknet prover will be open-sourced under the Apache 2.0 license
-* The move will boost accessibility to developers, promote collaboration within the community and offer other benefits
-* This announcement follows the open-sourcing of Cairo 1.0, Papyrus Full Node, and Starknet’s new sequencer
+* Trình chứng minh Starknet sẽ có nguồn mở theo giấy phép Apache 2.0
+* Động thái này sẽ tăng cường khả năng tiếp cận cho các nhà phát triển, thúc đẩy sự hợp tác trong cộng đồng và mang lại những lợi ích khác
+* Thông báo này theo sau mã nguồn mở của Cairo 1.0, Papyrus Full Node và trình sắp xếp chuỗi mới của Starknet
 
-### Intro
+### giới thiệu
 
-Exciting news ahead: Starknet Prover will be open-sourced!
+Tin thú vị phía trước: Starknet Prover sẽ có nguồn mở!
 
-This is a milestone in the evolution of Starknet. Discover the decision to open-source the Starknet prover and explore the benefits it brings to the Starknet ecosystem. As a public good, accessibility is at the forefront, allowing for greater collaboration and innovation in the tech stack.
+Đây là một cột mốc quan trọng trong quá trình phát triển của Starknet. Khám phá quyết định mở mã nguồn chứng minh Starknet và khám phá những lợi ích mà nó mang lại cho hệ sinh thái Starknet. Là một hàng hóa công cộng, khả năng tiếp cận được đặt lên hàng đầu, cho phép cộng tác và đổi mới nhiều hơn trong lĩnh vực công nghệ.
 
-### Open Sourcing the Starknet Prover
+### Tìm nguồn mở cho Starknet Prover
 
-Starknet Alpha launched on Mainnet in November 2021. From Starknet’s outset, it was envisaged as a network that would be owned by the community, and enable it to benefit from the power of STARK scaling. One year after launching on Mainnet, the time was right to start open-sourcing the entire Starknet stack.
+Starknet Alpha ra mắt trên Mainnet vào tháng 11 năm 2021. Ngay từ đầu của Starknet, nó đã được hình dung là một mạng sẽ thuộc sở hữu của cộng đồng và cho phép nó hưởng lợi từ sức mạnh của quy mô STARK. Một năm sau khi ra mắt trên Mainnet, đây là thời điểm thích hợp để bắt đầu cung cấp nguồn mở toàn bộ ngăn xếp Starknet.
 
-Elements that have already been open-sourced include [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0), [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), and the new StarkNet [Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003). When the Starknet Prover will be placed under Apache 2.0, the open-source process will be complete. This will happen towards the final phase of decentralizing Starknet.
+Các phần tử đã được mã nguồn mở bao gồm[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0),[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)và StarkNet[Sequencer](https://starkware.medium.com/starknets-new-sequencer-339e63845003)mới. Khi Starknet Prover sẽ được đặt trong Apache 2.0, quá trình mã nguồn mở sẽ hoàn tất. Điều này sẽ xảy ra trong giai đoạn cuối cùng của quá trình phi tập trung hóa Starknet.
 
-### The Importance of Open-Sourcing the Starknet Prover
+### Tầm quan trọng của việc cung cấp nguồn mở cho Starknet Prover
 
-Open-sourced STARK software will allow the community to maintain and develop the network independently, and therefore provides the most genuine path to build Starknet as a decentralized public good. It will also allow the community to have more freedom in contributing to the development of the prover, and therefore of Starknet. In addition, open-sourcing the Starknet Prover will allow more eyes to review the code, improve its quality, help detect bugs, and provide transparency.
+Phần mềm STARK có nguồn mở sẽ cho phép cộng đồng duy trì và phát triển mạng một cách độc lập, do đó cung cấp con đường xác thực nhất để xây dựng Starknet như một hàng hóa công cộng phi tập trung. Nó cũng sẽ cho phép cộng đồng có nhiều tự do hơn trong việc đóng góp vào sự phát triển của châm ngôn, và do đó là của Starknet. Ngoài ra, mã nguồn mở Starknet Prover sẽ cho phép nhiều người xem xét mã hơn, cải thiện chất lượng của mã, giúp phát hiện lỗi và cung cấp tính minh bạch.
 
-In short, open-sourcing the Starknet tech stack means more collaboration, better quality, innovation and independence. All of these values can help Starknet reach its full potential.
+Nói tóm lại, nguồn mở ngăn xếp công nghệ Starknet có nghĩa là cộng tác nhiều hơn, chất lượng tốt hơn, đổi mới và độc lập. Tất cả những giá trị này có thể giúp Starknet phát huy hết tiềm năng của nó.
 
-The codebase on which we will build the Starknet Prover is based on the prover that has been in use since June 2020, proving transactions from dApps powered by [StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a) (such as Immutable X, Sorare, dYdX, and more). In this role it has processed 327 million transactions and minted 95 million NFTs, and settled some $824 billion.
+Cơ sở mã mà chúng tôi sẽ xây dựng Chứng minh Starknet dựa trên chứng minh đã được sử dụng từ tháng 6 năm 2020, chứng minh các giao dịch từ dApp do[StarkEx](https://medium.com/starkware/starks-starkex-and-starknet-9a426680745a)cung cấp (chẳng hạn như Immutable X, Sorare, dYdX, v.v.). Với vai trò này, nó đã xử lý 327 triệu giao dịch và đúc 95 triệu NFT, đồng thời thanh toán khoảng 824 tỷ đô la.
 
-### Summary
+### Bản tóm tắt
 
-We are excited to announce the Starknet Prover will be open-sourced, available under Apache 2.0. Open-sourcing the Starknet Prover will take place right before Starknet will be ready for full decentralization. This way, the Starknet stack will be fully open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
+Chúng tôi rất vui mừng được thông báo rằng Starknet Prover sẽ có mã nguồn mở, khả dụng trong Apache 2.0. Mã nguồn mở Starknet Prover sẽ diễn ra ngay trước khi Starknet sẵn sàng phân quyền hoàn toàn. Bằng cách này, ngăn xếp Starknet sẽ có nguồn mở hoàn toàn, phù hợp với mạng Lớp 2 phi tập trung, không cần cấp phép.

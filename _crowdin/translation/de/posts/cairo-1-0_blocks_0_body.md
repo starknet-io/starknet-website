@@ -3,9 +3,9 @@
 * Kairo 1.0 ist die erste große Version nach der[Einführung von Kairo](https://medium.com/starkware/hello-cairo-3cb43b13b209)vor zwei Jahren
 * Kairo 1.0 wird Entwicklern eine sicherere, einfachere, benutzerfreundlichere Programmiersprache geben
 * Im Mittelpunkt von Kairo 1.0 steht**Sierra**, eine zwischengeschaltete Reprätionsschicht, die eine größere langfristige Stabilität für Kairoer Programme verspricht
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. Es wirkt auch die[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). In den kommenden Wochen werden wir weitere Informationen über Regenesis veröffentlichen.
+* Sierra bringt Kairo dazu, in einem genehmigungsfreien Netzwerk zu dienen:\
+  -**Schutz des Netzwerks**: Es ermöglicht einen robusteren DoS-Schutz\
+  -**Schutz des Benutzers**: Es ermöglicht Zensurwiderstand auf Ethereum-Niveau Kairo 1.0 wird StarkNet in vielerlei Hinsicht beeinflussen. Es wirkt auch die[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). In den kommenden Wochen werden wir weitere Informationen über Regenesis veröffentlichen.
 
 ### Einführung
 

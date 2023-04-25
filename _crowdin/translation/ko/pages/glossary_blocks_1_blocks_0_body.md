@@ -1,1 +1,1 @@
-The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.
+Starknet 시퀀서 노드 및 필요한 경우 L1 계약과 상호 작용하는 사용자. 인간이든 자동이든 이러한 사용자는 Starknet 네트워크에 트랜잭션을 제출하는 에이전트입니다.

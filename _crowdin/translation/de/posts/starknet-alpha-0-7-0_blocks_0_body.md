@@ -76,7 +76,7 @@ Wir freuen uns darauf, zu sehen, was die Community damit macht.
 
 **Unterstützung für ausstehende Blöcke**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. Diese Version enthält Unterstützung für die Abfrage dieser Blöcke über das StarkNet CLI.
+[Ausstehende Blöcke](https://starknet.io/documentation/block-structure-and-hash/#pending_block)wurden[in der letzten Unterversion (v0.6.2) eingeführt](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)und boten schnellere Bestätigungen für Transaktionen. Diese Version enthält Unterstützung für die Abfrage dieser Blöcke über das StarkNet CLI.
 
 Um es zu verwenden, in jedem CLI-Befehl, der block_number als Argument verwendet (contract_call/get_block/get_code/get_storage_at), können wir das StarkNet in Bezug auf den ausstehenden Block abfragen, indem wir block_number=pending.
 

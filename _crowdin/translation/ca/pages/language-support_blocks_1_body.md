@@ -1,11 +1,11 @@
-### Starknet translation program
+### Programa de traducció Starknet
 
-The [Starknet translation program](https://starkware.crowdin.com/starknet-web) aims to make the content on starknet.io available in as many languages as possible. Please read our simple steps below for how you can contribute and help us achieve these goals:
+El programa de traducció [Starknet](https://starkware.crowdin.com/starknet-web) pretén que el contingut de starknet.io estigui disponible en tants idiomes com sigui possible. Si us plau, llegiu els nostres senzills passos a continuació per saber com podeu contribuir i ajudar-nos a assolir aquests objectius:
 
-1. Sign up for a [CrowdIn](https://crowdin.com/) account (or log in if you already have one).
-2. [Select your chosen language](https://starkware.crowdin.com/starknet-web) for translation.
-3. Contribute!
+1. Registra't per obtenir un compte [CrowdIn](https://crowdin.com/) (o inicia sessió si ja en tens un).
+2. [Seleccioneu l'idioma escollit](https://starkware.crowdin.com/starknet-web) per a la traducció.
+3. Contribueix!
 
-Note: Submitted translations will undergo a short review process before being published so there will be a delay before your work appears on the site.
+Nota: les traduccions enviades se sotmetran a un breu procés de revisió abans de ser publicades, de manera que hi haurà un retard abans que el vostre treball aparegui al lloc.
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+També elaborem i mantenim una llista de comunitats i recursos relacionats amb Starknet [en diversos idiomes](/en/community/language-resources).

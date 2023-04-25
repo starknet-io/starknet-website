@@ -1,6 +1,6 @@
 ### TL;DR
 
-* We are building StarkNet in steps, starting with establishing **usability**, then improving **performance**, and finally, moving on to **decentralization**
+* StarkNet は段階的に構築されており、**使いやすさの確立**から始まり、次に**パフォーマンスの改善**、そして最後に**分散化**に移行します。
 * 私たちは最初の目標を達成しました:ユーザビリティ。 これは、Ethereumのような状態で一般的な計算を行ったことを意味します(可能であると考えられる数年前)
 * 現在、3部構成の構築計画の第2段階に移行しています:スループット、トランザクションコスト、およびレイテンシに焦点を当てたパフォーマンス。
 * 次へ：分割化
@@ -61,4 +61,4 @@ StarkNetは、リーダー選挙とガバナンスのメカニズムを備えた
 
 ### 常に改善; 永遠に聴き続ける
 
-次のチャレンジにフォーカスが移行するにつれて、私たちは過去の成果を改善し続けます。 そして、[StarkNet](https://starknet.io/)のすべての分野で作業を続ける中で、私たちの耳は常に開発者コミュニティ全体に開かれたままです。 So get involved in the discussion, via[ Discord](https://discord.com/invite/uJ9HZTUk2Y), the[ StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8) community, [Twitter](https://twitter.com/Starknet_Intern), or another route, and help shape the future of blockchain scaling.
+次のチャレンジにフォーカスが移行するにつれて、私たちは過去の成果を改善し続けます。 そして、[StarkNet](https://starknet.io/)のすべての分野で作業を続ける中で、私たちの耳は常に開発者コミュニティ全体に開かれたままです。 したがって、[Discord](https://discord.com/invite/uJ9HZTUk2Y)、[StarkNet Shamans](https://www.google.com/search?client=safari&rls=en&q=StarkNet+Shamans&ie=UTF-8&oe=UTF-8)コミュニティ、[Twitter](https://twitter.com/Starknet_Intern)、または別のルートを介して議論に参加し、ブロックチェーン スケーリングの未来を形作るのを手伝ってください。

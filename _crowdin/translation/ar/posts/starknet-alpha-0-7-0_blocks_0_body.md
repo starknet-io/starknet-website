@@ -17,9 +17,13 @@
 
 #### ترقية العقد
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. ونمط البروكسي هو الطريقة الشائعة للتمكين من رفع مستوى العقود فوق إيثيريوم. Alpha 0.7.0 يمكن هذا النمط عبر StarkNet.
+</a>ترقية الوكيل
+
+من OpenZeppelin مدعوم بالكامل الآن لترقيات العقد في StarkNet. ونمط البروكسي هو الطريقة الشائعة للتمكين من رفع مستوى العقود فوق إيثيريوم. Alpha 0.7.0 يمكن هذا النمط عبر StarkNet.</p> 
 
 قمنا بإعداد[درسًا تعليميًا قصيرًا](https://starknet.io/docs/hello_starknet/default_entrypoint.html)لعرض التنفيذ الأساسي للنمط، و OpenZeppelin يعمل جاهدا بالفعل على تنفيذ عقد قياسي لنمط الوكالة؛ انظر[النموذج الأولي](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+
+
 
 #### حظر رقم و حظر الوقت
 
@@ -27,17 +31,23 @@ OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades
 
 يمكنك رؤية مثال على كيفية استخدام هذه الميزات في[البرنامج التعليمي](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
 
+
+
 #### الأحداث
 
 مفاجئة! وثمة سمة كان من المقرر أن تكون لها صيغة في المستقبل قد سارت في طريقها إلى هذه الصيغة السابقة.
 
 وتدعم عقود StarkNet الآن تحديد الأحداث وإصدارها، مما يسمح لها بالكشف عن معلومات التنفيذ لاستهلاكها في تطبيقات خارج السلسلة. مطوري إيثيريوم سيجدون الألفاظ و الجملة مشابهة جدا للتضامن يمكنك قراءة[المستندات](https://starknet.io/documentation/events/)، أو اتباع[البرنامج التعليمي](https://starknet.io/docs/hello_starknet/events.html)، الذي يشرح هذه الميزة.
 
+
+
 #### إزالة توجيه %builtins
 
 لم تعد هناك حاجة إلى توجيه %builtin في عقود StarkNet. أعقب هذا التغيير مناقشة مجتمعية حول نمط[تمديد العقد](https://community.starknet.io/t/contract-extensibility-pattern/210)في[StarkNet Shamans](https://community.starknet.io/). وهو يبسِّط إلى حد كبير إمكانية استخدام هذا النمط المتعلق بالقابلية للتطبيق.
 
 وعلى سبيل المثال، سيتم تغيير العقد التالي من:
+
+
 
 ```
 %lang starknet
@@ -52,7 +62,10 @@ func add(x : pot, y : Pot) -> (res : felt):
 end
 ```
 
+
 إلى ذلك:
+
+
 
 ```
 %lang starknet
@@ -62,7 +75,10 @@ end
 نهاية
 ```
 
+
 يمكنك التحقق من[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)العقود القياسية، التي تستخدم النمط الجديد.
+
+
 
 #### مصفوفات دعم الوظائف الخارجية للهياكل
 
@@ -71,6 +87,8 @@ end
 متعدد الميزة القوية لتجريد الحساب الذي يسمح للحساب بإجراء مكالمات متعددة في معاملة واحدة. حالة استخدام واضحة هي إنشاء**معاملة واحدة**التي تتصل بالسماح ومن ثم تحويل فروم.
 
 ونتطلع إلى رؤية ما يفعله المجتمع المحلي معها.
+
+
 
 #### تحسينات على CLI StarkNet
 
@@ -88,19 +106,27 @@ end
 
 تمت إضافة وظيفة مماثلة أيضا إلى[StarkNet.py](https://github.com/software-mansion/starknet.py/)و[Nile](https://github.com/OpenZeppelin/nile)في الشهر الماضي.
 
+
+
 #### L1<>L2 المراسلة في إطار الاختبار
 
 ألفا 0.7.0 يقدم البريد. ويمكِّن بوستمان المطورين من استخدام إطار الاختبار لاختبار تدفقات أكثر تعقيدا.
 
 على مستوى عالٍ - يحجب مسؤولية ستارك نيت ستيكنسر عن نقل الرسائل من L1 إلى L2 و L2 إلى L1. تأكد من أن الرسائل المرسلة عن طريق عقد الرسائل التضامنية ستظهر في عقد StarkNet الخاص بالمقصد وستظهر الرسائل المرسلة من عقد StarkNet في عقد الرسائل التضامنية.
 
+
+
 #### و المزيد من الميزات
 
 يوفر ألفا 0.7.0 العديد من الميزات والتغييرات الأخرى، مثل إضافة دالة جذر مربع كفؤة إلى المكتبة العامة للرياضيات. تظهر قائمة كاملة في[سجل التغييرات](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
 
+
+
 ### التالي للأعلى؟
 
 سيتم إصدار الدعم الأولي[لآلية الرسوم](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)في غضون أسابيع، كنسخة فرعية من StarkNet.
+
+
 
 ### المزيد من المعلومات؟
 

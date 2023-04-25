@@ -1,114 +1,144 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+StarkNet'in ademi merkeziyet sürecindeki bir sonraki adımı duyurmaktan heyecan duyuyoruz - protokol değişiklikleri için oylama.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+Son birkaç hafta içinde StarkNet,[the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)kurarak, Ethereum</a>üzerinde
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+STRK Token'ı piyasaya sürerek ve[açık kaynaklı Kahire 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)ile daha fazla ademi merkeziyetçilik için önemli adımlar attı.</p> 
+
+Bu gönderi bir sonraki adıma, yani önümüzdeki aylara yayılacak olan StarkNet'in Yönetişiminin ilk aşamasına genişleyecektir.
+
+
 
 ### TL;DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* StarkNet protokolünde önerilen değişiklikleri onaylayan veya reddeden ilk oylama yakında yapılacak
+* İlk aşamadaki oylamalara katılanlar:\
+  — Jeton sahipleri\
+  — Oy haklarını devretmeyi tercih eden jeton sahipleri tarafından seçilen delegeler\
+  — Oy haklarının bir kısmını kullanmak üzere StarkNet Foundation tarafından seçilen delegeler\
+  — StarkNet Vakfı tarafından kurulan profesyonel İnşaatçılar Konseyi
 
-### Background
+* Herkes kendilerini StarkNet'in Yönetişiminde delege olarak aday göstermeye davetlidir.
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+* Tartışmalar[StarkNet Community Forum](https://community.starknet.io/)yürütülecektir.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
 
-### Starknet’s governance first phase plan
+### Arka plan
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+StarkNet'in sansüre dayanıklı bir genel ağ olma vizyonunu yerine getirmek için iki süreç aynı anda geliştirilmektedir: (i) StarkNet'in sistem bileşenlerinin[, örneğin sıralayıcılar ve kanıtlayıcıların dağıtılması ve (ii) protokol değişikliklerine ilişkin yönetişim](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671)uygulanması.
 
-#### Voting subject
+Açık bir topluluğun protokol yükseltmelerini yönetmesine izin verecek kaliteli yönetişim mekanizmaları oluşturmak ciddi bir zorluktur. Geniş topluluk işbirliğini gerektiren kademeli ve keşfedici bir süreçtir.
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+StarkNet'in Yönetişiminin ilk aşamalarını planlamak ve yönetmek için, StarkNet Vakfı bir yönetişim komitesi kurdu. Vakıf, komitenin kapsamı ve misyonu hakkında daha fazla ayrıntıyı ayrı bir gönderide yayınlayacak. Komite üyeleri Deven Matthews (Nethermind), Manor Bareli (StarkWare) ve Sylve Chevet'dir (briq). StarkNet Yönetişiminin ilk aşaması için, komite üyeleri tarafından StarkNet ekosisteminden çeşitli katkıda bulunanlarla birlikte formüle edilen ve Vakıf yönetim kurulu tarafından onaylanan plan aşağıdadır.
 
-#### Voting type
 
-Off-chain signal vote (Via Snapshot)
 
-#### Voting process
+### Starknet'in yönetişim ilk aşama planı
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+StarkNet Yönetişiminin ilk aşaması başlatıldı. Şu andan itibaren, topluluk üyeleri, StarkNet'i başka bir kanal aracılığıyla şekillendirmeye, yani protokol değişikliklerini oylamaya katılabilecekler. Bu, StarkNet'in Yönetişiminin yalnızca ilk aşamasıdır; StarkNet sonraki aşamalara geçtikçe, yönetişim mekanizmaları ve katılımcıları yelpazesi genişleyecektir. İşte**birinci aşama**ayrıntıları:
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
 
-#### Threshold and required quorum
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+#### Oylama konusu
 
-### First phase voting participants
+StarkNet protokolü için önerilen yükseltmeler. Bu aşamadaki tüm yükseltmeler Vakıf tarafından önerilecektir. Öneriler, StarkNet Topluluk Forumunda ortaya atılan tartışmaları, fikirleri ve geri bildirimleri yansıtacaktır.
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
 
-#### Token holders
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+#### Oylama türü
 
-#### Delegates
+Zincir dışı sinyal oylaması (Anlık Görüntü Yoluyla)
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+#### oylama süreci
 
-**Operation**:
+1. Vakıf, StarkNet'in güncellenmiş bir sürümünü Goerli'ye dağıtacak.
+2. Seçmenlerin, Goerli'de çalışırken yükseltilmiş sürümü incelemek için 6 günlük bir süresi olacak. Bu süre zarfında, Mainnet dağıtımı için onaylayıp onaylamama konusunda oy kullanabilirler.
+3. Bir teklif seçmenler tarafından onaylanırsa, yükseltmenin Mainnet'e uygulanmasından önce 24+ saatlik bir gecikme olacaktır.
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+Bu güncellemeler için duyurular, StarkNet Foundation</a>Twitter hesabında ve ayrıca[StarkNet Topluluk Forumu'nda](https://community.starknet.io/)yapılacaktır.</p> 
 
-#### The StarkNet builders’ council
 
-A professional committee, appointed by the Foundation.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+#### Eşik ve gerekli çekirdek
 
-**Responsibilities**:
+* Eşik basit çoğunluktur (yani, baraj kullanılan oyların %50'sidir)
+* Gerekli nisap yok, yani oylamanın geçerli olması için minimum katılım düzeyi yok
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
 
-**Operation**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+### Birinci aşama oylama katılımcıları
 
-### First phase voting power
+İşte yönetişim sürecinin ilk aşamasına katılabilecek olanların listesi:
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
 
-The voting power distribution in the **first phase** will be:
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+#### Jeton sahipleri
 
-### First vote — StarkNet’s 0.11 version
+* StarkNet'in Yönetişiminin ilk aşamasında, çoğu token sahibi, ağı erken aşamalarında kuran ve destekleyen erken çekirdek katkıda bulunanlar ve yatırımcılardır ([daha fazla ayrıntı için bu gönderiyi okuyun](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Zamanla, belirteç geliştiricilere ve ağı sürdürmek ve yükseltmek için çalışma yapan diğer taraflara dağıtılacaktır. Bu nedenle, bu taraflar ağı güvence altına alabilecek, kullanabilecek, işletebilecek ve yönetimine katılabilecektir.
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+
+#### delegeler
+
+**Gerekçe**:\
+Oylama yetkisi devri, token sahiplerinin yönetişim yetkilerini ilgili, bilgili ve profesyonel topluluk üyelerine devretmelerini sağlar. Bunun sayesinde:
+
+* Jeton sahipleri, doğrudan demokrasi yerine temsili yoluyla karar alma sürecinin bir parçası olmayı seçebilirler.
+* Kendini adamış, yetenekli topluluk üyeleri, itibarlarının liyakatiyle yönetişimde önemli bir rol üstlenebilir. Kendinizi delege olarak öne sürmek için jeton sahibi olmanıza gerek yok.
+
+**Sorumluluklar**:\
+StarkNet'e ve onun uzun vadeli vizyonuna fayda sağlayan sağlam temelli, bağımsız kararlara yol açacak her karar için ciddi bir öğrenme süreci yürütün.
+
+**İşlem**:
+
+* Delegasyon mekanizmasının başarılı olabilmesi için her şeyden önce kaliteli bir delege havuzuna ihtiyaç vardır.
+* Delege olma yolu izinsizdir — herhangi bir önkoşul yoktur — ancak dileyenler için forumda delege adaylarının profil gönderebilecekleri bir bölüm oluşturulmuştur ( bu bağlantıda[](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Jeton sahipleri, oylama yetkilerini devretmek istedikleri herhangi bir Ethereum L1 adresini özgürce seçebilirler.
+* Daha fazla ayrıntı için, StarkNet Community Forum</a>özel yayını okuyun.</li> </ul> 
+  
+  
+
+#### StarkNet inşaatçılar konseyi
+
+Vakıf tarafından atanan profesyonel bir komite.
+
+**Gerekçe**:\
+Yalnızca simge tutma temelinde değil, topluluk katılımına ve profesyonel itibara dayalı yönetişim mekanizmalarının uygulanması.
+
+**Sorumluluklar**:
+
+* StarkNet'e ve onun uzun vadeli vizyonuna fayda sağlayan sağlam temelli kararlara yol açacak her karar için ciddi bir öğrenme ve tartışma süreci yürütmek
+* İlk aşamada tartışmalarda ve oylamalarda aktif rol almak
+* Tartışmalarının ve karar alma süreçlerinin şeffaf olmasını sağlamak
+* StarkNet topluluk forumunda açık tartışmalar yoluyla topluluğa erişilebilir olmak
+
+**İşlem**:
+
+* Vakıf tarafından atanan 17 komite üyesi
+* Yetki süresi — StarkNet yönetişiminin ilk aşaması (birkaç ay)
+* Daha fazla ayrıntı için, StarkNet Topluluk Forumu</a>özel yayını okuyun.</li> </ul> 
+  
+  
+
+### Birinci aşama oylama gücü
+
+StarkNet'in Yönetişim ilk aşaması sırasında, StarkWare oylamalara katılmayacaktır. StarkNet Vakfı, oylama yetkisini İnşaatçılar Konseyi'ne ve havuzdan birkaç delegeye devredecek ve doğrudan oy kullanmayacak.
+
+**birinci aşama**oylama gücü dağılımı şöyle olacaktır:
+
+* Yatırımcılar: %33,3
+* StarkNet'in ilk ana katılımcıları (StarkWare hariç): %33,3
+* Vakfın temsilcileri: %33,3\
+  — StarkNet İnşaatçılar Konseyi: %23,3\
+  — Vakıf adına oy kullanan delegeler: %10
+
+
+
+### İlk oylama — StarkNet'in 0.11 versiyonu
+
+İlk oylama önümüzdeki haftalarda yapılacak. Oylama, StarkNet Alpha'nın 0.11 sürümüne yükseltilip yükseltilmeyeceğiyle ilgili olacak.
+
+Oylama Goerli'nin yayınlanmasından kısa bir süre sonra başlayacak ve resmi kanallar aracılığıyla duyurulacak:[StarkNet Vakfı'nın Twitter hesabı](https://twitter.com/StarkNetFndn)ve[StarkNet Topluluk Forumu](https://community.starknet.io/). Bizi izlemeye devam edin!

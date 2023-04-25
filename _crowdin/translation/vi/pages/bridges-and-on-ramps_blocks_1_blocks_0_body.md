@@ -1,3 +1,3 @@
-## What are bridges?
+## Cầu là gì?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Cầu nối cho phép người dùng di chuyển tài sản giữa các hệ sinh thái tiền điện tử, chẳng hạn như chuỗi khối hoặc sàn giao dịch.

@@ -9,7 +9,7 @@ StarkNet Alpha 1 有两个新功能：
 
 年初，我们宣布StarkWare正在建造[StarkNet](https://starkware.co/product/starknet/)， a 一个无权限分散的以STARK为基础的 ZK-Rollup1 在以太空为基础的 L2 网络上运行。 StarkNet允许任何dApp 实现其计算的无限比例 — — 但不影响Etherum的合成性和安全性。
 
-上个月，[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)发布到世界上。 For the first time, developers are able to [write](https://kobi.one/2021/07/14/stardrop.html) any smart contract and deploy it, permissionlessly, to a ZK-Rollup. 用户能够将交易发送到网络以太太空风格。
+上个月，[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)发布到世界上。 开发人员第一次能够[编写](https://kobi.one/2021/07/14/stardrop.html)任何智能合约并将其无许可地部署到 ZK-Rollup。 用户能够将交易发送到网络以太太空风格。
 
 今天，我们正在发布一个新版本：Alpha 1。 我们正在滚动基础上发布功能，让开发者尽快与新功能互动。 我们预计，这将使反馈周期更加紧张，并使社区反馈能够迅速改进StarkNet。
 

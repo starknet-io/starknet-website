@@ -1,4 +1,4 @@
 {
-  "source": "/community/community-jobs/:path*",
-  "destination": "/en/jobs"
+  "source": "/cộng đồng/cộng đồng-việc làm/:đường dẫn*",
+  "destination": "/vi/việc làm"
 }

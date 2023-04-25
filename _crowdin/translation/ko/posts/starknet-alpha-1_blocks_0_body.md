@@ -1,62 +1,62 @@
-### TL;DR
+### TL; DR
 
-StarkNet Alpha 1 has two new features:
+StarkNet Alpha 1에는 두 가지 새로운 기능이 있습니다.
 
-* L1<>L2 interaction
-* On-chain data
+* L1<>L2 상호 작용
+* 온체인 데이터
 
-### Introduction
+### 소개
 
-At the beginning of the year, we announced that StarkWare is building [StarkNet](https://starkware.co/product/starknet/), a permissionless decentralized STARK-based ZK-Rollup¹ operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation — without compromising Ethereum’s composability and security.
+연초에 우리는 StarkWare가 이더리움을 통해 L2 네트워크로 작동하는 무허가 분산형 STARK 기반 ZK-Rollup¹인[StarkNet](https://starkware.co/product/starknet/)을 구축하고 있다고 발표했습니다. StarkNet을 사용하면 Ethereum의 구성 가능성과 보안을 손상시키지 않고 모든 dApp이 계산을 위한 무제한 확장을 달성할 수 있습니다.
 
-Last month, [StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95) was released to the world. For the first time, developers are able to [write](https://kobi.one/2021/07/14/stardrop.html) any smart contract and deploy it, permissionlessly, to a ZK-Rollup. Users are able to send transactions to the network, Ethereum-style.
+지난 달[StarkNet Alpha 0](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)이 세상에 출시되었습니다. 처음으로 개발자는 모든 스마트 계약을[작성](https://kobi.one/2021/07/14/stardrop.html)하고 허가 없이 ZK-Rollup에 배포할 수 있습니다. 사용자는 이더리움 스타일의 네트워크로 거래를 보낼 수 있습니다.
 
-Today we are releasing a new version; Alpha 1. We are releasing features on a rolling basis to allow developers to interact with new features as soon as possible. We anticipate that this will tighten the feedback cycle and allow community feedback to quickly improve StarkNet.
+오늘 우리는 새 버전을 출시합니다. 알파 1. 우리는 개발자가 가능한 한 빨리 새로운 기능과 상호 작용할 수 있도록 기능을 순차적으로 릴리스하고 있습니다. 이를 통해 피드백 주기가 단축되고 커뮤니티 피드백이 StarkNet을 빠르게 개선할 수 있을 것으로 기대합니다.
 
-### **Alpha 1 Features**
+### **알파 1 기능**
 
-#### L1<>L2 Interaction
+#### L1<>L2 상호 작용
 
-Alpha 1 includes an L1<>L2 messaging protocol, which allows developers to implement seamless transaction flows between L1 and L2. Developers can now send messages from contracts on L1 to contracts on L2 and vice versa.
+Alpha 1에는 L1<>L2 메시징 프로토콜이 포함되어 있어 개발자가 L1과 L2 간의 원활한 트랜잭션 흐름을 구현할 수 있습니다. 개발자는 이제 L1의 계약에서 L2의 계약으로 또는 그 반대로 메시지를 보낼 수 있습니다.
 
-One of the beauties of ZK-Rollups is that state updates are final, without any delay. This means that messages that were sent from L2 to L1 can be immediately forwarded to their destination contract. This opens the way to build apps that are truly interoperable between the layers.
+ZK-Rollups의 장점 중 하나는 상태 업데이트가 지연 없이 최종적이라는 것입니다. 이는 L2에서 L1로 전송된 메시지를 대상 계약으로 즉시 전달할 수 있음을 의미합니다. 이것은 계층 간에 진정으로 상호 운용 가능한 앱을 구축할 수 있는 길을 열어줍니다.
 
-Interested in trying it out? The best way to get started is to follow the tutorial [here](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html).
+사용해 보고 싶으신가요? 시작하는 가장 좋은 방법은 튜토리얼[여기](https://www.cairo-lang.org/docs/hello_starknet/l1l2.html)을 따르는 것입니다.
 
-Our L1<>L2 protocol owes much to other L2s (specifically Optimism and Arbitrum) whose previous work in this area influenced our design.
+우리의 L1<>L2 프로토콜은 이 분야에서 이전 작업이 우리 설계에 영향을 준 다른 L2(특히 Optimism 및 Arbitrum) 덕분입니다.
 
-#### On-Chain Data-Availability
+#### 온체인 데이터 가용성
 
-StarkNet’s state update is now also published as on-chain data on Ethereum. This allows any user to fully construct StarkNet’s state from L1 data. Each state update includes the state diff, i.e., what storage was changed and its new value.
+StarkNet의 상태 업데이트는 이제 Ethereum의 온체인 데이터로도 게시됩니다. 이를 통해 모든 사용자는 L1 데이터에서 StarkNet의 상태를 완전히 구성할 수 있습니다. 각 상태 업데이트에는 상태 차이, 즉 변경된 저장소와 새 값이 포함됩니다.
 
-Here also, ZK-Rollup shows its strength. In contrast to Optimistic Rollups, in which the full transactions’ data must be sent on-chain, in ZK-Rollups, only the absolute minimum data required to derive the state diff is sent on-chain.
+여기에서도 ZK-Rollup이 강점을 보입니다. 전체 트랜잭션의 데이터를 온체인으로 전송해야 하는 낙관적 롤업과 달리 ZK-롤업에서는 상태 차이를 도출하는 데 필요한 절대 최소 데이터만 온체인으로 전송됩니다.
 
-Consider a prime example, price oracles. A transaction to update a price oracle usually contains multiple transactions but updates only one storage cell; the pair’s price. The on-chain data required for a state update containing price oracle transactions in an Optimistic Rollup grows linearly with the number of updates, while in a ZK-Rollup, it will always be a single storage update.
+대표적인 예인 가격 오라클을 고려하십시오. 가격 오라클을 업데이트하는 트랜잭션에는 일반적으로 여러 트랜잭션이 포함되지만 하나의 스토리지 셀만 업데이트됩니다. 쌍의 가격. 낙관적 롤업에서 가격 오라클 트랜잭션을 포함하는 상태 업데이트에 필요한 온체인 데이터는 업데이트 수에 따라 선형적으로 증가하는 반면 ZK-롤업에서는 항상 단일 스토리지 업데이트가 됩니다.
 
-Moreover, compression algorithms can be applied to the published data, and their validity will be attested to by the STARK proof, further reducing the on-chain footprint. Future versions of StarkNet will introduce innovative optimizations in this area.
+또한 압축 알고리즘을 게시된 데이터에 적용할 수 있으며 그 유효성은 STARK 증명으로 증명되어 온체인 공간을 더욱 줄일 수 있습니다. StarkNet의 향후 버전은 이 분야에서 혁신적인 최적화를 도입할 것입니다.
 
-#### StarkNet OS
+#### 스타크넷 OS
 
-We are also releasing the StarkNet Operating System code. The StarkNet OS is the Cairo program that runs StarkNet. The OS handles everything which is done on the network — contract deployment, transaction execution, L1<>L2 messages and more. The StarkNet OS architecture and design will be explained in detail in a separate post.
+우리는 또한 StarkNet 운영 체제 코드를 공개합니다. StarkNet OS는 StarkNet을 실행하는 Cairo 프로그램입니다. OS는 계약 배포, 트랜잭션 실행, L1<>L2 메시지 등 네트워크에서 수행되는 모든 작업을 처리합니다. StarkNet OS 아키텍처 및 디자인은 별도의 게시물에서 자세히 설명합니다.
 
-#### Extra Features
+#### 추가 기능
 
-Not only has StarkNet Alpha evolved, we are also constantly improving Cairo. For a full description of the new features in Cairo v0.3.0, check the release notes [here](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0).
+StarkNet Alpha는 진화했을 뿐만 아니라 지속적으로 Cairo를 개선하고 있습니다. Cairo v0.3.0의 새로운 기능에 대한 자세한 설명은 릴리스 노트[여기](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.3.0)확인하십시오.
 
-### The Ecosystem is Growing
+### 생태계가 성장하고 있습니다
 
-Aside from the constant work on StarkNet Core, the ecosystem’s work on StarkNet is continuously expanding. We are thrilled to be collaborating with some of the most talented teams from the ecosystem.
+StarkNet Core에 대한 지속적인 작업 외에도 StarkNet에 대한 생태계의 작업은 지속적으로 확장되고 있습니다. 생태계에서 가장 재능 있는 팀과 협력하게 되어 기쁩니다.
 
-Fermion, StarkNet’s first Full Node effort, is developed by the Erigon (formerly TurboGeth) team. Based on their enormous knowledge gained from working on Ethereum, we are able to work with them to build a powerful Full Node, which incorporates many lessons learned while building for Ethereum, while benefiting from the scale offered by STARK proofs.
+StarkNet의 첫 번째 전체 노드 노력인 Fermion은 Erigon(이전의 TurboGeth) 팀에서 개발했습니다. 이더리움에서 작업하면서 얻은 방대한 지식을 바탕으로 우리는 STARK 증명이 제공하는 규모의 이점을 누리면서 이더리움용으로 구축하는 동안 배운 많은 교훈을 통합하는 강력한 풀 노드를 구축하기 위해 그들과 협력할 수 있습니다.
 
-Nethermind are working on Warp, a compiler from EVM to Cairo. Bound by our culture of presenting new tools only once they are ready, all we can say is, expect exciting news on this front very soon! We can say, though, that they are moving at warp speed.
+Nethermind는 EVM에서 Cairo까지의 컴파일러인 Warp를 작업하고 있습니다. 새로운 도구가 준비되었을 때만 제시하는 우리의 문화에 얽매여 있기 때문에 우리가 말할 수 있는 것은 곧 이 전면에 대한 흥미로운 소식을 기대한다는 것입니다! 그러나 우리는 그들이 워프 속도로 움직이고 있다고 말할 수 있습니다.
 
-### What the Future Holds
+### 미래는 무엇을 보유하고
 
-The next stop on our road to StarkNet will be composability — allowing contracts to interact with one another. Stay tuned.
+StarkNet으로 가는 길의 다음 정거장은 계약이 서로 상호 작용할 수 있도록 하는 구성 가능성입니다. 계속 지켜봐 주세요.
 
-[StarkWare](https://starkware.co/)
+[스타크웨어](https://starkware.co/)
 
-1 As we’ve said previously, ZK-Rollup is by now a commonly used term, yet very misleading: these solutions do not (currently) offer zero-knowledge.
+1 이전에 말했듯이 ZK-Rollup은 현재 일반적으로 사용되는 용어이지만 매우 오해의 소지가 있습니다. 이러한 솔루션은 (현재) 영지식을 제공하지 않습니다.
 
-**Update (Nov. 2021):** StarkNet Alpha is live on Ethereum Mainnet
+**업데이트(2021년 11월):**StarkNet Alpha가 이더리움 메인넷에서 실행 중입니다.

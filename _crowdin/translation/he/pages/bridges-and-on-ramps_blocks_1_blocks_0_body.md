@@ -1,3 +1,3 @@
-## What are bridges?
+## מה זה גשרים?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+גשרים מאפשרים למשתמשים להעביר נכסים בין מערכות אקולוגיות קריפטו, כגון בלוקצ'יין או בורסות.

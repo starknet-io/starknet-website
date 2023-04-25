@@ -2,4 +2,4 @@ Starknetコミュニティをできるだけ多くの人々にアクセスし、
 \
 Starknetは、あなたの母国語の他のコミュニティメンバーや、あなたが世界のどこに住んでいるかに基づいて、すべてのことを発見し議論できる場所です。 \
 \
-If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please [open an issue](https://github.com/starknet-io/starknet-website/issues) on Github to get it added.
+知っていて、ここにリストされていない英語以外の言語のリソースがある場合は、 [Github で問題を開いて](https://github.com/starknet-io/starknet-website/issues) 追加してください。

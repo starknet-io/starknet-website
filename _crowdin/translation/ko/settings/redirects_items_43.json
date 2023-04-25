@@ -1,4 +1,4 @@
 {
-  "source": "/bulletin-board/:path*",
+  "source": "/게시판/:경로*",
   "destination": "/en/developers/tools-and-resources"
 }

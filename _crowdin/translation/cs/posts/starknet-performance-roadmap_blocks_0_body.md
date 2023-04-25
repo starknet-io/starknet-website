@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* „Technologie“ ve smyslu všeobecné poznámky k technologii pro „vývoj“, „výrobu“ nebo „užití“ zařízení nebo „softwaru“ uvedených v položkách 3A, 3B nebo 3C. To vede k potenciálně mnohem vyššímu TPS u válcových článků s platností L2.
+* Plán výkonnosti StarkNet řeší klíčový prvek systému: posloupnost.
+* Zde představíme plán pro zlepšení výkonnosti:\
+  – Sequencer parallelization\
+  – Nová implementace reklam pro Káhiru VM\
+  – opětovné zavedení Sequencer v rustu\
+* Poskytovatelé, kteří jsou testováni na bitvu, nejsou překážkou a dokážou zvládnout mnohem více než dosud.
 
-### Intro
+### Úvod
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+StarkNet zahájil na Mainnet téměř před rokem. Začali jsme budovat StarkNet se zaměřením na funkčnost. Nyní zaměříme pozornost na zlepšení výkonnosti pomocí řady kroků, které pomohou zlepšit zkušenosti StarkNet.
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+V tomto příspěvku vysvětlujeme, proč existuje široká škála optimalizací, které se vztahují pouze na články validity, a budeme sdílet náš plán na zavedení těchto kroků na StarkNet. Některé z těchto kroků jsou již implementovány v StarkNet Alpha 0.10.2, který byl vydán na Testnet v Novu 16 a včera v Mainnet. Než však začneme diskutovat o řešeních, přehodnotme omezení a jejich příčinu.
 
-### Block limitations: validity rollups versus L1
+### Omezení bloku: validita rollups versus L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+Potenciálním přístupem ke zvýšení škálovatelnosti blockchainu a ke zvýšení TPS by bylo zrušit omezení bloků (pokud jde o plyn/velikost) při zachování konstanty času bloku. To by vyžadovalo větší úsilí od výrobců bloků (osoby provádějící ověření na L1, následovníci na L2, a proto požadují účinnější provádění těchto složek. Za tímto účelem nyní zaměříme pozornost na optimalizaci posloupnosti StarkNet, kterou podrobněji popisujeme v následujících oddílech.
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+Zde vyvstává přirozená otázka. Proč jsou optimalizace posloupnosti omezeny na rollps, tj. Proč nemůžeme implementovat stejná vylepšení na L1 a vyhnout se složitosti rollups validity? V další části tvrdíme, že mezi těmito dvěma body existuje zásadní rozdíl. umožňuje širokou škálu optimalizací na L2, které nejsou použitelné pro L1.
 
-### Why is L1 throughput limited?
+### Proč je množství L1 omezené?
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+Odstranění blokových omezení na L1 bohužel trpí velkou nástrahou. Zvyšováním tempa růstu řetězce, také zvyšujeme požadavky z celých uzlů, kteří se snaží držet krok s nejnovějším stavem. Vzhledem k tomu, že L1 plné uzly musí znovu spustit celou historii, vysoký nárůst velikosti bloku (z hlediska plynu) na ně působí značný tlak, opět vedlo k tomu, že slabší stroje vyřadily ze systému a ponechaly schopnost spustit plné uzly pouze na dostatečně velké objekty. V důsledku toho nebudou uživatelé schopni ověřit sám stát a nedůvěryhodně se zapojit do sítě.
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+To nás přivádí k pochopení, že průchod L1 by měl být omezený, abychom udrželi skutečně decentralizovaný a bezpečný systém.
 
-### Why don’t the same barriers affect validity rollups?
+### Proč tytéž bariéry nemají vliv na hodnocení platnosti?
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**Pouze při zvažování pohledu na celý uzel vidíme skutečný výkon nabízený válcem.**L1 úplný uzel musí znovu spustit celou historii, aby se zajistila správnost aktuálního státu. StarkNet uzly musí ověřit pouze důkazy STARK a toto ověření je exponenciálně nižší množství výpočetních zdrojů. Zejména synchronizace od nuly nemusí zahrnovat provádění; uzel může obdržet výpis aktuálního stavu od jeho klientů a ověřit pouze prostřednictvím potvrzení STARK, že tento stav je platný. To nám umožňuje zvýšit výkonnost sítě, aniž bychom zvýšili požadavky z celého uzlu.
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+Dospíváme proto k závěru, že posloupnost L2 podléhá celému spektru optimalizací, které není v případě L1 možné.
 
-### Performance roadmap ahead
+### Plánování výkonu před
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+V následujících oddílech diskutujeme o tom, které z nich se v současné době plánuje pro sekvenování StarkNet.
 
-### Sequencer parallelization
+### Paralelizace sekvenceru
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+Prvním krokem na našem plánu bylo zavedení paralelizace s transakčním provedením. To bylo představeno v alfě StarkNet 0.10.2, která byla včera uvolněna v Mainnet. Nyní se ponoříme do toho, co je paralelizace (toto je polotechnická část, pokračovat na cestovní mapě, skočit na další sekci).
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+Co tedy znamená „paralelizace transakcí“? Naprosto je souběžné provedení bloku transakcí nemožné, protože mohou záviset různé transakce. To je znázorněno v následujícím příkladu. Zvažte blok se třemi transakcemi od stejného uživatele:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* Transakce A: swap USDC pro ETH
+* Transakce B: zaplatí ETH za NFT
+* Transakce C: swap USDT pro BTC
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+Je zřejmé, že k Tx A musí dojít dříve, než je Tx B, ale Tx C je zcela nezávislá na obojí a může být provedena souběžně. Pokud každá transakce vyžaduje provedení 1 sekundy, pak může být doba výroby bloku zkrácena ze 3 sekund na 2 sekundy zavedením paralelnosti.
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+Jádrem problému je to, že předem neznáme závislosti na transakcích. V praxi pouze tehdy, když provádíme transakci B z našeho příkladu, vidíme, že se spoléhá na změny provedené transakcí A. Z formálnějšího hlediska vyplývá závislost ze skutečnosti, že transakce B čte ze skladovacích buněk, na které transakce A napsala. Transakce můžeme považovat za vytvoření grafu závislosti, kde je marka od transakce A k transakci B iff A zapsána do úložné buňky, která je přečtena B, a tudíž musí být provedeny před datem B. Následující obrázek znázorňuje příklad takového grafu závislosti:
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+Ve výše uvedeném příkladu lze každý sloupec provést paralelně. a to je optimální uspořádání (zatímco naivně bychom provedli transakce 1-9 postupně).
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+Abychom překonali skutečnost, že graf závislosti není znám předem, představíme***optimistickou paralelizaci***. v duchu[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)vyvinutého společností Aptos Labs, na sekvenci StarkNet. V rámci tohoto paradigmatu se optimisticky snažíme paralelně uskutečňovat transakce a znovu provádět při hledání kolize. Můžeme například provádět transakce 1–4 z obrázku 1 paralelně, jen abychom zjistili, že Tx4 závisí na Tx1. Proto jeho poprava byla zbytečná (spálili jsme ji vzhledem ke stejnému stavu, proti němuž jsme Tx1 běželi, i když jsme to měli vést proti státu, který je výsledkem aplikace Tx1). V takovém případě znovu spustíme Tx4.
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+Všimněte si, že kromě optimistické paralelizace můžeme přidat mnoho optimalizací. Namísto naivního čekání na ukončení každé popravy můžeme například popravu přerušit okamžikem, kdy zjistíme závislost, která ji zneplatní.
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+Dalším příkladem je optimalizace výběru, které transakce mají být znovu provedeny. Předpokládejme, že blok, který se skládá ze všech transakcí z obrázku 1, je vložen do posloupnosti s pěti jádry CPU. Zaprvé se snažíme provádět transakce 1–5 souběžně. Pokud bylo pořadí dokončení Tx2, Tx3, Tx4, Tx1 a nakonec Tx5, pak závislost Tx1→Tx4 najdeme až poté, co byl Tx4 již spuštěn - což naznačuje, že by měl být znovu spuštěn. Naproti tomu možná budeme chtít znovu spustit Tx5, protože se vzhledem k nové popravě Tx4 může chovat jinak. Avšak spíše než jen opětovné provedení všech transakcí po nyní zneplatněném Tx4, můžeme procházet graf závislosti vytvořený z transakcí, jejichž provedení již skončilo, a pouze opakovat transakce, které závisely na Tx4.
 
-### A new Rust implementation for the Cairo-VM
+### Nová implementace Rust pro Káhiro-VM
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+Chytré zakázky v StarkNet jsou napsány v Káhiře a jsou prováděny v Káhiro-VM, což je specifikace uvedena v[Káhiře](https://eprint.iacr.org/2021/1063.pdf). V současné době posloupnost používá[implementaci pythonu](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)Kairo-VM. Abychom optimalizovali výkonnost implementace VM, zahájili jsme úsilí o přepsání VM v důvěře. Díky skvělé práci[Lambdaclass](https://lambdaclass.com/), kteří jsou dosud neocenitelným týmem ekosystému StarkNet, toto úsilí se brzy dostane do ovoce.
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+Realizace VM –[kairo-rs](https://github.com/lambdaclass/cairo-rs)– může nyní spustit původní Káhiru kód. Dalším krokem je řešení provádění chytrých smluv a integrace s pythonickým sekventorem. Očekává se, že jakmile se spojuje s kairo-ry, výrazně se zlepší výkonnost sekvenčního.
 
-### Sequencer re-implementation in Rust
+### Sekvencer opětovné provedení v Rust
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+Náš posun od pythonu k rust ke zlepšení výkonu se neomezuje na Káhiru VM. Vedle výše uvedených vylepšení plánujeme přepsat posloupnost od nuly. Kromě Rustových vnitřních výhod to představuje příležitost k další optimalizaci postupníka. Když posloucháme pár, můžeme si vychutnat výhody kairo-rs bez režie komunikace python-rust, a můžeme zcela přebudovat způsob, jakým je stav uložen a přístupný (který dnes vychází ze struktury[Patria-Trie](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
 
-### What about provers?
+### A co provést?
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+Po celou dobu tohoto příspěvku jsme nezmínili snad nejznámější prvek platnosti – provenience. Lze si představit, že se jedná o pravděpodobně nejdůmyslnější součást architektury, měla by to být překážka, a tedy zaměření optimalizace. Zajímavé je, že právě „standardnější“ komponenty jsou dnes překážkou StarkNet. Dnes, zejména s[rekurentními důkazy](https://medium.com/starkware/recursive-starks-78f8dd401025), můžeme do důkazu zařadit mnohem více transakcí než aktuální provoz na Testnet/Mainnet. Ve skutečnosti dnes jsou bloky StarkNet prokázány spolu s transakcemi StarkEx, kde mohou vzniknout několik stovek tisíc NFT mins.
 
 ### Summary
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+Paralelizace, Rust, a další – připravte se na lepší TPS v nadcházejících verzích StarkNet.

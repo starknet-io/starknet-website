@@ -52,7 +52,7 @@ StarkGate Alpha в Mainnet запускається з двома обмежен
 2. [StarkGate контракти repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
 3. [Шоманс СтаркНет](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+Щоб отримати відповіді на запитання та отримати підтримку розробників, приєднайтеся до[сервера Discord StarkNet](https://discord.gg/uJ9HZTUk2Y).
 
 ### Умови обмеженої відповідальності
 

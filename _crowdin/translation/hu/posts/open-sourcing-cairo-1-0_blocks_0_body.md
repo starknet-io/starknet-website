@@ -1,77 +1,81 @@
 ### TL;DR
 
-* **Cairo 1.0 is open source! This is only the first step towards open-sourcing the StarkNet stack.**
-* We now present a [first look](https://github.com/starkware-libs/cairo) into the Cairo 1.0 compiler. You can now start experimenting with basic Cairo 1.0 code
-* Cairo 1.0 at its core is very similar to Rust
-* Consider it a first taste, not a release. More improvements are on the way. The first version of the compiler is planned for early Q1 next year.
-* Cairo 1.0 is not supported on StarkNet, yet. It will be supported on StarkNet in Q1 next year.
+* **A Cairo 1.0 nyílt forráskódú! Ez csak az első lépés a StarkNet verem nyílt forráskódú beszerzése felé.**
+* Most egy[első pillantást](https://github.com/starkware-libs/cairo)mutatunk be a Cairo 1.0 fordítóba. Most már elkezdheti a kísérletezést az alap Cairo 1.0 kóddal
+* A Cairo 1.0 magjában nagyon hasonlít a Rusthoz
+* Tekintsd első ízelítőnek, ne kiadásnak. További fejlesztések készülnek. A fordítóprogram első verzióját jövő év első negyedévére tervezik.
+* A Cairo 1.0 még nem támogatott a StarkNeten. A StarkNet a jövő év első negyedévében támogatja.
 
 ### Intro
 
-In 2020, we released [Cairo](https://eprint.iacr.org/2021/1063.pdf), a Turing-complete programming language supporting verifiable computation. Cairo started as an assembly language and gradually became more expressive. Two months ago, we announced [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0), which addresses some major issues in the current situation:
+2020-ban kiadtuk[Cairo](https://eprint.iacr.org/2021/1063.pdf), egy Turing-komplett programozási nyelvet, amely támogatja az ellenőrizhető számításokat. Kairó assembly nyelvnek indult, és fokozatosan kifejezőbbé vált. Két hónappal ezelőtt bejelentettük[Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)verziót, amely a jelenlegi helyzetben néhány fontosabb problémát kezel:
 
-* While Cairo’s syntax has seen significant improvement since its inception, the developer experience can always improve. Cairo 1.0 is a rust-inspired fully typed language, making writing the same logic much easier and less error-prone.
-* The existing compiler is developed in the same repo as StarkNet itself, making it harder to track language changes. The Cairo 1.0 compiler is written from the ground up, allowing for faster feature development and for more community involvement.
-* Every computation is now provable. Currently, a Cairo program may fail with specific inputs (e.g. by reaching an \`assert 1=2\` instruction in some computation branch), rendering the computation unprovable. With Cairo 1.0, programs are provable in every possible branch. This is particularly important for DOS protection and censorship resistance in StarkNet.
+* Míg a kairói szintaxis jelentős fejlődésen ment keresztül a kezdetek óta, a fejlesztői élmény mindig fejlődhet. A Cairo 1.0 egy rozsda által ihletett, teljesen gépelt nyelv, amely sokkal könnyebbé és kevésbé hibássá teszi ugyanazt a logikát.
+* A meglévő fordító ugyanabban a tárban van kifejlesztve, mint maga a StarkNet, ami megnehezíti a nyelvi változások nyomon követését. A Cairo 1.0 fordító az alapoktól kezdve íródott, ami gyorsabb szolgáltatásfejlesztést és nagyobb közösségi részvételt tesz lehetővé.
+* Most már minden számítás bizonyítható. Jelenleg egy kairói program bizonyos bemenetekkel meghibásodhat (pl. \`assert 1=2\` utasítás elérése valamelyik számítási ágban), ami bizonyíthatatlanná teszi a számítást. A Cairo 1.0-val a programok minden lehetséges ágban bizonyíthatók. Ez különösen fontos a DOS-védelem és a cenzúraállóság szempontjából a StarkNetben.
 
-Today we mark the first milestone in reaching the above goals as we move the development to a public repo, and **open source Cairo 1.0!** Developers can now, for the first time, compile and execute simple Cairo 1.0 programs. This allows developers to start experimenting with Cairo 1.0 and gradually get accustomed to the new features, even if, at this phase, they cannot implement it on StarkNet just yet.
+Ma jelöljük meg az első mérföldkövet a fenti célok elérésében, mivel a fejlesztést nyilvános repo-ra és**nyílt forráskódú Cairo 1.0-ra helyezzük!**A fejlesztők most először tudnak egyszerű Cairo 1.0 programokat fordítani és végrehajtani. Ez lehetővé teszi a fejlesztők számára, hogy elkezdjenek kísérletezni a Cairo 1.0-val, és fokozatosan hozzászokjanak az új funkciókhoz, még akkor is, ha ebben a fázisban még nem tudják megvalósítani a StarkNeten.
 
-### Current capabilities
+### Jelenlegi képességek
 
-Currently, you can compile and execute basic native Cairo programs. While many of the syntax/language improvements are still underway, this allows getting used to Cairo 1.0 and enjoy upgrades as they come.
+Jelenleg alapvető natív kairói programokat fordíthat és hajthat végre. Bár sok szintaxis/nyelvi fejlesztés még folyamatban van, ez lehetővé teszi a Cairo 1.0-hoz való hozzászokást, és a frissítések azonnali élvezetét.
 
-**Note that writing StarkNet contracts is still unsupported.** StarkNet syntax (storage variables / calling contracts / events and other system calls) will be added in the coming weeks.
+**Vegye figyelembe, hogy a StarkNet szerződések írása továbbra sem támogatott.**StarkNet szintaxis (tárolási változók / hívási szerződések / események és egyéb rendszerhívások) a következő hetekben kerül hozzáadásra.
 
-### Code examples
+### Kódpéldák
 
-To illustrate the differences between the old syntax and Cairo 1.0, we have chosen to show a few different implementations/flavors of finding the n’th Fibonacci number.
+A régi szintaxis és a Cairo 1.0 közötti különbségek szemléltetésére úgy döntöttünk, hogy bemutatunk néhány különböző megvalósítást/ízt az n-edik Fibonacci-szám megtalálásához.
 
-### Example I: Match expressions
+### I. példa: Kifejezések egyezése
 
-In Cairo 1.0, you can use rust-like [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match) expressions. No longer will you fear if/else statements that may cause reference revocation!
+A Cairo 1.0-ban rozsdaszerű[match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html?highlight=match#match)kifejezéseket használhat. Többé nem fog félni az if/else kijelentésektől, amelyek hivatkozási visszavonást okozhatnak!
 
 ![](/assets/code01.png)
 
-### Example II: Data types
+### II. példa: Adattípusok
 
-While Cairo 0 worked with felts and pointers, in Cairo 1.0 we have native access to complex data types in the language. Below you can find an example that generates an array of the first n Fibonacci numbers.
+Míg a Cairo 0 filcekkel és mutatókkal dolgozott, a Cairo 1.0-ban natív hozzáférésünk van a nyelv összetett adattípusaihoz. Alább található egy példa, amely az első n Fibonacci-szám tömbjét generálja.
 
 ![](/assets/code02.png)
 
-As you can see above, rather than working directly with memory pointers, we use the `Array::<felt>\` type and the \`array_append\`function.
+Mint fentebb látható, ahelyett, hogy közvetlenül a memóriamutatókkal dolgoznánk, a `Array::<felt>\` típust és a \`array_append\`függvényt.
 
-### Example III: structs & ownership
+### III. példa: & tulajdonjogot strukturál
 
-The following code illustrates the usage of structs in Cairo 1.0.
+A következő kód a struktúrák használatát mutatja be a Cairo 1.0-ban.
 
 ![](/assets/code03.png)
 
-> The following paragraph is meant for the Rustaceans among the audience. Cairo 1.0 manages memory in a similar way to rust. In particular, it uses the concepts of [ownership and borrowing](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html). Thus, By accessing a member of the \`FibResult\` struct (in this case, \`result.value\`), we’ve moved \`result\`, which means that unless FibResult is copyable, we can’t access it again in \`result.index\`. To overcome this, we add the \`#\[derive(Copy)]\` attribute of the \`FibResult\` type. In future versions, we will add auto deconstruction for structs. This will allow moving ownership of one member without touching the others (in particular, the above code would compile even if \`FibResult\` didn’t have the copy attribute).
+> A következő bekezdés a közönség körében a rusztáknak szól. A Cairo 1.0 a rozsdához hasonló módon kezeli a memóriát. Különösen[tulajdonjog és a kölcsönfelvétel](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)fogalmát használja. Így a \`FibResult\` struktúra egy tagjának elérésével (jelen esetben \`result.value\`) áthelyeztük az \`eredményt\`, ami azt jelenti, hogy ha a FibResult nem másolható, akkor nem tudjuk érje el újra a \`result.index\` fájlban. Ennek kiküszöbölésére adjuk hozzá a \`#\[derive(Copy)]\` attribútumot a \`FibResult\` típushoz. A jövőbeli verziókban hozzáadjuk az automatikus dekonstrukciót a struktúrákhoz. Ez lehetővé teszi az egyik tag tulajdonjogának áthelyezését anélkül, hogy megérintené a többit (különös tekintettel arra, hogy a fenti kód akkor is lefordítható, ha a \`FibResult\` nem rendelkezik a copy attribútummal).
 
-**In particular, note that Cairo 1.0 is completely abstracting away the original (none deterministic read-only) memory model of Cairo.**
+**Különösképpen vegye figyelembe, hogy a Cairo 1.0 teljesen absztrahálja Kairó eredeti (nem determinisztikus, csak olvasható) memóriamodelljét.**
 
-## Example IV: Error propagation
+## IV. példa: Hiba terjedése
 
-The following code computes the n’th Fibonacci number, but unlike the previous examples, all the inputs are of the type uint128. Note that this solves a major pain point of handling uints in Cairo 0. Here, uint128 (and in the future uint256) are native types.
+A következő kód az n-edik Fibonacci-számot számítja ki, de az előző példákkal ellentétben az összes bemenet uint128 típusú. Ne feledje, hogy ez megoldja az uint-kezelés egyik fő fájdalmas pontját Kairó 0-ban. Itt az uint128 (és a jövőben az uint256) natív típus.
 
 ![](/assets/0_s8bhjf_ade3carmi.png)
 
-The addition of two 128 bit integers can cause an overflow. The above code uses the [Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html) and the [question mark operator](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html) to handle the case of overflow in one of the intermediate additions. Compare this to the [current](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31) uint256 addition syntax, where the \`unit256_check\` function had to be called to guarantee soundness. In addition, in the near future, we will add the concept of \`panic\` to the language (similar to the [panic](https://doc.rust-lang.org/rust-by-example/std/panic.html) macro in rust), and simple errors like addition overflow will be uncatchable and propagated automatically, which means that you won’t have to use \`Option\` or \`?\` when adding uints.
+Két 128 bites egész szám összeadása túlcsordulást okozhat. A fenti kód a[Option enum](https://doc.rust-lang.org/rust-by-example/std/option.html)és a[kérdőjeles](https://doc.rust-lang.org/rust-by-example/std/result/question_mark.html)operátort használja a túlcsordulás esetének kezelésére az egyik közbenső kiegészítésben. Hasonlítsa össze ezt a[jelenlegi](https://github.com/starkware-libs/cairo-lang/blob/9889fbd522edc5eff603356e1912e20642ae20af/src/starkware/cairo/common/uint256.cairo#L31)uint256 hozzáadási szintaxissal, ahol a \`unit256_check\` függvényt kellett meghívni a megbízhatóság garantálásához. Ezenkívül a közeljövőben hozzáadjuk a \`pánik\` fogalmát a nyelvhez (hasonlóan a rozsdás[panic](https://doc.rust-lang.org/rust-by-example/std/panic.html)makróhoz), és az olyan egyszerű hibák, mint az összeadás túlcsordulása, nem lesznek elfoghatók és automatikusan továbbterjednek, ami azt jelenti, hogy nem kell használnod az \`Option\` vagy \`?\` uints hozzáadásakor.
 
-## Try it yourself
+## Próbáld ki magad
 
-You can now compile and run currently supported Cairo 1.0 programs! Follow these [instructions](https://github.com/starkware-libs/cairo/tree/main/crates/cairo-lang-runner) on how to use the \`cairo-run\` command. Note that under the hood, the [Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), developed by [Lambdaclass](https://lambdaclass.com/), is used for execution.
+Most már lefordíthatja és futtathatja a jelenleg támogatott Cairo 1.0 programokat! Kövesse ezeket</a>
 
-You can find more examples to help you get started [here](https://github.com/starkware-libs/cairo2/tree/main/examples). Note that this is only the first peek into the compiler development; in the coming weeks, we will improve the CLI alongside the compiler.
+\`cairo-run\` parancs használatához. Vegye figyelembe, hogy a motorháztető alatt a[Rust Cairo VM](https://github.com/lambdaclass/cairo-rs), amelyet[Lambdaclass](https://lambdaclass.com/)fejlesztett ki a végrehajtáshoz.</p> 
 
-## Future Plans
+További példákat találhat az induláshoz[itt](https://github.com/starkware-libs/cairo2/tree/main/examples). Vegye figyelembe, hogy ez csak az első bepillantás a fordítóprogram fejlesztésébe; a következő hetekben a fordítóprogram mellett továbbfejlesztjük a CLI-t.
 
-The focus of the first version of the Compiler, which is planned for early Q1, is supporting all existing functionality of StarkNet in Cairo 1.0. Additionally, we’re working on extending the capabilities of the Cairo 1.0 compiler. In the coming weeks, you can expect:
 
-* StarkNet capabilities — writing smart contracts and using system calls.
-* Loops
-* New library functions
-* Improved language server
-* A native notion of StarkNet gas
 
-Make sure to stay tuned and track the compiler progress!
+## Jövőbeli tervek
+
+A Compiler első, az első negyedév elejére tervezett verziójának középpontjában a StarkNet összes meglévő funkciójának támogatása áll Kairóban 1.0. Emellett a Cairo 1.0 fordító képességeinek kibővítésén is dolgozunk. A következő hetekben a következőkre számíthatsz:
+
+* StarkNet képességek – intelligens szerződések írása és rendszerhívások használata.
+* Hurkok
+* Új könyvtári funkciók
+* Továbbfejlesztett nyelvi szerver
+* A StarkNet gáz natív fogalma
+
+Ügyeljen arra, hogy maradjon velünk, és kövesse nyomon a fordító folyamatát!

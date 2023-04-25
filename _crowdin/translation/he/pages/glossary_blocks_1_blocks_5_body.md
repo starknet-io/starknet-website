@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+סטים מסודרים של עסקאות Starknet המופעלות באמצעות מערכת ההפעלה Starknet, וכתוצאה מכך שינוי מצב אחד מצטבר שמתחייב לאחר מכן לחוזה הליבה של Starknet L1. לבלוק יש:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … a block hash - מזהה יציב ייחודי שניתן להשתמש בו כדי לבצע שאילתות ולהתייחס לבלוק.
+* … מספר בלוק – מספר סידורי המייצג את מיקום הבלוק ברצף הבלוקים המקובלים ב-Starknet. שימו לב, מספר החסימה עשוי להשתנות עם הזמן. כמו כן, מספר נתון עשוי להתייחס לבלוקים שונים בנקודות זמן שונות, למשל, במקרה של הזמנות מחדש של שרשרת L1.

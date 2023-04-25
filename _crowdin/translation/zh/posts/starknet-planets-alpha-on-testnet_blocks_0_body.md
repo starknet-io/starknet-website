@@ -8,7 +8,7 @@
 
 ### **导 言**
 
-We [announced](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880) the roadmap for [StarkNet](https://starkware.co/product/starknet/) in Jan 2021. 圣杯可伸缩性解决办法将支持(一) 任意智能合同，(二) 复合性，(三) 通过分散的网络运作。 今天，我们宣布在测试网上部署步骤1：StarkNet 行星Alpha。 Alpha系统支持任意智能合约。 将于今年晚些时候支持合成性，随后将进行权力下放。
+我们[于 2021 年 1 月宣布](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880)[StarkNet](https://starkware.co/product/starknet/)的路线图。 圣杯可伸缩性解决办法将支持(一) 任意智能合同，(二) 复合性，(三) 通过分散的网络运作。 今天，我们宣布在测试网上部署步骤1：StarkNet 行星Alpha。 Alpha系统支持任意智能合约。 将于今年晚些时候支持合成性，随后将进行权力下放。
 
 非常重要的是，我们必须做到充分透明并适当地确定期望。 这个帖子的目的是清楚地列出哪些已经支持的功能，以及哪些功能仍然缺失。 我们今天要释放的是正在测试网上进行的工作。 我们认为，这种早期释放将有助于形成StarkNet周围的健康生态系统及其工具。 我们渴望让开发者参与与我们一起建立网络，并从社区获得持续的反馈。
 

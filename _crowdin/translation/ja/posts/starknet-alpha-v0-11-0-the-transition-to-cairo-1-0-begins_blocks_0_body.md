@@ -55,7 +55,7 @@ Starknet alpha v0.11.0 は投票のためにアップされた Starknet 最初�
 
 ## Cairo 1.0 and Sierra
 
-Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion) is an intermediate representation that compiles to Cairo assembly (CASM). 開発者がCairo 0をCASMにコンパイルし、その結果をStarknetシーケンサーに送信します。 Cairo 1.0では、開発者はコードをSierraにコンパイルし、この中間表現をシーケンサーに送信します。 シーケンサーはそれをCASMにコンパイルします。 Sierraは「安全なCASM」にコンパイルすることが保証されています。すなわち、失敗することができないCASMのサブセットであり、すべての実行が証明可能になります。 これにより、シーケンサーはDOSから保護され、元に戻された取引でも料金を請求することができます。 詳細については、[ドキュメント](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/) を参照してください。
+Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion) は、Cairo アセンブリ (CASM) にコンパイルされる中間表現です。 開発者がCairo 0をCASMにコンパイルし、その結果をStarknetシーケンサーに送信します。 Cairo 1.0では、開発者はコードをSierraにコンパイルし、この中間表現をシーケンサーに送信します。 シーケンサーはそれをCASMにコンパイルします。 Sierraは「安全なCASM」にコンパイルすることが保証されています。すなわち、失敗することができないCASMのサブセットであり、すべての実行が証明可能になります。 これにより、シーケンサーはDOSから保護され、元に戻された取引でも料金を請求することができます。 詳細については、[ドキュメント](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/) を参照してください。
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*KsAwaJTIsOuCsJIe)
 

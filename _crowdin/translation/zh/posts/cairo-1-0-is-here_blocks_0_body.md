@@ -1,38 +1,44 @@
 ### TL;DR
 
-* Cairo 1.0 first release is here!
-* Developers can start writing and testing Cairo 1.0 programs
-* Feature parity with the older version of Cairo will be reached in the coming weeks
-* Support for StarkNet contracts will be added in the upcoming StarkNet Alpha version
+* 开罗1.0 第一版在这里！
+* 开发者可以开始写作和测试 Cairo 1.0 程序
+* 今后几周内将实现与旧版开罗的功能对等性
+* StarkNet 合同的支持将添加到即将推出的StarkNet Alpha 版本
 
-### Background
+### 二. 背景
 
-We are excited to announce that the first public version of Cairo 1.0 is now available. This marks a major milestone in the evolution of Cairo, which was first introduced in 2020 as a Turing-complete programming language for efficiently writing STARK-provable programs. Cairo 1.0 is a Rust-like high-level language. Like Rust, it is intended to allow developers to easily write code that is efficient and safe.
+我们很高兴地宣布，第一个公开版开罗1.0版现已出版。 这是开罗演变过程中的一个重要里程碑。 它是在2020年首次引入的，作为一种全面的编程语言，有效地编写STARK可证明的程序。 开罗1.0语是一种类似冲锋利的高级语言。 像Rust一样，它是为了让开发人员能够轻松地写下高效和安全的代码。
 
-Since its inception, Cairo has been used to build Layer-2 applications that have [handled](https://dashboard.starkware.co/starkex) over $790 billion worth of trades, processed over 300 million transactions and minted more than 90 million NFTs, all performed off-chain and settled on Ethereum with the mathematical integrity guaranteed by STARK proofs. Cairo became the 4th most used programming language in the blockchain [ecosystem](https://defillama.com/languages) at large. With the release of Cairo 1.0, we aim to make the language even more accessible and user-friendly while also introducing new features that enhance safety and convenience.
+自成立以来，Cairo 已被用于构建第 2 层应用程序，这些应用程序[处理](https://dashboard.starkware.co/starkex)超过 7900 亿美元的交易，处理了超过 3 亿笔交易并铸造了超过 9000 万个 NFT，所有这些都在链下执行并在以太坊上结算STARK 证明保证的数学完整性。 开罗成为区块链[生态系统](https://defillama.com/languages)中第四个最常用的编程语言。 开罗一世获释。 我们的目标是使语言更容易获得，更方便用户，同时也引进新的特征，加强安全和方便。
 
-One of the most significant changes in Cairo 1.0 is the syntax. We have taken inspiration from **Rust** to create a more developer-friendly language that is easier to read and write. The new version of Cairo allows writing safer code (strongly typed, ownership and borrowing, etc.), while also being more expressive.
+开罗1.0最重要的变化之一是语法。 我们从**Rust**中获得灵感，创建一种更容易阅读和写入的更方便开发者的语言。 开罗新版允许撰写更安全的代码（强化打字、所有权和借款，等等），同时也更加明确。
 
-Cairo 1.0 also introduces Sierra, a new intermediate representation that ensures **every** Cairo run can be proven. This makes Cairo 1.0 particularly well-suited for use in a permissionless network like StarkNet, where it can provide robust DoS protection and censorship resistance. You can read more about Sierra in our [previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) post.
+Cairo 1.0 还引入了 Sierra，这是一种新的中间表示，可确保每运行</strong>Cairo 就可以证明**。 这使得开罗1.0特别适合于在StarkNet这样一个没有许可的网络中使用，它能够在那里提供强有力的DoS保护和防止新闻检查。 您可以在我们的[previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)post 中阅读更多关于 Sierra 的信息。</p>
 
-## First taste!
+## 首次驯服！
 
-### What can you do today?
+### 今天你能做什么？
 
-Developers can start writing, compiling, and testing Cairo 1.0 programs! We encourage developers to start experimenting with Cairo 1.0 and getting accustomed to the new syntax and features.
+开发者可以开始编写、编译和测试 Cairo 1.0 程序！ 我们鼓励开发者开始尝试开罗1.0并习惯新的语法和功能。
 
-Since Cairo 1.0 is still actively developed, and new features are constantly added, check out the [Cairo repository](https://github.com/starkware-libs/cairo/) for the latest updates.
+由于开罗1.0版仍在积极开发，新功能不断添加，请参阅[开罗存储库](https://github.com/starkware-libs/cairo/)获取最新更新。
 
-### What's next?
+### 接下来是什么？
 
-At the moment, Cairo 1.0 is still missing some of the features supported in the older version of Cairo ([see this table for details](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Our next milestone, expected in the next few weeks, will provide Cairo 1.0 feature parity with the older version. You can track the progress toward that milestone [here](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
+目前是开罗1。 还缺少一些旧版本开罗所支持的功能([详情请查看此表格](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md))。 我们的下一个里程碑预计将在今后几周内完成，它将提供开罗1.0地物与较老的地物对等。 您可以在此处</a>跟踪里程碑
 
-### Starknet support
+的进度。</p> 
 
-Writing StarkNet contracts in Cairo 1.0 is supported (although certain features are still missing). However, StarkNet does not yet support the deployment and execution of Cairo 1.0 contracts. StarkNet Alpha V0.11.0, planned in the upcoming weeks, will introduce the ability to deploy and run Cairo 1.0 contracts. The upgrade to v0.11.0 will mark the beginning of the Transition Period towards a system that runs only Cairo 1.0 contracts. This Transition Period will end with the [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), expected a few months later.
+
+
+### Starknet支持
+
+在开罗写入StarkNet合同得到支持(尽管某些特征仍然缺失)。 然而，StarkNet尚未支持开罗1.0合同的部署和执行。 计划在今后几周实施的StarkNet Alpha V0.11.0将引入部署和运行开罗1.0合同的能力。 升级到v0.11.0将标志着向仅运行开罗1.0合同的系统过渡期的开始。 这个过渡时期将以[雷格尼斯](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)结束，预计几个月后结束。
 
 ![](/assets/0_odxbxeacqdwizlfw.jpg)
 
-### Let's build!
 
-The goal of StarkNet is to exponentially scale Ethereum using the mathematical integrity of STARKs, and the goal of Cairo is to make this exponential scale accessible to developers. Accessibility means a programming language that is efficient, easy to read and write, and safe to use. We hope the release of Cairo 1.0 will inspire even more developers to join StarkNet and scale Ethereum to meet global demand.
+
+### 让我们来建造吧！
+
+StarkNet的目标是利用STARK的数学完整性指数化以太坊。 而且开罗会议的目标是使开发者能够获得这种指数规模。 可获取性是指一种高效、易读写、安全使用的编程语言。 我们希望开罗1.0版的发行将鼓励更多的开发商加入StarkNet，扩大以满足全球需求。

@@ -87,7 +87,7 @@ StarkNet Alpha предоставляет общие вычисления сма
 * Начните писать контракты на безразрешенную StarkNet testnet на Goerli
 * Присоединяйтесь к[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)
 * Присоединяйтесь к звонкам сообщества
-* Attend the first [StarkNet Ecosystem Summit](https://www.eventbrite.com/e/starknet-ecosystem-summit-2022-tickets-206671880157) (Jan 27–28 2022, Stanford CA)
+* Посетите[Саммит StarkNet Ecosystem](https://www.eventbrite.com/e/starknet-ecosystem-summit-2022-tickets-206671880157)(27–28 января 2022 г., Стэнфорд, Калифорния)
 * Присоединяйтесь к[StarkNet Shamans](https://community.starknet.io/)для более глубокого погружения в исследования
 
 ### Оговорка

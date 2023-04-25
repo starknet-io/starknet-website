@@ -1,97 +1,97 @@
 ### TL;DR
 
-* Alpha is live on Mainnet
-* It supports general computation and composability
-* Fast-growing community, developing tooling, and applications
-* Additional features to be rolled out on an ongoing basis in the coming weeks
-* Disclaimer: this is an Alpha version (read the fine print below)
+* Alpha élőben a Mainneten
+* Támogatja az általános számítást és az összeállítást
+* Gyorsan növekvő közösség, fejlődő eszközök és alkalmazások
+* A következő hetekben további funkciókat is folyamatosan vezetnek be
+* Felelősség kizárása: ez egy alfa verzió (olvassa el az apró betűs részt lent)
 
-### Introduction
+### Bevezetés
 
-StarkNet Alpha is launching today on Ethereum Mainnet!
+A StarkNet Alpha ma elindul az Ethereum Mainnet-en!
 
-StarkNet is a permissionless decentralized Rollup operating as an L2 network over Ethereum. StarkNet allows any dApp to achieve unlimited scale for its computation, without compromising Ethereum’s composability and security, thanks to its reliance on the safest and most scalable cryptographic proof system — [STARK](https://starkware.co/stark/). StarkNet is built on the [Cairo](https://starkware.co/cairo/) programming language, the first production-grade Turing complete von-Neumann verifier on Ethereum. Both Cairo and STARK were developed in-house by StarkWare and have powered all our production-grade applications, which have settled over 50M txs and $250B since Summer 2020.
+A StarkNet egy engedély nélküli decentralizált Rollup, amely L2 hálózatként működik az Ethereumon keresztül. A StarkNet lehetővé teszi bármely dApp számára, hogy korlátlan méretarányt érjen el a számításai során, anélkül, hogy veszélyeztetné az Ethereum kompozícióját és biztonságát, köszönhetően a legbiztonságosabb és leginkább méretezhető kriptográfiai bizonyítékrendszernek –[STARK](https://starkware.co/stark/). A StarkNet a[Cairo](https://starkware.co/cairo/)programozási nyelvre épül, amely az első termelési szintű Turing teljes von-Neumann hitelesítő az Ethereumon. Mind a Cairot, mind a STARK-ot a StarkWare házon belül fejlesztette ki, és ezek működtetik az összes éles szintű alkalmazásunkat, amelyek 2020 nyara óta több mint 50 millió tx-t és 250 milliárd dollárt tettek ki.
 
-Among other features, StarkNet Alpha enables general computation smart contracts that support composability, both with other StarkNet contracts and via L1<>L2 messaging with L1 contracts. StarkNet Alpha operates in a Rollup mode, meaning all the state diff data is sent on-chain.
+Többek között a StarkNet Alpha általános számítási intelligens szerződéseket tesz lehetővé, amelyek támogatják az összeállítást, mind más StarkNet-szerződésekkel, mind L1<>L2 üzenetküldéssel az L1 szerződésekkel. A StarkNet Alpha összesítő módban működik, ami azt jelenti, hogy az összes állapot-diff adat a láncon belül kerül elküldésre.
 
-Back in January, we shared the StarkNet [roadmap](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880). In June, StarkNet Alpha went live on a public testnet, and has been updated with new features on a rolling basis. We are delighted to be ahead of schedule, thanks, in part, to our reliance on our production-grade battle-hardened STARK/Cairo software stack.
+Még januárban megosztottuk a StarkNet[ütemtervét](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880). Júniusban a StarkNet Alpha nyilvános tesztneten megjelent, és folyamatosan frissült új funkciókkal. Örülünk, hogy az ütemterv előtt járunk, részben annak köszönhetően, hogy támaszkodunk a gyártási szintű, harcedzett STARK/Cairo szoftvercsomagunkra.
 
-### How Should you Treat StarkNet Alpha?
+### Hogyan kell kezelni a StarkNet Alfát?
 
-First, with great care, as the “Alpha” label is there for a reason. Expect changes, fixes, and improvements to come. StarkNet Alpha has yet to be audited, and we may delay such an audit till the network matures some more (read the disclaimer at the end of this post for more information).
+Először is, nagy körültekintéssel, mivel az „Alfa” címke okkal van ott. Várható változások, javítások és fejlesztések. A StarkNet Alpha auditálása még nem történt meg, és előfordulhat, hogy elhalasztjuk az ellenőrzést, amíg a hálózat kifejlődik (további információért olvassa el a jelen bejegyzés végén található felelősségkizárást).
 
-Generally, we follow the cautious and sensible path defined by our Optimistic Rollup colleagues, namely, Arbitrum and Optimism: launch the network with a single sequencer, and whitelist applications in order to ensure their developers understand the risks involved. We continue to be fully committed to a complete decentralization of StarkNet.
+Általában az Optimistic Rollup munkatársaink által meghatározott óvatos és ésszerű utat követjük, nevezetesen az Arbitrumot és az Optimizmust: egyetlen szekvenszerrel indítsuk el a hálózatot, és engedélyezzük az alkalmazásokat annak érdekében, hogy a fejlesztők megértsék az ezzel járó kockázatokat. Továbbra is teljes mértékben elkötelezettek vagyunk a StarkNet teljes decentralizálása mellett.
 
-And how should you treat StarkNet Alpha’s economics? The Alpha will start out with no transaction fees. The next upgrade, only a few weeks away, will introduce a fee mechanism — we will share more details in a separate post.
+És hogyan kell kezelni a StarkNet Alpha gazdaságtanát? Az Alpha tranzakciós díjak nélkül indul. A következő, csak néhány hét múlva esedékes frissítés díjmechanizmust vezet be – további részleteket egy külön bejegyzésben osztunk meg.
 
-### Start Building
+### Kezdje el az építést
 
-We invite you to start writing your own applications over StarkNet by either checking the (new!) [website](http://starknet.io/), or jumping directly to the [tutorial](https://starknet.io/docs/).
+Meghívjuk Önt, hogy kezdje el saját alkalmazásait a StarkNeten keresztül az (új!) [webhely](http://starknet.io/), vagy közvetlenül a[oktatóanyagra ugrás](https://starknet.io/docs/).
 
-If you are ready to deploy, please follow this [onboarding process](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu); created to ensure all developers are well aware of the preliminary state of the system.
+Ha készen áll a telepítésre, kövesse ezt a[beépítési folyamatot](https://forms.reform.app/starkware/SN-Alpha-Contract-Deployment/l894lu); azért jött létre, hogy minden fejlesztő tisztában legyen a rendszer előzetes állapotával.
 
-### Ecosystem
+### Ökoszisztéma
 
-Over the past couple of months, we have seen amazing growth in the size and activity of the StarkNet community, which congregates on the [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y). Dozens of developers — teams and individuals — across the blockchain ecosystem are contributing to this effort. (See the disclaimer at the end of this post)
+Az elmúlt néhány hónapban elképesztő növekedést tapasztaltunk a StarkNet közösség méretében és aktivitásában, amely a[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)en gyűlik össze. Fejlesztők tucatjai – csapatok és magánszemélyek – a blokklánc ökoszisztémában járulnak hozzá ehhez az erőfeszítéshez. (Lásd a nyilatkozatot a bejegyzés végén)
 
-#### Developer Tools
+#### Fejlesztői eszközök
 
-* OpenZeppelin is defining the standard contracts. Their [repo](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts) and [discussions](https://github.com/OpenZeppelin/cairo-contracts/discussions) are worth following
-* The [Warp](https://github.com/NethermindEth/warp) Solidity–>Cairo transpiler, developed by Nethermind
-* Shard Labs’ [HardHat plugin](https://github.com/Shard-Labs/starknet-hardhat-plugin) and [StarkNet Devnet](https://github.com/Shard-Labs/starknet-devnet)
-* Argent is developing tooling, including its joint effort on StarkNet.js, alongside [Sean Han](https://twitter.com/seanjameshan), its creator
+* Az OpenZeppelin határozza meg a standard szerződéseket. Érdemes követni a[repo](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts)és[megbeszéléseiket](https://github.com/OpenZeppelin/cairo-contracts/discussions)
+* A Nethermind által kifejlesztett[Warp](https://github.com/NethermindEth/warp)Solidity–>Cairo transzpiler
+* A Shard Labs[HardHat bővítménye](https://github.com/Shard-Labs/starknet-hardhat-plugin)és[StarkNet Devnet](https://github.com/Shard-Labs/starknet-devnet)
+* Az Argent eszközöket fejleszt, beleértve a StarkNet.js-en végzett közös erőfeszítéseit, valamint[Sean Han](https://twitter.com/seanjameshan), annak készítője
 
-#### Infrastructure
+#### Infrastruktúra
 
-**Block explorer**:
+****blokkböngésző:
 
-* [The Voyager](http://voyager.online/) project by Nethermind
-* [Eth.tx](https://ethtx.info/) will offer support analysis and a detailed view of StarkNet transactions
+* [A Nethermind Voyager](http://voyager.online/)projektje
+* [Az Eth.tx](https://ethtx.info/)támogatáselemzést és a StarkNet-tranzakciók részletes nézetét kínálja
 
-**Full nodes**: two efforts underway: one is the Fermion project led by Erigon, the other is the [Pathfinder](https://github.com/eqlabs/pathfinder) project, led by Equilibrium
+**Teljes csomópont**: két erőfeszítés folyamatban: az egyik az Erigon által vezetett Fermion projekt, a másik a[Pathfinder](https://github.com/eqlabs/pathfinder)projekt, az Equilibrium vezetésével
 
-**Wallets**:
+**Pénztárcák**:
 
-* [ArgentX](https://github.com/argentlabs/argent-x) is a browser extension developed by Argent, already available to devs
-* Torus key management solution is StarkNet ready
-* Ledger is developing a native StarkNet app; to be made available before the end of the year
+* [Az ArgentX](https://github.com/argentlabs/argent-x)az Argent által kifejlesztett böngészőbővítmény, amely már elérhető a fejlesztők számára
+* A Torus kulcskezelési megoldása készen áll a StarkNetre
+* A Ledger natív StarkNet alkalmazást fejleszt; év vége előtt elérhetővé kell tenni
 
-**Cairo Audits**: ConsenSys Diligence, Trail of Bits, Peckshield, and ABDK are either conducting Cairo audits already, or about to start soon
+**Cairo Audits**: A ConsenSys Diligence, a Trail of Bits, a Peckshield és az ABDK vagy már végez kairói auditokat, vagy hamarosan elkezdődik
 
-**API Services**: after a StarkNet full node is made available, API services will be offered by Figment, Chainstack, and Infura
+**API-szolgáltatások**: miután a StarkNet teljes csomópontja elérhetővé válik, az API-szolgáltatásokat a Figment, a Chainstack és az Infura kínálja
 
-**Indexer**: we will be working on integrating TheGraph to work with StarkNet, together with the Figment team
+**Indexer**: a Figment csapatával együtt azon fogunk dolgozni, hogy a TheGraph-t integráljuk a StarkNettel
 
-### The Road Ahead
+### Az előttünk lévő út
 
-In the weeks and months to come, we will upgrade the Alpha with the following capabilities:
+Az elkövetkező hetekben és hónapokban a következő képességekkel frissítjük az Alfát:
 
-* Contract upgradability mechanism
-* Fee Mechanism
-* Events
-* Addition of missing syscalls (get_block_number, get_block_timestamp, and more)
-* Skeletal version of Volition
-* And much more …
+* A szerződés bővíthetőségi mechanizmusa
+* Díjmechanizmus
+* Események
+* Hiányzó rendszerhívások hozzáadása (get_block_number, get_block_timestamp stb.)
+* A Volition csontvázas változata
+* És még sok más …
 
-To monitor this effort on an ongoing basis, see the features’ [tentative roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51).
+Ennek az erőfeszítésnek a folyamatos nyomon követéséhez tekintse meg a funkciók[kísérleti útitervét](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51).
 
-Looking further out, we continue to invest heavily in active research on multiple fronts (come join the [Shamans](https://community.starknet.io/) effort):
+Tovább tekintve, továbbra is jelentős összegeket fektetünk be az aktív kutatásba több fronton (gyere, csatlakozz a[Shamans](https://community.starknet.io/)erőfeszítéshez):
 
-* Decentralization
-* Scaling
-* Data availability
-* Permissionless incentivization
+* Decentralizálás
+* Méretezés
+* Az adatok elérhetősége
+* Engedély nélküli ösztönzés
 
-### Call to Action
+### Felhívás cselekvésre
 
-* Start writing contracts on the permissionless StarkNet testnet on Goerli
-* Join the [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)
-* Join the community calls
-* Attend the first [StarkNet Ecosystem Summit](https://www.eventbrite.com/e/starknet-ecosystem-summit-2022-tickets-206671880157) (Jan 27–28 2022, Stanford CA)
-* Join the [StarkNet Shamans](https://community.starknet.io/) for a deeper dive into research challenges
+* Kezdjen el szerződéseket írni a Goerli engedély nélküli StarkNet teszthálóján
+* Csatlakozz a[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)hez
+* Csatlakozzon a közösségi hívásokhoz
+* Vegyen részt az első[StarkNet ökoszisztéma csúcstalálkozón](https://www.eventbrite.com/e/starknet-ecosystem-summit-2022-tickets-206671880157)(2022. január 27–28., Stanford CA)
+* Csatlakozzon a[StarkNet Shamans](https://community.starknet.io/), hogy mélyebben belemerüljön a kutatási kihívásokba
 
-### Disclaimer
+### Jogi nyilatkozat
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. Like all complex software systems, the StarkNet system may contain bugs which, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***A StarkNet Alpha egy új és összetett rendszer, amelyet még nem auditáltak teljesen. Mint minden összetett szoftverrendszer, a StarkNet rendszer is tartalmazhat hibákat, amelyek szélsőséges esetekben az összes pénzeszköz elvesztéséhez vezethetnek. Tehát***óvatosan lépj és vigyázz!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*A StarkNet ökoszisztéma független csapatok és egyének nagy és gyorsan növekvő halmaza, amely felett a StarkWare nem rendelkezik felügyelettel, és nem vállal felelősséget. Az ökoszisztéma tagjai által kifejlesztett projektek bármelyike tartalmazhat olyan hibákat, amelyek szélsőséges esetekben az összes pénzeszköz elvesztéséhez vezethetnek. Továbbá, ahogy egyre több intelligens szerződés kerül bevezetésre, megnő a nem szándékos kártékony hibák, sőt a rosszindulatú csalások és szőnyeglehúzások lehetősége. Tehát kezelje a StarkNet összes intelligens szerződését úgy, mint az Ethereum intelligens szerződéseit, és csak azokat használja biztonságosnak, amelyekben alapos oka van megbízni.*

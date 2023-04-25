@@ -1,1 +1,1 @@
-The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.
+Starknet sıralayıcı düğümleri ve gerekirse L1 sözleşmeleri ile etkileşime giren kullanıcılar. İster insan ister otomatik olsun bu kullanıcılar, işlemleri Starknet ağına gönderen aracılardır.

@@ -1,4 +1,4 @@
 {
   "source": "/blog-posts/:path*",
-  "destination": "/en/posts"
+  "destination": "/pt-BR/posts"
 }

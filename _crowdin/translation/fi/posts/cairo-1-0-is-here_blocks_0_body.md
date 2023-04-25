@@ -1,38 +1,38 @@
 ### TL;DR
 
-* Cairo 1.0 first release is here!
-* Developers can start writing and testing Cairo 1.0 programs
-* Feature parity with the older version of Cairo will be reached in the coming weeks
-* Support for StarkNet contracts will be added in the upcoming StarkNet Alpha version
+* Kairo 1.0 ensimmäinen julkaisu on täällä!
+* Kehittäjät voivat aloittaa Kairo 1.0 -ohjelmien kirjoittamisen ja testaamisen
+* Ominaisuuden pariteetti vanhempi versio Kairo saavutetaan tulevina viikkoina
+* Tukea StarkNet-sopimuksille lisätään tulevaan StarkNet Alpha -versioon
 
-### Background
+### Tausta
 
-We are excited to announce that the first public version of Cairo 1.0 is now available. This marks a major milestone in the evolution of Cairo, which was first introduced in 2020 as a Turing-complete programming language for efficiently writing STARK-provable programs. Cairo 1.0 is a Rust-like high-level language. Like Rust, it is intended to allow developers to easily write code that is efficient and safe.
+Olemme innoissamme ilmoittaa, että ensimmäinen julkinen versio Kairo 1.0 on nyt saatavilla. Tämä on merkittävä virstanpylväs Kairon kehityksessä, joka esiteltiin ensimmäisen kerran vuonna 2020 käännöskokonaisena ohjelmointikielenä tehokkaasti STARK-todistettavissa olevien ohjelmien kirjoittamiseksi. Kairo 1.0 on ruostemainen korkean tason kieli. Kuten Rust, sen tarkoituksena on antaa kehittäjien helposti kirjoittaa koodia, joka on tehokas ja turvallinen.
 
-Since its inception, Cairo has been used to build Layer-2 applications that have [handled](https://dashboard.starkware.co/starkex) over $790 billion worth of trades, processed over 300 million transactions and minted more than 90 million NFTs, all performed off-chain and settled on Ethereum with the mathematical integrity guaranteed by STARK proofs. Cairo became the 4th most used programming language in the blockchain [ecosystem](https://defillama.com/languages) at large. With the release of Cairo 1.0, we aim to make the language even more accessible and user-friendly while also introducing new features that enhance safety and convenience.
+Perustamisestaan lähtien Kairo on käytetty rakentamaan Layer-2 sovelluksia, jotka ovat[käsitellyt](https://dashboard.starkware.co/starkex)yli $ 790 miljardia arvoinen kaupat, Jalostettu yli 300 miljoonaa transaktiota ja lyöty yli 90 miljoonaa NFT:tä, kaikki suoritetaan off-ketjun ja asettui Ethereum kanssa matemaattinen koskemattomuus taattu STARK todisteita. Kairosta tuli neljänneksi eniten käytetty ohjelmointikieli lohkoketjussa[ekosysteemissä](https://defillama.com/languages)yleensä. Kanssa vapauttamalla Kairo 1. , Pyrimme tekemään kielestä entistä helppokäyttöisempi ja käyttäjäystävällisempi ja ottamaan käyttöön uusia ominaisuuksia, jotka parantavat turvallisuutta ja mukavuutta.
 
-One of the most significant changes in Cairo 1.0 is the syntax. We have taken inspiration from **Rust** to create a more developer-friendly language that is easier to read and write. The new version of Cairo allows writing safer code (strongly typed, ownership and borrowing, etc.), while also being more expressive.
+Yksi merkittävimmistä muutoksista Kairo 1.0 on syntaksi. Olemme ottaneet inspiraation**Rust**luodaksemme kehittäjäystävällisemmän kielen, joka on helpompi lukea ja kirjoittaa. Kairon uusi versio mahdollistaa turvallisemman koodin kirjoittamisen (voimakkaasti kirjoitettu, omistajuus ja lainanotto, jne.), mutta myös ilmeisempi.
 
-Cairo 1.0 also introduces Sierra, a new intermediate representation that ensures **every** Cairo run can be proven. This makes Cairo 1.0 particularly well-suited for use in a permissionless network like StarkNet, where it can provide robust DoS protection and censorship resistance. You can read more about Sierra in our [previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) post.
+Kairo 1.0 esittelee myös Sierran uuden välilehden, joka takaa**jokaisen**Kairon ajon. Tämä tekee Kairo 1.0:sta erityisen sopivan käytettäväksi StarkNetin kaltaisessa luvattomassa verkossa, jossa se voi tarjota vahvan DoS-suojauksen ja sensuurivastuksen. Voit lukea lisää Sierra meidän[edellinen](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)postitse.
 
-## First taste!
+## Ensimmäinen maku!
 
-### What can you do today?
+### Mitä voit tehdä tänään?
 
-Developers can start writing, compiling, and testing Cairo 1.0 programs! We encourage developers to start experimenting with Cairo 1.0 and getting accustomed to the new syntax and features.
+Kehittäjät voivat aloittaa kirjoittamisen, kokoamisen ja testaamisen Kairo 1.0:n! Kannustamme kehittäjiä aloittamaan Kairo 1.0:n kokeilun ja tottumaan uuteen syntaksiin ja ominaisuuksiin.
 
-Since Cairo 1.0 is still actively developed, and new features are constantly added, check out the [Cairo repository](https://github.com/starkware-libs/cairo/) for the latest updates.
+Koska Kairo 1.0 on edelleen aktiivisesti kehitetty ja uusia ominaisuuksia lisätään jatkuvasti, tutustu[Kairo arkistoon](https://github.com/starkware-libs/cairo/)viimeisimmistä päivityksistä.
 
-### What's next?
+### Mitä seuraavaksi?
 
-At the moment, Cairo 1.0 is still missing some of the features supported in the older version of Cairo ([see this table for details](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Our next milestone, expected in the next few weeks, will provide Cairo 1.0 feature parity with the older version. You can track the progress toward that milestone [here](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
+Tällä hetkellä Kairo 1. puuttuu edelleen joitakin Kairon vanhassa versiossa tuettuja ominaisuuksia ([katso tämä taulukko lisätietoja](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Meidän seuraava merkkipaalu odotetaan lähiviikkoina, antaa Kairo 1.0 ominaisuus pariteetti vanhemman version. Voit seurata edistymistä kohti että virstanpylväs[täällä](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
 
-### Starknet support
+### Starknet- tuki
 
-Writing StarkNet contracts in Cairo 1.0 is supported (although certain features are still missing). However, StarkNet does not yet support the deployment and execution of Cairo 1.0 contracts. StarkNet Alpha V0.11.0, planned in the upcoming weeks, will introduce the ability to deploy and run Cairo 1.0 contracts. The upgrade to v0.11.0 will mark the beginning of the Transition Period towards a system that runs only Cairo 1.0 contracts. This Transition Period will end with the [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), expected a few months later.
+StarkNet-sopimusten kirjoittaminen Kairossa 1.0:ssa on tuettu (vaikka tietyt ominaisuudet puuttuvat). StarkNet ei kuitenkaan vielä tue Kairo 1.0:n sopimusten käyttöönottoa ja toteuttamista. StarkNet Alpha V0.11.0, suunniteltu tulevina viikkoina, tuo mahdollisuuden ottaa käyttöön ja ajaa Kairo 1.0 sopimuksia. Päivitys on v0.11.0 merkitsee alussa Siirtymäkausi kohti järjestelmää, joka toimii vain Kairo 1.0 sopimuksia. Tämä siirtymäkausi päättyy[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), odotetaan muutamaa kuukautta myöhemmin.
 
 ![](/assets/0_odxbxeacqdwizlfw.jpg)
 
-### Let's build!
+### Rakennetaan!
 
-The goal of StarkNet is to exponentially scale Ethereum using the mathematical integrity of STARKs, and the goal of Cairo is to make this exponential scale accessible to developers. Accessibility means a programming language that is efficient, easy to read and write, and safe to use. We hope the release of Cairo 1.0 will inspire even more developers to join StarkNet and scale Ethereum to meet global demand.
+StarkNetin tavoitteena on eksponentiaalisesti mittakaava Ethereum käyttäen matemaattinen eheys STARKs, ja Kairon tavoitteena on tehdä tämä eksponentiaalinen mittakaava saataville kehittäjille. Esteettömyys tarkoittaa ohjelmointikieltä, joka on tehokas, helppo lukea ja kirjoittaa, sekä turvallista käyttää. Toivomme, että vapautus Kairo 1.0 innostaa vielä enemmän kehittäjät liittyä StarkNet ja mittakaavassa Ethereum vastaamaan maailmanlaajuiseen kysyntään.

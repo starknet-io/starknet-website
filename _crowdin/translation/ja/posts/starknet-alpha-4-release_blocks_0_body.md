@@ -42,6 +42,6 @@ Hash(PREFIX, caller_address, salt contract_hash, ctr_args_hash)
 
 ### StarkNetに参加
 
-成長を続けるStarkNetコミュニティに参加するのに最適な時期はありませんでした。 You can join the conversation in the [StarkNet discord](https://discord.gg/uJ9HZTUk2Y), participate in an [online workshop](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8), or use one of the [tutorials](https://www.cairo-lang.org/docs/hello_starknet/index.html) to start building your first own app.
+成長を続けるStarkNetコミュニティに参加するのに最適な時期はありませんでした。 [StarkNet discord](https://discord.gg/uJ9HZTUk2Y)で会話に参加したり、[オンライン ワークショップに参加したり](https://forms.reform.app/starkware/join-a-starknet-workshop/2ma1x8)たり、[のチュートリアル](https://www.cairo-lang.org/docs/hello_starknet/index.html)のいずれかを使用して、最初の独自のアプリの構築を開始したりできます。
 
 **Update (2021年11月):**StarkNet Alpha is live on Ethereum Mainnet

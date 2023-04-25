@@ -1,4 +1,4 @@
-The decentralization of the network has two aspects:
+네트워크의 분산화에는 두 가지 측면이 있습니다.
 
-1. The permissionless layer of Sequencers and Provers ensures that the network will be censorship-resistant.
-2. The usage of STARK-proofs ensures that the state is correct, allows everyone to verify the entire Starknet chain with low hardware requirements – regardless of the network’s throughput, and without trusting any external entity.
+1. 무허가 시퀀서 및 증명기 계층은 네트워크가 검열에 강하도록 합니다.
+2. STARK 증명을 사용하면 상태가 올바르고 모든 사람이 네트워크의 처리량에 관계없이 외부 엔터티를 신뢰하지 않고 낮은 하드웨어 요구 사항으로 전체 Starknet 체인을 확인할 수 있습니다.

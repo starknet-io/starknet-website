@@ -1,3 +1,3 @@
-A good place to start is the [Hello Starknet tutorial](https://docs.starknet.io/documentation/), which guides the developer step by step through writing and deploying a simple contract. The [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) offers an environment for learning how to write Starknet contracts and test them. 
+Một nơi tốt để bắt đầu là hướng dẫn [Hello Starknet](https://docs.starknet.io/documentation/), hướng dẫn nhà phát triển từng bước thông qua việc viết và triển khai một hợp đồng đơn giản. [Sân chơi Starknet](https://starknet.io/playground/?lesson=starknet_contract) cung cấp một môi trường để học cách viết và kiểm tra hợp đồng Starknet. 
 
-You can become part of the developers’ community, and support it, by joining the [Starknet Discord](https://discord.com/invite/QypNMzkHbc) server.
+Bạn có thể trở thành một phần của cộng đồng nhà phát triển và hỗ trợ nó bằng cách tham gia máy chủ [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

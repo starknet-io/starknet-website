@@ -8,7 +8,7 @@
 我们在年初宣布了我们对[StarkNet](https://starkware.co/product/starknet/)的愿景：在维护L1安全的同时，将大规模的可伸缩性带给以太坊。 无权限的互动和权力下放。\
 我们在6月份在公共测试网上发布了**[StarkNet Alpha](https://medium.com/starkware/starknet-planets-alpha-on-ropsten-e7494929cb95)** 这个版本支持完全无权限的一般计算智能合同。 我们已经将其升级了两次：第一次升级到**Alpha 1**— 提供[L1<>L2 短信和链上数据](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f)， 然后到**Alpha 2**— 支持[composability](https://medium.com/starkware/starknet-alpha-2-4aa116f0ecfc)
 
-StarkNet Alpha 2 现在支持类似于以太空的状态进行一般计算的可混成智能合同。 L1和L2合同能够相互作用。 Read more [here](https://www.cairo-lang.org/docs/hello_starknet/index.html).
+StarkNet Alpha 2 现在支持类似于以太空的状态进行一般计算的可混成智能合同。 L1和L2合同能够相互作用。 在这里阅读更多[](https://www.cairo-lang.org/docs/hello_starknet/index.html)。
 
 ### Mainnet上的StarkNet Alpha是什么？
 

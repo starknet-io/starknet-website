@@ -1,1 +1,1 @@
-An invocation of a specific state-transition logic that’s defined by a contract. Syntactically, a transaction has a well-defined structure that includes all the necessary metadata and an arbitrary data payload. The semantics of the transaction is defined by the invoked contract.
+Bir sözleşme tarafından tanımlanan belirli bir durum geçiş mantığının çağrılması. Sözdizimsel olarak, bir işlem, gerekli tüm meta verileri ve isteğe bağlı bir veri yükünü içeren iyi tanımlanmış bir yapıya sahiptir. İşlemin anlamı, çağrılan sözleşme tarafından tanımlanır.

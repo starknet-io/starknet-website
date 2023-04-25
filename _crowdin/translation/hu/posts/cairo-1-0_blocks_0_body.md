@@ -1,63 +1,80 @@
 ### TL;DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* A Cairo 1.0 az első nagyobb kiadás a Cairo</a>két évvel ezelőtti
 
-### Introduction
+bevezetése után</li> 
+  
+  * A Cairo 1.0 biztonságosabb, egyszerűbb és használhatóbb programozási nyelvet ad a fejlesztőknek
+* A Cairo 1.0 középpontjában**Sierra**áll majd, egy közvetítő reprezentációs réteg, amely nagyobb hosszú távú stabilitást ígér a kairói programok számára
+* A Sierra továbbfejleszti Kairót, hogy egy engedély nélküli hálózatban szolgálhasson:\
+  -**A hálózat védelme**: robusztusabb DoS védelmet tesz lehetővé\
+  -**A felhasználó védelme**: lehetővé teszi az Ethereum-minőségű cenzúra ellenállást A Cairo 1.0 sokféleképpen hatással lesz a StarkNetre. Ez hatással lesz a[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae)is. A következő hetekben további információkat teszünk közzé a Regenesisről.</ul> 
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
 
-### The Cairo Journey
+### Bevezetés
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+2020-ban kiadtuk a Cairo-t, egy Turing-komplett programozási nyelvet, és nagy lépést tettünk a STARK-ok segítségével történő, ellenőrizhető számítások támogatása felé. Ma bejelentjük**Cairo 1.0**verziót, amely Kairó eddigi legnagyobb fejlesztése. Továbbfejlesztett nyelvet vezet be olyan funkciókkal, amelyek javítják a használhatóságot, a biztonságot és a kényelmet. Úgy tervezték, hogy támogassa a StarkNet engedély nélküli hálózat követelményeit, lehetővé téve a protokoll egyszerűbbé és biztonságosabbá válását.\
+A fejlesztés már folyamatban van, és várhatóan hamarosan megtörténik az első kiadás.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+Ebben a bejegyzésben leírjuk Kairó eddigi utazását, és megosztjuk a részleteket a közelgő funkciókról.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+### A kairói utazás
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+2020-ig niche tudásra volt szükség a STARK által igazolható általános számítási programok elkészítéséhez. Ez csak azok számára volt lehetséges, akik megértették a STARK-ok mögött rejlő összetett matematikát. Pontosabban, minden üzleti logikához, azaz minden számításhoz egy algebrai köztes reprezentáció (AIR) generálásához szükséges – polinomiális kényszerek halmaza, amely az adott számítást reprezentálja.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+Kairó abból a felismerésből született, hogy az ellenőrizhető számításokat mindenhol elérhetővé kell tenni a fejlesztők számára. Kairó lehetővé teszi a fejlesztők számára, hogy kihasználják a STARK-ok erejét.
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+A fejlesztői közösség azóta megragadta Kairót, hogy lelkesen építsen. A virágzó StarkNet ökoszisztémában ma minden Kairón alapul. [StarkNet](https://starkware.co/starknet/)és[StarkEx](https://starkware.co/starkex/)között a kairói alkalmazások több mint 220 millió tranzakciót dolgoztak fel, több mint 65 millió NFT-t vertek, és 700 milliárd dollár értékű ügyletet bonyolítottak le, mindezt az Ethereumon rendezték el.
 
-### Cairo 1.0
+Míg Kairó elérhetővé tette a STARK-okat, eredetileg assembly nyelvnek tervezték, ezért alacsony szintű nyelvnek írták.
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+![Példa a korai programokra, amelyeket Kairóban írtak](/assets/cairocode_01.png "Példa a korai programokra, amelyeket Kairóban írtak")
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+A fejlesztők visszajelzései és[StarkNet](https://starkware.co/starknet/)térnyerése miatt fokozatosan kifejezőbbé és fejlesztőbarátabbá tettük Kairót.
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+![Példa az ERC-20 Kairói szerződésből, amely bemutatja a változók, if utasítások, hibák és UINT256 könyvtár támogatását](/assets/cairocode_02.png "Példa az ERC-20 Kairói szerződésből, amely bemutatja a változók, if utasítások, hibák és UINT256 könyvtár támogatását")
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+Ám hamarosan arra a következtetésre jutottunk, hogy ideje nagyot ugrani előre, és Kairó fokozatos fejlesztése helyett egy merészebb átalakításra fogunk.
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+### Kairó 1.0
 
-### **Language Features**
+A Cairo 1.0-hoz az alapoktól kezdve egy teljesen új fordítót építettünk fel, amely biztonsági funkciókkal látja el a fejlesztőket, és lehetővé teszi számukra a szerződések egyszerűbb és kifejezőbb megírását.
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
 
-#### **Improved syntax**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+#### Bemutatkozik Sierra: minden kairói futás bizonyítható legyen
+
+A Cairo 1.0 fő kiegészítése a Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion). A Sierra egy új köztes reprezentációs réteget képez a Cairo 1.0 és a Cairo byte kód között. A Sierra célja annak biztosítása, hogy minden kairói futtatás – azaz egy kairói program és annak bemenete – bizonyítható legyen (lásd alább).
+
+A Sierra azt ígéri, hogy a Cairo jobb, jövőbiztos kódot fejleszt. További stabilitást biztosít az a tény, hogy a StarkNet szerződéseket nem kell újrafordítani az alapul szolgáló rendszer fejlesztése esetén (pl. CPU AIR architektúra változásai, a Sierráról Kairóba való végleges fordítás javítása).
+
+**Minden kairói futás bizonyítása.**A régi Kairóban egy kairói futtatás három esetet eredményezhet – IGAZ, HAMIS vagy kudarcot. A sikertelen futásokat nem lehet bizonyítani. Sierra biztosítja, hogy a kairói futás soha ne kudarcot valljon, és csak IGAZ vagy HAMIS eredményt eredményezhet. Ez viszont biztosítja, hogy minden kairói futás bizonyítható legyen.
+
+A Sierra ezen bevezetése fontos hatással van a StarkNetre, mint engedély nélküli hálózatra. A Sierra biztosítja, hogy még a visszaállított tranzakciók is bekerüljenek a StarkNet blokkba. Ez a tulajdonság lehetővé teszi, hogy a StarkNet protokoll karcsú és egyszerű maradjon anélkül, hogy bonyolult kripto-gazdasági mechanizmusokat kellene hozzáadni.\
+Két értelmes példa:
+
+1. A Sequencerek díjakat szedhetnek be a visszaváltott tranzakciók után, így a StarkNet jól bevált módon megakadályozhatja a Sequencer DoS-t.
+2. Lehetővé válik a kényszerített L1-tranzakciók végrehajtása, ami lehetővé teszi, hogy a StarkNet örökölje az Ethereum teljes cenzúra-ellenállását.
+
+
+
+### **Nyelvi jellemzők**
+
+A Cairo 1.0 számos fejlesztést kínál magának a programozási nyelvnek. Nem minden alább felsorolt lesz az első kiadás része, de az ütemterv része.
+
+
+
+#### **Továbbfejlesztett szintaxis**
+
+* Nincs több*helyi*és*tempvar*. Most már csak*legyen*, hogy az összes változót szabályozzuk.
+* Javított*ha*utasítások szintaxisa
+
+
 
 ```python
 #Old
@@ -67,91 +84,118 @@ if cond != 0 {
   tempvar x = x;
 }
 __________________________________
-#New
+#Új
 if cond { x = x + 1; }
 ```
 
-#### **Type safety guarantees**
 
-The compiler will use strong typing to improve the security of the code. For example:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
 
-#### **Easier to use language constructs**
+#### **Típusbiztonsági garanciák**
 
-For example:
+A fordító erős gépelést használ a kód biztonságának javítása érdekében. Például:
 
-* For loops
+* A mutatók mindig az inicializált memóriára mutatnak.
+* A szótárak mindig összeomlanak, ahelyett, hogy a squash_dict meghívását a programozóra bíznák.
+
+
+
+#### **Könnyebben használható nyelvi konstrukciók**
+
+Például:
+
+* Hurkokhoz
+
+
 
 ```
-let sum = 0
-for x in iter {
-  sum = sum + x;
+legyen összeg = 0
+x-re az iterben {
+  összeg = összeg + x;
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+
+* Logikai kifejezések
+* Egész számok (szabályos egész osztással 👯)
+* Túlfolyás elleni védelem a megfelelő típusokhoz
+* Logikai feltételek
+
+
 
 ```
-#Old
-If cond1:
-  if cond2:
-       # Some code
-  else if cond3:
-       # Same code
+#Régi
+Ha feltétel1:
+  ha feltétel2:
+       # Valami
+  as kód, ha feltétel3:
+       # Ugyanaz a kód
 __________________________________
-#New
-If cond1 && (cond2 || cond3) { … }
+#Új
+Ha feltétel1 && (2. feltétel || kond.3) { … }
 ```
 
-#### **A fully fledged type system**
 
-* Abstract data types (i.e. Rust-like enum)
+
+
+#### **Teljesen kiforrott típusú rendszer**
+
+* Absztrakt adattípusok (pl rozsdaszerű enum)
+
+
 
 ```
-enum Option<T> {
- Some: T,
- None,
+enum Opció<T> {
+ Néhány: T,
+ Nincs,
 }
-match result {
- Some(r) => {..},
- None => {..},
+találat eredménye {
+ Néhány(r) => {..},
+ Nincs => {..},
 }
 ```
 
-* Traits
+
+* Tulajdonságok
+
+
 
 ```
-trait Add<Uint256> {
+vonás Add<Uint256> {
     fn add(…) { … }
 }
 
-let a: Uint256 = 1;
-let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+legyen a: Uint256 = 1;
+legyen b: Uint256 = 4;
+a + b; // Uint256 típusú 5-re értékelve.
 ```
 
-#### **More intuitive libraries**
 
-(e.g. dict, arrays)
+
+
+#### **Intuitívabb könyvtárak**
+
+(pl. dict, tömbök)
 
 * Dict<Uint256, MyStruct>;
-* Array<MyOtherStruct>;
+* Sor<MyOtherStruct>;
 
-#### **More optimized code**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
 
-#### **Better compiler integration**
+#### **Optimalizáltabb kód**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+Nem kell kifejezetten megadni a helyi változók kiosztását – a rendszer automatikusan észleli és automatikusan megtörténik.
 
-### **Conclusion**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+#### **Jobb fordítóintegráció**
+
+Jobb IDE-támogatás, csomagkezelés és a közösségi hozzájárulások jobb elősegítése.
+
+
+
+### **Következtetés**
+
+Két évvel azután, hogy a Kairót először gyártásban használták, fejlesztjük a Cairo 1.0-t, amely javítja a kifejezhetőséget, a biztonságot és a szintaxist. Ez nagy lépést tesz majd előre, lehetővé téve a fejlesztők számára, hogy könnyebben írják meg StarkNet-szerződéseiket.
+
+Egy másik, hamarosan megjelenő bejegyzésben további részleteket fogunk megosztani arról, hogy a Cairo 1.0 hogyan befolyásolja a StarkNet újjászületését, és hogyan kell a fejlesztőknek felkészülniük a megjelenésére.

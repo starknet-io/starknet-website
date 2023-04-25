@@ -1,3 +1,3 @@
-Yes!
+Igen!
 
-You can take a look at [this tutorial](https://github.com/eqlabs/pathfinder/#readme).
+Megtekintheti[ezt az oktatóanyagot](https://github.com/eqlabs/pathfinder/#readme).

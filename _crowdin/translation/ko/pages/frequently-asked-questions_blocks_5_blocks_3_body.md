@@ -1,1 +1,1 @@
-Currently, no. Fees in Starknet are now paid in Ether (ETH). But later on, we anticipate that in the future, fees will be paid exclusively with the native Starknet Token.
+현재는 아닙니다. Starknet의 수수료는 이제 Ether(ETH)로 지불됩니다. 그러나 나중에는 수수료가 기본 Starknet 토큰으로만 지불될 것으로 예상합니다.

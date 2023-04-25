@@ -1,69 +1,69 @@
-### TL;DR
+### TL; DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* Cairo 1.0 là bản phát hành chính đầu tiên sau bản giới thiệu[của Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209)hai năm trước
+* Cairo 1.0 sẽ cung cấp cho các nhà phát triển một ngôn ngữ lập trình an toàn hơn, đơn giản hơn và dễ sử dụng hơn
+* Trung tâm của Cairo 1.0 sẽ là**Sierra**, một lớp đại diện trung gian hứa hẹn sự ổn định lâu dài hơn cho các chương trình của Cairo
+* Sierra cải tiến Cairo để phục vụ trong mạng không cần cấp phép:\
+  -**Bảo vệ mạng**: nó cho phép bảo vệ DoS mạnh mẽ hơn\
+  -**Bảo vệ người dùng**: nó cho phép kháng kiểm duyệt cấp EthereumCairo 1.0 sẽ ảnh hưởng đến StarkNet theo nhiều cách. Nó cũng sẽ ảnh hưởng đến[Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). Chúng tôi sẽ đăng thêm thông tin về Regenesis trong vài tuần tới.
 
-### Introduction
+### Giới thiệu
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
+Vào năm 2020, chúng tôi đã phát hành Cairo, một ngôn ngữ lập trình hoàn chỉnh của Turing và đã tiến một bước lớn hướng tới việc hỗ trợ tính toán có thể kiểm chứng bằng STARK. Hôm nay, chúng tôi công bố**Cairo 1.0**, tiến bộ lớn nhất của Cairo cho đến nay. Nó sẽ giới thiệu một ngôn ngữ cải tiến, với các tính năng sẽ nâng cao khả năng sử dụng, an toàn và tiện lợi. Nó được thiết kế để hỗ trợ các yêu cầu của StarkNet như một mạng không được phép, cho phép giao thức trở nên đơn giản và an toàn hơn.\
+Quá trình phát triển đang diễn ra và chúng tôi hy vọng bản phát hành đầu tiên sẽ sớm ra mắt.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
+Trong bài đăng này, chúng tôi sẽ mô tả hành trình của Cairo cho đến nay và chia sẻ chi tiết về các tính năng sắp tới.
 
-### The Cairo Journey
+### Hành trình Cairo
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+Cho đến năm 2020, kiến thức chuyên biệt là cần thiết để xây dựng các chương trình có thể chứng minh được STARK cho tính toán chung. Điều đó chỉ có thể xảy ra đối với những người hiểu toán học phức tạp đằng sau STARK. Cụ thể, đối với mọi logic nghiệp vụ, tức là mọi phép tính, người ta cần tạo một Biểu diễn trung gian đại số (AIR) — một tập hợp các ràng buộc đa thức biểu thị phép tính cụ thể.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+Cairo ra đời từ nhận thức rằng tính toán có thể kiểm chứng nên được cung cấp cho các nhà phát triển ở khắp mọi nơi. Cairo giúp các nhà phát triển có thể khai thác sức mạnh của STARK.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
+Kể từ đó, cộng đồng nhà phát triển đã tận dụng Cairo để xây dựng một cách nhiệt tình. Mọi thứ trong hệ sinh thái StarkNet phát triển mạnh ngày nay đều dựa trên Cairo. Từ[StarkNet](https://starkware.co/starknet/)đến[StarkEx](https://starkware.co/starkex/), các ứng dụng do Cairo cung cấp đã xử lý hơn 220 triệu giao dịch, đúc hơn 65 triệu NFT và xử lý các giao dịch trị giá 700 tỷ đô la, tất cả đều được thanh toán trên Ethereum.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
+Mặc dù Cairo làm cho STARK có thể truy cập được, nhưng ban đầu nó được thiết kế dưới dạng hợp ngữ và do đó, nó được viết dưới dạng ngôn ngữ cấp thấp.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+![Một ví dụ cho các chương trình ban đầu được viết ở Cairo](/assets/cairocode_01.png "Một ví dụ cho các chương trình ban đầu được viết ở Cairo")
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+Được thúc đẩy bởi phản hồi từ các nhà phát triển và sự gia tăng của[StarkNet](https://starkware.co/starknet/), chúng tôi dần dần làm cho Cairo trở nên biểu cảm hơn và thân thiện hơn với nhà phát triển.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+![Một ví dụ từ hợp đồng ERC-20 Cairo thể hiện sự hỗ trợ của các biến, câu lệnh if, lỗi và thư viện UINT256](/assets/cairocode_02.png "Một ví dụ từ hợp đồng ERC-20 Cairo thể hiện sự hỗ trợ của các biến, câu lệnh if, lỗi và thư viện UINT256")
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+Nhưng chúng tôi sớm kết luận rằng đã đến lúc phải thực hiện một bước tiến lớn và thay vì cải thiện từng bước cho Cairo, hãy thực hiện một sự chuyển đổi táo bạo hơn.
 
 ### Cairo 1.0
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+Đối với Cairo 1.0, chúng tôi đã xây dựng một trình biên dịch hoàn toàn mới từ đầu, trình biên dịch này sẽ cung cấp cho các nhà phát triển các tính năng an toàn và sẽ cho phép họ viết hợp đồng theo cách đơn giản và rõ ràng hơn.
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+#### Giới thiệu Sierra: đảm bảo mọi cuộc chạy ở Cairo đều có thể được chứng minh
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+Phần bổ sung chính trong Cairo 1.0 là Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion). Sierra tạo thành một lớp biểu diễn trung gian mới giữa Cairo 1.0 và mã byte Cairo. Mục tiêu của Sierra là đảm bảo rằng mọi hoạt động của Cairo - tức là một chương trình Cairo và đầu vào của nó - đều có thể được chứng minh (xem thêm bên dưới).
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+Sierra hứa hẹn với các nhà phát triển mã tốt hơn trong tương lai của Cairo Sự ổn định hơn nữa được cung cấp bởi thực tế là các hợp đồng StarkNet sẽ không cần biên dịch lại trong trường hợp cải tiến hệ thống cơ bản (ví dụ: thay đổi kiến trúc CPU AIR, cải tiến bản dịch cuối cùng từ Sierra sang mã byte Cairo).
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
+**Chứng minh mọi lần chạy Cairo.**Ở Cairo cũ, một cuộc chạy Cairo có thể dẫn đến ba trường hợp — ĐÚNG, SAI hoặc thất bại. Chạy không thành công không thể được chứng minh. Sierra, đảm bảo rằng một lần chạy Cairo sẽ không bao giờ thất bại và chỉ có thể dẫn đến TRUE hoặc FALSE. Đổi lại, điều này đảm bảo rằng mọi hoạt động ở Cairo đều có thể được chứng minh.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
+Việc giới thiệu Sierra này có ý nghĩa quan trọng đối với StarkNet với tư cách là một mạng không được phép. Sierra đảm bảo rằng các giao dịch thậm chí được hoàn nguyên có thể được đưa vào các khối StarkNet. Thuộc tính này sẽ cho phép giao thức StarkNet duy trì tinh gọn và đơn giản mà không cần thêm các cơ chế kinh tế tiền điện tử phức tạp.\
+Hai ví dụ có ý nghĩa:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+1. Sequencer sẽ có thể thu phí đối với các giao dịch được hoàn nguyên, cho phép StarkNet ngăn chặn Sequencer DoS theo cách đã được thiết lập tốt.
+2. Việc triển khai các giao dịch L1 bắt buộc sẽ có thể thực hiện được, cho phép StarkNet thừa hưởng toàn bộ khả năng chống kiểm duyệt của Ethereum.
 
-### **Language Features**
+### **Tính năng ngôn ngữ**
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
+Cairo 1.0 sẽ cung cấp nhiều cải tiến cho ngôn ngữ lập trình. Không phải mọi thứ được liệt kê dưới đây sẽ là một phần của bản phát hành đầu tiên, nhưng nó là một phần của lộ trình.
 
-#### **Improved syntax**
+#### **Cải thiện cú pháp**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+* Không còn*local*và*tempvar*. Bây giờ chúng ta chỉ cần*let*để cai trị tất cả các biến.
+* Cải thiện cú pháp câu lệnh*if*
 
 ```python
 #Old
 if cond != 0 {
   tempvar x = x+1;
-} else {
+} khác {
   tempvar x = x;
 }
 __________________________________
@@ -71,87 +71,87 @@ __________________________________
 if cond { x = x + 1; }
 ```
 
-#### **Type safety guarantees**
+#### **Loại đảm bảo an toàn**
 
-The compiler will use strong typing to improve the security of the code. For example:
+Trình biên dịch sẽ sử dụng kiểu gõ mạnh để cải thiện tính bảo mật của mã. Ví dụ:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
+* Con trỏ sẽ luôn trỏ đến bộ nhớ khởi tạo.
+* Các từ điển sẽ luôn bị nén, thay vì để lại trách nhiệm gọi squash_dict cho lập trình viên.
 
-#### **Easier to use language constructs**
+#### **Dễ dàng sử dụng cấu trúc ngôn ngữ hơn**
 
-For example:
+Ví dụ:
 
-* For loops
+* Đối với vòng lặp
 
 ```
-let sum = 0
+đặt tổng = 0
 for x in iter {
   sum = sum + x;
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+* biểu thức Boolean
+* Số nguyên (với phép chia số nguyên thông thường 👯)
+* Bảo vệ tràn cho các loại có liên quan
+* điều kiện Boolean
 
 ```
-#Old
-If cond1:
-  if cond2:
-       # Some code
-  else if cond3:
-       # Same code
+# Cũ
+Nếu cond1:
+  nếu cond2:
+       # Một số mã
+  khác nếu cond3:
+       # Cùng mã
 __________________________________
-#New
-If cond1 && (cond2 || cond3) { … }
+# Mới
+Nếu cond1 && (cond2 || cond3) { … }
 ```
 
-#### **A fully fledged type system**
+#### **Một hệ thống loại hoàn chỉnh**
 
-* Abstract data types (i.e. Rust-like enum)
+* Các kiểu dữ liệu trừu tượng (nghĩa là giống như rỉ sét enum)
 
 ```
-enum Option<T> {
- Some: T,
- None,
+enum Tùy chọn<T> {
+ Một số: T,
+ Không có,
 }
-match result {
- Some(r) => {..},
- None => {..},
+kết quả trận đấu {
+ Một số (r) => {..},
+ Không có => {..},
 }
 ```
 
-* Traits
+* đặc điểm
 
 ```
-trait Add<Uint256> {
-    fn add(…) { … }
+đặc điểm Thêm<Uint256> {
+    fn thêm(…) { … }
 }
 
-let a: Uint256 = 1;
-let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+cho a: Uint256 = 1;
+cho b: Uint256=4;
+a + b; // Được đánh giá là 5 của loại Uint256.
 ```
 
-#### **More intuitive libraries**
+#### **Thư viện trực quan hơn**
 
-(e.g. dict, arrays)
+(ví dụ: dict, mảng)
 
-* Dict<Uint256, MyStruct>;
-* Array<MyOtherStruct>;
+* Số<Uint256, MyStruct>;
+* Mảng<MyOtherStruct>;
 
-#### **More optimized code**
+#### **Mã được tối ưu hóa hơn**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+Không cần nêu rõ ràng việc phân bổ các biến cục bộ — tự động phát hiện và thực hiện tự động.
 
-#### **Better compiler integration**
+#### **Tích hợp trình biên dịch tốt hơn**
 
-Enabling better IDE support, package management and better facilitation of community contributions.
+Cho phép hỗ trợ IDE tốt hơn, quản lý gói và tạo điều kiện tốt hơn cho các đóng góp của cộng đồng.
 
-### **Conclusion**
+### **Phần kết luận**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+Hai năm sau khi Cairo lần đầu tiên được sử dụng trong sản xuất, chúng tôi đang phát triển Cairo 1.0, phiên bản này sẽ mang lại khả năng diễn đạt, bảo mật và cú pháp được cải thiện. Nó sẽ có một bước tiến dài, cho phép các nhà phát triển viết hợp đồng StarkNet của họ dễ dàng hơn.
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+Trong một bài đăng khác sắp ra mắt, chúng tôi sẽ chia sẻ thêm chi tiết về cách Cairo 1.0 sẽ ảnh hưởng đến quá trình tái tạo của StarkNet và cách các nhà phát triển nên chuẩn bị cho việc phát hành.

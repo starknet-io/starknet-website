@@ -1,63 +1,80 @@
-### TL;DR
+### TL; DR
 
-* Cairo 1.0 is the first major release following the [introduction of Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) two years ago
-* Cairo 1.0 will give developers a safer, simpler, more usable programming language
-* At the heart of Cairo 1.0 will be **Sierra**, an intermediary representation layer that promises greater long term stability for Cairo programs
-* Sierra advances Cairo to serve in a permissionless network:\
-  - **Protecting the network**: it allows more robust DoS protection\
-  - **Protecting the user**: it allows Ethereum-grade censorship resistanceCairo 1.0 will effect StarkNet in many ways. It will also effect the [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae). We will post more information about Regenesis in the coming weeks.
+* 카이로 1.0은 2년 전 카이로</a>의
 
-### Introduction
+도입에 이은 첫 번째 주요 릴리스입니다.</li> 
+  
+  * Cairo 1.0은 개발자에게 더 안전하고 간단하며 사용하기 쉬운 프로그래밍 언어를 제공합니다.
+* 카이로 1.0의 중심에는 카이로 프로그램의 장기적 안정성을 약속하는 중간 표현 계층인**Sierra**이 있습니다.
+* Sierra는 무허가 네트워크에서 서비스를 제공하도록 카이로를 발전시킵니다.\
+  -**네트워크 보호**: 보다 강력한 DoS 보호를 허용합니다\
+  -**사용자 보호**: 이더리움급 검열 저항을 허용합니다. [Regenesis](https://medium.com/starkware/regenesis-starknets-no-sweat-state-reset-e296b12b80ae)에도 영향을 미칩니다. 앞으로 몇 주 안에 Regenesis에 대한 자세한 정보를 게시할 예정입니다.</ul> 
 
-In 2020 we released Cairo, a Turing-complete programming language, and took a big step towards supporting verifiable computation using STARKs. Today, we announce **Cairo 1.0**, the biggest advancement of Cairo to date. It will introduce an improved language, with features that will enhance usability, safety and convenience. It is designed to support StarkNet’s requirements as a permissionless network, allowing the protocol to become simpler and safer.\
-The development is already ongoing, and we expect the first release to happen soon.
 
-In this post we will describe the journey of Cairo so far and share details on the upcoming features.
 
-### The Cairo Journey
+### 소개
 
-Until 2020, niche knowledge was needed to build STARK-provable programs for general computation. It was only possible for those who understood the complex math behind STARKs. Specifically, for every business logic, i.e. every computation, one needed to generate an Algebraic Intermediate Representation (AIR) — a set of polynomial constraints that represents the specific computation.
+2020년에 우리는 Turing-complete 프로그래밍 언어인 Cairo를 출시했고 STARK를 사용하여 검증 가능한 계산을 지원하는 데 큰 발걸음을 내디뎠습니다. 오늘 우리는 지금까지 카이로의 가장 큰 발전인**카이로 1.0**발표합니다. 사용성, 안전성 및 편의성을 향상시키는 기능을 갖춘 개선된 언어를 소개합니다. 무허가 네트워크로서 StarkNet의 요구 사항을 지원하도록 설계되어 프로토콜이 더 간단하고 안전해집니다.\
+이미 개발이 진행 중이며 곧 첫 번째 릴리스가 나올 것으로 예상됩니다.
 
-Cairo was born out of the realization that verifiable computation should be made available to developers everywhere. Cairo makes it possible for developers to harness the power of STARKs.
+이 게시물에서는 지금까지 카이로의 여정을 설명하고 향후 기능에 대한 세부 정보를 공유합니다.
 
-The developer community has since seized on Cairo to build enthusiastically. Everything in the thriving StarkNet ecosystem today is based on Cairo. Between [StarkNet](https://starkware.co/starknet/) and [StarkEx](https://starkware.co/starkex/), Cairo-powered applications have processed over 220M transactions, minted more than 65M NFTs, and handled $700B worth of trades, all settled on Ethereum.
 
-While Cairo made STARKs accessible, it was originally designed as an assembly language, and as such it was written as a low level language.
 
-![An example for the early programs that were written in Cairo](/assets/cairocode_01.png "An example for the early programs that were written in Cairo")
+### 카이로 여행
 
-Prompted by feedback from developers and the rise of [StarkNet](https://starkware.co/starknet/), we gradually made Cairo more expressive and more developer-friendly.
+2020년까지 일반 계산을 위한 STARK 증명 가능한 프로그램을 구축하려면 틈새 지식이 필요했습니다. STARK의 복잡한 수학을 이해하는 사람들에게만 가능했습니다. 특히, 모든 비즈니스 로직, 즉 모든 계산에 대해 특정 계산을 나타내는 다항식 제약 조건 집합인 대수 중간 표현(AIR)을 생성하는 데 필요했습니다.
 
-![An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library](/assets/cairocode_02.png "An example from the ERC-20 Cairo contract demonstrating support of variables, if statements, errors, and UINT256 library")
+Cairo는 어디에서나 개발자가 검증 가능한 계산을 사용할 수 있어야 한다는 깨달음에서 탄생했습니다. Cairo는 개발자가 STARK의 힘을 활용할 수 있도록 합니다.
 
-But we soon concluded that it is time to take a big leap forward and, instead of incremental improvements to Cairo, go for a bolder transformation.
+이후 개발자 커뮤니티는 열정적으로 빌드하기 위해 카이로를 점령했습니다. 오늘날 번성하는 StarkNet 생태계의 모든 것은 카이로를 기반으로 합니다. [StarkNet](https://starkware.co/starknet/)과[StarkEx](https://starkware.co/starkex/)사이에서 Cairo 기반 애플리케이션은 2억 2천만 건 이상의 거래를 처리하고 6천 5백만 개 이상의 NFT를 발행했으며 7천억 달러 상당의 거래를 처리했으며 모두 이더리움에서 결제되었습니다.
 
-### Cairo 1.0
+Cairo는 STARK를 액세스 가능하게 만들었지만 원래 어셈블리 언어로 설계되었기 때문에 저수준 언어로 작성되었습니다.
 
-For Cairo 1.0 we’ve built a whole new compiler from the ground up, which will provide developers with safety features, and will allow them to write contracts in a simpler and more expressive way.
+![카이로에서 작성된 초기 프로그램의 예](/assets/cairocode_01.png "카이로에서 작성된 초기 프로그램의 예")
 
-#### Introducing Sierra: ensuring every Cairo run can be proven
+개발자의 피드백과[StarkNet](https://starkware.co/starknet/)의 부상에 힘입어 점차 카이로를 더욱 표현력 있고 개발자 친화적으로 만들었습니다.
 
-The main addition in Cairo 1.0 is Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion). Sierra constitutes a new intermediate representation layer between Cairo 1.0 and Cairo byte code. Sierra’s goal is to ensure that every Cairo run — i.e. a Cairo program and its input — can be proven (see more below).
+![변수, if 문, 오류 및 UINT256 라이브러리 지원을 보여주는 ERC-20 카이로 계약의 예](/assets/cairocode_02.png "변수, if 문, 오류 및 UINT256 라이브러리 지원을 보여주는 ERC-20 카이로 계약의 예")
 
-Sierra promises Cairo devs better future-proof code. Further stability is provided by the fact that StarkNet contracts won’t need recompiling in the case of improvements to the underlying system (e.g., CPU AIR architecture changes, improvements of the final translation from Sierra to Cairo byte code).
+그러나 우리는 카이로의 점진적인 개선 대신 대담한 변화를 위해 큰 도약을 해야 할 때라는 결론을 내렸습니다.
 
-**Proving every Cairo run.** In old Cairo, a Cairo run can result in three cases — TRUE, FALSE, or failure. Failed runs can’t be proven. Sierra, ensures that a Cairo run will never fail, and can only result in TRUE or FALSE. This in turn, ensures that every Cairo run can be proven.
 
-This introduction of Sierra has important implications for StarkNet as a permissionless network. Sierra ensures that even reverted transactions can be included in StarkNet blocks. This property will allow the StarkNet protocol to remain lean and simple without the need to add complex crypto-economic mechanisms.\
-Two meaningful examples:
 
-1. Sequencers will be able to collect fees on reverted transactions, allowing StarkNet to prevent Sequencer DoS in a well-established manner.
-2. Implementing forced L1 transactions will be possible, allowing StarkNet to inherit the full censorship-resistance of Ethereum.
+### 카이로 1.0
 
-### **Language Features**
+Cairo 1.0을 위해 완전히 새로운 컴파일러를 구축하여 개발자에게 안전 기능을 제공하고 보다 간단하고 표현력 있는 방식으로 계약을 작성할 수 있도록 합니다.
 
-Cairo 1.0 will offer many improvements to the programming language itself. Not everything listed below will be part of the first release, but it is part of the roadmap.
 
-#### **Improved syntax**
 
-* No more *local* and *tempvar*. We now only need *let* to rule them all variables.
-* Improved *if* statements syntax
+#### Sierra 소개: 모든 카이로 실행이 입증될 수 있도록 보장
+
+Cairo 1.0의 주요 추가 기능은 Sierra(**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**)입니다. Sierra는 Cairo 1.0과 Cairo 바이트 코드 사이의 새로운 중간 표현 계층을 구성합니다. Sierra의 목표는 모든 Cairo 실행(예: Cairo 프로그램 및 해당 입력)이 입증될 수 있도록 하는 것입니다(자세한 내용은 아래 참조).
+
+Sierra는 Cairo 개발자에게 더 나은 미래 보장형 코드를 약속합니다. 기본 시스템이 개선된 경우(예: CPU AIR 아키텍처 변경, Sierra에서 Cairo 바이트 코드로의 최종 변환 개선) StarkNet 컨트랙트를 다시 컴파일할 필요가 없다는 사실로 안정성이 더욱 향상됩니다.
+
+**모든 카이로 실행 증명.**오래된 카이로에서 카이로 실행은 TRUE, FALSE 또는 실패의 세 가지 경우를 초래할 수 있습니다. 실패한 실행은 증명할 수 없습니다. Sierra는 카이로 실행이 절대 실패하지 않도록 보장하고 TRUE 또는 FALSE만 반환할 수 있습니다. 이를 통해 모든 카이로 실행이 입증될 수 있습니다.
+
+이러한 Sierra의 도입은 무허가 네트워크인 StarkNet에 중요한 의미를 갖습니다. Sierra는 되돌린 트랜잭션도 StarkNet 블록에 포함될 수 있도록 보장합니다. 이 속성을 통해 StarkNet 프로토콜은 복잡한 암호화 경제 메커니즘을 추가할 필요 없이 간결하고 단순하게 유지될 수 있습니다.\
+두 가지 의미 있는 예:
+
+1. 시퀀서는 되돌려진 트랜잭션에 대한 수수료를 징수할 수 있으므로 StarkNet은 안정적인 방식으로 시퀀서 DoS를 방지할 수 있습니다.
+2. 강제 L1 트랜잭션 구현이 가능해 StarkNet이 이더리움의 완전한 검열 저항성을 물려받을 수 있습니다.
+
+
+
+### **언어 기능**
+
+Cairo 1.0은 프로그래밍 언어 자체에 많은 개선 사항을 제공할 것입니다. 아래 나열된 모든 것이 첫 번째 릴리스의 일부는 아니지만 로드맵의 일부입니다.
+
+
+
+#### **향상된 구문**
+
+* 더 이상*로컬*및*tempvar*없습니다. 이제 모든 변수를 지배하기 위해*let*만 필요합니다.
+* 개선된*if*문 구문
+
+
 
 ```python
 #Old
@@ -71,18 +88,25 @@ __________________________________
 if cond { x = x + 1; }
 ```
 
-#### **Type safety guarantees**
 
-The compiler will use strong typing to improve the security of the code. For example:
 
-* Pointers will always point to initialized memory.
-* Dictionaries will always be squashed, as opposed to leaving the responsibility to call squash_dict to the programmer.
 
-#### **Easier to use language constructs**
+#### **유형 안전 보장**
 
-For example:
+컴파일러는 강력한 유형 지정을 사용하여 코드의 보안을 향상시킵니다. 예를 들어:
 
-* For loops
+* 포인터는 항상 초기화된 메모리를 가리킵니다.
+* squash_dict를 호출하는 책임을 프로그래머에게 맡기는 것과 반대로 사전은 항상 찌그러집니다.
+
+
+
+#### **사용하기 쉬운 언어 구조**
+
+예를 들어:
+
+* For 루프
+
+
 
 ```
 let sum = 0
@@ -91,67 +115,87 @@ for x in iter {
 }
 ```
 
-* Boolean expressions
-* Integers (with regular integer division 👯)
-* Overflow protection for the relevant types
-* Boolean conditions
+
+* 부울 표현식
+* 정수(정수 나누기 👯 포함)
+* 관련 유형에 대한 오버플로우 방지
+* 부울 조건
+
+
 
 ```
-#Old
+#기존
 If cond1:
   if cond2:
-       # Some code
+       # 어떤 코드
   else if cond3:
-       # Same code
+       # 같은 코드
 __________________________________
 #New
 If cond1 && (cond2 || cond3) { … }
 ```
 
-#### **A fully fledged type system**
 
-* Abstract data types (i.e. Rust-like enum)
+
+
+#### **본격적인 유형 시스템**
+
+* 추상 데이터 유형(예: 러스트 같은 열거형)
+
+
 
 ```
-enum Option<T> {
+enum 옵션<T> {
  Some: T,
  None,
 }
-match result {
+일치 결과 {
  Some(r) => {..},
  None => {..},
 }
 ```
 
-* Traits
+
+* 특성
+
+
 
 ```
-trait Add<Uint256> {
-    fn add(…) { … }
+특성 추가<Uint256> {
+    fn 추가(…) { … }
 }
 
 let a: Uint256 = 1;
-let b: Uint256 = 4;
-a + b; // Evaluated to 5 of type Uint256.
+b로 하자: Uint256 = 4;
++ b; // Uint256 유형의 5로 평가됩니다.
 ```
 
-#### **More intuitive libraries**
 
-(e.g. dict, arrays)
 
-* Dict<Uint256, MyStruct>;
-* Array<MyOtherStruct>;
 
-#### **More optimized code**
+#### **보다 직관적인 라이브러리**
 
-No need to explicitly state allocation of local variables — auto detected and done automatically.
+(예: 사전, 배열)
 
-#### **Better compiler integration**
+* 사전<Uint256, MyStruct>;
+* 정렬<MyOtherStruct>;
 
-Enabling better IDE support, package management and better facilitation of community contributions.
 
-### **Conclusion**
 
-Two years after Cairo was first used in production, we are developing Cairo 1.0, which will deliver improved expressibility, security, and syntax. It will take a large stride forward, allowing developers to more easily write their StarkNet contracts.
+#### **더 최적화된 코드**
 
-In another post, coming soon, we will share more details on how Cairo 1.0 will effect StarkNet’s regenesis, and how developers should prepare for its release.
+로컬 변수의 할당을 명시적으로 지정할 필요가 없습니다. 자동으로 감지되고 완료됩니다.
+
+
+
+#### **더 나은 컴파일러 통합**
+
+더 나은 IDE 지원, 패키지 관리 및 더 나은 커뮤니티 기여를 가능하게 합니다.
+
+
+
+### **결론**
+
+카이로가 생산에 처음 사용된 지 2년 후 우리는 향상된 표현성, 보안 및 구문을 제공할 카이로 1.0을 개발하고 있습니다. 개발자가 StarkNet 계약을 보다 쉽게 작성할 수 있도록 큰 진전이 있을 것입니다.
+
+곧 있을 또 다른 게시물에서 우리는 Cairo 1.0이 StarkNet의 재생성에 어떤 영향을 미치고 개발자가 출시를 준비하는 방법에 대해 자세히 공유할 것입니다.

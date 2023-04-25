@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* Τα rollups εγκυρότητας δεν περιορίζονται στην απόδοση με τον ίδιο τρόπο όπως το L1s. Αυτό δημιουργεί δυνητικά πολύ υψηλότερη TPS σε L2 κύλιση ισχύος.
+* Ο οδικός χάρτης επιδόσεων StarkNet αντιμετωπίζει ένα βασικό στοιχείο του συστήματος: το sequencer.
+* Παρουσιάζουμε εδώ τον οδικό χάρτη για βελτιώσεις επιδόσεων:\
+  - Sequencer parallelization\
+  - Μια νέα εφαρμογή σκουριάς για το Κάιρο VM\
+  - Επανεφαρμογή Sequencer σε σκουριά\
+* Οι παροιμίες, καθώς δοκιμάζονται από μάχες όπως είναι, δεν είναι το σημείο συμφόρησης και μπορούν να χειριστούν πολύ περισσότερα από όσα κάνουν τώρα!
 
-### Intro
+### Εισαγωγή
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+Το StarkNet ξεκίνησε στο Mainnet σχεδόν πριν από ένα χρόνο. Ξεκινήσαμε να χτίζουμε το StarkNet εστιάζοντας στη λειτουργικότητα. Τώρα, μετατοπίζουμε την εστίαση στη βελτίωση της απόδοσης με μια σειρά βημάτων που θα βοηθήσουν στη βελτίωση της εμπειρίας του StarkNet.
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+Σε αυτό το post, εξηγούμε γιατί υπάρχει ένα ευρύ φάσμα βελτιστοποιήσεων που ισχύουν μόνο σε rollups, και θα μοιραστούμε το σχέδιό μας να εφαρμόσουμε αυτά τα βήματα στο StarkNet. Μερικά από αυτά τα βήματα εφαρμόζονται ήδη στο StarkNet Alpha 0.10.2, το οποίο κυκλοφόρησε στο Testnet στις Nov 16 και Χθες στο Mainnet. Αλλά πριν συζητήσουμε τις λύσεις, ας επανεξετάσουμε τους περιορισμούς και την αιτία τους.
 
-### Block limitations: validity rollups versus L1
+### Περιορισμοί αποκλεισμού: κύλιση εγκυρότητας έναντι L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+Μια πιθανή προσέγγιση για την αύξηση της επεκτασιμότητας blockchain και την αύξηση της TPS θα ήταν να άρει τους περιορισμούς μπλοκ (σε ό,τι αφορά το αέριο/μέγεθος/μέγεθος) διατηρώντας παράλληλα τον χρόνο μπλοκ σταθερό. Αυτό θα απαιτούσε μεγαλύτερη προσπάθεια από τους παραγωγούς μπλοκ (επικυρωτές στο L1, Οι αλληλουχίες στο L2) και ως εκ τούτου απαιτούν μια πιο αποτελεσματική εφαρμογή αυτών των συστατικών. Για το σκοπό αυτό, τώρα μετατοπίζουμε την εστίαση σε βελτιστοποιήσεις StarkNet sequencer, τις οποίες περιγράφουμε λεπτομερέστερα στις παρακάτω ενότητες.
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+Εδώ τίθεται ένα φυσικό ερώτημα. Γιατί είναι βελτιστοποιήσεις αλληλουχίας περιορίζεται σε rollups εγκυρότητα, δηλαδή, γιατί δεν μπορούμε να εφαρμόσουμε τις ίδιες βελτιώσεις για L1 και να αποφευχθεί η πολυπλοκότητα των rollups εγκυρότητας εξ ολοκλήρου? Στην επόμενη ενότητα, ισχυριζόμαστε ότι υπάρχει μια θεμελιώδης διαφορά μεταξύ των δύο, επιτρέποντας ένα ευρύ φάσμα βελτιστοποιήσεων στο L2 που δεν ισχύουν για το L1.
 
-### Why is L1 throughput limited?
+### Γιατί η απόδοση L1 περιορισμένη?
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+Δυστυχώς, η άρση των περιορισμών μπλοκ στο L1 πάσχει από μια μεγάλη παγίδα. Με την αύξηση του ρυθμού ανάπτυξης της αλυσίδας, αυξάνουμε επίσης τις απαιτήσεις από πλήρη κόμβους, που προσπαθούν να συμβαδίσουν με την πιο πρόσφατη κατάσταση. Από L1 πλήρεις κόμβοι πρέπει να εκτελέσουν εκ νέου όλο το ιστορικό, μια υψηλή αύξηση του μεγέθους του μπλοκ (όσον αφορά το αέριο) θέτει ένα σημαντικό στέλεχος σε αυτά, και πάλι οδηγώντας σε ασθενέστερες μηχανές που εγκαταλείπουν το σύστημα και αφήνοντας την ικανότητα να λειτουργούν πλήρεις κόμβους μόνο σε αρκετά μεγάλες οντότητες. Ως αποτέλεσμα, οι χρήστες δεν θα είναι σε θέση να επαληθεύσουν το κράτος και να συμμετάσχουν στο δίκτυο χωρίς εμπιστοσύνη.
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+Αυτό μας αφήνει με την κατανόηση ότι η απόδοση L1 θα πρέπει να περιοριστεί, προκειμένου να διατηρηθεί ένα πραγματικά αποκεντρωμένο και ασφαλές σύστημα.
 
-### Why don’t the same barriers affect validity rollups?
+### Γιατί δεν τα ίδια εμπόδια επηρεάζουν κύρος rollups?
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**Μόνο κατά την εξέταση της πλήρους προοπτικής του κόμβου βλέπουμε την πραγματική δύναμη που προσφέρει η εγκυρότητα.**Ένας πλήρης κόμβος L1 πρέπει να εκτελέσει ξανά ολόκληρο το ιστορικό για να εξασφαλίσει την ορθότητα του τρέχοντος κράτους. Οι κόμβοι StarkNet χρειάζονται μόνο για να επαληθεύσουν τις αποδείξεις STARK και αυτή η επαλήθευση παίρνει εκθετικά χαμηλότερο ποσό υπολογιστικών πόρων. Ειδικότερα, ο συγχρονισμός από το μηδέν δεν χρειάζεται να περιλαμβάνει την εκτέλεση. ένας κόμβος μπορεί να λάβει μια χωματερή της τρέχουσας κατάστασης από τους συνομηλίκους του και να επαληθεύσει μόνο μέσω μιας απόδειξης STARK ότι αυτή η κατάσταση είναι έγκυρη. Αυτό μας επιτρέπει να αυξήσουμε τη ροή του δικτύου χωρίς να αυξήσουμε τις απαιτήσεις από τον πλήρη κόμβο.
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+Ως εκ τούτου, συμπεραίνουμε ότι η αλληλουχία L2 υπόκειται σε ένα ολόκληρο φάσμα βελτιστοποιήσεων που δεν είναι δυνατές σε L1.
 
-### Performance roadmap ahead
+### Οδικός χάρτης επιδόσεων μπροστά
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+Στις επόμενες ενότητες, συζητούμε ποιες από αυτές έχουν προγραμματιστεί για το sequencer, το StarkNet.
 
-### Sequencer parallelization
+### Αλληλουχία παραλληλισμού
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+Το πρώτο βήμα στον οδικό μας χάρτη ήταν να εισαγάγουμε την παραλληλισμό με την εκτέλεση συναλλαγών. Αυτό εισήχθη στο StarkNet άλφα 0.10.2, το οποίο κυκλοφόρησε χθες στο Mainnet. Τώρα βουτάμε σε αυτό που είναι παραλληλισμός (αυτό είναι ένα ημι-τεχνικό τμήμα, για να συνεχίσουμε στο οδικό χάρτη, πηδώντας στο επόμενο τμήμα).
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+Έτσι, τι σημαίνει “συναλλαγή παραλληλισμός” σημαίνει? Αφετέρου, η παράλληλη εκτέλεση ενός συνόλου συναλλαγών είναι αδύνατη καθώς μπορεί να εξαρτώνται διαφορετικές συναλλαγές. Αυτό απεικονίζεται στο ακόλουθο παράδειγμα. Εξετάστε ένα block με τρεις συναλλαγές από τον ίδιο χρήστη:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* Συναλλαγή A: ανταλλαγή USDC για ETH
+* Συναλλαγή Β: να πληρώσει ETH για μια NFT
+* Συναλλαγή C: ανταλλαγή USDT για BTC
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+Σαφώς, Tx A πρέπει να συμβεί πριν Tx B, αλλά Tx C είναι εντελώς ανεξάρτητη από τα δύο και μπορεί να εκτελεστεί παράλληλα. Εάν κάθε συναλλαγή απαιτεί 1 δευτερόλεπτο για να εκτελεστεί, τότε ο χρόνος παραγωγής μπλοκ μπορεί να μειωθεί από 3 δευτερόλεπτα σε 2 δευτερόλεπτα με την εισαγωγή παραλληλισμού.
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+Η ουσία του προβλήματος είναι ότι δεν γνωρίζουμε εκ των προτέρων τις εξαρτήσεις των συναλλαγών. Στην πράξη, μόνο όταν εκτελέσουμε τη συναλλαγή Β από το παράδειγμά μας βλέπουμε ότι βασίζεται σε αλλαγές που έγιναν με τη συναλλαγή Α. Πιο επίσημα, η εξάρτηση προκύπτει από το γεγονός ότι η συναλλαγή Β διαβάζει από αποθηκευτικά κελιά στα οποία έχει γράψει η συναλλαγή Α. Μπορούμε να σκεφτούμε τις συναλλαγές ως ένα γράφημα εξάρτησης, όπου υπάρχει διαφορά από τη συναλλαγή A έως τη συναλλαγή B iff A γράφει σε ένα κελί αποθήκευσης που διαβάζεται από το B, και έτσι πρέπει να εκτελεστεί πριν από το Β. Το ακόλουθο σχήμα δείχνει ένα παράδειγμα ενός τέτοιου γραφήματος εξάρτησης:
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+Στο παραπάνω παράδειγμα, κάθε στήλη μπορεί να εκτελεστεί παράλληλα, και αυτή είναι η βέλτιστη ρύθμιση (ενώ αφελώς, θα είχαμε εκτελέσει τις συναλλαγές 1-9 διαδοχικά).
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+Για να ξεπεράσουμε το γεγονός ότι το γράφημα εξάρτησης δεν είναι γνωστό εκ των προτέρων, εισάγουμε***αισιόδοξη παραλληλισμό***, στο πνεύμα του[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)που αναπτύχθηκε από Aptos Labs, στο sequencer. Κάτω από αυτό το παράδειγμα, επιχειρούμε με αισιοδοξία να εκτελέσουμε τις συναλλαγές παράλληλα και να εκτελέσουμε εκ νέου κατά την εύρεση μιας σύγκρουσης. Για παράδειγμα, μπορούμε να εκτελέσουμε τις συναλλαγές 1-4 από το σχήμα 1 παράλληλα, μόνο για να μάθετε μετά ότι Tx4 εξαρτάται από Tx1. Ως εκ τούτου, η εκτέλεσή του ήταν άχρηστη (τρέχαμε σε σχέση με την ίδια κατάσταση στην οποία εκτείναμε τον Tx1, ενώ θα έπρεπε να είχαμε τρέξει ενάντια στο κράτος που προκύπτει από την εφαρμογή Tx1). Σε αυτή την περίπτωση, θα εκτελέσουμε εκ νέου Tx4.
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+Σημειώστε ότι μπορούμε να προσθέσουμε πολλές βελτιστοποιήσεις στην κορυφή της αισιόδοξης παραλληλισμού. Για παράδειγμα, αντί να περιμένουμε αφελώς για κάθε εκτέλεση να τελειώσει, μπορούμε να ακυρώσουμε μια εκτέλεση τη στιγμή που βρίσκουμε μια εξάρτηση που την ακυρώνει.
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+Ένα άλλο παράδειγμα είναι η βελτιστοποίηση της επιλογής των συναλλαγών για επανεκτέλεση. Ας υποθέσουμε ότι ένα μπλοκ που αποτελείται από όλες τις συναλλαγές από το σχήμα 1 τροφοδοτείται σε μια αλληλουχία με πέντε πυρήνες CPU. Πρώτον, προσπαθούμε να εκτελέσουμε τις συναλλαγές 1-5 παράλληλα. Εάν η σειρά ολοκλήρωσης ήταν Tx2, Tx3, Tx4, Tx1, και τελικά Tx5, τότε θα βρούμε την εξάρτηση Tx1→Tx4 μόνο μετά Tx4 εκτελέστηκε ήδη - υποδεικνύοντας ότι θα πρέπει να εκτελεστεί εκ νέου. Αφελώς, μπορεί να θέλουμε να εκτελέσουμε εκ νέου Tx5 καθώς μπορεί να συμπεριφέρεται διαφορετικά δεδομένης της νέας εκτέλεσης του Tx4. Ωστόσο, αντί απλώς να εκτελέσετε εκ νέου όλες τις συναλλαγές μετά την ακύρωση του Tx4, μπορούμε να διανύσουμε το γράφημα εξάρτησης που έχει κατασκευαστεί από τις συναλλαγές των οποίων η εκτέλεση έχει ήδη τερματιστεί και μόνο επανεκτέλεση συναλλαγών που εξαρτώνται από Tx4.
 
-### A new Rust implementation for the Cairo-VM
+### Μια νέα εφαρμογή Rust για το Κάιρο-VM
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+Οι έξυπνες συμβάσεις στο StarkNet είναι γραμμένες στο Κάιρο και εκτελούνται εντός του Καϊρό-VM, η οποία αναγράφεται στην προδιαγραφή[Χαρτί του Καΐρου](https://eprint.iacr.org/2021/1063.pdf). Επί του παρόντος, ο sequencer χρησιμοποιεί μια[εφαρμογή python](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)του Cairo-VM. Για να βελτιστοποιήσουμε τις επιδόσεις της VM υλοποίησης, έχουμε ξεκινήσει μια προσπάθεια επανεγγραφής του VM στη σκουριά. Χάρη στο μεγάλο έργο του[Lambdaclass](https://lambdaclass.com/), που είναι από τώρα μια ανεκτίμητη ομάδα στο οικοσύστημα StarkNet, αυτή η προσπάθεια σύντομα θα καρποφορήσει.
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+Η εφαρμογή της VM,[καΐρο-rs](https://github.com/lambdaclass/cairo-rs), μπορεί τώρα να εκτελέσει τον τοπικό κώδικα του Καΐρου. Το επόμενο βήμα είναι η διαχείριση έξυπνων συμβάσεων εκτέλεσης και ενσωμάτωσης με τον πυθωνικό sequencer. Μόλις ενσωματωθεί με καϊρό-rs, η απόδοση του sequencerâ € ™️ s αναμένεται να βελτιωθεί σημαντικά.
 
-### Sequencer re-implementation in Rust
+### Επανεφαρμογή αλληλουχίας στο Rust
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+Η μετατόπιση από python στη σκουριά για βελτίωση της απόδοσης δεν περιορίζεται στο Κάιρο VM. Παράλληλα με τις βελτιώσεις που αναφέρθηκαν παραπάνω, σκοπεύουμε να ξαναγράψουμε το sequencer από το μηδέν στη σκουριά. Εκτός από τα εσωτερικά πλεονεκτήματα του Rust, αυτό παρουσιάζει μια ευκαιρία για άλλες βελτιστοποιήσεις στο sequencer. Καταχώρηση ενός ζευγαριού, μπορούμε να απολαύσουμε τα οφέλη του καΐρου-rs χωρίς την εναέρια επικοινωνία python-σκουριά, και μπορούμε να επανασχεδιάσουμε πλήρως τον τρόπο με τον οποίο η κατάσταση αποθηκεύεται και έχει πρόσβαση (η οποία σήμερα βασίζεται στη δομή[Patricia-Trie](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
 
-### What about provers?
+### Τι γίνεται με τις παροιμίες?
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+Σε όλο αυτό το post, δεν αναφέραμε το ίσως πιο διάσημο στοιχείο της εγκυρότητας rollups - ο prover. Κάποιος θα μπορούσε να φανταστεί ότι είναι η αναμφισβήτητα πιο εξελιγμένη συνιστώσα της αρχιτεκτονικής, θα πρέπει να είναι η συμφόρηση και, έτσι, το επίκεντρο της βελτιστοποίησης. Είναι ενδιαφέρον ότι είναι τα πιο “στάντα” συστατικά που είναι τώρα η συμφόρηση του StarkNet. Σήμερα, ιδιαίτερα με[αναδρομικές αποδείξεις](https://medium.com/starkware/recursive-starks-78f8dd401025), μπορούμε να χωρέσουμε πολύ περισσότερες συναλλαγές από την τρέχουσα κίνηση στο Testnet/Mainnet σε μια απόδειξη. Στην πραγματικότητα, σήμερα, StarkNet μπλοκ αποδεικνύεται παράλληλα με τις συναλλαγές StarkEx, όπου το τελευταίο μπορεί μερικές φορές να επιβαρυνθεί με αρκετές εκατοντάδες χιλιάδες νομισματοκοπεία NFT.
 
 ### Summary
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+Παραλληλισμός, Rust, και πολλά άλλα- στηρίξτε τον εαυτό σας για μια βελτιωμένη TPS στις επερχόμενες εκδόσεις StarkNet.

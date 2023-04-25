@@ -1,1 +1,1 @@
-Ecosystem
+Ökoszisztéma

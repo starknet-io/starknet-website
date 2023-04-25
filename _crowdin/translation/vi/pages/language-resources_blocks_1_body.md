@@ -1,5 +1,5 @@
-In line with our goal to make the Starknet community accessible and usable to as many people across the globe as possible, we’ve listed a collection of non-English resources below.\
+Để phù hợp với mục tiêu của chúng tôi là làm cho cộng đồng Starknet có thể truy cập và sử dụng được cho càng nhiều người trên toàn cầu càng tốt, chúng tôi đã liệt kê một bộ sưu tập các tài nguyên không phải tiếng Anh bên dưới.\
 \
-These are places where you can discover and discuss all things Starknet with other community members in your native language and/or based on where you live in the world. \
+Đây là những nơi bạn có thể khám phá và thảo luận mọi thứ về Starknet với các thành viên khác trong cộng đồng bằng ngôn ngữ mẹ đẻ của bạn và/hoặc dựa trên nơi bạn sinh sống trên thế giới. \
 \
-If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please [open an issue](https://github.com/starknet-io/starknet-website/issues) on Github to get it added.
+Nếu có tài nguyên bằng ngôn ngữ không phải tiếng Anh mà bạn biết và không thấy được liệt kê ở đây, vui lòng [mở số](https://github.com/starknet-io/starknet-website/issues) trên Github để thêm tài nguyên đó.

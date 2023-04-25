@@ -1,37 +1,37 @@
-### TL;DR
+### TL; DR
 
-* We are releasing Cairo 1.0-alpha.2, which brings a host of new features to the language
-* It is now possible to implement an ERC20 contract
-* Those new linguistic features will be applicable in the upcoming StarkNet-v0.11.0 version
+* Chúng tôi đang phát hành Cairo 1.0-alpha.2, mang đến nhiều tính năng mới cho ngôn ngữ
+* Hiện có thể triển khai hợp đồng ERC20
+* Những tính năng ngôn ngữ mới này sẽ được áp dụng trong phiên bản StarkNet-v0.11.0 sắp tới
 
-### Fresh new features!
+### Các tính năng mới!
 
-Cairo 1.0 is continuing its fast improvement pace. Today’s release introduces, among other things, all the necessary features to write an ERC-20 contract.
+Cairo 1.0 đang tiếp tục tốc độ cải tiến nhanh chóng. Bản phát hành hôm nay giới thiệu, trong số những thứ khác, tất cả các tính năng cần thiết để viết hợp đồng ERC-20.
 
-To mention some of the new features:
+Để đề cập đến một số tính năng mới:
 
-* Dictionaries
-* Events in contracts
-* Mapping storage variables
-* Trait support
-* Type inference
-* Methods
+* từ điển
+* Sự kiện trong hợp đồng
+* Ánh xạ các biến lưu trữ
+* hỗ trợ đặc điểm
+* Loại suy luận
+* phương pháp
 
-See the complete list in the GitHub [repository.](https://github.com/starkware-libs/cairo)
+Xem danh sách đầy đủ trong kho lưu trữ GitHub [.](https://github.com/starkware-libs/cairo)
 
-Let’s have a look at an example of an ERC20 contract (the full concrete example is, of course, on [GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) to demonstrate a use case of an event and mappings in the storage:
+Chúng ta hãy xem một ví dụ về hợp đồng ERC20 (tất nhiên, ví dụ cụ thể đầy đủ là trên[GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) để minh họa trường hợp sử dụng của một sự kiện và ánh xạ trong bộ lưu trữ:
 
 ![](/assets/0_i4ch5-4rxxal4rkt.png)
 
-### Jump into the water!
+### Nhảy xuống nước!
 
-We continue to work on two parallel vectors:
+Chúng tôi tiếp tục làm việc trên hai vectơ song song:
 
-1. Evolve Cairo 1.0 at full speed towards full-feature compatibility with the old Cairo.
-2. Develop Starknet v0.11.0 that will support contracts written in Cairo 1.0
+1. Phát triển Cairo 1.0 ở tốc độ tối đa để tương thích đầy đủ tính năng với Cairo cũ.
+2. Phát triển Starknet v0.11.0 sẽ hỗ trợ các hợp đồng được viết bằng Cairo 1.0
 
-In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+Trong thời gian chờ đợi, chúng tôi khuyến khích các nhà phát triển bắt đầu viết bằng Cairo 1.0 và làm quen với nó.
 
-For any questions — you can use the Cairo 1.0 Discord [channel](https://discord.com/channels/793094838509764618/1065544063245365288).
+Đối với bất kỳ câu hỏi nào — bạn có thể sử dụng Cairo 1.0 Discord[kênh](https://discord.com/channels/793094838509764618/1065544063245365288).
 
-For any suggestions or feedback — don’t hesitate to open an [issue](https://github.com/starkware-libs/cairo/issues) in the Cairo repo.
+Đối với bất kỳ đề xuất hoặc phản hồi nào — vui lòng mở số[số](https://github.com/starkware-libs/cairo/issues)trong kho lưu trữ Cairo.

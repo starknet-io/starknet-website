@@ -1,67 +1,67 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **A díjak mostantól kötelezőek a Testneten, hamarosan a Mainneten**
+* Szerződéses gyári minta már lehetséges!
+* A StarkNet szerződéses osztályokat vezet be
+* A delegált hívás helyébe a könyvtári hívás lép
 
 ### Intro
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+Örömmel mutatjuk be a StarkNet Alpha 0.9.0-t! Ez egy fontos verzió, amelyben a StarkNet jelentős lépéseket tesz a kiforrottság felé, jelentős kiegészítéssel mind a funkcionalitás, mind a protokolltervezés terén.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**A díjak kötelezőek**(jelenleg csak a Testneten, amíg a 0.9.0-s verzió nem lesz elérhető a Mainnet-en) – minden virágzó L2-nek saját független díjrendszerrel kell rendelkeznie. Miután a 0.8.0-s verzióban opcionális szolgáltatásként bevezettük a díjakat, most már biztosak vagyunk abban, hogy ezeket a protokoll alapvető összetevőjeként beépítjük, és kötelezővé tesszük. További részletek alább.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+Egy másik jelentős változás protokoll szinten a szerződésosztályok bevezetése és az osztály/példány szétválasztás. Ez lehetővé teszi a \`delegate_call\` funkció egyszerűbb használatát és a meglévő szerződésekből származó telepítéseket, lehetővé téve a gyári mintát a StarkNeten.
 
-### Contract Classes
+### Szerződéses osztályok
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+Az objektum-orientált programozásból merítve különbséget teszünk a szerződéskód és annak megvalósítása között. Ezt úgy tesszük, hogy a szerződéseket osztályokra és példányokra osztjuk.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+A**szerződési osztály**a szerződés meghatározása: Kairói bájtkódja, tippinformációi, belépési pontok nevei és minden, ami a szemantikájának egyértelmű meghatározásához szükséges. Minden osztályt az osztálykivonat azonosít (hasonlóan az OOP nyelvekből származó osztálynévvel).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+A**szerződéspéldány**, vagy egyszerűen egy szerződés, valamely osztálynak megfelelő telepített szerződés. Ne feledje, hogy csak a szerződéses példányok viselkednek szerződésként, azaz saját tárral rendelkeznek, és tranzakciók/egyéb szerződések hívhatják le őket. Egy szerződésosztálynak nem feltétlenül van telepített példánya a StarkNetben. Az órák bevezetése több protokollmódosítással is jár.
 
-#### ‘Declare’ Transaction
+#### Tranzakció „bejelentése”.
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+Egy új típusú tranzakciót vezetünk be a StarkNeten: a['declare'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)tranzakciót, amely lehetővé teszi a szerződés**osztályú deklarálását.**A \`deploy\` tranzakcióval ellentétben ez nem telepíti az adott osztály példányát. A StarkNet állapota tartalmazni fogja a deklarált osztályok listáját. Új osztályok adhatók hozzá az új \`declare\` tranzakcióval.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### A „telepítési” rendszerhívási és szerződéses gyárak.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+Ha egy osztály deklarálva van, azaz a megfelelő \`declare\` tranzakció elfogadásra került, telepíthetjük az osztály új példányait. Ebből a célból az új \`deploy\` rendszerhívást használjuk, amely a következő argumentumokat veszi fel:
 
-* The class hash
-* Salt
-* Constructor arguments
+* Az osztály hash
+* Só
+* Konstruktori argumentumok
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+A „telepítési” rendszerhívás ezután a szerződésosztály egy új példányát telepíti, amelynek[](https://docs.starknet.io/docs/Contracts/contract-address)címét a fenti három paraméter és a telepítő címe (a rendszerhívást meghívó szerződés) határozza meg.
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+A telepítések meghívási tranzakcióba való belefoglalása lehetővé teszi számunkra, hogy a telepítésekért árat és díjat számítsunk fel, anélkül, hogy a telepítéseket és a meghívásokat eltérően kellene kezelnünk. A telepítési díjakkal kapcsolatos további információkért lásd:[a dokumentumok](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+Ez a funkció bevezeti a szerződéses gyárakat a StarkNetbe, mivel bármely szerződés meghívhatja a \`deploy\` syscall-t, új szerződéseket hozva létre.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### Áttérés a „Delegate Call”-ról a „Library Call”-ra
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+Az osztályok bevezetése lehetővé teszi egy jól ismert probléma megoldását az Ethereum delegált hívási mechanizmusában: Amikor egy szerződés delegált hívást hajt végre egy másik szerződéshez, akkor csak az osztályára (kódjára) van szüksége, nem pedig egy tényleges példányra (tárhelyére). Ezért rossz gyakorlat egy konkrét szerződéspéldány megadása delegált hívás során (valóban néhány hibához vezetett az Ethereum-szerződésekben) – csak az osztályt kell megadni.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+A régi \`delegate_call\` rendszerhívás elavulttá válik (a régi szerződések, amelyek már telepítve vannak, továbbra is működni fognak, de a \`delegate_call\`**szerződések már nem fordítják le**), és egy új library_call rendszerhívás váltja fel, amely az osztály hash-jét kapja meg (egy korábban deklarált osztályé) a szerződéspéldány címe helyett. Vegye figyelembe, hogy egy könyvtári felhívásban csak egy tényleges szerződés szerepel, így elkerüljük a felhívási szerződés és a megvalósítási szerződés közötti félreértést.
 
-#### New API endpoints
+#### Új API-végpontok
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+Két új végpontot adtunk az API-hoz, lehetővé téve az osztályokhoz kapcsolódó adatok lekérését:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: az osztálykivonat alapján az osztálydefiníciót adja vissza
+* \`get_class_hash_at\`: egy telepített szerződés osztálykivonatát adja vissza a szerződés címének megadásával
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+Vegye figyelembe, hogy a telepített szerződés osztályának közvetlen megszerzéséhez a fenti két módszer végrehajtása helyett használhatja a régi \`get_full_contract\` végpontot, amely a jövőbeni verziókban át lesz nevezve. A fent említett összes végpont a[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands)-ből is használható.
 
-#### Fees
+#### Díjak
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+Folytatjuk a díjak beépítését a StarkNetbe, kötelezővé téve azokat (először a Testneten, majd később a Mainneten is) ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` tranzakciókhoz. A \`declare\` tranzakció ezen a ponton nem igényel díjat. Hasonlóképpen, a \`deploy`` tranzakciók sem igényelnek díjat, azonban vegye figyelembe, hogy ez a tranzakciótípus valószínűleg elavult lesz a jövőbeli verziókban.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+Számos nyitott kérdés maradt ezen a területen, a legszembetűnőbbek a szerződésnyilatkozatok és a StarkNet-fiókok telepítésének díjak felszámítása. A következő verziókban ezekkel a problémákkal foglalkozunk.
 
-### What’s Next?
+### Mi a következő lépés?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+Február[](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717)jén bejelentett ütemtervünket követve elkötelezettek vagyunk a StarkNet teljesítményének általános, és különösen a szekvenszer teljesítményének javítása mellett, hogy a felhasználók gyorsabb visszajelzést kapjunk tranzakcióikról. A következő verzióban a párhuzamosítást tervezzük bevezetni a szekvenszerbe, ami gyorsabb blokkgyártást tesz lehetővé.
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+A StarkNet következő nagyobb verziója a StarkNet fiókjainak szerkezetére fog összpontosítani, a[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)hez hasonló módon. Ezzel véglegesítjük a StarkNet fiókok viselkedését, ami újabb jelentős lépést tesz a tömeges elfogadás felé!

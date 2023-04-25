@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+A Starknet OS használatával futtatott Starknet-tranzakciók rendezett halmazai, amelyek egyetlen összesített állapotváltozást eredményeznek, amelyet ezután a Starknet L1 alapszerződéshez kötnek. Egy blokk a következőket tartalmazza:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … a blokk hash – egyedi stabil azonosító, amellyel lekérdezhetünk és hivatkozhatunk a blokkra.
+* … a blokkszám – egy sorszám, amely a blokk helyét jelöli a Starknetben elfogadott blokkok sorrendjében. Megjegyzés: egy blokk száma idővel változhat. Ezenkívül egy adott szám különböző blokkra utalhat különböző időpontokban, például L1 lánc újrarendelése esetén.

@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+A Starknet Token még nem kapható. Jelenleg nem adható hozzá a pénztárcájához. Óvakodj a csalásoktól.

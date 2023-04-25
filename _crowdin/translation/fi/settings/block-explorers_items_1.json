@@ -1,7 +1,7 @@
 {
-  "name": "ViewBlock",
+  "name": "NäytäEstä",
   "website_url": "https://viewblock.io/starknet",
-  "company_name": "Viewblock ",
+  "company_name": "Näytälohko ",
   "twitter": "https://twitter.com/viewblock",
-  "description": "Block explorer and analytics for multiple networks including Starknet. "
+  "description": "Estä Explorer ja analytiikka useille verkoille, mukaan lukien Starknetet. "
 }

@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## מהן רמפות על פיאט?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+Fiat on-ramps הם ספקי שירות המאפשרים החלפת מטבעות פיאט למטבעות קריפטוגרפיים.

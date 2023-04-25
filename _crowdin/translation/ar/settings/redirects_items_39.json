@@ -1,4 +1,4 @@
 {
   "source": "/faq/:path*",
-  "destination": "/en/learn/frequently-asked-questions"
+  "destination": "/en/learn/يتكرر طرح الأسئلة"
 }

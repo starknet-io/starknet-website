@@ -66,7 +66,7 @@ EAG 委员会的目的是通过在链上部署，促进生态系统的扩大和�
 
 生态系统上网委员会的主要重点与早期领养补助委员会不同。 欧亚经济共同体委员会旨在启动并颁发Starknet首批收养人奖， 生态系统在线委员会强调了在基层一级生态系统的持续和持续增长与发展。 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+可以通过以下方式联系生态系统入职委员会： [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org)。
 
 ## 即将到来的里程碑
 

@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+لقد كانت قابلية البلوكشين للتوسع دائما موضوعا مشتعلا بالحرارة. تقريبا كل شبكة بلوكشين تلمس أعدادا كبيرة من المعاملات في الثانية (TPS) كنقطة بيع. ومع ذلك، فإن TPS ليس مقياساً صحيحاً لمقارنة شبكات البلوكشين مع - مما يجعل تقييم أدائها النسبي يشكل تحدياً. وعلاوة على ذلك، عادة ما تأتي أعداد كبيرة من هذه الخدمات بتكلفة - وهو ما يطرح السؤال: هل يمكن لهذه الشبكات في الواقع أن تتوسع، أم أنهم يزيدون إنتاجهم فقط؟
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+لذا، دعونا ندرس كيفية تعريف القابلية للتوسع، أي المقايضات التي تم القيام بها لتحقيقها، ولماذا تعتبر مقايضات الصالح حل القابلية للتوسع.
 
-### Not all Transactions are Made Equal
+### ليست كل المعاملات مصنوعة على قدم المساواة
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+أولا، نحن بحاجة إلى إثبات تأكيدنا على أن القياس البسيط والملائم لدائرة الخدمات التقنية ليس مقياسا دقيقا للقابلية للتوسع.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+لتعويض العقد لتنفيذ المعاملات (ولردع المستخدمين عن إرسال الرسائل غير المرغوب فيها للشبكة بحساب غير ضروري)، تشحن البلوكشين رسوماً تتناسب مع العبء الحسابي المفروض على البلوكشين. في الإيثيريوم، يقاس مدى تعقيد العبء الحسابي بـ*غاز.*لأن الغاز هو مقياس مناسب جدا لتعقيد المعاملة، سيتم استخدام هذا المصطلح في جميع أنحاء هذه المقالة لبلوكشين غير إيثيريوم أيضًا، حتى وإن كان عادة محدداً بإيثيريوم.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+وتختلف المعاملات اختلافا كبيرا من حيث التعقيد، وبالتالي من حيث مقدار الغاز الذي تستهلكه. البيتكوين، رائد في المعاملات غير الموثوق بها بين الأقران، يدعم فقط نص بيتكوين البدائي. هذه التحويلات البسيطة من العنوان لمعالجة استخدام القليل من الغاز. وعلى النقيض من ذلك، فإن سلاسل العقود الذكية مثل إيثيريوم أو سولانا تدعم آلة افتراضية ولغات البرمجة الكاملة التي تسمح بمعاملات أكثر تعقيدا. ومن ثم تحتاج تطبيقات مثل Uniswap إلى المزيد من الغاز.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+هذا هو السبب في أنه ليس من المنطقي مقارنة TPS لمختلف سلاسل الكتل. وما ينبغي أن نقارنه بدلا من ذلك هو القدرة على الحساب - أو الناتج.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+جميع سلاسل الكتل لديها حجم كتلة (متغير) ووقت كتلة تحدد عدد*وحدات الحساب*التي يمكن معالجتها لكل كتلة وكيف*سريع*يمكن إضافة كتلة جديدة. معا هذين المتغيرين يحددان ناتج**لسلسلة الكتل.
 
-### What Constrains Scalability?
+### ما هي القيود القابلية؟
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+سلاسل الكتل البرمجية تسعى إلى أن تكون شبكات لا مركزية إلى أقصى حد، شاملة للجميع. ولتحقيق ذلك، لا بد من التحقق من خواصتين أساسيتين.
 
-#### **1. Hardware Requirements**
+#### **1. متطلبات الجهاز**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+يتم تحديد اللامركزية في شبكة البلوكشين من خلال قدرة أضعف العقدة في الشبكة على التحقق من سلسلة البلوكشين والحفاظ على حالتها. لذلك فإن تكاليف تشغيل العقدة (الأجهزة وعرض النطاق الترددي وينبغي الإبقاء على الحد الأدنى قدر الإمكان لتمكين أكبر عدد ممكن من الأفراد من أن يصبحوا مشاركين بلا إذن في الشبكة التي لا يمكن الوثوق بها.
 
-#### 2**.** State Growth
+#### 2**.**حالة النمو
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+يشير نمو الدولة إلى مدى سرعة نمو البلوكشين. كلما زاد الإنتاج الذي يسمح بلوكشين بحدوث كل وحدة من الوقت، كلما زادت سرعة نمو البلوكشين. العقد الكاملة تخزن تاريخ الشبكة، ويجب أن تكون قادرة على التحقق من حالة الشبكة. يتم تخزين حالة إيثيريوم والإشارة إليها باستخدام هياكل كفؤة مثل الأشجار. ومع نمو الدولة، تضاف إليها أوراق وفروع جديدة، مما يزيد من تعقيدها واستهلاكها للوقت في القيام بأعمال معينة. ومع تزايد حجم السلسلة، فإنها تزيد من سوء حالة التنفيذ من جانب العقد، مما يؤدي إلى تزايد مستمر في الوقت اللازم للتحقق من صحة الكتل الجديدة. مع مرور الوقت، هذا أيضا يزيد من الوقت الإجمالي الذي يستغرقه المزامنة الكاملة للعقدة.
 
-### Detrimental Impacts of Increasing Throughput
+### الآثار السلبية المترتبة على الزيادة طوال فترة
 
-#### 1. Node Count
+#### 1. عدد العقدة
 
-The minimum requirements to run a node and node counts are:
+الحد الأدنى من المتطلبات لتشغيل العقدة والعقد هو كما يلي:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin1: مساحة قرص HDD 350GB ، 5 ميغابت/ثانية اتصال ، 1GB ذاكرة ، CPU >1 جيغاتز. **عدد العقد: ~10,000**
+* Ethereum2: 500GB+ SSD مساحة القرص، 25 Mbit/s وصلة، 4–8GB ذاكرة الوصول العشوائي، CPU 2–4 **عدد العقد: ~6,000**
+* سولانا3: 1.5TB+ مساحة قرص SSD، 300 ميغابت/ثانية اتصال، 128جيغابايت معالج ذاكرة الوصول العشوائي 12+ النواة **عدد العقد: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+لاحظ أن متطلبات وحدة المعالجة المعالجة، وعرض النطاق الترددي، والتخزين للعقود المطلوبة لمخرجات بلوكشين، أكبر حجما، عقد أقل على الشبكة - مما يؤدي إلى إضعاف اللامركزية وإلى شبكة أقل شمولا.
 
-#### 2. Time to Sync a Full Node
+#### 2. الوقت لمزامنة عقدة كاملة
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+عند تشغيل عقدة لأول مرة، يجب مزامنة جميع العقد الموجودة، التنزيل، والتحقق من صحة حالة الشبكة على طول الطريق من كتلة الإنشاء إلى الطرف الآخر من السلسلة. وينبغي أن تكون هذه العملية سريعة وفعالة قدر الإمكان لتمكين أي شخص من العمل كمشارك لا يسمح له بالبروتوكول.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+أخذ اختبار مزامنة العقد[لجيمس لوب 2020 عقدة بيتكوين](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)و[اختبارات 2021](https://blog.lopp.net/2021-altcoin-node-sync-tests/)كمؤشر، يقارن الجدول 1 الوقت الذي يستغرقه مزامنة عقدة كاملة من بيتكوين مقابل بيتكوين. إيثيريوم ضد سولانا في متوسط درجة استهلاك الفيلوك.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![الجدول 1 مقارنة مخرجات سلسلة الكتل ومزامنة العقدة](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "الجدول 1 مقارنة مخرجات سلسلة الكتل ومزامنة العقدة")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+ويبين الجدول 1 أن زيادة الناتج تؤدي إلى فترات متزامنة أطول لأن هناك حاجة إلى معالجة وتخزين المزيد من البيانات.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+في حين يتم إدخال تحسينات على برمجيات العقدة باستمرار للتخفيف من تحدي البلوكشين المتنامي (خفض بصمة القرص)، سرعة مزامنة أسرع، قدرة أقوى على التحطم، وحدة نمطية لبعض المكونات، إلخ. , من الواضح أن العقد لا تزال غير قادرة على مواكبة الزيادات للإنتاج.
 
-### How Should Scalability be defined?
+### كيف ينبغي تعريف القابلية للقياس ؟
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+المقياس هو المصطلح الأكثر تشويها في مساحة سلسلة الكتل. وفي حين أن زيادة الناتج أمر مرغوب فيه، فإنها ليست سوى جزء واحد من اللغز.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***المقياس**يعني**المزيد من المعاملات**لـ**نفس الأجهزة**.*
 
-For that reason, scalability can be separated into two categories.
+ولهذا السبب، يمكن تقسيم قابلية التوسع إلى فئتين.
 
-#### Sequencer scalability
+#### قابلية التسلسل للتوسع
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+ويصف التسلسل عملية طلب المعاملات ومعالجتها في الشبكة. وكما سبق إثباته، يمكن لأي بلوكشين أن يزيد ناتجه بشكل غير عادي من خلال زيادة حجم الكتلة وتقصير وقت كتلها - حتى النقطة التي يعتبر فيها التأثير السلبي على لامركزيتها كبيرا جدا. ولكن تغيير هذه البارامترات البسيطة لا يوفر التحسينات المطلوبة. يمكن لـ EVM في إيثيريوم، نظريا،[التعامل مع ما يصل إلى 2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989)، وهو غير كاف لخدمة الطلب الطويل الأجل على الفضاء. ولتحديد التسلسل، حققت سولانا بعض الابتكارات المثيرة للإعجاب: فاستفادت من بيئة تنفيذ متوازية وآلية توافقية ذكية، مما يسمح بزيادة كفاءة الإنتاج بكثير. غير أنه على الرغم من تحسينه فإنه ليس كافياً ولا قابلاً للتحسين. ومع زيادة شركة سولانا لإنتاجها، تزداد أيضا تكاليف المعدات اللازمة لتشغيل عقدة ومعالجة المعاملات.
 
-#### Verification scalability
+#### قابلية التحسين
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*إمكانية التحقّق تصف النُهج التي تزيد من الإنتاج بدون إثقال العقد بتكاليف الأجهزة المتزايدة باستمرار.*على وجه التحديد، تشير إلى الابتكارات التشفيرية مثل أدلة الصلاحية. هي السبب الذي يجعل من الممكن لمداولات الصالح أن تقلص البلوكشين بشكل مستدام.
 
-**What’s a Validity Rollup?**
+**ما هو هدر الصلاحية؟**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+وتنقل رولوبس الصالح (المعروف أيضا باسم "ZK-Rollups") الحساب والتخزين الحكومي خارج السلسلة ولكنها تحتفظ بكمية صغيرة من بعض البيانات في السلسلة. عقد ذكي على سلسلة الكتل الأساسية يحافظ على جذر الولاية في رولب. على Rollup، يتم إرسال مجموعة من المعاملات الشديدة الضغط، مع جذر الحالة الحالية، إلى مدير خارج السلسلة. يقوم Prover بحساب المعاملات، وينشئ دليلا على صحة النتائج وجذور الحالة الجديدة، ويرسل إلى محقق في السلسلة. يتحقق المتحقق من صحة الإثبات، والعقد الذكي الذي يحافظ على حالة Rollup يقوم بتحديثه إلى الدولة الجديدة المقدمة من Prover.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**كيف يمكن لمقاييس دقة التدوير مع نفس المتطلبات من المعدات؟**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+على الرغم من أن Provers تحتاج إلى أجهزة عالية المستوى، فإنها لا تؤثر على لامركزية البلوكشين؛ لأن صحة المعاملات مضمونة بأدلة يمكن التحقق منها من الناحية الرياضية.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+وما يهم هو متطلبات التحقق من الأدلة. لأن البيانات المعنية مضغوطة للغاية وموجزة إلى حد كبير من خلال الحساب، فإن تأثيرها على العقد من سلسلة الكتل الأساسية هو الحد الأدنى*.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+والمحققون (عقدة ثيروم) لا يحتاجون إلى معدات عالية الجودة، وحجم الدفعات لا يزيد من الاحتياجات من المعدات. يجب معالجة وتخزين عمليات انتقال الدولة فقط وكمية صغيرة من بيانات المكالمات بواسطة العقد. وهذا يسمح لجميع عقد إيثيريوم بالتحقق من دفعات التدوير الصالح باستخدام المعدات الموجودة لديها.
 
-**The more transactions, the cheaper it gets**
+**كلما زادت المعاملات، كلما حصلت على أرخص**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+في سلاسل البلوكشين التقليدية، يحدث المزيد من المعاملات، كلما كان ذلك مكلفاً للجميع كلما تم ملء مساحة الكتلة - ويتعين على المستخدمين أن يخرجوا بعضهم البعض من سوق الرسوم للحصول على معاملاتهم.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+من أجل تدهير الصلاحية, يتم عكس هذه الديناميكية. التحقق من مجموعة من المعاملات على إيثيريوم له تكلفة معينة. ومع تزايد عدد المعاملات داخل الدفعة الواحدة، تزداد تكلفة التحقق من الدفعة بمعدل أبطأ من ذي قبل. وإضافة المزيد من المعاملات إلى دفعة ما يؤدي إلى رسوم معاملات أرخص حتى وإن زادت تكلفة التحقق من الدفعة - لأنها مستهلكة بين جميع المعاملات داخل الدفعة. ترتيبات الصلاحية تريد أكبر عدد ممكن من المعاملات داخل الدفعة - بحيث يمكن تقاسم رسوم التحقق بين جميع المستخدمين. مع نمو حجم الدفعة إلى ما لا نهاية، تتقارب الرسوم المستهلكة لكل معاملة إلى صفر، `1`. .، كلما زاد عدد المعاملات على صلاحيّات الصلاحيّة، كلما كان ذلك أرخص للجميع.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX، وهو تطبيق مدعوم من قبل Rollity Roll، يرى في كثير من الأحيان أحجام دفعة تزيد على 12,000 معاملة. ومقارنة استهلاك الغاز لنفس الصفقات في ماينيت مقابل صلاحيتها تبيِّن المكاسب المتحققة من قابلية الارتفاع:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+إعداد معاملة DYdX على صيانة إيثيريوم:**200,000 غاز**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+إعداد معاملة dYdX على StarkEx:**<500 غاز**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+طريقة أخرى للنظر فيها: مقاييس التكلفة الرئيسية للصلاحية خطياً مع عدد المستخدمين في نفس الدفعة.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### لماذا عمليات التدوير المتفائلة ليست قابلة للتطوير كما قد يتصور المرء
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+ومن الناحية النظرية، فإن عمليات التدوير المتفائلة توفر تقريباً نفس فوائد قابلية التوسع التي توفرها عمليات التدوير المتعلقة بالصلاحية. ولكن هناك تمييز مهم واحد: التهدئة المتفائلة تحسنا في الحالة المتوسطة، في حين أن التهدئة الصالحة تحسّن في الحالة الأسوأ. لأن أنظمة البلوكشين تعمل في ظروف خصامية للغاية، فإن تحسين الحالة لأسوأ الحالات هو السبيل الوحيد لتحقيق الأمان.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+في أسوأ حالة "رولوب" التفاعلية، لن يتم التحقق من معاملات المستخدم بواسطة مدققي الاحتيال. لذلك ، لمجابهة الاحتيال ، يجب على المستخدم مزامنة عقدة إيثيريوم كاملة ، عقدة L2 كاملة ، وحساب المعاملة المشبوهة بنفسه.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+في أسوأ حالة من حالات "صلاحية" سوف يحتاج المستخدم فقط إلى مزامنة عقدة كاملة في إيثيريوم للتحقق من صحة الإثبات. حفظ أنفسهم العبء الحسابي.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+خلافاً لتدخلات الصلاحية، فإن مقاييس التكلفة المتفائلة تعمل خطياً مع عدد المعاملات بدلاً من عدد المستخدمين، مما يجعلها أكثر تكلفة.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### القطع النهائي من اللغز - الوصول غير المسموح به إلى ولاية الرولوب
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+ولضمان صحة المعاملات، يحتاج المستخدمون إلى تشغيل عقدة إيثيريوم فقط. بيد أن المستخدمين والمطورين قد يرغبون في عرض وتشغيل حالة الرولوب وتنفيذها لأغراض مختلفة. يقوم*فهرسة العقدة L2*بملء هذه الحاجة بشكل كامل. لا يسمح فقط للمستخدمين برؤية المعاملات في الشبكة، ولكنها أيضا جزء حيوي من الهياكل الأساسية اللازمة لتشغيل الهياكل الأساسية للنظم الإيكولوجية. فهرس مثل The Graph, Alchemy, Infura, Oracle Networks، و مستكشفي الكتل، كلها مدعومة بالكامل من عقدة L2 غير مسموح بها.
 
-### Conclusion
+### خاتمة
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+العديد من النُهج لمعالجة قابلية البلوكشين للتوسع تركز بشكل خاطئ على زيادة*ناتج*. ولكن هذا يغفل تأثير الإنتاج على العقد: متطلبات المعدات المتزايدة دوماً لتجهيز الكتل وتخزين تاريخ الشبكات، وكيف أن ذلك يعوق لامركزية الشبكة.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+مع ظهور التشفير غير الصالح، يمكن لسلسلة الكتل أن تحقق**إمكانية التطوير الحقيقي**الذي لا يثقل العقد بتكاليف متزايدة باستمرار ويسمح بتطبيق اللامركزية على نطاق واسع. يمكن الآن إجراء المزيد من المعاملات مع حسابات قوية وأكثر تعقيدا لنفس الجهاز، عكس مسار معضلة سوق الرسوم في هذه العملية - كلما زاد النشاط على تهدئة الصلاحية, كلما كان ذلك أرخص ثمنا!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.oth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)و[لويس غوثمان](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+1 من<https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+2 من<https://ethereum.org/en/developers/docs/nodes-and-clients/>
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+3 من<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+4 تم تبسيطه وتعديله بشدة لمتوسط أحجام الكتلة الديناميكية

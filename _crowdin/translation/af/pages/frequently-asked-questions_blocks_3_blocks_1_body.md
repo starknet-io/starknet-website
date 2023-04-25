@@ -1,1 +1,1 @@
-Any dApp can be deployed on Starknet. As Cairo allows general computation, any business logic can be implemented and processed over StarkNet.
+Enige dApp kan op Starknet ontplooi word. Aangesien Kaïro algemene berekening toelaat, kan enige besigheidslogika oor StarkNet geïmplementeer en verwerk word.

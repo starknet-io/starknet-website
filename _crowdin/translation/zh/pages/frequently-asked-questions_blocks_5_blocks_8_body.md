@@ -1,1 +1,1 @@
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. 分配给股东、员工和独立软件开发者的代币被锁定4年，一年后开始逐步发布计划。 锁定的令牌可以用于投票和标记，但不能转移或交易。 有些代币是通过专门的智能合同在 Ethereum 上锁定的，而其他代币是通过保管人锁定的。
+我们之前已经为代币的初始分配提出了 [计划](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)。 分配给股东、员工和独立软件开发者的代币被锁定4年，一年后开始逐步发布计划。 锁定的令牌可以用于投票和标记，但不能转移或交易。 有些代币是通过专门的智能合同在 Ethereum 上锁定的，而其他代币是通过保管人锁定的。

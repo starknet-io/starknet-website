@@ -55,7 +55,7 @@
 
 В пользу постепенного прогресса в обновлении Cairo,[Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), эта версия включает в себя несколько изменений синтаксиса.
 
-Чтобы свести к минимуму неудобства, в релизе будет включен[сценарий миграции](https://www.youtube.com/watch?v=kXs59zaQrsc), который автоматически применяет вышеперечисленные изменения. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Чтобы свести к минимуму неудобства, в релизе будет включен[сценарий миграции](https://www.youtube.com/watch?v=kXs59zaQrsc), который автоматически применяет вышеперечисленные изменения. Вы можете найти более подробную информацию[здесь](https://github.com/starkware-libs/cairo-lang/releases).
 
 ### Что дальше?
 

@@ -83,7 +83,7 @@ STARK証明では、ステートメントを実行するのにかかる時間は
 
 各 STARK 証明書は、「公開入力」(またはカイロの用語で「プログラム出力」)と呼ばれるいくつかの入力に適用される文の有効性を証明します。 概念的に、STARKは2つの証明を*2つの*入力を2つの*入力を1つの*プルーフに圧縮します。 言い換えれば、証明の数が減る一方で、入力の数は一定に保たれます。 これらの入力は通常、L1の状態を更新するためにアプリケーションによって使用されます(e. をクリックします。
 
-If the recursive statement is allowed to be *application-aware*, i.e. recognizes the semantics of the application itself, it can both compress two proofs into one *as well as* combine the two inputs into one. 生成された文は、アプリケーションのセマンティクスに基づく入力の組み合わせの妥当性を証明します。 したがって、Applicative Recursionという名前です (例えば図面3を参照してください)。
+再帰ステートメントが*アプリケーション対応*であることが許可されている場合、つまり、アプリケーション自体のセマンティクスを認識している場合、2 つの証明を 1 つに圧縮することも*、*つの入力を 1 つに結合することもできます。 生成された文は、アプリケーションのセマンティクスに基づく入力の組み合わせの妥当性を証明します。 したがって、Applicative Recursionという名前です (例えば図面3を参照してください)。
 
 ![図面3: 適用再帰の例](/assets/recursive_starks_03.png "図面3: 適用再帰の例")
 

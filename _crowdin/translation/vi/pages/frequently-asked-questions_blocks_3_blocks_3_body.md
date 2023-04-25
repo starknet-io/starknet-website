@@ -1,4 +1,4 @@
-The decentralization of the network has two aspects:
+Sự phân cấp của mạng có hai khía cạnh:
 
-1. The permissionless layer of Sequencers and Provers ensures that the network will be censorship-resistant.
-2. The usage of STARK-proofs ensures that the state is correct, allows everyone to verify the entire Starknet chain with low hardware requirements – regardless of the network’s throughput, and without trusting any external entity.
+1. Lớp Sequencer và Provers không được phép đảm bảo rằng mạng sẽ chống lại sự kiểm duyệt.
+2. Việc sử dụng bằng chứng STARK đảm bảo rằng trạng thái là chính xác, cho phép mọi người xác minh toàn bộ chuỗi Starknet với yêu cầu phần cứng thấp – bất kể thông lượng của mạng và không cần tin tưởng vào bất kỳ thực thể bên ngoài nào.

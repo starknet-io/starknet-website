@@ -1,111 +1,111 @@
 ### TL;DR
 
-* StarkNet Alpha 0.7.0 released to Goerli; packed with improvements
-* Contracts can now be upgraded using the Proxy Upgrade Pattern
-* Contracts can now emit Events
-* Support for the long-awaited Block Number and Block Timestamp system calls
+* A StarkNet Alpha 0.7.0 kiadása Goerli számára; tele van fejlesztésekkel
+* A szerződések mostantól frissíthetők a Proxy frissítési mintával
+* A szerződések mostantól eseményeket bocsáthatnak ki
+* Támogatás a régóta várt blokkszám és blokkidőbélyeg rendszerhívásokhoz
 
 ### Intro
 
-We are happy to release Alpha 0.7.0, a version packed with new features and improvements. One of the best stimulants to StarkNet over the last few months has been the increased involvement of the community in shaping StarkNet’s future. This version addresses some of the community’s burning needs.
+Örömmel jelentettük meg az Alpha 0.7.0-t, amely új funkciókkal és fejlesztésekkel van tele. A StarkNet egyik legjobb ösztönzője az elmúlt néhány hónapban a közösség fokozott bevonása volt a StarkNet jövőjének alakításában. Ez a verzió a közösség égető igényeit kielégíti.
 
-#### Changes to Naming Convention
+#### Változások az elnevezési egyezményben
 
-The observant reader might have noticed that the previous StarkNet Alpha release was named Alpha 4, whereas we are now releasing Alpha 0.7.0. We decided to omit the dedicated Alpha version number and rely instead only on the associated cairo-lang version.
+A figyelmes olvasó észrevehette, hogy az előző StarkNet Alpha kiadás az Alpha 4 nevet kapta, míg mi most az Alpha 0.7.0-t adjuk ki. Úgy döntöttünk, hogy elhagyjuk a dedikált Alpha verziószámot, és ehelyett csak a kapcsolódó cairo-lang verzióra hagyatkozunk.
 
-### New Features
+### Új funkciók
 
-#### Contract Upgradeability
+#### A szerződés bővíthetősége
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. The Proxy pattern is the common method to enable contract upgrades over Ethereum. Alpha 0.7.0 enables this pattern over StarkNet.
+Az OpenZeppelin[Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)immár teljes mértékben támogatja a StarkNet szerződéses frissítéseit. A proxy minta az Ethereumon keresztüli szerződésfrissítések általános módja. Az Alpha 0.7.0 lehetővé teszi ezt a mintát a StarkNeten keresztül.
 
-We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+Készítettünk egy rövid[oktatóanyagot](https://starknet.io/docs/hello_starknet/default_entrypoint.html)a minta alapvető megvalósításának bemutatására, és az OpenZeppelin már keményen dolgozik a proxy minta szabványos szerződésének megvalósításán; lásd a[prototípust](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
 
-#### Block Number and Block Timestamp
+#### Blokkszám és Blokkidőbélyeg
 
-Alpha 0.7.0 adds two new system calls that many devs have been asking for. These calls allow a contract to access the block number and the block timestamp. The block number returns the number of the current executed block. The block timestamp returns the timestamp given by the Sequencer at the creation of the block.
+Az Alpha 0.7.0 két új rendszerhívást ad hozzá, amelyeket sok fejlesztő kért. Ezek a hívások lehetővé teszik a szerződés számára, hogy hozzáférjen a blokkszámhoz és a blokk időbélyegzőjéhez. A blokkszám az aktuálisan végrehajtott blokk számát adja vissza. A blokk időbélyege azt az időbélyeget adja vissza, amelyet a Sequencer adott a blokk létrehozásakor.
 
-You can see an example of how to use these features in the [tutorial](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
+Példát láthat ezeknek a funkcióknak a használatára a[oktatóanyagban](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
 
-#### Events
+#### Események
 
-Surprise! A feature that was planned for a future version has sneaked its way into this earlier one.
+Meglepetés! Egy jövőbeli verzióhoz tervezett funkció belopakodott ebbe a korábbi verzióba.
 
-StarkNet contracts now support defining and emitting events, allowing them to expose execution information for off-chain applications to consume. Ethereum developers will find the semantics and syntax very similar to Solidity. You can read the [documentation](https://starknet.io/documentation/events/), or follow the [tutorial](https://starknet.io/docs/hello_starknet/events.html), that explains this feature.
+A StarkNet szerződések mostantól támogatják az események meghatározását és kibocsátását, lehetővé téve számukra, hogy végrehajtási információkat tárjanak fel a láncon kívüli alkalmazások számára. Az Ethereum fejlesztői a szemantikát és a szintaxist nagyon hasonlónak találják a Solidity-hez. Elolvashatja a[dokumentációt](https://starknet.io/documentation/events/)vagy kövesse a[oktatóanyagot](https://starknet.io/docs/hello_starknet/events.html), amely elmagyarázza ezt a funkciót.
 
-#### Removed %builtins Directive
+#### %builtins irányelv eltávolítva
 
-The %builtin directive is no longer needed in StarkNet contracts. This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). It significantly simplifies the usability of this extensibility pattern.
+A %builtin direktíva már nem szükséges a StarkNet szerződésekben. Ez a változás a[StarkNet Shamans](https://community.starknet.io/)-on a[szerződés-bővíthetőségi mintáról](https://community.starknet.io/t/contract-extensibility-pattern/210)szóló közösségi megbeszélést követte. Jelentősen leegyszerűsíti ennek a bővíthetőségi mintának a használhatóságát.
 
-For example, the following contract will be changed from:
+Például a következő szerződés módosul a következőről:
 
 ```
 %lang starknet
 
-# This is the "%builtins" directive.
-# It is not needed anymore.
+# Ez a "%builtins" direktíva.
+# Nincs rá többé szükség.
 %builtins range_check
 
 @view
-func add(x : felt, y : felt) -> (res : felt):
+func add(x : filc, y : filc) -> (res : filc):
 return (res=x + y)
 end
 ```
 
-To this:
+Ehhez:
 
 ```
 %lang starknet
 @view
-func add(x : felt, y : felt) -> (res : felt):
+func add(x : filc, y : filc) -> (res : filc):
 return (res=x + y)
 end
 ```
 
-You can check out the [ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token) standard contracts, which use the new pattern.
+Megtekintheti a[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)szabványos szerződést, amelyek az új mintát használják.
 
-#### External Functions Support Arrays of Structs
+#### A külső funkciók struktúrák tömbjeit támogatják
 
-Alpha 0.7.0 supports passing and returning arrays of structs in external functions. This additional functionality allows Account Contracts to better support [multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
+Az Alpha 0.7.0 támogatja a struktúrák átadását és visszaadását a külső függvényekben. Ez a kiegészítő funkció lehetővé teszi, hogy a fiókszerződések jobban támogassák[többszörös hívást](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
 
-Multicall is a powerful feature of Account Abstraction that allows an account to make multiple calls in a single transaction. An obvious use-case is that of creating a **single transaction** that calls allowance and then transferFrom.
+A Multicall a fiókabsztrakció egyik hatékony funkciója, amely lehetővé teszi, hogy egy fiók több hívást kezdeményezzen egyetlen tranzakció során. Egy kézenfekvő használati eset egy**egyetlen tranzakció**létrehozása, amely felhívja a ráhagyást, majd az átadást.
 
-We look forward to seeing what the community does with it.
+Kíváncsian várjuk, mit kezd vele a közösség.
 
-#### Improvements to StarkNet CLI
+#### A StarkNet CLI továbbfejlesztései
 
-**Support for Pending Blocks**
+**Függőben lévő blokkok támogatása**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. This version includes support for querying those blocks via the StarkNet CLI.
+[Függőben lévő blokkok](https://starknet.io/documentation/block-structure-and-hash/#pending_block)[került bevezetésre](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)az utolsó kisebb verzióban (v0.6.2), és gyorsabb visszaigazolást kínáltak a tranzakciókról. Ez a verzió támogatja a blokkok StarkNet CLI-n keresztüli lekérdezését.
 
-To use it, in every CLI command that takes block_number as an argument (contract_call/get_block/get_code/get_storage_at), we can query the StarkNet with respect to the pending block by specifying block_number=pending.
+Használatához minden CLI-parancsban, amely a blokk_számot veszi argumentumként (contract_call/get_block/get_code/get_storage_at), lekérdezhetjük a StarkNet-et a függőben lévő blokkra vonatkozóan a block_number=pending megadásával.
 
-**Support for Account Contracts**
+**Számlaszerződések támogatása**
 
-StarkNet uses account abstraction, i.e., all accounts are implemented as smart contracts. The first implementations of account contracts were done by [Argent](https://github.com/argentlabs/argent-contracts-starknet) and [OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), but we expect many more to come.
+A StarkNet fiókabsztrakciót használ, azaz minden fiók intelligens szerződésként valósul meg. A számlaszerződések első implementációit[Argent](https://github.com/argentlabs/argent-contracts-starknet)és[OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo)végezte el, de várhatóan még sok ilyen lesz.
 
-In StarkNet, all transactions must go through an account contract, and the CLI now allows interaction with StarkNet Alpha directly via account contracts. See the [tutorial](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account) on how to set it up.
+A StarkNetben minden tranzakciónak számlaszerződésen kell keresztülmennie, és a CLI mostantól lehetővé teszi a StarkNet Alpha-val való interakciót közvetlenül a számlaszerződéseken keresztül. Tekintse meg a[oktatóanyagot](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account)a beállításáról.
 
-Similar functionality was also added to [StarkNet.py](https://github.com/software-mansion/starknet.py/) and to [Nile](https://github.com/OpenZeppelin/nile) in the last month.
+Hasonló funkciókkal bővült[StarkNet.py](https://github.com/software-mansion/starknet.py/)és a[Nile](https://github.com/OpenZeppelin/nile)is az elmúlt hónapban.
 
-#### L1<>L2 Messaging in the Testing Framework
+#### L1<>L2 üzenetküldés a tesztelési keretrendszerben
 
-Alpha 0.7.0 introduces the Postman. The Postman enables developers to use the testing framework to test more complicated flows.
+Az Alpha 0.7.0 bemutatja a Postást. A Postman lehetővé teszi a fejlesztők számára, hogy a tesztelési keretrendszert bonyolultabb folyamatok tesztelésére használják.
 
-At a high level — it mocks the StarkNet Sequencer’s responsibility of passing messages from L1 to L2 and L2 to L1. It makes sure messages that are sent via the Solidity messaging contract will appear at the destination StarkNet contract and messages sent from a StarkNet contract will appear in the Solidity messaging contract.
+Magas szinten – kigúnyolja a StarkNet Sequencer azon felelősségét, hogy üzeneteket továbbítson az L1-ből L2-be és L2-ből L1-be. Biztosítja, hogy a Solidity üzenetküldési szerződésen keresztül küldött üzenetek megjelenjenek a cél StarkNet szerződésben, a StarkNet szerződésből küldött üzenetek pedig a Solidity üzenetküldési szerződésben.
 
-#### And More Features
+#### És további funkciók
 
-Alpha 0.7.0 provides many more features and changes, like the addition of an efficient square root function to the math common library. A full list appears in the [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
+Az Alpha 0.7.0 számos további szolgáltatást és változtatást kínál, például egy hatékony négyzetgyök függvény hozzáadása a matematikai közös könyvtárhoz. A teljes lista megjelenik a[változásnaplóban](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
 
-### Next Up?
+### Következö?
 
-Initial [Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29) support will be released in a matter of weeks, as a sub-version of StarkNet.
+Az Initial[Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)támogatás heteken belül megjelenik a StarkNet alváltozataként.
 
-### More Information?
+### Több információ?
 
-[starknet.io](https://starknet.io/): for all StarkNet information, tutorials and updates.
+[starknet.io](https://starknet.io/): minden StarkNet-információ, oktatóanyag és frissítés.
 
-[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): join to get answers to your questions, get dev support and become a part of the community.
+[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): csatlakozzon, hogy választ kapjon kérdéseire, fejlesztői támogatást kapjon, és részese legyen a közösségnek.
 
-[StarkNet Shamans](https://community.starknet.io/): join to follow (and participate!) in StarkNet research discussions.
+[StarkNet Shamans](https://community.starknet.io/): csatlakozzon, hogy kövesse (és vegyen részt!) a StarkNet kutatási megbeszélésein.

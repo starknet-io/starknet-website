@@ -1,5 +1,5 @@
 {
-  "title": "Part 3: Starknet Token Design",
-  "time_to_consume": "5 min read",
-  "short_desc": "The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) Users of StarkNet, (ii) Operators — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) Developers writing software for its infrastructure and for applications running on it.\n"
+  "title": "파트 3: Starknet 토큰 디자인",
+  "time_to_consume": "5분 읽기",
+  "short_desc": "StarkNet 토큰의 디자인은 (i) StarkNet 사용자, (ii) 운영자 - 네트워크에 트랜잭션 순서 지정, STARK 증명 생성 및 컴퓨팅 리소스를 제공하는 사람으로 구성된 네트워크에 전원을 공급해야 할 필요성에 따라 형성됩니다. 장기 스토리지 제공자 및 (iii) 인프라 및 인프라에서 실행되는 애플리케이션용 소프트웨어를 작성하는 개발자.\n"
 }

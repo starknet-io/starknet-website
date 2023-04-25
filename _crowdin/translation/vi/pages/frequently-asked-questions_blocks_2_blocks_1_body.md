@@ -1,1 +1,1 @@
-STARK is a proof system. It uses cutting-edge cryptography to provide polylogarithmic verification complexity and proof size, quasilinear proof complexity, and minimal assumptions which are post-quantum-secure. More information [here](https://starkware.co/stark/).
+STARK là một hệ thống bằng chứng. Nó sử dụng mật mã tiên tiến để cung cấp độ phức tạp xác minh đa logarit và kích thước bằng chứng, độ phức tạp bằng chứng gần như tuyến tính và các giả định tối thiểu an toàn hậu lượng tử. Thêm thông tin [tại đây](https://starkware.co/stark/).

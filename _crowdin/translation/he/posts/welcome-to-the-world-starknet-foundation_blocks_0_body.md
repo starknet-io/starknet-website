@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+היום אנו מקבלים בברכה את**StarkNet Foundation**, קרן קהילתית חדשה שאורגנה כדי לספק מבנה קהילתי עצמאי לתמיכה בפרויקט StarkNet.
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+StarkNet הוא אוסף תקפות מבוזר ללא הרשאות הפועל כרשת L2 על Ethereum, שבו כל dApp יכולה להשיג קנה מידה מוגדל באופן משמעותי עבור החישוב שלה, מבלי לפגוע ביכולת ההרכבה והאבטחה של Ethereum. למידע נוסף על StarkNet, תסתכל[כאן](https://starknet.io/). כדי להיות באמת אחראי ונגיש לקהילת המפתחים והמשתמשים שלה, StarkNet זקוקה למנחה עצמאי לממשל מכוון קהילה עבור כל מערכת האקולוגית של StarkNet.
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+קרן StarkNet החדשה שנוצרה, עם תמיכה ומשאבים מחתך רחב של חברי קהילה, תטפח מחקר, פיתוח והרחבה של רשת StarkNet וטכנולוגיה תומכת, תקדם את השימוש והאימוץ של רשת StarkNet, ותדלק את קהילת StarkNet השתתפות וממשל פרויקטים. הקרן תסייע במימון ובארגון כנסים של משתמשים ומפתחים, ותתאם שיתוף פעולה עם קהילות בעלות ברית וקשורות.
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+הקרן תנוהל על ידי דירקטוריון ראשוני של שבעה דירקטורים, עם רקע רב תחומי מכל העולם. בקצרה:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [אנדרו מקלוהן](https://andrew.mclaughl.in/about-me)- מדיניות טכנולוגיה, זכויות דיגיטליות, יזם ומומחה לממשל עצמי קהילתי
+* [אלי בן ששון](https://starkware.co/media-kit/?founder=Eli#founders)- מייסד/נשיא שותף של StarkWare, ממציא שותף של STARKs
+* [אריק וול](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))- חוקר בלוקצ'יין עצמאי ומוביל מחשבה
+* [Heather Meeker](http://www.heathermeeker.com/)- מומחית ברישוי תוכנה בקוד פתוח
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)- פרופסור למתמטיקה ומדעי המחשב תיאורטיים, ותורם ליבה למתמטיקה שבבסיס STARKs
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)- מהנדס בלוקצ'יין ומנהיג ומנכ"ל Nethermind, אחד הצוותים הגדולים ביותר שנבנים ב-StarkNet
+* [אורי קולודני](https://starkware.co/media-kit/?founder=Uri#founders)- מייסד שותף ומנכ"ל StarkWare
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+אסימון StarkNet נוצר כדי לתגמל מפתחים ומפעילי StarkNet על העבודה שהם מבצעים כדי לתחזק ולקדם את הרשת. הקרן מחזיקה ב-50.1% מהטבעה הראשונית של אסימוני 10B, שהקצאתם תנוהל על ידי הקרן לטובת המשתמשים, המפעילים והמפתחים בקהילת StarkNet, כמפורט[כאן](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). האסימונים הנותרים כפופים לנעילה של ארבע שנים והם בבעלות תורמי הליבה ומשקיעים קיימים של StarkNet בפיתוח StarkNet.
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+מועצת המנהלים של קרן StarkNet החלה בעבודה, התכוננה לפורמליזציה ותפעול, גיוס למנהל מנכ"ל, והחלה להקים ועדות קהילתיות אד-הוק כדי לקדם כמה פרויקטים חיוניים כמו להבין מה / איפה / איך / מתי של הצבעה ראשונה של אסימון StarkNet מחזיקים.
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+אנו מאחלים לכל קהילת StarkNet הצלחה ואנו גאים ונרגשים לעבוד על השקת קרן StarkNet.
 
 
 
-### Here is what our board has to say:
+### הנה מה שיש לדירקטוריון שלנו לומר:
 
-**Andrew:**
+**אנדרו:**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> מה שהופך את StarkNet למשכנע בעיני הוא שזהו, לפי שיקול דעתי, המאמץ המבטיח והמשכנע ביותר מבחינה טכנולוגית להפוך את Ethereum (ושאר בלוקצ'יין) לפלטפורמת מחשוב גלובלית ניתנת להרחבה, מאובטחת ופרטית באמת. עם מדע איתן וצוות מוכשר מאחוריו, StarkNet היא חלק מרכזי בהשגת השירות בקנה מידה רחב שהיה ממש מעבר לאופק של מערכת האקולוגית הרווחת של הבלוקצ'יין.
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> כחבר בוועד המייסד, אני שואף להתמקד בממשל תקין ובבניית קהילה גלובלית יעילה. קרן StarkNet תהיה סטארטאפ ללא מטרות רווח, עם המשימה לבנות קהילה של בונים ומשתמשים מעורבת, מגוונת ומוסמכת לשלוט בעצמה. כארגון, הקרן עצמה צריכה להיות פתוחה, שקופה, אחראית, אמינה ואתית. כדוגמה של ממשל עצמי קהילתי, אני מקווה לראות את הקרן מניעה את היצירה של כלי ושירותי ממשל מופעלי StarkNet שהם אינטואיטיביים ושימושיים באופן אובייקטיבי - וזמינים לאחרים כפי שהם לנו.
 
-**Eli:**
+**אלי:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> ההצלחה הראשונית של StarkNet (ו-STARKs) תפסה אותי בהפתעה. מה שהתחיל כמאמץ ממוקד StarkWare הוא כעת מערכת אקולוגית משגשגת ומתרחבת במהירות. Yahoo!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> ממשל הוא נושא קשה, כזה שבלבל את החברות האנושיות לאורך ההיסטוריה. הממשל של StarkNet, לרבות הבלמים והאיזונים הדרושים, מנגנוני פתרון סכסוכים וכו', טרם צץ והתגבש. וכך, רגשות ההתרגשות והאופטימיות שלי מושפלים לנוכח האתגרים שלפנינו. ברור לי ש-StarkNet לא אמורה להיות נשלטת על ידי אף צד אחד. לפיכך, אני רואה את החלק המהותי ביותר במשימה שלנו כמו זה של הקשבה למערכת האקולוגית הרחבה והמתרחבת של מפתחי StarkNet ולעזור להם להוביל את הדרך.
 
-**Eric:**
+**אריק:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> טכנולוגיות רול-אפ הן ללא ספק התשובה המבטיחה ביותר לשאלה כיצד להרחיב מימון חסר הרשאות למיליוני המשתמשים. STARKs מספקים את היכולת לאמת באופן תמציתי חישוב כללי, ובכך יכולים להרחיב את האיכויות והערכים של שכבת הבסיס של Ethereum לשכבות שלמעלה. StarkNet היא אולי ההתקנה החשובה ביותר של הרעיון הזה, ובענווה אני מקבל את המשימה לעזור להבטיח את שלמותו כמו גם את הצלחתו.
 
-**Heather:**
+**אַברָשׁ:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> אני נרגש להיות חלק מקרן StarkNet.
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> במשך כמעט שלושה עשורים, אני עובד כדי לעזור לאנשים להבין רישוי קוד פתוח. אני עורך דין, אז כמובן, ביליתי הרבה מהזמן הזה בעזרה ללקוחות שלי ללמוד על רישוי ופיתוח בקוד פתוח. אבל במהלך העשורים האלה, כל תעשיית הטכנולוגיה עבדה כדי להבין טוב יותר איך לשתף פעולה - זו המתנה של מודל הפיתוח בקוד פתוח. התמזל מזלי במיוחד, כי חלק גדול מהעבודה שלי היה לעזור לאחרים - לא רק ללקוחות שלי - ללמוד על הכללים והפרדיגמות לשיתוף פעולה. במובן מסוים, היה לי המזל הגדול להיות מורה כמו יועץ.
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> אני מצפה לעבוד עם StarkNet Foundation כדי לעבור לעידן הבא של Ethereum ובלוקצ'יין, ולתמוך בקהילת StarkNet ההולכת וגדלה.
 
-*(Heather is an advisor to StarkWare.)*
+*(הת'ר היא יועצת של StarkWare.)*
 
-**Shubhangi:**
+**שובנגי:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> אני חוקר ביסודות התיאורטיים של מדעי המחשב. באופן אישי, נדהמתי מהאופן שבו חלק מהפיתוחים התיאורטיים המרגשים בתחום מהעשורים האחרונים התאחדו כדי ליצור את הטכנולוגיה שמניעה את הוכחות STARK.
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> אני חושב שהמשימה של הבאת מדרגיות באמצעות STARKS דרך פלטפורמה ציבורית מבוזרת, שבה מפתחים ממלאים תפקיד מרכזי בממשל ובעיצוב יש פוטנציאל להרחיב מאוד את טווח ההגעה של טכנולוגיות הבלוקצ'יין. כחבר מועצת המנהלים, אני גם מעוניין לאפשר ל-StarkNet דרכים לעורר ולהפיק תועלת ממחקר מודרני במדעי המחשב התיאורטיים. אני מצפה להיות חלק מזה.
 
-*(Shubangi is an advisor to StarkWare.)*
+*(Shubangi הוא יועץ של StarkWare.)*
 
-**Tomasz:**
+**תומאש:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> StarkNet נכנסת לשלב חשוב של הפיתוח שלה - שלב שבו היא הופכת להיות פתוחה יותר, ניתנת להרכבה, חסרת אמון ובטוחה יותר. אני רואה בתפקידי בקרן הזדמנות לטפח שיתוף פעולה, ולתמוך במהלך לעבר העתיד של רשתות מבוזרות ומורשות המופעלות על ידי STARKs.
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> אני זוכר את דרכי ב-Nethermind כמענק קרן Ethereum ומבין את האתגרים וההזדמנויות העומדים בפני בונים, אני מברך על ההזדמנות להבטיח שהצוות המנהלי בקרן StarkNet יבנה מערכת אקולוגית שבה בונים מרגישים מועצמים, וייהנו ממאמצי המחקר והפיתוח שלהם. תוך בניית StarkNet כמוצר ציבורי. אני מצפה לראות את הדורות הבאים של בונים וקהילות מוצאים את תפקידם כבעלים משותפים עצמאיים של StarkNet.
 
-**Uri:**
+**אורי:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> כמייסד שותף של & CEO ב-StarkWare, אני צופה במרחב הבלוקצ'יין מאז 2018 (מצטרף חדש יחסית!), ומעורב עמוקות בבניית פתרונות קנה מידה עבור Ethereum. כלי התוכנה לשלמות חישובית שהתחלנו לפתח ב-StarkWare מונחים כעת בידי מפתחים ברחבי העולם. המשימה ברורה: את הכלים הללו צריך לשים בידיו של כל מפתח מעוניין בעולם; יש לשפר את הכלים הללו. קרן StarkNet תמלא תפקיד חשוב ומרגש במילוי המשימה הזו, בביזור של StarkNet.

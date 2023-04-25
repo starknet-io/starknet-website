@@ -1,1 +1,1 @@
-A node in the Starknet network that is used only for querying the current Starknet state. It can independently (i.e., without/o querying additional nodes) answer queries about the current state of the Starknet network, including the L1 state. It does not batch transactions or prove batches.
+현재 Starknet 상태를 쿼리하는 데만 사용되는 Starknet 네트워크의 노드입니다. L1 상태를 포함하여 Starknet 네트워크의 현재 상태에 대한 질문에 독립적으로(즉, 추가 노드를 쿼리하지 않고/않고) 응답할 수 있습니다. 거래를 일괄 처리하거나 일괄 증명하지 않습니다.

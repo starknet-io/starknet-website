@@ -1,4 +1,4 @@
 {
-  "source": "/community-links/:path*",
-  "destination": "/en"
+  "source": "/community-links/:경로*",
+  "destination": "/ko"
 }

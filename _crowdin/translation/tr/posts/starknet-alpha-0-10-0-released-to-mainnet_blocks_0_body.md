@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* EIP-4337 ruhuna uygun Hesap Soyutlama İyileştirmeleri
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Doğrula — Ayrımı yürüt
+2. İşlem benzersizliği artık protokolde sağlanmaktadır (Nonce)
 
-* The fee mechanism is extended to include:
+* Ücret mekanizması aşağıdakileri içerecek şekilde genişletildi:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 Mesajları
+2. Beyan İşlemleri
 
-* Few Cairo syntax changes
+* Birkaç Kahire sözdizimi değişikliği
 
-### Intro
+### Giriş
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+StarkNet Alpha 0.10.0'ı sunmaktan heyecan duyuyoruz. Bu sürüm, güvenlik ve ademi merkeziyetten ödün vermeden Ethereum'u ölçeklendirmeye yönelik bir başka adımdır.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Bu blog yazısı, bu sürümün ana özelliklerini kısaca açıklamaktadır. Değişikliklerin tam listesi için[sürüm notlarını](https://github.com/starkware-libs/cairo-lang/releases)kontrol edin. Daha ayrıntılı bilgi için[belgelerine bakın](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Hesap Soyutlama Değişiklikleri
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+[StarkNet'in hesap soyutlaması](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)ile ilerliyoruz. Bu sürüm,[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)ilham alan değişiklikleri sunar.
 
-#### Validate/Execute Separation
+#### Ayrımı Doğrula/Yürüt
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Şimdiye kadar, hesabın \_\_execute\_\_ işlevi hem işlem doğrulamasından hem de yürütmeden sorumluydu. 0.10.0'da bu eşleşmeyi kırıyoruz ve hesaplara ayrı bir \_\_validate\_\_ işlevi ekliyoruz. Bir işlem alındığında, hesap sözleşmesi önce \_\_validate\_\_ öğesini arayacak ve ardından başarılı olursa \_\_execute\_\_ ile devam edecektir.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Doğrulama/yürütme ayrımı, geçersiz ve geri alınmış (ancak geçerli) işlemler arasında protokol düzeyinde bir ayrım sağlar. Bu sayede sıralayıcılar, geri alınıp alınmadığına bakılmaksızın geçerli bir işlemin yürütülmesi için ücret talep edebilecektir.
 
-#### Nonce
+#### hiç
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+0.10.0 sürümünde, işlem benzersizliğini protokol düzeyinde zorlamak için bir nonce alanı eklenir. Şimdiye kadar, nonce'lar hesap sözleşmesi düzeyinde ele alınıyordu, bu da teorik olarak aynı hash'e sahip bir işlemin iki kez gerçekleştirilebileceği anlamına geliyordu.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Ethereum'a benzer şekilde, artık her sözleşme, bu hesaptan yürütülen işlemlerin sayısını sayan bir nonce içeriyor. Hesap sözleşmeleri yalnızca nonce ile eşleşen işlemleri kabul edecektir, yani hesabın mevcut nonce'si X ise, o zaman yalnızca nonce ile işlemleri kabul edecektir.
 
-#### New Transaction Version
+#### Yeni İşlem Sürümü
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+Geriye dönük uyumluluğa izin vermek için, bu iki değişikliği yeni bir işlem sürümü olan[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C)aracılığıyla kullanıma sunacağız. Bu değişiklikler yalnızca yeni sürüm için geçerli olacak ve eski hesaplar yine de sürüm 0 işlemlerini gerçekleştirebilecek.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Not — v0 işlemi artık kullanımdan kaldırılmıştır ve StarkNet Alpha v0.11.0'da kaldırılacaktır. Lütfen yeni işlem sürümünü kullanmak için yükselttiğinizden emin olun.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+İşlem sürümü hakkında daha ayrıntılı bilgi için lütfen[belgelerini](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C)okuyun.
 
-#### Fees Mechanism
+#### Ücret Mekanizması
 
-The new version allows to include fees for two required components:
+Yeni sürüm, gerekli iki bileşen için ücretlerin eklenmesine izin verir:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2 Mesajı](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [İşlemi beyan et](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Bu ücretler bu sürümde zorunlu olmayacak ve yalnızca StarkNet Alpha v0.11.0'dan itibaren uygulanacaktır.
 
-#### Cairo Syntax Changes
+#### Kahire Söz Dizimi Değişiklikleri
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+Kahire,[Kahire 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU)yükseltmesine doğru kademeli ilerleme lehine, bu sürüm birkaç sözdizimi değişikliği içerir.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+Rahatsızlığı en aza indirmek için sürüm sürümü, yukarıdaki değişiklikleri otomatik olarak uygulayan bir[geçiş komut dosyası](https://www.youtube.com/watch?v=kXs59zaQrsc)içerecektir. Daha fazla ayrıntıyı burada bulabilirsiniz[](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Sıradaki ne?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Birkaç hafta içinde, daha hızlı blok üretimi (V0.10.1) sağlayan sıralayıcıya paralelleştirme getirmeyi planlıyoruz.
+* Ücret ödemesine dahil edilmesi gereken son kısmı yakında tamamlayacağız - Hesap dağıtımı
+* Kahire 1.0 sürümü! Gelecek bir gönderide bununla ilgili daha fazla bilgi.
 
-### How Can I Be More Engaged?
+### Nasıl Daha Etkileşimli Olabilirim?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Tüm StarkNet bilgileri, belgeleri, eğitimleri ve güncellemeleri için[starknet.io](https://starknet.io/)adresine gidin.
+* Geliştirici desteği, ekosistem duyuruları ve topluluğun bir parçası olmak için[StarkNet Discord](http://starknet.io/discord)katılın.
+* Güncel bilgilerden haberdar olmak ve StarkNet araştırma tartışmalarına katılmak için[StarkNet Forum](http://community.starknet.io/)ziyaret edin.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+[belgelerimiz](https://docs.starknet.io/)hakkında geri bildirim almaktan her zaman mutlu oluruz!

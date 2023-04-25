@@ -1,6 +1,6 @@
 私たちは、StarkNetの分散化プロセスにおける次のステップを発表することを楽しみにしています - プロトコル変更のための投票。
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+過去数週間にわたって、StarkNet は、StarkNet Foundation を設立し[](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)[イーサリアム上で STRK トークンを立ち上げ](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c)、Cairo 1.0 をオープンソース化する[ことにより、さらなる分散化への重要な一歩を踏み出しました](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)。
 
 このポストは、次のステップ、すなわちStarkNetのガバナンスの第一段階に拡大し、今後数ヶ月にわたって広がるでしょう。
 
@@ -41,7 +41,7 @@ StarkNetプロトコルへのアップグレードを提案しました。 こ�
 2. 有権者はGoerliで実行されるアップグレードされたバージョンを調べるための6日間の期間があります。 この間、Mainnet 展開で承認するかどうかを投票できます。
 3. 提案が有権者によって承認された場合、Mainnetにアップグレードを適用する前に24時間以上の遅延が発生します。
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+これらの更新の発表は、[StarkNet Foundation](https://twitter.com/StarkNetFndn)の Twitter アカウント、および[StarkNet コミュニティ フォーラム](https://community.starknet.io/)で行われます。
 
 #### 閾値と必要なクォーラム
 

@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* Els acumulacions de validesa no estan limitats en el rendiment de la mateixa manera que els L1. Això dóna lloc a un TPS potencialment molt més alt en els paquets de validesa L2.
+* El full de ruta de rendiment de StarkNet aborda un element clau del sistema: el seqüenciador.
+* Presentem aquí el full de ruta per millorar el rendiment:\
+  — Paral·lelització del seqüenciador\
+  — Una nova implementació de rovell per al Cairo VM\
+  — Reimplementació del seqüenciador en rovell\
+* Els provadors, que estan provats a la batalla, no són el coll d'ampolla i poden manejar molt més que ara!
 
-### Intro
+### Introducció
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+StarkNet es va llançar a Mainnet fa gairebé un any. Vam començar a construir StarkNet centrant-nos en la funcionalitat. Ara, ens centrem en la millora del rendiment amb una sèrie de passos que ajudaran a millorar l'experiència de StarkNet.
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+En aquesta publicació, expliquem per què hi ha una àmplia gamma d'optimitzacions que només s'apliquen als paquets de validesa, i compartirem el nostre pla per implementar aquests passos a StarkNet. Alguns d'aquests passos ja estan implementats a StarkNet Alpha 0.10.2, que es va publicar a Testnet el 16 de novembre i ahir a Mainnet. Però abans de discutir les solucions, revisem les limitacions i la seva causa.
 
-### Block limitations: validity rollups versus L1
+### Limitacions del bloc: acumulacions de validesa versus L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+Un enfocament potencial per augmentar l'escalabilitat de la cadena de blocs i augmentar el TPS seria aixecar les limitacions del bloc (en termes de gas / mida) mantenint el temps de bloc constant. Això requeriria més esforç per part dels productors de blocs (validadors a L1, seqüenciadors a L2) i, per tant, demana una implementació més eficient d'aquests components. Amb aquesta finalitat, ara ens centrem en les optimitzacions del seqüenciador StarkNet, que descriurem amb més detall a les seccions següents.
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+Aquí sorgeix una pregunta natural. Per què les optimitzacions del seqüenciador es limiten als paquets de validesa, és a dir, per què no podem implementar les mateixes millores a L1 i evitar completament les complexitats dels paquets de validesa? A la següent secció, afirmem que hi ha una diferència fonamental entre ambdós, que permet una àmplia gamma d'optimitzacions en L2 que no són aplicables a L1.
 
-### Why is L1 throughput limited?
+### Per què el rendiment L1 està limitat?
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+Malauradament, aixecar les limitacions del bloc a L1 pateix un gran obstacle. En augmentar la taxa de creixement de la cadena, també augmentem les demandes dels nodes complets, que intenten mantenir-se al dia amb l'estat més recent. Atès que els nodes complets L1 han de tornar a executar tot l'historial, un gran augment de la mida del bloc (en termes de gas) els posa una tensió significativa, de nou provoca que les màquines més febles abandonin el sistema i deixin la capacitat d'executar nodes complets. només a entitats prou grans. Com a resultat, els usuaris no podran verificar l'estat ells mateixos i participar a la xarxa sense confiança.
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+Això ens deixa entendre que el rendiment L1 s'ha de limitar per mantenir un sistema veritablement descentralitzat i segur.
 
-### Why don’t the same barriers affect validity rollups?
+### Per què les mateixes barreres no afecten els paquets de validesa?
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**Només quan considerem la perspectiva completa del node veiem la veritable potència que ofereixen les acumulacions de validesa.**Un node complet L1 ha de tornar a executar tot l'historial per garantir la correcció de l'estat actual. Els nodes de StarkNet només necessiten verificar les proves STARK, i aquesta verificació requereix una quantitat exponencialment menor de recursos computacionals. En particular, la sincronització des de zero no ha d'implicar l'execució; un node pot rebre un abocament de l'estat actual dels seus iguals i només verificar mitjançant una prova STARK que aquest estat és vàlid. Això ens permet augmentar el rendiment de la xarxa sense augmentar els requisits del node complet.
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+Per tant, concloem que el seqüenciador L2 està subjecte a tot un espectre d'optimitzacions que no són possibles en un L1.
 
-### Performance roadmap ahead
+### Full de ruta de rendiment per endavant
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+A les seccions següents, analitzarem quines d'elles estan planejades actualment per al seqüenciador StarkNet.
 
-### Sequencer parallelization
+### Paral·lelització del seqüenciador
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+El primer pas del nostre full de ruta va ser introduir la paral·lelització a l'execució de la transacció. Això es va introduir a StarkNet alpha 0.10.2, que es va publicar ahir a Mainnet. Ara ens endinsem en què és la paral·lelització (és un apartat semitècnic, per continuar amb el full de ruta, aneu al següent apartat).
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+Aleshores, què vol dir "paral·lelització de transaccions"? Ingenuament, executar un bloc de transaccions en paral·lel és impossible, ja que diferents transaccions poden dependre. Això s'il·lustra a l'exemple següent. Considereu un bloc amb tres transaccions del mateix usuari:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* Transacció A: canvieu USDC per ETH
+* Transacció B: pagar ETH per una NFT
+* Transacció C: canvieu USDT per BTC
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+És evident que Tx A ha de passar abans que Tx B, però Tx C és totalment independent de tots dos i es pot executar en paral·lel. Si cada transacció requereix 1 segon per executar-se, el temps de producció del bloc es pot reduir de 3 segons a 2 segons introduint la paral·lelització.
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+El quid del problema és que no coneixem les dependències de la transacció per endavant. A la pràctica, només quan executem la transacció B a partir del nostre exemple veiem que es basa en els canvis fets per la transacció A. Més formalment, la dependència es deriva del fet que la transacció B llegeix de les cel·les d'emmagatzematge a les quals la transacció A ha escrit. Podem pensar que les transaccions formen un gràfic de dependència, on hi ha una vora de la transacció A a la transacció B si A escriu en una cel·la d'emmagatzematge que és llegida per B i, per tant, s'ha d'executar abans que B. La figura següent mostra un exemple d'aquest gràfic de dependència:
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+A l'exemple anterior, cada columna es pot executar en paral·lel, i aquesta és la disposició òptima (tot i que de manera ingènua, hauríem executat les transaccions 1-9 de manera seqüencial).
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+Per superar el fet que el gràfic de dependència no es coneix per endavant, introduïm***paral·lelització optimista***, en l'esperit de[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)desenvolupat per Aptos Labs, al seqüenciador StarkNet. Sota aquest paradigma, intentem de manera optimista executar transaccions en paral·lel i tornar-les a executar en trobar una col·lisió. Per exemple, podem executar les transaccions 1-4 de la figura 1 en paral·lel, només per descobrir després que Tx4 depèn de Tx1. Per tant, la seva execució va ser inútil (l'hem executat en relació amb el mateix estat contra el qual vam executar Tx1, mentre que l'hauríem d'haver executat contra l'estat resultant d'aplicar Tx1). En aquest cas, tornarem a executar Tx4.
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+Tingueu en compte que podem afegir moltes optimitzacions a la paral·lelització optimista. Per exemple, en lloc d'esperar ingènuament que acabi cada execució, podem avortar una execució en el moment que trobem una dependència que la invalida.
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+Un altre exemple és l'optimització de l'elecció de quines transaccions es tornaran a executar. Suposem que un bloc que consta de totes les transaccions de la figura 1 s'introdueix a un seqüenciador amb cinc nuclis de CPU. Primer, intentem executar les transaccions 1-5 en paral·lel. Si l'ordre de finalització era Tx2, Tx3, Tx4, Tx1 i finalment Tx5, trobarem la dependència Tx1→Tx4 només després que Tx4 ja s'hagi executat, cosa que indica que s'ha de tornar a executar. Ingènuament, potser voldrem tornar a executar Tx5 també, ja que pot comportar-se de manera diferent donada la nova execució de Tx4. Tanmateix, en lloc de tornar a executar totes les transaccions després del Tx4 ara invalidat, podem recórrer el gràfic de dependència construït a partir de les transaccions l'execució de les quals ja ha finalitzat i només tornar a executar les transaccions que depenien de Tx4.
 
-### A new Rust implementation for the Cairo-VM
+### Una nova implementació de Rust per al Cairo-VM
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+Els contractes intel·ligents a StarkNet s'escriuen al Caire i s'executen dins del Cairo-VM, especificació que apareix al document[Cairo](https://eprint.iacr.org/2021/1063.pdf). Actualment, el seqüenciador utilitza una implementació[python](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)del Cairo-VM. Per optimitzar el rendiment de la implementació de la VM, hem llançat un esforç per reescriure la VM en rovell. Gràcies al gran treball de[Lambdaclass](https://lambdaclass.com/), que a hores d'ara són un equip inestimable a l'ecosistema StarkNet, aquest esforç es portarà a terme aviat.
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+La implementació rust de la VM,[cairo-rs](https://github.com/lambdaclass/cairo-rs), ara pot executar codi natiu del Caire. El següent pas és gestionar l'execució de contractes intel·ligents i les integracions amb el seqüenciador pythonic. Un cop integrat amb Cairo-rs, s'espera que el rendiment del seqüenciador millori significativament.
 
-### Sequencer re-implementation in Rust
+### Reimplementació del seqüenciador a Rust
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+El nostre canvi de python a l'òxid per millorar el rendiment no es limita a la VM del Caire. Al costat de les millores esmentades anteriorment, tenim previst reescriure el seqüenciador des de zero en òxid. A més dels avantatges interns de Rust, això presenta una oportunitat per a altres optimitzacions del seqüenciador. Enumerant un parell, podem gaudir dels avantatges dels cairo-rs sense la sobrecàrrega de la comunicació python-rust, i podem redissenyar completament la manera com s'emmagatzema i s'accedeix a l'estat (que avui es basa en l'estructura[Patricia-Trie](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
 
-### What about provers?
+### Què passa amb els provadors?
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+Al llarg d'aquesta publicació, no hem esmentat l'element potser més famós dels paquets de validesa: el provador. Es podria imaginar que sent el component més sofisticat de l'arquitectura, hauria de ser el coll d'ampolla i, per tant, el focus d'optimització. Curiosament, són els components més "estàndards" els que ara són el coll d'ampolla de StarkNet. Avui, sobretot amb[proves recursives](https://medium.com/starkware/recursive-starks-78f8dd401025), podem encaixar moltes més transaccions que el trànsit actual a Testnet/Mainnet en una prova. De fet, avui en dia, els blocs StarkNet estan demostrats al costat de les transaccions StarkEx, on aquestes últimes de vegades poden incórrer en diversos centenars de milers de moneda de moneda NFT.
 
-### Summary
+### Resum
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+Paral·lelització, Rust i molt més: prepareu-vos per a un TPS millorat a les properes versions de StarkNet.

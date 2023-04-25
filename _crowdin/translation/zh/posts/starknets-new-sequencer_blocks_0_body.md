@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* 正在开发一个新的 StarkNet 序列器
+* 它是在 Apache 2.0 许可下开源的
+* 第一个目标是增加StarkNet的传输量
 
-### A shiny new sequencer
+### 一个小的新序列器
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+我们高兴地宣布一个新的StarkNet Sequencer正在工作中。 StarkNet的科技堆栈走向开源，继[Cair1之后。](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)and[Papyrus 全节点](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), 我们现在继续使用StarkNet的新序列器。 它将是开源的，在 Apache 2.0 许可下可用，您现在可以查看[仓库](https://github.com/starkware-libs/blockifier)！
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+构建一个新序列器是我们几个月前提交的[StarkNet 路线图](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)的一部分。 新序列器的实现将从替换执行方块执行的序列器中的**Blockifier**开始。 正如行进图所解释的那样，预计它将为StarkNet的性能带来好处。
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+我们建设这个序列器的方法与StarkNet Alpha指导我们的方法相同。 序列器**将在阶段**中实施，我们今天正在分享它的第一个模块。 随着时间的推移，序列器的新组件将会完成，直到最终基于Rus的序列器完全取代当前基于 Python 的序列器。
 
-### What does the sequencer do?
+### 测序器做什么？
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+在StarkNet上，用户发送交易后，交易中前往STARK缩放的第一个站点是序列器。 在StarkNet协议中，序列器负责订购交易和生产区块。 在由测序器创建该块并经协商一致议定书批准之后，支持者接管并为L1生成证据。
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
-### Open-Sourcing
+### 开放源
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+StarkNet Alpha于2021年11月在Mainnet上发射。 它从一开始就致力于与世界分享STARK缩放的力量。
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+今天，我们正在发布新的开放源码测序器中的第一个模块。 部署所有单元和子单元需要几个月时间。 开放源码将使社区成员能够为发展做出贡献，并审计代码。
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+这将使StarkNet靠近一个分散的无权限顺序点。 我们正在设计StarkNet的分散协议，我们正在鼓励社区参与[的研究和讨论](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386)。
 
-### Performance
+### 业绩
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+StarkNet最初的测序器主要是对StarkEx基础设施的改造。 现在需要建设基础设施，特别是为了满足分散的高绩效网络的需要。
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+新的测序器是在Rust构建的，其设计和开发是考虑到性能的。 新序列器还建立在坚实的基础上：Papyrus，新的[StarkNet 全节点，](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)将处理国家管理，而LambdaClass公司的新的开罗-VM将加快开罗执行工作。 我们期望新的测序器在各个方面改进现有的测序器。 随着StarkNet中这个序列器的整合，网络的输送量和延迟性预计将大大改善。
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+我们还期望其他基础设施和发展工具能够利用新的测序器来改进发展经验。 预计完整节点性能以及所有测试框架都会改进。
 
 ### Summary
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+我们今天很高兴宣布新的开源顺序。 它的第一个模块已经可供社区审查，今后几个月将有更多的模块。 我们也很高兴在我们的路线图中采取另一个步骤来提高StarkNet的性能。 我们的目标是使网络更有效率和更便于使用，我们感谢在这个旅途中与我们一起的每一个人的支持。

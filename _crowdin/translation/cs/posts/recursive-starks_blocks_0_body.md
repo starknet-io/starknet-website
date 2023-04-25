@@ -22,7 +22,7 @@ V červnu 2020 bylo v Ethereum Mainnet, zavedeno první scaling řešení založ
 
 #### Cairo
 
-In the summer of 2020 Cairo made its [first appearance on Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Kairo znamená CPU Algebraic Intermediate Representation (AIR) a zahrnuje jeden AIR, který ověřuje sadu instrukcí tohoto „CPU“. Otevřela dveře pro kódování důkazů pro složitější obchodní logiku, pro svévolná výpočetní prohlášení, a to rychleji a bezpečněji. Program Káhira může prokázat provedení logiky jediné aplikace. Ale program Káhira může být také spojením několika takových aplikací – SHARP.
+V létě 2020 se Káhira[objevila na Ethereum Mainnet](https://medium.com/starkware/hello-cairo-3cb43b13b209). Kairo znamená CPU Algebraic Intermediate Representation (AIR) a zahrnuje jeden AIR, který ověřuje sadu instrukcí tohoto „CPU“. Otevřela dveře pro kódování důkazů pro složitější obchodní logiku, pro svévolná výpočetní prohlášení, a to rychleji a bezpečněji. Program Káhira může prokázat provedení logiky jediné aplikace. Ale program Káhira může být také spojením několika takových aplikací – SHARP.
 
 #### SHARP
 

@@ -1,68 +1,68 @@
 ### TL;DR
 
-* StarkNet Foundation is officially launched
-* It is dedicated to supporting a thriving StarkNet
-* Strong interdisciplinary board will lead the Foundation
-* The Foundation is independent of StarkWare
+* קרן StarkNet הושקה רשמית
+* הוא מוקדש לתמיכה ב-StarkNet משגשגת
+* דירקטוריון בינתחומי חזק יוביל את הקרן
+* הקרן אינה תלויה ב-StarkWare
 
-[StarkNet](https://starknet.io/) is taking a major step towards its future community governance structure, with the establishment of the StarkNet Foundation.
+[StarkNet](https://starknet.io/)עושה צעד גדול לקראת מבנה הממשל הקהילתי העתידי שלה, עם הקמת קרן StarkNet.
 
-This post outlines the mission of the Foundation, introduces its directors, and briefly discusses the experience and values they bring to the table.
+פוסט זה מתאר את המשימה של הקרן, מציג את המנהלים שלה ודן בקצרה בניסיון ובערכים שהם מביאים לשולחן.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+הקרן הוקמה על מנת להגשים את החזון של הצעת הביזור[של StarkNet](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), כפי שפורסמה ביולי 2022, ופרסמה פוסט משלה "Hello World"[כאן](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
-### Advancing Starknet's vision
+### קידום החזון של סטארקנט
 
-StarkNet is a permissionless, decentralized Layer 2 (L2) Validity Rollup (often referred to as ZK-Rollup), intended to scale Ethereum while retaining Ethereum’s security and decentralization. In keeping with that mission, the Foundation was established as an independent entity to advance the shared technology that is StarkNet. Additionally, as a not-for-profit entity with a narrow mission: to advance StarkNet as a public good for all, and maintain it as such for years to come.
+StarkNet הוא אוסף תוקף שכבה 2 (L2) מבוזר ללא רשות (המכונה לעתים קרובות ZK-Rollup), שנועד להרחיב את Ethereum תוך שמירה על האבטחה והביזור של Ethereum. בהתאם למשימה זו, הקרן הוקמה כישות עצמאית לקידום הטכנולוגיה המשותפת שהיא StarkNet. בנוסף, כגוף ללא מטרות רווח עם משימה צרה: לקדם את StarkNet כטובת ציבור לכולם, ולשמור עליה ככזו לשנים הבאות.
 
-The Foundation launches with 50.1% of the initial Token supply to ensure the network’s resources are effectively deployed towards the following goals: the maintenance and security of StarkNet as a public good; the continued development and expansion of the network; and support for a culture of constructive collaboration between developers.
+הקרן משיקה עם 50.1% מהאספקה הראשונית של Token כדי להבטיח שמשאבי הרשת ייפרסו ביעילות לקראת המטרות הבאות: תחזוקה ואבטחה של StarkNet כמוצר ציבורי; המשך פיתוח והרחבת הרשת; ותמיכה בתרבות של שיתוף פעולה בונה בין מפתחים.
 
-#### **The foundation’s priorities will include:**
+#### **סדרי העדיפויות של הקרן יכללו:**
 
-**Fostering the community** of StarkNet users, developers and researchers as they breathe life into StarkNet by building infrastructure, tools, applications and more.
+**טיפוח הקהילה**של משתמשי StarkNet, מפתחים וחוקרים בזמן שהם מפיחים חיים ב-StarkNet על ידי בניית תשתית, כלים, יישומים ועוד.
 
-**Expanding the community** by educating about StarkNet and its technology, and helping developers gain the skills to build StarkNet’s infrastructure, as well as dApps that harness the power of STARKs.
+**הרחבת הקהילה**על ידי חינוך על StarkNet והטכנולוגיה שלה, ועזרה למפתחים להשיג את הכישורים לבנות את התשתית של StarkNet, כמו גם אפליקציות dApps הרותמות את הכוח של STARKs.
 
-**Overseeing the continued development of the network and advancing research,** which are key elements of helping the network to realize its vision.
+**פיקוח על המשך פיתוח הרשת וקידום המחקר,**המהווים מרכיבים מרכזיים בסיוע לרשת לממש את חזונה.
 
-**Furthering StarkNet’s decentralization** by developing StarkNet governance mechanisms, and instituting decentralized sequencing and proving.
+**קידום הביזור של StarkNet**על ידי פיתוח מנגנוני ממשל של StarkNet, והקמת רצף והוכחה מבוזר.
 
-### **Introducing the board**
+### **היכרות עם הלוח**
 
-A seven-member board will govern the Foundation. The board members come from diverse backgrounds and bring balance, independence, and a multidisciplinary range of skills to the table. Each member has expertise and experience that will help StarkNet to achieve its potential as a long-lasting common good. In their “[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)” post, they give their insight into what motivates them to be involved in StarkNet. They are presented in alphabetical order according to first names.
+ועדה של שבעה חברים ינהל את הקרן. חברי ההנהלה מגיעים מרקע מגוון ומביאים לשולחן איזון, עצמאות ומגוון רב תחומי של מיומנויות. לכל חבר יש מומחיות וניסיון שיעזרו ל-StarkNet לממש את הפוטנציאל שלו כטובת משותף לאורך זמן. בפוסט "[Hello World](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)" שלהם, הם נותנים את התובנה שלהם לגבי מה מניע אותם להיות מעורבים ב-StarkNet. הם מוצגים בסדר אלפביתי לפי שמות פרטיים.
 
-[**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me) Former Deputy Chief Technology Officer of the United States; former Vice President and Chief Policy Officer of ICANN, the independent body that manages the infrastructure of the Internet.
+[**אנדרו מקלוהן**:](https://andrew.mclaughl.in/about-me)לשעבר סגן מנהל הטכנולוגיה הראשי של ארצות הברית; לשעבר סגן נשיא וקצין מדיניות ראשי של ICANN, הגוף העצמאי המנהל את תשתית האינטרנט.
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[פרופ' אלי בן ששון:](https://starkware.co/media-kit/?founder=Eli#founders)**מתמטיקאי ומדען מחשבים; נשיא StarkWare ומייסד שותף; ממציא שותף של פרוטוקולי STARK, FRI ו-Zerocash ומדען מייסד של Zcash.
 
-**[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: Blockchain thought leader and whistleblower, renowned for exposing systemic flaws in high-profile cryptoasset projects; advisor on cryptocurrency to the Human Rights Foundation; former Chief Investment Officer at Arcane Assets.
+**[אריק וול](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: מוביל מחשבה ומלשין בלוקצ'יין, הידוע בחשיפת פגמים מערכתיים בפרויקטים בעלי פרופיל גבוה של נכסי קריפטו; יועץ בנושא מטבעות קריפטוגרפיים לקרן זכויות האדם; לשעבר מנהל השקעות ב-Arcane Assets.
 
-**[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, expert on open source software and author of ‘Open Source for Business’; General Partner at OSS Capital and legal advisor to StarkWare.
+**[Heather Meeker](https://www.techlawpartners.com/heather)**: עורכת דין עטורת פרסים, מומחית לתוכנות קוד פתוח ומחברת 'קוד פתוח לעסקים'; שותף כללי ב-OSS Capital ויועץ משפטי של StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[פרופ' שובנגי שרף](https://www.math.toronto.edu/ssaraf/)**: מתמטיקאי ומדען מחשבים; תורם הליבה למתמטיקה בבסיס הוכחות STARK; פרופסור חבר באוניברסיטת טורונטו; יועץ מדעי של StarkWare.
 
-**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Blockchain developer who has built core components of Ethereum; Founder at Nethermind, one of the biggest teams building on Ethereum and StarkNet.
+**[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: מפתח Blockchain שבנה רכיבי ליבה של Ethereum; מייסד ב-Nethermind, אחת מהצוותים הגדולים ביותר הבנויים על Ethereum ו-StarkNet.
 
-[**Uri Kolodny**:](https://starkware.co/media-kit/?founder=Uri#founders) Entrepreneur; StarkWare CEO and Co-founder. Before StarkWare, he co-founded companies developing a range of tech products, including optical fibers, data visualization tools, etc.
+[**אורי קולודני**:](https://starkware.co/media-kit/?founder=Uri#founders)יזם; מנכ"ל StarkWare ומייסד שותף. לפני StarkWare, הוא ייסד חברות המפתחות מגוון מוצרים טכנולוגיים, כולל סיבים אופטיים, כלים להדמיה של נתונים וכו'.
 
-The backgrounds of these members provide an excellent toolbox of skills as well as considerable experience that equips the Foundation well for the future.
+הרקע של חברים אלה מספק ארגז כלים מצוין של מיומנויות כמו גם ניסיון רב שמכשיר את הקרן היטב לעתיד.
 
-Andrew and Heather bring strong credentials from public good and open source projects. Heather is renowned for advocating for free and open software licensing. Andrew was a central figure for years in ICANN, the organization that helped shape the internet, in its early years, as a decentralized community good. It did so through bottom-up, consensus-based processes. Just such a process is needed for StarkNet to deliver on the goals of Web3.
+אנדרו והתר מביאים אישורים חזקים מפרויקטים של טובת הציבור וקוד פתוח. הת'ר ידועה כדוגלת ברישוי תוכנה חופשית ופתוחה. אנדרו היה דמות מרכזית במשך שנים ב-ICANN, הארגון שעזר לעצב את האינטרנט, בשנותיו הראשונות, כטוב קהילה מבוזרת. היא עשתה זאת באמצעות תהליכים מלמטה למעלה, מבוססי קונצנזוס. בדיוק תהליך כזה נחוץ כדי ש-StarkNet יצליח לעמוד במטרות של Web3.
 
-The board also reflects significant crypto experience across numerous chains. Tomasz has worked on development of the core components of Ethereum — and of StarkNet. Eli was a Founding Scientist at Zcash before pioneering the technology behind StarkNet, and Andrew today sits on the board of the Electric Coin Company, which builds and supports Zcash technology.
+הלוח משקף גם חווית קריפטו משמעותית על פני רשתות רבות. תומאש עבד על פיתוח רכיבי הליבה של Ethereum - ושל StarkNet. אלי היה מדען מייסד ב-Zcash לפני שהיה חלוץ הטכנולוגיה מאחורי StarkNet, ואנדרו יושב היום במועצת המנהלים של חברת Electric Coin, שבונה ותומכת בטכנולוגיית Zcash.
 
-The board has business and CEO experience, from Tomasz and Uri, and it has expertise in computer science and math — and specifically STARKs — from Shubhangi and Eli. Three board members, Tomasz, Uri and Eli have been deeply involved in building StarkNet.
+לדירקטוריון יש ניסיון עסקי ומנכ"ל, מתומאש ואורי, ויש לו מומחיות במדעי המחשב ומתמטיקה - ובמיוחד STARKs - משובנגי ואלי. שלושה חברי דירקטוריון, תומאש, אורי ואלי היו מעורבים עמוקות בבניית StarkNet.
 
-All members stand up for what they believe. Eric went so far as to leave a senior role at Nasdaq-owned Cinnober when it threatened to limit his independence to post his opinions regarding crypto. As a Foundation popularizing technology that delivers [integrity to computation,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b) it’s fitting to assemble a board with such integrity.
+כל החברים עומדים על מה שהם מאמינים. אריק הרחיק לכת ועזב תפקיד בכיר ב-Cinnober שבבעלות נאסד"ק כשזו איימה להגביל את עצמאותו כדי לפרסם את דעותיו בנוגע לקריפטו. בתור קרן המפורסמת טכנולוגיה שמספקת[שלמות לחישוב,](https://medium.com/starkware/extreme-integrity-in-decentralized-world-9e66cdf24d8b)ראוי להרכיב לוח עם שלמות כזו.
 
-### **An Independent Foundation**
+### **קרן עצמאית**
 
-The Foundation is an independent entity that will support those building, using, and maintaining a public good, namely the StarkNet Protocol. As with the Internet, Bitcoin, and Ethereum, StarkNet is a shared technology that is built as a decentralized censorship-resistant network where anyone can participate and develop freely and in a permissionless manner, without the need to trust any third party.
+הקרן היא ישות עצמאית שתתמוך באלו שבונים, משתמשים ושומרים על טובת הציבור, כלומר פרוטוקול StarkNet. כמו באינטרנט, ביטקוין ו-Ethereum, StarkNet היא טכנולוגיה משותפת הבנויה כרשת עמידה לצנזורה מבוזרת שבה כל אחד יכול להשתתף ולהתפתח בחופשיות וללא רשות, ללא צורך לתת אמון בצד שלישי כלשהו.
 
-The newly formed Foundation is a not-for-profit entity that was established especially to advance and maintain StarkNet as a public good. The Foundation, along with an inclusive set of independent developers, start-ups, enterprise users, and the public at large will always be free to use and improve StarkNet for their own purposes and for the good of anyone who wants to securely interact and transact through it.
+הקרן החדשה שהוקמה היא גוף ללא מטרות רווח שהוקם במיוחד כדי לקדם ולתחזק את StarkNet כטובת ציבור. הקרן, יחד עם מערך כולל של מפתחים עצמאיים, סטארט-אפים, משתמשים ארגוניים והציבור הרחב תמיד יהיו חופשיים להשתמש ולשפר את StarkNet למטרותיהם ולטובת כל מי שרוצה לקיים אינטראקציה מאובטחת ולבצע עסקאות. דרך זה.
 
-The Foundation is independent, and free to take whatever positions it chooses regarding StarkNet. Decisions are to be made by a simple majority, or by five out of seven in special cases like removing and appointing Foundation board members. In decisions where board members’ external positions present a conflict-of-interest, the Foundation shall require such members to recuse themselves from the vote.
+הקרן היא עצמאית וחופשית לנקוט בכל עמדות שהיא תבחר לגבי StarkNet. החלטות צריכות להתקבל ברוב רגיל, או בחמישה מתוך שבעה במקרים מיוחדים כמו הדחה ומינוי חברי דירקטוריון הקרן. בהחלטות שבהן עמדותיהם החיצוניות של חברי ההנהלה מציגות ניגוד עניינים, תדרוש הקרן מחברים אלה לפטור את עצמם מההצבעה.
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+לקרן יש אמצעים ניכרים לביצוע משימתה: 5.01 מיליארד אסימוני StarkNet הוקצו לקרן, כלומר, 50.1% מאספקת האסימונים הראשונית של 10 מיליארד אסימונים (ראה[חלק 3 של הצעת הממשל](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)שלנו למידע נוסף).
 
-There are many details to be decided that will shape the future direction of StarkNet. Happily, the establishment of the Foundation brings more voices from a growing community. StarkWare remains a committed part of this community and we are delighted to welcome the greater StarkNet ecosystem to take more ownership of the network’s future. StarkNet’s journey is now in the hands of a decentralized crew, and the Foundation will play an important part in helping to ensure it’s a smooth one. All at StarkWare wish the new body great success in its mission.
+ישנם פרטים רבים שיש להחליט שיעצבו את הכיוון העתידי של StarkNet. לשמחתנו, הקמת הקרן מביאה עוד קולות מקהילה צומחת. StarkWare נותרה חלק מחויב מהקהילה הזו ואנו שמחים לקבל בברכה את מערכת האקולוגית הגדולה יותר של StarkNet שתיקח בעלות רבה יותר על עתיד הרשת. המסע של StarkNet נמצא כעת בידיו של צוות מבוזר, ולקרן תהיה חלק חשוב בסיוע להבטיח שזה יהיה חלק. כולם ב-StarkWare מאחלים לגוף החדש הצלחה רבה במשימתו.

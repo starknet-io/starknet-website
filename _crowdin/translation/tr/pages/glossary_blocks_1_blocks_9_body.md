@@ -1,4 +1,4 @@
-This L1 contract defines the state of the system by storing the commitment to the L2 state. The contract also stores the Starknet OS program hash – effectively defining the version of Starknet the network is running. The committed state on the L1 core contract acts as the consensus mechanism of Starknet, i.e., the system is secured by the L1 Ethereum consensus. In addition to maintaining the state, the Starknet L1 Core Contract is the main hub of operations for Starknet on L1. Specifically:
+Bu L1 sözleşmesi, taahhüdü L2 durumuna depolayarak sistemin durumunu tanımlar. Sözleşme ayrıca, ağın çalıştırdığı Starknet sürümünü etkili bir şekilde tanımlayan Starknet OS program karmasını da saklar. L1 çekirdek sözleşmesinde taahhüt edilen durum, Starknet'in mutabakat mekanizması olarak hareket eder, yani sistem, L1 Ethereum mutabakatı tarafından korunur. Durumu korumaya ek olarak, Starknet L1 Temel Sözleşmesi, Starknet'in L1'deki ana operasyon merkezidir. özellikle:
 
-* It stores the list of allowed verifiers (contracts) that can verify state update transactions
-* It facilitates L1 ↔ L2 interaction
+* Durum güncelleme işlemlerini doğrulayabilen izin verilen doğrulayıcıların (sözleşmeler) listesini saklar.
+* L1 ↔ L2 etkileşimini kolaylaştırır

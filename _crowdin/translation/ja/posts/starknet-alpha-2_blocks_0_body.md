@@ -10,7 +10,7 @@
 
 ### 背景
 
-StarkNetは権限のない分散型Validity-Rollup（別名「ZK-Rollup」）です。 We announced its [roadmap](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880) at the beginning of the year. The[Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), currently running on a public Ethereum testnet L1<>L2メッセージとオンチェーンデータを使用して、任意のビジネスロジックを実装するスマートコントラクトの無許可デプロイメントをすでにサポートしています。 さらに、任意のユーザーが許可なくネットワークにトランザクションを送信することを可能にします。
+StarkNetは権限のない分散型Validity-Rollup（別名「ZK-Rollup」）です。 年初に[ロードマップ](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880)を発表しました。 The[Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), currently running on a public Ethereum testnet L1<>L2メッセージとオンチェーンデータを使用して、任意のビジネスロジックを実装するスマートコントラクトの無許可デプロイメントをすでにサポートしています。 さらに、任意のユーザーが許可なくネットワークにトランザクションを送信することを可能にします。
 
 今回のリリース:StarkNet Alpha 2には、導入されたスマートコントラクト間の構成性:惑星から星座への進出を可能にするコア機能が含まれています。
 

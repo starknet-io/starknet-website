@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* A StarkNet Alpha 0.8.0 bemutatja a díjmechanizmus kezdeti verzióját (opcionális a StarkNet Alpha 0.9.0-ig)
+* Az új API megköveteli a tranzakciós díj becslését a tranzakció nyomkövetéséért, ami jobb láthatóságot és hibakeresési képességet tesz lehetővé
+* A StarkNet szekvenszer teljesítménybeli fejlesztései
+* L1→L2 üzenet törlése
 
 ### Intro
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+Amint azt[ütemtervünkben](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51)megosztottuk, a StarkNet funkcionalitásának és szolgáltatásainak legújabb kiegészítését követően figyelmünk a teljesítménynövelés és a protokolltervezés felé fordul (beleértve a díjakat, a számlakivonást, a decentralizációt stb.). A StarkNet Alpha 0.8.0 elindítja a tranzakciós díjak hozzáadását és a szekvenszer teljesítményének javítását.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+A StarkNet ütemterve díjmechanizmust tartalmaz, és ezzel a verzióval egy fontos lépést teszünk közelebb a platform teljes teljesítményéhez.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+A díjmechanizmus hozzáadása a StarkNet teljesítménytervezésének lényeges része. Minimális díj nélkül azt kockáztatjuk, hogy végtelen tranzakciókkal kell szembenéznünk: ami ellehetetlenítené a rendszer teljesítményét, függetlenül a szekvenszer optimalizálástól.
 
-### Features
+### Jellemzők
 
-#### Fee Support
+#### Díjtámogatás
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+A StarkNet Alpha mostantól támogatja a díjmechanizmus első verzióját. Ez a mechanizmus még ebben a korai szakaszban is elengedhetetlen, és még a Testneten is, két fő okból:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Lehetővé teszi a fejlesztők számára, hogy megkezdjék szerződéseik optimalizálását a StarkNet költségmodellje szerint.
+2. A rendszer teljesítményének javításának döntő párja, mivel számtalan tranzakció elküldésével megakadályozza a spamküldést.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Ez a verzió bemutatja azokat az összetevőket, amelyek szükségesek ahhoz, hogy a fejlesztők beépítsék a díjfizetést eszközeikbe és alkalmazásaikba. A fejlesztők most megbecsülhetik a tranzakciós díjat az \`estimate_fee\` végpont meghívásával, és a tranzakció végrehajtásának részeként befizethetik a díjat.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Mivel ez a funkció visszafelé nem kompatibilis, a díjfizetést jelenleg nem fogjuk érvényesíteni, hanem csak a 0.9.0-s verziótól, amely néhány héten belül megjelenik. Ez a fokozatos átállás lehetővé teszi a felhasználóknak és a fejlesztőknek, hogy alkalmazkodjanak az új modellhez.
 
-#### Fee Structure on 0.8.0
+#### Díjszerkezet a 0.8.0-n
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+0.8.0-n a díjakat kizárólag a számítási bonyolultságnak megfelelően szedik be, miközben a StarkWare továbbra is támogatja az L1 kommunikációs költségeket. A következő hetekben frissíteni fogjuk a díjmechanizmust, hogy az tartalmazza ezeket az L1 üzemeltetési és kommunikációs költségeket. A fizetés a StarkNet L2-n végrehajtott tranzakció végrehajtásával atomosan beszedésre kerül. A részletes leírást lásd a[díjak dokumentációjában](https://starknet.io/documentation/fee-mechanism/).
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+Fontos megjegyezni, hogy a StarkNet fejlődésével szorosan együttműködünk a fejlesztői közösséggel a díjmechanizmus finomítása és fejlesztése érdekében.
 
-#### L2 Goerli ETH Faucet
+#### L2 Goerli ETH csaptelep
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Bevezettük a[L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/), hogy lehetővé tegyük a felhasználók számára, hogy díjakat fizessenek a Testneten. Ez a csaptelep kis mennyiségű L2 Goerli ETH-t küld a StarkNet Goerli fiókcímére, amelyet a tranzakciós díj kifizetésére használhat fel.
 
 #### Trace API
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+A StarkNet API-jához hozzáadtuk a tranzakció végrehajtási nyomkövetésének lekérésének lehetőségét. A tranzakció nyomkövetésén belül az összes belső hívás látható, olyan információk kíséretében, mint a felhasznált végrehajtási erőforrások, a visszatérési érték, a kibocsátott események és az elküldött üzenetek. Ez az új hívás leegyszerűsíti a szerződés viselkedésének megértését vagy a tranzakciók hibakeresését. Ezenkívül az olyan eszközök, mint[Voyager](https://voyager.online/)vagy[StarkTx](https://starktx.info/)tartalmazhatják ezeket az adatokat; részletesebb elemzések biztosítása a felhasználók számára, különösen a számlaszerződéses interakcióhoz.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+A nyomkövetés megszerzéséhez használhatja a \`get_transaction_trace\` parancsot a StarkNet parancssori felületén. Ha példát szeretne látni a használatára, tekintse meg a[oktatóanyagot](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Üzenet törlése
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+A verzió további funkciója az L1→L2 üzenetek törlése. Miért hasznos ez? Képzeljünk el egy olyan forgatókönyvet, amelyben a felhasználó átvisz egy eszközt az L1-ből az L2-be. A folyamat azzal kezdődik, hogy a felhasználó elküldi az eszközt egy StarkNet hídnak, és a megfelelő L1→L2 üzenetet generál. Most képzelje el, hogy az L2 üzenetfogyasztás nem működik (ez a dApps kairói szerződésének hibája miatt fordulhat elő). Ez azt eredményezheti, hogy a felhasználó örökre elveszíti az eszköz feletti felügyeleti jogot.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Ennek a kockázatnak a mérséklése érdekében lehetővé tesszük, hogy az L1→L2 üzenetet kezdeményező szerződés – az erre irányuló szándék kinyilvánítása és megfelelő várakozás után – felmondja azt (lásd a[dokumentációt](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Teljesítményfejlesztések
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Ez a verzió jelentősen csökkenti azt az időt, amelyre a szekvenszernek szüksége van a bejövő kairói tranzakciók folyamának végrehajtásához.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+Ez még csak az első lépés! Következő nagy teljesítményű mérföldkőnk, amelyet hamarosan bemutatunk (0.9.0), a szekvenszer párhuzamos végrehajtása, és sok további optimalizálás várható az úton.
 
-### What now?
+### És most?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Olvassa el a műszaki dokumentációt[itt](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Nyissa meg[starknet.io](https://starknet.io/)webhelyet, ahol minden StarkNet-információt, dokumentációt, oktatóanyagot és frissítést talál.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Csatlakozz a[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)a fejlesztői támogatásért, az ökoszisztéma bejelentéseiért és a közösség részévé válásért.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Látogassa meg[StarkNet Shamans](https://community.starknet.io/), hogy naprakész legyen, és részt vegyen a StarkNet kutatási megbeszélésein.

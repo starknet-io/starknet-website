@@ -1,6 +1,6 @@
-Starknet is evolving to become fully permissionless, allowing anyone to operate on the network:
+Starknet ontwikkel om heeltemal toestemmingloos te word, wat enigiemand in staat stel om op die netwerk te werk:
 
-1. **Sequencers**  – Anyone will be able to operate a sequencer, i.e., batch transactions and propose new blocks (somewhat analogous to Ethereum miners, without the Proof of Work part).
-2. **Provers** – Anyone will be able to set up a prover and create proofs for the validity of new blocks.
-3. **Developers** – Developers will be able to deploy their smart contracts – permissionlessly.
-4. **Users** – Users will be able to send transactions permissionlessly. As the system will be decentralized, the possibility of censorship will be eliminated.
+1. **Sequencers**– Enigeen sal in staat wees om 'n sequencer te bedryf, dws bondeltransaksies en nuwe blokke voorstel (ietwat analoog aan Ethereum-mynwerkers, sonder die Bewys van Werk-deel).
+2. **Sprekers**– Enigeen sal 'n toetser kan opstel en bewyse vir die geldigheid van nuwe blokke kan skep.
+3. **Ontwikkelaars**– Ontwikkelaars sal hul slim kontrakte kan ontplooi – sonder toestemming.
+4. **Gebruikers**– Gebruikers sal transaksies toestemmingloos kan stuur. Aangesien die stelsel gedesentraliseer sal word, sal die moontlikheid van sensuur uitgeskakel word.

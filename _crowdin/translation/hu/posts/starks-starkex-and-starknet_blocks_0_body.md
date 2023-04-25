@@ -1,43 +1,43 @@
 ### TL;DR
 
-* STARKs enable blockchain scaling by efficiently proving the integrity of computations
-* StarkEx is an application-specific scaling engine
-* StarkNet is a permissionless, smart contract Layer 2 network
+* A STARK-ok lehetővé teszik a blokklánc skálázást azáltal, hogy hatékonyan bizonyítják a számítások integritását
+* A StarkEx egy alkalmazás-specifikus skálázómotor
+* A StarkNet egy engedély nélküli, intelligens szerződéses Layer 2 hálózat
 
-### **STARKs**
+### **STARKok**
 
-STARKs (Scalable, Transparent ARgument of Knowledge) are a proof system that enables the proving and verification of computations. It allows processing a big computation, generating a proof for the computation’s correctness, and then verifying the proof in very few steps.
+A STARK-ok (Scalable, Transparent ARgument of Knowledge) egy bizonyító rendszer, amely lehetővé teszi a számítások bizonyítását és ellenőrzését. Lehetővé teszi egy nagy számítás feldolgozását, a számítás helyességének bizonyítását, majd a bizonyítás nagyon kevés lépésben történő ellenőrzését.
 
-STARKs can play a key role in blockchain scalability by allowing large computations to be done off-chain, where it is cheaper, leaving only the verification, which requires a fraction of the computation, to be done on-chain. In other words, by performing very few steps on-chain, the verifier asserts the integrity of a much larger computation that was done off-chain.
+A STARK-ok kulcsszerepet játszhatnak a blokklánc skálázhatóságában azáltal, hogy lehetővé teszik a nagy számítások elvégzését a láncon kívül, ahol ez olcsóbb, így csak az ellenőrzést kell elvégezni, amely a számítás töredékét igényli a láncon. Más szavakkal, azáltal, hogy nagyon kevés lépést hajt végre a láncon, a hitelesítő megerősíti egy sokkal nagyobb, a láncon kívül végzett számítás integritását.
 
-Using STARKs, layer 2 solutions batch together and compute thousands of transactions, and then verify their validity on-chain with a single STARK proof. The cost of the on-chain process is split between **all** transactions in the batch. This results in Ethereum security and low gas cost per transaction.
+A STARK-ok használatával a 2. rétegbeli megoldások kötegelt köteggel dolgoznak és tranzakciók ezreit számítják ki, majd egyetlen STARK-bizonyítvánnyal ellenőrizhetik azok érvényességét a láncon. A láncon belüli folyamat költsége fel van osztva a kötegelt**mind**tranzakció között. Ez Ethereum biztonságot és alacsony tranzakciónkénti gázköltséget eredményez.
 
-The low computational cost will usher in a new class of applications that were previously not feasible on-chain. These properties make STARKs an excellent building block for improving user experience and reducing gas costs, all while maintaining the security of the Ethereum settlement layer.
+Az alacsony számítási költség az alkalmazások új osztályát nyitja meg, amelyek korábban nem voltak megvalósíthatók a láncon. Ezek a tulajdonságok a STARK-okat kiváló építőelemgé teszik a felhasználói élmény javításához és a gázköltségek csökkentéséhez, miközben megőrzik az Ethereum települési réteg biztonságát.
 
-StarkWare provides two solutions to scale Ethereum with STARKs: StarkEx and StarkNet.
+A StarkWare két megoldást kínál az Ethereum méretezésére STARK-okkal: StarkEx és StarkNet.
 
 ### **StarkEx**
 
-[StarkEx](https://starkware.co/starkex/) is a framework for creating permissioned, application-specific scaling solutions. StarkEx is a toolbox of useful [application flows](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows) that projects can use to achieve cheap off-chain computation. A STARK proof, attesting to the correctness of execution, is generated off-chain. Such a proof can include up to 12,000–500,000 transactions (depending on the transaction type). The proof is then sent to the STARK Verifier to be accepted on-chain. This means one verification for all the transactions — for an incredibly low amortized gas cost per transaction.
+[A StarkEx](https://starkware.co/starkex/)egy keretrendszer engedélyezett, alkalmazás-specifikus skálázási megoldások létrehozására. A StarkEx egy hasznos[alkalmazásfolyamat](https://docs.starkware.co/starkex-v4/starkex-deep-dive/regular-flows)tartalmazó eszköztár, amelyet a projektek olcsó, láncon kívüli számítások megvalósítására használhatnak. A végrehajtás helyességét tanúsító STARK-bizonyíték a láncon kívül jön létre. Egy ilyen igazolás legfeljebb 12 000–500 000 tranzakciót tartalmazhat (a tranzakció típusától függően). A bizonyítást ezután elküldik a STARK Verifier-nek, hogy elfogadják a láncon. Ez egy ellenőrzést jelent az összes tranzakcióhoz – hihetetlenül alacsony tranzakciónkénti amortizált gázköltségért.
 
-A few examples of the applications deployed on StarkEx are dYdX (perpetuals trading), Immutable and Sorare (NFTs — minting and trading), DeversiFi (spot trading), and Celer (DeFi Pooling).
+Néhány példa a StarkEx-en telepített alkalmazásokra: dYdX (perpetuals trade), Immutable and Sorare (NFT-k – pénzverés és kereskedés), DeversiFi (spot kereskedés) és Celer (DeFi Pooling).
 
-StarkWare is continuously adding more application flows to StarkEx, following the market and its customers’ needs.
+A StarkWare folyamatosan újabb alkalmazásfolyamokat ad a StarkEx-hez, követve a piacot és ügyfelei igényeit.
 
 ### **StarkNet**
 
-*[StarkNet](https://starkware.co/starknet/) is a permissionless layer 2 network where any user or developer can deploy smart contracts developed in the Cairo language.*
+*[A StarkNet](https://starkware.co/starknet/)egy engedély nélküli 2. rétegű hálózat, ahol bármely felhasználó vagy fejlesztő telepíthet kairói nyelven kifejlesztett intelligens szerződéseket.*
 
-Comparable to the Ethereum smart-contract experience, inside of the StarkNet ecosystem, your contract can interact with any other contract deployed on StarkNet, allowing for richly composable protocols. StarkNet contracts can also interact with Ethereum contracts via asynchronous message passing.
+Az Ethereum intelligens szerződéses tapasztalatához hasonlóan a StarkNet ökoszisztémán belül az Ön szerződése kölcsönhatásba léphet bármely más, a StarkNeten telepített szerződéssel, így gazdagon összeállítható protokollokat tesz lehetővé. A StarkNet-szerződések az Ethereum-szerződésekkel is kapcsolatba léphetnek aszinkron üzenettovábbítással.
 
-Unlike StarkEx, where applications are responsible for submitting transactions, StarkNet sequencers batch transactions and send them to be processed and proved. (StarkNet’s sequencers are currently operated by StarkWare with future plans to decentralize.) This means once applications deploy their Cairo contracts, they do not have to worry about running additional Operator infrastructure. StarkNet supports the Rollup data availability mode, meaning the state of the rollup is written to Ethereum along with the STARK proofs.
+Ellentétben a StarkEx-szel, ahol az alkalmazások felelősek a tranzakciók benyújtásáért, a StarkNet szekvenátorok kötegelt tranzakciókat hajtanak végre, és elküldik feldolgozásra és bizonyításra. (A StarkNet szekvenszereit jelenleg a StarkWare üzemelteti, és a jövőbeni tervek szerint decentralizálják.) Ez azt jelenti, hogy miután az alkalmazások telepítik a kairói szerződéseiket, nem kell aggódniuk a további üzemeltetői infrastruktúra futtatása miatt. A StarkNet támogatja az összesítő adatok rendelkezésre állási módját, ami azt jelenti, hogy az összesítés állapota a STARK-bizonyítványokkal együtt az Ethereumba kerül.
 
-A huge developer community is deeply engaged with the StarkNet ecosystem, building apps, tools and infrastructure. Dozens of applications are already live on testnet — DeFi, games, voting, AI and more. More over, developer tools such as block explorer, local testing environment and framework, SDK’s in several languages and more, are being built by the StarkNet Community. In addition, active discussions take place in the [Shamans’ platform](https://community.starknet.io/), featuring suggestions for improvements, potential features and best practices.
+Egy hatalmas fejlesztői közösség mélyen foglalkozik a StarkNet ökoszisztémával, alkalmazásokat, eszközöket és infrastruktúrát épít. A testneten már több tucat alkalmazás elérhető – DeFi, játékok, szavazás, mesterséges intelligencia és még sok más. Ráadásul a StarkNet közösség olyan fejlesztői eszközöket hoz létre, mint például a blokkböngésző, a helyi tesztelési környezet és keretrendszer, az SDK-k több nyelven és még sok más. Emellett aktív megbeszélések zajlanak a[Shamans' platformon](https://community.starknet.io/), amelyek fejlesztési javaslatokat, lehetséges funkciókat és bevált gyakorlatokat tartalmaznak.
 
-### **To Sum It Up**
+### **Összefoglalva**
 
-Both [StarkEx](https://youtu.be/P-qoPVoneQA) and StarkNet are STARK-based scaling solutions. Both provide scalability, low gas costs, and Security, but have different operating requirements and interoperability patterns. StarkEx might be the right solution for an application that is largely self-contained and fits into the APIs that StarkEx provides. StarkNet might be better suited for a protocol that requires interacting synchronously with other protocols or has needs that go beyond what StarkEx offers.
+[StarkEx](https://youtu.be/P-qoPVoneQA)és a StarkNet is STARK-alapú skálázási megoldás. Mindkettő méretezhetőséget, alacsony gázköltséget és biztonságot nyújt, de eltérő működési követelményekkel és interoperabilitási mintákkal rendelkeznek. A StarkEx lehet a megfelelő megoldás egy olyan alkalmazáshoz, amely nagyrészt önálló, és illeszkedik a StarkEx által biztosított API-khoz. A StarkNet jobban megfelelhet olyan protokollokhoz, amelyek más protokollokkal való szinkron interakciót igényelnek, vagy amelyek túlmutatnak a StarkEx által kínált szükségleteken.
 
-STARKs have revolutionized how applications can be built on Ethereum. StarkEx and StarkNet will continue to enable applications that were previously unviable and push the limits of what is possible on the blockchain.
+A STARK-ok forradalmasították az alkalmazások Ethereumra való építését. A StarkEx és a StarkNet továbbra is engedélyezni fogja az olyan alkalmazásokat, amelyek korábban életképtelenek voltak, és feszegetik a blokkláncban elérhető lehetőségek határait.
 
-This article was written in collaboration by [Tim Gestson](https://twitter.com/IcemanTim) and the [StarkWare](https://starkware.co/) team
+Ezt a cikket[Tim Gestson](https://twitter.com/IcemanTim)és a[StarkWare](https://starkware.co/)csapata közösen írta

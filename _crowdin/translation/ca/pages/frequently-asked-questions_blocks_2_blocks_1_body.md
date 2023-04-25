@@ -1,1 +1,1 @@
-STARK is a proof system. It uses cutting-edge cryptography to provide polylogarithmic verification complexity and proof size, quasilinear proof complexity, and minimal assumptions which are post-quantum-secure. More information [here](https://starkware.co/stark/).
+STARK és un sistema de prova. Utilitza criptografia d'avantguarda per proporcionar complexitat de verificació polilogarítmica i mida de prova, complexitat de prova quasilineal i supòsits mínims que són segurs postquàntics. Més informació [aquí](https://starkware.co/stark/).

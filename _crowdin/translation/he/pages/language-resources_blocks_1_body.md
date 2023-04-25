@@ -1,5 +1,5 @@
-In line with our goal to make the Starknet community accessible and usable to as many people across the globe as possible, we’ve listed a collection of non-English resources below.\
+בהתאם למטרה שלנו להפוך את קהילת Starknet לנגישה ושמישה לכמה שיותר אנשים ברחבי העולם, רשמנו למטה אוסף של משאבים שאינם באנגלית.\
 \
-These are places where you can discover and discuss all things Starknet with other community members in your native language and/or based on where you live in the world. \
+אלו הם מקומות שבהם אתה יכול לגלות ולדון בכל הדברים של Starknet עם חברי קהילה אחרים בשפת האם שלך ו/או בהתבסס על המקום שבו אתה חי בעולם. \
 \
-If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please [open an issue](https://github.com/starknet-io/starknet-website/issues) on Github to get it added.
+אם יש משאב בשפה שאינה אנגלית שאתה מודע לו ואינך רואה ברשימה כאן, פתח [בעיה](https://github.com/starknet-io/starknet-website/issues) ב- Github כדי להוסיף אותו.

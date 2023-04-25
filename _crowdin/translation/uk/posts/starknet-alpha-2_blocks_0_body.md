@@ -10,7 +10,7 @@
 
 ### Фон
 
-StarkNet - це допустимий децентралізований Validity-Rollup (він же "ZK-Rollup"). На початку року ми оголосили[дорожню карту](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880). The [Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), currently running on a public Ethereum testnet, already supports permissionless deployment of smart contracts implementing any business logic, with L1<>L2 messaging and on-chain data. Крім того, це дозволяє будь-якому користувачеві надсилати транзакції до мережі без дозволу Ethereum-стилю.
+StarkNet - це допустимий децентралізований Validity-Rollup (він же "ZK-Rollup"). На початку року ми оголосили[дорожню карту](https://medium.com/starkware/on-the-road-to-starknet-a-permissionless-stark-powered-l2-zk-rollup-83be53640880). [Alpha](https://medium.com/starkware/starknet-alpha-1-90c3348cca4f), який зараз працює в загальнодоступній тестовій мережі Ethereum, уже підтримує розгортання смарт-контрактів без дозволу, що реалізує будь-яку бізнес-логіку, з обміном повідомленнями L1<>L2 і даними в ланцюжку. Крім того, це дозволяє будь-якому користувачеві надсилати транзакції до мережі без дозволу Ethereum-стилю.
 
 Цей реліз: StarkNet Alpha 2, включає в себе ядерну функцію, яка дозволяє просуватися від планет до сузір'їв: композитність між розгорнутими розумними контрактами.
 

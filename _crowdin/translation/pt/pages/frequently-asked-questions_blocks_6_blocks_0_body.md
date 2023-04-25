@@ -2,4 +2,4 @@ Starknet é uma camada descentralizada e permissiva 2 (L2) Rollup de Validade de
 
 A Fundação lança os 50. % do fornecimento inicial do Token para garantir que os recursos da rede sejam efetivamente implantados para os seguintes objetivos: a manutenção e a segurança da Starknet como bem público; o desenvolvimento contínuo e a expansão da rede; e o apoio a uma cultura de colaboração construtiva entre desenvolvedores.
 
-For more information on the Foundation’s mission, first steps, and board, see the Foundation’s [“Hello World” post](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) and [StarkWare’s complementary post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).
+Para obter mais informações sobre a missão, os primeiros passos e o conselho da Fundação, consulte a publicação [“Hello World” da Fundação](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) e [a postagem complementar StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

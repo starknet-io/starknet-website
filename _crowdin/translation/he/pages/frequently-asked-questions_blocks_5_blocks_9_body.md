@@ -1,1 +1,1 @@
-No. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol. Details on the minting rate and mechanism are yet to be defined.
+לא. ההיצע במחזור של אסימונים יגדל עם הזמן עם הטבעת אסימונים חדשים על ידי הפרוטוקול. פרטים על קצב ההטבעה והמנגנון טרם הוגדרו.

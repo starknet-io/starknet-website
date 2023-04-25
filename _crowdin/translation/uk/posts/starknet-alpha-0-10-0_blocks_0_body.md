@@ -20,7 +20,7 @@
 
 ### Зміни протидії облікового запису
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Ця версія запроваджує зміни, натхненні[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Ми просуваємось далі з[абстракцією облікового запису StarkNet](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Ця версія запроваджує зміни, натхненні[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
 #### Підтвердження/Виконання роздільника
 

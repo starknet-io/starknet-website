@@ -1,61 +1,61 @@
 ### TL;DR
 
-* The first version of StarkNet Bridge, StarkGate Alpha, is live on **[Testnet](https://goerli.starkgate.starknet.io/)**, and on **[Mainnet](https://starkgate.starknet.io/)**!
-* We await community feedback on how things can be improved. You can send your feedback for both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
-* Mainnet deployment will follow soon (update, May 9th 2022: StarkGate is live on Mainnet)
+* StarkNet Bridge'in ilk versiyonu olan StarkGate Alpha,**[Testnet](https://goerli.starkgate.starknet.io/)**ve**[Mainnet](https://starkgate.starknet.io/)**yayında !
+* İşlerin nasıl iyileştirilebileceği konusunda topluluk geri bildirimlerini bekliyoruz. Hem[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)hem de[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx)için görüşlerinizi iletebilirsiniz.
+* Ana ağ dağıtımı yakında başlayacak (güncelleme, 9 Mayıs 2022: StarkGate, Ana ağda yayında)
 
-Excitement! We are thrilled to release StarkGate Alpha, the first version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet deployment to follow soon.*
+Heyecanlanmak! StarkNet's Bridge'in ilk versiyonu olan StarkGate Alpha'yı artık Goerli test ağında canlı olarak yayınlamaktan heyecan duyuyoruz ve yakında Mainnet konuşlandırması yapılacak.*
 
-\*(update, May 9th 2022: StarkGate is live on Mainnet)
+\*(güncelleme, 9 Mayıs 2022: StarkGate, Mainnet'te yayında)
 
-**Important disclaimer: this is an alpha version on StarkGate Alpha (read the fine print below!).**
+**Önemli sorumluluk reddi beyanı: Bu, StarkGate Alpha'daki bir alfa sürümüdür (aşağıdaki ince yazıyı okuyun!).**
 
 ![](/assets/starkgate_01.png)
 
-Before you continue, go check it out! [StarkGate Testnet](https://goerli.starkgate.starknet.io/), [StarkGate Mainnet](https://starkgate.starknet.io/)
+Devam etmeden önce gidip kontrol edin! [StarkGate Testnet](https://goerli.starkgate.starknet.io/),[StarkGate Mainnet](https://starkgate.starknet.io/)
 
-StarkGate serves as a gateway between Ethereum and [StarkNet](https://starknet.io/), and allows users to do everything they can expect from a bridge.
+StarkGate, Ethereum ile[StarkNet](https://starknet.io/)arasında bir ağ geçidi görevi görür ve kullanıcıların bir köprüden bekleyebilecekleri her şeyi yapmalarına olanak tanır.
 
-#### **Where can I find information on how StarkGate works?**
+#### **StarkGate'in nasıl çalıştığına dair bilgileri nereden bulabilirim?**
 
-To understand how StarkGate works, read the [technical documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) and take a look at the [code](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Note that this is the first version, and we invite your feedback and suggestions on how to improve both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+StarkGate'in nasıl çalıştığını anlamak için[teknik dokümantasyonu](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)okuyun ve[koduna bir göz atın](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Bunun ilk sürüm olduğunu unutmayın ve hem[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)hem de[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx)nasıl iyileştirileceğine ilişkin geri bildirimlerinizi ve önerilerinizi bekliyoruz.
 
-#### **Which tokens will be supported by StarkGate?**
+#### **StarkGate tarafından hangi belirteçler desteklenecek?**
 
-* StarkGate Alpha on Goerli supports ETH and a few other ERC-20 tokens. The full list and the relevant contract addresses, both on Ethereum and StarkNet, are available in this [repo](https://github.com/starkware-libs/starknet-addresses).
-* On Mainnet, initially, StarkGate Alpha will only support ETH to allow use of the fee mechanism. Later on, we will add support for WBTC, USDC, USDT, and DAI. You can see the relevant contract addresses in this [repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
+* Goerli'deki StarkGate Alpha, ETH'yi ve diğer birkaç ERC-20 jetonunu destekler. Hem Ethereum hem de StarkNet'teki tam liste ve ilgili sözleşme adresleri bu[repo](https://github.com/starkware-libs/starknet-addresses)mevcuttur.
+* Ana ağda, başlangıçta StarkGate Alpha, ücret mekanizmasının kullanımına izin vermek için yalnızca ETH'yi destekleyecektir. Daha sonra WBTC, USDC, USDT ve DAI için destek ekleyeceğiz. Bu[deposunda](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json)ilgili sözleşme adreslerini görebilirsiniz.
 
-Further down the road, we will publish the mechanism for adding support for additional tokens.
+Yolun ilerleyen kısımlarında, ek belirteçler için destek ekleme mekanizmasını yayınlayacağız.
 
-#### **What safety limitations will StarkGate Alpha have on Mainnet?**
+#### **StarkGate Alpha'nın Mainnet üzerinde hangi güvenlik sınırlamaları olacak?**
 
-StarkGate Alpha on Mainnet is launched with two limitations — in order to reduce the risks involved in using an Alpha version:
+Ana ağda StarkGate Alpha, bir Alfa sürümünün kullanılmasıyla ilgili riskleri azaltmak için iki sınırlamayla başlatılır:
 
-1. The total value locked (TVL) in the bridge on L1 will limit the amount of each token type.
-2. The maximum amount in each transaction sent from L1 to L2 (Ethereum→StarkNet) via StarkGate will be limited.
+1. L1'deki köprüde kilitlenen toplam değer (TVL), her bir belirteç türünün miktarını sınırlayacaktır.
+2. StarkGate aracılığıyla L1'den L2'ye (Ethereum→StarkNet) gönderilen her işlemdeki maksimum tutar sınırlı olacaktır.
 
-We plan to gradually ease these limitations and lift them completely as confidence grows. The updated parameters can be found in StarkGate’s [documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
+Bu sınırlamaları kademeli olarak hafifletmeyi ve güven arttıkça tamamen kaldırmayı planlıyoruz. Güncellenen parametreler StarkGate'in[belgelerinde](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)bulunabilir.
 
 ![](/assets/starkgate_02.png)
 
-### Alpha and What It Means
+### Alfa ve Anlamı
 
-As always, we remind you that StarkNet is currently in its **Alpha** stage:
+Her zaman olduğu gibi, size StarkNet'in şu anda**Alfa**aşamasında olduğunu hatırlatıyoruz:
 
-* Things can break. If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
-* Both StarkNet Alpha and StarkGate contracts can be upgraded without a timelock. While we expect to announce such upgrades well ahead of time, in the case of imminent security risks (for example, if a critical bug is found), the upgrade may be applied with little or no warning.
-* The code of the bridge, as well as portions of StarkNet Alpha, have not yet been audited. The ABDK and Nethermind audits of StarkGate Alpha will be completed soon.
+* İşler bozulabilir. Feci bir şekilde başarısız olurlarsa, paranız kaybolabilir (**aşağıdaki sorumluluk reddini okuyun**!).
+* Hem StarkNet Alpha hem de StarkGate sözleşmeleri zaman kilidi olmadan yükseltilebilir. Bu tür yükseltmeleri çok önceden duyurmayı beklesek de, olası güvenlik riskleri durumunda (örneğin, kritik bir hata bulunursa), yükseltme çok az uyarıyla veya hiç uyarı yapılmadan uygulanabilir.
+* Köprünün kodu ve StarkNet Alpha'nın bölümleri henüz denetlenmedi. StarkGate Alpha'nın ABDK ve Nethermind denetimleri yakında tamamlanacak.
 
-We encourage all users to help improve the bridge by providing their feedback using one of the following platforms:
+Tüm kullanıcıları, aşağıdaki platformlardan birini kullanarak geri bildirimde bulunarak köprünün geliştirilmesine yardımcı olmaya teşvik ediyoruz:
 
-1. [StarkGate frontend repo](https://github.com/starkware-libs/starkgate-frontend)
-2. [StarkGate Contracts repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
-3. [StarkNet Shamans](http://community.starknet.io/)
+1. [StarkGate ön uç deposu](https://github.com/starkware-libs/starkgate-frontend)
+2. [StarkGate Sözleşmeleri deposu](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
+3. [StarkNet Şamanları](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+Sorular ve geliştirici desteği için[StarkNet discord sunucusuna katılın](https://discord.gg/uJ9HZTUk2Y).
 
-### Disclaimer
+### Feragatname
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. The same applies to the StarkNet Bridge. Like all complex software systems, both StarkNet and the bridge may contain bugs that, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***StarkNet Alpha, tam olarak denetlenmemiş yeni ve karmaşık bir sistemdir. Aynısı StarkNet Köprüsü için de geçerlidir. Tüm karmaşık yazılım sistemlerinde olduğu gibi, hem StarkNet hem de köprü aşırı durumlarda tüm paranızı kaybetmenize neden olabilecek hatalar içerebilir. Bu nedenle,***adımınızı dikkatli atın ve dikkatli olun!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*StarkNet ekosistemi, StarkWare'in gözetimi ve sorumluluğu olmayan büyük ve hızla büyüyen bağımsız ekipler ve bireyler kümesidir. Ekosistem üyeleri tarafından geliştirilen projelerden herhangi biri, aşırı durumlarda tüm paranızı kaybetmenize neden olabilecek hatalar içerebilir. Ayrıca, daha fazla akıllı sözleşme devreye girdikçe, istenmeyen zararlı hatalar ve hatta kötü niyetli dolandırıcılık ve hile yapma potansiyeli artar. Bu nedenle, StarkNet'teki tüm akıllı sözleşmelere Ethereum'daki akıllı sözleşmelere davrandığınız gibi davranın ve yalnızca güvenmek için iyi nedenleriniz olanların güvenli olduğunu kullanın.*

@@ -1,1 +1,1 @@
-The state is composed of contracts’ code and contracts’ storage.
+Durum, sözleşmelerin kodu ve sözleşmelerin saklanmasından oluşur.

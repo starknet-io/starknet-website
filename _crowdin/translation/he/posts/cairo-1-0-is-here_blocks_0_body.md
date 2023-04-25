@@ -1,38 +1,50 @@
 ### TL;DR
 
-* Cairo 1.0 first release is here!
-* Developers can start writing and testing Cairo 1.0 programs
-* Feature parity with the older version of Cairo will be reached in the coming weeks
-* Support for StarkNet contracts will be added in the upcoming StarkNet Alpha version
+* המהדורה הראשונה של Cairo 1.0 כבר כאן!
+* מפתחים יכולים להתחיל לכתוב ולבדוק תוכניות Cairo 1.0
+* שוויון תכונה עם הגרסה הישנה יותר של קהיר יושג בשבועות הקרובים
+* תמיכה בחוזי StarkNet תתווסף בגרסת StarkNet Alpha הקרובה
 
-### Background
+### רקע כללי
 
-We are excited to announce that the first public version of Cairo 1.0 is now available. This marks a major milestone in the evolution of Cairo, which was first introduced in 2020 as a Turing-complete programming language for efficiently writing STARK-provable programs. Cairo 1.0 is a Rust-like high-level language. Like Rust, it is intended to allow developers to easily write code that is efficient and safe.
+אנו נרגשים להכריז כי הגרסה הציבורית הראשונה של Cairo 1.0 זמינה כעת. זה מסמן אבן דרך גדולה באבולוציה של קהיר, שהוצגה לראשונה בשנת 2020 כשפת תכנות מלאה בטיורינג לכתיבת תוכניות הניתנות להוכחה יעילה של STARK. Cairo 1.0 היא שפה ברמה גבוהה דמוית חלודה. כמו Rust, הוא נועד לאפשר למפתחים לכתוב בקלות קוד יעיל ובטוח.
 
-Since its inception, Cairo has been used to build Layer-2 applications that have [handled](https://dashboard.starkware.co/starkex) over $790 billion worth of trades, processed over 300 million transactions and minted more than 90 million NFTs, all performed off-chain and settled on Ethereum with the mathematical integrity guaranteed by STARK proofs. Cairo became the 4th most used programming language in the blockchain [ecosystem](https://defillama.com/languages) at large. With the release of Cairo 1.0, we aim to make the language even more accessible and user-friendly while also introducing new features that enhance safety and convenience.
+מאז הקמתה, קהיר שימשה לבניית יישומי Layer-2 ש[](https://dashboard.starkware.co/starkex)בעסקאות בשווי של למעלה מ-790 מיליארד דולר, עיבדו למעלה מ-300 מיליון עסקאות והטביעו יותר מ-90 מיליון NFTs, כולם בוצעו מחוץ לשרשרת והתיישבו ב-Ethereum עם שלמות מתמטית מובטחת על ידי הוכחות STARK. קהיר הפכה לשפת התכנות הרביעית בשימוש במערכת האקולוגית</a>של blockchain
 
-One of the most significant changes in Cairo 1.0 is the syntax. We have taken inspiration from **Rust** to create a more developer-friendly language that is easier to read and write. The new version of Cairo allows writing safer code (strongly typed, ownership and borrowing, etc.), while also being more expressive.
+בכללותה. עם שחרורו של Cairo 1.0, אנו שואפים להפוך את השפה לנגישה וידידותית יותר למשתמש, תוך הצגת תכונות חדשות המשפרות את הבטיחות והנוחות.</p> 
 
-Cairo 1.0 also introduces Sierra, a new intermediate representation that ensures **every** Cairo run can be proven. This makes Cairo 1.0 particularly well-suited for use in a permissionless network like StarkNet, where it can provide robust DoS protection and censorship resistance. You can read more about Sierra in our [previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) post.
+אחד השינויים המשמעותיים ביותר בקהיר 1.0 הוא התחביר. לקחנו השראה מ**Rust**כדי ליצור שפה ידידותית יותר למפתחים שקל יותר לקרוא ולכתוב. הגרסה החדשה של קהיר מאפשרת כתיבת קוד בטוח יותר (הקלדה חזקה, בעלות והשאלה וכו'), תוך שהיא גם אקספרסיבית יותר.
 
-## First taste!
+קהיר 1.0 מציגה גם את סיירה, ייצוג ביניים חדש שמבטיח שניתן להוכיח**כל ריצה**בקהיר. זה הופך את Cairo 1.0 למתאים במיוחד לשימוש ברשת ללא הרשאות כמו StarkNet, שם הוא יכול לספק הגנה חזקה על DoS ועמידות לצנזורה. אתה יכול לקרוא עוד על סיירה בפוסט[](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)שלנו.
 
-### What can you do today?
 
-Developers can start writing, compiling, and testing Cairo 1.0 programs! We encourage developers to start experimenting with Cairo 1.0 and getting accustomed to the new syntax and features.
 
-Since Cairo 1.0 is still actively developed, and new features are constantly added, check out the [Cairo repository](https://github.com/starkware-libs/cairo/) for the latest updates.
+## טעימה ראשונה!
 
-### What's next?
 
-At the moment, Cairo 1.0 is still missing some of the features supported in the older version of Cairo ([see this table for details](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Our next milestone, expected in the next few weeks, will provide Cairo 1.0 feature parity with the older version. You can track the progress toward that milestone [here](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
 
-### Starknet support
+### מה אתה יכול לעשות היום?
 
-Writing StarkNet contracts in Cairo 1.0 is supported (although certain features are still missing). However, StarkNet does not yet support the deployment and execution of Cairo 1.0 contracts. StarkNet Alpha V0.11.0, planned in the upcoming weeks, will introduce the ability to deploy and run Cairo 1.0 contracts. The upgrade to v0.11.0 will mark the beginning of the Transition Period towards a system that runs only Cairo 1.0 contracts. This Transition Period will end with the [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), expected a few months later.
+מפתחים יכולים להתחיל לכתוב, להרכיב ולבדוק תוכניות Cairo 1.0! אנו מעודדים מפתחים להתחיל להתנסות עם Cairo 1.0 ולהתרגל לתחביר ולתכונות החדשות.
+
+מכיוון שקהיר 1.0 עדיין מפותחת באופן פעיל, ותכונות חדשות מתווספות כל הזמן, בדוק את מאגר[קהיר](https://github.com/starkware-libs/cairo/)לקבלת העדכונים האחרונים.
+
+
+
+### מה הלאה?
+
+נכון לעכשיו, בקהיר 1.0 עדיין חסרות חלק מהתכונות הנתמכות בגרסה הישנה יותר של קהיר ([ראה טבלה זו לפרטים](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). אבן הדרך הבאה שלנו, הצפויה בשבועות הקרובים, תספק התאמה בין התכונות של Cairo 1.0 לגרסה הישנה יותר. אתה יכול לעקוב אחר ההתקדמות לעבר אותו אבן דרך[כאן](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
+
+
+
+### תמיכה ב-Starknet
+
+כתיבת חוזי StarkNet בקהיר 1.0 נתמכת (אם כי תכונות מסוימות עדיין חסרות). עם זאת, StarkNet עדיין לא תומכת בפריסה ובביצוע של חוזי Cairo 1.0. StarkNet Alpha V0.11.0, המתוכנן בשבועות הקרובים, יציג את היכולת לפרוס ולהפעיל חוזי קהיר 1.0. השדרוג לגרסה 0.11.0 יסמן את תחילת תקופת המעבר לקראת מערכת המריץ רק חוזי קהיר 1.0. תקופת מעבר זו תסתיים עם ה[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), הצפוי כעבור מספר חודשים.
 
 ![](/assets/0_odxbxeacqdwizlfw.jpg)
 
-### Let's build!
 
-The goal of StarkNet is to exponentially scale Ethereum using the mathematical integrity of STARKs, and the goal of Cairo is to make this exponential scale accessible to developers. Accessibility means a programming language that is efficient, easy to read and write, and safe to use. We hope the release of Cairo 1.0 will inspire even more developers to join StarkNet and scale Ethereum to meet global demand.
+
+### בוא נבנה!
+
+המטרה של StarkNet היא להרחיב את Ethereum באופן אקספוננציאלי תוך שימוש בשלמות המתמטית של STARKs, והמטרה של קהיר היא להנגיש את הסולם האקספוננציאלי הזה למפתחים. נגישות פירושה שפת תכנות יעילה, קלה לקריאה ולכתיבה ובטוחה לשימוש. אנו מקווים שהשחרור של Cairo 1.0 יעורר עוד יותר מפתחים להצטרף ל-StarkNet ולהרחיב את Ethereum כדי לענות על הביקוש העולמי.

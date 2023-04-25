@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+Mã thông báo Starknet chưa có sẵn để bán. Nó không thể được thêm vào ví của bạn ở giai đoạn này. Cẩn thận với những trò gian lận.

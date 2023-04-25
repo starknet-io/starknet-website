@@ -1,37 +1,37 @@
 ### TL;DR
 
-* We are releasing Cairo 1.0-alpha.2, which brings a host of new features to the language
-* It is now possible to implement an ERC20 contract
-* Those new linguistic features will be applicable in the upcoming StarkNet-v0.11.0 version
+* Απελευθερώνουμε το Κάιρο 1.0-alpha.2, το οποίο φέρνει μια σειρά από νέα χαρακτηριστικά στη γλώσσα
+* Είναι πλέον δυνατή η εφαρμογή μιας σύμβασης ERC20
+* Αυτά τα νέα γλωσσικά χαρακτηριστικά θα ισχύουν στην επερχόμενη έκδοση του StarkNet-v0.11.0
 
-### Fresh new features!
+### Φρέσκα νέα χαρακτηριστικά!
 
-Cairo 1.0 is continuing its fast improvement pace. Today’s release introduces, among other things, all the necessary features to write an ERC-20 contract.
+Το Κάιρο 1,0 συνεχίζει το γρήγορο ρυθμό βελτίωσης. Η σημερινή έκδοση παρουσιάζει, μεταξύ άλλων, όλα τα απαραίτητα χαρακτηριστικά για να γράψει ένα συμβόλαιο ERC-20.
 
-To mention some of the new features:
+Για να αναφέρω μερικά από τα νέα χαρακτηριστικά:
 
-* Dictionaries
-* Events in contracts
-* Mapping storage variables
-* Trait support
-* Type inference
-* Methods
+* Λεξικά
+* Γεγονότα στις συμβάσεις
+* Χαρτογράφηση μεταβλητών αποθήκευσης
+* Υποστήριξη τρένου
+* Τύπος συμπεράσματος
+* Μέθοδοι
 
-See the complete list in the GitHub [repository.](https://github.com/starkware-libs/cairo)
+Δείτε την πλήρη λίστα στο αποθετήριο GitHub [.](https://github.com/starkware-libs/cairo)
 
-Let’s have a look at an example of an ERC20 contract (the full concrete example is, of course, on [GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) to demonstrate a use case of an event and mappings in the storage:
+Ας ρίξουμε μια ματιά σε ένα παράδειγμα μιας σύμβασης ERC20 (το πλήρες συγκεκριμένο παράδειγμα είναι, φυσικά, στο[GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)για την επίδειξη μιας περίπτωσης χρήσης ενός γεγονότος και χαρτογραφήσεων στην αποθήκευση:
 
 ![](/assets/0_i4ch5-4rxxal4rkt.png)
 
-### Jump into the water!
+### Μετάβαση στο νερό!
 
-We continue to work on two parallel vectors:
+Συνεχίζουμε να εργαζόμαστε σε δύο παράλληλους διανύσματα:
 
-1. Evolve Cairo 1.0 at full speed towards full-feature compatibility with the old Cairo.
-2. Develop Starknet v0.11.0 that will support contracts written in Cairo 1.0
+1. Evolve Κάιρο 1.0 με πλήρη ταχύτητα προς πλήρη συμβατότητα χαρακτηριστικών με το παλιό Κάιρο.
+2. Αναπτύξτε Starknet v0.11.0 που θα υποστηρίξει συμβάσεις γραμμένες στο Κάιρο 1.0
 
-In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+Εν τω μεταξύ, ενθαρρύνουμε τους προγραμματιστές να αρχίσουν να γράφουν με το Κάιρο 1.0 και να εξοικειωθούν με αυτό.
 
-For any questions — you can use the Cairo 1.0 Discord [channel](https://discord.com/channels/793094838509764618/1065544063245365288).
+Για οποιεσδήποτε ερωτήσεις - μπορείτε να χρησιμοποιήσετε το κανάλι του Καΐρου 1.0 Discord[](https://discord.com/channels/793094838509764618/1065544063245365288).
 
-For any suggestions or feedback — don’t hesitate to open an [issue](https://github.com/starkware-libs/cairo/issues) in the Cairo repo.
+Για οποιαδήποτε πρόταση ή ανατροφοδότηση - μην διστάσετε να ανοίξετε ένα[θέμα](https://github.com/starkware-libs/cairo/issues)στο Cairo repo.

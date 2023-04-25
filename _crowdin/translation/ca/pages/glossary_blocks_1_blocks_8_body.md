@@ -1,1 +1,1 @@
-The state is composed of contracts’ code and contracts’ storage.
+L'estat es compon de codi de contractes i emmagatzematge de contractes.

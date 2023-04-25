@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Conjunts ordenats de transaccions Starknet que s'executen amb el sistema operatiu Starknet, donant lloc a un canvi d'estat agregat que després es compromet amb el contracte principal de Starknet L1. Un bloc té:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … un hash de bloc: un identificador estable únic que es pot utilitzar per consultar i fer referència al bloc.
+* … un número de bloc: un nombre ordinal que representa la ubicació del bloc en la seqüència de blocs acceptats a Starknet. Tingueu en compte que el número d'un bloc pot canviar amb el temps. A més, un nombre determinat pot referir-se a diferents blocs en diferents moments del temps, per exemple, en el cas de reordres de cadena L1.

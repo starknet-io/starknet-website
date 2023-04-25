@@ -42,7 +42,7 @@ StarkGate Alpha on Mainnet有两个限制——为了减少使用Alpha 版本所
 
 一如既往，我们提醒您StarkNet目前处于**Alpha**阶段：
 
-* 事情可以打破。 If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
+* 事情可以打破。 如果他们灾难性地失败，您的资金可能会丢失（**阅读下面的免责声明**！）。
 * StarkNet Alpha 和 StarkGate 的合同都可以在没有时限的情况下升级。 虽然我们期望提前很长时间宣布这种升级，但是在安全风险迫在眉睫的情况下（例如： 如果发现了一个关键错误，升级可能会在几乎没有或没有警告的情况下应用。
 * 桥的代码以及StarkNet Alpha的部分内容尚未得到审计。 ABDK和荷兰将很快完成StarkGate Alpha的审计工作。
 

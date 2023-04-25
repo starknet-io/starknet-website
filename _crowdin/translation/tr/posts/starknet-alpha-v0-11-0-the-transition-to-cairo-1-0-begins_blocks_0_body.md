@@ -1,111 +1,111 @@
 ## TL;DR
 
-* Starknet alpha v0.11.0 is out and live on Testnet
-* You can now deploy and interact with Cairo 1.0 contracts on Starknet Testnet!
-* Computation on Starknet is 5x cheaper!
-* For the first time, the Mainnet upgrade to Starknet alpha v0.11.0 will be put to a governance vote
-* This marks the beginning of the transition period before [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)
-* Deploying Cairo 1.0 contracts on Mainnet will be enabled only after a few weeks of running on Testnet, once we ensure the new system runs smoothly.
+* Starknet alpha v0.11.0 çıktı ve Testnet'te yayında
+* Artık Starknet Testnet'te Kahire 1.0 sözleşmelerini dağıtabilir ve bunlarla etkileşim kurabilirsiniz!
+* Starknet'te hesaplama 5 kat daha ucuz!
+* İlk kez, Starknet alpha v0.11.0'a Mainnet yükseltmesi yönetim oylamasına sunulacak
+* Bu,[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)önceki geçiş döneminin başlangıcını işaret eder.
+* Kahire 1.0 sözleşmelerinin Mainnet üzerinde dağıtılması, yalnızca yeni sistemin sorunsuz çalışmasını sağladığımızda, Testnet üzerinde birkaç hafta çalıştıktan sonra etkinleştirilecektir.
 
-## Introduction
+## giriiş
 
-We are excited to announce that the much-awaited Starknet alpha v0.11.0 is live on Testnet! Why is this a big step for Starknet? In Starknet v0.11.0, you can declare, deploy and run [Cairo 1.0](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038) smart contracts. We also introduce a new system call that allows a smooth transitioning of existing contracts to a Cairo 1.0 implementation.
+Merakla beklenen Starknet alpha v0.11.0'ın Testnet'te yayında olduğunu duyurmaktan heyecan duyuyoruz! Bu Starknet için neden büyük bir adım? Starknet v0.11.0'da[Kahire 1.0](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038)akıllı sözleşme ilan edebilir, dağıtabilir ve çalıştırabilirsiniz. Ayrıca, mevcut sözleşmelerin Kahire 1.0 uygulamasına sorunsuz bir şekilde geçişine izin veren yeni bir sistem çağrısı sunuyoruz.
 
-Cairo 1.0 improves Starknet in two different aspects. First, it improves the development experience by offering a richer programming language, which introduces (among other things) types/generics/traits/error handling to Cairo. Second, Cairo 1.0 plays a key role in Starknet’s decentralization journey: Cairo 1.0 contracts sent in Starknet alpha v0.11.0 compile to Sierra. Sierra guarantees that every contract execution is provable, which is a crucial property in a decentralized Starknet.
+Kahire 1.0, Starknet'i iki farklı açıdan geliştirir. İlk olarak, Kahire'ye (diğer şeylerin yanı sıra) türleri/jenerikleri/özellikleri/hata işlemeyi tanıtan daha zengin bir programlama dili sunarak geliştirme deneyimini geliştirir. İkincisi, Kahire 1.0, Starknet'in ademi merkeziyetçilik yolculuğunda kilit bir rol oynuyor: Starknet alpha v0.11.0 derlemesinde Sierra'ya gönderilen Kahire 1.0 sözleşmeleri. Sierra, merkezi olmayan bir Starknet'te çok önemli bir özellik olan her sözleşme uygulamasının kanıtlanabilir olduğunu garanti eder.
 
-Another important improvement that is coming in this version is a 5x cost reduction for computation. This will make Starknet even more friendly to computationally intensive applications. More details below.
+Bu sürümde gelen bir diğer önemli gelişme, hesaplama için maliyetin 5 kat düşürülmesidir. Bu, Starknet'i hesaplama açısından yoğun uygulamalar için daha da kolay hale getirecek. Daha fazla detay aşağıda.
 
-## Getting Ready for Regenesis
+## Yenilenmeye Hazırlanmak
 
-Starknet alpha v0.11.0 marks the beginning of the Transition period, which will allow preparation ahead of Starknet’s Regenesis. Starknet’s Regenesis plan was [published](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4) a few months ago, and it focuses on transitioning from a system based on Cairo 0 to a system based on Cairo 1.0.
+Starknet alpha v0.11.0, Starknet'in Yenilenmesinden önce hazırlığa izin verecek olan Geçiş döneminin başlangıcını işaret ediyor. Starknet'in Regenesis planı birkaç ay önce yayınlandı[ve Kahire 0 tabanlı bir sistemden Kahire](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)tabanlı bir sisteme geçişe odaklanıyor.
 
-During the Transition period, existing Cairo 0 contracts (if they’re upgradable) have the opportunity to maintain their address and storage, and seamlessly transition their implementation to Cairo 1.0 (see next section).
+Geçiş döneminde, mevcut Kahire 0 sözleşmeleri (yükseltilebilirlerse) adreslerini ve depolama alanlarını koruma ve uygulamalarını Kahire 1.0'a sorunsuz bir şekilde geçirme fırsatına sahiptir (sonraki bölüme bakın).
 
-As a Starknet user, this means that you only need to upgrade your wallet once the new Cairo 1.0 implementation of your account is released (you’ll be able to do it any time up to the Regenesis itself). No downtime is expected, all the dapps in the system will continue to operate as usual.
+Bir Starknet kullanıcısı olarak bu, cüzdanınızı yalnızca hesabınızın yeni Kahire 1.0 uygulaması yayınlandıktan sonra yükseltmeniz gerektiği anlamına gelir (bunu Regenesis'in kendisine kadar istediğiniz zaman yapabilirsiniz). Herhangi bir kesinti beklenmiyor, sistemdeki tüm dapp'ler her zamanki gibi çalışmaya devam edecek.
 
-After the Regenesis, Starknet will stop supporting the remaining Cairo 0 contracts throughout the system. This will be well communicated in advance, and developers will be given sufficient time to migrate their contracts. The transition period is expected to last a few months, and dapp developers can already start migrating their implementation to Cairo 1.0. At the end of the Transition period, the Regenesis will happen.
+Regenesis'ten sonra, Starknet sistem genelinde kalan Kahire 0 sözleşmelerini desteklemeyi bırakacaktır. Bu önceden iyi bir şekilde iletilecek ve geliştiricilere sözleşmelerini taşımaları için yeterli zaman verilecektir. Geçiş döneminin birkaç ay sürmesi bekleniyor ve DApp geliştiricileri şimdiden uygulamalarını Kahire 1.0'a taşımaya başlayabilirler. Geçiş döneminin sonunda, Yenilenme gerçekleşecektir.
 
-## Smooth Migration to Cairo 1.0
+## Kahire 1.0'a Sorunsuz Geçiş
 
-With the transition to Cairo 1.0, existing Cairo 0 contracts are deprecated and will no longer be supported upon Regenesis. To allow upgradable Cairo 0 contracts to continue operating, even after the Regenesis, and keep the state constructed up until that time, we added a new system call — ['replace_class'](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#replace_class_syscall). Upgradable contracts have no issue with upgrading to a Cairo 1.0 implementation, but the underlying proxy (the contract that holds the actual state) will still be stuck with the Cairo 0 implementation. The \`replace_class\` syscall solves this problem by allowing the proxy contract to replace its underlying class, i.e. keep the same address and storage, but replace the implementation.
+Kahire 1.0'a geçişle birlikte mevcut Kahire 0 sözleşmeleri kullanımdan kaldırıldı ve Regenesis'te artık desteklenmeyecek. Yükseltilebilir Kahire 0 sözleşmelerinin Yeniden Doğuştan sonra bile çalışmaya devam etmesine izin vermek ve durumu o zamana kadar kurulu halde tutmak için yeni bir sistem çağrısı ekledik — ['replace_class'](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#replace_class_syscall). Yükseltilebilir sözleşmelerin Kahire 1.0 uygulamasına yükseltmeyle ilgili bir sorunu yoktur, ancak temel proxy (gerçek durumu tutan sözleşme) yine de Kahire 0 uygulamasında sıkışıp kalacaktır. \`replace_class\` sistem çağrısı, proxy sözleşmesinin temeldeki sınıfı değiştirmesine izin vererek bu sorunu çözer, yani aynı adres ve depolamayı korurken uygulamayı değiştirir.
 
-## Computation is Now 5x Cheaper!
+## Hesaplama Artık 5 Kat Daha Ucuz!
 
-Today, Starknet transaction fees have two major components: Computation and on-chain data. The computational element of the Starknet transaction fee is determined by the marginal cost of verifying its proof on L1 (see the [docs](https://docs.starknet.io/documentation/architecture_and_concepts/Fees/fee-mechanism/) for more details).
+Bugün, Starknet işlem ücretlerinin iki ana bileşeni vardır: Hesaplama ve zincir üstü veriler. Starknet işlem ücretinin hesaplama unsuru, L1'deki kanıtını doğrulamanın marjinal maliyeti tarafından belirlenir (daha fazla ayrıntı için[belge](https://docs.starknet.io/documentation/architecture_and_concepts/Fees/fee-mechanism/)bakın).
 
-Originally, our 200m Cairo steps in a proof that requires 5m gas for verification led to a naive estimation of 0.05 gas per Cairo step. Since then, we have moved to [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025) which allow for a significant reduction in L1 verification cost (only the root of a recursion tree reaches L1). It is now time to update our original estimates accordingly — the price of each Cairo-step on L2 will be reduced by 5x, and will now cost 0.01 gas.
+Başlangıçta, doğrulama için 5m gaz gerektiren bir kanıtta 200m Kahire adımlarımız, Kahire adımı başına 0,05 gaz gibi saf bir tahmine yol açtı. O zamandan beri, L1 doğrulama maliyetinde önemli bir azalmaya izin veren[özyinelemeli kanıta](https://medium.com/starkware/recursive-starks-78f8dd401025)geçtik (yalnızca bir özyineleme ağacının kökü L1'e ulaşır). Şimdi orijinal tahminlerimizi buna göre güncelleme zamanı — L2'deki her Kahire adımının fiyatı 5 kat azaltılacak ve şimdi 0,01 gaza mal olacak.
 
-This cost reduction is significant for computationally intensive applications, e.g. account contracts with non-native signatures. Simple transactions will see a minor cost reduction (~ 5%). In future versionss, we will handle the second component: on-chain data costs. Once alternatives to on-chain data are introduced to Starknet (aka Volition), the cost reduction will be felt all across the board.
+Bu maliyet düşüşü, yerel olmayan imzalara sahip hesap sözleşmeleri gibi hesaplama açısından yoğun uygulamalar için önemlidir. Basit işlemlerde küçük bir maliyet düşüşü (~ %5) görülecektir. Gelecek sürümlerde, ikinci bileşeni ele alacağız: zincir üstü veri maliyetleri. Zincir üstü verilere alternatifler Starknet'e (diğer adıyla Volition) sunulduğunda, maliyet düşüşü her yerde hissedilecektir.
 
-## Starknet Governance First Vote
+## Starknet Yönetişimi İlk Oylama
 
-The first phase of Starknet Governance has launched (more details [here](https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40)). Community members are now able to participate in shaping Starknet through an additional channel, namely voting on protocol changes.
+Starknet Yönetişiminin ilk aşaması başladı (daha fazla ayrıntı[burada](https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40)). Topluluk üyeleri artık ek bir kanal aracılığıyla Starknet'i şekillendirmeye, yani protokol değişiklikleri üzerinde oylamaya katılabilirler.
 
-Starknet Governance first phases will focus on Starknet protocol upgrades. Every Starknet version upgrade will first be deployed on Testnet; voters will have a 6-day period to examine and test the upgraded version as it runs on Goerli. During this time, a Snapshot proposal will be opened, and the community can vote on whether to approve the new version for Mainnet deployment.
+Starknet Yönetişiminin ilk aşamaları, Starknet protokol yükseltmelerine odaklanacak. Her Starknet sürüm yükseltmesi, önce Testnet'te konuşlandırılacaktır; seçmenlerin, Goerli'de çalışırken yükseltilmiş sürümü incelemek ve test etmek için 6 günlük bir süresi olacak. Bu süre zarfında, bir Anlık Görüntü teklifi açılır ve topluluk, Mainnet dağıtımı için yeni sürümün onaylanıp onaylanmayacağını oylayabilir.
 
-If the proposal gains a majority of ‘YES’ votes during the 6-day voting period, the proposal passes and Starknet Mainnet will be upgraded accordingly.
+Teklif, 6 günlük oylama döneminde 'EVET' oylarının çoğunluğunu alırsa, teklif geçer ve Starknet Mainnet buna göre yükseltilir.
 
-Starknet alpha v0.11.0 is the first Starknet version which is up for a vote. The Starknet alpha v0.11.0 vote will be open for six days starting from the Testnet deployment.
+Starknet alpha v0.11.0, oylamaya sunulan ilk Starknet sürümüdür. Starknet alpha v0.11.0 oylaması, Testnet dağıtımından itibaren altı gün boyunca açık olacaktır.
 
-Relevant links:
+İlgili bağlantılar:
 
-* [Snapshot space](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
-* [Delegation discovery page](https://delegate.starknet.io/)
-* Starknet alpha v0.11.0 discussion thread on the [Community forum](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)
+* [Anlık görüntü alanı](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
+* [Temsilci bulma sayfası](https://delegate.starknet.io/)
+* [Topluluk forumu](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)Starknet alpha v0.11.0 tartışma dizisi
 
-## Cairo 1.0 and Sierra
+## Kahire 1.0 ve Sierra
 
-Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion) is an intermediate representation that compiles to Cairo assembly (CASM). Pre Starknet alpha v0.11.0, a developer would compile Cairo 0 into CASM and send the result to the Starknet sequencer. With Cairo 1.0, developers compile their code to Sierra, and send this intermediate representation to the sequencer. The sequencer will then compile it to CASM. Sierra is guaranteed to compile to “safe CASM”, i.e. a subset of CASM that cannot fail, making each and every execution provable. This guarantees that the sequencer will be able to charge fees even for reverted transactions, protecting from DOS. For more information, see [the docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/).
+Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion), Kahire meclisine (CASM) derlenen bir ara temsildir. Starknet alpha v0.11.0 öncesi, bir geliştirici Kahire 0'ı CASM'de derler ve sonucu Starknet sıralayıcıya gönderirdi. Cairo 1.0 ile, geliştiriciler kodlarını Sierra'ya derler ve bu ara gösterimi sıralayıcıya gönderir. Sıralayıcı daha sonra onu CASM'ye derleyecektir. Sierra'nın "güvenli CASM"ye, yani CASM'nin başarısız olamayacak bir alt kümesine derlemesi garanti edilir ve her yürütme kanıtlanabilir hale gelir. Bu, sıralayıcının DOS'tan koruyarak geri alınan işlemler için bile ücret talep edebileceğini garanti eder. Daha fazla bilgi için bkz.[belgeler](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/).
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*KsAwaJTIsOuCsJIe)
 
-Starknet alpha 0.11.0 will use the [Cairo 1.0-alpha.6 version](https://github.com/starkware-libs/cairo/releases/tag/v1.0.0-alpha.6). This version is close to [feature parity](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md) with Cairo 0, with all Starknet system calls already present.
+Starknet alpha 0.11.0,[Kahire 1.0-alpha.6 sürüm](https://github.com/starkware-libs/cairo/releases/tag/v1.0.0-alpha.6)kullanacak. Bu sürüm, tüm Starknet sistem çağrıları zaten mevcutken, Kahire 0 ile[özellik paritesi](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)yakındır.
 
-Note that the Starknet sequencer uses a fixed compiler version, which means language improvements may not be immediately available in Starknet, and will be available only after a Starknet version update. Specifically, while improvements that affect the Cairo 1.0 → Sierra compilation may take effect immediately, changes to the Sierra → CASM compiler (see the [docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/) for more details) will need to wait for a Starknet upgrade.
+Starknet sıralayıcının sabit bir derleyici sürümü kullandığını unutmayın; bu, dil iyileştirmelerinin Starknet'te hemen mevcut olmayabileceği ve yalnızca bir Starknet sürüm güncellemesinden sonra mevcut olacağı anlamına gelir. Spesifik olarak, Kahire 1.0 → Sierra derlemesini etkileyen iyileştirmeler hemen yürürlüğe girebilse de, Sierra → CASM derleyicisindeki değişikliklerin (daha fazla ayrıntı için[docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/)bakın) bir Starknet yükseltmesini beklemesi gerekecektir.
 
-## What Else is New?
+## Başka yeni ne var?
 
-### New Transaction Type — Declare v2
+### Yeni İşlem Türü — v2'yi Bildir
 
-We’re adding [a new transaction type](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/#declare_v2_cairo_1_0) for declaring Cairo 1.0 classes.
+Kahire 1.0 sınıflarını bildirmek için[yeni bir işlem türü](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/#declare_v2_cairo_1_0)ekliyoruz.
 
-This new \`declare\` transaction version is similar to the existing \`declare\`, with two important distinctions:
+Bu yeni \`beyan\` işlem sürümü, iki önemli farkla mevcut \`beyan\` işlemine benzer:
 
-* The class object being sent now represents Sierra rather than CASM, i.e. the class’s semantics is defined by the Sierra representation.
-* The user is also signing the compiled class hash. This is a crucial step until Sierra→CASM compilation will be proven as part of the Starknet OS.
+* Gönderilen sınıf nesnesi artık CASM yerine Sierra'yı temsil ediyor, yani sınıfın semantiği Sierra temsili tarafından tanımlanıyor.
+* Kullanıcı ayrıca derlenmiş sınıf karmasını da imzalıyor. Bu, Sierra→CASM derlemesinin Starknet İşletim Sisteminin bir parçası olduğu kanıtlanana kadar çok önemli bir adımdır.
 
-For more details, see [the docs](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect).
+Daha fazla ayrıntı için bkz.[belgeler](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect).
 
-From the developer’s point of view, the experience remains the same. After writing your Cairo 1.0 code, you can use the CLI to declare the class.
+Geliştiricinin bakış açısından, deneyim aynı kalır. Cairo 1.0 kodunuzu yazdıktan sonra, sınıfı bildirmek için CLI'yi kullanabilirsiniz.
 
-**Note that initially, \`declare v2\` transactions will not be accepted on Starknet Mainnet. After a period of experimenting on Testnet, the new transaction type will be enabled on Mainnet, and Cairo 1.0 classes will become available.**
+**Başlangıçta, Starknet Mainnet'te \`v2 beyanı\` işlemlerinin kabul edilmeyeceğini unutmayın. Testnet üzerinde bir süre deneme yaptıktan sonra Mainnet üzerinde yeni işlem türü etkinleştirilecek ve Kahire 1.0 sınıfları kullanıma sunulacaktır.**
 
-### Poseidon is Here
+### Poseidon Burada
 
-[Poseidon](https://www.poseidon-hash.info/) is a family of hash functions designed for having very efficient algebraic circuits. As such, they may be very useful in ZK proving systems such as STARKs and SNARKs. As of Starknet alpha v0.11.0, developers will be able to use Poseidon. Additionally, some of the hash computations that are part of the Starknet protocol will transition to Poseidon (specifically, the class hash, compiled class hash, and parts of the state commitment will use Poseidon, see [the docs](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash) for more details). In the future, more internal components will transition to using the Poseidon hash function.
+[Poseidon](https://www.poseidon-hash.info/)çok verimli cebirsel devrelere sahip olmak için tasarlanmış bir sağlama fonksiyonları ailesidir. Bu nedenle, STARK'lar ve SNARK'lar gibi ZK kanıtlama sistemlerinde çok faydalı olabilirler. Starknet alpha v0.11.0'dan itibaren, geliştiriciler Poseidon'u kullanabilecekler. Ek olarak, Starknet protokolünün parçası olan bazı karma hesaplamalar Poseidon'a geçiş yapacaktır (özellikle, sınıf karma, derlenmiş sınıf karma ve durum taahhüdünün bazı bölümleri Poseidon'u kullanacaktır, daha fazla ayrıntı için[belgeler](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash)bakın). Gelecekte, daha fazla dahili bileşen Poseidon hash işlevini kullanmaya geçiş yapacaktır.
 
-The exact version and parameters that are used in Starknet can be found [here](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
+Starknet'te kullanılan tam sürüm ve parametreler[burada bulunabilir](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
 
-### Miscellaneous changes
+### Çeşitli değişiklikler
 
-Like previous Starknet versions, an upgrade also has implications for our APIs and other low-level components. Below we list those and address the specific changes that were made:
+Önceki Starknet sürümlerinde olduğu gibi, bir yükseltmenin de API'lerimiz ve diğer düşük seviyeli bileşenlerimiz üzerinde etkileri vardır. Aşağıda bunları listeliyoruz ve yapılan belirli değişiklikleri ele alıyoruz:
 
-* v0 invoke/declare transactions are no longer supported
-* L1→L2 messages now require [fees](https://docs.starknet.io/documentation/architecture_and_concepts/L1-L2_Communication/messaging-mechanism/#l1-l2_message_fees). That is, messages sent with zero fee will not be processed by the Starknet sequencer
-* The on-chain data format is [changed](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/#on_chain_data_post_v0_11_0)
-* [API changes](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#api_changes) (not all changes are listed here, please refer to the docs for an exhaustive list) :
-* added a new \`get_compiled_class_by_class_hash\` endpoint
-* \`get_class_by_hash\` returns both Cairo 0 / Cairo 1.0 classes (depending on the requested hash)
-* \`get_state_update\` has a new section for replaced classes, and declarations are split between Cairo 0 and Cairo 1 classes.
-* \`estimate_fee\` and \`simulate_tx\` can now skip validation
-* A [new](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1) Starknet JSON-RPC version
+* v0 çağırma/bildirme işlemleri artık desteklenmiyor
+* L1→L2 mesajları artık[ücret gerektiriyor](https://docs.starknet.io/documentation/architecture_and_concepts/L1-L2_Communication/messaging-mechanism/#l1-l2_message_fees). Yani sıfır ücretle gönderilen mesajlar Starknet sıralayıcı tarafından işlenmeyecektir.
+* Zincir üstü veri formatı[değiştirildi](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/#on_chain_data_post_v0_11_0)
+* [API değişiklikleri](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#api_changes)(tüm değişiklikler burada listelenmemiştir, lütfen kapsamlı bir liste için belgelere bakın):
+* yeni bir \`get_compiled_class_by_class_hash\` bitiş noktası ekledi
+* \`get_class_by_hash\` Kahire 0 / Kahire 1.0 sınıflarının ikisini de döndürür (istenen karmaya bağlı olarak)
+* \`get_state_update\`, değiştirilen sınıflar için yeni bir bölüme sahiptir ve bildirimler Kahire 0 ile Kahire 1 sınıfları arasında bölünmüştür.
+* \`estimate_fee\` ve \`simulate_tx\` artık doğrulamayı atlayabilir
+* [yeni](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1)Starknet JSON-RPC sürümü
 
-## What’s coming next?
+## Sırada ne var?
 
-Now that all the Cairo 1.0-related infrastructure has been put into place, you can expect:
+Artık Kahire 1.0 ile ilgili tüm altyapı uygulamaya konduğuna göre şunları bekleyebilirsiniz:
 
-* Further language improvements to Cairo 1.0
-* Performance improvements: [as promised](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), we keep moving forward towards significantly increasing the TPS. The next step in the roadmap is transitioning to the [Rust sequenencer](https://github.com/starkware-libs/blockifier), which is developed in the open under the Apache 2.0 license. The new sequencer will make use of the [rust CairoVM](https://github.com/lambdaclass/cairo-rs) and the [Papyrus](https://github.com/starkware-libs/papyrus) full node, forming the Performance Trio.
-* Offchain [DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! In this version, we handled the computational component of the transaction’s cost. In upcoming versions, we will handle the on-chain data costs, which are today the dominant cost for average transactions.
+* Kahire 1.0'da daha fazla dil geliştirmesi
+* Performans iyileştirmeleri:[söz verildiği gibi](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), TPS'yi önemli ölçüde artırma yolunda ilerlemeye devam ediyoruz. Yol haritasındaki bir sonraki adım, Apache 2.0 lisansı altında açıkta geliştirilen[Rust sıralayıcıya](https://github.com/starkware-libs/blockifier)geçiş yapmaktır. Yeni sıralayıcı, Performance Trio'yu oluşturan[paslı CairoVM](https://github.com/lambdaclass/cairo-rs)ve[Papyrus](https://github.com/starkware-libs/papyrus)tam düğümünü kullanacak.
+* Zincir dışı[DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! Bu versiyonda, işlem maliyetinin hesaplama bileşenini ele aldık. Gelecek sürümlerde, bugün ortalama işlemler için baskın maliyet olan on-chain veri maliyetlerini ele alacağız.
 
 ![](/assets/starknet-alpha-v0.11.0-diagram.png)

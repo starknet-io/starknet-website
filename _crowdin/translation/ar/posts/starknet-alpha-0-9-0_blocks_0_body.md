@@ -1,67 +1,67 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **الرسوم الآن إلزامية على Testnet، قريبا على Mainnet**
+* نمط مصنع العقود ممكن الآن!
+* StarkNet بصدد إدخال فئات تعاقدية
+* استعيض عن مكالمة المندوبة بالمكتبة العامة
 
-### Intro
+### مقدمة
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+نحن سعداء لتقديم StarkNet Alpha 0.9.0! هذه نسخة هامة تتخذ فيها StarkNet خطوات هامة نحو النضج، مع إضافات كبيرة إلى كل من الوظيفة وتصميم البروتوكول.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**الرسوم إلزامية**(حاليا على Testnet فقط، حتى الإصدار 0.9. وسيعيش في ماينيت) - ويجب أن يكون لأي رفاهية من طراز L2 نظامها المستقل الخاص من الرسوم. بعد إدخال الرسوم كميزة اختيارية في الإصدار 0.8. ونحن واثقون الآن من إدراجهم كعنصر أساسي في البروتوكول، وجعلهم إلزاميين. مزيد من التفاصيل أدناه.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+وثمة تغيير هام آخر على مستوى البروتوكول يتمثل في الأخذ بفئات العقود وفصل الفئات/النموذج. وهذا يتيح استخدام وظيفة \`delegate_call\` وعمليات النشر من العقود القائمة، مما يمكن من نمط المصنع على StarkNet.
 
-### Contract Classes
+### فئات العقود
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+وإذ نستلهم البرمجة الموجهة، فإننا نميز بين رمز العقد وتنفيذه. ونحن نفعل ذلك بتقسيم العقود إلى فئات وحالات.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+**فئة العقد**هي تعريف العقد: رمز القاهرة الخاص بها، تلميح المعلومات، وأسماء نقاط الدخول، وكل ما هو ضروري لتعريف لغتها بشكل لا لبس فيه. يتم تحديد كل صف دراسي بتجزئة الفصل (مشابهة لاسم الصف الدراسي من لغات OOP).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+**نموذج العقد**، أو مجرد عقد، هو عقد منشور يقابل بعض الفئة. ويلاحظ أن العقود لا تتصرف إلا كعقود، أي أن لها تخزينها الخاص ويمكن استنساخها عن طريق المعاملات/العقود الأخرى. ولا يكون للفئة التعاقدية بالضرورة مثال منشور في StarkNet. ويأتي إدخال الصفوف مع عدة تغييرات في البروتوكول.
 
-#### ‘Declare’ Transaction
+#### "إعلان" معاملة
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+نحن نقدم نوعاً جديداً من المعاملات ل StarkNet: المعاملة["الإعلان"](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)، التي تسمح بإعلان عقد**صف دراسي.**خلافا للمعاملة \'نشر\'، هذا لا يستخدم مثيل من تلك الفئة. ستتضمن حالة StarkNet قائمة بالفصول المعلنة. يمكن إضافة فئات جديدة عن طريق المعاملة الجديدة \'الإعلان\'.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### مصانع المكالمات والعقود الخاصة بنظام "النشر".
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+بمجرد الإعلان عن فئة ما، أي أن المعاملة المقابلة \`الإعلان\` قد تم قبولها، يمكننا نشر أمثلة جديدة من تلك الفئة. وتحقيقا لهذه الغاية، نستخدم مكالمة النظام الجديدة \`نشر \`، التي تأخذ بالحجج التالية:
 
-* The class hash
-* Salt
-* Constructor arguments
+* تجزئة الصف الدراسي
+* ملح
+* حجج البناء
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+ثم سينشر شراب "النشر" مثيل جديد من تلك الفئة التعاقدية، الذي سيتم تحديد عنوان[](https://docs.starknet.io/docs/Contracts/contract-address)من خلال البارامترات الثلاثة أعلاه وعنوان المستخدم (العقد الذي استظهر بمكالمة النظام).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+ويسمح لنا إدراج عمليات الانتشار داخل صفقة الاستدعاء بسعر ورسوم عمليات النشر، دون الاضطرار إلى معاملة عمليات النشر والاستدعاء بطريقة مختلفة. لمزيد من المعلومات حول رسوم النشر، انظر[المستندات](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+وتُدخل هذه الخاصية مصانع التعاقد في StarkNet حيث يمكن لأي عقد أن يستظهر بعقود "StarkNet"، مما ينشئ عقوداً جديدة.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### الانتقال من "مكالمة المندوبة" إلى "المكتبة العامة"
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+إن إدخال الصفوف الدراسية يسمح لنا بمعالجة مشكلة معروفة تماماً في آلية مكالمة المندوبين في إيثيريوم: عندما يؤدي عقد ما دعوة مندوبة إلى عقد آخر. وهي تحتاج فقط إلى صفتها (رمزها) بدلاً من نموذج فعلي (تخزينها). ولذلك فإن الاضطرار إلى تحديد حالة معينة من حالات العقد عند إجراء مكالمة مندوبة هو ممارسة سيئة (والواقع أنه وقد أدى ذلك إلى بعض الأخطاء في عقود إيثيريوم) - ولا يحتاج إلا إلى تحديد الصف.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+تصبح مكالمة النظام القديمة \`delegate_call\` الآن مغفلة (العقود القديمة التي تم نشرها بالفعل ستستمر في العمل، ولكن**العقود التي تستخدم \`delegate_call\` لن تقوم بتجميع**)، ويتم استبدالها بمكالمة جديدة من نظام المكتبة_المكالمة التي تحصل على تجزئة الصف (من صف معلن عنه سابقاً) بدلاً من عنوان مثال العقد. ويلاحظ أن هناك عقداً فعلياً واحداً فقط يدخل في مكالمة مكتبية، وبالتالي فإننا نتجنب الغموض بين عقد الاتصال الهاتفي وعقد التنفيذ.
 
-#### New API endpoints
+#### نقاط نهاية API جديدة
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+أضفنا نقطتين نهائيتين جديدتين إلى API، مما يسمح باستعادة البيانات ذات الصلة بالفصل:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: يرجع تعريف الصف الدراسي بتجزئة الفصل
+* \`get_class_hash_at\`: يرجع تجزئة فئة العقد المنشور بسبب عنوان العقد
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+ويلاحظ أنه للحصول على فئة العقد المنشور مباشرة، بدلا من المرور بالطريقتين المذكورتين أعلاه، يمكنك استخدام نقطة النهاية القديمة \`get_full_contract\`، التي سيتم إعادة تسميتها في الإصدارات المقبلة. جميع النقاط النهائية المذكورة أعلاه يمكن استخدامها أيضا من[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### الرسوم
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+نشرع في دمج الرسوم في StarkNet ، وجعلها إلزامية (أولاً على Testnet، ثم أيضاً على Mainnet) ل ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\`. الصفقة \`الإعلان\` لن تتطلب رسوماً في هذه المرحلة. بالمثل، لن تتطلب المعاملات \`نشر`` رسوماً أيضاً، ولكن لاحظ أن هذا النوع من المعاملات سوف يتم إهماله على الأرجح في الإصدارات المقبلة.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+ولا تزال هناك عدة أسئلة مفتوحة في هذا المجال، وأبرزها مسألة كيفية فرض رسوم على إعلانات العقود ونشر حسابات شركة StarkNet. وسوف نعالج هذه المسائل في صيغ مقبلة.
 
-### What’s Next?
+### ما التالي؟
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+اتباعا لخارطة الطريق التي أعلنناها[في فبراير](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717)، نحن ملتزمون بتحسين أداء StarkNet، بشكل عام، وأداء المتسلسل على وجه الخصوص، للحصول على ردود فعل أسرع للمستخدمين حول معاملاتهم. في الإصدار القادم، نخطط لإدخال التوازي في تسلسل التسلسل، تمكين إنتاج كتلة أسرع.
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+النسخة الرئيسية التالية من StarkNet سوف تركز على بنية حسابات StarkNet، بطريقة مشابهة لـ[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). وبهذا نكون قد انتهينا من الطريقة التي تتصرف بها حسابات StarkNet واتخذنا خطوة رئيسية أخرى نحو الاعتماد الجماعي!

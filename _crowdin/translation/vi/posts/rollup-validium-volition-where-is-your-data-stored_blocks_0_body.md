@@ -1,50 +1,50 @@
-### TL;DR
+### TL; DR
 
-* StarkWare offers a range of Data Availability (DA) modes for customers to choose from, according to their priority
-* There are three approaches to Data Availability for STARK proofs, all of them are already available in production:\
-  — **Rollup**: the ledger is published directly on the blockchain\
-  — **Validium**: a Data Availability Committee secures the ledger, with only a hash being stored on-chain\
-  — **Volition**: apps can let users choose their DA mode — Rollup or Validium — for each and every transaction
-* No matter which DA is used — the validity of all transactions is guaranteed by STARKs
+* StarkWare cung cấp nhiều chế độ Dữ liệu sẵn có (DA) để khách hàng lựa chọn, tùy theo mức độ ưu tiên của họ
+* Có ba cách tiếp cận Tính khả dụng của dữ liệu đối với bằng chứng STARK, tất cả chúng đều đã có sẵn trong quá trình sản xuất:\
+  —**Tổng hợp**: sổ cái được xuất bản trực tiếp trên chuỗi khối\
+  —**Xác thực**: Ủy ban về tính khả dụng của dữ liệu bảo vệ sổ cái, chỉ với một hàm băm được lưu trữ trên chuỗi\
+  —**Tập**: ứng dụng có thể cho phép người dùng chọn chế độ DA của họ — Rollup hoặc Validium — cho mỗi và mọi giao dịch
+* Bất kể DA nào được sử dụng — tính hợp lệ của tất cả các giao dịch được đảm bảo bởi STARK
 
-### Introduction
+### Giới thiệu
 
-As of November 2022, [StarkEx](https://starkware.co/starkex/) has settled over $750 billion of trading volume, and over 270m transactions on Ethereum. In the NFT space, powering apps such as ImmutableX and Sorare, StarkEx has minted over 85 million NFTs at a price that is 1000x cheaper than doing this directly on Ethereum. STARK-based technology is scaling Ethereum. For example, in a single week, StarkEx ran 1.6x the number of transactions as Ethereum (12m on StarkEx vs 7.5m on Ethereum) while taking up less than 0.1% of Ethereum blockspace. And it does all of this while giving users the same level of security as if they were settling directly on Ethereum.
+Tính đến tháng 11 năm 2022,[StarkEx](https://starkware.co/starkex/)đã thanh toán hơn 750 tỷ đô la khối lượng giao dịch và hơn 270 triệu giao dịch trên Ethereum. Trong không gian NFT, cung cấp năng lượng cho các ứng dụng như ImmutableX và Sorare, StarkEx đã đúc hơn 85 triệu NFT với mức giá rẻ hơn 1000 lần so với thực hiện điều này trực tiếp trên Ethereum. Công nghệ dựa trên STARK đang mở rộng quy mô Ethereum. Ví dụ: trong một tuần, StarkEx đã chạy số lượng giao dịch gấp 1,6 lần so với Ethereum (12 triệu trên StarkEx so với 7,5 triệu trên Ethereum) trong khi chiếm chưa đến 0,1% không gian khối Ethereum. Và nó thực hiện tất cả những điều này trong khi cung cấp cho người dùng mức độ bảo mật giống như thể họ đang giải quyết trực tiếp trên Ethereum.
 
-### How does StarkWare achieve this?
+### Làm thế nào để StarkWare đạt được điều này?
 
-Users send transactions on Layer 2 (either StarkEx or StarkNet), which are batched and sent to a STARK prover. This STARK prover knows the state of the ledger before and after these transactions have been processed. The prover produces a STARK proof that attests to the validity of the new state of the ledger after these transactions have been executed. The new state and the STARK proof are sent to the on-chain STARK verifier. The verification of this proof happens autonomously via an immutable smart contract on Ethereum.
+Người dùng gửi các giao dịch trên Lớp 2 (StarkEx hoặc StarkNet), các giao dịch này được nhóm và gửi đến một bộ chứng minh STARK. Người chứng minh STARK này biết trạng thái của sổ cái trước và sau khi các giao dịch này được xử lý. Người chứng minh tạo ra bằng chứng STARK chứng thực tính hợp lệ của trạng thái mới của sổ cái sau khi các giao dịch này đã được thực hiện. Trạng thái mới và bằng chứng STARK được gửi đến trình xác minh STARK trên chuỗi. Việc xác minh bằng chứng này diễn ra tự động thông qua hợp đồng thông minh bất biến trên Ethereum.
 
-This architecture provides the best of both worlds: we can have low transaction costs, while still having Ethereum in the middle as a neutral arbitrator. Ethereum as an arbitrator is not just a nice-to-have; it provides critical security to the end user. A user transacting can now be confident that their funds are secured by Ethereum, and transactions are immutable once they are verified on Ethereum. The user also has complete self-custody of their funds. Self-custody is important because it ensures that the user has access to their funds at all times, without relying on any third party.
+Kiến trúc này cung cấp những gì tốt nhất của cả hai thế giới: chúng ta có thể có chi phí giao dịch thấp, trong khi vẫn có Ethereum ở giữa với tư cách là trọng tài trung lập. Ethereum với tư cách là người phân xử không chỉ là thứ dễ sở hữu; nó cung cấp bảo mật quan trọng cho người dùng cuối. Giờ đây, người dùng giao dịch có thể yên tâm rằng tiền của họ được bảo đảm bằng Ethereum và các giao dịch là bất biến sau khi chúng được xác minh trên Ethereum. Người dùng cũng hoàn toàn tự quản lý tiền của mình. Tự lưu giữ rất quan trọng vì nó đảm bảo rằng người dùng luôn có quyền truy cập vào tiền của họ mà không cần phụ thuộc vào bất kỳ bên thứ ba nào.
 
-### Where does data availability fit into all of this?
+### Dữ liệu sẵn có phù hợp với tất cả những điều này ở đâu?
 
-It’s important to emphasize both what this proof is doing as well as what it’s *not* doing. The proof is attesting to the validity of the new state, but it’s not telling you what the new state is. For that, you need data availability. If we only have the proof, then the blockchain knows that what was submitted is valid, but it doesn’t know what the new state (eg. ledger balance) is! Consumers of this data include users who have transactions within these proofs. The data should be made available to them if they want to withdraw funds on Ethereum without needing to trust the Layer 2 operator. This gives users full self-custody of their funds.
+Điều quan trọng là phải nhấn mạnh cả những gì bằng chứng này đang làm cũng như những gì nó không phải</em>*làm. Bằng chứng đang chứng thực tính hợp lệ của trạng thái mới, nhưng nó không cho bạn biết trạng thái mới là gì. Đối với điều đó, bạn cần dữ liệu sẵn có. Nếu chúng ta chỉ có bằng chứng, thì chuỗi khối biết rằng những gì đã gửi là hợp lệ, nhưng nó không biết trạng thái mới (ví dụ: số dư sổ cái) là gì! Người tiêu dùng dữ liệu này bao gồm những người dùng có giao dịch trong các bằng chứng này. Dữ liệu sẽ được cung cấp cho họ nếu họ muốn rút tiền trên Ethereum mà không cần tin tưởng vào nhà điều hành Lớp 2. Điều này mang lại cho người dùng toàn quyền tự quản lý tiền của họ.</p>
 
-One analogy for this is your high-school teacher asking you to prove that x equals x. This is trivial to prove. What’s more difficult to answer: what is x actually equal to? For that, you need a separate piece of information. It could be that x equals 5, or another value. Likewise, on the blockchain, a STARK proof can be submitted to a STARK verifier smart contract for verification. And the verifier can attest that the proof is valid (that x=x). But you need a separate input to tell you what x (the new ledger balance) is.
+Một ví dụ tương tự cho điều này là giáo viên trung học của bạn yêu cầu bạn chứng minh rằng x bằng x. Điều này là tầm thường để chứng minh. Điều khó trả lời hơn: x thực sự bằng bao nhiêu? Đối với điều đó, bạn cần một phần thông tin riêng biệt. Có thể là x bằng 5 hoặc một giá trị khác. Tương tự như vậy, trên chuỗi khối, bằng chứng STARK có thể được gửi tới hợp đồng thông minh của trình xác minh STARK để xác minh. Và người xác minh có thể chứng thực rằng bằng chứng là hợp lệ (x=x). Nhưng bạn cần một đầu vào riêng để cho bạn biết x (số dư sổ cái mới) là bao nhiêu.
 
-There are three approaches to make this data available:
+Có ba cách tiếp cận để cung cấp dữ liệu này:
 
-#### Rollup Mode
+#### Chế độ cuộn lên
 
-Rollup mode ensures that the state of the ledger is stored on Ethereum together with the proofs. Rollup mode is currently used by [dYdX](https://dydx.exchange/) in production, and is also used by the [Public StarkNet](http://starknet.io/) L2 network. The benefits here are clear: one can recreate the state of the ledger by only interacting with the Ethereum blockchain. The implication of this is that you, as an end-user, can trustlessly talk to the relevant smart contract on Ethereum, and withdraw your funds even if the Layer 2 system shuts down.
+Chế độ tổng số đảm bảo rằng trạng thái của sổ cái được lưu trữ trên Ethereum cùng với các bằng chứng. Chế độ tổng số hiện được[dYdX](https://dydx.exchange/)sử dụng trong sản xuất và cũng được sử dụng bởi mạng[Public StarkNet](http://starknet.io/)L2. Lợi ích ở đây rất rõ ràng: người ta có thể tạo lại trạng thái của sổ cái bằng cách chỉ tương tác với chuỗi khối Ethereum. Hàm ý của điều này là bạn, với tư cách là người dùng cuối, có thể nói chuyện một cách đáng tin cậy với hợp đồng thông minh có liên quan trên Ethereum và rút tiền của bạn ngay cả khi hệ thống Lớp 2 ngừng hoạt động.
 
-#### Validium
+#### hợp lệ
 
-Under Rollup Mode, the majority of Ethereum gas costs go to Data Availability, and not proof verification. This is because it is very gas-intensive to store data on the blockchain. In Validium mode, the ledger information is not sent to Ethereum. Rather, it is stored off-chain with a Data Availability Committee. Ethereum stores a hash of this ledger information. This Data Availability Committee consists of a quorum of independent members that oversee the correct state update as well as keep a copy of the data that was processed. Each StarkEx instance can create their own quorum. Quorum members for existing apps running on StarkEx include entities like [Consensys](https://consensys.net/), [Nethermind](https://nethermind.io/), [Iqlusion](https://iqlusion.io/) and [Cephalopod](https://cephalopod.equipment/).
+Trong Chế độ tổng hợp, phần lớn chi phí gas Ethereum được chuyển đến Tính khả dụng của dữ liệu chứ không phải xác minh bằng chứng. Điều này là do việc lưu trữ dữ liệu trên blockchain rất tốn gas. Ở chế độ Validium, thông tin sổ cái không được gửi đến Ethereum. Thay vào đó, nó được lưu trữ ngoài chuỗi với Ủy ban về tính sẵn có của dữ liệu. Ethereum lưu trữ một hàm băm của thông tin sổ cái này. Ủy ban về tính khả dụng của dữ liệu này bao gồm một nhóm tối thiểu các thành viên độc lập giám sát việc cập nhật trạng thái chính xác cũng như giữ một bản sao của dữ liệu đã được xử lý. Mỗi phiên bản StarkEx có thể tạo đại biểu của riêng mình. Thành viên đại biểu cho các ứng dụng hiện có đang chạy trên StarkEx bao gồm các thực thể như[Consensys](https://consensys.net/),[Nethermind](https://nethermind.io/),[Iqlusion](https://iqlusion.io/)và[Cephalopod](https://cephalopod.equipment/).
 
-The benefits here are clear. There is no need to pay Ethereum gas fees to store the ledger information on-chain. Rather, the only thing stored on Ethereum is a single hash of the ledger information. If you want to trustlessly withdraw funds from Layer 2 by talking to Ethereum, you merely require the digital signature of one of the members of the Data Availability Committee. The DAC members will use cryptography to prove that you have ownership of those funds.
+Những lợi ích ở đây là rõ ràng. Không cần phải trả phí gas Ethereum để lưu trữ thông tin sổ cái trên chuỗi. Thay vào đó, thứ duy nhất được lưu trữ trên Ethereum là một hàm băm duy nhất của thông tin sổ cái. Nếu bạn muốn rút tiền từ Lớp 2 một cách đáng tin cậy bằng cách nói chuyện với Ethereum, bạn chỉ cần có chữ ký điện tử của một trong các thành viên của Ủy ban Dữ liệu Sẵn có. Các thành viên DAC sẽ sử dụng mật mã để chứng minh rằng bạn có quyền sở hữu các khoản tiền đó.
 
-Another hidden benefit of Validium Data Availability is confidentiality from people reading the blockchain. Under Rollup Mode, the balance of each account at the time that each proof is submitted is known to the public. With Validium, this data is hidden from the blockchain — only the Data Availability Committee is aware of this, because it’s kept off-chain. This level of confidentiality enables a wide variety of use cases where obfuscating the transactions data is important.
+Một lợi ích tiềm ẩn khác của Tính khả dụng của Dữ liệu Validium là tính bảo mật đối với những người đọc chuỗi khối. Trong Chế độ tổng số, số dư của mỗi tài khoản tại thời điểm mỗi bằng chứng được gửi sẽ được công khai. Với Validium, dữ liệu này bị ẩn khỏi chuỗi khối — chỉ có Ủy ban về tính sẵn có của dữ liệu mới biết điều này, vì dữ liệu này được lưu giữ ngoài chuỗi. Mức độ bảo mật này cho phép nhiều trường hợp sử dụng khác nhau trong đó việc làm xáo trộn dữ liệu giao dịch là rất quan trọng.
 
-#### Volition
+#### ý chí
 
-Volition is a data availability architecture that provides the choice between Validium and Rollup Mode at the transaction level. It does this by keeping one ledger on-chain, and another ledger with a Data Availability Committee. Users can choose between Validium and Rollup mode for each individual transaction.
+Volition là kiến trúc có sẵn dữ liệu cung cấp lựa chọn giữa Chế độ hợp lệ và Tổng số ở cấp độ giao dịch. Nó thực hiện điều này bằng cách giữ một sổ cái trực tuyến và một sổ cái khác với Ủy ban tính sẵn có của dữ liệu. Người dùng có thể chọn giữa chế độ Xác thực và Tổng số cho từng giao dịch riêng lẻ.
 
-Imagine that you purchase a really expensive NFT like a Bored Ape or a Cryptopunk, on an app running on StarkEx. You may want to use Rollup Mode to secure the data for that NFT, because you want a record of that specific transaction stored on Ethereum. However, you may then purchase a really cheap NFT (e.g. a cloak for your character in a blockchain game), and in that circumstance you will be happy to save money by using Validium.
+Hãy tưởng tượng rằng bạn mua một NFT thực sự đắt tiền như Bored Ape hoặc Cryptopunk, trên một ứng dụng chạy trên StarkEx. Bạn có thể muốn sử dụng Chế độ tổng số để bảo mật dữ liệu cho NFT đó, vì bạn muốn có một bản ghi về giao dịch cụ thể đó được lưu trữ trên Ethereum. Tuy nhiên, sau đó bạn có thể mua một NFT thực sự rẻ (ví dụ: áo choàng cho nhân vật của bạn trong trò chơi chuỗi khối) và trong trường hợp đó, bạn sẽ rất vui khi tiết kiệm tiền bằng cách sử dụng Validium.
 
-If you are interested in the scale achieved by STARK proofs, then please come and build on us.
+Nếu bạn quan tâm đến quy mô đạt được bằng các bằng chứng của STARK, vui lòng đến và xây dựng dựa trên chúng tôi.
 
 
 
-You can always email [info@starkware.co](mailto:info@starkware.co) and a human will get to your email.
+Bạn luôn có thể gửi email tới[info@starkware.co](mailto:info@starkware.co)và một người sẽ nhận được email của bạn.

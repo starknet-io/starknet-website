@@ -24,8 +24,8 @@
 
 [チュートリアルとドキュメント](https://www.cairo-lang.org/docs/hello_starknet/) から始めましょう。
 
-その後、StarkNetに記述・導入した[サンプルAMMスマートコントラクト](http://cairo-lang.org/docs/hello_starknet/amm.html)をご覧ください。 シンプルなAMMで、ここ[](https://starkware-amm-demo.netlify.app/swap)で操作できます。 これでStarkNetにスマートコントラクトを書いてデプロイする準備が整いました。 The block explorer for StarkNet — [Voyager](https://voyager.online/) — allows anyone to inspect StarkNet’s state.\
-By getting your feet wet, we believe you will be better prepared to build on StarkNet, as we continue to roll out additional features. 私たちはすでに最初のハッカソンや開発者向けのワークショップを計画しています。
+その後、StarkNetに記述・導入した[サンプルAMMスマートコントラクト](http://cairo-lang.org/docs/hello_starknet/amm.html)をご覧ください。 シンプルなAMMで、ここ[](https://starkware-amm-demo.netlify.app/swap)で操作できます。 これでStarkNetにスマートコントラクトを書いてデプロイする準備が整いました。 StarkNet のブロック エクスプローラ —[Voyager](https://voyager.online/)— を使用すると、誰でも StarkNet の状態を調べることができます。\
+足元を濡らしていただくことで、追加機能を展開し続ける StarkNet で構築するための準備が整うと信じています。 私たちはすでに最初のハッカソンや開発者向けのワークショップを計画しています。
 
 ### **StarkNetの次のステップ**
 
@@ -41,11 +41,13 @@ Alphaにまだ欠けている主要機能は、今後数週間以内にリリー
 
 私たちはStarkNetの周りに形成されているエコシステムに非常に興奮しているので、これまでの協力者に感謝します。
 
-We’re working closely with [Nethermind](https://twitter.com/nethermindeth) and the Nubia team, [Alexey Akhunov](https://twitter.com/realLedgerwatch) (Erigon) & [Igor Mandrigin](https://twitter.com/mandrigin) (gateway.fm), [Iddo Bentov](https://www.cs.cornell.edu/~iddo/), [dOrg](https://twitter.com/dOrg_tech), [Prof. Tim Roughgarden](https://twitter.com/algo_class), [Prof. Jeremy Avigad](https://www.andrew.cmu.edu/user/avigad/) & Yoav Seginer, last but not least — the [Paradigm](https://twitter.com/paradigm) team.\
-Our early partners — [dYdX](https://twitter.com/dydxprotocol), [Immutable](https://twitter.com/Immutable), [DeversiFi](https://twitter.com/deversifi), as well as [Sorare](https://twitter.com/SorareHQ), [Celer](https://twitter.com/CelerNetwork), and others — have been providing us with invaluable input from Day One, and allow us to build a production-grade network for real users.\
-We continue to be amazed by the quality of content created by the community, by people such as [Bobbin Threadbare](https://twitter.com/bobbinth), [Daniel Kroni](https://github.com/danielkroeni/cairo-playground/blob/main/anon-bank/README.md), [Adrian Hamelink](https://twitter.com/adr1anh), [perama](https://twitter.com/eth_worm), [Francesco Ceccon](https://twitter.com/ceccon_me), [Ilian Malchev](http://twitter.com/imalchev), and the [Alexandria team](https://blockchainpartner.fr/).
+[](https://twitter.com/nethermindeth)</a>[](https://www.andrew.cmu.edu/user/avigad/)&</a>緊密
 
-私たちは、コミュニティがすべての面で何を生み出すかを見たいと思っています:開発者ツール、コンテンツ、そしてもちろん、彼らが構築する StarkNet アプリケーション。 Let’s keep the conversation going in your favorite media of choice: [discord](https://discord.gg/uJ9HZTUk2Y), [Twitter](https://twitter.com/CairoLang), [email](mailto:info@starkware.co), and soon using the most decentralized of communication forms: f2f.
+[[](https://www.cs.cornell.edu/~iddo/)[](https://twitter.com/algo_class). Jeremy Avigad](https://twitter.com/dOrg_tech)& Yoav Seginer、最後になりましたが、[Paradigm](https://twitter.com/paradigm)チームです。\
+初期のパートナー —[dYdX](https://twitter.com/dydxprotocol)、[Immutable](https://twitter.com/Immutable)、[DeversiFi](https://twitter.com/deversifi)、および[Sorare](https://twitter.com/SorareHQ)、[Celer](https://twitter.com/CelerNetwork)など — は初日から貴重な情報を提供してくれ、プロダクションを構築することができました。 -実際のユーザー向けのグレードのネットワーク。\
+32 Bobbin Threadbare[](https://twitter.com/bobbinth)[Daniel Kroni](https://github.com/danielkroeni/cairo-playground/blob/main/anon-bank/README.md),[Adrian Hamelink](https://twitter.com/adr1anh),[perama](https://twitter.com/eth_worm),[Francesco Ceccon](https://twitter.com/ceccon_me),[Ilian Malchev](http://twitter.com/imalchev),と[アレクサンドリア チーム](https://blockchainpartner.fr/)。</p> 
+
+私たちは、コミュニティがすべての面で何を生み出すかを見たいと思っています:開発者ツール、コンテンツ、そしてもちろん、彼らが構築する StarkNet アプリケーション。 好きなメディアで会話を続けましょう:[discord](https://discord.gg/uJ9HZTUk2Y),[Twitter](https://twitter.com/CairoLang),[メール](mailto:info@starkware.co).
 
 1 私たちはZK-Rollupという用語のファンではありません。数学的に言えば、それは知識ゼロではありませんが、皆さんは私たちが何を意味するか知っています。
 

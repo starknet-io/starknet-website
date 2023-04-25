@@ -9,7 +9,7 @@
 
 Це опублікує місію Фундації, запроваджує її директорів та коротко обговорює досвід і цінності, які вони привносять до столу.
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+Фонд був створений для реалізації бачення пропозиції децентралізації StarkNet[,](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)в липні 2022 року, і опублікував власну публікацію «Hello World»[тут](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
 
 ### Передовище Starknet-носіїв
 
@@ -39,7 +39,7 @@ StarkNet є допустимим, децентралізований проша�
 
 **[Heather Meeker](https://www.techlawpartners.com/heather)**: Award-winning lawyer, що є експертом з відкритого програмного забезпечення і автором «Open Source for Business»; Генеральний партнер на OSS Capital та правовий радник StarkWare.
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[Професор Шубхангі Сараф](https://www.math.toronto.edu/ssaraf/)**: Математик і комп'ютерник; основний внесок у математику, що лежить в основі доказів STARK; Доцент Університету Торонто; Науковий консультант StarkWare.
 
 **[Томаш Стен́чак](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Забудник Blockchain який побудував основні компоненти Ethereum; Засновник у Нідерландах, один з найбільших команд який будує на Ethereum та StarkNet.
 

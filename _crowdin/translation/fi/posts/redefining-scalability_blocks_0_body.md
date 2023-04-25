@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+Lohkoketjujen skaalautuvuus on aina ollut lämmitetty aihe. Lähes jokainen lohkoketjuverkko koskettaa useita liiketoimia sekunnissa (TPS) myyntipisteenä. TPS ei kuitenkaan ole kelvollinen mittari lohkoketjuverkkojen vertailemiseksi – joten on haastavaa arvioida niiden suhteellista suorituskykyä. Lisäksi suuret TPS-numerot tulevat yleensä hintaan – mikä asettaa kysymyksen: tehdä nämä verkot todella mittakaavassa, vai lisäävätkö ne vain niiden läpivientiä?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Joten tutkitaan miten määritellä skaalautuvuus, mitkä kompromissit tehdään sen saavuttamiseksi, ja miksi validiteetti Rollups on lopullinen skaalautuvuusratkaisu.
 
-### Not all Transactions are Made Equal
+### Kaikki liiketoimet eivät ole samanarvoisia
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+Ensinnäkin meidän on vahvistettava väite, jonka mukaan yksinkertainen ja kätevä TPS-mittari ei ole tarkka mittaus skaalautuvuudesta.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+Korvata solmut tapahtumien suorittamisesta (ja estää käyttäjiä lähettämästä verkkoa roskapostin tarpeettomalla laskentalla), lohkoketjuista peritään maksu, joka on suhteutettu lohkoketjulle aiheutuvaan laskennalliseen rasitteeseen. Ethereumissa laskennallisen taakan monimutkaisuus mitataan*kaasussa.*Koska kaasu on erittäin kätevä mitta liiketoimen monimutkaisuus, termiä käytetään koko tässä artikkelissa ei-Ethereum lohkoketjut, vaikka se on tyypillisesti Ethereum-erityinen.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+Kaupat eroavat toisistaan huomattavasti monimutkaisissa tilanteissa, ja sen vuoksi niiden kulutuksessa on paljon kaasua. Bitcoin, luotettavien vertaismaksutapahtumien edelläkävijä, tukee vain alkeellista Bitcoin-käsikirjoitusta. Nämä yksinkertaiset siirrot osoitteesta osoitteeseen käyttää vähän kaasua. Sen sijaan älykkäät sopimusketjut kuten Ethereum tai Solana tukevat virtuaalista koneistoa ja kääntöä täydentäviä ohjelmointikieliä, jotka mahdollistavat paljon monimutkaisemmat tapahtumat. Näin ollen dApps kuten Uniswap vaatii paljon enemmän kaasua.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+Tämän vuoksi ei ole mitään järkeä verrata eri lohkoketjujen TPS-järjestelmää. Mitä meidän pitäisi verrata sen sijaan kapasiteetti laskenta — tai throughput.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Kaikilla lohkoketjuilla on (muuttuva) lohkon koko ja lohkoaika, jotka määrittävät kuinka monta*laskenta-yksikköä*voidaan käsitellä lohkoa kohti, ja kuinka*nopea*uusi lohko voidaan lisätä. Yhdessä nämä kaksi muuttujaa määrittävät lohkoketjun*tilavuuden*.
 
-### What Constrains Scalability?
+### Mitä Rajoita Scalability?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+Lohkoketjut pyrkivät olemaan maksimaalisesti hajautettuja, osallistavia verkostoja. Tämän saavuttamiseksi kaksi perusominaisuutta on pidettävä kurissa.
 
-#### **1. Hardware Requirements**
+#### **1. Laitteiston Vaatimukset**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+Lohkoketjuverkon hajauttaminen määräytyy sen mukaan, pystyvätkö verkon heikoimman solmun tarkistamaan lohkoketjun ja pitämään sen tilan. Näin ollen kustannukset solmun (laitteisto, kaistanleveys, ja varastointi) olisi pidettävä mahdollisimman alhaisena, jotta mahdollisimman monesta henkilöstä voi tulla luvanvaraisia osallistujia luotettavaan verkostoon.
 
-#### 2**.** State Growth
+#### 2**.**Valtion kasvu
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Valtion kasvu viittaa siihen, miten nopeasti lohkoketju kasvaa. Mitä enemmän läpivientiä lohkoketju sallii tapahtua per yksikkö aikaa, sitä nopeammin lohkoketju kasvaa. Täysi solmut tallentaa verkon historiaa, ja niiden on voitava vahvistaa verkon tila. Ethereumin tila tallennetaan ja siihen viitataan käyttämällä tehokkaita rakenteita, kuten puita. Kun valtio kasvaa, siihen lisätään uusia lehtiä ja oksia, mikä tekee yhä monimutkaisemmaksi ja aikaa vievämmäksi tiettyjen toimien toteuttamiseksi. Kun ketju kasvaa kooltaan, se pahentaa pahimman tapauksen suorituksen solmut, mikä johtaa yhä enemmän aikaa validoida uusia lohkoja. Ajan myötä tämä myös lisää kokonaisaikaa se vaatii täyden solmun synkronointia.
 
-### Detrimental Impacts of Increasing Throughput
+### Koko ajan lisääntyvän vähenemisen vaikutukset
 
-#### 1. Node Count
+#### 1. Solmujen Määrä
 
-The minimum requirements to run a node and node counts are:
+Solmun ja solmun käyttöä koskevat vähimmäisvaatimukset ovat seuraavat:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin1: 350GB kiintolevytilaa, 5 Mbit/s yhteys, 1GB RAM, CPU >1 Ghz. **Solmujen lukumäärä: ~10,000**
+* Ethereum2: 500GB+ SSD-levytila, 25 Mbit/s yhteys, 4–8 Gt RAM, CPU 2–4 ytimiä. **Solmujen lukumäärä: ~6,000**
+* Solana3: 1.5TB+ SSD-levytila, 300 Mbit/s yhteys, 128 GB RAM CPU 12+ ytimiä. **Solmujen lukumäärä: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Huomaa, että lohkoketjun läpi kulkevien solmujen suurempi suoritinsuhde, kaistanleveys ja varastointivaatimukset verkon vähemmän solmukohtia – mikä johtaa heikompaan hajauttamiseen ja vähemmän osallisuutta edistävään verkkoon.
 
-#### 2. Time to Sync a Full Node
+#### 2. Aika synkronoida koko solmun
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Kun käytät solmua ensimmäistä kertaa, sen on synkronoitava kaikki olemassa olevat solmut, lataus, ja vahvistaa, että verkon tila aina genesis lohkosta aina ketjun kärkeen. Prosessin olisi oltava mahdollisimman nopea ja tehokas, jotta kuka tahansa voi toimia pöytäkirjan luvattomana osallistujana.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Kun Jameson Lopp’s[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)ja[2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/)indikaattorina, Taulukko 1 vertaa aikaa se kuluu synkronoida koko solmun Bitcoin vs. Ethereum vs. Solana keskimäärin kuluttaja-asteella PC.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Taulukko 1. Lohkoketjun läpimeno ja solmun synkronoinnin vertailu](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Taulukko 1. Lohkoketjun läpimeno ja solmun synkronoinnin vertailu")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Taulukosta 1 käy ilmi, että kasvava määrä johtaa pidempiin synkronointiaikoihin, koska yhä enemmän tietoja on käsiteltävä ja tallennettava.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Vaikka solmukohtien ohjelmistoparannuksia tehdään jatkuvasti kasvavan lohkoketjun haasteen lieventämiseksi (levyn jalanjäljen pienentäminen, nopeampi synkronointinopeudet, vahvempi kaatumisen sietokyky, modulaarinen tiettyjen osien jne. , solmut ilmeisesti vielä voi pysyä tahdissa kasvaa throughput.
 
-### How Should Scalability be defined?
+### Miten Skaalautuvuus olisi määriteltävä?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+Skaalautuvuus on eniten väärin esitetty termi lohkoketjutilaan. Vyöhykkeen lisääminen on toivottavaa, mutta se on vain yksi osa palapeliä.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***Skaalautuvuus**tarkoittaa**lisää tapahtumia****saman laitteen** osalta.*
 
-For that reason, scalability can be separated into two categories.
+Tästä syystä skaalattavuus voidaan erottaa kahteen luokkaan.
 
-#### Sequencer scalability
+#### Sekvensserin skaalautuvuus
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+Sequencing kuvailee liiketoimien tilaamista ja käsittelyä verkossa. Kuten edellä on todettu, mikä tahansa lohkoketju voisi triviaalisti lisätä sen tilavuutta korottamalla lohkon kokoa ja lyhentämällä sen lohkoaikaa — kunnes sen hajauttamiseen kohdistuvan kielteisen vaikutuksen katsotaan olevan liian merkittävä. Mutta näiden yksinkertaisten parametrien muokkaaminen ei tarjoa tarvittavia parannuksia. Ethereumin EVM voi teoriassa[käsitellä jopa ~2000 TPS](https://twitter.com/dankrad/status/1459607325854121989), mikä ei riitä pitkän aikavälin lohkotilan kysynnän tyydyttämiseen. Sarjauksen mittaamiseksi Solana teki joitakin vaikuttavia innovaatioita: hyödyntäen rinnakkaista toteutusympäristöä ja viisasta konsensuksen mekanismia, joka mahdollistaa paljon tehokkaamman teho. Mutta parannuksista huolimatta se ei ole riittävä eikä skaalautuva. Solanan osuus kasvaa sen myötä, että myös solmukohtien suorittamisesta aiheutuvat laitteistokustannukset kasvavat ja prosessoivat liiketoimia.
 
-#### Verification scalability
+#### Todentamisen skaalautuvuus
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*Tarkistaminen skaalautuvuus kuvaa lähestymistapoja, jotka lisäävät suorituskykyä kuormittamatta solmuja jatkuvasti kasvavilla laitteistokustannuksilla.*Erityisesti se viittaa kryptografisiin innovaatioihin kuten validiteettitodisteisiin. Ne ovat syy siihen, miksi validiteettirullat voivat laajentaa lohkoketjua kestävällä tavalla.
 
-**What’s a Validity Rollup?**
+**Mikä on voimassa oleva rullaus?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+Voimassaolo Rollups (tunnetaan myös nimellä ZK-Rollups) siirtää laskenta ja valtion varastointi ketjun ulkopuolella, mutta pitää pieni määrä tiettyjä tietoja ketjulla. Peräkkäinen sopimus taustalla olevasta lohkoketjusta pitää yllä Rollupin valtion juurta. Rollupissa lähetetään erittäin pakattujen liiketoimien erä yhdessä nykyisen valtion juuren kanssa ketjun ulkopuoliseen Proveriin. Prover laskee maksutapahtumat, tuottaa oikeellisuuden todisteet tuloksista ja uuden valtion juureen, ja lähettää sen on-chain Verifier. Todentaja varmistaa pätevyyden todistamisen; ja älykäs sopimus, joka ylläpitää Rollupin tilaa, päivittää sen uuteen tilaan, jonka Prover on toimittanut.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**Miten validiteetti Rollups-asteikko samoilla laitteistovaatimuksilla?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+Vaikka Proverit vaativat huippuluokan laitteistoja, ne eivät vaikuta lohkoketjun hajauttamiseen. koska liiketoimien pätevyys on taattu matemaattisesti todennettavissa olevilla todisteilla.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Tärkeää on todisteiden tarkastamista koskevat vaatimukset. Koska tiedot ovat erittäin pakattuja ja suurelta osin abstracted pois laskenta, sen vaikutus solmut taustalla lohkoketjun on minimaalinen*.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+Todentajat (Ethereum solmut) eivät vaadi high-end laitteistoa, ja erien koko ei lisää laitteiston vaatimuksia. Solmukohtien on käsiteltävä ja tallennettava vain pieniä määriä puhelutietoja ja vain siirtymävaiheita. Tämä mahdollistaa kaikkien Ethereum solmujen tarkistaa validiteetti Rollup erät käyttäen niiden olemassa olevaa laitteistoa.
 
-**The more transactions, the cheaper it gets**
+**Mitä enemmän tapahtumia, sitä halvempaa se saa**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+Perinteisissä lohkoketjuissa tapahtuu enemmän tapahtumia, mitä kalliimpaa se saa kaikille, kun lohko tila täytetään — ja käyttäjien on ylitettävä toisensa maksumarkkinoilla saada liiketoimet mukana.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+Voimassaolon Rollupin osalta tämä dynamiikka käännetään. Verifying a batch of transactions on Ethereum on tiettyjä kustannuksia. Kun erän sisällä tapahtuvien liiketoimien määrä kasvaa, erän varmentamisen kustannukset kasvavat eksponentiaalisesti hitaammin. Useampien tapahtumien lisääminen erään johtaa halvempiin maksuihin, vaikka erän vahvistuskustannukset nousevat – koska se kuoletetaan kaikkien erän sisällä tapahtuvien tapahtumien kesken. Voimassaolo Rollupit haluavat niin monta tapahtumaa kuin mahdollista erän sisällä – jotta todentamismaksu voidaan jakaa kaikkien käyttäjien kesken. Koska eräkoko kasvaa äärettömäksi, jaksotettu maksu per tapahtuma muuttuu nollaan, i. ., enemmän tapahtumia valididity Rollup, halvempaa se saa kaikille.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX, dApp powered by valididity Rollup, näkee usein eräkokoja yli 12,000 tapahtumia. Kun verrataan samojen liiketoimien kaasunkulutusta Mainnet'ssa vs. valididity Rollup -ohjelmassa, voidaan todeta, että skaalautuvuushyödyt ovat seuraavat:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+DYdX-tapahtuman selvittäminen Ethereum Mainnet:**200000 kaasua**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+DYdX-tapahtuman selvittäminen StarkEx:**<500 kaasu**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+Toinen tapa tarkastella sitä: Validity Rollupsin pääkustannusasteikot ovat linjassa saman erän käyttäjien lukumäärän kanssa.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### Miksi Optimistiset rullat eivät ole niin skaalautuvia kuin voi ajatella
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+Optimistiset Rollupit tarjoavat teoriassa lähes samat skaalautuvuusedut kuin Validity Rollups. Mutta yksi tärkeä ero: Optimistiset Rollupit optimoi keskimääräisen kotelon, kun taas validiteetti Rollupit optimoi huonoimman kotelon. Koska lohkoketjujärjestelmät toimivat erittäin vastoinkäymisissä, optimointi pahin tapaus on ainoa tapa saavuttaa turvallisuutta.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+Optimistisen Rollupin pahimmassa tapauksessa käyttäjän tapahtumia ei tarkisteta petosten tarkastajien toimesta. Joten, kiistääkseen petos, käyttäjän on synkronoitava Ethereum koko solmu, L2 täysi solmu, ja laskea epäilyttävän tapahtuman itse.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+Vuonna Voimassaolo Rollupin huonoin tapaus, käyttäjä olisi vain tarvitse synkronoida Ethereum koko solmun tarkistaa oikeellisuuden todiste, tallentamalla itse laskennallisen taakan.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+Optimistiset Rollupsin kustannusasteikot vastaavat käyttäjien määrän sijasta liiketoimien määrää, mikä tekee niistä kalliimpia.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### Palapelin lopullinen osa – Käyttöoikeus liikkuvan kaluston osavaltioon
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+Varmistaakseen tapahtumien pätevyyden, käyttäjien täytyy käyttää vain Ethereum solmua. Käyttäjät ja kehittäjät voivat kuitenkin haluta tarkastella ja toteuttaa Rollupin tilaa ja toteutusta eri tarkoituksiin. L2-solmun</em>indeksointi*täyttää tämän tarpeen täydellisesti. Se ei ainoastaan salli käyttäjien nähdä tapahtumia verkossa, mutta se on myös kriittinen osa infrastruktuuria, joka on tarpeen, jotta ekosysteemiinfrastruktuuri toimisi. Indeksoijat kuten Graph, Alchemy, Infura; Oracle verkot, kuten Chainlink, ja lohko Explorers, kaikki nämä ovat täysin tukena luvaton, indeksointi L2 solmu.</p>
 
-### Conclusion
+### Päätelmät
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+Monet lähestymistavat, joilla puututaan lohkoketjujen skaalautuvuuteen, keskittyvät virheellisesti*tehon lisäämiseen*. Tämä kuitenkin jättää huomiotta läpimenoalueiden vaikutuksen solmukohtiin: jatkuvasti kasvavat laitevaatimukset lohkojen käsittelemiseksi ja verkkohistorian tallentamiseksi, ja miten se estää verkon hajauttamisen.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Validity-proof cryptography kynnyksellä, lohkoketju voi saavuttaa**todellisen skaalautuvuuden**, joka ei rasita solmuja jatkuvasti kasvavilla kustannuksilla ja mahdollistaa laajan hajauttamisen. Enemmän transaktioita tehokkailla ja monimutkaisemmilla laskentoja saman laitteen ovat nyt mahdollisia. kääntämällä palkkio markkinoiden ongelma prosessissa — mitä enemmän toimintaa Validity Rollup, halvempaa se saa!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)ja[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+1 Alkaen<https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+2 Alkaen<https://ethereum.org/en/developers/docs/nodes-and-clients/>
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+3 Alkaen<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+4 Erittäin yksinkertaistettu ja mukautettu keskimääräisiin dynaamisiin lohkokokoihin

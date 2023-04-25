@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* En ny sekvenser for StarkNet er i ferd med å bli utviklet
+* Det er en åpen kilde under Apache 2.0-lisensen
+* Det er første mål å øke gjennomstrømningen til StarkNM
 
-### A shiny new sequencer
+### En skinnende ny sekvenser
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+Vi er glade for å kunngjøre en ny StarkNet Sequencer er med i arbeidet. Som StarkNetts tekniske stabel beveger seg mot åpen kildekode, ifølge[Cairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)and[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), vi fortsetter nå med StarkNets nye sekveler. Det vil være åpen kildekode, tilgjengelig under Apache 2.0 lisens, og du kan gå gjennom[repoet](https://github.com/starkware-libs/blockifier)nå!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+Å bygge en ny Sequencer inngår i[StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)vi presenterte for noen måneder siden. Implementering av den nye sekvensen starter med at**Blockifier**, modulen i sekvensen som utfører blokkutførelsen. Som forklart på veikartet forventes det at det skal være fordelaktig for StarkNetts resultater.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+Vår tilnærming til bygging av denne sekvensen er den samme tilnærmingen som førte oss i StarkNet Alpha. Sekvenseren**vil bli implementert i nivå**, og vi deler i dag dens første modul. Over tid vil nye komponenter i sekvenseren fullføres, inntil det til slutt vil en Rust-basert sekvenser erstatte den aktuelle Python-baserte sekvenseren.
 
-### What does the sequencer do?
+### Hva gjør sekvenseren?
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+På StarkNet er det etter brukere som sender transaksjoner, det første stoppet i transaksjonens reise til STARK-skalering, som er sekvensene. I StarkNet protokollen er sekvensatorene ansvarlig for å bestille transaksjonene og produsere blokker. Etter at blokken er opprettet av en sekvensgiver, og godkjent av konsensus-protokollen, overtar provene og genererer et bevis for L1.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
-### Open-Sourcing
+### Åpne kildekode
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+StarkNet Alpha ble lansert på Mainnet i november 2021. Fra starten er det forpliktet til å dele STARK-skalering med verden.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+I dag lanserer vi de første i en linje av modulene til den nye sekvensen åpen kildekode. Det vil ta flere måneder før alle moduler og submoduler blir distribuert. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+Dette vil knytte StarkNet nærmere et punkt med desentralisert tillatelsesfri sekvensering. Vi prosjekterer nå StarkNetts desentraliserte protokoll, og vi oppfordrer samfunnet til å delta i[forskning og diskusjonen](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
 
-### Performance
+### Ytelse
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+StarkNetts opprinnelige sekvensprogram er i stor grad en tilpasning av StarkEx-infrastruktur. Nå er det behov for infrastruktur som bygges spesielt for kravene til et desentralisert velfungerende nettverk.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+Bygget i Rust, den nye sekvensen er utformet og utviklet med tanke på prestasjon. Den nye sekvensen bygger også på solide stiftelser: Papyrus, den nye[StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)skal håndtere statsledelse, og ciro-rs, den nye Cairo-VM ved LambdaClass, vil fremskynde gjennomføringen av Kairo. Vi forventer at den nye sekvensen forbedres på eksisterende sekvenser for hvert tilfelle. Gjennomstrømmingen og forsinkelsen i nettverket forventes å forbedre dramatisk ved integreringen av denne sekvensen i StarkNet.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+Vi forventer også at annen infrastruktur og utviklingsverktøy vil kunne ta i bruk den nye sekvensen for å forbedre utviklingserfaringen. Full node ytelse forventes å bli både bedre og alle rammeverk for prøving.
 
 ### Summary
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+Vi er glade for å kunngjøre i dag den nye åpen kildekode-sekvensen. Den første modulen er allerede tilgjengelig for samfunnet som skal gjennomgå, og vil bli fulgt med flere moduler de neste månedene som kommer. Vi er også glade for å ta et annet steg i veikartet for å bedre StarkNetts resultater. Vi ønsker å gjøre nettverket mer effektivt og tilgjengelig, og vi setter pris på støtten til alle som har sluttet oss på denne reisen.

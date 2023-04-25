@@ -1,4 +1,4 @@
 {
-  "source": "/blog-posts/:path*",
-  "destination": "/en/posts"
+  "source": "/블로그-포스트/:경로*",
+  "destination": "/ko/게시물"
 }

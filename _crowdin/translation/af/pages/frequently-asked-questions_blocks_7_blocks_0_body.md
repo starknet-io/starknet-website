@@ -1,1 +1,1 @@
-If you are excited about StarkNet and its decentralization and wish to participate in the process, please join the builders on StarkNet [Discord](https://starknet.io/discord) and [Starknet community forum](https://community.starknet.io/)
+As jy opgewonde is oor StarkNet en sy desentralisasie en wil deelneem aan die proses, sluit asseblief aan by die bouers op StarkNet [Discord](https://starknet.io/discord) en [Starknet gemeenskapsforum](https://community.starknet.io/)

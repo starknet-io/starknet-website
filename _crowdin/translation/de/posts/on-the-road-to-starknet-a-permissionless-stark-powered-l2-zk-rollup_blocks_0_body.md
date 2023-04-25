@@ -29,7 +29,7 @@ StarkWare hat einige wichtige Grundlagen für StarkNet geschaffen.
 
 #### **Cairo**
 
-[Kairo](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20)ist unser Turing-Complete High-Level Language & Framework für die Erstellung von STARK Proofs für die allgemeine Berechnung. Anstelle komplexer „Schaltungen“ oder AIR kann ein Anwendungsentwickler Kairo verwenden, um jede Geschäftslogik zu definieren, sich außerhalb der Kette bewährt und on-chain verifiziert zu haben. Cairo is [in production on Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20), and is also [available to developers](http://cairo-lang.org/).
+[Kairo](https://twitter.com/StarkWareLtd/status/1300353049836376066?s=20)ist unser Turing-Complete High-Level Language & Framework für die Erstellung von STARK Proofs für die allgemeine Berechnung. Anstelle komplexer „Schaltungen“ oder AIR kann ein Anwendungsentwickler Kairo verwenden, um jede Geschäftslogik zu definieren, sich außerhalb der Kette bewährt und on-chain verifiziert zu haben. Cairo ist[in der Produktion auf Mainnet](https://twitter.com/StarkWareLtd/status/1320695603492507648?s=20)und ist auch[für Entwickler verfügbar](http://cairo-lang.org/).
 
 In ein paar Wochen werden wir ein öffentliches Ethereum testnet eine Alpha Version des Generic Proof Service (GPS) von Kairo auf den Markt bringen. *Dies wird Entwicklern erlauben, ihre eigenen Anwendungen mit Kairo zu erstellen und die Geschäftslogik zu implementieren, die sie wünschen. Sie werden ihren Kairo-Code an das GPS schicken, das nachgewiesen werden soll und dann auf der Kette verifiziert werden.*
 
@@ -101,6 +101,6 @@ StarkWare baut StarkNet, ein dezentralisiertes genehmigungsfreies STARK-basierte
 
 StarkNet ermöglicht Anwendungen, die skaliert werden können, ohne die Sicherheit zu beeinträchtigen Benutzer, um angemessene Transaktionsgebühren zu zahlen, und das gesamte Ökosystem zu wachsen und sein Versprechen zu erfüllen.
 
-We gladly invite the developer community to [join us](https://twitter.com/StarkWareLtd) on this journey.
+Wir laden die Entwickler-Community gerne ein,[uns](https://twitter.com/StarkWareLtd)auf dieser Reise zu begleiten.
 
 **Update (Nov. 2021):**StarkNet Alpha ist live auf Ethereum Mainnet

@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+Ebben a bejegyzésben mélyebben belemerülünk a StarkNet Token kialakításába, a pénzverési ütemezésébe és a várható idővonalba.
 
-### Considerations
+### Megfontolások
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+A StarkNet Token kialakítását az az igény határozza meg, hogy olyan hálózatot kell táplálni, amely (i)**StarkNet felhasználóból**, (ii)**üzemeltetőből**– olyan személyekből áll, akik a hálózatot olyan számítási erőforrásokkal látják el, amelyek tranzakciók sorrendjét hajtják végre, STARK proofok és hosszú távú tárolási szolgáltatók, valamint (iii)**Fejlesztők**írószoftver az infrastruktúrájához és a rajta futó alkalmazásokhoz.
 
-Mechanisms for fee structure and token minting should be:
+A díjstruktúra és a zsetonverés mechanizmusai a következők:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Nagyrészt automatizált, nem pedig jelentős emberi beavatkozáson alapul
+* Ismert és más blokklánc rendszerekben tesztelt
+* Egyszerűen elemezhető és magyarázható; átlátszó
+* Ellenáll a spekulatív manipulációnak és a nem értékteremtő gamificationnek
+* Jó felhasználói élménynek számít (UX)
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Ezek a preferenciák alakítják a tokenek kiosztásának mechanizmusát a felhasználók által fizetett új pénzverési és tranzakciós díjakból:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Operátorok**biztosítják a StarkNet folyamatos működését, és a felhasználók által megkívánt protokoll kiváló minőségű teljesítményét biztosítják.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Fejlesztők**megépítik és karbantartják az üzemeltetők által a hálózat védelmére használt szoftvereket, és olyan alkalmazásokat hoznak létre, amelyek javítják a hálózat funkcionalitását a felhasználók számára. Következésképpen a díjak egy része és az új pénzverés a Smart Contract Developers és a Core Developers nevéhez fűződik, az alábbiak szerint:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Smart Contract Developers:**A StarkNet protokoll automatikusan képes mérni az intelligens szerződések által biztosított értéket, az ezen szerződések Felhasználói által fizetett L1 és L2 díjak révén. A StarkNet protokoll automatikusan kiosztja a díjak egy részét és a folyamatban lévő új pénzverést a Smart Contract Developers számára. Azok az intelligens szerződések, amelyek több értéket kínálnak a felhasználóknak – az értük fizetett díjakkal mérve – nagyobb részt kapnak az erre a célra kiosztott tokenekből.
+* **Core Developers:**A StarkNet protokollnak nincs automatikus módja a Core Developers hozzájárulásának számszerűsítésére, például azoknak, akik kódot írnak a proversekhez, szekvenszerekhez, teljes csomópontokhoz stb. Következésképpen a token kiosztása az ilyen központi fejlesztőknek és más közreműködőknek, akiknek hozzájárulása nem mérhető a protokoll szerint, szükségszerűen bizonyos emberi mérlegelést igényel. Ennek a decentralizációs célnak megfelelő módon történő alkalmazására modell kerül kialakításra.
+* Az új pénzverésből származó tokenek és a díjak mindkét típusú Fejlesztő számára történő kiosztásának pontos mechanizmusa még nem határozható meg. A tervezési elvek közé tartozik a játékellenesség és az átláthatóság.
 
-### Initial allocation of StarkNet Tokens
+### A StarkNet tokenek kezdeti kiosztása
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+A StarkWare tízmilliárd tokent vert ki a láncon kívül. Pontosításképpen: ezek a StarkNet Tokenek nem képviselnek részesedést a StarkWare-ben, és nem biztosítanak semmilyen részvételi jogot a StarkWare-ben, és nem biztosítanak semmilyen követelési jogot a StarkWare-től. A forgalomban lévő tokenek mennyisége idővel növekedni fog a protokoll szerinti új tokenek verésével, a közösség által egy későbbi időpontban meghatározott ütemezés szerint.\
+*Emiatt előfordulhat, hogy a keringő ellátás nem marad rögzített.*
 
-The allocation is thus:
+Az elosztás a következő:
 
-**17%** — StarkWare Investors
+**17%**— StarkWare befektetők
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32,9%**— Fő közreműködők: StarkWare és alkalmazottai és tanácsadói, valamint StarkNet szoftverfejlesztő partnerei
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50,1%**a StarkWare az alapítvány számára, az alábbiak szerint:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**– Közösségi rendelkezések – azok számára, akik a StarkNet számára munkát végeztek, és a mögöttes technológiát működtették vagy fejlesztették, pl. a StarkEx L2 rendszerek korábbi használatán keresztül. Lényeges, hogy minden közösségi rendelkezés a múltban elvégzett ellenőrizhető munkán alapul. Például, amennyiben közösségi rendelkezéseket kapnak a korábbi StarkEx-felhasználók, az allokációt a StarkEx technológiájának 2022. június 1-je előtti**történt ellenőrizhető használata alapján határozzák meg**
+* **9%**— Közösségi visszatérítések — a StarkNet tokenek engedményei**részlegesen**fedezik az Ethereumból a StarkNetbe való belépés költségeit. A gamification elkerülése érdekében a közösségi engedmények csak azokra a tranzakciókra vonatkoznak, amelyek****következnek be a visszatérítési mechanizmus bejelentése után.
+* **12%**— Támogatás a StarkNet protokoll fejlesztése, tesztelése, telepítése és karbantartása érdekében végzett kutatáshoz és munkához
+* **10%**— stratégiai tartalék az alapítvány küldetéséhez igazodó ökoszisztéma-tevékenységek finanszírozására, amint azt a sorozat[előző bejegyzésében](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)kifejtjük.
+* **2%**— Adományok nagyra becsült intézményeknek és szervezeteknek, például egyetemeknek, civil szervezeteknek stb., a StarkNet Token tulajdonosok és az Alapítvány döntése alapján.
+* **8,1%**Fel nem osztott – az Alapítvány fel nem osztott pénztára a StarkNet közösség további támogatására szolgál a közösség által meghatározott módon.
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+Az Alapvető Közreműködők és Befektetők hosszú távú ösztönzőinek a StarkNet közösség érdekeihez való igazítása érdekében, valamint a decentralizált ökoszisztémákban bevett gyakorlatot követve a fő közreműködőknek és befektetőknek kiosztott valamennyi tokenre 4 éves zárolási időszak vonatkozik. lineáris elengedés és egy éves szikla.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### Van mód StarkNet token fogadására?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+A rövid válasz igen, de nincsenek parancsikonok a tokenek fogadásához.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+A StarkNet Token kiosztása és díjpiaca, valamint az új pénzverési forma elsőbbséget ad az alapvető infrastruktúra és a dApps fejlesztőinek, valamint más, az ökoszisztéma biztonságához és egészségéhez hozzájáruló személyeknek. Mit jelent ez gyakorlatilag a tokennel kapcsolatban?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Ha Ön fejlesztő, és már írt olyan szoftvert a StarkNet infrastruktúrához vagy egy intelligens szerződéshez, amelyet a StarkNet végfelhasználói valóban értékelnek és használnak, akkor számíthat arra, hogy a protokollon keresztül automatikusan megkapja a tokeneket. A mechanizmus gamification elleni számos biztosítéka az, hogy a fejlesztők által kapott díjak szigorúan alacsonyabbak lesznek, mint a felhasználók által fizetett díjak.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+A fejlesztők token támogatást is kaphatnak a StarkNet protokoll fejlesztése, tesztelése és karbantartása érdekében végzett munkájukért. Bármely ilyen támogatást küldetésének megfelelően az Alapítvány kellő időben határoz meg.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+Ha Ön blokklánc-fejlesztő, aki úgy gondolja, hogy a StarkNet a válasz az Ethereum skálázási igényeire, javasoljuk, hogy tudjon meg többet[StarkNet](https://starknet.io/)és annak programozási nyelvéről, a[Cairo](https://www.cairo-lang.org/), és kezdje el saját intelligens szerződéseinek fejlesztését.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Ha Ön végfelhasználó, használja a StarkNet-et – de csak úgy, ahogy ma az Ön igényeit szolgálja. Használja azokhoz a tranzakciókhoz és alkalmazásokhoz, amelyeket*értékel, ne számítson a StarkNet token jövőbeli jutalmaira.*A közösségi rendelkezések bejelentésekor csak a bejelentés dátuma előtt keletkezett pillanatképekre hivatkoznak, és kiszűrik és kizárják az általa a hálózattal való visszaélésnek és játékosításnak minősített használatot az adott helyen elérhető információk alapján. időpont. A közösségi visszatérítések bevezetésekor azok soha nem vonatkoznak azokra a tranzakciókra, amelyek az engedmény bejelentése előtt történtek, ezért hiábavaló a mai tranzakció a jövőbeli visszatérítésre számítva.
 
-### Closing remarks
+### Zárszó
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+A nyílt hálózat felépítése az ismeretlen befogadását jelenti. Az internetet, a Bitcoint és az Ethereumot olyan újítók találták fel, akik hitték, hogy eszközeik megváltoztathatják a világot, de nem egészen tudták, hogyan. Alázatosan reméljük, hogy a StarkNet blokkláncok méretezési képessége jó lesz az Ethereum számára, és jó lesz egy decentralizált web számára. Nem tudhatjuk, mi épül. De hisszük, hogy a StarkNet figyelemre méltó technológiai képességet ad egy kreatív közösség kezébe, és reméljük, hogy ez a közösség számtalan módon fogja használni, ezek közül sok még elképzelhetetlen.

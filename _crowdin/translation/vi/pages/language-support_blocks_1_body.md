@@ -1,11 +1,11 @@
-### Starknet translation program
+### Chương trình dịch thuật Starknet
 
-The [Starknet translation program](https://starkware.crowdin.com/starknet-web) aims to make the content on starknet.io available in as many languages as possible. Please read our simple steps below for how you can contribute and help us achieve these goals:
+Chương trình dịch [Starknet](https://starkware.crowdin.com/starknet-web) nhằm mục đích cung cấp nội dung trên starknet.io bằng nhiều ngôn ngữ nhất có thể. Vui lòng đọc các bước đơn giản dưới đây của chúng tôi để biết cách bạn có thể đóng góp và giúp chúng tôi đạt được những mục tiêu này:
 
-1. Sign up for a [CrowdIn](https://crowdin.com/) account (or log in if you already have one).
-2. [Select your chosen language](https://starkware.crowdin.com/starknet-web) for translation.
-3. Contribute!
+1. Đăng ký tài khoản [CrowdIn](https://crowdin.com/) (hoặc đăng nhập nếu bạn đã có).
+2. [Chọn ngôn ngữ bạn chọn](https://starkware.crowdin.com/starknet-web) để dịch.
+3. Đóng góp!
 
-Note: Submitted translations will undergo a short review process before being published so there will be a delay before your work appears on the site.
+Lưu ý: Các bản dịch đã gửi sẽ trải qua một quá trình đánh giá ngắn trước khi được xuất bản nên sẽ có độ trễ trước khi tác phẩm của bạn xuất hiện trên trang web.
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+Chúng tôi cũng sắp xếp và duy trì danh sách các cộng đồng và tài nguyên liên quan đến Starknet [bằng nhiều ngôn ngữ](/en/community/language-resources).

@@ -1,3 +1,3 @@
-## What are bridges?
+## 브리지란 무엇입니까?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+브리지를 통해 사용자는 블록체인이나 거래소와 같은 암호화 생태계 간에 자산을 이동할 수 있습니다.

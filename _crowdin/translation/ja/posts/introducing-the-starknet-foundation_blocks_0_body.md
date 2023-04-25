@@ -9,7 +9,7 @@
 
 この記事では、財団の使命を概説し、ディレクターを紹介し、彼らがテーブルにもたらす経験と価値観について簡単に説明します。
 
-The Foundation has been set up in order to fulfill the vision of StarkNet’s [decentralization proposal](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), as published in July 2022, and has published its own “Hello World” post [here](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59).
+財団は、2022 年 7 月に公開された StarkNet の[分散化提案](https://medium.com/starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)ビジョンを実現するために設立され、独自の「Hello World」投稿[ここ](https://medium.com/@StarkNet_Foundation/7bd55d5dbc59)を公開しました。
 
 ### Starknet のビジョンを進化させる
 
@@ -33,13 +33,13 @@ StarkNetは、Ethereumのセキュリティと分散化を維持しながらEthe
 
 [**Andrew McLaughlin**:](https://andrew.mclaughl.in/about-me)米国の元副最高技術責任者; インターネットのインフラを管理する独立機関ICANNの前副社長兼最高政策責任者。
 
-**[Prof. Eli Ben-Sasson:](https://starkware.co/media-kit/?founder=Eli#founders)** Mathematician and computer scientist; StarkWare President and Co-founder; Co-inventor of the STARK, FRI and Zerocash protocols and a Founding Scientist of Zcash.
+**[Eli Ben-Sasson 教授:](https://starkware.co/media-kit/?founder=Eli#founders)**数学者およびコンピューター科学者。 StarkWare 社長兼共同設立者。 STARK、FRI、Zerocash プロトコルの共同発明者であり、Zcash の創設者でもあります。
 
 **[Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))**: 有名な暗号資産プロジェクトのシステム上の欠陥を暴くことで有名なブロックチェーンのソートリーダーと内部告発者。 人権財団への暗号侵害のアドバイザー、不可解な資産の元最高投資責任者。
 
 **[Heather Meeker](https://www.techlawpartners.com/heather)**: 受賞歴のある弁護士、オープンソースソフトウェアの専門家、「ビジネスのためのオープンソース」の著者。 OSSキャピタルのゼネラルパートナーであり、StarkWareの法律顧問。
 
-**[Prof. Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)**: Mathematician and computer scientist; core contributor to math underpinning STARK proofs; Associate Professor at University of Toronto; Scientific advisor to StarkWare.
+**[Shubhangi Saraf 教授](https://www.math.toronto.edu/ssaraf/)**: 数学者およびコンピュータ科学者。 STARK証明を支える数学への主要な貢献者。トロント大学准教授。 StarkWare の科学顧問。
 
 **[Tomasz Stańczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)**: Ethereumのコアコンポーネントを構築したブロックチェーン開発者; Nethermineの創設者、EthereumとStarkNetに構築されている最大のチームの1つ。
 
@@ -63,6 +63,8 @@ StarkNetは、Ethereumのセキュリティと分散化を維持しながらEthe
 
 財団は独立しており、StarkNetに関する任意のポジションを自由に取ることができます。 決定は、単純な過半数によって行われます, または特別な場合には7のうちの5によって、財団理事会のメンバーを除去し、任命するなど. 理事会の外部の役職が利害の対立を提示する決定には、財団はそのような会員に対して投票から再利用することを要求する。
 
-The Foundation has considerable means to carry out its mission: 5.01 Billion StarkNet Tokens have been allocated to the Foundation, i.e., 50.1% of the initial Token supply of 10 Billion Tokens (see [part 3 of our governance proposal](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for more information).
+財団には、その使命を遂行するためのかなりの手段があります。50 億 1000 万の StarkNet トークンが財団に割り当てられました。つまり、100 億トークンの初期トークン供給の 50.1% です (詳細については、ガバナンス提案</a>のパート
+
+参照してください)。</p> 
 
 StarkNetの将来の方向性を形作ることが決定される多くの詳細があります。 幸いなことに、財団の設立は、成長しているコミュニティからのより多くの声をもたらします。 StarkWareはこのコミュニティのコミットメントの一部であり、ネットワークの将来のより多くの所有権を取るためにStarkNetエコシステムを歓迎します。 StarkNetの旅は今、分散型乗組員の手に委ねられています そして財団はそれが円滑なものであることを保証するために重要な役割を果たします。 StarkWareのすべての任務で新しい体の大成功を願っています。

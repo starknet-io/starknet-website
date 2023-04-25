@@ -1,5 +1,5 @@
-Currently not. STARKs are defined as Validity proofs, meaning they prove computational integrity. With Validity proofs (STARKs included), one party can prove to another that a certain computation was performed correctly. Zero-Knowledge is an additional property asserting that the prover does not have to reveal any information included in the computation.
+현재는 아닙니다. STARK는 유효성 증명으로 정의되며, 이는 계산 무결성을 증명한다는 의미입니다. 유효성 증명(STARK 포함)을 통해 한 당사자는 특정 계산이 올바르게 수행되었음을 다른 당사자에게 증명할 수 있습니다. Zero-Knowledge는 증명자가 계산에 포함된 정보를 공개할 필요가 없다고 주장하는 추가 속성입니다.
 
-Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
+대부분의 ZK-롤업은 실제로 영지식이 아닙니다. 실수는 유효성 증명(계산 무결성 보장)과 영지식 증명(정보가 공개되지 않음) 간의 혼동에서 비롯됩니다.
 
-Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+Starknet은 STARK 유효성 증명을 사용합니다. 증명에서 정보를 추출하는 것은 매우 어렵다는 점은 주목할 가치가 있습니다. 실제로는 거의 불가능합니다.

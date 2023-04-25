@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Các tập hợp giao dịch Starknet được sắp xếp chạy bằng Hệ điều hành Starknet, dẫn đến một thay đổi trạng thái tổng hợp sau đó được cam kết với hợp đồng lõi L1 của Starknet. Một khối có:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … một hàm băm khối – một mã định danh ổn định duy nhất có thể được sử dụng để truy vấn và tham chiếu đến khối.
+* … một số khối – một số thứ tự đại diện cho vị trí của khối trong chuỗi các khối được chấp nhận trong Starknet. Lưu ý, số của một khối có thể thay đổi theo thời gian. Ngoài ra, một số nhất định có thể đề cập đến các khối khác nhau tại các thời điểm khác nhau, ví dụ: trong trường hợp đặt hàng lại chuỗi L1.

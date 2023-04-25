@@ -1,67 +1,69 @@
-### TL;DR
+### TL; DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **Phí hiện bắt buộc trên Testnet, sắp có trên Mainnet**
+* Mô hình nhà máy hợp đồng hiện có thể thực hiện được!
+* StarkNet đang giới thiệu các lớp hợp đồng
+* Cuộc gọi đại biểu được thay thế bằng cuộc gọi thư viện
 
-### Intro
+### giới thiệu
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+Chúng tôi rất vui được giới thiệu StarkNet Alpha 0.9.0! Đây là một phiên bản quan trọng trong đó StarkNet thực hiện các bước quan trọng hướng tới sự trưởng thành, với những bổ sung đáng kể cho cả chức năng và thiết kế giao thức.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**Phí là bắt buộc**(hiện chỉ có trên Testnet, cho đến phiên bản 0.9.0 sẽ có trên Mainnet) — bất kỳ L2 thịnh vượng nào cũng phải có hệ thống phí độc lập của riêng mình. Sau khi giới thiệu phí như một tính năng tùy chọn trong phiên bản 0.8.0, giờ đây chúng tôi cảm thấy tự tin khi đưa chúng vào như một thành phần cốt lõi của giao thức và biến chúng thành bắt buộc. Thêm chi tiết dưới đây.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+Một thay đổi quan trọng khác ở cấp độ giao thức là việc giới thiệu các Lớp hợp đồng và phân tách lớp/thực thể. Điều này cho phép sử dụng đơn giản hơn chức năng \`delegate_call\` và triển khai từ các hợp đồng hiện có, cho phép mẫu xuất xưởng trên StarkNet.
 
-### Contract Classes
+### Các lớp hợp đồng
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+Lấy cảm hứng từ lập trình hướng đối tượng, chúng tôi phân biệt giữa mã hợp đồng và việc triển khai nó. Chúng tôi làm như vậy bằng cách tách các hợp đồng thành các lớp và các trường hợp.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+Hợp đồng**lớp**là định nghĩa của hợp đồng: Mã byte Cairo, thông tin gợi ý, tên điểm nhập và mọi thứ cần thiết để xác định rõ ràng ngữ nghĩa của nó. Mỗi lớp được xác định bởi hàm băm lớp của nó (tương tự như tên lớp từ các ngôn ngữ OOP).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+Hợp đồng**thể hiện**, hay đơn giản là hợp đồng, là hợp đồng được triển khai tương ứng với một số lớp. Lưu ý rằng chỉ các trường hợp hợp đồng mới hoạt động như hợp đồng, nghĩa là có bộ nhớ riêng và có thể gọi được bằng các giao dịch/hợp đồng khác. Một lớp hợp đồng không nhất thiết phải có một phiên bản được triển khai trong StarkNet. Việc giới thiệu các lớp đi kèm với một số thay đổi về giao thức.
 
-#### ‘Declare’ Transaction
+#### 'Khai báo' giao dịch
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+Chúng tôi đang giới thiệu một loại giao dịch mới cho StarkNet: giao dịch['khai báo'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction), cho phép khai báo loại hợp đồng**.**Không giống như giao dịch \`triển khai\`, giao dịch này không triển khai một thể hiện của lớp đó. Trạng thái của StarkNet sẽ bao gồm danh sách các lớp được khai báo. Các lớp mới có thể được thêm vào thông qua giao dịch \`declare\` mới.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### Các nhà máy hợp đồng và cuộc gọi hệ thống 'triển khai'.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+Khi một lớp được khai báo, nghĩa là giao dịch \`declare\` tương ứng đã được chấp nhận, chúng ta có thể triển khai các thể hiện mới của lớp đó. Để làm được điều này, chúng tôi sử dụng lệnh gọi hệ thống \`deploy\` mới, có các đối số sau:
 
-* The class hash
-* Salt
-* Constructor arguments
+* Lớp băm
+* Muối
+* đối số xây dựng
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+Cuộc gọi tòa nhà 'triển khai' sau đó sẽ triển khai một phiên bản mới của lớp hợp đồng đó, có địa chỉ[](https://docs.starknet.io/docs/Contracts/contract-address)sẽ được xác định bởi ba tham số ở trên và địa chỉ của người triển khai (hợp đồng đã gọi lệnh gọi hệ thống).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+Việc bao gồm các triển khai bên trong một giao dịch gọi cho phép chúng tôi định giá và tính phí cho các triển khai mà không cần phải xử lý các triển khai và yêu cầu khác nhau. Để biết thêm thông tin về phí triển khai, hãy xem[tài liệu](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+Tính năng này giới thiệu các nhà máy hợp đồng vào StarkNet, vì bất kỳ hợp đồng nào cũng có thể gọi tòa nhà chọc trời \`triển khai\`, tạo hợp đồng mới.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### Chuyển từ 'Cuộc gọi đại biểu' sang 'Cuộc gọi thư viện'
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+Việc giới thiệu các lớp cho phép chúng tôi giải quyết một vấn đề nổi tiếng trong cơ chế gọi ủy quyền của Ethereum: Khi một hợp đồng thực hiện lệnh gọi ủy quyền cho một hợp đồng khác, nó chỉ cần lớp của nó (mã của nó) chứ không phải một phiên bản thực (bộ nhớ của nó). Do đó, việc phải chỉ định một phiên bản hợp đồng cụ thể khi thực hiện cuộc gọi ủy quyền là một cách làm không tốt (thực tế, nó đã dẫn đến một số lỗi trong hợp đồng Ethereum) — chỉ cần chỉ định lớp.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+Lệnh gọi hệ thống \`delegate_call\` cũ hiện không còn được dùng nữa (các hợp đồng cũ đã được triển khai sẽ tiếp tục hoạt động, nhưng**hợp đồng sử dụng \`delegate_call\` sẽ không còn biên dịch**) và được thay thế bằng lệnh gọi hệ thống library_call mới. lấy hàm băm lớp (của lớp đã khai báo trước đó) thay vì địa chỉ cá thể hợp đồng. Lưu ý rằng chỉ có một hợp đồng thực tế có liên quan đến cuộc gọi thư viện, vì vậy chúng tôi tránh sự mơ hồ giữa hợp đồng cuộc gọi và hợp đồng triển khai.
 
-#### New API endpoints
+#### Điểm cuối API mới
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+Chúng tôi đã thêm hai điểm cuối mới vào API, cho phép truy xuất dữ liệu liên quan đến lớp:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: trả về định nghĩa lớp dựa trên hàm băm của lớp
+* \`get_class_hash_at\`: trả về hàm băm lớp của hợp đồng đã triển khai với địa chỉ hợp đồng
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+Lưu ý rằng để lấy trực tiếp loại hợp đồng đã triển khai, thay vì thực hiện hai phương pháp trên, bạn có thể sử dụng điểm cuối \`get_full_contract\` cũ, điểm cuối này sẽ được đổi tên trong các phiên bản sau. Tất cả các điểm cuối được đề cập ở trên cũng có thể sử dụng được từ[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### lệ phí
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+Chúng tôi tiếp tục kết hợp các khoản phí vào StarkNet, biến chúng thành bắt buộc (đầu tiên là trên Testnet và sau đó là trên Mainnet) đối với các giao dịch ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\`. Giao dịch \`declare\` sẽ không yêu cầu phí vào thời điểm này. Tương tự, các giao dịch \`triển khai`` cũng sẽ không yêu cầu phí, tuy nhiên, lưu ý rằng loại giao dịch này rất có thể sẽ không được dùng nữa trong các phiên bản sau.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+Một số câu hỏi mở vẫn còn trong lĩnh vực này, những câu hỏi nổi bật nhất là cách tính phí khai báo hợp đồng và triển khai tài khoản StarkNet. Chúng tôi sẽ giải quyết những vấn đề này trong các phiên bản sau.
 
-### What’s Next?
+### Cái gì tiếp theo?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+Theo lộ trình mà chúng tôi đã công bố vào</a>
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+2, chúng tôi cam kết cải thiện hiệu suất của StarkNet nói chung và hiệu suất của trình sắp xếp thứ tự nói riêng, để nhận được phản hồi nhanh hơn của người dùng về các giao dịch của họ. Trong phiên bản tiếp theo, chúng tôi dự định đưa tính năng song song hóa vào trình sắp xếp thứ tự, cho phép sản xuất khối nhanh hơn.</p> 
+
+Phiên bản chính tiếp theo của StarkNet sẽ tập trung vào cấu trúc tài khoản của StarkNet, theo cách tương tự như[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). Với điều này, chúng tôi sẽ hoàn thiện cách thức hoạt động của các tài khoản StarkNet, thực hiện một bước quan trọng khác hướng tới việc áp dụng hàng loạt!

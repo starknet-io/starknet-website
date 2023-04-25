@@ -1,53 +1,53 @@
-Our previous [post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef) explained what StarkNet is, how it is progressively being decentralized, and provided a summary of its two decentralization mechanisms. This post discusses the StarkNet decentralization process, the role of the StarkNet Foundation, and the need for a new native token for StarkNet. Finally, it discusses additional considerations for StarkNet’s governance down the road.
+我们先前的[发表](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)说明了StarkNet是什么，它是如何逐步下放权力的，并提供了两个权力下放机制的摘要。 这个帖子讨论了StarkNet权力下放进程、StarkNet基金会的作用以及StarkNet需要一个新的本地令牌。 最后，报告讨论了StarkNet在道路上治理的其他考虑因素。
 
-### Principles of decentralization
+### 权力下放原则
 
-[STARK](https://eprint.iacr.org/2018/046.pdf) technology is mature and secure, but thus far it has been implemented and utilized primarily as a centralized service on Ethereum ([StarkEx](https://starkware.co/starkex/)), and an Alpha version of a decentralized service ([StarkNet](https://starkware.co/starknet/)). StarkNet should be available as a truly permissionless public good, like Ethereum, or the Internet. So we are committing to furthering StarkNet’s decentralization and the following four principles to guide the change:
+[STARK](https://eprint.iacr.org/2018/046.pdf)技术是成熟和安全的。 但迄今为止，这项服务主要是作为以太空为基础的中央服务加以实施和使用的([StarkEx](https://starkware.co/starkex/)), 和 Alpha 版本的分散服务([StarkNet](https://starkware.co/starknet/))。 StarkNet应该是一种真正没有许可的公益物，例如Etherum或互联网。 因此，我们致力于推进StarkNet的权力下放和指导改革的以下四项原则：
 
-**Liveness.** StarkNet will not rely on a single company as its operator. Companies can cease to exist, or may decide to stop servicing the network. After decentralization, such scenarios will not bring down StarkNet.
+**Liveness.**StarkNet不会依靠单一公司作为其经营者。 公司可以停止存在，也可以决定停止网络服务。 在权力下放之后，这种情况不会使StarkNet崩溃。
 
-**Censorship resistance.** A single company can theoretically decide, or be forced, to censor particular transactions and smart contracts while fulfilling others. StarkNet will employ a decentralized model to protect against such a scenario.
+**抵制检查。**一个公司理论上可以决定或被迫检查某些交易和智能合同，而完成其他交易。 StarkNet将采用分散的模式来防范这种情况。
 
-**Transparency.** Software upgrades and maintenance are an inevitable part of any decentralized service. Such actions must be discussed transparently, so the community is informed and in control of the technology. The larger community of StarkNet users, operators and developers must work collectively to determine upgrades and maintenance via a transparent, fair, participatory and inclusive process.
+**透明**软件升级和维护是任何分散服务不可避免的一部分。 必须以透明的方式讨论这种行动，以便让社区了解情况，并控制技术。 StarkNet用户、运营商和开发商等更大的社区必须集体努力，通过透明、公平、参与性和包容性的进程确定升级和维护。
 
-**Creativity.** StarkNet must allow any developer to participate in building its core infrastructure and applications, to prevent monopolization and to increase creative and socially beneficial uses of blockchains at scale.
+**创造性。**StarkNet必须允许任何开发者参与其核心基础设施和应用的建设。 防止垄断，扩大区块链的创造性和有利社会的广泛使用。
 
-Decentralization is a hard problem, not to be approached in a rushed manner. StarkNet’s governance proposal, shared here, will likely develop and change over time. What follows is merely its first iteration.
+权力下放是一个棘手的问题，而不是匆忙处理。 StarkNet的治理建议在这里分享，很可能随着时间的推移而发展和变化。 以下只是第一次迭代。
 
 ### 基金会
 
-The Foundation will be a mission-driven non-profit organization, and will be granted StarkNet Tokens (see [next post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)). We anticipate the mission of the Foundation will be to maintain StarkNet as a public good. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between its users, operators, and developers. The Foundation will be dedicated to furthering the decentralization goals outlined above: liveness, censorship-resistance, transparency, and creativity.
+该基金会将是一个由任务驱动的非营利组织，将获得StarkNet令牌(见[下一个帖子](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6))。 我们预计该基金会的任务将是维持StarkNet作为一项公益物。 StarkNet是所有人都可以使用的无权限基础设施。 它必须得到很好的维护，以便能够安全和有效地供公众使用。 它也不得区别对待其用户、经营者和开发者。 基金会将致力于推进上述权力下放目标：寿命、抵制审查、透明度和创造力。
 
-StarkNet’s liveness and censorship-resistance are best achieved by permissionless and decentralized consensus through a proof-of-stake leader election for sequencing and proving STARK-compressed transactions. While that mechanism is automated, it relies on well-functioning protocol software run by nodes on the network as well as the validity and ongoing liveness of the underlying Ethereum blockchain. Therefore, the Foundation will also act as a resource for the ongoing development, documentation, and publication of that protocol software, especially as it relates to bug-fixes and efficiency improvements.
+StarkNet的抵制和审查-抵制最好是通过无权限和分散的共识，通过经证实的利益攸关方领导人选举来排序和证明STARK压缩的交易。 在该机制是自动化的情况下， 它依赖于网络节点运行良好的协议软件以及基础的Ethereum blockchain的有效性和持续的活跃性。 因此，基金会还将作为不断发展、文件编制的资源。 并公布该协议软件，特别是因为它与解决错误和提高效率有关。
 
-Beyond routine maintenance, we anticipate vibrant debates within the community over feature changes or other more fundamental upgrades to the protocol. This is unavoidable in permissionless systems, as evidenced historically by Bitcoin’s block size debate, Ethereum’s proof-of-stake merge, and numerous other examples across the cryptocurrency ecosystem. These software development decisions are more than just objective math and efficiency gains, but rather involve subjective value judgements and feature tradeoffs. In many blockchain communities these decisions are made informally without any clear rules of debate or a process for decision making. Even a non-decision is a decision that favors the status quo. To avoid these issues, the Foundation’s mission will also include developing, testing, and implementing community decision-making processes for resolving essential technological questions. That mechanism will be central to deliberations over protocol updates, dispute resolution, and public goods funding. The Foundation will promote transparency by distributing the information that is needed for making these decisions, and will maintain an archive of such information for future reference.
+除了例行维修外，我们还期待社区内就功能变化或议定书的其他更根本性的升级进行激烈的辩论。 这在无权限的系统中是不可避免的，比特币的区块大小辩论、Etherum的股份合并以及在加密货币生态系统中的许多其他例子都证明了这一点。 这些软件开发决定不仅仅是客观的数学和效率收益，而且涉及主观价值判断和特征权衡。 在许多区块链社区，这些决定是非正式作出的，没有任何明确的辩论规则或决策程序。 即使是不作出决定，也是一种有利于现状的决定。 为了避免这些问题，基金会的任务还包括发展、测试和执行解决基本技术问题的社区决策进程。 该机制将是审议更新程序、解决争端和为公益物筹措资金问题的核心。 基金会将通过分发作出这些决定所需的资料来提高透明度。 并将保持这种资料的档案库，供今后参考。
 
-### Why token?
+### 为什么标记？
 
-StarkNet was always envisioned as a protocol that is run by the community, yet there has been no clear way to define who exactly comprises this community. *The token will allow supporters of the community that perform work that contributed to the success of the ecosystem to play a role in the governance of that ecosystem.*
+StarkNet一直被视为社区管理的一个协议。 然而，尚无明确的方法来确定究竟由谁组成这个社区。 *象征性地将使那些为生态系统成功作出贡献的社区支持者能够在管理该生态系统方面发挥作用。*
 
-Additionally, a fair, open, and censorship-resistant service is only possible if several parties show up to compete to perform work that powers the decentralized service, and that can only be guaranteed if those workers are compensated for their role as operators of the network.
+此外，只有在几个政党参与竞争以行使下放权力的服务的情况下，才有可能提供公平、开放和不受审查的服务。 只有当这些工人因其作为网络经营者的作用而得到补偿时，这一点才能得到保证。
 
-Therefore, including tokens as part of a network technology like StarkNet is necessary. And although payment censorship resistance can be achieved by using an existing non-native token, for example Bitcoin or Ether (ETH), we believe such an approach would fail over time to provide the users of the network with a distinct community and a voice in decisions.
+因此，需要将代币作为StarkNet这样的网络技术的一部分。 虽然可以通过使用现有的非本地代币实现付款检查阻力，例如比特币或Ether (ETH)， 我们认为，这种做法随着时间的推移将无法为网络用户提供一个独特的社区和在决策中的发言权。
 
-A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact StarkNet’s service and its users and providers.
+奖励开发网络的社区成员的本地令牌将会将生态系统推向使用非本地令牌的程度。 此外，如果象征性的象征不是本土的，其他生态系统决策所产生的经济冲击可能会影响StarkNet的服务及其用户和提供者。
 
-### What will the token be used for?
+### 令牌将用于什么？
 
-The token will be the mechanism for operating the network (fees), maintaining and securing the network (consensus participation), and deciding on its values and strategic goals (governance).
+令牌将是操作网络的机制(手续费)， • 维持和确保网络安全（协商一致参与），并决定其价值和战略目标（施政）。
 
-**Transaction fees:** Currently, fees in StarkNet are paid in Ether (ETH). But later on, we anticipate fees will be paid exclusively with the native StarkNet Token. To support good user experience, automated and decentralized on-chain mechanisms will allow users to pay fees in ETH.
+**交易费：**目前，StarkNet的费用是以Ether (ETH)支付的。 但稍后，我们预计费用将完全由土著StarkNet Token支付。 为了支持良好的用户经验，自动化和分散化的链上机制将使用户能够支付电网费用。
 
-**Staking:** Certain services that are critical to the liveness and security of StarkNet may require staking of StarkNet Tokens. These services may include sequencing, reaching temporary L2 consensus before L1 finality is reached, STARK-proving services and data availability provisioning, to name a few examples. We expect these services to be decentralized in 2023.
+**隐藏：**对StarkNet的活力和安全至关重要的某些服务可能需要StarkNet令牌。 这些服务可包括先后顺序、在L1最后确定之前达成临时的L2共识、STARK证明服务和数据提供情况，举几个例子。 我们预计这些服务将在2023年下放。
 
-**Governance:** Proposals for improving StarkNet will require a minimal token support threshold, to be defined later. Voting, either directly or via delegation, will be required for all changes to the protocol that are essential to StarkNet’s liveness, security and maintenance. For example, all major updates to the StarkNet Operating System will require the approval of token holders.
+**治理：**改进StarkNet的建议将需要一个最低的令牌支持阈值，稍后再来确定。 对于StarkNet的生存、安全和维护至关重要的所有更改，都需要直接或通过授权投票。 例如，StarkNet 操作系统的所有重大更新都需要得到代币持有人的批准。
 
-### Closing reflections on governance
+### 结束对施政问题的思考。
 
-Decentralized governance mechanisms are still in their infancy and no project in this space has provided us with a compelling model for emulation. Is regular and direct voting by all token holders the best path? It is relatively straightforward to design this as a technological mechanism, but it can be unwieldy and may unfairly privilege the holders of a large number of tokens, rather than persons who actively use the network.
+权力下放的施政机制仍处于初期阶段，在这个领域没有任何项目为我们提供了令人信服的仿效模式。 所有令牌持有人的定期和直接投票是否是最佳途径？ 将此作为一种技术机制设计起来比较简单。 但它可能变得难以运作，并且可能不公平地使大量代币持有者而不是积极使用网络的人享有特权。
 
-When considering the best approach, we suggest considering checks and balances between several separate structures that derive their authority from the community of StarkNet Token holders.
+在考虑最佳办法时， 我们建议考虑从StarkNet Token 持有人社区获得权力的几个独立机构之间的制衡。
 
-We also recommend that StarkNet Token holders make good use of the expertise of core developers. In all blockchain ecosystems, core developers play a central role in securing, maintaining and advancing the underlying technology. Hence, defining a formal role for them within the governance process is worth consideration.
+我们还建议StarkNet Token 持有者充分利用核心开发者的专门知识。 在所有区块链生态系统中，核心开发者在保护、维护和发展基础技术方面发挥着中心作用。 因此，应当考虑在治理进程中为他们确定正式的作用。
 
-The [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) in this series describes the design of the StarkNet Token: the key token design considerations, and the different phases of token allocation.
+此系列中的[第三篇](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)描述了StarkNet 令牌的设计：关键的令牌设计考虑。 和代币分配的不同阶段。

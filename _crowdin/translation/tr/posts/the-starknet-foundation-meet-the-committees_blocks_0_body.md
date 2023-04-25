@@ -1,83 +1,99 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+Kasım 2022'nin sonlarında, Starknet Foundation</a>
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+lansmanı duyuruldu. Vakıf, Starknet'in gelişen, merkezi olmayan ve izinsiz bir Katman 2 (L2) Validity Rollup (aka ZK-Toplaması). </p> 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Dümende güçlü bir [disiplinler arası yönetim kurulu](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) ile Starknet Vakfı, Starknet topluluğunu geliştirme ve genişletme, ağın sürekli gelişimini denetleme, izinsiz yönetişim mekanizmaları geliştirme ve tam merkezsizleştirme hedefini gerçekleştirmek için iyi bir konumdadır. Starknet ekosistemi. 
 
-The committees are:
+Vakıf bugün, her biri Starknet'in misyonu ve öncelikleriyle uyumlu belirli bir görevle görevlendirilen beş komitenin atandığını kamuoyuna duyurmaktan heyecan duyuyor. Her komitenin yetkisi kesin değildir ve gerekli düzeltmeler ve tadillerle rutin değerlendirmelere tabi tutulacaktır.
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+Komiteler:
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+* Hükümler Komitesi
+* Erken Benimseyenler Hibe Komitesi
+* Geliştirici Ortaklıkları Komitesi
+* Yönetim Komitesi
+* Ekosistem Uyum Komitesi
 
-## Introducing the Starknet Foundation Committees 
+Aşağıda, görev alanları, faaliyetleri ve ilk üyeleri de dahil olmak üzere komiteler hakkında daha fazla ayrıntı paylaşacağız.
 
-### Provisions Committee
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+## Starknet Vakfı Komitelerinin Tanıtımı 
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+### Hükümler Komitesi
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Tedarik Komitesi, Starknet ekosistem belirteci olan STRK'nın tedarikinin planlanmasından, denetlenmesinden ve yürütülmesinden sorumludur. STRK, Starknet'in mutabakat mekanizmasına katılım için staking belirteci olarak kullanılacaktır. Aynı zamanda ağın yönetişim belirteci ve ağın işlem ücretlerinin ödenmesi için gas belirteci olarak hizmet edecektir. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Tedarik Komitesi, Starknet ekosistemine güç verecek olan jetonun adil, merkezi olmayan ve şeffaf dağıtımını sağlamak için kritik öneme sahiptir. Komite, Starknet'i kullanmak için ücret ödemeleri gereken STRK belirteçlerinin kullanıcılara sağlanmasını denetler. Komite, adalet, şeffaflık ve ademi merkeziyetçilik hedeflerine dayalı olarak uygun grupları değerlendirecek ve Starknet Vakfı'na tavsiyelerde bulunacaktır. Bu planlar hazır olduğunda duyurulacaktır.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Provisions Committee ile şu adresten temasa geçilebilir: [provizyon@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Developer Partnerships Committee
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+### Erken Benimseyenler Hibe Komitesi
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Erken Benimseyenler Hibeleri (EAG) Komitesi, Starknet'te zincir üstü uygulamalar geliştiren yenilikçi ekiplere hibeler sağlayarak Starknet ekosisteminin büyümesini desteklemeye kendini adamıştır. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+EAG Komitesinin amacı, zincir üstü konuşlandırmalar yoluyla ekosistemin genişlemesini ve canlılığını kolaylaştırmaktır. Komite, Starknet'i şimdiden geliştirmeye başlamış olan takımlara geriye dönük olarak odaklanacak olan ilk tur başvurularının kriterlerini belirlemek için yakında bir duyuru yapacak. 
 
-### Governance Committee
+Erken Benimseyenler Hibe Komitesi şeffaflığa kendini adamıştır ve tüm hibe meblağlarını kamuya açıklayacaktır.
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Early Adopter Grants Committee ile şu adresten iletişime geçilebilir: [Earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+### Geliştirici Ortaklıkları Komitesi
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Geliştirici Ortaklıkları Komitesi, Starknet ekosistemine getirilecek yeni stratejik geliştirici ortaklıklarını teşvik ederek ve denetleyerek Starknet ekosisteminde hayati bir rol oynar. Özellikle, stratejik geliştirici ortaklıkları, Starknet'in başarısı için kritik olan temel altyapı parçaları üzerindeki işbirlikleri olarak kabul edilir.
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Komitenin ana sorumlulukları, geliştirici ortaklıkları için sunum sürecini kolaylaştırmak, ayrıntılı durum tespiti yapmak ve sunulan teklifleri onaylamaktır. 
 
-### Ecosystem Onboarding Committee
+Komite, ağın temel altyapı katmanını oluşturan veya aktif olarak oluşturmakta olan geliştirici ekipleri belirleyerek ve destekleyerek sağlam bir ekosistemi teşvik etmek için çok önemlidir. Çabaları, Starknet'in altyapı raylarını güvence altına almak ve genişletmek için inşa edilen ekiplerin merkezi olmayan ve şeffaf bir şekilde ödüllendirilmesini sağlar. 
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Geliştirici Ortaklıkları Komitesi ile şu adresten iletişime geçilebilir: [Developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+### Yönetim Komitesi
 
-## Upcoming Milestones
+Yönetişim Komitesi, Starknet ekosisteminin süregelen ademi merkeziyetçiliğinde kritik bir rol ile görevlendirilmiştir. Komite, Starknet yönetiminin ilk aşamalarını araştırmak, planlamak ve yürütmekten sorumludur. 
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Ademi merkeziyetçiliğe odaklanarak ve topluluk katılımı ile aktif devam eden kalkınma arasındaki dengeyi sağlayarak; Komite, Starknet yönetişiminin ilk sütunlarını oluşturmayı, uygulamayı ve denetlemeyi amaçlar. 
 
-Here is what’s coming next: 
+Yönetişim Komitesi, topluluk katılımını teşvik eden ve sürekli büyümeyi ve ekosisteme merkezi olmayan katılımı sağlayan şeffaf, adil ve merkezi olmayan bir yapıyı koruyan temel mekanizmalar geliştirecek ve uygulamaya koyacaktır. Bu hedeflere ulaşmak için komite, Starknet topluluğu tarafından oylanacak ve onaylanacak kararları tanımlayacak ve yönetişim oylarının tartışılması ve uygulanması için gerekli süreci oluşturacaktır. 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+Komite</a>Starknet yönetiminin ilk aşamasını çoktan başlattı. İlk oylamayla ilgili sorularınız için lütfen şu adresle iletişime geçin: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).</p> 
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Yönetişim Komitesi ile şu adresten de iletişime geçilebilir: [yönetişim@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+
+Yönetişim komitesinin çalışması ve yol haritası hakkında daha fazla bilgi edinmek için lütfen [bu sayfa](https://www.starknet.io/en/posts/governance)bakın.
+
+
+
+### Ekosistem Uyum Komitesi
+
+Ekosistem Onboarding Komitesi, yeni geliştiricileri ve topluluk üyelerini güçlendirmekten ve Starknet ekosistemine entegre etmekten sorumludur. Buna Starknet elçilerinin belirlenmesi, yetkilendirilmesi ve desteklenmesi, ekosisteme katkıda bulunanlara ve yetenek havuzlarına hibe verilmesi ve topluluğun Starknet'in ekosistemine katılımını ilerleten etkinliklerin ve eğitim ortaklıklarının genel bir kadansının organize edilmesi ve sponsor olunması dahildir. 
+
+Elçiler, etkinlikler düzenlemeye, katılmaya ve etkinliklerde konuşmaya, topluluk gelişimini desteklemeye, içerik oluşturmaya, karşılıklı yarar sağlayan sponsorluklar aramaya ve gelecek vaat eden bireyleri ve takımları Starknet'i geliştirmeye ikna etmeye kendini adamış, saygı duyulan ve Starknet topluluğunun köklü üyeleri olacaktır.
+
+Ekosistem Onboarding Komitesi, Erken Benimseyenler Hibeleri Komitesinden farklı bir birincil odak noktasına sahiptir. EAG Komitesi, Starknet'i ilk benimseyenleri önyüklemeyi ve ödüllendirmeyi hedeflerken, Ekosistem Onboarding Komitesi, ekosistemin taban düzeyinde devam eden ve sürdürülebilir büyümesini ve gelişimini vurgular. 
+
+Ecosystem Onboarding Committee ile şu adresten iletişime geçilebilir: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+
+
+
+## Yaklaşan Kilometre Taşları
+
+Bu komitelerin atanmasıyla, Starknet Vakfı heyecan verici bir yolculuğa hazırlanıyor. Her komite kendini ekosistemin belirli bir yönünü geliştirmeye adamıştır ve Vakfın yanı sıra birlikte gelişen, merkezi olmayan ve izinsiz bir Katman 2 ekosistemi için çalışacaktır.  
+
+Sırada şunlar var: 
+
+* [İlk Yönetişim Oyu](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) 21 Mart 2023'te yapılacak;
+* EAG Komitesinin ilk duyurusu ve ilk tur başvurulara ilişkin ayrıntılar, 21 Mart 2023 tarihinde StarkNet Foundation'ın [blog](https://www.starknet.io/en/posts/foundation) yayınlanacaktır.
+
+En son güncellemeler ve fırsatlar için StarkNet Foundation'ın [blogunu](https://www.starknet.io/en/posts/foundation) ve sosyal medya kanallarını takip edin.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Tüm ek Starknet Vakfı bilgileri, güncellemeleri ve teklifleri için, [Twitter](https://twitter.com/Starknet)Starknet'i takip edin, [Discord](http://starknet.io/discord)katılın ve [Topluluk Forumunu okuyun.](https://community.starknet.io/)**

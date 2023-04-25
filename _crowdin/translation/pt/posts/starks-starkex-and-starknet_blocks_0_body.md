@@ -36,7 +36,7 @@ Uma enorme comunidade de desenvolvedores está profundamente envolvida com o eco
 
 ### **A Somar Subir**
 
-Both [StarkEx](https://youtu.be/P-qoPVoneQA) and StarkNet are STARK-based scaling solutions. Ambos proporcionam escalabilidade, baixos custos de gás e segurança, mas possuem diferentes requisitos de funcionamento e padrões de interoperabilidade. StarkEx pode ser a solução certa para um aplicativo que em grande parte se enquadra nas APIs que a StarkEx proporciona. StarkNet pode ser mais adequado para um protocolo que requer interação sincronizada com outros protocolos ou que tenha necessidades que vão além do que a StarkEx oferece.
+Ambos[StarkEx](https://youtu.be/P-qoPVoneQA)e StarkNet são soluções de escalonamento baseadas em STARK. Ambos proporcionam escalabilidade, baixos custos de gás e segurança, mas possuem diferentes requisitos de funcionamento e padrões de interoperabilidade. StarkEx pode ser a solução certa para um aplicativo que em grande parte se enquadra nas APIs que a StarkEx proporciona. StarkNet pode ser mais adequado para um protocolo que requer interação sincronizada com outros protocolos ou que tenha necessidades que vão além do que a StarkEx oferece.
 
 STARKs revolucionaram como aplicativos podem ser construídos na Ethereum. StarkEx e StarkNet continuarão a permitir aplicativos que anteriormente eram inviáveis e irão os limites do que é possível no blockchain.
 

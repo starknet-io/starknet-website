@@ -83,9 +83,9 @@ Twitter 帐户上发布， 以及[StarkNet 社区论坛](https://community.stark
 * 首先，为了使代表团机制取得成功，需要一批高素质的代表。
 * 成为代表的道路是没有许可的——没有先决条件——而是对那些愿意这样做的人来说是如此。 在论坛中创建了一个版块，未来的代表可以发布个人资料([在这个链接](https://community.starknet.io/t/delegate-profile-thread/4049) 中)。
 * 代币持有者可以自由选择他们想要授予投票权的任何Ethereum L1地址。
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
-
-
+* 有关详细信息，请阅读 StarkNet 社区论坛</a>上的篇专门帖子。</li> </ul> 
+  
+  
 
 #### StarkNet 生成器的理事会
 
@@ -105,9 +105,9 @@ Twitter 帐户上发布， 以及[StarkNet 社区论坛](https://community.stark
 
 * 17 委员会成员由基金会任命。
 * 任务期间——StarkNet治理第一阶段（几个月）
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
-
-
+* 有关详细信息，请阅读 StarkNet 社区论坛</a>上的篇专门帖子。</li> </ul> 
+  
+  
 
 ### 第一阶段投票权
 

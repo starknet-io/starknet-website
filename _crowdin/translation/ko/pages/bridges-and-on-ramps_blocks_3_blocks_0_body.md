@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## 피아트 램프는 무엇입니까?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+Fiat on-ramps는 법정 화폐를 암호화폐로 교환할 수 있는 서비스 제공업체입니다.

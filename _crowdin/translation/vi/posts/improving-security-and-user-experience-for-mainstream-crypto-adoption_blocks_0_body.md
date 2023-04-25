@@ -1,64 +1,64 @@
-Technological innovation in blockchain has flourished over the last few years — STARKs, SNARKs, EIP-1559, the Ethereum Merge — are all huge technological achievements. However, UX and UI design have failed to keep up. People still get stuck on 16-word seed-phrases, and getting into DeFi without a centralised intermediary is still too intimidating for many . To onboard the next billion users into Web3, improving the user onboarding experience is critical.
+Đổi mới công nghệ trong chuỗi khối đã phát triển mạnh mẽ trong vài năm qua — STARK, SNARK, EIP-1559, Ethereum Merge — đều là những thành tựu công nghệ to lớn. Tuy nhiên, thiết kế UX và UI đã không theo kịp. Mọi người vẫn bị mắc kẹt với các cụm từ hạt giống 16 từ và việc truy cập vào DeFi mà không có trung gian tập trung vẫn còn quá đáng sợ đối với nhiều người. Để đưa một tỷ người dùng tiếp theo vào Web3, việc cải thiện trải nghiệm tích hợp của người dùng là rất quan trọng.
 
-As FTX demonstrated (and Gemini, Celsius and Mt. Gox), retaining self-custody over one’s assets is critically important. However, until recently, self-custodial wallets have been clunky and confusing for the average user. Most people forget their Web2 passwords on a monthly basis; how are users expected to keep their seed phrase and private keys safe for eternity?
+Như FTX đã chứng minh (và Gemini, Celsius và Mt. Gox), việc duy trì quyền tự giám sát đối với tài sản của một người là cực kỳ quan trọng. Tuy nhiên, cho đến gần đây, ví tự quản lý vẫn còn rắc rối và khó hiểu đối với người dùng bình thường. Hầu hết mọi người quên mật khẩu Web2 của họ hàng tháng; làm cách nào để người dùng giữ cụm từ hạt giống và khóa riêng của họ an toàn mãi mãi?
 
-Simply put, it’s a security nightmare. As we’ve seen countless times, one wrong move, whether initiated by bad actors or negligence, can result in the loss of millions of dollars.
+Nói một cách đơn giản, đó là một cơn ác mộng về bảo mật. Như chúng ta đã thấy vô số lần, một động thái sai lầm, cho dù do những kẻ xấu khởi xướng hoặc sơ suất, có thể dẫn đến tổn thất hàng triệu đô la.
 
-As the first contact point for new crypto users, Ethereum wallets must be easy to use, secure, and customizable to fit each user’s needs. This requires developers to integrate the simplicity of Web2 financial products with the features of Web3.
+Là điểm tiếp xúc đầu tiên cho người dùng tiền điện tử mới, ví Ethereum phải dễ sử dụng, an toàn và có thể tùy chỉnh để phù hợp với nhu cầu của từng người dùng. Điều này đòi hỏi các nhà phát triển phải tích hợp tính đơn giản của các sản phẩm tài chính Web2 với các tính năng của Web3.
 
-This is exactly what account abstraction achieves.
+Đây chính xác là những gì trừu tượng hóa tài khoản đạt được.
 
-Account abstraction improves the safety and security of self-custodial wallet products by removing the users’ reliance on the private key and making wallets more programmable. With this improved UX, non-custodial wallets can finally scale to millions of mainstream crypto-users.
+Tính năng trừu tượng hóa tài khoản cải thiện tính an toàn và bảo mật của các sản phẩm ví tự quản lý bằng cách loại bỏ sự phụ thuộc của người dùng vào khóa cá nhân và làm cho ví dễ lập trình hơn. Với trải nghiệm người dùng được cải thiện này, các ví không giam giữ cuối cùng cũng có thể mở rộng quy mô cho hàng triệu người dùng tiền điện tử chính thống.
 
-But to fully understand the impact of account abstraction, we must refresh ourselves on how Ethereum accounts work.
+Nhưng để hiểu đầy đủ tác động của việc trừu tượng hóa tài khoản, chúng ta phải làm mới bản thân về cách thức hoạt động của tài khoản Ethereum.
 
-### The basics of Ethereum accounts
+### Khái niệm cơ bản về tài khoản Ethereum
 
-There are two types of Ethereum accounts:
+Có hai loại tài khoản Ethereum:
 
-1. Externally Owned Accounts (EOA)
-2. Contract Accounts (CA)
+1. Tài khoản sở hữu bên ngoài (EOA)
+2. Tài khoản hợp đồng (CA)
 
-Let’s break each down a bit further.
+Hãy chia nhỏ từng phần hơn nữa.
 
-### Externally owned accounts
+### Tài khoản thuộc sở hữu bên ngoài
 
-Externally owned accounts, like MetaMask and Coinbase Wallet, are the typical account type for Ethereum users. Each EOA consists of a private and public key, called a keypair.
+Các tài khoản thuộc sở hữu bên ngoài, như MetaMask và Coinbase Wallet, là loại tài khoản điển hình cho người dùng Ethereum. Mỗi EOA bao gồm một khóa riêng và khóa chung, được gọi là cặp khóa.
 
-All transactions are authorized and signed by private keys. Once a transaction is signed, the EVM verifies that the signature is valid using the EOA’s account address. The hard-coded logic in the EVM signifies that the account (the object holding your tokens) and the private key (signer) are coupled as one.
+Tất cả các giao dịch được ủy quyền và ký bằng khóa riêng. Sau khi một giao dịch được ký, EVM sẽ xác minh rằng chữ ký đó hợp lệ bằng cách sử dụng địa chỉ tài khoản của EOA. Logic được mã hóa cứng trong EVM biểu thị rằng tài khoản (đối tượng chứa mã thông báo của bạn) và khóa riêng (người ký) được ghép thành một.
 
-Losing your private key means losing your funds, or even control of your account, forever.
+Mất khóa riêng đồng nghĩa với việc mất tiền hoặc thậm chí là mất quyền kiểm soát tài khoản của bạn mãi mãi.
 
-### Contract accounts
+### tài khoản hợp đồng
 
-Meanwhile, contract accounts, synonymous with account abstraction, are smart contracts deployed on the Ethereum blockchain. These contracts are controlled by code logic and do not require private keys. Unlike EOAs, contract accounts can not initiate transactions. Instead, their transactions are triggered by instructions from EOAs.
+Trong khi đó, tài khoản hợp đồng, đồng nghĩa với tài khoản trừu tượng, là hợp đồng thông minh được triển khai trên chuỗi khối Ethereum. Các hợp đồng này được kiểm soát bởi logic mã và không yêu cầu khóa riêng. Không giống như EOA, tài khoản hợp đồng không thể bắt đầu giao dịch. Thay vào đó, các giao dịch của họ được kích hoạt bởi các hướng dẫn từ EOA.
 
-### Why account abstraction matters
+### Tại sao trừu tượng hóa tài khoản lại quan trọng
 
-Account abstraction entails abstracting the hard-coded authorization logic away from EOAs, turning each account into a programmable smart contract that can be tailored to meet the needs of any individual.
+Việc trừu tượng hóa tài khoản đòi hỏi phải trừu tượng hóa logic ủy quyền được mã hóa cứng khỏi EOA, biến mỗi tài khoản thành một hợp đồng thông minh có thể lập trình có thể được điều chỉnh để đáp ứng nhu cầu của bất kỳ cá nhân nào.
 
-As explained by Argent co-founder and Chief Science Officer Julien Niset in a recent[ Stark @ Home event](https://www.crowdcast.io/e/7olimxqv), this flexible authorization logic gives freedom to developers to play around with account features such as…
+Theo giải thích của người đồng sáng lập Argent và Giám đốc Khoa học Julien Niset trong sự kiện[Stark @ Home](https://www.crowdcast.io/e/7olimxqv)gần đây, logic ủy quyền linh hoạt này cho phép các nhà phát triển tự do thử nghiệm với các tính năng tài khoản như…
 
-**Hardware Signers:** Using an iPhone or Android’s secure enclave to turn any smartphone into a hardware wallet. From there, users can verify transactions using biometric data like a fingerprint or Apple Face ID. We’ve already begun to see self-custodial wallets like Braavos [roll out this feature.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
+**Người ký phần cứng:**Sử dụng vùng an toàn của iPhone hoặc Android để biến bất kỳ điện thoại thông minh nào thành ví phần cứng. Từ đó, người dùng có thể xác minh các giao dịch bằng dữ liệu sinh trắc học như dấu vân tay hoặc Apple Face ID. Chúng tôi đã bắt đầu thấy các ví tự quản lý như Braavos[triển khai tính năng này.](https://medium.com/@braavos_starknet_wallet/hardware-signer-the-last-innovation-for-wallet-crypto-everyday-users-7e1974f93944)
 
-**Paymasters:** Allow users to pay gas fees in any token, or even have a third-party-designed mechanism pay for transactions.
+**Paymasters:**Cho phép người dùng thanh toán phí gas bằng bất kỳ mã thông báo nào hoặc thậm chí có cơ chế do bên thứ ba thiết kế thanh toán cho các giao dịch.
 
-**Social Recovery:** In the event a private key is lost or compromised, users can authorize a new key as a legitimate wallet owner. This can include a variety of recovery methods through trusted contacts, hardware wallets, or third-party services. The idea is to make recovering access to your account as easy as recovering your bank account password through an email.
+**Khôi phục xã hội:**Trong trường hợp khóa riêng tư bị mất hoặc bị xâm phạm, người dùng có thể ủy quyền khóa mới với tư cách là chủ sở hữu ví hợp pháp. Điều này có thể bao gồm nhiều phương pháp khôi phục thông qua các địa chỉ liên hệ đáng tin cậy, ví phần cứng hoặc dịch vụ của bên thứ ba. Ý tưởng là làm cho việc khôi phục quyền truy cập vào tài khoản của bạn dễ dàng như khôi phục mật khẩu tài khoản ngân hàng của bạn qua email.
 
-**Multifactor Authentication:** Similar to the commonplace Web2 2FA practices, users can set up two (or more) authentication methods for their crypto wallets, where a transaction is only signed once a user confirms the approval via a second option like email or SMS. Users can also set up daily transfer limits or lists of account addresses of which the wallet is automatically blocked from interacting.
+**Xác thực đa yếu tố:**Tương tự như các phương pháp Web2 2FA phổ biến, người dùng có thể thiết lập hai (hoặc nhiều) phương thức xác thực cho ví tiền điện tử của họ, trong đó giao dịch chỉ được ký sau khi người dùng xác nhận phê duyệt thông qua tùy chọn thứ hai như email hoặc SMS. Người dùng cũng có thể thiết lập giới hạn chuyển khoản hàng ngày hoặc danh sách địa chỉ tài khoản mà ví tự động bị chặn tương tác.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Through signature abstraction, different account contracts use more efficient and quantum-secure signature schemes. StarkNet uses its own proprietary STARK-friendly curve.
+**Chữ ký kháng lượng tử và tiết kiệm gas:**Sơ đồ chữ ký hiện tại của Ethereum, ECDSA, được tính toán rộng rãi (đọc là: phí gas cao hơn) và có thể bị máy tính lượng tử phá vỡ. Thông qua trừu tượng hóa chữ ký, các hợp đồng tài khoản khác nhau sử dụng các lược đồ chữ ký an toàn lượng tử và hiệu quả hơn. StarkNet sử dụng đường cong thân thiện với STARK độc quyền của riêng mình.
 
-Not only do these features provide users with greater security and more flexibility, but more importantly, result in a much **better** user experience.
+Các tính năng này không chỉ cung cấp cho người dùng khả năng bảo mật cao hơn và linh hoạt hơn mà quan trọng hơn là mang lại trải nghiệm người dùng tốt hơn gấp****.
 
-Listed by Vitalik Buterin as a “long-time dream” for the Ethereum developer community, innovations around account abstraction, mainly EIP-2938 and EIP-3074, have swirled since 2020. However, both required tradeoffs around security and implementation. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), the most promising development thus far, proposes a version of account abstraction without requiring changes to the Ethereum protocol.
+Được Vitalik Buterin liệt kê là “ước mơ từ lâu” đối với cộng đồng nhà phát triển Ethereum, những đổi mới xung quanh việc trừu tượng hóa tài khoản, chủ yếu là EIP-2938 và EIP-3074, đã bùng nổ kể từ năm 2020. Tuy nhiên, cả hai đều cần phải đánh đổi xung quanh bảo mật và triển khai. [EIP-4337](https://github.com/ethereum/EIPs/blob/3fd65b1a782912bfc18cb975c62c55f733c7c96e/EIPS/eip-4337.md), sự phát triển hứa hẹn nhất cho đến nay, đề xuất một phiên bản trừu tượng hóa tài khoản mà không yêu cầu thay đổi giao thức Ethereum.
 
-### **Account abstraction and Starknet**
+### **Tóm tắt tài khoản và Starknet**
 
-Unlike Bitcoin and Ethereum which are retrofitting their current protocols to support account abstraction, [StarkNet](https://starkware.co/starknet/) has implemented account abstraction since day one. When coupled with the scalability and capabilities of our STARK proofs, the potential for wallet innovation is limitless. This is why the next generation of self-custodial wallets, like Argent and Braavos, are currently being built on top of our network.
+Không giống như Bitcoin và Ethereum đang trang bị thêm các giao thức hiện tại của họ để hỗ trợ trừu tượng hóa tài khoản,[StarkNet](https://starkware.co/starknet/)đã triển khai trừu tượng hóa tài khoản kể từ ngày đầu tiên. Khi được kết hợp với khả năng mở rộng và khả năng của bằng chứng STARK của chúng tôi, tiềm năng đổi mới ví là vô hạn. Đây là lý do tại sao thế hệ ví tự quản lý tiếp theo, như Argent và Braavos, hiện đang được xây dựng trên mạng của chúng tôi.
 
-StarkNet’s approach is similar to EIP-4337, [acknowledging that ](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)complete account abstraction would still result in confusing UX and [could open the door](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale) to attacks on sequencers. Rather, it aims to achieve both signature abstraction and payment abstraction by mutualizing some of the required on and off-chain infrastructure.
+Cách tiếp cận của StarkNet tương tự như EIP-4337,[thừa nhận rằng việc trừu tượng hóa tài khoản hoàn chỉnh](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781)vẫn sẽ dẫn đến UX khó hiểu và[có thể mở ra cánh cửa](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md#rationale)cho các cuộc tấn công vào trình sắp xếp thứ tự. Thay vào đó, nó nhằm mục đích đạt được cả trừu tượng hóa chữ ký và trừu tượng hóa thanh toán bằng cách tương hỗ hóa một số cơ sở hạ tầng bắt buộc trong và ngoài chuỗi.
 
-And while there’s still much more work to do, account abstraction is gaining traction beyond a small circle of crypto natives. In December, [Visa proposed the idea](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/) of using account abstraction to set up automatic recurring payments on StarkNet. Using a delegatable account, users can grant permission to initiate a payment to a pre-approved smart contract. From there, the smart contract will be programmed to deduct a set payment amount on a specific day, over a set duration of time. While Visa hasn’t yet revealed its plans for its own services, the interest alone speaks volumes, and may foreshadow a world where big-tech subscription platforms like Netflix and Spotify could embrace crypto-adoption.
+Và mặc dù vẫn còn nhiều việc phải làm, nhưng tính trừu tượng của tài khoản đang đạt được sức hút vượt ra ngoài một nhóm nhỏ những người bản địa về tiền điện tử. Vào tháng 12,[Visa đã đề xuất ý tưởng](https://www.coindesk.com/tech/2023/01/11/ethereum-upgrade-could-make-it-harder-to-lose-all-your-crypto/)về việc sử dụng tính năng tóm tắt tài khoản để thiết lập thanh toán định kỳ tự động trên StarkNet. Sử dụng tài khoản có thể ủy quyền, người dùng có thể cấp quyền bắt đầu thanh toán cho hợp đồng thông minh được phê duyệt trước. Từ đó, hợp đồng thông minh sẽ được lập trình để khấu trừ số tiền thanh toán đã đặt vào một ngày cụ thể, trong một khoảng thời gian nhất định. Mặc dù Visa chưa tiết lộ kế hoạch cho các dịch vụ của riêng mình, nhưng chỉ riêng sự quan tâm đã nói lên nhiều điều và có thể báo trước một thế giới nơi các nền tảng đăng ký công nghệ lớn như Netflix và Spotify có thể chấp nhận tiền điện tử.
 
-As for what the future holds, only time will tell. But one thing is certain. By making wallets easier and safe to use, account abstraction will serve as a powerful catalyst for self-custodial blockchain wallets to scale to millions of mainstream crypto-users. We’ll keep on building in the meantime.
+Còn tương lai nắm giữ những gì thì chỉ có thời gian mới trả lời được. Nhưng có một điều chắc chắn. Bằng cách làm cho ví dễ sử dụng và an toàn hơn, tính trừu tượng của tài khoản sẽ đóng vai trò là chất xúc tác mạnh mẽ để ví blockchain tự quản lý mở rộng quy mô cho hàng triệu người dùng tiền điện tử chính thống. Chúng tôi sẽ tiếp tục xây dựng trong khi chờ đợi.

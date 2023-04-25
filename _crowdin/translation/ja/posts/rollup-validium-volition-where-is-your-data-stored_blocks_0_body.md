@@ -1,10 +1,10 @@
 ### TL;DR
 
 * StarkWareは、優先順位に応じて、お客様が選択できるさまざまなデータ可用性(DA)モードを提供しています。
-* There are three approaches to Data Availability for STARK proofs, all of them are already available in production:\
-  — **Rollup**: the ledger is published directly on the blockchain\
-  — **Validium**: a Data Availability Committee secures the ledger, with only a hash being stored on-chain\
-  — **Volition**: apps can let users choose their DA mode — Rollup or Validium — for each and every transaction
+* STARKプルーフのデータ可用性には3つのアプローチがあり、それらはすべて本番環境ですでに利用可能です:\
+  —**ロールアップ**: 台帳はブロックチェーン上で直接公開されます\
+  —**バリジウム**: データ可用性委員会が台帳を保護します,ハッシュのみがオンチェーンに保存される\
+  —**Volition**: アプリは、ユーザーがトランザクションごとに DA モード (Rollup または Validium) を選択できるようにする
 * DAがどちらを使用しても、すべてのトランザクションの有効性はSTARKsによって保証されています
 
 ### はじめに
@@ -31,11 +31,17 @@
 
 #### Validium
 
-Rollupモードでは、Ethereumガスコストの大部分はData Availabilityに移動し、検証の証拠ではありません。 これは、ブロックチェーンにデータを保存することは非常にガス集中性があるためです。 Validiumモードでは、元帳情報はEthereumに送信されません。 むしろ、データ可用性委員会でオフチェーンで保存されます。 Ethereumはこの元帳情報のハッシュを格納します。 このデータ可用性委員会は、正しい状態の更新を監督し、処理されたデータのコピーを保持する独立したメンバーの定足数で構成されています。 各StarkExインスタンスは、独自のクォーラムを作成できます。 Quorum members for existing apps running on StarkEx include entities like [Consensys](https://consensys.net/), [Nethermind](https://nethermind.io/), [Iqlusion](https://iqlusion.io/) and [Cephalopod](https://cephalopod.equipment/).
+Rollupモードでは、Ethereumガスコストの大部分はData Availabilityに移動し、検証の証拠ではありません。 これは、ブロックチェーンにデータを保存することは非常にガス集中性があるためです。 Validiumモードでは、元帳情報はEthereumに送信されません。 むしろ、データ可用性委員会でオフチェーンで保存されます。 Ethereumはこの元帳情報のハッシュを格納します。 このデータ可用性委員会は、正しい状態の更新を監督し、処理されたデータのコピーを保持する独立したメンバーの定足数で構成されています。 各StarkExインスタンスは、独自のクォーラムを作成できます。 StarkEx で実行され[いる既存のアプリのクォーラム メンバーには[[Consensys](https://consensys.net/)](https://iqlusion.io/)](https://cephalopod.equipment/)Iqlusion</a>Cephalopod
+
+
+
+などのエンティティが含まれます。</p> 
 
 ここでの利点は明らかです。 元帳情報をチェーン上に保管するためにEthereumのガス料金を支払う必要はありません。 むしろ、Ethereumに保存されている唯一のものは、元帳情報の単一のハッシュです。 あなたがEthereumと話すことによってレイヤー2から資金を信頼せずに引き出したい場合。 データ可用性委員会のメンバーのデジタル署名を要求するだけです。 DACメンバーは、あなたがその資金の所有権を持っていることを証明するために暗号を使用します。
 
 Validium Data Availability のもう一つの隠された利点は、ブロックチェーンを読む人々からの機密性です。 Rollup Modeでは、各証拠が提出された時点の各アカウントの残高が一般に知られています。 Validiumでは、このデータはブロックチェーンから隠されています。データ可用性委員会だけがこれを認識しています。 このレベルの機密性は、トランザクションデータを難読化することが重要な様々なユースケースを可能にします。
+
+
 
 #### Volition
 
@@ -44,7 +50,5 @@ Volitionは、トランザクションレベルでValidiumとRollup Modeの選�
 StarkExで実行されているアプリで、退屈な猿やCryptopunkのような非常に高価なNFTを購入するとします。 Rollup Modeを使用して、そのNFTのデータを保護することができます。 Ethereumに保存された特定のトランザクションの記録が欲しいから しかし、あなたはその後、本当に安いNFTを購入することができます (例えば、 ブロックチェーンゲームであなたのキャラクターのクローク)、そしてそのような状況では、Validiumを使用してお金を節約することができます。
 
 STARK証明で達成されたスケールに興味をお持ちの場合は、是非ご来場ください。
-
-
 
 あなたはいつでも電子メール[info@starkware.co](mailto:info@starkware.co)を送信することができますし、人間はあなたの電子メールに取得します。

@@ -1,1 +1,1 @@
-A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact Starknet’s service and its users and providers.
+네트워크를 개발하는 커뮤니티 구성원에게 보상하는 네이티브 토큰은 네이티브가 아닌 토큰을 사용하지 않을 정도로 생태계를 발전시킬 것입니다. 또한 토큰이 고유하지 않은 경우 다른 생태계에서 내린 결정으로 인한 경제적 충격이 Starknet의 서비스와 사용자 및 공급자에게 영향을 미칠 수 있습니다.

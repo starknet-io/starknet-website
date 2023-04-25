@@ -1,61 +1,61 @@
 ### TL;DR
 
-* The first version of StarkNet Bridge, StarkGate Alpha, is live on **[Testnet](https://goerli.starkgate.starknet.io/)**, and on **[Mainnet](https://starkgate.starknet.io/)**!
-* We await community feedback on how things can be improved. You can send your feedback for both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
-* Mainnet deployment will follow soon (update, May 9th 2022: StarkGate is live on Mainnet)
+* A StarkNet Bridge első verziója, a StarkGate Alpha élőben elérhető**[Testnet](https://goerli.starkgate.starknet.io/)**on és**[Mainnet](https://starkgate.starknet.io/)**en!
+* Várjuk a közösség visszajelzéseit, hogy miként lehetne javítani. Visszajelzését elküldheti[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)és[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx)esetében is.
+* A Mainnet bevezetése hamarosan megtörténik (frissítés, 2022. május 9.: A StarkGate elérhető a Mainneten)
 
-Excitement! We are thrilled to release StarkGate Alpha, the first version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet deployment to follow soon.*
+Izgalom! Nagy örömünkre kiadjuk a StarkGate Alpha-t, a StarkNet's Bridge első verzióját, amely már elérhető a Goerli testneten, és hamarosan a Mainnet bevezetése következik.*
 
-\*(update, May 9th 2022: StarkGate is live on Mainnet)
+\*(frissítés, 2022. május 9.: a StarkGate élőben van a Mainneten)
 
-**Important disclaimer: this is an alpha version on StarkGate Alpha (read the fine print below!).**
+**Fontos felelősségkizárás: ez a StarkGate Alpha alfa verziója (olvassa el az apró betűs részt alább!).**
 
 ![](/assets/starkgate_01.png)
 
-Before you continue, go check it out! [StarkGate Testnet](https://goerli.starkgate.starknet.io/), [StarkGate Mainnet](https://starkgate.starknet.io/)
+Mielőtt folytatná, nézze meg! [StarkGate Testnet](https://goerli.starkgate.starknet.io/),[StarkGate Mainnet](https://starkgate.starknet.io/)
 
-StarkGate serves as a gateway between Ethereum and [StarkNet](https://starknet.io/), and allows users to do everything they can expect from a bridge.
+A StarkGate átjáróként szolgál az Ethereum és a[StarkNet](https://starknet.io/)között, és lehetővé teszi a felhasználók számára, hogy mindent megtegyenek, amit egy hídtól elvárhatnak.
 
-#### **Where can I find information on how StarkGate works?**
+#### **Hol találhatok információt a StarkGate működéséről?**
 
-To understand how StarkGate works, read the [technical documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) and take a look at the [code](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Note that this is the first version, and we invite your feedback and suggestions on how to improve both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+A StarkGate működésének megértéséhez olvassa el a[műszaki dokumentációt](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)és vessen egy pillantást a[kódra](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Vegye figyelembe, hogy ez az első verzió, és várjuk visszajelzéseit és javaslatait[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)és[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx)javítására vonatkozóan.
 
-#### **Which tokens will be supported by StarkGate?**
+#### **Mely tokeneket támogatja a StarkGate?**
 
-* StarkGate Alpha on Goerli supports ETH and a few other ERC-20 tokens. The full list and the relevant contract addresses, both on Ethereum and StarkNet, are available in this [repo](https://github.com/starkware-libs/starknet-addresses).
-* On Mainnet, initially, StarkGate Alpha will only support ETH to allow use of the fee mechanism. Later on, we will add support for WBTC, USDC, USDT, and DAI. You can see the relevant contract addresses in this [repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
+* A Goerli StarkGate Alpha támogatja az ETH-t és néhány más ERC-20 tokent. A teljes lista és a vonatkozó szerződési címek az Ethereumon és a StarkNeten is elérhetők ebben a[repóban](https://github.com/starkware-libs/starknet-addresses).
+* A Mainneten a StarkGate Alpha kezdetben csak az ETH-t támogatja, hogy lehetővé tegye a díjmechanizmus használatát. Később hozzáadjuk a WBTC, USDC, USDT és DAI támogatását. Ebben a[repóban](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json)láthatja a vonatkozó szerződési címeket.
 
-Further down the road, we will publish the mechanism for adding support for additional tokens.
+A későbbiekben közzétesszük a további tokenek támogatásának mechanizmusát.
 
-#### **What safety limitations will StarkGate Alpha have on Mainnet?**
+#### **Milyen biztonsági korlátai lesznek a StarkGate Alpha-nak a Mainnet hálózaton?**
 
-StarkGate Alpha on Mainnet is launched with two limitations — in order to reduce the risks involved in using an Alpha version:
+A StarkGate Alpha a Mainneten két korlátozással indul – az Alpha verzió használatával járó kockázatok csökkentése érdekében:
 
-1. The total value locked (TVL) in the bridge on L1 will limit the amount of each token type.
-2. The maximum amount in each transaction sent from L1 to L2 (Ethereum→StarkNet) via StarkGate will be limited.
+1. A teljes zárolt érték (TVL) a hídban az L1-en korlátozza az egyes token típusok mennyiségét.
+2. Az L1-ről L2-re (Ethereum→StarkNet) StarkGate-en keresztül küldött tranzakciók maximális összege korlátozott.
 
-We plan to gradually ease these limitations and lift them completely as confidence grows. The updated parameters can be found in StarkGate’s [documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
+Azt tervezzük, hogy fokozatosan enyhítjük ezeket a korlátokat, és az önbizalom növekedésével teljesen feloldjuk őket. A frissített paraméterek a StarkGate[dokumentációjában](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)találhatók.
 
 ![](/assets/starkgate_02.png)
 
-### Alpha and What It Means
+### Alfa és mit jelent
 
-As always, we remind you that StarkNet is currently in its **Alpha** stage:
+Mint mindig, emlékeztetünk arra, hogy a StarkNet jelenleg**Alpha**szakaszában van:
 
-* Things can break. If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
-* Both StarkNet Alpha and StarkGate contracts can be upgraded without a timelock. While we expect to announce such upgrades well ahead of time, in the case of imminent security risks (for example, if a critical bug is found), the upgrade may be applied with little or no warning.
-* The code of the bridge, as well as portions of StarkNet Alpha, have not yet been audited. The ABDK and Nethermind audits of StarkGate Alpha will be completed soon.
+* A dolgok összetörhetnek. Ha katasztrofálisan meghiúsulnak, pénze elveszhet (**olvassa el az alábbi nyilatkozatot**!).
+* A StarkNet Alpha és a StarkGate szerződések is frissíthetők időzár nélkül. Bár várhatóan jóval az idő előtt bejelentjük az ilyen frissítéseket, közelgő biztonsági kockázatok esetén (például ha kritikus hibát találunk), előfordulhat, hogy a frissítés csekély vagy semmilyen figyelmeztetés nélkül alkalmazható.
+* A híd kódja, valamint a StarkNet Alpha egyes részei még nem auditáltak. A StarkGate Alpha ABDK és Nethermind auditja hamarosan befejeződik.
 
-We encourage all users to help improve the bridge by providing their feedback using one of the following platforms:
+Arra bátorítunk minden felhasználót, hogy segítsen a híd fejlesztésében azáltal, hogy visszajelzést ad a következő platformok egyikén:
 
 1. [StarkGate frontend repo](https://github.com/starkware-libs/starkgate-frontend)
-2. [StarkGate Contracts repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
-3. [StarkNet Shamans](http://community.starknet.io/)
+2. [StarkGate szerződések repó](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
+3. [StarkNet sámánok](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+Kérdéseivel és fejlesztői támogatásával kapcsolatban csatlakozzon a[StarkNet diszcord szerverhez](https://discord.gg/uJ9HZTUk2Y).
 
-### Disclaimer
+### Jogi nyilatkozat
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. The same applies to the StarkNet Bridge. Like all complex software systems, both StarkNet and the bridge may contain bugs that, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***A StarkNet Alpha egy új és összetett rendszer, amelyet még nem auditáltak teljesen. Ugyanez vonatkozik a StarkNet Bridge-re is. Mint minden összetett szoftverrendszer, a StarkNet és a híd is tartalmazhat olyan hibákat, amelyek szélsőséges esetekben az összes pénzeszköz elvesztéséhez vezethetnek. Tehát***óvatosan lépj és vigyázz!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*A StarkNet ökoszisztéma független csapatok és egyének nagy és gyorsan növekvő halmaza, amely felett a StarkWare nem rendelkezik felügyelettel, és nem vállal felelősséget. Az ökoszisztéma tagjai által kifejlesztett projektek bármelyike tartalmazhat olyan hibákat, amelyek szélsőséges esetekben az összes pénzeszköz elvesztéséhez vezethetnek. Továbbá, ahogy egyre több intelligens szerződés kerül bevezetésre, megnő a nem szándékos kártékony hibák, sőt a rosszindulatú csalások és szőnyeglehúzások lehetősége. Tehát kezelje a StarkNet összes intelligens szerződését úgy, mint az Ethereum intelligens szerződéseit, és csak azokat használja biztonságosnak, amelyekben alapos oka van megbízni.*

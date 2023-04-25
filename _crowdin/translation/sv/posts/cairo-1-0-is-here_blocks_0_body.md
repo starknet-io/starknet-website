@@ -1,38 +1,38 @@
 ### TL;DR
 
-* Cairo 1.0 first release is here!
-* Developers can start writing and testing Cairo 1.0 programs
-* Feature parity with the older version of Cairo will be reached in the coming weeks
-* Support for StarkNet contracts will be added in the upcoming StarkNet Alpha version
+* Cairo 1.0 första släppet är här!
+* Utvecklare kan börja skriva och testa Kairo 1.0-program
+* Feature parity med den äldre versionen av Kairo kommer att nås under de kommande veckorna
+* Stöd för StarkNet-kontrakt kommer att läggas till i den kommande versionen av StarkNet Alpha
 
-### Background
+### Bakgrund
 
-We are excited to announce that the first public version of Cairo 1.0 is now available. This marks a major milestone in the evolution of Cairo, which was first introduced in 2020 as a Turing-complete programming language for efficiently writing STARK-provable programs. Cairo 1.0 is a Rust-like high-level language. Like Rust, it is intended to allow developers to easily write code that is efficient and safe.
+Vi är glada att kunna meddela att den första offentliga versionen av Kairo 1.0 nu är tillgänglig. Detta markerar en viktig milstolpe i utvecklingen av Kairo, som först introducerades 2020 som ett Turing-komplett programmeringsspråk för att effektivt skriva STARK-bevisbara program. Kairo 1.0 är ett rost liknande språk på hög nivå. Precis som Rust, är det avsett att tillåta utvecklare att enkelt skriva kod som är effektiv och säker.
 
-Since its inception, Cairo has been used to build Layer-2 applications that have [handled](https://dashboard.starkware.co/starkex) over $790 billion worth of trades, processed over 300 million transactions and minted more than 90 million NFTs, all performed off-chain and settled on Ethereum with the mathematical integrity guaranteed by STARK proofs. Cairo became the 4th most used programming language in the blockchain [ecosystem](https://defillama.com/languages) at large. With the release of Cairo 1.0, we aim to make the language even more accessible and user-friendly while also introducing new features that enhance safety and convenience.
+Sedan starten har Kairo använts för att bygga Layer-2 program som[har hanterat](https://dashboard.starkware.co/starkex)över $790 miljarder till ett värde av affärer, bearbetade över 300 miljoner transaktioner och präglade mer än 90 miljoner NFTs, alla utförda off-chain och bosatte sig på Ethereum med den matematiska integritet garanteras av STARK bevis. Kairo blev det fjärde mest använda programmeringsspråket i blockkedjan[ekosystemet](https://defillama.com/languages)i stort. Med frisläppandet av Kairo 1. Vi strävar efter att göra språket ännu mer tillgängligt och användarvänligt samtidigt som vi introducerar nya funktioner som ökar säkerheten och bekvämligheten.
 
-One of the most significant changes in Cairo 1.0 is the syntax. We have taken inspiration from **Rust** to create a more developer-friendly language that is easier to read and write. The new version of Cairo allows writing safer code (strongly typed, ownership and borrowing, etc.), while also being more expressive.
+En av de mest betydande förändringarna i Kairo 1.0 är syntaxen. Vi har tagit inspiration från**Rust**för att skapa ett mer utvecklarvänligt språk som är lättare att läsa och skriva. Den nya versionen av Kairo gör det möjligt att skriva säkrare kod (starkt skrivet, ägande och lån, etc.), samtidigt som den är mer uttrycksfull.
 
-Cairo 1.0 also introduces Sierra, a new intermediate representation that ensures **every** Cairo run can be proven. This makes Cairo 1.0 particularly well-suited for use in a permissionless network like StarkNet, where it can provide robust DoS protection and censorship resistance. You can read more about Sierra in our [previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) post.
+Kairo 1.0 introducerar också Sierra, en ny mellanliggande representation som garanterar**varje**Kairo kör kan bevisas. Detta gör Cairo 1.0 särskilt väl lämpad för användning i ett behörighetslöst nätverk som StarkNet, där det kan ge robust DoS-skydd och censurmotstånd. Du kan läsa mer om Sierra i vårt[föregående](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)inlägg.
 
-## First taste!
+## Första smaken!
 
-### What can you do today?
+### Vad kan du göra idag?
 
-Developers can start writing, compiling, and testing Cairo 1.0 programs! We encourage developers to start experimenting with Cairo 1.0 and getting accustomed to the new syntax and features.
+Utvecklare kan börja skriva, kompilera och testa Kairo 1.0 program! Vi uppmuntrar utvecklare att börja experimentera med Kairo 1.0 och vänja sig vid den nya syntax och funktioner.
 
-Since Cairo 1.0 is still actively developed, and new features are constantly added, check out the [Cairo repository](https://github.com/starkware-libs/cairo/) for the latest updates.
+Eftersom Kairo 1.0 fortfarande är aktivt utvecklad, och nya funktioner ständigt läggs till, kolla in[Kairo utvecklingskatalogen](https://github.com/starkware-libs/cairo/)för de senaste uppdateringarna.
 
-### What's next?
+### Vad kommer härnäst?
 
-At the moment, Cairo 1.0 is still missing some of the features supported in the older version of Cairo ([see this table for details](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Our next milestone, expected in the next few weeks, will provide Cairo 1.0 feature parity with the older version. You can track the progress toward that milestone [here](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
+För tillfället Kairo 1. saknar fortfarande några av de funktioner som stöds i den äldre versionen av Kairo ([se denna tabell för detaljer](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Vår nästa milstolpe, förväntas under de närmaste veckorna, kommer att ge Kairo 1.0 funktionen paritet med den äldre versionen. Du kan spåra framstegen mot denna milstolpe[här](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
 
-### Starknet support
+### Stöd för Starknet
 
-Writing StarkNet contracts in Cairo 1.0 is supported (although certain features are still missing). However, StarkNet does not yet support the deployment and execution of Cairo 1.0 contracts. StarkNet Alpha V0.11.0, planned in the upcoming weeks, will introduce the ability to deploy and run Cairo 1.0 contracts. The upgrade to v0.11.0 will mark the beginning of the Transition Period towards a system that runs only Cairo 1.0 contracts. This Transition Period will end with the [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), expected a few months later.
+Skriva StarkNet kontrakt i Kairo 1.0 stöds (även om vissa funktioner fortfarande saknas). Men StarkNet stöder ännu inte utbyggnaden och genomförandet av Kairo 1.0 avtal. StarkNet Alpha V0.11.0, som planeras under de kommande veckorna, kommer att introducera möjligheten att distribuera och driva Kairo 1.0 kontrakt. Uppgraderingen till v0.11.0 kommer att markera början av övergångsperioden mot ett system som kör endast Kairo 1.0 kontrakt. Denna övergångsperiod kommer att avslutas med[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), förväntas några månader senare.
 
 ![](/assets/0_odxbxeacqdwizlfw.jpg)
 
-### Let's build!
+### Låt oss bygga!
 
-The goal of StarkNet is to exponentially scale Ethereum using the mathematical integrity of STARKs, and the goal of Cairo is to make this exponential scale accessible to developers. Accessibility means a programming language that is efficient, easy to read and write, and safe to use. We hope the release of Cairo 1.0 will inspire even more developers to join StarkNet and scale Ethereum to meet global demand.
+Målet med StarkNet är att exponentiellt skala Ethereum med hjälp av STARKs matematiska integritet, och målet med Kairo är att göra denna exponentiella skala tillgänglig för utvecklare. Tillgänglighet innebär ett programmeringsspråk som är effektivt, lätt att läsa och skriva, och säkert att använda. Vi hoppas att lanseringen av Cairo 1.0 kommer att inspirera ännu fler utvecklare att ansluta sig till StarkNet och skala Ethereum för att möta den globala efterfrågan.

@@ -1,1 +1,1 @@
-Currently, no. Fees in Starknet are now paid in Ether (ETH). But later on, we anticipate that in the future, fees will be paid exclusively with the native Starknet Token.
+Actualment, no. Les tarifes a Starknet ara es paguen en Ether (ETH). Però més endavant, preveiem que en el futur, les tarifes es pagaran exclusivament amb el token Starknet natiu.

@@ -40,9 +40,13 @@ Wie bereits erwähnt, können alle Spielsteine – gesperrt und freigeschaltet �
 
 ### Absteckung
 
-Die unzulässige und zensursichere Operation von StarkNet erfordert eine zufällige Auswahl der Sequenzer. Die Wahrscheinlichkeit, dass ein Knoten ausgewählt wird, um einen Block zu sequenzieren und vorschlagen, ist proportional zur Anzahl der StarkNet-Token, die Knotenpunkte gesetzt werden. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+Die unzulässige und zensursichere Operation von StarkNet erfordert eine zufällige Auswahl der Sequenzer. Die Wahrscheinlichkeit, dass ein Knoten ausgewählt wird, um einen Block zu sequenzieren und vorschlagen, ist proportional zur Anzahl der StarkNet-Token, die Knotenpunkte gesetzt werden. Die Gründe für die Verwendung von StarkNet-Token (anstelle von beispielsweise Ethereum oder Bitcoin) werden im[Governance-Vorschlag](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)erläutert, und die genauen Einzelheiten des Staking, der Sequenzierung und der Blockerstellung auf StarkNet werden von der Community</a>laufend
+
+diskutiert und werden derzeit diskutiert noch nicht abgeschlossen.</p> 
 
 Wie bei der Abstimmung können Tokens auch dann zum Abstecken verwendet werden, wenn sie gesperrt sind. Dies trägt zur Vielfalt der StarkNet-Betreiber und zur Widerstandsfähigkeit von StarkNet bei.
+
+
 
 ### Summary
 

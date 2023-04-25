@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Starknet İşletim Sistemi kullanılarak çalıştırılan ve daha sonra Starknet L1 çekirdek sözleşmesine taahhüt edilen bir toplu durum değişikliğiyle sonuçlanan sıralı Starknet işlem kümeleri. Bir blokta şunlar bulunur:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … bir blok karması - bloğa sorgulamak ve ona başvurmak için kullanılabilecek benzersiz bir kararlı tanımlayıcı.
+* … bir blok numarası – Starknet'te kabul edilen bloklar sırasında bloğun konumunu temsil eden bir sıra numarası. Not, bir bloğun numarası zamanla değişebilir. Ayrıca, belirli bir sayı, örneğin L1 zincirinin yeniden sıralanması durumunda, farklı zaman noktalarında farklı bloklara atıfta bulunabilir.

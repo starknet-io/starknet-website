@@ -8,4 +8,4 @@
 
 Uwaga: Przesłane tłumaczenia zostaną poddane krótkiej recenzji przed publikacją, więc pojawi się opóźnienie zanim Twoja praca pojawi się na stronie.
 
-We also curate and maintain a list of Starknet related [communities and resources in multiple languages](/en/community/language-resources).
+Zajmujemy się również tworzeniem i utrzymywaniem listy społeczności i zasobów związanych ze Starknet [w wielu językach](/en/community/language-resources).

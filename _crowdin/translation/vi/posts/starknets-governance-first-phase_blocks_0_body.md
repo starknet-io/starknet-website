@@ -1,114 +1,114 @@
-We are excited to announce the next step in StarkNet’s decentralization process — voting for protocol changes.
+Chúng tôi rất vui mừng thông báo bước tiếp theo trong quy trình phân cấp của StarkNet — bỏ phiếu cho các thay đổi giao thức.
 
-Over the last few weeks, StarkNet took significant steps to further decentralization by establishing [the StarkNet Foundation](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), launching the [STRK Token on Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c), and by [open-sourcing Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
+Trong vài tuần qua, StarkNet đã thực hiện các bước quan trọng để phân cấp hơn nữa bằng cách thành lập[Quỹ StarkNet](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59), tung ra[Mã thông báo STRK trên Ethereum](https://medium.com/starkware/starknet-token-is-deployed-on-ethereum-f27f0000b00c)và[mã nguồn mở Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0).
 
-This post will expand on the next step, namely the first phase of StarkNet’s Governance, which will span over the coming months.
+Bài đăng này sẽ mở rộng trong bước tiếp theo, cụ thể là giai đoạn đầu tiên của Quản trị StarkNet, sẽ kéo dài trong những tháng tới.
 
-### TL;DR
+### TL; DR
 
-* The first vote to approve or reject proposed changes to the StarkNet protocol will take place soon
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
-* All are invited to nominate themselves as a delegate in StarkNet’s Governance
-* Discussions will be conducted in the [StarkNet Community Forum](https://community.starknet.io/)
+* Cuộc bỏ phiếu đầu tiên để phê duyệt hoặc từ chối các thay đổi được đề xuất đối với giao thức StarkNet sẽ sớm diễn ra
+* Những người tham gia bỏ phiếu trong giai đoạn đầu tiên sẽ là:\
+  — Chủ sở hữu mã thông báo\
+  — Đại biểu được lựa chọn bởi chủ sở hữu mã thông báo muốn ủy quyền quyền biểu quyết của họ\
+  — Đại biểu được Quỹ StarkNet lựa chọn để thực hiện một số quyền biểu quyết của mình\
+  — Hội đồng các nhà xây dựng chuyên nghiệp, được thành lập bởi StarkNet Foundation
+* Tất cả đều được mời tự đề cử mình làm đại biểu trong Quản trị của StarkNet
+* Các cuộc thảo luận sẽ được tiến hành trong[Diễn đàn cộng đồng StarkNet](https://community.starknet.io/)
 
-### Background
+### Lý lịch
 
-Two processes are being advanced simultaneously in order to fulfill StarkNet’s vision to become a censorship-resistant public network: (i) decentralization of [StarkNet’s system components](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), e.g., sequencers and provers, and (ii) implementation of governance mechanisms regarding protocol changes.
+Hai quy trình đang được nâng cao đồng thời để hoàn thành tầm nhìn của StarkNet trở thành mạng công cộng chống kiểm duyệt: (i) phân cấp[thành phần hệ thống của StarkNet](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), ví dụ: trình sắp xếp thứ tự và trình chứng minh, và (ii) triển khai các cơ chế quản trị liên quan đến thay đổi giao thức.
 
-Building quality governance mechanisms that will allow an open community to manage protocol upgrades is a serious challenge. It is a gradual and exploratory process that requires broad community collaboration.
+Xây dựng các cơ chế quản trị chất lượng cho phép một cộng đồng mở quản lý các nâng cấp giao thức là một thách thức nghiêm trọng. Đó là một quá trình dần dần và khám phá đòi hỏi sự cộng tác rộng rãi của cộng đồng.
 
-In order to plan and orchestrate the first phases of StarkNet’s Governance, the StarkNet Foundation established a governance committee. The Foundation will publish more details on the committee’s scope and mission in a separate post. The committee members are Deven Matthews (Nethermind), Manor Bareli (StarkWare), and Sylve Chevet (briq). Below is the plan for the first phase of StarkNet Governance, formulated by the committee members together with various contributors from the StarkNet ecosystem and approved by the Foundation board.
+Để lập kế hoạch và sắp xếp các giai đoạn đầu tiên của Quản trị StarkNet, Quỹ StarkNet đã thành lập một ủy ban quản trị. Quỹ sẽ công bố thêm chi tiết về phạm vi và nhiệm vụ của ủy ban trong một bài viết riêng. Các thành viên của ủy ban là Deven Matthews (Nethermind), Manor Bareli (StarkWare) và Sylve Chevet (briq). Dưới đây là kế hoạch cho giai đoạn đầu tiên của Quản trị StarkNet, được xây dựng bởi các thành viên ủy ban cùng với những người đóng góp khác nhau từ hệ sinh thái StarkNet và được hội đồng quản trị của Tổ chức phê duyệt.
 
-### Starknet’s governance first phase plan
+### Kế hoạch quản trị giai đoạn đầu của Starknet
 
-The first phase of StarkNet Governance has been launched. From now on, community members will be able to participate in shaping StarkNet through a further channel, namely voting on protocol changes. This is only the first stage of StarkNet’s Governance; as StarkNet advances to the next phases, the range of governance mechanisms and participants will expand. Here are the details of the **first phase**:
+Giai đoạn đầu tiên của Quản trị StarkNet đã được khởi chạy. Từ giờ trở đi, các thành viên cộng đồng sẽ có thể tham gia định hình StarkNet thông qua một kênh khác, đó là bỏ phiếu về các thay đổi giao thức. Đây chỉ là giai đoạn đầu tiên của Quản trị StarkNet; khi StarkNet tiến tới các giai đoạn tiếp theo, phạm vi cơ chế quản trị và người tham gia sẽ mở rộng. Dưới đây là chi tiết của**giai đoạn đầu tiên**:
 
-#### Voting subject
+#### chủ đề bình chọn
 
-Proposed upgrades to the StarkNet protocol. All upgrades, at this stage, will be proposed by the Foundation. The proposals will reflect discussions, ideas, and feedback raised in the StarkNet Community Forum.
+Đề xuất nâng cấp cho giao thức StarkNet. Tất cả các nâng cấp, ở giai đoạn này, sẽ được đề xuất bởi Tổ chức. Các đề xuất sẽ phản ánh các cuộc thảo luận, ý tưởng và phản hồi được đưa ra trong Diễn đàn cộng đồng StarkNet.
 
-#### Voting type
+#### loại bỏ phiếu
 
-Off-chain signal vote (Via Snapshot)
+Bỏ phiếu tín hiệu ngoài chuỗi (Qua Ảnh chụp nhanh)
 
-#### Voting process
+#### quá trình bỏ phiếu
 
-1. The Foundation will deploy an updated version of StarkNet to Goerli.
-2. Voters will have a 6-day period to examine the upgraded version as it runs on Goerli. During this time, they can vote on whether to approve it for Mainnet deployment.
-3. If a proposal is approved by voters, there will then be a delay of 24+ hours before applying the upgrade to Mainnet.
+1. Tổ chức sẽ triển khai phiên bản cập nhật của StarkNet cho Goerli.
+2. Người bình chọn sẽ có thời gian 6 ngày để kiểm tra phiên bản nâng cấp khi nó chạy trên Goerli. Trong thời gian này, họ có thể bỏ phiếu về việc có chấp thuận triển khai Mainnet hay không.
+3. Nếu một đề xuất được các cử tri chấp thuận, thì sẽ có hơn 24 giờ trì hoãn trước khi áp dụng nâng cấp lên Mainnet.
 
-Announcements for these updates will be made on the [Twitter account of the StarkNet Foundation](https://twitter.com/StarkNetFndn), as well as on the [StarkNet Community Forum](https://community.starknet.io/).
+Thông báo về những cập nhật này sẽ được thực hiện trên tài khoản Twitter[của Tổ chức StarkNet](https://twitter.com/StarkNetFndn), cũng như trên[Diễn đàn Cộng đồng StarkNet](https://community.starknet.io/).
 
-#### Threshold and required quorum
+#### Ngưỡng và đại biểu bắt buộc
 
-* Threshold is a simple majority (i.e., the threshold is 50% of votes cast)
-* No required quorum, meaning that there is no minimum level of participation for the vote to be valid
+* Ngưỡng là đa số đơn giản (nghĩa là ngưỡng là 50% số phiếu bầu)
+* Không có đại biểu bắt buộc, nghĩa là không có mức độ tham gia tối thiểu để phiếu bầu hợp lệ
 
-### First phase voting participants
+### Những người tham gia bỏ phiếu giai đoạn đầu
 
-Here is the list of those who will be able to participate in the first phase of the governance process:
+Dưới đây là danh sách những người sẽ có thể tham gia vào giai đoạn đầu tiên của quy trình quản trị:
 
-#### Token holders
+#### chủ sở hữu mã thông báo
 
-* In the first phase of StarkNet’s Governance, most token holders are early core contributors and investors who built and supported the network in its early stages ([read this post for more details](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
-* Over time, the token will be distributed to developers and other parties who are performing work to maintain and upgrade the network. As such, those parties will be able to secure the network, use it, operate it and participate in its governance.
+* Trong giai đoạn đầu tiên của Quản trị StarkNet, hầu hết chủ sở hữu mã thông báo là những người đóng góp và nhà đầu tư cốt lõi ban đầu, những người đã xây dựng và hỗ trợ mạng trong giai đoạn đầu ([đọc bài đăng này để biết thêm chi tiết](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)).
+* Theo thời gian, mã thông báo sẽ được phân phối cho các nhà phát triển và các bên khác đang thực hiện công việc để duy trì và nâng cấp mạng. Như vậy, các bên đó sẽ có thể bảo mật mạng, sử dụng, vận hành và tham gia quản trị mạng.
 
-#### Delegates
+#### đại biểu
 
-**Rationale**:\
-Voting power delegation enables token holders to delegate their governance mandate to involved, informed, and professional community members. Thanks to that:
+**Cơ sở lý luận**:\
+Ủy quyền quyền biểu quyết cho phép chủ sở hữu mã thông báo ủy quyền ủy quyền quản trị của họ cho các thành viên cộng đồng có liên quan, được thông báo và chuyên nghiệp. Cám ơn vì điều đó:
 
-* Token holders can opt to be part of the decision-making through representational rather than direct democracy.
-* Dedicated, talented community members can take a significant role in governance by merit of their reputation. There’s no need to own tokens in order to put yourself forward as a delegate.
+* Chủ sở hữu mã thông báo có thể chọn tham gia vào quá trình ra quyết định thông qua đại diện thay vì dân chủ trực tiếp.
+* Các thành viên cộng đồng tận tụy, tài năng có thể đảm nhận vai trò quan trọng trong việc quản trị nhờ vào danh tiếng của họ. Bạn không cần phải sở hữu mã thông báo để có thể tự khẳng định mình là một đại biểu.
 
-**Responsibilities**:\
-Carry out a serious learning process for each decision, which will lead to well-founded, independent decisions that benefit StarkNet and its long-term vision.
+**Trách nhiệm**:\
+Thực hiện quá trình học hỏi nghiêm túc cho từng quyết định, điều này sẽ dẫn đến các quyết định độc lập, có cơ sở vững chắc có lợi cho StarkNet và tầm nhìn dài hạn của nó.
 
-**Operation**:
+**Thao tác**:
 
-* First and foremost, in order for the delegation mechanism to be successful, a pool of quality delegates is needed.
-* The path to become a delegate is permissionless — there are no prerequisites — but for those who wish, a section has been created in the forum where prospective delegates can post profiles ([in this link](https://community.starknet.io/t/delegate-profile-thread/4049)).
-* Token holders can freely choose any Ethereum L1 address they wish to delegate their voting power.
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* Trước hết, để cơ chế ủy nhiệm thành công, cần có một đội ngũ đại biểu chất lượng.
+* Con đường trở thành đại biểu là không cần xin phép — không có điều kiện tiên quyết — nhưng đối với những người muốn, một phần đã được tạo trong diễn đàn nơi các đại biểu tiềm năng có thể đăng hồ sơ ([trong liên kết này](https://community.starknet.io/t/delegate-profile-thread/4049)).
+* Chủ sở hữu mã thông báo có thể tự do chọn bất kỳ địa chỉ Ethereum L1 nào mà họ muốn để ủy quyền quyền biểu quyết của mình.
+* Để biết thêm chi tiết, hãy đọc[bài đăng chuyên dụng trên Diễn đàn cộng đồng StarkNet](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-#### The StarkNet builders’ council
+#### Hội đồng các nhà xây dựng StarkNet
 
-A professional committee, appointed by the Foundation.
+Một ủy ban chuyên nghiệp, được chỉ định bởi Quỹ.
 
-**Rationale**:\
-Implementation of governance mechanisms that are based upon community involvement and professional reputation, and not only on the basis of token-holding.
+**Cơ sở lý luận**:\
+Thực hiện các cơ chế quản trị dựa trên sự tham gia của cộng đồng và danh tiếng nghề nghiệp chứ không chỉ dựa trên cơ sở nắm giữ mã thông báo.
 
-**Responsibilities**:
+**Trách nhiệm**:
 
-* Carrying out a serious learning and discussion process for each decision, which will lead to well-founded decisions that benefit StarkNet and its long-term vision
-* Taking an active part in discussions and votes during the first phase
-* Ensuring that their discussions and decision-making processes are transparent
-* Being accessible to the community via open discussions on the StarkNet community forum
+* Thực hiện quá trình học hỏi và thảo luận nghiêm túc cho từng quyết định, điều này sẽ dẫn đến những quyết định có cơ sở vững chắc có lợi cho StarkNet và tầm nhìn dài hạn của nó
+* Tham gia tích cực vào các cuộc thảo luận và bình chọn trong giai đoạn đầu tiên
+* Đảm bảo rằng các cuộc thảo luận và quá trình ra quyết định của họ là minh bạch
+* Có thể tiếp cận cộng đồng thông qua các cuộc thảo luận mở trên diễn đàn cộng đồng StarkNet
 
-**Operation**:
+**Thao tác**:
 
-* 17 committee members appointed by the Foundation
-* Mandate period — StarkNet governance first phase (several months)
-* For more details, read the [dedicated post on StarkNet Community Forum](https://community.starknet.io/t/delegate-profile-thread/4049).
+* 17 thành viên ủy ban do Quỹ bổ nhiệm
+* Thời hạn ủy quyền — Giai đoạn đầu quản trị StarkNet (vài tháng)
+* Để biết thêm chi tiết, hãy đọc[bài đăng chuyên dụng trên Diễn đàn cộng đồng StarkNet](https://community.starknet.io/t/delegate-profile-thread/4049).
 
-### First phase voting power
+### Quyền biểu quyết giai đoạn đầu
 
-During StarkNet’s Governance first phase, StarkWare will not participate in votes. The StarkNet Foundation will delegate voting power to the Builders’ Council and to several delegates from the pool, and will not vote directly.
+Trong giai đoạn quản trị đầu tiên của StarkNet, StarkWare sẽ không tham gia bình chọn. Tổ chức StarkNet sẽ ủy quyền biểu quyết cho Hội đồng Nhà xây dựng và một số đại biểu từ nhóm và sẽ không bỏ phiếu trực tiếp.
 
-The voting power distribution in the **first phase** will be:
+Phân phối quyền biểu quyết trong**đầu tiên giai đoạn**sẽ là:
 
-* Investors: 33.3%
-* StarkNet’s early core contributors (excluding StarkWare): 33.3%
-* The Foundation’s representatives: 33.3%\
-  — StarkNet Builders’ Council: 23.3%\
-  — Delegates voting on behalf of the Foundation: 10%
+* Nhà đầu tư: 33,3%
+* Những người đóng góp cốt lõi ban đầu của StarkNet (không bao gồm StarkWare): 33,3%
+* Đại diện của Quỹ: 33,3%\
+  — Hội đồng những người xây dựng StarkNet: 23,3%\
+  — Đại biểu bỏ phiếu thay mặt cho Quỹ: 10%
 
-### First vote — StarkNet’s 0.11 version
+### Bình chọn đầu tiên — Phiên bản 0.11 của StarkNet
 
-The first vote will take place in the coming weeks. The vote will concern whether to upgrade StarkNet Alpha to version 0.11.
+Cuộc bỏ phiếu đầu tiên sẽ diễn ra trong vài tuần tới. Cuộc bỏ phiếu sẽ liên quan đến việc có nên nâng cấp StarkNet Alpha lên phiên bản 0.11 hay không.
 
-Voting will start shortly after the Goerli release and will be announced via the official channels: [StarkNet Foundation’s Twitter account](https://twitter.com/StarkNetFndn) and [StarkNet Community Forum](https://community.starknet.io/). Stay tuned!
+Việc bỏ phiếu sẽ bắt đầu ngay sau khi phát hành Goerli và sẽ được thông báo qua các kênh chính thức:[Tài khoản Twitter của Quỹ StarkNet](https://twitter.com/StarkNetFndn)và[Diễn đàn cộng đồng StarkNet](https://community.starknet.io/). Giữ nguyên!

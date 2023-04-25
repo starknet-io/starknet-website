@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* يجري تطوير جهاز تسلسل StarkNet جديد
+* هو مفتوح المصدر بموجب ترخيص أباتشي 2.0
+* الهدف الأول هو زيادة ناتج StarkNet،
 
-### A shiny new sequencer
+### جهاز تسلسل جديد مشرق
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+ويسعدنا أن نعلن أن ستارك نيت ستيكنسر جديد في العمل. بينما يتحرك مكدس تقنية StarkNet، نحو المصدر المفتوح، يتبع[القاهرة 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)و[عقدة البابايروس الكاملة](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)، نحن الآن نواصل مع تسلسل StarkNet. سيكون مفتوح المصدر، متاح بموجب ترخيص أباتشي 2.0، ويمكنك التحقق من[المستودع](https://github.com/starkware-libs/blockifier)الآن!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+بناء جهاز تسلسل جديد هو جزء من[خريطة طريق StarkNet](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)التي قدمناها قبل بضعة أشهر. سيبدأ تنفيذ متحكم التسلسل الجديد باستبدال**بلوكفير**، الوحدة داخل تسلسل الذي يقوم بتنفيذ الكتل. وكما هو موضح في خارطة الطريق، فمن المتوقع أن تحقق هذه الخطة فوائد لأداء ستاركنيت.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+ونهجنا في بناء هذه التسلسل هو نفس النهج الذي استرشدنا به في ستاركنيت ألفا. سيتم تنفيذ جهاز التسلسل**في المراحل**، ونحن نشارك اليوم أول وحدة. ومع مرور الوقت، ستكتمل العناصر الجديدة لراسل التسلسل إلى أن يحل راسل التسلسل الحالي القائم على بايثون محل راسل التسلسل الحالي.
 
-### What does the sequencer do?
+### ماذا يفعل عامل التسلسل؟
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+على StarkNet ، بعد إرسال المستخدمين للمعاملات، فإن أول نقطة في رحلة المعاملة إلى توسيع ستارك هي نقاط التسلسل. في بروتوكول StarkNet ، يكون واضعو التسلسل مسؤولين عن طلب المعاملات وإنتاج الكتل. بعد أن يتم إنشاء الكتلة بواسطة متسلسل، والموافقة عليها بواسطة بروتوكول توافقي ، يتسلم المؤلفون وينتجون دليلاً ل L1.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
-### Open-Sourcing
+### مفتوح المصدر
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+اطلق StarkNet Alpha على Mainnet في نوفمبر 2021. وقد التزمت منذ البداية بتقاسم قوة التوسع في ستارك مع العالم.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+واليوم، نحن نصدر الأول في سلسلة من وحدات متسلسل المصدر المفتوح الجديد. وسيستغرق نشر جميع الوحدات والوحدات الفرعية عدة أشهر. وسيمكن استخدام كل مصدر مفتوح لأعضاء المجتمع من المساهمة في التطوير، ومراجعة حسابات الشفرة البرمجية.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+سيؤدي هذا إلى وضع StarkNet أقرب إلى نقطة تسلسل لامركزي بلا إذن. نحن الآن نصمم بروتوكول StarkNet، اللامركزي ونحن نشجع المجتمع على المشاركة في[البحث والمناقشة](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
 
-### Performance
+### الأداء
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+معلم تسلسل StarkNet، الأصلي، هو إلى حد كبير تكييف للبنية الأساسية StarkEx. الآن، هناك حاجة إلى بنية تحتية بنيت بشكل خاص لمتطلبات شبكة لامركزية عالية الأداء.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+وقد صمم معلم التسلسل الجديد الذي بُني في روست وتم تطويره مع مراعاة الأداء. يقوم عامل التسلسل الجديد أيضًا على أسس صلبة: بابيروس، العقدة الجديدة[StarkNet الكاملة،](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)سوف يتعامل مع إدارة الولاية، والقاهرة الجديدة للقاهرة من قبل لامبانداكراسيس، سوف تسرع تنفيذ حكم القاهرة. ونتوقع أن يتحسن عامل التسلسل الجديد على أساس تسلسل السلسلة الحالية في جميع الجوانب. ومن المتوقع أن تتحسن إنتاجية الشبكة وتوافرها تحسنا كبيرا مع دمج هذا المخرج في StarkNet.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+ونتوقع أيضا أن تكون الهياكل الأساسية وأدوات التنمية الأخرى قادرة على استخدام المتسلسل الجديد لتحسين تجربة التنمية. ومن المتوقع أن يتحسن أداء العقد بالكامل وأن تتحسن جميع أطر الاختبار.
 
 ### Summary
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+ونحن متحمسون لأن نعلن اليوم عن تسلسل المصدر المفتوح الجديد. والوحدة التدريبية الأولى متاحة بالفعل للمجتمع المحلي لاستعراضها، وستتبع مع المزيد من الوحدات في الأشهر التالية في المستقبل. ويسعدنا أيضا أن نتخذ خطوة أخرى في خارطة الطريق لتعزيز أداء StarkNet. ونهدف إلى جعل الشبكة أكثر كفاءة وسهولة في الوصول، ونقدر دعم كل من انضم إلينا في هذه الرحلة.

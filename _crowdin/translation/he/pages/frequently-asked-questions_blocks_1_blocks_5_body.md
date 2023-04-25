@@ -1,3 +1,3 @@
-Currently, Starknet transactions and their payloads are visible to the network in the same way that they are visible on Ethereum.
+נכון לעכשיו, עסקאות Starknet והמטענים שלהן גלויים לרשת באותו אופן שבו הם גלויים ב-Ethereum.
 
-It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+ניתן לפרוס פרוטוקולי פרטיות שונים ב-Starknet, שיציעו פרטיות מלאה מכל משתתפי הרשת. מכיוון שהפרוטוקולים האלה בדרך כלל דורשים הרבה חישובים, הם יפיקו תועלת רבה ממדרגיות Starknet.

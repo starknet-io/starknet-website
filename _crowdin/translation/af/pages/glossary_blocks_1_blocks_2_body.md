@@ -1,1 +1,1 @@
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+'n Versameling kontrakte (L1 en L2) wat gesamentlik 'n besigheidsvloei implementeer.

@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+Trong bài đăng này, chúng tôi đi sâu hơn vào thiết kế của Mã thông báo StarkNet, lịch trình đúc và dòng thời gian dự kiến.
 
-### Considerations
+### cân nhắc
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+Thiết kế của Mã thông báo StarkNet được định hình bởi nhu cầu cung cấp năng lượng cho mạng bao gồm (i)**Người dùng**của StarkNet, (ii)**Người vận hành**— những người cung cấp cho mạng tài nguyên máy tính thực hiện trình tự các giao dịch, tạo ra Bằng chứng của STARK, và các nhà cung cấp dịch vụ lưu trữ dài hạn, và (iii)**Nhà phát triển**viết phần mềm cho cơ sở hạ tầng của nó và cho các ứng dụng chạy trên nó.
 
-Mechanisms for fee structure and token minting should be:
+Các cơ chế cho cấu trúc phí và đúc mã thông báo phải là:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Tự động hóa phần lớn, trái ngược với dựa trên sự can thiệp đáng kể của con người
+* Được biết đến và thử nghiệm trong các hệ thống chuỗi khối khác
+* Đơn giản để phân tích và giải thích; trong suốt
+* Chống thao túng đầu cơ và trò chơi hóa không tạo ra giá trị
+* Được coi là có trải nghiệm người dùng (UX) tốt
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Các tùy chọn này sẽ định hình cơ chế phân bổ mã thông báo từ phí giao dịch và đúc mới do Người dùng thanh toán:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Người vận hành**đảm bảo sự sống động liên tục của StarkNet và mang lại hiệu suất chất lượng cao của giao thức mà Người dùng yêu cầu.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Nhà phát triển**xây dựng và duy trì phần mềm được Nhà điều hành sử dụng để bảo mật mạng và họ tạo các ứng dụng nâng cao chức năng của mạng cho người dùng. Do đó, một phần phí và tiền đúc mới sẽ được chuyển đến Nhà phát triển hợp đồng thông minh và Nhà phát triển cốt lõi, như sau:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Nhà phát triển hợp đồng thông minh:**giao thức StarkNet có thể tự động đo lường giá trị được cung cấp bởi các hợp đồng thông minh, thông qua phí L1 và L2 do Người dùng của các hợp đồng này trả. Giao thức StarkNet sẽ tự động phân bổ một phần phí và việc đúc tiền mới đang diễn ra cho Nhà phát triển hợp đồng thông minh. Các hợp đồng thông minh mang lại nhiều giá trị hơn cho Người dùng — được đo bằng các khoản phí trả cho họ — sẽ nhận được phần lớn mã thông báo được phân bổ cho mục đích này.
+* **Nhà phát triển cốt lõi:**Giao thức StarkNet không có cách tự động định lượng sự đóng góp của các Nhà phát triển cốt lõi, chẳng hạn như những người viết mã cho trình kiểm chứng, trình sắp xếp thứ tự, nút đầy đủ, v.v. Do đó, việc phân bổ mã thông báo cho các Nhà phát triển cốt lõi đó và những người đóng góp khác mà giao thức không thể đo lường được đóng góp của họ nhất thiết phải có một số quyết định của con người. Một mô hình sẽ được thiết lập để áp dụng điều này theo cách nhất quán với mục tiêu phân quyền.
+* Cơ chế chính xác để phân bổ mã thông báo từ việc đúc mới và phí cho cả hai loại Nhà phát triển vẫn chưa được xác định. Các nguyên tắc thiết kế sẽ bao gồm chống trò chơi điện tử và minh bạch.
 
-### Initial allocation of StarkNet Tokens
+### Phân bổ ban đầu của Mã thông báo StarkNet
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+Mười tỷ mã thông báo đã được StarkWare đúc ngoài chuỗi. Để làm rõ: các Mã thông báo StarkNet này không đại diện cho vốn chủ sở hữu trong StarkWare cũng như không cung cấp bất kỳ quyền tham gia nào trong StarkWare hoặc cấp bất kỳ quyền yêu cầu nào từ StarkWare. Việc cung cấp mã thông báo lưu hành sẽ tăng theo thời gian với việc đúc mã thông báo mới theo giao thức, theo một lịch trình sẽ được cộng đồng xác định sau này.\
+*Do đó, nguồn cung tuần hoàn có thể không cố định.*
 
-The allocation is thus:
+Do đó, việc phân bổ là:
 
-**17%** — StarkWare Investors
+**17%**— Nhà đầu tư của StarkWare
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32,9%**— Người đóng góp cốt lõi: StarkWare cùng các nhân viên và chuyên gia tư vấn của công ty cũng như các đối tác phát triển phần mềm của StarkNet
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50,1%**do StarkWare cấp cho Tổ chức, được phân bổ như sau:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**— Quy định của cộng đồng — dành cho những người đã thực hiện công việc cho StarkNet và hỗ trợ hoặc phát triển công nghệ cơ bản của nó, ví dụ như thông qua việc sử dụng các hệ thống StarkEx L2 trước đây. Điều quan trọng là tất cả các Điều khoản của Cộng đồng sẽ dựa trên công việc có thể kiểm chứng đã được thực hiện trong quá khứ. Ví dụ: trong phạm vi Điều khoản cộng đồng sẽ được trao cho người dùng StarkEx trước đây, việc phân bổ sẽ được xác định dựa trên việc sử dụng có thể kiểm chứng công nghệ của StarkEx diễn ra**trước ngày 1 tháng 6 năm**
+* **9%**— Giảm giá cộng đồng — giảm giá bằng Mã thông báo StarkNet đến**phần**chi trả cho chi phí gia nhập StarkNet từ Ethereum. Để ngăn chặn trò chơi hóa, Giảm giá cộng đồng sẽ chỉ áp dụng cho các giao dịch xảy ra**sau**khi cơ chế giảm giá được công bố.
+* **12%**— Tài trợ cho nghiên cứu và công việc được thực hiện để phát triển, thử nghiệm, triển khai và duy trì giao thức StarkNet
+* **10%**— khoản dự trữ chiến lược, để tài trợ cho các hoạt động của hệ sinh thái phù hợp với sứ mệnh của Tổ chức như đã giải thích trong[bài đăng trước](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)trong loạt bài này.
+* **2%**— Quyên góp cho các cơ quan và tổ chức được đánh giá cao, chẳng hạn như trường đại học, tổ chức phi chính phủ, v.v., theo quyết định của những người nắm giữ Mã thông báo StarkNet và Quỹ.
+* **8,1%**Chưa phân bổ — ngân quỹ chưa phân bổ của Tổ chức được thiết lập để hỗ trợ thêm cho cộng đồng StarkNet theo cách thức do cộng đồng quyết định.
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+Để điều chỉnh các ưu đãi dài hạn của Người đóng góp cốt lõi và Nhà đầu tư với lợi ích của cộng đồng StarkNet và theo thông lệ chung trong các hệ sinh thái phi tập trung, tất cả các mã thông báo được phân bổ cho Người đóng góp cốt lõi và Nhà đầu tư sẽ phải chịu thời hạn khóa 4 năm, với phát hành tuyến tính và vách đá một năm.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### Có cách nào để nhận được Mã thông báo StarkNet không?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+Câu trả lời ngắn gọn là có, nhưng không có lối tắt nào để nhận mã thông báo.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+Phân bổ mã thông báo StarkNet và thị trường phí cũng như thiết kế đúc tiền mới ưu tiên cho các nhà phát triển cơ sở hạ tầng cốt lõi và ứng dụng dApp, cũng như những người khác đóng góp cho an ninh và sức khỏe của hệ sinh thái. Điều này có ý nghĩa gì trên thực tế liên quan đến mã thông báo?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Nếu bạn là nhà phát triển và bạn đã viết phần mềm cho cơ sở hạ tầng StarkNet hoặc cho hợp đồng thông minh, được người dùng cuối StarkNet đánh giá cao và sử dụng thực sự, thì bạn có thể mong đợi nhận được mã thông báo tự động thông qua giao thức. Một trong nhiều biện pháp bảo vệ chống lại trò chơi điện tử của cơ chế này là phí mà nhà phát triển nhận được sẽ hoàn toàn thấp hơn phí do người dùng trả.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+Các nhà phát triển cũng có thể nhận được khoản trợ cấp mã thông báo cho công việc đã hoàn thành để phát triển, thử nghiệm và duy trì giao thức StarkNet. Bất kỳ khoản tài trợ nào như vậy sẽ được xác định đúng hạn bởi Tổ chức phù hợp với sứ mệnh của nó.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+Nếu bạn là nhà phát triển chuỗi khối tin rằng StarkNet là câu trả lời cho nhu cầu mở rộng quy mô của Ethereum, chúng tôi khuyến khích bạn tìm hiểu thêm về[StarkNet](https://starknet.io/)và ngôn ngữ lập trình của nó,[Cairo](https://www.cairo-lang.org/)và bắt đầu phát triển hợp đồng thông minh của riêng bạn.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Nếu bạn là người dùng cuối, hãy sử dụng StarkNet — nhưng chỉ khi nó phục vụ nhu cầu của bạn hiện nay. Hãy sử dụng nó cho những giao dịch và ứng dụng mà bạn đánh giá cao,*phải để mong đợi bất kỳ phần thưởng nào trong tương lai của Mã thông báo StarkNet.*Khi Điều khoản cộng đồng được công bố, chúng sẽ chỉ đề cập đến các ảnh chụp nhanh đã xảy ra trước ngày thông báo, đồng thời sẽ lọc và loại trừ việc sử dụng được cho là lạm dụng và đánh bạc mạng, dựa trên thông tin có sẵn tại thời điểm đó thời điểm. Khi Giảm giá cộng đồng được thiết lập, chúng sẽ không bao giờ áp dụng cho các giao dịch xảy ra trước khi giảm giá được công bố, vì vậy giao dịch hôm nay với dự đoán giảm giá trong tương lai là vô ích.
 
-### Closing remarks
+### Đóng nhận xét
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+Xây dựng một mạng mở có nghĩa là nắm lấy những điều chưa biết. Internet, Bitcoin và Ethereum, được phát minh bởi những nhà đổi mới, những người tin rằng công cụ của họ có thể thay đổi thế giới, nhưng hoàn toàn không biết làm thế nào. Một cách khiêm tốn, chúng tôi hy vọng rằng khả năng mở rộng quy mô chuỗi khối của StarkNet sẽ tốt cho Ethereum và tốt cho một trang web phi tập trung. Chúng ta không thể biết những gì sẽ được xây dựng. Nhưng chúng tôi tin rằng StarkNet đặt khả năng công nghệ vượt trội vào tay cộng đồng sáng tạo và chúng tôi hy vọng sẽ thấy cộng đồng đó sử dụng nó theo vô số cách, nhiều cách trong số đó vẫn chưa được tưởng tượng.

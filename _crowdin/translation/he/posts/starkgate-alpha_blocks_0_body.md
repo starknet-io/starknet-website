@@ -1,61 +1,61 @@
 ### TL;DR
 
-* The first version of StarkNet Bridge, StarkGate Alpha, is live on **[Testnet](https://goerli.starkgate.starknet.io/)**, and on **[Mainnet](https://starkgate.starknet.io/)**!
-* We await community feedback on how things can be improved. You can send your feedback for both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
-* Mainnet deployment will follow soon (update, May 9th 2022: StarkGate is live on Mainnet)
+* הגרסה הראשונה של StarkNet Bridge, StarkGate Alpha, פעילה ב**[Testnet](https://goerli.starkgate.starknet.io/)**וב**[Mainnet](https://starkgate.starknet.io/)**!
+* אנו ממתינים למשוב מהקהילה כיצד ניתן לשפר דברים. אתה יכול לשלוח את המשוב שלך עבור[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)ו[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+* פריסת Mainnet תגיע בקרוב (עדכון, 9 במאי 2022: StarkGate פעיל ב-Mainnet)
 
-Excitement! We are thrilled to release StarkGate Alpha, the first version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet deployment to follow soon.*
+התרגשות! אנו נרגשים לשחרר את StarkGate Alpha, הגרסה הראשונה של StarkNet's Bridge, פעילה כעת ב-Goerli testnet, עם פריסת Mainnet בקרוב.*
 
-\*(update, May 9th 2022: StarkGate is live on Mainnet)
+\*(עדכון, 9 במאי 2022: StarkGate פעיל ב-Mainnet)
 
-**Important disclaimer: this is an alpha version on StarkGate Alpha (read the fine print below!).**
+**כתב ויתור חשוב: זוהי גרסת אלפא ב-StarkGate Alpha (קרא את האותיות הקטנות למטה!).**
 
 ![](/assets/starkgate_01.png)
 
-Before you continue, go check it out! [StarkGate Testnet](https://goerli.starkgate.starknet.io/), [StarkGate Mainnet](https://starkgate.starknet.io/)
+לפני שתמשיך, לך תבדוק! [StarkGate Testnet](https://goerli.starkgate.starknet.io/),[StarkGate Mainnet](https://starkgate.starknet.io/)
 
-StarkGate serves as a gateway between Ethereum and [StarkNet](https://starknet.io/), and allows users to do everything they can expect from a bridge.
+StarkGate משמש כשער בין Ethereum ל[StarkNet](https://starknet.io/), ומאפשר למשתמשים לעשות כל מה שהם יכולים לצפות מגשר.
 
-#### **Where can I find information on how StarkGate works?**
+#### **היכן אוכל למצוא מידע על אופן הפעולה של StarkGate?**
 
-To understand how StarkGate works, read the [technical documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge) and take a look at the [code](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). Note that this is the first version, and we invite your feedback and suggestions on how to improve both [StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh) and [StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
+כדי להבין איך StarkGate עובד, קרא את התיעוד הטכני[](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge)והסתכל על קוד[](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate). שים לב שזו הגרסה הראשונה, ואנו מזמינים את המשוב וההצעות שלך כיצד לשפר את[StarkGate Testnet](https://forms.reform.app/starkware/StarkGate_Feedback/yhyalh)ו[StarkGate Mainnet](https://forms.reform.app/TeRuSp/StarkGate-Feedback-Mainnet/bcoscx).
 
-#### **Which tokens will be supported by StarkGate?**
+#### **אילו אסימונים יתמכו על ידי StarkGate?**
 
-* StarkGate Alpha on Goerli supports ETH and a few other ERC-20 tokens. The full list and the relevant contract addresses, both on Ethereum and StarkNet, are available in this [repo](https://github.com/starkware-libs/starknet-addresses).
-* On Mainnet, initially, StarkGate Alpha will only support ETH to allow use of the fee mechanism. Later on, we will add support for WBTC, USDC, USDT, and DAI. You can see the relevant contract addresses in this [repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json).
+* StarkGate Alpha ב-Goerli תומך ב-ETH ובכמה אסימוני ERC-20 אחרים. הרשימה המלאה וכתובות החוזים הרלוונטיות, הן ב-Ethereum והן ב-StarkNet, זמינות ב[repo](https://github.com/starkware-libs/starknet-addresses)זה.
+* ב-Mainnet, בתחילה, StarkGate Alpha תתמוך רק ב-ETH כדי לאפשר שימוש במנגנון העמלות. בהמשך, נוסיף תמיכה עבור WBTC, USDC, USDT ו-DAI. אתה יכול לראות את כתובות החוזה הרלוונטיות ב[repo](https://github.com/starkware-libs/starknet-addresses/blob/master/bridged_tokens/mainnet.json)זה.
 
-Further down the road, we will publish the mechanism for adding support for additional tokens.
+בהמשך הדרך, נפרסם את המנגנון להוספת תמיכה באסימונים נוספים.
 
-#### **What safety limitations will StarkGate Alpha have on Mainnet?**
+#### **אילו מגבלות בטיחות יהיו ל-StarkGate Alpha ב-Mainnet?**
 
-StarkGate Alpha on Mainnet is launched with two limitations — in order to reduce the risks involved in using an Alpha version:
+StarkGate Alpha ב- Mainnet מושק עם שתי מגבלות - על מנת להפחית את הסיכונים הכרוכים בשימוש בגרסת אלפא:
 
-1. The total value locked (TVL) in the bridge on L1 will limit the amount of each token type.
-2. The maximum amount in each transaction sent from L1 to L2 (Ethereum→StarkNet) via StarkGate will be limited.
+1. הערך הכולל הנעול (TVL) בגשר על L1 יגביל את הכמות של כל סוג אסימון.
+2. הסכום המקסימלי בכל עסקה שנשלחה מ-L1 ל-L2 (Ethereum →StarkNet) דרך StarkGate יהיה מוגבל.
 
-We plan to gradually ease these limitations and lift them completely as confidence grows. The updated parameters can be found in StarkGate’s [documentation](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
+אנו מתכננים להקל בהדרגה את המגבלות הללו ולהרים אותן לחלוטין ככל שהביטחון גדל. ניתן למצוא את הפרמטרים המעודכנים בתיעוד[של StarkGate](https://docs.starknet.io/docs/L1%3C%3EL2%20Communication/token-bridge).
 
 ![](/assets/starkgate_02.png)
 
-### Alpha and What It Means
+### אלפא ומה זה אומר
 
-As always, we remind you that StarkNet is currently in its **Alpha** stage:
+כמו תמיד, אנו מזכירים לכם ש-StarkNet נמצאת כעת בשלב**אלפא**שלה:
 
-* Things can break. If they fail catastrophically, your funds could be lost (**read the disclaimer below**!).
-* Both StarkNet Alpha and StarkGate contracts can be upgraded without a timelock. While we expect to announce such upgrades well ahead of time, in the case of imminent security risks (for example, if a critical bug is found), the upgrade may be applied with little or no warning.
-* The code of the bridge, as well as portions of StarkNet Alpha, have not yet been audited. The ABDK and Nethermind audits of StarkGate Alpha will be completed soon.
+* דברים יכולים להישבר. אם הם נכשלים בצורה קטסטרופלית, הכספים שלך עלולים ללכת לאיבוד (**קרא את כתב הוויתור למטה**!).
+* ניתן לשדרג גם את חוזי StarkNet Alpha וגם את StarkGate ללא נעילת זמן. למרות שאנו מצפים להכריז על שדרוגים כאלה הרבה לפני הזמן, במקרה של סיכוני אבטחה קרובים (לדוגמה, אם נמצא באג קריטי), השדרוג עשוי להיות מיושם עם אזהרה מועטה או ללא אזהרה.
+* הקוד של הגשר, כמו גם חלקים של StarkNet Alpha, טרם עברו ביקורת. הביקורות של ABDK ו-Nethermind של StarkGate Alpha יושלמו בקרוב.
 
-We encourage all users to help improve the bridge by providing their feedback using one of the following platforms:
+אנו מעודדים את כל המשתמשים לעזור לשפר את הגשר על ידי מתן המשוב שלהם באמצעות אחת מהפלטפורמות הבאות:
 
-1. [StarkGate frontend repo](https://github.com/starkware-libs/starkgate-frontend)
-2. [StarkGate Contracts repo](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
-3. [StarkNet Shamans](http://community.starknet.io/)
+1. [ריפו חזיתי של StarkGate](https://github.com/starkware-libs/starkgate-frontend)
+2. [ריפו חוזי StarkGate](https://github.com/starkware-libs/starkgate-contracts/tree/main/src/starkware/starknet/apps/starkgate)
+3. [שמאנים של StarkNet](http://community.starknet.io/)
 
-For questions and dev support, join the [StarkNet discord server](https://discord.gg/uJ9HZTUk2Y).
+לשאלות ותמיכה במפתחים, הצטרף לשרת דיסקורד[StarkNet](https://discord.gg/uJ9HZTUk2Y).
 
-### Disclaimer
+### כתב ויתור
 
-***StarkNet Alpha is a new and complex system that has not been fully audited. The same applies to the StarkNet Bridge. Like all complex software systems, both StarkNet and the bridge may contain bugs that, in extreme cases, could lead to a loss of all of your funds. So, ***tread carefully and beware!******
+***StarkNet Alpha היא מערכת חדשה ומורכבת שלא עברה ביקורת מלאה. אותו הדבר חל על גשר StarkNet. כמו כל מערכות התוכנה המורכבות, גם StarkNet וגם הגשר עלולים להכיל באגים שבמקרים קיצוניים עלולים להוביל לאובדן של כל הכספים שלך. אז,***לדרוך בזהירות ולהיזהר!******
 
-*The StarkNet ecosystem is a large and fast-growing set of independent teams and individuals, over which StarkWare has no oversight and assumes no responsibility. Any one of the projects developed by ecosystem members may contain bugs that, in extreme cases, could lead to a loss of all your funds. Furthermore, as more smart contracts are deployed, the potential for unintended harmful bugs and even malicious scams and rug pulls increases. So, treat all smart contracts on StarkNet as you treat smart contracts on Ethereum, and use only those that you have good reason to trust as secure.*
+*המערכת האקולוגית של StarkNet היא קבוצה גדולה וצומחת במהירות של צוותים ויחידים עצמאיים, שעליהם אין ל-StarkWare פיקוח ואינה נוטלת אחריות. כל אחד מהפרויקטים שפותחו על ידי חברי המערכת האקולוגית עלול להכיל באגים שבמקרים קיצוניים עלולים להוביל לאובדן כל הכספים שלך. יתר על כן, ככל שנפרסים יותר חוזים חכמים, הפוטנציאל לבאגים מזיקים לא מכוונים ואפילו הונאות זדוניות ומשיכת שטיחים גדל. לכן, התייחס לכל החוזים החכמים ב-StarkNet כפי שאתה מתייחס לחוזים החכמים ב-Ethereum, והשתמש רק באלו שיש לך סיבה טובה לסמוך עליהם כמאובטחים.*

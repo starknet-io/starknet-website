@@ -1,5 +1,5 @@
 {
-  "title": "Part 3: Starknet Token Design",
-  "time_to_consume": "5 min read",
-  "short_desc": "The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) Users of StarkNet, (ii) Operators — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) Developers writing software for its infrastructure and for applications running on it.\n"
+  "title": "Bölüm 3: Starknet Token Tasarımı",
+  "time_to_consume": "5 dakika okuma",
+  "short_desc": "StarkNet Jetonunun tasarımı, (i) StarkNet Kullanıcılarından, (ii) Operatörlerden - ağa işlemlerin sırasını gerçekleştiren bilgi işlem kaynakları sağlayan kişilerden, STARK kanıtlarının oluşturulmasından ve uzun vadeli depolama sağlayıcıları ve (iii) Altyapısı ve üzerinde çalışan uygulamalar için yazılım yazan Geliştiriciler.\n"
 }

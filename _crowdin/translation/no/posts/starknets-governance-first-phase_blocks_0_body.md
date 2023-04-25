@@ -7,11 +7,11 @@ Denne posten vil utvide i neste steg, nemlig første fase av StarkNetts Governan
 ### TL;DR
 
 * Første stemme som godkjenner eller avviser forslag til endringer i StarkNet protokollen vil skje snart
-* The participants in the votes during the first phase will be:\
-  — Token holders\
-  — Delegates selected by token holders who prefer to delegate their voting rights\
-  — Delegates selected by the StarkNet Foundation to exercise some of its voting rights\
-  — A professional Builders’ Council, set by the StarkNet Foundation
+* Deltakerne i avstemningene i den første fasen vil være:\
+  — Token-innehavere\
+  — Delegater valgt av token-innehavere som foretrekker å delegere sine stemmerettigheter\
+  — Delegater valgt av StarkNet Foundation til å utøve noen av sine stemmerettigheter\
+  — Et profesjonelt byggherreråd, satt av StarkNet Foundation
 * Alle inviteres til å utnevne seg som delegat for Starknetts styring
 * Diskusjoner vil bli gjennomført i[StarkNet Community Forum](https://community.starknet.io/)
 
@@ -99,7 +99,7 @@ Implementering av styringsmekanismer som er basert på samfunnsengasjement og pr
 
 Under 1. fase i Starknetts styringsfase vil ikke StarkWare være med i stemmene. Stiftelsen StarkNet Foundation vil delegere stemmeretten til byggernes råd og til flere delegater fra bassenget og vil ikke stemme direkte.
 
-The voting power distribution in the **first phase** will be:
+Stemmestyrkefordelingen i**første fase**vil være:
 
 * Investorer: 33,3%
 * StarkNetts tidlige kjernebidragsytere (unntatt StarkWare): 33,3

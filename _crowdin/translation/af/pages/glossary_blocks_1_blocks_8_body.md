@@ -1,1 +1,1 @@
-The state is composed of contracts’ code and contracts’ storage.
+Die staat is saamgestel uit kontrakte se kode en kontrakte se stoor.

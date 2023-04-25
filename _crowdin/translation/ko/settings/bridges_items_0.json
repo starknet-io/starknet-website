@@ -1,7 +1,7 @@
 {
-  "name": "StarkGate",
+  "name": "스타크게이트",
   "website_url": "https://starkgate.starknet.io/",
-  "company_name": "StarkWare",
+  "company_name": "스타크웨어",
   "twitter": "https://twitter.com/StarkWareLtd",
-  "description": "StarkGate is the official bridge between Starknet and Ethereum."
+  "description": "StarkGate는 Starknet과 Ethereum 간의 공식 브리지입니다."
 }

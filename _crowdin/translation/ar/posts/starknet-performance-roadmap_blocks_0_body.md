@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* ولا تكون عمليات تكديس الصلاحية محدودة من حيث الإنتاج بنفس الطريقة التي يتم بها تكديسها من المستوى L1. وهذا ما قد يؤدي إلى ارتفاع كبير في عدد طلبات الترحيل من الفئة L2.
+* وتتناول خارطة طريق الأداء StarkNet عنصرا رئيسيا في النظام: مسؤول التسلسل.
+* نحن نقدم هنا خارطة الطريق لتحسين الأداء:\
+  - التوازي بين تسلسلات\
+  - تنفيذ دفع جديد للقرص VM للقاهرة\
+  — إعادة تنفيذ تسلسل في السروق\/
+* فالمخرجات، التي يجري اختبارها في المعركة، ليست الاختناقات ويمكنها التعامل مع ما هو أكثر بكثير مما تفعله الآن!
 
-### Intro
+### مقدمة
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+بدأ StarkNet العمل على Mainnet قبل سنة تقريباً. بدأنا في بناء StarkNet بالتركيز على الوظائف. الآن، نحن نحول التركيز إلى تحسين الأداء بسلسلة من الخطوات التي ستساعد على تعزيز تجربة StarkNet.
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+في هذه الوظيفة، نفسر لماذا هناك مجموعة واسعة من التحسينات التي لا تنطبق إلا على عمليات الاستكشاف، وسوف نتشاطر خطتنا لتنفيذ هذه الخطوات على موقع StarkNet. وقد نُفذت بعض هذه الخطوات بالفعل في StarkNet Alpha 0.10.2، الذي صدر على Testnet في 16 تشرين الثاني/نوفمبر وبالأمس على Mainnet. ولكن قبل أن نناقش الحلول، دعونا نستعرض القيود وأسبابها.
 
-### Block limitations: validity rollups versus L1
+### حدود الكتلة: تكديسات الصلاحية مقابل L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+وهناك نهج محتمل لزيادة إمكانية توسيع البلوكشين وزيادة TPS هو رفع حدود الكتلة (من حيث الغاز/الحجم) مع الحفاظ على استقرار وقت الكتلة. وهذا يتطلب المزيد من الجهد من منتجي الكتل (المدققون على L1, ومن ثم تدعو إلى تنفيذ هذه العناصر بمزيد من الكفاءة. وتحقيقا لهذه الغاية، نحول التركيز الآن إلى تحسين تسلسل StarkNet الذي نصفه بمزيد من التفصيل في الفروع التالية.
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+ويطرح هنا سؤال طبيعي. لماذا يتم تحسين التسلسل مقتصرة على عمليات الدوران الصحيحة، أي لماذا لا نستطيع تنفيذ نفس التحسينات على L1 وتجنب التعقيدات التي تنطوي عليها عملية تكديس الصلاحية تماما؟ وفي الفرع التالي، ندعي أن هناك فرقا جوهريا بين الاثنتين، السماح بطائفة واسعة من التحسينات على L2 التي لا تنطبق على L1.
 
-### Why is L1 throughput limited?
+### لماذا ناتج L1 محدود؟
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+ولسوء الحظ، فإن رفع قيود الكتلة على L1 يعاني من حفرة كبيرة. وبزيادة معدل نمو السلسلة، فإننا نزيد أيضا الطلبات من العقد الكاملة، الذين يحاولون مواكبة أحدث الولاية. بما أن العقد الكاملة L1 يجب أن تعيد تنفيذ كل التاريخ، زيادة كبيرة في حجم الكتلة (من حيث الغاز) تضع ضغطا كبيرا عليهم، ومرة أخرى تؤدي إلى تسرب آلات أضعف من النظام وتترك القدرة على تشغيل عقد كاملة للكيانات الكبيرة بما فيه الكفاية. ونتيجة لذلك، لن يتمكن المستخدمون من التحقق من حالة أنفسهم والمشاركة في الشبكة بدون ثقة.
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+ويتركنا هذا الأمر على فهم أن الناتج المحلي الإجمالي ينبغي أن يكون محدودا، من أجل الحفاظ على نظام لا مركزي وآمن حقا.
 
-### Why don’t the same barriers affect validity rollups?
+### لماذا لا تؤثر نفس الحواجز على صحة الطلقات؟
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**فقط عند النظر في المنظور الكامل للعقدة نرى القوة الحقيقية التي توفرها التكديرات الصحيحة.**تحتاج عقدة L1 الكاملة إلى إعادة تنفيذ التاريخ بأكمله لضمان صحة الدولة الحالية. تحتاج عقد StarkNet فقط إلى التحقق من أدلة STARK، وهذا التحقق يتطلب كمية أقل من الموارد الحسابية. وعلى وجه الخصوص، لا ينبغي للمزامنة من الصفر أن تنطوي على تنفيذ؛ قد تتلقى عقدة إغراق من الحالة الراهنة من أقرانها ولا تتحقق إلا من خلال إثبات أن هذه الحالة صحيحة. وهذا يسمح لنا بزيادة إنتاجية الشبكة دون زيادة المتطلبات من كامل العقدة.
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+ولذلك نخلص إلى أن مخرج التسلسل L2 يخضع لطائفة كاملة من التحسينات التي لا يمكن تحقيقها في التسلسل L1.
 
-### Performance roadmap ahead
+### خريطة طريق الأداء في المستقبل
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+وفي الفروع التالية، نناقش أي من هذه الفروع مخططة حاليا لموظف تسلسل ستارك نيت.
 
-### Sequencer parallelization
+### التوازي بين التسلسل
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+وكانت الخطوة الأولى في خارطة الطريق التي وضعناها هي تحقيق التوازي مع تنفيذ المعاملة. تم إدخال هذا في StarkNet Alpha 0.10.2، الذي تم إصداره أمس في Mainnet. ونحن نسعى الآن إلى تحقيق التوازي (هذا قسم شبه تقني، لمواصلة العمل على خارطة الطريق، والقفز إلى القسم التالي).
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+فما الذي يعنيه إذن "توازي المعاملات"؟ ومن المؤسف أن تنفيذ مجموعة من المعاملات بالتوازي أمر مستحيل لأن المعاملات المختلفة قد تكون معتمدة. ويتضح ذلك في المثال التالي. فكر في كتلة تحتوي على ثلاث معاملات من نفس المستخدم:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* المعاملة ألف: مبادلة USDC مع ETH
+* المعاملة باء: دفع ETH لـ NFT
+* المعاملة جيم: مبادلة USDT مع BTC
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+ومن الواضح أن التوكس ألف يجب أن يحدث قبل التوكس باء، ولكن التوكس جيم مستقل تماما عن كليهما ويمكن تنفيذه بالتوازي. إذا كانت كل معاملة تتطلب ثانية واحدة لتنفيذها، عندئذ يمكن تقليل وقت إنتاج الكتلة من 3 ثوان إلى ثوانين عن طريق إدخال التوازي.
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+وجوهر المشكلة هو أننا لا نعرف مسبقا التبعية للمعاملة. ومن الناحية العملية، لا نرى أنها تعتمد على التغييرات التي تجريها المعاملة ألف إلا عندما ننفذ المعاملة باء من مثالنا. ومن الناحية الرسمية، ينبع التبعية من حقيقة أن المعاملة باء تفسر من خلايا التخزين التي كتبتها المعاملة ألف. يمكننا أن نفكر في المعاملات على أنها تشكل رسم بياني للتبعية، عندما يكون هناك حافة من المعاملة ألف إلى المعاملة باء ألف يكتب إلى خلية تخزين يقرأها باء، ومن ثم يتعين إعدامه قبل ب. ويبين الشكل التالي مثالا على هذا الرسم البياني للاتكال على النحو التالي:
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+وفي المثال الوارد أعلاه، يمكن تنفيذ كل عمود بالتوازي، وهذا هو الترتيب الأمثل (على الرغم من أننا سذاجون، كنا سننفذ المعاملات من 1 إلى 9 بالتتابع).
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+للتغلب على حقيقة أن الرسم البياني للتبعية غير معروف مسبقاً، نقدم***التوازي المتفائل***، بروح[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)الذي طوره Aptos Labs، إلى تسلسل StarkNet. وفي إطار هذا النموذج، نحاول بتفاؤل إجراء المعاملات بالتوازي مع إعادة تنفيذها عند العثور على تصادم. على سبيل المثال، يمكننا تنفيذ المعاملات من 1-4 من الشكل 1 بالتوازي، فقط لمعرفة بعد ذلك أن Tx4 تعتمد على Tx1. ومن ثم كان تنفيذه عديم الفائدة (قمنا بتشغيله بالنسبة إلى نفس الدولة التي قمنا بتشغيل Tx1 ضدها، بينما كان يجب علينا تشغيله ضد الحالة الناتجة عن تطبيق Tx1). وفي تلك الحالة، سنعيد تنفيذ Tx4.
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+لاحظ أنه يمكننا أن نضيف العديد من التحسينات إلى جانب التوازي المتفائل. على سبيل المثال، بدلا من الانتظار بسذاجة حتى تنتهي كل عملية إعدام، يمكننا إجهاض التنفيذ في اللحظة التي نجد فيها تبعية تبطله.
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+ومن الأمثلة الأخرى على ذلك تحسين اختيار المعاملات التي يتعين إعادة تنفيذها. لنفترض أن الكتلة التي تتكون من جميع المعاملات من الشكل 1 يتم تغذيتها في جهاز تسلسل مع خمس نواة لوحدة المعالجة المركزية. أولاً، نحاول تنفيذ المعاملات من 1 إلى 5 بالتوازي. إذا كان ترتيب الإكمال هو Tx2, Tx3, Tx4, Tx1, وأخيراً Tx5, ثم سنجد التبعية Tx1<unk> Tx4 فقط بعد أن تم تنفيذ Tx4 بالفعل - مشيرا إلى أنه ينبغي إعادة تنفيذه. ولسوء الطالع، قد نريد إعادة تنفيذ Tx5 أيضا لأنها قد تتصرف بطريقة مختلفة بالنظر إلى التنفيذ الجديد لـ Tx4. ولكن بدلا من مجرد إعادة تنفيذ جميع المعاملات بعد إلغاء Tx4 الآن، يمكننا تجاوز الرسم البياني للتبعية المبني من المعاملات التي أنهى تنفيذها بالفعل و فقط إعادة تنفيذ المعاملات التي تعتمد على Tx4.
 
-### A new Rust implementation for the Cairo-VM
+### ألف - تنفيذ جديد لمؤتمر القاهرة
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+العقود الذكية في StarkNet مكتوبة في القاهرة ويتم تنفيذها داخل القاهرة، والتي تظهر في[ورقة القاهرة](https://eprint.iacr.org/2021/1063.pdf). في الوقت الحالي، يستخدم عامل التسلسل تطبيق[بايثون](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)للقاهرة . ولتحسين أداء تنفيذ آلية VM إلى أقصى حد، بدأنا جهوداً لإعادة كتابة آلية VM في حالة صدأ. بفضل العمل الرائع لـ[Lambdaclass](https://lambdaclass.com/)، وهذه الجهود التي أصبحت الآن فريقاً قيماً في النظام الإيكولوجي لستارك نيت، ستؤتي ثمارها قريباً.
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+يمكن الآن تنفيذ برنامج VM،[القاهرة](https://github.com/lambdaclass/cairo-rs)، تنفيذ رمز القاهرة الأصلي. الخطوة التالية هي التعامل مع تنفيذ العقود الذكية والتكامل مع جهاز التسلسل البيثوني. وبمجرد الاندماج مع القاهرة، من المتوقع أن يتحسن أداء المتتابع تحسناً كبيراً.
 
-### Sequencer re-implementation in Rust
+### إعادة تنفيذ التسلسل في الروت
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+إن تحولنا من بايثون إلى الاندفاع إلى تحسين الأداء لا يقتصر على آلية القاهرة للتحقيق. وإلى جانب التحسينات المشار إليها أعلاه، نعتزم إعادة كتابة أداة التسلسل من الصفر في السخرة. وبالإضافة إلى ميزات روست الداخلية، فإن هذا يمثل فرصة لإدخال تحسينات أخرى على متسلسلها. وبإدراج زوجين، يمكننا أن نستمتع بمزايا القاهرة بدون النفقات العامة للاتصالات بين زبائن البيتون، ويمكننا أن نعيد تصميم الطريقة التي يتم بها تخزين الدولة والوصول إليها (والتي تعتمد اليوم على بنية[باتريسيا - تريي](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
 
-### What about provers?
+### ماذا عن الأميرات؟
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+وطوال هذا المنصب، لم نذكر العنصر الأكثر شهرة في عمليات الترحيل - ألا وهو الوثيل. ويمكن للمرء أن يتصور أن العنصر الأكثر تطورا في الهندسة المعمارية ينبغي أن يكون الاختناق، ومن ثم التركيز على تحقيق المستوى الأمثل. ومن المثير للاهتمام أن المكونات "المعيارية" أكثر هي التي باتت الآن اختناق ستاركنيت. اليوم، خاصة مع[أدلة متكررة](https://medium.com/starkware/recursive-starks-78f8dd401025)، يمكننا أن نضع معاملات أكثر بكثير من حركة المرور الحالية على Testnet/ainnet لإثبات ذلك. في الواقع، اليوم، يتم إثبات كتل StarkNet جنبا إلى جنب مع معاملات StarkEx ، حيث يمكن أن يتكبد هذا الأخير أحيانا عدة مئات من الألوف من الألغام غير القابلة للتداول.
 
 ### Summary
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+التوازي، روست، وأكثر - تكافئ أنفسنا لتحسين TPS في إصدارات StarkNet القادمة.

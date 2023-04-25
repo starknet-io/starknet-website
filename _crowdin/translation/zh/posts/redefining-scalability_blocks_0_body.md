@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+区块链可伸缩性始终是一个热门话题。 几乎每个区块链网络都把每秒交易次数高作为一个销售点。 然而，TPS不是比较区块链网络和区块链网络的有效尺度，使得评估其相对性能成为一项挑战。 此外，大量的与贸易有关的采购计划数字通常是付出代价的，这就提出了一个问题：这些网络实际上是否有规模。 还是只是提高产量？
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+因此，让我们来研究如何定义可扩展性，哪些是为实现它而进行的权衡，以及为什么有效性滚动是最终的可扩展性解决方案。
 
-### Not all Transactions are Made Equal
+### 并非所有交易都是平等的
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+首先，我们需要确定我们的说法，即简单和方便的技术需要评估不是衡量可扩展性的准确尺度。
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+对执行交易的节点进行补偿(并阻止用户不必要的计算将网络垃圾邮件), 区块链按区块链的计算负担按比例收取费用。 在以太坊，计算负担的复杂性以*气体衡量。*因为气体是衡量交易复杂性的非常方便的尺度， 这个词将在整个文章中用于非Ethereum blockchain，即使它通常是针对以Etherum为对象的。
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+交易的复杂性有很大不同，因此它们消耗的气体有多少。 比特币是不信任的对等交易的先驱，只支持基本的比特币脚本。 这些从地址到地址的简单传输使用少量气体。 与此形成对照的是，像埃瑟姆或索拉纳这样的智能合同链支持一种虚拟机器和Turing-完整的编程语言，可以进行更复杂的交易。 因此，像Uniswap这样的脱氧核糖核酸需要更多的气体。
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+这就是为什么比较不同区块链的 TPS 是没有意义的。 我们应该比较的是计算能力——或输送能力。
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+所有区块链都有一个（可变的）块大小和块时间，它们决定了每个块可以处理多少个*计算单位*以及可以多快**添加一个新块。 这两个变量共同决定了区块链的*吞吐量*。
 
-### What Constrains Scalability?
+### 什么制约因素可缩放？
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+区块链努力实现最大程度的分散、包容性网络。 为了做到这一点，必须对两种基本财产加以控制。
 
-#### **1. Hardware Requirements**
+#### **1. 硬件要求**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+区块链网络的分散化取决于网络中最弱的节点验证区块链并保持其状态的能力。 因此，运行节点的成本(硬件、带宽) 应当尽量保持最低限度，以便使尽可能多的个人成为毫无信任的网络的无许可证参与者。
 
-#### 2**.** State Growth
+#### 2**。**状态增长
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+状态增长是指区块链增长的速度。 区块链越允许每个时间单位运行，区块链增长速度就越快。 完整的节点存储网络历史记录，它们必须能够验证网络状态。 以太空状态存储并使用高效率的结构如树木进行引用。 随着国家的发展，新假期和新增分支，使得采取某些行动变得更加复杂和费时。 随着链条规模的扩大，用节点执行情况最差，这就使得验证新区块的时间越来越长。 随着时间的推移，这也会增加一个完整节点同步所需的总时间。
 
-### Detrimental Impacts of Increasing Throughput
+### 增加流量的有害影响
 
-#### 1. Node Count
+#### 1. 节点计数
 
-The minimum requirements to run a node and node counts are:
+运行节点和节点计数的最低要求是：
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* 比特币1: 350GB HDD 磁盘空间, 5 Mbit/s 连接, 1GB RAM, CPU >1 Ghz. **节点数: ~10,000**
+* Etherum2: 500GB+ SSD 磁盘空间, 25 Mbit/s connect, 4- 8GB RAM, CPU 2- 4 cores. **节点数：~6,000**
+* Solana3: 1.5TB+ SSD 磁盘空间, 300 Mbit/s 连接, 128GB RAM CPU 12+ 核心。 **节点数: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+注意到 CPU、带宽和区块链传输节点的存储要求越大 ， 网络上的节点较少——导致分散化程度较弱和包容性较弱的网络。
 
-#### 2. Time to Sync a Full Node
+#### 2. 同步完整节点的时间
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+当第一次运行节点时，它必须同步到所有现有节点，下载。 并验证网络状态，从起源区块到链条的一角。 这一过程应尽可能迅速和有效，以便任何人都能够作为不经许可的协议参与者行事。
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+使用 Jameson Lopp[2020 比特币节点](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)和[2021 节点同步测试](https://blog.lopp.net/2021-altcoin-node-sync-tests/)作为一个指标。 表1比较了同步比特币与比特币的完整节点所需的时间。 以太币相对于按消费者平均等级计算的索拉纳。
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![表 1 区块链通过量和节点同步比较](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "表 1 区块链通过量和节点同步比较")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+表1显示，由于需要处理和储存越来越多的数据，通过增加输送量可以延长同步时间。
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+在不断改进节点软件以减轻日益增长的区块链挑战的同时(降低磁盘足迹, 更快的同步速度、更强的崩溃复原力、某些组件的模块化等。 ，节点显然仍然无法跟上增量的速度。
 
-### How Should Scalability be defined?
+### 应如何定义可缩放性？
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+可缩放是区块链空间中最错误的术语。 虽然增加输送是可取的，但它只是关卡的一部分。
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***可扩展性**意味着**相同的硬件**有**以上的交易**。*
 
-For that reason, scalability can be separated into two categories.
+为此，可将可调整性分为两类。
 
-#### Sequencer scalability
+#### 序列缩放能力
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+顺序描述了在网络中订购和处理交易的行为。 如先前所确立的那样。 任何区块链都可以通过提高区块大小和缩短区块时间来轻微提高其吞吐量，直至人们认为对其权力下放造成的负面影响过大之时。 但是，采用这些简单的参数并不能提供所需的改进。 理论上，以太坊的 EVM[可以处理高达 ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989)，这不足以满足长期的区块空间需求。 为了扩大顺序，Solana作出了一些令人印象深刻的创新：利用一个平行的执行环境和一个明智的协商一致机制。 这将使输送效率大大提高。 但是，尽管情况有所改善，但它既不够，也不能缩小。 随着Solana增加其输送量，运行节点和处理交易的硬件成本也增加了。
 
-#### Verification scalability
+#### 验证可伸展性
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*核查可扩展性描述了能够增加生产量而不给节点增加硬件成本带来负担的方法*具体而言，它是指像有效性证明这样的加密创新。 正因为如此，有效性滚动能够以可持续的方式缩小区块链的规模。
 
-**What’s a Validity Rollup?**
+**什么是有效的滚动？**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+Validity Rollups(又称“ZK-Rollups”)将计算和状态存储置于链外但保留了少量的某些数据。 基础区块链上的智能合约维护滚动的状态根。 在滚动中，一批高度压缩的交易以及当前状态的根目录被送到一个非链式巨型。 Prover计算交易，提供结果和新的状态根目录的有效证明并将其发送到链上的验证器。 验证程序验证有效性证明， 和智能合约，保持Rollup状态将它更新到Prover提供的新状态。
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**有效率滚压是如何以相同的硬件要求缩放的？**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+尽管Provers的确需要高端硬件，但它们并不影响区块链的分散化； 因为交易的有效性得到数学上可核实的证据的保证。
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+重要的是核查证据的要求。 由于所涉数据被高度压缩并大致通过计算被抽取，它对基础区块链节点的影响极小。*。*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+校验器(因此节点)不需要高端硬件，批量的规模不会增加硬件需求。 只有状态转换和少量通话数据需要由节点处理和存储。 这使得所有以太空节点能够使用现有的硬件验证有效性批次。
 
-**The more transactions, the cheaper it gets**
+**交易越多，交易就越便宜了**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+在传统的区块链中，交易发生得越多， 每个人都会在方块空间填充时花费更高——用户需要在收费市场上超额交易才能将其交易包括在内。
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+对于有效性滚动，此动态将被逆转。 验证以太坊上的一批交易有一定的成本。 随着批量内交易数量的增加，核实批量的成本以指数速度增长。 在批量中添加更多的交易导致更便宜的交易费用，即使批量验证费用增加——因为它是在批量内的所有交易中摊销的。 有效率的滚动需要在批量中尽可能多的交易，以便所有用户都能分享验证费用。 随着批量的大小增加到无限，每笔交易的摊销费用转换为零。 .。有效性卷上的交易越多，它对每个人来说就越便宜。
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX，一个由 Validity Rollup 驱动的dApp ，经常看到超过12,000笔交易的批量大小。 在Mainnet上比较同一交易的气体消耗量与有效滚压相比表明了可伸缩性的增益：
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+在 Ethereum Mainnet上解决一个 dYdX 交易：**200 000种气体**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+在 StarkEx上解决一个 dYdX 交易：**<500 气体**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+查看它的另一种方法：有效率滚动的主要成本比额与同一批中的用户数线在一起。
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### 为什么优化的滚动不能像人们可能认为的那样缩放
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+在理论上，优化排名提供了与有效性滚动几乎相同的可扩展性。 但有一个重要的区别：优化的选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民选民 由于区块链系统是在极具对抗性的条件下运作的，因此对最坏情况进行优化是实现安全的唯一途径。
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+在最糟糕的情况下，用户的交易将不会被欺诈检查员检查。 因此，为了反驳欺诈，用户必须同步一个完整的节点，一个完整的L2节点，并自行计算可疑交易。
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+在最坏的情况下，用户只需要同步Ethereum 完整节点来验证有效性证据， 为了节省自己的计算负担。
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+与有效性滚动不同的是，最优化的滚动成本比额表与交易数量而不是用户数量相提早，使得交易更加昂贵。
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### 拼图的最终区块——无权限访问滚动状态
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+为了保证交易的有效性，用户只需要运行一个Ethereum 节点。 然而，用户和开发者可能想要为各种目的查看和运行Rollup的状态和执行情况。 一个*索引L2 节点*完全满足了这个需要。 它不仅允许用户看到网络中的交易。 但它也是生态系统基础设施运转所必需的关键基础设施。 索引器，如The Graph, Alchemy, Infura; Oracle networks such Chainlink, and block explorers，所有这些都完全被无权限、索引L2 节点所支持。
 
-### Conclusion
+### 五. 结论
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+解决区块链可缩放性的许多方法错误地侧重增加*吞吐量*。 但是，这忽略了传输量对节点的影响：处理块和存储网络历史的硬件需求不断增加。 如何阻止网络的分散化。
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+随着防验证加密技术的出现， 一个区块链可以实现**个真正的可扩展性**，这不会给节点带来成本不断增加的负担，并允许广泛分散。 现在有可能为相同硬件进行更多强大和更复杂的计算 反转费用市场在过程中的两难处境——有效性滚动上的活动越多，它就越便宜！
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)and[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+1 来自[https://bitcoin.org/en/bitcoin-core/features/requires](https://bitcoin.org/en/bitcoin-core/features/requirements)
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+2 来自[https://eferum.org/en/developers/docs/nodes-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+3 从<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+为平均动态方块大小进行严格简化和调整

@@ -32,7 +32,7 @@
 
 Ранній комітет з адотерських ґрантів зобов'язаний прозорості та надасть всі суми громадськості.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+З Комітетом грантів для перших користувачів можна зв’язатися за адресою: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
 ### Комітет партнерств розробників
 
@@ -52,7 +52,7 @@ The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@star
 
 Комітет управління розвиватиметься та застосовуватиме основні механізми, які підтримують прозорі, чесні, та децентралізована структура, яка сприяє залученню та забезпеченню постійного зростання та децентралізованої участі в екосистемі. Для досягнення цих цілей комітет визначатиме резолюції, на які будуть голосовані та затверджені співтовариством Starknet та встановить належний процес для обговорення та виконання голосування за управління. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). За будь-які запити, пов'язані з першим голосуванням, будь ласка, зв'яжіться з [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Комітет уже запустив [етап управління Starknet](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). За будь-які запити, пов'язані з першим голосуванням, будь ласка, зв'яжіться з [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
 Комітет управління, з яким також можна зв'язатися з: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
@@ -75,7 +75,7 @@ The committee has already launched the [first phase of Starknet’s governance](
 Ось що буде далі: 
 
 * [Голос першого управління](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) відбудеться 21 березня 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* Перше оголошення Комітету EAG і деталі першого раунду заявок будуть опубліковані в блозі [StarkNet Foundation](https://www.starknet.io/en/posts/foundation) 21 березня 2023 року.
 
 Тримайте погляд на [блозі StarkNet Foundation](https://www.starknet.io/en/posts/foundation) та соціальні медіа для останніх оновлень та можливостей.
 

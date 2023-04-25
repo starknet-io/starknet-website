@@ -1,37 +1,37 @@
 ### TL;DR
 
-* We are releasing Cairo 1.0-alpha.2, which brings a host of new features to the language
-* It is now possible to implement an ERC20 contract
-* Those new linguistic features will be applicable in the upcoming StarkNet-v0.11.0 version
+* 私たちはCairo 1.0-alpha.2をリリースしました。これにより多くの新機能が言語に追加されました。
+* ERC20契約を実装できるようになりました
+* これらの新しい言語機能は、今後のStarkNet-v0.11.0バージョンで適用されます。
 
-### Fresh new features!
+### 新鮮な新機能!
 
-Cairo 1.0 is continuing its fast improvement pace. Today’s release introduces, among other things, all the necessary features to write an ERC-20 contract.
+Cairo 1.0 は、急速な改善ペースを続けています。 今日のリリースでは、ERC-20契約を書くために必要なすべての機能が紹介されています。
 
-To mention some of the new features:
+新機能のいくつかを言及するには:
 
-* Dictionaries
-* Events in contracts
-* Mapping storage variables
-* Trait support
-* Type inference
-* Methods
+* 辞書
+* 契約内のイベント
+* ストレージ変数のマッピング
+* 形質サポート
+* 型推論：
+* メソッド
 
-See the complete list in the GitHub [repository.](https://github.com/starkware-libs/cairo)
+GitHub [リポジトリの完全なリストを参照してください。](https://github.com/starkware-libs/cairo)
 
-Let’s have a look at an example of an ERC20 contract (the full concrete example is, of course, on [GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) to demonstrate a use case of an event and mappings in the storage:
+ERC20契約の例を見てみましょう（完全な具体例はもちろんです） on[GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) で、ストレージ内のイベントとマッピングの使用例を示します。
 
 ![](/assets/0_i4ch5-4rxxal4rkt.png)
 
-### Jump into the water!
+### 水に飛び込む！
 
-We continue to work on two parallel vectors:
+私たちは、二つの並列ベクトルに引き続き取り組んでいます。
 
-1. Evolve Cairo 1.0 at full speed towards full-feature compatibility with the old Cairo.
-2. Develop Starknet v0.11.0 that will support contracts written in Cairo 1.0
+1. カイロ1.0をフル機能の互換性に向けてフルスピードで進化させました。
+2. Cairo 1.0 で書かれた契約をサポートする Starknet v0.11.0 を開発
 
-In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+一方で、私たちは、開発者にカイロ1.0を使って書き始め、それに慣れることを奨励しています。
 
-For any questions — you can use the Cairo 1.0 Discord [channel](https://discord.com/channels/793094838509764618/1065544063245365288).
+どんな質問でも、Cairo 1.0 Discord[チャンネル](https://discord.com/channels/793094838509764618/1065544063245365288) をご利用いただけます。
 
-For any suggestions or feedback — don’t hesitate to open an [issue](https://github.com/starkware-libs/cairo/issues) in the Cairo repo.
+どんなご意見やご提案については、カイロのリポジトリで[問題](https://github.com/starkware-libs/cairo/issues)を開くことを躊躇しないでください。

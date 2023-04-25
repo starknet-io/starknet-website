@@ -1,38 +1,38 @@
 ### TL;DR
 
-* Cairo 1.0 first release is here!
-* Developers can start writing and testing Cairo 1.0 programs
-* Feature parity with the older version of Cairo will be reached in the coming weeks
-* Support for StarkNet contracts will be added in the upcoming StarkNet Alpha version
+* Káhira 1.0 první vydání je tady!
+* Vývojáři mohou začít psát a testovat programy Káhira 1.0
+* V nadcházejících týdnech bude dosaženo parity funkcí se starší verzí Káhiry
+* Podpora pro smlouvy StarkNet bude přidána do nadcházející Alfa verze StarkNet
 
-### Background
+### Pozadí
 
-We are excited to announce that the first public version of Cairo 1.0 is now available. This marks a major milestone in the evolution of Cairo, which was first introduced in 2020 as a Turing-complete programming language for efficiently writing STARK-provable programs. Cairo 1.0 is a Rust-like high-level language. Like Rust, it is intended to allow developers to easily write code that is efficient and safe.
+Jsme rádi, že oznamujeme, že první veřejná verze Káhiry 1.0 je nyní k dispozici. To představuje významný milník ve vývoji Káhiry, který byl poprvé zaveden v roce 2020 jako Tur-kompletní programovací jazyk pro efektivní psaní programů provežívajících STARK. Cairo 1.0 je vysoce kvalitní jazyk. Stejně jako Rust, je záměrem umožnit vývojářům snadno psát kód, který je účinný a bezpečný.
 
-Since its inception, Cairo has been used to build Layer-2 applications that have [handled](https://dashboard.starkware.co/starkex) over $790 billion worth of trades, processed over 300 million transactions and minted more than 90 million NFTs, all performed off-chain and settled on Ethereum with the mathematical integrity guaranteed by STARK proofs. Cairo became the 4th most used programming language in the blockchain [ecosystem](https://defillama.com/languages) at large. With the release of Cairo 1.0, we aim to make the language even more accessible and user-friendly while also introducing new features that enhance safety and convenience.
+Od svého založení se Káhira používá k vytváření aplikací Layer-2, které[zpracovaly](https://dashboard.starkware.co/starkex)obchody v hodnotě přes 790 miliard dolarů, zpracovává více než 300 milionů transakcí a vytěžuje více než 90 milionů NFT, všechny provedené mimo řetězec a usazené na Ethereu s matematickou integritou zaručenou důkazy STARK. Káhira se obecně stala 4. nejpoužívanějším programovacím jazykem v ekosystému blockchainu[](https://defillama.com/languages). S uvolněním Káhiry 1. , usilujeme o to, aby byl jazyk ještě přístupnější a uživatelsky přívětivější a zároveň jsme zavedli nové funkce, které zvyšují bezpečnost a pohodlí.
 
-One of the most significant changes in Cairo 1.0 is the syntax. We have taken inspiration from **Rust** to create a more developer-friendly language that is easier to read and write. The new version of Cairo allows writing safer code (strongly typed, ownership and borrowing, etc.), while also being more expressive.
+Jednou z nejvýznamnějších změn v Káhiře 1.0 je syntaxe. Vybrali jsme inspiraci od**Rust**, abychom vytvořili vývojářsky přívětivější jazyk, který je snazší číst a psát. Nová verze Káhiry umožňuje psaní bezpečnějšího kódu (silně zadaného, vlastnictví a půjčky atd.), ale je také výraznější.
 
-Cairo 1.0 also introduces Sierra, a new intermediate representation that ensures **every** Cairo run can be proven. This makes Cairo 1.0 particularly well-suited for use in a permissionless network like StarkNet, where it can provide robust DoS protection and censorship resistance. You can read more about Sierra in our [previous](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) post.
+Káhira 1.0 také zavádí Sierru, novou přechodovou reprezentaci, která zajišťuje**každý**Káhirový běh lze prokázat. Díky tomu je Káhira 1.0 obzvláště dobře vhodná pro použití v bezpovolené síti, jako je StarkNet, kde může zajistit robustní ochranu DoS a cenzurní rezistenci. Více o Sierře si můžete přečíst v našem[předchozím](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)příspěvku.
 
-## First taste!
+## První taste!
 
-### What can you do today?
+### Co dnes můžete udělat?
 
-Developers can start writing, compiling, and testing Cairo 1.0 programs! We encourage developers to start experimenting with Cairo 1.0 and getting accustomed to the new syntax and features.
+Vývojáři mohou začít psát, sestavovat a testovat programy v Káhiře! Doporučujeme vývojářům, aby začali experimentovat s Káhirou 1.0 a zvykli na novou syntaxi a funkce.
 
-Since Cairo 1.0 is still actively developed, and new features are constantly added, check out the [Cairo repository](https://github.com/starkware-libs/cairo/) for the latest updates.
+Protože je Káhira 1.0 stále aktivně vyvíjen a nové funkce jsou neustále přidávány, podívejte se na[Káhirový repozitář](https://github.com/starkware-libs/cairo/)pro nejnovější aktualizace.
 
-### What's next?
+### Co bude dál?
 
-At the moment, Cairo 1.0 is still missing some of the features supported in the older version of Cairo ([see this table for details](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Our next milestone, expected in the next few weeks, will provide Cairo 1.0 feature parity with the older version. You can track the progress toward that milestone [here](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
+V současné době Káhira 1. stále chybí některé funkce podporované ve starší verzi Káhiry ([viz tato tabulka pro podrobnosti](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)). Náš další milník, očekávaný v příštích několika týdnech, poskytne Káhiře 1.0 parity funkcí se starší verzí. Pokrok směrem k tomuto milníku[můžete sledovat zde](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md).
 
-### Starknet support
+### Podpora Starknet
 
-Writing StarkNet contracts in Cairo 1.0 is supported (although certain features are still missing). However, StarkNet does not yet support the deployment and execution of Cairo 1.0 contracts. StarkNet Alpha V0.11.0, planned in the upcoming weeks, will introduce the ability to deploy and run Cairo 1.0 contracts. The upgrade to v0.11.0 will mark the beginning of the Transition Period towards a system that runs only Cairo 1.0 contracts. This Transition Period will end with the [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), expected a few months later.
+Psaní smluv StarkNet v Káhiře 1.0 je podporováno (i když některé funkce stále chybí). StarkNet však zatím nepodporuje rozmístění a plnění smluv z Káhiry o 1.0. StarkNet Alpha V0.11.0, plánované v nadcházejících týdnech, zavede schopnost rozmístit a provozovat smlouvy z Káhiry 1.0. Upgrade na v0.11.0 bude znamenat začátek přechodného období směrem k systému, který provozuje pouze smlouvy z Káhiry 1.0. Toto přechodné období skončí[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), očekáváno o několik měsíců později.
 
 ![](/assets/0_odxbxeacqdwizlfw.jpg)
 
-### Let's build!
+### Pojďme stavět!
 
-The goal of StarkNet is to exponentially scale Ethereum using the mathematical integrity of STARKs, and the goal of Cairo is to make this exponential scale accessible to developers. Accessibility means a programming language that is efficient, easy to read and write, and safe to use. We hope the release of Cairo 1.0 will inspire even more developers to join StarkNet and scale Ethereum to meet global demand.
+Cílem StarkNet je exponenciálně šířit Ethereum pomocí matematické integrity STARKů, a cílem Káhiry je zpřístupnit toto exponenciální měřítko vývojářům. Dostupnost znamená programovací jazyk, který je efektivní, snadno čitelný a psaný a bezpečný pro používání. Doufáme, že vydání Káhiry 1.0 inspiruje ještě více vývojářů, aby se připojili ke StarkNet a měřítku Ethereum, aby uspokojili globální poptávku.

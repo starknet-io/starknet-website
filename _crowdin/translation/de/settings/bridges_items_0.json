@@ -1,7 +1,7 @@
 {
-  "name": "StarkGate",
+  "name": "StarkTor",
   "website_url": "https://starkgate.starknet.io/",
   "company_name": "StarkWare",
   "twitter": "https://twitter.com/StarkWareLtd",
-  "description": "StarkGate is the official bridge between Starknet and Ethereum."
+  "description": "StarkGate ist die offizielle Brücke zwischen Starknet und Ethereum."
 }

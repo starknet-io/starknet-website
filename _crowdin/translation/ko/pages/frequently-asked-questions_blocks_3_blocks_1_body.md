@@ -1,1 +1,1 @@
-Any dApp can be deployed on Starknet. As Cairo allows general computation, any business logic can be implemented and processed over StarkNet.
+모든 dApp은 Starknet에 배포할 수 있습니다. Cairo는 일반적인 계산을 허용하므로 모든 비즈니스 로직을 StarkNet을 통해 구현하고 처리할 수 있습니다.

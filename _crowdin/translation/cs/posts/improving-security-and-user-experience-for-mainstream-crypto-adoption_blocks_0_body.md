@@ -47,7 +47,7 @@ Jak vysvětluje spoluzakladatel Argentu a vrchní vědecký úředník Julien Ni
 
 **Multifactor Authentication:**Podobné běžným Web2 2FA postupům, uživatelé mohou nastavit dvě (nebo více) metody ověřování pro své kryptoměny, pokud je transakce podepsána pouze tehdy, když uživatel potvrdí schválení prostřednictvím druhé možnosti jako je e-mail nebo SMS. Uživatelé mohou také nastavit denní limity transferů nebo seznamy adres účtu, z nichž je peněženka automaticky zablokována v interakci.
 
-**Quantum Resistant and Gas-Efficient Signatures:** Ethereum’s current signature scheme, ECDSA, is computationally extensive (read: higher gas fees) and can be broken by quantum computers. Prostřednictvím abstrakce podpisů využívají různé smlouvy na účtu účinnější a kvantově bezpečnější podpisové systémy. StarkNet používá svou vlastní vlastní křivku přátelskou ke STARKu.
+**Kvantově odolné a plynoefektivní podpisy:**Současné podpisové schéma Etherea, ECDSA, je výpočetně rozsáhlé (čtěte: vyšší poplatky za plyn) a lze jej prolomit pomocí kvantových počítačů. Prostřednictvím abstrakce podpisů využívají různé smlouvy na účtu účinnější a kvantově bezpečnější podpisové systémy. StarkNet používá svou vlastní vlastní křivku přátelskou ke STARKu.
 
 Nejenže tyto funkce poskytují uživatelům větší bezpečnost a větší flexibilitu, ale co je důležitější, vedou k mnohem lepšímu****uživatelům.
 

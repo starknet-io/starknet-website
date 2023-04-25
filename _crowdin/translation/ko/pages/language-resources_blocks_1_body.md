@@ -1,5 +1,5 @@
-In line with our goal to make the Starknet community accessible and usable to as many people across the globe as possible, we’ve listed a collection of non-English resources below.\
+가능한 한 전 세계 많은 사람들이 Starknet 커뮤니티에 액세스하고 사용할 수 있도록 하려는 목표에 따라 아래에 비영어 리소스 모음을 나열했습니다.\
 \
-These are places where you can discover and discuss all things Starknet with other community members in your native language and/or based on where you live in the world. \
+이것은 귀하의 모국어로 및/또는 귀하가 거주하는 지역에 따라 다른 커뮤니티 구성원과 함께 Starknet에 관한 모든 것을 발견하고 토론할 수 있는 장소입니다. \
 \
-If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please [open an issue](https://github.com/starknet-io/starknet-website/issues) on Github to get it added.
+알고 있지만 여기에 나열되지 않은 비영어권 리소스가 있는 경우 [Github에서 이슈](https://github.com/starknet-io/starknet-website/issues) 열어 추가하십시오.

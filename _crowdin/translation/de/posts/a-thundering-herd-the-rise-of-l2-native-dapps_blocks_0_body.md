@@ -46,4 +46,4 @@ Generative Kunst verwendet Berechnung, Zufall und andere Daten, um blockchain-ba
 
 Gültigkeits-Rollups — und Kairobetriebene StarkEx und StarkNet, Insbesondere — bieten Sie ein Umfeld, in dem Sie dApps entwickeln und betreiben können, die viele Berechnungen oder Zeugendaten verbrauchen. Mit all den Vorteilen verteilter Technologieentwicklungen prognostizieren wir eine ungeheuer spannende Zukunft für L2-native dApps.
 
-What can *you* create with general computation supported by composability, trustlessness, and decentralization?
+Was können Sie*mit allgemeiner Berechnung erstellen*die durch Zusammensetzbarkeit, Vertrauenslosigkeit und Dezentralisierung unterstützt wird?

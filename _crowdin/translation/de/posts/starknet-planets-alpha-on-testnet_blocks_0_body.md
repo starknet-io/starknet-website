@@ -24,7 +24,7 @@ Es ist sehr wichtig, dass wir vollkommen transparent sind und die Erwartungen ri
 
 Beginnen Sie mit unserer[Anleitung und Dokumentation](https://www.cairo-lang.org/docs/hello_starknet/).
 
-Dann können Sie den[-Beispiel-AMM-Smart-Vertrag durchlesen](http://cairo-lang.org/docs/hello_starknet/amm.html), den wir auf StarkNet geschrieben und eingesetzt haben, lesen. It is a simple AMM, and you can interact with it [here](https://starkware-amm-demo.netlify.app/swap). Sie sind nun bereit, intelligente Verträge auf StarkNet zu schreiben und umzusetzen. Der Block-Explorer für StarkNet —[Voyager](https://voyager.online/)— erlaubt es jedem, den Status von StarkNet zu untersuchen.\
+Dann können Sie den[-Beispiel-AMM-Smart-Vertrag durchlesen](http://cairo-lang.org/docs/hello_starknet/amm.html), den wir auf StarkNet geschrieben und eingesetzt haben, lesen. Es ist ein einfaches AMM, mit dem Sie[hier](https://starkware-amm-demo.netlify.app/swap)interagieren können. Sie sind nun bereit, intelligente Verträge auf StarkNet zu schreiben und umzusetzen. Der Block-Explorer für StarkNet —[Voyager](https://voyager.online/)— erlaubt es jedem, den Status von StarkNet zu untersuchen.\
 Wenn Sie Ihre Füße nass bekommen, glauben wir, dass Sie besser vorbereitet sind, auf StarkNet zu bauen, da wir auch weiterhin zusätzliche Funktionen ausführen. Wir planen bereits einen ersten Hackathon sowie Workshops für Entwickler.
 
 ### **Nächste Schritte für StarkNet**

@@ -1,53 +1,53 @@
 ### TL;DR
 
-* The StarkNet Token (STRK) is now deployed on Ethereum Mainnet
-* **Beware of scams!** StarkNet Tokens are not offered for sale
-* It will take time for the Foundation to determine the mechanism for distributing its tokens
-* Tokens held by StarkWare shareholders, employees and by independent partner software developers are locked for a four year period, with a gradual release starting after one year
-* The token will further StarkNet’s decentralization thanks to its use for voting, staking and paying fees
+* אסימון StarkNet (STRK) פרוס כעת ב-Ethereum Mainnet
+* **היזהרו מהונאות!**אסימוני StarkNet אינם מוצעים למכירה
+* ייקח זמן עד שהקרן תקבע את המנגנון להפצת האסימונים שלה
+* אסימונים המוחזקים על ידי בעלי מניות, עובדים של StarkWare ועל ידי מפתחי תוכנה שותפים עצמאיים נעולים לתקופה של ארבע שנים, עם שחרור הדרגתי החל לאחר שנה אחת
+* האסימון יקדם את הביזור של StarkNet הודות לשימוש בו להצבעה, החזקה ותשלום עמלות
 
-Today, [StarkNet](https://starknet.io/) is taking another step towards decentralization. The StarkNet token is now [on Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). Recapping quickly: STRK will be used as a staking token for participation in StarkNet’s consensus mechanisms, as a Governance token, and for paying transaction fees. The rationale for each of these utilities is presented in [our decentralization proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), in the section titled “What will the tokens be used for?”
+היום,[StarkNet](https://starknet.io/)עושה צעד נוסף לקראת ביזור. אסימון StarkNet הוא כעת[ב-Ethereum](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766). סיכום מהיר: STRK ישמש כאסימון הימור עבור השתתפות במנגנוני הקונצנזוס של StarkNet, כאסימון ממשל ותשלום עמלות עסקה. הרציונל של כל אחת מהשירותים הללו מוצג ב[הצעת הביזור שלנו](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), בסעיף שכותרתו "למה ישמשו האסימונים?"
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. You can report scams and check for other reports of scams in the [scam-report](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.*
+***היזהרו מהונאות:**בזמן הכתיבה אין דרך לרכוש אסימוני StarkNet; תקופת אי-מכירה זו תישאר בתוקף עד להודעה חדשה מצד קרן[StarkNet](https://twitter.com/StarkNetFndn); עקוב אחר התקשורת הרשמית של קרן StarkNet כדי ללמוד על עדכונים כלשהם לסטטוס של STRK. אתה יכול לדווח על הונאות ולבדוק דיווחים אחרים על הונאות בערוץ[דיווח תרמית](https://discord.gg/qypnmzkhbc)בשרת[StarkNet Discord](http://starknet.io/discord).*
 
-This post explains the token allocation process, and how the deployed token contracts serve two of the token’s three designed utilities, namely, voting and staking. The third utility — paying StarkNet fees — will be discussed at a later time.
+פוסט זה מסביר את תהליך הקצאת האסימון, וכיצד חוזי האסימון שנפרסו משרתים שניים משלושת כלי השירות המעוצבים של האסימון, כלומר, הצבעה והימור. כלי השירות השלישי - תשלום דמי StarkNet - יידון במועד מאוחר יותר.
 
-### Planning the token allocation process
+### תכנון תהליך הקצאת האסימונים
 
-We’ve previously proposed a [plan](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) for initial allocation of the tokens. Tokens allocated to shareholders, employees, and independent software developers are locked for four years, with a gradual release schedule starting after one-year. Locked tokens can be used for voting and staking, but cannot be transferred or traded. Some of the tokens are locked via a dedicated smart contract on Ethereum while other tokens are locked via custodians.
+הצענו בעבר תוכנית[](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)להקצאה ראשונית של האסימונים. אסימונים שהוקצו לבעלי מניות, עובדים ומפתחי תוכנה עצמאיים נעולים למשך ארבע שנים, עם לוח זמנים לשחרור הדרגתי שמתחיל לאחר שנה. ניתן להשתמש באסימונים נעולים להצבעה ולהימור, אך לא ניתן להעבירם או לסחור בהם. חלק מהאסימונים ננעלים באמצעות חוזה חכם ייעודי ב-Ethereum בעוד שאסימונים אחרים נעולים באמצעות אפוטרופוסים.
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). These tokens are not locked. However, the Foundation will need time to formulate the exact mechanism to further allocate those tokens and will share its plans in due time.
+בנפרד, 50.1% מהאסימונים הקיימים של StarkNet מוקצים לקרן StarkNet, כדי שישמשו לעמידה ב[יעדים](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)שלה (ראה פוסט[של StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). אסימונים אלה אינם נעולים. עם זאת, הקרן תזדקק לזמן כדי לגבש את המנגנון המדויק להקצאה נוספת של אותם אסימונים ותשתף את תוכניותיה בבוא העת.
 
-#### Why lockup?
+#### למה נעילה?
 
-Locking the tokens for the aforementioned period ensures that current contributors align with the long-term incentives of StarkNet. It also discourages speculation over the token in advance of widespread usage for its intended purposes: securing the network, paying fees, and decentralizing governance.
+נעילת האסימונים לתקופה האמורה מבטיחה שהתורמים הנוכחיים יתאימו עם התמריצים ארוכי הטווח של StarkNet. זה גם מרתיע ספקולציות לגבי האסימון מראש של שימוש נרחב למטרותיו המיועדות: אבטחת הרשת, תשלום עמלות וביזור ממשל.
 
-Next, we explain how the token implementation supports voting and staking.
+לאחר מכן, אנו מסבירים כיצד יישום האסימון תומך בהצבעה והימור.
 
-### Voting
+### הַצבָּעָה
 
-The Foundation will be in charge of facilitating sound governance and formulating the voting mechanisms. The StarkNet Token was designed to allow both direct voting and a range of delegation mechanisms.
+הקרן תהיה מופקדת על מתן ממשל תקין וגיבוש מנגנוני ההצבעה. אסימון StarkNet תוכנן כדי לאפשר גם הצבעה ישירה וגם מגוון מנגנוני האצלה.
 
-#### L1 voting
+#### הצבעה L1
 
-The ERC-20 implementation deployed now includes **optional** use of Compound’s [delegation module](https://docs.compound.finance/v2/governance/). This module is widely used for on-chain voting. The reason it’s optional on StarkNet, and turned-off by default, is cost consideration. Turning it on means that every transfer of the StarkNet Tokens on L1 requires extra gas needed solely for the purpose of tracking shifts in voting power.
+יישום ה-ERC-20 שנפרס כעת כולל**שימוש אופציונלי**במודול האצלה[של Compound](https://docs.compound.finance/v2/governance/). מודול זה נמצא בשימוש נרחב להצבעה בשרשרת. הסיבה שהוא אופציונלי ב-StarkNet, וכבוי כברירת מחדל, היא שיקול עלות. הפעלתו פירושה שכל העברה של אסימוני StarkNet ב-L1 דורשת גז נוסף הנחוץ אך ורק למטרת מעקב אחר שינויים בכוח ההצבעה.
 
-#### Non-L1 voting
+#### הצבעה ללא L1
 
-Alternatives to L1 on-chain voting with Compound’s delegation module include off-chain voting, as well as StarkNet-based on-chain voting systems (such as [SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). These alternatives, which significantly reduce gas consumption for L1 transfers, don’t require explicit support from the ERC-20 code currently deployed, and are thus inherently supported.
+חלופות להצבעה בשרשרת L1 עם מודול האצלה של Compound כוללות הצבעה מחוץ לשרשרת, כמו גם מערכות הצבעה בשרשרת מבוססות StarkNet (כגון[SnapshotX](https://snapshot.mirror.xyz/cUOrwdtEs5PvNh0sqYWWxPjt8GdJWn_Qp3cl7E3_8IU)). חלופות אלה, המפחיתות באופן משמעותי את צריכת הגז עבור העברות L1, אינן דורשות תמיכה מפורשת מקוד ה-ERC-20 שנפרס כעת, ולכן הן נתמכות מטבען.
 
-As mentioned above, all tokens — locked and unlocked — will be usable in StarkNet’s voting mechanism.
+כפי שהוזכר לעיל, כל האסימונים - נעולים ובלתי נעולים - יהיו ניתנים לשימוש במנגנון ההצבעה של StarkNet.
 
-### Staking
+### הימור
 
-StarkNet’s permissionless and censorship-resistant operation requires random selection of sequencers. The probability of a node being selected to sequence and propose a block is proportional to the number of StarkNet Tokens that node stakes. The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+הפעולה נטולת ההרשאה ועמידה לצנזורה של StarkNet דורשת בחירה אקראית של סיקוונסרים. ההסתברות שצומת ייבחר לרצף ולהציע בלוק היא פרופורציונלית למספר אסימוני StarkNet שהצומת מחזיק. הרציונל לשימוש באסימוני StarkNet (ולא, למשל, Ethereum או ביטקוין) מוסבר בהצעת הממשל[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), והפרטים המדויקים של הימור, רצף ויצירת בלוק ב-StarkNet נמצאים בדיון מתמשך[של הקהילה](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), והם עדיין לא סופית.
 
-As with voting, tokens can be used for staking even when they are locked. This contributes to the diversity of the StarkNet operators and to the resilience of StarkNet.
+כמו בהצבעה, ניתן להשתמש באסימונים להמרה גם כשהם נעולים. זה תורם לגיוון של מפעילי StarkNet ולחוסן של StarkNet.
 
-### Summary
+### סיכום
 
-The deployment of the StarkNet Token contracts on Ethereum is another step in StarkNet decentralization.
+פריסת חוזי StarkNet Token ב-Ethereum היא שלב נוסף בביזור StarkNet.
 
-We urge developers and users to be wary of scams! At time of publication, no tokens are tradable, and this no-trade status will remain in place until further notice by the StarkNet Foundation.
+אנו קוראים למפתחים ולמשתמשים להיזהר מהונאות! בזמן הפרסום, אין אסימונים ניתנים לסחר, ומעמד זה של אי סחר יישאר במקומו עד להודעה חדשה של קרן StarkNet.
 
-For more questions you can go to the [Token-discussions](https://discord.gg/qypnmzkhbc) channel on the [StarkNet Discord](http://starknet.io/discord) server.
+לשאלות נוספות אתה יכול ללכת לערוץ[Token-discussions](https://discord.gg/qypnmzkhbc)בשרת[StarkNet Discord](http://starknet.io/discord).

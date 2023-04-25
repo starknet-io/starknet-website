@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+블록체인 확장성은 항상 뜨거운 주제였습니다. 거의 모든 블록체인 네트워크는 높은 TPS(초당 트랜잭션 수)를 판매 포인트로 선전합니다. 그러나 TPS는 블록체인 네트워크를 비교할 수 있는 유효한 지표가 아니므로 상대적인 성능을 평가하는 것이 어렵습니다. 게다가 큰 TPS 수치는 일반적으로 비용이 발생합니다. 즉, 이러한 네트워크가 실제로 확장됩니까, 아니면 처리량만 증가합니까?라는 질문이 제기됩니다.
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+따라서 확장성을 정의하는 방법, 이를 달성하기 위해 어떤 장단점이 있는지, 유효성 롤업이 궁극적인 확장성 솔루션인 이유를 살펴보겠습니다.
 
-### Not all Transactions are Made Equal
+### 모든 거래가 평등하지는 않습니다
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+첫째, TPS의 단순하고 편리한 척도가 확장성의 정확한 척도가 아니라는 주장을 확립해야 합니다.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+트랜잭션 실행에 대한 노드 보상(및 사용자가 불필요한 계산으로 네트워크에 스팸을 보내는 것을 방지하기 위해) 블록체인은 블록체인에 부과된 계산 부담에 비례하여 수수료를 부과합니다. Ethereum에서 계산 부담의 복잡성은*가스로 측정됩니다.*가스는 거래 복잡성의 매우 편리한 척도이기 때문에 이 용어는 일반적으로 이더리움에만 국한되지만 이 문서 전체에서 비이더리움 블록체인에도 사용됩니다.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+트랜잭션은 복잡성과 그에 따라 얼마나 많은 가스를 소비하는지에 따라 크게 다릅니다. 무신뢰 P2P 거래의 선구자인 비트코인은 초보적인 비트코인 스크립트만 지원합니다. 주소에서 주소로의 이러한 간단한 전송은 가스를 거의 사용하지 않습니다. 반대로 Ethereum 또는 Solana와 같은 스마트 계약 체인은 훨씬 더 복잡한 트랜잭션을 허용하는 가상 머신 및 Turing-complete 프로그래밍 언어를 지원합니다. 따라서 Uniswap과 같은 dApp에는 훨씬 더 많은 가스가 필요합니다.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+이것이 서로 다른 블록체인의 TPS를 비교하는 것이 이치에 맞지 않는 이유입니다. 대신 비교해야 할 것은 계산 용량 또는 처리량입니다.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+모든 블록체인에는</em>당 처리할 수 있는 계산*수와 새 블록*추가할 수 있는 속도를 결정하는 (변수) 블록*와 블록 시간이 있습니다. 이 두 변수가 함께 블록체인의*처리량*결정합니다.</p>
 
-### What Constrains Scalability?
+### 확장성을 제한하는 요소는 무엇입니까?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+블록체인은 최대한 분산되고 포괄적인 네트워크가 되기 위해 노력합니다. 이를 달성하려면 두 가지 기본 속성을 확인해야 합니다.
 
-#### **1. Hardware Requirements**
+#### **1. 하드웨어 요구 사항**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+블록체인 네트워크의 분산화는 네트워크에서 가장 약한 노드가 블록체인을 확인하고 상태를 유지하는 능력에 의해 결정됩니다. 따라서 노드(하드웨어, 대역폭 및 스토리지)를 실행하는 비용을 가능한 한 낮게 유지하여 가능한 한 많은 개인이 신뢰할 수 없는 네트워크에서 무허가 참여자가 될 수 있도록 해야 합니다.
 
-#### 2**.** State Growth
+#### 2**.**상태 성장
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+상태 성장은 블록체인이 얼마나 빨리 성장하는지를 나타냅니다. 블록체인이 단위 시간당 더 많은 처리량을 허용할수록 블록체인이 더 빨리 성장합니다. 전체 노드는 네트워크의 기록을 저장하며 네트워크 상태를 확인할 수 있어야 합니다. Ethereum의 상태는 트리와 같은 효율적인 구조를 사용하여 저장되고 참조됩니다. 상태가 성장함에 따라 새로운 잎과 가지가 추가되어 특정 작업을 수행하는 것이 훨씬 더 복잡하고 시간이 많이 걸립니다. 체인의 크기가 커짐에 따라 노드에 의한 최악의 실행이 악화되어 새 블록을 검증하는 시간이 계속 증가합니다. 시간이 지남에 따라 전체 노드가 동기화되는 데 걸리는 총 시간도 늘어납니다.
 
-### Detrimental Impacts of Increasing Throughput
+### 처리량 증가의 해로운 영향
 
-#### 1. Node Count
+#### 1. 노드 수
 
-The minimum requirements to run a node and node counts are:
+노드 및 노드 수를 실행하기 위한 최소 요구 사항은 다음과 같습니다.
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* 비트코인¹: 350GB HDD 디스크 공간, 5Mbit/s 연결, 1GB RAM, CPU >1Ghz. **노드 수: ~10,000**
+* Ethereum²: 500GB 이상의 SSD 디스크 공간, 25Mbit/s 연결, 4–8GB RAM, CPU 2–4 코어. **노드 수: ~6,000**
+* Solana³: 1.5TB 이상의 SSD 디스크 공간, 300Mbit/s 연결, 128GB RAM CPU 12+ 코어. **노드 수: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+블록체인의 처리량에 필요한 노드의 CPU, 대역폭 및 스토리지 요구 사항이 클수록 네트워크의 노드 수가 적어져 탈중앙화가 약해지고 네트워크 포용성이 떨어집니다.
 
-#### 2. Time to Sync a Full Node
+#### 2. 전체 노드를 동기화하는 시간
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+노드를 처음으로 실행할 때 모든 기존 노드와 동기화하고, 제네시스 블록에서 체인 끝까지 네트워크 상태를 다운로드하고 검증해야 합니다. 이 프로세스는 누구나 프로토콜의 무허가 참여자 역할을 할 수 있도록 가능한 한 빠르고 효율적이어야 합니다.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Jameson Lopp의[2020 비트코인 노드](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)및[2021 노드 동기화 테스트](https://blog.lopp.net/2021-altcoin-node-sync-tests/)지표로 사용하여 표 1은 일반 소비자용 PC에서 비트코인과 이더리움, 솔라나의 전체 노드를 동기화하는 데 걸리는 시간을 비교합니다.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![1 번 테이블. 블록체인 처리량 및 노드 동기화 비교](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "1 번 테이블. 블록체인 처리량 및 노드 동기화 비교")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+표 1은 점점 더 많은 데이터를 처리하고 저장해야 하기 때문에 처리량이 증가하면 동기화 시간이 길어진다는 것을 보여줍니다.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+성장하는 블록체인의 문제를 완화하기 위해 노드 소프트웨어에 대한 개선이 지속적으로 이루어지고 있지만(디스크 풋프린트 감소, 더 빠른 동기화 속도, 더 강력한 충돌 복원력, 특정 구성 요소의 모듈화 등), 노드는 분명히 여전히 증가 속도를 따라갈 수 없습니다. 처리량에.
 
-### How Should Scalability be defined?
+### 확장성을 어떻게 정의해야 합니까?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+확장성은 블록체인 공간에서 가장 잘못 표현된 용어입니다. 처리량을 늘리는 것이 바람직하지만 이는 퍼즐의 한 부분일 뿐입니다.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***확장성****동일한 하드웨어**에 대해**추가 트랜잭션**의미합니다.*
 
-For that reason, scalability can be separated into two categories.
+이러한 이유로 확장성은 두 가지 범주로 구분할 수 있습니다.
 
-#### Sequencer scalability
+#### 시퀀서 확장성
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+시퀀싱은 네트워크에서 트랜잭션을 주문하고 처리하는 행위를 설명합니다. 이전에 확립된 바와 같이 모든 블록체인은 블록 크기를 늘리고 블록 시간을 단축하여 처리량을 소소하게 늘릴 수 있습니다. 탈중앙화에 대한 부정적인 영향이 너무 크다고 간주되는 시점까지입니다. 그러나 이러한 간단한 매개 변수를 조정해도 필요한 개선 사항이 제공되지 않습니다. 이더리움의 EVM은 이론적으로[최대 ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989)까지 처리할 수 있으며 이는 장기적인 블록 공간 수요를 충족시키기에 충분하지 않습니다. 시퀀싱을 확장하기 위해 Solana는 몇 가지 인상적인 혁신을 이루었습니다. 병렬 실행 환경과 영리한 합의 메커니즘을 활용하여 훨씬 더 효율적인 처리량을 가능하게 합니다. 그러나 개선에도 불구하고 충분하지도 않고 확장 가능하지도 않습니다. Solana가 처리량을 늘리면 노드를 실행하고 트랜잭션을 처리하는 하드웨어 비용도 증가합니다.
 
-#### Verification scalability
+#### 검증 확장성
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*검증 확장성은 지속적으로 증가하는 하드웨어 비용으로 노드에 부담을 주지 않고 처리량을 증가시키는 접근 방식을 설명합니다.*특히 유효성 증명과 같은 암호화 혁신을 말합니다. 유효성 롤업이 블록체인을 지속 가능하게 확장할 수 있는 이유입니다.
 
-**What’s a Validity Rollup?**
+**유효성 롤업이란 무엇입니까?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+유효성 롤업("ZK-롤업"이라고도 함)은 계산 및 상태 저장소를 오프체인으로 이동하지만 소량의 특정 데이터를 온체인에 유지합니다. 기본 블록체인의 스마트 계약은 롤업의 상태 루트를 유지합니다. 롤업에서는 현재 상태 루트와 함께 고도로 압축된 트랜잭션 배치가 오프체인 증명기로 전송됩니다. Prover는 트랜잭션을 계산하고 결과의 유효성 증명과 새로운 상태 루트를 생성하여 온체인 Verifier로 보냅니다. 검증자는 유효성 증명을 검증하고 롤업 상태를 유지하는 스마트 계약은 이를 증명자가 제공하는 새로운 상태로 업데이트합니다.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**유효성 롤업은 동일한 하드웨어 요구 사항으로 어떻게 확장됩니까?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+증명자는 고급 하드웨어가 필요하지만 블록체인의 분산화에 영향을 미치지 않습니다. 거래의 유효성은 수학적으로 검증 가능한 증명에 의해 보장되기 때문입니다.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+중요한 것은 증명을 검증하기 위한 요건입니다. 관련된 데이터는 고도로 압축되고 계산을 통해 대체로 추상화되기 때문에 기본 블록체인의 노드에 미치는 영향은 최소*입니다.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+검증자(Ethereum 노드)에는 고급 하드웨어가 필요하지 않으며 배치 크기가 하드웨어 요구 사항을 증가시키지 않습니다. 상태 전환과 소량의 호출 데이터만 노드에서 처리하고 저장하면 됩니다. 이를 통해 모든 이더리움 노드는 기존 하드웨어를 사용하여 유효성 롤업 배치를 확인할 수 있습니다.
 
-**The more transactions, the cheaper it gets**
+**거래가 많을수록 저렴해진다**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+전통적인 블록체인에서는 더 많은 트랜잭션이 발생할수록 블록 공간이 채워짐에 따라 모든 사람에게 더 많은 비용이 발생합니다. 사용자는 트랜잭션을 포함하려면 수수료 시장에서 서로를 능가해야 합니다.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+유효성 롤업의 경우 이 역학이 역전됩니다. Ethereum에서 거래 배치를 확인하는 데는 일정한 비용이 듭니다. 배치 내부의 트랜잭션 수가 증가함에 따라 배치를 확인하는 비용은 기하급수적으로 느린 속도로 증가합니다. 배치에 더 많은 거래를 추가하면 배치 검증 비용이 증가하더라도 거래 수수료가 낮아집니다. 배치 내의 모든 거래에서 상각되기 때문입니다. 유효성 롤업은 모든 사용자가 확인 수수료를 공유할 수 있도록 배치 내에서 가능한 한 많은 트랜잭션을 원합니다. 배치 크기가 무한대로 커짐에 따라 거래당 상각 수수료는 0으로 수렴됩니다. 즉, 유효성 롤업에 거래가 많을수록 모두에게 더 저렴해집니다.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+Validity Rollup으로 구동되는 dApp인 dYdX는 12,000개 이상의 트랜잭션에 대한 배치 크기를 자주 확인합니다. Mainnet과 Validity Rollup에서 동일한 트랜잭션의 가스 소비량을 비교하면 확장성 이점을 알 수 있습니다.
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+이더리움 메인넷에서 dYdX 트랜잭션 정산:**200,000 가스**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+StarkEx에서 dYdX 트랜잭션 정산:**<500 가스**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+그것을 보는 또 다른 방법: 유효성 롤업의 주요 비용은 동일한 배치 내의 사용자 수에 따라 선형적으로 확장됩니다.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### 낙관적 롤업이 생각만큼 확장 가능하지 않은 이유
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+이론적으로 낙관적 롤업은 유효성 롤업과 거의 동일한 확장성 이점을 제공합니다. 그러나 한 가지 중요한 차이점이 있습니다. 낙관적 롤업은 평균적인 경우에 최적화되는 반면 유효성 롤업은 최악의 경우에 최적화됩니다. 블록체인 시스템은 극도로 적대적인 조건에서 작동하기 때문에 최악의 경우에 최적화하는 것이 보안을 달성하는 유일한 방법입니다.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+낙관적 롤업의 최악의 경우 사기 체커가 사용자의 거래를 확인하지 않습니다. 따라서 사기에 맞서기 위해 사용자는 이더리움 풀 노드, L2 풀 노드를 동기화하고 의심스러운 트랜잭션을 직접 계산해야 합니다.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+유효성 롤업의 최악의 경우 사용자는 유효성 증명을 확인하기 위해 이더리움 전체 노드를 동기화하기만 하면 계산 부담을 줄일 수 있습니다.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+유효성 롤업과 달리 낙관적 롤업의 비용은 사용자 수가 아닌 트랜잭션 수에 따라 선형적으로 확장되므로 비용이 더 많이 듭니다.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### 퍼즐의 마지막 조각 — 롤업 상태에 대한 무허가 액세스
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+거래의 유효성을 보장하기 위해 사용자는 이더리움 노드만 실행해야 합니다. 그러나 사용자와 개발자는 다양한 목적으로 롤업의 상태와 실행을 보고 실행하기를 원할 수 있습니다. *인덱싱 L2 노드*은 이러한 요구를 완벽하게 충족합니다. 사용자가 네트워크에서 트랜잭션을 볼 수 있을 뿐만 아니라 생태계 인프라가 작동하는 데 필요한 중요한 인프라이기도 합니다. The Graph, Alchemy, Infura와 같은 인덱서; Chainlink 및 블록 탐색기와 같은 Oracle 네트워크는 모두 무허가 인덱싱 L2 노드에서 완벽하게 지원됩니다.
 
-### Conclusion
+### 결론
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+블록체인 확장성을 해결하기 위한 많은 접근 방식은*증가에 잘못 초점*맞추고 있습니다. 그러나 이것은 노드에 대한 처리량의 영향을 간과합니다. 즉, 블록을 처리하고 네트워크 기록을 저장하기 위한 계속 증가하는 하드웨어 요구 사항과 이것이 네트워크의 분산화를 방해하는 방식입니다.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Validity-proof cryptography의 출현으로 블록체인은 계속 증가하는 비용으로 노드에 부담을 주지 않고 광범위한 분산화를 허용하는**진정한 확장성**달성할 수 있습니다. 이제 동일한 하드웨어에 대해 더 강력하고 복잡한 계산을 사용하는 더 많은 거래가 가능하여 프로세스에서 수수료 시장 딜레마를 뒤집을 수 있습니다. 유효성 롤업에 대한 활동이 많을수록 더 저렴해집니다!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)및[Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+¹[부터 https://bitcoin.org/en/bitcoin-core/features/requirements](https://bitcoin.org/en/bitcoin-core/features/requirements)
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+²[부터 https://ethereum.org/en/developers/docs/nodes-and-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+³[부터 https://docs.solana.com/running-validator/validator-reqs](https://docs.solana.com/running-validator/validator-reqs)
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+⁴ 평균 동적 블록 크기에 맞게 강력하게 단순화 및 조정됨

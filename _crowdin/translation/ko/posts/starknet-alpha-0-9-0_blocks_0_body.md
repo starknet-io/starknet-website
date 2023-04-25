@@ -1,67 +1,67 @@
-### TL;DR
+### TL; DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **수수료는 이제 테스트넷에서 필수이며 곧 메인넷에서도 적용됩니다.**
+* 이제 계약 공장 패턴이 가능합니다!
+* StarkNet은 계약 클래스를 도입하고 있습니다.
+* 대리자 호출이 라이브러리 호출로 대체됨
 
-### Intro
+### 소개
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+StarkNet Alpha 0.9.0을 소개하게 되어 기쁩니다! 이것은 StarkNet이 기능과 프로토콜 디자인 모두에 실질적인 추가를 통해 성숙을 향한 중요한 단계를 만드는 중요한 버전입니다.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**수수료는 필수입니다.**(현재 테스트넷에서만, 버전 0.9.0이 메인넷에서 실행될 때까지) — 번영하는 모든 L2는 자체적인 수수료 시스템을 가져야 합니다. 버전 0.8.0에서 수수료를 옵션 기능으로 도입한 후 이제 우리는 수수료를 프로토콜의 핵심 구성 요소로 포함하고 의무화할 자신이 있습니다. 자세한 내용은 아래를 참조하십시오.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+프로토콜 수준의 또 다른 중요한 변화는 계약 클래스의 도입과 클래스/인스턴스 분리입니다. 이를 통해 \`delegate_call\` 기능과 기존 계약의 배포를 보다 간단하게 사용할 수 있으므로 StarkNet에서 팩토리 패턴을 사용할 수 있습니다.
 
-### Contract Classes
+### 계약 클래스
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+개체 지향 프로그래밍에서 영감을 받아 계약 코드와 구현을 구분합니다. 계약을 클래스와 인스턴스로 분리하여 그렇게 합니다.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+**계약 클래스**은 계약의 정의입니다. Cairo 바이트 코드, 힌트 정보, 진입점 이름 및 의미 체계를 명확하게 정의하는 데 필요한 모든 것입니다. 각 클래스는 해당 클래스 해시(OOP 언어의 클래스 이름과 유사함)로 식별됩니다.
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+**계약 인스턴스**또는 간단히 계약은 일부 클래스에 해당하는 배포된 계약입니다. 계약 인스턴스만 계약으로 작동합니다. 즉, 자체 저장소가 있고 트랜잭션/다른 계약에 의해 호출될 수 있습니다. 계약 클래스에는 StarkNet에 배포된 인스턴스가 반드시 있어야 하는 것은 아닙니다. 클래스의 도입에는 몇 가지 프로토콜 변경 사항이 있습니다.
 
-#### ‘Declare’ Transaction
+#### 거래 '선언'
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+우리는 StarkNet에 새로운 유형의 트랜잭션인['declare'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)트랜잭션을 도입하여 계약**클래스 선언을 허용합니다.**\`deploy\` 트랜잭션과 달리 해당 클래스의 인스턴스를 배포하지 않습니다. StarkNet의 상태에는 선언된 클래스 목록이 포함됩니다. 새 \`declare\` 트랜잭션을 통해 새 클래스를 추가할 수 있습니다.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### '배포' 시스템 호출 및 계약 팩토리.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+클래스가 선언되면, 즉 해당 \`declare\` 트랜잭션이 수락되면 해당 클래스의 새 인스턴스를 배포할 수 있습니다. 이를 위해 다음 인수를 사용하는 새로운 \`deploy\` 시스템 호출을 사용합니다.
 
-* The class hash
-* Salt
-* Constructor arguments
+* 클래스 해시
+* 소금
+* 생성자 인수
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+그런 다음 '배포' 시스템 호출은 해당 계약 클래스의 새 인스턴스를 배포합니다. 이 인스턴스의[주소](https://docs.starknet.io/docs/Contracts/contract-address)위의 세 매개변수와 배포자 주소(시스템 호출을 호출한 계약)에 의해 결정됩니다.
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+호출 트랜잭션 내부에 배포를 포함하면 배포와 호출을 다르게 취급하지 않고도 배포에 대한 요금을 책정하고 요금을 청구할 수 있습니다. 배포 비용에 대한 자세한 내용은[the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts)참조하십시오.
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+이 기능은 모든 계약이 \`deploy\` 시스템 호출을 호출하여 새 계약을 생성할 수 있으므로 계약 팩토리를 StarkNet에 도입합니다.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### '델리게이트 콜'에서 '라이브러리 콜'로 이동
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+클래스의 도입으로 이더리움의 위임 호출 메커니즘에서 잘 알려진 문제를 해결할 수 있습니다. 계약이 다른 계약에 대한 위임 호출을 수행할 때 실제 인스턴스(스토리지)가 아닌 클래스(코드)만 필요합니다. 따라서 대리자 호출을 수행할 때 특정 계약 인스턴스를 지정해야 하는 것은 나쁜 습관입니다(실제로 이더리움 계약에서 몇 가지 버그가 발생했습니다) — 클래스만 지정하면 됩니다.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+이전 \`delegate_call\` 시스템 호출은 이제 더 이상 사용되지 않으며(이미 배포된 이전 계약은 계속 작동하지만 \`delegate_call\`을 사용하는**계약은 더 이상 컴파일되지 않습니다**) 새로운 library_call 시스템 호출로 대체됩니다. 계약 인스턴스 주소 대신 클래스 해시(이전에 선언된 클래스의)를 가져옵니다. 라이브러리 호출에는 하나의 실제 계약만 포함되므로 호출 계약과 구현 계약 간의 모호성을 피합니다.
 
-#### New API endpoints
+#### 새로운 API 엔드포인트
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+클래스 관련 데이터를 검색할 수 있도록 두 개의 새로운 엔드포인트를 API에 추가했습니다.
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: 클래스 해시가 주어진 클래스 정의를 반환합니다.
+* \`get_class_hash_at\`: 계약 주소가 주어진 배포된 계약의 클래스 해시를 반환합니다.
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+위의 두 가지 방법을 거치지 않고 배포된 계약의 클래스를 직접 얻으려면 이전 버전에서 이름이 변경될 이전 \`get_full_contract\` 엔드포인트를 사용할 수 있습니다. 위에서 언급한 모든 끝점은[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands)에서도 사용할 수 있습니다.
 
-#### Fees
+#### 수수료
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+우리는 수수료를 StarkNet에 통합하여 ``(https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` 거래[invoke]대해 수수료를 필수로 만듭니다(처음에는 Testnet에서, 나중에는 Mainnet에서도). 이 시점에서 \`declare\` 트랜잭션에는 수수료가 필요하지 않습니다. 마찬가지로 \`deploy`` 트랜잭션에도 수수료가 필요하지 않지만 이 트랜잭션 유형은 향후 버전에서 더 이상 사용되지 않을 가능성이 높습니다.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+이 영역에는 몇 가지 미해결 질문이 남아 있으며 가장 두드러진 질문은 계약 선언 및 StarkNet 계정 배포에 대한 요금을 청구하는 방법입니다. 향후 버전에서 이러한 문제를 해결할 것입니다.
 
-### What’s Next?
+### 무엇 향후 계획?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+2월[](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717)에 발표한 로드맵에 따라 일반적으로 StarkNet의 성능, 특히 시퀀서의 성능을 개선하여 사용자가 트랜잭션에 대한 더 빠른 피드백을 받을 수 있도록 최선을 다하고 있습니다. 다음 버전에서는 시퀀서에 병렬화를 도입하여 더 빠른 블록 생성을 가능하게 할 계획입니다.
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+StarkNet의 다음 주요 버전은[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)과 유사한 방식으로 StarkNet 계정 구조에 초점을 맞출 것입니다. 이것으로 우리는 StarkNet 계정이 작동하는 방식을 마무리하고 대량 채택을 향한 또 다른 중요한 단계를 밟을 것입니다!

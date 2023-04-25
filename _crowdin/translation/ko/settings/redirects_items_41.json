@@ -1,4 +1,4 @@
 {
-  "source": "/podcasts/:path*",
-  "destination": "/en/posts"
+  "source": "/팟캐스트/:경로*",
+  "destination": "/ko/게시물"
 }

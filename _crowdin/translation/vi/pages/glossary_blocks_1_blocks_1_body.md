@@ -1,1 +1,1 @@
-The users of Starknet that develop Starknet applications. They write and deploy Starknet and Ethereum contracts.
+Người dùng Starknet phát triển các ứng dụng Starknet. Họ viết và triển khai các hợp đồng Starknet và Ethereum.

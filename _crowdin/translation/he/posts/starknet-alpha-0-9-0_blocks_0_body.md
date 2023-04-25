@@ -1,67 +1,69 @@
 ### TL;DR
 
-* **Fees are now mandatory on Testnet, soon on Mainnet**
-* Contract factory pattern is now possible!
-* StarkNet is introducing contract classes
-* Delegate call is replaced with library call
+* **עמלות חובה כעת ב-Testnet, בקרוב ב-Mainnet**
+* דפוס מפעל חוזה אפשרי כעת!
+* StarkNet מציגה שיעורי חוזים
+* שיחת נציג מוחלפת בשיחת ספרייה
 
-### Intro
+### הקדמה
 
-We are happy to introduce StarkNet Alpha 0.9.0! This is an important version in which StarkNet makes significant steps towards maturity, with substantial additions to both functionality and protocol design.
+אנו שמחים להציג את StarkNet Alpha 0.9.0! זוהי גרסה חשובה שבה StarkNet עושה צעדים משמעותיים לקראת בגרות, עם תוספות משמעותיות הן לפונקציונליות והן לעיצוב הפרוטוקול.
 
-**Fees are mandatory** (currently only on Testnet, until version 0.9.0 will be live on Mainnet) — any prospering L2 must have its own independent system of fees. After introducing fees as an optional feature in version 0.8.0, we now feel confident to include them as a core component of the protocol, and make them mandatory. More details below.
+**עמלות הן חובה**(כרגע רק ב-Testnet, עד שגרסה 0.9.0 תהיה פעילה ב-Mainnet) - לכל L2 משגשגת חייבת להיות מערכת עמלות עצמאית משלה. לאחר הצגת עמלות כתכונה אופציונלית בגרסה 0.8.0, כעת אנו מרגישים בטוחים לכלול אותם כמרכיב ליבה של הפרוטוקול, ולהפוך אותם לחובה. פרטים נוספים בהמשך.
 
-Another significant change at the protocol level is the introduction of Contract Classes and the class/instance separation. This allows a more straightforward use of the \`delegate_call\` functionality and deployments from existing contracts, enabling the factory pattern on StarkNet.
+שינוי משמעותי נוסף ברמת הפרוטוקול הוא הכנסת מחלקות חוזה והפרדת מחלקה/מופע. זה מאפשר שימוש פשוט יותר בפונקציונליות \`delegate_call\` ובפריסות מחוזים קיימים, מה שמאפשר את דפוס היצרן ב-StarkNet.
 
-### Contract Classes
+### שיעורי חוזה
 
-Taking inspiration from object-oriented programming, we distinguish between the contract code and its implementation. We do so by separating contracts into classes and instances.
+מתוך השראה מתכנות מונחה עצמים, אנו מבחינים בין קוד החוזה לבין היישום שלו. אנו עושים זאת על ידי הפרדת חוזים לשיעורים ומופעים.
 
-A **contract class** is the definition of the contract: Its Cairo bytecode, hint information, entry point names, and everything necessary to unambiguously define its semantics. Each class is identified by its class hash (analogous to a class name from OOP languages).
+חוזה**מחלקה**היא ההגדרה של החוזה: קוד הביטים של קהיר, מידע רמז, שמות נקודות כניסה וכל מה שצריך כדי להגדיר באופן חד משמעי את הסמנטיקה שלו. כל מחלקה מזוהה לפי ה-hash המחלקה שלה (בדומה לשם מחלקה משפות OOP).
 
-A **contract instance**, or simply a contract, is a deployed contract corresponding to some class. Note that only contract instances behave as contracts, i.e., have their own storage and are callable by transactions/other contracts. A contract class does not necessarily have a deployed instance in StarkNet. The introduction of classes comes with several protocol changes.
+מופע**חוזה**, או פשוט חוזה, הוא חוזה פרוס המתאים למחלקה כלשהי. שימו לב שרק מופעי חוזה מתנהגים כחוזים, כלומר יש להם אחסון משלהם וניתנים להתקשרות על ידי עסקאות/חוזים אחרים. למחלקת חוזה אין בהכרח מופע פרוס ב-StarkNet. הצגת השיעורים מגיעה עם מספר שינויים בפרוטוקול.
 
-#### ‘Declare’ Transaction
+#### 'הכרז' על עסקה
 
-We’re introducing a new type of transaction to StarkNet: the [‘declare’](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction) transaction, which allows declaring a contract **class.** Unlike the \`deploy\` transaction, this does not deploy an instance of that class. The state of StarkNet will include a list of declared classes. New classes can be added via the new \`declare\` transaction.
+אנו מציגים סוג חדש של עסקה ל-StarkNet: עסקת['הכרז'](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction), המאפשרת להכריז על חוזה**class.**בניגוד לעסקת \`deploy\`, פעולה זו אינה פורסת מופע של אותה מחלקה. מצב StarkNet יכלול רשימה של מחלקות מוצהרות. ניתן להוסיף מחלקות חדשות באמצעות העסקה החדשה של \`declare\`.
 
-#### The ‘Deploy’ System Call and Contract Factories.
+#### מפעלי הקריאה והחוזה של מערכת 'פרוס'.
 
-Once a class is declared, that is, the corresponding \`declare\` transaction was accepted, we can deploy new instances of that class. To this end, we use the new \`deploy\` system call, which takes the following arguments:
+ברגע שהוכרזה מחלקה, כלומר, העסקה המתאימה של \`declare\` התקבלה, נוכל לפרוס מופעים חדשים של המחלקה הזו. לשם כך, אנו משתמשים בקריאת המערכת החדשה \`deploy\`, אשר לוקחת את הארגומנטים הבאים:
 
-* The class hash
-* Salt
-* Constructor arguments
+* ה-hash של הכיתה
+* מלח
+* טיעוני קונסטרוקטור
 
-The ‘deploy’ syscall will then deploy a new instance of that contract class, whose [address](https://docs.starknet.io/docs/Contracts/contract-address) will be determined by the three parameters above and the deployer address (the contract that invoked the system call).
+ה-'deploy' syscall אז תפרוס מופע חדש של אותה מחלקת חוזה, שכתובת[שלו](https://docs.starknet.io/docs/Contracts/contract-address)תיקבע על ידי שלושת הפרמטרים שלמעלה וכתובת ה-deployer (החוזה שהפעיל את קריאת המערכת).
 
-Including deployments inside an invoke transaction allows us to price and charge fees for deployments, without having to treat deployments and invocations differently. For more information about deployment fees, see [the docs](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
+הכללת פריסות בתוך עסקת invoke מאפשרת לנו לתמחר ולגבות עמלות עבור פריסות, מבלי שנצטרך להתייחס אחרת לפריסות ופניות. למידע נוסף על דמי פריסה, ראה[המסמכים](https://docs.starknet.io/docs/Fees/fee-mechanism#deployed-contracts).
 
-This feature introduces contract factories into StarkNet, as any contract may invoke the \`deploy\` syscall, creating new contracts.
+תכונה זו מציגה מפעלי חוזה לתוך StarkNet, מכיוון שכל חוזה עשוי להפעיל את ה-\`deploy\` syscall, וליצור חוזים חדשים.
 
-#### Moving from ‘Delegate Call’ to ‘Library Call’
+#### מעבר מ'שיחת נציג' ל'שיחת ספרייה'
 
-The introduction of classes allows us to address a well-known problem in Ethereum’s delegate call mechanism: When a contract performs a delegate call to another contract, it only needs its class (its code) rather than an actual instance (its storage). Having to specify a specific contract instance when doing a delegate call is therefore bad practice (indeed, it has led to a few bugs in Ethereum contracts) — only the class needs to be specified.
+הכנסת המחלקות מאפשרת לנו לטפל בבעיה ידועה במנגנון הנציגים של Ethereum: כאשר חוזה מבצע קריאת נציג לחוזה אחר, הוא צריך רק את המחלקה שלו (הקוד שלו) ולא מופע ממשי (האחסון שלו). הצורך לציין מופע חוזה ספציפי בעת ביצוע קריאת נציג הוא אפוא נוהג גרוע (אכן, זה הוביל לכמה באגים בחוזי Ethereum) - רק המחלקה צריכה להיות מוגדרת.
 
-The old \`delegate_call\` system call now becomes deprecated (old contracts that are already deployed will continue to function, but **contracts using \`delegate_call\` will no longer compile**), and is replaced by a new library_call system call which gets the class hash (of a previously declared class) instead of a contract instance address. Note that only one actual contract is involved in a library call, so we avoid the ambiguity between the calling contract and the implementation contract.
+קריאת המערכת הישנה \`delegate_call\` הופכת כעת משימוש (חוזים ישנים שכבר נפרסו ימשיכו לתפקד, אך**חוזים המשתמשים ב-\`delegate_call\` לא יקדרו עוד**), ומוחלפת בקריאה חדשה למערכת library_call אשר מקבל את ה-hash המחלקה (של מחלקה שהוכרזה בעבר) במקום כתובת מופע חוזה. שימו לב שרק חוזה אחד בפועל מעורב בשיחת ספרייה, ולכן אנו נמנעים מהעמימות בין החוזה המתקשר לחוזה היישום.
 
-#### New API endpoints
+#### נקודות קצה חדשות של API
 
-We added two new endpoints to the API, allowing retrieval of class-related data:
+הוספנו שתי נקודות קצה חדשות ל-API, המאפשרות אחזור של נתונים הקשורים לכיתה:
 
-* \`get_class_by_hash\`: returns the class definition given the class hash
-* \`get_class_hash_at\`: returns the class hash of a deployed contract given the contract address
+* \`get_class_by_hash\`: מחזירה את הגדרת המחלקה בהינתן ה-hash של המחלקה
+* \`get_class_hash_at\`: מחזיר את ה-class hash של חוזה פרוס בהינתן כתובת החוזה
 
-Note that to obtain the class of a deployed contract directly, rather than going through the two methods above, you can use the old \`get_full_contract\` endpoint, which will be renamed in future versions. All the endpoints mentioned above are also usable from the [StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
+שים לב שכדי להשיג את המחלקה של חוזה פרוס ישירות, במקום לעבור את שתי השיטות שלמעלה, אתה יכול להשתמש בנקודת הסיום הישנה \`get_full_contract\`, ששמה ישונה בגרסאות עתידיות. כל נקודות הקצה שהוזכרו לעיל ניתנות לשימוש גם מ[StarkNet CLI](https://docs.starknet.io/docs/CLI/commands).
 
-#### Fees
+#### עמלות
 
-We proceed to incorporate fees into StarkNet, making them mandatory (first on Testnet, and later also on Mainnet) for ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\` transactions. The \`declare\` transaction will not require fees at this point. Similarly, \`deploy`` transactions will also not require a fee, however, note that this transaction type will most likely be deprecated in future versions.
+אנו ממשיכים לשלב עמלות ב-StarkNet, מה שהופך אותן לחובה (תחילה ב-Testnet, ובהמשך גם ב-Mainnet) עבור עסקאות ``[invoke](https://docs.starknet.io/docs/Blocks/transactions#invoke-function)\`. העסקה \`הצהר\` לא תדרוש עמלות בשלב זה. באופן דומה, \`פרוס`` טרנזקציות גם לא ידרשו עמלה, עם זאת, שים לב שסוג עסקה זה ככל הנראה ייצא משימוש בגרסאות עתידיות.
 
-Several open questions remain in this area, the most prominent ones being how to charge fees for contract declarations and StarkNet accounts deployment. We will tackle these issues in future versions.
+נותרו מספר שאלות פתוחות בתחום זה, כאשר הבולטות שבהן הן כיצד לגבות עמלות עבור הצהרות חוזים ופריסה של חשבונות StarkNet. אנו נטפל בבעיות אלו בגרסאות עתידיות.
 
-### What’s Next?
+### מה הלאה?
 
-Following our roadmap that we [announced in February](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717), we are committed to improving StarkNet’s performance in general, and the sequencer’s performance in particular, to get users faster feedback about their transactions. In the next version, we plan to introduce parallelization into the sequencer, enabling faster block production.
+בעקבות מפת הדרכים שלנו שעליה הכרזנו</a>
 
-The next major version of StarkNet will focus on the structure of StarkNet’s accounts, in a way that is similar to [ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). With this, we will have finalized the way StarkNet accounts behave, taking yet another major step towards mass adoption!
+בפברואר, אנו מחויבים לשפר את הביצועים של StarkNet בכלל, ואת הביצועים של הרצף בפרט, כדי לקבל משוב מהיר יותר למשתמשים על העסקאות שלהם. בגרסה הבאה, אנו מתכננים להכניס מקביליות לרצף, מה שמאפשר ייצור בלוק מהיר יותר.</p> 
+
+הגרסה הגדולה הבאה של StarkNet תתמקד במבנה החשבונות של StarkNet, באופן דומה ל[ERC-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a). עם זה, נסיים את הדרך שבה חשבונות StarkNet מתנהגים, ונעשה עוד צעד גדול לקראת אימוץ המוני!

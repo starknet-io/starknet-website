@@ -1,3 +1,3 @@
-Yes!
+Ja!
 
-You can take a look at [this tutorial](https://github.com/eqlabs/pathfinder/#readme).
+Jy kan kyk na[hierdie tutoriaal](https://github.com/eqlabs/pathfinder/#readme).

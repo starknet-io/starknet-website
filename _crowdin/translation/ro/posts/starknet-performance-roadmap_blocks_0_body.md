@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* Valabilitatea rulusurilor nu este limitată la cantitatea tranzitată, în același mod ca L1s. Acest lucru ar putea duce la creșterea considerabilă a TPS în cazul rollupurilor cu privire la validitatea L2.
+* Foaia de parcurs StarkNet abordează un element cheie din sistem: secvențiatorul.
+* Vă prezentăm aici foaia de parcurs pentru îmbunătățirea performanței:\
+  — Paralelizarea fotbalului\
+  — O nouă implementare a deprinderilor pentru Cairo VM\
+  — Reimplementarea în grabă
+* Dovezii, fiind testați ca atare, nu sunt blocajele și pot face față mult mai mult decât în prezent!
 
-### Intro
+### Introducere
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+StarkNet a fost lansat pe Mainnet în urmă cu aproape un an. Am început să construim StarkNet concentrându-ne pe funcționalitate. Acum, ne concentrăm asupra îmbunătăţirii performanţei cu o serie de paşi care vor ajuta la îmbunătăţirea experienţei StarkNet.
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+În acest post, explicăm de ce există o gamă largă de optimizări care sunt aplicabile numai în versiunea valabilității, și vom împărtăși planul nostru de a pune în aplicare acești pași cu privire la StarkNet. Unele dintre aceste măsuri sunt deja puse în aplicare în cadrul programului StarkNet Alpha 0.10.2, care a fost lansat pe Testnet în zilele de 16 şi de ieri pe Mainnet. Dar înainte de a discuta soluţiile, haideţi să revizuim limitele şi cauza lor.
 
-### Block limitations: validity rollups versus L1
+### Limitări de bloc: validitate rulantă versus L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+O posibilă abordare în vederea creșterii scalabilității blockchain și a creșterii TPS ar fi ridicarea limitărilor blocului (în ceea ce privește gazul/dimensiunea), menținând în același timp constanta timpului de blocare. Acest lucru ar necesita mai multe eforturi din partea producătorilor în bloc (validatori în L1; secvențiere pe L2) și, prin urmare, necesită o punere în aplicare mai eficientă a acestor componente. În acest scop, acum transferăm atenţia către optimizările secvenţiale StarkNet, pe care le descriem mai în detaliu în următoarele secţiuni.
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+Aici apare o întrebare naturală. De ce sunt optimizările de secvențiere limitate la valabilitate, adică, de ce nu putem implementa aceleași îmbunătățiri pe L1 și să evităm în întregime complexitatea listelor de validitate? În următoarea secţiune, susţinem că există o diferenţă fundamentală între cele două, permițând o gamă largă de optimizări pentru L2 care nu se aplică pentru L1.
 
-### Why is L1 throughput limited?
+### De ce este limitată cantitatea de L1?
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+Din păcate, ridicarea limitărilor în bloc pentru L1 suferă de un pericol major. Prin creşterea ratei de creştere a lanţului, creştem, de asemenea, cererile din partea nodurilor complete, cine încearcă să țină pasul cu cel mai recent stat. Deoarece nodurile L1 trebuie să reexecute toată istoria, o creștere importantă a dimensiunii blocului (în ceea ce privește gazul) impune o presiune semnificativă asupra lui; din nou, conducând la mașini mai slabe care ies din sistem și lăsând capacitatea de a rula noduri întregi doar către entități destul de mari. Ca rezultat, utilizatorii nu vor putea verifica ei înșiși starea și participa la rețea fără încredere.
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+Acest lucru ne lasă să înţelegem că tranzitul L1 ar trebui să fie limitat, pentru a menţine un sistem cu adevărat descentralizat şi sigur.
 
-### Why don’t the same barriers affect validity rollups?
+### De ce nu afectează aceleași bariere valabilitatea?
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**Doar dacă luăm în considerare perspectiva completă a nodului, vedem adevărata putere oferită de rulajele de validitate.**Un nod complet L1 trebuie să reexecute întreaga istorie pentru a asigura corectitudinea stării curente. Nodurile StarkNet trebuie doar să verifice dovezile STARK, iar această verificare ia o cantitate exponențial mai mică de resurse computaționale. În special, sincronizarea de la zero nu trebuie să implice execuția; un modul poate primi o copie de stare curentă de la colegii săi și poate verifica numai prin intermediul unei dovezi STARK că această stare este validă. Acest lucru ne permite să mărim cantitatea de trafic a rețelei fără a crește cerințele din întregul nod.
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+Prin urmare, conchidem că secvențierul L2 este supus unui întreg spectru de optimizări care nu sunt posibile pe un L1.
 
-### Performance roadmap ahead
+### Foaia de performanță avansată
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+În următoarele secţiuni, discutăm care dintre acestea sunt planificate în prezent pentru secvenţierul StarkNet.
 
-### Sequencer parallelization
+### Paralelizarea sequencer
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+Primul pas al foii noastre de parcurs a fost introducerea unei paralelizări a execuției tranzacțiilor. Aceasta a fost introdusă în StarkNet alpha 0.10.2, care a fost lansată ieri pe Mainnet. Acum ne scufundăm în ceea ce este paralelizare (aceasta este o secţiune semi-tehnică, să continuăm pe foaia de parcurs, să sărim la următoarea secţiune).
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+Deci ce înseamnă „paralelizarea tranzacţiei”? În mod imposibil, executarea în paralel a unui bloc de tranzacții este imposibilă, deoarece diferite tranzacții pot fi dependente. Acest lucru este ilustrat în următorul exemplu. Luați în considerare un bloc cu trei tranzacții de la același utilizator:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* Tranzacția A: swap USDC pentru ETH
+* Tranzacția B: plătește ETH pentru un NFT
+* Tranzacție C: swap USDT pentru BTC
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+În mod clar, Tx A trebuie să se întâmple înainte de Tx B, dar Tx C este complet independent de ambele și poate fi executat în paralel. Dacă fiecare tranzacție are nevoie de 1 secundă pentru a executa, atunci timpul de producție al blocului poate fi redus de la 3 secunde la 2 secunde prin introducerea paralelizării.
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+Problema principală este că nu cunoaştem în prealabil dependenţele de tranzacţionare. În practică, doar atunci când executăm tranzacţia B din exemplul nostru vedem că aceasta se bazează pe modificările făcute de tranzacţia A. Mai formal, dependența rezultă din faptul că tranzacția B citește din celulele de stocare la care a scris tranzacția. Putem considera tranzacțiile ca formând un grafic de dependență, unde există o muchie de la tranzacţia A la tranzacţia B iff A scrie către o celulă de stocare citită de B, şi prin urmare trebuie executate înainte de B. Următoarea cifră arată un exemplu de grafic de dependență:
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+În exemplul de mai sus, fiecare coloană poate fi executată în paralel, iar acesta este mecanismul optim (deşi naiv, am fi executat tranzacţiile în mod secvenţial 1-9).
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+Pentru a depăși faptul că graficul de dependență nu este cunoscut în avans, introducem***paralelizare optimistă***, în spiritul[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)dezvoltat de laboratoarele Aptos, la secvențierul StarkNet. Conform acestei paradigme, încercăm cu optimism să efectuăm tranzacții în paralel și să reexecutăm după găsirea unei coliziuni. De exemplu, putem executa în paralel tranzacții 1-4 din figura 1, doar pentru a afla ulterior că Tx4 depinde de Tx1. Prin urmare, execuţia a fost inutilă (am rulat-o în raport cu aceeaşi stare în care am rulat Tx1 împotrivă, în timp ce ar fi trebuit să ne opunem statului care rezultă din aplicarea Tx1). În acest caz, vom reexecuta Tx4.
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+Reţineţi că putem adăuga multe optimizări pe lângă paralelizarea optimistă. De exemplu, în loc să așteptăm ca fiecare execuție să se încheie, putem renunța la execuție în momentul în care găsim o dependență care o invalidează.
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+Un alt exemplu este optimizarea alegerii pe care tranzacțiile trebuie reexecutate. Să presupunem că un bloc care constă din toate tranzacţiile din figura 1 este introdus într-un secvenţial cu cinci nuclee CPU. În primul rând, încercăm să executăm tranzacțiile 1-5 în paralel. În cazul în care ordinea completării a fost Tx2, Tx3, Tx4, Tx1, și în final Tx5, apoi vom găsi dependența Tx1→Tx4 doar după ce Tx4 a fost deja executat – indicând faptul că ar trebui să fie reexecutat. În mod incredibil, am putea dori să reexecutăm și Tx5, deoarece s-ar putea să se comporte diferit, având în vedere noua execuție a Tx4. Cu toate acestea, în loc să fie reexecutate toate tranzacțiile după Tx invalidat în prezent4, putem traversa graficul de dependență construit din tranzacțiile a căror execuție a încetat deja și doar a reexecuta tranzacții care depindeau de Tx4.
 
-### A new Rust implementation for the Cairo-VM
+### O nouă punere în aplicare necesară pentru Cairo-VM
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+Contractele inteligente din StarkNet sunt scrise în Cairo şi sunt executate în interiorul Cairo-VM, care specificaţia apare în[hârtia Cairo](https://eprint.iacr.org/2021/1063.pdf). În prezent, secvențialul folosește[implementarea python](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)a Cairo-VM. Pentru a optimiza performanţa punerii în aplicare a MV, am lansat un efort de a rescrie în grabă MV. Mulțumită muncii extraordinare a[Lambdaclass](https://lambdaclass.com/), care sunt până acum o echipă inestimabilă în ecosistemul StarkNet, acest efort va da rezultate în curând.
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+Implementarea impulsului VM,[cairo-rs](https://github.com/lambdaclass/cairo-rs), poate executa acum codul nativ Cairo. Pasul următor este gestionarea execuției contractelor inteligente și integrarea cu secvențierul pantonic. Odată integrat cu cairo-rs, se preconizează o îmbunătățire semnificativă a performanței secvențiatorului.
 
-### Sequencer re-implementation in Rust
+### Refacerea fotbalului în Rust
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+Trecerea noastră de la python la împingere pentru a îmbunătăți performanța nu este limitată la Cairo VM. Pe lângă îmbunătăţirile menţionate mai sus, intenţionăm să rescriem secvenţialul de la zero. Pe lângă avantajele interne ale lui Rust, acest lucru reprezintă o oportunitate pentru alte optimizări ale secvențiatorului. Includerea în listă a unui cuplu se poate bucura de beneficiile cairo-erilor fără cheltuieli de comunicare de tip pthon-push; și putem reproiecta complet modul în care starea este stocată și accesată (care se bazează pe[structura Patricia-Trie](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
 
-### What about provers?
+### Ce se întâmplă cu demonstranții?
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+De-a lungul acestui post, nu am menționat probabil cel mai faimos element de validitate - propul. Ne putem imagina că fiind probabil cea mai sofisticată componentă a arhitecturii, ar trebui să fie blocajul şi, prin urmare, punctul central al optimizării. În mod interesant, componentele mai „standard” sunt acum blocajele din StarkNet. Astăzi, în special cu[dovezile recursive](https://medium.com/starkware/recursive-starks-78f8dd401025), putem încăpea mult mai multe tranzacții decât traficul actual pe Testnet/Mainnet într-o dovadă. De fapt, astăzi, blocurile StarkNet sunt dovedite alături de tranzacţiile cu StarkEx, unde acestea din urmă pot acumula uneori câteva sute de mii de monetării NFT.
 
 ### Summary
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+Paralelizarea, Rust, și multe altele — înscrie-te pe tine însuți pentru un TPS îmbunătățit în viitoarele versiuni StarkNet.

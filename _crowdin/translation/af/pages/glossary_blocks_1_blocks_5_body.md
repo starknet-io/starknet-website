@@ -1,4 +1,4 @@
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Geordende stelle Starknet-transaksies wat met die Starknet-bedryfstelsel uitgevoer word, wat lei tot een saamgevoegde toestandsverandering wat dan verbind word tot die Starknet L1-kernkontrak. 'n Blok het:
 
-* … a block hash – a unique stable identifier that can be used to query and refer to the block.
-* … a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+* … 'n blokhash – 'n unieke stabiele identifiseerder wat gebruik kan word om navraag te doen en na die blok te verwys.
+* … 'n bloknommer – 'n ranggetal wat die ligging van die blok in die volgorde van aanvaarde blokke in Starknet verteenwoordig. Let wel, 'n blok se nommer kan met verloop van tyd verander. Ook kan 'n gegewe nommer na verskillende blokke op verskillende tydstip verwys, bv. in die geval van L1-kettingherbestellings.

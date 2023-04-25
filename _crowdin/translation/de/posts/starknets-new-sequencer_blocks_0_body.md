@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* Ein neuer StarkNet-Sequenzer wird entwickelt
+* Es ist Open-Source unter der Apache 2.0-Lizenz
+* Das erste Ziel ist es, den Durchsatz von StarkNet zu erhöhen
 
-### A shiny new sequencer
+### Ein glänzender neuer Sequenzer
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+Wir freuen uns, einen neuen StarkNet Sequencer ankündigen zu können. Während sich der Technologiestapf von StarkNett in Richtung Open-Source bewegt, folgt[Kairo 1.](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)und[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), fahren wir nun mit dem neuen Sequenzer von StarkNet fort. Es wird Open-Source, verfügbar unter Apache 2.0 Lizenz und Sie können sich[das Repo](https://github.com/starkware-libs/blockifier)jetzt ansehen!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+Der Aufbau eines neuen Sequenzers ist Teil der[StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)die wir vor einigen Monaten vorgestellt haben. Die Implementierung des neuen Sequenzers beginnt mit dem Ersetzen des**Blockierers**, des Moduls innerhalb des Sequenzers, der die Blockausführung ausführt. Wie in der Roadmap erklärt, wird erwartet, dass sie Vorteile für die Leistung von StarkNet bringt.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+Unser Ansatz zum Aufbau dieses Sequenzers ist der gleiche Ansatz, der uns in StarkNet Alpha geführt hat. Der Sequenzer**wird in Stufe**implementiert und wir teilen heute sein erstes Modul. Im Laufe der Zeit werden neue Komponenten des Sequenzers fertiggestellt, bis schließlich ein rostbasierter Sequenzer den aktuellen Python basierten Sequenzer vollständig ersetzt.
 
-### What does the sequencer do?
+### Was macht der Sequenzer?
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+Bei StarkNet sind nach dem Absenden von Transaktionen die Sequenzer der erste Stopp der Transaktion zur STARK-Skalierung. Im StarkNet-Protokoll sind die Sequenzer für die Bestellung der Transaktionen und die Erzeugung von Blöcken verantwortlich. Nachdem der Block von einem Sequenzer erstellt und durch das Konsensprotokoll genehmigt wurde, übernehmen die Prover die Kontrolle und erstellen einen Nachweis für L1.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
 ### Open-Sourcing
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+StarkNet Alpha startete im November 2021 auf Mainnet. Von Anfang an war es verpflichtet, die Macht der STARK-Skalierung mit der Welt zu teilen.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+Heute werden die ersten in einer Reihe von Modulen des neuen Open-Source-Sequenzers veröffentlicht. Es wird mehrere Monate dauern, bis alle Module und Submodule eingesetzt werden. Alles Open Sourcing ermöglicht es den Mitgliedern der Gemeinschaft, zur Entwicklung beizutragen und die Codebase zu prüfen.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+Dies wird StarkNet näher an einen Punkt dezentralisierter permissionless Sequenzierung heranrücken. Wir entwerfen jetzt das dezentrale Protokoll von StarkNet und ermutigen die Gemeinschaft, an der[Forschung und Diskussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386) teilzunehmen.
 
-### Performance
+### Leistung
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+StarkNets ursprünglicher Sequenzer ist weitgehend eine Anpassung der StarkEx-Infrastruktur. Jetzt besteht Bedarf an Infrastruktur, die speziell für die Anforderungen eines dezentralisierten und leistungsstarken Netzwerks aufgebaut ist.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+Der neue Sequenzer wurde in Rust gebaut und entwickelt unter Berücksichtigung der Performance. Der neue Sequenzer baut auch auf soliden Fundamenten auf: Papyrus, der neue[StarkNet Vollknoten,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)kümmert sich um die Staatsverwaltung, und Cairo-Rs, das neue Cairo-VM von LambdaClass, wird die Ausführung von Kairo beschleunigen. Wir erwarten, dass der neue Sequenzer den bestehenden Sequenzer in jeder Hinsicht verbessert. Der Durchsatz und die Latenz des Netzwerks wird durch die Integration dieses Sequenzers in StarkNet drastisch verbessert.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+Wir erwarten auch, dass andere Infrastruktur- und Entwicklungstools den neuen Sequenzer nutzen können, um die Entwicklungserfahrung zu verbessern. Es wird erwartet, dass die volle Knotenleistung sowie alle Test-Frameworks verbessert werden.
 
 ### Summary
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+Wir freuen uns, heute den neuen Open-Source-Sequenzer bekanntgeben zu können. Sein erstes Modul ist bereits für die Community verfügbar und wird in den kommenden Monaten mit weiteren Modulen folgen. Wir freuen uns auch über einen weiteren Schritt in unserer Roadmap zur Verbesserung der Leistung von StarkNet. Unser Ziel ist es, das Netz effizienter und zugänglicher zu machen, und wir freuen uns über die Unterstützung all derer, die auf dieser Reise zu uns gekommen sind.

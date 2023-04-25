@@ -1,3 +1,3 @@
-Yes!
+Đúng!
 
-You can take a look at [this tutorial](https://github.com/eqlabs/pathfinder/#readme).
+Bạn có thể xem[hướng dẫn này](https://github.com/eqlabs/pathfinder/#readme).

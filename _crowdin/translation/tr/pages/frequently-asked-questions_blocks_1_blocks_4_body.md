@@ -1,5 +1,5 @@
-Currently not. STARKs are defined as Validity proofs, meaning they prove computational integrity. With Validity proofs (STARKs included), one party can prove to another that a certain computation was performed correctly. Zero-Knowledge is an additional property asserting that the prover does not have to reveal any information included in the computation.
+Şimdilik değil. STARK'lar Geçerlilik kanıtları olarak tanımlanır, yani hesaplama bütünlüğünü kanıtlarlar. Geçerlilik kanıtlarıyla (STARK'lar dahil), bir taraf diğerine belirli bir hesaplamanın doğru yapıldığını kanıtlayabilir. Sıfır Bilgi, kanıtlayıcının hesaplamaya dahil olan herhangi bir bilgiyi ifşa etmek zorunda olmadığını iddia eden ek bir özelliktir.
 
-Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
+ZK Toplamalarının çoğu gerçekten Sıfır Bilgi değildir. Hata, Geçerlilik kanıtları (hesaplama bütünlüğünü sağlar) ve Sıfır Bilgi kanıtları (hiçbir bilginin açığa çıkmamasını sağlar) arasındaki karışıklıktan kaynaklanır.
 
-Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+Starknet, STARK Geçerlilik kanıtlarını kullanır. Kanıttan bilgi çıkarmanın son derece zor - pratikte neredeyse imkansız olduğunu belirtmekte fayda var.

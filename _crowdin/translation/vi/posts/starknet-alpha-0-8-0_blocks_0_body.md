@@ -1,65 +1,65 @@
-### TL;DR
+### TL; DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* StarkNet Alpha 0.8.0 giới thiệu phiên bản ban đầu của cơ chế tính phí (tùy chọn cho đến StarkNet Alpha 0.9.0.)
+* Các cuộc gọi API mới để ước tính phí giao dịch để có được dấu vết giao dịch, cho phép khả năng hiển thị và gỡ lỗi tốt hơn
+* Cải thiện hiệu suất cho trình sắp xếp chuỗi StarkNet
+* L1 → L2 hủy tin nhắn
 
-### Intro
+### giới thiệu
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+Như đã chia sẻ trong lộ trình[](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51)của chúng tôi, sau phần bổ sung mới nhất cho chức năng và tính năng của StarkNet, sự chú ý của chúng tôi chuyển sang cải tiến hiệu suất và thiết kế giao thức (bao gồm phí, trừu tượng hóa tài khoản, phân quyền, v.v.). StarkNet Alpha 0.8.0 bắt đầu quá trình thêm phí giao dịch và cải thiện hiệu suất của trình sắp xếp thứ tự.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+Lộ trình cho StarkNet bao gồm một cơ chế tính phí và bằng cách phát triển phiên bản này, chúng tôi đang tiến một bước quan trọng đến gần hơn với hiệu suất đầy đủ cho nền tảng.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+Thêm cơ chế tính phí là một phần thiết yếu trong thiết kế hiệu suất của StarkNet. Nếu không có một khoản phí tối thiểu, chúng tôi có nguy cơ phải đối mặt với các giao dịch vô hạn: điều này sẽ khiến hệ thống không thể hoạt động hiệu quả, bất kể tối ưu hóa trình tự sắp xếp.
 
-### Features
+### Đặc trưng
 
-#### Fee Support
+#### Hỗ trợ phí
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+StarkNet Alpha hiện hỗ trợ phiên bản đầu tiên của cơ chế tính phí. Cơ chế này rất cần thiết ngay cả ở giai đoạn đầu này và thậm chí trên Testnet, vì hai lý do chính:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. Nó cho phép các nhà phát triển bắt đầu tối ưu hóa hợp đồng của họ theo mô hình chi phí của StarkNet.
+2. Nó là một đối tác quan trọng để cải thiện hiệu suất của hệ thống, vì nó ngăn chặn gửi thư rác bằng cách gửi vô số giao dịch.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+Phiên bản này giới thiệu các thành phần cần thiết để nhà phát triển kết hợp các khoản thanh toán phí vào các công cụ và ứng dụng của họ. Giờ đây, các nhà phát triển có thể ước tính phí giao dịch bằng cách gọi điểm cuối \`estimate_fee\` và thực hiện thanh toán phí như một phần của quá trình thực hiện giao dịch.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+Vì tính năng này không tương thích ngược nên chúng tôi sẽ không thực thi thanh toán phí vào thời điểm này mà chỉ áp dụng từ phiên bản 0.9.0, phiên bản này sẽ được phát hành trong vài tuần nữa. Quá trình chuyển đổi dần dần này sẽ cho phép người dùng và nhà phát triển điều chỉnh theo mô hình mới.
 
-#### Fee Structure on 0.8.0
+#### Cấu trúc phí trên 0.8.0
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+Vào ngày 0.8.0, phí sẽ chỉ được thu theo độ phức tạp tính toán, trong khi StarkWare vẫn sẽ trợ cấp chi phí truyền thông L1. Chúng tôi sẽ cập nhật cơ chế phí để bao gồm các chi phí liên lạc và vận hành L1 này trong vài tuần tới. Khoản thanh toán sẽ được thu thập nguyên tử khi thực hiện giao dịch trên StarkNet L2. Xem tài liệu[lệ phí](https://starknet.io/documentation/fee-mechanism/)để biết mô tả chuyên sâu.
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+Điều quan trọng cần lưu ý là chúng tôi sẽ hợp tác chặt chẽ với cộng đồng nhà phát triển để điều chỉnh và phát triển cơ chế tính phí khi StarkNet phát triển.
 
-#### L2 Goerli ETH Faucet
+#### Vòi L2 Goerli ETH
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+Chúng tôi đã ra mắt Vòi[L2 Goerli ETH](https://faucet.goerli.starknet.io/)để cho phép người dùng thanh toán phí trên Testnet. Vòi này gửi một lượng nhỏ L2 Goerli ETH đến địa chỉ tài khoản của bạn trên StarkNet Goerli mà bạn có thể sử dụng để thanh toán phí giao dịch.
 
-#### Trace API
+#### API theo dõi
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+Chúng tôi đã thêm khả năng truy xuất dấu vết thực thi của giao dịch vào API của StarkNet. Bên trong dấu vết của giao dịch, tất cả các cuộc gọi nội bộ đều hiển thị, kèm theo thông tin như tài nguyên thực thi đã sử dụng, giá trị trả về, sự kiện phát ra và thông báo đã gửi. Cuộc gọi mới này giúp đơn giản hóa việc hiểu hành vi của hợp đồng hoặc gỡ lỗi các giao dịch. Ngoài ra, các công cụ như[Voyager](https://voyager.online/)hoặc[StarkTx](https://starktx.info/)có thể kết hợp dữ liệu này; cung cấp cho người dùng phân tích chi tiết hơn, đặc biệt đối với tương tác hợp đồng tài khoản.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+Để có được dấu vết, bạn có thể sử dụng \`get_transaction_trace\` trong CLI của StarkNet. Để xem ví dụ về cách sử dụng nó, hãy xem hướng dẫn[](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### Hủy tin nhắn
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+Một tính năng bổ sung của phiên bản này là khả năng hủy các tin nhắn L1 → L2. Tại sao điều này hữu ích? Hãy tưởng tượng một kịch bản trong đó người dùng chuyển tài sản từ L1 sang L2. Luồng bắt đầu với việc người dùng gửi nội dung tới cầu nối StarkNet và tạo thông báo L1→L2 tương ứng. Bây giờ, hãy tưởng tượng rằng mức tiêu thụ tin nhắn L2 không hoạt động (điều này có thể xảy ra do lỗi trong hợp đồng Cairo của dApps). Điều này có thể dẫn đến việc người dùng mất quyền giám sát tài sản của họ mãi mãi.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+Để giảm thiểu rủi ro này, chúng tôi cho phép hợp đồng khởi tạo thông báo L1→L2 hủy hợp đồng đó — sau khi tuyên bố ý định làm như vậy và đợi một khoảng thời gian thích hợp (xem tài liệu[](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### Cải tiến hiệu suất
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+Phiên bản này giảm đáng kể thời gian mà trình sắp xếp thứ tự cần thực hiện luồng giao dịch đến Cairo.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+Đây chỉ là bước đầu tiên! Cột mốc quan trọng tiếp theo về hiệu suất của chúng tôi, sắp được giới thiệu (0.9.0), là thực thi song song trình sắp xếp thứ tự và dự kiến sẽ có nhiều tối ưu hóa khác trong tương lai.
 
-### What now?
+### Gì bây giờ?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+Đọc tài liệu kỹ thuật[tại đây](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+Truy cập[starknet.io](https://starknet.io/)để biết tất cả thông tin, tài liệu, hướng dẫn và cập nhật về StarkNet.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+Tham gia[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)để được hỗ trợ nhà phát triển, thông báo về hệ sinh thái và trở thành một phần của cộng đồng.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+Truy cập[StarkNet Shamans](https://community.starknet.io/)để được cập nhật và tham gia vào tất cả các cuộc thảo luận về nghiên cứu của StarkNet.

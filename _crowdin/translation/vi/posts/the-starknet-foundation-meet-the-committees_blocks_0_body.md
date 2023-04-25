@@ -1,83 +1,83 @@
-In late November 2022, the [launch of Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) was announced. The Foundation is an independent organization dedicated to realizing Starknet’s vision of becoming a thriving, decentralized and permissionless Layer 2 (L2) Validity Rollup (a.k.a. ZK-Rollup). 
+Vào cuối tháng 11 năm 2022, lần ra mắt [của Starknet Foundation](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb) đã được công bố. Foundation là một tổ chức độc lập chuyên thực hiện tầm nhìn của Starknet về việc trở thành một Tổng hợp Xác thực Lớp 2 (L2) thịnh vượng, phi tập trung và không cần cấp phép (hay còn gọi là ZK-Rollup). 
 
-With a strong [interdisciplinary board](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) at the helm, the Starknet Foundation is well positioned to pursue its goal of fostering and expanding the Starknet community, overseeing the continued development of the network, developing permissionless governance mechanisms, and carrying out the full decentralization of the Starknet ecosystem. 
+Với sự lãnh đạo của một hội đồng liên ngành [mạnh mẽ, Quỹ Starknet có vị trí thuận lợi để theo đuổi mục tiêu thúc đẩy và mở rộng cộng đồng Starknet, giám sát sự phát triển không ngừng](https://medium.com/starknet-foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) mạng, phát triển các cơ chế quản trị không cần xin phép và thực hiện phân quyền đầy đủ cho Hệ sinh thái Starknet. 
 
-Today, the Foundation is excited to publicly announce the appointment of five committees, each entrusted with a specific mandate that aligns with Starknet’s mission and priorities. Each committee’s mandate is not set in stone and will undergo routine evaluations, with adjustments and amendments made as necessary.
+Hôm nay, Tổ chức vui mừng thông báo công khai việc bổ nhiệm năm ủy ban, mỗi ủy ban được giao một nhiệm vụ cụ thể phù hợp với sứ mệnh và các ưu tiên của Starknet. Nhiệm vụ của mỗi ủy ban không cố định và sẽ trải qua các cuộc đánh giá định kỳ, với các điều chỉnh và sửa đổi được thực hiện khi cần thiết.
 
-The committees are:
+Các ủy ban là:
 
-* Provisions Committee
-* Early Adopter Grants Committee
-* Developer Partnerships Committee
-* Governance Committee
-* Ecosystem Onboarding Committee
+* Ủy ban dự phòng
+* Ủy ban tài trợ cho người áp dụng sớm
+* Ủy ban Đối tác Nhà phát triển
+* Ủy ban quản trị
+* Ủy ban giới thiệu hệ sinh thái
 
-Below, we will share more details on the committees, including their mandate, operations and initial members.
+Dưới đây, chúng tôi sẽ chia sẻ thêm thông tin chi tiết về các ủy ban, bao gồm nhiệm vụ, hoạt động và thành viên ban đầu của họ.
 
-## Introducing the Starknet Foundation Committees 
+## Giới thiệu các Ủy ban của Quỹ Starknet 
 
-### Provisions Committee
+### Ủy ban dự phòng
 
-The Provisions Committee is responsible for planning, overseeing and executing the provision of the Starknet ecosystem token – STRK. STRK will be used as the staking token for participation in Starknet’s consensus mechanism. It will also serve as the network’s governance token and as the gas token for the payment of the network’s transaction fees. 
+Ủy ban cung cấp chịu trách nhiệm lập kế hoạch, giám sát và thực hiện việc cung cấp mã thông báo hệ sinh thái Starknet – STRK. STRK sẽ được sử dụng làm mã thông báo đặt cược để tham gia vào cơ chế đồng thuận của Starknet. Nó cũng sẽ đóng vai trò là mã thông báo quản trị của mạng và là mã thông báo gas để thanh toán phí giao dịch của mạng. 
 
-The Provisions Committee is critical to ensuring the fair, decentralized and transparent distribution of the token that will power the Starknet ecosystem. The committee oversees the provisioning of users with STRK tokens which are required to pay fees for using Starknet. The committee will assess and provide recommendations to the Starknet Foundation for qualifying groups based on the objectives of fairness, transparency and decentralization. These plans will be announced once ready.
+Ủy ban Điều khoản đóng vai trò quan trọng trong việc đảm bảo phân phối mã thông báo một cách công bằng, phi tập trung và minh bạch, thứ sẽ cung cấp năng lượng cho hệ sinh thái Starknet. Ủy ban giám sát việc cung cấp cho người dùng mã thông báo STRK được yêu cầu trả phí sử dụng Starknet. Ủy ban sẽ đánh giá và đưa ra các đề xuất cho Quỹ Starknet cho các nhóm đủ điều kiện dựa trên các mục tiêu về sự công bằng, minh bạch và phân cấp. Những kế hoạch này sẽ được công bố khi đã sẵn sàng.
 
-The Provisions Committee can be contacted at: [provisions@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
+Có thể liên hệ với Ủy ban Điều khoản tại: [provision@starknetfoundation.org](mailto:provisions@starknetfoundation.org).
 
-### Early Adopter Grants Committee
+### Ủy ban tài trợ cho người áp dụng sớm
 
-The Early Adopter Grants (EAG) Committee is committed to fostering the growth of the Starknet ecosystem by providing grants to innovative teams building on-chain applications on Starknet. 
+Ủy ban tài trợ cho người áp dụng sớm (EAG) cam kết thúc đẩy sự phát triển của hệ sinh thái Starknet bằng cách cung cấp các khoản tài trợ cho các nhóm sáng tạo xây dựng các ứng dụng trên chuỗi trên Starknet. 
 
-The EAG Committee’s purpose is to facilitate the expansion and vitality of the ecosystem through on-chain deployments. The committee will make an announcement soon to set out the criteria for their first round of applications which will retroactively focus on teams that have already begun building on Starknet. 
+Mục đích của Ủy ban EAG là tạo điều kiện thuận lợi cho việc mở rộng và sức sống của hệ sinh thái thông qua các triển khai trên chuỗi. Ủy ban sẽ sớm đưa ra thông báo để đặt ra các tiêu chí cho vòng đăng ký đầu tiên của họ, tiêu chí này sẽ tập trung trở về trước vào các nhóm đã bắt đầu xây dựng trên Starknet. 
 
-The Early Adopter Grants Committee is committed to transparency and will make all grant sums public.
+Ủy ban tài trợ dành cho người áp dụng sớm cam kết minh bạch và sẽ công khai tất cả các khoản tài trợ.
 
-The Early Adopter Grants Committee can be contacted at: [earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
+Có thể liên hệ với Ủy ban tài trợ dành cho người áp dụng sớm theo địa chỉ: [Earlyadoptergrants@starknetfoundation.org](earlyadoptergrants@starknetfoundation.org).
 
-### Developer Partnerships Committee
+### Ủy ban Đối tác Nhà phát triển
 
-The Developer Partnerships Committee plays a vital role in the Starknet ecosystem by fostering and overseeing new strategic developer partnerships to be brought into the Starknet ecosystem. In particular, strategic developer partnerships are considered to be collaborations on key pieces of infrastructure critical to Starknet's success.
+Ủy ban Đối tác Nhà phát triển đóng một vai trò quan trọng trong hệ sinh thái Starknet bằng cách thúc đẩy và giám sát các mối quan hệ đối tác chiến lược mới của nhà phát triển sẽ được đưa vào hệ sinh thái Starknet. Đặc biệt, quan hệ đối tác chiến lược với nhà phát triển được coi là sự hợp tác trên các phần cơ sở hạ tầng quan trọng đối với thành công của Starknet.
 
-The committee’s main responsibilities include streamlining the submission process for developer partnerships, conducting thorough due diligence and approving submitted proposals. 
+Trách nhiệm chính của ủy ban bao gồm hợp lý hóa quy trình đệ trình cho quan hệ đối tác của nhà phát triển, tiến hành thẩm định kỹ lưỡng và phê duyệt các đề xuất đã đệ trình. 
 
-The committee is crucial for fostering a robust ecosystem by identifying and supporting developer teams who have built or are actively building the network's core layer of infrastructure. Their efforts ensure that teams building to secure and expand the infrastructural rails of Starknet are awarded in a decentralized and transparent manner. 
+Ủy ban đóng vai trò quan trọng trong việc thúc đẩy một hệ sinh thái mạnh mẽ bằng cách xác định và hỗ trợ các nhóm nhà phát triển đã xây dựng hoặc đang tích cực xây dựng lớp cơ sở hạ tầng cốt lõi của mạng. Những nỗ lực của họ đảm bảo rằng các nhóm xây dựng để bảo đảm và mở rộng đường ray cơ sở hạ tầng của Starknet được trao thưởng một cách phi tập trung và minh bạch. 
 
-The Developer Partnerships Committee can be contacted at: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
+Bạn có thể liên hệ với Ủy ban Đối tác Nhà phát triển tại: [developerpartnerships@starknetfoundation.org](mailto:developerpartnerships@starknetfoundation.org).
 
-### Governance Committee
+### Ủy ban quản trị
 
-The Governance Committee is tasked with a critical role in the ongoing decentralization of the Starknet ecosystem. The committee is responsible for researching, planning, and executing the initial phases of Starknet governance. 
+Ủy ban quản trị được giao nhiệm vụ đóng vai trò quan trọng trong quá trình phân cấp liên tục của hệ sinh thái Starknet. Ủy ban chịu trách nhiệm nghiên cứu, lập kế hoạch và thực hiện các giai đoạn ban đầu của quản trị Starknet. 
 
-With a focus on decentralization and striking the balance between community participation and active ongoing development; the committee aims to create, implement and oversee the initial pillars for Starknet governance. 
+Tập trung vào phân cấp và đạt được sự cân bằng giữa sự tham gia của cộng đồng và sự phát triển liên tục tích cực; ủy ban nhằm mục đích tạo, triển khai và giám sát các trụ cột ban đầu để quản trị Starknet. 
 
-The Governance Committee will develop and put in place core mechanisms that maintain a transparent, fair, and decentralized structure that fosters community involvement and ensures continued growth and decentralized participation in the ecosystem. To achieve these goals, the committee will define resolutions to be voted on and approved by the Starknet community and establish due process for the discussion and implementation of governance votes. 
+Ủy ban Quản trị sẽ phát triển và đưa ra các cơ chế cốt lõi để duy trì cấu trúc minh bạch, công bằng và phi tập trung nhằm thúc đẩy sự tham gia của cộng đồng và đảm bảo sự tăng trưởng liên tục cũng như sự tham gia phi tập trung vào hệ sinh thái. Để đạt được những mục tiêu này, ủy ban sẽ xác định các nghị quyết sẽ được cộng đồng Starknet bỏ phiếu và phê duyệt, đồng thời thiết lập quy trình hợp lý cho việc thảo luận và thực hiện các phiếu bầu quản trị. 
 
-The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
+Ủy ban đã khởi động [giai đoạn đầu tiên của quản trị Starknet](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). Mọi thắc mắc liên quan đến cuộc bỏ phiếu đầu tiên, vui lòng liên hệ: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
+Bạn cũng có thể liên hệ với Ủy ban Quản trị tại: [Governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
-To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+Để tìm hiểu thêm về công việc và lộ trình của ủy ban quản trị, vui lòng tham khảo [trang này](https://www.starknet.io/en/posts/governance).
 
-### Ecosystem Onboarding Committee
+### Ủy ban giới thiệu hệ sinh thái
 
-The Ecosystem Onboarding Committee is responsible for empowering and integrating new developers and community members into the Starknet ecosystem. This includes identifying, empowering and supporting Starknet ambassadors, awarding grants to ecosystem contributors and talent pools, and organizing and sponsoring a general cadence of events and educational partnerships that further the community’s participation in Starknet’s ecosystem. 
+Ủy ban giới thiệu hệ sinh thái chịu trách nhiệm trao quyền và tích hợp các nhà phát triển và thành viên cộng đồng mới vào hệ sinh thái Starknet. Điều này bao gồm việc xác định, trao quyền và hỗ trợ các đại sứ của Starknet, trao các khoản tài trợ cho những người đóng góp cho hệ sinh thái và nhóm tài năng, đồng thời tổ chức và tài trợ cho một loạt các sự kiện và quan hệ đối tác giáo dục nhằm thúc đẩy sự tham gia của cộng đồng vào hệ sinh thái của Starknet. 
 
-Ambassadors will be respected and established members of the Starknet community that are committed to organizing, attending, and speaking at events, fostering community development, creating content, seeking mutually beneficial sponsorships, and persuading promising individuals and teams to build on Starknet.
+Các đại sứ sẽ được tôn trọng và là thành viên lâu đời của cộng đồng Starknet cam kết tổ chức, tham dự và phát biểu tại các sự kiện, thúc đẩy sự phát triển của cộng đồng, tạo nội dung, tìm kiếm tài trợ đôi bên cùng có lợi và thuyết phục các cá nhân và nhóm có triển vọng xây dựng trên Starknet.
 
-The Ecosystem Onboarding Committee has a different primary focus from the Early Adopter Grants Committee. While the EAG Committee aims to bootstrap and award the initial adopters of Starknet, the Ecosystem Onboarding Committee emphasizes the continued and sustained growth and development of the ecosystem at the grassroots level. 
+Ủy ban giới thiệu hệ sinh thái có trọng tâm chính khác với Ủy ban tài trợ cho người áp dụng sớm. Trong khi Ủy ban EAG đặt mục tiêu khởi động và trao giải thưởng cho những người dùng đầu tiên của Starknet, Ủy ban giới thiệu hệ sinh thái nhấn mạnh đến sự tăng trưởng và phát triển liên tục và bền vững của hệ sinh thái ở cấp cơ sở. 
 
-The Ecosystem Onboarding Committee can be contacted at: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
+Có thể liên hệ với Ủy ban Giới thiệu Hệ sinh thái tại: [onboarding@starknetfoundation.org](mailto:onboarding@starknetfoundation.org).
 
-## Upcoming Milestones
+## Cột mốc sắp tới
 
-With the appointment of these committees, the Starknet Foundation is poised for an exciting journey ahead. Each committee is dedicated to furthering a specific aspect of the ecosystem and together, alongside the Foundation, will work towards a thriving, decentralized and permissionless Layer 2 ecosystem.  
+Với việc bổ nhiệm các ủy ban này, Quỹ Starknet đã sẵn sàng cho một hành trình thú vị phía trước. Mỗi ủy ban được dành riêng để thúc đẩy một khía cạnh cụ thể của hệ sinh thái và cùng nhau, cùng với Quỹ, sẽ hướng tới một hệ sinh thái Lớp 2 phát triển mạnh, phi tập trung và không được phép.  
 
-Here is what’s coming next: 
+Đây là những gì sắp tới: 
 
-* the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
-* the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+* [Bầu chọn quản trị đầu tiên](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) sẽ diễn ra vào ngày 21 tháng 3 năm 2023;
+* thông báo đầu tiên của Ủy ban EAG và thông tin chi tiết về vòng đăng ký đầu tiên sẽ được công bố trên blog [](https://www.starknet.io/en/posts/foundation) của Quỹ StarkNet vào ngày 21 tháng 3 năm 2023.
 
-Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+Hãy theo dõi [blog](https://www.starknet.io/en/posts/foundation) và các kênh truyền thông xã hội của StarkNet Foundation để biết các thông tin cập nhật và cơ hội mới nhất.
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+Để biết tất cả thông tin bổ sung, cập nhật và đề xuất của Tổ chức Starknet, hãy theo dõi Starknet trên [Twitter](https://twitter.com/Starknet), tham gia [Discord](http://starknet.io/discord)của chúng tôi và đọc Diễn đàn cộng đồng [.](https://community.starknet.io/)**

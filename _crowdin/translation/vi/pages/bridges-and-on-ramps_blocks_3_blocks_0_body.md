@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## fiat on-ramp là gì?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+Fiat on-ramps là các nhà cung cấp dịch vụ cho phép trao đổi tiền tệ fiat lấy tiền điện tử.

@@ -1,4 +1,4 @@
 {
   "source": "/community-links/:path*",
-  "destination": "/en"
+  "destination": "/pt-BR"
 }

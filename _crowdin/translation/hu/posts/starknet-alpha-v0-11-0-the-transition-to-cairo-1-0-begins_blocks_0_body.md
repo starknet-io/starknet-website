@@ -1,111 +1,111 @@
 ## TL;DR
 
-* Starknet alpha v0.11.0 is out and live on Testnet
-* You can now deploy and interact with Cairo 1.0 contracts on Starknet Testnet!
-* Computation on Starknet is 5x cheaper!
-* For the first time, the Mainnet upgrade to Starknet alpha v0.11.0 will be put to a governance vote
-* This marks the beginning of the transition period before [Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)
-* Deploying Cairo 1.0 contracts on Mainnet will be enabled only after a few weeks of running on Testnet, once we ensure the new system runs smoothly.
+* Megjelent a Starknet alpha v0.11.0 és elérhető a Testneten
+* Mostantól telepítheti a Cairo 1.0-s szerződéseket és kommunikálhat velük a Starknet Testneten!
+* A Starkneten való számítás 5x olcsóbb!
+* A Mainnet Starknet alpha v0.11.0 verzióra történő frissítése első alkalommal kerül irányítási szavazásra
+* Ezzel kezdődik a[Regenesis](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4)előtti átmeneti időszak
+* A Cairo 1.0-s szerződések telepítése a Mainnet hálózaton csak néhány héttel a Testneten való futtatás után válik lehetővé, miután biztosítjuk az új rendszer zökkenőmentes működését.
 
-## Introduction
+## Bevezetés
 
-We are excited to announce that the much-awaited Starknet alpha v0.11.0 is live on Testnet! Why is this a big step for Starknet? In Starknet v0.11.0, you can declare, deploy and run [Cairo 1.0](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038) smart contracts. We also introduce a new system call that allows a smooth transitioning of existing contracts to a Cairo 1.0 implementation.
+Örömmel jelentjük be, hogy a várva várt Starknet alfa v0.11.0 élőben elérhető a Testneten! Miért nagy lépés ez a Starknet számára? A Starknet v0.11.0 verziójában[Cairo 1.0](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038)intelligens szerződést deklarálhat, telepíthet és futtathat. Bevezetünk egy új rendszerhívást is, amely lehetővé teszi a meglévő szerződések zökkenőmentes átállását a Cairo 1.0 implementációra.
 
-Cairo 1.0 improves Starknet in two different aspects. First, it improves the development experience by offering a richer programming language, which introduces (among other things) types/generics/traits/error handling to Cairo. Second, Cairo 1.0 plays a key role in Starknet’s decentralization journey: Cairo 1.0 contracts sent in Starknet alpha v0.11.0 compile to Sierra. Sierra guarantees that every contract execution is provable, which is a crucial property in a decentralized Starknet.
+A Cairo 1.0 két különböző szempontból javítja a Starknetet. Először is javítja a fejlesztési élményt azáltal, hogy gazdagabb programozási nyelvet kínál, amely (többek között) típusokat/generikusokat/jellemzőket/hibakezelést vezet be Kairóba. Másodszor, a Cairo 1.0 kulcsszerepet játszik a Starknet decentralizációs útjában: a Starknet alpha v0.11.0 verziójában elküldött Cairo 1.0 szerződéseket a Sierra fordítja le. A Sierra garantálja, hogy minden szerződés végrehajtása bizonyítható, ami egy decentralizált Starknet kulcsfontosságú tulajdonsága.
 
-Another important improvement that is coming in this version is a 5x cost reduction for computation. This will make Starknet even more friendly to computationally intensive applications. More details below.
+Egy másik fontos fejlesztés, amely ebben a verzióban érkezik, a számítási költségek 5-szörös csökkenése. Ezzel a Starknet még barátságosabb lesz a számításigényes alkalmazások számára. További részletek alább.
 
-## Getting Ready for Regenesis
+## Felkészülés a Regenesisre
 
-Starknet alpha v0.11.0 marks the beginning of the Transition period, which will allow preparation ahead of Starknet’s Regenesis. Starknet’s Regenesis plan was [published](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4) a few months ago, and it focuses on transitioning from a system based on Cairo 0 to a system based on Cairo 1.0.
+A Starknet alpha v0.11.0 jelzi az átmeneti időszak kezdetét, amely lehetővé teszi a Starknet Regenesis előtti felkészülést. Starknet Regenesis tervét[tették közzé néhány hónapja](https://medium.com/starkware/starknet-regenesis-the-plan-bd0219843ef4), és a Cairo 0 alapú rendszerről a Cairo 1.0 alapú rendszerre való átállásra összpontosít.
 
-During the Transition period, existing Cairo 0 contracts (if they’re upgradable) have the opportunity to maintain their address and storage, and seamlessly transition their implementation to Cairo 1.0 (see next section).
+Az átmeneti időszakban a meglévő Cairo 0 szerződéseknek (ha frissíthetők) lehetőségük van fenntartani címüket és tárhelyüket, és zökkenőmentesen átállítani a megvalósítást a Cairo 1.0-ra (lásd a következő részt).
 
-As a Starknet user, this means that you only need to upgrade your wallet once the new Cairo 1.0 implementation of your account is released (you’ll be able to do it any time up to the Regenesis itself). No downtime is expected, all the dapps in the system will continue to operate as usual.
+Starknet-felhasználóként ez azt jelenti, hogy csak akkor kell frissítenie pénztárcáját, ha fiókja új Cairo 1.0-s implementációja megjelenik (ezt magát a Regenesisig bármikor megteheti). Leállás nem várható, a rendszerben lévő összes dapp a megszokott módon működik tovább.
 
-After the Regenesis, Starknet will stop supporting the remaining Cairo 0 contracts throughout the system. This will be well communicated in advance, and developers will be given sufficient time to migrate their contracts. The transition period is expected to last a few months, and dapp developers can already start migrating their implementation to Cairo 1.0. At the end of the Transition period, the Regenesis will happen.
+A Regenesis után a Starknet leállítja a fennmaradó Cairo 0 szerződések támogatását az egész rendszerben. Ezt jól előre közölni fogják, és a fejlesztőknek elegendő időt kapnak szerződéseik migrálására. Az átmeneti időszak várhatóan néhány hónapig tart, és a dapp fejlesztők már megkezdhetik implementációjuk áttelepítését a Cairo 1.0-ra. Az Átmeneti időszak végén megtörténik a Regenesis.
 
-## Smooth Migration to Cairo 1.0
+## Sima migráció Kairóba 1.0
 
-With the transition to Cairo 1.0, existing Cairo 0 contracts are deprecated and will no longer be supported upon Regenesis. To allow upgradable Cairo 0 contracts to continue operating, even after the Regenesis, and keep the state constructed up until that time, we added a new system call — ['replace_class'](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#replace_class_syscall). Upgradable contracts have no issue with upgrading to a Cairo 1.0 implementation, but the underlying proxy (the contract that holds the actual state) will still be stuck with the Cairo 0 implementation. The \`replace_class\` syscall solves this problem by allowing the proxy contract to replace its underlying class, i.e. keep the same address and storage, but replace the implementation.
+A Cairo 1.0-ra való átállással a meglévő Cairo 0 szerződések elavultak, és a Regenesis után már nem támogatottak. Annak érdekében, hogy a frissíthető Cairo 0 szerződések továbbra is működjenek, még a Regenesis után is, és az állapotot addig is fenntartsuk, hozzáadtunk egy új rendszerhívást – ['replace_class'](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#replace_class_syscall). A frissíthető szerződések nem okoznak problémát a Cairo 1.0 implementációra való frissítéssel, de az alapul szolgáló proxy (a szerződés, amely az aktuális állapotot tartalmazza) továbbra is a Cairo 0 implementációnál marad. A \`replace_class\` rendszerhívás úgy oldja meg ezt a problémát, hogy lehetővé teszi a proxyszerződés számára, hogy lecserélje az alapul szolgáló osztályt, azaz megtartsa ugyanazt a címet és tárhelyet, de lecserélje a megvalósítást.
 
-## Computation is Now 5x Cheaper!
+## A számítás most 5x olcsóbb!
 
-Today, Starknet transaction fees have two major components: Computation and on-chain data. The computational element of the Starknet transaction fee is determined by the marginal cost of verifying its proof on L1 (see the [docs](https://docs.starknet.io/documentation/architecture_and_concepts/Fees/fee-mechanism/) for more details).
+Manapság a Starknet tranzakciós díja két fő összetevőből áll: számításból és láncon belüli adatokból. A Starknet tranzakciós díj számítási elemét az L1-es igazolás ellenőrzésének határköltsége határozza meg (további részletekért lásd a[doc](https://docs.starknet.io/documentation/architecture_and_concepts/Fees/fee-mechanism/)).
 
-Originally, our 200m Cairo steps in a proof that requires 5m gas for verification led to a naive estimation of 0.05 gas per Cairo step. Since then, we have moved to [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025) which allow for a significant reduction in L1 verification cost (only the root of a recursion tree reaches L1). It is now time to update our original estimates accordingly — the price of each Cairo-step on L2 will be reduced by 5x, and will now cost 0.01 gas.
+Eredetileg a mi 200 méteres kairói lépéseink egy bizonyításban, amely 5 méteres gázt igényel az ellenőrzéshez, naiv becsléshez vezetett, 0,05 gáz per lépés Kairóban. Azóta[rekurzív bizonyításra](https://medium.com/starkware/recursive-starks-78f8dd401025)tértünk át, amely lehetővé teszi az L1 ellenőrzési költség jelentős csökkentését (csak a rekurziós fa gyökere éri el az L1-et). Itt az ideje, hogy ennek megfelelően frissítsük eredeti becsléseinket – az L2-n minden egyes kairói lépés ára ötszörösére csökken, és mostantól 0,01 gázba kerül.
 
-This cost reduction is significant for computationally intensive applications, e.g. account contracts with non-native signatures. Simple transactions will see a minor cost reduction (~ 5%). In future versionss, we will handle the second component: on-chain data costs. Once alternatives to on-chain data are introduced to Starknet (aka Volition), the cost reduction will be felt all across the board.
+Ez a költségcsökkentés jelentős a számításigényes alkalmazásoknál, például a nem natív aláírásokkal rendelkező számlaszerződéseknél. Az egyszerű tranzakcióknál kisebb költségcsökkenés (~ 5%) lesz. A jövőbeni verziókban a második komponenst kezeljük: a láncon belüli adatköltségeket. Amint a láncon belüli adatok alternatíváit bevezetik a Starknetbe (más néven Volition), a költségcsökkentés mindenhol érezhető lesz.
 
-## Starknet Governance First Vote
+## Starknet kormányzási első szavazás
 
-The first phase of Starknet Governance has launched (more details [here](https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40)). Community members are now able to participate in shaping Starknet through an additional channel, namely voting on protocol changes.
+Elindult a Starknet Governance első fázisa (további részletek[itt](https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40)). A közösség tagjai ezentúl egy további csatornán keresztül is részt vehetnek a Starknet alakításában, nevezetesen a protokollmódosításokról szóló szavazáson keresztül.
 
-Starknet Governance first phases will focus on Starknet protocol upgrades. Every Starknet version upgrade will first be deployed on Testnet; voters will have a 6-day period to examine and test the upgraded version as it runs on Goerli. During this time, a Snapshot proposal will be opened, and the community can vote on whether to approve the new version for Mainnet deployment.
+A Starknet Governance első fázisai a Starknet protokoll frissítésére összpontosítanak. Minden Starknet verziófrissítés először a Testneten kerül telepítésre; A szavazóknak 6 nap áll rendelkezésükre, hogy megvizsgálják és teszteljék a frissített verziót, amint az a Goerli-n fut. Ez idő alatt megnyílik egy Snapshot javaslat, és a közösség szavazhat arról, hogy jóváhagyja-e az új verziót a Mainnet telepítéséhez.
 
-If the proposal gains a majority of ‘YES’ votes during the 6-day voting period, the proposal passes and Starknet Mainnet will be upgraded accordingly.
+Ha a javaslat a 6 napos szavazási időszak alatt az „IGEN” szavazatok többségét szerzi meg, a javaslat sikeres lesz, és a Starknet Mainnet ennek megfelelően frissítésre kerül.
 
-Starknet alpha v0.11.0 is the first Starknet version which is up for a vote. The Starknet alpha v0.11.0 vote will be open for six days starting from the Testnet deployment.
+A Starknet alpha v0.11.0 az első Starknet-verzió, amelyről szavazni kell. A Starknet alpha v0.11.0 szavazás a Testnet bevezetésétől számítva hat napig lesz nyitva.
 
-Relevant links:
+Vonatkozó linkek:
 
-* [Snapshot space](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
-* [Delegation discovery page](https://delegate.starknet.io/)
-* Starknet alpha v0.11.0 discussion thread on the [Community forum](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)
+* [Pillanatkép tér](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
+* [Delegáció felderítési oldal](https://delegate.starknet.io/)
+* Starknet alpha v0.11.0 vitaszál a[közösségi fórumon](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)
 
-## Cairo 1.0 and Sierra
+## Cairo 1.0 és Sierra
 
-Sierra (**S**afe **I**nt**e**rmediate **R**ep**r**esent**a**tion) is an intermediate representation that compiles to Cairo assembly (CASM). Pre Starknet alpha v0.11.0, a developer would compile Cairo 0 into CASM and send the result to the Starknet sequencer. With Cairo 1.0, developers compile their code to Sierra, and send this intermediate representation to the sequencer. The sequencer will then compile it to CASM. Sierra is guaranteed to compile to “safe CASM”, i.e. a subset of CASM that cannot fail, making each and every execution provable. This guarantees that the sequencer will be able to charge fees even for reverted transactions, protecting from DOS. For more information, see [the docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/).
+A Sierra (**S**afe**I**nt**e**rmediate**R**ep**r**esent**a**tion) egy köztes reprezentáció, amely a Cairo assembly-re (CASM) fordítható. A Starknet alpha v0.11.0 előtt a fejlesztő a Cairo 0-t CASM-be fordítja, és az eredményt elküldi a Starknet szekvenszernek. A Cairo 1.0-val a fejlesztők lefordítják a kódjukat a Sierrára, és ezt a közbenső reprezentációt elküldik a szekvenszernek. A szekvenszer ezután CASM-be fordítja. A Sierra garantáltan a „biztonságos CASM-re” fordít, azaz a CASM egy olyan részhalmazára, amely nem tud meghibásodni, így minden egyes végrehajtás bizonyíthatóvá válik. Ez garantálja, hogy a szekvenszer még a visszaállított tranzakciókért is díjat számíthat fel, védve a DOS-tól. További információkért lásd:[a dokumentumok](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/).
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*KsAwaJTIsOuCsJIe)
 
-Starknet alpha 0.11.0 will use the [Cairo 1.0-alpha.6 version](https://github.com/starkware-libs/cairo/releases/tag/v1.0.0-alpha.6). This version is close to [feature parity](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md) with Cairo 0, with all Starknet system calls already present.
+A Starknet alpha 0.11.0 a[Cairo 1.0-alpha.6](https://github.com/starkware-libs/cairo/releases/tag/v1.0.0-alpha.6)es verzióját fogja használni. Ez a verzió közel áll[hoz](https://github.com/starkware-libs/cairo/blob/main/docs/FEATURE_PARITY.md)jellemzőparitáshoz a Cairo 0-val, az összes Starknet rendszerhívással.
 
-Note that the Starknet sequencer uses a fixed compiler version, which means language improvements may not be immediately available in Starknet, and will be available only after a Starknet version update. Specifically, while improvements that affect the Cairo 1.0 → Sierra compilation may take effect immediately, changes to the Sierra → CASM compiler (see the [docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/) for more details) will need to wait for a Starknet upgrade.
+Ne feledje, hogy a Starknet szekvenszer fix fordítóverziót használ, ami azt jelenti, hogy a nyelvi fejlesztések nem biztos, hogy azonnal elérhetők a Starknetben, és csak a Starknet verziófrissítés után lesznek elérhetők. Pontosabban, bár a Cairo 1.0 → Sierra fordítást érintő fejlesztések azonnal életbe léphetnek, a Sierra → CASM fordító módosításainak (további részletekért lásd a[docs](https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/cairo-1-and-sierra/)) meg kell várniuk a Starknet frissítését.
 
-## What Else is New?
+## Mi még az új?
 
-### New Transaction Type — Declare v2
+### Új tranzakciótípus – Nyilatkozat v2
 
-We’re adding [a new transaction type](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/#declare_v2_cairo_1_0) for declaring Cairo 1.0 classes.
+[adunk hozzá egy új](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/#declare_v2_cairo_1_0)tranzakciótípussal a Cairo 1.0 osztályok deklarálásához.
 
-This new \`declare\` transaction version is similar to the existing \`declare\`, with two important distinctions:
+Ez az új \`declare\` tranzakciós verzió hasonló a meglévő \`declare\`-hoz, két fontos különbséggel:
 
-* The class object being sent now represents Sierra rather than CASM, i.e. the class’s semantics is defined by the Sierra representation.
-* The user is also signing the compiled class hash. This is a crucial step until Sierra→CASM compilation will be proven as part of the Starknet OS.
+* A küldendő osztályobjektum most a Sierra-t képviseli, nem pedig a CASM-et, azaz az osztály szemantikáját a Sierra-reprezentáció határozza meg.
+* A felhasználó aláírja a lefordított osztálykivonatot is. Ez egy döntő lépés, amíg a Sierra→CASM összeállítás a Starknet OS részeként be nem bizonyul.
 
-For more details, see [the docs](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect).
+További részletekért lásd:[a dokumentumok](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect).
 
-From the developer’s point of view, the experience remains the same. After writing your Cairo 1.0 code, you can use the CLI to declare the class.
+A fejlesztő szemszögéből a tapasztalat ugyanaz marad. A Cairo 1.0 kód megírása után a CLI segítségével deklarálhatja az osztályt.
 
-**Note that initially, \`declare v2\` transactions will not be accepted on Starknet Mainnet. After a period of experimenting on Testnet, the new transaction type will be enabled on Mainnet, and Cairo 1.0 classes will become available.**
+**Ne feledje, hogy kezdetben a \`declare v2\` tranzakciókat nem fogadja el a Starknet Mainnet. A Testneten végzett kísérletezés időszaka után az új tranzakciótípus engedélyezve lesz a Mainneten, és elérhetővé válnak a Cairo 1.0 osztályok.**
 
-### Poseidon is Here
+### Poszeidon itt van
 
-[Poseidon](https://www.poseidon-hash.info/) is a family of hash functions designed for having very efficient algebraic circuits. As such, they may be very useful in ZK proving systems such as STARKs and SNARKs. As of Starknet alpha v0.11.0, developers will be able to use Poseidon. Additionally, some of the hash computations that are part of the Starknet protocol will transition to Poseidon (specifically, the class hash, compiled class hash, and parts of the state commitment will use Poseidon, see [the docs](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash) for more details). In the future, more internal components will transition to using the Poseidon hash function.
+[A Poseidon](https://www.poseidon-hash.info/)egy hash függvénycsalád, amelyet nagyon hatékony algebrai áramkörökre terveztek. Mint ilyenek, nagyon hasznosak lehetnek a ZK-ellenőrző rendszerekben, például a STARK-okban és a SNARK-okban. A Starknet alpha v0.11.0 verziójától kezdve a fejlesztők használhatják a Poseidont. Ezenkívül a Starknet protokoll részét képező hash-számítások egy része átáll a Poseidonra (konkrétan az osztálykivonat, a lefordított osztálykivonat és az állapotkötelezettség egyes részei a Poseidon-t fogják használni, további részletekért lásd a[a dokumentumokat](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#poseidon_hash)). A jövőben több belső komponens fog áttérni a Poseidon hash funkció használatára.
 
-The exact version and parameters that are used in Starknet can be found [here](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
+A Starknetben használt pontos verzió és paraméterek itt találhatók[](https://docs.starknet.io/documentation/architecture_and_concepts/Hashing/hash-functions/#poseidon_hash).
 
-### Miscellaneous changes
+### Különféle változtatások
 
-Like previous Starknet versions, an upgrade also has implications for our APIs and other low-level components. Below we list those and address the specific changes that were made:
+A korábbi Starknet-verziókhoz hasonlóan a frissítés az API-kra és más alacsony szintű összetevőkre is hatással van. Az alábbiakban felsoroljuk ezeket, és foglalkozunk a végrehajtott konkrét változtatásokkal:
 
-* v0 invoke/declare transactions are no longer supported
-* L1→L2 messages now require [fees](https://docs.starknet.io/documentation/architecture_and_concepts/L1-L2_Communication/messaging-mechanism/#l1-l2_message_fees). That is, messages sent with zero fee will not be processed by the Starknet sequencer
-* The on-chain data format is [changed](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/#on_chain_data_post_v0_11_0)
-* [API changes](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#api_changes) (not all changes are listed here, please refer to the docs for an exhaustive list) :
-* added a new \`get_compiled_class_by_class_hash\` endpoint
-* \`get_class_by_hash\` returns both Cairo 0 / Cairo 1.0 classes (depending on the requested hash)
-* \`get_state_update\` has a new section for replaced classes, and declarations are split between Cairo 0 and Cairo 1 classes.
-* \`estimate_fee\` and \`simulate_tx\` can now skip validation
-* A [new](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1) Starknet JSON-RPC version
+* A v0 invoke/declare tranzakciók már nem támogatottak
+* Az L1→L2 üzenetekért most[díjat kell fizetni](https://docs.starknet.io/documentation/architecture_and_concepts/L1-L2_Communication/messaging-mechanism/#l1-l2_message_fees). Vagyis a nulla díjjal küldött üzeneteket a Starknet szekvenszer nem dolgozza fel
+* A láncon belüli adatformátum[megváltozott](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/#on_chain_data_post_v0_11_0)
+* [API-módosítás](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#api_changes)(nem minden változás szerepel itt, kérjük, tekintse meg a dokumentumokat a teljes listáért):
+* hozzáadott egy új \`get_compiled_class_by_class_hash\` végpontot
+* A \`get_class_by_hash\` mindkét Cairo 0 / Cairo 1.0 osztályt adja vissza (a kért hashtől függően)
+* A \`get_state_update\` új szekcióval rendelkezik a lecserélt osztályokhoz, és a deklarációk fel vannak osztva a Cairo 0 és Cairo 1 osztályok között.
+* A \`estiimate_fee\` és a \`simulate_tx\` most kihagyhatja az érvényesítést
+* Egy[új](https://github.com/starkware-libs/starknet-specs/releases/tag/v0.3.0-rc1)Starknet JSON-RPC verzió
 
-## What’s coming next?
+## Mi jön ezután?
 
-Now that all the Cairo 1.0-related infrastructure has been put into place, you can expect:
+Most, hogy a Cairo 1.0-val kapcsolatos összes infrastruktúra a helyére került, a következőkre számíthat:
 
-* Further language improvements to Cairo 1.0
-* Performance improvements: [as promised](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), we keep moving forward towards significantly increasing the TPS. The next step in the roadmap is transitioning to the [Rust sequenencer](https://github.com/starkware-libs/blockifier), which is developed in the open under the Apache 2.0 license. The new sequencer will make use of the [rust CairoVM](https://github.com/lambdaclass/cairo-rs) and the [Papyrus](https://github.com/starkware-libs/papyrus) full node, forming the Performance Trio.
-* Offchain [DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! In this version, we handled the computational component of the transaction’s cost. In upcoming versions, we will handle the on-chain data costs, which are today the dominant cost for average transactions.
+* További nyelvi fejlesztések a Cairo 1.0-hoz
+* Teljesítményjavítások:[, ahogy ígértük](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de), folyamatosan haladunk a TPS jelentős növelése felé. Az ütemterv következő lépése a[Rust Sequenencer](https://github.com/starkware-libs/blockifier)re való átállás, amelyet az Apache 2.0 licenc alatt fejlesztenek a szabadban. Az új szekvenszer a[rozsdás CairoVM](https://github.com/lambdaclass/cairo-rs)és a[Papyrus](https://github.com/starkware-libs/papyrus)full node-ot fogja használni, így alkotva a Performance Triót.
+* Offchain[DA](https://docs.starknet.io/documentation/architecture_and_concepts/Data_Availability/on-chain-data/)! Ebben a verzióban a tranzakció költségének számítási komponensét kezeltük. A következő verziókban a láncon belüli adatköltségeket kezeljük, amelyek ma az átlagos tranzakciók domináns költsége.
 
 ![](/assets/starknet-alpha-v0.11.0-diagram.png)

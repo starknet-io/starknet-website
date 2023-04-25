@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+האסימון של Starknet עדיין לא זמין למכירה. לא ניתן להוסיף אותו לארנק שלך בשלב זה. היזהרו מהונאות.

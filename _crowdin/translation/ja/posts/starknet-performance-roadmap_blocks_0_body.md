@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* 有効性のロールアップは、L1と同じ方法でスループットに限定されません。 これにより、L2の有効性ロールアップにおいて、潜在的にはるかに高いTPSが発生します。
+* StarkNetパフォーマンスロードマップは、シーケンサーというシステムの重要な要素に対応します。
+* パフォーマンス改善のためのロードマップをご紹介します:\
+  — シーケンサー並列化\
+  — カイロのVMの新しい錆実装\
+  — シーケンサーのrustの再実装
+* 彼らがそうであるように戦いテストされている諺はボトルネックではなく、今よりもはるかに多くを処理することができます!
 
-### Intro
+### はじめに
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+StarkNetは、ほぼ1年前にMainnetで発売されました。 機能性に焦点を当てた StarkNet の構築を始めました。 今、私たちはStarkNetのエクスペリエンスを向上させる一連のステップでパフォーマンスを向上させることにフォーカスをシフトします。
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+この記事では、有効性ロールアップにのみ適用可能な幅広い最適化がある理由を説明します。 これらのステップをStarkNetに実施する計画を共有します。 これらのステップのいくつかはすでに11月16日にテストネットでリリースされたStarkNet Alpha 0.10.2で実装されています。 しかし、解決策について議論する前に、制限とその原因について検討してみましょう。
 
-### Block limitations: validity rollups versus L1
+### ブロック制限: 有効性とL1の間のロールアップ
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+ブロックチェーンのスケーラビリティを向上させ、TPSを向上させるための潜在的なアプローチは、ブロックタイムを一定に保ちながら(ガス/サイズに関して)ブロックの制限を解除することです。 これはブロック生成者(L1のバリデーター)からのより多くの労力を必要とします。 L2のシーケンサーにより、これらのコンポーネントをより効率的に実装する必要があります。 ここでは、StarkNetシーケンサーの最適化にフォーカスを移します。ここでは、以下のセクションで詳しく説明します。
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+ここで自然な質問が起こります。 シーケンサーの最適化が有効ロールアップに限定されるのはなぜですか? L1に同じ改善を実施し、妥当性ロールアップの複雑さを完全に避けることができないのはなぜですか? 次のセクションでは、両者には根本的な違いがあると主張します。 L1には適用できないL2の幅広い最適化を可能にします。
 
-### Why is L1 throughput limited?
+### L1スループットが制限されるのはなぜですか?
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+残念ながら、L1のブロック制限を解除することは、主要な落とし穴に苦しんでいます。 チェーンの成長率を上げることで、フルノードからの需要も高まります。 最近の状態に追いつこうとしています L1フルノードはすべての履歴を再実行する必要があるので。 ブロックサイズ(気体の面で)が高くなると、それらに大きなひずみがあります。 再び弱いマシンがシステムから脱落し フルノードを走らせる能力を 十分に大きなエンティティにしか残しません 結果として、ユーザーは自分自身で状態を確認し、ネットワークに信頼できなくなります。
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+これにより、真に分散型でセキュアなシステムを維持するために、L1スループットは制限されるべきであるという理解が私たちに残ります。
 
-### Why don’t the same barriers affect validity rollups?
+### なぜ同じ障壁が有効期間に影響を与えないのですか?
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**完全なノードの観点を考慮した場合にのみ、有効性のロールアップによって提供される真の力がわかります。**L1 フル ノードは、現在の状態が正確であることを確認するために、履歴全体を再実行する必要があります。 StarkNetノードはSTARK証明を検証するだけで、この検証には指数関数的に低い計算リソースが必要です。 特に、ゼロからの同期は実行を伴う必要はありません。 ノードは、ピアから現在の状態のダンプを受け取り、この状態が有効であることを STARK 証明でのみ検証します。 これにより、フルノードからの要件を増やすことなく、ネットワークのスループットを向上させることができます。
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+したがって、L2シーケンサーはL1では不可能な全体の最適化の対象となります。
 
-### Performance roadmap ahead
+### パフォーマンス・ロードマップ
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+次のセクションでは、現在StarkNetシーケンサー用に計画されているものについて説明します。
 
-### Sequencer parallelization
+### シーケンサー並列化
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+ロードマップの最初のステップは、トランザクション実行に並列化を導入することでした。 これは昨日MainnetでリリースされたStarkNetアルファ0.10.2で導入されました。 我々は今、どのような並列化に飛び込む(これは、半技術的なセクションでは、ロードマップ上で続行するには、次のセクションにジャンプします)。
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+「トランザクション並列化」とは何を意味するのでしょうか？ 単純に、異なるトランザクションが依存する可能性があるため、トランザクションのブロックを並列実行することは不可能です。 これは次の例で示されています。 同じユーザーからの3つのトランザクションを持つブロックを考えてみましょう:
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* トランザクションA：USDCをETHに交換する
+* トランザクションB:NFTのETHを支払う
+* 取引 C: BTCにUSDTをスワップする
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+明らかに、Tx AはTx Bより前に起こらなければなりませんが、Tx Cは両方から完全に独立しており、並列に実行することができます。 各トランザクションが実行に1秒を必要とする場合、並列化を導入することでブロックの生産時間を3秒から2秒に短縮できます。
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+問題の核心は、事前にトランザクションの依存関係がわからないことです。 実際には、例からトランザクションBを実行する場合にのみ、トランザクションAによって行われた変更に依存していることがわかります。 より形式的には、トランザクションAが書き込んだストレージセルからトランザクションBが読み込まれるという事実に基づいています。 取引は依存関係グラフを形成すると考えることができます。 トランザクションAからトランザクションBのiff Aまでエッジがあり、Bによって読み込まれるストレージセルに書き込みます。 Bより前に処刑されなければなりません 次の図は、このような依存関係グラフの例を示しています。
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+上記の例では、各列を並列に実行できます。 そして、これが最適な配置です(単純に、トランザクションは1~9を順次実行していたでしょう)。
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+依存グラフが事前にわからないという事実を克服するために、Aptos Labs によって開発された[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)の精神で、StarkNet シーケンサーに***楽観的並列化***を導入します。 このパラダイムの下で、私たちは、トランザクションを並列に実行し、衝突を見つけたときに再実行することを楽観的に試みます。 例えば、Tx4がTx1に依存していることを確認するためにのみ、図1から並列にトランザクション1-4を実行することができます。 したがって、その実行は役に立たなかった(Tx1を実行したのと同じ状態に対して実行した)。 Tx1を適用した結果の状態に対して実行するべきだった。 その場合、Tx4を再実行します。
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+楽観的な並列化に加えて、多くの最適化を加えることができます。 例えば、単純に各実行が終了するのを待つのではなく、依存関係が無効になった瞬間に実行を中止することができます。
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+もう1つの例は、どのトランザクションを再実行するかを最適化することです。 図1からのすべてのトランザクションで構成されるブロックが、5つのCPUコアを持つシーケンサーに送られるとします。 最初に、トランザクション1-5を並列実行しようとします。 完了の順序がTx2、Tx3、Tx4、Tx1、そして最終的にTx5であった場合 次に、Tx4がすでに実行された後にのみ依存性Tx1→Tx4が見つかり、再実行される必要があることを示します。 Tx4の新しい実行を与えると異なる動作をする可能性があるため、簡単には、Tx5を再実行したい場合もあります。 ただし、今回の無効化されたTx4以降のすべてのトランザクションを再実行するのではなく。 実行がすでに終了しているトランザクションから構築された依存関係グラフを横断し、Tx4に依存するトランザクションのみを再実行することができます。
 
-### A new Rust implementation for the Cairo-VM
+### Cairo-VM用の新しいRust実装
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+StarkNetのスマートコントラクトはカイロで記述されており、カイロVM内で実行され、[カイロ紙](https://eprint.iacr.org/2021/1063.pdf)に記載されている。 現在、シーケンサーはCairo-VMの[Python実装](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm)を使用しています。 VMの実装性能を最適化するために、VMをrustで書き直す作業を開始しました。 [Lambdaclass](https://lambdaclass.com/)の素晴らしい仕事に感謝します StarkNetエコシステムの非常に貴重なチームは、この努力はすぐに実現に近づいています。
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+VMのrust実装、[cairo-rs](https://github.com/lambdaclass/cairo-rs)が、カイロのネイティブコードを実行できるようになりました。 次のステップは、スマートコントラクトの実行とピトニックシーケンサーとの統合です。 cairo-rsと統合されると、シーケンサーのパフォーマンスは大幅に向上すると予想されます。
 
-### Sequencer re-implementation in Rust
+### Rust におけるシーケンサーの再実装
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+性能向上のためにpythonからrustに移行したのは、Cairo VMに限られたことではありません。 上記の改良と並んで、シーケンサーを最初から錆で書き直す予定です。 Rust の内部的な利点に加えて、シーケンサーに他の最適化を行う機会を提供します。 カップルをリストアップすると、ピトン-錆の通信のオーバーヘッドなしでcairo-rsの利点を楽しむことができます。 そして、状態が保存されアクセスされる方法を完全に再設計することができます(今日は[Patricia-Trie 構造](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment) に基づいています)。
 
-### What about provers?
+### 諺についてはどうですか?
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+この記事を通して、私たちは妥当性ロールアップのおそらく最も有名な要素、すなわちプロバーについて言及していませんでした。 おそらく最も洗練されたアーキテクチャの構成要素であることは、それがボトルネックであり、したがって最適化の焦点であることを想像することができます。 興味深いことに、StarkNetのボトルネックとなったのは、より「標準」のコンポーネントです。 今日、特に[再帰的な証明](https://medium.com/starkware/recursive-starks-78f8dd401025)を使えば、Testnet/Mainnetの現在のトラフィックよりも多くのトランザクションを証拠に収めることができます。 実際には、今日、StarkNetブロックは、後者が時々数十万NFTミントを発生することができるStarkExトランザクションと一緒に証明されています。
 
 ### Summary
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+並列化、Rustなど、今後のStarkNetバージョンで改善されたTPSのために気をつけてください。

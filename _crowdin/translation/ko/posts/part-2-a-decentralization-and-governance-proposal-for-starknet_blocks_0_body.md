@@ -1,53 +1,53 @@
-Our previous [post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef) explained what StarkNet is, how it is progressively being decentralized, and provided a summary of its two decentralization mechanisms. This post discusses the StarkNet decentralization process, the role of the StarkNet Foundation, and the need for a new native token for StarkNet. Finally, it discusses additional considerations for StarkNet’s governance down the road.
+이전[게시물](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)에서는 StarkNet이 무엇인지, 어떻게 점진적으로 탈중앙화되고 있는지 설명하고 두 가지 탈중앙화 메커니즘에 대한 요약을 제공했습니다. 이 게시물에서는 StarkNet 분산 프로세스, StarkNet Foundation의 역할 및 StarkNet을 위한 새로운 기본 토큰의 필요성에 대해 설명합니다. 마지막으로 향후 StarkNet의 거버넌스에 대한 추가 고려 사항에 대해 설명합니다.
 
-### Principles of decentralization
+### 탈중앙화 원칙
 
-[STARK](https://eprint.iacr.org/2018/046.pdf) technology is mature and secure, but thus far it has been implemented and utilized primarily as a centralized service on Ethereum ([StarkEx](https://starkware.co/starkex/)), and an Alpha version of a decentralized service ([StarkNet](https://starkware.co/starknet/)). StarkNet should be available as a truly permissionless public good, like Ethereum, or the Internet. So we are committing to furthering StarkNet’s decentralization and the following four principles to guide the change:
+[STARK](https://eprint.iacr.org/2018/046.pdf)기술은 성숙하고 안전하지만 지금까지 주로 Ethereum의 중앙 집중식 서비스([StarkEx](https://starkware.co/starkex/)) 및 분산형 서비스의 알파 버전([StarkNet](https://starkware.co/starknet/))으로 구현 및 활용되었습니다. StarkNet은 이더리움이나 인터넷과 같은 진정한 무허가 공공재로 사용할 수 있어야 합니다. 따라서 우리는 StarkNet의 탈중앙화와 변화를 안내하는 다음 네 가지 원칙을 발전시키기 위해 노력하고 있습니다.
 
-**Liveness.** StarkNet will not rely on a single company as its operator. Companies can cease to exist, or may decide to stop servicing the network. After decentralization, such scenarios will not bring down StarkNet.
+**생동감.**StarkNet은 운영업체로서 단일 회사에 의존하지 않을 것입니다. 회사는 더 이상 존재하지 않거나 네트워크 서비스를 중단하기로 결정할 수 있습니다. 탈중앙화 후에는 그러한 시나리오가 StarkNet을 무너뜨리지 않을 것입니다.
 
-**Censorship resistance.** A single company can theoretically decide, or be forced, to censor particular transactions and smart contracts while fulfilling others. StarkNet will employ a decentralized model to protect against such a scenario.
+**검열 저항.**단일 회사는 이론적으로 특정 거래 및 스마트 계약을 검열하는 한편 다른 거래를 이행하도록 결정하거나 강요받을 수 있습니다. StarkNet은 이러한 시나리오로부터 보호하기 위해 분산형 모델을 사용할 것입니다.
 
-**Transparency.** Software upgrades and maintenance are an inevitable part of any decentralized service. Such actions must be discussed transparently, so the community is informed and in control of the technology. The larger community of StarkNet users, operators and developers must work collectively to determine upgrades and maintenance via a transparent, fair, participatory and inclusive process.
+**투명도.**소프트웨어 업그레이드 및 유지 관리는 분산 서비스의 불가피한 부분입니다. 이러한 조치는 투명하게 논의되어야 커뮤니티가 정보를 얻고 기술을 제어할 수 있습니다. StarkNet 사용자, 운영자 및 개발자의 더 큰 커뮤니티는 투명하고 공정하며 참여적이고 포괄적인 프로세스를 통해 업그레이드 및 유지 관리를 결정하기 위해 공동으로 작업해야 합니다.
 
-**Creativity.** StarkNet must allow any developer to participate in building its core infrastructure and applications, to prevent monopolization and to increase creative and socially beneficial uses of blockchains at scale.
+**창의성.**StarkNet은 모든 개발자가 핵심 인프라 및 응용 프로그램 구축에 참여하여 독점을 방지하고 대규모 블록체인의 창의적이고 사회적으로 유익한 사용을 증가시킬 수 있도록 해야 합니다.
 
-Decentralization is a hard problem, not to be approached in a rushed manner. StarkNet’s governance proposal, shared here, will likely develop and change over time. What follows is merely its first iteration.
+탈중앙화는 성급하게 접근해서는 안 되는 어려운 문제입니다. 여기에서 공유되는 StarkNet의 거버넌스 제안은 시간이 지남에 따라 발전하고 변경될 것입니다. 다음은 첫 번째 반복일 뿐입니다.
 
-### Foundation
+### 기반
 
-The Foundation will be a mission-driven non-profit organization, and will be granted StarkNet Tokens (see [next post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)). We anticipate the mission of the Foundation will be to maintain StarkNet as a public good. StarkNet is permissionless infrastructure that should be available to all. It must be well maintained in order to be safe and efficient for public usage. It also must not discriminate between its users, operators, and developers. The Foundation will be dedicated to furthering the decentralization goals outlined above: liveness, censorship-resistance, transparency, and creativity.
+재단은 사명 중심의 비영리 조직이 될 것이며 StarkNet 토큰을 부여받을 것입니다([다음 게시물](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)참조). 재단의 임무는 StarkNet을 공공재로 유지하는 것입니다. StarkNet은 모두가 사용할 수 있어야 하는 무허가 인프라입니다. 공공 사용을 위해 안전하고 효율적으로 사용하려면 잘 관리되어야 합니다. 또한 사용자, 운영자 및 개발자를 차별해서는 안 됩니다. 재단은 위에서 설명한 탈중앙화 목표인 활성, 검열 저항, 투명성 및 창의성을 발전시키는 데 전념할 것입니다.
 
-StarkNet’s liveness and censorship-resistance are best achieved by permissionless and decentralized consensus through a proof-of-stake leader election for sequencing and proving STARK-compressed transactions. While that mechanism is automated, it relies on well-functioning protocol software run by nodes on the network as well as the validity and ongoing liveness of the underlying Ethereum blockchain. Therefore, the Foundation will also act as a resource for the ongoing development, documentation, and publication of that protocol software, especially as it relates to bug-fixes and efficiency improvements.
+StarkNet의 활성 및 검열 저항성은 STARK 압축 트랜잭션을 시퀀싱하고 증명하기 위한 지분 증명 리더 선거를 통해 무허가 및 분산 합의에 의해 가장 잘 달성됩니다. 해당 메커니즘은 자동화되어 있지만 네트워크의 노드에서 실행되는 잘 작동하는 프로토콜 소프트웨어와 기본 이더리움 블록체인의 유효성 및 지속적인 활성에 의존합니다. 따라서 재단은 특히 버그 수정 및 효율성 개선과 관련하여 해당 프로토콜 소프트웨어의 지속적인 개발, 문서화 및 출판을 위한 리소스 역할을 할 것입니다.
 
-Beyond routine maintenance, we anticipate vibrant debates within the community over feature changes or other more fundamental upgrades to the protocol. This is unavoidable in permissionless systems, as evidenced historically by Bitcoin’s block size debate, Ethereum’s proof-of-stake merge, and numerous other examples across the cryptocurrency ecosystem. These software development decisions are more than just objective math and efficiency gains, but rather involve subjective value judgements and feature tradeoffs. In many blockchain communities these decisions are made informally without any clear rules of debate or a process for decision making. Even a non-decision is a decision that favors the status quo. To avoid these issues, the Foundation’s mission will also include developing, testing, and implementing community decision-making processes for resolving essential technological questions. That mechanism will be central to deliberations over protocol updates, dispute resolution, and public goods funding. The Foundation will promote transparency by distributing the information that is needed for making these decisions, and will maintain an archive of such information for future reference.
+일상적인 유지 관리 외에도 프로토콜의 기능 변경 또는 기타 보다 근본적인 업그레이드에 대해 커뮤니티 내에서 활발한 토론이 있을 것으로 예상합니다. 이것은 비트코인의 블록 크기 논쟁, 이더리움의 지분 증명 병합 및 암호화폐 생태계 전반에 걸친 수많은 다른 사례에서 역사적으로 입증된 바와 같이 무허가 시스템에서 피할 수 없습니다. 이러한 소프트웨어 개발 결정은 객관적인 수학 및 효율성 향상 이상의 의미가 있으며 오히려 주관적인 가치 판단 및 기능 트레이드 오프를 포함합니다. 많은 블록체인 커뮤니티에서 이러한 결정은 명확한 토론 규칙이나 의사 결정 프로세스 없이 비공식적으로 이루어집니다. 결정을 내리지 않는 것조차 현상 유지에 유리한 결정입니다. 이러한 문제를 방지하기 위해 재단의 임무에는 필수적인 기술 문제를 해결하기 위한 커뮤니티 의사 결정 프로세스를 개발, 테스트 및 구현하는 것도 포함될 것입니다. 이 메커니즘은 프로토콜 업데이트, 분쟁 해결 및 공공재 자금 조달에 대한 심의의 중심이 될 것입니다. 재단은 이러한 결정을 내리는 데 필요한 정보를 배포하여 투명성을 증진하고 향후 참조를 위해 해당 정보를 보관할 것입니다.
 
-### Why token?
+### 왜 토큰인가?
 
-StarkNet was always envisioned as a protocol that is run by the community, yet there has been no clear way to define who exactly comprises this community. *The token will allow supporters of the community that perform work that contributed to the success of the ecosystem to play a role in the governance of that ecosystem.*
+StarkNet은 항상 커뮤니티에서 실행되는 프로토콜로 구상되었지만 이 커뮤니티를 정확히 구성하는 사람을 정의하는 명확한 방법이 없었습니다. *토큰은 생태계의 성공에 기여한 작업을 수행하는 커뮤니티 지지자가 해당 생태계의 거버넌스에서 역할을 할 수 있도록 합니다.*
 
-Additionally, a fair, open, and censorship-resistant service is only possible if several parties show up to compete to perform work that powers the decentralized service, and that can only be guaranteed if those workers are compensated for their role as operators of the network.
+또한 공정하고 개방적이며 검열에 강한 서비스는 여러 당사자가 분산형 서비스에 힘을 실어주는 작업을 수행하기 위해 경쟁하는 경우에만 가능하며 해당 작업자가 네트워크 운영자로서의 역할에 대해 보상을 받는 경우에만 보장될 수 있습니다. .
 
-Therefore, including tokens as part of a network technology like StarkNet is necessary. And although payment censorship resistance can be achieved by using an existing non-native token, for example Bitcoin or Ether (ETH), we believe such an approach would fail over time to provide the users of the network with a distinct community and a voice in decisions.
+따라서 StarkNet과 같은 네트워크 기술의 일부로 토큰을 포함하는 것이 필요합니다. 그리고 비트코인이나 이더(ETH)와 같은 기존의 비네이티브 토큰을 사용하여 지불 검열 저항을 달성할 수 있지만, 우리는 그러한 접근 방식이 시간이 지남에 따라 네트워크 사용자에게 뚜렷한 커뮤니티와 목소리를 제공하는 데 실패할 것이라고 믿습니다. 결정.
 
-A native token that rewards members of the community who develop the network will advance the ecosystem to a degree that use of a non-native token will not. Also, if the token is non-native, economic shocks from decisions made in other ecosystems might impact StarkNet’s service and its users and providers.
+네트워크를 개발하는 커뮤니티 구성원에게 보상하는 네이티브 토큰은 네이티브가 아닌 토큰을 사용하지 않을 정도로 생태계를 발전시킬 것입니다. 또한 토큰이 고유하지 않은 경우 다른 생태계에서 내린 결정으로 인한 경제적 충격이 StarkNet의 서비스와 사용자 및 공급자에게 영향을 미칠 수 있습니다.
 
-### What will the token be used for?
+### 토큰은 무엇에 사용됩니까?
 
-The token will be the mechanism for operating the network (fees), maintaining and securing the network (consensus participation), and deciding on its values and strategic goals (governance).
+토큰은 네트워크 운영(수수료), 네트워크 유지 및 보안(합의 참여), 네트워크의 가치와 전략적 목표(거버넌스)를 결정하는 메커니즘이 될 것입니다.
 
-**Transaction fees:** Currently, fees in StarkNet are paid in Ether (ETH). But later on, we anticipate fees will be paid exclusively with the native StarkNet Token. To support good user experience, automated and decentralized on-chain mechanisms will allow users to pay fees in ETH.
+**거래 수수료:**현재 StarkNet의 수수료는 Ether(ETH)로 지불됩니다. 그러나 나중에 수수료는 기본 StarkNet 토큰으로만 지불될 것으로 예상합니다. 좋은 사용자 경험을 지원하기 위해 자동화되고 분산된 온체인 메커니즘을 통해 사용자는 ETH로 수수료를 지불할 수 있습니다.
 
-**Staking:** Certain services that are critical to the liveness and security of StarkNet may require staking of StarkNet Tokens. These services may include sequencing, reaching temporary L2 consensus before L1 finality is reached, STARK-proving services and data availability provisioning, to name a few examples. We expect these services to be decentralized in 2023.
+**스테이킹:**StarkNet의 활성 및 보안에 중요한 특정 서비스는 StarkNet 토큰의 스테이킹이 필요할 수 있습니다. 이러한 서비스에는 시퀀싱, L1 최종성에 도달하기 전에 임시 L2 합의 도달, STARK 증명 서비스 및 데이터 가용성 프로비저닝 등이 포함될 수 있습니다. 우리는 이러한 서비스가 2023년에 분산될 것으로 예상합니다.
 
-**Governance:** Proposals for improving StarkNet will require a minimal token support threshold, to be defined later. Voting, either directly or via delegation, will be required for all changes to the protocol that are essential to StarkNet’s liveness, security and maintenance. For example, all major updates to the StarkNet Operating System will require the approval of token holders.
+**거버넌스:**StarkNet 개선을 위한 제안에는 나중에 정의할 최소 토큰 지원 임계값이 필요합니다. 직접 또는 위임을 통한 투표는 StarkNet의 활성, 보안 및 유지 관리에 필수적인 프로토콜의 모든 변경 사항에 필요합니다. 예를 들어 StarkNet 운영 체제에 대한 모든 주요 업데이트에는 토큰 소유자의 승인이 필요합니다.
 
-### Closing reflections on governance
+### 거버넌스에 대한 마무리 반성
 
-Decentralized governance mechanisms are still in their infancy and no project in this space has provided us with a compelling model for emulation. Is regular and direct voting by all token holders the best path? It is relatively straightforward to design this as a technological mechanism, but it can be unwieldy and may unfairly privilege the holders of a large number of tokens, rather than persons who actively use the network.
+분산형 거버넌스 메커니즘은 아직 초기 단계에 있으며 이 분야의 어떤 프로젝트도 에뮬레이션을 위한 강력한 모델을 제공하지 못했습니다. 모든 토큰 소유자의 정기적이고 직접적인 투표가 최선의 경로입니까? 이것을 기술적 메커니즘으로 설계하는 것은 비교적 간단하지만 다루기 힘들 수 있고 네트워크를 적극적으로 사용하는 사람보다 많은 수의 토큰 보유자에게 부당하게 특권을 부여할 수 있습니다.
 
-When considering the best approach, we suggest considering checks and balances between several separate structures that derive their authority from the community of StarkNet Token holders.
+최선의 접근 방식을 고려할 때 StarkNet 토큰 보유자 커뮤니티에서 권한을 파생하는 여러 개별 구조 간의 견제와 균형을 고려할 것을 제안합니다.
 
-We also recommend that StarkNet Token holders make good use of the expertise of core developers. In all blockchain ecosystems, core developers play a central role in securing, maintaining and advancing the underlying technology. Hence, defining a formal role for them within the governance process is worth consideration.
+또한 스타크넷 토큰 보유자는 핵심 개발자의 전문성을 잘 활용할 것을 권장합니다. 모든 블록체인 생태계에서 핵심 개발자는 기본 기술을 확보, 유지 및 발전시키는 데 중심적인 역할을 합니다. 따라서 거버넌스 프로세스 내에서 공식적인 역할을 정의하는 것은 고려할 가치가 있습니다.
 
-The [third post](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6) in this series describes the design of the StarkNet Token: the key token design considerations, and the different phases of token allocation.
+이 시리즈의[세 번째 게시물](https://medium.com/@starkware/part-3-starknet-token-design-5cc17af066c6)에서는 StarkNet 토큰의 설계, 즉 주요 토큰 설계 고려 사항 및 토큰 할당의 여러 단계에 대해 설명합니다.

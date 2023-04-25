@@ -1,3 +1,3 @@
-Anyone can interact with Starknet and deploy contracts.
+누구나 Starknet과 상호 작용하고 계약을 배포할 수 있습니다.
 
-During the Alpha phase, developers need to make sure they are aware of the network status as part of the onboarding process.
+알파 단계 동안 개발자는 온보딩 프로세스의 일부로 네트워크 상태를 알고 있는지 확인해야 합니다.

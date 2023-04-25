@@ -1,4 +1,4 @@
 {
-  "source": "/faq/:path*",
-  "destination": "/en/learn/frequently-asked-questions"
+  "source": "/faks/:path*",
+  "destination": "/radgiver/singelliv-og-partnersok/mann-soker-spørsmål"
 }

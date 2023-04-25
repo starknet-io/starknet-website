@@ -1,123 +1,133 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+A blokklánc méretezhetősége mindig is heves téma volt. Szinte minden blokklánc-hálózat a másodpercenkénti tranzakciók magas számát (TPS) hirdeti értékesítési pontként. A TPS azonban nem egy érvényes mérőszám a blokklánc-hálózatok összehasonlítására – így kihívást jelent a relatív teljesítményük értékelése. Sőt, a nagy TPS-számok általában költséggel járnak – ami felveti a kérdést: ezek a hálózatok valóban méreteződnek, vagy csak növelik az áteresztőképességüket?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+Vizsgáljuk meg tehát, hogyan határozhatjuk meg a méretezhetőséget, milyen kompromisszumokat kell megtenni ennek elérése érdekében, és miért a Validity Rollup a legjobb méretezhetőségi megoldás.
 
-### Not all Transactions are Made Equal
+### Nem minden tranzakció egyenlő
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+Először is meg kell állapítanunk azt az állításunkat, hogy a TPS egyszerű és kényelmes mérőszáma nem a méretezhetőség pontos mértéke.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+A csomópontok tranzakciók végrehajtásáért való kompenzálására (és arra, hogy a felhasználókat visszatartsák attól, hogy szükségtelen számításokkal spammeljék a hálózatot), a blokkláncok a blokkláncra háruló számítási terhekkel arányos díjat számítanak fel. Az Ethereumban a számítási terhelés összetettségét*gázban mérik.*Mivel a gáz nagyon kényelmes mérőszáma a tranzakciók bonyolultságának, a kifejezést ebben a cikkben a nem Ethereum blokkláncokra is használjuk, még akkor is, ha ez jellemzően Ethereum-specifikus.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+A tranzakciók összetettsége és így mennyi gázfogyasztás tekintetében jelentősen eltér egymástól. A Bitcoin, a megbízható peer-to-peer tranzakciók úttörője, csak a kezdetleges Bitcoin-szkriptet támogatja. Ezek az egyszerű átvitelek címről címre kevés gázt igényelnek. Ezzel szemben az olyan intelligens szerződésláncok, mint az Ethereum vagy a Solana, támogatják a virtuális gépeket és a Turing-komplett programozási nyelveket, amelyek sokkal összetettebb tranzakciókat tesznek lehetővé. Ezért az olyan dApps-ok, mint az Uniswap, sokkal több energiát igényelnek.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+Ezért nincs értelme összehasonlítani a különböző blokkláncok TPS-eit. Ehelyett a számítási kapacitást vagy az áteresztőképességet kellene összehasonlítanunk.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+Minden blokkláncnak van (változó</em>blokkmérete és blokkideje, amelyek meghatározzák, hogy blokkonként hány*számítási egység*dolgozható fel, és milyen gyorsan*adható hozzá új blokk. Ez a két változó együtt határozza meg a blokklánc**áteresztőképességét.</p>
 
-### What Constrains Scalability?
+### Mi korlátozza a méretezhetőséget?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+A blokkláncok arra törekszenek, hogy maximálisan decentralizált, befogadó hálózatok legyenek. Ennek eléréséhez két alapvető tulajdonságot kell kordában tartani.
 
-#### **1. Hardware Requirements**
+#### **1. Hardverkövetelmények**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+A blokklánc hálózat decentralizációját az határozza meg, hogy a hálózat leggyengébb csomópontja képes-e ellenőrizni a blokkláncot és megtartani annak állapotát. Ezért a csomópontok futtatásának költségeit (hardver, sávszélesség és tárhely) a lehető legalacsonyabb szinten kell tartani, hogy a lehető legtöbb személy váljon engedély nélküli résztvevővé a megbízható hálózatban.
 
-#### 2**.** State Growth
+#### 2**.**Államnövekedés
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+Az állapotnövekedés arra utal, hogy milyen gyorsan növekszik a blokklánc. Minél nagyobb áteresztőképességet enged meg egy blokklánc időegységenként, annál gyorsabban növekszik a blokklánc. A teljes csomópontok tárolják a hálózat előzményeit, és képesnek kell lenniük a hálózat állapotának ellenőrzésére. Az Ethereum állapotát hatékony struktúrák, például fák segítségével tárolják és hivatkoznak rájuk. Ahogy az állam növekszik, új levelek és ágak jelennek meg, ami egyre bonyolultabbá és időigényesebbé teszi bizonyos műveletek végrehajtását. Ahogy a lánc mérete növekszik, rontja a csomópontok legrosszabb esetben történő végrehajtását, ami az új blokkok érvényesítésének egyre hosszabb időhöz vezet. Idővel ez megnöveli a teljes csomópont szinkronizálásához szükséges teljes időt is.
 
-### Detrimental Impacts of Increasing Throughput
+### Az áteresztőképesség növelésének káros hatásai
 
-#### 1. Node Count
+#### 1. Csomópontszám
 
-The minimum requirements to run a node and node counts are:
+A csomópontok és a csomópontszámok minimális követelményei a következők:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* Bitcoin¹: 350 GB HDD lemezterület, 5 Mbit/s kapcsolat, 1 GB RAM, CPU >1 Ghz. **Csomópontok száma: ~10 000**
+* Ethereum²: 500 GB+ SSD lemezterület, 25 Mbit/s kapcsolat, 4–8 GB RAM, CPU 2–4 mag. **Csomópontok száma: ~6000**
+* Solana³: 1,5 TB+ SSD lemezterület, 300 Mbit/s kapcsolat, 128 GB RAM CPU 12+ mag. **Csomópontok száma: ~1200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+Figyeljük meg, hogy minél nagyobb a CPU, a sávszélesség és a tárolási igény a blokklánc átviteléhez szükséges csomópontokhoz, annál kevesebb csomópont van a hálózaton – ami gyengébb decentralizációhoz és kevésbé befogadó hálózathoz vezet.
 
-#### 2. Time to Sync a Full Node
+#### 2. Ideje szinkronizálni a teljes csomópontot
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+Egy csomópont első futtatásakor szinkronizálnia kell az összes meglévő csomóponttal, letöltenie és érvényesítenie kell a hálózat állapotát a keletkezési blokktól a lánc csúcsáig. Ennek a folyamatnak a lehető leggyorsabbnak és leghatékonyabbnak kell lennie, hogy bárki a protokoll engedély nélküli résztvevőjeként működhessen.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+Jameson Lopp[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)és[2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/)mutatóját figyelembe véve az 1. táblázat összehasonlítja a teljes Bitcoin és Ethereum vs. Solana csomópont szinkronizálásához szükséges időt egy átlagos fogyasztói minőségű PC-n.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![Asztal 1. Blockchain átviteli sebesség és csomópont-szinkron összehasonlítása](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Asztal 1. Blockchain átviteli sebesség és csomópont-szinkron összehasonlítása")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+Az 1. táblázat bemutatja, hogy az átviteli sebesség növelése hosszabb szinkronizálási időt eredményez, mivel egyre több adatot kell feldolgozni és tárolni.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+Míg a csomóponti szoftvereket folyamatosan fejlesztik a növekvő blokklánc kihívásainak mérséklésére (a lemezterület csökkentése, gyorsabb szinkronizálási sebesség, erősebb ütközésállóság, bizonyos komponensek modularizálása stb.), a csomópontok nyilvánvalóan még mindig nem tudnak lépést tartani a növekedéssel. az áteresztőképességhez.
 
-### How Should Scalability be defined?
+### Hogyan kell definiálni a méretezhetőséget?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+A skálázhatóság a leginkább félreértelmezett kifejezés a blokklánc térben. Bár az átviteli sebesség növelése kívánatos, ez csak egy része a rejtvénynek.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***A skálázhatóság**további**tranzakciót jelent****a hardverre**.*
 
-For that reason, scalability can be separated into two categories.
+Emiatt a méretezhetőség két kategóriába sorolható.
 
-#### Sequencer scalability
+#### A szekvencer skálázhatósága
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+A szekvenálás a tranzakciók hálózaton belüli megrendelésének és feldolgozásának műveletét írja le. Amint azt korábban megállapítottuk, bármely blokklánc triviálisan növelheti áteresztőképességét a blokk méretének növelésével és a blokk idejének lerövidítésével – egészen addig a pontig, amikor a decentralizációra gyakorolt negatív hatást túl jelentősnek ítélik. De ezeknek az egyszerű paramétereknek a módosítása nem biztosítja a szükséges fejlesztéseket. Az Ethereum EVM elméletileg akár ~2000 TPS</a>kezelésére
 
-#### Verification scalability
+képes, ami nem elegendő a hosszú távú blokkhelyigény kiszolgálásához. A szekvenálás méretezéséhez Solana lenyűgöző újításokat hozott: kihasználta a párhuzamosítható végrehajtási környezetet és az okos konszenzusos mechanizmust, amely sokkal hatékonyabb átvitelt tesz lehetővé. De a fejlesztései ellenére sem nem elégséges, sem nem méretezhető. Ahogy a Solana növeli az átviteli sebességet, a csomópontok futtatásához és a tranzakciók feldolgozásához szükséges hardverköltségek is növekednek.</p> 
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
 
-**What’s a Validity Rollup?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+#### Ellenőrzési skálázhatóság
 
-**How do Validity Rollups scale with the same hardware requirements?**
+*Az ellenőrzési skálázhatóság olyan megközelítéseket ír le, amelyek növelik az átviteli sebességet anélkül, hogy a csomópontokat folyamatosan növekvő hardverköltségekkel terhelnék.*Konkrétan olyan kriptográfiai újításokra vonatkozik, mint az érvényességi igazolások. Ezek az okai annak, hogy a Validity Rollupok fenntarthatóan méretezhetik a blokkláncot.
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+**Mi az az érvényességi összesítő?**
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+Az érvényességi összesítések (más néven „ZK-összegzések”) a számítási és állapottárolást a láncon kívülre helyezik, de bizonyos adatok egy kis részét a láncon belül tartják. Az alapul szolgáló blokkláncra vonatkozó intelligens szerződés fenntartja a Rollup állapotgyökerét. Az összesítőn a nagymértékben tömörített tranzakciók kötegét az aktuális állapotgyökérrel együtt elküldik egy láncon kívüli provernek. A Prover kiszámítja a tranzakciókat, érvényességi igazolást állít elő az eredményekről és az új állapotgyökérről, és elküldi egy láncon belüli ellenőrzőnek. A Verifier ellenőrzi az érvényességi igazolást, és az összesítő állapotát fenntartó intelligens szerződés frissíti azt a Prover által biztosított új állapotra.
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+**Hogyan skálázódnak az érvényességi összesítők azonos hardverkövetelmények mellett?**
 
-**The more transactions, the cheaper it gets**
+Annak ellenére, hogy a Provers-nek csúcskategóriás hardverre van szüksége, nincsenek hatással a blokklánc decentralizálására; mert a tranzakciók érvényességét matematikailag igazolható bizonyítások garantálják.
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+Ami számít, az a bizonyítékok ellenőrzésére vonatkozó követelmények. Mivel az érintett adatok nagymértékben tömörítettek és a számítások során nagyrészt elvonatkoztattak, a mögöttes blokklánc csomópontjaira gyakorolt hatása minimális*.*
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+A hitelesítők (Ethereum csomópontok) nem igényelnek csúcsminőségű hardvert, és a kötegek mérete nem növeli a hardverkövetelményeket. A csomópontoknak csak az állapotátmeneteket és kis mennyiségű hívási adatot kell feldolgozniuk és tárolniuk. Ez lehetővé teszi az összes Ethereum csomópontnak, hogy a meglévő hardverével ellenőrizze az érvényességi összesítő kötegeket.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+**Minél több tranzakció, annál olcsóbb lesz**
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+A hagyományos blokkláncokban minél több tranzakció történik, annál drágább lesz mindenki számára, mivel a blokkterület megtelik – és a felhasználóknak felül kell licitálniuk egymást a díjpiacon, hogy tranzakcióikat beleszámítsák.
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+Az érvényességi összesítésnél ez a dinamika megfordul. Egy köteg tranzakció ellenőrzése az Ethereumon bizonyos költségekkel jár. A kötegen belüli tranzakciók számának növekedésével a köteg ellenőrzésének költsége exponenciálisan lassabb ütemben nő. Ha több tranzakciót ad hozzá egy köteghez, az olcsóbb tranzakciós díjakat eredményez, még akkor is, ha a kötegellenőrzés költsége nő – mivel a kötegben lévő összes tranzakció között amortizálódik. Az érvényességi összesítők a lehető legtöbb tranzakciót kívánják kötegen belül, hogy az ellenőrzési díjat meg lehessen osztani az összes felhasználó között. Ahogy a köteg mérete a végtelenségig növekszik, a tranzakciónkénti amortizált díj nullához konvergál, azaz minél több tranzakciót hajtanak végre az érvényességi összesítőn, annál olcsóbb lesz mindenki számára.
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+A dYdX, egy Validity Rollup által működtetett dApp, gyakran több mint 12 000 tranzakció kötegméretét látja. Ugyanazon tranzakciók gázfogyasztásának összehasonlítása a főhálózaton és az érvényességi összesítőn keresztül szemlélteti a skálázhatósági előnyöket:
 
-#### Why Optimistic Rollups are not as scalable as one may think
+dYdX tranzakció kiegyenlítése az Ethereum Mainnet hálózaton:**200 000 gáz**
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+dYdX tranzakció kiegyenlítése StarkEx-en:**<500 gáz**
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+Egy másik szemléltetési mód: Az érvényességi összesítések fő költsége lineárisan skálázódik az azonos kötegben lévő felhasználók számával.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+#### Miért nem olyan méretezhetőek az Optimista összesítők, mint gondolnánk
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+Elméletileg az Optimistic Rollupok közel ugyanazokat a méretezhetőségi előnyöket biztosítják, mint az érvényességi összesítők. De van egy fontos különbség: az Optimistic Rollups az átlagos esetre optimalizál, míg az érvényességi összesítés a legrosszabb esetre optimalizál. Mivel a blokklánc rendszerek rendkívül ellenséges körülmények között működnek, a biztonság elérésének egyetlen módja a legrosszabb esetre történő optimalizálás.
 
-### Conclusion
+Az Optimistic Rollup legrosszabb esetben a felhasználó tranzakcióit nem ellenőrzik a csalásellenőrzők. Tehát a csalás elleni küzdelemhez a felhasználónak szinkronizálnia kell egy teljes Ethereum csomópontot, egy L2 teljes csomópontot, és magának kell kiszámítania a gyanús tranzakciót.
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+A Validity Rollup legrosszabb esetben a felhasználónak csak egy teljes Ethereum csomópontot kell szinkronizálnia az érvényesség igazolásának ellenőrzéséhez, ezzel megkímélve magát a számítási terhektől.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+Az érvényességi összesítéssel szemben az Optimistic Rollups költsége lineárisan skálázódik a tranzakciók számával, nem pedig a felhasználók számával, ami drágábbá teszi őket.
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+### A rejtvény utolsó darabja – Engedély nélküli hozzáférés az összesítő állapothoz
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+A tranzakciók érvényességének garantálása érdekében a felhasználóknak csak egy Ethereum csomópontot kell futtatniuk. Előfordulhat azonban, hogy a felhasználók és a fejlesztők különféle célokra szeretnék megtekinteni és futtatni az összesítő állapotát és végrehajtását. Egy*indexelő L2 csomópont*tökéletesen kielégíti ezt az igényt. Nemcsak lehetővé teszi a felhasználók számára, hogy lássák a tranzakciókat a hálózatban, hanem az infrastruktúra kritikus eleme is, amely szükséges az ökoszisztéma-infrastruktúra működéséhez. Az indexelők, mint a The Graph, az Alchemy, az Infura; Az Oracle hálózatok, mint például a Chainlink és a blokkfelfedezők, mindegyiket teljes mértékben támogatja egy engedély nélküli, indexelő L2 csomópont.
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+
+
+### Következtetés
+
+A blokklánc skálázhatóságának kezelésére szolgáló számos megközelítés tévesen*átviteli sebesség növelésére összpontosít*. Ez azonban figyelmen kívül hagyja az átviteli sebesség csomópontokra gyakorolt hatását: a blokkok feldolgozásához és a hálózati előzmények tárolásához szükséges folyamatosan növekvő hardverkövetelményeket, és azt, hogy ez hogyan gátolja a hálózat decentralizálását.
+
+A Validity-proof kriptográfia megjelenésével a blokklánc**valódi méretezhetőséget**érhet el, amely nem terheli a csomópontokat folyamatosan növekvő költségekkel, és széles körű decentralizációt tesz lehetővé. Mostantól több tranzakció is lehetséges ugyanazon hardveren hatékony és összetettebb számításokkal, megfordítva ezzel a folyamatban a díjpiaci dilemmát – minél több tevékenységet végez az érvényességi összesítőn, annál olcsóbb lesz!
+
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)és[Louis Guthmann](https://twitter.com/GuthL)
+
+¹[-tól https://bitcoin.org/en/bitcoin-core/features/requirements](https://bitcoin.org/en/bitcoin-core/features/requirements)
+
+²[-tól https://ethereum.org/en/developers/docs/nodes-and-clients/](https://ethereum.org/en/developers/docs/nodes-and-clients/)
+
+³[-tól https://docs.solana.com/running-validator/validator-reqs](https://docs.solana.com/running-validator/validator-reqs)
+
+⁴ Erősen leegyszerűsítve és az átlagos dinamikus blokkméretekhez igazítva

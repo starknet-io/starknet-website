@@ -1,3 +1,3 @@
-## What are fiat on-ramps?
+## Què són les rampes d'entrada dels Fiat?
 
-Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
+Fiat on-ramps són proveïdors de serveis que permeten l'intercanvi de monedes fiduciaries per criptomonedes.

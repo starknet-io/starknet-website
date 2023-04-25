@@ -1,39 +1,39 @@
-### TL;DR
+### TL; DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* 새로운 StarkNet 시퀀서가 개발 중입니다.
+* Apache 2.0 라이센스에 따라 오픈 소스입니다.
+* 첫 번째 목표는 StarkNet의 처리량을 높이는 것입니다.
 
-### A shiny new sequencer
+### 반짝이는 새 시퀀서
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+새로운 StarkNet Sequencer가 작업 중임을 발표하게 되어 기쁩니다. StarkNet의 기술 스택이[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)및[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)에 이어 오픈 소스로 이동함에 따라 이제 StarkNet의 새로운 시퀀서를 계속 사용합니다. Apache 2.0 라이선스에 따라 사용할 수 있는 오픈 소스가 될 것이며 지금[the repo](https://github.com/starkware-libs/blockifier)확인할 수 있습니다!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+새로운 시퀀서를 구축하는 것은 몇 달 전에 발표한[StarkNet 로드맵](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)의 일부입니다. 새로운 시퀀서의 구현은 블록 실행을 수행하는 시퀀서 내의 모듈인**Blockifier**의 교체로 시작됩니다. 로드맵에서 설명했듯이 StarkNet의 성능에 대한 이점을 제공할 것으로 예상됩니다.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+이 시퀀서를 구축하기 위한 우리의 접근 방식은 StarkNet Alpha에서 우리를 안내했던 것과 동일한 접근 방식입니다. 시퀀서****단계에서 구현되며 오늘 첫 번째 모듈을 공유합니다. 시간이 지남에 따라 시퀀서의 새로운 구성 요소가 완성되고 결국 Rust 기반 시퀀서가 현재 Python 기반 시퀀서를 완전히 대체할 것입니다.
 
-### What does the sequencer do?
+### 시퀀서는 무엇을 합니까?
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+StarkNet에서 사용자가 트랜잭션을 보낸 후 STARK 스케일링으로의 트랜잭션 여정에서 첫 번째 중지는 시퀀서입니다. StarkNet 프로토콜에서 시퀀서는 트랜잭션 주문 및 블록 생성을 담당합니다. 블록이 시퀀서에 의해 생성되고 합의 프로토콜에 의해 승인된 후 증명자는 L1에 대한 증명을 인계받아 생성합니다.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
-### Open-Sourcing
+### 오픈 소싱
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+StarkNet Alpha는 2021년 11월 메인넷에서 출시되었습니다. 처음부터 STARK 스케일링의 힘을 전 세계와 공유하기로 약속했습니다.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+오늘 우리는 새로운 오픈 소스 시퀀서의 첫 번째 모듈 라인을 출시합니다. 모든 모듈과 하위 모듈을 배포하는 데 몇 개월이 걸립니다. 모든 것을 오픈 소싱하면 커뮤니티 구성원이 개발에 기여하고 코드베이스를 감사할 수 있습니다.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+이것은 StarkNet을 분산된 무허가 시퀀싱 지점에 더 가깝게 만들 것입니다. 우리는 현재 StarkNet의 분산형 프로토콜을 설계하고 있으며 커뮤니티가[연구 및 토론에 참여하도록 권장하고 있습니다](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
 
-### Performance
+### 성능
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+StarkNet의 원래 시퀀서는 주로 StarkEx 인프라를 채택한 것입니다. 이제 분산형 고성능 네트워크의 요구 사항을 위해 특별히 구축된 인프라가 필요합니다.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+Rust에 내장된 새로운 시퀀서는 성능을 염두에 두고 설계 및 개발되었습니다. 새로운 시퀀서는 또한 견고한 토대 위에 구축됩니다. 새로운[StarkNet 전체 노드인 Papyrus,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)상태 관리를 처리하고 LambdaClass의 새로운 Cairo-VM인 cairo-rs는 카이로 실행 속도를 높일 것입니다. 우리는 새로운 시퀀서가 모든 측면에서 기존 시퀀서를 개선할 것으로 기대합니다. StarkNet에 이 시퀀서를 통합하면 네트워크의 처리량과 대기 시간이 크게 향상될 것으로 예상됩니다.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+또한 다른 인프라 및 개발 도구에서 새로운 시퀀서를 사용하여 개발 환경을 개선할 수 있을 것으로 기대합니다. 전체 노드 성능은 모든 테스트 프레임워크와 마찬가지로 향상될 것으로 예상됩니다.
 
-### Summary
+### 요약
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+오늘 새로운 오픈 소스 시퀀서를 발표하게 되어 기쁩니다. 첫 번째 모듈은 이미 커뮤니티에서 검토할 수 있으며 앞으로 몇 달 동안 더 많은 모듈이 뒤따를 것입니다. 우리는 또한 StarkNet의 성능 향상을 위한 로드맵에서 또 다른 단계를 밟게 되어 기쁩니다. 우리는 네트워크를 보다 효율적이고 접근하기 쉽게 만드는 것을 목표로 하고 있으며 이 여정에 함께 해주신 모든 분들의 지원에 감사드립니다.

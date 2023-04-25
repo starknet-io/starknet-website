@@ -7,9 +7,9 @@
 
 ### はじめに
 
-StarkNet Alphaは、生産への重要なステップであるRegenesisに向けて進んでいます。 In this update we want to share more details on the main motivation for Regenesis — [Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0) — and to start explaining what it will require from users and developers. Regenesisの後、StarkNetはCairo 1.0ベースの契約でのみ動作し、新しいジェネシスブロックから既存の状態で開始します。
+StarkNet Alphaは、生産への重要なステップであるRegenesisに向けて進んでいます。 今回の更新では、Regenesis の主な動機 ([Cairo 1.0](https://medium.com/starkware/cairo-1-0-aa96eefb19a0)) の詳細を共有し、ユーザーと開発者に何が必要かを説明したいと思います。 Regenesisの後、StarkNetはCairo 1.0ベースの契約でのみ動作し、新しいジェネシスブロックから既存の状態で開始します。
 
-再発生に必要なものは何ですか? ウォレットの簡単なアップデート。 StarkNetのダップのビルダーには何が必要ですか？ 契約書を Cairo 1.0 に移植し、簡単なアップグレードガイドラインに従ってください。 Specifically, there will be no restart from a clean state and we will stay with the same StarkNet instance, meaning there will be no need for a migration**.**
+再発生に必要なものは何ですか? ウォレットの簡単なアップデート。 StarkNetのダップのビルダーには何が必要ですか？ 契約書を Cairo 1.0 に移植し、簡単なアップグレードガイドラインに従ってください。 具体的には、クリーンな状態からの再起動はなく、同じ StarkNet インスタンスにとどまります。つまり、移行**は必要ありません。**
 
 Regenesisプランは、アプリケーションの状態を完全に維持し、アプリケーションにダウンタイムを伴わないようにするものです。 したがって、私たちが提供するガイドラインに従ったアプリケーションは、StarkNet Alpha Mainnetで即座に起動することができます。再発生プロセス中に操作とユーザーに影響を与えることはありません。 eはコミュニティーと協力し可能な限りスムーズにするために必要なすべての支援を提供することを約束している
 

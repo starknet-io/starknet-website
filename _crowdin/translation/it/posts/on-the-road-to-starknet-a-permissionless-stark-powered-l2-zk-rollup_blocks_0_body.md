@@ -51,7 +51,7 @@ Questa tecnologia sarà la pietra angolare dello strato di prova decentralizzato
 
 #### **StarkEx**
 
-StarkEx è il nostro motore di scalabilità L2. It has been serving [DeversiFi](https://twitter.com/deversifi)’s customers on Mainnet since June 2020. Potenzierà sia[dYdX](https://twitter.com/dydxprotocol)che[ImmutableX](https://twitter.com/Immutable)a partire da poche settimane. StarkEx è in grado di gestire complesse logiche di trading (trading a pronti, derivati, NFTs) e pagamenti.
+StarkEx è il nostro motore di scalabilità L2. Da giugno 2020 serve[clienti di DeversiFi](https://twitter.com/deversifi)su Mainnet. Potenzierà sia[dYdX](https://twitter.com/dydxprotocol)che[ImmutableX](https://twitter.com/Immutable)a partire da poche settimane. StarkEx è in grado di gestire complesse logiche di trading (trading a pronti, derivati, NFTs) e pagamenti.
 
 Sviluppare StarkEx è stato il nostro modo di dogfood la nostra catena di strumenti e testarlo in base alle esigenze del mondo reale. Non c’è niente di simile alle esigenze delle applicazioni reali e degli utenti live per aiutare gli strumenti a maturare ed evolvere. Ci aiuta anche a capire quali elementi devono essere indirizzati per servire meglio l'ecosistema, ad esempio le integrazioni con portafogli e gli esploratori di blocchi.
 

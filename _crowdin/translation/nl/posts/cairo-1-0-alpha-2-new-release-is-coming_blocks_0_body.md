@@ -1,37 +1,37 @@
 ### TL;DR
 
-* We are releasing Cairo 1.0-alpha.2, which brings a host of new features to the language
-* It is now possible to implement an ERC20 contract
-* Those new linguistic features will be applicable in the upcoming StarkNet-v0.11.0 version
+* We brengen Cairo 1.0-alpha.2 vrij die een heleboel nieuwe functies in de taal brengt
+* Het is nu mogelijk om een ERC20-contract uit te voeren
+* Deze nieuwe taalfuncties zullen van toepassing zijn in de aankomende StarkNet-v0.11.0 versie
 
-### Fresh new features!
+### Verse nieuwe functies!
 
-Cairo 1.0 is continuing its fast improvement pace. Today’s release introduces, among other things, all the necessary features to write an ERC-20 contract.
+Caïro 1.0 zet zijn snelle verbeteringstempo voort. De release van vandaag introduceert onder andere alle benodigde functies om een ERC-20 contract te schrijven.
 
-To mention some of the new features:
+Om enkele van de nieuwe functies te noemen:
 
-* Dictionaries
-* Events in contracts
-* Mapping storage variables
-* Trait support
-* Type inference
-* Methods
+* Woordenboeken
+* Evenementen in contracten
+* Opslagvariabelen toewijzen
+* Eigenschap ondersteuning
+* Type conclusie
+* Methoden
 
-See the complete list in the GitHub [repository.](https://github.com/starkware-libs/cairo)
+Bekijk de volledige lijst in de GitHub [repository,](https://github.com/starkware-libs/cairo)
 
-Let’s have a look at an example of an ERC20 contract (the full concrete example is, of course, on [GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) to demonstrate a use case of an event and mappings in the storage:
+Laten we eens kijken naar een voorbeeld van een ERC20-contract (het volledige concrete voorbeeld is natuurlijk op[GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) om de geval van een event en toewijzingen in de opslag te laten zien:
 
 ![](/assets/0_i4ch5-4rxxal4rkt.png)
 
-### Jump into the water!
+### Spring in het water!
 
-We continue to work on two parallel vectors:
+We blijven werken aan twee parallelle vectoren:
 
-1. Evolve Cairo 1.0 at full speed towards full-feature compatibility with the old Cairo.
-2. Develop Starknet v0.11.0 that will support contracts written in Cairo 1.0
+1. Evolueer Cairo 1.0 met volledige snelheid naar volledige compatibiliteit met de oude Cairo.
+2. Ontwikkel Starknet v0.11.0 die contracten in Caïro 1.0 ondersteunt
 
-In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+In de tussentijd moedigen we devs aan om te beginnen met schrijven in Caïro 1.0 en vertrouwd te raken met Caïro.
 
-For any questions — you can use the Cairo 1.0 Discord [channel](https://discord.com/channels/793094838509764618/1065544063245365288).
+Voor vragen - u kunt het Caïro 1.0 Discord[kanaal](https://discord.com/channels/793094838509764618/1065544063245365288) gebruiken.
 
-For any suggestions or feedback — don’t hesitate to open an [issue](https://github.com/starkware-libs/cairo/issues) in the Cairo repo.
+Voor suggesties of feedback - aarzel niet om een[-issue](https://github.com/starkware-libs/cairo/issues)te openen in de Caïro-repo.

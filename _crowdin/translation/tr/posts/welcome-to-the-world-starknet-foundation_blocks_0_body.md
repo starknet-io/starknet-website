@@ -1,69 +1,69 @@
-Today we welcome the **StarkNet Foundation**, a new community foundation organized to provide an independent community structure for supporting the StarkNet project.
+Bugün, StarkNet projesini desteklemek için bağımsız bir topluluk yapısı sağlamak üzere düzenlenen yeni bir topluluk vakfı olan**StarkNet Foundation'ı**karşılıyoruz.
 
-StarkNet is a permissionless, decentralized validity rollup operating as an L2 network over Ethereum, where any dApp can achieve vastly increased scale for its computation, without compromising Ethereum’s composability and security. For more about StarkNet, take a look [here](https://starknet.io/). To be truly accountable and accessible to the community of its developers and users, StarkNet needs an independent facilitator for community-oriented governance for the entire StarkNet ecosystem.
+StarkNet, Ethereum üzerinde bir L2 ağı olarak çalışan izinsiz, merkezi olmayan bir geçerlilik toplamasıdır; burada herhangi bir dApp, Ethereum'un birleştirilebilirliği ve güvenliğinden ödün vermeden hesaplaması için büyük ölçüde artırılmış ölçek elde edebilir. StarkNet hakkında daha fazla bilgi için buraya bir göz atın[](https://starknet.io/). Geliştiricileri ve kullanıcıları topluluğuna gerçekten hesap verebilir ve erişilebilir olmak için, StarkNet'in tüm StarkNet ekosistemi için topluluk odaklı yönetişim için bağımsız bir kolaylaştırıcıya ihtiyacı var.
 
-The newly-created StarkNet Foundation, with support and resources from a broad cross-section of community members, will foster research, development, and extension of the StarkNet network and supporting technology, promote use and adoption of the StarkNet network, and fuel StarkNet community participation and project governance. The Foundation will help fund and organize user and developer conferences, and coordinate cooperation with allied and related communities.
+Geniş bir topluluk üyesi kesiminden gelen destek ve kaynaklarla yeni oluşturulan StarkNet Vakfı, StarkNet ağının ve destekleyici teknolojinin araştırılmasını, geliştirilmesini ve genişletilmesini teşvik edecek, StarkNet ağının kullanımını ve benimsenmesini teşvik edecek ve StarkNet topluluğunu besleyecektir. katılım ve proje yönetişimi. Vakıf, kullanıcı ve geliştirici konferanslarının finanse edilmesine ve düzenlenmesine yardımcı olacak ve müttefik ve ilgili topluluklarla işbirliğini koordine edecektir.
 
-The Foundation will be governed by an initial board of seven directors, with multidisciplinary backgrounds from across the world. In short:
+Vakıf, dünyanın dört bir yanından çok disiplinli geçmişe sahip yedi yöneticiden oluşan bir ilk kurul tarafından yönetilecektir. Kısacası:
 
-* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me) — Tech policy, digital rights, entrepreneur, and community self-governance expert
-* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders) — StarkWare co-founder/President, co-inventor of STARKs
-* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher)) — Independent blockchain researcher and thought leader
-* [Heather Meeker](http://www.heathermeeker.com/) — Expert on open-source software licensing
-* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/) — Professor of math and theoretical computer science, and core contributor to the math underpinning STARKs
-* [Tomasz Stanczak ](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain engineer and leader and CEO of Nethermind, one of the largest teams building on StarkNet
-* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders) — StarkWare co-founder and CEO
+* [Andrew McLaughlin](https://andrew.mclaughl.in/about-me)— Teknoloji politikası, dijital haklar, girişimci ve topluluk özyönetim uzmanı
+* [Eli Ben-Sasson](https://starkware.co/media-kit/?founder=Eli#founders)— StarkWare'in kurucu ortağı/Başkanı, STARK'ların eş mucidi
+* [Eric Wall](https://en.wikipedia.org/wiki/Eric_Wall_(researcher))— Bağımsız blockchain araştırmacısı ve düşünce lideri
+* [Heather Meeker](http://www.heathermeeker.com/)— Açık kaynaklı yazılım lisanslama uzmanı
+* [Shubhangi Saraf](https://www.math.toronto.edu/ssaraf/)— Matematik ve teorik bilgisayar bilimi profesörü ve STARK'ların temelini oluşturan matematiğe temel katkıda bulunan kişi
+* [Tomasz Stanczak](https://www.linkedin.com/in/tomaszkajetanstanczak/?originalSubdomain=uk)— Blockchain mühendisi ve StarkNet'te bina yapan en büyük ekiplerden biri olan Nethermind'in lideri ve CEO'su
+* [Uri Kolodny](https://starkware.co/media-kit/?founder=Uri#founders)— StarkWare'in kurucu ortağı ve CEO'su
 
-A StarkNet token has been created to reward StarkNet developers and operators for the work they perform to maintain and advance the network. The Foundation holds 50.1% of the initial minting of 10B tokens, the allocation of which will be managed by the Foundation for the benefit of users, operators and developers in the StarkNet community, as set out [here](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6). The remaining tokens are subject to a four-year lockup and are owned by existing StarkNet core contributors and investors in StarkNet development.
+StarkNet geliştiricilerini ve operatörlerini, ağı sürdürmek ve ilerletmek için yaptıkları iş için ödüllendirmek üzere bir StarkNet belirteci oluşturuldu. Vakıf, burada[](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)belirtildiği gibi StarkNet topluluğundaki kullanıcıların, operatörlerin ve geliştiricilerin yararına tahsisi Vakıf tarafından yönetilecek olan 10B jetonlarının ilk basımının %50,1'ine sahiptir. Kalan belirteçler dört yıllık bir kilitlenmeye tabidir ve StarkNet'in geliştirilmesindeki mevcut StarkNet temel katkıda bulunanlara ve yatırımcılara aittir.
 
-The StarkNet Foundation board has begun work, prepping for formalization and operations, recruiting for an executive director, and beginning to form ad hoc community committees to advance some essential projects like figuring the what / where / how / when of a first vote of StarkNet token holders.
+StarkNet Foundation yönetim kurulu, resmileştirme ve operasyonlar için hazırlık yapmaya, bir yönetici direktör bulmaya ve StarkNet tokeninin ilk oylamasının ne/nerede/nasıl/ne zaman yapılacağı gibi bazı temel projeleri ilerletmek için ad hoc topluluk komiteleri oluşturmaya başlayarak çalışmaya başladı. sahipleri.
 
-We wish the entire StarkNet community success and we are proud and excited to be working on the launch of the StarkNet Foundation.
+Tüm StarkNet topluluğuna başarılar diliyoruz ve StarkNet Vakfı'nın lansmanı üzerinde çalışmaktan gurur ve heyecan duyuyoruz.
 
 
 
-### Here is what our board has to say:
+### İşte yönetim kurulumuzun söyleyecekleri:
 
 **Andrew:**
 
-> What makes StarkNet compelling to me is that it is, in my judgment, the most promising and technologically convincing effort to make Ethereum (and other blockchains) a truly scalable, secure, and private permissionless global computing platform. With rock-solid science and a talented team behind it, StarkNet is a pivotal part of achieving the broad-scale utility that has been just over the horizon of the prevailing blockchain ecosystem.
+> StarkNet'i benim için çekici kılan şey, kanımca, Ethereum'u (ve diğer blok zincirlerini) gerçekten ölçeklenebilir, güvenli ve özel, izinsiz bir küresel bilgi işlem platformu haline getirmek için en umut verici ve teknolojik olarak ikna edici çaba olmasıdır. Arkasında sağlam bir bilim ve yetenekli bir ekip bulunan StarkNet, hakim blok zinciri ekosisteminin ufkunun hemen ötesinde olan geniş ölçekli yardımcı programa ulaşmanın çok önemli bir parçasıdır.
 > 
-> As a member of the founding board, I aim to focus on good governance and effective global community-building. The StarkNet Foundation will be a not-for-profit startup, with a mission to build out a community of builders and users that is engaged, diverse, and empowered to govern itself. As an organization, the Foundation itself needs to be open, transparent, accountable, reliable, and ethical. As an instance of community self-governance, I hope to see the Foundation drive the creation of StarkNet-powered governance tools and services that are objectively intuitive and useful — and as available to others as they are to us.
+> Kurucu kurulun bir üyesi olarak, iyi yönetişime ve etkili küresel topluluk oluşturmaya odaklanmayı hedefliyorum. StarkNet Vakfı, bağlı, çeşitli ve kendi kendini yönetme yetkisine sahip inşaatçılar ve kullanıcılardan oluşan bir topluluk oluşturma misyonuyla kar amacı gütmeyen bir girişim olacak. Bir kuruluş olarak Vakfın kendisinin açık, şeffaf, hesap verebilir, güvenilir ve etik olması gerekir. Topluluğun özyönetiminin bir örneği olarak, Vakfın, nesnel olarak sezgisel ve yararlı olan ve bizim için olduğu kadar başkaları için de erişilebilir olan StarkNet destekli yönetişim araçlarının ve hizmetlerinin oluşturulmasını sağladığını görmeyi umuyorum.
 
 **Eli:**
 
-> The initial success of StarkNet (and STARKs) caught me by surprise. What started off as a StarkWare-centric effort is now a thriving and rapidly expanding ecosystem. Yahoo!
+> StarkNet'in (ve STARK'ların) ilk başarısı beni şaşırttı. StarkWare merkezli bir çaba olarak başlayan şey, şimdi gelişen ve hızla genişleyen bir ekosistemdir. yahoo!
 > 
-> Governance is a hard topic, one that has baffled human societies throughout history. StarkNet’s governance, including the necessary checks and balances, conflict resolution mechanisms etc., has yet to emerge and crystalize. And so, my feelings of excitement and optimism are humbled by the challenges ahead. It is clear to me that StarkNet should not be ruled by any single party. Thus, I view the most essential part of our mission as that of listening to the wide and expanding ecosystem of StarkNet developers and helping them lead the way.
+> Yönetişim, tarih boyunca insan toplumlarını şaşırtan zor bir konudur. StarkNet'in gerekli kontroller ve dengeler, çatışma çözme mekanizmaları vb. dahil yönetişimi henüz ortaya çıkmadı ve netleşmedi. Ve böylece, heyecan ve iyimserlik duygularım, önümdeki zorluklar tarafından alçaltılıyor. StarkNet'in tek bir tarafça yönetilmemesi gerektiği benim için çok açık. Bu nedenle, misyonumuzun en önemli kısmını, StarkNet geliştiricilerinin geniş ve genişleyen ekosistemini dinlemek ve onlara yol göstermelerine yardımcı olmak olarak görüyorum.
 
 **Eric:**
 
-> Rollup technologies are by far the most promising answer to the question of how to scale permissionless finance to the millions of users. STARKs provide the ability to succinctly verify general computation, and can thus extend the qualities and values of the Ethereum baselayer to the layers above. StarkNet is perhaps the most important installation of this concept, and it is with humility that I accept the task of helping to ensure its integrity as well as its success.
+> Toplama teknolojileri, izinsiz finansın milyonlarca kullanıcıya nasıl ölçeklendirileceği sorusuna açık ara en umut verici yanıttır. STARK'lar, genel hesaplamayı özlü bir şekilde doğrulama yeteneği sağlar ve böylece Ethereum temel katmanının niteliklerini ve değerlerini yukarıdaki katmanlara genişletebilir. StarkNet belki de bu konseptin en önemli kurulumudur ve başarısının yanı sıra bütünlüğünün sağlanmasına yardım etme görevini alçakgönüllülükle kabul ediyorum.
 
-**Heather:**
+**Funda:**
 
-> I am thrilled to be part of the StarkNet Foundation.
+> StarkNet Foundation'ın bir parçası olduğum için heyecanlıyım.
 > 
-> For almost three decades, I have been working to help people understand open source licensing. I am a lawyer, so of course, I’ve spent a lot of that time helping my clients learn about open source licensing and development. But during those decades, the whole technology industry has been working to better understand how to collaborate — that’s the gift of the open source development model. I have been especially lucky, because a lot of my work has been helping others — not only my clients — learn about the rules and paradigms for collaboration. In a way, I’ve had the great fortune to be as much a teacher as a counselor.
+> Neredeyse otuz yıldır, insanların açık kaynak lisanslamayı anlamalarına yardımcı olmak için çalışıyorum. Ben bir avukatım, bu yüzden tabii ki zamanımın çoğunu müvekkillerimin açık kaynak lisanslama ve geliştirme hakkında bilgi edinmelerine yardımcı olmak için harcadım. Ancak bu on yıllar boyunca, tüm teknoloji endüstrisi nasıl işbirliği yapılacağını daha iyi anlamak için çalışıyor - bu, açık kaynak geliştirme modelinin bir armağanı. Özellikle şanslıydım çünkü çalışmalarımın çoğu, yalnızca müşterilerime değil, başkalarına da işbirliği için kurallar ve paradigmalar hakkında bilgi edinme konusunda yardımcı oldu. Bir bakıma, danışman olduğum kadar öğretmen olma şansına da sahip oldum.
 > 
-> I look forward to working with StarkNet Foundation to move into the next era of Ethereum and blockchain, and to support the growing StarkNet community.
+> Bir sonraki Ethereum ve blockchain çağına geçmek ve büyüyen StarkNet topluluğunu desteklemek için StarkNet Vakfı ile çalışmayı dört gözle bekliyorum.
 
-*(Heather is an advisor to StarkWare.)*
+*(Heather, StarkWare'in danışmanıdır.)*
 
-**Shubhangi:**
+**Şubhangi:**
 
-> I am a researcher in the theoretical foundations of computer science. Personally, I have been amazed by how some of the exciting theoretical developments in the field from the last couple of decades have come together to create the technology that powers STARK-proofs.
+> Bilgisayar biliminin teorik temellerinde araştırmacıyım. Şahsen, son birkaç on yılda bu alandaki bazı heyecan verici teorik gelişmelerin STARK kanıtlarına güç veren teknolojiyi yaratmak için nasıl bir araya geldiğine şaşırdım.
 > 
-> I think that the mission of bringing scalability via STARKS through a decentralized public platform, where developers play a central role in governance and design has the potential to greatly expand the reach of blockchain technologies. As a member of the board, I am also keen to enable avenues for StarkNet to stimulate, and to benefit from, modern research in theoretical computer science. I am looking forward to being part of this.
+> Geliştiricilerin yönetişim ve tasarımda merkezi bir rol oynadığı merkezi olmayan bir kamu platformu aracılığıyla STARKS aracılığıyla ölçeklenebilirlik getirme misyonunun, blockchain teknolojilerinin erişimini büyük ölçüde genişletme potansiyeline sahip olduğunu düşünüyorum. Kurulun bir üyesi olarak, StarkNet'in teorik bilgisayar bilimindeki modern araştırmaları teşvik etmesi ve bunlardan faydalanması için yollar açmaya da hevesliyim. Bunun bir parçası olmayı dört gözle bekliyorum.
 
-*(Shubangi is an advisor to StarkWare.)*
+*(Shubangi, StarkWare'in danışmanıdır.)*
 
 **Tomasz:**
 
-> StarkNet enters an important phase of its development — one when it becomes more open, composable, trustless, and more trusting. I see my role at the foundation as an opportunity to foster collaboration, and support a move towards the future of decentralized and permissioned chains powered by STARKs.
+> StarkNet, gelişiminin önemli bir aşamasına giriyor - daha açık, düzenlenebilir, güvenilmez ve daha güvenilir hale geldiği aşama. Vakıftaki rolümü, işbirliğini geliştirmek ve STARK'lar tarafından desteklenen merkezi olmayan ve izin verilen zincirlerin geleceğine doğru bir hareketi desteklemek için bir fırsat olarak görüyorum.
 > 
-> Remembering my path at Nethermind as an Ethereum Foundation grantee and understanding both challenges and opportunities that builders are facing, I welcome the opportunity to ensure that the executive team at StarkNet Foundation builds an ecosystem where builders feel empowered, and benefit from their research and development efforts while building StarkNet as a public good. I am looking forward to seeing the next generations of builders and communities finding their role as independent co-owners of StarkNet.
+> Nethermind'de bir Ethereum Vakfı bağışçısı olarak yolumu hatırladığım ve inşaatçıların karşılaştığı zorlukları ve fırsatları anladığım için, StarkNet Foundation'daki yönetici ekibin, inşaatçıların kendilerini güçlü hissettikleri ve araştırma ve geliştirme çabalarından yararlandıkları bir ekosistem oluşturmasını sağlama fırsatını memnuniyetle karşılıyorum. StarkNet'i bir kamu malı olarak inşa ederken. Yeni nesil inşaatçılar ve toplulukların StarkNet'in bağımsız ortak sahipleri olarak rollerini bulmalarını dört gözle bekliyorum.
 
 **Uri:**
 
-> As a co-founder & CEO at StarkWare, I have been observing the blockchain space since 2018 (a relative newcomer!), and deeply involved in building scaling solutions for Ethereum. The software tools for computational integrity that we started developing at StarkWare are now being placed in the hands of developers worldwide. The mission is clear: these tools need to be put in the hands of any interested developer in the world; these tools need to be improved. The StarkNet Foundation will play an important and exciting role in fulfilling this mission, in decentralizing StarkNet.
+> StarkWare'in kurucu ortağı & CEO'su olarak, 2018'den beri blockchain alanını gözlemliyorum (nispeten yeni biri!) ve Ethereum için ölçeklendirme çözümleri oluşturmaya derinden dahil oldum. Hesaplama bütünlüğü için StarkWare'de geliştirmeye başladığımız yazılım araçları artık dünya çapındaki geliştiricilerin ellerine veriliyor. Misyon açık: bu araçların dünyadaki ilgili herhangi bir geliştiricinin eline verilmesi gerekiyor; bu araçların iyileştirilmesi gerekiyor. StarkNet Vakfı, bu misyonun yerine getirilmesinde, StarkNet'in merkezileştirilmesinde önemli ve heyecan verici bir rol oynayacaktır.

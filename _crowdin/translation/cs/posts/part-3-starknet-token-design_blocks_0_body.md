@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+V tomto příspěvku se ponoříme hlouběji do designu StarkNet Token, jeho těžební plán a očekávaná časová věc.
 
-### Considerations
+### Úvahy
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+Konstrukce StarkNet Tokenu je utvářena potřebou napájení sítě, která se skládá z i)**uživatelů**StarkNet, ii)**Operátoři**– lidé, kteří poskytují síť výpočetními zdroji, které provádějí sekvenování transakcí, výroba dokladů STARK a poskytovatelé dlouhodobého skladování, a iii)**Vývojáři**psaní softwaru pro jeho infrastrukturu a pro aplikace, které na něm běží.
 
-Mechanisms for fee structure and token minting should be:
+Mechanismy pro strukturu poplatků a těžbu žetonů by měly být:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Velice automatizované na rozdíl od významných lidských zásahů
+* Známé a testované v jiných blockchainových systémech
+* Jednoduše analyzovat a vysvětlit; transparentní
+* Odolnost spekulativní manipulaci a gamifikaci vytvářející nehodnotu
+* Má se za to, že má dobrý uživatelský zážitek (UX)
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Tyto preference budou formovat mechanismus pro přidělování tokenů z nových těžebních a transakčních poplatků placených uživateli:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Operátoři**zabezpečují nepřetržitou živost StarkNet a zajišťují vysoce kvalitní výkon protokolu, který uživatelé požadují.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Vývojáři**budují a udržují software používaný operátory k zabezpečení sítě, a vytvářejí aplikace, které zvyšují funkčnost sítě pro uživatele. Část poplatků a nové těžby bude proto směřovat k developerům a hlavním vývojářům inteligentních smluv:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Inteligentní vývojáři smluv:**Protokol StarkNet může automaticky měřit hodnotu nabízenou inteligentními smlouvami, prostřednictvím poplatků L1 a L2 placených uživateli těchto smluv. Protokol StarkNet automaticky přidělí zlomek poplatků a další těžbu chytrým vývojářům. Chytré smlouvy, které uživatelům nabízejí větší hodnotu – měřeno podle poplatků, za ně zaplacených – obdrží větší část mincí přidělených k tomuto účelu.
+* **Hlavní vývojáři:**Protokol StarkNet nemá automatický způsob kvantifikace příspěvku hlavních vývojářů, např. psaní kódu pro provenience, posloupnosti, plné uzly atd. Proto přidělení symbolických symbolů hlavním vývojářům a dalším přispěvatelům, jejichž příspěvek není měřitelný protokolem, nutně vyžaduje určitou volnost lidského uvážení. Bude vytvořen model pro jeho uplatňování způsobem, který bude v souladu s cílem decentralizace.
+* Přesný mechanismus přidělování žetonů z nové těžby a poplatků oběma typům vývojářů je ještě třeba stanovit. Zásady návrhu budou zahrnovat boj proti gamifikaci a transparentnost.
 
-### Initial allocation of StarkNet Tokens
+### Počáteční přidělování tokenů StarkNet
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+StarkWare vytěží deset miliard žetonů mimo řetězec. Pro objasnění: tyto StarkNet tokeny nepředstavují vlastní kapitál ve společnosti StarkWare, ani neposkytují žádné právo na účast ve společnosti StarkWare ani neudělují žádné právo na pohledávku od StarkWare. Pohybující se zásoba žetonů se postupem času zvýší s těžbou nových žetonů protokolem, podle harmonogramu, který bude stanoven komunitou v pozdějším bodě.\
+*Obíhající zásoba proto nesmí zůstat pevná.*
 
-The allocation is thus:
+Přidělení tedy činí:
 
-**17%** — StarkWare Investors
+**17%**– Investoři StarkWare
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32,9%**– hlavní přispěvatelé: StarkWare a jeho zaměstnanci a konzultanti a partneři vývojáře softwaru StarkNet
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50.1%**udělená nadací společností StarkWare a vyhrazená takto:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**– Předpisy Společenství – pro ty, kteří pracovali pro StarkNet a poháněni nebo vyvinuli svou základní technologii, e. . pomocí systémů StarkEx L2 v minulosti. Zásadní je, že všechna ustanovení Společenství budou založena na ověřitelné práci, která byla vykonávána v minulosti. Například do té míry, do jaké budou předpisy Společenství poskytnuty uživatelům StarkEx, Příděly budou určeny na základě ověřitelného využití technologie StarkEx, která se uskutečnila**před 1. červnem 2022.**
+* **9%**– Sazby Společenství – slevy ve StarkNet Tokens na**částečně**pokrývají náklady na zapojení do StarkNet z Etherea. Aby se zabránilo gamifikaci, budou se tarify Společenství vztahovat pouze na transakce uskutečněné**po**oznámení mechanismu rabatu.
+* **12%**– Granty na výzkum a práce vykonané za účelem vývoje, testování, nasazení a údržby protokolu StarkNet
+* **10%**– strategická rezerva, financovat činnosti ekosystému, které jsou v souladu s posláním nadace, jak je vysvětleno v předchozím bodě[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)v této řadě.
+* **2%**– dary vysoce uznávaným institucím a organizacím, jako jsou univerzity, nevládní organizace atd., jak o tom rozhodnou držitelé tokNet a nadace.
+* **8. %**Nepřiděleno – nepřidělená pokladna nadace je k dispozici k další podpoře komunity StarkNet způsobem, o kterém rozhodne komunita.
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+sladit dlouhodobé pobídky hlavních přispěvatelů a investorů se zájmy komunity StarkNet a dodržovat běžnou praxi v decentralizovaných ekosystémech, všechny žetony přidělené hlavním přispěvatelům a investorům budou podléhat čtyřletému období uzávěrky s lineárním uvolňováním a jednoletým útesem.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### Je zde způsob, jak dostávat tokNet ?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+Stručná odpověď zní ano, ale nejsou zde žádné zkratky pro přijímání tokenů.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+StarkNet Token alokace a jeho trh s poplatky a nový design těžby dávají přednost vývojářům hlavní infrastruktury a dApps, jakož i další přispívající k bezpečnosti a zdraví ekosystému. Co to znamená prakticky ve vztahu k tokenu?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Pokud jste vývojář a již jste napsali software pro infrastrukturu StarkNet nebo pro chytrou smlouvu, které jsou skutečně oceněny a využívány koncovými uživateli StarkNet, pak můžete očekávat, že získáte tokeny automaticky prostřednictvím protokolu. Jedním z mnoha pojistek proti gamifikaci tohoto mechanismu je, že poplatky obdržené vývojáři budou přísně nižší než poplatky, které platí uživatelé.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+Vývojáři mohou také obdržet granty na práci na vývoj, testování a údržbu protokolu StarkNet. Veškeré tyto granty stanoví včas nadace v souladu s jejím posláním.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+Pokud jste vývojář blockchainu, který věří, že StarkNet je odpovědí na Ethereum Scaling potřeb, povzbuzujeme vás, abyste se dozvěděli více o[StarkNet](https://starknet.io/)a jeho programovacím jazyku,[Káhira](https://www.cairo-lang.org/)a začít vyvíjet vlastní chytré smlouvy.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Pokud jste koncovým uživatelem, použijte StarkNet — ale pouze tak, jak slouží vašim potřebám dnes. Použijte ji pro transakce a aplikace, které hodnotíte,*neočekávají žádnou budoucí odměnu StarkNet toků.*Když jsou vyhlášeny předpisy Společenství, budou odkazovat pouze na snímky, které nastaly před datem oznámení, a bude filtrovat a vylučovat používání, které považuje za zneužití a gamifikaci sítě, na základě informací dostupných v daném okamžiku. Jakmile budou zavedeny snížené sazby Společenství, nikdy se nepoužijí na transakce, které se uskutečnily před oznámením rabatu, provádění dnes v očekávání budoucího rabatu je marné.
 
-### Closing remarks
+### Závěrečné poznámky
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+Vybudování otevřené sítě znamená přijetí neznámého. Internet, Bitcoin a Ethereum vynalezli inovátoři, kteří věřili, že jejich nástroje by mohly svět změnit, ale nevěděli, jak. Humbyli, doufáme, že schopnost StarkNetu zvětšovat blokované řetězce bude dobrá pro Ethereum a bude dobrá pro decentralizovaný web. Nemůžeme vědět, co se postaví. Věříme však, že StarkNet dává pozoruhodnou technologickou schopnost do rukou tvůrčí komunity, a doufáme, že ji uvidíme, že komunita používá bezpočet způsobů, mnoho z nich jako dosud nepředstavitelné.

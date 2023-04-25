@@ -1,65 +1,65 @@
-In this post we dive deeper into the design of the StarkNet Token, its minting schedule and expected timeline.
+Σε αυτό το post θα βουτήξει βαθύτερα στο σχεδιασμό του StarkNet Token, το χρονοδιάγραμμα κοπής και την αναμενόμενη χρονοδιάγραμμα.
 
-### Considerations
+### Εξετάσεις
 
-The design of the StarkNet Token is shaped by the need to power a network that is composed of (i) **Users** of StarkNet, (ii) **Operators** — people providing the network with computing resources that perform sequencing of transactions, generation of STARK proofs, and long-term storage providers, and (iii) **Developers** writing software for its infrastructure and for applications running on it.
+Ο σχεδιασμός του StarkNet Token διαμορφώνεται από την ανάγκη τροφοδοσίας ενός δικτύου που αποτελείται από (i)**Χρήστες**της StarkNet, (ii)**Operators**— άτομα που παρέχουν στο δίκτυο υπολογιστικούς πόρους που εκτελούν αλληλουχία συναλλαγών, παραγωγή αποδείξεων STARK και μακροπρόθεσμων παρόχων αποθήκευσης, και (iii)**Προγραμματιστές**λογισμικό γραφής για την υποδομή του και για εφαρμογές που λειτουργούν σε αυτό.
 
-Mechanisms for fee structure and token minting should be:
+Μηχανισμοί για τη διάρθρωση των τελών και την νομισματοκοπία πρέπει να είναι:
 
-* Largely automated, as opposed to based on significant human intervention
-* Known and tested in other blockchain systems
-* Simple to analyze and explain; transparent
-* Resistant to speculative manipulation and non-value-creating gamification
-* Considered to have a good user experience (UX)
+* Μεγάλος αυτοματοποιημένος, σε αντίθεση με βάση τη σημαντική ανθρώπινη παρέμβαση
+* Γνωστό και δοκιμασμένο σε άλλα συστήματα blockchain
+* Απλό να αναλύσει και να εξηγήσει; διαφανές
+* Ανθεκτική στην κερδοσκοπική χειραγώγηση και την gamification που δεν δημιουργούν αξία
+* Θεωρείται ότι έχει μια καλή εμπειρία χρήστη (UX)
 
-These preferences will shape the mechanism for allocating tokens from new minting and transaction fees paid by Users:
+Αυτές οι προτιμήσεις θα διαμορφώσουν τον μηχανισμό για την κατανομή των νομισμάτων από νέα νομισματοκοπεία και τα τέλη συναλλαγών που καταβάλλονται από τους χρήστες:
 
-**Operators** secure the ongoing liveness of StarkNet and deliver the high-quality performance of the protocol that Users demand.
+**Οι χειριστές**εξασφαλίζουν τη συνεχή ζωντάνια της StarkNet και παρέχουν την υψηλής ποιότητας απόδοση του πρωτοκόλλου που απαιτούν οι χρήστες.
 
-**Developers** build and maintain the software used by Operators to secure the network, and they create apps that enhance the network’s functionality for users. Consequently, a portion of the fees and new minting will go to Smart Contract Developers and Core Developers, as follows:
+**Προγραμματιστές**κατασκευάζουν και διατηρούν το λογισμικό που χρησιμοποιείται από τους χειριστές για να εξασφαλίσουν το δίκτυο, και δημιουργούν εφαρμογές που ενισχύουν τη λειτουργικότητα του δικτύου για τους χρήστες. Κατά συνέπεια, ένα μέρος των τελών και των νέων νομισματοκοπείων θα πάει στους Smart Contract Developers και Core Developers, ως εξής:
 
-* **Smart Contract Developers:** the StarkNet protocol can automatically measure the value provided by smart contracts, via the L1 and L2 fees paid by Users of these contracts. The StarkNet protocol will automatically allocate a fraction of fees and ongoing new minting to Smart Contract Developers. Smart contracts that offer more value to Users — measured by fees paid for them — will receive a larger portion of tokens allocated for this purpose.
-* **Core Developers:** The StarkNet protocol has no automatic way of quantifying the contribution of Core Developers, such as those writing code for provers, sequencers, full nodes, etc. Consequently, token allocation to such Core Developers and other contributors whose contribution is not measurable by the protocol necessarily requires some human discretion. A model will be established for applying this in a manner that is consistent with the goal of decentralization.
-* The exact mechanism for allocating tokens from new minting and fees to both types of Developers is yet to be determined. The design principles will include anti-gamification and transparency.
+* **Smart Contract Developers:**το πρωτόκολλο StarkNet μπορεί αυτόματα να μετρήσει την αξία που παρέχεται από έξυπνες συμβάσεις, μέσω των τελών L1 και L2 που καταβάλλουν οι χρήστες αυτών των συμβάσεων. Το πρωτόκολλο του StarkNet θα κατανέμει αυτόματα ένα κλάσμα των τελών και των νέων ορυχείων σε Smart Contract Developers. Έξυπνες συμβάσεις που προσφέρουν μεγαλύτερη αξία στους Χρήστες - μετρούμενες με τα τέλη που τους καταβάλλονται - θα λάβουν ένα μεγαλύτερο μέρος των νομισμάτων που διατίθενται για το σκοπό αυτό.
+* **Βασικοί Προγραμματιστές:**Το πρωτόκολλο StarkNet δεν έχει αυτόματο τρόπο ποσοτικοποίησης της συμβολής των Προγραμματιστών Πυρήνα, όπως αυτοί που γράφουν κώδικα για παροχές, επακόλουθους, πλήρεις κόμβους κ.λπ. Κατά συνέπεια, η ενδεικτική κατανομή σε αυτούς τους βασικούς προγραμματιστές και άλλους συνεισφέροντες των οποίων η συμβολή δεν είναι μετρήσιμη από το πρωτόκολλο απαιτεί αναγκαστικά κάποια ανθρώπινη διακριτική ευχέρεια. Θα δημιουργηθεί ένα μοντέλο για την εφαρμογή του με τρόπο που θα συνάδει με τον στόχο της αποκέντρωσης.
+* Ο ακριβής μηχανισμός για την κατανομή μαρκών από νέα νομισματοκοπεία και τέλη και στους δύο τύπους προγραμματιστών δεν έχει ακόμη καθοριστεί. Οι αρχές σχεδιασμού θα περιλαμβάνουν αντι-gamification και διαφάνεια.
 
-### Initial allocation of StarkNet Tokens
+### Αρχική κατανομή των StarkNet Tokens
 
-Ten billion tokens have been minted off-chain by StarkWare. To clarify: these StarkNet Tokens do not represent equity in StarkWare nor do they provide any participation right in StarkWare or grant any right of claim from StarkWare. The circulating supply of tokens will increase over time with the minting of new tokens by the protocol, pursuant to a schedule that will be determined by the community at a later point.\
-*The circulating supply may not, therefore, remain fixed.*
+Δέκα δισεκατομμύρια μάρκες έχουν κοπεί εκτός αλυσίδας από την StarkWare. Η StarkNet Tokens δεν αντιπροσωπεύει ίδια κεφάλαια στην StarkWare ούτε παρέχει δικαίωμα συμμετοχής στο StarkWare ή παρέχει οποιοδήποτε δικαίωμα απαίτησης από την StarkWare. Η παροχή νομισμάτων που κυκλοφορεί θα αυξηθεί με την πάροδο του χρόνου με την κοπή νέων νομισμάτων από το πρωτόκολλο, σύμφωνα με ένα χρονοδιάγραμμα που θα καθοριστεί από την κοινότητα σε μεταγενέστερο σημείο.\
+*Η παροχή που κυκλοφορεί δεν μπορεί, επομένως, να παραμείνει σταθερή.*
 
-The allocation is thus:
+Η κατανομή είναι ως εξής:
 
-**17%** — StarkWare Investors
+**17%**— StarkWare Investors
 
-**32.9%** — Core Contributors: StarkWare and its employees and consultants, and StarkNet software developer partners
+**32.9%**— Βασικοί συνεισφέροντες: StarkWare και οι υπάλληλοι και σύμβουλοί της, και συνεργάτες λογισμικού StarkNet
 
-**50.1%** granted by StarkWare to the Foundation, earmarked as follows:
+**50,1%**χορηγηθέν από την StarkWare στο Ίδρυμα, προοριζόμενο ως εξής:
 
-* **9%** — Community Provisions — for those who performed work for StarkNet and powered or developed its underlying technology, e.g. via past use of the StarkEx L2 systems. Crucially, all Community Provisions will be based on verifiable work that was performed in the past. For example, to the extent Community Provisions will be given to past StarkEx users, allocations will be determined based on verifiable usage of StarkEx’s technology that took place **prior to June 1, 2022.**
-* **9%** — Community Rebates — rebates in StarkNet Tokens to **partially** cover the costs of onboarding to StarkNet from Ethereum. To prevent gamification, Community Rebates will only apply to transactions that occur **after** the rebate mechanism is announced.
-* **12%** — Grants for research and work done to develop, test, deploy and maintain the StarkNet protocol
-* **10%** — a strategic reserve, to fund ecosystem activities that are aligned with the Foundation’s mission as explained in the [previous post](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778) in this series.
-* **2%** — Donations to highly regarded institutions and organizations, such as universities, NGOs, etc, as decided by StarkNet Token holders and the Foundation.
-* **8.1%** Unallocated — the Foundation’s unallocated treasury is in place to further support the StarkNet community in a manner to be decided by the community.
+* **9%**— Κοινοτικές διατάξεις — για όσους εκτελούσαν εργασίες για το StarkNet και τροφοδοτούσαν ή ανέπτυξαν τη βασική τεχνολογία του. . – μέσω της προηγούμενης χρήσης των συστημάτων StarkEx L2. Βασικά, όλες οι κοινοτικές διατάξεις θα βασίζονται σε επαληθεύσιμες εργασίες που εκτελέστηκαν στο παρελθόν. Για παράδειγμα, στον βαθμό που οι κοινοτικές διατάξεις θα δοθούν σε προηγούμενους χρήστες της StarkEX, οι κατανομές θα καθοριστούν βάσει της επαληθεύσιμης χρήσης της τεχνολογίας της StarkEx, η οποία πραγματοποιήθηκε**πριν από την 1η Ιουνίου 2022.**
+* **9%**— κοινοτικές εκπτώσεις — μειώσεις στο StarkNet Tokens σε**εν μέρει**καλύπτουν το κόστος επιβίβασης στο StarkNet από το Ethereum. Για την αποτροπή τυχερών παιχνιδιών, οι κοινοτικές χρεώσεις θα ισχύουν μόνο για συναλλαγές που πραγματοποιούνται**μετά το**ανακοινώνεται ο μηχανισμός επιστροφής.
+* **12%**— Επιχορηγήσεις για έρευνα και εργασία για την ανάπτυξη, δοκιμή, ανάπτυξη και διατήρηση του πρωτοκόλλου StarkNet
+* **10%**— ένα στρατηγικό αποθεματικό, για τη χρηματοδότηση δραστηριοτήτων οικοσυστήματος που είναι ευθυγραμμισμένες με την αποστολή του Ιδρύματος, όπως εξηγείται στην προηγούμενη θέση[](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)αυτής της σειράς.
+* **2%**— Δωρεές σε ιδρύματα και οργανισμούς υψηλής εκτίμησης, όπως πανεπιστήμια, ΜΚΟ κλπ, όπως αποφασίζονται από τους κατόχους StarkNet Token και το Ίδρυμα.
+* **8. %**Χωρίς διάθεση — το μη διατιθέμενο ταμείο του Ιδρύματος έχει θεσπιστεί για την περαιτέρω στήριξη της κοινότητας StarkNet κατά τρόπο που θα αποφασίσει η κοινότητα.
 
-To align long-term incentives of the Core Contributors and Investors with the interests of the StarkNet community, and following common practice in decentralized ecosystems, all tokens allocated to Core Contributors and Investors will be subject to a 4-year lock-up period, with linear release and a one-year cliff.
+Ευθυγράμμιση των μακροπρόθεσμων κινήτρων των βασικών συνεισφερόντων και των επενδυτών με τα συμφέροντα της κοινότητας StarkNet και ακολουθώντας την κοινή πρακτική σε αποκεντρωμένα οικοσυστήματα, όλα τα νομίσματα που διατίθενται στους βασικούς συνεισφέροντες και επενδυτές θα υπόκεινται σε περίοδο κλειδώματος 4 ετών, με γραμμική αποδέσμευση και απότομο γκρεμό ενός έτους.
 
 ![](/assets/1_qcosthgskfd-q6bn3yzghq-1.png)
 
-### Is there a way to receive StarkNet Tokens?
+### Είναι ένας τρόπος για να λάβετε StarkNet Tokens?
 
-The short answer is yes, but there are no shortcuts to receiving tokens.
+Η σύντομη απάντηση είναι ναι, αλλά δεν υπάρχουν συντομεύσεις για τη λήψη μαρκών.
 
-StarkNet Token allocation and its fee market and new minting design give precedence to developers of core infrastructure and dApps, as well as others contributing to the ecosystem’s security and health. What does this mean practically in relation to the token?
+Η κατανομή του StarkNet Token και η αγορά τελών και ο νέος σχεδιασμός κοπής δίνουν προτεραιότητα στους προγραμματιστές της βασικής υποδομής και dApps, καθώς και άλλοι που συμβάλλουν στην ασφάλεια και την υγεία του οικοσυστήματος. Τι σημαίνει αυτό σχεδόν σε σχέση με το σύμβολο?
 
-If you are a developer and you already wrote software for either StarkNet infrastructure, or for a smart contract, that are genuinely valued and used by StarkNet end users, then you can expect to receive tokens automatically through the protocol. One of the many safeguards against gamification of this mechanism is that fees received by developers will be strictly less than fees paid by users.
+Αν είστε προγραμματιστής και έχετε ήδη γράψει λογισμικό είτε για την υποδομή του StarkNet είτε για ένα έξυπνο συμβόλαιο, που έχουν πραγματική αξία και χρησιμοποιούνται από τους τελικούς χρήστες του StarkNet τότε μπορείτε να περιμένετε να λάβετε αυτόματα νομίσματα μέσω του πρωτοκόλλου. Μία από τις πολλές διασφαλίσεις κατά της τυχερών παιχνιδιών αυτού του μηχανισμού είναι ότι τα τέλη που λαμβάνουν οι προγραμματιστές θα είναι αυστηρά λιγότερα από τα τέλη που καταβάλλουν οι χρήστες.
 
-Developers may also receive token grants for work done to develop, test and maintain the StarkNet protocol. Any such grants will be determined in due course by the Foundation in accordance with its mission.
+Οι προγραμματιστές μπορούν επίσης να λάβουν υποτροφίες token για εργασία που γίνεται για την ανάπτυξη, δοκιμή και διατήρηση του πρωτοκόλλου StarkNet. Τυχόν τέτοιες επιχορηγήσεις θα καθορίζονται εν ευθέτω χρόνω από το Ίδρυμα σύμφωνα με την αποστολή του.
 
-If you are a blockchain developer who believes that StarkNet is the answer to Ethereum’s scaling needs, we encourage you to learn more about [StarkNet](https://starknet.io/) and its programming language, [Cairo](https://www.cairo-lang.org/), and to start developing your own smart contracts.
+Αν είστε προγραμματιστής blockchain που πιστεύει ότι το StarkNet είναι η απάντηση στις ανάγκες κλιμάκωσης του Ethereum, σας ενθαρρύνουμε να μάθετε περισσότερα για το[StarkNet](https://starknet.io/)και τη γλώσσα προγραμματισμού του,[Κάιρο](https://www.cairo-lang.org/), και για να ξεκινήσετε την ανάπτυξη των δικών σας έξυπνων συμβάσεων.
 
-If you are an end user, use StarkNet — but only as it serves your needs today. Use it for those transactions and applications that you value, *not in expectation of any future reward of StarkNet Tokens.* When Community Provisions are announced, they will refer only to snapshots that have occurred previous to the announcement date, and will filter and exclude usage that is deemed by it to be an abuse and gamification of the network, based on the information available at that point in time. When Community Rebates are instituted, they will never apply to transactions that occurred before the rebate was announced, so transacting today in anticipation of a future rebate is futile.
+Εάν είστε τελικός χρήστης, χρησιμοποιήστε το StarkNet - αλλά μόνο καθώς εξυπηρετεί τις ανάγκες σας σήμερα. Χρησιμοποιήστε το για τις συναλλαγές και τις εφαρμογές που εκτιμάτε,*χωρίς να αναμένετε οποιαδήποτε μελλοντική ανταμοιβή του StarkNet Tokens.*Όταν ανακοινωθούν οι κοινοτικές διατάξεις, θα αναφέρονται μόνο σε στιγμιότυπα που έχουν συμβεί πριν από την ημερομηνία ανακοίνωσης, και θα φιλτράρει και θα αποκλείσει τη χρήση που θεωρείται από αυτό ως κατάχρηση και παιχνιδοποίηση του δικτύου, με βάση τις πληροφορίες που είναι διαθέσιμες τη δεδομένη χρονική στιγμή. Όταν θεσμοθετηθούν οι κοινοτικές εκτροπές, δεν θα εφαρμοστούν ποτέ σε συναλλαγές που πραγματοποιήθηκαν πριν από την ανακοίνωση της έκπτωσης, έτσι η διεξαγωγή σήμερα εν αναμονή μιας μελλοντικής επιστροφής είναι μάταιη.
 
-### Closing remarks
+### Τελικές παρατηρήσεις
 
-Building an open network means embracing the unknown. The Internet, Bitcoin and Ethereum, were invented by innovators who believed their tools might change the world, but didn’t quite know how. Humbly, we hope that StarkNet’s ability to scale blockchains will be good for Ethereum and good for a decentralized web. We can’t know what will get built. But we do believe that StarkNet puts a remarkable technological capability in the hands of a creative community, and we hope to see that community use it in a myriad of ways, many of them as-yet unimagined.
+Η οικοδόμηση ενός ανοικτού δικτύου σημαίνει ότι αγκαλιάζουμε το άγνωστο. Το Διαδίκτυο, Bitcoin και Ethereum, εφευρέθηκαν από καινοτόμους που πίστευαν ότι τα εργαλεία τους θα μπορούσαν να αλλάξουν τον κόσμο, αλλά δεν ήξεραν πολύ πώς. Humbly, Ελπίζουμε ότι η ικανότητα του StarkNet να κλιμακώσει τα blockchains θα είναι καλή για το Ethereum και καλό για ένα αποκεντρωμένο διαδίκτυο. Δεν μπορούμε να ξέρουμε τι θα χτίσει. Πιστεύουμε όμως ότι η StarkNet διαθέτει μια αξιόλογη τεχνολογική ικανότητα στα χέρια μιας δημιουργικής κοινότητας, and we hopeελπίδα to see that communityκοινότητα use it in a myriadμυριάδα of waysτρόπους, many of them as-yet unimaginedαδιανόητος .

@@ -1,4 +1,4 @@
 {
   "source": "/bulletin-board/:path*",
-  "destination": "/en/developers/tools-and-resources"
+  "destination": "/ro/developers/tools-and-resources"
 }

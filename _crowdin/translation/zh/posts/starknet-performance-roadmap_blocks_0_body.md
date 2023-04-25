@@ -1,79 +1,79 @@
 ### TL;DR
 
-* Validity rollups are not limited in throughput in the same manner as L1s. This gives rise to potentially much higher TPS on L2 validity rollups.
-* StarkNet performance roadmap addresses a key element in the system: the sequencer.
-* We present here the roadmap for performance improvements:\
-  — Sequencer parallelization\
-  — A new rust implementation for the Cairo VM\
-  — Sequencer re-implementation in rust\
-* Provers, being battle-tested as they are, are not the bottleneck and can handle much more than they do now!
+* 有效率的增压不以与L1s相同的方式限制生产量。 这可能会导致L2有效性滚动更高的TPS。
+* StarkNet性能路线图涉及系统中的一个关键要素：序列器。
+* 我们在这里是改进性能的路径图：\
+  - 序列器平行\
+  - 开罗虚拟机\
+  - 序列器重新实现精灵\ 。
+* 目前正在进行战斗测试的支持者并不是瓶颈，能够比现在做得更多！
 
-### Intro
+### 简介
 
-StarkNet launched on Mainnet almost a year ago. We started building StarkNet by focusing on functionality. Now, we shift the focus to improving performance with a series of steps that will help enhance the StarkNet experience.
+StarkNet几乎一年前在Mainnet上发射。 我们开始建设StarkNet，注重功能。 现在，我们将重点转向改进业绩，采取一系列有助于加强StarkNet经验的步骤。
 
-In this post, we explain why there’s a wide range of optimizations that are only applicable in validity rollups, and we will share our plan to implement these steps on StarkNet. Some of these steps are already implemented in StarkNet Alpha 0.10.2, which was released on Testnet on Nov 16 and Yesterday on Mainnet. But before we discuss the solutions, let’s review the limitations and their cause.
+在这个帖子中，我们解释为什么有一系列仅适用于有效滚动的优化， 我们将分享我们在StarkNet上执行这些步骤的计划。 其中一些步骤已经在StarkNet Alpha 0.10.2中实施，该步骤是在16年11月和昨天在Mainnet上发布的。 但在我们讨论解决办法之前，让我们审视限制及其原因。
 
-### Block limitations: validity rollups versus L1
+### 块限制：有效滚动相对于L1
 
-A potential approach towards increasing blockchain scalability and increasing TPS would be to lift the block limitations (in terms of gas/size) while keeping the block time constant. This would require more effort from the block producers (validators on L1, sequencers on L2) and thus calls for a more efficient implementation of those components. To this end, we now shift the focus to StarkNet sequencer optimizations, which we describe in more detail in the following sections.
+提高区块链的可扩展性和增加区块的可变性的办法将是取消区块限制（在气体/大小方面），同时保持区块时间的不变。 这将需要区块生产者(L1上的验证器) 作出更多的努力。 因此要求更有效地执行这些构成部分。 为此，我们现在将重点转向StarkNet序列器优化，我们在以下各节中对此作了更详细的描述。
 
-A natural question arises here. Why are sequencer optimizations limited to validity rollups, that is, why can’t we implement the same improvements on L1 and avoid the complexities of validity rollups entirely? In the next section, we claim that there is a fundamental difference between the two, allowing a wide range of optimizations on L2 that are not applicable to L1.
+这里产生了一个自然问题。 为什么序列器优化仅限于有效滚动，即。 为什么我们不能在L1方面实现同样的改进并完全避免效力增强的复杂性？ 我们在下一节中声称，两者之间存在着根本性差别。 允许不适用于L1的L2范围的优化。
 
-### Why is L1 throughput limited?
+### 为什么L1输送受到限制？
 
-Unfortunately, lifting the block limitations on L1 suffers from a major pitfall. By increasing the growth rate of the chain, we also increase the demands from full nodes, who are attempting to keep up with the most recent state. Since L1 full nodes must re-execute all the history, a high increase in the block size (in terms of gas) puts a significant strain on them, again leading to weaker machines dropping out of the system and leaving the ability to run full nodes only to large enough entities. As a result, users won’t be able to verify the state themselves and participate in the network trustlessly.
+不幸的是，解除对L1的区块限制有一个严重的陷阱。 通过提高这一链条的增长率，我们还增加了全方位的需求， 想要跟上最新状态的人。 由于L1完整节点必须重新执行所有历史记录。 大量增加区块大小(就气体而言)，对它们造成了严重的压力， 再次导致较弱的机器丢失系统，并使完全的节点只能由足够大的实体运行。 因此，用户将无法亲自验证国家并无需信任地参与网络。
 
-This leaves us with the understanding that L1 throughput should be limited, in order to maintain a truly decentralized and secure system.
+这使我们有一项谅解，即L1输送量应该受到限制，以便维持一个真正分散和安全的系统。
 
-### Why don’t the same barriers affect validity rollups?
+### 为什么不会有同样的障碍影响有效的滚动？
 
-**Only when considering the full node perspective do we see the true power offered by validity rollups.** An L1 full node needs to re-execute the entire history to ensure the current state’s correctness. StarkNet nodes only need to verify STARK proofs, and this verification takes an exponentially lower amount of computational resources. In particular, syncing from scratch does not have to involve execution; a node may receive a dump of the current state from its peers and only verify via a STARK proof that this state is valid. This allows us to increase the throughput of the network without increasing the requirements from the full node.
+**只有在考虑完整节点视角时，我们才能看到有效滚动提供的真正力量。**L1 完整节点需要重新执行整个历史记录以确保当前状态的正确性。 StarkNet节点只需要验证STARK证明，而这种验证所需的计算资源量极低。 特别是，从零开始同步不一定涉及执行。 节点可能会从其对等点接收当前状态的转储，并且只能通过 STARK 验证该状态是否有效。 这使我们能够增加网络的输送量，而不会从全节点上增加需求。
 
-We therefore conclude that the L2 sequencer is subject to an entire spectrum of optimizations that are not possible on an L1.
+因此，我们的结论是，L2测序器需要在L1上进行整套优化，而这种优化是不可能的。
 
-### Performance roadmap ahead
+### 未来的性能路线图。
 
-In the next sections, we discuss which of those are currently planned for the StarkNet sequencer.
+在下面的章节中，我们讨论目前为StarkNet测序器计划的内容。
 
-### Sequencer parallelization
+### 序列器平行化
 
-The first step on our roadmap was to introduce parallelization to the transaction execution. This was introduced in StarkNet alpha 0.10.2, which was released Yesterday on Mainnet. We now dive into what parallelization is (this is a semi-technical section, to continue on the roadmap, jump to the next section).
+我们路线图上的第一步是采用与交易执行平行的做法。 昨天在Mainnet发布的StarkNet alpha 0.10.2中采用了这种做法。 我们现在深入探讨平行化是什么(这是一个半技术部分，可以在路线图上继续延伸到下一节)。
 
-So what does “transaction parallelization” mean? Naively, executing a block of transactions in parallel is impossible as different transactions may be dependent. This is illustrated in the following example. Consider a block with three transactions from the same user:
+那么“交易并行化”意味着什么？ 天真的是，由于不同的交易可能依赖于不同的交易，无法平行地执行一组交易。 下面的例子说明了这一点。 考虑一个来自同一用户的包含三个交易的块：
 
-* Transaction A: swap USDC for ETH
-* Transaction B: pay ETH for an NFT
-* Transaction C: swap USDT for BTC
+* 交易 A：交换ETH USDC
+* 交易 B：支付 ETH for an NFT
+* 交易 C：交换BTC USDT
 
-Clearly, Tx A must happen before Tx B, but Tx C is entirely independent of both and can be executed in parallel. If each transaction requires 1 second to execute, then the block production time can be reduced from 3 seconds to 2 seconds by introducing parallelization.
+显然，Tx A必须在Tx B之前发生，但Tx C完全独立于两者，可以平行执行。 如果每次交易需要1秒才能执行，则区块生产时间可以通过采用平行方式从3秒减少到2秒。
 
-The crux of the problem is that we do not know the transaction dependencies in advance. In practice, only when we execute transaction B from our example do we see that it relies on changes made by transaction A. More formally, the dependency follows from the fact that transaction B reads from storage cells that transaction A has written to. We can think of the transactions as forming a dependency graph, where there is an edge from transaction A to transaction B iff A writes to a storage cell that is read by B, and thus has to be executed before B. The following figure shows an example of such a dependency graph:
+问题的症结在于我们事先不知道交易的依赖性。 实际上，只有当我们从我们的例子中执行交易B时，我们才会看到它依赖于交易A所作的修改。 更正式地说，交易B从交易A已经写到的储存单元中读取，从而产生了依赖性。 我们可以认为交易会形成依赖关系图表， 如果从交易A到交易B iff A有一种边缘，则将其写入B读取的存储单元格， 因此必须在B之前执行。 下图显示了这种依赖关系图示：
 
 ![](https://miro.medium.com/max/641/0*I-qGgxdJJmqmgZWM)
 
-In the above example, each column can be executed in parallel, and this is the optimal arrangement (while naively, we would have executed transactions 1–9 sequentially).
+在上述示例中，每一列可以并行执行， 这是最佳安排(虽然天真，我们会依次执行交易1- 9 )。
 
-To overcome the fact that the dependency graph is not known in advance, we introduce ***optimistic parallelization***, in the spirit of [BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/) developed by Aptos Labs, to the StarkNet sequencer. Under this paradigm, we optimistically attempt to run transactions in parallel and re-execute upon finding a collision. For example, we may execute transactions 1–4 from figure 1 in parallel, only to find out afterward that Tx4 depends on Tx1. Hence, its execution was useless (we ran it relative to the same state we ran Tx1 against, while we should have run it against the state resulting from applying Tx1). In that case, we will re-execute Tx4.
+为了克服依赖图事先未知的事实，我们本着 Aptos Labs 开发的[BLOCK-STM](https://malkhi.com/posts/2022/04/block-stm/)的精神，将***乐观并行化***引入 StarkNet 定序器。 在这种模式下，我们乐观地试图同时运行交易，并在发现碰撞后重新执行。 例如，我们可能会同时执行图1中的交易1- 4，只能在事后发现Tx4依赖于Tx1。 因此，它的执行是毫无用处的 (我们对它的运行与我们所运行的 Tx1 状态相同) 我们应该以应用Tx1所产生的状态来执行它。 在这种情况下，我们将重新执行Tx4。
 
-Note that we can add many optimizations on top of optimistic parallelization. For example, rather than naively waiting for each execution to end, we can abort an execution the moment we find a dependency that invalidates it.
+请注意，我们可以在乐观的平行基础上增加许多优化。 例如，我们可以在我们发现依赖使其失效的时候中止执行，而不是天真地等待每个执行结束。
 
-Another example is optimizing the choice of which transactions to re-execute. Suppose that a block which consists of all the transactions from figure 1 is fed into a sequencer with five CPU cores. First, we try to execute transactions 1–5 in parallel. If the order of completion was Tx2, Tx3, Tx4, Tx1, and finally Tx5, then we will find the dependency Tx1→Tx4 only after Tx4 was already executed — indicating that it should be re-executed. Naively, we may want to re-execute Tx5 as well since it may behave differently given the new execution of Tx4. However, rather than just re-executing all the transactions after the now invalidated Tx4, we can traverse the dependency graph constructed from the transactions whose execution has already terminated and only re-execute transactions that depended on Tx4.
+另一个例子是优化选择哪些交易可以重新执行。 假设由图1中的所有交易组成的方块会被输入一个有五个CPU核心的序列器。 首先，我们试图并行执行交易1- 5。 如果完成顺序是 Tx2, Tx3, Tx4, Tx1, 最后是 Tx5, 然后我们才能找到依赖Tx1——Tx4已经执行后才能找到Tx4——这表明它应该重新执行。 顺便说一句，我们也可能想要再次执行Tx5，因为由于Tx4的新执行，它的行为可能不同。 然而，不仅仅是在现已失效的Tx4之后重新执行所有交易， 我们可以遍历从已经终止执行的交易中生成的依赖图，只能重新执行依赖于Tx4的交易。
 
-### A new Rust implementation for the Cairo-VM
+### 开罗虚拟机制新的Rust 实现
 
-Smart contracts in StarkNet are written in Cairo and are executed inside the Cairo-VM, which specification appears in the [Cairo paper](https://eprint.iacr.org/2021/1063.pdf). Currently, the sequencer is using a [python implementation](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) of the Cairo-VM. To optimize the VM implementation performance, we have launched an effort of re-writing the VM in rust. Thanks to the great work of [Lambdaclass](https://lambdaclass.com/), who are by now an invaluable team in the StarkNet ecosystem, this effort is soon coming to fruition.
+StarkNet中的智能合同是在开罗编写的，在[开罗文件](https://eprint.iacr.org/2021/1063.pdf) 中出现的开罗-虚拟机中执行。 目前，序列器正在使用Cairo-VM的[python 实现](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) 为了优化虚拟机的执行性能，我们已经开始尝试改写虚拟机。 感谢[Lambdaclass](https://lambdaclass.com/)所做的出色工作。 我们现在已经成为StarkNet生态系统中一个宝贵的团队，这一努力很快就会取得成果。
 
-The VM’s rust implementation, [cairo-rs](https://github.com/lambdaclass/cairo-rs), can now execute native Cairo code. The next step is handling smart-contracts execution and integrations with the pythonic sequencer. Once integrated with cairo-rs, the sequencer’s performance are expected to improve significantly.
+虚拟机实现,[cairo-rers](https://github.com/lambdaclass/cairo-rs), 现在可以执行本机开罗代码。 下一步是处理智能合约的执行和与pythoncer的结合。 一旦与cairo-rs集成，测序器的性能预计将大大提高。
 
-### Sequencer re-implementation in Rust
+### Rust 中的序列器重新实现
 
-Our shift from python to rust to improve performance is not limited to the Cairo VM. Alongside the improvements mentioned above, we plan to rewrite the sequencer from scratch in rust. In addition to Rust’s internal advantages, this presents an opportunity for other optimizations to the sequencer. Listing a couple, we can enjoy the benefits of cairo-rs without the overhead of python-rust communication, and we can completely redesign the way the state is stored and accessed (which today is based on the [Patricia-Trie structure](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment)).
+我们从python转向rust以提高业绩并不仅限于开罗VM。 除了上述改进之外，我们计划从零重写序列器。 除了俄罗斯的内部优势外，这也为随后者提供了其他优化机会。 如果是夫妇，我们可以享受网球员的好处，而不需要间接传送python-rust通讯。 并且我们可以完全重新设计状态的存储和访问方式(今天是基于[Patria-Trie 结构](https://docs.starknet.io/documentation/develop/State/starknet-state/#state_commitment))。
 
-### What about provers?
+### 对方是什么？
 
-Throughout this post, we didn’t mention the perhaps most famous element of validity rollups — the prover. One could imagine that being the arguably most sophisticated component of the architecture, it should be the bottleneck and, thus, the focus of optimization. Interestingly, it is the more “standard” components that are now the bottleneck of StarkNet. Today, particularly with [recursive proofs](https://medium.com/starkware/recursive-starks-78f8dd401025), we can fit a lot more transactions than the current traffic on Testnet/Mainnet into a proof. In fact, today, StarkNet blocks are proven alongside StarkEx transactions, where the latter can sometimes incur several hundred thousand NFT mints.
+在这个帖子中，我们没有提到也许最著名的有效性增压元素——原理。 人们可以想象，作为结构中可以说最复杂的组成部分，它应该是瓶颈，从而是最优化的焦点。 有趣的是，现在成为StarkNet瓶颈的“标准”成分就更多。 今天，尤其是[递归性证明](https://medium.com/starkware/recursive-starks-78f8dd401025)，我们可以比目前在 Testnet/Mainnet上的流量更多的交易作为证据。 事实上，今天StarkNet的区块已证明与StarkEx的交易并存，后者有时会产生数十万NFT的心数。
 
 ### Summary
 
-Parallelization, Rust, and more — brace yourselves for an improved TPS in the upcoming StarkNet versions.
+平面化、Rust以及更多——在即将推出的StarkNet版本中寻求改进TPS。

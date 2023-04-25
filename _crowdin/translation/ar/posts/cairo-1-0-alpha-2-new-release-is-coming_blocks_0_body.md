@@ -1,37 +1,37 @@
 ### TL;DR
 
-* We are releasing Cairo 1.0-alpha.2, which brings a host of new features to the language
-* It is now possible to implement an ERC20 contract
-* Those new linguistic features will be applicable in the upcoming StarkNet-v0.11.0 version
+* نحن نصدر القاهرة 1.0-ألفا.2، التي تجلب مجموعة من الميزات الجديدة إلى اللغة
+* ومن الممكن الآن تنفيذ عقد ERC20
+* هذه الميزات اللغوية الجديدة ستكون قابلة للتطبيق في النسخة القادمة من StarkNet-v0.11.0
 
-### Fresh new features!
+### ميزات جديدة جديدة!
 
-Cairo 1.0 is continuing its fast improvement pace. Today’s release introduces, among other things, all the necessary features to write an ERC-20 contract.
+وتستمر القاهرة 1.0 في سرعة تحسينها. يقدم إصدار اليوم، ضمن أمور أخرى، جميع الميزات الضرورية لكتابة عقد ERC-20.
 
-To mention some of the new features:
+ولذكر بعض الميزات الجديدة:
 
-* Dictionaries
-* Events in contracts
-* Mapping storage variables
-* Trait support
-* Type inference
-* Methods
+* القواميس
+* الأحداث في العقود
+* تعيين متغيرات التخزين
+* دعم التدريب
+* استدلال النوع
+* الأساليب
 
-See the complete list in the GitHub [repository.](https://github.com/starkware-libs/cairo)
+شاهد القائمة الكاملة في مستودع GitHub [](https://github.com/starkware-libs/cairo)
 
-Let’s have a look at an example of an ERC20 contract (the full concrete example is, of course, on [GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) to demonstrate a use case of an event and mappings in the storage:
+لنلقي نظرة على مثال على عقد ERC20 (المثال الملموس الكامل هو، بالطبع، في[GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)لعرض حالة استخدام لحدث وتعيينات في التخزين:
 
 ![](/assets/0_i4ch5-4rxxal4rkt.png)
 
-### Jump into the water!
+### اقفز إلى الماء
 
-We continue to work on two parallel vectors:
+ونحن نواصل العمل على ناقلين متوازيين:
 
-1. Evolve Cairo 1.0 at full speed towards full-feature compatibility with the old Cairo.
-2. Develop Starknet v0.11.0 that will support contracts written in Cairo 1.0
+1. تطور القاهرة 1.0 بسرعة كاملة نحو توافق كامل مع القاهرة القديمة.
+2. تطوير Starknet v0.11.0 الذي سيدعم العقود المكتوبة في القاهرة 1.0
 
-In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+في غضون ذلك، نشجع الديفار على البدء في الكتابة مع القاهرة 1.0 والتعرف عليها.
 
-For any questions — you can use the Cairo 1.0 Discord [channel](https://discord.com/channels/793094838509764618/1065544063245365288).
+لأي أسئلة - يمكنك استخدام قناة ديسكورد في القاهرة 1.0[](https://discord.com/channels/793094838509764618/1065544063245365288).
 
-For any suggestions or feedback — don’t hesitate to open an [issue](https://github.com/starkware-libs/cairo/issues) in the Cairo repo.
+للحصول على أي اقتراحات أو ملاحظات - لا تتردد في فتح[مشكلة](https://github.com/starkware-libs/cairo/issues)في مستودع القاهرة.

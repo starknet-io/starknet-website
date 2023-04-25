@@ -8,7 +8,7 @@
 
 今日、[StarkNet](https://starknet.io/)は分散化に向けてもう一歩踏み出しています。 StarkNetトークンはEthereum[で](https://etherscan.io/address/0xca14007eff0db1f8135f4c25b34de49ab0d42766)になりました。 すばやく再現：STRKは、StarkNetのコンセンサスメカニズム、ガバナンス・トークンとしての参加、およびトランザクション手数料の支払いのためのステーキングトークンとして使用されます。 これらのユーティリティのそれぞれに対する根拠は、[私たちの分散提案](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)で提示されています 「トークンは何のために使用されますか？」というセクションにあります。
 
-***Beware of scams:** at time of writing there is no way to purchase StarkNet Tokens; this no-sale period will remain in place until further notice by the [StarkNet Foundation](https://twitter.com/StarkNetFndn); follow official communication from the StarkNet Foundation to learn of any updates to the status of STRK. [StarkNet Discord](https://discord.gg/qypnmzkhbc)サーバーの[詐欺レポート](http://starknet.io/discord)チャンネルで、詐欺を報告し、他の詐欺の報告を確認できます。*
+***詐欺にご注意ください:**執筆時点では、StarkNet トークンを購入する方法はありません。この非販売期間は、[StarkNet Foundation](https://twitter.com/StarkNetFndn)からの通知があるまで有効です。 STRK のステータスの更新については、StarkNet Foundation からの公式の連絡に従ってください。 [StarkNet Discord](https://discord.gg/qypnmzkhbc)サーバーの[詐欺レポート](http://starknet.io/discord)チャンネルで、詐欺を報告し、他の詐欺の報告を確認できます。*
 
 この記事では、トークン割り当てプロセスと、デプロイされたトークンコントラクトが、トークンの3つの設計されたユーティリティ、すなわち投票とステークの2つをどのように提供するかについて説明します。 3 番目のユーティリティ - StarkNet手数料を支払う-後で議論されます。
 
@@ -16,7 +16,7 @@
 
 以前にトークンの初期割り当てのための[計画](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6)を提案しました。 株主、従業員、および独立したソフトウェア開発者に割り当てられたトークンは、1年後に段階的なリリーススケジュールで4年間ロックされています。 ロックされたトークンは投票や投資に使用できますが、転送や取引はできません。 トークンの一部はEthereumの専用スマートコントラクトによってロックされていますが、他のトークンはカストディアンを介してロックされています。
 
-Separately, 50.1% of the existing StarkNet tokens are allocated to the StarkNet Foundation, to be used to meet its [goals](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) (cf. [StarkWare’s post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb)). これらのトークンはロックされていません。 ただし、財団は、これらのトークンをさらに割り当てるための正確なメカニズムを策定するための時間が必要であり、その計画を期限内に共有します。
+これとは別に、既存の StarkNet トークンの 50.1% が StarkNet Foundation に割り当てられ、[目標を達成するために使用されます](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59)(cf.[StarkWare の投稿](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb))。 これらのトークンはロックされていません。 ただし、財団は、これらのトークンをさらに割り当てるための正確なメカニズムを策定するための時間が必要であり、その計画を期限内に共有します。
 
 #### なぜ監禁されたのですか？
 
@@ -40,7 +40,7 @@ Compoundの委任モジュールを使用したL1オンチェーン投票の代�
 
 ### ステーキング
 
-StarkNetの権限がなく検閲に強い操作には、シーケンサーをランダムに選択する必要があります。 シーケンスするためにノードが選択され、ブロックを提案する確率は、ノードがステークするStarkNetトークンの数に比例します。 The rationale for using StarkNet Tokens (rather than, say, Ethereum or Bitcoin) is explained in the [governance proposal](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), and the exact details of staking, sequencing and block creation on StarkNet are under ongoing [discussion by the community](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671), and are yet to be finalized.
+StarkNetの権限がなく検閲に強い操作には、シーケンサーをランダムに選択する必要があります。 シーケンスするためにノードが選択され、ブロックを提案する確率は、ノードがステークするStarkNetトークンの数に比例します。 StarkNet トークン (たとえば、イーサリアムやビットコインではなく) を使用する理由は、[ガバナンス提案で説明されており](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)、StarkNet でのステーキング、シーケンス、ブロック作成の正確な詳細は、コミュニティによって進行中の[議論](https://community.starknet.io/t/starknet-decentralized-protocol-introduction/2671)であり、まだ確定していません。
 
 投票と同様に、トークンはロックされていてもステーキングに使用できます。 これはStarkNetオペレータの多様性とStarkNetの回復力に貢献します。
 

@@ -1,37 +1,39 @@
 ### TL;DR
 
-* We are releasing Cairo 1.0-alpha.2, which brings a host of new features to the language
-* It is now possible to implement an ERC20 contract
-* Those new linguistic features will be applicable in the upcoming StarkNet-v0.11.0 version
+* אנו משחררים את Cairo 1.0-alpha.2, אשר מביאה שורה של תכונות חדשות לשפה
+* כעת ניתן ליישם חוזה ERC20
+* התכונות הלשוניות החדשות הללו יחולו בגרסת StarkNet-v0.11.0 הקרובה
 
-### Fresh new features!
+### תכונות חדשות טריות!
 
-Cairo 1.0 is continuing its fast improvement pace. Today’s release introduces, among other things, all the necessary features to write an ERC-20 contract.
+קהיר 1.0 ממשיכה בקצב השיפור המהיר שלה. המהדורה של היום מציגה, בין היתר, את כל התכונות הנחוצות לכתיבת חוזה ERC-20.
 
-To mention some of the new features:
+להזכיר כמה מהתכונות החדשות:
 
-* Dictionaries
-* Events in contracts
-* Mapping storage variables
-* Trait support
-* Type inference
-* Methods
+* מילונים
+* אירועים בחוזים
+* מיפוי משתני אחסון
+* תמיכה בתכונה
+* הקלד מסקנות
+* שיטות
 
-See the complete list in the GitHub [repository.](https://github.com/starkware-libs/cairo)
+ראה את הרשימה המלאה במאגר GitHub [.](https://github.com/starkware-libs/cairo)
 
-Let’s have a look at an example of an ERC20 contract (the full concrete example is, of course, on [GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) to demonstrate a use case of an event and mappings in the storage:
+בואו נסתכל על דוגמה של חוזה ERC20 (הדוגמה הקונקרטית המלאה היא, כמובן, ב[GitHub](https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-starknet/test_data/erc20.cairo)) כדי להדגים מקרה שימוש של אירוע ומיפויים באחסון:
 
 ![](/assets/0_i4ch5-4rxxal4rkt.png)
 
-### Jump into the water!
+### לקפוץ למים!
 
-We continue to work on two parallel vectors:
+אנו ממשיכים לעבוד על שני וקטורים מקבילים:
 
-1. Evolve Cairo 1.0 at full speed towards full-feature compatibility with the old Cairo.
-2. Develop Starknet v0.11.0 that will support contracts written in Cairo 1.0
+1. פתח את Cairo 1.0 במהירות מלאה לקראת תאימות מלאה עם קהיר הישנה.
+2. פתח את Starknet v0.11.0 שיתמוך בחוזים שנכתבו בקהיר 1.0
 
-In the meanwhile, we encourage devs to start writing with Cairo 1.0 and getting familiar with it.
+בינתיים, אנו מעודדים מפתחים להתחיל לכתוב עם Cairo 1.0 ולהכיר אותו.
 
-For any questions — you can use the Cairo 1.0 Discord [channel](https://discord.com/channels/793094838509764618/1065544063245365288).
+לכל שאלה - אתה יכול להשתמש בערוץ</a>של Cairo 1.0 Discord
 
-For any suggestions or feedback — don’t hesitate to open an [issue](https://github.com/starkware-libs/cairo/issues) in the Cairo repo.
+.</p> 
+
+לכל הצעה או משוב - אל תהססו לפתוח גיליון[](https://github.com/starkware-libs/cairo/issues)בריפו של קהיר.

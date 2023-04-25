@@ -1,123 +1,123 @@
-Blockchain scalability has always been a heated topic. Nearly every blockchain network touts high numbers of transactions per second (TPS) as a selling point. However, TPS is not a valid metric to compare blockchain networks with — making it a challenge to evaluate their relative performance. Moreover, big TPS numbers usually come at a cost — which poses the question: do these networks actually scale, or do they just increase their throughput?
+מדרגיות בלוקצ'יין תמיד הייתה נושא לוהט. כמעט כל רשת בלוקצ'יין מציגה מספרים גבוהים של עסקאות בשנייה (TPS) כנקודת מכירה. עם זאת, TPS אינו מדד חוקי להשוות איתן רשתות בלוקצ'יין - מה שהופך את זה לאתגר להעריך את הביצועים היחסיים שלהן. יתרה מכך, למספרי TPS גדולים יש בדרך כלל מחיר - מה שמציב את השאלה: האם הרשתות הללו אכן מתרחבות, או שהן פשוט מגדילות את התפוקה שלהן?
 
-So, let’s examine how to define scalability, which tradeoffs are made to achieve it, and why Validity Rollups are the ultimate scalability solution.
+אז, בואו נבחן כיצד להגדיר מדרגיות, אילו פשרות נעשות כדי להשיג אותה, ומדוע Validity Rollups הם פתרון המדרגיות האולטימטיבי.
 
-### Not all Transactions are Made Equal
+### לא כל העסקאות נעשות שוות
 
-First, we need to establish our assertion that the simple and convenient metric of TPS is not an accurate measure of scalability.
+ראשית, עלינו לבסס את הקביעה שלנו שהמדד הפשוט והנוח של TPS אינו מדד מדויק של מדרגיות.
 
-To compensate nodes for executing transactions (and to deter users from spamming the network with unnecessary computation), blockchains charge a fee proportional to the computational burden imposed on the blockchain. In Ethereum, the complexity of the computational burden is measured in *gas.* Because gas is a very convenient measure of transaction complexity, the term will be used throughout this article for non-Ethereum blockchains as well, even though it is typically Ethereum-specific.
+כדי לפצות צמתים על ביצוע עסקאות (ולהרתיע משתמשים מלשלוח דואר זבל ברשת בחישוב מיותר), בלוקצ'יין גובים עמלה פרופורציונלית לנטל החישובי המוטל על הבלוקצ'יין. ב-Ethereum, מורכבות הנטל החישובי נמדדת בגז*.*מכיוון שגז הוא מדד נוח מאוד למורכבות העסקאות, המונח ישמש לאורך המאמר הזה גם עבור בלוקצ'יין שאינם Ethereum, למרות שהוא בדרך כלל ספציפי ל-Ethereum.
 
-Transactions differ significantly in complexity and, therefore, how much gas they consume. Bitcoin, the pioneer of trustless peer-to-peer transactions, only supports the rudimentary Bitcoin script. These simple transfers from address to address use little gas. In contrast, smart contract chains like Ethereum or Solana support a virtual machine and Turing-complete programming languages that allow for much more complex transactions. Hence, dApps like Uniswap require much more gas.
+עסקאות שונות באופן משמעותי במורכבותן, ולכן, כמה גז הן צורכות. ביטקוין, חלוץ עסקאות עמית לעמית חסרות אמון, תומך רק בכתב הביטקוין הבסיסי. ההעברות הפשוטות הללו מכתובת לכתובת משתמשות במעט גז. לעומת זאת, רשתות חוזים חכמים כמו Ethereum או Solana תומכות במכונה וירטואלית ובשפות תכנות שלמות טיורינג המאפשרות לבצע עסקאות הרבה יותר מורכבות. לפיכך, אפליקציות dApps כמו Uniswap דורשות הרבה יותר גז.
 
-This is why it makes no sense to compare the TPS of different blockchains. What we should compare instead is the capacity for computation — or throughput.
+זו הסיבה שלא הגיוני להשוות את ה-TPS של בלוקצ'יין שונים. מה שעלינו להשוות במקום זאת הוא יכולת החישוב - או התפוקה.
 
-All Blockchains have a (variable) block size and block time that determine how many *units of computation* can be processed per block and how *fast* a new block may be added. Together, these two variables determine the *throughput* of a blockchain.
+לכל Blockchains יש גודל בלוק (משתנה) וזמן חסימה שקובעים כמה*יחידות חישוב*ניתן לעבד בכל בלוק וכמה*מהר*ניתן להוסיף בלוק חדש. יחד, שני המשתנים הללו קובעים את תפוקת**של בלוקצ'יין.
 
-### What Constrains Scalability?
+### מה מגביל את יכולת ההרחבה?
 
-Blockchains strive to be maximally decentralized, inclusive networks. To achieve this, two fundamental properties must be kept in check.
+רשתות בלוקצ'יין שואפות להיות רשתות מבוזרות ומכילות בצורה מקסימלית. כדי להשיג זאת, יש לשמור על שתי תכונות בסיסיות.
 
-#### **1. Hardware Requirements**
+#### **1. דרישות חומרה**
 
-The decentralization of a blockchain network is determined by the ability of the weakest node in the network to verify the blockchain and hold its state. Therefore, the costs to run a node (hardware, bandwidth, and storage) should be kept as low as possible to enable as many individuals as possible to become permissionless participants in the trustless network.
+הביזור של רשת בלוקצ'יין נקבע על ידי היכולת של הצומת החלש ביותר ברשת לאמת את הבלוקצ'יין ולשמור על מצבו. לכן, העלויות להפעלת צומת (חומרה, רוחב פס ואחסון) צריכות להישמר נמוכות ככל האפשר כדי לאפשר לכמה שיותר אנשים להפוך למשתתפים חסרי הרשאה ברשת חסרת האמון.
 
-#### 2**.** State Growth
+#### 2**.**צמיחת המדינה
 
-State growth refers to how quickly the blockchain grows. The more throughput a blockchain allows to happen per unit of time, the quicker the blockchain grows. Full nodes store the network’s history, and they must be able to validate the state of the network. Ethereum’s state is stored and referenced using efficient structures such as trees. As the state grows, new leaves and branches are added to it, making it ever more complex and time-consuming to perform certain actions. As the chain grows in size, it worsens the worst-case execution by nodes, which leads to an ever-growing time to validate new blocks. Over time, this also increases the total time it takes for a full node to sync.
+צמיחת המדינה מתייחסת לכמה מהר הבלוקצ'יין גדל. ככל שבלוקצ'יין מאפשר להתרחש יותר ביחידת זמן, כך הבלוקצ'יין גדל מהר יותר. צמתים מלאים מאחסנים את היסטוריית הרשת, והם חייבים להיות מסוגלים לאמת את מצב הרשת. מצבו של Ethereum מאוחסן ומתייחסים אליו באמצעות מבנים יעילים כגון עצים. ככל שהמדינה גדלה, מתווספים לה עלים וענפים חדשים, מה שהופך אותו למורכב וגוזל זמן רב יותר לבצע פעולות מסוימות. ככל שהשרשרת גדלה בגודלה, היא מחמירה את הביצוע במקרה הגרוע ביותר על ידי צמתים, מה שמוביל לזמן הולך וגדל לאימות בלוקים חדשים. עם הזמן, זה גם מגדיל את הזמן הכולל שלוקח לצומת מלא להסתנכרן.
 
-### Detrimental Impacts of Increasing Throughput
+### השפעות מזיקות של הגדלת התפוקה
 
-#### 1. Node Count
+#### 1. ספירת צמתים
 
-The minimum requirements to run a node and node counts are:
+הדרישות המינימליות להפעלת צומת וספירת צומתים הן:
 
-* Bitcoin¹: 350GB HDD disk space, 5 Mbit/s connection, 1GB RAM, CPU >1 Ghz. **Number of nodes: ~10,000**
-* Ethereum²: 500GB+ SSD disk space, 25 Mbit/s connection, 4–8GB RAM, CPU 2–4 cores. **Number of nodes: ~6,000**
-* Solana³: 1.5TB+ SSD disk space, 300 Mbit/s connection, 128GB RAM CPU 12+ cores. **Number of nodes: ~1,200**
+* ביטקוין¹: שטח דיסק קשיח של 350GB, חיבור של 5 Mbit/s, 1GB RAM, CPU >1 Ghz. **מספר צמתים: ~10,000**
+* Ethereum²: 500GB+ שטח דיסק SSD, חיבור של 25 Mbit/s, 4–8GB RAM, CPU 2–4 ליבות. **מספר צמתים: ~6,000**
+* Solana³: 1.5TB+ שטח דיסק SSD, חיבור של 300 Mbit/s, 128GB RAM CPU 12+ ליבות. **מספר צמתים: ~1,200**
 
-Notice that the bigger the CPU, bandwidth, and storage requirements for nodes required for throughput of a blockchain, the fewer nodes on the network — leading to weaker decentralization and a less inclusive network.
+שימו לב שככל שדרישות המעבד, רוחב הפס והאחסון גדול יותר עבור צמתים הנדרשים לתפוקה של בלוקצ'יין, כך פחות צמתים ברשת - מה שמוביל לביזור חלש יותר ולרשת פחות מכילה.
 
-#### 2. Time to Sync a Full Node
+#### 2. הגיע הזמן לסנכרן צומת מלא
 
-When running a node for the first time, it has to sync to all existing nodes, download, and validate, the state of the network all the way from the genesis block to the tip of the chain. This process should be as fast and efficient as possible to allow anyone to act as a permissionless participant of the protocol.
+כאשר מפעילים צומת בפעם הראשונה, עליו לסנכרן עם כל הצמתים הקיימים, להוריד ולאמת את מצב הרשת לאורך כל הדרך מבלוק הג'נסיס ועד לקצה השרשרת. תהליך זה צריך להיות מהיר ויעיל ככל האפשר כדי לאפשר לכל אחד לפעול כמשתתף חסר רשות בפרוטוקול.
 
-Taking Jameson Lopp’s [2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/) and [2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/) as an indicator, Table 1 compares the time it takes to sync a full node of Bitcoin vs. Ethereum vs. Solana on an average consumer-grade PC.
+בהתייחס ל[2020 Bitcoin Node](https://blog.lopp.net/2020-bitcoin-node-performance-tests/)ו[2021 Node Sync Tests](https://blog.lopp.net/2021-altcoin-node-sync-tests/)של Jameson Lopp כאינדיקטור, טבלה 1 משווה את הזמן שלוקח לסנכרן צומת מלא של ביטקוין מול Ethereum מול Solana במחשב ממוצע ברמת צרכן.
 
-![Table 1. Blockchain throughput and node-sync comparison](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "Table 1. Blockchain throughput and node-sync comparison")
+![שולחן 1. השוואה בין תפוקת בלוקצ'יין וסנכרון צמתים](/assets/1_gmpi_1c9zipoc-znrh7b5q.png "שולחן 1. השוואה בין תפוקת בלוקצ'יין וסנכרון צמתים")
 
-Table 1 demonstrates that increasing throughput leads to longer sync times because more and more data needs to be processed and stored.
+טבלה 1 מדגימה שהגדלת התפוקה מובילה לזמני סנכרון ארוכים יותר מכיוון שצריך לעבד ולאחסן יותר ויותר נתונים.
 
-While improvements to node software are constantly made to mitigate the challenge of the growing blockchain (lowering the disk footprint, faster sync speeds, stronger crash resilience, modularization of certain components, etc.), the nodes evidently still can’t keep pace with increases to throughput.
+בעוד שיפורים לתוכנת הצמתים נעשים כל הזמן כדי להפחית את האתגר של הבלוקצ'יין ההולך וגדל (הורדת טביעת הרגל של הדיסק, מהירויות סנכרון מהירות יותר, עמידות חזקה יותר של קריסה, מודולריזציה של רכיבים מסוימים וכו'), ברור שהצמתים עדיין לא יכולים לעמוד בקצב העליות לתפוקה.
 
-### How Should Scalability be defined?
+### כיצד יש להגדיר מדרגיות?
 
-Scalability is the most misrepresented term in the blockchain space. While increasing throughput is desirable, it is only one part of the puzzle.
+מדרגיות היא המונח המוטעה ביותר בתחום הבלוקצ'יין. אמנם רצוי להגדיל את התפוקה, אבל זה רק חלק אחד מהפאזל.
 
-***Scalability** means **more transactions** for the **same hardware**.*
+***מדרגיות**פירושה**עסקאות נוספות**עבור**אותן חומרה**.*
 
-For that reason, scalability can be separated into two categories.
+מסיבה זו, ניתן להפריד את המדרגיות לשתי קטגוריות.
 
-#### Sequencer scalability
+#### מדרגיות של רצף
 
-Sequencing describes the act of ordering and processing transactions in a network. As previously established, any blockchain could trivially increase its throughput by raising the block size and shortening its block time — up until a point at which the negative impact to its decentralization is deemed too significant. But, tweaking these simple parameters does not provide the required improvements. Ethereum’s EVM can, in theory, [handle up to ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), which is insufficient to service long-term block space demand. To scale sequencing, Solana made some impressive innovations: taking advantage of a parallelizable execution environment and a clever consensus mechanism, which allows for far more efficient throughput. But, despite its improvements, it is neither sufficient nor scalable. As Solana increases its throughput, the hardware costs to run a node and process transactions also increase.
+רצף מתאר את פעולת ההזמנה והעיבוד של עסקאות ברשת. כפי שנקבע בעבר, כל בלוקצ'יין יכול להגדיל באופן טריוויאלי את התפוקה שלו על ידי הגדלת גודל הבלוק וקיצור זמן החסימה שלו - עד לנקודה שבה ההשפעה השלילית על הביזור שלו נחשבת משמעותית מדי. אבל, התאמה של הפרמטרים הפשוטים האלה לא מספקת את השיפורים הנדרשים. ה-EVM של Ethereum יכול, בתיאוריה,[להתמודד עם עד ~2,000 TPS](https://twitter.com/dankrad/status/1459607325854121989), וזה לא מספיק כדי לתת שירות לדרישת שטח בלוקים לטווח ארוך. כדי להרחיב את הרצף, סולאנה עשתה כמה חידושים מרשימים: ניצול סביבת ביצוע הניתנת להקביל ומנגנון קונצנזוס חכם, המאפשר תפוקה יעילה הרבה יותר. אבל, למרות השיפורים שלו, זה לא מספיק ולא ניתן להרחבה. ככל שסולאנה מגדילה את התפוקה שלה, עלויות החומרה להפעלת צומת ועיבוד עסקאות עולות גם הן.
 
-#### Verification scalability
+#### מדרגיות אימות
 
-*Verification scalability describes approaches that increase throughput without burdening nodes with ever-increasing hardware costs.* Specifically, it refers to cryptographic innovations like Validity proofs. They are the reason why Validity Rollups can scale a blockchain sustainably.
+*מדרגיות אימות מתארת גישות המגדילות את התפוקה מבלי להעמיס על צמתים עם עלויות חומרה הולכות וגדלות.*ספציפית, זה מתייחס לחידושים קריפטוגרפיים כמו הוכחות תוקף. הם הסיבה לכך ש-Lodity Rollups יכולים להרחיב בלוקצ'יין באופן בר קיימא.
 
-**What’s a Validity Rollup?**
+**מה זה אוסף תוקף?**
 
-Validity Rollups (also known as “ZK-Rollups”) move computation and state storage off-chain but keep a small amount of certain data on-chain. A smart contract on the underlying blockchain maintains the state root of the Rollup. On the Rollup, a batch of highly-compressed transactions, together with the current state root, are sent to an off-chain Prover. The Prover computes the transactions, generates a validity proof of the results and the new state root, and sends it to an on-chain Verifier. The Verifier verifies the validity proof, and the smart contract that maintains the state of the Rollup updates it to the new state provided by the Prover.
+אוסף תוקף (הידוע גם בשם "ZK-Rollups") מעביר חישוב ואחסון מצב מחוץ לשרשרת, אך שומר כמות קטנה של נתונים מסוימים על השרשרת. חוזה חכם על הבלוקצ'יין הבסיסי שומר על שורש המדינה של ה-Rollup. ב-Rollup, אצווה של עסקאות דחוסות מאוד, יחד עם שורש המצב הנוכחי, נשלחות ל-Prover מחוץ לשרשרת. המוכיח מחשב את העסקאות, מייצר הוכחת תוקף של התוצאות ושורש המצב החדש, ושולח אותו לאמת על השרשרת. המאמת מאמת את הוכחת התוקף, והחוזה החכם ששומר על מצב ה-Rollup מעדכן אותו למצב החדש שסופק על ידי המוכיח.
 
-**How do Validity Rollups scale with the same hardware requirements?**
+**כיצד מתרחבים אוסף תוקף עם אותן דרישות חומרה?**
 
-Even though Provers do require high-end hardware, they do not impact the decentralization of a blockchain; because the validity of transactions is guaranteed by mathematically-verifiable proofs.
+למרות ש-Provers דורשים חומרה מתקדמת, הם אינם משפיעים על ביזור הבלוקצ'יין; כי תקפותן של עסקאות מובטחת על ידי הוכחות הניתנות לאימות מתמטית.
 
-What matters are the requirements to verify the proofs. Because the data involved is highly compressed and largely abstracted away through computation, its impact on nodes of the underlying blockchain is minimal*.*
+מה שחשוב הן הדרישות לאימות ההוכחות. מכיוון שהנתונים המעורבים דחוסים מאוד ומופשטים ברובם באמצעות חישוב, השפעתם על צמתים של הבלוקצ'יין הבסיסית היא*מינימלית.*
 
-Verifiers (Ethereum nodes) do not require high-end hardware, and the size of the batches does not increase hardware requirements. Only state transitions and a small amount of call data need to be processed and stored by the nodes. This allows all Ethereum nodes to verify Validity Rollup batches using their existing hardware.
+מאמתים (צמתי Ethereum) אינם דורשים חומרה מתקדמת, וגודל האצוות אינו מגדיל את דרישות החומרה. רק מעברי מצב וכמות קטנה של נתוני שיחה צריכים להיות מעובדים ומאוחסנים על ידי הצמתים. זה מאפשר לכל צמתי Ethereum לאמת אצווה של אוסף תוקף באמצעות החומרה הקיימת שלהם.
 
-**The more transactions, the cheaper it gets**
+**ככל שיותר עסקאות, כך זה נהיה זול יותר**
 
-In traditional blockchains, the more transactions happen, the more expensive it gets for everyone as the block space gets filled up — and users need to outbid each other in a fee market to get their transactions included.
+ב-blockchains המסורתיים, ככל שיותר עסקאות מתרחשות, כך זה יתייקר עבור כולם ככל ששטח הבלוק מתמלא - והמשתמשים צריכים להציע מחיר גבוה יותר זה על זה בשוק עמלות כדי לכלול את העסקאות שלהם.
 
-For a Validity Rollup, this dynamic is reversed. Verifying a batch of transactions on Ethereum has a certain cost. As the number of transactions inside a batch grows, the cost to verify the batch grows at an exponentially slower rate. Adding more transactions to a batch leads to cheaper transaction fees even though the batch verification cost increases — because it is amortized among all transactions inside the batch. Validity Rollups want as many transactions as possible inside a batch — so that the verification fee can be shared among all users. As batch size grows to infinity, amortized fee per transaction converges to zero, i.e., the more transactions on a Validity Rollup, the cheaper it gets for everyone.
+עבור אוסף תוקף, הדינמיקה הזו הפוכה. לאימות קבוצת עסקאות ב-Ethereum יש עלות מסוימת. ככל שמספר העסקאות בתוך אצווה גדל, העלות לאימות האצווה גדלה בקצב איטי יותר באופן אקספוננציאלי. הוספת עסקאות נוספות לאצווה מובילה לעמלות עסקה זולות יותר למרות שעלות האימות האצווה עולה - מכיוון שהיא מופחתת בין כל העסקאות בתוך האצווה. אוסף תוקף רוצה כמה שיותר עסקאות בתוך אצווה - כדי שניתן יהיה לחלק את עמלת האימות בין כל המשתמשים. ככל שגודל האצווה גדל לאינסוף, עמלה מופחתת לעסקה מתכנסת לאפס, כלומר, ככל שיותר עסקאות באוסף תוקף, כך היא זולה יותר עבור כולם.
 
-dYdX, a dApp powered by a Validity Rollup, frequently sees batch sizes of over 12,000 transactions. Comparing the gas consumption of the same transactions on Mainnet vs. on a Validity Rollup illustrates the scalability gains:
+dYdX, dApp המופעל על ידי אוסף תקפות, רואה לעתים קרובות גדלי אצווה של למעלה מ-12,000 עסקאות. השוואת צריכת הגז של אותן עסקאות ב-Mainnet לעומת ב-Validity Rollup ממחישה את רווחי המדרגיות:
 
-Settling a dYdX transaction on Ethereum Mainnet: **200,000 gas**
+יישוב עסקת dYdX ב-Ethereum Mainnet:**200,000 גז**
 
-Settling a dYdX transaction on StarkEx: **<500 gas**
+יישוב עסקת dYdX ב-StarkEx:**<500 גז**
 
-Another way to look at it: Validity Rollups’ main cost scales linearly with the number of users within the same batch.
+דרך נוספת להסתכל על זה: העלות העיקרית של Validity Rollups מתקדמת באופן ליניארי עם מספר המשתמשים באותה אצווה.
 
-#### Why Optimistic Rollups are not as scalable as one may think
+#### מדוע רשימות אופטימיות אינן ניתנות להרחבה כפי שניתן לחשוב
 
-In theory, Optimistic Rollups provide nearly the same scalability benefits as Validity Rollups. But there is one important distinction: Optimistic Rollups optimize for the average case, whereas Validity Rollups optimize for the worst case. Because blockchain systems operate in extremely adversarial conditions, optimizing for the worst case is the only way to achieve security.
+בתיאוריה, אוסף אופטימיסטים מספק כמעט את אותם יתרונות מדרגיות כמו אוסף תוקף. אבל יש הבחנה אחת חשובה: אוסף אופטימיסטים מבצע אופטימיזציה למקרה הממוצע, ואילו אוסף תוקף מבצע אופטימיזציה למקרה הגרוע ביותר. מכיוון שמערכות בלוקצ'יין פועלות בתנאים יריבים במיוחד, אופטימיזציה למקרה הגרוע היא הדרך היחידה להשיג אבטחה.
 
-In the Optimistic Rollup’s worst case, a user’s transactions won’t be checked by fraud checkers. So, to contest fraud, the user has to sync an Ethereum full node, an L2 full node, and compute the suspicious transaction themself.
+במקרה הגרוע ביותר של אוסף האופטימיות, עסקאות של משתמש לא ייבדקו על ידי בודקי הונאה. לכן, כדי להתחרות בהונאה, המשתמש צריך לסנכרן צומת מלא של Ethereum, צומת מלא L2 ולחשב את העסקה החשודה בעצמו.
 
-In the Validity Rollup’s worst case, a user would only need to sync an Ethereum full node to verify the validity proof, saving themself the computational burden.
+במקרה הגרוע ביותר של אוסף התוקף, משתמש יצטרך רק לסנכרן צומת Ethereum מלא כדי לאמת את הוכחת התוקף, ולחסוך לעצמו את הנטל החישובי.
 
-As opposed to Validity Rollups, Optimistic Rollups’ cost scales linearly with the number of transactions instead of number of users, making them more expensive.
+בניגוד ל-Lodity Rollups, העלויות של Optimistic Rollups מתרחבות באופן ליניארי עם מספר העסקאות במקום מספר המשתמשים, מה שהופך אותן ליקר יותר.
 
-### Final Piece of the Puzzle — Permissionless Access to the Rollup State
+### החלק האחרון של הפאזל - גישה ללא רשות למצב האוסף
 
-To guarantee the validity of transactions, users need to run an Ethereum node only. However, users and developers may want to view, and run, the state and execution of the Rollup for various purposes. An *indexing L2 node* fills this need perfectly. Not only does it allow users to see the transactions in the network, but it is also a critical piece of infrastructure that is necessary for ecosystem infrastructure to function. Indexers like The Graph, Alchemy, Infura; Oracle networks like Chainlink, and block explorers, all of these are fully supported by a permissionless, indexing L2 node.
+כדי להבטיח את תקפות העסקאות, המשתמשים צריכים להפעיל צומת Ethereum בלבד. עם זאת, משתמשים ומפתחים עשויים לרצות להציג ולהפעיל את המצב והביצוע של האוסף למטרות שונות. צומת L2</em>של אינדקס*ממלא את הצורך הזה בצורה מושלמת. לא רק שהוא מאפשר למשתמשים לראות את העסקאות ברשת, אלא שהוא גם חלק קריטי של תשתית הנחוץ לתשתית האקולוגית לתפקד. אינדקסים כמו The Graph, Alchemy, Infura; רשתות אורקל כמו Chainlink, וחוקרי בלוקים, כל אלה נתמכים באופן מלא על ידי צומת L2 חסר הרשאות ואינדקס.</p>
 
-### Conclusion
+### סיכום
 
-Many approaches to tackle blockchain scalability falsely focus on increasing *throughput*. But, this neglects throughputs’ impact on nodes: the ever-increasing hardware requirements to process blocks and store network history, and how that inhibits the decentralization of a network.
+גישות רבות להתמודדות עם מדרגיות בלוקצ'יין מתמקדות בטעות בהגדלת תפוקה של**. אבל, זה מזניח את ההשפעה של התפוקה על צמתים: דרישות החומרה ההולכות וגוברות לעיבוד בלוקים ואחסון היסטוריית רשת, וכיצד זה מעכב את ביזור הרשת.
 
-With the advent of Validity-proof cryptography, a blockchain can achieve **true scalability**that doesn’t burden nodes with ever-increasing costs and allows for wide decentralization. More transactions with powerful and more complex computations for the same hardware are now possible, inverting the fee market dilemma in the process — the more activity on a Validity Rollup, the cheaper it gets!
+עם הופעתה של קריפטוגרפיה חסינת תוקף, בלוקצ'יין יכול להשיג**מדרגיות אמיתית**שאינה מעמיסה על הצמתים בעלויות הולכות וגדלות ומאפשרת ביזור רחב. כעת אפשריות יותר עסקאות עם חישובים חזקים ומורכבים יותר עבור אותה חומרה, מה שהופך את הדילמה של שוק העמלות בתהליך - ככל שתהיה יותר פעילות ב-Validity Rollup, כך היא זולה יותר!
 
-[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09) and [Louis Guthmann](https://twitter.com/GuthL)
+[SwagtimusPrime.eth](https://twitter.com/SwagtimusP?t=pO0L1vGIhuC-ZgWOusQYtA&s=09)ו[לואיס גוטמן](https://twitter.com/GuthL)
 
-¹ From <https://bitcoin.org/en/bitcoin-core/features/requirements>
+¹ מ<https://bitcoin.org/en/bitcoin-core/features/requirements>
 
-² From <https://ethereum.org/en/developers/docs/nodes-and-clients/>
+² מ<https://ethereum.org/en/developers/docs/nodes-and-clients/>
 
-³ From <https://docs.solana.com/running-validator/validator-reqs>
+³ מ<https://docs.solana.com/running-validator/validator-reqs>
 
-⁴ Strongly simplified and adjusted for average dynamic block sizes
+⁴ מפושט מאוד ומותאם לגדלי בלוקים דינמיים ממוצעים

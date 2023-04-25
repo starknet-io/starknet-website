@@ -1,65 +1,65 @@
 ### TL;DR
 
-* StarkNet Alpha 0.8.0 presents the initial version of the fee mechanism (optional until StarkNet Alpha 0.9.0.)
-* New API calls for estimating the transaction fee for obtaining the transaction trace, allowing better visibility and debugging capabilities
-* Performance improvements to the StarkNet sequencer
-* L1→L2 message cancellation
+* StarkNet Alpha 0.8.0 מציג את הגרסה הראשונית של מנגנון העמלות (אופציונלי עד StarkNet Alpha 0.9.0.)
+* API חדש קורא להערכת עמלת העסקה לקבלת מעקב העסקה, המאפשר נראות טובה יותר ויכולות ניפוי באגים
+* שיפורי ביצועים לרצף StarkNet
+* ביטול הודעה L1→L2
 
-### Intro
+### הקדמה
 
-As shared in our [roadmap](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), following the latest addition to StarkNet’s functionality and features, our attention shifts towards performance enhancements and protocol design (including fees, account abstraction, decentralization, etc.). StarkNet Alpha 0.8.0 starts the process of adding transaction fees and improving the sequencer’s performance.
+כפי ששותף במפת הדרכים[שלנו](https://www.notion.so/starkware/StarkNet-Alpha-Features-Tentative-Roadmap-f2b8f5f25a2d4d1cb3265fb82a098c51), בעקבות התוספת האחרונה לפונקציונליות ולתכונות של StarkNet, תשומת הלב שלנו עוברת לשיפורי ביצועים ועיצוב פרוטוקולים (כולל עמלות, הפשטת חשבונות, ביזור וכו'). StarkNet Alpha 0.8.0 מתחיל בתהליך של הוספת עמלות עסקה ושיפור ביצועי הרצף.
 
-The roadmap for StarkNet includes a fee mechanism, and by progressing with this version we are taking an important step closer to full performance for the platform.
+מפת הדרכים של StarkNet כוללת מנגנון עמלות, ועל ידי התקדמות עם גרסה זו אנו מתקרבים צעד חשוב לביצועים מלאים עבור הפלטפורמה.
 
-Adding the fee mechanism is an essential part of StarkNet’s performance design. Without a minimal fee, we risk facing infinite transactions: which would make it impossible for the system to be performant, regardless of sequencer optimizations.
+הוספת מנגנון העמלות היא חלק חיוני מעיצוב הביצועים של StarkNet. ללא עמלה מינימלית, אנו מסתכנים בפני אינסוף עסקאות: מה שלא יאפשר למערכת להיות ביצועית, ללא קשר לאופטימיזציות של הרצף.
 
-### Features
+### מאפיינים
 
-#### Fee Support
+#### תמיכה בתשלום
 
-StarkNet Alpha now supports the first version of the fee mechanism. This mechanism is essential even at this early stage, and even on Testnet, for two main reasons:
+StarkNet Alpha תומך כעת בגרסה הראשונה של מנגנון העמלות. מנגנון זה חיוני אפילו בשלב מוקדם זה, ואפילו ב-Testnet, משתי סיבות עיקריות:
 
-1. It allows developers to start optimizing their contracts according to StarkNet’s cost model.
-2. It is a crucial counterpart to improving the system’s performance, as it prevents spamming by sending countless transactions.
+1. זה מאפשר למפתחים להתחיל לייעל את החוזים שלהם לפי מודל העלויות של StarkNet.
+2. זהו מקביל מכריע לשיפור ביצועי המערכת, שכן הוא מונע ספאם על ידי שליחת אינספור עסקאות.
 
-This version introduces the components necessary for developers to incorporate fee payments into their tools and applications. Developers can now estimate the transaction fee by calling the \`estimate_fee\` endpoint and make the fee payment as part of the transaction execution.
+גרסה זו מציגה את הרכיבים הדרושים למפתחים כדי לשלב תשלומי עמלות בכלים ובאפליקציות שלהם. מפתחים יכולים כעת להעריך את עמלת העסקה על ידי קריאה לנקודת הקצה \`estimate_fee\` ולבצע את תשלום העמלה כחלק מביצוע העסקה.
 
-Since this feature is not backward compatible, we will not enforce the fee payment at this point, but only from version 0.9.0, which is due to be released in a few weeks. This gradual transition will allow users and developers to adjust to the new model.
+מכיוון שתכונה זו אינה תואמת לאחור, לא נאכוף את תשלום העמלה בשלב זה, אלא רק מגרסה 0.9.0, שאמורה לצאת בעוד מספר שבועות. מעבר הדרגתי זה יאפשר למשתמשים ולמפתחים להסתגל לדגם החדש.
 
-#### Fee Structure on 0.8.0
+#### מבנה עמלות ב-0.8.0
 
-On 0.8.0, fees will be collected according to the computational complexity alone, while StarkWare will still subsidize L1 communication cost. We will update the fee mechanism to include these L1 operation and communication costs over the next few weeks. The payment will be collected atomically with the transaction execution on StarkNet L2. See the [fees documentation](https://starknet.io/documentation/fee-mechanism/) for an in-depth description.
+בתאריך 0.8.0, עמלות ייגבו בהתאם למורכבות החישובית בלבד, בעוד ש-StarkWare עדיין תסבסד את עלות התקשורת L1. אנו נעדכן את מנגנון העמלות כך שיכלול את עלויות התפעול והתקשורת L1 הללו במהלך השבועות הקרובים. התשלום ייגבה באופן אטומי עם ביצוע העסקה ב-StarkNet L2. עיין בתיעוד[עמלות](https://starknet.io/documentation/fee-mechanism/)לתיאור מעמיק.
 
-It’s important to note that we will work closely with the developer community to tweak and develop the fee mechanism as StarkNet evolves.
+חשוב לציין שאנו נעבוד בשיתוף פעולה הדוק עם קהילת המפתחים כדי לצבוט ולפתח את מנגנון העמלות ככל ש-StarkNet מתפתח.
 
-#### L2 Goerli ETH Faucet
+#### ברז L2 Goerli ETH
 
-We launched the [L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/) to enable users to pay fees on Testnet. This Faucet sends small amounts of L2 Goerli ETH to your account address on StarkNet Goerli which you can use for paying the transaction fee.
+השקנו את[L2 Goerli ETH Faucet](https://faucet.goerli.starknet.io/)כדי לאפשר למשתמשים לשלם עמלות ב-Testnet. ברז זה שולח כמויות קטנות של L2 Goerli ETH לכתובת החשבון שלך ב-StarkNet Goerli שבה תוכל להשתמש לתשלום עמלת העסקה.
 
 #### Trace API
 
-We added the ability to retrieve a transaction’s execution trace to StarkNet’s API. Inside the transaction’s trace, all the internal calls are visible, accompanied by information such as execution resources consumed, return value, emitted events, and messages sent. This new call simplifies understanding a contract’s behavior or debugging transactions. Additionally, tools such as [Voyager](https://voyager.online/) or [StarkTx](https://starktx.info/) could incorporate this data; providing the users with more detailed analysis, in particular for account contract interaction.
+הוספנו את היכולת לאחזר מעקב ביצוע של עסקה ל-API של StarkNet. בתוך עקבות העסקה, כל השיחות הפנימיות גלויות, מלוות במידע כמו משאבי ביצוע שנצרכו, ערך החזרה, אירועים שנפלטו והודעות שנשלחו. קריאה חדשה זו מפשטת את הבנת התנהגות החוזה או ניפוי באגים בעסקאות. בנוסף, כלים כגון[Voyager](https://voyager.online/)או[StarkTx](https://starktx.info/)יכולים לשלב נתונים אלה; לספק למשתמשים ניתוח מפורט יותר, במיוחד עבור אינטראקציה עם חוזה חשבון.
 
-To obtain the trace, you may use \`get_transaction_trace\` in StarkNet’s CLI. To see an example of how to use it, check the [tutorial](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
+כדי להשיג את המעקב, אתה יכול להשתמש ב-\`get_transaction_trace\` ב-CLI של StarkNet. כדי לראות דוגמה לשימוש בו, עיין במדריך[](https://www.cairo-lang.org/docs/hello_starknet/cli.html?#get-transaction-trace).
 
-#### Message Cancellation
+#### ביטול הודעה
 
-An additional feature of this version is the ability to cancel L1→L2 messages. Why is this useful? Imagine a scenario where a user transfers an asset from L1 to L2. The flow starts with the user sending the asset to a StarkNet bridge and the corresponding L1→L2 message generation. Now, imagine that the L2 message consumption doesn’t function (this might happen due to a bug in the dApps’s Cairo contract). This could result in the user losing custody over their asset forever.
+תכונה נוספת של גרסה זו היא היכולת לבטל הודעות L1→L2. למה זה שימושי? תארו לעצמכם תרחיש שבו משתמש מעביר נכס מ-L1 ל-L2. הזרימה מתחילה בכך שהמשתמש שולח את הנכס לגשר של StarkNet ויצירת הודעות L1→L2 התואמת. כעת, תארו לעצמכם שצריכת ההודעות L2 לא פועלת (זה עלול לקרות בגלל באג בחוזה קהיר של dApps). זה עלול לגרום למשתמש לאבד את המשמורת על הנכס שלו לנצח.
 
-To mitigate this risk, we allow the contract that initiated the L1→L2 message to cancel it — after declaring the intent to do so and waiting a suitable amount of time (see the [documentation](https://starknet.io/l1-l2-messaging/#cancellation)).
+כדי להפחית סיכון זה, אנו מאפשרים לחוזה שיזם את הודעת L1→L2 לבטל אותו - לאחר שהכריזו על הכוונה לעשות זאת והמתנה פרק זמן מתאים (ראה תיעוד[](https://starknet.io/l1-l2-messaging/#cancellation)).
 
-### Performance Improvements
+### שיפורי ביצועים
 
-This version significantly decreases the time a sequencer needs to execute a stream of incoming Cairo transactions.
+גרסה זו מקטינה משמעותית את הזמן שסיקוונסר צריך לבצע זרם של עסקאות נכנסות בקהיר.
 
-This is only the first step! Our next major performance milestone, to be introduced soon (0.9.0), is parallel execution of the sequencer, and many more optimizations are expected down the road.
+זה רק הצעד הראשון! אבן הדרך הגדולה הבאה שלנו בביצועים, שתוצג בקרוב (0.9.0), היא ביצוע מקביל של הרצף, וצפויות עוד אופטימיזציות רבות בהמשך הדרך.
 
-### What now?
+### מה עכשיו?
 
-Read the technical documentation [here](https://starknet.io/documentation/fee-mechanism/).
+קרא את התיעוד הטכני[כאן](https://starknet.io/documentation/fee-mechanism/).
 
-Go to [starknet.io](https://starknet.io/), for all StarkNet information, documentation, tutorials, and updates.
+עבור אל[starknet.io](https://starknet.io/), לקבלת כל המידע, התיעוד, ההדרכות והעדכונים של StarkNet.
 
-Join [StarkNet Discord](https://discord.gg/uJ9HZTUk2Y) for dev support, ecosystem announcements, and becoming a part of the community.
+הצטרף ל[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y)לתמיכה במפתחים, הכרזות של מערכות אקולוגיות והפיכה לחלק מהקהילה.
 
-Visit [StarkNet Shamans](https://community.starknet.io/) to stay updated and participate in all StarkNet research discussions.
+בקר ב[StarkNet Shamans](https://community.starknet.io/)כדי להישאר מעודכן ולהשתתף בכל דיוני המחקר של StarkNet.

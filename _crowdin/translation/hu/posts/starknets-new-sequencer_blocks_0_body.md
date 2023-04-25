@@ -1,39 +1,39 @@
 ### TL;DR
 
-* A new StarkNet sequencer is being developed
-* It is open-source under the Apache 2.0 license
-* It’s first goal is to increase StarkNet’s throughput
+* Új StarkNet szekvenszer fejlesztés alatt áll
+* Az Apache 2.0 licenc alatt nyílt forráskódú
+* Az első cél a StarkNet átviteli sebességének növelése
 
-### A shiny new sequencer
+### Egy fényes új szekvenszer
 
-We are happy to announce a new StarkNet Sequencer is in the works. As StarkNet’s tech stack moves towards open-source, following [Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0) and [Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202), we now continue with StarkNet’s new sequencer. It will be open-source, available under Apache 2.0 license, and you can go check out [the repo](https://github.com/starkware-libs/blockifier) now!
+Örömmel jelentjük be, hogy egy új StarkNet Sequencer készül. Ahogy a StarkNet technológiai stackje a nyílt forráskód felé halad,[Cairo 1.0](https://medium.com/starkware/open-sourcing-cairo-1-0-b3100a664bb0)és[Papyrus Full Node](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)után, most a StarkNet új szekvenszerével folytatjuk. Nyílt forráskódú lesz, Apache 2.0 licenc alatt érhető el, és most megnézheti[a repo](https://github.com/starkware-libs/blockifier)!
 
-Building a new Sequencer is part of the [StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de) we presented a few months ago. Implementation of the new sequencer will start with replacement of the **Blockifier**, the module within the sequencer that performs block execution. As explained in the roadmap, it is expected to deliver benefits for StarkNet’s performance.
+Az új Sequencer építése a néhány hónappal ezelőtt bemutatott[StarkNet Roadmap](https://medium.com/starkware/starknet-performance-roadmap-bb7aae14c7de)része. Az új szekvenszer megvalósítása a**Blockfier**cseréjével kezdődik, amely a szekvenszeren belüli blokkvégrehajtást végző modul. Az ütemtervben leírtak szerint várhatóan előnyökkel jár a StarkNet teljesítménye szempontjából.
 
-Our approach to building this sequencer is the same approach that guided us in StarkNet Alpha. The sequencer **will be implemented in stages**, and we are sharing today its first module. Over time, new components of the sequencer will be completed, until eventually a Rust-based sequencer will replace the current Python-based sequencer entirely.
+A szekvenszer felépítéséhez ugyanaz a megközelítés, mint a StarkNet Alpha esetében. A**szekvenszert**szakaszban fogjuk megvalósítani, és ma megosztjuk az első modulját. Idővel a szekvenszer új összetevői elkészülnek, míg végül egy Rust-alapú szekvenszer teljesen felváltja a jelenlegi Python-alapú szekvenszert.
 
-### What does the sequencer do?
+### Mit csinál a szekvenszer?
 
-On StarkNet, after users send transactions, the first stop in the transaction’s journey to STARK scaling is the sequencers. In the StarkNet protocol, the sequencers are responsible for ordering the transactions and producing blocks. After the block is created by a sequencer, and approved by the consensus protocol, the provers take over and generate a proof for L1.
+A StarkNeten, miután a felhasználók tranzakciókat küldtek, a tranzakció STARK skálázáshoz vezető útjának első állomása a szekvenszerek. A StarkNet protokollban a szekvenszerek felelősek a tranzakciók megrendeléséért és a blokkok előállításáért. Miután a blokkot egy szekvenszer létrehozta, és a konszenzus protokoll jóváhagyta, a bizonyítók átveszik az irányítást és létrehoznak egy bizonyítást az L1-hez.
 
 ![](/assets/1_ndrekwqunjixo_wskdeycw-1.png)
 
-### Open-Sourcing
+### Nyílt forráskódú
 
-StarkNet Alpha launched on Mainnet in November 2021. From the outset, it was committed to share the power of STARK scaling with the world.
+A StarkNet Alpha 2021 novemberében indult a Mainneten. Kezdettől fogva elkötelezte magát, hogy megossza a világgal a STARK méretezés erejét.
 
-Today, we are releasing the first in a line of modules of the new open-source sequencer. It will take several months for all modules and sub-modules to be deployed. Open sourcing everything will enable community members to contribute to the development, and to audit the codebase.
+Ma adjuk ki az első modult az új nyílt forráskódú szekvenszer moduljai közül. Az összes modul és almodul üzembe helyezése több hónapot vesz igénybe. A nyílt forráskódú minden lehetővé teszi a közösség tagjainak, hogy hozzájáruljanak a fejlesztéshez, és ellenőrizzék a kódbázist.
 
-This will edge StarkNet closer to a point of decentralized permissionless sequencing. We are now designing StarkNet’s decentralized protocol and we are encouraging the community to take part in the [research and the discussion](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
+Ezzel közelebb kerül a StarkNet a decentralizált engedély nélküli szekvenálás pontjához. Jelenleg a StarkNet decentralizált protokollját tervezzük, és arra ösztönözzük a közösséget, hogy vegyen részt a[kutatásban és a vitában](https://community.starknet.io/t/starknet-decentralized-protocol-consensus/5386).
 
-### Performance
+### Teljesítmény
 
-StarkNet’s original sequencer is largely an adaptation of StarkEx infrastructure. Now, there is a need for infrastructure that is built especially for the requirements of a decentralized highly-performant network.
+A StarkNet eredeti szekvenszere nagyrészt a StarkEx infrastruktúra adaptációja. Most olyan infrastruktúrára van szükség, amelyet kifejezetten a decentralizált, nagy teljesítményű hálózat követelményeihez építettek.
 
-Built in Rust, the new sequencer is designed and developed with performance in mind. The new sequencer also builds on solid foundations: Papyrus, the new [StarkNet full node,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202) will handle state management, and cairo-rs, the new Cairo-VM by LambdaClass, will speed up the Cairo execution. We expect the new sequencer to improve upon the existing sequencer in every aspect. The throughput and latency of the network is expected to improve dramatically with the integration of this sequencer in StarkNet.
+A Rustba épített új szekvenszert a teljesítményt szem előtt tartva tervezték és fejlesztették. Az új szekvenszer is szilárd alapokra épít: a Papyrus, az új[StarkNet teljes csomópont,](https://medium.com/starkware/papyrus-an-open-source-starknet-full-node-396f7cd90202)kezeli az állapotkezelést, a cairo-rs, a LambdaClass új Cairo-VM pedig felgyorsítja a Cairo végrehajtását. Arra számítunk, hogy az új szekvenszer minden szempontból jobb lesz a meglévő szekvenszerhez képest. A hálózat átviteli sebessége és késleltetése várhatóan drámai mértékben javulni fog a szekvenszer StarkNetbe történő integrálásával.
 
-We also expect other infrastructure and development tools to be able to use the new sequencer to improve the development experience. Full node performance is expected to improve as well as all the testing frameworks.
+Arra számítunk, hogy más infrastruktúra és fejlesztési eszközök is képesek lesznek az új szekvenszerrel javítani a fejlesztési élményt. A csomópont teljes teljesítménye várhatóan javulni fog, csakúgy, mint az összes tesztelési keretrendszer.
 
-### Summary
+### Összegzés
 
-We are excited to announce today the new open-source sequencer. Its first module is already available for the community to review, and will be followed with more modules in the following months to come. We are also happy to take another step in our roadmap for enhancing StarkNet’s performance. We aim to make the network more efficient and accessible, and we appreciate the support of everyone who has joined us on this journey.
+Örömmel jelentjük be ma az új nyílt forráskódú szekvenszert. Ennek első modulja már elérhető a közösség számára, és a következő hónapokban további modulokkal követhető. Örülünk annak is, hogy újabb lépést teszünk a StarkNet teljesítményének javítására irányuló ütemtervünkben. Célunk, hogy a hálózatot hatékonyabbá és elérhetőbbé tegyük, és köszönjük mindenkinek, aki csatlakozott hozzánk ezen az úton.

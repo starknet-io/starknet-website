@@ -1,72 +1,72 @@
 ### TL;DR
 
-* Account Abstraction Improvements in spirit of EIP-4337
+* Fiókabsztrakciós fejlesztések az EIP-4337 szellemében
 
-1. Validate — Execute separation
-2. Transaction uniqueness is now ensured in the protocol (Nonce)
+1. Érvényesítés – Elválasztás végrehajtása
+2. A tranzakció egyedisége mostantól biztosított a protokollban (Nonce)
 
-* The fee mechanism is extended to include:
+* A díjmechanizmus a következőkre terjed ki:
 
-1. L1→L2 Messages
-2. Declare Transactions
+1. L1→L2 Üzenetek
+2. Tranzakciók deklarálása
 
-* Few Cairo syntax changes
+* Néhány kairói szintaxis változás
 
 ### Intro
 
-We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+Izgatottan várjuk a StarkNet Alpha 0.10.0 bemutatását. Ez a verzió egy újabb lépés az Ethereum méretezéséhez anélkül, hogy a biztonság és a decentralizáció veszélyeztetné.
 
-This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
+Ez a blogbejegyzés röviden ismerteti ennek a verziónak a főbb jellemzőit. A változtatások teljes listájáért tekintse meg a[kiadási megjegyzéseket](https://github.com/starkware-libs/cairo-lang/releases). További részletekért tekintse meg a[dokumentációt](https://docs.starknet.io/).
 
-### Account Abstraction Changes
+### Fiókabsztrakciós változások
 
-We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+Továbblépünk[StarkNet fiókabsztrakciójával](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). Ez a verzió a[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)által ihletett változtatásokat vezet be.
 
-#### Validate/Execute Separation
+#### Elválasztás érvényesítése/végrehajtása
 
-Up until now, the account’s \_\_execute\_\_ function was responsible for both the transaction validation and execution. In 0.10.0 we break this coupling and introduce a separate \_\_validate\_\_ function into accounts. Upon receiving a transaction, the account contract will first call \_\_validate\_\_, and then, if successful, proceed to \_\_execute\_\_.
+Eddig a fiók \_\_execute\_\_ funkciója volt felelős mind a tranzakció érvényesítéséért, mind a végrehajtásért. A 0.10.0-ban megszakítjuk ezt a csatolást, és bevezetünk egy külön \_\_validate\_\_ függvényt a fiókokba. A tranzakció beérkezésekor a számlaszerződés először a \_\_validate\_\_ parancsot hívja meg, majd ha sikeres, akkor folytatja a \_\_execute\_\_ műveletet.
 
-The validate/execute separation provides a protocol-level distinction between invalid and reverted (yet valid) transactions. Thanks to that, sequencers will be able to charge fees for the execution of a valid transaction regardless of whether it was reverted or not.
+Az érvényesítés/végrehajtás szétválasztás protokollszintű különbséget tesz az érvénytelen és a visszaállított (még érvényes) tranzakciók között. Ennek köszönhetően a szekvenszerek díjat számíthatnak fel egy érvényes tranzakció végrehajtásáért, függetlenül attól, hogy azt visszaállították-e vagy sem.
 
 #### Nonce
 
-In version 0.10.0 a nonce field is added in order to enforce transaction uniqueness at the protocol level. Until now nonces were handled at the account contract level, which meant that a transaction with the same hash could be executed twice theoretically.
+A 0.10.0-s verzióban egy nonce mező került hozzáadásra a tranzakció egyediségének kényszerítésére a protokoll szintjén. Eddig a nonces-eket a számlaszerződés szintjén kezelték, ami azt jelentette, hogy elméletileg kétszer is végrehajtható egy tranzakció azonos hash-sel.
 
-Similarly to Ethereum, every contract now includes a nonce, which counts the number of executed transactions from this account. Account contracts will only accept transactions with a matching nonce, i.e., if the current nonce of the account is X, then it will only accept transactions with nonce X.
+Az Ethereumhoz hasonlóan most minden szerződés tartalmaz egy nonce-t, amely az ebből a számlából végrehajtott tranzakciók számát számolja. A számlaszerződések csak az egyező nonce-szel rendelkező tranzakciókat fogadják el, azaz ha a számla aktuális nonce-je X, akkor csak az X nonce-szel rendelkező tranzakciókat fogadja el.
 
-#### New Transaction Version
+#### Új tranzakció verzió
 
-To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
+A visszamenőleges kompatibilitás érdekében ezt a két változtatást egy új tranzakcióverzión keresztül vezetjük be –[v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Ezek a módosítások csak az új verzióra vonatkoznak, és a régebbi fiókok továbbra is végrehajthatják a 0-ás verziójú tranzakciókat.
 
-Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+Megjegyzés – a tranzakció v0-s verziója elavult, és a StarkNet Alpha v0.11.0 verziójában eltávolítjuk. Kérjük, mindenképpen frissítsen az új tranzakciós verzió használatára.
 
-For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
+A tranzakció verziójával kapcsolatos részletesebb információkért olvassa el a[dokumentációt](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
 
-#### Fees Mechanism
+#### Díjmechanizmus
 
-The new version allows to include fees for two required components:
+Az új verzió lehetővé teszi, hogy két szükséges összetevő díját tartalmazza:
 
-* [L1→L2 Message](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
-* [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
+* [L1→L2 Üzenet](https://docs.starknet.io/docs/L1-L2%20Communication/messaging-mechanism#l1--l2-message-fees)
+* [Tranzakció deklarálása](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
-These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+Ezek a díjak ebben a verzióban nem kötelezőek, és csak a StarkNet Alpha 0.11.0-s verziójától kezdődően lesznek érvényesítve.
 
-#### Cairo Syntax Changes
+#### Kairói szintaxis változásai
 
-In favor of gradual progress towards an upgrade of Cairo, [Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU), this version includes several syntax changes.
+A Cairo,[Cairo 1.0](https://www.youtube.com/watch?v=Ny4Rv6ztINU)frissítése felé vezető fokozatos előrelépés érdekében ez a verzió számos szintaxis-módosítást tartalmaz.
 
-To minimize inconvenience, the version release will include a [migration script](https://www.youtube.com/watch?v=kXs59zaQrsc) that automatically applies the above changes. You can find more details [here](https://github.com/starkware-libs/cairo-lang/releases).
+A kellemetlenségek minimalizálása érdekében a verzió kiadása tartalmazni fog egy[](https://www.youtube.com/watch?v=kXs59zaQrsc)migrációs szkriptet, amely automatikusan alkalmazza a fenti változtatásokat. További részleteket[itt talál](https://github.com/starkware-libs/cairo-lang/releases).
 
-### What’s Next?
+### Mi a következő lépés?
 
-* In a few weeks, we plan to introduce parallelization into the sequencer, enabling faster block production (V0.10.1)
-* We will soon complete the last part that must be included in the fee payment — Account deployment
-* Cairo 1.0 release! More info on that in an upcoming post.
+* Néhány héten belül a párhuzamosítást tervezzük bevezetni a szekvenszerbe, ami gyorsabb blokkgyártást tesz lehetővé (V0.10.1)
+* Hamarosan elkészül az utolsó rész, amelyet a díjfizetésbe bele kell foglalni – Fióktelepítés
+* Cairo 1.0 kiadás! Erről bővebb információ egy következő bejegyzésben.
 
-### How Can I Be More Engaged?
+### Hogyan lehetek elkötelezettebb?
 
-* Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
-* Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
-* Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+* Keresse fel[starknet.io](https://starknet.io/)webhelyet az összes StarkNet információért, dokumentációért, oktatóanyagokért és frissítésekért.
+* Csatlakozz a[StarkNet Discord](http://starknet.io/discord)a fejlesztői támogatásért, az ökoszisztéma bejelentéseiért és a közösség részévé válásért.
+* Látogassa meg a[StarkNet Forum](http://community.starknet.io/), hogy naprakész legyen, és részt vegyen a StarkNet kutatási megbeszélésein.
 
-We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!
+Mindig örömmel kapunk visszajelzést[dokumentációnkkal](https://docs.starknet.io/)!

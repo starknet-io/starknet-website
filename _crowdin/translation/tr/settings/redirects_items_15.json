@@ -1,4 +1,4 @@
 {
-  "source": "/community/community-links/:path*",
-  "destination": "/en/community"
+  "source": "/community/community-links/:yol*",
+  "destination": "/tr/topluluk"
 }

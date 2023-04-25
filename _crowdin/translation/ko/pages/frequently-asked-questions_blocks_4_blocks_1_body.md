@@ -1,1 +1,1 @@
-Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so choose.
+Starknet이 준비되면 StarkEx 앱은 원하는 경우 StarkNet으로 마이그레이션할 수 있습니다.

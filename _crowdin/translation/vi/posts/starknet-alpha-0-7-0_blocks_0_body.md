@@ -1,111 +1,111 @@
-### TL;DR
+### TL; DR
 
-* StarkNet Alpha 0.7.0 released to Goerli; packed with improvements
-* Contracts can now be upgraded using the Proxy Upgrade Pattern
-* Contracts can now emit Events
-* Support for the long-awaited Block Number and Block Timestamp system calls
+* StarkNet Alpha 0.7.0 được phát hành cho Goerli; đóng gói với những cải tiến
+* Hợp đồng hiện có thể được nâng cấp bằng Mẫu nâng cấp proxy
+* Hợp đồng hiện có thể phát ra Sự kiện
+* Hỗ trợ cho các lệnh gọi hệ thống Block Number và Block Timestamp được chờ đợi từ lâu
 
-### Intro
+### giới thiệu
 
-We are happy to release Alpha 0.7.0, a version packed with new features and improvements. One of the best stimulants to StarkNet over the last few months has been the increased involvement of the community in shaping StarkNet’s future. This version addresses some of the community’s burning needs.
+Chúng tôi rất vui khi phát hành Alpha 0.7.0, một phiên bản có nhiều tính năng và cải tiến mới. Một trong những yếu tố kích thích tốt nhất đối với StarkNet trong vài tháng qua là sự tham gia ngày càng tăng của cộng đồng trong việc định hình tương lai của StarkNet. Phiên bản này giải quyết một số nhu cầu bức thiết của cộng đồng.
 
-#### Changes to Naming Convention
+#### Thay đổi quy ước đặt tên
 
-The observant reader might have noticed that the previous StarkNet Alpha release was named Alpha 4, whereas we are now releasing Alpha 0.7.0. We decided to omit the dedicated Alpha version number and rely instead only on the associated cairo-lang version.
+Độc giả tinh ý có thể nhận thấy rằng bản phát hành StarkNet Alpha trước đó được đặt tên là Alpha 4, trong khi chúng tôi hiện đang phát hành Alpha 0.7.0. Chúng tôi đã quyết định bỏ qua số phiên bản Alpha chuyên dụng và thay vào đó chỉ dựa vào phiên bản cairo-lang được liên kết.
 
-### New Features
+### Các tính năng mới
 
-#### Contract Upgradeability
+#### Khả năng nâng cấp hợp đồng
 
-OpenZeppelin’s [Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) is now fully supported for contract upgrades in StarkNet. The Proxy pattern is the common method to enable contract upgrades over Ethereum. Alpha 0.7.0 enables this pattern over StarkNet.
+OpenZeppelin's[Proxy Upgrade Pattern](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies)hiện được hỗ trợ đầy đủ để nâng cấp theo hợp đồng trong StarkNet. Mẫu Proxy là phương pháp phổ biến để cho phép nâng cấp hợp đồng trên Ethereum. Alpha 0.7.0 kích hoạt mẫu này trên StarkNet.
 
-We made a short [tutorial](https://starknet.io/docs/hello_starknet/default_entrypoint.html) to demonstrate a basic implementation of the pattern, and OpenZeppelin is already hard at work implementing a standard contract for the proxy pattern; see the [prototype](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
+Chúng tôi đã thực hiện một hướng dẫn[ngắn](https://starknet.io/docs/hello_starknet/default_entrypoint.html)để minh họa cách triển khai cơ bản của mẫu và OpenZeppelin đã rất nỗ lực để triển khai một hợp đồng tiêu chuẩn cho mẫu proxy; xem nguyên mẫu[](https://github.com/OpenZeppelin/cairo-contracts/pull/129).
 
-#### Block Number and Block Timestamp
+#### Số khối và dấu thời gian khối
 
-Alpha 0.7.0 adds two new system calls that many devs have been asking for. These calls allow a contract to access the block number and the block timestamp. The block number returns the number of the current executed block. The block timestamp returns the timestamp given by the Sequencer at the creation of the block.
+Alpha 0.7.0 thêm hai lệnh gọi hệ thống mới mà nhiều nhà phát triển đã yêu cầu. Các cuộc gọi này cho phép một hợp đồng truy cập vào số khối và dấu thời gian của khối. Số khối trả về số của khối được thực hiện hiện tại. Dấu thời gian của khối trả về dấu thời gian do Trình tạo chuỗi cung cấp khi tạo khối.
 
-You can see an example of how to use these features in the [tutorial](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
+Bạn có thể xem ví dụ về cách sử dụng các tính năng này trong hướng dẫn[](https://starknet.io/docs/hello_starknet/more_features.html#block-number-and-timestamp).
 
-#### Events
+#### Sự kiện
 
-Surprise! A feature that was planned for a future version has sneaked its way into this earlier one.
+Sự ngạc nhiên! Một tính năng được lên kế hoạch cho một phiên bản trong tương lai đã lẻn vào phiên bản trước đó.
 
-StarkNet contracts now support defining and emitting events, allowing them to expose execution information for off-chain applications to consume. Ethereum developers will find the semantics and syntax very similar to Solidity. You can read the [documentation](https://starknet.io/documentation/events/), or follow the [tutorial](https://starknet.io/docs/hello_starknet/events.html), that explains this feature.
+Các hợp đồng của StarkNet hiện hỗ trợ xác định và phát ra các sự kiện, cho phép chúng hiển thị thông tin thực thi cho các ứng dụng ngoài chuỗi sử dụng. Các nhà phát triển Ethereum sẽ thấy ngữ nghĩa và cú pháp rất giống với Solidity. Bạn có thể đọc tài liệu[](https://starknet.io/documentation/events/)hoặc làm theo hướng dẫn[](https://starknet.io/docs/hello_starknet/events.html)giải thích tính năng này.
 
-#### Removed %builtins Directive
+#### Đã xóa %builtins Chỉ thị
 
-The %builtin directive is no longer needed in StarkNet contracts. This change followed a community discussion about the [contract extensibility pattern](https://community.starknet.io/t/contract-extensibility-pattern/210) on [StarkNet Shamans](https://community.starknet.io/). It significantly simplifies the usability of this extensibility pattern.
+Lệnh %builtin không còn cần thiết trong các hợp đồng StarkNet. Thay đổi này diễn ra sau một cuộc thảo luận cộng đồng về mẫu khả năng mở rộng hợp đồng[](https://community.starknet.io/t/contract-extensibility-pattern/210)trên[StarkNet Shamans](https://community.starknet.io/). Nó đơn giản hóa đáng kể khả năng sử dụng của mẫu mở rộng này.
 
-For example, the following contract will be changed from:
+Ví dụ: hợp đồng sau sẽ được thay đổi từ:
 
 ```
 %lang starknet
 
-# This is the "%builtins" directive.
-# It is not needed anymore.
+# Đây là chỉ thị "%builtins".
+# Nó không còn cần thiết nữa.
 %builtins range_check
 
 @view
-func add(x : felt, y : felt) -> (res : felt):
+func add(x : nỉ, y : nỉ) -> (res : nỉ):
 return (res=x + y)
-end
+kết thúc
 ```
 
-To this:
+Về điều này:
 
 ```
 %lang starknet
 @view
-func add(x : felt, y : felt) -> (res : felt):
+func add(x : nỉ, y : nỉ) -> (res : nỉ):
 return (res=x + y)
-end
+kết thúc
 ```
 
-You can check out the [ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token) standard contracts, which use the new pattern.
+Bạn có thể kiểm tra các hợp đồng tiêu chuẩn[ERC-20](https://github.com/OpenZeppelin/cairo-contracts/tree/main/contracts/token)sử dụng mẫu mới.
 
-#### External Functions Support Arrays of Structs
+#### Chức năng bên ngoài hỗ trợ Mảng cấu trúc
 
-Alpha 0.7.0 supports passing and returning arrays of structs in external functions. This additional functionality allows Account Contracts to better support [multicalls](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
+Alpha 0.7.0 hỗ trợ truyền và trả về các mảng cấu trúc trong các hàm bên ngoài. Chức năng bổ sung này cho phép Hợp đồng tài khoản hỗ trợ tốt hơn[cuộc gọi nhiều lần](https://github.com/OpenZeppelin/cairo-contracts/pull/73#discussion_r753535751).
 
-Multicall is a powerful feature of Account Abstraction that allows an account to make multiple calls in a single transaction. An obvious use-case is that of creating a **single transaction** that calls allowance and then transferFrom.
+Nhiều cuộc gọi là một tính năng mạnh mẽ của Trừu tượng tài khoản cho phép một tài khoản thực hiện nhiều cuộc gọi trong một giao dịch. Một trường hợp sử dụng rõ ràng là tạo một giao dịch**duy nhất**gọi trợ cấp và sau đó chuyểnTừ.
 
-We look forward to seeing what the community does with it.
+Chúng tôi mong muốn được xem những gì cộng đồng làm với nó.
 
-#### Improvements to StarkNet CLI
+#### Các cải tiến đối với StarkNet CLI
 
-**Support for Pending Blocks**
+**Hỗ trợ cho các khối đang chờ xử lý**
 
-[Pending Blocks](https://starknet.io/documentation/block-structure-and-hash/#pending_block) were [introduced](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195) in the last minor version (v0.6.2) and offered faster confirmations on transactions. This version includes support for querying those blocks via the StarkNet CLI.
+[Khối đang chờ xử lý](https://starknet.io/documentation/block-structure-and-hash/#pending_block)là[được giới thiệu](https://community.starknet.io/t/cairo-v0-6-2-api-change-pending-block/195)trong phiên bản nhỏ cuối cùng (v0.6.2) và cung cấp xác nhận giao dịch nhanh hơn. Phiên bản này bao gồm hỗ trợ truy vấn các khối đó thông qua StarkNet CLI.
 
-To use it, in every CLI command that takes block_number as an argument (contract_call/get_block/get_code/get_storage_at), we can query the StarkNet with respect to the pending block by specifying block_number=pending.
+Để sử dụng nó, trong mọi lệnh CLI lấy block_number làm đối số (hợp đồng_call/get_block/get_code/get_storage_at), chúng ta có thể truy vấn StarkNet đối với khối đang chờ xử lý bằng cách chỉ định block_number=pending.
 
-**Support for Account Contracts**
+**Hỗ trợ cho hợp đồng tài khoản**
 
-StarkNet uses account abstraction, i.e., all accounts are implemented as smart contracts. The first implementations of account contracts were done by [Argent](https://github.com/argentlabs/argent-contracts-starknet) and [OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), but we expect many more to come.
+StarkNet sử dụng tính trừu tượng của tài khoản, nghĩa là tất cả các tài khoản được triển khai dưới dạng hợp đồng thông minh. Việc triển khai hợp đồng tài khoản đầu tiên được thực hiện bởi[Argent](https://github.com/argentlabs/argent-contracts-starknet)và[OZ](https://github.com/OpenZeppelin/cairo-contracts/blob/main/contracts/Account.cairo), nhưng chúng tôi mong đợi nhiều điều nữa sẽ đến.
 
-In StarkNet, all transactions must go through an account contract, and the CLI now allows interaction with StarkNet Alpha directly via account contracts. See the [tutorial](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account) on how to set it up.
+Trong StarkNet, tất cả các giao dịch phải thông qua hợp đồng tài khoản và CLI hiện cho phép tương tác trực tiếp với StarkNet Alpha thông qua hợp đồng tài khoản. Xem hướng dẫn[](https://starknet.io/docs/hello_starknet/account_setup.html#setting-up-a-starknet-account)về cách thiết lập.
 
-Similar functionality was also added to [StarkNet.py](https://github.com/software-mansion/starknet.py/) and to [Nile](https://github.com/OpenZeppelin/nile) in the last month.
+Chức năng tương tự cũng đã được thêm vào[StarkNet.py](https://github.com/software-mansion/starknet.py/)và[Nile](https://github.com/OpenZeppelin/nile)trong tháng trước.
 
-#### L1<>L2 Messaging in the Testing Framework
+#### Nhắn tin L1<>L2 trong Khung kiểm tra
 
-Alpha 0.7.0 introduces the Postman. The Postman enables developers to use the testing framework to test more complicated flows.
+Alpha 0.7.0 giới thiệu Người đưa thư. Postman cho phép các nhà phát triển sử dụng khung thử nghiệm để kiểm tra các luồng phức tạp hơn.
 
-At a high level — it mocks the StarkNet Sequencer’s responsibility of passing messages from L1 to L2 and L2 to L1. It makes sure messages that are sent via the Solidity messaging contract will appear at the destination StarkNet contract and messages sent from a StarkNet contract will appear in the Solidity messaging contract.
+Ở cấp độ cao — nó chế giễu trách nhiệm của StarkNet Sequencer trong việc truyền thông điệp từ L1 đến L2 và L2 đến L1. Nó đảm bảo các tin nhắn được gửi qua hợp đồng nhắn tin Solidity sẽ xuất hiện tại hợp đồng StarkNet đích và các tin nhắn được gửi từ hợp đồng StarkNet sẽ xuất hiện trong hợp đồng nhắn tin Solidity.
 
-#### And More Features
+#### Và nhiều tính năng khác
 
-Alpha 0.7.0 provides many more features and changes, like the addition of an efficient square root function to the math common library. A full list appears in the [changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
+Alpha 0.7.0 cung cấp nhiều tính năng và thay đổi hơn, chẳng hạn như bổ sung một hàm căn bậc hai hiệu quả vào thư viện toán học chung. Một danh sách đầy đủ xuất hiện trong[changelog](https://github.com/starkware-libs/cairo-lang/releases/tag/v0.7.0).
 
-### Next Up?
+### Tiếp theo?
 
-Initial [Fee Mechanism](https://community.starknet.io/t/fees-in-starknet-alpha/286/29) support will be released in a matter of weeks, as a sub-version of StarkNet.
+Hỗ trợ Cơ chế[phí ban đầu](https://community.starknet.io/t/fees-in-starknet-alpha/286/29)sẽ được phát hành sau vài tuần nữa, dưới dạng phiên bản phụ của StarkNet.
 
-### More Information?
+### Thêm thông tin?
 
-[starknet.io](https://starknet.io/): for all StarkNet information, tutorials and updates.
+[starknet.io](https://starknet.io/): cho tất cả thông tin, hướng dẫn và cập nhật về StarkNet.
 
-[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): join to get answers to your questions, get dev support and become a part of the community.
+[StarkNet Discord](https://discord.gg/uJ9HZTUk2Y): tham gia để nhận câu trả lời cho câu hỏi của bạn, nhận hỗ trợ của nhà phát triển và trở thành một phần của cộng đồng.
 
-[StarkNet Shamans](https://community.starknet.io/): join to follow (and participate!) in StarkNet research discussions.
+[StarkNet Shamans](https://community.starknet.io/): tham gia để theo dõi (và tham gia!) vào các cuộc thảo luận nghiên cứu về StarkNet.

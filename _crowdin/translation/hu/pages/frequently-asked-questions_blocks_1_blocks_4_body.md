@@ -1,5 +1,5 @@
-Currently not. STARKs are defined as Validity proofs, meaning they prove computational integrity. With Validity proofs (STARKs included), one party can prove to another that a certain computation was performed correctly. Zero-Knowledge is an additional property asserting that the prover does not have to reveal any information included in the computation.
+Jelenleg nem. A STARK-okat érvényességi bizonyítékként definiálják, ami azt jelenti, hogy bizonyítják a számítási integritást. Az érvényességi igazolásokkal (beleértve a STARK-okat is) az egyik fél bizonyíthatja a másiknak, hogy egy bizonyos számítást helyesen hajtottak végre. A Zero-Knowledge egy további tulajdonság, amely azt állítja, hogy a bizonyítónak nem kell felfednie a számításban szereplő információkat.
 
-Most ZK-Rollups are not really Zero-Knowledge. The mistake comes from the confusion between Validity proofs (assures computational integrity) and Zero-Knowledge proofs (assures no information is revealed).
+A legtöbb ZK-Rollup nem igazán nulla tudás. A hiba az érvényességi bizonyítások (biztosítja a számítási integritást) és a Zero-Knowledge bizonyítások (biztosítja, hogy ne tárjanak fel információt) összekeveréséből ered.
 
-Starknet uses STARK Validity proofs. It is worth noting that extracting information from the proof is extremely hard – almost impossible in practice.
+A Starknet STARK Validity proofokat használ. Érdemes megjegyezni, hogy a bizonyításból információt kinyerni rendkívül nehéz – a gyakorlatban szinte lehetetlen.

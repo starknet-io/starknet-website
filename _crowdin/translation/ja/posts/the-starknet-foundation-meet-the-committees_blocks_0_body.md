@@ -80,4 +80,4 @@ EAG委員会の目的は、オンチェーン展開を通じてエコシステ�
 StarkNet Foundationの [ブログ](https://www.starknet.io/en/posts/foundation) やソーシャルメディアチャンネルから最新のアップデートと機会をご覧ください。
 
 **\
-For all additional Starknet Foundation information, updates, and proposals, follow Starknet on [Twitter](https://twitter.com/Starknet), join our [Discord](http://starknet.io/discord), and read the [Community Forum.](https://community.starknet.io/)**
+スタークネット財団の追加情報、最新情報、提案については、 [Twitter](https://twitter.com/Starknet)でスタークネットをフォローし、 [Discord](http://starknet.io/discord)に参加し、 [コミュニティ フォーラムをお読みください。](https://community.starknet.io/)**

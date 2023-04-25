@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+Die Starknet-token is nog nie te koop beskikbaar nie. Dit kan nie op hierdie stadium by jou beursie gevoeg word nie. Pasop vir swendelary.

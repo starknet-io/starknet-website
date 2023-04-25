@@ -1,1 +1,1 @@
-Learn!
+Tanul!

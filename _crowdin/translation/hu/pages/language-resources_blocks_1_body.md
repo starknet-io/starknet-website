@@ -1,5 +1,5 @@
-In line with our goal to make the Starknet community accessible and usable to as many people across the globe as possible, we’ve listed a collection of non-English resources below.\
+Célunkkal összhangban, hogy a Starknet közösséget a lehető legtöbb ember számára hozzáférhetővé és használhatóvá tegyük szerte a világon, az alábbiakban felsoroltunk egy gyűjteményt a nem angol nyelvű forrásokból.\
 \
-These are places where you can discover and discuss all things Starknet with other community members in your native language and/or based on where you live in the world. \
+Ezek azok a helyek, ahol minden Starknet-et felfedezhet és megvitathat a közösség többi tagjával az anyanyelvén és/vagy a világ lakóhelye alapján. \
 \
-If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please [open an issue](https://github.com/starknet-io/starknet-website/issues) on Github to get it added.
+Ha van egy nem angol nyelvű forrás, amelyet ismer, és nem látja itt, kérjük, [nyisson meg egy problémát](https://github.com/starknet-io/starknet-website/issues) a Githubon, hogy hozzáadhassa.

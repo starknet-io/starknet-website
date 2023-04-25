@@ -1,3 +1,3 @@
-## What are bridges?
+## Wat is brûe?
 
-Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
+Brûe laat gebruikers toe om bates tussen kripto-ekosisteme te skuif, soos blokkettings of uitruilings.

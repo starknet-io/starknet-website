@@ -1,1 +1,1 @@
-The Starknet Token is not yet available for sale. It cannot be added to your wallet at this stage. Beware of scams.
+Starknet Simgesi henüz satışa sunulmadı. Bu aşamada cüzdanınıza eklenemez. Dolandırıcılıklara dikkat edin.

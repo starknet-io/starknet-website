@@ -1,3 +1,3 @@
-Currently, Starknet transactions and their payloads are visible to the network in the same way that they are visible on Ethereum.
+Hiện tại, các giao dịch Starknet và tải trọng của chúng được hiển thị trên mạng giống như cách chúng hiển thị trên Ethereum.
 
-It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+Có thể triển khai các giao thức bảo mật khác nhau trên Starknet, giao thức này sẽ cung cấp đầy đủ quyền riêng tư cho tất cả những người tham gia mạng. Vì các giao thức đó thường yêu cầu nhiều tính toán nên chúng sẽ được hưởng lợi rất nhiều từ khả năng mở rộng của Starknet.
