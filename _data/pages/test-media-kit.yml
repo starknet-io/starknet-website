@@ -1,0 +1,42 @@
+id: 575c22e7-477f-4a7e-9b90-7406b802176f
+title: Media kit
+template: content
+parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      ## Starknet logo kit
+
+      ![](/assets/sn_logo_banner.png)
+  - type: link_list
+    heading: ""
+    listSize: "lg"
+    blocks:
+      - link:
+          custom_title: SVG only
+          custom_internal_link: /assets/starknet-logos-svg.zip
+      - link:
+          custom_title: PNG only
+          custom_internal_link: /assets/starknet-logos-png.zip
+      - link:
+          custom_title: Complete kit
+          custom_internal_link: /assets/starknet-logos-complete.zip
+  - type: markdown
+    body: |-
+      ## Cairo logo kit
+
+      ![](/assets/cairo_logo_banner.png)
+  - type: link_list
+    listSize: "lg"
+    blocks:
+      - link:
+          custom_title: SVG only
+          custom_internal_link: /assets/cairo-logos-svg.zip
+      - link:
+          custom_title: PNG only
+          custom_internal_link: /assets/cairo-logos-png.zip
+      - link:
+          custom_title: Complete kit
+          custom_internal_link: /assets/cairo-logos-complete.zip

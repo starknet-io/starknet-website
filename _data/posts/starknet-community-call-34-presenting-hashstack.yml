@@ -1,0 +1,59 @@
+id: c1bea919-f3cb-4d08-8d33-41010e9dcc41
+post_type: video
+title: "Starknet Community Call #34 | Presenting Hashstack"
+published_date: 2023-03-01T16:20:16.753Z
+video:
+  url: https://www.youtube.com/watch?v=-I4OtuML7Fg&list=PLcIyXLwiPilWpAItJqnBgq1cu180i9dPd&index=5
+  id: -I4OtuML7Fg
+  data:
+    kind: youtube#video
+    etag: h-Hh24aBHRh_y9rCC_vvne2JnUA
+    id: -I4OtuML7Fg
+    snippet:
+      publishedAt: 2023-03-01T09:23:14.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/-I4OtuML7Fg/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/-I4OtuML7Fg/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/-I4OtuML7Fg/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/-I4OtuML7Fg/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/-I4OtuML7Fg/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: "Starknet Community Call #34 | Presenting Hashstack"
+      categoryId: "28"
+      localized:
+        title: "Starknet Community Call #34 | Presenting Hashstack"
+        description: >-
+          On our 34th Community Call, we are going to have Hashstack with us.
+
+
+          @hashstack provides a permissionless under-collateralised lending solution for crypto-native retail, enabling them to borrow up to 300% of the collateral.
+      description: >-
+        On our 34th Community Call, we are going to have Hashstack with us.
+
+
+        @hashstack provides a permissionless under-collateralised lending solution for crypto-native retail, enabling them to borrow up to 300% of the collateral.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+image: /assets/communitycall-34-presenting-haskstack-youtube1.png
+category: community-calls
+topic:
+  - defi
+short_desc: Hashstack provides a permissionless under-collateralized lending
+  solution for crypto-native retail, enabling them to borrow up to 300% of the
+  collateral.

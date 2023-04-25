@@ -1,0 +1,12 @@
+{
+  "name": "@starknet-io/cms-utils",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.3"
+  }
+}

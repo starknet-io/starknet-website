@@ -1,19 +1,15 @@
 "use client";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
-import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import {
   Box,
-  Container,
   Flex,
   Heading,
-  Image,
   Img,
   Stack,
   Text,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
-import { Button } from "@ui/Button";
 
 type Props = {
   title: string;

@@ -21,10 +21,10 @@ import {
   Configure,
   useRefinementList,
 } from "src/libs/react-instantsearch-hooks-web";
-import type { Category } from "src/data/categories";
+import type { Category } from "@starknet-io/cms-data/src/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { useRouter } from "next/navigation";
-import type { Topic } from "src/data/topics";
+import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
 import Link from "next/link";
@@ -48,6 +48,7 @@ export function PostsPage({
   categories,
   topics,
 }: Props): JSX.Element | null {
+  console.log("topics", topics);
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -69,7 +70,7 @@ export function PostsPage({
               // topic: searchParams.get("topic")?.split(",") ?? [],
               category: category != null ? [category.id] : [],
             }),
-            [category, params.locale],
+            [category, params.locale]
           )}
         />
         <Container maxW="container.xl" mb={4}>
@@ -82,6 +83,16 @@ export function PostsPage({
               <BreadcrumbItem>
                 <BreadcrumbLink
                   as={Link}
+                  href={`/${params.locale}`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={Link}
                   href={`/${params.locale}/community`}
                   fontSize="sm"
                   noOfLines={1}
@@ -90,14 +101,19 @@ export function PostsPage({
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
-              <BreadcrumbItem isCurrentPage fontSize='sm'>
+              <BreadcrumbItem isCurrentPage fontSize="sm">
                 <BreadcrumbLink fontSize="sm">Blog</BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <Heading mt="-24px" color="heading-navy-fg" variant="h4">
+              <Heading
+                mt="-24px"
+                color="heading-navy-fg"
+                variant="h4"
+                mb="1rem"
+              >
                 Topics
               </Heading>
               <CustomTopics topics={topics} />
@@ -128,9 +144,20 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
     sortBy: ["count:desc"],
   });
 
+  const topicsDict = useMemo(() => {
+    return topics.reduce((acc, topic) => {
+      acc[topic.id] = topic;
+      return acc;
+    }, {} as Record<string, Topic>);
+  }, [topics]);
+
+  const validTopics = useMemo(() => {
+    return items.filter((topic) => topicsDict[topic.value] != null);
+  }, [topicsDict, items]);
+
   return (
     <Box display="flex" flexWrap="wrap" gap="8px" columnGap="4px" width="100%">
-      {items.map((topic, i) => (
+      {validTopics.map((topic, i) => (
         <Button
           size="sm"
           px="8px"
@@ -156,7 +183,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
           }}
           key={i}
         >
-          {topics.find((a) => a.id === topic.value)?.name}
+          {topicsDict[topic.value].name}
         </Button>
       ))}
     </Box>

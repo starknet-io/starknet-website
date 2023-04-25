@@ -6,14 +6,12 @@ import {
   Icon,
   Stack,
   Tag,
-  useColorModeValue,
   Wrap,
 } from "src/libs/chakra-ui";
 import { IconButton } from "@ui/IconButton";
 import { Button } from "@ui/Button";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading"
-import * as React from "react";
 
 import { FiExternalLink } from "react-icons/fi";
 import { HiGlobeAlt } from "react-icons/hi2";

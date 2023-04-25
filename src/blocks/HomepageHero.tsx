@@ -93,7 +93,7 @@ export const HomepageHero = (props: Props) => {
               variant="h1"
               fontWeight="bold"
               color="heading-navy-fg"
-              mt="-20px"
+              mt={{ base: "0", lg: "-20px" }}
               fontSize={{ base: "56px", md: "80px", xl: "92px" }}
             >
               Starknet

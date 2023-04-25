@@ -1,0 +1,10 @@
+id: 0cairows06
+type: youtube
+url: https://youtu.be/DvuLlZFAi5c
+image: /assets/maxresdefault-1-.jpg
+title: Running a Starknet indexer
+author: StarkWare
+published_at: 2022-10-11T00:00:00+00:00
+difficulty: intermediate
+course: cairo_workshops
+tags: indexers

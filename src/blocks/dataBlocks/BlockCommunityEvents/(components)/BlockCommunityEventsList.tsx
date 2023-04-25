@@ -9,11 +9,11 @@ import {
   Configure,
 } from "src/libs/react-instantsearch-hooks-web";
 import { useHits } from "react-instantsearch-hooks";
-
 import { ListCard } from "@ui/ListCards/ListCard";
 import { Heading } from "@ui/Typography/Heading";
 import { Button } from "@ui/Button";
 import { useRouter } from "next/navigation";
+import { getUnixTime, startOfDay } from "date-fns";
 
 export interface AutoProps {
   readonly params: {
@@ -40,11 +40,14 @@ export function BlockCommunityEventsList({
   return (
     <InstantSearch
       searchClient={searchClient}
-      indexName={`web_events_${env.ALGOLIA_INDEX}`}
+      indexName={`web_events_${env.ALGOLIA_INDEX}_asc`}
     >
       <Configure
         hitsPerPage={hitsPerPage}
         facetsRefinements={{ locale: [params.locale] }}
+        filters={`start_date_ts > ${getUnixTime(
+          startOfDay(new Date())
+        )} AND type: community_event`}
       />
       <Container maxW="1062px">
         <Box>
@@ -66,6 +69,8 @@ type HitProps = {
     readonly end_date?: string;
     readonly name: string;
     readonly image: string;
+    readonly city: string;
+    readonly country: string;
     readonly description: string;
     readonly tags: string[];
     readonly url: string;

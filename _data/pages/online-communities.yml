@@ -1,0 +1,41 @@
+id: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
+title: Online communities
+template: content
+parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: page_header
+    title: Online communities
+    description: Join the groups building and driving Starknet forward.
+  - type: link_list
+    heading: "Official Starknet communities "
+    listSize: lg
+    blocks:
+      - type: link_list_item
+        link:
+          custom_title: Discord
+          custom_external_link: https://starknet.io/discord
+        subLabel:
+          label: "Join the conversation on Discord "
+      - type: link_list_item
+        link:
+          custom_title: Twitter
+          custom_external_link: https://twitter.com/Starknet
+        subLabel:
+          label: The official Starknet community account on Twitter
+      - type: link_list_item
+        link:
+          custom_title: "Community forum "
+          custom_external_link: https://community.starknet.io/
+        subLabel:
+          label: Share, discuss and collaborate on initiatives.
+  - type: link_list
+    heading: Telegram groups
+    listSize: lg
+    blocks:
+      - link:
+          custom_title: Starknet Version Updates
+          custom_external_link: https://t.me/+EkT8aCg9R-xjZGU0
+        subLabel:
+          label: Get notified on technical updates to Starknet

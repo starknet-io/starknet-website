@@ -1,6 +1,6 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/ListCards/ListCard";
-import { getWallets } from "src/data/wallets";
+import { getWallets } from "@starknet-io/cms-data/src/wallets";
 interface Props extends LocaleProps {
   noOfItems?: number;
 }
@@ -22,12 +22,13 @@ Props): JSX.Element {
               <ListCard
                 href={wallet.website_url}
                 twitterHandle={wallet.twitter}
+                discordHandle={wallet.discord}
                 image={wallet.image}
                 // startDateTime="Fri, Jan 12 • 2:00 PM EST"
                 key={wallet.name}
                 description={wallet.description}
                 title={wallet.name}
-                type={wallet.type}
+                type_list={wallet.type_list}
               />
             );
           })}

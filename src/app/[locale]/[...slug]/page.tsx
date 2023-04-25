@@ -1,4 +1,4 @@
-import { getPageBySlug } from "src/data/pages";
+import { getPageBySlug } from "@starknet-io/cms-data/src/pages";
 import moment from "moment";
 import {
   Breadcrumb,
@@ -10,7 +10,7 @@ import {
 import { notFound } from "next/navigation";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Block } from "src/blocks/Block";
-import { Page as PageType } from "src/data/pages";
+import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
 import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
@@ -18,13 +18,13 @@ import { TableOfContents } from "../(components)/TableOfContents";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { Metadata } from "next";
-import { preRenderedLocales } from "src/data/i18n/config";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
     const data = await getPageBySlug(
       props.params.slug.join("/"),
-      props.params.locale,
+      props.params.locale
     );
 
     return {
@@ -39,7 +39,7 @@ export async function generateStaticParams() {
   const params = [];
 
   for (const locale of preRenderedLocales) {
-    const base = path.join(process.cwd(), "_data/_dynamic/pages", locale);
+    const base = path.join(process.cwd(), "_crowdin/data/pages", locale);
     const dirs: string[][] = [];
 
     do {
@@ -86,6 +86,14 @@ Props): JSX.Element {
               data.breadcrumbs_data &&
               data.breadcrumbs_data.length > 0 ? (
                 <Breadcrumb separator="/">
+                  <BreadcrumbItem>
+                    <BreadcrumbLink
+                      fontSize="sm"
+                      href={`/${data.breadcrumbs_data[0].locale}`}
+                    >
+                      Home
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
                   <BreadcrumbItem>
                     <BreadcrumbLink
                       fontSize="sm"

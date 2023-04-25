@@ -6,7 +6,6 @@ import {
   Img,
   Link,
   LinkBox,
-  LinkOverlay,
   Stack,
   useBreakpointValue,
 } from "src/libs/chakra-ui";
@@ -14,8 +13,7 @@ import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import NextLink from "next/link";
-import { CardLink } from "./CardLink";
-import { LargeCardBlock } from "src/data/pages";
+import type { LargeCardBlock } from "@starknet-io/cms-data/src/pages";
 import { getComputedLinkData } from "src/utils/utils";
 
 type Props = LargeCardBlock & { locale: string };
@@ -52,7 +50,7 @@ export const LargeCard = ({
                 height="full"
               >
                 <Box
-                  order={orientation === "right" ? 1 : 0}
+                  order={orientation === "right" ? 2 : 1}
                   // maxW={{ base: "full", lg: "480px" }}
                   // maxH={{ base: "full", lg: "480px" }}
                   borderRadius="16px"
@@ -73,7 +71,7 @@ export const LargeCard = ({
                 </Box>
                 <Stack
                   pl={{ base: "0", md: orientation === "right" ? "0" : "80px" }}
-                  order={orientation === "right" ? 0 : 1}
+                  order={1}
                   spacing={{ base: "8", md: "12" }}
                 >
                   <Flex>

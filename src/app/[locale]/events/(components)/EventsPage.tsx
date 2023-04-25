@@ -24,9 +24,10 @@ import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/ListCards/ListCard";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
-import { Event } from "src/data/events";
+import { Event } from "@starknet-io/cms-data/src/events";
 import type { BaseHit } from "instantsearch.js";
 import Link from "next/link";
+import { getUnixTime, startOfDay } from "date-fns";
 
 export interface AutoProps {
   readonly params: {
@@ -40,9 +41,21 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
 }
 
-export function EventsPage({ params, env }: Props): JSX.Element | null {
+const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
+  if (mode === "UPCOMING_EVENTS") {
+    return `start_date_ts > ${getUnixTime(
+      startOfDay(new Date())
+    )} OR end_date_ts > ${getUnixTime(startOfDay(new Date()))}`;
+  }
+  return `start_date_ts < ${getUnixTime(
+    startOfDay(new Date())
+  )} AND end_date_ts < ${getUnixTime(startOfDay(new Date()))}`;
+};
+
+export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -51,11 +64,16 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
     <Box>
       <InstantSearch
         searchClient={searchClient}
-        indexName={`web_events_${env.ALGOLIA_INDEX}`}
+        indexName={
+          mode === "UPCOMING_EVENTS"
+            ? `web_events_${env.ALGOLIA_INDEX}_asc`
+            : `web_events_${env.ALGOLIA_INDEX}_desc`
+        }
       >
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
+          filters={getEventFilter(mode)}
         />
 
         <PageLayout
@@ -63,6 +81,16 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
           sectionHeaderDescription="Find Starknet events, online or around the world."
           breadcrumbs={
             <Breadcrumb separator="/">
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={Link}
+                  href={`/${params.locale}`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
               <BreadcrumbItem>
                 <BreadcrumbLink
                   as={Link}
@@ -85,11 +113,41 @@ export function EventsPage({ params, env }: Props): JSX.Element | null {
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
               <CustomLocation />
               <CustomType />
-              <CustomTags />
             </Box>
           }
           main={
             <Box>
+              <Flex
+                as="ul"
+                sx={{ overflowX: "auto" }}
+                gap="24px"
+                borderBottomWidth="1px"
+                borderColor="tabs-main-br"
+                width="100%"
+                mb={4}
+              >
+                <Box>
+                  <Button
+                    variant="category"
+                    as={Link}
+                    isActive={mode === "UPCOMING_EVENTS"}
+                    href={`/${params.locale}/events`}
+                  >
+                    Upcoming events
+                  </Button>
+                </Box>
+                <Box>
+                  <Button
+                    variant="category"
+                    as={Link}
+                    isActive={mode === "PAST_EVENTS"}
+                    href={`/${params.locale}/events/past`}
+                  >
+                    Past events
+                  </Button>
+                </Box>
+              </Flex>
+
               <CustomHits />
             </Box>
           }
@@ -155,65 +213,86 @@ function CustomType() {
   );
 }
 
-function CustomTags() {
-  const { items, refine } = useRefinementList({
-    attribute: "tags",
-    sortBy: ["name:asc"],
-  });
-
-  return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
-        Tags
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => {
-          let label = titleCase(item.label);
-
-          return (
-            <Button
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
-              key={i}
-              justifyContent="flex-start"
-            >
-              {label}
-            </Button>
-          );
-        })}
-      </VStack>
-    </Box>
-  );
-}
-
 function CustomHits() {
   const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
 
+  const hitsByMonth = useMemo(() => {
+    let hitsByMonthDict: Record<string, typeof hits> = {};
+
+    hits.forEach((hit) => {
+      let startDate = new Date(hit?.start_date);
+      let month = startDate.getMonth();
+      let year = startDate.getFullYear();
+      let key = `${year}-${month + 1}`;
+      if (!hitsByMonthDict[key]) {
+        hitsByMonthDict[key] = [];
+      }
+      hitsByMonthDict[key].push(hit);
+    });
+    return hitsByMonthDict;
+  }, [hits]);
+
   return (
     <>
-      <Flex gap={4} direction="column" flex={1}>
-        {hits.map((hit) => {
-          return (
-            <ListCard
-              variant="event"
-              href={hit.url}
-              key={hit?.name}
-              startDateTime={
-                hit?.end_date
-                  ? `${moment(hit?.start_date).format("ddd MMM DD")} - ${moment(
-                      hit?.end_date,
-                    ).format("ddd MMM DD, YYYY")}`
-                  : moment(hit?.start_date).format("ddd MMM DD, YYYY")
-              }
-              image={hit.image}
-              title={hit.name}
-              description={hit.description}
-              type={hit.tags}
-            />
-          );
-        })}
-      </Flex>
+      {Object.keys(hitsByMonth).map((key) => {
+        const monthHits = hitsByMonth[key];
+
+        return (
+          <Box key={key}>
+            <Heading
+              variant="h6"
+              fontWeight={700}
+              fontSize="lg"
+              lineHeight={1.5}
+              mt="2.5rem"
+              mb="1rem"
+            >
+              {moment(key, "YYYY-MM").format("MMMM YYYY")}
+            </Heading>
+            <Flex gap={4} direction="column" flex={1}>
+              {monthHits.map((hit) => {
+                let startDate = new Date(hit?.start_date);
+                let endDate = new Date(hit?.end_date ?? "");
+                let hasSameDay = startDate.getDate() === endDate.getDate();
+                let hasSameMonth = startDate.getMonth() === endDate.getMonth();
+                let hasSameYear =
+                  startDate.getFullYear() === endDate.getFullYear();
+                return (
+                  <ListCard
+                    variant="event"
+                    href={hit.url}
+                    key={hit?.name}
+                    startDateTime={
+                      hit?.end_date
+                        ? `${moment(hit?.start_date).format(
+                            hasSameDay
+                              ? "DD MMM, YYYY"
+                              : hasSameMonth
+                              ? "DD"
+                              : hasSameYear
+                              ? "DD MMM"
+                              : "DD MMM, YYYY"
+                          )}${!hasSameDay ? " - " : ""}${
+                            !hasSameDay
+                              ? moment(hit?.end_date).format("DD MMM, YYYY")
+                              : ""
+                          }`
+                        : moment(hit?.start_date).format("DD MMM, YYYY")
+                    }
+                    image={hit.image}
+                    title={hit.name}
+                    description={hit.description}
+                    type={[hit.type]}
+                    location={hit.location}
+                    city={hit.city}
+                    country={hit.country}
+                  />
+                );
+              })}
+            </Flex>
+          </Box>
+        );
+      })}
       {!isLastPage && (
         <HStack mt="24">
           <Divider />

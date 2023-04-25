@@ -1,0 +1,184 @@
+id: 4c40a102-df5b-4f39-98fb-774d6841da9e
+title: "Tools & resources "
+template: content
+parent_page: c1050a37-5af0-4277-aabd-b681ffe2cda5
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: page_header
+    title: Tools & resources
+    description: Explore developer tooling and resources available for Starknet
+  - type: link_list
+    heading: Libraries
+    listSize: "lg"
+    blocks:
+      - type: link_list_item
+        link:
+          custom_title: starknet.js
+          custom_external_link: https://github.com/seanjameshan/starknet.js
+        subLabel:
+          label: A Javascript SDK for Starknet
+      - type: link_list_item
+        link:
+          custom_title: starknet.py
+          custom_external_link: https://github.com/software-mansion/starknet.py
+        subLabel:
+          label: A Python SDK for Starknet
+      - type: link_list_item
+        link:
+          custom_title: starknet.rs
+          custom_external_link: https://github.com/xJonathanLEI/starknet-rs
+        subLabel:
+          label: A Rust SDK for Starknet
+      - type: link_list_item
+        link:
+          custom_title: "Caigo "
+          custom_external_link: https://github.com/dontpanicdao/caigo
+        subLabel:
+          label: "A Golang SDK for Starknet "
+      - type: link_list_item
+        link:
+          custom_title: starknet.php
+          custom_external_link: https://github.com/Starknet-php/starknet.php
+        subLabel:
+          label: "A PHP SDK for Starknet "
+  - type: link_list
+    heading: Development frameworks
+    listSize: "lg"
+    blocks:
+      - link:
+          custom_title: "Protostar "
+          custom_external_link: https://github.com/software-mansion/protostar
+        subLabel:
+          label: StarkNet smart contract development toolchain
+      - link:
+          custom_title: Hardhat-starknet
+          custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
+      - link:
+          custom_title: Nile
+          custom_external_link: https://github.com/OpenZeppelin/nile
+        subLabel:
+          label: CLI tool for interacting with Starknet projects
+      - link:
+          custom_title: "Starknet Devnet "
+          custom_external_link: https://github.com/Shard-Labs/starknet-devnet
+        subLabel:
+          label: like Ganache, but for Starknet
+  - type: link_list
+    heading: "Editor plugins "
+    listSize: "lg"
+    blocks:
+      - type: link_list_item
+        link:
+          custom_title: Cairo.vim
+          custom_external_link: https://github.com/miguelmota/cairo.vim
+        subLabel:
+          label: (Outdate) vim syntax plugin for Cairo
+      - type: link_list_item
+        link:
+          custom_title: Cairo VS Code
+          custom_external_link: https://www.cairo-lang.org/docs/quickstart.html#visual-studio-code-setup
+        subLabel:
+          label: "VS Code syntax support for Cairo (requires manual installation) "
+      - type: link_list_item
+        link:
+          custom_title: Cairo language support
+          custom_external_link: https://marketplace.visualstudio.com/items?itemName=ericglau.cairo-ls
+        subLabel:
+          label: Code assistance and compile error highlighting in VS Code
+  - type: link_list
+    heading: Templates
+    listSize: "lg"
+    blocks:
+      - type: link_list_item
+        link:
+          custom_title: Vue-Stark-Boil
+          custom_external_link: https://github.com/dontpanicdao/vue-stark-boil
+        subLabel:
+          label: Boilerplate project for connecting your Vue.js application to Starknet
+      - type: link_list_item
+        link:
+          custom_title: "Starknet Hardhat "
+          custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-example
+        subLabel:
+          label: Example usage of the Starknet Hardhat plugin.
+      - type: link_list_item
+        link:
+          custom_title: Starknet React Example
+          custom_external_link: https://github.com/fracek/starknet-react-example
+        subLabel:
+          label: Connect your ReactApp to Starknet
+  - type: link_list
+    heading: "General "
+    listSize: "lg"
+    blocks:
+      - type: link_list_item
+        link:
+          custom_title: Cairo Kernel
+          custom_external_link: https://github.com/ankitchiplunkar/cairo-jupyter
+        subLabel:
+          label: "Jupyter kernel for Cairo "
+      - type: link_list_item
+        link:
+          custom_title: Cairo docker
+          custom_external_link: https://hub.docker.com/repository/docker/shardlabs/cairo-cli
+      - type: link_list_item
+        link:
+          custom_title: "Empiric network "
+          custom_external_link: https://docs.empiric.network/
+        subLabel:
+          label: "Starknet native oracle "
+      - type: link_list_item
+        link:
+          custom_title: get-starknet
+          custom_external_link: https://www.npmjs.com/package/get-starknet
+        subLabel:
+          label: Starknet wallet <-> dapp bridge
+      - type: link_list_item
+        link:
+          custom_title: starknet-deeplink
+          custom_external_link: https://www.npmjs.com/package/starknet-deeplink
+        subLabel:
+          label: StarkNet deeplink generator
+      - type: link_list_item
+        link:
+          custom_title: Nile
+          custom_external_link: https://github.com/OpenZeppelin/nile
+        subLabel:
+          label: "CLI tool to develop Starknet projects "
+      - type: link_list_item
+        link:
+          custom_title: Starknet devnet
+          custom_external_link: https://github.com/Shard-Labs/starknet-devnet
+        subLabel:
+          label: "Local testnet "
+      - type: link_list_item
+        link:
+          custom_title: Starknet Goerli ETH faucet
+          custom_external_link: https://faucet.goerli.starknet.io/
+        subLabel:
+          label: "Testnet ETH faucet "
+      - type: link_list_item
+        link:
+          custom_title: Starknet node by Infura
+          custom_external_link: https://www.infura.io/networks/ethereum/starknet
+        subLabel:
+          label: Scale your infrastructure
+      - type: link_list_item
+        link:
+          custom_title: "Starknet node by Chainstack "
+          custom_external_link: https://chainstack.com/build-custom_title-with-starknet/
+        subLabel:
+          label: get your API services without running your own node
+      - type: link_list_item
+        link:
+          custom_title: "TypeChain "
+          custom_external_link: https://github.com/dethcrypto/TypeChain
+        subLabel:
+          label: TypeScript bindings generator for Cairo
+      - type: link_list_item
+        link:
+          custom_title: Warp
+          custom_external_link: https://github.com/NethermindEth/warp
+        subLabel:
+          label: "Solidity to Cairo transpiler "

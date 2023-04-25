@@ -1,0 +1,51 @@
+name: Build and Deploy Storybook
+
+on:
+  push:
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    environment: "storybook"
+    permissions:
+      contents: read
+      deployments: write
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            .yarn/install-state.gz
+            .eslintcache
+            **/tsconfig.tsbuildinfo
+            **/.types/**
+            **/.types-*/**
+          key: build-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            build-cache-
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build storybook
+        run: yarn exec storybook build
+
+      - name: Deploy storybook
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: starknet-storybook
+          directory: storybook-static
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}

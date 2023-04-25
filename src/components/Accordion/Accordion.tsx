@@ -1,6 +1,6 @@
 "use client";
 import { accordionAnatomy } from "@chakra-ui/anatomy";
-import { createMultiStyleConfigHelpers, defineStyle } from "src/libs/chakra-ui";
+import { createMultiStyleConfigHelpers } from "src/libs/chakra-ui";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(accordionAnatomy.keys);

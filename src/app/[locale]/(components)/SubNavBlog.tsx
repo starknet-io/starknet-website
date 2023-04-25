@@ -1,7 +1,7 @@
 "use client";
 
 import * as SubNav from "@ui/SubNav/SubNav";
-import type { Category } from "src/data/categories";
+import type { Category } from "@starknet-io/cms-data/src/categories";
 
 export interface Props {
   readonly categories: Category[];

@@ -22,29 +22,27 @@ export const BlockCards = ({
   lg,
   xl,
 }: Props) => {
-  let styles = {};
-
   const renderHeadingVariant = () => {
     switch (headingVariant) {
       case "h4":
-        return (styles = { fontWeight: "extrabold" });
+        return { fontWeight: "extrabold" };
 
       case "h3":
-        return (styles = {
+        return {
           fontWeight: "extrabold",
           fontSize: "32px",
-          marginBottom: "24px"
-        });
+          marginBottom: "24px",
+        };
 
       case "h2":
-        return (styles = {
+        return {
           fontWeight: "extrabold",
           fontSize: "48px",
-          marginBottom: "48px"
-        });
+          marginBottom: "48px",
+        };
 
       default:
-        return (styles = { fontWeight: "extrabold" });
+        return { fontWeight: "extrabold" };
     }
   };
   return (

@@ -1,55 +1,71 @@
 {
+  "extends": "./tsconfig.projects.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "outDir": ".types",
+    "target": "ES5",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "types": [
-      "vitest/importMeta",
-      "vitest/globals",
-      "@types/mdx"
-    ],
+    "types": ["vitest/importMeta", "vitest/globals", "@types/mdx"],
     "baseUrl": ".",
     "paths": {
-      "@ui/*": [
-        "./src/components/*"
-      ]
+      "@ui/*": ["./src/components/*"]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "strictNullChecks": true
   },
+  "include": [
+    "_data/i18n/*.json",
+    "_data/i18n/intl/*.json",
+    "./next-env.d.ts",
+    "./vite-env.d.ts",
+    "./src/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "_data/categories",
+    "_data/_dynamic",
+    "_data/events",
+    "_data/jobs",
+    "_data/pages",
+    "_data/posts",
+    "_data/settings",
+    "_data/topics",
+    "_data/tutorials",
+    ".yarn",
+    "node_modules"
+  ],
   "references": [
+    {
+      "path": "./workspaces/cms-config"
+    },
+    {
+      "path": "./workspaces/cms-data"
+    },
+    {
+      "path": "./workspaces/cms-scripts"
+    },
+    {
+      "path": "./workspaces/cms-utils"
+    },
+    {
+      "path": "./workspaces/netlify-cms"
+    },
+    {
+      "path": "./workspaces/netlify-cms-auth"
+    },
+    {
+      "path": "./workspaces/netlify-cms-widgets"
+    },
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "include": [
-    "env.d.ts",
-    "next-env.d.ts",
-    "src",
-    "workspaces/netlify-cms/src",
-    ".next/types/**/*.ts",
-    "/Users/akrom/Developer/web/starknet-website/.next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
   ]
 }

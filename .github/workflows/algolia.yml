@@ -1,0 +1,49 @@
+name: Algolia Action
+
+on:
+  push:
+    paths:
+      - "_data/**"
+      - "workspaces/cms-*/**"
+      - ".github/workflows/algolia.yml"
+    branches:
+      - dev
+      - production
+
+jobs:
+  update-index:
+    runs-on: ubuntu-22.04
+    environment: "dev-algolia-index"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            .yarn/install-state.gz
+            .eslintcache
+            **/tsconfig.tsbuildinfo
+            **/.types/**
+            **/.types-*/**
+          key: build-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            build-cache-
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Update Algolia search index
+        run: yarn workspace @starknet-io/cms-scripts update-algolia-index
+        env:
+          ALGOLIA_INDEX:  ${{ github.ref_name }}
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          ALGOLIA_WRITE_API_KEY: ${{ secrets.ALGOLIA_WRITE_API_KEY }}
