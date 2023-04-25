@@ -130,7 +130,9 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
 
   return (
     <Box display="flex" flexWrap="wrap" gap="8px" columnGap="4px" width="100%">
-      {items.map((topic, i) => (
+      {items.map((topic, i) => {
+        let topicName = topics.find((a) => a.id === topic.value)?.name;
+        return topicName && (
         <Button
           size="sm"
           px="8px"
@@ -156,9 +158,9 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
           }}
           key={i}
         >
-          {topics.find((a) => a.id === topic.value)?.name}
+          {topicName}
         </Button>
-      ))}
+      )})}
     </Box>
   );
 }
