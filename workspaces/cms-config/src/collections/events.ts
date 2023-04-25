@@ -4,7 +4,7 @@ export const eventsCollectionConfig = {
   name: "events",
   label: "Events",
   label_singular: "Event",
-  folder: '_data/events',
+  folder: "_data/events",
   slug: "{{name}}",
   summary: "{{name}}",
   create: true,
@@ -26,6 +26,10 @@ export const eventsCollectionConfig = {
         {
           label: "Hackathon",
           value: "hackathon",
+        },
+        {
+          label: "Meetup",
+          value: "meetup",
         },
       ],
     },
@@ -66,7 +70,7 @@ export const eventsCollectionConfig = {
       widget: "select",
       options: [
         {
-          label: "online / remote",
+          label: "Online / Remote",
           value: "online_remote",
         },
         {
@@ -74,20 +78,28 @@ export const eventsCollectionConfig = {
           value: "usa",
         },
         {
-          label: "Europe",
-          value: "europe",
+          label: "Africa",
+          value: "africa",
         },
         {
           label: "Asia",
           value: "asia",
         },
         {
-          label: "South America",
-          value: "south_america",
+          label: "Australia / Oceania",
+          value: "australia_oceania",
         },
         {
-          label: "Canada",
-          value: "canada",
+          label: "Europe",
+          value: "europe",
+        },
+        {
+          label: "North America",
+          value: "north_america",
+        },
+        {
+          label: "South America",
+          value: "south_america",
         },
       ],
     },
@@ -100,12 +112,6 @@ export const eventsCollectionConfig = {
       name: "country",
       label: "Country (State if USA)",
       widget: "string",
-    },
-    {
-      name: "tags",
-      label: "Tags",
-      widget: "list",
-      default: ["crypto", "blockchain", "starknet"],
     },
   ],
 } satisfies CmsConfig["collections"][number];
