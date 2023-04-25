@@ -16,7 +16,7 @@ import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-  useInfiniteHits
+  useInfiniteHits,
 } from "src/libs/react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -81,6 +81,16 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
           sectionHeaderDescription="Find Starknet events, online or around the world."
           breadcrumbs={
             <Breadcrumb separator="/">
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={Link}
+                  href={`/${params.locale}`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
               <BreadcrumbItem>
                 <BreadcrumbLink
                   as={Link}

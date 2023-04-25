@@ -48,6 +48,7 @@ export function PostsPage({
   categories,
   topics,
 }: Props): JSX.Element | null {
+  console.log("topics", topics);
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -69,7 +70,7 @@ export function PostsPage({
               // topic: searchParams.get("topic")?.split(",") ?? [],
               category: category != null ? [category.id] : [],
             }),
-            [category, params.locale],
+            [category, params.locale]
           )}
         />
         <Container maxW="container.xl" mb={4}>
@@ -82,6 +83,16 @@ export function PostsPage({
               <BreadcrumbItem>
                 <BreadcrumbLink
                   as={Link}
+                  href={`/${params.locale}`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={Link}
                   href={`/${params.locale}/community`}
                   fontSize="sm"
                   noOfLines={1}
@@ -90,7 +101,7 @@ export function PostsPage({
                 </BreadcrumbLink>
               </BreadcrumbItem>
 
-              <BreadcrumbItem isCurrentPage fontSize='sm'>
+              <BreadcrumbItem isCurrentPage fontSize="sm">
                 <BreadcrumbLink fontSize="sm">Blog</BreadcrumbLink>
               </BreadcrumbItem>
             </Breadcrumb>

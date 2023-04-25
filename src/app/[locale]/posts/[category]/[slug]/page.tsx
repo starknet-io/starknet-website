@@ -112,6 +112,16 @@ export default async function Page({
             <BreadcrumbItem>
               <BreadcrumbLink
                 as={Link}
+                href={`/${locale}`}
+                fontSize="sm"
+                noOfLines={1}
+              >
+                Home
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                as={Link}
                 href={`/${locale}/posts`}
                 fontSize="sm"
                 noOfLines={1}
