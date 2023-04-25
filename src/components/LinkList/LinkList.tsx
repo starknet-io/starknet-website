@@ -117,7 +117,7 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
     >
       <Flex
         direction={{ base: "column", md: "row" }}
-        gap="16px"
+        gap="12px"
         alignItems={{ md: "center" }}
       >
         {avatar && (
@@ -162,12 +162,16 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
               md: "row",
             }}
           >
-            <Text display={{ base: "none", md: "flex" }} color="fg-default">
-              •
-            </Text>
-            <Text noOfLines={1} color="fg-default">
-              {subLabel.label}
-            </Text>
+            {subLabel.label && (
+              <Flex gap="8px">
+                <Text display={{ base: "none", md: "flex" }} color="fg-default">
+                  •
+                </Text>
+                <Text noOfLines={1} color="fg-default">
+                  {subLabel.label}
+                </Text>
+              </Flex>
+            )}
             {subLabel.boldLabel && (
               <Text
                 // pl={{ base: "32px", md: "0px" }}
