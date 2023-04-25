@@ -108,7 +108,12 @@ export function PostsPage({
           }
           leftAside={
             <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <Heading mt="-24px" color="heading-navy-fg" variant="h4">
+              <Heading
+                mt="-24px"
+                color="heading-navy-fg"
+                variant="h4"
+                mb="1rem"
+              >
                 Topics
               </Heading>
               <CustomTopics topics={topics} />
@@ -139,9 +144,20 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
     sortBy: ["count:desc"],
   });
 
+  const topicsDict = useMemo(() => {
+    return topics.reduce((acc, topic) => {
+      acc[topic.id] = topic;
+      return acc;
+    }, {} as Record<string, Topic>);
+  }, [topics]);
+
+  const validTopics = useMemo(() => {
+    return items.filter((topic) => topicsDict[topic.value] != null);
+  }, [topicsDict, items]);
+
   return (
     <Box display="flex" flexWrap="wrap" gap="8px" columnGap="4px" width="100%">
-      {items.map((topic, i) => (
+      {validTopics.map((topic, i) => (
         <Button
           size="sm"
           px="8px"
@@ -167,7 +183,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
           }}
           key={i}
         >
-          {topics.find((a) => a.id === topic.value)?.name}
+          {topicsDict[topic.value].name}
         </Button>
       ))}
     </Box>
