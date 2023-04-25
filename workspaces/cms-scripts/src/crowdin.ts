@@ -76,7 +76,6 @@ async function translateFields(data: any, fields: CmsField[], filepath: string) 
             );
 
             translatedData = JSON.parse(file);
-            console.log(translatedData)
           } catch {}
         }
 
@@ -99,7 +98,7 @@ async function translateFields(data: any, fields: CmsField[], filepath: string) 
       case "markdown":
         try {
           data[field.name] = await fs.readFile(
-            path.join(process.cwd(), filepath + ".json"),
+            path.join(process.cwd(), filepath + "_" + field.name + ".md"),
             "utf8",
           );
         } catch {}
@@ -203,7 +202,6 @@ export function handleFields(
               );
 
               if (type != null) {
-                // console.log(type)
                 handleFields(
                   files,
                   data,
