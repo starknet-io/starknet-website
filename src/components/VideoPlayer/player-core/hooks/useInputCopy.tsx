@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useCopyToClipboard } from "react-use";
 
 export default function useInputCopy() {

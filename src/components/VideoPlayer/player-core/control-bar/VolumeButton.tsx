@@ -5,7 +5,7 @@ import {
   SliderThumb,
   SliderTrack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import ControlButton from "./ControlButton";
 import { preventVideoJSHotKeys } from "./utils";
 
@@ -27,8 +27,6 @@ export const VolumeButton = ({
   onVolumeScrubChange,
   onVolumeScrubEnd,
 }: VolumeButtonProps) => {
-  const [isScrubbing, setScrubbing] = useState(false);
-
   const getIcon = () => {
     if (isMuted)
       return (
@@ -86,12 +84,12 @@ export const VolumeButton = ({
       <ControlButton ariaLabel="Volume" onClick={toggleMute} icon={getIcon()} />
       <Box
         sx={{
-          w: isScrubbing ? "80px" : "0",
-          opacity: isScrubbing ? 1 : 0,
+          w: "0px",
+          opacity: 0,
           pl: "4px",
           // pr: "24px",
           display: "flex",
-          transition: "all 0.5s",
+          transition: "all 0.5s ease-in-out",
           position: "relative",
         }}
         _groupHover={{
