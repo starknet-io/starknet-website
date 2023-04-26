@@ -5,7 +5,6 @@ import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
-import { IconLinkCard } from "./cards/IconLinkCard";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
@@ -28,8 +27,6 @@ interface Props {
 export async function Block({ block, locale }: Props): JSX.Element {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
-  } else if (block.type === "icon_link_card") {
-    return <IconLinkCard {...block} locale={locale} />;
   } else if (block.type === "container") {
     return (
       <Container maxWidth={block.max_width}>

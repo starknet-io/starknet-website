@@ -41,13 +41,6 @@ export interface BasicCardBlock {
 
   readonly size?: "sm" | "md";
 }
-export interface IconLinkCardBlock {
-  readonly type: "icon_link_card";
-  readonly title: string;
-  readonly link: LinkData;
-  readonly icon: string;
-  readonly color?: "orange" | "blue" | "green" | "yellow";
-}
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -146,7 +139,6 @@ export type Block =
   | OnRampsBlock
   | WalletsBlock
   | BasicCardBlock
-  | IconLinkCardBlock
   | ImageIconLinkCardBlock
   | HeroBlock
   | HomeHeroBlock
