@@ -25,6 +25,7 @@ export const CardGradientBorder = ({
       padding={`${padding}px`}
       bg="card-bg"
       borderRadius={borderRadius}
+      height="100%"
       _hover={{
         background:
           "linear-gradient(0.25turn, white, white) padding-box,linear-gradient(200deg, #C507E4, #5C94FF) ",

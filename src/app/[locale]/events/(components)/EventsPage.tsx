@@ -6,9 +6,9 @@ import {
   Breadcrumb,
   Box,
   Flex,
-  VStack,
   HStack,
   Divider,
+  VStack
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { useMemo } from "react";
@@ -21,7 +21,7 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/ListCards/ListCard";
+import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
 import { Event } from "@starknet-io/cms-data/src/events";
