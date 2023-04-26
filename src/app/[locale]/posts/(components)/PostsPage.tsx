@@ -185,7 +185,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
         >
           {topicsDict[topic.value].name}
         </Button>
-      )})}
+      ))}
     </Box>
   );
 }
