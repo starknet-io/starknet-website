@@ -7,7 +7,10 @@ start_date: 2023-06-08T13:39:35.920Z
 end_date: 2023-06-10T13:39:35.925Z
 image: /assets/btc-prague-2023.jpeg
 location: europe
+city: Prague
+country: Czech Republic
 tags:
   - crypto
   - blockchain
   - starknet
+  - ""

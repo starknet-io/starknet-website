@@ -1,6 +1,7 @@
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const jobsCollectionConfig = {
+  crowdin: true,
   name: "jobs",
   label: "Jobs",
   identifier_field: "id",
@@ -13,7 +14,7 @@ export const jobsCollectionConfig = {
     {
       name: "id",
       label: "id",
-      widget: "uuid" as "string",
+      widget: "uuid",
     },
     {
       name: "contact",
@@ -24,21 +25,25 @@ export const jobsCollectionConfig = {
           name: "name",
           label: "Name",
           widget: "string",
+          crowdin: true,
         },
         {
           name: "email",
           label: "Email",
           widget: "string",
+          crowdin: false
         },
         {
           name: "twitter",
           label: "Twitter",
           widget: "string",
+          crowdin: false
         },
         {
           name: "discord",
           label: "Discord",
           widget: "string",
+          crowdin: false
         },
         {
           name: "logo",
@@ -56,16 +61,19 @@ export const jobsCollectionConfig = {
           name: "title",
           label: "Title",
           widget: "string",
+          crowdin: true
         },
         {
           name: "description",
           label: "Description",
           widget: "string",
+          crowdin: true
         },
         {
           name: "role",
           label: "Role",
           widget: "string",
+          crowdin: true
         },
         {
           name: "type",
@@ -138,18 +146,21 @@ export const jobsCollectionConfig = {
           name: "scope",
           label: "Job scope",
           widget: "string",
+          crowdin: true
         },
         {
           name: "how_to_apply",
           label: "How to apply",
           widget: "string",
+          crowdin: true
         },
         {
           name: "apply_url",
           label: "Link to apply",
           widget: "string",
+          crowdin: false
         },
       ],
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

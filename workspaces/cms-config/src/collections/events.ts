@@ -1,10 +1,11 @@
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const eventsCollectionConfig = {
+  crowdin: true,
   name: "events",
   label: "Events",
   label_singular: "Event",
-  folder: '_data/events',
+  folder: "_data/events",
   slug: "{{name}}",
   summary: "{{name}}",
   create: true,
@@ -27,22 +28,29 @@ export const eventsCollectionConfig = {
           label: "Hackathon",
           value: "hackathon",
         },
+        {
+          label: "Meetup",
+          value: "meetup",
+        },
       ],
     },
     {
       name: "name",
       label: "Event Name",
       widget: "string",
+      crowdin: true
     },
     {
       name: "description",
       label: "Description",
       widget: "string",
+      crowdin: true
     },
     {
       name: "url",
       label: "Website URL",
       widget: "string",
+      crowdin: false
     },
     {
       name: "start_date",
@@ -66,7 +74,7 @@ export const eventsCollectionConfig = {
       widget: "select",
       options: [
         {
-          label: "online / remote",
+          label: "Online / Remote",
           value: "online_remote",
         },
         {
@@ -74,20 +82,28 @@ export const eventsCollectionConfig = {
           value: "usa",
         },
         {
-          label: "Europe",
-          value: "europe",
+          label: "Africa",
+          value: "africa",
         },
         {
           label: "Asia",
           value: "asia",
         },
         {
-          label: "South America",
-          value: "south_america",
+          label: "Australia / Oceania",
+          value: "australia_oceania",
         },
         {
-          label: "Canada",
-          value: "canada",
+          label: "Europe",
+          value: "europe",
+        },
+        {
+          label: "North America",
+          value: "north_america",
+        },
+        {
+          label: "South America",
+          value: "south_america",
         },
       ],
     },
@@ -95,17 +111,13 @@ export const eventsCollectionConfig = {
       name: "city",
       label: "City",
       widget: "string",
+      crowdin: true
     },
     {
       name: "country",
       label: "Country (State if USA)",
       widget: "string",
-    },
-    {
-      name: "tags",
-      label: "Tags",
-      widget: "list",
-      default: ["crypto", "blockchain", "starknet"],
+      crowdin: true
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

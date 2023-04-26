@@ -63,6 +63,16 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
               <BreadcrumbItem>
                 <BreadcrumbLink
                   as={Link}
+                  href={`/${params.locale}`}
+                  fontSize="sm"
+                  noOfLines={1}
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  as={Link}
                   href={`/${params.locale}/community`}
                   fontSize="sm"
                   noOfLines={1}
