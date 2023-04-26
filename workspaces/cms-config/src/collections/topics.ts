@@ -1,6 +1,7 @@
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const topicsCollectionConfig = {
+  crowdin: true,
   name: "topics",
   label: "Blog - Topics",
   label_singular: "Topic",
@@ -14,12 +15,13 @@ export const topicsCollectionConfig = {
     {
       name: "id",
       label: "id",
-      widget: "uuid" as "string",
+      widget: "uuid",
     },
     {
       name: "name",
       label: "Name",
       widget: "string",
+      crowdin: true
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

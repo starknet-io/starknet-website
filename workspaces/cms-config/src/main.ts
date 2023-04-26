@@ -1,5 +1,5 @@
-import type { CmsConfig } from "netlify-cms-core";
 import { collections } from "./collections";
+import { CmsConfig } from "./types";
 
 export const CMSConfig = {
   slug: {
