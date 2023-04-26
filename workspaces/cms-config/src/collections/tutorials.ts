@@ -8,6 +8,7 @@ export const tutorialsCollectionConfig = {
   format: "yml",
   identifier_field: "id",
   summary: "{{title}}",
+  sortable_fields: ["published_at", "title"],
   fields: [
     {
       label: "ID",
