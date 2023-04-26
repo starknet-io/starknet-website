@@ -25,81 +25,102 @@ type RootProps = {
 
 const Root = ({ children, ...rest }: RootProps) => {
   return (
-    <Box as="footer" role="contentinfo" {...rest} margin="auto">
+    <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto">
       <Box>
-        <Box>
-          <Container as="footer" role="contentinfo" maxW="1200">
+        <Box display="flex" justifyContent="center">
+          <Container
+            as="footer"
+            role="contentinfo"
+            maxWidth="auto"
+            px="0"
+            justifyContent="center"
+            display="flex"
+            flexDirection="column"
+            alignItems={{ base: "flex-start", md: "center" }}
+          >
             <Stack
               spacing={{ base: "12", md: "8" }}
               direction={{ base: "column-reverse", lg: "row" }}
               py={{ base: "12", md: "16" }}
               justify="space-between"
+              maxW="1200"
+              px="30px"
             >
               {children}
             </Stack>
             <Divider borderColor={useColorModeValue("footer-divider-bg", "footer-divider-bg")} marginBottom="8px" opacity="1" />
-            <Stack
-              pb="38px"
-              pt="38px"
-              justify="space-between"
-              direction={{ base: "column", md: "row" }}
-              align={{ base: "start", md: "center" }}
+            <Box
               background="bg.main"
               _dark={{
                 background:
                   "darkMode.bg2",
               }}
+              width="100%"
+              display="flex"
+              flexDirection="row"
+              justifyContent="center"
             >
-              <HStack
-                justify={{ base: "space-between", sm: "start" }}
-                width={{ base: "full", sm: "auto" }}
-                spacing="8px"
-                order={{ base: 2, lg: 1}}
+              <Stack
+                pb="38px"
+                pt="38px"
+                justify="space-between"
+                direction={{ base: "column", md: "row" }}
+                align={{ base: "start", md: "center" }}
+                maxW="1200"
+                width="100%"
+                px="30px"
               >
-                <Box pr="24px">
-                  <StarknetLogo height="32" />
-                </Box>
-                <Center height='32px'>
-                  <Divider orientation="vertical" borderColor={useColorModeValue("footer-divider-bg", "footer-divider-bg")} opacity="1" />
-                </Center>
-                <Text fontSize="sm" color={useColorModeValue("footer-link-fg", "footer-link-fg")} paddingLeft="24px">
-                © {new Date().getFullYear()} Starknet
-                </Text>
-              </HStack>
-              <ButtonGroup order={{ base: 1, lg: 2}} paddingBottom={{ base: "36px", md: 0}}>
-                <IconButton
-                  as="a"
-                  href="https://starknet.io/discord"
-                  aria-label="Discord"
-                  icon={<SiDiscord fontSize="1.25rem" />}
-                  size="small"
-                  marginRight="16px"
-                />
-                <IconButton
-                  as="a"
-                  href="https://github.com/starknet-io/starknet-website"
-                  aria-label="GitHub"
-                  icon={<SiGithub fontSize="1.25rem" />}
-                  size="small"
-                  marginRight="16px"
-                />
-                <IconButton
-                  as="a"
-                  href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
-                  aria-label="YouTube"
-                  icon={<SiYoutube fontSize="1.25rem" />}
-                  size="small"
-                  marginRight="16px"
-                />
-                <IconButton
-                  as="a"
-                  href="https://twitter.com/Starknet"
-                  aria-label="Twitter"
-                  icon={<SiTwitter fontSize="1.25rem" />}
-                  size="small"
-                />
-              </ButtonGroup>
-            </Stack>
+                <HStack
+                  justify={{ base: "space-between", sm: "start" }}
+                  width={{ base: "full", sm: "auto" }}
+                  spacing="0"
+                  order={{ base: 2, lg: 1}}
+                >
+                  <Box pr="24px">
+                    <StarknetLogo height="32" />
+                  </Box>
+                  <Center height='32px'>
+                    <Divider orientation="vertical" borderColor={useColorModeValue("footer-divider-bg", "footer-divider-bg")} opacity="1" />
+                  </Center>
+                  <Text fontSize="sm" color={useColorModeValue("footer-link-fg", "footer-link-fg")} paddingLeft="24px">
+                  Built with ✨ by the Starknet community.
+                  </Text>
+                </HStack>
+                <ButtonGroup order={{ base: 1, lg: 2}} paddingBottom={{ base: "36px", md: 0}}>
+                  <IconButton
+                    as="a"
+                    href="https://starknet.io/discord"
+                    aria-label="Discord"
+                    icon={<SiDiscord fontSize="1.25rem" />}
+                    size="small"
+                    marginRight="16px"
+                  />
+                  <IconButton
+                    as="a"
+                    href="https://github.com/starknet-io/starknet-website"
+                    aria-label="GitHub"
+                    icon={<SiGithub fontSize="1.25rem" />}
+                    size="small"
+                    marginRight="16px"
+                  />
+                  <IconButton
+                    as="a"
+                    href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
+                    aria-label="YouTube"
+                    icon={<SiYoutube fontSize="1.25rem" />}
+                    size="small"
+                    marginRight="16px"
+                  />
+                  <IconButton
+                    as="a"
+                    href="https://twitter.com/Starknet"
+                    aria-label="Twitter"
+                    icon={<SiTwitter fontSize="1.25rem" />}
+                    size="small"
+                  />
+                </ButtonGroup>
+              </Stack>
+            </Box>
           </Container>
         </Box>
       </Box>
@@ -119,7 +140,7 @@ const Column = ({ title, children, color }: ColumnProps) => {
       {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
       </Text> */}
-      <Heading variant="h4" color="footer-header-fg" _dark={{ color: "white"}}>{title}</Heading>
+      <Heading variant="h4" color={useColorModeValue("footer-header-fg", "white")} fontWeight="500">{title}</Heading>
       <Stack spacing="1" shouldWrapChildren>
         {children}
       </Stack>
@@ -145,8 +166,7 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
       alignItems="center"
       justifyContent="flex-start"
       textDecoration="none"
-      mb="4"
-      gap={1}
+      gap="4px"
       _hover={{
         color: "navbar-link-hover-fg",
         bg: "navbar-link-hover-bg",

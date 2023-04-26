@@ -250,7 +250,7 @@ export const tokens = {
       "navbar-link-hover-bg": "#121212",
       "navbar-link-hover-fg": "#9EBFFF",
       "footer-link-fg": "#858585",
-      "footer-header-fg": "#080844",
+      "footer-header-fg": "#ffffff",
       "footer-stack-bg": "#0B0B0B",
       "navbar-link-active-bg": "transparent",
       "navbar-link-active-fg": "#2166EF",
@@ -582,6 +582,10 @@ export const semanticTokens = {
     "footer-link-fg": {
       default: tokens.colors.light["footer-link-fg"],
       _dark: tokens.colors.dark["footer-link-fg"],
+    },
+    "footer-header-fg": {
+      default: tokens.colors.light["footer-header-fg"],
+      _dark: tokens.colors.dark["footer-header-fg"],
     },
     "navbar-link-active-fg": {
       default: tokens.colors.light["navbar-link-active-fg"],
