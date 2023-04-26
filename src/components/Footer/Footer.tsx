@@ -10,7 +10,7 @@ import {
   Link,
   Divider,
   Center,
-  useColorModeValue
+  useColorModeValue,
 } from "src/libs/chakra-ui";
 import { Heading } from "@ui/Typography/Heading";
 import NextLink from "next/link";
@@ -48,12 +48,18 @@ const Root = ({ children, ...rest }: RootProps) => {
             >
               {children}
             </Stack>
-            <Divider borderColor={useColorModeValue("footer-divider-bg", "footer-divider-bg")} marginBottom="8px" opacity="1" />
+            <Divider
+              borderColor={useColorModeValue(
+                "footer-divider-bg",
+                "footer-divider-bg"
+              )}
+              marginBottom="0px"
+              opacity="1"
+            />
             <Box
               background="bg.main"
               _dark={{
-                background:
-                  "darkMode.bg2",
+                background: "darkMode.bg2",
               }}
               width="100%"
               display="flex"
@@ -74,19 +80,36 @@ const Root = ({ children, ...rest }: RootProps) => {
                   justify={{ base: "space-between", sm: "start" }}
                   width={{ base: "full", sm: "auto" }}
                   spacing="0"
-                  order={{ base: 2, lg: 1}}
+                  order={{ base: 2, lg: 1 }}
                 >
                   <Box pr="24px">
                     <StarknetLogo height="32" />
                   </Box>
-                  <Center height='32px'>
-                    <Divider orientation="vertical" borderColor={useColorModeValue("footer-divider-bg", "footer-divider-bg")} opacity="1" />
+                  <Center height="32px">
+                    <Divider
+                      orientation="vertical"
+                      borderColor={useColorModeValue(
+                        "footer-divider-bg",
+                        "footer-divider-bg"
+                      )}
+                      opacity="1"
+                    />
                   </Center>
-                  <Text fontSize="sm" color={useColorModeValue("footer-link-fg", "footer-link-fg")} paddingLeft="24px">
-                  Built with ✨ by the Starknet community.
+                  <Text
+                    fontSize="sm"
+                    color={useColorModeValue(
+                      "footer-link-fg",
+                      "footer-link-fg"
+                    )}
+                    paddingLeft="24px"
+                  >
+                    Built with ✨ by the Starknet community.
                   </Text>
                 </HStack>
-                <ButtonGroup order={{ base: 1, lg: 2}} paddingBottom={{ base: "36px", md: 0}}>
+                <ButtonGroup
+                  order={{ base: 1, lg: 2 }}
+                  paddingBottom={{ base: "36px", md: 0 }}
+                >
                   <IconButton
                     as="a"
                     href="https://starknet.io/discord"
@@ -140,7 +163,13 @@ const Column = ({ title, children, color }: ColumnProps) => {
       {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
       </Text> */}
-      <Heading variant="h4" color={useColorModeValue("footer-header-fg", "white")} fontWeight="500">{title}</Heading>
+      <Heading
+        variant="h4"
+        color={useColorModeValue("footer-header-fg", "white")}
+        fontWeight="500"
+      >
+        {title}
+      </Heading>
       <Stack spacing="1" shouldWrapChildren>
         {children}
       </Stack>
