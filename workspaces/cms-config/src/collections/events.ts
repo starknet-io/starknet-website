@@ -1,5 +1,69 @@
 import type { CmsConfig } from "netlify-cms-core";
 
+export const eventsLocations = [
+  {
+    label: "Online / Remote",
+    value: "online_remote",
+  },
+  {
+    label: "USA",
+    value: "usa",
+  },
+  {
+    label: "Africa",
+    value: "africa",
+  },
+  {
+    label: "Asia",
+    value: "asia",
+  },
+  {
+    label: "Australia / Oceania",
+    value: "australia_oceania",
+  },
+  {
+    label: "Europe",
+    value: "europe",
+  },
+  {
+    label: "North America",
+    value: "north_america",
+  },
+  {
+    label: "South America",
+    value: "south_america",
+  },
+];
+
+export const eventsLocationsLabels = eventsLocations.reduce((acc, curr) => {
+  acc[curr.value] = curr.label;
+  return acc;
+}, {} as Record<string, string>);
+
+export const eventsTypes = [
+  {
+    label: "Community Event",
+    value: "community_event",
+  },
+  {
+    label: "Conference",
+    value: "conference",
+  },
+  {
+    label: "Hackathon",
+    value: "hackathon",
+  },
+  {
+    label: "Meetup",
+    value: "meetup",
+  },
+];
+
+export const eventsTypesLabels = eventsTypes.reduce((acc, curr) => {
+  acc[curr.value] = curr.label;
+  return acc;
+}, {} as Record<string, string>);
+
 export const eventsCollectionConfig = {
   name: "events",
   label: "Events",
@@ -14,24 +78,7 @@ export const eventsCollectionConfig = {
       name: "type",
       label: "Type",
       widget: "select",
-      options: [
-        {
-          label: "Community Event",
-          value: "community_event",
-        },
-        {
-          label: "Conference",
-          value: "conference",
-        },
-        {
-          label: "Hackathon",
-          value: "hackathon",
-        },
-        {
-          label: "Meetup",
-          value: "meetup",
-        },
-      ],
+      options: eventsTypes,
     },
     {
       name: "name",
@@ -68,40 +115,7 @@ export const eventsCollectionConfig = {
       name: "location",
       label: "Location",
       widget: "select",
-      options: [
-        {
-          label: "Online / Remote",
-          value: "online_remote",
-        },
-        {
-          label: "USA",
-          value: "usa",
-        },
-        {
-          label: "Africa",
-          value: "africa",
-        },
-        {
-          label: "Asia",
-          value: "asia",
-        },
-        {
-          label: "Australia / Oceania",
-          value: "australia_oceania",
-        },
-        {
-          label: "Europe",
-          value: "europe",
-        },
-        {
-          label: "North America",
-          value: "north_america",
-        },
-        {
-          label: "South America",
-          value: "south_america",
-        },
-      ],
+      options: eventsLocations,
     },
     {
       name: "city",

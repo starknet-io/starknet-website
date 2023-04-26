@@ -28,6 +28,10 @@ import { Event } from "@starknet-io/cms-data/src/events";
 import type { BaseHit } from "instantsearch.js";
 import Link from "next/link";
 import { getUnixTime, startOfDay } from "date-fns";
+import {
+  eventsTypesLabels,
+  eventsLocationsLabels,
+} from "workspaces/cms-config/src/collections/events";
 
 export interface AutoProps {
   readonly params: {
@@ -177,7 +181,7 @@ function CustomLocation() {
             onClick={() => refine(item.value)}
             key={i}
           >
-            {titleCase(item.label)}
+            {eventsLocationsLabels[item.value] || titleCase(item.label)}
           </Button>
         ))}
       </VStack>
@@ -205,7 +209,7 @@ function CustomType() {
             onClick={() => refine(item.value)}
             key={i}
           >
-            {titleCase(item.label)}
+            {eventsTypesLabels[item.value] || titleCase(item.label)}
           </Button>
         ))}
       </VStack>
