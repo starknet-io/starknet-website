@@ -96,23 +96,28 @@ export const ListCard = (props: Props) => {
                     fontWeight="bold"
                     color="list-card-sm-title-fg"
                     display="flex"
-                    flexDirection={{ base: "column", md: "row" }}
+                    flexDirection={{ base: "row", md: "row" }}
                     // justifyContent="space-between"
                     alignItems={{ base: "flex-start", md: "center" }}
                     // margin="0"
                   >
                     {props.startDateTime}
+                    {props.city && (
+                      <Text fontSize="xs" fontWeight="bold" px="4px">
+                        ·
+                      </Text>
+                    )}
                     <Text
                       // mt="2"
                       fontSize="xs"
                       fontWeight="bold"
                       color="list-card-sm-title-fg"
                       // paddingBottom="4px",
-                      paddingLeft="4px"
+
                       as="span"
                     >
                       {/* {props.city} */}
-                      {props.city && ` ·  ${props.city}, `}
+                      {props.city && `  ${props.city}, `}
                       {props.country && props.country}
                     </Text>
                   </Text>
