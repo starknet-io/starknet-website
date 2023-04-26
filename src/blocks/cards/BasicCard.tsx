@@ -1,6 +1,7 @@
 import { Box, LinkBox, Stack } from "src/libs/chakra-ui";
 import { Text } from "@ui/Typography/Text";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import React from "react";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { getComputedLinkData } from "src/utils/utils";
 import type { BasicCardBlock } from "@starknet-io/cms-data/src/pages";

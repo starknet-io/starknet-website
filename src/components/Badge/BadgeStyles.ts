@@ -30,15 +30,15 @@ const stark_struck = defineStyle({
 });
 const foundation = defineStyle({
   background: "badge-starkstruck-bg",
-  color: "badge-starkstruck-fg",
+  color: "badge-foundation-fg",
 });
 const ecosystem = defineStyle({
   background: "badge-starkstruck-bg",
-  color: "badge-starkstruck-fg",
+  color: "badge-foundation-fg",
 });
 const github = defineStyle({
   background: "badge-starkstruck-bg",
-  color: "badge-starkstruck-fg",
+  color: "badge-foundation-fg",
 });
 const blog = defineStyle({
   background: "badge-community-and-events-bg",
@@ -50,6 +50,12 @@ const youtube = defineStyle({
 });
 
 export const badgeTheme = defineStyleConfig({
+  baseStyle: {
+    paddingLeft: "12px",
+    paddingRight: "12px",
+    borderRadius: "12px",
+    color: "badge-starkstruck-fg"
+  },
   variants: {
     engineering,
     community_calls,
