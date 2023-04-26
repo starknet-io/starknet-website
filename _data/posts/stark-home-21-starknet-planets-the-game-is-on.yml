@@ -13,7 +13,7 @@ video:
   id: RhTGxuBryGg
   data:
     kind: youtube#video
-    etag: GWYbGMc5CjT883M0YCxvvQjTLzQ
+    etag: xY--5BldA153jAdPhGACZt05Q38
     id: RhTGxuBryGg
     snippet:
       publishedAt: 2021-06-24T06:49:04Z
@@ -44,3 +44,11 @@ video:
         title: "STARK @ Home 21: StarkNet Planets - The Game is On!"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H23M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

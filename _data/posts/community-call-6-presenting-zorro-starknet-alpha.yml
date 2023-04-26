@@ -13,7 +13,7 @@ video:
   id: UoL4KGP_KVA
   data:
     kind: youtube#video
-    etag: wOQqGT-G74gpHtHQaKQiUvXhkec
+    etag: aN0OhRdy4mKYcZwDtfx8WsCDGBs
     id: UoL4KGP_KVA
     snippet:
       publishedAt: 2022-01-18T18:01:41Z
@@ -150,3 +150,11 @@ video:
 
           01:07:25 Closing thoughts, upcoming community calls
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H10M26S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

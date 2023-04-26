@@ -8,11 +8,17 @@ video:
   id: GnXQiFJlf2w
   data:
     kind: youtube#video
-    etag: ehflAWaoCGAlEYJ9mLk49QIcpUg
+    etag: cKDcCLznIEBQy5zuSgVmr9Zeyuo
     id: GnXQiFJlf2w
     snippet:
-      publishedAt: 2023-04-21T06:02:26.000Z
-      liveBroadcastContent: none
+      publishedAt: 2023-04-21T06:02:26Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: L2 peace - One goal, different visions
+      description: >-
+        Announcing an electrifying event as industry trailblazers unite to
+        explore Ethereum Layer 2 solutions!
+
+        Scroll, Optimism, Arbitrum, LambdaClass, zkSync, Polygon, ConsenSys, RISC Zero, Starknet
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/GnXQiFJlf2w/default.jpg
@@ -34,9 +40,7 @@ video:
           url: https://i.ytimg.com/vi/GnXQiFJlf2w/maxresdefault.jpg
           width: 1280
           height: 720
-      defaultAudioLanguage: en-US
       channelTitle: StarkWare
-      title: L2 peace - One goal, different visions
       tags:
         - Cairo
         - StarkNet
@@ -46,6 +50,7 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
+      liveBroadcastContent: none
       localized:
         title: L2 peace - One goal, different visions
         description: >-
@@ -53,18 +58,21 @@ video:
           explore Ethereum Layer 2 solutions!
 
           Scroll, Optimism, Arbitrum, LambdaClass, zkSync, Polygon, ConsenSys, RISC Zero, Starknet
-      description: >-
-        Announcing an electrifying event as industry trailblazers unite to
-        explore Ethereum Layer 2 solutions!
-
-        Scroll, Optimism, Arbitrum, LambdaClass, zkSync, Polygon, ConsenSys, RISC Zero, Starknet
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H44M44S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/l2-peace-one-goal-different-visions.png
 category: ecosystem
 topic:
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: >-
-  Announcing an electrifying event as industry trailblazers unite to explore
-  Ethereum Layer 2 solutions!
+  Announcing an electrifying event as industry trailblazers unite to
+  explore Ethereum Layer 2 solutions!
 
   Scroll, Optimism, Arbitrum, LambdaClass, zkSync, Polygon, ConsenSys, RISC Zero, Starknet

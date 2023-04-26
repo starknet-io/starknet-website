@@ -14,7 +14,7 @@ video:
   id: 3p9gdwC2x88
   data:
     kind: youtube#video
-    etag: Ckysa40iEmzQmR5n7XxSn_ZF7cE
+    etag: mQQC5snzUlYN4MA_-bVUZJMk6wI
     id: 3p9gdwC2x88
     snippet:
       publishedAt: 2022-11-22T15:31:40Z
@@ -112,3 +112,11 @@ video:
 
 
           #ethereum #eth #crypto #defi #layer2 #layer1 #zkrollups #lending #moneymarket #blockchain #technology
+    contentDetails:
+      duration: PT16M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

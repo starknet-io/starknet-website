@@ -13,7 +13,7 @@ video:
   id: s1Ja3EmJPt4
   data:
     kind: youtube#video
-    etag: 4YXmRxQx1xmc5L2OK052yttEsng
+    etag: KIiRaXS2Hh5fAuAf6IJiVEXC-dg
     id: s1Ja3EmJPt4
     snippet:
       publishedAt: 2022-02-16T05:17:30Z
@@ -47,3 +47,11 @@ video:
       localized:
         title: "StarkNet Community call #8"
         description: StarkNet community call
+    contentDetails:
+      duration: PT1H14M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

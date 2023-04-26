@@ -14,7 +14,7 @@ video:
   id: 9IszIArEt1M
   data:
     kind: youtube#video
-    etag: SWZgGs9jzfQ_9EtfR4Tckc96B84
+    etag: xUCG2AagaEMkH9UNPJZJPK5-HFM
     id: 9IszIArEt1M
     snippet:
       publishedAt: 2023-01-18T02:22:43Z
@@ -65,3 +65,11 @@ video:
 
           Today we will host Elin Tulchinsky and Alon Haramati from StarkWare to talk about the new StarkNet Rust Sequencer
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT42M21S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

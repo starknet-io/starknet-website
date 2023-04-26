@@ -15,7 +15,7 @@ video:
   id: Ugy6mEtHqdA
   data:
     kind: youtube#video
-    etag: 5T8DDqojDCaLC5M7CxfnGK6xSQg
+    etag: QXwbvfZ0sFsey2tIIsq_JjjbqYU
     id: Ugy6mEtHqdA
     snippet:
       publishedAt: 2022-12-01T07:15:10Z
@@ -59,3 +59,11 @@ video:
           specifically.   Twitter: @jane0mac @bfu_fubrian @zkLend @henrlihenrli
           @Starknet_Edu"
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT51M19S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

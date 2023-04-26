@@ -14,7 +14,7 @@ video:
   id: SreeFPVrGYo
   data:
     kind: youtube#video
-    etag: OSqRdtb7YidYO0QW-TwoHXmuI54
+    etag: zzlssGKyrPoxMU1aA99C44Ptf58
     id: SreeFPVrGYo
     snippet:
       publishedAt: 2020-03-19T19:12:49Z
@@ -96,3 +96,11 @@ video:
 
           - Support us on Patreon - https://www.patreon.com/zeroknowledge
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT1H14M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

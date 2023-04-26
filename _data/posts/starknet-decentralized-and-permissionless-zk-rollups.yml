@@ -18,7 +18,7 @@ video:
   id: SxlgpmRsxsM
   data:
     kind: youtube#video
-    etag: UQVONLTAC5Ir9314yL6EU1-bKUI
+    etag: Vu9owzdbUosubOpRBUYkty_uaRc
     id: SxlgpmRsxsM
     snippet:
       publishedAt: 2021-08-17T13:24:18Z
@@ -118,3 +118,11 @@ video:
 
           Talk to an expert: http://chn.lk/contact
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT16M28S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

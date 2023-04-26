@@ -13,7 +13,7 @@ video:
   id: Q0LpMwvIMmc
   data:
     kind: youtube#video
-    etag: Vr0UIv6eIUKusTlXePC4LRVIf_c
+    etag: ZzPYQIN17uH-yaEjufYkv16uJZ4
     id: Q0LpMwvIMmc
     snippet:
       publishedAt: 2022-11-14T13:00:15Z
@@ -63,3 +63,11 @@ video:
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT12M56S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

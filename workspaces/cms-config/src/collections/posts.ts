@@ -56,7 +56,7 @@ export const postsCollectionConfig = {
     {
       name: "time_to_consume",
       label: "Time to read / watch / listen (in minutes)",
-      widget: "string",
+      widget: "timeToConsume" as "string"
     },
     {
       name: "video",

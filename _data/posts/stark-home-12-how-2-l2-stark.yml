@@ -13,7 +13,7 @@ video:
   id: 2HEaWD0ceU0
   data:
     kind: youtube#video
-    etag: 1k9B-y-f1u3snDF65OMppcj9gzY
+    etag: 6O_-VZZ0L58_GFWGp4izTGtt3so
     id: 2HEaWD0ceU0
     snippet:
       publishedAt: 2020-09-11T10:39:21Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 12: How 2 L2 STARK?"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H29M35S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

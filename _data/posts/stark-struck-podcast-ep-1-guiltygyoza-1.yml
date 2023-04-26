@@ -15,7 +15,7 @@ video:
   id: YNukaXe1xaU
   data:
     kind: youtube#video
-    etag: Yn299s-7yz8VZrHI1LRFXtthweo
+    etag: Hmsb3KnVLhOFL1PS5LMMDs3QwJc
     id: YNukaXe1xaU
     snippet:
       publishedAt: 2022-08-08T05:21:34Z
@@ -94,3 +94,11 @@ video:
 
           @Starknet_Intern
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT44M53S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

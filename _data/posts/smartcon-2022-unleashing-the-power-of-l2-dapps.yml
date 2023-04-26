@@ -21,7 +21,7 @@ video:
   id: d_Za0z5JCsc
   data:
     kind: youtube#video
-    etag: eww2UUph-A5CvmVCqFRVpBUwFFw
+    etag: A19k90bqGvbiTQln_waCJwFPQFA
     id: d_Za0z5JCsc
     snippet:
       publishedAt: 2022-11-09T18:00:28Z
@@ -119,3 +119,11 @@ video:
 
           #Chainlink
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT14M10S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

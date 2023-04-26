@@ -13,7 +13,7 @@ video:
   id: vDiMYP8vc60
   data:
     kind: youtube#video
-    etag: w9cnEoVwMwL1AYJR7nLrhGZkK8g
+    etag: LIuILBPQa5iO2L0bspBF0qQ84G4
     id: vDiMYP8vc60
     snippet:
       publishedAt: 2021-02-12T05:41:05Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 18: T+epsilon - Capital Efficiency on L2-DeFi"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H23M15S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

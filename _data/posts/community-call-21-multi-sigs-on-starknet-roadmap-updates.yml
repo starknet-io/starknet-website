@@ -13,7 +13,7 @@ video:
   id: Nze82XYVLbQ
   data:
     kind: youtube#video
-    etag: XjimiuFtfWPuvH2rNZtqcLhY5JM
+    etag: 82CONJXOu7NdEjxJML7nMXl8r7M
     id: Nze82XYVLbQ
     snippet:
       publishedAt: 2022-08-24T01:23:14Z
@@ -48,3 +48,11 @@ video:
         title: "StarkNet Community Call #21 | Multi sigs on StarkNet, roadmap updates"
         description: Multi sigs on StarkNet, roadmap updates
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT49M6S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

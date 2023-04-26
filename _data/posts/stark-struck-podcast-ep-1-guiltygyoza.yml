@@ -15,7 +15,7 @@ video:
   id: _Z9nIoAKQQE
   data:
     kind: youtube#video
-    etag: 3uWzDvp3lsyX96pX_DHO1BBhOY4
+    etag: t8PEfnNlY7M9sjGtsMc9bcigidg
     id: _Z9nIoAKQQE
     snippet:
       publishedAt: 2022-08-22T07:58:15Z
@@ -74,3 +74,11 @@ video:
 
           Twitter: @sylvechv @wraitii @henrlihenrli @Starknet_Intern
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT54M22S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

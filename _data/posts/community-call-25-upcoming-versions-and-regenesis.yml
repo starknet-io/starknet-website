@@ -14,7 +14,7 @@ video:
   id: 0y5XIjXMkx4
   data:
     kind: youtube#video
-    etag: Qui2Q2I-_pxSLUXcQRZvFL-wvWA
+    etag: fHmhdKy2WgTASi5bREJImfl7K20
     id: 0y5XIjXMkx4
     snippet:
       publishedAt: 2022-10-19T09:25:55Z
@@ -55,3 +55,11 @@ video:
 
           Today we will have Tom Brand from StarkWare talking about the upcoming versions and Regenesis.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT55M25S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -14,7 +14,7 @@ video:
   id: G6e_wI9zIVA
   data:
     kind: youtube#video
-    etag: eqn1lkduBgBv_M2OxkKhpRBJpUw
+    etag: lWkyKDtoIrMHNfUU39TUoJKLLAo
     id: G6e_wI9zIVA
     snippet:
       publishedAt: 2022-06-10T01:36:31Z
@@ -53,3 +53,11 @@ video:
         description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
           and Snapshot partnership
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M6S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

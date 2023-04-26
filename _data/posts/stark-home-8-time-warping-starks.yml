@@ -15,7 +15,7 @@ video:
   id: pSQTnD9opTc
   data:
     kind: youtube#video
-    etag: 1H1coC-5KuEwLck1fVV0t-H1-v0
+    etag: IuaSaJH23PoHLLRX9pvdLB9rYlk
     id: pSQTnD9opTc
     snippet:
       publishedAt: 2020-06-21T06:03:44Z
@@ -53,3 +53,11 @@ video:
         description: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
           stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members
           Kinneret Segal and Tom Brand.
+    contentDetails:
+      duration: PT1H31M19S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

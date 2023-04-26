@@ -12,7 +12,6 @@ function Control(props: CmsWidgetControlProps & any) {
     props.value && "toJSON" in props.value ? props.value.toJSON() : props.value;
   const value = valueData?.url ?? "";
   const title = valueData?.data?.snippet?.title ?? null;
-
   const [fetching, setFetching] = useState<string | null>(null);
 
   async function updateYoutubeData() {
@@ -33,7 +32,6 @@ function Control(props: CmsWidgetControlProps & any) {
         const res = await fetch(
           `${API_BASE_URL}/youtube?id=${encodeURIComponent(id)}`
         );
-
         const { data, message } = await res.json();
 
         if (message != null) throw new Error(message);
@@ -86,8 +84,8 @@ function Control(props: CmsWidgetControlProps & any) {
       >
         {fetching
           ? `Fetching: ${fetching}`
-          : title
-          ? `Video: ${title}`
+          : title && formattedDuration
+          ? `Video: ${title} | Duration: ${formattedDuration}`
           : "No Video Data!"}
       </div>
     </div>

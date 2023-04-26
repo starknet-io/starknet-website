@@ -14,7 +14,7 @@ video:
   id: CKYM25oicTA
   data:
     kind: youtube#video
-    etag: a0CCmPiGsvUjWdWg5txpLAolj7o
+    etag: t5xt7s5wkukOcXfqhC_EGOHNGVA
     id: CKYM25oicTA
     snippet:
       publishedAt: 2023-01-27T03:19:59Z
@@ -69,3 +69,11 @@ video:
 
           Upcoming Starknet version description https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H9M25S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -15,7 +15,7 @@ video:
   id: 9zc804NZ0Hs
   data:
     kind: youtube#video
-    etag: 3sv63m97DBcm_u1We64ssXkPo7A
+    etag: 2XAIkB8qRWEvg7I6L2kNG0m-GF0
     id: 9zc804NZ0Hs
     snippet:
       publishedAt: 2022-03-13T15:26:28Z
@@ -80,3 +80,11 @@ video:
 
           In this STARK @ Home episode, Greg Vardy – head of Nethermind’s Warp team, and Jorik Schellekens from the Warp team – will share their team’s experience and insights.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H9M1S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -17,7 +17,7 @@ video:
   id: wFZ_YIetK1o
   data:
     kind: youtube#video
-    etag: ASIYjuMJP02faojDki1ElAHPDk8
+    etag: dMx1SHqUljLz453MoL8WnJsz8Gw
     id: wFZ_YIetK1o
     snippet:
       publishedAt: 2022-06-05T19:29:59Z
@@ -78,3 +78,11 @@ video:
 
           Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT1H9M56S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

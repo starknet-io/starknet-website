@@ -15,7 +15,7 @@ video:
   id: 3UK4SqUptRw
   data:
     kind: youtube#video
-    etag: CWrdlakPlQ4SSE53AJAYpqzmVH8
+    etag: DA5HycR3q4t9hBnWft17ccy6OW8
     id: 3UK4SqUptRw
     snippet:
       publishedAt: 2022-10-19T12:29:56Z
@@ -58,3 +58,11 @@ video:
           blockchain in particular, and validity rollups specifically.  Twitter:
           @0xs34n @aspectdotco @StarkscanCo @henrlihenrli @Starknet_Intern"
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT43M50S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

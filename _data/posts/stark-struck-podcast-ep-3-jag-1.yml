@@ -15,7 +15,7 @@ video:
   id: fHO9e9OyIyc
   data:
     kind: youtube#video
-    etag: 7Ak4XDrzEiPUeTD9ZK08gR4wCDY
+    etag: hGHI3x3dBYBjXock3v7yuSHuiH8
     id: fHO9e9OyIyc
     snippet:
       publishedAt: 2022-09-07T11:13:45Z
@@ -70,3 +70,11 @@ video:
 
           Twitter: @jag_lotus @henrlihenrli @Starknet_Intern
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H2M39S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -26,7 +26,7 @@ video:
   id: k7soivNSiNU
   data:
     kind: youtube#video
-    etag: CMYi5cEJ_2pMCHaKo61KnbMvhQ0
+    etag: ySkDhZFTTK8STGdO0lGFBthLPQM
     id: k7soivNSiNU
     snippet:
       publishedAt: 2023-01-11T02:34:56Z
@@ -97,3 +97,11 @@ video:
 
           https://starknet.io/governance/starknet-governance-posts/
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT54M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

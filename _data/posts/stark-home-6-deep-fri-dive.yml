@@ -14,7 +14,7 @@ video:
   id: CBw5d520vqk
   data:
     kind: youtube#video
-    etag: p8nyhsBLBXwPSALn9tNQqdEXr1Q
+    etag: MUErcSYWJlGPbkts87ArUDMisHA
     id: CBw5d520vqk
     snippet:
       publishedAt: 2020-05-14T12:19:17Z
@@ -50,3 +50,11 @@ video:
         title: "STARK @ Home 6: Deep FRI Dive"
         description: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and
           a cool trick at the end)
+    contentDetails:
+      duration: PT1H15M59S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

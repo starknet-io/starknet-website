@@ -14,7 +14,7 @@ video:
   id: OzYbVm536vo
   data:
     kind: youtube#video
-    etag: Rg3AkYyKx5Vk4knYbr7HK9FYAts
+    etag: YN820MZFdwpeG4AWakv3D61sYEc
     id: OzYbVm536vo
     snippet:
       publishedAt: 2022-07-27T01:26:50Z
@@ -53,3 +53,11 @@ video:
         description: Join us for our 19th Community call. Today we are hosting Mirko
           from Equilibrium and talking about full-nodes
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT51M31S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

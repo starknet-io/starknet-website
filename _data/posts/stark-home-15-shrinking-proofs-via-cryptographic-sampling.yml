@@ -13,7 +13,7 @@ video:
   id: 5XCLfCkRmsM
   data:
     kind: youtube#video
-    etag: YiSm3zetYwUFAY752cydwuIQjek
+    etag: qkOtOi-GPXSgAw2bwvHvTGEK38A
     id: 5XCLfCkRmsM
     snippet:
       publishedAt: 2020-11-15T07:31:31Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 15: Shrinking Proofs via Cryptographic Sampling"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H13M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

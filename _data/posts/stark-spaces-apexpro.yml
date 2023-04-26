@@ -13,7 +13,7 @@ video:
   id: W2Gz8zd6uUM
   data:
     kind: youtube#video
-    etag: MpI3ry76zp4_KNlXbwzTqeUcoLY
+    etag: UzuvrSiYjyYpguVqb3x9AtrGQWc
     id: W2Gz8zd6uUM
     snippet:
       publishedAt: 2022-12-13T17:05:56Z
@@ -48,3 +48,11 @@ video:
         title: STARK SPACES | ApeXPro
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT24M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

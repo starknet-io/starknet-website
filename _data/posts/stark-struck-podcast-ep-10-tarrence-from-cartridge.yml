@@ -15,7 +15,7 @@ video:
   id: xslN-kj5jZA
   data:
     kind: youtube#video
-    etag: dmn9qtaJ2pTZbt3spu-DsLjVHoo
+    etag: Ka1YASbeZQGj2s7q2th5rBIUpBs
     id: xslN-kj5jZA
     snippet:
       publishedAt: 2023-01-25T15:08:46Z
@@ -64,3 +64,11 @@ video:
 
           Twitter: @tarrenceva @cartridge_gg @henrlihenrli @Starknet
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M57S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

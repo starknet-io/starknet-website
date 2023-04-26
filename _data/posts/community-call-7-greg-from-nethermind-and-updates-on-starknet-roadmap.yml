@@ -13,7 +13,7 @@ video:
   id: 4kb4wSDETLM
   data:
     kind: youtube#video
-    etag: 1jBO4ELu4Nd4lxS-uxJWSzQV8cM
+    etag: oI46L1SaRVrTV-JE2521yd8gM_s
     id: 4kb4wSDETLM
     snippet:
       publishedAt: 2022-02-07T16:18:53Z
@@ -50,3 +50,11 @@ video:
           StarkNet Roadmap"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT51M38S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

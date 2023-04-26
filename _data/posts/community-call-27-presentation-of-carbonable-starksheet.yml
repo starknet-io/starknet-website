@@ -13,7 +13,7 @@ video:
   id: f6V46ZzgaOs
   data:
     kind: youtube#video
-    etag: w8mw6JXsxkwmviRjI_Z5SpuQAnI
+    etag: IZMeRSXR77eTUETCLIC5QJEgvaM
     id: f6V46ZzgaOs
     snippet:
       publishedAt: 2022-11-16T02:38:30Z
@@ -56,3 +56,11 @@ video:
           Join us for our #27 StarkNet community call.
           Presentation of Carbonable + StarkSheet.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M35S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

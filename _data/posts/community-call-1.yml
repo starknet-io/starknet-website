@@ -13,7 +13,7 @@ video:
   id: gHoaoRxdJ_4
   data:
     kind: youtube#video
-    etag: THjjY-xzgWhtqAjM5kfgIzWclko
+    etag: UeNLXWQpVUYbOcZDY1hcHn8TLlE
     id: gHoaoRxdJ_4
     snippet:
       publishedAt: 2021-11-24T16:37:53Z
@@ -78,3 +78,11 @@ video:
           32:10 StarkVote
           36:30 Conclusion
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT40M4S
+      dimension: 2d
+      definition: sd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

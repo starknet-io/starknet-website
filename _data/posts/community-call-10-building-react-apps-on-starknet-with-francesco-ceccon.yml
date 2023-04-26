@@ -14,7 +14,7 @@ video:
   id: PSTCTVMmMz4
   data:
     kind: youtube#video
-    etag: cNwRjgge0npn-whR2AluvIiens8
+    etag: DERyBmpyP4kdHo9vNyIxJ5Pt2mc
     id: PSTCTVMmMz4
     snippet:
       publishedAt: 2022-03-16T02:43:23Z
@@ -51,3 +51,11 @@ video:
           Francesco Ceccon"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H5M30S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

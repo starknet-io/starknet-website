@@ -15,7 +15,7 @@ video:
   id: iAaSQfZ-2AM
   data:
     kind: youtube#video
-    etag: Z-8kb29zw8MsW8gmfwZsjqKwP6c
+    etag: OJYrw66ukesJ9LzruFjFloLge2w
     id: iAaSQfZ-2AM
     snippet:
       publishedAt: 2020-04-06T06:06:01Z
@@ -53,3 +53,11 @@ video:
           succinct ZK proofs?"
         description: This week Eli Ben-Sasson explains the pretty properties of
           polynomials that make them useful in succinct ZK proofs.
+    contentDetails:
+      duration: PT1H27M54S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

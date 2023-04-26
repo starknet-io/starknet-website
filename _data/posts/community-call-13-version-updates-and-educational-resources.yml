@@ -15,7 +15,7 @@ video:
   id: csgPYUpjDR4
   data:
     kind: youtube#video
-    etag: GtFBWWLQDo6iegXFnYWvTp2uvJ8
+    etag: oIFJqqRVxfIExGlaqv8PhS6GqPE
     id: csgPYUpjDR4
     snippet:
       publishedAt: 2022-05-11T01:34:32Z
@@ -54,3 +54,11 @@ video:
           StarkNet Alpha, upcoming feature on version 0.9, and discussing
           educational resources for StarkNet
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT59M50S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

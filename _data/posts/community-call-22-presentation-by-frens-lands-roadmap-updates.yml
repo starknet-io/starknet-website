@@ -14,7 +14,7 @@ video:
   id: khXAXAl-tvc
   data:
     kind: youtube#video
-    etag: dDyqJNoVhrotMPK1pF21u-liRv0
+    etag: F10kxZNaAdjscVlLiyrVM9WL3Wg
     id: khXAXAl-tvc
     snippet:
       publishedAt: 2022-09-07T01:08:52Z
@@ -53,3 +53,11 @@ video:
         description: Join our 22nd community call for a presentation by Frens Lands and
           roadmap updates.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT34M
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

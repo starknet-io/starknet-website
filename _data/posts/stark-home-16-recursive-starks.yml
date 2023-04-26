@@ -13,7 +13,7 @@ video:
   id: lZa9Zb8wVFc
   data:
     kind: youtube#video
-    etag: y0jiqhDO2nYUDj54gYBIuflcpe8
+    etag: I67sadaFvm_L-KKm4jiouGkPuec
     id: lZa9Zb8wVFc
     snippet:
       publishedAt: 2020-12-10T08:00:18Z
@@ -40,3 +40,11 @@ video:
         title: "STARK@Home 16: Recursive STARKs"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H19M11S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

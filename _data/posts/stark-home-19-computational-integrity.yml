@@ -13,7 +13,7 @@ video:
   id: 3_LkKX7hBBk
   data:
     kind: youtube#video
-    etag: c9jtcCA9Y40Ht5XNjTcYecLuOuk
+    etag: EEjzRHQ4ZEctk1pIiNnBc8k2zqw
     id: 3_LkKX7hBBk
     snippet:
       publishedAt: 2021-03-29T12:47:14Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 19: Computational Integrity"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H24M41S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

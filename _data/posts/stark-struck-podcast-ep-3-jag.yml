@@ -15,7 +15,7 @@ video:
   id: xkzX04wzBUw
   data:
     kind: youtube#video
-    etag: QGiEiZFu73zVB-4lp4Fja5YTqgc
+    etag: TeurQED3A-RLhImGESnREStMQnU
     id: xkzX04wzBUw
     snippet:
       publishedAt: 2022-09-22T10:31:28Z
@@ -64,3 +64,11 @@ video:
 
           Twitter: @jonas_nelle @oskarlso @EmpiricNetwork @henrlihenrli @Starknet_Intern
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT50M55S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

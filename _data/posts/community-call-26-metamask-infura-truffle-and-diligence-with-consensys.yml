@@ -14,7 +14,7 @@ video:
   id: if6yyAWhJj0
   data:
     kind: youtube#video
-    etag: LBqTvvmRfrLKlGq4GNx-i7rAnWw
+    etag: UQ01NrsKmM0U5joVfCgCSJ9jAi8
     id: if6yyAWhJj0
     snippet:
       publishedAt: 2022-11-03T02:28:06Z
@@ -115,3 +115,11 @@ video:
 
           https://consensys.net/diligence/blog/2022/09/consensys-diligence-partners-with-starkware-to-expand-auditing-services/
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT53M45S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

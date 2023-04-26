@@ -13,7 +13,7 @@ video:
   id: jfsSGn0bvt4
   data:
     kind: youtube#video
-    etag: wVIRc3BDHGR-c_WQprIykREXOQM
+    etag: QC8nQaRI8coRzBWpCbfKhSjIRh4
     id: jfsSGn0bvt4
     snippet:
       publishedAt: 2020-09-09T12:46:10Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 11: Preserving Mathematical Distancing"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H16M49S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

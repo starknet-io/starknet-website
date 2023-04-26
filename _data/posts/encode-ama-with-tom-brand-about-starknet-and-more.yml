@@ -15,7 +15,7 @@ video:
   id: PlpnV_k-hek
   data:
     kind: youtube#video
-    etag: 5nOypTkHs_4-Tsqoi-LZy6uVqlU
+    etag: ZH9I3qzLzd98Q0SzytmTqb65lOA
     id: PlpnV_k-hek
     snippet:
       publishedAt: 2022-06-29T11:13:19Z
@@ -222,3 +222,11 @@ video:
 
           01:01:26 Conclusion
       defaultAudioLanguage: en-GB
+    contentDetails:
+      duration: PT1H2M44S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

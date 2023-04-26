@@ -18,7 +18,7 @@ video:
   id: 5y9LyTtUtwE
   data:
     kind: youtube#video
-    etag: 9xT8Q_CMaiQOuqA6Vk1zWi12WoQ
+    etag: m3aBCor-9C7U5ErdT5E9oBEakTg
     id: 5y9LyTtUtwE
     snippet:
       publishedAt: 2020-06-18T12:40:58Z
@@ -62,3 +62,11 @@ video:
           picked up so much that today we are seeing this same amount monthly,
           if not weekly. In this STARK @ Home talk, Eli Ben-Sasson suggests a
           method to better categorize and understand the different systems.
+    contentDetails:
+      duration: PT1H24M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

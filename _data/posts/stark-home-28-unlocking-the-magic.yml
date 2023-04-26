@@ -18,7 +18,7 @@ video:
   id: j9HwAJ-4YpA
   data:
     kind: youtube#video
-    etag: X7A8mpDKScKuQnXv_1wMWGxJ3VI
+    etag: 0x_x5upuGQn5SUoQZPK_ediYPM8
     id: j9HwAJ-4YpA
     snippet:
       publishedAt: 2022-12-21T08:23:56Z
@@ -77,3 +77,11 @@ video:
 
           Together, we’ll try to unveil the ways decentralized blockchains (and StarkNet, in particular) can improve gaming and discover the potential for greater innovation, fairness, and value for all.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H13M3S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

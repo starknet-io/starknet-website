@@ -15,7 +15,7 @@ video:
   id: 5FiioicgnDo
   data:
     kind: youtube#video
-    etag: _LqyYLr7N6Mcxz4cODnZGiVha5U
+    etag: 2fQwLvo8O4LORW9wU_3OXYdDKuM
     id: 5FiioicgnDo
     snippet:
       publishedAt: 2022-12-14T02:32:51Z
@@ -62,3 +62,11 @@ video:
           Ariel (@FeedTheFed)! Ohad will be talking about AAVE StarkNet
           deployment, and Ariel will be giving an in-depth look at Sierra."
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M1S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

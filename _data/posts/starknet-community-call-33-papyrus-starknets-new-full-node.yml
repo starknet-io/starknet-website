@@ -2,13 +2,13 @@ id: bed92971-691a-4d5c-9a1e-b5b10476874f
 post_type: video
 title: "StarkNet Community Call #33 | Papyrus - Starknet's new full node"
 published_date: 2023-02-15T16:08:01.541Z
+time_to_consume: 1
 video:
-  url: "https://www.youtube.com/watch?v=TpjkJaDYww4&list=PLcIyXLwiPilWpAItJqnBgq1\
-    cu180i9dPd&index=7 "
+  url: https://www.youtube.com/watch?v=TpjkJaDYww4
   id: TpjkJaDYww4
   data:
     kind: youtube#video
-    etag: 6Rf4GuK_39DmlKwR8KJI3qZ9byk
+    etag: 2wBl58M6lZqQlP8C3O1noDWk8FA
     id: TpjkJaDYww4
     snippet:
       publishedAt: 2023-02-16T03:24:09Z
@@ -51,6 +51,14 @@ video:
         title: "StarkNet Community Call #33 | Papyrus - Starknet's new full node"
         description: "Join us for the #33 StarkNet Community Call"
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT44M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/community-calls-33-.jpg
 category: community-calls
 topic:

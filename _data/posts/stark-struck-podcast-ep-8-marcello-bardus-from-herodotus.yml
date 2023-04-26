@@ -15,7 +15,7 @@ video:
   id: ozt6JDaFUbQ
   data:
     kind: youtube#video
-    etag: Swehndy23YZ1Zq78NBUdVq8c_Lo
+    etag: UYw3hzzNvJNa39KOPWd-227bNIo
     id: ozt6JDaFUbQ
     snippet:
       publishedAt: 2022-12-15T07:25:30Z
@@ -64,3 +64,11 @@ video:
 
           Twitter: @0xmarcello @HerodotusDev @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT41M13S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

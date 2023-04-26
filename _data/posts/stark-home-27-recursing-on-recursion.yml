@@ -14,7 +14,7 @@ video:
   id: 1QFK2xoOacc
   data:
     kind: youtube#video
-    etag: LpwpOholXPA_jm1hoqvWB5uIT1o
+    etag: YlbAuAMAOOd8yXgYuosHlb_4uvY
     id: 1QFK2xoOacc
     snippet:
       publishedAt: 2022-11-16T07:45:13Z
@@ -89,3 +89,11 @@ video:
 
           For more preparatory information please see our previous episode on recursion and the recent StarkNet Community Call on the topic.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H6M35S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

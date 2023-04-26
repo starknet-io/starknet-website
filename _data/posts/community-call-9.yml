@@ -13,7 +13,7 @@ video:
   id: emteinw4NgA
   data:
     kind: youtube#video
-    etag: tUcrOOM6iVe8lypnZef-hMj9vqE
+    etag: EQWYmiHyeVGutRA3lYF_QvCJrBc
     id: emteinw4NgA
     snippet:
       publishedAt: 2022-03-02T02:28:46Z
@@ -47,3 +47,11 @@ video:
       localized:
         title: "StarkNet community call #9"
         description: ""
+    contentDetails:
+      duration: PT50M30S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

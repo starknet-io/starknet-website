@@ -13,7 +13,7 @@ video:
   id: QVrpx-0yloo
   data:
     kind: youtube#video
-    etag: LcHbe5YNquBM2EQLzeX_rYZReLE
+    etag: 5otpKLrJrsQLACkYAUjxAWZGswI
     id: QVrpx-0yloo
     snippet:
       publishedAt: 2022-01-10T18:47:43Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 24: Fireside chat with Professor Dan Boneh"
         description: From Elliptic Curves to ZK-SNARKs and Beyond
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H17M26S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

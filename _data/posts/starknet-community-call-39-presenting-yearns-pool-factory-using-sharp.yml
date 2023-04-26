@@ -8,7 +8,7 @@ video:
   id: lNmXnOy2r_M
   data:
     kind: youtube#video
-    etag: F5ONFt53af3-D6BnomQWFYJT3RY
+    etag: SaWost7dEdjd7JYVL3FgF63wLgI
     id: lNmXnOy2r_M
     snippet:
       publishedAt: 2023-04-12T01:37:20Z
@@ -61,6 +61,14 @@ video:
 
           Reach Sacha at https://t.me/SachaEth
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT51M41S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/communitycall-39-presenting-yearn-s-pool-factory-using-sharp-youtube.png
 category: community-calls
 topic:

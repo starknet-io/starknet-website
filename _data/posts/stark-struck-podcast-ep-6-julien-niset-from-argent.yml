@@ -15,7 +15,7 @@ video:
   id: NXa99W1l710
   data:
     kind: youtube#video
-    etag: 5ejSBHHZAOlrzQdF3FkvxrN2ifM
+    etag: wngp58vXIKprqOY5vAuskl4l2U4
     id: NXa99W1l710
     snippet:
       publishedAt: 2022-11-16T14:35:06Z
@@ -62,3 +62,11 @@ video:
 
           Twitter: @jniset @argentHQ @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

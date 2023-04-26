@@ -13,7 +13,7 @@ video:
   id: 95RHzcmbHMo
   data:
     kind: youtube#video
-    etag: Xs_WCfh8y0J5YHkGhUoSoKFjbg4
+    etag: -4bf6p-8JxEhSXjIr6dZn7zeljU
     id: 95RHzcmbHMo
     snippet:
       publishedAt: 2022-06-27T09:05:42Z
@@ -48,3 +48,11 @@ video:
         title: "StarkNet community call #17 - Talking about Recursion"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT52M26S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

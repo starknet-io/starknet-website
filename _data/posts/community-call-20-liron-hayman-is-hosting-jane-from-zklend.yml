@@ -13,7 +13,7 @@ video:
   id: aWYIhtCXBYw
   data:
     kind: youtube#video
-    etag: BQPBqHv6pCR_tmlmMHgsJ8teKE4
+    etag: nlk1je9nyo8_Xmoc3Y5DQR38_KQ
     id: aWYIhtCXBYw
     snippet:
       publishedAt: 2022-08-10T01:35:12Z
@@ -48,3 +48,11 @@ video:
         title: "StarkNet Community Call #20 | Liron Hayman is hosting Jane from zkLend"
         description: Liron Hayman is hosting Jane from zkLend
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M51S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

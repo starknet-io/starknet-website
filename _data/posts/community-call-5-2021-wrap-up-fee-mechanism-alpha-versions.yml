@@ -13,7 +13,7 @@ video:
   id: dGpL-SLZsX0
   data:
     kind: youtube#video
-    etag: _JKE7ZfPa4TB3NI4HDjk-UQljR8
+    etag: 7Uovd8YYGL46TmGUm_GMgjSuL6Q
     id: dGpL-SLZsX0
     snippet:
       publishedAt: 2022-01-06T10:01:22Z
@@ -132,3 +132,11 @@ video:
 
           01:00:25 Testing StarkNet as a user
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H3M52S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -15,7 +15,7 @@ video:
   id: bKGUXBEOCrw
   data:
     kind: youtube#video
-    etag: HNfXVbeOXYr7JUvSRohzpHYa1Wg
+    etag: dJao3H6sJ1wbyysvy38HB50Umbw
     id: bKGUXBEOCrw
     snippet:
       publishedAt: 2022-07-28T21:45:09Z
@@ -41,7 +41,7 @@ video:
 
         ------
 
-        🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/  
+        🚀 SUBSCRIBE TO NEWSLETTER:          https://www.bankless.com/join
 
         🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/  
 
@@ -147,7 +147,7 @@ video:
           url: https://i.ytimg.com/vi/bKGUXBEOCrw/maxresdefault.jpg
           width: 1280
           height: 720
-      channelTitle: Bankless Shows
+      channelTitle: Bankless
       tags:
         - bitcoin
         - ethereum
@@ -186,7 +186,7 @@ video:
 
           ------
 
-          🚀 SUBSCRIBE TO NEWSLETTER:          https://newsletter.banklesshq.com/  
+          🚀 SUBSCRIBE TO NEWSLETTER:          https://www.bankless.com/join
 
           🎙️ SUBSCRIBE TO PODCAST:                 http://podcast.banklesshq.com/  
 
@@ -272,3 +272,11 @@ video:
 
           Not financial or tax advice. This channel is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This video is not tax advice. Talk to your accountant. Do your own research.
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT27M52S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

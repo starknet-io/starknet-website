@@ -17,7 +17,7 @@ video:
   id: TVhjXVeEamo
   data:
     kind: youtube#video
-    etag: JrptMxc-4PVzjJ9annp6DRFOdy4
+    etag: KfTmRRJ956tj2zVgYxI8K8vr9tc
     id: TVhjXVeEamo
     snippet:
       publishedAt: 2022-10-03T13:00:31Z
@@ -212,3 +212,11 @@ video:
 
           Disclaimer: Nothing said on Empire is a recommendation to buy or sell securities or tokens. This podcast is for informational purposes only, and any views expressed by anyone on the show are solely our opinions, not financial advice. Santiago, Jason, and our guests may hold positions in the companies, funds, or projects discussed.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H9M52S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

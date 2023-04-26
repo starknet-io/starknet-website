@@ -13,7 +13,7 @@ video:
   id: WrieNtiAnyw
   data:
     kind: youtube#video
-    etag: gJHjTP-hnCcAMwp-kJnTBaOjRT4
+    etag: lKYWOdrnDDA3gQpGT-2qIxcYNns
     id: WrieNtiAnyw
     snippet:
       publishedAt: 2020-10-04T06:30:41Z
@@ -48,3 +48,11 @@ video:
         title: "STARK @ Home 13: Dark Forest Escape Route"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H16M58S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

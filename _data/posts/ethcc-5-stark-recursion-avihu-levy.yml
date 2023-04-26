@@ -14,7 +14,7 @@ video:
   id: mBYF5r-J1aw
   data:
     kind: youtube#video
-    etag: Es3EOT96qrhmNjhLkRuJuP1z3rE
+    etag: VClTnGmeyWRNKSZslmsPBs5YKMM
     id: mBYF5r-J1aw
     snippet:
       publishedAt: 2022-07-20T22:10:16Z
@@ -53,3 +53,11 @@ video:
           new capabilities will it unlock? which new peaks will we conquer using
           it?
       defaultAudioLanguage: zh-Hans
+    contentDetails:
+      duration: PT24M29S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

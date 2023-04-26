@@ -14,7 +14,7 @@ video:
   id: lKgII-UtYP4
   data:
     kind: youtube#video
-    etag: VOGIp1UG6W5Fs9XuG3TT42DuOXY
+    etag: HzqyFk12E4kqkp3-ET12ApvT1RU
     id: lKgII-UtYP4
     snippet:
       publishedAt: 2022-03-30T01:33:53Z
@@ -51,3 +51,11 @@ video:
           presenting Solve 2 Mint"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M20S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
