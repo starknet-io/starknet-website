@@ -6,10 +6,6 @@ export const eventsLocations = [
     value: "online_remote",
   },
   {
-    label: "USA",
-    value: "usa",
-  },
-  {
     label: "Africa",
     value: "africa",
   },

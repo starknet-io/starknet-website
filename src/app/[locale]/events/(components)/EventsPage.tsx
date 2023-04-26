@@ -172,7 +172,7 @@ function CustomLocation() {
       <Heading variant="h6" mb={4}>
         Location
       </Heading>
-      <VStack dir="column" alignItems="stretch">
+      <Flex direction="column" gap="8px">
         {items.map((item, i) => (
           <Button
             justifyContent="flex-start"
@@ -180,11 +180,12 @@ function CustomLocation() {
             variant={item.isRefined ? "filterActive" : "filter"}
             onClick={() => refine(item.value)}
             key={i}
+            style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >
             {eventsLocationsLabels[item.value] || titleCase(item.label)}
           </Button>
         ))}
-      </VStack>
+      </Flex>
     </Box>
   );
 }
