@@ -1,0 +1,52 @@
+/* Start of "videojs" overrides */
+
+.video-js .vjs-tech:focus-visible {
+  outline: none;
+}
+
+/* End of "videojs" overrides */
+
+/* Start of "video-seek-slider" overrides */
+.ui-video-seek-slider .thumb {
+  display: none;
+}
+
+.ui-video-seek-slider .track .main {
+  top: -3px;
+  height: 3px;
+}
+.ui-video-seek-slider .track .main:hover::before,
+.ui-video-seek-slider .track .main:hover .inner-seek-block {
+  height: 6px;
+  /* margin-bottom: 3px; */
+}
+
+.ui-video-seek-slider .track .main .seek-hover {
+  background-color: initial;
+}
+
+.ui-video-seek-slider .hover-time {
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+}
+/* End of "video-seek-slider" overrides */
+
+/* Start of "Scrubber" library overrides */
+
+/* .scrubber.horizontal .bar {
+  background-color: #160f2e66;
+} */
+.scrubber.horizontal .bar__buffer {
+  background-color: #160f2e66;
+}
+
+.scrubber.horizontal .bar__progress,
+.scrubber.horizontal .bar__thumb {
+  background-color: #ec796b;
+}
+
+/* End of "Scrubber" library overrides */
