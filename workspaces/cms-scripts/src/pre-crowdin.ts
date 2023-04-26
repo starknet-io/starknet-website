@@ -11,38 +11,42 @@ dotenvFiles.forEach((path) => dotenv.config({ path }));
 
 import { scandir, yaml } from "./utils";
 import { Files, handleFields } from "./crowdin";
-import { CmsField } from "netlify-cms-core";
+import { CmsField } from "@starknet-io/cms-config/src/types";
 
 const files: Files[] = [];
 
 for (const collection of collections) {
-  if ("files" in collection) {
-    for (const collectionFile of collection.files) {
-      const data = await yaml(collectionFile.file);
+  if (collection.crowdin) {
+    if ("files" in collection) {
+      for (const collectionFile of collection.files) {
+        if (collectionFile.crowdin) {
+          const data = await yaml(collectionFile.file);
 
-      handleFields(
-        files,
-        data,
-        collectionFile.fields as CmsField[],
-        path.join(collection.name, path.basename(collectionFile.file, ".yml"))
-      );
+          handleFields(
+            files,
+            data,
+            collectionFile.fields as CmsField[],
+            path.join(collection.name, path.basename(collectionFile.file, ".yml"))
+          );
+        }
+      }
+    } else if ("folder" in collection) {
+      const filenames = await scandir(path.join("_data", collection.name));
+
+      for (const filename of filenames) {
+        const filepath = path.join("_data", collection.name, filename);
+        const data = await yaml(filepath);
+
+        handleFields(
+          files,
+          data,
+          collection.fields,
+          path.join(collection.name, path.basename(filename, ".yml"))
+        );
+      }
+    } else {
+      collection satisfies never;
     }
-  } else if ("folder" in collection) {
-    const filenames = await scandir(path.join("_data", collection.name));
-
-    for (const filename of filenames) {
-      const filepath = path.join("_data", collection.name, filename);
-      const data = await yaml(filepath);
-
-      handleFields(
-        files,
-        data,
-        collection.fields,
-        path.join(collection.name, path.basename(filename, ".yml"))
-      );
-    }
-  } else {
-    collection satisfies never;
   }
 }
 

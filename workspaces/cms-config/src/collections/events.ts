@@ -1,6 +1,7 @@
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const eventsCollectionConfig = {
+  crowdin: true,
   name: "events",
   label: "Events",
   label_singular: "Event",
@@ -37,16 +38,19 @@ export const eventsCollectionConfig = {
       name: "name",
       label: "Event Name",
       widget: "string",
+      crowdin: true
     },
     {
       name: "description",
       label: "Description",
       widget: "string",
+      crowdin: true
     },
     {
       name: "url",
       label: "Website URL",
       widget: "string",
+      crowdin: false
     },
     {
       name: "start_date",
@@ -107,11 +111,13 @@ export const eventsCollectionConfig = {
       name: "city",
       label: "City",
       widget: "string",
+      crowdin: true
     },
     {
       name: "country",
       label: "Country (State if USA)",
       widget: "string",
+      crowdin: true
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

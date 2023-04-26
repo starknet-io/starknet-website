@@ -1,7 +1,8 @@
 import { topLevelBlocks } from "../blocks";
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const pagesCollectionConfig = {
+  crowdin: true,
   name: "pages",
   label: "Pages",
   label_singular: "Page",
@@ -15,12 +16,13 @@ export const pagesCollectionConfig = {
     {
       name: "id",
       label: "id",
-      widget: "uuid" as "string",
+      widget: "uuid",
     },
     {
       name: "title",
       label: "Title",
       widget: "string",
+      crowdin: true,
     },
     {
       name: "template",
@@ -57,4 +59,4 @@ export const pagesCollectionConfig = {
       types: topLevelBlocks,
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;
