@@ -1,8 +1,7 @@
 import * as path from "node:path";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
-import { yaml } from "./utils";
+import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
-import fs from "node:fs/promises";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
 import { slugify } from "@starknet-io/cms-utils/src/index";
@@ -27,6 +26,7 @@ export interface Post extends Meta {
   readonly post_date: string;
   readonly time_to_consume: string;
   readonly published_date: string;
+  readonly toc: boolean;
   readonly video: any;
   blocks: readonly any[];
 }
@@ -53,6 +53,7 @@ export async function fileToPost(
     post_date: data.post_date,
     published_date: data.published_date,
     time_to_consume: data.time_to_consume,
+    toc: data.toc,
     video: data.video,
     topic: data.topic ?? [],
     short_desc: data.short_desc,
@@ -114,7 +115,7 @@ export async function getPages(): Promise<PagesData> {
   const filenameMap = new Map<string, Page>();
   const idMap = new Map<string, Page>();
 
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await scandir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -184,7 +185,7 @@ export async function getPosts(): Promise<PostsData> {
   const resourceName = "posts";
   const filenameMap = new Map<string, Post>();
   const idMap = new Map<string, Post>();
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await scandir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -203,7 +204,7 @@ export async function getTutorials(): Promise<SimpleData<Meta>> {
 
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
-      data.tags = data.tags.split(",").map((t: string) => t.trim());
+      data.tags = data.tags.replace(/,\s*$/, "").split(",").map((t: string) => t.trim());
     }
   });
 
@@ -220,7 +221,7 @@ export async function getSimpleData<T = {}>(
   resourceName: string
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await scandir(`_data/${resourceName}`);
 
   for (const locale of locales) {
     for (const filename of filenames) {

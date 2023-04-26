@@ -1,4 +1,4 @@
-import type { CmsFieldList, CmsField } from "netlify-cms-core";
+import { CmsField, CmsFieldList } from "./types";
 
 export const linkFields = [
   {
@@ -6,24 +6,28 @@ export const linkFields = [
     required: false,
     name: "custom_title",
     widget: "string",
+    crowdin: true,
   },
   {
     label: "Custom Icon",
     required: false,
     name: "custom_icon",
     widget: "string",
+    crowdin: false,
   },
   {
     label: "Custom Internal Link",
     required: false,
     name: "custom_internal_link",
     widget: "string",
+    crowdin: false,
   },
   {
     label: "Custom External Link",
     required: false,
     name: "custom_external_link",
     widget: "string",
+    crowdin: false,
   },
   {
     label: "Page",
@@ -67,10 +71,12 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
+        crowdin: true,
       },
       {
         name: "description",
         widget: "string",
+        crowdin: true
       },
     ],
   },
@@ -109,6 +115,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
+        crowdin: false,
       },
     ],
   },
@@ -125,6 +132,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
+        crowdin: false
       },
     ],
   },
@@ -141,6 +149,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
+        crowdin: false
       },
     ],
   },
@@ -157,6 +166,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
+        crowdin: false
       },
     ],
   },
@@ -173,6 +183,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
+        crowdin: false
       },
     ],
   },
@@ -184,10 +195,12 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
+        crowdin: true
       },
       {
         name: "description",
         widget: "string",
+        crowdin: true
       },
       {
         name: "link",
@@ -204,6 +217,7 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
+        crowdin: true
       },
       {
         name: "link",
@@ -258,9 +272,13 @@ export const blocks = [
       },
       {
         name: "title",
+        widget: "string",
+        crowdin: true
       },
       {
         name: "description",
+        widget: "string",
+        crowdin: true
       },
       {
         name: "link",
@@ -313,6 +331,7 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
+        crowdin: true
       },
       {
         name: "link",
@@ -322,6 +341,7 @@ export const blocks = [
       {
         name: "description",
         widget: "string",
+        crowdin: true
       },
       {
         name: "image",
@@ -343,10 +363,12 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
+        crowdin: true
       },
       {
         name: "description",
         widget: "string",
+        crowdin: true
       },
       {
         name: "variant",
@@ -363,6 +385,20 @@ export const blocks = [
         ],
         default: "learn",
       },
+      {
+        name: "buttonText",
+        label: "Button text",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "buttonUrl",
+        label: "Button url",
+        required: false,
+        widget: "string",
+        crowdin: false
+      },
     ],
   },
   {
@@ -375,6 +411,20 @@ export const blocks = [
         label: "Heading",
         required: false,
         widget: "string",
+        crowdin: true
+      },
+      {
+        name: "listSize",
+        label: "List Size",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+      },
+      {
+        name: "listGap",
+        label: "List Gap",
+        widget: "select",
+        options: ["sm", "md", "lg"],
+        required: false,
       },
       {
         name: "blocks",
@@ -382,22 +432,63 @@ export const blocks = [
         widget: "list",
         fields: [
           {
-            name: "label",
-            widget: "string",
+            name: "link",
+            widget: "object",
+            label: "Link",
+            fields: [
+              {
+                name: "hasIcon",
+                label: "Has Icon",
+                widget: "boolean",
+                required: true,
+                default: true,
+              },
+              ...linkFields,
+            ],
           },
           {
-            name: "sub_label",
-            widget: "string",
+            name: "subLabel",
+            widget: "object",
+            label: "Sub Label",
+            fields: [
+              {
+                name: "label",
+                label: "Label",
+                widget: "string",
+                crowdin: true
+              },
+              {
+                name: "boldLabel",
+                label: "Bold Label",
+                widget: "string",
+                crowdin: true
+              },
+            ],
           },
           {
-            name: "href",
-            widget: "string",
-          },
-          {
-            name: "is_external",
-            widget: "boolean",
-            required: false,
-            default: false,
+            name: "avatar",
+            widget: "object",
+            label: "Avatar",
+            fields: [
+              {
+                name: "url",
+                label: "URL",
+                widget: "string",
+                crowdin: false
+              },
+              {
+                name: "title",
+                label: "Title",
+                widget: "string",
+                crowdin: true
+              },
+              {
+                name: "displayTitle",
+                label: "Display title",
+                widget: "boolean",
+                required: false,
+              },
+            ],
           },
         ],
       },
@@ -413,6 +504,7 @@ export const blocks = [
         label: "Heading",
         required: false,
         widget: "string",
+        crowdin: true
       },
       {
         name: "blocks",
@@ -423,6 +515,7 @@ export const blocks = [
             name: "label",
             label: "Label",
             widget: "string",
+            crowdin: true
           },
           {
             name: "body",
@@ -446,6 +539,7 @@ export const blocks = [
           {
             name: "title",
             widget: "string",
+            crowdin: true
           },
           {
             name: "body",
@@ -521,6 +615,7 @@ export const topLevelBlocks = [
         name: "heading",
         required: false,
         widget: "string",
+        crowdin: true
       },
       {
         name: "heading_variant",

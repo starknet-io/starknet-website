@@ -1,5 +1,5 @@
 "use client";
-import { Box, Stack, StackDivider } from "@chakra-ui/react";
+import { Box, Stack, StackDivider, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { getComputedLinkData } from "src/utils/utils";
@@ -11,16 +11,16 @@ export interface Props {
 
 export const Footer = ({ mainMenu }: Props) => {
   const locale = useLocale();
-
+  const displayValue = useBreakpointValue({ base: "none", md: "block" });
   return (
     <FooterComponent.Root>
       <Stack
-        divider={<StackDivider borderColor="nav-footer-br" />}
+        divider={<StackDivider borderColor={useColorModeValue("footer-divider-bg", "footer-divider-bg")} display={displayValue} />}
         align="stretch"
         gap={10}
         alignItems="flex-start"
         justifyContent="flex-start"
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", md: "row" }}
       >
         {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
           <FooterComponent.Column
@@ -62,13 +62,13 @@ export const Footer = ({ mainMenu }: Props) => {
                           }
 
                           return (
-                            <FooterComponent.Link
+                            <FooterComponent.FooterLink
                               isExternal={item.custom_external_link != null}
                               href={href}
                               key={itemIndex}
                             >
                               {label}
-                            </FooterComponent.Link>
+                            </FooterComponent.FooterLink>
                           );
                         })}
                       </Box>

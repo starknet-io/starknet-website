@@ -18,7 +18,8 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Read the docs
-        description: Read the official Starknet documentation to build your first
+        description:
+          Read the official Starknet documentation to build your first
           contracts and dapps.
         icon: /assets/docs.svg
         link:
@@ -38,7 +39,8 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: "Set up a local environment "
-        description: Learn how to get your dev environment up and running so you can
+        description:
+          Learn how to get your dev environment up and running so you can
           start building.
         icon: /assets/local-environment.svg
         link:
@@ -64,7 +66,8 @@ blocks:
       - type: image_icon_link_card
         color: peach
         title: Starknet 101
-        description: Get up and running developing on Starknet through this series of
+        description:
+          Get up and running developing on Starknet through this series of
           video tutorials.
         icon: /assets/green.svg
         link:
@@ -90,50 +93,52 @@ blocks:
     blocks:
       - type: link_list
         heading: "Getting started "
+        listSize: "lg"
         blocks:
-          - is_external: true
-            label: "Introduction "
-            href: https://docs.starknet.io/documentation/
-          - is_external: true
-            label: "Setting up a Starknet account "
-            href: https://docs.starknet.io/documentation/getting_started/account_setup/
-          - is_external: true
-            label: Writing Starknet contracts
-            href: https://docs.starknet.io/documentation/getting_started/intro/
-          - is_external: true
-            label: "CLI commands "
-            href: https://docs.starknet.io/documentation/getting_started/cli/
-          - is_external: true
-            label: "Adding user authentication "
-            href: https://docs.starknet.io/documentation/getting_started/user_auth/
+          - link:
+              custom_title: "Introduction "
+              custom_external_link: https://docs.starknet.io/documentation/
+          - link:
+              custom_title: "Setting up a Starknet account "
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/account_setup/
+          - link:
+              custom_title: Writing Starknet contracts
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/intro/
+          - link:
+              custom_title: "CLI commands "
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/cli/
+          - link:
+              custom_title: "Adding user authentication "
+              custom_external_link: https://docs.starknet.io/documentation/getting_started/user_auth/
       - type: link_list
         heading: Architecture & concepts
+        listSize: "lg"
         blocks:
-          - is_external: true
-            label: Block structure
-            href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
-          - is_external: true
-            label: "Transaction lifecycle "
-            href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
-          - is_external: true
-            label: "Transaction structure "
-            href: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
-          - is_external: false
-            label: Contract ABI
-            href: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
-          - is_external: true
-            label: "Account abstraction "
-            href: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
+          - link:
+              custom_title: Block structure
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
+          - link:
+              custom_title: "Transaction lifecycle "
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
+          - link:
+              custom_title: "Transaction structure "
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
+          - link:
+              custom_title: Contract ABI
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
+          - link:
+              custom_title: "Account abstraction "
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
       - type: link_list
         heading: "Tools & resources "
+        listSize: "lg"
         blocks:
-          - is_external: true
-            label: Starknet block explorers
-            href: https://docs.starknet.io/documentation/tools/ref_block_explorers/
-          - is_external: true
-            label: "Starknet CLI reference "
-            sub_label: ""
-            href: https://docs.starknet.io/documentation/tools/CLI/commands/
-          - is_external: true
-            label: "Starknet compiler reference "
-            href: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/
+          - link:
+              custom_title: Starknet block explorers
+              custom_external_link: https://docs.starknet.io/documentation/tools/ref_block_explorers/
+          - link:
+              custom_title: "Starknet CLI reference "
+              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
+          - link:
+              custom_title: "Starknet compiler reference "
+              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/

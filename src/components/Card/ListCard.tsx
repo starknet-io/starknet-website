@@ -162,7 +162,7 @@ export const ListCard = (props: Props) => {
                     {props.location && (<Tag variant="listCard">
                       {titleCase(props.location)}
                     </Tag>)}
-                    {props.type.map((tag) => (
+                    {props.type.filter((element) => element !== '').map((tag) => (
                       <Tag key={tag} variant="listCard">
                         {titleCase(tag)}
                       </Tag>
