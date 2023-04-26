@@ -24,7 +24,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
     const data = await getPageBySlug(
       props.params.slug.join("/"),
-      props.params.locale,
+      props.params.locale
     );
 
     return {
@@ -86,6 +86,14 @@ Props): JSX.Element {
               data.breadcrumbs_data &&
               data.breadcrumbs_data.length > 0 ? (
                 <Breadcrumb separator="/">
+                  <BreadcrumbItem>
+                    <BreadcrumbLink
+                      fontSize="sm"
+                      href={`/${data.breadcrumbs_data[0].locale}`}
+                    >
+                      Home
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
                   <BreadcrumbItem>
                     <BreadcrumbLink
                       fontSize="sm"

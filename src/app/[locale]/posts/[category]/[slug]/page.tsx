@@ -7,6 +7,10 @@ import moment from "moment";
 import { notFound } from "next/navigation";
 import { Block } from "src/blocks/Block";
 import { getPostBySlug } from "@starknet-io/cms-data/src/posts";
+import { TableOfContents } from "src/app/[locale]/(components)/TableOfContents";
+import remarkParse from "remark-parse";
+import { unified } from "unified";
+import { Index } from "unist-util-index";
 import {
   Container,
   Flex,
@@ -93,6 +97,84 @@ export interface Props {
   };
 }
 
+interface HeadingData {
+  readonly title: string;
+  readonly level: 2 | 3;
+}
+export interface MarkdownBlock {
+  readonly type: "markdown";
+  readonly body: string;
+}
+function pageToTableOfContents(page: any): readonly HeadingData[] {
+  const data = page.blocks.flatMap((block: { title: string, type: string, heading: string, body: string, blocks: [{ title: string, body: MarkdownBlock, heading: string }]}) => {
+    if (block.type === "page_header") {
+      return [];
+    } else if (block.type === "ordered_block") {
+      let blocks = Array.from(block.blocks).sort((a: any, b: any) => {
+        return a.title.localeCompare(b.title);
+      });
+
+      return blocks.map((block) => {
+        return {
+          title: block.title,
+          level: 2,
+        };
+      });
+    } else if (block.type === "accordion") {
+      return [
+        ...(block.heading != null
+          ? [
+              {
+                title: block.heading,
+                level: 2,
+              },
+            ]
+          : []),
+        // ...block.blocks.map(block => {
+        //   return {
+        //     title: block.label,
+        //     level: 3,
+        //   };
+        // })
+      ];
+    } else if (block.type === "markdown") {
+      const processor = unified()
+        .use(remarkParse)
+        .use(() => {
+          return (tree: any) => {
+            const typeIndex = new Index("type", tree);
+            const headings = typeIndex.get("heading");
+
+            return headings.map((node: any) => {
+              const textNode = node.children.find((n: any) => {
+                return n.type === "text";
+              });
+
+              return {
+                title: textNode?.value ?? "",
+                level: 2,
+              };
+            });
+          };
+        });
+
+      const node = processor.parse(block.body);
+      const tree = processor.runSync(node);
+
+      return tree;
+    } else if ("title" in block) {
+      return {
+        title: block.title,
+        level: 2,
+      };
+    }
+
+    return [];
+  });
+
+  return data;
+}
+
 export default async function Page({
   params: { slug, locale },
 }: Props): Promise<JSX.Element> {
@@ -109,6 +191,16 @@ export default async function Page({
       <PageLayout
         breadcrumbs={
           <Breadcrumb separator="/">
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                as={Link}
+                href={`/${locale}`}
+                fontSize="sm"
+                noOfLines={1}
+              >
+                Home
+              </BreadcrumbLink>
+            </BreadcrumbItem>
             <BreadcrumbItem>
               <BreadcrumbLink
                 as={Link}
@@ -188,6 +280,13 @@ export default async function Page({
               ))}
             </Flex>
           </Container>
+        }
+        rightAside={
+          <>
+            {!!post.toc ? (
+              <TableOfContents headings={pageToTableOfContents(post)} />
+            ) : null}
+          </>
         }
       />
     );
