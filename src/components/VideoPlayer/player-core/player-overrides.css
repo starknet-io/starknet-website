@@ -18,7 +18,7 @@
 .ui-video-seek-slider .track .main:hover::before,
 .ui-video-seek-slider .track .main:hover .inner-seek-block {
   height: 6px;
-  margin-bottom: 3px;
+  /* margin-bottom: 3px; */
 }
 
 .ui-video-seek-slider .track .main .seek-hover {
