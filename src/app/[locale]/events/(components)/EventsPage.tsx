@@ -1,45 +1,38 @@
 "use client";
 
 import {
+  Box,
+  Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Breadcrumb,
-  Box,
+  Divider,
   Flex,
   HStack,
-  Divider,
   VStack,
-  useBreakpointValue,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
 } from "@chakra-ui/react";
+import { Event } from "@starknet-io/cms-data/src/events";
 import { Button } from "@ui/Button";
-import { useMemo, useState } from "react";
-import algoliasearch from "src/libs/algoliasearch/lite";
-import {
-  InstantSearch,
-  Configure,
-  useInfiniteHits,
-} from "src/libs/react-instantsearch-hooks-web";
-import { useRefinementList } from "react-instantsearch-hooks";
+import { ListCard } from "@ui/Card/ListCard";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/Card/ListCard";
-import { titleCase } from "src/utils/utils";
-import moment from "moment";
-import { Event } from "@starknet-io/cms-data/src/events";
-import type { BaseHit } from "instantsearch.js";
-import Link from "next/link";
 import { getUnixTime, startOfDay } from "date-fns";
-import {
-  eventsTypesLabels,
-  eventsLocationsLabels,
-} from "workspaces/cms-config/src/collections/events";
+import type { BaseHit } from "instantsearch.js";
+import moment from "moment";
+import Link from "next/link";
+import { useMemo } from "react";
+import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
+import algoliasearch from "src/libs/algoliasearch/lite";
+import {
+  Configure,
+  InstantSearch,
+  useInfiniteHits,
+} from "src/libs/react-instantsearch-hooks-web";
+import { titleCase } from "src/utils/utils";
+import {
+  eventsLocationsLabels,
+  eventsTypesLabels,
+} from "workspaces/cms-config/src/collections/events";
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
