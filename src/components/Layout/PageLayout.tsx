@@ -14,6 +14,7 @@ type Props = {
   pageLastUpdated?: string | null;
   sectionHeaderTitle?: string | undefined;
   sectionHeaderDescription?: string | undefined;
+  sectionHeaderBottomContent?: React.ReactNode;
 };
 
 export const PageLayout = (props: Props) => {
@@ -56,6 +57,7 @@ export const PageLayout = (props: Props) => {
               <SectionHeader
                 title={props.sectionHeaderTitle}
                 description={props.sectionHeaderDescription}
+                bottomContent={props.sectionHeaderBottomContent}
               />
             )}
             {props.main}

@@ -39,8 +39,10 @@ import {
   eventsTypesLabels,
   eventsLocationsLabels,
 } from "workspaces/cms-config/src/collections/events";
-import { HiAdjustmentsVertical } from "react-icons/hi2";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
+import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
+import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 
 export interface AutoProps {
   readonly params: {
@@ -89,15 +91,13 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
           filters={getEventFilter(mode)}
         />
 
-        <Events params={params} mode={mode} />
+        <EventsPageLayout params={params} mode={mode} />
       </InstantSearch>
     </Box>
   );
 }
 
-const Events = ({ params, mode }: Pick<Props, "params" | "mode">) => {
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-  const isMobile = useBreakpointValue({ base: true, lg: false });
+const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
   const { items: locations, refine: refineLocation } = useRefinementList({
     attribute: "location",
     sortBy: ["name:asc"],
@@ -108,11 +108,10 @@ const Events = ({ params, mode }: Pick<Props, "params" | "mode">) => {
     sortBy: ["name:asc"],
   });
 
-  const filtersCount = useMemo(() => {
-    return [...locations, ...types].reduce((acc, curr) => {
-      return acc + (curr.isRefined ? 1 : 0);
-    }, 0);
-  }, [locations, types]);
+  const { isOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer([
+    ...locations,
+    ...types,
+  ]);
 
   return (
     <PageLayout
@@ -189,39 +188,18 @@ const Events = ({ params, mode }: Pick<Props, "params" | "mode">) => {
               </Button>
             </Box>
           </Flex>
-          <Button
-            variant={filtersCount > 0 ? "solid" : "outline"}
-            leftIcon={<HiAdjustmentsVertical size={24} />}
-            w="100%"
-            display={{ base: "flex", lg: "none" }}
-            mt="24px"
-            lineHeight={1}
-            alignItems="center"
-            onClick={() => setIsMobileFilterOpen(true)}
-          >
-            Filters {filtersCount > 0 && `(${filtersCount})`}
-          </Button>
-          <Drawer
-            placement="left"
-            isOpen={isMobileFilterOpen && !!isMobile}
-            onClose={() => setIsMobileFilterOpen(false)}
-            size="full"
-            variant="primary"
-            /* set trapFocus to false to make search inside drawer interactive */
-            trapFocus={false}
-          >
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerBody pt="64px">
-                <CustomLocation
-                  locations={locations}
-                  refineLocation={refineLocation}
-                />
-                <CustomType types={types} refineTypes={refineTypes} />
-              </DrawerBody>
-            </DrawerContent>
-          </Drawer>
+          <MobileFiltersButton
+            filtersCount={filtersCount}
+            onClick={onOpen}
+            style={{ marginTop: "24px" }}
+          />
+          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+            <CustomLocation
+              locations={locations}
+              refineLocation={refineLocation}
+            />
+            <CustomType types={types} refineTypes={refineTypes} />
+          </MobileFiltersDrawer>
           <CustomHits />
         </Box>
       }
