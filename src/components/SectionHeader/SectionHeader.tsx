@@ -8,10 +8,16 @@ import React from "react";
 type Props = {
   title: string | undefined;
   description?: string | undefined;
+  bottomContent?: React.ReactNode;
   size?: "sm" | "lg";
 };
 
-export const SectionHeader = ({ size = "sm", title, description }: Props) => {
+export const SectionHeader = ({
+  size = "sm",
+  title,
+  description,
+  bottomContent,
+}: Props) => {
   return (
     <Box
       as="section"
@@ -34,6 +40,7 @@ export const SectionHeader = ({ size = "sm", title, description }: Props) => {
               {description}
             </Text>
           )}
+          {bottomContent}
         </Box>
         <Divider variant="primary" />
       </Stack>
