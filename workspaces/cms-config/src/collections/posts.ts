@@ -1,7 +1,8 @@
 import { topLevelBlocks } from "../blocks";
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const postsCollectionConfig = {
+  crowdin: true,
   name: "posts",
   label: "Blog - Posts",
   label_singular: "Post",
@@ -16,7 +17,7 @@ export const postsCollectionConfig = {
     {
       name: "id",
       label: "id",
-      widget: "uuid" as "string",
+      widget: "uuid",
     },
     {
       name: "post_type",
@@ -42,6 +43,7 @@ export const postsCollectionConfig = {
       name: "title",
       label: "Post Title",
       widget: "string",
+      crowdin: true
     },
     {
       name: "toc",
@@ -57,11 +59,12 @@ export const postsCollectionConfig = {
       name: "time_to_consume",
       label: "Time to read / watch / listen (in minutes)",
       widget: "string",
+      crowdin: true
     },
     {
       name: "video",
       label: "Video - youtube link",
-      widget: "youtube" as "string",
+      widget: "youtube",
       required: false,
     },
     {
@@ -100,4 +103,4 @@ export const postsCollectionConfig = {
       types: topLevelBlocks,
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

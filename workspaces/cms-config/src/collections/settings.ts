@@ -1,7 +1,8 @@
-import type { CmsConfig } from "netlify-cms-core";
 import { linkFields } from "../blocks";
+import { CmsCollection } from "../types";
 
 export const settingsCollectionConfig = {
+  crowdin: true,
   label: "Settings",
   name: "settings",
   files: [
@@ -9,6 +10,7 @@ export const settingsCollectionConfig = {
       label: "Main Menu",
       name: "main-menu",
       file: `_data/settings/main-menu.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Top Level Menu Items",
@@ -19,6 +21,7 @@ export const settingsCollectionConfig = {
               label: "Title",
               name: "title",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Columns",
@@ -36,6 +39,7 @@ export const settingsCollectionConfig = {
                       name: "title",
                       required: false,
                       widget: "string",
+                      crowdin: true
                     },
                     {
                       label: "Menu Items",
@@ -62,6 +66,7 @@ export const settingsCollectionConfig = {
       label: "Redirects",
       name: "redirects",
       file: `_data/settings/redirects.yml`,
+      crowdin: false,
       fields: [
         {
           label: "Redirects",
@@ -71,10 +76,12 @@ export const settingsCollectionConfig = {
             {
               name: "source",
               widget: "string",
+              crowdin: false
             },
             {
               name: "destination",
               widget: "string",
+              crowdin: false
             },
           ],
         },
@@ -84,6 +91,7 @@ export const settingsCollectionConfig = {
       label: "Dapps",
       name: "dapps",
       file: `_data/settings/dapps.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Dapps",
@@ -94,6 +102,7 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Image",
@@ -104,16 +113,19 @@ export const settingsCollectionConfig = {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
+              crowdin: true
             },
           ],
         },
@@ -123,6 +135,7 @@ export const settingsCollectionConfig = {
       label: "Wallets",
       name: "wallets",
       file: `_data/settings/wallets.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Wallets",
@@ -133,6 +146,7 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Type",
@@ -163,16 +177,19 @@ export const settingsCollectionConfig = {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Description",
               name: "body",
               widget: "string",
+              crowdin: true
             },
           ],
         },
@@ -182,6 +199,7 @@ export const settingsCollectionConfig = {
       label: "Block explorers",
       name: "block-explorers",
       file: `_data/settings/block-explorers.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Block explorers",
@@ -192,11 +210,13 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Image",
@@ -207,16 +227,19 @@ export const settingsCollectionConfig = {
               label: "Company name",
               name: "company_name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
+              crowdin: true
             },
           ],
         },
@@ -226,6 +249,7 @@ export const settingsCollectionConfig = {
       label: "Bridges",
       name: "bridges",
       file: `_data/settings/bridges.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Bridges",
@@ -236,11 +260,13 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Image",
@@ -251,16 +277,19 @@ export const settingsCollectionConfig = {
               label: "Company name",
               name: "company_name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
+              crowdin: true
             },
           ],
         },
@@ -270,6 +299,7 @@ export const settingsCollectionConfig = {
       label: "Fiat on-ramps",
       name: "fiat-on-ramps",
       file: `_data/settings/fiat-on-ramps.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Fiat on-ramps",
@@ -280,11 +310,13 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Image",
@@ -295,16 +327,19 @@ export const settingsCollectionConfig = {
               label: "Company name",
               name: "company_name",
               widget: "string",
+              crowdin: true
             },
             {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
+              crowdin: false
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
+              crowdin: true
             },
           ],
         },
@@ -314,6 +349,7 @@ export const settingsCollectionConfig = {
       label: "Alert",
       name: "alert",
       file: `_data/settings/alert.yml`,
+      crowdin: true,
       fields: [
         {
           label: "Alert",
@@ -338,12 +374,13 @@ export const settingsCollectionConfig = {
             {
               name: "id",
               label: "id",
-              widget: "uuid" as "string",
+              widget: "uuid",
             },
             {
               name: "title",
               label: "Title",
               widget: "string",
+              crowdin: true
             },
             {
               name: "body",
@@ -356,10 +393,11 @@ export const settingsCollectionConfig = {
               hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
               required: false,
               widget: "string",
+              crowdin: false
             },
           ],
         },
       ],
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

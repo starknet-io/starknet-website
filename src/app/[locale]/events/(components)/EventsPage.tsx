@@ -6,9 +6,9 @@ import {
   Breadcrumb,
   Box,
   Flex,
-  VStack,
   HStack,
   Divider,
+  VStack
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { useMemo } from "react";
@@ -21,13 +21,17 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/ListCards/ListCard";
+import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
 import { Event } from "@starknet-io/cms-data/src/events";
 import type { BaseHit } from "instantsearch.js";
 import Link from "next/link";
 import { getUnixTime, startOfDay } from "date-fns";
+import {
+  eventsTypesLabels,
+  eventsLocationsLabels,
+} from "workspaces/cms-config/src/collections/events";
 
 export interface AutoProps {
   readonly params: {
@@ -168,7 +172,7 @@ function CustomLocation() {
       <Heading variant="h6" mb={4}>
         Location
       </Heading>
-      <VStack dir="column" alignItems="stretch">
+      <Flex direction="column" gap="8px">
         {items.map((item, i) => (
           <Button
             justifyContent="flex-start"
@@ -176,11 +180,12 @@ function CustomLocation() {
             variant={item.isRefined ? "filterActive" : "filter"}
             onClick={() => refine(item.value)}
             key={i}
+            style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >
-            {titleCase(item.label)}
+            {eventsLocationsLabels[item.value] || titleCase(item.label)}
           </Button>
         ))}
-      </VStack>
+      </Flex>
     </Box>
   );
 }
@@ -205,7 +210,7 @@ function CustomType() {
             onClick={() => refine(item.value)}
             key={i}
           >
-            {titleCase(item.label)}
+            {eventsTypesLabels[item.value] || titleCase(item.label)}
           </Button>
         ))}
       </VStack>

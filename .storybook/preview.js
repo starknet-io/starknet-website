@@ -19,5 +19,5 @@ export const decorators = [
     <ChakraProvider theme={theme}>
       <Story />
     </ChakraProvider>
-  ),
+  )
 ]
