@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "name": "Conference on Artificial Intelligence",
+      "image": "https://example.com/ai-conference.jpg",
+      "start_date": "2023-05-01",
+      "end_date": "2023-05-03",
+      "location": "San Francisco",
+      "city": "San Francisco",
+      "country": "USA",
+      "venue": "Moscone Center",
+      "type": "Conference",
+      "url": "https://example.com/ai-conference",
+      "tags": ["AI", "Machine Learning", "Deep Learning"],
+      "description": "Join us for the biggest conference on AI!"
+    }
+  ]
+}
