@@ -3,6 +3,7 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
+  DrawerHeader,
   DrawerOverlay,
 } from "@chakra-ui/react";
 import { CSSProperties, ReactNode } from "react";
@@ -32,7 +33,8 @@ export default function MobileFiltersDrawer({
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
-        <DrawerBody pt="64px" style={contentStyle}>
+        <DrawerHeader bg="inherit" mb="1rem"></DrawerHeader>
+        <DrawerBody pb="1rem" style={contentStyle}>
           {children}
         </DrawerBody>
       </DrawerContent>
