@@ -8,10 +8,17 @@ import {
   Flex,
   HStack,
   Divider,
-  VStack
+  VStack,
+  useBreakpointValue,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
@@ -32,6 +39,8 @@ import {
   eventsTypesLabels,
   eventsLocationsLabels,
 } from "workspaces/cms-config/src/collections/events";
+import { HiAdjustmentsVertical } from "react-icons/hi2";
+import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 
 export interface AutoProps {
   readonly params: {
@@ -80,105 +89,164 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
           filters={getEventFilter(mode)}
         />
 
-        <PageLayout
-          sectionHeaderTitle="Events"
-          sectionHeaderDescription="Find Starknet events, online or around the world."
-          breadcrumbs={
-            <Breadcrumb separator="/">
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Home
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}/community`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Community
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" noOfLines={1}>
-                  Events
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
-          }
-          leftAside={
-            <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <CustomLocation />
-              <CustomType />
-            </Box>
-          }
-          main={
-            <Box>
-              <Flex
-                as="ul"
-                sx={{ overflowX: "auto" }}
-                gap="24px"
-                borderBottomWidth="1px"
-                borderColor="tabs-main-br"
-                width="100%"
-                mb={4}
-              >
-                <Box>
-                  <Button
-                    variant="category"
-                    as={Link}
-                    isActive={mode === "UPCOMING_EVENTS"}
-                    href={`/${params.locale}/events`}
-                  >
-                    Upcoming events
-                  </Button>
-                </Box>
-                <Box>
-                  <Button
-                    variant="category"
-                    as={Link}
-                    isActive={mode === "PAST_EVENTS"}
-                    href={`/${params.locale}/events/past`}
-                  >
-                    Past events
-                  </Button>
-                </Box>
-              </Flex>
-
-              <CustomHits />
-            </Box>
-          }
-        />
+        <Events params={params} mode={mode} />
       </InstantSearch>
     </Box>
   );
 }
 
-function CustomLocation() {
-  const { items, refine } = useRefinementList({
+const Events = ({ params, mode }: Pick<Props, "params" | "mode">) => {
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const { items: locations, refine: refineLocation } = useRefinementList({
     attribute: "location",
     sortBy: ["name:asc"],
   });
 
+  const { items: types, refine: refineTypes } = useRefinementList({
+    attribute: "type",
+    sortBy: ["name:asc"],
+  });
+
+  const filtersCount = useMemo(() => {
+    return [...locations, ...types].reduce((acc, curr) => {
+      return acc + (curr.isRefined ? 1 : 0);
+    }, 0);
+  }, [locations, types]);
+
+  return (
+    <PageLayout
+      sectionHeaderTitle="Events"
+      sectionHeaderDescription="Find Starknet events, online or around the world."
+      breadcrumbs={
+        <Breadcrumb separator="/">
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}/community`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Community
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink fontSize="sm" noOfLines={1}>
+              Events
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      }
+      leftAside={
+        <Box minH="xs" display={{ base: "none", lg: "block" }}>
+          <CustomLocation
+            refineLocation={refineLocation}
+            locations={locations}
+          />
+          <CustomType types={types} refineTypes={refineTypes} />
+        </Box>
+      }
+      main={
+        <Box>
+          <Flex
+            as="ul"
+            sx={{ overflowX: "auto" }}
+            gap="24px"
+            borderBottomWidth="1px"
+            borderColor="tabs-main-br"
+            width="100%"
+            mb={4}
+          >
+            <Box>
+              <Button
+                variant="category"
+                as={Link}
+                isActive={mode === "UPCOMING_EVENTS"}
+                href={`/${params.locale}/events`}
+              >
+                Upcoming events
+              </Button>
+            </Box>
+            <Box>
+              <Button
+                variant="category"
+                as={Link}
+                isActive={mode === "PAST_EVENTS"}
+                href={`/${params.locale}/events/past`}
+              >
+                Past events
+              </Button>
+            </Box>
+          </Flex>
+          <Button
+            variant={filtersCount > 0 ? "solid" : "outline"}
+            leftIcon={<HiAdjustmentsVertical size={24} />}
+            w="100%"
+            display={{ base: "flex", lg: "none" }}
+            mt="24px"
+            lineHeight={1}
+            alignItems="center"
+            onClick={() => setIsMobileFilterOpen(true)}
+          >
+            Filters {filtersCount > 0 && `(${filtersCount})`}
+          </Button>
+          <Drawer
+            placement="left"
+            isOpen={isMobileFilterOpen && !!isMobile}
+            onClose={() => setIsMobileFilterOpen(false)}
+            size="full"
+            variant="primary"
+            /* set trapFocus to false to make search inside drawer interactive */
+            trapFocus={false}
+          >
+            <DrawerOverlay />
+            <DrawerContent>
+              <DrawerCloseButton />
+              <DrawerBody pt="64px">
+                <CustomLocation
+                  locations={locations}
+                  refineLocation={refineLocation}
+                />
+                <CustomType types={types} refineTypes={refineTypes} />
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
+          <CustomHits />
+        </Box>
+      }
+    />
+  );
+};
+
+type CustomLocationProps = {
+  locations: RefinementListProps["items"];
+  refineLocation: (value: string) => void;
+};
+
+function CustomLocation({ locations, refineLocation }: CustomLocationProps) {
   return (
     <Box>
       <Heading variant="h6" mb={4}>
         Location
       </Heading>
       <Flex direction="column" gap="8px">
-        {items.map((item, i) => (
+        {locations.map((item, i) => (
           <Button
             justifyContent="flex-start"
             size="sm"
             variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
+            onClick={() => refineLocation(item.value)}
             key={i}
             style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >
@@ -190,24 +258,25 @@ function CustomLocation() {
   );
 }
 
-function CustomType() {
-  const { items, refine } = useRefinementList({
-    attribute: "type",
-    sortBy: ["name:asc"],
-  });
-
+function CustomType({
+  types,
+  refineTypes,
+}: {
+  types: RefinementListProps["items"];
+  refineTypes: (value: string) => void;
+}) {
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
+        {types.map((item, i) => (
           <Button
             justifyContent="flex-start"
             size="sm"
             variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
+            onClick={() => refineTypes(item.value)}
             key={i}
           >
             {eventsTypesLabels[item.value] || titleCase(item.label)}
