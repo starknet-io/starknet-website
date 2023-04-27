@@ -91,27 +91,34 @@ export const ListCard = (props: Props) => {
               <Box flex="1">
                 {props.startDateTime && (
                   <Text
-                    mt="2"
+                    // mt="2"
                     fontSize="xs"
                     fontWeight="bold"
                     color="list-card-sm-title-fg"
                     display="flex"
-                    flexDirection={{ base: "column", md: "row" }}
-                    justifyContent="space-between"
+                    flexDirection={{ base: "row", md: "row" }}
+                    // justifyContent="space-between"
                     alignItems={{ base: "flex-start", md: "center" }}
-                    margin="0"
+                    // margin="0"
                   >
                     {props.startDateTime}
+                    {props.city && (
+                      <Text fontSize="xs" fontWeight="bold" px="4px">
+                        ·
+                      </Text>
+                    )}
                     <Text
-                      mt="2"
+                      // mt="2"
                       fontSize="xs"
                       fontWeight="bold"
                       color="list-card-sm-title-fg"
-                      paddingBottom="4px"
+                      // paddingBottom="4px",
+
                       as="span"
                     >
                       {/* {props.city} */}
-                      {props.city && `${props.city}, `}{props.country && props.country}
+                      {props.city && `  ${props.city}, `}
+                      {props.country && props.country}
                     </Text>
                   </Text>
                 )}
@@ -119,21 +126,25 @@ export const ListCard = (props: Props) => {
                   spacing={{ base: "1", md: "2" }}
                   direction={{ base: "row", md: "row" }}
                   pb="4px"
-                  borderTop={!props.startDateTime ? "none" : "1px solid #E6E6E6"}
-                  paddingTop="12px"
+                  // removing until designers look at this
+                  // borderTop={!props.startDateTime ? "none" : "1px solid red"}
+                  paddingTop="4px"
                 >
                   <Heading
                     variant="h4"
                     color="btn-primary-bg"
                     _dark={{
-                      color: "button-nav-fg"
+                      color: "button-nav-fg",
                     }}
                   >
                     {props.title}
                   </Heading>
                   <HStack fontSize={{ base: "md", md: "xl" }}>
                     {/* <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" /> */}
-                    <Icon as={HiArrowTopRightOnSquare} color="list-card-sm-title-link-fg" />
+                    <Icon
+                      as={HiArrowTopRightOnSquare}
+                      color="list-card-sm-title-link-fg"
+                    />
                   </HStack>
                 </Stack>
 
@@ -150,36 +161,54 @@ export const ListCard = (props: Props) => {
                 {props.type_list ? (
                   <Wrap shouldWrapChildren>
                     {props.type_list.map((tag) => (
-                      <Link key={tag.type} isExternal as={NextLink} href={tag.url}>
+                      <Link
+                        key={tag.type}
+                        isExternal
+                        as={NextLink}
+                        href={tag.url}
+                      >
                         <Tag variant="listCard">
                           {tag.type !== "ios" ? titleCase(tag.type) : "iOS"}
                         </Tag>
                       </Link>
                     ))}
                   </Wrap>
-                ) : props.type && (
-                  <Wrap shouldWrapChildren>
-                    {props.location && (<Tag variant="listCard">
-                      {titleCase(props.location)}
-                    </Tag>)}
-                    {props.type.filter((element) => element !== '').map((tag) => (
-                      <Tag key={tag} variant="listCard">
-                        {titleCase(tag)}
-                      </Tag>
-                    ))}
-                  </Wrap>
+                ) : (
+                  props.type && (
+                    <Wrap shouldWrapChildren>
+                      {props.location && (
+                        <Tag variant="listCard">
+                          {titleCase(props.location)}
+                        </Tag>
+                      )}
+                      {props.type
+                        .filter((element) => element !== "")
+                        .map((tag) => (
+                          <Tag key={tag} variant="listCard">
+                            {titleCase(tag)}
+                          </Tag>
+                        ))}
+                    </Wrap>
+                  )
                 )}
 
                 <Wrap spacingX="24px" shouldWrapChildren>
-                  {props.href && props.variant !== "event" && props.variant !== "job" && (
-                    <Link mt="20px" isExternal as={NextLink} href={`${props.href}`}>
-                      <Icon
-                        boxSize="18px"
-                        color="list-card-icon-fg"
-                        as={HiGlobeAlt}
-                      />
-                    </Link>
-                  )}
+                  {props.href &&
+                    props.variant !== "event" &&
+                    props.variant !== "job" && (
+                      <Link
+                        mt="20px"
+                        isExternal
+                        as={NextLink}
+                        href={`${props.href}`}
+                      >
+                        <Icon
+                          boxSize="18px"
+                          color="list-card-icon-fg"
+                          as={HiGlobeAlt}
+                        />
+                      </Link>
+                    )}
                   {props.twitterHandle && (
                     <Link
                       isExternal
