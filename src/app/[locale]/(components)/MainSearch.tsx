@@ -34,6 +34,27 @@ export function Autocomplete<TItem extends BaseItem>(
   const panelRootRef = useRef<Root>();
   const rootRef = useRef<HTMLElement>();
 
+  function openSearch(event: KeyboardEvent) {
+    if (event.key === "/") {
+      containerRef.current?.querySelector('.aa-DetachedSearchButton')?.click();
+    } else if (event.key === "k") {
+      if (
+        (navigator.platform === "MacIntel" && event.metaKey) ||
+        (navigator.platform !== "MacIntel" && event.ctrlKey)
+      ) {
+        containerRef.current?.querySelector('.aa-DetachedSearchButton')?.click();
+      }
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", openSearch);
+  
+    return () => {
+      document.removeEventListener("keydown", openSearch);
+    };
+  }, []);
+
   useEffect(() => {
     if (!containerRef.current) {
       return undefined;
@@ -42,6 +63,7 @@ export function Autocomplete<TItem extends BaseItem>(
     const search = autocomplete({
       ...props,
       container: containerRef.current,
+      openOnFocus: true,
       renderer: { createElement, Fragment, render: () => {} },
       render({ children }, root) {
         if (!panelRootRef.current || rootRef.current !== root) {
