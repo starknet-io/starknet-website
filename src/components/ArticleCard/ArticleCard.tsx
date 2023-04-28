@@ -12,14 +12,15 @@ import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
 import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
-import { Category } from "@starknet-io/cms-data/src/categories";
+import { Category as DataCategory } from "@starknet-io/cms-data/src/categories";
 
 type RootProps = {
   children: React.ReactNode;
   href: string;
+  type?: | "grid" | "featured";
 };
 
-const Root = ({ children, href }: RootProps) => {
+const Root = ({ children, href, type = "grid" }: RootProps) => {
   return (
     <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
@@ -28,9 +29,9 @@ const Root = ({ children, href }: RootProps) => {
             direction="column"
             gap={{ base: "8", lg: "16" }}
             // justify="space-between"
-            height="full"
+            height={type === "featured" ? "400px" : "full"}
           >
-            <Flex gap="8" direction="column" flex={1}>
+            <Flex gap={type === "featured" ? "1" : "8"} direction={type === "featured" ? "row" : "column"} flex={1}>
               {children}
             </Flex>
           </Flex>
@@ -43,18 +44,19 @@ const Root = ({ children, href }: RootProps) => {
 type ImageProps = {
   url?: string;
   imageAlt?: string;
+  type?: | "grid" | "featured";
 };
 
-const Image = ({ url, imageAlt }: ImageProps) => {
+const Image = ({ url, imageAlt, type = "grid" }: ImageProps) => {
   return (
-    <Box overflow="hidden">
+    <Box overflow="hidden" {...type === "featured" && { width: "auto", maxWidth: "60%"}}>
       <ChakraImage
         src={url}
         alt={imageAlt}
         width="full"
-        height={{ base: "16rem", md: "12rem", lg: "10rem" }}
+        height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
         objectFit="cover"
-        borderTopRadius={8}
+        {...type === "grid" && { borderTopRadius: 8}}
       />
     </Box>
   );
@@ -62,18 +64,19 @@ const Image = ({ url, imageAlt }: ImageProps) => {
 
 type BodyProps = {
   children: React.ReactNode;
+  type?: | "grid" | "featured";
 };
 
-const Body = ({ children }: BodyProps) => {
+const Body = ({ children, type = "grid" }: BodyProps) => {
   return (
-    <Flex flex={1} direction="column" pl={6} pr={6}>
+    <Flex flex={1} direction="column" pl={6} pr={6} {...type === "featured" && { pt: 8 }}>
       {children}
     </Flex>
   );
 };
 
 interface CategoryProps {
-  category: Category;
+  category: DataCategory;
 }
 
 const Category = ({ category }: CategoryProps) => {
@@ -89,16 +92,17 @@ const Category = ({ category }: CategoryProps) => {
 type ContentProps = {
   title: string;
   excerpt: string;
+  type?: | "grid" | "featured";
 };
 
-const Content = ({ title, excerpt }: ContentProps) => {
+const Content = ({ title, excerpt, type = "grid" }: ContentProps) => {
   return (
     <Flex gap="3" direction="column" flex={1}>
       <Heading
         color="heading-navy-fg"
-        variant="h4"
+        variant={type === "featured" ? "h2" : "h4"}
         fontWeight="bold"
-        noOfLines={2}
+        noOfLines={type === "featured" ? 3 : 2}
       >
         {title}
       </Heading>
@@ -113,11 +117,13 @@ type FooterProps = {
   postType: string;
   publishedAt?: string;
   timeToConsume?: string;
+  type?: | "grid" | "featured";
 };
 const Footer = ({
   postType,
   publishedAt = "N/A",
   timeToConsume = "5min read",
+  type = "grid"
 }: FooterProps) => {
   const renderPostTypeIcon = () => {
     switch (postType) {
@@ -133,7 +139,7 @@ const Footer = ({
     }
   };
   return (
-    <Flex p={6}>
+    <Flex p={type === "featured" ? "14px 0" : 6}>
       <HStack>
         <Icon as={renderPostTypeIcon()} />
 
