@@ -305,7 +305,6 @@ type Hit = {
   readonly locale: string;
   readonly filepath: string;
   readonly post_type: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
   readonly blocks: Array<Block>;
   readonly video: Video;

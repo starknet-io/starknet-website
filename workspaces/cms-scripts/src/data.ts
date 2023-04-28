@@ -24,7 +24,6 @@ export interface Post extends Meta {
   readonly short_desc: string;
   readonly post_type: string;
   readonly post_date: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
   readonly toc: boolean;
   readonly video: any;
@@ -52,7 +51,6 @@ export async function fileToPost(
     post_type: data.post_type,
     post_date: data.post_date,
     published_date: data.published_date,
-    time_to_consume: data.time_to_consume,
     toc: data.toc,
     video: data.video,
     topic: data.topic ?? [],
