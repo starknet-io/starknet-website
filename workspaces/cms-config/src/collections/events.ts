@@ -135,6 +135,12 @@ export const eventsCollectionConfig = {
       required: false,
     },
     {
+      name: "show_in_past_events",
+      label: "Show in Past Events",
+      widget: "boolean",
+      default: true,
+    },
+    {
       name: "image",
       label: "Event Image",
       widget: "image",
