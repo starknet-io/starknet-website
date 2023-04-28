@@ -36,13 +36,15 @@ export function Autocomplete<TItem extends BaseItem>(
 
   function openSearch(event: KeyboardEvent) {
     if (event.key === "/") {
-      containerRef.current?.querySelector('.aa-DetachedSearchButton')?.click();
+      const el = containerRef.current?.querySelector('.aa-DetachedSearchButton') as HTMLElement;
+      el?.click();
     } else if (event.key === "k") {
       if (
         (navigator.platform === "MacIntel" && event.metaKey) ||
         (navigator.platform !== "MacIntel" && event.ctrlKey)
       ) {
-        containerRef.current?.querySelector('.aa-DetachedSearchButton')?.click();
+        const el = containerRef.current?.querySelector('.aa-DetachedSearchButton') as HTMLElement;
+        el?.click();
       }
     }
   }
