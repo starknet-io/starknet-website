@@ -21,9 +21,13 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/ListCards/ListCard";
+import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
 import Link from "next/link";
+import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
+import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
+import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 
 export interface AutoProps {
   readonly params: {
@@ -54,61 +58,93 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
         />
-
-        <PageLayout
-          sectionHeaderTitle="Jobs"
-          sectionHeaderDescription="Find a job with the best teams building on Starknet."
-          breadcrumbs={
-            <Breadcrumb separator="/">
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Home
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}/community`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Community
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm">Jobs</BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
-          }
-          leftAside={
-            <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <CustomRole />
-              <CustomType />
-            </Box>
-          }
-          main={
-            <Box>
-              <CustomHits />
-            </Box>
-          }
-        />
+        <JobsPageLayout params={params} />
       </InstantSearch>
     </Box>
   );
 }
 
-function CustomRole() {
-  const { items, refine } = useRefinementList({
+const JobsPageLayout = ({ params }: Pick<Props, "params">) => {
+  const { items: roles, refine: refineRoles } = useRefinementList({
     attribute: "job.role",
     sortBy: ["name:asc"],
   });
 
+  const { items: types, refine: refineTypes } = useRefinementList({
+    attribute: "job.type",
+    sortBy: ["name:asc"],
+  });
+
+  const { isOpen, onOpen, onClose, filtersCount } = useMobileFiltersDrawer([
+    ...roles,
+    ...types,
+  ]);
+  return (
+    <PageLayout
+      sectionHeaderTitle="Jobs"
+      sectionHeaderDescription="Find a job with the best teams building on Starknet."
+      sectionHeaderBottomContent={
+        <MobileFiltersButton
+          filtersCount={filtersCount}
+          onClick={onOpen}
+          style={{
+            marginBlock: "16px",
+          }}
+        />
+      }
+      breadcrumbs={
+        <Breadcrumb separator="/">
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}/community`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Community
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink fontSize="sm">Jobs</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      }
+      leftAside={
+        <Box minH="xs" display={{ base: "none", lg: "block" }}>
+          <CustomRole items={roles} refine={refineRoles} />
+          <CustomType items={types} refine={refineTypes} />
+        </Box>
+      }
+      main={
+        <Box>
+          <CustomHits />
+          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+            <CustomRole items={roles} refine={refineRoles} />
+            <CustomType items={types} refine={refineTypes} />
+          </MobileFiltersDrawer>
+        </Box>
+      }
+    />
+  );
+};
+function CustomRole({
+  items,
+  refine,
+}: {
+  items: RefinementListProps["items"];
+  refine: (value: string) => void;
+}) {
   return (
     <Box>
       <Heading variant="h6" mb={4}>
@@ -131,12 +167,13 @@ function CustomRole() {
   );
 }
 
-function CustomType() {
-  const { items, refine } = useRefinementList({
-    attribute: "job.type",
-    sortBy: ["name:asc"],
-  });
-
+function CustomType({
+  items,
+  refine,
+}: {
+  items: RefinementListProps["items"];
+  refine: (value: string) => void;
+}) {
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>

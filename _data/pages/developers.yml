@@ -25,6 +25,7 @@ blocks:
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
+        withIllustration: true
       - type: image_icon_link_card
         color: blue-default
         title: "Learn through tutorials "
@@ -34,6 +35,7 @@ blocks:
           custom_external_link: ""
           custom_internal_link: /tutorials/
           custom_title: View
+        withIllustration: true
       - type: image_icon_link_card
         color: blue-default
         title: "Set up a local environment "
@@ -44,6 +46,7 @@ blocks:
         link:
           custom_external_link: https://docs.starknet.io/documentation/getting_started/setting_up_the_environment/
           custom_title: View
+        withIllustration: true
   - type: flex_layout
     heading_variant: h3
     base: 1
@@ -59,6 +62,7 @@ blocks:
         link:
           custom_title: View
           custom_internal_link: /tutorials/bytesized_series
+        withIllustration: true
       - type: image_icon_link_card
         color: peach
         title: Starknet 101
@@ -69,6 +73,7 @@ blocks:
         link:
           custom_title: View
           custom_internal_link: /tutorials/cairo_101
+        withIllustration: true
       - type: image_icon_link_card
         color: cyan
         title: "Starknet Edu "
@@ -77,6 +82,7 @@ blocks:
         link:
           custom_title: View
           custom_internal_link: /tutorials/starknet_edu
+        withIllustration: true
   - type: community_events
   - type: flex_layout
     heading_variant: h3

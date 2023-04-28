@@ -28,6 +28,10 @@ import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
 import Link from "next/link";
+import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
+import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
+import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -75,73 +79,111 @@ export function PostsPage({
         <Container maxW="container.xl" mb={4}>
           <CustomCategories categories={categories} params={params} />
         </Container>
-        <PageLayout
-          sectionHeaderTitle={category != null ? category.name : "All posts"}
-          breadcrumbs={
-            <Breadcrumb separator="/">
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Home
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}/community`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Community
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <BreadcrumbItem isCurrentPage fontSize="sm">
-                <BreadcrumbLink fontSize="sm">Blog</BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
-          }
-          leftAside={
-            <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <Heading
-                mt="-24px"
-                color="heading-navy-fg"
-                variant="h4"
-                mb="1rem"
-              >
-                Topics
-              </Heading>
-              <CustomTopics topics={topics} />
-            </Box>
-          }
-          main={
-            <Box>
-              <CustomHits categories={categories} />
-            </Box>
-          }
+        <PostsPageLayout
+          categories={categories}
+          params={params}
+          topics={topics}
         />
       </InstantSearch>
     </Box>
   );
 }
 
-function CustomTopics({ topics }: Pick<Props, "topics">) {
+const PostsPageLayout = ({
+  params,
+  categories,
+  topics,
+}: Pick<Props, "categories" | "params" | "topics">) => {
+  const category = categories.find((c) => c.slug === params.category);
+  const { items: topicsItems, refine: refineTopics } = useRefinementList({
+    attribute: "topic",
+    limit: 50,
+    sortBy: ["count:desc"],
+  });
+
+  const { isOpen, filtersCount, onOpen, onClose } =
+    useMobileFiltersDrawer(topicsItems);
+
+  return (
+    <PageLayout
+      sectionHeaderTitle={category != null ? category.name : "All posts"}
+      sectionHeaderBottomContent={
+        <MobileFiltersButton
+          filtersCount={filtersCount}
+          onClick={onOpen}
+          style={{
+            marginBlock: "16px",
+          }}
+        />
+      }
+      breadcrumbs={
+        <Breadcrumb separator="/">
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}/community`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Community
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage fontSize="sm">
+            <BreadcrumbLink fontSize="sm">Blog</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      }
+      leftAside={
+        <Box minH="xs" display={{ base: "none", lg: "block" }}>
+          <Heading mt="-24px" color="heading-navy-fg" variant="h4" mb="1rem">
+            Topics
+          </Heading>
+          <CustomTopics
+            topics={topics}
+            items={topicsItems}
+            refineTopics={refineTopics}
+          />
+        </Box>
+      }
+      main={
+        <Box>
+          <CustomHits categories={categories} />
+          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+            <CustomTopics
+              topics={topics}
+              items={topicsItems}
+              refineTopics={refineTopics}
+            />
+          </MobileFiltersDrawer>
+        </Box>
+      }
+    />
+  );
+};
+
+type CustomTopicsProps = {
+  topics: readonly Topic[];
+  items: RefinementListProps["items"];
+  refineTopics: (value: string) => void;
+};
+function CustomTopics({ topics, items, refineTopics }: CustomTopicsProps) {
   // const router = useRouter();
   // const pathname = usePathname()!;
   // const searchParams = useSearchParams();
   // const topicSet = useMemo(() => {
   //   return new Set(searchParams.get("topic")?.split(",") ?? []);
   // }, [searchParams]);
-
-  const { items, refine } = useRefinementList({
-    attribute: "topic",
-    limit: 50,
-    sortBy: ["count:desc"],
-  });
 
   const topicsDict = useMemo(() => {
     return topics.reduce((acc, topic) => {
@@ -163,7 +205,7 @@ function CustomTopics({ topics }: Pick<Props, "topics">) {
           // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
           variant={topic.isRefined ? "filterActive" : "filter"}
           onClick={() => {
-            refine(topic.value);
+            refineTopics(topic.value);
 
             // const params = new URLSearchParams(searchParams);
 
