@@ -292,6 +292,7 @@ export function MainSearch({ env }: Props): JSX.Element | null {
       right="8px"
       cursor="pointer"
       onClick={() => searchBox?.click()}
+      display={{base: "none", md: "block"}}
     >/</Kbd>
     <Kbd
       background={useColorModeValue(
@@ -310,6 +311,7 @@ export function MainSearch({ env }: Props): JSX.Element | null {
       right="48px"
       cursor="pointer"
       onClick={() => searchBox?.click()}
+      display={{base: "none", md: "block"}}
     >K</Kbd>
     </Box>
   );
