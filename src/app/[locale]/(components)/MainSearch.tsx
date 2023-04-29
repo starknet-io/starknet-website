@@ -13,6 +13,7 @@ import React, {
   Fragment,
   useEffect,
   useMemo,
+  useState,
   useRef,
 } from "react";
 import { createRoot, Root } from "react-dom/client";
@@ -170,10 +171,10 @@ export function MainSearch({ env }: Props): JSX.Element | null {
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
-  let searchBox: HTMLElement;
-  if (typeof window !== "undefined") {
-    searchBox = window.document.querySelector('.aa-DetachedSearchButton') as HTMLElement;
-  }
+  const [searchBox, setSearchBox] = useState<HTMLElement>();
+  useEffect(() => {
+    setSearchBox(window.document.querySelector('.aa-DetachedSearchButton') as HTMLElement);
+  }, [])
 
   return (
     <Box position="relative">
