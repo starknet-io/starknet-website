@@ -50,10 +50,13 @@ export function Autocomplete<TItem extends BaseItem>(
   }
 
   useEffect(() => {
-    window.document.addEventListener("keydown", openSearch);
-  
+    if (typeof window !== "undefined") {
+      window.document.addEventListener("keydown", openSearch);
+    }
     return () => {
-      window.document.removeEventListener("keydown", openSearch);
+      if (typeof window !== "undefined") {
+        window.document.removeEventListener("keydown", openSearch);
+      }
     };
   }, []);
 
@@ -167,7 +170,10 @@ export function MainSearch({ env }: Props): JSX.Element | null {
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
-  const searchBox = window.document.querySelector('.aa-DetachedSearchButton') as HTMLElement;
+  let searchBox: HTMLElement;
+  if (typeof window !== "undefined") {
+    searchBox = window.document.querySelector('.aa-DetachedSearchButton') as HTMLElement;
+  }
 
   return (
     <Box position="relative">
