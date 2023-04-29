@@ -25,7 +25,7 @@ import type { Page } from "@starknet-io/cms-data/src/pages";
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
-import { Box } from "@chakra-ui/react";
+import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>,
@@ -167,8 +167,10 @@ export function MainSearch({ env }: Props): JSX.Element | null {
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
+  const searchBox = document.querySelector('.aa-DetachedSearchButton') as HTMLElement;
 
   return (
+    <Box position="relative">
     <Autocomplete<any>
       detachedMediaQuery=""
       openOnFocus={true}
@@ -267,6 +269,43 @@ export function MainSearch({ env }: Props): JSX.Element | null {
         ];
       }}
     />
+    <Kbd
+      background={useColorModeValue(
+        "kbd-bg",
+        "kbd-bg"
+      )}
+      color={useColorModeValue(
+        "kbd-fg",
+        "kbd-fg"
+      )}
+      padding="7px 14px"
+      borderRadius="4px"
+      borderWidth="1px"
+      position="absolute"
+      top="7px"
+      right="8px"
+      cursor="pointer"
+      onClick={() => searchBox?.click()}
+    >/</Kbd>
+    <Kbd
+      background={useColorModeValue(
+        "kbd-bg",
+        "kbd-bg"
+      )}
+      color={useColorModeValue(
+        "kbd-fg",
+        "kbd-fg"
+      )}
+      padding="7px 14px"
+      borderRadius="4px"
+      borderWidth="1px"
+      position="absolute"
+      top="7px"
+      right="48px"
+      cursor="pointer"
+      onClick={() => searchBox?.click()}
+    >K</Kbd>
+    </Box>
   );
 }
 
