@@ -183,7 +183,7 @@ blocks:
         subLabel:
           label: "Solidity to Cairo transpiler "
   - type: link_list
-    heading: Full-nodes & API Services
+    heading: Full-nodes & API services
     listSize: lg
     blocks:
       - link:
