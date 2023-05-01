@@ -1,7 +1,7 @@
+import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
-import type { LinkData } from "./settings/main-menu";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -41,13 +41,6 @@ export interface BasicCardBlock {
 
   readonly size?: "sm" | "md";
 }
-export interface IconLinkCardBlock {
-  readonly type: "icon_link_card";
-  readonly title: string;
-  readonly link: LinkData;
-  readonly icon: string;
-  readonly color?: "orange" | "blue" | "green" | "yellow";
-}
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -61,26 +54,10 @@ export interface ImageIconLinkCardBlock {
     | "purple"
     | "peach"
     | "cyan"
-    | "pink";
-}
-export interface GetInvolvedBlock {
-  readonly type: "get_involved_card";
-  readonly title: string;
-  readonly description: string;
-  readonly link: LinkData;
-  readonly link_label: string;
-  readonly link_href: string;
+    | "pink"
+    | "grey";
 }
 
-export interface LargeCardBlock {
-  readonly type: "large_card";
-  readonly title: string;
-  readonly link: LinkData;
-  readonly size?: "sm" | "md";
-  readonly description: string;
-  readonly image: string;
-  readonly orientation?: "left" | "right";
-}
 export interface LinkListItem {
   readonly type: "link_list_item";
   readonly link?: {
@@ -162,10 +139,7 @@ export type Block =
   | OnRampsBlock
   | WalletsBlock
   | BasicCardBlock
-  | LargeCardBlock
-  | IconLinkCardBlock
   | ImageIconLinkCardBlock
-  | GetInvolvedBlock
   | HeroBlock
   | HomeHeroBlock
   | LinkListBlock

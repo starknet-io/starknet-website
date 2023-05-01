@@ -1,6 +1,6 @@
 "use client";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { CardGradientBorder } from "@ui/Card/CardGradientBorder";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import {
   Box,
   Flex,

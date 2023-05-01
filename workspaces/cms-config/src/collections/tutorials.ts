@@ -1,6 +1,7 @@
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsCollection } from "../types";
 
 export const tutorialsCollectionConfig = {
+  crowdin: true,
   label: "Tutorials",
   name: "tutorials",
   folder: '_data/tutorials',
@@ -8,11 +9,12 @@ export const tutorialsCollectionConfig = {
   format: "yml",
   identifier_field: "id",
   summary: "{{title}}",
+  sortable_fields: ["published_at", "title"],
   fields: [
     {
       label: "ID",
       name: "id",
-      widget: "uuid" as "string",
+      widget: "uuid",
     },
     {
       label: "Type",
@@ -37,6 +39,7 @@ export const tutorialsCollectionConfig = {
       label: "URL",
       name: "url",
       widget: "string",
+      crowdin: false
     },
     {
       label: "Image",
@@ -49,12 +52,14 @@ export const tutorialsCollectionConfig = {
       name: "title",
       required: false,
       widget: "string",
+      crowdin: true
     },
     {
       label: "Author",
       name: "author",
       required: false,
       widget: "string",
+      crowdin: true
     },
     {
       label: "Published at",
@@ -111,12 +116,12 @@ export const tutorialsCollectionConfig = {
         },
       ],
     },
-
     {
       label: "Tags",
       name: "tags",
       required: false,
       widget: "string",
+      crowdin: true
     },
   ],
-} satisfies CmsConfig["collections"][number];
+} satisfies CmsCollection;

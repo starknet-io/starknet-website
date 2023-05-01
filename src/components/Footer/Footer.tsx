@@ -3,14 +3,19 @@ import {
   BoxProps as ChakraBoxProps,
   ButtonGroup,
   Container,
-  Divider,
   HStack,
   Stack,
   Text,
+  Icon,
+  Link,
+  Divider,
+  Center,
+  useColorModeValue,
 } from "src/libs/chakra-ui";
+import { Heading } from "@ui/Typography/Heading";
+import NextLink from "next/link";
 import { IconButton } from "@ui/IconButton";
-import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { StarknetLogo } from "../Logo/StarknetLogo";
 
@@ -20,63 +25,125 @@ type RootProps = {
 
 const Root = ({ children, ...rest }: RootProps) => {
   return (
-    <Box as="footer" role="contentinfo" {...rest}>
+    <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto">
       <Box>
-        <Box>
-          <Container as="footer" role="contentinfo" maxW="1200">
+        <Box display="flex" justifyContent="center">
+          <Container
+            as="footer"
+            role="contentinfo"
+            maxWidth="auto"
+            px="0"
+            justifyContent="center"
+            display="flex"
+            flexDirection="column"
+            alignItems={{ base: "flex-start", md: "center" }}
+          >
             <Stack
               spacing={{ base: "12", md: "8" }}
               direction={{ base: "column-reverse", lg: "row" }}
               py={{ base: "12", md: "16" }}
               justify="space-between"
+              maxW="1200"
+              px="30px"
             >
               {children}
             </Stack>
-            <Divider />
-            <Stack
-              pb="12"
-              pt="8"
-              justify="space-between"
-              direction={{ base: "column", md: "row" }}
-              align={{ base: "start", md: "center" }}
+            <Divider
+              borderColor={useColorModeValue(
+                "footer-divider-bg",
+                "footer-divider-bg"
+              )}
+              marginBottom="0px"
+              opacity="1"
+            />
+            <Box
+              background="bg.main"
+              _dark={{
+                background: "darkMode.bg2",
+              }}
+              width="100%"
+              display="flex"
+              flexDirection="row"
+              justifyContent="center"
             >
-              <HStack
-                justify={{ base: "space-between", sm: "start" }}
-                width={{ base: "full", sm: "auto" }}
-                spacing="8px"
+              <Stack
+                pb="38px"
+                pt="38px"
+                justify="space-between"
+                direction={{ base: "column", md: "row" }}
+                align={{ base: "start", md: "center" }}
+                maxW="1200"
+                width="100%"
+                px="30px"
               >
-                <StarknetLogo height="30" />
-                <Text fontSize="xs" color="subtle">
-                  Built with ✨ by the Starknet community.
-                </Text>
-              </HStack>
-              <ButtonGroup>
-                <IconButton
-                  as="a"
-                  href="https://starknet.io/discord"
-                  aria-label="Discord"
-                  icon={<SiDiscord fontSize="1.25rem" />}
-                />
-                <IconButton
-                  as="a"
-                  href="https://github.com/starknet-io/starknet-website"
-                  aria-label="GitHub"
-                  icon={<SiGithub fontSize="1.25rem" />}
-                />
-                <IconButton
-                  as="a"
-                  href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
-                  aria-label="YouTube"
-                  icon={<SiYoutube fontSize="1.25rem" />}
-                />
-                <IconButton
-                  as="a"
-                  href="https://twitter.com/Starknet"
-                  aria-label="Twitter"
-                  icon={<SiTwitter fontSize="1.25rem" />}
-                />
-              </ButtonGroup>
-            </Stack>
+                <HStack
+                  justify={{ base: "space-between", sm: "start" }}
+                  width={{ base: "full", sm: "auto" }}
+                  spacing="0"
+                  order={{ base: 2, lg: 1 }}
+                >
+                  <Box pr="24px">
+                    <StarknetLogo height="32" />
+                  </Box>
+                  <Center height="32px">
+                    <Divider
+                      orientation="vertical"
+                      borderColor={useColorModeValue(
+                        "footer-divider-bg",
+                        "footer-divider-bg"
+                      )}
+                      opacity="1"
+                    />
+                  </Center>
+                  <Text
+                    fontSize="sm"
+                    color={useColorModeValue(
+                      "footer-link-fg",
+                      "footer-link-fg"
+                    )}
+                    paddingLeft="24px"
+                  >
+                    Built with ✨ by the Starknet community.
+                  </Text>
+                </HStack>
+                <ButtonGroup
+                  order={{ base: 1, lg: 2 }}
+                  paddingBottom={{ base: "36px", md: 0 }}
+                >
+                  <IconButton
+                    as="a"
+                    href="https://starknet.io/discord"
+                    aria-label="Discord"
+                    icon={<SiDiscord fontSize="1.25rem" />}
+                    size="small"
+                    marginRight="16px"
+                  />
+                  <IconButton
+                    as="a"
+                    href="https://github.com/starknet-io/starknet-website"
+                    aria-label="GitHub"
+                    icon={<SiGithub fontSize="1.25rem" />}
+                    size="small"
+                    marginRight="16px"
+                  />
+                  <IconButton
+                    as="a"
+                    href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
+                    aria-label="YouTube"
+                    icon={<SiYoutube fontSize="1.25rem" />}
+                    size="small"
+                    marginRight="16px"
+                  />
+                  <IconButton
+                    as="a"
+                    href="https://twitter.com/Starknet"
+                    aria-label="Twitter"
+                    icon={<SiTwitter fontSize="1.25rem" />}
+                    size="small"
+                  />
+                </ButtonGroup>
+              </Stack>
+            </Box>
           </Container>
         </Box>
       </Box>
@@ -96,25 +163,56 @@ const Column = ({ title, children, color }: ColumnProps) => {
       {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
       </Text> */}
-      <NavbarHeading tt="capitalize">{title}</NavbarHeading>
+      <Heading
+        variant="h4"
+        color={useColorModeValue("footer-header-fg", "white")}
+        fontWeight="500"
+      >
+        {title}
+      </Heading>
       <Stack spacing="1" shouldWrapChildren>
         {children}
       </Stack>
     </Stack>
   );
 };
-type LinkProps = {
+type FooterLinkProps = {
   href: string;
   isExternal?: boolean;
   children: React.ReactNode;
 };
 
-const Link = ({ children, href, isExternal }: LinkProps) => {
+const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
   return (
-    <NavBarLink isExternal={isExternal} href={href}>
+    <Link
+      fontSize="sm"
+      px="0"
+      height="36px"
+      bg="navbar-link-bg"
+      color={useColorModeValue("footer-link-fg", "footer-link-fg")}
+      borderRadius={18}
+      display="flex"
+      alignItems="center"
+      justifyContent="flex-start"
+      textDecoration="none"
+      gap="4px"
+      _hover={{
+        color: "navbar-link-hover-fg",
+        bg: "navbar-link-hover-bg",
+      }}
+      _active={{
+        color: "navbar-link-active-fg",
+        svg: {
+          color: "navbar-link-active-fg",
+        },
+      }}
+      as={NextLink}
+      href={href}
+    >
       {children}
-    </NavBarLink>
+      {isExternal && <Icon boxSize="14px" as={HiArrowUpRight} />}
+    </Link>
   );
 };
 
-export { Root, Column, Link };
+export { Root, Column, FooterLink };

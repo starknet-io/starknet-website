@@ -27,6 +27,10 @@ import { titleCase } from "src/utils/utils";
 import moment from "moment";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
+import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
+import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
@@ -57,56 +61,111 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
             course: params.course != null ? [params.course] : [],
           }}
         />
-
-        <PageLayout
-          sectionHeaderTitle="Tutorials"
-          sectionHeaderDescription="Learn about Starknet by developers, for developers"
-          breadcrumbs={
-            <Breadcrumb separator="/">
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}/developers`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Developers
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm">Tutorials</BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
-          }
-          leftAside={
-            <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <Heading mt="-24px" color="heading-navy-fg" variant="h4">
-                Filter
-              </Heading>
-              <CustomType />
-              <CustomCourse params={params} />
-              <CustomDifficulty />
-              <CustomTags />
-            </Box>
-          }
-          main={
-            <Box>
-              <CustomHits />
-            </Box>
-          }
-        />
+        <TutorialsPageLayout params={params} />
       </InstantSearch>
     </Box>
   );
 }
 
-function CustomDifficulty() {
-  const { items, refine } = useRefinementList({
-    attribute: "difficulty",
+const TutorialsPageLayout = ({ params }: Pick<Props, "params">) => {
+  const { items: typeItems, refine: refineTypes } = useRefinementList({
+    attribute: "type",
     sortBy: ["name:asc"],
   });
 
+  const { items: difficultyItems, refine: refineDifficulty } =
+    useRefinementList({
+      attribute: "difficulty",
+      sortBy: ["name:asc"],
+    });
+
+  const { items: tagsItems, refine: refineTags } = useRefinementList({
+    attribute: "tags",
+    sortBy: ["name:asc"],
+  });
+
+  const { isOpen, onOpen, onClose, filtersCount } = useMobileFiltersDrawer([
+    ...typeItems,
+    ...difficultyItems,
+    ...tagsItems,
+  ]);
+
+  return (
+    <PageLayout
+      sectionHeaderTitle="Tutorials"
+      sectionHeaderDescription="Learn about Starknet by developers, for developers"
+      sectionHeaderBottomContent={
+        <MobileFiltersButton
+          filtersCount={filtersCount}
+          onClick={onOpen}
+          style={{
+            marginBlock: "1rem",
+          }}
+        />
+      }
+      breadcrumbs={
+        <Breadcrumb separator="/">
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}/developers`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Developers
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink fontSize="sm">Tutorials</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      }
+      leftAside={
+        <Box minH="xs" display={{ base: "none", lg: "block" }}>
+          <CustomType items={typeItems} refineTypes={refineTypes} />
+          <CustomCourse params={params} />
+          <CustomDifficulty
+            items={difficultyItems}
+            refineDifficulty={refineDifficulty}
+          />
+          <CustomTags items={tagsItems} refineTags={refineTags} />
+        </Box>
+      }
+      main={
+        <Box>
+          <CustomHits />
+          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+            <CustomType items={typeItems} refineTypes={refineTypes} />
+            <CustomCourse params={params} />
+            <CustomDifficulty
+              items={difficultyItems}
+              refineDifficulty={refineDifficulty}
+            />
+            <CustomTags items={tagsItems} refineTags={refineTags} />
+          </MobileFiltersDrawer>
+        </Box>
+      }
+    />
+  );
+};
+function CustomDifficulty({
+  items,
+  refineDifficulty,
+}: {
+  items: RefinementListProps["items"];
+  refineDifficulty: (v: string) => void;
+}) {
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>
@@ -120,7 +179,7 @@ function CustomDifficulty() {
               justifyContent="flex-start"
               size="sm"
               variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
+              onClick={() => refineDifficulty(item.value)}
               key={i}
             >
               {label}
@@ -132,12 +191,13 @@ function CustomDifficulty() {
   );
 }
 
-function CustomType() {
-  const { items, refine } = useRefinementList({
-    attribute: "type",
-    sortBy: ["name:asc"],
-  });
-
+function CustomType({
+  items,
+  refineTypes,
+}: {
+  items: RefinementListProps["items"];
+  refineTypes: (v: string) => void;
+}) {
   return (
     <Box>
       <Heading variant="h6" mb={4}>
@@ -150,7 +210,7 @@ function CustomType() {
             <Button
               size="sm"
               variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
+              onClick={() => refineTypes(item.value)}
               key={i}
               justifyContent="flex-start"
             >
@@ -162,12 +222,13 @@ function CustomType() {
     </Box>
   );
 }
-function CustomTags() {
-  const { items, refine } = useRefinementList({
-    attribute: "tags",
-    sortBy: ["name:asc"],
-  });
-
+function CustomTags({
+  items,
+  refineTags,
+}: {
+  items: RefinementListProps["items"];
+  refineTags: (v: string) => void;
+}) {
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>
@@ -180,7 +241,7 @@ function CustomTags() {
             <Button
               size="sm"
               variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refine(item.value)}
+              onClick={() => refineTags(item.value)}
               key={i}
               justifyContent="flex-start"
             >

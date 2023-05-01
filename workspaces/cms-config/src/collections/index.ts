@@ -1,4 +1,4 @@
-import type { CmsConfig } from "netlify-cms-core";
+import { CmsConfig } from "../types";
 import { categoriesCollectionConfig } from "./categories";
 import { eventsCollectionConfig } from "./events";
 import { jobsCollectionConfig } from "./jobs";
@@ -8,7 +8,7 @@ import { settingsCollectionConfig } from "./settings";
 import { topicsCollectionConfig } from "./topics";
 import { tutorialsCollectionConfig } from "./tutorials";
 
-export const collections =  [
+export const collections = [
   pagesCollectionConfig,
   postsCollectionConfig,
   topicsCollectionConfig,

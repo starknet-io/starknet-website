@@ -5,15 +5,12 @@ import { BlockCards } from "./BlockCards";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
-import { CommunityCard } from "./cards/CommunityCard";
-import { IconLinkCard } from "./cards/IconLinkCard";
-import { ImageIconCard } from "./cards/ImageIconCard";
+import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
-import { LargeCard } from "./cards/LargeCard";
 import { Container } from "./Container";
 import { LinkList, LinkListItem } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
@@ -30,10 +27,6 @@ interface Props {
 export async function Block({ block, locale }: Props): JSX.Element {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
-  } else if (block.type === "large_card") {
-    return <LargeCard {...block} locale={locale} />;
-  } else if (block.type === "icon_link_card") {
-    return <IconLinkCard {...block} locale={locale} />;
   } else if (block.type === "container") {
     return (
       <Container maxWidth={block.max_width}>
@@ -132,8 +125,6 @@ export async function Block({ block, locale }: Props): JSX.Element {
     );
   } else if (block.type === "home_hero") {
     return <HomepageHero />;
-  } else if (block.type === "get_involved_card") {
-    return <CommunityCard {...block} locale={locale} />;
   } else if (block.type === "dapps") {
     return (
       <BlockDapps

@@ -414,7 +414,7 @@
         "type": "color"
       },
       "background": {
-        "value": "#afcaff",
+        "value": "#CCDDFF",
         "type": "color"
       },
       "background-strong": {
@@ -527,6 +527,54 @@
       },
       "light-pink": {
         "value": "linear-gradient(25deg, #dec9e1 0%, #ffd5d4 100%)",
+        "type": "color"
+      },
+      "pink": {
+        "value": "linear-gradient(208deg, #ffdad6 0%, #b6c6ff 100%)",
+        "type": "color"
+      },
+      "pink-strong": {
+        "value": "linear-gradient(34deg, #ec796b 0%, #f4c9ff 100%)",
+        "type": "color"
+      },
+      "orange": {
+        "value": "linear-gradient(208deg, #fae4ab 0%, #eca9fd 100%)",
+        "type": "color"
+      },
+      "orange-strong": {
+        "value": "linear-gradient(41deg, #edc39c 0%, #c78f6f 100%)",
+        "type": "color"
+      },
+      "green": {
+        "value": "linear-gradient(208deg, #b5f6ff 0%, #fdf4a9 100%)",
+        "type": "color"
+      },
+      "green-strong": {
+        "value": "linear-gradient(39deg, #b9ebd4 0%, #466a6f 100%)",
+        "type": "color"
+      },
+      "blue": {
+        "value": "linear-gradient(208deg, #b4dbff 0%, #a9fdb6 100%)",
+        "type": "color"
+      },
+      "blue-strong": {
+        "value": "linear-gradient(37deg, #82bdbd 0%, #6187a7 100%)",
+        "type": "color"
+      },
+      "purple": {
+        "value": "linear-gradient(208deg, #ddc2ff 0%, #ffeccf 100%)",
+        "type": "color"
+      },
+      "purple-strong": {
+        "value": "linear-gradient(216deg, #a373dc 0%, #e2a3fa 96.35%)",
+        "type": "color"
+      },
+      "peach": {
+        "value": "linear-gradient(208deg, #ffc8ce 0%, #fdfaa9 100%)",
+        "type": "color"
+      },
+      "peach-strong": {
+        "value": "linear-gradient(34deg, #ee9663 0%, #f9abae 97.27%)",
         "type": "color"
       }
     },
@@ -733,7 +781,7 @@
         "type": "color"
       },
       "background": {
-        "value": "#46587c",
+        "value": "#3E4B65",
         "type": "color"
       },
       "border": {
@@ -846,6 +894,54 @@
       },
       "light-pink": {
         "value": "linear-gradient(25deg, #dec9e1 0%, #ffd5d4 100%)",
+        "type": "color"
+      },
+      "pink": {
+        "value": "linear-gradient(213deg, #50465c 0%, #171b31 100%)",
+        "type": "color"
+      },
+      "pink-strong": {
+        "value": "linear-gradient(34deg, #ec796b 0%, #f4c9ff 100%)",
+        "type": "color"
+      },
+      "orange": {
+        "value": "linear-gradient(213deg, #3c3224 0%, #171b31 100%)",
+        "type": "color"
+      },
+      "orange-strong": {
+        "value": "linear-gradient(41deg, #edc39c 0%, #c78f6f 100%)",
+        "type": "color"
+      },
+      "green": {
+        "value": "linear-gradient(213deg, #364b4e 0%, #171b31 100%)",
+        "type": "color"
+      },
+      "green-strong": {
+        "value": "linear-gradient(39deg, #b9ebd4 0%, #466a6f 100%)",
+        "type": "color"
+      },
+      "blue": {
+        "value": "linear-gradient(213deg, #3e4e5b 0%, #171b31 100%)",
+        "type": "color"
+      },
+      "blue-strong": {
+        "value": "linear-gradient(37deg, #82bdbd 0%, #6187a7 100%)",
+        "type": "color"
+      },
+      "purple": {
+        "value": "linear-gradient(213deg, #50465c 0%, #171b31 100%)",
+        "type": "color"
+      },
+      "purple-strong": {
+        "value": "linear-gradient(216deg, #a373dc 0%, #e2a3fa 96.35%)",
+        "type": "color"
+      },
+      "peach": {
+        "value": "linear-gradient(213deg, #63494b 0%, #171b31 100%)",
+        "type": "color"
+      },
+      "peach-strong": {
+        "value": "linear-gradient(34deg, #ee9663 0%, #f9abae 97.27%)",
         "type": "color"
       }
     },
