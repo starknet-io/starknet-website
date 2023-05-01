@@ -11,8 +11,8 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230404.0",
     "typescript": "^5.0.4",
-    "vitest": "^0.29.8",
-    "wrangler": "^2.15.0"
+    "vitest": "^0.30.1",
+    "wrangler": "^2.16.0"
   },
   "dependencies": {
     "@octokit/oauth-app": "^4.2.0"

@@ -8,12 +8,7 @@ module.exports = {
     "@chakra-ui/storybook-addon",
     "storybook-addon-dark-mode-toggle"
   ],
-  framework: {
-    name: "@storybook/nextjs",
-    options: {},
-  },
   features: { emotionAlias: false },
-
   docs: {
     autodocs: "tag",
   },

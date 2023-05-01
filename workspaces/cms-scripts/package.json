@@ -12,11 +12,11 @@
     "@starknet-io/cms-config": "workspace:*",
     "@starknet-io/cms-data": "workspace:*",
     "@starknet-io/cms-utils": "workspace:*",
-    "algoliasearch": "^4.16.0",
+    "algoliasearch": "^4.17.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
     "simple-git": "^3.17.0",
-    "vite-node": "^0.29.8",
+    "vite-node": "^0.30.1",
     "yaml": "^2.2.1"
   }
 }

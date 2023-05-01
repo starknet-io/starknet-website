@@ -1,0 +1,14 @@
+main="./worker/index.ts"
+name = "starknet-website"
+compatibility_flags = ["streams_enable_constructors"]
+compatibility_date = "2021-09-29"
+workers_dev = true
+
+[site]
+bucket = "./dist/client"
+
+[dev]
+port = 3000
+
+[env.test]
+[env.prod]
