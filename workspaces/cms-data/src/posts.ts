@@ -26,6 +26,7 @@ export interface Post extends Meta {
   readonly published_date: string;
   readonly video?: VideoMeta;
   readonly blocks: readonly TopLevelBlock[];
+  readonly timeToConsume: string;
 }
 
 export async function getPostBySlug(

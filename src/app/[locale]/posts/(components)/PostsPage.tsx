@@ -308,46 +308,12 @@ type Hit = {
   readonly published_date: string;
   readonly blocks: Array<Block>;
   readonly video: Video;
+  readonly timeToConsume: string;
 };
 
 interface Block {
   body?: string;
   type?: string;
-}
-
-function formatDuration(duration: string): string {
-  const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
-  if (!match) {
-    return '';
-  }
-  const hours = parseInt(match[1]) || 0;
-  const minutes = parseInt(match[2]) || 0;
-  const totalMinutes = hours * 60 + minutes; // pretvaranje u minute
-  const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : ""; // samo minute
-  return formattedMinutes.trim();
-}
-
-
-function concatenateBodies(blocks: readonly Block[]): string {
-  let fullText = "";
-  blocks.forEach((block) => {
-    if (block.body) {
-      fullText += block.body;
-    }
-  });
-  return fullText;
-}
-
-function calculateReadingTime(text: string): string {
-  const wordsPerMinute = 200;
-  const wordsPerImage = 12;
-  const words = text.trim().split(/\s+/).length;
-  const imageCount = (text.match(/!\[\]/g) || []).length;
-  const wordsWithImages = words + imageCount * wordsPerImage;
-  const decimalMinutes = wordsWithImages / wordsPerMinute;
-
-  const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
-  return `${minutes}min`;
 }
 
 function CustomHits({ categories }: Pick<Props, "categories">) {
@@ -367,13 +333,6 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
       >
         {hits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
-          const fullText = concatenateBodies(hit.blocks);
-          let timeToRead;
-          if (hit.post_type === "video") {
-            timeToRead = `${formatDuration(hit.video?.data?.contentDetails?.duration || '')} watch`;
-          } else {
-            timeToRead = `${calculateReadingTime(fullText)} read`;
-          }
           const date = moment(hit.published_date).format("MMM DD, YYYY");
           const category = categories.find((c) => c.id === hit.category)!;
 
@@ -394,7 +353,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
               <ArticleCard.Footer
                 postType={hit.post_type}
                 publishedAt={date}
-                timeToConsume={timeToRead}
+                timeToConsume={hit.timeToConsume}
               />
             </ArticleCard.Root>
           );

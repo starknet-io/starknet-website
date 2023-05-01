@@ -179,41 +179,6 @@ function pageToTableOfContents(page: any): readonly HeadingData[] {
   return data;
 }
 
-function formatDuration(duration: string): string {
-  const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
-  if (!match) {
-    return '';
-  }
-  const hours = parseInt(match[1]) || 0;
-  const minutes = parseInt(match[2]) || 0;
-  const totalMinutes = hours * 60 + minutes; // pretvaranje u minute
-  const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : ""; // samo minute
-  return formattedMinutes.trim();
-}
-
-
-function concatenateBodies(blocks: readonly Block[]): string {
-  let fullText = "";
-  blocks.forEach((block) => {
-    if (block.body) {
-      fullText += block.body;
-    }
-  });
-  return fullText;
-}
-
-function calculateReadingTime(text: string): string {
-  const wordsPerMinute = 200;
-  const wordsPerImage = 12;
-  const words = text.trim().split(/\s+/).length;
-  const imageCount = (text.match(/!\[\]/g) || []).length;
-  const wordsWithImages = words + imageCount * wordsPerImage;
-  const decimalMinutes = wordsWithImages / wordsPerMinute;
-
-  const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
-  return `${minutes}min`;
-}
-
 export default async function Page({
   params: { slug, locale },
 }: Props): Promise<JSX.Element> {
@@ -222,15 +187,7 @@ export default async function Page({
     const categories = await getCategories(locale);
     const topics = await getTopics(locale);
     const category = categories.find((c) => c.id === post.category)!;
-
     let videoId = post.post_type === "video" ? post.video?.id : undefined;
-    const fullText = concatenateBodies(post.blocks);
-    let timeToRead;
-    if (post.post_type === "video") {
-      timeToRead = `${formatDuration(post.video?.data?.contentDetails?.duration || '')} watch`;
-    } else {
-      timeToRead = `${calculateReadingTime(fullText)} read`;
-    }
     return (
       <PageLayout
         breadcrumbs={
@@ -300,7 +257,7 @@ export default async function Page({
                   {moment(post.published_date).format("MMM DD,YYYY")} ·
                 </Text>
                 <Text fontSize="sm" color="muted">
-                  {timeToRead}
+                  {post.timeToConsume}
                 </Text>
               </HStack>
               <Spacer />

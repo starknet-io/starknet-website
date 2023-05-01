@@ -84,8 +84,8 @@ function Control(props: CmsWidgetControlProps & any) {
       >
         {fetching
           ? `Fetching: ${fetching}`
-          : title && formattedDuration
-          ? `Video: ${title} | Duration: ${formattedDuration}`
+          : title
+          ? `Video: ${title}`
           : "No Video Data!"}
       </div>
     </div>
