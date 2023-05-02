@@ -27,7 +27,7 @@ blocks:
       ## The Starknet Journey
 
 
-      Starknet was designed to allow developers to harness the power of STARKs and Cairo in order to build their app. Up till now, Starknet’s development focused on providing developers with future-proof *functionality*. Starknet’s functionality, powered by Cairo 1.0, is by now mostly complete, aside from Regenesis.
+      Starknet was designed to allow developers to harness the power of STARKs and Cairo in order to build their app. Up till now, Starknet’s development focused on providing developers with future-proof *functionality.* Starknet’s functionality, powered by Cairo 1.0, is by now mostly complete, aside from Regenesis.
 
 
       ## Regenesis
@@ -58,7 +58,7 @@ blocks:
       ![](/assets/roadmap-timeline-2023-image-.webp)
 
 
-      ### Performance
+      #### Performance
 
 
       Our main goal for the coming months is to improve network performance in order to support the expected increase in the number of users and developers. As we see it, performance is defined by throughput and latency, obviously, but also by transaction cost.\
@@ -66,7 +66,7 @@ blocks:
       We list here the areas of focus by their priority, and (when possible) state the planned version for their release.
 
 
-      ### Throughput & Latency
+      #### Throughput & Latency
 
 
       The upcoming Starknet v0.12.0, will incorporate significant throughput and latency improvements. This is the result of work conducted over the past six months to Rust-ify the Starknet stack. This version will include the transition to a Rust-based Sequencer (developed by StarkWare), and the new Rust-Cairo VM ([cairo-rs](https://github.com/lambdaclass/cairo-rs), developed by LambdaClass) — two open-source projects. We expect to have performance benchmarks soon.
@@ -78,7 +78,7 @@ blocks:
       Higher throughput and lower latency will remain a top priority, even after v0.12.0, and the work to improve them will become a mainstay of Starknet development.
 
 
-      ### Transaction Cost
+      #### Transaction Cost
 
 
       In v0.13.0, Starknet’s transaction costs will be reduced dramatically. This will be done by targeting the main component of transaction cost: L1 (Ethereum) data cost, which accounts for 95% of tx cost today. Volition will allow developers to build Starknet applications with a hybrid Data Availability (DA) mode: both on-chain and off-chain data. A post dedicated to Volition is forthcoming, with full details on its design and developer interfaces.
@@ -96,13 +96,13 @@ blocks:
       As we approach the release of Starknet v0.14.0 and v0.15.0, we remain committed to providing Starknet’s users with a seamless and predictable experience on the network, regardless of congestion levels. To achieve this, we are prioritizing two key areas of development: fee market and block intervals.
 
 
-      ### Fee Market
+      #### Fee Market
 
 
       The planned performance improvements will be evident to developers and users, as long as the network remains uncongested. However, when network congestion occurs, it will lead to increased waiting times for everyone. To solve this issue, a fee market will be introduced to Starknet in v0.14.0, to allow an efficient allocation of Starknet’s limited resources, based on users’ willingness to pay for a transaction, and not merely on its place in line.
 
 
-      ### Shorter & Fixed Block Intervals
+      #### Shorter & Fixed Block Intervals
 
 
       In v0.15.0, Starknet will switch to constant and shorter block intervals. Currently, each block is proven by its own proof, and block intervals are variable — the conserved quantity is the block cost. In order to reach that fixed block cost, the network awaits for the accumulation of enough transactions, and that results in variable block intervals. To solve this we plan to decouple the 1:1 relationship between a Starknet block and its proof. Starting v0.15.0, a proof will attest to the integrity of one or more Starknet blocks. This will fix the block interval, and improve Starknet’s UX.
