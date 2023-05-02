@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface Dapp {
   readonly name: string;
@@ -9,7 +9,10 @@ export interface Dapp {
   readonly description: string;
 }
 
-export async function getDapps(locale: string): Promise<readonly Dapp[]> {
+export async function getDapps(
+  locale: string,
+  getJSON: (src: string) => Promise<any>
+): Promise<readonly Dapp[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(

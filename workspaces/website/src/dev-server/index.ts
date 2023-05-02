@@ -4,6 +4,8 @@ import { renderPage } from "vite-plugin-ssr/server";
 import { createServer } from "vite";
 import fetch from "node-fetch";
 import compression from "compression";
+import fs from "fs/promises";
+import path from "path";
 
 const app = express();
 
@@ -22,13 +24,25 @@ app.get("*", async (req, res, next) => {
   const userAgent = req.headers["user-agent"]!;
   const pageContextInit = {
     urlOriginal: req.originalUrl,
+    getJSON: async (src: string) => {
+      if (import.meta.env.SSR) {
+        return JSON.parse(
+          await fs.readFile(
+            path.join(process.cwd(), "../../public/", src + ".json"),
+            "utf8"
+          )
+        );
+      }
+
+      return (await fetch("/" + src + ".json")).json();
+    },
     fetch: fetch as WindowOrWorkerGlobalScope["fetch"],
     userAgent,
   };
   const pageContext: any = await renderPage(pageContextInit);
 
   if (pageContext.redirectTo) {
-    res.redirect(pageContext.redirectTo)
+    res.redirect(pageContext.redirectTo);
   }
 
   const { httpResponse } = pageContext;

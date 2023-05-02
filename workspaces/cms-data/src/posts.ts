@@ -1,7 +1,7 @@
 import algoliasearch from "algoliasearch";
 import { defaultLocale } from "./i18n/config";
 import type { TopLevelBlock } from "./pages";
-import { getFirst, getJSON, Meta } from "@starknet-io/cms-utils/src/index";
+import { getFirst, Meta } from "@starknet-io/cms-utils/src/index";
 import { youtube_v3 } from "googleapis";
 
 interface VideoMeta {
@@ -29,7 +29,8 @@ export interface Post extends Meta {
 
 export async function getPostBySlug(
   slug: string,
-  locale: string
+  locale: string,
+  getJSON: (src: string) => Promise<any>
 ): Promise<Post> {
   try {
     return await getFirst(

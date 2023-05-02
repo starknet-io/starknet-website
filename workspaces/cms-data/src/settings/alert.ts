@@ -1,5 +1,5 @@
 import { defaultLocale } from "../i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface Alert {
   readonly title: string;
@@ -10,7 +10,10 @@ export interface Alert {
   readonly id: string;
 }
 
-export async function getAlerts(locale: string): Promise<Alert[]> {
+export async function getAlerts(
+  locale: string,
+  getJSON: (src: string) => Promise<any>
+): Promise<Alert[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(

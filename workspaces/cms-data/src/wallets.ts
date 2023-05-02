@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface Type {
   readonly type: string;
@@ -15,7 +15,10 @@ export interface Wallet {
   readonly description: string;
 }
 
-export async function getWallets(locale: string): Promise<readonly Wallet[]> {
+export async function getWallets(
+  locale: string,
+  getJSON: (src: string) => Promise<any>
+): Promise<readonly Wallet[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(

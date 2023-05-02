@@ -1,6 +1,4 @@
 import type { DefaultLogFields } from "simple-git";
-import fs from "fs/promises";
-import path from "path";
 
 export function youtubeVideoIdFromURL(url: string): string | undefined | void {
   try {
@@ -51,20 +49,4 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
   throw new Error("getFirst failed! SSR: "+ JSON.stringify(import.meta.env.SSR), {
     cause,
   });
-}
-
-export async function getJSON(src: string) {
-  if (import.meta.env.SSR) {
-    return JSON.parse(
-      await fs.readFile(
-        path.join(
-          process.cwd(),"../../public/",
-          src + ".json"
-        ),
-        "utf8"
-      )
-    )
-  }
-
-  return (await fetch("/" + src + ".json")).json()
 }

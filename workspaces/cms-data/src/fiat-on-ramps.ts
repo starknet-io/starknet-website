@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 
 export interface FiatOnRamp {
   readonly name: string;
@@ -11,7 +11,8 @@ export interface FiatOnRamp {
 }
 
 export async function getFiatOnRamps(
-  locale: string
+  locale: string,
+  getJSON: (src: string) => Promise<any>
 ): Promise<readonly FiatOnRamp[]> {
   try {
     return await getFirst(

@@ -1,6 +1,6 @@
 import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 
 export interface MarkdownBlock {
@@ -182,7 +182,8 @@ export interface Page extends Meta {
 
 export async function getPageBySlug(
   slug: string,
-  locale: string
+  locale: string,
+  getJSON: (src: string) => Promise<any>
 ): Promise<Page> {
   try {
     return await getFirst(

@@ -5,9 +5,9 @@ import { PageContextServer } from "src/renderer/types";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const { locale } = pageContext;
-  const mainMenu = await getMainMenu(locale);
+  const mainMenu = await getMainMenu(locale, pageContext.getJSON);
   const messages = await getMessages(locale);
-  const alerts = await getAlerts(locale);
+  const alerts = await getAlerts(locale, pageContext.getJSON);
 
   return {
     pageContext: {
