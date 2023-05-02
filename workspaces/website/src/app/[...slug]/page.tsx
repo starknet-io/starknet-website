@@ -13,6 +13,7 @@ import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { TableOfContents } from "../(components)/TableOfContents";
+import { Suspense } from "react";
 // import * as fs from "fs/promises";
 // import * as path from "path";
 // import { Metadata } from "next";
@@ -67,10 +68,7 @@ export interface Props {
   readonly data: PageType;
 }
 
-export default function Page({
-  params: { locale },
-  data,
-}: Props): JSX.Element {
+export default function Page({ params: { locale }, data }: Props): JSX.Element {
   const date = data?.gitlog?.date;
 
   return (
@@ -117,9 +115,11 @@ export default function Page({
               lg: data.template === "content" ? "32px" : "136px",
             }}
           >
-            {data.blocks.map((block, i) => {
-              return <Block key={i} block={block} locale={locale} />;
-            })}
+            {data.blocks.map((block, i) => (
+              <Suspense fallback={null} key={i}>
+                <Block block={block} locale={locale} />
+              </Suspense>
+            ))}
           </Flex>
         }
         rightAside={

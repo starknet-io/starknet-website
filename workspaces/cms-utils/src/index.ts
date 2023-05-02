@@ -46,15 +46,15 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
     }
   }
 
-  throw new Error("getFirst failed! SSR: "+ JSON.stringify(import.meta.env.SSR), {
-    cause,
-  });
+  throw new Error(
+    "getFirst failed! SSR: " + JSON.stringify(import.meta.env.SSR),
+    {
+      cause,
+    }
+  );
 }
 
-export async function getJSON(src: string) {
-  if (import.meta.env.SSR) {
-    return (await import(/* @vite-ignore */ "../../../public/" + src + ".json")).default
-  }
-
-  return (await import(/* @vite-ignore */ "/" + src + ".json")).default
+export async function getJSON(src: string): Promise<any> {
+  const res = await fetch(import.meta.env.VITE_SITE_URL + "/" + src + ".json");
+  return res.json();
 }
