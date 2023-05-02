@@ -1,5 +1,5 @@
 import { Box, Button, Text, Textarea } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import useInputCopy from "../hooks/useInputCopy";
 import { Chapter, VIDEO_SHARE_DOMAIN } from "../../constants";
 

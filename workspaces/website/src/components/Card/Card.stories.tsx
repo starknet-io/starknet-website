@@ -1,4 +1,3 @@
-import React from "react";
 import { HStack } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Card } from "./Card";

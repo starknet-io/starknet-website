@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import React from "react";
 import "react-video-seek-slider/styles.css";
 // import "./VideoSeekSlider.css";
 // import { VideoSeekSlider } from "react-video-seek-slider";

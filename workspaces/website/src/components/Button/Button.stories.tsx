@@ -1,4 +1,3 @@
-import React from "react";
 import { HStack, Icon as ChakraIcon } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Button } from "./Button";
@@ -9,7 +8,7 @@ import {
   HiOutlineSun,
   HiGlobeAlt
 } from "react-icons/hi2";
-import { ChevronDownIcon } from "heroicons/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
 import { PopoverIcon } from "../../components/Layout/Navbar/PopoverIcon";
 

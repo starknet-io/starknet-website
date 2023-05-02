@@ -25,7 +25,7 @@ export default function LocaleSwitcher() {
             <HStack key={i}>
               <ColumnLink
                 active={localeConfig.code === c.code}
-                href={`/${c.code}${pathname.replace(/^\/\w{2}\/?/, "/")}`}
+                href={`/${c.code}${pathname}`}
               >
                 {c.name}
               </ColumnLink>

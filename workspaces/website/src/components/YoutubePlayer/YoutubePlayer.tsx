@@ -1,7 +1,7 @@
-
-import React from "react";
-import YouTube, { type YouTubeProps } from "react-youtube";
 import "./YoutubePlayer.css";
+
+import YouTube, { type YouTubeProps } from "react-youtube";
+
 export const YoutubePlayer = (props: YouTubeProps) => {
   const opts: YouTubeProps["opts"] = {
     height: "600px",

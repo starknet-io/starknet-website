@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 type BigPlayButtonProps = {
   onClick: () => void;

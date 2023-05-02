@@ -11,17 +11,17 @@ type Props = {
 
 export const PageContainer = ({ children, alerts }: Props) => {
   const pathname = usePathname()!;
-  const path = pathname.replace(/^\/[^/]+\//, "");
+
   let result = useMemo(() => {
     if (typeof window !== "undefined") {
-      let result = alerts.find((obj) => obj.page_url?.includes(path));
+      let result = alerts.find((obj) => obj.page_url?.includes(pathname));
       if (!window.localStorage.getItem(`uuid-${result?.id}`)) {
         return result;
       }
     }
 
     return null
-  }, [path, alerts]);
+  }, [pathname, alerts]);
 
   return (
     <Flex direction="column" flex="1">

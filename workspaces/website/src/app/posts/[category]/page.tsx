@@ -1,6 +1,6 @@
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import { getCategories } from "@starknet-io/cms-data/src/categories";
-import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+// import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PostsPage } from "../(components)/PostsPage";
 
@@ -10,32 +10,32 @@ export interface Props extends LocaleProps {
   };
 }
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
-  const categories = await getCategories(props.params.locale);
+// export async function generateMetadata(props: Props): Promise<Metadata> {
+//   const categories = await getCategories(props.params.locale);
 
-  const category = categories.find((c) => c.id === props.params.category);
+//   const category = categories.find((c) => c.id === props.params.category);
 
-  return {
-    title: category?.name,
-  };
-}
+//   return {
+//     title: category?.name,
+//   };
+// }
 
-export async function generateStaticParams() {
-  const params = [];
+// export async function generateStaticParams() {
+//   const params = [];
 
-  for (const locale of preRenderedLocales) {
-    const categories = await getCategories(locale);
+//   for (const locale of preRenderedLocales) {
+//     const categories = await getCategories(locale);
 
-    for (const category of categories) {
-      params.push({
-        locale,
-        category: category.slug,
-      });
-    }
-  }
+//     for (const category of categories) {
+//       params.push({
+//         locale,
+//         category: category.slug,
+//       });
+//     }
+//   }
 
-  return params;
-}
+//   return params;
+// }
 
 export default async function Page(props: Props) {
   const categories = await getCategories(props.params.locale);

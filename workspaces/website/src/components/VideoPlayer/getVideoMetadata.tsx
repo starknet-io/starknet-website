@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import { VIDEO_SHARE_DOMAIN, playlist, playlistObject } from "./constants";
 
 export default function getVideoMetadata(chapterId: string) {
@@ -10,7 +10,7 @@ export default function getVideoMetadata(chapterId: string) {
   const imageUrl =
     "https://www.starknet.io/assets/illustration-how-it-works.png";
 
-  const metadata: Metadata = {
+  const metadata = {
     title,
     description,
     openGraph: {

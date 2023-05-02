@@ -4,8 +4,6 @@ import { renderPage } from "vite-plugin-ssr/server";
 import { createServer } from "vite";
 import fetch from "node-fetch";
 import compression from "compression";
-import fs from "fs/promises";
-import path from "path";
 
 const app = express();
 

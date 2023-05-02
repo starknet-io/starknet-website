@@ -1,6 +1,6 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Chapter } from "../constants";
 import { convertSecondsToMMSS } from "../player-core/control-bar/utils";
 

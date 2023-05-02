@@ -5,7 +5,6 @@ import {
   SliderThumb,
   SliderTrack,
 } from "@chakra-ui/react";
-import React from "react";
 import ControlButton from "./ControlButton";
 import { preventVideoJSHotKeys } from "./utils";
 

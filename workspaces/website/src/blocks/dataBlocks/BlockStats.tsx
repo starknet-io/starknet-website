@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
-import React from "react";
 import { BlockCards } from "../BlockCards";
 import { StatCard } from "../cards/StatCard";
 

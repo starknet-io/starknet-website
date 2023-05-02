@@ -1,4 +1,3 @@
-import React from "react";
 import ControlButton from "./ControlButton";
 
 export type FullscreenButtonProps = {

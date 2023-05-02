@@ -11,7 +11,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
-import React from "react";
 
 type Props = {};
 

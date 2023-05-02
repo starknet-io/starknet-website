@@ -1,5 +1,5 @@
 import { Heading } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
 const texts = [

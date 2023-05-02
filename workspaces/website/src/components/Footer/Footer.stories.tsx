@@ -1,7 +1,6 @@
 import { HStack } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Footer } from "src/app/(components)/Footer";
-import { ClientLocaleProvider } from "src/app/(components)/ClientLocaleProvider";
 import { ThemeProvider } from "src/renderer/ThemeProvider";
 import { ColorModeScript } from "@chakra-ui/react";
 import { ColorModeProvider } from "@chakra-ui/color-mode";
@@ -15,7 +14,7 @@ export const Solid = () => (
   <ThemeProvider>
     <ColorModeProvider options={{ useSystemColorMode: true }}>
     <ColorModeScript initialColorMode="light" />
-        <ClientLocaleProvider value={{ locale: "en", messages: { search: 'Search' } }}>
+
             <HStack>
                 <Footer mainMenu={{
     "items": [
@@ -402,7 +401,7 @@ export const Solid = () => (
     ]
 }}/>
             </HStack>
-        </ClientLocaleProvider>
+
     </ColorModeProvider>
   </ThemeProvider>
 );

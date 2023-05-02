@@ -1,5 +1,4 @@
 import { Icon, IconProps } from "@chakra-ui/react";
-import * as React from "react";
 import { FiChevronDown } from "react-icons/fi";
 
 interface PopoverIconProps extends IconProps {

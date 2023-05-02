@@ -1,4 +1,3 @@
-import React from "react";
 import { SeekStatuses } from "../hooks/useSeek";
 import ControlButton from "./ControlButton";
 

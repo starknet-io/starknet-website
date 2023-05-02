@@ -63,4 +63,4 @@ export const alertTheme = defineStyleConfig({
       }
     }
   }
-});
+} as any);

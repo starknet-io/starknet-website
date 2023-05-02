@@ -1,6 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
+
 const items = ["ようこそ"];
+
 type Props = {};
 
 export const TextCycle = (props: Props) => {
