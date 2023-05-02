@@ -276,6 +276,7 @@ export const ListCard = (props: Props) => {
                     mt="20px"
                     isExternal={props.recap.isExternal}
                     variant="outlineRounded"
+                    target="_blank"
                   >
                     {props.recap.label || "View event recap"}
                   </Button>
