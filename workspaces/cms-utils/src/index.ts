@@ -1,4 +1,5 @@
 import type { DefaultLogFields } from "simple-git";
+import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
 
 export function youtubeVideoIdFromURL(url: string): string | undefined | void {
   try {
@@ -55,6 +56,24 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
 }
 
 export async function getJSON(src: string): Promise<any> {
-  const res = await fetch(import.meta.env.VITE_SITE_URL + "/" + src + ".json");
+  if (globalThis.__STATIC_CONTENT) {
+    const res = await getAssetFromKV({
+      request: new Request(
+        new URL("/" + src + ".json", "http://localhost:3000")
+      ),
+      waitUntil(promise) {},
+    });
+
+    return res.json();
+  }
+
+  if (import.meta.env.SSR) {
+    const res = await fetch(
+      import.meta.env.VITE_SITE_URL + "/" + src + ".json"
+    );
+    return res.json();
+  }
+
+  const res = await fetch("/" + src + ".json");
   return res.json();
 }

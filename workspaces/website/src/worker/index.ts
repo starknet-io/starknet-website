@@ -24,7 +24,7 @@ async function handleFetchEvent(event: WorkerGlobalScopeEventMap["fetch"]) {
     const pageContext: any = await renderPage(pageContextInit);
 
     if (pageContext.redirectTo) {
-      return Response.redirect(pageContext.redirectTo);
+      return Response.redirect(new URL(pageContext.redirectTo, url));
     }
 
     const { httpResponse } = pageContext;
@@ -44,5 +44,5 @@ async function handleFetchEvent(event: WorkerGlobalScopeEventMap["fetch"]) {
 
 function isAssetUrl(url: string | URL) {
   const { pathname } = new URL(url);
-  return pathname.startsWith("/assets/");
+  return pathname.startsWith("/assets/") || pathname.startsWith("/data/");
 }

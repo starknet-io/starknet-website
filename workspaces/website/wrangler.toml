@@ -9,6 +9,3 @@ bucket = "./dist/client"
 
 [dev]
 port = 3000
-
-[env.test]
-[env.prod]
