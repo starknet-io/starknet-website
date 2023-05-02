@@ -3,7 +3,6 @@ post_type: video
 title: Transacting on Starkware's Live ZK-Rollups and Building a Vibrant
   Ecosystem of dApps
 published_date: 2021-10-29T15:46:35.198Z
-time_to_consume: 57 min watch
 image: /assets/interviews04.png
 category: ecosystem
 topic:
@@ -16,7 +15,7 @@ video:
   id: dz_TSqiljHE
   data:
     kind: youtube#video
-    etag: 8aYFQvCDakrGbov0xkf9__4Ex80
+    etag: oNc6LEk536i2bRMFvrCQyt6ICns
     id: dz_TSqiljHE
     snippet:
       publishedAt: 2021-10-29T13:00:15Z
@@ -253,3 +252,11 @@ video:
 
           Disclosures: This podcast is strictly informational and educational and is not investment advice or a solicitation to buy or sell any tokens or securities or to make any financial decisions. Do not trade or invest in any project, tokens, or securities based upon this podcast episode. The host may personally own tokens that are mentioned on the podcast. Our current show features paid sponsorships which may be featured at the start, middle, and/or the end of the episode. These sponsorships are for informational purposes only and are not a solicitation to use any product, service or token. Delphi’s transparency page can be viewed at https://delphidigital.io/transparency.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M49S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: true
+      contentRating: {}
+      projection: rectangular

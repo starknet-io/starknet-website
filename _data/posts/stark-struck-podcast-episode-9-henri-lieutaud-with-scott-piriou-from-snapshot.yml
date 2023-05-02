@@ -3,7 +3,6 @@ post_type: audio
 title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from
   Snapshot
 published_date: 2023-01-26T00:00:00+00:00
-time_to_consume: 56 min listen
 image: /assets/cleanshot-2023-01-22-at-14.07.10-2x.png
 category: stark-struck
 topic:
@@ -20,7 +19,7 @@ video:
   id: NPcpug9sQcg
   data:
     kind: youtube#video
-    etag: Rbku5L64ybALTc3vwHq2vVZEqdY
+    etag: o2ezyttLEaRowaJhUCdQduAGpQw
     id: NPcpug9sQcg
     snippet:
       publishedAt: 2023-01-04T14:00:16Z
@@ -69,3 +68,11 @@ video:
 
           Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M55S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

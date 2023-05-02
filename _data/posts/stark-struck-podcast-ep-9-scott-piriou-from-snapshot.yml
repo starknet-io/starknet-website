@@ -2,7 +2,6 @@ id: 37b2e0d8-dd87-4ba3-b3be-a15307db2c70
 post_type: video
 title: STARK Struck Podcast | Ep 9 | Scott Piriou from Snapshot
 published_date: 2023-01-04T00:00:00+00:00
-time_to_consume: 57 min watch
 image: /assets/starkstruck09.jpg
 category: stark-struck
 topic:
@@ -15,7 +14,7 @@ video:
   id: NPcpug9sQcg
   data:
     kind: youtube#video
-    etag: Rbku5L64ybALTc3vwHq2vVZEqdY
+    etag: o2ezyttLEaRowaJhUCdQduAGpQw
     id: NPcpug9sQcg
     snippet:
       publishedAt: 2023-01-04T14:00:16Z
@@ -64,3 +63,11 @@ video:
 
           Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M55S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

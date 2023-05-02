@@ -2,7 +2,6 @@ id: fbeb2036-5f4e-4655-b664-e247e2cc9e8c
 post_type: video
 title: "StarkNetCC Lisbon | A folk history of Starknet - Sylve Chevet "
 published_date: 2022-11-14T13:11:44.694Z
-time_to_consume: 13 min watch
 image: /assets/vid_events01.jpg
 category: community-and-events
 topic:
@@ -13,7 +12,7 @@ video:
   id: Q0LpMwvIMmc
   data:
     kind: youtube#video
-    etag: Vr0UIv6eIUKusTlXePC4LRVIf_c
+    etag: ZzPYQIN17uH-yaEjufYkv16uJZ4
     id: Q0LpMwvIMmc
     snippet:
       publishedAt: 2022-11-14T13:00:15Z
@@ -63,3 +62,11 @@ video:
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT12M56S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

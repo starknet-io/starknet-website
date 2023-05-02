@@ -24,10 +24,10 @@ export interface Post extends Meta {
   readonly short_desc: string;
   readonly post_type: string;
   readonly post_date: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
   readonly toc: boolean;
   readonly video: any;
+  readonly timeToConsume: string;
   blocks: readonly any[];
 }
 
@@ -44,6 +44,48 @@ export async function fileToPost(
 
   const slug = slugify(sourceData.title);
 
+  function formatDuration(duration: string): string {
+    const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+    if (!match) {
+      return '';
+    }
+    const hours = parseInt(match[1]) || 0;
+    const minutes = parseInt(match[2]) || 0;
+    const totalMinutes = hours * 60 + minutes;
+    const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : "";
+    return formattedMinutes.trim();
+  }
+  
+  
+  function concatenateBodies(blocks: readonly Block[]): string {
+    let fullText = "";
+    blocks?.forEach((block) => {
+      if (block.body) {
+        fullText += block.body;
+      }
+    });
+    return fullText;
+  }
+  
+  function calculateReadingTime(text: string): string {
+    const wordsPerMinute = 200;
+    const wordsPerImage = 12;
+    const words = text.trim().split(/\s+/).length;
+    const imageCount = (text.match(/!\[\]/g) || []).length;
+    const wordsWithImages = words + imageCount * wordsPerImage;
+    const decimalMinutes = wordsWithImages / wordsPerMinute;
+  
+    const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
+    return `${minutes}min`;
+  }
+  const fullText = concatenateBodies(data.blocks);
+  let timeToConsume;
+  if (data.post_type === "video") {
+    timeToConsume = `${formatDuration(data.video?.data?.contentDetails?.duration || '')} watch`;
+  } else {
+    timeToConsume = `${calculateReadingTime(fullText)} read`;
+  }
+
   return {
     id: data.id,
     slug,
@@ -52,7 +94,6 @@ export async function fileToPost(
     post_type: data.post_type,
     post_date: data.post_date,
     published_date: data.published_date,
-    time_to_consume: data.time_to_consume,
     toc: data.toc,
     video: data.video,
     topic: data.topic ?? [],
@@ -63,6 +104,7 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
+    timeToConsume
   };
 }
 

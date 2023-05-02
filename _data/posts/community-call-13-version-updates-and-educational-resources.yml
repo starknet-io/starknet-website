@@ -2,7 +2,6 @@ id: 28af3fed-4b39-4278-9fd8-c3ff4dd68db9
 post_type: video
 title: "Community Call #13 | Version updates and educational resources"
 published_date: 2022-05-10T14:06:18.594Z
-time_to_consume: 60 min watch
 image: /assets/cc13.jpg
 category: community-calls
 topic:
@@ -15,7 +14,7 @@ video:
   id: csgPYUpjDR4
   data:
     kind: youtube#video
-    etag: GtFBWWLQDo6iegXFnYWvTp2uvJ8
+    etag: oIFJqqRVxfIExGlaqv8PhS6GqPE
     id: csgPYUpjDR4
     snippet:
       publishedAt: 2022-05-11T01:34:32Z
@@ -54,3 +53,11 @@ video:
           StarkNet Alpha, upcoming feature on version 0.9, and discussing
           educational resources for StarkNet
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT59M50S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

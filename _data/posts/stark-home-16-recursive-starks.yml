@@ -2,7 +2,6 @@ id: 94c49a42-df53-478c-ab1e-91bcec500ab4
 post_type: video
 title: "STARK @ Home 16: Recursive STARKs"
 published_date: 2020-12-10T15:34:32.178Z
-time_to_consume: 79 min watch
 image: /assets/starkhome16.png
 category: stark-math
 topic:
@@ -13,7 +12,7 @@ video:
   id: lZa9Zb8wVFc
   data:
     kind: youtube#video
-    etag: y0jiqhDO2nYUDj54gYBIuflcpe8
+    etag: I67sadaFvm_L-KKm4jiouGkPuec
     id: lZa9Zb8wVFc
     snippet:
       publishedAt: 2020-12-10T08:00:18Z
@@ -40,3 +39,11 @@ video:
         title: "STARK@Home 16: Recursive STARKs"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H19M11S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

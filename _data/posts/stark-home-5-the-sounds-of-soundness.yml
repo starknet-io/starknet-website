@@ -2,7 +2,6 @@ id: 92af078d-b4c2-4c96-b807-8001a7c64bdc
 post_type: video
 title: "STARK @ Home 5: The Sounds of Soundness"
 published_date: 2020-04-30T14:11:02.387Z
-time_to_consume: 81 min watch
 image: /assets/starkhome05.png
 category: stark-math
 topic:
@@ -14,7 +13,7 @@ video:
   id: CpS_OCpU3xM
   data:
     kind: youtube#video
-    etag: HfYRZbDtX1jRYH8jiACGyjOKP4c
+    etag: tsJZGBCDw6cJHKn0yfUczeYZP6M
     id: CpS_OCpU3xM
     snippet:
       publishedAt: 2020-04-30T14:55:46Z
@@ -50,3 +49,11 @@ video:
         title: "STARK @ Home 5: The Sounds of Soundness"
         description: How do parrots check their phone bill? And what does it have to do
           with the PCP theorem?
+    contentDetails:
+      duration: PT1H21M3S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
