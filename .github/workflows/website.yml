@@ -1,11 +1,11 @@
-name: Build
+name: Build and Deploy Starknet Website
 
 on:
   push:
 
 jobs:
   build:
-    name: Build
+    name: Build and Deploy
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -43,4 +43,13 @@ jobs:
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
 
       - name: Build project
-        run: yarn exec next build
+        run: yarn workspace @starknet-io/website exec vite build
+
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: workspaces/website
+          command: publish
+          environment: ${{ github.ref_name }}
