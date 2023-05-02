@@ -4655,7 +4655,7 @@ __metadata:
     "@octokit/oauth-app": ^4.2.1
     typescript: ^5.0.4
     vitest: ^0.30.1
-    wrangler: ^2.17.0
+    wrangler: ^2.18.0
   languageName: unknown
   linkType: soft
 
@@ -4704,7 +4704,7 @@ __metadata:
     vite-node: ^0.30.1
     vite-plugin-ssr: ^0.4.120
     vite-tsconfig-paths: ^4.2.0
-    wrangler: ^2.17.0
+    wrangler: ^2.18.0
   languageName: unknown
   linkType: soft
 
@@ -19686,9 +19686,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^2.17.0":
-  version: 2.17.0
-  resolution: "wrangler@npm:2.17.0"
+"wrangler@npm:^2.18.0":
+  version: 2.18.0
+  resolution: "wrangler@npm:2.18.0"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -19712,7 +19712,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: e1d8b143ffbd0e788e15005ca7c564dc62d242e70ad2560c9ce6766e5aea8b198042e6b32dbab8473019419106cd6e15dc8ea8298b14b98b4d131b92a5af5ad7
+  checksum: 9867f3977252df06232ff7455c55c5e831909599fa937e09f994099e019eb6d3ddf2fe83946132e927fcaf0906a162dc84710a898eff4e5b4768eb3ab5d71afe
   languageName: node
   linkType: hard
 
