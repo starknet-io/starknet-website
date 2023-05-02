@@ -81,19 +81,44 @@ export const eventsCollectionConfig = {
       name: "name",
       label: "Event Name",
       widget: "string",
-      crowdin: true
+      crowdin: true,
     },
     {
       name: "description",
       label: "Description",
       widget: "string",
-      crowdin: true
+      crowdin: true,
     },
     {
       name: "url",
       label: "Website URL",
       widget: "string",
-      crowdin: false
+      crowdin: false,
+    },
+    {
+      name: "recap",
+      label: "Event recap (appears on past events only)",
+      widget: "object",
+      fields: [
+        {
+          name: "label",
+          label: "Label",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          name: "link",
+          label: "Link",
+          widget: "string",
+          crowdin: false,
+        },
+        {
+          name: "isExternal",
+          label: "Is external link?",
+          widget: "boolean",
+          crowdin: false,
+        },
+      ],
     },
     {
       name: "start_date",
@@ -121,13 +146,13 @@ export const eventsCollectionConfig = {
       name: "city",
       label: "City",
       widget: "string",
-      crowdin: true
+      crowdin: true,
     },
     {
       name: "country",
       label: "Country (State if USA)",
       widget: "string",
-      crowdin: true
+      crowdin: true,
     },
   ],
 } satisfies CmsCollection;

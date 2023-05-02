@@ -16,6 +16,11 @@ export interface Event {
   readonly url: string;
   readonly tags: string[];
   readonly description: string;
+  readonly recap?: {
+    readonly label: string;
+    readonly link: string;
+    readonly isExternal: boolean;
+  };
 }
 
 export async function getEvents(locale: string): Promise<readonly Event[]> {
@@ -25,11 +30,7 @@ export async function getEvents(locale: string): Promise<readonly Event[]> {
         (value) => async () =>
           JSON.parse(
             await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/events",
-                value + ".json"
-              ),
+              path.join(process.cwd(), "_crowdin/data/events", value + ".json"),
               "utf8"
             )
           )
