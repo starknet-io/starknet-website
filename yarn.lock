@@ -4641,6 +4641,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@starknet-io/cms-utils@workspace:workspaces/cms-utils"
   dependencies:
+    "@cloudflare/kv-asset-handler": ^0.3.0
     "@cloudflare/workers-types": ^4.20230404.0
     simple-git: ^3.18.0
     typescript: ^5.0.4
