@@ -1,6 +1,6 @@
 import type { DefaultLogFields } from "simple-git";
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from "fs/promises";
+import path from "path";
 
 export function youtubeVideoIdFromURL(url: string): string | undefined | void {
   try {

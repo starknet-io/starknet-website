@@ -24,8 +24,8 @@ import {
   BreadcrumbLink,
   HStack,
 } from "@chakra-ui/react";
-// import * as fs from "node:fs/promises";
-// import * as path from "node:path";
+// import * as fs from "fs/promises";
+// import * as path from "path";
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 // import { Metadata } from "next";

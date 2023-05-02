@@ -1,4 +1,4 @@
-import * as path from "node:path";
+import * as path from "path";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";

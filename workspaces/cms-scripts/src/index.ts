@@ -1,5 +1,5 @@
-import fs from "node:fs/promises";
-import * as path from "node:path";
+import fs from "fs/promises";
+import * as path from "path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 

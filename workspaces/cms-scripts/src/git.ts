@@ -1,4 +1,4 @@
-import path from "node:path";
+import path from "path";
 import { DefaultLogFields, ListLogLine, simpleGit } from "simple-git";
 
 const git = simpleGit();

@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+import fs from "fs/promises";
 import YAML from "yaml";
 
 export async function json(filepath: string): Promise<any> {
