@@ -2,7 +2,7 @@ import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getBlockExplorers } from "@starknet-io/cms-data/src/block-explorers";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
+
 interface Props extends LocaleProps {
   noOfItems?: number;
 }
@@ -11,9 +11,8 @@ export default function BlockBlockExplorers({
   noOfItems,
   params: { locale },
 }: Props): JSX.Element {
-  const pageContext = usePageContext()
   const blockExplorers = useAsync(["getBlockExplorers", locale], () =>
-    getBlockExplorers(locale, pageContext.getJSON)
+    getBlockExplorers(locale)
   );
 
   return (

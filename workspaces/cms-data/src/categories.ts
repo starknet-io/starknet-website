@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
+import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
 
 export interface Category {
   readonly id: string;
@@ -9,7 +9,7 @@ export interface Category {
 
 export async function getCategories(
   locale: string,
-  getJSON?: (src: string) => Promise<any>
+
 ): Promise<readonly Category[]> {
   try {
     return await getFirst(

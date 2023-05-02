@@ -2,7 +2,6 @@ import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getDapps } from "@starknet-io/cms-data/src/dapps";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
 
 interface Props extends LocaleProps {
   noOfItems?: number;
@@ -12,8 +11,7 @@ export default function BlockDapps({
   noOfItems,
   params: { locale },
 }: Props): JSX.Element {
-  const pageContext = usePageContext()
-  const dapps = useAsync(['getDapps', locale], () => getDapps(locale, pageContext.getJSON));
+  const dapps = useAsync(['getDapps', locale], () => getDapps(locale));
 
   return (
     <Box>

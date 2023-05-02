@@ -2,7 +2,7 @@ import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getWallets } from "@starknet-io/cms-data/src/wallets";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
+
 interface Props extends LocaleProps {
   noOfItems?: number;
 }
@@ -11,8 +11,7 @@ export default function BlockWallets({
   noOfItems,
   params: { locale },
 }: Props): JSX.Element {
-  const pageContext = usePageContext()
-  const wallets = useAsync(['getWallets', locale], () => getWallets(locale, pageContext.getJSON));
+  const wallets = useAsync(['getWallets', locale], () => getWallets(locale));
 
   return (
     <Box>

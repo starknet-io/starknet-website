@@ -50,3 +50,11 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
     cause,
   });
 }
+
+export async function getJSON(src: string) {
+  if (import.meta.env.SSR) {
+    return (await import(/* @vite-ignore */ "../../../public/" + src + ".json")).default
+  }
+
+  return (await import(/* @vite-ignore */ "/" + src + ".json")).default
+}

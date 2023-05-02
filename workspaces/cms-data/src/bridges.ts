@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
+import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
 
 export interface Bridge {
   readonly name: string;
@@ -12,7 +12,7 @@ export interface Bridge {
 
 export async function getBridges(
   locale: string,
-  getJSON?: (src: string) => Promise<any>
+
 ): Promise<readonly Bridge[]> {
   try {
     return await getFirst(

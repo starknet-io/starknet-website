@@ -43,7 +43,7 @@ app.get("*", async (req, res, next) => {
   const pageContext: any = await renderPage(pageContextInit);
 
   if (pageContext.redirectTo) {
-    res.redirect(pageContext.redirectTo);
+    return res.redirect(pageContext.redirectTo);
   }
 
   const { httpResponse } = pageContext;

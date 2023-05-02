@@ -2,7 +2,6 @@ import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getBridges } from "@starknet-io/cms-data/src/bridges";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
 
 interface Props extends LocaleProps {
   noOfItems?: number;
@@ -12,8 +11,7 @@ export default function BlockBridges({
   noOfItems,
   params: { locale },
 }: Props): JSX.Element {
-  const pageContext = usePageContext()
-  const bridges = useAsync(['getBridges', locale], () => getBridges(locale, pageContext.getJSON));
+  const bridges = useAsync(['getBridges', locale], () => getBridges(locale));
 
   return (
     <Box>

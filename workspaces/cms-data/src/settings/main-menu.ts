@@ -1,7 +1,7 @@
 import { defaultLocale } from "../i18n/config";
 import type { Page } from "../pages";
 import type { Post } from "../posts";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
+import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
 
 export interface MainMenu {
   readonly items: MainMenuItem[];
@@ -39,7 +39,7 @@ export interface BlockItem extends LinkData {
 
 export async function getMainMenu(
   locale: string,
-  getJSON?: (src: string) => Promise<any>
+
 ): Promise<MainMenu> {
   try {
     return await getFirst(

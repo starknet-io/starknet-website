@@ -2,7 +2,6 @@ import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getFiatOnRamps } from "@starknet-io/cms-data/src/fiat-on-ramps";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
 
 interface Props extends LocaleProps {
   noOfItems?: number;
@@ -12,8 +11,7 @@ export default function BlockOnRamps({
   noOfItems,
   params: { locale },
 }: Props): JSX.Element {
-  const pageContext = usePageContext()
-  const fiatOnRamps = useAsync(['getFiatOnRamps', locale], () => getFiatOnRamps(locale, pageContext.getJSON));
+  const fiatOnRamps = useAsync(['getFiatOnRamps', locale], () => getFiatOnRamps(locale));
 
   return (
     <Box>
