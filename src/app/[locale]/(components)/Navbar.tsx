@@ -35,7 +35,9 @@ export default function Navbar({ mainMenu, env }: Props) {
     <NavbarContainer>
       <NavBar
         languageSwitcher={<LocaleSwitcher />}
-        search={<MainSearch env={env} />}
+        search={<div>
+          <MainSearch env={env} />
+        </div>}
         desktopNavItems={mainMenu.items.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
