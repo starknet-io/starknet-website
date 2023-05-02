@@ -18,6 +18,7 @@ import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { titleCase } from "src/utils/utils";
+import { Button } from "@ui/Button";
 
 interface Type {
   readonly type: string;
@@ -41,6 +42,11 @@ type Props = {
   readonly type_list?: Type[];
   readonly type?: string[];
   readonly isRounded?: boolean;
+  readonly recap?: {
+    label?: string;
+    link: string;
+    isExternal?: boolean;
+  };
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
@@ -237,6 +243,19 @@ export const ListCard = (props: Props) => {
                       />
                     </Link>
                   )}
+                  {/* {props.recapLink && (
+                    <Link
+                      as={NextLink}
+                      href={`${props.discordHandle}`}
+                      mt="20px"
+                      isExternal={true}
+                      p="8px 12px"
+                      border="1px solid #E2E8F0"
+                      borderRadius="16px"
+                    >
+                      View event recap
+                    </Link>
+                  )} */}
                   {/* <IconButton
               aria-label="Website"
               icon={<HiGlobeAlt />}
@@ -250,6 +269,18 @@ export const ListCard = (props: Props) => {
               icon={<SiDiscord />}
             /> */}
                 </Wrap>
+                {props.recap?.link && (
+                  <Button
+                    as={NextLink}
+                    href={props.recap.link}
+                    mt="20px"
+                    isExternal={props.recap.isExternal}
+                    variant="outlineRounded"
+                    target="_blank"
+                  >
+                    {props.recap.label || "View event recap"}
+                  </Button>
+                )}
               </Box>
             </Stack>
           </Box>

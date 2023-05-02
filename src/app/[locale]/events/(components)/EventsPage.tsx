@@ -193,7 +193,7 @@ const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
             />
             <CustomType types={types} refineTypes={refineTypes} />
           </MobileFiltersDrawer>
-          <CustomHits />
+          <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
         </Box>
       }
     />
@@ -258,7 +258,7 @@ function CustomType({
   );
 }
 
-function CustomHits() {
+function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
 
   const hitsByMonth = useMemo(() => {
@@ -331,6 +331,7 @@ function CustomHits() {
                     location={hit.location}
                     city={hit.city}
                     country={hit.country}
+                    recap={isPastEvent ? hit.recap : undefined}
                   />
                 );
               })}
