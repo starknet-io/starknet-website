@@ -1,9 +1,7 @@
 import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -189,18 +187,7 @@ export async function getPageBySlug(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/pages",
-                value,
-                slug + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/pages/" + value + "/" + slug)
       )
     );
   } catch (cause) {

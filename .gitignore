@@ -62,4 +62,5 @@ _crowdin
 *.vars
 *.__*
 dist
+public/data
 !_crowdin/translation

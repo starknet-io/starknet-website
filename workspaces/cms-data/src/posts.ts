@@ -1,10 +1,8 @@
 import algoliasearch from "algoliasearch";
 import { defaultLocale } from "./i18n/config";
 import type { TopLevelBlock } from "./pages";
-import { getFirst, Meta } from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON, Meta } from "@starknet-io/cms-utils/src/index";
 import { youtube_v3 } from "googleapis";
-import fs from "node:fs/promises";
-import path from "node:path";
 
 interface VideoMeta {
   readonly url: string;
@@ -36,18 +34,7 @@ export async function getPostBySlug(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/posts",
-                value,
-                slug + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/posts/" + value + "/" + slug)
       ),
       async () => {
         const client = algoliasearch(

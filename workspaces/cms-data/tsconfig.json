@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.projects.json",
   "compilerOptions": {
     "outDir": ".types",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client", "@cloudflare/workers-types"],
+    "jsx": "react-jsx",
   },
   "include": ["src/**/*"],
   "references": [{ "path": "../cms-utils" }]

@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@algolia/autocomplete-core@npm:1.9.2, @algolia/autocomplete-core@npm:^1.8.3":
+"@algolia/autocomplete-core@npm:1.9.2, @algolia/autocomplete-core@npm:^1.9.2":
   version: 1.9.2
   resolution: "@algolia/autocomplete-core@npm:1.9.2"
   dependencies:
@@ -15,7 +15,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@algolia/autocomplete-js@npm:1.9.2, @algolia/autocomplete-js@npm:^1.8.3":
+"@algolia/autocomplete-js@npm:1.9.2, @algolia/autocomplete-js@npm:^1.9.2":
   version: 1.9.2
   resolution: "@algolia/autocomplete-js@npm:1.9.2"
   dependencies:
@@ -42,7 +42,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@algolia/autocomplete-plugin-query-suggestions@npm:^1.8.3":
+"@algolia/autocomplete-plugin-query-suggestions@npm:^1.9.2":
   version: 1.9.2
   resolution: "@algolia/autocomplete-plugin-query-suggestions@npm:1.9.2"
   dependencies:
@@ -57,7 +57,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@algolia/autocomplete-plugin-recent-searches@npm:^1.8.3":
+"@algolia/autocomplete-plugin-recent-searches@npm:^1.9.2":
   version: 1.9.2
   resolution: "@algolia/autocomplete-plugin-recent-searches@npm:1.9.2"
   dependencies:
@@ -93,7 +93,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@algolia/autocomplete-theme-classic@npm:^1.8.3":
+"@algolia/autocomplete-theme-classic@npm:^1.9.2":
   version: 1.9.2
   resolution: "@algolia/autocomplete-theme-classic@npm:1.9.2"
   checksum: d9a716356c70a66452fe7c3aab6b684ce098d9bc6ca57bc1762b8a9ce2b871dadbe52a0b4207bd42b537d7ed744e355cbd1b0d1ffd397f4ac4a631037e038fbf
@@ -1840,7 +1840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/cli@npm:^2.3.0":
+"@chakra-ui/cli@npm:^2.4.0":
   version: 2.4.0
   resolution: "@chakra-ui/cli@npm:2.4.0"
   dependencies:
@@ -2547,7 +2547,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react@npm:^2.5.5":
+"@chakra-ui/react@npm:^2.6.0":
   version: 2.6.0
   resolution: "@chakra-ui/react@npm:2.6.0"
   dependencies:
@@ -2715,7 +2715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/storybook-addon@npm:^4.0.16":
+"@chakra-ui/storybook-addon@npm:^4.0.17":
   version: 4.0.17
   resolution: "@chakra-ui/storybook-addon@npm:4.0.17"
   peerDependencies:
@@ -3006,7 +3006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@crowdin/cli@npm:^3.10.1":
+"@crowdin/cli@npm:^3.11.0":
   version: 3.11.0
   resolution: "@crowdin/cli@npm:3.11.0"
   dependencies:
@@ -3154,7 +3154,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.1.1, @emotion/react@npm:^11.10.6":
+"@emotion/react@npm:^11.1.1, @emotion/react@npm:^11.10.8":
   version: 11.10.8
   resolution: "@emotion/react@npm:11.10.8"
   dependencies:
@@ -3243,7 +3243,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.10.6":
+"@emotion/styled@npm:^11.10.8":
   version: 11.10.8
   resolution: "@emotion/styled@npm:11.10.8"
   dependencies:
@@ -4404,7 +4404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/oauth-app@npm:^4.2.0":
+"@octokit/oauth-app@npm:^4.2.1":
   version: 4.2.1
   resolution: "@octokit/oauth-app@npm:4.2.1"
   dependencies:
@@ -4615,6 +4615,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@starknet-io/cms-data@workspace:workspaces/cms-data"
   dependencies:
+    "@cloudflare/workers-types": ^4.20230404.0
     "@starknet-io/cms-utils": "workspace:*"
     typescript: ^5.0.4
   languageName: unknown
@@ -4628,11 +4629,11 @@ __metadata:
     "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     algoliasearch: ^4.17.0
-    date-fns: ^2.29.3
+    date-fns: ^2.30.0
     dotenv: ^16.0.3
-    simple-git: ^3.17.0
+    simple-git: ^3.18.0
     vite-node: ^0.30.1
-    yaml: ^2.2.1
+    yaml: ^2.2.2
   languageName: unknown
   linkType: soft
 
@@ -4640,6 +4641,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@starknet-io/cms-utils@workspace:workspaces/cms-utils"
   dependencies:
+    "@cloudflare/workers-types": ^4.20230404.0
+    simple-git: ^3.18.0
     typescript: ^5.0.4
   languageName: unknown
   linkType: soft
@@ -4649,10 +4652,10 @@ __metadata:
   resolution: "@starknet-io/netlify-cms-auth@workspace:workspaces/netlify-cms-auth"
   dependencies:
     "@cloudflare/workers-types": ^4.20230404.0
-    "@octokit/oauth-app": ^4.2.0
+    "@octokit/oauth-app": ^4.2.1
     typescript: ^5.0.4
     vitest: ^0.30.1
-    wrangler: ^2.16.0
+    wrangler: ^2.17.0
   languageName: unknown
   linkType: soft
 
@@ -4669,13 +4672,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@starknet-io/netlify-cms@workspace:workspaces/netlify-cms"
   dependencies:
-    "@types/react": ^18.0.38
-    "@types/react-dom": ^18.0.11
+    "@types/react": ^18.2.0
+    "@types/react-dom": ^18.2.1
     "@vitejs/plugin-react-swc": ^3.3.0
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.0.4
-    vite: ^4.3.1
+    vite: ^4.3.3
   languageName: unknown
   linkType: soft
 
@@ -4684,6 +4687,11 @@ __metadata:
   resolution: "@starknet-io/website@workspace:workspaces/website"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.3.0
+    "@cloudflare/workers-types": ^4.20230404.0
+    "@starknet-io/cms-config": "workspace:*"
+    "@starknet-io/cms-data": "workspace:*"
+    "@starknet-io/cms-utils": "workspace:*"
+    "@types/compression": ^1.7.2
     "@vitejs/plugin-react": ^4.0.0
     compression: ^1.7.4
     express: ^4.18.2
@@ -4692,10 +4700,11 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-streaming: ^0.3.9
-    vite: ^4.3.1
+    vite: ^4.3.3
     vite-node: ^0.30.1
-    vite-plugin-ssr: ^0.4.116
-    wrangler: ^2.16.0
+    vite-plugin-ssr: ^0.4.120
+    vite-tsconfig-paths: ^4.2.0
+    wrangler: ^2.17.0
   languageName: unknown
   linkType: soft
 
@@ -4703,18 +4712,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@starknet-io/workspaces@workspace:."
   dependencies:
-    "@algolia/autocomplete-core": ^1.8.3
-    "@algolia/autocomplete-js": ^1.8.3
-    "@algolia/autocomplete-plugin-query-suggestions": ^1.8.3
-    "@algolia/autocomplete-plugin-recent-searches": ^1.8.3
-    "@algolia/autocomplete-theme-classic": ^1.8.3
-    "@chakra-ui/cli": ^2.3.0
+    "@algolia/autocomplete-core": ^1.9.2
+    "@algolia/autocomplete-js": ^1.9.2
+    "@algolia/autocomplete-plugin-query-suggestions": ^1.9.2
+    "@algolia/autocomplete-plugin-recent-searches": ^1.9.2
+    "@algolia/autocomplete-theme-classic": ^1.9.2
+    "@chakra-ui/cli": ^2.4.0
     "@chakra-ui/pro-theme": ^0.0.66
-    "@chakra-ui/react": ^2.5.5
-    "@chakra-ui/storybook-addon": ^4.0.16
-    "@crowdin/cli": ^3.10.1
-    "@emotion/react": ^11.10.6
-    "@emotion/styled": ^11.10.6
+    "@chakra-ui/react": ^2.6.0
+    "@chakra-ui/storybook-addon": ^4.0.17
+    "@crowdin/cli": ^3.11.0
+    "@emotion/react": ^11.10.8
+    "@emotion/styled": ^11.10.8
     "@fontsource/inter": ^4.5.15
     "@fontsource/noto-sans-hebrew": ^4.5.14
     "@fontsource/noto-sans-jp": ^4.5.12
@@ -4732,9 +4741,9 @@ __metadata:
     "@storybook/react": ^7.0.7
     "@storybook/testing-library": ^0.1.0
     "@types/cors": ^2.8.13
-    "@types/node": ^18.16.0
-    "@types/react": ^18.0.38
-    "@types/react-dom": ^18.0.11
+    "@types/node": ^18.16.3
+    "@types/react": ^18.2.0
+    "@types/react-dom": ^18.2.1
     "@types/uuid": ^9.0.1
     "@types/youtube-player": ^5.5.7
     "@vitejs/plugin-react": ^4.0.0
@@ -4743,7 +4752,7 @@ __metadata:
     browser-lang: 0.1.0
     classnames: ^2.3.2
     cors: ^2.8.5
-    date-fns: ^2.29.3
+    date-fns: ^2.30.0
     eslint: ^8.39.0
     eslint-plugin-storybook: ^0.6.11
     framer-motion: ^10.12.4
@@ -4761,11 +4770,11 @@ __metadata:
     react: ^18.2.0
     react-countdown-circle-timer: ^3.2.1
     react-dom: ^18.2.0
-    react-hotkeys-hook: ^4.3.7
+    react-hotkeys-hook: ^4.4.0
     react-icons: ^4.8.0
     react-in-viewport: ^1.0.0-alpha.30
     react-instantsearch-dom: ^6.39.1
-    react-instantsearch-hooks-web: ^6.42.2
+    react-instantsearch-hooks-web: ^6.43.0
     react-markdown: ^8.0.7
     react-scrubber: ^1.1.1
     react-share: ^4.4.1
@@ -4774,7 +4783,7 @@ __metadata:
     react-youtube: ^10.1.0
     remark-parse: ^10.0.1
     rome: ^12.0.0
-    simple-git: ^3.17.0
+    simple-git: ^3.18.0
     start-server-and-test: ^2.0.0
     storybook: ^7.0.7
     storybook-addon-dark-mode-toggle: ^0.0.6
@@ -4783,11 +4792,11 @@ __metadata:
     unist-util-index: ^3.0.2
     use-scramble: ^2.2.12
     uuid: ^9.0.0
-    video.js: ^8.0.4
-    vite: ^4.3.1
+    video.js: ^8.3.0
+    vite: ^4.3.3
     vite-tsconfig-paths: ^4.2.0
     vitest: ^0.30.1
-    yaml: ^2.2.1
+    yaml: ^2.2.2
   languageName: unknown
   linkType: soft
 
@@ -5929,6 +5938,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/compression@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "@types/compression@npm:1.7.2"
+  dependencies:
+    "@types/express": "*"
+  checksum: 3457f9d39ed73d58387bccf15bcfe8e140298c5d6e90fe354dfeb24ec7828432658caebee8ab6f4e4ac39a7d03bc0a6a52686d7fb2fe405fbdefede41d6b5834
+  languageName: node
+  linkType: hard
+
 "@types/connect@npm:*":
   version: 3.4.35
   resolution: "@types/connect@npm:3.4.35"
@@ -6010,7 +6028,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:^4.7.0":
+"@types/express@npm:*, @types/express@npm:^4.7.0":
   version: 4.17.17
   resolution: "@types/express@npm:4.17.17"
   dependencies:
@@ -6206,7 +6224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=6, @types/node@npm:^18.16.0":
+"@types/node@npm:*, @types/node@npm:>=6, @types/node@npm:^18.16.3":
   version: 18.16.3
   resolution: "@types/node@npm:18.16.3"
   checksum: 816b39d45b05ebdc6f362b630970df3f6d82f71d418a2555353522f4eeeb078fa201de5299f02c09a09faa975e43b2745fe19c263d44069f87ddf37d6c37b717
@@ -8451,7 +8469,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.29.3":
+"date-fns@npm:^2.30.0":
   version: 2.30.0
   resolution: "date-fns@npm:2.30.0"
   dependencies:
@@ -15581,7 +15599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hotkeys-hook@npm:^4.3.7":
+"react-hotkeys-hook@npm:^4.4.0":
   version: 4.4.0
   resolution: "react-hotkeys-hook@npm:4.4.0"
   peerDependencies:
@@ -15676,7 +15694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-instantsearch-hooks-web@npm:^6.42.2":
+"react-instantsearch-hooks-web@npm:^6.43.0":
   version: 6.43.0
   resolution: "react-instantsearch-hooks-web@npm:6.43.0"
   dependencies:
@@ -17235,7 +17253,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^3.17.0":
+"simple-git@npm:^3.18.0":
   version: 3.18.0
   resolution: "simple-git@npm:3.18.0"
   dependencies:
@@ -19234,7 +19252,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"video.js@npm:^7 || ^8, video.js@npm:^8.0.4":
+"video.js@npm:^7 || ^8, video.js@npm:^8.3.0":
   version: 8.3.0
   resolution: "video.js@npm:8.3.0"
   dependencies:
@@ -19299,7 +19317,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-ssr@npm:^0.4.116":
+"vite-plugin-ssr@npm:^0.4.120":
   version: 0.4.120
   resolution: "vite-plugin-ssr@npm:0.4.120"
   dependencies:
@@ -19668,7 +19686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^2.16.0":
+"wrangler@npm:^2.17.0":
   version: 2.17.0
   resolution: "wrangler@npm:2.17.0"
   dependencies:
@@ -19822,7 +19840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.2.1":
+"yaml@npm:^2.2.2":
   version: 2.2.2
   resolution: "yaml@npm:2.2.2"
   checksum: d90c235e099e30094dcff61ba3350437aef53325db4a6bcd04ca96e1bfe7e348b191f6a7a52b5211e2dbc4eeedb22a00b291527da030de7c189728ef3f2b4eb3

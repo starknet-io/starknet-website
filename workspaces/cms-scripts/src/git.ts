@@ -1,3 +1,4 @@
+import path from "node:path";
 import { DefaultLogFields, ListLogLine, simpleGit } from "simple-git";
 
 const git = simpleGit();
@@ -12,7 +13,7 @@ export async function gitlog(
   if (cache[`log-${filepath}`] == null) {
     cache[`log-${filepath}`] = (async () => {
       const logResult = await git.log({
-        file: filepath,
+        file: path.resolve(process.cwd(), filepath),
         maxCount: 1,
       });
 

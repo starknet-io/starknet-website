@@ -22,7 +22,7 @@ export default function App() {
 
     CMS.init({
       config: {
-        ...CMSConfig,
+        ...CMSConfig as any,
         backend: {
           ...CMSConfig.backend,
           branch,

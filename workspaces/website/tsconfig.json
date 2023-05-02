@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.projects.json",
+  "compilerOptions": {
+    "outDir": ".types",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client", "@cloudflare/workers-types"],
+    "jsx": "react-jsx",
+    "paths": {
+      "@ui/*": ["./src/components/*"],
+      "next/*": ["./src/next/*"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../cms-utils" },
+    { "path": "../cms-config" },
+    { "path": "../cms-data" }
+  ]
+}

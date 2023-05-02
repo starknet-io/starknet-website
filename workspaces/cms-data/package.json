@@ -7,6 +7,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230404.0",
     "@starknet-io/cms-utils": "workspace:*",
     "typescript": "^5.0.4"
   }

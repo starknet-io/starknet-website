@@ -1,4 +1,4 @@
-main="./worker/index.ts"
+main="./src/worker/index.ts"
 name = "starknet-website"
 compatibility_flags = ["streams_enable_constructors"]
 compatibility_date = "2021-09-29"
