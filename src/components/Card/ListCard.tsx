@@ -43,6 +43,7 @@ type Props = {
   readonly type?: string[];
   readonly isRounded?: boolean;
   readonly recap?: {
+    label?: string;
     link: string;
     isExternal?: boolean;
   };
@@ -276,7 +277,7 @@ export const ListCard = (props: Props) => {
                     isExternal={props.recap.isExternal}
                     variant="outlineRounded"
                   >
-                    View event recap
+                    {props.recap.label || "View event recap"}
                   </Button>
                 )}
               </Box>

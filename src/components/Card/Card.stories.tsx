@@ -420,6 +420,7 @@ const list = [
     },
     __position: 4,
     recap: {
+      label: "Read the summary of this event",
       link: "https://www.parisblockchainweek.com/summit#speakers",
       isExternal: true,
     },

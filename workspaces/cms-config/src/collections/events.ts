@@ -97,12 +97,18 @@ export const eventsCollectionConfig = {
     },
     {
       name: "recap",
-      label: "Event recap",
+      label: "Event recap (appears on past events only)",
       widget: "object",
       fields: [
         {
+          name: "label",
+          label: "Label",
+          widget: "string",
+          crowdin: true,
+        },
+        {
           name: "link",
-          label: "Link to recap",
+          label: "Link",
           widget: "string",
           crowdin: false,
         },
