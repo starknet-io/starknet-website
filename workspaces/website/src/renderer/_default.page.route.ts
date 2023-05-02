@@ -4,7 +4,6 @@ import { PageContextServer } from "./types";
 export function onBeforeRoute(
   pageContext: PageContextServer
 ) {
-  console.log(pageContext.urlPathname)
   if (pageContext.urlPathname == "/") {
     return {
       pageContext: {
