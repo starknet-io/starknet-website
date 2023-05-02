@@ -39,7 +39,7 @@ export interface BlockItem extends LinkData {
 
 export async function getMainMenu(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<MainMenu> {
   try {
     return await getFirst(

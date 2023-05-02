@@ -8,7 +8,7 @@ export interface Topic {
 
 export async function getTopics(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly Topic[]> {
   try {
     return await getFirst(

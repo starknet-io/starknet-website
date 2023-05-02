@@ -18,20 +18,20 @@ async function handleFetchEvent(event: WorkerGlobalScopeEventMap["fetch"]) {
 
     const pageContextInit = {
       urlOriginal: url,
-      getJSON: async (src: string) => {
-        if (import.meta.env.SSR) {
-          const data = await getAssetFromKV({
-            request: new Request(
-              new URL("/" + src + ".json", event.request.url)
-            ),
-            waitUntil: event.waitUntil,
-          });
+      // getJSON: async (src: string) => {
+      //   if (import.meta.env.SSR) {
+      //     const data = await getAssetFromKV({
+      //       request: new Request(
+      //         new URL("/" + src + ".json", event.request.url)
+      //       ),
+      //       waitUntil: event.waitUntil,
+      //     });
 
-          return data.json();
-        }
+      //     return data.json();
+      //   }
 
-        return (await fetch("/" + src + ".json")).json();
-      },
+      //   return (await fetch("/" + src + ".json")).json();
+      // },
       fetch,
       userAgent,
     };

@@ -24,18 +24,19 @@ app.get("*", async (req, res, next) => {
   const userAgent = req.headers["user-agent"]!;
   const pageContextInit = {
     urlOriginal: req.originalUrl,
-    getJSON: async (src: string) => {
-      if (import.meta.env.SSR) {
-        return JSON.parse(
-          await fs.readFile(
-            path.join(process.cwd(), "../../public/", src + ".json"),
-            "utf8"
-          )
-        );
-      }
+    // getJSON: async (src: string) => {
+    //   if (import.meta.env.SSR) {
+    //     console.log(src)
+    //     return JSON.parse(
+    //       await fs.readFile(
+    //         path.join(process.cwd(), "../../public/", src + ".json"),
+    //         "utf8"
+    //       )
+    //     );
+    //   }
 
-      return (await fetch("/" + src + ".json")).json();
-    },
+    //   return (await fetch("/" + src + ".json")).json();
+    // },
     fetch: fetch as WindowOrWorkerGlobalScope["fetch"],
     userAgent,
   };

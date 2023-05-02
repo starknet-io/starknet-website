@@ -27,7 +27,7 @@ export type PageContextCustom = {
     title: string
   }
   locale: string
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
   userAgent: string
   redirectTo?: string
   mainMenu: MainMenu;

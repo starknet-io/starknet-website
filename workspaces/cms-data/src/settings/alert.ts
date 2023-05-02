@@ -12,7 +12,7 @@ export interface Alert {
 
 export async function getAlerts(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<Alert[]> {
   try {
     return await getFirst(

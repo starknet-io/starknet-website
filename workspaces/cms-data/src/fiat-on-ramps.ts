@@ -12,7 +12,7 @@ export interface FiatOnRamp {
 
 export async function getFiatOnRamps(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly FiatOnRamp[]> {
   try {
     return await getFirst(

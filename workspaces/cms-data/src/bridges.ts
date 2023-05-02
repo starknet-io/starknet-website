@@ -12,7 +12,7 @@ export interface Bridge {
 
 export async function getBridges(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly Bridge[]> {
   try {
     return await getFirst(

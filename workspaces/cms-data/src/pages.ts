@@ -183,7 +183,7 @@ export interface Page extends Meta {
 export async function getPageBySlug(
   slug: string,
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<Page> {
   try {
     return await getFirst(

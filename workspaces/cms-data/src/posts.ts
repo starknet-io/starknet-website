@@ -30,7 +30,7 @@ export interface Post extends Meta {
 export async function getPostBySlug(
   slug: string,
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<Post> {
   try {
     return await getFirst(

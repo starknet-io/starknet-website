@@ -11,7 +11,7 @@ export interface Dapp {
 
 export async function getDapps(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly Dapp[]> {
   try {
     return await getFirst(

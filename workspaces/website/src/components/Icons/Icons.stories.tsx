@@ -1,4 +1,3 @@
-import React from "react";
 import { Icon } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Heading } from "@ui/Typography/Heading";

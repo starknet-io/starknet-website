@@ -18,7 +18,7 @@ export interface Event {
 
 export async function getEvents(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly Event[]> {
   try {
     return await getFirst(

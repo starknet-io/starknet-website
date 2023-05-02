@@ -12,7 +12,7 @@ export interface BlockExplorer {
 
 export async function getBlockExplorers(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly BlockExplorer[]> {
   try {
     return await getFirst(

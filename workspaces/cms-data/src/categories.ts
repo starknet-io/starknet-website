@@ -9,7 +9,7 @@ export interface Category {
 
 export async function getCategories(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly Category[]> {
   try {
     return await getFirst(

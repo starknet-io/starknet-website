@@ -1,7 +1,5 @@
 import { Stack, Link, Text } from "@chakra-ui/react";
 
-import React from "react";
-
 type Props = {
   href: string;
   label: string;

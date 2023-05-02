@@ -17,7 +17,7 @@ export interface Wallet {
 
 export async function getWallets(
   locale: string,
-  getJSON: (src: string) => Promise<any>
+  getJSON?: (src: string) => Promise<any>
 ): Promise<readonly Wallet[]> {
   try {
     return await getFirst(

@@ -1,6 +1,5 @@
 import { Box, LinkBox, Stack } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
-import React from "react";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { getComputedLinkData } from "src/utils/utils";

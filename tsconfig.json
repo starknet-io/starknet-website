@@ -22,6 +22,9 @@
     },
     {
       "path": "./workspaces/netlify-cms-widgets"
+    },
+    {
+      "path": "./workspaces/website"
     }
   ]
 }
