@@ -1,37 +1,41 @@
 "use client";
 
 import {
+  Box,
+  Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Breadcrumb,
-  Box,
+  Divider,
   Flex,
   HStack,
-  Divider,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
+import { Event } from "@starknet-io/cms-data/src/events";
 import { Button } from "@ui/Button";
-import { useMemo } from "react";
-import algoliasearch from "src/libs/algoliasearch/lite";
-import {
-  InstantSearch,
-  Configure,
-  useInfiniteHits,
-} from "src/libs/react-instantsearch-hooks-web";
-import { useRefinementList } from "react-instantsearch-hooks";
+import { ListCard } from "@ui/Card/ListCard";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/Card/ListCard";
-import { titleCase } from "src/utils/utils";
-import moment from "moment";
-import { Event } from "@starknet-io/cms-data/src/events";
-import type { BaseHit } from "instantsearch.js";
-import Link from "next/link";
 import { getUnixTime, startOfDay } from "date-fns";
+import type { BaseHit } from "instantsearch.js";
+import moment from "moment";
+import Link from "next/link";
+import { useMemo } from "react";
+import { useRefinementList } from "react-instantsearch-hooks";
+import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
+import algoliasearch from "src/libs/algoliasearch/lite";
 import {
-  eventsTypesLabels,
+  Configure,
+  InstantSearch,
+  useInfiniteHits,
+} from "src/libs/react-instantsearch-hooks-web";
+import { titleCase } from "src/utils/utils";
+import {
   eventsLocationsLabels,
+  eventsTypesLabels,
 } from "workspaces/cms-config/src/collections/events";
+import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
+import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 
 export interface AutoProps {
   readonly params: {
@@ -80,105 +84,140 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
           filters={getEventFilter(mode)}
         />
 
-        <PageLayout
-          sectionHeaderTitle="Events"
-          sectionHeaderDescription="Find Starknet events, online or around the world."
-          breadcrumbs={
-            <Breadcrumb separator="/">
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Home
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  as={Link}
-                  href={`/${params.locale}/community`}
-                  fontSize="sm"
-                  noOfLines={1}
-                >
-                  Community
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink fontSize="sm" noOfLines={1}>
-                  Events
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </Breadcrumb>
-          }
-          leftAside={
-            <Box minH="xs" display={{ base: "none", lg: "block" }}>
-              <CustomLocation />
-              <CustomType />
-            </Box>
-          }
-          main={
-            <Box>
-              <Flex
-                as="ul"
-                sx={{ overflowX: "auto" }}
-                gap="24px"
-                borderBottomWidth="1px"
-                borderColor="tabs-main-br"
-                width="100%"
-                mb={4}
-              >
-                <Box>
-                  <Button
-                    variant="category"
-                    as={Link}
-                    isActive={mode === "UPCOMING_EVENTS"}
-                    href={`/${params.locale}/events`}
-                  >
-                    Upcoming events
-                  </Button>
-                </Box>
-                <Box>
-                  <Button
-                    variant="category"
-                    as={Link}
-                    isActive={mode === "PAST_EVENTS"}
-                    href={`/${params.locale}/events/past`}
-                  >
-                    Past events
-                  </Button>
-                </Box>
-              </Flex>
-
-              <CustomHits />
-            </Box>
-          }
-        />
+        <EventsPageLayout params={params} mode={mode} />
       </InstantSearch>
     </Box>
   );
 }
 
-function CustomLocation() {
-  const { items, refine } = useRefinementList({
+const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
+  const { items: locations, refine: refineLocation } = useRefinementList({
     attribute: "location",
     sortBy: ["name:asc"],
   });
 
+  const { items: types, refine: refineTypes } = useRefinementList({
+    attribute: "type",
+    sortBy: ["name:asc"],
+  });
+
+  const { isOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer([
+    ...locations,
+    ...types,
+  ]);
+
+  return (
+    <PageLayout
+      sectionHeaderTitle="Events"
+      sectionHeaderDescription="Find Starknet events, online or around the world."
+      breadcrumbs={
+        <Breadcrumb separator="/">
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              as={Link}
+              href={`/${params.locale}/community`}
+              fontSize="sm"
+              noOfLines={1}
+            >
+              Community
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink fontSize="sm" noOfLines={1}>
+              Events
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      }
+      leftAside={
+        <Box minH="xs" display={{ base: "none", lg: "block" }}>
+          <CustomLocation
+            refineLocation={refineLocation}
+            locations={locations}
+          />
+          <CustomType types={types} refineTypes={refineTypes} />
+        </Box>
+      }
+      main={
+        <Box>
+          <Flex
+            as="ul"
+            sx={{ overflowX: "auto" }}
+            gap="24px"
+            borderBottomWidth="1px"
+            borderColor="tabs-main-br"
+            width="100%"
+            mb={4}
+          >
+            <Box>
+              <Button
+                variant="category"
+                as={Link}
+                isActive={mode === "UPCOMING_EVENTS"}
+                href={`/${params.locale}/events`}
+              >
+                Upcoming events
+              </Button>
+            </Box>
+            <Box>
+              <Button
+                variant="category"
+                as={Link}
+                isActive={mode === "PAST_EVENTS"}
+                href={`/${params.locale}/events/past`}
+              >
+                Past events
+              </Button>
+            </Box>
+          </Flex>
+          <MobileFiltersButton
+            filtersCount={filtersCount}
+            onClick={onOpen}
+            style={{ marginTop: "24px" }}
+          />
+          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+            <CustomLocation
+              locations={locations}
+              refineLocation={refineLocation}
+            />
+            <CustomType types={types} refineTypes={refineTypes} />
+          </MobileFiltersDrawer>
+          <CustomHits />
+        </Box>
+      }
+    />
+  );
+};
+
+type CustomLocationProps = {
+  locations: RefinementListProps["items"];
+  refineLocation: (value: string) => void;
+};
+
+function CustomLocation({ locations, refineLocation }: CustomLocationProps) {
   return (
     <Box>
       <Heading variant="h6" mb={4}>
         Location
       </Heading>
       <Flex direction="column" gap="8px">
-        {items.map((item, i) => (
+        {locations.map((item, i) => (
           <Button
             justifyContent="flex-start"
             size="sm"
             variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
+            onClick={() => refineLocation(item.value)}
             key={i}
             style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >
@@ -190,24 +229,25 @@ function CustomLocation() {
   );
 }
 
-function CustomType() {
-  const { items, refine } = useRefinementList({
-    attribute: "type",
-    sortBy: ["name:asc"],
-  });
-
+function CustomType({
+  types,
+  refineTypes,
+}: {
+  types: RefinementListProps["items"];
+  refineTypes: (value: string) => void;
+}) {
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">
-        {items.map((item, i) => (
+        {types.map((item, i) => (
           <Button
             justifyContent="flex-start"
             size="sm"
             variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
+            onClick={() => refineTypes(item.value)}
             key={i}
           >
             {eventsTypesLabels[item.value] || titleCase(item.label)}
