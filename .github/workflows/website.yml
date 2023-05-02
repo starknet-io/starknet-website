@@ -45,7 +45,7 @@ jobs:
       - name: Build project
         run: yarn workspace @starknet-io/website exec vite build
         env:
-          VITE_SITE_URL: http://localhost:3000
+          VITE_SITE_URL: https://starknet-website-${{ github.ref_name }}.yukilabs.workers.dev
           VITE_ALGOLIA_INDEX: dev
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
