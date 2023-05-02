@@ -45,6 +45,9 @@ jobs:
       - name: Build project
         run: yarn workspace @starknet-io/website exec vite build
 
+      - name: Create Env
+        run: echo -e "\n[env.${{ github.ref_name }}]\n" >> workspaces/website/wrangler.toml
+
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
         with:
