@@ -96,6 +96,10 @@ export interface Props {
     readonly slug: string;
   };
 }
+interface Block {
+  body?: string;
+  type?: string;
+}
 
 interface HeadingData {
   readonly title: string;
@@ -182,11 +186,8 @@ export default async function Page({
     const post = await getPostBySlug(slug, locale);
     const categories = await getCategories(locale);
     const topics = await getTopics(locale);
-
     const category = categories.find((c) => c.id === post.category)!;
-
     let videoId = post.post_type === "video" ? post.video?.id : undefined;
-
     return (
       <PageLayout
         breadcrumbs={
@@ -256,7 +257,7 @@ export default async function Page({
                   {moment(post.published_date).format("MMM DD,YYYY")} ·
                 </Text>
                 <Text fontSize="sm" color="muted">
-                  {post.time_to_consume}
+                  {post.timeToConsume}
                 </Text>
               </HStack>
               <Spacer />

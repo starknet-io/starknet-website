@@ -7,7 +7,7 @@ video:
   id: IDd8CBHVKUo
   data:
     kind: youtube#video
-    etag: mv04_IlyajlzUkkM2qpO6fXFS2Q
+    etag: KlgvQtPXVVn16rSQ1dR4dsEi-RM
     id: IDd8CBHVKUo
     snippet:
       publishedAt: 2023-03-29T01:19:14Z
@@ -50,6 +50,14 @@ video:
         title: "Starknet Community Call #38 | Starknet Roadmap Updates"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT39M21S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/community-calls-38.jpg
 category: community-calls
 topic:

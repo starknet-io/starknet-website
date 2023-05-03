@@ -7,11 +7,17 @@ video:
   id: -I4OtuML7Fg
   data:
     kind: youtube#video
-    etag: h-Hh24aBHRh_y9rCC_vvne2JnUA
+    etag: PdPw8VT-_9KvCq-YdP2dnmh5tAE
     id: -I4OtuML7Fg
     snippet:
-      publishedAt: 2023-03-01T09:23:14.000Z
-      liveBroadcastContent: none
+      publishedAt: 2023-03-01T09:23:14Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #34 | Presenting Hashstack"
+      description: >-
+        On our 34th Community Call, we are going to have Hashstack with us.
+
+
+        @hashstack provides a permissionless under-collateralised lending solution for crypto-native retail, enabling them to borrow up to 300% of the collateral.
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/-I4OtuML7Fg/default.jpg
@@ -33,10 +39,9 @@ video:
           url: https://i.ytimg.com/vi/-I4OtuML7Fg/maxresdefault.jpg
           width: 1280
           height: 720
-      defaultAudioLanguage: en-US
       channelTitle: StarkWare
-      title: "Starknet Community Call #34 | Presenting Hashstack"
       categoryId: "28"
+      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #34 | Presenting Hashstack"
         description: >-
@@ -44,12 +49,15 @@ video:
 
 
           @hashstack provides a permissionless under-collateralised lending solution for crypto-native retail, enabling them to borrow up to 300% of the collateral.
-      description: >-
-        On our 34th Community Call, we are going to have Hashstack with us.
-
-
-        @hashstack provides a permissionless under-collateralised lending solution for crypto-native retail, enabling them to borrow up to 300% of the collateral.
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT52M39S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/communitycall-34-presenting-haskstack-youtube1.png
 category: community-calls
 topic:

@@ -2,7 +2,6 @@ id: 41fe84d0-475f-47ab-adae-54213fd45099
 post_type: video
 title: STARK Struck Podcast | Ep 2 |  Sylve & Lancelot from briq
 published_date: 2022-08-22T00:00:00+00:00
-time_to_consume: 54 min watch
 image: /assets/starkstruck02.jpg
 category: stark-struck
 topic:
@@ -15,7 +14,7 @@ video:
   id: _Z9nIoAKQQE
   data:
     kind: youtube#video
-    etag: 3uWzDvp3lsyX96pX_DHO1BBhOY4
+    etag: t8PEfnNlY7M9sjGtsMc9bcigidg
     id: _Z9nIoAKQQE
     snippet:
       publishedAt: 2022-08-22T07:58:15Z
@@ -74,3 +73,11 @@ video:
 
           Twitter: @sylvechv @wraitii @henrlihenrli @Starknet_Intern
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT54M22S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

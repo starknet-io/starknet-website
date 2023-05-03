@@ -2,7 +2,6 @@ id: 38b8fb5a-646d-4a30-9b0f-27c620d497cf
 post_type: video
 title: "Community Call #12 | Starknet’s decentralization"
 published_date: 2022-04-12T14:04:24.552Z
-time_to_consume: 68 min watch
 image: /assets/cc12.jpg
 category: community-calls
 topic:
@@ -14,7 +13,7 @@ video:
   id: rQd6xXIQ43g
   data:
     kind: youtube#video
-    etag: 9yUUey31ZkDxOnKOjc82wasrcy0
+    etag: XfQW-Gu4IZCufOxYHgjSblfw304
     id: rQd6xXIQ43g
     snippet:
       publishedAt: 2022-04-13T01:45:13Z
@@ -51,3 +50,11 @@ video:
         description: Join us for our 12th Community Call! Today we are going to have a
           presentation about StarkNet’s decentralization by Ohad.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H8M1S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

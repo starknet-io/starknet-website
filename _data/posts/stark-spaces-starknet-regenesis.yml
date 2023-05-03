@@ -2,7 +2,6 @@ id: 4161eef7-eac8-421d-8806-7837eb03d7a8
 post_type: video
 title: STARK SPACES | StarkNet Regenesis
 published_date: 2022-11-30T13:54:13.727Z
-time_to_consume: 46 min watch
 image: /assets/ts04.jpg
 category: stark-math
 topic:
@@ -14,7 +13,7 @@ video:
   id: NR-fNmIcUFo
   data:
     kind: youtube#video
-    etag: fWdCcIXwp9LMaPPQe72yDVBkZDo
+    etag: S9Ae0_GjK4tf8BGzDjdMuFMQVdA
     id: NR-fNmIcUFo
     snippet:
       publishedAt: 2022-12-13T19:49:37Z
@@ -49,3 +48,11 @@ video:
         title: STARK SPACES | StarkNet Regenesis
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT45M31S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

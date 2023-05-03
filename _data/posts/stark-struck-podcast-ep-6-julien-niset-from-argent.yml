@@ -2,7 +2,6 @@ id: 495055e8-48fd-4474-b551-c29bacf4d8de
 post_type: article
 title: STARK Struck Podcast | Ep 6 | Julien Niset from Argent
 published_date: 2022-11-16T00:00:00+00:00
-time_to_consume: 56 min watch
 image: /assets/starkstruck06.jpg
 category: stark-struck
 topic:
@@ -15,7 +14,7 @@ video:
   id: NXa99W1l710
   data:
     kind: youtube#video
-    etag: 5ejSBHHZAOlrzQdF3FkvxrN2ifM
+    etag: wngp58vXIKprqOY5vAuskl4l2U4
     id: NXa99W1l710
     snippet:
       publishedAt: 2022-11-16T14:35:06Z
@@ -62,3 +61,11 @@ video:
 
           Twitter: @jniset @argentHQ @henrlihenrli @Starknet_Edu
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

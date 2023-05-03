@@ -3,7 +3,6 @@ post_type: video
 title: "Community Call #4 | Argent X presentation, and bridging and messaging on
   Starknet"
 published_date: 2021-12-15T00:00:00+00:00
-time_to_consume: 74 min watch
 image: /assets/cc04.jpg
 category: community-calls
 topic:
@@ -15,7 +14,7 @@ video:
   id: _dRMZnYTsc4
   data:
     kind: youtube#video
-    etag: EBVt_8tdZXY46QqcIdduKZC21bE
+    etag: AftdrD6-XaGBzT0X2kwOeidtOEY
     id: _dRMZnYTsc4
     snippet:
       publishedAt: 2021-12-15T15:00:11Z
@@ -118,3 +117,11 @@ video:
 
           01:11:01 Upcoming events & conclusion
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H13M59S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

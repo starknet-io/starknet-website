@@ -47,7 +47,7 @@ export default async function handler(
 
   const { data } = await youtube.videos.list({
     id: [req.query.id],
-    part: ["snippet"],
+    part: ["snippet", "contentDetails"],
   });
 
   const item = data?.items?.[0];

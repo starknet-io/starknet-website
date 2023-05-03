@@ -3,7 +3,6 @@ post_type: video
 title: "The Blockcrunch Podcast with Jason Choi: “This is the future of Ethereum
   scaling”"
 published_date: 2021-09-26T15:43:08.984Z
-time_to_consume: 41 min watch
 image: /assets/interview02.jpg
 category: ecosystem
 topic:
@@ -16,7 +15,7 @@ video:
   id: w7QdGRCiYfo
   data:
     kind: youtube#video
-    etag: k-Re3AiCS14ymx0ribyBTcxI67E
+    etag: thesx9IFl98dS0DdzkvuSuk3JuE
     id: w7QdGRCiYfo
     snippet:
       publishedAt: 2021-09-25T22:24:05Z
@@ -81,7 +80,7 @@ video:
           url: https://i.ytimg.com/vi/w7QdGRCiYfo/maxresdefault.jpg
           width: 1280
           height: 720
-      channelTitle: The Blockcrunch Podcast
+      channelTitle: The Blockcrunch Podcast with Jason Choi
       tags:
         - Ethereum
         - bitcoin
@@ -134,3 +133,11 @@ video:
           Capital, a subsidiary of The Spartan Group. All opinions expressed by
           Jason and podcast guests are solely their own opinions and do not
           reflect the opinion of The Spartan Group and any of its subsidiaries"
+    contentDetails:
+      duration: PT40M43S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
