@@ -5,9 +5,9 @@ export const metadata = {
   title: "Events",
 };
 
-export default function Page(props: AutoProps) {
-  const eventsseo = getEventsSEO(props.params.locale);
-  console.log("events seo", eventsseo);
+export default async function Page(props: AutoProps) {
+  const eventsSEO = await getEventsSEO(props.params.locale);
+  console.log("events seo", eventsSEO);
 
   return (
     <>

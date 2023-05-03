@@ -17,7 +17,7 @@ export async function getEventsSEO(locale: string): Promise<PageCommonSEO> {
             await fs.readFile(
               path.join(
                 process.cwd(),
-                "_crowdin/data/events-seo",
+                "_crowdin/data/seo/events",
                 value + ".json"
               ),
               "utf8"

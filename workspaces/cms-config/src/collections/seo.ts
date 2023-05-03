@@ -27,8 +27,8 @@ export const SEOCollectionConfig = {
     // },
     {
       label: "Events",
-      name: "events-seo",
-      file: `_data/seo/events-seo.yml`,
+      name: "events",
+      file: `_data/seo/events.yml`,
       crowdin: true,
       fields: [
         {

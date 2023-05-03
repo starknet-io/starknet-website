@@ -313,11 +313,13 @@ interface SimpleFiles<T> {
   readonly localeMap: Map<string, T>;
   readonly resourceName: string;
   readonly collectionName: string;
+  readonly writeRootData?: boolean;
 }
 
 export async function getSimpleFiles<T = ItemsFile>(
   collectionName: string,
-  resourceName: string
+  resourceName: string,
+  writeRootData?: boolean
 ): Promise<SimpleFiles<T & Meta>> {
   const filename = `${resourceName}.yml`;
 
@@ -330,12 +332,12 @@ export async function getSimpleFiles<T = ItemsFile>(
     localeMap.set(locale, {
       ...data,
       locale: locale,
-      objectID: `${collectionName}${resourceName}:${locale}`,
+      objectID: `${collectionName}:${resourceName}:${locale}`,
       sourceFilepath,
     });
   }
 
-  return { localeMap, resourceName, collectionName };
+  return { localeMap, resourceName, collectionName, writeRootData };
 }
 
 export function updateBlocks(pages: PagesData, posts: PostsData) {
