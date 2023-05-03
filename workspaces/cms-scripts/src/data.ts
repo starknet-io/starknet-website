@@ -56,7 +56,7 @@ export async function fileToPost(
     return formattedMinutes.trim();
   }
 
-  function concatenateBodies(blocks: readonly Block[]): string {
+  function concatenateBodies(blocks: readonly any[]): string {
     let fullText = "";
     blocks?.forEach((block) => {
       if (block.body) {
@@ -312,11 +312,12 @@ export interface ItemsFile<T = {}> {
 interface SimpleFiles<T> {
   readonly localeMap: Map<string, T>;
   readonly resourceName: string;
+  readonly collectionName: string;
 }
 
 export async function getSimpleFiles<T = ItemsFile>(
-  resourceName: string,
-  collectionName: string = "settings"
+  collectionName: string,
+  resourceName: string
 ): Promise<SimpleFiles<T & Meta>> {
   const filename = `${resourceName}.yml`;
 
@@ -325,25 +326,16 @@ export async function getSimpleFiles<T = ItemsFile>(
   for (const locale of locales) {
     const sourceFilepath = path.join("_data", collectionName, filename);
 
-    console.log("before nnn");
-
-    try {
-      const data = await translateFile(locale, collectionName, filename);
-      localeMap.set(locale, {
-        ...data,
-        locale: locale,
-        objectID: `${resourceName}:${locale}`,
-        sourceFilepath,
-      });
-    } catch (e) {
-      console.log("translateFile error", e);
-      process.exit(1);
-    }
-
-    console.log("after afff");
+    const data = await translateFile(locale, collectionName, filename);
+    localeMap.set(locale, {
+      ...data,
+      locale: locale,
+      objectID: `${collectionName}${resourceName}:${locale}`,
+      sourceFilepath,
+    });
   }
 
-  return { localeMap, resourceName };
+  return { localeMap, resourceName, collectionName };
 }
 
 export function updateBlocks(pages: PagesData, posts: PostsData) {
