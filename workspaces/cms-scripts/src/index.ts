@@ -30,12 +30,12 @@ for (const simpleData of simpleDataTypes) {
 
     for (const locale of locales) {
       const data = simpleData.filenames.map((filename) =>
-        simpleData.filenameMap.get(`${locale}:${filename}`),
+        simpleData.filenameMap.get(`${locale}:${filename}`)
       );
 
       await write(
         `_crowdin/data/${simpleData.resourceName}/${locale}.json`,
-        data,
+        data
       );
     }
   } catch (err) {
@@ -52,6 +52,8 @@ const simpleFiles = [
   await getSimpleFiles("fiat-on-ramps"),
   await getSimpleFiles("redirects"),
   await getSimpleFiles("alert"),
+  await getSimpleFiles("events-seo", "seo"),
+  // await getSimpleFiles("tutorials", "seo"),
 ];
 
 for (const simpleFile of simpleFiles) {
@@ -65,7 +67,7 @@ for (const simpleFile of simpleFiles) {
 
       await write(
         `_crowdin/data/${simpleFile.resourceName}/${locale}.json`,
-        data.items,
+        data.items
       );
     }
   } catch (err) {
@@ -96,9 +98,9 @@ for (const data of pages.filenameMap.values()) {
     path.join(
       "_crowdin/data/pages",
       data.locale,
-      ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
+      ...(data.breadcrumbs_data?.map((page) => page.slug) ?? [])
     ),
-    { recursive: true },
+    { recursive: true }
   );
 
   await write(path.join("_crowdin/data/pages", `${data.link}.json`), data);
@@ -111,13 +113,17 @@ for (const data of pages.filenameMap.values()) {
 await fs.mkdir("_crowdin/data/main-menu", { recursive: true });
 
 for (const locale of locales) {
-  const mainMenu: MainMenu = await translateFile(locale, "settings", 'main-menu.yml');
+  const mainMenu: MainMenu = await translateFile(
+    locale,
+    "settings",
+    "main-menu.yml"
+  );
 
   for (const mainMenuItem of mainMenu.items) {
     for (const column of mainMenuItem.columns ?? []) {
       for (const block of column.blocks ?? []) {
         block.items = block.items?.map((item) =>
-          handleLink(locale, item, pages, posts),
+          handleLink(locale, item, pages, posts)
         );
       }
     }
