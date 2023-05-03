@@ -2,7 +2,6 @@ id: 667fa9b5-c331-46ce-bf11-5fe7cdf80c32
 post_type: video
 title: "STARK @ Home 13: Dark Forest Escape Route"
 published_date: 2020-10-04T14:29:08.023Z
-time_to_consume: 77 min watch
 image: /assets/starkhome13.png
 category: stark-math
 topic:
@@ -13,7 +12,7 @@ video:
   id: WrieNtiAnyw
   data:
     kind: youtube#video
-    etag: gJHjTP-hnCcAMwp-kJnTBaOjRT4
+    etag: lKYWOdrnDDA3gQpGT-2qIxcYNns
     id: WrieNtiAnyw
     snippet:
       publishedAt: 2020-10-04T06:30:41Z
@@ -48,3 +47,11 @@ video:
         title: "STARK @ Home 13: Dark Forest Escape Route"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H16M58S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

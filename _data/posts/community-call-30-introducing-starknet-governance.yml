@@ -2,7 +2,6 @@ id: 81652dcd-480d-46d8-82bd-e18125aa81cc
 post_type: video
 title: "Community Call #30 | Introducing StarkNet Governance"
 published_date: 2023-01-10T12:59:05.374Z
-time_to_consume: 55 min watch
 image: /assets/cc30.jpg
 category: community-calls
 topic:
@@ -26,7 +25,7 @@ video:
   id: k7soivNSiNU
   data:
     kind: youtube#video
-    etag: CMYi5cEJ_2pMCHaKo61KnbMvhQ0
+    etag: ySkDhZFTTK8STGdO0lGFBthLPQM
     id: k7soivNSiNU
     snippet:
       publishedAt: 2023-01-11T02:34:56Z
@@ -97,3 +96,11 @@ video:
 
           https://starknet.io/governance/starknet-governance-posts/
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT54M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -7,7 +7,7 @@ video:
   id: VLgYnHaJpq8
   data:
     kind: youtube#video
-    etag: kiqD_jyuls-StytzfUmOHLdz9ws
+    etag: Yw2r8rCHCu5vvyu41U9IpGdHmRM
     id: VLgYnHaJpq8
     snippet:
       publishedAt: 2023-03-22T04:17:14Z
@@ -54,6 +54,14 @@ video:
           of Protostar. Are you interested in what the close future is going to
           look like? See it during this workshop!
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT39M52S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/community-calls-36.jpg
 category: community-calls
 topic:

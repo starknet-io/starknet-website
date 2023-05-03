@@ -7,7 +7,7 @@ video:
   id: VMNreeZkAgI
   data:
     kind: youtube#video
-    etag: DJUCxLmSXMAm609SsxV7dYFoz60
+    etag: 5pKudc_jtshVJjywb3c-upaVx1A
     id: VMNreeZkAgI
     snippet:
       publishedAt: 2023-03-09T02:42:59Z
@@ -52,6 +52,14 @@ video:
         description: Join us for the 35th Community Call with Kineret Segal from
           StarkWare, to learn about Starknet's prover, SHARP.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT54M11S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/community-calls-35.jpg
 category: community-calls
 topic:

@@ -2,7 +2,6 @@ id: f658b96a-504f-4578-a2fb-b72ff60856f1
 post_type: video
 title: "STARK @ Home 2: Fast and Furious {Fourier Transforms, PCPs, STARKs}"
 published_date: 2020-03-29T14:04:12.404Z
-time_to_consume: 74 min watch
 image: /assets/starkhome02.png
 category: stark-math
 topic:
@@ -13,7 +12,7 @@ video:
   id: 6qJo2qK-FPY
   data:
     kind: youtube#video
-    etag: 4qaWZ0x37zWAE01R053bntIUMhY
+    etag: --BAusu9KTqN3kkRsskvkFz814M
     id: 6qJo2qK-FPY
     snippet:
       publishedAt: 2020-03-29T08:34:57Z
@@ -47,3 +46,11 @@ video:
       localized:
         title: "STARK @ Home 2: Fast and Furious {Fourier Transforms, PCPs, STARKs}"
         description: "STARK @ Home 2: Eli Ben Sasson talks about FFT vs. PPC"
+    contentDetails:
+      duration: PT1H14M42S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import CMS from "netlify-cms-app";
 import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
@@ -13,7 +13,7 @@ export default function App() {
     // @ts-expect-error
     CMS.registerWidget([
       NetlifyCmsWidgetUUID.Widget(),
-      NetlifyCmsWidgetYouTube.Widget(),
+      NetlifyCmsWidgetYouTube.Widget()
     ]);
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;

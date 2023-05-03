@@ -2,7 +2,6 @@ id: fde6972f-d48d-4cfa-ab30-9e5b8d8dc98d
 post_type: video
 title: "Community Call #7 | Greg from Nethermind and updates on Starknet Roadmap"
 published_date: 2022-02-01T00:00:00+00:00
-time_to_consume: 52 min watch
 image: /assets/cc07.jpg
 category: community-calls
 topic:
@@ -13,7 +12,7 @@ video:
   id: 4kb4wSDETLM
   data:
     kind: youtube#video
-    etag: 1jBO4ELu4Nd4lxS-uxJWSzQV8cM
+    etag: oI46L1SaRVrTV-JE2521yd8gM_s
     id: 4kb4wSDETLM
     snippet:
       publishedAt: 2022-02-07T16:18:53Z
@@ -50,3 +49,11 @@ video:
           StarkNet Roadmap"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT51M38S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
