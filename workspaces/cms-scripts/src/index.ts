@@ -45,32 +45,35 @@ for (const simpleData of simpleDataTypes) {
 }
 
 const simpleFiles = [
-  await getSimpleFiles("dapps"),
-  await getSimpleFiles("wallets"),
-  await getSimpleFiles("block-explorers"),
-  await getSimpleFiles("bridges"),
-  await getSimpleFiles("fiat-on-ramps"),
-  await getSimpleFiles("redirects"),
-  await getSimpleFiles("alert"),
-  await getSimpleFiles("events-seo", "seo"),
+  await getSimpleFiles("settings", "dapps"),
+  await getSimpleFiles("settings", "wallets"),
+  await getSimpleFiles("settings", "block-explorers"),
+  await getSimpleFiles("settings", "bridges"),
+  await getSimpleFiles("settings", "fiat-on-ramps"),
+  await getSimpleFiles("settings", "redirects"),
+  await getSimpleFiles("settings", "alert"),
+  await getSimpleFiles("seo", "events-seo"),
   // await getSimpleFiles("tutorials", "seo"),
 ];
 
 for (const simpleFile of simpleFiles) {
   try {
-    await fs.mkdir(`_crowdin/data/${simpleFile.resourceName}`, {
+    const name =
+      simpleFile.collectionName === "settings"
+        ? simpleFile.resourceName
+        : `${simpleFile.collectionName}/${simpleFile.resourceName}`;
+
+    await fs.mkdir(`_crowdin/data/${name}`, {
       recursive: true,
     });
 
     for (const locale of locales) {
       const data = simpleFile.localeMap.get(locale)!;
 
-      await write(
-        `_crowdin/data/${simpleFile.resourceName}/${locale}.json`,
-        data.items
-      );
+      await write(`_crowdin/data/${name}/${locale}.json`, data);
     }
   } catch (err) {
+    console.log("simpleFile.collectionName", simpleFile.collectionName);
     console.log("simpleFile.resourceName", simpleFile.resourceName);
     console.log(err);
   }
