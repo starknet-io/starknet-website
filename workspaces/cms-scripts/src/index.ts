@@ -52,30 +52,31 @@ const simpleFiles = [
   await getSimpleFiles("settings", "fiat-on-ramps"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
-  await getSimpleFiles("seo", "events-seo"),
+  await getSimpleFiles("seo", "events", true),
   // await getSimpleFiles("tutorials", "seo"),
 ];
 
 for (const simpleFile of simpleFiles) {
-  try {
-    const name =
-      simpleFile.collectionName === "settings"
-        ? simpleFile.resourceName
-        : `${simpleFile.collectionName}/${simpleFile.resourceName}`;
+  const resourceDir =
+    simpleFile.collectionName === "settings"
+      ? simpleFile.resourceName
+      : `${simpleFile.collectionName}/${simpleFile.resourceName}`;
 
-    await fs.mkdir(`_crowdin/data/${name}`, {
+  try {
+    await fs.mkdir(`_crowdin/data/${resourceDir}`, {
       recursive: true,
     });
 
     for (const locale of locales) {
       const data = simpleFile.localeMap.get(locale)!;
 
-      await write(`_crowdin/data/${name}/${locale}.json`, data);
+      await write(
+        `_crowdin/data/${resourceDir}/${locale}.json`,
+        simpleFile.writeRootData ? data : data.items
+      );
     }
   } catch (err) {
-    console.log("simpleFile.collectionName", simpleFile.collectionName);
-    console.log("simpleFile.resourceName", simpleFile.resourceName);
-    console.log(err);
+    console.log("resourceDir err", err);
   }
 }
 
