@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "yarn vite-node ./src/dev-server -c vite-node.config.ts",
     "preview": "vite build && wrangler dev",
+    "preview-local": "vite build && wrangler dev --local",
+    "preview-experimental-local": "vite build && wrangler dev --experimental-local",
     "deploy": "vite build && wrangler publish"
   },
   "dependencies": {
@@ -27,5 +29,8 @@
     "vite-plugin-ssr": "^0.4.120",
     "vite-tsconfig-paths": "^4.2.0",
     "wrangler": "^2.18.0"
+  },
+  "devDependencies": {
+    "@miniflare/tre": "next"
   }
 }

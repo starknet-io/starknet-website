@@ -12,12 +12,12 @@ export interface FiatOnRamp {
 
 export async function getFiatOnRamps(
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<readonly FiatOnRamp[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/fiat-on-ramps/" + value)
+        (value) => async () => getJSON("data/fiat-on-ramps/" + value, event)
       )
     );
   } catch (cause) {

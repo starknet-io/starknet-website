@@ -30,12 +30,12 @@ export interface Post extends Meta {
 export async function getPostBySlug(
   slug: string,
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Post> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/posts/" + value + "/" + slug)
+        (value) => async () => getJSON("data/posts/" + value + "/" + slug, event)
       ),
       async () => {
         const client = algoliasearch(

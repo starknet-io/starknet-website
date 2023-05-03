@@ -37,11 +37,14 @@ export interface BlockItem extends LinkData {
   readonly hide_from_footer?: boolean;
 }
 
-export async function getMainMenu(locale: string): Promise<MainMenu> {
+export async function getMainMenu(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<MainMenu> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/main-menu/" + value)
+        (value) => async () => getJSON("data/main-menu/" + value, event)
       )
     );
   } catch (cause) {

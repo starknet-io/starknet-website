@@ -11,12 +11,12 @@ export interface Dapp {
 
 export async function getDapps(
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<readonly Dapp[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/dapps/" + value)
+        (value) => async () => getJSON("data/dapps/" + value, event)
       )
     );
   } catch (cause) {

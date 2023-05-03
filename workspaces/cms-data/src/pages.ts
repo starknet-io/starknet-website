@@ -183,12 +183,12 @@ export interface Page extends Meta {
 export async function getPageBySlug(
   slug: string,
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Page> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/pages/" + value + "/" + slug)
+        (value) => async () => getJSON("data/pages/" + value + "/" + slug, event)
       )
     );
   } catch (cause) {

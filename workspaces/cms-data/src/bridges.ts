@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface Bridge {
   readonly name: string;
@@ -12,12 +12,12 @@ export interface Bridge {
 
 export async function getBridges(
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<readonly Bridge[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/bridges/" + value)
+        (value) => async () => getJSON("data/bridges/" + value, event)
       )
     );
   } catch (cause) {

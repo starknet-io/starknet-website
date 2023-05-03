@@ -32,6 +32,7 @@ import { getTopics } from "@starknet-io/cms-data/src/topics";
 // import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import Link from "next/link";
 import { useAsync } from "react-streaming";
+import { usePageContext } from "src/renderer/usePageContext";
 
 // export async function generateMetadata(props: Props): Promise<Metadata> {
 //   try {
@@ -180,9 +181,10 @@ export default function Page({
   params: { slug, locale },
 }: Props): JSX.Element | void {
   try {
-    const post = useAsync(['getPostBySlug', slug, locale], () => getPostBySlug(slug, locale))
-    const categories = useAsync(['getCategories', locale], () => getCategories(locale))
-    const topics = useAsync(['getTopics', locale], () => getTopics(locale))
+    const pageContext = usePageContext();
+    const post = useAsync(['getPostBySlug', slug, locale], () => getPostBySlug(slug, locale, pageContext.event))
+    const categories = useAsync(['getCategories', locale], () => getCategories(locale, pageContext.event))
+    const topics = useAsync(['getTopics', locale], () => getTopics(locale, pageContext.event))
 
     const category = categories.find((c) => c.id === post.category)!;
 

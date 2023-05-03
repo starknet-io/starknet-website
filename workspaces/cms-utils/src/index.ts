@@ -55,13 +55,15 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
   );
 }
 
-export async function getJSON(src: string): Promise<any> {
+export async function getJSON(src: string, event: null | WorkerGlobalScopeEventMap["fetch"]): Promise<any> {
   if (globalThis.__STATIC_CONTENT) {
     const res = await getAssetFromKV({
       request: new Request(
         new URL("/" + src + ".json", "http://localhost:3000")
       ),
-      waitUntil(promise) {},
+      waitUntil(promise) {
+        event?.waitUntil(promise)
+      },
     });
 
     return res.json();

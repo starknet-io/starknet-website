@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface Event {
   readonly name: string;
@@ -18,12 +18,12 @@ export interface Event {
 
 export async function getEvents(
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<readonly Event[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/events/" + value)
+        (value) => async () => getJSON("data/events/" + value, event)
       )
     );
   } catch (cause) {

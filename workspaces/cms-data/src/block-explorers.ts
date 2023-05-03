@@ -1,5 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface BlockExplorer {
   readonly name: string;
@@ -12,12 +12,12 @@ export interface BlockExplorer {
 
 export async function getBlockExplorers(
   locale: string,
-
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<readonly BlockExplorer[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/block-explorers/" + value)
+        (value) => async () => getJSON("data/block-explorers/" + value, event)
       )
     );
   } catch (cause) {

@@ -11,12 +11,13 @@ export interface Alert {
 }
 
 export async function getAlerts(
-  locale: string
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Alert[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/alert/" + value)
+        (value) => async () => getJSON("data/alert/" + value, event)
       )
     );
   } catch (cause) {

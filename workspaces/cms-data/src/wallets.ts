@@ -15,11 +15,14 @@ export interface Wallet {
   readonly description: string;
 }
 
-export async function getWallets(locale: string): Promise<readonly Wallet[]> {
+export async function getWallets(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<readonly Wallet[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/wallets/" + value)
+        (value) => async () => getJSON("data/wallets/" + value, event)
       )
     );
   } catch (cause) {

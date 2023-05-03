@@ -1,8 +1,8 @@
 // import { Metadata } from "next";
-import { getCategories } from "@starknet-io/cms-data/src/categories";
+// import { getCategories } from "@starknet-io/cms-data/src/categories";
 // import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
-import { getTopics } from "@starknet-io/cms-data/src/topics";
-import { PostsPage } from "../(components)/PostsPage";
+// import { getTopics } from "@starknet-io/cms-data/src/topics";
+// import { PostsPage } from "../(components)/PostsPage";
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
@@ -37,22 +37,22 @@ export interface Props extends LocaleProps {
 //   return params;
 // }
 
-export default async function Page(props: Props) {
-  const categories = await getCategories(props.params.locale);
-  const topics = await getTopics(props.params.locale);
+// export default async function Page(props: Props) {
+//   const categories = await getCategories(props.params.locale);
+//   const topics = await getTopics(props.params.locale);
 
-  return (
-    <>
-      <PostsPage
-        {...props}
-        categories={categories}
-        topics={topics}
-        env={{
-          ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
-          ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
-          ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
-        }}
-      />
-    </>
-  );
-}
+//   return (
+//     <>
+//       <PostsPage
+//         {...props}
+//         categories={categories}
+//         topics={topics}
+//         env={{
+//           ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
+//           ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
+//           ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
+//         }}
+//       />
+//     </>
+//   );
+// }

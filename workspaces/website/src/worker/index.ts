@@ -17,6 +17,7 @@ async function handleFetchEvent(event: WorkerGlobalScopeEventMap["fetch"]) {
     const userAgent = event.request.headers.get("User-Agent")!;
 
     const pageContextInit = {
+      event,
       urlOriginal: url,
       fetch,
       userAgent,
