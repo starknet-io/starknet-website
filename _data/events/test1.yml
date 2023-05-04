@@ -1,0 +1,14 @@
+type: community_event
+name: test1
+description: sdsd
+url: sdsds
+recap:
+  label: sdsd
+  link: sds
+  isExternal: false
+start_date: 2023-05-04T07:52:51.379Z
+end_date: 2023-05-04T07:52:51.403Z
+image: /assets/0_i4ch5-4rxxal4rkt.png
+location: asia
+city: sdsd
+country: sdsd
