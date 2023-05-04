@@ -42,8 +42,8 @@ export interface Props extends LocaleProps {
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
   readonly seo: {
-    readonly title: string;
-    readonly subtitle: string;
+    title: string;
+    subtitle: string;
   };
 }
 
