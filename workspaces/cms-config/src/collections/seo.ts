@@ -5,26 +5,54 @@ export const SEOCollectionConfig = {
   label: "SEO",
   name: "seo",
   files: [
-    // {
-    //   label: "Tutorials",
-    //   name: "tutorials",
-    //   file: `_data/seo/tutorials.yml`,
-    //   crowdin: true,
-    //   fields: [
-    //     {
-    //       label: "Page title",
-    //       name: "title",
-    //       widget: "string",
-    //       crowdin: true,
-    //     },
-    //     {
-    //       label: "Page subtitle",
-    //       name: "sub-title",
-    //       widget: "string",
-    //       crowdin: true,
-    //     },
-    //   ],
-    // },
+    {
+      label: "Home",
+      name: "home",
+      file: `_data/seo/home.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Hero text",
+          name: "heroText",
+          widget: "string",
+          crowdin: true,
+        },
+      ],
+    },
+    {
+      label: "Footer",
+      name: "footer",
+      file: `_data/seo/footer.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Footer text",
+          name: "footerText",
+          widget: "string",
+          crowdin: true,
+        },
+      ],
+    },
+    {
+      label: "Tutorials",
+      name: "tutorials",
+      file: `_data/seo/tutorials.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Page title",
+          name: "title",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Page subtitle",
+          name: "subtitle",
+          widget: "string",
+          crowdin: true,
+        },
+      ],
+    },
     {
       label: "Events",
       name: "events",
@@ -39,31 +67,83 @@ export const SEOCollectionConfig = {
         },
         {
           label: "Page subtitle",
-          name: "sub-title",
+          name: "subtitle",
           widget: "string",
           crowdin: true,
         },
       ],
     },
-    // {
-    //   label: "Jobs",
-    //   name: "jobs",
-    //   file: `_data/seo/jobs.yml`,
-    //   crowdin: true,
-    //   fields: [
-    //     {
-    //       label: "Page title",
-    //       name: "title",
-    //       widget: "string",
-    //       crowdin: true,
-    //     },
-    //     {
-    //       label: "Page subtitle",
-    //       name: "sub-title",
-    //       widget: "string",
-    //       crowdin: true,
-    //     },
-    //   ],
-    // },
+    {
+      label: "Jobs",
+      name: "jobs",
+      file: `_data/seo/jobs.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Page title",
+          name: "title",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Page subtitle",
+          name: "subtitle",
+          widget: "string",
+          crowdin: true,
+        },
+      ],
+    },
+    {
+      label: "Search",
+      name: "search",
+      file: `_data/seo/search.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Search text",
+          name: "search",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Cancel text",
+          name: "cancel",
+          widget: "string",
+          crowdin: true,
+        },
+      ],
+    },
+    {
+      label: "Language center",
+      name: "language",
+      file: `_data/seo/language.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Sub Title",
+          name: "subtitle",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Call to action",
+          name: "callToAction",
+          widget: "string",
+          crowdin: true,
+        },
+      ],
+    },
   ],
 } satisfies CmsCollection;

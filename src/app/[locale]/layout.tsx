@@ -9,6 +9,11 @@ import { getAlerts } from "@starknet-io/cms-data/src/settings/alert";
 import React from "react";
 import { i18nConfig } from "@starknet-io/cms-data/src/i18n/config";
 import { notFound } from "next/navigation";
+import {
+  getFooterSEO,
+  getLanguageCenterSEO,
+  getSearchSEO,
+} from "workspaces/cms-data/src/seo";
 
 export const metadata = {
   title: {
@@ -44,6 +49,9 @@ export default async function LocaleLayout({
   const mainMenu = await getMainMenu(locale);
   const messages = await getMessages(locale);
   const alerts = await getAlerts(locale);
+  const footerSEO = await getFooterSEO(locale);
+  const searchSEO = await getSearchSEO(locale);
+  const languageCenterSeo = await getLanguageCenterSEO(locale);
 
   return (
     <ThemeProvider>
@@ -56,10 +64,12 @@ export default async function LocaleLayout({
               ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
               ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
             }}
+            searchSEO={searchSEO}
+            languageCenterSeo={languageCenterSeo}
           />
           {children}
         </PageContainer>
-        <Footer mainMenu={mainMenu} />
+        <Footer mainMenu={mainMenu} seo={footerSEO} />
       </ClientLocaleProvider>
     </ThemeProvider>
   );
