@@ -1,17 +1,3 @@
-id: e449aae9-628a-47a4-b5eb-d02644f95c25
-post_type: article
-title: Starknet Goals and Roadmap for 2023
-published_date: 2023-04-24T14:18:24.983Z
-time_to_consume: 5 min read
-image: /assets/blog-post-image-starknet-goals-.webp
-category: engineering
-topic:
-  - 63d577bc-fbb2-432c-8d43-ce4472c82338
-short_desc: >
-  This post will address Starknet’s roadmap for 2023 and provide color on the
-  considerations driving it. The roadmap focuses on performance and UX.
-
-  We are aiming to provide the community with the transparency it needs, and so are sharing the roadmap at the earliest time possible. Naturally, sharing the roadmap early on also means things may change.
 blocks:
   - type: markdown
     body: >-
@@ -47,8 +33,8 @@ blocks:
 
 
       ![](/assets/regenesis-image-.webp)
-  - type: markdown
-    body: >-
+
+
       ## Roadmap for 2023
 
 
@@ -88,8 +74,8 @@ blocks:
 
 
       We expect dramatic reduction in the cost of data thanks to Ethereum’s EIP-4844 and to Starknet’s Volition (off-chain data availability).
-  - type: markdown
-    body: >-
+
+
       ## Faster Finality
 
 
@@ -106,8 +92,8 @@ blocks:
 
 
       In v0.15.0, Starknet will switch to constant and shorter block intervals. Currently, each block is proven by its own proof, and block intervals are variable — the conserved quantity is the block cost. In order to reach that fixed block cost, the network awaits for the accumulation of enough transactions, and that results in variable block intervals. To solve this we plan to decouple the 1:1 relationship between a Starknet block and its proof. Starting v0.15.0, a proof will attest to the integrity of one or more Starknet blocks. This will fix the block interval, and improve Starknet’s UX.
-  - type: markdown
-    body: >-
+
+
       ## Tradeoffs & Considerations
 
 
@@ -135,3 +121,17 @@ blocks:
 
 
       updated: April 2023
+time_to_consume: 5 min read
+id: e449aae9-628a-47a4-b5eb-d02644f95c25
+post_type: article
+title: Starknet Goals and Roadmap for 2023
+published_date: 2023-04-24T14:18:24.983Z
+image: /assets/blog-post-image-starknet-goals-.webp
+category: engineering
+topic:
+  - 63d577bc-fbb2-432c-8d43-ce4472c82338
+short_desc: >
+  This post will address Starknet’s roadmap for 2023 and provide color on the
+  considerations driving it. The roadmap focuses on performance and UX.
+
+  We are aiming to provide the community with the transparency it needs, and so are sharing the roadmap at the earliest time possible. Naturally, sharing the roadmap early on also means things may change.

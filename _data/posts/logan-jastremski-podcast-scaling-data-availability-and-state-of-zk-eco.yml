@@ -1,8 +1,8 @@
-id: 32d49e46-b3f0-4e49-bf8c-f2450f47795a
-post_type: article
-title: Logan Jastremski Podcast | Scaling Data Availability and State of ZK Eco
-published_date: 2023-04-25T12:10:57.026Z
 time_to_consume: 1:12 min
+id: 32d49e46-b3f0-4e49-bf8c-f2450f47795a
+post_type: video
+title: Logan Jastremski Podcast | Scaling Data Availability and State of ZK Eco
+published_date: 2023-04-25T13:10:57.026Z
 video:
   url: https://youtu.be/PT6futbRpEs
   id: PT6futbRpEs
@@ -11,62 +11,8 @@ video:
     etag: DTv5O_d9sLElf0XHczjMTCuUkaQ
     id: PT6futbRpEs
     snippet:
-      publishedAt: 2023-04-25T15:34:00Z
-      channelId: UC8__jTM6-_GOkRmOBPrTB0A
-      title: "Avihu Levy | Head of Product of Starkware | Scaling Data Availability
-        and State of ZK Eco | Ep #76"
-      description: >-
-        Avihu Levy is the Head of Product at Starkware 
-
-
-        Avihu's Twitter: @avihu28
-
-        Starkware's Twitter: @StarkWareLtd 
-
-        Starkware's Website: https://starkware.co/
-
-
-        Logan Jastremski's Twitter: @LoganJastremski 
-
-        Frictionless's Twitter: @_Frictionless_
-
-        Frictionless's Website: https://frictionless.fund/
-
-
-        Try out NEW Orca: https://bit.ly/neworca_logan
-
-        ___
-
-
-        This Podcast was sponsored by Squads (https://squads.so) & Orca (https://www.orca.so/).
-
-
-        Squads Protocol: the multisig standard you were looking for on Solana
-
-        Securely manage your treasury, program upgrades and tokens with your Squad.
-
-
-        - Multi-signature - A multisig requires multiple digital signatures in order to approve transactions. This is opposed to individual web3 wallets, which only require one signature.
-
-
-        - Security - Multisigs spread the attack vector necessary for your assets to be compromised. By requiring confirmations from multiple private keys, a single point of failure is eliminated.
-
-
-        - Collective Ownership - Multisigs allow teams to own and manage their on-chain assets together. You get to choose who is on your multisig.
-
-
-        - Self-Custody -  Your on-chain assets are always in your team’s control. By securing them in a multisig, you forego the risk of centralized entities losing your funds.
-
-        ___
-
-
-        Orca is a Concentrated Liquidity Automated Market Maker (CLAMM, for short).
-
-
-        - Orca is the easiest place to trade crypto and build applications on Solana.
-
-
-        - On Orca, you can trade tokens lightning fast and confidently (thanks to our Fair Price Indicator). Additionally, you can provide liquidity to our concentrated liquidity pools (Whirlpools) to earn trading fees and token emissions.
+      publishedAt: 2023-04-25T15:34:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/PT6futbRpEs/default.jpg
@@ -88,9 +34,11 @@ video:
           url: https://i.ytimg.com/vi/PT6futbRpEs/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: Logan Jastremski Podcast
+      title: "Avihu Levy | Head of Product of Starkware | Scaling Data Availability
+        and State of ZK Eco | Ep #76"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Avihu Levy | Head of Product of Starkware | Scaling Data Availability
           and State of ZK Eco | Ep #76"
@@ -146,7 +94,59 @@ video:
 
 
           - On Orca, you can trade tokens lightning fast and confidently (thanks to our Fair Price Indicator). Additionally, you can provide liquidity to our concentrated liquidity pools (Whirlpools) to earn trading fees and token emissions.
-      defaultAudioLanguage: en
+      description: >-
+        Avihu Levy is the Head of Product at Starkware 
+
+
+        Avihu's Twitter: @avihu28
+
+        Starkware's Twitter: @StarkWareLtd 
+
+        Starkware's Website: https://starkware.co/
+
+
+        Logan Jastremski's Twitter: @LoganJastremski 
+
+        Frictionless's Twitter: @_Frictionless_
+
+        Frictionless's Website: https://frictionless.fund/
+
+
+        Try out NEW Orca: https://bit.ly/neworca_logan
+
+        ___
+
+
+        This Podcast was sponsored by Squads (https://squads.so) & Orca (https://www.orca.so/).
+
+
+        Squads Protocol: the multisig standard you were looking for on Solana
+
+        Securely manage your treasury, program upgrades and tokens with your Squad.
+
+
+        - Multi-signature - A multisig requires multiple digital signatures in order to approve transactions. This is opposed to individual web3 wallets, which only require one signature.
+
+
+        - Security - Multisigs spread the attack vector necessary for your assets to be compromised. By requiring confirmations from multiple private keys, a single point of failure is eliminated.
+
+
+        - Collective Ownership - Multisigs allow teams to own and manage their on-chain assets together. You get to choose who is on your multisig.
+
+
+        - Self-Custody -  Your on-chain assets are always in your team’s control. By securing them in a multisig, you forego the risk of centralized entities losing your funds.
+
+        ___
+
+
+        Orca is a Concentrated Liquidity Automated Market Maker (CLAMM, for short).
+
+
+        - Orca is the easiest place to trade crypto and build applications on Solana.
+
+
+        - On Orca, you can trade tokens lightning fast and confidently (thanks to our Fair Price Indicator). Additionally, you can provide liquidity to our concentrated liquidity pools (Whirlpools) to earn trading fees and token emissions.
+      channelId: UC8__jTM6-_GOkRmOBPrTB0A
 image: /assets/logan-jastremski-podcast-scaling-data-availability-and-state-of-zk-eco.jpg
 category: ecosystem
 topic:

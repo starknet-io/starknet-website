@@ -122,7 +122,10 @@ export const ImageIconCard = ({
             (orientation === "left" && variant === "large_card") ? "row" :
             variant === "community_card" ? "row" : "column"
           }}
-          padding={variant === "community_card" ? "16px" : variant === "large_card" ? "48px" : "0"}
+          padding={{
+            base: variant === "community_card" ? "24px" : variant === "large_card" ? "24px" : "0",
+            md: variant === "community_card" ? "16px" : variant === "large_card" ? "48px" : "0"
+          }}
           {...(orientation === "right" && variant === "large_card" && { justifyContent: "space-between" })}
           alignItems={{ lg: variant === "large_card" ? "center" : "initial" }}
           height="100%"
