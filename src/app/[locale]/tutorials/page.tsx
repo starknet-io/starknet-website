@@ -1,10 +1,13 @@
+import { getTutorialsSEO } from "workspaces/cms-data/src/seo";
 import { TutorialsPage, Props } from "./(components)/TutorialsPage";
 
 export const metadata = {
   title: "Tutorials",
 };
 
-export default function Page(props: Omit<Props, "env">) {
+export default async function Page(props: Omit<Props, "env">) {
+  const seo = await getTutorialsSEO(props.params.locale);
+
   return (
     <>
       <TutorialsPage
@@ -14,6 +17,7 @@ export default function Page(props: Omit<Props, "env">) {
           ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
           ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
         }}
+        seo={seo}
       />
     </>
   );

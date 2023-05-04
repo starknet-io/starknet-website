@@ -53,7 +53,12 @@ const simpleFiles = [
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
   await getSimpleFiles("seo", "events", true),
-  // await getSimpleFiles("tutorials", "seo"),
+  await getSimpleFiles("seo", "tutorials", true),
+  await getSimpleFiles("seo", "jobs", true),
+  await getSimpleFiles("seo", "footer", true),
+  await getSimpleFiles("seo", "home", true),
+  await getSimpleFiles("seo", "language", true),
+  await getSimpleFiles("seo", "search", true),
 ];
 
 for (const simpleFile of simpleFiles) {
