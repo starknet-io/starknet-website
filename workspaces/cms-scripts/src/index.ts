@@ -67,21 +67,17 @@ for (const simpleFile of simpleFiles) {
       ? simpleFile.resourceName
       : `${simpleFile.collectionName}/${simpleFile.resourceName}`;
 
-  try {
-    await fs.mkdir(`_crowdin/data/${resourceDir}`, {
-      recursive: true,
-    });
+  await fs.mkdir(`_crowdin/data/${resourceDir}`, {
+    recursive: true,
+  });
 
-    for (const locale of locales) {
-      const data = simpleFile.localeMap.get(locale)!;
+  for (const locale of locales) {
+    const data = simpleFile.localeMap.get(locale)!;
 
-      await write(
-        `_crowdin/data/${resourceDir}/${locale}.json`,
-        simpleFile.writeRootData ? data : data.items
-      );
-    }
-  } catch (err) {
-    console.log("resourceDir err", err);
+    await write(
+      `_crowdin/data/${resourceDir}/${locale}.json`,
+      simpleFile.writeRootData ? data : data.items
+    );
   }
 }
 
