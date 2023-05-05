@@ -363,7 +363,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
             <ArticleCard.Footer
               postType={featuredHit?.post_type}
               publishedAt={featuredHitDate}
-              timeToConsume={featuredHit?.time_to_consume}
+              timeToConsume={featuredHit?.timeToConsume}
               type="featured"
             />
           </ArticleCard.Body>
