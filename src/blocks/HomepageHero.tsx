@@ -4,11 +4,15 @@ import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 
-type Props = {};
+type Props = {
+  readonly seo: {
+    heroText: string;
+  };
+};
 import { Intro } from "./Intro";
 import { useRouter } from "next/navigation";
 
-export const HomepageHero = (props: Props) => {
+export const HomepageHero = ({ seo }: Props) => {
   const router = useRouter();
   return (
     <Box
@@ -104,8 +108,7 @@ export const HomepageHero = (props: Props) => {
               fontSize="20px"
               fontWeight="500"
             >
-              Starknet is the secure scaling technology bringing Ethereum’s
-              benefits to the world.
+              {seo.heroText}
             </Text>
 
             <Stack

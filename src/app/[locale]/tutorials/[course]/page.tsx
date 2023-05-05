@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { TutorialsPage, Props } from "../(components)/TutorialsPage";
+import { TutorialsPage } from "../(components)/TutorialsPage";
+import { getTutorialsSEO } from "workspaces/cms-data/src/seo";
 
 const courses = [
   {
@@ -28,13 +29,21 @@ const courses = [
   },
 ];
 
-export function generateMetadata(props: Omit<Props, "env">): Metadata {
+type Props = {
+  readonly params: LocaleParams & {
+    readonly course?: string;
+  };
+};
+
+export function generateMetadata(props: Props): Metadata {
   return {
     title: courses.find((c) => c.value === props.params.course)?.label,
   };
 }
 
-export default function Page(props: Omit<Props, "env">) {
+export default async function Page(props: Props) {
+  const seo = await getTutorialsSEO(props.params.locale);
+
   return (
     <>
       <TutorialsPage
@@ -44,6 +53,7 @@ export default function Page(props: Omit<Props, "env">) {
           ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
           ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
         }}
+        seo={seo}
       />
     </>
   );
