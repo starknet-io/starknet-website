@@ -47,7 +47,7 @@ export async function fileToPost(
   function formatDuration(duration: string): string {
     const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
     if (!match) {
-      return '';
+      return "";
     }
     const hours = parseInt(match[1]) || 0;
     const minutes = parseInt(match[2]) || 0;
@@ -55,9 +55,8 @@ export async function fileToPost(
     const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : "";
     return formattedMinutes.trim();
   }
-  
-  
-  function concatenateBodies(blocks: readonly Block[]): string {
+
+  function concatenateBodies(blocks: readonly any[]): string {
     let fullText = "";
     blocks?.forEach((block) => {
       if (block.body) {
@@ -66,7 +65,7 @@ export async function fileToPost(
     });
     return fullText;
   }
-  
+
   function calculateReadingTime(text: string): string {
     const wordsPerMinute = 200;
     const wordsPerImage = 12;
@@ -74,14 +73,16 @@ export async function fileToPost(
     const imageCount = (text.match(/!\[\]/g) || []).length;
     const wordsWithImages = words + imageCount * wordsPerImage;
     const decimalMinutes = wordsWithImages / wordsPerMinute;
-  
+
     const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
     return `${minutes}min`;
   }
   const fullText = concatenateBodies(data.blocks);
   let timeToConsume;
   if (data.post_type === "video") {
-    timeToConsume = `${formatDuration(data.video?.data?.contentDetails?.duration || '')} watch`;
+    timeToConsume = `${formatDuration(
+      data.video?.data?.contentDetails?.duration || ""
+    )} watch`;
   } else {
     timeToConsume = `${calculateReadingTime(fullText)} read`;
   }
@@ -104,7 +105,7 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
-    timeToConsume
+    timeToConsume,
   };
 }
 
@@ -246,7 +247,10 @@ export async function getTutorials(): Promise<SimpleData<Meta>> {
 
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
-      data.tags = data.tags.replace(/,\s*$/, "").split(",").map((t: string) => t.trim());
+      data.tags = data.tags
+        .replace(/,\s*$/, "")
+        .split(",")
+        .map((t: string) => t.trim());
     }
   });
 
@@ -308,12 +312,15 @@ export interface ItemsFile<T = {}> {
 interface SimpleFiles<T> {
   readonly localeMap: Map<string, T>;
   readonly resourceName: string;
+  readonly collectionName: string;
+  readonly writeRootData?: boolean;
 }
 
 export async function getSimpleFiles<T = ItemsFile>(
-  resourceName: string
+  collectionName: string,
+  resourceName: string,
+  writeRootData?: boolean
 ): Promise<SimpleFiles<T & Meta>> {
-  const collectionName = "settings";
   const filename = `${resourceName}.yml`;
 
   const localeMap = new Map<string, T & Meta>();
@@ -322,16 +329,15 @@ export async function getSimpleFiles<T = ItemsFile>(
     const sourceFilepath = path.join("_data", collectionName, filename);
 
     const data = await translateFile(locale, collectionName, filename);
-
     localeMap.set(locale, {
       ...data,
       locale: locale,
-      objectID: `${resourceName}:${locale}`,
+      objectID: `${collectionName}:${resourceName}:${locale}`,
       sourceFilepath,
     });
   }
 
-  return { localeMap, resourceName };
+  return { localeMap, resourceName, collectionName, writeRootData };
 }
 
 export function updateBlocks(pages: PagesData, posts: PostsData) {

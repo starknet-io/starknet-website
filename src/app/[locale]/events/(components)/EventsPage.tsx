@@ -50,6 +50,10 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
   readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
+  readonly seo: {
+    title: string;
+    subtitle: string;
+  };
 }
 
 const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
@@ -63,7 +67,12 @@ const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
   )} AND end_date_ts < ${getUnixTime(startOfDay(new Date()))}`;
 };
 
-export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
+export function EventsPage({
+  params,
+  env,
+  mode,
+  seo,
+}: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -84,13 +93,17 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
           filters={getEventFilter(mode)}
         />
 
-        <EventsPageLayout params={params} mode={mode} />
+        <EventsPageLayout params={params} mode={mode} seo={seo} />
       </InstantSearch>
     </Box>
   );
 }
 
-const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
+const EventsPageLayout = ({
+  params,
+  mode,
+  seo,
+}: Pick<Props, "params" | "mode" | "seo">) => {
   const { items: locations, refine: refineLocation } = useRefinementList({
     attribute: "location",
     sortBy: ["name:asc"],
@@ -108,8 +121,8 @@ const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
 
   return (
     <PageLayout
-      sectionHeaderTitle="Events"
-      sectionHeaderDescription="Find Starknet events, online or around the world."
+      sectionHeaderTitle={seo.title}
+      sectionHeaderDescription={seo.subtitle}
       breadcrumbs={
         <Breadcrumb separator="/">
           <BreadcrumbItem>

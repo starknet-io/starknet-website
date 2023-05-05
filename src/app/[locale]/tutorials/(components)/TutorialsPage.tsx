@@ -41,9 +41,13 @@ export interface Props extends LocaleProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  readonly seo: {
+    title: string;
+    subtitle: string;
+  };
 }
 
-export function TutorialsPage({ params, env }: Props): JSX.Element | null {
+export function TutorialsPage({ params, env, seo }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -61,13 +65,16 @@ export function TutorialsPage({ params, env }: Props): JSX.Element | null {
             course: params.course != null ? [params.course] : [],
           }}
         />
-        <TutorialsPageLayout params={params} />
+        <TutorialsPageLayout params={params} seo={seo} />
       </InstantSearch>
     </Box>
   );
 }
 
-const TutorialsPageLayout = ({ params }: Pick<Props, "params">) => {
+const TutorialsPageLayout = ({
+  params,
+  seo,
+}: Pick<Props, "params" | "seo">) => {
   const { items: typeItems, refine: refineTypes } = useRefinementList({
     attribute: "type",
     sortBy: ["name:asc"],
@@ -92,8 +99,8 @@ const TutorialsPageLayout = ({ params }: Pick<Props, "params">) => {
 
   return (
     <PageLayout
-      sectionHeaderTitle="Tutorials"
-      sectionHeaderDescription="Learn about Starknet by developers, for developers"
+      sectionHeaderTitle={seo.title}
+      sectionHeaderDescription={seo.subtitle}
       sectionHeaderBottomContent={
         <MobileFiltersButton
           filtersCount={filtersCount}
