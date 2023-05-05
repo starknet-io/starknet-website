@@ -329,7 +329,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
     }
     const handleResize = () => {
       if (window.innerWidth > 992) {
-        setFilteredHits(hits.filter(hit => hit.featured === false))
+        setFilteredHits(hits.filter(hit => hit.featured !== true))
       } else {
         setFilteredHits(hits);
       }
