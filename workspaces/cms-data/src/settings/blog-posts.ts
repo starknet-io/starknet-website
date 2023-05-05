@@ -4,10 +4,6 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 export interface BlogPosts {
-  readonly items: FeaturedPost[];
-}
-
-export interface FeaturedPost {
   readonly featured_post: string;
 }
 
