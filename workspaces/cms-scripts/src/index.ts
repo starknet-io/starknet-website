@@ -52,6 +52,7 @@ const simpleFiles = [
   await getSimpleFiles("fiat-on-ramps"),
   await getSimpleFiles("redirects"),
   await getSimpleFiles("alert"),
+  await getSimpleFiles("blog-posts"),
 ];
 
 for (const simpleFile of simpleFiles) {

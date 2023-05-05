@@ -22,7 +22,7 @@ type RootProps = {
 
 const Root = ({ children, href, type = "grid" }: RootProps) => {
   return (
-    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
+    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }} overflow="hidden">
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
         <Box p="0" height="full" borderRadius="8px" bg="card-bg">
           <Flex
