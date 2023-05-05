@@ -14,7 +14,7 @@ import {
 import { Button } from "@ui/Button";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
@@ -306,6 +306,7 @@ type Hit = {
   readonly filepath: string;
   readonly post_type: string;
   readonly published_date: string;
+  readonly featured: boolean;
   readonly blocks: Array<Block>;
   readonly video: Video;
   readonly timeToConsume: string;
@@ -318,9 +319,56 @@ interface Block {
 
 function CustomHits({ categories }: Pick<Props, "categories">) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
+  const [featuredHit, setFeaturedHit] = useState<Hit>();
+  const [filteredHits, setFilteredHits] = useState<Hit[]>([]);
+  const [featuredHitDate, setFeaturedHitDate] = useState<string>();
+  const [featuredHitCategory, setFeaturedHitCategory] = useState<Category>(categories[0]);
+  useEffect(() => {
+    if (hits) {
+      setFeaturedHit(hits.find(hit => hit.featured === true))
+    }
+    const handleResize = () => {
+      if (window.innerWidth > 992) {
+        setFilteredHits(hits.filter(hit => hit.featured !== true))
+      } else {
+        setFilteredHits(hits);
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize)
+  }, [hits])
+  useEffect(() => {
+    if (hits && featuredHit) {
+      setFeaturedHitDate(moment(featuredHit.published_date).format("MMM DD, YYYY"));
+      setFeaturedHitCategory(categories.find((c) => c.id === featuredHit.category) || categories[0])
+    }
 
+  }, [hits, categories, featuredHit])
   return (
     <>
+      {featuredHit && window.innerWidth > 992 && <Box mb="48px">
+        <ArticleCard.Root
+          href={`/${featuredHit?.locale}/posts/${featuredHit?.category}/${featuredHit?.slug}`}
+          type="featured"
+        >
+          <ArticleCard.Image url={featuredHit?.image} type="featured" />
+
+          <ArticleCard.Body type="featured">
+            <ArticleCard.Category category={featuredHitCategory} />
+            <ArticleCard.Content
+              title={featuredHit?.title}
+              excerpt={featuredHit?.short_desc}
+              type="featured"
+            />
+            <ArticleCard.Footer
+              postType={featuredHit?.post_type}
+              publishedAt={featuredHitDate}
+              timeToConsume={featuredHit?.timeToConsume}
+              type="featured"
+            />
+          </ArticleCard.Body>
+        </ArticleCard.Root>
+      </Box>}
       <Grid
         templateColumns={{
           base: "repeat(auto-fit, minmax(280px, 1fr))",
@@ -331,7 +379,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
         columnGap="24px"
         rowGap="48px"
       >
-        {hits.map((hit, i) => {
+        {filteredHits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
           const date = moment(hit.published_date).format("MMM DD, YYYY");
           const category = categories.find((c) => c.id === hit.category)!;

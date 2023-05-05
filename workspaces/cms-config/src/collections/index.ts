@@ -9,7 +9,7 @@ import { topicsCollectionConfig } from "./topics";
 import { tutorialsCollectionConfig } from "./tutorials";
 import { SEOCollectionConfig } from "./seo";
 
-export const collections = [
+export const collections: CmsConfig["collections"] = [
   pagesCollectionConfig,
   postsCollectionConfig,
   topicsCollectionConfig,
@@ -19,4 +19,4 @@ export const collections = [
   tutorialsCollectionConfig,
   settingsCollectionConfig,
   SEOCollectionConfig,
-] satisfies CmsConfig["collections"];
+];

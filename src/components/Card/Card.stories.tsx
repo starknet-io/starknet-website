@@ -7,6 +7,7 @@ import * as GridCard from "./GridCard";
 import { ImageIconCard } from "./ImageIconCard";
 import { ThemeProvider } from "src/app/providers/ThemeProvider";
 import { Tag } from "@ui/Tag/Tag";
+import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import {
   Grid,
   Flex
@@ -75,6 +76,10 @@ export default {
     },
     columns: {
       options: [2, 4],
+      control: { type: 'select' },
+    },
+    type: {
+      options: ["featured", "grid"],
       control: { type: 'select' },
     }
   },
@@ -427,6 +432,129 @@ const list = [
   },
 ];
 
+const articleData = {
+  "id": "9dac0c05-fed5-40ef-84cd-a5a504b0d2b3",
+  "slug": "starknet-community-call-40-ama-with-giza-tech",
+  "title": "Starknet Community Call #40 | AMA with Giza tech",
+  "category": "community-calls",
+  "post_type": "video",
+  "published_date": "2023-04-23T08:34:02.316Z",
+  "time_to_consume": "43:15",
+  "video": {
+      "url": "https://www.youtube.com/live/TJDTWJNLkbw?feature=share",
+      "id": "TJDTWJNLkbw",
+      "data": {
+          "kind": "youtube#video",
+          "etag": "Kr7n5CvoSPeLRta6yHcgXTrEqKw",
+          "id": "TJDTWJNLkbw",
+          "snippet": {
+              "publishedAt": "2023-04-19T01:31:02Z",
+              "channelId": "UCnDWguR8mE2oDBsjhQkgbvg",
+              "title": "Starknet Community Call #40 | AMA with Giza tech",
+              "description": "Giza is a permissionless protocol in Starknet for deploying machine learning models on-chain, performing verifiable inferences, and enabling an open AI economy.",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/TJDTWJNLkbw/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/TJDTWJNLkbw/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/TJDTWJNLkbw/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  },
+                  "standard": {
+                      "url": "https://i.ytimg.com/vi/TJDTWJNLkbw/sddefault.jpg",
+                      "width": 640,
+                      "height": 480
+                  },
+                  "maxres": {
+                      "url": "https://i.ytimg.com/vi/TJDTWJNLkbw/maxresdefault.jpg",
+                      "width": 1280,
+                      "height": 720
+                  }
+              },
+              "channelTitle": "StarkWare",
+              "tags": [
+                  "Cairo",
+                  "StarkNet",
+                  "StarkWare",
+                  "blockchain",
+                  "decentralized",
+                  "decentralization",
+                  "permissionless"
+              ],
+              "categoryId": "28",
+              "liveBroadcastContent": "none",
+              "localized": {
+                  "title": "Starknet Community Call #40 | AMA with Giza tech",
+                  "description": "Giza is a permissionless protocol in Starknet for deploying machine learning models on-chain, performing verifiable inferences, and enabling an open AI economy."
+              },
+              "defaultAudioLanguage": "en-US"
+          },
+          "contentDetails": {
+              "duration": "PT43M15S",
+              "dimension": "2d",
+              "definition": "hd",
+              "caption": "false",
+              "licensedContent": false,
+              "contentRating": {},
+              "projection": "rectangular"
+          }
+      }
+  },
+  "topic": [
+      "c509a814-84b5-4552-b21e-980b92f215f6"
+  ],
+  "short_desc": "Giza is a permissionless protocol in Starknet for deploying machine learning models on-chain, performing verifiable inferences, and enabling an open AI economy.",
+  "image": "/assets/communitycall-40-ama-with-giza-tech-youtube.png",
+  "blocks": [],
+  "locale": "en",
+  "sourceFilepath": "_data/posts/starknet-community-call-40-ama-with-giza-tech.yml",
+  "gitlog": {
+      "hash": "66cd9a2a286b1ab0fbde9d56c2f420683ac881c9",
+      "date": "2023-04-27T11:30:15+04:00",
+      "message": "update data",
+      "refs": "HEAD -> articles-read-time, origin/articles-read-time",
+      "body": "",
+      "author_name": "Tsotne Nazarashvili",
+      "author_email": "cotne.95@gmail.com"
+  },
+  "objectID": "posts:en:starknet-community-call-40-ama-with-giza-tech.yml",
+  "_highlightResult": {
+      "title": {
+          "value": "Starknet Community Call #40 | AMA with Giza tech",
+          "matchLevel": "none",
+          "matchedWords": []
+      },
+      "published_date": {
+          "value": "2023-04-23T08:34:02.316Z",
+          "matchLevel": "none",
+          "matchedWords": []
+      },
+      "locale": {
+          "value": "en",
+          "matchLevel": "none",
+          "matchedWords": []
+      }
+  },
+  "__position": 1
+}
+
+const articleCategory = {
+  "id": "community-and-events",
+  "name": "Community & Events",
+  "slug": "community-and-events",
+  "locale": "en",
+  "objectID": "categories:en:community-and-events.yml",
+  "sourceFilepath": "_data/categories/community-and-events.yml"
+}
+
 export const Gridcard = () => (
   <ThemeProvider>
     <Grid
@@ -505,6 +633,38 @@ export const Listcard = () => (
     </Flex>
   </ThemeProvider>
 );
+
+export const Article = (args: { type?: "featured" | "grid" }) => {
+  const {
+    type
+  } = args;
+  return (
+  <ThemeProvider>
+    <Flex gap={4} direction="column" flex={1} maxWidth="1000px">
+    <ArticleCard.Root
+        type={type}
+        href={`/${articleData.locale}/posts/${articleCategory.slug}/${articleData.slug}`}
+      >
+        <ArticleCard.Image url={articleData.image} type={type} />
+
+        <ArticleCard.Body type={type}>
+          <ArticleCard.Category category={articleCategory} />
+          <ArticleCard.Content
+            title={articleData.title}
+            excerpt={articleData.short_desc}
+            type={type}
+          />
+          <ArticleCard.Footer
+            postType={articleData.post_type}
+            publishedAt={moment(articleData.published_date).format("MMM DD, YYYY")}
+            timeToConsume={articleData.time_to_consume}
+            type={type}
+          />
+        </ArticleCard.Body>
+      </ArticleCard.Root></Flex>
+  </ThemeProvider>
+)
+};
 
 export const ImageIcon = (args: { variant?: "image_icon_link_card" | "icon_link_card" | "dapp" | "large_card" | "community_card";
 title: string;
@@ -874,5 +1034,6 @@ ImageIcon.args = {
   withIllustration: true,
   variant: "image_icon_link_card",
   columns: 4,
-  orientation: "left"
+  orientation: "left",
+  type: "featured"
 }

@@ -6,7 +6,6 @@ import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { translateFile } from "./crowdin";
-
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
   readonly sourceFilepath: string;
@@ -27,6 +26,7 @@ export interface Post extends Meta {
   readonly published_date: string;
   readonly toc: boolean;
   readonly video: any;
+  readonly featured: boolean;
   readonly timeToConsume: string;
   blocks: readonly any[];
 }
@@ -38,10 +38,10 @@ export async function fileToPost(
   const resourceName = "posts";
 
   const sourceFilepath = path.join("_data", resourceName, filename);
+  const blogPostsSourceFilepath = path.join("_data", 'settings', 'blog-posts.yml');
   const sourceData = await yaml(sourceFilepath);
-
+  const blogPosts = await yaml(blogPostsSourceFilepath);
   const data = await translateFile(locale, resourceName, filename);
-
   const slug = slugify(sourceData.title);
 
   function formatDuration(duration: string): string {
@@ -105,6 +105,7 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
+    featured: blogPosts.featured_post === data.id,
     timeToConsume,
   };
 }
