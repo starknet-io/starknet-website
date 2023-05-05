@@ -103,6 +103,7 @@ const Content = ({ title, excerpt, type = "grid" }: ContentProps) => {
         variant={type === "featured" ? "h2" : "h4"}
         fontWeight="bold"
         noOfLines={type === "featured" ? 3 : 2}
+        {...type === "featured" && { fontSize: "2.7rem", lineHeight: "3.025rem" }}
       >
         {title}
       </Heading>
