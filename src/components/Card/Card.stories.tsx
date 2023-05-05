@@ -389,7 +389,47 @@ const list = [
       "__position": 4,
       "twitter": "https://twitter.com/myBraavos",
       "discord": "https://discord.gg/2Z8Z8Z"
-  }
+  },
+  {
+    name: "Paris Blockchain Week Summit",
+    description:
+      "The Paris Blockchain Week Summit is a two-day event that explores the latest developments in blockchain technology and its potential applications across a range of industries.",
+    url: "https://www.parisblockchainweek.com/summit#speakers",
+    start_date: "2023-03-20T09:50:05.569Z",
+    end_date: "2023-03-24T09:50:05.575Z",
+    image: "/assets/paris_blockchain_week-summit-2x.png",
+    location: "europe",
+    tags: ["crypto", "blockchain", "Paris"],
+    type_list: [
+      {
+        url: "https://www.parisblockchainweek.com/summit#speakers",
+        type: "ios",
+      },
+      {
+        url: "https://www.parisblockchainweek.com/summit#speakers",
+        type: "android",
+      },
+    ],
+    city: "London",
+    country: "UK",
+    slug: "paris-blockchain-week-summit",
+    locale: "en",
+    sourceFilepath: "_data/events/en/paris-blockchain-week-summit.yml",
+    objectID: "events:en:paris-blockchain-week-summit.yml",
+    _highlightResult: {
+      locale: {
+        value: "en",
+        matchLevel: "none",
+        matchedWords: [],
+      },
+    },
+    __position: 4,
+    recap: {
+      label: "Read the summary of this event",
+      link: "https://www.parisblockchainweek.com/summit#speakers",
+      isExternal: true,
+    },
+  },
 ];
 
 const articleData = {
@@ -586,6 +626,7 @@ export const Listcard = () => (
             country={hit.country}
             twitterHandle={hit.twitter}
             discordHandle={hit.discord}
+            recap={hit.recap}
           />
         );
       })}

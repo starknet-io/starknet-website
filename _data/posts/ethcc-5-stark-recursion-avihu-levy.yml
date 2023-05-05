@@ -2,7 +2,6 @@ id: ebd73eba-a04a-4088-b879-890a7bdf36ff
 post_type: video
 title: "ETHCC (5): Stark Recursion - Avihu Levy "
 published_date: 2022-07-20T12:27:33.521Z
-time_to_consume: 24 min watch
 image: /assets/vid_events04.jpg
 category: community-calls
 topic:
@@ -14,7 +13,7 @@ video:
   id: mBYF5r-J1aw
   data:
     kind: youtube#video
-    etag: Es3EOT96qrhmNjhLkRuJuP1z3rE
+    etag: VClTnGmeyWRNKSZslmsPBs5YKMM
     id: mBYF5r-J1aw
     snippet:
       publishedAt: 2022-07-20T22:10:16Z
@@ -53,3 +52,11 @@ video:
           new capabilities will it unlock? which new peaks will we conquer using
           it?
       defaultAudioLanguage: zh-Hans
+    contentDetails:
+      duration: PT24M29S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

@@ -278,6 +278,22 @@ function CustomCategories({
   );
 }
 
+type VideoData = {
+  etag: string;
+  id: string;
+  kind: string;
+  snippet: object;
+  contentDetails: {
+    duration: string;
+  }
+}
+
+type Video = {
+  data: VideoData;
+  url: string;
+  id: string;
+}
+
 type Hit = {
   readonly id: string;
   readonly slug: string;
@@ -289,10 +305,17 @@ type Hit = {
   readonly locale: string;
   readonly filepath: string;
   readonly post_type: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
   readonly featured: boolean;
+  readonly blocks: Array<Block>;
+  readonly video: Video;
+  readonly timeToConsume: string;
 };
+
+interface Block {
+  body?: string;
+  type?: string;
+}
 
 function CustomHits({ categories }: Pick<Props, "categories">) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
@@ -358,7 +381,6 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
       >
         {filteredHits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
-
           const date = moment(hit.published_date).format("MMM DD, YYYY");
           const category = categories.find((c) => c.id === hit.category)!;
 
@@ -379,7 +401,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
               <ArticleCard.Footer
                 postType={hit.post_type}
                 publishedAt={date}
-                timeToConsume={hit?.time_to_consume}
+                timeToConsume={hit.timeToConsume}
               />
             </ArticleCard.Root>
           );

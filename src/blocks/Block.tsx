@@ -17,6 +17,7 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
+import { getHomeSEO } from "workspaces/cms-data/src/seo";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -124,7 +125,8 @@ export async function Block({ block, locale }: Props): JSX.Element {
       />
     );
   } else if (block.type === "home_hero") {
-    return <HomepageHero />;
+    const homeSEO = await getHomeSEO(locale);
+    return <HomepageHero seo={homeSEO} />;
   } else if (block.type === "dapps") {
     return (
       <BlockDapps

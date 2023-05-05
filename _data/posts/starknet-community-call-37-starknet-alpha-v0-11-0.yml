@@ -7,11 +7,13 @@ video:
   id: yh4F7Eii8Lw
   data:
     kind: youtube#video
-    etag: caisTHzp_z6K6fyxa60zQh27IdE
+    etag: rSfWARYLEQF1kxT7puYXOEMCBx0
     id: yh4F7Eii8Lw
     snippet:
-      publishedAt: 2023-03-23T03:46:03.000Z
-      liveBroadcastContent: none
+      publishedAt: 2023-03-23T03:46:03Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #37 | Starknet Alpha v0.11.0"
+      description: ""
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/yh4F7Eii8Lw/default.jpg
@@ -33,9 +35,7 @@ video:
           url: https://i.ytimg.com/vi/yh4F7Eii8Lw/maxresdefault.jpg
           width: 1280
           height: 720
-      defaultAudioLanguage: en-US
       channelTitle: StarkWare
-      title: "Starknet Community Call #37 | Starknet Alpha v0.11.0"
       tags:
         - Cairo
         - StarkNet
@@ -45,11 +45,19 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
+      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #37 | Starknet Alpha v0.11.0"
         description: ""
-      description: ""
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT38M21S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/community-calls-37.jpg
 category: community-calls
 topic:

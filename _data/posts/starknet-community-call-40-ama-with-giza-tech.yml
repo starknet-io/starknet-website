@@ -2,17 +2,20 @@ id: 9dac0c05-fed5-40ef-84cd-a5a504b0d2b3
 post_type: video
 title: "Starknet Community Call #40 | AMA with Giza tech"
 published_date: 2023-04-23T08:34:02.316Z
-time_to_consume: 43:15
 video:
   url: https://www.youtube.com/live/TJDTWJNLkbw?feature=share
   id: TJDTWJNLkbw
   data:
     kind: youtube#video
-    etag: fQHAfiwtCB3gcMfT0ZJsaVOwXZ8
+    etag: Kr7n5CvoSPeLRta6yHcgXTrEqKw
     id: TJDTWJNLkbw
     snippet:
-      publishedAt: 2023-04-19T01:31:02.000Z
-      liveBroadcastContent: none
+      publishedAt: 2023-04-19T01:31:02Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #40 | AMA with Giza tech"
+      description: Giza is a permissionless protocol in Starknet for deploying machine
+        learning models on-chain, performing verifiable inferences, and enabling
+        an open AI economy.
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/TJDTWJNLkbw/default.jpg
@@ -34,9 +37,7 @@ video:
           url: https://i.ytimg.com/vi/TJDTWJNLkbw/maxresdefault.jpg
           width: 1280
           height: 720
-      defaultAudioLanguage: en-US
       channelTitle: StarkWare
-      title: "Starknet Community Call #40 | AMA with Giza tech"
       tags:
         - Cairo
         - StarkNet
@@ -46,15 +47,21 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
+      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #40 | AMA with Giza tech"
         description: Giza is a permissionless protocol in Starknet for deploying machine
           learning models on-chain, performing verifiable inferences, and
           enabling an open AI economy.
-      description: Giza is a permissionless protocol in Starknet for deploying machine
-        learning models on-chain, performing verifiable inferences, and enabling
-        an open AI economy.
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT43M15S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/communitycall-40-ama-with-giza-tech-youtube.png
 category: community-calls
 topic:

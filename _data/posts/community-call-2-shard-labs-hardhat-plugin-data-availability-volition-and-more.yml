@@ -3,7 +3,6 @@ post_type: video
 title: "Community Call #2 | Shard Labs, HardHat plugin, Data availability,
   Volition and more"
 published_date: 2021-11-22T00:00:00+00:00
-time_to_consume: 55 min watch
 image: /assets/cc02.jpg
 category: community-calls
 topic:
@@ -15,7 +14,7 @@ video:
   id: LyvNiQd3oLY
   data:
     kind: youtube#video
-    etag: DN1vC_5LJcq7OlmcIMH8KbBLaHA
+    etag: 1WTsTH3tHguEdUri9f0VcDQQUD4
     id: LyvNiQd3oLY
     snippet:
       publishedAt: 2021-11-29T12:48:51Z
@@ -74,3 +73,11 @@ video:
           00:49:50 Getting involved as a non technical person
           00:52:00 Conclusion
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT55M5S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

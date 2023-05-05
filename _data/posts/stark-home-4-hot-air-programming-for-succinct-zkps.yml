@@ -2,7 +2,6 @@ id: b5183be6-8d4e-4146-ae7f-6ecc202a9762
 post_type: video
 title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
 published_date: 2020-04-20T14:09:43.156Z
-time_to_consume: 80 min watch
 image: /assets/starkhome04.png
 category: stark-math
 topic:
@@ -14,7 +13,7 @@ video:
   id: kHhpIvEbDy0
   data:
     kind: youtube#video
-    etag: 0tdtpbbUQl6agEafiV6N1hfQxio
+    etag: P_hNGt7A9OeT4PRzRxRHI0BiCdI
     id: kHhpIvEbDy0
     snippet:
       publishedAt: 2020-04-20T15:39:01Z
@@ -42,3 +41,11 @@ video:
         title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
         description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
           hands in the air to explain this concept
+    contentDetails:
+      duration: PT1H19M59S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

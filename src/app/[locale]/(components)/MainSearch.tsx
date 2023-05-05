@@ -13,6 +13,7 @@ import React, {
   Fragment,
   useEffect,
   useMemo,
+  useState,
   useRef,
 } from "react";
 import { createRoot, Root } from "react-dom/client";
@@ -25,14 +26,44 @@ import type { Page } from "@starknet-io/cms-data/src/pages";
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
-import { Box } from "@chakra-ui/react";
+import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
 
 export function Autocomplete<TItem extends BaseItem>(
-  props: Partial<AutocompleteOptions<TItem>>,
+  props: Partial<AutocompleteOptions<TItem>>
 ) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const panelRootRef = useRef<Root>();
   const rootRef = useRef<HTMLElement>();
+
+  function openSearch(event: KeyboardEvent) {
+    if (event.key === "/") {
+      const el = containerRef.current?.querySelector(
+        ".aa-DetachedSearchButton"
+      ) as HTMLElement;
+      el?.click();
+    } else if (event.key === "k") {
+      if (
+        (navigator.platform === "MacIntel" && event.metaKey) ||
+        (navigator.platform !== "MacIntel" && event.ctrlKey)
+      ) {
+        const el = containerRef.current?.querySelector(
+          ".aa-DetachedSearchButton"
+        ) as HTMLElement;
+        el?.click();
+      }
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.document.addEventListener("keydown", openSearch);
+    }
+    return () => {
+      if (typeof window !== "undefined") {
+        window.document.removeEventListener("keydown", openSearch);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -42,6 +73,7 @@ export function Autocomplete<TItem extends BaseItem>(
     const search = autocomplete({
       ...props,
       container: containerRef.current,
+      openOnFocus: true,
       renderer: { createElement, Fragment, render: () => {} },
       render({ children }, root) {
         if (!panelRootRef.current || rootRef.current !== root) {
@@ -69,13 +101,17 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  seo: {
+    title: string;
+    cancel: string;
+  };
 }
 
-export function MainSearch({ env }: Props): JSX.Element | null {
+export function MainSearch({ env, seo }: Props): JSX.Element | null {
   const data = useMemo(() => {
     const searchClient = algoliasearch(
       env.ALGOLIA_APP_ID,
-      env.ALGOLIA_SEARCH_API_KEY,
+      env.ALGOLIA_SEARCH_API_KEY
     );
 
     const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin({
@@ -143,106 +179,134 @@ export function MainSearch({ env }: Props): JSX.Element | null {
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
   const locale = useLocale();
+  const [searchBox, setSearchBox] = useState<HTMLElement>();
+  useEffect(() => {
+    setSearchBox(
+      window.document.querySelector(".aa-DetachedSearchButton") as HTMLElement
+    );
+  }, []);
+
+  console.log("seo.title", seo.title);
 
   return (
-    <Autocomplete<any>
-      detachedMediaQuery=""
-      openOnFocus={true}
-      plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
-      getSources={({ query }) => {
-        if (!query) return [];
+    <Box position="relative">
+      <Autocomplete<any>
+        detachedMediaQuery=""
+        openOnFocus={true}
+        plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
+        placeholder={seo.title}
+        getSources={({ query }) => {
+          if (!query) return [];
 
-        return [
-          {
-            sourceId: "posts",
-            getItems() {
-              return getAlgoliaResults({
-                searchClient: data.searchClient,
+          return [
+            {
+              sourceId: "posts",
+              getItems() {
+                return getAlgoliaResults({
+                  searchClient: data.searchClient,
 
-                queries: [
-                  {
-                    params: {
-                      facetFilters: [`locale:${locale}`],
-                      hitsPerPage: 5,
+                  queries: [
+                    {
+                      params: {
+                        facetFilters: [`locale:${locale}`],
+                        hitsPerPage: 5,
+                      },
+                      indexName: `web_posts_${env.ALGOLIA_INDEX}`,
+                      query,
                     },
-                    indexName: `web_posts_${env.ALGOLIA_INDEX}`,
-                    query,
-                  },
-                ],
-              });
-            },
-            templates: {
-              header() {
-                return (
-                  <Fragment>
-                    <span className="aa-SourceHeaderTitle">Posts</span>
-                  </Fragment>
-                );
+                  ],
+                });
               },
-              item: PostItem,
-            },
-          },
-          {
-            sourceId: "pages",
-            getItems() {
-              return getAlgoliaResults({
-                searchClient: data.searchClient,
-                queries: [
-                  {
-                    params: {
-                      facetFilters: [`locale:${locale}`],
-                      hitsPerPage: 5,
-                    },
-                    indexName: `web_pages_${env.ALGOLIA_INDEX}`,
-                    query,
-                  },
-                ],
-              });
-            },
-            templates: {
-              header() {
-                return (
-                  <Fragment>
-                    <span className="aa-SourceHeaderTitle">Pages</span>
-                  </Fragment>
-                );
+              templates: {
+                header() {
+                  return (
+                    <Fragment>
+                      <span className="aa-SourceHeaderTitle">Posts</span>
+                    </Fragment>
+                  );
+                },
+                item: PostItem,
               },
-              item: PageItem,
             },
-          },
-          {
-            sourceId: "docs",
-            getItems() {
-              return getAlgoliaResults({
-                searchClient: data.searchClient,
-                queries: [
-                  {
-                    params: {
-                      hitsPerPage: 5,
-                      attributesToSnippet: ["title:8", "content:10"],
-                      snippetEllipsisText: "...",
+            {
+              sourceId: "pages",
+              getItems() {
+                return getAlgoliaResults({
+                  searchClient: data.searchClient,
+                  queries: [
+                    {
+                      params: {
+                        facetFilters: [`locale:${locale}`],
+                        hitsPerPage: 5,
+                      },
+                      indexName: `web_pages_${env.ALGOLIA_INDEX}`,
+                      query,
                     },
+                  ],
+                });
+              },
+              templates: {
+                header() {
+                  return (
+                    <Fragment>
+                      <span className="aa-SourceHeaderTitle">Pages</span>
+                    </Fragment>
+                  );
+                },
+                item: PageItem,
+              },
+            },
+            {
+              sourceId: "docs",
+              getItems() {
+                return getAlgoliaResults({
+                  searchClient: data.searchClient,
+                  queries: [
+                    {
+                      params: {
+                        hitsPerPage: 5,
+                        attributesToSnippet: ["title:8", "content:10"],
+                        snippetEllipsisText: "...",
+                      },
 
-                    indexName: "starknet-docs-dev",
-                    query,
-                  },
-                ],
-              });
-            },
-            templates: {
-              header() {
-                return (
-                  <Fragment>
-                    <span className="aa-SourceHeaderTitle">Documentation</span>
-                  </Fragment>
-                );
+                      indexName: "starknet-docs-dev",
+                      query,
+                    },
+                  ],
+                });
               },
-              item: DocsItem,
+              templates: {
+                header() {
+                  return (
+                    <Fragment>
+                      <span className="aa-SourceHeaderTitle">
+                        Documentation
+                      </span>
+                    </Fragment>
+                  );
+                },
+                item: DocsItem,
+              },
             },
-          },
-        ];
-      }}
-    />
+          ];
+        }}
+      />
+      <Kbd
+        background={useColorModeValue("kbd-bg", "kbd-bg")}
+        color={useColorModeValue("kbd-fg", "kbd-fg")}
+        padding="7px 14px"
+        borderRadius="4px"
+        borderWidth="1px"
+        position="absolute"
+        top="7px"
+        right="8px"
+        cursor="pointer"
+        onClick={() => searchBox?.click()}
+        display={{ base: "none", md: "block" }}
+      >
+        /
+      </Kbd>
+    </Box>
   );
 }
 
@@ -470,7 +534,7 @@ export function RecentSearchesItem({
   onRemove: (itemId: string) => void;
 }) {
   const onSelectItem = (
-    e: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>,
+    e: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
     e.stopPropagation();
