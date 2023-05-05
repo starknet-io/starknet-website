@@ -95,6 +95,6 @@ export const postsCollectionConfig = {
       label: "Blocks",
       widget: "list",
       types: topLevelBlocks,
-    },
+    }
   ],
 } satisfies CmsCollection;
