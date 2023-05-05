@@ -282,13 +282,16 @@ function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
       let month = startDate.getMonth();
       let year = startDate.getFullYear();
       let key = `${year}-${month + 1}`;
+      if (isPastEvent && !hit.show_in_past_events) {
+        return;
+      }
       if (!hitsByMonthDict[key]) {
         hitsByMonthDict[key] = [];
       }
       hitsByMonthDict[key].push(hit);
     });
     return hitsByMonthDict;
-  }, [hits]);
+  }, [hits, isPastEvent]);
 
   return (
     <>
