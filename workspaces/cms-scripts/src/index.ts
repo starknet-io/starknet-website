@@ -52,7 +52,7 @@ const simpleFiles = [
   await getSimpleFiles("settings", "fiat-on-ramps"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
-  await getSimpleFiles("settings", "blog-posts"),
+  await getSimpleFiles("settings", "blog-posts", true),
   await getSimpleFiles("seo", "events", true),
   await getSimpleFiles("seo", "tutorials", true),
   await getSimpleFiles("seo", "jobs", true),
