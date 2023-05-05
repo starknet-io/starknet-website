@@ -62,7 +62,7 @@ const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
       startOfDay(new Date())
     )} OR end_date_ts > ${getUnixTime(startOfDay(new Date()))}`;
   }
-  return `start_date_ts < ${getUnixTime(
+  return `NOT show_in_past_events:false AND start_date_ts < ${getUnixTime(
     startOfDay(new Date())
   )} AND end_date_ts < ${getUnixTime(startOfDay(new Date()))}`;
 };
@@ -282,16 +282,13 @@ function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
       let month = startDate.getMonth();
       let year = startDate.getFullYear();
       let key = `${year}-${month + 1}`;
-      if (isPastEvent && !hit.show_in_past_events) {
-        return;
-      }
       if (!hitsByMonthDict[key]) {
         hitsByMonthDict[key] = [];
       }
       hitsByMonthDict[key].push(hit);
     });
     return hitsByMonthDict;
-  }, [hits, isPastEvent]);
+  }, [hits]);
 
   return (
     <>
