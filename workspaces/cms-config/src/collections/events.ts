@@ -148,7 +148,7 @@ export const eventsCollectionConfig = {
     },
     {
       name: "show_in_past_events",
-      label: "Show in Past Events",
+      label: "Show in Past Events (after it ends)",
       widget: "boolean",
       default: true,
     },
