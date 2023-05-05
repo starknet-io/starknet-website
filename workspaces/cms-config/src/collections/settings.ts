@@ -406,21 +406,13 @@ export const settingsCollectionConfig = {
       crowdin: true,
       fields: [
         {
+          name: "featured_post",
           label: "Featured post",
-          name: "items",
-          widget: "list",
-          max: 1,
-          fields: [
-            {
-              name: "featured_post",
-              label: "Featured post",
-              widget: "relation",
-              collection: "posts",
-              search_fields: ["title"],
-              value_field: "id",
-              display_fields: ["title"],
-            },
-          ],
+          widget: "relation",
+          collection: "posts",
+          search_fields: ["title"],
+          value_field: "id",
+          display_fields: ["title"],
         },
       ],
     },
