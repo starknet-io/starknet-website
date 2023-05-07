@@ -10,11 +10,8 @@ video:
     etag: 5pKudc_jtshVJjywb3c-upaVx1A
     id: VMNreeZkAgI
     snippet:
-      publishedAt: 2023-03-09T02:42:59Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #35 | SHARP - the backbone of Starknet"
-      description: Join us for the 35th Community Call with Kineret Segal from
-        StarkWare, to learn about Starknet's prover, SHARP.
+      publishedAt: 2023-03-09T02:42:59.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/VMNreeZkAgI/default.jpg
@@ -36,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/VMNreeZkAgI/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #35 | SHARP - the backbone of Starknet"
       tags:
         - Cairo
         - StarkNet
@@ -46,12 +45,13 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #35 | SHARP - the backbone of Starknet"
         description: Join us for the 35th Community Call with Kineret Segal from
           StarkWare, to learn about Starknet's prover, SHARP.
-      defaultAudioLanguage: en-US
+      description: Join us for the 35th Community Call with Kineret Segal from
+        StarkWare, to learn about Starknet's prover, SHARP.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT54M11S
       dimension: 2d
@@ -64,5 +64,6 @@ image: /assets/community-calls-35.jpg
 category: community-calls
 topic:
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
 short_desc: Join us for the 35th Community Call with Kineret Segal from
   StarkWare, to learn about Starknet's prover, SHARP.

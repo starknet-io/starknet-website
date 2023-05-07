@@ -1,5 +1,5 @@
 id: 21969390-ba50-4224-b099-d3ae208c3aa9
-post_type: article
+post_type: video
 title: " Starknet Community Call #41 | Introduction to SHARP Verifier smart contact"
 published_date: 2023-05-03T07:57:22.547Z
 video:
@@ -10,20 +10,8 @@ video:
     etag: MSXw_G1LvF0WnJSbjKjESVzVetQ
     id: jPxD9h7BdzU
     snippet:
-      publishedAt: 2023-05-03T01:38:25Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #41 | Introduction to SHARP Verifier smart
-        contact"
-      description: >-
-        In this session, we will cover:
-
-        - The different smart contracts that live on Ethereum Mainnet
-
-        - What each of them does from a high-level view
-
-        - What are the different steps for a proof to be validated?
-
-        - What are the different steps for a Starknet block to be validated on L1?
+      publishedAt: 2023-05-03T01:38:25.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/jPxD9h7BdzU/default.jpg
@@ -45,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/jPxD9h7BdzU/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #41 | Introduction to SHARP Verifier smart
+        contact"
       tags:
         - Cairo
         - StarkNet
@@ -55,7 +46,6 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #41 | Introduction to SHARP Verifier smart
           contact"
@@ -69,7 +59,17 @@ video:
           - What are the different steps for a proof to be validated?
 
           - What are the different steps for a Starknet block to be validated on L1?
-      defaultAudioLanguage: en-US
+      description: >-
+        In this session, we will cover:
+
+        - The different smart contracts that live on Ethereum Mainnet
+
+        - What each of them does from a high-level view
+
+        - What are the different steps for a proof to be validated?
+
+        - What are the different steps for a Starknet block to be validated on L1?
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT59M26S
       dimension: 2d
@@ -80,6 +80,8 @@ video:
       projection: rectangular
 image: /assets/communitycall-41-intro-to-sharp-verifier-sc-youtube.png
 category: community-calls
+topic:
+  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
 short_desc: |-
   In this session, we will cover:
   - The different smart contracts that live on Ethereum Mainnet
