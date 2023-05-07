@@ -1,0 +1,174 @@
+id: da1a29ba-5d31-4a7b-91ca-77b22f54263a
+post_type: article
+title: Exploring the Use Cases of Cheap Computation
+toc: true
+published_date: 2023-05-06T10:37:34.408Z
+image: /assets/exploring-the-use-cases-of-cheap-computation-image.webp
+category: ecosystem
+topic:
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: What new use cases of cheap computation does Starknet enable, and
+  how can devs take advantage?
+blocks:
+  - type: markdown
+    body: >-
+      
+
+      High compute costs have held back blockchain adoption and use cases
+
+
+      * Starknet, a layer 2 Ethereum rollup, enables cheap computation
+
+      * Starknet already live on mainnet, with millions of transactions processed
+
+      * Possibilities for AI/ML integration with verifiable inference, on-chain model ensembles, and verifiable training
+
+      * Developers can use the Starknet book to learn about Cairo and build on Starknet
+
+
+      In the bull markets of 2021 (or Pepe season May 2023), when everyone was talking about crypto and sending out millions of transactions on Ethereum, gas prices could reach as high as 200 or more Gwei. That meant if you wanted to send 10 USDC to someone on Ethereum, it would cost you $50 or more. Not a very good deal.
+
+
+      With many new users of the blockchains, the demand for block space skyrocketed. This surge in gas prices on Ethereum (and other chains) exposed the limitations of monolithic blockchains. The public was ready — but the technology was not.
+
+
+      To address this issue, a shift to modular design emerged with “layer 2” solutions, a set of technologies built on top of a base blockchain that increases scalability and cost-effectiveness. As per Polynya’s [article](https://polynya.mirror.xyz/wnt16H0VnFoCGDK_ds5H4J1ZcHepZfQr1DQHCzw940o), “all blockchains worth their salt will pivot away from purely monolithic, in some way or another, over the coming years (unless the scale is not required, like Bitcoin).”
+
+
+      **Starknet —** a validity (or zero-knowledge) rollup — is a leader among these layer 2 solutions and has massively decreased the cost of computation. In this article, we’ll explore how high compute costs have held back blockchain, and then look in detail at several new use cases now possible through the cheap computation costs of Starknet.
+
+
+      ## Ethereum L2s
+
+
+      On Ethereum, a wide variety of these L2s have been developed, mainly within three solution categories: [optimistic rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/), and [state channels](https://ethereum.org/en/developers/docs/scaling/state-channels/).
+
+
+      The great thing about rollups is that they derive their security from Ethereum L1 (thus utilizing a decentralized network of over [600k validators](https://beaconcha.in/validators)). However, they also offer much faster and cheaper execution than a transaction on the mainnet. They achieve this by performing the computations outside of layer one (where computation is cheaper), but periodically posting the state of the L2 on the mainnet (to keep the security of the mainnet) as a bundle (hence “rolling up” the transactions).
+
+
+      ## What Is Starknet?
+
+
+      **Starknet** is a validity rollup (commonly known as a zero-knowledge rollup) developed by [StarkWare](https://starkware.co/starknet/) that uses cryptographic systems called STARKs to achieve decreased computation cost.
+
+
+      Today, the mainnet version of Starknet already has transaction fees much lower than Ethereum.In version 0.13.0 (expected to release in Q3 2023), Starknet’s transaction costs are expected to go down even more with the introduction of Volition (or off-chain data availability). Currently, 95% of the transaction fees on Starknet are due to the transaction costs on Ethereum Mainnet (the rest 5% is compute). Furthermore, once EIP 4844 is implemented on Layer 1, the team will push upgrades to adapt to it as soon as possible. As a result of these 2 upgrades, the transaction costs are expected to go down drastically.
+
+
+      ## Limitations of High Compute Costs
+
+
+      Aside from the outrageously high fees just to send tokens, there are other issues with high compute costs. Even today, many applications are limited in their use cases due to this high computation cost. And as blockchain technology continues to evolve, the demand for complex computations will increase. The high compute costs are creating limitations on the growth and adoption of decentralized applications. For example:
+
+
+      1. **Day-to-day transactions**. The promise of “crypto as cash” has yet to come true (except for [some](https://www.pwc.com/gx/en/financial-services/pdf/el-salvadors-law-a-meaningful-test-for-bitcoin.pdf) exceptions where you can “survive on crypto”). Along with regulatory uncertainty, one of the primary reasons for lack of mainstream day-to-day adoption has been expensive transactions. No one wants to pay $1 in transaction fees for a $2 coffee.
+
+      2. **Oracles**. Due to their inherent design and principles, blockchains cannot retrieve off-chain real-life data. In order to get data such as stock prices, weather data, sports match results, etc., special applications called oracles are used. These oracles periodically publish data on-chain, which smart contracts can then retrieve. However, due to the high cost of transactions, the oracles cannot publish data on-chain regularly, often publishing only at long intervals. As a result, the data on-chain becomes outdated and could potentially cause poor decisions to be made by smart contracts. This is particularly important to be able to deliver trading experiences on par with Web 2. On top of this, due to expensive execution, any kind of data aggregation or additional computation becomes unfeasible.
+
+      3. **Governance**. On-chain governance, or on-chain voting, is an effective way of making decision-making processes transparent and decentralized. Until now, for on-chain voting to occur, voters were required to cast their vote (based on the amount of token X they hold or any other mechanism to achieve voting power) by sending a transaction. However, for governance to be decentralized, effective decisions must be made often and quickly. As a result of high compute costs, on-chain voting has become an inefficient voting system. It’s too expensive to vote — so people simply don’t. Consequently, many projects have opted for off-chain governance, which undermines the purpose of blockchains.
+
+      4. **Gaming**. When we hear of on-chain gaming, the once-viral game [Axie Infinity](https://axieinfinity.com/) comes to mind. In the game developed by Sky Mavis, the game characters, Axies, were represented by NFTs. However, the game logic was running in a fashion similar to all the other traditional games — on a centralized server. Games require players to make numerous decisions in a short period, each representing a transaction of sorts. And based on the player’s decision, the game plot can change, which requires large amounts of computation. This limitation of expensive computation caused games like CryptoKitties and Axie Infinity to feature only limited on-chain components. However, by marketing themselves as “web3” games, they achieved a market cap of several billion dollars at their peak, despite not being genuinely representative of blockchain gaming.
+
+
+      ## Opening the Door to New Use Cases with Cheap Computation
+
+
+      However, if we can achieve cheap computation, we open a new set of blockchain use cases. Starknet is already live on mainnet and processes tens of thousands of transactions daily (with more than 7 million transactions done to date). As mentioned, once EIP-4844 is integrated, the cost of transactions will go down by orders of magnitude.
+
+
+      Let’s look at some of the use cases this cheap computation on Starknet enables.
+
+
+      ### Affordable transactions and Account Abstraction
+
+
+      The simplest of all is that with cheap transactions comes **day-to-day usage**. Paying for your coffee now only costs you a couple of cents (or even a fraction of a cent). Additionally, due to [account abstraction](https://medium.com/starkware/account-abstraction-improving-security-and-user-experience-for-mainstream-crypto-adoption-eb57cb09023), your crypto wallet functions similarly to a traditional wallet. Much like keeping the bulk of your finances in a secure savings account, you store most of your assets in a wallet with multiple security layers (e.g., requiring a trusted individual to co-sign large transfers or using a unique private key).
+
+
+      ### Transforming data feeds with affordable on-chain computation
+
+
+      With the introduction of cheap on-chain computation, oracles will look much different than today.
+
+
+      First, **frequent updates** of oracle feeds become possible since individual transactions cost much less. This will result in more accurate data feeds and will enable more use cases for the users to build markets based on this data (complicated options protocols, prediction markets, etc.).
+
+
+      Since Starknet is a rollup, it needs to periodically send a **commitment** on Ethereum mainnet to update the state of the rollup (generally the gap between commitments can be from a couple minutes to hours). This commitment is one of the significant costs that a user pays when paying transaction fees on an L2. However, rollups must only commit the *latest* state to the L1. Overwriting the same storage slot multiple times in a single block does not incur high storage costs. In case of oracles, if some variable (e.g. the price of some asset) is updated frequently within the same commitment, the L1 cost would still be equivalent to a single write, as only the final state is published to mainnet as calldata.
+
+
+      **Computational feeds** — or feeds of aggregated and computed data — become possible due to the cheaper cost of execution. In traditional finance, financial applications utilize sophisticated data feeds, including risk, yield, and volatility. Teams like [Pragma](https://www.pragmaoracle.com/) are working on bringing these feeds to web3. Pragma already has two computational feeds live on Starknet testnet — a volatility index and a yield curve.
+
+
+      The utilization of **storage proofs** will also change the landscape of oracles. Storage proofs are a cryptographic way to keep track of storage. Using these cryptographic commitments makes it possible to trustlessly prove that a particular state existed at a certain time (or at a specific block, in the case of blockchains). In order to verify these proofs, computations are needed (though they are very light), and cheap computation will enhance the UX. With storage proofs, it becomes possible to transfer information between different chains in a decentralized manner, offer historical data from the blockchain, and much more. If you want to dive deeper into storage proofs, [check out our Medium article](https://starkware.medium.com/what-are-storage-proofs-and-how-can-they-improve-oracles-e0379108720a).
+
+
+      ### The shift to on-chain game logic
+
+
+      The world of gaming is immense. The largest gaming market, the USA, generates a whopping [**54 billion USD** per annum](https://www.statista.com/forecasts/308454/gaming-revenue-countries) in revenue from gaming. Blockchain games have been in the spotlight recently, but as previously discussed, those games mainly belong to “web2.5” rather than being actual “web3” games.
+
+
+      In order for games to be actually considered a blockchain game, they must:
+
+
+      ![](/assets/cheap-computation-image-2.webp)
+
+
+      For the game logic to be completely on-chain, cheap execution is essential.
+
+
+      For the game to be considered a web3 game, an elementary “litmus test” could be whether the game could survive if the developers behind the game suddenly disappeared. This is very similar to how a smart contract lives on-chain; no matter if the developer of the smart contract is still active or not, the game should continue. Different interfaces could be built on the game logic if the basic game mechanics and rules are on-chain. The developers, on the other hand, would be incentivized to build with game-specific tokens. Even though no major game is currently wholly built on-chain, multiple projects on Starknet are working in the right direction, including [Realms](https://linktr.ee/BibliothecaDAO), and [Influence](https://venturebeat.com/games/unstoppable-games-will-launch-web3-sci-fi-mmo-influence-on-starknet/).
+
+
+      Ecosystem developers like [Dojo](https://dojoengine.org/) are working on providing an open-source ECS (Entity-Component-System) framework for the Starknet ecosystem. An ECS framework is a basic design pattern used to build games in a modular way. For example, for the case of Mario Kart, Mario and his car would be entities, the position and velocity of the cars would be components and the logic for car collisions would be implemented as a System. The game developer would then use these components to build the game. Projects like this are needed as the ecosystem grows, and more game developers are joining to build games on Starknet.
+
+
+      ### Transparent AI applications
+
+
+      With the recent buzz of artificial intelligence, it seems that AI may soon be integrated into our digital being. While it’s not a sure thing that AI models will be put on-chain, there are several reasons why this could be beneficial. And cheap computation is a must for these use cases.
+
+
+      1. **Verifiable inference** means that models are pre-trained in centralized servers. However, once training is done, the model weights could be published on-chain. Once this is done, inputs could be passed to the model on-chain, and the outputs would maintain transparency with the user having proof of the model generating a certain output.
+
+      2. **On-chain model ensembles** could be made possible if computation is cheap enough for models to be run to generate outputs on-chain. Outputs from multiple models could then be aggregated to form an “ensemble” model commonly used in ML applications.
+
+      3. **Verifiable training** would mean that models could be trained on-chain, maintaining verifiable proof of benign training without introducing external biases. This may be the most compute-intensive application of the above and also the least likely to be brought live soon. These days, large AI/ML models take days (or years) to train on GPUs with enormous resources. On top of this, generating S\[N/T]ARK proofs for the computation done while training would be an overhead right now. Moreover, Cairo specifically runs on CPUs (which are much slower than GPUs).
+
+
+      ![](/assets/cheap-computation-image-3.webp)
+
+
+      Source: [https://www.moduluslabs.xyz](https://www.moduluslabs.xyz/)
+
+
+      [Giza](https://starknet.substack.com/p/all-roads-lead-to-giza-starknet-roadmap?utm_source=substack&utm_medium=email) and [Modulus Labs](https://www.moduluslabs.xyz/) (*which also abbreviates to ML*) are some of the prime research teams working to bring AI on-chain using ZK proofs.
+
+
+      ## What is the future for Starknet?
+
+
+      In the near future, Starknet’s roadmap focuses on performance and a better UX. Increased throughput, reduced latency and lower transaction fees are expected by Q3 of 2023. For more details on the plans for development, you may refer to the roadmap given [here](https://medium.com/starkware/starknet-goals-and-roadmap-for-2023-fe7b89eead3b).
+
+
+      Cairo is designed specifically for STARK proving, making it optimal for harnessing the benefits of algebraic proof systems and ensuring efficient computation and verification processes.
+
+
+      Starknet is engineered for scalability, ensuring that it can accommodate exponential growth without sacrificing security, or decentralization.
+
+
+      ![](/assets/cheap-computation-image-4.webp)
+
+
+      ## Conclusion
+
+
+      With the intensive research around the “modular blockchain” space, the “bringing one billion users” goal is getting closer and closer. And with Starknet, cheap computation is here, [and it’s only getting cheaper](https://www.starknet.io/de/posts/engineering/starknet-performance-roadmap).
+
+
+      The growing [Starknet book](https://book.starknet.io/chapter_2/index.html) offers an excellent starting point for developers embarking on their Cairo journey for Starknet, with chapters 0 to 2 providing an introduction to various topics.
