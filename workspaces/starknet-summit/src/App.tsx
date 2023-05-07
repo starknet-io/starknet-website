@@ -37,7 +37,6 @@ const socialItems = [
 const baseId = import.meta.env.VITE_BASE_ID;
 const pat = import.meta.env.VITE_PERSONAL_ACCESS_TOKEN;
 const dbName = import.meta.env.VITE_AIRTABLE_DB_NAME;
-// const url = `https://api.airtable.com/v0/${baseId}/Subscribers`;
 const base = new airtable({ apiKey: pat }).base(baseId || "");
 
 function NewsletterForm(): JSX.Element {
