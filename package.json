@@ -21,6 +21,7 @@
     "cms": "yarn workspace @starknet-io/netlify-cms dev",
     "data": "yarn workspace @starknet-io/cms-scripts update-dynamic-data",
     "update:algolia": "yarn workspace @starknet-io/cms-scripts update-algolia-index",
+    "starknet-summit": "yarn workspace @starknet-io/starknet-summit dev",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "theme": "chakra-cli tokens src/style/theme.ts",
