@@ -1,3 +1,4 @@
+"use client";
 
 import {
   BreadcrumbItem,
@@ -13,15 +14,16 @@ import {
 import { Button } from "@ui/Button";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { useMemo } from "react";
-import algoliasearch from "algoliasearch/lite";
+import { useMemo, useState, useEffect } from "react";
+import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
   useRefinementList,
-} from "react-instantsearch-hooks-web";
+} from "src/libs/react-instantsearch-hooks-web";
 import type { Category } from "@starknet-io/cms-data/src/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
+import { useRouter } from "next/navigation";
 import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
@@ -30,7 +32,6 @@ import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/Re
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
-import { navigate } from 'vite-plugin-ssr/client/router'
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -51,7 +52,6 @@ export function PostsPage({
   categories,
   topics,
 }: Props): JSX.Element | null {
-  console.log("topics", topics);
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -178,6 +178,7 @@ type CustomTopicsProps = {
   refineTopics: (value: string) => void;
 };
 function CustomTopics({ topics, items, refineTopics }: CustomTopicsProps) {
+  // const router = useRouter();
   // const pathname = usePathname()!;
   // const searchParams = useSearchParams();
   // const topicSet = useMemo(() => {
@@ -234,7 +235,7 @@ function CustomCategories({
   categories,
   params,
 }: Pick<Props, "categories" | "params">) {
-
+  const router = useRouter();
 
   return (
     <Flex
@@ -251,9 +252,7 @@ function CustomCategories({
           as="a"
           isActive={params.category == null}
           onClick={() => {
-            navigate(`/${params.locale}/posts`, {
-              overwriteLastHistoryEntry: true
-            })
+            router.replace(`/${params.locale}/posts`);
           }}
         >
           All posts
@@ -268,9 +267,7 @@ function CustomCategories({
             onClick={() => {
               if (category.slug === params.category) return;
 
-              navigate(`/${params.locale}/posts/${category.slug}`, {
-                overwriteLastHistoryEntry: true
-              })
+              router.replace(`/${params.locale}/posts/${category.slug}`);
             }}
           >
             <> {category.name}</>
@@ -279,6 +276,22 @@ function CustomCategories({
       ))}
     </Flex>
   );
+}
+
+type VideoData = {
+  etag: string;
+  id: string;
+  kind: string;
+  snippet: object;
+  contentDetails: {
+    duration: string;
+  }
+}
+
+type Video = {
+  data: VideoData;
+  url: string;
+  id: string;
 }
 
 type Hit = {
@@ -292,15 +305,70 @@ type Hit = {
   readonly locale: string;
   readonly filepath: string;
   readonly post_type: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
+  readonly featured: boolean;
+  readonly blocks: Array<Block>;
+  readonly video: Video;
+  readonly timeToConsume: string;
 };
+
+interface Block {
+  body?: string;
+  type?: string;
+}
 
 function CustomHits({ categories }: Pick<Props, "categories">) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
+  const [featuredHit, setFeaturedHit] = useState<Hit>();
+  const [filteredHits, setFilteredHits] = useState<Hit[]>([]);
+  const [featuredHitDate, setFeaturedHitDate] = useState<string>();
+  const [featuredHitCategory, setFeaturedHitCategory] = useState<Category>(categories[0]);
+  useEffect(() => {
+    if (hits) {
+      setFeaturedHit(hits.find(hit => hit.featured === true))
+    }
+    const handleResize = () => {
+      if (window.innerWidth > 992) {
+        setFilteredHits(hits.filter(hit => hit.featured !== true))
+      } else {
+        setFilteredHits(hits);
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize)
+  }, [hits])
+  useEffect(() => {
+    if (hits && featuredHit) {
+      setFeaturedHitDate(moment(featuredHit.published_date).format("MMM DD, YYYY"));
+      setFeaturedHitCategory(categories.find((c) => c.id === featuredHit.category) || categories[0])
+    }
 
+  }, [hits, categories, featuredHit])
   return (
     <>
+      {featuredHit && window.innerWidth > 992 && <Box mb="48px">
+        <ArticleCard.Root
+          href={`/${featuredHit?.locale}/posts/${featuredHit?.category}/${featuredHit?.slug}`}
+          type="featured"
+        >
+          <ArticleCard.Image url={featuredHit?.image} type="featured" />
+
+          <ArticleCard.Body type="featured">
+            <ArticleCard.Category category={featuredHitCategory} />
+            <ArticleCard.Content
+              title={featuredHit?.title}
+              excerpt={featuredHit?.short_desc}
+              type="featured"
+            />
+            <ArticleCard.Footer
+              postType={featuredHit?.post_type}
+              publishedAt={featuredHitDate}
+              timeToConsume={featuredHit?.timeToConsume}
+              type="featured"
+            />
+          </ArticleCard.Body>
+        </ArticleCard.Root>
+      </Box>}
       <Grid
         templateColumns={{
           base: "repeat(auto-fit, minmax(280px, 1fr))",
@@ -311,9 +379,8 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
         columnGap="24px"
         rowGap="48px"
       >
-        {hits.map((hit, i) => {
+        {filteredHits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
-
           const date = moment(hit.published_date).format("MMM DD, YYYY");
           const category = categories.find((c) => c.id === hit.category)!;
 
@@ -334,7 +401,7 @@ function CustomHits({ categories }: Pick<Props, "categories">) {
               <ArticleCard.Footer
                 postType={hit.post_type}
                 publishedAt={date}
-                timeToConsume={hit?.time_to_consume}
+                timeToConsume={hit.timeToConsume}
               />
             </ArticleCard.Root>
           );

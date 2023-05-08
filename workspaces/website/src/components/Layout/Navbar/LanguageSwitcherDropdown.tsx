@@ -20,17 +20,21 @@ import { HiOutlineGlobeAlt } from "react-icons/hi2";
 import { PopoverIcon } from "./PopoverIcon";
 
 type Props = {
-  title?: string;
+  title: string;
+  description: string;
+  subtitle: string;
+  callToAction: string;
   children?: React.ReactNode;
   selectedLocale: string;
-  description?: string;
 };
 
 export const LanguageSwitcherDropdown = ({
+  title = "Languages",
   description,
+  subtitle,
+  callToAction,
   children,
   selectedLocale,
-  title = "Languages",
 }: Props) => (
   <Popover
     trigger="hover"
@@ -98,7 +102,7 @@ export const LanguageSwitcherDropdown = ({
                 textTransform="uppercase"
                 mb={5}
               >
-                Language Center
+                {subtitle}
               </Heading>
 
               <Text variant="cardBody">{description}</Text>
@@ -108,7 +112,7 @@ export const LanguageSwitcherDropdown = ({
                 variant="outline"
                 href="/en/community/language-support"
               >
-                Learn how to contribute
+                {callToAction}
               </Button>
             </Stack>
           </HStack>

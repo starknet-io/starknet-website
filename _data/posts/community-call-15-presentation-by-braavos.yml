@@ -2,7 +2,6 @@ id: c02eaf96-e99e-4cc4-94df-d1eab7166397
 post_type: video
 title: "Community Call #15 | Presentation by Braavos"
 published_date: 2022-05-24T14:07:30.249Z
-time_to_consume: 40 min watch
 image: /assets/cc15.jpg
 category: community-calls
 topic:
@@ -13,7 +12,7 @@ video:
   id: rnjkUexnJHw
   data:
     kind: youtube#video
-    etag: wj87ezk7tV7ofJtpIB7PMJPNxnc
+    etag: 9TkQCQTAtNDqi7QsOA4-Hj6jVUU
     id: rnjkUexnJHw
     snippet:
       publishedAt: 2022-05-25T01:18:27Z
@@ -48,3 +47,11 @@ video:
         title: "Starknet Community call #15 | Presentation by Braavos"
         description: Join us for our 15th community call - Presentation by Braavos
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT39M35S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

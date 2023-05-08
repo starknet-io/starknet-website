@@ -49,6 +49,10 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
   readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
+  readonly seo: {
+    title: string;
+    subtitle: string;
+  };
 }
 
 const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
@@ -62,7 +66,12 @@ const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
   )} AND end_date_ts < ${getUnixTime(startOfDay(new Date()))}`;
 };
 
-export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
+export function EventsPage({
+  params,
+  env,
+  mode,
+  seo,
+}: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -83,13 +92,17 @@ export function EventsPage({ params, env, mode }: Props): JSX.Element | null {
           filters={getEventFilter(mode)}
         />
 
-        <EventsPageLayout params={params} mode={mode} />
+        <EventsPageLayout params={params} mode={mode} seo={seo} />
       </InstantSearch>
     </Box>
   );
 }
 
-const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
+const EventsPageLayout = ({
+  params,
+  mode,
+  seo,
+}: Pick<Props, "params" | "mode" | "seo">) => {
   const { items: locations, refine: refineLocation } = useRefinementList({
     attribute: "location",
     sortBy: ["name:asc"],
@@ -107,8 +120,8 @@ const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
 
   return (
     <PageLayout
-      sectionHeaderTitle="Events"
-      sectionHeaderDescription="Find Starknet events, online or around the world."
+      sectionHeaderTitle={seo.title}
+      sectionHeaderDescription={seo.subtitle}
       breadcrumbs={
         <Breadcrumb separator="/">
           <BreadcrumbItem>
@@ -192,7 +205,7 @@ const EventsPageLayout = ({ params, mode }: Pick<Props, "params" | "mode">) => {
             />
             <CustomType types={types} refineTypes={refineTypes} />
           </MobileFiltersDrawer>
-          <CustomHits />
+          <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
         </Box>
       }
     />
@@ -257,7 +270,7 @@ function CustomType({
   );
 }
 
-function CustomHits() {
+function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
 
   const hitsByMonth = useMemo(() => {
@@ -330,6 +343,7 @@ function CustomHits() {
                     location={hit.location}
                     city={hit.city}
                     country={hit.country}
+                    recap={isPastEvent ? hit.recap : undefined}
                   />
                 );
               })}

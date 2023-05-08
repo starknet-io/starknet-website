@@ -1,10 +1,13 @@
+import { getJobsSEO } from "workspaces/cms-data/src/seo";
 import { AutoProps, JobsPage } from "./(components)/JobsPage";
 
 export const metadata = {
   title: "Jobs",
 };
 
-export default function Page(props: AutoProps) {
+export default async function Page(props: AutoProps) {
+  const seo = await getJobsSEO(props.params.locale);
+
   return (
     <>
       <JobsPage
@@ -14,6 +17,7 @@ export default function Page(props: AutoProps) {
           ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
           ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
         }}
+        seo={seo}
       />
     </>
   );

@@ -40,9 +40,13 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  readonly seo: {
+    readonly title: string;
+    readonly subtitle: string;
+  };
 }
 
-export function JobsPage({ params, env }: Props): JSX.Element | null {
+export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
@@ -57,13 +61,13 @@ export function JobsPage({ params, env }: Props): JSX.Element | null {
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
         />
-        <JobsPageLayout params={params} />
+        <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
     </Box>
   );
 }
 
-const JobsPageLayout = ({ params }: Pick<Props, "params">) => {
+const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
   const { items: roles, refine: refineRoles } = useRefinementList({
     attribute: "job.role",
     sortBy: ["name:asc"],
@@ -80,8 +84,8 @@ const JobsPageLayout = ({ params }: Pick<Props, "params">) => {
   ]);
   return (
     <PageLayout
-      sectionHeaderTitle="Jobs"
-      sectionHeaderDescription="Find a job with the best teams building on Starknet."
+      sectionHeaderTitle={seo.title}
+      sectionHeaderDescription={seo.subtitle}
       sectionHeaderBottomContent={
         <MobileFiltersButton
           filtersCount={filtersCount}

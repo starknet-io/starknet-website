@@ -2,7 +2,6 @@ id: 322f922f-27c8-48cc-924c-50314e2b8fc8
 post_type: video
 title: Encode AMA with Tom Brand, about Starknet and more
 published_date: 2022-06-22T15:49:29.553Z
-time_to_consume: 63 min watch
 image: /assets/interviews06.jpg
 category: ecosystem
 topic:
@@ -15,7 +14,7 @@ video:
   id: PlpnV_k-hek
   data:
     kind: youtube#video
-    etag: 5nOypTkHs_4-Tsqoi-LZy6uVqlU
+    etag: ZH9I3qzLzd98Q0SzytmTqb65lOA
     id: PlpnV_k-hek
     snippet:
       publishedAt: 2022-06-29T11:13:19Z
@@ -222,3 +221,11 @@ video:
 
           01:01:26 Conclusion
       defaultAudioLanguage: en-GB
+    contentDetails:
+      duration: PT1H2M44S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

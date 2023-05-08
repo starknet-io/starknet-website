@@ -2,7 +2,6 @@ id: 2a11ad69-453c-481c-afc3-9105e9593ef1
 post_type: video
 title: "STARK @ Home 14: One STARK to Rule Them All"
 published_date: 2020-10-23T14:31:05.601Z
-time_to_consume: 68 min watch
 image: /assets/starkhome14.png
 category: stark-math
 topic:
@@ -13,7 +12,7 @@ video:
   id: U0_71d7f0Ks
   data:
     kind: youtube#video
-    etag: 5dNS52DJwbOq8jblQbw2kUIx6AY
+    etag: J82r3Ao1onFjWeu9bjfbqll7Aiw
     id: U0_71d7f0Ks
     snippet:
       publishedAt: 2020-10-23T07:16:58Z
@@ -48,3 +47,11 @@ video:
         title: "STARK @ Home 14: One STARK to Rule Them All"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H8M5S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

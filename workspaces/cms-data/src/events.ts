@@ -14,6 +14,11 @@ export interface Event {
   readonly url: string;
   readonly tags: string[];
   readonly description: string;
+  readonly recap?: {
+    readonly label: string;
+    readonly link: string;
+    readonly isExternal: boolean;
+  };
 }
 
 export async function getEvents(

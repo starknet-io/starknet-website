@@ -35,7 +35,7 @@ export async function translateFile(
   const data = await yaml(dataFilepath);
 
   if ("files" in collection) {
-    const collectionFile = collection.files.find(
+    const collectionFile = collection.files!.find(
       (f) => path.basename(f.file) === filename
     )!;
 
@@ -45,9 +45,7 @@ export async function translateFile(
       translationFilepath
     );
   } else if ("folder" in collection) {
-    return translateFields(data, collection.fields, translationFilepath);
-  } else {
-    collection satisfies never;
+    return translateFields(data, collection.fields!, translationFilepath);
   }
 }
 

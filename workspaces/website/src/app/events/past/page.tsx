@@ -1,3 +1,4 @@
+import { getEventsSEO } from "workspaces/cms-data/src/seo";
 import { AutoProps, EventsPage } from "../(components)/EventsPage";
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
 };
 
 export default async function Page(props: AutoProps) {
+  const seo = await getEventsSEO(props.params.locale);
   return (
     <>
       <EventsPage
@@ -15,6 +17,7 @@ export default async function Page(props: AutoProps) {
           ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
           ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
         }}
+        seo={seo}
       />
     </>
   );

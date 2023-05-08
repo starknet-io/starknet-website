@@ -18,7 +18,7 @@ const files: Files[] = [];
 for (const collection of collections) {
   if (collection.crowdin) {
     if ("files" in collection) {
-      for (const collectionFile of collection.files) {
+      for (const collectionFile of collection.files!) {
         if (collectionFile.crowdin) {
           const data = await yaml(collectionFile.file);
 
@@ -40,12 +40,10 @@ for (const collection of collections) {
         handleFields(
           files,
           data,
-          collection.fields,
+          collection.fields!,
           path.join(collection.name, path.basename(filename, ".yml"))
         );
       }
-    } else {
-      collection satisfies never;
     }
   }
 }

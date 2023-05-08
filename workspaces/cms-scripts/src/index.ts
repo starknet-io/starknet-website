@@ -23,54 +23,57 @@ const simpleDataTypes = [
 ];
 
 for (const simpleData of simpleDataTypes) {
-  try {
-    await fs.mkdir(`public/data/${simpleData.resourceName}`, {
-      recursive: true,
-    });
+  await fs.mkdir(`public/data/${simpleData.resourceName}`, {
+    recursive: true,
+  });
 
-    for (const locale of locales) {
-      const data = simpleData.filenames.map((filename) =>
-        simpleData.filenameMap.get(`${locale}:${filename}`),
-      );
+  for (const locale of locales) {
+    const data = simpleData.filenames.map((filename) =>
+      simpleData.filenameMap.get(`${locale}:${filename}`)
+    );
 
-      await write(
-        `public/data/${simpleData.resourceName}/${locale}.json`,
-        data,
-      );
-    }
-  } catch (err) {
-    console.log("simpleData.resourceName", simpleData.resourceName);
-    console.log(err);
+    await write(
+      `public/data/${simpleData.resourceName}/${locale}.json`,
+      data
+    );
   }
 }
 
 const simpleFiles = [
-  await getSimpleFiles("dapps"),
-  await getSimpleFiles("wallets"),
-  await getSimpleFiles("block-explorers"),
-  await getSimpleFiles("bridges"),
-  await getSimpleFiles("fiat-on-ramps"),
-  await getSimpleFiles("redirects"),
-  await getSimpleFiles("alert"),
+  await getSimpleFiles("settings", "dapps"),
+  await getSimpleFiles("settings", "wallets"),
+  await getSimpleFiles("settings", "block-explorers"),
+  await getSimpleFiles("settings", "bridges"),
+  await getSimpleFiles("settings", "fiat-on-ramps"),
+  await getSimpleFiles("settings", "redirects"),
+  await getSimpleFiles("settings", "alert"),
+  await getSimpleFiles("settings", "blog-posts", true),
+  await getSimpleFiles("seo", "events", true),
+  await getSimpleFiles("seo", "tutorials", true),
+  await getSimpleFiles("seo", "jobs", true),
+  await getSimpleFiles("seo", "footer", true),
+  await getSimpleFiles("seo", "home", true),
+  await getSimpleFiles("seo", "language", true),
+  await getSimpleFiles("seo", "search", true),
 ];
 
 for (const simpleFile of simpleFiles) {
-  try {
-    await fs.mkdir(`public/data/${simpleFile.resourceName}`, {
-      recursive: true,
-    });
+  const resourceDir =
+    simpleFile.collectionName === "settings"
+      ? simpleFile.resourceName
+      : `${simpleFile.collectionName}/${simpleFile.resourceName}`;
 
-    for (const locale of locales) {
-      const data = simpleFile.localeMap.get(locale)!;
+  await fs.mkdir(`public/data/${resourceDir}`, {
+    recursive: true,
+  });
 
-      await write(
-        `public/data/${simpleFile.resourceName}/${locale}.json`,
-        data.items,
-      );
-    }
-  } catch (err) {
-    console.log("simpleFile.resourceName", simpleFile.resourceName);
-    console.log(err);
+  for (const locale of locales) {
+    const data = simpleFile.localeMap.get(locale)!;
+
+    await write(
+      `public/data/${resourceDir}/${locale}.json`,
+      simpleFile.writeRootData ? data : data.items
+    );
   }
 }
 
@@ -96,9 +99,9 @@ for (const data of pages.filenameMap.values()) {
     path.join(
       "public/data/pages",
       data.locale,
-      ...(data.breadcrumbs_data?.map((page) => page.slug) ?? []),
+      ...(data.breadcrumbs_data?.map((page) => page.slug) ?? [])
     ),
-    { recursive: true },
+    { recursive: true }
   );
 
   await write(path.join("public/data/pages", `${data.link}.json`), data);
@@ -111,13 +114,17 @@ for (const data of pages.filenameMap.values()) {
 await fs.mkdir("public/data/main-menu", { recursive: true });
 
 for (const locale of locales) {
-  const mainMenu: MainMenu = await translateFile(locale, "settings", 'main-menu.yml');
+  const mainMenu: MainMenu = await translateFile(
+    locale,
+    "settings",
+    "main-menu.yml"
+  );
 
   for (const mainMenuItem of mainMenu.items) {
     for (const column of mainMenuItem.columns ?? []) {
       for (const block of column.blocks ?? []) {
         block.items = block.items?.map((item) =>
-          handleLink(locale, item, pages, posts),
+          handleLink(locale, item, pages, posts)
         );
       }
     }

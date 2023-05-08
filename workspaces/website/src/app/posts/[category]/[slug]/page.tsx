@@ -7,7 +7,7 @@ import moment from "moment";
 import { notFound } from "next/navigation";
 import { Block } from "src/blocks/Block";
 import { getPostBySlug } from "@starknet-io/cms-data/src/posts";
-import { TableOfContents } from "src/app/(components)/TableOfContents";
+import { TableOfContents } from "src/app/[locale]/(components)/TableOfContents";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { Index } from "unist-util-index";
@@ -23,80 +23,82 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   HStack,
-} from "@chakra-ui/react";
-// import * as fs from "fs/promises";
-// import * as path from "path";
+} from "src/libs/chakra-ui";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
-// import { Metadata } from "next";
-// import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+import { Metadata } from "next";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import Link from "next/link";
-import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
 
-// export async function generateMetadata(props: Props): Promise<Metadata> {
-//   try {
-//     const post = await getPostBySlug(props.params.slug, props.params.locale);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  try {
+    const post = await getPostBySlug(props.params.slug, props.params.locale);
 
-//     const PUBLIC_URL =
-//       import.meta.env.VERCEL_URL && import.meta.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
-//         ? import.meta.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
-//           ? `https://starknet-website-dev.vercel.app`
-//           : import.meta.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
-//           ? `https://www.starknet.io`
-//           : `https://${import.meta.env.VERCEL_URL}`
-//         : "";
+    const PUBLIC_URL =
+      process.env.VERCEL_URL && process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
+        ? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
+          ? `https://starknet-website-dev.vercel.app`
+          : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
+          ? `https://www.starknet.io`
+          : `https://${process.env.VERCEL_URL}`
+        : "";
 
-//     return {
-//       title: post.title,
-//       description: post.short_desc,
-//       openGraph: {
-//         type: "article",
-//         title: post.title,
-//         description: post.short_desc,
-//         images: `${PUBLIC_URL}${post.image}`,
-//       },
-//       twitter: {
-//         card: "summary_large_image",
-//         title: post.title,
-//         description: post.short_desc,
-//         images: `${PUBLIC_URL}${post.image}`,
-//       },
-//     };
-//   } catch {
-//     return {};
-//   }
-// }
+    return {
+      title: post.title,
+      description: post.short_desc,
+      openGraph: {
+        type: "article",
+        title: post.title,
+        description: post.short_desc,
+        images: `${PUBLIC_URL}${post.image}`,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.title,
+        description: post.short_desc,
+        images: `${PUBLIC_URL}${post.image}`,
+      },
+    };
+  } catch {
+    return {};
+  }
+}
 
-// export async function generateStaticParams() {
-//   const params = [];
+export async function generateStaticParams() {
+  const params = [];
 
-//   for (const locale of preRenderedLocales) {
-//     const files = await fs.readdir(
-//       path.join(process.cwd(), "public/data/posts", locale)
-//     );
+  for (const locale of preRenderedLocales) {
+    const files = await fs.readdir(
+      path.join(process.cwd(), "_crowdin/data/posts", locale)
+    );
 
-//     const categories = await getCategories(locale);
+    const categories = await getCategories(locale);
 
-//     for (const slug of files) {
-//       const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
-//       const category = categories.find((c) => c.id === post.category)!;
+    for (const slug of files) {
+      const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
+      const category = categories.find((c) => c.id === post.category)!;
 
-//       params.push({
-//         locale,
-//         slug: post.slug,
-//         category: category.slug,
-//       });
-//     }
-//   }
+      params.push({
+        locale,
+        slug: post.slug,
+        category: category.slug,
+      });
+    }
+  }
 
-//   return params;
-// }
+  return params;
+}
 
 export interface Props {
   readonly params: LocaleParams & {
     readonly slug: string;
   };
+}
+interface Block {
+  body?: string;
+  type?: string;
 }
 
 interface HeadingData {
@@ -177,19 +179,15 @@ function pageToTableOfContents(page: any): readonly HeadingData[] {
   return data;
 }
 
-export default function Page({
+export default async function Page({
   params: { slug, locale },
-}: Props): JSX.Element | void {
+}: Props): Promise<JSX.Element> {
   try {
-    const pageContext = usePageContext();
-    const post = useAsync(['getPostBySlug', slug, locale], () => getPostBySlug(slug, locale, pageContext.event))
-    const categories = useAsync(['getCategories', locale], () => getCategories(locale, pageContext.event))
-    const topics = useAsync(['getTopics', locale], () => getTopics(locale, pageContext.event))
-
+    const post = await getPostBySlug(slug, locale);
+    const categories = await getCategories(locale);
+    const topics = await getTopics(locale);
     const category = categories.find((c) => c.id === post.category)!;
-
     let videoId = post.post_type === "video" ? post.video?.id : undefined;
-
     return (
       <PageLayout
         breadcrumbs={
@@ -259,7 +257,7 @@ export default function Page({
                   {moment(post.published_date).format("MMM DD,YYYY")} ·
                 </Text>
                 <Text fontSize="sm" color="muted">
-                  {post.time_to_consume}
+                  {post.timeToConsume}
                 </Text>
               </HStack>
               <Spacer />

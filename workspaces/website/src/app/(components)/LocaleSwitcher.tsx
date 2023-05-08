@@ -5,8 +5,9 @@ import { useLocale } from "./ClientLocaleProvider";
 import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDropdown";
 import { ColumnLink, ColumnLinkDescription } from "@ui/ColumnLink/ColumnLink";
 import { HStack } from "@chakra-ui/react";
+import { LanguageCenterSEO } from "workspaces/cms-data/src/seo";
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ seo }: { seo: LanguageCenterSEO }) {
   const locale = useLocale();
   console.log(locale)
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;
@@ -15,7 +16,10 @@ export default function LocaleSwitcher() {
 
   return (
     <LanguageSwitcherDropdown
-      description=" As part of the Starknet community’s drive to be globally accessible we’ll be rolling out our translation program soon. We are inviting members of the community to tell us which languages they would like to see available on the site and also to help us with translations. Follow the link below to find out how you can contribute."
+      title={seo.title}
+      description={seo.description}
+      subtitle={seo.subtitle}
+      callToAction={seo.callToAction}
       selectedLocale={localeConfig.code}
     >
       {i18nConfig

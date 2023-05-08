@@ -399,5 +399,22 @@ export const settingsCollectionConfig = {
         },
       ],
     },
+    {
+      label: "Blog posts",
+      name: "blog-posts",
+      file: `_data/settings/blog-posts.yml`,
+      crowdin: true,
+      fields: [
+        {
+          name: "featured_post",
+          label: "Featured post",
+          widget: "relation",
+          collection: "posts",
+          search_fields: ["title"],
+          value_field: "id",
+          display_fields: ["title"],
+        },
+      ],
+    },
   ],
 } satisfies CmsCollection;

@@ -2,7 +2,6 @@ id: 247b09d9-8c93-43e6-9f31-0253d4ff777c
 post_type: video
 title: "STARK @ Home 27: Recursing on Recursion"
 published_date: 2022-11-16T16:30:42.081Z
-time_to_consume: 67 min watch
 image: /assets/starkhome27.jpg
 category: stark-math
 topic:
@@ -14,7 +13,7 @@ video:
   id: 1QFK2xoOacc
   data:
     kind: youtube#video
-    etag: LpwpOholXPA_jm1hoqvWB5uIT1o
+    etag: YlbAuAMAOOd8yXgYuosHlb_4uvY
     id: 1QFK2xoOacc
     snippet:
       publishedAt: 2022-11-16T07:45:13Z
@@ -89,3 +88,11 @@ video:
 
           For more preparatory information please see our previous episode on recursion and the recent StarkNet Community Call on the topic.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H6M35S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

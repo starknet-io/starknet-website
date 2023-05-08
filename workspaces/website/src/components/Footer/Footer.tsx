@@ -21,9 +21,13 @@ import { StarknetLogo } from "../Logo/StarknetLogo";
 
 type RootProps = {
   children: React.ReactNode;
-} & ChakraBoxProps;
+} & ChakraBoxProps & {
+    seo: {
+      footerText: string;
+    };
+  };
 
-const Root = ({ children, ...rest }: RootProps) => {
+const Root = ({ children, seo, ...rest }: RootProps) => {
   return (
     <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto">
       <Box>
@@ -103,7 +107,7 @@ const Root = ({ children, ...rest }: RootProps) => {
                     )}
                     paddingLeft="24px"
                   >
-                    Built with ✨ by the Starknet community.
+                    {seo.footerText}
                   </Text>
                 </HStack>
                 <ButtonGroup

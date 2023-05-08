@@ -2,7 +2,6 @@ id: 4ca439d7-c990-4180-969d-966673ef3e44
 post_type: video
 title: "Community Call #24 | Presentation by Cartridge"
 published_date: 2022-10-04T11:48:06.184Z
-time_to_consume: 56 min watch
 image: /assets/cc24.jpg
 category: community-calls
 topic:
@@ -14,7 +13,7 @@ video:
   id: nxV7-LkKyFs
   data:
     kind: youtube#video
-    etag: 8L3PhO74qWVzTouWZLQfOeLlPIM
+    etag: 2MaVcmIBFEdkpprfwQLhYkO1m3w
     id: nxV7-LkKyFs
     snippet:
       publishedAt: 2022-10-05T01:35:08Z
@@ -55,3 +54,11 @@ video:
           Today we will have Tarrence with a presentation about Cartridge.
           @tarrenceva  @cartridge_gg on Twitter.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT56M20S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

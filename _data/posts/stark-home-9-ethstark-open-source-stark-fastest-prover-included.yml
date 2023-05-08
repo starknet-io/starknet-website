@@ -2,7 +2,6 @@ id: 46cdc26a-72cc-4c41-9d0a-584dca242214
 post_type: video
 title: "STARK @ Home 9: ethSTARK – Open Source STARK (Fastest Prover Included)"
 published_date: 2020-06-28T14:17:55.480Z
-time_to_consume: 89 min watch
 image: /assets/starkhome09.png
 category: stark-math
 topic:
@@ -15,7 +14,7 @@ video:
   id: Ee7nq3Eff4c
   data:
     kind: youtube#video
-    etag: z2e1LdIVyQl1M95PnPBT9zpiR_s
+    etag: tG-NF84BSyDo9zGStiojgRS6Z48
     id: Ee7nq3Eff4c
     snippet:
       publishedAt: 2020-06-28T08:55:00Z
@@ -57,3 +56,11 @@ video:
           guest stars to help us announce it: Vitalk Buterin who needs no
           introduction, and David Levitt-Gurevich who leads the ethSTARK effort
           at StarkWare"
+    contentDetails:
+      duration: PT1H28M57S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

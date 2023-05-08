@@ -1,13 +1,19 @@
-import { Box, Flex, Img, Stack } from "@chakra-ui/react";
+"use client";
+import { Box, Flex, Img, Stack } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+
+type Props = {
+  readonly seo: {
+    heroText: string;
+  };
+};
 import { Intro } from "./Intro";
-import { navigate } from "vite-plugin-ssr/client/router";
+import { useRouter } from "next/navigation";
 
-type Props = {};
-
-export const HomepageHero = (props: Props) => {
+export const HomepageHero = ({ seo }: Props) => {
+  const router = useRouter();
   return (
     <Box
       as="section"
@@ -102,8 +108,7 @@ export const HomepageHero = (props: Props) => {
               fontSize="20px"
               fontWeight="500"
             >
-              Starknet is the secure scaling technology bringing Ethereum’s
-              benefits to the world.
+              {seo.heroText}
             </Text>
 
             <Stack
@@ -114,7 +119,7 @@ export const HomepageHero = (props: Props) => {
               zIndex={4}
             >
               <Button
-                onClick={() => navigate("/en/developers")}
+                onClick={() => router.push("/en/developers")}
                 size="lg"
                 minW="210px"
                 variant="primaryHero"
@@ -124,7 +129,7 @@ export const HomepageHero = (props: Props) => {
               <Button
                 size="lg"
                 variant="secondaryHero"
-                onClick={() => navigate("/en/what-is-starknet")}
+                onClick={() => router.push("/en/what-is-starknet")}
               >
                 Learn the basics
               </Button>

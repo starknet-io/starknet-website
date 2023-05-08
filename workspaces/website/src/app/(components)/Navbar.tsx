@@ -16,6 +16,7 @@ import React, { Fragment } from "react";
 import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
+import { LanguageCenterSEO } from "workspaces/cms-data/src/seo";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -24,17 +25,31 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
+  readonly searchSEO: {
+    readonly title: string;
+    readonly cancel: string;
+  };
+  readonly languageCenterSeo: LanguageCenterSEO;
 }
 
-export default function Navbar({ mainMenu, env }: Props) {
+export default function Navbar({
+  mainMenu,
+  env,
+  searchSEO,
+  languageCenterSeo,
+}: Props) {
   const locale = useLocale();
   const pathname = usePathname()!;
 
   return (
     <NavbarContainer>
       <NavBar
-        languageSwitcher={<LocaleSwitcher />}
-        search={<MainSearch env={env} />}
+        languageSwitcher={<LocaleSwitcher seo={languageCenterSeo} />}
+        search={
+          <div>
+            <MainSearch env={env} seo={searchSEO} />
+          </div>
+        }
         desktopNavItems={mainMenu.items.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
@@ -56,7 +71,7 @@ export default function Navbar({ mainMenu, env }: Props) {
                         const blocks = block.items?.map((item, itemIndex) => {
                           const { href, label } = getComputedLinkData(
                             locale,
-                            item,
+                            item
                           );
 
                           if (!href) {
@@ -100,7 +115,7 @@ export default function Navbar({ mainMenu, env }: Props) {
                         });
 
                         const iconsOnly = block.items?.every(
-                          (b) => b.custom_icon,
+                          (b) => b.custom_icon
                         );
 
                         return (
@@ -122,7 +137,7 @@ export default function Navbar({ mainMenu, env }: Props) {
                   ))}
               </Flex>
             </MenuItemWithDropdown>
-          ),
+          )
         )}
         mobileNavItems={
           <NavAccordian.Root>
@@ -145,7 +160,7 @@ export default function Navbar({ mainMenu, env }: Props) {
                               {block.items?.map((item, itemIndex) => {
                                 const { href, label } = getComputedLinkData(
                                   locale,
-                                  item,
+                                  item
                                 );
 
                                 if (!href) {

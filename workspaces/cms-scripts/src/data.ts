@@ -6,7 +6,6 @@ import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { translateFile } from "./crowdin";
-
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
   readonly sourceFilepath: string;
@@ -24,10 +23,11 @@ export interface Post extends Meta {
   readonly short_desc: string;
   readonly post_type: string;
   readonly post_date: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
   readonly toc: boolean;
   readonly video: any;
+  readonly featured: boolean;
+  readonly timeToConsume: string;
   blocks: readonly any[];
 }
 
@@ -38,11 +38,54 @@ export async function fileToPost(
   const resourceName = "posts";
 
   const sourceFilepath = path.join("_data", resourceName, filename);
+  const blogPostsSourceFilepath = path.join("_data", 'settings', 'blog-posts.yml');
   const sourceData = await yaml(sourceFilepath);
-
+  const blogPosts = await yaml(blogPostsSourceFilepath);
   const data = await translateFile(locale, resourceName, filename);
-
   const slug = slugify(sourceData.title);
+
+  function formatDuration(duration: string): string {
+    const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+    if (!match) {
+      return "";
+    }
+    const hours = parseInt(match[1]) || 0;
+    const minutes = parseInt(match[2]) || 0;
+    const totalMinutes = hours * 60 + minutes;
+    const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : "";
+    return formattedMinutes.trim();
+  }
+
+  function concatenateBodies(blocks: readonly any[]): string {
+    let fullText = "";
+    blocks?.forEach((block) => {
+      if (block.body) {
+        fullText += block.body;
+      }
+    });
+    return fullText;
+  }
+
+  function calculateReadingTime(text: string): string {
+    const wordsPerMinute = 200;
+    const wordsPerImage = 12;
+    const words = text.trim().split(/\s+/).length;
+    const imageCount = (text.match(/!\[\]/g) || []).length;
+    const wordsWithImages = words + imageCount * wordsPerImage;
+    const decimalMinutes = wordsWithImages / wordsPerMinute;
+
+    const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
+    return `${minutes}min`;
+  }
+  const fullText = concatenateBodies(data.blocks);
+  let timeToConsume;
+  if (data.post_type === "video") {
+    timeToConsume = `${formatDuration(
+      data.video?.data?.contentDetails?.duration || ""
+    )} watch`;
+  } else {
+    timeToConsume = `${calculateReadingTime(fullText)} read`;
+  }
 
   return {
     id: data.id,
@@ -52,7 +95,6 @@ export async function fileToPost(
     post_type: data.post_type,
     post_date: data.post_date,
     published_date: data.published_date,
-    time_to_consume: data.time_to_consume,
     toc: data.toc,
     video: data.video,
     topic: data.topic ?? [],
@@ -63,6 +105,8 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
+    featured: blogPosts.featured_post === data.id,
+    timeToConsume,
   };
 }
 
@@ -204,7 +248,10 @@ export async function getTutorials(): Promise<SimpleData<Meta>> {
 
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
-      data.tags = data.tags.replace(/,\s*$/, "").split(",").map((t: string) => t.trim());
+      data.tags = data.tags
+        .replace(/,\s*$/, "")
+        .split(",")
+        .map((t: string) => t.trim());
     }
   });
 
@@ -266,12 +313,15 @@ export interface ItemsFile<T = {}> {
 interface SimpleFiles<T> {
   readonly localeMap: Map<string, T>;
   readonly resourceName: string;
+  readonly collectionName: string;
+  readonly writeRootData?: boolean;
 }
 
 export async function getSimpleFiles<T = ItemsFile>(
-  resourceName: string
+  collectionName: string,
+  resourceName: string,
+  writeRootData?: boolean
 ): Promise<SimpleFiles<T & Meta>> {
-  const collectionName = "settings";
   const filename = `${resourceName}.yml`;
 
   const localeMap = new Map<string, T & Meta>();
@@ -280,16 +330,15 @@ export async function getSimpleFiles<T = ItemsFile>(
     const sourceFilepath = path.join("_data", collectionName, filename);
 
     const data = await translateFile(locale, collectionName, filename);
-
     localeMap.set(locale, {
       ...data,
       locale: locale,
-      objectID: `${resourceName}:${locale}`,
+      objectID: `${collectionName}:${resourceName}:${locale}`,
       sourceFilepath,
     });
   }
 
-  return { localeMap, resourceName };
+  return { localeMap, resourceName, collectionName, writeRootData };
 }
 
 export function updateBlocks(pages: PagesData, posts: PostsData) {

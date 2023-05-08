@@ -56,12 +56,6 @@ export const postsCollectionConfig = {
       widget: "datetime",
     },
     {
-      name: "time_to_consume",
-      label: "Time to read / watch / listen (in minutes)",
-      widget: "string",
-      crowdin: true
-    },
-    {
       name: "video",
       label: "Video - youtube link",
       widget: "youtube",
@@ -101,6 +95,6 @@ export const postsCollectionConfig = {
       label: "Blocks",
       widget: "list",
       types: topLevelBlocks,
-    },
+    }
   ],
 } satisfies CmsCollection;
