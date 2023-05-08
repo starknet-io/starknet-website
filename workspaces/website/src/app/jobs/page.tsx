@@ -1,4 +1,4 @@
-import { getJobsSEO } from "workspaces/cms-data/src/seo";
+import { getJobsSEO } from "@starknet-io/cms-data/src/seo";
 import { AutoProps, JobsPage } from "./(components)/JobsPage";
 
 export const metadata = {

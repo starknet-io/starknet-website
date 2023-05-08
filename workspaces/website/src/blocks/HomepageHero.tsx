@@ -1,5 +1,4 @@
-"use client";
-import { Box, Flex, Img, Stack } from "src/libs/chakra-ui";
+import { Box, Flex, Img, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -10,10 +9,9 @@ type Props = {
   };
 };
 import { Intro } from "./Intro";
-import { useRouter } from "next/navigation";
+import { navigate } from "vite-plugin-ssr/client/router";
 
 export const HomepageHero = ({ seo }: Props) => {
-  const router = useRouter();
   return (
     <Box
       as="section"
@@ -119,7 +117,7 @@ export const HomepageHero = ({ seo }: Props) => {
               zIndex={4}
             >
               <Button
-                onClick={() => router.push("/en/developers")}
+                onClick={() => navigate("/en/developers")}
                 size="lg"
                 minW="210px"
                 variant="primaryHero"
@@ -129,7 +127,7 @@ export const HomepageHero = ({ seo }: Props) => {
               <Button
                 size="lg"
                 variant="secondaryHero"
-                onClick={() => router.push("/en/what-is-starknet")}
+                onClick={() => navigate("/en/what-is-starknet")}
               >
                 Learn the basics
               </Button>

@@ -17,7 +17,9 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
-import { getHomeSEO } from "workspaces/cms-data/src/seo";
+import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
+import { useAsync } from "react-streaming";
+import { usePageContext } from "src/renderer/usePageContext";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -124,7 +126,11 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       />
     );
   } else if (block.type === "home_hero") {
-    const homeSEO = await getHomeSEO(locale);
+    const pageContext = usePageContext();
+    const homeSEO = useAsync(["getBlockExplorers", locale], () =>
+      getHomeSEO(locale, pageContext.event)
+    );
+
     return <HomepageHero seo={homeSEO} />;
   } else if (block.type === "dapps") {
     return (
@@ -171,5 +177,5 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     block satisfies never;
   }
 
-  return null
+  return null;
 }

@@ -16,7 +16,7 @@ import React, { Fragment } from "react";
 import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
-import { LanguageCenterSEO } from "workspaces/cms-data/src/seo";
+import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -25,11 +25,8 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  readonly searchSEO: {
-    readonly title: string;
-    readonly cancel: string;
-  };
-  readonly languageCenterSeo: LanguageCenterSEO;
+  readonly searchSEO: SEOTexts['search'];
+  readonly languageCenterSeo: SEOTexts['language'];
 }
 
 export default function Navbar({

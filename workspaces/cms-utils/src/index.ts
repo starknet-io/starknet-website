@@ -43,6 +43,7 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
     try {
       return await fn();
     } catch (err) {
+      console.log(err)
       cause.push(err);
     }
   }
@@ -70,10 +71,19 @@ export async function getJSON(src: string, event: null | WorkerGlobalScopeEventM
   }
 
   if (import.meta.env.SSR) {
-    const res = await fetch(
-      import.meta.env.VITE_SITE_URL + "/" + src + ".json"
-    );
-    return res.json();
+    const fs = await import("node:fs/promises")
+    const path = await import("node:path")
+
+    return JSON.parse(
+      await fs.readFile(
+        path.join(
+          process.cwd(),
+          "../../public",
+          src + ".json"
+        ),
+        "utf8"
+      )
+    )
   }
 
   const res = await fetch("/" + src + ".json");

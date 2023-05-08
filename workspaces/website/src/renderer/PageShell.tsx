@@ -5,7 +5,7 @@ import "@fontsource/noto-sans-jp/japanese.css";
 import "@fontsource/noto-sans-sc/chinese-simplified.css";
 import "@fontsource/noto-sans-tc/chinese-traditional.css";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { PageContextProvider } from "./usePageContext";
 import type { PageContext } from "./types";
 import { ThemeProvider } from "./ThemeProvider";
@@ -19,27 +19,32 @@ interface Props {
 }
 
 export function PageShell(props: Props) {
-  const {
-    pageContext: { alerts, mainMenu },
-    children,
-  } = props;
+  const { pageContext, children } = props;
 
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={props.pageContext}>
         <ThemeProvider>
-          <PageContainer alerts={alerts}>
-            <Navbar
-              mainMenu={mainMenu}
-              env={{
-                ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
-                ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
-                ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
-              }}
+          <Suspense>
+            <PageContainer alerts={pageContext.alerts}>
+              <Navbar
+                mainMenu={pageContext.mainMenu}
+                env={{
+                  ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
+                  ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
+                  ALGOLIA_SEARCH_API_KEY: import.meta.env
+                    .VITE_ALGOLIA_SEARCH_API_KEY!,
+                }}
+                searchSEO={pageContext.seo.search}
+                languageCenterSeo={pageContext.seo.language}
+              />
+              {children}
+            </PageContainer>
+            <Footer
+              mainMenu={pageContext.mainMenu}
+              seo={pageContext.seo.footer}
             />
-            {children}
-          </PageContainer>
-          <Footer mainMenu={mainMenu} />
+          </Suspense>
         </ThemeProvider>
       </PageContextProvider>
     </React.StrictMode>

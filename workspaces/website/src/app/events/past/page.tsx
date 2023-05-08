@@ -1,4 +1,4 @@
-import { getEventsSEO } from "workspaces/cms-data/src/seo";
+import { getEventsSEO } from "@starknet-io/cms-data/src/seo";
 import { AutoProps, EventsPage } from "../(components)/EventsPage";
 
 export const metadata = {

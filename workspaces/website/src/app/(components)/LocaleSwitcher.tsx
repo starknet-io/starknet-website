@@ -5,9 +5,9 @@ import { useLocale } from "./ClientLocaleProvider";
 import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDropdown";
 import { ColumnLink, ColumnLinkDescription } from "@ui/ColumnLink/ColumnLink";
 import { HStack } from "@chakra-ui/react";
-import { LanguageCenterSEO } from "workspaces/cms-data/src/seo";
+import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
-export default function LocaleSwitcher({ seo }: { seo: LanguageCenterSEO }) {
+export default function LocaleSwitcher({ seo }: { seo: SEOTexts['language'] }) {
   const locale = useLocale();
   console.log(locale)
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;

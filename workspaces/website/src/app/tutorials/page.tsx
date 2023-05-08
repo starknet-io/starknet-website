@@ -1,4 +1,4 @@
-import { getTutorialsSEO } from "workspaces/cms-data/src/seo";
+import { getTutorialsSEO } from "@starknet-io/cms-data/src/seo";
 import { TutorialsPage } from "./(components)/TutorialsPage";
 
 export const metadata = {

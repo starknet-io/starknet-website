@@ -25,6 +25,7 @@ import { Post } from "@starknet-io/cms-data/src/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
 import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
+import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -99,10 +100,7 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  seo: {
-    title: string;
-    cancel: string;
-  };
+  readonly seo: SEOTexts['search']
 }
 
 export function MainSearch({ env, seo }: Props): JSX.Element | null {
@@ -184,7 +182,6 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
     );
   }, []);
 
-  console.log("seo.title", seo.title);
 
   return (
     <Box position="relative">

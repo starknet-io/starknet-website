@@ -1,5 +1,3 @@
-"use client";
-
 import {
   BreadcrumbItem,
   BreadcrumbLink,
@@ -15,15 +13,14 @@ import { Button } from "@ui/Button";
 import moment from "moment";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
 import { useMemo, useState, useEffect } from "react";
-import algoliasearch from "src/libs/algoliasearch/lite";
+import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
   useRefinementList,
-} from "src/libs/react-instantsearch-hooks-web";
+} from "react-instantsearch-hooks-web";
 import type { Category } from "@starknet-io/cms-data/src/categories";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import { useRouter } from "next/navigation";
 import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
@@ -32,6 +29,7 @@ import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/Re
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import { navigate } from "vite-plugin-ssr/client/router";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -235,8 +233,6 @@ function CustomCategories({
   categories,
   params,
 }: Pick<Props, "categories" | "params">) {
-  const router = useRouter();
-
   return (
     <Flex
       as="ul"
@@ -252,7 +248,9 @@ function CustomCategories({
           as="a"
           isActive={params.category == null}
           onClick={() => {
-            router.replace(`/${params.locale}/posts`);
+            navigate(`/${params.locale}/posts`, {
+              overwriteLastHistoryEntry: true
+            })
           }}
         >
           All posts
@@ -267,7 +265,9 @@ function CustomCategories({
             onClick={() => {
               if (category.slug === params.category) return;
 
-              router.replace(`/${params.locale}/posts/${category.slug}`);
+              navigate(`/${params.locale}/posts/${category.slug}`, {
+                overwriteLastHistoryEntry: true
+              })
             }}
           >
             <> {category.name}</>

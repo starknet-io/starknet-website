@@ -1,7 +1,7 @@
 import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getBlockExplorers } from "@starknet-io/cms-data/src/block-explorers";
-import { useAsync } from "react-streaming";
+import { useAsync } from 'react-streaming'
 import { usePageContext } from "src/renderer/usePageContext";
 
 interface Props extends LocaleProps {
