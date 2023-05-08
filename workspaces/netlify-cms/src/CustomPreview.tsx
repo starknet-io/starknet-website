@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { useWindowSize } from "./useWindowSize";
+import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
   JOBS = "JOBS",
+  TUTORIALS = "TUTORIALS",
 }
 
 type CustomPreviewProps = {
@@ -19,7 +21,10 @@ export default function CustomPreview(props: CustomPreviewProps) {
 
   useEffect(() => {
     const { entry } = props;
-    const data = entry.getIn(["data"]).toJS();
+    let data = entry.getIn(["data"]).toJS();
+    if (props.type === CustomPreviewType.TUTORIALS) {
+      data.tags = convertStringTagsToArray(data.tags);
+    }
 
     ref.current?.contentWindow?.postMessage(
       {

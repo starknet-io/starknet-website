@@ -3,12 +3,8 @@
 import EventCard from "src/app/[locale]/events/(components)/EventCard";
 import { isUpcomingEvent } from "src/app/[locale]/events/(components)/utils";
 import JobsCard from "src/app/[locale]/jobs/(components)/JobsCard";
-import usePreviewData from "./usePreviewData";
-
-export enum CustomPreviewType {
-  EVENTS = "EVENTS",
-  JOBS = "JOBS",
-}
+import usePreviewData, { CustomPreviewType } from "./usePreviewData";
+import TutorialsCard from "src/app/[locale]/tutorials/(components)/TutorialsCard";
 
 export default function LivePreivewPage() {
   const data = usePreviewData();
@@ -27,6 +23,9 @@ export default function LivePreivewPage() {
         />
       )}
       {data.type === CustomPreviewType.JOBS && <JobsCard hit={data.payload} />}
+      {data.type === CustomPreviewType.TUTORIALS && (
+        <TutorialsCard hit={data.payload} />
+      )}
     </div>
   );
 }

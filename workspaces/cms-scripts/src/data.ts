@@ -4,7 +4,10 @@ import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
-import { slugify } from "@starknet-io/cms-utils/src/index";
+import {
+  slugify,
+  convertStringTagsToArray,
+} from "@starknet-io/cms-utils/src/index";
 import { translateFile } from "./crowdin";
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
@@ -38,7 +41,11 @@ export async function fileToPost(
   const resourceName = "posts";
 
   const sourceFilepath = path.join("_data", resourceName, filename);
-  const blogPostsSourceFilepath = path.join("_data", 'settings', 'blog-posts.yml');
+  const blogPostsSourceFilepath = path.join(
+    "_data",
+    "settings",
+    "blog-posts.yml"
+  );
   const sourceData = await yaml(sourceFilepath);
   const blogPosts = await yaml(blogPostsSourceFilepath);
   const data = await translateFile(locale, resourceName, filename);
@@ -248,10 +255,7 @@ export async function getTutorials(): Promise<SimpleData<Meta>> {
 
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
-      data.tags = data.tags
-        .replace(/,\s*$/, "")
-        .split(",")
-        .map((t: string) => t.trim());
+      data.tags = convertStringTagsToArray(data.tags);
     }
   });
 
