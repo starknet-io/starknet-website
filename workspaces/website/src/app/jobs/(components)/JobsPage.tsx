@@ -26,6 +26,7 @@ import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/Re
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export interface AutoProps {
   readonly params: {
@@ -39,10 +40,7 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  readonly seo: {
-    readonly title: string;
-    readonly subtitle: string;
-  };
+  readonly seo: SEOTexts['jobs'];
 }
 
 export function JobsPage({ params, env, seo }: Props): JSX.Element | null {

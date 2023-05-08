@@ -1,7 +1,5 @@
-import { getCategories } from "@starknet-io/cms-data/src/categories";
-import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PageContextServer } from "src/renderer/types";
-import { Props } from "src/app/posts/(components)/PostsPage";
+import { Props } from "src/app/tutorials/(components)/TutorialsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
@@ -9,8 +7,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const { locale } = defaultPageContext;
 
   const pageProps: Props = {
-    categories: await getCategories(locale, pageContext.event),
-    topics: await getTopics(locale, pageContext.event),
+    seo: defaultPageContext.seo.jobs,
     env: {
       ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
       ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
@@ -18,7 +15,6 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     },
     params: {
       locale,
-      category: pageContext.routeParams.category!,
     },
   };
 

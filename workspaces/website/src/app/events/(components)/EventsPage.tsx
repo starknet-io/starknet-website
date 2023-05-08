@@ -34,6 +34,7 @@ import {
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export interface AutoProps {
   readonly params: {
@@ -48,10 +49,7 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
   readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
-  readonly seo: {
-    title: string;
-    subtitle: string;
-  };
+  readonly seo: SEOTexts['events'];
 }
 
 const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {

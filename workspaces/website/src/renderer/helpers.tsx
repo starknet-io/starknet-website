@@ -13,9 +13,16 @@ import {
 } from "@starknet-io/cms-data/src/seo";
 import { defaultLocale } from "@starknet-io/cms-data/src/i18n/config";
 
+type DefaultPageContextKeys =
+  | "locale"
+  | "mainMenu"
+  | "messages"
+  | "alerts"
+  | "seo";
+
 export async function getDefaultPageContext(
   pageContext: PageContextServer
-): Promise<Partial<PageContextServer>> {
+): Promise<Pick<PageContextServer, DefaultPageContextKeys>> {
   const locale = pageContext.locale ?? defaultLocale;
 
   return {
