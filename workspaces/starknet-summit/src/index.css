@@ -228,6 +228,7 @@ body {
 
 .header {
   max-width: calc(100% - 32px);
+  box-sizing: border-box;
 }
 
 
