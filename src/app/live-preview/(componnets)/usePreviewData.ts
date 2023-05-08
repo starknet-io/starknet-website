@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { JobsHit } from "src/app/[locale]/jobs/(components)/JobsPage";
 import { Event } from "@starknet-io/cms-data/src/events";
+import { Tutorial } from "src/app/[locale]/tutorials/(components)/TutorialsCard";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
   JOBS = "JOBS",
+  TUTORIALS = "TUTORIALS",
+  NONE = "",
 }
 type PreviewData =
   | {
@@ -16,13 +19,17 @@ type PreviewData =
       payload: JobsHit;
     }
   | {
-      type: "";
+      type: CustomPreviewType.TUTORIALS;
+      payload: Tutorial;
+    }
+  | {
+      type: CustomPreviewType.NONE;
       payload: null;
     };
 
 export default function usePreviewData() {
   const [data, setData] = useState<PreviewData>({
-    type: "",
+    type: CustomPreviewType.NONE,
     payload: null,
   });
 
@@ -36,16 +43,13 @@ export default function usePreviewData() {
         console.log("message", message);
         if (typeof message.data == "object") {
           // Do something with message.data.value;
-          if (message.data.type === CustomPreviewType.EVENTS) {
+          if (
+            message.data.type &&
+            Object.values(CustomPreviewType).includes(message.data.type)
+          ) {
             setData({
-              type: CustomPreviewType.EVENTS,
-              payload: message.data.payload,
-            });
-          }
-          if (message.data.type === CustomPreviewType.JOBS) {
-            setData({
-              type: CustomPreviewType.JOBS,
-              payload: message.data.payload,
+              type: message.data.type as CustomPreviewType,
+              payload: message.data.payload as any,
             });
           }
         }
