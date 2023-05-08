@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { JobsHit } from "src/app/[locale]/jobs/(components)/JobsPage";
 import { Event } from "@starknet-io/cms-data/src/events";
 import { Tutorial } from "src/app/[locale]/tutorials/(components)/TutorialsCard";
+import { Post } from "workspaces/cms-data/src/posts";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
   JOBS = "JOBS",
   TUTORIALS = "TUTORIALS",
+  POST = "POST",
   NONE = "",
 }
 type PreviewData =
@@ -21,6 +23,10 @@ type PreviewData =
   | {
       type: CustomPreviewType.TUTORIALS;
       payload: Tutorial;
+    }
+  | {
+      type: CustomPreviewType.POST;
+      payload: Post;
     }
   | {
       type: CustomPreviewType.NONE;
