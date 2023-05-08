@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import airtable from "airtable";
 import cn from "classnames";
-import navLogo from "./assets/STARKNET_logo.svg";
+import navLogo from "./assets/STARKNET_logo.png";
 import twitterIcon from "./assets/_Twitter.svg";
 import discordIcon from "./assets/_Discord.svg";
 import youtubeIcon from "./assets/_YouTube.svg";
