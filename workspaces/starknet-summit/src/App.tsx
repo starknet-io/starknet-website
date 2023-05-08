@@ -91,6 +91,7 @@ function NewsletterForm(): JSX.Element {
             href="https://starknet.io/"
             target="_blank"
             rel="noopener noreferrer"
+            className="logo-container"
           >
             <img src={navLogo} alt="nav-logo" />
           </a>

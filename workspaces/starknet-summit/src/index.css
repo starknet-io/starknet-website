@@ -41,6 +41,11 @@ button {
   padding: 12px 24px 12px 24px;
 }
 
+.logo-container img {
+  width:179px;
+height:42px;
+}
+
 label {
   font-family: Inter;
   font-size: 14px;
