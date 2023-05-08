@@ -25,7 +25,7 @@ export function PageShell(props: Props) {
     <React.StrictMode>
       <PageContextProvider pageContext={props.pageContext}>
         <ThemeProvider>
-          <Suspense>
+          <Suspense fallback={<p>Loading...</p>}>
             <PageContainer alerts={pageContext.alerts}>
               <Navbar
                 mainMenu={pageContext.mainMenu}

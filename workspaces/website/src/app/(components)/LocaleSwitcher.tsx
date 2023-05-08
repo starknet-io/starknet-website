@@ -9,7 +9,6 @@ import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export default function LocaleSwitcher({ seo }: { seo: SEOTexts['language'] }) {
   const locale = useLocale();
-  console.log(locale)
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;
   const pathname = usePathname()!;
   const topLanguages = ["en", "es", "fr", "de", "pt", "ar", "ja", "ko"];

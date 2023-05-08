@@ -50,7 +50,13 @@ export const PageLayout = (props: Props) => {
           </Box>
         )}
 
-        <Box as="main" role="main" width="full" mt="0 !important">
+        <Box
+          as="main"
+          role="main"
+          width="full"
+          mt="0 !important"
+          flexShrink={props.leftAside == null ? 0 : undefined}
+        >
           <Box minH="lg">
             {props.sectionHeaderTitle && (
               <SectionHeader

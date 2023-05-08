@@ -2,21 +2,11 @@ import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
 import { PageContextServer } from "./types";
 import { PageShell } from "./PageShell";
-import { getMainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
-import { getMessages } from "@starknet-io/cms-data/src/i18n/intl";
-import { getAlerts } from "@starknet-io/cms-data/src/settings/alert";
-import {
-  getEventsSEO,
-  getFooterSEO,
-  getHomeSEO,
-  getJobsSEO,
-  getLanguageCenterSEO,
-  getSearchSEO,
-  getTutorialsSEO,
-} from "@starknet-io/cms-data/src/seo";
+import { getDefaultPageContext } from "./helpers";
 
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = [
+  "routeParams",
   "pageProps",
   "documentProps",
   "locale",
@@ -29,26 +19,8 @@ export const passToClient = [
 ];
 
 export async function onBeforeRender(pageContext: PageContextServer) {
-  const { locale } = pageContext;
-
   return {
-    pageContext: {
-      mainMenu: await getMainMenu(locale, pageContext.event),
-      messages: await getMessages(locale),
-      alerts: await getAlerts(locale, pageContext.event),
-      seo: {
-        home: await getHomeSEO(pageContext.locale, pageContext.event),
-        footer: await getFooterSEO(pageContext.locale, pageContext.event),
-        tutorials: await getTutorialsSEO(pageContext.locale, pageContext.event),
-        events: await getEventsSEO(pageContext.locale, pageContext.event),
-        jobs: await getJobsSEO(pageContext.locale, pageContext.event),
-        search: await getSearchSEO(pageContext.locale, pageContext.event),
-        language: await getLanguageCenterSEO(
-          pageContext.locale,
-          pageContext.event
-        ),
-      },
-    },
+    pageContext: await getDefaultPageContext(pageContext)
   };
 }
 
