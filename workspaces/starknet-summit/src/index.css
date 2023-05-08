@@ -134,7 +134,7 @@ form buttom {
     background-position: center top -24px;
   }
   .container {
-    padding: 60px 15px 220px 15px;
+    padding: 60px 15px 60px 15px;
     width: calc(100% - 30px);
   }
   .footer-container {
@@ -164,7 +164,7 @@ body {
 }
 
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   background-color: transparent;
   padding: 20px 0;
