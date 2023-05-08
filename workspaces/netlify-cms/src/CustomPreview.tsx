@@ -7,6 +7,7 @@ export enum CustomPreviewType {
   EVENTS = "EVENTS",
   JOBS = "JOBS",
   TUTORIALS = "TUTORIALS",
+  POST = "POST",
 }
 
 type CustomPreviewProps = {
