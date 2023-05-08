@@ -38,7 +38,7 @@ jobs:
         run: yarn
 
       - name: Build storybook
-        run: yarn exec storybook build
+        run: yarn workspace @starknet-io/storybook build-storybook
 
       - name: Deploy storybook
         uses: cloudflare/pages-action@1
