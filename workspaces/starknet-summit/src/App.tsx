@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import airtable from "airtable";
 import cn from "classnames";
-import navLogo from "./assets/STARKNET Logo Medium.svg";
+import navLogo from "./assets/STARKNET_logo.svg";
 import twitterIcon from "./assets/_Twitter.svg";
 import discordIcon from "./assets/_Discord.svg";
 import youtubeIcon from "./assets/_YouTube.svg";
@@ -87,7 +87,13 @@ function NewsletterForm(): JSX.Element {
     <div className="wrapper">
       <header className="header">
         <div className="header-container">
-          <img src={navLogo} alt="nav-logo" />
+          <a
+            href="https://starknet.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={navLogo} alt="nav-logo" />
+          </a>
         </div>
         <div className="social">
           {socialItems.map((item, index) => (
@@ -104,6 +110,7 @@ function NewsletterForm(): JSX.Element {
       </header>
       <div className="container">
         <img src={logo} className="logo" alt="starknet-logo" />
+
         <h1>Starknet Summit</h1>
         <div className="medium-text">
           San Francisco Bay Area, CA | August 31, 2023
@@ -148,10 +155,9 @@ function NewsletterForm(): JSX.Element {
           </form>
         )}
       </div>
-      <footer className="footer" style={{ display: "none" }}>
+      <footer className="footer">
         <div className="footer-container">
-          <img src={navLogo} alt="nav-logo" className="small-logo" />
-          <div className="social">
+          <div className="social footer">
             {socialItems.map((item, index) => (
               <a
                 key={index}
