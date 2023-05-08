@@ -18,8 +18,9 @@ export interface Props {
 }
 
 export const Footer = ({ mainMenu, seo }: Props) => {
-  const locale = usePageContext().locale;
+  const { locale } = usePageContext();
   const displayValue = useBreakpointValue({ base: "none", md: "block" });
+
   return (
     <FooterComponent.Root seo={seo}>
       <Stack

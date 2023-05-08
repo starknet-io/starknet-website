@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Alert } from "@ui/Alert";
 import { Flex } from "@chakra-ui/react";
 import type { Alert as AlertType } from "@starknet-io/cms-data/src/settings/alert";
-import { usePathname } from "next/navigation";
+import { usePageContext } from "src/renderer/usePageContext";
 
 type Props = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const PageContainer = ({ children, alerts }: Props) => {
-  const pathname = usePathname()!;
+  const { urlPathname: pathname } = usePageContext();
 
   let result = useMemo(() => {
     if (typeof window !== "undefined") {
@@ -20,7 +20,7 @@ export const PageContainer = ({ children, alerts }: Props) => {
       }
     }
 
-    return null
+    return null;
   }, [pathname, alerts]);
 
   return (
@@ -45,12 +45,12 @@ export const PageContainer = ({ children, alerts }: Props) => {
                   uuid={alert.id}
                   variant={alert.variant}
                   body={alert.body}
-                  />
+                />
               );
             }
           }
 
-          return null
+          return null;
         })
       )}
       {children}

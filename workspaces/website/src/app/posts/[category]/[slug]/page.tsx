@@ -29,7 +29,6 @@ import { Category } from "@starknet-io/cms-data/src/categories";
 import { Topic } from "@starknet-io/cms-data/src/topics";
 // import { Metadata } from "next";
 // import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
-import Link from "next/link";
 
 // export async function generateMetadata(props: Props): Promise<Metadata> {
 //   try {
@@ -198,7 +197,6 @@ export function Page({ params: { slug, locale }, categories, topics, post }: Pro
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -208,7 +206,6 @@ export function Page({ params: { slug, locale }, categories, topics, post }: Pro
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/posts`}
               fontSize="sm"
               noOfLines={1}
@@ -218,7 +215,6 @@ export function Page({ params: { slug, locale }, categories, topics, post }: Pro
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/posts/${category.slug}`}
               fontSize="sm"
               noOfLines={1}

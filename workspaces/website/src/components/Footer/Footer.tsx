@@ -13,7 +13,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
-import NextLink from "next/link";
 import { IconButton } from "@ui/IconButton";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
@@ -210,7 +209,6 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
           color: "navbar-link-active-fg",
         },
       }}
-      as={NextLink}
       href={href}
     >
       {children}

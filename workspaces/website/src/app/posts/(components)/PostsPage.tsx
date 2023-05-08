@@ -24,7 +24,6 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
-import Link from "next/link";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
@@ -118,7 +117,6 @@ const PostsPageLayout = ({
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -128,7 +126,6 @@ const PostsPageLayout = ({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}/community`}
               fontSize="sm"
               noOfLines={1}

@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
 import { CSSProperties } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
@@ -54,7 +53,7 @@ export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
             />
           )}
           <Text>Next Chapter</Text>
-          <Image
+          <img
             src="/assets/video/arrow_right.svg"
             width={20}
             height={20}

@@ -6,8 +6,7 @@
     "types": ["vite/client"],
     "jsx": "react-jsx",
     "paths": {
-      "@ui/*": ["@starknet-io/website/src/components/*"],
-      "next/*": ["@starknet-io/website/src/next/*"]
+      "@ui/*": ["@starknet-io/website/src/components/*"]
     },
     "baseUrl": "."
   },

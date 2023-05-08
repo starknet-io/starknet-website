@@ -17,7 +17,6 @@ import { Heading } from "@ui/Typography/Heading";
 import { getUnixTime, startOfDay } from "date-fns";
 import type { BaseHit } from "instantsearch.js";
 import moment from "moment";
-import Link from "next/link";
 import { useMemo } from "react";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
@@ -126,7 +125,6 @@ const EventsPageLayout = ({
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -136,7 +134,6 @@ const EventsPageLayout = ({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}/community`}
               fontSize="sm"
               noOfLines={1}
@@ -175,7 +172,6 @@ const EventsPageLayout = ({
             <Box>
               <Button
                 variant="category"
-                as={Link}
                 isActive={mode === "UPCOMING_EVENTS"}
                 href={`/${params.locale}/events`}
               >
@@ -185,7 +181,6 @@ const EventsPageLayout = ({
             <Box>
               <Button
                 variant="category"
-                as={Link}
                 isActive={mode === "PAST_EVENTS"}
                 href={`/${params.locale}/events/past`}
               >

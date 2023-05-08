@@ -25,7 +25,7 @@ export default function ShareModal({
   embedded,
   chapter,
 }: ShareModalProps) {
-  const locale = usePageContext().locale;
+  const { locale } = usePageContext();
   const shareUrl = `${VIDEO_SHARE_DOMAIN}/${locale}/video?chapter=${chapter.id}`;
 
   return (

@@ -1,5 +1,3 @@
-
-import { usePathname } from "next/navigation";
 import { i18nConfig } from "@starknet-io/cms-data/src/i18n/config";
 import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDropdown";
 import { ColumnLink, ColumnLinkDescription } from "@ui/ColumnLink/ColumnLink";
@@ -7,10 +5,9 @@ import { HStack } from "@chakra-ui/react";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import { usePageContext } from "src/renderer/usePageContext";
 
-export default function LocaleSwitcher({ seo }: { seo: SEOTexts['language'] }) {
-  const locale = usePageContext().locale;
+export default function LocaleSwitcher({ seo }: { seo: SEOTexts["language"] }) {
+  const { locale, urlPathname: pathname } = usePageContext();
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;
-  const pathname = usePathname()!;
   const topLanguages = ["en", "es", "fr", "de", "pt", "ar", "ja", "ko"];
 
   return (

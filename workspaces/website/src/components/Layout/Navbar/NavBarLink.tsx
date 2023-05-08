@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import { Link, LinkProps, Icon } from "@chakra-ui/react";
 import { HiArrowUpRight } from "react-icons/hi2";
 
@@ -36,7 +35,6 @@ export const NavBarLink = (props: Props) => {
       //   },
       // }}
       {...props}
-      as={NextLink}
       href={props.href}
     >
       {props.children}

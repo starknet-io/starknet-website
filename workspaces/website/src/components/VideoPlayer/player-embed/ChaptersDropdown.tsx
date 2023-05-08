@@ -1,5 +1,4 @@
 import { Box, Button } from "@chakra-ui/react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Chapter } from "../constants";
 
@@ -93,7 +92,7 @@ export default function ChaptersDropdown({
         >
           {episode}. {title}
         </Box>
-        <Image
+        <img
           src="/assets/video/expand_more.svg"
           width={20}
           height={20}
@@ -132,7 +131,7 @@ export default function ChaptersDropdown({
               onClick={() => onChapterSelect(chapter.id)}
               zIndex={12}
             >
-              <Image
+              <img
                 src={chapter.thumbnail}
                 width={142}
                 height={80}

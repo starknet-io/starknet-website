@@ -24,7 +24,6 @@ import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
-import Link from "next/link";
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
@@ -113,7 +112,6 @@ const TutorialsPageLayout = ({
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -123,7 +121,6 @@ const TutorialsPageLayout = ({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}/developers`}
               fontSize="sm"
               noOfLines={1}

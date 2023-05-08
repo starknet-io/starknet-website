@@ -10,7 +10,6 @@ import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { Flex } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
-import { usePathname } from "next/navigation";
 import React, { Fragment } from "react";
 import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
@@ -35,8 +34,7 @@ export default function Navbar({
   searchSEO,
   languageCenterSeo,
 }: Props) {
-  const locale = usePageContext().locale;
-  const pathname = usePathname()!;
+  const { locale, urlPathname: pathname } = usePageContext();
 
   return (
     <NavbarContainer>

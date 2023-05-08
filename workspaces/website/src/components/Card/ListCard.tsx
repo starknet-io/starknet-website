@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import NextLink from "next/link";
 import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
@@ -169,7 +168,6 @@ export const ListCard = (props: Props) => {
                       <Link
                         key={tag.type}
                         isExternal
-                        as={NextLink}
                         href={tag.url}
                       >
                         <Tag variant="listCard">
@@ -204,7 +202,6 @@ export const ListCard = (props: Props) => {
                       <Link
                         mt="20px"
                         isExternal
-                        as={NextLink}
                         href={`${props.href}`}
                       >
                         <Icon
@@ -218,7 +215,6 @@ export const ListCard = (props: Props) => {
                     <Link
                       isExternal
                       mt="20px"
-                      as={NextLink}
                       href={`${props.twitterHandle}`}
                     >
                       <Icon
@@ -232,7 +228,6 @@ export const ListCard = (props: Props) => {
                     <Link
                       isExternal
                       mt="20px"
-                      as={NextLink}
                       href={`${props.discordHandle}`}
                     >
                       <Icon
@@ -270,7 +265,6 @@ export const ListCard = (props: Props) => {
                 </Wrap>
                 {props.recap?.link && (
                   <Button
-                    as={NextLink}
                     href={props.recap.link}
                     mt="20px"
                     isExternal={props.recap.isExternal}

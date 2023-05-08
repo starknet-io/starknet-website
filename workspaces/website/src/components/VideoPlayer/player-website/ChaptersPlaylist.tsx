@@ -1,5 +1,4 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
-import Image from "next/image";
 import { useEffect } from "react";
 import { Chapter } from "../constants";
 import { convertSecondsToMMSS } from "../player-core/control-bar/utils";
@@ -60,7 +59,7 @@ export default function ChaptersPlaylist({
             padding={{ base: "0px 0px 2rem", lg: "0px 1rem 0px" }}
           >
             <Box maxW={{ base: "151px", lg: "99px", xl: "151px" }}>
-              <Image
+              <img
                 src={chapter.thumbnail}
                 width={151}
                 height={85}

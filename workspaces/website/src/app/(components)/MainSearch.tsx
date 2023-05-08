@@ -175,7 +175,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
 
-  const locale = usePageContext().locale;
+  const { locale } = usePageContext();
   const [searchBox, setSearchBox] = useState<HTMLElement>();
   useEffect(() => {
     setSearchBox(

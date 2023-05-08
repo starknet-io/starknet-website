@@ -11,7 +11,6 @@ import { ImageIconBox } from "./components/ImageIconBox";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import "./style.css";
-import NextLink from "next/link";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { getComputedLinkData } from "src/utils/utils";
 import { CustomLink } from "@ui/Link/CustomLink";
@@ -104,7 +103,7 @@ export const ImageIconCard = ({
   }
   return (
     <LinkBox
-      as={NextLink}
+      as='a'
       href={href!}
       sx={{ textDecoration: "none!important" }}
     >

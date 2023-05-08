@@ -8,7 +8,7 @@
     "start": "",
     "lint": "",
     "fmt": "yarn rome:format",
-    "rome:format": "rome format --write *.{ts,tsx,js} src workspaces/*/{src,*.js,.storybook}",
+    "rome:format": "rome format --write *.{ts,tsx,js} workspaces/*/{src,*.js,.storybook}",
     "rome:check": "rome check .",
     "eslint:check": "eslint --cache .",
     "test": "yarn vitest run",
@@ -20,8 +20,8 @@
     "starknet-summit": "yarn workspace @starknet-io/starknet-summit dev",
     "storybook": "yarn workspace @starknet-io/storybook storybook",
     "build-storybook": "yarn workspace @starknet-io/storybook build-storybook",
-    "theme": "chakra-cli tokens src/style/theme.ts",
-    "theme:watch": "chakra-cli tokens src/style/theme.ts --watch"
+    "theme": "chakra-cli tokens workspaces/website/src/style/theme.ts",
+    "theme:watch": "chakra-cli tokens workspaces/website/src/style/theme.ts --watch"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.9.2",

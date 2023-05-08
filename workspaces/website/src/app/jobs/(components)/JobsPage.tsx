@@ -22,7 +22,6 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
-import Link from "next/link";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
@@ -99,7 +98,6 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -109,7 +107,6 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}/community`}
               fontSize="sm"
               noOfLines={1}
