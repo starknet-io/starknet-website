@@ -1,0 +1,16 @@
+id: 1f73f99c-b264-4bfa-a8bb-6046d30c550f
+contact:
+  name: Braavos
+  email: jobs@braavos.app
+  twitter: https://twitter.com/myBraavos
+  discord: https://discord.com/invite/MZPkZfE9F2
+  logo: /assets/braavos.jpg
+job:
+  title: Senior Blockchain Contract Engineer
+  description: "Smart Contract codes are immutable - it means there is little to
+    no room for error. We are looking for experienced engineers, who write code
+    which works off the bat, but also write the tests to prove it does. "
+  apply_url: mailto:jobs@braavos.app
+  type: full_time
+  location: tel_aviv_remote
+  role: Blockchain Contract
