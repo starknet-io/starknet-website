@@ -54,10 +54,7 @@ jobs:
         run: echo -e "\n[env.${{ github.ref_name }}]\n" >> workspaces/website/wrangler.toml
 
       - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: workspaces/website
-          command: publish --env ${{ github.ref_name }}
-          environment: ${{ github.ref_name }}
+        run: yarn workspace @starknet-io/website exec wrangler publish --env ${{ github.ref_name }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
