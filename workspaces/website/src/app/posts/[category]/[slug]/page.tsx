@@ -5,7 +5,7 @@ import { Text } from "@ui/Typography/Text";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { Block } from "src/blocks/Block";
-import { Post, getPostBySlug } from "@starknet-io/cms-data/src/posts";
+import { Post } from "@starknet-io/cms-data/src/posts";
 import { TableOfContents } from "src/app/(components)/TableOfContents";
 import remarkParse from "remark-parse";
 import { unified } from "unified";

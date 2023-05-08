@@ -43,7 +43,7 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
     try {
       return await fn();
     } catch (err) {
-      console.log(err)
+      console.log(err);
       cause.push(err);
     }
   }
@@ -56,34 +56,38 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
   );
 }
 
-export async function getJSON(src: string, event: null | WorkerGlobalScopeEventMap["fetch"]): Promise<any> {
-  if (globalThis.__STATIC_CONTENT) {
-    const res = await getAssetFromKV({
-      request: new Request(
-        new URL("/" + src + ".json", "http://localhost:3000")
-      ),
-      waitUntil(promise) {
-        event?.waitUntil(promise)
-      },
-    });
-
-    return res.json();
-  }
-
+export async function getJSON(
+  src: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<any> {
   if (import.meta.env.SSR) {
-    const fs = await import("node:fs/promises")
-    const path = await import("node:path")
-
-    return JSON.parse(
-      await fs.readFile(
-        path.join(
-          process.cwd(),
-          "../../public",
-          src + ".json"
+    if (globalThis.__STATIC_CONTENT) {
+      const res = await getAssetFromKV({
+        request: new Request(
+          new URL("/" + src + ".json", "http://localhost:3000")
         ),
-        "utf8"
-      )
-    )
+        waitUntil(promise) {
+          event?.waitUntil(promise);
+        },
+      });
+
+      return res.json();
+    } else if (import.meta.env.DEV) {
+      const fs = await import("node:fs/promises");
+      const path = await import("node:path");
+
+      return JSON.parse(
+        await fs.readFile(
+          path.join(process.cwd(), "../../public", src + ".json"),
+          "utf8"
+        )
+      );
+    } else {
+      const res = await fetch(
+        import.meta.env.VITE_SITE_URL + "/" + src + ".json"
+      );
+      return res.json();
+    }
   }
 
   const res = await fetch("/" + src + ".json");

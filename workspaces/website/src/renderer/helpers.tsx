@@ -19,6 +19,7 @@ export async function getDefaultPageContext(
   const locale = pageContext.locale ?? defaultLocale;
 
   return {
+    locale,
     mainMenu: await getMainMenu(locale, pageContext.event),
     messages: await getMessages(locale),
     alerts: await getAlerts(locale, pageContext.event),

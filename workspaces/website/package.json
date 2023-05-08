@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "yarn exec vite-node ./src/dev-server -c vite-node.config.ts",
+    "dev": "vite-node ./src/dev-server -c vite-node.config.ts",
+    "build": "vite build",
     "preview": "vite build && wrangler dev",
     "preview-local": "vite build && wrangler dev --local",
     "preview-experimental-local": "vite build && wrangler dev --experimental-local",

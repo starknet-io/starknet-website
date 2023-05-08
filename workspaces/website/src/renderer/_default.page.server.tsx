@@ -15,7 +15,6 @@ export const passToClient = [
   "mainMenu",
   "data",
   "seo",
-  "event",
 ];
 
 export async function onBeforeRender(pageContext: PageContextServer) {
