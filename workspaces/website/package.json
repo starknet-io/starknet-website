@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "vite-node ./src/dev-server -c vite-node.config.ts",
     "build": "vite build",
-    "preview": "vite build && wrangler dev",
-    "preview-local": "vite build && wrangler dev --local",
-    "preview-experimental-local": "vite build && wrangler dev --experimental-local",
-    "deploy": "vite build && wrangler publish"
+    "preview": "wrangler dev",
+    "preview-local": "wrangler dev --local",
+    "preview-experimental-local": "wrangler dev --experimental-local"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",

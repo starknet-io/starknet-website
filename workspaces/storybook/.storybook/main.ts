@@ -1,6 +1,8 @@
-const path = require("path");
-module.exports = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+export default {
+  stories: [
+    "../../website/src/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+    "../src/**/*.stories.@(js|jsx|ts|tsx|mdx)"
+  ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -8,9 +10,13 @@ module.exports = {
     "@chakra-ui/storybook-addon",
     "storybook-addon-dark-mode-toggle"
   ],
+  framework: {
+    name: "@storybook/react-vite",
+    options: {},
+  },
   features: { emotionAlias: false },
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ['../public']
+  staticDirs: ['../../../public']
 };

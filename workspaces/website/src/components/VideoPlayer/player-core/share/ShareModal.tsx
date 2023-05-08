@@ -7,10 +7,10 @@ import {
   ModalOverlay,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useLocale } from "src/app/(components)/ClientLocaleProvider";
 import { Chapter, VIDEO_SHARE_DOMAIN } from "../../constants";
 import ShareEmbed from "./ShareEmbed";
 import SocialShare from "./SocialShare";
+import { usePageContext } from "src/renderer/usePageContext";
 
 type ShareModalProps = {
   isOpen: boolean;
@@ -25,7 +25,7 @@ export default function ShareModal({
   embedded,
   chapter,
 }: ShareModalProps) {
-  const locale = useLocale();
+  const locale = usePageContext().locale;
   const shareUrl = `${VIDEO_SHARE_DOMAIN}/${locale}/video?chapter=${chapter.id}`;
 
   return (

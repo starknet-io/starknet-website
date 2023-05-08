@@ -16,7 +16,7 @@ import {
   HiOutlineSun,
   HiOutlineXMark,
 } from "react-icons/hi2";
-import { useLocale } from "src/app/(components)/ClientLocaleProvider";
+import { usePageContext } from "src/renderer/usePageContext";
 
 type NavLayoutProps = {
   items?: React.ReactNode;
@@ -31,7 +31,7 @@ type NavLayoutProps = {
 export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
-  const locale = useLocale();
+  const locale = usePageContext().locale;
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (

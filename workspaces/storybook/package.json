@@ -1,0 +1,27 @@
+{
+  "name": "@starknet-io/storybook",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@chakra-ui/storybook-addon": "^4.0.16",
+    "@starknet-io/cms-config": "workspace:*",
+    "@starknet-io/cms-data": "workspace:*",
+    "@starknet-io/cms-utils": "workspace:*",
+    "@starknet-io/website": "workspace:*",
+    "@storybook/addon-essentials": "^7.0.9",
+    "@storybook/addon-interactions": "^7.0.9",
+    "@storybook/addon-links": "^7.0.9",
+    "@storybook/addons": "^7.0.9",
+    "@storybook/react-vite": "^7.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.9",
+    "storybook-addon-dark-mode-toggle": "^0.0.6",
+    "vite": "^4.3.3",
+    "vite-tsconfig-paths": "^4.2.0"
+  }
+}

@@ -1,9 +1,9 @@
 import PagePage from "src/app/[...slug]/page";
-import { useLocale } from "../app/(components)/ClientLocaleProvider";
 import NotFound from "@ui/NotFound/NotFound";
+import { usePageContext } from "src/renderer/usePageContext";
 
 export function Page({ data }: any): JSX.Element {
-  const locale = useLocale();
+  const locale = usePageContext().locale;
 
   if (data == null) {
     return <NotFound type="page" />;

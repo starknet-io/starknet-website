@@ -8,7 +8,7 @@ import {
 import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { getComputedLinkData } from "src/utils/utils";
-import { useLocale } from "./ClientLocaleProvider";
+import { usePageContext } from "src/renderer/usePageContext";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -18,7 +18,7 @@ export interface Props {
 }
 
 export const Footer = ({ mainMenu, seo }: Props) => {
-  const locale = useLocale();
+  const locale = usePageContext().locale;
   const displayValue = useBreakpointValue({ base: "none", md: "block" });
   return (
     <FooterComponent.Root seo={seo}>

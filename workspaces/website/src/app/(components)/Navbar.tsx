@@ -5,7 +5,6 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
-import { useLocale } from "./ClientLocaleProvider";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { Flex } from "@chakra-ui/react";
@@ -17,6 +16,7 @@ import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
+import { usePageContext } from "src/renderer/usePageContext";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -35,7 +35,7 @@ export default function Navbar({
   searchSEO,
   languageCenterSeo,
 }: Props) {
-  const locale = useLocale();
+  const locale = usePageContext().locale;
   const pathname = usePathname()!;
 
   return (

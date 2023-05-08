@@ -18,7 +18,6 @@ import React, {
   useRef,
 } from "react";
 import { createRoot, Root } from "react-dom/client";
-import { useLocale } from "./ClientLocaleProvider";
 import { ArgumentsType } from "vitest";
 import type { Page } from "@starknet-io/cms-data/src/pages";
 import { Post } from "@starknet-io/cms-data/src/posts";
@@ -26,6 +25,7 @@ import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-pl
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
 import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
+import { usePageContext } from "src/renderer/usePageContext";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -174,7 +174,8 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
 
     return { searchClient, recentSearchesPlugin, querySuggestionsPlugin };
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_INDEX, env.ALGOLIA_SEARCH_API_KEY]);
-  const locale = useLocale();
+
+  const locale = usePageContext().locale;
   const [searchBox, setSearchBox] = useState<HTMLElement>();
   useEffect(() => {
     setSearchBox(
@@ -189,7 +190,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         detachedMediaQuery=""
         openOnFocus={true}
         plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
-        placeholder={seo.title}
+        placeholder={seo.search}
         getSources={({ query }) => {
           if (!query) return [];
 

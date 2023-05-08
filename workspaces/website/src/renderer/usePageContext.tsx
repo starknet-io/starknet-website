@@ -22,5 +22,6 @@ function PageContextProvider({
 
 function usePageContext() {
   const pageContext = useContext(Context);
+
   return pageContext;
 }

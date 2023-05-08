@@ -18,8 +18,8 @@
     "data": "yarn workspace @starknet-io/cms-scripts update-dynamic-data",
     "update:algolia": "yarn workspace @starknet-io/cms-scripts update-algolia-index",
     "starknet-summit": "yarn workspace @starknet-io/starknet-summit dev",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "yarn workspace @starknet-io/storybook storybook",
+    "build-storybook": "yarn workspace @starknet-io/storybook build-storybook",
     "theme": "chakra-cli tokens src/style/theme.ts",
     "theme:watch": "chakra-cli tokens src/style/theme.ts --watch"
   },
@@ -110,16 +110,7 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.0",
-    "@chakra-ui/storybook-addon": "^4.0.17",
-    "@storybook/addon-essentials": "^7.0.7",
-    "@storybook/addon-interactions": "^7.0.7",
-    "@storybook/addon-links": "^7.0.7",
-    "@storybook/blocks": "^7.0.7",
-    "@storybook/react": "^7.0.7",
-    "@storybook/testing-library": "^0.1.0",
     "@types/youtube-player": "^5.5.7",
-    "eslint-plugin-storybook": "^0.6.11",
-    "storybook": "^7.0.7",
-    "storybook-addon-dark-mode-toggle": "^0.0.6"
+    "eslint-plugin-storybook": "^0.6.11"
   }
 }
