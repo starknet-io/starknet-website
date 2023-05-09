@@ -40,7 +40,7 @@ The StarkNet website includes the following features:
 
     `yarn install`
 
-4. Update dynamic data:
+4.  Update dynamic data:
 
     `yarn data`
 
