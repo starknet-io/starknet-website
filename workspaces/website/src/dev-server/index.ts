@@ -4,6 +4,7 @@ import { renderPage } from "vite-plugin-ssr/server";
 import { createServer } from "vite";
 import fetch from "node-fetch";
 import compression from "compression";
+import { router } from "../api";
 
 const app = express();
 
@@ -17,6 +18,23 @@ const viteDevMiddleware = (
   })
 ).middlewares;
 app.use(viteDevMiddleware);
+
+app.all(/\/api(.*)/, async (req, res, next) => {
+  const httpResponse: Response = await router.handle({
+    method: req.method,
+    url: new URL(req.url, `http://localhost:${port}`).toString(),
+  });
+
+  if (httpResponse != null) {
+    httpResponse.headers.forEach((value, key) => {
+      res.header(key, value);
+    });
+
+    res.send(await httpResponse.text())
+  } else {
+    res.send("cotne123");
+  }
+});
 
 app.get("*", async (req, res, next) => {
   const userAgent = req.headers["user-agent"]!;

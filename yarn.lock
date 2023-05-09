@@ -4837,6 +4837,7 @@ __metadata:
     "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     "@types/cors": ^2.8.13
+    "@types/itty-router-extras": ^0.4.0
     "@types/node": ^18.16.3
     "@types/react": ^18.2.0
     "@types/react-dom": ^18.2.1
@@ -4854,6 +4855,9 @@ __metadata:
     framer-motion: ^10.12.4
     fsevents: ^2.3.2
     googleapis: ^118.0.0
+    itty-cors: ^0.3.6
+    itty-router: ^3.0.12
+    itty-router-extras: ^0.4.2
     moment: ^2.29.4
     moment-timezone: ^0.5.43
     netlify-cms-app: ^2.15.72
@@ -6234,6 +6238,15 @@ __metadata:
   dependencies:
     "@types/istanbul-lib-report": "*"
   checksum: f1ad54bc68f37f60b30c7915886b92f86b847033e597f9b34f2415acdbe5ed742fa559a0a40050d74cdba3b6a63c342cac1f3a64dba5b68b66a6941f4abd7903
+  languageName: node
+  linkType: hard
+
+"@types/itty-router-extras@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@types/itty-router-extras@npm:0.4.0"
+  dependencies:
+    itty-router: ^2.3.10
+  checksum: 615c0de94e8a06d4db33262d2bb9a348ffb76aaad4a6ebf103771fae42d0458879815c1c604a601b7e95e553f11a662b780125a8054e101cd7fe124278a4d1a3
   languageName: node
   linkType: hard
 
@@ -11879,6 +11892,34 @@ __metadata:
     html-escaper: ^2.0.0
     istanbul-lib-report: ^3.0.0
   checksum: 7867228f83ed39477b188ea07e7ccb9b4f5320b6f73d1db93a0981b7414fa4ef72d3f80c4692c442f90fc250d9406e71d8d7ab65bb615cb334e6292b73192b89
+  languageName: node
+  linkType: hard
+
+"itty-cors@npm:^0.3.6":
+  version: 0.3.6
+  resolution: "itty-cors@npm:0.3.6"
+  checksum: 8979093d2790dc9abbcfe858fea4b41f6075545a8ba2c39798e0469be880a52ce6c5cedb102c77d12f4148f0249828113d79cc03d88754c2739c31d0b4da2d0c
+  languageName: node
+  linkType: hard
+
+"itty-router-extras@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "itty-router-extras@npm:0.4.2"
+  checksum: 3d98dac81561a9d7aab19f35c5a23af23ad5ff035c57b221c8991a6e6f79faf023e107c1c368af1c61b77e3861263967b0c7957c86ecfaed8879ae13b09bffe8
+  languageName: node
+  linkType: hard
+
+"itty-router@npm:^2.3.10":
+  version: 2.6.6
+  resolution: "itty-router@npm:2.6.6"
+  checksum: 2117cba792e7a131f12af8e4f18ed7fddf643d632a440f235e4a3478eac4e4158272a859d160969e0d76e96f5a8659bd090f714afabdb95cffb7964c29d4a89f
+  languageName: node
+  linkType: hard
+
+"itty-router@npm:^3.0.12":
+  version: 3.0.12
+  resolution: "itty-router@npm:3.0.12"
+  checksum: aedc7d66e5606bc57a503a0386cb80083b5adc863de2a634676223c84c8106087db7a53155119d47b86f501278dab60f5758d386f1a0b72b7e15589a3b588a65
   languageName: node
   linkType: hard
 
