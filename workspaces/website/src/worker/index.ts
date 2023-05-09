@@ -1,9 +1,16 @@
+import { router } from "src/api";
 import { handleStaticAssets } from "./static-assets";
 import { renderPage } from "vite-plugin-ssr/server";
 
 addEventListener("fetch", (event: WorkerGlobalScopeEventMap["fetch"]) => {
   try {
-    event.respondWith(handleFetchEvent(event));
+    const { pathname } = new URL(event.request.url);
+
+    if (pathname.startsWith("/api/")) {
+      event.respondWith(router.handle(event.request, event));
+    } else {
+      event.respondWith(handleFetchEvent(event));
+    }
   } catch (err: any) {
     console.error(err.stack);
     event.respondWith(new Response("Internal Error", { status: 500 }));
