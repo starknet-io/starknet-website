@@ -14,11 +14,13 @@ import type {
 } from "vite-plugin-ssr/types";
 
 type Page = (pageProps: PageProps) => React.ReactElement;
+
 export type PageProps = Record<string, unknown>;
 
 export type PageContextCustom = {
   Page: Page;
   pageProps?: PageProps;
+  hasLayout?: boolean;
   exports: {
     documentProps?: {
       title: string;

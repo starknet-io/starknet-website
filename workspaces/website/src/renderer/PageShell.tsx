@@ -23,30 +23,41 @@ export function PageShell(props: Props) {
 
   return (
     <React.StrictMode>
-      <PageContextProvider pageContext={props.pageContext}>
+      <PageContextProvider pageContext={pageContext}>
         <ThemeProvider>
           <Suspense fallback={<p>Loading...</p>}>
-            <PageContainer alerts={pageContext.alerts}>
-              <Navbar
-                mainMenu={pageContext.mainMenu}
-                env={{
-                  ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
-                  ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
-                  ALGOLIA_SEARCH_API_KEY: import.meta.env
-                    .VITE_ALGOLIA_SEARCH_API_KEY!,
-                }}
-                searchSEO={pageContext.seo.search}
-                languageCenterSeo={pageContext.seo.language}
-              />
-              {children}
-            </PageContainer>
-            <Footer
-              mainMenu={pageContext.mainMenu}
-              seo={pageContext.seo.footer}
-            />
+            {(pageContext.hasLayout ?? true) === true ? (
+              <PageLayout pageContext={pageContext}>{children}</PageLayout>
+            ) : (
+              children
+            )}
           </Suspense>
         </ThemeProvider>
       </PageContextProvider>
     </React.StrictMode>
+  );
+}
+
+function PageLayout(props: Props) {
+  const { pageContext, children } = props;
+
+  return (
+    <>
+      <PageContainer alerts={pageContext.alerts}>
+        <Navbar
+          mainMenu={pageContext.mainMenu}
+          env={{
+            ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
+            ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
+            ALGOLIA_SEARCH_API_KEY: import.meta.env
+              .VITE_ALGOLIA_SEARCH_API_KEY!,
+          }}
+          searchSEO={pageContext.seo.search}
+          languageCenterSeo={pageContext.seo.language}
+        />
+        {children}
+      </PageContainer>
+      <Footer mainMenu={pageContext.mainMenu} seo={pageContext.seo.footer} />
+    </>
   );
 }

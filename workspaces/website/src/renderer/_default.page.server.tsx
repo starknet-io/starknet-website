@@ -6,6 +6,7 @@ import { getDefaultPageContext } from "./helpers";
 
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = [
+  "hasLayout",
   "routeParams",
   "pageProps",
   "documentProps",

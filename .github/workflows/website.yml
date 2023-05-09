@@ -49,6 +49,7 @@ jobs:
           VITE_ALGOLIA_INDEX: dev
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
 
       - name: Create Env
         run: echo -e "\n[env.${{ github.ref_name }}]\n" >> workspaces/website/wrangler.toml

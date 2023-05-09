@@ -1,14 +1,19 @@
 import { Box, Container } from "@chakra-ui/react";
 import { playlist } from "@ui/VideoPlayer/constants";
 import { VideoPlayerWebsite } from "@ui/VideoPlayer/player-website/VideoPlayerWebsite";
+import { usePageContext } from "src/renderer/usePageContext";
 import { navigate } from "vite-plugin-ssr/client/router";
 
-interface Props {
+export interface Props {
   chapter: string;
   locale: string;
 }
 
-export default function VideoPage({ chapter, locale }: Props) {
+export default function VideoPage() {
+  const pageContext = usePageContext()
+  const chapter = pageContext.urlParsed.search.chapter ?? playlist[0].id
+  const locale = pageContext.locale
+
   const onChapterChange = (chapterId: string) => {
     navigate(`/${locale}/video?chapter=${chapterId}`);
   };

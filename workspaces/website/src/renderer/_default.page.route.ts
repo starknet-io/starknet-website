@@ -1,9 +1,7 @@
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { PageContextServer } from "./types";
 
-export function onBeforeRoute(
-  pageContext: PageContextServer
-) {
+export function onBeforeRoute(pageContext: PageContextServer) {
   if (pageContext.urlPathname == "/") {
     return {
       pageContext: {
@@ -15,7 +13,7 @@ export function onBeforeRoute(
 
   const urlParts = pageContext.urlPathname.split("/");
 
-  urlParts.shift()
+  urlParts.shift();
 
   const locale = urlParts.shift();
 
@@ -30,8 +28,7 @@ export function onBeforeRoute(
 
   return {
     pageContext: {
-      _pageId: null,
-      is404: true
+      locale: "en",
     },
   };
 }
