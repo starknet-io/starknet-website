@@ -9,6 +9,7 @@ recap:
   isExternal: true
 start_date: 2023-04-09T07:00:50.843Z
 end_date: 2023-04-09T13:00:50.856Z
+show_in_past_events: true
 image: /assets/fs2a4dkauaejf-3.jpeg
 location: asia
 city: "Beijing "

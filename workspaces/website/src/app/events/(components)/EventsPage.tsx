@@ -58,7 +58,7 @@ const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
       startOfDay(new Date())
     )} OR end_date_ts > ${getUnixTime(startOfDay(new Date()))}`;
   }
-  return `start_date_ts < ${getUnixTime(
+  return `NOT show_in_past_events:false AND start_date_ts < ${getUnixTime(
     startOfDay(new Date())
   )} AND end_date_ts < ${getUnixTime(startOfDay(new Date()))}`;
 };

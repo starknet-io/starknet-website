@@ -17,6 +17,7 @@ description: Calling the Starknet community of Amsterdam!  🎺 Starknet is
 url: https://www.meetup.com/starknet-amsterdam/events/293197940/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link
 start_date: 2023-05-18T15:00:38.980Z
 end_date: 2023-05-18T06:00:38.987Z
+show_in_past_events: true
 image: /assets/600_512437958.jpeg
 location: europe
 city: Amsterdam
