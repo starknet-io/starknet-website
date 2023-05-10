@@ -25,6 +25,7 @@ interface Props {
   readonly locale: string;
 }
 
+// @ts-expect-error
 export function Block({ block, locale }: Props): JSX.Element {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
@@ -132,55 +133,53 @@ export function Block({ block, locale }: Props): JSX.Element {
         }}
       />
     );
+  } else if (block.type === "dapps") {
+    return (
+      <h2>BlockDapps block</h2>
+      // <BlockDapps
+      //   params={{
+      //     locale,
+      //   }}
+      // />
+    );
+  } else if (block.type === "block_explorers") {
+    return (
+      <h2>BlockBlockExplorers block</h2>
+      // <BlockBlockExplorers
+      //   params={{
+      //     locale,
+      //   }}
+      // />
+    );
+  } else if (block.type === "bridges") {
+    return (
+      <h2>BlockBridges block</h2>
+      // <BlockBridges
+      //   params={{
+      //     locale,
+      //   }}
+      // />
+    );
+  } else if (block.type === "on_ramps") {
+    return (
+      <h2>BlockOnRamps block</h2>
+      // <BlockOnRamps
+      //   params={{
+      //     locale,
+      //   }}
+      // />
+    );
+  } else if (block.type === "wallets") {
+    return (
+      <h2>BlockWallets block</h2>
+      // <BlockWallets
+      //   params={{
+      //     locale,
+      //   }}
+      // />
+    );
+  } else {
+    // this will report type error if there is unhandled block.type
+    block satisfies never;
   }
-  return <div>Blockkkk</div>;
-  // else if (block.type === "dapps") {
-  //   return (
-  //     <BlockDapps
-  //       params={{
-  //         locale,
-  //       }}
-  //     />
-  //   );
-  // }
-  // else if (block.type === "block_explorers") {
-  //   return (
-  //     <BlockBlockExplorers
-  //       params={{
-  //         locale,
-  //       }}
-  //     />
-  //   );
-  // }
-  // else if (block.type === "bridges") {
-  //   return (
-  //     <BlockBridges
-  //       params={{
-  //         locale,
-  //       }}
-  //     />
-  //   );
-  // }
-  // else if (block.type === "on_ramps") {
-  //   return (
-  //     <BlockOnRamps
-  //       params={{
-  //         locale,
-  //       }}
-  //     />
-  //   );
-  // }
-  // else if (block.type === "wallets") {
-  //   return (
-  //     <BlockWallets
-  //       params={{
-  //         locale,
-  //       }}
-  //     />
-  //   );
-  // }
-  // else {
-  //   // this will report type error if there is unhandled block.type
-  //   block satisfies never;
-  // }
 }
