@@ -186,8 +186,6 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
     );
   }, []);
 
-  console.log("seo.title", seo.title);
-
   return (
     <Box position="relative">
       <Autocomplete<any>
