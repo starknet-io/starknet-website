@@ -11,6 +11,7 @@ export const postsCollectionConfig = {
   create: true,
   format: "yml",
   slug: "{{title}}",
+  preview_path: "/preview/posts/{{id}}",
   summary: "{{title}}",
   sortable_fields: ["published_date", "title"],
   fields: [
@@ -19,6 +20,7 @@ export const postsCollectionConfig = {
       label: "id",
       widget: "uuid",
     },
+    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "post_type",
       label: "Post Type",

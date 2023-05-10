@@ -69,6 +69,7 @@ export const eventsCollectionConfig = {
   slug: "{{name}}",
   summary: "{{name}}",
   create: true,
+  preview_path: "/preview/events/{{name}}",
   format: "yml",
   fields: [
     {
@@ -77,6 +78,7 @@ export const eventsCollectionConfig = {
       widget: "select",
       options: eventsTypes,
     },
+    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "name",
       label: "Event Name",

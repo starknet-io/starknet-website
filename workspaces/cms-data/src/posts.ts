@@ -25,6 +25,7 @@ export interface Post extends Meta {
   readonly toc: boolean;
   readonly published_date: string;
   readonly video?: VideoMeta;
+  readonly deploy_id: string;
   readonly blocks: readonly TopLevelBlock[];
   readonly timeToConsume: string;
 }
@@ -73,6 +74,55 @@ export async function getPostBySlug(
     );
   } catch (cause) {
     throw new Error(`Post not found! ${slug}`, {
+      cause,
+    });
+  }
+}
+
+export async function getPostById(
+  id: string,
+  locale: string
+): Promise<Post> {
+  try {
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          JSON.parse(
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/posts",
+                value,
+                id + ".json"
+              ),
+              "utf8"
+            )
+          )
+      ),
+      async () => {
+        const client = algoliasearch(
+          process.env.ALGOLIA_APP_ID!,
+          process.env.ALGOLIA_SEARCH_API_KEY!
+        );
+        const index = client.initIndex(
+          `web_posts_${process.env.ALGOLIA_INDEX}`
+        );
+
+        const searchResponse = await index.search<Post>("", {
+          facetFilters: [`locale:${locale}`, `slug:${id}`],
+        });
+
+        const post = searchResponse.hits[0];
+
+        if (post == null) {
+          throw new Error("Post not found!");
+        }
+
+        return post;
+      }
+    );
+  } catch (cause) {
+    throw new Error(`Post not found! ${id}`, {
       cause,
     });
   }

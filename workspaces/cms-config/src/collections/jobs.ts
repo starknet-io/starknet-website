@@ -16,6 +16,7 @@ export const jobsCollectionConfig = {
       label: "id",
       widget: "uuid",
     },
+    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "contact",
       label: "Contact",
