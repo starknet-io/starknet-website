@@ -42,10 +42,14 @@ jobs:
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
 
-      - name: create secrets.json
-        run: echo '{"YOUTUBE_API_KEY":"${{ secrets.YOUTUBE_API_KEY }}"}' > secrets.json
 
-      - name: upload secrets
+      - name: Create Env
+        run: echo -e "\n[env.${{ github.ref_name }}]\n" >> workspaces/website/wrangler.toml
+
+      - name: Create secrets.json
+        run: echo '{"YOUTUBE_API_KEY":"${{ secrets.YOUTUBE_API_KEY }}"}' > workspaces/website/secrets.json
+
+      - name: Upload secrets
         run: yarn workspace @starknet-io/website exec wrangler secret:bulk secrets.json --env ${{ github.ref_name }}
 
       - name: Build project
@@ -56,9 +60,6 @@ jobs:
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
           VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
-
-      - name: Create Env
-        run: echo -e "\n[env.${{ github.ref_name }}]\n" >> workspaces/website/wrangler.toml
 
       - name: Publish
         run: yarn workspace @starknet-io/website exec wrangler publish --env ${{ github.ref_name }}
