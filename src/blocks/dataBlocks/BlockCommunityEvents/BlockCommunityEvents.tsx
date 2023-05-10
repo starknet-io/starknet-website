@@ -3,8 +3,7 @@ import {
   BlockCommunityEventsList,
 } from "./(components)/BlockCommunityEventsList";
 
-// @ts-expect-error
-export async function BlockCommunityEvents(props: AutoProps): JSX.Element {
+export function BlockCommunityEvents(props: AutoProps): JSX.Element {
   return (
     <>
       <BlockCommunityEventsList

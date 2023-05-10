@@ -6,6 +6,7 @@ import JobsCard from "src/app/[locale]/jobs/(components)/JobsCard";
 import usePreviewData, { CustomPreviewType } from "./usePreviewData";
 import TutorialsCard from "src/app/[locale]/tutorials/(components)/TutorialsCard";
 import PostByCategory from "src/app/[locale]/posts/[category]/(components)/PostByCategory";
+import CMSPage from "src/app/[locale]/(components)/CMSPageClient";
 
 export default function LivePreivewPage() {
   const data = usePreviewData();
@@ -36,8 +37,14 @@ export default function LivePreivewPage() {
             slug: data.payload.category,
           }}
           locale="en"
-          topics={[]}
+          topics={data.payload.topic.map((topic, i) => ({
+            id: topic,
+            name: `Topic ${i + 1}`,
+          }))}
         />
+      )}
+      {data.type === CustomPreviewType.PAGE && (
+        <CMSPage data={data.payload} locale="en" />
       )}
     </div>
   );

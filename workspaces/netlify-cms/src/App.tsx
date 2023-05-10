@@ -24,6 +24,9 @@ export default function App() {
     CMS.registerPreviewTemplate("posts", ({ entry }) => {
       return <CustomPreview entry={entry} type={CustomPreviewType.POST} />;
     });
+    CMS.registerPreviewTemplate("pages", ({ entry }) => {
+      return <CustomPreview entry={entry} type={CustomPreviewType.PAGE} />;
+    });
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;
 
