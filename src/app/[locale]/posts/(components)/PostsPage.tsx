@@ -32,7 +32,6 @@ import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/Re
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
-
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
   readonly topics: readonly Topic[];
@@ -158,7 +157,7 @@ const PostsPageLayout = ({
       }
       main={
         <Box>
-          <CustomHits categories={categories} />
+          <CustomHits categories={categories} params={params} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
             <CustomTopics
               topics={topics}
@@ -317,26 +316,39 @@ interface Block {
   type?: string;
 }
 
-function CustomHits({ categories }: Pick<Props, "categories">) {
+function CustomHits({ categories, params }: Pick<Props, "categories" | "params">) {
+  const [blogPostsSettings, setBlogPostsSettings] = useState<any>();
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(`/api/blogPosts?locale=${params.locale}`);
+      const data = await response.json();
+      setBlogPostsSettings(data);
+    }
+    fetchData();
+  }, []);
+
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
   const [featuredHit, setFeaturedHit] = useState<Hit>();
   const [filteredHits, setFilteredHits] = useState<Hit[]>([]);
   const [featuredHitDate, setFeaturedHitDate] = useState<string>();
   const [featuredHitCategory, setFeaturedHitCategory] = useState<Category>(categories[0]);
   useEffect(() => {
-    if (hits) {
-      setFeaturedHit(hits.find(hit => hit.featured === true))
-    }
     const handleResize = () => {
-      if (window.innerWidth > 992) {
-        setFilteredHits(hits.filter(hit => hit.featured !== true))
-      } else {
-        setFilteredHits(hits);
+      if (blogPostsSettings && hits) {
+        if (window.innerWidth > 992 && !!blogPostsSettings?.show_featured_post) {
+          setFilteredHits(hits.filter(hit => hit.featured !== true));
+          setFeaturedHit(hits.find(hit => hit.featured === true))
+        } else if (window.innerWidth > 992 && !blogPostsSettings?.show_featured_post) {
+          setFeaturedHit(hits[0])
+          setFilteredHits(hits.slice(1));
+        } else {
+          setFilteredHits(hits);
+        }
       }
     }
     handleResize();
     window.addEventListener('resize', handleResize)
-  }, [hits])
+  }, [hits, blogPostsSettings])
   useEffect(() => {
     if (hits && featuredHit) {
       setFeaturedHitDate(moment(featuredHit.published_date).format("MMM DD, YYYY"));

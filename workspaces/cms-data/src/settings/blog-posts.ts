@@ -1,4 +1,4 @@
-import { defaultLocale } from "../i18n/config";
+import { defaultLocale } from "@starknet-io/cms-data/src/i18n/config";
 import { getFirst } from "@starknet-io/cms-utils/src/index";
 import fs from "node:fs/promises";
 import path from "node:path";

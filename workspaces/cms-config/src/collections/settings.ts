@@ -406,6 +406,12 @@ export const settingsCollectionConfig = {
       crowdin: true,
       fields: [
         {
+          name: "show_featured_post",
+          label: "Show Featured post",
+          widget: "boolean",
+          default: true,
+        },
+        {
           name: "featured_post",
           label: "Featured post",
           widget: "relation",

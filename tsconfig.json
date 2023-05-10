@@ -28,7 +28,7 @@
     "./vite-env.d.ts",
     "./src/**/*",
     ".next/types/**/*.ts"
-  ],
+, "workspaces/cms-data/src/settings/blog-posts.ts"  ],
   "exclude": [
     "_data/categories",
     "_data/_dynamic",

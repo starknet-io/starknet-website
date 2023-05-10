@@ -4,6 +4,6 @@
     "outDir": ".types",
     "lib": ["DOM", "DOM.Iterable", "ESNext"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/settings/blog-posts.ts"],
   "references": [{ "path": "../cms-utils" }]
 }
