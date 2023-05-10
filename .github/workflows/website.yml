@@ -42,8 +42,14 @@ jobs:
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
 
+      - name: create secrets.json
+        run: echo '{"YOUTUBE_API_KEY":"${{ secrets.YOUTUBE_API_KEY }}"}' > secrets.json
+
+      - name: upload secrets
+        run: yarn workspace @starknet-io/website exec wrangler secret:bulk secrets.json --env ${{ github.ref_name }}
+
       - name: Build project
-        run: yarn workspace @starknet-io/website exec vite build
+        run: yarn workspace @starknet-io/website build
         env:
           VITE_SITE_URL: https://starknet-website-${{ github.ref_name }}.yukilabs.workers.dev
           VITE_ALGOLIA_INDEX: dev
