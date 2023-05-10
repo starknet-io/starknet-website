@@ -1,0 +1,14 @@
+id: 7a79499d-317d-4823-9b13-fd9da3a8558f
+post_type: video
+title: "Starknet Community Call #42 | Rango Exchange cross-chain DEX and Bridge
+  aggregator"
+published_date: 2023-05-10T07:28:50.651Z
+video:
+  url: https://youtube.com/live/NL-skz5VW_0
+category: community-calls
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - defi
+short_desc: Rango Exchange is a cross-chain DEX and bridge aggregator. They have
+  enabled interoperability between Starknet and other blockchains like
+  Cosmos-based, Solana, UTXOs, EVMs.
