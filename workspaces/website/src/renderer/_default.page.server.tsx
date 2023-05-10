@@ -28,7 +28,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext;
 
-  const documentProps = pageContext.documentProps ?? pageContext.exports.documentProps ?? pageContext.exports.getDocumentProps?.(pageProps)
+  const documentProps = pageContext.documentProps ?? pageContext.exports.documentProps
 
   const page = (
     <PageShell pageContext={pageContext}>

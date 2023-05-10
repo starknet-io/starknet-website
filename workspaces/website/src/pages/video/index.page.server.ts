@@ -2,7 +2,7 @@ import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { getDefaultPageContext } from "src/renderer/helpers";
 import { playlist } from "@ui/VideoPlayer/constants";
 import { imageUrl } from "@ui/VideoPlayer/getVideoMetadata";
-import { Props } from "src/app/video-embed/(components)/VideoEmbedPage";
+import { Props } from "src/app/video/(components)/VideoPage";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -18,7 +18,6 @@ export async function onBeforeRender(pageContext: PageContextServer) {
         description: currentChapter?.description,
         image: imageUrl,
       } satisfies DocumentProps,
-
       hasLayout: false,
     },
   };

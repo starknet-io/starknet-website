@@ -28,7 +28,6 @@ export type PageContextCustom = {
   pageProps?: PageProps;
   hasLayout?: boolean;
   exports: {
-    getDocumentProps?: (pageProps?: PageProps) => DocumentProps;
     documentProps?: DocumentProps;
   };
   documentProps?: DocumentProps;

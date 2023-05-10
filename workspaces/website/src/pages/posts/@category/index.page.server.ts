@@ -1,6 +1,6 @@
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
-import { PageContextServer } from "src/renderer/types";
+import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { Props } from "src/app/posts/(components)/PostsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 
@@ -22,10 +22,17 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     },
   };
 
+  const category = pageProps.categories.find(
+    (c) => c.id === pageProps.params.category
+  );
+
   return {
     pageContext: {
       ...defaultPageContext,
       pageProps,
+      documentProps: {
+        title: category?.name,
+      } satisfies DocumentProps,
     },
   };
 }

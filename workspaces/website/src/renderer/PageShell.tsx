@@ -23,9 +23,7 @@ export function PageShell(props: Props) {
 
   useEffect(() => {
     const documentProps =
-      pageContext.documentProps ??
-      pageContext.exports.documentProps ??
-      pageContext.exports.getDocumentProps?.(pageContext.pageProps);
+      pageContext.documentProps ?? pageContext.exports.documentProps;
 
     document.title = documentProps?.title ?? document.title;
   }, [pageContext.pageProps]);

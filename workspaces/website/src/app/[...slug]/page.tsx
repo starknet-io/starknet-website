@@ -14,6 +14,7 @@ import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { TableOfContents } from "../(components)/TableOfContents";
 import { Suspense } from "react";
+import { usePageContext } from "src/renderer/PageContextProvider";
 // import * as fs from "fs/promises";
 // import * as path from "path";
 // import { Metadata } from "next";
@@ -64,11 +65,11 @@ import { Suspense } from "react";
 // }
 
 export interface Props {
-  readonly params: LocaleParams;
   readonly data: PageType;
 }
 
-export default function Page({ params: { locale }, data }: Props): JSX.Element {
+export default function Page({ data }: Props): JSX.Element {
+  const { locale } = usePageContext();
   const date = data?.gitlog?.date;
 
   return (

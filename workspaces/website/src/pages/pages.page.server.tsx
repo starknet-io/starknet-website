@@ -1,7 +1,8 @@
 import { defaultLocale } from "@starknet-io/cms-data/src/i18n/config";
 import { getPageBySlug } from "@starknet-io/cms-data/src/pages";
 import { getDefaultPageContext } from "src/renderer/helpers";
-import { PageContextServer } from "src/renderer/types";
+import { DocumentProps, PageContextServer } from "src/renderer/types";
+import { Props } from "src/app/[...slug]/page";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const locale = pageContext.locale ?? defaultLocale;
@@ -14,7 +15,10 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 
   return {
     pageContext: {
-      pageProps: { data },
+      pageProps: { data } satisfies Props,
+      documentProps: {
+        title: data.title
+      } satisfies DocumentProps,
       ...await getDefaultPageContext(pageContext),
     },
   }
