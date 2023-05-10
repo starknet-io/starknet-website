@@ -51,6 +51,9 @@ jobs:
 
       - name: Upload secrets
         run: yarn workspace @starknet-io/website exec wrangler secret:bulk secrets.json --env ${{ github.ref_name }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Build project
         run: yarn workspace @starknet-io/website build
