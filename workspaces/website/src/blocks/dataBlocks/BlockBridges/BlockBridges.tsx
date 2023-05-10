@@ -2,7 +2,7 @@ import { Box, Flex, Container } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import { getBridges } from "@starknet-io/cms-data/src/bridges";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 interface Props extends LocaleProps {
   noOfItems?: number;

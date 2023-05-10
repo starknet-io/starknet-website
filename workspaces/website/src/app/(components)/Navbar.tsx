@@ -15,7 +15,7 @@ import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 export interface Props {
   readonly mainMenu: MainMenu;

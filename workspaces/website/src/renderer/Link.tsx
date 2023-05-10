@@ -1,4 +1,4 @@
-import { usePageContext } from "./usePageContext";
+import { usePageContext } from "./PageContextProvider";
 
 export function Link({ href, children }: { href: string; children: string }) {
   const { urlPathname: pathname } = usePageContext();

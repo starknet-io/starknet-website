@@ -25,7 +25,7 @@ import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-pl
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
 import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>

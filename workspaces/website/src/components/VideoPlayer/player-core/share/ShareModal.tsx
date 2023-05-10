@@ -10,7 +10,7 @@ import {
 import { Chapter, VIDEO_SHARE_DOMAIN } from "../../constants";
 import ShareEmbed from "./ShareEmbed";
 import SocialShare from "./SocialShare";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 type ShareModalProps = {
   isOpen: boolean;

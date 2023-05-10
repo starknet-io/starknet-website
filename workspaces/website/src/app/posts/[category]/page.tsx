@@ -10,15 +10,15 @@ export interface Props extends LocaleProps {
   };
 }
 
-// export async function generateMetadata(props: Props): Promise<Metadata> {
-//   const categories = await getCategories(props.params.locale);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const categories = await getCategories(props.params.locale);
 
-//   const category = categories.find((c) => c.id === props.params.category);
+  const category = categories.find((c) => c.id === props.params.category);
 
-//   return {
-//     title: category?.name,
-//   };
-// }
+  return {
+    title: category?.name,
+  };
+}
 
 // export async function generateStaticParams() {
 //   const params = [];

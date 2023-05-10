@@ -16,7 +16,7 @@ import * as React from "react";
 import { HiGlobeAlt, HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import { Button } from "../../Button";
 import { NavLayout } from "./NavLayout";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 type Props = {
   desktopNavItems?: React.ReactNode;

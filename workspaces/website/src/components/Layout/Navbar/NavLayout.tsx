@@ -15,7 +15,7 @@ import {
   HiOutlineSun,
   HiOutlineXMark,
 } from "react-icons/hi2";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 type NavLayoutProps = {
   items?: React.ReactNode;

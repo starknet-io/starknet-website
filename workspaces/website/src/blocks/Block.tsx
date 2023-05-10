@@ -19,7 +19,7 @@ import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
 import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 interface Props {
   readonly block: TopLevelBlock;

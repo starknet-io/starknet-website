@@ -1,8 +1,9 @@
-import PagePage from "src/app/[...slug]/page";
+import PagePage, { Props } from "src/app/[...slug]/page";
 import NotFound from "@ui/NotFound/NotFound";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
+import { DocumentProps } from "src/renderer/types";
 
-export function Page({ data }: any): JSX.Element {
+export function Page({ data }: Props): JSX.Element {
   const { locale } = usePageContext();
 
   if (data == null) {
@@ -10,4 +11,10 @@ export function Page({ data }: any): JSX.Element {
   }
 
   return <PagePage params={{ locale }} data={data} />;
+}
+
+export function getDocumentProps({ data }: Props): DocumentProps {
+  return {
+    title: data.title,
+  };
 }

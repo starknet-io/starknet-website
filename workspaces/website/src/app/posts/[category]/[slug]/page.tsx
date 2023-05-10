@@ -30,39 +30,39 @@ import { Topic } from "@starknet-io/cms-data/src/topics";
 // import { Metadata } from "next";
 // import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 
-// export async function generateMetadata(props: Props): Promise<Metadata> {
-//   try {
-//     const post = await getPostBySlug(props.params.slug, props.params.locale);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  try {
+    const post = await getPostBySlug(props.params.slug, props.params.locale);
 
-//     const PUBLIC_URL =
-//       process.env.VERCEL_URL && process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
-//         ? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
-//           ? `https://starknet-website-dev.vercel.app`
-//           : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
-//           ? `https://www.starknet.io`
-//           : `https://${process.env.VERCEL_URL}`
-//         : "";
+    const PUBLIC_URL =
+      process.env.VERCEL_URL && process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
+        ? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
+          ? `https://starknet-website-dev.vercel.app`
+          : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
+          ? `https://www.starknet.io`
+          : `https://${process.env.VERCEL_URL}`
+        : "";
 
-//     return {
-//       title: post.title,
-//       description: post.short_desc,
-//       openGraph: {
-//         type: "article",
-//         title: post.title,
-//         description: post.short_desc,
-//         images: `${PUBLIC_URL}${post.image}`,
-//       },
-//       twitter: {
-//         card: "summary_large_image",
-//         title: post.title,
-//         description: post.short_desc,
-//         images: `${PUBLIC_URL}${post.image}`,
-//       },
-//     };
-//   } catch {
-//     return {};
-//   }
-// }
+    return {
+      title: post.title,
+      description: post.short_desc,
+      openGraph: {
+        type: "article",
+        title: post.title,
+        description: post.short_desc,
+        images: `${PUBLIC_URL}${post.image}`,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.title,
+        description: post.short_desc,
+        images: `${PUBLIC_URL}${post.image}`,
+      },
+    };
+  } catch {
+    return {};
+  }
+}
 
 // export async function generateStaticParams() {
 //   const params = [];

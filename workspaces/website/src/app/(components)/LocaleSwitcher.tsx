@@ -3,7 +3,7 @@ import { LanguageSwitcherDropdown } from "@ui/Layout/Navbar/LanguageSwitcherDrop
 import { ColumnLink, ColumnLinkDescription } from "@ui/ColumnLink/ColumnLink";
 import { HStack } from "@chakra-ui/react";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 export default function LocaleSwitcher({ seo }: { seo: SEOTexts["language"] }) {
   const { locale, urlPathname: pathname } = usePageContext();

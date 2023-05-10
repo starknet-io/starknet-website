@@ -17,5 +17,5 @@ export async function onBeforeRender(pageContext: PageContextServer) {
       pageProps: { data },
       ...await getDefaultPageContext(pageContext),
     },
-  };
+  }
 }

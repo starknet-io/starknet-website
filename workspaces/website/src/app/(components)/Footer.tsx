@@ -8,7 +8,7 @@ import {
 import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { getComputedLinkData } from "src/utils/utils";
-import { usePageContext } from "src/renderer/usePageContext";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 export interface Props {
   readonly mainMenu: MainMenu;

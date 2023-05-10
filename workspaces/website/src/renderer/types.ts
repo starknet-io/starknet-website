@@ -17,18 +17,21 @@ type Page = (pageProps: PageProps) => React.ReactElement;
 
 export type PageProps = Record<string, unknown>;
 
+export interface DocumentProps {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
 export type PageContextCustom = {
   Page: Page;
   pageProps?: PageProps;
   hasLayout?: boolean;
   exports: {
-    documentProps?: {
-      title: string;
-    };
+    getDocumentProps?: (pageProps?: PageProps) => DocumentProps;
+    documentProps?: DocumentProps;
   };
-  documentProps?: {
-    title: string;
-  };
+  documentProps?: DocumentProps;
   locale: string;
   event: null | WorkerGlobalScopeEventMap["fetch"];
   userAgent: string;

@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom/client'
 import { PageShell } from './PageShell'
-import { getPageTitle } from './getPageTitle'
 import type { PageContextClient } from './types'
 
 export const clientRouting = true
@@ -25,7 +24,6 @@ export async function render(pageContext: PageContextClient) {
     }
     root.render(page)
   }
-  document.title = getPageTitle(pageContext)
 }
 
 export function onHydrationEnd() {

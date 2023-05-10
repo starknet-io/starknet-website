@@ -5,8 +5,8 @@ import "@fontsource/noto-sans-jp/japanese.css";
 import "@fontsource/noto-sans-sc/chinese-simplified.css";
 import "@fontsource/noto-sans-tc/chinese-traditional.css";
 
-import React, { Suspense } from "react";
-import { PageContextProvider } from "./usePageContext";
+import React, { Suspense, useEffect } from "react";
+import { PageContextProvider } from "./PageContextProvider";
 import type { PageContext } from "./types";
 import { ThemeProvider } from "./ThemeProvider";
 import { PageContainer } from "src/app/(components)/PageContainer";
@@ -20,6 +20,15 @@ interface Props {
 
 export function PageShell(props: Props) {
   const { pageContext, children } = props;
+
+  useEffect(() => {
+    const documentProps =
+      pageContext.documentProps ??
+      pageContext.exports.documentProps ??
+      pageContext.exports.getDocumentProps?.(pageContext.pageProps);
+
+    document.title = documentProps?.title ?? document.title;
+  }, [pageContext.pageProps]);
 
   return (
     <React.StrictMode>
