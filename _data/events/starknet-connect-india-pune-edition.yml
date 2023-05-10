@@ -9,6 +9,7 @@ description: "​For the first time in South India, Starknet in Collaboration wi
 url: https://lu.ma/StarknetConnect_Pune
 start_date: 2023-04-29T09:00:20.588Z
 end_date: 2023-04-29T12:00:20.595Z
+show_in_past_events: true
 image: /assets/screenshot-2023-04-27-at-14.34.55.png
 location: asia
 city: Pune

@@ -42,7 +42,7 @@ export const Intro = () => {
       mt="8"
       fontWeight="bold"
       height={{ base: "1.2em" }}
-      fontSize={{ base: "48px", md: "70px", lg: "80px", xl: "80px" }}
+      fontSize={{ base: "48px", md: "55px", lg: "60px", xl: "80px" }}
       fontFamily="InterVariable, Tajawal, Noto Sans Hebrew, Noto Sans JP, Noto Sans TC, Noto Sans SC"
       color="heading-navy-fg"
     />
