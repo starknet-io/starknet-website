@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #080836;
-  background-image: url("./assets/desktop-bg.jpg");
+  background-image: url("./assets/desktop-bg-2.jpg");
   background-repeat: no-repeat;
   background-position: center top -20px;
   font-synthesis: none;
@@ -39,6 +39,11 @@ button {
   top: 117px;
   border-radius: 4px;
   padding: 12px 24px 12px 24px;
+}
+
+.logo-container img {
+  width:177px;
+height:39.98px;
 }
 
 label {
@@ -82,7 +87,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #EFEFEF;
-    background-color: #ffffff;
+    background-color: #080836;
   }
   a:hover {
     color: #747bff;
@@ -130,11 +135,11 @@ form buttom {
 
 @media screen and (max-width: 1024px) {
   :root {
-    background-image: url("./assets/mobile-tablet-bg.jpg");
-    background-position: center top 58px;
+    background-image: url("./assets/mobile-tablet-bg-1.jpg");
+    background-position: center top -24px;
   }
   .container {
-    padding: 60px 15px 220px 15px;
+    padding: 60px 15px 60px 15px;
     width: calc(100% - 30px);
   }
   .footer-container {
@@ -164,10 +169,10 @@ body {
 }
 
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   background-color: transparent;
-  padding: 20px 16px;
+  padding: 20px 0;
   width: 100%;
   display: flex;
   margin: 0 auto;
@@ -177,12 +182,14 @@ body {
 
 .header {
   background-color: transparent;
-  padding: 20px 16px;
+  padding: 20px 32px;
   width: 100%;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  /* display:none; */
+
 }
 
 .header-container,
@@ -194,6 +201,24 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .header {
+    display:none
+  }
+    .social.footer {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    display: none
+  }
+}
+
 .footer-container {
   justify-content: space-between;
 }
@@ -202,9 +227,14 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-right: 80px;
+  margin-right: 0px;
+  margin-left:0px;
 }
 
 .header {
   max-width: calc(100% - 32px);
+  box-sizing: border-box;
 }
+
+
+/* summit23.starknet.io */
