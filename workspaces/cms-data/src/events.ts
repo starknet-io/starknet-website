@@ -21,6 +21,7 @@ export interface Event {
     readonly link: string;
     readonly isExternal: boolean;
   };
+  readonly show_in_past_events?: boolean;
 }
 
 export async function getEvents(locale: string): Promise<readonly Event[]> {
