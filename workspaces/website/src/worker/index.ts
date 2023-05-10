@@ -1,4 +1,4 @@
-import { router } from "src/api";
+import { router } from "../api";
 import { handleStaticAssets } from "./static-assets";
 import { renderPage } from "vite-plugin-ssr/server";
 

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": ".types",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client", "@cloudflare/workers-types"],
+    "types": ["vite/client", "@cloudflare/workers-types", "@types/gapi"],
     "jsx": "react-jsx",
     "paths": {
       "@ui/*": ["./src/components/*"]

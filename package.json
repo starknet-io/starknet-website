@@ -60,7 +60,6 @@
     "eslint": "^8.39.0",
     "framer-motion": "^10.12.4",
     "fsevents": "^2.3.2",
-    "googleapis": "^118.0.0",
     "itty-cors": "^0.3.6",
     "itty-router": "^3.0.12",
     "itty-router-extras": "^0.4.2",
