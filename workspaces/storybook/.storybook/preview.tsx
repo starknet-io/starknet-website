@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@starknet-io/website/src/style/theme";
-import { PageContextProvider } from "@starknet-io/website/src/renderer/usePageContext";
+import { PageContextProvider } from "@starknet-io/website/src/renderer/PageContextProvider";
 import React from "react";
 
 export const parameters = {
