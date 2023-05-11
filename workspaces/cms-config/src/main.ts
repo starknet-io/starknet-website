@@ -12,6 +12,8 @@ export const CMSConfig = {
     repo: "starknet-io/starknet-website",
     branch: "dev",
     base_url: "https://netlify-cms-auth.yukilabs.workers.dev",
+    // @ts-expect-error
+    preview_context: "Vercel – starknet-website"
   },
   publish_mode: "editorial_workflow",
   show_preview_links: true,
