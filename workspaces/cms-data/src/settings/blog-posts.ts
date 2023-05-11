@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 export interface BlogPosts {
-  readonly featured_post: string;
+  readonly custom_featured_post: string;
 }
 
 export async function getBlogPosts(locale: string): Promise<BlogPosts> {

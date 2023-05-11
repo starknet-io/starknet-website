@@ -407,13 +407,13 @@ export const settingsCollectionConfig = {
       fields: [
         {
           name: "show_featured_post",
-          label: "Show Featured post",
+          label: "Show custom featured post",
           widget: "boolean",
           default: true,
         },
         {
-          name: "featured_post",
-          label: "Featured post",
+          name: "custom_featured_post",
+          label: "Custom featured post",
           widget: "relation",
           collection: "posts",
           search_fields: ["title"],
