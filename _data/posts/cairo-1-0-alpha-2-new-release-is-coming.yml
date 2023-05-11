@@ -11,7 +11,7 @@ topic:
   - open_source
 short_desc: Cairo 1.0 is continuing its fast improvement pace. Today’s release
   introduces, among other things, all the necessary features to write an ERC-20
-  contract.
+  contract. 2
 blocks:
   - type: markdown
     body: >-
