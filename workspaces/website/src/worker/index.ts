@@ -9,9 +9,12 @@ export const router = Router();
 router.all("/api", apiRouter.handle);
 
 redirects.items.forEach(({ source, destination }) => {
-  router.get(source, () => {
-    return Response.redirect(destination, 301);
-  });
+  router.get(
+    source,
+    (req: IRequest, event: WorkerGlobalScopeEventMap["fetch"]) => {
+      return Response.redirect(new URL(destination, event.request.url), 301);
+    }
+  );
 });
 
 async function ittyAssetshandler(
@@ -41,7 +44,8 @@ router.all("*", async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
 
   if (pageContext.redirectTo) {
     return Response.redirect(
-      new URL(pageContext.redirectTo, event.request.url)
+      new URL(pageContext.redirectTo, event.request.url),
+      301
     );
   } else if (pageContext.httpResponse != null) {
     return new Response(pageContext.httpResponse.getReadableWebStream(), {
