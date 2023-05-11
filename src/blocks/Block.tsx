@@ -57,6 +57,7 @@ Props): JSX.Element {
         params={{
           locale,
         }}
+        env={blocksDynamicData.algoliaEnv}
       />
     );
   } else if (block.type === "flex_layout") {

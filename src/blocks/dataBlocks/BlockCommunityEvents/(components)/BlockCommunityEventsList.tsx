@@ -19,6 +19,11 @@ export interface AutoProps {
   readonly params: {
     readonly locale: string;
   };
+  readonly env: {
+    readonly ALGOLIA_INDEX: string;
+    readonly ALGOLIA_APP_ID: string;
+    readonly ALGOLIA_SEARCH_API_KEY: string;
+  };
 }
 
 export interface Props extends AutoProps {
@@ -92,7 +97,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                 startDateTime={
                   hit?.end_date
                     ? `${moment(hit?.start_date).format(
-                        "ddd MMM DD",
+                        "ddd MMM DD"
                       )} - ${moment(hit?.end_date).format("ddd MMM DD, YYYY")}`
                     : moment(hit?.start_date).format("ddd MMM DD, YYYY")
                 }

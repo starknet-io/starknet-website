@@ -18,6 +18,11 @@ export type BlocksDynamicData = {
   readonly fiatOnRamps: readonly FiatOnRamp[];
   readonly blockExplorers: readonly BlockExplorer[];
   readonly homeSEO: HomeSEO;
+  readonly algoliaEnv: {
+    readonly ALGOLIA_INDEX: string;
+    readonly ALGOLIA_APP_ID: string;
+    readonly ALGOLIA_SEARCH_API_KEY: string;
+  };
 };
 
 export default async function getBlocksDynamicData(locale: string) {
@@ -27,7 +32,11 @@ export default async function getBlocksDynamicData(locale: string) {
   const fiatOnRamps = await getFiatOnRamps(locale);
   const bridges = await getBridges(locale);
   const homeSEO = await getHomeSEO(locale);
-
+  const algoliaEnv = {
+    ALGOLIA_INDEX: process.env.ALGOLIA_INDEX!,
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID!,
+    ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY!,
+  };
   const blocksDynamicData: BlocksDynamicData = {
     dapps,
     wallets,
@@ -35,6 +44,7 @@ export default async function getBlocksDynamicData(locale: string) {
     fiatOnRamps,
     bridges,
     homeSEO,
+    algoliaEnv,
   };
 
   return blocksDynamicData;
