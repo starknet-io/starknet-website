@@ -6,9 +6,18 @@ import JobsCard from "src/app/[locale]/jobs/(components)/JobsCard";
 import usePreviewData, { CustomPreviewType } from "./usePreviewData";
 import TutorialsCard from "src/app/[locale]/tutorials/(components)/TutorialsCard";
 import PostByCategory from "src/app/[locale]/posts/[category]/(components)/PostByCategory";
-import CMSPage from "src/app/[locale]/(components)/CMSPageClient";
+import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
+import CMSPage from "src/app/[locale]/(components)/CMSPage";
+import { Topic } from "workspaces/cms-data/src/topics";
 
-export default function LivePreivewPage() {
+type LivePreivewPageProps = {
+  blocksDynamicData?: BlocksDynamicData;
+  topics?: readonly Topic[];
+};
+export default function LivePreivewPage({
+  blocksDynamicData,
+  topics,
+}: LivePreivewPageProps) {
   const data = usePreviewData();
 
   return (
@@ -28,7 +37,7 @@ export default function LivePreivewPage() {
       {data.type === CustomPreviewType.TUTORIALS && (
         <TutorialsCard hit={data.payload} />
       )}
-      {data.type === CustomPreviewType.POST && (
+      {data.type === CustomPreviewType.POST && blocksDynamicData && (
         <PostByCategory
           post={data.payload}
           category={{
@@ -37,14 +46,16 @@ export default function LivePreivewPage() {
             slug: data.payload.category,
           }}
           locale="en"
-          topics={data.payload.topic.map((topic, i) => ({
-            id: topic,
-            name: `Topic ${i + 1}`,
-          }))}
+          topics={topics || []}
+          blocksDynamicData={blocksDynamicData}
         />
       )}
-      {data.type === CustomPreviewType.PAGE && (
-        <CMSPage data={data.payload} locale="en" />
+      {data.type === CustomPreviewType.PAGE && blocksDynamicData && (
+        <CMSPage
+          data={data.payload}
+          locale="en"
+          blocksDynamicData={blocksDynamicData}
+        />
       )}
     </div>
   );

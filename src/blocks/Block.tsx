@@ -1,3 +1,4 @@
+"use client";
 import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
 import { MarkdownBlock } from "./MarkdownBlock";
@@ -17,22 +18,32 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
-import { getHomeSEO } from "workspaces/cms-data/src/seo";
+import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 
 interface Props {
   readonly block: TopLevelBlock;
   readonly locale: string;
+  readonly blocksDynamicData: BlocksDynamicData;
 }
 
-// @ts-expect-error
-export async function Block({ block, locale }: Props): JSX.Element {
+export function Block({
+  block,
+  locale,
+  blocksDynamicData,
+}: // @ts-expect-error
+Props): JSX.Element {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
   } else if (block.type === "container") {
     return (
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+            blocksDynamicData={blocksDynamicData}
+          />
         ))}
       </Container>
     );
@@ -59,7 +70,12 @@ export async function Block({ block, locale }: Props): JSX.Element {
         headingVariant={block.heading_variant}
       >
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+            blocksDynamicData={blocksDynamicData}
+          />
         ))}
       </BlockCards>
     );
@@ -110,7 +126,12 @@ export async function Block({ block, locale }: Props): JSX.Element {
     return (
       <BlockGrouping>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+            blocksDynamicData={blocksDynamicData}
+          />
         ))}
       </BlockGrouping>
     );
@@ -125,14 +146,14 @@ export async function Block({ block, locale }: Props): JSX.Element {
       />
     );
   } else if (block.type === "home_hero") {
-    const homeSEO = await getHomeSEO(locale);
-    return <HomepageHero seo={homeSEO} />;
+    return <HomepageHero seo={blocksDynamicData.homeSEO} />;
   } else if (block.type === "dapps") {
     return (
       <BlockDapps
         params={{
           locale,
         }}
+        dapps={blocksDynamicData.dapps}
       />
     );
   } else if (block.type === "block_explorers") {
@@ -141,6 +162,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         params={{
           locale,
         }}
+        blockExplorers={blocksDynamicData.blockExplorers}
       />
     );
   } else if (block.type === "bridges") {
@@ -149,6 +171,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         params={{
           locale,
         }}
+        bridges={blocksDynamicData.bridges}
       />
     );
   } else if (block.type === "on_ramps") {
@@ -157,6 +180,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         params={{
           locale,
         }}
+        fiatOnRamps={blocksDynamicData.fiatOnRamps}
       />
     );
   } else if (block.type === "wallets") {
@@ -165,6 +189,7 @@ export async function Block({ block, locale }: Props): JSX.Element {
         params={{
           locale,
         }}
+        wallets={blocksDynamicData.wallets}
       />
     );
   } else {

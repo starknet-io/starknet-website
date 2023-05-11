@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import CMSPage from "../(components)/CMSPage";
+import getBlocksDynamicData from "../(components)/utils/getBlocksDynamicData";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -61,8 +62,15 @@ export default async function Page({
 }: // @ts-expect-error
 Props): JSX.Element {
   try {
+    const blocksDynamicData = await getBlocksDynamicData(locale);
     const data = await getPageBySlug(slug.join("/"), locale);
-    return <CMSPage data={data} locale={locale} />;
+    return (
+      <CMSPage
+        data={data}
+        locale={locale}
+        blocksDynamicData={blocksDynamicData}
+      />
+    );
   } catch (err) {
     console.log(err);
     notFound();

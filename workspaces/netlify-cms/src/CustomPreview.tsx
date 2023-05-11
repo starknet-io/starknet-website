@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { useWindowSize } from "./useWindowSize";
 import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
+const livePreviewHost =
+  import.meta.env.VITE_LIVE_PREVIEW_HOST ??
+  "https://starknet-website-git-cms-live-preview-yuki-labs.vercel.app";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
@@ -43,8 +46,8 @@ export default function CustomPreview(props: CustomPreviewProps) {
         ref={ref}
         width="100%"
         height={height ? height - 100 : 500}
-        src="http://localhost:3000/live-preview"
-        title="Events item preview"
+        src={`${livePreviewHost}/live-preview?type=${props.type}`}
+        title="Live preview"
         frameBorder="0"
         onLoad={() => {
           setTimeout(() => {

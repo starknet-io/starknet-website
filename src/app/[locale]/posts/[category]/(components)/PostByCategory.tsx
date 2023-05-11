@@ -5,8 +5,7 @@ import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
-// import { Block } from "src/blocks/Block";
-import { Block } from "src/blocks/BlockClient";
+import { Block } from "src/blocks/Block";
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { TableOfContents } from "src/app/[locale]/(components)/TableOfContents";
 import remarkParse from "remark-parse";
@@ -28,18 +27,21 @@ import {
 import Link from "next/link";
 import { Topic } from "workspaces/cms-data/src/topics";
 import { Category } from "workspaces/cms-data/src/categories";
+import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 
 type PostByCategoryProps = {
   post: Post;
   category: Category;
   locale: string;
   topics: readonly Topic[];
+  blocksDynamicData: BlocksDynamicData;
 };
 export default function PostByCategory({
   post,
   category,
   locale,
   topics,
+  blocksDynamicData,
 }: PostByCategoryProps) {
   let videoId = post.post_type === "video" ? post.video?.id : undefined;
   return (
@@ -124,7 +126,12 @@ export default function PostByCategory({
           ) : null}
           <Flex direction="column" gap="32px">
             {post.blocks?.map((block, i) => (
-              <Block key={i} block={block} locale={locale} />
+              <Block
+                key={i}
+                block={block}
+                locale={locale}
+                blocksDynamicData={blocksDynamicData}
+              />
             ))}
           </Flex>
           <Spacer height="32px" />

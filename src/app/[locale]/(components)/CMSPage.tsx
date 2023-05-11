@@ -13,12 +13,18 @@ import {
   BreadcrumbLink,
   Flex,
 } from "../../../libs/chakra-ui";
+import { BlocksDynamicData } from "./utils/getBlocksDynamicData";
 
 type CMSPageProps = {
   data: PageType;
   locale: string;
+  blocksDynamicData: BlocksDynamicData;
 };
-export default function CMSPage({ data, locale }: CMSPageProps) {
+export default function CMSPage({
+  data,
+  locale,
+  blocksDynamicData,
+}: CMSPageProps) {
   const date = data?.gitlog?.date;
 
   return (
@@ -68,7 +74,14 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             }}
           >
             {data.blocks.map((block, i) => {
-              return <Block key={i} block={block} locale={locale} />;
+              return (
+                <Block
+                  key={i}
+                  block={block}
+                  locale={locale}
+                  blocksDynamicData={blocksDynamicData}
+                />
+              );
             })}
           </Flex>
         }
