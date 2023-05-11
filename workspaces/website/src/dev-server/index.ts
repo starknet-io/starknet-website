@@ -4,7 +4,7 @@ import { renderPage } from "vite-plugin-ssr/server";
 import { createServer } from "vite";
 import fetch from "node-fetch";
 import compression from "compression";
-import { router } from "../api";
+import { apiRouter } from "../api";
 
 const app = express();
 
@@ -20,7 +20,7 @@ const viteDevMiddleware = (
 app.use(viteDevMiddleware);
 
 app.all(/\/api(.*)/, async (req, res, next) => {
-  const httpResponse: Response = await router.handle({
+  const httpResponse: Response = await apiRouter.handle({
     method: req.method,
     url: new URL(req.url, `http://localhost:${port}`).toString(),
   });
