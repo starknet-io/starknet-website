@@ -6,7 +6,7 @@ import * as redirects from "../../redirects.json";
 
 export const router = Router();
 
-router.all("/api", apiRouter.handle);
+router.all("/api/*", apiRouter.handle);
 
 redirects.items.forEach(({ source, destination }) => {
   router.get(
