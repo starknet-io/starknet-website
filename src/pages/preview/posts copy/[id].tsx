@@ -32,8 +32,9 @@ const PostPreview = ({ post }: IPostProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { id } = context.params as IParams;
-  const post = await getContent(id, "en");
+  const { id, locale } = context.params as IParams;
+  const post = await getContent(id, locale as string);
+
   return {
     props: {
       post,

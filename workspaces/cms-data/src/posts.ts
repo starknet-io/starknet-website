@@ -43,7 +43,7 @@ export async function getPostBySlug(
               path.join(
                 process.cwd(),
                 "_crowdin/data/posts",
-                value,
+                value as string,
                 slug + ".json"
               ),
               "utf8"
@@ -80,8 +80,8 @@ export async function getPostBySlug(
 }
 
 export async function getPostById(
-  id: string,
-  locale: string
+  id: string | string[] | undefined,
+  locale: string | string[]
 ): Promise<Post> {
   try {
     return await getFirst(
@@ -92,7 +92,7 @@ export async function getPostById(
               path.join(
                 process.cwd(),
                 "_crowdin/data/posts",
-                value,
+                value as string,
                 id + ".json"
               ),
               "utf8"

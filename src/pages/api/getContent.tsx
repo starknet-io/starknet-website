@@ -1,15 +1,16 @@
-import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
-import remark from 'remark';
-import html from 'remark-html';
+import remarkParse from "remark-parse";
+import { unified } from "unified";
 import { Octokit } from '@octokit/core';
-import { getPostById } from "@starknet-io/cms-data/src/posts";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN });
 async function getContent(id: string, locale: string): Promise<any> {
-  const { slug } = await getPostById(id, 'en');
-  
+  let slug;
+    async function fetchData() {
+      const response = await fetch(`/api/getPostById?id=${id}&locale=en`);
+      slug = await response.json();
+    }
+    fetchData();
   
   const response = await octokit.request('GET /repos/{owner}/{repo}/{path}', {
     owner: 'starknet-io',
@@ -23,8 +24,8 @@ async function getContent(id: string, locale: string): Promise<any> {
 
   const { data, content } = matter(fileContent);
 
-  const processedContent = await remark()
-    .use(html)
+  const processedContent = await unified()
+    .use(remarkParse)
     .process(content);
   const contentHtml = processedContent.toString();
 
