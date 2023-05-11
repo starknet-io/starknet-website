@@ -3,7 +3,7 @@ import * as path from "path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 
-import { write } from "./utils";
+import { write, yaml } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
@@ -132,3 +132,7 @@ for (const locale of locales) {
 
   await write(`public/data/main-menu/${locale}.json`, mainMenu);
 }
+
+const redirects = await yaml('_data/settings/redirects.yml')
+
+await write(`workspaces/website/redirects.json`, redirects);

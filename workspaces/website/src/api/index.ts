@@ -3,7 +3,7 @@ import { error, json, missing } from "itty-router-extras";
 import { createCors } from "itty-cors";
 
 // now let's create a router (note the lack of "new")
-export const router = Router();
+export const apiRouter = Router({base: '/api'});
 
 const { preflight, corsify } = createCors({
   origins: [
@@ -15,10 +15,10 @@ const { preflight, corsify } = createCors({
 });
 
 // @ts-expect-error
-router.all("*", preflight);
+apiRouter.all("*", preflight);
 
-router.get(
-  "/api/youtube",
+apiRouter.get(
+  "/youtube",
   async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
     if (typeof req.query.id !== "string") {
       return corsify(error(422, { message: "Invalid id provided!" }));

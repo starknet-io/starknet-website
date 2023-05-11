@@ -8,9 +8,10 @@
     "paths": {
       "@ui/*": ["./src/components/*"]
     },
+    "resolveJsonModule": true,
     "baseUrl": "."
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "*.json"],
   "references": [
     { "path": "../cms-utils" },
     { "path": "../cms-config" },

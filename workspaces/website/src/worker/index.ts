@@ -1,56 +1,63 @@
-import { router } from "../api";
+import { apiRouter } from "../api";
 import { handleStaticAssets } from "./static-assets";
 import { renderPage } from "vite-plugin-ssr/server";
+import { IRequest, Router } from "itty-router";
+import * as redirects from "../../redirects.json";
 
-addEventListener("fetch", (event: WorkerGlobalScopeEventMap["fetch"]) => {
-  try {
-    const { pathname } = new URL(event.request.url);
+export const router = Router();
 
-    if (pathname.startsWith("/api/")) {
-      event.respondWith(router.handle(event.request, event));
-    } else {
-      event.respondWith(handleFetchEvent(event));
-    }
-  } catch (err: any) {
-    console.error(err.stack);
-    event.respondWith(new Response("Internal Error", { status: 500 }));
-  }
+router.all("/api", apiRouter.handle);
+
+redirects.items.forEach(({ source, destination }) => {
+  router.get(source, () => {
+    return Response.redirect(destination, 301);
+  });
 });
 
-async function handleFetchEvent(event: WorkerGlobalScopeEventMap["fetch"]) {
-  const { url } = event.request;
+async function ittyAssetshandler(
+  req: IRequest,
+  event: WorkerGlobalScopeEventMap["fetch"]
+) {
+  return await handleStaticAssets(event);
+}
 
-  if (!isAssetUrl(url)) {
-    const userAgent = event.request.headers.get("User-Agent")!;
+router.get("/*.png", ittyAssetshandler);
+router.get("/*.svg", ittyAssetshandler);
+router.get("/*.ico", ittyAssetshandler);
+router.get("/assets/*", ittyAssetshandler);
+router.get("/data/*", ittyAssetshandler);
 
-    const pageContextInit = {
-      event,
-      urlOriginal: url,
-      fetch,
-      userAgent,
-    };
-    const pageContext: any = await renderPage(pageContextInit);
+router.all("*", async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
+  const userAgent = event.request.headers.get("User-Agent")!;
 
-    if (pageContext.redirectTo) {
-      return Response.redirect(new URL(pageContext.redirectTo, url));
-    }
+  const pageContextInit = {
+    event,
+    urlOriginal: event.request.url,
+    fetch,
+    userAgent,
+  };
 
-    const { httpResponse } = pageContext;
+  const pageContext: any = await renderPage(pageContextInit);
 
-    if (httpResponse != null) {
-      const { statusCode, contentType } = httpResponse;
-      const stream = httpResponse.getReadableWebStream();
-      return new Response(stream, {
-        headers: { "content-type": contentType },
-        status: statusCode,
-      });
-    }
+  if (pageContext.redirectTo) {
+    return Response.redirect(
+      new URL(pageContext.redirectTo, event.request.url)
+    );
+  } else if (pageContext.httpResponse != null) {
+    return new Response(pageContext.httpResponse.getReadableWebStream(), {
+      headers: { "content-type": pageContext.httpResponse.contentType },
+      status: pageContext.httpResponse.statusCode,
+    });
   }
-  const response = await handleStaticAssets(event);
-  return response;
-}
 
-function isAssetUrl(url: string | URL) {
-  const { pathname } = new URL(url);
-  return pathname.startsWith("/assets/") || pathname.startsWith("/data/");
-}
+  return await handleStaticAssets(event);
+});
+
+addEventListener("fetch", async (event: WorkerGlobalScopeEventMap["fetch"]) => {
+  event.respondWith(
+    router.handle(event.request, event).catch((err) => {
+      console.error(err);
+      return new Response("Internal Error", { status: 500 });
+    })
+  );
+});
