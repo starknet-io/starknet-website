@@ -38,11 +38,15 @@ The StarkNet website includes the following features:
 
     `yarn install`
 
-4.  Run the development server:
+4.  Update dynamic data:
+
+    `yarn data`
+
+5.  Run the development server:
 
     `yarn dev`
 
-5.  Open your browser and visit `http://localhost:3000` to see the website running locally.
+6.  Open your browser and visit `http://localhost:3000` to see the website running locally.
 
 ## Contributing to the Code
 
