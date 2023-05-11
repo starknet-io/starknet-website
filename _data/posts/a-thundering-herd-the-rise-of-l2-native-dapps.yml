@@ -14,7 +14,7 @@ topic:
 short_desc: >+
   dApp developers have always faced severe constraints due to Ethereum’s (L1)
   block gas limit. It limits not only how those dApps operate but also what
-  those dApps are capable of doing.
+  those dApps are capable of doing.2
 
 blocks:
   - type: markdown
