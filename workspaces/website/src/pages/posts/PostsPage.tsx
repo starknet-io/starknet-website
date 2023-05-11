@@ -25,9 +25,9 @@ import type { Topic } from "@starknet-io/cms-data/src/topics";
 import { useInfiniteHits } from "react-instantsearch-hooks-web";
 import { Heading } from "@ui/Typography/Heading";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
-import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
-import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
-import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
+import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
+import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { navigate } from "vite-plugin-ssr/client/router";
 
 export interface Props extends LocaleProps {

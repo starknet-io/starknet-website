@@ -1,1 +1,1 @@
-export { Page } from "src/app/posts/[category]/[slug]/page";
+export { Page } from "src/pages/posts/PostPage";

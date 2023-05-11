@@ -23,10 +23,10 @@ import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
 import moment from "moment";
-import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
-import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
+import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
-import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { navigate } from "vite-plugin-ssr/client/router";
 
 export interface Props extends LocaleProps {

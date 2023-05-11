@@ -9,9 +9,9 @@ import React, { Suspense, useEffect } from "react";
 import { PageContextProvider } from "./PageContextProvider";
 import type { PageContext } from "./types";
 import { ThemeProvider } from "./ThemeProvider";
-import { PageContainer } from "src/app/(components)/PageContainer";
-import Navbar from "src/app/(components)/Navbar";
-import { Footer } from "src/app/(components)/Footer";
+import { PageContainer } from "src/pages/(components)/PageContainer";
+import Navbar from "src/pages/(components)/Navbar";
+import { Footer } from "src/pages/(components)/Footer";
 
 interface Props {
   readonly pageContext: PageContext;

@@ -1,7 +1,7 @@
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PageContextServer } from "src/renderer/types";
-import { Props } from "src/app/posts/(components)/PostsPage";
+import { Props } from "src/pages/posts/PostsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 
 export async function onBeforeRender(pageContext: PageContextServer) {

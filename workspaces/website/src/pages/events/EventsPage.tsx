@@ -31,9 +31,9 @@ import {
   eventsLocationsLabels,
   eventsTypesLabels,
 } from "@starknet-io/cms-config/src/collections/events";
-import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
-import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
-import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
+import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
+import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export interface AutoProps {

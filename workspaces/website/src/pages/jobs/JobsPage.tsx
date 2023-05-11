@@ -23,9 +23,9 @@ import { Heading } from "@ui/Typography/Heading";
 import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
-import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
-import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
-import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
+import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
+import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 
 export interface AutoProps {

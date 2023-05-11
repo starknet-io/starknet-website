@@ -1,1 +1,1 @@
-export { TutorialsPage as Page } from "src/app/tutorials/(components)/TutorialsPage";
+export { TutorialsPage as Page } from "src/pages/tutorials/TutorialsPage";

@@ -1,1 +1,1 @@
-export { default as Page } from "src/app/video-embed/(components)/VideoEmbedPage";
+export { default as Page } from "src/pages/video-embed/VideoEmbedPage";

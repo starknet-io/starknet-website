@@ -1,6 +1,6 @@
 import { HStack } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
-import { Footer } from "src/app/(components)/Footer";
+import { Footer } from "src/pages/(components)/Footer";
 import { ColorModeScript } from "@chakra-ui/react";
 import { ColorModeProvider } from "@chakra-ui/color-mode";
 

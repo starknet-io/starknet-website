@@ -12,57 +12,9 @@ import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
 import { Index } from "unist-util-index";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
-import { TableOfContents } from "../(components)/TableOfContents";
+import { TableOfContents } from "./(components)/TableOfContents";
 import { Suspense } from "react";
 import { usePageContext } from "src/renderer/PageContextProvider";
-// import * as fs from "fs/promises";
-// import * as path from "path";
-// import { Metadata } from "next";
-// import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
-
-// export async function generateMetadata(props: Props): Promise<Metadata> {
-//   try {
-//     const data = await getPageBySlug(
-//       props.params.slug.join("/"),
-//       props.params.locale
-//     );
-
-//     return {
-//       title: data.title,
-//     };
-//   } catch {
-//     return {};
-//   }
-// }
-
-// export async function generateStaticParams() {
-//   const params = [];
-
-//   for (const locale of preRenderedLocales) {
-//     const base = path.join(process.cwd(), "public/data/pages", locale);
-//     const dirs: string[][] = [];
-
-//     do {
-//       const dir = dirs.pop() ?? [];
-//       const files = await fs.readdir(path.join(base, ...dir), {
-//         withFileTypes: true,
-//       });
-
-//       for (const file of files) {
-//         if (file.isDirectory()) {
-//           dirs.push([...dir, file.name]);
-//         } else if (file.isFile()) {
-//           params.push({
-//             locale,
-//             slug: [...dir, file.name.replace(/\.json$/, "")],
-//           });
-//         }
-//       }
-//     } while (dirs.length > 0);
-//   }
-
-//   return params;
-// }
 
 export interface Props {
   readonly data: PageType;
