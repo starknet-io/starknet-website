@@ -31,36 +31,13 @@ import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { Metadata } from "next";
 import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import Link from "next/link";
+import { generateBlogPostMetadata } from "src/utils/seo";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
     const post = await getPostBySlug(props.params.slug, props.params.locale);
 
-    const PUBLIC_URL =
-      process.env.VERCEL_URL && process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF
-        ? process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "dev"
-          ? `https://starknet-website-dev.vercel.app`
-          : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF === "production"
-          ? `https://www.starknet.io`
-          : `https://${process.env.VERCEL_URL}`
-        : "";
-
-    return {
-      title: post.title,
-      description: post.short_desc,
-      openGraph: {
-        type: "article",
-        title: post.title,
-        description: post.short_desc,
-        images: `${PUBLIC_URL}${post.image}`,
-      },
-      twitter: {
-        card: "summary_large_image",
-        title: post.title,
-        description: post.short_desc,
-        images: `${PUBLIC_URL}${post.image}`,
-      },
-    };
+    return generateBlogPostMetadata(post);
   } catch {
     return {};
   }
@@ -110,71 +87,79 @@ export interface MarkdownBlock {
   readonly body: string;
 }
 function pageToTableOfContents(page: any): readonly HeadingData[] {
-  const data = page.blocks.flatMap((block: { title: string, type: string, heading: string, body: string, blocks: [{ title: string, body: MarkdownBlock, heading: string }]}) => {
-    if (block.type === "page_header") {
-      return [];
-    } else if (block.type === "ordered_block") {
-      let blocks = Array.from(block.blocks).sort((a: any, b: any) => {
-        return a.title.localeCompare(b.title);
-      });
+  const data = page.blocks.flatMap(
+    (block: {
+      title: string;
+      type: string;
+      heading: string;
+      body: string;
+      blocks: [{ title: string; body: MarkdownBlock; heading: string }];
+    }) => {
+      if (block.type === "page_header") {
+        return [];
+      } else if (block.type === "ordered_block") {
+        let blocks = Array.from(block.blocks).sort((a: any, b: any) => {
+          return a.title.localeCompare(b.title);
+        });
 
-      return blocks.map((block) => {
+        return blocks.map((block) => {
+          return {
+            title: block.title,
+            level: 2,
+          };
+        });
+      } else if (block.type === "accordion") {
+        return [
+          ...(block.heading != null
+            ? [
+                {
+                  title: block.heading,
+                  level: 2,
+                },
+              ]
+            : []),
+          // ...block.blocks.map(block => {
+          //   return {
+          //     title: block.label,
+          //     level: 3,
+          //   };
+          // })
+        ];
+      } else if (block.type === "markdown") {
+        const processor = unified()
+          .use(remarkParse)
+          .use(() => {
+            return (tree: any) => {
+              const typeIndex = new Index("type", tree);
+              const headings = typeIndex.get("heading");
+
+              return headings.map((node: any) => {
+                const textNode = node.children.find((n: any) => {
+                  return n.type === "text";
+                });
+
+                return {
+                  title: textNode?.value ?? "",
+                  level: 2,
+                };
+              });
+            };
+          });
+
+        const node = processor.parse(block.body);
+        const tree = processor.runSync(node);
+
+        return tree;
+      } else if ("title" in block) {
         return {
           title: block.title,
           level: 2,
         };
-      });
-    } else if (block.type === "accordion") {
-      return [
-        ...(block.heading != null
-          ? [
-              {
-                title: block.heading,
-                level: 2,
-              },
-            ]
-          : []),
-        // ...block.blocks.map(block => {
-        //   return {
-        //     title: block.label,
-        //     level: 3,
-        //   };
-        // })
-      ];
-    } else if (block.type === "markdown") {
-      const processor = unified()
-        .use(remarkParse)
-        .use(() => {
-          return (tree: any) => {
-            const typeIndex = new Index("type", tree);
-            const headings = typeIndex.get("heading");
+      }
 
-            return headings.map((node: any) => {
-              const textNode = node.children.find((n: any) => {
-                return n.type === "text";
-              });
-
-              return {
-                title: textNode?.value ?? "",
-                level: 2,
-              };
-            });
-          };
-        });
-
-      const node = processor.parse(block.body);
-      const tree = processor.runSync(node);
-
-      return tree;
-    } else if ("title" in block) {
-      return {
-        title: block.title,
-        level: 2,
-      };
+      return [];
     }
-
-    return [];
-  });
+  );
 
   return data;
 }

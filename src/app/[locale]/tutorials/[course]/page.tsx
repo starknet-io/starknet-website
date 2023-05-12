@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { TutorialsPage } from "../(components)/TutorialsPage";
 import { getTutorialsSEO } from "workspaces/cms-data/src/seo";
+import { generateGenericMetadata } from "src/utils/seo";
 
 const courses = [
   {
@@ -36,9 +37,11 @@ type Props = {
 };
 
 export function generateMetadata(props: Props): Metadata {
-  return {
-    title: courses.find((c) => c.value === props.params.course)?.label,
-  };
+  const courseName = courses.find(
+    (c) => c.value === props.params.course
+  )?.label;
+
+  return generateGenericMetadata(courseName);
 }
 
 export default async function Page(props: Props) {
