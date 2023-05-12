@@ -6,7 +6,7 @@ describe("Worker", () => {
 	let worker: UnstableDevWorker;
 
 	beforeAll(async () => {
-		worker = await unstable_dev("src/index.ts", {
+		worker = await unstable_dev(__dirname + "/index.ts", {
 			experimental: { disableExperimentalWarning: true },
 		});
 	});
