@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "",
-    "build": "yarn data",
+    "dev": "yarn workspace @starknet-io/website dev",
+    "build": "yarn workspace @starknet-io/website build",
     "start": "",
     "lint": "",
     "fmt": "yarn rome:format",
