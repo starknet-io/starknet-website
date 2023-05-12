@@ -3,6 +3,7 @@ import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PostsPage } from "../(components)/PostsPage";
+import { generateBlogMetadata } from "src/utils/seo";
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
@@ -14,10 +15,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const categories = await getCategories(props.params.locale);
 
   const category = categories.find((c) => c.id === props.params.category);
-
-  return {
-    title: category?.name,
-  };
+  return generateBlogMetadata(category?.name);
 }
 
 export async function generateStaticParams() {

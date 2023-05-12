@@ -1,9 +1,8 @@
 import { getTutorialsSEO } from "workspaces/cms-data/src/seo";
 import { TutorialsPage } from "./(components)/TutorialsPage";
+import { generateGenericMetadata } from "src/utils/seo";
 
-export const metadata = {
-  title: "Tutorials",
-};
+export const generateMetadata = () => generateGenericMetadata("Tutorials");
 
 type Props = {
   readonly params: LocaleParams & {
