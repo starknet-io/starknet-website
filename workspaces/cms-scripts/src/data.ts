@@ -105,7 +105,7 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
-    featured_post: blogPosts.show_featured_post && blogPosts.custom_featured_post === data.id,
+    featured_post: blogPosts.show_custom_featured_post && blogPosts.custom_featured_post === data.id,
     timeToConsume,
   };
 }
