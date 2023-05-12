@@ -10,6 +10,7 @@ import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocks
 import CMSPage from "src/app/[locale]/(components)/CMSPage";
 import { Topic } from "workspaces/cms-data/src/topics";
 import { Category } from "workspaces/cms-data/src/categories";
+import { Box } from "@chakra-ui/react";
 
 type LivePreivewPageProps = {
   blocksDynamicData: BlocksDynamicData;
@@ -38,7 +39,9 @@ export default function LivePreivewPage({
       )}
       {data.type === CustomPreviewType.JOBS && <JobsCard hit={data.payload} />}
       {data.type === CustomPreviewType.TUTORIALS && (
-        <TutorialsCard hit={data.payload} />
+        <Box maxW="400px">
+          <TutorialsCard hit={data.payload} />
+        </Box>
       )}
       {data.type === CustomPreviewType.POST && (
         <PostByCategory
