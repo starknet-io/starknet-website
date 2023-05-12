@@ -406,7 +406,7 @@ export const settingsCollectionConfig = {
       crowdin: true,
       fields: [
         {
-          name: "show_featured_post",
+          name: "show_custom_featured_post",
           label: "Show custom featured post",
           widget: "boolean",
           default: true,
