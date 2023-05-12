@@ -13,7 +13,7 @@ export enum CustomPreviewType {
   PAGE = "PAGE",
   NONE = "",
 }
-type PreviewData =
+export type LivePreviewData =
   | {
       type: CustomPreviewType.EVENTS;
       payload: Event;
@@ -40,7 +40,7 @@ type PreviewData =
     };
 
 export default function usePreviewData() {
-  const [data, setData] = useState<PreviewData>({
+  const [data, setData] = useState<LivePreviewData>({
     type: CustomPreviewType.NONE,
     payload: null,
   });
@@ -48,7 +48,7 @@ export default function usePreviewData() {
   useEffect(() => {
     window.addEventListener(
       "message",
-      function (message: MessageEvent<PreviewData>) {
+      function (message: MessageEvent<LivePreviewData>) {
         // TODO: Do we need to check the origin?
         // var origin = message.origin || message.originalEvent.origin; // For Chrome, the origin property is in the message.originalEvent object.
         // if (origin !== "") return;

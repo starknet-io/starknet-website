@@ -9,14 +9,17 @@ import PostByCategory from "src/app/[locale]/posts/[category]/(components)/PostB
 import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import CMSPage from "src/app/[locale]/(components)/CMSPage";
 import { Topic } from "workspaces/cms-data/src/topics";
+import { Category } from "workspaces/cms-data/src/categories";
 
 type LivePreivewPageProps = {
-  blocksDynamicData?: BlocksDynamicData;
-  topics?: readonly Topic[];
+  blocksDynamicData: BlocksDynamicData;
+  topics: readonly Topic[];
+  categories: readonly Category[];
 };
 export default function LivePreivewPage({
   blocksDynamicData,
   topics,
+  categories,
 }: LivePreivewPageProps) {
   const data = usePreviewData();
 
@@ -37,20 +40,16 @@ export default function LivePreivewPage({
       {data.type === CustomPreviewType.TUTORIALS && (
         <TutorialsCard hit={data.payload} />
       )}
-      {data.type === CustomPreviewType.POST && blocksDynamicData && (
+      {data.type === CustomPreviewType.POST && (
         <PostByCategory
           post={data.payload}
-          category={{
-            id: data.payload.category,
-            name: data.payload.category,
-            slug: data.payload.category,
-          }}
           locale="en"
           topics={topics || []}
           blocksDynamicData={blocksDynamicData}
+          category={categories.find((c) => c.id === data.payload.category)!}
         />
       )}
-      {data.type === CustomPreviewType.PAGE && blocksDynamicData && (
+      {data.type === CustomPreviewType.PAGE && (
         <CMSPage
           data={data.payload}
           locale="en"
