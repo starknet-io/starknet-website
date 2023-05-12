@@ -26,7 +26,7 @@ export interface Post extends Meta {
   readonly published_date: string;
   readonly toc: boolean;
   readonly video: any;
-  readonly featured: boolean;
+  readonly featured_post: boolean;
   readonly timeToConsume: string;
   blocks: readonly any[];
 }
@@ -105,7 +105,7 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
-    featured: blogPosts.featured_post === data.id,
+    featured_post: blogPosts.show_custom_featured_post && blogPosts.custom_featured_post === data.id,
     timeToConsume,
   };
 }
