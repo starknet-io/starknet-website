@@ -8,7 +8,8 @@ export const CMSConfig = {
     sanitize_replacement: "-",
   },
   backend: {
-    name: "github",
+    // @ts-expect-error
+    name: "github-yuki",
     repo: "starknet-io/starknet-website",
     branch: "dev",
     base_url: "https://netlify-cms-auth.yukilabs.workers.dev",

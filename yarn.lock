@@ -5947,6 +5947,39 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@starknet-io/netlify-cms-backend-github@workspace:workspaces/netlify-cms-backend-github":
+  version: 0.0.0-use.local
+  resolution: "@starknet-io/netlify-cms-backend-github@workspace:workspaces/netlify-cms-backend-github"
+  dependencies:
+    "@cloudflare/workers-types": ^4.20230404.0
+    apollo-cache-inmemory: ^1.6.2
+    apollo-client: ^2.6.3
+    apollo-link-context: ^1.0.18
+    apollo-link-http: ^1.5.15
+    common-tags: ^1.8.0
+    graphql: ^15.0.0
+    graphql-tag: ^2.10.1
+    js-base64: ^3.0.0
+    semaphore: ^1.1.0
+    typescript: ^5.0.4
+    vitest: ^0.29.8
+    wrangler: ^2.15.0
+  peerDependencies:
+    "@cloudflare/workers-types": ^4.20230404.0
+    "@emotion/core": ^10.0.35
+    "@emotion/styled": ^10.0.27
+    lodash: ^4.17.11
+    netlify-cms-lib-auth: ^2.3.0
+    netlify-cms-lib-util: ^2.12.3
+    netlify-cms-ui-default: ^2.12.1
+    prop-types: ^15.7.2
+    react: ^16.8.4 || ^17.0.0
+    typescript: ^5.0.4
+    vitest: ^0.29.8
+    wrangler: ^2.15.0
+  languageName: unknown
+  linkType: soft
+
 "@starknet-io/netlify-cms-widgets@workspace:workspaces/netlify-cms-widgets":
   version: 0.0.0-use.local
   resolution: "@starknet-io/netlify-cms-widgets@workspace:workspaces/netlify-cms-widgets"

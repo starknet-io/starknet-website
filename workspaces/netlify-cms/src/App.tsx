@@ -3,6 +3,7 @@ import CMS from "netlify-cms-app";
 import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
 import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/youtube";
+import { NetlifyCmsBackendGithub } from "@starknet-io/netlify-cms-backend-github/src/index.ts";
 
 export default function App() {
   React.useEffect(() => {
@@ -15,6 +16,7 @@ export default function App() {
       NetlifyCmsWidgetUUID.Widget(),
       NetlifyCmsWidgetYouTube.Widget()
     ]);
+    CMS.registerBackend('github-yuki', NetlifyCmsBackendGithub);
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;
 
