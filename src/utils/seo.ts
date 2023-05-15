@@ -7,7 +7,7 @@ export function generateBlogMetadata(category?: string): Metadata {
   const PUBLIC_URL = getPublicUrl();
   const title = category ? `${category} - Starknet Blog` : "Starknet Blog";
   const description =
-    "Get the latest insights from across the Starknet ecosystem, hear what community members are building or take a deep dive into the math that powers Starknet.";
+    "Get the latest insights from across the Starknet ecosystem, learn what community members are building or take a deep dive into the math that powers Starknet.";
   const images = `${PUBLIC_URL}/assets/share/blog_landing.png`;
 
   return {
@@ -54,7 +54,7 @@ export function generateGenericMetadata(page?: string): Metadata {
   const images = `${PUBLIC_URL}/assets/share/generic_landing.png`;
   const title = page ? `${page} - Starknet` : "Starknet";
   const description =
-    "Starknet is the secure scaling technology bringing Ethereums benefits to the world.";
+    "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
 
   return {
     title,
