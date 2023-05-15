@@ -1,10 +1,12 @@
-import GitHubBackend from './implementation';
-import API from './API';
-import AuthenticationPage from './AuthenticationPage';
+import GitHubBackend from "./implementation";
+import API from "./API";
+import AuthenticationPage from "./AuthenticationPage";
 
-export const NetlifyCmsBackendGithub = {
+const NetlifyCmsBackendGithub = {
   GitHubBackend,
   API,
   AuthenticationPage,
 };
+
+export default NetlifyCmsBackendGithub;
 export { GitHubBackend, API, AuthenticationPage };

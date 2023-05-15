@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { NetlifyAuthenticator } from 'netlify-cms-lib-auth';
-import { AuthenticationPage, Icon } from 'netlify-cms-ui-default';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "@emotion/styled";
+import { NetlifyAuthenticator } from "../../netlify-cms-auth";
+import { AuthenticationPage, Icon } from "netlify-cms-ui-default";
 
 const LoginButtonIcon = styled(Icon)`
   margin-right: 18px;
@@ -56,37 +56,44 @@ export default class GitHubAuthenticationPage extends React.Component {
 
     this.setState({ findingFork: true });
     return backend
-      .authenticateWithFork({ userData: data, getPermissionToFork: this.getPermissionToFork })
-      .catch(err => {
+      .authenticateWithFork({
+        userData: data,
+        getPermissionToFork: this.getPermissionToFork,
+      })
+      .catch((err) => {
         this.setState({ findingFork: false });
         console.error(err);
         throw err;
       });
   }
 
-  handleLogin = e => {
+  handleLogin = (e) => {
     e.preventDefault();
     const cfg = {
       base_url: this.props.base_url,
       site_id:
-        document.location.host.split(':')[0] === 'localhost'
-          ? 'cms.netlify.com'
+        document.location.host.split(":")[0] === "localhost"
+          ? "cms.netlify.com"
           : this.props.siteId,
       auth_endpoint: this.props.authEndpoint,
     };
     const auth = new NetlifyAuthenticator(cfg);
 
-    const { open_authoring: openAuthoring = false, auth_scope: authScope = '' } =
-      this.props.config.backend;
+    const {
+      open_authoring: openAuthoring = false,
+      auth_scope: authScope = "",
+    } = this.props.config.backend;
 
-    const scope = authScope || (openAuthoring ? 'public_repo' : 'repo');
-    auth.authenticate({ provider: 'github', scope }, (err, data) => {
+    const scope = authScope || (openAuthoring ? "public_repo" : "repo");
+    auth.authenticate({ provider: "github", scope }, (err, data) => {
       if (err) {
         this.setState({ loginError: err.toString() });
         return;
       }
       if (openAuthoring) {
-        return this.loginWithOpenAuthoring(data).then(() => this.props.onLogin(data));
+        return this.loginWithOpenAuthoring(data).then(() =>
+          this.props.onLogin(data)
+        );
       }
       this.props.onLogin(data);
     });
@@ -95,11 +102,11 @@ export default class GitHubAuthenticationPage extends React.Component {
   renderLoginButton = () => {
     const { inProgress, t } = this.props;
     return inProgress || this.state.findingFork ? (
-      t('auth.loggingIn')
+      t("auth.loggingIn")
     ) : (
       <React.Fragment>
         <LoginButtonIcon type="github" />
-        {t('auth.loginWithGitHub')}
+        {t("auth.loginWithGitHub")}
       </React.Fragment>
     );
   };
@@ -113,13 +120,15 @@ export default class GitHubAuthenticationPage extends React.Component {
         renderPageContent: ({ LoginButton, TextButton, showAbortButton }) => (
           <ForkApprovalContainer>
             <p>
-              Open Authoring is enabled: we need to use a fork on your github account. (If a fork
-              already exists, we&#39;ll use that.)
+              Open Authoring is enabled: we need to use a fork on your github
+              account. (If a fork already exists, we&#39;ll use that.)
             </p>
             <ForkButtonsContainer>
               <LoginButton onClick={approveFork}>Fork the repo</LoginButton>
               {showAbortButton && (
-                <TextButton onClick={refuseFork}>Don&#39;t fork the repo</TextButton>
+                <TextButton onClick={refuseFork}>
+                  Don&#39;t fork the repo
+                </TextButton>
               )}
             </ForkButtonsContainer>
           </ForkApprovalContainer>
