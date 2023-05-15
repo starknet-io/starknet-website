@@ -24,7 +24,6 @@ import {
   unsentRequest,
   throwOnConflictingBranches,
 } from 'netlify-cms-lib-util';
-import { dirname } from 'path';
 
 import type {
   AssetProxy,
@@ -1465,4 +1464,27 @@ export default class API {
     const pullRequest = await this.getBranchPullRequest(branch);
     return pullRequest.head.sha;
   }
+}
+
+function dirname(path: string): string {
+  // Check for an empty path
+  if (path === "") {
+    return ".";
+  }
+
+  // Regex to match the last directory separator (forward slash or backslash)
+  const regex = /[/\\]([^/\\]+)$/;
+
+  // Remove trailing separators
+  const trimmedPath = path.replace(/[/\\]+$/, "");
+
+  // Find the last directory separator and remove the remaining characters
+  const folderpath = trimmedPath.replace(regex, "");
+
+  // If the result is an empty string, return the root directory
+  if (folderpath === "") {
+    return "/";
+  }
+
+  return folderpath;
 }

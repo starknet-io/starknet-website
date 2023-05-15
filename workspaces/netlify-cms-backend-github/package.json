@@ -1,8 +1,8 @@
 {
   "name": "@starknet-io/netlify-cms-backend-github",
-  "description": "GitHub backend for Netlify CMS",
   "private": true,
-  "version": "0.0.0",
+  "description": "GitHub backend for Netlify CMS",
+  "version": "2.14.1",
   "license": "MIT",
   "repository": "https://github.com/decaporg/decap-cms/tree/master/packages/netlify-cms-backend-github",
   "bugs": "https://github.com/decaporg/decap-cms/issues",
@@ -16,16 +16,15 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler publish",
-    "test": "vitest",
     "develop": "yarn build:esm --watch",
     "build": "cross-env NODE_ENV=production webpack",
     "build:esm": "cross-env NODE_ENV=esm babel src --out-dir dist/esm --ignore \"**/__tests__\" --root-mode upward --extensions \".js,.jsx,.ts,.tsx\"",
     "createFragmentTypes": "node scripts/createFragmentTypes.js"
   },
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20230404.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@octokit/rest": "^19.0.8",
     "apollo-cache-inmemory": "^1.6.2",
     "apollo-client": "^2.6.3",
     "apollo-link-context": "^1.0.18",
@@ -34,23 +33,11 @@
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.1",
     "js-base64": "^3.0.0",
-    "semaphore": "^1.1.0",
-    "typescript": "^5.0.4",
-    "vitest": "^0.29.8",
-    "wrangler": "^2.15.0"
-  },
-  "peerDependencies": {
-    "@cloudflare/workers-types": "^4.20230404.0",
-    "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.27",
     "lodash": "^4.17.11",
     "netlify-cms-lib-auth": "^2.3.0",
-    "netlify-cms-lib-util": "^2.12.3",
+    "netlify-cms-lib-util": "^2.15.1",
     "netlify-cms-ui-default": "^2.12.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4 || ^17.0.0",
-    "typescript": "^5.0.4",
-    "vitest": "^0.29.8",
-    "wrangler": "^2.15.0"
+    "semaphore": "^1.1.0"
   }
 }

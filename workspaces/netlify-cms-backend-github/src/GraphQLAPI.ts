@@ -14,9 +14,10 @@ import {
   branchFromContentKey,
   CMS_BRANCH_PREFIX,
   throwOnConflictingBranches,
+  // @ts-expect-error
 } from 'netlify-cms-lib-util';
 import { trim, trimStart } from 'lodash';
-
+// @ts-expect-error
 import introspectionQueryResultData from './fragmentTypes';
 import API, { API_NAME, PullRequestState, MOCK_PULL_REQUEST } from './API';
 import * as queries from './queries';
@@ -129,7 +130,7 @@ export default class GraphQLAPI extends API {
     });
   }
 
-  reset() {
+  override reset() {
     return this.client.resetStore();
   }
 
@@ -188,7 +189,7 @@ export default class GraphQLAPI extends API {
     }
   }
 
-  async hasWriteAccess() {
+  override async hasWriteAccess() {
     const { repoOwner: owner, repoName: name } = this;
     try {
       const { data } = await this.query({
@@ -205,7 +206,7 @@ export default class GraphQLAPI extends API {
     }
   }
 
-  async user() {
+  override async user() {
     const { data } = await this.query({
       query: queries.user,
       fetchPolicy: CACHE_FIRST, // we can assume user details don't change often
@@ -238,7 +239,7 @@ export default class GraphQLAPI extends API {
     return { owner, name };
   }
 
-  async readFile(
+  override async readFile(
     path: string,
     sha?: string | null,
     {
@@ -259,7 +260,7 @@ export default class GraphQLAPI extends API {
     return content;
   }
 
-  async fetchBlobContent({ sha, repoURL, parseText }: BlobArgs) {
+  override async fetchBlobContent({ sha, repoURL, parseText }: BlobArgs) {
     if (!parseText) {
       return super.fetchBlobContent({ sha, repoURL, parseText });
     }
@@ -280,12 +281,12 @@ export default class GraphQLAPI extends API {
     }
   }
 
-  async getPullRequestAuthor(pullRequest: Octokit.PullsListResponseItem) {
+  override async getPullRequestAuthor(pullRequest: Octokit.PullsListResponseItem) {
     const user = pullRequest.user as unknown as GraphQLPullsListResponseItemUser;
     return user?.name || user?.login;
   }
 
-  async getPullRequests(
+  override async getPullRequests(
     head: string | undefined,
     state: PullRequestState,
     predicate: (pr: Octokit.PullsListResponseItem) => boolean,
@@ -323,7 +324,7 @@ export default class GraphQLAPI extends API {
     );
   }
 
-  async getOpenAuthoringBranches() {
+  override async getOpenAuthoringBranches() {
     const { repoOwner: owner, repoName: name } = this;
     const { data } = await this.query({
       query: queries.openAuthoringBranches,
@@ -339,7 +340,7 @@ export default class GraphQLAPI extends API {
     }));
   }
 
-  async getStatuses(collectionName: string, slug: string) {
+  override async getStatuses(collectionName: string, slug: string) {
     const contentKey = this.generateContentKey(collectionName, slug);
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
@@ -378,7 +379,7 @@ export default class GraphQLAPI extends API {
     return allFiles;
   }
 
-  async listFiles(path: string, { repoURL = this.repoURL, branch = this.branch, depth = 1 } = {}) {
+  override async listFiles(path: string, { repoURL = this.repoURL, branch = this.branch, depth = 1 } = {}) {
     const { owner, name } = this.getOwnerAndNameFromRepoUrl(repoURL);
     const folder = trim(path, '/');
     const { data } = await this.query({
@@ -409,14 +410,14 @@ export default class GraphQLAPI extends API {
     };
   }
 
-  async getDefaultBranch() {
+  override async getDefaultBranch() {
     const { data } = await this.query({
       ...this.getBranchQuery(this.branch, this.originRepoOwner, this.originRepoName),
     });
     return data.repository.branch;
   }
 
-  async getBranch(branch: string) {
+  override async getBranch(branch: string) {
     const { data } = await this.query({
       ...this.getBranchQuery(branch, this.repoOwner, this.repoName),
       fetchPolicy: CACHE_FIRST,
@@ -427,7 +428,7 @@ export default class GraphQLAPI extends API {
     return data.repository.branch;
   }
 
-  async patchRef(type: string, name: string, sha: string, opts: { force?: boolean } = {}) {
+  override async patchRef(type: string, name: string, sha: string, opts: { force?: boolean } = {}) {
     if (type !== 'heads') {
       return super.patchRef(type, name, sha, opts);
     }
@@ -444,14 +445,13 @@ export default class GraphQLAPI extends API {
     return data!.updateRef.branch;
   }
 
-  async deleteBranch(branchName: string) {
+  override async deleteBranch(branchName: string) {
     const branch = await this.getBranch(branchName);
     const { data } = await this.mutate({
       mutation: mutations.deleteBranch,
       variables: {
         deleteRefInput: { refId: branch.id },
       },
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       update: (store: any) => store.data.delete(defaultDataIdFromObject(branch)),
     });
 
@@ -512,7 +512,7 @@ export default class GraphQLAPI extends API {
     return { branch: repository.branch, pullRequest: origin.pullRequest };
   }
 
-  async openPR(number: number) {
+  override async openPR(number: number) {
     const pullRequest = await this.getPullRequest(number);
 
     const { data } = await this.mutate({
@@ -534,7 +534,7 @@ export default class GraphQLAPI extends API {
     return data!.reopenPullRequest;
   }
 
-  async closePR(number: number) {
+  override async closePR(number: number) {
     const pullRequest = await this.getPullRequest(number);
 
     const { data } = await this.mutate({
@@ -556,7 +556,7 @@ export default class GraphQLAPI extends API {
     return data!.closePullRequest;
   }
 
-  async deleteUnpublishedEntry(collectionName: string, slug: string) {
+  override async deleteUnpublishedEntry(collectionName: string, slug: string) {
     try {
       const contentKey = this.generateContentKey(collectionName, slug);
       const branchName = branchFromContentKey(contentKey);
@@ -570,7 +570,6 @@ export default class GraphQLAPI extends API {
             deleteRefInput: { refId: branch.id },
             closePullRequestInput: { pullRequestId: pullRequest.id },
           },
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           update: (store: any) => {
             store.data.delete(defaultDataIdFromObject(branch));
             store.data.delete(defaultDataIdFromObject(pullRequest));
@@ -581,7 +580,7 @@ export default class GraphQLAPI extends API {
       } else {
         return await this.deleteBranch(branchName);
       }
-    } catch (e) {
+    } catch (e: any) {
       const { graphQLErrors } = e;
       if (graphQLErrors && graphQLErrors.length > 0) {
         const branchNotFound = graphQLErrors.some((e: Error) => e.type === 'NOT_FOUND');
@@ -593,7 +592,7 @@ export default class GraphQLAPI extends API {
     }
   }
 
-  async createPR(title: string, head: string) {
+  override async createPR(title: string, head: string) {
     const [repository, headReference] = await Promise.all([
       this.getRepository(this.originRepoOwner, this.originRepoName),
       this.useOpenAuthoring ? `${(await this.user()).login}:${head}` : head,
@@ -623,7 +622,7 @@ export default class GraphQLAPI extends API {
     return { ...pullRequest, head: { sha: pullRequest.headRefOid } };
   }
 
-  async createBranch(branchName: string, sha: string) {
+  override async createBranch(branchName: string, sha: string) {
     const owner = this.repoOwner;
     const name = this.repoName;
     const repository = await this.getRepository(owner, name);
@@ -650,7 +649,7 @@ export default class GraphQLAPI extends API {
     return { ...branch, ref: `${branch.prefix}${branch.name}` };
   }
 
-  async createBranchAndPullRequest(branchName: string, sha: string, title: string) {
+  override async createBranchAndPullRequest(branchName: string, sha: string, title: string) {
     const owner = this.originRepoOwner;
     const name = this.originRepoName;
     const repository = await this.getRepository(owner, name);
@@ -694,7 +693,7 @@ export default class GraphQLAPI extends API {
     return transformPullRequest(pullRequest) as unknown as Octokit.PullsCreateResponse;
   }
 
-  async getFileSha(path: string, { repoURL = this.repoURL, branch = this.branch } = {}) {
+  override async getFileSha(path: string, { repoURL = this.repoURL, branch = this.branch } = {}) {
     const { owner, name } = this.getOwnerAndNameFromRepoUrl(repoURL);
     const { data } = await this.query({
       query: queries.fileSha,

@@ -629,6 +629,7 @@ export default class GitHub implements Implementation {
   }
 
   async getDeployPreview(collection: string, slug: string) {
+    console.log("  async getDeployPreview(collection: string, slug: string) {")
     try {
       const statuses = await this.api!.getStatuses(collection, slug);
       const deployStatus = getPreviewStatus(statuses, this.previewContext);

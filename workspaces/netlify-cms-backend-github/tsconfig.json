@@ -2,19 +2,6 @@
   "extends": "../../tsconfig.projects.json",
   "compilerOptions": {
     "outDir": ".types",
-    "target": "es2021",
-    "lib": ["es2021"],
-    "jsx": "react",
-    "module": "es2022",
-    "moduleResolution": "node",
-    "types": ["@cloudflare/workers-types"],
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": false,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*"]
 }
