@@ -19,7 +19,6 @@ export const pagesCollectionConfig = {
       label: "id",
       widget: "uuid",
     },
-    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "title",
       label: "Title",

@@ -11,7 +11,7 @@ async function Page({
   if (!data) {
     return (
       <div>
-        <h1>This is a preview page</h1>
+        <h1>Loading...</h1>
       </div>
     )
   } else {

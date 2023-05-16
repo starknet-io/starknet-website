@@ -17,7 +17,6 @@ export const CMSConfig = {
   },
   publish_mode: "editorial_workflow",
   show_preview_links: true,
-  // site_url: "http://localhost:3000",
   media_folder: "public/assets",
   public_folder: "/assets",
   collections,
