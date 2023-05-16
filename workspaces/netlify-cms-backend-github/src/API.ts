@@ -505,6 +505,20 @@ export default class API {
     );
   }
 
+  async getAllDeployments(
+    head: string | undefined,
+    state: PullRequestState,
+    predicate: (pr: GitHubPull) => boolean,
+  
+  ) {
+    const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
+      `${this.originRepoURL}/deployments`,
+    );
+    return deployments;//.filter(
+      // pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
+    // );
+  }
+
   async getOpenAuthoringPullRequest(branch: string, pullRequests: GitHubPull[]) {
     // we can't use labels when using open authoring
     // since the contributor doesn't have access to set labels
@@ -551,6 +565,21 @@ export default class API {
         throw new EditorialWorkflowError('content is not under editorial workflow', true);
       }
       return pullRequests[0];
+    }
+  }
+
+  async getDeploys(branch: string) {
+    if (this.useOpenAuthoring) {
+      const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
+        withCmsLabel(pr, this.cmsLabelPrefix),);
+      return deploys;
+    } else {
+      const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
+        withCmsLabel(pr, this.cmsLabelPrefix),);
+      if (deploys.length <= 0) {
+        throw new EditorialWorkflowError('content is not under editorial workflow', true);
+      }
+      return deploys[0];
     }
   }
 
@@ -872,12 +901,13 @@ export default class API {
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
+    const deploys = await this.getDeploys(branch);
     const resp: { statuses: GitHubCommitStatus[] } = await this.request(
-      `${this.originRepoURL}/commits/${sha}/status`,
+      `${this.originRepoURL}/deployments/${deploys.id}/statuses`,
     );
     return resp.statuses.map(s => ({
       context: s.context,
-      target_url: s.target_url,
+      target_url: s.environment_url,
       state:
         s.state === GitHubCommitStatusState.Success ? PreviewState.Success : PreviewState.Other,
     }));
