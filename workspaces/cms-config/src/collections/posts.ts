@@ -20,7 +20,6 @@ export const postsCollectionConfig = {
       label: "id",
       widget: "uuid",
     },
-    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "post_type",
       label: "Post Type",

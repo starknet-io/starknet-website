@@ -31,7 +31,6 @@ export interface Post extends Meta {
   readonly video: any;
   readonly featured_post: boolean;
   readonly timeToConsume: string;
-  readonly deploy_id: string;
   blocks: readonly any[];
 }
 
@@ -115,7 +114,6 @@ export async function fileToPost(
     gitlog: await gitlog(sourceFilepath),
     featured_post: blogPosts.show_custom_featured_post && blogPosts.custom_featured_post === data.id,
     timeToConsume,
-    deploy_id: data.deploy_id,
   };
 }
 
@@ -127,7 +125,6 @@ export interface Page extends Meta {
   readonly template: "landing" | "content";
   readonly breadcrumbs: boolean;
   readonly pageLastUpdated: boolean;
-  readonly deploy_id: string | undefined;
   blocks?: any;
 
   link?: string;
@@ -152,7 +149,6 @@ export async function fileToPage(
     blocks: data.blocks ?? [],
     id: data.id,
     parent_page: data.parent_page,
-    deploy_id: data.deploy_id,
     slug,
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
@@ -398,7 +394,6 @@ export function handleLink(
         breadcrumbs: data.breadcrumbs,
         pageLastUpdated: data.pageLastUpdated,
         link: data.link,
-        deploy_id: data.deploy_id,
       };
     }
   }

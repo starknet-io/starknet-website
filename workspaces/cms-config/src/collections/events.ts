@@ -71,7 +71,6 @@ export const eventsCollectionConfig = {
   summary:
     "{{name}} [{{start_date | date('YYYY-MM-DD')}} - {{end_date | date('YYYY-MM-DD')}}]",
   create: true,
-  preview_path: "/preview/events/{{name}}",
   format: "yml",
   view_groups: [
     {
@@ -90,7 +89,6 @@ export const eventsCollectionConfig = {
       widget: "select",
       options: eventsTypes,
     },
-    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "name",
       label: "Event Name",

@@ -25,7 +25,6 @@ export interface Post extends Meta {
   readonly toc: boolean;
   readonly published_date: string;
   readonly video?: VideoMeta;
-  readonly deploy_id: string;
   readonly blocks: readonly TopLevelBlock[];
   readonly timeToConsume: string;
 }

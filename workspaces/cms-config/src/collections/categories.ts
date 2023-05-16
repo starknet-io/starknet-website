@@ -12,7 +12,6 @@ export const categoriesCollectionConfig = {
   create: true,
   format: "yml",
   fields: [
-    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       name: "id",
       label: "id",
