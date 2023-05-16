@@ -4,6 +4,7 @@ import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
 import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/youtube";
 import CustomPreview, { CustomPreviewType } from "./CustomPreview";
+import {GitHubBackend} from "@starknet-io/netlify-cms-backend-github/src";
 
 export default function App() {
   React.useEffect(() => {
@@ -27,6 +28,7 @@ export default function App() {
     CMS.registerPreviewTemplate("pages", ({ entry }) => {
       return <CustomPreview entry={entry} type={CustomPreviewType.PAGE} />;
     });
+    CMS.registerBackend("github-yuki", GitHubBackend);
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;
 
@@ -35,6 +37,7 @@ export default function App() {
     CMS.init({
       config: {
         ...CMSConfig,
+        // @ts-expect-error
         backend: {
           ...CMSConfig.backend,
           branch,

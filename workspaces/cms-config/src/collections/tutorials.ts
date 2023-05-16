@@ -16,6 +16,7 @@ export const tutorialsCollectionConfig = {
       name: "id",
       widget: "uuid",
     },
+    { label: "Deploy ID", name: "deploy_id", widget: "hidden" },
     {
       label: "Type",
       name: "type",

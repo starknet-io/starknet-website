@@ -18,6 +18,9 @@
 input.error {
   border: 1px solid #fb3319;
 }
+a:hover > img {
+  opacity:0.8;
+}
 
 .error-message {
   color: #fb3319;

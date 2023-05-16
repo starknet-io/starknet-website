@@ -8,11 +8,16 @@ export const CMSConfig = {
     sanitize_replacement: "-",
   },
   backend: {
-    name: "github",
+    // @ts-expect-error
+    name: "github-yuki",
     repo: "starknet-io/starknet-website",
     branch: "dev",
     base_url: "https://netlify-cms-auth.yukilabs.workers.dev",
+    preview_context: "Vercel – starknet-website"
   },
+  publish_mode: "editorial_workflow",
+  show_preview_links: true,
+  // site_url: "http://localhost:3000",
   media_folder: "public/assets",
   public_folder: "/assets",
   collections,
