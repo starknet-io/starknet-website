@@ -4,6 +4,7 @@ description: The 2023 edition of the Duke University’s Web3 Conference!
 url: https://www.dukeweb3conference.com/
 start_date: 2023-04-21T06:00:46.333Z
 end_date: 2023-04-23T15:30:46.339Z
+show_in_past_events: true
 image: /assets/63d704b2883e452ca71cfe5f_fuqua-blockchain-club-coin-logo-copy-min-1.svg
 location: north_america
 city: Durham

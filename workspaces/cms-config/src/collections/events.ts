@@ -67,10 +67,22 @@ export const eventsCollectionConfig = {
   label_singular: "Event",
   folder: "_data/events",
   slug: "{{name}}",
-  summary: "{{name}}",
+  sortable_fields: ["name", "start_date", "end_date"],
+  summary:
+    "{{name}} [{{start_date | date('YYYY-MM-DD')}} - {{end_date | date('YYYY-MM-DD')}}]",
   create: true,
   preview_path: "/preview/events/{{name}}",
   format: "yml",
+  view_groups: [
+    {
+      label: "Show in past events",
+      field: "show_in_past_events",
+    },
+    {
+      label: "Location",
+      field: "location",
+    },
+  ],
   fields: [
     {
       name: "type",
@@ -135,6 +147,12 @@ export const eventsCollectionConfig = {
       label: "end date",
       widget: "datetime",
       required: false,
+    },
+    {
+      name: "show_in_past_events",
+      label: "Show in Past Events (after it ends)",
+      widget: "boolean",
+      default: true,
     },
     {
       name: "image",

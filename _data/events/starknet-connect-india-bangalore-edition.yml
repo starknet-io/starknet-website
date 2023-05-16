@@ -8,6 +8,7 @@ description: "​For the first time in South India, Starknet in Collaboration wi
 url: https://lu.ma/StarknetConnect_Blr
 start_date: 2023-04-30T14:00:54.576Z
 end_date: 2023-04-30T17:00:54.581Z
+show_in_past_events: true
 image: /assets/screenshot-2023-04-27-at-14.36.59.png
 location: asia
 city: Bangalore
