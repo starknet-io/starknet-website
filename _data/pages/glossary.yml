@@ -6,7 +6,7 @@ breadcrumbs: false
 page_last_updated: true
 blocks:
   - type: page_header
-    title: Glossary
+    title: Glossary 2
     description: This document provides definitions for the main Starknet concepts
       and terms, along with their relationship to one another. Familiarity with
       the Starknet and Cairo is assumed.
