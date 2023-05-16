@@ -230,7 +230,7 @@ export async function getPageById(id: string, locale: string): Promise<Page> {
       )
     );
     // Redirect to the page with slug
-    return await getPageBySlug(page.slug, locale);
+    return page.slug;
   } catch (cause) {
     throw new Error(`Page not found! \${id}`, {
       cause,
