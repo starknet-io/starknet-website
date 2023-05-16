@@ -4,7 +4,7 @@ import { useWindowSize } from "./useWindowSize";
 import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
 const livePreviewHost =
   import.meta.env.VITE_LIVE_PREVIEW_HOST ??
-  "https://starknet-website-git-cms-live-preview-yuki-labs.vercel.app";
+  "https://starknet-website-git-preview-link-yuki-labs.vercel.app";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
