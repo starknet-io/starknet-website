@@ -31,7 +31,7 @@ import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocks
 
 type PostByCategoryProps = {
   post: Post;
-  category: Category;
+  category?: Category; // Category can be undefined in live preview
   locale: string;
   topics: readonly Topic[];
   blocksDynamicData: BlocksDynamicData;
@@ -71,11 +71,11 @@ export default function PostByCategory({
           <BreadcrumbItem>
             <BreadcrumbLink
               as={Link}
-              href={`/${locale}/posts/${category.slug}`}
+              href={`/${locale}/posts/${category?.slug}`}
               fontSize="sm"
               noOfLines={1}
             >
-              {category.name}
+              {category?.name}
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem isCurrentPage>
@@ -137,7 +137,7 @@ export default function PostByCategory({
           <Spacer height="32px" />
           <Divider />
           <Flex direction="row" gap="8px" mt="64px">
-            {post.topic.map((topic, i) => (
+            {post.topic?.map((topic, i) => (
               <Tag key={i}> {topics.find((t) => t.id === topic)?.name} </Tag>
             ))}
           </Flex>

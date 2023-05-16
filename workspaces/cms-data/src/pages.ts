@@ -182,7 +182,7 @@ export interface Page extends Meta {
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly page_last_updated?: string;
-  readonly blocks: readonly TopLevelBlock[];
+  readonly blocks?: readonly TopLevelBlock[]; // blocks can be undefined in live previews
 }
 
 export async function getPageBySlug(

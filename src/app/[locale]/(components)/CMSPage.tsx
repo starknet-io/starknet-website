@@ -73,7 +73,7 @@ export default function CMSPage({
               lg: data.template === "content" ? "32px" : "136px",
             }}
           >
-            {data.blocks.map((block, i) => {
+            {data.blocks?.map((block, i) => {
               return (
                 <Block
                   key={i}
@@ -101,6 +101,9 @@ interface HeadingData {
 }
 
 function pageToTableOfContents(page: PageType): readonly HeadingData[] {
+  if (!page.blocks) {
+    return [];
+  }
   const data = page.blocks.flatMap((block) => {
     if (block.type === "page_header") {
       return [];
