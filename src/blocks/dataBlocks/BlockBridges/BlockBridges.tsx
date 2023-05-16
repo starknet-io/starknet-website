@@ -1,17 +1,15 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
-import { getBridges } from "@starknet-io/cms-data/src/bridges";
+import { Bridge } from "@starknet-io/cms-data/src/bridges";
 interface Props extends LocaleProps {
   noOfItems?: number;
+  readonly bridges: readonly Bridge[];
 }
 
-export default async function BlockBridges({
+export default function BlockBridges({
   noOfItems,
-  params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const bridges = await getBridges(locale);
-
+  bridges = [],
+}: Props): JSX.Element {
   return (
     <Box>
       <Container maxW="1062px">

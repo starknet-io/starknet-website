@@ -113,6 +113,9 @@ export interface HeroBlock {
 }
 export interface HomeHeroBlock {
   readonly type: "home_hero";
+  readonly seo: {
+    readonly heroText: string;
+  };
 }
 export interface LinkListBlock {
   readonly type: "link_list";

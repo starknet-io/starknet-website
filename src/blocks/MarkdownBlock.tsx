@@ -15,8 +15,7 @@ interface Props {
   readonly body: string;
 }
 
-// @ts-expect-error
-export async function MarkdownBlock({ body }: Props): JSX.Element {
+export function MarkdownBlock({ body }: Props): JSX.Element {
   return (
     <Box>
       <ReactMarkdown
@@ -62,12 +61,12 @@ export async function MarkdownBlock({ body }: Props): JSX.Element {
           ),
           p: (props) => (
             <Text
-              pt={2}
-              pb={4}
-              lineHeight="32px"
-              variant="body"
-              {...props}
-            />
+            pt={2}
+            pb={4}
+            lineHeight="32px"
+            variant="body"
+            {...props}
+          />
           ),
           ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,

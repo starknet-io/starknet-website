@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { Event } from "@starknet-io/cms-data/src/events";
 import { Button } from "@ui/Button";
-import { ListCard } from "@ui/Card/ListCard";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
 import { getUnixTime, startOfDay } from "date-fns";
@@ -36,6 +35,7 @@ import {
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
+import EventCard from "./EventCard";
 
 export interface AutoProps {
   readonly params: {
@@ -308,46 +308,13 @@ function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
               {moment(key, "YYYY-MM").format("MMMM YYYY")}
             </Heading>
             <Flex gap={4} direction="column" flex={1}>
-              {monthHits.map((hit) => {
-                let startDate = new Date(hit?.start_date);
-                let endDate = new Date(hit?.end_date ?? "");
-                let hasSameDay = startDate.getDate() === endDate.getDate();
-                let hasSameMonth = startDate.getMonth() === endDate.getMonth();
-                let hasSameYear =
-                  startDate.getFullYear() === endDate.getFullYear();
-                return (
-                  <ListCard
-                    variant="event"
-                    href={hit.url}
-                    key={hit?.name}
-                    startDateTime={
-                      hit?.end_date
-                        ? `${moment(hit?.start_date).format(
-                            hasSameDay
-                              ? "DD MMM, YYYY"
-                              : hasSameMonth
-                              ? "DD"
-                              : hasSameYear
-                              ? "DD MMM"
-                              : "DD MMM, YYYY"
-                          )}${!hasSameDay ? " - " : ""}${
-                            !hasSameDay
-                              ? moment(hit?.end_date).format("DD MMM, YYYY")
-                              : ""
-                          }`
-                        : moment(hit?.start_date).format("DD MMM, YYYY")
-                    }
-                    image={hit.image}
-                    title={hit.name}
-                    description={hit.description}
-                    type={[hit.type]}
-                    location={hit.location}
-                    city={hit.city}
-                    country={hit.country}
-                    recap={isPastEvent ? hit.recap : undefined}
-                  />
-                );
-              })}
+              {monthHits.map((hit) => (
+                <EventCard
+                  key={hit.objectID}
+                  event={hit}
+                  isPastEvent={isPastEvent}
+                />
+              ))}
             </Flex>
           </Box>
         );
