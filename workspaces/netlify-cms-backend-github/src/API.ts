@@ -902,12 +902,15 @@ export default class API {
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
     const deploys = await this.getDeploys(branch);
-    const resp: { statuses: GitHubCommitStatus[] } = await this.request(
+    const resp: {environment_url: string }[] = await this.request(
       `${this.originRepoURL}/deployments/${deploys.id}/statuses`,
     );
-    return resp.statuses.map(s => ({
+    const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
+      `${this.originRepoURL}/commits/${sha}/status`,
+    );
+    return commitResp.statuses.map(s => ({
       context: s.context,
-      target_url: s.environment_url,
+      target_url: resp[0].environment_url,
       state:
         s.state === GitHubCommitStatusState.Success ? PreviewState.Success : PreviewState.Other,
     }));
