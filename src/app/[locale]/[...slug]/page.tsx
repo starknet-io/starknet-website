@@ -19,6 +19,7 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { Metadata } from "next";
 import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+import { generateGenericMetadata } from "src/utils/seo";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -27,9 +28,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       props.params.locale
     );
 
-    return {
-      title: data.title,
-    };
+    return generateGenericMetadata(data.title);
   } catch {
     return {};
   }

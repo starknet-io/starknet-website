@@ -1,9 +1,8 @@
 import { getEventsSEO } from "workspaces/cms-data/src/seo";
 import { AutoProps, EventsPage } from "../(components)/EventsPage";
+import { generateGenericMetadata } from "src/utils/seo";
 
-export const metadata = {
-  title: "Past events",
-};
+export const generateMetadata = () => generateGenericMetadata("Past events");
 
 export default async function Page(props: AutoProps) {
   const seo = await getEventsSEO(props.params.locale);

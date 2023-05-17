@@ -1,9 +1,8 @@
 import { getJobsSEO } from "workspaces/cms-data/src/seo";
 import { AutoProps, JobsPage } from "./(components)/JobsPage";
+import { generateGenericMetadata } from "src/utils/seo";
 
-export const metadata = {
-  title: "Jobs",
-};
+export const generateMetadata = () => generateGenericMetadata("Jobs");
 
 export default async function Page(props: AutoProps) {
   const seo = await getJobsSEO(props.params.locale);
