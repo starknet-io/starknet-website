@@ -1,0 +1,10 @@
+id: a08f30a3-4d6b-4370-9646-a825f0dc8c6d
+post_type: article
+title: New post Akrom
+published_date: 2023-05-17T09:47:31.955Z
+category: ecosystem
+topic:
+  - cairo
+short_desc: Here is the description
+blocks:
+  - type: home_hero
