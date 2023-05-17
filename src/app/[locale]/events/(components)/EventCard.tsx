@@ -41,7 +41,11 @@ export default function EventCard({ event, isPastEvent }: EventCardProps) {
       location={event.location}
       city={event.city}
       country={event.country}
-      recap={isPastEvent ? event.recap : undefined}
+      recap={
+        isPastEvent && event.show_in_past_events !== false
+          ? event.recap
+          : undefined
+      }
     />
   );
 }
