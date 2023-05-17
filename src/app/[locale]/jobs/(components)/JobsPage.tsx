@@ -223,8 +223,8 @@ interface Job {
 }
 
 export type JobsHit = {
-  contact: Contact;
-  job: Job;
+  contact?: Contact; // contact can be undefined in live preview
+  job?: Job; // job can be undefined in live preview
 };
 
 function CustomHits() {

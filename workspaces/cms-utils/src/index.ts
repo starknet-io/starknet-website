@@ -51,7 +51,7 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
   });
 }
 
-export const convertStringTagsToArray = (commaSeperatedTags: string) => {
+export const convertStringTagsToArray = (commaSeperatedTags: string = "") => {
   return commaSeperatedTags
     .replace(/,\s*$/, "")
     .split(",")
