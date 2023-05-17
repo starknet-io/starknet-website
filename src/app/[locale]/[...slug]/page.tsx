@@ -1,11 +1,12 @@
-import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import { getPageBySlug } from "@starknet-io/cms-data/src/pages";
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import CMSPage from "../(components)/CMSPage";
 import getBlocksDynamicData from "../(components)/utils/getBlocksDynamicData";
+import { Metadata } from "next";
+import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
+import { generateGenericMetadata } from "src/utils/seo";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
@@ -14,9 +15,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       props.params.locale
     );
 
-    return {
-      title: data.title,
-    };
+    return generateGenericMetadata(data.title);
   } catch {
     return {};
   }

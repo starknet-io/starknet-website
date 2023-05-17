@@ -1,10 +1,9 @@
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PostsPage } from "./(components)/PostsPage";
+import { generateBlogMetadata } from "src/utils/seo";
 
-export const metadata = {
-  title: "Blog",
-};
+export const generateMetadata = () => generateBlogMetadata();
 
 export default async function Page(props: LocaleProps) {
   const categories = await getCategories(props.params.locale);

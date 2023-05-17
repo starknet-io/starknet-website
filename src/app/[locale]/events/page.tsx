@@ -1,9 +1,8 @@
+import { generateGenericMetadata } from "src/utils/seo";
 import { AutoProps, EventsPage } from "./(components)/EventsPage";
 import { getEventsSEO } from "@starknet-io/cms-data/src/seo";
 
-export const metadata = {
-  title: "Events",
-};
+export const generateMetadata = () => generateGenericMetadata("Events");
 
 export default async function Page(props: AutoProps) {
   const eventsSEO = await getEventsSEO(props.params.locale);

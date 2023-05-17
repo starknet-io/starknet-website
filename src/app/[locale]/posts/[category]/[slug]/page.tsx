@@ -7,6 +7,18 @@ import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import getBlocksDynamicData from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import PostByCategory from "../(components)/PostByCategory";
+import { Metadata } from "next";
+import { generateBlogPostMetadata } from "src/utils/seo";
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  try {
+    const post = await getPostBySlug(props.params.slug, props.params.locale);
+
+    return generateBlogPostMetadata(post);
+  } catch {
+    return {};
+  }
+}
 
 export async function generateStaticParams() {
   const params = [];
