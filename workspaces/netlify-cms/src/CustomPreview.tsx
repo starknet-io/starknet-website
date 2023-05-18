@@ -2,9 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { useWindowSize } from "./useWindowSize";
 import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
-const livePreviewHost =
-  import.meta.env.VITE_LIVE_PREVIEW_HOST ??
-  "https://starknet-website-git-dev-yuki-labs.vercel.app";
+
+const livePreviewHost = import.meta.env.VITE_LIVE_PREVIEW_HOST
+  ? import.meta.env.VITE_LIVE_PREVIEW_HOST
+  : import.meta.env.VITE_GIT_BRANCH_NAME === "production"
+  ? "https://www.starknet.io"
+  : "https://starknet-website-dev.vercel.app";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
