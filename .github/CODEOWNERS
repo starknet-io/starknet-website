@@ -1,6 +1,28 @@
-# All files not matched by other patterns
-* @thecotne @robwalsh21 @milosyuki @lorcan-codes
 
-# All CMS content files
-/_data/ @thorville @robwalsh21 @Tal-wagner @glrn @AmalyStark
-/public/assets/ @thorville @robwalsh21 @Tal-wagner @glrn @AmalyStark
+# All CMS code files
+/.github/ @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.storybook/ @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.vscode/ @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.yarn/ @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/src/ @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/workspaces/ @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.editorconfig @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.eslintignore @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.eslintrc.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.gitignore @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.nvmrc @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/.yarnrc.yml @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/crowdin.yml @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/cypress.config.js @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/next.config.mjs @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/package.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/README.md @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/rome.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/tsconfig.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/tsconfig.node.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/tsconfig.options.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/tsconfig.projects.json @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/vite-env.d.ts @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/vitest.config.ts @thecotne @robwalsh21 @milosyuki @lorcan-codes
+/yarn.lock @thecotne @robwalsh21 @milosyuki @lorcan-codes
+
