@@ -1,17 +1,15 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
-import { getWallets } from "@starknet-io/cms-data/src/wallets";
+import { Wallet } from "@starknet-io/cms-data/src/wallets";
 interface Props extends LocaleProps {
   noOfItems?: number;
+  readonly wallets: readonly Wallet[];
 }
 
-export default async function BlockWallets({
+export default function BlockWallets({
   noOfItems,
-  params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const wallets = await getWallets(locale);
-
+  wallets = [],
+}: Props): JSX.Element {
   return (
     <Box>
       <Container maxW="1062px">

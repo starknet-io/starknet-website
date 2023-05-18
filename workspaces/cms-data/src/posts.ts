@@ -42,7 +42,7 @@ export async function getPostBySlug(
               path.join(
                 process.cwd(),
                 "_crowdin/data/posts",
-                value,
+                value as string,
                 slug + ".json"
               ),
               "utf8"
@@ -73,6 +73,55 @@ export async function getPostBySlug(
     );
   } catch (cause) {
     throw new Error(`Post not found! ${slug}`, {
+      cause,
+    });
+  }
+}
+
+export async function getPostById(
+  id: string | string[] | undefined,
+  locale: string | string[]
+): Promise<Post> {
+  try {
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          JSON.parse(
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/posts",
+                value as string,
+                id + ".json"
+              ),
+              "utf8"
+            )
+          )
+      ),
+      async () => {
+        const client = algoliasearch(
+          process.env.ALGOLIA_APP_ID!,
+          process.env.ALGOLIA_SEARCH_API_KEY!
+        );
+        const index = client.initIndex(
+          `web_posts_${process.env.ALGOLIA_INDEX}`
+        );
+
+        const searchResponse = await index.search<Post>("", {
+          facetFilters: [`locale:${locale}`, `slug:${id}`],
+        });
+
+        const post = searchResponse.hits[0];
+
+        if (post == null) {
+          throw new Error("Post not found!");
+        }
+
+        return post;
+      }
+    );
+  } catch (cause) {
+    throw new Error(`Post not found! ${id}`, {
       cause,
     });
   }

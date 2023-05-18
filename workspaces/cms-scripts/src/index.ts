@@ -93,6 +93,7 @@ for (const locale of locales) {
 
 for (const data of posts.filenameMap.values()) {
   await write(`_crowdin/data/posts/${data.locale}/${data.slug}.json`, data);
+  await write(`_crowdin/data/posts/${data.locale}/${data.id}.json`, data);
 }
 
 for (const locale of locales) {
@@ -113,6 +114,7 @@ for (const data of pages.filenameMap.values()) {
 
   // TODO stop using this in favor of above
   await write(`_crowdin/data/pages/${data.locale}/${data.slug}.json`, data);
+  await write(`_crowdin/data/pages/${data.locale}/${data.id}.json`, data);
 }
 
 // main menu

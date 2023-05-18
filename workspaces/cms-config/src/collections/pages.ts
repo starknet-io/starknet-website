@@ -12,6 +12,7 @@ export const pagesCollectionConfig = {
   format: "yml",
   slug: "{{title}}",
   summary: "{{title}}",
+  preview_path: "/preview/pages/{{id}}",
   fields: [
     {
       name: "id",
