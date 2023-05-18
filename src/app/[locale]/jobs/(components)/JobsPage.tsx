@@ -21,13 +21,13 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import { ListCard } from "@ui/Card/ListCard";
 import { titleCase } from "src/utils/utils";
 import Link from "next/link";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
+import JobsCard from "./JobsCard";
 
 export interface AutoProps {
   readonly params: {
@@ -222,35 +222,20 @@ interface Job {
   apply_url: string;
 }
 
-type Hit = {
-  contact: Contact;
-  job: Job;
+export type JobsHit = {
+  contact?: Contact; // contact can be undefined in live preview
+  job?: Job; // job can be undefined in live preview
 };
 
 function CustomHits() {
-  const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
+  const { hits, showMore, isLastPage } = useInfiniteHits<JobsHit>();
 
   return (
     <>
       <Flex gap={4} direction="column" flex={1}>
-        {hits.map((hit, i) => {
-          let tags: string[] = [];
-          if (hit.job.role) tags.push(hit.job.role);
-          if (hit.job.type) tags.push(hit.job.type);
-          if (hit.job.location) tags.push(hit.job.location);
-          return (
-            <ListCard
-              variant="job"
-              key={i}
-              startDateTime={hit.contact.name}
-              image={hit.contact.logo}
-              title={hit.job.title}
-              description={hit.job.description}
-              type={tags}
-              href={hit.job.apply_url}
-            />
-          );
-        })}
+        {hits.map((hit, i) => (
+          <JobsCard key={i} hit={hit} />
+        ))}
       </Flex>
       {/* {hits.map((hit, i) => (
           <ArticleCard.Root href="$" key={i}>

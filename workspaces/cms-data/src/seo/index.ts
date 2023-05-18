@@ -66,9 +66,10 @@ export async function getFooterSEO(locale: string): Promise<{
   }
 }
 
-export async function getHomeSEO(locale: string): Promise<{
+export type HomeSEO = {
   heroText: string;
-}> {
+};
+export async function getHomeSEO(locale: string): Promise<HomeSEO> {
   try {
     return await getFirst(...getSEO(locale, "home"));
   } catch (cause) {
