@@ -1366,7 +1366,15 @@ export default class API {
       return result;
     } catch (error) {
       if (error instanceof APIError && error.status === 405) {
-        return this.forceMergePR(pullrequest);
+        if (
+          error.message ===
+          'Required status check "Vercel – starknet-website" is pending.'
+        ) {
+          alert("You can not publish while the preview link is being generated. Please try again in a few minutes.");
+          throw error;
+        } else {
+          return this.forceMergePR(pullrequest);
+        }
       } else {
         throw error;
       }
