@@ -11,9 +11,9 @@ export const CMSConfig = {
     // @ts-expect-error
     name: "github-yuki",
     repo: "starknet-io/starknet-website",
-    branch: "dev",
+    branch: "production",
     base_url: "https://netlify-cms-auth.yukilabs.workers.dev",
-    preview_context: "Vercel – starknet-website"
+    preview_context: "Vercel – starknet-website",
   },
   publish_mode: "editorial_workflow",
   show_preview_links: true,
