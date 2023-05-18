@@ -1,0 +1,10 @@
+id: 861152cb-1e48-4bfc-b6e2-fde8362441ec
+title: A new page from dev
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: group
+    blocks:
+      - type: page_header
+        title: Header
