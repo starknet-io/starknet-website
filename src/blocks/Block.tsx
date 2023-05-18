@@ -1,4 +1,3 @@
-"use client";
 import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
 import { MarkdownBlock } from "./MarkdownBlock";
