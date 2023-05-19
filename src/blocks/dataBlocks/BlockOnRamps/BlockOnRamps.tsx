@@ -1,6 +1,7 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
 import { FiatOnRamp } from "@starknet-io/cms-data/src/fiat-on-ramps";
+import { getShuffledArray } from "src/utils/getShuffledArray";
 interface Props extends LocaleProps {
   noOfItems?: number;
   readonly fiatOnRamps: readonly FiatOnRamp[];
@@ -8,15 +9,18 @@ interface Props extends LocaleProps {
 
 export default function BlockOnRamps({
   noOfItems,
-  params: { locale },
   fiatOnRamps = [],
 }: Props): JSX.Element {
+  const randomizedFiatOnRamps = getShuffledArray(fiatOnRamps).slice(
+    0,
+    noOfItems
+  );
+
   return (
     <Box>
       <Container maxW="1062px">
         <Flex gap={4} direction="column" flex={1}>
-          {fiatOnRamps.map((fiatOnRamp, i) => {
-            if (noOfItems && i <= noOfItems) return null;
+          {randomizedFiatOnRamps.map((fiatOnRamp, i) => {
             return (
               <ListCard
                 href={fiatOnRamp.website_url}
