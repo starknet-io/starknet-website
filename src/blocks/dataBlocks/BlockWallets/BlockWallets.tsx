@@ -13,8 +13,6 @@ export default function BlockWallets({
   wallets = [],
 }: Props): JSX.Element {
   const randomWallets = getShuffledArray(wallets).slice(0, noOfItems);
-  console.log("wallets", wallets);
-  console.log("randomWallets", randomWallets);
 
   return (
     <Box>
