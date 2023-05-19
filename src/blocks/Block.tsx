@@ -8,6 +8,7 @@ import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
+import NodeCardsBlock from "./NodeCardsBlock";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
@@ -138,6 +139,16 @@ export async function Block({ block, locale }: Props): JSX.Element {
   } else if (block.type === "block_explorers") {
     return (
       <BlockBlockExplorers
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "node_card") {
+    console.log('block ', block)
+    return (
+      <NodeCardsBlock
+        {...block}
         params={{
           locale,
         }}

@@ -51,6 +51,50 @@ export const linkFields = [
   },
 ] satisfies CmsField[];
 
+export const nodeCard = [
+  {
+    label: "Title",
+    name: "title",
+    widget: "string",
+    crowdin: true,
+  },
+  {
+    label: "Description",
+    name: "description",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "Link url",
+    name: "link_url",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "Image",
+    required: false,
+    name: "image",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "Website url",
+    name: "website_url",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Twitter handle",
+    name: "twitter",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+] satisfies CmsField[];
+
 export const blocks = [
   {
     name: "markdown",
@@ -322,6 +366,37 @@ export const blocks = [
         options: ["left", "right"],
       }
     ],
+  },
+  {
+    name: "node_card",
+    label: "Node cards list",
+    widget: "object",
+    fields: [
+      {
+        label: "Title",
+        name: "title",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        label: "Description",
+        name: "description",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        label: "Cards",
+        name: "nodes",
+        widget: "list",
+        fields: nodeCard,
+        crowdin: true,
+        required: true,
+        index_file: "",
+        meta: true
+      },
+    ]
   },
   {
     name: "large_card",

@@ -58,6 +58,29 @@ export interface ImageIconLinkCardBlock {
     | "grey";
 }
 
+interface Icon {
+  icon: string;
+  linkUrl: string;
+}
+
+interface Node {
+  title: string;
+  description: string;
+  linkUrl: string;
+  imageUrl: string;
+  icons: Icon;
+  website_url: string;
+  twitter: string;
+  image: string;
+}
+export interface NodeCardBlock {
+  readonly type: "node_card";
+  readonly title: string;
+  readonly nodes: Node[];
+  readonly noOfItems: number;
+  readonly description: string;
+}
+
 export interface LinkListItem {
   readonly type: "link_list_item";
   readonly link?: {
@@ -145,7 +168,8 @@ export type Block =
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock
-  | OrderedBlock;
+  | OrderedBlock
+  | NodeCardBlock;
 
 export interface Container {
   readonly type: "container";
