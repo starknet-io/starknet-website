@@ -1,3 +1,4 @@
+"use client";
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
 import { FiatOnRamp } from "@starknet-io/cms-data/src/fiat-on-ramps";
