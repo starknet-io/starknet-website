@@ -10,7 +10,6 @@ blocks:
     title: Dapps
     description: Discover apps in the Starknet ecosystem across NFTs, Gaming, Defi,
       DAOs and more.
-  - type: dapps
   - type: node_card
     nodes:
       - title: Starknet-ecosystem

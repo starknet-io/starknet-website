@@ -9,4 +9,24 @@ blocks:
     variant: block_explorers
     title: Block explorers
     description: Explore blocks, transactions, and other metrics of Starknet.
-  - type: block_explorers
+  - type: node_card
+    nodes:
+      - title: Starkscan
+        description: "Block explorer and analytics for Starknet. "
+        link_url: https://starkscan.co
+        image: /assets/starkscan.jpg
+        twitter: https://twitter.com/StarkscanCo
+        website_url: https://starkscan.co/
+      - title: ViewBlock
+        description: "Block explorer and analytics for multiple networks including
+          Starknet. "
+        link_url: https://viewblock.io/starknet
+        website_url: https://viewblock.io/starknet
+        twitter: https://twitter.com/viewblock
+        image: /assets/viewblock.jpg
+      - title: Voyager
+        description: "Block explorer and analytics for Starknet. "
+        link_url: https://voyager.online
+        website_url: https://voyager.online
+        twitter: https://twitter.com/0xvoyageronline
+        image: /assets/voyager.jpg
