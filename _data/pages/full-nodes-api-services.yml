@@ -5,55 +5,37 @@ parent_page: /ecosystem/
 breadcrumbs: false
 page_last_updated: true
 blocks:
-  - type: link_list
-    heading: Full-nodes
-    listSize: lg
-    listGap: sm
-    blocks:
-      - link:
-          hasIcon: false
-          custom_title: Pathfinder
-          custom_external_link: https://github.com/eqlabs/pathfinder
-        subLabel:
-          label: a Starknet full-node written in Rust by Equilibrium
-      - link:
-          hasIcon: false
-          custom_title: Juno
-          custom_external_link: https://github.com/NethermindEth/juno
-        subLabel:
-          label: a Starknet full-node written in go-lang by Nethermind
-      - link:
-          hasIcon: false
-          custom_title: Papyrus
-          custom_external_link: https://github.com/starkware-libs/papyrus
-        subLabel:
-          label: a Starknet full-node written in Rust by StarkWare
-  - type: link_list
-    heading: API services
-    listSize: lg
-    listGap: sm
-    blocks:
-      - link:
-          hasIcon: false
-          custom_title: Infura
-          custom_external_link: https://www.infura.io/networks/ethereum/starknet
-        subLabel:
-          label: API service for Starknet
-      - link:
-          hasIcon: false
-          custom_title: Chainstack
-          custom_external_link: https://chainstack.com/build-better-with-starknet/
-        subLabel:
-          label: API service for Starknet
-      - link:
-          hasIcon: false
-          custom_title: Alchemy
-          custom_external_link: https://www.alchemy.com/starknet
-        subLabel:
-          label: API service for Starknet
-      - link:
-          hasIcon: false
-          custom_title: Lava Protocol
-          custom_external_link: https://www.lavanet.xyz
-        subLabel:
-          label: Lava is an open-source protocol for reliable access to RPC data
+  - type: node_card
+    title: Full-nodes
+    nodes:
+      - link_url: https://github.com/eqlabs/pathfinder
+        website_url: https://github.com/eqlabs/pathfinder
+        title: Pathfinder
+        description: Starknet full-node written in Rust by Equilibrium
+      - link_url: https://github.com/NethermindEth/juno
+        website_url: https://github.com/NethermindEth/juno
+        title: Juno
+        description: Starknet full-node written in go-lang by Nethermind
+      - link_url: https://github.com/starkware-libs/papyrus
+        website_url: https://github.com/starkware-libs/papyrus
+        title: Papyrus
+        description: Starknet full-node written in Rust by StarkWare
+  - type: node_card
+    title: API services
+    nodes:
+      - link_url: https://www.infura.io/networks/ethereum/starknet
+        website_url: https://www.infura.io/networks/ethereum/starknet
+        title: Infura
+        description: API service for Starknet
+      - description: API service for Starknet
+        title: Chainstack
+        link_url: https://chainstack.com/build-better-with-starknet
+        website_url: https://chainstack.com/build-better-with-starknet
+      - link_url: https://www.alchemy.com/starknet
+        website_url: https://www.alchemy.com/starknet
+        title: Alchemy
+        description: API service for Starknet
+      - link_url: https://www.lavanet.xyz
+        website_url: https://www.lavanet.xyz
+        title: Lava Protocol
+        description: Lava is an open-source protocol for reliable access to RPC data
