@@ -12,7 +12,7 @@ import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { Container } from "./Container";
-import { LinkList, LinkListItem } from "./LinkList";
+import { LinkList } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
@@ -80,18 +80,7 @@ Props): JSX.Element {
       </BlockCards>
     );
   } else if (block.type === "link_list") {
-    return (
-      <LinkList heading={block.heading} listSize={block.listSize}>
-        {block.blocks.map((item, i) => (
-          <LinkListItem
-            key={i}
-            link={item.link}
-            subLabel={item.subLabel}
-            avatar={item.avatar}
-          />
-        ))}
-      </LinkList>
-    );
+    return <LinkList {...block} />;
   } else if (block.type === "accordion") {
     return (
       <AccordionRoot heading={block.heading}>

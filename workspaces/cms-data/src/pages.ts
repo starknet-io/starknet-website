@@ -121,6 +121,8 @@ export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
   readonly listSize?: "sm" | "md" | "lg";
+  readonly listGap?: "sm" | "md" | "lg";
+  randomize?: boolean;
   readonly blocks: readonly LinkListItem[];
 }
 export interface AccordionBlock {
