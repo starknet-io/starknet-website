@@ -11,3 +11,18 @@ blocks:
     description: Discover apps in the Starknet ecosystem across NFTs, Gaming, Defi,
       DAOs and more.
   - type: dapps
+  - type: node_card
+    nodes:
+      - title: Starknet-ecosystem
+        description: Immerse yourself in the StarkNet Ecosystem by discovering projects,
+          jobs, metrics and learning resources.
+        website_url: https://www.starknet-ecosystem.com
+        twitter: https://twitter.com/StarkNetEco
+        link_url: https://www.starknet-ecosystem.com
+        image: /assets/sn-ecosystem.jpg
+      - title: Dappland
+        description: Discover and rate the best apps on Starknet.
+        link_url: https://www.dappland.com
+        website_url: https://www.dappland.com
+        twitter: https://twitter.com/argentHQ
+        image: /assets/dappland.jpg
