@@ -10,6 +10,7 @@
   "references": [
     { "path": "./tsconfig.node.json" },
     { "path": "../cms-config" },
-    { "path": "../netlify-cms-widgets" }
+    { "path": "../netlify-cms-widgets" },
+    { "path": "../netlify-cms-backend-github" }
   ]
 }

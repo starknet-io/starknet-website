@@ -1,6 +1,6 @@
 import { LinkData } from "@starknet-io/cms-data/src/settings/main-menu";
 
-export const titleCase = (s: string) => {
+export const titleCase = (s: string = "") => {
   return s
     .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
     .replace(/[-_]+(.)/g, (_, c) => ` ${c.toUpperCase()}`);
@@ -8,7 +8,7 @@ export const titleCase = (s: string) => {
 
 export function getComputedLinkData(
   locale: string,
-  link: LinkData,
+  link: LinkData
 ): { href?: string; label?: string } {
   let href;
 

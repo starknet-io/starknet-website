@@ -1,17 +1,15 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
-import { getBlockExplorers } from "@starknet-io/cms-data/src/block-explorers";
+import { BlockExplorer } from "@starknet-io/cms-data/src/block-explorers";
 interface Props extends LocaleProps {
   noOfItems?: number;
+  readonly blockExplorers: readonly BlockExplorer[];
 }
 
-export default async function BlockBlockExplorers({
+export default function BlockBlockExplorers({
   noOfItems,
-  params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const blockExplorers = await getBlockExplorers(locale);
-
+  blockExplorers = [],
+}: Props): JSX.Element {
   return (
     <Box>
       <Container maxW="1062px">

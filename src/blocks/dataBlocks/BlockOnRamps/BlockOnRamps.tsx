@@ -1,17 +1,16 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
-import { getFiatOnRamps } from "@starknet-io/cms-data/src/fiat-on-ramps";
+import { FiatOnRamp } from "@starknet-io/cms-data/src/fiat-on-ramps";
 interface Props extends LocaleProps {
   noOfItems?: number;
+  readonly fiatOnRamps: readonly FiatOnRamp[];
 }
 
-export default async function BlockOnRamps({
+export default function BlockOnRamps({
   noOfItems,
   params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const fiatOnRamps = await getFiatOnRamps(locale);
-
+  fiatOnRamps = [],
+}: Props): JSX.Element {
   return (
     <Box>
       <Container maxW="1062px">

@@ -1,17 +1,16 @@
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
-import { getDapps } from "@starknet-io/cms-data/src/dapps";
+import { Dapp } from "@starknet-io/cms-data/src/dapps";
 interface Props extends LocaleProps {
   noOfItems?: number;
+  readonly dapps: readonly Dapp[];
 }
 
-export default async function BlockDapps({
+export default function BlockDapps({
   noOfItems,
-  params: { locale },
-}: //@ts-expect-error
-Props): JSX.Element {
-  const dapps = await getDapps(locale);
-
+  // params: { locale },
+  dapps = [],
+}: Props): JSX.Element {
   return (
     <Box>
       <Container maxW="1062px">
