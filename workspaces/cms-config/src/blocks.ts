@@ -51,7 +51,7 @@ export const linkFields = [
   },
 ] satisfies CmsField[];
 
-export const nodeCard = [
+export const ecosystemCard = [
   {
     label: "Title",
     name: "title",
@@ -368,8 +368,8 @@ export const blocks = [
     ],
   },
   {
-    name: "node_card",
-    label: "Node cards list",
+    name: "ecosystem_card",
+    label: "Ecosystem cards list",
     widget: "object",
     fields: [
       {
@@ -388,9 +388,9 @@ export const blocks = [
       },
       {
         label: "Cards",
-        name: "nodes",
+        name: "ecosystem_cards",
         widget: "list",
-        fields: nodeCard,
+        fields: ecosystemCard,
         crowdin: true,
         required: true,
         index_file: "",

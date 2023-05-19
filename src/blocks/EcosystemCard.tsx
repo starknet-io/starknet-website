@@ -9,7 +9,7 @@ interface Icon {
   linkUrl: string;
 }
 
-interface Node {
+interface EcosystemCard {
   title: string;
   description: string;
   linkUrl: string;
@@ -23,32 +23,32 @@ interface Node {
 interface Props extends LocaleProps {
   title: string,
   description?: string,
-  nodes: Node[]
+  ecosystem_cards: EcosystemCard[]
 }
 
-export default async function NodeCardsBlock({
+export default async function EcosystemCard({
   params: { locale },
   title,
   description,
-  nodes
+  ecosystem_cards
 }: //@ts-expect-error
 Props): JSX.Element {
 
   return (
     <Box>
       <Container maxW="1062px">
-        <Heading color="heading-navy-fg" variant="h3" mb="10px" id={`toc-${slugify(title || "")}`}>{title}</Heading>
-        <Text variant="body" mb="24px">{description}</Text>
+        {title && <Heading color="heading-navy-fg" variant="h3" mb="10px" id={`toc-${slugify(title)}`}>{title}</Heading>}
+        {description && <Text variant="body" mb="24px">{description}</Text>}
         <Flex gap={4} direction="column" flex={1}>
-          {nodes.map((node, i) => {
+          {ecosystem_cards.map((card, i) => {
             return (
               <ListCard
-                href={node.website_url}
-                twitterHandle={node.twitter}
-                image={node.image}
-                key={`${node.title}-${i}`}
-                description={node.description}
-                title={node.title}
+                href={card.website_url}
+                twitterHandle={card.twitter}
+                image={card.image}
+                key={`${card.title}-${i}`}
+                description={card.description}
+                title={card.title}
               />
             );
           })}
