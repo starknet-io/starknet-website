@@ -36,8 +36,8 @@ Props): JSX.Element {
   return (
     <Box>
       <Container maxW="1062px">
-        <Heading variant="h3">{title}</Heading>
-        <Text variant="cardBody">{description}</Text>
+        <Heading color="heading-navy-fg" variant="h3" mb="10px">{title}</Heading>
+        <Text variant="body" mb="24px">{description}</Text>
         <Flex gap={4} direction="column" flex={1}>
           {nodes.map((node, i) => {
             return (
