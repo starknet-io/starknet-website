@@ -73,8 +73,8 @@ export const ListCard = (props: Props) => {
           >
             <Stack
               direction={{ base: "column", md: "row" }}
-              spacing={{ base: "3", md: "10" }}
-              align="flex-start"
+              spacing={{ base: "3", md: "6" }}
+              align="center"
             >
               <Stack spacing="4">
                 <Box
@@ -82,7 +82,6 @@ export const ListCard = (props: Props) => {
                   height="80px"
                   borderRadius="8px"
                   overflow="hidden"
-                  marginTop={{ base: "0px", md: "24px" }}
                   marginBottom={{ base: "16px", md: "0" }}
                 >
                   <Img
@@ -203,7 +202,6 @@ export const ListCard = (props: Props) => {
                     props.variant !== "event" &&
                     props.variant !== "job" && (
                       <Link
-                        mt="20px"
                         isExternal
                         as={NextLink}
                         href={`${props.href}`}
@@ -218,7 +216,6 @@ export const ListCard = (props: Props) => {
                   {props.twitterHandle && (
                     <Link
                       isExternal
-                      mt="20px"
                       as={NextLink}
                       href={`${props.twitterHandle}`}
                     >
@@ -232,7 +229,6 @@ export const ListCard = (props: Props) => {
                   {props.discordHandle && (
                     <Link
                       isExternal
-                      mt="20px"
                       as={NextLink}
                       href={`${props.discordHandle}`}
                     >
@@ -247,7 +243,6 @@ export const ListCard = (props: Props) => {
                     <Link
                       as={NextLink}
                       href={`${props.discordHandle}`}
-                      mt="20px"
                       isExternal={true}
                       p="8px 12px"
                       border="1px solid #E2E8F0"
