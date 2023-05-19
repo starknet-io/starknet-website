@@ -74,7 +74,7 @@ export const nodeCard = [
     label: "Image",
     required: false,
     name: "image",
-    widget: "string",
+    widget: "image",
     crowdin: false,
   },
   {

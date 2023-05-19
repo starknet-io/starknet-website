@@ -156,7 +156,6 @@ Props): JSX.Element {
       />
     );
   } else if (block.type === "node_card") {
-    console.log('block ', block)
     return (
       <NodeCardsBlock
         {...block}
