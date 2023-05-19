@@ -76,7 +76,7 @@ export const ListCard = (props: Props) => {
               spacing={{ base: "3", md: "6" }}
               align="center"
             >
-              <Stack spacing="4">
+              {props.image && <Stack spacing="4">
                 <Box
                   width="80px"
                   height="80px"
@@ -92,7 +92,7 @@ export const ListCard = (props: Props) => {
                     objectFit="contain"
                   />
                 </Box>
-              </Stack>
+              </Stack>}
               <Box flex="1">
                 {props.startDateTime && (
                   <Text
