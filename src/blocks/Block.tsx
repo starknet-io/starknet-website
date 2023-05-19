@@ -8,7 +8,7 @@ import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
-import NodeCardsBlock from "./NodeCardsBlock";
+import EcosystemCard from "./EcosystemCard";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
@@ -155,9 +155,9 @@ Props): JSX.Element {
         blockExplorers={blocksDynamicData.blockExplorers}
       />
     );
-  } else if (block.type === "node_card") {
+  } else if (block.type === "ecosystem_card") {
     return (
-      <NodeCardsBlock
+      <EcosystemCard
         {...block}
         params={{
           locale,

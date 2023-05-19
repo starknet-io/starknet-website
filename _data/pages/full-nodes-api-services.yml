@@ -5,9 +5,9 @@ parent_page: /ecosystem/
 breadcrumbs: false
 page_last_updated: true
 blocks:
-  - type: node_card
+  - type: ecosystem_card
     title: Full-nodes
-    nodes:
+    ecosystem_cards:
       - link_url: https://github.com/eqlabs/pathfinder
         website_url: https://github.com/eqlabs/pathfinder
         title: Pathfinder
@@ -20,9 +20,9 @@ blocks:
         website_url: https://github.com/starkware-libs/papyrus
         title: Papyrus
         description: Starknet full-node written in Rust by StarkWare
-  - type: node_card
+  - type: ecosystem_card
     title: API services
-    nodes:
+    ecosystem_cards:
       - link_url: https://www.infura.io/networks/ethereum/starknet
         website_url: https://www.infura.io/networks/ethereum/starknet
         title: Infura
