@@ -1,11 +1,12 @@
 type: meetup
 name: Starknet meetup
-description: For the first StarkNet meetup, we will be discussing the
+description: For the first Starknet meetup, we will be discussing the
   fascinating topic of account abstraction.
 url: https://www.eventbrite.com/e/billets-starknet-meetup-629082842717
 start_date: 2023-05-23T16:00:47.851Z
 end_date: 2023-05-23T19:00:10.896Z
-image: /assets/screenshot-2023-05-15-at-13.24.30.png
+show_in_past_events: true
+image: /assets/lyon-meetup-1.jpg
 location: europe
-city: "Paris "
+city: "Lyon "
 country: France
