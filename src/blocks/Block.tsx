@@ -8,7 +8,7 @@ import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
-import EcosystemCard from "./EcosystemCard";
+import ListCardItems from "./ListCardItems";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
@@ -168,7 +168,7 @@ Props): JSX.Element {
     );
   } else if (block.type === "card_list") {
     return (
-      <EcosystemCard
+      <ListCardItems
         {...block}
         params={{
           locale,

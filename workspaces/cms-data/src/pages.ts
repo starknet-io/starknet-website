@@ -63,7 +63,7 @@ interface Icon {
   linkUrl: string;
 }
 
-interface EcosystemCard {
+interface ListCardItems {
   title: string;
   description: string;
   linkUrl: string;
@@ -73,10 +73,10 @@ interface EcosystemCard {
   twitter: string;
   image: string;
 }
-export interface EcosystemCardBlock {
+export interface ListCardItemsBlock {
   readonly type: "card_list";
   readonly title: string;
-  readonly card_list_items: EcosystemCard[];
+  readonly card_list_items: ListCardItems[];
   readonly noOfItems: number;
   readonly description: string;
 }
@@ -172,7 +172,7 @@ export type Block =
   | PageHeaderBlock
   | AccordionBlock
   | OrderedBlock
-  | EcosystemCardBlock;
+  | ListCardItemsBlock;
 
 export interface Container {
   readonly type: "container";
