@@ -5,7 +5,7 @@ description: For the first Starknet meetup, we will be discussing the
 url: https://www.eventbrite.com/e/billets-starknet-meetup-629082842717
 start_date: 2023-05-23T16:00:47.851Z
 end_date: 2023-05-23T19:00:10.896Z
-show_in_past_events: true
+show_in_past_events: false
 image: /assets/lyon-meetup-1.jpg
 location: europe
 city: "Lyon "
