@@ -74,9 +74,9 @@ interface EcosystemCard {
   image: string;
 }
 export interface EcosystemCardBlock {
-  readonly type: "ecosystem_card";
+  readonly type: "card_list";
   readonly title: string;
-  readonly ecosystem_cards: EcosystemCard[];
+  readonly card_list_items: EcosystemCard[];
   readonly noOfItems: number;
   readonly description: string;
 }

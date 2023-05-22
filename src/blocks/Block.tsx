@@ -48,7 +48,7 @@ Props): JSX.Element {
       </Container>
     );
   } else if (block.type === "image_icon_link_card") {
-    return <ImageIconCard {...block} locale={locale} />;
+    return <ImageIconCard {...block} locale={locale} {...blocksDynamicData} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} />;
   } else if (block.type === "community_events") {
@@ -155,7 +155,7 @@ Props): JSX.Element {
         blockExplorers={blocksDynamicData.blockExplorers}
       />
     );
-  } else if (block.type === "ecosystem_card") {
+  } else if (block.type === "card_list") {
     return (
       <EcosystemCard
         {...block}
