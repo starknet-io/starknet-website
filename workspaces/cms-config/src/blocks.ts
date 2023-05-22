@@ -51,21 +51,6 @@ export const linkFields = [
   },
 ] satisfies CmsField[];
 
-export const cardListItemType = [
-  {
-    label: "Type",
-    name: "type",
-    widget: "string",
-    crowdin: true,
-  },
-  {
-    label: "Url",
-    name: "url",
-    widget: "string",
-    crowdin: false,
-  }
-]
-
 export const cardListItem = [
   {
     label: "Title",
@@ -117,7 +102,7 @@ export const cardListItem = [
     meta: false
   },
   {
-    label: "Tags",
+    label: "Tags (separate by comma)",
     name: "tags",
     required: false,
     widget: "string",
@@ -160,12 +145,24 @@ export const cardListItem = [
     label: "Type list",
     name: "type_list",
     required: false,
-    widget: "string",
-    index_file: "",
-    meta: false
+    widget: "list",
+    fields: [
+      {
+        label: "Type",
+        name: "type",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        label: "Url",
+        name: "url",
+        widget: "string",
+        crowdin: false,
+      }
+    ],
   },
   {
-    label: "Type",
+    label: "Type (separate by comma)",
     name: "type",
     required: false,
     widget: "string",
@@ -184,7 +181,27 @@ export const cardListItem = [
     label: "Recap",
     name: "recap",
     required: false,
-    widget: "string",
+    widget: "list",
+    fields: [
+      {
+        label: "Label",
+        name: "label",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        label: "Link",
+        name: "link",
+        widget: "string",
+        crowdin: false,
+      },
+      {
+        label: "Is external link",
+        name: "isExternal",
+        widget: "boolean",
+        crowdin: false,
+      }
+    ],
     index_file: "",
     meta: false
   },

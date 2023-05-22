@@ -1,3 +1,4 @@
+"use client";
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
 import { Heading } from "@ui/Typography/Heading";
@@ -9,7 +10,7 @@ interface Icon {
   linkUrl: string;
 }
 
-interface EcosystemCard {
+interface ListCardItems {
   title: string;
   description: string;
   linkUrl: string;
@@ -23,15 +24,15 @@ interface EcosystemCard {
 interface Props extends LocaleProps {
   title: string,
   description?: string,
-  card_list_items: EcosystemCard[]
+  card_list_items: ListCardItems[]
 }
 
-export default async function EcosystemCard({
+export default function ListCardItems({
   params: { locale },
   title,
   description,
   card_list_items
-}: //@ts-expect-error
+}:
 Props): JSX.Element {
 
   return (
