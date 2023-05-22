@@ -41,7 +41,7 @@ Props): JSX.Element {
         {title && <Heading color="heading-navy-fg" variant="h3" mb="10px" id={`toc-${slugify(title)}`}>{title}</Heading>}
         {description && <Text variant="body" mb="24px">{description}</Text>}
         <Flex gap={4} direction="column" flex={1}>
-          {card_list_items.map((card, i) => {
+          {card_list_items?.map((card, i) => {
             return (
               <ListCard
                 href={card.website_url}
