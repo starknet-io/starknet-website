@@ -76,7 +76,7 @@ export const blocks = [
       {
         name: "description",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
     ],
   },
@@ -132,7 +132,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
-        crowdin: false
+        crowdin: false,
       },
     ],
   },
@@ -149,7 +149,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
-        crowdin: false
+        crowdin: false,
       },
     ],
   },
@@ -166,7 +166,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
-        crowdin: false
+        crowdin: false,
       },
     ],
   },
@@ -183,7 +183,7 @@ export const blocks = [
         name: "no_of_items",
         required: false,
         widget: "string",
-        crowdin: false
+        crowdin: false,
       },
     ],
   },
@@ -195,12 +195,12 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "description",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "link",
@@ -217,7 +217,7 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "link",
@@ -249,7 +249,7 @@ export const blocks = [
           { label: "Icon link card", value: "icon_link_card" },
           { label: "Dapp", value: "dapp" },
           { label: "Large card", value: "large_card" },
-          { label: "Community card", value: "community_card" }
+          { label: "Community card", value: "community_card" },
         ],
       },
       {
@@ -260,7 +260,7 @@ export const blocks = [
         required: false,
         options: [
           { label: "Large", value: "large" },
-          { label: "Small", value: "small" }
+          { label: "Small", value: "small" },
         ],
       },
       {
@@ -273,12 +273,12 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "description",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "link",
@@ -287,7 +287,7 @@ export const blocks = [
       },
       {
         name: "icon",
-        widget: "image"
+        widget: "image",
       },
       {
         name: "color",
@@ -301,13 +301,14 @@ export const blocks = [
           "cyan",
           "orange",
           "pink",
-          "grey"
+          "grey",
         ],
         default: "orange",
       },
       {
         name: "columns",
-        label: "Columns (number of cards per row, works only for icon_link_card)",
+        label:
+          "Columns (number of cards per row, works only for icon_link_card)",
         widget: "select",
         default: "4",
         required: false,
@@ -320,7 +321,7 @@ export const blocks = [
         default: "left",
         required: false,
         options: ["left", "right"],
-      }
+      },
     ],
   },
   {
@@ -331,7 +332,7 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "link",
@@ -341,7 +342,7 @@ export const blocks = [
       {
         name: "description",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "image",
@@ -363,12 +364,12 @@ export const blocks = [
       {
         name: "title",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "description",
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "variant",
@@ -390,14 +391,14 @@ export const blocks = [
         label: "Button text",
         required: false,
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "buttonUrl",
         label: "Button url",
         required: false,
         widget: "string",
-        crowdin: false
+        crowdin: false,
       },
     ],
   },
@@ -411,19 +412,22 @@ export const blocks = [
         label: "Heading",
         required: false,
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "listSize",
         label: "List Size",
         widget: "select",
         options: ["sm", "md", "lg"],
+        crowdin: false,
+        required: false,
       },
       {
         name: "listGap",
         label: "List Gap",
         widget: "select",
         options: ["sm", "md", "lg"],
+        crowdin: false,
         required: false,
       },
       {
@@ -455,13 +459,13 @@ export const blocks = [
                 name: "label",
                 label: "Label",
                 widget: "string",
-                crowdin: true
+                crowdin: true,
               },
               {
                 name: "boldLabel",
                 label: "Bold Label",
                 widget: "string",
-                crowdin: true
+                crowdin: true,
               },
             ],
           },
@@ -474,13 +478,13 @@ export const blocks = [
                 name: "url",
                 label: "URL",
                 widget: "string",
-                crowdin: false
+                crowdin: false,
               },
               {
                 name: "title",
                 label: "Title",
                 widget: "string",
-                crowdin: true
+                crowdin: true,
               },
               {
                 name: "displayTitle",
@@ -504,7 +508,7 @@ export const blocks = [
         label: "Heading",
         required: false,
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "blocks",
@@ -515,7 +519,7 @@ export const blocks = [
             name: "label",
             label: "Label",
             widget: "string",
-            crowdin: true
+            crowdin: true,
           },
           {
             name: "body",
@@ -539,7 +543,7 @@ export const blocks = [
           {
             name: "title",
             widget: "string",
-            crowdin: true
+            crowdin: true,
           },
           {
             name: "body",
@@ -615,7 +619,7 @@ export const topLevelBlocks = [
         name: "heading",
         required: false,
         widget: "string",
-        crowdin: true
+        crowdin: true,
       },
       {
         name: "heading_variant",
