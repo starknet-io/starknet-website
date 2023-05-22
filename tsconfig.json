@@ -25,6 +25,9 @@
     },
     {
       "path": "./workspaces/website"
+    },
+    {
+      "path": "./workspaces/netlify-cms-backend-github"
     }
   ]
 }

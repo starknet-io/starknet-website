@@ -56,7 +56,7 @@ export const ImageIconCard = ({
   columns = 4,
   orientation = "left"
 }: Props) => {
-  const { href, label } = getComputedLinkData(locale, link ?? {
+  const { href = 'test', label } = getComputedLinkData(locale, link ?? {
       custom_title: 'dsa',
       custom_internal_link: 'asd'
   });

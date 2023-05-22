@@ -88,6 +88,7 @@ for (const locale of locales) {
 
 for (const data of posts.filenameMap.values()) {
   await write(`public/data/posts/${data.locale}/${data.slug}.json`, data);
+  await write(`public/data/posts/${data.locale}/${data.id}.json`, data);
 }
 
 for (const locale of locales) {
@@ -108,6 +109,7 @@ for (const data of pages.filenameMap.values()) {
 
   // TODO stop using this in favor of above
   await write(`public/data/pages/${data.locale}/${data.slug}.json`, data);
+  await write(`public/data/pages/${data.locale}/${data.id}.json`, data);
 }
 
 // main menu

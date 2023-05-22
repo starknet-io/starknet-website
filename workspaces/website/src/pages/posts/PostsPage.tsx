@@ -153,7 +153,7 @@ const PostsPageLayout = ({
       }
       main={
         <Box>
-          <CustomHits categories={categories} />
+          <CustomHits categories={categories} params={params} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
             <CustomTopics
               topics={topics}
@@ -303,7 +303,7 @@ type Hit = {
   readonly filepath: string;
   readonly post_type: string;
   readonly published_date: string;
-  readonly featured: boolean;
+  readonly featured_post: boolean;
   readonly blocks: Array<Block>;
   readonly video: Video;
   readonly timeToConsume: string;
@@ -314,21 +314,25 @@ interface Block {
   type?: string;
 }
 
-function CustomHits({ categories }: Pick<Props, "categories">) {
+function CustomHits({ categories, params }: Pick<Props, "categories" | "params">) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
   const [featuredHit, setFeaturedHit] = useState<Hit>();
   const [filteredHits, setFilteredHits] = useState<Hit[]>([]);
   const [featuredHitDate, setFeaturedHitDate] = useState<string>();
   const [featuredHitCategory, setFeaturedHitCategory] = useState<Category>(categories[0]);
+
   useEffect(() => {
-    if (hits) {
-      setFeaturedHit(hits.find(hit => hit.featured === true))
-    }
     const handleResize = () => {
-      if (window.innerWidth > 992) {
-        setFilteredHits(hits.filter(hit => hit.featured !== true))
-      } else {
-        setFilteredHits(hits);
+      if (hits) {
+        if (window.innerWidth > 992 && hits.some(obj => obj.featured_post === true)) {
+          setFilteredHits(hits.filter(hit => hit.featured_post !== true));
+          setFeaturedHit(hits.find(hit => hit.featured_post === true))
+        } else if (window.innerWidth > 992 && !hits.some(obj => obj.featured_post === true)) {
+          setFeaturedHit(hits[0])
+          setFilteredHits(hits.slice(1));
+        } else {
+          setFilteredHits(hits);
+        }
       }
     }
     handleResize();

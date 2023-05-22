@@ -33,7 +33,11 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return (
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+          />
         ))}
       </Container>
     );
@@ -60,7 +64,11 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         headingVariant={block.heading_variant}
       >
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+          />
         ))}
       </BlockCards>
     );
@@ -111,7 +119,11 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return (
       <BlockGrouping>
         {block.blocks.map((block, i) => (
-          <Block key={i} block={block} locale={locale} />
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+          />
         ))}
       </BlockGrouping>
     );

@@ -111,6 +111,9 @@ export interface HeroBlock {
 }
 export interface HomeHeroBlock {
   readonly type: "home_hero";
+  readonly seo: {
+    readonly heroText: string;
+  };
 }
 export interface LinkListBlock {
   readonly type: "link_list";
@@ -177,7 +180,7 @@ export interface Page extends Meta {
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly page_last_updated?: string;
-  readonly blocks: readonly TopLevelBlock[];
+  readonly blocks?: readonly TopLevelBlock[]; // blocks can be undefined in live previews
 }
 
 export async function getPageBySlug(
@@ -193,6 +196,33 @@ export async function getPageBySlug(
     );
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
+      cause,
+    });
+  }
+}
+
+export async function getPageById(id: string, locale: string): Promise<Page> {
+  try {
+    const page = await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          JSON.parse(
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/pages",
+                value,
+                id + ".json"
+              ),
+              "utf8"
+            )
+          )
+      )
+    );
+    // Redirect to the page with slug
+    return page.slug;
+  } catch (cause) {
+    throw new Error(`Page not found! \${id}`, {
       cause,
     });
   }

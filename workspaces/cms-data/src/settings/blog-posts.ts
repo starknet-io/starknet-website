@@ -2,7 +2,7 @@ import { defaultLocale } from "../i18n/config";
 import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface BlogPosts {
-  readonly featured_post: string;
+  readonly custom_featured_post: string;
 }
 
 export async function getBlogPosts(locale: string, event: null | WorkerGlobalScopeEventMap["fetch"]): Promise<BlogPosts> {

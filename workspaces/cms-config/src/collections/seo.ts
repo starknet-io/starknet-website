@@ -35,7 +35,7 @@ export const SEOCollectionConfig = {
     },
     {
       label: "Tutorials",
-      name: "tutorials",
+      name: "tutorials-seo",
       file: `_data/seo/tutorials.yml`,
       crowdin: true,
       fields: [
@@ -55,7 +55,7 @@ export const SEOCollectionConfig = {
     },
     {
       label: "Events",
-      name: "events",
+      name: "events-seo",
       file: `_data/seo/events.yml`,
       crowdin: true,
       fields: [
@@ -75,7 +75,7 @@ export const SEOCollectionConfig = {
     },
     {
       label: "Jobs",
-      name: "jobs",
+      name: "jobs-seo",
       file: `_data/seo/jobs.yml`,
       crowdin: true,
       fields: [
@@ -101,7 +101,7 @@ export const SEOCollectionConfig = {
       fields: [
         {
           label: "Search text",
-          name: "search",
+          name: "title",
           widget: "string",
           crowdin: true,
         },

@@ -3,6 +3,7 @@ import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/posts/PostsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
+import { generateBlogMetadata } from "src/utils/seo";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -30,9 +31,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
-      documentProps: {
-        title: category?.name,
-      } satisfies DocumentProps,
+      documentProps: generateBlogMetadata(category?.name) satisfies DocumentProps,
     },
   };
 }

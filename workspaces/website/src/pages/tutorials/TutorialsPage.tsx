@@ -19,10 +19,7 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
-import * as GridCard from "@ui/Card/GridCard";
-import { Tag } from "@ui/Tag/Tag";
 import { titleCase } from "src/utils/utils";
-import moment from "moment";
 import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
@@ -351,20 +348,6 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 //   );
 // }
 
-type Tutorial = {
-  readonly id?: string;
-  readonly type: "youtube" | "blog" | "github";
-  readonly url: string;
-  readonly image?: string;
-  readonly title: string;
-  readonly author?: string;
-  readonly published_at: string;
-  readonly difficulty?: "beginner" | "intermediate" | "advanced";
-  readonly tags?: string[];
-  readonly locale: string;
-  readonly filepath: string;
-};
-
 function CustomHits() {
   const { hits, showMore, isLastPage } = useInfiniteHits<Tutorial>();
 
@@ -381,38 +364,11 @@ function CustomHits() {
         rowGap="48px"
       >
         {hits.map((hit) => {
-          const date = moment(hit.published_at).format("MMM DD, YYYY");
           // let tags: string[] = [];
           // if (hit.difficulty) tags.push(hit.difficulty);
           // if (hit.type) tags.push(hit.type);
 
-          return (
-            <GridCard.Root href={hit.url} key={hit.title}>
-              <GridCard.Image url={hit.image} type={hit.type} />
-              <GridCard.Body>
-                {/* <GridCard.Category category={hit.tags} /> */}
-                <GridCard.Content
-                  title={hit.title}
-                  author={hit.author}
-                  date={date}
-                  difficulty={hit.difficulty}
-                />
-              </GridCard.Body>
-              <GridCard.Footer>
-                <HStack spacing="8px">
-                  {hit?.tags?.map((tag, i) => {
-                    // only show max 2 tags
-                    if (i > 1) return null;
-                    return (
-                      <Tag key={i} variant="listCard">
-                        {tag}
-                      </Tag>
-                    );
-                  })}
-                </HStack>
-              </GridCard.Footer>
-            </GridCard.Root>
-          );
+          return <TutorialsCard key={hit.objectID} hit={hit} />;
         })}
       </Grid>
       {/* {hits.map((hit, i) => (

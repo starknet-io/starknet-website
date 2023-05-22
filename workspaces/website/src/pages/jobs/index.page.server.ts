@@ -1,6 +1,7 @@
-import { PageContextServer } from "src/renderer/types";
+import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/jobs/JobsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
+import { generateGenericMetadata } from "src/utils/seo";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -22,6 +23,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
+      documentProps: generateGenericMetadata("Jobs") satisfies DocumentProps,
     },
   };
 }

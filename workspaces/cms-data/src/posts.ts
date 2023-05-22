@@ -3,6 +3,8 @@ import { defaultLocale } from "./i18n/config";
 import type { TopLevelBlock } from "./pages";
 import { getFirst, Meta, getJSON } from "@starknet-io/cms-utils/src/index";
 import type { youtube_v3 } from "googleapis";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 interface VideoMeta {
   readonly url: string;
@@ -61,6 +63,55 @@ export async function getPostBySlug(
     );
   } catch (cause) {
     throw new Error(`Post not found! ${slug}`, {
+      cause,
+    });
+  }
+}
+
+export async function getPostById(
+  id: string | string[] | undefined,
+  locale: string | string[]
+): Promise<Post> {
+  try {
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          JSON.parse(
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/posts",
+                value as string,
+                id + ".json"
+              ),
+              "utf8"
+            )
+          )
+      ),
+      async () => {
+        const client = algoliasearch(
+          process.env.ALGOLIA_APP_ID!,
+          process.env.ALGOLIA_SEARCH_API_KEY!
+        );
+        const index = client.initIndex(
+          `web_posts_${process.env.ALGOLIA_INDEX}`
+        );
+
+        const searchResponse = await index.search<Post>("", {
+          facetFilters: [`locale:${locale}`, `slug:${id}`],
+        });
+
+        const post = searchResponse.hits[0];
+
+        if (post == null) {
+          throw new Error("Post not found!");
+        }
+
+        return post;
+      }
+    );
+  } catch (cause) {
+    throw new Error(`Post not found! ${id}`, {
       cause,
     });
   }
