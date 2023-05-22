@@ -25,7 +25,7 @@ type props = {
 } & ButtonProps;
 
 export const Button = forwardRef<HTMLButtonElement, props>(
-  ({ children, toId, ...rest }, ref) => {
+  ({ children, toId, color, ...rest }, ref) => {
     const handleOnClick = () => {
       if (!toId) {
         return;
@@ -34,7 +34,7 @@ export const Button = forwardRef<HTMLButtonElement, props>(
       scrollIntoView(toId);
     };
     return (
-      <ChakraButton onClick={handleOnClick} ref={ref} {...rest}>
+      <ChakraButton onClick={handleOnClick} ref={ref} color={color} {...rest}>
         {children}
       </ChakraButton>
     );
