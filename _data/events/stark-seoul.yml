@@ -1,0 +1,14 @@
+type: community_event
+name: STARK Seoul
+description: Join us for a dynamic day of engaging talks, interactive workshops,
+  and insightful conversations centered around harnessing Zero-Knowledge
+  technology, advancing Layer 2 and Layer 3 dapps, all within the vibrant city
+  of Seoul.
+url: https://www.starknet.asia/event/stark-seoul
+start_date: 2023-06-05T09:00:24.561Z
+end_date: 2023-06-05T16:00:24.567Z
+show_in_past_events: true
+image: /assets/img_1335-1-.jpg
+location: asia
+city: Seoul
+country: Korea
