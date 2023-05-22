@@ -51,7 +51,22 @@ export const linkFields = [
   },
 ] satisfies CmsField[];
 
-export const ecosystemCard = [
+export const cardListItemType = [
+  {
+    label: "Type",
+    name: "type",
+    widget: "string",
+    crowdin: true,
+  },
+  {
+    label: "Url",
+    name: "url",
+    widget: "string",
+    crowdin: false,
+  }
+]
+
+export const cardListItem = [
   {
     label: "Title",
     name: "title",
@@ -86,8 +101,88 @@ export const ecosystemCard = [
     meta: false
   },
   {
-    label: "Twitter handle",
-    name: "twitter",
+    label: "Start date time",
+    name: "start_date_time",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Location",
+    name: "location",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Tags",
+    name: "tags",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "City",
+    name: "city",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Country",
+    name: "country",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Venue",
+    name: "venue",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Discord handle",
+    name: "discordHandle",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Type list",
+    name: "type_list",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Type",
+    name: "type",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Is image rounded",
+    name: "is_rounded",
+    required: false,
+    widget: "boolean",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Recap",
+    name: "recap",
     required: false,
     widget: "string",
     index_file: "",
@@ -368,8 +463,8 @@ export const blocks = [
     ],
   },
   {
-    name: "ecosystem_card",
-    label: "Ecosystem cards list",
+    name: "card_list",
+    label: "Cards list",
     widget: "object",
     fields: [
       {
@@ -387,10 +482,10 @@ export const blocks = [
         crowdin: true
       },
       {
-        label: "Cards",
-        name: "ecosystem_cards",
+        label: "Card list items",
+        name: "card_list_items",
         widget: "list",
-        fields: ecosystemCard,
+        fields: cardListItem,
         crowdin: true,
         required: true,
         index_file: "",

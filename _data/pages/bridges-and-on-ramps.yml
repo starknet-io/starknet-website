@@ -10,11 +10,11 @@ blocks:
     title: Bridges & on-ramps
     description: Bridge tokens between Starknet and other chains or exchanges, or
       exchange tokens with fiat through on-ramp services.
-  - type: ecosystem_card
+  - type: card_list
     title: What are bridges?
     description: Bridges allow users to move assets between crypto ecosystems, such
       as blockchains or exchanges.
-    ecosystem_cards:
+    card_list_items:
       - image: /assets/starkgate.jpg
         title: StarkGate
         description: StarkGate is the official bridge between Starknet and Ethereum.
@@ -34,11 +34,11 @@ blocks:
         website_url: https://www.orbiter.finance
         image: /assets/orbiter.jpg
         twitter: https://twitter.com/Orbiter_Finance
-  - type: ecosystem_card
+  - type: card_list
     title: What are fiat on-ramps?
     description: Fiat on-ramps are service providers that allows for the exchange of
       fiat currencies for cryptocurrencies.
-    ecosystem_cards:
+    card_list_items:
       - title: Banxa
         description: Banxa is a fiat to crypto on and off-ramp.
         link_url: https://banxa.com

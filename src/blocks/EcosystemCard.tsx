@@ -23,14 +23,14 @@ interface EcosystemCard {
 interface Props extends LocaleProps {
   title: string,
   description?: string,
-  ecosystem_cards: EcosystemCard[]
+  card_list_items: EcosystemCard[]
 }
 
 export default async function EcosystemCard({
   params: { locale },
   title,
   description,
-  ecosystem_cards
+  card_list_items
 }: //@ts-expect-error
 Props): JSX.Element {
 
@@ -40,7 +40,7 @@ Props): JSX.Element {
         {title && <Heading color="heading-navy-fg" variant="h3" mb="10px" id={`toc-${slugify(title)}`}>{title}</Heading>}
         {description && <Text variant="body" mb="24px">{description}</Text>}
         <Flex gap={4} direction="column" flex={1}>
-          {ecosystem_cards.map((card, i) => {
+          {card_list_items.map((card, i) => {
             return (
               <ListCard
                 href={card.website_url}

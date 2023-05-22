@@ -9,8 +9,8 @@ blocks:
     variant: block_explorers
     title: Block explorers
     description: Explore blocks, transactions, and other metrics of Starknet.
-  - type: ecosystem_card
-    ecosystem_cards:
+  - type: card_list
+    card_list_items:
       - title: Starkscan
         description: "Block explorer and analytics for Starknet. "
         link_url: https://starkscan.co
