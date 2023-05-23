@@ -25,6 +25,7 @@ import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFilter
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { navigate } from "vite-plugin-ssr/client/router";
+import TutorialsCard, { Tutorial } from "./TutorialsCard";
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {

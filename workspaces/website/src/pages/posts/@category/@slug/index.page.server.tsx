@@ -4,7 +4,6 @@ import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/posts/PostPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
-import { generateBlogPostMetadata } from "src/utils/seo";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -15,7 +14,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     locale,
     pageContext.event
   )
-  
+
   const pageProps: Props = {
     post ,
     categories: await getCategories(locale, pageContext.event),
@@ -30,7 +29,11 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
-      documentProps: generateBlogPostMetadata(post) satisfies DocumentProps,
+      documentProps: {
+        title: post.title,
+        description: post.short_desc,
+        image: `${import.meta.env.VITE_SITE_URL}${post.image}`,
+      } satisfies DocumentProps,
     },
   };
 }

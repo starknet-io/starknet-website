@@ -409,7 +409,7 @@ export default class API {
             data,
           });
           this._metadataSemaphore?.leave();
-          resolve();
+          resolve(undefined);
         } catch (err) {
           reject(err);
         }
@@ -431,10 +431,10 @@ export default class API {
           const { sha } = await this.commit(`Deleting “${key}” metadata`, changeTree);
           await this.patchRef('meta', '_netlify_cms', sha);
           this._metadataSemaphore?.leave();
-          resolve();
+          resolve(undefined);
         } catch (err) {
           this._metadataSemaphore?.leave();
-          resolve();
+          resolve(undefined);
         }
       }),
     );
@@ -509,7 +509,7 @@ export default class API {
     head: string | undefined,
     state: PullRequestState,
     predicate: (pr: GitHubPull) => boolean,
-  
+
   ) {
     const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
       `${this.originRepoURL}/deployments`,
@@ -598,7 +598,7 @@ export default class API {
     }
   }
 
-  async getPullRequestAuthor(pullRequest: Octokit.PullsListResponseItem) {
+  async getPullRequestAuthor(pullRequest: Octokit.PullsListResponseItem): Promise<string|void> {
     if (!pullRequest.user?.login) {
       return;
     }
@@ -903,6 +903,7 @@ export default class API {
     const sha = pullRequest.head.sha;
     const deploys = await this.getDeploys(branch);
     const resp: {environment_url: string }[] = await this.request(
+      // @ts-expect-error
       `${this.originRepoURL}/deployments/${deploys.id}/statuses`,
     );
     const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
@@ -962,7 +963,7 @@ export default class API {
     }
   }
 
-  async deleteFiles(paths: string[], message: string) {
+  async deleteFiles(paths: string[], message: string): Promise<never|void> {
     if (this.useOpenAuthoring) {
       return Promise.reject('Cannot delete published entries as an Open Authoring user!');
     }
@@ -1003,7 +1004,7 @@ export default class API {
     slug: string,
     mediaFilesList: MediaFile[],
     options: PersistOptions,
-  ) {
+  ): Promise<Octokit.GitUpdateRefResponse|void> {
     const contentKey = this.generateContentKey(options.collectionName as string, slug);
     const branch = branchFromContentKey(contentKey);
     const unpublished = options.unpublished || false;

@@ -1,6 +1,6 @@
 import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst , getJSON} from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 
 export interface MarkdownBlock {
@@ -191,7 +191,8 @@ export async function getPageBySlug(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/pages/" + value + "/" + slug, event)
+        (value) => async () =>
+          getJSON("data/pages/" + value + "/" + slug, event)
       )
     );
   } catch (cause) {
@@ -201,26 +202,17 @@ export async function getPageBySlug(
   }
 }
 
-export async function getPageById(id: string, locale: string): Promise<Page> {
+export async function getPageById(
+  id: string,
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<Page> {
   try {
-    const page = await getFirst(
+    return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/pages",
-                value,
-                id + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/pages/" + value + "/" + id, event)
       )
     );
-    // Redirect to the page with slug
-    return page.slug;
   } catch (cause) {
     throw new Error(`Page not found! \${id}`, {
       cause,
