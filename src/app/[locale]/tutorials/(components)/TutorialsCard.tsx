@@ -25,7 +25,7 @@ export default function TutorialsCard({ hit }: TutorialsCardProps) {
   const date = moment(hit.published_at).format("MMM DD, YYYY");
 
   return (
-    <GridCard.Root href={hit.url} key={hit.title}>
+    <GridCard.Root href={`tutorials/video/${hit.id}`} key={hit.title}>
       <GridCard.Image url={hit.image} type={hit.type} />
       <GridCard.Body>
         {/* <GridCard.Category category={hit.tags} /> */}
