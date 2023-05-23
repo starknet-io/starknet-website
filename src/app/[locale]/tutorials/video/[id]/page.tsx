@@ -7,12 +7,16 @@ import { Tag } from "@ui/Tag/Tag";
 import {
   Box
 } from "src/libs/chakra-ui";
-
+import * as GridCard from "@ui/Card/GridCard";
+import moment from "moment";
 interface Tutorial {
   id: string;
   title: string;
   url: string;
   tags: string[];
+  author: string;
+  difficulty: string;
+  published_at: string;
 }
 
 const TutorialPage: React.FC = () => {
@@ -37,10 +41,21 @@ const TutorialPage: React.FC = () => {
   }
   const videoId = tutorial.url.split('/').pop();
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-
+  const date = moment(tutorial.published_at).format("MMM DD, YYYY");
   return <PageLayout
     sectionHeaderTitle={tutorial.title}
     main={<div>
+      <Box width="100%" height={{base: "250px", sm: "350px", md: "500px", lg: "650px"}}>
+        <iframe width="100%" height="100%" src={embedUrl} frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </Box>
+      <Box mb="4" mt="4">
+        <GridCard.Content
+          title={''}
+          author={tutorial.author}
+          date={date}
+          difficulty={tutorial.difficulty}
+        />
+      </Box>
       <Box mb="4">
         {Array.isArray(tutorial.tags) &&
         tutorial.tags.map((tag, i) => {
@@ -53,7 +68,6 @@ const TutorialPage: React.FC = () => {
           );
         })}
       </Box>
-      <iframe width="100%" height="600px" src={embedUrl} frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>}/>;
 }
 
