@@ -18,10 +18,9 @@ export const passToClient = [
   "seo",
 ];
 
-
 export async function onBeforeRender(pageContext: PageContextServer) {
   return {
-    pageContext: await getDefaultPageContext(pageContext)
+    pageContext: await getDefaultPageContext(pageContext),
   };
 }
 
@@ -48,8 +47,6 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext;
 
-  const documentProps = pageContext.documentProps ?? pageContext.exports.documentProps
-
   const page = (
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
@@ -62,6 +59,20 @@ export async function render(pageContext: PageContextServer) {
   });
 
   const GOOGLE_TAG_ID = "G-WY42TERK5P";
+  const documentProps =
+    pageContext.documentProps ?? pageContext.exports.documentProps;
+
+  const title = documentProps?.title
+    ? `${documentProps?.title} - Starknet`
+    : "Starknet";
+
+  const description =
+    documentProps?.description ??
+    "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
+
+  const image =
+    documentProps?.image ??
+    `${import.meta.env.VITE_SITE_URL}/assets/share/generic_landing.png`;
 
   const documentHtml = escapeInject`<!DOCTYPE html>
   <html>
@@ -70,23 +81,23 @@ export async function render(pageContext: PageContextServer) {
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
       <!-- Primary Meta Tags -->
-      <title>${documentProps?.title ?? 'Starknet'}</title>
-      <meta name="title" content="${documentProps?.title ?? 'Starknet'}">
-      <meta name="description" content="${documentProps?.description ?? ''}">
+      <title>${title}</title>
+      <meta name="title" content="${title}">
+      <meta name="description" content="${description}">
 
       <!-- Open Graph / Facebook -->
-      <meta property="og:type" content="website">
+      <meta property="og:type" content="article">
       <meta property="og:url" content="${pageContext.urlOriginal}">
-      <meta property="og:title" content="${documentProps?.title ?? 'Starknet'}">
-      <meta property="og:description" content="${documentProps?.description ?? ''}">
-      <meta property="og:image" content="${documentProps?.image ?? ''}">
+      <meta property="og:title" content="${title}">
+      <meta property="og:description" content="${description}">
+      <meta property="og:image" content="${image}">
 
       <!-- Twitter -->
       <meta property="twitter:card" content="summary_large_image">
       <meta property="twitter:url" content="${pageContext.urlOriginal}">
-      <meta property="twitter:title" content="${documentProps?.title ?? 'Starknet'}">
-      <meta property="twitter:description" content="${documentProps?.description ?? ''}">
-      <meta property="twitter:image" content="${documentProps?.image ?? ''}">
+      <meta property="twitter:title" content="${title}">
+      <meta property="twitter:description" content="${description}">
+      <meta property="twitter:image" content="${image}">
 
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}"></script>

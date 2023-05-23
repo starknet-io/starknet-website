@@ -6,20 +6,16 @@ import { Props } from "src/pages/PagePage";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const locale = pageContext.locale ?? defaultLocale;
-
-  const data = await getPageBySlug(
-    pageContext.routeParams["*"] || "home",
-    locale,
-    pageContext.event
-  );
+  const slug = pageContext.routeParams["*"] || "home";
+  const data = await getPageBySlug(slug, locale, pageContext.event);
 
   return {
     pageContext: {
       pageProps: { data } satisfies Props,
       documentProps: {
-        title: data.title
+        title: slug == "home" ? undefined : data.title,
       } satisfies DocumentProps,
-      ...await getDefaultPageContext(pageContext),
+      ...(await getDefaultPageContext(pageContext)),
     },
-  }
+  };
 }

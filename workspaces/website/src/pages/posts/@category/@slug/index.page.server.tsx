@@ -9,12 +9,14 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
   const { locale } = defaultPageContext;
 
+  const post = await getPostBySlug(
+    pageContext.routeParams.slug,
+    locale,
+    pageContext.event
+  )
+
   const pageProps: Props = {
-    post: await getPostBySlug(
-      pageContext.routeParams.slug,
-      locale,
-      pageContext.event
-    ),
+    post ,
     categories: await getCategories(locale, pageContext.event),
     topics: await getTopics(locale, pageContext.event),
     params: {
@@ -28,9 +30,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
       ...defaultPageContext,
       pageProps,
       documentProps: {
-        title: pageProps.post.title,
-        description: pageProps.post.short_desc,
-        image: pageProps.post.image,
+        title: post.title,
+        description: post.short_desc,
+        image: `${import.meta.env.VITE_SITE_URL}${post.image}`,
       } satisfies DocumentProps,
     },
   };

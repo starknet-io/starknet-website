@@ -3,18 +3,32 @@ import CMS from "netlify-cms-app";
 import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
 import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/youtube";
+import CustomPreview, { CustomPreviewType } from "./CustomPreview";
+import {GitHubBackend} from "@starknet-io/netlify-cms-backend-github/src";
 
 export default function App() {
   React.useEffect(() => {
-    // if (process.env.NODE_ENV === "development") {
-    //   config.local_backend = true;
-    // }
-
     // @ts-expect-error
     CMS.registerWidget([
       NetlifyCmsWidgetUUID.Widget(),
-      NetlifyCmsWidgetYouTube.Widget()
+      NetlifyCmsWidgetYouTube.Widget(),
     ]);
+    CMS.registerPreviewTemplate("events", ({ entry }) => (
+      <CustomPreview entry={entry} type={CustomPreviewType.EVENTS} />
+    ));
+    CMS.registerPreviewTemplate("jobs", ({ entry }) => (
+      <CustomPreview entry={entry} type={CustomPreviewType.JOBS} />
+    ));
+    CMS.registerPreviewTemplate("tutorials", ({ entry }) => {
+      return <CustomPreview entry={entry} type={CustomPreviewType.TUTORIALS} />;
+    });
+    CMS.registerPreviewTemplate("posts", ({ entry }) => {
+      return <CustomPreview entry={entry} type={CustomPreviewType.POST} />;
+    });
+    CMS.registerPreviewTemplate("pages", ({ entry }) => {
+      return <CustomPreview entry={entry} type={CustomPreviewType.PAGE} />;
+    });
+    CMS.registerBackend("github-yuki", GitHubBackend);
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;
 

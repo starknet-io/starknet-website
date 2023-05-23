@@ -93,3 +93,10 @@ export async function getJSON(
   const res = await fetch("/" + src + ".json");
   return res.json();
 }
+
+export const convertStringTagsToArray = (commaSeperatedTags: string = "") => {
+  return commaSeperatedTags
+    .replace(/,\s*$/, "")
+    .split(",")
+    .map((t: string) => t.trim());
+};

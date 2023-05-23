@@ -1,6 +1,6 @@
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
-import { DocumentProps, PageContextServer } from "src/renderer/types";
+import { PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/posts/PostsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 
@@ -22,17 +22,15 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     },
   };
 
-  const category = pageProps.categories.find(
-    (c) => c.id === pageProps.params.category
-  );
-
   return {
     pageContext: {
       ...defaultPageContext,
       pageProps,
       documentProps: {
-        title: category?.name,
-      } satisfies DocumentProps,
+        title: "Starknet Blog",
+        description: "Get the latest insights from across the Starknet ecosystem, learn what community members are building or take a deep dive into the math that powers Starknet.",
+        image: `${import.meta.env.VITE_SITE_URL}/assets/share/blog_landing.png`,
+      },
     },
   };
 }
