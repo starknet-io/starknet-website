@@ -6,20 +6,23 @@ import EventCard from "src/pages/events/EventCard";
 import { isUpcomingEvent } from "src/pages/events/utils";
 import JobsCard from "src/pages/jobs/JobsCard";
 import TutorialsCard from "src/pages/tutorials/TutorialsCard";
-import PostByCategory from "src/pages/posts/[category]/(components)/PostByCategory";
+import PostByCategory from "src/pages/posts/PostByCategory";
 import CMSPage from "src/pages/(components)/CMSPage";
+import { ThemeProvider } from "src/renderer/ThemeProvider";
 
-type LivePreivewPageProps = {
-  topics: readonly Topic[];
-  categories: readonly Category[];
-};
+export interface Props {
+  readonly categories: readonly Category[];
+  readonly topics: readonly Topic[];
+}
+
 export default function LivePreivewPage({
   topics,
   categories,
-}: LivePreivewPageProps) {
+}: Props) {
   const data = usePreviewData();
 
   return (
+    <ThemeProvider>
     <div className="preview-content">
       {data.type === CustomPreviewType.EVENTS && (
         <EventCard
@@ -53,5 +56,6 @@ export default function LivePreivewPage({
         />
       )}
     </div>
+    </ThemeProvider>
   );
 }

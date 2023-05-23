@@ -86,7 +86,7 @@ export async function render(pageContext: PageContextServer) {
       <meta name="description" content="${description}">
 
       <!-- Open Graph / Facebook -->
-      <meta property="og:type" content="website">
+      <meta property="og:type" content="article">
       <meta property="og:url" content="${pageContext.urlOriginal}">
       <meta property="og:title" content="${title}">
       <meta property="og:description" content="${description}">

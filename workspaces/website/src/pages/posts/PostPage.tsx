@@ -1,7 +1,7 @@
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { Category } from "@starknet-io/cms-data/src/categories";
 import { Topic } from "@starknet-io/cms-data/src/topics";
-import PostByCategory from "./[category]/(components)/PostByCategory";
+import PostByCategory from "./PostByCategory";
 
 export interface Props {
   readonly params: LocaleParams & {

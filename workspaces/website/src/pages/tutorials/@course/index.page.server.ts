@@ -2,7 +2,6 @@ import { PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/tutorials/TutorialsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 import { DocumentProps } from "src/renderer/types";
-import { generateGenericMetadata } from "src/utils/seo";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -25,7 +24,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
-      documentProps: generateGenericMetadata(courses.find((c) => c.value === pageProps.params.course)?.label) satisfies DocumentProps,
+      documentProps: {
+        title: courses.find((c) => c.value === pageProps.params.course)?.label,
+      } satisfies DocumentProps,
     },
   };
 }

@@ -1,4 +1,4 @@
-import { DocumentProps, PageContextServer } from "src/renderer/types";
+import { PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/tutorials/TutorialsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 
@@ -22,9 +22,6 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
-      documentProps: {
-        title: "Tutorials"
-      } satisfies DocumentProps,
     },
   };
 }

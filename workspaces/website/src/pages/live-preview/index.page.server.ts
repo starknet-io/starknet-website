@@ -2,7 +2,7 @@ import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PageContextServer } from "src/renderer/types";
 import { getDefaultPageContext } from "src/renderer/helpers";
-import { Props } from "./index.page";
+import { Props } from "./(componnets)/LivePreivewPage";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -17,6 +17,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
+      hasLayout: false,
     },
   };
 }
