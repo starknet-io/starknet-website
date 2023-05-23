@@ -1,4 +1,5 @@
 import { ListCard } from "@ui/Card/ListCard";
+import React from "react";
 import { JobsHit } from "./JobsPage";
 
 export default function JobsCard({ hit }: { hit: JobsHit }) {

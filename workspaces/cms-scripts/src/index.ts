@@ -32,10 +32,7 @@ for (const simpleData of simpleDataTypes) {
       simpleData.filenameMap.get(`${locale}:${filename}`)
     );
 
-    await write(
-      `public/data/${simpleData.resourceName}/${locale}.json`,
-      data
-    );
+    await write(`public/data/${simpleData.resourceName}/${locale}.json`, data);
   }
 }
 
@@ -135,6 +132,6 @@ for (const locale of locales) {
   await write(`public/data/main-menu/${locale}.json`, mainMenu);
 }
 
-const redirects = await yaml('_data/settings/redirects.yml')
+const redirects = await yaml("_data/settings/redirects.yml");
 
 await write(`workspaces/website/redirects.json`, redirects);

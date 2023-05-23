@@ -3,33 +3,33 @@ import { defaultLocale } from "../i18n/config";
 
 export interface SEOTexts {
   home: {
-    heroText: string
-  },
+    heroText: string;
+  };
   footer: {
-    footerText: string
-  }
+    footerText: string;
+  };
   tutorials: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   events: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   jobs: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   search: {
-    search: string
-    cancel: string
-  }
+    search: string;
+    cancel: string;
+  };
   language: {
-    title: string
-    subtitle: string
-    description: string
-    callToAction: string
-  }
+    title: string;
+    subtitle: string;
+    description: string;
+    callToAction: string;
+  };
 }
 
 async function getSEO<T extends keyof SEOTexts>(
@@ -37,15 +37,17 @@ async function getSEO<T extends keyof SEOTexts>(
   event: null | WorkerGlobalScopeEventMap["fetch"],
   page: T
 ): Promise<any> {
-  return getFirst(...[locale, defaultLocale].map(
-    (value) => async () => getJSON("data/seo/" + page + "/" + value, event)
-  ));
-};
+  return getFirst(
+    ...[locale, defaultLocale].map(
+      (value) => async () => getJSON("data/seo/" + page + "/" + value, event)
+    )
+  );
+}
 
 export async function getTutorialsSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['tutorials']> {
+): Promise<SEOTexts["tutorials"]> {
   try {
     return await getSEO(locale, event, "tutorials");
   } catch (cause) {
@@ -58,7 +60,7 @@ export async function getTutorialsSEO(
 export async function getEventsSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['events']> {
+): Promise<SEOTexts["events"]> {
   try {
     return await getSEO(locale, event, "events");
   } catch (cause) {
@@ -71,7 +73,7 @@ export async function getEventsSEO(
 export async function getJobsSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['jobs']> {
+): Promise<SEOTexts["jobs"]> {
   try {
     return await getSEO(locale, event, "jobs");
   } catch (cause) {
@@ -84,7 +86,7 @@ export async function getJobsSEO(
 export async function getFooterSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['footer']> {
+): Promise<SEOTexts["footer"]> {
   try {
     return await getSEO(locale, event, "footer");
   } catch (cause) {
@@ -97,7 +99,7 @@ export async function getFooterSEO(
 export async function getHomeSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['home']> {
+): Promise<SEOTexts["home"]> {
   try {
     return await getSEO(locale, event, "home");
   } catch (cause) {
@@ -110,7 +112,7 @@ export async function getHomeSEO(
 export async function getSearchSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['search']> {
+): Promise<SEOTexts["search"]> {
   try {
     return await getSEO(locale, event, "search");
   } catch (cause) {
@@ -123,7 +125,7 @@ export async function getSearchSEO(
 export async function getLanguageCenterSEO(
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
-): Promise<SEOTexts['language']> {
+): Promise<SEOTexts["language"]> {
   try {
     return await getSEO(locale, event, "language");
   } catch (cause) {

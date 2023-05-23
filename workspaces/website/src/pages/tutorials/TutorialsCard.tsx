@@ -1,3 +1,4 @@
+import React from "react";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { HStack } from "@chakra-ui/react";

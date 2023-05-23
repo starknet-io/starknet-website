@@ -1,5 +1,6 @@
 import { ListCard } from "@ui/Card/ListCard";
 import moment from "moment";
+import React from "react";
 import { Event } from "@starknet-io/cms-data/src/events";
 
 export type EventCardProps = {

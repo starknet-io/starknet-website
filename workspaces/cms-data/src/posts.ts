@@ -35,7 +35,8 @@ export async function getPostBySlug(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/posts/" + value + "/" + slug, event)
+        (value) => async () =>
+          getJSON("data/posts/" + value + "/" + slug, event)
       ),
       async () => {
         const client = algoliasearch(
@@ -70,7 +71,6 @@ export async function getPostById(
   id: string | string[] | undefined,
   locale: string | string[],
   event: null | WorkerGlobalScopeEventMap["fetch"]
-
 ): Promise<Post> {
   try {
     return await getFirst(

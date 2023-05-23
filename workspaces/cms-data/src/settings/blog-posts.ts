@@ -5,7 +5,10 @@ export interface BlogPosts {
   readonly custom_featured_post: string;
 }
 
-export async function getBlogPosts(locale: string, event: null | WorkerGlobalScopeEventMap["fetch"]): Promise<BlogPosts> {
+export async function getBlogPosts(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<BlogPosts> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(

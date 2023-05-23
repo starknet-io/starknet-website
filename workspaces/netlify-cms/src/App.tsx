@@ -4,7 +4,7 @@ import { CMSConfig } from "@starknet-io/cms-config/src/main";
 import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
 import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/youtube";
 import CustomPreview, { CustomPreviewType } from "./CustomPreview";
-import {GitHubBackend} from "@starknet-io/netlify-cms-backend-github/src";
+import { GitHubBackend } from "@starknet-io/netlify-cms-backend-github/src";
 
 export default function App() {
   React.useEffect(() => {
@@ -36,7 +36,7 @@ export default function App() {
 
     CMS.init({
       config: {
-        ...CMSConfig as any,
+        ...(CMSConfig as any),
         backend: {
           ...CMSConfig.backend,
           branch,
