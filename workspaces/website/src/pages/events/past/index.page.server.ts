@@ -1,4 +1,4 @@
-import { DocumentProps, PageContextServer } from "src/renderer/types";
+import { PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/events/EventsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 

@@ -509,7 +509,6 @@ export default class API {
     head: string | undefined,
     state: PullRequestState,
     predicate: (pr: GitHubPull) => boolean,
-
   ) {
     const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
       `${this.originRepoURL}/deployments`,
