@@ -1,0 +1,7 @@
+id: 84d8608e-08a3-4d4e-af7a-06e7fc154c8b
+title: "A page to test "
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: home_hero
