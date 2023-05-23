@@ -3,6 +3,8 @@ import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { useWindowSize } from "./useWindowSize";
 import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
 
+const livePreviewURL = import.meta.env.VITE_LIVE_PREVIEW_URL ?? "http://localhost:3000";
+
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
   JOBS = "JOBS",
@@ -43,7 +45,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
         ref={ref}
         width="100%"
         height={height ? height - 100 : 500}
-        src={`${import.meta.env.VITE_SITE_URL}/live-preview?type=${props.type}`}
+        src={`${livePreviewURL}/live-preview?type=${props.type}`}
         title="Live preview"
         frameBorder="0"
         onLoad={() => {

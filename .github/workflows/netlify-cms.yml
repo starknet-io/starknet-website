@@ -43,7 +43,7 @@ jobs:
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
         env:
-          VITE_SITE_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
+          VITE_LIVE_PREVIEW_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
           VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
           VITE_API_BASE_URL: https://starknet-website-dev.vercel.app/api
 
