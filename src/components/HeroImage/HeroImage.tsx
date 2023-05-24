@@ -69,7 +69,7 @@ const heroStyles = {
   nodes_and_services: {
     img: "/assets/ecosystem/nodes_and_services.svg",
     gradient:
-      "linear(262.88deg, hero-gradient-nodes_and_services-a 21.62%, hero-gradient-nodes_and_services-b 100.38%);",
+      "linear(262.88deg, hero-gradient-nodes_and_services-a 21.62%, hero-gradient-nodes_and_services-b 100.38%)",
   },
 };
 
