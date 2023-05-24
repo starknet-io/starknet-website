@@ -3,15 +3,15 @@ import { CmsCollection } from "../types";
 
 export const roadmapPostsCollectionConfig = {
   crowdin: true,
-  name: "roadmapPosts",
+  name: "roadmap-posts",
   label: "Roadmap - Posts",
   label_singular: "Roadmap Post",
   identifier_field: "id",
-  folder: "_data/roadmapPosts",
+  folder: "_data/roadmap-posts",
   create: true,
   format: "yml",
   slug: "{{title}}",
-  preview_path: "/preview/roadmapPosts/{{id}}",
+  preview_path: "/preview/roadmap-posts/{{id}}",
   summary: "{{title}}",
   sortable_fields: ["published_date", "title"],
   fields: [

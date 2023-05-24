@@ -17,6 +17,8 @@ items:
                 custom_title: Documentation
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
+              - custom_internal_link: /roadmap/
+                custom_title: Roadmap
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
               - custom_title: Engineering blog
                 custom_internal_link: /posts/engineering

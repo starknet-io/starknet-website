@@ -1,13 +1,17 @@
 import { preRenderedLocales } from "@starknet-io/cms-data/src/i18n/config";
 import { notFound } from "next/navigation";
 import RoadmapPost from "./(components)/RoadmapPost";
-import { getRoadmaPostBySlug, getRoadmapPosts } from "../utils";
+import {
+  getRoadmapPostBySlug,
+  getRoadmapPosts,
+} from "workspaces/cms-data/src/roadmap";
 
 export async function generateStaticParams() {
   const params = [];
 
   for (const locale of preRenderedLocales) {
-    for (const post of getRoadmapPosts()) {
+    const roadmapPosts = await getRoadmapPosts(locale);
+    for (const post of roadmapPosts) {
       params.push({
         locale,
         slug: post.slug,
@@ -24,19 +28,11 @@ export interface Props {
   };
 }
 
-export interface MarkdownBlock {
-  readonly type: "markdown";
-  readonly body: string;
-}
-
 export default async function Page({
   params: { slug, locale },
 }: Props): Promise<JSX.Element> {
   try {
-    const roadmapPost = getRoadmaPostBySlug(slug);
-    if (!roadmapPost) {
-      throw new Error("Roadmap post not found");
-    }
+    const roadmapPost = await getRoadmapPostBySlug(slug, locale);
     return <RoadmapPost roadmapPost={roadmapPost} locale={locale} />;
   } catch (err) {
     console.log(err);
