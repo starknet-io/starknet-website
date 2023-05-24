@@ -31,7 +31,7 @@ blocks:
           custom_title: Snapshot
           custom_external_link: https://snapshot.org/#/starknet.eth
         subLabel:
-          label: View active Starknet proposals on Snapshot
+          label: View Starknet proposals on Snapshot
   - type: link_list
     listSize: lg
     heading: Community discussion
