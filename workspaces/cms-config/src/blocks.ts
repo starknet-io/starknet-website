@@ -569,6 +569,7 @@ export const blocks = [
           "learn",
           "build",
           "community",
+          "nodes_and_services",
         ],
         default: "learn",
       },
