@@ -7,7 +7,7 @@ description: "Starknet in Collaboration with The Phoenix Guild (TPG) is
 url: https://lu.ma/StarknetConnect_Kerala
 start_date: 2023-06-03T07:30:29.107Z
 end_date: 2023-06-03T10:00:29.115Z
-show_in_past_events: true
+show_in_past_events: false
 image: /assets/image-24-05-2023-at-12.28.jpeg
 location: asia
 city: Kochi
