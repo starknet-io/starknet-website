@@ -164,7 +164,7 @@ export const ListCard = (props: Props) => {
                 </Box>
               )} */}
                 {props.type_list ? (
-                  <Wrap shouldWrapChildren>
+                  <Wrap shouldWrapChildren mb="12px">
                     {props.type_list.map((tag) => (
                       <Link
                         key={tag.type}
@@ -180,7 +180,7 @@ export const ListCard = (props: Props) => {
                   </Wrap>
                 ) : (
                   props.type && (
-                    <Wrap shouldWrapChildren>
+                    <Wrap shouldWrapChildren mb="12px">
                       {props.location && (
                         <Tag variant="listCard">
                           {titleCase(props.location)}
