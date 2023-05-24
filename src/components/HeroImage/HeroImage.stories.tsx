@@ -14,7 +14,8 @@ type HeroImageProps = {
     | "bridges"
     | "dapps"
     | "build"
-    | "community";
+    | "community"
+    | "nodes_and_services";
   buttonText?: string;
   buttonUrl?: string;
 };
@@ -26,7 +27,7 @@ export default {
     title: { control: "text" },
     description: { control: "text" },
     variant: {
-      options: ["wallets", "block_explorers", "bridges", "dapps", "build", "community"],
+      options: ["wallets", "block_explorers", "bridges", "dapps", "build", "community", "nodes_and_services"],
       control: { type: "select" }
     }
   },
