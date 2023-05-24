@@ -1,0 +1,11 @@
+type: meetup
+name: event
+description: desc
+url: url
+start_date: 2023-05-24T14:05:43.439Z
+end_date: 2023-05-24T14:05:43.463Z
+show_in_past_events: true
+image: /assets/0_i4ch5-4rxxal4rkt.png
+location: africa
+city: Kragujevac
+country: Serbia
