@@ -2,8 +2,15 @@
 
 import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import { RoadmapPost } from "workspaces/cms-data/src/roadmap";
 
-export default function RoadmapsPage({ roadmapPosts, locale }: any) {
+export default function RoadmapsPage({
+  roadmapPosts,
+  locale,
+}: {
+  roadmapPosts: readonly RoadmapPost[];
+  locale: string;
+}) {
   return (
     <Box>
       <Text>Roadmap Items</Text>

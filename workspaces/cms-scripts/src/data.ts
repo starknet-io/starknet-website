@@ -33,6 +33,56 @@ export interface Post extends Meta {
   readonly timeToConsume: string;
   blocks: readonly any[];
 }
+export interface RoadmapPost extends Meta {
+  readonly id: string;
+  readonly slug: string;
+  readonly title: string;
+  readonly image: string;
+  readonly category: string;
+  readonly topic: string[];
+  readonly short_desc: string;
+  readonly post_type: string;
+  readonly post_date: string;
+  readonly published_date: string;
+  readonly toc: boolean;
+  readonly video: any;
+  readonly timeToConsume: string;
+  blocks: readonly any[];
+}
+
+function calculateReadingTime(text: string): string {
+  const wordsPerMinute = 200;
+  const wordsPerImage = 12;
+  const words = text.trim().split(/\s+/).length;
+  const imageCount = (text.match(/!\[\]/g) || []).length;
+  const wordsWithImages = words + imageCount * wordsPerImage;
+  const decimalMinutes = wordsWithImages / wordsPerMinute;
+
+  const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
+  return `${minutes}min`;
+}
+
+function concatenateBodies(blocks: readonly any[]): string {
+  let fullText = "";
+  blocks?.forEach((block) => {
+    if (block.body) {
+      fullText += block.body;
+    }
+  });
+  return fullText;
+}
+
+function formatDuration(duration: string): string {
+  const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+  if (!match) {
+    return "";
+  }
+  const hours = parseInt(match[1]) || 0;
+  const minutes = parseInt(match[2]) || 0;
+  const totalMinutes = hours * 60 + minutes;
+  const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : "";
+  return formattedMinutes.trim();
+}
 
 export async function fileToPost(
   locale: string,
@@ -51,39 +101,6 @@ export async function fileToPost(
   const data = await translateFile(locale, resourceName, filename);
   const slug = slugify(sourceData.title);
 
-  function formatDuration(duration: string): string {
-    const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
-    if (!match) {
-      return "";
-    }
-    const hours = parseInt(match[1]) || 0;
-    const minutes = parseInt(match[2]) || 0;
-    const totalMinutes = hours * 60 + minutes;
-    const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : "";
-    return formattedMinutes.trim();
-  }
-
-  function concatenateBodies(blocks: readonly any[]): string {
-    let fullText = "";
-    blocks?.forEach((block) => {
-      if (block.body) {
-        fullText += block.body;
-      }
-    });
-    return fullText;
-  }
-
-  function calculateReadingTime(text: string): string {
-    const wordsPerMinute = 200;
-    const wordsPerImage = 12;
-    const words = text.trim().split(/\s+/).length;
-    const imageCount = (text.match(/!\[\]/g) || []).length;
-    const wordsWithImages = words + imageCount * wordsPerImage;
-    const decimalMinutes = wordsWithImages / wordsPerMinute;
-
-    const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
-    return `${minutes}min`;
-  }
   const fullText = concatenateBodies(data.blocks);
   let timeToConsume;
   if (data.post_type === "video") {
@@ -112,7 +129,52 @@ export async function fileToPost(
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
-    featured_post: blogPosts.show_custom_featured_post && blogPosts.custom_featured_post === data.id,
+    featured_post:
+      blogPosts.show_custom_featured_post &&
+      blogPosts.custom_featured_post === data.id,
+    timeToConsume,
+  };
+}
+
+export async function fileToRoadmapPost(
+  locale: string,
+  filename: string
+): Promise<RoadmapPost> {
+  const resourceName = "roadmap-posts";
+
+  const sourceFilepath = path.join("_data", resourceName, filename);
+  const sourceData = await yaml(sourceFilepath);
+  const data = await translateFile(locale, resourceName, filename);
+  const slug = slugify(sourceData.title);
+
+  const fullText = concatenateBodies(data.blocks);
+  let timeToConsume;
+  if (data.post_type === "video") {
+    timeToConsume = `${formatDuration(
+      data.video?.data?.contentDetails?.duration || ""
+    )} watch`;
+  } else {
+    timeToConsume = `${calculateReadingTime(fullText)} read`;
+  }
+
+  return {
+    id: data.id,
+    slug,
+    title: data.title,
+    category: data.category,
+    post_type: data.post_type,
+    post_date: data.post_date,
+    published_date: data.published_date,
+    toc: data.toc,
+    video: data.video,
+    topic: data.topic ?? [],
+    short_desc: data.short_desc,
+    image: data.image,
+    blocks: data.blocks ?? [],
+    locale,
+    objectID: `${resourceName}:${locale}:${filename}`,
+    sourceFilepath,
+    gitlog: await gitlog(sourceFilepath),
     timeToConsume,
   };
 }
@@ -232,6 +294,10 @@ interface PostsData extends SimpleData<Post> {
   readonly idMap: Map<string, Post>;
 }
 
+interface RoadmapPostsData extends SimpleData<RoadmapPost> {
+  readonly idMap: Map<string, RoadmapPost>;
+}
+
 export async function getPosts(): Promise<PostsData> {
   const resourceName = "posts";
   const filenameMap = new Map<string, Post>();
@@ -241,6 +307,24 @@ export async function getPosts(): Promise<PostsData> {
   for (const locale of locales) {
     for (const filename of filenames) {
       const data = await fileToPost(locale, filename);
+
+      idMap.set(`${locale}:${data.id}`, data);
+      filenameMap.set(`${locale}:${filename}`, data);
+    }
+  }
+
+  return { filenameMap, filenames, idMap, resourceName };
+}
+
+export async function getRoadmapPosts(): Promise<RoadmapPostsData> {
+  const resourceName = "roadmap-posts";
+  const filenameMap = new Map<string, RoadmapPost>();
+  const idMap = new Map<string, RoadmapPost>();
+  const filenames = await scandir(`_data/${resourceName}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = await fileToRoadmapPost(locale, filename);
 
       idMap.set(`${locale}:${data.id}`, data);
       filenameMap.set(`${locale}:${filename}`, data);

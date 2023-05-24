@@ -9,6 +9,7 @@ import { MainMenu } from "./main-menu";
 import {
   getPages,
   getPosts,
+  getRoadmapPosts,
   getSimpleData,
   getSimpleFiles,
   handleLink,
@@ -83,6 +84,7 @@ for (const simpleFile of simpleFiles) {
 }
 
 const posts = await getPosts();
+const roadmapPosts = await getRoadmapPosts();
 const pages = await getPages();
 
 updateBlocks(pages, posts);
@@ -94,6 +96,17 @@ for (const locale of locales) {
 for (const data of posts.filenameMap.values()) {
   await write(`_crowdin/data/posts/${data.locale}/${data.slug}.json`, data);
   await write(`_crowdin/data/posts/${data.locale}/${data.id}.json`, data);
+}
+
+for (const locale of locales) {
+  await fs.mkdir(`_crowdin/data/roadmap-posts/${locale}`, { recursive: true });
+}
+
+for (const data of roadmapPosts.filenameMap.values()) {
+  await write(
+    `_crowdin/data/roadmap-posts/${data.locale}/${data.slug}.json`,
+    data
+  );
 }
 
 for (const locale of locales) {
