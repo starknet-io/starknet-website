@@ -55,9 +55,6 @@ blocks:
     heading: Further reading
     blocks:
       - link:
-          hasIcon: true
-          custom_title: Delegation Agreement
-      - link:
           custom_title: "Starknet’s governance: First phase"
           custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
           hasIcon: true
@@ -81,3 +78,6 @@ blocks:
           custom_title: "Part 3: Starknet Token Design"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
           hasIcon: true
+      - link:
+          hasIcon: true
+          custom_title: Suggested Delegation Agreement
