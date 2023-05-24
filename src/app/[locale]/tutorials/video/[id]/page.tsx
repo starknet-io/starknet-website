@@ -3,7 +3,8 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Breadcrumb,
-  Box
+  Box,
+  Flex
 } from "@chakra-ui/react";
 import Link from "next/link";
 import axios from 'axios';
@@ -98,26 +99,27 @@ function TutorialPage({ params }: AutoProps): JSX.Element | null {
       <Box width="100%" height={{base: "250px", sm: "350px", md: "500px", lg: "650px"}}>
         <iframe width="100%" height="100%" src={embedUrl} frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </Box>
-      <Box mb="4" mt="4">
+      <Flex mb="4" mt="4" direction="row">
         <GridCard.Content
           title={''}
           author={tutorial.author}
           date={date}
           difficulty={tutorial.difficulty}
+          direction="row"
         />
-      </Box>
-      <Box mb="4">
-        {Array.isArray(tutorial.tags) &&
-        tutorial.tags.map((tag, i) => {
-          // only show max 2 tags
-          if (i > 1) return null;
-          return (
-            <Tag key={i} variant="listCard">
-              {tag}
-            </Tag>
-          );
-        })}
-      </Box>
+        <Flex height="40px" ml="24px">
+          {Array.isArray(tutorial.tags) &&
+          tutorial.tags.map((tag, i) => {
+            // only show max 2 tags
+            if (i > 1) return null;
+            return (
+              <Tag key={i} variant="listCard">
+                {tag}
+              </Tag>
+            );
+          })}
+        </Flex>
+      </Flex>
     </div>}/>;
 }
 

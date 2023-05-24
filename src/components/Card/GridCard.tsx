@@ -1,4 +1,5 @@
 "use client";
+import { ResponsiveValue } from '@chakra-ui/styled-system';
 import { useRef, useEffect, useState, ReactNode, forwardRef } from "react";
 // toDo rebuild this card in to a generalized grid card
 import {
@@ -24,6 +25,8 @@ type RootProps = {
   href: string;
   newTab?: boolean;
 };
+
+type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
 
 const Root = ({ children, href, newTab }: RootProps) => {
   return (
@@ -119,13 +122,14 @@ type ContentProps = {
   date?: string;
   author?: string;
   difficulty?: string;
+  direction?: string;
 };
 
-const Content = ({ title, date, author, difficulty }: ContentProps) => {
+const Content = ({ title, date, author, difficulty, direction = "column" }: ContentProps) => {
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
-    <Flex gap="3" direction="column" flex={1} w="full">
+    <Flex gap="3" direction={direction as ResponsiveValue<FlexDirection>} flex={direction === "column" ? 1 : "initial"} w={direction === "column" ? "full" : "auto"}>
       <Text
         color="heading-navy-fg"
         fontSize="18px"
