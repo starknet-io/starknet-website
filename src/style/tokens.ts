@@ -151,8 +151,8 @@ export const tokens = {
       "hero-gradient-developer-b": "#FDFAA9",
       "hero-gradient-learn-a": "#FFDAD6",
       "hero-gradient-learn-b": "#B6C6FF",
-      "hero-gradient-nodes_and_services-a": "#F7E9E8",
-      "hero-gradient-nodes_and_services-b": "#CDCEE7",
+      "hero-gradient-nodes-and-services-a": "#F7E9E8",
+      "hero-gradient-nodes-and-services-b": "#CDCEE7",
       "hero-subtitle-fg": "#313131",
       "btn-outline-hero-bg": "transparent",
       "btn-outline-hero-fg": "#0C0C4F",
@@ -339,8 +339,8 @@ export const tokens = {
       "hero-gradient-developer-b": "#171B31",
       "hero-gradient-learn-a": "#213033",
       "hero-gradient-learn-b": "#171B31",
-      "hero-gradient-nodes_and_services-a": "#664E79",
-      "hero-gradient-nodes_and_services-b": "#1A1628",
+      "hero-gradient-nodes-and-services-a": "#664E79",
+      "hero-gradient-nodes-and-services-b": "#1A1628",
       "hero-subtitle-fg": "#CCCCCC",
       "btn-outline-hero-bg": "transparent",
       "btn-outline-hero-fg": "#ffffff",
@@ -974,13 +974,13 @@ export const semanticTokens = {
       default: tokens.colors.light["hero-gradient-learn-b"],
       _dark: tokens.colors.dark["hero-gradient-learn-b"],
     },
-    "hero-gradient-nodes_and_services-a": {
-      default: tokens.colors.light["hero-gradient-nodes_and_services-a"],
-      _dark: tokens.colors.dark["hero-gradient-nodes_and_services-a"],
+    "hero-gradient-nodes-and-services-a": {
+      default: tokens.colors.light["hero-gradient-nodes-and-services-a"],
+      _dark: tokens.colors.dark["hero-gradient-nodes-and-services-a"],
     },
-    "hero-gradient-nodes_and_services-b": {
-      default: tokens.colors.light["hero-gradient-nodes_and_services-b"],
-      _dark: tokens.colors.dark["hero-gradient-nodes_and_services-b"],
+    "hero-gradient-nodes-and-services-b": {
+      default: tokens.colors.light["hero-gradient-nodes-and-services-b"],
+      _dark: tokens.colors.dark["hero-gradient-nodes-and-services-b"],
     },
     "hero-subtitle-fg": {
       default: tokens.colors.light["hero-subtitle-fg"],
