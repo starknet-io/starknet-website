@@ -37,10 +37,10 @@ blocks:
     heading: Community discussion
     blocks:
       - link:
-          custom_title: https://community.starknet.io/c/governance/15
-          custom_external_link: Community forum
+          custom_title: Community forum
+          custom_external_link: https://community.starknet.io/c/governance/15
         subLabel:
-          label: Starknet governance discussion on Discourse
+          label: Starknet governance discussion
   - type: link_list
     listSize: lg
     heading: "Delegate discovery "
