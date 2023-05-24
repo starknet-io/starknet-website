@@ -55,14 +55,19 @@ blocks:
     heading: Further reading
     blocks:
       - link:
+          hasIcon: true
+          custom_title: Delegation Agreement
+      - link:
           custom_title: "Starknet’s governance: First phase"
           custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
+          hasIcon: true
       - link:
           custom_title: Starknet token is deployed on Ethereum
           custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
       - link:
           custom_title: Welcome to the world, Starknet foundation!
           custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
+          hasIcon: true
       - link:
           custom_title: "Introducing: The StarkNet Foundation"
           custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
@@ -75,3 +80,4 @@ blocks:
       - link:
           custom_title: "Part 3: Starknet Token Design"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
+          hasIcon: true
