@@ -22,14 +22,15 @@ import { titleCase } from "src/utils/utils";
 type RootProps = {
   children: ReactNode;
   href: string;
+  newTab?: boolean;
 };
 
-const Root = ({ children, href }: RootProps) => {
+const Root = ({ children, href, newTab }: RootProps) => {
   return (
     <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
       <Box
         as="a"
-        target="_blank"
+        {...newTab && {target: "_blank"}}
         href={href}
         _hover={{ textDecor: "none" }}
         role="group"

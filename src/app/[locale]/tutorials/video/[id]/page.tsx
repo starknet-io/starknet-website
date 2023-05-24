@@ -1,14 +1,36 @@
 "use client";
+import {
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Breadcrumb,
+  Box
+} from "@chakra-ui/react";
+import Link from "next/link";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
-import {
-  Box
-} from "src/libs/chakra-ui";
 import * as GridCard from "@ui/Card/GridCard";
 import moment from "moment";
+
+export interface AutoProps {
+  readonly params: {
+    readonly locale: string;
+  };
+}
+
+export interface Props extends AutoProps {
+  readonly env: {
+    readonly ALGOLIA_INDEX: string;
+    readonly ALGOLIA_APP_ID: string;
+    readonly ALGOLIA_SEARCH_API_KEY: string;
+  };
+  readonly seo: {
+    readonly title: string;
+    readonly subtitle: string;
+  };
+}
 interface Tutorial {
   id: string;
   title: string;
@@ -19,7 +41,7 @@ interface Tutorial {
   published_at: string;
 }
 
-const TutorialPage: React.FC = () => {
+export function TutorialPage({ params, env, seo }: Props): JSX.Element | null {
   const [tutorial, setTutorial] = useState<Tutorial | null>(null);
   const pathname = usePathname()!;
   
@@ -44,6 +66,44 @@ const TutorialPage: React.FC = () => {
   const date = moment(tutorial.published_at).format("MMM DD, YYYY");
   return <PageLayout
     sectionHeaderTitle={tutorial.title}
+    breadcrumbs={
+      <Breadcrumb separator="/">
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            as={Link}
+            href={`/${params.locale}`}
+            fontSize="sm"
+            noOfLines={1}
+          >
+            Home
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            as={Link}
+            href={`/${params.locale}/developers`}
+            fontSize="sm"
+            noOfLines={1}
+          >
+            Developers
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            as={Link}
+            href={`/${params.locale}/tutorials`}
+            fontSize="sm"
+            noOfLines={1}
+          >
+            Tutorials
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink fontSize="sm">{tutorial.title}</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+    }
     main={<div>
       <Box width="100%" height={{base: "250px", sm: "350px", md: "500px", lg: "650px"}}>
         <iframe width="100%" height="100%" src={embedUrl} frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
