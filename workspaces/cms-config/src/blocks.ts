@@ -606,6 +606,7 @@ export const blocks = [
         label: "List Size",
         widget: "select",
         options: ["sm", "md", "lg"],
+        required: false,
       },
       {
         name: "listGap",

@@ -151,6 +151,7 @@ export const eventsCollectionConfig = {
       label: "Show in Past Events (after it ends)",
       widget: "boolean",
       default: true,
+      required: false,
     },
     {
       name: "image",
