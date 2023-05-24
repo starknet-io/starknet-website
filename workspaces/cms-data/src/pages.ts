@@ -130,7 +130,8 @@ export interface HeroBlock {
     | "dapps"
     | "learn"
     | "build"
-    | "community";
+    | "community"
+    | "nodes_and_services";
   readonly buttonText?: string;
   readonly buttonUrl?: string;
 }
