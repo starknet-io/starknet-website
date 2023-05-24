@@ -20,17 +20,6 @@ export interface AutoProps {
   };
 }
 
-export interface Props extends AutoProps {
-  readonly env: {
-    readonly ALGOLIA_INDEX: string;
-    readonly ALGOLIA_APP_ID: string;
-    readonly ALGOLIA_SEARCH_API_KEY: string;
-  };
-  readonly seo: {
-    readonly title: string;
-    readonly subtitle: string;
-  };
-}
 interface Tutorial {
   id: string;
   title: string;
@@ -42,7 +31,7 @@ interface Tutorial {
 }
 
 
-function TutorialPage({ params, env, seo }: Props): JSX.Element | null {
+function TutorialPage({ params }: AutoProps): JSX.Element | null {
   const [tutorial, setTutorial] = useState<Tutorial | null>(null);
   const pathname = usePathname()!;
   
