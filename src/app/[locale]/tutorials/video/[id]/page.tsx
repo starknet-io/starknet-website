@@ -41,7 +41,8 @@ interface Tutorial {
   published_at: string;
 }
 
-export function TutorialPage({ params, env, seo }: Props): JSX.Element | null {
+
+function TutorialPage({ params, env, seo }: Props): JSX.Element | null {
   const [tutorial, setTutorial] = useState<Tutorial | null>(null);
   const pathname = usePathname()!;
   
