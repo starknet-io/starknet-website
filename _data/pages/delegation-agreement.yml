@@ -6,7 +6,7 @@ page_last_updated: true
 blocks:
   - type: markdown
     body: >-
-      ## **Tokenholder Delegation Agreement**
+      ## **Delegation Agreement**
 
 
       **By delegating “Governance Capabilities” (as defined below) to \[Name/Handle of Delegate] (“Delegate”) you are consenting to be bound by and become a party to this agreement as the “Tokenholder.”**
@@ -36,14 +36,10 @@ blocks:
       1. ##### Delegation. 
 
          1. By making a valid token delegation in accordance with the standard practices and procedures that pertains to a certain number of Tokens (the "Delegated Portion"), the Tokenholder acknowledges and agrees to be bound by the terms of this agreement. The date of this delegation transaction shall be the “Effective Date” of this agreement. 
-
-
          2. Tokenholder will not exercise any influence or control over the Tokens or instruct, suggest to, or otherwise imply to Delegate how to use the Governance Capabilities associated with the Delegated Portion during the Term. During the Term, Delegate shall possess and shall be entitled to exercise in their sole and absolute discretion, with respect to the voting of any and all Tokens, as well as the use of the Tokens to make a proposal or exercise any other Governance Capabilities at any time covered by this Agreement. All decisions and actions by Delegate, pursuant to this Agreement shall be based on their independent judgment. 
       2. Participation. 
 
          1. Promptly following the Effective Date, Delegate shall use the Delegated Portion to participate in Protocol governance matters in a manner that it reasonably deems to be in the best interest of the Protocol.  Delegate will not seek to unduly manipulate any outcome when exercising Governance Capabilities. 
-
-
          2. Delegate shall use reasonable care in conducting appropriate due diligence, such as monitoring and participating in community discussions regarding changes to the Protocol and/or research and review code related to certain proposed changes to the Protocol in the course of such participation. 
          3. Delegate will not accept any payment or other value to exercise Governance Capabilities in any way Delegate would not otherwise exercise them. 
          4. If Delegate will substantially rely on others to engage in Protocol governance, Delegate shall inform Tokenholder which team members will engage in Protocol governance matters on its behalf, if any, and shall provide reasonable notice to Tokenholder of any material changes to this team. 
@@ -56,23 +52,15 @@ blocks:
       4. Confidentiality; Communications; Proprietary Rights. 
 
          1. Delegate shall not make any public statements regarding this Agreement, or use Tokenholder’s name or logo, without the prior written consent of Tokenholder, unless required by applicable law or for audit or tax purposes, in which case, Delegate shall, before such disclosure, notify Tokenholder of such requirements, to the extent legally permissible, to allow Tokenholder to seek a protective order or other remedy and reasonably assist Tokenholder therewith; provided, however, that either party may disclose publicly that the Delegated Portion has been delegated to Delegate. 
-
-
          2. Nothing in this Agreement shall be construed to create a license of intellectual property or other proprietary rights from one party to the other. Each party shall retain all right, title, and interest in and to its intellectual property and all of its financial, business, legal, and technical information that by the nature of such information would be understood by a reasonable person to be proprietary or confidential. 
       5. Term and Termination. 
 
          1. This Agreement will commence on the Effective Date and continue until Tokenholder makes a valid removal of the delegation in accordance with standard practices and procedures and as recognized by the Protocol as valid. Notwithstanding the foregoing, Sections 3, 4, 7, and 8 shall survive the termination of this Agreement.
-
-
          2. Delegate may terminate this Agreement for any reason or no reason by providing seven (7) calendar day’s written notice to Tokenholder. 
-
-
          3. Following the termination of this Agreement, Tokenholder will revoke the Delegated Portion in full. In such case, Delegate shall provide any assistance reasonably requested by Tokenholder for the purpose of revoking and returning the Delegated Portion and terminating this Agreement. 
       6. Entire Agreement; Amendment; Assignment; Severability. 
 
          1. This Agreement is the final, complete, and entire agreement of the parties. There are no other promises or conditions in any other agreement, oral or written. This Agreement supersedes any prior written or oral agreements between the parties. 
-
-
          2. The Agreement may only be modified or amended if the amendment is made in writing and is signed by both parties. 
          3. Neither this Agreement nor any of the rights, interests, or obligations hereunder shall be assigned by Delegate without the prior written consent of Tokenholder. Subject to the preceding sentence, this Agreement will be binding on, inure to the benefit of, and be enforceable by the parties and their respective successors and assigns.  
          4. If any provision of this Agreement is found by a proper authority to be unenforceable or invalid such unenforceability or invalidity shall not render this Agreement unenforceable or invalid as a whole and in such event, such provision shall be changed and interpreted so as to best accomplish the objectives of such unenforceable or invalid provision within the limits of applicable law or applicable court decisions. 
