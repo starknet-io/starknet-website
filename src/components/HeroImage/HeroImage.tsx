@@ -28,6 +28,7 @@ type Props = {
     | "nodes_and_services";
   buttonText?: string;
   buttonUrl?: string;
+  leftBoxMaxWidth?: number
 };
 
 const heroStyles = {
@@ -78,7 +79,8 @@ export const HeroImage = ({
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
   variant = "dapps",
   buttonText,
-  buttonUrl
+  buttonUrl,
+  leftBoxMaxWidth,
 }: Props) => {
   return (
     <Box
@@ -121,7 +123,7 @@ export const HeroImage = ({
                 <Stack
                   // bg="red"
                   // spacing={{ base: "4", md: "3" }}
-                  maxW={{ md: "xl", lg: "md", xl: "xl" }}
+                  maxW={leftBoxMaxWidth ?? { md: "xl", lg: "md", xl: "xl" }}
                 >
                   <Box>
                     <svg
