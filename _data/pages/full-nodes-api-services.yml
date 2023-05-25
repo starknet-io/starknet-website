@@ -1,59 +1,55 @@
 id: 9308fd57-e090-4ca9-9581-d9aeb8a3187c
 title: Full-nodes & API services
-template: content
+template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
 page_last_updated: true
 blocks:
-  - type: link_list
-    heading: Full-nodes
-    listSize: lg
-    listGap: sm
-    blocks:
-      - link:
-          hasIcon: false
-          custom_title: Pathfinder
-          custom_external_link: https://github.com/eqlabs/pathfinder
-        subLabel:
-          label: a Starknet full-node written in Rust by Equilibrium
-      - link:
-          hasIcon: false
-          custom_title: Juno
-          custom_external_link: https://github.com/NethermindEth/juno
-        subLabel:
-          label: a Starknet full-node written in go-lang by Nethermind
-      - link:
-          hasIcon: false
-          custom_title: Papyrus
-          custom_external_link: https://github.com/starkware-libs/papyrus
-        subLabel:
-          label: a Starknet full-node written in Rust by StarkWare
-  - type: link_list
-    heading: API services
-    listSize: lg
-    listGap: sm
-    blocks:
-      - link:
-          hasIcon: false
-          custom_title: Infura
-          custom_external_link: https://www.infura.io/networks/ethereum/starknet
-        subLabel:
-          label: API service for Starknet
-      - link:
-          hasIcon: false
-          custom_title: Chainstack
-          custom_external_link: https://chainstack.com/build-better-with-starknet/
-        subLabel:
-          label: API service for Starknet
-      - link:
-          hasIcon: false
-          custom_title: Alchemy
-          custom_external_link: https://www.alchemy.com/starknet
-        subLabel:
-          label: API service for Starknet
-      - link:
-          hasIcon: false
-          custom_title: Lava Protocol
-          custom_external_link: https://www.lavanet.xyz
-        subLabel:
-          label: Lava is an open-source protocol for reliable access to RPC data
+  - type: hero
+    variant: nodes_and_services
+    title: Full-nodes & API services
+    description: Use APIs to connect to other services, run full nodes and interact
+      with on-chain data.
+  - type: card_list
+    title: Full-nodes
+    card_list_items:
+      - link_url: https://github.com/eqlabs/pathfinder
+        website_url: https://github.com/eqlabs/pathfinder
+        title: Pathfinder
+        description: Starknet full-node written in Rust by Equilibrium
+        image: /assets/logo_pathfinder_80x80.png
+      - link_url: https://github.com/NethermindEth/juno
+        website_url: https://github.com/NethermindEth/juno
+        title: Juno
+        description: Starknet full-node written in go-lang by Nethermind
+        image: /assets/logo_juno_80x80.png
+      - link_url: https://github.com/starkware-libs/papyrus
+        website_url: https://github.com/starkware-libs/papyrus
+        title: Papyrus
+        description: Starknet full-node written in Rust by StarkWare
+        image: /assets/logo_papyrus_80x80.png
+    randomize: true
+  - type: card_list
+    title: API services
+    card_list_items:
+      - link_url: https://www.infura.io/networks/ethereum/starknet
+        website_url: https://www.infura.io/networks/ethereum/starknet
+        title: Infura
+        description: API service for Starknet
+        image: /assets/logo_infura_80x80.png
+      - description: API service for Starknet
+        title: Chainstack
+        link_url: https://chainstack.com/build-better-with-starknet
+        website_url: https://chainstack.com/build-better-with-starknet
+        image: /assets/logo_chainstack_80x80.png
+      - link_url: https://www.alchemy.com/starknet
+        website_url: https://www.alchemy.com/starknet
+        title: Alchemy
+        description: API service for Starknet
+        image: /assets/logo_alchemy_80x80.png
+      - link_url: https://www.lavanet.xyz
+        website_url: https://www.lavanet.xyz
+        title: Lava Protocol
+        description: Lava is an open-source protocol for reliable access to RPC data
+        image: /assets/logo_lava_80x80.png
+    randomize: true

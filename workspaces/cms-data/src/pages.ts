@@ -58,6 +58,30 @@ export interface ImageIconLinkCardBlock {
     | "grey";
 }
 
+interface Icon {
+  icon: string;
+  linkUrl: string;
+}
+
+interface ListCardItems {
+  title: string;
+  description: string;
+  linkUrl: string;
+  imageUrl: string;
+  icons: Icon;
+  website_url: string;
+  twitter: string;
+  image: string;
+}
+export interface ListCardItemsBlock {
+  readonly type: "card_list";
+  readonly title: string;
+  readonly card_list_items: ListCardItems[];
+  readonly noOfItems: number;
+  readonly description: string;
+  randomize?: boolean;
+}
+
 export interface LinkListItem {
   readonly type: "link_list_item";
   readonly link?: {
@@ -107,7 +131,8 @@ export interface HeroBlock {
     | "dapps"
     | "learn"
     | "build"
-    | "community";
+    | "community"
+    | "nodes_and_services";
   readonly buttonText?: string;
   readonly buttonUrl?: string;
 }
@@ -150,7 +175,8 @@ export type Block =
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock
-  | OrderedBlock;
+  | OrderedBlock
+  | ListCardItemsBlock;
 
 export interface Container {
   readonly type: "container";

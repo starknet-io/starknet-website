@@ -24,7 +24,8 @@ type Props = {
     | "dapps"
     | "learn"
     | "build"
-    | "community";
+    | "community"
+    | "nodes_and_services";
   buttonText?: string;
   buttonUrl?: string;
 };
@@ -64,6 +65,11 @@ const heroStyles = {
     img: "/assets/ecosystem/community.svg",
     gradient:
       "linear(258.76deg, hero-gradient-community-a 3.96%, hero-gradient-community-b 254.34%)",
+  },
+  nodes_and_services: {
+    img: "/assets/ecosystem/nodes_and_services.svg",
+    gradient:
+      "linear(262.88deg, hero-gradient-nodes-and-services-a 21.62%, hero-gradient-nodes-and-services-b 100.38%)",
   },
 };
 

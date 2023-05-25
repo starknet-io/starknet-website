@@ -10,23 +10,44 @@ blocks:
     title: Bridges & on-ramps
     description: Bridge tokens between Starknet and other chains or exchanges, or
       exchange tokens with fiat through on-ramp services.
-  - type: container
-    max_width: "800"
-    blocks:
-      - type: markdown
-        body: >-
-          ## What are bridges?
-
-
-          Bridges allow users to move assets between crypto ecosystems, such as blockchains or exchanges.
-  - type: bridges
-  - type: container
-    blocks:
-      - type: markdown
-        body: >-
-          ## What are fiat on-ramps?
-
-
-          Fiat on-ramps are service providers that allows for the exchange of fiat currencies for cryptocurrencies.
-    max_width: "800"
-  - type: on_ramps
+  - type: card_list
+    title: What are bridges?
+    description: Bridges allow users to move assets between crypto ecosystems, such
+      as blockchains or exchanges.
+    card_list_items:
+      - image: /assets/starkgate.jpg
+        title: StarkGate
+        description: StarkGate is the official bridge between Starknet and Ethereum.
+        link_url: https://starkgate.starknet.io
+        website_url: https://starkgate.starknet.io
+        twitter: https://twitter.com/StarkWareLtd
+      - image: /assets/layerswap.jpg
+        title: Layerswap
+        description: Layerswap allows users to move crypto between exchanges and layer 2s.
+        link_url: https://www.layerswap.io
+        website_url: https://www.layerswap.io
+        twitter: https://twitter.com/layerswap
+      - title: Orbiter Finance
+        description: "Orbiter allows users to send funds across different layer 2
+          networks. "
+        link_url: https://www.orbiter.finance
+        website_url: https://www.orbiter.finance
+        image: /assets/orbiter.jpg
+        twitter: https://twitter.com/Orbiter_Finance
+  - type: card_list
+    title: What are fiat on-ramps?
+    description: Fiat on-ramps are service providers that allows for the exchange of
+      fiat currencies for cryptocurrencies.
+    card_list_items:
+      - title: Banxa
+        description: Banxa is a fiat to crypto on and off-ramp.
+        link_url: https://banxa.com
+        website_url: https://banxa.com
+        twitter: https://twitter.com/BanxaOfficial
+        image: /assets/banxa.jpg
+      - title: Ramp
+        description: Non-custodial fiat to crypto on-ramp.
+        image: /assets/ramp.jpg
+        twitter: https://twitter.com/RampNetwork
+        link_url: https://ramp.network
+        website_url: https://ramp.network
