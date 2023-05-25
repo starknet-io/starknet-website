@@ -52,3 +52,4 @@ blocks:
         title: Lava Protocol
         description: Lava is an open-source protocol for reliable access to RPC data
         image: /assets/logo_lava_80x80.png
+    randomize: true
