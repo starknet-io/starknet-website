@@ -135,6 +135,7 @@ export interface HeroBlock {
     | "nodes_and_services";
   readonly buttonText?: string;
   readonly buttonUrl?: string;
+  readonly leftBoxMaxWidth?: number;
 }
 export interface HomeHeroBlock {
   readonly type: "home_hero";
