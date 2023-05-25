@@ -5,6 +5,7 @@ import {
   getRoadmapPostBySlug,
   getRoadmapPosts,
 } from "workspaces/cms-data/src/roadmap";
+import getBlocksDynamicData from "../../(components)/utils/getBlocksDynamicData";
 
 export async function generateStaticParams() {
   const params = [];
@@ -33,7 +34,14 @@ export default async function Page({
 }: Props): Promise<JSX.Element> {
   try {
     const roadmapPost = await getRoadmapPostBySlug(slug, locale);
-    return <RoadmapPost roadmapPost={roadmapPost} locale={locale} />;
+    const blocksDynamicData = await getBlocksDynamicData(locale);
+    return (
+      <RoadmapPost
+        roadmapPost={roadmapPost}
+        locale={locale}
+        blocksDynamicData={blocksDynamicData}
+      />
+    );
   } catch (err) {
     console.log(err);
     notFound();
