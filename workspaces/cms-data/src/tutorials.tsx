@@ -27,7 +27,6 @@ export const getTutorialById = async (id: string, locale: string) => {
   });
 
   const tutorial = searchResponse.hits[0];
-  console.log("tutorial", tutorial);
 
   if (tutorial == null) {
     throw new Error("Tutorial not found!");
