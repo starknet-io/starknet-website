@@ -8,5 +8,5 @@ blocks:
   - type: hero
     variant: block_explorers
     title: Block explorers
-    description: Explore blocks, transactions, and other metrics of Starknet.
+    description: Explore blocks, transactions, and other metrics of Starknet. 2
   - type: block_explorers
