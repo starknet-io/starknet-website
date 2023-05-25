@@ -499,6 +499,13 @@ export const blocks = [
         crowdin: true
       },
       {
+        name: "randomize",
+        label: "Randomize",
+        widget: "boolean",
+        required: false,
+        default: false,
+      },
+      {
         label: "Card list items",
         name: "card_list_items",
         widget: "list",

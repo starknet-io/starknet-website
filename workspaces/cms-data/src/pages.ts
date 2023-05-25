@@ -79,6 +79,7 @@ export interface ListCardItemsBlock {
   readonly card_list_items: ListCardItems[];
   readonly noOfItems: number;
   readonly description: string;
+  randomize?: boolean;
 }
 
 export interface LinkListItem {
