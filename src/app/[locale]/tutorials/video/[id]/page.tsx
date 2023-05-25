@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import React from "react";
 import TutorialVideoPage, { AutoProps } from "./(components)/TutorialVideoPage";
 import { getTutorialById } from "workspaces/cms-data/src/tutorials";
+import { generateGenericMetadata } from "src/utils/seo";
+
+export const generateMetadata = () => generateGenericMetadata("Tutorial Video");
 
 export default async function TutorialVideo({ params }: AutoProps) {
   const { locale, id } = params;
