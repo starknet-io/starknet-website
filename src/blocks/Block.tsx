@@ -8,11 +8,12 @@ import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
+import ListCardItems from "./ListCardItems";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { Container } from "./Container";
-import { LinkList, LinkListItem } from "./LinkList";
+import { LinkList } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
@@ -47,7 +48,7 @@ Props): JSX.Element {
       </Container>
     );
   } else if (block.type === "image_icon_link_card") {
-    return <ImageIconCard {...block} locale={locale} />;
+    return <ImageIconCard {...block} locale={locale} {...blocksDynamicData} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} />;
   } else if (block.type === "community_events") {
@@ -80,18 +81,7 @@ Props): JSX.Element {
       </BlockCards>
     );
   } else if (block.type === "link_list") {
-    return (
-      <LinkList heading={block.heading} listSize={block.listSize}>
-        {block.blocks.map((item, i) => (
-          <LinkListItem
-            key={i}
-            link={item.link}
-            subLabel={item.subLabel}
-            avatar={item.avatar}
-          />
-        ))}
-      </LinkList>
-    );
+    return <LinkList {...block} />;
   } else if (block.type === "accordion") {
     return (
       <AccordionRoot heading={block.heading}>
@@ -163,6 +153,15 @@ Props): JSX.Element {
           locale,
         }}
         blockExplorers={blocksDynamicData.blockExplorers}
+      />
+    );
+  } else if (block.type === "card_list") {
+    return (
+      <ListCardItems
+        {...block}
+        params={{
+          locale,
+        }}
       />
     );
   } else if (block.type === "bridges") {

@@ -300,6 +300,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         right="8px"
         cursor="pointer"
         onClick={() => searchBox?.click()}
+        pointerEvents="none"
         display={{ base: "none", md: "block" }}
       >
         /

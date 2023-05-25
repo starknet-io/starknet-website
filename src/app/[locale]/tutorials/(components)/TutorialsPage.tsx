@@ -28,7 +28,8 @@ import MobileFiltersButton from "../../(components)/MobileFilter/MobileFiltersBu
 import useMobileFiltersDrawer from "../../(components)/MobileFilter/useMobileFiltersDrawer";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
-import TutorialsCard, { Tutorial } from "./TutorialsCard";
+import TutorialsCard from "./TutorialsCard";
+import { Tutorial } from "workspaces/cms-data/src/tutorials";
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {

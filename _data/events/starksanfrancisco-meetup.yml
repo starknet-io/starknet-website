@@ -13,8 +13,8 @@ description: Join STARKSanFrancisco, an exciting meetup hosted by StarkWare for
 url: https://www.eventbrite.com/e/starksanfrancisco-meetup-tickets-635818258527
 start_date: 2023-05-23T14:00:47.427Z
 end_date: 2023-05-23T17:00:47.434Z
-show_in_past_events: true
-image: /assets/screenshot-2023-05-17-at-11.48.33.png
+show_in_past_events: false
+image: /assets/starksan.jpg
 location: north_america
 city: "San Francisco "
 country: "California "

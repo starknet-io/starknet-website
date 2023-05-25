@@ -109,6 +109,7 @@ export const tokens = {
       "card-link-hover-fg": "#5C94FF",
       "hero-home-bg": "#E5ECED",
       "hero-home-text-fg": "#313131",
+      "community-card-border-color": "#E2E8F0",
       "card-orange-bg": "#FDF8F8",
       "card-orange-br": "#F9F0F0",
       "card-blue-bg": "#F6FAFC",
@@ -151,6 +152,8 @@ export const tokens = {
       "hero-gradient-developer-b": "#FDFAA9",
       "hero-gradient-learn-a": "#FFDAD6",
       "hero-gradient-learn-b": "#B6C6FF",
+      "hero-gradient-nodes-and-services-a": "#F7E9E8",
+      "hero-gradient-nodes-and-services-b": "#CDCEE7",
       "hero-subtitle-fg": "#313131",
       "btn-outline-hero-bg": "transparent",
       "btn-outline-hero-fg": "#0C0C4F",
@@ -278,6 +281,7 @@ export const tokens = {
       "list-card-lg-title-fg": "#FFFFFF",
       "list-card-sm-title-fg": "#CCCCCC",
       "list-card-sm-title-link-fg": "#AFCAFF",
+      "community-card-border-color": "#313131",
       "list-card-lg-desc-fg": "#CCCCCC",
       "list-card-img-bg": "#000",
       "list-card-icon-fg": "#FFFFFF",
@@ -337,6 +341,8 @@ export const tokens = {
       "hero-gradient-developer-b": "#171B31",
       "hero-gradient-learn-a": "#213033",
       "hero-gradient-learn-b": "#171B31",
+      "hero-gradient-nodes-and-services-a": "#664E79",
+      "hero-gradient-nodes-and-services-b": "#1A1628",
       "hero-subtitle-fg": "#CCCCCC",
       "btn-outline-hero-bg": "transparent",
       "btn-outline-hero-fg": "#ffffff",
@@ -969,6 +975,14 @@ export const semanticTokens = {
     "hero-gradient-learn-b": {
       default: tokens.colors.light["hero-gradient-learn-b"],
       _dark: tokens.colors.dark["hero-gradient-learn-b"],
+    },
+    "hero-gradient-nodes-and-services-a": {
+      default: tokens.colors.light["hero-gradient-nodes-and-services-a"],
+      _dark: tokens.colors.dark["hero-gradient-nodes-and-services-a"],
+    },
+    "hero-gradient-nodes-and-services-b": {
+      default: tokens.colors.light["hero-gradient-nodes-and-services-b"],
+      _dark: tokens.colors.dark["hero-gradient-nodes-and-services-b"],
     },
     "hero-subtitle-fg": {
       default: tokens.colors.light["hero-subtitle-fg"],
