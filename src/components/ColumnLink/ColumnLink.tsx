@@ -18,7 +18,7 @@ export const ColumnLink = ({ active, ...props }: Props) => {
   return (
     <Button
       {...props}
-      variant="solid"
+      variant="icon"
       as={Link}
       leftIcon={
         <Icon
@@ -38,7 +38,7 @@ export const ColumnLink = ({ active, ...props }: Props) => {
       fontWeight="semibold"
       justifyContent="flex-start"
       bg="columnlink-bg"
-      color={active ? "columnlink-active-fg" : "columnlink-fg"}
+      color={active ? "columnlink-active-fg !important" : "columnlink-fg"}
       _hover={{ bg: "columnlink-hover-bg", color: "columnlink-hover-fg" }}
       _active={{ bg: "columnlink-active-bg", color: "columnlink-active-fg" }}
       _focus={{
