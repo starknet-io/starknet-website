@@ -8,6 +8,8 @@ blocks:
   - type: hero
     variant: nodes_and_services
     title: Full-nodes & API services
+    description: Use APIs to connect to other services, run full nodes and interact
+      with on-chain data.
   - type: card_list
     title: Full-nodes
     card_list_items:
