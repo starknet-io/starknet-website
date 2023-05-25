@@ -28,6 +28,7 @@ blocks:
         title: Papyrus
         description: Starknet full-node written in Rust by StarkWare
         image: /assets/logo_papyrus_80x80.png
+    randomize: true
   - type: card_list
     title: API services
     card_list_items:
