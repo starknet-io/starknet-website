@@ -11,6 +11,7 @@ blocks:
   - type: link_list
     heading: Libraries
     listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -45,6 +46,7 @@ blocks:
   - type: link_list
     heading: Development frameworks
     listSize: lg
+    randomize: true
     blocks:
       - link:
           custom_title: "Protostar "
@@ -67,6 +69,7 @@ blocks:
   - type: link_list
     heading: "Editor plugins "
     listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -89,6 +92,7 @@ blocks:
   - type: link_list
     heading: Templates
     listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -111,6 +115,7 @@ blocks:
   - type: link_list
     heading: "General "
     listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -185,6 +190,7 @@ blocks:
   - type: link_list
     heading: Full-nodes & API services
     listSize: lg
+    randomize: true
     blocks:
       - link:
           hasIcon: false

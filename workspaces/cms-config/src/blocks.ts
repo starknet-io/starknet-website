@@ -428,6 +428,13 @@ export const blocks = [
         required: false,
       },
       {
+        name: "randomize",
+        label: "Randomize",
+        widget: "boolean",
+        required: false,
+        default: false,
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",

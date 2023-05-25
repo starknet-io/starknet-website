@@ -1,6 +1,8 @@
+"use client";
 import { Box, Flex, Container } from "src/libs/chakra-ui";
 import { ListCard } from "@ui/Card/ListCard";
 import { Dapp } from "@starknet-io/cms-data/src/dapps";
+import { getShuffledArray } from "src/utils/getShuffledArray";
 interface Props extends LocaleProps {
   noOfItems?: number;
   readonly dapps: readonly Dapp[];
@@ -8,15 +10,15 @@ interface Props extends LocaleProps {
 
 export default function BlockDapps({
   noOfItems,
-  // params: { locale },
   dapps = [],
 }: Props): JSX.Element {
+  const randomizedDapps = getShuffledArray(dapps).slice(0, noOfItems);
+
   return (
     <Box>
       <Container maxW="1062px">
         <Flex gap={4} direction="column" flex={1}>
-          {dapps.map((dapp, i) => {
-            if (noOfItems && i <= noOfItems) return null;
+          {randomizedDapps.map((dapp, i) => {
             return (
               <ListCard
                 href={dapp.website_url}
