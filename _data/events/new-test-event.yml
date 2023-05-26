@@ -1,0 +1,11 @@
+type: conference
+name: New test event
+description: Here is a new event
+url: https://www.eventbrite.com/e/starknet-meetup-in-zurich-tickets-606466867727
+start_date: 2023-05-26T09:19:06.926Z
+end_date: 2023-05-26T09:19:06.935Z
+show_in_past_events: true
+image: /assets/10_-first-steps-to-contribute-to-kakarot-zkevm.png
+location: africa
+city: New city
+country: Nigeria
