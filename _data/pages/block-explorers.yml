@@ -8,7 +8,7 @@ blocks:
   - type: hero
     variant: block_explorers
     title: Block explorers
-    description: Explore blocks, transactions, and other metrics of Starknet.
+    description: Explore blocks, transactions, and other metrics of Starknet.1
   - type: card_list
     card_list_items:
       - title: Starkscan
