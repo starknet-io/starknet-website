@@ -23,6 +23,23 @@ type CustomPreviewProps = {
   getAsset: PreviewTemplateComponentProps["getAsset"];
 };
 
+async function toDataURL(src: string) {
+  return new Promise((resolve) => {
+    var image = new Image();
+    image.crossOrigin = "Anonymous";
+    image.onload = function () {
+      var canvas = document.createElement("canvas");
+      var context = canvas.getContext("2d")!;
+      canvas.height = image.naturalHeight;
+      canvas.width = image.naturalWidth;
+      context.drawImage(image, 0, 0);
+      var dataURL = canvas.toDataURL("image/jpeg");
+      resolve(dataURL);
+    };
+    image.src = src;
+  });
+}
+
 export default function CustomPreview(props: CustomPreviewProps) {
   const ref = useRef<HTMLIFrameElement>(null);
   const [refresh, setRefresh] = React.useState(false);
@@ -33,26 +50,32 @@ export default function CustomPreview(props: CustomPreviewProps) {
     let data = entry.getIn(["data"]).toJS();
     var image = entry.getIn(["data", "image"]);
     var asset = props.getAsset(image);
+
     console.log("data", data);
     console.log("image", image);
     console.log("asset", asset);
-    if (image && asset?.url) {
-      data.image = asset.url;
-    }
-    // if (data.image) {
-    //   data.image = data.image.replace("public", "");
-    // }
-    if (props.type === CustomPreviewType.TUTORIALS) {
-      data.tags = convertStringTagsToArray(data.tags);
-    }
 
-    ref.current?.contentWindow?.postMessage(
-      {
-        type: props.type,
-        payload: data,
-      },
-      "*"
-    );
+    void (async () => {
+      if (image && asset?.url) {
+        if (asset.fileObj) {
+          data.image = await toDataURL(URL.createObjectURL(asset.fileObj));
+        } else {
+          data.image = image;
+        }
+      }
+
+      if (props.type === CustomPreviewType.TUTORIALS) {
+        data.tags = convertStringTagsToArray(data.tags);
+      }
+
+      ref.current?.contentWindow?.postMessage(
+        {
+          type: props.type,
+          payload: data,
+        },
+        "*"
+      );
+    })();
   }, [props, refresh]);
 
   return (
