@@ -8,7 +8,7 @@ blocks:
   - type: hero
     variant: bridges
     title: Bridges & on-ramps
-    description: Bridge tokens between Starknet and other chains or exchanges, or
+    description: 1 Bridge tokens between Starknet and other chains or exchanges, or
       exchange tokens with fiat through on-ramp services.
   - type: card_list
     title: What are bridges?
