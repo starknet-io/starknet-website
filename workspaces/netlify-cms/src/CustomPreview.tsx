@@ -20,6 +20,7 @@ export enum CustomPreviewType {
 type CustomPreviewProps = {
   entry: PreviewTemplateComponentProps["entry"];
   type: CustomPreviewType;
+  getAsset: PreviewTemplateComponentProps["getAsset"];
 };
 
 export default function CustomPreview(props: CustomPreviewProps) {
@@ -30,6 +31,14 @@ export default function CustomPreview(props: CustomPreviewProps) {
   useEffect(() => {
     const { entry } = props;
     let data = entry.getIn(["data"]).toJS();
+    var image = entry.getIn(["data", "image"]);
+    var asset = props.getAsset(image);
+    console.log("CustomPreview data", data);
+    console.log("CustomPreview image", image);
+    console.log("CustomPreview asset", asset);
+    if (image && asset?.url) {
+      data.image = asset.url;
+    }
     if (props.type === CustomPreviewType.TUTORIALS) {
       data.tags = convertStringTagsToArray(data.tags);
     }
