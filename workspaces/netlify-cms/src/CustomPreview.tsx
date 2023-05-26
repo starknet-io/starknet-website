@@ -51,11 +51,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
     var image = entry.getIn(["data", "image"]);
     var asset = props.getAsset(image);
 
-    console.log("data", data);
-    console.log("image", image);
-    console.log("asset", asset);
-
-    void (async () => {
+    const sendDataToLivePreviewRendere = async () => {
       if (image && asset?.url) {
         if (asset.fileObj) {
           data.image = await toDataURL(URL.createObjectURL(asset.fileObj));
@@ -75,7 +71,9 @@ export default function CustomPreview(props: CustomPreviewProps) {
         },
         "*"
       );
-    })();
+    };
+
+    sendDataToLivePreviewRendere();
   }, [props, refresh]);
 
   return (
