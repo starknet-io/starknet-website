@@ -33,12 +33,15 @@ export default function CustomPreview(props: CustomPreviewProps) {
     let data = entry.getIn(["data"]).toJS();
     var image = entry.getIn(["data", "image"]);
     var asset = props.getAsset(image);
-    console.log("CustomPreview data", data);
-    console.log("CustomPreview image", image);
-    console.log("CustomPreview asset", asset);
+    console.log("data", data);
+    console.log("image", image);
+    console.log("asset", asset);
     if (image && asset?.url) {
       data.image = asset.url;
     }
+    // if (data.image) {
+    //   data.image = data.image.replace("public", "");
+    // }
     if (props.type === CustomPreviewType.TUTORIALS) {
       data.tags = convertStringTagsToArray(data.tags);
     }
