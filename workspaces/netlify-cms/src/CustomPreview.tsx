@@ -56,7 +56,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
         if (asset.fileObj) {
           data.image = await toDataURL(URL.createObjectURL(asset.fileObj));
         } else {
-          data.image = image;
+          data.image = image.replace("public", "");
         }
       }
 
