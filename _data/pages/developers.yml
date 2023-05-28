@@ -64,7 +64,7 @@ blocks:
         withIllustration: true
       - type: image_icon_link_card
         color: peach
-        title: "Sign-up to the Basecamp "
+        title: "Sign-up to Basecamp "
         description: Learn everything about Starknet - from STARK mathematics to Cairo 1
           smart contracts best practices.
         icon: /assets/green.svg
