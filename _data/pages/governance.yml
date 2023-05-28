@@ -81,3 +81,4 @@ blocks:
       - link:
           hasIcon: true
           custom_title: Suggested Delegation Agreement
+          custom_internal_link: https://www.starknet.io/en/community/governance/delegation-agreement
