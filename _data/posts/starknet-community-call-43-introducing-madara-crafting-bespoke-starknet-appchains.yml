@@ -113,15 +113,19 @@ short_desc: >-
   It leverages the power of Cairo to make any program execution actually provable.
 
   A prover or a prover market can ultimately listen to the blocks produced by the chain and generate proofs. Thus, a madara-chain can technically settle on any L1/L2.
-
-
-
-  https://github.com/keep-starknet-stra...
-
-  https://twitter.com/MadaraStarknet
-
-  https://docs.madara.wtf/ 
 blocks:
+  - type: markdown
+    body: >-
+      Built on the robust Substrate framework and fast, thanks to Rust, Madara
+      delivers performance and scalability for Starknet-based Validity Rollup
+      chain.
+
+
+      Madara is based on substrate and uses the Cairo VM and the Blockifier to execute Cairo programs and Starknet smart contracts.
+
+      It leverages the power of Cairo to make any program execution actually provable.
+
+      A prover or a prover market can ultimately listen to the blocks produced by the chain and generate proofs. Thus, a madara-chain can technically settle on any L1/L2.
   - type: link_list
     randomize: false
     heading: Links
