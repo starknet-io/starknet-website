@@ -9,6 +9,7 @@ import { topicsCollectionConfig } from "./topics";
 import { tutorialsCollectionConfig } from "./tutorials";
 import { SEOCollectionConfig } from "./seo";
 import { roadmapPostsCollectionConfig } from "./roadmapPosts";
+import { roadmapVersionsCollectionConfig } from "./roadmapVersions";
 
 export const collections: CmsConfig["collections"] = [
   pagesCollectionConfig,
@@ -21,4 +22,5 @@ export const collections: CmsConfig["collections"] = [
   settingsCollectionConfig,
   SEOCollectionConfig,
   roadmapPostsCollectionConfig,
+  roadmapVersionsCollectionConfig,
 ];
