@@ -27,12 +27,13 @@ blocks:
         withIllustration: true
       - type: image_icon_link_card
         color: blue-default
-        title: "Learn through tutorials "
-        description: Learn from Starknet's community of developers and technologists.
-        icon: /assets/tutorials.svg
+        title: Learn through Starknet Book
+        description: The Starknet Book is a curriculum created to teach Starknet
+          development. Learn from Starknet's community of developers.
+        icon: /assets/docs.svg
         link:
-          custom_external_link: ""
-          custom_internal_link: /tutorials/
+          custom_external_link: https://book.starknet.io/
+          custom_internal_link: ""
           custom_title: View
         withIllustration: true
       - type: image_icon_link_card
