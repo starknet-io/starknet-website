@@ -121,3 +121,20 @@ short_desc: >-
   https://twitter.com/MadaraStarknet
 
   https://docs.madara.wtf/ 
+blocks:
+  - type: link_list
+    randomize: false
+    heading: Links
+    blocks:
+      - link:
+          hasIcon: false
+          custom_title: Madara on GitHub
+          custom_external_link: https://github.com/keep-starknet-strange/madara
+      - link:
+          hasIcon: false
+          custom_title: Madara Docs
+          custom_external_link: https://docs.madara.wtf/
+      - link:
+          hasIcon: false
+          custom_title: Madara on Twitter
+          custom_external_link: https://twitter.com/MadaraStarknet
