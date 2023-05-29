@@ -30,3 +30,4 @@ blocks:
         website_url: https://voyager.online
         twitter: https://twitter.com/0xvoyageronline
         image: /assets/voyager.jpg
+    randomize: true
