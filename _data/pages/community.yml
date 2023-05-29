@@ -5,7 +5,7 @@ breadcrumbs: true
 page_last_updated: false
 blocks:
   - type: hero
-    title: Community hub
+    title: Community hub 1
     description: Join a community of developers, enthusiasts and explorers, working
       together to build Starknet and scale Ethereum.
     variant: community
