@@ -32,7 +32,7 @@ export const roadmapPostsCollectionConfig = {
       widget: "image",
     },
     {
-      name: "Availability",
+      name: "availability",
       label: "Availability",
       widget: "select",
       options: [
