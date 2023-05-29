@@ -1,5 +1,5 @@
 import { generateGenericMetadata } from "src/utils/seo";
-import RoadmapsPage from "./(components)/RoadmapsPage";
+import RoadmapsPage from "./(components)/RoadmapPage";
 import { getRoadmapPosts } from "workspaces/cms-data/src/roadmap";
 
 export const generateMetadata = () => generateGenericMetadata("Roadmap");

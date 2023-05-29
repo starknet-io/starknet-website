@@ -54,7 +54,7 @@ export const roadmapPostsCollectionConfig = {
       name: "version",
       label: "Version",
       widget: "relation",
-      collection: "roadmap_versions",
+      collection: "roadmap-versions",
       search_fields: ["version", "impact"],
       value_field: "id",
       display_fields: ["version", "impact"],

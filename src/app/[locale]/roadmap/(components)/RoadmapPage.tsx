@@ -5,7 +5,7 @@ import Link from "next/link";
 import { RoadmapPost } from "workspaces/cms-data/src/roadmap";
 import SubscribeModal from "../SubscribeModal";
 
-export default function RoadmapsPage({
+export default function RoadmapPage({
   roadmapPosts,
   locale,
 }: {

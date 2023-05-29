@@ -2,11 +2,11 @@ import { CmsCollection } from "../types";
 
 export const roadmapVersionsCollectionConfig = {
   crowdin: true,
-  name: "roadmap_versions",
+  name: "roadmap-versions",
   label: "Roadmap - Versions",
   label_singular: "Roadmap version",
   identifier_field: "id",
-  folder: "_data/roadmap_versions",
+  folder: "_data/roadmap-versions",
   slug: "{{version}} - {{impact}}",
   summary: "{{version}} - {{impact}}",
   create: true,
