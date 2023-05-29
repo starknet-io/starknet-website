@@ -7,8 +7,8 @@ export const roadmapVersionsCollectionConfig = {
   label_singular: "Roadmap version",
   identifier_field: "id",
   folder: "_data/roadmap_versions",
-  slug: "{{name}}-{{impact}}",
-  summary: "{{name}} - {{impact}}",
+  slug: "{{version}} - {{impact}}",
+  summary: "{{version}} - {{impact}}",
   create: true,
   format: "yml",
   fields: [
