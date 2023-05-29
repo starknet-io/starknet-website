@@ -156,6 +156,8 @@ export const ImageIconCard = ({
             }}
             {...(variant === "large_card" && { justifyContent: "center", display: "flex", flexDirection: "column" })}
             borderLeft={variant === "community_card" ? {base: "none", md: "1px solid #EFEFEF"} : "none"}
+            _dark={{borderLeft:variant === "community_card" ? {base: "none", md: "1px solid #313131"} : "none",
+              _hover: {borderLeft:variant === "community_card" ? {base: "none", md: "1px solid #C507E4"} : "none"}}}
             marginLeft={variant === "community_card" ? {base: "0", md: "44px"} : "0"}
           >
             <CardBody

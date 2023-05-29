@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { JobsHit } from "src/app/[locale]/jobs/(components)/JobsPage";
 import { Event } from "@starknet-io/cms-data/src/events";
-import { Tutorial } from "src/app/[locale]/tutorials/(components)/TutorialsCard";
 import { Post } from "workspaces/cms-data/src/posts";
 import { Page } from "workspaces/cms-data/src/pages";
+import { Tutorial } from "workspaces/cms-data/src/tutorials";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
