@@ -1,0 +1,12 @@
+type: conference
+name: Starknet Summit
+description: Join us for the very first Starknet Summit, the conference for
+  everyone building, hacking and scaling on Starknet.
+url: https://summit23.starknet.io
+start_date: 2023-08-31T06:00:10.638Z
+end_date: 2023-08-31T16:00:10.646Z
+show_in_past_events: true
+image: /assets/sn-summit.png
+location: north_america
+city: Bay Area, Exact location TBD
+country: USA
