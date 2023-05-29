@@ -15,6 +15,8 @@ export enum CustomPreviewType {
   TUTORIALS = "TUTORIALS",
   POST = "POST",
   PAGE = "PAGE",
+  ROADMAP_POST = "ROADMAP_POST",
+  ROADMAP_VERSION = "ROADMAP_VERSION",
 }
 
 type CustomPreviewProps = {

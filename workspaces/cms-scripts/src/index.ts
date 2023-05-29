@@ -21,6 +21,7 @@ const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
   await getSimpleData("topics"),
+  await getSimpleData("roadmap-versions"),
 ];
 
 for (const simpleData of simpleDataTypes) {

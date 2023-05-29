@@ -9,15 +9,17 @@ export interface RoadmapPost extends Meta {
   readonly slug: string;
   readonly title: string;
   readonly image: string;
-  readonly category: string;
-  readonly topic: string[];
-  readonly short_desc: string;
-  readonly post_type: string;
-  readonly post_date: string;
-  readonly toc: boolean;
-  readonly published_date: string;
+  readonly version: string;
+  readonly stage: string;
   readonly blocks: readonly TopLevelBlock[];
-  readonly timeToConsume: string;
+}
+
+export interface RoadmapVersion extends Meta {
+  readonly id: string;
+  readonly version: string;
+  readonly impact: string;
+  readonly bgColor: string;
+  readonly textColor: string;
 }
 
 export async function getRoadmapPosts(
@@ -77,6 +79,32 @@ export async function getRoadmapPostBySlug(
     );
   } catch (cause) {
     throw new Error(`Roadmap Post not found! ${slug}`, {
+      cause,
+    });
+  }
+}
+
+export async function getRoadmapVersions(
+  locale: string
+): Promise<readonly RoadmapVersion[]> {
+  try {
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          JSON.parse(
+            await fs.readFile(
+              path.join(
+                process.cwd(),
+                "_crowdin/data/roadmap-versions",
+                value + ".json"
+              ),
+              "utf8"
+            )
+          )
+      )
+    );
+  } catch (cause) {
+    throw new Error("getRoadmapVersions failed!", {
       cause,
     });
   }

@@ -38,15 +38,8 @@ export interface RoadmapPost extends Meta {
   readonly slug: string;
   readonly title: string;
   readonly image: string;
-  readonly category: string;
-  readonly topic: string[];
-  readonly short_desc: string;
-  readonly post_type: string;
-  readonly post_date: string;
-  readonly published_date: string;
-  readonly toc: boolean;
-  readonly video: any;
-  readonly timeToConsume: string;
+  readonly version: string;
+  readonly stage: string;
   blocks: readonly any[];
 }
 
@@ -147,35 +140,18 @@ export async function fileToRoadmapPost(
   const data = await translateFile(locale, resourceName, filename);
   const slug = slugify(sourceData.title);
 
-  const fullText = concatenateBodies(data.blocks);
-  let timeToConsume;
-  if (data.post_type === "video") {
-    timeToConsume = `${formatDuration(
-      data.video?.data?.contentDetails?.duration || ""
-    )} watch`;
-  } else {
-    timeToConsume = `${calculateReadingTime(fullText)} read`;
-  }
-
   return {
-    id: data.id,
     slug,
+    id: data.id,
     title: data.title,
-    category: data.category,
-    post_type: data.post_type,
-    post_date: data.post_date,
-    published_date: data.published_date,
-    toc: data.toc,
-    video: data.video,
-    topic: data.topic ?? [],
-    short_desc: data.short_desc,
     image: data.image,
+    version: data.version,
+    stage: data.stage,
     blocks: data.blocks ?? [],
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
     sourceFilepath,
     gitlog: await gitlog(sourceFilepath),
-    timeToConsume,
   };
 }
 

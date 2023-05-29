@@ -1,4 +1,5 @@
 id: 69ee8aba-95ec-4da9-9348-b8debe034a1a
-version: New roadmap version
-impact: impacts everything
-color: red
+version: v0.12
+impact: Throughput & latency
+bgColor: pink
+textColor: pink

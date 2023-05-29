@@ -8,11 +8,11 @@ import {
   Container,
   Divider,
   Flex,
-  HStack,
+  // HStack,
   Heading,
   Img,
   Spacer,
-  Text,
+  // Text,
 } from "@chakra-ui/react";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
@@ -91,15 +91,15 @@ export default function RoadmapPost({
             />
           ) : null}
 
-          <Box mb={"16px"}>
+          {/* <Box mb={"16px"}>
             <Badge variant="stark_at_home" textTransform="capitalize">
               {roadmapPost.post_type}
             </Badge>
-          </Box>
+          </Box> */}
           <Heading variant="h2" color="heading-navy-fg">
             {roadmapPost.title}
           </Heading>
-          <Flex mt="16px">
+          {/* <Flex mt="16px">
             <HStack>
               <Text fontSize="sm" color="muted">
                 {moment(roadmapPost.published_date).format("MMM DD,YYYY")} ·
@@ -109,7 +109,7 @@ export default function RoadmapPost({
               </Text>
             </HStack>
             <Spacer />
-          </Flex>
+          </Flex> */}
           <Divider mt="8px" mb="32px" />
           <Flex direction="column" gap="32px">
             {roadmapPost.blocks?.map((block, i) => (

@@ -1,28 +1,79 @@
 "use client";
 
-import { Box, Text } from "@chakra-ui/react";
-import Link from "next/link";
-import { RoadmapPost } from "workspaces/cms-data/src/roadmap";
+import { Box, Container, Grid, Heading, Text } from "@chakra-ui/react";
+import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
+import { PageLayout } from "@ui/Layout/PageLayout";
 import SubscribeModal from "../SubscribeModal";
+import RoadmapPostCard from "./RoadmapPostCard";
+import { useMemo } from "react";
 
+type RoadmapPageProps = {
+  roadmapPosts: readonly RoadmapPost[];
+  roadmapVersions: readonly RoadmapVersion[];
+  locale: string;
+};
 export default function RoadmapPage({
   roadmapPosts,
+  roadmapVersions,
   locale,
-}: {
-  roadmapPosts: readonly RoadmapPost[];
-  locale: string;
-}) {
+}: RoadmapPageProps) {
+  const roadmapVersionsDict = useMemo(() => {
+    return roadmapVersions.reduce((acc, topic) => {
+      acc[topic.id] = topic;
+      return acc;
+    }, {} as Record<string, RoadmapVersion>);
+  }, [roadmapVersions]);
+
   return (
-    <Box>
-      <SubscribeModal />
-      <Text>Roadmap Items</Text>
-      <Box display="flex" flexDirection="column" gap="20px" mt="20px">
-        {roadmapPosts.map((post: any) => (
-          <Link href={`/${locale}/roadmap/${post.slug}`} key={post.slug}>
-            {post.title}
-          </Link>
-        ))}
+    <>
+      <Box
+        textAlign="center"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        gap="1rem"
+        background="#F5F5F5"
+        py="4rem"
+      >
+        <Heading variant="h2" color="heading-navy-fg" fontSize="5xl">
+          Roadmap & product updates
+        </Heading>
+        <Text fontSize="xl" maxW="560px">
+          See what we’re building, what’s coming next and keep up to date on
+          product announcements
+        </Text>
+        <SubscribeModal />
       </Box>
-    </Box>
+      <PageLayout
+        main={
+          <Container>
+            <Grid
+              templateColumns={{
+                base: "repeat(auto-fit, minmax(300px, 1fr))",
+                lg: "repeat(auto-fit, minmax(300px, 1fr))",
+                xl: "repeat(auto-fit, minmax(300px, 299px))",
+              }}
+              templateRows="1fr"
+              columnGap="24px"
+              rowGap="48px"
+              justifyContent="center"
+            >
+              {roadmapPosts.map((post) => {
+                const roadmapVersion = roadmapVersionsDict[post.version];
+
+                return (
+                  <RoadmapPostCard
+                    key={post.id}
+                    roadmapPost={post}
+                    roadmapVersion={roadmapVersion}
+                    locale={locale}
+                  />
+                );
+              })}
+            </Grid>
+          </Container>
+        }
+      />
+    </>
   );
 }

@@ -31,8 +31,14 @@ export const roadmapVersionsCollectionConfig = {
       crowdin: true,
     },
     {
-      name: "color",
-      label: "Color",
+      name: "bgColor",
+      label: "Background color",
+      widget: "string",
+      crowdin: false,
+    },
+    {
+      name: "textColor",
+      label: "Text color",
       widget: "string",
       crowdin: false,
     },
