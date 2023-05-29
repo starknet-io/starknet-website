@@ -6,7 +6,7 @@ breadcrumbs: false
 page_last_updated: true
 blocks:
   - type: page_header
-    title: Frequently asked questions
+    title: Frequently asked questions 1
   - type: accordion
     heading: Common questions
     blocks:
@@ -199,12 +199,10 @@ blocks:
           the native Starknet Token.
       - label: Do I need Starknet tokens to transact on StarkEx?
         body: No.
-      - label: >-
-          How are the tokens distributed? Who has how many tokens? How many tokens
+      - label: How are the tokens distributed? Who has how many tokens? How many tokens
           are in circulation? How many tokens are there? How many tokens will be
           minted each year?
-        body: >-
-          This information can be found in the [blog
+        body: This information can be found in the [blog
           post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef).
       - label: What is the process for adding the token to my wallet?
         body: The Starknet Token is not yet available for sale. It cannot be added to
