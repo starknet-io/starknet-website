@@ -1,7 +1,5 @@
 "use client";
 import {
-  Badge,
-  Box,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
