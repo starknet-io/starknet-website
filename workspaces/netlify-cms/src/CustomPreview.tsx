@@ -44,29 +44,31 @@ export default function CustomPreview(props: CustomPreviewProps) {
   const ref = useRef<HTMLIFrameElement>(null);
   const [refresh, setRefresh] = React.useState(false);
   const { height } = useWindowSize();
+  const { type, entry, getAsset } = props;
 
   useEffect(() => {
-    const { entry } = props;
     let data = entry.getIn(["data"]).toJS();
     var image = entry.getIn(["data", "image"]);
-    var asset = props.getAsset(image);
+    var asset = getAsset(image);
 
     const sendDataToLivePreviewRendere = async () => {
       if (image && asset?.url) {
-        if (asset.fileObj) {
+        if (asset.path === "empty.svg") {
+          data.image = "";
+        } else if (asset.fileObj) {
           data.image = await toDataURL(URL.createObjectURL(asset.fileObj));
         } else {
           data.image = image.replace("public", "");
         }
       }
 
-      if (props.type === CustomPreviewType.TUTORIALS) {
+      if (type === CustomPreviewType.TUTORIALS) {
         data.tags = convertStringTagsToArray(data.tags);
       }
 
       ref.current?.contentWindow?.postMessage(
         {
-          type: props.type,
+          type,
           payload: data,
         },
         "*"
@@ -74,7 +76,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
     };
 
     sendDataToLivePreviewRendere();
-  }, [props, refresh]);
+  }, [type, entry, getAsset, refresh]);
 
   return (
     <div>
