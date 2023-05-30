@@ -1,6 +1,21 @@
 import { topLevelBlocks } from "../blocks";
 import { CmsCollection } from "../types";
 
+export const roadmapStagesFields = [
+  {
+    label: "Building Now",
+    value: "building-now",
+  },
+  {
+    label: "Building Next",
+    value: "building-next",
+  },
+  {
+    label: "Backlog",
+    value: "backlog",
+  },
+];
+
 export const roadmapPostsCollectionConfig = {
   crowdin: true,
   name: "roadmap-posts",
@@ -63,20 +78,7 @@ export const roadmapPostsCollectionConfig = {
       name: "stage",
       label: "Stage",
       widget: "select",
-      options: [
-        {
-          label: "Building Now",
-          value: "building-now",
-        },
-        {
-          label: "Building Next",
-          value: "building-next",
-        },
-        {
-          label: "Backlog",
-          value: "backlog",
-        },
-      ],
+      options: roadmapStagesFields,
       required: true,
     },
     {

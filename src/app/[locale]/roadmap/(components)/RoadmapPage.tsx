@@ -2,6 +2,7 @@
 
 import { Box, Container, Grid, Heading, Text } from "@chakra-ui/react";
 import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
+import { roadmapStagesFields } from "workspaces/cms-config/src/collections/roadmapPosts";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import SubscribeModal from "../SubscribeModal";
 import RoadmapPostCard from "./RoadmapPostCard";
@@ -23,6 +24,19 @@ export default function RoadmapPage({
       return acc;
     }, {} as Record<string, RoadmapVersion>);
   }, [roadmapVersions]);
+
+  const roadmapPostsByStage = useMemo(() => {
+    const postsByStage: Record<RoadmapPost["stage"], RoadmapPost[]> = {};
+    roadmapPosts.forEach((post, i) => {
+      if (postsByStage[post.stage]) {
+        postsByStage[post.stage].push(post);
+      } else {
+        postsByStage[post.stage] = [post];
+      }
+    });
+
+    return postsByStage;
+  }, [roadmapPosts]);
 
   return (
     <>
@@ -47,30 +61,41 @@ export default function RoadmapPage({
       <PageLayout
         main={
           <Container>
-            <Grid
-              templateColumns={{
-                base: "repeat(auto-fit, minmax(300px, 1fr))",
-                lg: "repeat(auto-fit, minmax(300px, 1fr))",
-                xl: "repeat(auto-fit, minmax(300px, 299px))",
-              }}
-              templateRows="1fr"
-              columnGap="24px"
-              rowGap="48px"
-              justifyContent="center"
-            >
-              {roadmapPosts.map((post) => {
-                const roadmapVersion = roadmapVersionsDict[post.version];
+            {roadmapStagesFields.map((stage) => {
+              const stagePosts = roadmapPostsByStage[stage.value];
 
-                return (
-                  <RoadmapPostCard
-                    key={post.id}
-                    roadmapPost={post}
-                    roadmapVersion={roadmapVersion}
-                    locale={locale}
-                  />
-                );
-              })}
-            </Grid>
+              return (
+                <Box key={stage.value} mb="4rem">
+                  <Heading variant="h3" mb="2rem">
+                    {stage.label}
+                  </Heading>
+                  <Grid
+                    templateColumns={{
+                      base: "repeat(auto-fit, minmax(300px, 1fr))",
+                      lg: "repeat(auto-fit, minmax(300px, 1fr))",
+                      xl: "repeat(auto-fit, minmax(300px, 299px))",
+                    }}
+                    templateRows="1fr"
+                    columnGap="24px"
+                    rowGap="48px"
+                    // justifyContent="center"
+                  >
+                    {stagePosts.map((post) => {
+                      const roadmapVersion = roadmapVersionsDict[post.version];
+
+                      return (
+                        <RoadmapPostCard
+                          key={post.id}
+                          roadmapPost={post}
+                          roadmapVersion={roadmapVersion}
+                          locale={locale}
+                        />
+                      );
+                    })}
+                  </Grid>
+                </Box>
+              );
+            })}
           </Container>
         }
       />
