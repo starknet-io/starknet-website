@@ -33,6 +33,11 @@ export default function App() {
         <CustomPreview entry={entry} type={CustomPreviewType.ROADMAP_POST} />
       );
     });
+    CMS.registerPreviewTemplate("announcements", ({ entry }) => {
+      return (
+        <CustomPreview entry={entry} type={CustomPreviewType.ANNOUNCEMENTS_POST} />
+      );
+    });
     CMS.registerPreviewTemplate("roadmap-versions", ({ entry }) => {
       return (
         <CustomPreview entry={entry} type={CustomPreviewType.ROADMAP_VERSION} />

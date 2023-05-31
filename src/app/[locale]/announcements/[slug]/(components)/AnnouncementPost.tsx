@@ -8,27 +8,29 @@ import {
   Flex,
   Heading,
   Img,
-  Spacer,
+  Spacer
 } from "@chakra-ui/react";
+import { Badge } from "@ui/Badge";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
 import Link from "next/link";
 import React from "react";
 import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
-import { RoadmapPost as RoadmapPostType } from "workspaces/cms-data/src/roadmap";
+import { AnnouncementPost as AnnouncementPostType } from "workspaces/cms-data/src/announcements";
 
-export default function RoadmapPost({
-  roadmapPost,
+export default function AnnouncementPost({
+  announcementsPost,
   locale,
   blocksDynamicData,
 }: {
-  roadmapPost: RoadmapPostType;
+  announcementsPost: AnnouncementPostType;
   locale: string;
   blocksDynamicData: BlocksDynamicData;
 }) {
   return (
     <PageLayout
+      maxW="734px"
       breadcrumbs={
         <Breadcrumb separator="/">
           <BreadcrumbItem>
@@ -54,61 +56,35 @@ export default function RoadmapPost({
           <BreadcrumbItem>
             <BreadcrumbLink
               as={Link}
-              href={`/${locale}/roadmap`}
+              href={`/${locale}/announcements`}
               fontSize="sm"
               noOfLines={1}
             >
-              Roadmap
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}/roadmap/${roadmapPost?.slug}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              {roadmapPost?.title}
+              Announcements
             </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       }
       pageLastUpdated={`Page last updated ${moment(
-        roadmapPost?.gitlog?.date
+        announcementsPost?.gitlog?.date
       ).fromNow()}`}
       main={
         <Container maxWidth="846px">
-          {roadmapPost.image ? (
+          {announcementsPost.image ? (
             <Img
               mb="32px"
               borderRadius={"8px"}
-              src={roadmapPost.image}
-              alt={roadmapPost.title}
+              src={announcementsPost.image}
+              alt={announcementsPost.title}
             />
           ) : null}
-
-          {/* <Box mb={"16px"}>
-            <Badge variant="stark_at_home" textTransform="capitalize">
-              {roadmapPost.post_type}
-            </Badge>
-          </Box> */}
-          <Heading variant="h2" color="heading-navy-fg">
-            {roadmapPost.title}
+          <Badge variant="community_and_events">{announcementsPost.badge}</Badge>
+          <Heading variant="h2" mt="4" color="heading-navy-fg">
+            {announcementsPost.title}
           </Heading>
-          {/* <Flex mt="16px">
-            <HStack>
-              <Text fontSize="sm" color="muted">
-                {moment(roadmapPost.published_date).format("MMM DD,YYYY")} ·
-              </Text>
-              <Text fontSize="sm" color="muted">
-                {roadmapPost.timeToConsume}
-              </Text>
-            </HStack>
-            <Spacer />
-          </Flex> */}
           <Divider mt="8px" mb="32px" />
           <Flex direction="column" gap="32px">
-            {roadmapPost.blocks?.map((block, i) => (
+            {announcementsPost.blocks?.map((block, i) => (
               <Block
                 key={i}
                 block={block}

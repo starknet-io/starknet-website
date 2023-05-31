@@ -7,6 +7,7 @@ import { write } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
+  getAnnouncements,
   getPages,
   getPosts,
   getRoadmapPosts,
@@ -86,6 +87,7 @@ for (const simpleFile of simpleFiles) {
 
 const posts = await getPosts();
 const roadmapPosts = await getRoadmapPosts();
+const announcements = await getAnnouncements();
 const pages = await getPages();
 
 updateBlocks(pages, posts);
@@ -108,6 +110,13 @@ for (const data of roadmapPosts.filenameMap.values()) {
     `_crowdin/data/roadmap-posts/${data.locale}/${data.slug}.json`,
     data
   );
+}
+
+for (const data of announcements.filenameMap.values()) {
+  await write(
+  `_crowdin/data/announcements/${data.locale}/${data.slug}.json`,
+  data
+);
 }
 
 for (const locale of locales) {
