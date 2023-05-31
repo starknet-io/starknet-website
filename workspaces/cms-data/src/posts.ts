@@ -79,11 +79,11 @@ export async function getPostById(
       ),
       async () => {
         const client = algoliasearch(
-          process.env.ALGOLIA_APP_ID!,
-          process.env.ALGOLIA_SEARCH_API_KEY!
+          import.meta.env.VITE_ALGOLIA_APP_ID!,
+          import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!
         );
         const index = client.initIndex(
-          `web_posts_${process.env.ALGOLIA_INDEX}`
+          `web_posts_${import.meta.env.VITE_ALGOLIA_INDEX}`
         );
 
         const searchResponse = await index.search<Post>("", {

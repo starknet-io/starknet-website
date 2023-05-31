@@ -2,7 +2,7 @@ import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { HStack } from "@chakra-ui/react";
 import moment from "moment";
-import { Tutorial } from "workspaces/cms-data/src/tutorials";
+import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
 
 type TutorialsCardProps = {
   hit: Tutorial;
