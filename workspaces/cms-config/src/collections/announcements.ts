@@ -39,7 +39,7 @@ export const announcementsCollectionConfig = {
     },
     {
       name: "badge",
-      label: "Badge",
+      label: "Tag",
       widget: "select",
       options: [
         {
