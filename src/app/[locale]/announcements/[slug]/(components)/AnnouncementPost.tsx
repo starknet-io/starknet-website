@@ -17,7 +17,7 @@ import Link from "next/link";
 import React from "react";
 import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
-import { AnnouncementPost as AnnouncementPostType } from "workspaces/cms-data/src/announcements";
+import { AnnouncementsPost as AnnouncementPostType } from "workspaces/cms-data/src/announcements";
 
 export default function AnnouncementPost({
   announcementsPost,

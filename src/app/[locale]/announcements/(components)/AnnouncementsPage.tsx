@@ -58,9 +58,8 @@ export default function AnnouncementsPage({
             rowGap="48px"
           >
             {announcements.map((post) => {
-
               return (
-                <AnnouncementPostCard post={post} locale={locale}/>
+                <AnnouncementPostCard post={post} key={`announcement-${post.id}`} locale={locale}/>
               );
             })}
           </Grid>

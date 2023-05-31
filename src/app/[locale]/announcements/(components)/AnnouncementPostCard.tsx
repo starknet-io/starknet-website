@@ -23,7 +23,7 @@ export default function AnnouncementPostCard({
         height="full"
       />
       <CardBody>
-        <Badge variant="community_and_events">{post.badge}</Badge>
+        <Badge variant="community_and_events">{post?.badge}</Badge>
         <Heading my="4" variant="h4">{post?.title}</Heading>
         <Text size="lg">{post?.description}</Text>
       </CardBody>

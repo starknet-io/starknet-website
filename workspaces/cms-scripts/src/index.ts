@@ -103,6 +103,7 @@ for (const data of posts.filenameMap.values()) {
 
 for (const locale of locales) {
   await fs.mkdir(`_crowdin/data/roadmap-posts/${locale}`, { recursive: true });
+  await fs.mkdir(`_crowdin/data/announcements/${locale}`, { recursive: true });
 }
 
 for (const data of roadmapPosts.filenameMap.values()) {

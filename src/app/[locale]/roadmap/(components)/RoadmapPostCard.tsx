@@ -1,8 +1,5 @@
-import { Card, CardBody, CardHeader, Img } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Img, Text } from "@chakra-ui/react";
 import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
-import { Badge } from "@ui/Badge";
-import { Heading } from "@ui/Typography/Heading";
-import { Text } from "@ui/Typography/Text";
 import RoadmapPostVersion from "./RoadmapPostVersion";
 import Link from "next/link";
 
@@ -17,7 +14,10 @@ export default function RoadmapPostCard({
   locale,
 }: RoadmapPostCardProps) {
   return (
-    <Card as={Link} href={`/${locale}/announcements/${roadmapPost?.slug}`}>
+    <Card maxW="md" as={Link} href={`/${locale}/roadmap/${roadmapPost?.slug}`}>
+      <CardHeader>
+        <Text size="lg">{roadmapPost?.title}</Text>
+      </CardHeader>
       <Img
         objectFit="cover"
         src={roadmapPost?.image}
@@ -26,9 +26,7 @@ export default function RoadmapPostCard({
         height="full"
       />
       <CardBody>
-        <Badge variant="community_and_events">{roadmapPost.badge}</Badge>
-        <Heading my="4" variant="h4">{roadmapPost?.title}</Heading>
-        <Text size="lg">{roadmapPost?.description}</Text>
+        <RoadmapPostVersion roadmapVersion={roadmapVersion} />
       </CardBody>
     </Card>
   );
