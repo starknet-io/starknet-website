@@ -2,20 +2,7 @@ import * as GridCard from "@ui/Card/GridCard";
 import { Tag } from "@ui/Tag/Tag";
 import { HStack } from "@chakra-ui/react";
 import moment from "moment";
-
-export type Tutorial = {
-  readonly id?: string;
-  readonly type: "youtube" | "blog" | "github";
-  readonly url: string;
-  readonly image?: string;
-  readonly title: string;
-  readonly author?: string;
-  readonly published_at: string;
-  readonly difficulty?: "beginner" | "intermediate" | "advanced";
-  readonly tags?: string[];
-  readonly locale: string;
-  readonly filepath: string;
-};
+import { Tutorial } from "workspaces/cms-data/src/tutorials";
 
 type TutorialsCardProps = {
   hit: Tutorial;
@@ -24,7 +11,11 @@ export default function TutorialsCard({ hit }: TutorialsCardProps) {
   const date = moment(hit.published_at).format("MMM DD, YYYY");
 
   return (
-    <GridCard.Root href={hit.url} key={hit.title}>
+    <GridCard.Root
+      href={hit.type === "youtube" ? `tutorials/video/${hit.id}` : hit.url}
+      key={hit.title}
+      newTab={hit.type !== "youtube"}
+    >
       <GridCard.Image url={hit.image} type={hit.type} />
       <GridCard.Body>
         {/* <GridCard.Category category={hit.tags} /> */}

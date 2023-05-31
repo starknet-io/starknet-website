@@ -23,9 +23,11 @@ type Props = {
     | "dapps"
     | "learn"
     | "build"
-    | "community";
+    | "community"
+    | "nodes_and_services";
   buttonText?: string;
   buttonUrl?: string;
+  leftBoxMaxWidth?: number
 };
 
 const heroStyles = {
@@ -64,6 +66,11 @@ const heroStyles = {
     gradient:
       "linear(258.76deg, hero-gradient-community-a 3.96%, hero-gradient-community-b 254.34%)",
   },
+  nodes_and_services: {
+    img: "/assets/ecosystem/nodes_and_services.svg",
+    gradient:
+      "linear(262.88deg, hero-gradient-nodes-and-services-a 21.62%, hero-gradient-nodes-and-services-b 100.38%)",
+  },
 };
 
 export const HeroImage = ({
@@ -71,7 +78,8 @@ export const HeroImage = ({
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
   variant = "dapps",
   buttonText,
-  buttonUrl
+  buttonUrl,
+  leftBoxMaxWidth,
 }: Props) => {
   return (
     <Box
@@ -114,7 +122,7 @@ export const HeroImage = ({
                 <Stack
                   // bg="red"
                   // spacing={{ base: "4", md: "3" }}
-                  maxW={{ md: "xl", lg: "md", xl: "xl" }}
+                  maxW={leftBoxMaxWidth ?? { md: "xl", lg: "md", xl: "xl" }}
                 >
                   <Box>
                     <svg

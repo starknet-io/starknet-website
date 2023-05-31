@@ -8,11 +8,12 @@ import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
 import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
+import ListCardItems from "./ListCardItems";
 import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
 import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { Container } from "./Container";
-import { LinkList, LinkListItem } from "./LinkList";
+import { LinkList } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
@@ -73,18 +74,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       </BlockCards>
     );
   } else if (block.type === "link_list") {
-    return (
-      <LinkList heading={block.heading} listSize={block.listSize}>
-        {block.blocks.map((item, i) => (
-          <LinkListItem
-            key={i}
-            link={item.link}
-            subLabel={item.subLabel}
-            avatar={item.avatar}
-          />
-        ))}
-      </LinkList>
-    );
+    return <LinkList {...block} />;
   } else if (block.type === "accordion") {
     return (
       <AccordionRoot heading={block.heading}>
@@ -135,6 +125,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         variant={block.variant}
         buttonText={block.buttonText}
         buttonUrl={block.buttonUrl}
+        leftBoxMaxWidth={block.leftBoxMaxWidth}
       />
     );
   } else if (block.type === "home_hero") {
@@ -155,6 +146,15 @@ export function Block({ block, locale }: Props): JSX.Element | null {
   } else if (block.type === "block_explorers") {
     return (
       <BlockBlockExplorers
+        params={{
+          locale,
+        }}
+      />
+    );
+  } else if (block.type === "card_list") {
+    return (
+      <ListCardItems
+        {...block}
         params={{
           locale,
         }}

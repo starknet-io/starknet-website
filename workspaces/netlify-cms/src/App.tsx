@@ -13,20 +13,46 @@ export default function App() {
       NetlifyCmsWidgetUUID.Widget(),
       NetlifyCmsWidgetYouTube.Widget(),
     ]);
-    CMS.registerPreviewTemplate("events", ({ entry }) => (
-      <CustomPreview entry={entry} type={CustomPreviewType.EVENTS} />
+    CMS.registerPreviewTemplate("events", ({ entry, getAsset }) => (
+      <CustomPreview
+        entry={entry}
+        type={CustomPreviewType.EVENTS}
+        getAsset={getAsset}
+      />
     ));
-    CMS.registerPreviewTemplate("jobs", ({ entry }) => (
-      <CustomPreview entry={entry} type={CustomPreviewType.JOBS} />
+    CMS.registerPreviewTemplate("jobs", ({ entry, getAsset }) => (
+      <CustomPreview
+        entry={entry}
+        type={CustomPreviewType.JOBS}
+        getAsset={getAsset}
+      />
     ));
-    CMS.registerPreviewTemplate("tutorials", ({ entry }) => {
-      return <CustomPreview entry={entry} type={CustomPreviewType.TUTORIALS} />;
+    CMS.registerPreviewTemplate("tutorials", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.TUTORIALS}
+          getAsset={getAsset}
+        />
+      );
     });
-    CMS.registerPreviewTemplate("posts", ({ entry }) => {
-      return <CustomPreview entry={entry} type={CustomPreviewType.POST} />;
+    CMS.registerPreviewTemplate("posts", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.POST}
+          getAsset={getAsset}
+        />
+      );
     });
-    CMS.registerPreviewTemplate("pages", ({ entry }) => {
-      return <CustomPreview entry={entry} type={CustomPreviewType.PAGE} />;
+    CMS.registerPreviewTemplate("pages", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.PAGE}
+          getAsset={getAsset}
+        />
+      );
     });
     CMS.registerBackend("github-yuki", GitHubBackend);
     const branch =

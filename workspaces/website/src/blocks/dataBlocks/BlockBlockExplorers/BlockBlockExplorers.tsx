@@ -3,6 +3,7 @@ import { ListCard } from "@ui/Card/ListCard";
 import { getBlockExplorers } from "@starknet-io/cms-data/src/block-explorers";
 import { useAsync } from 'react-streaming'
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { getShuffledArray } from "src/utils/getShuffledArray";
 
 interface Props extends LocaleProps {
   noOfItems?: number;
@@ -16,19 +17,21 @@ export default function BlockBlockExplorers({
   const blockExplorers = useAsync(["getBlockExplorers", locale], () =>
     getBlockExplorers(locale, pageContext.event)
   );
+  const randomizedBlockExplorers = getShuffledArray(blockExplorers).slice(
+    0,
+    noOfItems
+  );
 
   return (
     <Box>
       <Container maxW="1062px">
         <Flex gap={4} direction="column" flex={1}>
-          {blockExplorers.map((blockExplorer, i) => {
-            if (noOfItems && i <= noOfItems) return null;
+          {randomizedBlockExplorers.map((blockExplorer, i) => {
             return (
               <ListCard
                 href={blockExplorer.website_url}
                 twitterHandle={blockExplorer.twitter}
                 image={blockExplorer.image}
-                // startDateTime="Fri, Jan 12 • 2:00 PM EST"
                 key={blockExplorer.name}
                 description={blockExplorer.description}
                 title={blockExplorer.name}

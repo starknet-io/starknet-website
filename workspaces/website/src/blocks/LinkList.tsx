@@ -1,20 +1,16 @@
 import React from "react";
 import * as StarkLinkList from "@ui/LinkList/LinkList";
+import { LinkListBlock } from "workspaces/cms-data/src/pages";
+import { getShuffledArray } from "src/utils/getShuffledArray";
 
-type Props = {
-  children: React.ReactNode;
-  heading?: string;
-  listSize?: "sm" | "md" | "lg";
-};
+export const LinkList = ({ randomize, blocks, ...rest }: LinkListBlock) => {
+  const items = randomize ? getShuffledArray(blocks || []) : blocks;
 
-export const LinkList = (props: Props) => {
   return (
-    <StarkLinkList.Root heading={props.heading} listSize={props.listSize}>
-      {props.children}
+    <StarkLinkList.Root {...rest}>
+      {items.map((item, i) => (
+        <StarkLinkList.Item key={i} {...item} />
+      ))}
     </StarkLinkList.Root>
   );
-};
-
-export const LinkListItem = (props: StarkLinkList.ItemProps) => {
-  return <StarkLinkList.Item {...props} />;
 };

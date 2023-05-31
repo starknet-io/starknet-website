@@ -252,7 +252,6 @@ export async function getPosts(): Promise<PostsData> {
 
 export async function getTutorials(): Promise<SimpleData<Meta>> {
   const resourceData = await getSimpleData("tutorials");
-
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
       data.tags = convertStringTagsToArray(data.tags);

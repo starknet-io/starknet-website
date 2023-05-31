@@ -3,6 +3,7 @@ import { ListCard } from "@ui/Card/ListCard";
 import { getBridges } from "@starknet-io/cms-data/src/bridges";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { getShuffledArray } from "src/utils/getShuffledArray";
 
 interface Props extends LocaleProps {
   noOfItems?: number;
@@ -14,13 +15,13 @@ export default function BlockBridges({
 }: Props): JSX.Element {
   const pageContext = usePageContext();
   const bridges = useAsync(['getBridges', locale], () => getBridges(locale, pageContext.event));
+  const randomizedBridges = getShuffledArray(bridges).slice(0, noOfItems);
 
   return (
     <Box>
       <Container maxW="1062px">
         <Flex gap={4} direction="column" flex={1}>
-          {bridges.map((bridge, i) => {
-            if (noOfItems && i <= noOfItems) return null;
+          {randomizedBridges.map((bridge, i) => {
             return (
               <ListCard
                 href={bridge.website_url}
