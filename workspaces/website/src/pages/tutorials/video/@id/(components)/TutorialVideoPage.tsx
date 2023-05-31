@@ -1,4 +1,3 @@
-"use client";
 import {
   BreadcrumbItem,
   BreadcrumbLink,
@@ -6,22 +5,19 @@ import {
   Box,
   Flex,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
 import * as GridCard from "@ui/Card/GridCard";
-import { Tutorial } from "workspaces/cms-data/src/tutorials";
+import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
 import moment from "moment";
 
-export interface AutoProps {
+export interface Props {
   readonly params: LocaleParams & {
     readonly id: string;
   };
+  readonly tutorial: Tutorial;
 }
 
-type Props = AutoProps & {
-  readonly tutorial: Tutorial;
-};
 
 function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
   const videoId = tutorial.url.split("/").pop();
@@ -35,7 +31,6 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -45,7 +40,6 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}/developers`}
               fontSize="sm"
               noOfLines={1}
@@ -55,7 +49,6 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${params.locale}/tutorials`}
               fontSize="sm"
               noOfLines={1}
