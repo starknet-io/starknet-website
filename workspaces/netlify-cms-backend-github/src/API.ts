@@ -901,27 +901,16 @@ export default class API {
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
 
-
     const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
       `${this.originRepoURL}/deployments?sha=${sha}&environment=${encodeURIComponent(`Starknet Website ${branch}`)}`,
     );
 
     const deployment = deployments[0]!
 
-
-
     const statuses: {environment_url: string, environment: string, state: string }[] = await this.request(
       // @ts-expect-error
       `${this.originRepoURL}/deployments/${deployment.id}/statuses`,
-      );
-
-      const status = statuses[0]
-      console.log(status)
-
-      // const target_url = resp.find(item => item.environment === `Starknet Website ${branch}`).environment_url;
-      // const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
-      //   `${this.originRepoURL}/commits/${sha}/status`,
-      //   );
+    );
 
     return statuses;
   }
