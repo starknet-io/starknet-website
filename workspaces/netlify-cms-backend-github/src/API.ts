@@ -584,9 +584,12 @@ export default class API {
   // }
 
   async getShaPreviewDeployment(sha: string) {
-    const allDeployments: Octokit.PullsListCommitsResponseItem[] =
-      await this.request(`${this.originRepoURL}/deployments`);
-    const shaAllDeployments = allDeployments.filter((d) => d.sha === sha);
+    const shaAllDeployments: Octokit.PullsListCommitsResponseItem[] =
+      await this.request(`${this.originRepoURL}/deployments`, {
+        params: {
+          sha
+        }
+      });
     const shaPreviewDeployment = shaAllDeployments.find(d => d.environment === 'Preview – starknet-website')
     if (!shaPreviewDeployment) {
       throw new EditorialWorkflowError(
