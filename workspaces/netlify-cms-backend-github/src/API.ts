@@ -900,21 +900,30 @@ export default class API {
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
-    const deploys = await this.getDeploys(branch);
-    const resp: {environment_url: string, environment: string, state: string }[] = await this.request(
+
+
+    const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
+      `${this.originRepoURL}/deployments?sha=${sha}&environment=${encodeURIComponent(`Starknet Website ${branch}`)}`,
+    );
+
+    const deployment = deployments[0]!
+
+
+
+    const statuses: {environment_url: string, environment: string, state: string }[] = await this.request(
       // @ts-expect-error
-      `${this.originRepoURL}/deployments/${deploys.id}/statuses`,
+      `${this.originRepoURL}/deployments/${deployment.id}/statuses`,
       );
-      const target_url = resp.find(item => item.environment === `Starknet Website ${branch}`).environment_url;
-      const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
-        `${this.originRepoURL}/commits/${sha}/status`,
-        );
-    return commitResp.statuses.map(s => ({
-      context: s.context,
-      target_url,
-      state:
-        s.state === GitHubCommitStatusState.Success ? PreviewState.Success : PreviewState.Other,
-    }));
+
+      const status = statuses[0]
+      console.log(status)
+
+      // const target_url = resp.find(item => item.environment === `Starknet Website ${branch}`).environment_url;
+      // const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
+      //   `${this.originRepoURL}/commits/${sha}/status`,
+      //   );
+
+    return statuses;
   }
 
   async persistFiles(dataFiles: DataFile[], mediaFiles: AssetProxy[], options: PersistOptions) {
