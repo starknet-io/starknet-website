@@ -8,8 +8,10 @@ blocks:
   - type: hero
     variant: nodes_and_services
     title: Full-nodes & API services
-    description: Use APIs to connect to other services, run full nodes and interact
+    description:
+      Use APIs to connect to other services, run full nodes and interact
       with on-chain data.
+    leftBoxMaxWidth: 600
   - type: card_list
     title: Full-nodes
     card_list_items:

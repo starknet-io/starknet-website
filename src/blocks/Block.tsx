@@ -133,6 +133,7 @@ Props): JSX.Element {
         variant={block.variant}
         buttonText={block.buttonText}
         buttonUrl={block.buttonUrl}
+        leftBoxMaxWidth={block.leftBoxMaxWidth}
       />
     );
   } else if (block.type === "home_hero") {

@@ -594,6 +594,13 @@ export const blocks = [
         widget: "string",
         crowdin: false
       },
+      {
+        name: "leftBoxMaxWidth",
+        label: "Left box max width",
+        required: false,
+        widget: "number",
+        crowdin: false
+      },
     ],
   },
   {
