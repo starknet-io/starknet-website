@@ -1,0 +1,107 @@
+id: cfa25ac1-9686-4169-a687-1ab1fffc5621
+post_type: video
+title: "Starknet Community Call #44 | How Sierra prevents DOS in Starknet"
+published_date: 2023-05-23T12:30:37.672Z
+video:
+  url: https://www.youtube.com/live/eUe6Sxi8dTU?feature=share
+  id: eUe6Sxi8dTU
+  data:
+    kind: youtube#video
+    etag: BW5OqMnSwg3SUWqiDbMxdBnlmX4
+    id: eUe6Sxi8dTU
+    snippet:
+      publishedAt: 2023-05-24T01:49:06.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/eUe6Sxi8dTU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/eUe6Sxi8dTU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/eUe6Sxi8dTU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/eUe6Sxi8dTU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/eUe6Sxi8dTU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: "Starknet Community Call #44 | How Sierra prevents DOS in Starknet"
+      tags:
+        - Cairo
+        - Starknet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+        - layer 2
+      categoryId: "28"
+      localized:
+        title: "Starknet Community Call #44 | How Sierra prevents DOS in Starknet"
+        description: >-
+          Sierra is an IR between Cairo 1.0 and Cairo assembly. In this talk,
+          Ariel, AKA @FeedTheFed explains the completeness problem in the
+          context of Starknet and how an IR between user code and proven code
+          can solve it. We’ll also discuss other benefits of such an IR, such as
+          gas metering and separation between execution and proving
+          environments.
+
+
+          https://github.com/starkware-libs/cairo
+      description: >-
+        Sierra is an IR between Cairo 1.0 and Cairo assembly. In this talk,
+        Ariel, AKA @FeedTheFed explains the completeness problem in the context
+        of Starknet and how an IR between user code and proven code can solve
+        it. We’ll also discuss other benefits of such an IR, such as gas
+        metering and separation between execution and proving environments.
+
+
+        https://github.com/starkware-libs/cairo
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT51M16S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/communitycall-44-how-sierra-prevents-dos-in-starknet-youtube.png
+category: community-calls
+topic:
+  - cairo
+  - 266fa988-350c-4842-b74e-379068ddcf34
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+short_desc: Sierra is an IR between Cairo 1.0 and Cairo assembly. In this talk,
+  Ariel, AKA @FeedTheFed explains the completeness problem in the context of
+  Starknet and how an IR between user code and proven code can solve it. We’ll
+  also discuss other benefits of such an IR, such as gas metering and separation
+  between execution and proving environments.
+blocks:
+  - type: markdown
+    body: Sierra is an IR between Cairo 1.0 and Cairo assembly. In this talk, Ariel,
+      AKA [@FeedTheFed](https://twitter.com/FeedTheFed) explains the
+      completeness problem in the context of Starknet and how an IR between user
+      code and proven code can solve it. We’ll also discuss other benefits of
+      such an IR, such as gas metering and separation between execution and
+      proving environments.
+  - type: link_list
+    randomize: false
+    listSize: sm
+    listGap: sm
+    blocks:
+      - link:
+          hasIcon: true
+          custom_external_link: https://github.com/starkware-libs/cairo
+          custom_title: Cairo
+    heading: Links
