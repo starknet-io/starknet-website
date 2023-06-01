@@ -505,19 +505,19 @@ export default class API {
     );
   }
 
-  async getAllDeployments(
-    head: string | undefined,
-    state: PullRequestState,
-    predicate: (pr: GitHubPull) => boolean,
+  // async getAllDeployments(
+  //   head: string | undefined,
+  //   state: PullRequestState,
+  //   predicate: (pr: GitHubPull) => boolean,
   
-  ) {
-    const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
-      `${this.originRepoURL}/deployments`,
-    );
-    return deployments;//.filter(
-      // pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
-    // );
-  }
+  // ) {
+  //   const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
+  //     `${this.originRepoURL}/deployments`,
+  //   );
+  //   return deployments;//.filter(
+  //     // pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
+  //   // );
+  // }
 
   async getOpenAuthoringPullRequest(branch: string, pullRequests: GitHubPull[]) {
     // we can't use labels when using open authoring
@@ -568,19 +568,33 @@ export default class API {
     }
   }
 
-  async getDeploys(branch: string) {
-    if (this.useOpenAuthoring) {
-      const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
-        withCmsLabel(pr, this.cmsLabelPrefix),);
-      return deploys;
-    } else {
-      const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
-        withCmsLabel(pr, this.cmsLabelPrefix),);
-      if (deploys.length <= 0) {
-        throw new EditorialWorkflowError('content is not under editorial workflow', true);
-      }
-      return deploys[0];
+  // async getDeploys(branch: string) {
+  //   if (this.useOpenAuthoring) {
+  //     const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
+  //       withCmsLabel(pr, this.cmsLabelPrefix),);
+  //     return deploys;
+  //   } else {
+  //     const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
+  //       withCmsLabel(pr, this.cmsLabelPrefix),);
+  //     if (deploys.length <= 0) {
+  //       throw new EditorialWorkflowError('content is not under editorial workflow', true);
+  //     }
+  //     return deploys[0];
+  //   }
+  // }
+
+  async getShaPreviewDeployment(sha: string) {
+    const allDeployments: Octokit.PullsListCommitsResponseItem[] =
+      await this.request(`${this.originRepoURL}/deployments`);
+    const shaAllDeployments = allDeployments.filter((d) => d.sha === sha);
+    const shaPreviewDeployment = shaAllDeployments.find(d => d.environment === 'Preview – starknet-website')
+    if (!shaPreviewDeployment) {
+      throw new EditorialWorkflowError(
+        "No preview deployment found for this commit",
+        true
+      );
     }
+    return shaPreviewDeployment;
   }
 
   async getPullRequestCommits(number: number) {
@@ -901,9 +915,9 @@ export default class API {
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
-    const deploys = await this.getDeploys(branch);
+    const deployment = await this.getShaPreviewDeployment(sha);
     const resp: {environment_url: string }[] = await this.request(
-      `${this.originRepoURL}/deployments/${deploys.id}/statuses`,
+      `${this.originRepoURL}/deployments/${deployment.id}/statuses`,
     );
     const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
       `${this.originRepoURL}/commits/${sha}/status`,
