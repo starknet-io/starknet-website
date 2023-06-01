@@ -45,7 +45,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 // };
 
 export async function render(pageContext: PageContextServer) {
-  const { Page, pageProps } = pageContext;
+  const { Page, pageProps, redirectTo } = pageContext;
+
+  if (redirectTo) return {}
 
   const page = (
     <PageShell pageContext={pageContext}>

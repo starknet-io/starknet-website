@@ -1,7 +1,7 @@
 import { PageContextServer } from "src/renderer/types";
 import { getPostById } from "@starknet-io/cms-data/src/posts";
 
-export async function onBeforeRender(pageContext: PageContextServer) {
+export async function render(pageContext: PageContextServer) {
   const data = await getPostById(
     pageContext.routeParams.id,
     pageContext.locale,
@@ -10,7 +10,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 
   return {
     pageContext: {
-      redirectTo: `${data?.locale}/posts/${
+      redirectTo: `/${data?.locale}/posts/${
         data?.category ? `${data?.category}/` : ""
       }${data?.slug}`,
     },

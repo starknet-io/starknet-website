@@ -1,9 +1,7 @@
-import { Router } from "itty-router";
-import { error, json, missing } from "itty-router-extras";
-import { createCors } from "itty-cors";
+import { Router, createCors, error, json } from 'itty-router'
 
 // now let's create a router (note the lack of "new")
-export const apiRouter = Router({base: '/api'});
+export const apiRouter = Router({ base: "/api" });
 
 const { preflight, corsify } = createCors({
   origins: [
@@ -14,7 +12,6 @@ const { preflight, corsify } = createCors({
   ],
 });
 
-// @ts-expect-error
 apiRouter.all("*", preflight);
 
 apiRouter.get(
@@ -42,7 +39,7 @@ apiRouter.get(
 
     if (item == null) {
       return corsify(
-        missing({
+        error(404, {
           message: "Video not found!",
         })
       );

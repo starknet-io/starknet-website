@@ -64,3 +64,4 @@ _crowdin
 dist
 public/data
 !_crowdin/translation
+.wrangler/
