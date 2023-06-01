@@ -1,0 +1,7 @@
+id: c4dfc874-6a57-4a50-82e8-a80cb97037ed
+title: A new test page from dev
+template: landing
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: home_hero
