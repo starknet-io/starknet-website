@@ -17,6 +17,7 @@ export enum CustomPreviewType {
   PAGE = "PAGE",
   ROADMAP_POST = "ROADMAP_POST",
   ROADMAP_VERSION = "ROADMAP_VERSION",
+  ANNOUNCEMENTS_POST = "ANNOUNCEMENTS_POST",
 }
 
 type CustomPreviewProps = {

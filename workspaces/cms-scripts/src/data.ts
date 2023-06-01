@@ -43,6 +43,16 @@ export interface RoadmapPost extends Meta {
   blocks: readonly any[];
 }
 
+export interface AnnouncementsPost extends Meta {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  badge: string;
+  blocks: readonly any[];
+}
+
 function calculateReadingTime(text: string): string {
   const wordsPerMinute = 200;
   const wordsPerImage = 12;
@@ -147,6 +157,32 @@ export async function fileToRoadmapPost(
     image: data.image,
     version: data.version,
     stage: data.stage,
+    blocks: data.blocks ?? [],
+    locale,
+    objectID: `${resourceName}:${locale}:${filename}`,
+    sourceFilepath,
+    gitlog: await gitlog(sourceFilepath),
+  };
+}
+
+export async function fileToAnnouncementsPost(
+  locale: string,
+  filename: string
+): Promise<AnnouncementsPost> {
+  const resourceName = "announcements";
+
+  const sourceFilepath = path.join("_data", resourceName, filename);
+  const sourceData = await yaml(sourceFilepath);
+  const data = await translateFile(locale, resourceName, filename);
+  const slug = slugify(sourceData.title);
+
+  return {
+    slug,
+    id: data.id,
+    title: data.title,
+    description: data.description,
+    image: data.image,
+    badge: data.badge,
     blocks: data.blocks ?? [],
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
@@ -274,6 +310,10 @@ interface RoadmapPostsData extends SimpleData<RoadmapPost> {
   readonly idMap: Map<string, RoadmapPost>;
 }
 
+interface AnnouncementsPostsData extends SimpleData<AnnouncementsPost> {
+  readonly idMap: Map<string, AnnouncementsPost>;
+}
+
 export async function getPosts(): Promise<PostsData> {
   const resourceName = "posts";
   const filenameMap = new Map<string, Post>();
@@ -301,6 +341,24 @@ export async function getRoadmapPosts(): Promise<RoadmapPostsData> {
   for (const locale of locales) {
     for (const filename of filenames) {
       const data = await fileToRoadmapPost(locale, filename);
+
+      idMap.set(`${locale}:${data.id}`, data);
+      filenameMap.set(`${locale}:${filename}`, data);
+    }
+  }
+
+  return { filenameMap, filenames, idMap, resourceName };
+}
+
+export async function getAnnouncements(): Promise<AnnouncementsPostsData> {
+  const resourceName = "announcements";
+  const filenameMap = new Map<string, AnnouncementsPost>();
+  const idMap = new Map<string, AnnouncementsPost>();
+  const filenames = await scandir(`_data/${resourceName}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = await fileToAnnouncementsPost(locale, filename);
 
       idMap.set(`${locale}:${data.id}`, data);
       filenameMap.set(`${locale}:${filename}`, data);
