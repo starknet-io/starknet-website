@@ -3,3 +3,5 @@ title: Debuggin link preview
 template: content
 breadcrumbs: true
 page_last_updated: true
+blocks:
+  - type: bridges
