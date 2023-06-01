@@ -1,0 +1,8 @@
+id: 067c178c-1285-4ff3-95dd-2118ea6fdf89
+title: "A new test page "
+template: content
+parent_page: ""
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: home_hero
