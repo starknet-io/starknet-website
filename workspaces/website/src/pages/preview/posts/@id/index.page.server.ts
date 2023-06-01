@@ -10,9 +10,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 
   return {
     pageContext: {
-      redirectTo: `${data.locale}/posts/${
-        data.category ? `${data.category}/` : ""
-      }${data.slug}`,
+      redirectTo: `${data?.locale}/posts/${
+        data?.category ? `${data?.category}/` : ""
+      }${data?.slug}`,
     },
   };
 }

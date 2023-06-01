@@ -511,7 +511,7 @@ export default class API {
     predicate: (pr: GitHubPull) => boolean,
   ) {
     const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
-      `${this.originRepoURL}/deployments`,
+      `${this.originRepoURL}/deployments?ref=${head}&environment=Starknet Website ${head}`,
     );
     return deployments;//.filter(
       // pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
@@ -901,16 +901,17 @@ export default class API {
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
     const deploys = await this.getDeploys(branch);
-    const resp: {environment_url: string }[] = await this.request(
+    const resp: {environment_url: string, environment: string, state: string }[] = await this.request(
       // @ts-expect-error
       `${this.originRepoURL}/deployments/${deploys.id}/statuses`,
-    );
-    const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
-      `${this.originRepoURL}/commits/${sha}/status`,
-    );
+      );
+      const target_url = resp.find(item => item.environment === `Starknet Website ${branch}`).environment_url;
+      const commitResp: { statuses: GitHubCommitStatus[] } = await this.request(
+        `${this.originRepoURL}/commits/${sha}/status`,
+        );
     return commitResp.statuses.map(s => ({
       context: s.context,
-      target_url: resp[0].environment_url,
+      target_url,
       state:
         s.state === GitHubCommitStatusState.Success ? PreviewState.Success : PreviewState.Other,
     }));
@@ -1529,3 +1530,4 @@ function dirname(path: string): string {
 
   return folderpath;
 }
+

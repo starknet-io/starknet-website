@@ -7,10 +7,10 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext.locale,
     pageContext.event
   );
-
+    console.log('data je ', data)
   return {
     pageContext: {
-      redirectTo: data.link,
+      redirectTo: data?.link,
     },
   };
 }
