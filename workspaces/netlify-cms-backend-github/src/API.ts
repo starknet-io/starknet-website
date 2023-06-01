@@ -505,19 +505,6 @@ export default class API {
     );
   }
 
-  // async getAllDeployments(
-  //   head: string | undefined,
-  //   state: PullRequestState,
-  //   predicate: (pr: GitHubPull) => boolean,
-  
-  // ) {
-  //   const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
-  //     `${this.originRepoURL}/deployments`,
-  //   );
-  //   return deployments;//.filter(
-  //     // pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
-  //   // );
-  // }
 
   async getOpenAuthoringPullRequest(branch: string, pullRequests: GitHubPull[]) {
     // we can't use labels when using open authoring
@@ -568,36 +555,22 @@ export default class API {
     }
   }
 
-  // async getDeploys(branch: string) {
-  //   if (this.useOpenAuthoring) {
-  //     const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
-  //       withCmsLabel(pr, this.cmsLabelPrefix),);
-  //     return deploys;
-  //   } else {
-  //     const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
-  //       withCmsLabel(pr, this.cmsLabelPrefix),);
-  //     if (deploys.length <= 0) {
-  //       throw new EditorialWorkflowError('content is not under editorial workflow', true);
-  //     }
-  //     return deploys[0];
-  //   }
-  // }
-
   async getShaPreviewDeployment(sha: string) {
-    const shaAllDeployments: Octokit.PullsListCommitsResponseItem[] =
+    const shaPreviewDeployments: Octokit.PullsListCommitsResponseItem[] =
       await this.request(`${this.originRepoURL}/deployments`, {
         params: {
-          sha
+          sha,
+          environment: 'Preview – starknet-website'
         }
       });
-    const shaPreviewDeployment = shaAllDeployments.find(d => d.environment === 'Preview – starknet-website')
-    if (!shaPreviewDeployment) {
+      
+    if (!(shaPreviewDeployments?.length > 0)) {
       throw new EditorialWorkflowError(
         "No preview deployment found for this commit",
         true
       );
     }
-    return shaPreviewDeployment;
+    return shaPreviewDeployments[0];
   }
 
   async getPullRequestCommits(number: number) {
