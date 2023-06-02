@@ -11,7 +11,6 @@ import {
   readFile,
   localForage,
   DEFAULT_PR_BODY,
-  branchFromContentKey,
   throwOnConflictingBranches,
   // @ts-expect-error
 } from 'netlify-cms-lib-util';
@@ -28,7 +27,7 @@ import type { QueryOptions, MutationOptions, OperationVariables } from 'apollo-c
 import type { GraphQLError } from 'graphql';
 import type { Octokit } from '@octokit/rest';
 
-const CMS_BRANCH_PREFIX = `${import.meta.env.VITE_GIT_BRANCH_NAME}-cms`;
+import { CMS_BRANCH_PREFIX, branchFromContentKey } from './utils'
 
 const NO_CACHE = 'no-cache';
 const CACHE_FIRST = 'cache-first';
