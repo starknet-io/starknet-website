@@ -12,7 +12,6 @@ import {
   localForage,
   DEFAULT_PR_BODY,
   branchFromContentKey,
-  CMS_BRANCH_PREFIX,
   throwOnConflictingBranches,
   // @ts-expect-error
 } from 'netlify-cms-lib-util';
@@ -28,6 +27,8 @@ import type { NormalizedCacheObject } from 'apollo-cache-inmemory';
 import type { QueryOptions, MutationOptions, OperationVariables } from 'apollo-client';
 import type { GraphQLError } from 'graphql';
 import type { Octokit } from '@octokit/rest';
+
+const CMS_BRANCH_PREFIX = `${import.meta.env.VITE_GIT_BRANCH_NAME}-cms`;
 
 const NO_CACHE = 'no-cache';
 const CACHE_FIRST = 'cache-first';

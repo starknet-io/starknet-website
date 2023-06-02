@@ -9,7 +9,6 @@ import {
   localForage,
   basename,
   readFileMetadata,
-  CMS_BRANCH_PREFIX,
   generateContentKey,
   DEFAULT_PR_BODY,
   MERGE_COMMIT_MESSAGE,
@@ -34,6 +33,8 @@ import type {
 } from 'netlify-cms-lib-util';
 import type { Semaphore } from 'semaphore';
 import type { Octokit } from '@octokit/rest';
+
+const CMS_BRANCH_PREFIX = `${import.meta.env.VITE_GIT_BRANCH_NAME}-cms`;
 
 type GitHubUser = Octokit.UsersGetAuthenticatedResponse;
 type GitCreateTreeParamsTree = Octokit.GitCreateTreeParamsTree;
