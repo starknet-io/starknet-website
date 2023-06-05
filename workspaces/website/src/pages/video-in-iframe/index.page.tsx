@@ -1,6 +1,6 @@
 import { DocumentProps } from "src/renderer/types";
 
-export default function Page() {
+export function Page() {
   return (
     <div
       style={{
