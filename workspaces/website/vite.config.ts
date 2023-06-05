@@ -10,4 +10,19 @@ export default {
   build: {
     emptyOutDir: true,
   },
+  ssr: {
+    noExternal: [
+      "react-countdown-circle-timer",
+      "react-share",
+      "react-use",
+      "react-icons",
+      "@algolia/autocomplete-js",
+      "@algolia/autocomplete-core",
+      "@algolia/autocomplete-plugin-algolia-insights",
+      "@algolia/autocomplete-plugin-recent-searches",
+      "@algolia/autocomplete-plugin-query-suggestions",
+      "@algolia/autocomplete-shared",
+      "@algolia/autocomplete-preset-algolia",
+    ],
+  },
 } as UserConfig;
