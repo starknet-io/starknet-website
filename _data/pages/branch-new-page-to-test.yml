@@ -1,0 +1,7 @@
+id: 6b2c6887-9e29-45e5-a146-abf9c4bc46ee
+title: Branch new page to test
+template: landing
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: home_hero
