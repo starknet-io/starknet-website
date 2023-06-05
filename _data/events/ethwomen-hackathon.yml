@@ -6,7 +6,7 @@ description: A female-focused and inclusive online and in-person event series
 url: https://www.ethwomen.com/
 start_date: 2023-08-15T07:00:10.946Z
 end_date: 2023-08-16T15:00:10.951Z
-show_in_past_events: true
+show_in_past_events: false
 image: /assets/fud0_cui_400x400.jpg
 location: north_america
 city: Toronto
