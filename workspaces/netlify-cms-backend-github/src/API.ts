@@ -9,21 +9,20 @@ import {
   localForage,
   basename,
   readFileMetadata,
-  CMS_BRANCH_PREFIX,
   generateContentKey,
   DEFAULT_PR_BODY,
   MERGE_COMMIT_MESSAGE,
   PreviewState,
   parseContentKey,
-  branchFromContentKey,
   isCMSLabel,
   labelToStatus,
   statusToLabel,
-  contentKeyFromBranch,
   requestWithBackoff,
   unsentRequest,
   throwOnConflictingBranches,
 } from 'netlify-cms-lib-util';
+
+import { CMS_BRANCH_PREFIX , contentKeyFromBranch, branchFromContentKey} from './utils'
 
 import type {
   AssetProxy,
@@ -34,6 +33,7 @@ import type {
 } from 'netlify-cms-lib-util';
 import type { Semaphore } from 'semaphore';
 import type { Octokit } from '@octokit/rest';
+
 
 type GitHubUser = Octokit.UsersGetAuthenticatedResponse;
 type GitCreateTreeParamsTree = Octokit.GitCreateTreeParamsTree;
@@ -501,7 +501,7 @@ export default class API {
     );
 
     return pullRequests.filter(
-      pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
+      pr => pr.head.ref.startsWith(`${ CMS_BRANCH_PREFIX }/`) && predicate(pr),
     );
   }
 
@@ -1232,8 +1232,8 @@ export default class API {
       const existingBranch = await this.getBranch(branchName);
       await this.createBranch(
         existingBranch.name.replace(
-          new RegExp(`${CMS_BRANCH_PREFIX}/`),
-          `${CMS_BRANCH_PREFIX}_${Date.now()}/`,
+          new RegExp(`${ CMS_BRANCH_PREFIX }/`),
+          `${ CMS_BRANCH_PREFIX }_${Date.now()}/`,
         ),
         existingBranch.commit.sha,
       );
