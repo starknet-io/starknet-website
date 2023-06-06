@@ -65,13 +65,14 @@ blocks:
         withIllustration: true
       - type: image_icon_link_card
         color: peach
-        title: Starknet 101
-        description: Get up and running developing on Starknet through this series of
-          video tutorials.
+        title: Starknet Basecamp
+        description: Sign up for the next basecamp and learn everything about Starknet -
+          from STARK mathematics to Cairo 1 smart contracts best practices.
         icon: /assets/green.svg
         link:
-          custom_title: View
-          custom_internal_link: /tutorials/cairo_101
+          custom_title: Sign up
+          custom_internal_link: ""
+          custom_external_link: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
         withIllustration: true
       - type: image_icon_link_card
         color: cyan
