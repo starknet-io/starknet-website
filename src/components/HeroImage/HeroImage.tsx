@@ -28,7 +28,8 @@ type Props = {
     | "nodes_and_services";
   buttonText?: string;
   buttonUrl?: string;
-  leftBoxMaxWidth?: number
+  onButtonClick?: () => void;
+  leftBoxMaxWidth?: number;
 };
 
 const heroStyles = {
@@ -80,6 +81,7 @@ export const HeroImage = ({
   variant = "dapps",
   buttonText,
   buttonUrl,
+  onButtonClick,
   leftBoxMaxWidth,
 }: Props) => {
   return (
@@ -112,7 +114,13 @@ export const HeroImage = ({
       </Box>
 
       <Box zIndex={2} position="relative" height={{ lg: "420px" }}>
-        <Container py={{ base: "64px", lg: "0" }} px={{ base: "1rem", lg: "0" }} pr={{ base: "64px", md: "64px" }} height="full" maxW="none">
+        <Container
+          py={{ base: "64px", lg: "0" }}
+          px={{ base: "1rem", lg: "0" }}
+          pr={{ base: "64px", md: "64px" }}
+          height="full"
+          maxW="none"
+        >
           <Flex
             direction={{ base: "column", lg: "row" }}
             align={{ lg: "center" }}
@@ -187,15 +195,15 @@ export const HeroImage = ({
                       height="1px"
                       position="relative"
                       _after={{
-                          position: "absolute",
-                          content: `""`,
-                          bottom: "-1.5px",
-                          right: 0,
-                          width: 0,
-                          height: 0,
-                          borderTop: "2px solid transparent",
-                          borderBottom: "2px solid transparent",
-                          borderLeft: "5px solid #D672EF"
+                        position: "absolute",
+                        content: `""`,
+                        bottom: "-1.5px",
+                        right: 0,
+                        width: 0,
+                        height: 0,
+                        borderTop: "2px solid transparent",
+                        borderBottom: "2px solid transparent",
+                        borderLeft: "5px solid #D672EF",
                       }}
                     />
                   </Box>
@@ -214,7 +222,16 @@ export const HeroImage = ({
                   >
                     {description}
                   </Text>
-                  {!!buttonText && <Button variant="solid" style={{alignSelf:"flex-start"}} href={buttonUrl}>{buttonText}</Button>}
+                  {!!buttonText && (
+                    <Button
+                      variant="solid"
+                      style={{ alignSelf: "flex-start" }}
+                      href={buttonUrl}
+                      onClick={onButtonClick}
+                    >
+                      {buttonText}
+                    </Button>
+                  )}
                 </Stack>
               </Stack>
               {/* <Stack direction={{ base: "column", md: "row" }} spacing="3">
