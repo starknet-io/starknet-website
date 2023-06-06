@@ -120,7 +120,7 @@ export default function PostByCategory({
           </Flex>
           <Divider mt="8px" mb="32px" />
           {post.post_type === "video" ? (
-            <Flex mb={!post.blocks.length ? "32px" : 0} direction="column">
+            <Flex mb={!post.blocks?.length ? "32px" : 0} direction="column">
               <YoutubePlayer videoId={videoId} />
               {!post.blocks.length && <Text
                 pt={2}
