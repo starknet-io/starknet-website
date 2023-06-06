@@ -18,8 +18,7 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Read the docs
-        description:
-          Read the official Starknet documentation to build your first
+        description: Read the official Starknet documentation to build your first
           contracts and dapps.
         icon: /assets/docs.svg
         link:
@@ -28,8 +27,10 @@ blocks:
         withIllustration: true
       - type: image_icon_link_card
         color: blue-default
-        title: "Learn through tutorials "
-        description: Learn from Starknet's community of developers and technologists.
+        title: Read Starknet book
+        description: Developed by the Starknet community, the Starknet book teaches
+          Cairo programming and Starknet development. Start reading and conquer
+          the Ethereum world.
         icon: /assets/tutorials.svg
         link:
           custom_external_link: ""
@@ -39,8 +40,7 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: "Set up a local environment "
-        description:
-          Learn how to get your dev environment up and running so you can
+        description: Learn how to get your dev environment up and running so you can
           start building.
         icon: /assets/local-environment.svg
         link:
@@ -66,8 +66,7 @@ blocks:
       - type: image_icon_link_card
         color: peach
         title: Starknet 101
-        description:
-          Get up and running developing on Starknet through this series of
+        description: Get up and running developing on Starknet through this series of
           video tutorials.
         icon: /assets/green.svg
         link:
@@ -93,7 +92,7 @@ blocks:
     blocks:
       - type: link_list
         heading: "Getting started "
-        listSize: "lg"
+        listSize: lg
         blocks:
           - link:
               custom_title: "Introduction "
@@ -112,7 +111,7 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/getting_started/user_auth/
       - type: link_list
         heading: Architecture & concepts
-        listSize: "lg"
+        listSize: lg
         blocks:
           - link:
               custom_title: Block structure
@@ -131,7 +130,7 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
       - type: link_list
         heading: "Tools & resources "
-        listSize: "lg"
+        listSize: lg
         blocks:
           - link:
               custom_title: Starknet block explorers
