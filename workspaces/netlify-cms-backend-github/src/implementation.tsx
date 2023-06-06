@@ -17,14 +17,13 @@ import {
   getPreviewStatus,
   runWithLock,
   blobToFileObj,
-  contentKeyFromBranch,
   unsentRequest,
-  branchFromContentKey,
 } from 'netlify-cms-lib-util';
 
 import AuthenticationPage from './AuthenticationPage';
 import API, { API_NAME } from './API';
 import GraphQLAPI from './GraphQLAPI';
+import { contentKeyFromBranch, branchFromContentKey } from './utils'
 
 import type { Octokit } from '@octokit/rest';
 import type {
