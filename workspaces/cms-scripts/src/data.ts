@@ -89,7 +89,7 @@ export async function fileToPost(
   if (data.post_type === "video") {
     timeToConsume = `${formatDuration(
       data.video?.data?.contentDetails?.duration || ""
-    )} watch`;
+    )} ${data.video?.data?.contentDetails?.duration ? "watch" : ""}`;
   } else {
     timeToConsume = `${calculateReadingTime(fullText)} read`;
   }
