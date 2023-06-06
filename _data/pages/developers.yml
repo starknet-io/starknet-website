@@ -31,10 +31,10 @@ blocks:
         description: Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
-        icon: /assets/tutorials.svg
+        icon: /assets/docs.svg
         link:
-          custom_external_link: ""
-          custom_internal_link: /tutorials/
+          custom_external_link: https://book.starknet.io/
+          custom_internal_link: ""
           custom_title: View
         withIllustration: true
       - type: image_icon_link_card
@@ -56,12 +56,12 @@ blocks:
     blocks:
       - type: image_icon_link_card
         color: purple
-        title: "Starknet ByteSized Series "
-        description: A series of short videos that cover the basic concepts of Starknet.
-        icon: /assets/orange.svg
+        title: Learn through tutorials
+        description: "Learn from the Starknet's community of developers and technologies. "
+        icon: /assets/7.svg
         link:
           custom_title: View
-          custom_internal_link: /tutorials/bytesized_series
+          custom_internal_link: /tutorials/
         withIllustration: true
       - type: image_icon_link_card
         color: peach
