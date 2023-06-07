@@ -7,7 +7,7 @@ export const roadmapVersionsCollectionConfig = {
   label_singular: "Roadmap version",
   identifier_field: "id",
   folder: "_data/roadmap-versions",
-  slug: "{{version}} - {{impact}}",
+  slug: "{{version}}",
   summary: "{{version}} - {{impact}}",
   create: true,
   format: "yml",
@@ -43,7 +43,8 @@ export const roadmapVersionsCollectionConfig = {
         { label: "Pink", value: "community_and_events" },
         { label: "Grey", value: "stark_struct" },
       ],
+      required: true,
       crowdin: false,
-    }
+    },
   ],
 } satisfies CmsCollection;
