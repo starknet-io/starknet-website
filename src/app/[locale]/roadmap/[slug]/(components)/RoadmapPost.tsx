@@ -7,7 +7,6 @@ import {
   Divider,
   Flex,
   Heading,
-  Img,
   Spacer,
 } from "@chakra-ui/react";
 import { PageLayout } from "@ui/Layout/PageLayout";
