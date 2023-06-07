@@ -34,6 +34,7 @@ blocks:
         website_url: https://www.orbiter.finance
         image: /assets/orbiter.jpg
         twitter: https://twitter.com/Orbiter_Finance
+    randomize: true
   - type: card_list
     title: What are fiat on-ramps?
     description: Fiat on-ramps are service providers that allows for the exchange of
@@ -51,3 +52,4 @@ blocks:
         twitter: https://twitter.com/RampNetwork
         link_url: https://ramp.network
         website_url: https://ramp.network
+    randomize: true
