@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Img } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
