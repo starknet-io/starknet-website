@@ -37,6 +37,9 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v4
+
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
         env:
