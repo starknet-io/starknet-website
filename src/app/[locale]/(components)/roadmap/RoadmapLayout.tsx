@@ -33,7 +33,8 @@ export default function RoadmapLayout({
               onButtonClick={() => setIsOpen(true)}
             />
             <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Flex
+            <Box my="56px"></Box>
+            {/* <Flex
               as="ul"
               sx={{ overflowX: "auto" }}
               gap="24px"
@@ -62,7 +63,7 @@ export default function RoadmapLayout({
                   Roadmap
                 </Button>
               </Box>
-            </Flex>
+            </Flex> */}
             {children}
           </Container>
         }
