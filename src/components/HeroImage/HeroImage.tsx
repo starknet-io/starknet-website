@@ -9,6 +9,7 @@ import {
   Stack,
   Text,
   useBreakpointValue,
+  useColorModeValue,
 } from "src/libs/chakra-ui";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
@@ -25,14 +26,22 @@ type Props = {
     | "learn"
     | "build"
     | "community"
-    | "nodes_and_services";
+    | "nodes_and_services"
+    | "roadmap";
   buttonText?: string;
   buttonUrl?: string;
   onButtonClick?: () => void;
   leftBoxMaxWidth?: number;
 };
 
-const heroStyles = {
+type HeroStyleObject = {
+  img: string;
+  gradient: string;
+  gradientDark?: string;
+  bg?: string;
+  bgDark?: string;
+};
+const heroStyles: Record<string, HeroStyleObject> = {
   dapps: {
     img: "/assets/ecosystem/dapps.svg",
     gradient:
@@ -73,6 +82,13 @@ const heroStyles = {
     gradient:
       "linear(262.88deg, hero-gradient-nodes-and-services-a 21.62%, hero-gradient-nodes-and-services-b 100.38%)",
   },
+  roadmap: {
+    img: "/assets/ecosystem/roadmap.svg",
+    gradient:
+      "linear-gradient(280.23deg, #EBF2F7 0%, rgba(235, 242, 247, 0) 97.73%)",
+    gradientDark: "linear-gradient(259.71deg, #414548 2.88%, #1C1D24 96.77%)",
+    bg: "#F8F8F8",
+  },
 };
 
 export const HeroImage = ({
@@ -84,12 +100,16 @@ export const HeroImage = ({
   onButtonClick,
   leftBoxMaxWidth,
 }: Props) => {
+  const { bg = "card-bg", bgDark = "card-bg" } = heroStyles[variant];
   return (
     <Box
       as="section"
-      bg="card-bg"
+      bg={useColorModeValue(bg, bgDark)}
       borderRadius="32px"
-      bgGradient={heroStyles[variant].gradient}
+      bgGradient={useColorModeValue(
+        heroStyles[variant].gradient,
+        heroStyles[variant].gradientDark || heroStyles[variant].gradient
+      )}
       position="relative"
       zIndex={0}
       overflow="hidden"

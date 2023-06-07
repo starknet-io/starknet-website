@@ -28,8 +28,8 @@ export default function RoadmapLayout({
             <HeroImage
               title="Roadmap & product updates"
               description="See what we’re building, what’s coming next and keep up to date on product announcements"
-              variant="dapps"
-              buttonText="Subscribe to updates"
+              variant="roadmap"
+              buttonText="Notify me"
               onButtonClick={() => setIsOpen(true)}
             />
             <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
