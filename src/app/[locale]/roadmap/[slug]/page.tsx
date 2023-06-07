@@ -4,6 +4,7 @@ import RoadmapPost from "./(components)/RoadmapPost";
 import {
   getRoadmapPostBySlug,
   getRoadmapPosts,
+  getRoadmapVersions,
 } from "workspaces/cms-data/src/roadmap";
 import getBlocksDynamicData from "../../(components)/utils/getBlocksDynamicData";
 
@@ -35,11 +36,16 @@ export default async function Page({
   try {
     const roadmapPost = await getRoadmapPostBySlug(slug, locale);
     const blocksDynamicData = await getBlocksDynamicData(locale);
+    const roadmapVersions = await getRoadmapVersions(locale);
+
     return (
       <RoadmapPost
         roadmapPost={roadmapPost}
         locale={locale}
         blocksDynamicData={blocksDynamicData}
+        roadmapVersion={
+          roadmapVersions.find((version) => version.id === roadmapPost.version)!
+        }
       />
     );
   } catch (err) {

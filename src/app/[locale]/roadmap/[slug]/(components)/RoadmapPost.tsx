@@ -1,5 +1,6 @@
 "use client";
 import {
+  Box,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -15,17 +16,24 @@ import Link from "next/link";
 import React from "react";
 import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
-import { RoadmapPost as RoadmapPostType } from "workspaces/cms-data/src/roadmap";
+import {
+  RoadmapPost as RoadmapPostType,
+  RoadmapVersion,
+} from "workspaces/cms-data/src/roadmap";
+import RoadmapPostVersion from "../../(components)/RoadmapPostVersion";
 
 export default function RoadmapPost({
   roadmapPost,
   locale,
   blocksDynamicData,
+  roadmapVersion,
 }: {
   roadmapPost: RoadmapPostType;
+  roadmapVersion: RoadmapVersion;
   locale: string;
   blocksDynamicData: BlocksDynamicData;
 }) {
+  console.log("roadmapPost", roadmapPost);
   return (
     <PageLayout
       breadcrumbs={
@@ -77,25 +85,15 @@ export default function RoadmapPost({
       ).fromNow()}`}
       main={
         <Container maxWidth="846px">
-          {/* <Box mb={"16px"}>
-            <Badge variant="stark_at_home" textTransform="capitalize">
-              {roadmapPost.post_type}
-            </Badge>
-          </Box> */}
+          <Box mb={"2rem"}>
+            <RoadmapPostVersion roadmapVersion={roadmapVersion} />
+          </Box>
           <Heading variant="h2" color="heading-navy-fg">
             {roadmapPost.title}
           </Heading>
-          {/* <Flex mt="16px">
-            <HStack>
-              <Text fontSize="sm" color="muted">
-                {moment(roadmapPost.published_date).format("MMM DD,YYYY")} ·
-              </Text>
-              <Text fontSize="sm" color="muted">
-                {roadmapPost.timeToConsume}
-              </Text>
-            </HStack>
-            <Spacer />
-          </Flex> */}
+          <Heading variant="h4" mt="24px" mb="2rem" fontSize="sm">
+            {roadmapPost.availability}
+          </Heading>
           <Divider mt="8px" mb="32px" />
           <Flex direction="column" gap="32px">
             {roadmapPost.blocks?.map((block, i) => (
