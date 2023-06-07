@@ -1,12 +1,12 @@
 "use client";
 
-import { Box, Button, Container, Flex } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { useBoolean } from "react-use";
 import RoadmapSubscribeForm from "./RoadmapSubscribeForm";
-import Link from "next/link";
+// import Link from "next/link";
 
 type RoadmapLayoutProps = {
   children: ReactNode;
