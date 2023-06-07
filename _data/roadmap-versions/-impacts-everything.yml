@@ -3,3 +3,4 @@ version: v0.12
 impact: Throughput & latency
 bgColor: pink
 textColor: black
+color: foundation
