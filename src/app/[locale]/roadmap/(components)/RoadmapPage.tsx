@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Grid, Heading } from "@chakra-ui/react";
+import { Box, Grid, Heading, Icon } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { roadmapStagesFields } from "workspaces/cms-config/src/collections/roadmapPosts";
 import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
@@ -43,18 +43,24 @@ export default function RoadmapPage({
         const stagePosts = roadmapPostsByStage[stage.value];
 
         return (
-          <Box key={stage.value} mb="4rem">
-            <Heading variant="h3" mb="2rem">
-              {stage.label}
+          <Box key={stage.value} mb="5rem">
+            <Heading variant="h4" display="flex" alignItems="center" mb="2rem" color="heading-navy-fg">
+              <Icon
+                boxSize="18px"
+                color="list-card-icon-fg"
+                as={stage.icon}
+                mr="12px"
+              />
+              {stage.label} ({stagePosts.length})
             </Heading>
             <Grid
               templateColumns={{
                 base: "repeat(auto-fit, minmax(300px, 1fr))",
-                lg: "repeat(auto-fit, minmax(300px, 1fr))",
-                xl: "repeat(auto-fit, minmax(300px, 299px))",
+                lg: "1fr 1fr 1fr",
+                xl: "1fr 1fr 1fr",
               }}
               templateRows="1fr"
-              columnGap="24px"
+              columnGap="32px"
               rowGap="48px"
               // justifyContent="center"
             >

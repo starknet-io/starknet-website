@@ -78,15 +78,6 @@ export default function RoadmapPost({
       ).fromNow()}`}
       main={
         <Container maxWidth="846px">
-          {roadmapPost.image ? (
-            <Img
-              mb="32px"
-              borderRadius={"8px"}
-              src={roadmapPost.image}
-              alt={roadmapPost.title}
-            />
-          ) : null}
-
           {/* <Box mb={"16px"}>
             <Badge variant="stark_at_home" textTransform="capitalize">
               {roadmapPost.post_type}

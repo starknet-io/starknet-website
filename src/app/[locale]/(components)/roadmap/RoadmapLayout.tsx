@@ -40,7 +40,7 @@ export default function RoadmapLayout({
               borderBottomWidth="1px"
               borderColor="tabs-main-br"
               width="100%"
-              my="76px"
+              my="56px"
             >
               <Box>
                 <Button

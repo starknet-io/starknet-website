@@ -31,16 +31,19 @@ export const roadmapVersionsCollectionConfig = {
       crowdin: true,
     },
     {
-      name: "bgColor",
-      label: "Background color",
-      widget: "string",
+      name: "color",
+      label: "Color",
+      widget: "select",
+      options: [
+        { label: "Green", value: "foundation" },
+        { label: "Yellow", value: "community_calls" },
+        { label: "Red", value: "engineering" },
+        { label: "Blue", value: "stark_math" },
+        { label: "Purple", value: "youtube" },
+        { label: "Pink", value: "community_and_events" },
+        { label: "Grey", value: "stark_struct" },
+      ],
       crowdin: false,
-    },
-    {
-      name: "textColor",
-      label: "Text color",
-      widget: "string",
-      crowdin: false,
-    },
+    }
   ],
 } satisfies CmsCollection;

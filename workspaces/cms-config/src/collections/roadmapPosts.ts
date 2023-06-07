@@ -1,18 +1,23 @@
 import { topLevelBlocks } from "../blocks";
 import { CmsCollection } from "../types";
+import { BiBullseye, BiWrench } from "react-icons/bi";
+import { AiOutlineAppstore } from "react-icons/ai";
 
 export const roadmapStagesFields = [
   {
     label: "Building Now",
     value: "building-now",
+    icon: BiWrench
   },
   {
     label: "Building Next",
     value: "building-next",
+    icon: BiBullseye
   },
   {
     label: "Backlog",
     value: "backlog",
+    icon: AiOutlineAppstore
   },
 ];
 
@@ -40,11 +45,6 @@ export const roadmapPostsCollectionConfig = {
       label: "Post Title",
       widget: "string",
       crowdin: true,
-    },
-    {
-      name: "image",
-      label: "Background Image",
-      widget: "image",
     },
     {
       name: "availability",

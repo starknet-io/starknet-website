@@ -1,4 +1,5 @@
-import { Flex, Tag, TagLabel } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import { Badge } from "@ui/Badge";
 import { RoadmapVersion } from "workspaces/cms-data/src/roadmap";
 
 export default function RoadmapPostVersion({
@@ -8,16 +9,12 @@ export default function RoadmapPostVersion({
 }) {
   return (
     <Flex gap="0.5rem" flexWrap="wrap">
-      <Tag bg={roadmapVersion?.bgColor}>
-        <TagLabel color={roadmapVersion?.textColor}>
-          {roadmapVersion?.version}
-        </TagLabel>
-      </Tag>
-      <Tag bg={roadmapVersion?.bgColor}>
-        <TagLabel color={roadmapVersion?.textColor}>
-          {roadmapVersion?.impact}
-        </TagLabel>
-      </Tag>
+      <Badge variant={roadmapVersion?.color}>
+        {roadmapVersion?.version}
+      </Badge>
+      <Badge variant={roadmapVersion?.color}>
+        {roadmapVersion?.impact}
+      </Badge>
     </Flex>
   );
 }

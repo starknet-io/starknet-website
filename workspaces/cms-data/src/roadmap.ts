@@ -8,9 +8,9 @@ export interface RoadmapPost extends Meta {
   readonly id: string;
   readonly slug: string;
   readonly title: string;
-  readonly image: string;
   readonly version: string;
   readonly stage: string;
+  readonly availability: string;
   readonly blocks: readonly TopLevelBlock[];
 }
 
@@ -18,8 +18,7 @@ export interface RoadmapVersion extends Meta {
   readonly id: string;
   readonly version: string;
   readonly impact: string;
-  readonly bgColor: string;
-  readonly textColor: string;
+  readonly color: string;
 }
 
 export async function getRoadmapPosts(

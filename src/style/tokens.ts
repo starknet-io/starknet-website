@@ -187,6 +187,8 @@ export const tokens = {
       "gradient-pink-b": "  #E8D4E3",
       "gradient-blue-default-a": " #E9F2F8 ",
       "gradient-blue-default-b": "  #FBF6F1",
+      "roadmap-card-border-color": "#CCCCCC",
+      "roadmap-card-bg-color": "#FFFFFF",
     },
 
     dark: {
@@ -282,6 +284,7 @@ export const tokens = {
       "list-card-sm-title-fg": "#CCCCCC",
       "list-card-sm-title-link-fg": "#AFCAFF",
       "community-card-border-color": "#313131",
+      "roadmap-card-bg-color": "#313131",
       "list-card-lg-desc-fg": "#CCCCCC",
       "list-card-img-bg": "#000",
       "list-card-icon-fg": "#FFFFFF",
@@ -376,6 +379,7 @@ export const tokens = {
       "gradient-pink-b": "  #223033",
       "gradient-blue-default-a": " #252525 ",
       "gradient-blue-default-b": "  #1B1B1B",
+      "roadmap-card-border-color": "#5C5C5C"
     },
   },
 };
@@ -1116,5 +1120,13 @@ export const semanticTokens = {
       default: tokens.colors.light["gradient-blue-default-b"],
       _dark: tokens.colors.dark["gradient-blue-default-b"],
     },
+    "roadmap-card-border-color": {
+      default: tokens.colors.light["roadmap-card-border-color"],
+      _dark: tokens.colors.dark["roadmap-card-border-color"],
+    },
+    "roadmap-card-bg-color": {
+      default: tokens.colors.light["roadmap-card-bg-color"],
+      _dark: tokens.colors.dark["roadmap-card-bg-color"],
+    }
   },
 };
