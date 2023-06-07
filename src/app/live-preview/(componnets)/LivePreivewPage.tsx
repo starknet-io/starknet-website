@@ -25,6 +25,7 @@ export default function LivePreivewPage({
   blocksDynamicData,
   topics,
   categories,
+  roadmapVersions,
 }: LivePreivewPageProps) {
   const data = usePreviewData();
 
@@ -67,6 +68,9 @@ export default function LivePreivewPage({
         <RoadmapPost
           roadmapPost={data.payload}
           blocksDynamicData={blocksDynamicData}
+          roadmapVersion={
+            roadmapVersions.find((v) => v.version === data.payload.version)!
+          }
           locale="en"
         />
       )}

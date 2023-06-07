@@ -54,19 +54,31 @@ export default function App() {
         />
       );
     });
-    CMS.registerPreviewTemplate("roadmap-posts", ({ entry }) => {
+    CMS.registerPreviewTemplate("roadmap-posts", ({ entry, getAsset }) => {
       return (
-        <CustomPreview entry={entry} type={CustomPreviewType.ROADMAP_POST} />
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ROADMAP_POST}
+          getAsset={getAsset}
+        />
       );
     });
-    CMS.registerPreviewTemplate("announcements", ({ entry }) => {
+    CMS.registerPreviewTemplate("announcements", ({ entry, getAsset }) => {
       return (
-        <CustomPreview entry={entry} type={CustomPreviewType.ANNOUNCEMENTS_POST} />
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ANNOUNCEMENTS_POST}
+          getAsset={getAsset}
+        />
       );
     });
-    CMS.registerPreviewTemplate("roadmap-versions", ({ entry }) => {
+    CMS.registerPreviewTemplate("roadmap-versions", ({ entry, getAsset }) => {
       return (
-        <CustomPreview entry={entry} type={CustomPreviewType.ROADMAP_VERSION} />
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ROADMAP_VERSION}
+          getAsset={getAsset}
+        />
       );
     });
 
