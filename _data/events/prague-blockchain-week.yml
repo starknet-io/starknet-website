@@ -10,6 +10,8 @@ end_date: 2023-06-11T13:14:32.310Z
 show_in_past_events: true
 image: /assets/prague-blockchain-week-2023.jpeg
 location: europe
+city: Prague
+country: Czech Republic
 tags:
   - crypto
   - blockchain
