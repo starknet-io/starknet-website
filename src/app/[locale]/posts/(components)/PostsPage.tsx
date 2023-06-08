@@ -94,21 +94,89 @@ const PostsPageLayout = ({
   topics,
 }: Pick<Props, "categories" | "params" | "topics">) => {
   const category = categories.find((c) => c.slug === params.category);
+
+  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
+
   const { items: topicsItems, refine: refineTopics } = useRefinementList({
     attribute: "topic",
     limit: 50,
     sortBy: ["count:desc"],
   });
 
-  const { isOpen, filtersCount, onOpen, onClose } =
+  function mapSelectedFilters() {
+    let result = {};
+    let refinedValues1 = topicsItems
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+    if (refinedValues1.length > 0) {
+        result["topic"] = refinedValues1;
+    }
+    return result;
+  }
+
+  const handleFilterClick = (attribute: string, value: string) => {
+    setSelectedFilters((prevFilters) => {
+      const newFilters = { ...prevFilters };
+      if (!newFilters[attribute]) {
+        newFilters[attribute] = [];
+      }
+
+      if (newFilters[attribute].includes(value)) {
+        newFilters[attribute] = newFilters[attribute].filter((val) => val !== value);
+      } else {
+        newFilters[attribute].push(value);
+      }
+      return newFilters;
+    });
+  };
+
+  const { isOpen, onOpen, onClose, setFilterOpen } =
     useMobileFiltersDrawer(topicsItems);
+  
+  const handleModalClose = () => {
+    onClose();
+    setSelectedFilters(mapSelectedFilters());
+  }
+
+  const handleApplyChanges = () => {
+    if (selectedFilters["topic"]?.length) {
+      selectedFilters["topic"].map((topic) => {
+        refineTopics(topic);
+      });
+    } else {
+      topicsItems.map((topic) => {
+        topic.isRefined && refineTopics(topic.value);
+      });
+    }
+  }
+
+  const handleApplyFilters = () => {
+    handleApplyChanges();
+    setFilterOpen(false);
+  };
+
+  const handleClearFilters = () => {
+    handleApplyChanges();
+    setSelectedFilters({});
+  };
+
+  let filtersCounts = useMemo(() => {
+    let topicsItemsCount = topicsItems.reduce((accumulator, currentObject) => {
+      if (currentObject.isRefined) {
+          return accumulator + 1;
+      } else {
+          return accumulator;
+      }
+    }, 0);
+    return topicsItemsCount;
+  }, [topicsItems]);
 
   return (
     <PageLayout
       sectionHeaderTitle={category != null ? category.name : "All posts"}
       sectionHeaderBottomContent={
         <MobileFiltersButton
-          filtersCount={filtersCount}
+          filtersCount={filtersCounts}
           onClick={onOpen}
           style={{
             marginBlock: "16px",
@@ -158,12 +226,16 @@ const PostsPageLayout = ({
       main={
         <Box>
           <CustomHits categories={categories} params={params} />
-          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+          <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
             <CustomTopics
               topics={topics}
               items={topicsItems}
-              refineTopics={refineTopics}
+              refineTopics={handleFilterClick}
+              selectedFilters={selectedFilters}
+              isDesktop={false}
             />
+            <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
+            <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
           </MobileFiltersDrawer>
         </Box>
       }
@@ -175,15 +247,26 @@ type CustomTopicsProps = {
   topics: readonly Topic[];
   items: RefinementListProps["items"];
   refineTopics: (value: string) => void;
+  selectedFilters: any;
+  isDesktop?: boolean;
 };
-function CustomTopics({ topics, items, refineTopics }: CustomTopicsProps) {
+function CustomTopics({
+  topics,
+  items,
+  refineTopics,
+  selectedFilters,
+  isDesktop = true
+}: CustomTopicsProps) {
   // const router = useRouter();
   // const pathname = usePathname()!;
   // const searchParams = useSearchParams();
   // const topicSet = useMemo(() => {
   //   return new Set(searchParams.get("topic")?.split(",") ?? []);
   // }, [searchParams]);
-
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
   const topicsDict = useMemo(() => {
     return topics.reduce((acc, topic) => {
       acc[topic.id] = topic;
@@ -202,9 +285,9 @@ function CustomTopics({ topics, items, refineTopics }: CustomTopicsProps) {
           size="sm"
           px="8px"
           // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
-          variant={topic.isRefined ? "filterActive" : "filter"}
+          variant={isDesktop ? (topic.isRefined ? "filterActive" : "filter") : checkIfFilterExists(topic.label, "topic", selectedFilters) ? "filterActive" : "filter"}
           onClick={() => {
-            refineTopics(topic.value);
+            isDesktop ? refineTopics(topic.value) : refineTopics("topic", topic.label);
 
             // const params = new URLSearchParams(searchParams);
 

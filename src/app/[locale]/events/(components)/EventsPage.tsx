@@ -303,7 +303,7 @@ const EventsPageLayout = ({
               selectedFilters={selectedFilters}
               isDesktop={false}
             />
-            <CustomType types={types} refineTypes={handleFilterClick} selectedFilters={selectedFilters} selectedFilters={selectedFilters} isDesktop={false} />
+            <CustomType types={types} refineTypes={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
             <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
             <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
           </MobileFiltersDrawer>
@@ -341,7 +341,7 @@ function CustomLocation({
           <Button
             justifyContent="flex-start"
             size="sm"
-            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") :  checkIfFilterExists(item.label, "location", selectedFilters) ? "filterActive" : "filter"}
+            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "location", selectedFilters) ? "filterActive" : "filter"}
             onClick={() => isDesktop ? refineLocation(item.value) : refineLocation("location", item.label)}
             key={i}
             style={{ order: item.value === "online_remote" ? -1 : 0 }}
