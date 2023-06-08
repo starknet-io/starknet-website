@@ -1,0 +1,12 @@
+type: community_event
+name: STARK HCMC
+description: A day full of talks, workshops, and conversations around scaling
+  web3 using Zero-Knowledge tech, Layer 2 and Layer 3 dapps in Ho Chi Minh City.
+url: https://www.starknet.asia/event/stark-hcmc
+start_date: 2023-06-17T10:00:54.321Z
+end_date: 2023-06-17T15:00:54.326Z
+show_in_past_events: false
+image: /assets/stark-hcmc.jpeg
+location: asia
+city: Ho Chi Minh City
+country: Vietnam

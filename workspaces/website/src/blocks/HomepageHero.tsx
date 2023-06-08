@@ -122,7 +122,7 @@ export const HomepageHero = ({ seo }: Props) => {
                 minW="210px"
                 variant="primaryHero"
               >
-                Build on starknet
+                Build on Starknet
               </Button>
               <Button
                 size="lg"

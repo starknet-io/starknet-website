@@ -5,14 +5,15 @@ import moment from "moment";
 import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
 
 type TutorialsCardProps = {
+  locale: string;
   hit: Tutorial;
 };
-export default function TutorialsCard({ hit }: TutorialsCardProps) {
+export default function TutorialsCard({ locale, hit }: TutorialsCardProps) {
   const date = moment(hit.published_at).format("MMM DD, YYYY");
 
   return (
     <GridCard.Root
-      href={hit.type === "youtube" ? `tutorials/video/${hit.id}` : hit.url}
+      href={hit.type === "youtube" ? `/${locale}/tutorials/video/${hit.id}` : hit.url}
       key={hit.title}
       newTab={hit.type !== "youtube"}
     >

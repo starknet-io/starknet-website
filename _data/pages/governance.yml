@@ -25,22 +25,22 @@ blocks:
       We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
   - type: link_list
     listSize: lg
-    heading: Active proposals
+    heading: Governance proposals
     blocks:
       - link:
           custom_title: Snapshot
           custom_external_link: https://snapshot.org/#/starknet.eth
         subLabel:
-          label: View active Starknet proposals on Snapshot
+          label: View Starknet proposals on Snapshot
   - type: link_list
     listSize: lg
     heading: Community discussion
     blocks:
       - link:
-          custom_title: https://community.starknet.io/c/governance/15
-          custom_external_link: Community forum
+          custom_title: Community forum
+          custom_external_link: https://community.starknet.io/c/governance/15
         subLabel:
-          label: Starknet governance discussion on Discourse
+          label: Starknet governance discussion
   - type: link_list
     listSize: lg
     heading: "Delegate discovery "
@@ -57,14 +57,33 @@ blocks:
       - link:
           custom_title: "Starknet’s governance: First phase"
           custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
+          hasIcon: true
+      - link:
+          hasIcon: true
+          custom_title: Delegate Profile Thread
+          custom_external_link: https://community.starknet.io/t/delegate-profile-thread/4049
+      - link:
+          hasIcon: true
+          custom_title: Starknet Builders’ Council - Mission Statement
+          custom_external_link: https://community.starknet.io/t/starknet-builders-council-mission-statement/4045/1
+      - link:
+          hasIcon: true
+          custom_title: "[Proposal] Starknet Alpha v0.11.0"
+          custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334/1
+      - link:
+          hasIcon: true
+          custom_title: Suggested Delegation Agreement
+          custom_internal_link: https://www.starknet.io/en/community/governance/delegation-agreement
       - link:
           custom_title: Starknet token is deployed on Ethereum
           custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
+          hasIcon: true
       - link:
           custom_title: Welcome to the world, Starknet foundation!
           custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
+          hasIcon: true
       - link:
-          custom_title: "Introducing: The StarkNet Foundation"
+          custom_title: "Introducing: The Starknet Foundation"
           custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
       - link:
           custom_title: "Part 1: StarkNet sovereignty: A decentralization proposal"
@@ -72,6 +91,8 @@ blocks:
       - link:
           custom_title: "Part 2: A Decentralization and governance proposal for Starknet"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+          hasIcon: true
       - link:
           custom_title: "Part 3: Starknet Token Design"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
+          hasIcon: true

@@ -46,6 +46,15 @@ export default function usePreviewData() {
   });
 
   useEffect(() => {
+    window.top?.postMessage(
+      {
+        type: "preview-loaded",
+      },
+      "*"
+    );
+  }, []);
+
+  useEffect(() => {
     window.addEventListener(
       "message",
       function (message: MessageEvent<LivePreviewData>) {

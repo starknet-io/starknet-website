@@ -9,21 +9,19 @@ import {
   localForage,
   basename,
   readFileMetadata,
-  CMS_BRANCH_PREFIX,
   generateContentKey,
   DEFAULT_PR_BODY,
   MERGE_COMMIT_MESSAGE,
-  PreviewState,
   parseContentKey,
-  branchFromContentKey,
   isCMSLabel,
   labelToStatus,
   statusToLabel,
-  contentKeyFromBranch,
   requestWithBackoff,
   unsentRequest,
   throwOnConflictingBranches,
 } from 'netlify-cms-lib-util';
+
+import { CMS_BRANCH_PREFIX , contentKeyFromBranch, branchFromContentKey} from './utils'
 
 import type {
   AssetProxy,
@@ -34,6 +32,7 @@ import type {
 } from 'netlify-cms-lib-util';
 import type { Semaphore } from 'semaphore';
 import type { Octokit } from '@octokit/rest';
+
 
 type GitHubUser = Octokit.UsersGetAuthenticatedResponse;
 type GitCreateTreeParamsTree = Octokit.GitCreateTreeParamsTree;
@@ -501,22 +500,10 @@ export default class API {
     );
 
     return pullRequests.filter(
-      pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
+      pr => pr.head.ref.startsWith(`${ CMS_BRANCH_PREFIX }/`) && predicate(pr),
     );
   }
 
-  async getAllDeployments(
-    head: string | undefined,
-    state: PullRequestState,
-    predicate: (pr: GitHubPull) => boolean,
-  ) {
-    const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
-      `${this.originRepoURL}/deployments?ref=${head}&environment=Starknet Website ${head}`,
-    );
-    return deployments;//.filter(
-      // pr => pr.head.ref.startsWith(`${CMS_BRANCH_PREFIX}/`) && predicate(pr),
-    // );
-  }
 
   async getOpenAuthoringPullRequest(branch: string, pullRequests: GitHubPull[]) {
     // we can't use labels when using open authoring
@@ -567,19 +554,22 @@ export default class API {
     }
   }
 
-  async getDeploys(branch: string) {
-    if (this.useOpenAuthoring) {
-      const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
-        withCmsLabel(pr, this.cmsLabelPrefix),);
-      return deploys;
-    } else {
-      const deploys = await this.getAllDeployments(branch, PullRequestState.Open, pr =>
-        withCmsLabel(pr, this.cmsLabelPrefix),);
-      if (deploys.length <= 0) {
-        throw new EditorialWorkflowError('content is not under editorial workflow', true);
-      }
-      return deploys[0];
+  async getShaPreviewDeployment(sha: string) {
+    const shaPreviewDeployments: Octokit.PullsListCommitsResponseItem[] =
+      await this.request(`${this.originRepoURL}/deployments`, {
+        params: {
+          sha,
+          environment: 'Preview – starknet-website'
+        }
+      });
+      
+    if (!(shaPreviewDeployments?.length > 0)) {
+      throw new EditorialWorkflowError(
+        "No preview deployment found for this commit",
+        true
+      );
     }
+    return shaPreviewDeployments[0];
   }
 
   async getPullRequestCommits(number: number) {
@@ -900,12 +890,7 @@ export default class API {
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
     const sha = pullRequest.head.sha;
-
-    const deployments: Octokit.PullsListCommitsResponseItem[] = await this.request(
-      `${this.originRepoURL}/deployments?sha=${sha}&environment=${encodeURIComponent(`Starknet Website ${branch}`)}`,
-    );
-
-    const deployment = deployments[0]!
+    const deployment = await this.getShaPreviewDeployment(sha);
 
     const statuses: {environment_url: string, environment: string, state: string }[] = await this.request(
       // @ts-expect-error
@@ -1241,8 +1226,8 @@ export default class API {
       const existingBranch = await this.getBranch(branchName);
       await this.createBranch(
         existingBranch.name.replace(
-          new RegExp(`${CMS_BRANCH_PREFIX}/`),
-          `${CMS_BRANCH_PREFIX}_${Date.now()}/`,
+          new RegExp(`${ CMS_BRANCH_PREFIX }/`),
+          `${ CMS_BRANCH_PREFIX }_${Date.now()}/`,
         ),
         existingBranch.commit.sha,
       );

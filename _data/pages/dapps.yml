@@ -25,3 +25,4 @@ blocks:
         website_url: https://www.dappland.com
         twitter: https://twitter.com/argentHQ
         image: /assets/dappland.jpg
+    randomize: true

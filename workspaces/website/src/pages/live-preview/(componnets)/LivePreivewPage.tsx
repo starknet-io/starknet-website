@@ -38,7 +38,7 @@ export default function LivePreivewPage({
       {data.type === CustomPreviewType.JOBS && <JobsCard hit={data.payload} />}
       {data.type === CustomPreviewType.TUTORIALS && (
         <Box maxW="400px">
-          <TutorialsCard hit={data.payload} />
+          <TutorialsCard hit={data.payload} locale="en" />
         </Box>
       )}
       {data.type === CustomPreviewType.POST && (

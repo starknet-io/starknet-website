@@ -72,10 +72,10 @@ items:
               - custom_title: Governance
                 custom_internal_link: /posts/governance
                 hide_from_footer: true
-              - custom_title: Stark Math
+              - custom_title: STARK Math
                 custom_internal_link: /posts/stark-math
                 hide_from_footer: true
-              - custom_title: Stark Struck
+              - custom_title: STARK Struck
                 custom_internal_link: /posts/stark-struck
                 hide_from_footer: true
       - blocks:
@@ -86,7 +86,7 @@ items:
               - custom_title: Starknet EDU newsletter
                 custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet roundup newsletter
-                custom_external_link: https://swagtimus.substack.com/
+                custom_external_link: https://starknetroundup.substack.com/
           - title: SOCIAL
             items:
               - custom_title: youtube
@@ -101,4 +101,4 @@ items:
               - custom_internal_link: ""
                 custom_icon: SiTwitter
                 custom_title: Twitter
-                custom_external_link: https://twitter.com/@Starknet_edu
+                custom_external_link: https://twitter.com/Starknet

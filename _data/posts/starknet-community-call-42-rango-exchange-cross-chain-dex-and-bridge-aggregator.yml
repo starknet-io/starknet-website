@@ -13,3 +13,8 @@ topic:
 short_desc: Rango Exchange is a cross-chain DEX and bridge aggregator. They have
   enabled interoperability between Starknet and other blockchains like
   Cosmos-based, Solana, UTXOs, EVMs.
+blocks:
+  - type: markdown
+    body: Rango Exchange is a cross-chain DEX and bridge aggregator. They have
+      enabled interoperability between Starknet and other blockchains like
+      Cosmos-based, Solana, UTXOs, EVMs.
