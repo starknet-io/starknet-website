@@ -61,7 +61,7 @@ export default function usePreviewData() {
         // TODO: Do we need to check the origin?
         // var origin = message.origin || message.originalEvent.origin; // For Chrome, the origin property is in the message.originalEvent object.
         // if (origin !== "") return;
-        console.log("message", message);
+        console.log("message is", message);
         if (typeof message.data == "object") {
           // Do something with message.data.value;
           if (
