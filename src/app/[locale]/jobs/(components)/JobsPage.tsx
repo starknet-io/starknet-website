@@ -147,7 +147,7 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
       })
     } else {
       types.map((type) => {
-        type.isRefined && refineRoles(type.value);
+        type.isRefined && refineTypes(type.value);
       });
     }
   }

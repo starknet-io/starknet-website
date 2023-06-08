@@ -18,7 +18,7 @@ import { getUnixTime, startOfDay } from "date-fns";
 import type { BaseHit } from "instantsearch.js";
 import moment from "moment";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -114,10 +114,106 @@ const EventsPageLayout = ({
     sortBy: ["name:asc"],
   });
 
-  const { isOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer([
+  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
+
+  function mapSelectedFilters() {
+    let result = {};
+
+    let refinedValues1 = locations
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+
+    if (refinedValues1.length > 0) {
+        result["location"] = refinedValues1;
+    }
+
+    let refinedValues2 = types
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+
+    if (refinedValues2.length > 0) {
+        result["type"] = refinedValues2;
+    }
+
+    return result;
+}
+
+
+  const handleFilterClick = (attribute: string, value: string) => {
+    setSelectedFilters((prevFilters) => {
+      const newFilters = { ...prevFilters };
+      if (!newFilters[attribute]) {
+        newFilters[attribute] = [];
+      }
+
+      if (newFilters[attribute].includes(value)) {
+        newFilters[attribute] = newFilters[attribute].filter((val) => val !== value);
+      } else {
+        newFilters[attribute].push(value);
+      }
+      return newFilters;
+    });
+  };
+
+  const { isOpen, setFilterOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer([
     ...locations,
     ...types,
   ]);
+
+  const handleModalClose = () => {
+    onClose();
+    setSelectedFilters(mapSelectedFilters());
+  }
+
+  const handleApplyChanges = () => {
+    if (selectedFilters["location"]?.length) {
+      selectedFilters["location"].map((location) => {
+        refineLocation(location);
+      });
+    } else {
+      locations.map((location) => {
+        location.isRefined && refineLocation(location.value);
+      });
+    }
+
+    if (selectedFilters["type"]?.length) {
+      selectedFilters["type"].map(type => {
+        refineTypes(type);
+      })
+    } else {
+      types.map((type) => {
+        type.isRefined && refineTypes(type.value);
+      });
+    }
+  }
+
+  const handleApplyFilters = () => {
+    handleApplyChanges();
+    setFilterOpen(false);
+  };
+
+  const handleClearFilters = () => {
+    handleApplyChanges();
+    setSelectedFilters({});
+  };
+
+  let filtersCounts = useMemo(() => {
+    let locationsCount = locations.reduce((accumulator, currentObject) => {
+      if (currentObject.isRefined) {
+          return accumulator + 1;
+      } else {
+          return accumulator;
+      }
+    }, 0);
+    let typesCount = types.reduce((accumulator, currentObject) => {
+      if (currentObject.isRefined) {
+          return accumulator + 1;
+      } else {
+          return accumulator;
+      }
+    }, 0);
+    return locationsCount + typesCount;
+  }, [locations, types]);
 
   return (
     <PageLayout
@@ -158,8 +254,9 @@ const EventsPageLayout = ({
           <CustomLocation
             refineLocation={refineLocation}
             locations={locations}
+            selectedFilters={selectedFilters}
           />
-          <CustomType types={types} refineTypes={refineTypes} />
+          <CustomType types={types} refineTypes={refineTypes} selectedFilters={selectedFilters} />
         </Box>
       }
       main={
@@ -195,16 +292,20 @@ const EventsPageLayout = ({
             </Box>
           </Flex>
           <MobileFiltersButton
-            filtersCount={filtersCount}
+            filtersCount={filtersCounts}
             onClick={onOpen}
             style={{ marginTop: "24px" }}
           />
-          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+          <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
             <CustomLocation
               locations={locations}
-              refineLocation={refineLocation}
+              refineLocation={handleFilterClick}
+              selectedFilters={selectedFilters}
+              isDesktop={false}
             />
-            <CustomType types={types} refineTypes={refineTypes} />
+            <CustomType types={types} refineTypes={handleFilterClick} selectedFilters={selectedFilters} selectedFilters={selectedFilters} isDesktop={false} />
+            <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
+            <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
           </MobileFiltersDrawer>
           <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
         </Box>
@@ -216,9 +317,20 @@ const EventsPageLayout = ({
 type CustomLocationProps = {
   locations: RefinementListProps["items"];
   refineLocation: (value: string) => void;
+  selectedFilters: any;
+  isDesktop?: boolean;
 };
 
-function CustomLocation({ locations, refineLocation }: CustomLocationProps) {
+function CustomLocation({
+  locations,
+  refineLocation,
+  selectedFilters,
+  isDesktop = true
+}: CustomLocationProps) {
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
   return (
     <Box>
       <Heading variant="h6" mb={4}>
@@ -229,8 +341,8 @@ function CustomLocation({ locations, refineLocation }: CustomLocationProps) {
           <Button
             justifyContent="flex-start"
             size="sm"
-            variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refineLocation(item.value)}
+            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") :  checkIfFilterExists(item.label, "location", selectedFilters) ? "filterActive" : "filter"}
+            onClick={() => isDesktop ? refineLocation(item.value) : refineLocation("location", item.label)}
             key={i}
             style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >
@@ -245,10 +357,18 @@ function CustomLocation({ locations, refineLocation }: CustomLocationProps) {
 function CustomType({
   types,
   refineTypes,
+  selectedFilters,
+  isDesktop = true
 }: {
   types: RefinementListProps["items"];
   refineTypes: (value: string) => void;
+  selectedFilters: any;
+  isDesktop?: boolean;
 }) {
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>
@@ -259,8 +379,8 @@ function CustomType({
           <Button
             justifyContent="flex-start"
             size="sm"
-            variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refineTypes(item.value)}
+            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "type", selectedFilters) ? "filterActive" : "filter"}
+            onClick={() => isDesktop ? refineTypes(item.value) : refineTypes("type", item.label)}
             key={i}
           >
             {eventsTypesLabels[item.value] || titleCase(item.label)}
