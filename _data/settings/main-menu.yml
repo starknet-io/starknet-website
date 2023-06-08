@@ -18,7 +18,8 @@ items:
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
-              - custom_title: Engineering blog
+                custom_title: Tools & resources
+              - custom_title: Developers blog
                 custom_internal_link: /posts/engineering
   - title: Ecosystem
     columns:
