@@ -352,8 +352,10 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 //     </Box>
 //   );
 // }
-
-function CustomHits({ locale }) {
+type CustomHitsProps = {
+  locale: string;
+};
+function CustomHits({ locale }: CustomHitsProps) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Tutorial>();
 
   return (
