@@ -9,6 +9,8 @@ end_date: 2023-07-20T13:45:09.148Z
 show_in_past_events: true
 image: /assets/ethcc-ethereum-community-conference.jpeg
 location: europe
+city: Paris
+country: France
 tags:
   - crypto
   - blockchain
