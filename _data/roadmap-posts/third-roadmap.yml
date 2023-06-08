@@ -1,9 +1,21 @@
+id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b433
+title: Rust-based local state management
+availability: Q3 2023
+stage: building-now
 blocks:
   - type: markdown
-    body: H﻿ere is a markdown
-id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b433
-title: Third roadmap
+    body: >-
+      The Rust-based local state management system is a fundamental component of
+      Starknet's infrastructure. It plays a crucial role in handling and
+      managing the state of contracts within the network.
+
+
+      Developed using the Rust programming language, the Rust-based local state management system provides an efficient and reliable mechanism for storing and accessing contract state data locally.
+
+
+      The introduction of the Rust-based local state management system marks a significant milestone in Starknet's development. It represents a shift from the previous implementation and harnesses the performance benefits and robustness offered by Rust.
+
+
+      By integrating the Rust-based local state management system, Starknet ensures a seamless and predictable experience for users and developers. The system's efficiency and reliability result in improved contract state handling and faster access times. This advancement establishes a solid foundation for future scalability and performance enhancements, empowering Starknet to handle increased usage and maintain efficient and secure state management for contracts within the network.
 image: /assets/1-fherdrczy-d9w787cboy8q.png
-availability: Q3 2023
 version: 69ee8aba-95ec-4da9-9348-b8debe034a1a
-stage: building-next
