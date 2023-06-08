@@ -19,6 +19,7 @@ export default function useMobileFiltersDrawer(
   return {
     isOpen: isMobile ? isFilterOpen : false,
     filtersCount,
+    setFilterOpen,
     onClose,
     onOpen,
   };
