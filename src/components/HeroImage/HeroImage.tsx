@@ -81,8 +81,7 @@ const heroStyles: Record<string, HeroStyleObject> = {
   },
   roadmap: {
     img: "/assets/ecosystem/roadmap.svg",
-    gradient: "roadmap-hero-gradient",
-    bg: "roadmap-hero-card-bg",
+    gradient: "linear(262.88deg, roadmap-hero-gradient-a 21.62%, roadmap-hero-gradient-b 100.38%)",
   },
 };
 

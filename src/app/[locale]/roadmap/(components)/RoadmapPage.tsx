@@ -46,10 +46,11 @@ export default function RoadmapPage({
           <Box key={stage.value} mb="5rem">
             <Heading variant="h4" display="flex" alignItems="center" mb="2rem" color="heading-navy-fg">
               <Icon
-                boxSize="18px"
+                boxSize="22px"
                 color="list-card-icon-fg"
                 as={stage.icon}
                 mr="12px"
+                color="heading-navy-fg"
               />
               {stage.label} ({stagePosts.length})
             </Heading>
@@ -61,7 +62,7 @@ export default function RoadmapPage({
               }}
               templateRows="1fr"
               columnGap="32px"
-              rowGap="48px"
+              rowGap="24px"
               // justifyContent="center"
             >
               {stagePosts.map((post) => {

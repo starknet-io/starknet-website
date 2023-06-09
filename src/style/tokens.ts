@@ -48,8 +48,8 @@ export const tokens = {
       "article-card-bg": "#FFFFFF",
       "card-bg": "#FFFFFF",
       "roadmap-hero-card-bg": "#F8F8F8",
-      "roadmap-hero-gradient":
-        "linear(280.23deg, #EBF2F7 0%, rgba(235, 242, 247, 0) 97.73%)",
+      "roadmap-hero-gradient-a": "#EBF2F7",
+      "roadmap-hero-gradient-b": "#F8F8F8",
       "card-br": "#EFEFEF",
       "subnav-fg": "#858585",
       "subnav-fg-accent": "#0C0C4F",
@@ -243,8 +243,8 @@ export const tokens = {
       "article-card-bg": "#1B1B1B",
       "card-bg": "#1B1B1B",
       "roadmap-hero-card-bg": "#1B1B1B",
-      "roadmap-hero-gradient":
-        "linear(259.71deg, #414548 2.88%, #1C1D24 96.77%)",
+      "roadmap-hero-gradient-a": "#414548",
+      "roadmap-hero-gradient-b": "#1C1D24",
       "card-br": "#000000",
       "subnav-fg": "#7E7E7E",
       "subnav-fg-accent": "#ffffff",
@@ -509,9 +509,13 @@ export const semanticTokens = {
       default: tokens.colors.light["roadmap-hero-card-bg"],
       _dark: tokens.colors.dark["roadmap-hero-card-bg"],
     },
-    "roadmap-hero-gradient": {
-      default: tokens.colors.light["roadmap-hero-gradient"],
-      _dark: tokens.colors.dark["roadmap-hero-gradient"],
+    "roadmap-hero-gradient-a": {
+      default: tokens.colors.light["roadmap-hero-gradient-a"],
+      _dark: tokens.colors.dark["roadmap-hero-gradient-a"],
+    },
+    "roadmap-hero-gradient-b": {
+      default: tokens.colors.light["roadmap-hero-gradient-b"],
+      _dark: tokens.colors.dark["roadmap-hero-gradient-b"],
     },
     "card-br": {
       default: tokens.colors.light["card-br"],
