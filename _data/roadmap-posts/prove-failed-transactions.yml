@@ -6,15 +6,11 @@ stage: backlog
 blocks:
   - type: markdown
     body: >-
-      In the roadmap for Starknet in 2023, there is a focus on addressing the
-      issue of prove failed transactions to enhance the user experience on the
-      network. Currently, if a transaction fails to produce a proof within a
-      specified time frame, it is considered a prove failed transaction. This
-      can occur due to various reasons such as network congestion or transaction
-      complexity.
+      v0.15.0 enables the handling of failed transactions more effectively.
+      Notably, the utilization of Sierra for proving failed transactions. This
+      addition ensures a more reliable and robust network experience by reducing
+      the occurrence of failed transactions and enhancing the overall efficiency
+      of transaction processing.
 
 
-      To improve this aspect, Starknet plans to introduce a fee market in version 0.14.0. This fee market will allow for an efficient allocation of Starknet's limited resources based on users' willingness to pay for a transaction. By introducing a fee market, Starknet aims to mitigate congestion-related issues and reduce the occurrence of prove failed transactions, ensuring a more reliable and predictable network experience for users.
-
-
-      This decision to introduce a fee market reflects the prioritization of user experience on Starknet. By addressing prove failed transactions, the network aims to provide a smoother transaction processing flow and minimize frustrating experiences for users. As a result, developers and users can expect a more seamless and efficient environment for building and interacting with applications on Starknet.
+      This advancement aligns with Starknet's commitment to optimizing resource utilization, enhancing transaction processing reliability, and creating a user-friendly ecosystem for building and interacting with applications on the network.
