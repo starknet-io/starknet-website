@@ -114,6 +114,11 @@ const EventsPageLayout = ({
     sortBy: ["name:asc"],
   });
 
+  const { items: months, refine: refineMonths } = useRefinementList({
+    attribute: "month",
+    sortBy: ["name:asc"],
+  });
+
   const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
 
   function mapSelectedFilters() {
@@ -183,6 +188,16 @@ const EventsPageLayout = ({
     } else {
       types.map((type) => {
         type.isRefined && refineTypes(type.value);
+      });
+    }
+
+    if (selectedFilters["month"]?.length) {
+      selectedFilters["month"].map(month => {
+        refineMonths(month);
+      })
+    } else {
+      months.map((month) => {
+        month.isRefined && refineMonths(month.value);
       });
     }
   }
@@ -257,6 +272,11 @@ const EventsPageLayout = ({
             selectedFilters={selectedFilters}
           />
           <CustomType types={types} refineTypes={refineTypes} selectedFilters={selectedFilters} />
+          <CustomMonth
+            refineLocation={refineMonths}
+            months={months}
+            selectedFilters={selectedFilters}
+          />
         </Box>
       }
       main={
@@ -343,6 +363,46 @@ function CustomLocation({
             size="sm"
             variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "location", selectedFilters) ? "filterActive" : "filter"}
             onClick={() => isDesktop ? refineLocation(item.value) : refineLocation("location", item.label)}
+            key={i}
+            style={{ order: item.value === "online_remote" ? -1 : 0 }}
+          >
+            {eventsLocationsLabels[item.value] || titleCase(item.label)}
+          </Button>
+        ))}
+      </Flex>
+    </Box>
+  );
+}
+
+type CustomMonthProps = {
+  months: RefinementListProps["items"];
+  refineLocation: (value: string) => void;
+  selectedFilters: any;
+  isDesktop?: boolean;
+};
+
+function CustomMonth({
+  months,
+  refineLocation,
+  selectedFilters,
+  isDesktop = true
+}: CustomLocationProps) {
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
+  return (
+    <Box>
+      <Heading variant="h6" mb={4}>
+        Month
+      </Heading>
+      <Flex direction="column" gap="8px">
+        {months.map((item, i) => (
+          <Button
+            justifyContent="flex-start"
+            size="sm"
+            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "month", selectedFilters) ? "filterActive" : "filter"}
+            onClick={() => isDesktop ? refineLocation(item.value) : refineLocation("month", item.label)}
             key={i}
             style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >

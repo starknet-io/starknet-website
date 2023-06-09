@@ -140,6 +140,7 @@ export const eventsCollectionConfig = {
       label: "start date",
       widget: "datetime",
     },
+    {label: "", name: "month", widget: "month", required: false, hidden: true},
     {
       name: "end_date",
       label: "end date",
