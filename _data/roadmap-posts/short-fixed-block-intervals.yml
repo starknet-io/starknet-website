@@ -1,0 +1,15 @@
+id: 1cf8d129-c305-4440-ac49-ed07e18e7f74
+title: Short & fixed block intervals
+availability: Q4 2023
+version: 74e695e3-111c-4add-bf09-b15278c25e3e
+stage: backlog
+blocks:
+  - type: markdown
+    body: >-
+      Currently, the variability of block intervals in Starknet leads to
+      unpredictable waiting times for transactions. To tackle this issue,
+      Starknet has decided to introduce constant and shorter block intervals
+      starting from version 0.15.0.
+
+
+      By decoupling the 1:1 relationship between a Starknet block and its proof, proofs will be able to attest to the integrity of one or more Starknet blocks. This change will establish fixed block intervals, ensuring more consistent and predictable network behavior. The introduction of shorter and fixed block intervals aims to significantly improve the overall user experience on Starknet by reducing waiting times and enabling a more seamless and efficient transaction processing.
