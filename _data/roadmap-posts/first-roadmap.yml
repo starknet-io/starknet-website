@@ -15,7 +15,7 @@ blocks:
       Developed by StarkWare as an open-source project, the Rust-based Blockifier utilizes the Rust programming language to implement an optimized block processing mechanism.
 
 
-      This introduction marks a significant milestone in Starknet's development, as it involves transitioning to the Rust-based Blockifier from the previou python-bases implementation. This shift leverages the performance and reliability advantages offered by Rust.
+      This introduction marks a significant milestone in Starknet's development, as it involves transitioning to the Rust-based Blockifier from the previous python-based implementation. This shift leverages the performance and reliability advantages offered by Rust.
 
 
-      By implementing the Rust-based Blockifier, Starknet ensures a seamless and predictable experience for users and developers. It reduces waiting times and improves transaction latency during normal network conditions. Moreover, it establishes a foundation for future scalability and performance enhancements, allowing Starknet to handle increased traffic efficiently and reliably as the platform continues to grow.
+      By implementing the Rust-based Blockifier, Starknet ensures reduced waiting times and improves transaction latency during everyday network conditions. Moreover, it establishes a foundation for future scalability and performance enhancements, allowing Starknet to handle increased traffic efficiently and reliably as the platform continues to grow.
