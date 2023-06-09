@@ -2,7 +2,7 @@ id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b455
 title: Updated Cairo 1.0 contract syntax
 image: ""
 availability: Q3 2023
-version: ba3a82db-4811-42f4-9161-c1ab955c5445
+version: f86e0846-b0e1-43dc-bab2-fbcab0b5896e
 stage: building-now
 blocks:
   - type: markdown
