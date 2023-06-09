@@ -9,6 +9,7 @@ import {
   Flex,
   HStack,
   VStack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Event } from "@starknet-io/cms-data/src/events";
 import { Button } from "@ui/Button";
@@ -18,7 +19,7 @@ import { getUnixTime, startOfDay } from "date-fns";
 import type { BaseHit } from "instantsearch.js";
 import moment from "moment";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -104,6 +105,7 @@ const EventsPageLayout = ({
   mode,
   seo,
 }: Pick<Props, "params" | "mode" | "seo">) => {
+  const [selectedMonth, setSelectedMonth] = useState("");
   const { items: locations, refine: refineLocation } = useRefinementList({
     attribute: "location",
     sortBy: ["name:asc"],
@@ -114,10 +116,28 @@ const EventsPageLayout = ({
     sortBy: ["name:asc"],
   });
 
-  const { isOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer([
-    ...locations,
-    ...types,
-  ]);
+  const { isOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer(
+    [...locations, ...types],
+    selectedMonth
+  );
+
+  const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
+
+  const hitsByMonth = useMemo(() => {
+    let hitsByMonthDict: Record<string, typeof hits> = {};
+
+    hits.forEach((hit) => {
+      let startDate = new Date(hit?.start_date);
+      let month = startDate.getMonth();
+      let year = startDate.getFullYear();
+      let key = `${year}-${month + 1}`;
+      if (!hitsByMonthDict[key]) {
+        hitsByMonthDict[key] = [];
+      }
+      hitsByMonthDict[key].push(hit);
+    });
+    return hitsByMonthDict;
+  }, [hits]);
 
   return (
     <PageLayout
@@ -205,8 +225,29 @@ const EventsPageLayout = ({
               refineLocation={refineLocation}
             />
             <CustomType types={types} refineTypes={refineTypes} />
+            <Box display="flex" flexDirection="column" gap={2} mt={5}>
+              {Object.keys(hitsByMonth).map((monthName) => (
+                <Button
+                  key={monthName}
+                  onClick={() =>
+                    setSelectedMonth(
+                      monthName === selectedMonth ? "" : monthName
+                    )
+                  }
+                  variant={monthName === selectedMonth ? "solid" : "outline"}
+                >
+                  {moment(monthName, "YYYY-MM").format("MMMM YYYY")}
+                </Button>
+              ))}
+            </Box>
           </MobileFiltersDrawer>
-          <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
+          <CustomHits
+            isPastEvent={mode === "PAST_EVENTS"}
+            showMore={showMore}
+            isLastPage={isLastPage}
+            hitsByMonth={hitsByMonth}
+            selectedMonth={selectedMonth}
+          />
         </Box>
       }
     />
@@ -271,28 +312,26 @@ function CustomType({
   );
 }
 
-function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
-  const { hits, showMore, isLastPage } = useInfiniteHits<Event & BaseHit>();
-
-  const hitsByMonth = useMemo(() => {
-    let hitsByMonthDict: Record<string, typeof hits> = {};
-
-    hits.forEach((hit) => {
-      let startDate = new Date(hit?.start_date);
-      let month = startDate.getMonth();
-      let year = startDate.getFullYear();
-      let key = `${year}-${month + 1}`;
-      if (!hitsByMonthDict[key]) {
-        hitsByMonthDict[key] = [];
-      }
-      hitsByMonthDict[key].push(hit);
-    });
-    return hitsByMonthDict;
-  }, [hits]);
+function CustomHits({
+  isPastEvent,
+  showMore,
+  isLastPage,
+  hitsByMonth,
+  selectedMonth,
+}: {
+  isPastEvent: boolean;
+  showMore: () => void;
+  isLastPage: boolean;
+  hitsByMonth: any;
+  selectedMonth: string;
+}) {
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const months =
+    selectedMonth && isMobile ? [selectedMonth] : Object.keys(hitsByMonth);
 
   return (
     <>
-      {Object.keys(hitsByMonth).map((key) => {
+      {months.map((key) => {
         const monthHits = hitsByMonth[key];
 
         return (
