@@ -39,6 +39,7 @@ items:
             items:
               - custom_title: Community Hub
                 page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+              - {}
           - title: GET INVOLVED
             items:
               - custom_internal_link: /events
@@ -51,44 +52,8 @@ items:
                 custom_external_link: https://community.starknet.io/
               - page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
                 custom_title: Online communities
+          - title: SOCIAL
       - blocks:
-          - title: BLOG & MEDIA
-            items:
-              - custom_title: All blog posts
-                custom_internal_link: /posts/
-              - custom_title: Community & Events
-                custom_internal_link: /posts/community-and-events
-                hide_from_footer: true
-              - custom_title: Community Calls
-                custom_internal_link: /posts/community-calls
-                hide_from_footer: true
-              - custom_title: Ecosystem
-                custom_internal_link: /posts/ecosystem
-                hide_from_footer: true
-              - custom_title: Engineering
-                custom_internal_link: /posts/engineering
-                hide_from_footer: true
-              - custom_title: Foundation
-                custom_internal_link: /posts/foundation
-                hide_from_footer: true
-              - custom_title: Governance
-                custom_internal_link: /posts/governance
-                hide_from_footer: true
-              - custom_title: STARK Math
-                custom_internal_link: /posts/stark-math
-                hide_from_footer: true
-              - custom_title: STARK Struck
-                custom_internal_link: /posts/stark-struck
-                hide_from_footer: true
-      - blocks:
-          - title: OTHER
-            items:
-              - page: 9ef815e0-d670-404f-a97d-c5aebfe80a12
-              - page: 575c22e7-477f-4a7e-9b90-7406b802176f
-              - custom_title: Starknet EDU newsletter
-                custom_external_link: https://starknet.substack.com/
-              - custom_title: Starknet roundup newsletter
-                custom_external_link: https://starknetroundup.substack.com/
           - title: SOCIAL
             items:
               - custom_title: youtube
@@ -104,3 +69,43 @@ items:
                 custom_icon: SiTwitter
                 custom_title: Twitter
                 custom_external_link: https://twitter.com/Starknet
+  - title: Resources
+    columns:
+      - blocks:
+          - title: All blog posta
+            items:
+              - custom_internal_link: /posts/
+                custom_title: All blog posts
+              - custom_title: Community & events
+                custom_internal_link: /posts/community-and-events
+                hide_from_footer: true
+              - custom_title: Community calls
+                custom_internal_link: /posts/community-calls
+                hide_from_footer: true
+              - custom_title: Ecosystem
+                hide_from_footer: true
+                custom_internal_link: /posts/ecosystem
+              - custom_title: Developers
+                custom_internal_link: /posts/engineering
+                hide_from_footer: true
+              - custom_title: Foundation
+                custom_internal_link: /posts/foundation
+                hide_from_footer: true
+              - custom_title: Governance
+                custom_internal_link: /posts/governance
+                hide_from_footer: true
+              - custom_title: Stark math
+                custom_internal_link: /posts/stark-math
+                hide_from_footer: true
+              - custom_internal_link: /posts/stark-struck
+                custom_title: Stark struck
+                hide_from_footer: true
+          - title: OTHER
+            items:
+              - custom_title: Media kit
+                page: 575c22e7-477f-4a7e-9b90-7406b802176f
+                hide_from_footer: false
+              - custom_title: Starknet EDU newsletter
+                custom_external_link: https://starknet.substack.com/
+              - custom_title: Starknet roundup newsletter
+                custom_external_link: https://starknetroundup.substack.com/
