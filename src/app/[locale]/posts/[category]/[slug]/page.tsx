@@ -32,12 +32,12 @@ export async function generateStaticParams() {
 
     for (const slug of files) {
       const post = await getPostBySlug(slug.replace(/\.json$/, ""), locale);
-      const category = categories.find((c) => c.id === post.category)!;
+      const category = categories.find((c) => c.id === post.category);
 
       params.push({
         locale,
         slug: post.slug,
-        category: category.slug,
+        category: category?.slug,
       });
     }
   }
