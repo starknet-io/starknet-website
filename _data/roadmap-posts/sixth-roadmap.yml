@@ -1,9 +1,9 @@
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b455
-title: Sixth roadmap
+title: Inclusion of failed transactions in a block
+image: ""
 availability: Q3 2023
-stage: backlog
+version: ba3a82db-4811-42f4-9161-c1ab955c5445
+stage: building-next
 blocks:
   - type: markdown
     body: H﻿ere is a markdown
-image: /assets/1-fherdrczy-d9w787cboy8q.png
-version: 9ed3a1c1-4dee-4f80-837f-341291f1f3d9
