@@ -1,9 +1,21 @@
-blocks:
-  - type: markdown
-    body: H﻿ere is a markdown
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b422
-title: Second roadmap
-image: /assets/1-fherdrczy-d9w787cboy8q.png
-availability: Q3 2023
+title: Rust-based Cairo VM
+image: ""
+availability: Q2 2023
 version: 69ee8aba-95ec-4da9-9348-b8debe034a1a
 stage: building-now
+blocks:
+  - type: markdown
+    body: >-
+      Developed using the Rust programming language, the Rust-based Cairo
+      Virtual Machine (VM) provides an efficient and optimized environment for
+      executing Cairo contracts within the Starknet ecosystem.
+
+
+      This introduction of the Rust-based Cairo VM represents a significant milestone in Starknet's development. It signifies a transition from the previous implementation to leverage the performance benefits and robustness offered by Rust.
+
+
+      By incorporating the Rust-based Cairo VM, Starknet ensures a seamless and predictable experience for users and developers. The VM's efficiency and optimization result in reduced contract execution times, higher throughput, lower latency and improved overall performance. 
+
+
+      This advancement lays the groundwork for future scalability and reliability enhancements, enabling Starknet to handle increased usage and maintain its commitment to efficient contract execution and application development.
