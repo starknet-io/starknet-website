@@ -7,10 +7,9 @@ stage: building-now
 blocks:
   - type: markdown
     body: >-
-      Card content:
-
-
-      Developed by LambdaClass using the Rust programming language, the Rust-based Cairo Virtual Machine (VM) provides an efficient and optimized environment for executing Cairo contracts within the Starknet ecosystem.
+      Developed by LambdaClass using the Rust programming language, the
+      Rust-based Cairo Virtual Machine (VM) provides an efficient and optimized
+      environment for executing Cairo contracts within the Starknet ecosystem.
 
 
       The VM's efficiency and optimization result in reduced contract execution times, higher throughput, lower latency and improved overall performance. 
