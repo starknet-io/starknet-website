@@ -132,7 +132,8 @@ export interface HeroBlock {
     | "learn"
     | "build"
     | "community"
-    | "nodes_and_services";
+    | "nodes_and_services"
+    | "security";
   readonly buttonText?: string;
   readonly buttonUrl?: string;
   readonly leftBoxMaxWidth?: number;
