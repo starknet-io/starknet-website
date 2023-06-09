@@ -47,7 +47,6 @@ export default function RoadmapPage({
             <Heading variant="h4" display="flex" alignItems="center" mb="2rem" color="heading-navy-fg">
               <Icon
                 boxSize="22px"
-                color="list-card-icon-fg"
                 as={stage.icon}
                 mr="12px"
                 color="heading-navy-fg"
