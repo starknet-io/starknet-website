@@ -6,4 +6,12 @@ version: 69ee8aba-95ec-4da9-9348-b8debe034a1a
 stage: building-now
 blocks:
   - type: markdown
-    body: H﻿ere is a markdown
+    body: >-
+      0.12.0 brings an exciting addition to the system with the introduction of
+      the Block Hash Syscall. 
+
+
+      This new syscall enables contracts to retrieve the block hashes of older blocks, akin to the functionality provided by the blockhash in [Solidity](https://docs.soliditylang.org/en/v0.8.11/units-and-global-variables.html#block-and-transaction-properties). By incorporating this feature, Starknet empowers developers to access past block information within a specified range, specifically from the current block-10 to the current block-1024.
+
+
+      The Block Hash Syscall in version 0.12.0 offers developers increased flexibility and functionality in retrieving historical block data, opening up possibilities for more advanced contract interactions and data analysis within the Starknet ecosystem.
