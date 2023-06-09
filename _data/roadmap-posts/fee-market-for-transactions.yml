@@ -1,12 +1,11 @@
 id: f49c51fc-5b87-4f9e-9eaf-a0274ee0cacc
 title: Fee market for transactions
 availability: Q4 2023
-version: 74e695e3-111c-4add-bf09-b15278c25e3e
+version: 9ed3a1c1-4dee-4f80-837f-341291f1f3d9
 stage: backlog
 blocks:
   - type: markdown
-    body: >-
-      In the roadmap for Starknet in 2023, one of the key areas of development
+    body: In the roadmap for Starknet in 2023, one of the key areas of development
       is the introduction of a fee market to improve user experience during
       network congestion. Currently, when congestion occurs, waiting times for
       transactions increase for everyone. To address this issue, Starknet plans
@@ -16,9 +15,3 @@ blocks:
       the order of transactions in line. By implementing a fee market, Starknet
       aims to provide a more predictable and seamless experience for users, even
       during periods of high network activity.
-
-
-      The introduction of a fee market is a tradeoff considered by the Starknet team. In version 0.13.0, they had to choose between lower transaction costs and better user experience with shorter and fixed block intervals. They decided to prioritize lower transaction costs, as they expect the improvements in latency from version 0.12.0 to result in significantly better user experience. The main lever for reducing transaction costs will be the introduction of Volition, a hybrid Data Availability (DA) mode that allows both on-chain and off-chain data. Additionally, the upcoming Ethereum EIP-4844 (Shard Blob Transaction) and the integration of Volition are expected to contribute to a dramatic reduction in the cost of data for Starknet transactions.
-
-
-      Overall, the roadmap for Starknet in 2023 emphasizes enhancing performance and user experience. By improving throughput, reducing transaction costs, and introducing a fee market, Starknet aims to provide developers and users with a stable, efficient, and predictable network for building and using applications. These improvements are expected to attract more developers and applications to Starknet while setting the stage for decentralization in the future.
