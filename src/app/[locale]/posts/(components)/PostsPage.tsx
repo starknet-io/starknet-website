@@ -385,17 +385,17 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
         {filteredHits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
           const date = moment(hit.published_date).format("MMM DD, YYYY");
-          const category = categories.find((c) => c.id === hit.category)!;
+          const category = categories.find((c) => c.id === hit.category);
 
           return (
             <ArticleCard.Root
-              href={`/${hit.locale}/posts/${category.slug}/${hit.slug}`}
+              href={`/${hit.locale}/posts/${category?.slug}/${hit.slug}`}
               key={i}
             >
               <ArticleCard.Image url={hit.image} />
 
               <ArticleCard.Body>
-                <ArticleCard.Category category={category} />
+                {category && <ArticleCard.Category category={category} />}
                 <ArticleCard.Content
                   title={hit.title}
                   excerpt={hit.short_desc}
