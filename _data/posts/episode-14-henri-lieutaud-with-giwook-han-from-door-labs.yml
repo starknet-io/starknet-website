@@ -1,0 +1,77 @@
+id: 819986ee-ef71-436a-baff-502fd427b157
+post_type: video
+title: Episode 14 | Henri Lieutaud with Giwook Han from Door Labs
+published_date: 2023-05-17T12:03:16.965Z
+video:
+  url: https://www.youtube.com/watch?v=sUkAVqerTZo&list=PLcIyXLwiPilU-qOgGEPno8LGN9qiBVlZS&index=1
+  id: sUkAVqerTZo
+  data:
+    kind: youtube#video
+    etag: cZWDxwQtC05mMwfiynCSaG-rpyE
+    id: sUkAVqerTZo
+    snippet:
+      publishedAt: 2023-05-17T10:27:36Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK Struck Podcast | Episode 14 | Henri Lieutaud with Giwook Han from
+        Door Labs
+      description: >-
+        Join Henri Lieutaud from the Starknet team and Giwook Han from Door
+        Labs, on what gets them excited about technology in general, blockchain
+        in particular, and validity rollups specifically. 
+
+        Twitter: @hkw00011 @door_labs @henrlihenrli @Starknet
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/sUkAVqerTZo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/sUkAVqerTZo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/sUkAVqerTZo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/sUkAVqerTZo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/sUkAVqerTZo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK Struck Podcast | Episode 14 | Henri Lieutaud with Giwook Han from
+          Door Labs
+        description: >-
+          Join Henri Lieutaud from the Starknet team and Giwook Han from Door
+          Labs, on what gets them excited about technology in general,
+          blockchain in particular, and validity rollups specifically. 
+
+          Twitter: @hkw00011 @door_labs @henrlihenrli @Starknet
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT38M18S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/stark-strcuk-episode-14.jpg
+category: stark-struck
+short_desc: >-
+  Join Henri Lieutaud from the Starknet team and Giwook Han from Door Labs, on
+  what gets them excited about technology in general, blockchain in particular,
+  and validity rollups specifically. 
+
+
+  Twitter: 
+
+  @hkw00011 
+
+  @door_labs
