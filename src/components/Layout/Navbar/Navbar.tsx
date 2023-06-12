@@ -34,12 +34,16 @@ export const NavBar = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const { colorMode, toggleColorMode } = useColorMode();
-  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const isMobile = useBreakpointValue({ base: true, xl: false });
   const pathname = usePathname();
 
   React.useEffect(() => {
     onClose();
   }, [onClose, pathname]);
+
+  React.useEffect(() => {
+    console.log('isMobile ', isMobile)
+  }, [isMobile]);
 
   return (
     <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
