@@ -1,6 +1,5 @@
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b444
 title: Fetch older blocks with the BlockHash Syscall
-image: ""
 availability: Q2 2023
 version: ea637184-247a-4370-82bd-3059d1c988f0
 stage: building-now
