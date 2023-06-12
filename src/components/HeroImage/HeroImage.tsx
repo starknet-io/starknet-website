@@ -35,53 +35,85 @@ type Props = {
 
 type HeroStyleObject = {
   img: string;
-  gradient: string;
+  gradient?: string;
   bg?: string;
+  backgroundBlendMode?: string;
+  arrowGradient?: string;
+  arrowOpacity?: string;
+  arrowTipColor?: string;
 };
 const heroStyles: Record<string, HeroStyleObject> = {
   dapps: {
     img: "/assets/ecosystem/dapps.svg",
     gradient:
       "linear(258.76deg, hero-gradient-dapps-a 3.96%, hero-gradient-dapps-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   block_explorers: {
     img: "/assets/ecosystem/blockexplorers.svg",
     gradient:
       "linear(258.76deg, hero-gradient-block-explorers-a 3.96%, hero-gradient-block-explorers-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   bridges: {
     img: "/assets/ecosystem/bridges.svg",
     gradient:
       "linear(258.76deg, hero-gradient-bridges-on-ramps-a 3.96%, hero-gradient-bridges-on-ramps-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   wallets: {
     img: "/assets/ecosystem/wallets.svg",
     gradient:
       "linear(258.76deg, hero-gradient-wallets-a 3.96%, hero-gradient-wallets-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   learn: {
     img: "/assets/ecosystem/learn.svg",
     gradient:
       "linear(258.76deg, hero-gradient-learn-a 3.96%, hero-gradient-learn-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   build: {
     img: "/assets/ecosystem/developer.svg",
     gradient:
       "linear(258.76deg, hero-gradient-developer-a 3.96%, hero-gradient-developer-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   community: {
     img: "/assets/ecosystem/community.svg",
     gradient:
       "linear(258.76deg, hero-gradient-community-a 3.96%, hero-gradient-community-b 254.34%)",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   nodes_and_services: {
     img: "/assets/ecosystem/nodes_and_services.svg",
     gradient:
-      "linear(262.88deg, hero-gradient-nodes-and-services-a 21.62%, hero-gradient-nodes-and-services-b 100.38%)",
+      "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
+    arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
+    arrowOpacity: "0.2",
+    arrowTipColor: "#D672EF"
   },
   roadmap: {
     img: "/assets/ecosystem/roadmap.svg",
-    gradient: "linear(262.88deg, roadmap-hero-gradient-a 21.62%, roadmap-hero-gradient-b 100.38%)",
+    bg: "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
+    arrowGradient: "linear(45deg, #82BDBD 100%, #4F6D87 100%)",
+    backgroundBlendMode: "multiply, multiply, multiply, normal",
+    arrowOpacity: "1",
+    arrowTipColor: "#82BDBD"
   },
 };
 
@@ -97,9 +129,10 @@ export const HeroImage = ({
   return (
     <Box
       as="section"
-      bg={heroStyles[variant].bg || "card-bg"}
+      bg={variant === "roadmap" && heroStyles[variant].bg}
+      backgroundBlendMode={heroStyles[variant].backgroundBlendMode ? heroStyles[variant].backgroundBlendMode : ""}
       borderRadius="32px"
-      bgGradient={heroStyles[variant].gradient}
+      {...variant !== "roadmap" && { bgGradient: heroStyles[variant].gradient}}
       position="relative"
       zIndex={0}
       overflow="hidden"
@@ -141,7 +174,7 @@ export const HeroImage = ({
                 <Stack
                   // bg="red"
                   // spacing={{ base: "4", md: "3" }}
-                  maxW={leftBoxMaxWidth ?? { md: "xl", lg: "md", xl: "xl" }}
+                  maxW={leftBoxMaxWidth ?? { md: "xl", lg: "2xl", xl: "2xl" }}
                 >
                   <Box>
                     <svg
@@ -198,9 +231,9 @@ export const HeroImage = ({
 
                     <Box
                       mixBlendMode="multiply"
-                      opacity="0.2"
+                      opacity={heroStyles[variant].arrowOpacity}
                       mt={4}
-                      bgGradient="linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)"
+                      bgGradient={heroStyles[variant].arrowGradient}
                       bgClip="div"
                       height="1px"
                       position="relative"
@@ -213,7 +246,7 @@ export const HeroImage = ({
                         height: 0,
                         borderTop: "2px solid transparent",
                         borderBottom: "2px solid transparent",
-                        borderLeft: "5px solid #D672EF",
+                        borderLeft: `5px solid ${heroStyles[variant].arrowTipColor}`
                       }}
                     />
                   </Box>
