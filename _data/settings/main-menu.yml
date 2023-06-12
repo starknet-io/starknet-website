@@ -58,7 +58,7 @@ items:
                 custom_icon: SiDiscord
                 custom_external_link: https://starknet.io/discord
               - custom_title: GitHub
-                custom_icon: SiGitHub
+                custom_icon: SiGithub
                 custom_external_link: https://github.com/starknet-io/starknet-website
               - custom_title: Twitter
                 custom_icon: SiTwitter
@@ -94,11 +94,11 @@ items:
               - custom_internal_link: /posts/stark-struck
                 custom_title: Stark struck
                 hide_from_footer: true
+      - blocks:
           - title: OTHER
             items:
               - custom_title: Media kit
                 page: 575c22e7-477f-4a7e-9b90-7406b802176f
-                hide_from_footer: false
               - custom_title: Starknet EDU newsletter
                 custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet roundup newsletter
