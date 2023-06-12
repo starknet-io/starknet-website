@@ -11,7 +11,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
@@ -82,7 +82,7 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
   const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
 
   function mapSelectedFilters() {
-    let result = {};
+    let result: { "job.role"?: string[], "job.type"?: string[] } = {};
 
     let refinedValues1 = roles
         .filter(item => item.isRefined)
@@ -236,7 +236,7 @@ function CustomRole({
   isDesktop = true
 }: {
   items: RefinementListProps["items"];
-  refine: (value: string) => void;
+  refine: any;
   selectedFilters: any;
   isDesktop?: boolean;
 }) {
@@ -273,7 +273,7 @@ function CustomType({
   isDesktop = true
 }: {
   items: RefinementListProps["items"];
-  refine: (value: string) => void;
+  refine: any;
   selectedFilters: any;
   isDesktop?: boolean;
 }) {

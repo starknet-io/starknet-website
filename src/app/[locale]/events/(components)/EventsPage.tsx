@@ -18,7 +18,7 @@ import { getUnixTime, startOfDay } from "date-fns";
 import type { BaseHit } from "instantsearch.js";
 import moment from "moment";
 import Link from "next/link";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -122,7 +122,7 @@ const EventsPageLayout = ({
   const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
 
   function mapSelectedFilters() {
-    let result = {};
+    let result: { location?: string[], type?: string[], month?: string[] } = {};
 
     let refinedValues1 = locations
         .filter(item => item.isRefined)
@@ -149,7 +149,7 @@ const EventsPageLayout = ({
     }
 
     return result;
-}
+  }
 
 
   const handleFilterClick = (attribute: string, value: string) => {
@@ -168,7 +168,7 @@ const EventsPageLayout = ({
     });
   };
 
-  const { isOpen, setFilterOpen, filtersCount, onOpen, onClose } = useMobileFiltersDrawer([
+  const { isOpen, setFilterOpen, onOpen, onClose } = useMobileFiltersDrawer([
     ...locations,
     ...types,
   ]);
@@ -333,7 +333,7 @@ const EventsPageLayout = ({
 
 type CustomLocationProps = {
   locations: RefinementListProps["items"];
-  refineLocation: (value: string) => void;
+  refineLocation: any;
   selectedFilters: any;
   isDesktop?: boolean;
 };
@@ -373,7 +373,7 @@ function CustomLocation({
 
 type CustomMonthProps = {
   months: RefinementListProps["items"];
-  refineMonths: (value: string) => void;
+  refineMonths: any;
   selectedFilters: any;
   isDesktop?: boolean;
 };
@@ -418,7 +418,7 @@ function CustomType({
   isDesktop = true
 }: {
   types: RefinementListProps["items"];
-  refineTypes: (value: string) => void;
+  refineTypes: any;
   selectedFilters: any;
   isDesktop?: boolean;
 }) {

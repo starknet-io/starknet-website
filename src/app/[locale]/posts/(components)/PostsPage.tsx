@@ -104,7 +104,7 @@ const PostsPageLayout = ({
   });
 
   function mapSelectedFilters() {
-    let result = {};
+    let result: { topic?: string[] } = {};
     let refinedValues1 = topicsItems
         .filter(item => item.isRefined)
         .map(item => item.value);
@@ -241,8 +241,8 @@ const PostsPageLayout = ({
 type CustomTopicsProps = {
   topics: readonly Topic[];
   items: RefinementListProps["items"];
-  refineTopics: (value: string) => void;
-  selectedFilters: any;
+  refineTopics: any;
+  selectedFilters?: any;
   isDesktop?: boolean;
 };
 function CustomTopics({
