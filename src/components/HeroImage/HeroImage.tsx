@@ -25,8 +25,7 @@ type Props = {
     | "learn"
     | "build"
     | "community"
-    | "nodes_and_services"
-    | "security";
+    | "nodes_and_services";
   buttonText?: string;
   buttonUrl?: string;
   leftBoxMaxWidth?: number
@@ -72,11 +71,6 @@ const heroStyles = {
     img: "/assets/ecosystem/nodes_and_services.svg",
     gradient:
       "linear(262.88deg, hero-gradient-nodes-and-services-a 21.62%, hero-gradient-nodes-and-services-b 100.38%)",
-  },
-  security: {
-    img: "/assets/ecosystem/security.svg",
-    gradient:
-      "linear(262.88deg, hero-gradient-security-a 21.62%, hero-gradient-security-b 100.38%)",
   },
 };
 
