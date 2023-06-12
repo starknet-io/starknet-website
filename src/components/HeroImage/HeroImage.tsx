@@ -129,7 +129,7 @@ export const HeroImage = ({
   return (
     <Box
       as="section"
-      bg={variant === "roadmap" && heroStyles[variant].bg}
+      bg={variant === "roadmap" ? heroStyles[variant].bg : "none"}
       backgroundBlendMode={heroStyles[variant].backgroundBlendMode ? heroStyles[variant].backgroundBlendMode : ""}
       borderRadius="32px"
       {...variant !== "roadmap" && { bgGradient: heroStyles[variant].gradient}}
