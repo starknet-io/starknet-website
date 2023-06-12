@@ -234,3 +234,9 @@ blocks:
           custom_external_link: https://www.lavanet.xyz
         subLabel:
           label: Lava is an open-source protocol for reliable access to RPC data
+      - link:
+          hasIcon: false
+          custom_external_link: https://blastapi.io/public-api/starknet
+          custom_title: Blast API
+        subLabel:
+          label: API service for Starknet
