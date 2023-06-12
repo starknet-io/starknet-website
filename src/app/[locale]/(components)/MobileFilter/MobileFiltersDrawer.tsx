@@ -34,7 +34,7 @@ export default function MobileFiltersDrawer({
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader bg="inherit" mb="1rem"></DrawerHeader>
-        <DrawerBody pb="3rem" style={contentStyle}>
+        <DrawerBody pb="4rem" style={contentStyle}>
           {children}
         </DrawerBody>
       </DrawerContent>
