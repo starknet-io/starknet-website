@@ -33,7 +33,7 @@ export default function RoadmapPost({
   locale: string;
   blocksDynamicData: BlocksDynamicData;
 }) {
-  console.log("roadmapPost", roadmapPost);
+
   return (
     <PageLayout
       breadcrumbs={
