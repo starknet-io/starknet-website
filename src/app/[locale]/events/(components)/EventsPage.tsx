@@ -18,7 +18,7 @@ import { getUnixTime, startOfDay } from "date-fns";
 import type { BaseHit } from "instantsearch.js";
 import moment from "moment";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import algoliasearch from "src/libs/algoliasearch/lite";
@@ -140,6 +140,14 @@ const EventsPageLayout = ({
         result["type"] = refinedValues2;
     }
 
+    let refinedValues3 = months
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+
+    if (refinedValues3.length > 0) {
+        result["month"] = refinedValues3;
+    }
+
     return result;
 }
 
@@ -211,24 +219,12 @@ const EventsPageLayout = ({
     handleApplyChanges();
     setSelectedFilters({});
   };
-
+  
   let filtersCounts = useMemo(() => {
-    let locationsCount = locations.reduce((accumulator, currentObject) => {
-      if (currentObject.isRefined) {
-          return accumulator + 1;
-      } else {
-          return accumulator;
-      }
+    return Object.values(selectedFilters).reduce((total, currentArray) => {
+      return total + currentArray.length;
     }, 0);
-    let typesCount = types.reduce((accumulator, currentObject) => {
-      if (currentObject.isRefined) {
-          return accumulator + 1;
-      } else {
-          return accumulator;
-      }
-    }, 0);
-    return locationsCount + typesCount;
-  }, [locations, types]);
+  }, [selectedFilters]);
 
   return (
     <PageLayout
@@ -272,11 +268,6 @@ const EventsPageLayout = ({
             selectedFilters={selectedFilters}
           />
           <CustomType types={types} refineTypes={refineTypes} selectedFilters={selectedFilters} />
-          <CustomMonth
-            refineLocation={refineMonths}
-            months={months}
-            selectedFilters={selectedFilters}
-          />
         </Box>
       }
       main={
@@ -324,6 +315,12 @@ const EventsPageLayout = ({
               isDesktop={false}
             />
             <CustomType types={types} refineTypes={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
+            <CustomMonth
+              refineMonths={handleFilterClick}
+              months={months}
+              selectedFilters={selectedFilters}
+              isDesktop={false}
+            />
             <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
             <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
           </MobileFiltersDrawer>
@@ -376,24 +373,24 @@ function CustomLocation({
 
 type CustomMonthProps = {
   months: RefinementListProps["items"];
-  refineLocation: (value: string) => void;
+  refineMonths: (value: string) => void;
   selectedFilters: any;
   isDesktop?: boolean;
 };
 
 function CustomMonth({
   months,
-  refineLocation,
+  refineMonths,
   selectedFilters,
   isDesktop = true
-}: CustomLocationProps) {
+}: CustomMonthProps) {
   const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
   return (
     <Box>
-      <Heading variant="h6" mb={4}>
+      <Heading variant="h6" mb={4} mt={7}>
         Month
       </Heading>
       <Flex direction="column" gap="8px">
@@ -402,7 +399,7 @@ function CustomMonth({
             justifyContent="flex-start"
             size="sm"
             variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "month", selectedFilters) ? "filterActive" : "filter"}
-            onClick={() => isDesktop ? refineLocation(item.value) : refineLocation("month", item.label)}
+            onClick={() => isDesktop ? refineMonths(item.value) : refineMonths("month", item.label)}
             key={i}
             style={{ order: item.value === "online_remote" ? -1 : 0 }}
           >

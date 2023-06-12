@@ -22,7 +22,7 @@ export default function App() {
       name: 'preSave',
       handler: ({ entry }) => {
         const startDate = new Date(entry.get('data').get('start_date'));
-        const month = `${monthNames[startDate.getMonth() + 1]} ${startDate.getFullYear()}`;
+        const month = `${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
         return entry.get('data').set('month', month);
       },
     });

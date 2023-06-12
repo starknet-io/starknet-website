@@ -161,15 +161,10 @@ const PostsPageLayout = ({
   };
 
   let filtersCounts = useMemo(() => {
-    let topicsItemsCount = topicsItems.reduce((accumulator, currentObject) => {
-      if (currentObject.isRefined) {
-          return accumulator + 1;
-      } else {
-          return accumulator;
-      }
+    return Object.values(selectedFilters).reduce((total, currentArray) => {
+      return total + currentArray.length;
     }, 0);
-    return topicsItemsCount;
-  }, [topicsItems]);
+  }, [selectedFilters]);
 
   return (
     <PageLayout

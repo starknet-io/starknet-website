@@ -163,22 +163,10 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
   };
 
   let filtersCounts = useMemo(() => {
-    let rolesCount = roles.reduce((accumulator, currentObject) => {
-      if (currentObject.isRefined) {
-          return accumulator + 1;
-      } else {
-          return accumulator;
-      }
+    return Object.values(selectedFilters).reduce((total, currentArray) => {
+      return total + currentArray.length;
     }, 0);
-    let typesCount = types.reduce((accumulator, currentObject) => {
-      if (currentObject.isRefined) {
-          return accumulator + 1;
-      } else {
-          return accumulator;
-      }
-    }, 0);
-    return rolesCount + typesCount;
-  }, [roles, types]);
+  }, [selectedFilters]);
   
   return (
     <PageLayout
