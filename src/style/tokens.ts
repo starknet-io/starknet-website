@@ -154,8 +154,6 @@ export const tokens = {
       "hero-gradient-learn-b": "#B6C6FF",
       "hero-gradient-nodes-and-services-a": "#F7E9E8",
       "hero-gradient-nodes-and-services-b": "#CDCEE7",
-      "hero-gradient-security-a": "#C4D7FF",
-      "hero-gradient-security-b": "#F3CDFF",
       "hero-subtitle-fg": "#313131",
       "btn-outline-hero-bg": "transparent",
       "btn-outline-hero-fg": "#0C0C4F",
@@ -345,8 +343,6 @@ export const tokens = {
       "hero-gradient-learn-b": "#171B31",
       "hero-gradient-nodes-and-services-a": "#664E79",
       "hero-gradient-nodes-and-services-b": "#1A1628",
-      "hero-gradient-security-a": "#143B75",
-      "hero-gradient-security-b": "#0C0F32",
       "hero-subtitle-fg": "#CCCCCC",
       "btn-outline-hero-bg": "transparent",
       "btn-outline-hero-fg": "#ffffff",
@@ -987,14 +983,6 @@ export const semanticTokens = {
     "hero-gradient-nodes-and-services-b": {
       default: tokens.colors.light["hero-gradient-nodes-and-services-b"],
       _dark: tokens.colors.dark["hero-gradient-nodes-and-services-b"],
-    },
-    "hero-gradient-security-a": {
-      default: tokens.colors.light["hero-gradient-security-a"],
-      _dark: tokens.colors.dark["hero-gradient-security-a"],
-    },
-    "hero-gradient-security-b": {
-      default: tokens.colors.light["hero-gradient-security-b"],
-      _dark: tokens.colors.dark["hero-gradient-security-b"],
     },
     "hero-subtitle-fg": {
       default: tokens.colors.light["hero-subtitle-fg"],

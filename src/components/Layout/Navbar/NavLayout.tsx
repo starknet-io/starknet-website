@@ -63,7 +63,6 @@ export const NavLayout = (props: NavLayoutProps) => {
                 }
                 aria-label="Toggle color mode"
                 onClick={toggleColorMode}
-                marginInlineStart="10px !important"
               />
             </>
           )}
@@ -75,7 +74,8 @@ export const NavLayout = (props: NavLayoutProps) => {
                 bg="nav-footer-br"
                 h="30px"
                 position="relative"
-                marginInlineStart="10px !important"
+                left="-13px"
+                marginLeft="20px"
               />
               {props.languageSwitcher}
             </>
@@ -87,7 +87,6 @@ export const NavLayout = (props: NavLayoutProps) => {
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
-              marginInlineStart="10px !important"
             />
           )}
         </HStack>
