@@ -49,26 +49,24 @@ items:
                 custom_external_link: https://community.starknet.io/
               - page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
                 custom_title: Online communities
-      - blocks:
           - title: SOCIAL
             items:
-              - custom_title: youtube
+              - custom_title: YouTube
                 custom_icon: SiYoutube
-                custom_external_link: https://www.youtube.com/@starkware_ltd
+                custom_internal_link: https://www.youtube.com/@starkware_ltd
               - custom_title: Discord
                 custom_icon: SiDiscord
                 custom_external_link: https://starknet.io/discord
-              - custom_icon: SiGithub
-                custom_title: Github
+              - custom_title: GitHub
+                custom_icon: SiGitHub
                 custom_external_link: https://github.com/starknet-io/starknet-website
-              - custom_internal_link: ""
+              - custom_title: Twitter
                 custom_icon: SiTwitter
-                custom_title: Twitter
-                custom_external_link: https://twitter.com/Starknet
+                custom_internal_link: https://twitter.com/Starknet
   - title: Resources
     columns:
       - blocks:
-          - title: All blog posta
+          - title: All blog posts
             items:
               - custom_internal_link: /posts/
                 custom_title: All blog posts
