@@ -6,32 +6,40 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { ReactNode } from "react";
 import { useBoolean } from "react-use";
 import RoadmapSubscribeForm from "./RoadmapSubscribeForm";
-// import Link from "next/link";
+import { Roadmap } from "workspaces/cms-data/src/settings/roadmap";
 
 type RoadmapLayoutProps = {
   children: ReactNode;
   mode: "ROADMAP" | "ANNOUNCEMENTS";
   locale: string;
+  roadmapSettings: Roadmap;
 };
 export default function RoadmapLayout({
   children,
   mode,
   locale,
+  roadmapSettings
 }: RoadmapLayoutProps) {
   const [isOpen, setIsOpen] = useBoolean(false);
-
+  const {
+    hero_description,
+    hero_title,
+    show_hero_banner,
+    show_hero_cta,
+    hero_cta_copy
+  } = roadmapSettings;
   return (
     <>
       <PageLayout
         main={
           <Container>
-            <HeroImage
-              title="Roadmap & product updates"
-              description="See what we’re building, what’s coming next and keep up to date on product announcements"
+            {show_hero_banner && <HeroImage
+              title={hero_title}
+              description={hero_description}
               variant="roadmap"
-              buttonText="Notify me"
+              {...show_hero_cta && { buttonText: hero_cta_copy} }
               onButtonClick={() => setIsOpen(true)}
-            />
+            />}
             <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
             <Box my="56px"></Box>
             {/* <Flex

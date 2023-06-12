@@ -4,17 +4,20 @@ import { Box, Grid, Heading, Icon } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { roadmapStagesFields } from "workspaces/cms-config/src/collections/roadmapPosts";
 import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
+import { Roadmap } from "workspaces/cms-data/src/settings/roadmap";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import RoadmapPostCard from "./RoadmapPostCard";
 
 type RoadmapPageProps = {
   roadmapPosts: readonly RoadmapPost[];
   roadmapVersions: readonly RoadmapVersion[];
+  roadmapSettings: Roadmap;
   locale: string;
 };
 export default function RoadmapPage({
   roadmapPosts,
   roadmapVersions,
+  roadmapSettings,
   locale,
 }: RoadmapPageProps) {
   const roadmapVersionsDict = useMemo(() => {
@@ -38,7 +41,7 @@ export default function RoadmapPage({
   }, [roadmapPosts]);
 
   return (
-    <RoadmapLayout locale={locale} mode="ROADMAP">
+    <RoadmapLayout locale={locale} mode="ROADMAP" roadmapSettings={roadmapSettings}>
       {roadmapStagesFields.map((stage) => {
         const stagePosts = roadmapPostsByStage[stage.value];
 
