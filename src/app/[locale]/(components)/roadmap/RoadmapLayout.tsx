@@ -12,7 +12,7 @@ type RoadmapLayoutProps = {
   children: ReactNode;
   mode: "ROADMAP" | "ANNOUNCEMENTS";
   locale: string;
-  roadmapSettings: Roadmap;
+  roadmapSettings?: Roadmap;
 };
 export default function RoadmapLayout({
   children,
@@ -21,23 +21,16 @@ export default function RoadmapLayout({
   roadmapSettings
 }: RoadmapLayoutProps) {
   const [isOpen, setIsOpen] = useBoolean(false);
-  const {
-    hero_description,
-    hero_title,
-    show_hero_banner,
-    show_hero_cta,
-    hero_cta_copy
-  } = roadmapSettings;
   return (
     <>
       <PageLayout
         main={
           <Container>
-            {show_hero_banner && <HeroImage
-              title={hero_title}
-              description={hero_description}
+            {roadmapSettings?.show_hero_banner && <HeroImage
+              title={roadmapSettings?.hero_title}
+              description={roadmapSettings?.hero_description}
               variant="roadmap"
-              {...show_hero_cta && { buttonText: hero_cta_copy} }
+              {...roadmapSettings?.show_hero_cta && { buttonText: roadmapSettings?.hero_cta_copy} }
               onButtonClick={() => setIsOpen(true)}
             />}
             <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />

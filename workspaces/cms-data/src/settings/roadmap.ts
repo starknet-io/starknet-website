@@ -11,7 +11,7 @@ export interface Roadmap {
   readonly hero_cta_copy?: string;
 }
 
-export async function getRoadmapSettings(locale: string): Promise<Roadmap[]> {
+export async function getRoadmapSettings(locale: string): Promise<Roadmap> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
