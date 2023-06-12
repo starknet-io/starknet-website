@@ -1,5 +1,6 @@
 show_hero_banner: true
 hero_title: Roadmap & product updates
 hero_description: See what we’re building, what’s coming next and keep up to
-  date on product announcements
-show_hero_cta: false
+  date on product announcements.
+show_hero_cta: true
+hero_cta_copy: Subscribe to updates
