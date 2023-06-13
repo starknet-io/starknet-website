@@ -79,51 +79,41 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     sortBy: ["name:asc"],
   });
 
-  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
+  const {
+    isOpen,
+    setFilterOpen,
+    onOpen,
+    onClose,
+    handleFilterClick,
+    filtersCounts,
+    selectedFilters,
+    setSelectedFilters
+  } = useMobileFiltersDrawer([
+    ...roles,
+    ...types,
+  ]);
 
   function mapSelectedFilters() {
     let result: { "job.role"?: string[], "job.type"?: string[] } = {};
 
-    let refinedValues1 = roles
+    let rolesFilteredValues = roles
         .filter(item => item.isRefined)
         .map(item => item.value);
 
-    if (refinedValues1.length > 0) {
-        result["job.role"] = refinedValues1;
+    if (rolesFilteredValues.length > 0) {
+        result["job.role"] = rolesFilteredValues;
     }
 
-    let refinedValues2 = types
+    let typesFilteredValues = types
         .filter(item => item.isRefined)
         .map(item => item.value);
 
-    if (refinedValues2.length > 0) {
-        result["job.type"] = refinedValues2;
+    if (typesFilteredValues.length > 0) {
+        result["job.type"] = typesFilteredValues;
     }
 
     return result;
-}
-
-
-  const handleFilterClick = (attribute: string, value: string) => {
-    setSelectedFilters((prevFilters) => {
-      const newFilters = { ...prevFilters };
-      if (!newFilters[attribute]) {
-        newFilters[attribute] = [];
-      }
-
-      if (newFilters[attribute].includes(value)) {
-        newFilters[attribute] = newFilters[attribute].filter((val) => val !== value);
-      } else {
-        newFilters[attribute].push(value);
-      }
-      return newFilters;
-    });
-  };
-
-  const { isOpen, setFilterOpen, onOpen, onClose } = useMobileFiltersDrawer([
-    ...roles,
-    ...types,
-  ]);
+  }
 
   const handleModalClose = () => {
     onClose();
@@ -161,12 +151,6 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     handleApplyChanges();
     setSelectedFilters({});
   };
-
-  let filtersCounts = useMemo(() => {
-    return Object.values(selectedFilters).reduce((total, currentArray) => {
-      return total + currentArray.length;
-    }, 0);
-  }, [selectedFilters]);
   
   return (
     <PageLayout

@@ -119,59 +119,48 @@ const EventsPageLayout = ({
     sortBy: ["name:asc"],
   });
 
-  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
+  const {
+    isOpen,
+    setFilterOpen,
+    onOpen,
+    onClose,
+    handleFilterClick,
+    filtersCounts,
+    selectedFilters,
+    setSelectedFilters } = useMobileFiltersDrawer([
+    ...locations,
+    ...types,
+  ]);
 
   const mapSelectedFilters = () => {
     let result: { location?: string[], type?: string[], month?: string[] } = {};
 
-    let refinedValues1 = locations
+    let locationsFilteredValues = locations
         .filter(item => item.isRefined)
         .map(item => item.value);
 
-    if (refinedValues1.length > 0) {
-        result["location"] = refinedValues1;
+    if (locationsFilteredValues.length > 0) {
+        result["location"] = locationsFilteredValues;
     }
 
-    let refinedValues2 = types
+    let typesFilteredValues = types
         .filter(item => item.isRefined)
         .map(item => item.value);
 
-    if (refinedValues2.length > 0) {
-        result["type"] = refinedValues2;
+    if (typesFilteredValues.length > 0) {
+        result["type"] = typesFilteredValues;
     }
 
-    let refinedValues3 = months
+    let monthsFilteredValues = months
         .filter(item => item.isRefined)
         .map(item => item.value);
 
-    if (refinedValues3.length > 0) {
-        result["month"] = refinedValues3;
+    if (monthsFilteredValues.length > 0) {
+        result["month"] = monthsFilteredValues;
     }
 
     return result;
   }
-
-
-  const handleFilterClick = (attribute: string, value: string) => {
-    setSelectedFilters((prevFilters) => {
-      const newFilters = { ...prevFilters };
-      if (!newFilters[attribute]) {
-        newFilters[attribute] = [];
-      }
-
-      if (newFilters[attribute].includes(value)) {
-        newFilters[attribute] = newFilters[attribute].filter((val) => val !== value);
-      } else {
-        newFilters[attribute].push(value);
-      }
-      return newFilters;
-    });
-  };
-
-  const { isOpen, setFilterOpen, onOpen, onClose } = useMobileFiltersDrawer([
-    ...locations,
-    ...types,
-  ]);
 
   const handleModalClose = () => {
     onClose();
@@ -233,13 +222,7 @@ const EventsPageLayout = ({
     anyFilterApplied && handleApplyChanges();
     setSelectedFilters({});
   };
-  
-  let filtersCounts = useMemo(() => {
-    return Object.values(selectedFilters).reduce((total, currentArray) => {
-      return total + currentArray.length;
-    }, 0);
-  }, [selectedFilters]);
-
+console.log('months ', months)
   return (
     <PageLayout
       sectionHeaderTitle={seo.title}
@@ -408,7 +391,7 @@ function CustomMonth({
         Month
       </Heading>
       <Flex direction="column" gap="8px">
-        {months.map((item, i) => (
+        {months.sort((a, b) => new Date(a.value).getTime() - new Date(b.value).getTime()).map((item, i) => (
           <Button
             justifyContent="flex-start"
             size="sm"

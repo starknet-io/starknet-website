@@ -95,43 +95,33 @@ const PostsPageLayout = ({
 }: Pick<Props, "categories" | "params" | "topics">) => {
   const category = categories.find((c) => c.slug === params.category);
 
-  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
-
   const { items: topicsItems, refine: refineTopics } = useRefinementList({
     attribute: "topic",
     limit: 50,
     sortBy: ["count:desc"],
   });
 
+  const {
+    isOpen,
+    onOpen,
+    onClose,
+    setFilterOpen,
+    handleFilterClick,
+    filtersCounts,
+    selectedFilters,
+    setSelectedFilters
+  } = useMobileFiltersDrawer(topicsItems);
+
   function mapSelectedFilters() {
     let result: { topic?: string[] } = {};
-    let refinedValues1 = topicsItems
+    let topicsFilteredValues = topicsItems
         .filter(item => item.isRefined)
         .map(item => item.value);
-    if (refinedValues1.length > 0) {
-        result["topic"] = refinedValues1;
+    if (topicsFilteredValues.length > 0) {
+        result["topic"] = topicsFilteredValues;
     }
     return result;
   }
-
-  const handleFilterClick = (attribute: string, value: string) => {
-    setSelectedFilters((prevFilters) => {
-      const newFilters = { ...prevFilters };
-      if (!newFilters[attribute]) {
-        newFilters[attribute] = [];
-      }
-
-      if (newFilters[attribute].includes(value)) {
-        newFilters[attribute] = newFilters[attribute].filter((val) => val !== value);
-      } else {
-        newFilters[attribute].push(value);
-      }
-      return newFilters;
-    });
-  };
-
-  const { isOpen, onOpen, onClose, setFilterOpen } =
-    useMobileFiltersDrawer(topicsItems);
   
   const handleModalClose = () => {
     onClose();
@@ -159,12 +149,6 @@ const PostsPageLayout = ({
     handleApplyChanges();
     setSelectedFilters({});
   };
-
-  let filtersCounts = useMemo(() => {
-    return Object.values(selectedFilters).reduce((total, currentArray) => {
-      return total + currentArray.length;
-    }, 0);
-  }, [selectedFilters]);
 
   return (
     <PageLayout
