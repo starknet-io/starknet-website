@@ -1,0 +1,96 @@
+id: 2b03a0c4-178b-49c5-9f77-80365f6d4b24
+post_type: video
+title: "Dynamic layouts: faster, cheaper proving"
+published_date: 2023-06-06T12:30:36.490Z
+video:
+  url: https://www.youtube.com/live/ee3S83TaKM4?feature=share
+  id: ee3S83TaKM4
+  data:
+    kind: youtube#video
+    etag: UIBPje_UugPEr4Oq_t97n2k8Byw
+    id: ee3S83TaKM4
+    snippet:
+      publishedAt: 2023-06-07T01:24:55Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #45 | Dynamic layouts: faster, cheaper proving"
+      description: >-
+        In this talk, we will discuss what dynamic layouts are and how Starknet
+        benefits from them.
+
+
+        For further elaboration:
+
+        https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/ee3S83TaKM4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/ee3S83TaKM4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/ee3S83TaKM4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/ee3S83TaKM4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/ee3S83TaKM4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - Starknet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+        - layer 2
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #45 | Dynamic layouts: faster, cheaper proving"
+        description: >-
+          In this talk, we will discuss what dynamic layouts are and how
+          Starknet benefits from them.
+
+
+          For further elaboration:
+
+          https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT41M16S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/communitycall-45-dynamic-layouts_-faster-cheaper-proving-youtube-web.png
+category: community-calls
+topic:
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
+short_desc: In this talk, we will discuss dynamic layouts and how Starknet
+  benefits from them.
+blocks:
+  - type: markdown
+    body: In this talk, we will discuss dynamic layouts and how Starknet benefits
+      from them.
+  - type: link_list
+    randomize: false
+    heading: Related links
+    blocks:
+      - link:
+          hasIcon: true
+          custom_external_link: https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e
+          custom_title: Builtins and Dynamic Layouts
+        subLabel:
+          label: ""
