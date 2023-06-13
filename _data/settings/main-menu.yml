@@ -75,7 +75,7 @@ items:
               - custom_title: STARK Math
                 custom_internal_link: /posts/stark-math
                 hide_from_footer: true
-              - custom_title: STARK Struck
+              - custom_title: STARK Struck Podcast
                 custom_internal_link: /posts/stark-struck
                 hide_from_footer: true
       - blocks:
