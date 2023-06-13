@@ -266,14 +266,18 @@ export const HeroImage = ({
                     {description}
                   </Text>
                   {!!buttonText && (
-                    <Button
-                      variant="solid"
-                      style={{ alignSelf: "flex-start" }}
-                      href={buttonUrl}
-                      onClick={onButtonClick}
+                    <Box
+                      pt="4"
                     >
-                      {buttonText}
-                    </Button>
+                      <Button
+                        variant="solid"
+                        style={{ alignSelf: "flex-start" }}
+                        href={buttonUrl}
+                        onClick={onButtonClick}
+                      >
+                        {buttonText}
+                      </Button>
+                    </Box>
                   )}
                 </Stack>
               </Stack>
