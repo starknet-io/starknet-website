@@ -11,7 +11,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
