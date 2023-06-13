@@ -9,6 +9,7 @@ export interface Roadmap {
   readonly hero_description: string;
   readonly show_hero_cta: boolean;
   readonly hero_cta_copy?: string;
+  readonly roadmap_post_ps?: string;
 }
 
 export async function getRoadmapSettings(locale: string): Promise<Roadmap> {

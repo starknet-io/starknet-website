@@ -10,10 +10,13 @@ import {
   Heading,
   Spacer,
 } from "@chakra-ui/react";
+import { MarkdownBlock } from "src/blocks/MarkdownBlock";
+import { useBoolean } from "react-use";
+import RoadmapSubscribeForm from "../../../(components)/roadmap/RoadmapSubscribeForm";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
 import Link from "next/link";
-import React from "react";
+import { useEffect } from "react";
 import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
 import { Text } from "@ui/Typography/Text";
@@ -38,12 +41,28 @@ export default function RoadmapPost({
   locale,
   blocksDynamicData,
   roadmapVersion,
+  psCopy
 }: {
   roadmapPost: RoadmapPostType;
   roadmapVersion: RoadmapVersion;
   locale: string;
   blocksDynamicData: BlocksDynamicData;
+  psCopy?: string;
 }) {
+  const [isOpen, setIsOpen] = useBoolean(false);
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (target.tagName === 'A' && (target as HTMLAnchorElement).getAttribute('href') === '#sendgrid') {
+        event.preventDefault();
+        setIsOpen(true)
+      }
+    };
+    document.addEventListener('click', handleClick);
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, [setIsOpen]);
 
   return (
     <PageLayout
@@ -118,7 +137,10 @@ export default function RoadmapPost({
             ))}
           </Flex>
           <Spacer height="32px" />
-          <Divider />
+          <Divider mb="6" />
+          <MarkdownBlock body={psCopy as string} />
+          <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Divider mt="6" />
         </Container>
       }
     />

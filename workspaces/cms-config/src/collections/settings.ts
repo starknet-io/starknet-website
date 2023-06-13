@@ -461,6 +461,13 @@ export const settingsCollectionConfig = {
           widget: "string",
           required: false,
           crowdin: true
+        },
+        {
+          name: "roadmap_post_ps",
+          label: "Roadmap post p.s. copy",
+          widget: "markdown",
+          required: false,
+          crowdin: true
         }
       ],
     },

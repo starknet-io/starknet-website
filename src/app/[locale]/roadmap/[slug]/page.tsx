@@ -7,6 +7,7 @@ import {
   getRoadmapVersions,
 } from "workspaces/cms-data/src/roadmap";
 import getBlocksDynamicData from "../../(components)/utils/getBlocksDynamicData";
+import { getRoadmapSettings } from "@starknet-io/cms-data/src/settings/roadmap";
 
 export async function generateStaticParams() {
   const params = [];
@@ -37,6 +38,7 @@ export default async function Page({
     const roadmapPost = await getRoadmapPostBySlug(slug, locale);
     const blocksDynamicData = await getBlocksDynamicData(locale);
     const roadmapVersions = await getRoadmapVersions(locale);
+    const roadmapSettings = await getRoadmapSettings(locale);
 
     return (
       <RoadmapPost
@@ -46,6 +48,7 @@ export default async function Page({
         roadmapVersion={
           roadmapVersions.find((version) => version.id === roadmapPost.version)!
         }
+        psCopy={roadmapSettings.roadmap_post_ps}
       />
     );
   } catch (err) {
