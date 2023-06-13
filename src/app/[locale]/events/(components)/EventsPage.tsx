@@ -215,7 +215,7 @@ const EventsPageLayout = ({
     setFilterOpen(false);
   };
 
-  const checkIsRefined = (arr) => {
+  const checkIsRefined = (arr: any) => {
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].hasOwnProperty('isRefined') && arr[i].isRefined === true) {
         return true;
