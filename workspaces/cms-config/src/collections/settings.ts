@@ -21,7 +21,7 @@ export const settingsCollectionConfig = {
               label: "Title",
               name: "title",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Columns",
@@ -39,7 +39,7 @@ export const settingsCollectionConfig = {
                       name: "title",
                       required: false,
                       widget: "string",
-                      crowdin: true
+                      crowdin: true,
                     },
                     {
                       label: "Menu Items",
@@ -76,12 +76,12 @@ export const settingsCollectionConfig = {
             {
               name: "source",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               name: "destination",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
           ],
         },
@@ -102,7 +102,7 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Image",
@@ -113,19 +113,19 @@ export const settingsCollectionConfig = {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
           ],
         },
@@ -146,7 +146,7 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Type",
@@ -177,19 +177,19 @@ export const settingsCollectionConfig = {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Description",
               name: "body",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
           ],
         },
@@ -210,13 +210,13 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Image",
@@ -227,19 +227,19 @@ export const settingsCollectionConfig = {
               label: "Company name",
               name: "company_name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
           ],
         },
@@ -260,13 +260,13 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Image",
@@ -277,19 +277,19 @@ export const settingsCollectionConfig = {
               label: "Company name",
               name: "company_name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
           ],
         },
@@ -310,13 +310,13 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Image",
@@ -327,19 +327,19 @@ export const settingsCollectionConfig = {
               label: "Company name",
               name: "company_name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Description",
               name: "description",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
           ],
         },
@@ -380,7 +380,7 @@ export const settingsCollectionConfig = {
               name: "title",
               label: "Title",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               name: "body",
@@ -393,7 +393,7 @@ export const settingsCollectionConfig = {
               hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
               required: false,
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
           ],
         },
@@ -419,6 +419,67 @@ export const settingsCollectionConfig = {
           search_fields: ["title"],
           value_field: "id",
           display_fields: ["title"],
+        },
+      ],
+    },
+    {
+      label: "Permissions",
+      name: "permissions",
+      file: `_data/settings/permissions.yml`,
+      crowdin: false,
+      fields: [
+        {
+          label: "Permissions",
+          name: "items",
+          widget: "list",
+          fields: [
+            {
+              name: "username",
+              label: "Github username (without @)",
+              widget: "string",
+              crowdin: false,
+            },
+            {
+              name: "access",
+              label: "Access to collections",
+              multiple: true,
+              widget: "select",
+              options: [
+                {
+                  label: "All",
+                  value: "all",
+                },
+                {
+                  label: "Pages",
+                  value: "pages",
+                },
+                {
+                  label: "Posts",
+                  value: "posts",
+                },
+                {
+                  label: "Events",
+                  value: "events",
+                },
+                {
+                  label: "Tutorials",
+                  value: "tutorials",
+                },
+                {
+                  label: "Jobs",
+                  value: "jobs",
+                },
+                {
+                  label: "SEO",
+                  value: "seo",
+                },
+                {
+                  label: "Settings",
+                  value: "settings",
+                },
+              ],
+            },
+          ],
         },
       ],
     },
