@@ -121,7 +121,7 @@ const EventsPageLayout = ({
 
   const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
 
-  function mapSelectedFilters() {
+  const mapSelectedFilters = () => {
     let result: { location?: string[], type?: string[], month?: string[] } = {};
 
     let refinedValues1 = locations
@@ -215,8 +215,22 @@ const EventsPageLayout = ({
     setFilterOpen(false);
   };
 
+  const checkIsRefined = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].hasOwnProperty('isRefined') && arr[i].isRefined === true) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+
   const handleClearFilters = () => {
-    handleApplyChanges();
+    const locationsRefined = checkIsRefined(locations);
+    const typesRefined = checkIsRefined(types);
+    const monthsRefined = checkIsRefined(months);
+    const anyFilterApplied = locationsRefined || typesRefined || monthsRefined;
+    anyFilterApplied && handleApplyChanges();
     setSelectedFilters({});
   };
   
