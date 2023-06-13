@@ -5,8 +5,17 @@ items:
     username: lorcan-codes
   - username: milosyuki
     access:
-      - all
+      - settings
+      - events
   - username: thecotne
     access:
-      - pages
-      - posts
+      - settings
+      - events
+  - username: thorville
+    access:
+      - settings
+      - events
+  - username: robwalsh21
+    access:
+      - events
+      - settings
