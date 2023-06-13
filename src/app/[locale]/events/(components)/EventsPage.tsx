@@ -18,7 +18,7 @@ import { getUnixTime, startOfDay } from "date-fns";
 import type { BaseHit } from "instantsearch.js";
 import moment from "moment";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import algoliasearch from "src/libs/algoliasearch/lite";
