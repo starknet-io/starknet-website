@@ -16,11 +16,22 @@ import Link from "next/link";
 import React from "react";
 import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
+import { Text } from "@ui/Typography/Text";
 import {
   RoadmapPost as RoadmapPostType,
   RoadmapVersion,
 } from "workspaces/cms-data/src/roadmap";
 import RoadmapPostVersion from "../../(components)/RoadmapPostVersion";
+
+interface KeyValuePairs {
+  [key: string]: string;
+}
+
+const stages: KeyValuePairs = {
+  "building-now": "Building Now",
+  "building-next": "Building Next",
+  "backlog": "Backlog",
+};
 
 export default function RoadmapPost({
   roadmapPost,
@@ -91,6 +102,7 @@ export default function RoadmapPost({
           <Heading variant="h2" color="heading-navy-fg">
             {roadmapPost.title}
           </Heading>
+          <Text variant="cardBody" mt="6"><strong>STAGE:</strong> {stages[roadmapPost?.stage]}</Text>
           <Heading variant="h4" mt="24px" mb="2rem" fontSize="sm">
             {roadmapPost.availability}
           </Heading>
