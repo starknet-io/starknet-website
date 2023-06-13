@@ -19,7 +19,7 @@ function RoadmapSubscribeForm({
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={handleClose}>
+    <Modal isOpen={isOpen} onClose={handleClose} size="2xl">
       <ModalOverlay />
       <ModalContent>
         <ModalCloseButton />
