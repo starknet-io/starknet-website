@@ -1,38 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { google } from "googleapis";
-import Cors from "cors";
-
-const cors = Cors({
-  methods: ["POST", "GET", "HEAD"],
-  origin: [
-    "https://starknet-website-cms.netlify.app",
-    "http://127.0.0.1:1234",
-    "http://localhost:1234",
-    /^https:\/\/[-_\w]+\.starknet-netlify-cms\.pages\.dev$/,
-  ],
-});
-
-function runMiddleware(
-  req: NextApiRequest,
-  res: NextApiResponse,
-  fn: Function,
-) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result: any) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-
-      return resolve(result);
-    });
-  });
-}
+import { CMSCors, runMiddleware } from "./(utils)/middleware";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  await runMiddleware(req, res, cors);
+  await runMiddleware(req, res, CMSCors);
 
   const youtube = google.youtube({
     version: "v3",

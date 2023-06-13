@@ -22,7 +22,7 @@ import {
   throwOnConflictingBranches,
 } from 'netlify-cms-lib-util';
 
-import { CMS_BRANCH_PREFIX , contentKeyFromBranch, branchFromContentKey} from './utils'
+import { API_BASE_URL, CMS_BRANCH_PREFIX , contentKeyFromBranch, branchFromContentKey } from './utils'
 
 import type {
   AssetProxy,
@@ -1179,12 +1179,26 @@ export default class API {
   }
 
   async publishUnpublishedEntry(collectionName: string, slug: string) {
-    const contentKey = this.generateContentKey(collectionName, slug);
-    const branch = branchFromContentKey(contentKey);
+      const contentKey = this.generateContentKey(collectionName, slug);
+      const branch = branchFromContentKey(contentKey);
+      const pullRequest = await this.getBranchPullRequest(branch);
+      const res = await fetch(
+        `${API_BASE_URL}/permissions`
+      );
 
-    const pullRequest = await this.getBranchPullRequest(branch);
-    await this.mergePR(pullRequest);
-    await this.deleteBranch(branch);
+      const permissions = await res.json();
+
+      const { user } = pullRequest
+      const userPermissions = permissions.find(p => p.username = user.login)
+      if(!userPermissions){
+        throw new Error(`No data found for user "${user.login}" in CMS permissions`)
+      }
+      if(!userPermissions.access?.includes('all') && !userPermissions.access?.includes(collectionName)){
+        throw new Error(`User "${user.login}" has no permission to publish "${collectionName}"`)
+      }
+
+      await this.mergePR(pullRequest);
+      await this.deleteBranch(branch);
   }
 
   async createRef(type: string, name: string, sha: string) {
