@@ -144,7 +144,7 @@ export default function PostByCategory({
           <Divider />
           <Flex direction="row" gap="8px" mt="64px">
             {post.topic?.map((topic, i) => (
-              <Tag key={i}> {topics.find((t) => t.id === topic)?.name} </Tag>
+              <Tag key={i} capitalize={false}> {topics.find((t) => t.id === topic)?.name} </Tag>
             ))}
           </Flex>
         </Container>
