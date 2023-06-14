@@ -141,7 +141,7 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
 }
 
 .aa-DetachedSearchButton {
-  min-width: 200px;
+  min-width: 177px;
   border-radius: 8px;
   border: 0px;
 }
