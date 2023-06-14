@@ -109,7 +109,7 @@ const heroStyles: Record<string, HeroStyleObject> = {
   },
   roadmap: {
     img: "/assets/ecosystem/roadmap.svg",
-    bg: "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
+    bg: "roadmap-hero-gradient",
     arrowGradient: "linear(45deg, #82BDBD 100%, #4F6D87 100%)",
     backgroundBlendMode: "multiply, multiply, multiply, normal",
     arrowOpacity: "1",
