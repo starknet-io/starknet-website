@@ -141,6 +141,14 @@ export const eventsCollectionConfig = {
       widget: "datetime",
     },
     {
+      label: "",
+      name: "month",
+      widget: "month",
+      required: false,
+      index_file: "",
+      meta: false
+    },
+    {
       name: "end_date",
       label: "end date",
       widget: "datetime",
