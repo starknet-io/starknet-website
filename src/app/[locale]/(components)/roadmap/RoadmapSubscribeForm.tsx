@@ -19,9 +19,9 @@ function RoadmapSubscribeForm({
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={handleClose} size="2xl">
+    <Modal isOpen={isOpen} onClose={handleClose}>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent maxWidth="400px">
         <ModalCloseButton />
         <iframe
           src="https://cdn.forms-content.sg-form.com/2fb14a4a-f24d-11ed-97a1-2255cc459392"
