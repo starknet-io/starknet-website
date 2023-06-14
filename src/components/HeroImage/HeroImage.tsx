@@ -26,6 +26,7 @@ type Props = {
     | "build"
     | "community"
     | "nodes_and_services"
+    | "security"
     | "roadmap";
   buttonText?: string;
   buttonUrl?: string;
