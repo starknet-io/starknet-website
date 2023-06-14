@@ -1190,11 +1190,13 @@ export default class API {
 
       const { user } = pullRequest
       const userPermissions = permissions.find(p => p.username = user.login)
-      if(!userPermissions){
-        throw new Error(`No data found for user "${user.login}" in CMS permissions`)
-      }
-      if(!userPermissions.access?.includes('all') && !userPermissions.access?.includes(collectionName)){
-        throw new Error(`User "${user.login}" has no permission to publish "${collectionName}"`)
+
+      if(userPermissions){        
+        const postCollections = ['posts', 'categories', 'topics']
+        const noPermissionToPosts = postCollections.includes(collectionName) && !userPermissions.access?.includes('posts')
+        if(noPermissionToPosts || !userPermissions.access?.includes(collectionName)){
+          throw new Error(`User "${user.login}" has no permission to publish "${collectionName}"`)
+        }
       }
 
       await this.mergePR(pullRequest);

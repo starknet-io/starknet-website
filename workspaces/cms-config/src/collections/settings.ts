@@ -446,15 +446,11 @@ export const settingsCollectionConfig = {
               widget: "select",
               options: [
                 {
-                  label: "All",
-                  value: "all",
-                },
-                {
                   label: "Pages",
                   value: "pages",
                 },
                 {
-                  label: "Posts",
+                  label: "Post collections",
                   value: "posts",
                 },
                 {
