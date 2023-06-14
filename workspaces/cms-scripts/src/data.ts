@@ -63,7 +63,7 @@ function calculateReadingTime(text: string): string {
   const decimalMinutes = wordsWithImages / wordsPerMinute;
 
   const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
-  return `${minutes}min`;
+  return `${minutes} min`;
 }
 
 function concatenateBodies(blocks: readonly any[]): string {
@@ -84,7 +84,7 @@ function formatDuration(duration: string): string {
   const hours = parseInt(match[1]) || 0;
   const minutes = parseInt(match[2]) || 0;
   const totalMinutes = hours * 60 + minutes;
-  const formattedMinutes = totalMinutes > 0 ? `${totalMinutes}min` : "";
+  const formattedMinutes = totalMinutes > 0 ? `${totalMinutes} min` : "";
   return formattedMinutes.trim();
 }
 
@@ -110,7 +110,7 @@ export async function fileToPost(
   if (data.post_type === "video") {
     timeToConsume = `${formatDuration(
       data.video?.data?.contentDetails?.duration || ""
-    )} watch`;
+    )} ${data.video?.data?.contentDetails?.duration ? "watch" : ""}`;
   } else {
     timeToConsume = `${calculateReadingTime(fullText)} read`;
   }

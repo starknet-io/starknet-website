@@ -1,0 +1,12 @@
+type: conference
+name: Eth Seattle
+description: Eth Seattle is a gathering of ETH folks from the west coast. the
+  goal is to bring together the local community & have fun!
+url: https://2023.ethseattle.org/
+start_date: 2023-07-07T06:00:46.404Z
+end_date: 2023-07-07T15:00:46.410Z
+show_in_past_events: false
+image: /assets/eth-seattle.png
+location: north_america
+city: Seattle
+country: Washington

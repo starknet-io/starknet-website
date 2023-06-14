@@ -26,7 +26,8 @@ type Props = {
     | "build"
     | "community"
     | "nodes_and_services"
-    | "roadmap";
+    | "roadmap"
+    | "security";
   buttonText?: string;
   buttonUrl?: string;
   onButtonClick?: () => void;
@@ -114,6 +115,11 @@ const heroStyles: Record<string, HeroStyleObject> = {
     backgroundBlendMode: "multiply, multiply, multiply, normal",
     arrowOpacity: "1",
     arrowTipColor: "#82BDBD"
+  },
+  security: {
+    img: "/assets/ecosystem/security.svg",
+    gradient:
+      "linear(262.88deg, hero-gradient-security-a 21.62%, hero-gradient-security-b 100.38%)",
   },
 };
 
