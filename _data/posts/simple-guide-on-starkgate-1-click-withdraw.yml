@@ -6,6 +6,8 @@ toc: true
 published_date: 2023-05-01T08:33:35.784Z
 image: ""
 category: ecosystem
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
 short_desc: Have you ever found yourself forgetting to withdraw your assets from
   Mainnet after bridging them through Starkgate? Well, thanks to the incredible
   work of our developers, you can now say goodbye to that concern.
