@@ -20,8 +20,8 @@ items:
               - custom_internal_link: /roadmap/
                 custom_title: Roadmap
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
-              - custom_title: Engineering blog
-                custom_internal_link: /posts/engineering
+              - custom_title: Developers blog
+                custom_internal_link: /posts/developers
   - title: Ecosystem
     columns:
       - blocks:
@@ -65,8 +65,8 @@ items:
               - custom_title: Ecosystem
                 custom_internal_link: /posts/ecosystem
                 hide_from_footer: true
-              - custom_title: Engineering
-                custom_internal_link: /posts/engineering
+              - custom_title: Developers
+                custom_internal_link: /posts/developers
                 hide_from_footer: true
               - custom_title: Foundation
                 custom_internal_link: /posts/foundation
