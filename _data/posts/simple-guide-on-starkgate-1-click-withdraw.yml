@@ -1,6 +1,7 @@
 id: 3de95a42-7ae7-452a-99fc-7046ad2444a5
 post_type: article
 title: Simple Guide on Starkgate 1-Click Withdraw
+toc: true
 published_date: 2023-05-01T08:33:35.784Z
 image: ""
 category: ecosystem
@@ -10,8 +11,8 @@ short_desc: Have you ever found yourself forgetting to withdraw your assets from
 blocks:
   - type: markdown
     body: >-
-      ![](/assets/main-image-spaceshard.jpg "✨ Enhancement that takes your
-      bridging experience to a whole new level! ✨")
+      ![](/assets/artboard-40.png "✨ Enhancement that takes your bridging
+      experience to a whole new level! ✨")
 
 
       Have you ever found yourself forgetting to withdraw your assets from Mainnet after bridging them through Starkgate? Well, thanks to the incredible work of our developers, you can now say goodbye to that concern.
