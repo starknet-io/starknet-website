@@ -1,3 +1,4 @@
+month: undefined NaN
 id: 3de95a42-7ae7-452a-99fc-7046ad2444a5
 post_type: article
 title: Simple Guide on Starkgate 1-Click Withdraw
@@ -37,7 +38,7 @@ blocks:
       ## How to use it?
 
 
-      Go to **[https://goerli.starkgate.starknet.io](https://goerli.starkgate.starknet.io/) for testnet option** or to **[https://starkgate.starknet.io/](https://starkgate.starknet.io/**)** for mainnet.
+      Go to **[https://goerli.starkgate.starknet.io](https://goerli.starkgate.starknet.io/) for testnet option** or to **\[https://starkgate.starknet.io/](https://starkgate.starknet.io/**)\*\* for mainnet.
 
 
       Make sure you connect with your Metamask and Argent/Braavos wallets.
@@ -161,7 +162,9 @@ blocks:
 
       >
 
-      > \- The relayer is waiting for a gas price drop on L1. If it’s not the case feel free to reach out SpaceShard team on **[Discord](https://discord.gg/6PKcsRPQKC)**.
+      > \- The relayer is waiting for a gas price drop on L1. If it’s not the case feel free to reach out SpaceShard team on [Discord](https://discord.gg/6PKcsRPQKC).
+
+
 
 
       ## Where can I test the Starkgate relayer?
@@ -171,8 +174,6 @@ blocks:
 
 
       We hope this guide has been helpful in showing you how to use the SpaceShard one-click withdraw feature on Starkgate.
-
-
 
 
       If you have any questions or require further information, feel free to reach out to us through our **Discord** community. We are continuously working to enhance the bridging experience and are excited to have you on board as an early tester.
