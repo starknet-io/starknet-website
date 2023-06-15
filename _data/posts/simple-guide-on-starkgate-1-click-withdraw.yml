@@ -41,3 +41,27 @@ blocks:
 
 
       Make sure you connect with your Metamask and Argent/Braavos wallets.
+
+
+      ![Make sure you connect with your Metamask and Argent/Braavos wallets.](/assets/metamask-argent-braavos-connection.jpg)
+
+
+      Go to the withdrawal tab, enter the amount you want to withdraw, and then check “*Use the automatic withdrawal service by SpaceShard* “.
+
+
+      ![](/assets/withdrawl-tab.jpg)
+
+
+      Depending on the wallet you are using popup will appear. In this case, the Argent wallet is connected to Starkgate (see image below).
+
+
+      ![](/assets/argent-popup.jpg)
+
+
+      Confirm the transaction on the Argent wallet. It will deposit the tokens in the Starkgate bridge and a small ETH fee to the one-click service provider.
+
+
+      Once the transaction is confirmed, you can check the status of your transaction on **[Starkscan](https://starkscan.co/)** or **[Voyager](https://voyager.online/).**
+
+
+      ![](/assets/transaction-is-being-processed-on-sn.jpg)
