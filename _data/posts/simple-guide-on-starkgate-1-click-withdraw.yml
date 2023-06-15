@@ -11,7 +11,8 @@ short_desc: Have you ever found yourself forgetting to withdraw your assets from
 blocks:
   - type: markdown
     body: >-
-      ![](/assets/artboard-40.png "✨ Enhancement that takes your bridging
+      ![✨ Enhancement that takes your bridging experience to a whole new level!
+      ✨](/assets/artboard-40.png "✨ Enhancement that takes your bridging
       experience to a whole new level! ✨")
 
 
@@ -24,4 +25,4 @@ blocks:
       With the 1-click withdrawal feature, you can now effortlessly retrieve your bridged assets from Mainnet without the need to initiate a separate withdrawal transaction. No more worrying about forgetting to withdraw or dealing with complicated withdrawal procedures. 🥳🥳🥳
 
 
-      ![This feature simplifies the process, allowing you to effortlessly withdraw your assets with just a single click.](/assets/meme-image-spaceshard.jpg)
+      ![This feature simplifies the process, allowing you to effortlessly withdraw your assets with just a single click.](/assets/meme-image-spaceshard.jpg "This feature simplifies the process, allowing you to effortlessly withdraw your assets with just a single click.")
