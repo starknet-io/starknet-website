@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { Meta, getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from "fs/promises";
+import path from "path";
 import { TopLevelBlock } from "./pages";
 
 export interface RoadmapPost extends Meta {

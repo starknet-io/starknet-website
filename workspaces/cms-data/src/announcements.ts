@@ -1,7 +1,7 @@
 import { defaultLocale } from "./i18n/config";
 import { Meta, getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import path from "path";
+import fs from "fs/promises";
 import { TopLevelBlock } from "./pages";
 
 export interface AnnouncementsPost extends Meta {

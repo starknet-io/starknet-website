@@ -1,5 +1,5 @@
-import fs from "node:fs/promises";
-import * as path from "node:path";
+import fs from "fs/promises";
+import * as path from "path";
 import * as dotenv from "dotenv";
 import { google } from "googleapis";
 import YAML from "yaml";
