@@ -20,7 +20,7 @@ type Props = {
 
 export const PageLayout = (props: Props) => {
   return (
-    <Container py="0" pb="16" flex="1" maxW={props.maxW ? props.maxW : "none"}>
+    <Container py="0" pb="16" flex="1" maxW={props.maxW ? props.maxW : "1344px"}>
       <Flex py="4" direction={{ base: "column", lg: "row" }}>
         <Box>{props.breadcrumbs}</Box>
         <Spacer />

@@ -35,19 +35,20 @@ export const NavLayout = (props: NavLayoutProps) => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Container py={{ base: "4", lg: "17px" }}>
+    <Container py={{ base: "4", lg: "17px" }} px={{ base: "16px", md: "32px" }} maxW="1344px">
       <HStack spacing="4" justify="space-between">
-        <Link href={`/${locale}/`}>
-          <StarknetLogo />
-        </Link>
-        {isDesktop && (
-          <>
-            <ButtonGroup variant="link" spacing="18px">
-              {props.items}
-            </ButtonGroup>
-          </>
-        )}
-
+        <HStack>
+          <Link href={`/${locale}/`}>
+            <StarknetLogo />
+          </Link>
+          {isDesktop && (
+            <>
+              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "60px" }}>
+                {props.items}
+              </ButtonGroup>
+            </>
+          )}
+        </HStack>
         <HStack spacing={6}>
           {props.searchArea}
 

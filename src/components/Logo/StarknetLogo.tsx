@@ -4,7 +4,7 @@ type Props = {
   height?: string;
 } & HTMLChakraProps<"svg">;
 
-export const StarknetLogo = ({ height = "40" }: Props) => {
+export const StarknetLogo = ({ height = "35" }: Props) => {
   const { colorMode } = useColorMode();
   if (colorMode === "light") {
     return (
