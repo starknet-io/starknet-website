@@ -68,6 +68,34 @@ export default function App() {
         />
       );
     });
+    CMS.registerPreviewTemplate("roadmap-posts", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ROADMAP_POST}
+          getAsset={getAsset}
+        />
+      );
+    });
+    CMS.registerPreviewTemplate("announcements", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ANNOUNCEMENTS_POST}
+          getAsset={getAsset}
+        />
+      );
+    });
+    CMS.registerPreviewTemplate("roadmap-versions", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ROADMAP_VERSION}
+          getAsset={getAsset}
+        />
+      );
+    });
+
     CMS.registerBackend("github-yuki", GitHubBackend);
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;

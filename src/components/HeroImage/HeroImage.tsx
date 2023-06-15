@@ -108,13 +108,6 @@ const heroStyles: Record<string, HeroStyleObject> = {
     arrowOpacity: "0.2",
     arrowTipColor: "#D672EF"
   },
-  security: {
-    img: "/assets/ecosystem/security.svg",
-    gradient:
-      "linear(262.88deg, hero-gradient-security-a 21.62%, hero-gradient-security-b 100.38%)",
-    arrowGradient: "linear(250.04deg, #5B5F68 57.45%, #81D2FF 119.39%)",
-    arrowTipColor: "#5B5F68"
-  },
   roadmap: {
     img: "/assets/ecosystem/roadmap.svg",
     bg: "roadmap-hero-gradient",
@@ -123,6 +116,13 @@ const heroStyles: Record<string, HeroStyleObject> = {
     arrowOpacity: "1",
     arrowTipColor: "#82BDBD"
   },
+  security: {
+    img: "/assets/ecosystem/security.svg",
+    gradient:
+      "linear(262.88deg, hero-gradient-security-a 21.62%, hero-gradient-security-b 100.38%)",
+    arrowGradient: "linear(250.04deg, #5B5F68 57.45%, #81D2FF 119.39%)",
+    arrowTipColor: "#5B5F68"
+  }
 };
 
 export const HeroImage = ({

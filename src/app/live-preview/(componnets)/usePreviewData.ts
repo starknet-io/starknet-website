@@ -4,6 +4,7 @@ import { Event } from "@starknet-io/cms-data/src/events";
 import { Post } from "workspaces/cms-data/src/posts";
 import { Page } from "workspaces/cms-data/src/pages";
 import { Tutorial } from "workspaces/cms-data/src/tutorials";
+import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
@@ -11,6 +12,8 @@ export enum CustomPreviewType {
   TUTORIALS = "TUTORIALS",
   POST = "POST",
   PAGE = "PAGE",
+  ROADMAP_POST = "ROADMAP_POST",
+  ROADMAP_VERSION = "ROADMAP_VERSION",
   NONE = "",
 }
 export type LivePreviewData =
@@ -33,6 +36,14 @@ export type LivePreviewData =
   | {
       type: CustomPreviewType.PAGE;
       payload: Page;
+    }
+  | {
+      type: CustomPreviewType.ROADMAP_POST;
+      payload: RoadmapPost;
+    }
+  | {
+      type: CustomPreviewType.ROADMAP_VERSION;
+      payload: RoadmapVersion;
     }
   | {
       type: CustomPreviewType.NONE;
