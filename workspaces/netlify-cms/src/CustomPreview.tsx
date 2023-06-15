@@ -6,7 +6,7 @@ import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
 const livePreviewHost =
   import.meta.env.VITE_GIT_BRANCH_NAME === "production"
     ? "https://www.starknet.io"
-    : import.meta.env.VITE_LIVE_PREVIEW_URL;
+    : import.meta.env.VITE_LIVE_PREVIEW_URL ?? 'http://localhost:3000';
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",

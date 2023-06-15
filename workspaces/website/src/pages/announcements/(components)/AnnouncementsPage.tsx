@@ -3,7 +3,7 @@ import { AnnouncementsPost } from "@starknet-io/cms-data/src/announcements";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import AnnouncementPostCard from "./AnnouncementPostCard";
 
-export type AnnouncementsPageProps = {
+type AnnouncementsPageProps = {
   announcements: readonly AnnouncementsPost[];
   locale: string;
 };

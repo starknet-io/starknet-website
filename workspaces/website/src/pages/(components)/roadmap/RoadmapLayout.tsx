@@ -1,4 +1,3 @@
-
 import { Box, Container } from "@chakra-ui/react";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { PageLayout } from "@ui/Layout/PageLayout";

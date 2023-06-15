@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Link } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { RoadmapPost, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
@@ -22,7 +22,7 @@ export default function RoadmapPostCard({
         bg="roadmap-card-bg-color"
         borderWidth="1px"
         borderRadius="24px"
-        as={Link}
+        as='a'
         href={`/${locale}/roadmap/${roadmapPost?.slug}`}
         padding="8px"
         height="100%"

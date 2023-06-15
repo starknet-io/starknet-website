@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Grid, Heading, Icon } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { roadmapStagesFields } from "@starknet-io/cms-config/src/collections/roadmapPosts";
@@ -8,7 +6,7 @@ import { Roadmap } from "@starknet-io/cms-data/src/settings/roadmap";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import RoadmapPostCard from "./RoadmapPostCard";
 
-export type RoadmapPageProps = {
+type RoadmapPageProps = {
   roadmapPosts: readonly RoadmapPost[];
   roadmapVersions: readonly RoadmapVersion[];
   roadmapSettings: Roadmap;
