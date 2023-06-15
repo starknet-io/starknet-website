@@ -92,21 +92,68 @@ const PostsPageLayout = ({
   topics,
 }: Pick<Props, "categories" | "params" | "topics">) => {
   const category = categories.find((c) => c.slug === params.category);
+
   const { items: topicsItems, refine: refineTopics } = useRefinementList({
     attribute: "topic",
     limit: 50,
     sortBy: ["count:desc"],
   });
 
-  const { isOpen, filtersCount, onOpen, onClose } =
-    useMobileFiltersDrawer(topicsItems);
+  const {
+    isOpen,
+    onOpen,
+    onClose,
+    setFilterOpen,
+    handleFilterClick,
+    filtersCounts,
+    selectedFilters,
+    setSelectedFilters
+  } = useMobileFiltersDrawer(topicsItems);
+
+  function mapSelectedFilters() {
+    let result: { topic?: string[] } = {};
+    let topicsFilteredValues = topicsItems
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+    if (topicsFilteredValues.length > 0) {
+        result["topic"] = topicsFilteredValues;
+    }
+    return result;
+  }
+  
+  const handleModalClose = () => {
+    onClose();
+    setSelectedFilters(mapSelectedFilters());
+  }
+
+  const handleApplyChanges = () => {
+    if (selectedFilters["topic"]?.length) {
+      selectedFilters["topic"].map((topic) => {
+        refineTopics(topic);
+      });
+    } else {
+      topicsItems.map((topic) => {
+        topic.isRefined && refineTopics(topic.value);
+      });
+    }
+  }
+
+  const handleApplyFilters = () => {
+    handleApplyChanges();
+    setFilterOpen(false);
+  };
+
+  const handleClearFilters = () => {
+    handleApplyChanges();
+    setSelectedFilters({});
+  };
 
   return (
     <PageLayout
       sectionHeaderTitle={category != null ? category.name : "All posts"}
       sectionHeaderBottomContent={
         <MobileFiltersButton
-          filtersCount={filtersCount}
+          filtersCount={filtersCounts}
           onClick={onOpen}
           style={{
             marginBlock: "16px",
@@ -154,12 +201,16 @@ const PostsPageLayout = ({
       main={
         <Box>
           <CustomHits categories={categories} params={params} />
-          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
+          <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
             <CustomTopics
               topics={topics}
               items={topicsItems}
-              refineTopics={refineTopics}
+              refineTopics={handleFilterClick}
+              selectedFilters={selectedFilters}
+              isDesktop={false}
             />
+            <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
+            <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
           </MobileFiltersDrawer>
         </Box>
       }
@@ -170,16 +221,27 @@ const PostsPageLayout = ({
 type CustomTopicsProps = {
   topics: readonly Topic[];
   items: RefinementListProps["items"];
-  refineTopics: (value: string) => void;
+  refineTopics: any;
+  selectedFilters?: any;
+  isDesktop?: boolean;
 };
-function CustomTopics({ topics, items, refineTopics }: CustomTopicsProps) {
+function CustomTopics({
+  topics,
+  items,
+  refineTopics,
+  selectedFilters,
+  isDesktop = true
+}: CustomTopicsProps) {
   // const router = useRouter();
   // const pathname = usePathname()!;
   // const searchParams = useSearchParams();
   // const topicSet = useMemo(() => {
   //   return new Set(searchParams.get("topic")?.split(",") ?? []);
   // }, [searchParams]);
-
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
   const topicsDict = useMemo(() => {
     return topics.reduce((acc, topic) => {
       acc[topic.id] = topic;
@@ -198,9 +260,9 @@ function CustomTopics({ topics, items, refineTopics }: CustomTopicsProps) {
           size="sm"
           px="8px"
           // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
-          variant={topic.isRefined ? "filterActive" : "filter"}
+          variant={isDesktop ? (topic.isRefined ? "filterActive" : "filter") : checkIfFilterExists(topic.label, "topic", selectedFilters) ? "filterActive" : "filter"}
           onClick={() => {
-            refineTopics(topic.value);
+            isDesktop ? refineTopics(topic.value) : refineTopics("topic", topic.label);
 
             // const params = new URLSearchParams(searchParams);
 
@@ -383,17 +445,17 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
         {filteredHits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
           const date = moment(hit.published_date).format("MMM DD, YYYY");
-          const category = categories.find((c) => c.id === hit.category)!;
+          const category = categories.find((c) => c.id === hit.category);
 
           return (
             <ArticleCard.Root
-              href={`/${hit.locale}/posts/${category.slug}/${hit.slug}`}
+              href={`/${hit.locale}/posts/${category?.slug}/${hit.slug}`}
               key={i}
             >
               <ArticleCard.Image url={hit.image} />
 
               <ArticleCard.Body>
-                <ArticleCard.Category category={category} />
+                {category && <ArticleCard.Category category={category} />}
                 <ArticleCard.Content
                   title={hit.title}
                   excerpt={hit.short_desc}

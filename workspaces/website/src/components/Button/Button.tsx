@@ -21,10 +21,11 @@ type props = {
   href?: string;
   isExternal?: boolean;
   target?: ButtonProps["formTarget"];
+  fullWidth?: boolean;
 } & ButtonProps;
 
 export const Button = forwardRef<HTMLButtonElement, props>(
-  ({ children, toId, href, ...rest }, ref) => {
+  ({ children, toId, href, fullWidth, ...rest }, ref) => {
     const handleOnClick = () => {
       if (!toId) {
         return;
@@ -36,6 +37,7 @@ export const Button = forwardRef<HTMLButtonElement, props>(
     return (
       <ChakraButton
         as={href != null ? "a" : undefined}
+        width={fullWidth ? "100%" : "auto"}
         onClick={handleOnClick}
         ref={ref}
         href={href}

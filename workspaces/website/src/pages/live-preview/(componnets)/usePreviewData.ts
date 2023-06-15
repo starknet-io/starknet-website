@@ -11,6 +11,8 @@ export enum CustomPreviewType {
   TUTORIALS = "TUTORIALS",
   POST = "POST",
   PAGE = "PAGE",
+  ROADMAP_POST = "ROADMAP_POST",
+  ROADMAP_VERSION = "ROADMAP_VERSION",
   NONE = "",
 }
 export type LivePreviewData =
@@ -35,6 +37,14 @@ export type LivePreviewData =
       payload: Page;
     }
   | {
+      type: CustomPreviewType.ROADMAP_POST;
+      payload: RoadmapPost;
+    }
+  | {
+      type: CustomPreviewType.ROADMAP_VERSION;
+      payload: RoadmapVersion;
+    }
+  | {
       type: CustomPreviewType.NONE;
       payload: null;
     };
@@ -44,6 +54,15 @@ export default function usePreviewData() {
     type: CustomPreviewType.NONE,
     payload: null,
   });
+
+  useEffect(() => {
+    window.top?.postMessage(
+      {
+        type: "preview-loaded",
+      },
+      "*"
+    );
+  }, []);
 
   useEffect(() => {
     window.addEventListener(

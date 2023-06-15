@@ -145,7 +145,7 @@ const TutorialsPageLayout = ({
       }
       main={
         <Box>
-          <CustomHits />
+          <CustomHits locale={params.locale} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
             <CustomType items={typeItems} refineTypes={refineTypes} />
             <CustomCourse params={params} />
@@ -197,7 +197,7 @@ function CustomType({
   refineTypes,
 }: {
   items: RefinementListProps["items"];
-  refineTypes: (v: string) => void;
+  refineTypes: any;
 }) {
   return (
     <Box>
@@ -228,7 +228,7 @@ function CustomTags({
   refineTags,
 }: {
   items: RefinementListProps["items"];
-  refineTags: (v: string) => void;
+  refineTags: any;
 }) {
   return (
     <Box mt={8}>
@@ -349,8 +349,10 @@ function CustomCourse({ params }: Pick<Props, "params">) {
 //     </Box>
 //   );
 // }
-
-function CustomHits() {
+type CustomHitsProps = {
+  locale: string;
+};
+function CustomHits({ locale }: CustomHitsProps) {
   const { hits, showMore, isLastPage } = useInfiniteHits<Tutorial>();
 
   return (
@@ -370,7 +372,7 @@ function CustomHits() {
           // if (hit.difficulty) tags.push(hit.difficulty);
           // if (hit.type) tags.push(hit.type);
 
-          return <TutorialsCard key={hit.objectID} hit={hit} />;
+          return <TutorialsCard key={hit.objectID} hit={hit} locale={locale} />;
         })}
       </Grid>
       {/* {hits.map((hit, i) => (

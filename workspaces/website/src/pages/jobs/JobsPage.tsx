@@ -75,17 +75,86 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     sortBy: ["name:asc"],
   });
 
-  const { isOpen, onOpen, onClose, filtersCount } = useMobileFiltersDrawer([
+  const {
+    isOpen,
+    setFilterOpen,
+    onOpen,
+    onClose,
+    handleFilterClick,
+    filtersCounts,
+    selectedFilters,
+    setSelectedFilters
+  } = useMobileFiltersDrawer([
     ...roles,
     ...types,
   ]);
+
+  function mapSelectedFilters() {
+    let result: { "job.role"?: string[], "job.type"?: string[] } = {};
+
+    let rolesFilteredValues = roles
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+
+    if (rolesFilteredValues.length > 0) {
+        result["job.role"] = rolesFilteredValues;
+    }
+
+    let typesFilteredValues = types
+        .filter(item => item.isRefined)
+        .map(item => item.value);
+
+    if (typesFilteredValues.length > 0) {
+        result["job.type"] = typesFilteredValues;
+    }
+
+    return result;
+  }
+
+  const handleModalClose = () => {
+    onClose();
+    setSelectedFilters(mapSelectedFilters());
+  }
+
+  const handleApplyChanges = () => {
+    if (selectedFilters["job.role"]?.length) {
+      selectedFilters["job.role"].map((role) => {
+        refineRoles(role);
+      });
+    } else {
+      roles.map((role) => {
+        role.isRefined && refineRoles(role.value);
+      });
+    }
+
+    if (selectedFilters["job.type"]?.length) {
+      selectedFilters["job.type"].map(type => {
+        refineTypes(type);
+      })
+    } else {
+      types.map((type) => {
+        type.isRefined && refineTypes(type.value);
+      });
+    }
+  }
+
+  const handleApplyFilters = () => {
+    handleApplyChanges();
+    setFilterOpen(false);
+  };
+
+  const handleClearFilters = () => {
+    handleApplyChanges();
+    setSelectedFilters({});
+  };
+  
   return (
     <PageLayout
       sectionHeaderTitle={seo.title}
       sectionHeaderDescription={seo.subtitle}
       sectionHeaderBottomContent={
         <MobileFiltersButton
-          filtersCount={filtersCount}
+          filtersCount={filtersCounts}
           onClick={onOpen}
           style={{
             marginBlock: "16px",
@@ -120,16 +189,18 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
-          <CustomRole items={roles} refine={refineRoles} />
-          <CustomType items={types} refine={refineTypes} />
+          <CustomRole items={roles} refine={refineRoles} selectedFilters={selectedFilters} />
+          <CustomType items={types} refine={refineTypes} selectedFilters={selectedFilters} />
         </Box>
       }
       main={
         <Box>
           <CustomHits />
-          <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
-            <CustomRole items={roles} refine={refineRoles} />
-            <CustomType items={types} refine={refineTypes} />
+          <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
+          <CustomRole items={roles} refine={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
+          <CustomType items={types} refine={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
+          <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
+          <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
           </MobileFiltersDrawer>
         </Box>
       }
@@ -139,10 +210,18 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
 function CustomRole({
   items,
   refine,
+  selectedFilters,
+  isDesktop = true
 }: {
   items: RefinementListProps["items"];
-  refine: (value: string) => void;
+  refine: any;
+  selectedFilters: any;
+  isDesktop?: boolean;
 }) {
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
   return (
     <Box>
       <Heading variant="h6" mb={4}>
@@ -152,8 +231,8 @@ function CustomRole({
         {items.map((item, i) => (
           <Button
             size="sm"
-            variant={item.isRefined ? "filterActive" : "filter"}
-            onClick={() => refine(item.value)}
+            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "job.role", selectedFilters) ? "filterActive" : "filter"}
+            onClick={() => isDesktop ? refine(item.value) : refine("job.role", item.label)}
             key={i}
             justifyContent="flex-start"
           >
@@ -168,10 +247,18 @@ function CustomRole({
 function CustomType({
   items,
   refine,
+  selectedFilters,
+  isDesktop = true
 }: {
   items: RefinementListProps["items"];
-  refine: (value: string) => void;
+  refine: any;
+  selectedFilters: any;
+  isDesktop?: boolean;
 }) {
+  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+    const rolesA = selectedFilters[filter];
+    return rolesA && rolesA.includes(role);
+  };
   return (
     <Box mt={8}>
       <Heading variant="h6" mb={4}>
@@ -182,9 +269,9 @@ function CustomType({
           const label = titleCase(item.label);
           return (
             <Button
-              variant={item.isRefined ? "filterActive" : "filter"}
+              variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "job.type", selectedFilters) ? "filterActive" : "filter"}
               size="sm"
-              onClick={() => refine(item.value)}
+              onClick={() => isDesktop ? refine(item.value) : refine("job.type", item.label)}
               key={i}
               justifyContent="flex-start"
             >

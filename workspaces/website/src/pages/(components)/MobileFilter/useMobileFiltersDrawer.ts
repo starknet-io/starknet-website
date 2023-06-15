@@ -16,10 +16,39 @@ export default function useMobileFiltersDrawer(
     }, 0);
   }, [filtersItems]);
 
+  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({});
+
+  const handleFilterClick = (attribute: string, value: string) => {
+    setSelectedFilters((prevFilters) => {
+      const newFilters = { ...prevFilters };
+      if (!newFilters[attribute]) {
+        newFilters[attribute] = [];
+      }
+
+      if (newFilters[attribute].includes(value)) {
+        newFilters[attribute] = newFilters[attribute].filter((val) => val !== value);
+      } else {
+        newFilters[attribute].push(value);
+      }
+      return newFilters;
+    });
+  };
+
+  let filtersCounts = useMemo(() => {
+    return Object.values(selectedFilters).reduce((total, currentArray) => {
+      return total + currentArray.length;
+    }, 0);
+  }, [selectedFilters]);
+
   return {
     isOpen: isMobile ? isFilterOpen : false,
     filtersCount,
+    setFilterOpen,
     onClose,
     onOpen,
+    handleFilterClick,
+    filtersCounts,
+    selectedFilters,
+    setSelectedFilters
   };
 }

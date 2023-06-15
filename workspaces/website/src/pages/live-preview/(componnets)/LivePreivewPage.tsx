@@ -38,7 +38,7 @@ export default function LivePreivewPage({
       {data.type === CustomPreviewType.JOBS && <JobsCard hit={data.payload} />}
       {data.type === CustomPreviewType.TUTORIALS && (
         <Box maxW="400px">
-          <TutorialsCard hit={data.payload} />
+          <TutorialsCard hit={data.payload} locale="en" />
         </Box>
       )}
       {data.type === CustomPreviewType.POST && (
@@ -54,6 +54,19 @@ export default function LivePreivewPage({
           data={data.payload}
           locale="en"
         />
+      )}
+      {data.type === CustomPreviewType.ROADMAP_POST && (
+        <RoadmapPost
+          roadmapPost={data.payload}
+          blocksDynamicData={blocksDynamicData}
+          roadmapVersion={
+            roadmapVersions.find((v) => v.version === data.payload.version)!
+          }
+          locale="en"
+        />
+      )}
+      {data.type === CustomPreviewType.ROADMAP_VERSION && (
+        <RoadmapPostVersion roadmapVersion={data.payload} />
       )}
     </div>
     </ThemeProvider>

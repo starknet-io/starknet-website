@@ -7,12 +7,12 @@ export const postsCollectionConfig = {
   label: "Blog - Posts",
   label_singular: "Post",
   identifier_field: "id",
-  folder: '_data/posts',
+  folder: "_data/posts",
   create: true,
   format: "yml",
   slug: "{{title}}",
   preview_path: "/preview/posts/{{id}}",
-  summary: "{{title}}",
+  summary: "{{title}} [{{published_date | date('YYYY-MM-DD')}}]",
   sortable_fields: ["published_date", "title"],
   fields: [
     {

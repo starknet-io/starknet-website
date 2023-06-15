@@ -11,8 +11,6 @@ import {
   readFile,
   localForage,
   DEFAULT_PR_BODY,
-  branchFromContentKey,
-  CMS_BRANCH_PREFIX,
   throwOnConflictingBranches,
 } from 'netlify-cms-lib-util';
 import { trim, trimStart } from 'lodash';
@@ -26,6 +24,8 @@ import type { NormalizedCacheObject } from 'apollo-cache-inmemory';
 import type { QueryOptions, MutationOptions, OperationVariables } from 'apollo-client';
 import type { GraphQLError } from 'graphql';
 import type { Octokit } from '@octokit/rest';
+
+import { CMS_BRANCH_PREFIX, branchFromContentKey } from './utils'
 
 const NO_CACHE = 'no-cache';
 const CACHE_FIRST = 'cache-first';

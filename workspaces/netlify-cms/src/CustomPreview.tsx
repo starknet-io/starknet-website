@@ -3,7 +3,10 @@ import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { useWindowSize } from "./useWindowSize";
 import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
 
-const livePreviewURL = import.meta.env.VITE_LIVE_PREVIEW_URL ?? "http://localhost:3000";
+const livePreviewHost =
+  import.meta.env.VITE_GIT_BRANCH_NAME === "production"
+    ? "https://www.starknet.io"
+    : import.meta.env.VITE_LIVE_PREVIEW_URL;
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
@@ -11,6 +14,9 @@ export enum CustomPreviewType {
   TUTORIALS = "TUTORIALS",
   POST = "POST",
   PAGE = "PAGE",
+  ROADMAP_POST = "ROADMAP_POST",
+  ROADMAP_VERSION = "ROADMAP_VERSION",
+  ANNOUNCEMENTS_POST = "ANNOUNCEMENTS_POST",
 }
 
 type CustomPreviewProps = {
@@ -38,7 +44,7 @@ async function toDataURL(src: string) {
 
 export default function CustomPreview(props: CustomPreviewProps) {
   const ref = useRef<HTMLIFrameElement>(null);
-  const [refresh, setRefresh] = React.useState(false);
+  const [refresh, setRefresh] = React.useState(0);
   const { height } = useWindowSize();
   const { type, entry, getAsset } = props;
 
@@ -74,20 +80,27 @@ export default function CustomPreview(props: CustomPreviewProps) {
     sendDataToLivePreviewRendere();
   }, [type, entry, getAsset, refresh]);
 
+  useEffect(() => {
+    window.addEventListener(
+      "message",
+      function (message: MessageEvent<{ type: string }>) {
+        if (message.data.type == "preview-loaded") {
+          setRefresh((p) => p + 1);
+        }
+      },
+      false
+    );
+  }, []);
+
   return (
     <div>
       <iframe
         ref={ref}
         width="100%"
         height={height ? height - 100 : 500}
-        src={`${livePreviewURL}/live-preview?type=${props.type}`}
+        src={`${livePreviewHost}/live-preview?type=${props.type}`}
         title="Live preview"
         frameBorder="0"
-        onLoad={() => {
-          setTimeout(() => {
-            setRefresh((prev) => !prev);
-          }, 300);
-        }}
       ></iframe>
     </div>
   );

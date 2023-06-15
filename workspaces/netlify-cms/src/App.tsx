@@ -5,6 +5,10 @@ import NetlifyCmsWidgetUUID from "@starknet-io/netlify-cms-widgets/src/uuid";
 import NetlifyCmsWidgetYouTube from "@starknet-io/netlify-cms-widgets/src/youtube";
 import CustomPreview, { CustomPreviewType } from "./CustomPreview";
 import { GitHubBackend } from "@starknet-io/netlify-cms-backend-github/src";
+import NetlifyCmsWidgetMonth from "@starknet-io/netlify-cms-widgets/src/month";
+
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 
 export default function App() {
   React.useEffect(() => {
@@ -12,7 +16,17 @@ export default function App() {
     CMS.registerWidget([
       NetlifyCmsWidgetUUID.Widget(),
       NetlifyCmsWidgetYouTube.Widget(),
+      NetlifyCmsWidgetMonth.Widget(),
     ]);
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        const startDate = new Date(entry.get('data').get('start_date'));
+        const month = `${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
+        return entry.get('data').set('month', month);
+      },
+    });
+    
     CMS.registerPreviewTemplate("events", ({ entry, getAsset }) => (
       <CustomPreview
         entry={entry}
@@ -54,6 +68,34 @@ export default function App() {
         />
       );
     });
+    CMS.registerPreviewTemplate("roadmap-posts", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ROADMAP_POST}
+          getAsset={getAsset}
+        />
+      );
+    });
+    CMS.registerPreviewTemplate("announcements", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ANNOUNCEMENTS_POST}
+          getAsset={getAsset}
+        />
+      );
+    });
+    CMS.registerPreviewTemplate("roadmap-versions", ({ entry, getAsset }) => {
+      return (
+        <CustomPreview
+          entry={entry}
+          type={CustomPreviewType.ROADMAP_VERSION}
+          getAsset={getAsset}
+        />
+      );
+    });
+
     CMS.registerBackend("github-yuki", GitHubBackend);
     const branch =
       import.meta.env.VITE_GIT_BRANCH_NAME ?? CMSConfig.backend.branch;

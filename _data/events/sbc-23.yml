@@ -1,0 +1,19 @@
+type: conference
+name: SBC 23
+description: The conference focuses on technical innovations in the blockchain
+  ecosystem, and brings together researchers and practioners working in the
+  space. We are interested in the application of cryptography, decentralized
+  protocols, formal methods, and empirical analysis, to improving the security
+  and scalability of blockchain deployments. We aim to foster collaboration
+  among practitioners and researchers working on blockchain protocol
+  development, cryptography, distributed systems, secure computing,
+  crypto-economics, and economic risk analysis.
+url: https://cbr.stanford.edu/sbc23/
+start_date: 2023-08-28T06:00:20.271Z
+end_date: 2023-08-30T15:00:20.276Z
+month: August 2023
+show_in_past_events: false
+image: /assets/frame-1-1-.png
+location: north_america
+city: Stanford
+country: California
