@@ -202,7 +202,7 @@ function CustomType({
   refineTypes,
 }: {
   items: RefinementListProps["items"];
-  refineTypes: (v: string) => void;
+  refineTypes: any;
 }) {
   return (
     <Box>
@@ -233,7 +233,7 @@ function CustomTags({
   refineTags,
 }: {
   items: RefinementListProps["items"];
-  refineTags: (v: string) => void;
+  refineTags: any;
 }) {
   return (
     <Box mt={8}>

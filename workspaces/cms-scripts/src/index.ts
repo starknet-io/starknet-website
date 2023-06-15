@@ -7,8 +7,10 @@ import { write } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
+  getAnnouncements,
   getPages,
   getPosts,
+  getRoadmapPosts,
   getSimpleData,
   getSimpleFiles,
   handleLink,
@@ -20,6 +22,7 @@ const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
   await getSimpleData("topics"),
+  await getSimpleData("roadmap-versions"),
 ];
 
 for (const simpleData of simpleDataTypes) {
@@ -52,6 +55,7 @@ const simpleFiles = [
   await getSimpleFiles("settings", "fiat-on-ramps"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
+  await getSimpleFiles("settings", "roadmap", true),
   await getSimpleFiles("settings", "blog-posts", true),
   await getSimpleFiles("seo", "events", true),
   await getSimpleFiles("seo", "tutorials", true),
@@ -83,6 +87,8 @@ for (const simpleFile of simpleFiles) {
 }
 
 const posts = await getPosts();
+const roadmapPosts = await getRoadmapPosts();
+const announcements = await getAnnouncements();
 const pages = await getPages();
 
 updateBlocks(pages, posts);
@@ -94,6 +100,25 @@ for (const locale of locales) {
 for (const data of posts.filenameMap.values()) {
   await write(`_crowdin/data/posts/${data.locale}/${data.slug}.json`, data);
   await write(`_crowdin/data/posts/${data.locale}/${data.id}.json`, data);
+}
+
+for (const locale of locales) {
+  await fs.mkdir(`_crowdin/data/roadmap-posts/${locale}`, { recursive: true });
+  await fs.mkdir(`_crowdin/data/announcements/${locale}`, { recursive: true });
+}
+
+for (const data of roadmapPosts.filenameMap.values()) {
+  await write(
+    `_crowdin/data/roadmap-posts/${data.locale}/${data.slug}.json`,
+    data
+  );
+}
+
+for (const data of announcements.filenameMap.values()) {
+  await write(
+  `_crowdin/data/announcements/${data.locale}/${data.slug}.json`,
+  data
+);
 }
 
 for (const locale of locales) {

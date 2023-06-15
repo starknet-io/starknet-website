@@ -19,9 +19,7 @@ export function useToggleFullscreen<T extends HTMLDivElement>() {
 
   useEffect(() => {
     const updateFullscreenState = () => {
-      console.log("updateFullscreenState");
       if (!document.fullscreenElement) {
-        console.log("inside if");
         setIsFullscreen(false);
       }
     };

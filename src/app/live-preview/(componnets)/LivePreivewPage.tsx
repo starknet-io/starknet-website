@@ -11,16 +11,21 @@ import CMSPage from "src/app/[locale]/(components)/CMSPage";
 import { Topic } from "workspaces/cms-data/src/topics";
 import { Category } from "workspaces/cms-data/src/categories";
 import { Box } from "@chakra-ui/react";
+import RoadmapPost from "src/app/[locale]/roadmap/[slug]/(components)/RoadmapPost";
+import { RoadmapVersion } from "workspaces/cms-data/src/roadmap";
+import RoadmapPostVersion from "src/app/[locale]/roadmap/(components)/RoadmapPostVersion";
 
 type LivePreivewPageProps = {
   blocksDynamicData: BlocksDynamicData;
   topics: readonly Topic[];
   categories: readonly Category[];
+  roadmapVersions: readonly RoadmapVersion[];
 };
 export default function LivePreivewPage({
   blocksDynamicData,
   topics,
   categories,
+  roadmapVersions,
 }: LivePreivewPageProps) {
   const data = usePreviewData();
 
@@ -58,6 +63,19 @@ export default function LivePreivewPage({
           locale="en"
           blocksDynamicData={blocksDynamicData}
         />
+      )}
+      {data.type === CustomPreviewType.ROADMAP_POST && (
+        <RoadmapPost
+          roadmapPost={data.payload}
+          blocksDynamicData={blocksDynamicData}
+          roadmapVersion={
+            roadmapVersions.find((v) => v.version === data.payload.version)!
+          }
+          locale="en"
+        />
+      )}
+      {data.type === CustomPreviewType.ROADMAP_VERSION && (
+        <RoadmapPostVersion roadmapVersion={data.payload} />
       )}
     </div>
   );

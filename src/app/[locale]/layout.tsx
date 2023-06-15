@@ -6,6 +6,7 @@ import Navbar from "./(components)/Navbar";
 import { Footer } from "./(components)/Footer";
 import { getMainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { getAlerts } from "@starknet-io/cms-data/src/settings/alert";
+
 import React from "react";
 import { i18nConfig } from "@starknet-io/cms-data/src/i18n/config";
 import { notFound } from "next/navigation";
