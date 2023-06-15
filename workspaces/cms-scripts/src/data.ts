@@ -421,7 +421,7 @@ export async function getSimpleData<T = {}>(
         slug,
         locale: locale,
         objectID: `${resourceName}:${locale}:${filename}`,
-        sourceFilepath,
+        sourceFilepath
       });
     }
   }
