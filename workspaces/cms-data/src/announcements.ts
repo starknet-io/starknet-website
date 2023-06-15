@@ -21,7 +21,7 @@ export async function getAnnouncements(
     const announcements: AnnouncementsPost[] = [];
 
     const filesInDir = await fs.readdir(
-      path.join(process.cwd(), "_crowdin/data/announcements", locale)
+      path.join(process.cwd(), "../../public/data/announcements", locale)
     );
 
     const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
@@ -30,7 +30,7 @@ export async function getAnnouncements(
       const fileData = await fs.readFile(
         path.join(
           process.cwd(),
-          "_crowdin/data/announcements",
+          "../../public/data/announcements",
           locale,
           fileName
         ),
@@ -42,9 +42,7 @@ export async function getAnnouncements(
 
     return announcements;
   } catch (cause) {
-    throw new Error("getAnnouncements failed!", {
-      cause,
-    });
+    throw new Error("getAnnouncements failed!");
   }
 }
 
@@ -60,7 +58,7 @@ export async function getAnnouncementsPostBySlug(
             await fs.readFile(
               path.join(
                 process.cwd(),
-                "_crowdin/data/announcements",
+                "../../public/data/announcements",
                 value,
                 slug + ".json"
               ),
@@ -70,8 +68,6 @@ export async function getAnnouncementsPostBySlug(
       )
     );
   } catch (cause) {
-    throw new Error(`Announcement not found! ${slug}`, {
-      cause,
-    });
+    throw new Error(`Announcement not found! ${slug}`);
   }
 }

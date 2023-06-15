@@ -26,10 +26,8 @@ export async function getRoadmapPosts(
 ): Promise<readonly RoadmapPost[]> {
   try {
     const roadmapPosts: RoadmapPost[] = [];
-
-    const filesInDir = await fs.readdir(
-      path.join(process.cwd(), "_crowdin/data/roadmap-posts", locale)
-    );
+    const filesPath = path.join(process.cwd(), "../../public/data/roadmap-posts", locale)
+    const filesInDir = await fs.readdir(filesPath);
 
     const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
 
@@ -37,7 +35,7 @@ export async function getRoadmapPosts(
       const fileData = await fs.readFile(
         path.join(
           process.cwd(),
-          "_crowdin/data/roadmap-posts",
+          "../../public/data/roadmap-posts",
           locale,
           fileName
         ),
@@ -67,7 +65,7 @@ export async function getRoadmapPostBySlug(
             await fs.readFile(
               path.join(
                 process.cwd(),
-                "_crowdin/data/roadmap-posts",
+                "../../public/data/roadmap-posts",
                 value,
                 slug + ".json"
               ),
@@ -94,7 +92,7 @@ export async function getRoadmapVersions(
             await fs.readFile(
               path.join(
                 process.cwd(),
-                "_crowdin/data/roadmap-versions",
+                "../../public/data/roadmap-versions",
                 value + ".json"
               ),
               "utf8"

@@ -4,6 +4,7 @@ import { Post } from "@starknet-io/cms-data/src/posts";
 import { useEffect, useState } from "react";
 import { JobsHit } from "src/pages/jobs/JobsPage";
 import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
+import { RoadmapPost, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",

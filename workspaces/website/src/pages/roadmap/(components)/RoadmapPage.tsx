@@ -2,13 +2,13 @@
 
 import { Box, Grid, Heading, Icon } from "@chakra-ui/react";
 import { useMemo } from "react";
-import { roadmapStagesFields } from "workspaces/cms-config/src/collections/roadmapPosts";
-import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
-import { Roadmap } from "workspaces/cms-data/src/settings/roadmap";
+import { roadmapStagesFields } from "@starknet-io/cms-config/src/collections/roadmapPosts";
+import { RoadmapPost, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
+import { Roadmap } from "@starknet-io/cms-data/src/settings/roadmap";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import RoadmapPostCard from "./RoadmapPostCard";
 
-type RoadmapPageProps = {
+export type RoadmapPageProps = {
   roadmapPosts: readonly RoadmapPost[];
   roadmapVersions: readonly RoadmapVersion[];
   roadmapSettings: Roadmap;

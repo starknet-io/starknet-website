@@ -21,7 +21,7 @@ export async function getRoadmapSettings(locale: string): Promise<Roadmap> {
             await fs.readFile(
               path.join(
                 process.cwd(),
-                "_crowdin/data/roadmap",
+                "../../public/data/roadmap",
                 value + ".json"
               ),
               "utf8"

@@ -1,4 +1,3 @@
-"use client";
 
 import { Box, Container } from "@chakra-ui/react";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
@@ -6,7 +5,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { ReactNode } from "react";
 import { useBoolean } from "react-use";
 import RoadmapSubscribeForm from "./RoadmapSubscribeForm";
-import { Roadmap } from "workspaces/cms-data/src/settings/roadmap";
+import { Roadmap } from "@starknet-io/cms-data/src/settings/roadmap";
 
 type RoadmapLayoutProps = {
   children: ReactNode;

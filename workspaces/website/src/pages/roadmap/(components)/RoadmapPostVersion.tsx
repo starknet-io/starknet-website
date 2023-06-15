@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import { Badge } from "@ui/Badge";
-import { RoadmapVersion } from "workspaces/cms-data/src/roadmap";
+import { RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
 
 export default function RoadmapPostVersion({
   roadmapVersion,

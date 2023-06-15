@@ -1,9 +1,8 @@
 import { Card, CardBody, Img } from "@chakra-ui/react";
-import { AnnouncementsPost } from "workspaces/cms-data/src/announcements";
+import { AnnouncementsPost } from "@starknet-io/cms-data/src/announcements";
 import { Badge } from "@ui/Badge";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import Link from "next/link";
 
 type AnnouncementPostCardProps = {
   post?: AnnouncementsPost;
@@ -14,7 +13,7 @@ export default function AnnouncementPostCard({
   locale,
 }: AnnouncementPostCardProps) {
   return (
-    <Card as={Link} href={`/${locale}/announcements/${post?.slug}`}>
+    <Card as='a' href={`/${locale}/announcements/${post?.slug}`}>
       <Img
         objectFit="cover"
         src={post?.image}

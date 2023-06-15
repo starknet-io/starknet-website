@@ -15,15 +15,13 @@ import { useBoolean } from "react-use";
 import RoadmapSubscribeForm from "../../../(components)/roadmap/RoadmapSubscribeForm";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
-import Link from "next/link";
 import { useEffect } from "react";
-import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
 import { Text } from "@ui/Typography/Text";
 import {
   RoadmapPost as RoadmapPostType,
   RoadmapVersion,
-} from "workspaces/cms-data/src/roadmap";
+} from "@starknet-io/cms-data/src/roadmap";
 import RoadmapPostVersion from "../../(components)/RoadmapPostVersion";
 
 interface KeyValuePairs {
@@ -36,19 +34,19 @@ const stages: KeyValuePairs = {
   "backlog": "Backlog",
 };
 
+export type RoadmapPostProps = {
+  roadmapPost: RoadmapPostType;
+  roadmapVersion?: RoadmapVersion;
+  locale: string;
+  psCopy?: string;
+}
+
 export default function RoadmapPost({
   roadmapPost,
   locale,
-  blocksDynamicData,
   roadmapVersion,
   psCopy
-}: {
-  roadmapPost: RoadmapPostType;
-  roadmapVersion: RoadmapVersion;
-  locale: string;
-  blocksDynamicData: BlocksDynamicData;
-  psCopy?: string;
-}) {
+}: RoadmapPostProps) {
   const [isOpen, setIsOpen] = useBoolean(false);
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -70,7 +68,6 @@ export default function RoadmapPost({
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -80,7 +77,6 @@ export default function RoadmapPost({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/developers`}
               fontSize="sm"
               noOfLines={1}
@@ -90,7 +86,6 @@ export default function RoadmapPost({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/roadmap`}
               fontSize="sm"
               noOfLines={1}
@@ -100,7 +95,6 @@ export default function RoadmapPost({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/roadmap/${roadmapPost?.slug}`}
               fontSize="sm"
               noOfLines={1}
@@ -132,7 +126,6 @@ export default function RoadmapPost({
                 key={i}
                 block={block}
                 locale={locale}
-                blocksDynamicData={blocksDynamicData}
               />
             ))}
           </Flex>

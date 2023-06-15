@@ -1,11 +1,9 @@
-"use client";
-
 import { Grid, Heading } from "@chakra-ui/react";
-import { AnnouncementsPost } from "workspaces/cms-data/src/announcements";
+import { AnnouncementsPost } from "@starknet-io/cms-data/src/announcements";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import AnnouncementPostCard from "./AnnouncementPostCard";
 
-type AnnouncementsPageProps = {
+export type AnnouncementsPageProps = {
   announcements: readonly AnnouncementsPost[];
   locale: string;
 };

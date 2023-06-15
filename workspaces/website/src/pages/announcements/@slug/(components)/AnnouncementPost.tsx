@@ -13,21 +13,18 @@ import {
 import { Badge } from "@ui/Badge";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
-import Link from "next/link";
-import React from "react";
-import { BlocksDynamicData } from "src/app/[locale]/(components)/utils/getBlocksDynamicData";
 import { Block } from "src/blocks/Block";
-import { AnnouncementsPost as AnnouncementPostType } from "workspaces/cms-data/src/announcements";
+import { AnnouncementsPost as AnnouncementPostType } from "@starknet-io/cms-data/src/announcements";
+
+export type AnnouncementPostProps = {
+  announcementsPost: AnnouncementPostType;
+  locale: string;
+}
 
 export default function AnnouncementPost({
   announcementsPost,
   locale,
-  blocksDynamicData,
-}: {
-  announcementsPost: AnnouncementPostType;
-  locale: string;
-  blocksDynamicData: BlocksDynamicData;
-}) {
+}: AnnouncementPostProps) {
   return (
     <PageLayout
       maxW="734px"
@@ -35,7 +32,6 @@ export default function AnnouncementPost({
         <Breadcrumb separator="/">
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}`}
               fontSize="sm"
               noOfLines={1}
@@ -45,7 +41,6 @@ export default function AnnouncementPost({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/developers`}
               fontSize="sm"
               noOfLines={1}
@@ -55,7 +50,6 @@ export default function AnnouncementPost({
           </BreadcrumbItem>
           <BreadcrumbItem>
             <BreadcrumbLink
-              as={Link}
               href={`/${locale}/announcements`}
               fontSize="sm"
               noOfLines={1}
@@ -89,7 +83,6 @@ export default function AnnouncementPost({
                 key={i}
                 block={block}
                 locale={locale}
-                blocksDynamicData={blocksDynamicData}
               />
             ))}
           </Flex>
