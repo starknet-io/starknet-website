@@ -11,7 +11,8 @@ blocks:
       developers with a more reliable environment. 
 
 
-      At first, the of inclusion of failed transactions will operate on a trusted basis. However, in version 0.15.0 the ability to prove failed transactions will be introduced, transitioning the process to a trustless framework.
+      At first, the inclusion of failed transactions will operate on a trusted basis. However, in version 0.15.0 the ability to prove failed transactions will be introduced, transitioning the process to a trustless framework.
 
 
       By including failed transactions in the block, Starknet simplifies the user experience, allowing developers to confidently advance the nonce without constant status monitoring. This enhancement fosters smoother interactions and serves as a stepping stone towards a trustless system in version 0.15.0, ensuring transparency and security.
+month: undefined NaN
