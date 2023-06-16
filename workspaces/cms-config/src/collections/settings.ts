@@ -422,5 +422,54 @@ export const settingsCollectionConfig = {
         },
       ],
     },
+    {
+      label: "Roadmap",
+      name: "roadmap",
+      file: `_data/settings/roadmap.yml`,
+      crowdin: true,
+      fields: [
+        {
+          name: "show_hero_banner",
+          label: "Show hero banner",
+          widget: "boolean",
+          default: true,
+        },
+        {
+          name: "hero_title",
+          label: "Hero banner title",
+          widget: "string",
+          required: true,
+          crowdin: true
+        },
+        {
+          name: "hero_description",
+          label: "Hero description",
+          widget: "string",
+          required: true,
+          crowdin: true
+        },
+        {
+          name: "show_hero_cta",
+          label: "Show hero banner CTA",
+          widget: "boolean",
+          default: true,
+          crowdin: true
+        },
+        {
+          name: "hero_cta_copy",
+          label: "Hero banner CTA copy",
+          widget: "string",
+          required: false,
+          crowdin: true
+        },
+        {
+          name: "roadmap_post_ps",
+          label: "Roadmap post p.s. copy",
+          widget: "markdown",
+          required: false,
+          crowdin: true
+        }
+      ],
+    },
   ],
 } satisfies CmsCollection;

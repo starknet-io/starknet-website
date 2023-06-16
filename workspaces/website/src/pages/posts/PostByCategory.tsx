@@ -117,8 +117,14 @@ export default function PostByCategory({
           </Flex>
           <Divider mt="8px" mb="32px" />
           {post.post_type === "video" ? (
-            <Flex mb="32px">
+            <Flex mb={!post.blocks?.length ? "32px" : 0} direction="column">
               <YoutubePlayer videoId={videoId} />
+              {!post.blocks.length && <Text
+                pt={2}
+                pb={4}
+                lineHeight="32px"
+                variant="body"
+              >{post.short_desc}</Text>}
             </Flex>
           ) : null}
           <Flex direction="column" gap="32px">
@@ -134,7 +140,7 @@ export default function PostByCategory({
           <Divider />
           <Flex direction="row" gap="8px" mt="64px">
             {post.topic?.map((topic, i) => (
-              <Tag key={i}> {topics.find((t) => t.id === topic)?.name} </Tag>
+              <Tag key={i} capitalize={false}> {topics.find((t) => t.id === topic)?.name} </Tag>
             ))}
           </Flex>
         </Container>

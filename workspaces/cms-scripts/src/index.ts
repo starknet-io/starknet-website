@@ -7,8 +7,14 @@ import { write, yaml } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
+  AnnouncementDetails,
+  AnnouncementsPost,
+  RoadmapDetails,
+  RoadmapPost,
+  getAnnouncements,
   getPages,
   getPosts,
+  getRoadmapPosts,
   getSimpleData,
   getSimpleFiles,
   handleLink,
@@ -16,10 +22,65 @@ import {
 } from "./data";
 import { translateFile } from "./crowdin";
 
+const createRoadmapDetails = async () => {
+  await fs.mkdir(`public/data/roadmap-details`, {recursive: true});
+  for (const locale of locales) {
+    const roadmapPosts: RoadmapDetails[] = [];
+    const filesPath = path.join("public/data/roadmap-posts", locale)
+    const filesInDir = await fs.readdir(filesPath);
+
+    const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
+
+    for (const fileName of jsonFilesInDir) {
+      const fileData = await fs.readFile(
+        path.join(
+          process.cwd(),
+          "public/data/roadmap-posts",
+          locale,
+          fileName
+        ),
+        "utf8"
+      );
+
+      const { blocks, gitlog, sourceFilepath, objectID, ...roadmapDetails }: RoadmapPost = JSON.parse(fileData.toString());
+      roadmapPosts.push(roadmapDetails);
+    }
+    await write(path.join("public/data/roadmap-details", `${locale}.json`), roadmapPosts);
+  }
+}
+
+const createAnnouncementDetails = async () => {
+  await fs.mkdir(`public/data/announcements-details`, {recursive: true});
+  for (const locale of locales) {
+    const roadmapPosts: AnnouncementDetails[] = [];
+    const filesPath = path.join("public/data/announcements", locale)
+    const filesInDir = await fs.readdir(filesPath);
+
+    const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
+
+    for (const fileName of jsonFilesInDir) {
+      const fileData = await fs.readFile(
+        path.join(
+          process.cwd(),
+          "public/data/announcements",
+          locale,
+          fileName
+        ),
+        "utf8"
+      );
+
+      const { blocks, gitlog, sourceFilepath, objectID, ...roadmapDetails }: AnnouncementsPost = JSON.parse(fileData.toString());
+      roadmapPosts.push(roadmapDetails);
+    }
+    await write(path.join("public/data/announcements-details", `${locale}.json`), roadmapPosts);
+  }
+}
+
 const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
   await getSimpleData("topics"),
+  await getSimpleData("roadmap-versions"),
 ];
 
 for (const simpleData of simpleDataTypes) {
@@ -44,6 +105,7 @@ const simpleFiles = [
   await getSimpleFiles("settings", "fiat-on-ramps"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
+  await getSimpleFiles("settings", "roadmap", true),
   await getSimpleFiles("settings", "blog-posts", true),
   await getSimpleFiles("seo", "events", true),
   await getSimpleFiles("seo", "tutorials", true),
@@ -75,6 +137,8 @@ for (const simpleFile of simpleFiles) {
 }
 
 const posts = await getPosts();
+const roadmapPosts = await getRoadmapPosts();
+const announcements = await getAnnouncements();
 const pages = await getPages();
 
 updateBlocks(pages, posts);
@@ -87,6 +151,29 @@ for (const data of posts.filenameMap.values()) {
   await write(`public/data/posts/${data.locale}/${data.slug}.json`, data);
   await write(`public/data/posts/${data.locale}/${data.id}.json`, data);
 }
+
+for (const locale of locales) {
+  await fs.mkdir(`public/data/pages/${locale}`, { recursive: true });
+  await fs.mkdir(`public/data/roadmap-posts/${locale}`, { recursive: true });
+  await fs.mkdir(`public/data/announcements/${locale}`, { recursive: true });
+}
+
+for (const data of roadmapPosts.filenameMap.values()) {
+  await write(
+    `public/data/roadmap-posts/${data.locale}/${data.slug}.json`,
+    data
+  );
+}
+
+for (const data of announcements.filenameMap.values()) {
+  await write(
+  `public/data/announcements/${data.locale}/${data.slug}.json`,
+  data
+);
+}
+
+await createRoadmapDetails()
+await createAnnouncementDetails()
 
 for (const locale of locales) {
   await fs.mkdir(`public/data/pages/${locale}`, { recursive: true });

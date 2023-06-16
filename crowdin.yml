@@ -26,3 +26,15 @@ files:
 
   - source: /_crowdin/source/tutorials/*
     translation: /_crowdin/translation/%two_letters_code%/tutorials/%original_file_name%
+
+  - source: /_crowdin/source/roadmap-posts/*
+    translation: /_crowdin/translation/%two_letters_code%/roadmap-posts/%original_file_name%
+
+  - source: /_crowdin/source/roadmap-versions/*
+    translation: /_crowdin/translation/%two_letters_code%/roadmap-versions/%original_file_name%
+
+  - source: /_crowdin/source/seo/*
+    translation: /_crowdin/translation/%two_letters_code%/seo/%original_file_name%
+
+  - source: /_crowdin/source/announcements/*
+    translation: /_crowdin/translation/%two_letters_code%/announcements/%original_file_name%

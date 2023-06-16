@@ -1,0 +1,99 @@
+id: 0cc45698-3caa-4a56-b371-58fc29f645eb
+post_type: video
+title: Episode 11 | Liron Hayman with David Lavecky & Tim Moddel from Canvas
+published_date: 2023-02-16T12:51:50.554Z
+video:
+  url: https://www.youtube.com/watch?v=72cVk1VOlAE&list=PLcIyXLwiPilU-qOgGEPno8LGN9qiBVlZS&index=4
+  id: 72cVk1VOlAE
+  data:
+    kind: youtube#video
+    etag: oH2cdbLdIW39OtM0AwxiprfOb7Q
+    id: 72cVk1VOlAE
+    snippet:
+      publishedAt: 2023-02-16T12:01:39.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/72cVk1VOlAE/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/72cVk1VOlAE/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/72cVk1VOlAE/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/72cVk1VOlAE/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/72cVk1VOlAE/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 11 | Liron Hayman with David Lavecky & Tim
+        Moddel from Canvas
+      categoryId: "28"
+      localized:
+        title: STARK Struck Podcast | Episode 11 | Liron Hayman with David Lavecky & Tim
+          Moddel from Canvas
+        description: >-
+          In this special STARK Struck episode, Join Liron Hayman from StarkWare
+          and David Lavecky & Tim Moddel from Canvas, as they chat about the
+          company, technology and blockchain.
+
+
+          Twitter: 
+
+          @HaymanLiron
+
+          @davidlavecky
+
+          @timmoddel
+
+          @canvas_defi
+      description: >-
+        In this special STARK Struck episode, Join Liron Hayman from StarkWare
+        and David Lavecky & Tim Moddel from Canvas, as they chat about the
+        company, technology and blockchain.
+
+
+        Twitter: 
+
+        @HaymanLiron
+
+        @davidlavecky
+
+        @timmoddel
+
+        @canvas_defi
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT48M8S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/stark-struck-episode-11.jpg
+category: stark-struck
+short_desc: >-
+  In this special STARK Struck episode, Join Liron Hayman from StarkWare and
+  David Lavecky & Tim Moddel from Canvas as they chat about the company,
+  technology, and blockchain.
+
+
+  Twitter: 
+
+  @HaymanLiron
+
+  @davidlavecky
+
+  @timmoddel
+
+  @canvas_defi
