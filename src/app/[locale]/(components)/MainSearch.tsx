@@ -187,7 +187,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
   }, []);
 
   return (
-    <Box position="relative">
+    <Box position="relative" height="44px">
       <Autocomplete<any>
         detachedMediaQuery=""
         openOnFocus={true}
@@ -301,7 +301,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         cursor="pointer"
         onClick={() => searchBox?.click()}
         pointerEvents="none"
-        display={{ base: "none", md: "block" }}
+        display={{ base: "none", lg: "block" }}
       >
         /
       </Kbd>
