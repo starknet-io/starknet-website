@@ -70,7 +70,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                 marginInlineStart="12px !important"
                 display={{ base: "none", lg: "block" }}
               />
-              <Box display={{ base: "none", lg: "block" }}>
+              <Box display={{ base: "none", lg: "block" }} marginInlineStart="0 !important">
                {props.languageSwitcher}
               </Box>
 
