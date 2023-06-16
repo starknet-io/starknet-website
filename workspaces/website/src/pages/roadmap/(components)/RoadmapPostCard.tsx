@@ -1,12 +1,12 @@
 import { Card, CardBody, CardHeader } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { RoadmapPost, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
+import { RoadmapDetails, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
 import RoadmapPostVersion from "./RoadmapPostVersion";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 
 type RoadmapPostCardProps = {
-  roadmapPost?: RoadmapPost;
+  roadmapPost?: RoadmapDetails;
   roadmapVersion: RoadmapVersion;
   locale: string;
 };

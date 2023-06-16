@@ -1,11 +1,11 @@
 import { Card, CardBody, Img } from "@chakra-ui/react";
-import { AnnouncementsPost } from "@starknet-io/cms-data/src/announcements";
+import { AnnouncementDetails } from "@starknet-io/cms-data/src/announcements";
 import { Badge } from "@ui/Badge";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 
 type AnnouncementPostCardProps = {
-  post?: AnnouncementsPost;
+  post?: AnnouncementDetails;
   locale: string;
 };
 export default function AnnouncementPostCard({

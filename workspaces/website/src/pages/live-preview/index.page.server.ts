@@ -12,7 +12,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const pageProps: Props = {
     categories: await getCategories(locale, pageContext.event),
     topics: await getTopics(locale, pageContext.event),
-    roadmapVersions: await getRoadmapVersions(locale)
+    roadmapVersions: await getRoadmapVersions(locale, pageContext.event)
   };
 
   return {

@@ -1,13 +1,13 @@
 import { Box, Grid, Heading, Icon } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { roadmapStagesFields } from "@starknet-io/cms-config/src/collections/roadmapPosts";
-import { RoadmapPost, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
+import { RoadmapDetails, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
 import { Roadmap } from "@starknet-io/cms-data/src/settings/roadmap";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import RoadmapPostCard from "./RoadmapPostCard";
 
-type RoadmapPageProps = {
-  roadmapPosts: readonly RoadmapPost[];
+export type RoadmapPageProps = {
+  roadmapPosts: readonly RoadmapDetails[];
   roadmapVersions: readonly RoadmapVersion[];
   roadmapSettings: Roadmap;
   locale: string;
@@ -26,7 +26,7 @@ export default function RoadmapPage({
   }, [roadmapVersions]);
 
   const roadmapPostsByStage = useMemo(() => {
-    const postsByStage: Record<RoadmapPost["stage"], RoadmapPost[]> = {};
+    const postsByStage: Record<RoadmapDetails["stage"], RoadmapDetails[]> = {};
     roadmapPosts.forEach((post, i) => {
       if (postsByStage[post.stage]) {
         postsByStage[post.stage].push(post);

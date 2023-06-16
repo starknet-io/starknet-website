@@ -7,6 +7,10 @@ import { write, yaml } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
 import {
+  AnnouncementDetails,
+  AnnouncementsPost,
+  RoadmapDetails,
+  RoadmapPost,
   getAnnouncements,
   getPages,
   getPosts,
@@ -17,6 +21,60 @@ import {
   updateBlocks,
 } from "./data";
 import { translateFile } from "./crowdin";
+
+const createRoadmapDetails = async () => {
+  await fs.mkdir(`public/data/roadmap-details`, {recursive: true});
+  for (const locale of locales) {
+    const roadmapPosts: RoadmapDetails[] = [];
+    const filesPath = path.join("public/data/roadmap-posts", locale)
+    const filesInDir = await fs.readdir(filesPath);
+
+    const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
+
+    for (const fileName of jsonFilesInDir) {
+      const fileData = await fs.readFile(
+        path.join(
+          process.cwd(),
+          "public/data/roadmap-posts",
+          locale,
+          fileName
+        ),
+        "utf8"
+      );
+
+      const { blocks, gitlog, sourceFilepath, objectID, ...roadmapDetails }: RoadmapPost = JSON.parse(fileData.toString());
+      roadmapPosts.push(roadmapDetails);
+    }
+    await write(path.join("public/data/roadmap-details", `${locale}.json`), roadmapPosts);
+  }
+}
+
+const createAnnouncementDetails = async () => {
+  await fs.mkdir(`public/data/announcements-details`, {recursive: true});
+  for (const locale of locales) {
+    const roadmapPosts: AnnouncementDetails[] = [];
+    const filesPath = path.join("public/data/announcements", locale)
+    const filesInDir = await fs.readdir(filesPath);
+
+    const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
+
+    for (const fileName of jsonFilesInDir) {
+      const fileData = await fs.readFile(
+        path.join(
+          process.cwd(),
+          "public/data/announcements",
+          locale,
+          fileName
+        ),
+        "utf8"
+      );
+
+      const { blocks, gitlog, sourceFilepath, objectID, ...roadmapDetails }: AnnouncementsPost = JSON.parse(fileData.toString());
+      roadmapPosts.push(roadmapDetails);
+    }
+    await write(path.join("public/data/announcements-details", `${locale}.json`), roadmapPosts);
+  }
+}
 
 const simpleDataTypes = [
   await getSimpleData("categories"),
@@ -113,6 +171,9 @@ for (const data of announcements.filenameMap.values()) {
   data
 );
 }
+
+await createRoadmapDetails()
+await createAnnouncementDetails()
 
 for (const locale of locales) {
   await fs.mkdir(`public/data/pages/${locale}`, { recursive: true });

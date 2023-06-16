@@ -1,10 +1,10 @@
 import { Grid, Heading } from "@chakra-ui/react";
-import { AnnouncementsPost } from "@starknet-io/cms-data/src/announcements";
+import { AnnouncementDetails } from "@starknet-io/cms-data/src/announcements";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import AnnouncementPostCard from "./AnnouncementPostCard";
 
-type AnnouncementsPageProps = {
-  announcements: readonly AnnouncementsPost[];
+export type AnnouncementsPageProps = {
+  announcements: readonly AnnouncementDetails[];
   locale: string;
 };
 export default function AnnouncementsPage({

@@ -1,16 +1,16 @@
 import { defaultLocale } from "./i18n/config";
-import { Meta, getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "fs/promises";
-import path from "path";
+import { Meta, getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 import { TopLevelBlock } from "./pages";
 
-export interface RoadmapPost extends Meta {
+export interface RoadmapDetails extends Meta {
   readonly id: string;
   readonly slug: string;
   readonly title: string;
   readonly version: string;
   readonly stage: string;
   readonly availability: string;
+}
+export interface RoadmapPost extends Meta, RoadmapDetails {
   readonly blocks: readonly TopLevelBlock[];
 }
 
@@ -21,57 +21,32 @@ export interface RoadmapVersion extends Meta {
   readonly color: string;
 }
 
-export async function getRoadmapPosts(
-  locale: string
-): Promise<readonly RoadmapPost[]> {
+export async function getRoadmapDetails(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<readonly RoadmapDetails[]> {
   try {
-    const roadmapPosts: RoadmapPost[] = [];
-    const filesPath = path.join(process.cwd(), "../../public/data/roadmap-posts", locale)
-    const filesInDir = await fs.readdir(filesPath);
-
-    const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
-
-    for (const fileName of jsonFilesInDir) {
-      const fileData = await fs.readFile(
-        path.join(
-          process.cwd(),
-          "../../public/data/roadmap-posts",
-          locale,
-          fileName
-        ),
-        "utf8"
-      );
-      const jsonData = JSON.parse(fileData.toString());
-      roadmapPosts.push(jsonData);
-    }
-
-    return roadmapPosts;
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () => getJSON(`data/roadmap-details/${value}`, event)
+      )
+    );
   } catch (cause) {
-    throw new Error("getRoadmapPosts failed!", {
+    throw new Error("getRoadmapDetails failed!", {
       cause,
     });
   }
 }
 
 export async function getRoadmapPostBySlug(
+  locale: string,
   slug: string,
-  locale: string
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<RoadmapPost> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "../../public/data/roadmap-posts",
-                value,
-                slug + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON(`data/roadmap-posts/${value}/${slug}`, event)
       )
     );
   } catch (cause) {
@@ -82,22 +57,13 @@ export async function getRoadmapPostBySlug(
 }
 
 export async function getRoadmapVersions(
-  locale: string
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<readonly RoadmapVersion[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "../../public/data/roadmap-versions",
-                value + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/roadmap-versions/" + value, event)
       )
     );
   } catch (cause) {

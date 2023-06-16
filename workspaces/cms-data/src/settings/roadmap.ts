@@ -1,7 +1,5 @@
 import { defaultLocale } from "../i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "fs/promises";
-import path from "path";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface Roadmap {
   readonly show_hero_banner: boolean;
@@ -12,21 +10,11 @@ export interface Roadmap {
   readonly roadmap_post_ps?: string;
 }
 
-export async function getRoadmapSettings(locale: string): Promise<Roadmap> {
+export async function getRoadmapSettings(locale: string, event: null | WorkerGlobalScopeEventMap["fetch"]): Promise<Roadmap> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "../../public/data/roadmap",
-                value + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/roadmap/" + value, event)
       )
     );
   } catch (cause) {
