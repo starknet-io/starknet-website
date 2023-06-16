@@ -33,53 +33,60 @@ export const NavLayout = (props: NavLayoutProps) => {
   const locale = useLocale();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Container py={{ base: "4", lg: "17px" }} px={{ base: "16px", md: "32px" }} maxW="1344px">
-      <HStack spacing="4" justify="space-between">
+    <Container
+      py={{ base: "4", lg: "17px" }}
+      px={{ base: "16px", md: "32px" }}
+      maxW="1344px"
+    >
+      <HStack justify="space-between">
         <HStack>
           <Link href={`/${locale}/`}>
             <StarknetLogo />
           </Link>
           <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "60px" }}>
-                {props.items}
-              </ButtonGroup>
-              </Box>
+            <ButtonGroup variant="link" sx={{ pl: "60px" }}>
+              {props.items}
+            </ButtonGroup>
+          </Box>
         </HStack>
-        <HStack spacing={6}>
+        <HStack>
           {props.searchArea}
 
           <Box display={{ base: "none", lg: "block" }}>
-              <IconButton
-                icon={
-                  colorMode === "light" ? (
-                    <Icon as={HiOutlineMoon} fontSize="xl" />
-                  ) : (
-                    <Icon as={HiOutlineSun} fontSize="xl" />
-                  )
-                }
-                aria-label="Toggle color mode"
-                onClick={toggleColorMode}
-                marginInlineStart="10px !important"
-              />
-            </Box>
+            <IconButton
+              icon={
+                colorMode === "light" ? (
+                  <Icon as={HiOutlineMoon} fontSize="xl" />
+                ) : (
+                  <Icon as={HiOutlineSun} fontSize="xl" />
+                )
+              }
+              aria-label="Toggle color mode"
+              onClick={toggleColorMode}
+              marginInlineStart="10px !important"
+            />
+          </Box>
 
-              <Box
-                w="1px"
-                bg="nav-footer-br"
-                h="30px"
-                position="relative"
-                marginInlineStart="10px !important"
-                display={{ base: "none", lg: "block" }}
-              />
-              {props.languageSwitcher}
+          <Box
+            w="1px"
+            bg="nav-footer-br"
+            h="30px"
+            position="relative"
+            marginInlineStart="10px !important"
+            display={{ base: "none", lg: "block" }}
+          >
+            {props.languageSwitcher}
+          </Box>
 
-            <Box display={{ base: "block", lg: "none" }}><IconButton
+          <Box display={{ base: "block", lg: "none" }}>
+            <IconButton
               ref={menuButtonRef}
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
               marginInlineStart="10px !important"
-            /></Box>
+            />
+          </Box>
         </HStack>
       </HStack>
     </Container>
