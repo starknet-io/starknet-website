@@ -47,7 +47,7 @@ export const NavLayout = (props: NavLayoutProps) => {
         </HStack>
         <HStack spacing={6}>
           {props.searchArea}
-          <Box display={{ base: "none", lg: "block" }}>
+          <Box display={{ base: "none", lg: "block" }} sx={{marginInlineStart: "12px !important"}}>
               <IconButton
                 icon={
                   colorMode === "light" ? (
@@ -58,7 +58,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                 }
                 aria-label="Toggle color mode"
                 onClick={toggleColorMode}
-                marginInlineStart="10px !important"
+                marginInlineStart="0 !important"
               />
             </Box>
 
@@ -67,7 +67,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                 bg="nav-footer-br"
                 h="30px"
                 position="relative"
-                marginInlineStart="10px !important"
+                marginInlineStart="12px !important"
                 display={{ base: "none", lg: "block" }}
               />
               <Box display={{ base: "none", lg: "block" }}>
@@ -79,7 +79,7 @@ export const NavLayout = (props: NavLayoutProps) => {
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
-              marginInlineStart="10px !important"
+              marginInlineStart="12px !important"
             /></Box>
         </HStack>
       </HStack>
