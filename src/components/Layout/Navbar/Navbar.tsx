@@ -10,7 +10,6 @@ import {
   useColorModeValue,
   useDisclosure,
   Icon,
-  useBreakpointValue,
 } from "src/libs/chakra-ui";
 import * as React from "react";
 import { HiGlobeAlt, HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
@@ -34,16 +33,11 @@ export const NavBar = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const { colorMode, toggleColorMode } = useColorMode();
-  const isMobile = useBreakpointValue({ base: true, xl: false });
   const pathname = usePathname();
 
   React.useEffect(() => {
     onClose();
   }, [onClose, pathname]);
-
-  React.useEffect(() => {
-    console.log('isMobile ', isMobile)
-  }, [isMobile]);
 
   return (
     <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
@@ -54,7 +48,7 @@ export const NavBar = ({
         languageSwitcher={languageSwitcher}
         searchArea={search}
       />
-      {isMobile && (
+      <Box display={{ base: "block", lg: "none" }}>
         <Drawer
           placement="left"
           initialFocusRef={menuButtonRef}
@@ -111,7 +105,7 @@ export const NavBar = ({
             </HStack>
           </DrawerContent>
         </Drawer>
-      )}
+      </Box>
     </Box>
   );
 };
