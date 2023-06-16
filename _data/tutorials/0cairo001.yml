@@ -1,3 +1,4 @@
+month: undefined NaN
 id: 0cairo001
 type: youtube
 url: https://youtu.be/DrBJ9LWvsOQ
@@ -8,3 +9,7 @@ published_at: 2023-01-31T00:00:00+00:00
 difficulty: beginner
 course: cairo_101
 tags: starknet
+description: |-
+  d﻿escription
+
+  [s﻿ome link](https://www.google.com)
