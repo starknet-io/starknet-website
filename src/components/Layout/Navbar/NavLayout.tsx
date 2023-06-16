@@ -1,7 +1,6 @@
 import {
   HStack,
   Icon,
-  useBreakpointValue,
   ButtonGroup,
   Container,
   useColorMode,
@@ -32,27 +31,24 @@ export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const locale = useLocale();
-  const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Container py={{ base: "4", lg: "17px" }}>
+    <Container py={{ base: "4", lg: "17px" }} px={{ base: "16px", md: "32px" }} maxW="1344px">
       <HStack spacing="4" justify="space-between">
-        <Link href={`/${locale}/`}>
-          <StarknetLogo />
-        </Link>
-        {isDesktop && (
-          <>
-            <ButtonGroup variant="link" spacing="18px">
-              {props.items}
-            </ButtonGroup>
-          </>
-        )}
-
+        <HStack>
+          <Link href={`/${locale}/`}>
+            <StarknetLogo />
+          </Link>
+          <Box display={{ base: "none", lg: "block" }}>
+              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "60px" }}>
+                {props.items}
+              </ButtonGroup>
+              </Box>
+        </HStack>
         <HStack spacing={6}>
           {props.searchArea}
 
-          {isDesktop && (
-            <>
+          <Box display={{ base: "none", lg: "block" }}>
               <IconButton
                 icon={
                   colorMode === "light" ? (
@@ -65,31 +61,25 @@ export const NavLayout = (props: NavLayoutProps) => {
                 onClick={toggleColorMode}
                 marginInlineStart="10px !important"
               />
-            </>
-          )}
+            </Box>
 
-          {isDesktop && (
-            <>
               <Box
                 w="1px"
                 bg="nav-footer-br"
                 h="30px"
                 position="relative"
                 marginInlineStart="10px !important"
+                display={{ base: "none", lg: "block" }}
               />
               {props.languageSwitcher}
-            </>
-          )}
 
-          {!isDesktop && (
-            <IconButton
+            <Box display={{ base: "block", lg: "none" }}><IconButton
               ref={menuButtonRef}
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
               marginInlineStart="10px !important"
-            />
-          )}
+            /></Box>
         </HStack>
       </HStack>
     </Container>
