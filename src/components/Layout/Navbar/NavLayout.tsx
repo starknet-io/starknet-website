@@ -40,7 +40,7 @@ export const NavLayout = (props: NavLayoutProps) => {
             <StarknetLogo />
           </Link>
           <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "60px" }}>
+              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
                 {props.items}
               </ButtonGroup>
           </Box>
