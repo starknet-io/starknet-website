@@ -12,6 +12,7 @@ export type Tutorial = {
   readonly tags?: string[];
   readonly locale: string;
   readonly filepath: string;
+  readonly description?: string;
 };
 
 export const getTutorialById = async (id: string, locale: string) => {

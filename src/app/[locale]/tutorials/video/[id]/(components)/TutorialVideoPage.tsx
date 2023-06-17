@@ -11,6 +11,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tutorial } from "workspaces/cms-data/src/tutorials";
+import { MarkdownBlock } from "src/blocks/MarkdownBlock";
 import moment from "moment";
 
 export interface AutoProps {
@@ -105,6 +106,7 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
                 })}
             </Flex>
           </Flex>
+          <MarkdownBlock body={tutorial.description as string} />
         </div>
       }
     />
