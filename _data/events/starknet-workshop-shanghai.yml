@@ -1,0 +1,19 @@
+type: meetup
+name: Starknet Workshop Shanghai
+description: China First Starknet Workshop is Coming! In this Starknet Workshop,
+  we will dive into Cairo, a general-purpose programming language for writing
+  contracts on Starknet, and the Validity Rollup on Ethereum. This workshop aims
+  to introduce participants to Cairo so they can build their own Cairo contracts
+  from scratch.  This workshop is proudly hosted by Starknet Astro and
+  co-sponsored by Starknet Site. We've invited experienced Starknet developers
+  to discuss the fundamental concepts of the Cairo language and share practical
+  coding techniques.
+url: https://www.meetup.com/shanghai-cryptography-meetup-group/events/294160354/
+start_date: 2023-06-23T10:00:57.840Z
+month: June 2023
+end_date: 2023-06-23T14:00:57.849Z
+show_in_past_events: false
+image: /assets/events-to-square-format-7.png
+location: asia
+city: Shanghai
+country: "China "
