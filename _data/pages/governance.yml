@@ -61,7 +61,7 @@ blocks:
           custom_external_link: https://community.starknet.io/t/starknet-s-second-vote-is-coming-starknet-alpha-v0-12-0/94414
   - type: link_list
     listSize: lg
-    heading: Further reading
+    heading: "Starknet Governance: First Phase"
     blocks:
       - link:
           custom_title: "Starknet’s governance: First phase"
@@ -105,3 +105,11 @@ blocks:
           custom_title: "Part 3: Starknet Token Design"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
           hasIcon: true
+  - type: link_list
+    randomize: false
+    heading: "Starknet Foundation:"
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Welcome to the world, Starknet foundation!
+          custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
