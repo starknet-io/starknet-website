@@ -25,7 +25,7 @@ blocks:
       We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
   - type: link_list
     listSize: lg
-    heading: Governance proposals
+    heading: Governance Proposals
     blocks:
       - link:
           custom_title: Snapshot
@@ -34,7 +34,7 @@ blocks:
           label: View Starknet proposals on Snapshot
   - type: link_list
     listSize: lg
-    heading: Community discussion
+    heading: Community Discussion
     blocks:
       - link:
           custom_title: Community forum
@@ -43,7 +43,7 @@ blocks:
           label: Starknet governance discussion
   - type: link_list
     listSize: lg
-    heading: "Delegate discovery "
+    heading: "Delegate Discovery "
     blocks:
       - link:
           custom_title: Starknet delegate discovery page
