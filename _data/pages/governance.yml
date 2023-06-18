@@ -107,7 +107,7 @@ blocks:
           hasIcon: true
   - type: link_list
     randomize: false
-    heading: "Starknet Foundation:"
+    heading: Starknet Foundation
     blocks:
       - link:
           hasIcon: true
@@ -127,15 +127,15 @@ blocks:
           custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
   - type: link_list
     randomize: false
-    heading: "Starknet Sovereignty:"
+    heading: Starknet Sovereignty
     blocks:
       - link:
           hasIcon: true
-          custom_title: "Part 1: StarkNet sovereignty: A decentralization proposal"
+          custom_title: "Part 1: A Decentralization Proposal"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
       - link:
           hasIcon: true
-          custom_title: "Part 2: A Decentralization and governance proposal for Starknet"
+          custom_title: "Part 2: A Decentralization and Governance Proposal for Starknet"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
       - link:
           hasIcon: true
