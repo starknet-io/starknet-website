@@ -113,3 +113,15 @@ blocks:
           hasIcon: true
           custom_title: Welcome to the world, Starknet foundation!
           custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
+      - link:
+          hasIcon: true
+          custom_title: "Introducing: The Starknet Foundation"
+          custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
+  - type: link_list
+    randomize: false
+    heading: "STRK Token "
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Starknet token is deployed on Ethereum
+          custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
