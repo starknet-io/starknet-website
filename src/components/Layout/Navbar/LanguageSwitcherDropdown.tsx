@@ -45,7 +45,7 @@ export const LanguageSwitcherDropdown = ({
     offset={[0, 24]}
   >
     {({ isOpen }) => (
-      <>
+      <Box sx={{marginInlineStart: "12px !important"}}>
         <PopoverTrigger>
           <Button
             size="sm"
@@ -53,7 +53,7 @@ export const LanguageSwitcherDropdown = ({
             variant="icon"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
             textTransform="uppercase"
-            marginInlineStart="12px !important"
+            marginInlineStart="0 !important"
           >
             {selectedLocale}
           </Button>
@@ -118,7 +118,7 @@ export const LanguageSwitcherDropdown = ({
             </Stack>
           </HStack>
         </PopoverContent>
-      </>
+      </Box>
     )}
   </Popover>
 );
