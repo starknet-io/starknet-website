@@ -10,6 +10,8 @@ blocks:
     title: Security & audits
   - type: card_list
     randomize: false
-    title: Title goes here
+    title: Auditing Companies
     card_list_items:
-      - {}
+      - title: ABDK
+        website_url: https://www.abdk.consulting/
+        image: https://www.abdk.consulting/
