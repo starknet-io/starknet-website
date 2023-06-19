@@ -21,3 +21,9 @@ blocks:
       - title: ConsenSys Diligence
         website_url: http://consensys.net/diligence
         image: /assets/consensys-diligence-logo.svg
+      - title: Nethermind
+        website_url: https://nethermind.io/
+        image: /assets/nethermind-logo.png
+      - title: OpenZeppelin
+        website_url: https://www.openzeppelin.com/
+        image: /assets/openzeppelin-logo.png
