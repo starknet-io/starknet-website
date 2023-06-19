@@ -142,7 +142,7 @@ export const HomepageHero = ({ seo }: Props) => {
           />
           <Img
             position="relative"
-            marginRight={{ base: "-10px", lg: "-5rem", xl: "-9rem" }}
+            marginRight={{ sm: "-70px", md: "-10px", lg: "-5rem", xl: "-9rem" }}
             right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
             width={{ base: "100%", lg: "35rem" }}
             src="/assets/home/hero_illustration.png"
