@@ -9,9 +9,15 @@ blocks:
     variant: security
     title: Security & audits
   - type: card_list
-    randomize: false
+    randomize: true
     title: Auditing Companies
     card_list_items:
       - title: ABDK
         website_url: https://www.abdk.consulting/
-        image: https://www.abdk.consulting/
+        image: /assets/abdk-logo.png
+      - title: ChainSecurity
+        image: /assets/chiansecurity-logo.png
+        website_url: https://chainsecurity.com/
+      - title: ConsenSys Diligence
+        website_url: http://consensys.net/diligence
+        image: /assets/consensys-diligence-logo.svg
