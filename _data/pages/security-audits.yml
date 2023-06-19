@@ -8,6 +8,7 @@ blocks:
   - type: hero
     variant: security
     title: Security & audits
+    description: Secure your apps with auditing services for Starknet Smart Contracts.
   - type: card_list
     randomize: true
     title: Auditing Companies
