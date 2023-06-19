@@ -1,0 +1,15 @@
+id: 263188bb-f6bd-4201-9e3a-3a60810b08e1
+title: Another page
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: card_list
+    randomize: false
+    title: Header
+    description: sdasdf
+    card_list_items:
+      - title: asdfasdf
+        description: sdfasdf
+        link_url: safdsdf
+        image: /assets/implementation.png
