@@ -14,12 +14,10 @@ short_desc: Have you ever found yourself forgetting to withdraw your assets from
 blocks:
   - type: markdown
     body: >-
-      ![✨ Enhancement that takes your bridging experience to a whole new level!
-      ✨](/assets/artboard-40.png "✨ Enhancement that takes your bridging
-      experience to a whole new level! ✨")
-
-
-      Have you ever found yourself forgetting to withdraw your assets from Mainnet after bridging them through Starkgate? Well, thanks to the incredible work of our developers, you can now say goodbye to that concern.
+      Have you ever found yourself forgetting to withdraw your assets from
+      Mainnet after bridging them through Starkgate? Well, thanks to the
+      incredible work of our developers, you can now say goodbye to that
+      concern.
 
 
       ### We are thrilled to announce that [SpaceShard](https://www.spaceshard.io/) has introduced an exciting new feature to Starkgate: 1-click withdrawals!
@@ -165,8 +163,6 @@ blocks:
       >
 
       > \- The relayer is waiting for a gas price drop on L1. If it’s not the case feel free to reach out SpaceShard team on [Discord](https://discord.gg/6PKcsRPQKC).
-
-
 
 
       ## Where can I test the Starkgate relayer?
