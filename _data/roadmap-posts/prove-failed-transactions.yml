@@ -6,11 +6,12 @@ stage: backlog
 blocks:
   - type: markdown
     body: >-
-      v0.15.0 enables the handling of failed transactions more effectively.
-      Notably, the utilization of Sierra for proving failed transactions. This
-      addition ensures a more reliable and robust network experience by reducing
-      the occurrence of failed transactions and enhancing the overall efficiency
-      of transaction processing.
+      Starknet Version 0.15.0 will enable better handling of failed
+      transactions. Notably, the utilization of Sierra for proving failed
+      transactions. This addition ensures a more reliable and robust network
+      experience by reducing the occurrence of failed transactions and enhancing
+      the overall efficiency of transaction processing.
 
 
       This advancement aligns with Starknet's commitment to optimizing resource utilization, enhancing transaction processing reliability, and creating a user-friendly ecosystem for building and interacting with applications on the network.
+month: undefined NaN
