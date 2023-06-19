@@ -162,5 +162,10 @@ export const jobsCollectionConfig = {
         },
       ],
     },
+    {
+      label: "Published at",
+      name: "published_at",
+      widget: "datetime",
+    },
   ],
 } satisfies CmsCollection;
