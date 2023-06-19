@@ -141,6 +141,14 @@ export const eventsCollectionConfig = {
       widget: "datetime",
     },
     {
+      label: "",
+      name: "month",
+      widget: "month",
+      required: false,
+      index_file: "",
+      meta: false
+    },
+    {
       name: "end_date",
       label: "end date",
       widget: "datetime",
@@ -150,7 +158,7 @@ export const eventsCollectionConfig = {
       name: "show_in_past_events",
       label: "Show in Past Events (after it ends)",
       widget: "boolean",
-      default: true,
+      default: false,
       required: false,
     },
     {

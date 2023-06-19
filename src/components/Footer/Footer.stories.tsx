@@ -124,8 +124,8 @@ export const Solid = () => (
                               },
                             },
                             {
-                              custom_title: "Engineering blog",
-                              custom_internal_link: "/posts/engineering",
+                              custom_title: "Developers blog",
+                              custom_internal_link: "/posts/developers",
                             },
                           ],
                         },
@@ -304,8 +304,8 @@ export const Solid = () => (
                               hide_from_footer: true,
                             },
                             {
-                              custom_title: "Engineering",
-                              custom_internal_link: "/posts/engineering",
+                              custom_title: "Developers",
+                              custom_internal_link: "/posts/developers",
                               hide_from_footer: true,
                             },
                             {

@@ -53,7 +53,7 @@ export const LanguageSwitcherDropdown = ({
             variant="icon"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
             textTransform="uppercase"
-            marginInlineStart="0 !important"
+            sx={{marginInlineStart: "0 !important"}}
           >
             {selectedLocale}
           </Button>

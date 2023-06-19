@@ -43,11 +43,10 @@ export const NavLayout = (props: NavLayoutProps) => {
               <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
                 {props.items}
               </ButtonGroup>
-              </Box>
+          </Box>
         </HStack>
         <HStack spacing={6}>
           {props.searchArea}
-
           <Box display={{ base: "none", lg: "block" }} sx={{marginInlineStart: "12px !important"}}>
               <IconButton
                 icon={
@@ -71,7 +70,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                 marginInlineStart="12px !important"
                 display={{ base: "none", lg: "block" }}
               />
-              <Box display={{ base: "none", lg: "block" }} sx={{marginInlineStart: "0 !important"}}>
+              <Box display={{ base: "none", lg: "block" }} marginInlineStart="0 !important">
                {props.languageSwitcher}
               </Box>
 

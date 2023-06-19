@@ -123,5 +123,12 @@ export const tutorialsCollectionConfig = {
       widget: "string",
       crowdin: true
     },
+    {
+      label: "Description",
+      name: "description",
+      required: false,
+      widget: "markdown",
+      crowdin: true
+    },
   ],
 } satisfies CmsCollection;
