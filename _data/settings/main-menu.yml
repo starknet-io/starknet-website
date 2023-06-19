@@ -32,6 +32,8 @@ items:
               - page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
               - page: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
               - page: 9308fd57-e090-4ca9-9581-d9aeb8a3187c
+              - custom_title: Security & audits
+                custom_internal_link: https://www.starknet.io/en/ecosystem/security-and-audits
   - title: Community
     columns:
       - blocks:
