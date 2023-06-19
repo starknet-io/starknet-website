@@ -1,0 +1,15 @@
+id: bb9fe37e-e8fc-4ec3-a7f4-ba987749ec47
+title: My page here
+template: landing
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: card_list
+    randomize: false
+    card_list_items:
+      - title: Firs card here
+        description: Short desc
+        link_url: https://www.youtube.com/
+        image: /assets/as-per-design.png
+    title: Card list below
+    description: Nice description
