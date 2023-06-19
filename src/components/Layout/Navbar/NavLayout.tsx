@@ -40,7 +40,7 @@ export const NavLayout = (props: NavLayoutProps) => {
             <StarknetLogo />
           </Link>
           <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "60px" }}>
+              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
                 {props.items}
               </ButtonGroup>
               </Box>
@@ -48,7 +48,7 @@ export const NavLayout = (props: NavLayoutProps) => {
         <HStack spacing={6}>
           {props.searchArea}
 
-          <Box display={{ base: "none", lg: "block" }}>
+          <Box display={{ base: "none", lg: "block" }} sx={{marginInlineStart: "12px !important"}}>
               <IconButton
                 icon={
                   colorMode === "light" ? (
@@ -59,7 +59,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                 }
                 aria-label="Toggle color mode"
                 onClick={toggleColorMode}
-                marginInlineStart="10px !important"
+                marginInlineStart="0 !important"
               />
             </Box>
 
@@ -68,17 +68,19 @@ export const NavLayout = (props: NavLayoutProps) => {
                 bg="nav-footer-br"
                 h="30px"
                 position="relative"
-                marginInlineStart="10px !important"
+                marginInlineStart="12px !important"
                 display={{ base: "none", lg: "block" }}
               />
-              {props.languageSwitcher}
+              <Box display={{ base: "none", lg: "block" }}>
+               {props.languageSwitcher}
+              </Box>
 
             <Box display={{ base: "block", lg: "none" }}><IconButton
               ref={menuButtonRef}
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
-              marginInlineStart="10px !important"
+              marginInlineStart="12px !important"
             /></Box>
         </HStack>
       </HStack>
