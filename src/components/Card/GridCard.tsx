@@ -121,11 +121,18 @@ type ContentProps = {
   title: string;
   date?: string;
   author?: string;
+  author_link?: string;
   difficulty?: string;
   direction?: string;
 };
 
-const Content = ({ title, date, author, difficulty, direction = "column" }: ContentProps) => {
+const Content = ({ title, date, author, author_link, difficulty, direction = "column" }: ContentProps) => {
+  const handleAuthorClick = (e: any, url: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(url, "_blank");
+
+  }
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
@@ -140,19 +147,27 @@ const Content = ({ title, date, author, difficulty, direction = "column" }: Cont
         {title}
       </Text>
       <HStack spacing="2">
-        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="#0F172A" />
+        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
         <Text variant="cardBody" noOfLines={4}>
           {date}
         </Text>
       </HStack>
       <HStack spacing="2">
-        <Icon as={HiOutlineUser} boxSize="24px" stroke="#0F172A" />
-        <Text variant="cardBody" noOfLines={4}>
-          {author}
-        </Text>
+        <Icon as={HiOutlineUser} boxSize="24px" stroke={author_link ? "listLink-fg" : "tutorials-card-icon-color"} />
+        {author_link ?
+          <Text
+            variant="textLink"
+            onClick={(e) => handleAuthorClick(e, author_link)}>{author}</Text> :
+          <Text
+            variant="cardBody"
+            noOfLines={4}
+          >
+            {author}
+          </Text>
+        }
       </HStack>
       <HStack spacing="2">
-        <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="#0F172A" />
+        <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="tutorials-card-icon-color" />
         <Text variant="cardBody" noOfLines={4}>
           {formattedDifficulty}
         </Text>

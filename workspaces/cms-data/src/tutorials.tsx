@@ -7,6 +7,7 @@ export type Tutorial = {
   readonly image?: string;
   readonly title: string;
   readonly author?: string;
+  readonly author_link?: string;
   readonly published_at: string;
   readonly difficulty?: "beginner" | "intermediate" | "advanced";
   readonly tags?: string[];
