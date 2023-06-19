@@ -1,0 +1,15 @@
+id: af68f1f8-b2a3-49e2-bec0-f36165cc331f
+title: Security & audits
+template: landing
+parent_page: /ecosystem/
+breadcrumbs: false
+page_last_updated: true
+blocks:
+  - type: hero
+    variant: security
+    title: Security & audits
+  - type: card_list
+    randomize: false
+    title: Title goes here
+    card_list_items:
+      - {}
