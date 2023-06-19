@@ -27,3 +27,22 @@ blocks:
       - title: OpenZeppelin
         website_url: https://www.openzeppelin.com/
         image: /assets/openzeppelin-logo.png
+      - title: PeckShield
+        image: /assets/peckshield-logo.jpg
+        website_url: http://peckshield.com
+      - website_url: http://www.trailofbits.com
+        image: /assets/trail-of-bits-logo.png
+        title: Trail of Bits
+      - title: Zellic
+        image: /assets/zellic-logo.png
+        website_url: http://www.zellic.io
+      - title: Ginger Security
+        image: /assets/ginger-security-logo.png
+        website_url: https://gingersec.xyz/
+  - type: card_list
+    randomize: true
+    title: Bug Bounty Program
+    card_list_items:
+      - title: Immunefi
+        website_url: https://immunefi.com/bounty/starknet/
+        image: /assets/immunefi-logo.jpg
