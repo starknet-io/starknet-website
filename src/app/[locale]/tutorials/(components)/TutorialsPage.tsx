@@ -139,12 +139,12 @@ const TutorialsPageLayout = ({
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
-          <CustomType items={typeItems} refineTypes={refineTypes} />
-          <CustomCourse params={params} />
           <CustomDifficulty
             items={difficultyItems}
             refineDifficulty={refineDifficulty}
           />
+          <CustomType items={typeItems} refineTypes={refineTypes} />
+          <CustomCourse params={params} />
           <CustomTags items={tagsItems} refineTags={refineTags} />
         </Box>
       }
@@ -152,12 +152,12 @@ const TutorialsPageLayout = ({
         <Box>
           <CustomHits locale={params.locale} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
-            <CustomType items={typeItems} refineTypes={refineTypes} />
-            <CustomCourse params={params} />
             <CustomDifficulty
               items={difficultyItems}
               refineDifficulty={refineDifficulty}
             />
+            <CustomType items={typeItems} refineTypes={refineTypes} />
+            <CustomCourse params={params} />
             <CustomTags items={tagsItems} refineTags={refineTags} />
           </MobileFiltersDrawer>
         </Box>
