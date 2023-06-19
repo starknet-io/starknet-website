@@ -147,12 +147,6 @@ const Content = ({ title, date, author, author_link, difficulty, direction = "co
         {title}
       </Text>
       <HStack spacing="2">
-        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
-        <Text variant="cardBody" noOfLines={4}>
-          {date}
-        </Text>
-      </HStack>
-      <HStack spacing="2">
         <Icon as={HiOutlineUser} boxSize="24px" stroke={author_link ? "listLink-fg" : "tutorials-card-icon-color"} />
         {author_link ?
           <Text
@@ -165,6 +159,12 @@ const Content = ({ title, date, author, author_link, difficulty, direction = "co
             {author}
           </Text>
         }
+      </HStack>
+      <HStack spacing="2">
+        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
+        <Text variant="cardBody" noOfLines={4}>
+          {date}
+        </Text>
       </HStack>
       <HStack spacing="2">
         <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="tutorials-card-icon-color" />
