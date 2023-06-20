@@ -9,7 +9,7 @@ export const LinkList = ({ randomize, blocks, ...rest }: LinkListBlock) => {
 
   return (
     <StarkLinkList.Root {...rest}>
-      {items.map((item, i) => (
+      {items?.map((item, i) => (
         <StarkLinkList.Item key={i} {...item} />
       ))}
     </StarkLinkList.Root>
