@@ -76,6 +76,54 @@ const createAnnouncementDetails = async () => {
   }
 }
 
+const createSharedData = async () => {
+  await fs.mkdir(`public/data/shared-data`, { recursive: true });
+  const seoFiles = [
+    "home",
+    "footer",
+    "tutorials",
+    "events",
+    "jobs",
+    "search",
+    "language",
+  ];
+
+  for (const locale of locales) {
+    const seo: Record<string, any> = {}
+
+    for (const fileName of seoFiles) {
+      const fileData = await fs.readFile(
+        path.join(process.cwd(), `public/data/seo/${fileName}/${locale}.json`),
+        "utf8"
+      );
+      
+      const fileDataParsed = JSON.parse(fileData.toString());
+      seo[fileName] = fileDataParsed
+    }
+
+    const mainMenuData = await fs.readFile(
+      path.join(process.cwd(), `public/data/main-menu/${locale}.json`),
+      "utf8"
+    );
+
+    const alertsData = await fs.readFile(
+      path.join(process.cwd(), `public/data/alert/${locale}.json`),
+      "utf8"
+    );
+
+    const sharedData = {
+      seo,
+      mainMenu: JSON.parse(mainMenuData.toString()),
+      alerts: JSON.parse(alertsData.toString()),
+    }
+
+    await write(
+      path.join("public/data/shared-data", `${locale}.json`),
+      sharedData
+    );
+  }
+};
+
 const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
@@ -172,9 +220,6 @@ for (const data of announcements.filenameMap.values()) {
 );
 }
 
-await createRoadmapDetails()
-await createAnnouncementDetails()
-
 for (const locale of locales) {
   await fs.mkdir(`public/data/pages/${locale}`, { recursive: true });
 }
@@ -222,3 +267,6 @@ for (const locale of locales) {
 const redirects = await yaml("_data/settings/redirects.yml");
 
 await write(`workspaces/website/redirects.json`, redirects);
+await createRoadmapDetails()
+await createAnnouncementDetails()
+await createSharedData()
