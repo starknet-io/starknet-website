@@ -1,4 +1,3 @@
-import type { MessagesType } from "@starknet-io/cms-data/src/i18n/intl";
 import type { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import type { Alert } from "@starknet-io/cms-data/src/settings/alert";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
@@ -36,7 +35,6 @@ export type PageContextCustom = {
   userAgent: string;
   redirectTo?: string;
   mainMenu: MainMenu;
-  messages: MessagesType;
   alerts: Alert[];
   seo: SEOTexts;
 };

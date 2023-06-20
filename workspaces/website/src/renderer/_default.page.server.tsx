@@ -13,7 +13,6 @@ export const passToClient = [
   "documentProps",
   "locale",
   "alerts",
-  "messages",
   "mainMenu",
   "data",
   "seo",
