@@ -4,7 +4,7 @@ import { renderPage } from "vite-plugin-ssr/server";
 import { IRequest, Router } from "itty-router";
 import * as redirects from "../../redirects.json";
 
-export const router = Router();
+const router = Router();
 
 router.all("/api/*", apiRouter.handle);
 

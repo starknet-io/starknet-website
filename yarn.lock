@@ -4621,7 +4621,7 @@ __metadata:
     "@octokit/oauth-app": ^4.2.1
     typescript: ^5.0.4
     vitest: ^0.31.4
-    wrangler: ^3.0.1
+    wrangler: ^3.1.0
   languageName: unknown
   linkType: soft
 
@@ -4744,7 +4744,7 @@ __metadata:
     vite-node: 0.30.1
     vite-plugin-ssr: ^0.4.131
     vite-tsconfig-paths: ^4.2.0
-    wrangler: ^3.0.1
+    wrangler: ^3.1.0
   languageName: unknown
   linkType: soft
 
@@ -4789,7 +4789,7 @@ __metadata:
     eslint-plugin-storybook: ^0.6.11
     framer-motion: ^10.12.4
     fsevents: ^2.3.2
-    itty-router: ^4.0.9
+    itty-router: ^4.0.11
     moment: ^2.29.4
     moment-timezone: ^0.5.43
     netlify-cms-app: ^2.15.72
@@ -11980,10 +11980,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"itty-router@npm:^4.0.9":
-  version: 4.0.9
-  resolution: "itty-router@npm:4.0.9"
-  checksum: 4c26be6607b4d6b256cfae6a512cacca5ae806f466b5bedf202b2df02dcda922b4f67817753e1ab8735834961fa491e508baa2cbdabc834179cadf0e47023808
+"itty-router@npm:^4.0.11":
+  version: 4.0.11
+  resolution: "itty-router@npm:4.0.11"
+  checksum: 6ef6b2b98081a56dd92eecb75e0f6d5ea82ce3dadfab42d38ab4ee6afb87e42c3ec55b5f25dbe171c400f54474b01eea2364e161c134b9d3e49bb96c3d8eeec7
   languageName: node
   linkType: hard
 
@@ -19862,9 +19862,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "wrangler@npm:3.0.1"
+"wrangler@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "wrangler@npm:3.1.0"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -19885,7 +19885,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 7970d31b5fe8c9266f1fb2351eaec34cd714338613cd360959ed4559f73ec3037069a0ce821119579d707e920050465dd039780776322f9b853ba4c64b97d6cb
+  checksum: 03ff3905cb32db214f5338ac514b306c22f3684f402405d12abf96d0672d94082a5fd9249b67bfa86710824b8643914987173ca1443a30340530ae6824a7c68b
   languageName: node
   linkType: hard
 

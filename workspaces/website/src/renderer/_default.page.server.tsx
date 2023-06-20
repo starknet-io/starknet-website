@@ -3,6 +3,7 @@ import { escapeInject } from "vite-plugin-ssr/server";
 import { PageContextServer } from "./types";
 import { PageShell } from "./PageShell";
 import { getDefaultPageContext } from "./helpers";
+import type { InjectFilterEntry } from 'vite-plugin-ssr/types'
 
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = [
@@ -23,26 +24,6 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: await getDefaultPageContext(pageContext),
   };
 }
-
-// TODO
-// export const metadata = {
-//   title: {
-//     default: "Starknet",
-//     template: "%s - Starknet",
-//   },
-//   description:
-//     "Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security",
-//   openGraph: {
-//     type: "website",
-//     siteName: "StarkNet",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//   },
-//   icons: {
-//     icon: "/favicon.ico",
-//   },
-// };
 
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps, redirectTo } = pageContext;
@@ -116,5 +97,34 @@ export async function render(pageContext: PageContextServer) {
     </body>
   </html>`;
 
-  return { documentHtml };
+  return { documentHtml, injectFilter };
+}
+
+
+const injectFilter = (assets: InjectFilterEntry[]): void => {
+  assets.forEach(asset => {
+    if (
+      // We don't touch entry assets (recommended)
+      asset.isEntry ||
+      // We don't touch JavaScript preloading (recommended)
+      asset.assetType === 'script'
+    ) {
+      return
+    }
+
+    // Preload images
+    if (asset.assetType === 'image') {
+      asset.inject = 'HTML_BEGIN'
+    }
+
+    // Don't preload fonts
+    if (asset.assetType === 'font') {
+      asset.inject = false
+    }
+
+    // Preload videos
+    if (asset.mediaType?.startsWith('video')) {
+      asset.inject = 'HTML_END'
+    }
+  })
 }
