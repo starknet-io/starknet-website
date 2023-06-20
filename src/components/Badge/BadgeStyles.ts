@@ -1,6 +1,6 @@
 import { defineStyle, defineStyleConfig } from "src/libs/chakra-ui";
 
-const engineering = defineStyle({
+const developers = defineStyle({
   background: "badge-engineering-bg",
   color: "badge-engineering-fg",
 });
@@ -57,7 +57,7 @@ export const badgeTheme = defineStyleConfig({
     color: "badge-starkstruck-fg"
   },
   variants: {
-    engineering,
+    developers,
     community_calls,
     stark_math,
     stark_struck,
