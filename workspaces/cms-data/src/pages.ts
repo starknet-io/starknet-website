@@ -150,7 +150,7 @@ export interface LinkListBlock {
   readonly listSize?: "sm" | "md" | "lg";
   readonly listGap?: "sm" | "md" | "lg";
   randomize?: boolean;
-  readonly blocks: readonly LinkListItem[];
+  readonly blocks?: readonly LinkListItem[];
 }
 export interface AccordionBlock {
   readonly type: "accordion";

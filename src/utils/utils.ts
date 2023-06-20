@@ -8,8 +8,11 @@ export const titleCase = (s: string = "") => {
 
 export function getComputedLinkData(
   locale: string,
-  link: LinkData
+  link?: LinkData
 ): { href?: string; label?: string } {
+  if(!link){
+    return {href: '', label: ''}
+  }
   let href;
 
   const label =
@@ -23,6 +26,10 @@ export function getComputedLinkData(
     href = link.page_data.link;
   } else if (link.post_data) {
     href = `/${locale}/posts/${link.post_data.category}/${link.post_data.slug}`;
+  }
+
+  if(!href){
+    href = '#'
   }
 
   return { href, label };
