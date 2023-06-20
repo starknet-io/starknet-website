@@ -206,7 +206,7 @@ function CustomType({
 }) {
   return (
     <Box>
-      <Heading variant="h6" mb={4}>
+      <Heading variant="h6" mb={4} mt={8}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">

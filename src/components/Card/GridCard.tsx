@@ -11,6 +11,7 @@ import {
   Icon,
   Flex,
 } from "src/libs/chakra-ui";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { Text } from "@ui/Typography/Text";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import {
@@ -147,11 +148,12 @@ const Content = ({ title, date, author, author_link, difficulty, direction = "co
         {title}
       </Text>
       <HStack spacing="2">
-        <Icon as={HiOutlineUser} boxSize="24px" stroke={author_link ? "listLink-fg" : "tutorials-card-icon-color"} />
+        <Icon as={HiOutlineUser} boxSize="24px" stroke="tutorials-card-icon-color" />
         {author_link ?
           <Text
             variant="textLink"
-            onClick={(e) => handleAuthorClick(e, author_link)}>{author}</Text> :
+            sx={{display: "flex", flexDirection: "row", alignItems: "center"}}
+            onClick={(e) => handleAuthorClick(e, author_link)}>{author}<Icon ml={1} boxSize="14px" as={HiArrowUpRight} /></Text> :
           <Text
             variant="cardBody"
             noOfLines={4}
