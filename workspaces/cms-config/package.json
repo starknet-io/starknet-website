@@ -7,6 +7,6 @@
     "build": "tsc"
   },
   "devDependencies": {
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   }
 }

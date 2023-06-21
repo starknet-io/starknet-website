@@ -1,47 +1,6 @@
 {
-  "extends": "./tsconfig.projects.json",
-  "compilerOptions": {
-    "outDir": ".types",
-    "target": "ES5",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "types": ["vitest/importMeta", "vitest/globals", "@types/mdx"],
-    "baseUrl": ".",
-    "paths": {
-      "@ui/*": ["./src/components/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "noEmit": false,
-    "emitDeclarationOnly": true,
-    "strictNullChecks": true
-  },
-  "include": [
-    "_data/i18n/*.json",
-    "_data/i18n/intl/*.json",
-    "./next-env.d.ts",
-    "./vite-env.d.ts",
-    "./src/**/*",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "_data/categories",
-    "_data/_dynamic",
-    "_data/events",
-    "_data/jobs",
-    "_data/pages",
-    "_data/posts",
-    "_data/settings",
-    "_data/topics",
-    "_data/tutorials",
-    ".yarn",
-    "node_modules"
-  ],
+  "extends": "./tsconfig.options.json",
+  "include": [],
   "references": [
     {
       "path": "./workspaces/cms-config"
@@ -65,10 +24,10 @@
       "path": "./workspaces/netlify-cms-widgets"
     },
     {
-      "path": "./workspaces/netlify-cms-backend-github"
+      "path": "./workspaces/website"
     },
     {
-      "path": "./tsconfig.node.json"
+      "path": "./workspaces/netlify-cms-backend-github"
     }
   ]
 }

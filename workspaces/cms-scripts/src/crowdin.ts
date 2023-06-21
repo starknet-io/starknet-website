@@ -1,7 +1,7 @@
-import path from "node:path";
+import path from "path";
 import { collections } from "@starknet-io/cms-config/src/collections";
 import { yaml } from "./utils";
-import fs from "node:fs/promises";
+import fs from "fs/promises";
 import { CmsField } from "@starknet-io/cms-config/src/types";
 
 export type JsonFile = {

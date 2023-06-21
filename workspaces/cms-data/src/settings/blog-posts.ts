@@ -1,27 +1,18 @@
-import { defaultLocale } from "@starknet-io/cms-data/src/i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { defaultLocale } from "../i18n/config";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface BlogPosts {
   readonly custom_featured_post: string;
 }
 
-export async function getBlogPosts(locale: string): Promise<BlogPosts> {
+export async function getBlogPosts(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<BlogPosts> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/blog-posts",
-                value + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/blog-posts/" + value, event)
       )
     );
   } catch (cause) {

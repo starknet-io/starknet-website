@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.projects.json",
+  "compilerOptions": {
+    "outDir": ".types",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client"],
+    "jsx": "react-jsx",
+    "paths": {
+      "@ui/*": ["@starknet-io/website/src/components/*"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../cms-utils" },
+    { "path": "../cms-config" },
+    { "path": "../cms-data" },
+    { "path": "../website" }
+  ]
+}

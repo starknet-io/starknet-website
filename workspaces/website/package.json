@@ -1,0 +1,35 @@
+{
+  "name": "@starknet-io/website",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite-node ./src/dev-server -c vite-dev-server.config.ts",
+    "build": "yarn build-ssr && yarn build-worker",
+    "build-worker": "vite build -c vite-worker.config.ts",
+    "build-ssr": "vite build -c vite.config.ts",
+    "preview": "wrangler dev",
+    "preview-remote": "wrangler dev --remote"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0",
+    "@cloudflare/workers-types": "^4.20230518.0",
+    "@starknet-io/cms-config": "workspace:*",
+    "@starknet-io/cms-data": "workspace:*",
+    "@starknet-io/cms-utils": "workspace:*",
+    "@types/compression": "^1.7.2",
+    "@types/gapi": "^0.0.44",
+    "@vitejs/plugin-react": "^4.0.0",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "fsevents": "^2.3.2",
+    "node-fetch": "^3.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-streaming": "^0.3.10",
+    "vite": "^4.3.9",
+    "vite-node": "0.30.1",
+    "vite-plugin-ssr": "^0.4.131",
+    "vite-tsconfig-paths": "^4.2.0",
+    "wrangler": "^3.1.0"
+  }
+}

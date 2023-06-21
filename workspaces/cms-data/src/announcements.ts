@@ -1,77 +1,47 @@
 import { defaultLocale } from "./i18n/config";
-import { Meta, getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { Meta, getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 import { TopLevelBlock } from "./pages";
 
-export interface AnnouncementsPost extends Meta {
+export interface AnnouncementDetails extends Meta {
   readonly id: string;
   readonly slug: string;
   readonly title: string;
   readonly description: string;
   readonly image: string;
   readonly badge: string;
+}
+
+export interface AnnouncementsPost extends Meta, AnnouncementDetails {
   readonly blocks: readonly TopLevelBlock[];
 }
 
-export async function getAnnouncements(
-  locale: string
-): Promise<readonly AnnouncementsPost[]> {
+
+export async function getAnnouncementDetails(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<AnnouncementDetails[]> {
   try {
-    const announcements: AnnouncementsPost[] = [];
-
-    const filesInDir = await fs.readdir(
-      path.join(process.cwd(), "_crowdin/data/announcements", locale)
+    return await getFirst(
+      ...[locale, defaultLocale].map(
+          (value) => async () => getJSON(`data/announcements-details/${value}`, event)
+      )
     );
-
-    const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
-
-    for (const fileName of jsonFilesInDir) {
-      const fileData = await fs.readFile(
-        path.join(
-          process.cwd(),
-          "_crowdin/data/announcements",
-          locale,
-          fileName
-        ),
-        "utf8"
-      );
-      const jsonData = JSON.parse(fileData.toString());
-      announcements.push(jsonData);
-    }
-
-    return announcements;
   } catch (cause) {
-    throw new Error("getAnnouncements failed!", {
-      cause,
-    });
+    throw new Error(`getAnnouncementDetails failed!`);
   }
 }
-
 export async function getAnnouncementsPostBySlug(
+  locale: string,
   slug: string,
-  locale: string
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<AnnouncementsPost> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/announcements",
-                value,
-                slug + ".json"
-              ),
-              "utf8"
-            )
-          )
+          (value) => async () => getJSON(`data/announcements/${value}/${slug}`, event)
       )
     );
   } catch (cause) {
-    throw new Error(`Announcement not found! ${slug}`, {
-      cause,
-    });
+    throw new Error(`Announcement not found! ${slug}`);
   }
 }

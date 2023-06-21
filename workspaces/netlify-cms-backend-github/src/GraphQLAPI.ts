@@ -12,10 +12,8 @@ import {
   localForage,
   DEFAULT_PR_BODY,
   throwOnConflictingBranches,
-  // @ts-expect-error
 } from 'netlify-cms-lib-util';
 import { trim, trimStart } from 'lodash';
-// @ts-expect-error
 import introspectionQueryResultData from './fragmentTypes';
 import API, { API_NAME, PullRequestState, MOCK_PULL_REQUEST } from './API';
 import * as queries from './queries';

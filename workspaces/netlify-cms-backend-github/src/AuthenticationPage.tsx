@@ -21,7 +21,7 @@ const ForkButtonsContainer = styled.div`
   align-items: center;
 `;
 
-export default class GitHubAuthenticationPage extends React.Component {
+export default class GitHubAuthenticationPage extends React.Component<any,any,any> {
   static propTypes = {
     onLogin: PropTypes.func.isRequired,
     inProgress: PropTypes.bool,
@@ -33,10 +33,10 @@ export default class GitHubAuthenticationPage extends React.Component {
     t: PropTypes.func.isRequired,
   };
 
-  state = {};
+  override state: {[key:string]: any} = {};
 
   getPermissionToFork = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       this.setState({
         requestingFork: true,
         approveFork: () => {
@@ -132,7 +132,7 @@ export default class GitHubAuthenticationPage extends React.Component {
     };
   }
 
-  render() {
+  override render() {
     const { inProgress, config, t } = this.props;
     const { loginError, requestingFork, findingFork } = this.state;
 

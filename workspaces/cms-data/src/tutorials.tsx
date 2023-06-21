@@ -18,11 +18,11 @@ export type Tutorial = {
 
 export const getTutorialById = async (id: string, locale: string) => {
   const client = algoliasearch(
-    process.env.ALGOLIA_APP_ID!,
-    process.env.ALGOLIA_SEARCH_API_KEY!
+    import.meta.env.VITE_ALGOLIA_APP_ID!,
+    import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!
   );
   //   const index = client.initIndex(`web_posts_${process.env.ALGOLIA_INDEX}`);
-  const index = client.initIndex(`web_tutorials_${process.env.ALGOLIA_INDEX}`);
+  const index = client.initIndex(`web_tutorials_${import.meta.env.VITE_ALGOLIA_INDEX}`);
 
   const searchResponse = await index.search<Tutorial>("", {
     facetFilters: [`locale:${locale}`, `id:${id}`],
