@@ -141,6 +141,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
               />
             ),
           },
+          onSelect({ setIsOpen }) {
+            setIsOpen(true);
+          }
         };
       },
     });
@@ -172,6 +175,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
               <PopularSearchesItem {...props} onTapAhead={onTapAhead} />
             ),
           },
+          onSelect({ setIsOpen }) {
+            setIsOpen(true);
+          }
         };
       },
     });
@@ -199,6 +205,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
           return [
             {
               sourceId: "posts",
+              getItemUrl({ item }) {
+                return `/${locale}/posts/${item.category}/${item.slug}`;
+              },
               getItems() {
                 return getAlgoliaResults({
                   searchClient: data.searchClient,
@@ -228,6 +237,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
             },
             {
               sourceId: "pages",
+              getItemUrl({ item }) {
+                return `${item.link}`;
+              },
               getItems() {
                 return getAlgoliaResults({
                   searchClient: data.searchClient,
@@ -256,6 +268,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
             },
             {
               sourceId: "docs",
+              getItemUrl({ item }) {
+                return item.url;
+              },
               getItems() {
                 return getAlgoliaResults({
                   searchClient: data.searchClient,
