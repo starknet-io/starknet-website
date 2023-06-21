@@ -14,7 +14,7 @@ export const Primary = () => (
     <VStack alignItems="flex-start">
       <Badge variant="community_and_events">Community and events</Badge>
       <Badge variant="community_calls">Community calls</Badge>
-      <Badge variant="engineering">Engineering</Badge>
+      <Badge variant="engineering">Developers</Badge>
       <Badge variant="governance">Governance</Badge>
       <Badge variant="stark_at_home">Stark@home</Badge>
       <Badge variant="stark_math">Stark Math</Badge>

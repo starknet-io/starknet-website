@@ -7,11 +7,13 @@ export type Tutorial = {
   readonly image?: string;
   readonly title: string;
   readonly author?: string;
+  readonly author_link?: string;
   readonly published_at: string;
   readonly difficulty?: "beginner" | "intermediate" | "advanced";
   readonly tags?: string[];
   readonly locale: string;
   readonly filepath: string;
+  readonly description?: string;
 };
 
 export const getTutorialById = async (id: string, locale: string) => {

@@ -21,9 +21,11 @@ export default function App() {
     CMS.registerEventListener({
       name: 'preSave',
       handler: ({ entry }) => {
-        const startDate = new Date(entry.get('data').get('start_date'));
-        const month = `${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
-        return entry.get('data').set('month', month);
+        if (entry.get('collection') === 'events') {
+          const startDate = new Date(entry.get('data').get('start_date'));
+          const month = `${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
+          return entry.get('data').set('month', month);
+        }
       },
     });
     

@@ -59,7 +59,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
                           if (
                             item.hide_from_footer ||
                             item.custom_icon ||
-                            item.custom_title === "Engineering posts" ||
+                            item.custom_title === "Developers posts" ||
                             item.custom_title === "Community Calls" ||
                             item.custom_title === "Stark math" ||
                             item.custom_title === "Stark struck" ||

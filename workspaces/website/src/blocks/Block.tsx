@@ -78,7 +78,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
   } else if (block.type === "accordion") {
     return (
       <AccordionRoot heading={block.heading}>
-        {block.blocks.map((block, i) => (
+        {block.blocks?.map((block, i) => (
           <AccordionItem key={i} label={block.label}>
             <MarkdownBlock body={block.body} />
           </AccordionItem>
@@ -86,7 +86,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       </AccordionRoot>
     );
   } else if (block.type === "ordered_block") {
-    let blocks = Array.from(block.blocks).sort((a, b) => {
+    let blocks = Array.from(block.blocks || []).sort((a, b) => {
       return a.title.localeCompare(b.title);
     });
 

@@ -23,6 +23,7 @@ export default function TutorialsCard({ locale, hit }: TutorialsCardProps) {
         <GridCard.Content
           title={hit.title}
           author={hit.author}
+          author_link={hit.author_link}
           date={date}
           difficulty={hit.difficulty}
         />

@@ -28,6 +28,20 @@ import { navigate } from "vite-plugin-ssr/client/router";
 import TutorialsCard from "./TutorialsCard";
 import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
 
+type RefinementListItem = {
+  value: string;
+  label: string;
+  highlighted?: string;
+  count: number;
+  isRefined: boolean;
+};
+
+let levelRanks: {[key: string]: number} = {
+  "beginner": 1,
+  "intermediate": 2,
+  "advanced": 3
+};
+
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
     readonly course?: string;
@@ -134,12 +148,12 @@ const TutorialsPageLayout = ({
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
-          <CustomType items={typeItems} refineTypes={refineTypes} />
-          <CustomCourse params={params} />
           <CustomDifficulty
-            items={difficultyItems}
+            items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem) => levelRanks[a.value] - levelRanks[b.value])}
             refineDifficulty={refineDifficulty}
           />
+          <CustomType items={typeItems} refineTypes={refineTypes} />
+          <CustomCourse params={params} />
           <CustomTags items={tagsItems} refineTags={refineTags} />
         </Box>
       }
@@ -147,12 +161,12 @@ const TutorialsPageLayout = ({
         <Box>
           <CustomHits locale={params.locale} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
-            <CustomType items={typeItems} refineTypes={refineTypes} />
-            <CustomCourse params={params} />
             <CustomDifficulty
-              items={difficultyItems}
+              items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem ) => levelRanks[a.value] - levelRanks[b.value])}
               refineDifficulty={refineDifficulty}
             />
+            <CustomType items={typeItems} refineTypes={refineTypes} />
+            <CustomCourse params={params} />
             <CustomTags items={tagsItems} refineTags={refineTags} />
           </MobileFiltersDrawer>
         </Box>
@@ -201,7 +215,7 @@ function CustomType({
 }) {
   return (
     <Box>
-      <Heading variant="h6" mb={4}>
+      <Heading variant="h6" mb={4} mt={8}>
         Type
       </Heading>
       <VStack dir="column" alignItems="stretch">

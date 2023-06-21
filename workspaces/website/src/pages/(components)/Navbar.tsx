@@ -89,7 +89,7 @@ export default function Navbar({
                                   ) : item.custom_icon === "SiTwitter" ? (
                                     <SiTwitter fontSize="1.25rem" />
                                   ) : item.custom_icon === "SiYoutube" ? (
-                                    <SiYoutube fontSize="1.25rem" />
+                                    <Box ml="-16px"><SiYoutube fontSize="1.25rem" /></Box>
                                   ) : (
                                     <React.Fragment />
                                   )

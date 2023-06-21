@@ -19,6 +19,7 @@ import {
   getSimpleFiles,
   handleLink,
   updateBlocks,
+  updateJobs
 } from "./data";
 import { translateFile } from "./crowdin";
 
@@ -190,6 +191,7 @@ const announcements = await getAnnouncements();
 const pages = await getPages();
 
 updateBlocks(pages, posts);
+updateJobs();
 
 for (const locale of locales) {
   await fs.mkdir(`public/data/posts/${locale}`, { recursive: true });

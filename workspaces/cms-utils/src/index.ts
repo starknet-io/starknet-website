@@ -20,7 +20,7 @@ export function youtubeVideoIdFromURL(url: string): string | undefined | void {
 }
 
 export function slugify(value: string): string {
-  return value
+  return String(value)
     .normalize("NFD") // split an accented letter in the base letter and the acent
     .replace(/[\u0300-\u036f]/g, "") // remove all previously split accents
     .toLowerCase()

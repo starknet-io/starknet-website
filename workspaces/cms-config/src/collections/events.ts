@@ -141,6 +141,12 @@ export const eventsCollectionConfig = {
       widget: "datetime",
     },
     {
+      name: "display_time",
+      label: "Display time",
+      widget: "boolean",
+      required: false,
+    },
+    {
       label: "",
       name: "month",
       widget: "month",

@@ -10,6 +10,7 @@ import { Tag } from "@ui/Tag/Tag";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
 import moment from "moment";
+import { MarkdownBlock } from "src/blocks/MarkdownBlock";
 
 export interface Props {
   readonly params: LocaleParams & {
@@ -81,6 +82,7 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
             <GridCard.Content
               title={""}
               author={tutorial.author}
+              author_link={tutorial.author_link}
               date={date}
               difficulty={tutorial.difficulty}
               direction="row"
@@ -98,6 +100,7 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
                 })}
             </Flex>
           </Flex>
+          <MarkdownBlock body={tutorial.description as string} />
         </div>
       }
     />

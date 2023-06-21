@@ -1,0 +1,49 @@
+id: af68f1f8-b2a3-49e2-bec0-f36165cc331f
+title: Security & audits
+template: landing
+parent_page: /ecosystem/
+breadcrumbs: false
+page_last_updated: true
+blocks:
+  - type: hero
+    variant: security
+    title: Security & audits
+    description: Secure your apps with auditing services for Starknet Smart Contracts.
+  - type: card_list
+    randomize: true
+    title: Auditing Companies
+    card_list_items:
+      - title: ABDK
+        website_url: https://www.abdk.consulting/
+        image: /assets/abdk-logo.png
+      - title: ChainSecurity
+        image: /assets/chiansecurity-logo.png
+        website_url: https://chainsecurity.com/
+      - title: ConsenSys Diligence
+        website_url: http://consensys.net/diligence
+        image: /assets/consensys-diligence-logo.svg
+      - title: Nethermind
+        website_url: https://nethermind.io/
+        image: /assets/nethermind-logo.png
+      - title: OpenZeppelin
+        website_url: https://www.openzeppelin.com/
+        image: /assets/openzeppelin-logo.png
+      - title: PeckShield
+        image: /assets/peckshield-logo.jpg
+        website_url: http://peckshield.com
+      - website_url: http://www.trailofbits.com
+        image: /assets/trail-of-bits-logo.png
+        title: Trail of Bits
+      - title: Zellic
+        image: /assets/zellic-logo.png
+        website_url: http://www.zellic.io
+      - title: Ginger Security
+        image: /assets/ginger-security-logo.png
+        website_url: https://gingersec.xyz/
+  - type: card_list
+    randomize: true
+    title: Bug Bounty Program
+    card_list_items:
+      - title: Immunefi
+        website_url: https://immunefi.com/bounty/starknet/
+        image: /assets/immunefi-logo.jpg

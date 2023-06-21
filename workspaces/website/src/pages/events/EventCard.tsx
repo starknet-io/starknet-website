@@ -30,8 +30,8 @@ export default function EventCard({ event, isPastEvent }: EventCardProps) {
                 : "DD MMM, YYYY"
             )}${!hasSameDay ? " - " : ""}${
               !hasSameDay ? moment(event?.end_date).format("DD MMM, YYYY") : ""
-            }`
-          : moment(event?.start_date).format("DD MMM, YYYY")
+            }${event?.display_time ? " · " + moment(event?.start_date).format("h:MM A") : ""}`
+          : `${moment(event?.start_date).format("DD MMM, YYYY")}${event?.display_time ? " · " + moment(event?.start_date).format("h:MM A") : ""}`
       }
       image={event.image}
       title={event.name}

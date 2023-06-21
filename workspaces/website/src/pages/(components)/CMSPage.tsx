@@ -104,7 +104,7 @@ function pageToTableOfContents(page: PageType): readonly HeadingData[] {
     if (block.type === "page_header") {
       return [];
     } else if (block.type === "ordered_block") {
-      let blocks = Array.from(block.blocks).sort((a, b) => {
+      let blocks = Array.from(block.blocks || []).sort((a, b) => {
         return a.title.localeCompare(b.title);
       });
 

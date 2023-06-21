@@ -37,7 +37,7 @@ export const textTheme = defineStyleConfig({
       lineHeight: "24px",
       fontWeight: 400,
       cursor: "pointer",
-      color: "selected.main",
+      color: "listLink-fg",
       "&:hover": {
         textDecoration: "underline"
       }

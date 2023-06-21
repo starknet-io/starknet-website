@@ -9,7 +9,9 @@ import {
   Tooltip as ChakraTooltip, TooltipProps,
   Icon,
   Flex,
+  Link
 } from "@chakra-ui/react";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { Text } from "@ui/Typography/Text";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import {
@@ -120,11 +122,12 @@ type ContentProps = {
   title: string;
   date?: string;
   author?: string;
+  author_link?: string;
   difficulty?: string;
   direction?: string;
 };
 
-const Content = ({ title, date, author, difficulty, direction = "column" }: ContentProps) => {
+const Content = ({ title, date, author, author_link, difficulty, direction = "column" }: ContentProps) => {
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
@@ -139,19 +142,36 @@ const Content = ({ title, date, author, difficulty, direction = "column" }: Cont
         {title}
       </Text>
       <HStack spacing="2">
-        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="#0F172A" />
+        <Icon as={HiOutlineUser} boxSize="24px" stroke="tutorials-card-icon-color" />
+        {author_link ?
+          <Link
+            href={author_link}
+            isExternal={true}
+          >
+            <Text
+              variant="textLink"
+              sx={{display: "flex", flexDirection: "row", alignItems: "center"}}
+            >
+              {author}
+              <Icon ml={1} boxSize="14px" as={HiArrowUpRight} />
+            </Text>
+          </Link> :
+          <Text
+            variant="cardBody"
+            noOfLines={4}
+          >
+            {author}
+          </Text>
+        }
+      </HStack>
+      <HStack spacing="2">
+        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
         <Text variant="cardBody" noOfLines={4}>
           {date}
         </Text>
       </HStack>
       <HStack spacing="2">
-        <Icon as={HiOutlineUser} boxSize="24px" stroke="#0F172A" />
-        <Text variant="cardBody" noOfLines={4}>
-          {author}
-        </Text>
-      </HStack>
-      <HStack spacing="2">
-        <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="#0F172A" />
+        <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="tutorials-card-icon-color" />
         <Text variant="cardBody" noOfLines={4}>
           {formattedDifficulty}
         </Text>

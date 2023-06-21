@@ -218,7 +218,7 @@ const EventsPageLayout = ({
     anyFilterApplied && handleApplyChanges();
     setSelectedFilters({});
   };
-console.log('months ', months)
+
   return (
     <PageLayout
       sectionHeaderTitle={seo.title}
