@@ -31,6 +31,20 @@ import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDr
 import TutorialsCard from "./TutorialsCard";
 import { Tutorial } from "workspaces/cms-data/src/tutorials";
 
+type RefinementListItem = {
+  value: string;
+  label: string;
+  highlighted?: string;
+  count: number;
+  isRefined: boolean;
+};
+
+let levelRanks: {[key: string]: number} = {
+  "beginner": 1,
+  "intermediate": 2,
+  "advanced": 3
+};
+
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
     readonly course?: string;
@@ -140,7 +154,7 @@ const TutorialsPageLayout = ({
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
           <CustomDifficulty
-            items={difficultyItems}
+            items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem) => levelRanks[a.value] - levelRanks[b.value])}
             refineDifficulty={refineDifficulty}
           />
           <CustomType items={typeItems} refineTypes={refineTypes} />
@@ -153,7 +167,7 @@ const TutorialsPageLayout = ({
           <CustomHits locale={params.locale} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
             <CustomDifficulty
-              items={difficultyItems}
+              items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem ) => levelRanks[a.value] - levelRanks[b.value])}
               refineDifficulty={refineDifficulty}
             />
             <CustomType items={typeItems} refineTypes={refineTypes} />
