@@ -89,6 +89,7 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
             <GridCard.Content
               title={""}
               author={tutorial.author}
+              author_link={tutorial.author_link}
               date={date}
               difficulty={tutorial.difficulty}
               direction="row"
