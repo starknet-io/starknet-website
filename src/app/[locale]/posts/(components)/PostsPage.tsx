@@ -285,7 +285,7 @@ function CustomTopics({
           }}
           key={i}
         >
-          {topicsDict[topic.value].name}
+          {topicsDict[topic.value].name} ({topic.count})
         </Button>
       ))}
     </Box>
