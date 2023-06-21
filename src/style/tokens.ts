@@ -56,6 +56,7 @@ export const tokens = {
       "heading-navy-fg": "#0C0C4F",
       "columnlink-bg": "transparent",
       "columnlink-fg": "#6B7280",
+      "tutorials-card-icon-color": "#0F172A",
       "columnlink-hover-bg": "#FBFBFB",
       "columnlink-hover-fg": "#5C94FF",
       "columnlink-active-bg": "#FFFFFF",
@@ -253,6 +254,7 @@ export const tokens = {
       "heading-navy-fg": "#FFFFFF",
       "columnlink-bg": "transparent",
       "columnlink-fg": "#CCCCCC",
+      "tutorials-card-icon-color": "#FFFFFF",
       "columnlink-hover-bg": "#121212",
       "columnlink-hover-fg": "#9EBFFF",
       "columnlink-active-bg": "transparent",
@@ -544,6 +546,10 @@ export const semanticTokens = {
     "columnlink-fg": {
       default: tokens.colors.light["columnlink-fg"],
       _dark: tokens.colors.dark["columnlink-fg"],
+    },
+    "tutorials-card-icon-color": {
+      default: tokens.colors.light["tutorials-card-icon-color"],
+      _dark: tokens.colors.dark["tutorials-card-icon-color"],
     },
     "columnlink-hover-bg": {
       default: tokens.colors.light["columnlink-hover-bg"],
