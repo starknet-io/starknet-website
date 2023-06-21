@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { useMemo } from "react";
-import algoliasearch from "src/libs/algoliasearch/lite";
+import algoliasearch, { RefinementListItem } from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
@@ -30,6 +30,12 @@ import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/Re
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 import TutorialsCard from "./TutorialsCard";
 import { Tutorial } from "workspaces/cms-data/src/tutorials";
+
+let levelRanks: {[key: string]: number} = {
+  "beginner": 1,
+  "intermediate": 2,
+  "advanced": 3
+};
 
 export interface Props extends LocaleProps {
   readonly params: LocaleParams & {
@@ -140,7 +146,7 @@ const TutorialsPageLayout = ({
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
           <CustomDifficulty
-            items={difficultyItems}
+            items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem) => levelRanks[a.value] - levelRanks[b.value])}
             refineDifficulty={refineDifficulty}
           />
           <CustomType items={typeItems} refineTypes={refineTypes} />
@@ -153,7 +159,7 @@ const TutorialsPageLayout = ({
           <CustomHits locale={params.locale} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
             <CustomDifficulty
-              items={difficultyItems}
+              items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem ) => levelRanks[a.value] - levelRanks[b.value])}
               refineDifficulty={refineDifficulty}
             />
             <CustomType items={typeItems} refineTypes={refineTypes} />
