@@ -141,6 +141,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
               />
             ),
           },
+          onSelect({ setIsOpen }) {
+            setIsOpen(true);
+          }
         };
       },
     });
@@ -172,6 +175,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
               <PopularSearchesItem {...props} onTapAhead={onTapAhead} />
             ),
           },
+          onSelect({ setIsOpen }) {
+            setIsOpen(true);
+          }
         };
       },
     });
