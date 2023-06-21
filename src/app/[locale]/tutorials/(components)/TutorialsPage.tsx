@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { useMemo } from "react";
-import algoliasearch, { RefinementListItem } from "src/libs/algoliasearch/lite";
+import algoliasearch from "src/libs/algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
@@ -30,6 +30,14 @@ import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/Re
 import MobileFiltersDrawer from "../../(components)/MobileFilter/MobileFiltersDrawer";
 import TutorialsCard from "./TutorialsCard";
 import { Tutorial } from "workspaces/cms-data/src/tutorials";
+
+type RefinementListItem = {
+  value: string;
+  label: string;
+  highlighted?: string;
+  count: number;
+  isRefined: boolean;
+};
 
 let levelRanks: {[key: string]: number} = {
   "beginner": 1,
