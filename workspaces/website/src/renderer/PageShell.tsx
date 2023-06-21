@@ -32,7 +32,7 @@ export function PageShell(props: Props) {
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
         <ThemeProvider>
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={null}>
             {(pageContext.hasLayout ?? true) === true ? (
               <PageLayout pageContext={pageContext}>{children}</PageLayout>
             ) : (
