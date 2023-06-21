@@ -10,6 +10,7 @@ import {
   Tooltip as ChakraTooltip, TooltipProps,
   Icon,
   Flex,
+  Link
 } from "src/libs/chakra-ui";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Text } from "@ui/Typography/Text";
@@ -128,12 +129,6 @@ type ContentProps = {
 };
 
 const Content = ({ title, date, author, author_link, difficulty, direction = "column" }: ContentProps) => {
-  const handleAuthorClick = (e: any, url: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    window.open(url, "_blank");
-
-  }
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
@@ -150,10 +145,18 @@ const Content = ({ title, date, author, author_link, difficulty, direction = "co
       <HStack spacing="2">
         <Icon as={HiOutlineUser} boxSize="24px" stroke="tutorials-card-icon-color" />
         {author_link ?
-          <Text
-            variant="textLink"
-            sx={{display: "flex", flexDirection: "row", alignItems: "center"}}
-            onClick={(e) => handleAuthorClick(e, author_link)}>{author}<Icon ml={1} boxSize="14px" as={HiArrowUpRight} /></Text> :
+          <Link
+            href={author_link}
+            isExternal={true}
+          >
+            <Text
+              variant="textLink"
+              sx={{display: "flex", flexDirection: "row", alignItems: "center"}}
+            >
+              {author}
+              <Icon ml={1} boxSize="14px" as={HiArrowUpRight} />
+            </Text>
+          </Link> :
           <Text
             variant="cardBody"
             noOfLines={4}
