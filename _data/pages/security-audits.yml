@@ -40,6 +40,11 @@ blocks:
       - title: Ginger Security
         image: /assets/ginger-security-logo.png
         website_url: https://gingersec.xyz/
+      - title: Extropy
+        description: Extropy provides auditing, training and development services for
+          Web3 / ZKP companies.
+        link_url: https://security.extropy.io/
+        image: /assets/extropy-logoi.jpeg
   - type: card_list
     randomize: true
     title: Bug Bounty Program
