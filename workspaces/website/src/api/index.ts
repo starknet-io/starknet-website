@@ -54,7 +54,7 @@ apiRouter.get(
 );
 
 apiRouter.get(
-  "/cms-permissions",
+  "/permissions",
   async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
 
     // const permissions = await getPermissions();
