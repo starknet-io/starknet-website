@@ -25,12 +25,14 @@ blocks:
       - title: Nethermind
         website_url: https://nethermind.io/
         image: /assets/nethermind-logo.png
-        description: Nethermind is a Blockchain Research and Software Engineering
-          Company, that provides auditing and formal verification services for
-          Starknet smart contracts.
+        description: Nethermind is a leading Blockchain Research and Software
+          Engineering Company, that provides auditing and formal verification
+          services for Starknet smart contracts.
       - title: OpenZeppelin
         website_url: https://www.openzeppelin.com/
         image: /assets/openzeppelin-logo.png
+        description: OpenZeppelin is a leading blockchain security company providing
+          products and audits to trusted organizations in Web3.
       - title: PeckShield
         image: /assets/peckshield-logo.jpg
         website_url: http://peckshield.com
