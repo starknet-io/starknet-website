@@ -10,26 +10,8 @@ video:
     etag: fUfopkjP3qfPJb1aj0IF4oXxU8o
     id: aI88vUAqtiM
     snippet:
-      publishedAt: 2023-06-16T02:11:00Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #46 | Cairo 1 - Deep dive into the contract
-        syntax changes"
-      description: >-
-        In this talk, we’ll discuss the recent smart contract syntax changes
-        that are part of the new Cairo 1 compiler release (v2.0.0). Expect a
-        deep dive into the smart contract syntax - what exactly is different and
-        what lead us to go down this route.
-
-
-        For further elaboration:
-
-        https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794 - technical post explains the changes.
-
-
-        https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0 - compiler new version
-
-
-        #cairo #smartcontracts
+      publishedAt: 2023-06-16T02:11:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/aI88vUAqtiM/default.jpg
@@ -51,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/aI88vUAqtiM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #46 | Cairo 1 - Deep dive into the contract
+        syntax changes"
       tags:
         - Cairo
         - Starknet
@@ -62,7 +47,6 @@ video:
         - permissionless
         - layer 2
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #46 | Cairo 1 - Deep dive into the contract
           syntax changes"
@@ -82,7 +66,23 @@ video:
 
 
           #cairo #smartcontracts
-      defaultAudioLanguage: en-US
+      description: >-
+        In this talk, we’ll discuss the recent smart contract syntax changes
+        that are part of the new Cairo 1 compiler release (v2.0.0). Expect a
+        deep dive into the smart contract syntax - what exactly is different and
+        what lead us to go down this route.
+
+
+        For further elaboration:
+
+        https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794 - technical post explains the changes.
+
+
+        https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0 - compiler new version
+
+
+        #cairo #smartcontracts
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT55M16S
       dimension: 2d
@@ -95,11 +95,17 @@ image: /assets/communitycall-46-cairo-1-deep-dive-into-the-contract-syntax-chang
 category: community-calls
 topic:
   - cairo
+  - a294fed5-41b4-4a8a-bba0-c025cf179de1
 short_desc: In this talk, we’ll discuss the recent smart contract syntax changes
   that are part of the new Cairo 1 compiler release (v2.0.0). Expect a deep dive
   into the smart contract syntax - what exactly is different and what lead us to
   go down this route.
 blocks:
+  - type: markdown
+    body: In this talk, we’ll discuss the recent smart contract syntax changes that
+      are part of the new Cairo 1 compiler release (v2.0.0). Expect a deep dive
+      into the smart contract syntax - what exactly is different and what lead
+      us to go down this route.
   - type: link_list
     randomize: false
     blocks:
