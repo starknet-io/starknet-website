@@ -1184,14 +1184,33 @@ export default class API {
     const permissions = await res.json();
 
     const { user } = pullRequest
-    const userPermissions = permissions.find(p => p.username = user.login)
+    const userPermissions: {username: string, access: Array<string>} = permissions.find(p => p.username = user.login)
     if(!userPermissions){
       throw new Error(`No permissions found in CMS for user "${user.login}"`)
     }
+
+    const { access } = userPermissions
+    const isSudoUser = access.includes('sudo')
+    const hasAllAccess = access.includes('all') || isSudoUser
+
+    const genericMessage = `User "${user.login}" has no permission to publish ${collectionName}`
+
+    if(slug === 'permissions' && !(isSudoUser || access.includes('permissions'))){
+      throw new Error(`User "${user.login}" has no permission to publish "permissions"`)
+    }
+
     const postCollections = ['posts', 'categories', 'topics']
-    const noPermissionToPosts = postCollections.includes(collectionName) && !userPermissions.access?.includes('posts')
-    if(noPermissionToPosts || !userPermissions.access?.includes(collectionName)){
-      throw new Error(`User "${user.login}" has no permission to publish "${collectionName}"`)
+    if(postCollections.includes(collectionName) && !(hasAllAccess || access.includes('posts'))){
+      throw new Error(genericMessage)
+    }
+    
+    const roadmapCollections = ['roadmap-posts', 'roadmap-versions', 'announcements']
+    if(roadmapCollections.includes(collectionName) && !(hasAllAccess || access.includes('roadmap'))){
+      throw new Error(genericMessage)
+    }
+
+    if(!(hasAllAccess || access.includes(collectionName))){
+      throw new Error(genericMessage)
     }
 
     await this.mergePR(pullRequest);
