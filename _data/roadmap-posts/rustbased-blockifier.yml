@@ -1,14 +1,15 @@
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b411
 title: Rust-based blockifier
-availability: Q2 2023
+availability: Q3 2023
 version: 69ee8aba-95ec-4da9-9348-b8debe034a1a
 stage: building-now
 blocks:
   - type: markdown
     body: >-
-      The Rust-based Blockifier is a crucial component of Starknet's upcoming
-      version, 0.12.0. It significantly improves throughput and latency by
-      reducing block execution time.
+      **E﻿stimation:** July 2023 on testnet.
+
+
+      The Rust-based Blockifier is a crucial component of Starknet's upcoming version, 0.12.0. It significantly improves throughput and latency by reducing block execution time.
 
 
       Developed by StarkWare as an open-source project, the new Blockifier utilizes the Rust programming language to implement an optimized block processing mechanism.
