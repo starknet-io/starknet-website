@@ -1,0 +1,26 @@
+items:
+  - access:
+      - posts
+      - settings
+      - events
+    username: lorcan-codes
+  - username: milosyuki
+    access:
+      - posts
+      - settings
+      - events
+  - username: thecotne
+    access:
+      - posts
+      - settings
+      - events
+  - username: thorville
+    access:
+      - posts
+      - settings
+      - events
+  - username: robwalsh21
+    access:
+      - posts
+      - settings
+      - events

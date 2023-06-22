@@ -1176,11 +1176,28 @@ export default class API {
   async publishUnpublishedEntry(collectionName: string, slug: string) {
     const contentKey = this.generateContentKey(collectionName, slug);
     const branch = branchFromContentKey(contentKey);
-
     const pullRequest = await this.getBranchPullRequest(branch);
+    const res = await fetch(
+      `${import.meta.env.VITE_API_BASE_URL}/permissions`
+    );
+
+    const permissions = await res.json();
+
+    const { user } = pullRequest
+    const userPermissions = permissions.find(p => p.username = user.login)
+
+    if(userPermissions){        
+      const postCollections = ['posts', 'categories', 'topics']
+      const noPermissionToPosts = postCollections.includes(collectionName) && !userPermissions.access?.includes('posts')
+      if(noPermissionToPosts || !userPermissions.access?.includes(collectionName)){
+        throw new Error(`User "${user.login}" has no permission to publish "${collectionName}"`)
+      }
+    }
+
     await this.mergePR(pullRequest);
     await this.deleteBranch(branch);
-  }
+}
+
 
   async createRef(type: string, name: string, sha: string) {
     const result: Octokit.GitCreateRefResponse = await this.request(`${this.repoURL}/git/refs`, {

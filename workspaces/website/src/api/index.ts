@@ -52,3 +52,29 @@ apiRouter.get(
     );
   }
 );
+
+apiRouter.get(
+  "/cms-permissions",
+  async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
+
+    // const permissions = await getPermissions();
+    const permissions = [
+      {
+        username: 'lorcan-codes',
+        access: ['pages', 'posts']
+      }
+    ]
+
+    if (permissions == null) {
+      return corsify(
+        error(404, {
+          message: "No permissions found",
+        })
+      );
+    }
+
+    return corsify(
+      json({permissions})
+    );
+  }
+);
