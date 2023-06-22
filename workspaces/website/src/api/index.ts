@@ -1,4 +1,5 @@
 import { Router, createCors, error, json } from 'itty-router'
+import { getPermissions } from '@starknet-io/cms-data/src/settings/permissions'
 
 // now let's create a router (note the lack of "new")
 export const apiRouter = Router({ base: "/api" });
@@ -57,13 +58,7 @@ apiRouter.get(
   "/permissions",
   async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
 
-    // const permissions = await getPermissions();
-    const permissions = [
-      {
-        username: 'lorcan-codes',
-        access: ['pages', 'posts']
-      }
-    ]
+    const permissions = await getPermissions(event)
 
     if (permissions == null) {
       return corsify(
