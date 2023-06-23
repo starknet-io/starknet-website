@@ -563,7 +563,7 @@ export default class API {
           environment: `Starknet Website ${branch}`,
         }
       });
-      
+
     if (!(shaPreviewDeployments?.length > 0)) {
       throw new EditorialWorkflowError(
         "No preview deployment found for this commit",
@@ -1178,7 +1178,7 @@ export default class API {
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
     const res = await fetch(
-      `${import.meta.env.VITE_API_BASE_URL}/data/permissions/en.json`
+      `${import.meta.env.VITE_DATA_URL}/permissions/en.json`
     );
 
     const permissions = await res.json();
@@ -1203,7 +1203,7 @@ export default class API {
     if(postCollections.includes(collectionName) && !(hasAllAccess || access.includes('posts'))){
       throw new Error(genericMessage)
     }
-    
+
     const roadmapCollections = ['roadmap-posts', 'roadmap-versions', 'announcements']
     if(roadmapCollections.includes(collectionName) && !(hasAllAccess || access.includes('roadmap'))){
       throw new Error(genericMessage)

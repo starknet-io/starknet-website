@@ -1,10 +1,9 @@
 import { Router, createCors, error, json } from 'itty-router'
-import { getPermissions } from '@starknet-io/cms-data/src/settings/permissions'
 
 // now let's create a router (note the lack of "new")
 export const apiRouter = Router({ base: "/api" });
 
-const { preflight, corsify } = createCors({
+export const { preflight, corsify } = createCors({
   origins: [
     "https://starknet-website-cms.netlify.app",
     "http://127.0.0.1:1234",
@@ -52,28 +51,4 @@ apiRouter.get(
       })
     );
   }
-);
-
-apiRouter.get(
-  "/permissions",
-  async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
-      const response = await fetch(
-        "https://starknet-website-cms-permissions.yukilabs.workers.dev/data/permissions/en.json"
-      );
-
-      const permissions = await response.json();
-
-      if (permissions == null) {
-        return corsify(
-          error(404, {
-            message: "No permissions found",
-          })
-        );
-      }
-  
-      return corsify(
-        json({permissions})
-      );
-
-    }
 );
