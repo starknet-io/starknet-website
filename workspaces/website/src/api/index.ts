@@ -3,7 +3,7 @@ import { Router, createCors, error, json } from 'itty-router'
 // now let's create a router (note the lack of "new")
 export const apiRouter = Router({ base: "/api" });
 
-const { preflight, corsify } = createCors({
+export const { preflight, corsify } = createCors({
   origins: [
     "https://starknet-website-cms.netlify.app",
     "http://127.0.0.1:1234",

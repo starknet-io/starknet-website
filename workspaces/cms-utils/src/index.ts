@@ -60,7 +60,7 @@ export async function getJSON(
   src: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<any> {
-  if (import.meta.env.SSR) {
+  if (import.meta.env.SSR || event) {
     if (globalThis.__STATIC_CONTENT) {
       const res = await getAssetFromKV({
         request: new Request(

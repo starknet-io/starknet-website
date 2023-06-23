@@ -1,0 +1,42 @@
+items:
+  - username: lorcan-codes
+    access:
+      - posts
+      - permissions
+      - events
+
+  - username: milosyuki
+    access:
+      - posts
+      - permissions
+      - events
+  - username: thecotne
+    access:
+      - posts
+      - permissions
+      - events
+  - username: thorville
+    access:
+      - posts
+      - permissions
+      - events
+  - username: robwalsh21
+    access:
+      - posts
+      - permissions
+      - events
+  - username: AmalyStark
+    access:
+      - posts
+      - permissions
+      - events
+  - username: AmalyStark
+    access:
+      - posts
+      - permissions
+      - events
+  - username: Tal-wagner
+    access:
+      - posts
+      - permissions
+      - events
