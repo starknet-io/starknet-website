@@ -1176,10 +1176,58 @@ export default class API {
   async publishUnpublishedEntry(collectionName: string, slug: string) {
     const contentKey = this.generateContentKey(collectionName, slug);
     const branch = branchFromContentKey(contentKey);
-
     const pullRequest = await this.getBranchPullRequest(branch);
-    await this.mergePR(pullRequest);
-    await this.deleteBranch(branch);
+    const res = await fetch(
+      `${import.meta.env.VITE_DATA_URL}/permissions/en.json`
+    );
+
+    const user = await this.user()
+    const permissions = await res.json();
+    const userPermissions: {username: string, access: Array<string>} = permissions.find(p => p.username = user.login)
+    if(!userPermissions){
+      throw new Error(`No permissions found in CMS for user "${user.login}"`)
+    }
+
+    const { access } = userPermissions
+    const isSudoUser = access.includes('sudo')
+    const hasAllAccess = access.includes('all') || isSudoUser
+
+    let hasPermission = false
+    let collection = collectionName
+    let permissionName = collectionName
+
+    switch(collectionName) {
+      case 'settings':
+        if(slug === 'permissions'){
+          hasPermission = isSudoUser || access.includes('permissions')
+          collection = 'permissions'
+          permissionName = 'permissions'
+        }else {
+          hasPermission = hasAllAccess || access.includes('settings')
+        }
+        break;
+      case 'posts':
+      case 'topics':
+      case 'categories':
+        hasPermission = hasAllAccess || access.includes('posts')
+        permissionName = 'posts'
+        break;
+      case 'roadmap-posts':
+      case 'roadmap-versions':
+      case 'announcements':
+        hasPermission = hasAllAccess || access.includes('roadmap')
+        permissionName = 'roadmap'
+        break;
+      default:
+        hasPermission = hasAllAccess || access.includes(collectionName)
+    }
+
+    if(hasPermission){
+      await this.mergePR(pullRequest);
+      await this.deleteBranch(branch);
+    }else {
+      throw new Error(`You need "${permissionName}" access to publish "${collection}" (User: ${user.login})`)
+    }
   }
 
   async createRef(type: string, name: string, sha: string) {
