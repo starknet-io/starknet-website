@@ -1178,10 +1178,10 @@ export default class API {
     const branch = branchFromContentKey(contentKey);
     const pullRequest = await this.getBranchPullRequest(branch);
     const res = await fetch(
-      `${import.meta.env.VITE_API_BASE_URL}/permissions`
+      `${import.meta.env.VITE_API_BASE_URL}/data/permissions/en.json`
     );
 
-    const { permissions } = await res.json();
+    const permissions = await res.json();
 
     const { user } = pullRequest
     const userPermissions: {username: string, access: Array<string>} = permissions.find(p => p.username = user.login)

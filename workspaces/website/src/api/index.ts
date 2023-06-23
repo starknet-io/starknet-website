@@ -57,9 +57,12 @@ apiRouter.get(
 apiRouter.get(
   "/permissions",
   async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
+      const res = await fetch(
+        import.meta.env.VITE_SITE_URL + "/data/permissions/en.json"
+      );
 
-    try{
-      const permissions = await getPermissions(event)
+      const permissions = await res.json();
+
       if (permissions == null) {
         return corsify(
           error(404, {
@@ -71,10 +74,6 @@ apiRouter.get(
       return corsify(
         json({permissions})
       );
+      
     }
-    catch(err) {
-      console.log('permissions err', err)
-      throw new Error('permissions api failed')
-    }
-  }
 );
