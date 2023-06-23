@@ -57,9 +57,7 @@ apiRouter.get(
 apiRouter.get(
   "/permissions",
   async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
-      const res = await fetch(
-        import.meta.env.VITE_SITE_URL + "/data/permissions/en.json"
-      );
+      const res = await fetch("https://starknet-website-cms-permissions.yukilabs.workers.dev/data/permissions/en.json");
 
       const permissions = await res.json();
 
@@ -74,6 +72,6 @@ apiRouter.get(
       return corsify(
         json({permissions})
       );
-      
+
     }
 );
