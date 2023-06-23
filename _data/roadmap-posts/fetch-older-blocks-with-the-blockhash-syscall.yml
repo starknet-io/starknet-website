@@ -9,7 +9,7 @@ blocks:
       **E﻿stimation:** July 2023 on testnet.
 
 
-      0.12.0 brings an exciting addition to the system with the introduction of the blockhash syscall . 
+      0.12.0 brings an exciting addition to the system with the introduction of the blockhash syscall. 
 
 
       This new syscall enables contracts to retrieve the block hashes of older blocks, akin to the functionality provided by the blockhash in [Solidity](https://docs.soliditylang.org/en/v0.8.11/units-and-global-variables.html#block-and-transaction-properties). By incorporating this feature, Starknet empowers developers to access past block information within a specified range, specifically from the current block-10 to the current block-1024.
