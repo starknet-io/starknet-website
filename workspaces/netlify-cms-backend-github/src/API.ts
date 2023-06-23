@@ -1181,7 +1181,7 @@ export default class API {
       `${import.meta.env.VITE_API_BASE_URL}/permissions`
     );
 
-    const permissions = await res.json();
+    const { permissions } = await res.json();
 
     const { user } = pullRequest
     const userPermissions: {username: string, access: Array<string>} = permissions.find(p => p.username = user.login)
