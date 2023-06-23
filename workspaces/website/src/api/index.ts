@@ -58,18 +58,23 @@ apiRouter.get(
   "/permissions",
   async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
 
-    const permissions = await getPermissions(event)
-
-    if (permissions == null) {
+    try{
+      const permissions = await getPermissions(event)
+      if (permissions == null) {
+        return corsify(
+          error(404, {
+            message: "No permissions found",
+          })
+        );
+      }
+  
       return corsify(
-        error(404, {
-          message: "No permissions found",
-        })
+        json({permissions})
       );
     }
-
-    return corsify(
-      json({permissions})
-    );
+    catch(err) {
+      console.log('permissions err', err)
+      throw new Error('permissions api failed')
+    }
   }
 );
