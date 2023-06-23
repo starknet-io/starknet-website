@@ -24,3 +24,6 @@ items:
       - posts
       - settings
       - events
+  - username: AmalyStark
+    access:
+      - sudo
