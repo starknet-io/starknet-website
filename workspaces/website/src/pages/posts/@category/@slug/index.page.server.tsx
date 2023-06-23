@@ -4,6 +4,8 @@ import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { Props } from "src/pages/posts/PostPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
+import { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
+import { getShuffledArray } from "src/utils/getShuffledArray";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -14,6 +16,13 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     locale,
     pageContext.event
   )
+
+  post.blocks.forEach((block: TopLevelBlock) => {
+    if (block.type === 'link_list' && block.randomize) {
+      // @ts-expect-error
+      block.blocks = getShuffledArray(block.blocks || []);
+    }
+  })
 
   const pageProps: Props = {
     post ,
