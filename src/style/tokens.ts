@@ -87,7 +87,7 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#5C94FF",
       "kbd-bg": "#cccccc",
       "kbd-fg": "#363636",
-
+      "roadmap-availability-state-fg": "#082817",
       "hero-gradient-gradient-a": "#FFDAD6",
       "hero-gradient-gradient-b": "#B6C6FF",
       "heading-hero-gradient-1a": "#0C0C4F",
@@ -194,7 +194,9 @@ export const tokens = {
       "gradient-blue-default-a": " #E9F2F8 ",
       "gradient-blue-default-b": "  #FBF6F1",
       "roadmap-card-border-color": "#CCCCCC",
+      "roadmap-card-tag-border-color": "#DDDDDD",
       "roadmap-card-bg-color": "#FFFFFF",
+      "roadmap-card-tag-bg": "#ffffff"
     },
 
     dark: {
@@ -285,6 +287,7 @@ export const tokens = {
       "nav-searchinput-hover-fg": "#AFCAFF",
       "kbd-bg": "#313131",
       "kbd-fg": "#CCCCCC",
+      "roadmap-availability-state-fg": "#FFFFFF",
       "heading-hero-gradient-1a": "#D672EF",
       "heading-hero-gradient-1b": "#EC796B",
       "hero-gradient-1a": "#171B31",
@@ -392,6 +395,8 @@ export const tokens = {
       "gradient-blue-default-a": " #252525 ",
       "gradient-blue-default-b": "  #1B1B1B",
       "roadmap-card-border-color": "#5C5C5C",
+      "roadmap-card-tag-border-color": "#5C5C5C",
+      "roadmap-card-tag-bg": "#313131"
     },
   },
 };
@@ -691,7 +696,10 @@ export const semanticTokens = {
       default: tokens.colors.light["kbd-fg"],
       _dark: tokens.colors.dark["kbd-fg"],
     },
-
+    "roadmap-availability-state-fg": {
+      default: tokens.colors.light["roadmap-availability-state-fg"],
+      _dark: tokens.colors.dark["roadmap-availability-state-fg"],
+    },
     "button-nav-bg": {
       default: tokens.colors.light["button-nav-bg"],
       _dark: tokens.colors.dark["button-nav-bg"],
@@ -1159,6 +1167,14 @@ export const semanticTokens = {
     "roadmap-card-border-color": {
       default: tokens.colors.light["roadmap-card-border-color"],
       _dark: tokens.colors.dark["roadmap-card-border-color"],
+    },
+    "roadmap-card-tag-border-color": {
+      default: tokens.colors.light["roadmap-card-tag-border-color"],
+      _dark: tokens.colors.dark["roadmap-card-tag-border-color"],
+    },
+    "roadmap-card-tag-bg": {
+      default: tokens.colors.light["roadmap-card-tag-bg"],
+      _dark: tokens.colors.dark["roadmap-card-tag-bg"],
     },
     "roadmap-card-bg-color": {
       default: tokens.colors.light["roadmap-card-bg-color"],

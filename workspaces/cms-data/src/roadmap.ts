@@ -11,6 +11,8 @@ export interface RoadmapPost extends Meta {
   readonly version: string;
   readonly stage: string;
   readonly availability: string;
+  readonly specific_info?: string;
+  readonly state?: string;
   readonly blocks: readonly TopLevelBlock[];
 }
 

@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Box, Flex } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { RoadmapPost, RoadmapVersion } from "workspaces/cms-data/src/roadmap";
@@ -29,15 +29,18 @@ export default function RoadmapPostCard({
         height="100%"
       >
         <CardHeader
-          height="194px"
+          minHeight="194px"
           background="btn-filter-bg"
           borderRadius="16px 16px 0px 0px"
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
         >
-          <Heading variant="h3" color="heading-navy-fg" fontWeight={600} lineHeight="28px">{roadmapPost?.title}</Heading>
-          <Text variant="cardBody" color="heading-navy-fg">{roadmapPost?.availability}</Text>
+          <Heading variant="h3" pb="2" color="heading-navy-fg" fontWeight={600} lineHeight="28px">{roadmapPost?.title}</Heading>
+          <Flex direction="row" alignItems="center" justifyContent="space-between">
+            <Text variant="cardBody" color="heading-navy-fg">{roadmapPost?.availability}</Text>
+            {roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "on testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}
+          </Flex>
         </CardHeader>
         <CardBody padding="24px 16px 16px 16px">
           <RoadmapPostVersion roadmapVersion={roadmapVersion} />
