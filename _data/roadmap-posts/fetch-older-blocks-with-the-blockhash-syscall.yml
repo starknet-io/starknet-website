@@ -17,3 +17,4 @@ blocks:
 
       The blockhash syscall in version 0.12.0 offers developers increased flexibility and functionality in retrieving historical block data, opening up possibilities for more advanced contract interactions and data analysis within the Starknet ecosystem.
 month: undefined NaN
+state: testing now
