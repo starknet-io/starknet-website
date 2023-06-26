@@ -5,12 +5,12 @@ import { AiOutlineAppstore } from "react-icons/ai";
 
 export const roadmapStagesFields = [
   {
-    label: "Building Now",
+    label: "Building now",
     value: "building-now",
     icon: BiWrench
   },
   {
-    label: "Building Next",
+    label: "Building next",
     value: "building-next",
     icon: BiBullseye
   },
@@ -74,6 +74,14 @@ export const roadmapPostsCollectionConfig = {
         "testing now"
       ],
       required: false,
+    },
+    {
+      name: "specific_info",
+      label: "Specific info",
+      widget: "string",
+      required: false,
+      index_file: "",
+      meta: false
     },
     {
       name: "version",
