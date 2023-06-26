@@ -20,3 +20,4 @@ blocks:
 
       By implementing the Rust-based Blockifier, Starknet ensures reduced waiting times and improves transaction latency during everyday network conditions. Moreover, it establishes a foundation for future scalability and performance enhancements, allowing Starknet to handle increased traffic efficiently and reliably as the platform continues to grow.
 month: undefined NaN
+state: testing now
