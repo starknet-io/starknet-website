@@ -125,7 +125,7 @@ export default function RoadmapPost({
           <Heading variant="h4" mt="24px" mb="32px" fontSize="sm">
             {roadmapPost.availability}
           </Heading>
-          {roadmapPost?.state ? <><Text mb="2" mt="-24px" display="inline-flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "on testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text>{roadmapPost?.specific_info ? <Text variant="cardBody" ml="1">{roadmapPost?.specific_info}</Text> : null}</> : null}
+          {roadmapPost?.state ? <Flex alignItems="center"mb="40px"><Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "on testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text>{roadmapPost?.specific_info ? <Text variant="cardBody" ml="2">{roadmapPost?.specific_info}</Text> : null}</Flex> : null}
           <Divider mt="8px" mb="32px" />
           <Flex direction="column" gap="32px">
             {roadmapPost.blocks?.map((block, i) => (
