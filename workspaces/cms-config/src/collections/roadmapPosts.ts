@@ -66,6 +66,16 @@ export const roadmapPostsCollectionConfig = {
       ],
     },
     {
+      name: "state",
+      label: "Availability state",
+      widget: "select",
+      options: [
+        "on testnet",
+        "testing now"
+      ],
+      required: false,
+    },
+    {
       name: "version",
       label: "Version",
       widget: "relation",
