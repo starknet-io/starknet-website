@@ -1,6 +1,9 @@
+month: undefined NaN
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b444
 title: "Fetch older blocks with the blockhash syscall "
 availability: Q3 2023
+state: testing now
+specific_info: (est. mid July 2023)
 version: ea637184-247a-4370-82bd-3059d1c988f0
 stage: building-now
 blocks:
@@ -16,5 +19,3 @@ blocks:
 
 
       The blockhash syscall in version 0.12.0 offers developers increased flexibility and functionality in retrieving historical block data, opening up possibilities for more advanced contract interactions and data analysis within the Starknet ecosystem.
-month: undefined NaN
-state: testing now
