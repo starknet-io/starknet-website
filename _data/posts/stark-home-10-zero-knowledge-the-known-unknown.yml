@@ -1,12 +1,7 @@
 id: 76f99af2-797f-4eab-bdcd-e95ee419530e
 post_type: video
 title: "STARK @ Home 10: Zero-Knowledge – The Known Unknown"
-published_date: 2023-02-02T15:19:38.760Z
-image: /assets/starkhome10.png
-category: stark-math
-topic:
-  - starknet
-short_desc: Zero-Knowledge – The Known Unknown.
+published_date: 2020-07-27T14:19:38.760Z
 video:
   url: https://youtu.be/3uSG-Xp5slM
   id: 3uSG-Xp5slM
@@ -15,10 +10,8 @@ video:
     etag: F9XYWd6kzk1JPBDwdW85dboGdUM
     id: 3uSG-Xp5slM
     snippet:
-      publishedAt: 2020-07-27T09:08:21Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 10: Zero Knowledge - The Known Unknown"
-      description: ""
+      publishedAt: 2020-07-27T09:08:21.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/3uSG-Xp5slM/default.jpg
@@ -41,11 +34,13 @@ video:
           width: 1280
           height: 720
       channelTitle: StarkWare
+      title: "STARK @ Home 10: Zero Knowledge - The Known Unknown"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 10: Zero Knowledge - The Known Unknown"
         description: ""
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H23M49S
       dimension: 2d
@@ -54,3 +49,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome10.png
+category: stark-math
+topic:
+  - starknet
+short_desc: Zero-Knowledge – The Known Unknown.
