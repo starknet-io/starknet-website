@@ -121,11 +121,16 @@ export default function RoadmapPost({
           <Heading variant="h2" color="heading-navy-fg">
             {roadmapPost.title}
           </Heading>
-          <Text variant="cardBody" mt="6"><strong>STAGE:</strong> {stages[roadmapPost?.stage]}</Text>
-          <Heading variant="h4" mt="24px" mb="32px" fontSize="sm">
-            {roadmapPost.availability}
-          </Heading>
-          {roadmapPost?.state ? <Flex alignItems="center"mb="40px"><Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "on testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text>{roadmapPost?.specific_info ? <Text variant="cardBody" ml="2">{roadmapPost?.specific_info}</Text> : null}</Flex> : null}
+          <Flex direction="row" alignItems="center" mt="6" mb="32px" justifyContent="space-between">
+            <Flex direction="row" alignItems="center">
+              <Text variant="cardBody"><strong>STAGE:</strong> {stages[roadmapPost?.stage]}</Text>
+              <Heading variant="h4" fontSize="sm" mt="0" ml="2" pl="2" borderLeftWidth="1px" sx={{borderWeight: "solid", borderColor: "fg-default"}}>
+              {roadmapPost.availability}
+              </Heading>
+              {roadmapPost?.state ? <Flex alignItems="center">{roadmapPost?.specific_info ? <Text variant="cardBody" ml="2">{roadmapPost?.specific_info}</Text> : null}</Flex> : null}
+            </Flex>
+            <div>{roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "on testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}</div>
+          </Flex>
           <Divider mt="8px" mb="32px" />
           <Flex direction="column" gap="32px">
             {roadmapPost.blocks?.map((block, i) => (
