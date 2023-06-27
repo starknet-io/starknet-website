@@ -1,11 +1,60 @@
 id: c968733e-503b-41f1-8bd8-8a152dadcdc6
 post_type: video
-title: "Twitter space pt.1: Kakarot, a ZK-EVM written in Cairo."
+title: STARK SPACES | Kakarot ZK-EVM in Cairo
 published_date: 2022-10-27T12:51:40.280Z
-image: /assets/ts02.jpg
+video:
+  url: https://www.youtube.com/watch?v=ZpDRe7P9R6w
+  id: ZpDRe7P9R6w
+  data:
+    kind: youtube#video
+    etag: X6XDLDNcy6kOADiAE7UzEoh4x_A
+    id: ZpDRe7P9R6w
+    snippet:
+      publishedAt: 2022-11-17T11:47:46Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Kakarot ZK-EVM in Cairo: Vitalik Buterin, Eli Ben-Sasson, Shahar Papini
+        & Abdel Bakhta"
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/ZpDRe7P9R6w/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/ZpDRe7P9R6w/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/ZpDRe7P9R6w/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/ZpDRe7P9R6w/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/ZpDRe7P9R6w/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Kakarot ZK-EVM in Cairo: Vitalik Buterin, Eli Ben-Sasson, Shahar Papini
+          & Abdel Bakhta"
+        description: ""
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H30M5S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/stark-spaces-kakarot-zk-evm-in-cairo.jpg
 category: stark-math
 topic:
-  - starknet
-short_desc: Kakarot, a ZK-EVM written in Cairo - Part 1
-video:
-  url: https://twitter.com/StarkWareLtd/status/1585632275923750913?s=20&t=RaCxfFqigstk-GsoGgMadw
+  - cairo
+short_desc: "Hear what Vitalik Buterin, Eli Ben-Sasson, Shahar Papini, and Abdel
+  Bakhta have to say about Kakarot, a ZK-EVM written in Cairo. "
