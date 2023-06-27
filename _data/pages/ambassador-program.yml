@@ -8,7 +8,7 @@ blocks:
   - type: page_header
     title: Ambassador Program
   - type: markdown
-    body: >
+    body: >-
       The Starknet Foundation Ambassador Program is a unique initiative designed
       with a mission to decentralize and amplify the knowledge of Starknet on a
       global scale. 
@@ -26,13 +26,16 @@ blocks:
       **Speaking at Events -** Ambassadors can represent Starknet at local and international events, forums, and conferences, discussing the latest updates, breakthroughs, and possibilities that Starknet offers.
 
 
-      **Generating Content** **-** Ambassadors play a crucial role in creating engaging content across various platforms - blogs, podcasts, videos, and social media - to ensure Starknet’s vision and advancements reach a wider audience.
+      **Generating Content** **\-** Ambassadors play a crucial role in creating engaging content across various platforms - blogs, podcasts, videos, and social media - to ensure Starknet’s vision and advancements reach a wider audience.
 
 
-      **Grant Disbursement** **-** Starknet ambassadors are entrusted with the responsibility of identifying and granting funds to promising, upcoming developers who are striving to make a difference in the decentralized world with their innovations.
-
-
-      The onboarding committee has assigned several individuals to commence this journey as founding ambassadors. Each ambassador will be granted a tenure of three months, which is extendable based on their contribution and engagement. 
+      **Grant Disbursement** **\-** Starknet ambassadors are entrusted with the responsibility of identifying and granting funds to promising, upcoming developers who are striving to make a difference in the decentralized world with their innovations.
+  - type: markdown
+    body: >-
+      The onboarding committee has assigned several individuals to commence this
+      journey as founding ambassadors. Each ambassador will be granted a tenure
+      of three months, which is extendable based on their contribution and
+      engagement. 
 
 
       Join this exciting endeavor, and let’s redefine the future with Starknet!
