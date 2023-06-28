@@ -119,7 +119,7 @@ export default function PostByCategory({
           {post.post_type === "video" ? (
             <Flex mb={!post.blocks?.length ? "32px" : 0} direction="column">
               <YoutubePlayer videoId={videoId} />
-              {!post.blocks.length && <Text
+              {!post.blocks?.length && <Text
                 pt={2}
                 pb={4}
                 lineHeight="32px"
@@ -166,6 +166,9 @@ export interface MarkdownBlock {
 }
 
 function pageToTableOfContents(page: any): readonly HeadingData[] {
+  if(!Array.isArray(page.blocks)){
+    return []
+  }
   const data = page.blocks.flatMap(
     (block: {
       title: string;

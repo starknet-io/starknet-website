@@ -1,25 +1,7 @@
 id: 81652dcd-480d-46d8-82bd-e18125aa81cc
 post_type: video
-title: "Community Call #30 | Introducing StarkNet Governance"
+title: "Community Call #30 | Introducing Starknet Governance"
 published_date: 2023-01-10T12:59:05.374Z
-image: /assets/cc30.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: >-
-  Today we will have Sylve Chevet from Briq, Deven Mathews from
-  Nethermind, and Manor Bareli from StarkWare, talking about StarkNet
-  Governance.
-
-
-  Before watching, we recommend reading StarkNet’s Governance First Phase blog post:
-
-  https://medium.com/starknet-foundatio...
-
-
-  Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
-
-  https://starknet.io/governance/starkn...
 video:
   url: https://youtu.be/k7soivNSiNU
   id: k7soivNSiNU
@@ -28,24 +10,8 @@ video:
     etag: ySkDhZFTTK8STGdO0lGFBthLPQM
     id: k7soivNSiNU
     snippet:
-      publishedAt: 2023-01-11T02:34:56Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #30 | Introducing StarkNet Governance"
-      description: >-
-        Join us today for our 30th StarkNet Community Call.
-
-
-        Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance.
-
-
-        Before watching, we recommend reading StarkNet’s Governance First Phase blog post:
-
-        https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40
-
-
-        Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
-
-        https://starknet.io/governance/starknet-governance-posts/
+      publishedAt: 2023-01-11T02:34:56.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/k7soivNSiNU/default.jpg
@@ -67,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/k7soivNSiNU/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #30 | Introducing StarkNet Governance"
       tags:
         - Cairo
         - StarkNet
@@ -77,7 +45,6 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #30 | Introducing StarkNet Governance"
         description: >-
@@ -95,7 +62,22 @@ video:
           Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
 
           https://starknet.io/governance/starknet-governance-posts/
-      defaultAudioLanguage: en-US
+      description: >-
+        Join us today for our 30th StarkNet Community Call.
+
+
+        Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and Manor Bareli from StarkWare, talking about StarkNet Governance.
+
+
+        Before watching, we recommend reading StarkNet’s Governance First Phase blog post:
+
+        https://medium.com/starknet-foundation/starknets-governance-first-phase-4614c7566f40
+
+
+        Will also be helpful reading the rest of the blog post about StarkNet Governance on this link:
+
+        https://starknet.io/governance/starknet-governance-posts/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT54M46S
       dimension: 2d
@@ -104,3 +86,20 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc30.jpg
+category: community-calls
+topic:
+  - starknet
+short_desc: >-
+  Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and
+  Manor Bareli from StarkWare, talking about Starknet Governance.
+
+
+  Before watching, we recommend reading Starknet’s Governance First Phase blog post:
+
+  https://medium.com/starknet-foundatio...
+
+
+  Will also be helpful reading the rest of the blog post about Starknet Governance on this link:
+
+  https://starknet.io/governance/starkn...

@@ -42,6 +42,8 @@ export interface RoadmapDetails {
   readonly version: string;
   readonly stage: string;
   readonly availability: string;
+  readonly specific_info?: string;
+  readonly state?: string;
 }
 
 export interface RoadmapPost extends Meta, RoadmapDetails  {
@@ -164,6 +166,8 @@ export async function fileToRoadmapPost(
     title: data.title,
     version: data.version,
     availability: data.availability,
+    specific_info: data.specific_info,
+    state: data.state,
     stage: data.stage,
     blocks: data.blocks ?? [],
     locale,

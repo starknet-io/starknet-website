@@ -37,7 +37,7 @@ export const roadmapVersionsCollectionConfig = {
       options: [
         { label: "Green", value: "foundation" },
         { label: "Yellow", value: "community_calls" },
-        { label: "Red", value: "engineering" },
+        { label: "Red", value: "developers" },
         { label: "Blue", value: "stark_math" },
         { label: "Purple", value: "youtube" },
         { label: "Pink", value: "community_and_events" },
