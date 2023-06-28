@@ -57,6 +57,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
+          filters="title:Senior Blockchain Contract Engineer"
         />
         <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
@@ -307,6 +308,7 @@ export type JobsHit = {
   contact?: Contact; // contact can be undefined in live preview
   job?: Job; // job can be undefined in live preview
   published_at?: string;
+  archived?: string;
 };
 
 function CustomHits() {

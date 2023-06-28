@@ -546,29 +546,28 @@ export function updateBlocks(pages: PagesData, posts: PostsData) {
 
 export async function updateJobs() {
   const resourceName = "jobs";
-const filenames = await fs.readdir(`_data/${resourceName}`);
+  const filenames = await fs.readdir(`_data/${resourceName}`);
 
-for (const filename of filenames) {
-  const filepath = path.join("_data", resourceName, filename);
+  for (const filename of filenames) {
+    const filepath = path.join("_data", resourceName, filename);
 
-  const data = await yaml(filepath);
+    const data = await yaml(filepath);
 
-  const isOlderThanTwoMonths = (dateString: string) => {
-    const date = new Date(dateString);
-    const today = new Date();
-    today.setMonth(today.getMonth() - 2);
-    return date < today;
-  }
-  const isOlder = isOlderThanTwoMonths(data.published_at);
-  if (isOlder) {
-    try {
-      await fs.unlink(filepath);
-    } catch (err) {
-      console.error(err);
+    const isOlderThanTwoMonths = (dateString: string) => {
+      const date = new Date(dateString);
+      const today = new Date();
+      today.setMonth(today.getMonth() - 2);
+      return date < today;
+    }
+    const isOlder = isOlderThanTwoMonths(data.published_at);
+    if (isOlder) {
+      try {
+        data.archived = true;
+      } catch (err) {
+        console.error(err);
+      }
     }
   }
-  
-}
 }
 
 export function handleLink(

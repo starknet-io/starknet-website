@@ -10,6 +10,18 @@ export const jobsCollectionConfig = {
   create: true,
   format: "yml",
   summary: "{{job.title}}",
+  view_filters: [
+    {
+      field: 'archived', 
+      label: 'Active',
+      pattern: 'false'
+    },
+    {
+      field: 'archived', 
+      label: 'Archived',
+      pattern: 'true'
+    }
+  ],
   fields: [
     {
       name: "id",
@@ -166,6 +178,15 @@ export const jobsCollectionConfig = {
       label: "Published at",
       name: "published_at",
       widget: "datetime",
+    },
+    {
+      label: "Archived",
+      name: "archived",
+      widget: "boolean",
+      required: false,
+      search_fields: ["name"],
+      value_field: "id",
+      display_fields: ["name"],
     },
   ],
 } satisfies CmsCollection;
