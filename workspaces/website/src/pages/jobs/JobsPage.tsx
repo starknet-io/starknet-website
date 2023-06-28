@@ -57,7 +57,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
         <Configure
           hitsPerPage={40}
           facetsRefinements={{ locale: [params.locale] }}
-          filters="title:Senior Blockchain Contract Engineer"
+          filters="archived:false"
         />
         <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
