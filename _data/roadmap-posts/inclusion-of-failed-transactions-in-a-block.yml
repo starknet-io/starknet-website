@@ -15,4 +15,7 @@ blocks:
 
 
       By including failed transactions in the block, Starknet simplifies the user experience, allowing developers to confidently advance the nonce without constant status monitoring. This enhancement fosters smoother interactions and serves as a stepping stone towards a trustless system in version 0.15.0, ensuring transparency and security.
+
+
+      The full proposal for this feature is outlined on the official [Starknet Community Forum](https://community.starknet.io/t/efficient-utilization-of-sequencer-capacity-in-starknet-v0-12-1/95607/1).
 month: undefined NaN
