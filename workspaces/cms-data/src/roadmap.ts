@@ -9,6 +9,8 @@ export interface RoadmapDetails extends Meta {
   readonly version: string;
   readonly stage: string;
   readonly availability: string;
+  readonly specific_info?: string;
+  readonly state?: string;
 }
 export interface RoadmapPost extends Meta, RoadmapDetails {
   readonly blocks: readonly TopLevelBlock[];

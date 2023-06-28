@@ -1,6 +1,9 @@
+month: undefined NaN
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b455
 title: Updated Cairo 1.0 contract syntax
-availability: Q2 2023
+availability: Q3 2023
+state: testing now
+specific_info: (est. mid July 2023)
 version: 4e2b83da-0595-4975-bf6a-9dd19815c9f2
 stage: building-now
 blocks:
@@ -20,4 +23,3 @@ blocks:
 
 
       Developers are empowered to easily build large, interacting projects while minimizing bugs and promoting explicit contract behavior with the new syntax. It provides a foundation for creating robust and scalable smart contracts on Starknet.
-month: undefined NaN

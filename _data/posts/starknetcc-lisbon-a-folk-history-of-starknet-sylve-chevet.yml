@@ -1,12 +1,7 @@
 id: fbeb2036-5f4e-4655-b664-e247e2cc9e8c
 post_type: video
-title: "StarkNetCC Lisbon | A folk history of Starknet - Sylve Chevet "
+title: "StarknetCC Lisbon | A folk history of Starknet - Sylve Chevet "
 published_date: 2022-11-14T13:11:44.694Z
-image: /assets/vid_events01.jpg
-category: community-and-events
-topic:
-  - starknet
-short_desc: "A folk history of StarkNet - Sylve Chevet "
 video:
   url: https://youtu.be/Q0LpMwvIMmc
   id: Q0LpMwvIMmc
@@ -15,12 +10,8 @@ video:
     etag: ZzPYQIN17uH-yaEjufYkv16uJZ4
     id: Q0LpMwvIMmc
     snippet:
-      publishedAt: 2022-11-14T13:00:15Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: A folk history of StarkNet - Sylve Chevet - StarkNetCC Lisbon
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2022-11-14T13:00:15.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Q0LpMwvIMmc/default.jpg
@@ -42,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/Q0LpMwvIMmc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: A folk history of StarkNet - Sylve Chevet - StarkNetCC Lisbon
       tags:
         - crypto
         - ethereum
@@ -53,15 +46,17 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: A folk history of StarkNet - Sylve Chevet - StarkNetCC Lisbon
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT12M56S
       dimension: 2d
@@ -70,3 +65,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/vid_events01.jpg
+category: community-and-events
+topic:
+  - starknet
+short_desc: "A folk history of Starknet - Sylve Chevet "

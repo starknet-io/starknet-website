@@ -1,0 +1,120 @@
+id: 6e861eb7-304c-415c-9440-3260047a5c49
+post_type: video
+title: Cairo 1 - Deep dive into the contract syntax changes
+published_date: 2023-06-15T12:38:21.815Z
+video:
+  url: https://www.youtube.com/live/aI88vUAqtiM?feature=share
+  id: aI88vUAqtiM
+  data:
+    kind: youtube#video
+    etag: fUfopkjP3qfPJb1aj0IF4oXxU8o
+    id: aI88vUAqtiM
+    snippet:
+      publishedAt: 2023-06-16T02:11:00.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/aI88vUAqtiM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/aI88vUAqtiM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/aI88vUAqtiM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/aI88vUAqtiM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/aI88vUAqtiM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: "Starknet Community Call #46 | Cairo 1 - Deep dive into the contract
+        syntax changes"
+      tags:
+        - Cairo
+        - Starknet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+        - layer 2
+      categoryId: "28"
+      localized:
+        title: "Starknet Community Call #46 | Cairo 1 - Deep dive into the contract
+          syntax changes"
+        description: >-
+          In this talk, we’ll discuss the recent smart contract syntax changes
+          that are part of the new Cairo 1 compiler release (v2.0.0). Expect a
+          deep dive into the smart contract syntax - what exactly is different
+          and what lead us to go down this route.
+
+
+          For further elaboration:
+
+          https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794 - technical post explains the changes.
+
+
+          https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0 - compiler new version
+
+
+          #cairo #smartcontracts
+      description: >-
+        In this talk, we’ll discuss the recent smart contract syntax changes
+        that are part of the new Cairo 1 compiler release (v2.0.0). Expect a
+        deep dive into the smart contract syntax - what exactly is different and
+        what lead us to go down this route.
+
+
+        For further elaboration:
+
+        https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794 - technical post explains the changes.
+
+
+        https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0 - compiler new version
+
+
+        #cairo #smartcontracts
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT55M16S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/communitycall-46-cairo-1-deep-dive-into-the-contract-syntax-changes-web.png
+category: community-calls
+topic:
+  - cairo
+  - a294fed5-41b4-4a8a-bba0-c025cf179de1
+short_desc: In this talk, we’ll discuss the recent smart contract syntax changes
+  that are part of the new Cairo 1 compiler release (v2.0.0). Expect a deep dive
+  into the smart contract syntax - what exactly is different and what lead us to
+  go down this route.
+blocks:
+  - type: markdown
+    body: In this talk, we’ll discuss the recent smart contract syntax changes that
+      are part of the new Cairo 1 compiler release (v2.0.0). Expect a deep dive
+      into the smart contract syntax - what exactly is different and what lead
+      us to go down this route.
+  - type: link_list
+    randomize: false
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Technical post explains the changes
+          custom_external_link: https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794
+      - link:
+          hasIcon: true
+          custom_title: Compiler new version
+          custom_external_link: https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0
+    heading: Related links

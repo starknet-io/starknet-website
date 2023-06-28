@@ -1,6 +1,9 @@
+month: undefined NaN
 id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b433
 title: Rust-based local state management using Papyrus
-availability: Q2 2023
+availability: Q3 2023
+state: testing now
+specific_info: (est. mid July 2023)
 version: 69ee8aba-95ec-4da9-9348-b8debe034a1a
 stage: building-now
 blocks:
@@ -15,4 +18,3 @@ blocks:
 
 
       Papyrus strengthens the ecosystem, adding decentralization and redundancy. It enables communication and synchronization among nodes, improving efficiency and sync times.
-month: undefined NaN
