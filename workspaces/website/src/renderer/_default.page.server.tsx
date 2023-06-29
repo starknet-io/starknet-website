@@ -90,6 +90,17 @@ export async function render(pageContext: PageContextServer) {
 
         gtag('config', '${GOOGLE_TAG_ID}');
       </script>
+      <!-- Hotjar Tracking Code for Starknet -->
+      <script>
+          (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:3541762,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
     </head>
     <body>
       <div id="page-view">${stream}</div>
