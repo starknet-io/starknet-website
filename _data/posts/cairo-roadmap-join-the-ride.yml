@@ -12,7 +12,10 @@ blocks:
     blocks:
       - type: markdown
         body: >-
-          ##  
+          #  Time to migrate from Cairo 0!
+
+
+          [](https://medium.com/@starkware?source=post_page-----23f31dcad172--------------------------------)
 
 
           ## TL;DR
