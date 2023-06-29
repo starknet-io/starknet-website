@@ -60,7 +60,6 @@ export default function Navbar({
               <Flex
                 // bg="red"
                 maxW="900px"
-                maxH="none"
                 mx="auto"
                 gap="48px"
                 // display="block"
