@@ -70,8 +70,8 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability state",
       widget: "select",
       options: [
-        "on testnet",
-        "testing now"
+        "On testnet",
+        "Testing now"
       ],
       required: false,
     },
