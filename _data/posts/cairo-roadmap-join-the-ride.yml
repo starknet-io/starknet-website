@@ -1,0 +1,117 @@
+id: c499be1d-95fd-4258-98c1-de69da221959
+post_type: article
+title: "Cairo Roadmap: Join the Ride "
+published_date: 2023-06-29T13:58:13.648Z
+image: /assets/cairo-roadmap-post.jpg
+category: ecosystem
+topic:
+  - cairo
+  - 63d577bc-fbb2-432c-8d43-ce4472c82338
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ##  
+
+
+          ## TL;DR
+
+
+          * Cairo continues to evolve. For the community’s convenience, we’ve created a public board describing the cool features ahead.
+
+          * A new contract syntax will be launched soon along with Starknet alpha v0.12.0, requiring minimal code changes and significantly enriching the smart contract language.
+
+          * With Cairo 1.1.0 on Starknet Mainnet, and v2 arriving to Starknet soon, we have reached an important milestone in the maturity of the language. Between the [docs](https://cairo-lang.org/docs/v1.0/), [book](https://cairo-book.github.io/title-page.html), and the Starknet [discord](https://discord.gg/qypnmzkhbc), you should have enough resources to get going and migrate from Cairo 0.
+
+
+          ## Introduction
+
+
+          Cairo v1 has evolved significantly since its early alpha days, reaching feature parity with Cairo 0, and accumulating new features on top (basic loops are now available, and many more capabilities are underway). Our goal in this post is to shed more light on Cairo’s short-term roadmap:  what is currently being worked on and what developers can expect in the coming weeks and months. In the future, you can stay up to date with the latest developments or plans for the language by tracking the [cairo-roadmap board](https://github.com/orgs/starkware-libs/projects/1/views/1) on Github.
+
+
+          ## Why Cairo?
+
+
+          Alongside the major advances in the high-level language, we think it’s important to emphasize the fundamental benefit of Cairo, and why we think it’s the foundation of future of blockchain scaling. 
+
+
+          From its inception, Cairo was designed with the sole purpose of being the most efficient language for writing provable programs. The architecture of the Cairo VM, as described [in the original paper](https://eprint.iacr.org/2021/1063.pdf), was designed for efficiently generating STARK proofs for Cairo programs execution, making it the ideal foundation for Validity Rollups. Cairo v2, the new rust-like language we have today, is built on these foundations, but designed to serve a wide community of developers, in terms of ergonomics, safety, and ease of learning and writing. The evolution that Cairo went through in the past two years, turned it from a niche low-level language into a high-level developer-friendly language, that provides an edge when it comes to proofs and scaling efficiency.
+
+
+          ## Just Say Cairo
+
+
+          Say “Cairo 1 - compiler version vX.Y.Z” no more. From now on, just say Cairo. Yai! 
+
+
+          With the new Cairo compiler, we’re following the [semantic versioning](https://semver.org/) standard; that is, compiler versions consist of three digits, and a change in the most significant digit denotes breaking changes. With the next Cairo version, we have breaking changes in the smart contract syntax (described later in the post), so the correct thing to do is to bump the version to Cairo v2. To avoid cumbersome notation, we’ll stop saying Cairo 1, and from now on, identify the language’s version with the (only) compiler version. The original language, which could still be used in the future in different contexts outside Starknet, will be referred to as “Cairo 0”.
+
+
+          ![](/assets/screenshot-2023-06-29-at-17.04.49.png)
+
+
+          ## What’s Next for Cairo?
+
+
+          In the following sections, we go over the upcoming major developments in the language, and explain how they affect the developer experience in Cairo.
+
+
+          ### Upcoming Features
+
+
+          While feature parity with Cairo 0 was an important milestone, it is definitely not the final destination. The high-level language can always be improved, and many more features are on the way. You can check out the [roadmap](https://github.com/orgs/starkware-libs/projects/1/views/1) to see features that are being worked on and track the backlog. A few notable mentions are:
+
+
+          * **Components**: the next phase in the new contract syntax, allowing contracts to import components defined in external libraries
+
+          * **Keccak and Secp-k1**: Already included in Cairo v2, these will allow verifying Ethereum signatures on the upcoming version of Starknet.
+
+          * **Signed integers support**
+
+          * **Secp-r1 curve operations**: This will allow using native hardware to sign transactions, which will result in a much simpler UX for interacting with Starknet
+
+          * **Strings**: A native type for (long) strings, allowing standard string manipulation. This is a basic feature, which is also in high demand from NFT and gaming projects.
+
+          * **Iterators**: these will allow us to enrich the loop syntax, and iterate over arrays/spans much more conveniently
+
+
+          ### Cairo v2 - New Contract Syntax
+
+
+          The current syntax of Starknet’s smart contract mostly inherits from the previous Cairo 0 design. This design suffers from a few issues that we would like to address. Our goal in moving to a new syntax is to increase safety by making the contract’s behavior more explicit. By introducing more structure to the contract’s external functions, storage, and events, we can significantly decrease the probability of bugs. This will help protect protocols against potential hacks and loss of funds. In addition, the new syntax allows us to introduce *extensibility*, a feature highly requested by the community, that allows developers to easily use components written in external libraries.
+
+
+          The new syntax requires breaking changes. While we opt to avoid breaking changes as much as possible at this stage, after internal and community discussions we concluded that this is the right path that will pay dividends in the future.
+
+
+          These changes are discussed at length in a [more technical post](https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794/20) that was published in the community forum (refer to it for a comprehensive overview of the upcoming changes). Here we’d only like to emphasize that **only the “outermost layer” of your contract (definition of external functions and events) needs to be modified**. Your existing Cairo v1 code only requires minor adjustments (see the docs for a [quick migration guide](https://docs.starknet.io/documentation/architecture_and_concepts/Cairo_on_Starknet/contract-syntax/)). The benefit of the new syntax, on the other hand, is highly significant: Using components from external libraries (a critical feature when working on large projects) will become mundane, and will no longer require ad-hoc workarounds.
+
+
+          ### Backward Compatibility Guarantee
+
+
+          Some of the upcoming changes described in the post (in particular, the new contract syntax) will mean breaking changes in the language. While, following Cairo v2, the bulk of breaking changes is behind us, committing to backward compatibility from this point onwards is still early. That said, projects developing smart contracts on top of Starknet require stability and careful auditing, and this presents an important consideration for us. To address these concerns, we provide the following guarantees for stability:
+
+
+          1. Any class declared on Starknet will continue to work as before, and will be unaffected by changes in the language
+
+          2. Any contract deployed on Starknet will continue to work as before, and will be unaffected by changes in the language
+
+          3. For every breaking language upgrade, contracts written in the previous version will continue to be declarable on Starknet for a period of at least six months.
+
+
+          For example, if you’re developing your project (or are near deployment / during the audit phase) with Cairo version X, and Cairo Y is released with breaking changes, **contracts written with version X will still be accepted on Starknet for at least six months**. That is, you have a period of at least six months to get your contracts deployed on Starknet, at which point they’re forever protected by points 1 & 2.
+
+
+          ## When Should I Migrate?
+
+
+          With the new contract syntax released (and made available on Starknet in the upcoming v0.12.0), and the bulk of breaking changes behind us, Cairo is now stable and rich enough to support complex applications, and to port existing Cairo 0 logic. Additionally, the backward compatibility guarantees on Starknet ensure that even if there are breaking changes in the language, you will have enough time (at least six months) to finish developing or auditing and deploying your contracts.
+
+
+          ## Summary
+
+
+          Cairo continues to evolve and has reached a point where it greatly bypasses the original language. If you haven’t already, now is the time to get involved. We welcome the developer community to actively participate in the discussions, either directly on the [compiler repo](https://github.com/starkware-libs/cairo) by raising issues, or posting in the [cairo discord channel](https://discord.gg/qypnmzkhbc) or the Starknet [community forum](https://community.starknet.io/latest). Hopefully, this post (alongside its more technical [counterpart](https://docs.google.com/document/d/1qemNmIWYuYyVg0f9J_SO6SqGQVDPOBVt10wXH0rrT_U/edit#)) helped shed some light on expected changes and remove much of the doubt about the future of Cairo.
