@@ -53,7 +53,7 @@ export const roadmapPostsCollectionConfig = {
       options: [
         "No time yet",
         "Q2 2023",
-        "Q3 2023",
+        "July 2023",
         "Q4 2023",
         "Q1 2024",
         "Q2 2024",
@@ -70,8 +70,8 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability state",
       widget: "select",
       options: [
-        "on testnet",
-        "testing now"
+        "On testnet",
+        "Testing now"
       ],
       required: false,
     },
