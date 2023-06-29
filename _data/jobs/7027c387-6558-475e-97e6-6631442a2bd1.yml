@@ -17,3 +17,5 @@ job:
   location: online_remote
 published_at: 2023-06-19T08:22:08.615Z
 archived: false
+archive_after: 2
+

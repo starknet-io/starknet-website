@@ -1,4 +1,5 @@
 import * as path from "path";
+import YAML from "yaml";
 import fs from "fs/promises";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { scandir, yaml } from "./utils";
@@ -42,6 +43,8 @@ export interface RoadmapDetails {
   readonly version: string;
   readonly stage: string;
   readonly availability: string;
+  readonly specific_info?: string;
+  readonly state?: string;
 }
 
 export interface RoadmapPost extends Meta, RoadmapDetails  {
@@ -164,6 +167,8 @@ export async function fileToRoadmapPost(
     title: data.title,
     version: data.version,
     availability: data.availability,
+    specific_info: data.specific_info,
+    state: data.state,
     stage: data.stage,
     blocks: data.blocks ?? [],
     locale,
@@ -546,28 +551,31 @@ export function updateBlocks(pages: PagesData, posts: PostsData) {
 
 export async function updateJobs() {
   const resourceName = "jobs";
-  const filenames = await fs.readdir(`_data/${resourceName}`);
+const filenames = await fs.readdir(`_data/${resourceName}`);
 
-  for (const filename of filenames) {
-    const filepath = path.join("_data", resourceName, filename);
+for (const filename of filenames) {
+  const filepath = path.join("_data", resourceName, filename);
 
-    const data = await yaml(filepath);
-
-    const isOlderThanTwoMonths = (dateString: string) => {
-      const date = new Date(dateString);
-      const today = new Date();
-      today.setMonth(today.getMonth() - 2);
-      return date < today;
-    }
-    const isOlder = isOlderThanTwoMonths(data.published_at);
-    if (isOlder) {
-      try {
-        data.archived = true;
-      } catch (err) {
-        console.error(err);
-      }
+  const data = await yaml(filepath);
+  const isOlderThanTwoMonths = (dateString: string) => {
+    const date = new Date(dateString);
+    const today = new Date();
+    today.setMonth(today.getMonth() - data.archive_after);
+    return date < today;
+  }
+  const isOlder = isOlderThanTwoMonths(data.published_at);
+  if (isOlder) {
+    try {
+      data.archived = true;
+      await fs.writeFile(filepath, YAML.stringify(data), {
+        encoding: "utf8",
+      });
+    } catch (err) {
+      console.error(err);
     }
   }
+  
+}
 }
 
 export function handleLink(

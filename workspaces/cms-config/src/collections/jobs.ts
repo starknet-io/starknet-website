@@ -10,23 +10,44 @@ export const jobsCollectionConfig = {
   create: true,
   format: "yml",
   summary: "{{job.title}}",
-  view_filters: [
-    {
-      field: 'archived', 
-      label: 'Active',
-      pattern: 'false'
-    },
-    {
-      field: 'archived', 
-      label: 'Archived',
-      pattern: 'true'
-    }
-  ],
   fields: [
     {
       name: "id",
       label: "id",
       widget: "uuid",
+    },
+    {
+      label: "Published at",
+      name: "published_at",
+      widget: "datetime",
+    },
+    {
+      label: "Archived",
+      name: "archived",
+      hint: "If set to false, update the 'Published at' date to be not older that the value from 'Archive after' field",
+      widget: "boolean",
+      required: false,
+    },
+    {
+      label: "Archive after",
+      name: "archive_after",
+      widget: "select",
+      options: [
+        {
+          label: "1 month",
+          value: 1,
+        },
+        {
+          label: "2 months",
+          value: 2,
+        },
+        {
+          label: "3 months",
+          value: 3,
+        },
+      ],
+      default: "2 months",
+      crowdin: false
     },
     {
       name: "contact",
@@ -173,20 +194,6 @@ export const jobsCollectionConfig = {
           crowdin: false
         },
       ],
-    },
-    {
-      label: "Published at",
-      name: "published_at",
-      widget: "datetime",
-    },
-    {
-      label: "Archived",
-      name: "archived",
-      widget: "boolean",
-      required: false,
-      search_fields: ["name"],
-      value_field: "id",
-      display_fields: ["name"],
-    },
+    }
   ],
 } satisfies CmsCollection;

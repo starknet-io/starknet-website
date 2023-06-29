@@ -309,6 +309,7 @@ export type JobsHit = {
   job?: Job; // job can be undefined in live preview
   published_at?: string;
   archived?: string;
+  archive_after: string;
 };
 
 function CustomHits() {
