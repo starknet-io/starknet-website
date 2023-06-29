@@ -7,7 +7,7 @@ video:
   id: uW2tTR53J7o
   data:
     kind: youtube#video
-    etag: W6EkWpmnl1WWPrDFDGbDLvewDOM
+    etag: 5IZnKD2WS9LIaNUe3FvX9V21-dk
     id: uW2tTR53J7o
     snippet:
       publishedAt: 2023-04-05T04:33:15Z
@@ -50,6 +50,14 @@ video:
           pay attention to when creating a new language, and which special
           features it has.
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H15M25S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/stark-at-home-cairo-1.0-2.jpg
 category: stark-math
 topic:

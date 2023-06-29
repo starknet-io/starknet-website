@@ -1,0 +1,20 @@
+month: undefined NaN
+id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b433
+title: Rust-based local state management using Papyrus
+availability: July 2023
+state: Testing now
+specific_info: (est. mid July 2023)
+version: 69ee8aba-95ec-4da9-9348-b8debe034a1a
+stage: building-now
+blocks:
+  - type: markdown
+    body: >-
+      Papyrus, an open-source Rust implementation of a Starknet full node,
+      revolutionizes local state management. It enhances performance and
+      decentralization, paving the way for mass adoption of Starknet.
+
+
+      In the upcoming 0.12.0 release, Papyrus will be integrated into Starknet's infrastructure. With efficient and reliable local storage mechanisms, Papyrus surpasses previous implementations. It optimizes the Sequencer by utilizing a local database and a flat key/value storage structure, eliminating the need for complex paths.
+
+
+      Papyrus strengthens the ecosystem, adding decentralization and redundancy. It enables communication and synchronization among nodes, improving efficiency and sync times.

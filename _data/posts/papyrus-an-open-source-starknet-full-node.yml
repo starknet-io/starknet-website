@@ -2,9 +2,7 @@ id: papyrus_an_open_source_starknet_full_node
 post_type: article
 title: "Papyrus: An open-source Starknet full node"
 published_date: 2023-01-11T01:00:00.000Z
-time_to_consume: 3 min read
-video_link: ""
-image: /assets/blog2.webp
+image: /assets/papyrus-an-open-source-starknet-full-node.png
 category: engineering
 topic:
   - decentralization
@@ -56,3 +54,4 @@ blocks:
       Papyrus is being open sourced now, pending full release for public use within a few months. In addition to working on full compatibility with the [JSON-RPC spec](https://github.com/starkware-libs/starknet-specs/blob/master/api/starknet_api_openrpc.json), the Papyrus team, alongside Pathfinder and Juno, will work to form the foundation of the [StarkNet P2P layer](https://github.com/starknet-io/starknet-p2p-specs). Having different nodes being able to communicate and sync through the P2P layer is a big leap towards a decentralized StarkNet. Furthermore, the ability to sync from peers (as opposed to the situation today where each node communicates with a centralized API) should drastically improve sync time.
 
       To summarize, Papyrus is the third full node to join the StarkNet ecosystem. It is released under an open source license (Apache 2.0) and will form a crucial part of the infrastructure of the decentralized StarkNet.
+video_link: ""

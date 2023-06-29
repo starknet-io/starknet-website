@@ -17,9 +17,11 @@ items:
                 custom_title: Documentation
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
+              - custom_internal_link: /roadmap/
+                custom_title: Roadmap
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
-              - custom_title: Engineering blog
-                custom_internal_link: /posts/engineering
+              - custom_title: Developers blog
+                custom_internal_link: /posts/developers
   - title: Ecosystem
     columns:
       - blocks:
@@ -29,6 +31,10 @@ items:
               - page: d202009a-3541-4366-b664-36ef2e492aa3
               - page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
               - page: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
+              - page: 9308fd57-e090-4ca9-9581-d9aeb8a3187c
+              - custom_title: Security & audits
+                custom_internal_link: ""
+                page: af68f1f8-b2a3-49e2-bec0-f36165cc331f
   - title: Community
     columns:
       - blocks:
@@ -41,29 +47,48 @@ items:
               - custom_internal_link: /events
                 custom_title: Events
               - custom_internal_link: /jobs
-                custom_title: Jobs
+                custom_title: Ecosystem jobs
               - page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
                 custom_title: Governance
+              - custom_internal_link: ""
+                custom_title: Ambassador program
+                page: e7d4deb8-4f81-434a-9692-27292454f939
               - custom_title: Community forum
                 custom_external_link: https://community.starknet.io/
               - page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
                 custom_title: Online communities
-      - blocks:
-          - title: BLOG & MEDIA
+          - title: SOCIAL
             items:
-              - custom_title: All blog posts
-                custom_internal_link: /posts/
-              - custom_title: Community & Events
+              - custom_title: YouTube
+                custom_icon: SiYoutube
+                custom_internal_link: https://www.youtube.com/@starkware_ltd
+              - custom_title: Discord
+                custom_icon: SiDiscord
+                custom_external_link: https://starknet.io/discord
+              - custom_title: GitHub
+                custom_icon: SiGithub
+                custom_external_link: https://github.com/starknet-io/starknet-website
+              - custom_title: Twitter
+                custom_icon: SiTwitter
+                custom_internal_link: https://twitter.com/Starknet
+  - title: Resources
+    columns:
+      - blocks:
+          - title: All blog posts
+            items:
+              - custom_internal_link: /posts/
+                custom_title: All blog posts
+              - custom_title: Community & events
                 custom_internal_link: /posts/community-and-events
                 hide_from_footer: true
-              - custom_title: Community Calls
+              - custom_title: Community calls
                 custom_internal_link: /posts/community-calls
                 hide_from_footer: true
               - custom_title: Ecosystem
-                custom_internal_link: /posts/ecosystem
                 hide_from_footer: true
-              - custom_title: Engineering
-                custom_internal_link: /posts/engineering
+                custom_internal_link: /posts/ecosystem
+              - custom_title: Developers
+                custom_internal_link: /posts/developers
                 hide_from_footer: true
               - custom_title: Foundation
                 custom_internal_link: /posts/foundation
@@ -71,33 +96,18 @@ items:
               - custom_title: Governance
                 custom_internal_link: /posts/governance
                 hide_from_footer: true
-              - custom_title: Stark Math
+              - custom_title: Stark math
                 custom_internal_link: /posts/stark-math
                 hide_from_footer: true
-              - custom_title: Stark Struck
+              - custom_title: STARK Struck Podcast
                 custom_internal_link: /posts/stark-struck
                 hide_from_footer: true
       - blocks:
           - title: OTHER
             items:
-              - page: 9ef815e0-d670-404f-a97d-c5aebfe80a12
-              - page: 575c22e7-477f-4a7e-9b90-7406b802176f
+              - custom_title: Media kit
+                page: 575c22e7-477f-4a7e-9b90-7406b802176f
               - custom_title: Starknet EDU newsletter
                 custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet roundup newsletter
-                custom_external_link: https://swagtimus.substack.com/
-          - title: SOCIAL
-            items:
-              - custom_title: youtube
-                custom_icon: SiYoutube
-                custom_external_link: https://www.youtube.com/@starkware_ltd
-              - custom_title: Discord
-                custom_icon: SiDiscord
-                custom_external_link: https://starknet.io/discord
-              - custom_icon: SiGithub
-                custom_title: Github
-                custom_external_link: https://github.com/starknet-io/starknet-website
-              - custom_internal_link: ""
-                custom_icon: SiTwitter
-                custom_title: Twitter
-                custom_external_link: https://twitter.com/@Starknet_edu
+                custom_external_link: https://starknetroundup.substack.com/

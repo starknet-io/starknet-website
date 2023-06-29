@@ -2,7 +2,6 @@ id: e9553909-28a6-4a05-a2eb-c87435c7abc2
 post_type: video
 title: Starknet House weekly session 1
 published_date: 2022-06-10T15:58:53.559Z
-time_to_consume: 67 min watch
 image: /assets/sn_house02.jpg
 category: ecosystem
 topic:
@@ -14,7 +13,7 @@ video:
   id: Vv1WTwWylp0
   data:
     kind: youtube#video
-    etag: JcEOE4hrlgn9k2Br-LGGW0KEqOg
+    etag: GifCHOSI-GOML3hIE28PIkiLBn0
     id: Vv1WTwWylp0
     snippet:
       publishedAt: 2022-06-10T16:28:36Z
@@ -87,3 +86,11 @@ video:
 
           Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT1H6M30S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

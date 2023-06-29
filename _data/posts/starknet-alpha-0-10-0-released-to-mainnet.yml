@@ -1,15 +1,14 @@
 id: 4c4bca42-bd3d-43dc-9a3f-515bda8d0b44
 post_type: article
-title: "StarkNet Alpha 0.10.0: Released to Mainnet!"
+title: "Starknet Alpha 0.10.0: Released to Mainnet!"
 published_date: 2022-09-05T17:13:30.055Z
-time_to_consume: 3 min read
 image: /assets/1_isdu6pzjsdnkp2ovk6-6ma-2.png
 category: engineering
 topic:
   - starknet
   - 4e28457a-74a1-4570-88ec-6ef5817be14f
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
-short_desc: We are excited to present StarkNet Alpha 0.10.0. This version is
+short_desc: We are excited to present Starknet Alpha 0.10.0. This version is
   another step toward scaling Ethereum without compromising on security and
   decentralization.
 blocks:
@@ -40,7 +39,7 @@ blocks:
       ### Intro
 
 
-      We are excited to present StarkNet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
+      We are excited to present Starknet Alpha 0.10.0. This version is another step toward scaling Ethereum without compromising on security and decentralization.
 
 
       This blog post briefly describes the main features of this version. For the full list of changes, check the [release notes](https://github.com/starkware-libs/cairo-lang/releases). For more detailed information, check the [documentation](https://docs.starknet.io/).
@@ -49,7 +48,7 @@ blocks:
       ### Account Abstraction Changes
 
 
-      We move forward with[ StarkNet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
+      We move forward with[ Starknet’s account abstraction](https://community.starknet.io/t/starknet-account-abstraction-model-part-1/781). This version introduces changes inspired by [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337).
 
 
       #### Validate/Execute Separation
@@ -76,7 +75,7 @@ blocks:
       To allow backward-compatibility, we will introduce those two changes via a new transaction version — [v1](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C). Those changes will only apply to the new version, and older accounts will still be able to execute version 0 transactions.
 
 
-      Note — transaction v0 is now deprecated and will be removed in StarkNet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
+      Note — transaction v0 is now deprecated and will be removed in Starknet Alpha v0.11.0. Please make sure you upgrade to use the new transaction version.
 
 
       For more detailed information about the transaction version, please read the [documentation](https://docs.starknet.io/docs/Blocks/transactions/#invoke-transaction-version-1%5C).
@@ -93,7 +92,7 @@ blocks:
       * [Declare transaction](https://docs.starknet.io/docs/Blocks/transactions#declare-transaction)
 
 
-      These fees will not be mandatory in this version and will only be enforced starting StarkNet Alpha v0.11.0.
+      These fees will not be mandatory in this version and will only be enforced starting Starknet Alpha v0.11.0.
 
 
       #### Cairo Syntax Changes
@@ -118,11 +117,11 @@ blocks:
       ### How Can I Be More Engaged?
 
 
-      * Go to [starknet.io](https://starknet.io/) for all StarkNet information, documentation, tutorials, and updates.
+      * Go to [starknet.io](https://starknet.io/) for all Starknet information, documentation, tutorials, and updates.
 
-      * Join [StarkNet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
+      * Join [Starknet Discord](http://starknet.io/discord) for dev support, ecosystem announcements, and becoming a part of the community.
 
-      * Visit the [StarkNet Forum](http://community.starknet.io/) to stay up to date and participate in StarkNet research discussions.
+      * Visit the [Starknet Forum](http://community.starknet.io/) to stay up to date and participate in Starknet research discussions.
 
 
       We are always happy to receive feedback on our [documentation](https://docs.starknet.io/)!

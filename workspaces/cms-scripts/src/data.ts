@@ -1,12 +1,15 @@
-import * as path from "node:path";
+import * as path from "path";
+import fs from "fs/promises";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
 import { gitlog } from "./git";
 import { getUnixTime, isValid, parseISO } from "date-fns";
-import { slugify } from "@starknet-io/cms-utils/src/index";
+import {
+  slugify,
+  convertStringTagsToArray,
+} from "@starknet-io/cms-utils/src/index";
 import { translateFile } from "./crowdin";
-
 export interface Meta {
   readonly gitlog?: DefaultLogFields | undefined | null;
   readonly sourceFilepath: string;
@@ -24,11 +27,74 @@ export interface Post extends Meta {
   readonly short_desc: string;
   readonly post_type: string;
   readonly post_date: string;
-  readonly time_to_consume: string;
   readonly published_date: string;
   readonly toc: boolean;
   readonly video: any;
+  readonly featured_post: boolean;
+  readonly timeToConsume: string;
   blocks: readonly any[];
+}
+
+export interface RoadmapDetails {
+  readonly id: string;
+  readonly slug: string;
+  readonly title: string;
+  readonly version: string;
+  readonly stage: string;
+  readonly availability: string;
+  readonly specific_info?: string;
+  readonly state?: string;
+}
+
+export interface RoadmapPost extends Meta, RoadmapDetails  {
+  blocks: readonly any[];
+}
+
+export interface AnnouncementDetails {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  badge: string;
+}
+
+export interface AnnouncementsPost extends Meta, AnnouncementDetails {
+  blocks: readonly any[];
+}
+
+function calculateReadingTime(text: string): string {
+  const wordsPerMinute = 200;
+  const wordsPerImage = 12;
+  const words = text.trim().split(/\s+/).length;
+  const imageCount = (text.match(/!\[\]/g) || []).length;
+  const wordsWithImages = words + imageCount * wordsPerImage;
+  const decimalMinutes = wordsWithImages / wordsPerMinute;
+
+  const minutes = Math.ceil(decimalMinutes); // zaokruživanje na višu minutu
+  return `${minutes} min`;
+}
+
+function concatenateBodies(blocks: readonly any[]): string {
+  let fullText = "";
+  blocks?.forEach((block) => {
+    if (block.body) {
+      fullText += block.body;
+    }
+  });
+  return fullText;
+}
+
+function formatDuration(duration: string): string {
+  const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+  if (!match) {
+    return "";
+  }
+  const hours = parseInt(match[1]) || 0;
+  const minutes = parseInt(match[2]) || 0;
+  const totalMinutes = hours * 60 + minutes;
+  const formattedMinutes = totalMinutes > 0 ? `${totalMinutes} min` : "";
+  return formattedMinutes.trim();
 }
 
 export async function fileToPost(
@@ -38,11 +104,25 @@ export async function fileToPost(
   const resourceName = "posts";
 
   const sourceFilepath = path.join("_data", resourceName, filename);
+  const blogPostsSourceFilepath = path.join(
+    "_data",
+    "settings",
+    "blog-posts.yml"
+  );
   const sourceData = await yaml(sourceFilepath);
-
+  const blogPosts = await yaml(blogPostsSourceFilepath);
   const data = await translateFile(locale, resourceName, filename);
-
   const slug = slugify(sourceData.title);
+
+  const fullText = concatenateBodies(data.blocks);
+  let timeToConsume;
+  if (data.post_type === "video") {
+    timeToConsume = `${formatDuration(
+      data.video?.data?.contentDetails?.duration || ""
+    )} ${data.video?.data?.contentDetails?.duration ? "watch" : ""}`;
+  } else {
+    timeToConsume = `${calculateReadingTime(fullText)} read`;
+  }
 
   return {
     id: data.id,
@@ -52,12 +132,69 @@ export async function fileToPost(
     post_type: data.post_type,
     post_date: data.post_date,
     published_date: data.published_date,
-    time_to_consume: data.time_to_consume,
     toc: data.toc,
     video: data.video,
     topic: data.topic ?? [],
     short_desc: data.short_desc,
     image: data.image,
+    blocks: data.blocks ?? [],
+    locale,
+    objectID: `${resourceName}:${locale}:${filename}`,
+    sourceFilepath,
+    gitlog: await gitlog(sourceFilepath),
+    featured_post:
+      blogPosts.show_custom_featured_post &&
+      blogPosts.custom_featured_post === data.id,
+    timeToConsume,
+  };
+}
+
+export async function fileToRoadmapPost(
+  locale: string,
+  filename: string
+): Promise<RoadmapPost> {
+  const resourceName = "roadmap-posts";
+
+  const sourceFilepath = path.join("_data", resourceName, filename);
+  const sourceData = await yaml(sourceFilepath);
+  const data = await translateFile(locale, resourceName, filename);
+  const slug = slugify(sourceData.title);
+
+  return {
+    slug,
+    id: data.id,
+    title: data.title,
+    version: data.version,
+    availability: data.availability,
+    specific_info: data.specific_info,
+    state: data.state,
+    stage: data.stage,
+    blocks: data.blocks ?? [],
+    locale,
+    objectID: `${resourceName}:${locale}:${filename}`,
+    sourceFilepath,
+    gitlog: await gitlog(sourceFilepath),
+  };
+}
+
+export async function fileToAnnouncementsPost(
+  locale: string,
+  filename: string
+): Promise<AnnouncementsPost> {
+  const resourceName = "announcements";
+
+  const sourceFilepath = path.join("_data", resourceName, filename);
+  const sourceData = await yaml(sourceFilepath);
+  const data = await translateFile(locale, resourceName, filename);
+  const slug = slugify(sourceData.title);
+
+  return {
+    slug,
+    id: data.id,
+    title: data.title,
+    description: data.description,
+    image: data.image,
+    badge: data.badge,
     blocks: data.blocks ?? [],
     locale,
     objectID: `${resourceName}:${locale}:${filename}`,
@@ -181,6 +318,18 @@ interface PostsData extends SimpleData<Post> {
   readonly idMap: Map<string, Post>;
 }
 
+interface RoadmapPostsData extends SimpleData<RoadmapPost> {
+  readonly idMap: Map<string, RoadmapPost>;
+}
+
+interface RoadmapDetailsData extends SimpleData<RoadmapDetails> {
+  readonly idMap: Map<string, RoadmapDetails>;
+}
+
+interface AnnouncementsPostsData extends SimpleData<AnnouncementsPost> {
+  readonly idMap: Map<string, AnnouncementsPost>;
+}
+
 export async function getPosts(): Promise<PostsData> {
   const resourceName = "posts";
   const filenameMap = new Map<string, Post>();
@@ -199,12 +348,89 @@ export async function getPosts(): Promise<PostsData> {
   return { filenameMap, filenames, idMap, resourceName };
 }
 
+export async function getRoadmapPosts(): Promise<RoadmapPostsData> {
+  const resourceName = "roadmap-posts";
+  const filenameMap = new Map<string, RoadmapPost>();
+  const idMap = new Map<string, RoadmapPost>();
+  const filenames = await scandir(`_data/${resourceName}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = await fileToRoadmapPost(locale, filename);
+
+      idMap.set(`${locale}:${data.id}`, data);
+      filenameMap.set(`${locale}:${filename}`, data);
+    }
+  }
+
+  return { filenameMap, filenames, idMap, resourceName };
+}
+
+// export async function getRoadmapDetails(): Promise<RoadmapDetailsData> {
+//   const roadmapPosts: RoadmapPost[] = [];
+//   const filesPath = path.join(process.cwd(), "../../public/data/roadmap-posts", locale)
+//   const filesInDir = await scandir(filesPath);
+
+//   const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
+
+//   for (const fileName of jsonFilesInDir) {
+//     const fileData = await fs.readFile(
+//       path.join(
+//         process.cwd(),
+//         "../../public/data/roadmap-posts",
+//         locale,
+//         fileName
+//       ),
+//       "utf8"
+//     );
+//     const jsonData = JSON.parse(fileData.toString());
+//     roadmapPosts.push(jsonData);
+//   }
+
+//   return roadmapPosts;
+
+// }
+// export async function getRoadmapDetails(): Promise<RoadmapDetailsData> {
+//   const resourceName = "roadmap-posts";
+//   const filenameMap = new Map<string, RoadmapDetails>();
+//   const idMap = new Map<string, RoadmapDetails>();
+//   const filenames = await scandir(`_data/${resourceName}`);
+
+//   for (const locale of locales) {
+//     for (const filename of filenames) {
+//       const {blocks, gitlog, ...data} = await fileToRoadmapPost(locale, filename);
+
+//       idMap.set(`${locale}:${data.id}`, data);
+//       filenameMap.set(`${locale}:${filename}`, data);
+//     }
+//   }
+
+//   return { filenameMap, filenames, idMap, resourceName };
+// }
+
+export async function getAnnouncements(): Promise<AnnouncementsPostsData> {
+  const resourceName = "announcements";
+  const filenameMap = new Map<string, AnnouncementsPost>();
+  const idMap = new Map<string, AnnouncementsPost>();
+  const filenames = await scandir(`_data/${resourceName}`);
+
+  for (const locale of locales) {
+    for (const filename of filenames) {
+      const data = await fileToAnnouncementsPost(locale, filename);
+
+      idMap.set(`${locale}:${data.id}`, data);
+      filenameMap.set(`${locale}:${filename}`, data);
+    }
+  }
+
+  return { filenameMap, filenames, idMap, resourceName };
+}
+
 export async function getTutorials(): Promise<SimpleData<Meta>> {
   const resourceData = await getSimpleData("tutorials");
-
   resourceData.filenameMap.forEach((data: any) => {
     if (typeof data.tags === "string") {
-      data.tags = data.tags.replace(/,\s*$/, "").split(",").map((t: string) => t.trim());
+      data.tags = convertStringTagsToArray(data.tags);
     }
   });
 
@@ -251,7 +477,7 @@ export async function getSimpleData<T = {}>(
         slug,
         locale: locale,
         objectID: `${resourceName}:${locale}:${filename}`,
-        sourceFilepath,
+        sourceFilepath
       });
     }
   }
@@ -266,12 +492,15 @@ export interface ItemsFile<T = {}> {
 interface SimpleFiles<T> {
   readonly localeMap: Map<string, T>;
   readonly resourceName: string;
+  readonly collectionName: string;
+  readonly writeRootData?: boolean;
 }
 
 export async function getSimpleFiles<T = ItemsFile>(
-  resourceName: string
+  collectionName: string,
+  resourceName: string,
+  writeRootData?: boolean
 ): Promise<SimpleFiles<T & Meta>> {
-  const collectionName = "settings";
   const filename = `${resourceName}.yml`;
 
   const localeMap = new Map<string, T & Meta>();
@@ -280,16 +509,15 @@ export async function getSimpleFiles<T = ItemsFile>(
     const sourceFilepath = path.join("_data", collectionName, filename);
 
     const data = await translateFile(locale, collectionName, filename);
-
     localeMap.set(locale, {
       ...data,
       locale: locale,
-      objectID: `${resourceName}:${locale}`,
+      objectID: `${collectionName}:${resourceName}:${locale}`,
       sourceFilepath,
     });
   }
 
-  return { localeMap, resourceName };
+  return { localeMap, resourceName, collectionName, writeRootData };
 }
 
 export function updateBlocks(pages: PagesData, posts: PostsData) {
@@ -318,6 +546,33 @@ export function updateBlocks(pages: PagesData, posts: PostsData) {
       data.blocks = handleBlocks(data.locale, data.blocks);
     }
   }
+}
+
+export async function updateJobs() {
+  const resourceName = "jobs";
+const filenames = await fs.readdir(`_data/${resourceName}`);
+
+for (const filename of filenames) {
+  const filepath = path.join("_data", resourceName, filename);
+
+  const data = await yaml(filepath);
+
+  const isOlderThanTwoMonths = (dateString: string) => {
+    const date = new Date(dateString);
+    const today = new Date();
+    today.setMonth(today.getMonth() - 2);
+    return date < today;
+  }
+  const isOlder = isOlderThanTwoMonths(data.published_at);
+  if (isOlder) {
+    try {
+      await fs.unlink(filepath);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  
+}
 }
 
 export function handleLink(

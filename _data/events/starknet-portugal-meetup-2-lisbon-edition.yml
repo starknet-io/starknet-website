@@ -1,0 +1,21 @@
+type: community_event
+name: "Starknet Portugal Meetup #2 (Lisbon edition)"
+description: We are back again, this time in Lisbon! After the success of the
+  first edition in Porto, on the 15th of March, Lisbon felt like the obvious
+  place for a new round, with ETHGlobal Lisbon right around the corner.  So come
+  and join us on Tuesday, May 9th 2023 between 18:30 and 21:00 GMT for the 2nd
+  edition of the Starknet Meetup in Portugal to talk about ZK-Rollups, Starknet
+  news, current projects that are being built and all kinds of coolness.
+url: https://www.meetup.com/starknet-portugal/events/293197894/
+start_date: 2023-05-09T15:30:42.070Z
+end_date: 2023-05-09T18:00:42.077Z
+month: May 2023
+show_in_past_events: true
+image: /assets/600_512438412.jpeg
+location: europe
+city: "Lisbon "
+country: "Portugal "
+tags:
+  - crypto
+  - blockchain
+  - starknet

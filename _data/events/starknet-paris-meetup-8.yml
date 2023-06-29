@@ -8,6 +8,8 @@ description: Nearly 300 of you registered for our last meetup at the Crowne
 url: https://www.meetup.com/fr-FR/starknet-paris/events/292808856/
 start_date: 2023-04-27T15:15:40.650Z
 end_date: 2023-04-27T19:00:40.659Z
+month: April 2023
+show_in_past_events: true
 image: /assets/600_509604259.webp
 location: europe
 city: "Paris "

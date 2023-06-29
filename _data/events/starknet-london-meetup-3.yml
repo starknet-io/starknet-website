@@ -6,6 +6,8 @@ description: The third Starknet London meetup - co-hosted by Argent and
 url: https://www.meetup.com/starknet-london/events/292993792?response=3&action=rsvp&utm_medium=email&utm_source=braze_canvas&utm_campaign=mmrk_alleng_event_announcement_prod_v7_en&utm_term=promo&utm_content=lp_meetup
 start_date: 2023-04-24T15:30:09.201Z
 end_date: 2023-04-24T18:30:09.209Z
+month: April 2023
+show_in_past_events: false
 image: /assets/600_511316115.webp
 location: europe
 city: "London "

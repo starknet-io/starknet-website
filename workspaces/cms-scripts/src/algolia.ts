@@ -1,4 +1,4 @@
-import * as path from "node:path";
+import * as path from "path";
 
 process.chdir(path.resolve(__dirname, "../../.."));
 

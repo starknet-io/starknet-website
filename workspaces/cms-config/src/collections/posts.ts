@@ -7,12 +7,55 @@ export const postsCollectionConfig = {
   label: "Blog - Posts",
   label_singular: "Post",
   identifier_field: "id",
-  folder: '_data/posts',
+  folder: "_data/posts",
   create: true,
   format: "yml",
   slug: "{{title}}",
-  summary: "{{title}}",
+  preview_path: "/preview/posts/{{id}}",
+  summary: "{{title}} [{{published_date | date('YYYY-MM-DD')}}]",
   sortable_fields: ["published_date", "title"],
+  view_filters: [
+    {
+      field: 'category', 
+      label: 'Community and Events',
+      pattern: 'community-and-events'
+    },
+    {
+      field: 'category', 
+      label: 'Community Calls',
+      pattern: 'community-calls'
+    },
+    {
+      field: 'category', 
+      label: 'Ecosystem',
+      pattern: 'ecosystem'
+    },
+    {
+      field: 'category', 
+      label: 'Developers',
+      pattern: 'engineering'
+    },
+    {
+      field: 'category', 
+      label: 'Foundation',
+      pattern: '757155c6-ce07-49f1-af21-907b7e0b1cb1'
+    },
+    {
+      field: 'category', 
+      label: 'Governance',
+      pattern: 'governance'
+    },
+    {
+      field: 'category', 
+      label: 'Stark Math',
+      pattern: 'stark-math'
+    },
+    {
+      field: 'category', 
+      label: 'STARK Struck Podcast',
+      pattern: 'stark-struck'
+    },
+  ],
   fields: [
     {
       name: "id",
@@ -56,12 +99,6 @@ export const postsCollectionConfig = {
       widget: "datetime",
     },
     {
-      name: "time_to_consume",
-      label: "Time to read / watch / listen (in minutes)",
-      widget: "string",
-      crowdin: true
-    },
-    {
       name: "video",
       label: "Video - youtube link",
       widget: "youtube",
@@ -101,6 +138,6 @@ export const postsCollectionConfig = {
       label: "Blocks",
       widget: "list",
       types: topLevelBlocks,
-    },
+    }
   ],
 } satisfies CmsCollection;

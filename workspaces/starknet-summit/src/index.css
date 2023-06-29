@@ -1,0 +1,240 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100% !important;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #080836;
+  background-image: url("./assets/desktop-bg-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center top -20px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border: 1px solid transparent;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ff6450;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  height: 48px;
+  left: 0px;
+  top: 117px;
+  border-radius: 4px;
+  padding: 12px 24px 12px 24px;
+}
+
+.logo-container img {
+  width:177px;
+height:39.98px;
+}
+
+label {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 48px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0px 0px 0px 16px;
+  background: white;
+  color: black;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 16px;
+  border: 1px solid #cccccc;
+}
+
+input::placeholder {
+  color: #858585;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #EFEFEF;
+    background-color: #080836;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #FF6450;
+    color:white;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 80px 0 220px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium-text {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.divider {
+  width: 320px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 40px 0;
+}
+
+form {
+  max-width: 378px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+form buttom {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    background-image: url("./assets/mobile-tablet-bg-1.jpg");
+    background-position: center top -24px;
+  }
+  .container {
+    padding: 60px 15px 60px 15px;
+    width: calc(100% - 30px);
+  }
+  .footer-container {
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  min-height: calc(
+    100vh - 40px
+  ); /* 40px is the sum of header and footer vertical padding */
+}
+
+.footer {
+  /* position: fixed; */
+  bottom: 0;
+  background-color: transparent;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: transparent;
+  padding: 20px 32px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  /* display:none; */
+
+}
+
+.header-container,
+.footer-container {
+  max-width: 1440px;
+  justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    display:none
+  }
+    .social.footer {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    display: none
+  }
+}
+
+.footer-container {
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 0px;
+  margin-left:0px;
+}
+
+.header {
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+}
+
+
+/* summit23.starknet.io */

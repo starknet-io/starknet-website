@@ -1,7 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 
 export interface Bridge {
   readonly name: string;
@@ -12,21 +10,14 @@ export interface Bridge {
   readonly description: string;
 }
 
-export async function getBridges(locale: string): Promise<readonly Bridge[]> {
+export async function getBridges(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<readonly Bridge[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/bridges",
-                value + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/bridges/" + value, event)
       )
     );
   } catch (cause) {

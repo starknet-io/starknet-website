@@ -38,7 +38,7 @@ jobs:
         run: yarn
 
       - name: Build storybook
-        run: yarn exec storybook build
+        run: yarn workspace @starknet-io/storybook build-storybook
 
       - name: Deploy storybook
         uses: cloudflare/pages-action@1
@@ -46,6 +46,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: starknet-storybook
-          directory: storybook-static
+          directory: workspaces/storybook/storybook-static
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref_name }}

@@ -51,6 +51,162 @@ export const linkFields = [
   },
 ] satisfies CmsField[];
 
+export const cardListItem = [
+  {
+    label: "Title",
+    name: "title",
+    widget: "string",
+    crowdin: true,
+  },
+  {
+    label: "Description",
+    name: "description",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "Link url",
+    name: "link_url",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "Image",
+    required: false,
+    name: "image",
+    widget: "image",
+    crowdin: false,
+  },
+  {
+    label: "Website url",
+    name: "website_url",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Start date time",
+    name: "start_date_time",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Location",
+    name: "location",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Tags (separate by comma)",
+    name: "tags",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "City",
+    name: "city",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Country",
+    name: "country",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Venue",
+    name: "venue",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Discord handle",
+    name: "discordHandle",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Type list",
+    name: "type_list",
+    required: false,
+    widget: "list",
+    fields: [
+      {
+        label: "Type",
+        name: "type",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        label: "Url",
+        name: "url",
+        widget: "string",
+        crowdin: false,
+      }
+    ],
+  },
+  {
+    label: "Type (separate by comma)",
+    name: "type",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Is image rounded",
+    name: "is_rounded",
+    required: false,
+    widget: "boolean",
+    index_file: "",
+    meta: false
+  },
+  {
+    label: "Recap",
+    name: "recap",
+    required: false,
+    widget: "list",
+    fields: [
+      {
+        label: "Label",
+        name: "label",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        label: "Link",
+        name: "link",
+        widget: "string",
+        crowdin: false,
+      },
+      {
+        label: "Is external link",
+        name: "isExternal",
+        widget: "boolean",
+        crowdin: false,
+      }
+    ],
+    index_file: "",
+    meta: false
+  },
+] satisfies CmsField[];
+
 export const blocks = [
   {
     name: "markdown",
@@ -234,38 +390,42 @@ export const blocks = [
     ],
   },
   {
-    name: "icon_link_card",
-    label: "Icon link card",
-    widget: "object",
-    fields: [
-      {
-        name: "title",
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "link",
-        widget: "object",
-        fields: linkFields,
-      },
-      {
-        name: "icon",
-        widget: "image",
-      },
-      {
-        name: "color",
-        widget: "select",
-        required: false,
-        options: ["orange", "blue", "green", "yellow"],
-        default: "orange",
-      },
-    ],
-  },
-  {
     name: "image_icon_link_card",
     label: "Image Icon link card",
     widget: "object",
     fields: [
+      {
+        name: "variant",
+        label: "Variant (Image icon link card by default)",
+        widget: "select",
+        default: "image_icon_link_card",
+        required: false,
+        options: [
+          { label: "Image icon link card", value: "image_icon_link_card" },
+          { label: "Icon link card", value: "icon_link_card" },
+          { label: "Dapp", value: "dapp" },
+          { label: "Large card", value: "large_card" },
+          { label: "Community card", value: "community_card" }
+        ],
+      },
+      {
+        name: "size",
+        label: "Size (Large by default)",
+        widget: "select",
+        default: "large",
+        required: false,
+        options: [
+          { label: "Large", value: "large" },
+          { label: "Small", value: "small" }
+        ],
+      },
+      {
+        label: "Background illustration (hidden by default)",
+        name: "withIllustration",
+        widget: "boolean",
+        default: false,
+        required: false,
+      },
       {
         name: "title",
         widget: "string",
@@ -283,7 +443,7 @@ export const blocks = [
       },
       {
         name: "icon",
-        widget: "image",
+        widget: "image"
       },
       {
         name: "color",
@@ -297,10 +457,65 @@ export const blocks = [
           "cyan",
           "orange",
           "pink",
+          "grey"
         ],
         default: "orange",
       },
+      {
+        name: "columns",
+        label: "Columns (number of cards per row, works only for icon_link_card)",
+        widget: "select",
+        default: "4",
+        required: false,
+        options: ["2", "4"],
+      },
+      {
+        name: "orientation",
+        label: "Orientation (for large cards only)",
+        widget: "select",
+        default: "left",
+        required: false,
+        options: ["left", "right"],
+      }
     ],
+  },
+  {
+    name: "card_list",
+    label: "Cards list",
+    widget: "object",
+    fields: [
+      {
+        label: "Title",
+        name: "title",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        label: "Description",
+        name: "description",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "randomize",
+        label: "Randomize",
+        widget: "boolean",
+        required: false,
+        default: false,
+      },
+      {
+        label: "Card list items",
+        name: "card_list_items",
+        widget: "list",
+        fields: cardListItem,
+        crowdin: true,
+        required: true,
+        index_file: "",
+        meta: true
+      },
+    ]
   },
   {
     name: "large_card",
@@ -361,6 +576,8 @@ export const blocks = [
           "learn",
           "build",
           "community",
+          "nodes_and_services",
+          "security",
         ],
         default: "learn",
       },
@@ -376,6 +593,13 @@ export const blocks = [
         label: "Button url",
         required: false,
         widget: "string",
+        crowdin: false
+      },
+      {
+        name: "leftBoxMaxWidth",
+        label: "Left box max width",
+        required: false,
+        widget: "number",
         crowdin: false
       },
     ],
@@ -397,6 +621,7 @@ export const blocks = [
         label: "List Size",
         widget: "select",
         options: ["sm", "md", "lg"],
+        required: false,
       },
       {
         name: "listGap",
@@ -404,6 +629,13 @@ export const blocks = [
         widget: "select",
         options: ["sm", "md", "lg"],
         required: false,
+      },
+      {
+        name: "randomize",
+        label: "Randomize",
+        widget: "boolean",
+        required: false,
+        default: false,
       },
       {
         name: "blocks",

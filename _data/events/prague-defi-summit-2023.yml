@@ -5,8 +5,12 @@ description: Prague DeFi Summit has been designed around community collaboration
 url: https://praguedefisummit.com/
 start_date: 2023-06-08T14:14:42.855Z
 end_date: 2023-06-09T14:14:42.860Z
+month: June 2023
+show_in_past_events: true
 image: /assets/prague-defi-summit-2023.jpeg
 location: europe
+city: Prague
+country: Czech Republic
 tags:
   - crypto
   - blockchain

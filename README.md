@@ -14,14 +14,12 @@ The StarkNet website includes the following features:
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) for server-rendered React app
 - [Chakra UI](https://chakra-ui.com/) for UI components
 - [React](https://reactjs.org/) as a JavaScript library for UI
 - [TypeScript](https://www.typescriptlang.org/) for type-safe JavaScript code
 - [Algolia](https://www.algolia.com/) for search functionality
 - [Framer Motion](https://www.framer.com/motion) for animations
 - [Storybook](https://storybook.js.org/) for component development and testing
-- [Cypress](https://www.cypress.io/) for end-to-end testing
 - [Crowdin](https://crowdin.com/) for translations
 - [Yarn](https://yarnpkg.com/) as the package manager
 - [NetlifyCMS](https://www.netlifycms.org) Give non-technical users a simple way to edit and add content
@@ -40,11 +38,15 @@ The StarkNet website includes the following features:
 
     `yarn install`
 
-4.  Run the development server:
+4.  Update dynamic data:
+
+    `yarn data`
+
+5.  Run the development server:
 
     `yarn dev`
 
-5.  Open your browser and visit `http://localhost:3000` to see the website running locally.
+6.  Open your browser and visit `http://localhost:3000` to see the website running locally.
 
 ## Contributing to the Code
 

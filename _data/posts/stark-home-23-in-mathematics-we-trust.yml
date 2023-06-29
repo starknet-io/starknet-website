@@ -2,7 +2,6 @@ id: 624fe6e6-e869-4fc6-b5b4-852e80141d58
 post_type: video
 title: "STARK @ Home 23: In Mathematics We Trust"
 published_date: 2021-10-30T15:19:14.307Z
-time_to_consume: 79 min watch
 image: /assets/starkhome23.png
 category: stark-math
 topic:
@@ -13,7 +12,7 @@ video:
   id: wuq3iHCPYt4
   data:
     kind: youtube#video
-    etag: DSXsrQYOub1iwKieCkpIliry_6o
+    etag: xtwajk47eEN4QaLmkLnMjm-er4s
     id: wuq3iHCPYt4
     snippet:
       publishedAt: 2021-10-30T18:44:29Z
@@ -48,3 +47,11 @@ video:
         title: "STARK @ Home 23: In Mathematics We Trust"
         description: ""
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H8M39S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

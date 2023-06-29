@@ -2,7 +2,6 @@ id: ab9f31c3-3b77-497a-935a-3771a20d7158
 post_type: video
 title: "SmartCon 2022 | Unleashing the Power of L2 dApps "
 published_date: 2023-02-02T13:19:36.322Z
-time_to_consume: 14 min watch
 image: /assets/vid_events02.jpg
 category: community-and-events
 topic:
@@ -21,7 +20,7 @@ video:
   id: d_Za0z5JCsc
   data:
     kind: youtube#video
-    etag: eww2UUph-A5CvmVCqFRVpBUwFFw
+    etag: A19k90bqGvbiTQln_waCJwFPQFA
     id: d_Za0z5JCsc
     snippet:
       publishedAt: 2022-11-09T18:00:28Z
@@ -119,3 +118,11 @@ video:
 
           #Chainlink
       defaultAudioLanguage: en
+    contentDetails:
+      duration: PT14M10S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

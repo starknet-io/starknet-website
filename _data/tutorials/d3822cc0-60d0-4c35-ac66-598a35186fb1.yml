@@ -1,0 +1,31 @@
+id: d3822cc0-60d0-4c35-ac66-598a35186fb1
+type: youtube
+url: https://www.youtube.com/live/davbtSbJTyE?feature=share
+image: /assets/workshop-15-erc721-cairo1-basecamp-youtube-1.jpg
+title: ERC721 Cairo 1 Basecamp with Robert
+author: "@robertkp13"
+author_link: https://twitter.com/robertkp13
+published_at: 2023-06-13T11:06:12.455Z
+difficulty: advanced
+course: cairo_workshops
+tags: Cairo, Contracts
+description: >-
+  Today, we are pleased to have Robert joining us. Robert, a Blockchain Engineer
+  at [Extropy.io](http://extropy.io/), is a vital contributor to the Starknet
+  Ecosystem. His recent work includes projects such as Basecamp and
+  [wtf.Academy](https://www.wtf.academy/).
+
+
+  Robert will showcasing the ERC721 Cairo 1 exercise and conducting a live demonstration on building a basic ERC721. He will also demonstrate the use of the Evaluator to validate these exercises.
+
+
+  Outline of the workshop:
+
+
+  * ERC721 Exercise presentation, discussing the project structure and files
+
+  * Creating your first ERC721 contract on Cairo 1
+
+  * Deploy and Validate individual exercise
+
+  * Outro and other useful materials

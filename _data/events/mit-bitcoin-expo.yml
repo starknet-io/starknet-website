@@ -7,8 +7,10 @@ description: MIT Bitcoin Expo is the longest-running collegiate conference about
 url: http://mitbitcoinexpo.org/
 start_date: 2023-04-22T06:00:31.815Z
 end_date: 2023-04-23T13:13:00.000Z
+month: April 2023
+show_in_past_events: true
 image: /assets/btcmit.jpg
-location: usa
+location: north_america
 city: Cambridge
 country: Massachusetts
 tags:

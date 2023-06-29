@@ -7,8 +7,12 @@ import { postsCollectionConfig } from "./posts";
 import { settingsCollectionConfig } from "./settings";
 import { topicsCollectionConfig } from "./topics";
 import { tutorialsCollectionConfig } from "./tutorials";
+import { SEOCollectionConfig } from "./seo";
+import { roadmapPostsCollectionConfig } from "./roadmapPosts";
+import { roadmapVersionsCollectionConfig } from "./roadmapVersions";
+import { announcementsCollectionConfig } from "./announcements";
 
-export const collections = [
+export const collections: CmsConfig["collections"] = [
   pagesCollectionConfig,
   postsCollectionConfig,
   topicsCollectionConfig,
@@ -17,4 +21,8 @@ export const collections = [
   jobsCollectionConfig,
   tutorialsCollectionConfig,
   settingsCollectionConfig,
-] satisfies CmsConfig['collections'];
+  SEOCollectionConfig,
+  roadmapPostsCollectionConfig,
+  roadmapVersionsCollectionConfig,
+  announcementsCollectionConfig
+];

@@ -2,7 +2,6 @@ id: be4ad71a-f37f-47ee-8ac0-90803e2327b6
 post_type: video
 title: STARK Struck Podcast | Ep 10 | Tarrence from Cartridge
 published_date: 2023-01-26T00:00:00+00:00
-time_to_consume: 59 min watch
 image: /assets/starkstruck10.jpg
 category: stark-struck
 topic:
@@ -15,7 +14,7 @@ video:
   id: xslN-kj5jZA
   data:
     kind: youtube#video
-    etag: dmn9qtaJ2pTZbt3spu-DsLjVHoo
+    etag: Ka1YASbeZQGj2s7q2th5rBIUpBs
     id: xslN-kj5jZA
     snippet:
       publishedAt: 2023-01-25T15:08:46Z
@@ -64,3 +63,11 @@ video:
 
           Twitter: @tarrenceva @cartridge_gg @henrlihenrli @Starknet
       defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M57S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular

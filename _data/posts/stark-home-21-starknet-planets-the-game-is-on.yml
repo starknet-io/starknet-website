@@ -1,25 +1,17 @@
 id: b5e0f1b0-2fe5-4b0a-9a76-925d5a5110f1
 post_type: video
-title: "STARK @ Home 21: StarkNet Planets – The Game is On!"
+title: "STARK @ Home 21: Starknet Planets – The Game is On!"
 published_date: 2021-06-24T14:43:14.567Z
-time_to_consume: 84 min watch
-image: /assets/starkhome21.png
-category: stark-math
-topic:
-  - starknet
-short_desc: StarkNet Planets - The game is on!
 video:
   url: https://youtu.be/RhTGxuBryGg
   id: RhTGxuBryGg
   data:
     kind: youtube#video
-    etag: GWYbGMc5CjT883M0YCxvvQjTLzQ
+    etag: xY--5BldA153jAdPhGACZt05Q38
     id: RhTGxuBryGg
     snippet:
-      publishedAt: 2021-06-24T06:49:04Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 21: StarkNet Planets - The Game is On!"
-      description: ""
+      publishedAt: 2021-06-24T06:49:04.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/RhTGxuBryGg/default.jpg
@@ -37,10 +29,25 @@ video:
           url: https://i.ytimg.com/vi/RhTGxuBryGg/sddefault.jpg
           width: 640
           height: 480
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK @ Home 21: StarkNet Planets - The Game is On!"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 21: StarkNet Planets - The Game is On!"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT1H23M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/starkhome21.png
+category: stark-math
+topic:
+  - starknet
+short_desc: Starknet Planets - The game is on!

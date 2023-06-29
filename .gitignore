@@ -64,3 +64,6 @@ _crowdin/source
 *.vars
 *.__*
 dist
+public/data
+!_crowdin/translation
+.wrangler/

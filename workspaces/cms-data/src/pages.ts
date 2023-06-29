@@ -1,9 +1,7 @@
+import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON, getShuffledArray } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
-import type { LinkData } from "./settings/main-menu";
-import fs from "node:fs/promises";
-import path from "node:path";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -41,13 +39,6 @@ export interface BasicCardBlock {
 
   readonly size?: "sm" | "md";
 }
-export interface IconLinkCardBlock {
-  readonly type: "icon_link_card";
-  readonly title: string;
-  readonly link: LinkData;
-  readonly icon: string;
-  readonly color?: "orange" | "blue" | "green" | "yellow";
-}
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -61,26 +52,34 @@ export interface ImageIconLinkCardBlock {
     | "purple"
     | "peach"
     | "cyan"
-    | "pink";
-}
-export interface GetInvolvedBlock {
-  readonly type: "get_involved_card";
-  readonly title: string;
-  readonly description: string;
-  readonly link: LinkData;
-  readonly link_label: string;
-  readonly link_href: string;
+    | "pink"
+    | "grey";
 }
 
-export interface LargeCardBlock {
-  readonly type: "large_card";
-  readonly title: string;
-  readonly link: LinkData;
-  readonly size?: "sm" | "md";
-  readonly description: string;
-  readonly image: string;
-  readonly orientation?: "left" | "right";
+interface Icon {
+  icon: string;
+  linkUrl: string;
 }
+
+interface ListCardItems {
+  title: string;
+  description: string;
+  linkUrl: string;
+  imageUrl: string;
+  icons: Icon;
+  website_url: string;
+  twitter: string;
+  image: string;
+}
+export interface ListCardItemsBlock {
+  readonly type: "card_list";
+  readonly title: string;
+  readonly card_list_items: ListCardItems[];
+  readonly noOfItems: number;
+  readonly description: string;
+  randomize?: boolean;
+}
+
 export interface LinkListItem {
   readonly type: "link_list_item";
   readonly link?: {
@@ -130,18 +129,26 @@ export interface HeroBlock {
     | "dapps"
     | "learn"
     | "build"
-    | "community";
+    | "community"
+    | "nodes_and_services"
+    | "security";
   readonly buttonText?: string;
   readonly buttonUrl?: string;
+  readonly leftBoxMaxWidth?: number;
 }
 export interface HomeHeroBlock {
   readonly type: "home_hero";
+  readonly seo: {
+    readonly heroText: string;
+  };
 }
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
   readonly listSize?: "sm" | "md" | "lg";
-  readonly blocks: readonly LinkListItem[];
+  readonly listGap?: "sm" | "md" | "lg";
+  randomize?: boolean;
+  readonly blocks?: readonly LinkListItem[];
 }
 export interface AccordionBlock {
   readonly type: "accordion";
@@ -162,16 +169,14 @@ export type Block =
   | OnRampsBlock
   | WalletsBlock
   | BasicCardBlock
-  | LargeCardBlock
-  | IconLinkCardBlock
   | ImageIconLinkCardBlock
-  | GetInvolvedBlock
   | HeroBlock
   | HomeHeroBlock
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock
-  | OrderedBlock;
+  | OrderedBlock
+  | ListCardItemsBlock;
 
 export interface Container {
   readonly type: "container";
@@ -205,32 +210,58 @@ export interface Page extends Meta {
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;
   readonly page_last_updated?: string;
-  readonly blocks: readonly TopLevelBlock[];
+  readonly blocks?: readonly TopLevelBlock[]; // blocks can be undefined in live previews
 }
 
+const getPageWithRandomizedData = (data: Page): Page => {
+  const randomizedData = {...data}
+  randomizedData.blocks?.forEach((block: TopLevelBlock) => {
+    
+    if (block.type === 'link_list' && block.randomize) {
+      //@ts-expect-error
+      block.blocks = getShuffledArray(block.blocks || []);
+    } else if (block.type === 'card_list' && block.randomize) {
+      //@ts-expect-error
+      block.card_list_items = getShuffledArray(block.card_list_items || []);
+    }
+  })
+
+  return randomizedData
+}
 export async function getPageBySlug(
   slug: string,
-  locale: string
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<Page> {
+  try {
+    const data = await getFirst(
+      ...[locale, defaultLocale].map(
+        (value) => async () =>
+          getJSON("data/pages/" + value + "/" + slug, event)
+      )
+    );
+
+    return getPageWithRandomizedData(data)
+  } catch (cause) {
+    throw new Error(`Page not found! ${slug}`, {
+      cause,
+    });
+  }
+}
+
+export async function getPageById(
+  id: string,
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Page> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/pages",
-                value,
-                slug + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/pages/" + value + "/" + id, event)
       )
     );
   } catch (cause) {
-    throw new Error(`Page not found! ${slug}`, {
+    throw new Error(`Page not found! \${id}`, {
       cause,
     });
   }

@@ -1,0 +1,183 @@
+month: undefined NaN
+id: 3de95a42-7ae7-452a-99fc-7046ad2444a5
+post_type: article
+title: Simple Guide on Starkgate 1-Click Withdraw
+toc: true
+published_date: 2023-05-01T08:33:35.784Z
+image: /assets/artboard-40.png
+category: ecosystem
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+short_desc: Have you ever found yourself forgetting to withdraw your assets from
+  Mainnet after bridging them through Starkgate? Well, thanks to the incredible
+  work of our developers, you can now say goodbye to that concern.
+blocks:
+  - type: markdown
+    body: >-
+      Have you ever found yourself forgetting to withdraw your assets from
+      Mainnet after bridging them through Starkgate? Well, thanks to the
+      incredible work of our developers, you can now say goodbye to that
+      concern.
+
+
+      ### We are thrilled to announce that [SpaceShard](https://www.spaceshard.io/) has introduced an exciting new feature to Starkgate: 1-click withdrawals!
+
+
+      With the 1-click withdrawal feature, you can now effortlessly retrieve your bridged assets from Mainnet without the need to initiate a separate withdrawal transaction. No more worrying about forgetting to withdraw or dealing with complicated withdrawal procedures. 🥳🥳🥳
+
+
+      ![This feature simplifies the process, allowing you to effortlessly withdraw your assets with just a single click.](/assets/meme-image-spaceshard.jpg "This feature simplifies the process, allowing you to effortlessly withdraw your assets with just a single click.")
+
+
+      ## Join our early tester program!
+
+
+      We invite you to join our early tester program to experience the convenience and efficiency of Starkgate’s 1-click withdrawal feature firsthand. Visit **[Starkgate website](https://starkgate.starknet.io/terms)** today to become an early tester and explore this exciting advancement in bridging technology.
+
+
+      ## How to use it?
+
+
+      Go to **[https://goerli.starkgate.starknet.io](https://goerli.starkgate.starknet.io/) for testnet option** or to **\[https://starkgate.starknet.io/](https://starkgate.starknet.io/**)\*\* for mainnet.
+
+
+      Make sure you connect with your Metamask and Argent/Braavos wallets.
+
+
+      ![Make sure you connect with your Metamask and Argent/Braavos wallets.](/assets/metamask-argent-braavos-connection.jpg)
+
+
+      Go to the withdrawal tab, enter the amount you want to withdraw, and then check “*Use the automatic withdrawal service by SpaceShard* “.
+
+
+      ![](/assets/withdrawl-tab.jpg)
+
+
+      Depending on the wallet you are using popup will appear. In this case, the Argent wallet is connected to Starkgate (see image below).
+
+
+      ![](/assets/argent-popup.jpg)
+
+
+      Confirm the transaction on the Argent wallet. It will deposit the tokens in the Starkgate bridge and a small ETH fee to the one-click service provider.
+
+
+      Once the transaction is confirmed, you can check the status of your transaction on **[Starkscan](https://starkscan.co/)** or **[Voyager](https://voyager.online/).**
+
+
+      ![](/assets/transaction-is-being-processed-on-sn.jpg)
+
+
+      The one-click withdrawal service will wait until the transaction gets accepted on L1.
+
+
+      ![](/assets/transaction-gets-accepted-on-l1.-.jpg)
+
+
+      In the meantime, the user can go back to Starkgate to check the status of the withdrawal request. To check the withdrawal history, click on the Argent widget located in the upper right corner. Once it is accepted on L1, users will be notified on Starkgate via popup.
+
+
+      ![](/assets/starkgate-page.jpg)
+
+
+      Here’s a closer look at the withdrawal history. Once the withdrawal has been completed, users can access the confirmation by clicking on the Ethereum Tx button. This will redirect them to StarkScan.
+
+
+      ![](/assets/withdrawal-history-confirmation.jpg)
+
+
+      Double-checking is always a must and users can find the confirmation also on **[Etherscan](https://etherscan.io/)**. The final stage of the withdrawal should look like the image below, where the USDC token has been transferred to the L1 recipient account.
+
+
+      ![](/assets/etherscan.jpg "Voila! So simple, so Starknet!")
+
+
+      *Voila! So simple, so Starknet!*
+
+
+      ## Q&A How to get my transaction processed by the Starkgate relayer?
+
+
+      > *Get the current gas cost to process your transaction, then create a multi-call on L2. This transaction must contain the transfer of the gas cost to the relayer address, and withdraw tokens from the bridge contract. Your transaction will be processed when it gets accepted on L1. A node application example is available here.*
+
+
+      ## What tokens can I use to pay the gas cost?
+
+
+      > *Currently, we accept L2 ETH tokens. Later we will extend the fee payment options to other tokens such as WBTC and USDC/T.*
+
+
+      ## What tokens are supported by the relayer?
+
+
+      > *On Mainnet, the relayer handles 4 tokens: ETH, USDC, USDT, and WBTC. For more details check this list of addresses. On Testnet, only ETH token are available.*
+
+
+      ## How do you calculate the gas cost?
+
+
+      > *The gas cost is calculated using the average of the base fee price recorded on L1 blocks during the last 8 hours. In the future, the gas cost will be even lower because of the batching mechanism that we have implemented. Basically, as more users use the service, it will become cheaper for everyone! Pure magic 🪄✨*
+
+
+      ## How much time does it take for the relayer to process my withdrawal?
+
+
+      > *The relayer will try to execute your transaction as quickly as possible. But in some cases, the L1 network fees are higher than expected, which means the relayer will wait for better prices before executing the withdrawals.*
+
+
+      ## How does the relayer execute the withdrawal?
+
+
+      > *The relayer executes withdrawals per batch. So, each time the relayer detects valid withdrawals, it buffers them and then executes a withdraw function through a multi-call. This approach allows us to reduce the gas cost for the user.*
+
+
+      ## What if I did a mistake and did not set the correct gas cost?
+
+
+      > *In this case, the relayer will ignore your transaction and the gas cost paid will not be refunded. The only way to get your tokens is by doing a manual call to withdraw them. We are developing the version where you will be able to get a refund for the tx and make if faster on demand if you are willing to pay more gas.*
+
+
+      ## Can I do a second transaction to cover the missing gas cost?
+
+
+      > *Currently, this is not possible but we are in the process of developing a solution so you will be able to choose between a normal speed of withdrawal and a faster one.*
+
+
+      ## I paid the correct gas cost but my transaction was not processed, why?
+
+
+      > *Either your transaction was not well executed:*
+
+      >
+
+      > \- The transaction is not a multi-call
+
+      >
+
+      > \- The token used to pay the gas cost is not ETH
+
+      >
+
+      > *Or:*
+
+      >
+
+      > \- The relayer is waiting for a gas price drop on L1. If it’s not the case feel free to reach out SpaceShard team on [Discord](https://discord.gg/6PKcsRPQKC).
+
+
+      ## Where can I test the Starkgate relayer?
+
+
+      > *You will have access to the relayer feature through Starkgate, the official Starknet bridge.*
+
+
+      We hope this guide has been helpful in showing you how to use the SpaceShard one-click withdraw feature on Starkgate.
+
+
+      If you have any questions or require further information, feel free to reach out to us through our **Discord** community. We are continuously working to enhance the bridging experience and are excited to have you on board as an early tester.
+
+
+      Happy withdrawing!
+
+
+      [](https://medium.com/tag/starkware?source=post_page-----5e96e5dc152c---------------starkware-----------------)

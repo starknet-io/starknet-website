@@ -62,6 +62,13 @@ export const tutorialsCollectionConfig = {
       crowdin: true
     },
     {
+      label: "Author link",
+      name: "author_link",
+      required: false,
+      widget: "string",
+      crowdin: true
+    },
+    {
       label: "Published at",
       name: "published_at",
       widget: "datetime",
@@ -121,6 +128,13 @@ export const tutorialsCollectionConfig = {
       name: "tags",
       required: false,
       widget: "string",
+      crowdin: true
+    },
+    {
+      label: "Description",
+      name: "description",
+      required: false,
+      widget: "markdown",
       crowdin: true
     },
   ],

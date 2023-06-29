@@ -1,0 +1,21 @@
+id: 5ea43ca1-5ca8-4d55-bbc3-f7911c60b455
+title: Inclusion of failed transactions in a block
+availability: July 2023
+version: ba3a82db-4811-42f4-9161-c1ab955c5445
+stage: building-next
+blocks:
+  - type: markdown
+    body: >-
+      v0.12.1 sees the addition of failed transactions being included into
+      blocks. This aims to streamline the transaction process and provide
+      developers with a more reliable environment. 
+
+
+      At first, the inclusion of failed transactions will operate on a trusted basis. However, in version 0.15.0 the ability to prove failed transactions will be introduced, transitioning the process to a trustless framework.
+
+
+      By including failed transactions in the block, Starknet simplifies the user experience, allowing developers to confidently advance the nonce without constant status monitoring. This enhancement fosters smoother interactions and serves as a stepping stone towards a trustless system in version 0.15.0, ensuring transparency and security.
+
+
+      The full proposal for this feature is outlined on the official [Starknet Community Forum](https://community.starknet.io/t/efficient-utilization-of-sequencer-capacity-in-starknet-v0-12-1/95607/1).
+month: undefined NaN

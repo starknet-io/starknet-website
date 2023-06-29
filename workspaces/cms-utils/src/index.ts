@@ -1,4 +1,5 @@
-import { DefaultLogFields } from "simple-git";
+import type { DefaultLogFields } from "simple-git";
+import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
 
 export function youtubeVideoIdFromURL(url: string): string | undefined | void {
   try {
@@ -19,7 +20,7 @@ export function youtubeVideoIdFromURL(url: string): string | undefined | void {
 }
 
 export function slugify(value: string): string {
-  return value
+  return String(value)
     .normalize("NFD") // split an accented letter in the base letter and the acent
     .replace(/[\u0300-\u036f]/g, "") // remove all previously split accents
     .toLowerCase()
@@ -42,11 +43,70 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
     try {
       return await fn();
     } catch (err) {
+      console.log(err);
       cause.push(err);
     }
   }
 
-  throw new Error("getFirst failed!", {
-    cause,
-  });
+  throw new Error(
+    "getFirst failed! SSR: " + JSON.stringify(import.meta.env.SSR),
+    {
+      cause,
+    }
+  );
+}
+
+export async function getJSON(
+  src: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<any> {
+  if (import.meta.env.SSR) {
+    if (globalThis.__STATIC_CONTENT) {
+      const res = await getAssetFromKV({
+        request: new Request(
+          new URL("/" + src + ".json", "http://localhost:3000")
+        ),
+        waitUntil(promise) {
+          event?.waitUntil(promise);
+        },
+      });
+
+      return res.json();
+    } else if (import.meta.env.DEV) {
+      const fs = await import("node:fs/promises");
+      const path = await import("node:path");
+
+      return JSON.parse(
+        await fs.readFile(
+          path.join(process.cwd(), "../../public", src + ".json"),
+          "utf8"
+        )
+      );
+    } else {
+      const res = await fetch(
+        import.meta.env.VITE_SITE_URL + "/" + src + ".json"
+      );
+      return res.json();
+    }
+  }
+
+  const res = await fetch("/" + src + ".json");
+  return res.json();
+}
+
+export const convertStringTagsToArray = (commaSeperatedTags: string = "") => {
+  return commaSeperatedTags
+    .replace(/,\s*$/, "")
+    .split(",")
+    .map((t: string) => t.trim());
+};
+
+export function getShuffledArray<T>(_array: readonly T[]) {
+  const array = _array.slice(0);
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  return array;
 }

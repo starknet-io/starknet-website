@@ -10,7 +10,8 @@ blocks:
     description: Explore developer tooling and resources available for Starknet
   - type: link_list
     heading: Libraries
-    listSize: "lg"
+    listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -44,7 +45,8 @@ blocks:
           label: "A PHP SDK for Starknet "
   - type: link_list
     heading: Development frameworks
-    listSize: "lg"
+    listSize: lg
+    randomize: true
     blocks:
       - link:
           custom_title: "Protostar "
@@ -66,7 +68,8 @@ blocks:
           label: like Ganache, but for Starknet
   - type: link_list
     heading: "Editor plugins "
-    listSize: "lg"
+    listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -88,7 +91,8 @@ blocks:
           label: Code assistance and compile error highlighting in VS Code
   - type: link_list
     heading: Templates
-    listSize: "lg"
+    listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -110,7 +114,8 @@ blocks:
           label: Connect your ReactApp to Starknet
   - type: link_list
     heading: "General "
-    listSize: "lg"
+    listSize: lg
+    randomize: true
     blocks:
       - type: link_list_item
         link:
@@ -167,7 +172,7 @@ blocks:
       - type: link_list_item
         link:
           custom_title: "Starknet node by Chainstack "
-          custom_external_link: https://chainstack.com/build-custom_title-with-starknet/
+          custom_external_link: https://chainstack.com/build-better-with-starknet/
         subLabel:
           label: get your API services without running your own node
       - type: link_list_item
@@ -182,3 +187,56 @@ blocks:
           custom_external_link: https://github.com/NethermindEth/warp
         subLabel:
           label: "Solidity to Cairo transpiler "
+  - type: link_list
+    heading: Full-nodes & API services
+    listSize: lg
+    randomize: true
+    blocks:
+      - link:
+          hasIcon: false
+          custom_title: Pathfinder
+          custom_external_link: https://github.com/eqlabs/pathfinder
+        subLabel:
+          label: a Starknet full-node written in Rust by Equilibrium
+      - link:
+          hasIcon: false
+          custom_title: Juno
+          custom_external_link: https://github.com/NethermindEth/juno
+        subLabel:
+          label: a Starknet full-node written in go-lang by Nethermind
+      - link:
+          hasIcon: false
+          custom_title: Papyrus
+          custom_external_link: https://github.com/starkware-libs/papyrus
+        subLabel:
+          label: a Starknet full-node written in Rust by StarkWare
+      - link:
+          hasIcon: false
+          custom_title: Infura
+          custom_external_link: https://www.infura.io/networks/ethereum/starknet
+        subLabel:
+          label: API service for Starknet
+      - link:
+          hasIcon: false
+          custom_title: Chainstack
+          custom_external_link: https://chainstack.com/build-better-with-starknet/
+        subLabel:
+          label: API service for Starknet
+      - link:
+          hasIcon: false
+          custom_title: Alchemy
+          custom_external_link: https://www.alchemy.com/starknet
+        subLabel:
+          label: API service for Starknet
+      - link:
+          hasIcon: false
+          custom_title: Lava Protocol
+          custom_external_link: https://www.lavanet.xyz
+        subLabel:
+          label: Lava is an open-source protocol for reliable access to RPC data
+      - link:
+          hasIcon: false
+          custom_external_link: https://blastapi.io/public-api/starknet
+          custom_title: Blast API
+        subLabel:
+          label: API service for Starknet

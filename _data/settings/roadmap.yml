@@ -1,0 +1,11 @@
+show_hero_banner: true
+hero_title: Roadmap & version updates
+hero_description: See what’s coming next for Starknet and keep up to date on version updates.
+show_hero_cta: true
+hero_cta_copy: Subscribe to updates
+roadmap_post_ps: >-
+  [Subscribe to our newsletter](#sendgrid) to get roadmap and version updates
+  straight to your inbox.
+
+
+  To gain further insights into the technical aspects of the Starknet roadmap, please visit the official [Starknet documentation site](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/).
