@@ -1,6 +1,6 @@
 import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
+import { getFirst, getJSON, getShuffledArray } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 
 export interface MarkdownBlock {
@@ -213,18 +213,35 @@ export interface Page extends Meta {
   readonly blocks?: readonly TopLevelBlock[]; // blocks can be undefined in live previews
 }
 
+const getPageWithRandomizedData = (data: Page): Page => {
+  const randomizedData = {...data}
+  randomizedData.blocks?.forEach((block: TopLevelBlock) => {
+    
+    if (block.type === 'link_list' && block.randomize) {
+      //@ts-expect-error
+      block.blocks = getShuffledArray(block.blocks || []);
+    } else if (block.type === 'card_list' && block.randomize) {
+      //@ts-expect-error
+      block.card_list_items = getShuffledArray(block.card_list_items || []);
+    }
+  })
+
+  return randomizedData
+}
 export async function getPageBySlug(
   slug: string,
   locale: string,
   event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Page> {
   try {
-    return await getFirst(
+    const data = await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
           getJSON("data/pages/" + value + "/" + slug, event)
       )
     );
+
+    return getPageWithRandomizedData(data)
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
       cause,

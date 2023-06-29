@@ -25,7 +25,7 @@ export default function LocaleSwitcher({ seo }: { seo: SEOTexts["language"] }) {
             <HStack key={i}>
               <ColumnLink
                 active={localeConfig.code === c.code}
-                href={`/${c.code}${pathname}`}
+                href={`/${c.code}${pathname.replace(/^\/\w{2}($|\/)/, "/")}`}
               >
                 {c.name}
               </ColumnLink>

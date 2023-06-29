@@ -9,6 +9,7 @@ import {
   BoxProps,
   Img,
   LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -51,9 +52,6 @@ export const ListCard = (props: Props) => {
   return (
     <Box maxW="5xl">
       <LinkBox
-        as="a"
-        href={props.href!}
-        target="_blank"
         sx={{ textDecoration: "none!important", cursor: "pointer" }}
       >
         <CardGradientBorder padding="0" borderRadius={{ base: "16px" }}>
@@ -151,9 +149,15 @@ export const ListCard = (props: Props) => {
                   </HStack>
                 </Stack>
 
-                <Text pb="12px" fontSize="sm" color="list-card-lg-desc-fg">
+                <LinkOverlay 
+                  pb="12px" 
+                  fontSize="sm" 
+                  color="list-card-lg-desc-fg"
+                  href={props.href!}
+                  target="_blank"
+                >
                   {props.description}
-                </Text>
+                </LinkOverlay>
                 {/* {props.variant === "event" && (
                 <Box py="8px">
                   <Button variant="outline" size="sm">
@@ -194,7 +198,7 @@ export const ListCard = (props: Props) => {
                   )
                 )}
 
-                <Wrap spacingX="24px" shouldWrapChildren>
+                <Wrap spacingX="24px" shouldWrapChildren mt='20px'>
                   {props.href &&
                     props.variant !== "event" &&
                     props.variant !== "job" && (
@@ -212,7 +216,6 @@ export const ListCard = (props: Props) => {
                   {props.twitterHandle && (
                     <Link
                       isExternal
-                      mt="20px"
                       href={`${props.twitterHandle}`}
                     >
                       <Icon
@@ -225,7 +228,6 @@ export const ListCard = (props: Props) => {
                   {props.discordHandle && (
                     <Link
                       isExternal
-                      mt="20px"
                       href={`${props.discordHandle}`}
                     >
                       <Icon
@@ -235,30 +237,6 @@ export const ListCard = (props: Props) => {
                       />
                     </Link>
                   )}
-                  {/* {props.recapLink && (
-                    <Link
-                      as={NextLink}
-                      href={`${props.discordHandle}`}
-                      isExternal={true}
-                      p="8px 12px"
-                      border="1px solid #E2E8F0"
-                      borderRadius="16px"
-                    >
-                      View event recap
-                    </Link>
-                  )} */}
-                  {/* <IconButton
-              aria-label="Website"
-              icon={<HiGlobeAlt />}
-            />
-            <IconButton
-              aria-label="Twitter"
-              icon={<SiTwitter />}
-            />
-            <IconButton
-              aria-label="Discord"
-              icon={<SiDiscord />}
-            /> */}
                 </Wrap>
                 {props.recap?.link && (
                   <Button
