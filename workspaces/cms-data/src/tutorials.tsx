@@ -1,13 +1,17 @@
 import algoliasearch from "algoliasearch";
 
+type Author = {
+  readonly author?: string;
+  readonly author_link?: string;
+}
+
 export type Tutorial = {
   readonly id?: string;
   readonly type: "youtube" | "blog" | "github";
   readonly url: string;
   readonly image?: string;
   readonly title: string;
-  readonly author?: string;
-  readonly author_link?: string;
+  readonly authors?: Author[];
   readonly published_at: string;
   readonly difficulty?: "beginner" | "intermediate" | "advanced";
   readonly tags?: string[];
