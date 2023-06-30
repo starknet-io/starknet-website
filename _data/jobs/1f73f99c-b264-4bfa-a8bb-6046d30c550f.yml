@@ -1,5 +1,6 @@
 id: 1f73f99c-b264-4bfa-a8bb-6046d30c550f
 published_at: 2023-06-19T09:08:00.000Z
+archived: false
 contact:
   name: Braavosusaa
   email: jobs@braavos.app
@@ -15,4 +16,4 @@ job:
   type: full_time
   location: tel_aviv_remote
   role: Blockchain Contract
-archived_hidden: undefined
+archived_hidden: "false"
