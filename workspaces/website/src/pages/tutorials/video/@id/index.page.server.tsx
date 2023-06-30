@@ -7,7 +7,7 @@ import { getTutorialById } from "@starknet-io/cms-data/src/tutorials";
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
   const { locale } = defaultPageContext;
-  const tutorial = await getTutorialById(pageContext.routeParams.id, locale);
+  const tutorial = await getTutorialById(pageContext.routeParams.id, locale, pageContext.event);
 
   const pageProps: Props = {
     tutorial,
