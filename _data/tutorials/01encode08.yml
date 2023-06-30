@@ -3,8 +3,11 @@ type: youtube
 url: https://youtu.be/dRNfmn3Pcxw
 image: /assets/ec08.jpeg
 title: AAVE Ethereum Starknet Bridge
-author: "Encode "
+authors:
+  - author: Milos
+    author_link: link
 published_at: 2022-10-27T00:00:00+00:00
+author: "Encode "
 difficulty: intermediate
 course: hackathon_oct_22
 tags: hackathon, bridging
