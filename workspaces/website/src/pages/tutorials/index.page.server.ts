@@ -7,7 +7,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const { locale } = defaultPageContext;
 
   const pageProps: Props = {
-    seo: defaultPageContext.seo.jobs,
+    seo: defaultPageContext.seo.tutorials,
     env: {
       ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
       ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
