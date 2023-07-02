@@ -22,6 +22,9 @@ blocks:
       - title: ConsenSys Diligence
         website_url: http://consensys.net/diligence
         image: /assets/consensys-diligence-logo.svg
+        description: ConsenSys is a leading smart contract auditing and blockchain
+          security tooling for smart contract developers, auditors and web3
+          protocols.
       - title: Nethermind
         website_url: https://nethermind.io/
         image: /assets/nethermind-logo.png
