@@ -106,7 +106,7 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/getting_started/intro/
           - link:
               custom_title: "CLI commands "
-              custom_external_link: https://docs.starknet.io/documentation/getting_started/cli/
+              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
           - link:
               custom_title: "Adding user authentication "
               custom_external_link: https://docs.starknet.io/documentation/getting_started/user_auth/
