@@ -15,18 +15,3 @@
 //     });
 //   }
 // }
-
-export type MessagesType = {
-  "search": "Search"
-};
-
-export async function getMessages(locale: string): Promise<MessagesType> {
-  return {
-    "search": "Search"
-  };
-  // try {
-  //   return (await import(`_data/i18n/intl/${locale}.json`)).default;
-  // } catch {}
-
-  // return (await import("_data/i18n/intl/en.json")).default;
-}

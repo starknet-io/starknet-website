@@ -106,8 +106,7 @@ export default function App() {
 
     CMS.init({
       config: {
-        ...CMSConfig,
-        // @ts-expect-error
+        ...(CMSConfig as any),
         backend: {
           ...CMSConfig.backend,
           branch,

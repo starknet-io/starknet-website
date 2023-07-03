@@ -1,10 +1,8 @@
 import algoliasearch from "algoliasearch";
 import { defaultLocale } from "./i18n/config";
 import type { TopLevelBlock } from "./pages";
-import { getFirst, Meta } from "@starknet-io/cms-utils/src/index";
-import { youtube_v3 } from "googleapis";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { getFirst, Meta, getJSON } from "@starknet-io/cms-utils/src/index";
+import type { youtube_v3 } from "googleapis";
 
 interface VideoMeta {
   readonly url: string;
@@ -31,31 +29,22 @@ export interface Post extends Meta {
 
 export async function getPostBySlug(
   slug: string,
-  locale: string
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Post> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/posts",
-                value as string,
-                slug + ".json"
-              ),
-              "utf8"
-            )
-          )
+          getJSON("data/posts/" + value + "/" + slug, event)
       ),
       async () => {
         const client = algoliasearch(
-          process.env.ALGOLIA_APP_ID!,
-          process.env.ALGOLIA_SEARCH_API_KEY!
+          import.meta.env.VITE_ALGOLIA_APP_ID!,
+          import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!
         );
         const index = client.initIndex(
-          `web_posts_${process.env.ALGOLIA_INDEX}`
+          `web_posts_${import.meta.env.VITE_ALGOLIA_INDEX}`
         );
 
         const searchResponse = await index.search<Post>("", {
@@ -80,31 +69,21 @@ export async function getPostBySlug(
 
 export async function getPostById(
   id: string | string[] | undefined,
-  locale: string | string[]
+  locale: string | string[],
+  event: null | WorkerGlobalScopeEventMap["fetch"]
 ): Promise<Post> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/posts",
-                value as string,
-                id + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/posts/" + value + "/" + id, event)
       ),
       async () => {
         const client = algoliasearch(
-          process.env.ALGOLIA_APP_ID!,
-          process.env.ALGOLIA_SEARCH_API_KEY!
+          import.meta.env.VITE_ALGOLIA_APP_ID!,
+          import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!
         );
         const index = client.initIndex(
-          `web_posts_${process.env.ALGOLIA_INDEX}`
+          `web_posts_${import.meta.env.VITE_ALGOLIA_INDEX}`
         );
 
         const searchResponse = await index.search<Post>("", {

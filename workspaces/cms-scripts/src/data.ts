@@ -1,5 +1,5 @@
-import * as path from "node:path";
-import fs from "node:fs/promises";
+import * as path from "path";
+import fs from "fs/promises";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
@@ -34,26 +34,32 @@ export interface Post extends Meta {
   readonly timeToConsume: string;
   blocks: readonly any[];
 }
-export interface RoadmapPost extends Meta {
+
+export interface RoadmapDetails {
   readonly id: string;
   readonly slug: string;
   readonly title: string;
-  readonly image: string;
   readonly version: string;
   readonly stage: string;
   readonly availability: string;
   readonly specific_info?: string;
   readonly state?: string;
+}
+
+export interface RoadmapPost extends Meta, RoadmapDetails  {
   blocks: readonly any[];
 }
 
-export interface AnnouncementsPost extends Meta {
+export interface AnnouncementDetails {
   id: string;
   slug: string;
   title: string;
   description: string;
   image: string;
   badge: string;
+}
+
+export interface AnnouncementsPost extends Meta, AnnouncementDetails {
   blocks: readonly any[];
 }
 
@@ -158,7 +164,6 @@ export async function fileToRoadmapPost(
     slug,
     id: data.id,
     title: data.title,
-    image: data.image,
     version: data.version,
     availability: data.availability,
     specific_info: data.specific_info,
@@ -317,6 +322,10 @@ interface RoadmapPostsData extends SimpleData<RoadmapPost> {
   readonly idMap: Map<string, RoadmapPost>;
 }
 
+interface RoadmapDetailsData extends SimpleData<RoadmapDetails> {
+  readonly idMap: Map<string, RoadmapDetails>;
+}
+
 interface AnnouncementsPostsData extends SimpleData<AnnouncementsPost> {
   readonly idMap: Map<string, AnnouncementsPost>;
 }
@@ -356,6 +365,48 @@ export async function getRoadmapPosts(): Promise<RoadmapPostsData> {
 
   return { filenameMap, filenames, idMap, resourceName };
 }
+
+// export async function getRoadmapDetails(): Promise<RoadmapDetailsData> {
+//   const roadmapPosts: RoadmapPost[] = [];
+//   const filesPath = path.join(process.cwd(), "../../public/data/roadmap-posts", locale)
+//   const filesInDir = await scandir(filesPath);
+
+//   const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
+
+//   for (const fileName of jsonFilesInDir) {
+//     const fileData = await fs.readFile(
+//       path.join(
+//         process.cwd(),
+//         "../../public/data/roadmap-posts",
+//         locale,
+//         fileName
+//       ),
+//       "utf8"
+//     );
+//     const jsonData = JSON.parse(fileData.toString());
+//     roadmapPosts.push(jsonData);
+//   }
+
+//   return roadmapPosts;
+
+// }
+// export async function getRoadmapDetails(): Promise<RoadmapDetailsData> {
+//   const resourceName = "roadmap-posts";
+//   const filenameMap = new Map<string, RoadmapDetails>();
+//   const idMap = new Map<string, RoadmapDetails>();
+//   const filenames = await scandir(`_data/${resourceName}`);
+
+//   for (const locale of locales) {
+//     for (const filename of filenames) {
+//       const {blocks, gitlog, ...data} = await fileToRoadmapPost(locale, filename);
+
+//       idMap.set(`${locale}:${data.id}`, data);
+//       filenameMap.set(`${locale}:${filename}`, data);
+//     }
+//   }
+
+//   return { filenameMap, filenames, idMap, resourceName };
+// }
 
 export async function getAnnouncements(): Promise<AnnouncementsPostsData> {
   const resourceName = "announcements";

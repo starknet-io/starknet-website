@@ -1,0 +1,63 @@
+import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Heading } from "@ui/Typography/Heading";
+import React from "react";
+
+type Props = {
+  children: React.ReactNode;
+  base?: number;
+  md?: number;
+  lg?: number;
+  xl?: number;
+  heading?: string;
+  headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+};
+
+export const BlockCards = ({
+  heading,
+  headingVariant = "h3",
+  children,
+  base = 2,
+  md = 2,
+  lg,
+  xl,
+}: Props) => {
+  const renderHeadingVariant = () => {
+    switch (headingVariant) {
+      case "h4":
+        return { fontWeight: "extrabold" };
+
+      case "h3":
+        return {
+          fontWeight: "extrabold",
+          fontSize: "32px",
+          marginBottom: "24px",
+        };
+
+      case "h2":
+        return {
+          fontWeight: "extrabold",
+          fontSize: "48px",
+          marginBottom: "48px",
+        };
+
+      default:
+        return { fontWeight: "extrabold" };
+    }
+  };
+  return (
+    <Box>
+      {heading && (
+        <Heading
+          variant="h3"
+          color="heading-navy-fg"
+          sx={renderHeadingVariant()}
+        >
+          {heading}
+        </Heading>
+      )}
+      <SimpleGrid columns={{ base, md, lg, xl }} spacing="32px">
+        {children}
+      </SimpleGrid>
+    </Box>
+  );
+};

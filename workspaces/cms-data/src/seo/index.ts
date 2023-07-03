@@ -1,32 +1,55 @@
-import { getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 import { defaultLocale } from "../i18n/config";
 
-interface PageCommonSEO {
-  readonly title: string;
-  readonly subtitle: string;
+export interface SEOTexts {
+  home: {
+    heroText: string;
+  };
+  footer: {
+    footerText: string;
+  };
+  tutorials: {
+    title: string;
+    subtitle: string;
+  };
+  events: {
+    title: string;
+    subtitle: string;
+  };
+  jobs: {
+    title: string;
+    subtitle: string;
+  };
+  search: {
+    search: string;
+    cancel: string;
+  };
+  language: {
+    title: string;
+    subtitle: string;
+    description: string;
+    callToAction: string;
+  };
 }
 
-const getSEO = (locale: string, page: string) => {
-  return [locale, defaultLocale].map(
-    (value) => async () =>
-      JSON.parse(
-        await fs.readFile(
-          path.join(
-            process.cwd(),
-            `_crowdin/data/seo/${page}`,
-            value + ".json"
-          ),
-          "utf8"
-        )
-      )
+async function getSEO<T extends keyof SEOTexts>(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"],
+  page: T
+): Promise<any> {
+  return getFirst(
+    ...[locale, defaultLocale].map(
+      (value) => async () => getJSON("data/seo/" + page + "/" + value, event)
+    )
   );
-};
+}
 
-export async function getTutorialsSEO(locale: string): Promise<PageCommonSEO> {
+export async function getTutorialsSEO(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["tutorials"]> {
   try {
-    return await getFirst(...getSEO(locale, "tutorials"));
+    return await getSEO(locale, event, "tutorials");
   } catch (cause) {
     throw new Error("getTutorialsSEO failed!", {
       cause,
@@ -34,9 +57,12 @@ export async function getTutorialsSEO(locale: string): Promise<PageCommonSEO> {
   }
 }
 
-export async function getEventsSEO(locale: string): Promise<PageCommonSEO> {
+export async function getEventsSEO(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["events"]> {
   try {
-    return await getFirst(...getSEO(locale, "events"));
+    return await getSEO(locale, event, "events");
   } catch (cause) {
     throw new Error("getEventsSEO failed!", {
       cause,
@@ -44,9 +70,12 @@ export async function getEventsSEO(locale: string): Promise<PageCommonSEO> {
   }
 }
 
-export async function getJobsSEO(locale: string): Promise<PageCommonSEO> {
+export async function getJobsSEO(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["jobs"]> {
   try {
-    return await getFirst(...getSEO(locale, "jobs"));
+    return await getSEO(locale, event, "jobs");
   } catch (cause) {
     throw new Error("getJobsSEO failed!", {
       cause,
@@ -54,11 +83,12 @@ export async function getJobsSEO(locale: string): Promise<PageCommonSEO> {
   }
 }
 
-export async function getFooterSEO(locale: string): Promise<{
-  footerText: string;
-}> {
+export async function getFooterSEO(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["footer"]> {
   try {
-    return await getFirst(...getSEO(locale, "footer"));
+    return await getSEO(locale, event, "footer");
   } catch (cause) {
     throw new Error("getFooterSEO failed!", {
       cause,
@@ -66,12 +96,12 @@ export async function getFooterSEO(locale: string): Promise<{
   }
 }
 
-export type HomeSEO = {
-  heroText: string;
-};
-export async function getHomeSEO(locale: string): Promise<HomeSEO> {
+export async function getHomeSEO(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["home"]> {
   try {
-    return await getFirst(...getSEO(locale, "home"));
+    return await getSEO(locale, event, "home");
   } catch (cause) {
     throw new Error("getHomeSEO failed!", {
       cause,
@@ -79,12 +109,12 @@ export async function getHomeSEO(locale: string): Promise<HomeSEO> {
   }
 }
 
-export async function getSearchSEO(locale: string): Promise<{
-  title: string;
-  cancel: string;
-}> {
+export async function getSearchSEO(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["search"]> {
   try {
-    return await getFirst(...getSEO(locale, "search"));
+    return await getSEO(locale, event, "search");
   } catch (cause) {
     throw new Error("getSearchSEO failed!", {
       cause,
@@ -92,18 +122,12 @@ export async function getSearchSEO(locale: string): Promise<{
   }
 }
 
-export type LanguageCenterSEO = {
-  title: string;
-  subtitle: string;
-  description: string;
-  callToAction: string;
-};
-
 export async function getLanguageCenterSEO(
-  locale: string
-): Promise<LanguageCenterSEO> {
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<SEOTexts["language"]> {
   try {
-    return await getFirst(...getSEO(locale, "language"));
+    return await getSEO(locale, event, "language");
   } catch (cause) {
     throw new Error("getLanguageCenterSEO failed!", {
       cause,

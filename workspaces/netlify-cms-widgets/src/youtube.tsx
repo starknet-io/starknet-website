@@ -32,7 +32,7 @@ function Control(props: CmsWidgetControlProps & any) {
         const res = await fetch(
           `${API_BASE_URL}/youtube?id=${encodeURIComponent(id)}`
         );
-        const { data, message } = await res.json();
+        const { data, message } = (await res.json()) as any;
 
         if (message != null) throw new Error(message);
         if (data == null) throw new Error("Video not found!");

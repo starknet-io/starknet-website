@@ -630,11 +630,9 @@ export default class GitHub implements Implementation {
   async getDeployPreview(collection: string, slug: string) {
     try {
       const statuses = await this.api!.getStatuses(collection, slug);
-      const deployStatus = getPreviewStatus(statuses, this.previewContext);
-      
-      if (deployStatus) {
-        const { target_url: url, state } = deployStatus;
-        return { url, status: state };
+
+      if (statuses.length) {
+        return { url: statuses[0].environment_url, status: statuses[0].state };
       } else {
         return null;
       }

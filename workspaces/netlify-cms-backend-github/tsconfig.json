@@ -2,6 +2,10 @@
   "extends": "../../tsconfig.projects.json",
   "compilerOptions": {
     "outDir": ".types",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client"],
+    "jsx": "preserve",
+    "strict": false
   },
   "include": ["src/**/*"]
 }

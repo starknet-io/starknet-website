@@ -1,7 +1,5 @@
 import { defaultLocale } from "./i18n/config";
-import { getFirst } from "@starknet-io/cms-utils/src/index";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { getFirst, getJSON, getShuffledArray } from "@starknet-io/cms-utils/src/index";
 
 export interface Type {
   readonly type: string;
@@ -17,23 +15,18 @@ export interface Wallet {
   readonly description: string;
 }
 
-export async function getWallets(locale: string): Promise<readonly Wallet[]> {
+export async function getWallets(
+  locale: string,
+  event: null | WorkerGlobalScopeEventMap["fetch"]
+): Promise<readonly Wallet[]> {
   try {
-    return await getFirst(
+    const wallets = await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () =>
-          JSON.parse(
-            await fs.readFile(
-              path.join(
-                process.cwd(),
-                "_crowdin/data/wallets",
-                value + ".json"
-              ),
-              "utf8"
-            )
-          )
+        (value) => async () => getJSON("data/wallets/" + value, event)
       )
     );
+
+    return getShuffledArray(wallets)
   } catch (cause) {
     throw new Error("getWallets failed!", {
       cause,
