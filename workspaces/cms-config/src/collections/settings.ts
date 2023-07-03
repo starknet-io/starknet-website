@@ -532,9 +532,16 @@ export const settingsCollectionConfig = {
           fields: [
             {
               name: "username",
-              label: "Github username (without @)",
+              label: "Github username",
               widget: "string",
               crowdin: false,
+            },
+            {
+              name: "name",
+              label: "Name",
+              widget: "string",
+              crowdin: false,
+              required: false
             },
             {
               name: "access",
