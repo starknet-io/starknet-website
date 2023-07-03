@@ -1,42 +1,46 @@
 items:
   - username: lorcan-codes
     access:
-      - posts
-      - permissions
-      - events
+      - sudo
 
   - username: milosyuki
+    name: Miloš Leković
     access:
-      - posts
-      - permissions
-      - events
+      - sudo
+
   - username: thecotne
+    name: Tsotne
     access:
-      - posts
-      - permissions
-      - events
+      - sudo
+
   - username: thorville
+    name: Keith Tormey
     access:
-      - posts
-      - permissions
-      - events
+      - sudo
+
   - username: robwalsh21
     access:
-      - posts
-      - permissions
-      - events
+      - sudo
+      
   - username: AmalyStark
+    name: Amalya
     access:
-      - posts
-      - permissions
-      - events
-  - username: AmalyStark
-    access:
-      - posts
-      - permissions
-      - events
+      - sudo
+
   - username: Tal-wagner
     access:
-      - posts
-      - permissions
-      - events
+      - sudo
+
+  - username: JameStark
+    access:
+      - sudo
+
+  - username: glrn
+    name: Gal Ron
+    access:
+      - sudo
+
+  - username: stoobie
+    name: Steve Goodman
+    access:
+      - sudo
