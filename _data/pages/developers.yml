@@ -102,14 +102,14 @@ blocks:
               custom_title: "Setting up a Starknet account "
               custom_external_link: https://docs.starknet.io/documentation/getting_started/account_setup/
           - link:
-              custom_title: Writing Starknet contracts
-              custom_external_link: https://docs.starknet.io/documentation/getting_started/intro/
+              custom_title: Latest Starknet version
+              custom_external_link: https://docs.starknet.io/documentation/starknet_versions/version_notes/
+          - link:
+              custom_title: Upcoming Starknet versions
+              custom_external_link: https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
           - link:
               custom_title: "CLI commands "
-              custom_external_link: https://docs.starknet.io/documentation/getting_started/cli/
-          - link:
-              custom_title: "Adding user authentication "
-              custom_external_link: https://docs.starknet.io/documentation/getting_started/user_auth/
+              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
       - type: link_list
         heading: Architecture & concepts
         listSize: lg
