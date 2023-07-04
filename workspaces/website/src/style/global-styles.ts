@@ -8,11 +8,13 @@ export const styles = {
       background: "bg-default",
       color: "fg-default",
     },
-    // " p + h3": {
-    //   marginTop: "80px",
-    // },
-    // " p + h2": {
-    //   marginTop: "80px",
-    // },
+    " p + h3, ul + h3": {
+      marginTop: "48px",
+      marginBottom: "16px",
+    },
+    " p + h2, ul + h2": {
+      marginTop: "48px",
+      marginBottom: "16px",
+    },
   },
 };
