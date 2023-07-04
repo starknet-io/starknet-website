@@ -8,8 +8,7 @@ blocks:
   - type: hero
     variant: nodes_and_services
     title: Full-nodes & API services
-    description:
-      Use APIs to connect to other services, run full nodes and interact
+    description: Use APIs to connect to other services, run full nodes and interact
       with on-chain data.
     leftBoxMaxWidth: 600
   - type: card_list
@@ -54,4 +53,8 @@ blocks:
         title: Lava Protocol
         description: Lava is an open-source protocol for reliable access to RPC data
         image: /assets/logo_lava_80x80.png
+      - title: Blast API
+        description: API service for Starknet
+        link_url: https://blastapi.io/public-api/starknet
+        image: /assets/5olekvre_400x400.jpg
     randomize: true
