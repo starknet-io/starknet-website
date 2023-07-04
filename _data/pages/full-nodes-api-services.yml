@@ -57,4 +57,5 @@ blocks:
         description: API service for Starknet
         link_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
+        website_url: https://blastapi.io/public-api/starknet
     randomize: true
