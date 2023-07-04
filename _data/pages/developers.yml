@@ -27,7 +27,7 @@ blocks:
         withIllustration: true
       - type: image_icon_link_card
         color: blue-default
-        title: Read Starknet Book
+        title: Read the Starknet Book
         description: Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
