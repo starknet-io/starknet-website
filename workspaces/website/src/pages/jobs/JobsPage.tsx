@@ -52,7 +52,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
     <Box>
       <InstantSearch
         searchClient={searchClient}
-        indexName={`web_jobs_${env.ALGOLIA_INDEX}`}
+        indexName={`web_active-jobs_${env.ALGOLIA_INDEX}`}
       >
         <Configure
           hitsPerPage={40}
