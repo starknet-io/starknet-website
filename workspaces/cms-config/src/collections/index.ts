@@ -1,7 +1,8 @@
 import { CmsConfig } from "../types";
 import { categoriesCollectionConfig } from "./categories";
 import { eventsCollectionConfig } from "./events";
-import { jobsCollectionConfig } from "./jobs";
+import { activeJobsCollectionConfig } from "./active-jobs";
+import { archivedJobsCollectionConfig } from "./archived-jobs";
 import { pagesCollectionConfig } from "./pages";
 import { postsCollectionConfig } from "./posts";
 import { settingsCollectionConfig } from "./settings";
@@ -18,7 +19,8 @@ export const collections: CmsConfig["collections"] = [
   topicsCollectionConfig,
   categoriesCollectionConfig,
   eventsCollectionConfig,
-  jobsCollectionConfig,
+  activeJobsCollectionConfig,
+  archivedJobsCollectionConfig,
   tutorialsCollectionConfig,
   settingsCollectionConfig,
   SEOCollectionConfig,

@@ -30,7 +30,8 @@ try {
   const resources = [
     posts,
     pages,
-    await getSimpleData("jobs"),
+    await getSimpleData("active-jobs"),
+    await getSimpleData("archived-jobs"),
     await getSimpleData("events"),
     await getTutorials(),
   ] as const;

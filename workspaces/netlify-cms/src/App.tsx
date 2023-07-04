@@ -36,7 +36,14 @@ export default function App() {
         getAsset={getAsset}
       />
     ));
-    CMS.registerPreviewTemplate("jobs", ({ entry, getAsset }) => (
+    CMS.registerPreviewTemplate("active-jobs", ({ entry, getAsset }) => (
+      <CustomPreview
+        entry={entry}
+        type={CustomPreviewType.JOBS}
+        getAsset={getAsset}
+      />
+    ));
+    CMS.registerPreviewTemplate("archived-jobs", ({ entry, getAsset }) => (
       <CustomPreview
         entry={entry}
         type={CustomPreviewType.JOBS}

@@ -1,12 +1,12 @@
 import { CmsCollection } from "../types";
 
-export const jobsCollectionConfig = {
+export const activeJobsCollectionConfig = {
   crowdin: true,
-  name: "jobs",
-  label: "Jobs",
+  name: "active-jobs",
+  label: "Active jobs",
   identifier_field: "id",
-  label_singular: "Job",
-  folder: '_data/jobs',
+  label_singular: "Active job",
+  folder: '_data/active-jobs',
   create: true,
   format: "yml",
   summary: "{{job.title}}",

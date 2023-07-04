@@ -1,6 +1,7 @@
 import * as path from "path";
 import YAML from "yaml";
 import fs from "fs/promises";
+import * as filesystem from "fs";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { scandir, yaml } from "./utils";
 import { DefaultLogFields } from "simple-git";
@@ -549,33 +550,81 @@ export function updateBlocks(pages: PagesData, posts: PostsData) {
   }
 }
 
-export async function updateJobs() {
-  const resourceName = "jobs";
-const filenames = await fs.readdir(`_data/${resourceName}`);
+export async function updateActiveJobs() {
+  const activeJobsResourceName = "active-jobs";
+  const archivedJobsResourceName = "archived-jobs";
+  const activeJobsFilenames = await fs.readdir(`_data/${activeJobsResourceName}`);
 
-for (const filename of filenames) {
-  const filepath = path.join("_data", resourceName, filename);
-
-  const data = await yaml(filepath);
-  const isOlderThanTwoMonths = (dateString: string) => {
-    const date = new Date(dateString);
-    const today = new Date();
-    today.setMonth(today.getMonth() - data.archive_after);
-    return date < today;
-  }
-  const isOlder = isOlderThanTwoMonths(data.published_at);
-  if (isOlder) {
-    try {
-      data.archived = true;
-      await fs.writeFile(filepath, YAML.stringify(data), {
-        encoding: "utf8",
-      });
-    } catch (err) {
-      console.error(err);
+  for (const filename of activeJobsFilenames) {
+    const activeJobFilepath = path.join("_data", activeJobsResourceName, filename);
+    const archivedJobFilepath = path.join("_data", archivedJobsResourceName, filename);
+    const data = await yaml(activeJobFilepath);
+    const isOlderThanTwoMonths = (dateString: string) => {
+      const date = new Date(dateString);
+      const today = new Date();
+      today.setMonth(today.getMonth() - data.archive_after);
+      return date < today;
+    }
+    const isOlder = isOlderThanTwoMonths(data.published_at);
+    if (isOlder) {
+      try {
+        data.archived = true;
+        await filesystem.unlink(archivedJobFilepath, function(err: any) {
+          if(err && err.code == 'ENOENT') {
+          } else if (err) {
+          } else {
+              console.info(`removed`);
+          }
+        });
+        await fs.writeFile(archivedJobFilepath, YAML.stringify(data), {
+          encoding: "utf8",
+        });
+      } catch (err) {
+        console.error(err);
+      }
     }
   }
-  
 }
+
+export async function updateArchivedJobs() {
+  const activeJobsResourceName = "active-jobs";
+  const archivedJobsResourceName = "archived-jobs";
+
+  const archivedJobsFilenames = await fs.readdir(`_data/${activeJobsResourceName}`);
+  for (const filename of archivedJobsFilenames) {
+    const activeJobFilepath = path.join("_data", activeJobsResourceName, filename);
+    const archivedJobFilepath = path.join("_data", archivedJobsResourceName, filename);
+    const data = await yaml(activeJobFilepath);
+    const isOlderThanTwoMonths = (dateString: string) => {
+      const date = new Date(dateString);
+      const today = new Date();
+      today.setMonth(today.getMonth() - data.archive_after);
+      return date < today;
+    }
+    const isOlder = isOlderThanTwoMonths(data.published_at);
+    const isActive = data.archived === false;
+    if (isActive) {
+      try {
+        if (isOlder) {
+          const date = new Date();
+          data.published_at = date;
+        }
+        await filesystem.unlink(archivedJobFilepath, function(err: any) {
+          if(err && err.code == 'ENOENT') {
+          } else if (err) {
+          } else {
+              console.info(`removed`);
+          }
+        });
+      
+        await fs.writeFile(activeJobFilepath, YAML.stringify(data), {
+          encoding: "utf8",
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }
 }
 
 export function handleLink(
