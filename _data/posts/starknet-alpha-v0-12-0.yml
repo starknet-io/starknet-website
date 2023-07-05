@@ -16,6 +16,14 @@ short_desc: >-
 
   And an in-depth explanation of all the new features of the upcoming version.
 blocks:
+  - type: markdown
+    body: >-
+      StarkWare and Lambda Class will present to the builders council and
+      delegates Starknet new version in preparation for the upcoming vote.
+
+      An open discussion regarding Starknet Alpha v0.12.0 version upgrade.
+
+      And an in-depth explanation of all the new features of the upcoming version.
   - type: link_list
     randomize: false
     blocks:
