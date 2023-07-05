@@ -115,7 +115,7 @@ export default function PostByCategory({
             </HStack>
             <Spacer />
           </Flex>
-          <Divider mt="8px" mb="32px" />
+          <Divider mt="8px" mb="24px" />
           {post.post_type === "video" ? (
             <Flex mb={!post.blocks?.length ? "32px" : 0} direction="column">
               <YoutubePlayer videoId={videoId} />
