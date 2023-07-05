@@ -16,5 +16,11 @@ export const styles = {
       marginTop: "48px",
       marginBottom: "16px",
     },
+    " p:has(> img) + h3": {
+      marginTop: "0",
+    },
+    " p:has(> img) + h2": {
+      marginTop: "0",
+    },
   },
 };
