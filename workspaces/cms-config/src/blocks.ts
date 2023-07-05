@@ -1,5 +1,41 @@
 import { CmsField, CmsFieldList } from "./types";
 
+const codeLanguages = [
+  {label: 'Asciidoc', value: 'asciidoc'},
+  {label: 'Bash', value: 'bash'},
+  {label: 'Clojure', value: 'clojure'},
+  {label: 'C++', value: 'cpp'},
+  {label: 'CSS', value: 'css'},
+  {label: 'Diff', value: 'diff'},
+  {label: 'Dockerfile', value: 'dockerfile'},
+  {label: 'Elixir', value: 'elixir'},
+  {label: 'Go', value: 'go'},
+  {label: 'Groovy', value: 'groovy'},
+  {label: 'Haskell', value: 'haskell'},
+  {label: 'Java', value: 'java'},
+  {label: 'Javascript', value: 'javascript'},
+  {label: 'JSON', value: 'json'},
+  {label: 'Kotlin', value: 'kotlin'},
+  {label: 'Markdown', value: 'markdown'},
+  {label: 'Nix', value: 'nix'},
+  {label: 'Objective-C', value: 'objectivec'},
+  {label: 'Perl', value: 'perl'},
+  {label: 'PHP', value: 'php'},
+  {label: 'Properties', value: 'properties'},
+  {label: 'Puppet', value: 'puppet'},
+  {label: 'Python', value: 'python'},
+  {label: 'Ruby', value: 'ruby'},
+  {label: 'Rust', value: 'rust'},
+  {label: 'Scala', value: 'scala'},
+  {label: 'Shell', value: 'shell'},
+  {label: 'SQL', value: 'sql'},
+  {label: 'Swift', value: 'swift'},
+  {label: 'Typescript', value: 'typescript'},
+  {label: 'XML', value: 'xml'},
+  {label: 'YAML', value: 'yaml'}
+];
+
+
 export const linkFields = [
   {
     label: "Custom Title",
@@ -216,6 +252,24 @@ export const blocks = [
       {
         name: "body",
         widget: "markdown",
+      },
+    ],
+  },
+  {
+    name: "code",
+    label: "Code",
+    widget: "object",
+    fields: [
+      {
+        label: 'Language',
+        name: 'language',
+        widget: 'select',
+        crowdin: false,
+        options: codeLanguages,
+      },
+      {
+        name: "body",
+        widget: "code",
       },
     ],
   },
