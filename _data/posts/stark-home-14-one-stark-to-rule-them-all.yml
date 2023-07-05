@@ -2,11 +2,6 @@ id: 2a11ad69-453c-481c-afc3-9105e9593ef1
 post_type: video
 title: "STARK @ Home 14: One STARK to Rule Them All"
 published_date: 2020-10-23T14:31:05.601Z
-image: /assets/starkhome14.png
-category: stark-math
-topic:
-  - starknet
-short_desc: One STARK to rule them all.
 video:
   url: https://youtu.be/U0_71d7f0Ks
   id: U0_71d7f0Ks
@@ -15,10 +10,8 @@ video:
     etag: J82r3Ao1onFjWeu9bjfbqll7Aiw
     id: U0_71d7f0Ks
     snippet:
-      publishedAt: 2020-10-23T07:16:58Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 14: One STARK to Rule Them All"
-      description: ""
+      publishedAt: 2020-10-23T07:16:58.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/U0_71d7f0Ks/default.jpg
@@ -40,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/U0_71d7f0Ks/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK @ Home 14: One STARK to Rule Them All"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 14: One STARK to Rule Them All"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H8M5S
       dimension: 2d
@@ -55,3 +50,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome14.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: One STARK to rule them all.

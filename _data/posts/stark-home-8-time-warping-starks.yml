@@ -2,13 +2,6 @@ id: 6f1aaede-eb80-4cf5-9ba4-66b45c6702d9
 post_type: video
 title: STARK @ Home 8 - Time-Warping STARKs
 published_date: 2020-06-21T14:16:22.713Z
-image: /assets/starkhome08.png
-category: stark-math
-topic:
-  - starknet
-short_desc: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
-  stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members Kinneret
-  Segal and Tom Brand.
 video:
   url: https://youtu.be/pSQTnD9opTc
   id: pSQTnD9opTc
@@ -17,12 +10,8 @@ video:
     etag: IuaSaJH23PoHLLRX9pvdLB9rYlk
     id: pSQTnD9opTc
     snippet:
-      publishedAt: 2020-06-21T06:03:44Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK @ Home 8 - Time-Warping STARKs
-      description: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
-        stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members
-        Kinneret Segal and Tom Brand.
+      publishedAt: 2020-06-21T06:03:44.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/pSQTnD9opTc/default.jpg
@@ -45,13 +34,17 @@ video:
           width: 1280
           height: 720
       channelTitle: StarkWare
+      title: STARK @ Home 8 - Time-Warping STARKs
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK @ Home 8 - Time-Warping STARKs
         description: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
           stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members
           Kinneret Segal and Tom Brand.
+      description: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
+        stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members
+        Kinneret Segal and Tom Brand.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H31M19S
       dimension: 2d
@@ -60,3 +53,10 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome08.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
+  stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members Kinneret
+  Segal and Tom Brand.
