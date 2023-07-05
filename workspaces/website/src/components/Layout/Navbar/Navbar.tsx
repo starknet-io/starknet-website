@@ -24,6 +24,12 @@ type Props = {
   search?: React.ReactNode;
 };
 
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
+
 export const NavBar = ({
   desktopNavItems,
   mobileNavItems,
@@ -38,6 +44,16 @@ export const NavBar = ({
   React.useEffect(() => {
     onClose();
   }, [onClose, pathname]);
+
+  const toogleTheme = () => {
+    toggleColorMode();
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "theme_change", {
+        'event_category': "engagement",
+        'value': colorMode
+      });
+    }
+  }
 
   return (
     <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
@@ -87,7 +103,7 @@ export const NavBar = ({
                 }
                 flex="1"
                 height="100%"
-                onClick={toggleColorMode}
+                onClick={toogleTheme}
                 size="lg"
               >
                 {colorMode === "light" ? "Dark" : "Light"} mode
