@@ -103,8 +103,6 @@ export const ImageIconCard = ({
   }
   return (
     <LinkBox
-      as='a'
-      href={href!}
       sx={{ textDecoration: "none!important" }}
     >
       <CardGradientBorder
@@ -167,29 +165,44 @@ export const ImageIconCard = ({
                 <Heading variant={titleVariant as titleVariantType} lineHeight="100%" {...(variant === "large_card" && { paddingBottom: "8px" })}>
                   {title}
                 </Heading>
-                {variant !== "icon_link_card" && <Text variant={descriptionVariant as descriptionVariantType} paddingTop="0px" color="grey.coolerText" _dark={{color: "grey.morning"}} lineHeight="24px">{description} {variant === "community_card" && <CustomLink
-                  variant={linkVariant as linkVariantType}
-                  color="selected.main"
-                  href={href}
-                  _hover={{ textDecoration: "underline!important" }}
-                >
-                  {label} &rarr;
-                </CustomLink>}</Text>}
+                {variant !== "icon_link_card" && (
+                  <Text
+                    variant={descriptionVariant as descriptionVariantType}
+                    paddingTop="0px"
+                    color="grey.coolerText"
+                    _dark={{ color: "grey.morning" }}
+                    lineHeight="24px"
+                  >
+                    {description}{" "}
+                    {variant === "community_card" && (
+                      <CustomLink
+                        variant={linkVariant as linkVariantType}
+                        color="selected.main"
+                        href={href}
+                        _hover={{ textDecoration: "underline!important" }}
+                      >
+                        {label} &rarr;
+                      </CustomLink>
+                    )}
+                  </Text>
+                )}
               </Stack>
             </CardBody>
 
-            {link && variant !== "dapp" && variant !== "community_card" && <CardFooter padding={cardFooterPadding}>
-              <ButtonGroup spacing="2">
-                <CustomLink
-                  variant={linkVariant as linkVariantType}
-                  color="selected.main"
-                  href={href}
-                  _hover={{ textDecoration: "underline!important" }}
-                >
-                  {label} &rarr;
-                </CustomLink>
-              </ButtonGroup>
-            </CardFooter>}
+            {link && variant !== "dapp" && variant !== "community_card" && (
+              <CardFooter padding={cardFooterPadding}>
+                <ButtonGroup spacing="2">
+                  <CustomLink
+                    variant={linkVariant as linkVariantType}
+                    color="selected.main"
+                    href={href}
+                    _hover={{ textDecoration: "underline!important" }}
+                    >
+                    {label} &rarr;
+                  </CustomLink>
+                </ButtonGroup>
+              </CardFooter>
+            )}
           </Box>
         </Card>
       </CardGradientBorder>

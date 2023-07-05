@@ -1,13 +1,7 @@
 id: d5c42c80-0eff-42ba-93ab-e905734b07a2
 post_type: video
-title: "Community Call #10 | Building React apps on StarkNet with Francesco Ceccon"
+title: "Community Call #10 | Building React apps on Starknet with Francesco Ceccon"
 published_date: 2022-03-15T00:00:00+00:00
-image: /assets/cc10.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Building React apps on Starknet with Francesco Ceccon, AMA about
-  Starknet version 0.8
 video:
   url: https://youtu.be/PSTCTVMmMz4
   id: PSTCTVMmMz4
@@ -16,11 +10,8 @@ video:
     etag: DERyBmpyP4kdHo9vNyIxJ5Pt2mc
     id: PSTCTVMmMz4
     snippet:
-      publishedAt: 2022-03-16T02:43:23Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #10 | Building React apps on StarkNet with
-        Francesco Ceccon"
-      description: ""
+      publishedAt: 2022-03-16T02:43:23.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/PSTCTVMmMz4/default.jpg
@@ -42,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/PSTCTVMmMz4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community call #10 | Building React apps on StarkNet with
+        Francesco Ceccon"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community call #10 | Building React apps on StarkNet with
           Francesco Ceccon"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H5M30S
       dimension: 2d
@@ -58,3 +52,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc10.jpg
+category: community-calls
+topic:
+  - starknet
+short_desc: Building React apps on Starknet with Francesco Ceccon, AMA about
+  Starknet version 0.8

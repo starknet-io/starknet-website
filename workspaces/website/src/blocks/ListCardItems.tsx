@@ -3,7 +3,6 @@ import { ListCard } from "@ui/Card/ListCard";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { slugify } from "@starknet-io/cms-utils/src/index";
-import { getShuffledArray } from "src/utils/getShuffledArray";
 
 interface Icon {
   icon: string;
@@ -32,11 +31,9 @@ export default function ListCardItems({
   params: { locale },
   title,
   description,
-  card_list_items,
-  randomize
+  card_list_items
 }:
 Props): JSX.Element {
-  const items = randomize ? getShuffledArray(card_list_items || []) : card_list_items;
 
   return (
     <Box>
@@ -44,7 +41,7 @@ Props): JSX.Element {
         {title && <Heading color="heading-navy-fg" variant="h3" mb="10px" id={`toc-${slugify(title)}`}>{title}</Heading>}
         {description && <Text variant="body" mb="24px">{description}</Text>}
         <Flex gap={4} direction="column" flex={1}>
-          {items?.map((card, i) => {
+          {card_list_items?.map((card, i) => {
             return (
               <ListCard
                 href={card.website_url}

@@ -5,10 +5,8 @@ type Props = LinkProps & { size?: string };
 export const CustomLink = (props: Props) => {
 
   return (
-    <LinkOverlay>
-      <Link as='a' variant={props.variant} href={props.href}>
+      <Link as={LinkOverlay} variant={props.variant} href={props.href}>
         {props.children}
       </Link>
-    </LinkOverlay>
   );
 };

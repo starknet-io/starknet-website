@@ -17,6 +17,7 @@ import {
   getRoadmapPosts,
   getSimpleData,
   getSimpleFiles,
+  getTutorials,
   handleLink,
   updateBlocks,
   updateActiveJobs,
@@ -192,6 +193,7 @@ const posts = await getPosts();
 const roadmapPosts = await getRoadmapPosts();
 const announcements = await getAnnouncements();
 const pages = await getPages();
+const tutorials = await getTutorials();
 
 updateBlocks(pages, posts);
 updateActiveJobs();
@@ -204,6 +206,15 @@ for (const locale of locales) {
 for (const data of posts.filenameMap.values()) {
   await write(`public/data/posts/${data.locale}/${data.slug}.json`, data);
   await write(`public/data/posts/${data.locale}/${data.id}.json`, data);
+}
+
+for (const locale of locales) {
+  await fs.mkdir(`public/data/tutorials/${locale}`, { recursive: true });
+}
+
+for (const data of tutorials.filenameMap.values()) {
+  //@ts-ignore
+  await write(`public/data/tutorials/${data.locale}/${data.id}.json`, data);
 }
 
 for (const locale of locales) {

@@ -5,12 +5,12 @@ import { AiOutlineAppstore } from "react-icons/ai";
 
 export const roadmapStagesFields = [
   {
-    label: "Building Now",
+    label: "Building now",
     value: "building-now",
     icon: BiWrench
   },
   {
-    label: "Building Next",
+    label: "Building next",
     value: "building-next",
     icon: BiBullseye
   },
@@ -53,7 +53,7 @@ export const roadmapPostsCollectionConfig = {
       options: [
         "No time yet",
         "Q2 2023",
-        "Q3 2023",
+        "July 2023",
         "Q4 2023",
         "Q1 2024",
         "Q2 2024",
@@ -64,6 +64,24 @@ export const roadmapPostsCollectionConfig = {
         "Q3 2025",
         "Q4 2025",
       ],
+    },
+    {
+      name: "state",
+      label: "Availability state",
+      widget: "select",
+      options: [
+        "On testnet",
+        "Testing now"
+      ],
+      required: false,
+    },
+    {
+      name: "specific_info",
+      label: "Specific info",
+      widget: "string",
+      required: false,
+      index_file: "",
+      meta: false
     },
     {
       name: "version",
