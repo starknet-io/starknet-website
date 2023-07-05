@@ -3,14 +3,6 @@ post_type: video
 title: "STARK @ Home 26: Shafi Goldwasser and the Amazing Untold Invention Story
   of ZK"
 published_date: 2022-09-25T15:29:23.261Z
-image: /assets/starkhome26.png
-category: stark-math
-topic:
-  - starknet
-short_desc: Watch this special episode of STARK @ Home with Professor Shafi
-  Goldwasser, 2012 Turing Award Laureate, talking with Eli Ben-Sasson about the
-  amazing untold story of the origin of Zero Knowledge and Interactive Proofs
-  which she co-invented.
 video:
   url: https://youtu.be/9J9rhKJk4RM
   id: 9J9rhKJk4RM
@@ -19,14 +11,8 @@ video:
     etag: t7SyXBaYbXQz95SHGtiK6AmzQ6k
     id: 9J9rhKJk4RM
     snippet:
-      publishedAt: 2022-09-25T07:53:38Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 26: Shafi Goldwasser and the Amazing Untold Invention Story
-        of ZK"
-      description: Watch this special episode of STARK @ Home with Professor Shafi
-        Goldwasser, 2012 Turing Award Laureate, talking with Eli Ben-Sasson
-        about the amazing untold story of the origin of Zero Knowledge and
-        Interactive Proofs which she co-invented.
+      publishedAt: 2022-09-25T07:53:38.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/9J9rhKJk4RM/default.jpg
@@ -48,9 +34,11 @@ video:
           url: https://i.ytimg.com/vi/9J9rhKJk4RM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK @ Home 26: Shafi Goldwasser and the Amazing Untold Invention Story
+        of ZK"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 26: Shafi Goldwasser and the Amazing Untold Invention Story
           of ZK"
@@ -58,7 +46,11 @@ video:
           Goldwasser, 2012 Turing Award Laureate, talking with Eli Ben-Sasson
           about the amazing untold story of the origin of Zero Knowledge and
           Interactive Proofs which she co-invented.
-      defaultAudioLanguage: en-US
+      description: Watch this special episode of STARK @ Home with Professor Shafi
+        Goldwasser, 2012 Turing Award Laureate, talking with Eli Ben-Sasson
+        about the amazing untold story of the origin of Zero Knowledge and
+        Interactive Proofs which she co-invented.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H14M9S
       dimension: 2d
@@ -67,3 +59,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome26.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: Watch this special episode of STARK @ Home with Professor Shafi
+  Goldwasser, 2012 Turing Award Laureate, talking with Eli Ben-Sasson about the
+  amazing untold story of the origin of Zero Knowledge and Interactive Proofs
+  which she co-invented.
