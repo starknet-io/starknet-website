@@ -3,7 +3,8 @@ type: youtube
 url: https://youtu.be/ZHwDlDt7oRg
 image: /assets/ec09.jpeg
 title: "Streamify Pitch "
-author: "Encode "
+authors:
+  - author: "Encode "
 published_at: 2022-10-23T00:00:00+00:00
 difficulty: beginner
 tags: hackathon

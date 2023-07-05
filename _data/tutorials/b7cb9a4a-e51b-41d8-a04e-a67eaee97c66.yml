@@ -3,7 +3,8 @@ type: youtube
 url: https://www.youtube.com/watch?v=HJP5LVkulBw&list=PLcIyXLwiPilV5RBZj43AX1FY4FJMWHFTY&index=14
 image: /assets/cairo-workshop-11.jpg
 title: "StarkNet Workshop #11: All about storage proofs with Herodotus"
-author: "StarkWare"
+authors:
+  - author: "StarkWare"
 published_at: 2023-03-14T13:27:19.395Z
 difficulty: intermediate
 tags: Storage Proofs

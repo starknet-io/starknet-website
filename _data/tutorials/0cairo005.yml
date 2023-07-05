@@ -3,7 +3,8 @@ type: youtube
 url: https://youtu.be/oYfVZ1nsCsI
 image: /assets/cairo05.jpeg
 title: "Contract deployment (demo) "
-author: StarkWare
+authors:
+  - author: StarkWare
 published_at: 2023-01-31T00:00:00+00:00
 difficulty: intermediate
 course: cairo_101
