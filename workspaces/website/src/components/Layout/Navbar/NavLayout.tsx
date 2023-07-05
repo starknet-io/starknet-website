@@ -31,6 +31,15 @@ export const NavLayout = (props: NavLayoutProps) => {
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const { locale } = usePageContext();
   const { colorMode, toggleColorMode } = useColorMode();
+  const toogleTheme = () => {
+    toggleColorMode();
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "theme_change", {
+        'event_category': "engagement",
+        'value': colorMode
+      });
+    }
+  }
   return (
     <Container py={{ base: "4", lg: "17px" }} px={{ base: "16px", md: "32px" }} maxW="1344px">
       <HStack spacing="4" justify="space-between">
@@ -56,7 +65,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                   )
                 }
                 aria-label="Toggle color mode"
-                onClick={toggleColorMode}
+                onClick={toogleTheme}
                 marginInlineStart="0 !important"
               />
             </Box>
