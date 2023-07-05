@@ -3,7 +3,7 @@ post_type: article
 title: "Cairo Roadmap: Join the Ride "
 toc: true
 published_date: 2023-06-29T13:58:13.648Z
-image: /assets/cairo-roadmap-post.jpg
+image: /assets/cairo-roadmap-post-16-9.jpg
 category: ecosystem
 topic:
   - cairo
@@ -14,8 +14,6 @@ blocks:
     blocks:
       - type: markdown
         body: >-
-          
-
           ## TL;DR
 
 
@@ -26,10 +24,14 @@ blocks:
           * With Cairo 1.1.0 on Starknet Mainnet, and v2 arriving to Starknet soon, we have reached an important milestone in the maturity of the language. Between the [docs](https://cairo-lang.org/docs/v1.0/), [book](https://cairo-book.github.io/title-page.html), and the Starknet [discord](https://discord.gg/qypnmzkhbc), you should have enough resources to get going and migrate from Cairo 0.
 
 
+
+
           ## Introduction
 
 
           Cairo v1 has evolved significantly since its early alpha days, reaching feature parity with Cairo 0, and accumulating new features on top (basic loops are now available, and many more capabilities are underway). Our goal in this post is to shed more light on Cairo’s short-term roadmap:  what is currently being worked on and what developers can expect in the coming weeks and months. In the future, you can stay up to date with the latest developments or plans for the language by tracking the [cairo-roadmap board](https://github.com/orgs/starkware-libs/projects/1/views/1) on Github.
+
+
 
 
           ## Why Cairo?
@@ -78,7 +80,9 @@ blocks:
           * **Iterators**: these will allow us to enrich the loop syntax, and iterate over arrays/spans much more conveniently
 
 
-          ### Cairo v2 - New Contract Syntax
+
+
+          ## Cairo v2 - New Contract Syntax
 
 
           The current syntax of Starknet’s smart contract mostly inherits from the previous Cairo 0 design. This design suffers from a few issues that we would like to address. Our goal in moving to a new syntax is to increase safety by making the contract’s behavior more explicit. By introducing more structure to the contract’s external functions, storage, and events, we can significantly decrease the probability of bugs. This will help protect protocols against potential hacks and loss of funds. In addition, the new syntax allows us to introduce *extensibility*, a feature highly requested by the community, that allows developers to easily use components written in external libraries.
