@@ -160,3 +160,9 @@ blocks:
 
 
           LambdaClass is an engineering-centered company with 10 years in the industry working in distributed systems, compilers, ML and cybersecurity. Throughout their history, they've supported projects that offer technical challenges and that make a difference in the world, choosing projects and partners mainly on the basis of shared goals and approaches with their creators or founders
+      - type: markdown
+        body: >-
+          **About LambdaClass**
+
+
+          LambdaClass is an engineering-centered company with 10 years in the industry working in distributed systems, compilers, ML and cybersecurity. Throughout their history, they've supported projects that offer technical challenges and that make a difference in the world, choosing projects and partners mainly on the basis of shared goals and approaches with their creators or founders
