@@ -137,7 +137,7 @@ const Content = ({ title, date, authors, difficulty, direction = "column", tags 
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
-    <Flex gap="3" direction="column" alignItems={direction === "row" ? "flex-start" : "flex-start"} flex={direction === "column" ? 1 : "initial"} w={direction === "column" ? "full" : "auto"}>
+    <Flex gap="3" direction="column" alignItems="flex-start" flex={direction === "column" ? 1 : "initial"} w={direction === "column" ? "full" : "auto"}>
       <Text
         color="heading-navy-fg"
         fontSize="18px"

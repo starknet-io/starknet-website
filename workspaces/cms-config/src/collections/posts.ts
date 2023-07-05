@@ -99,27 +99,6 @@ export const postsCollectionConfig = {
       widget: "datetime",
     },
     {
-      name: "authors",
-      label: "Authors",
-      widget: "list",
-      fields: [
-        {
-          label: "Author",
-          name: "author",
-          required: false,
-          widget: "string",
-          crowdin: true
-        },
-        {
-          label: "Author link",
-          name: "author_link",
-          required: false,
-          widget: "string",
-          crowdin: true
-        },
-      ],
-    },
-    {
       name: "video",
       label: "Video - youtube link",
       widget: "youtube",
