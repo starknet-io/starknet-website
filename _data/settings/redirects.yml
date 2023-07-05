@@ -99,7 +99,7 @@ items:
     destination: "https://starknet.karmahq.xyz"
   - source: /governance
     destination: "https://starknet.karmahq.xyz"
-  - source: /:slug/posts/engineering
-    destination: /en/posts/developers
-  - source: /:slug/posts/engineering/:path*
-    destination: /en/posts/developers
+  - source: /:locale/posts/engineering
+    destination: /:locale/posts/developers
+  - source: /:locale/posts/engineering/:path+
+    destination: /:locale/posts/developers/:path+
