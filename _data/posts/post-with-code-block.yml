@@ -1,0 +1,18 @@
+id: 28b6d5cf-eb60-4735-8824-a1877bcedff7
+post_type: article
+title: Post with code block
+published_date: 2023-07-05T17:24:27.287Z
+category: engineering
+topic:
+  - open_source
+short_desc: Here is a short desc
+blocks:
+  - type: code
+    language: javascript
+    body:
+      lang: javascript
+      code: |-
+        function add(num1, num2){
+          // here a little comment
+          return num1 + num2
+        }
