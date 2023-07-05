@@ -590,11 +590,11 @@ export async function updateArchivedJobs() {
   const activeJobsResourceName = "active-jobs";
   const archivedJobsResourceName = "archived-jobs";
 
-  const archivedJobsFilenames = await fs.readdir(`_data/${activeJobsResourceName}`);
+  const archivedJobsFilenames = await fs.readdir(`_data/${archivedJobsResourceName}`);
   for (const filename of archivedJobsFilenames) {
     const activeJobFilepath = path.join("_data", activeJobsResourceName, filename);
     const archivedJobFilepath = path.join("_data", archivedJobsResourceName, filename);
-    const data = await yaml(activeJobFilepath);
+    const data = await yaml(archivedJobFilepath);
     const isOlderThanTwoMonths = (dateString: string) => {
       const date = new Date(dateString);
       const today = new Date();
