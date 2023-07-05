@@ -60,7 +60,7 @@ items:
   - source: /building-on-starknet/versions-release-notes
     destination: "https://docs.starknet.io/documentation/starknet_versions/version_notes"
   - source: /governance/starknet-governance-posts
-    destination: /en/posts/governance
+    destination: /en/posts/foundation-and-governance
   - source: /what-is-starknet/stark-struck-podcast
     destination: /en/posts/stark-struck
   - source: /community/events
@@ -103,3 +103,7 @@ items:
     destination: /:locale/posts/developers
   - source: /:locale/posts/engineering/:path+
     destination: /:locale/posts/developers/:path+
+  - source: /:locale/posts/governance
+    destination: /:locale/posts/foundation-and-governance
+  - source: /:locale/posts/governance/:path+
+    destination: /:locale/posts/foundation-and-governance/:path+
