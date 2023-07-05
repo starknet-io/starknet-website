@@ -83,7 +83,7 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
               authors={tutorial.authors}
               date={date}
               difficulty={tutorial.difficulty}
-              direction="row"
+              variant="horizontal"
               tags={tutorial.tags}
             />
             

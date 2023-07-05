@@ -28,7 +28,7 @@ type RootProps = {
   newTab?: boolean;
 };
 
-type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
+type CardContentVariant = 'vertical' | 'horizontal';
 
 const Root = ({ children, href, newTab }: RootProps) => {
   return (
@@ -129,15 +129,15 @@ type ContentProps = {
   date?: string;
   authors?: Author[];
   difficulty?: string;
-  direction?: string;
+  variant?: CardContentVariant;
   tags?: string[];
 };
 
-const Content = ({ title, date, authors, difficulty, direction = "column", tags }: ContentProps) => {
+const Content = ({ title, date, authors, difficulty, variant = "vertical", tags }: ContentProps) => {
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
-    <Flex gap="3" direction="column" alignItems="flex-start" flex={direction === "column" ? 1 : "initial"} w={direction === "column" ? "full" : "auto"}>
+    <Flex gap="3" direction="column" alignItems="flex-start" flex={variant === "vertical" ? 1 : "initial"} w={variant === "vertical" ? "full" : "auto"}>
       <Text
         color="heading-navy-fg"
         fontSize="18px"
@@ -147,36 +147,42 @@ const Content = ({ title, date, authors, difficulty, direction = "column", tags 
       >
         {title}
       </Text>
-      <Flex direction={direction as ResponsiveValue<FlexDirection>} alignItems={direction === "row" ? "center" : "flex-start"} gap={direction === "row" ? "2" : "3"}>
-          {authors?.map((anAuthor, i) => 
+      <Flex
+        direction={variant === "vertical" ? "column" : "row"}
+        alignItems={variant === "horizontal" ? "center" : "flex-start"}
+        gap={variant === "horizontal" ? "2" : "3"}
+      >
+        {authors?.map((anAuthor, i) => (
           <HStack spacing="2" alignItems="flex-start">
-            <Icon as={HiOutlineUser} boxSize="24px" stroke="tutorials-card-icon-color" />
-            {anAuthor.author_link ?
-              <Link
-                href={anAuthor.author_link}
-                isExternal={true}
-                mr="2"
-              >
+            <Icon
+              as={HiOutlineUser}
+              boxSize="24px"
+              stroke="tutorials-card-icon-color"
+            />
+            {anAuthor.author_link ? (
+              <Link href={anAuthor.author_link} isExternal={true} mr="2">
                 <Text
                   variant="textLink"
-                  sx={{display: "flex", flexDirection: "row", alignItems: "center"}}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
                 >
                   {anAuthor.author}
                   <Icon ml={1} boxSize="14px" as={HiArrowUpRight} />
                 </Text>
-              </Link> :
-              <Text
-                variant="cardBody"
-                noOfLines={4}
-              >
+              </Link>
+            ) : (
+              <Text variant="cardBody" noOfLines={4}>
                 {anAuthor.author}
               </Text>
-            }
+            )}
           </HStack>
-        )}
+        ))}
       </Flex>
       <Flex direction="row">
-        <Flex direction={direction as ResponsiveValue<FlexDirection>} alignItems={direction === "row" ? "center" : "flex-start"} gap={direction === "row" ? "2" : "3"}>
+        <Flex direction={variant === "vertical" ? "column" : "row"} alignItems={variant === "horizontal" ? "center" : "flex-start"} gap={variant === "horizontal" ? "2" : "3"}>
           <HStack spacing="2">
             <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
             <Text variant="cardBody" noOfLines={4}>
@@ -190,18 +196,20 @@ const Content = ({ title, date, authors, difficulty, direction = "column", tags 
             </Text>
           </HStack>
         </Flex>
-        {direction === "row" ? <Flex height="40px" ml="24px">
-          {Array.isArray(tags) &&
-            tags.map((tag, i) => {
-              // only show max 2 tags
-              if (i > 1) return null;
-              return (
-                <Tag key={i} variant="listCard">
-                  {tag}
-                </Tag>
-              );
-            })}
-        </Flex> : null}
+        {variant === "horizontal" ? (
+          <Flex height="40px" ml="24px">
+            {Array.isArray(tags) &&
+              tags.map((tag, i) => {
+                // only show max 2 tags
+                if (i > 1) return null;
+                return (
+                  <Tag key={i} variant="listCard">
+                    {tag}
+                  </Tag>
+                );
+              })}
+          </Flex>
+        ) : null}
       </Flex>
     </Flex>
   );
