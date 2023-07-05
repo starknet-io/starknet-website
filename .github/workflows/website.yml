@@ -47,6 +47,8 @@ jobs:
 
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
+        with:
+          slug-maxlength: 40
 
       - name: Create Env
         run: echo -e "\n[env.${{ env.GITHUB_REF_SLUG }}]\n" >> workspaces/website/wrangler.toml
@@ -64,7 +66,7 @@ jobs:
         run: yarn workspace @starknet-io/website build
         env:
           VITE_SITE_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
-          VITE_ALGOLIA_INDEX: dev
+          VITE_ALGOLIA_INDEX: ${{ github.ref_name == 'production' && 'production' || 'dev' }}
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
           VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
