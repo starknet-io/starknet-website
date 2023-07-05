@@ -8,18 +8,17 @@ const router = Router();
 
 router.all("/api/*", apiRouter.handle);
 
-router.get(
-  `/:locale/posts/engineering/:slug+`,
-  (req: IRequest, event: WorkerGlobalScopeEventMap["fetch"]) => {
-    return Response.redirect(new URL(`/${req.params.locale}/posts/developers/${req.params.slug}`, event.request.url), 301);
-  }
-);
-
 redirects.items.forEach(({ source, destination }) => {
   router.get(
     source,
     (req: IRequest, event: WorkerGlobalScopeEventMap["fetch"]) => {
-      return Response.redirect(new URL(destination, event.request.url), 301);
+      let src = destination
+
+      for (const [key, value] of Object.entries(req.params)) {
+        src = src.replace(new RegExp(`:${key}\+?`), value)
+      }
+
+      return Response.redirect(new URL(src, event.request.url), 301);
     }
   );
 });
