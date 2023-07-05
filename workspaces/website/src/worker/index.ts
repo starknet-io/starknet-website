@@ -15,7 +15,7 @@ redirects.items.forEach(({ source, destination }) => {
       let src = destination
 
       for (const [key, value] of Object.entries(req.params)) {
-        src = src.replace(new RegExp(`:${key}\+?`), value)
+        src = src.replace(new RegExp(`:${key}\\+?`), value)
       }
 
       return Response.redirect(new URL(src, event.request.url), 301);
