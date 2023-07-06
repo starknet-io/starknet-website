@@ -1,1 +1,5 @@
-items: []
+items:
+  - variant: important
+    hasCloseButton: true
+    id: c3ca1053-9cc9-4f74-a909-1286d00ebcf4
+    title: Starknet Alpha v0.12.0 is up for a community governance vote!
