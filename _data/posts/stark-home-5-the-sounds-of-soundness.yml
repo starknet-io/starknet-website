@@ -2,12 +2,6 @@ id: 92af078d-b4c2-4c96-b807-8001a7c64bdc
 post_type: video
 title: "STARK @ Home 5: The Sounds of Soundness"
 published_date: 2020-04-30T14:11:02.387Z
-image: /assets/starkhome05.png
-category: stark-math
-topic:
-  - starknet
-short_desc: How do parrots check their phone bill? And what does it have to do
-  with the PCP theorem?
 video:
   url: https://youtu.be/CpS_OCpU3xM
   id: CpS_OCpU3xM
@@ -16,11 +10,8 @@ video:
     etag: tsJZGBCDw6cJHKn0yfUczeYZP6M
     id: CpS_OCpU3xM
     snippet:
-      publishedAt: 2020-04-30T14:55:46Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 5: The Sounds of Soundness"
-      description: How do parrots check their phone bill? And what does it have to do
-        with the PCP theorem?
+      publishedAt: 2020-04-30T14:55:46.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/CpS_OCpU3xM/default.jpg
@@ -43,12 +34,15 @@ video:
           width: 1280
           height: 720
       channelTitle: StarkWare
+      title: "STARK @ Home 5: The Sounds of Soundness"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 5: The Sounds of Soundness"
         description: How do parrots check their phone bill? And what does it have to do
           with the PCP theorem?
+      description: How do parrots check their phone bill? And what does it have to do
+        with the PCP theorem?
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H21M3S
       dimension: 2d
@@ -57,3 +51,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome05.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: How do parrots check their phone bill? And what does it have to do
+  with the PCP theorem?
