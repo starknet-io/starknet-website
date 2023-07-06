@@ -15,3 +15,20 @@ short_desc: >-
   An open discussion regarding Starknet Alpha v0.12.0 version upgrade.
 
   And an in-depth explanation of all the new features of the upcoming version.
+blocks:
+  - type: markdown
+    body: >-
+      StarkWare and Lambda Class will present to the builders council and
+      delegates Starknet new version in preparation for the upcoming vote.
+
+      An open discussion regarding Starknet Alpha v0.12.0 version upgrade.
+
+      And an in-depth explanation of all the new features of the upcoming version.
+  - type: link_list
+    randomize: false
+    heading: Related links
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Roadmap & version updates
+          custom_internal_link: https://www.starknet.io/en/roadmap
