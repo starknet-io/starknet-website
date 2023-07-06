@@ -26,20 +26,6 @@ export default function App() {
           const month = `${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
           return entry.get('data').set('month', month);
         }
-        if (entry.get('collection') === 'jobs') {
-          const archiveAfter: any = new Date(entry.get('data').get('archive_after'));
-          const publishedAt: any = new Date(entry.get('data').get('published_at'));
-          const isOlderThanTwoMonths = (dateString: string) => {
-            const date = new Date(dateString);
-            const today = new Date();
-            today.setMonth(today.getMonth() - archiveAfter);
-            return date < today;
-          }
-          const isOlder = isOlderThanTwoMonths(publishedAt);
-          if (isOlder) {
-            return entry.get('data').set('status', "archived");
-          }
-        }
       },
     });
     
