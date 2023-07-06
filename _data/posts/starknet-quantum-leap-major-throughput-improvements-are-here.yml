@@ -19,8 +19,8 @@ short_desc: >
 blocks:
   - type: group
     blocks:
-      - type: page_header
-        title: Starknet is about to break through the TPS barrier
+      - type: markdown
+        body: "## Starknet is about to break through the TPS barrier"
       - type: markdown
         body: >-
           ## TL;DR
