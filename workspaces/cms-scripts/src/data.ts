@@ -454,7 +454,6 @@ export async function getSimpleData<T = {}>(
       const sourceFilepath = path.join("_data", resourceName, filename);
       const sourceData = await yaml(sourceFilepath);
       const data = await translateFile(locale, resourceName, filename);
-
       const defaultLocaleTitle = sourceData.title ?? sourceData.name;
 
       const slug = defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined;
@@ -565,11 +564,7 @@ export async function updateJobs() {
     }
     const isOlder = isOlderThanTwoMonths(data.published_at);
     if (isOlder) {
-      try {
-        data.archived = true;
-      } catch (err) {
-        console.error(err);
-      }
+      data.archived = true;
     }
   }
 }

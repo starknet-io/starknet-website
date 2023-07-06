@@ -52,7 +52,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
     <Box>
       <InstantSearch
         searchClient={searchClient}
-        indexName={`web_active-jobs_${env.ALGOLIA_INDEX}`}
+        indexName={`web_jobs_${env.ALGOLIA_INDEX}`}
       >
         <Configure
           hitsPerPage={40}
@@ -318,7 +318,7 @@ function CustomHits() {
   return (
     <>
       <Flex gap={4} direction="column" flex={1}>
-        {hits.filter((hit => !hit.archived)).map((hit, i) => (
+        {hits.filter((hit => hit.status === "active")).map((hit, i) => (
           <JobsCard key={i} hit={hit} />
         ))}
       </Flex>
