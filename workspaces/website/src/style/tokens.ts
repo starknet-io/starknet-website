@@ -63,6 +63,7 @@ export const tokens = {
       "columnlink-active-fg": "#0C0C4F",
       "divider-bg": "#EFEFEF",
       "footer-divider-bg": "#EFEFEF",
+      "code-divider-bg": "#313131",
       "footer-stack-bg": "#F6F6F6",
       "navbar-link-bg": "transparent",
       "navbar-link-fg": "#6B7280",
@@ -122,6 +123,7 @@ export const tokens = {
       "card-yellow-br": "#F7F4F2",
       "card-green-bg": "#F8FCFD",
       "card-green-br": "#EFF6F7",
+      "card-code-bg": "#F6F6F6",
       "tabs-main-br": "#EFEFEF",
       "tabs-fg": "#858585",
       "tabs-bg": "transparent",
@@ -264,6 +266,7 @@ export const tokens = {
       "columnlink-active-fg": "#9EBFFF",
       "divider-bg": "#313131",
       "footer-divider-bg": "#313131",
+      "code-divider-bg": "#CCCCCC",
       "navbar-link-bg": "transparent",
       "navbar-link-fg": "#CCCCCC",
       "navbar-link-hover-bg": "#121212",
@@ -324,6 +327,7 @@ export const tokens = {
       "card-yellow-br": "#121212",
       "card-green-bg": "#161616",
       "card-green-br": "#121212",
+      "card-code-bg": "#161616",
       "tabs-main-br": "#1E1D1D",
       "tabs-fg": "#7E7E7E",
       "tabs-bg": "transparent",
@@ -750,6 +754,10 @@ export const semanticTokens = {
       default: tokens.colors.light["footer-divider-bg"],
       _dark: tokens.colors.dark["footer-divider-bg"],
     },
+    "code-divider-bg": {
+      default: tokens.colors.light["code-divider-bg"],
+      _dark: tokens.colors.dark["code-divider-bg"],
+    },
     // "hero-gradient-1a": {
     //   default: tokens.colors.light["hero-gradient-1a"],
     //   _dark: tokens.colors.dark["hero-gradient-1a"],
@@ -873,6 +881,10 @@ export const semanticTokens = {
     "card-green-br": {
       default: tokens.colors.light["card-green-br"],
       _dark: tokens.colors.dark["card-green-br"],
+    },
+    "card-code-bg": {
+      default: tokens.colors.light["card-code-bg"],
+      _dark: tokens.colors.dark["card-code-bg"],
     },
     "card-blue-bg": {
       default: tokens.colors.light["card-blue-bg"],
