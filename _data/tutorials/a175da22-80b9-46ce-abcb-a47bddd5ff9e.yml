@@ -1,0 +1,36 @@
+id: a175da22-80b9-46ce-abcb-a47bddd5ff9e
+type: youtube
+url: https://www.youtube.com/live/XCxAvuutks4?feature=share
+image: /assets/workshop-16-apibara-integrations-with-francesco-ceccon-youtube.png
+title: Apibara Integrations with Francesco Ceccon
+authors:
+  - author: Francesco Ceccon
+    author_link: https://twitter.com/ceccon_me
+published_at: 2023-07-04T12:00:26.377Z
+difficulty: beginner
+course: cairo_workshops
+tags: Data, dApps, Open-source
+description: >-
+  Apibara DNA is an open-source tool to stream on-chain data.
+
+  Apibara are now launching *integrations* to quickly send Starknet data where it’s needed. In the workshop they will show us what you can build using integrations and how to get started.
+
+
+  In the workshop we will go through how to:
+
+
+  * Stream Starknet data with Apibara and store it in a Postgres database
+
+  * Build an API that uses ChatGPT to query data
+
+
+  We will also learn:
+
+
+  * What is Apibara DNA? How to use it?
+
+  * What are integrations? What type of integrations exist?
+
+  * How to use 1 or 2 integrations to build a real-world application.
+
+  * How to contribute and add even more integrations.
