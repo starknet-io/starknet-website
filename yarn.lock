@@ -4790,6 +4790,7 @@ __metadata:
     framer-motion: ^10.12.4
     fsevents: ^2.3.2
     highlight.js: ^11.8.0
+    highlightjs-cairo: ^0.2.0
     itty-router: ^4.0.11
     marked: ^5.1.0
     moment: ^2.29.4
@@ -11118,10 +11119,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^11.8.0":
+"highlight.js@npm:^11.0.0, highlight.js@npm:^11.8.0":
   version: 11.8.0
   resolution: "highlight.js@npm:11.8.0"
   checksum: d2578a57aee7315946ff19379053fd0a28b127baabf7617ab1d28d62cdc4eaf3d75053569cb8479a5afdc7a68f1ba9a6c1d612d8ae399b4b9aa43093b4fb6831
+  languageName: node
+  linkType: hard
+
+"highlightjs-cairo@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "highlightjs-cairo@npm:0.2.0"
+  dependencies:
+    highlight.js: ^11.0.0
+  checksum: fa3e19b825258f0171c6daaa44740f9ebf82c3ada31e5e7279674d12e35a55fc7deced0edbf6426dc72380f676868c02d2f9e19ced0c0d2ed041e4fec4308cee
   languageName: node
   linkType: hard
 
