@@ -9,6 +9,8 @@ import { Post } from "@starknet-io/cms-data/src/posts";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { Index } from "unist-util-index";
+import '@ui/CodeHighlight/code-highlight-init'
+
 import {
   Container,
   Flex,
