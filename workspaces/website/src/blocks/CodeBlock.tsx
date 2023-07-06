@@ -6,9 +6,12 @@ import CopyButton from "@ui/Button/CopyButton";
 import { codeLanguages } from "@starknet-io/cms-config/src/blocks";
 import "../style/highlight/highlight.css";
 
-export default function CodeBlock(
-  props: Pick<CodeBlockType, "body" | "language">
-) {
+type CodeBlockProps = {
+  body?: CodeBlockType['body']
+  language: CodeBlockType['language']
+}
+
+export default function CodeBlock(props: CodeBlockProps) {
   const { body, language } = props;
   const langDetails = codeLanguages.find(c => c.value === language)
 
@@ -25,7 +28,7 @@ export default function CodeBlock(
       >
         <pre>
           <code
-            dangerouslySetInnerHTML={{ __html: body.code }}
+            dangerouslySetInnerHTML={{ __html: body?.code || "" }}
             className={`language-${language}`}
           />
         </pre>
@@ -35,7 +38,7 @@ export default function CodeBlock(
       }}>
         <Text fontSize='sm'>{langDetails?.abbreviation || language}</Text>
         <Divider orientation='horizontal' height='1rem' w='1px' bg='code-divider-bg'/>
-        <CopyButton code={body.code} />
+        <CopyButton code={body?.code || ''} />
       </Box>
     </Box>
   );
