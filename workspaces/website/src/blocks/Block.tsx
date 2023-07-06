@@ -6,11 +6,7 @@ import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCom
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
-import BlockDapps from "./dataBlocks/BlockDapps/BlockDapps";
-import BlockBlockExplorers from "./dataBlocks/BlockBlockExplorers/BlockBlockExplorers";
 import ListCardItems from "./ListCardItems";
-import BlockBridges from "./dataBlocks/BlockBridges/BlockBridges";
-import BlockOnRamps from "./dataBlocks/BlockOnRamps/BlockOnRamps";
 import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { Container } from "./Container";
 import { LinkList } from "./LinkList";
@@ -135,42 +131,10 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
 
     return <HomepageHero seo={homeSEO} />;
-  } else if (block.type === "dapps") {
-    return (
-      <BlockDapps
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "block_explorers") {
-    return (
-      <BlockBlockExplorers
-        params={{
-          locale,
-        }}
-      />
-    );
   } else if (block.type === "card_list") {
     return (
       <ListCardItems
         {...block}
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "bridges") {
-    return (
-      <BlockBridges
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "on_ramps") {
-    return (
-      <BlockOnRamps
         params={{
           locale,
         }}

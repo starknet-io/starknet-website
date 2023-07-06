@@ -3,7 +3,8 @@ type: youtube
 url: https://youtu.be/Th7pGv42900
 image: /assets/ec09.jpeg
 title: "Aira Pitch "
-author: "Encode "
+authors:
+  - author: "Encode "
 published_at: 2022-10-16T00:00:00+00:00
 difficulty: intermediate
 course: hackathon_oct_22
