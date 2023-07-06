@@ -2,4 +2,7 @@ items:
   - variant: info
     hasCloseButton: true
     id: c3ca1053-9cc9-4f74-a909-1286d00ebcf4
-    title: "Starknet Alpha v0.12.0 is up for a community governance vote! "
+    title: ""
+    body: "[Starknet Alpha v0.12.0 is up for a community governance vote!
+      ](https://snapshot.org/#/starknet.eth/proposal/0xe3666dcfaecdd871bbad1c2f\
+      882861d2bb0a26eb27aeab36679c498f2a1c86c2)"
