@@ -7,6 +7,14 @@ export interface MarkdownBlock {
   readonly type: "markdown";
   readonly body: string;
 }
+export interface CodeBlock {
+  readonly type: "code";
+  readonly body: {
+    code: string
+    lang: string
+  };
+  readonly language: string
+}
 
 export interface CommunityEventsBlock {
   readonly type: "community_events";
@@ -146,6 +154,7 @@ export interface OrderedBlock {
 
 export type Block =
   | MarkdownBlock
+  | CodeBlock
   | CommunityEventsBlock
   | WalletsBlock
   | BasicCardBlock
