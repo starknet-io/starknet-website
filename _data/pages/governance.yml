@@ -32,7 +32,7 @@ blocks:
           custom_title: "Vote now on Snapshot "
           custom_external_link: https://snapshot.org/#/starknet.eth/proposal/0xe3666dcfaecdd871bbad1c2f882861d2bb0a26eb27aeab36679c498f2a1c86c2
         subLabel:
-          label: View current Starknet proposal and vote now
+          label: View proposal for Starknet Alpha v0.12.0 and vote now!
       - link:
           custom_title: Snapshot
           custom_external_link: https://snapshot.org/#/starknet.eth
