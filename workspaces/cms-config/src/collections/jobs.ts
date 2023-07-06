@@ -1,15 +1,27 @@
 import { CmsCollection } from "../types";
 
-export const activeJobsCollectionConfig = {
+export const jobsCollectionConfig = {
   crowdin: true,
-  name: "active-jobs",
-  label: "Active jobs",
+  name: "jobs",
+  label: "Jobs",
   identifier_field: "id",
-  label_singular: "Active job",
-  folder: '_data/active-jobs',
+  label_singular: "Job",
+  folder: '_data/jobs',
   create: true,
   format: "yml",
   summary: "{{job.title}}",
+  view_filters: [
+    {
+      field: 'status', 
+      label: 'Active',
+      pattern: 'active'
+    },
+    {
+      field: 'status', 
+      label: 'Archived',
+      pattern: 'archived'
+    },
+  ],
   fields: [
     {
       name: "id",
@@ -22,11 +34,20 @@ export const activeJobsCollectionConfig = {
       widget: "datetime",
     },
     {
-      label: "Archived",
-      name: "archived",
-      hint: "If set to false, update the 'Published at' date to be not older that the value from 'Archive after' field",
-      widget: "boolean",
-      required: false,
+      label: "Status",
+      name: "status",
+      hint: "If set to Active, update the 'Published at' date to be not older than the value from 'Archive after' field",
+      widget: "select",
+      options: [
+        {
+          label: "Active",
+          value: "active",
+        },
+        {
+          label: "Archived",
+          value: "archived",
+        },
+      ]
     },
     {
       label: "Archive after",

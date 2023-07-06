@@ -9,12 +9,8 @@ files:
   - source: /_crowdin/source/events/*
     translation: /_crowdin/translation/%two_letters_code%/events/%original_file_name%
 
-- source: /_crowdin/source/active-jobs/*
-  translation: /_crowdin/translation/%two_letters_code%/active-jobs/%original_file_name%
-
-- source: /_crowdin/source/archived-jobs/*
-  translation: /_crowdin/translation/%two_letters_code%/archived-jobs/%original_file_name%
-
+  - source: /_crowdin/source/jobs/*
+    translation: /_crowdin/translation/%two_letters_code%/jobs/%original_file_name%
 
   - source: /_crowdin/source/pages/*
     translation: /_crowdin/translation/%two_letters_code%/pages/%original_file_name%
