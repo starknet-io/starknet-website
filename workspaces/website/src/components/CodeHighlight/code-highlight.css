@@ -1,6 +1,6 @@
 :root {
   --hljs-quote-clr: #998; 
-  --hljs-keyword-clr: #333; 
+  --hljs-keyword-clr: #b58900; 
 }
 body.chakra-ui-dark {
   --hljs-keyword-clr: #8b5959;

@@ -23,6 +23,7 @@ import {
   RoadmapVersion,
 } from "@starknet-io/cms-data/src/roadmap";
 import RoadmapPostVersion from "../../(components)/RoadmapPostVersion";
+import '@ui/CodeHighlight/code-highlight-init'
 
 interface KeyValuePairs {
   [key: string]: string;
