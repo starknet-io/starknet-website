@@ -3,6 +3,7 @@ import { CmsField, CmsFieldList } from "./types";
 export const codeLanguages = [
   {label: 'Asciidoc', value: 'asciidoc', abbreviation: 'ADOC'},
   {label: 'Bash', value: 'bash', abbreviation: 'SH'},
+  {label: 'Cairo', value: 'cairo', abbreviation: 'Cairo'},
   {label: 'Clojure', value: 'clojure', abbreviation: 'CLJ'},
   {label: 'C++', value: 'cpp', abbreviation: 'CPP'},
   {label: 'CSS', value: 'css', abbreviation: 'CSS'},
