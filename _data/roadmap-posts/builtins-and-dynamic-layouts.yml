@@ -1,0 +1,20 @@
+id: 6777038e-dcdb-4ef8-82b5-f30db8876456
+title: Builtins and Dynamic Layouts
+availability: July 2023
+specific_info: ""
+version: ba3a82db-4811-42f4-9161-c1ab955c5445
+stage: building-next
+blocks:
+  - type: markdown
+    body: >-
+      In v0.12.1, we are happy to announce that the Keccak builtin will be
+      enabled on Starknet.
+
+
+      The Cairo stack and Starknet protocol employ builtins. These builtins streamline the computation process by reducing the number of trace cells required, resulting in more efficient proofs. However, the current approach of using a static list of layouts for different builtins has limitations. 
+
+
+      To address this, the development team plans to implement Dynamic Layouts using Keccak, which tailor the layout to each proving job, optimizing trace cell allocation. This dynamic approach will enhance efficiency, simplify the integration of new builtins, and reduce unnecessary costs for users, making the proving process more streamlined and effective.
+
+
+      Y﻿ou can learn more about Builtins and Dynamic layouts [here](https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e)
