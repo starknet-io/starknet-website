@@ -2,7 +2,7 @@ id: 6777038e-dcdb-4ef8-82b5-f30db8876456
 title: Builtins and Dynamic Layouts
 availability: July 2023
 specific_info: ""
-version: ba3a82db-4811-42f4-9161-c1ab955c5445
+version: f6ac4e13-3849-45c4-a2a8-f4da12799f0e
 stage: building-next
 blocks:
   - type: markdown
