@@ -1,0 +1,21 @@
+id: 91b66c2c-a25c-4b58-ae65-a7b744a1e240
+title: New page with code
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      ## H﻿1 heading
+
+
+
+      T﻿ext here
+
+
+
+      ```javascript
+              const name = "Akrom"
+      const secondName = "Akromdev"
+
+      ### W﻿hy this code works best
