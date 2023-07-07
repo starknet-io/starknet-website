@@ -17,4 +17,4 @@ blocks:
       To address this, the development team plans to implement Dynamic Layouts using Keccak, which tailor the layout to each proving job, optimizing trace cell allocation. This dynamic approach will enhance efficiency, simplify the integration of new builtins, and reduce unnecessary costs for users, making the proving process more streamlined and effective.
 
 
-      Y﻿ou can learn more about Builtins and Dynamic layouts [here](https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e)
+      Y﻿ou can learn more about Builtins and Dynamic layouts [here](https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e).
