@@ -1,0 +1,11 @@
+id: fd054674-cadb-4b40-ba8c-fca36ad37e9b
+title: "Same code "
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      ```javascript
+              const name = "Dev"
+      const lastName = "DDD"```
