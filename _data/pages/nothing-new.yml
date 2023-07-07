@@ -1,0 +1,16 @@
+id: 4433f11a-9131-42c1-8e60-126f92f8ff81
+title: Nothing new
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      s﻿dfasdfasdf
+
+      ```javascript
+      const name = "DDDDD"
+      // This a comment
+      const lastName = "DDDDD"
+      console.log(name)
+      ```
