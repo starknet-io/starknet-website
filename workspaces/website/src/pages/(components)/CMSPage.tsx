@@ -13,6 +13,7 @@ import {
   BreadcrumbLink,
   Flex,
 } from "@chakra-ui/react";
+import '@ui/CodeHighlight/code-highlight-init'
 
 type CMSPageProps = {
   data: PageType;
