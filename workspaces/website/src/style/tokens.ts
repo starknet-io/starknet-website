@@ -123,7 +123,6 @@ export const tokens = {
       "card-yellow-br": "#F7F4F2",
       "card-green-bg": "#F8FCFD",
       "card-green-br": "#EFF6F7",
-      "card-code-bg": "#F6F6F6",
       "tabs-main-br": "#EFEFEF",
       "tabs-fg": "#858585",
       "tabs-bg": "transparent",
@@ -327,7 +326,6 @@ export const tokens = {
       "card-yellow-br": "#121212",
       "card-green-bg": "#161616",
       "card-green-br": "#121212",
-      "card-code-bg": "#161616",
       "tabs-main-br": "#1E1D1D",
       "tabs-fg": "#7E7E7E",
       "tabs-bg": "transparent",
@@ -881,10 +879,6 @@ export const semanticTokens = {
     "card-green-br": {
       default: tokens.colors.light["card-green-br"],
       _dark: tokens.colors.dark["card-green-br"],
-    },
-    "card-code-bg": {
-      default: tokens.colors.light["card-code-bg"],
-      _dark: tokens.colors.dark["card-code-bg"],
     },
     "card-blue-bg": {
       default: tokens.colors.light["card-blue-bg"],
