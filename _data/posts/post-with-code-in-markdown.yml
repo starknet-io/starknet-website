@@ -1,0 +1,15 @@
+id: cb9012cd-6e84-4b99-bb67-d593387d6380
+post_type: article
+title: Post with code in markdown
+published_date: 2023-07-07T14:56:08.625Z
+category: engineering
+blocks:
+  - type: markdown
+    body: |-
+      H﻿ere is my code example below
+
+      ```javascript
+      // Below is the javascript code to console name
+      const name = "Developer"
+      console.log(name)
+      ```
