@@ -15,6 +15,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
 import { Block } from "src/blocks/Block";
 import { AnnouncementsPost as AnnouncementPostType } from "@starknet-io/cms-data/src/announcements";
+import '@ui/CodeHighlight/code-highlight-init'
 
 export type AnnouncementPostProps = {
   announcementsPost: AnnouncementPostType;
