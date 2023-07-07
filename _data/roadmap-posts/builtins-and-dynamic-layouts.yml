@@ -11,4 +11,10 @@ blocks:
       enabled on Starknet!  
 
 
+      The Cairo stack and Starknet protocol employ builtins. These builtins streamline the computation process by reducing the number of trace cells required, resulting in more efficient proofs. However, the current approach of using a static list of layouts for different builtins has limitations. 
+
+
+      To address this, the development team plans to implement Dynamic Layouts , which tailor the layout to each proving job, optimizing trace cell allocation. This dynamic approach will enhance efficiency, simplify the integration of new builtins, and reduce unnecessary costs for users, making the proving process more streamlined and effective.
+
+
       The layout with Keccak will be activated only when a transaction utilizing Keccak is included in the block (otherwise the sequencer will use the [current layout](https://github.com/starkware-libs/cairo-lang/blob/c98fc0b50529185b7018208cb3460191eeb53e0d/src/starkware/cairo/lang/instances.py#L204)). It's important to note that the price of all other builtins and Cairo steps will remain unchanged in both layouts, just as it is today. However, the price of Keccak will be determined based on its ratio within [this layout](https://github.com/starkware-libs/cairo-lang/blob/c98fc0b50529185b7018208cb3460191eeb53e0d/src/starkware/cairo/lang/instances.py#L250) (2048x the price of 1 cairo step).
