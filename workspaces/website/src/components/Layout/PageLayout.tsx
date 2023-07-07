@@ -32,11 +32,6 @@ export const PageLayout = (props: Props) => {
     setIsPopupOpen(!!isSummitPopupOpen);
   }, [isSummitPopupOpen]);
 
-  useEffect(() => {
-    console.log("isSummitPopupOpen ", isSummitPopupOpen);
-    console.log("isPopupOpen ", isPopupOpen);
-  }, [isSummitPopupOpen, isPopupOpen]);
-
   const closePopup = () => {
     setIsSummitPopupOpen(false);
   }
