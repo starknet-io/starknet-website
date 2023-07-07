@@ -7,15 +7,59 @@ topic:
   - open_source
 short_desc: Here is a short desc
 blocks:
+  - type: markdown
+    body: >-
+      ### Safe Casm
+
+
+      The method by which Sierra guarantees that user code is always provable is by compiling Sierra instructions to a subset of Casm, which we call "safe Casm". The important property that we require from safe Casm is being provable for *all* inputs. A canonical example of safe Casm is using `if/else` instructions instead of `assert`, i.e. making sure all failures are graceful.
+
+
+      To better understand the considerations that go into designing the Sierra → Casm compiler, consider the `find_element` function from the common library of Cairo 0:
+  - type: code
+    language: cairo
+    body:
+      code: |-
+        use starknet::syscalls::emit_event_syscall;
+
+        let keys = ArrayTrait::new();
+        keys.append('key');
+        keys.append('deposit');
+        let values = ArrayTrait::new();
+        values.append(1);
+        values.append(2);
+        values.append(3);
+        emit_event_syscall(keys, values).unwrap_syscall();
+  - type: markdown
+    body: "## C﻿ode example in JavaScript"
   - type: code
     language: javascript
     body:
       lang: javascript
-      code: |-
-        function add(num1, num2){
-          // here a little comment
-          return num1 + num2
-        }
+      code: >-
+        web3.extend({
+            property: 'myModule',
+            methods: [{
+                name: 'getBalance',
+                call: 'eth_getBalance',
+                params: 2,
+                inputFormatter: [web3.extend.formatters.inputAddressFormatter, web3.extend.formatters.inputDefaultBlockNumberFormatter],
+                outputFormatter: web3.utils.hexToNumberString
+            },{
+                name: 'getGasPriceSuperFunction',
+                call: 'eth_gasPriceSuper',
+                params: 2,
+                inputFormatter: [null, web3.utils.numberToHex]
+            }]
+        });
+
+
+        web3.extend({
+            methods: [{
+                name: 'directCall',
+                call: 'eth_callForFun',
+            }]
+        });
   - type: code
     language: python
     body:
@@ -48,33 +92,3 @@ blocks:
 
         # printing result
         print("The string after replacing : " + str(res))
-  - type: code
-    language: cairo
-    body:
-      code: >-
-        func find_element{range_check_ptr}(array_ptr: felt*, elm_size, n_elms,
-        key) -> (elm_ptr: felt*) {
-            alloc_locals;
-            local index;
-            %{
-                ...
-            %}
-            assert_nn_le(a=index, b=n_elms - 1);
-            tempvar elm_ptr = array_ptr + elm_size * index;
-            assert [elm_ptr] = key;
-            return (elm_ptr=elm_ptr);
-        }
-  - type: code
-    language: cairo
-    body:
-      code: |-
-        use starknet::syscalls::emit_event_syscall;
-
-        let keys = ArrayTrait::new();
-        keys.append('key');
-        keys.append('deposit');
-        let values = ArrayTrait::new();
-        values.append(1);
-        values.append(2);
-        values.append(3);
-        emit_event_syscall(keys, values).unwrap_syscall();
