@@ -16,21 +16,14 @@ export default function CodeHighlight(props: CodeHighlightProps) {
   const codeHtml = code ? hljs.highlight(code, {language}).value: ''
 
   return (
-    <Box position="relative" zIndex="0" bg="card-code-bg" role='group'>
-      <Box
-        rounded="8px"
-        m="8"
-        sx={{ "& > div": { paddingBlock: "5", paddingEnd: "4" } }}
-        overflow='auto'
-      >
+    <Box position="relative" zIndex="0" className="hljs-box" role='group'>
         <pre>
           <code
             dangerouslySetInnerHTML={{ __html: codeHtml }}
             className={`hljs language-${language}`}
           />
         </pre>
-      </Box>
-      <Box position="absolute" right="1.25em" top='1rem' display="flex" alignItems='center' gap="10px" opacity={0} transition='all 0.2s cubic-bezier(.08,.52,.52,1)' _groupHover={{
+      <Box position="absolute" right="1.25em" top='5px' display="flex" alignItems='center' gap="10px" opacity={0} transition='all 0.2s cubic-bezier(.08,.52,.52,1)' _groupHover={{
         opacity: 1
       }}>
         <Text fontSize='sm'>{langDetails?.abbreviation || language}</Text>
