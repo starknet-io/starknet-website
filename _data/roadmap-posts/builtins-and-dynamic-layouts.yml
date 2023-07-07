@@ -1,0 +1,14 @@
+id: 6777038e-dcdb-4ef8-82b5-f30db8876456
+title: Builtins and Dynamic Layouts
+availability: July 2023
+specific_info: ""
+version: ba3a82db-4811-42f4-9161-c1ab955c5445
+stage: building-next
+blocks:
+  - type: markdown
+    body: >-
+      On v0.12.1, we are happy to announce that the Keccak builtin will be
+      enabled on Starknet!  
+
+
+      The layout with Keccak will be activated only when a transaction utilizing Keccak is included in the block (otherwise the sequencer will use the [current layout](https://github.com/starkware-libs/cairo-lang/blob/c98fc0b50529185b7018208cb3460191eeb53e0d/src/starkware/cairo/lang/instances.py#L204)). It's important to note that the price of all other builtins and Cairo steps will remain unchanged in both layouts, just as it is today. However, the price of Keccak will be determined based on its ratio within [this layout](https://github.com/starkware-libs/cairo-lang/blob/c98fc0b50529185b7018208cb3460191eeb53e0d/src/starkware/cairo/lang/instances.py#L250) (2048x the price of 1 cairo step).
