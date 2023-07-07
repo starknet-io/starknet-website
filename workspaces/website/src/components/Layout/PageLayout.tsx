@@ -32,6 +32,11 @@ export const PageLayout = (props: Props) => {
     setIsPopupOpen(!!isSummitPopupOpen);
   }, [isSummitPopupOpen]);
 
+  useEffect(() => {
+    console.log("isSummitPopupOpen ", isSummitPopupOpen);
+    console.log("isPopupOpen ", isPopupOpen);
+  }, [isSummitPopupOpen, isPopupOpen]);
+
   const closePopup = () => {
     setIsSummitPopupOpen(false);
   }
@@ -107,7 +112,7 @@ export const PageLayout = (props: Props) => {
         style={{
           position: "fixed",
           right:"16px",
-          bottom:"32px",
+          bottom:"16px",
           width:"336px",
           height:"358px"
         }}>
