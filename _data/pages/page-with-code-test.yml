@@ -1,0 +1,18 @@
+id: 620ec2a4-7767-47cd-b3a5-0f21b0bff12c
+title: Page with code test
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      # T﻿est page
+
+      H﻿ere is a code snippet
+
+      ```javascript
+      const name = "Dev"
+      const secondName = "DDDD"
+      ```
+
+      ## W﻿hy this is a test
