@@ -11,6 +11,7 @@ export interface HeadingData {
 
 interface Props {
   readonly headings: readonly HeadingData[];
+  readonly tocCustomTitle?: string;
 }
 
 export function TableOfContents(props: Props) {
@@ -72,7 +73,7 @@ export function TableOfContents(props: Props) {
         variant="h6"
         color="heading-navy-fg"
       >
-        On this page
+        {props.tocCustomTitle ? props.tocCustomTitle : "On this page"}
       </Heading>
       {props.headings.map((h, i) => (
         <Toc.Item key={i} isActive={`toc-${slugify(h.title)}` === activeId} pl={`${h.level * 16}px`}>
