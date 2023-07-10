@@ -1,0 +1,11 @@
+id: dcf56e91-60dd-4988-a908-4cf97474a884
+title: js code
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      ```
+      import js from 'javascript'
+      ```
