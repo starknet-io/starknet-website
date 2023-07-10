@@ -19,8 +19,8 @@ short_desc: >
 blocks:
   - type: group
     blocks:
-      - type: page_header
-        title: Starknet is about to break through the TPS barrier
+      - type: markdown
+        body: "## Starknet is about to break through the TPS barrier"
       - type: markdown
         body: >-
           ## TL;DR
@@ -107,7 +107,7 @@ blocks:
           In this version we’re introducing significant improvements to the smart contract syntax. The new syntax focuses on safety and lays the foundations for extensibility. Safety in this context means being more explicit on the external-facing components of the contract (interface/storage/events), which gives developers a better idea of what to expect when interacting with the contract. Extensibility, which will be finalized in a later version, allows contracts to use components from external libraries. This is a key feature of any smart contract language and will address a significant issue in the Starknet dev community. For an exhaustive treatment of the motivation and changes, see the [Cairo Roadmap blog post](https://www.starknet.io/en/posts/ecosystem/cairo-roadmap-join-the-ride) and the [community forum post](https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794).
 
 
-          While the [new compiler version](https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0) includes breaking changes, **you can keep using the older compiler version (v1.1.0) and deploy the resulting contracts on Starknet for the next six months**. This reflects our new compiler upgrade protocol for breaking changes: following new compiler versions, contracts compiled by the old compiler version will continue to be accepted for at least six months, in order to allow the community to adjust. Of course, Once a Cairo contract (not Cairo 0) is declared on Starknet, it will remain available for deployment and interaction indefinitely.
+          While the [new compiler version](https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0) includes breaking changes, **you can keep using the older compiler version (v1.1.0) and deploy the resulting contracts on Starknet for the next six months**. This reflects our new compiler upgrade protocol for breaking changes: following new compiler versions, contracts compiled by the old compiler version will continue to be accepted for at least six months, in order to allow the community to adjust. Of course, once a Cairo contract (not Cairo 0) is declared on Starknet, it will remain available for deployment and interaction indefinitely.
 
 
           ## What’s next?
@@ -141,7 +141,7 @@ blocks:
 
           The Starknet Alpha V0.12.0 vote is just around the corner!\
 
-          Everyone is  invited to  sign up for the notification service on Starknet’s [Snapshot space.](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef) Check out the [Delegate Profile Thread](https://community.starknet.io/t/delegate-profile-thread/4049) & the [Delegation discovery](https://delegate.starknet.io/)  to either become a delegate or select one, and disscuss Starknet alpha v0.12.0 proposal on the  Community forum.
+          Everyone is  invited to  sign up for the notification service on Starknet’s [Snapshot space.](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef) Check out the [Delegate Profile Thread](https://community.starknet.io/t/delegate-profile-thread/4049) & the [Delegation discovery](https://delegate.starknet.io/)  to either become a delegate or select one, and disscuss [Starknet alpha v0.12.0 proposal](https://community.starknet.io/t/proposal-starknet-alpha-v0-12-0/95997) on the  Community forum.
 
 
           ## Summary
@@ -150,7 +150,7 @@ blocks:
           Starknet Alpha V0.12.0 focuses on enhancing performance and user experience. The new version introduces a Rust-based implementation of the Sequencer, improving throughput by 10X and reducing transaction latency. Other features include a new compiler version, removal of the pending transaction status, and the addition of a block hash syscall. 
 
 
-          Starknet developers are empowered to code solutions that make a difference. Start your Cairo [development journey](https://twitter.com/Starknet/status/1674689343758168065?s=20), read the [Cairo docs](https://www.cairo-lang.org/docs/), register for [Cairo Basecamp](https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform), or go [through the tutorials](https://www.starknet.io/en/tutorials). Want to stay up to date with all version updates? Sign up for our [Staknet Developers Newsletter](https://starknet.substack.com/).
+          Starknet developers are empowered to code solutions that make a difference. Start your Cairo [development journey](https://twitter.com/Starknet/status/1674689343758168065?s=20), read the [Cairo docs](https://www.cairo-lang.org/docs/), register for [Cairo Basecamp](https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform), or go [through the tutorials](https://www.starknet.io/en/tutorials). Want to stay up to date with all version updates? Sign up for our [Starknet Developers Newsletter](https://starknet.substack.com/).
       - type: markdown
         body: >-
           
