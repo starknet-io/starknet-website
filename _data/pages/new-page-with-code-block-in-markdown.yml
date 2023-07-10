@@ -1,0 +1,8 @@
+id: 3fed7ce2-f778-4a96-8c54-717aa34dec8d
+title: New page with code block in markdown
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: N﻿ew one
