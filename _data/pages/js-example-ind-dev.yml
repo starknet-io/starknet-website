@@ -1,0 +1,11 @@
+id: aa4f5dbe-890c-4d2e-bc07-7899062dec99
+title: js example ind dev
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      ```javascript
+      import jsss from 'jsssds'
+      ```
