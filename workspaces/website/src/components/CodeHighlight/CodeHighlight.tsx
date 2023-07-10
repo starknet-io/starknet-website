@@ -16,7 +16,7 @@ export default function CodeHighlight(props: CodeHighlightProps) {
   const codeHtml = code ? hljs.highlight(code, {language}).value: ''
 
   return (
-    <Box position="relative" zIndex="0" className="hljs-box" role='group'>
+    <Box position="relative" zIndex="0" className="hljs-box" role='group' mb='1rem'>
         <pre>
           <code
             dangerouslySetInnerHTML={{ __html: codeHtml }}
