@@ -151,6 +151,7 @@ const simpleFiles = [
   await getSimpleFiles("settings", "wallets"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
+  await getSimpleFiles("settings", "permissions"),
   await getSimpleFiles("settings", "roadmap", true),
   await getSimpleFiles("settings", "blog-posts", true),
   await getSimpleFiles("seo", "events", true),
