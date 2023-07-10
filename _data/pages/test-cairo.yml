@@ -7,5 +7,5 @@ blocks:
   - type: markdown
     body: |-
       ```
-      import caior from "cairo"
+      import caior from "cairo";
       ```
