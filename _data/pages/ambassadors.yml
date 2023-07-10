@@ -1,0 +1,42 @@
+id: 1a90f3bc-f2de-4789-8952-fc992467716a
+title: Ambassadors
+template: content
+parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: >-
+      In line with our goal to make the Starknet community accessible and usable
+      to as many people across the globe as possible, we’ve listed a collection
+      of non-English resources below.
+
+
+      These are places where you can discover and discuss all things Starknet with other community members in your native language.
+
+
+      If there’s a resource in a non-English language that you’re aware of and don’t see listed here, please open an issue      to get it added.
+  - type: ambassadors_list
+    title: Council 01
+    ambassador:
+      - full_name: Mattia Amador
+        title: Co-founder and investor at Acme Corp.
+        description: Description
+        image: /assets/ellipse-3.png
+        website: https://www.starknet.io/en
+      - full_name: Mattia Amador
+        title: Co-founder and investor at Acme Corp.
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do magna aliqua.  Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore.
+        image: /assets/ellipse-3.png
+      - full_name: Mattia Amador
+        title: Co-founder and investor at Acme Corp.
+        description: Desc
+        image: /assets/ellipse-3.png
