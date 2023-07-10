@@ -1,0 +1,11 @@
+id: acb6fa84-7dee-4283-82e2-02c030e91e5c
+title: Test cairo
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      ```
+      import caior from "cairo"
+      ```
