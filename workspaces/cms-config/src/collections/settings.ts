@@ -1,6 +1,50 @@
 import { linkFields } from "../blocks";
 import { CmsCollection } from "../types";
 
+
+const permissionOptions = [
+  {
+    label: "All",
+    value: "all",
+  },
+  {
+    label: "Pages",
+    value: "pages",
+  },
+  {
+    label: "Posts",
+    value: "posts",
+  },
+  {
+    label: "Events",
+    value: "events",
+  },
+  {
+    label: "Tutorials",
+    value: "tutorials",
+  },
+  {
+    label: "Jobs",
+    value: "jobs",
+  },
+  {
+    label: "SEO",
+    value: "seo",
+  },
+  {
+    label: "Settings (excluding permissions)",
+    value: "settings",
+  },
+  {
+    label: "Permissions",
+    value: "permissions",
+  },
+  {
+    label: "Roadmap and Announcements",
+    value: "roadmap",
+  },
+]
+
 export const settingsCollectionConfig = {
   crowdin: true,
   label: "Settings",
@@ -275,6 +319,41 @@ export const settingsCollectionConfig = {
           required: false,
           crowdin: true
         }
+      ],
+    },
+    {
+      label: "Permissions",
+      name: "permissions",
+      file: `_data/settings/permissions.yml`,
+      crowdin: false,
+      fields: [
+        {
+          label: "Permissions",
+          name: "items",
+          widget: "list",
+          fields: [
+            {
+              name: "username",
+              label: "Github username",
+              widget: "string",
+              crowdin: false,
+            },
+            {
+              name: "name",
+              label: "Name",
+              widget: "string",
+              crowdin: false,
+              required: false
+            },
+            {
+              name: "access",
+              label: "Access to collections",
+              multiple: true,
+              widget: "select",
+              options: permissionOptions
+            },
+          ],
+        },
       ],
     },
   ],
