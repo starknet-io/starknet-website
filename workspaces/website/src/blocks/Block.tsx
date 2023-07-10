@@ -44,7 +44,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} />;
   } else if (block.type === "code") {
-    return <CodeBlock body={block.body} language={block.language} />;
+    return <CodeBlock code={block.body?.code} language={block.language} />;
   } else if (block.type === "community_events") {
     return (
       <BlockCommunityEvents
