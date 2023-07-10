@@ -57,7 +57,7 @@ blocks:
     blocks:
       - link:
           hasIcon: true
-          custom_title: Starknet Alpha v0.12.0 Version
+          custom_title: Starknet Alpha v0.12.0
           custom_external_link: https://community.starknet.io/t/starknet-s-second-vote-is-coming-starknet-alpha-v0-12-0/94414
   - type: link_list
     listSize: lg

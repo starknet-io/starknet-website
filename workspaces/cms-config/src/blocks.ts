@@ -259,74 +259,6 @@ export const blocks = [
     ],
   },
   {
-    name: "dapps",
-    label: "Dapps block",
-    widget: "object",
-    fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
-      {
-        name: "no_of_items",
-        required: false,
-        widget: "string",
-        crowdin: false,
-      },
-    ],
-  },
-  {
-    name: "block_explorers",
-    label: "Block Explorers block",
-    widget: "object",
-    fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
-      {
-        name: "no_of_items",
-        required: false,
-        widget: "string",
-        crowdin: false
-      },
-    ],
-  },
-  {
-    name: "bridges",
-    label: "Bridges block",
-    widget: "object",
-    fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
-      {
-        name: "no_of_items",
-        required: false,
-        widget: "string",
-        crowdin: false
-      },
-    ],
-  },
-  {
-    name: "on_ramps",
-    label: "On-Ramps block",
-    widget: "object",
-    fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
-      {
-        name: "no_of_items",
-        required: false,
-        widget: "string",
-        crowdin: false
-      },
-    ],
-  },
-  {
     name: "wallets",
     label: "Wallets block",
     widget: "object",
@@ -340,28 +272,6 @@ export const blocks = [
         required: false,
         widget: "string",
         crowdin: false
-      },
-    ],
-  },
-  {
-    name: "get_involved_card",
-    label: "Get Involved card",
-    widget: "object",
-    fields: [
-      {
-        name: "title",
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "description",
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "link",
-        widget: "object",
-        fields: linkFields,
       },
     ],
   },
@@ -516,38 +426,6 @@ export const blocks = [
         meta: true
       },
     ]
-  },
-  {
-    name: "large_card",
-    label: "Large card",
-    widget: "object",
-    fields: [
-      {
-        name: "title",
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "link",
-        widget: "object",
-        fields: linkFields,
-      },
-      {
-        name: "description",
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "image",
-        widget: "image",
-      },
-      {
-        name: "orientation",
-        widget: "select",
-        required: false,
-        options: ["left", "right"],
-      },
-    ],
   },
   {
     name: "hero",

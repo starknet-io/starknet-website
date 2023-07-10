@@ -3,7 +3,8 @@ type: youtube
 url: https://youtu.be/iQdH2CtE-9g
 image: /assets/byte03.jpeg
 title: Starknet contract basic
-author: ByteSized
+authors:
+  - author: ByteSized
 published_at: 2021-12-03T00:00:00.000Z
 difficulty: beginner
 course: bytesized_series

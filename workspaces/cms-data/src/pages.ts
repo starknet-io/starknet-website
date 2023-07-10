@@ -11,23 +11,7 @@ export interface MarkdownBlock {
 export interface CommunityEventsBlock {
   readonly type: "community_events";
 }
-export interface DappsBlock {
-  readonly type: "dapps";
-  readonly no_of_items: number;
-}
 
-export interface BlockExplorersBlock {
-  readonly type: "block_explorers";
-  readonly no_of_items: number;
-}
-export interface BridgesBlock {
-  readonly type: "bridges";
-  readonly no_of_items: number;
-}
-export interface OnRampsBlock {
-  readonly type: "on_ramps";
-  readonly no_of_items: number;
-}
 export interface WalletsBlock {
   readonly type: "wallets";
   readonly no_of_items: number;
@@ -163,10 +147,6 @@ export interface OrderedBlock {
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
-  | DappsBlock
-  | BlockExplorersBlock
-  | BridgesBlock
-  | OnRampsBlock
   | WalletsBlock
   | BasicCardBlock
   | ImageIconLinkCardBlock

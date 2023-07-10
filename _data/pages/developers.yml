@@ -20,14 +20,14 @@ blocks:
         title: Read the Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        icon: /assets/docs.svg
+        icon: /assets/read_the_docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
         withIllustration: true
       - type: image_icon_link_card
         color: blue-default
-        title: Read Starknet Book
+        title: Read the Starknet Book
         description: Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
@@ -44,7 +44,7 @@ blocks:
           start building.
         icon: /assets/local-environment.svg
         link:
-          custom_external_link: https://docs.starknet.io/documentation/getting_started/setting_up_the_environment/
+          custom_external_link: https://docs.starknet.io/documentation/getting_started/environment_setup/
           custom_title: View
         withIllustration: true
   - type: flex_layout
@@ -68,7 +68,7 @@ blocks:
         title: Starknet Basecamp
         description: Sign up for the next basecamp and learn everything about Starknet -
           from STARK mathematics to Cairo 1 smart contracts best practices.
-        icon: /assets/green.svg
+        icon: /assets/basecamp.svg
         link:
           custom_title: Sign-up
           custom_internal_link: ""
@@ -78,7 +78,7 @@ blocks:
         color: cyan
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
-        icon: /assets/yellow.svg
+        icon: /assets/starknet_edu.svg
         link:
           custom_title: View
           custom_internal_link: /tutorials/starknet_edu

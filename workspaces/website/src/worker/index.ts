@@ -12,7 +12,13 @@ redirects.items.forEach(({ source, destination }) => {
   router.get(
     source,
     (req: IRequest, event: WorkerGlobalScopeEventMap["fetch"]) => {
-      return Response.redirect(new URL(destination, event.request.url), 301);
+      let src = destination
+
+      for (const [key, value] of Object.entries(req.params)) {
+        src = src.replace(new RegExp(`:${key}\\+?`), value)
+      }
+
+      return Response.redirect(new URL(src, event.request.url), 301);
     }
   );
 });

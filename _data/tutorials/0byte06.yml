@@ -3,7 +3,8 @@ type: youtube
 url: https://youtu.be/G8jn8QP_JdA
 image: /assets/maxresdefault-2-.jpg
 title: Fundamentals of contract writing (demo)
-author: ByteSized
+authors:
+  - author: ByteSized
 published_at: 2021-12-06T00:00:00.000Z
 difficulty: beginner
 course: bytesized_series
