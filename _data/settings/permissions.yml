@@ -1,46 +1,48 @@
 items:
   - username: lorcan-codes
     access:
-      - sudo
+      - all
 
   - username: milosyuki
     name: Miloš Leković
     access:
-      - sudo
+      - all
 
   - username: thecotne
     name: Tsotne
     access:
-      - sudo
+      - all
 
   - username: thorville
     name: Keith Tormey
     access:
-      - sudo
+      - all
 
   - username: robwalsh21
     access:
-      - sudo
+      - all
       
   - username: AmalyStark
     name: Amalya
     access:
-      - sudo
+      - all
 
   - username: Tal-wagner
     access:
-      - sudo
+      - all
 
   - username: JameStark
     access:
-      - sudo
+      - roadmap
 
-  - username: glrn
-    name: Gal Ron
+  - username: LiranRich
     access:
-      - sudo
+      - events
 
-  - username: stoobie
-    name: Steve Goodman
+  - username: Karinbd1
     access:
-      - sudo
+      - events
+
+  - username: shakedstarkware
+    access:
+      - posts

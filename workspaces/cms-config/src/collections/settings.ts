@@ -5,10 +5,6 @@ import { CmsCollection } from "../types";
 const permissionOptions = [
   {
     label: "All",
-    value: "sudo",
-  },
-  {
-    label: "All (excluding permission)",
     value: "all",
   },
   {

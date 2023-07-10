@@ -1189,8 +1189,7 @@ export default class API {
     }
 
     const { access } = userPermissions
-    const isSudoUser = access.includes('sudo')
-    const hasAllAccess = access.includes('all') || isSudoUser
+    const hasAllAccess = access.includes('all')
 
     let hasPermission = false
     let collection = collectionName
@@ -1199,30 +1198,30 @@ export default class API {
     switch(collectionName) {
       case 'settings':
         if(slug === 'permissions'){
-          hasPermission = isSudoUser || access.includes('permissions')
+          hasPermission = access.includes('permissions')
           collection = 'permissions'
           permissionName = 'permissions'
         }else {
-          hasPermission = hasAllAccess || access.includes('settings')
+          hasPermission = access.includes('settings')
         }
         break;
       case 'posts':
       case 'topics':
       case 'categories':
-        hasPermission = hasAllAccess || access.includes('posts')
+        hasPermission = access.includes('posts')
         permissionName = 'posts'
         break;
       case 'roadmap-posts':
       case 'roadmap-versions':
       case 'announcements':
-        hasPermission = hasAllAccess || access.includes('roadmap')
+        hasPermission = access.includes('roadmap')
         permissionName = 'roadmap'
         break;
       default:
-        hasPermission = hasAllAccess || access.includes(collectionName)
+        hasPermission = access.includes(collectionName)
     }
 
-    if(hasPermission){
+    if(hasPermission || hasAllAccess){
       await this.mergePR(pullRequest);
       await this.deleteBranch(branch);
     }else {
