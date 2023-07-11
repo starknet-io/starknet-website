@@ -1,15 +1,15 @@
 [
   {
+    "label": "Asciidoc",
+    "name": "asciidoc",
+    "mode": "gfm",
+    "mimeType": "text/asciidoc"
+  },
+  {
     "label": "Bash",
     "name": "bash",
     "mode": "shell",
     "mimeType": "text/bash"
-  },
-  {
-    "label": "Cairo",
-    "name": "cairo",
-    "mode": "clike",
-    "mimeType": "text/cairo"
   },
   {
     "label": "C",
