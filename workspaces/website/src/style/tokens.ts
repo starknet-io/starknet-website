@@ -197,7 +197,8 @@ export const tokens = {
       "roadmap-card-tag-border-color": "#DDDDDD",
       "roadmap-card-bg-color": "#FFFFFF",
       "roadmap-card-tag-bg": "#ffffff",
-      "summit-popup-date-heading-color": "#D672EF"
+      "summit-popup-date-heading-color": "#D672EF",
+      "councils-title-fg": "#1F1F1F"
     },
 
     dark: {
@@ -398,7 +399,8 @@ export const tokens = {
       "roadmap-card-border-color": "#5C5C5C",
       "roadmap-card-tag-border-color": "#5C5C5C",
       "roadmap-card-tag-bg": "#313131",
-      "summit-popup-date-heading-color": "#D672EF"
+      "summit-popup-date-heading-color": "#D672EF",
+      "councils-title-fg": "#FFFFFF"
     },
   },
 };
@@ -1185,6 +1187,10 @@ export const semanticTokens = {
     "summit-popup-date-heading-color": {
       default: tokens.colors.light["summit-popup-date-heading-color"],
       _dark: tokens.colors.dark["summit-popup-date-heading-color"],
+    },
+    "councils-title-fg": {
+      default: tokens.colors.light["councils-title-fg"],
+      _dark: tokens.colors.dark["councils-title-fg"],
     },
   },
 };

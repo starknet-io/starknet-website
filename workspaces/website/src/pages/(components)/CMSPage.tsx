@@ -1,6 +1,7 @@
 import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
+import { Heading } from "@ui/Typography/Heading";
 import remarkParse from "remark-parse";
 import { Block } from "src/blocks/Block";
 import { unified } from "unified";
@@ -23,7 +24,7 @@ export default function CMSPage({
   locale,
 }: CMSPageProps) {
   const date = data?.gitlog?.date;
-
+  console.log('data ', data)
   return (
     <Box>
       <PageLayout
@@ -70,6 +71,7 @@ export default function CMSPage({
               lg: data.template === "content" ? "32px" : "136px",
             }}
           >
+            {data.show_title ? <Heading variant="h3" color="text-hero-fg">{data.title}</Heading> : null}
             {data.blocks?.map((block, i) => {
               return (
                 <Block
@@ -83,7 +85,7 @@ export default function CMSPage({
         }
         rightAside={
           data.template === "content" ? (
-            <TableOfContents headings={pageToTableOfContents(data)} />
+            <TableOfContents headings={pageToTableOfContents(data)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
           ) : null
         }
       />

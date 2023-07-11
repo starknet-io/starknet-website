@@ -12,6 +12,10 @@ export interface CommunityEventsBlock {
   readonly type: "community_events";
 }
 
+export interface AmbassadorsListBlock {
+  readonly type: "ambassadors_list";
+}
+
 export interface WalletsBlock {
   readonly type: "wallets";
   readonly no_of_items: number;
@@ -156,7 +160,8 @@ export type Block =
   | PageHeaderBlock
   | AccordionBlock
   | OrderedBlock
-  | ListCardItemsBlock;
+  | ListCardItemsBlock
+  | AmbassadorsListBlock;
 
 export interface Container {
   readonly type: "container";
@@ -185,7 +190,9 @@ export interface Page extends Meta {
   readonly slug: string;
   readonly link: string;
   readonly title: string;
+  readonly show_title?: boolean;
   readonly template: "landing" | "content";
+  readonly tocCustomTitle?: string;
   readonly breadcrumbs: boolean;
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;

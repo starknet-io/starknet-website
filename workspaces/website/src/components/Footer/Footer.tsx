@@ -106,7 +106,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     )}
                     paddingLeft="24px"
                   >
-                    {seo.footerText}
+                    {seo?.footerText}
                   </Text>
                 </HStack>
                 <ButtonGroup

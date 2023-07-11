@@ -209,6 +209,7 @@ export interface Page extends Meta {
   readonly parent_page?: string | undefined;
   readonly title: string;
   readonly template: "landing" | "content";
+  readonly tocCustomTitle?: string;
   readonly breadcrumbs: boolean;
   readonly pageLastUpdated: boolean;
   blocks?: any;

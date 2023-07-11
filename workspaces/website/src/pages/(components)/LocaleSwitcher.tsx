@@ -12,11 +12,11 @@ export default function LocaleSwitcher({ seo }: { seo: SEOTexts["language"] }) {
 
   return (
     <LanguageSwitcherDropdown
-      title={seo.title}
-      description={seo.description}
-      subtitle={seo.subtitle}
-      callToAction={seo.callToAction}
-      selectedLocale={localeConfig.code}
+      title={seo?.title}
+      description={seo?.description}
+      subtitle={seo?.subtitle}
+      callToAction={seo?.callToAction}
+      selectedLocale={localeConfig?.code}
     >
       {i18nConfig
         .filter((c) => topLanguages.includes(c.code))
@@ -24,12 +24,12 @@ export default function LocaleSwitcher({ seo }: { seo: SEOTexts["language"] }) {
           return (
             <HStack key={i}>
               <ColumnLink
-                active={localeConfig.code === c.code}
+                active={localeConfig?.code === c.code}
                 href={`/${c.code}${pathname.replace(/^\/\w{2}($|\/)/, "/")}`}
               >
                 {c.name}
               </ColumnLink>
-              <ColumnLinkDescription active={localeConfig.code === c.code}>
+              <ColumnLinkDescription active={localeConfig?.code === c.code}>
                 {c.localName}
               </ColumnLinkDescription>
             </HStack>

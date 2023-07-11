@@ -1,6 +1,8 @@
 id: 1a90f3bc-f2de-4789-8952-fc992467716a
 title: Ambassadors
+show_title: true
 template: content
+tocCustomTitle: Councils
 parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
@@ -19,12 +21,14 @@ blocks:
   - type: ambassadors_list
     title: Council 01
     ambassador:
-      - full_name: Mattia Amador
+      - full_name: Mattia Amador 1
         title: Co-founder and investor at Acme Corp.
         description: Description
-        image: /assets/ellipse-3.png
+        image: /assets/AmbassadorMemberExample.png
         website: https://www.starknet.io/en
-      - full_name: Mattia Amador
+        twitter: https://www.starknet.io/en
+        discord: https://www.starknet.io/en
+      - full_name: Mattia Amador 2
         title: Co-founder and investor at Acme Corp.
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -35,8 +39,40 @@ blocks:
           ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore.
-        image: /assets/ellipse-3.png
-      - full_name: Mattia Amador
+        image: /assets/AmbassadorMemberExample.png
+      - full_name: Mattia Amador 3
         title: Co-founder and investor at Acme Corp.
         description: Desc
-        image: /assets/ellipse-3.png
+        image: /assets/AmbassadorMemberExample.png
+      - full_name: Mattia Amador 4
+        title: Co-founder and investor at Acme Corp.
+        description: Desc
+        image: /assets/AmbassadorMemberExample.png
+  - type: ambassadors_list
+    title: Council 02
+    ambassador:
+      - full_name: Mattia Amador 5
+        title: Co-founder and investor at Acme Corp.
+        description: Description
+        image: /assets/AmbassadorMemberExample.png
+        website: https://www.starknet.io/en
+      - full_name: Mattia Amador 6
+        title: Co-founder and investor at Acme Corp.
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do magna aliqua.  Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore.
+        image: /assets/AmbassadorMemberExample.png
+      - full_name: Mattia Amador 7
+        title: Co-founder and investor at Acme Corp.
+        description: Desc
+        image: /assets/AmbassadorMemberExample.png
+      - full_name: Mattia Amador 8
+        title: Co-founder and investor at Acme Corp.
+        description: Desc
+        image: /assets/AmbassadorMemberExample.png

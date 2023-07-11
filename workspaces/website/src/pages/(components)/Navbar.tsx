@@ -45,7 +45,7 @@ export default function Navbar({
             <MainSearch env={env} seo={searchSEO} />
           </div>
         }
-        desktopNavItems={mainMenu.items.map(
+        desktopNavItems={mainMenu?.items?.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
               key={`${mainMenuItemIndex}-${pathname}`}
@@ -136,7 +136,7 @@ export default function Navbar({
         )}
         mobileNavItems={
           <NavAccordian.Root>
-            {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => {
+            {mainMenu?.items?.map((mainMenuItem, mainMenuItemIndex) => {
               return (
                 <NavAccordian.Item key={mainMenuItemIndex}>
                   <NavAccordian.Button title={mainMenuItem.title} />
