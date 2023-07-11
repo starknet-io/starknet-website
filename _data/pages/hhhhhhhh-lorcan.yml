@@ -6,8 +6,29 @@ page_last_updated: true
 blocks:
   - type: markdown
     body: |-
-      H﻿ere is some code
+      ## P﻿age with different code blocks
 
-      ```asciidoc
-      const net = "Hi"
+      T﻿his page has many examples 
+
+      ### H﻿ere is some code in CSS
+
+      ```css
+      .main {
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+      ```
+
+      ### H﻿ere is code example in Rust
+
+      ```rust
+      #[contract]
+      mod CounterContract {
+         #[external]
+         fn increase_counter(amount: u128) { ... }
+         #[external]
+         fn decrease_counter(amount: u128) { ... }
+         #[view]
+         fn get_counter() -> u128 { ... }
+      }
       ```
