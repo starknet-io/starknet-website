@@ -7,7 +7,7 @@ type CodeBlockProps = {
 };
 
 export default function CodeBlock(props: CodeBlockProps) {
-  const { code, language = 'cairo' } = props;
+  const { code, language } = props;
 
   return <CodeHighlight code={code || ""} language={language || ""} />;
 }

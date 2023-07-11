@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.projects.json",
   "compilerOptions": {
     "outDir": ".types-node",
+    "resolveJsonModule": true
   },
   "include": ["vite.config.ts", "vitest.config.ts"]
 }

@@ -1,0 +1,230 @@
+[
+  {
+    "label": "Bash",
+    "name": "bash",
+    "mode": "shell",
+    "mimeType": "text/bash"
+  },
+  {
+    "label": "Cairo",
+    "name": "cairo",
+    "mode": "clike",
+    "mimeType": "text/cairo"
+  },
+  {
+    "label": "C",
+    "name": "c",
+    "mode": "clike",
+    "mimeType": "text/x-csrc"
+  },
+  {
+    "label": "C++",
+    "name": "cpp",
+    "mode": "clike",
+    "mimeType": "text/x-c++src"
+  },
+  {
+    "label": "CMake",
+    "name": "cmake",
+    "mode": "cmake",
+    "mimeType": "text/x-cmake"
+  },
+  {
+    "label": "CSS",
+    "name": "css",
+    "mode": "css",
+    "mimeType": "text/css"
+  },
+  {
+    "label": "Clojure",
+    "name": "clojure",
+    "mode": "clojure",
+    "mimeType": "text/x-clojure"
+  },
+  {
+    "label": "Diff",
+    "name": "diff",
+    "mode": "diff",
+    "mimeType": "text/x-diff"
+  },
+  {
+    "label": "Dockerfile",
+    "name": "dockerfile",
+    "mode": "dockerfile",
+    "mimeType": "text/x-dockerfile"
+  },
+  {
+    "label": "Elixir",
+    "name": "elixir",
+    "mode": "elixir",
+    "mimeType": "text/elixir"
+  },
+  {
+    "label": "Go",
+    "name": "go",
+    "mode": "go",
+    "mimeType": "text/x-go"
+  },
+  {
+    "label": "Groovy",
+    "name": "groovy",
+    "mode": "groovy",
+    "mimeType": "text/x-groovy"
+  },
+  {
+    "label": "HTML",
+    "name": "html",
+    "mode": "htmlmixed",
+    "mimeType": "text/html"
+  },
+  {
+    "label": "Haskell",
+    "name": "haskell",
+    "mode": "haskell",
+    "mimeType": "text/x-haskell"
+  },
+  {
+    "label": "JSON",
+    "name": "json",
+    "mode": "javascript",
+    "mimeType": "application/json"
+  },
+  {
+    "label": "JSX",
+    "name": "jsx",
+    "mode": "jsx",
+    "mimeType": "text/jsx"
+  },
+  {
+    "label": "Java",
+    "name": "java",
+    "mode": "clike",
+    "mimeType": "text/x-java"
+  },
+  {
+    "label": "JavaScript",
+    "name": "javascript",
+    "mode": "javascript",
+    "mimeType": "text/javascript"
+  },
+  {
+    "label": "Kotlin",
+    "name": "kotlin",
+    "mode": "clike",
+    "mimeType": "text/x-kotlin"
+  },
+  {
+    "label": "Markdown",
+    "name": "markdown",
+    "mode": "gfm",
+    "mimeType": "text/x-gfm"
+  },
+  {
+    "label": "Nix",
+    "name": "nix",
+    "mode": "clike",
+    "mimeType": "text/nix"
+  },
+  {
+    "label": "Objective-C",
+    "name": "objc",
+    "mode": "clike",
+    "mimeType": "text/x-objectivec"
+  },
+  {
+    "label": "PHP",
+    "name": "php",
+    "mode": "php",
+    "mimeType": "application/x-httpd-php"
+  },
+  {
+    "label": "Pascal",
+    "name": "pascal",
+    "mode": "pascal",
+    "mimeType": "text/x-pascal"
+  },
+  {
+    "label": "Perl",
+    "name": "perl",
+    "mode": "perl",
+    "mimeType": "text/x-perl"
+  },
+  {
+    "label": "PowerShell",
+    "name": "powershell",
+    "mode": "powershell",
+    "mimeType": "application/x-powershell"
+  },
+  {
+    "label": "Properties",
+    "name": "properties",
+    "mode": "properties",
+    "mimeType": "text/x-properties"
+  },
+  {
+    "label": "Puppet",
+    "name": "puppet",
+    "mode": "puppet",
+    "mimeType": "text/x-puppet"
+  },
+  {
+    "label": "Python",
+    "name": "python",
+    "mode": "python",
+    "mimeType": "text/x-python"
+  },
+  {
+    "label": "Ruby",
+    "name": "ruby",
+    "mode": "ruby",
+    "mimeType": "text/x-ruby"
+  },
+  {
+    "label": "Rust",
+    "name": "rust",
+    "mode": "rust",
+    "mimeType": "text/x-rustsrc"
+  },
+  {
+    "label": "SQL",
+    "name": "sql",
+    "mode": "sql",
+    "mimeType": "text/x-sql"
+  },
+  {
+    "label": "Scala",
+    "name": "scala",
+    "mode": "clike",
+    "mimeType": "text/x-scala"
+  },
+  {
+    "label": "Shell",
+    "name": "shell",
+    "mode": "shell",
+    "mimeType": "text/x-sh"
+  },
+  {
+    "label": "Swift",
+    "name": "swift",
+    "mode": "swift",
+    "mimeType": "text/x-swift"
+  },
+  {
+    "label": "TypeScript",
+    "name": "typescript",
+    "mode": "javascript",
+    "mimeType": "application/typescript"
+  },
+  {
+    "label": "XML",
+    "name": "xml",
+    "mode": "xml",
+    "mimeType": "text/xml"
+  },
+  {
+    "label": "YAML",
+    "name": "yaml",
+    "mode": "yaml",
+    "mimeType": "text/x-yaml"
+  }
+]
