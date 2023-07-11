@@ -3,8 +3,9 @@ type: youtube
 url: https://youtu.be/DrBJ9LWvsOQ
 image: /assets/cairo001.jpeg
 title: "Starknet 101 workshop "
-author: StarkWare
-author_link: https://twitter.com/StarkWareLtd
+authors:
+  - author: StarkWare
+    author_link: https://twitter.com/StarkWareLtd
 published_at: 2023-01-31T00:00:00+00:00
 difficulty: beginner
 course: cairo_101

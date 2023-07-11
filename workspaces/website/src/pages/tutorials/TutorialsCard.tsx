@@ -22,10 +22,10 @@ export default function TutorialsCard({ locale, hit }: TutorialsCardProps) {
         {/* <GridCard.Category category={hit.tags} /> */}
         <GridCard.Content
           title={hit.title}
-          author={hit.author}
-          author_link={hit.author_link}
+          authors={hit.authors}
           date={date}
           difficulty={hit.difficulty}
+          tags={hit?.tags}
         />
       </GridCard.Body>
       <GridCard.Footer>

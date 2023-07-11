@@ -11,29 +11,8 @@ video:
     etag: 0GJFJO7vGeDD-Q2vRu0kHUuQuMo
     id: rZXMORLBLqQ
     snippet:
-      publishedAt: 2023-01-15T08:35:13Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 29: The Future of Blockchain Property Rights via Account
-        Abstraction"
-      description: >-
-        Blockchains are transparent, public ledgers that hold immense financial
-        value, and have relied on specific public key cryptography (PKC)
-        protocols to ensure property rights for their users. For all their
-        benefits in terms of simplicity and safety, PKCs are clunky and limited
-        and make for a pretty lousy user experience. 
-
-
-        Enter "Account Abstraction" (AA), a new and better way to enforce property rights on blockchain. With AA, it is easy to integrate blockchains with smartphone biometric security devices, implement sophisticated guardrails for user assets and allow for better financial planning. 
-
-
-
-
-        So, what is account abstraction and is all this related to STARKs and StarkNet? 
-
-
-        Answers to this question, and many more, from the visionaries who imagined AA and turned it into reality on StarkNet.
-
-        Join me as I ask the experts - Yoav Weiss (Security Fellow at the Ethereum Foundation), Julien Niset (Co-Founder and Chief Scientist at Argent) and Tom Brand (StarkNet Product Lead at StarkWare) for this exciting next episode of STARK @ Home.
+      publishedAt: 2023-01-15T08:35:13.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/rZXMORLBLqQ/default.jpg
@@ -51,9 +30,11 @@ video:
           url: https://i.ytimg.com/vi/rZXMORLBLqQ/sddefault.jpg
           width: 640
           height: 480
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK @ Home 29: The Future of Blockchain Property Rights via Account
+        Abstraction"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 29: The Future of Blockchain Property Rights via Account
           Abstraction"
@@ -76,7 +57,26 @@ video:
           Answers to this question, and many more, from the visionaries who imagined AA and turned it into reality on StarkNet.
 
           Join me as I ask the experts - Yoav Weiss (Security Fellow at the Ethereum Foundation), Julien Niset (Co-Founder and Chief Scientist at Argent) and Tom Brand (StarkNet Product Lead at StarkWare) for this exciting next episode of STARK @ Home.
-      defaultAudioLanguage: en-US
+      description: >-
+        Blockchains are transparent, public ledgers that hold immense financial
+        value, and have relied on specific public key cryptography (PKC)
+        protocols to ensure property rights for their users. For all their
+        benefits in terms of simplicity and safety, PKCs are clunky and limited
+        and make for a pretty lousy user experience. 
+
+
+        Enter "Account Abstraction" (AA), a new and better way to enforce property rights on blockchain. With AA, it is easy to integrate blockchains with smartphone biometric security devices, implement sophisticated guardrails for user assets and allow for better financial planning. 
+
+
+
+
+        So, what is account abstraction and is all this related to STARKs and StarkNet? 
+
+
+        Answers to this question, and many more, from the visionaries who imagined AA and turned it into reality on StarkNet.
+
+        Join me as I ask the experts - Yoav Weiss (Security Fellow at the Ethereum Foundation), Julien Niset (Co-Founder and Chief Scientist at Argent) and Tom Brand (StarkNet Product Lead at StarkWare) for this exciting next episode of STARK @ Home.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H12M53S
       dimension: 2d
@@ -86,7 +86,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-home-29.jpg
-category: stark-math
+category: community-and-events
 topic:
   - account-abstraction
 short_desc: ""

@@ -55,18 +55,25 @@ export const tutorialsCollectionConfig = {
       crowdin: true
     },
     {
-      label: "Author",
-      name: "author",
-      required: false,
-      widget: "string",
-      crowdin: true
-    },
-    {
-      label: "Author link",
-      name: "author_link",
-      required: false,
-      widget: "string",
-      crowdin: true
+      name: "authors",
+      label: "Authors",
+      widget: "list",
+      fields: [
+        {
+          label: "Author",
+          name: "author",
+          required: false,
+          widget: "string",
+          crowdin: true
+        },
+        {
+          label: "Author link",
+          name: "author_link",
+          required: false,
+          widget: "string",
+          crowdin: true
+        },
+      ],
     },
     {
       label: "Published at",

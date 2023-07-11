@@ -6,7 +6,6 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import { Tag } from "@ui/Tag/Tag";
 import * as GridCard from "@ui/Card/GridCard";
 import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
 import moment from "moment";
@@ -81,24 +80,13 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
           <Flex mb="4" mt="4" direction="row">
             <GridCard.Content
               title={""}
-              author={tutorial.author}
-              author_link={tutorial.author_link}
+              authors={tutorial.authors}
               date={date}
               difficulty={tutorial.difficulty}
-              direction="row"
+              variant="horizontal"
+              tags={tutorial.tags}
             />
-            <Flex height="40px" ml="24px">
-              {Array.isArray(tutorial.tags) &&
-                tutorial.tags.map((tag, i) => {
-                  // only show max 2 tags
-                  if (i > 1) return null;
-                  return (
-                    <Tag key={i} variant="listCard">
-                      {tag}
-                    </Tag>
-                  );
-                })}
-            </Flex>
+            
           </Flex>
           <MarkdownBlock body={tutorial.description as string} />
         </div>

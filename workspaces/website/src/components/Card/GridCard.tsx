@@ -11,6 +11,7 @@ import {
   Flex,
   Link
 } from "@chakra-ui/react";
+import { Tag } from "@ui/Tag/Tag";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Text } from "@ui/Typography/Text";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
@@ -27,7 +28,7 @@ type RootProps = {
   newTab?: boolean;
 };
 
-type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
+type CardContentVariant = 'vertical' | 'horizontal';
 
 const Root = ({ children, href, newTab }: RootProps) => {
   return (
@@ -118,20 +119,25 @@ const Category = ({ category }: any) => {
   );
 };
 
+type Author = {
+  readonly author?: string;
+  readonly author_link?: string;
+}
+
 type ContentProps = {
   title: string;
   date?: string;
-  author?: string;
-  author_link?: string;
+  authors?: Author[];
   difficulty?: string;
-  direction?: string;
+  variant?: CardContentVariant;
+  tags?: string[];
 };
 
-const Content = ({ title, date, author, author_link, difficulty, direction = "column" }: ContentProps) => {
+const Content = ({ title, date, authors, difficulty, variant = "vertical", tags }: ContentProps) => {
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
-    <Flex gap="3" direction={direction as ResponsiveValue<FlexDirection>} flex={direction === "column" ? 1 : "initial"} w={direction === "column" ? "full" : "auto"}>
+    <Flex gap="3" direction="column" alignItems="flex-start" flex={variant === "vertical" ? 1 : "initial"} w={variant === "vertical" ? "full" : "auto"}>
       <Text
         color="heading-navy-fg"
         fontSize="18px"
@@ -141,41 +147,70 @@ const Content = ({ title, date, author, author_link, difficulty, direction = "co
       >
         {title}
       </Text>
-      <HStack spacing="2">
-        <Icon as={HiOutlineUser} boxSize="24px" stroke="tutorials-card-icon-color" />
-        {author_link ?
-          <Link
-            href={author_link}
-            isExternal={true}
-          >
-            <Text
-              variant="textLink"
-              sx={{display: "flex", flexDirection: "row", alignItems: "center"}}
-            >
-              {author}
-              <Icon ml={1} boxSize="14px" as={HiArrowUpRight} />
+      <Flex
+        direction={variant === "vertical" ? "column" : "row"}
+        alignItems={variant === "horizontal" ? "center" : "flex-start"}
+        gap={variant === "horizontal" ? "2" : "3"}
+      >
+        {authors?.map((anAuthor, i) => (
+          <HStack spacing="2" alignItems="flex-start">
+            <Icon
+              as={HiOutlineUser}
+              boxSize="24px"
+              stroke="tutorials-card-icon-color"
+            />
+            {anAuthor.author_link ? (
+              <Link href={anAuthor.author_link} isExternal={true} mr="2">
+                <Text
+                  variant="textLink"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  {anAuthor.author}
+                  <Icon ml={1} boxSize="14px" as={HiArrowUpRight} />
+                </Text>
+              </Link>
+            ) : (
+              <Text variant="cardBody" noOfLines={4}>
+                {anAuthor.author}
+              </Text>
+            )}
+          </HStack>
+        ))}
+      </Flex>
+      <Flex direction="row">
+        <Flex direction={variant === "vertical" ? "column" : "row"} alignItems={variant === "horizontal" ? "center" : "flex-start"} gap={variant === "horizontal" ? "2" : "3"}>
+          <HStack spacing="2">
+            <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
+            <Text variant="cardBody" noOfLines={4}>
+              {date}
             </Text>
-          </Link> :
-          <Text
-            variant="cardBody"
-            noOfLines={4}
-          >
-            {author}
-          </Text>
-        }
-      </HStack>
-      <HStack spacing="2">
-        <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
-        <Text variant="cardBody" noOfLines={4}>
-          {date}
-        </Text>
-      </HStack>
-      <HStack spacing="2">
-        <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="tutorials-card-icon-color" />
-        <Text variant="cardBody" noOfLines={4}>
-          {formattedDifficulty}
-        </Text>
-      </HStack>
+          </HStack>
+          <HStack spacing="2">
+            <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="tutorials-card-icon-color" />
+            <Text variant="cardBody" noOfLines={4}>
+              {formattedDifficulty}
+            </Text>
+          </HStack>
+        </Flex>
+        {variant === "horizontal" ? (
+          <Flex height="40px" ml="24px">
+            {Array.isArray(tags) &&
+              tags.map((tag, i) => {
+                // only show max 2 tags
+                if (i > 1) return null;
+                return (
+                  <Tag key={i} variant="listCard">
+                    {tag}
+                  </Tag>
+                );
+              })}
+          </Flex>
+        ) : null}
+      </Flex>
     </Flex>
   );
 };

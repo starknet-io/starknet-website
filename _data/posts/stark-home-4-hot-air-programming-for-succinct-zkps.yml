@@ -2,12 +2,6 @@ id: b5183be6-8d4e-4146-ae7f-6ecc202a9762
 post_type: video
 title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
 published_date: 2020-04-20T14:09:43.156Z
-image: /assets/starkhome04.png
-category: stark-math
-topic:
-  - starknet
-short_desc: How do you map a program to a polynomial? Eli Ben-Sasson waves his
-  hands in the air to explain this concept
 video:
   url: https://youtu.be/kHhpIvEbDy0
   id: kHhpIvEbDy0
@@ -16,11 +10,8 @@ video:
     etag: P_hNGt7A9OeT4PRzRxRHI0BiCdI
     id: kHhpIvEbDy0
     snippet:
-      publishedAt: 2020-04-20T15:39:01Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
-      description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
-        hands in the air to explain this concept
+      publishedAt: 2020-04-20T15:39:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/kHhpIvEbDy0/default.jpg
@@ -35,12 +26,15 @@ video:
           width: 480
           height: 360
       channelTitle: StarkWare
+      title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 4: Hot Air*: Programming for Succinct ZKPs"
         description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
           hands in the air to explain this concept
+      description: How do you map a program to a polynomial? Eli Ben-Sasson waves his
+        hands in the air to explain this concept
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H19M59S
       dimension: 2d
@@ -49,3 +43,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome04.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: How do you map a program to a polynomial? Eli Ben-Sasson waves his
+  hands in the air to explain this concept
