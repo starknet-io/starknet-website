@@ -1,0 +1,12 @@
+id: 4245dcd5-3cf6-43dd-b774-7c1f73a706bb
+title: new page again
+template: content
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: markdown
+    body: |-
+      # S﻿ome content
+
+      ```javascript
+              const name = "My name is someone"```
