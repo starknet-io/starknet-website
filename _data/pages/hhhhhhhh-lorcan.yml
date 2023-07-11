@@ -8,6 +8,6 @@ blocks:
     body: |-
       H﻿ere is some code
 
-      ```nix
+      ```asciidoc
       const net = "Hi"
       ```
