@@ -7,10 +7,10 @@ import {
 import { HiClipboardDocumentList } from "react-icons/hi2";
 
 interface CopyButtonProps extends ButtonProps {
-  code: string;
+  code?: string;
 }
 
-function CopyButton({ code, ...props }: CopyButtonProps) {
+function CopyButton({ code = '', ...props }: CopyButtonProps) {
   const { hasCopied, onCopy } = useClipboard(code);
 
   return (
