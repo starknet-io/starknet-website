@@ -6,7 +6,7 @@ type Props = {
 
 export const Main = ({ children }: Props) => {
   return (
-    <Box as="main" role="main" width="full">
+    <Box as="main" role="main" width="full" minW='0px'>
       {children}
     </Box>
   );
