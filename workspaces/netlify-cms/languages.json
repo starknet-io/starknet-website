@@ -18,6 +18,12 @@
     "mimeType": "text/x-csrc"
   },
   {
+    "label": "Cairo",
+    "name": "cairo",
+    "mode": "clike",
+    "mimeType": "text/cairo"
+  },
+  {
     "label": "C++",
     "name": "cpp",
     "mode": "clike",
