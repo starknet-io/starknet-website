@@ -63,6 +63,7 @@ export const tokens = {
       "columnlink-active-fg": "#0C0C4F",
       "divider-bg": "#EFEFEF",
       "footer-divider-bg": "#EFEFEF",
+      "code-divider-bg": "#313131",
       "footer-stack-bg": "#F6F6F6",
       "navbar-link-bg": "transparent",
       "navbar-link-fg": "#6B7280",
@@ -264,6 +265,7 @@ export const tokens = {
       "columnlink-active-fg": "#9EBFFF",
       "divider-bg": "#313131",
       "footer-divider-bg": "#313131",
+      "code-divider-bg": "#CCCCCC",
       "navbar-link-bg": "transparent",
       "navbar-link-fg": "#CCCCCC",
       "navbar-link-hover-bg": "#121212",
@@ -749,6 +751,10 @@ export const semanticTokens = {
     "footer-divider-bg": {
       default: tokens.colors.light["footer-divider-bg"],
       _dark: tokens.colors.dark["footer-divider-bg"],
+    },
+    "code-divider-bg": {
+      default: tokens.colors.light["code-divider-bg"],
+      _dark: tokens.colors.dark["code-divider-bg"],
     },
     // "hero-gradient-1a": {
     //   default: tokens.colors.light["hero-gradient-1a"],

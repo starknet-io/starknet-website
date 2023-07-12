@@ -59,6 +59,7 @@ export const PageLayout = (props: Props) => {
           role="main"
           width="full"
           mt="0 !important"
+          minW='0px'
         >
           <Box minH="lg">
             {props.sectionHeaderTitle && (
