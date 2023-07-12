@@ -17,7 +17,6 @@ import { HomepageHero } from "./HomepageHero";
 import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
-import CodeBlock from "./CodeBlock";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -43,8 +42,6 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return <ImageIconCard {...block} locale={locale} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} />;
-  } else if (block.type === "code") {
-    return <CodeBlock code={block.body?.code} language={block.language} />;
   } else if (block.type === "community_events") {
     return (
       <BlockCommunityEvents

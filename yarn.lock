@@ -4774,6 +4774,7 @@ __metadata:
     "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     "@types/cors": ^2.8.13
+    "@types/highlight.js": ^10.1.0
     "@types/node": ^18.16.3
     "@types/react": ^18.2.7
     "@types/react-dom": ^18.2.4
@@ -6264,6 +6265,15 @@ __metadata:
   dependencies:
     "@types/unist": "*"
   checksum: fff47998f4c11e21a7454b58673f70478740ecdafd95aaf50b70a3daa7da9cdc57315545bf9c039613732c40b7b0e9e49d11d03fe9a4304721cdc3b29a88141e
+  languageName: node
+  linkType: hard
+
+"@types/highlight.js@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "@types/highlight.js@npm:10.1.0"
+  dependencies:
+    highlight.js: "*"
+  checksum: 284f47e89bfe300f307ad76523a257ff12ed7cf0318cdc0a7fe6965a1d7e21840d133cfc623ec705495550d37341c278c2c9641bafce8b8dbb4bea4acd46f0ec
   languageName: node
   linkType: hard
 
@@ -11119,7 +11129,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^11.0.0, highlight.js@npm:^11.8.0":
+"highlight.js@npm:*, highlight.js@npm:^11.0.0, highlight.js@npm:^11.8.0":
   version: 11.8.0
   resolution: "highlight.js@npm:11.8.0"
   checksum: d2578a57aee7315946ff19379053fd0a28b127baabf7617ab1d28d62cdc4eaf3d75053569cb8479a5afdc7a68f1ba9a6c1d612d8ae399b4b9aa43093b4fb6831

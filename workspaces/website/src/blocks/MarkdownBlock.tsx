@@ -12,6 +12,7 @@ import {
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import CodeBlock from "./CodeBlock";
 import { ReactMarkdownProps } from "react-markdown/lib/complex-types";
+import CodeHighlight from "@ui/CodeHighlight/CodeHighlight";
 
 interface Props {
   readonly body: string;
@@ -89,7 +90,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
                 return <pre {...props}>{props.children}</pre>
               }
               
-              return <CodeBlock language={language} code={code} />
+              return <CodeHighlight language={language} code={code} />
             }else {
               return <pre {...props}>{props.children}</pre>
             }

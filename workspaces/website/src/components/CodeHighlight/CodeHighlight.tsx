@@ -1,17 +1,16 @@
 import hljs from "highlight.js";
-import { CodeBlock as CodeBlockType } from "@starknet-io/cms-data/src/pages";
 import { Box, Divider, Text } from "@chakra-ui/react";
-import CopyButton from "@ui/Button/CopyButton";
-import { codeLanguages } from "@starknet-io/cms-config/src/blocks";
+import CopyButton from "@ui/CodeHighlight/CopyButton";
+import codeLanguages from "@starknet-io/netlify-cms/languages.json";
 
 type CodeHighlightProps = {
   code?: string
-  language?: CodeBlockType['language']
+  language?: string
 }
 
 export default function CodeHighlight(props: CodeHighlightProps) {
   const { code, language } = props;
-  const langDetails = codeLanguages.find(c => c.value === language)
+  const langDetails = codeLanguages.find(c => c.name === language)
 
   let codeHtml = ''
   if(code && language){

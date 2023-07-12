@@ -1,12 +1,12 @@
 id: 0417b464-3b00-4ee0-8295-f096181b24ae
-title: HHHHHHHH Lorcan
+title: Page with code
 template: content
 breadcrumbs: true
 page_last_updated: true
 blocks:
   - type: markdown
     body: >-
-      ## P﻿age with different code blocks
+      ## P﻿age with different code examples
 
 
       T﻿his page has many examples 
