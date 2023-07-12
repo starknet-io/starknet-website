@@ -6,6 +6,8 @@ export const apiRouter = Router({ base: "/api" });
 export const { preflight, corsify } = createCors({
   origins: [
     "https://starknet-website-cms.netlify.app",
+    "https://dev.starknet-netlify-cms.pages.dev/",
+    "https://production.starknet-netlify-cms.pages.dev/",
     "http://127.0.0.1:1234",
     "http://localhost:1234",
     "https://*.starknet-netlify-cms.pages.dev",
