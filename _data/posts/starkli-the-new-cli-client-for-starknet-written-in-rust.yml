@@ -6,6 +6,7 @@ video:
   url: https://www.youtube.com/live/FWvP5bh0yIM?feature=share
   id: FWvP5bh0yIM
   data: null
+image: /assets/communitycall-48-starkli-the-new-cli-client-for-starknet-written-in-rust-youtube-thumbnail.png
 category: community-calls
 topic:
   - open_source
