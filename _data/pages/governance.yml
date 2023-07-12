@@ -24,21 +24,6 @@ blocks:
 
       We encourage you to read all the details in the following posts and engage with the discussions in the [Starknet community forum](https://community.starknet.io/).
   - type: link_list
-    randomize: false
-    heading: Active Vote - Starknet Alpha v0.12.0
-    listSize: lg
-    blocks:
-      - link:
-          hasIcon: true
-          custom_title: Snapshot proposal
-          custom_external_link: https://snapshot.org/#/starknet.eth/proposal/0xe3666dcfaecdd871bbad1c2f882861d2bb0a26eb27aeab36679c498f2a1c86c2
-      - link:
-          hasIcon: true
-          custom_title: "Discussion Thread "
-          custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-12-0/95997
-        subLabel:
-          label: ""
-  - type: link_list
     listSize: lg
     heading: Governance Proposals
     blocks:
