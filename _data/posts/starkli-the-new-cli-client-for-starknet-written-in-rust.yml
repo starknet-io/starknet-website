@@ -1,0 +1,27 @@
+id: 468a355b-3bf4-49b1-9a5e-bd6560cac264
+post_type: video
+title: Starkli - the new CLI client for Starknet written in Rust
+published_date: 2023-07-11T12:00:38.810Z
+video:
+  url: https://www.youtube.com/live/FWvP5bh0yIM?feature=share
+  id: FWvP5bh0yIM
+  data: null
+category: community-calls
+topic:
+  - open_source
+short_desc: Henrli hosts Jonathan Lei, CTO at zkLend, and creator of Starknet-rs
+  and Starkli. Jonathan Lei presents Starkli, a Starknet CLI client tool written
+  in Rust
+blocks:
+  - type: link_list
+    randomize: false
+    heading: Related links
+    blocks:
+      - link:
+          hasIcon: true
+          custom_external_link: https://github.com/xJonathanLEI/starkli
+          custom_title: Starkli on GitHub
+      - link:
+          hasIcon: true
+          custom_title: "@xJonathanLEI on Twitter"
+          custom_external_link: https://twitter.com/xJonathanLEI
