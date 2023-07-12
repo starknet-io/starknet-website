@@ -257,24 +257,6 @@ export const blocks = [
     ],
   },
   {
-    name: "code",
-    label: "Code",
-    widget: "object",
-    fields: [
-      {
-        label: 'Language',
-        name: 'language',
-        widget: 'select',
-        crowdin: false,
-        options: codeLanguages,
-      },
-      {
-        name: "body",
-        widget: "code",
-      },
-    ],
-  },
-  {
     name: "page_header",
     label: "Page Header",
     widget: "object",
