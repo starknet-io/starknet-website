@@ -41,7 +41,7 @@ export default function RoadmapPage({
   return (
     <RoadmapLayout locale={locale} mode="ROADMAP" roadmapSettings={roadmapSettings}>
       {roadmapStagesFields.map((stage) => {
-        const stagePosts = roadmapPostsByStage[stage.value];
+        const stagePosts = roadmapPostsByStage[stage.value] || [];
 
         return (
           <Box key={stage.value} mb="5rem">
