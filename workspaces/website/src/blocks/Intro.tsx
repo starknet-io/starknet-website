@@ -15,6 +15,7 @@ const texts = [
   "Servus zu",
 ];
 
+
 export const Intro = () => {
   const [index, setIndex] = useState(0);
 
