@@ -1,0 +1,192 @@
+id: 20c6f058-f8e2-40a9-9d8e-3d3b1bf12188
+post_type: article
+title: "Dojo on Starknet: Game On!"
+published_date: 2023-07-13T12:28:38.087Z
+image: /assets/dojo.png
+category: engineering
+topic:
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
+blocks:
+  - type: markdown
+    body: >-
+      ### The First Provable Game Engine for Starknet
+
+
+      #   
+
+
+      ## TL;DR
+
+
+      * Dojo is a provable on-chain game engine, enabling games with ownership, interoperability, and extensibility.
+
+      * It operates on Starknet, providing a software framework for game creators, to help them create a high-quality seamless, and fast game.
+
+      * Dojo enhances game development by enabling fast and cheap transactions, necessary for production-grade crypto gaming.
+
+      * Components like ECS, Sozu, Torii, and Katana aid game development and deployment.
+
+      * Future Dojo enhancements include Layer-3 game research, optimistic updates, client-side proving, and cross-chain transfers.
+
+      * Dojo-powered games on Starknet, like Dope Wars, Influence, Realms, and CafeCosmos, are increasing, marking a rising trend in on-chain gaming.
+
+
+      #  
+
+
+      *Blockchain games have failed to live up to their promise. The limitations in scale and high costs have limited most on-chain games to the tokenization of in-game assets. But with the cheap and fast transactions enabled by Starknet and the new Dojo crypto gaming engine, the promise of not only owning your in-game assets, but also proving the game logic on-chain, is coming true.*  
+
+
+      The global gaming market, [valued at $245 billion](https://www.mordorintelligence.com/industry-reports/global-gaming-market) as of 2023, is one of the largest segments of the worldwide entertainment industry. And *blockchain* gaming, with its promise of allowing boundless interoperability, offers an opening to a world of gaming that is much more exciting than the current scenario. Similar to how multiplayer games added a whole new dimension of possibilities to the gaming ecosystem, on-chain games can become even more entertaining and relevant.
+
+
+      But that promise has run up against the reality of blockchain—transactions are expensive and slow. These are two problems that games simply can’t have. Because of this, creating successful on-chain games has been nearly impossible.
+
+
+      But with the maturity of validity rollup technology, the promise of on-chain games is finally being delivered. 
+
+
+      In this article, we’ll look at how the high TPS enabled by **Starknet** brings the promise of on-chain games to fruition. And we’ll look at how **Dojo**—the first community-built provable gaming engine—uses Starknet to empower creators. Finally, we’ll look at the future of Dojo and what it unlocks for blockchain gaming.
+
+
+      ## Crypto Gaming
+
+
+      When we talk about blockchain gaming, the two most popular ideologies that blockchain enables are **ownership of in-game assets** and **interoperability**. 
+
+
+      **Ownership of in-game assets** means that game assets belong to a wallet owned by the *user*. In other words, they do not belong to the game builder or to a simple email account stored on a centralized server that the game devs can remotely delete. In blockchain gaming, assets that you create or earn truly belong to you.
+
+
+      And once these assets belong to *you*—games can enable **interoperability**. With interoperability, characters and assets from one game can be transferred to a different game or world. If you invest hundreds of hours in a game but decide to no longer play, you can take those hard-earned assets with you to your new game of choice. 
+
+
+      In order to implement these two concepts, games must be built **on-chain**. This means that all in-game assets, all the actions taken by the player, and any other state changes *must take place as a transaction on the blockchain* (either separately for each action or an aggregate transaction pushed periodically). On a fairly decentralized blockchain, it can cost a few cents *to a few hundred dollars* (during congestion) and take several minutes or more for a single transaction. Obviously, this makes operating large-scale gaming infrastructure on such platforms prohibitively expensive, slow, and impractical.
+
+
+      ## Starknet and Cheap Computation 
+
+
+      But all that is changing with the advent of validity rollups such as Starknet. 
+
+
+      **Starknet** is a Layer 2 validity rollup (commonly known as a zero-knowledge rollup) developed by [StarkWare](https://starkware.co/starknet/) that uses cryptographic systems called STARKs to massively decrease computation and storage costs. (To learn more about cryptographic proofs on Starknet, [refer to an introductory article here](https://starkware.medium.com/cambrian-explosion-of-cryptographic-proofs-5740a41cdbd2#:~:text=The%20Cambrian%20explosion%20of%20cryptographic,currently%20being%20used%20in%20web3).) 
+
+
+      Starknet (and Cairo, the smart contract language for Starknet) allow dApps to process high TPS at minimal cost and yet still take advantage of the security of Ethereum. These cheap and fast transactions are exactly what’s needed to unlock the promise of blockchain gaming. Games can now be fully on-chain, fast, and affordable.   
+
+
+      But even with the ability to be on-chain, for blockchain games to flourish they need a second key building block: a provable game engine.
+
+
+      ## What are Game Engines
+
+
+      A **game engine** is the software framework that enables the beautiful settings, swift player movements, and realistic character behaviors in the games you love. A game engine usually includes libraries and support programs that provide developers with a framework so they don't have to recreate fundamental systems (such as physics, graphics, and game mechanics) from scratch for every game. Game engines can also include audio and video processing, rendering 3D effects, and AI features. 
+
+
+      A game engine is the stage upon which a game is built. 
+
+
+      Most of the games that we love to play owe their existence to two of the most popular game engines in the world: Unity and Unreal Engine. The Unreal Engine, developed by Epic Games, has been used in popular titles like "Fortnite," "Street Fighter V," and the "Gears of War" series. Unity, another major player in the game engine industry, has brought games like "Hearthstone," "Ori and the Blind Forest," and "Pokémon Go" to life.
+
+
+      Because Starknet unlocks the promise of crypto gaming, a rush of projects have started building games on Starknet. But what is still missing is a *crypto* game engine that allows developers to build games without having to write custom code for basic physics, logic, and game mechanics—and all while staying on-chain. 
+
+
+      ## Dojo - the First Provable Game Engine
+
+
+      **[Dojo](https://dojoengine.org/)** is that crypto game engine. It is a community-built, provable game engine and toolchain for building on-chain games and autonomous worlds. It brings the promise of crypto gaming to reality.
+
+
+      The number of games on Starknet using Dojo is growing quickly. Some of the most popular include:
+
+
+      * [Influence](https://www.influenceth.io/) - A grand strategy MMO set in a distant asteroid belt with a player-owned open economy. The users can buy NFTs that permit them to explore and develop asteroids. All the asteroids live in the same world, and players can interact with one another. 
+
+      * [Realms](https://linktr.ee/BibliothecaDAO) - A strategy game with 8,000 land maps with specific names, forms, sizes, and geographical traits that give users (owners of these lands) on-chain utility, such as resource generation and fungible housing primitives allowing for economic games.
+
+      * [CafeCosmos](https://www.cafecosmos.io/) - A land-based on-chain game where users must manage resources efficiently. This includes gathering resources, farming, and rearing animals, crafting appliances and furniture, trading assets, and so much more. 
+
+
+      ## Dojo Components
+
+
+      The Dojo ecosystem has the following components: 
+
+
+      * ECS (Entity Component System) written in [Cairo](https://github.com/starkware-libs/cairo)
+
+      * Sozu migration planner
+
+      * Torii networking & indexing stack
+
+      * Katana RPC development network
+
+
+      Let’s walk through each of these in detail. 
+
+
+      An **ECS system** is a design pattern used in game development to promote more maintainable code. An ECS system allows the game developer to give unique features (components) to the game's objects (entities), allowing the whole scene to work as an integrated system. 
+
+
+      Dojo's ECS framework, specially designed for blockchain-based game development, promotes modularity, efficiency, and flexibility, which are vital to managing blockchain environments' unique challenges. This enables the creation of complex, dynamic games on the blockchain, supporting diverse game mechanics and interactions while harnessing blockchain technology's transparent, decentralized benefits. 
+
+
+      And, since Dojo is written in Cairo, it maximizes the efficiency of code that needs to be proven. (To learn more about the intricacies of Cairo and what we mean by provable, [we recommend this article](https://starkware.medium.com/moving-from-solidity-to-cairo-7d44f9723c68).) 
+
+
+      **Sozo** is a toolchain adapted specifically for building and migration planning. In other words, Sozo can be used for deploying the developed games on Starknet. With a simple \`sozo migrate\` command, deploying an instance of the game "world" on-chain is possible. Sozo is only available as a command-line interface (CLI) tool. However, a GUI interface is currently in development.
+
+
+      **Torii** is a comprehensive indexing and networking layer for Dojo worlds. Since the Torii system is built on top of Dojo, it is designed to index any events happening in the game worlds deployed on-chain. It systematically organizes the state of Dojo's worlds, making querying data for clients convenient and efficient. Considering many state changes in games—imagine each click is a state change—efficient querying systems are a useful feature on top of the Dojo stack. Queries on Torii are made in [GraphQL](https://www.apollographql.com/blog/graphql/basics/what-is-graphql-introduction/).
+
+
+      **Katana** is an extremely fast local Starknet node designed to support local development with Dojo. Katana allows developers to test their applications on this "devnet" for rapid local development. Developers can use the Katana network to test the transactions being sent during the game. Katana provides convenient RPC methods that can be used to change the network's configuration as needed (for example, changing the block time or allowing zero-fee transactions, etc.). On top of that, Katana supports version [v0.3.0](https://github.com/starkware-libs/starknet-specs/tree/v0.3.0) of the Starknet JSON-RPC specifications (the latest version as of June 2023). Native Starknet JSON calls, such as starknet_getTransactionReceipt, starknet_getStorageAt, can be used on Katana. 
+
+
+      ## The Future of Dojo and Crypto Gaming 
+
+
+      The Dojo community continually researches and builds in order to push crypto gaming forward. In addition to improving the current components, the lead developers are working on:
+
+
+      * L3s for games
+
+      * Optimistic updates
+
+      * Client-side proving 
+
+      * Cross-chain asset transfers
+
+
+      Let’s look at each one and what it means for gaming.
+
+
+      **L3s for games** - Dojo is researching the viability of developing games as L3s on Starknet. This means that a separate chain is deployed on top of Starknet which periodically proves the execution of its transactions and submits the proof on Starknet (the L2). Starknet aggregates this proof with other transactions on the network and submits the proof to Ethereum L1, where the proof is verified. [This solution could increase the scalability of games](https://medium.com/starkware/fractal-scaling-from-l2-to-l3-7fe238ecfb4f) even several times more. (As an extra step, think about if every time a player attempts a level in the game, a new layer is built for a one-time use on top of the game layer.)
+
+
+      **Optimistic updates** - How often have we sat silently waiting for the "transaction in progress…" text in our wallets to turn green and show the transaction as "verified"? A lot. If every move a player takes in the game is sent as a separate transaction, the player would waste *a lot* of time waiting for the transaction to be accepted. 
+
+
+      Optimistic updates—which Dojo is working on adding as an extra feature to its stack—get rid of this problem by optimistically running the transaction on the client side (in the browser itself) and allowing the player to continue the game. If, for some reason, the transaction's outcome is different from what was run in the browser, the game would reconcile the changes.
+
+
+      **Client-side proving**  - Along with optimistic updates running on the client side, Dojo is exploring the possibility of client-side proving parts of transactions sent on-chain. This would allow the games built on top of Dojo to effectively blind some of the inputs passed by the user since a ZK proof of receiving those inputs on the client side can be created. This ZK proof, in turn, could be sent on-chain to the sequencer, which executes the rest of the transaction. 
+
+
+      **Utilizing storage proofs** - Storage proofs are a cryptographic way to store blockchain information so that it can be shared across chains. Similar to oracles, they provide proof that information is true. But unlike oracles, they do not require trust in a third party for this proof—with storage proofs, the trust is built into the storage. Storage proofs also allow proving the validity of the state for another chain or layer built on top of Ethereum. 
+
+
+      Dojo is working with the [Herodotus](https://www.herodotus.dev/) team to implement storage proofs in Dojo so that cross-chain asset *transfer* is unnecessary. Ownership of an asset from a different chain could be proven with storage proof, and the user would be able to use their assets in different games on different chains or layers. (See the part about games being built as separate L3s on top of Starknet discussed above.)
+
+
+      ## Conclusion
+
+
+      Dojo is the world's first provable game engine and is made possible due to the availability of Starknet and Cairo. With provable gaming engines such as Dojo, truly on-chain crypto games are starting to see the light of day. The "interoperability and ownership" promise is being fulfilled one step at a time.
+
+
+      If you want to help the Dojo community to build the future, visit them at [https://dojoengine.org](https://dojoengine.org/) or reach out on their Discord.
