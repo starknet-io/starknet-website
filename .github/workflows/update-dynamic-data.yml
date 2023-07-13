@@ -1,6 +1,10 @@
 name: Update Dynamic Data
 
 on:
+  push:
+    branches:
+      - jobs-archiving
+
   schedule:
     - cron: "0 8 * * *" # This will run the workflow every day at midnight
 
@@ -10,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: jobs-archiving
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
