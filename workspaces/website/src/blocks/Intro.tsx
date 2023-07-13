@@ -3,16 +3,7 @@ import { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
 const texts = [
-  "Welcome to",
-  "へようこそ",
-  "Bienvenue à",
   "ברוכים הבאים ל",
-  "مرحبا بك في",
-  "欢迎来到",
-  "歡迎來到",
-  "Grüezi tso",
-  "Bienvenida a",
-  "Servus zu",
 ];
 
 export const Intro = () => {
@@ -42,7 +33,7 @@ export const Intro = () => {
       mt="8"
       fontWeight="bold"
       height={{ base: "1.2em" }}
-      fontSize={{ base: "48px", md: "55px", lg: "60px", xl: "80px" }}
+      fontSize={{ base: "39px", md: "55px", xl: "80px" }}
       fontFamily="InterVariable, Tajawal, Noto Sans Hebrew, Noto Sans JP, Noto Sans TC, Noto Sans SC"
       color="heading-navy-fg"
     />
