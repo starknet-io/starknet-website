@@ -16,6 +16,7 @@
     "typecheck:watch": "tsc -b -w",
     "cms": "yarn workspace @starknet-io/netlify-cms dev",
     "data": "yarn workspace @starknet-io/cms-scripts update-dynamic-data",
+    "update-jobs": "yarn workspace @starknet-io/cms-scripts update-jobs",
     "update:algolia": "yarn workspace @starknet-io/cms-scripts update-algolia-index",
     "starknet-summit": "yarn workspace @starknet-io/starknet-summit dev",
     "storybook": "yarn workspace @starknet-io/storybook storybook",

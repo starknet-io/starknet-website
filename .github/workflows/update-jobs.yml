@@ -5,10 +5,10 @@ on:
     branches:
       - jobs-archiving
   schedule:
-    - cron: "05 14 * * *" # This will run the workflow every day at midnight
+    - cron: "0 0 * * *" # This will run the workflow every day at midnight
 
 jobs:
-  update-data:
+  update-jobs:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,18 +39,18 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Run data script
-        run: yarn data
+      - name: Run update-jobs script
+        run: yarn update-jobs
 
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'github-actions@example.com'
           git checkout jobs-archiving
-          git checkout -b update-data
+          git checkout -b update-jobs
           git add .
-          git commit -m "Update dynamic data"
-          git push origin update-data
+          git commit -m "Update jobs"
+          git push origin update-jobs
 
       - name: pull-request
         uses: repo-sync/pull-request@v2
