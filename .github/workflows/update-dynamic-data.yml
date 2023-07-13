@@ -1,12 +1,8 @@
 name: Update Dynamic Data
 
 on:
-  push:
-    branches:
-      - jobs-archiving
-
   schedule:
-    - cron: "0 8 * * *" # This will run the workflow every day at midnight
+    - cron: "40 12 * * *" # This will run the workflow every day at midnight
 
 jobs:
   update-data:
@@ -26,7 +22,7 @@ jobs:
         run: yarn install
 
       - name: Run data script
-        run: yarn run data
+        run: yarn data
 
       - name: Commit and push changes
         run: |
