@@ -56,7 +56,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
       >
         <Configure
           hitsPerPage={40}
-          facetsRefinements={{ locale: [params.locale] }}
+          facetsRefinements={{ locale: [params.locale], status: ['active'] }}
         />
         <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
@@ -318,7 +318,7 @@ function CustomHits() {
   return (
     <>
       <Flex gap={4} direction="column" flex={1}>
-        {hits.filter((hit => hit.status === "active")).map((hit, i) => (
+        {hits.map((hit, i) => (
           <JobsCard key={i} hit={hit} />
         ))}
       </Flex>

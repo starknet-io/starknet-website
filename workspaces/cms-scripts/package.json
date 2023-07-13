@@ -5,6 +5,7 @@
   "scripts": {
     "update-algolia-index": "vite-node src/algolia.ts",
     "update-dynamic-data": "vite-node src/index.ts",
+    "update-jobs": "vite-node src/jobs-update.ts",
     "pre-crowdin": "vite-node src/pre-crowdin.ts",
     "build": "tsc"
   },
