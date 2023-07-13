@@ -1,6 +1,9 @@
 import { Box, Container, Flex, Spacer, Stack } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import { useLocalStorage } from "react-use";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
 import { Text } from "@ui/Typography/Text";
+import { SummitPromo } from "./SummitPromo";
 import React from "react";
 
 type Props = {
@@ -83,10 +86,7 @@ export const PageLayout = (props: Props) => {
           </Box>
         )}
       </Stack>
+      <SummitPromo />
     </Container>
   );
 };
-
-{
-  /* <Box minH="xs">Sidebar</Box>; */
-}

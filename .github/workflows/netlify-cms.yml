@@ -39,6 +39,8 @@ jobs:
 
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
+        with:
+          slug-maxlength: 40
 
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
@@ -46,6 +48,7 @@ jobs:
           VITE_LIVE_PREVIEW_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
           VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
           VITE_API_BASE_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev/api
+          VITE_DATA_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev/data
 
       - name: Deploy Netlify CMS
         uses: cloudflare/pages-action@1

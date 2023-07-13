@@ -1,4 +1,4 @@
-import { apiRouter } from "../api";
+import { apiRouter, corsify, preflight } from "../api";
 import { handleStaticAssets } from "./static-assets";
 import { renderPage } from "vite-plugin-ssr/server";
 import { IRequest, Router } from "itty-router";
@@ -12,7 +12,13 @@ redirects.items.forEach(({ source, destination }) => {
   router.get(
     source,
     (req: IRequest, event: WorkerGlobalScopeEventMap["fetch"]) => {
-      return Response.redirect(new URL(destination, event.request.url), 301);
+      let src = destination
+
+      for (const [key, value] of Object.entries(req.params)) {
+        src = src.replace(new RegExp(`:${key}\\+?`), value)
+      }
+
+      return Response.redirect(new URL(src, event.request.url), 301);
     }
   );
 });
@@ -28,7 +34,11 @@ router.get("/*.png", ittyAssetshandler);
 router.get("/*.svg", ittyAssetshandler);
 router.get("/*.ico", ittyAssetshandler);
 router.get("/assets/*", ittyAssetshandler);
-router.get("/data/*", ittyAssetshandler);
+
+router.all("/data/*", preflight);
+router.get("/data/*", async (req, event) => {
+  return corsify(await handleStaticAssets(event));
+});
 
 router.all("*", async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
   const userAgent = event.request.headers.get("User-Agent")!;

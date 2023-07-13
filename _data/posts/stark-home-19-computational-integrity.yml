@@ -2,11 +2,6 @@ id: 92a274a5-af66-4950-ab46-cf57290a6093
 post_type: video
 title: "STARK @ Home 19: Computational Integrity"
 published_date: 2021-03-29T14:40:01.937Z
-image: /assets/starkhome19.png
-category: stark-math
-topic:
-  - starknet
-short_desc: Computational integrity.
 video:
   url: https://youtu.be/3_LkKX7hBBk
   id: 3_LkKX7hBBk
@@ -15,10 +10,8 @@ video:
     etag: EEjzRHQ4ZEctk1pIiNnBc8k2zqw
     id: 3_LkKX7hBBk
     snippet:
-      publishedAt: 2021-03-29T12:47:14Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 19: Computational Integrity"
-      description: ""
+      publishedAt: 2021-03-29T12:47:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/3_LkKX7hBBk/default.jpg
@@ -40,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/3_LkKX7hBBk/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK @ Home 19: Computational Integrity"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 19: Computational Integrity"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H24M41S
       dimension: 2d
@@ -55,3 +50,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome19.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: Computational integrity.

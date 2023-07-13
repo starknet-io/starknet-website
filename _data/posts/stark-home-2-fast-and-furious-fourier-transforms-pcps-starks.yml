@@ -2,11 +2,6 @@ id: f658b96a-504f-4578-a2fb-b72ff60856f1
 post_type: video
 title: "STARK @ Home 2: Fast and Furious {Fourier Transforms, PCPs, STARKs}"
 published_date: 2020-03-29T14:04:12.404Z
-image: /assets/starkhome02.png
-category: stark-math
-topic:
-  - starknet
-short_desc: Eli Ben Sasson talks about FFT vs. PPC
 video:
   url: https://youtu.be/6qJo2qK-FPY
   id: 6qJo2qK-FPY
@@ -15,10 +10,8 @@ video:
     etag: --BAusu9KTqN3kkRsskvkFz814M
     id: 6qJo2qK-FPY
     snippet:
-      publishedAt: 2020-03-29T08:34:57Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 2: Fast and Furious {Fourier Transforms, PCPs, STARKs}"
-      description: "STARK @ Home 2: Eli Ben Sasson talks about FFT vs. PPC"
+      publishedAt: 2020-03-29T08:34:57.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/6qJo2qK-FPY/default.jpg
@@ -41,11 +34,13 @@ video:
           width: 1280
           height: 720
       channelTitle: StarkWare
+      title: "STARK @ Home 2: Fast and Furious {Fourier Transforms, PCPs, STARKs}"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 2: Fast and Furious {Fourier Transforms, PCPs, STARKs}"
         description: "STARK @ Home 2: Eli Ben Sasson talks about FFT vs. PPC"
+      description: "STARK @ Home 2: Eli Ben Sasson talks about FFT vs. PPC"
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H14M42S
       dimension: 2d
@@ -54,3 +49,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome02.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: Eli Ben Sasson talks about FFT vs. PPC

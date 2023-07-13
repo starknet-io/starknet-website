@@ -22,6 +22,9 @@ blocks:
       - title: ConsenSys Diligence
         website_url: http://consensys.net/diligence
         image: /assets/consensys-diligence-logo.svg
+        description: ConsenSys is a leading smart contract auditing and blockchain
+          security tooling for smart contract developers, auditors and web3
+          protocols.
       - title: Nethermind
         website_url: https://nethermind.io/
         image: /assets/nethermind-logo.png
@@ -33,15 +36,9 @@ blocks:
         image: /assets/openzeppelin-logo.png
         description: OpenZeppelin is a leading blockchain security company providing
           products and audits to trusted organizations in Web3.
-      - title: PeckShield
-        image: /assets/peckshield-logo.jpg
-        website_url: http://peckshield.com
       - website_url: http://www.trailofbits.com
         image: /assets/trail-of-bits-logo.png
         title: Trail of Bits
-      - title: Zellic
-        image: /assets/zellic-logo.png
-        website_url: http://www.zellic.io
       - title: Ginger Security
         image: /assets/ginger-security-logo.png
         website_url: https://gingersec.xyz/

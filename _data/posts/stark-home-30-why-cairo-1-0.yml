@@ -10,14 +10,8 @@ video:
     etag: 5IZnKD2WS9LIaNUe3FvX9V21-dk
     id: uW2tTR53J7o
     snippet:
-      publishedAt: 2023-04-05T04:33:15Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 30: Why Cairo 1.0?"
-      description: In this session of STARK @ Home, we invited Vitalik Buterin to
-        discuss the creation of new programming languages. We'll review Cairo
-        1.0 and answer the questions of why it was created, what one should pay
-        attention to when creating a new language, and which special features it
-        has.
+      publishedAt: 2023-04-05T04:33:15.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/uW2tTR53J7o/default.jpg
@@ -39,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/uW2tTR53J7o/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK @ Home 30: Why Cairo 1.0?"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 30: Why Cairo 1.0?"
         description: In this session of STARK @ Home, we invited Vitalik Buterin to
@@ -49,7 +44,12 @@ video:
           1.0 and answer the questions of why it was created, what one should
           pay attention to when creating a new language, and which special
           features it has.
-      defaultAudioLanguage: en-US
+      description: In this session of STARK @ Home, we invited Vitalik Buterin to
+        discuss the creation of new programming languages. We'll review Cairo
+        1.0 and answer the questions of why it was created, what one should pay
+        attention to when creating a new language, and which special features it
+        has.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H15M25S
       dimension: 2d
@@ -59,7 +59,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-at-home-cairo-1.0-2.jpg
-category: stark-math
+category: community-and-events
 topic:
   - cairo
 short_desc: In this session of STARK @ Home, we invited Vitalik Buterin to

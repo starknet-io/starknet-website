@@ -1,0 +1,25 @@
+type: meetup
+name: "web3.krk meet-up #1"
+description: We're happy to invite you to our first meet-up! We're having three
+  presentations that will guide you through the world of Starknet, Layer 2, and
+  formal verification. If you can't come in person, you can join the live stream
+  (link soon).  What's the plan?  1. Tom Brand, Starkware TBA  2. Maksymilian
+  Demitraszek, Software Mansion How not to lose millions by mistake?
+  Introduction to formal verification Smart contracts often control critical
+  assets. History shows that a tiny mistake by a developer may cause a lot of
+  damage. Formal verification is a technique that can mitigate such risk.
+  Instead of testing contract behavior in different scenarios, we can prove that
+  the contract behaves exactly as defined in the specification. In this talk, we
+  will briefly discuss underlying technology and the possible consequences for
+  the whole blockchain ecosystem.  3. Antoni Pawlak, L2BEAT What is Layer 2?
+  Introduction to scaling solutions deployed on Ethereum.  Stay for pizza, beer,
+  and networking after the meetup!
+url: https://www.meetup.com/pl-PL/web3-krk/events/294470994/
+start_date: 2023-07-13T15:00:16.260Z
+month: July 2023
+end_date: 2023-07-13T17:00:16.270Z
+show_in_past_events: false
+image: /assets/image-6.png
+location: europe
+city: Kraków
+country: Poland

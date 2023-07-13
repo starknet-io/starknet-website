@@ -17,6 +17,7 @@ import {
   getRoadmapPosts,
   getSimpleData,
   getSimpleFiles,
+  getTutorials,
   handleLink,
   updateBlocks,
   updateJobs
@@ -147,13 +148,10 @@ for (const simpleData of simpleDataTypes) {
 }
 
 const simpleFiles = [
-  await getSimpleFiles("settings", "dapps"),
   await getSimpleFiles("settings", "wallets"),
-  await getSimpleFiles("settings", "block-explorers"),
-  await getSimpleFiles("settings", "bridges"),
-  await getSimpleFiles("settings", "fiat-on-ramps"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
+  await getSimpleFiles("settings", "permissions"),
   await getSimpleFiles("settings", "roadmap", true),
   await getSimpleFiles("settings", "blog-posts", true),
   await getSimpleFiles("seo", "events", true),
@@ -189,6 +187,7 @@ const posts = await getPosts();
 const roadmapPosts = await getRoadmapPosts();
 const announcements = await getAnnouncements();
 const pages = await getPages();
+const tutorials = await getTutorials();
 
 updateBlocks(pages, posts);
 updateJobs();
@@ -200,6 +199,15 @@ for (const locale of locales) {
 for (const data of posts.filenameMap.values()) {
   await write(`public/data/posts/${data.locale}/${data.slug}.json`, data);
   await write(`public/data/posts/${data.locale}/${data.id}.json`, data);
+}
+
+for (const locale of locales) {
+  await fs.mkdir(`public/data/tutorials/${locale}`, { recursive: true });
+}
+
+for (const data of tutorials.filenameMap.values()) {
+  //@ts-ignore
+  await write(`public/data/tutorials/${data.locale}/${data.id}.json`, data);
 }
 
 for (const locale of locales) {

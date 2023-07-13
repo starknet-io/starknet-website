@@ -2,12 +2,6 @@ id: 5f8dafd1-d07f-40ad-bce5-228fe1cb0122
 post_type: video
 title: "STARK @ Home 6: Deep FRI Dive"
 published_date: 2020-05-14T14:13:03.275Z
-image: /assets/starkhome06.png
-category: stark-math
-topic:
-  - starknet
-short_desc: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and a
-  cool trick at the end).
 video:
   url: https://youtu.be/CBw5d520vqk
   id: CBw5d520vqk
@@ -16,11 +10,8 @@ video:
     etag: MUErcSYWJlGPbkts87ArUDMisHA
     id: CBw5d520vqk
     snippet:
-      publishedAt: 2020-05-14T12:19:17Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK @ Home 6: Deep FRI Dive"
-      description: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and
-        a cool trick at the end)
+      publishedAt: 2020-05-14T12:19:17.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/CBw5d520vqk/default.jpg
@@ -43,12 +34,15 @@ video:
           width: 1280
           height: 720
       channelTitle: StarkWare
+      title: "STARK @ Home 6: Deep FRI Dive"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK @ Home 6: Deep FRI Dive"
         description: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and
           a cool trick at the end)
+      description: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and
+        a cool trick at the end)
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H15M59S
       dimension: 2d
@@ -57,3 +51,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkhome06.png
+category: community-and-events
+topic:
+  - starknet
+short_desc: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and a
+  cool trick at the end).

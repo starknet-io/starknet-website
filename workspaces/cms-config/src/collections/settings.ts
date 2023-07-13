@@ -1,6 +1,50 @@
 import { linkFields } from "../blocks";
 import { CmsCollection } from "../types";
 
+
+const permissionOptions = [
+  {
+    label: "All",
+    value: "all",
+  },
+  {
+    label: "Pages",
+    value: "pages",
+  },
+  {
+    label: "Posts",
+    value: "posts",
+  },
+  {
+    label: "Events",
+    value: "events",
+  },
+  {
+    label: "Tutorials",
+    value: "tutorials",
+  },
+  {
+    label: "Jobs",
+    value: "jobs",
+  },
+  {
+    label: "SEO",
+    value: "seo",
+  },
+  {
+    label: "Settings (excluding permissions)",
+    value: "settings",
+  },
+  {
+    label: "Permissions",
+    value: "permissions",
+  },
+  {
+    label: "Roadmap and Announcements",
+    value: "roadmap",
+  },
+]
+
 export const settingsCollectionConfig = {
   crowdin: true,
   label: "Settings",
@@ -88,50 +132,6 @@ export const settingsCollectionConfig = {
       ],
     },
     {
-      label: "Dapps",
-      name: "dapps",
-      file: `_data/settings/dapps.yml`,
-      crowdin: true,
-      fields: [
-        {
-          label: "Dapps",
-          name: "items",
-          widget: "list",
-          fields: [
-            {
-              label: "Name",
-              name: "name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Image",
-              name: "image",
-              widget: "image",
-            },
-            {
-              label: "Twitter handle",
-              name: "twitter",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Website url",
-              name: "website_url",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Description",
-              name: "description",
-              widget: "string",
-              crowdin: true
-            },
-          ],
-        },
-      ],
-    },
-    {
       label: "Wallets",
       name: "wallets",
       file: `_data/settings/wallets.yml`,
@@ -188,156 +188,6 @@ export const settingsCollectionConfig = {
             {
               label: "Description",
               name: "body",
-              widget: "string",
-              crowdin: true
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Block explorers",
-      name: "block-explorers",
-      file: `_data/settings/block-explorers.yml`,
-      crowdin: true,
-      fields: [
-        {
-          label: "Block explorers",
-          name: "items",
-          widget: "list",
-          fields: [
-            {
-              label: "Name",
-              name: "name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Website url",
-              name: "website_url",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Image",
-              name: "image",
-              widget: "image",
-            },
-            {
-              label: "Company name",
-              name: "company_name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Twitter handle",
-              name: "twitter",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Description",
-              name: "description",
-              widget: "string",
-              crowdin: true
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Bridges",
-      name: "bridges",
-      file: `_data/settings/bridges.yml`,
-      crowdin: true,
-      fields: [
-        {
-          label: "Bridges",
-          name: "items",
-          widget: "list",
-          fields: [
-            {
-              label: "Name",
-              name: "name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Website url",
-              name: "website_url",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Image",
-              name: "image",
-              widget: "image",
-            },
-            {
-              label: "Company name",
-              name: "company_name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Twitter handle",
-              name: "twitter",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Description",
-              name: "description",
-              widget: "string",
-              crowdin: true
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Fiat on-ramps",
-      name: "fiat-on-ramps",
-      file: `_data/settings/fiat-on-ramps.yml`,
-      crowdin: true,
-      fields: [
-        {
-          label: "Fiat on-ramps",
-          name: "items",
-          widget: "list",
-          fields: [
-            {
-              label: "Name",
-              name: "name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Website url",
-              name: "website_url",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Image",
-              name: "image",
-              widget: "image",
-            },
-            {
-              label: "Company name",
-              name: "company_name",
-              widget: "string",
-              crowdin: true
-            },
-            {
-              label: "Twitter handle",
-              name: "twitter",
-              widget: "string",
-              crowdin: false
-            },
-            {
-              label: "Description",
-              name: "description",
               widget: "string",
               crowdin: true
             },
@@ -469,6 +319,41 @@ export const settingsCollectionConfig = {
           required: false,
           crowdin: true
         }
+      ],
+    },
+    {
+      label: "Permissions",
+      name: "permissions",
+      file: `_data/settings/permissions.yml`,
+      crowdin: false,
+      fields: [
+        {
+          label: "Permissions",
+          name: "items",
+          widget: "list",
+          fields: [
+            {
+              name: "username",
+              label: "Github username",
+              widget: "string",
+              crowdin: false,
+            },
+            {
+              name: "name",
+              label: "Name",
+              widget: "string",
+              crowdin: false,
+              required: false
+            },
+            {
+              name: "access",
+              label: "Access to collections",
+              multiple: true,
+              widget: "select",
+              options: permissionOptions
+            },
+          ],
+        },
       ],
     },
   ],
