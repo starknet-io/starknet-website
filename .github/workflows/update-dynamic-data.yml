@@ -47,6 +47,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'github-actions@example.com'
+          git checkout jobs-archiving
           git checkout -b update-data
           git add .
           git commit -m "Update dynamic data"
@@ -59,5 +60,5 @@ jobs:
           pr_body: "This PR updates the dynamic data with the latest changes."
           pr_allow_empty: false
           pr_label: "auto-pr"
-          destination_branch: "dev"
+          destination_branch: "jobs-archiving"
           github_token: ${{ secrets.GITHUB_TOKEN }}
