@@ -1,13 +1,8 @@
 name: Update Dynamic Data
 
 on:
-push:
-  branches:
-    - jobs-archiving
-
   schedule:
-- cron: "0 8 * * *" # This will run the workflow every day at 8am UTC time
-
+    - cron: "0 8 * * *" # This will run the workflow every day at midnight
 
 jobs:
   update-data:
