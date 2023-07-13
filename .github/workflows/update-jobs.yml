@@ -1,4 +1,4 @@
-name: Update Dynamic Data
+name: Update Jobs
 
 on:
   push:
