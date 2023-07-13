@@ -71,5 +71,6 @@ jobs:
 
           pr_allow_empty: false
           pr_label: "auto-pr"
+          source_branch: "update-jobs"
           destination_branch: "jobs-archiving"
           github_token: ${{ secrets.GITHUB_TOKEN }}
