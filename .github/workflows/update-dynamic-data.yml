@@ -6,24 +6,37 @@ on:
       - jobs-archiving
 
   schedule:
-    - cron: "40 12 * * *" # This will run the workflow every day at midnight
+    - cron: "25 13 * * *" # This will run the workflow every day at midnight
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: jobs-archiving
-
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: 18
+          cache: yarn
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            .yarn/install-state.gz
+            .eslintcache
+            **/tsconfig.tsbuildinfo
+            **/.types/**
+            **/.types-*/**
+          key: build-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            build-cache-
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn
 
       - name: Run data script
         run: yarn data
