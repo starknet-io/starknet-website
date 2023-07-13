@@ -6,7 +6,7 @@ on:
       - jobs-archiving
 
   schedule:
-    - cron: "30 13 * * *" # This will run the workflow every day at midnight
+    - cron: "45 13 * * *" # This will run the workflow every day at midnight
 
 jobs:
   update-data:
