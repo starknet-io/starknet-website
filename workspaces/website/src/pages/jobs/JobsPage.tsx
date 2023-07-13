@@ -56,7 +56,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
       >
         <Configure
           hitsPerPage={40}
-          facetsRefinements={{ locale: [params.locale] }}
+          facetsRefinements={{ locale: [params.locale], status: ['active'] }}
         />
         <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
@@ -65,6 +65,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
 }
 
 const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
+
   const { items: roles, refine: refineRoles } = useRefinementList({
     attribute: "job.role",
     sortBy: ["name:asc"],
@@ -307,6 +308,8 @@ export type JobsHit = {
   contact?: Contact; // contact can be undefined in live preview
   job?: Job; // job can be undefined in live preview
   published_at?: string;
+  archived?: string;
+  archive_after: string;
 };
 
 function CustomHits() {
@@ -319,22 +322,6 @@ function CustomHits() {
           <JobsCard key={i} hit={hit} />
         ))}
       </Flex>
-      {/* {hits.map((hit, i) => (
-          <ArticleCard.Root href="$" key={i}>
-            <ArticleCard.Image url={`/static/${hit.image}`} />
-
-            <ArticleCard.Body>
-              <ArticleCard.Category category={hit?.category} />
-              <ArticleCard.Content title={hit.title} excerpt={hit.short_desc} />
-            </ArticleCard.Body>
-            <ArticleCard.Footer
-              postType="audio"
-              publishedAt="Nov 24, 2022"
-              duration="1hr 2mins"
-            />
-          </ArticleCard.Root>
-        ))} */}
-
       {!isLastPage && (
         <HStack mt="24">
           <Divider />

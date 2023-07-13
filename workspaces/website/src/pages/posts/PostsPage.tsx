@@ -433,11 +433,7 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
         </ArticleCard.Root>
       </Box>}
       <Grid
-        templateColumns={{
-          base: "repeat(auto-fit, minmax(280px, 1fr))",
-          lg: "repeat(auto-fit, minmax(280px, 1fr))",
-          xl: "repeat(auto-fit, minmax(280px, 299px))",
-        }}
+        templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
         templateRows="1fr"
         columnGap="24px"
         rowGap="48px"
