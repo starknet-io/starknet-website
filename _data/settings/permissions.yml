@@ -2,47 +2,38 @@ items:
   - username: lorcan-codes
     access:
       - all
-
   - username: milosyuki
     name: Miloš Leković
     access:
       - all
-
   - username: thecotne
     name: Tsotne
     access:
       - all
-
   - username: thorville
     name: Keith Tormey
     access:
       - all
-
   - username: robwalsh21
     access:
       - all
-      
   - username: AmalyStark
     name: Amalya
     access:
       - all
-
   - username: Tal-wagner
     access:
       - all
-
+    name: Tal.w
   - username: JameStark
     access:
       - roadmap
-
   - username: LiranRich
     access:
       - events
-
   - username: Karinbd1
     access:
       - events
-
   - username: shakedstarkware
     access:
       - posts
