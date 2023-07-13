@@ -7,6 +7,13 @@ category: engineering
 topic:
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
   - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
+short_desc: >+
+  Dojo is the world's first provable game engine and is made possible due to the
+  availability of Starknet and Cairo. With provable gaming engines such as Dojo,
+  truly on-chain crypto games are starting to see the light of day. The
+  "interoperability and ownership" promise is being fulfilled one step at a
+  time.
+
 blocks:
   - type: markdown
     body: >-
