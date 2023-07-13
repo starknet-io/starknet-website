@@ -375,7 +375,7 @@ function CustomHits({ locale }: CustomHitsProps) {
         templateColumns={{
           base: "repeat(auto-fit, minmax(280px, 1fr))",
           lg: "repeat(auto-fit, minmax(280px, 1fr))",
-          xl: "repeat(auto-fit, minmax(280px, 299px))",
+          xl: "repeat(auto-fit, minmax(280px, 321px))",
         }}
         templateRows="1fr"
         columnGap="24px"
