@@ -1,0 +1,275 @@
+[
+  {
+    "label": "Asciidoc",
+    "name": "asciidoc",
+    "mode": "gfm",
+    "mimeType": "text/asciidoc",
+    "abbreviation": "ADoc"
+  },
+  {
+    "label": "Bash",
+    "name": "bash",
+    "mode": "shell",
+    "mimeType": "text/bash",
+    "abbreviation": "Bash"
+  },
+  {
+    "label": "C",
+    "name": "c",
+    "mode": "clike",
+    "mimeType": "text/x-csrc",
+    "abbreviation": "C"
+  },
+  {
+    "label": "Cairo",
+    "name": "cairo",
+    "mode": "clike",
+    "mimeType": "text/cairo",
+    "abbreviation": "Cairo"
+  },
+  {
+    "label": "C++",
+    "name": "cpp",
+    "mode": "clike",
+    "mimeType": "text/x-c++src",
+    "abbreviation": "CPP"
+  },
+  {
+    "label": "CMake",
+    "name": "cmake",
+    "mode": "cmake",
+    "mimeType": "text/x-cmake",
+    "abbreviation": "CMake"
+  },
+  {
+    "label": "CSS",
+    "name": "css",
+    "mode": "css",
+    "mimeType": "text/css",
+    "abbreviation": "CSS"
+  },
+  {
+    "label": "Clojure",
+    "name": "clojure",
+    "mode": "clojure",
+    "mimeType": "text/x-clojure",
+    "abbreviation": "Clj"
+  },
+  {
+    "label": "Diff",
+    "name": "diff",
+    "mode": "diff",
+    "mimeType": "text/x-diff",
+    "abbreviation": "Diff"
+  },
+  {
+    "label": "Dockerfile",
+    "name": "dockerfile",
+    "mode": "dockerfile",
+    "mimeType": "text/x-dockerfile",
+    "abbreviation": "Docker"
+  },
+  {
+    "label": "Elixir",
+    "name": "elixir",
+    "mode": "elixir",
+    "mimeType": "text/elixir",
+    "abbreviation": "Elixir"
+  },
+  {
+    "label": "Go",
+    "name": "go",
+    "mode": "go",
+    "mimeType": "text/x-go",
+    "abbreviation": "Go"
+  },
+  {
+    "label": "Groovy",
+    "name": "groovy",
+    "mode": "groovy",
+    "mimeType": "text/x-groovy",
+    "abbreviation": "Groovy"
+  },
+  {
+    "label": "HTML",
+    "name": "html",
+    "mode": "htmlmixed",
+    "mimeType": "text/html",
+    "abbreviation": "HTML"
+  },
+  {
+    "label": "Haskell",
+    "name": "haskell",
+    "mode": "haskell",
+    "mimeType": "text/x-haskell",
+    "abbreviation": "Hask"
+  },
+  {
+    "label": "JSON",
+    "name": "json",
+    "mode": "javascript",
+    "mimeType": "application/json",
+    "abbreviation": "JSON"
+  },
+  {
+    "label": "JSX",
+    "name": "jsx",
+    "mode": "jsx",
+    "mimeType": "text/jsx",
+    "abbreviation": "JSX"
+  },
+  {
+    "label": "Java",
+    "name": "java",
+    "mode": "clike",
+    "mimeType": "text/x-java",
+    "abbreviation": "Java"
+  },
+  {
+    "label": "JavaScript",
+    "name": "javascript",
+    "mode": "javascript",
+    "mimeType": "text/javascript",
+    "abbreviation": "JS"
+  },
+  {
+    "label": "Kotlin",
+    "name": "kotlin",
+    "mode": "clike",
+    "mimeType": "text/x-kotlin",
+    "abbreviation": "Kotlin"
+  },
+  {
+    "label": "Markdown",
+    "name": "markdown",
+    "mode": "gfm",
+    "mimeType": "text/x-gfm",
+    "abbreviation": "MD"
+  },
+  {
+    "label": "Nix",
+    "name": "nix",
+    "mode": "clike",
+    "mimeType": "text/nix",
+    "abbreviation": "Nix"
+  },
+  {
+    "label": "Objective-C",
+    "name": "objc",
+    "mode": "clike",
+    "mimeType": "text/x-objectivec",
+    "abbreviation": "Obj-C"
+  },
+  {
+    "label": "PHP",
+    "name": "php",
+    "mode": "php",
+    "mimeType": "application/x-httpd-php",
+    "abbreviation": "PHP"
+  },
+  {
+    "label": "Pascal",
+    "name": "pascal",
+    "mode": "pascal",
+    "mimeType": "text/x-pascal",
+    "abbreviation": "Pascal"
+  },
+  {
+    "label": "Perl",
+    "name": "perl",
+    "mode": "perl",
+    "mimeType": "text/x-perl",
+    "abbreviation": "Perl"
+  },
+  {
+    "label": "PowerShell",
+    "name": "powershell",
+    "mode": "powershell",
+    "mimeType": "application/x-powershell",
+    "abbreviation": "PS"
+  },
+  {
+    "label": "Properties",
+    "name": "properties",
+    "mode": "properties",
+    "mimeType": "text/x-properties",
+    "abbreviation": "Props"
+  },
+  {
+    "label": "Puppet",
+    "name": "puppet",
+    "mode": "puppet",
+    "mimeType": "text/x-puppet",
+    "abbreviation": "Puppet"
+  },
+  {
+    "label": "Python",
+    "name": "python",
+    "mode": "python",
+    "mimeType": "text/x-python",
+    "abbreviation": "PY"
+  },
+  {
+    "label": "Ruby",
+    "name": "ruby",
+    "mode": "ruby",
+    "mimeType": "text/x-ruby",
+    "abbreviation": "Ruby"
+  },
+  {
+    "label": "Rust",
+    "name": "rust",
+    "mode": "rust",
+    "mimeType": "text/x-rustsrc",
+    "abbreviation": "Rust"
+  },
+  {
+    "label": "SQL",
+    "name": "sql",
+    "mode": "sql",
+    "mimeType": "text/x-sql",
+    "abbreviation": "SQL"
+  },
+  {
+    "label": "Scala",
+    "name": "scala",
+    "mode": "clike",
+    "mimeType": "text/x-scala",
+    "abbreviation": "Scala"
+  },
+  {
+    "label": "Shell",
+    "name": "shell",
+    "mode": "shell",
+    "mimeType": "text/x-sh",
+    "abbreviation": "SH"
+  },
+  {
+    "label": "Swift",
+    "name": "swift",
+    "mode": "swift",
+    "mimeType": "text/x-swift",
+    "abbreviation": "Swift"
+  },
+  {
+    "label": "TypeScript",
+    "name": "typescript",
+    "mode": "javascript",
+    "mimeType": "application/typescript",
+    "abbreviation": "TS"
+  },
+  {
+    "label": "XML",
+    "name": "xml",
+    "mode": "xml",
+    "mimeType": "text/xml",
+    "abbreviation": "XML"
+  },
+  {
+    "label": "YAML",
+    "name": "yaml",
+    "mode": "yaml",
+    "mimeType": "text/x-yaml",
+    "abbreviation": "YAML"
+  }
+]
