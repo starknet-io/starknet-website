@@ -8,7 +8,7 @@ export const styles = {
       background: "bg-default",
       color: "fg-default",
     },
-    " p + h3, ul + h3": {
+    "p + h3, ul + h3, .hljs-box + h3": {
       marginTop: "48px",
       marginBottom: "16px",
     },
