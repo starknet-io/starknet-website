@@ -1,4 +1,4 @@
-import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
+import type { Page as PageType, TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
 import remarkParse from "remark-parse";
@@ -84,7 +84,7 @@ export default function CMSPage({
         }
         rightAside={
           data.template === "content" ? (
-            <TableOfContents headings={pageToTableOfContents(data)} />
+            <TableOfContents headings={pageToTableOfContents(data.blocks, 1)} />
           ) : null
         }
       />
@@ -94,44 +94,48 @@ export default function CMSPage({
 
 interface HeadingData {
   readonly title: string;
-  readonly level: 2 | 3;
+  readonly level: number;
 }
 
-function pageToTableOfContents(page: PageType): readonly HeadingData[] {
-  if (!page.blocks) {
-    return [];
-  }
-  const data = page.blocks.flatMap((block) => {
-    if (block.type === "page_header") {
-      return [];
+function pageToTableOfContents(blocks: readonly TopLevelBlock[] = [], level: number, tableOfContents: HeadingData[] = []): readonly HeadingData[] {
+  blocks.forEach((block) => {
+    if(block.type === 'page_header'){
+      return
+    }
+    else if (block.type === "container") {
+      pageToTableOfContents(block.blocks, level, tableOfContents);
+    } else if (block.type === "flex_layout" || block.type === "group") {
+      if (!block.heading) {
+        pageToTableOfContents(block.blocks, level, tableOfContents);
+      } else {
+        const headingData: HeadingData = {
+          title: block.heading,
+          level,
+        };
+        tableOfContents.push(headingData);
+        pageToTableOfContents(block.blocks, level + 1, tableOfContents);
+      }
     } else if (block.type === "ordered_block") {
-      let blocks = Array.from(block.blocks || []).sort((a, b) => {
+      const sortedBlocks = Array.from(block.blocks || []).sort((a, b) => {
         return a.title.localeCompare(b.title);
       });
 
-      return blocks.map((block) => {
+      const blockItems: HeadingData[] = sortedBlocks.map((block) => {
         return {
           title: block.title,
-          level: 2,
+          level
         };
       });
+
+      tableOfContents.push(...blockItems);
     } else if (block.type === "accordion") {
-      return [
-        ...(block.heading != null
-          ? [
-              {
-                title: block.heading,
-                level: 2,
-              },
-            ]
-          : []),
-        // ...block.blocks.map(block => {
-        //   return {
-        //     title: block.label,
-        //     level: 3,
-        //   };
-        // })
-      ];
+      if (block.heading != null) {
+        const headingData: HeadingData = {
+          title: block.heading,
+          level
+        };
+        tableOfContents.push(headingData);
+      }
     } else if (block.type === "markdown") {
       const processor = unified()
         .use(remarkParse)
@@ -140,37 +144,37 @@ function pageToTableOfContents(page: PageType): readonly HeadingData[] {
             const typeIndex = new Index("type", tree);
             const headings = typeIndex.get("heading");
 
-            return headings.map((node: any) => {
+            const headingItems: HeadingData[] = headings.map((node: any) => {
               const textNode = node.children.find((n: any) => {
                 return n.type === "text";
               });
 
               return {
                 title: textNode?.value ?? "",
-                level: 2,
+                level
               };
             });
+
+            tableOfContents.push(...headingItems);
           };
         });
 
       const node = processor.parse(block.body);
-      const tree = processor.runSync(node);
-
-      return tree;
+      processor.runSync(node);
     } else if ("title" in block) {
-      return {
+      const headingData: HeadingData = {
         title: block.title,
-        level: 2,
+        level
       };
+      tableOfContents.push(headingData);
     } else if ("heading" in block && block.heading != null) {
-      return {
+      const headingData: HeadingData = {
         title: block.heading,
-        level: 2,
+        level
       };
+      tableOfContents.push(headingData);
     }
-
-    return [];
   });
 
-  return data;
+  return tableOfContents;
 }

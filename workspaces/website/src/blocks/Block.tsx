@@ -103,7 +103,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
   } else if (block.type === "group") {
     return (
-      <BlockGrouping>
+      <BlockGrouping heading={block.heading} heading_variant={block.heading_variant}>
         {block.blocks.map((block, i) => (
           <Block
             key={i}
