@@ -4,7 +4,7 @@ import { slugify } from "@starknet-io/cms-utils/src/index";
 import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { Heading } from "@ui/Typography/Heading";
 
-interface HeadingData {
+export interface HeadingData {
   readonly title: string;
   readonly level: number;
 }
@@ -82,4 +82,3 @@ export function TableOfContents(props: Props) {
     </Toc.Root>
   );
 }
-export {};
