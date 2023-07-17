@@ -6,9 +6,6 @@ import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { Block } from "src/blocks/Block";
 import { Post } from "@starknet-io/cms-data/src/posts";
-import remarkParse from "remark-parse";
-import { unified } from "unified";
-import { Index } from "unist-util-index";
 import '@ui/CodeHighlight/code-highlight-init'
 
 import {
@@ -26,9 +23,10 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-import { TableOfContents } from "src/pages/(components)/TableOfContents";
+import { TableOfContents } from "src/pages/(components)/TableOfContents/TableOfContents";
 import { Category } from "@starknet-io/cms-data/src/categories";
 import { Topic } from "@starknet-io/cms-data/src/topics";
+import { blocksToTOC } from "../(components)/TableOfContents/blocksToTOC";
 
 type PostByCategoryProps = {
   post: Post;
@@ -150,100 +148,10 @@ export default function PostByCategory({
       rightAside={
         <>
           {!!post.toc ? (
-            <TableOfContents headings={pageToTableOfContents(post)} />
+            <TableOfContents headings={blocksToTOC(post.blocks, 1)} />
           ) : null}
         </>
       }
     />
   );
-}
-
-interface HeadingData {
-  readonly title: string;
-  readonly level: 2 | 3;
-}
-export interface MarkdownBlock {
-  readonly type: "markdown";
-  readonly body: string;
-}
-
-function pageToTableOfContents(page: any): readonly HeadingData[] {
-  if(!Array.isArray(page.blocks)){
-    return []
-  }
-  const data = page.blocks.flatMap(
-    (block: {
-      title: string;
-      type: string;
-      heading: string;
-      body: string;
-      blocks: [{ title: string; body: MarkdownBlock; heading: string }];
-    }) => {
-      if (block.type === "page_header") {
-        return [];
-      } else if (block.type === "ordered_block") {
-        let blocks = Array.from(block.blocks).sort((a: any, b: any) => {
-          return a.title.localeCompare(b.title);
-        });
-
-        return blocks.map((block) => {
-          return {
-            title: block.title,
-            level: 2,
-          };
-        });
-      } else if (block.type === "accordion") {
-        return [
-          ...(block.heading != null
-            ? [
-                {
-                  title: block.heading,
-                  level: 2,
-                },
-              ]
-            : []),
-          // ...block.blocks.map(block => {
-          //   return {
-          //     title: block.label,
-          //     level: 3,
-          //   };
-          // })
-        ];
-      } else if (block.type === "markdown") {
-        const processor = unified()
-          .use(remarkParse)
-          .use(() => {
-            return (tree: any) => {
-              const typeIndex = new Index("type", tree);
-              const headings = typeIndex.get("heading");
-
-              return headings.map((node: any) => {
-                const textNode = node.children.find((n: any) => {
-                  return n.type === "text";
-                });
-
-                return {
-                  title: textNode?.value ?? "",
-                  level: 2,
-                };
-              });
-            };
-          });
-
-        const node = processor.parse(block.body);
-        const tree = processor.runSync(node);
-
-        return tree;
-      } else if ("title" in block) {
-        return {
-          title: block.title,
-          level: 2,
-        };
-      }
-
-      return [];
-    }
-  );
-
-  return data;
 }
