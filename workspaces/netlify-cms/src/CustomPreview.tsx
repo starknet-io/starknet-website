@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { useWindowSize } from "./useWindowSize";
 import { convertStringTagsToArray } from "@starknet-io/cms-utils/src/index";
+import { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 
 const livePreviewHost =
   import.meta.env.VITE_GIT_BRANCH_NAME === "production"
     ? "https://www.starknet.io"
-    : import.meta.env.VITE_LIVE_PREVIEW_URL ?? 'http://localhost:3000';
+    : import.meta.env.VITE_LIVE_PREVIEW_URL ?? "http://localhost:3000";
 
 export enum CustomPreviewType {
   EVENTS = "EVENTS",
@@ -48,36 +49,87 @@ export default function CustomPreview(props: CustomPreviewProps) {
   const { height } = useWindowSize();
   const { type, entry, getAsset } = props;
 
+  const fixImagePreview = async (_item: any, key = 'image') => {
+    const item = {..._item}
+    const asset = getAsset(item[key]);
+    if (item[key] && asset.url) {
+      if (asset.path === "empty.svg") {
+        item[key] = "";
+      } else if (asset.fileObj) {
+        item[key] = await toDataURL(URL.createObjectURL(asset.fileObj));
+      } else {
+        item[key] = item?.[key]?.replace("public", "");
+      }
+    }
+
+    return item
+  };
+
   useEffect(() => {
     let data = entry.getIn(["data"]).toJS();
     var image = entry.getIn(["data", "image"]);
     var asset = getAsset(image);
 
-    const sendDataToLivePreviewRendere = async () => {
+    const fixTopLevelImagePreview = async (_data: any) => {
       if (image && asset?.url) {
         if (asset.path === "empty.svg") {
-          data.image = "";
+          _data.image = "";
         } else if (asset.fileObj) {
-          data.image = await toDataURL(URL.createObjectURL(asset.fileObj));
+          _data.image = await toDataURL(URL.createObjectURL(asset.fileObj));
         } else {
-          data.image = image.replace("public", "");
+          _data.image = image.replace("public", "");
         }
       }
+    }
+
+    const getDataWithBlobImage = async (blocks: TopLevelBlock[]) => {
+      return Promise.all(
+        blocks.map(async (block) => {
+          if (
+            block.type === "group" ||
+            block.type === "flex_layout" ||
+            block.type === "container"
+          ) {
+            //@ts-ignore
+            block.blocks = await getDataWithBlobImage(block.blocks);
+          } else if (block.type === "card_list") {
+            //@ts-ignore
+            block.card_list_items = await Promise.all(
+              block.card_list_items.map(async (item) => await fixImagePreview(item))
+            );
+          } 
+          else if(block.type === "image_icon_link_card") {
+            block = await fixImagePreview(block, 'icon')
+          }
+
+          return block;
+        })
+      );
+    };
+
+    const sendDataToLivePreviewRenderer = async (_data: any) => {
+      fixTopLevelImagePreview(_data)
 
       if (type === CustomPreviewType.TUTORIALS) {
-        data.tags = convertStringTagsToArray(data.tags);
+        _data.tags = convertStringTagsToArray(_data.tags);
       }
 
       ref.current?.contentWindow?.postMessage(
         {
           type,
-          payload: data,
+          payload: _data,
         },
         "*"
       );
     };
 
-    sendDataToLivePreviewRendere();
+    if (data.blocks) {
+      getDataWithBlobImage([...data.blocks]).then((newBlocks) => {
+        sendDataToLivePreviewRenderer({ ...data, blocks: newBlocks });
+      });
+    } else {
+      sendDataToLivePreviewRenderer(data);
+    }
   }, [type, entry, getAsset, refresh]);
 
   useEffect(() => {
