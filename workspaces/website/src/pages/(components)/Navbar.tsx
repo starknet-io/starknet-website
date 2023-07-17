@@ -45,6 +45,7 @@ export default function Navbar({
             <MainSearch env={env} seo={searchSEO} />
           </div>
         }
+        seo={languageCenterSeo}
         desktopNavItems={mainMenu.items.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
