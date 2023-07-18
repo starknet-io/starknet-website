@@ -23,6 +23,7 @@ import {
   RoadmapVersion,
 } from "@starknet-io/cms-data/src/roadmap";
 import RoadmapPostVersion from "../../(components)/RoadmapPostVersion";
+import '@ui/CodeHighlight/code-highlight-init'
 
 interface KeyValuePairs {
   [key: string]: string;
@@ -126,6 +127,7 @@ export default function RoadmapPost({
             <div>{roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "On testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}</div>
           </Flex>
           <Divider mt="8px" mb="32px" />
+          
           <Flex direction="column" gap="32px">
             {roadmapPost.blocks?.map((block, i) => (
               <Block

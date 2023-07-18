@@ -10,6 +10,8 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { slugify } from "@starknet-io/cms-utils/src/index";
+import { ReactMarkdownProps } from "react-markdown/lib/complex-types";
+import CodeHighlight from "@ui/CodeHighlight/CodeHighlight";
 
 interface Props {
   readonly body: string;
@@ -73,6 +75,25 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
           li: (props) => <ListItem lineHeight="32px" {...props} />,
           img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
           a: (props) => <Link variant="standard" {...props} />,
+          pre: (props) => {
+            // @ts-ignore
+            if(props.node.children[0]?.tagName === 'code'){
+
+              //@ts-ignore
+              const codeProps = props.children[0]?.props as (undefined | Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLPreElement>, HTMLPreElement>, "ref"> & ReactMarkdownProps)
+
+              const code = typeof codeProps?.children?.[0] === 'string' ? codeProps?.children?.[0]: ''
+              const language = codeProps?.className?.split("-")?.[1]
+
+              if(!code){
+                return <pre {...props}>{props.children}</pre>
+              }
+              
+              return <CodeHighlight language={language} code={code} />
+            }else {
+              return <pre {...props}>{props.children}</pre>
+            }
+          }
         }}
       >
         {body}

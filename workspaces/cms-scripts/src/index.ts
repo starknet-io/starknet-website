@@ -20,7 +20,6 @@ import {
   getTutorials,
   handleLink,
   updateBlocks,
-  updateJobs
 } from "./data";
 import { translateFile } from "./crowdin";
 
@@ -131,6 +130,7 @@ const simpleDataTypes = [
   await getSimpleData("events"),
   await getSimpleData("topics"),
   await getSimpleData("roadmap-versions"),
+  await getSimpleData("jobs"),
 ];
 
 for (const simpleData of simpleDataTypes) {
@@ -190,7 +190,6 @@ const pages = await getPages();
 const tutorials = await getTutorials();
 
 updateBlocks(pages, posts);
-updateJobs();
 
 for (const locale of locales) {
   await fs.mkdir(`public/data/posts/${locale}`, { recursive: true });

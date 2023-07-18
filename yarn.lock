@@ -4774,6 +4774,7 @@ __metadata:
     "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     "@types/cors": ^2.8.13
+    "@types/highlight.js": ^10.1.0
     "@types/node": ^18.16.3
     "@types/react": ^18.2.7
     "@types/react-dom": ^18.2.4
@@ -4789,7 +4790,10 @@ __metadata:
     eslint-plugin-storybook: ^0.6.11
     framer-motion: ^10.12.4
     fsevents: ^2.3.2
+    highlight.js: ^11.8.0
+    highlightjs-cairo: ^0.2.0
     itty-router: ^4.0.11
+    marked: ^5.1.0
     moment: ^2.29.4
     moment-timezone: ^0.5.43
     netlify-cms-app: ^2.15.72
@@ -6261,6 +6265,15 @@ __metadata:
   dependencies:
     "@types/unist": "*"
   checksum: fff47998f4c11e21a7454b58673f70478740ecdafd95aaf50b70a3daa7da9cdc57315545bf9c039613732c40b7b0e9e49d11d03fe9a4304721cdc3b29a88141e
+  languageName: node
+  linkType: hard
+
+"@types/highlight.js@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "@types/highlight.js@npm:10.1.0"
+  dependencies:
+    highlight.js: "*"
+  checksum: 284f47e89bfe300f307ad76523a257ff12ed7cf0318cdc0a7fe6965a1d7e21840d133cfc623ec705495550d37341c278c2c9641bafce8b8dbb4bea4acd46f0ec
   languageName: node
   linkType: hard
 
@@ -11116,6 +11129,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:*, highlight.js@npm:^11.0.0, highlight.js@npm:^11.8.0":
+  version: 11.8.0
+  resolution: "highlight.js@npm:11.8.0"
+  checksum: d2578a57aee7315946ff19379053fd0a28b127baabf7617ab1d28d62cdc4eaf3d75053569cb8479a5afdc7a68f1ba9a6c1d612d8ae399b4b9aa43093b4fb6831
+  languageName: node
+  linkType: hard
+
+"highlightjs-cairo@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "highlightjs-cairo@npm:0.2.0"
+  dependencies:
+    highlight.js: ^11.0.0
+  checksum: fa3e19b825258f0171c6daaa44740f9ebf82c3ada31e5e7279674d12e35a55fc7deced0edbf6426dc72380f676868c02d2f9e19ced0c0d2ed041e4fec4308cee
+  languageName: node
+  linkType: hard
+
 "history@npm:^4.7.2, history@npm:^4.9.0":
   version: 4.10.1
   resolution: "history@npm:4.10.1"
@@ -12736,6 +12765,15 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: ea417e684d7eec9f1beebc9423aba377116ef77c3cd83a2d622df1b9030ffef99aa9b3f431192b94f3237943a33560e6dda9be8a4c1d25187518d09986dad22f
+  languageName: node
+  linkType: hard
+
+"marked@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "marked@npm:5.1.0"
+  bin:
+    marked: bin/marked.js
+  checksum: ecb2b36a4758f725000400113f5107e89512b897251207e514c22605319bdddb6554fe3e68bd73b0d08f855582946e001adddfbfc7080a556a492950fb4b3a09
   languageName: node
   linkType: hard
 
