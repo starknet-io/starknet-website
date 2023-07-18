@@ -10,9 +10,9 @@ export function blocksToTOC(blocks: readonly TopLevelBlock[] = [], level: number
     if(block.type === 'page_header'){
       return
     }
-    else if (block.type === "container") {
+    else if (block.type === "container" || block.type === "group") {
       blocksToTOC(block.blocks, level, tableOfContents);
-    } else if (block.type === "flex_layout" || block.type === "group") {
+    } else if (block.type === "flex_layout" || block.type === "heading_container") {
       if (!block.heading) {
         blocksToTOC(block.blocks, level, tableOfContents);
       } else {

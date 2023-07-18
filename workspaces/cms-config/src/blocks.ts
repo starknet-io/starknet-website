@@ -648,19 +648,6 @@ export const topLevelBlocks = [
     widget: "object",
     fields: [
       {
-        name: "heading",
-        required: false,
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "heading_variant",
-        widget: "select",
-        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
-        required: false,
-        default: "sm",
-      },
-      {
         name: "blocks",
         label: "Blocks",
         widget: "list",
@@ -678,6 +665,31 @@ export const topLevelBlocks = [
         name: "max_width",
         label: "Max width",
         widget: "number",
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+        default: [],
+      },
+    ],
+  },
+  {
+    name: "heading_container",
+    label: "Heading container",
+    widget: "object",
+    fields: [
+      {
+        name: "heading",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "heading_variant",
+        widget: "select",
+        options: ["h2", "h3", "h4", "h5", "h6"],
+        default: 'h2',
       },
       {
         name: "blocks",

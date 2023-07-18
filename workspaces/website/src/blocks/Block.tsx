@@ -17,6 +17,7 @@ import { HomepageHero } from "./HomepageHero";
 import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { HeadingContainer } from "./HeadingContainer";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -103,7 +104,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
   } else if (block.type === "group") {
     return (
-      <BlockGrouping heading={block.heading} heading_variant={block.heading_variant}>
+      <BlockGrouping>
         {block.blocks.map((block, i) => (
           <Block
             key={i}
@@ -112,6 +113,18 @@ export function Block({ block, locale }: Props): JSX.Element | null {
           />
         ))}
       </BlockGrouping>
+    );
+  }else if (block.type === "heading_container") {
+    return (
+      <HeadingContainer heading={block.heading} headingVariant={block.heading_variant}>
+        {block.blocks.map((block, i) => (
+          <Block
+            key={i}
+            block={block}
+            locale={locale}
+          />
+        ))}
+      </HeadingContainer>
     );
   } else if (block.type === "hero") {
     return (
