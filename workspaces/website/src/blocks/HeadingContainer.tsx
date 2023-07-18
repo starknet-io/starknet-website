@@ -20,7 +20,7 @@ export const HeadingContainer = ({
     <Box>
       {heading && (
         <Heading
-          variant="h3"
+          variant={headingVariant}
           color="heading-navy-fg"
           sx={renderHeadingVariant(headingVariant)}
           id={`toc-${slugify(heading)}`}
