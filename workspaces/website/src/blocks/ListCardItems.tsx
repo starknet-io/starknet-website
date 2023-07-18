@@ -13,7 +13,6 @@ interface ListCardItems {
   title: string;
   description: string;
   linkUrl: string;
-  imageUrl: string;
   icons: Icon;
   website_url: string;
   twitter: string;
