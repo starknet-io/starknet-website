@@ -49,7 +49,6 @@ interface ListCardItems {
   title: string;
   description: string;
   linkUrl: string;
-  imageUrl: string;
   icons: Icon;
   website_url: string;
   twitter: string;
@@ -144,6 +143,8 @@ export interface OrderedBlock {
   readonly blocks: readonly OrderedItem[];
 }
 
+export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
@@ -170,15 +171,21 @@ export interface FlexLayoutBlock {
   readonly lg?: number;
   readonly xl?: number;
   readonly heading?: string;
-  readonly heading_variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  readonly heading_variant?: HeadingVariant;
   readonly blocks: readonly Block[];
 }
 export interface GroupBlock {
   readonly type: "group";
   readonly blocks: readonly Block[];
 }
+export interface HeadingContainerBlock {
+  readonly type: "heading_container";
+  readonly heading: string;
+  readonly heading_variant: HeadingVariant;
+  readonly blocks: readonly Block[];
+}
 
-export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container;
+export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container | HeadingContainerBlock;
 
 export interface Page extends Meta {
   readonly id: string;

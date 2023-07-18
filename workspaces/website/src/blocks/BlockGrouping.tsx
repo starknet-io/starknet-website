@@ -5,23 +5,11 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const BlockGrouping = ({ children }: Props) => {
-  // const ref = React.useRef(null);
-  // const { inViewport } = useInViewport(
-  //   ref,
-  //   {
-  //     rootMargin: "-30px",
-  //   },
-  //   { disconnectOnLeave: true },
-  //   {}
-  // );
-
+export const BlockGrouping = ({
+  children,
+}: Props) => {
   return (
-    <Flex
-      direction="column"
-      gap="32px"
-      // mb={{ base: "56px", lg: "136px" }}
-    >
+    <Flex direction="column" gap="32px">
       {children}
     </Flex>
   );

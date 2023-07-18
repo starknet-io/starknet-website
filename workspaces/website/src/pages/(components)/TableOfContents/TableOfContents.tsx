@@ -4,9 +4,9 @@ import { slugify } from "@starknet-io/cms-utils/src/index";
 import * as Toc from "@ui/TableOfContents/TableOfContents";
 import { Heading } from "@ui/Typography/Heading";
 
-interface HeadingData {
+export interface HeadingData {
   readonly title: string;
-  readonly level: 2 | 3;
+  readonly level: number;
 }
 
 interface Props {
@@ -54,7 +54,7 @@ export function TableOfContents(props: Props) {
 
     props.headings.forEach((h) => {
       const el = document.getElementById(`toc-${slugify(h.title)}`);
-
+      
       if (el) {
         observer.observe(el);
       }
@@ -75,11 +75,10 @@ export function TableOfContents(props: Props) {
         On this page
       </Heading>
       {props.headings.map((h, i) => (
-        <Toc.Item key={i} isActive={`toc-${slugify(h.title)}` === activeId}>
+        <Toc.Item key={i} isActive={`toc-${slugify(h.title)}` === activeId} pl={`${h.level * 16}px`}>
           <a href={`#toc-${slugify(h.title)}`}>{h.title}</a>
         </Toc.Item>
       ))}
     </Toc.Root>
   );
 }
-export {};

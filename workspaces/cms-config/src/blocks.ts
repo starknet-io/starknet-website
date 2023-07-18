@@ -676,6 +676,34 @@ export const topLevelBlocks = [
     ],
   },
   {
+    name: "heading_container",
+    label: "Heading container",
+    widget: "object",
+    fields: [
+      {
+        label: "Heading",
+        name: "heading",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        label: "Heading variant",
+        name: "heading_variant",
+        widget: "select",
+        options: ["h2", "h3", "h4", "h5", "h6"],
+        default: 'h2',
+        crowdin: false
+      },
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: blocks,
+        default: [],
+      },
+    ],
+  },
+  {
     name: "flex_layout",
     label: "Flex layout",
     widget: "object",
