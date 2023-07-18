@@ -127,7 +127,7 @@ blocks:
           hasIcon: true
           custom_title: "Part 3: Starknet Token Design"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
-  - type: group
+  - type: heading_container
     heading: Further Reading
     heading_variant: h2
     blocks:
