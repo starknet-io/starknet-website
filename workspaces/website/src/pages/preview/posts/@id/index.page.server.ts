@@ -5,7 +5,7 @@ export async function render(pageContext: PageContextServer) {
   const data = await getPostById(
     pageContext.routeParams.id,
     pageContext.locale,
-    pageContext.event
+    pageContext.context
   );
 
   return {

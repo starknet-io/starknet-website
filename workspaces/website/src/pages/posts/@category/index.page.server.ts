@@ -9,8 +9,8 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const { locale } = defaultPageContext;
 
   const pageProps: Props = {
-    categories: await getCategories(locale, pageContext.event),
-    topics: await getTopics(locale, pageContext.event),
+    categories: await getCategories(locale, pageContext.context),
+    topics: await getTopics(locale, pageContext.context),
     env: {
       ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
       ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,

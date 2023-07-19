@@ -140,7 +140,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
   } else if (block.type === "home_hero") {
     const pageContext = usePageContext();
     const homeSEO = useAsync(["getBlockExplorers", locale], () =>
-      getHomeSEO(locale, pageContext.event)
+      getHomeSEO(locale, pageContext.context)
     );
 
     return <HomepageHero seo={homeSEO} />;

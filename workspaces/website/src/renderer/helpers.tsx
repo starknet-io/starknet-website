@@ -14,7 +14,7 @@ export async function getDefaultPageContext(
   pageContext: PageContextServer
 ): Promise<Pick<PageContextServer, DefaultPageContextKeys>> {
   const locale = pageContext.locale ?? defaultLocale;
-  const sharedData = await getSharedData(locale, pageContext.event)
+  const sharedData = await getSharedData(locale, pageContext.context)
 
   return {
     locale,
