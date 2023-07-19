@@ -11,11 +11,11 @@ type SharedData = {
 }
 export async function getSharedData(
     locale: string,
-    event: null | WorkerGlobalScopeEventMap["fetch"],
+    context: EventContext<{}, any, Record<string, unknown>>,
   ): Promise<SharedData> {
     return getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/shared-data/" + value, event)
+        (value) => async () => getJSON("data/shared-data/" + value, context)
       )
     );
   }

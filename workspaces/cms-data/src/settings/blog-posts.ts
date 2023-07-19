@@ -7,12 +7,12 @@ export interface BlogPosts {
 
 export async function getBlogPosts(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<BlogPosts> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/blog-posts/" + value, event)
+        (value) => async () => getJSON("data/blog-posts/" + value, context)
       )
     );
   } catch (cause) {

@@ -39,12 +39,12 @@ export interface BlockItem extends LinkData {
 
 export async function getMainMenu(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<MainMenu> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/main-menu/" + value, event)
+        (value) => async () => getJSON("data/main-menu/" + value, context)
       )
     );
   } catch (cause) {
