@@ -1,0 +1,185 @@
+id: 8c20a40b-9c78-483a-9ea2-c98df56a766e
+post_type: article
+title: The Starknet Stack’s Growth Spurt
+published_date: 2023-07-19T06:45:50.950Z
+image: /assets/starknet-stack.png
+category: ecosystem
+topic:
+  - decentralization
+  - open_source
+  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
+short_desc: The Starknet Stack is in the midst of a remarkable growth spurt. We
+  expect it to dominate the Appchain space due to its performance, security, and
+  expressiveness. The thriving Starknet developer ecosystem, which has been
+  driving the rapid evolution of this stack, will continue to develop it, and
+  meet the various needs of more and more applications.
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ##  
+
+
+          ##  
+
+
+          ## TL;DR
+
+
+          * The Starknet Stack is developing at dizzying speed, and will allow you to launch your own custom Starknet instance, to suit your needs
+
+          * Starknet is already the most performant L2 in terms of throughput
+
+          * With the fastest-growing developer community, Starknet has the most decentralized Rollup Stack, including lots of key infrastructure, built by multiple independent teams
+
+          * The first Starknet Appchain is coming to Mainnet *very* soon
+
+
+          ## Introduction
+
+
+          There is a veritable renaissance of public L2 chains over Ethereum. Starknet, in particular, has been flourishing, with a bustling community of developers tackling exciting use cases in gaming, DeFi, NFTs, AI, and more.
+
+
+          \
+
+          The need for Appchains, application-specific blockchains that are designed to service the needs of one specific application, has been apparent for several years and is now getting renewed attention. StarkWare’s SaaS offering StarkEx, has been powering the most successful L2 Appchains running on Ethereum today like dYdX and Sorare. To date (July 2023), StarkEx has settled some $1T in cumulative trading and processed over 500M txs. Starknet Appchains are the bespoke environment where applications can tailor an instance of Starknet to achieve better control over the specs, lower cost, greater scale, and opt-in privacy. The Starknet Stack is intended to allow any application to deploy its own Starknet Appchain in a permissionless fashion.
+
+
+          ## The Starknet Stack
+
+
+          Starknet’s building blocks attract a wide range of applications and use-cases. They are: STARK proofs, the Cairo programming language, and native Account Abstraction. With [Starknet’s upgrade to v0.12.0 on Mainnet](https://twitter.com/Starknet/status/1679096699309137921?s=20), Starknet became [the most performant L2 by TPS](https://twitter.com/EliBenSasson/status/1680615259726290948?s=20). We expect Starknet’s performance advantage over other L2s, and in particular over the EVM-compatible L2s, to grow over time, as Starknet is unshackled by legacy constraints put in place by the EVM’s design and implementation.
+
+
+          Still, it is only natural that some applications require further fine-tuning to their platform. The Starknet Stack will allow them to do so.
+
+
+          In the spirit of the Starknet ecosystem, we aim to show first, and tell later. But given the electrifying development efforts within our ecosystem, and the pace with which the Stack is evolving, we decided to offer our current perspective on the Starknet Stack. The development efforts are driven by the Starknet ecosystem, and are orchestrated by the Starknet Foundation via its development partnerships.
+
+
+          ### Benefits
+
+
+          The Starknet Stack allows applications to spin up bespoke Starknet Appchains. These will  yield the generic benefits of Appchains, namely:
+
+
+          * Protection from congestion on the public Starknet, can provide its users with better throughput and UX.
+
+          * Appchains are potentially free to implement features not supported on the public chain, such as their own fee market logic. From the public network’s perspective, these new features implemented in Appchains are invaluable experiments. Implementing these on an Appchain would yield valuable conclusions that may carry over to other Appchains, or to the public network. 
+
+
+          Beyond these benefits, *Starknet* Appchains will have additional benefits. Starknet is the most scalable rollup, with the option to configure various parameters, including consensus, block chain parameters, and data availability.
+
+
+          ### Decentralization
+
+
+          The Starknet Stack is quickly becoming the most decentralized L2 stack. Permissionless blockchains focus on decentralization as a means of achieving network security and resilience. The Starknet Foundation is focused on achieving this property for Starknet. 
+
+
+          > *“A decentralized stack makes the network more secure, resilient, transparent, scalable and innovative. No single point of failure, no dependency on a single entity, no black boxes and many more builders!”*\
+
+          > \
+
+          > Diego Oliva\
+
+          > CEO, Starknet Foundation
+
+          >
+
+          > *“Starknet is achieving organic decentralization of the stack - different teams are producing optimized versions of the core components, that then find their way back way to official releases (LambdaClass Rust VM) or sparkle entirely new components”* 
+
+          >
+
+          > Nicolas Bacca\
+
+          > Co-Founder & CTO, Ledger
+
+
+          #### Madara
+
+
+          One recent example for the decentralization of the Starknet Stack is the [Madara Sequencer](https://github.com/keep-starknet-strange/madara). It is based on Substrate, and as such relies on decentralized consensus mechanisms right out of the box. The community development effort started in Feb 2023. The engineering effort includes 45 community developers, who have produced to date (July 2023) over 740 commits and over 400 merged PRs. This effort has produced a Sequencer which is compatible with public Starknet, with a configurable mempool and more.
+
+
+          #### LambdaClass
+
+
+          Another notable effort in building the stack that will allow launching Starknet Appchains is the work done by [LambdaClass](https://lambdaclass.com/) (who also played a pivotal role in the improvements manifest in V0.12.0). LambdaClass is building a [Starknet Stack](https://github.com/lambdaclass/starknet_stack) that will eventually include a prover, a sequencer, an execution engine, and a network explorer. In the near future, these different components could be integrated with other components of the Starknet stack, and made into a working Starknet instance.
+
+
+          #### By the Community, for the Community
+
+
+          The Starknet ecosystem aims to have multiple implementations of every single component in the Stack. Here is a taste of the different teams and the infrastructure they’re developing:
+
+
+          ![a taste of the different teams and the infrastructure they’re developing](/assets/screenshot-2023-07-19-at-13.03.38.png "a taste of the different teams and the infrastructure they’re developing")
+
+
+          * Indexers: [Apibara](https://www.apibara.com/), [Checkpoint](https://checkpoint.fyi/#/), [TokenFlow](https://tokenflow.live/)
+
+          * API services: [Alchemy](https://www.alchemy.com/starknet), [Infura](https://www.infura.io/networks/ethereum/starknet)
+
+          * Bridges: [LayerSwap](https://www.layerswap.io/), [Orbiter](https://www.orbiter.finance/), [StarkGate](https://starkgate.starknet.io/)
+
+          * Fiat on-ramps: [Banxa](https://banxa.com/), [Ramp](https://ramp.network/)
+
+          * Wallets: [Argent](https://www.argent.xyz/argent-x/), [Braavos](https://braavos.app/), [Cartridge](https://cartridge.gg/) and [Metamask’s Snap](https://metamask.io/snaps/) (coming Sep 2023)
+
+          * Domain-specific application development framework: [Dojo](https://dojoengine.org/) (gaming)
+
+
+          ### Expressiveness
+
+
+          The Starknet Stack is powered by [Cairo](https://github.com/starkware-libs/cairo). Its latest version, Rust-like and ergonomic, has been met with tremendous excitement by the developer community. 
+
+
+          > *“As someone who has never written any Rust, I picked it up a few weeks ago and I'm as efficient in writing Cairo contracts as Solidity. Throw in the ability to share logic across contracts (coming soon!), and built-in fuzz-testing, and it will be my preferred environment for writing smart contracts!“*
+
+          >
+
+          > Moody Salem
+
+          >
+
+          > Lead Solidity Dev, Uniswap
+
+
+          Cairo, as a general purpose smart contract language, with the added benefit of producing provable computations, is consumed by one of the fastest growing blockchain developer ecosystems in history. Applications can find Starknet developers to partner with, hire, or outsource to.
+
+
+          > *“Starknet's ecosystem feels like early Ethereum. It attracts the best talent in the space, with its decentralized approach to development and innovation“*
+
+          >
+
+          > Itamar Lesuisse
+
+          >
+
+          > Cofounder & CEO, Argent
+
+
+          ## The Road Ahead
+
+
+          The Starknet Stack is WIP and will continue to evolve and improve over the years. Yet already today, Starknet Appchains can be run as a hosted service, operated by StarkWare. In fact, the first Starknet Appchain will launch a closed beta on Mainnet *real soon* (!).
+
+
+           \
+
+          We expect Starknet ecosystem development teams like LambdaClass, Nethermind, and StarkWare, as well as Rollup-as-a-Service providers to offer Appchain hosting services. Appchains will choose which components of the Stack they run themselves, and which they run through a hosting service (e.g., StarkWare’s SHARP). They may choose to rely on strictly open-source components, or on proprietary technology. This is the beauty of Appchains - one size does not fit all. Instead, each application will make its own optimal choices.
+
+
+          \
+
+          Appchains started out as an L2 over Ethereum, but will not remain there for long. Back in 2021, StarkWare [introduced the concept of L3](https://starkware.co/resource/fractal-scaling-from-l2-to-l3/). We believe that in order to achieve better scale and lower gas/tx, Starknet Appchains will migrate to L3, and as such will run over the L2 public Starknet.
+
+
+          ## Summary
+
+
+          The Starknet Stack is in the midst of a remarkable growth spurt. We expect it to dominate the Appchain space due to its performance, security, and expressiveness. The thriving Starknet developer ecosystem, which has been driving the rapid evolution of this stack, will continue to develop it, and meet the various needs of more and more applications.
