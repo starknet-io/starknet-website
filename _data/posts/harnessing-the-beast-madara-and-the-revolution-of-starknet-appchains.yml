@@ -26,9 +26,6 @@ blocks:
           ## TL;DR
 
 
-           
-
-
           * Madara is a high-performance Starknet sequencer, providing the power to create customizable and efficient appchains.
 
           * By using the Substrate framework, Madara amplifies the capabilities of the Cairo VM, leading to provable, secure, and flexible programs.
@@ -79,6 +76,9 @@ blocks:
           The customizability of appchains also allows developers to work with features that are currently unavailable or risky in environments like Starknet. To ensure controlled usage, restrictions are imposed on arbitrary code executed on the nodes. In Starknet, the current approach is to only allow the use of whitelisted code. Conversely, appchains will offer each team the autonomy to authorize any desired code hints. This allows appchains to unlock many use cases, like being able to enforce on-chain KYC without leaking private information. 
 
 
+          ![Madara](/assets/madara-spheres.png "Madara")
+
+
           ### Madara's Effect on the Appchain Stack
 
 
@@ -94,6 +94,9 @@ blocks:
           * **Governance:** Each Madara appchain can choose its governance model. [Snapshot X](https://twitter.com/SnapshotLabs) offers a fully on-chain governance system that relies on storage proofs. Alternative governance mechanisms are also under exploration, such as the native substrate governance pallet. On-chain governance stands as a core value for Madara. 
 
 
+          ![Madara](/assets/madara-levels.jpg "Madara")
+
+
           ## Enter: Madara
 
 
@@ -106,7 +109,4 @@ blocks:
           Initially, Madara will bear a strong resemblance to Starknet, enabling the composability of smart contracts within the Starknet ecosystem. There are bigger plans in store for the future as Starknet integrates with [Herodotus](https://www.herodotus.dev/) to leverage [storage proofs](https://book.starknet.io/chapter_8/storage_proofs.html) to achieve interoperability with other blockchains. The integration of storage proofs will also let Madara appchains consider state and liquidity from other chains. 
 
 
-          Prepare to witness a new era of possibilities in the realm of blockchains, enabled by Madara. 
-
-
-          ###
+          Prepare to witness a new era of possibilities in the realm of blockchains, enabled by Madara.
