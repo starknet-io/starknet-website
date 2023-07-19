@@ -19,6 +19,7 @@ apiRouter.get(
     const query = new URLSearchParams();
 
     query.set("version", "v3");
+    // TODO fix env for cf pages
     query.set("key", YOUTUBE_API_KEY);
     query.set("id", req.query.id as string);
     query.set("part", "snippet");
