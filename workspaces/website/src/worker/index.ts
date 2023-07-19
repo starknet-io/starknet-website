@@ -30,6 +30,7 @@ async function ittyAssetshandler(
   return await handleStaticAssets(event);
 }
 
+router.get("/*.txt", ittyAssetshandler);
 router.get("/*.png", ittyAssetshandler);
 router.get("/*.svg", ittyAssetshandler);
 router.get("/*.ico", ittyAssetshandler);
