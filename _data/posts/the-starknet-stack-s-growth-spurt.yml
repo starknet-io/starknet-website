@@ -7,6 +7,10 @@ blocks:
     blocks:
       - type: markdown
         body: >-
+          ##  
+
+
+          ##  
 
 
           ## TL;DR
@@ -102,39 +106,6 @@ blocks:
 
 
 
-          | Category                                                                                | Project                                                                                  | Entity             | Status        |
-
-          | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | ------------- |
-
-          | Full Node                                                                               | [Pathfinder](https://github.com/eqlabs/pathfinder)                                       | Equilibrium        | In production |
-
-          | [Juno](https://github.com/NethermindEth/juno)                                           | Nethermind                                                                               | In production      |               |
-
-          | [Papyrus](https://github.com/starkware-libs/papyrus)                                    | StarkWare                                                                                | Soon in production |               |
-
-          | [Deoxys](https://github.com/KasarLabs/deoxys)                                           | KasarLabs                                                                                | In development     |               |
-
-          | Execution Engine                                                                        | [Blockifier](https://github.com/starkware-libs/blockifier)                               | StarkWare          | In production |
-
-          | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                     | LambdaClass                                                                              | Soon in production |               |
-
-          | Sequencer                                                                               | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)        | StarkWare          | In production |
-
-          | [Madara](https://github.com/keep-starknet-strange/madara)                               | Community                                                                                | In development     |               |
-
-          | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)            | LambdaClass                                                                              | In development     |               |
-
-          | Prover                                                                                  | [SW Prover](https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b) | StarkWare          | In production |
-
-          | [LC Prover](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main) | LambdaClass                                                                              | In development     |               |
-
-          | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                  | Andrew Milson                                                                            | In development     |               |
-
-
-
-
-
-          * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
 
           * Indexers: [Apibara](https://www.apibara.com/), [Checkpoint](https://checkpoint.fyi/#/), [TokenFlow](https://tokenflow.live/)
 
