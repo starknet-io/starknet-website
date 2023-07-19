@@ -132,13 +132,13 @@ blocks:
 
           | Execution Engine | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                      | LambdaClass   | Soon in production |
 
-          | Sequencer        | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)        | Starkware     | In production      |
+          | Sequencer        | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)        | StarkWare     | In production      |
 
           | Sequencer        | [Madara](https://github.com/keep-starknet-strange/madara)                                | Community     | In development     |
 
           | Sequencer        | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)             | LambdaClass   | In development     |
 
-          | Prover           | [SW Prover](https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b) | Starkware     | In production      |
+          | Prover           | [SW Prover](https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b) | StarkWare     | In production      |
 
           | Prover           | [LC Prover](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)  | LambdaClass   | In development     |
 
