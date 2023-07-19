@@ -15,6 +15,7 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: left;
+    font-size: 14px;
 }
 
 th, td {
