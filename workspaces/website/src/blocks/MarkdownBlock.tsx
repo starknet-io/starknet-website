@@ -12,7 +12,8 @@ import {
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { ReactMarkdownProps } from "react-markdown/lib/complex-types";
 import CodeHighlight from "@ui/CodeHighlight/CodeHighlight";
-
+import remarkGfm from 'remark-gfm'
+import '../style/table.css'
 interface Props {
   readonly body: string;
 }
@@ -21,6 +22,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
   return (
     <Box>
       <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
         components={{
           h2: (props) => (
             <>
