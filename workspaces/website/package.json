@@ -4,11 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite-node ./src/dev-server -c vite-dev-server.config.ts",
-    "build": "yarn build-ssr && yarn build-worker",
-    "build-worker": "vite build -c vite-worker.config.ts",
-    "build-ssr": "vite build -c vite.config.ts",
-    "preview": "wrangler dev",
-    "preview-remote": "wrangler dev --remote"
+    "build": "vite build -c vite.config.ts",
+    "preview": "yarn wrangler pages dev --compatibility-date=2023-07-17 --port 3000 ../../public",
+    "preview-remote": "yarn wrangler pages dev --compatibility-date=2023-07-17 --port 3000 ../../public --remote"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
