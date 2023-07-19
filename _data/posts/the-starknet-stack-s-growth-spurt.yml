@@ -62,16 +62,10 @@ blocks:
           Beyond these benefits, *Starknet* Appchains will have additional benefits. Starknet is the most scalable rollup, with the option to configure various parameters, including consensus, block chain parameters, and data availability.
 
 
-           
-
-
           ### Decentralization
 
 
           The Starknet Stack is quickly becoming the most decentralized L2 stack. Permissionless blockchains focus on decentralization as a means of achieving network security and resilience. The Starknet Foundation is focused on achieving this property for Starknet. 
-
-
-           
 
 
           > *“A decentralized stack makes the network more secure, resilient, transparent, scalable and innovative. No single point of failure, no dependency on a single entity, no black boxes and many more builders!”*\
@@ -82,9 +76,7 @@ blocks:
 
           > CEO, Starknet Foundation
 
-
-           
-
+          >
 
           > *“Starknet is achieving organic decentralization of the stack - different teams are producing optimized versions of the core components, that then find their way back way to official releases (LambdaClass Rust VM) or sparkle entirely new components”* 
 
@@ -113,44 +105,37 @@ blocks:
           The Starknet ecosystem aims to have multiple implementations of every single component in the Stack. Here is a taste of the different teams and the infrastructure they’re developing:
 
 
-           
+
+          | Category                                                                                | Project                                                                                  | Entity             | Status        |
+
+          | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | ------------- |
+
+          | Full Node                                                                               | [Pathfinder](https://github.com/eqlabs/pathfinder)                                       | Equilibrium        | In production |
+
+          | [Juno](https://github.com/NethermindEth/juno)                                           | Nethermind                                                                               | In production      |               |
+
+          | [Papyrus](https://github.com/starkware-libs/papyrus)                                    | StarkWare                                                                                | Soon in production |               |
+
+          | [Deoxys](https://github.com/KasarLabs/deoxys)                                           | KasarLabs                                                                                | In development     |               |
+
+          | Execution Engine                                                                        | [Blockifier](https://github.com/starkware-libs/blockifier)                               | StarkWare          | In production |
+
+          | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                     | LambdaClass                                                                              | Soon in production |               |
+
+          | Sequencer                                                                               | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)        | StarkWare          | In production |
+
+          | [Madara](https://github.com/keep-starknet-strange/madara)                               | Community                                                                                | In development     |               |
+
+          | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)            | LambdaClass                                                                              | In development     |               |
+
+          | Prover                                                                                  | [SW Prover](https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b) | StarkWare          | In production |
+
+          | [LC Prover](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main) | LambdaClass                                                                              | In development     |               |
+
+          | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                  | Andrew Milson                                                                            | In development     |               |
 
 
-          |                                                                                         |                                                                                           |                    |               |
 
-          | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------ | ------------- |
-
-          | **Category**                                                                            | **Project**                                                                               | **Entity**         | **Status**    |
-
-          | Full Node                                                                               | [Pathfinder](https://github.com/eqlabs/pathfinder)                                        | Equilibrium        | In production |
-
-          | [Juno](https://github.com/NethermindEth/juno)                                           | Nethermind                                                                                | In production      |               |
-
-          | [Papyrus](https://github.com/starkware-libs/papyrus)                                    | StarkWare                                                                                 | Soon in production |               |
-
-          | [Deoxys](https://github.com/KasarLabs/deoxys)                                           | KasarLabs                                                                                 | In development     |               |
-
-          | Execution Engine                                                                        | [Blockifier](https://github.com/starkware-libs/blockifier)                                | StarkWare          | In production |
-
-          | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                     | LambdaClass                                                                               | Soon in production |               |
-
-          | Sequencer                                                                               | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)         | StarkWare          | In production |
-
-          | [Madara](https://github.com/keep-starknet-strange/madara)                               | Community                                                                                 | In development     |               |
-
-          | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)            | LambdaClass                                                                               | In development     |               |
-
-          | Prover                                                                                  | [SW Prover](https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b)  | StarkWare          | In production |
-
-          | [LC Prover](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main) | LambdaClass                                                                               | In development     |               |
-
-          | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                  | Andrew Milson                                                                             | In development     |               |
-
-
-           
-
-
-          In addition to the core components of the stack, there are important complementary components and services that are needed in order to run an Appchain (all in production, unless otherwise noted):
 
 
           * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
@@ -168,16 +153,10 @@ blocks:
           * Domain-specific application development framework: [Dojo](https://dojoengine.org/) (gaming)
 
 
-           
-
-
           ### Expressiveness
 
 
           The Starknet Stack is powered by [Cairo](https://github.com/starkware-libs/cairo). Its latest version, Rust-like and ergonomic, has been met with tremendous excitement by the developer community. 
-
-
-           
 
 
           > *“As someone who has never written any Rust, I picked it up a few weeks ago and I'm as efficient in writing Cairo contracts as Solidity. Throw in the ability to share logic across contracts (coming soon!), and built-in fuzz-testing, and it will be my preferred environment for writing smart contracts!“*
@@ -191,13 +170,7 @@ blocks:
           > Lead Solidity Dev, Uniswap
 
 
-           
-
-
           Cairo, as a general purpose smart contract language, with the added benefit of producing provable computations, is consumed by one of the fastest growing blockchain developer ecosystems in history. Applications can find Starknet developers to partner with, hire, or outsource to.
-
-
-           
 
 
           > *“Starknet's ecosystem feels like early Ethereum. It attracts the best talent in the space, with its decentralized approach to development and innovation“*
@@ -209,9 +182,6 @@ blocks:
           >
 
           > Cofounder & CEO, Argent
-
-
-           
 
 
           ## The Road Ahead
