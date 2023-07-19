@@ -203,7 +203,7 @@ export interface Page extends Meta {
 const getPageWithRandomizedData = (data: Page): Page => {
   const randomizedData = {...data}
   randomizedData.blocks?.forEach((block: TopLevelBlock) => {
-    
+
     if (block.type === 'link_list' && block.randomize) {
       //@ts-expect-error
       block.blocks = getShuffledArray(block.blocks || []);
@@ -218,13 +218,13 @@ const getPageWithRandomizedData = (data: Page): Page => {
 export async function getPageBySlug(
   slug: string,
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<Page> {
   try {
     const data = await getFirst(
       ...[locale, defaultLocale].map(
         (value) => async () =>
-          getJSON("data/pages/" + value + "/" + slug, event)
+          getJSON("data/pages/" + value + "/" + slug, context)
       )
     );
 
@@ -239,12 +239,12 @@ export async function getPageBySlug(
 export async function getPageById(
   id: string,
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<Page> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/pages/" + value + "/" + id, event)
+        (value) => async () => getJSON("data/pages/" + value + "/" + id, context)
       )
     );
   } catch (cause) {

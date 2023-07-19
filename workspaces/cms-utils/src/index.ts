@@ -58,20 +58,27 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
 
 export async function getJSON(
   src: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<any> {
-  if (import.meta.env.SSR || event) {
-    if (globalThis.__STATIC_CONTENT) {
-      const res = await getAssetFromKV({
-        request: new Request(
-          new URL("/" + src + ".json", "http://localhost:3000")
-        ),
-        waitUntil(promise) {
-          event?.waitUntil(promise);
-        },
-      });
+  if (import.meta.env.SSR || context) {
+    if (context) {
+      console.log(context.request.url)
+      const aa = new URL("/" + src + ".json", "http://localhost:3000")
+      console.log(aa)
 
-      return res.json();
+      const res = await context.env.ASSETS.fetch(aa)
+
+      // const res = await getAssetFromKV({
+      //   request: new Request(
+      //     new URL("/" + src + ".json", "http://localhost:3000")
+      //   ),
+      //   waitUntil(promise) {
+      //     event?.waitUntil(promise);
+      //   },
+      // });
+      const data = await res.json()
+      console.log(data)
+      return data;
     } else if (import.meta.env.DEV) {
       const fs = await import("node:fs/promises");
       const path = await import("node:path");
