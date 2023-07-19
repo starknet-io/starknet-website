@@ -1,0 +1,57 @@
+## **Delegationsvereinbarung**
+
+**Indem Sie „Governance-Fähigkeiten“ (wie unten definiert) an \[Name/Handle des Delegierten] („Delegierter“) delegieren, erklären Sie sich damit einverstanden, an diese Vereinbarung gebunden zu sein und als „Token-Inhaber“ Vertragspartei dieser Vereinbarung zu werden.**
+
+**Wenn Sie den Bedingungen dieser Vereinbarung nicht zustimmen, dürfen Sie Governance-Fähigkeiten nicht an Delegate delegieren und werden nicht Vertragspartei dieser Vereinbarung.**  
+
+EINFÜHRUNG: Diese Bedingungen beschreiben die Vereinbarung (die „**Vereinbarung**“) zwischen dem **Token-Inhaber** und \[Name/Handle des Delegierten] („**Delegierter**“), gemäß der der Token-Inhaber einen Teil seiner Governance-Rechte delegiert ( wie unten definiert) an den Delegierten übertragen und der Delegierte wird diese Governance-Rechte nutzen, um an der Governance des Protokolls teilzunehmen. 
+
+Der Starknet-Token (der „**Token**“) ist ein ERC-20-Token, der seinen Ursprung in der Ethereum-Blockchain hat und die Community-Governance des Starknet-Protokolls (das „**Protokoll“**) erleichtert. 
+
+Der Token verleiht seinen Inhabern die Befugnis, Vorschläge im Zusammenhang mit dem Protokoll zu debattieren, Vorschläge zu machen und darüber abzustimmen („**Governance-Fähigkeiten**“) sowie die Befugnis, diese Governance-Fähigkeiten an andere zu delegieren; 
+
+IN DER ERWÄGUNG, dass der Token-Inhaber Token besitzt und kontrolliert und einen Teil der Token zum Zwecke der Governance-Fähigkeiten delegieren möchte, um zur aktiven und dezentralen Governance und Entwicklung des Protokolls durch Personen mit Fachwissen und Kenntnissen des Protokolls und der damit verbundenen Technologie beizutragen; Und 
+
+Der Delegierte hat erklärt und der Token-Inhaber hat festgestellt, dass der Delegierte über besondere Kenntnisse und Fachkenntnisse in Bezug auf das Protokoll verfügt, so dass es für die langfristige Mission des Protokolls von Vorteil ist, wenn der Token-Inhaber einen Teil der Token zum Zwecke der Governance-Rechte delegiert, an denen der Delegierte teilnehmen kann Protokoll-Governance. 
+
+Daher vereinbaren die Parteien nun unter Berücksichtigung der hierin enthaltenen gegenseitigen Zusagen und in der Absicht, hierdurch rechtlich gebunden zu sein, Folgendes: 
+
+1. ##### Delegation
+
+   1. Durch die Durchführung einer gültigen Token-Delegierung gemäß den Standardpraktiken und -verfahren, die sich auf eine bestimmte Anzahl von Token (der „delegierte Teil“) bezieht, erkennt der Token-Inhaber die Bedingungen dieser Vereinbarung an und stimmt ihnen zu. Das Datum dieser Delegationstransaktion ist das „Datum des Inkrafttretens“ dieser Vereinbarung. 
+   2. Der Token-Inhaber wird keinen Einfluss oder keine Kontrolle über die Token ausüben oder den Delegierten anweisen, vorschlagen oder anderweitig andeuten, wie er die Governance-Fähigkeiten, die mit dem delegierten Teil verbunden sind, während der Laufzeit nutzen soll. Während der Amtszeit ist der Delegierte im alleinigen und uneingeschränkten Ermessen des Delegierten hinsichtlich der Abstimmung aller Token sowie der Verwendung der Token zur Unterbreitung eines Vorschlags oder zur Ausübung sonstiger Governance-Fähigkeiten berechtigt, diese auszuüben jederzeit im Rahmen dieser Vereinbarung. Alle Entscheidungen und Handlungen des Delegierten gemäß dieser Vereinbarung basieren auf seinem unabhängigen Urteil. 
+
+
+2. ##### Beteiligung
+
+   1. Unmittelbar nach dem Datum des Inkrafttretens nutzt der Delegierte den delegierten Teil zur Teilnahme an Protokoll-Governance-Angelegenheiten in einer Weise, die nach vernünftigem Ermessen im besten Interesse des Protokolls liegt.  Der Delegierte wird bei der Ausübung seiner Governance-Fähigkeiten nicht versuchen, das Ergebnis unangemessen zu manipulieren. 
+   2. Der Delegierte muss bei der Durchführung angemessener Due-Diligence-Prüfungen angemessene Sorgfalt walten lassen, wie z. B. die Überwachung und Teilnahme an Community-Diskussionen über Änderungen des Protokolls und/oder die Recherche und Überprüfung des Kodex im Zusammenhang mit bestimmten vorgeschlagenen Änderungen des Protokolls im Rahmen dieser Teilnahme. 
+   3. Der Delegierte akzeptiert keine Zahlungen oder sonstigen Gegenleistungen, um seine Governance-Fähigkeiten auf eine Art und Weise auszuüben, die der Delegierte sonst nicht ausüben würde. 
+   4. Wenn sich der Delegierte im Wesentlichen auf andere verlässt, um sich an der Protokollverwaltung zu beteiligen, muss der Delegierte den Token-Inhaber darüber informieren, welche Teammitglieder gegebenenfalls in seinem Namen an Protokoll-Governance-Angelegenheiten beteiligt sind, und den Token-Inhaber über alle wesentlichen Änderungen in diesem Team angemessen informieren. 
+   5. Alle Parteien erkennen an, dass die Teilnahme des Delegierten an der Protokollführung im alleinigen Ermessen des Delegierten liegt und der Token-Inhaber keine Abstimmungsanweisungen erteilt oder auf andere Weise versucht hat, die Teilnahme des Delegierten an Angelegenheiten der Protokollführung direkt oder unangemessen zu beeinflussen. Der Delegierte ist unter keinen Umständen verpflichtet, im Einklang mit dem Tokeninhaber oder einem seiner anderen Token-Delegierten abzustimmen. 
+   6. Der Delegierte wird ansonsten angemessene Anstrengungen unternehmen, um die in \[https&#x3A;//community.starknet.io/t/delegate-expectations/4048] dargelegten Erwartungen zu erfüllen.
+   7. Nichts in dieser Vereinbarung ist so auszulegen, dass eine Beziehung zwischen den Parteien eines Vertreters, einer Partnerschaft, eines Joint Ventures oder einer anderen ähnlichen Vereinbarung entsteht oder dass eine Partei für Schulden oder Verpflichtungen der anderen haftbar gemacht wird. 
+3. ##### Haftungsbeschränkung
+
+   1. In keinem Fall haftet eine der Parteien gegenüber der anderen in Bezug auf den Gegenstand dieser Vereinbarung, unabhängig von der Form eines Anspruchs oder einer Klage (sei es vertraglich, fahrlässig, verschuldensunabhängig oder anderweitig), für (a) Verluste oder Ungenauigkeiten von Daten, Verlust oder Unterbrechung der Nutzung oder Kosten für die Beschaffung von Ersatztechnologie, -gütern oder -dienstleistungen, (b) indirekte, strafende, zufällige, Vertrauens-, besondere, exemplarische oder Folgeschäden, einschließlich, aber nicht beschränkt auf Geschäfts-, Umsatz- und Gewinnverluste und Kulanz oder (c) Schäden insgesamt von mehr als 10.000 US-Dollar, selbst wenn diese Partei auf die Möglichkeit solcher Schäden hingewiesen wurde. 
+4. ##### Vertraulichkeit; Kommunikation; Eigentumsrechte 
+
+   1. Der Delegierte darf ohne die vorherige schriftliche Zustimmung des Tokeninhabers keine öffentlichen Erklärungen zu dieser Vereinbarung abgeben oder den Namen oder das Logo des Tokeninhabers verwenden, es sei denn, dies ist durch geltendes Recht oder für Prüfungs- oder Steuerzwecke erforderlich. In diesem Fall muss der Delegierte dies vor einer solchen Offenlegung benachrichtigen Der Token-Inhaber muss solche Anforderungen erfüllen, soweit gesetzlich zulässig, um dem Token-Inhaber die Möglichkeit zu geben, eine Schutzanordnung oder einen anderen Rechtsbehelf zu beantragen und den Token-Inhaber dabei angemessen zu unterstützen. vorausgesetzt jedoch, dass jede Partei öffentlich offenlegen kann, dass der delegierte Teil an den Delegierten delegiert wurde. 
+   2. Nichts in dieser Vereinbarung darf so ausgelegt werden, dass eine Lizenz für geistiges Eigentum oder andere Eigentumsrechte von einer Partei an die andere entsteht. Jede Partei behält alle Rechte, Titel und Interessen an ihrem geistigen Eigentum und allen ihren finanziellen, geschäftlichen, rechtlichen und technischen Informationen, die aufgrund der Art dieser Informationen von einer vernünftigen Person als geschützt oder vertraulich angesehen werden würden. 
+5. ##### Laufzeit und Kündigung 
+
+   1. Diese Vereinbarung beginnt mit dem Datum des Inkrafttretens und bleibt bestehen, bis der Tokeninhaber eine gültige Aufhebung der Delegation gemäß den Standardpraktiken und -verfahren vornimmt und im Protokoll als gültig anerkannt wird. Ungeachtet des Vorstehenden gelten die Abschnitte 3, 4, 7 und 8 auch nach Beendigung dieser Vereinbarung fort.
+   2. Der Delegierte kann diese Vereinbarung aus beliebigem Grund oder ohne Angabe von Gründen kündigen, indem er den Token-Inhaber mit einer Frist von sieben (7) Kalendertagen schriftlich darüber informiert. 
+   3. Nach Beendigung dieser Vereinbarung wird der Token-Inhaber den delegierten Teil vollständig widerrufen. In einem solchen Fall leistet der Delegierte jede vom Token-Inhaber in angemessener Weise angeforderte Unterstützung, um den delegierten Teil zu widerrufen und zurückzugeben und diese Vereinbarung zu kündigen. 
+6. ##### Ganze Vereinbarung; Änderung; Abtretung; Salvatorische Klausel
+
+   1. Diese Vereinbarung ist die endgültige, vollständige und vollständige Vereinbarung der Parteien. Es gibt keine anderen Zusagen oder Bedingungen in anderen Vereinbarungen, weder mündlich noch schriftlich. Diese Vereinbarung ersetzt alle vorherigen schriftlichen oder mündlichen Vereinbarungen zwischen den Parteien. 
+   2. Die Vereinbarung kann nur geändert oder ergänzt werden, wenn die Änderung schriftlich erfolgt und von beiden Parteien unterzeichnet wird. 
+   3. Weder diese Vereinbarung noch die Rechte, Interessen oder Pflichten daraus dürfen vom Delegierten ohne vorherige schriftliche Zustimmung des Token-Inhabers abgetreten werden. Vorbehaltlich des vorstehenden Satzes ist diese Vereinbarung für die Parteien und ihre jeweiligen Rechtsnachfolger und Abtretungsempfänger bindend, kommt ihnen zugute und ist durchsetzbar.  
+   4. Sollte eine Bestimmung dieser Vereinbarung von einer zuständigen Behörde für nicht durchsetzbar oder ungültig befunden werden, führt diese Nichtdurchsetzbarkeit oder Ungültigkeit nicht dazu, dass diese Vereinbarung als Ganzes nicht durchsetzbar oder ungültig ist. In einem solchen Fall muss diese Bestimmung so geändert und ausgelegt werden, dass sie bestmöglich erreicht wird Ziele einer solchen nicht durchsetzbaren oder ungültigen Bestimmung im Rahmen des geltenden Rechts oder der geltenden Gerichtsentscheidungen. 
+7. ##### Geltendes Recht; Schiedsverfahren
+
+   1. Diese Vereinbarung und alle damit zusammenhängenden Angelegenheiten unterliegen den Gesetzen der Cayman Islands und werden in Übereinstimmung mit diesen ausgelegt, ohne Rücksicht auf Kollisionsnormen. Alle Streitigkeiten im Zusammenhang mit oder aus dieser Vereinbarung werden nach der Schiedsgerichtsordnung der Internationalen Handelskammer von einem gemäß der genannten Regeln ernannten Einzelschiedsrichter endgültig entschieden. Der im Schiedsverfahren ergangene Schiedsspruch oder Verfahrensbeschluss darf nicht veröffentlicht werden. Der Ort des Schiedsverfahrens sind die Kaimaninseln und die Sprache des Schiedsverfahrens ist Englisch.  
+8. ##### Notiz
+
+   1. Alle im Rahmen dieser Vereinbarung zulässigen oder erforderlichen Mitteilungen oder Berichte bedürfen der Schriftform und werden per persönlicher Übergabe, per E-Mail oder per Einschreiben oder Einschreiben mit Rückschein zugestellt und gelten bei persönlicher Übergabe innerhalb von fünf (5) Tagen als zugestellt nach der Hinterlegung per Post oder nach Bestätigung des Empfangs der elektronischen Übermittlung. Mitteilungen sind an die am Ende dieser Vereinbarung angegebenen Adressen oder an eine andere Adresse zu senden, die eine der Parteien schriftlich angeben kann.

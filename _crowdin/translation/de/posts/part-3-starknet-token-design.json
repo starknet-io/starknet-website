@@ -1,0 +1,4 @@
+{
+  "title": "Teil 3: Starknet-Token-Design",
+  "short_desc": "Das Design des StarkNet-Tokens ist von der Notwendigkeit geprägt, ein Netzwerk zu betreiben, das aus (i) Benutzern von StarkNet, (ii) Betreibern – Personen, die das Netzwerk mit Rechenressourcen versorgen, die die Sequenzierung von Transaktionen durchführen, STARK-Beweise erstellen usw. – besteht Langzeitspeicheranbieter und (iii) Entwickler, die Software für ihre Infrastruktur und darauf laufende Anwendungen schreiben.\n"
+}

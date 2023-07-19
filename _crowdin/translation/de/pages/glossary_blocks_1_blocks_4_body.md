@@ -1,0 +1,1 @@
+Ein Aufruf einer bestimmten Zustandsübergangslogik, die durch einen Vertrag definiert ist. Syntaktisch gesehen hat eine Transaktion eine wohldefinierte Struktur, die alle notwendigen Metadaten und eine beliebige Datennutzlast umfasst. Die Semantik der Transaktion wird durch den aufgerufenen Vertrag definiert.

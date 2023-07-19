@@ -1,0 +1,1 @@
+אתה יכול לדווח על הונאות ולבדוק דיווחים אחרים על הונאות בערוץ [scam-report](https://discord.gg/qypnmzkhbc) בשרת [Starknet Discord](https://starknet.io/discord).

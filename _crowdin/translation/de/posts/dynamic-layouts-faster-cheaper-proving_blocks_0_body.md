@@ -1,0 +1,1 @@
+In diesem Vortrag besprechen wir dynamische Layouts und wie Starknet davon profitiert.

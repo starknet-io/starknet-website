@@ -1,0 +1,1 @@
+המשתמשים של Starknet המפתחים אפליקציות Starknet. הם כותבים ופורסים חוזי Starknet ו-Ethereum.

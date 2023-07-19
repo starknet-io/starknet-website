@@ -1,0 +1,1 @@
+אסימון Starknet ישמש לתשלום עמלות עסקה, השתתפות בפרוטוקול Starknet והשתתפות בממשל. הרציונל של כל אחת מהשירותים הללו מוצג בהצעת הביזור [שלנו](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778), בסעיף שכותרתו "למה ישמשו האסימונים?"

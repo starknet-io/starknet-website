@@ -1,0 +1,1 @@
+Jede dApp kann auf Starknet bereitgestellt werden. Da Cairo allgemeine Berechnungen ermöglicht, kann jede Geschäftslogik über StarkNet implementiert und verarbeitet werden.

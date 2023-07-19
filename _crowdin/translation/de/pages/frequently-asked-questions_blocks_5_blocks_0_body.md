@@ -1,0 +1,1 @@
+Die STARK-Technologie ist ausgereift und sicher, aber Starknet hat noch nicht den Status eines öffentlichen Guts wie Ethereum oder das Internet erreicht. Damit Starknet dieses Ziel erreichen kann, müssen Governance, Betrieb und Entwicklung weiterhin dezentralisiert werden. Dies wird durch zwei Mechanismen erleichtert: die **Starknet Foundation** und den **Starknet Token**.

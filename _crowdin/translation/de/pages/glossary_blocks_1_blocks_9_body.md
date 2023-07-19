@@ -1,0 +1,4 @@
+Dieser L1-Vertrag definiert den Zustand des Systems, indem er die Verpflichtung zum L2-Zustand speichert. Der Vertrag speichert auch den Hash des Starknet OS-Programms und definiert damit effektiv die Version von Starknet, die das Netzwerk ausführt. Der festgelegte Zustand im L1-Kernvertrag fungiert als Konsensmechanismus von Starknet, d. h. das System ist durch den L1-Ethereum-Konsens gesichert. Neben der Aufrechterhaltung des Zustands ist der Starknet L1-Kernvertrag das Hauptbetriebszentrum für Starknet auf L1. Speziell:
+
+* Es speichert die Liste der zulässigen Prüfer (Verträge), die Statusaktualisierungstransaktionen überprüfen können
+* Es erleichtert die L1 ↔ L2-Interaktion

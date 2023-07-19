@@ -1,0 +1,4 @@
+{
+  "title": "Starknet Quantum Leap: Große Durchsatzverbesserungen sind da!",
+  "short_desc": "Starknet Alpha V0.12.0 konzentriert sich auf die Verbesserung der Leistung und des Benutzererlebnisses. Die neue Version führt eine Rust-basierte Implementierung des Sequencers ein, die den Durchsatz um das Zehnfache verbessert und die Transaktionslatenz reduziert. Zu den weiteren Funktionen gehören eine neue Compilerversion, das Entfernen des Status „Ausstehende Transaktion“ und das Hinzufügen eines Block-Hash-Systemaufrufs. \n"
+}

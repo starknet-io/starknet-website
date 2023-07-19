@@ -1,0 +1,1 @@
+Sie können Betrugsfälle melden und im Kanal [scam-report](https://discord.gg/qypnmzkhbc) auf dem [Starknet Discord](https://starknet.io/discord) Server nach weiteren Betrugsberichten suchen.

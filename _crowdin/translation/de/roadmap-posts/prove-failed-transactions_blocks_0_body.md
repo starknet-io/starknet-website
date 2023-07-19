@@ -1,0 +1,3 @@
+Starknet Version 0.15.0 ermöglicht eine bessere Handhabung fehlgeschlagener Transaktionen. Insbesondere die Nutzung von Sierra zum Nachweis fehlgeschlagener Transaktionen. Diese Ergänzung sorgt für ein zuverlässigeres und robusteres Netzwerkerlebnis, indem das Auftreten fehlgeschlagener Transaktionen reduziert und die Gesamteffizienz der Transaktionsverarbeitung verbessert wird.
+
+Dieser Fortschritt steht im Einklang mit dem Engagement von Starknet, die Ressourcennutzung zu optimieren, die Zuverlässigkeit der Transaktionsverarbeitung zu verbessern und ein benutzerfreundliches Ökosystem für die Erstellung und Interaktion mit Anwendungen im Netzwerk zu schaffen.

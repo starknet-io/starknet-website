@@ -1,0 +1,1 @@
+StarkWare und Lambda Class werden dem Baurat und den Delegierten die neue Version von Starknet zur Vorbereitung der bevorstehenden Abstimmung vorstellen. Eine offene Diskussion zum Versions-Upgrade von Starknet Alpha v0.12.0. Und eine ausführliche Erklärung aller neuen Funktionen der kommenden Version.

@@ -1,0 +1,4 @@
+{
+  "title": "Starknet-Community-Aufruf Nr. 43 | Wir stellen vor: Madara – Erstellen maßgeschneiderter Starknet-Appchains",
+  "short_desc": "Madara basiert auf dem robusten Substrate-Framework und ist dank Rust schnell und bietet Leistung und Skalierbarkeit für die Starknet-basierte Validity Rollup-Kette.\n\nMadara basiert auf Substrat und nutzt die Cairo VM und den Blockifier, um Cairo-Programme und Starknet-Smart-Verträge auszuführen.\nEs nutzt die Macht von Kairo, um jede Programmausführung tatsächlich beweisbar zu machen.\nEin Prüfer oder ein Prüfermarkt kann letztendlich auf die von der Kette erzeugten Blöcke hören und Beweise generieren. Somit kann sich eine Madara-Kette technisch gesehen auf jedem L1/L2 niederlassen."
+}
