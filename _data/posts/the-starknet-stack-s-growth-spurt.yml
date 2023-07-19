@@ -102,36 +102,82 @@ blocks:
 
 
 
-          | Category                                                                                | Project                                                                                  | Entity             | Status        |
-
-          | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | ------------- |
-
-          | Full Node                                                                               | [Pathfinder](https://github.com/eqlabs/pathfinder)                                       | Equilibrium        | In production |
-
-          | [Juno](https://github.com/NethermindEth/juno)                                           | Nethermind                                                                               | In production      |               |
-
-          | [Papyrus](https://github.com/starkware-libs/papyrus)                                    | StarkWare                                                                                | Soon in production |               |
-
-          | [Deoxys](https://github.com/KasarLabs/deoxys)                                           | KasarLabs                                                                                | In development     |               |
-
-          | Execution Engine                                                                        | [Blockifier](https://github.com/starkware-libs/blockifier)                               | StarkWare          | In production |
-
-          | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                     | LambdaClass                                                                              | Soon in production |               |
-
-          | Sequencer                                                                               | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)        | StarkWare          | In production |
-
-          | [Madara](https://github.com/keep-starknet-strange/madara)                               | Community                                                                                | In development     |               |
-
-          | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)            | LambdaClass                                                                              | In development     |               |
-
-          | Prover                                                                                  | [SW Prover](https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b) | StarkWare          | In production |
-
-          | [LC Prover](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main) | LambdaClass                                                                              | In development     |               |
-
-          | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                  | Andrew Milson                                                                            | In development     |               |
-
-
-
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Project</th>
+                <th>Entity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="4">Full Node</td>
+                <td><a href="https://github.com/eqlabs/pathfinder">Pathfinder</a></td>
+                <td>Equilibrium</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/NethermindEth/juno">Juno</a></td>
+                <td>Nethermind</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/starkware-libs/papyrus">Papyrus</a></td>
+                <td>StarkWare</td>
+                <td>In development</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/KasarLabs/deoxys">Deoxys</a></td>
+                <td>KasarLabs</td>
+                <td>In development</td>
+              </tr>
+              <tr rowspan="2">
+                <td>Execution Engine</td>
+                <td><a href="https://github.com/starkware-libs/blockifier">Blockifier</a></td>
+                <td>StarkWare</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/lambdaclass/starknet_in_rust">starknet_in_rust</a></td>
+                <td>LambdaClass</td>
+                <td>Soon in production</td>
+              </tr>
+              <tr>
+                <td rowspan="3">Sequencer</td>
+                <td><a href="https://medium.com/starkware/starknets-new-sequencer-339e63845003">SW Sequencer</a></td>
+                <td>Starkware</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/keep-starknet-strange/madara">Madara</a></td>
+                <td>Community</td>
+                <td>In development</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/lambdaclass/starknet_tendermint_sequencer">LC Sequencer</a></td>
+                <td>LambdaClass</td>
+                <td>In development</td>
+              </tr>
+              <tr>
+                <td rowspan="3">Prover</td>
+                <td><a href="https://medium.com/starkware/open-sourcing-the-starknet-prover-283d3e807c8b">SW Prover</a></td>
+                <td>Starkware</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main">LC Prover</a></td>
+                <td>LambdaClass</td>
+                <td>In development</td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/andrewmilson/sandstorm">Sandstorm</a></td>
+                <td>Andrew Milson</td>
+                <td>In development</td>
+              </tr>
+            </tbody>
+          </table>
 
 
           * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
