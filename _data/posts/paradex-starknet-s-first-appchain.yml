@@ -6,29 +6,19 @@ image: /assets/paradex-starknet2.png
 category: ecosystem
 topic:
   - decentralization
-short_desc: Paradex, a new derivatives exchange seeded by
-  [Paradigm](http://paradigm.co), crypto's largest network of institutional
-  traders, is launching on Starknet’s first Appchain. It will offer its users
-  institutional-grade liquidity, self-custody, decentralization and
-  transparency. This collaboration between StarkWare, inventors of STARK
-  technology, and Paradex is a demonstration of the power of Starknet to cater
-  for the needs of apps that require high scale, low costs, and adjusted specs,
-  all while attaining decentralization and self-custody.
+short_desc: "Paradex is launching on Starknet’s first Appchain. It will offer
+  its users institutional-grade liquidity, self-custody, decentralization and
+  transparency. This collaboration is a demonstration of the power of Starknet
+  to cater for the needs of apps that require high scale, low costs, and
+  adjusted specs, all while attaining decentralization and self-custody. "
 blocks:
   - type: group
     blocks:
       - type: markdown
+        body: "**Quantum leap in Starknet throughput is bringing a new cutting-edge
+          financial use case to the Starknet ecosystem**"
+      - type: markdown
         body: >-
-          #### Quantum leap in Starknet throughput is bringing a new
-          cutting-edge financial use case to the Starknet ecosystem 
-
-
-          ##  
-
-
-          ##  
-
-
           ## Can We Skip to the Good Part?
 
 
