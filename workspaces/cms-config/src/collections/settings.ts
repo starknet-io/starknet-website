@@ -269,6 +269,7 @@ export const settingsCollectionConfig = {
           search_fields: ["title"],
           value_field: "id",
           display_fields: ["title"],
+          options_length: 300
         },
       ],
     },
