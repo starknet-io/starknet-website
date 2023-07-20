@@ -1,5 +1,5 @@
 id: b689eb1e-cc14-419b-999d-41c39ed97c52
-title: Support for full node P2P communication
+title: Full node P2P communication & increased throughput
 availability: Q3 2023
 version: 6774d826-4dbc-48d0-b2d2-682d056ce26d
 stage: building-next
