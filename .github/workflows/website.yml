@@ -8,7 +8,7 @@ jobs:
     name: Build and Deploy
     environment:
       name: Starknet Website ${{ github.ref_name }}
-      url: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
+      url: https://${{ env.GITHUB_REF_SLUG }}.starknet-website.pages.dev
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -50,29 +50,24 @@ jobs:
         with:
           slug-maxlength: 40
 
-      - name: Create Env
-        run: echo -e "\n[env.${{ env.GITHUB_REF_SLUG }}]\n" >> workspaces/website/wrangler.toml
-
-      - name: Create secrets.json
-        run: echo '{"YOUTUBE_API_KEY":"${{ secrets.YOUTUBE_API_KEY }}"}' > workspaces/website/secrets.json
-
-      - name: Upload secrets
-        run: yarn workspace @starknet-io/website exec wrangler secret:bulk secrets.json --env ${{ env.GITHUB_REF_SLUG }}
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
       - name: Build project
         run: yarn workspace @starknet-io/website build
         env:
-          VITE_SITE_URL: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
+          VITE_SITE_URL: ${{ env.CF_PAGES_URL }}
           VITE_ALGOLIA_INDEX: ${{ github.ref_name == 'production' && 'production' || 'dev' }}
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
           VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
 
       - name: Publish
-        run: yarn workspace @starknet-io/website exec wrangler publish --env ${{ env.GITHUB_REF_SLUG }}
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: starknet-website
+          directory: dist/client
+          workingDirectory: workspaces/website
+          wranglerVersion: '3'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}
+
