@@ -8,5 +8,3 @@ declare interface LocaleProps {
 declare interface PAGES_VARS {
   readonly YOUTUBE_API_KEY: string;
 }
-
-declare var YOUTUBE_API_KEY: string;

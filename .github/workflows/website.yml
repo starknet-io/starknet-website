@@ -8,7 +8,7 @@ jobs:
     name: Build and Deploy
     environment:
       name: Starknet Website ${{ github.ref_name }}
-      url: https://starknet-website-${{ env.GITHUB_REF_SLUG }}.yukilabs.workers.dev
+      url: ${{ env.CF_PAGES_URL }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
