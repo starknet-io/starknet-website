@@ -14,10 +14,13 @@ blocks:
     blocks:
       - type: markdown
         body: >-
+          ###  
+
+
+          ### From Massive Cost Reductions to Personalized Control, Discover the Future of Blockchain Infrastructure
+
+
           ##  
-
-
-          ## From Massive Cost Reductions to Personalized Control, Discover the Future of Blockchain Infrastructure
 
 
           ##  
@@ -26,7 +29,7 @@ blocks:
           ## TL;DR
 
 
-          * Madara is a high-performance Starknet sequencer, providing the power to create customizable and efficient appchains.
+          * Madara is a high-performance Starknet sequencer, providing the power to create customizable and efficient [appchains](https://www.starknet.io/en/posts/ecosystem/the-starknet-stacks-growth-spurt).
 
           * By using the Substrate framework, Madara amplifies the capabilities of the Cairo VM, leading to provable, secure, and flexible programs.
 
@@ -73,10 +76,7 @@ blocks:
           ### Innovation 
 
 
-          The customizability of appchains also allows developers to work with features that are currently unavailable or risky in environments like Starknet. To ensure controlled usage, restrictions are imposed on arbitrary code executed on the nodes. In Starknet, the current approach is to only allow the use of whitelisted code. Conversely, appchains will offer each team the autonomy to authorize any desired code hints. This allows appchains to unlock many use cases, like being able to enforce on-chain KYC without leaking private information. 
-
-
-          ![Madara](/assets/madara-spheres.png "Madara")
+          The customizability of appchains also allows developers to work with features that are currently unavailable or risky in environments like Starknet. Appchains will offer each team the autonomy to write and authorize any desired code hints. This allows appchains to unlock many use cases, like being able to enforce on-chain KYC without leaking private information. 
 
 
           ### Madara's Effect on the Appchain Stack
@@ -85,8 +85,10 @@ blocks:
           Let’s take a look at the interplay of different layers powering appchains, and where Madara comes in. 
 
 
-          * * **Execution:** The execution layer defines the execution of blocks and generation of state difference. Madara offers the flexibility to switch between two execution crates, [blockifier](https://github.com/starkware-libs/blockifier) by StarkWare  and [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust) by LambdaClass. Regardless of the crate chosen, the underlying framework utilizes the Cairo VM. The Cairo language facilitates the creation of provable programs, enabling the demonstration of correct computation execution.
-            * **Settlement:** As a Validity Rollup, a Madara appchain's state can be reconstructed solely by examining its settlement layer. By settling more frequently on Starknet, an L3 can achieve faster hard finality, while decentralizing the sequencing layer enables more robust soft finality. Hence, settlement is enhanced on both fronts (hard and soft finality).
+          * **Execution:** The execution layer defines the execution of blocks and generation of state difference. Madara offers the flexibility to switch between two execution crates, [blockifier](https://github.com/starkware-libs/blockifier) by StarkWare  and [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust) by LambdaClass. Regardless of the crate chosen, the underlying framework utilizes the Cairo VM. The Cairo language facilitates the creation of provable programs, enabling the demonstration of correct computation execution.
+
+          * **Settlement:** As a Validity Rollup, a Madara appchain's state can be reconstructed solely by examining its settlement layer. By settling more frequently on Starknet, an L3 can achieve faster hard finality, while decentralizing the sequencing layer enables more robust soft finality. Hence, settlement is enhanced on both fronts (hard and soft finality).
+
           * **Sequencing:** Madara takes charge of the sequencing process, which can be altered to suit the application’s needs – be it simple FCFS, PGA or more complex schemes like Narwhall & Bullshark. Certain appchains can choose to deploy encrypted mempools to ensure fair ordering and mitigate the impact of MEV.
 
           * **Data Availability:**  Data availability guarantees that the complete state tree remains accessible, providing users with the confidence that they can prove ownership of their funds even if Madara experiences a disruption. Madara will offer developers a range of data availability (DA) schemes to choose from, including [Volition](https://starkware.medium.com/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb), Validium, Celestia, Eigen DA, and rollup mode.
@@ -94,13 +96,13 @@ blocks:
           * **Governance:** Each Madara appchain can choose its governance model. [Snapshot X](https://twitter.com/SnapshotLabs) offers a fully on-chain governance system that relies on storage proofs. Alternative governance mechanisms are also under exploration, such as the native substrate governance pallet. On-chain governance stands as a core value for Madara. 
 
 
-          ![Madara](/assets/madara-levels.jpg "Madara")
+          ## ![levels of Madara ](https://starkware.co/wp-content/uploads/2023/07/madara-levels-300x184.png)
 
 
           ## Enter: Madara
 
 
-          Madara enhances the Cairo VM by utilizing the Substrate framework and integrating the Cairo VM for executing Cairo programs and Starknet smart contracts. Substrate is an open-source Rust framework to build customizable blockchains, that is known for its flexibility. Meanwhile, the Cairo VM is specifically designed to efficiently generate Validity Proofs for program execution. By employing state tracking and a smart contract to verify these proofs on L2, the L3 appchain  ensures secure integration with L2. This way, Madara leverages Cairo’s power to enable the provability of program execution. 
+          In Madara, the Cairo VM is being enhanced by utilizing the Substrate framework and integrating the Cairo VM for executing Cairo programs and Starknet smart contracts. Substrate is an open-source Rust framework to build customizable blockchains, that is known for its flexibility. Meanwhile, the Cairo VM is specifically designed to efficiently generate Validity Proofs for program execution. By employing state tracking and a smart contract to verify these proofs on L2, the L3 appchain  ensures secure integration with L2. This way, Madara leverages Cairo’s power to enable the provability of program execution. 
 
 
           The Substrate framework’s inherent modular nature lets developers customize the appchain with ease. No assumptions are imposed, allowing you to incorporate your own consensus protocol, hash function, signature scheme, storage layout – whatever your app requires, all while utilizing Cairo to generate proofs. No limits on what developers can do while still being provable, inheriting the security of the underlying chain – be it Starknet or Ethereum.
@@ -109,4 +111,7 @@ blocks:
           Initially, Madara will bear a strong resemblance to Starknet, enabling the composability of smart contracts within the Starknet ecosystem. There are bigger plans in store for the future as Starknet integrates with [Herodotus](https://www.herodotus.dev/) to leverage [storage proofs](https://book.starknet.io/chapter_8/storage_proofs.html) to achieve interoperability with other blockchains. The integration of storage proofs will also let Madara appchains consider state and liquidity from other chains. 
 
 
-          Prepare to witness a new era of possibilities in the realm of blockchains, enabled by Madara.
+          Prepare to witness a new era of possibilities in the realm of blockchains, enabled by Madara. 
+
+
+          ##
