@@ -14,10 +14,8 @@ blocks:
     blocks:
       - type: markdown
         body: >-
-          ### From Massive Cost Reductions to Personalized Control, Discover the
-          Future of Blockchain Infrastructure
-
-
+          #### From Massive Cost Reductions to Personalized Control, Discover
+          the Future of Blockchain Infrastructure
 
 
 
@@ -90,8 +88,6 @@ blocks:
           * Data Availability:  Data availability guarantees that the complete state tree remains accessible, providing users with the confidence that they can prove ownership of their funds even if Madara experiences a disruption. Madara will offer developers a range of data availability (DA) schemes to choose from.
 
           * Governance: Each Madara appchain can choose its governance model. [Snapshot X](https://twitter.com/SnapshotLabs) offers a fully on-chain governance system that relies on storage proofs. Alternative governance mechanisms are also under exploration, such as the native substrate governance pallet. On-chain governance stands as a core value for Madara. 
-
-
 
 
           ![](https://lh4.googleusercontent.com/i7bXi2IPV-LTLzEgueA2SPHGULUFDj1OX4IznOQr5BeZe0hcey-VXA5TOV6q9XaVqBGAcYiie7u7uxw7q1ByZxjkPQKHERqKJTxhdDdTSgBQy8smyNO3jEHiNJv7Eqh8BMxjj4fFlQAW6gm-hQMzyIU)
