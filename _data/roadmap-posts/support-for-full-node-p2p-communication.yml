@@ -1,14 +1,15 @@
 id: b689eb1e-cc14-419b-999d-41c39ed97c52
 title: Support for full node P2P communication
-availability: Q4 2023
+availability: Q3 2023
 version: 6774d826-4dbc-48d0-b2d2-682d056ce26d
 stage: building-next
 blocks:
   - type: markdown
     body: >-
       I﻿n Starknet version 0.12.0.1 we are introducing a new endpoint to the
-      Starknet feeder gateway which will return a signature on the
-      *state_diff_commitmant+block_hash* value. T﻿his change will facilitate
+      Starknet feeder gateway which will return the *state_diff_commitmant,
+      block_hash* and the signature on
+      the *state_diff_commitmant+block_hash* value. T﻿his change will facilitate
       full node P2P communication.   
 
 
