@@ -5,7 +5,7 @@ archive_after: 3
 contact:
   name: Kim Louie
   email: kim@starknet.org
-  twitter: ""
+  twitter: https://twitter.com/StarknetFndn
   logo: /assets/sn-symbol-gradient.png
 job:
   title: Head of Business Development
