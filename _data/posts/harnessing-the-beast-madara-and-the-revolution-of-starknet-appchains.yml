@@ -12,13 +12,14 @@ short_desc: Prepare to witness a new era of possibilities in the realm of
 blocks:
   - type: group
     blocks:
-      - type: page_header
-        title: From Massive Cost Reductions to Personalized Control, Discover the Future
-          of Blockchain Infrastructure
-        description: From Massive Cost Reductions to Personalized Control, Discover the
-          Future of Blockchain Infrastructure
       - type: markdown
         body: >-
+          #### From Massive Cost Reductions to Personalized Control, Discover
+          the Future of Blockchain Infrastructure
+
+
+
+
           ## TL;DR
 
 
