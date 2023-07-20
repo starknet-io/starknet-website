@@ -45,10 +45,10 @@ jobs:
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
         env:
-          VITE_LIVE_PREVIEW_URL: ${{ env.CF_PAGES_URL }}
+          VITE_LIVE_PREVIEW_URL: https://${{ env.GITHUB_REF_SLUG }}.starknet-website.pages.dev
           VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
-          VITE_API_BASE_URL: ${{ env.CF_PAGES_URL }}/api
-          VITE_DATA_URL: ${{ env.CF_PAGES_URL }}/data
+          VITE_API_BASE_URL: https://${{ env.GITHUB_REF_SLUG }}.starknet-website.pages.dev/api
+          VITE_DATA_URL: https://${{ env.GITHUB_REF_SLUG }}.starknet-website.pages.dev/data
 
       - name: Deploy Netlify CMS
         uses: cloudflare/pages-action@1
