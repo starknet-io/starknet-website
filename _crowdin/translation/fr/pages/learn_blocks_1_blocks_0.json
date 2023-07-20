@@ -1,0 +1,4 @@
+{
+  "title": "Starknet 101",
+  "description": "Starknet est un réseau de couche 2 qui utilise des mathématiques et de la cryptographie pour déployer à grande échelle Ethereum de manière sécurisée. Il est connu sous le nom de Validity-rollup (ou ZK-rollup) ; il \"regroupe\" de nombreuses transactions pour les envoyer à Ethereum en une seule transaction. Continuez à lire pour en apprendre les fondamentaux."
+}

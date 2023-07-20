@@ -1,0 +1,7 @@
+Les chaînes de blocs sont des registres publics transparents qui ont une immense valeur financière et se sont appuyés sur des protocoles spécifiques de cryptographie à clé publique (PKC) pour garantir les droits de propriété de leurs utilisateurs. Malgré tous leurs avantages en termes de simplicité et de sécurité, les PKC sont maladroits et limités et offrent une expérience utilisateur assez moche.
+
+Entrez "Account Abstraction" (AA), une nouvelle et meilleure façon de faire respecter les droits de propriété sur la blockchain. Avec AA, il est facile d'intégrer des chaînes de blocs aux dispositifs de sécurité biométrique des smartphones, de mettre en place des garde-corps sophistiqués pour les actifs des utilisateurs et de permettre une meilleure planification financière.
+
+Alors, qu'est-ce que l'abstraction de compte et tout cela est-il lié à STARKs et Starknet ? Réponses à cette question, et bien d'autres, des visionnaires qui ont imaginé les AA et en ont fait une réalité sur Starknet.
+
+Yoav Weiss (Security Fellow à la Ethereum Foundation), Julien Niset (Co-fondateur et Chief Scientist chez Argent) et Tom Brand (Starknet Product Lead chez StarkWare) pour ce prochain épisode passionnant de STARK @ Home.

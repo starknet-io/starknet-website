@@ -1,0 +1,1 @@
+Une invocation d'une logique de transition d'état spécifique définie par un contrat. Une transaction a, syntaxiquement, une structure bien définie qui inclut toutes les métadonnées nécessaires ainsi qu'une charge utile de données arbitraires. Les sémantiques de la transaction sont définies par le contrat invoqué.

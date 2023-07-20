@@ -1,0 +1,1 @@
+SHARP（共享证明者）是一项用于计算 Cairo 程序正确执行证明的服务。 它可用于证明特定 Cairo 程序的正确执行，该程序强制 Starknet 状态转换（Starknet OS（操作系统））的有效性。 目前，Starknet 与许多其他客户一起使用 SHARP 来摊销证明成本。 未来，Starknet 吞吐量可能证明专用证明层是合理的。

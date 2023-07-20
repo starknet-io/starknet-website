@@ -1,0 +1,1 @@
+L’état se compose du code des contrats et du stockage des contrats.

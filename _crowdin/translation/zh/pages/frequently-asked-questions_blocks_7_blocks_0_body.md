@@ -1,0 +1,1 @@
+如果您对 StarkNet 及其去中心化感到兴奋并希望参与该过程，请加入 StarkNet [Discord](https://starknet.io/discord) 和 [Starknet 社区论坛](https://community.starknet.io/)的构建者

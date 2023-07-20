@@ -1,0 +1,3 @@
+Non. Vous avez plusieurs options pour écrire un contrat, chacune ayant ses propres avantages. 
+
+Cairo est le langage natif pour un contrat Starknet, qui réalise le plus pleinement le potentiel de mise à l'échelle de Starknet. D'autre part, plusieurs équipes travaillent sur des transpileurs de langages de programmation (notamment Solidity) vers Cairo. De tels transpileurs facilitent le déploiement rapide de contrats existants sur Starknet. **[Consultez notre dernier outillage de développement](/developers/tools-resources).**

@@ -1,0 +1,3 @@
+Actuellement, les transactions Starknet et leurs charges sont visibles sur le réseau de la même manière qu'elles sont visibles sur Ethereum.
+
+Il est possible de déployer divers protocoles de confidentialité sur Starknet, qui offriront une totale confidentialité à tous les participants du réseau. Étant donné que ces protocoles nécessitent généralement beaucoup de calculs, ils bénéficieront grandement de l'évolutivité de Starknet.

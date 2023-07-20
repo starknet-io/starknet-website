@@ -1,0 +1,3 @@
+Construit sur le cadre Substrate robuste et rapide, grâce à Rust, Madara offre des performances et une évolutivité pour la chaîne Validity Rollup basée sur Starknet.
+
+Madara est basé sur un substrat et utilise la machine virtuelle Cairo et le Blockifier pour exécuter les programmes Cairo et les contrats intelligents Starknet. Il exploite la puissance du Caire pour rendre toute exécution de programme réellement prouvable. Un prouveur ou un marché de prouveurs peut finalement écouter les blocs produits par la chaîne et générer des preuves. Ainsi, une chaîne madara peut techniquement s'installer sur n'importe quelle L1/L2.

@@ -1,0 +1,1 @@
+Un nœud du réseau Starknet utilisé uniquement pour interroger l'état actuel de Starknet. Il peut répondre de manière indépendante (c'est-à-dire sans interroger d'autres nœuds) aux requêtes sur l'état actuel du réseau Starknet, y compris l'état L1. Il ne regroupe pas les transactions en lots ni ne prouve les lots.

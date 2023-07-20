@@ -1,0 +1,1 @@
+Les utilisateurs interagissent avec les nœuds séquenceurs de Starknet et, si nécessaire, avec les contrats de L1. Ces utilisateurs, qu'ils soient humains ou automatisés, sont les agents qui soumettent des transactions au réseau Starknet.

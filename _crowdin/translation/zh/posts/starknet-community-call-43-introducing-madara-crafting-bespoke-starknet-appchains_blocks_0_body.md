@@ -1,0 +1,3 @@
+Madara 建立在强大的 Substrate 框架之上，并且借助 Rust，速度很快，为基于 Starknet 的 Validity Rollup 链提供了性能和可扩展性。
+
+Madara 基于 Substrate，使用 Cairo VM 和 Blockifier 来执行 Cairo 程序和 Starknet 智能合约。 它利用开罗的力量使任何程序的执行都可以实际证明。 证明者或证明者市场最终可以监听链产生的区块并生成证明。 因此，从技术上讲，马达拉链可以解决任何 L1/L2 问题。

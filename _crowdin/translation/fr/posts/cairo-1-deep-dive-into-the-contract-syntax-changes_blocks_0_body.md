@@ -1,0 +1,1 @@
+Dans cette présentation, nous discuterons des récentes modifications de la syntaxe des contrats intelligents qui font partie de la nouvelle version du compilateur Cairo 1 (v2.0.0). Attendez-vous à une plongée profonde dans la syntaxe du contrat intelligent - ce qui est exactement différent et ce qui nous amène à emprunter cette voie.

@@ -1,0 +1,1 @@
+您可以在 [Starknet Discord](https://starknet.io/discord) 服务器上的 [诈骗报告](https://discord.gg/qypnmzkhbc) 频道中报告诈骗并检查其他诈骗报告。

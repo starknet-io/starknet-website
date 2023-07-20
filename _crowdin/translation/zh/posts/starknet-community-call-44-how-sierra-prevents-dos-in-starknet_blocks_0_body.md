@@ -1,0 +1,1 @@
+Sierra 是 Cairo 1.0 和 Cairo 组件之间的 IR。 在本次演讲中，Ariel，AKA [@FeedTheFed](https://twitter.com/FeedTheFed) 解释了 Starknet 背景下的完整性问题，以及用户代码和经过验证的代码之间的 IR 如何解决该问题。 我们还将讨论此类 IR 的其他好处，例如气体计量以及执行和证明环境之间的分离。

@@ -1,0 +1,1 @@
+开罗是一个含义丰富的术语，代表三个不同的事物。 首先，Cairo是一个CPU架构。 其次，“Cairo”是 CPU AIR 的简写，它是该 CPU 架构的代数表示。 最后，Cairo 是一种图灵完备的编程语言，使区块链开发人员能够利用 STARK 的强大功能。 [白皮书](https://eprint.iacr.org/2021/1063)概述了前两个方面以及语言的指令集。 对于该语言，请参阅 [github repo](https://github.com/starkware-libs/cairo)。

@@ -1,0 +1,3 @@
+**StarkEx** est un SAAS (Software as a Service) personnalisable et autonome pour les échanges qui utilise le système de preuves STARK pour permettre un déploiement grande échelle massif. Plusieurs échanges importants utilisent déjà StarkEx en production sur Ethereum Mainnet (en savoir plus sur StarkEx).
+
+**Starknet** est un réseau à usage général où vous pouvez écrire et déployer vos propres contrats intelligents, interagir avec d'autres contrats, etc., tout comme Ethereum.

@@ -1,0 +1,5 @@
+Actuellement pas. Les STARKs sont définis comme des preuves de validité, ce qui signifie qu'ils prouvent l'intégrité du calcul. Avec des preuves de validité (STARKs inclus), une partie peut prouver à une autre qu'un certain calcul a été effectué correctement. La divulgation nulle de connaissance (Zero-Knowledge) est une propriété supplémentaire affirmant que le prouveur n'a pas à révéler les informations incluses dans le calcul.
+
+La plupart des ZK-Rollups ne sont pas vraiment à divulgation nulle de connaissance. L'erreur vient de la confusion entre les preuves de validité (assurant l'intégrité du calcul) et les preuves de divulgation nulle de connaissance (assurant qu'aucune information n'est révélée).
+
+Starknet utilise les épreuves de validation STARK. Il convient de noter que l’extraction d’informations à partir de la preuve est extrêmement difficile – presque impossible dans la pratique.
