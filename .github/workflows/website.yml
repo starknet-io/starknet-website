@@ -67,4 +67,4 @@ jobs:
           projectName: starknet-website
           directory: workspaces/website
           workingDirectory: workspaces/website
-          wrangerVersion: '3'
+          wranglerVersion: '3'
