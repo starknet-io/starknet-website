@@ -8,7 +8,7 @@ import { usePageContext } from "src/renderer/PageContextProvider";
 export default function LocaleSwitcher({ seo }: { seo: SEOTexts["language"] }) {
   const { locale, urlPathname: pathname } = usePageContext();
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;
-  const topLanguages = ["en", "de", "he", "ru", "ja"];
+  const topLanguages = ["en", "de", "he", "ru", 'fr', 'zh'];
 
   return (
     <LanguageSwitcherDropdown
