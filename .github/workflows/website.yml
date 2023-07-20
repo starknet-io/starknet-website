@@ -8,7 +8,7 @@ jobs:
     name: Build and Deploy
     environment:
       name: Starknet Website ${{ github.ref_name }}
-      url: https://${{ env.GITHUB_REF_SLUG }}.starknet-website.pages.dev
+      url: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -48,12 +48,12 @@ jobs:
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
         with:
-          slug-maxlength: 40
+          slug-maxlength: 28
 
       - name: Build project
         run: yarn workspace @starknet-io/website build
         env:
-          VITE_SITE_URL: ${{ env.CF_PAGES_URL }}
+          VITE_SITE_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev
           VITE_ALGOLIA_INDEX: ${{ github.ref_name == 'production' && 'production' || 'dev' }}
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
