@@ -23,10 +23,10 @@ blocks:
       ## What are storage proofs?
 
 
-      Storage proofs allow you to open cryptographic commitments of state, They can be optimized by marrying them with S\[N/T]ARKS. . These validity proofs prove that a particular state existed and was valid at a particular block in the past.
+      Storage proofs allow you to open cryptographic commitments of state, they can be optimized by marrying them with S\[N/T]ARKS. These validity proofs prove that a particular state existed and was valid at a particular block in the past.
 
 
-      Fundamentally, blockchains are databases that contain data cryptographically committed using Merkle trees, Merkle Patricia trees, Verkle trees, etc.). Since all the data is committed, we can prove that some information is encapsulated in a given state. However, with simple commitment schemes, the size of this proof becomes more prominent as the size of the data it includes becomes larger. Verifying such proofs on-chain becomes too expensive to be practical.
+      Fundamentally, blockchains are databases that contain data cryptographically committed using Merkle trees, Merkle Patricia trees, Verkle trees, etc. Since all the data is committed, we can prove that some information is encapsulated in a given state. However, with simple commitment schemes, the size of this proof becomes more prominent as the size of the data it includes becomes larger. Verifying such proofs on-chain becomes too expensive to be practical.
 
 
       Storage proofs, on the other hand, when used in conjunction with STARKs or SNARKs, can be relatively small, and allow you to verify a specific piece of state, at a specific point in time, and on any domain — without trusting a third party. Instead of third parties, they rely on the security of the underlying chain itself.
@@ -113,8 +113,6 @@ blocks:
 
 
       ![](/assets/blog-post-image-5-.webp)
-
-
 
 
       ## Can oracles be replaced or improved by storage proofs?
