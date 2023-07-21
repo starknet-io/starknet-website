@@ -6,8 +6,6 @@ import {
   Image as ChakraImage,
   Icon,
   Flex,
-  useBreakpointValue,
-  ChakraProps
 } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
@@ -50,14 +48,10 @@ type ImageProps = {
 };
 
 const Image = ({ url, imageAlt, type = "grid" }: ImageProps) => {
-  const size = useBreakpointValue({ base: '581px', sm: '350px', md: '430px', xl: '320px' });
-  const featuredImageSize = useBreakpointValue({ base: '581px', sm: '350px', md: '430px', lg: '550px', xl: '606px' });
-  const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${type === "featured" ? featuredImageSize : size},height=auto,format=auto${url}`;
-  const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   return (
     <Box overflow="hidden" {...type === "featured" && { width: "auto", maxWidth: "60%"}}>
       <ChakraImage
-        src={isProd ? cloudflareImage : url}
+        src={url}
         alt={imageAlt}
         width="full"
         height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
