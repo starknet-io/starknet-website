@@ -4,7 +4,11 @@ import { renderPage } from "vite-plugin-ssr/server";
 import { createServer } from "vite";
 import fetch from "node-fetch";
 import compression from "compression";
+import * as dotenv from "dotenv";
 import { apiRouter } from "../api";
+
+const dotenvFiles = [".env.local", ".env"];
+dotenvFiles.forEach((path) => dotenv.config({ path }));
 
 const app = express();
 
@@ -25,7 +29,8 @@ app.all(/\/api(.*)/, async (req, res, next) => {
       method: req.method,
       body: req.body,
       headers: Object.entries(req.headers) as HeadersInit,
-    })
+    }),
+    process.env
   );
 
   if (httpResponse != null) {
