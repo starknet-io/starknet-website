@@ -1,0 +1,23 @@
+:root {
+    --table-border-color: #313131;
+}
+
+body.chakra-ui-dark {
+    --table-border-color: #EFEFEF;
+}
+
+table {
+    margin-block: 1rem;
+    overflow-x: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 0.5rem;
+}
