@@ -447,6 +447,7 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
             <ArticleCard.Root
               href={`/${hit.locale}/posts/${category?.slug}/${hit.slug}`}
               key={i}
+              sx={{maxW: {base: "none", lg: "440px", xl: "400px"}}}
             >
               <ArticleCard.Image url={hit.image} />
 

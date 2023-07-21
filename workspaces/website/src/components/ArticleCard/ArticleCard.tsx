@@ -6,6 +6,7 @@ import {
   Image as ChakraImage,
   Icon,
   Flex,
+  ChakraProps,
 } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
@@ -17,11 +18,12 @@ type RootProps = {
   children: React.ReactNode;
   href: string;
   type?: | "grid" | "featured";
+  sx?: ChakraProps['sx']
 };
 
-const Root = ({ children, href, type = "grid" }: RootProps) => {
+const Root = ({ children, href, type = "grid", sx }: RootProps) => {
   return (
-    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }} overflow="hidden">
+    <CardGradientBorder padding="0" borderRadius={{ base: "8px" }} overflow="hidden" sx={sx}>
       <Box as="a" href={href} _hover={{ textDecor: "none" }} role="group">
         <Box p="0" height="full" borderRadius="8px" bg="card-bg">
           <Flex
