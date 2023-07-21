@@ -11,7 +11,7 @@ apiRouter.all("*", preflight);
 
 apiRouter.get(
   "/youtube",
-  async (req, context: EventContext<PAGES_VARS, any, Record<string, unknown>>) => {
+  async (req, env: PAGES_VARS) => {
     if (typeof req.query.id !== "string") {
       return corsify(error(422, { message: "Invalid id provided!" }));
     }
@@ -20,7 +20,7 @@ apiRouter.get(
 
     query.set("version", "v3");
     // TODO fix env for cf pages
-    query.set("key", context.env.YOUTUBE_API_KEY);
+    query.set("key", env.YOUTUBE_API_KEY);
     query.set("id", req.query.id as string);
     query.set("part", "snippet");
     query.append("part", "contentDetails");
