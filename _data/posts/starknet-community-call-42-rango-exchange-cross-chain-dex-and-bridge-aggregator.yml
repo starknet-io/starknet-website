@@ -3,7 +3,67 @@ post_type: video
 title: Rango Exchange cross-chain DEX and Bridge aggregator
 published_date: 2023-05-10T07:28:50.651Z
 video:
-  url: https://youtube.com/live/NL-skz5VW_0
+  url: https://www.youtube.com/live/NL-skz5VW_0
+  id: NL-skz5VW_0
+  data:
+    kind: youtube#video
+    etag: kMUNQWRFefQb_0oFPMjq5a-sPrc
+    id: NL-skz5VW_0
+    snippet:
+      publishedAt: 2023-05-10T01:04:02Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #42 | Rango Exchange cross-chain DEX and Bridge
+        aggregator"
+      description: Rango Exchange is a cross-chain DEX and bridge aggregator. They
+        have enabled interoperability between Starknet and other blockchains
+        like Cosmos-based, Solana, UTXOs, EVMs.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/NL-skz5VW_0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/NL-skz5VW_0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/NL-skz5VW_0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/NL-skz5VW_0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/NL-skz5VW_0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - StarkNet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #42 | Rango Exchange cross-chain DEX and Bridge
+          aggregator"
+        description: Rango Exchange is a cross-chain DEX and bridge aggregator. They
+          have enabled interoperability between Starknet and other blockchains
+          like Cosmos-based, Solana, UTXOs, EVMs.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT18M16S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/communitycall-42-rango-exchange-multi-chain-dex-aggregator-youtube.jpg
 category: community-calls
 topic:
