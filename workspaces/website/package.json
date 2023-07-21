@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite-node ./src/dev-server -c vite-dev-server.config.ts",
     "build": "vite build -c vite.config.ts",
-    "preview": "yarn wrangler pages dev --compatibility-date=2023-07-17 --port 3000 ../../public",
-    "preview-remote": "yarn wrangler pages dev --compatibility-date=2023-07-17 --port 3000 ../../public --remote"
+    "preview": "yarn wrangler pages dev --compatibility-date=2023-07-17 --port 3000 dist/client",
+    "preview-remote": "yarn wrangler pages dev --compatibility-date=2023-07-17 --port 3000 dist/client --remote"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
