@@ -9,7 +9,8 @@ import {
   Tooltip as ChakraTooltip, TooltipProps,
   Icon,
   Flex,
-  Link
+  Link,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import { Tag } from "@ui/Tag/Tag";
 import { HiArrowUpRight } from "react-icons/hi2";
@@ -71,13 +72,16 @@ type ImageProps = {
 };
 
 const Image = ({ url, imageAlt, type }: ImageProps) => {
+  const size = useBreakpointValue({ base: '581', md: '430px', xl: '320px' });
+  const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${size},height=auto,format=auto${url}`;
+  const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const renderImage = () => {
     switch (type) {
       case "github":
         return "/assets/tutorials/github.png";
 
       case "youtube":
-        return url;
+        return isProd ? cloudflareImage : url;
       case "blog":
         return "/assets/tutorials/blog.png";
       default:
