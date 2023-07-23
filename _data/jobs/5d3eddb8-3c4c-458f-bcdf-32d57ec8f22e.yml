@@ -1,0 +1,27 @@
+id: 5d3eddb8-3c4c-458f-bcdf-32d57ec8f22e
+published_at: 2023-07-23T13:22:20.016Z
+status: active
+archive_after: 3
+contact:
+  name: Lucia Fiori
+  logo: /assets/argent.jpg
+  email: lucia.fiori1@gmail.com
+job:
+  title: Android Engineer
+  description: As Android Engineer, you will be crucial to our effort to build the
+    best mobile product in crypto and fintech. To do this you'll take ownership
+    of the entire development lifecycle, develop world-class UX, and quickly
+    ship features in an agile environment. All of this whilst working with
+    cutting-edge technology.
+  type: full_time
+  location: europe
+  required_experience: |-
+    1. Kotlin 
+    2. Strong computer science fundamentals
+    3. Reactive programming (Coroutines + Flow / RxJava)
+    4. Architecture design patterns
+    5. Network protocols and data persistence techniques
+    6. UI framework knowledge to deliver the best UX
+    7. 2-3 years of experience as an Android Engineer
+  how_to_apply: ""
+  apply_url: https://boards.eu.greenhouse.io/argent/jobs/4169158101?t=2f6f9d72teu
