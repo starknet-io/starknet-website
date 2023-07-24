@@ -1,5 +1,5 @@
 id: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
-title: Block explorers
+title: Block explorers & indexers
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -7,8 +7,8 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: block_explorers
-    title: Block explorers
-    description: Explore blocks, transactions, and other metrics of Starknet.
+    title: Block explorers & indexers
+    description: Explore blocks, indexers, and other metrics of Starknet.
   - type: card_list
     card_list_items:
       - title: Starkscan
@@ -30,3 +30,10 @@ blocks:
         website_url: https://voyager.online
         twitter: https://twitter.com/0xvoyageronline
         image: /assets/voyager.jpg
+    title: Block explorers
+    randomize: true
+  - type: card_list
+    randomize: true
+    title: Indexers
+    card_list_items:
+      - title: Apibara
