@@ -1,0 +1,85 @@
+id: 61e10a38-6094-4ca2-9f77-f6a2d169b793
+post_type: article
+title: "Paradex: Starknet’s first Appchain"
+published_date: 2023-07-19T11:45:39.572Z
+image: /assets/paradex-starknet2.png
+category: ecosystem
+topic:
+  - decentralization
+short_desc: "Paradex is launching on Starknet’s first Appchain. It will offer
+  its users institutional-grade liquidity, self-custody, decentralization and
+  transparency. This collaboration is a demonstration of the power of Starknet
+  to cater for the needs of apps that require high scale, low costs, and
+  adjusted specs, all while attaining decentralization and self-custody. "
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: "**Quantum leap in Starknet throughput is bringing a new cutting-edge
+          financial use case to the Starknet ecosystem**"
+      - type: markdown
+        body: >-
+          ## Can We Skip to the Good Part?
+
+
+          [Paradex](http://paradex.trade), a new crypto-derivatives exchange, is launching on Starknet’s first Appchain. Paradex will offer perpetual futures trading with deep liquidity, capital efficiency and performance while remaining transparent and self-custodial. Paradex was incubated by the team at [Paradigm](https://paradigm.co/), the largest institutional liquidity network in crypto.
+
+
+          This collaboration between StarkWare, inventors of STARK technology, and Paradex is a demonstration of the power of Starknet to cater for the needs of apps that require high scale, low costs, and custom specs, all while attaining decentralization and self-custody.  
+
+
+          ## How We Got Here 
+
+
+          Blockchain technology was invented with decentralization and security at its core, in order to tackle the disadvantages of traditional finance and its reliance on a third-party entity when handling assets. Notable events, such as the FTX crash in November 2022, underscored the essential need to provide users with self-custody, security and transparency.
+
+
+          ## STARK-Based Solutions
+
+
+          STARK technology aims to provide massive scaling on the one hand, while simultaneously retaining Ethereum's security and decentralization on the other. It has been used to process more than $1T, including [StarkEx](https://starkware.co/starkex/)-powered apps such as Sorare and dYdX. [Starknet](http://starknet.io), a STARK-based layer 2 Validity Rollup, has established one of the most creative and robust ecosystems in Web3. With the expanding variety of use cases on Starknet, it is only natural that some app developers would want to use Starknet for scaling, but they would like to customize it to their needs.
+
+
+          ## Leap of Chain: Introducing Paradex, Starknet’s First Appchain 
+
+
+          > “Paradex played a key role in being the first to adopt the new sequencer, a clear demonstration of our deep belief in the StarkNet team and its emerging ecosystem."
+
+          >
+
+          > “As we began evaluating blockchain scaling technologies that would enable Paradex’s ambitious vision, it became clear that we needed a solution that would not only deliver performance and scalability, but also control and customization. A private instance of Starknet, or Appchain, provides this in abundance.” 
+
+          >
+
+          > Nafaa Hendaoui,
+
+          >
+
+          > Head of product at Paradex 
+
+
+          As a derivative exchange, Paradex requires heavy computational capabilities to run complex business logic. It is determined to do so while establishing decentralization in order to ensure its users experience fair, transparent, and secure trading. 
+
+
+          STARK-based validity proofs provide integrity through math, with their power boosted by recent technological advances on Starknet, including the [major throughput improvement](https://starkware.co/resource/starknet-quantum-leap-major-throughput-improvements-are-here/) presented in Starknet Quantum Leap (V0.12.0), which made the creation of Starknet’s first Appchain possible. 
+
+
+          Starknet Appchains let applications that need significant scale to create their own highway, where they are the only user, free to adjust specs without being dependent on others’ protocols, and still benefit from Ethereum-grade security and decentralization. 
+
+
+          ### Building with Cairo. Fast. 
+
+
+          The business logic of the application was written in Cairo by the Paradex team. The speed with which the team mastered Cairo, and the ergonomic nature of the language, ensured its quick progress. Within just six months, the Paradex team was able to build a Starknet Appchain to fit its needs, and to take part in reaching Starknet’s V.0.12.0 impressive scale improvements before deploying it on Mainnet. 
+
+
+          The business logic, feature development, and addition of the Appchain were determined solely by the team who will operate it, which allows maximum optimization using new customized features as well as Starknet signature features, such as multi calls, that will allow optimization of perpetual trading on Paradex.
+
+
+          ## Join the Ride 
+
+
+          Welcoming Paradex Appchain to Starknet’s ecosystem is a sign of its innovation and strength in winning recognition from major actors in the crypto world. As new features, initiatives and possibilities unlock the ecosystem’s use on public Starknet, such as the recently introduced[ Starknet Stack](https://www.starknet.io/ar/posts/ecosystem/the-starknet-stacks-growth-spurt), it's getting clearer by the day that Starknet is in the midst of a remarkable growth spurt. 
+
+
+          While Paradex was the first to use Starknet Appchain, it opens a world of new opportunities for companies of varying sizes seeking scalability, security, and decentralization packed into one tailor-made product that suits each company’s special needs. Harnessing STARK technology to reach new heights and provide clients with improved performance is within your reach. Join us now.
