@@ -2,11 +2,6 @@ id: 4d65dc6b-ebf5-4172-b0c8-1f878c433f8e
 post_type: video
 title: STARK SPACES | Safe CEX
 published_date: 2022-12-13T13:55:12.064Z
-image: /assets/ts05.jpg
-category: stark-math
-topic:
-  - starknet
-short_desc: STARK SPACES | Safe CEX
 video:
   url: https://youtu.be/2G1gx4sbUmc
   id: 2G1gx4sbUmc
@@ -15,10 +10,8 @@ video:
     etag: vERuHP08kJyshLRwupHkE1N-quw
     id: 2G1gx4sbUmc
     snippet:
-      publishedAt: 2022-12-14T13:21:59Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES | Safe CEX
-      description: ""
+      publishedAt: 2022-12-14T13:21:59.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/2G1gx4sbUmc/default.jpg
@@ -40,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/2G1gx4sbUmc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES | Safe CEX
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES | Safe CEX
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT55M13S
       dimension: 2d
@@ -55,3 +50,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/ts05.jpg
+category: ecosystem
+topic:
+  - starknet
+short_desc: STARK SPACES | Safe CEX
