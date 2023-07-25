@@ -46,3 +46,6 @@ blocks:
           making it accessible through a GraphQL API
         image: /assets/checkpoint-logo.png
         website_url: https://checkpoint.fyi/#/
+      - description: Token Flow provides fully decoded and contextualised on-chain data,
+          including storage information and L1 / L2 messaging.
+        title: Token Flow
