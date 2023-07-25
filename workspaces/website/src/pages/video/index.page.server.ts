@@ -18,7 +18,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
         description: currentChapter?.description,
         image: imageUrl,
       } satisfies DocumentProps,
-      hasLayout: false,
+      hasLayout: true,
     },
   };
 }

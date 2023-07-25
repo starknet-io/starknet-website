@@ -71,7 +71,7 @@ export function VideoPlayerEmbed({
           currentChapter={currentChapter}
           onChapterSelect={setCurrentChapter}
           onToggleExpandPlaylist={onToggleExpandPlaylist}
-          timeDisplay={convertSecondsToMMSS(chapter.duration)}
+          timeDisplay={chapter.durationTime}
         />
       )}
     />
