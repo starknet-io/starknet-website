@@ -3,6 +3,7 @@ import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { ArrowLeftIcon } from "../components/Icons/ArrowLeftIcon";
 import { ArrowRightIcon } from "../components/Icons/ArrowRightIcon";
+import { Badge } from "@ui/Badge";
 import {
   Box,
   Flex,
@@ -16,6 +17,7 @@ import {
   Icon,
   IconButton,
   Wrap,
+  HStack,
   useDisclosure
 } from "@chakra-ui/react";
 import { slugify } from "@starknet-io/cms-utils/src/index";
@@ -130,6 +132,11 @@ const AmbassadorsList = (props: RootProps) => {
                 <Heading variant="h4" color="heading-navy-fg">{selectedMember?.full_name}</Heading>
                 <Text variant="cardBody" color="columnlink-fg" mb="2">{selectedMember?.title}</Text>
                 <Text variant="cardBody" color="columnlink-fg">{selectedMember?.description}</Text>
+                <HStack mt="20px">
+                  <Badge variant="community_and_events">Content generator</Badge>
+                  <Badge variant="youtube">Event organizer</Badge>
+                  <Badge variant="stark_math">Event speaker</Badge>
+                </HStack>
                 <Wrap spacingX="24px" shouldWrapChildren mt='20px'>
                   {selectedMember?.website && (
                       <Link

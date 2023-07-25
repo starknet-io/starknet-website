@@ -24,7 +24,6 @@ export default function CMSPage({
   locale,
 }: CMSPageProps) {
   const date = data?.gitlog?.date;
-  console.log('data ', data)
   return (
     <Box>
       <PageLayout
@@ -84,7 +83,7 @@ export default function CMSPage({
           </Flex>
         }
         rightAside={
-          data.template === "content" ? (
+          (data.template === "content" && data.toc) ? (
             <TableOfContents headings={pageToTableOfContents(data)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
           ) : null
         }
