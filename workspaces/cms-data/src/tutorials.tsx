@@ -7,11 +7,6 @@ type Author = {
   readonly author_link?: string;
 }
 
-type Author = {
-  readonly author?: string;
-  readonly author_link?: string;
-}
-
 export type Tutorial = {
   readonly id?: string;
   readonly type: "youtube" | "blog" | "github";
@@ -30,12 +25,12 @@ export type Tutorial = {
 export const getTutorialById = async (
   id: string,
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ) => {
   return getFirst(
     ...[locale, defaultLocale].map(
       (value) => async () =>
-        getJSON("data/tutorials/" + value + "/" + id, event)
+        getJSON("data/tutorials/" + value + "/" + id, context)
     ),
     // async () => {
     //   const client = algoliasearch(

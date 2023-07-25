@@ -12,13 +12,13 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const post = await getPostBySlug(
     pageContext.routeParams.slug,
     locale,
-    pageContext.event
+    pageContext.context
   )
 
   const pageProps: Props = {
     post ,
-    categories: await getCategories(locale, pageContext.event),
-    topics: await getTopics(locale, pageContext.event),
+    categories: await getCategories(locale, pageContext.context),
+    topics: await getTopics(locale, pageContext.context),
     params: {
       locale,
       slug: pageContext.routeParams!.slug!,

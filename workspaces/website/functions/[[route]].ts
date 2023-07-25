@@ -1,52 +1,50 @@
-import { apiRouter, corsify, preflight } from "../api";
-import { handleStaticAssets } from "./static-assets";
+import { apiRouter, corsify, preflight } from "../src/api";
 import { renderPage } from "vite-plugin-ssr/server";
 import { IRequest, Router } from "itty-router";
-import * as redirects from "../../redirects.json";
+import * as redirects from "../redirects.json";
 
 const router = Router();
 
-router.all("/api/*", apiRouter.handle);
+router.all("/api/*", (req, context) => apiRouter.handle(req, context.env));
 
 redirects.items.forEach(({ source, destination }) => {
   router.get(
     source,
-    (req: IRequest, event: WorkerGlobalScopeEventMap["fetch"]) => {
+    (req: IRequest, context: EventContext<{}, any, Record<string, unknown>>) => {
       let src = destination
 
       for (const [key, value] of Object.entries(req.params)) {
         src = src.replace(new RegExp(`:${key}\\+?`), value)
       }
 
-      return Response.redirect(new URL(src, event.request.url), 301);
+      return Response.redirect(new URL(src, req.url), 301);
     }
   );
 });
 
 async function ittyAssetshandler(
   req: IRequest,
-  event: WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ) {
-  return await handleStaticAssets(event);
+  return context.env.ASSETS.fetch(req);
 }
 
-router.get("/*.txt", ittyAssetshandler);
 router.get("/*.png", ittyAssetshandler);
 router.get("/*.svg", ittyAssetshandler);
 router.get("/*.ico", ittyAssetshandler);
 router.get("/assets/*", ittyAssetshandler);
 
 router.all("/data/*", preflight);
-router.get("/data/*", async (req, event) => {
-  return corsify(await handleStaticAssets(event));
+router.get("/data/*", async (req, context: EventContext<{}, any, Record<string, unknown>>) => {
+  return corsify(await context.env.ASSETS.fetch(req));
 });
 
-router.all("*", async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
-  const userAgent = event.request.headers.get("User-Agent")!;
+router.all("*", async (req, context: EventContext<{}, any, Record<string, unknown>>) => {
+  const userAgent = req.headers.get("User-Agent")!;
 
   const pageContextInit = {
-    event,
-    urlOriginal: event.request.url,
+    context,
+    urlOriginal: req.url,
     fetch,
     userAgent,
   };
@@ -55,7 +53,7 @@ router.all("*", async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
 
   if (pageContext.redirectTo) {
     return Response.redirect(
-      new URL(pageContext.redirectTo, event.request.url),
+      new URL(pageContext.redirectTo, req.url),
       301
     );
   } else if (pageContext.httpResponse != null) {
@@ -65,14 +63,13 @@ router.all("*", async (req, event: WorkerGlobalScopeEventMap["fetch"]) => {
     });
   }
 
-  return await handleStaticAssets(event);
+  return context.env.ASSETS.fetch(req);
 });
 
-addEventListener("fetch", async (event: WorkerGlobalScopeEventMap["fetch"]) => {
-  event.respondWith(
-    router.handle(event.request, event).catch((err) => {
-      console.error(err);
-      return new Response("Internal Error", { status: 500 });
-    })
-  );
-});
+
+export const onRequest: PagesFunction<{}> = async (context) => {
+  return router.handle(context.request, context).catch((err) => {
+    console.error(err);
+    return new Response("Internal Error", { status: 500 });
+  })
+}

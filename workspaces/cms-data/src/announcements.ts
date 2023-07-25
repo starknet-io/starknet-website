@@ -18,12 +18,12 @@ export interface AnnouncementsPost extends Meta, AnnouncementDetails {
 
 export async function getAnnouncementDetails(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<AnnouncementDetails[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-          (value) => async () => getJSON(`data/announcements-details/${value}`, event)
+          (value) => async () => getJSON(`data/announcements-details/${value}`, context)
       )
     );
   } catch (cause) {
@@ -33,12 +33,12 @@ export async function getAnnouncementDetails(
 export async function getAnnouncementsPostBySlug(
   locale: string,
   slug: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<AnnouncementsPost> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-          (value) => async () => getJSON(`data/announcements/${value}/${slug}`, event)
+          (value) => async () => getJSON(`data/announcements/${value}/${slug}`, context)
       )
     );
   } catch (cause) {
