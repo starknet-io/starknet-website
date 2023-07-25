@@ -6,7 +6,7 @@ import { PageContextServer } from "src/renderer/types";
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
   const { locale } = defaultPageContext;
-  const announcements = await getAnnouncementDetails(locale, pageContext.event);
+  const announcements = await getAnnouncementDetails(locale, pageContext.context);
 
   const pageProps: AnnouncementsPageProps = {
       announcements,

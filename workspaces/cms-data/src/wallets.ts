@@ -17,12 +17,12 @@ export interface Wallet {
 
 export async function getWallets(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<readonly Wallet[]> {
   try {
     const wallets = await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/wallets/" + value, event)
+        (value) => async () => getJSON("data/wallets/" + value, context)
       )
     );
 

@@ -10,9 +10,9 @@ import { getRoadmapSettings } from "@starknet-io/cms-data/src/settings/roadmap";
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
   const { locale } = defaultPageContext;
-  const roadmapPost = await getRoadmapPostBySlug(locale, pageContext.routeParams.slug, pageContext.event);
-  const roadmapVersions = await getRoadmapVersions(locale, pageContext.event);
-  const roadmapSettings = await getRoadmapSettings(locale, pageContext.event)
+  const roadmapPost = await getRoadmapPostBySlug(locale, pageContext.routeParams.slug, pageContext.context);
+  const roadmapVersions = await getRoadmapVersions(locale, pageContext.context);
+  const roadmapSettings = await getRoadmapSettings(locale, pageContext.context)
 
   console.log('roadmapVersions', roadmapVersions)
 
