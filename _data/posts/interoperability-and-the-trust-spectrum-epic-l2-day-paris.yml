@@ -1,7 +1,7 @@
 id: a852f9d3-cc6d-4967-a992-dcaef0b992ce
 post_type: video
 title: Interoperability and the trust spectrum | Epic L2 Day Paris
-published_date: 2023-07-25T11:28:55.350Z
+published_date: 2023-07-21T11:28:55.350Z
 video:
   url: https://www.youtube.com/watch?v=bE00Y5tAEeo
   id: bE00Y5tAEeo
@@ -10,16 +10,8 @@ video:
     etag: QPEFhxZi1Nsqmo_AOPFD_w4CRl4
     id: bE00Y5tAEeo
     snippet:
-      publishedAt: 2023-07-21T13:58:14Z
-      channelId: UCL5-kafg__NCkPn2KNJlJMg
-      title: Interoperability and the trust spectrum (Liron Hayman, Starkware) | Epic
-        L2 Day Paris
-      description: >-
-        Watch a session by Liron Hayman (BD @ Starkware) at Epic L2 Day in
-        Paris. He shares his expertise on interoperability. 
-
-
-        #epicweb3 #epicl2day #starkware #starknet #lironhayman #ethereum #interoperability
+      publishedAt: 2023-07-21T13:58:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/bE00Y5tAEeo/default.jpg
@@ -41,10 +33,12 @@ video:
           url: https://i.ytimg.com/vi/bE00Y5tAEeo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: Epic Web3
-      categoryId: "28"
-      liveBroadcastContent: none
+      title: Interoperability and the trust spectrum (Liron Hayman, Starkware) | Epic
+        L2 Day Paris
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Interoperability and the trust spectrum (Liron Hayman, Starkware) | Epic
           L2 Day Paris
@@ -54,7 +48,13 @@ video:
 
 
           #epicweb3 #epicl2day #starkware #starknet #lironhayman #ethereum #interoperability
-      defaultAudioLanguage: en
+      description: >-
+        Watch a session by Liron Hayman (BD @ Starkware) at Epic L2 Day in
+        Paris. He shares his expertise on interoperability. 
+
+
+        #epicweb3 #epicl2day #starkware #starknet #lironhayman #ethereum #interoperability
+      channelId: UCL5-kafg__NCkPn2KNJlJMg
     contentDetails:
       duration: PT28M48S
       dimension: 2d
