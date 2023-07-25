@@ -53,7 +53,7 @@ blocks:
         subLabel:
           label: Helping token holders choose delegates
   - type: heading_container
-    heading_variant: h2
+    heading_variant: h3
     blocks: []
     heading: "Further Reading "
   - type: link_list
