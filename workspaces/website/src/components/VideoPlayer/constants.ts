@@ -4,56 +4,40 @@ export type Chapter = {
   thumbnail: string;
   description: string;
   videoId: string;
-  duration: number;
+  durationTime: string;
 };
 export const playlist: Chapter[] = [
   {
     id: "scaling-eth",
-    title: "Scaling Ethereum",
+    title: "How Starknet scales Ethereum",
     description: "Episode 1 explains how Starknet works at a high level",
     thumbnail: "/assets/video/video-thumbnail-placeholder.jpg",
-    videoId: "e137ccdba732ebfe87a792d9066730c3",
-    duration: 136,
-  },
-  {
-    id: "starknet",
-    title: "Starknet",
-    description: "Episode 2 explains how Starknet works at a high level",
-    thumbnail: "/assets/video/video-thumbnail-placeholder.jpg",
-    videoId: "89f18f763dc367c248ddb647bc93ade3",
-    duration: 134,
+    videoId: "abd99c9696f1862f828c6e18136d75e5",
+    durationTime: "02:42",
   },
   {
     id: "sequencer",
-    title: "The Sequencer",
-    description: "Episode 3 explains how Starknet works at a high level",
-    duration: 39,
+    title: "The Starknet Sequencer",
+    description: "Episode 2 explains about the Starknet Sequencer",
     thumbnail: "/assets/video/video-thumbnail-placeholder.jpg",
-    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
+    videoId: "7ca4a89a8031a1737e4632ec498afb55",
+    durationTime: "02:24",
   },
   {
     id: "prover",
-    title: "The Prover",
-    description: "Episode 4 explains how Starknet works at a high level",
-    duration: 39,
+    title: "The Starknet Prover",
+    description: "Episode 3 explains how the Starknet Prover works",
     thumbnail: "/assets/video/video-thumbnail-placeholder.jpg",
-    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
+    videoId: "b66a934468bf72606e60abd7d475acf3",
+    durationTime: "02:26",
   },
   {
     id: "eth-settlement",
-    title: "Ethereum settlement",
-    description: "Episode 5 explains how Starknet works at a high level",
-    duration: 39,
+    title: "Secure settlement on Ethereum",
+    description: "Episode 5 explains about how to secure settlement on Ethereum",
     thumbnail: "/assets/video/video-thumbnail-placeholder.jpg",
-    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
-  },
-  {
-    id: "builders",
-    title: "Builders",
-    description: "Episode 6 explains how Starknet works at a high level",
-    duration: 39,
-    thumbnail: "/assets/video/video-thumbnail-placeholder.jpg",
-    videoId: "daac0b3cd34e7345ab5b0cac7afa4446",
+    videoId: "af654c93367a0d4eae7ea90252ac342e",
+    durationTime: "03:28",
   },
 ];
 
