@@ -18,8 +18,6 @@ blocks:
     blocks:
       - type: markdown
         body: >-
-          
-
           ## TL;DR
 
 
@@ -141,9 +139,13 @@ blocks:
           | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                   | Andrew Milson | In development     |
 
 
+
+
+          * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
+
           * Indexers: [Apibara](https://www.apibara.com/), [Checkpoint](https://checkpoint.fyi/#/), [TokenFlow](https://tokenflow.live/)
 
-          * API services: [Alchemy](https://www.alchemy.com/starknet), [Infura](https://www.infura.io/networks/ethereum/starknet)
+          * API services: [Alchemy](https://www.alchemy.com/starknet), [Infura](https://www.infura.io/networks/ethereum/starknet), [Blast API](https://blastapi.io/), [Lava](https://www.lavanet.xyz/), and [Chainstack](https://chainstack.com/build-better-with-starknet/)
 
           * Bridges: [LayerSwap](https://www.layerswap.io/), [Orbiter](https://www.orbiter.finance/), [StarkGate](https://starkgate.starknet.io/)
 
@@ -152,6 +154,11 @@ blocks:
           * Wallets: [Argent](https://www.argent.xyz/argent-x/), [Braavos](https://braavos.app/), [Cartridge](https://cartridge.gg/) and [Metamask’s Snap](https://metamask.io/snaps/) (coming Sep 2023)
 
           * Domain-specific application development framework: [Dojo](https://dojoengine.org/) (gaming)
+
+          * Oracles: [Pragma](https://www.pragmaoracle.com/) and [RedStone ](https://redstone.finance/)
+
+
+          ###  
 
 
           ### Expressiveness

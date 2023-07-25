@@ -39,6 +39,10 @@ blocks:
       - website_url: http://www.trailofbits.com
         image: /assets/trail-of-bits-logo.png
         title: Trail of Bits
+        description: Since 2012, Trail of Bits has helped secure some of the world’s
+          most targeted organizations and products, combining high-end security
+          research, with a real-world attacker mentality to reduce risk and
+          fortify code.
       - title: Ginger Security
         image: /assets/ginger-security-logo.png
         website_url: https://gingersec.xyz/

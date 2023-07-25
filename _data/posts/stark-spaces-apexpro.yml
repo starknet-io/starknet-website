@@ -2,11 +2,6 @@ id: 16e58112-4f0e-4190-8207-b6e45294c508
 post_type: video
 title: STARK SPACES | ApeXPro
 published_date: 2022-11-17T13:53:02.656Z
-image: /assets/ts03.jpg
-category: stark-math
-topic:
-  - starknet
-short_desc: STARK SPACES | ApeXPro
 video:
   url: https://youtu.be/W2Gz8zd6uUM
   id: W2Gz8zd6uUM
@@ -15,10 +10,8 @@ video:
     etag: UzuvrSiYjyYpguVqb3x9AtrGQWc
     id: W2Gz8zd6uUM
     snippet:
-      publishedAt: 2022-12-13T17:05:56Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES | ApeXPro
-      description: ""
+      publishedAt: 2022-12-13T17:05:56.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/W2Gz8zd6uUM/default.jpg
@@ -40,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/W2Gz8zd6uUM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES | ApeXPro
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES | ApeXPro
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT24M37S
       dimension: 2d
@@ -55,3 +50,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/ts03.jpg
+category: ecosystem
+topic:
+  - starknet
+short_desc: STARK SPACES | ApeXPro

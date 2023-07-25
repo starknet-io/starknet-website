@@ -1,0 +1,156 @@
+id: cbc85861-5340-4036-b2ab-cf4aa29d8b95
+post_type: article
+title: "Native Account Abstraction: Opening Blockchain to New Possibilities "
+published_date: 2023-07-25T12:47:55.978Z
+image: /assets/aa-post-shaked.jpg
+category: engineering
+topic:
+  - account-abstraction
+short_desc: Starknet's native Account Abstraction (AA) is revolutionizing
+  blockchain by offering user-friendly, flexible design, and boundless digital
+  innovation. Starknet eliminates barriers of past practices, offering a secure,
+  versatile ecosystem to developers. Experience the future of blockchain today!
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ##### Smooth UX, innovative technology, increased adoption
+
+
+          ##  
+
+
+          ##  
+
+
+          ## **TL;DR** 
+
+
+          * Blockchain’s journey to the heart of the mainstream hit a wall: security and UX limits created a barrier to introducing blockchain to a wider audience of Web 2 users. 
+
+          * The solution? Account Abstraction (AA). It is the software layer that’s revolutionizing the blockchain landscape by allowing accounts to have flexible design and adjustable deterministic behavior.
+
+          * AA is available on Ethereum and Starknet but implemented differently. Starknet has **native** AA, which means all accounts are smart accounts. Ethereum has **ERC-4337**, which adds AA without omitting the legacy of EOAs. The benefits of AA will be considerably diminished in any environment in which EOAs continue to prosper, if only because apps will have to continue to cater to EOAs.
+
+
+          ## **The Wall of EOAs** 
+
+
+          The Externally Owned Account (EOA) is Ethereum’s simple solution for creating an on-chain user representation that allows users to interact with the blockchain and own assets by linking it to the account’s assets. 
+
+
+          While simpler, EOAs’ behavior is pre-determined by the protocol on which they are deployed and therefore lack flexibility in adjusting them to the different needs of users. This often leads to poor UX and creates a barrier to mass adoption. The biggest issue is determined in the protocol: EOAs are controlled by a pair of private and public keys. The main Three problems of having to use pair of keys to initiate transactions are: 
+
+
+          1. Poor UX - the requirement to keep the private key in a secure, discreet place is not intuitive for the key holder who is used to using smarter, more modern methods like a 6-digit password or face ID; making initiating transactions more challenging.
+
+          2. Nothing but a key - Knowledge of the private key's details is not just the only way to initiate transactions, but also the only way in which the protocol identifies the account's owner. By that, a security hazard is created - in which if your key is compromised, you are indistinguishable from the entity who stole it. 
+
+          3. The protocol is the master - It is clear from the examples above that in the realm of EOAs the Ethereum protocol, and not the developer, is the one to determine which transaction is considered valid. 
+
+
+          The complications caused by determining the account’s behavior as part of the chain’s protocol are found in most chains. 
+
+
+          ## **Breaking the Wall: Introducing Account Abstraction**
+
+
+          The issue caused by the protocol, as opposed to the user determining accounts’ behavior, exists in most chains. As early as 2015 Ethereum co-founder Vitalik Buterin discussed [these challenges](https://blog.ethereum.org/2015/07/05/on-abstraction). He describes Account Abstraction (AA) as the solution that represents a simpler way to handle accounts – reducing, or even ending reliance on private keys. What is more, AA creates a host of other benefits that will make Web3 user experience indistinguishable from Web2 and, as such ease the way to mass adoption.\
+
+          Over the years, two significant approaches to AA emerged, and both carry the same goal of empowering app developers to design their apps and creating a simpler way to handle accounts. 
+
+
+          ### **ERC-4337** 
+
+
+          As mentioned before, EOAs are an inseparable part of Ethereum, and their behavior is defined by the Ethereum protocol. In addition to EOAs, Ethereum also has contracts, which can contain user-defined code. In 2023, Ethereum introduced a protocol upgrade - ERC-4337 - in order to bridge the structural gap between EOAs and contracts, without introducing major protocol changes. ERC-4337’s main idea is to introduce a new role: The Bundler. The Bundler’s role is to collect user operations (think of them as meta-transactions that are collected in a specialized mempool), and send them to Ethereum from their own (Bundler-controlled) EOAs. In this way, the Bundler allows developers and users to deploy and interact with account contracts and gain the advantages of AA.
+
+
+          Introducing AA to Ethereum with ERC-4337 allows developers to create a more flexible behavior for contracts. However, Ethereum continues to maintain EOAs. For developers, the consequence is having to serve both EOAs and ERC-4337. In an ecosystem where EOAs are cheaper it is likely to assume that EOAs will remain dominant, and applications won’t be able to harvest the real value of AA across their entire user base.\
+
+          EVM chains that track or emulate Ethereum, including zkEVMs, will experience a similar evolution: EOAs will remain the dominant form of accounts, negating the benefits of AA and losing the advantage of not having to work around EOAs legacy.
+
+
+          ### **Starknet’s Native Account Abstraction** 
+
+
+          By contrast, Starknet has AA at its core: All accounts are smart accounts - there are no EOAs. It’s a jump to a world where every account is smart. All infrastructure, including wallets and block explorers, are designed and built for AA. This is unique across L1 and L2 chains, making Starknet the first smart ecosystem: Builders can build their apps and tools knowing that AA applies to *all* accounts, and save the need to work and service non-AA accounts. Builders can design their app to benefit from the full breadth of opportunities presented by AA, knowing that smart accounts are the only means users have of interacting with the application.
+
+
+          Native AA on Starknet eliminates the additional complexities associated with introducing a Bundler, as done with ERC-4337. There is no need to adapt infrastructure and tools to interact with it. This simplification is achieved by designating the Sequencer to fulfill the Bundler's role.
+
+
+          ## The Three Pillars of Account Abstraction
+
+
+          There are three main components of AA. Each component serves a unique purpose to enhance the overall user experience: Signature Abstraction, Fee Abstraction, and Nonce Abstraction.
+
+
+          ### Signature Abstraction 
+
+
+          Signature Abstraction designs the flow of transactions. The power to define a valid transaction is in the hands of the architect - the account designer, be it the developer or the user. The main benefit here is the freedom to customize account permissions, as well as the potential usage of Smartphones to control accounts.
+
+
+          ### Fee Abstraction
+
+
+          Fee Abstraction allows different tokens to be used as payment for transaction fees, without being restricted to the network's native token. For instance, a user could use USDC to pay the transaction fee, bypassing the need to first convert USDC to the native token, thereby saving on exchange fees and time.
+
+
+          ### Nonce Abstraction 
+
+
+          Nonce Abstraction ensures comfort and convenience for the user. Traditional sequential nonce solutions have several UX drawbacks. For example, it restricts users from sending multiple independent transactions simultaneously due to its enforcement of complete ordering. Nonce Abstraction provides the required flexibility by allowing customization of the account's replay-protection mechanism.
+
+
+          Rollups, such as Starknet, can be thought of as blockchain operating systems. When designing a new operating system things work best without inheriting the challenges of previous operating systems. It’s the equivalent of building a new house as opposed to renovating an old one. When designing a new house, critical infrastructures such as electrical wiring, plumbing, and a heating system, should be incorporated during the blueprint stage. There is little sense in building a new house with mere adjustments and workarounds for what is already known to be the required standard in the future. The same principle applies to AA. Designing Starknet was done looking forward, towards the future and what we believe will become the standard way to build apps. With AA as the default, and in fact, the only option, Starknet provides the seamless, efficient, and user-friendly experience we’d desire to have in the future. 
+
+
+          Looking at the features enabled by the implementation of AA, it is clear that the benefit is twofold - the first for users as they benefit from better UX, and another one for developers, as they don’t need to be burdened with EOAs legacy. 
+
+
+          ## **Under Construction - Account Abstraction Implementations on Starknet** 
+
+
+          Starknet's smart ecosystem is already providing a fertile ground for growth, much like how the introduction of software revolutionized the cash economy. Initially, software digitized records and streamlined processes, and it has since evolved into a wider set of systems that manage transactions, track finances, and automate financial processes. Similarly, Starknet’s smart ecosystem empowers developers with the ability to interact seamlessly with various apps and providers. This not only enhances user experiences, making them richer and more dynamic but also promotes a collaborative and innovative environment, fostering an ever-growing, fertile ground for development.
+
+
+          It is evident from the following exciting app advancements made using signature abstraction on Starknet’s native smart accounts: 
+
+
+          ### **Braavos**
+
+
+          Using Starknet native smart account, [the Braavos](https://braavos.app/) team created [a smart wallet that enables a Web-2-like experience,](https://braavos.app/hardware-signer-innovative-security-feature-for-crypto-wallets/) allowing you to use your mobile phone’s biometric identity feature to access your wallet. This is exciting as the differences between the cryptography used in most blockchains versus that of mobiles, usually result in extremely costly signature verification, and might in the future enable signing off transactions using mobile phones, while maintaining a high level of security. 
+
+
+          ![Braavos - AA on Starknet](/assets/aa-braavos-.png "Braavos - AA on Starknet")
+
+
+          ### **Argent** 
+
+
+          Another innovation brought up by using signature abstraction, is [ArgentX](https://argentx-wallet.com/)’s guardian service, [Argent-Shield](https://support.argent.xyz/hc/en-us/articles/9950649206685-Argent-Shield-on-Argent-X). This service allows users to add another layer of protection for their account by having Argent function as a guardian, who will only approve your transactions if it was confirmed via mail. This is another 2-factor authentication mechanism that most of us are familiar with from many non-blockchain apps. 
+
+
+          ![Argant - AA on Starknet](/assets/aa-argent-.png "Argant - AA on Starknet")
+
+
+          ### **Visa** 
+
+
+          STARK proofs were invented to tackle Ethereum's scalability challenge, aiming to achieve the same TPS capacity as Visa. For that reason, Visa's decision to conduct its much-discussed exploration of ['auto payments for self-custodial wallets'](https://usa.visa.com/solutions/crypto/auto-payments-for-self-custodial-wallets.html) on Starknet is a significant milestone. It demonstrates their recognition of our cutting-edge technology and innovative smart ecosystem. 
+
+
+          ![Visa - AA on Starknet](/assets/aa-visa-.png "Visa - AA on Starknet")
+
+
+          ## **Conclusions** 
+
+
+          Starknet’s ecosystem is growing by the day, with more and more builders who utilize Starknet’s native AA to design their apps in the most flexible way possible. The opportunities for integration with other providers and the ability to offer users more sophisticated and personalized experiences mirror the boundless potential of a digital economy. 
+
+
+          Developers are not required to work out solutions for past practices. Instead, they can build their app in an environment designed for their future needs, built from the ground up.
