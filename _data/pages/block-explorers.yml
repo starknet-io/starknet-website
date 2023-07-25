@@ -44,7 +44,7 @@ blocks:
       - title: Checkpoint
         description: Checkpoint is a library for indexing data from Starknet events and
           making it accessible through a GraphQL API
-        image: /assets/checkpoint-logo.png
+        image: /assets/checkpoint-real-logo-blue.png
         website_url: https://checkpoint.fyi/#/
       - description: Token Flow provides fully decoded and contextualised on-chain data,
           including storage information and L1 / L2 messaging.
