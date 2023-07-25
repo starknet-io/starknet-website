@@ -49,3 +49,5 @@ blocks:
       - description: Token Flow provides fully decoded and contextualised on-chain data,
           including storage information and L1 / L2 messaging.
         title: Token Flow
+        image: /assets/token-flow-logo.jpg
+        website_url: https://tokenflow.live/
