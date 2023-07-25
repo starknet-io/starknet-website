@@ -1,5 +1,5 @@
 id: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
-title: Block explorers
+title: Block explorers & indexers
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -7,8 +7,8 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: block_explorers
-    title: Block explorers
-    description: Explore blocks, transactions, and other metrics of Starknet.
+    title: Block explorers & indexers
+    description: Explore blocks, indexers, and other metrics of Starknet transactions.
   - type: card_list
     card_list_items:
       - title: Starkscan
@@ -30,3 +30,24 @@ blocks:
         website_url: https://voyager.online
         twitter: https://twitter.com/0xvoyageronline
         image: /assets/voyager.jpg
+    title: Block explorers
+    randomize: true
+  - type: card_list
+    randomize: true
+    title: Indexers
+    card_list_items:
+      - title: Apibara
+        image: /assets/apibara-logo.png
+        website_url: https://www.apibara.com/
+        description: Apibara is an open-source data platform connecting Starknet to Web2
+          services
+      - title: Checkpoint
+        description: Checkpoint is a library for indexing data from Starknet events and
+          making it accessible through a GraphQL API
+        image: /assets/checkpoint-logo.png
+        website_url: https://checkpoint.fyi/#/
+      - description: Token Flow provides fully decoded and contextualised on-chain data,
+          including storage information and L1 / L2 messaging.
+        title: Token Flow
+        image: /assets/token-flow-logo.jpg
+        website_url: https://tokenflow.live/
