@@ -38,3 +38,11 @@ blocks:
     card_list_items:
       - title: Apibara
         image: /assets/apibara-logo.png
+        website_url: https://www.apibara.com/
+        description: Apibara is an open-source data platform connecting Starknet to Web2
+          services
+      - title: Checkpoint
+        description: Checkpoint is a library for indexing data from Starknet events and
+          making it accessible through a GraphQL API
+        image: /assets/checkpoint-logo.png
+        website_url: https://checkpoint.fyi/#/
