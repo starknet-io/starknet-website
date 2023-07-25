@@ -69,5 +69,5 @@ jobs:
           workingDirectory: workspaces/website
           wranglerVersion: '3'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}
+          branch: ${{ github.ref_name == 'thecotne-patch-3' && 'main' || github.ref_name }}
 
