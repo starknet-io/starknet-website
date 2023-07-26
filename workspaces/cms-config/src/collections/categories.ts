@@ -24,5 +24,21 @@ export const categoriesCollectionConfig = {
       widget: "string",
       crowdin: true
     },
+    {
+      name: "show_custom_featured_post",
+      label: "Show custom featured post",
+      widget: "boolean",
+      default: true,
+    },
+    {
+      name: "custom_featured_post",
+      label: "Custom featured post",
+      widget: "relation",
+      collection: "posts",
+      search_fields: ["title"],
+      value_field: "id",
+      display_fields: ["title"],
+      options_length: 300
+    },
   ],
 } satisfies CmsCollection;
