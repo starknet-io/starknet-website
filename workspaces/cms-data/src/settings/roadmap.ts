@@ -10,11 +10,11 @@ export interface Roadmap {
   readonly roadmap_post_ps?: string;
 }
 
-export async function getRoadmapSettings(locale: string, event: null | WorkerGlobalScopeEventMap["fetch"]): Promise<Roadmap> {
+export async function getRoadmapSettings(locale: string, context: EventContext<{}, any, Record<string, unknown>>): Promise<Roadmap> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/roadmap/" + value, event)
+        (value) => async () => getJSON("data/roadmap/" + value, context)
       )
     );
   } catch (cause) {

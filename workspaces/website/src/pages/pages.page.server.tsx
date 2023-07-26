@@ -7,7 +7,7 @@ import { Props } from "src/pages/PagePage";
 export async function onBeforeRender(pageContext: PageContextServer) {
   const locale = pageContext.locale ?? defaultLocale;
   const slug = pageContext.routeParams["*"] || "home";
-  const data = await getPageBySlug(slug, locale, pageContext.event);
+  const data = await getPageBySlug(slug, locale, pageContext.context);
 
   return {
     pageContext: {

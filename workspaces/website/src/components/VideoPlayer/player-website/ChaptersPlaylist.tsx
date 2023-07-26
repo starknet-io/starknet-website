@@ -1,7 +1,6 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Chapter } from "../constants";
-import { convertSecondsToMMSS } from "../player-core/control-bar/utils";
 
 type ChaptersPlaylistProps = {
   height: number;
@@ -103,7 +102,7 @@ export default function ChaptersPlaylist({
                   color: isActive ? "heading-navy-fg" : "",
                 }}
               >
-                {convertSecondsToMMSS(chapter.duration)}
+                {chapter.durationTime}
               </Box>
             </Box>
           </Box>

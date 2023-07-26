@@ -10,9 +10,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const { locale } = defaultPageContext;
 
   const pageProps: Props = {
-    categories: await getCategories(locale, pageContext.event),
-    topics: await getTopics(locale, pageContext.event),
-    roadmapVersions: await getRoadmapVersions(locale, pageContext.event)
+    categories: await getCategories(locale, pageContext.context),
+    topics: await getTopics(locale, pageContext.context),
+    roadmapVersions: await getRoadmapVersions(locale, pageContext.context)
   };
 
   return {

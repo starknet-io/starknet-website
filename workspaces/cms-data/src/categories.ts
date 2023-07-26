@@ -11,12 +11,12 @@ export interface Category {
 
 export async function getCategories(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<readonly Category[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/categories/" + value, event)
+        (value) => async () => getJSON("data/categories/" + value, context)
       )
     );
   } catch (cause) {
