@@ -28,6 +28,10 @@ blocks:
         website: https://www.starknet.io/en
         twitter: https://www.starknet.io/en
         discord: https://www.starknet.io/en
+        tags:
+          - tag: Content generator
+          - tag: Event organizer
+          - tag: Event speaker
       - full_name: Mattia Amador 2
         title: Co-founder and investor at Acme Corp.
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -40,6 +44,8 @@ blocks:
           adipiscing elit, sed do eiusmod tempor consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore.
         image: /assets/AmbassadorMemberExample.png
+        tags:
+          - tag: Content generator
       - full_name: Mattia Amador 3
         title: Co-founder and investor at Acme Corp.
         description: Desc
