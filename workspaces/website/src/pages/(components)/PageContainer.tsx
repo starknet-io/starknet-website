@@ -14,7 +14,7 @@ export const PageContainer = ({ children, alerts }: Props) => {
 
   let result = useMemo(() => {
     if (typeof window !== "undefined") {
-      let result = alerts.find((obj) => obj.page_url?.includes(pathname));
+      let result = alerts?.find((obj) => obj.page_url?.includes(pathname));
       if (!window.localStorage.getItem(`uuid-${result?.id}`)) {
         return result;
       }

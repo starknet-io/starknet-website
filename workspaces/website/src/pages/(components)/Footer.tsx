@@ -39,7 +39,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
         justifyContent="flex-start"
         direction={{ base: "column", md: "row" }}
       >
-        {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => (
+        {mainMenu?.items?.map((mainMenuItem, mainMenuItemIndex) => (
           <FooterComponent.Column
             key={mainMenuItemIndex}
             title={mainMenuItem.title}

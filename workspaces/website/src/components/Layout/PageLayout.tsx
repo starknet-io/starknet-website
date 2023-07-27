@@ -18,6 +18,7 @@ type Props = {
   sectionHeaderDescription?: string | undefined;
   sectionHeaderBottomContent?: React.ReactNode;
   maxW?: string;
+  contentMaxW?: string;
 };
 
 export const PageLayout = (props: Props) => {
@@ -39,6 +40,8 @@ export const PageLayout = (props: Props) => {
         flex="1"
         pt={{ base: 2, lg: 10 }}
         // bg="yellow"
+        maxWidth={props.contentMaxW ? props.contentMaxW : ""}
+        margin={props.contentMaxW ? "0 auto" : "0"}
       >
         {props.leftAside && (
           <Box

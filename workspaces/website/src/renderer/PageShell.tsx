@@ -59,12 +59,12 @@ function PageLayout(props: Props) {
             ALGOLIA_SEARCH_API_KEY: import.meta.env
               .VITE_ALGOLIA_SEARCH_API_KEY!,
           }}
-          searchSEO={pageContext.seo.search}
-          languageCenterSeo={pageContext.seo.language}
+          searchSEO={pageContext.seo?.search}
+          languageCenterSeo={pageContext.seo?.language}
         />
         {children}
       </PageContainer>
-      <Footer mainMenu={pageContext.mainMenu} seo={pageContext.seo.footer} />
+      <Footer mainMenu={pageContext.mainMenu} seo={pageContext.seo?.footer} />
     </>
   );
 }

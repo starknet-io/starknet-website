@@ -46,7 +46,7 @@ export default function Navbar({
           </div>
         }
         seo={languageCenterSeo}
-        desktopNavItems={mainMenu.items.map(
+        desktopNavItems={mainMenu?.items?.map(
           (mainMenuItem, mainMenuItemIndex) => (
             <MenuItemWithDropdown
               key={`${mainMenuItemIndex}-${pathname}`}
@@ -137,7 +137,7 @@ export default function Navbar({
         )}
         mobileNavItems={
           <NavAccordian.Root>
-            {mainMenu.items.map((mainMenuItem, mainMenuItemIndex) => {
+            {mainMenu?.items?.map((mainMenuItem, mainMenuItemIndex) => {
               return (
                 <NavAccordian.Item key={mainMenuItemIndex}>
                   <NavAccordian.Button title={mainMenuItem.title} />
