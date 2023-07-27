@@ -26,10 +26,31 @@ export const pagesCollectionConfig = {
       crowdin: true,
     },
     {
+      name: "show_title",
+      label: "Show title",
+      widget: "boolean"
+    },
+    {
       name: "template",
       widget: "select",
-      options: ["landing", "content"],
+      options: ["landing", "content", "narrow content"],
       default: "content",
+    },
+    {
+      name: "toc",
+      label: "Show table of contents",
+      hint: "Applies only for the 'content' template type",
+      widget: "boolean",
+      default: true,
+      required: false
+    },
+    {
+      name: "tocCustomTitle",
+      label: "Custom Table of contents title",
+      hint: "If empty, default 'On this page' title will be used",
+      widget: "string",
+      required: false,
+      crowdin: true
     },
     {
       name: "parent_page",
