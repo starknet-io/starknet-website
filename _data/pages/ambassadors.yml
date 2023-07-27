@@ -1,9 +1,58 @@
 id: 5ecdf9cf-d433-478a-a280-07e0f860534f
-title: Ambassadors
+title: Ambassadors Program
 show_title: true
 template: narrow content
 toc: false
+parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
 blocks:
+  - type: page_header
+    title: Ambassadors Program
+  - type: markdown
+    body: >-
+      The Starknet Foundation Ambassador Program is a unique initiative designed
+      with a mission to decentralize and amplify the knowledge of Starknet on a
+      global scale. 
+
+
+      The objective of this program is to identify and engage with exceptional Starknet community members worldwide who are poised to bring about a significant transformation in the blockchain ecosystem.
+
+
+      The ambassador program revolves around four core attributes:
+
+
+      **Organizing Events -** The ambassadors are encouraged to initiate, coordinate, and execute impactful events that can boost awareness about Starknet and foster community engagement.
+
+
+      **Speaking at Events -** Ambassadors can represent Starknet at local and international events, forums, and conferences, discussing the latest updates, breakthroughs, and possibilities that Starknet offers.
+
+
+      **Generating Content** **\-** Ambassadors play a crucial role in creating engaging content across various platforms - blogs, podcasts, videos, and social media - to ensure Starknet’s vision and advancements reach a wider audience.
+
+
+      **Grant Disbursement** **\-** Starknet ambassadors are entrusted with the responsibility of identifying and granting funds to promising, upcoming developers who are striving to make a difference in the decentralized world with their innovations.
+  - type: markdown
+    body: >-
+      The onboarding committee has assigned several individuals to commence this
+      journey as founding ambassadors. Each ambassador will be granted a tenure
+      of three months, which is extendable based on their contribution and
+      engagement. 
+
+
+      Join this exciting endeavor, and let’s redefine the future with Starknet!
   - type: ambassadors_list
+    title: Meet the Ambassadors
+    ambassador:
+      - full_name: Giwook Han
+        title: CTO of Door Labs
+        description: Giwook Han is the CTO of Door Labs. His dedication lies in
+          developing on Starknet. His primary objective is to expand the reach
+          and influence of Starknet, particularly across Asia.
+        image: /assets/4b94fe5d-ed18-4ea7-81db-7aa5debf0785_1_105_c-giwook-han.jpeg
+        website: https://www.guiltygyoza.xyz/
+        twitter: https://twitter.com/hkw00011
+        discord: Giwook#5230
+        tags:
+          - tag: Event organizer
+          - tag: Event organizer
