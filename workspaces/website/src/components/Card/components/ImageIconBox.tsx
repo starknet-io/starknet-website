@@ -1,5 +1,6 @@
 import {
-  Box
+  Box,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import "../style.css";
 import {
@@ -105,6 +106,9 @@ export const ImageIconBox = ({
   title
 }: Props) => {
   let ComponentToRender;
+  const featuredImageSize = useBreakpointValue({ base: '430px', sm: '464px' });
+  const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${featuredImageSize},height=auto,format=auto${icon}`;
+  const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const iconProps: CardIconProps = {
     gradientColor1: colors[color]?.iconGradientColor1,
     gradientColor2: colors[color]?.iconGradientColor2,
@@ -112,7 +116,7 @@ export const ImageIconBox = ({
     borderRadius: variant === "dapp" ? "28.0494px" : "0px",
     imagePadding: variant === "large_card" ? "0px" : "40px 0 0 32px",
     communityCardPadding: {base: "0", md: "24px 0px 24px 36px"},
-    icon: icon ?? '',
+    icon: icon ? (isProd ? cloudflareImage : icon) : '',
     alt: title ?? ''
   }
   switch (icon) {
