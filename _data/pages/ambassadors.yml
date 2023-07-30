@@ -216,3 +216,16 @@ blocks:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
+        website: https://subvisual.com
+      - full_name: Tarrence
+        title: Guild Master
+        description: Tarrence is the Co-Founder of Cartridge, Core Contributor to Dojo,
+          Co-Creator of Dope Wars.  Bringing on-chain games and autonomous
+          worlds to life on top of Starknet.
+        image: /assets/tarrence-final-.png
+        website: https://github.com/tarrencev
+        twitter: https://twitter.com/tarrenceva
+        discord: tarrence | cartridge#4660
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
