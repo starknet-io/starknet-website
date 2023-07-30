@@ -82,3 +82,35 @@ blocks:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
+      - full_name: Peteris Erins
+        title: Founder at Yagi
+        description: Peteris is the Founder of Yagi, the Starknet Yield Aggregator. On
+          Twitter, he shares insights about how to use Cairo and lessons from
+          building Yagi on Starknet. He is an investor and advisor for several
+          crypto start-ups including Cartridge, Topology on Starknet.
+        website: https://www.yagi.fi
+        twitter: https://twitter.com/p_e
+        tags:
+          - tag: Content generator
+      - full_name: Louthing
+        title: Head of Growth at MatchboxDAO
+        description: Louthing is the Head of Growth at MatchboxDAO. He organizes
+          Starknet meetups and conferences within the French community. Louthing
+          is also an Ex-VC in one of the largest crypto VC in Europe.
+        twitter: https://twitter.com/LouthingE
+        discord: Louthing#3654
+        tags:
+          - tag: Event organizer
+      - full_name: Crypto Gurkha
+        title: Content Creator - Team Gurkha
+        description: Crypto Gurkha is a passionate Starknet enthusiast who's writing
+          threads. He is a YouTube creator of documentaries and interviews.
+          "Walk the Talk", the show that explores the ecosystem in captivating
+          locations. Crypto Gurkha also collaborates with Starknet projects,
+          planed meetups and an active community member.
+        website: https://www.youtube.com/@cryptogurkha2528
+        twitter: https://twitter.com/crypto_gurkha
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
