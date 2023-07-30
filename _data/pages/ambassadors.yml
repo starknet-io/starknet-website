@@ -191,3 +191,15 @@ blocks:
         discord: yamancan#0001
         tags:
           - tag: Event organizer
+      - full_name: Cheechyuan
+        title: Developer
+        description: Cheechyuan is a developer that likes to participate in hackathons
+          and try out new strange things. Cheechyuan also runs a Starknet
+          community in Malaysia. Cheechyuan currently work at Nethermind in the
+          team that builds Voyager the explorer.
+        image: /assets/chee-chyuan-final-ang.png
+        twitter: https://twitter.com/cheechyuanang
+        discord: cheechyuan.eth#1092
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
