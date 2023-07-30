@@ -49,7 +49,7 @@ blocks:
         description: Giwook Han is the CTO of Door Labs. His dedication lies in
           developing on Starknet. His primary objective is to expand the reach
           and influence of Starknet, particularly across Asia.
-        image: /assets/4b94fe5d-ed18-4ea7-81db-7aa5debf0785_1_105_c-giwook-han.jpeg
+        image: /assets/giwook-han-final-.png
         website: ""
         twitter: https://twitter.com/hkw00011
         discord: Giwook#5230
@@ -67,6 +67,7 @@ blocks:
         tags:
           - tag: Event speaker
           - tag: Content generator
+        image: /assets/guiltygyoza-final-.png
       - full_name: Briyan Cessac
         title: CEO & Co-founder of Screenshot Labs
         description: "As a Starknet ambassador, Briyan brings together with his team,
@@ -82,6 +83,7 @@ blocks:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
+        image: /assets/briyan-cessac-final-.png
       - full_name: Peteris Erins
         title: Founder at Yagi
         description: Peteris is the Founder of Yagi, the Starknet Yield Aggregator. On
@@ -92,6 +94,7 @@ blocks:
         twitter: https://twitter.com/p_e
         tags:
           - tag: Content generator
+        image: /assets/peteris-erins-final-.png
       - full_name: Louthing
         title: Head of Growth at MatchboxDAO
         description: Louthing is the Head of Growth at MatchboxDAO. He organizes
@@ -101,6 +104,7 @@ blocks:
         discord: Louthing#3654
         tags:
           - tag: Event organizer
+        image: /assets/louthing-final-.png
       - full_name: Crypto Gurkha
         title: Content Creator - Team Gurkha
         description: Crypto Gurkha is a passionate Starknet enthusiast who's writing
@@ -114,3 +118,4 @@ blocks:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
+        image: /assets/crypto-gurkha-final-.png
