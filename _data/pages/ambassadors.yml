@@ -156,3 +156,15 @@ blocks:
         discord: Lyskey#2396
         tags:
           - tag: Content generator
+      - full_name: Shramee
+        title: Founder at Least Imperfect Pte Ltd
+        description: Shramee is passionate about building impactful transparent systems.
+          A wave of systems with verifiable integrity will soon be solving the
+          biggest societal challenges. Shramee wants to play a prominent role in
+          bringing about this wave.
+        image: /assets/shramee-final-.png
+        website: https://shramee.me
+        twitter: https://twitter.com/shrameetweets
+        discord: Shramee#4595
+        tags:
+          - tag: Event speaker
