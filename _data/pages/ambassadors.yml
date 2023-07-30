@@ -203,3 +203,16 @@ blocks:
         tags:
           - tag: Event organizer
           - tag: Event speaker
+      - full_name: Davide Silva
+        title: Software engineer at Subvisual
+        description: Davide is a software engineer. A lifelong computer nerd and
+          dedicated metal enthusiast, he finds immense joy in learning and the
+          exciting world of Formula 1 racing. Actively exploring and
+          contributing to the ever-evolving web3 space.
+        image: /assets/davide-silva-final-.png
+        twitter: https://twitter.com/0xdavidesilva
+        discord: Davide Silva#5522
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
