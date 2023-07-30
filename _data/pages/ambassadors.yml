@@ -55,7 +55,7 @@ blocks:
         discord: Giwook#5230
         tags:
           - tag: Event organizer
-          - tag: Event organizer
+          - tag: Event speaker
       - full_name: Guiltygyoza
         title: Co-founder of Topology
         description: Guiltygyoza has Co-founded Topology to build deep on-chain worlds
@@ -168,3 +168,13 @@ blocks:
         discord: Shramee#4595
         tags:
           - tag: Event speaker
+      - full_name: Jonathan Lei
+        title: Co-founder & CTO at zkLend
+        description: Jonathan Lei is the creator and maintainer of starknet-rs and
+          starkli. Always re-writing stuff in Rust 🦀.
+        website: https://github.com/xJonathanLEI
+        twitter: https://twitter.com/xJonathanLEI
+        discord: xjonathanlei#6900
+        tags:
+          - tag: Event speaker
+        image: /assets/jonathan-lei-final-.png
