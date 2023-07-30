@@ -50,7 +50,7 @@ blocks:
           developing on Starknet. His primary objective is to expand the reach
           and influence of Starknet, particularly across Asia.
         image: /assets/4b94fe5d-ed18-4ea7-81db-7aa5debf0785_1_105_c-giwook-han.jpeg
-        website: https://www.guiltygyoza.xyz/
+        website: ""
         twitter: https://twitter.com/hkw00011
         discord: Giwook#5230
         tags:
@@ -61,3 +61,24 @@ blocks:
         description: Guiltygyoza has Co-founded Topology to build deep on-chain worlds
           for our children to express their pluralistic values and fulfill their
           true potential.
+        website: https://www.guiltygyoza.xyz/
+        twitter: https://twitter.com/guiltygyoza
+        discord: guiltygyoza#0357
+        tags:
+          - tag: Event speaker
+          - tag: Content generator
+      - full_name: Briyan Cessac
+        title: CEO & Co-founder of Screenshot Labs
+        description: "As a Starknet ambassador, Briyan brings together with his team,
+          years of experience observing and solving challenges faced by NFT
+          creators. Backed by top VC firms, his dedicated team is pioneering
+          innovative digital asset solutions. Committed to empowering creators
+          and democratizing digital asset ownership leveraging Starknet
+          technology. "
+        website: https://www.screenshot.co/
+        twitter: https://twitter.com/Briyan_Cessac
+        discord: Briyan#6291
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
