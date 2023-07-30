@@ -131,3 +131,16 @@ blocks:
           - tag: Content generator
           - tag: Event speaker
         image: /assets/trang-nguyen-final-.png
+      - full_name: Loaf
+        title: Contributor of BibliothecaDAO & Dojo
+        description: Loaf, a pioneering contributor at BibliothecaDAO and Dojo,
+          spearheaded the construction of the innovative Realms Autonomous
+          World. Esteemed crypto enthusiast and early adopter of StarkNet in
+          '21. Avid gamer, economist and staunch onchain maximalist.
+        website: https://bibliothecadao.xyz/
+        twitter: https://twitter.com/lordOfAFew
+        discord: lordOfAFew
+        tags:
+          - tag: Event speaker
+          - tag: Content generator
+        image: /assets/loaf-final-.png
