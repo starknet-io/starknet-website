@@ -178,3 +178,16 @@ blocks:
         tags:
           - tag: Event speaker
         image: /assets/jonathan-lei-final-.png
+      - full_name: Yaman can
+        title: Co-founder of buchain.org & incLabs
+        description: Yaman can is a T.A. at MIS493 Blockchain Lecture at Bogazici
+          University. He is the Co-founder of BU Blockchain Society - BUCHAIN
+          and incLabs. Building, researching, advising, and lecturing about web3
+          since 2020. Yaman can is focused on helping promising builders onboard
+          Starknet.
+        image: /assets/yaman-can-final-.png
+        website: https://www.linkedin.com/in/yaman-can/
+        twitter: https://twitter.com/yamancan_
+        discord: yamancan#0001
+        tags:
+          - tag: Event organizer
