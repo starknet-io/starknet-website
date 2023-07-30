@@ -119,3 +119,15 @@ blocks:
           - tag: Event speaker
           - tag: Content generator
         image: /assets/crypto-gurkha-final-.png
+      - full_name: Trang Nguyen
+        title: Engineer at Web3 Space
+        description: Trang Nguyen is an ex-material scientist. He is a learner in
+          everything - math, cryptography, security. Trang Nguyen is dedicated
+          to build STARKpilled communities and applications.
+        website: https://www.linkedin.com/in/nvtrang91/
+        twitter: https://twitter.com/trangnv_
+        discord: trangnv#2156
+        tags:
+          - tag: Content generator
+          - tag: Event speaker
+        image: /assets/trang-nguyen-final-.png
