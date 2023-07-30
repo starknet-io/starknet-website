@@ -144,3 +144,13 @@ blocks:
           - tag: Event speaker
           - tag: Content generator
         image: /assets/loaf-final-.png
+      - full_name: Starknet_OG
+        title: Content creator
+        description: Dedicated to Starknet since April 2022, Starknet_OG creates a
+          weekly content to raise awareness of Starknet ecosystem and foster
+          community understanding. Notably, Starknet_OG writes Twitter threads,
+          publish a weekly newsletter, and manage a Starknet community Discord.
+        image: /assets/starknet_og-final-.png
+        website: https://starknetdigger.notion.site/starknetdigger/Starknet_Digger-b038024fc9924bf98dd61e7074903645
+        twitter: https://twitter.com/Starknet_OG
+        discord: Lyskey#2396
