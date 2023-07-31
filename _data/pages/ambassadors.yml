@@ -229,3 +229,14 @@ blocks:
         tags:
           - tag: Event organizer
           - tag: Event speaker
+      - full_name: Sylve
+        title: Co-founder at briqNFT
+        description: "Sylve is building at briqNFT with wraitii. Ex-product manager at
+          Ledger. Governance Facilitator and self-proclaimed head shitposter at
+          Starknet Foundation. Vibes operator at Dojo. "
+        image: /assets/sylve-final-.png
+        website: https://briq.construction/
+        twitter: https://twitter.com/sylvechv/
+        discord: s0lness#6373
+        tags:
+          - tag: Event speaker
