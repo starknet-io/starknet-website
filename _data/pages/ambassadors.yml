@@ -254,3 +254,16 @@ blocks:
         twitter: https://twitter.com/0xNurstar
         tags:
           - tag: Content generator
+      - full_name: Abdel
+        title: Exploration lead at StarkWare
+        description: Abdel, StarkWare's Exploration Lead, honed his skills in Ethereum's
+          terrain. Now contributing to Starknet's journey, his essence blends
+          open-source, decentralization, and community collaboration, amplifying
+          the collective spirit of Starknet.
+        image: /assets/abdel-final-.png
+        website: https://github.com/abdelhamidbakhta
+        twitter: https://twitter.com/dimahledba
+        discord: Abdel | StarkWare#7447
+        tags:
+          - tag: Content generator
+          - tag: Event speaker
