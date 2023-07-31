@@ -52,7 +52,7 @@ blocks:
           custom_title: "Protostar "
           custom_external_link: https://github.com/software-mansion/protostar
         subLabel:
-          label: StarkNet smart contract development toolchain
+          label: Starknet smart contract development toolchain
       - link:
           custom_title: Hardhat-starknet
           custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
