@@ -240,3 +240,17 @@ blocks:
         discord: s0lness#6373
         tags:
           - tag: Event speaker
+      - full_name: Nurstar
+        title: Content Creator and Community Builder
+        description: 'Nurstar is  a Starknet lover and he curates a daily Recap about
+          the Starknet Ecosystem. Nurstar is a host at the "Stark Cafe" show
+          where he hosts projects and people building on Starknet. Nurstar is
+          the co-host of the "Hablando de Starknet" spanish-speaking show, and
+          the curator of the "Le Monde de Starknet" Weekly Recap for the
+          StarknetEco Community. Nurstar loves writing, learning languages and
+          gardening. '
+        image: /assets/nurstar-final-.png
+        website: http://nurstar.substack.com
+        twitter: https://twitter.com/0xNurstar
+        tags:
+          - tag: Content generator
