@@ -24,6 +24,20 @@ blocks:
           [StarkScan](https://starkscan.co/),
           [Voyager](https://voyager.online/txns),
           [ViewBlock](https://viewblock.io/starknet)."
+      - label: "What are Starknet Appchains? "
+        body: >-
+          Starknet Appchains are instances of Starknet that power a specific
+          application (or a host of applications). Setting up a Starknet
+          appchain can be done in several ways using [the Starknet
+          Stack](https://starkware.co/resource/the-starknet-stacks-growth-spurt/).\
+
+          \
+
+          Operating an app-specific Starknet appchain allows configuring the network’s block size, latency, data availability mode, fees, consensus mechanism, and more, according to the unique requirements of the application. Appchains also enable the implementation of unique features and logic that are not available on the public Starknet network.\
+
+          \
+
+          In addition to the adjusted configuration and unique features, appchains benefit from Starknet’s technology, including massive throughput, native Account Abstraction, and Ethereum level of security, as well as the tools and infrastructure that are part of the public network.
       - type: accordion_item
         label: I want to write my own contract on Starknet. Where do I start? Are there
           any available toolkits?
@@ -199,12 +213,10 @@ blocks:
           the native Starknet Token.
       - label: Do I need Starknet tokens to transact on StarkEx?
         body: No.
-      - label: >-
-          How are the tokens distributed? Who has how many tokens? How many tokens
+      - label: How are the tokens distributed? Who has how many tokens? How many tokens
           are in circulation? How many tokens are there? How many tokens will be
           minted each year?
-        body: >-
-          This information can be found in the [blog
+        body: This information can be found in the [blog
           post](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef).
       - label: What is the process for adding the token to my wallet?
         body: The Starknet Token is not yet available for sale. It cannot be added to
