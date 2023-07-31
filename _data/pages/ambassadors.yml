@@ -267,3 +267,14 @@ blocks:
         tags:
           - tag: Content generator
           - tag: Event speaker
+      - full_name: Henri
+        title: Dev advocate lead at Starkware
+        description: Henri explains to people what Starknet is, and how they can build
+          cool stuff on top of it.
+        image: /assets/henri-final-.png
+        twitter: https://twitter.com/henrlihenrli
+        discord: Henri
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
