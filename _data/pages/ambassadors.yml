@@ -44,6 +44,75 @@ blocks:
   - type: ambassadors_list
     title: Meet the Ambassadors
     ambassador:
+      - full_name: Abdel
+        title: Exploration lead at StarkWare
+        description: Abdel, StarkWare's Exploration Lead, honed his skills in Ethereum's
+          terrain. Now contributing to Starknet's journey, his essence blends
+          open-source, decentralization, and community collaboration, amplifying
+          the collective spirit of Starknet.
+        image: /assets/abdel-final-.png
+        website: https://github.com/abdelhamidbakhta
+        twitter: https://twitter.com/dimahledba
+        discord: Abdel | StarkWare#7447
+        tags:
+          - tag: Content generator
+          - tag: Event speaker
+      - full_name: Briyan Cessac
+        title: CEO & Co-founder of Screenshot Labs
+        description: "As a Starknet ambassador, Briyan brings together with his team,
+          years of experience observing and solving challenges faced by NFT
+          creators. Backed by top VC firms, his dedicated team is pioneering
+          innovative digital asset solutions. Committed to empowering creators
+          and democratizing digital asset ownership leveraging Starknet
+          technology. "
+        website: https://www.screenshot.co/
+        twitter: https://twitter.com/Briyan_Cessac
+        discord: Briyan#6291
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
+        image: /assets/briyan-cessac-final-.png
+      - full_name: Cheechyuan
+        title: Developer
+        description: Cheechyuan is a developer that likes to participate in hackathons
+          and try out new strange things. Cheechyuan also runs a Starknet
+          community in Malaysia. Cheechyuan currently work at Nethermind in the
+          team that builds Voyager the explorer.
+        image: /assets/chee-chyuan-final-ang.png
+        twitter: https://twitter.com/cheechyuanang
+        discord: cheechyuan.eth#1092
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+      - full_name: Crypto Gurkha
+        title: Content Creator - Team Gurkha
+        description: Crypto Gurkha is a passionate Starknet enthusiast who's writing
+          threads. He is a YouTube creator of documentaries and interviews.
+          "Walk the Talk", the show that explores the ecosystem in captivating
+          locations. Crypto Gurkha also collaborates with Starknet projects,
+          planed meetups and an active community member.
+        website: https://www.youtube.com/@cryptogurkha2528
+        twitter: https://twitter.com/crypto_gurkha
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
+        image: /assets/crypto-gurkha-final-.png
+      - full_name: Davide Silva
+        title: Software engineer at Subvisual
+        description: Davide is a software engineer. A lifelong computer nerd and
+          dedicated metal enthusiast, he finds immense joy in learning and the
+          exciting world of Formula 1 racing. Actively exploring and
+          contributing to the ever-evolving web3 space.
+        image: /assets/davide-silva-final-.png
+        twitter: https://twitter.com/0xdavidesilva
+        discord: Davide Silva#5522
+        tags:
+          - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
+        website: https://subvisual.com
       - full_name: Giwook Han
         title: CTO of Door Labs
         description: Giwook Han is the CTO of Door Labs. His dedication lies in
@@ -68,69 +137,27 @@ blocks:
           - tag: Event speaker
           - tag: Content generator
         image: /assets/guiltygyoza-final-.png
-      - full_name: Briyan Cessac
-        title: CEO & Co-founder of Screenshot Labs
-        description: "As a Starknet ambassador, Briyan brings together with his team,
-          years of experience observing and solving challenges faced by NFT
-          creators. Backed by top VC firms, his dedicated team is pioneering
-          innovative digital asset solutions. Committed to empowering creators
-          and democratizing digital asset ownership leveraging Starknet
-          technology. "
-        website: https://www.screenshot.co/
-        twitter: https://twitter.com/Briyan_Cessac
-        discord: Briyan#6291
+      - full_name: Henri
+        title: Dev advocate lead at Starkware
+        description: Henri explains to people what Starknet is, and how they can build
+          cool stuff on top of it.
+        image: /assets/henri-final-.png
+        twitter: https://twitter.com/henrlihenrli
+        discord: Henri
         tags:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
-        image: /assets/briyan-cessac-final-.png
-      - full_name: Peteris Erins
-        title: Founder at Yagi
-        description: Peteris is the Founder of Yagi, the Starknet Yield Aggregator. On
-          Twitter, he shares insights about how to use Cairo and lessons from
-          building Yagi on Starknet. He is an investor and advisor for several
-          crypto start-ups including Cartridge, Topology on Starknet.
-        website: https://www.yagi.fi
-        twitter: https://twitter.com/p_e
+      - full_name: Jonathan Lei
+        title: Co-founder & CTO at zkLend
+        description: Jonathan Lei is the creator and maintainer of starknet-rs and
+          starkli. Always re-writing stuff in Rust 🦀.
+        website: https://github.com/xJonathanLEI
+        twitter: https://twitter.com/xJonathanLEI
+        discord: xjonathanlei#6900
         tags:
-          - tag: Content generator
-        image: /assets/peteris-erins-final-.png
-      - full_name: Louthing
-        title: Head of Growth at MatchboxDAO
-        description: Louthing is the Head of Growth at MatchboxDAO. He organizes
-          Starknet meetups and conferences within the French community. Louthing
-          is also an Ex-VC in one of the largest crypto VC in Europe.
-        twitter: https://twitter.com/LouthingE
-        discord: Louthing#3654
-        tags:
-          - tag: Event organizer
-        image: /assets/louthing-final-.png
-      - full_name: Crypto Gurkha
-        title: Content Creator - Team Gurkha
-        description: Crypto Gurkha is a passionate Starknet enthusiast who's writing
-          threads. He is a YouTube creator of documentaries and interviews.
-          "Walk the Talk", the show that explores the ecosystem in captivating
-          locations. Crypto Gurkha also collaborates with Starknet projects,
-          planed meetups and an active community member.
-        website: https://www.youtube.com/@cryptogurkha2528
-        twitter: https://twitter.com/crypto_gurkha
-        tags:
-          - tag: Event organizer
           - tag: Event speaker
-          - tag: Content generator
-        image: /assets/crypto-gurkha-final-.png
-      - full_name: Trang Nguyen
-        title: Engineer at Web3 Space
-        description: Trang Nguyen is an ex-material scientist. He is a learner in
-          everything - math, cryptography, security. Trang Nguyen is dedicated
-          to build STARKpilled communities and applications.
-        website: https://www.linkedin.com/in/nvtrang91/
-        twitter: https://twitter.com/trangnv_
-        discord: trangnv#2156
-        tags:
-          - tag: Content generator
-          - tag: Event speaker
-        image: /assets/trang-nguyen-final-.png
+        image: /assets/jonathan-lei-final-.png
       - full_name: Loaf
         title: Contributor of BibliothecaDAO & Dojo
         description: Loaf, a pioneering contributor at BibliothecaDAO and Dojo,
@@ -144,102 +171,16 @@ blocks:
           - tag: Event speaker
           - tag: Content generator
         image: /assets/loaf-final-.png
-      - full_name: Starknet_OG
-        title: Content creator
-        description: Dedicated to Starknet since April 2022, Starknet_OG creates a
-          weekly content to raise awareness of Starknet ecosystem and foster
-          community understanding. Notably, Starknet_OG writes Twitter threads,
-          publish a weekly newsletter, and manage a Starknet community Discord.
-        image: /assets/starknet_og-final-.png
-        website: https://starknetdigger.notion.site/starknetdigger/Starknet_Digger-b038024fc9924bf98dd61e7074903645
-        twitter: https://twitter.com/Starknet_OG
-        discord: Lyskey#2396
-        tags:
-          - tag: Content generator
-      - full_name: Shramee
-        title: Founder at Least Imperfect Pte Ltd
-        description: Shramee is passionate about building impactful transparent systems.
-          A wave of systems with verifiable integrity will soon be solving the
-          biggest societal challenges. Shramee wants to play a prominent role in
-          bringing about this wave.
-        image: /assets/shramee-final-.png
-        website: https://shramee.me
-        twitter: https://twitter.com/shrameetweets
-        discord: Shramee#4595
-        tags:
-          - tag: Event speaker
-      - full_name: Jonathan Lei
-        title: Co-founder & CTO at zkLend
-        description: Jonathan Lei is the creator and maintainer of starknet-rs and
-          starkli. Always re-writing stuff in Rust 🦀.
-        website: https://github.com/xJonathanLEI
-        twitter: https://twitter.com/xJonathanLEI
-        discord: xjonathanlei#6900
-        tags:
-          - tag: Event speaker
-        image: /assets/jonathan-lei-final-.png
-      - full_name: Yaman can
-        title: Co-founder of buchain.org & incLabs
-        description: Yaman can is a T.A. at MIS493 Blockchain Lecture at Bogazici
-          University. He is the Co-founder of BU Blockchain Society - BUCHAIN
-          and incLabs. Building, researching, advising, and lecturing about web3
-          since 2020. Yaman can is focused on helping promising builders onboard
-          Starknet.
-        image: /assets/yaman-can-final-.png
-        website: https://www.linkedin.com/in/yaman-can/
-        twitter: https://twitter.com/yamancan_
-        discord: yamancan#0001
+      - full_name: Louthing
+        title: Head of Growth at MatchboxDAO
+        description: Louthing is the Head of Growth at MatchboxDAO. He organizes
+          Starknet meetups and conferences within the French community. Louthing
+          is also an Ex-VC in one of the largest crypto VC in Europe.
+        twitter: https://twitter.com/LouthingE
+        discord: Louthing#3654
         tags:
           - tag: Event organizer
-      - full_name: Cheechyuan
-        title: Developer
-        description: Cheechyuan is a developer that likes to participate in hackathons
-          and try out new strange things. Cheechyuan also runs a Starknet
-          community in Malaysia. Cheechyuan currently work at Nethermind in the
-          team that builds Voyager the explorer.
-        image: /assets/chee-chyuan-final-ang.png
-        twitter: https://twitter.com/cheechyuanang
-        discord: cheechyuan.eth#1092
-        tags:
-          - tag: Event organizer
-          - tag: Event speaker
-      - full_name: Davide Silva
-        title: Software engineer at Subvisual
-        description: Davide is a software engineer. A lifelong computer nerd and
-          dedicated metal enthusiast, he finds immense joy in learning and the
-          exciting world of Formula 1 racing. Actively exploring and
-          contributing to the ever-evolving web3 space.
-        image: /assets/davide-silva-final-.png
-        twitter: https://twitter.com/0xdavidesilva
-        discord: Davide Silva#5522
-        tags:
-          - tag: Event organizer
-          - tag: Event speaker
-          - tag: Content generator
-        website: https://subvisual.com
-      - full_name: Tarrence
-        title: Guild Master
-        description: Tarrence is the Co-Founder of Cartridge, Core Contributor to Dojo,
-          Co-Creator of Dope Wars.  Bringing on-chain games and autonomous
-          worlds to life on top of Starknet.
-        image: /assets/tarrence-final-.png
-        website: https://github.com/tarrencev
-        twitter: https://twitter.com/tarrenceva
-        discord: tarrence | cartridge#4660
-        tags:
-          - tag: Event organizer
-          - tag: Event speaker
-      - full_name: Sylve
-        title: Co-founder at briqNFT
-        description: "Sylve is building at briqNFT with wraitii. Ex-product manager at
-          Ledger. Governance Facilitator and self-proclaimed head shitposter at
-          Starknet Foundation. Vibes operator at Dojo. "
-        image: /assets/sylve-final-.png
-        website: https://briq.construction/
-        twitter: https://twitter.com/sylvechv/
-        discord: s0lness#6373
-        tags:
-          - tag: Event speaker
+        image: /assets/louthing-final-.png
       - full_name: Nurstar
         title: Content Creator and Community Builder
         description: 'Nurstar is  a Starknet lover and he curates a daily Recap about
@@ -254,27 +195,86 @@ blocks:
         twitter: https://twitter.com/0xNurstar
         tags:
           - tag: Content generator
-      - full_name: Abdel
-        title: Exploration lead at StarkWare
-        description: Abdel, StarkWare's Exploration Lead, honed his skills in Ethereum's
-          terrain. Now contributing to Starknet's journey, his essence blends
-          open-source, decentralization, and community collaboration, amplifying
-          the collective spirit of Starknet.
-        image: /assets/abdel-final-.png
-        website: https://github.com/abdelhamidbakhta
-        twitter: https://twitter.com/dimahledba
-        discord: Abdel | StarkWare#7447
+      - full_name: Peteris Erins
+        title: Founder at Yagi
+        description: Peteris is the Founder of Yagi, the Starknet Yield Aggregator. On
+          Twitter, he shares insights about how to use Cairo and lessons from
+          building Yagi on Starknet. He is an investor and advisor for several
+          crypto start-ups including Cartridge, Topology on Starknet.
+        website: https://www.yagi.fi
+        twitter: https://twitter.com/p_e
         tags:
           - tag: Content generator
+        image: /assets/peteris-erins-final-.png
+      - full_name: Shramee
+        title: Founder at Least Imperfect Pte Ltd
+        description: Shramee is passionate about building impactful transparent systems.
+          A wave of systems with verifiable integrity will soon be solving the
+          biggest societal challenges. Shramee wants to play a prominent role in
+          bringing about this wave.
+        image: /assets/shramee-final-.png
+        website: https://shramee.me
+        twitter: https://twitter.com/shrameetweets
+        discord: Shramee#4595
+        tags:
           - tag: Event speaker
-      - full_name: Henri
-        title: Dev advocate lead at Starkware
-        description: Henri explains to people what Starknet is, and how they can build
-          cool stuff on top of it.
-        image: /assets/henri-final-.png
-        twitter: https://twitter.com/henrlihenrli
-        discord: Henri
+      - full_name: Starknet_OG
+        title: Content creator
+        description: Dedicated to Starknet since April 2022, Starknet_OG creates a
+          weekly content to raise awareness of Starknet ecosystem and foster
+          community understanding. Notably, Starknet_OG writes Twitter threads,
+          publish a weekly newsletter, and manage a Starknet community Discord.
+        image: /assets/starknet_og-final-.png
+        website: https://starknetdigger.notion.site/starknetdigger/Starknet_Digger-b038024fc9924bf98dd61e7074903645
+        twitter: https://twitter.com/Starknet_OG
+        discord: Lyskey#2396
+        tags:
+          - tag: Content generator
+      - full_name: Sylve
+        title: Co-founder at briqNFT
+        description: "Sylve is building at briqNFT with wraitii. Ex-product manager at
+          Ledger. Governance Facilitator and self-proclaimed head shitposter at
+          Starknet Foundation. Vibes operator at Dojo. "
+        image: /assets/sylve-final-.png
+        website: https://briq.construction/
+        twitter: https://twitter.com/sylvechv/
+        discord: s0lness#6373
+        tags:
+          - tag: Event speaker
+      - full_name: Tarrence
+        title: Guild Master
+        description: Tarrence is the Co-Founder of Cartridge, Core Contributor to Dojo,
+          Co-Creator of Dope Wars.  Bringing on-chain games and autonomous
+          worlds to life on top of Starknet.
+        image: /assets/tarrence-final-.png
+        website: https://github.com/tarrencev
+        twitter: https://twitter.com/tarrenceva
+        discord: tarrence | cartridge#4660
         tags:
           - tag: Event organizer
           - tag: Event speaker
+      - full_name: Trang Nguyen
+        title: Engineer at Web3 Space
+        description: Trang Nguyen is an ex-material scientist. He is a learner in
+          everything - math, cryptography, security. Trang Nguyen is dedicated
+          to build STARKpilled communities and applications.
+        website: https://www.linkedin.com/in/nvtrang91/
+        twitter: https://twitter.com/trangnv_
+        discord: trangnv#2156
+        tags:
           - tag: Content generator
+          - tag: Event speaker
+        image: /assets/trang-nguyen-final-.png
+      - full_name: Yaman can
+        title: Co-founder of buchain.org & incLabs
+        description: Yaman can is a T.A. at MIS493 Blockchain Lecture at Bogazici
+          University. He is the Co-founder of BU Blockchain Society - BUCHAIN
+          and incLabs. Building, researching, advising, and lecturing about web3
+          since 2020. Yaman can is focused on helping promising builders onboard
+          Starknet.
+        image: /assets/yaman-can-final-.png
+        website: https://www.linkedin.com/in/yaman-can/
+        twitter: https://twitter.com/yamancan_
+        discord: yamancan#0001
+        tags:
+          - tag: Event organizer
