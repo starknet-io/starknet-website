@@ -2,6 +2,7 @@ export const tokens = {
   colors: {
     light: {
       "listLink-fg": "#5C94FF",
+      "link-fg": "#3F8CFF",
       "bg-default": "#FBFBFB",
       "fg-default": "#6B7280",
       "fg-muted": "#858585",
@@ -49,6 +50,8 @@ export const tokens = {
       "btn-primary-border": "#0C0C4F",
       "btn-primary-hover-border": "#0C0C4F",
       "btn-primary-active-border": "#0C0C4F",
+      "btn-rounded-bg": "rgba(72, 38, 72, 0.06)",
+      "btn-rounded-border-color": "#ECECF9",
       "article-card-bg": "#FFFFFF",
       "card-bg": "#FFFFFF",
       "roadmap-hero-card-bg": "#F8F8F8",
@@ -208,6 +211,7 @@ export const tokens = {
 
     dark: {
       "listLink-fg": "#AFCAFF",
+      "link-fg": "#5C9EFF",
       "bg-default": "#0B0B0B",
       "fg-default": "#CCCCCC",
       "fg-muted": "#7E7E7E",
@@ -255,6 +259,8 @@ export const tokens = {
       "btn-primary-border": "#5C94FF",
       "btn-primary-hover-border": "#5C94FF",
       "btn-primary-active-border": "#5C94FF",
+      "btn-rounded-bg": "#D0D0E003",
+      "btn-rounded-border-color": "#1E1E40",
       "article-card-bg": "#1B1B1B",
       "card-bg": "#1B1B1B",
       "roadmap-hero-card-bg": "#1B1B1B",
@@ -420,6 +426,10 @@ export const semanticTokens = {
       default: tokens.colors.light["listLink-fg"],
       _dark: tokens.colors.dark["listLink-fg"],
     },
+    "link-fg": {
+      default: tokens.colors.light["link-fg"],
+      _dark: tokens.colors.dark["link-fg"],
+    },
     "bg-default": {
       default: tokens.colors.light["bg-default"],
       _dark: tokens.colors.dark["bg-default"],
@@ -528,6 +538,14 @@ export const semanticTokens = {
     "btn-primary-active-border": {
       default: tokens.colors.light["btn-primary-active-border"],
       _dark: tokens.colors.dark["btn-primary-active-border"],
+    },
+    "btn-rounded-bg": {
+      default: tokens.colors.light["btn-rounded-bg"],
+      _dark: tokens.colors.dark["btn-rounded-bg"],
+    },
+    "btn-rounded-border-color": {
+      default: tokens.colors.light["btn-rounded-border-color"],
+      _dark: tokens.colors.dark["btn-rounded-border-color"],
     },
     "article-card-bg": {
       default: tokens.colors.light["article-card-bg"],

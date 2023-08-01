@@ -59,26 +59,6 @@ export const Outline = () => (
   </ThemeProvider>
 );
 
-export const OutlineLight = () => (
-  <ThemeProvider>
-    <HStack p={12}>
-      <>
-        <Button variant="outlineLight">Outline light button</Button>
-      </>
-    </HStack>
-  </ThemeProvider>
-);
-
-export const OutlineRounded = () => (
-  <ThemeProvider>
-    <HStack p={12}>
-      <>
-        <Button variant="outlineRounded">Outline rounded button</Button>
-      </>
-    </HStack>
-  </ThemeProvider>
-);
-
 export const Ghost = () => (
   <ThemeProvider>
     <HStack p={12}>
@@ -99,6 +79,30 @@ export const Ghost = () => (
             boxSize="24px"
             />
           } variant="ghost" isDisabled>Ghost button disabled with icon</Button>
+    </HStack>
+  </ThemeProvider>
+);
+
+export const Rounded = () => (
+  <ThemeProvider>
+    <HStack p={12}>
+      <>
+        <Button variant="rounded">Rounded button</Button>
+        <Button variant="rounded" size="sm">Rounded button small</Button>
+        <Button rightIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } variant="rounded">With icon</Button>
+        </>
+      <Button variant="rounded" isDisabled>Rounded button disabled</Button>
+      <Button rightIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } variant="rounded" isDisabled>Rounded button disabled with icon</Button>
     </HStack>
   </ThemeProvider>
 );

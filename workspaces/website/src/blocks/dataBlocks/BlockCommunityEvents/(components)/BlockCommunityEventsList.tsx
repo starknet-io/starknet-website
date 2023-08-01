@@ -110,7 +110,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
         <Button
           onClick={() => navigate("/en/events")}
           flexShrink={0}
-          variant="outlineLight"
+          variant="rounded"
         >
           See all events
         </Button>
