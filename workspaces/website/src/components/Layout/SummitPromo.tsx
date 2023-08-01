@@ -29,7 +29,8 @@ export const SummitPromo = () => {
         bottom:"16px",
         width:"336px",
         height:"358px",
-        zIndex: 999
+        zIndex: 999,
+        pointerEvents: isPopupOpen ? "auto" : "none",
     }}>
     <Box
         sx={{ 
