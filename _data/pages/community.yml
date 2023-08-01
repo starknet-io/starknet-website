@@ -52,11 +52,13 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: true
-        title: Governance
+        title: Starknet Governance
         type: image_icon_link_card
         link:
           custom_internal_link: /community/governance
           custom_title: View
+        description: Explore Starknet governance - part of Starknet decentralization
+          process.
         columns: "4"
       - size: large
         color: blue-default
