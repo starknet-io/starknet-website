@@ -10,7 +10,7 @@ import {
   Link,
   Divider,
   Center,
-  useColorModeValue,
+  ChakraProps,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { IconButton } from "@ui/IconButton";
@@ -31,34 +31,19 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
     <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto">
       <Box>
         <Box display="flex" justifyContent="center">
-          <Container
-            as="footer"
-            role="contentinfo"
-            maxWidth="auto"
-            px="0"
-            justifyContent="center"
-            display="flex"
-            flexDirection="column"
-            alignItems={{ base: "flex-start", md: "center" }}
-          >
-            <Stack
-              spacing={{ base: "12", md: "8" }}
-              direction={{ base: "column-reverse", lg: "row" }}
+          <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
+            <Box
+              // spacing={{ base: "12", md: "8" }}
+              // direction={{ base: "column-reverse", lg: "row" }}
               py={{ base: "12", md: "16" }}
-              justify="space-between"
-              maxW="1200"
-              px="30px"
+              // justify="space-between"
+              // maxW="1200"
+              maxW={1344}
+              px="2rem"
+              marginInline="auto"
             >
               {children}
-            </Stack>
-            <Divider
-              borderColor={useColorModeValue(
-                "footer-divider-bg",
-                "footer-divider-bg"
-              )}
-              marginBottom="0px"
-              opacity="1"
-            />
+            </Box>
             <Box
               background="bg.main"
               _dark={{
@@ -91,21 +76,11 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   <Center height="32px">
                     <Divider
                       orientation="vertical"
-                      borderColor={useColorModeValue(
-                        "footer-divider-bg",
-                        "footer-divider-bg"
-                      )}
+                      borderColor="footer-divider-bg"
                       opacity="1"
                     />
                   </Center>
-                  <Text
-                    fontSize="sm"
-                    color={useColorModeValue(
-                      "footer-link-fg",
-                      "footer-link-fg"
-                    )}
-                    paddingLeft="24px"
-                  >
+                  <Text fontSize="sm" color="footer-link-fg" paddingLeft="24px">
                     {seo?.footerText}
                   </Text>
                 </HStack>
@@ -158,24 +133,68 @@ type ColumnProps = {
   title: string;
   children: React.ReactNode;
   color?: string;
+  sx?: ChakraProps["sx"];
 };
 
-const Column = ({ title, children, color }: ColumnProps) => {
+const Column = ({ title, children, color, sx }: ColumnProps) => {
   return (
-    <Stack bg={color} spacing="4" minW={{ lg: "40" }}>
-      {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
-        {title}
-      </Text> */}
+    <Stack
+      bg={color}
+      minW={{ lg: "40px" }}
+      padding={{
+        base: "40px 0px",
+        md: "40px 40px 0px",
+        lg: "0px 40px 1.5rem",
+      }}
+      borderColor="footer-divider-bg"
+      _even={{
+        borderLeftWidth: {
+          base: "0px",
+          md: "1px",
+          lg: "1px",
+        },
+      }}
+      _odd={{
+        borderLeftWidth: { base: "0px", md: "0px", lg: "1px" },
+        paddingLeft: { base: "0px", md: "0px", lg: "40px" },
+      }}
+      borderBottomWidth={{ base: "1px", md: "0px", lg: "0px" }}
+      _first={{
+        borderLeftWidth: { lg: "0px" },
+        paddingLeft: { lg: "0px" },
+        paddingTop: { md: "0px" },
+      }}
+      _last={{
+        borderBottomWidth: { base: "0px" },
+        paddingRight: { lg: "0px" },
+      }}
+      sx={{
+        "&:nth-of-type(2)": {
+          paddingTop: { md: "0px" },
+        },
+      }}
+    >
       <Heading
         variant="h4"
-        color={useColorModeValue("footer-header-fg", "white")}
+        color="footer-header-fg"
         fontWeight="500"
+        paddingY="1.5rem"
       >
         {title}
       </Heading>
-      <Stack spacing="1" shouldWrapChildren>
+      <Box
+        marginTop="0px !important"
+        display="flex"
+        flexDirection="column"
+        gap="1rem"
+        sx={{
+          "& > *": {
+            paddingBlock: "0.5rem",
+          },
+        }}
+      >
         {children}
-      </Stack>
+      </Box>
     </Stack>
   );
 };
@@ -190,9 +209,7 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
     <Link
       fontSize="sm"
       px="0"
-      height="36px"
-      bg="navbar-link-bg"
-      color={useColorModeValue("footer-link-fg", "footer-link-fg")}
+      color="footer-link-fg"
       borderRadius={18}
       display="flex"
       alignItems="center"
@@ -200,13 +217,12 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
       textDecoration="none"
       gap="4px"
       _hover={{
-        color: "navbar-link-hover-fg",
-        bg: "navbar-link-hover-bg",
+        color: "footer-link-hover-fg",
       }}
       _active={{
-        color: "navbar-link-active-fg",
+        color: "footer-link-hover-fg",
         svg: {
-          color: "navbar-link-active-fg",
+          color: "footer-link-hover-fg",
         },
       }}
       href={href}
