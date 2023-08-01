@@ -7,8 +7,6 @@ parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
 blocks:
-  - type: page_header
-    title: Ambassadors Program
   - type: markdown
     body: >-
       The Starknet Foundation Ambassador Program is a unique initiative designed
