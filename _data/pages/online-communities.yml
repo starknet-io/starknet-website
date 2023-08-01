@@ -31,6 +31,14 @@ blocks:
         subLabel:
           label: Share, discuss and collaborate on initiatives.
   - type: link_list
+    randomize: false
+    heading: "Global Twitter communities "
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: "Turkey "
+          custom_external_link: https://twitter.com/StarkNetTurkiye
+  - type: link_list
     heading: Telegram groups
     listSize: lg
     blocks:
