@@ -1,14 +1,9 @@
-import {
-  Box,
-  Stack,
-  StackDivider,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { SimpleGrid, useBreakpointValue } from "@chakra-ui/react";
 import * as FooterComponent from "@ui/Footer/Footer";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { getComputedLinkData } from "src/utils/utils";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { Fragment } from "react";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -19,101 +14,61 @@ export interface Props {
 
 export const Footer = ({ mainMenu, seo }: Props) => {
   const { locale } = usePageContext();
-  const displayValue = useBreakpointValue({ base: "none", md: "block" });
+  const isTabletScreen = useBreakpointValue({
+    base: false,
+    md: true,
+    lg: false,
+  });
 
   return (
     <FooterComponent.Root seo={seo}>
-      <Stack
-        divider={
-          <StackDivider
-            borderColor={useColorModeValue(
-              "footer-divider-bg",
-              "footer-divider-bg"
-            )}
-            display={displayValue}
-          />
-        }
-        align="stretch"
-        gap={10}
-        alignItems="flex-start"
-        justifyContent="flex-start"
-        direction={{ base: "column", md: "row" }}
+      <SimpleGrid
+        gridTemplateColumns={{
+          base: "repeat(1, minmax(0, max-content))",
+          md: "repeat(2, minmax(0, max-content))",
+          lg: `repeat(${mainMenu.items?.length}, minmax(0, 1fr))`,
+        }}
       >
         {mainMenu?.items?.map((mainMenuItem, mainMenuItemIndex) => (
           <FooterComponent.Column
             key={mainMenuItemIndex}
             title={mainMenuItem.title}
           >
-            {mainMenuItem.columns?.length && (
-              <Box
-              // sx={{
-              //   columnCount: mainMenuItem.title === "Learn" ? 2 : "inherit",
-              // }}
-              // width={mainMenuItem.title === "Learn" ? "350px" : "auto"}
-              >
-                {mainMenuItem.columns?.map((column, columnIndex) => (
-                  <Box key={columnIndex}>
-                    {column.blocks?.map((block, blockIndex) => (
-                      <Box key={blockIndex}>
-                        {block.items?.map((item, itemIndex) => {
-                          if (
-                            item.hide_from_footer ||
-                            item.custom_icon ||
-                            item.custom_title === "Developers posts" ||
-                            item.custom_title === "Community Calls" ||
-                            item.custom_title === "Stark math" ||
-                            item.custom_title === "Stark struck" ||
-                            item.custom_title === "Governance posts" ||
-                            item.custom_title === "Community & Events posts"
-                          ) {
-                            return;
-                          }
+            {mainMenuItem?.columns?.map((column, columnIndex) => (
+              <Fragment key={columnIndex}>
+                {column.blocks?.map((block) => (
+                  <Fragment key={block.title}>
+                    {block.items?.map((item, itemIndex) => {
+                      if (item.hide_from_footer || item.custom_icon) {
+                        return;
+                      }
 
-                          const { href, label } = getComputedLinkData(
-                            locale,
-                            item
-                          );
+                      const { href, label } = getComputedLinkData(locale, item);
 
-                          if (!href) {
-                            return <span key={itemIndex}>{label}</span>;
-                          }
+                      if (!href) {
+                        return <span key={itemIndex}>{label}</span>;
+                      }
 
-                          return (
-                            <FooterComponent.FooterLink
-                              isExternal={item.custom_external_link != null}
-                              href={href}
-                              key={itemIndex}
-                            >
-                              {label}
-                            </FooterComponent.FooterLink>
-                          );
-                        })}
-                      </Box>
-                    ))}
-                  </Box>
+                      return (
+                        <FooterComponent.FooterLink
+                          isExternal={item.custom_external_link != null}
+                          href={href}
+                          key={itemIndex}
+                        >
+                          {label}
+                        </FooterComponent.FooterLink>
+                      );
+                    })}
+                  </Fragment>
                 ))}
-              </Box>
-            )}
+              </Fragment>
+            ))}
           </FooterComponent.Column>
         ))}
-
-        {/* {mainMenu.pages.map(({ title, pages }) => {
-          return (
-            <FooterComponent.Column key={title} title={title}>
-              {pages.map(({ page, title }) => {
-                return (
-                  <FooterComponent.Link
-                    isExternal
-                    key={title}
-                    href={`/${locale}${page}`}
-                    title={title}
-                  />
-                );
-              })}
-            </FooterComponent.Column>
-          );
-        })} */}
-      </Stack>
+        {isTabletScreen && mainMenu?.items?.length % 2 === 1 && (
+          <FooterComponent.Column title="" children={null} />
+        )}
+      </SimpleGrid>
     </FooterComponent.Root>
   );
 };
