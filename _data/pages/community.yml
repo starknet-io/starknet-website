@@ -47,4 +47,15 @@ blocks:
           custom_title: View
           custom_internal_link: /jobs/
         withIllustration: true
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: "Governance Page "
+        type: image_icon_link_card
+        link:
+          custom_internal_link: /community/governance
+          custom_title: View
+        columns: "4"
   - type: community_events
