@@ -21,19 +21,21 @@ export const Solid = () => (
   <ThemeProvider>
     <HStack p={12}>
       <>
-        <Button variant="solid">Solid button</Button>
+        <Button variant="solid" size="md">Solid button</Button>
+        <Button variant="solid" size="sm">Solid small button</Button>
+        <Button variant="solid">
+          <ChakraIcon
+            as={HiPlay}
+            boxSize="24px"
+          />
+        </Button>
         <Button leftIcon={
             <ChakraIcon
               as={HiPlay}
               boxSize="24px"
             />
           } variant="solid">With icon</Button>
-        <Button leftIcon={
-            <ChakraIcon
-              as={HiGlobeAlt}
-              boxSize="24px"
-            />
-          } variant="solid">With icon and counter (3)</Button>
+        <Button variant="solid" isDisabled>Disabled</Button>
       </>
     </HStack>
   </ThemeProvider>
@@ -44,18 +46,14 @@ export const Outline = () => (
     <HStack p={12}>
       <>
         <Button variant="outline">Outline button</Button>
+        <Button variant="outline" size="sm">Outline small button</Button>
         <Button leftIcon={
             <ChakraIcon
               as={HiPlay}
               boxSize="24px"
             />
           } variant="outline">With icon</Button>
-        <Button leftIcon={
-            <ChakraIcon
-              as={HiGlobeAlt}
-              boxSize="24px"
-            />
-          } variant="outline">With icon and counter (3)</Button>
+        <Button variant="outline" isDisabled>Disabled</Button>
       </>
     </HStack>
   </ThemeProvider>
@@ -86,13 +84,21 @@ export const Ghost = () => (
     <HStack p={12}>
       <>
         <Button variant="ghost">Ghost button</Button>
+        <Button variant="ghost" size="sm">Ghost button small</Button>
         <Button rightIcon={
-            <ChakraIcon
-              as={ChevronDownIcon}
-              boxSize="24px"
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
             />
           } variant="ghost">With icon</Button>
-      </>
+        </>
+      <Button variant="ghost" isDisabled>Ghost button disabled</Button>
+      <Button rightIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } variant="ghost" isDisabled>Ghost button disabled with icon</Button>
     </HStack>
   </ThemeProvider>
 );
