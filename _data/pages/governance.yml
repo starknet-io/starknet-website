@@ -78,6 +78,10 @@ blocks:
           custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334/1
       - link:
           hasIcon: true
+          custom_title: "[Proposal] Starknet Alpha v0.12.0"
+          custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-12-0/95997
+      - link:
+          hasIcon: true
           custom_title: Suggested Delegation Agreement
           custom_internal_link: https://www.starknet.io/en/community/governance/delegation-agreement
   - type: link_list
