@@ -71,4 +71,3 @@ blocks:
           custom_title: View
         description: Get to know the ambassadors activities within Starknet community.
         columns: "4"
-  - type: community_events
