@@ -23,7 +23,10 @@ const outline = defineStyle({
   _focusVisible: {
     boxShadow: "none",
     outlineOffset: 1,
-    outline: "3px solid #3f8cff"
+    outline: "3px solid #3f8cff",
+    _dark: {
+      outlineOffset: 0
+    }
   },
   _hover: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
@@ -62,51 +65,53 @@ const outline = defineStyle({
   },
 });
 
-const outlineLight = defineStyle({
-  borderRadius: 4,
+const rounded = defineStyle({
+  borderRadius: 999,
   fontWeight: "medium",
-  fontSize: "14px",
-  color: "grey.coolerText",
-  borderColor: "grey.line",
-  borderWidth: "1px",
-  bg: "transparent",
+  fontSize: "16px",
+  color: "btn-outline-hover-fg",
+  borderWidth: 1,
+  borderStyle: "solid",
   minWidth: "none",
-  lineHeight: "16px",
+  lineHeight: "24px",
   height: "auto",
-  padding: "16px 40px",
-  _hover: {
-    bg: "transparent",
-    color: "btn-outline-hover-fg",
-    borderColor: "selected.main",
+  bg: "btn-rounded-bg",
+  borderColor: "btn-rounded-border-color",
+  "&:disabled": {
+    color: 'btn-outline-disabled-fg',
+    borderColor: 'btn-outline-disabled-border',
+    borderImage: "none"
+  },
+  _focusVisible: {
+    boxShadow: "none",
+    outlineOffset: 1,
+    outline: "3px solid #3f8cff",
+    borderColor: "white",
     _dark: {
-      color: "selected.100",
-      borderColor: "selected.200"
+      outlineOffset: 0
+    }
+  },
+  _hover: {
+    borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+    bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    _dark: {
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
     }
   },
   _active: {
-    bg: "grey.line",
-    color: "grey.coolerText",
-    borderColor: "grey.line",
-    borderWidth: "1px",
-    boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+    borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+    bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1) !important",
     outlineWidth: 1,
     _focus: {
-      bg: "grey.line",
-      color: "grey.coolerText",
-      borderColor: "grey.line",
-      borderWidth: "1px",
-      boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+      borderColor: "white",
       outlineWidth: 1
     },
     _dark: {
-      bg: "black",
-      color: "btn-outline-active-fg",
-      borderColor: "black",
+      boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset",
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
       outlineWidth: 1,
       _focus: {
-        bg: "black",
-        color: "btn-outline-active-fg",
-        borderColor: "black",
         outlineWidth: 1
       }
     }
@@ -121,85 +126,17 @@ const outlineLight = defineStyle({
       borderStyle: "solid"
     }
   },
-  _dark: {
-    border: "1px solid grey.greyDusk",
-    color: "white"
-  }
-});
-
-const outlineRounded = defineStyle({
-  borderRadius: 24,
-  fontWeight: "medium",
-  fontSize: "14px",
-  color: "grey.coolerText",
-  borderColor: "grey.line",
-  borderWidth: "1px",
-  bg: "transparent",
-  minWidth: "none",
-  lineHeight: "16px",
-  height: "auto",
-  padding: "16px 40px",
-  _hover: {
-    bg: "transparent",
-    color: "btn-outline-hover-fg",
-    borderColor: "selected.main",
-    _dark: {
-      color: "selected.100",
-      borderColor: "selected.200"
-    }
-  },
-  _active: {
-    bg: "grey.line",
-    color: "grey.coolerText",
-    borderColor: "grey.line",
-    borderWidth: "1px",
-    boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
-    outlineWidth: 1,
-    _focus: {
-      bg: "grey.line",
-      color: "grey.coolerText",
-      borderColor: "grey.line",
-      borderWidth: "1px",
-      boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
-      outlineWidth: 1
-    },
-    _dark: {
-      bg: "black",
-      color: "btn-outline-active-fg",
-      borderColor: "black",
-      outlineWidth: 1,
-      _focus: {
-        bg: "black",
-        color: "btn-outline-active-fg",
-        borderColor: "black",
-        outlineWidth: 1
-      }
-    }
-  },
-  _focus: {
-    boxShadow: "none",
-    borderColor: "selected.main",
-    _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
-    }
-  },
-  _dark: {
-    border: "1px solid grey.greyDusk",
-    color: "white"
-  }
 });
 
 const ghost = defineStyle({
   borderRadius: 8,
   fontWeight: "medium",
   fontSize: "16px",
-  color: "btn-primary-bg",
+  color: "btn-outline-hover-fg",
   minWidth: "none",
   lineHeight: "24px",
   height: "auto",
+  border: "1px solid transparent",
   bg: "transparent",
   "&:disabled": {
     color: 'btn-outline-disabled-fg',
@@ -207,13 +144,17 @@ const ghost = defineStyle({
   _focusVisible: {
     boxShadow: "none",
     outlineOffset: 1,
-    outline: "3px solid #3f8cff"
+    outline: "3px solid #3f8cff",
+    _dark: {
+      outlineOffset: 0,
+      border: "1px solid #ffffff"
+    }
   },
   _hover: {
     bg: "#eae9eb",
     color: "btn-outline-hover-fg",
     _dark: {
-      color: "selected.100"
+      bg: "#28282c"
     }
   },
   _active: {
@@ -264,8 +205,9 @@ const solid = defineStyle({
   },
   _active: {
     bg: "btn-primary-active-bg",
-    boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset",
+    boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
     outlineWidth: 1,
+    outlineOffset: 1,
     _dark: {
       bg: "grey.morning",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
@@ -277,6 +219,9 @@ const solid = defineStyle({
   },
   _dark: {
     bg: "white",
+  },
+  _focusVisible: {
+    outlineOffset: 1
   },
   _focus: {
     boxShadow: "0px 0px 0px 3px #3F8CFF, 0px 0px 0px 1px #FFFFFF",
@@ -619,8 +564,6 @@ const md = defineStyle({
 export const buttonTheme = defineStyleConfig({
   variants: {
     outline,
-    outlineLight,
-    outlineRounded,
     secondaryHero,
     primaryHero,
     solid,
@@ -629,7 +572,8 @@ export const buttonTheme = defineStyleConfig({
     filterActive,
     category,
     switch: switchButton,
-    icon
+    icon,
+    rounded
   },
   sizes: {
     sm,

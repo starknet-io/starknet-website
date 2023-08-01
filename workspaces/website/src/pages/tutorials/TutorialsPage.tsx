@@ -407,7 +407,7 @@ function CustomHits({ locale }: CustomHitsProps) {
           <Button
             onClick={() => showMore()}
             flexShrink={0}
-            variant="outlineLight"
+            variant="rounded"
           >
             View More
           </Button>

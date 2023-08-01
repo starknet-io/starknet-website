@@ -10,7 +10,7 @@ import { inputTheme } from "@ui/Input/Input";
 import { kbdTheme } from "@ui/Kbd/Kbd";
 import { dividerTheme } from "@ui/Divider/Divider";
 import { avatarTheme } from "@ui/Avatar/Avatar";
-import { linkTheme } from "@ui/Link/Link";
+import { customLinkTheme } from "../components/Link/CustomLinkStyles";
 import { headingTheme } from "../components/Typography/HeadingStyles";
 import { textTheme } from "../components/Typography/TextStyles";
 import { alertTheme } from "../components/Alert/AlertStyles";
@@ -107,7 +107,7 @@ const theme = extendTheme(proTheme, {
     Kbd: kbdTheme,
     Divider: dividerTheme,
     Tag: tagTheme,
-    Link: linkTheme,
+    Link: customLinkTheme,
     Heading: {
       baseStyle: {
         fontWeight: "300"

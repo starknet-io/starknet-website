@@ -7,8 +7,6 @@ type props = {
   variant:
     | "solid"
     | "outline"
-    | "outlineLight"
-    | "outlineRounded"
     | "ghost"
     | "primaryHero"
     | "secondaryHero"
@@ -16,7 +14,8 @@ type props = {
     | "filter"
     | "filterActive"
     | "category"
-    | "icon";
+    | "icon"
+    | "rounded";
   children: React.ReactNode;
   toId?: string;
   href?: string;
