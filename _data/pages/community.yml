@@ -52,10 +52,21 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: true
-        title: "Governance Page "
+        title: Governance
         type: image_icon_link_card
         link:
           custom_internal_link: /community/governance
           custom_title: View
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Ambassador program
+        type: image_icon_link_card
+        link:
+          custom_title: View
+        description: Get to know the ambassadors activities within Starknet community.
         columns: "4"
   - type: community_events
