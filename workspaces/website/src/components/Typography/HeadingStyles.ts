@@ -1,39 +1,18 @@
 export const headingTheme = {
   h1: {
-    base: {
-      fontSize: "2.5rem",
-      lineHeight: "120%",
-      fontWeight: 600
-    },
-    md: {
-      fontSize: "5rem",
-      lineHeight: "100%",
-      fontWeight: 600
-    }
+    fontSize: { base: "2.5rem", md: "5rem" },
+    lineHeight: { base: "120%", md: "120%" },
+    fontWeight: 600
   },
   h2: {
-    base: {
-      fontSize: "2.5rem",
-      lineHeight: "120%",
-      fontWeight: 600
-    },
-    md: {
-      fontSize: "4rem",
-      lineHeight: "125%",
-      fontWeight: 600
-    }
+    fontSize: { base: "2.5rem", md: "4rem" },
+    lineHeight: { base: "120%", md: "125%" },
+    fontWeight: 600
   },
   h3: {
-    base: {
-      fontSize: "1.3rem",
-      lineHeight: "140%",
-      fontWeight: 600
-    },
-    md: {
-      fontSize: "2.5rem",
-      lineHeight: "120%",
-      fontWeight: 600
-    }
+    fontSize: { base: "1.3rem", md: "2.5rem" },
+    lineHeight: { base: "140%", md: "120%" },
+    fontWeight: 600
   },
   h4: {
     fontSize: "1.3rem",

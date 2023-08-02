@@ -113,7 +113,7 @@ export default function RoadmapPost({
           <Box mb={"2rem"}>
             <RoadmapPostVersion roadmapVersion={roadmapVersion} />
           </Box>
-          <Heading variant="h2" color="heading-navy-fg">
+          <Heading variant="h1" color="heading-navy-fg">
             {roadmapPost.title}
           </Heading>
           <Flex direction="row" alignItems="center" mt="6" mb="32px" justifyContent="space-between">
