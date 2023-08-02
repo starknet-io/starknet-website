@@ -15,11 +15,14 @@ items:
                 page: c1050a37-5af0-4277-aabd-b681ffe2cda5
               - custom_external_link: https://docs.starknet.io
                 custom_title: Documentation
+              - custom_title: Starknet Book
+                custom_external_link: https://book.starknet.io/
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
               - custom_internal_link: /roadmap/
                 custom_title: Roadmap
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
+                custom_title: Tools & resources
               - custom_title: Developers blog
                 custom_internal_link: /posts/developers
   - title: Ecosystem
