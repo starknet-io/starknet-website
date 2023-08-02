@@ -11,12 +11,35 @@ import {
   Divider,
   Center,
   ChakraProps,
+  Button,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
-import { IconButton } from "@ui/IconButton";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { StarknetLogo } from "../Logo/StarknetLogo";
+
+const socialLinks = [
+  {
+    label: "Discord",
+    href: "https://starknet.io/discord",
+    icon: <SiDiscord fontSize="1.25rem" />,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/starknet-io/starknet-website",
+    icon: <SiGithub fontSize="1.25rem" />,
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com/Starknet",
+    icon: <SiTwitter fontSize="1.25rem" />,
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/channel/UCQZ3gKgk5YJNKAQgETdZqRQ",
+    icon: <SiYoutube fontSize="1.25rem" />,
+  },
+];
 
 type RootProps = {
   children: React.ReactNode;
@@ -33,11 +56,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
         <Box display="flex" justifyContent="center">
           <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
             <Box
-              // spacing={{ base: "12", md: "8" }}
-              // direction={{ base: "column-reverse", lg: "row" }}
               py={{ base: "12", md: "16" }}
-              // justify="space-between"
-              // maxW="1200"
               maxW={1344}
               px="2rem"
               marginInline="auto"
@@ -45,32 +64,30 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
               {children}
             </Box>
             <Box
-              background="bg.main"
-              _dark={{
-                background: "darkMode.bg2",
-              }}
               width="100%"
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
+              maxW={1344}
+              px="2rem"
+              marginInline="auto"
             >
               <Stack
                 pb="38px"
                 pt="38px"
                 justify="space-between"
-                direction={{ base: "column", md: "row" }}
-                align={{ base: "start", md: "center" }}
-                maxW="1200"
+                direction={{ base: "column", lg: "row" }}
+                align={{ base: "start", lg: "center" }}
                 width="100%"
-                px="30px"
+                gap={{
+                  base: "24px",
+                  lg: "0",
+                }}
               >
                 <HStack
                   justify={{ base: "space-between", sm: "start" }}
                   width={{ base: "full", sm: "auto" }}
                   spacing="0"
-                  order={{ base: 2, lg: 1 }}
+                  gap="24px"
                 >
-                  <Box pr="24px">
+                  <Box>
                     <StarknetLogo height="32" />
                   </Box>
                   <Center height="32px">
@@ -80,45 +97,37 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                       opacity="1"
                     />
                   </Center>
-                  <Text fontSize="sm" color="footer-link-fg" paddingLeft="24px">
+                  <Text fontSize="sm" color="footer-link-fg">
                     {seo?.footerText}
                   </Text>
                 </HStack>
                 <ButtonGroup
-                  order={{ base: 1, lg: 2 }}
-                  paddingBottom={{ base: "36px", md: 0 }}
+                  padding={{ base: "20px 0", md: "8px 0px" }}
+                  fontSize="14px"
+                  lineHeight="24px"
+                  gap={{ base: "32px", md: "40px" }}
+                  flexDirection={{ base: "column", md: "row" }}
                 >
-                  <IconButton
-                    as="a"
-                    href="https://starknet.io/discord"
-                    aria-label="Discord"
-                    icon={<SiDiscord fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://github.com/starknet-io/starknet-website"
-                    aria-label="GitHub"
-                    icon={<SiGithub fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
-                    aria-label="YouTube"
-                    icon={<SiYoutube fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://twitter.com/Starknet"
-                    aria-label="Twitter"
-                    icon={<SiTwitter fontSize="1.25rem" />}
-                    size="small"
-                  />
+                  {socialLinks.map((social) => (
+                    <Button
+                      key={social.label}
+                      as="a"
+                      href={social.href}
+                      size="small"
+                      fontWeight="normal"
+                      variant="unstyled"
+                      leftIcon={social.icon}
+                      color="footer-link-fg"
+                      _hover={{
+                        color: "footer-link-hover-fg",
+                      }}
+                      display="flex"
+                      gap="0.5rem"
+                      padding="0.5rem 0"
+                    >
+                      {social.label}
+                    </Button>
+                  ))}
                 </ButtonGroup>
               </Stack>
             </Box>
@@ -191,6 +200,7 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
           "& > *": {
             paddingBlock: "0.5rem",
           },
+          color: "footer-link-fg",
         }}
       >
         {children}
