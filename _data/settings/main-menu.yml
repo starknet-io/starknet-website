@@ -22,6 +22,8 @@ items:
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
               - custom_title: Developers blog
                 custom_internal_link: /posts/developers
+              - custom_title: Starknet Book
+                custom_external_link: https://book.starknet.io/
   - title: Ecosystem
     columns:
       - blocks:
