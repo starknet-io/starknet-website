@@ -69,7 +69,7 @@ export const tokens = {
       "navbar-link-fg": "#6B7280",
       "navbar-link-hover-bg": "#FBFBFB",
       "navbar-link-hover-fg": "#5C94FF",
-      "footer-link-fg": "#04030D",
+      "footer-link-fg": "rgba(4, 3, 13, 0.67)",
       "footer-link-hover-fg": "#0C0C4F",
       "footer-header-fg": "#0C0C4F",
       "navbar-link-active-bg": "transparent",
