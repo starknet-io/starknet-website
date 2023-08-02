@@ -24,8 +24,8 @@ export const Footer = ({ mainMenu, seo }: Props) => {
     <FooterComponent.Root seo={seo}>
       <SimpleGrid
         gridTemplateColumns={{
-          base: "repeat(1, minmax(0, max-content))",
-          md: "repeat(2, minmax(0, max-content))",
+          base: "repeat(1, minmax(0, 1fr))",
+          md: "repeat(2, minmax(0, 1fr))",
           lg: `repeat(${mainMenu.items?.length}, minmax(0, 1fr))`,
         }}
       >
