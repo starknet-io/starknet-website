@@ -22,22 +22,22 @@ const socialLinks = [
   {
     label: "Discord",
     href: "https://starknet.io/discord",
-    icon: <SiDiscord fontSize="1.25rem" />,
+    icon: <SiDiscord fontSize="1.25rem" style={{marginLeft: '-0.25rem'}} />,
   },
   {
     label: "GitHub",
     href: "https://github.com/starknet-io/starknet-website",
-    icon: <SiGithub fontSize="1.25rem" />,
+    icon: <SiGithub fontSize="1.25rem" style={{marginLeft: '-0.5rem'}} />,
   },
   {
     label: "Twitter",
     href: "https://twitter.com/Starknet",
-    icon: <SiTwitter fontSize="1.25rem" />,
+    icon: <SiTwitter fontSize="1.25rem" style={{marginLeft: '-0.5rem'}} />,
   },
   {
     label: "YouTube",
     href: "https://www.youtube.com/channel/UCQZ3gKgk5YJNKAQgETdZqRQ",
-    icon: <SiYoutube fontSize="1.25rem" />,
+    icon: <SiYoutube fontSize="1.25rem" style={{marginLeft: 'left'}} />,
   },
 ];
 
@@ -116,7 +116,6 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                       size="small"
                       fontWeight="normal"
                       variant="unstyled"
-                      leftIcon={social.icon}
                       color="footer-link-fg"
                       _hover={{
                         color: "footer-link-hover-fg",
@@ -124,7 +123,9 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                       display="flex"
                       gap="0.5rem"
                       padding="0.5rem 0"
+                      ml='0px !important'
                     >
+                      {social.icon}
                       {social.label}
                     </Button>
                   ))}
