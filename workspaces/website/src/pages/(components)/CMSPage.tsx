@@ -10,6 +10,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Flex,
+  Divider
 } from "@chakra-ui/react";
 import '@ui/CodeHighlight/code-highlight-init'
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
@@ -70,7 +71,10 @@ export default function CMSPage({
               lg: (data.template === "content" || data.template === "narrow content") ? "32px" : "136px",
             }}
           >
-            {data.show_title ? <Heading variant="h2" color="text-hero-fg">{data.title}</Heading> : null}
+            {data.show_title ? <>
+              <Heading variant="h2" color="text-hero-fg">{data.title}</Heading>
+              <Divider variant="primary" />
+            </> : null}
             {data.blocks?.map((block, i) => {
               return (
                 <Block
