@@ -9,7 +9,7 @@ blocks:
   - type: markdown
     body: >-
       We are happy to announce that a new builtin, the Keccak builtin, will be
-      supported on Starknet starting from version v0.12.1. 
+      supported on Starknet starting from version 0.12.1. 
 
 
       This means that the Keccak function will be available for use within the Starknet network, providing additional functionality and capabilities to developers and users.
