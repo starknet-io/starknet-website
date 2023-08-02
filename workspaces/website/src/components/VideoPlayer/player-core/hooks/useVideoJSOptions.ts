@@ -15,8 +15,6 @@ const videoJsBaseOptions = {
       toggleKey: function () {},
     },
   },
-  poster:
-    "https://image.mux.com/UZMwOY6MgmhFNXLbSFXAuPKlRPss5XNA/thumbnail.jpg?time=11",
 };
 
 export default function useVideoJSOptions({
@@ -30,6 +28,7 @@ export default function useVideoJSOptions({
     const chapter = getChapterById(chapters, currentChapter) || chapters[0];
     return {
       ...videoJsBaseOptions,
+      poster: chapter.thumbnail,
       sources: [
         {
           src: getVideoSrc(chapter.videoId),
