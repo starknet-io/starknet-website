@@ -91,6 +91,7 @@ const AmbassadorsList = (props: RootProps) => {
         overflow="hidden"
         direction="row"
         flexWrap="wrap"
+        justifyContent="space-between"
       >
         {ambassador?.map(a => {
           return (
@@ -110,8 +111,8 @@ const AmbassadorsList = (props: RootProps) => {
                 direction="column"
               >
                 <Img
-                  width="120px"
-                  height="120px"
+                  width="125px"
+                  height="125px"
                   src={a.image}
                   title={a.title}
                   objectFit="cover"
