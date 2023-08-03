@@ -1,0 +1,154 @@
+id: 79430758-4082-4325-bca6-23b95e3b2bc8
+post_type: article
+title: "Let the Games Begin: Redefining On-Chain Gaming with Starknet"
+toc: true
+published_date: 2023-08-03T12:41:17.072Z
+image: /assets/onchain-gaming-copy-3.png
+category: ecosystem
+topic:
+  - decentralization
+short_desc: Starknet is changing the gaming world by enabling fast and cheap
+  transactions while providing Ethereum's security. Two of these games are
+  Realms and Influence. We’ll explore what the games are all about, which
+  features of Starknet allow them to build next-gen systems, and how you can get
+  involved!
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ## TL;DR
+
+
+          * Starknet is redefining the crypto gaming industry by providing fast, cheap, and secure transactions on Ethereum.
+
+          * On-chain games such as Realms and Influence, built on Starknet, showcase the potential of crypto gaming.
+
+          * Starknet leverages Cairo – an ergonomic, developer-friendly Rust-like language – for game development.
+
+
+
+
+          ## Intro
+
+
+          For years crypto gaming has touted the potential to transform the gaming industry, thanks to its ability to own and transfer in-game assets. Ownership is just the start for blockchain gaming, with the greater potential being a DeFi style revolution of decentralisation and interoperability in onchain gaming. Unfortunately, the realities of slow and expensive blockchain transactions have kept that potential from being fully realized. 
+
+
+          Starknet is changing this by enabling fast and cheap transactions while providing Ethereum's security. With Starknet’s latest throughput improvements, there are already multiple on-chain games that are being built and are about to realize the potential of on-chain gaming. Two of these games are Realms and Influence. We’ll explore what the games are all about, which features of Starknet allow them to build next-gen systems, and how you can get involved!
+
+
+          First, let’s quickly examine Starknet and how it drives on-chain gaming.
+
+
+          ## Starknet and Cairo
+
+
+          Starknet is a powerful validity rollup layer (an L2) built on Ethereum. This means that not only are transactions fast and cheap (since they are “rolled” up and processed on L2) but also secure. With the [recent](https://starkware.co/resource/starknet-quantum-leap-major-throughput-improvements-are-here/) Starknet upgrade that massively increased the number of processable transactions per second (TPS). This is extremely important for  transaction-heavy industries, like on-chain gaming. 
+
+
+          Cairo is a Rust-like smart contract language that allows developers to easily build provable applications, making the most out of the scaling potential of STARKs. Multiple gaming projects (Influence, Realms, Topology, Briq, Cartridge, Dojo gaming engine, etc.) are building on Starknet using Cairo. Cairo 1.0 version has made it more user-friendly than ever, so if you last wrote code in Cairo Zero, it is time to check it out again. ([Here](https://medium.com/starkware/moving-from-solidity-to-cairo-7d44f9723c68) is a guide for developers moving from Solidity to Cairo) 
+
+
+          Now let’s explore the journey of two of the largest games close to releasing their first public versions on Starknet—Realms and Influence—and discuss both challenges and novel possibilities that stand before them.
+
+
+          ## Realms
+
+
+          [Realms.World](https://www.realms.world) – one of the pioneers of the on-chain gaming space – has multiple games and a ‘creator studio’ in development. 
+
+
+          ![Realms.World– one of the pioneers of the on-chain gaming space](/assets/realms.world-1600-600px-.png "Realms.World– one of the pioneers of the on-chain gaming space")
+
+
+          Realms was inspired by ideas from ‘Loot’, a project launched on Ethereum In 2021 with the aim to bootstrap the development of a fantasy world, and to be owned and built by the community on the blockchain. 
+
+
+          The idea of using smart contracts as building blocks to collectively build a fantasy world together on Ethereum appealed to many developers and gamers, who realized the potential that decentralization, open-sourcing, and self-custody can have on gaming.   
+
+
+          In creator-focused ‘web 2’ games, like Minecraft and Roblox, the users of the world are still visitors in the publisher’s world. With game worlds built on-chain, once deployed, they are autonomous of their original deployer and anyone can build on top of them. For gamers, the promise of on-chain games goes beyond ‘modding’ and ownership of assets to an entirely novel way of building and playing games together.
+
+
+          The Realms community was inspired by these possibilities and so formed Bibliotheca DAO to drive forward the development of a game world on-chain that encompassed Loot lore as well as its own lore. The DAO and project have been early adopters of Cairo, Starknet, and the new possibilities they offer on-chain games. 
+
+
+          ### Realms Eternum and Loot Survivor
+
+
+          ![Realms Eternum](/assets/5.png " Realms Eternum")
+
+
+          Eternum is a game from the strategy genre, that blends together the gameplay of popular browser games like Travian and Tribal War, with play patterns reminiscent of board games like Catan and Risk, with economic consideration. The 8,000 Realms of Eternum are individual territories, managed and developed by the Lord of each territory. Eternum is an eternal game: it will run as long as Ethereum is producing blocks, and the events in this world will shape its direction. 
+
+
+          Loot Survivor is a session-based game, one the first complex fully on-chain games running on any layer 2. In this game, players encounter beasts, traps and opportunities to improve their weaponry and armor with every move. The complexity of the game is made possible by the speed, cost and verifiable computation power of Starknet. Loot Survivor is the first example of an ‘immutable arcade machine’ enabled by ZK circuits.
+
+
+          ![Loot Survivor](/assets/1.png "Loot Survivor")
+
+
+          ## Influence
+
+
+          > “[Influence](https://www.influenceth.io/) is a highly strategic and massively social space colonization game, where players vie for dominance and control in the newly formed colony within the Adalian asteroid belt.” 
+
+          >
+
+          > \-Chris Lexmond, CEO of Unstoppable Games, Inc. and creator of Influence
+
+          >
+
+          > ![Influence](/assets/influence-.png "Influence")
+
+
+          After fleeing a dying Earth, humanity’s new frontier is the asteroid belt of the Adalia system. The 250,000 asteroids, each with its own unique mineral composition, all orbit the Adalian star in real-time. Players compete through multiple avenues: mining, building, trading, traveling, researching, and fighting. 
+
+
+          ![Influence](/assets/influence-2-.png "Influence")
+
+
+          In the game’s first release, Exploitation, Players focused on creating colonies in Adalia and the foundation of a player-driven in-game economy. 
+
+
+          TIn the next stages of the game – Discovery and Conflict – gamers will focus on technology advancements and inter-asteroid conflicts. At this point, the game will evolve into a full-fledged player-versus-player warfare experience.
+
+
+          Influence offers players the freedom to choose whether to claim their very own asteroid or to start their journey on Adalia Prime, the largest asteroid in the system which serves as open land from which all players can mine valuable resources to begin to expand their influence. Interestingly enough, the structure of the asteroid belt adheres to the principles of real-world orbital physics. 
+
+
+          Unstoppable Games will release the inaugural fully-playable version of the game on testnet soon, dubbed the “Pre-Release”.
+
+
+          Currently, 15+ independent applications are already being built with Influence contracts at the center—something that is only possible when you have an open and permissionless framework like blockchain.
+
+
+          ## The Revolution of On-Chain Gaming
+
+
+          1. Everlasting: Both Realms and Influence are intended to be everlasting games. As long as the game’s  logic stays on-chain  and the blockchain supporting the games is active, the games will continue to exist  and should be able to function independently of the developers that built them. Moreover, since the entire game logic exists on-chain, others can build on top of the game code 
+
+          2. Empowering players and third-party contributors:  players are allowed to have a role in shaping, contribute to the development and engage with the games in ways that transcend traditional gaming boundaries. This might involve creating analytical tools, resource managers, or DPS meters. This player-driven evolution contributs to  ever-evolving the game, and creating a vibrant ecosystem. 
+
+          3. Enhanced control of game assets: players can buy, sell, and trade assets freely without restrictions from a central authority.
+
+          4. Dojo Power: For Realms creatores building the game with [Dojo,](https://www.starknet.io/en/posts/developers/dojo-on-starknet-game-on) the world's first provable game engine, has made the work of the game’s developers much easier( Read more about Dojo [here](https://medium.com/starkware/dojo-on-starknet-game-on-f75ad441d869).)  
+
+          5. Cairo as a bridge: As apperent on Realms [codebase,](https://github.com/BibliothecaDAO) the game was written in Cairo. As the gaming industry moves from the Web2 to web3, the fact that Cairo is a Rust-like language can played a crucial role in the gaming landscape on Starknet: Game developers familiar with Rust-like languages can transition into blockchain game development. In this context, Cairo can serve as a bridge. 
+
+
+          > “Starknet is taking the long game, and in software, the long game is the game you want to play. Because there is so much optimization that can happen on the CairoVM in the near future.” 
+
+          >
+
+          > Realms Developers
+
+
+          ## Conclusion
+
+
+          Onchain games empower players and are leading to a new era in gaming. This approach, grounded in decentralization, cultivates a player-driven economy and fosters vibrant in-game communities. Moreover, it encourages innovative gameplay, leading to a dynamic, evolving ecosystem. 
+
+
+          Utilizing Cairo, the native language of Starknet only enhances onchain game's ability to succeed as they can process massive computational data, have ultra-efficient verification, and create seamless UX thanks to account abstraction. Additionally, as enhancements such as Volition and [Native Account Abstraction](https://www.starknet.io/en/posts/engineering/native-account-abstraction-opening-blockchain-to-new-possibilities) are integrated into Starknet, the cost of transactions is set to decrease much further. With continuous improvements in the Starknet sequencer, the transaction speed will only increase. Amidst this progressive scenario, the outlook for the gaming industry, and Starknet, has never been more promising.
