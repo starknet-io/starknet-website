@@ -41,18 +41,6 @@ export const H1 = (args: CustomHeadingProps) => (
     <HStack p={12}>
       <Heading variant="h1" {...args}>Heading 1</Heading>
     </HStack>
-    <HStack p={12}>
-      <></>
-      <Heading
-        variant="h1"
-        fontWeight="normal"
-        color="heading-navy-fg"
-        mt="-20px"
-        fontSize={{ base: "56px", md: "80px", xl: "92px" }}
-      >
-        Responsive heading
-      </Heading>
-    </HStack>
   </ThemeProvider>
 );
 export const H2 = (args: CustomHeadingProps) => (

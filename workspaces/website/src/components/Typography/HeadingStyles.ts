@@ -1,7 +1,7 @@
 export const headingTheme = {
   h1: {
     fontSize: { base: "2.5rem", md: "5rem" },
-    lineHeight: { base: "120%", md: "120%" },
+    lineHeight: { base: "120%", md: "100%" },
     fontWeight: 600
   },
   h2: {
