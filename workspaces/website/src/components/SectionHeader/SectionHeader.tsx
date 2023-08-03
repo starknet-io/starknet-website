@@ -26,7 +26,8 @@ export const SectionHeader = ({
         <Box>
           <Heading
             variant="h2"
-            color="text-hero-fg"
+            color="heading-navy-fg"
+            fontWeight="extrabold"
           >
             {title}
           </Heading>
