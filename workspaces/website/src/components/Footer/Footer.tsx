@@ -58,7 +58,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
             <Box
               py={{ base: "12", md: "16" }}
               maxW={1344}
-              px="2rem"
+              px="2xl"
               marginInline="auto"
             >
               {children}
@@ -66,18 +66,17 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
             <Box
               width="100%"
               maxW={1344}
-              px="2rem"
+              px="2xl"
               marginInline="auto"
             >
               <Stack
-                pb="38px"
-                pt="38px"
+                py="3xl"
                 justify="space-between"
                 direction={{ base: "column", lg: "row" }}
                 align={{ base: "start", lg: "center" }}
                 width="100%"
                 gap={{
-                  base: "24px",
+                  base: "xl",
                   lg: "0",
                 }}
               >
@@ -85,15 +84,15 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   justify={{ base: "space-between", sm: "start" }}
                   width={{ base: "full", sm: "auto" }}
                   spacing="0"
-                  gap="24px"
+                  gap="xl"
                 >
                   <Box>
-                    <StarknetLogo height="32" />
+                    <StarknetLogo height="32px" />
                   </Box>
                   <Center height="32px">
                     <Divider
                       orientation="vertical"
-                      borderColor="footer-divider-bg"
+                      borderColor="divider-bg"
                       opacity="1"
                     />
                   </Center>
@@ -105,7 +104,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   padding={{ base: "20px 0", md: "8px 0px" }}
                   fontSize="14px"
                   lineHeight="24px"
-                  gap={{ base: "32px", md: "40px" }}
+                  gap={{ base: "2xl", md: "3xl" }}
                   flexDirection={{ base: "column", md: "row" }}
                 >
                   {socialLinks.map((social) => (
@@ -118,7 +117,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                       variant="unstyled"
                       color="footer-link-fg"
                       _hover={{
-                        color: "footer-link-hover-fg",
+                        color: "fg-default-hover",
                       }}
                       display="flex"
                       gap="0.5rem"
@@ -150,13 +149,13 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
   return (
     <Stack
       bg={color}
-      minW={{ lg: "40px" }}
+      minW={{ lg: "3xl" }}
       padding={{
         base: "40px 0px",
         md: "40px 40px 0px",
         lg: "0px 40px 1.5rem",
       }}
-      borderColor="footer-divider-bg"
+      borderColor="divider-bg"
       _even={{
         borderLeftWidth: {
           base: "0px",
@@ -186,7 +185,7 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
     >
       <Heading
         variant="h4"
-        color="footer-header-fg"
+        color="fg-default-hover"
         fontWeight="500"
         paddingY="1.5rem"
       >
@@ -220,7 +219,6 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
     <Link
       fontSize="sm"
       px="0"
-      color="footer-link-fg"
       borderRadius={18}
       display="flex"
       alignItems="center"
@@ -228,12 +226,12 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
       textDecoration="none"
       gap="4px"
       _hover={{
-        color: "footer-link-hover-fg",
+        color: "fg-default-hover",
       }}
       _active={{
-        color: "footer-link-hover-fg",
+        color: "fg-default-hover",
         svg: {
-          color: "footer-link-hover-fg",
+          color: "fg-default-hover",
         },
       }}
       href={href}
