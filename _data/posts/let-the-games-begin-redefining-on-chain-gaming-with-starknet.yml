@@ -27,8 +27,6 @@ blocks:
           * Starknet leverages Cairo – an ergonomic, developer-friendly Rust-like language – for game development.
 
 
-
-
           ## Intro
 
 
@@ -127,15 +125,15 @@ blocks:
           ## The Revolution of On-Chain Gaming
 
 
-          1. Everlasting: Both Realms and Influence are intended to be everlasting games. As long as the game’s  logic stays on-chain  and the blockchain supporting the games is active, the games will continue to exist  and should be able to function independently of the developers that built them. Moreover, since the entire game logic exists on-chain, others can build on top of the game code 
+          1. Everlasting: Both Realms and Influence are intended to be everlasting games. As long as the game’s logic stays on-chain and the blockchain supporting the games is active, the games will continue to exist and should be able to function independently of the developers that built them. Moreover, since the entire game logic exists on-chain, others can build on top of the game code. 
 
-          2. Empowering players and third-party contributors:  players are allowed to have a role in shaping, contribute to the development and engage with the games in ways that transcend traditional gaming boundaries. This might involve creating analytical tools, resource managers, or DPS meters. This player-driven evolution contributs to  ever-evolving the game, and creating a vibrant ecosystem. 
+          2. Empowering players and third-party contributors:  players are allowed to have a role in shaping, contribute to the development and engage with the games in ways that transcend traditional gaming boundaries. This might involve creating analytical tools, resource managers, or DPS meters. This player-driven evolution contributes to ever-evolving the game, and creating a vibrant ecosystem. 
 
           3. Enhanced control of game assets: players can buy, sell, and trade assets freely without restrictions from a central authority.
 
-          4. Dojo Power: For Realms creatores building the game with [Dojo,](https://www.starknet.io/en/posts/developers/dojo-on-starknet-game-on) the world's first provable game engine, has made the work of the game’s developers much easier( Read more about Dojo [here](https://medium.com/starkware/dojo-on-starknet-game-on-f75ad441d869).)  
+          4. Dojo Power: For Realms creators building the game with [Dojo,](https://www.starknet.io/en/posts/developers/dojo-on-starknet-game-on) the world's first provable game engine, has made the work of the game’s developers much easier( Read more about Dojo [here](https://medium.com/starkware/dojo-on-starknet-game-on-f75ad441d869).)  
 
-          5. Cairo as a bridge: As apperent on Realms [codebase,](https://github.com/BibliothecaDAO) the game was written in Cairo. As the gaming industry moves from the Web2 to web3, the fact that Cairo is a Rust-like language can played a crucial role in the gaming landscape on Starknet: Game developers familiar with Rust-like languages can transition into blockchain game development. In this context, Cairo can serve as a bridge. 
+          5. Cairo as a bridge: As apparent on Realms [codebase,](https://github.com/BibliothecaDAO) the game was written in Cairo. As the gaming industry moves from Web2 to web3, the fact that Cairo is a Rust-like language can play a crucial role in the gaming landscape on Starknet: Game developers familiar with Rust-like languages can transition into blockchain game development. In this context, Cairo can serve as a bridge. 
 
 
           > “Starknet is taking the long game, and in software, the long game is the game you want to play. Because there is so much optimization that can happen on the CairoVM in the near future.” 
