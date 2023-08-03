@@ -3,6 +3,7 @@ export const tokens = {
     light: {
       "listLink-fg": "#5C94FF",
       "link-fg": "#3F8CFF",
+      "link-hover-fg": "#2C73DD",
       "bg-default": "#FBFBFB",
       "fg-default": "#6B7280",
       "fg-muted": "#858585",
@@ -214,6 +215,7 @@ export const tokens = {
     dark: {
       "listLink-fg": "#AFCAFF",
       "link-fg": "#5C9EFF",
+      "link-hover-fg": "#2C73DD",
       "bg-default": "#0B0B0B",
       "fg-default": "#CCCCCC",
       "fg-muted": "#7E7E7E",
@@ -433,6 +435,10 @@ export const semanticTokens = {
     "link-fg": {
       default: tokens.colors.light["link-fg"],
       _dark: tokens.colors.dark["link-fg"],
+    },
+    "link-hover-fg": {
+      default: tokens.colors.light["link-hover-fg"],
+      _dark: tokens.colors.dark["link-hover-fg"],
     },
     "bg-default": {
       default: tokens.colors.light["bg-default"],

@@ -13,7 +13,10 @@ const md = defineStyle({
 });
 
 const baseStyle = defineStyle({
-  textColor:  "link-fg"
+  textColor:  "link-fg",
+  _hover: {
+    textColor: "link-hover-fg"
+  }
 })
 
 export const customLinkTheme = defineStyleConfig({
