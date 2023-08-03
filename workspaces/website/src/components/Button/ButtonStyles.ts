@@ -7,10 +7,11 @@ const outline = defineStyle({
   color: "btn-outline-hover-fg",
   borderWidth: 1,
   borderStyle: "solid",
+  borderColor: "btn-outline-hover-fg",
   minWidth: "none",
   lineHeight: "24px",
   height: "auto",
-  borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+  borderImage: "none",
   bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
   _dark: {
     bg: "linear-gradient(#0B0B0B, #0B0B0B) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
@@ -132,7 +133,7 @@ const ghost = defineStyle({
   borderRadius: 8,
   fontWeight: "medium",
   fontSize: "16px",
-  color: "btn-outline-hover-fg",
+  color: "btn-ghost-fg",
   minWidth: "none",
   lineHeight: "24px",
   height: "auto",
@@ -152,7 +153,7 @@ const ghost = defineStyle({
   },
   _hover: {
     bg: "#eae9eb",
-    color: "btn-outline-hover-fg",
+    color: "btn-ghost-hover-fg",
     _dark: {
       bg: "#28282c"
     }
@@ -191,7 +192,7 @@ const solid = defineStyle({
   bg: "btn-primary-bg",
   borderWidth: "1px",
   borderStyle: "solid",
-  borderColor: "btn-primary-bg",
+  borderColor: "transparent",
   "&:disabled": {
     background: 'btn-primary-disabled-bg',
     color: 'btn-primary-disabled-fg',
@@ -201,6 +202,7 @@ const solid = defineStyle({
     bg: "btn-primary-hover-bg",
     _dark: {
       bg: "bg.main",
+      borderColor: "transparent",
     },
   },
   _active: {
@@ -208,29 +210,34 @@ const solid = defineStyle({
     boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
     outlineWidth: 1,
     outlineOffset: 1,
+    borderColor: "transparent",
     _dark: {
       bg: "grey.morning",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      borderColor: "transparent",
       _focus: {
         bg: "grey.morning",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+        borderColor: "transparent",
       }
     },
   },
   _dark: {
     bg: "white",
+    borderColor: "transparent",
   },
   _focusVisible: {
-    outlineOffset: 1
+    outlineOffset: 1,
+    borderColor: "transparent",
   },
   _focus: {
     boxShadow: "0px 0px 0px 3px #3F8CFF, 0px 0px 0px 1px #FFFFFF",
-    borderColor: "selected.main",
+    borderColor: "transparent",
     borderWidth: "1px",
     borderStyle: "solid",
     _dark: {
       boxShadow: "none",
-      borderColor: "selected.100",
+      borderColor: "transparent",
       borderWidth: "1px",
       borderStyle: "solid"
     }

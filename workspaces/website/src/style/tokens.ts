@@ -30,6 +30,8 @@ export const tokens = {
       "btn-outline-active-border": "#EFEFEF",
       "btn-outline-disabled-border": "#E9E8EA",
       "btn-outline-disabled-fg": "#706F78",
+      "btn-ghost-fg": "rgba(4, 3, 13, 0.67)",
+      "btn-ghost-hover-fg": "#0C0C4F",
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -239,6 +241,8 @@ export const tokens = {
       "btn-outline-active-border": "#000000",
       "btn-outline-disabled-border": "#2E2E32",
       "btn-outline-disabled-fg": "#706F78",
+      "btn-ghost-fg": "rgba(248, 247, 253, 0.80)",
+      "btn-ghost-hover-fg": "#F0F0FF",
       "btn-bg": "",
       "btn-hover-bg": "",
       "btn-active-bg": "",
@@ -546,6 +550,14 @@ export const semanticTokens = {
     "btn-rounded-border-color": {
       default: tokens.colors.light["btn-rounded-border-color"],
       _dark: tokens.colors.dark["btn-rounded-border-color"],
+    },
+    "btn-ghost-fg": {
+      default: tokens.colors.light["btn-ghost-fg"],
+      _dark: tokens.colors.dark["btn-ghost-fg"],
+    },
+    "btn-ghost-hover-fg": {
+      default: tokens.colors.light["btn-ghost-hover-fg"],
+      _dark: tokens.colors.dark["btn-ghost-hover-fg"],
     },
     "article-card-bg": {
       default: tokens.colors.light["article-card-bg"],
