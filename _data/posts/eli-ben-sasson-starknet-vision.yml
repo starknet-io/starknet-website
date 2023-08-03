@@ -1,0 +1,62 @@
+id: e910a26a-6976-415a-9da9-48f476989ab1
+post_type: video
+title: Eli Ben-Sasson - Starknet Vision
+published_date: 2023-07-19T14:36:33.116Z
+video:
+  url: https://www.youtube.com/watch?v=1FTWIJoSbLA&t=54s
+  id: 1FTWIJoSbLA
+  data:
+    kind: youtube#video
+    etag: JvtPTsVp0jseuZNabzx--axOlzQ
+    id: 1FTWIJoSbLA
+    snippet:
+      publishedAt: 2023-07-19T21:46:05Z
+      channelId: UCOka-g6iJEpQ9YSIoSn77uQ
+      title: Eli Ben-Sasson - Starknet Vision
+      description: "This talk will survey Starknet’s progress, next steps, and
+        mission: to empower individuals to implement and use any social
+        function, with the integrity that arises only from a maximally broad
+        social consensus"
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/1FTWIJoSbLA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/1FTWIJoSbLA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/1FTWIJoSbLA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/1FTWIJoSbLA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/1FTWIJoSbLA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: "[EthCC] Livestream 4"
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Eli Ben-Sasson - Starknet Vision
+        description: "This talk will survey Starknet’s progress, next steps, and
+          mission: to empower individuals to implement and use any social
+          function, with the integrity that arises only from a maximally broad
+          social consensus"
+    contentDetails:
+      duration: PT24M21S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/ethcc-conference-video-image.jpeg
+category: community-and-events
+short_desc: "This talk will survey Starknet’s progress, next steps, and mission:
+  to empower individuals to implement and use any social function with the
+  integrity that arises only from a maximally broad social consensus."
