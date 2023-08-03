@@ -72,8 +72,10 @@ export default function CMSPage({
             }}
           >
             {data.show_title ? <>
-              <Heading variant="h2" color="text-hero-fg">{data.title}</Heading>
-              <Divider variant="primary" />
+              <Box pb="6">
+                <Heading variant="h2" color="text-hero-fg">{data.title}</Heading>
+                <Divider variant="primary" mt="8px" />
+              </Box>
             </> : null}
             {data.blocks?.map((block, i) => {
               return (
