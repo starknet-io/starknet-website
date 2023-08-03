@@ -35,6 +35,17 @@ export const Solid = () => (
               boxSize="24px"
             />
           } variant="solid">With icon</Button>
+        <Button leftIcon={
+          <ChakraIcon
+            as={HiPlay}
+            boxSize="24px"
+          />
+        } rightIcon={
+          <ChakraIcon
+            as={HiPlay}
+            boxSize="24px"
+          />
+        } variant="solid">With icon</Button>
         <Button variant="solid" isDisabled>Disabled</Button>
       </>
     </HStack>
@@ -52,6 +63,11 @@ export const Outline = () => (
               as={HiPlay}
               boxSize="24px"
             />
+          } rightIcon={
+            <ChakraIcon
+              as={HiPlay}
+              boxSize="24px"
+            />
           } variant="outline">With icon</Button>
         <Button variant="outline" isDisabled>Disabled</Button>
       </>
@@ -65,7 +81,12 @@ export const Ghost = () => (
       <>
         <Button variant="ghost">Ghost button</Button>
         <Button variant="ghost" size="sm">Ghost button small</Button>
-        <Button rightIcon={
+        <Button leftIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } rightIcon={
           <ChakraIcon
             as={ChevronDownIcon}
             boxSize="24px"
@@ -89,12 +110,17 @@ export const Rounded = () => (
       <>
         <Button variant="rounded">Rounded button</Button>
         <Button variant="rounded" size="sm">Rounded button small</Button>
-        <Button rightIcon={
+        <Button leftIcon={
           <ChakraIcon
             as={ChevronDownIcon}
             boxSize="24px"
             />
-          } variant="rounded">With icon</Button>
+          } rightIcon={
+            <ChakraIcon
+              as={ChevronDownIcon}
+              boxSize="24px"
+              />
+            } variant="rounded">With icon</Button>
         </>
       <Button variant="rounded" isDisabled>Rounded button disabled</Button>
       <Button rightIcon={

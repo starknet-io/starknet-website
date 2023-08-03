@@ -19,7 +19,9 @@ const outline = defineStyle({
   "&:disabled": {
     color: 'btn-outline-disabled-fg',
     borderColor: 'btn-outline-disabled-border',
-    borderImage: "none"
+    borderImage: "none",
+    boxShadow: "none",
+    bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
   },
   _focusVisible: {
     boxShadow: "none",
@@ -32,6 +34,13 @@ const outline = defineStyle({
   _hover: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
     bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none",
+      bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    },
     _dark: {
       bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
     }
@@ -41,6 +50,13 @@ const outline = defineStyle({
     bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     outlineWidth: 1,
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none",
+      bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    },
     _focus: {
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       outlineWidth: 1
@@ -53,17 +69,7 @@ const outline = defineStyle({
         outlineWidth: 1
       }
     }
-  },
-  _focus: {
-    boxShadow: "none",
-    borderColor: "selected.main",
-    _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
-    }
-  },
+  }
 });
 
 const rounded = defineStyle({
@@ -81,7 +87,8 @@ const rounded = defineStyle({
   "&:disabled": {
     color: 'btn-outline-disabled-fg',
     borderColor: 'btn-outline-disabled-border',
-    borderImage: "none"
+    borderImage: "none",
+    boxShadow: "none"
   },
   _focusVisible: {
     boxShadow: "1px solid #ffffff",
@@ -96,6 +103,13 @@ const rounded = defineStyle({
   _hover: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
     bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    "&:disabled": {
+      bg: "btn-rounded-bg",
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none !important"
+    },
     _dark: {
       bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
     }
@@ -105,6 +119,12 @@ const rounded = defineStyle({
     bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1) !important",
     outlineWidth: 1,
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none !important"
+    },
     _focus: {
       borderColor: "white",
       outlineWidth: 1
@@ -131,6 +151,7 @@ const ghost = defineStyle({
   bg: "transparent",
   "&:disabled": {
     color: 'btn-outline-disabled-fg',
+    boxShadow: "none"
   },
   _focusVisible: {
     boxShadow: "none",
@@ -143,6 +164,11 @@ const ghost = defineStyle({
   _hover: {
     bg: "#eae9eb",
     color: "btn-ghost-hover-fg",
+    "&:disabled": {
+      bg: "transparent",
+      color: 'btn-outline-disabled-fg',
+      boxShadow: "none"
+    },
     _dark: {
       bg: "#28282c"
     }
@@ -151,6 +177,10 @@ const ghost = defineStyle({
     bg: "#eae9eb",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     outlineWidth: 1,
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      boxShadow: "none"
+    },
     _focus: {
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       outlineWidth: 1
@@ -176,9 +206,15 @@ const solid = defineStyle({
   "&:disabled": {
     background: 'btn-primary-disabled-bg',
     color: 'btn-primary-disabled-fg',
+    boxShadow: "none"
   },
   _hover: {
     bg: "btn-primary-hover-bg",
+    "&:disabled": {
+      background: 'btn-primary-disabled-bg !important',
+      color: 'btn-primary-disabled-fg',
+      boxShadow: "none !important"
+    },
     _dark: {
       bg: "bg.main",
     },
@@ -187,6 +223,11 @@ const solid = defineStyle({
     bg: "btn-primary-active-bg",
     boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
     outlineOffset: 1,
+    "&:disabled": {
+      background: 'btn-primary-disabled-bg !important',
+      color: 'btn-primary-disabled-fg',
+      boxShadow: "none !important"
+    },
     _dark: {
       bg: "grey.morning",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",

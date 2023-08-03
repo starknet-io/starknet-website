@@ -39,7 +39,7 @@ export const Intro = () => {
     <Heading
       aria-label={texts[index]}
       ref={ref}
-      variant="h2"
+      variant="h1"
       mt="8"
       fontWeight="bold"
       height={{ base: "1.2em" }}
