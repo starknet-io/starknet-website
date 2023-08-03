@@ -92,7 +92,7 @@ export const HomepageHero = ({ seo }: Props) => {
             <Intro />
 
             <Heading
-              variant="h1"
+              variant="h1hero"
               fontWeight="bold"
               color="heading-navy-fg"
               mt={{ base: "0", lg: "-20px" }}

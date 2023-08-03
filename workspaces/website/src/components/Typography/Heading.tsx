@@ -12,5 +12,5 @@ export const Heading: React.FC<CustomHeadingProps> = ({
 }) => {
   const { ...rest } = props;
   const Tag = variant || "h2";
-  return <ChakraHeading {...headingTheme[Tag as keyof typeof headingTheme]} as={as ? as : variant as typeof as} {...rest} />;
+  return <ChakraHeading {...headingTheme[Tag as keyof typeof headingTheme]} as={as ? as : variant === "h1hero" ? "h1" : variant as typeof as} {...rest} />;
 };
