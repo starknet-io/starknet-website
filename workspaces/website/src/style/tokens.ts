@@ -69,8 +69,9 @@ export const tokens = {
       "navbar-link-fg": "#6B7280",
       "navbar-link-hover-bg": "#FBFBFB",
       "navbar-link-hover-fg": "#5C94FF",
-      "footer-link-fg": "#858585",
-      "footer-header-fg": "#080844",
+      "footer-link-fg": "rgba(4, 3, 13, 0.67)",
+      "footer-link-hover-fg": "#0C0C4F",
+      "footer-header-fg": "#0C0C4F",
       "navbar-link-active-bg": "transparent",
       "navbar-link-active-fg": "#2166EF",
       "navbar-link-visited-bg": "transparent",
@@ -272,6 +273,7 @@ export const tokens = {
       "navbar-link-hover-bg": "#121212",
       "navbar-link-hover-fg": "#9EBFFF",
       "footer-link-fg": "#858585",
+      "footer-link-hover-fg": "#FFFFFF",
       "footer-header-fg": "#ffffff",
       "footer-stack-bg": "#0B0B0B",
       "navbar-link-active-bg": "transparent",
@@ -633,6 +635,10 @@ export const semanticTokens = {
     "footer-link-fg": {
       default: tokens.colors.light["footer-link-fg"],
       _dark: tokens.colors.dark["footer-link-fg"],
+    },
+    "footer-link-hover-fg": {
+      default: tokens.colors.light["footer-link-hover-fg"],
+      _dark: tokens.colors.dark["footer-link-hover-fg"],
     },
     "footer-header-fg": {
       default: tokens.colors.light["footer-header-fg"],
