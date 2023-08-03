@@ -74,7 +74,7 @@ export default function AnnouncementPost({
             />
           ) : null}
           <Badge variant="community_and_events">{announcementsPost.badge}</Badge>
-          <Heading variant="h2" mt="4" color="heading-navy-fg">
+          <Heading variant="h2" mt="4" color="heading-navy-fg" fontWeight="extrabold">
             {announcementsPost.title}
           </Heading>
           <Divider mt="8px" mb="32px" />

@@ -73,7 +73,13 @@ export default function CMSPage({
           >
             {data.show_title ? <>
               <Box pb="6">
-                <Heading variant="h2" color="text-hero-fg">{data.title}</Heading>
+                <Heading
+                  variant="h2"
+                  color="heading-navy-fg"
+                  fontWeight="extrabold"
+                >
+                  {data.title}
+                </Heading>
                 <Divider variant="primary" mt="8px" />
               </Box>
             </> : null}

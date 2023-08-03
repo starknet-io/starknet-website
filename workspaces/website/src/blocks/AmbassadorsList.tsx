@@ -77,7 +77,7 @@ const AmbassadorsList = (props: RootProps) => {
       {title && (
         <Heading
           variant="h3"
-          color="councils-title-fg"
+          color="heading-navy-fg"
           id={`toc-${slugify(title)}`}
           marginBottom="24px"
           lineHeight="150%"
@@ -111,8 +111,8 @@ const AmbassadorsList = (props: RootProps) => {
                 direction="column"
               >
                 <Img
-                  width="125px"
-                  height="125px"
+                  width="130px"
+                  height="130px"
                   src={a.image}
                   title={a.title}
                   objectFit="cover"
