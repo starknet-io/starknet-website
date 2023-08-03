@@ -40,54 +40,54 @@ blocks:
         subLabel:
           label: Get notified on technical updates to Starknet
   - type: link_list
-    randomize: true
+    randomize: false
     heading: "Global Twitter communities "
     blocks:
       - link:
           hasIcon: true
-          custom_title: "Turkey "
-          custom_external_link: https://twitter.com/StarkNetTurkiye
-      - link:
-          hasIcon: true
-          custom_title: Japan
-          custom_external_link: https://twitter.com/StarkNetJapan
-      - link:
-          hasIcon: true
-          custom_title: Portuguese
-          custom_external_link: https://twitter.com/StarknetPt
-      - link:
-          hasIcon: true
-          custom_title: "Gaming "
-          custom_external_link: https://twitter.com/Starknetgaming
-      - link:
-          hasIcon: true
-          custom_title: Ecosystem
-          custom_external_link: https://twitter.com/StarknetEco
-      - link:
-          hasIcon: true
-          custom_title: Africa
+          custom_title: Starknet Africa
           custom_external_link: https://twitter.com/StarkNetAfrica
       - link:
           hasIcon: true
-          custom_title: China
+          custom_title: Starknet China
           custom_external_link: https://twitter.com/StarkNet_ZH
       - link:
           hasIcon: true
-          custom_title: Vietnam
-          custom_external_link: https://twitter.com/starknetvietnam
+          custom_title: Starknet Congo
+          custom_external_link: https://twitter.com/StarknetCongo
       - link:
           hasIcon: true
-          custom_title: "Netherlands "
-          custom_external_link: https://twitter.com/StarknetNL
+          custom_title: Starknet Ecosystem
+          custom_external_link: https://twitter.com/StarknetEco
       - link:
           hasIcon: true
-          custom_title: Italy
-          custom_external_link: https://twitter.com/StarknetItaly
+          custom_title: "Starknet Gaming "
+          custom_external_link: https://twitter.com/Starknetgaming
       - link:
           hasIcon: true
-          custom_title: India
+          custom_title: Starknet India
           custom_external_link: https://twitter.com/StarknetIndEco
       - link:
           hasIcon: true
-          custom_title: Congo
-          custom_external_link: https://twitter.com/StarknetCongo
+          custom_title: Starknet Italy
+          custom_external_link: https://twitter.com/StarknetItaly
+      - link:
+          hasIcon: true
+          custom_title: Starknet Japan
+          custom_external_link: https://twitter.com/StarkNetJapan
+      - link:
+          hasIcon: true
+          custom_title: "Starknet Netherlands "
+          custom_external_link: https://twitter.com/StarknetNL
+      - link:
+          hasIcon: true
+          custom_title: Starknet Portuguese
+          custom_external_link: https://twitter.com/StarknetPt
+      - link:
+          hasIcon: true
+          custom_title: "Starknet Turkey "
+          custom_external_link: https://twitter.com/StarkNetTurkiye
+      - link:
+          hasIcon: true
+          custom_title: Starknet Vietnam
+          custom_external_link: https://twitter.com/starknetvietnam
