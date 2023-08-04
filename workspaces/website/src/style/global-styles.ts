@@ -6,7 +6,7 @@ export const styles = {
     },
     body: {
       background: "bg-default",
-      color: "fg-body",
+      color: "fg-default",
     },
     "p + h3, ul + h3, .hljs-box + h3": {
       marginTop: "48px",

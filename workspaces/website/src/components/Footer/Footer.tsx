@@ -51,8 +51,7 @@ type RootProps = {
 
 const Root = ({ children, seo, ...rest }: RootProps) => {
   return (
-    <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto">
-      <Box>
+    <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto" overflowX='hidden' color='fg-default'>
         <Box display="flex" justifyContent="center">
           <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
             <Box
@@ -96,7 +95,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                       opacity="1"
                     />
                   </Center>
-                  <Text fontSize="sm" color="footer-link-fg">
+                  <Text fontSize="sm">
                     {seo?.footerText}
                   </Text>
                 </HStack>
@@ -115,7 +114,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                       size="small"
                       fontWeight="normal"
                       variant="unstyled"
-                      color="footer-link-fg"
+                      color="fg-default-light"
                       _hover={{
                         color: "fg-default-hover",
                       }}
@@ -133,7 +132,6 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
             </Box>
           </Container>
         </Box>
-      </Box>
     </Box>
   );
 };
@@ -200,7 +198,7 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
           "& > *": {
             paddingBlock: "0.5rem",
           },
-          color: "footer-link-fg",
+          color: "fg-default-light",
         }}
       >
         {children}
@@ -225,6 +223,8 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
       justifyContent="flex-start"
       textDecoration="none"
       gap="4px"
+      color="fg-default-light"
+      fontWeight={400}
       _hover={{
         color: "fg-default-hover",
       }}

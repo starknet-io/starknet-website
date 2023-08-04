@@ -56,6 +56,11 @@ export default function Navbar({
                 maxW="900px"
                 mx="auto"
                 gap="48px"
+                // sx={{
+                //   '& a': {
+                //     fontWeight: 'normal',
+                //   },
+                // }}
               >
                 {mainMenuItem.columns?.length &&
                   mainMenuItem.columns?.map((column, columnIndex) => (
