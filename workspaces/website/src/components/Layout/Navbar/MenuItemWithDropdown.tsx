@@ -26,22 +26,19 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
       <>
         <PopoverTrigger>
           <Button
-            color={isOpen ? "button-nav-active-fg" : "button-nav-fg"}
-            bg={isOpen ? "button-nav-hover-bg" : "button-nav-bg"}
+            color="fg-default"
+            _hover={{ color: "fg-default-hover" , bg: 'transparent'}}
             size="sm"
-            pl="16px"
-            pr="8px"
             height="40px"
+            p="8px 12px"
             variant="link"
+            ml="0px !important"
             borderRadius="4px"
             fontWeight="400"
             rightIcon={
               <PopoverIcon
                 isOpen={isOpen}
-                color={
-                  isOpen ? "button-nav-active-icon-fg" : "button-nav-icon-fg"
-                }
-                sx={{marginLeft: "-2px"}}
+                sx={{ marginLeft: "-2px" }}
               />
             }
           >
@@ -54,8 +51,6 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
           px="24px"
           pt="24px"
           width="auto"
-
-          // maxW={{ base: "sm", md: "2xl" }}
         >
           {children}
         </PopoverContent>
