@@ -144,7 +144,7 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
   min-width: 177px;
   border-radius: 8px;
   border: 0px;
-  color: var(--chakra-colors-fg-default);
+  color: var(--chakra-colors-fg-default-light);
   background-color: var(--chakra-colors-nav-searchinput-bg);
 }
 .aa-DetachedSearchButtonIcon {

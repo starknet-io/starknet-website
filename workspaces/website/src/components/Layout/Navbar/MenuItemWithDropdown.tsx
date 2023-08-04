@@ -26,7 +26,7 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
       <>
         <PopoverTrigger>
           <Button
-            color="fg-default"
+            color="fg-default-light"
             _hover={{ color: "fg-default-hover" , bg: 'transparent'}}
             size="sm"
             height="40px"
