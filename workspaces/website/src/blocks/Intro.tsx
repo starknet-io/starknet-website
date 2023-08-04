@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
 const texts = [
-  "Welcome to",
+  "scalability",
   "へようこそ",
   "Bienvenue à",
   "ברוכים הבאים ל",
@@ -39,13 +39,17 @@ export const Intro = () => {
     <Heading
       aria-label={texts[index]}
       ref={ref}
-      variant="h2"
+      variant="h1hero"
+      as="span"
       mt="8"
-      fontWeight="bold"
-      height={{ base: "1.2em" }}
-      fontSize={{ base: "39px", md: "55px", xl: "80px" }}
-      fontFamily="InterVariable, Tajawal, Noto Sans Hebrew, Noto Sans JP, Noto Sans TC, Noto Sans SC"
-      color="heading-navy-fg"
+      height={{ base: "1.4em" }}
+      sx={{
+        background: "linear-gradient(271deg, #FFFDD8 0%, #EC796B 15.56%, #D672EF 43.09%, #8BF3F9 74.52%)",
+        "background-clip": "text",
+        "-webkit-background-clip": "text",
+        "-webkit-text-fill-color": "transparent",
+        lineHeight: "98.5px"
+      }}
     />
   );
 };

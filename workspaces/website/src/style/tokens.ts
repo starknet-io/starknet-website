@@ -2,6 +2,8 @@ export const tokens = {
   colors: {
     light: {
       "listLink-fg": "#5C94FF",
+      "link-fg": "#3F8CFF",
+      "link-hover-fg": "#2C73DD",
       "bg-default": "#FBFBFB",
       "fg-body": "#6B7280",
       "fg-default": "#04030DAB",
@@ -17,13 +19,24 @@ export const tokens = {
       "button-nav-active-fg": "#363636",
       "button-nav-active-icon-fg": "#CCCCCC",
       "btn-outline-border": "#EFEFEF",
-      "btn-outline-hover-fg": "#5C94FF",
+      "btn-outline-hover-bg": "#2B1E3703",
+      "btn-outline-hover-fg": "#0C0C4F",
+      "btn-outline-hover-border": "#E175B1",
       "btn-outline-active-fg": "#6B7280",
+      "btn-outline-disabled-border": "#E9E8EA",
+      "btn-outline-disabled-fg": "#706F78",
+      "btn-ghost-fg": "rgba(4, 3, 13, 0.67)",
+      "btn-ghost-hover-fg": "#0C0C4F",
       "btn-primary-bg": "#0C0C4F",
-      "btn-primary-hover-bg": "#131365",
-      "btn-primary-active-bg": "#150E1F",
+      "btn-primary-hover-bg": "#303093",
+      "btn-primary-disabled-bg": "#E9E8EA",
+      "btn-primary-disabled-fg": "#908E96",
+      "btn-primary-active-bg": "#4A4AB5",
+      "btn-primary-fg": "#FBFBFB",
       "btn-primary-hover-fg": "#FFFFFF",
       "btn-primary-active-fg": "#6B7280",
+      "btn-rounded-bg": "rgba(72, 38, 72, 0.06)",
+      "btn-rounded-border-color": "#ECECF9",
       "card-bg": "#FFFFFF",
       "roadmap-hero-gradient": "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
       "card-br": "#EFEFEF",
@@ -138,6 +151,8 @@ export const tokens = {
 
     dark: {
       "listLink-fg": "#AFCAFF",
+      "link-fg": "#5C9EFF",
+      "link-hover-fg": "#2C73DD",
       "bg-default": "#0B0B0B",
       "fg-body": "#CCCCCC",
       "fg-default": "#F8F7FDCC",
@@ -153,13 +168,22 @@ export const tokens = {
       "button-nav-active-fg": "#7E7E7E",
       "button-nav-active-icon-fg": "#7E7E7E",
       "btn-outline-border": "#7E7E7E",
-      "btn-outline-hover-fg": "#9EBFFF",
+      "btn-primary-hover-bg": "#8B8BE5",
+      "btn-primary-disabled-bg": "#2E2E32",
+      "btn-primary-disabled-fg": "#706F78",
+      "btn-primary-active-bg": "#7070D7",
+      "btn-primary-fg": "#161618",
+      "btn-outline-hover-border": "#E175B1",
       "btn-outline-active-fg": "#858585",
       "btn-primary-bg": "#5C94FF",
-      "btn-primary-hover-bg": "#5C94FF",
-      "btn-primary-active-bg": "#5C94FF",
       "btn-primary-hover-fg": "#FFFFFF",
       "btn-primary-active-fg": "#FFFFFF",
+      "btn-rounded-bg": "#D0D0E003",
+      "btn-rounded-border-color": "#1E1E40",
+      "btn-outline-disabled-border": "#2E2E32",
+      "btn-outline-disabled-fg": "#706F78",
+      "btn-ghost-fg": "rgba(248, 247, 253, 0.80)",
+      "btn-ghost-hover-fg": "#F0F0FF",
       "card-bg": "#1B1B1B",
       "roadmap-hero-gradient": "linear-gradient(259.71deg, #414548 2.88%, #1C1D24 96.77%)",
       "card-br": "#000000",
@@ -278,6 +302,14 @@ export const semanticTokens = {
       default: tokens.colors.light["listLink-fg"],
       _dark: tokens.colors.dark["listLink-fg"],
     },
+    "link-fg": {
+      default: tokens.colors.light["link-fg"],
+      _dark: tokens.colors.dark["link-fg"],
+    },
+    "link-hover-fg": {
+      default: tokens.colors.light["link-hover-fg"],
+      _dark: tokens.colors.dark["link-hover-fg"],
+    },
     "bg-default": {
       default: tokens.colors.light["bg-default"],
       _dark: tokens.colors.dark["bg-default"],
@@ -318,6 +350,14 @@ export const semanticTokens = {
       default: tokens.colors.light["btn-primary-hover-bg"],
       _dark: tokens.colors.dark["btn-primary-hover-bg"],
     },
+    "btn-primary-disabled-bg": {
+      default: tokens.colors.light["btn-primary-disabled-bg"],
+      _dark: tokens.colors.dark["btn-primary-disabled-bg"],
+    },
+    "btn-primary-disabled-fg": {
+      default: tokens.colors.light["btn-primary-disabled-fg"],
+      _dark: tokens.colors.dark["btn-primary-disabled-fg"],
+    },
     "btn-primary-active-bg": {
       default: tokens.colors.light["btn-primary-active-bg"],
       _dark: tokens.colors.dark["btn-primary-active-bg"],
@@ -329,6 +369,26 @@ export const semanticTokens = {
     "btn-primary-active-fg": {
       default: tokens.colors.light["btn-primary-active-fg"],
       _dark: tokens.colors.dark["btn-primary-active-fg"],
+    },
+    "btn-primary-fg": {
+      default: tokens.colors.light["btn-primary-fg"],
+      _dark: tokens.colors.dark["btn-primary-fg"],
+    },
+    "btn-rounded-bg": {
+      default: tokens.colors.light["btn-rounded-bg"],
+      _dark: tokens.colors.dark["btn-rounded-bg"],
+    },
+    "btn-rounded-border-color": {
+      default: tokens.colors.light["btn-rounded-border-color"],
+      _dark: tokens.colors.dark["btn-rounded-border-color"],
+    },
+    "btn-ghost-fg": {
+      default: tokens.colors.light["btn-ghost-fg"],
+      _dark: tokens.colors.dark["btn-ghost-fg"],
+    },
+    "btn-ghost-hover-fg": {
+      default: tokens.colors.light["btn-ghost-hover-fg"],
+      _dark: tokens.colors.dark["btn-ghost-hover-fg"],
     },
     "card-bg": {
       default: tokens.colors.light["card-bg"],
@@ -393,6 +453,10 @@ export const semanticTokens = {
     "btn-outline-active-fg": {
       default: tokens.colors.light["btn-outline-active-fg"],
       _dark: tokens.colors.dark["btn-outline-active-fg"],
+    },
+    "btn-outline-hover-bg": {
+      default: tokens.colors.light["btn-outline-hover-bg"],
+      _dark: tokens.colors.dark["btn-outline-hover-bg"],
     },
     "navbar-link-bg": {
       default: tokens.colors.light["navbar-link-bg"],
@@ -717,6 +781,14 @@ export const semanticTokens = {
     "hero-subtitle-fg": {
       default: tokens.colors.light["hero-subtitle-fg"],
       _dark: tokens.colors.dark["hero-subtitle-fg"],
+    },
+    "btn-outline-disabled-border": {
+      default: tokens.colors.light["btn-outline-disabled-border"],
+      _dark: tokens.colors.dark["btn-outline-disabled-border"],
+    },
+    "btn-outline-disabled-fg": {
+      default: tokens.colors.light["btn-outline-disabled-fg"],
+      _dark: tokens.colors.dark["btn-outline-disabled-fg"],
     },
     "gradient-orange-a": {
       default: tokens.colors.light["gradient-orange-a"],

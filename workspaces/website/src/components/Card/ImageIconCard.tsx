@@ -40,7 +40,6 @@ type Props = {
 };
 
 type titleVariantType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-type linkVariantType = "cardBody" | "breadcrumbs" | "footerLink" | "textLink";
 type descriptionVariantType = "body" | "cardBody" | "breadcrumbs" | "footerLink" | "textLink";
 
 export const ImageIconCard = ({
@@ -176,8 +175,6 @@ export const ImageIconCard = ({
                     {description}{" "}
                     {variant === "community_card" && (
                       <CustomLink
-                        variant={linkVariant as linkVariantType}
-                        color="selected.main"
                         href={href}
                         _hover={{ textDecoration: "underline!important" }}
                       >
@@ -193,7 +190,7 @@ export const ImageIconCard = ({
               <CardFooter padding={cardFooterPadding}>
                 <ButtonGroup spacing="2">
                   <CustomLink
-                    variant={linkVariant as linkVariantType}
+                    size="md"
                     color="selected.main"
                     href={href}
                     _hover={{ textDecoration: "underline!important" }}

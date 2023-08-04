@@ -1,327 +1,252 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
 const outline = defineStyle({
-  borderRadius: 4,
+  borderRadius: 8,
   fontWeight: "medium",
   fontSize: "16px",
-  paddingLeft: "40px",
-  paddingRight: "40px",
-  color: "grey.darkText",
-  borderColor: "grey.morning",
-  bg: "transparent",
+  color: "btn-outline-hover-fg",
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: "btn-outline-hover-fg",
   minWidth: "none",
   lineHeight: "24px",
   height: "auto",
-  padding: "12px 24px",
-  _hover: {
-    bg: "transparent",
-    color: "btn-outline-hover-fg",
-    borderColor: "grey.morning",
+  borderImage: "none",
+  bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+  _dark: {
+    bg: "linear-gradient(#0B0B0B, #0B0B0B) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+  },
+  "&:disabled": {
+    color: 'btn-outline-disabled-fg',
+    borderColor: 'btn-outline-disabled-border',
+    borderImage: "none",
+    boxShadow: "none",
+    bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+  },
+  _focusVisible: {
+    boxShadow: "none",
+    outlineOffset: 1,
+    outline: "3px solid #3f8cff",
     _dark: {
-      color: "selected.100"
+      outlineOffset: 0
+    }
+  },
+  _hover: {
+    borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+    bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none",
+      bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    },
+    _dark: {
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
     }
   },
   _active: {
-    bg: "bg.200",
-    color: "grey.greyDusk",
-    borderColor: "grey.morning",
-    borderWidth: "1px",
+    borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+    bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     outlineWidth: 1,
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none",
+      bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    },
     _focus: {
-      bg: "bg.200",
-      color: "grey.greyDusk",
-      borderColor: "grey.morning",
-      borderWidth: "1px",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       outlineWidth: 1
     },
     _dark: {
-      bg: "black",
-      color: "grey.greyDusk",
-      borderColor: "grey.greyDusk",
+      boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset",
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
       outlineWidth: 1,
       _focus: {
-        bg: "black",
-        color: "grey.greyDusk",
-        borderColor: "grey.greyDusk",
         outlineWidth: 1
       }
     }
-  },
-  _focus: {
-    boxShadow: "none",
-    borderColor: "selected.main",
-    _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
-    }
-  },
-  _dark: {
-    border: "1px solid grey.greyDusk",
-    color: "white"
   }
 });
 
-const outlineLight = defineStyle({
-  borderRadius: 4,
+const rounded = defineStyle({
+  borderRadius: 999,
   fontWeight: "medium",
-  fontSize: "14px",
-  color: "grey.coolerText",
-  borderColor: "grey.line",
-  borderWidth: "1px",
-  bg: "transparent",
+  fontSize: "16px",
+  color: "btn-outline-hover-fg",
+  borderWidth: 1,
+  borderStyle: "solid",
   minWidth: "none",
-  lineHeight: "16px",
+  lineHeight: "24px",
   height: "auto",
-  padding: "16px 40px",
-  _hover: {
-    bg: "transparent",
-    color: "btn-outline-hover-fg",
-    borderColor: "selected.main",
+  bg: "btn-rounded-bg",
+  borderColor: "btn-rounded-border-color",
+  "&:disabled": {
+    color: 'btn-outline-disabled-fg',
+    borderColor: 'btn-outline-disabled-border',
+    borderImage: "none",
+    boxShadow: "none"
+  },
+  _focusVisible: {
+    boxShadow: "1px solid #ffffff",
+    outlineOffset: 1,
+    outline: "3px solid #3f8cff",
     _dark: {
-      color: "selected.100",
-      borderColor: "selected.200"
+      boxShadow: "0px 0px 0px 1px #ffffff",
+      outlineOffset: 1,
+      outline: "3px solid #3f8cff",
+    }
+  },
+  _hover: {
+    borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+    bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    "&:disabled": {
+      bg: "btn-rounded-bg",
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none !important"
+    },
+    _dark: {
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
     }
   },
   _active: {
-    bg: "grey.line",
-    color: "grey.coolerText",
-    borderColor: "grey.line",
-    borderWidth: "1px",
-    boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+    borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+    bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1) !important",
     outlineWidth: 1,
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      borderColor: 'btn-outline-disabled-border',
+      borderImage: "none",
+      boxShadow: "none !important"
+    },
     _focus: {
-      bg: "grey.line",
-      color: "grey.coolerText",
-      borderColor: "grey.line",
-      borderWidth: "1px",
-      boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
+      borderColor: "white",
       outlineWidth: 1
     },
     _dark: {
-      bg: "black",
-      color: "btn-outline-active-fg",
-      borderColor: "black",
+      boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset",
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
       outlineWidth: 1,
       _focus: {
-        bg: "black",
-        color: "btn-outline-active-fg",
-        borderColor: "black",
         outlineWidth: 1
       }
     }
-  },
-  _focus: {
-    boxShadow: "none",
-    borderColor: "selected.main",
-    _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
-    }
-  },
-  _dark: {
-    border: "1px solid grey.greyDusk",
-    color: "white"
-  }
-});
-
-const outlineRounded = defineStyle({
-  borderRadius: 24,
-  fontWeight: "medium",
-  fontSize: "14px",
-  color: "grey.coolerText",
-  borderColor: "grey.line",
-  borderWidth: "1px",
-  bg: "transparent",
-  minWidth: "none",
-  lineHeight: "16px",
-  height: "auto",
-  padding: "16px 40px",
-  _hover: {
-    bg: "transparent",
-    color: "btn-outline-hover-fg",
-    borderColor: "selected.main",
-    _dark: {
-      color: "selected.100",
-      borderColor: "selected.200"
-    }
-  },
-  _active: {
-    bg: "grey.line",
-    color: "grey.coolerText",
-    borderColor: "grey.line",
-    borderWidth: "1px",
-    boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
-    outlineWidth: 1,
-    _focus: {
-      bg: "grey.line",
-      color: "grey.coolerText",
-      borderColor: "grey.line",
-      borderWidth: "1px",
-      boxShadow: "inset 0px 8px 0px rgba(0, 0, 0, 0.14)",
-      outlineWidth: 1
-    },
-    _dark: {
-      bg: "black",
-      color: "btn-outline-active-fg",
-      borderColor: "black",
-      outlineWidth: 1,
-      _focus: {
-        bg: "black",
-        color: "btn-outline-active-fg",
-        borderColor: "black",
-        outlineWidth: 1
-      }
-    }
-  },
-  _focus: {
-    boxShadow: "none",
-    borderColor: "selected.main",
-    _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
-    }
-  },
-  _dark: {
-    border: "1px solid grey.greyDusk",
-    color: "white"
   }
 });
 
 const ghost = defineStyle({
-  borderRadius: 4,
+  borderRadius: 8,
   fontWeight: "medium",
-  fontSize: "14px",
-  color: "grey.darkText",
-  borderColor: "transparent",
-  borderWidth: "1px",
-  bg: "transparent",
+  fontSize: "16px",
+  color: "btn-ghost-fg",
   minWidth: "none",
-  minHeight: 42,
-  lineHeight: "100%",
+  lineHeight: "24px",
   height: "auto",
-  padding: "8px 16px",
-  "& svg path": {
-    fill: "grey.morning"
+  bg: "transparent",
+  "&:disabled": {
+    color: 'btn-outline-disabled-fg',
+    boxShadow: "none"
+  },
+  _focusVisible: {
+    boxShadow: "none",
+    outlineOffset: 1,
+    outline: "3px solid #3f8cff",
+    _dark: {
+      boxShadow: "0px 0px 0px 1px #ffffff",
+    }
   },
   _hover: {
-    bg: "transparent",
-    "& svg path": {
-      fill: "selected.main"
+    bg: "#eae9eb",
+    color: "btn-ghost-hover-fg",
+    "&:disabled": {
+      bg: "transparent",
+      color: 'btn-outline-disabled-fg',
+      boxShadow: "none"
     },
     _dark: {
-      color: "white",
-      borderColor: "transparent",
-      bg: "black"
+      bg: "#28282c"
     }
   },
   _active: {
-    bg: "transparent",
+    bg: "#eae9eb",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     outlineWidth: 1,
-    color: "grey.greyDusk",
-    borderWidth: "1px",
-    borderColor: "transparent",
-    "& svg path": {
-      fill: "grey.greyDusk"
+    "&:disabled": {
+      color: 'btn-outline-disabled-fg',
+      boxShadow: "none"
     },
     _focus: {
-      bg: "transparent",
-      color: "grey.greyDusk",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      outlineWidth: 1,
-      borderWidth: "1px",
-      borderColor: "transparent",
-      "& svg path": {
-        fill: "grey.greyDusk"
-      },
+      outlineWidth: 1
     },
     _dark: {
-      bg: "black",
-      color: "btn-outline-active-fg",
-      borderColor: "black",
       outlineWidth: 1,
       _focus: {
-        bg: "black",
-        color: "btn-outline-active-fg",
-        borderColor: "black",
         outlineWidth: 1
       }
     }
-  },
-  _focus: {
-    boxShadow: "none",
-    borderColor: "selected.main",
-    _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
-    }
-  },
-  _dark: {
-    borderColor: "transparent",
-    color: "white"
   }
 });
 
 const solid = defineStyle({
-  borderRadius: 4,
-  fontWeight: "medium",
+  borderRadius: 8,
+  fontWeight: 600,
   fontSize: "16px",
   minWidth: "none",
   lineHeight: "24px",
   height: "auto",
-  padding: "12px 24px",
-  color: "white",
+  color: "btn-primary-fg",
   bg: "btn-primary-bg",
-  borderWidth: "1px",
-  borderStyle: "solid",
-  borderColor: "btn-primary-bg",
+  "&:disabled": {
+    background: 'btn-primary-disabled-bg',
+    color: 'btn-primary-disabled-fg',
+    boxShadow: "none"
+  },
   _hover: {
     bg: "btn-primary-hover-bg",
-    color: "btn-primary-hover-fg",
+    "&:disabled": {
+      background: 'btn-primary-disabled-bg !important',
+      color: 'btn-primary-disabled-fg',
+      boxShadow: "none !important"
+    },
     _dark: {
       bg: "bg.main",
-      color: "grey.darkText",
     },
   },
   _active: {
     bg: "btn-primary-active-bg",
-    color: "btn-primary-active-fg",
-    outlineWidth: 1,
+    boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
+    outlineOffset: 1,
+    "&:disabled": {
+      background: 'btn-primary-disabled-bg !important',
+      color: 'btn-primary-disabled-fg',
+      boxShadow: "none !important"
+    },
     _dark: {
       bg: "grey.morning",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      color: "grey.darkText",
       _focus: {
         bg: "grey.morning",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-        color: "grey.darkText",
       }
     },
   },
   _dark: {
     bg: "white",
-    color: "grey.darkText",
   },
-  _focus: {
+  _focusVisible: {
+    outlineOffset: 1,
+    outline: "3px solid #3F8CFF",
     boxShadow: "none",
-    borderColor: "selected.main",
-    borderWidth: "1px",
-    borderStyle: "solid",
+    border: "none",
     _dark: {
-      boxShadow: "none",
-      borderColor: "selected.100",
-      borderWidth: "1px",
-      borderStyle: "solid"
+      outlineOffset: 0
     }
   },
 });
@@ -638,11 +563,21 @@ const icon = defineStyle({
   }
 });
 
+const sm = defineStyle({
+  padding: "8px 16px",
+  minHeight: "40px",
+  maxHeight: "40px",
+});
+
+const md = defineStyle({
+  padding: "12px 24px",
+  minHeight: "48px",
+  maxHeight: "48px",
+});
+
 export const buttonTheme = defineStyleConfig({
   variants: {
     outline,
-    outlineLight,
-    outlineRounded,
     secondaryHero,
     primaryHero,
     solid,
@@ -651,6 +586,11 @@ export const buttonTheme = defineStyleConfig({
     filterActive,
     category,
     switch: switchButton,
-    icon
+    icon,
+    rounded
   },
+  sizes: {
+    sm,
+    md
+  }
 });
