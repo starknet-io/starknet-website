@@ -486,7 +486,7 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
           <Button
             onClick={() => showMore()}
             flexShrink={0}
-            variant="outlineLight"
+            variant="rounded"
           >
             View More
           </Button>

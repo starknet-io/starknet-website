@@ -260,7 +260,7 @@ export const HeroImage = ({
 
                   <Heading
                     color="heading-navy-fg"
-                    variant="h2"
+                    variant="h1"
                     size={useBreakpointValue({ base: "md", md: "lg" })}
                   >
                     {title}
