@@ -71,18 +71,7 @@ export default function CMSPage({
               lg: (data.template === "content" || data.template === "narrow content") ? "32px" : "136px",
             }}
           >
-            {data.show_title ? <>
-              <Box pb="6">
-                <Heading
-                  variant="h2"
-                  color="heading-navy-fg"
-                  fontWeight="extrabold"
-                >
-                  {data.title}
-                </Heading>
-                <Divider variant="primary" mt="8px" />
-              </Box>
-            </> : null}
+            {data.show_title ? <Heading variant="h1" color="text-hero-fg">{data.title}</Heading> : null}
             {data.blocks?.map((block, i) => {
               return (
                 <Block

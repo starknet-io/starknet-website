@@ -24,6 +24,21 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
+          h1: (props) => (
+            <>
+              {/* <Spacer
+                height="140px"
+                id={`toc-${slugify(props.children.join(" "))}`}
+              /> */}
+              <Heading
+                id={`toc-${slugify(props.children.join(" "))}`}
+                color="heading-navy-fg"
+                variant="h1"
+                marginBottom="16px"
+                {...props}
+              />
+            </>
+          ),
           h2: (props) => (
             <>
               {/* <Spacer
@@ -33,7 +48,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
               <Heading
                 id={`toc-${slugify(props.children.join(" "))}`}
                 color="heading-navy-fg"
-                variant="h3"
+                variant="h2"
                 marginBottom="16px"
                 {...props}
               />
@@ -58,7 +73,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
             <Heading color="heading-navy-fg" variant="h4" {...props} />
           ),
           h5: (props) => (
-            <Heading color="heading-navy-fg" variant="h4" {...props} />
+            <Heading color="heading-navy-fg" variant="h5" {...props} />
           ),
           h6: (props) => (
             <Heading color="heading-navy-fg" variant="h6" {...props} />

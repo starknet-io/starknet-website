@@ -21,7 +21,14 @@ export const Solid = () => (
   <ThemeProvider>
     <HStack p={12}>
       <>
-        <Button variant="solid">Solid button</Button>
+        <Button variant="solid" size="md">Solid button</Button>
+        <Button variant="solid" size="sm">Solid small button</Button>
+        <Button variant="solid">
+          <ChakraIcon
+            as={HiPlay}
+            boxSize="24px"
+          />
+        </Button>
         <Button leftIcon={
             <ChakraIcon
               as={HiPlay}
@@ -29,11 +36,17 @@ export const Solid = () => (
             />
           } variant="solid">With icon</Button>
         <Button leftIcon={
-            <ChakraIcon
-              as={HiGlobeAlt}
-              boxSize="24px"
-            />
-          } variant="solid">With icon and counter (3)</Button>
+          <ChakraIcon
+            as={HiPlay}
+            boxSize="24px"
+          />
+        } rightIcon={
+          <ChakraIcon
+            as={HiPlay}
+            boxSize="24px"
+          />
+        } variant="solid">With icon</Button>
+        <Button variant="solid" isDisabled>Disabled</Button>
       </>
     </HStack>
   </ThemeProvider>
@@ -44,38 +57,19 @@ export const Outline = () => (
     <HStack p={12}>
       <>
         <Button variant="outline">Outline button</Button>
+        <Button variant="outline" size="sm">Outline small button</Button>
         <Button leftIcon={
             <ChakraIcon
               as={HiPlay}
               boxSize="24px"
             />
-          } variant="outline">With icon</Button>
-        <Button leftIcon={
+          } rightIcon={
             <ChakraIcon
-              as={HiGlobeAlt}
+              as={HiPlay}
               boxSize="24px"
             />
-          } variant="outline">With icon and counter (3)</Button>
-      </>
-    </HStack>
-  </ThemeProvider>
-);
-
-export const OutlineLight = () => (
-  <ThemeProvider>
-    <HStack p={12}>
-      <>
-        <Button variant="outlineLight">Outline light button</Button>
-      </>
-    </HStack>
-  </ThemeProvider>
-);
-
-export const OutlineRounded = () => (
-  <ThemeProvider>
-    <HStack p={12}>
-      <>
-        <Button variant="outlineRounded">Outline rounded button</Button>
+          } variant="outline">With icon</Button>
+        <Button variant="outline" isDisabled>Disabled</Button>
       </>
     </HStack>
   </ThemeProvider>
@@ -86,13 +80,55 @@ export const Ghost = () => (
     <HStack p={12}>
       <>
         <Button variant="ghost">Ghost button</Button>
-        <Button rightIcon={
+        <Button variant="ghost" size="sm">Ghost button small</Button>
+        <Button leftIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } rightIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } variant="ghost">With icon</Button>
+        </>
+      <Button variant="ghost" isDisabled>Ghost button disabled</Button>
+      <Button rightIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } variant="ghost" isDisabled>Ghost button disabled with icon</Button>
+    </HStack>
+  </ThemeProvider>
+);
+
+export const Rounded = () => (
+  <ThemeProvider>
+    <HStack p={12}>
+      <>
+        <Button variant="rounded">Rounded button</Button>
+        <Button variant="rounded" size="sm">Rounded button small</Button>
+        <Button leftIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
+            />
+          } rightIcon={
             <ChakraIcon
               as={ChevronDownIcon}
               boxSize="24px"
+              />
+            } variant="rounded">With icon</Button>
+        </>
+      <Button variant="rounded" isDisabled>Rounded button disabled</Button>
+      <Button rightIcon={
+          <ChakraIcon
+            as={ChevronDownIcon}
+            boxSize="24px"
             />
-          } variant="ghost">With icon</Button>
-      </>
+          } variant="rounded" isDisabled>Rounded button disabled with icon</Button>
     </HStack>
   </ThemeProvider>
 );

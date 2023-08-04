@@ -246,7 +246,7 @@ export const ListCard = (props: Props) => {
                     href={props.recap.link}
                     mt="20px"
                     isExternal={props.recap.isExternal}
-                    variant="outlineRounded"
+                    variant="rounded"
                     target="_blank"
                   >
                     {props.recap.label || "View event recap"}
