@@ -146,6 +146,19 @@ const theme = extendTheme(proTheme, {
     xl: "80em",
     "2xl": "96em"
   },
-
+  space: {
+    "none": "0px",
+    "base": "4px",
+    "xs": "8px",
+    "sm": "12px",
+    "md": "16px",
+    "lg": "20px",
+    "xl": "24px",
+    "2xl": "32px",
+    "3xl": "40px",
+    "4xl": "80px",
+    "5xl": "120px",
+    "6xl": "160px",
+  }
 });
 export default theme;

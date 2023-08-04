@@ -10,13 +10,36 @@ import {
   Link,
   Divider,
   Center,
-  useColorModeValue,
+  ChakraProps,
+  Button,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
-import { IconButton } from "@ui/IconButton";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { StarknetLogo } from "../Logo/StarknetLogo";
+
+const socialLinks = [
+  {
+    label: "Discord",
+    href: "https://starknet.io/discord",
+    icon: <SiDiscord fontSize="1.25rem" style={{marginLeft: '-0.25rem'}} />,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/starknet-io/starknet-website",
+    icon: <SiGithub fontSize="1.25rem" style={{marginLeft: '-0.5rem'}} />,
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com/Starknet",
+    icon: <SiTwitter fontSize="1.25rem" style={{marginLeft: '-0.5rem'}} />,
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/channel/UCQZ3gKgk5YJNKAQgETdZqRQ",
+    icon: <SiYoutube fontSize="1.25rem" style={{marginLeft: 'left'}} />,
+  },
+];
 
 type RootProps = {
   children: React.ReactNode;
@@ -31,119 +54,80 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
     <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto">
       <Box>
         <Box display="flex" justifyContent="center">
-          <Container
-            as="footer"
-            role="contentinfo"
-            maxWidth="auto"
-            px="0"
-            justifyContent="center"
-            display="flex"
-            flexDirection="column"
-            alignItems={{ base: "flex-start", md: "center" }}
-          >
-            <Stack
-              spacing={{ base: "12", md: "8" }}
-              direction={{ base: "column-reverse", lg: "row" }}
+          <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
+            <Box
               py={{ base: "12", md: "16" }}
-              justify="space-between"
-              maxW="1200"
-              px="30px"
+              maxW={1344}
+              px="2xl"
+              marginInline="auto"
             >
               {children}
-            </Stack>
-            <Divider
-              borderColor={useColorModeValue(
-                "footer-divider-bg",
-                "footer-divider-bg"
-              )}
-              marginBottom="0px"
-              opacity="1"
-            />
+            </Box>
             <Box
-              background="bg.main"
-              _dark={{
-                background: "darkMode.bg2",
-              }}
               width="100%"
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
+              maxW={1344}
+              px="2xl"
+              marginInline="auto"
             >
               <Stack
-                pb="38px"
-                pt="38px"
+                py="3xl"
                 justify="space-between"
-                direction={{ base: "column", md: "row" }}
-                align={{ base: "start", md: "center" }}
-                maxW="1200"
+                direction={{ base: "column", lg: "row" }}
+                align={{ base: "start", lg: "center" }}
                 width="100%"
-                px="30px"
+                gap={{
+                  base: "xl",
+                  lg: "0",
+                }}
               >
                 <HStack
                   justify={{ base: "space-between", sm: "start" }}
                   width={{ base: "full", sm: "auto" }}
                   spacing="0"
-                  order={{ base: 2, lg: 1 }}
+                  gap="xl"
                 >
-                  <Box pr="24px">
-                    <StarknetLogo height="32" />
+                  <Box>
+                    <StarknetLogo height="32px" />
                   </Box>
                   <Center height="32px">
                     <Divider
                       orientation="vertical"
-                      borderColor={useColorModeValue(
-                        "footer-divider-bg",
-                        "footer-divider-bg"
-                      )}
+                      borderColor="divider-bg"
                       opacity="1"
                     />
                   </Center>
-                  <Text
-                    fontSize="sm"
-                    color={useColorModeValue(
-                      "footer-link-fg",
-                      "footer-link-fg"
-                    )}
-                    paddingLeft="24px"
-                  >
+                  <Text fontSize="sm" color="footer-link-fg">
                     {seo?.footerText}
                   </Text>
                 </HStack>
                 <ButtonGroup
-                  order={{ base: 1, lg: 2 }}
-                  paddingBottom={{ base: "36px", md: 0 }}
+                  padding={{ base: "20px 0", md: "8px 0px" }}
+                  fontSize="14px"
+                  lineHeight="24px"
+                  gap={{ base: "2xl", md: "3xl" }}
+                  flexDirection={{ base: "column", md: "row" }}
                 >
-                  <IconButton
-                    as="a"
-                    href="https://starknet.io/discord"
-                    aria-label="Discord"
-                    icon={<SiDiscord fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://github.com/starknet-io/starknet-website"
-                    aria-label="GitHub"
-                    icon={<SiGithub fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
-                    aria-label="YouTube"
-                    icon={<SiYoutube fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://twitter.com/Starknet"
-                    aria-label="Twitter"
-                    icon={<SiTwitter fontSize="1.25rem" />}
-                    size="small"
-                  />
+                  {socialLinks.map((social) => (
+                    <Button
+                      key={social.label}
+                      as="a"
+                      href={social.href}
+                      size="small"
+                      fontWeight="normal"
+                      variant="unstyled"
+                      color="footer-link-fg"
+                      _hover={{
+                        color: "fg-default-hover",
+                      }}
+                      display="flex"
+                      gap="0.5rem"
+                      padding="0.5rem 0"
+                      ml='0px !important'
+                    >
+                      {social.icon}
+                      {social.label}
+                    </Button>
+                  ))}
                 </ButtonGroup>
               </Stack>
             </Box>
@@ -158,24 +142,69 @@ type ColumnProps = {
   title: string;
   children: React.ReactNode;
   color?: string;
+  sx?: ChakraProps["sx"];
 };
 
-const Column = ({ title, children, color }: ColumnProps) => {
+const Column = ({ title, children, color, sx }: ColumnProps) => {
   return (
-    <Stack bg={color} spacing="4" minW={{ lg: "40" }}>
-      {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
-        {title}
-      </Text> */}
+    <Stack
+      bg={color}
+      minW={{ lg: "3xl" }}
+      padding={{
+        base: "40px 0px",
+        md: "40px 40px 0px",
+        lg: "0px 40px 1.5rem",
+      }}
+      borderColor="divider-bg"
+      _even={{
+        borderLeftWidth: {
+          base: "0px",
+          md: "1px",
+          lg: "1px",
+        },
+      }}
+      _odd={{
+        borderLeftWidth: { base: "0px", md: "0px", lg: "1px" },
+        paddingLeft: { base: "0px", md: "0px", lg: "40px" },
+      }}
+      borderBottomWidth={{ base: "1px", md: "0px", lg: "0px" }}
+      _first={{
+        borderLeftWidth: { lg: "0px" },
+        paddingLeft: { lg: "0px" },
+        paddingTop: { md: "0px" },
+      }}
+      _last={{
+        borderBottomWidth: { base: "0px" },
+        paddingRight: { lg: "0px" },
+      }}
+      sx={{
+        "&:nth-of-type(2)": {
+          paddingTop: { md: "0px" },
+        },
+      }}
+    >
       <Heading
         variant="h4"
-        color={useColorModeValue("footer-header-fg", "white")}
+        color="fg-default-hover"
         fontWeight="500"
+        paddingY="1.5rem"
       >
         {title}
       </Heading>
-      <Stack spacing="1" shouldWrapChildren>
+      <Box
+        marginTop="0px !important"
+        display="flex"
+        flexDirection="column"
+        gap="1rem"
+        sx={{
+          "& > *": {
+            paddingBlock: "0.5rem",
+          },
+          color: "footer-link-fg",
+        }}
+      >
         {children}
-      </Stack>
+      </Box>
     </Stack>
   );
 };
@@ -190,9 +219,6 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
     <Link
       fontSize="sm"
       px="0"
-      height="36px"
-      bg="navbar-link-bg"
-      color={useColorModeValue("footer-link-fg", "footer-link-fg")}
       borderRadius={18}
       display="flex"
       alignItems="center"
@@ -200,13 +226,12 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
       textDecoration="none"
       gap="4px"
       _hover={{
-        color: "navbar-link-hover-fg",
-        bg: "navbar-link-hover-bg",
+        color: "fg-default-hover",
       }}
       _active={{
-        color: "navbar-link-active-fg",
+        color: "fg-default-hover",
         svg: {
-          color: "navbar-link-active-fg",
+          color: "fg-default-hover",
         },
       }}
       href={href}
