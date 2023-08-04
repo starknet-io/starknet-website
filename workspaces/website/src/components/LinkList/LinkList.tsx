@@ -163,10 +163,10 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
           >
             {subLabel.label && (
               <Flex gap="8px">
-                <Text display={{ base: "none", md: "flex" }} color="fg-body">
+                <Text display={{ base: "none", md: "flex" }} color="fg-default">
                   •
                 </Text>
-                <Text noOfLines={1} color="fg-body">
+                <Text noOfLines={1} color="fg-default">
                   {subLabel.label}
                 </Text>
               </Flex>

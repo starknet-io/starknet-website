@@ -9,7 +9,7 @@ export const NavBarLink = (props: Props) => {
       fontSize="sm"
       px={4}
       height="36px"
-      color="fg-default"
+      color="fg-default-light"
       borderRadius={18}
       display="flex"
       alignItems="center"
@@ -17,6 +17,7 @@ export const NavBarLink = (props: Props) => {
       textDecoration="none"
       mt="0px!important"
       gap={1}
+      fontWeight={400}
       _hover={{
         color: "fg-default-hover",
       }}
