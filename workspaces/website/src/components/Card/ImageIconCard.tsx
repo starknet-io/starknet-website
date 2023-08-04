@@ -175,7 +175,6 @@ export const ImageIconCard = ({
                     {description}{" "}
                     {variant === "community_card" && (
                       <CustomLink
-                        color="selected.main"
                         href={href}
                         _hover={{ textDecoration: "underline!important" }}
                       >

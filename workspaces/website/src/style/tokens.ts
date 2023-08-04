@@ -177,10 +177,10 @@ export const tokens = {
       "btn-outline-hover-border": "#E175B1",
       "btn-outline-active-fg": "#858585",
       "btn-primary-bg": "#5C94FF",
-      "btn-primary-hover-bg": "#5C94FF",
-      "btn-primary-active-bg": "#5C94FF",
       "btn-primary-hover-fg": "#FFFFFF",
       "btn-primary-active-fg": "#FFFFFF",
+      "btn-rounded-bg": "#D0D0E003",
+      "btn-rounded-border-color": "#1E1E40",
       "btn-outline-disabled-border": "#2E2E32",
       "btn-outline-disabled-fg": "#706F78",
       "btn-ghost-fg": "rgba(248, 247, 253, 0.80)",
@@ -371,6 +371,10 @@ export const semanticTokens = {
     "btn-primary-active-fg": {
       default: tokens.colors.light["btn-primary-active-fg"],
       _dark: tokens.colors.dark["btn-primary-active-fg"],
+    },
+    "btn-primary-fg": {
+      default: tokens.colors.light["btn-primary-fg"],
+      _dark: tokens.colors.dark["btn-primary-fg"],
     },
     "btn-rounded-bg": {
       default: tokens.colors.light["btn-rounded-bg"],
