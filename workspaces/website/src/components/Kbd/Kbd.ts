@@ -4,7 +4,7 @@ const search = defineStyle({
   borderRadius: 4,
   border: 0,
   bg: "kbd-bg",
-  color: "kbd-fg",
+  color: "default-fg",
   padding: "4px 12px",
 });
 const md = defineStyle({

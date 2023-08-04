@@ -53,12 +53,9 @@ export default function Navbar({
               label={mainMenuItem.title}
             >
               <Flex
-                // bg="red"
                 maxW="900px"
                 mx="auto"
                 gap="48px"
-                // display="block"
-                // sx={{ columnCount: [1, 2, 3, 4] }}
               >
                 {mainMenuItem.columns?.length &&
                   mainMenuItem.columns?.map((column, columnIndex) => (
@@ -77,11 +74,19 @@ export default function Navbar({
                           if (item.custom_icon) {
                             return (
                               <IconButton
-                                // isExternal={item.custom_external_link != null}
                                 href={href}
                                 key={itemIndex}
                                 as="a"
                                 aria-label={label!}
+                                _hover={{
+                                  background: 'transparent !important',
+                                }}
+                                sx={{
+                                  '&:hover *': {
+                                      background: 'transparent !important',
+                                      fill: 'fg-default-hover',
+                                  }
+                                }}
                                 icon={
                                   item.custom_icon === "SiDiscord" ? (
                                     <SiDiscord fontSize="1.25rem" />

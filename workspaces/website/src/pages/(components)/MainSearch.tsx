@@ -301,11 +301,11 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         }}
       />
       <Kbd
-        background={useColorModeValue("kbd-bg", "kbd-bg")}
-        color={useColorModeValue("kbd-fg", "kbd-fg")}
-        padding="7px 14px"
+        background="kbd-bg"
+        color="default-fg"
+        padding="8px 16px"
         borderRadius="4px"
-        borderWidth="1px"
+        borderWidth="0px"
         position="absolute"
         top="7px"
         right="8px"
