@@ -89,16 +89,13 @@ export const HomepageHero = ({ seo }: Props) => {
             pt="0"
             order={{ base: 1, lg: 0 }}
           >
-            <Intro />
-
             <Heading
               variant="h1hero"
-              fontWeight="bold"
               color="heading-navy-fg"
+              lineHeight="98.5px"
               mt={{ base: "0", lg: "-20px" }}
-              fontSize={{ base: "56px", md: "80px", xl: "92px" }}
             >
-              Starknet
+              Ethereum’s next leap in <Intro />
             </Heading>
             <Text
               color="hero-subtitle-fg"
