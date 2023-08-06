@@ -30,7 +30,7 @@ blocks:
       - title: Orbiter Finance
         description: "Orbiter allows users to send funds across different layer 2
           networks. "
-        link_url: https://www.orbiter.finance
+        link_url: https://www.orbiter.finance/?source=Ethereum&dest=Starknet
         website_url: https://www.orbiter.finance
         image: /assets/orbiter.jpg
         twitter: https://twitter.com/Orbiter_Finance
