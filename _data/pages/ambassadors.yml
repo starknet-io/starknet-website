@@ -40,7 +40,7 @@ blocks:
 
       Join this exciting endeavor, and let’s redefine the future with Starknet!
   - type: ambassadors_list
-    title: Meet the Ambassadors
+    title: Meet the ambassadors
     ambassador:
       - full_name: Abdel
         title: Exploration lead at StarkWare
@@ -204,6 +204,21 @@ blocks:
         tags:
           - tag: Content generator
         image: /assets/peteris-erins-final-.png
+      - full_name: Scott
+        description: Scott has been involved in the cryptocurrency ecosystem, mostly via
+          Ethereum-France and EthCC. He has been working on Snapshot-X, an
+          on-chain governance framework, available on both EVM-compatible
+          rollups and on Starknet. He has been an early member of the Starknet
+          community, being amongst the first to deploy a smart-contract on
+          Starknet. You can find him regularly at Starknet events, on Twitter,
+          or at Brussels meetups he helps organize.
+        title: Developer at Snapshot
+        website: https://github.com/pscott
+        twitter: https://twitter.com/scottpiriou
+        discord: Scott#7612
+        tags:
+          - tag: Event organizer
+        image: /assets/scott-final-.png
       - full_name: Shramee
         title: Founder at Least Imperfect Pte Ltd
         description: Shramee is passionate about building impactful transparent systems.
