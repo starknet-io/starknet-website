@@ -48,7 +48,7 @@ blocks:
           terrain. Now contributing to Starknet's journey, his essence blends
           open-source, decentralization, and community collaboration, amplifying
           the collective spirit of Starknet.
-        image: /assets/abdel-final-.png
+        image: /assets/abdel-final.png
         website: https://github.com/abdelhamidbakhta
         twitter: https://twitter.com/dimahledba
         discord: Abdel | StarkWare#7447
@@ -70,7 +70,7 @@ blocks:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
-        image: /assets/briyan-cessac-final-.png
+        image: /assets/briyan-cessac-final.png
       - full_name: Cheechyuan
         title: Developer
         description: Cheechyuan is a developer that likes to participate in hackathons
@@ -96,14 +96,14 @@ blocks:
           - tag: Event organizer
           - tag: Event speaker
           - tag: Content generator
-        image: /assets/crypto-gurkha-final-.png
+        image: /assets/crypto-gurkha-final.png
       - full_name: Davide Silva
         title: Software engineer at Subvisual
         description: Davide is a software engineer. A lifelong computer nerd and
           dedicated metal enthusiast, he finds immense joy in learning and the
           exciting world of Formula 1 racing. Actively exploring and
           contributing to the ever-evolving web3 space.
-        image: /assets/davide-silva-final-.png
+        image: /assets/davide-silva-final.png
         twitter: https://twitter.com/0xdavidesilva
         discord: Davide Silva#5522
         tags:
@@ -116,7 +116,7 @@ blocks:
         description: Giwook Han is the CTO of Door Labs. His dedication lies in
           developing on Starknet. His primary objective is to expand the reach
           and influence of Starknet, particularly across Asia.
-        image: /assets/giwook-han-final-.png
+        image: /assets/giwook-han-final.png
         website: ""
         twitter: https://twitter.com/hkw00011
         discord: Giwook#5230
@@ -134,12 +134,12 @@ blocks:
         tags:
           - tag: Event speaker
           - tag: Content generator
-        image: /assets/guiltygyoza-final-.png
+        image: /assets/guiltygyoza-final.png
       - full_name: Henri
         title: Dev advocate lead at Starkware
         description: Henri explains to people what Starknet is, and how they can build
           cool stuff on top of it.
-        image: /assets/henri-final-.png
+        image: /assets/henri-final.png
         twitter: https://twitter.com/henrlihenrli
         discord: Henri
         tags:
@@ -155,7 +155,7 @@ blocks:
         discord: xjonathanlei#6900
         tags:
           - tag: Event speaker
-        image: /assets/jonathan-lei-final-.png
+        image: /assets/jonathan-lei-final.png
       - full_name: Loaf
         title: Contributor of BibliothecaDAO & Dojo
         description: Loaf, a pioneering contributor at BibliothecaDAO and Dojo,
@@ -168,7 +168,7 @@ blocks:
         tags:
           - tag: Event speaker
           - tag: Content generator
-        image: /assets/loaf-final-.png
+        image: /assets/loaf-final.png
       - full_name: Louthing
         title: Head of Growth at MatchboxDAO
         description: Louthing is the Head of Growth at MatchboxDAO. He organizes
@@ -178,7 +178,7 @@ blocks:
         discord: Louthing#3654
         tags:
           - tag: Event organizer
-        image: /assets/louthing-final-.png
+        image: /assets/louthing-final.png
       - full_name: Nurstar
         title: Content Creator and Community Builder
         description: 'Nurstar is  a Starknet lover and he curates a daily Recap about
@@ -188,7 +188,7 @@ blocks:
           the curator of the "Le Monde de Starknet" Weekly Recap for the
           StarknetEco Community. Nurstar loves writing, learning languages and
           gardening. '
-        image: /assets/nurstar-final-.png
+        image: /assets/nurstar-final.png
         website: http://nurstar.substack.com
         twitter: https://twitter.com/0xNurstar
         tags:
@@ -203,7 +203,7 @@ blocks:
         twitter: https://twitter.com/p_e
         tags:
           - tag: Content generator
-        image: /assets/peteris-erins-final-.png
+        image: /assets/peteris-erins-final.png
       - full_name: Scott
         description: Scott has been involved in the cryptocurrency ecosystem, mostly via
           Ethereum-France and EthCC. He has been working on Snapshot-X, an
@@ -225,7 +225,7 @@ blocks:
           A wave of systems with verifiable integrity will soon be solving the
           biggest societal challenges. Shramee wants to play a prominent role in
           bringing about this wave.
-        image: /assets/shramee-final-.png
+        image: /assets/shramee-final.png
         website: https://shramee.me
         twitter: https://twitter.com/shrameetweets
         discord: Shramee#4595
@@ -237,7 +237,7 @@ blocks:
           weekly content to raise awareness of Starknet ecosystem and foster
           community understanding. Notably, Starknet_OG writes Twitter threads,
           publish a weekly newsletter, and manage a Starknet community Discord.
-        image: /assets/starknet_og-final-.png
+        image: /assets/starknet_og-final.png
         website: https://starknetdigger.notion.site/starknetdigger/Starknet_Digger-b038024fc9924bf98dd61e7074903645
         twitter: https://twitter.com/Starknet_OG
         discord: Lyskey#2396
@@ -248,7 +248,7 @@ blocks:
         description: "Sylve is building at briqNFT with wraitii. Ex-product manager at
           Ledger. Governance Facilitator and self-proclaimed head shitposter at
           Starknet Foundation. Vibes operator at Dojo. "
-        image: /assets/sylve-final-.png
+        image: /assets/sylve-final.png
         website: https://briq.construction/
         twitter: https://twitter.com/sylvechv/
         discord: s0lness#6373
@@ -259,7 +259,7 @@ blocks:
         description: Tarrence is the Co-Founder of Cartridge, Core Contributor to Dojo,
           Co-Creator of Dope Wars.  Bringing on-chain games and autonomous
           worlds to life on top of Starknet.
-        image: /assets/tarrence-final-.png
+        image: /assets/tarrence-final.png
         website: https://github.com/tarrencev
         twitter: https://twitter.com/tarrenceva
         discord: tarrence | cartridge#4660
@@ -277,7 +277,7 @@ blocks:
         tags:
           - tag: Content generator
           - tag: Event speaker
-        image: /assets/trang-nguyen-final-.png
+        image: /assets/trang-nguyen-final.png
       - full_name: Yaman can
         title: Co-founder of buchain.org & incLabs
         description: Yaman can is a T.A. at MIS493 Blockchain Lecture at Bogazici
@@ -285,7 +285,7 @@ blocks:
           and incLabs. Building, researching, advising, and lecturing about web3
           since 2020. Yaman can is focused on helping promising builders onboard
           Starknet.
-        image: /assets/yaman-can-final-.png
+        image: /assets/yaman-can-final.png
         website: https://www.linkedin.com/in/yaman-can/
         twitter: https://twitter.com/yamancan_
         discord: yamancan#0001
