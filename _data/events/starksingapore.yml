@@ -1,0 +1,16 @@
+type: community_event
+name: StarkSingapore
+description: Join us for a dynamic day of engaging talks, interactive workshops,
+  and insightful conversations centered around harnessing Zero-Knowledge
+  technology, advancing Layer 2 and Layer 3 dapps, all within the vibrant
+  Singapore.  Esteemed speakers from renowned organizations such as Starkware,
+  Door Labs, and Topology will grace the event.
+url: https://www.starknet.asia/event/starksingapore-2023
+start_date: 2023-09-12T16:00:39.501Z
+month: September 2023
+end_date: 2023-09-12T19:00:39.508Z
+show_in_past_events: false
+image: /assets/starksingapore.png
+location: asia
+city: Singapore
+country: Singapore
