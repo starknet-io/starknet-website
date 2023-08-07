@@ -1,0 +1,53 @@
+id: 21e7711f-2535-4db3-b2fe-aa760eecc26b
+post_type: video
+title: Uniswap Foundation STARK SPACE | Deploying Uniswap v3 on Starknet
+published_date: 2023-02-12T07:57:06.947Z
+video:
+  url: https://www.youtube.com/watch?v=th-JXI3S87w&list=PLcIyXLwiPilVmfeWlxZhskABURfmsZuwu&index=5
+  id: th-JXI3S87w
+  data:
+    kind: youtube#video
+    etag: jnJWj_4iwkSNlH7c0wDnFXag6rk
+    id: th-JXI3S87w
+    snippet:
+      publishedAt: 2023-02-12T09:30:45.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/th-JXI3S87w/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/th-JXI3S87w/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/th-JXI3S87w/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/th-JXI3S87w/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/th-JXI3S87w/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: Uniswap Foundation twitter space | Deploying Uniswap v3 on Starknet
+      categoryId: "28"
+      localized:
+        title: Uniswap Foundation twitter space | Deploying Uniswap v3 on Starknet
+        description: ""
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT56M33S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+category: ecosystem
