@@ -1,0 +1,68 @@
+id: b328659c-0d7b-41d2-9b3c-977b4a1a33ad
+post_type: video
+title: Cairo1 - recent updates and what to expect
+published_date: 2023-08-04T15:37:40.727Z
+video:
+  url: https://www.youtube.com/watch?v=jvoeweQ1XWs
+  id: jvoeweQ1XWs
+  data:
+    kind: youtube#video
+    etag: VQaZnGXIFjjhJsR5aivLo36xX2c
+    id: jvoeweQ1XWs
+    snippet:
+      publishedAt: 2023-08-04T08:30:16Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Cairo1 - recent updates and what to expect - Yuval Goldberg
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/jvoeweQ1XWs/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/jvoeweQ1XWs/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/jvoeweQ1XWs/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/jvoeweQ1XWs/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/jvoeweQ1XWs/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Cairo1 - recent updates and what to expect - Yuval Goldberg
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT16M27S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/cairo1-recent-updates-and-what-to-expect.jpg
