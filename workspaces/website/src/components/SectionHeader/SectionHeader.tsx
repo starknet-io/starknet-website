@@ -26,11 +26,8 @@ export const SectionHeader = ({
         <Box>
           <Heading
             variant="h2"
-            fontSize={{ base: "32px", md: "48px" }}
-            lineHeight={{ base: "1.5em", md: "1.5em" }}
-            pb={size === "sm" ? 2 : 6}
-            fontWeight="extrabold"
             color="heading-navy-fg"
+            fontWeight="extrabold"
           >
             {title}
           </Heading>
@@ -41,7 +38,7 @@ export const SectionHeader = ({
           )}
           {bottomContent}
         </Box>
-        <Divider variant="primary" />
+        <Divider variant="primary" mt="8px" />
       </Stack>
     </Box>
   );

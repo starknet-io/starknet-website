@@ -18,6 +18,7 @@ import {
   IconButton,
   Wrap,
   HStack,
+  VStack,
   useDisclosure
 } from "@chakra-ui/react";
 import { slugify } from "@starknet-io/cms-utils/src/index";
@@ -76,7 +77,7 @@ const AmbassadorsList = (props: RootProps) => {
       {title && (
         <Heading
           variant="h3"
-          color="councils-title-fg"
+          color="heading-navy-fg"
           id={`toc-${slugify(title)}`}
           marginBottom="24px"
           lineHeight="150%"
@@ -90,33 +91,42 @@ const AmbassadorsList = (props: RootProps) => {
         overflow="hidden"
         direction="row"
         flexWrap="wrap"
+        justifyContent="space-between"
       >
         {ambassador?.map(a => {
           return (
             <Flex
               alignItems="center"
               direction="column"
-              mt="32px"
+              mt="48px"
               onClick={() => viewMember(a)}
               cursor="pointer"
               px="2"
               maxWidth={{base: "calc(100% - 16px)", md: "calc(50% - 16px)", lg: "calc(33.333333% - 16px)" }}
               width="100%"
+              justifyContent="space-between"
             >
-              <Img
-                width="120px"
-                height="120px"
-                src={a.image}
-                title={a.title}
-                objectFit="cover"
-                sx={{ borderRadius: "50%" }}
-                mb="24px"
-              />
-              <Heading variant="h4" color="heading-navy-fg">{a.full_name}</Heading>
-              <Text align="center" variant="cardBody" color="columnlink-fg">{a.title}</Text>
-              {a.tags?.map((t: Tag) => (
-                <Badge mt="2" variant={t.tag === "Content generator" ? "community_and_events" : t.tag === "Event organizer" ? "youtube" : "stark_math"}>{t.tag}</Badge>
-              ))}
+              <Flex
+                alignItems="center"
+                direction="column"
+              >
+                <Img
+                  width="130px"
+                  height="130px"
+                  src={a.image}
+                  title={a.title}
+                  objectFit="cover"
+                  sx={{ borderRadius: "50%" }}
+                  mb="24px"
+                  />
+                <Heading variant="h4" color="heading-navy-fg">{a.full_name}</Heading>
+                <Text align="center" variant="cardBody" color="columnlink-fg">{a.title}</Text>
+              </Flex>
+              <VStack height="96px">
+                {a.tags?.map((t: Tag) => (
+                  <Badge mt="2" variant={t.tag === "Content generator" ? "community_and_events" : t.tag === "Event organizer" ? "youtube" : "stark_math"}>{t.tag}</Badge>
+                  ))}
+              </VStack>
             </Flex>
           )})
         }
