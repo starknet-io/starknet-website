@@ -1,0 +1,73 @@
+id: 9ef96527-d86d-49f9-bbd9-2929e43a22c8
+post_type: video
+title: ZeroSync - Introducing validity proofs to Bitcoin
+published_date: 2023-08-04T11:22:54.452Z
+video:
+  url: https://www.youtube.com/watch?v=kuIZiWQIkOs
+  id: kuIZiWQIkOs
+  data:
+    kind: youtube#video
+    etag: CKrU2G3hUpUVpI2qAtbcASPzZgw
+    id: kuIZiWQIkOs
+    snippet:
+      publishedAt: 2023-08-04T07:15:01Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "ZeroSync : Introducing validity proofs to Bitcoin - Robin Linus"
+      description: |-
+        ZeroSync : https://zerosync.org/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/kuIZiWQIkOs/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/kuIZiWQIkOs/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/kuIZiWQIkOs/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/kuIZiWQIkOs/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/kuIZiWQIkOs/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "ZeroSync : Introducing validity proofs to Bitcoin - Robin Linus"
+        description: |-
+          ZeroSync : https://zerosync.org/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT34M17S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/zerosync-introducing-validity-proofs-to-bitcoin.jpg
+category: community-and-events
