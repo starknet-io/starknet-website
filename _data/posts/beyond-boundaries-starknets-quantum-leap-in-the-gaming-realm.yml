@@ -1,0 +1,71 @@
+id: 0eef8a35-8d0c-4a05-b6b9-aee7dc950230
+post_type: video
+title: Beyond Boundaries - Starknet's Quantum Leap in the Gaming Realm
+published_date: 2023-08-08T15:33:33.725Z
+video:
+  url: https://www.youtube.com/watch?v=iyPjr1K77e8
+  id: iyPjr1K77e8
+  data:
+    kind: youtube#video
+    etag: cnr0_0HGWHyp_3UdnI7NrfgJgh0
+    id: iyPjr1K77e8
+    snippet:
+      publishedAt: 2023-08-04T08:15:03Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Beyond Boundaries: StarkNet's Quantum Leap in the Gaming Realm - Nico
+        Rodriguez"
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/iyPjr1K77e8/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/iyPjr1K77e8/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/iyPjr1K77e8/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/iyPjr1K77e8/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/iyPjr1K77e8/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Beyond Boundaries: StarkNet's Quantum Leap in the Gaming Realm - Nico
+          Rodriguez"
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT15M36S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/beyond-boundaries-starknet-s-quantum-leap-in-the-gaming-realm.jpg
+category: community-and-events
