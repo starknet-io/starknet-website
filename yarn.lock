@@ -3726,6 +3726,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/fira-code@npm:^5.0.8":
+  version: 5.0.8
+  resolution: "@fontsource/fira-code@npm:5.0.8"
+  checksum: dcf4e2c78a24a99845a7794463e5badcf30f30ef88cc74c5a42aac13a810e311cba819c18d7fbcb03bc2cd34566884641b556d314cb75382ed3776eae4fb26c8
+  languageName: node
+  linkType: hard
+
 "@fontsource/inter@npm:^4.5.15":
   version: 4.5.15
   resolution: "@fontsource/inter@npm:4.5.15"
@@ -4763,6 +4770,7 @@ __metadata:
     "@crowdin/cli": ^3.11.0
     "@emotion/react": ^11.10.8
     "@emotion/styled": ^11.10.8
+    "@fontsource/fira-code": ^5.0.8
     "@fontsource/inter": ^4.5.15
     "@fontsource/noto-sans-hebrew": ^4.5.14
     "@fontsource/noto-sans-jp": ^4.5.12
