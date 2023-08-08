@@ -4,6 +4,8 @@ import "@fontsource/tajawal/arabic.css";
 import "@fontsource/noto-sans-jp/japanese.css";
 import "@fontsource/noto-sans-sc/chinese-simplified.css";
 import "@fontsource/noto-sans-tc/chinese-traditional.css";
+import "@fontsource/fira-code"; // Defaults to weight 400
+import "@fontsource/fira-code/600.css";
 
 import React, { Suspense, useEffect } from "react";
 import { PageContextProvider } from "./PageContextProvider";

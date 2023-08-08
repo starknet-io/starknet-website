@@ -16,6 +16,8 @@ export default function ControlButton({
   return (
     <IconButton
       variant="unstyled"
+      w="40px"
+      h="48px"
       aria-label={ariaLabel}
       backgroundColor="transparent"
       outline="none"

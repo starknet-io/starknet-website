@@ -1,4 +1,4 @@
-import { HStack } from "@chakra-ui/react";
+import { HStack, SimpleGrid } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Card } from "./Card";
 import { Heading } from "@ui/Typography/Heading";
@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import moment from "moment";
+import { StatsCard } from "./StatsCard";
 
 export default {
   title: "starknet.io/Cards",
@@ -1037,3 +1038,26 @@ ImageIcon.args = {
   type: "featured"
 }
 
+export const StatCard = () => {
+  return (
+    <ThemeProvider>
+      <SimpleGrid
+        columns={{
+          base: 1,
+          md: 2,
+          lg: 3,
+        }}
+        gap="4rem"
+        my="4rem"
+      >
+        <StatsCard title="Cumulative new addresses " stat="67,505" />
+        <StatsCard
+          title="Cumulative new addresses "
+          stat="67,505"
+          tooltip="I am a very long tooltip, longer than the box itself"
+        />
+        <StatsCard title="Cumulative new addresses " stat="67,505" />
+      </SimpleGrid>
+    </ThemeProvider>
+  );
+};

@@ -35,6 +35,7 @@
     "@crowdin/cli": "^3.11.0",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
+    "@fontsource/fira-code": "^5.0.8",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/noto-sans-hebrew": "^4.5.14",
     "@fontsource/noto-sans-jp": "^4.5.12",
