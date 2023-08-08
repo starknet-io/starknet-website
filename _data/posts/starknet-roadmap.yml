@@ -1,0 +1,71 @@
+id: 5473eea8-06c0-4129-a162-47cb80d6d253
+post_type: video
+title: Starknet Roadmap
+published_date: 2023-08-04T15:31:00.316Z
+video:
+  url: https://www.youtube.com/watch?v=T4D1ZrcPFo8
+  id: T4D1ZrcPFo8
+  data:
+    kind: youtube#video
+    etag: 5Xr4K2zoZSrIWD9JtV3yKAAWgLU
+    id: T4D1ZrcPFo8
+    snippet:
+      publishedAt: 2023-08-04T08:00:23Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Starknet Roadmap - Tom Brand
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/T4D1ZrcPFo8/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/T4D1ZrcPFo8/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/T4D1ZrcPFo8/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/T4D1ZrcPFo8/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/T4D1ZrcPFo8/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Starknet Roadmap - Tom Brand
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT12M58S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/starknet-community-update-tom-brand.jpg
+category: community-and-events
+topic:
+  - 63d577bc-fbb2-432c-8d43-ce4472c82338
