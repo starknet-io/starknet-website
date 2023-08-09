@@ -8,13 +8,13 @@ interface BorderRadius {
 }
 type Props = {
   children: React.ReactNode;
-  padding?: string;
+  padding?: BoxProps["padding"];
   borderRadius?: BorderRadius | string;
 } & BoxProps;
 
 export const CardGradientBorder = ({
   children,
-  padding = "8px",
+  padding = 0,
   borderRadius = "16px",
   ...rest
 }: Props) => {
