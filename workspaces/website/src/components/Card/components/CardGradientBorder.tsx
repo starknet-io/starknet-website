@@ -9,13 +9,13 @@ interface BorderRadius {
 type Props = {
   children: React.ReactNode;
   padding?: string;
-  borderRadius?: BorderRadius;
+  borderRadius?: BorderRadius | string;
 } & BoxProps;
 
 export const CardGradientBorder = ({
   children,
-  padding = "8",
-  borderRadius = { base: "24px" },
+  padding = "8px",
+  borderRadius = "16px",
   ...rest
 }: Props) => {
   return (
@@ -28,7 +28,7 @@ export const CardGradientBorder = ({
       height="100%"
       _hover={{
         background:
-          "linear-gradient(0.25turn, white, white) padding-box,linear-gradient(200deg, #C507E4, #5C94FF) ",
+          "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FBFBFB, #FBFBFB)",
         borderColor: "transparent",
       }}
       {...rest}
