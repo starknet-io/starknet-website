@@ -1115,6 +1115,7 @@ export const StatCard = () => {
 export const AnalyticsCards = () => {
   return (
     <ThemeProvider>
+      <Heading variant="h2">Grid example</Heading>
       <SimpleGrid
         columns={{
           base: 1,
@@ -1133,8 +1134,17 @@ export const AnalyticsCards = () => {
           icon={SiDiscord}
           description="Followers on Social Media"
           stat="100k"
+          bg="#FFFAD5"
         />
       </SimpleGrid>
+      <Heading variant="h2" mb="2rem">
+        Standalone example
+      </Heading>
+      <AnalyticsCard
+        icon={SiDiscord}
+        description="Followers on Social Media"
+        stat="100k"
+      />
     </ThemeProvider>
   );
 };
@@ -1142,6 +1152,7 @@ export const AnalyticsCards = () => {
 export const PatternCards = () => {
   return (
     <ThemeProvider>
+      <Heading variant="h2">Grid example</Heading>
       <SimpleGrid
         columns={{
           base: 1,
@@ -1172,6 +1183,14 @@ export const PatternCards = () => {
           link="/learn/frequently-asked-questions"
         />
       </SimpleGrid>
+      <Heading variant="h2" mb="2rem">
+        Standalone example
+      </Heading>
+      <PatternCard
+        title="What is StarkEx?"
+        pattern="circle-lines"
+        link="/learn/frequently-asked-questions"
+      />
     </ThemeProvider>
   );
 };
