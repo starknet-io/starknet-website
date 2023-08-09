@@ -28,11 +28,16 @@ const theme = extendTheme(proTheme, {
       red: "#444",
       infiniteBlue: "#4A4AB5",
     },
+    content: {
+      support: "rgba(12, 12, 79, 0.72)",
+      accent: "#0C0C4F",
+    },
     surface: {
       accent: "#0C0C4F",
       accentText: "#FBFBFB",
       accentInverted: "#F0F0FF",
       accentInvertedText: "#161618",
+      bgPage: "#F6F6F6",
     },
     offWhite: "#EAEFEE",
     sea: {
