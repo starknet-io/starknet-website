@@ -1,8 +1,6 @@
 import { Box, Container } from "@chakra-ui/react";
-import { AnalyticsCard } from "@ui/Card/AnalyticsCard";
 import { playlist } from "@ui/VideoPlayer/constants";
 import { VideoPlayerWebsite } from "@ui/VideoPlayer/player-website/VideoPlayerWebsite";
-import { SiTwitter } from "react-icons/si";
 import { usePageContext } from "src/renderer/PageContextProvider";
 import { navigate } from "vite-plugin-ssr/client/router";
 
@@ -25,10 +23,10 @@ export default function VideoPage({ chapter }: Props) {
           Video tutorial
         </Box>
       </Box>
-      <AnalyticsCard
-        icon={SiTwitter}
-        description="Followers on Social Media"
-        stat="100k"
+      <VideoPlayerWebsite
+        chapters={playlist}
+        initialActiveChapter={chapter}
+        onChapterChange={onChapterChange}
       />
     </Container>
   );

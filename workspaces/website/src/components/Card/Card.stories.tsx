@@ -13,6 +13,7 @@ import moment from "moment";
 import { StatsCard } from "./StatsCard";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 import { AnalyticsCard } from "./AnalyticsCard";
+import { PatternCard } from "./PatternCard";
 
 export default {
   title: "starknet.io/Cards",
@@ -1132,6 +1133,43 @@ export const AnalyticsCards = () => {
           icon={SiDiscord}
           description="Followers on Social Media"
           stat="100k"
+        />
+      </SimpleGrid>
+    </ThemeProvider>
+  );
+};
+
+export const PatternCards = () => {
+  return (
+    <ThemeProvider>
+      <SimpleGrid
+        columns={{
+          base: 1,
+          md: 2,
+          lg: 3,
+        }}
+        gap="4rem"
+        my="4rem"
+      >
+        <PatternCard
+          title="View all questions"
+          pattern="two-lines"
+          link="/learn/frequently-asked-questions"
+        />
+        <PatternCard
+          title="What is the starknet?"
+          pattern="ethereum"
+          link="/learn/frequently-asked-questions"
+        />
+        <PatternCard
+          title="How does Starknet work?"
+          pattern="curly-lines"
+          link="/learn/frequently-asked-questions"
+        />
+        <PatternCard
+          title="What is StarkEx?"
+          pattern="circle-lines"
+          link="/learn/frequently-asked-questions"
         />
       </SimpleGrid>
     </ThemeProvider>
