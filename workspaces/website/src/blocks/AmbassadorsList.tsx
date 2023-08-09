@@ -91,7 +91,7 @@ const AmbassadorsList = (props: RootProps) => {
         overflow="hidden"
         direction="row"
         flexWrap="wrap"
-        justifyContent="space-between"
+        justifyContent="flex-start"
       >
         {ambassador?.map(a => {
           return (
@@ -102,7 +102,7 @@ const AmbassadorsList = (props: RootProps) => {
               onClick={() => viewMember(a)}
               cursor="pointer"
               px="2"
-              maxWidth={{base: "calc(100% - 16px)", md: "calc(50% - 16px)", lg: "calc(33.333333% - 16px)" }}
+              maxWidth={{base: "100%", md: "50%", lg: "33.333333%" }}
               width="100%"
               justifyContent="space-between"
             >
