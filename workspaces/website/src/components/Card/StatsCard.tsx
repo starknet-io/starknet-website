@@ -92,7 +92,7 @@ export const StatsCard = ({
             aria-label="Information"
             color="brand.infiniteBlue"
             _hover={{
-              opacity: 0.7,
+              color: "surface.accentInverted",
             }}
             variant="unstyled"
           >

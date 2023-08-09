@@ -22,14 +22,5 @@ export const styles = {
     " p:has(> img) + h2": {
       marginTop: "0",
     },
-    "[data-popper-placement=left] .stat-tooltip": {
-      background: "surface.accentInverted",
-      color: "surface.accentInvertedText",
-    },
-    "[data-popper-placement=left] .chakra-tooltip__arrow": {
-      backgroundColor: "surface.accentInverted",
-      "--popper-arrow-shadow-color": "var(--chakra-colors-surface-accent)",
-      "--popper-arrow-bg": "var(--chakra-colors-surface-accentInverted)",
-    },
   },
 };
