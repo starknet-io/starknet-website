@@ -40,7 +40,7 @@ export const tokens = {
       "card-bg": "#FFFFFF",
       "roadmap-hero-gradient":
         "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
-      "card-br": "#EFEFEF",
+      "card-br": "#ECECF9",
       "subnav-fg": "#858585",
       "subnav-fg-accent": "#0C0C4F",
       "heading-navy-fg": "#0C0C4F",
