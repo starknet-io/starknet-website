@@ -27,10 +27,14 @@ const theme = extendTheme(proTheme, {
       orange: "orange",
       red: "#444",
       infiniteBlue: "#4A4AB5",
+      nebula: "#4A4AB5",
     },
     content: {
       support: "rgba(12, 12, 79, 0.72)",
       accent: "#0C0C4F",
+    },
+    border: {
+      card: "#ECECF9",
     },
     surface: {
       accent: "#0C0C4F",
