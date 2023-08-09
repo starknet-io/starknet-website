@@ -16,6 +16,7 @@ export const CardGradientBorder = ({
   children,
   padding = 0,
   borderRadius = "16px",
+  bg = "card-bg",
   ...rest
 }: Props) => {
   return (
@@ -26,9 +27,10 @@ export const CardGradientBorder = ({
       bg="card-bg"
       borderRadius={borderRadius}
       height="100%"
+      overflow="hidden"
       _hover={{
         background:
-          "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FBFBFB, #FBFBFB)",
+          "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
         borderColor: "transparent",
       }}
       {...rest}

@@ -1,7 +1,7 @@
 import { Box, Image, Link } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
-import { CardGradientBorder } from "./components/CardGradientBorder";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { CardGradientBorder } from "./components/CardGradientBorder";
 
 type PatternCardProps = {
   title: string;
@@ -14,69 +14,72 @@ export const PatternCard = ({
   pattern = "two-lines",
 }: PatternCardProps) => {
   return (
-    <CardGradientBorder
-      padding="0px"
-      display="inline-flex"
-      flexDir={{
-        base: "row",
-        lg: "column",
-      }}
-      alignItems={{
-        base: "center",
-        lg: "flex-start",
-      }}
-      borderRadius={{ base: "16px" }}
-    >
-      <Image
-        src={`/assets/pattern/${pattern}.svg`}
-        alt={title}
-        objectFit={{
-          base: "cover",
-          lg: "fill",
-        }}
-        objectPosition={{
-          base: "left center",
-          lg: "50% 50%",
-        }}
-        maxW={{
-          base: "160px",
-          lg: "100%",
-        }}
-        aspectRatio={{
-          base: "1",
-          lg: "auto",
-        }}
-      />
+    <CardGradientBorder display="inline-block">
       <Box
-        px={{
-          base: "xl",
-          lg: "3xl",
-        }}
-        py={{
-          lg: "xl",
-        }}
-        gap="lg"
+        padding="0px"
         display="flex"
-        flexDir="column"
+        flexDir={{
+          base: "row",
+          lg: "column",
+        }}
+        alignItems={{
+          base: "center",
+          lg: "flex-start",
+        }}
+        borderRadius={{ base: "16px" }}
+        bg="card-bg"
       >
-        <Heading
-          variant="h5"
-          title={title}
-          color="content.accent"
-          fontSize="20px"
-          lineHeight="28px"
-        >
-          {title}
-        </Heading>
-        <Link
-          href={link}
+        <Image
+          src={`/assets/pattern/${pattern}.svg`}
+          alt={title}
+          objectFit={{
+            base: "cover",
+            lg: "fill",
+          }}
+          objectPosition={{
+            base: "left center",
+            lg: "50% 50%",
+          }}
+          maxW={{
+            base: "160px",
+            lg: "100%",
+          }}
+          aspectRatio={{
+            base: "1",
+            lg: "auto",
+          }}
+        />
+        <Box
+          px={{
+            base: "xl",
+            lg: "3xl",
+          }}
+          py={{
+            lg: "xl",
+          }}
+          gap="lg"
           display="flex"
-          gap="base"
-          p="base"
-          alignItems="center"
+          flexDir="column"
         >
-          Learn <HiOutlineArrowRight size="14px" />
-        </Link>
+          <Heading
+            variant="h5"
+            title={title}
+            color="content.accent"
+            fontSize="20px"
+            lineHeight="28px"
+          >
+            {title}
+          </Heading>
+          <Link
+            href={link}
+            display="flex"
+            gap="base"
+            p="base"
+            alignItems="center"
+          >
+            Learn <HiOutlineArrowRight size="14px" />
+          </Link>
+        </Box>
       </Box>
     </CardGradientBorder>
   );
