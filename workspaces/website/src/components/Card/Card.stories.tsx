@@ -1,7 +1,6 @@
 import { HStack, Box, Icon, Link } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Card, CardBody, CardLink, CardImg, CardTitle } from "./Card";
-import { CustomLink } from "../Link";
 import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { Heading } from "@ui/Typography/Heading";
