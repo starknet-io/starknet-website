@@ -52,7 +52,7 @@ blocks:
           custom_title: "Protostar "
           custom_external_link: https://github.com/software-mansion/protostar
         subLabel:
-          label: StarkNet smart contract development toolchain
+          label: Starknet smart contract development toolchain
       - link:
           custom_title: Hardhat-starknet
           custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
@@ -65,7 +65,13 @@ blocks:
           custom_title: "Starknet Devnet "
           custom_external_link: https://github.com/Shard-Labs/starknet-devnet
         subLabel:
-          label: like Ganache, but for Starknet
+          label: Like Ganache, but for Starknet
+      - link:
+          hasIcon: true
+          custom_title: Foundry
+          custom_external_link: https://github.com/foundry-rs/starknet-foundry
+        subLabel:
+          label: Ethereum’s leading toolkit for developers is coming to Starknet
   - type: link_list
     heading: "Editor plugins "
     listSize: lg
@@ -144,7 +150,7 @@ blocks:
           custom_title: starknet-deeplink
           custom_external_link: https://www.npmjs.com/package/starknet-deeplink
         subLabel:
-          label: StarkNet deeplink generator
+          label: Starknet deeplink generator
       - type: link_list_item
         link:
           custom_title: Nile
@@ -174,7 +180,7 @@ blocks:
           custom_title: "Starknet node by Chainstack "
           custom_external_link: https://chainstack.com/build-better-with-starknet/
         subLabel:
-          label: get your API services without running your own node
+          label: Get your API services without running your own node
       - type: link_list_item
         link:
           custom_title: "TypeChain "
@@ -197,19 +203,19 @@ blocks:
           custom_title: Pathfinder
           custom_external_link: https://github.com/eqlabs/pathfinder
         subLabel:
-          label: a Starknet full-node written in Rust by Equilibrium
+          label: A Starknet full-node written in Rust by Equilibrium
       - link:
           hasIcon: false
           custom_title: Juno
           custom_external_link: https://github.com/NethermindEth/juno
         subLabel:
-          label: a Starknet full-node written in go-lang by Nethermind
+          label: A Starknet full-node written in go-lang by Nethermind
       - link:
           hasIcon: false
           custom_title: Papyrus
           custom_external_link: https://github.com/starkware-libs/papyrus
         subLabel:
-          label: a Starknet full-node written in Rust by StarkWare
+          label: A Starknet full-node written in Rust by StarkWare
       - link:
           hasIcon: false
           custom_title: Infura
