@@ -17,7 +17,7 @@ export const AnalyticsCard = ({
   bg = "surface.bgPage",
 }: Props) => {
   return (
-    <CardGradientBorder p={0} display="inline-block">
+    <CardGradientBorder display="inline-block">
       <Box p="2xl" bg={bg}>
         <Box
           display="flex"

@@ -14,6 +14,8 @@ import { StatsCard } from "./StatsCard";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 import { AnalyticsCard } from "./AnalyticsCard";
 import { PatternCard } from "./PatternCard";
+import "@fontsource/fira-code"; // Defaults to weight 400
+import "@fontsource/fira-code/600.css";
 
 export default {
   title: "starknet.io/Cards",
