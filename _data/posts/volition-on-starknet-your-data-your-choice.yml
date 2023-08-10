@@ -1,0 +1,108 @@
+id: a2ea3c50-d833-421c-b27d-ce7b04224257
+post_type: article
+title: "Volition on Starknet: Your Data, Your Choice "
+toc: true
+published_date: 2023-08-10T13:42:32.701Z
+image: /assets/volition-2-.png
+category: engineering
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
+short_desc: Volition will allow developers to regulate data availability on
+  Ethereum (L1) or on Starknet (L2). Reducing L1 onchain data can radically
+  reduce costs.
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ## TL;DR
+
+
+          * Starknet presents: Volition!
+
+          * Volition will allow developers to regulate data availability on Ethereum (L1) or on Starknet (L2). Reducing L1 onchain data can radically reduce costs. 
+
+          * Flexibility in data availability modes will allow, once again, greater freedom for Starknet developers and users, letting them choose the most suitable security level for their specific needs in a cost-effective manner.
+
+          * Volition will be implemented on testnet during Q4 2023. 
+
+
+
+
+          ## Validity Rollups: Increasing Throughput, Reducing Costs 
+
+
+          As Ethereum continues to grow, the need for scalability and cost reduction becomes increasingly urgent. For that purpose, Validity Rollups emerged as a scalable and efficient solution that operates on top of Ethereum. 
+
+
+          Starknet, a Validity Rollup from the inventors of STARK proofs, operates as Layer 2 that allows massive computations and reduce computation fees by submitting to Ethereum (L1) only the must-have data of each transaction and using a [Shared Prover (SHARP)](https://starkware.co/resource/joining-forces-sharp/) to split the proof’s onchain validation fees across all transactions within a given batch. 
+
+
+          In Q4 of 2023, Starknet will unlock another meaningful cost reduction,  addressing a major challenge that developers face when it comes to transaction fees: the high cost of L1 onchain data. 
+
+
+          Among the various factors that determine the cost of a transaction, onchain data availability alone can account for up to 95% of the average transaction cost. Finding a way to reduce L1 onchain data can have a major impact on the overall cost reduction that users and developers can gain. Starknet’s solution to this challenge: Volition.
+
+
+          ![L1 data availability (current state) ](/assets/on-chain-state-1x.png "L1 data availability (current state) ")
+
+
+          ## Introducing: Volition
+
+
+          Currently, Starknet operates in a Validity Rollup mode, meaning Starknet’s data and the commitment to the state is sent to be submitted on Ethereum. With Volition, data could be stored on Starknet L2, allowing developers to optimize their contracts by choosing its data availability mode at the individual storage variable level. 
+
+
+          Volition - as its name suggests - will provide the ability to choose the data availability of an app or a transaction. Starknet developers will be able to flex throughout the data availability spectrum, dynamically choosing their data availability solution, and determine if the data of their app will be available on Ethereum L1, or on Starknet L2 - Free to pass this choice along to the users of their app.
+
+
+          Volition is made possible by implementing Starknet’s state as two distinct storage commitment trees: one for L1 data availability mode, and one for L2 data availability mode. While the data of the L1 data availability mode tree will be posted on Ethereum Mainnet, L2 data availability means that the data of the transactions will be updated on L2 and communicated to the Starknet network. Only the commitment for the data (meaning the ‘root’ of the commitment tree) will be sent to L1.
+
+
+          ![L2 data availability (Volition state) ](/assets/volition-mode-21x.png "L2 data availability (Volition state) ")
+
+
+          ### Make it Your Choice
+
+
+          The security of the layer where data is posted determines the level of certainty for the data's availability. Data posted on L1 will benefit from the security level provided by Ethereum and will be as available as any other data on Ethereum. On the other hand, data posted on L2 will benefit from lower costs and will be communicated to all Starknet L2 nodes. This ensures minimized risks of failures or malicious actions that could prevent withdrawals or deny access to the stored data on L2. 
+
+
+          While these necessary measures are taken to ensure a high level of security for L2 data availability, we acknowledge that for maximum security, L1 data availability (DA) should be your choice, granting Ethereum-grade security. L2 data availability should be used for cases in which developers and users consider the trade-offs between L2 costs and L1 security. We also recommend developers to write contracts that use L2DA, in a way that enable the contract to function (while losing the L2DA assets, for example) in case of an L2 data availability crisis. Moreover, as we introduce Volition, we recognize that refining innovations takes time. Therefore, Volition will be available on the testnet for an extended period. During this phase, we will actively use feedback from our community to tailor it to our builders' needs.
+
+
+          Introducing Volition on Starknet will improve efficiency and DevEx. The ability to choose independently how to optimize the balance between security and costs will allow Layer 2 apps to adjust their design to user´s needs, and reach wider audiences. 
+
+
+          ## Volition Use Cases and Applications
+
+
+          To best illustrate the effectiveness of Volition, let’s look at a few real-world examples. 
+
+
+          Imagine you participate in a high-profile Web 3 game on an app that is built on Starknet. You successfully bid on and purchase a prime NFT of a crossbow. Given the importance of this transaction, you may choose onchain data availability mode. This will ensure the ownership of the crossbow is securely recorded on the Ethereum blockchain, benefiting its wide decentralization. Subsequently, you decide to buy 150 arrow NFTs. Since this purchase is of lower value, you may opt for L2 Data availability to complete the transaction, allowing you to save on costs. 
+
+
+          ![](/assets/screenshot-2023-08-10-at-16.56.49.png)
+
+
+          The same concept applies to high-value decentralized trading, where DEX’s top priorities are securing funds and minimizing transaction fees. Users may keep some funds in their L2 data availability account to optimize trading operations. Using the funds stored in the L2 data storage allows traders to execute a high volume of trades with reduced fees. When the funds in the L2 data availability account reach a high amount, the DEX will prioritize security over costs and will move funds back to an L1 data availability account. This transfer ensures that the lion’s share of the funds is securely available on L1.
+
+
+          ![](/assets/screenshot-2023-08-10-at-16.56.25.png)
+
+
+          As seen in both examples, Volition, by enabling developers and users to choose the data availability mode for each contract,  allows more control and enhances the user trading experience.  
+
+
+          ## Wen Volition? 
+
+
+          Volition will be introduced in Starknet Testnet in Q4 2023. It will remain in testnet for an extended period, enabling us to understand and enhance various security aspects based on the community's feedback and experience Volition is expected to allow cost reduction for many users and dApp builders. In the future, Starknet will define additional data availability modes, such as Adamantium (a data availability mode that utilizes a committee for users who prefer a trusted party for their data availability). 
+
+
+          ## Summary
+
+
+          Starknet's Volition tackles both security concerns and steep onchain data costs. By allowing data storage on Starknet L2, developers have a shot at cutting costs and boosting scalability, all while maintaining Ethereum's trusted security. The upside of employing Volition on Starknet is vast, potentially opening doors for innovative app development. Curious about Volition? Dive into a [comprehensive lecture](https://www.youtube.com/watch?v=uqUwVfDpTK0) by our head of product, Avihu Levy, and explore an [in-depth discussion](https://community.starknet.io/t/volition-hybrid-data-availability-solution/97387/17) on our community forum.
