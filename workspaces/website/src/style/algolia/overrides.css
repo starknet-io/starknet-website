@@ -157,8 +157,8 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
 
 @media only screen and (max-width: 600px) {
 .aa-DetachedSearchButton {
-    min-width: 40px;
-    width: 40px;
+    min-width: 44px;
+    width: 44px;
     border-radius: 8px;
     background-color: transparent;
     border: 0px;
@@ -168,7 +168,8 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
 }
 
 .aa-DetachedSearchButton svg {
- width: 16px;
+  width: 24px;
+  height: 24px;
 }
 
 .aa-DetachedContainer--modal {
