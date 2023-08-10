@@ -10,7 +10,8 @@ export const tokens = {
       "fg-default-hover": "#0C0C4F",
       "fg-muted": "#858585",
       "fg-accent": "#E97880",
-      "navbar-bg": "#FFFFFF",
+      "navbar-bg": "#FBFBFB",
+      "not-found-bg": "#FFFFFF",
       "navbar-dropdown-bg": "#FFFFFF",
       "button-nav-bg": "transparent",
       "button-nav-fg": "#363636",
@@ -159,6 +160,7 @@ export const tokens = {
       "fg-muted": "#7E7E7E",
       "fg-accent": "#FE9E92",
       "navbar-bg": "#121212",
+      "not-found-bg": "#121212",
       "navbar-dropdown-bg": "#1B1B1B",
       "button-nav-bg": "transparent",
       "button-nav-fg": "#FFFFFF",
@@ -338,6 +340,10 @@ export const semanticTokens = {
     "navbar-bg": {
       default: tokens.colors.light["navbar-bg"],
       _dark: tokens.colors.dark["navbar-bg"],
+    },
+    "not-found-bg": {
+      default: tokens.colors.light["not-found-bg"],
+      _dark: tokens.colors.dark["not-found-bg"],
     },
     "navbar-dropdown-bg": {
       default: tokens.colors.light["navbar-dropdown-bg"],
