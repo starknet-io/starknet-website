@@ -132,9 +132,9 @@ const AmbassadorsList = (props: RootProps) => {
         }
         <Modal isOpen={isOpen} onClose={handleClose}>
           <ModalOverlay />
-          <ModalContent maxWidth="1100px" width="100%">
-            <ModalCloseButton cursor="pointer" zIndex="9" onClick={handleClose} />
-            <Flex>
+          <ModalContent maxWidth="1100px" width="100%" margin={{ base: "0", lg: 16}}>
+            <ModalCloseButton cursor="pointer" zIndex="9" onClick={handleClose} color={{base: "white", lg: "inherit"}}/>
+            <Flex direction={{base: "column", lg: "row"}}>
               <Img
                 width="auto"
                 height="100%"
