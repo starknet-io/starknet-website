@@ -24,7 +24,7 @@ export const StatsCard = ({
       w="auto"
       gap={{
         base: "3xl",
-        md: "5xl",
+        lg: "5xl",
       }}
       minW={{
         base: "260px",
@@ -73,21 +73,7 @@ export const StatsCard = ({
         flexDir="column"
         alignItems="center"
       >
-        <Tooltip
-          label={tooltip}
-          placement="auto"
-          gutter={18}
-          hasArrow
-          className="stat-tooltip"
-          modifiers={[
-            {
-              name: "flip",
-              options: {
-                allowedAutoPlacements: ["left", "top", "right"],
-              },
-            },
-          ]}
-        >
+        <Tooltip label={tooltip} placement="auto" gutter={18} hasArrow isOpen>
           <Button
             aria-label="Information"
             color="brand.infiniteBlue"
