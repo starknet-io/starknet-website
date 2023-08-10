@@ -53,6 +53,7 @@ blocks:
         orientation: left
         withIllustration: true
         title: Starknet Governance
+        icon: /assets/governance.svg
         type: image_icon_link_card
         link:
           custom_internal_link: /community/governance
@@ -66,6 +67,7 @@ blocks:
         orientation: left
         withIllustration: true
         title: Ambassador program
+        icon: /assets/ambassador.svg
         type: image_icon_link_card
         link:
           custom_title: View
