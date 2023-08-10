@@ -1,4 +1,5 @@
 import { Box, BoxProps, Flex } from "@chakra-ui/react";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { ReactNode } from "react";
 import {
   LargeCardLayout,
@@ -114,13 +115,6 @@ export const Card = (props: Props) => {
   const bgColor = variant === "asset" ? "white" : "#FBFBFB"
   let styles = {
     borderRadius: "16px",
-    border: "1px solid #ECECF9",
-    borderImage: "none",
-    bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
-    "&:hover": {
-      borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
-      bg: `linear-gradient(${bgColor}, ${bgColor}) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box`,
-    }
   }
   switch(variant) {
     case 'grid':
@@ -151,8 +145,10 @@ export const Card = (props: Props) => {
       break;
   }
   return (
-    <Box
-      sx={styles} {...rest}
-    />
+    <CardGradientBorder bg={bgColor} padding="0" borderRadius="16px">
+      <Box
+        sx={styles} {...rest}
+      />
+    </CardGradientBorder>
   )
 };
