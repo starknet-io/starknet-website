@@ -73,7 +73,7 @@ export const StatsCard = ({
         flexDir="column"
         alignItems="center"
       >
-        <Tooltip label={tooltip} placement="auto" gutter={18} hasArrow isOpen>
+        <Tooltip label={tooltip} placement="auto" gutter={18} hasArrow>
           <Button
             aria-label="Information"
             color="brand.infiniteBlue"
