@@ -56,8 +56,9 @@ blocks:
         icon: /assets/governance.svg
         type: image_icon_link_card
         link:
-          custom_internal_link: /community/governance
+          custom_internal_link: ""
           custom_title: View
+          page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
         description: Explore Starknet governance - part of Starknet decentralization
           process.
         columns: "4"
@@ -71,5 +72,6 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: View
+          page: 5ecdf9cf-d433-478a-a280-07e0f860534f
         description: Get to know the ambassadors activities within Starknet community.
         columns: "4"
