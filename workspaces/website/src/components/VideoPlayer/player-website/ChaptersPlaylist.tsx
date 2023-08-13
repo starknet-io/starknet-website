@@ -1,4 +1,4 @@
-import { Box, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Chapter } from "../constants";
 
@@ -56,40 +56,42 @@ export default function ChaptersPlaylist({
             flexDir={{ base: "column", lg: "row" }}
             flexWrap="nowrap"
             padding={{ base: "0px 0px 2rem", lg: "0px 1rem 0px" }}
+            height="max-content"
           >
-            <Box maxW={{ base: "151px", lg: "99px", xl: "151px" }}>
-              <img
+            <Box
+              maxW={{ base: "151px", lg: "99px", xl: "151px" }}
+              height="min-content"
+            >
+              <Image
                 src={chapter.thumbnail}
-                width={151}
-                height={85}
+                // width={151}
+                // height={85}
                 alt={chapter.title}
                 style={{
                   // borderBottom: isActive ? "1px solid#EC796B" : "",
                   borderRadius: "10px",
                 }}
+                height="100%"
+                aspectRatio="16/9"
               />
             </Box>
-            <Box>
+            <Box display="flex" flexDir="column" gap="4px">
               <Box
-                as="h2"
+                as="h5"
                 fontSize="sm"
-                sx={{
-                  lineHeight: 1,
-                  marginBottom: "8px",
-                  fontWeight: isActive ? 700 : "",
-                  color: isActive ? "heading-navy-fg" : "",
-                }}
+                fontWeight="bold"
+                color={isActive ? "heading-navy-fg" : "fg-muted"}
+                lineHeight="normal"
               >
                 {chapter.title}
               </Box>
               <Box
                 as="p"
-                fontSize="xs"
-                marginBottom="8px"
+                fontSize="12px"
+                lineHeight="15px"
                 sx={{
                   maxW: "200px",
-                  lineHeight: 1,
-                  color: isActive ? "heading-navy-fg" : "",
+                  color: isActive ? "heading-navy-fg" : "fg-muted",
                 }}
               >
                 {chapter.description}
@@ -99,8 +101,11 @@ export default function ChaptersPlaylist({
                 fontSize="xs"
                 lineHeight={1}
                 sx={{
-                  color: isActive ? "heading-navy-fg" : "",
+                  color: isActive ? "heading-navy-fg" : "fg-muted",
                 }}
+                flex={1}
+                display="flex"
+                alignItems="flex-end"
               >
                 {chapter.durationTime}
               </Box>
