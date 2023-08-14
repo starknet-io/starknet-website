@@ -59,8 +59,8 @@ blocks:
           custom_internal_link: ""
           custom_title: View
           page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
-        description: Explore Starknet governance - part of Starknet decentralization
-          process.
+        description: Explore Starknet governance - participate in the discussions,
+          become a delegate.
         columns: "4"
       - size: large
         color: blue-default
