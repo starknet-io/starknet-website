@@ -47,4 +47,31 @@ blocks:
           custom_title: View
           custom_internal_link: /jobs/
         withIllustration: true
-  - type: community_events
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Starknet Governance
+        icon: /assets/governance.svg
+        type: image_icon_link_card
+        link:
+          custom_internal_link: ""
+          custom_title: View
+          page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
+        description: Explore Starknet governance - participate in the discussions,
+          become a delegate.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Ambassador program
+        icon: /assets/ambassador.svg
+        type: image_icon_link_card
+        link:
+          custom_title: View
+          page: 5ecdf9cf-d433-478a-a280-07e0f860534f
+        description: Get to know the ambassadors activities within Starknet community.
+        columns: "4"
