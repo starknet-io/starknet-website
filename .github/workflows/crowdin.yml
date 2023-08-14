@@ -53,7 +53,7 @@ jobs:
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Download approved translations from Crowdin
-        run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
+        run: yarn crowdin download -b ${{ github.ref_name }} --skip-untranslated-strings
         env:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
