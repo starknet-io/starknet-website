@@ -47,6 +47,7 @@ export const FinalChapterRightCTA = ({
       left={rightCTAStart}
       top={top}
       pointerEvents={isVisible ? "auto" : "none"}
+      visibility={isVisible ? "visible" : "hidden"}
       opacity={isVisible ? 1 : 0}
       transition="opacity 0.5s ease-in-out"
     >
