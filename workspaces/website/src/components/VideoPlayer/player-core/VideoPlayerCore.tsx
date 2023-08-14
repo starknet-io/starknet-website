@@ -227,6 +227,7 @@ export function VideoPlayerCore({
 
   const shouldShowChapterCTA =
     chapter?.id === chapters[chapters.length - 1].id &&
+    totalDuration !== 0 &&
     totalDuration - currentTime < 5;
 
   return (

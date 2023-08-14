@@ -1,6 +1,6 @@
 import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { Chapter } from "../constants";
+import { useUpdateEffect } from "react-use";
 
 type ChaptersPlaylistProps = {
   height: number;
@@ -17,7 +17,7 @@ export default function ChaptersPlaylist({
 }: ChaptersPlaylistProps) {
   const isMobile = useBreakpointValue({ base: true, lg: false });
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     const chapterElement = document.getElementById(currentChapter);
     if (chapterElement) {
       chapterElement.scrollIntoView({
