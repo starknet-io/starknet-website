@@ -64,14 +64,17 @@ export default function ChaptersPlaylist({
             >
               <Image
                 src={chapter.thumbnail}
-                // width={151}
-                // height={85}
+                width={{
+                  base: "151px",
+                  lg: "99px",
+                  xl: "151px",
+                }}
+                height="auto"
                 alt={chapter.title}
                 style={{
                   // borderBottom: isActive ? "1px solid#EC796B" : "",
                   borderRadius: "10px",
                 }}
-                height="100%"
                 aspectRatio="16/9"
               />
             </Box>
