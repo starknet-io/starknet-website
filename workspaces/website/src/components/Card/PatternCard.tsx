@@ -32,13 +32,16 @@ export const PatternCard = ({
         <Image
           src={`/assets/pattern/${pattern}.svg`}
           alt={title}
-          objectFit={{
-            base: "cover",
-            lg: "fill",
-          }}
+          objectFit="cover"
           objectPosition={{
             base: "left center",
             lg: "50% 50%",
+          }}
+          h={{
+            lg: "auto",
+          }}
+          w={{
+            lg: "100%",
           }}
           maxW={{
             base: "160px",
@@ -46,7 +49,7 @@ export const PatternCard = ({
           }}
           aspectRatio={{
             base: "1",
-            lg: "auto",
+            lg: "16 / 9",
           }}
         />
         <Box

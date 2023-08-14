@@ -1190,7 +1190,7 @@ export const PatternCards = () => {
       </Heading>
       <PatternCard
         title="What is StarkEx?"
-        pattern="circle-lines"
+        pattern="two-lines"
         link="/learn/frequently-asked-questions"
       />
     </ThemeProvider>
