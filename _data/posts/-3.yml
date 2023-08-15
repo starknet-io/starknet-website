@@ -1,5 +1,6 @@
 id: c6cee90d-b6d7-411a-abc1-ec6c33dd6e85
 post_type: video
+title: "Pragma : The Provable Oracle"
 published_date: 2023-08-04T12:07:14.399Z
 video:
   url: https://www.youtube.com/watch?v=MjU2vOElpqA
@@ -9,14 +10,8 @@ video:
     etag: 7VMbKpjV3H-TFign1GSo_OUm-MQ
     id: MjU2vOElpqA
     snippet:
-      publishedAt: 2023-08-04T14:00:15Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Pragma : The Provable Oracle - Matthias Hallgren"
-      description: |-
-        Pragma : https://www.pragmaoracle.com/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T14:00:15.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/MjU2vOElpqA/default.jpg
@@ -38,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/MjU2vOElpqA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Pragma : The Provable Oracle - Matthias Hallgren"
       tags:
         - crypto
         - ethereum
@@ -49,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Pragma : The Provable Oracle - Matthias Hallgren"
         description: |-
@@ -59,7 +55,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Pragma : https://www.pragmaoracle.com/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT11M56S
       dimension: 2d
