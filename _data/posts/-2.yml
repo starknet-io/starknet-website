@@ -1,0 +1,74 @@
+id: 1bf11d73-65de-472f-a643-d61d9f364b7f
+post_type: video
+published_date: 2023-08-04T12:01:18.909Z
+video:
+  url: https://www.youtube.com/watch?v=-G2z0MzC7Z0
+  id: -G2z0MzC7Z0
+  data:
+    kind: youtube#video
+    etag: jWdBUQULG3SrMpMDxDmC3CYvP8g
+    id: -G2z0MzC7Z0
+    snippet:
+      publishedAt: 2023-08-04T10:45:00Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Lambda Class : STARK prover - Mauro Toscano & Diego Kingston"
+      description: |-
+        LambdaClass : https://lambdaclass.com/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/-G2z0MzC7Z0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/-G2z0MzC7Z0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/-G2z0MzC7Z0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/-G2z0MzC7Z0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/-G2z0MzC7Z0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Lambda Class : STARK prover - Mauro Toscano & Diego Kingston"
+        description: |-
+          LambdaClass : https://lambdaclass.com/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT6M47S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/lambda-class-stark-prover.jpg
+category: community-and-events
+topic:
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
