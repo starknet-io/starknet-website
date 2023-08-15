@@ -26,6 +26,7 @@ export default function CMSPage({
   return (
     <Box>
       <PageLayout
+        maxW="none"
         contentMaxW={data.template === "narrow content" ? "846px" : null}
         breadcrumbs={
           <>
