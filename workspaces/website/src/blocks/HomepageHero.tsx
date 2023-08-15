@@ -2,7 +2,7 @@ import { Box, Flex, Img, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-
+import StarknetProjects from "./EcosystemHomepageBlock";
 type Props = {
   readonly seo: {
     heroText: string;
@@ -13,138 +13,155 @@ import { navigate } from "vite-plugin-ssr/client/router";
 
 export const HomepageHero = ({ seo }: Props) => {
   return (
-    <Box
-      as="section"
-      pt="46px"
-      pb="93px"
-      overflow="hidden"
-      bg="#eaeaea"
-      minHeight="729px"
-      _dark={{
-        bgGradient:
-          "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
-      }}
-      bgGradient="linear(0.59deg, #FBECF3 0.97%, #F3EBF7 26.24%, #F0F0FB 54.59%, #E6F0FF 99.96%)"
-      borderRadius="24px"
-      position="relative"
-      mt="-24px"
-    >
+    <>
       <Box
-        inset={0}
-        position="absolute"
-        opacity="0.6"
-        mixBlendMode="overlay"
+        as="section"
+        pt="46px"
+        pb="93px"
+        overflow="hidden"
+        bg="#eaeaea"
+        minHeight="729px"
         _dark={{
-          opacity: 0.3,
+          bgGradient:
+            "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
         }}
+        bgGradient="linear(0.59deg, #FBECF3 0.97%, #F3EBF7 26.24%, #F0F0FB 54.59%, #E6F0FF 99.96%)"
+        borderRadius="24px"
+        position="relative"
+        mt="-24px"
       >
-        <Img
-          zIndex={0}
-          pos="relative"
-          w="full"
-          h="full"
-          src="/assets/home/Pattern.png"
-          alt="Screenshot for Form builder"
-          objectFit={{ base: "cover", lg: "cover" }}
-        />
-      </Box>
-      <Box
-        zIndex={2}
-        inset={0}
-        position="absolute"
-        mixBlendMode="color-dodge"
-        _dark={{
-          mixBlendMode: "soft-light",
-          opacity: 0.4,
-        }}
-      >
-        <Img
-          pos="relative"
-          w="full"
-          h="full"
-          src="/assets/home/curves.svg"
-          alt="curves"
-          objectFit={{ base: "cover", lg: "cover" }}
-        />
-      </Box>
-
-      <Box
-        zIndex={2}
-        maxW={{ base: "xl", md: "7xl" }}
-        mx="auto"
-        px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
-      >
-        <Flex
-          align="flex-end"
-          direction={{ base: "column", lg: "row" }}
-          justify="space-between"
-          // paddingBottom="33px"
-          // mb="56px"
+        <Box
+          inset={0}
+          position="absolute"
+          opacity="0.6"
+          mixBlendMode="overlay"
+          _dark={{
+            opacity: 0.3,
+          }}
         >
-          <Box
-            top={{ lg: "-64px" }}
-            position="relative"
-            flex="1"
-            maxW={{ lg: "xl" }}
-            pt="0"
-            order={{ base: 1, lg: 0 }}
-          >
-            <Heading
-              variant="h1hero"
-              color="heading-navy-fg"
-              lineHeight="98.5px"
-              mt={{ base: "0", lg: "-20px" }}
-            >
-              Ethereum’s next leap in <Intro />
-            </Heading>
-            <Text
-              color="hero-subtitle-fg"
-              mt="5"
-              fontSize="20px"
-              fontWeight="500"
-            >
-              {seo.heroText}
-            </Text>
-
-            <Stack
-              direction={{ base: "column", md: "row" }}
-              spacing="4"
-              mt="72px"
-              position={{ base: "relative", md: "relative" }}
-              zIndex={4}
-            >
-              <Button
-                onClick={() => navigate("/en/developers")}
-                size="lg"
-                minW="210px"
-                variant="primaryHero"
-              >
-                Build on Starknet
-              </Button>
-              <Button
-                size="lg"
-                variant="secondaryHero"
-                onClick={() => navigate("/en/what-is-starknet")}
-              >
-                Learn the basics
-              </Button>
-            </Stack>
-          </Box>
-          <Box
-            zIndex={0}
-            order={{ base: 0, lg: 1 }}
-            // boxSize={{ base: "20", lg: "8" }}
-          />
           <Img
-            position="relative"
-            marginRight={{ sm: "-70px", md: "-10px", lg: "-5rem", xl: "-9rem" }}
-            right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
-            width={{ base: "100%", lg: "35rem" }}
-            src="/assets/home/hero_illustration.png"
+            zIndex={0}
+            pos="relative"
+            w="full"
+            h="full"
+            src="/assets/home/Pattern.png"
             alt="Screenshot for Form builder"
+            objectFit={{ base: "cover", lg: "cover" }}
           />
+        </Box>
+        <Box
+          zIndex={2}
+          inset={0}
+          position="absolute"
+          mixBlendMode="color-dodge"
+          _dark={{
+            mixBlendMode: "soft-light",
+            opacity: 0.4,
+          }}
+        >
+          <Img
+            pos="relative"
+            w="full"
+            h="full"
+            src="/assets/home/curves.svg"
+            alt="curves"
+            objectFit={{ base: "cover", lg: "cover" }}
+          />
+        </Box>
+
+        <Box
+          zIndex={2}
+          maxW={{ base: "xl", md: "7xl" }}
+          mx="auto"
+          px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
+        >
+          <Flex
+            align="flex-end"
+            direction={{ base: "column", lg: "row" }}
+            justify="space-between"
+            // paddingBottom="33px"
+            // mb="56px"
+          >
+            <Box
+              top={{ lg: "-64px" }}
+              position="relative"
+              flex="1"
+              maxW={{ lg: "xl" }}
+              pt="0"
+              order={{ base: 1, lg: 0 }}
+            >
+              <Heading
+                variant="h1hero"
+                color="heading-navy-fg"
+                lineHeight="98.5px"
+                mt={{ base: "0", lg: "-20px" }}
+              >
+                Ethereum’s next leap in <Intro />
+              </Heading>
+              <Text
+                color="hero-subtitle-fg"
+                mt="5"
+                fontSize="20px"
+                fontWeight="500"
+              >
+                {seo.heroText}
+              </Text>
+
+              <Stack
+                direction={{ base: "column", md: "row" }}
+                spacing="4"
+                mt="72px"
+                position={{ base: "relative", md: "relative" }}
+                zIndex={4}
+              >
+                <Button
+                  onClick={() => navigate("/en/developers")}
+                  size="lg"
+                  minW="210px"
+                  variant="primaryHero"
+                >
+                  Build on Starknet
+                </Button>
+                <Button
+                  size="lg"
+                  variant="secondaryHero"
+                  onClick={() => navigate("/en/what-is-starknet")}
+                >
+                  Learn the basics
+                </Button>
+              </Stack>
+            </Box>
+            <Box
+              zIndex={0}
+              order={{ base: 0, lg: 1 }}
+              // boxSize={{ base: "20", lg: "8" }}
+            />
+            <Img
+              position="relative"
+              marginRight={{ sm: "-70px", md: "-10px", lg: "-5rem", xl: "-9rem" }}
+              right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
+              width={{ base: "100%", lg: "35rem" }}
+              src="/assets/home/hero_illustration.png"
+              alt="Screenshot for Form builder"
+            />
+          </Flex>
+        </Box>
+      </Box>
+      <Box bg="#8DBABB33" padding="15% 50px"
+      sx={{
+        "clip-path": "polygon(0 10vw,100% 0,100% calc(100% - 10vw),0 100%)",
+        backgroundImage: "url(/assets/outline-bg.svg)",
+        backgroundSize: "130%",
+        backgroundPosition: "center"
+      }}>
+        <Box maxW="1036px" width="100%" m="0 auto" pt="10px" borderTop="1px solid #8DBABB">
+          <Heading variant="h2" color="heading-navy-fg" pb="108px">Projects exploring new ideas</Heading>
+        </Box>
+        <StarknetProjects />
+        <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
+          <Button variant="outline" mt="140px" bg="#e5eeee">{`Check out all the projects ->`}</Button>
         </Flex>
       </Box>
-    </Box>
+    </>
   );
 };
