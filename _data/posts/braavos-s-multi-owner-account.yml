@@ -1,7 +1,7 @@
 id: 221d6139-1ee1-4087-ad2d-ddfba8787008
 post_type: video
 title: Braavos’s Multi-Owner Account
-published_date: 2023-08-15T11:59:26.600Z
+published_date: 2023-08-04T11:59:26.600Z
 video:
   url: https://www.youtube.com/watch?v=EQ-kWv3KZLo
   id: EQ-kWv3KZLo
@@ -10,14 +10,8 @@ video:
     etag: nOlAUTks-0yV7oinb0JQr_IUQ0w
     id: EQ-kWv3KZLo
     snippet:
-      publishedAt: 2023-08-04T10:30:08Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: Braavos’s Multi-Owner Account - Motty Lavie
-      description: |-
-        Braavos : https://braavos.app/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T10:30:08.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/EQ-kWv3KZLo/default.jpg
@@ -35,7 +29,9 @@ video:
           url: https://i.ytimg.com/vi/EQ-kWv3KZLo/sddefault.jpg
           width: 640
           height: 480
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: Braavos’s Multi-Owner Account - Motty Lavie
       tags:
         - crypto
         - ethereum
@@ -46,9 +42,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Braavos’s Multi-Owner Account - Motty Lavie
         description: |-
@@ -56,7 +51,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Braavos : https://braavos.app/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT18M3S
       dimension: 2d
