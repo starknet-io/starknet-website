@@ -1,8 +1,6 @@
-
 import React, { CSSProperties, useRef, useState } from "react";
 import Player from "video.js/dist/types/player";
 import ChaptersDropdown from "./ChaptersDropdown";
-import { convertSecondsToMMSS } from "../player-core/control-bar/utils";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
 import { SeekStatuses } from "../player-core/hooks/useSeek";
 import { VideoPlayerCore } from "../player-core/VideoPlayerCore";
@@ -71,7 +69,7 @@ export function VideoPlayerEmbed({
           currentChapter={currentChapter}
           onChapterSelect={setCurrentChapter}
           onToggleExpandPlaylist={onToggleExpandPlaylist}
-          timeDisplay={convertSecondsToMMSS(chapter.duration)}
+          timeDisplay={chapter.durationTime}
         />
       )}
     />

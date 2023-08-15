@@ -52,6 +52,10 @@ blocks:
           hasIcon: false
         subLabel:
           label: Helping token holders choose delegates
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: "Further Reading "
   - type: link_list
     listSize: lg
     heading: "Starknet Governance: First Phase"
@@ -72,6 +76,10 @@ blocks:
           hasIcon: true
           custom_title: "[Proposal] Starknet Alpha v0.11.0"
           custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334/1
+      - link:
+          hasIcon: true
+          custom_title: "[Proposal] Starknet Alpha v0.12.0"
+          custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-12-0/95997
       - link:
           hasIcon: true
           custom_title: Suggested Delegation Agreement

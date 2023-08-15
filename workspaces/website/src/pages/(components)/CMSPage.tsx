@@ -1,6 +1,7 @@
 import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
+import { Heading } from "@ui/Typography/Heading";
 import { Block } from "src/blocks/Block";
 import { TableOfContents } from "./TableOfContents/TableOfContents";
 import {
@@ -22,10 +23,10 @@ export default function CMSPage({
   locale,
 }: CMSPageProps) {
   const date = data?.gitlog?.date;
-
   return (
     <Box>
       <PageLayout
+        contentMaxW={data.template === "narrow content" ? "846px" : null}
         breadcrumbs={
           <>
             {data.breadcrumbs &&
@@ -65,10 +66,11 @@ export default function CMSPage({
           <Flex
             direction="column"
             gap={{
-              base: data.template === "content" ? "32px" : "56px",
-              lg: data.template === "content" ? "32px" : "136px",
+              base: (data.template === "content" || data.template === "narrow content") ? "32px" : "56px",
+              lg: (data.template === "content" || data.template === "narrow content") ? "32px" : "136px",
             }}
           >
+            {data.show_title ? <Heading variant="h2" color="text-hero-fg">{data.title}</Heading> : null}
             {data.blocks?.map((block, i) => {
               return (
                 <Block
@@ -82,7 +84,7 @@ export default function CMSPage({
         }
         rightAside={
           data.template === "content" ? (
-            <TableOfContents headings={blocksToTOC(data.blocks, 1)} />
+            <TableOfContents headings={blocksToTOC(data.blocks, 1)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
           ) : null
         }
       />

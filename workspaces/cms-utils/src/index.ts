@@ -1,15 +1,17 @@
 import type { DefaultLogFields } from "simple-git";
-import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
 
 export function youtubeVideoIdFromURL(url: string): string | undefined | void {
   try {
     const obj = new URL(url);
 
-    if (obj.hostname === "www.youtube.com") {
+    if (obj.hostname === "www.youtube.com" || obj.hostname === "youtube.com") {
       if (obj.searchParams.get("v")) return obj.searchParams.get("v")!;
 
       if (obj.pathname.startsWith("/live/")) {
         return obj.pathname.replace("/live/", "");
+      }
+      if(obj.pathname.startsWith("/embed/")) {
+        return obj.pathname.replace("/embed/", "");
       }
     } else if (obj.hostname === "youtu.be") {
       return obj.pathname.slice(1);
@@ -58,20 +60,13 @@ export async function getFirst<T>(...fns: Array<() => Promise<T>>): Promise<T> {
 
 export async function getJSON(
   src: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<any> {
-  if (import.meta.env.SSR || event) {
-    if (globalThis.__STATIC_CONTENT) {
-      const res = await getAssetFromKV({
-        request: new Request(
-          new URL("/" + src + ".json", "http://localhost:3000")
-        ),
-        waitUntil(promise) {
-          event?.waitUntil(promise);
-        },
-      });
+  if (import.meta.env.SSR || context) {
+    if (context) {
+      const res = await context.env.ASSETS.fetch(new URL("/" + src + ".json", "http://localhost:3000"))
 
-      return res.json();
+      return res.json()
     } else if (import.meta.env.DEV) {
       const fs = await import("node:fs/promises");
       const path = await import("node:path");

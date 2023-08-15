@@ -7,7 +7,9 @@ export function precisionRound(number: number, precision = 2) {
 }
 
 export const getVideoSrc = (videoId: string) => {
-  return `${import.meta.env.VITE_CF_STREAM_URL}/${videoId}/manifest/video.m3u8`;
+  return `${
+    import.meta.env.VITE_CF_STREAM_URL
+  }/${videoId}/manifest/video.m3u8?clientBandwidthHint=10`;
 };
 
 export const getChapterById = (chapters: Chapter[], id: string) => {

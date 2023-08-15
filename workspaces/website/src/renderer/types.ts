@@ -31,7 +31,7 @@ export type PageContextCustom = {
   };
   documentProps?: DocumentProps;
   locale: string;
-  event: null | WorkerGlobalScopeEventMap["fetch"];
+  context: EventContext<{}, any, Record<string, unknown>>;
   userAgent: string;
   redirectTo?: string;
   mainMenu: MainMenu;

@@ -25,12 +25,12 @@ export interface RoadmapVersion extends Meta {
 
 export async function getRoadmapDetails(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<readonly RoadmapDetails[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON(`data/roadmap-details/${value}`, event)
+        (value) => async () => getJSON(`data/roadmap-details/${value}`, context)
       )
     );
   } catch (cause) {
@@ -43,12 +43,12 @@ export async function getRoadmapDetails(
 export async function getRoadmapPostBySlug(
   locale: string,
   slug: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<RoadmapPost> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON(`data/roadmap-posts/${value}/${slug}`, event)
+        (value) => async () => getJSON(`data/roadmap-posts/${value}/${slug}`, context)
       )
     );
   } catch (cause) {
@@ -60,12 +60,12 @@ export async function getRoadmapPostBySlug(
 
 export async function getRoadmapVersions(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<readonly RoadmapVersion[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/roadmap-versions/" + value, event)
+        (value) => async () => getJSON("data/roadmap-versions/" + value, context)
       )
     );
   } catch (cause) {

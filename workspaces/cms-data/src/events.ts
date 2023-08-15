@@ -25,12 +25,12 @@ export interface Event {
 
 export async function getEvents(
   locale: string,
-  event: null | WorkerGlobalScopeEventMap["fetch"]
+  context: EventContext<{}, any, Record<string, unknown>>
 ): Promise<readonly Event[]> {
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/events/" + value, event)
+        (value) => async () => getJSON("data/events/" + value, context)
       )
     );
   } catch (cause) {

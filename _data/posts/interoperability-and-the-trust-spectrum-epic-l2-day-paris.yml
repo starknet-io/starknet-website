@@ -1,0 +1,73 @@
+id: a852f9d3-cc6d-4967-a992-dcaef0b992ce
+post_type: video
+title: Interoperability and the trust spectrum | Epic L2 Day Paris
+published_date: 2023-07-21T11:28:55.350Z
+video:
+  url: https://www.youtube.com/watch?v=bE00Y5tAEeo
+  id: bE00Y5tAEeo
+  data:
+    kind: youtube#video
+    etag: QPEFhxZi1Nsqmo_AOPFD_w4CRl4
+    id: bE00Y5tAEeo
+    snippet:
+      publishedAt: 2023-07-21T13:58:14.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/bE00Y5tAEeo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/bE00Y5tAEeo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/bE00Y5tAEeo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/bE00Y5tAEeo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/bE00Y5tAEeo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en
+      channelTitle: Epic Web3
+      title: Interoperability and the trust spectrum (Liron Hayman, Starkware) | Epic
+        L2 Day Paris
+      defaultLanguage: en
+      categoryId: "28"
+      localized:
+        title: Interoperability and the trust spectrum (Liron Hayman, Starkware) | Epic
+          L2 Day Paris
+        description: >-
+          Watch a session by Liron Hayman (BD @ Starkware) at Epic L2 Day in
+          Paris. He shares his expertise on interoperability. 
+
+
+          #epicweb3 #epicl2day #starkware #starknet #lironhayman #ethereum #interoperability
+      description: >-
+        Watch a session by Liron Hayman (BD @ Starkware) at Epic L2 Day in
+        Paris. He shares his expertise on interoperability. 
+
+
+        #epicweb3 #epicl2day #starkware #starknet #lironhayman #ethereum #interoperability
+      channelId: UCL5-kafg__NCkPn2KNJlJMg
+    contentDetails:
+      duration: PT28M48S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/epic-l2-day-paris.jpg
+category: community-and-events
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+short_desc: "Building on Ethereum isn’t just about code and transactions. Watch
+  a session by Liron Hayman (BD @ Starkware) at Epic L2 Day in Paris where he
+  shares his expertise on interoperability. "

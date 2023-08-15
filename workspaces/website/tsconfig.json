@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "baseUrl": "."
   },
-  "include": ["src/**/*", "*.json"],
+  "include": ["functions/**/*","src/**/*", "*.json"],
   "references": [
     { "path": "../cms-utils" },
     { "path": "../cms-config" },

@@ -52,9 +52,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-image: /assets/stark-spaces-kakarot-zk-evm-in-cairo.jpg
-category: stark-math
+image: /assets/stark-spaces-kakarot-zk-evm-in-cairo.png
+category: ecosystem
 topic:
   - cairo
-short_desc: "Find out what Vitalik Buterin, Eli Ben-Sasson, Shahar Papini, and
-  Abdel Bakhta have to say about Kakarot, a ZK-EVM written in Cairo. "
+short_desc: Find out what Vitalik Buterin, Eli Ben-Sasson, Shahar Papini, and
+  Abdel Bakhta have to say about Kakarot, a ZK-EVM written in Cairo.

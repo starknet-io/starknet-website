@@ -194,7 +194,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         detachedMediaQuery=""
         openOnFocus={true}
         plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
-        placeholder={seo.search}
+        placeholder={seo?.search}
         getSources={({ query }) => {
           if (!query) return [];
 

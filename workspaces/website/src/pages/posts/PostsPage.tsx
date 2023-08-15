@@ -377,6 +377,7 @@ interface Block {
 }
 
 function CustomHits({ categories, params }: Pick<Props, "categories" | "params">) {
+  const category = categories.find((c) => c.slug === params.category);
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
   const [featuredHit, setFeaturedHit] = useState<Hit>();
   const [filteredHits, setFilteredHits] = useState<Hit[]>([]);
@@ -386,14 +387,26 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
   useEffect(() => {
     const handleResize = () => {
       if (hits) {
-        if (window.innerWidth > 992 && hits.some(obj => obj.featured_post === true)) {
-          setFilteredHits(hits.filter(hit => hit.featured_post !== true));
-          setFeaturedHit(hits.find(hit => hit.featured_post === true))
-        } else if (window.innerWidth > 992 && !hits.some(obj => obj.featured_post === true)) {
-          setFeaturedHit(hits[0])
-          setFilteredHits(hits.slice(1));
+        if (category) {
+          if (window.innerWidth > 992 && category.show_custom_featured_post && category.custom_featured_post) {
+            setFilteredHits(hits.filter(hit => hit.id !== category.custom_featured_post));
+            setFeaturedHit(hits.find(hit => hit.id === category.custom_featured_post))
+          } else if (window.innerWidth > 992 && !(category.show_custom_featured_post && category.custom_featured_post)) {
+            setFeaturedHit(hits[0])
+            setFilteredHits(hits.slice(1));
+          } else {
+            setFilteredHits(hits);
+          }
         } else {
-          setFilteredHits(hits);
+          if (window.innerWidth > 992 && hits.some(obj => obj.featured_post === true)) {
+            setFilteredHits(hits.filter(hit => hit.featured_post !== true));
+            setFeaturedHit(hits.find(hit => hit.featured_post === true))
+          } else if (window.innerWidth > 992 && !hits.some(obj => obj.featured_post === true)) {
+            setFeaturedHit(hits[0])
+            setFilteredHits(hits.slice(1));
+          } else {
+            setFilteredHits(hits);
+          }
         }
       }
     }
@@ -447,6 +460,7 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
             <ArticleCard.Root
               href={`/${hit.locale}/posts/${category?.slug}/${hit.slug}`}
               key={i}
+              sx={{maxW: {base: "none", lg: "440px", xl: "400px"}}}
             >
               <ArticleCard.Image url={hit.image} />
 

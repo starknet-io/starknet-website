@@ -13,7 +13,7 @@ export default function BlockWallets({
   params: { locale },
 }: Props): JSX.Element {
   const pageContext = usePageContext();
-  const wallets = useAsync(['getWallets', locale], () => getWallets(locale, pageContext.event));
+  const wallets = useAsync(['getWallets', locale], () => getWallets(locale, pageContext.context));
 
   return (
     <Box>

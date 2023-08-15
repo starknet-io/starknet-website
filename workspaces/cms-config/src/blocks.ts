@@ -51,6 +51,70 @@ export const linkFields = [
   },
 ] satisfies CmsField[];
 
+export const ambassadorTags = [
+  {
+    label: "Tag",
+    name: "tag",
+    widget: "select",
+    options: ["Content generator", "Event organizer", "Event speaker"]
+  },
+] satisfies CmsField[];
+
+export const ambassador = [
+  {
+    label: "Full name",
+    name: "full_name",
+    widget: "string",
+    crowdin: true,
+  },
+  {
+    label: "Title",
+    name: "title",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "Description",
+    name: "description",
+    widget: "string",
+    crowdin: false,
+  },
+  {
+    label: "image",
+    name: "image",
+    widget: "image",
+    crowdin: false,
+  },
+  {
+    label: "Website url",
+    name: "website",
+    widget: "string",
+    crowdin: false
+  },
+  {
+    label: "Twitter handle",
+    name: "twitter",
+    widget: "string",
+    crowdin: false
+  },
+  {
+    label: "Discord",
+    name: "discord",
+    widget: "string",
+    crowdin: false
+  },
+  {
+    label: "Tags",
+    name: "tags",
+    widget: "list",
+    fields: ambassadorTags,
+    crowdin: true,
+    required: false,
+    index_file: "",
+    meta: true
+  },
+] satisfies CmsField[];
+
 export const cardListItem = [
   {
     label: "Title",
@@ -388,6 +452,30 @@ export const blocks = [
         options: ["left", "right"],
       }
     ],
+  },
+  {
+    name: "ambassadors_list",
+    label: "Ambassadors list",
+    widget: "object",
+    fields: [
+      {
+        label: "Section title",
+        name: "title",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        label: "Ambassador",
+        name: "ambassador",
+        widget: "list",
+        fields: ambassador,
+        crowdin: true,
+        required: true,
+        index_file: "",
+        meta: true
+      },
+    ]
   },
   {
     name: "card_list",

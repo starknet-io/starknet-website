@@ -6,7 +6,9 @@ import { Props } from "src/pages/video/VideoPage";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
-  const chapter = pageContext.urlParsed.search.chapter ?? playlist[0].id;
+  // @ts-ignore
+  const parsedUrl = new URL(pageContext._urlPristine, "https://starknet.io");
+  const chapter = parsedUrl.searchParams.get("chapter") || playlist[0].id;
   const currentChapter = playlist.find((p) => p.id === chapter);
 
   return {
@@ -18,7 +20,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
         description: currentChapter?.description,
         image: imageUrl,
       } satisfies DocumentProps,
-      hasLayout: false,
+      hasLayout: true,
     },
   };
 }
