@@ -13,10 +13,10 @@ export const categoriesCollectionConfig = {
   format: "yml",
   fields: [
     {
-      name: "id",
+      name: "{{name}}",
       label: "id",
-      widget: "uuid",
-      crowdin: false
+      crowdin: false,
+      widget: 'hidden',
     },
     {
       name: "name",
