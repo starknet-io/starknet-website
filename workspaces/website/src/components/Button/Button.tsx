@@ -23,10 +23,11 @@ type props = {
   target?: ButtonProps["formTarget"];
   fullWidth?: boolean;
   size?: "sm" | "md";
+  bg?: string;
 } & ButtonProps;
 
 export const Button = forwardRef<HTMLButtonElement, props>(
-  ({ children, toId, href, fullWidth, size = "md", ...rest }, ref) => {
+  ({ children, toId, href, fullWidth, size = "md", bg, ...rest }, ref) => {
     const handleOnClick = () => {
       if (!toId) {
         return;
@@ -46,6 +47,9 @@ export const Button = forwardRef<HTMLButtonElement, props>(
           size={size}
           {...buttonTheme}
           {...rest}
+          sx={{
+            bg: `linear-gradient(${bg && rest.variant === "outline" ? bg : "white"}, ${bg && rest.variant === "outline" ? bg : "white"}) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box`
+          }}
         >
           {children}
         </ChakraButton>
