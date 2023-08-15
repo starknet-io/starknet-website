@@ -8,9 +8,9 @@ export interface Props {
   chapter: string;
 }
 
-export default function VideoPage({chapter}: Props) {
-  const pageContext = usePageContext()
-  const locale = pageContext.locale
+export default function VideoPage({ chapter }: Props) {
+  const pageContext = usePageContext();
+  const locale = pageContext.locale;
 
   const onChapterChange = (chapterId: string) => {
     navigate(`/${locale}/video?chapter=${chapterId}`);

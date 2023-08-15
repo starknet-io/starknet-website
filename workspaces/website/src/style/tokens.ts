@@ -10,7 +10,8 @@ export const tokens = {
       "fg-default-hover": "#0C0C4F",
       "fg-muted": "#858585",
       "fg-accent": "#E97880",
-      "navbar-bg": "#FFFFFF",
+      "navbar-bg": "#FBFBFB",
+      "not-found-bg": "#FFFFFF",
       "navbar-dropdown-bg": "#FFFFFF",
       "button-nav-bg": "transparent",
       "button-nav-fg": "#363636",
@@ -38,7 +39,8 @@ export const tokens = {
       "btn-rounded-bg": "rgba(72, 38, 72, 0.06)",
       "btn-rounded-border-color": "#ECECF9",
       "card-bg": "#FFFFFF",
-      "roadmap-hero-gradient": "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
+      "roadmap-hero-gradient":
+        "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
       "card-br": "#ECECF9",
       "subnav-fg": "#858585",
       "subnav-fg-accent": "#0C0C4F",
@@ -145,7 +147,7 @@ export const tokens = {
       "roadmap-card-bg-color": "#FFFFFF",
       "roadmap-card-tag-bg": "#ffffff",
       "summit-popup-date-heading-color": "#D672EF",
-      "councils-title-fg": "#1F1F1F"
+      "councils-title-fg": "#1F1F1F",
     },
 
     dark: {
@@ -159,6 +161,7 @@ export const tokens = {
       "fg-muted": "#7E7E7E",
       "fg-accent": "#FE9E92",
       "navbar-bg": "#121212",
+      "not-found-bg": "#121212",
       "navbar-dropdown-bg": "#1B1B1B",
       "button-nav-bg": "transparent",
       "button-nav-fg": "#FFFFFF",
@@ -186,7 +189,8 @@ export const tokens = {
       "btn-ghost-fg": "rgba(248, 247, 253, 0.80)",
       "btn-ghost-hover-fg": "#F0F0FF",
       "card-bg": "#1B1B1B",
-      "roadmap-hero-gradient": "linear-gradient(259.71deg, #414548 2.88%, #1C1D24 96.77%)",
+      "roadmap-hero-gradient":
+        "linear-gradient(259.71deg, #414548 2.88%, #1C1D24 96.77%)",
       "card-br": "#000000",
       "subnav-fg": "#7E7E7E",
       "subnav-fg-accent": "#ffffff",
@@ -291,7 +295,7 @@ export const tokens = {
       "roadmap-card-tag-border-color": "#5C5C5C",
       "roadmap-card-tag-bg": "#313131",
       "summit-popup-date-heading-color": "#D672EF",
-      "councils-title-fg": "#FFFFFF"
+      "councils-title-fg": "#FFFFFF",
     },
   },
 };
@@ -337,6 +341,10 @@ export const semanticTokens = {
     "navbar-bg": {
       default: tokens.colors.light["navbar-bg"],
       _dark: tokens.colors.dark["navbar-bg"],
+    },
+    "not-found-bg": {
+      default: tokens.colors.light["not-found-bg"],
+      _dark: tokens.colors.dark["not-found-bg"],
     },
     "navbar-dropdown-bg": {
       default: tokens.colors.light["navbar-dropdown-bg"],

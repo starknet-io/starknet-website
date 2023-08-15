@@ -5,8 +5,8 @@ import {
   Container,
   useColorMode,
   Box,
+  Button,
 } from "@chakra-ui/react";
-import { IconButton } from "@ui/IconButton";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import {
   HiBars3,
@@ -35,61 +35,79 @@ export const NavLayout = (props: NavLayoutProps) => {
     toggleColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
-        'event_category': "engagement",
-        'value': colorMode
+        event_category: "engagement",
+        value: colorMode,
       });
     }
-  }
+  };
   return (
-    <Container py={{ base: "4", lg: "17px" }} px={{ base: "16px", md: "32px" }} maxW="1344px">
+    <Container
+      py={{ base: "4", lg: "17px" }}
+      px={{ base: "16px", md: "32px" }}
+      maxW="1344px"
+    >
       <HStack spacing="4" justify="space-between">
         <HStack>
           <a href={`/${locale}/`}>
             <StarknetLogo />
           </a>
           <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
-                {props.items}
-              </ButtonGroup>
+            <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
+              {props.items}
+            </ButtonGroup>
           </Box>
         </HStack>
-        <HStack spacing={6}>
+        <Box display="flex" gap="base" alignItems="center">
           {props.searchArea}
-          <Box display={{ base: "none", lg: "block" }} sx={{marginInlineStart: "12px !important"}}>
-              <IconButton
-                icon={
-                  colorMode === "light" ? (
-                    <Icon as={HiOutlineMoon} fontSize="xl" />
-                  ) : (
-                    <Icon as={HiOutlineSun} fontSize="xl" />
-                  )
-                }
-                aria-label="Toggle color mode"
-                onClick={toogleTheme}
-                marginInlineStart="0 !important"
-              />
-            </Box>
+          <Box
+            display={{ base: "none", lg: "block" }}
+            sx={{ marginInlineStart: "12px !important" }}
+          >
+            <Button
+              aria-label="Toggle color mode"
+              onClick={toogleTheme}
+              marginInlineStart="0 !important"
+              variant="ghost"
+              padding="sm"
+              minH="44px"
+              maxH="44px"
+            >
+              <>
+                {colorMode === "light" ? (
+                  <Icon as={HiOutlineMoon} fontSize="xl" h="24px" />
+                ) : (
+                  <Icon as={HiOutlineSun} fontSize="xl" h="24px" />
+                )}
+              </>
+            </Button>
+          </Box>
 
-              <Box
-                w="1px"
-                bg="nav-footer-br"
-                h="30px"
-                position="relative"
-                marginInlineStart="12px !important"
-                display={{ base: "none", lg: "block" }}
-              />
-              <Box display={{ base: "none", lg: "block" }} marginInlineStart="0 !important">
-               {props.languageSwitcher}
-              </Box>
+          <Box
+            w="1px"
+            bg="nav-footer-br"
+            h="30px"
+            position="relative"
+            marginInlineStart="12px !important"
+            display={{ base: "none", lg: "block" }}
+          />
+          <Box
+            display={{ base: "none", lg: "block" }}
+            marginInlineStart="0 !important"
+          >
+            {props.languageSwitcher}
+          </Box>
 
-            <Box display={{ base: "block", lg: "none" }}><IconButton
-              ref={menuButtonRef}
-              icon={<Icon as={MenuIcon} fontSize="2xl" />}
-              aria-label="Open Menu"
-              onClick={onClickMenu}
-              marginInlineStart="12px !important"
-            /></Box>
-        </HStack>
+          <Button
+            display={{ base: "block", lg: "none" }}
+            variant="ghost"
+            ref={menuButtonRef}
+            aria-label="Open Menu"
+            onClick={onClickMenu}
+            padding="sm"
+          >
+            <MenuIcon fontSize="2xl" size="24px" />
+          </Button>
+        </Box>
       </HStack>
     </Container>
   );

@@ -17,8 +17,8 @@ const outline = defineStyle({
     bg: "linear-gradient(#0B0B0B, #0B0B0B) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
   },
   "&:disabled": {
-    color: 'btn-outline-disabled-fg',
-    borderColor: 'btn-outline-disabled-border',
+    color: "btn-outline-disabled-fg",
+    borderColor: "btn-outline-disabled-border",
     borderImage: "none",
     boxShadow: "none",
     bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
@@ -28,22 +28,22 @@ const outline = defineStyle({
     outlineOffset: 1,
     outline: "3px solid #3f8cff",
     _dark: {
-      outlineOffset: 0
-    }
+      outlineOffset: 0,
+    },
   },
   _hover: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
     bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     "&:disabled": {
-      color: 'btn-outline-disabled-fg',
-      borderColor: 'btn-outline-disabled-border',
+      color: "btn-outline-disabled-fg",
+      borderColor: "btn-outline-disabled-border",
       borderImage: "none",
       boxShadow: "none",
       bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     },
     _dark: {
-      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
-    }
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    },
   },
   _active: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
@@ -51,25 +51,25 @@ const outline = defineStyle({
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     outlineWidth: 1,
     "&:disabled": {
-      color: 'btn-outline-disabled-fg',
-      borderColor: 'btn-outline-disabled-border',
+      color: "btn-outline-disabled-fg",
+      borderColor: "btn-outline-disabled-border",
       borderImage: "none",
       boxShadow: "none",
       bg: "linear-gradient(white, white) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     },
     _focus: {
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      outlineWidth: 1
+      outlineWidth: 1,
     },
     _dark: {
       boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset",
       bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
       outlineWidth: 1,
       _focus: {
-        outlineWidth: 1
-      }
-    }
-  }
+        outlineWidth: 1,
+      },
+    },
+  },
 });
 
 const rounded = defineStyle({
@@ -85,10 +85,10 @@ const rounded = defineStyle({
   bg: "btn-rounded-bg",
   borderColor: "btn-rounded-border-color",
   "&:disabled": {
-    color: 'btn-outline-disabled-fg',
-    borderColor: 'btn-outline-disabled-border',
+    color: "btn-outline-disabled-fg",
+    borderColor: "btn-outline-disabled-border",
     borderImage: "none",
-    boxShadow: "none"
+    boxShadow: "none",
   },
   _focusVisible: {
     boxShadow: "1px solid #ffffff",
@@ -98,21 +98,21 @@ const rounded = defineStyle({
       boxShadow: "0px 0px 0px 1px #ffffff",
       outlineOffset: 1,
       outline: "3px solid #3f8cff",
-    }
+    },
   },
   _hover: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
     bg: "linear-gradient(#eae9eb, #eae9eb) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
     "&:disabled": {
       bg: "btn-rounded-bg",
-      color: 'btn-outline-disabled-fg',
-      borderColor: 'btn-outline-disabled-border',
+      color: "btn-outline-disabled-fg",
+      borderColor: "btn-outline-disabled-border",
       borderImage: "none",
-      boxShadow: "none !important"
+      boxShadow: "none !important",
     },
     _dark: {
-      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box"
-    }
+      bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
+    },
   },
   _active: {
     borderImage: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
@@ -120,24 +120,24 @@ const rounded = defineStyle({
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1) !important",
     outlineWidth: 1,
     "&:disabled": {
-      color: 'btn-outline-disabled-fg',
-      borderColor: 'btn-outline-disabled-border',
+      color: "btn-outline-disabled-fg",
+      borderColor: "btn-outline-disabled-border",
       borderImage: "none",
-      boxShadow: "none !important"
+      boxShadow: "none !important",
     },
     _focus: {
       borderColor: "white",
-      outlineWidth: 1
+      outlineWidth: 1,
     },
     _dark: {
       boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset",
       bg: "linear-gradient(#28282c, #28282c) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box",
       outlineWidth: 1,
       _focus: {
-        outlineWidth: 1
-      }
-    }
-  }
+        outlineWidth: 1,
+      },
+    },
+  },
 });
 
 const ghost = defineStyle({
@@ -150,8 +150,8 @@ const ghost = defineStyle({
   height: "auto",
   bg: "transparent",
   "&:disabled": {
-    color: 'btn-outline-disabled-fg',
-    boxShadow: "none"
+    color: "btn-outline-disabled-fg",
+    boxShadow: "none",
   },
   _focusVisible: {
     boxShadow: "none",
@@ -159,39 +159,39 @@ const ghost = defineStyle({
     outline: "3px solid #3f8cff",
     _dark: {
       boxShadow: "0px 0px 0px 1px #ffffff",
-    }
+    },
   },
   _hover: {
     bg: "#eae9eb",
     color: "btn-ghost-hover-fg",
     "&:disabled": {
       bg: "transparent",
-      color: 'btn-outline-disabled-fg',
-      boxShadow: "none"
+      color: "btn-outline-disabled-fg",
+      boxShadow: "none",
     },
     _dark: {
-      bg: "#28282c"
-    }
+      bg: "#28282c",
+    },
   },
   _active: {
     bg: "#eae9eb",
     boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
     outlineWidth: 1,
     "&:disabled": {
-      color: 'btn-outline-disabled-fg',
-      boxShadow: "none"
+      color: "btn-outline-disabled-fg",
+      boxShadow: "none",
     },
     _focus: {
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      outlineWidth: 1
+      outlineWidth: 1,
     },
     _dark: {
       outlineWidth: 1,
       _focus: {
-        outlineWidth: 1
-      }
-    }
-  }
+        outlineWidth: 1,
+      },
+    },
+  },
 });
 
 const solid = defineStyle({
@@ -204,16 +204,16 @@ const solid = defineStyle({
   color: "btn-primary-fg",
   bg: "btn-primary-bg",
   "&:disabled": {
-    background: 'btn-primary-disabled-bg',
-    color: 'btn-primary-disabled-fg',
-    boxShadow: "none"
+    background: "btn-primary-disabled-bg",
+    color: "btn-primary-disabled-fg",
+    boxShadow: "none",
   },
   _hover: {
     bg: "btn-primary-hover-bg",
     "&:disabled": {
-      background: 'btn-primary-disabled-bg !important',
-      color: 'btn-primary-disabled-fg',
-      boxShadow: "none !important"
+      background: "btn-primary-disabled-bg !important",
+      color: "btn-primary-disabled-fg",
+      boxShadow: "none !important",
     },
     _dark: {
       bg: "bg.main",
@@ -224,9 +224,9 @@ const solid = defineStyle({
     boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
     outlineOffset: 1,
     "&:disabled": {
-      background: 'btn-primary-disabled-bg !important',
-      color: 'btn-primary-disabled-fg',
-      boxShadow: "none !important"
+      background: "btn-primary-disabled-bg !important",
+      color: "btn-primary-disabled-fg",
+      boxShadow: "none !important",
     },
     _dark: {
       bg: "grey.morning",
@@ -234,7 +234,7 @@ const solid = defineStyle({
       _focus: {
         bg: "grey.morning",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      }
+      },
     },
   },
   _dark: {
@@ -246,8 +246,8 @@ const solid = defineStyle({
     boxShadow: "none",
     border: "none",
     _dark: {
-      outlineOffset: 0
-    }
+      outlineOffset: 0,
+    },
   },
 });
 
@@ -281,7 +281,7 @@ const primaryHero = defineStyle({
     _focus: {
       bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #5C94FF",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      borderColor: "selected.main"
+      borderColor: "selected.main",
     },
     _dark: {
       bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #AFCAFF",
@@ -292,8 +292,8 @@ const primaryHero = defineStyle({
         bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #AFCAFF",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
         color: "snNavy",
-        borderColor: "transparent"
-      }
+        borderColor: "transparent",
+      },
     },
   },
   _dark: {
@@ -310,8 +310,8 @@ const primaryHero = defineStyle({
       boxShadow: "none",
       borderColor: "selected.100",
       borderWidth: "1px",
-      borderStyle: "solid"
-    }
+      borderStyle: "solid",
+    },
   },
 });
 const secondaryHero = defineStyle({
@@ -347,7 +347,7 @@ const secondaryHero = defineStyle({
       bg: "rgba(0, 0, 0, 0.05)",
       color: "selected.main",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
-      borderColor: "selected.main"
+      borderColor: "selected.main",
     },
     _dark: {
       bg: "rgba(0, 0, 0, 0.4)",
@@ -358,8 +358,8 @@ const secondaryHero = defineStyle({
         bg: "rgba(0, 0, 0, 0.4)",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
         color: "selected.100",
-        borderColor: "selected.100"
-      }
+        borderColor: "selected.100",
+      },
     },
   },
   _dark: {
@@ -376,8 +376,8 @@ const secondaryHero = defineStyle({
       boxShadow: "none",
       borderColor: "selected.100",
       borderWidth: "1px",
-      borderStyle: "solid"
-    }
+      borderStyle: "solid",
+    },
   },
 });
 
@@ -425,7 +425,7 @@ const switchButton = defineStyle({
         bg: "grey.morning",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
         color: "grey.darkText",
-      }
+      },
     },
   },
   _dark: {
@@ -441,8 +441,8 @@ const switchButton = defineStyle({
       boxShadow: "none",
       borderColor: "selected.100",
       borderWidth: "1px",
-      borderStyle: "solid"
-    }
+      borderStyle: "solid",
+    },
   },
 });
 
@@ -502,6 +502,11 @@ const category = defineStyle({
   },
 });
 
+const unstyled = defineStyle({
+  height: "auto",
+  minHeight: "auto",
+  minWidth: "auto",
+});
 const icon = defineStyle({
   height: "auto",
   padding: "11px",
@@ -532,7 +537,7 @@ const icon = defineStyle({
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       outlineWidth: 1,
       borderWidth: "1px",
-      borderColor: "transparent"
+      borderColor: "transparent",
     },
     _dark: {
       bg: "black",
@@ -543,9 +548,9 @@ const icon = defineStyle({
         bg: "black",
         color: "grey.greyDusk",
         borderColor: "black",
-        outlineWidth: 1
-      }
-    }
+        outlineWidth: 1,
+      },
+    },
   },
   _focus: {
     boxShadow: "none",
@@ -554,13 +559,13 @@ const icon = defineStyle({
       boxShadow: "none",
       borderColor: "selected.100",
       borderWidth: "1px",
-      borderStyle: "solid"
-    }
+      borderStyle: "solid",
+    },
   },
   _dark: {
     borderColor: "transparent",
-    color: "white"
-  }
+    color: "white",
+  },
 });
 
 const sm = defineStyle({
@@ -587,10 +592,11 @@ export const buttonTheme = defineStyleConfig({
     category,
     switch: switchButton,
     icon,
-    rounded
+    rounded,
+    unstyled,
   },
   sizes: {
     sm,
-    md
-  }
+    md,
+  },
 });
