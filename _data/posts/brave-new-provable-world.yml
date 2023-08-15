@@ -1,0 +1,69 @@
+id: 3c81e797-613c-42f9-81ad-365d664071a7
+post_type: video
+title: Brave New Provable World
+published_date: 2023-08-04T12:13:57.638Z
+video:
+  url: https://www.youtube.com/watch?v=e6JKLTsg8Zo
+  id: e6JKLTsg8Zo
+  data:
+    kind: youtube#video
+    etag: GFW2APzYSbJBUPer4vbea5gje7A
+    id: e6JKLTsg8Zo
+    snippet:
+      publishedAt: 2023-08-04T14:30:14Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Brave New Provable World - Sylve Chevet
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/e6JKLTsg8Zo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/e6JKLTsg8Zo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/e6JKLTsg8Zo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/e6JKLTsg8Zo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/e6JKLTsg8Zo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Brave New Provable World - Sylve Chevet
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT14M24S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/brave-new-provable-world.jpg
+category: community-and-events
