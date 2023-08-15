@@ -1,5 +1,6 @@
 id: 1bf11d73-65de-472f-a643-d61d9f364b7f
 post_type: video
+title: LambdaClass - STARK Prover
 published_date: 2023-08-04T12:01:18.909Z
 video:
   url: https://www.youtube.com/watch?v=-G2z0MzC7Z0
@@ -9,14 +10,8 @@ video:
     etag: jWdBUQULG3SrMpMDxDmC3CYvP8g
     id: -G2z0MzC7Z0
     snippet:
-      publishedAt: 2023-08-04T10:45:00Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Lambda Class : STARK prover - Mauro Toscano & Diego Kingston"
-      description: |-
-        LambdaClass : https://lambdaclass.com/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T10:45:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/-G2z0MzC7Z0/default.jpg
@@ -38,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/-G2z0MzC7Z0/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Lambda Class : STARK prover - Mauro Toscano & Diego Kingston"
       tags:
         - crypto
         - ethereum
@@ -49,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Lambda Class : STARK prover - Mauro Toscano & Diego Kingston"
         description: |-
@@ -59,7 +55,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        LambdaClass : https://lambdaclass.com/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT6M47S
       dimension: 2d
