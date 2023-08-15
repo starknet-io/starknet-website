@@ -10,6 +10,7 @@ type Props = {
   children: React.ReactNode;
   padding?: BoxProps["padding"];
   borderRadius?: BorderRadius | string;
+  bg?: string;
 } & BoxProps;
 
 export const CardGradientBorder = ({
@@ -24,7 +25,7 @@ export const CardGradientBorder = ({
       borderWidth="1px"
       borderColor="card-br"
       padding={padding}
-      bg="card-bg"
+      bg={bg}
       borderRadius={borderRadius}
       height="100%"
       overflow="hidden"

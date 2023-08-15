@@ -1,7 +1,10 @@
-import { HStack, SimpleGrid } from "@chakra-ui/react";
+import { HStack, Box, Icon, Link, SimpleGrid } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
-import { Card } from "./Card";
+import { Card, CardBody, CardLink, CardImg, CardTitle } from "./Card";
+import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
+import { SiTwitter, SiDiscord } from "react-icons/si";
 import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 import * as GridCard from "./GridCard";
 import { ImageIconCard } from "./ImageIconCard";
 import { ThemeProvider } from "src/renderer/ThemeProvider";
@@ -11,7 +14,6 @@ import { Grid, Flex } from "@chakra-ui/react";
 import { ListCard } from "@ui/Card/ListCard";
 import moment from "moment";
 import { StatsCard } from "./StatsCard";
-import { SiDiscord, SiTwitter } from "react-icons/si";
 import { AnalyticsCard } from "./AnalyticsCard";
 import { PatternCard } from "./PatternCard";
 import "@fontsource/fira-code"; // Defaults to weight 400
@@ -104,10 +106,820 @@ export default {
 
 export const Basic = () => (
   <ThemeProvider>
+    <Heading variant="h2">Grid card</Heading>
     <HStack p={12}>
       <>
-        <Card variant="default">Default card</Card>
-        <Card variant="list">List card</Card>
+        <Card variant="grid">
+          <CardImg variant="grid" src="assets/grid_card_img.png" />
+          <CardBody variant="grid">
+            <Text variant="cardBody">Jul 05 - Jul 12, 2023</Text>
+            <Heading m="0" variant="h3" color="heading-navy-fg">
+              Starknet Salle du Temps ⏳ Paris Hacker House 2023
+            </Heading>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="grid">
+          <CardImg variant="grid" src="assets/grid_card_img.png" />
+          <CardBody variant="grid">
+            <Text variant="cardBody">Jul 05 - Jul 12, 2023</Text>
+            <Heading m="0" variant="h3" color="heading-navy-fg">
+              Starknet Salle du Temps ⏳ Paris Hacker House 2023
+            </Heading>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="grid">
+          <CardImg variant="grid" src="assets/grid_card_img.png" />
+          <CardBody variant="grid">
+            <Text variant="cardBody">Jul 05 - Jul 12, 2023</Text>
+            <Heading m="0" variant="h3" color="heading-navy-fg">
+              Starknet Salle du Temps ⏳ Paris Hacker House 2023
+            </Heading>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="grid">
+          <CardImg variant="grid" src="assets/grid_card_img.png" />
+          <CardBody variant="grid">
+            <Text variant="cardBody">Jul 05 - Jul 12, 2023</Text>
+            <Heading m="0" variant="h3" color="heading-navy-fg" color="">
+              Starknet Salle du Temps ⏳ Paris Hacker House 2023
+            </Heading>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+      </>
+    </HStack>
+    <Heading variant="h2">Large card</Heading>
+    <HStack p={12}>
+      <>
+        <Card variant="large">
+          <img src="assets/large_card_img.png" />
+          <CardBody>
+            <Box>
+              <CardTitle>Account abstraction</CardTitle>
+              <Text variant="body">
+                An innovative layer 2 solution, enabling faster transactions,
+                reduced costs.
+              </Text>
+            </Box>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="large">
+          <img src="assets/large_card_img.png" />
+          <CardBody>
+            <Box>
+              <CardTitle>Account abstraction</CardTitle>
+              <Text variant="body">
+                An innovative layer 2 solution, enabling faster transactions,
+                reduced costs.
+              </Text>
+            </Box>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="large">
+          <img src="assets/large_card_img.png" />
+          <CardBody>
+            <Box>
+              <CardTitle>Account abstraction</CardTitle>
+              <Text variant="body">
+                An innovative layer 2 solution, enabling faster transactions,
+                reduced costs.
+              </Text>
+            </Box>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="large">
+          <CardBody>
+            <Box>
+              <CardTitle>Account abstraction</CardTitle>
+              <Text variant="body">
+                An innovative layer 2 solution, enabling faster transactions,
+                reduced costs.
+              </Text>
+            </Box>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+          <img src="assets/large_card_img.png" />
+        </Card>
+      </>
+    </HStack>
+    <Heading variant="h2">Large card horizontal</Heading>
+    <HStack p={12}>
+      <>
+        <Card variant="large" orientation="horizontal">
+          <img src="assets/large_card_img.png" />
+          <CardBody>
+            <Box>
+              <CardTitle>Account abstraction</CardTitle>
+              <Text variant="body">
+                An innovative layer 2 solution, enabling faster transactions,
+                reduced costs.
+              </Text>
+            </Box>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="large" orientation="horizontal">
+          <CardBody>
+            <Box>
+              <CardTitle>Account abstraction</CardTitle>
+              <Text variant="body">
+                An innovative layer 2 solution, enabling faster transactions,
+                reduced costs.
+              </Text>
+            </Box>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+          <img src="assets/large_card_img.png" />
+        </Card>
+      </>
+    </HStack>
+    <Heading variant="h2">Asset card</Heading>
+    <HStack p={12}>
+      <>
+        <Card variant="asset" orientation="horizontal">
+          <CardImg
+            variant="asset"
+            orientation="horizontal"
+            src="assets/asset_card_img.png"
+          />
+          <CardBody variant="asset">
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <HStack>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon boxSize="18px" color="list-card-icon-fg" as={SiTwitter} />
+              </Link>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon boxSize="18px" color="list-card-icon-fg" as={SiDiscord} />
+              </Link>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon
+                  boxSize="18px"
+                  color="list-card-icon-fg"
+                  as={HiGlobeAlt}
+                />
+              </Link>
+            </HStack>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="asset" orientation="horizontal">
+          <CardImg
+            variant="asset"
+            orientation="horizontal"
+            src="assets/asset_card_img.png"
+          />
+          <CardBody variant="asset">
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <HStack>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon boxSize="18px" color="list-card-icon-fg" as={SiTwitter} />
+              </Link>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon boxSize="18px" color="list-card-icon-fg" as={SiDiscord} />
+              </Link>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon
+                  boxSize="18px"
+                  color="list-card-icon-fg"
+                  as={HiGlobeAlt}
+                />
+              </Link>
+            </HStack>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+      </>
+    </HStack>
+    <HStack p={12}>
+      <>
+        <Card variant="asset">
+          <CardImg variant="asset" src="assets/asset_card_img.png" />
+          <Box>
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </Box>
+        </Card>
+        <Card variant="asset">
+          <CardImg variant="asset" src="assets/asset_card_img.png" />
+          <CardBody variant="asset">
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <HStack>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon boxSize="18px" color="list-card-icon-fg" as={SiTwitter} />
+              </Link>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon boxSize="18px" color="list-card-icon-fg" as={SiDiscord} />
+              </Link>
+              <Link
+                isExternal
+                href=""
+                sx={{
+                  display: "flex",
+                  minWidth: "40px",
+                  maxWidth: "40px",
+                  minHeight: "40px",
+                  maxHeight: "40px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Icon
+                  boxSize="18px"
+                  color="list-card-icon-fg"
+                  as={HiGlobeAlt}
+                />
+              </Link>
+            </HStack>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="asset">
+          <CardImg variant="asset" src="assets/asset_card_img.png" />
+          <CardBody variant="asset">
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="asset">
+          <CardImg variant="asset" src="assets/asset_card_img.png" />
+          <CardBody variant="asset">
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="asset">
+          <CardImg variant="asset" src="assets/asset_card_img.png" />
+          <CardBody variant="asset">
+            <CardTitle variant="asset">
+              LayerSwap{" "}
+              <Icon
+                as={HiArrowTopRightOnSquare}
+                color="list-card-sm-title-link-fg"
+              />
+            </CardTitle>
+            <Text variant="body">
+              Layerswap allows users to move crypto between exchanges and layer
+              2s.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              View{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+      </>
+    </HStack>
+    <Heading variant="h2">IconLink card</Heading>
+    <HStack p={12}>
+      <>
+        <Card variant="iconLink">
+          <img src="assets/tutorials.svg" width="60px" />
+          <CardBody variant="iconLink">
+            <Heading variant="h3">Developer tutorials</Heading>
+            <Text variant="body">
+              Learn how to build on Starknet from developers who have already
+              started.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="iconLink">
+          <img src="assets/tutorials.svg" width="60px" />
+          <CardBody variant="iconLink">
+            <Heading variant="h3">Developer tutorials</Heading>
+            <Text variant="body">
+              Learn how to build on Starknet from developers who have already
+              started.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="iconLink">
+          <img src="assets/tutorials.svg" width="60px" />
+          <CardBody variant="iconLink">
+            <Heading variant="h3">Developer tutorials</Heading>
+            <Text variant="body">
+              Learn how to build on Starknet from developers who have already
+              started.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
+        <Card variant="iconLink">
+          <img src="assets/tutorials.svg" width="60px" />
+          <CardBody variant="iconLink">
+            <Heading variant="h3">Developer tutorials</Heading>
+            <Text variant="body">
+              Learn how to build on Starknet from developers who have already
+              started.
+            </Text>
+            <CardLink variant="iconLink" href="">
+              Learn more{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
+                  fill="#3F8CFF"
+                />
+              </svg>
+            </CardLink>
+          </CardBody>
+        </Card>
       </>
     </HStack>
   </ThemeProvider>
