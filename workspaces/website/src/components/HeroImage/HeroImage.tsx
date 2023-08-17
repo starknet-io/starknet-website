@@ -102,7 +102,7 @@ const heroStyles: Record<string, HeroStyleObject> = {
   nodes_and_services: {
     img: "/assets/ecosystem/nodes_and_services.svg",
     gradient:
-      "linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%), linear-gradient(280.23deg, #EAF7FF 0%, #FAFDFF 100%, #EEFAFF 100%), linear-gradient(280.23deg, #DEF7FD 0%, #F4FDFF 100%), #F8F8F8",
+      "linear-gradient(258.76deg, hero-gradient-nodes-and-services-a 3.96%, hero-gradient-nodes-and-services-b 254.34%)",
     arrowGradient: "linear(95.36deg, #EC796B 1.31%, #D672EF 169.4%)",
     arrowOpacity: "0.2",
     arrowTipColor: "#D672EF"
