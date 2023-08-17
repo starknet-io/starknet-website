@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache/restore@v3
         with:
           path: _crowdin
-          key: crowdin-cache-crowdin-translations2
+          key: crowdin-cache-${{ github.ref_name }}
 
       - name: Run pre-Crowdin script for file preparation
         run: yarn workspace @starknet-io/cms-scripts pre-crowdin
@@ -62,4 +62,6 @@ jobs:
         uses: actions/cache/save@v3
         with:
           path: _crowdin
-          key: crowdin-cache-crowdin-translations2
+          key: crowdin-cache-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            crowdin-cache-${{ github.ref_name }}
