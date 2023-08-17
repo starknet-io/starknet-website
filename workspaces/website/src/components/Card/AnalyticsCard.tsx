@@ -2,6 +2,9 @@ import { Box } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { IconType } from "react-icons/lib";
 import { CardGradientBorder } from "./components/CardGradientBorder";
+import { useAsync } from "react-streaming";
+import { getSocialMediaData } from "@starknet-io/cms-data/src/getSocialMediaData";
+import { usePageContext } from "src/renderer/PageContextProvider";
 
 type Props = {
   icon: IconType;
@@ -16,6 +19,10 @@ export const AnalyticsCard = ({
   description = "Followers on Social Media",
   bg = "surface.bgPage",
 }: Props) => {
+  const pageContext = usePageContext();
+  const socialMedia = useAsync(['getSocialMediaData'], () => getSocialMediaData(pageContext.context));
+  console.log("socialMedia", socialMedia)
+
   return (
     <CardGradientBorder display="inline-block">
       <Box p="2xl" bg={bg}>
