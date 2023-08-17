@@ -1,0 +1,1 @@
+El nodo principal de la red Starknet. Implementa la funcionalidad central de las transacciones secuenciadas que se le presentan. Ejecuta el programa Starknet OS Cairo con las entradas pertinentes, prueba el resultado usando el Proving Service o algún prover interno de STARK, y eventualmente actualiza el estado de la red en el Contrato de Núcleo Starknet.

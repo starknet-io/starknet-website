@@ -1,0 +1,1 @@
+Op dit moment niet. Vergoedingen in Starknet worden nu betaald in Ether (ETH). Maar later gaan we ervan uit dat in de toekomst uitsluitend de oorspronkelijke Starknet Token zal worden betaald.

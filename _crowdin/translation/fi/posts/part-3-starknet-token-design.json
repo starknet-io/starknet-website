@@ -1,0 +1,5 @@
+{
+  "title": "Osa 3: Starknet-Token Design",
+  "time_to_consume": "5 min luettu",
+  "short_desc": "StarkNet Tokenin muotoilu on muotoiltu tarpeella saada aikaan sähköä i) StarkNetin käyttäjistä koostuva verkko, (ii) Operaattorit – henkilöt, jotka tarjoavat verkostolle laskentaresursseja, jotka suorittavat liiketoimien jaksottamista, STARK-vedokset ja pitkän aikavälin varastojen toimittajat sekä iii) Kehittäjät kirjoittavat ohjelmistoja infrastruktuuriinsa ja siihen liittyviin sovelluksiin.\n"
+}

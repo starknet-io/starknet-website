@@ -1,0 +1,1 @@
+El testimoni Starknet encara no està disponible per a la venda. No es pot afegir a la vostra cartera en aquesta fase. Compte amb les estafes.

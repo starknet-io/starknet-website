@@ -1,0 +1,1 @@
+Det er flere blokkoppdagere som du kan bruke: [StarkScan](https://starkscan.co/), [Stemmegivere](https://voyager.online/txns), [Vis](https://viewblock.io/starknet).

@@ -1,0 +1,4 @@
+{
+  "source": "/подкастов/:path*",
+  "destination": "/ru/posts"
+}

@@ -1,0 +1,1 @@
+Du kan rapportere svindel og sjekke etter andre rapporter om svindel i [kanalen for scam-report](https://discord.gg/qypnmzkhbc) på [Starknet Discord](https://starknet.io/discord) serveren.

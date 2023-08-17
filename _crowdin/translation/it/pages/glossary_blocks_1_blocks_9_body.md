@@ -1,0 +1,4 @@
+Questo contratto L1 definisce lo stato del sistema memorizzando l'impegno per lo stato L2. Il contratto memorizza anche l'hash del programma Starknet OS, definendo in modo efficace la versione di Starknet la rete è in esecuzione. Lo Stato impegnato sul contratto di base L1 agisce come meccanismo di consenso di Starknet, vale a dire il sistema è assicurato dal consenso L1 Ethereum. Oltre a mantenere lo stato, Starknet L1 Core Contract è il principale hub di operazioni per Starknet su L1. Specificamente:
+
+* Memorizza l'elenco dei verificatori (contratti) consentiti che possono verificare le transazioni di aggiornamento dello stato
+* Facilita l'interazione L1 ↔️ L2

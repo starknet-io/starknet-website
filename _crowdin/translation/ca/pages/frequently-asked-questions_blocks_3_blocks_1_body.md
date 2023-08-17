@@ -1,0 +1,1 @@
+Qualsevol dApp es pot desplegar a Starknet. Com que el Caire permet el càlcul general, qualsevol lògica empresarial es pot implementar i processar a través de StarkNet.

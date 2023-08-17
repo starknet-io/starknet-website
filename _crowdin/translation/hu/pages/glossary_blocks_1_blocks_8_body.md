@@ -1,0 +1,1 @@
+Az állam a szerződések kódjából és a szerződések tárolásából áll.

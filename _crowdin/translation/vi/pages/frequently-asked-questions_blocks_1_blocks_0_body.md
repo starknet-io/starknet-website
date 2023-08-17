@@ -1,0 +1,1 @@
+Mã thông báo Starknet sẽ được sử dụng để thanh toán phí giao dịch, tham gia vào giao thức Starknet và tham gia quản trị. Cơ sở lý luận cho từng tiện ích này được trình bày trong [đề xuất phân cấp](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)của chúng tôi, trong phần có tiêu đề “Mã thông báo sẽ được sử dụng để làm gì?”

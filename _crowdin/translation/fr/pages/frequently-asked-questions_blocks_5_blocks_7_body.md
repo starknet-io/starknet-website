@@ -1,0 +1,3 @@
+Le jeton Starknet n'est pas encore disponible à la vente. Il ne peut pas être ajouté à votre portefeuille à ce stade. Méfiez-vous des arnaques.
+
+Le jeton Starknet a été lancé sur le réseau principal Ethereum en novembre 2022. La Fondation Starknet annoncera ultérieurement les détails des plans de remises et de provisions communautaires, mais au moment de la rédaction, ces détails n'ont pas encore été déterminés. Méfiez-vous des escroqueries visant à vendre des jetons Starknet.

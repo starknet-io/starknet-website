@@ -1,0 +1,3 @@
+Ohjelma, joka koodaa toteutetun sovellusliiketoiminnan logiikka. Tähän sisältyvät sovellustietojen rakenteet ja käyttäjien lähettämät tiettyjen tapahtumien käsittely. Tarkemmin sanottuna Starknet-sopimus koodaa hakemuksen osalta voimassa olevat valtion siirtymät.
+
+* Starknet-tiliä koskevat sopimukset: Käyttäjätilejä ei panna täytäntöön protokollan tasolla. Joissakin sopimuksissa on näin ollen otettava käyttöön käyttäjätilien käsite, jota kutsutaan tilisopimuksiksi. Tarkka täytäntöönpano riippuu sopimuksesta, mutta teknisesti ne ovat Kairossa toteutettuja Starknet-sopimuksia.

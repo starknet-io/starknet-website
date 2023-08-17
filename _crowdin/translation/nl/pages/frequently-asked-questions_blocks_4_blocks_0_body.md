@@ -1,0 +1,3 @@
+**StarkEx**is een standaard, aanpasbare Layer-2 SAAS voor uitwisselingen die het STARK proof systeem gebruiken om enorme schaalmogelijkheden te bieden. Verschillende belangrijke uitwisselingen gebruiken StarkEx al in de productie op Ethereum Mainnet (lees meer over StarkEx).
+
+**Starknet**is een netwerk waar je je eigen slimme contracten kunt schrijven en implementeren, neem contact op met andere contracten, enzovoort, net als Ethereum.

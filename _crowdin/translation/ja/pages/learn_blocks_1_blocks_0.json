@@ -1,0 +1,4 @@
+{
+  "title": "Starknet 101",
+  "description": "Starknetは、数学と暗号化を使用してEthereumを安全にスケールするレイヤー2ネットワークです。 これはValidity-rollup(またはZK-rollup)として知られており、1つのトランザクションとしてEthereumに送信するための多くのトランザクションを「rolls」します。 基礎を学ぶために読んでください。"
+}

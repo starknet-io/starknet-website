@@ -1,0 +1,1 @@
+För närvarande nej. Avgifter i Starknet betalas nu i Ether (ETH). Men senare räknar vi med att avgifter i framtiden kommer att betalas uteslutande med infödda Starknet Token.

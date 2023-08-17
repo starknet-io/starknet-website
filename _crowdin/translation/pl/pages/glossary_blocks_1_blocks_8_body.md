@@ -1,0 +1,1 @@
+Państwo składa się z kodeksów umów i przechowywania umów.

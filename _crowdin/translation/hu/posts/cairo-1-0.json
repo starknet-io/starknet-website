@@ -1,0 +1,5 @@
+{
+  "title": "Kairó 1.0",
+  "time_to_consume": "5 perc olvasás",
+  "short_desc": "2020-ban kiadtuk a Cairo-t, egy Turing-komplett programozási nyelvet, és nagy lépést tettünk a STARK-ok segítségével történő, ellenőrizhető számítások támogatása felé. Ma bemutatjuk a Cairo 1.0-t, amely Kairó eddigi legnagyobb fejlesztése."
+}

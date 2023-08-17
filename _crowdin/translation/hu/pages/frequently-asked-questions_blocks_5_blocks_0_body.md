@@ -1,0 +1,1 @@
+A STARK technológia kiforrott és biztonságos, de a Starknet még nem érte el a közjó státuszát, mint az Ethereum vagy az Internet. Ahhoz, hogy a Starknet elérje ezt a célt, irányításának, működésének és fejlesztésének továbbra is decentralizáltnak kell lennie. Ezt két mechanizmus segíti elő: a **Starknet Foundation** és a **Starknet Token**.

@@ -1,0 +1,1 @@
+Un cop Starknet estigui llest, les aplicacions StarkEx poden migrar a StarkNet si així ho volen.

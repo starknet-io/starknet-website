@@ -1,0 +1,4 @@
+{
+  "source": "/topluluk-bağlantıları/:yol*",
+  "destination": "/tr"
+}

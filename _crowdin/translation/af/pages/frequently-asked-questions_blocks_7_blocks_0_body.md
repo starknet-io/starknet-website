@@ -1,0 +1,1 @@
+As jy opgewonde is oor StarkNet en sy desentralisasie en wil deelneem aan die proses, sluit asseblief aan by die bouers op StarkNet [Discord](https://starknet.io/discord) en [Starknet gemeenskapsforum](https://community.starknet.io/)

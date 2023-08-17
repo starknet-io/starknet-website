@@ -1,0 +1,1 @@
+Enige dApp kan op Starknet ontplooi word. Aangesien Kaïro algemene berekening toelaat, kan enige besigheidslogika oor StarkNet geïmplementeer en verwerk word.

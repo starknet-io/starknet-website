@@ -1,0 +1,4 @@
+{
+  "title": "Як масштабувати Starknet Ethereum? ",
+  "description": "Starknet використовує математику та криптографію, щоб надійно масштабувати Ethereum. Ця операція працює як Validity-rollup (або ZK-rollup): вона \"bundles\" багато транзакцій та \"rolls\" їх до Ethereum як одна транзакція."
+}

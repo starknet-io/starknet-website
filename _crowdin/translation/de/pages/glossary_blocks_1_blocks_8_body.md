@@ -1,0 +1,1 @@
+Der Staat besteht aus Vertragskodex und der Lagerung von Verträgen.

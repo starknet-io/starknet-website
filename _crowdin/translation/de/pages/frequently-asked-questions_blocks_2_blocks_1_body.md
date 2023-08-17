@@ -1,0 +1,1 @@
+STARK ist ein bewährtes System. Es verwendet modernste Kryptographie, um polylogarithmische Verifikationskomplexität und Beweisgröße, quasilineare Komplexität und minimale Annahmen zu bieten, die nachquantensicher sind. Weitere Informationen [hier](https://starkware.co/stark/).

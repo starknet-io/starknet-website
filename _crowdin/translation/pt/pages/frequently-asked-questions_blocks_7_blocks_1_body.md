@@ -1,0 +1,1 @@
+Você pode denunciar fraudes e verificar se há outros relatórios de fraudes no canal de [relatório de fraude](https://discord.gg/qypnmzkhbc) no servidor [Starknet](https://starknet.io/discord).

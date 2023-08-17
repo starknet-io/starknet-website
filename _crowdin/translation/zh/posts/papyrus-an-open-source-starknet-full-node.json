@@ -1,0 +1,5 @@
+{
+  "title": "Papyrus：一个开源的StarkNet全节点",
+  "time_to_consume": "阅读需要3分钟",
+  "short_desc": "今天我们介绍Papyrus，这是一个用Rust实现的Starknet全节点，它将有助于铺平通向大规模使用Starknet的道路。"
+}

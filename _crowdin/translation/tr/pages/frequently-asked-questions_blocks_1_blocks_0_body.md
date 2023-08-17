@@ -1,0 +1,1 @@
+Starknet jetonu, işlem ücretlerinin ödenmesi, Starknet protokolüne katılım ve yönetişime katılım için kullanılacaktır. Bu yardımcı programların her birinin mantığı, "Tokenlar ne için kullanılacak?" başlıklı bölümde [ademi merkeziyet önerimizde](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)sunulmuştur.

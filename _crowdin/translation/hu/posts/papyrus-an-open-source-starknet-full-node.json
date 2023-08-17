@@ -1,0 +1,5 @@
+{
+  "title": "Papyrus: Nyílt forráskódú Starknet teljes csomópont",
+  "time_to_consume": "3 perc olvasás",
+  "short_desc": "Ma bemutatjuk a Papyrust, a Starknet teljes csomópontjának Rust implementációját, amely segít megnyitni az utat a Starknet tömeges használatához."
+}

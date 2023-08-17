@@ -1,0 +1,1 @@
+En samling av kontrakt (L1 och L2) som kollektivt implementerar ett affärsflöde.

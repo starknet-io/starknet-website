@@ -1,0 +1,1 @@
+The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.

@@ -1,0 +1,1 @@
+Nie. Rozprzestrzenianie się tokenów z czasem zwiększy się wraz z eksplodowaniem nowych tokenów przez protokół. Szczegóły dotyczące szybkości i mechanizmu rozminowywania nie zostały jeszcze określone.

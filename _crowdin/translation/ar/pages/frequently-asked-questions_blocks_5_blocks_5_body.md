@@ -1,0 +1,1 @@
+يمكن العثور على هذه المعلومات في [مشاركة المدونة](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef).

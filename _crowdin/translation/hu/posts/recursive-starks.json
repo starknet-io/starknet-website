@@ -1,0 +1,5 @@
+{
+  "title": "Rekurzív STARK-ok",
+  "time_to_consume": "9. perc olvasás",
+  "short_desc": "A rekurzív bizonyítások – amelyeket Kairó általános számításai hajtanak végre – most készülnek. Ez jelentős növekedést jelent a STARK-okkal történő L2-skálázás teljesítményében. Gyorsan többszörösére növeli az Ethereumba egyetlen bizonyítással írható tranzakciók számát."
+}

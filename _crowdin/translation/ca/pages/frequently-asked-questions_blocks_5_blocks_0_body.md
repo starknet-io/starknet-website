@@ -1,0 +1,1 @@
+La tecnologia STARK és madura i segura, però Starknet encara no ha aconseguit l'estatus de bé públic com Ethereum o Internet. Perquè Starknet assoleixi aquest objectiu, la seva governança, funcionament i desenvolupament s'han de continuar descentralitzant. Això es facilitarà mitjançant dos mecanismes: el **Starknet Foundation** i el **Starknet Token**.

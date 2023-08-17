@@ -1,0 +1,1 @@
+A Starknet tokent tranzakciós díjak fizetésére, a Starknet protokollban való részvételre és az irányításban való részvételre fogják használni. Az egyes segédprogramok indoklását [decentralizációs javaslatunk](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)tartalmazza, a „Mire fogják használni a tokeneket?” című részben.

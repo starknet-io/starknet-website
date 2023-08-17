@@ -1,0 +1,1 @@
+Egy szerződésben meghatározott állapotátmeneti logika meghívása. Szintaktikailag egy tranzakció jól meghatározott szerkezettel rendelkezik, amely tartalmazza az összes szükséges metaadatot és tetszőleges adatterhelést. A tranzakció szemantikáját a meghívott szerződés határozza meg.

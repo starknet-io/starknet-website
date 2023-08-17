@@ -1,0 +1,5 @@
+{
+  "title": "Teil 3: Starknet Token-Design",
+  "time_to_consume": "5 Minuten gelesen",
+  "short_desc": "Das Design des StarkNet Token wird durch die Notwendigkeit geprägt, ein Netzwerk zu betreiben, das aus (i) Benutzern von StarkNet besteht, (ii) Operatoren — Personen, die das Netzwerk mit Rechnerressourcen versorgen, die Transaktionen sequenzieren, Generierung von STARK-Beweisen und langfristigen Speicheranbietern und (iii) Entwicklern, die Software für ihre Infrastruktur und für darauf laufende Anwendungen schreiben.\n"
+}

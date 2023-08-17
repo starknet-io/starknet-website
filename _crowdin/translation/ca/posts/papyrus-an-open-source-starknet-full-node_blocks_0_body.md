@@ -1,0 +1,22 @@
+# Papyrus: un node complet StarkNet de codi obert
+## Papyrus serà un component clau de la infraestructura descentralitzada de StarkNet
+**TL;DR**
+* Papyrus és una implementació Rust d'un node complet de StarkNet * Proporcionarà les bases per al nou seqüenciador StarkNet, que millorarà dràsticament el rendiment de StarkNet * Papyrus ajudarà a avançar en el rendiment i la descentralització. Ara que StarkNet ha aconseguit una usabilitat excel·lent, aquestes són les seves principals prioritats de desenvolupament
+## Introducció
+Avui presentem Papyrus, una implementació Rust d'un node complet de StarkNet, que ajudarà a preparar el camí per a l'ús massiu de StarkNet. El node</a>complet[Papyrus farà un seguiment de l'estat de StarkNet a mesura que evoluciona al llarg del temps i permetrà als usuaris i desenvolupadors consultar aquest estat mitjançant el JSON-RPC](https://github.com/starkware-libs/papyrus)de
+StarkNet. Papyrus proporcionarà les bases del nou seqüenciador StarkNet, que millorarà dràsticament el rendiment de StarkNet en pocs mesos. Papyrus s'uneix a altres nodes complets de StarkNet - Pathfinder i Juno - que s'encarreguen de sincronitzar i mantenir l'estat de StarkNet. D'acord amb el nostre moviment en curs cap a la pila StarkNet de codi obert, Papyrus és de codi obert sota la llicència Apache 2.0.</p> 
+
+
+## Papir - Fonaments per a un seqüenciador optimitzat
+
+Al principi vam afirmar que[les fases del desenvolupament de StarkNet](https://medium.com/starkware/starknet-on-to-the-next-challenge-96a39de7717)són: (i) primer la funcionalitat i la usabilitat, seguida de (ii) l'escala i el rendiment i, finalment, (iii) la descentralització. StarkNet ha aconseguit una usabilitat excel·lent, i ara el rendiment del sistema és la principal prioritat, amb la descentralització agafant força. La millora del rendiment del sistema s'està abordant millorant el rendiment del Sequencer, responsable de la producció de blocs StarkNet. El seqüenciador és la "màquina" que ordena i executa les transaccions després d'enviar-les. Papyrus proporcionarà al StarkNet Sequencer una capa d'emmagatzematge eficient, que ajudarà a millorar el rendiment. En primer lloc, això significa que el seqüenciador mantindrà una base de dades local en lloc d'una base de dades basada en núvol. A més, Papyrus emmagatzemarà un emmagatzematge pla de clau/valor, és a dir, interactuarà directament amb l'estat, en lloc d'arribar-hi a través dels camins Merkle-Patricia.
+
+
+## Enfortiment i descentralització de la pila StarkNet
+
+Actualment, hi ha dos equips que desenvolupen un node complet StarkNet. Hi ha[Pathfinder](https://github.com/eqlabs/pathfinder)d'Equilibrium, implementat a Rust, i[Juno](https://github.com/NethermindEth/juno)de Nethermind, que estan treballant per a la primera versió oficial de la seva implementació Golang. Papyrus avui s'uneix a aquesta barreja saludable i fomenta la descentralització i la redundància. Afegir un altre node complet i fer-lo de codi obert ajuda a oferir una varietat d'implementacions de client, que és un indicador important de la força d'una xarxa descentralitzada i per consolidar el seu estatus com a bé públic.
+
+
+## Llançament actual i plans de futur
+
+La versió actual us permet sincronitzar amb l'estat de StarkNet i accedir a tot l'historial de StarkNet. Actualment, l'especificació JSON-RPC només s'admet parcialment, podeu fer un seguiment del progrés[aquí](https://github.com/starkware-libs/papyrus#endpoints). Papyrus està sent de codi obert ara, a l'espera del llançament complet per a ús públic d'aquí a uns quants mesos. A més de treballar en la compatibilitat total amb l'especificació[JSON-RPC](https://github.com/starkware-libs/starknet-specs/blob/master/api/starknet_api_openrpc.json), l'equip de Papyrus, juntament amb Pathfinder i Juno, treballarà per formar la base de la capa[de StarkNet P2P](https://github.com/starknet-io/starknet-p2p-specs). Tenir diferents nodes que es puguin comunicar i sincronitzar a través de la capa P2P és un gran salt cap a una StarkNet descentralitzada. A més, la capacitat de sincronitzar amb els companys (a diferència de la situació actual en què cada node es comunica amb una API centralitzada) hauria de millorar dràsticament el temps de sincronització. En resum, Papyrus és el tercer node complet que s'uneix a l'ecosistema StarkNet. Es publica sota una llicència de codi obert (Apache 2.0) i formarà una part crucial de la infraestructura de la StarkNet descentralitzada.

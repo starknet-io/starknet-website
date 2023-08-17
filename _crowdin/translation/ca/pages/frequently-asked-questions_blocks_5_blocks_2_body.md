@@ -1,0 +1,1 @@
+Un testimoni natiu que premia els membres de la comunitat que desenvolupen la xarxa farà avançar l'ecosistema fins a un punt que l'ús d'un testimoni no natiu no ho farà. A més, si el testimoni no és natiu, els xocs econòmics de les decisions preses en altres ecosistemes poden afectar el servei de Starknet i els seus usuaris i proveïdors.

@@ -1,0 +1,1 @@
+O nó principal da rede Starknet. Implementa a funcionalidade central das transações sequenciadoras submetidas a ela. Ele executa o programa Starknet OS Cairo com as entradas relevantes, prova o resultado usando o serviço de demonstração ou algum prover STARK interno, e eventualmente atualiza o estado da rede no Contrato Starknet Core.

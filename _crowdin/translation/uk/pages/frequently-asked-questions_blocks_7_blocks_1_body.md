@@ -1,0 +1,1 @@
+Ви можете повідомити про шахрайства і перевірити повідомлення про інші повідомлення про шахрайство в [scam-report](https://discord.gg/qypnmzkhbc) каналі на сервері [Starknet](https://starknet.io/discord).

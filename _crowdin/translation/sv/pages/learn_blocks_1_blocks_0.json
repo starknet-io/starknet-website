@@ -1,0 +1,4 @@
+{
+  "title": "Starknet 101",
+  "description": "Starknet är ett lager-2-nätverk som använder matematik och kryptografi för att säkert skala Ethereum. Det är känt som en validerings-rollup (eller ZK-rollup); det \"rullar\" många transaktioner upp för att skicka till Ethereum som en enda transaktion. Läs vidare för att lära sig grunderna."
+}

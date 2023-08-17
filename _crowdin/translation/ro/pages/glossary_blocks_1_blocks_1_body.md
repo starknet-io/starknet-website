@@ -1,0 +1,1 @@
+Utilizatorii de Starknet care dezvoltă aplicații Starknet. Ei scriu și implementează contracte Starknet și Ethereum.

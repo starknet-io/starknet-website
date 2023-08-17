@@ -1,0 +1,3 @@
+Program kodujący wdrożoną logikę biznesową aplikacji. Obejmuje to struktury danych aplikacji oraz obsługę określonych transakcji wysyłanych przez użytkowników. Konkretnie, kontrakt Starknet koduje ważne zmiany stanu dla wniosku.
+
+* Konta Starknet: Biorąc pod uwagę abstrakcję konta, konta użytkowników nie są zaimplementowane na poziomie protokołu. Niektóre umowy będą zatem musiały wdrożyć koncepcję kont użytkowników; są to umowy o konto. Dokładna realizacja zależy od umowy, ale pod względem technicznym są to umowy Starknet, które są wdrażane w Kairze.

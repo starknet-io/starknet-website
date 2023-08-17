@@ -1,0 +1,3 @@
+Nej. Du har flera alternativ för att skriva ett avtal, var och en med sina egna förmåner. 
+
+Kairo är modersmål för ett Starknet-kontrakt, som mest fullt inser skalningspotentialen i Starknet. Å andra sidan, flera team utvecklar transpilers från andra programmeringsspråk (särskilt Solidity) till Kairo. Sådana transpilers underlättar snabb implementering av befintliga kontrakt på Starknet.**[Se vårt senaste utvecklingsverktyg](/developers/tools-resources).**

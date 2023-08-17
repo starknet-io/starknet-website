@@ -1,0 +1,1 @@
+STARK-tegnologie is volwasse en veilig, maar Starknet het nog nie die status van 'n openbare goed soos Ethereum of die internet bereik nie. Vir Starknet om hierdie doelwit te bereik, moet sy bestuur, bedryf en ontwikkeling voortgaan om te desentraliseer. Dit sal deur twee meganismes gefasiliteer word: die **Starknet Foundation** en die **Starknet Token**.

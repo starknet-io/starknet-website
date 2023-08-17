@@ -1,0 +1,5 @@
+{
+  "title": "3. rész: Starknet token tervezés",
+  "time_to_consume": "5 perc olvasás",
+  "short_desc": "A StarkNet Token kialakítását az az igény határozza meg, hogy egy olyan hálózatot kell táplálni, amely (i) StarkNet felhasználóiból, (ii) Operátorokból áll – olyan emberekből, akik a hálózatot olyan számítási erőforrásokkal látják el, amelyek tranzakciók sorrendjét hajtják végre, STARK-bizonyítékokat generálnak, és hosszú távú tárolási szolgáltatók és (iii) fejlesztők, akik szoftvereket írnak az infrastruktúrájához és az azon futó alkalmazásokhoz.\n"
+}

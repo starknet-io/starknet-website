@@ -1,0 +1,4 @@
+{
+  "source": "/blog-plasings/:pad*",
+  "destination": "/af/plasings"
+}

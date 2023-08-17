@@ -1,0 +1,1 @@
+Lo Stato è composto dal codice dei contratti e dal deposito dei contratti.

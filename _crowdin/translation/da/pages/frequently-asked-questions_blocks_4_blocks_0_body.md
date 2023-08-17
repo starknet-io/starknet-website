@@ -1,0 +1,3 @@
+**StarkEx**er en standalone, tilpasselig Layer-2 SAAS til udvekslinger, der bruger STARK bevis system for at give massiv skalering. Flere væsentlige udvekslinger bruger allerede StarkEx i produktion på Ethereum Mainnet (læs mere om StarkEx).
+
+**Starknet**er et generelt netværk, hvor du kan skrive og implementere dine egne smarte kontrakter, interagere med andre kontrakter, og så videre, ligesom Ethereum.

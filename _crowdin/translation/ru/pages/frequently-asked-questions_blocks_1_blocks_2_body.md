@@ -1,0 +1,3 @@
+Хорошее место для начала — [учебник «Привет, Старкнет»](https://docs.starknet.io/documentation/), , который направляет разработчика шаг за шагом, путем написания и развертывания простого контракта. [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) предлагает окружение для изучения того, как писать контракты Starknet и тестировать их. 
+
+Вы можете стать частью сообщества разработчиков и поддержать его, присоединившись к [Starknet Discord](https://discord.com/invite/QypNMzkHbc) серверу.

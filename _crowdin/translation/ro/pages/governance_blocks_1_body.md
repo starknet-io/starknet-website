@@ -1,0 +1,7 @@
+Prima fază a guvernării Starknet a fost lansată (mai multe detalii[aici](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). De acum înainte, membrii comunităţii pot participa la modelarea Starknet printr-un alt canal, şi anume votarea modificărilor protocolului.
+
+În prima sa fază, guvernanţa Starknet se va concentra asupra actualizărilor protocolului Starknet. Fiecare actualizare a versiunii Starknet va fi implementată pe Goerli Testnet; Alegătorii vor avea apoi o perioadă de 6 zile pentru a examina şi testa versiunea actualizată în timp ce se desfăşoară pe Goerli. În acest timp, va fi deschisă o propunere de imagine, iar comunitatea poate vota dacă să aprobe sau să respingă versiunea actualizată pentru desfăşurarea Mainnet.
+
+În cazul în care propunerea câştigă majoritatea voturilor pentru „DA” în timpul perioadei de votare de şase zile, propunerea va fi adoptată, iar reţeaua continentală Starknet va fi actualizată în consecinţă. Ne așteptăm ca votul asupra[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)să fie deschis în curând.
+
+Vă încurajăm să citiţi toate detaliile din următoarele postări şi să discutaţi cu discuţiile din[Forumul comunităţii Starknet](https://community.starknet.io/).

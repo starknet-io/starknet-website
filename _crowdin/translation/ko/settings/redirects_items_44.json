@@ -1,0 +1,4 @@
+{
+  "source": "/latest-posts/:경로*",
+  "destination": "/ko/게시물"
+}

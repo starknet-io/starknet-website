@@ -1,0 +1,1 @@
+Huvudnoden i Starknet-nätverket. Det implementerar kärnfunktionaliteten i sekvensering transaktioner som lämnats in till den. Det exekverar Starknet OS Kairo program med relevanta ingångar, bevisar resultatet med hjälp av Proving Service eller någon intern STARK prover, och så småningom uppdaterar nätverksstaten på Starknet Core Contract.

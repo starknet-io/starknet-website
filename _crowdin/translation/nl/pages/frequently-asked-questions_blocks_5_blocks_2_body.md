@@ -1,0 +1,1 @@
+Een native token die leden van de gemeenschap die het netwerk ontwikkelen beloont, zal het ecosysteem in een mate bevorderen dat het gebruik van een niet-native token niet zal gebruiken. Als het token niet-formeel is, kunnen economische schokken door besluiten die zijn genomen in andere ecosystemen ook Starknet's service en zijn gebruikers en aanbieders beïnvloeden.

@@ -1,0 +1,3 @@
+**StarkEx**és un SAAS de capa 2 autònom i personalitzable per a intercanvis que utilitza el sistema de prova STARK per proporcionar una escala massiva. Diversos intercanvis importants ja utilitzen StarkEx en producció a Ethereum Mainnet (llegiu més sobre StarkEx).
+
+**Starknet**és una xarxa de propòsit general on podeu escriure i desplegar els vostres propis contractes intel·ligents, interactuar amb altres contractes, etc., igual que Ethereum.

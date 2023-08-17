@@ -1,0 +1,3 @@
+Das Programm, das die implementierte Anwendungsgeschäftslogik kodiert. Dazu gehören die Anwendungsdatenstrukturen und die Handhabung spezifischer Transaktionen, die von Benutzern gesendet werden. Insbesondere kodiert der Starknet-Vertrag gültige Zustandsübergänge für die Anwendung.
+
+* Starknet-Konto-Verträge: Benutzerkonten werden nicht auf Protokollebene implementiert. Einige Verträge müssen daher das Konzept der Benutzerkonten umsetzen; diese nennen sich Account-Verträge. Die genaue Umsetzung hängt vom Vertrag ab, aber technisch gesehen handelt es sich um Starknet-Verträge, die in Kairo umgesetzt werden.

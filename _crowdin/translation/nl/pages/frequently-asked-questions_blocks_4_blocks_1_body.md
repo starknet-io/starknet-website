@@ -1,0 +1,1 @@
+Zodra Starknet klaar is, kunnen StarkEx apps migreren naar StarkNet als ze dat kiezen.

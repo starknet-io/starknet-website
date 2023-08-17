@@ -1,0 +1,1 @@
+Der Hauptknoten des Starknet-Netzwerks. Es implementiert die Kernfunktionalität der ihm übertragenen Sequenzierungstransaktionen. Es führt das Starknet OS Kairo Programm mit den relevanten Eingaben aus, zeigt das Ergebnis mit dem Proving Service oder einem internen STARK Prover, und aktualisiert schließlich den Netzwerkstatus im Starknet Core Contract.

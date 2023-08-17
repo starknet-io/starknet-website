@@ -1,0 +1,4 @@
+{
+  "source": "/bulletin-board/:path*",
+  "destination": "/ca/desenvolupadors/eines-i-recursos"
+}

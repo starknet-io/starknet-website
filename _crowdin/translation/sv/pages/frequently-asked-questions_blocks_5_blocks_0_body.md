@@ -1,0 +1,1 @@
+STARK tekniken är mogen och säker, men Starknet har ännu inte uppnått status som en offentlig bra som Ethereum eller Internet. För att Starknet ska nå detta mål måste dess styrning, verksamhet och utveckling fortsätta att decentraliseras. Detta kommer att underlättas genom två mekanismer: **Starknet Foundation** och **Starknet Token**.

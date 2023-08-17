@@ -1,0 +1,1 @@
+Alla dApp kan distribueras på Starknet. Som Kairo tillåter allmän beräkning, någon affärslogik kan genomföras och bearbetas över StarkNet.

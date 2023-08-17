@@ -1,0 +1,4 @@
+Starknet İşletim Sistemi kullanılarak çalıştırılan ve daha sonra Starknet L1 çekirdek sözleşmesine taahhüt edilen bir toplu durum değişikliğiyle sonuçlanan sıralı Starknet işlem kümeleri. Bir blokta şunlar bulunur:
+
+* … bir blok karması - bloğa sorgulamak ve ona başvurmak için kullanılabilecek benzersiz bir kararlı tanımlayıcı.
+* … bir blok numarası – Starknet'te kabul edilen bloklar sırasında bloğun konumunu temsil eden bir sıra numarası. Not, bir bloğun numarası zamanla değişebilir. Ayrıca, belirli bir sayı, örneğin L1 zincirinin yeniden sıralanması durumunda, farklı zaman noktalarında farklı bloklara atıfta bulunabilir.

@@ -1,0 +1,5 @@
+Starknet là một Bản tổng hợp hiệu lực Lớp 2 (L2) không được phép, phi tập trung nhằm mở rộng quy mô Ethereum trong khi vẫn duy trì tính bảo mật và phân cấp của Ethereum. Để phù hợp với sứ mệnh đó, Tổ chức được thành lập như một thực thể độc lập để phát triển công nghệ dùng chung là Starknet. Ngoài ra, với tư cách là một tổ chức phi lợi nhuận với một nhiệm vụ hẹp: phát triển Starknet như một lợi ích công cộng cho tất cả mọi người và duy trì nó như vậy trong nhiều năm tới.
+
+Quỹ ra mắt với 50,1% nguồn cung cấp Mã thông báo ban đầu để đảm bảo tài nguyên của mạng được triển khai hiệu quả cho các mục tiêu sau: duy trì và bảo mật Starknet như một hàng hóa công cộng; việc tiếp tục phát triển và mở rộng mạng lưới; và hỗ trợ cho văn hóa hợp tác mang tính xây dựng giữa các nhà phát triển.
+
+Để biết thêm thông tin về nhiệm vụ, các bước đầu tiên và hội đồng quản trị của Tổ chức, hãy xem bài đăng [“Xin chào thế giới”](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) của Tổ chức và bài đăng bổ sung [của StarkWare](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

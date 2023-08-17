@@ -1,0 +1,1 @@
+Starknet 토큰은 거래 수수료 지불, Starknet 프로토콜 참여 및 거버넌스 참여에 사용됩니다. 이러한 각 유틸리티에 대한 이론적 근거는 "토큰은 무엇에 사용됩니까?" 섹션의 [탈중앙화 제안](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)에 제시되어 있습니다.

@@ -1,0 +1,3 @@
+Programmet som kodar den genomförda ansökan affärslogik. Detta inkluderar applikationsdatastrukturer och hantering av specifika transaktioner som skickas av användare. Specifikt kodar Starknet-avtalet giltiga tillståndsövergångar för applikationen.
+
+* Starknet Kontrakt: Givet kontoabstraktion, användarkonton är inte implementerade på protokollnivå. Vissa kontrakt kommer därför att behöva genomföra begreppet användarkonton; dessa kallas Kontrakt. Det exakta genomförandet beror på kontraktet, men tekniskt sett är det Starknet-kontrakt som genomförs i Kairo.

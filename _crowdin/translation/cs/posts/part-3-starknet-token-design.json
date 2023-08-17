@@ -1,0 +1,5 @@
+{
+  "title": "Část 3: Návrh tokenů Starknet",
+  "time_to_consume": "5 minut čtení",
+  "short_desc": "Konstrukce StarkNet Token je utvářena potřebou napájení sítě, která se skládá z i) uživatelů StarkNet, ii) operátoři – lidé, kteří poskytují síť výpočetními zdroji, které provádějí sekvenování transakcí, vytváření důkazů STARK a poskytovatelů dlouhodobých úložišť a iii) Vývojáři psaní softwaru pro jeho infrastrukturu a pro aplikace, které na něm běží.\n"
+}

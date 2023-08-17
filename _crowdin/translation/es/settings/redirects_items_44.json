@@ -1,0 +1,4 @@
+{
+  "source": "/última-posts/:ruta*",
+  "destination": "/es/posts"
+}

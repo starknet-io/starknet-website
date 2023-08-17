@@ -1,0 +1,4 @@
+{
+  "source": "/community/community-links/:경로*",
+  "destination": "/ko/커뮤니티"
+}

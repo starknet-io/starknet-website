@@ -1,0 +1,4 @@
+{
+  "source": "/community/community-jobb/:path*",
+  "destination": "/sv/jobs"
+}

@@ -1,0 +1,5 @@
+Starknet on luvaton, hajautettu kerros 2 (L2) Kelpoisuus Rollup tarkoitettu mittakaavassa Ethereum säilyttäen Ethereumin turvallisuus ja hajauttaminen. Kyseisen tehtävän mukaisesti säätiö perustettiin riippumattomaksi kokonaisuudeksi, jonka tehtävänä on edistää Starknet-yhteistekniikkaa ja joka on sen yhteinen teknologia. Lisäksi voittoa tavoittelemattomana yhteisönä, jolla on kapea tehtävä: edistää Starknettia yleishyödyllisenä asiana, ja ylläpitää sitä sellaisenaan tulevina vuosina.
+
+Säätiö käynnistyy 50 kpl. % alkuperäisestä Tokenin toimituksesta sen varmistamiseksi, että verkoston resursseja käytetään tehokkaasti seuraavien tavoitteiden saavuttamiseen: Starknetin ylläpito ja turvallisuus yleishyödyllisenä hyödykkeenä; verkoston kehittämisen ja laajentamisen jatkuminen sekä kehittäjien välisen rakentavan yhteistyön kulttuurin tukeminen.
+
+Lisätietoja säätiön tehtävästä, ensimmäisistä vaiheista ja hallituksesta, katso säätiön [“Hello World” postitse](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) ja [StarkWare’s complementary post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

@@ -1,0 +1,1 @@
+Simbolul Starknet nu este încă disponibil pentru vânzare. Nu poate fi adăugat în portofel în acest stadiu. Aveți grijă de înșelătorii.

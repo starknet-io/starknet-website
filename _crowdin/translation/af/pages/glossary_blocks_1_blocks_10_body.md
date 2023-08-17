@@ -1,0 +1,1 @@
+'n Nodus in die Starknet-netwerk wat slegs gebruik word om die huidige Starknet-toestand navraag te doen. Dit kan onafhanklik (dws sonder om bykomende nodusse navraag te doen) navrae beantwoord oor die huidige toestand van die Starknet-netwerk, insluitend die L1-toestand. Dit bondel nie transaksies of bewys bondels nie.

@@ -1,0 +1,3 @@
+**StarkEx**büyük ölçeklendirme sağlamak için STARK kanıtlama sistemini kullanan değiş tokuşlar için bağımsız, özelleştirilebilir bir Layer-2 SAAS'dir. Birkaç önemli borsa, Ethereum Mainnet'teki üretimde zaten StarkEx'i kullanıyor (StarkEx hakkında daha fazla bilgi edinin).
+
+**Starknet**tıpkı Ethereum gibi, kendi akıllı sözleşmelerinizi yazıp konuşlandırabileceğiniz, diğer sözleşmelerle etkileşime girebileceğiniz vb. genel amaçlı bir ağdır.

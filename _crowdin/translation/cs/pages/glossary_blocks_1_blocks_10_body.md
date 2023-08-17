@@ -1,0 +1,1 @@
+Uzel v síti Starknet, který se používá pouze pro dotazování aktuálního stavu Starknet. Může nezávisle (tzn. bez dotazu na další uzly) odpovědět na dotazy ohledně současného stavu sítě Starknet, včetně stavu L1. Neprovádí dávkové transakce ani neprokazuje dávky.

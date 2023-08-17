@@ -1,0 +1,4 @@
+{
+  "source": "/comunidade/comunidade-links/:path*",
+  "destination": "/pt/Comunidade"
+}

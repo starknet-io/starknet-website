@@ -1,0 +1,3 @@
+Et godt sted at starte er [Hej Starknet tutorial](https://docs.starknet.io/documentation/), som guider udvikleren trin for trin gennem at skrive og implementere en simpel kontrakt. The [Starknet Legeplads](https://starknet.io/playground/?lesson=starknet_contract) tilbyder et miljø til at lære at skrive Starknet kontrakter og teste dem. 
+
+Du kan blive en del af udviklernes fællesskab, og støtte det, ved at deltage i [Starknet Discord](https://discord.com/invite/QypNMzkHbc) -serveren.

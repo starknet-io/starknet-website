@@ -1,0 +1,1 @@
+Attualmente, n. Le commissioni in Starknet sono ora pagate in Ether (ETH). Ma più tardi, prevediamo che in futuro, le tasse saranno pagate esclusivamente con il nativo Starknet Token.

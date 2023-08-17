@@ -1,0 +1,4 @@
+Bestelde sets Starknet transacties die worden uitgevoerd met behulp van de Starknet OS resulteert in één geaggregeerde staatsverandering die zich vervolgens inzet voor het kerncontract van Starknet L1. Een blok heeft:
+
+* … een blokhash – een unieke stabiele id die kan worden gebruikt om op te vragen en naar het blok te verwijzen.
+* … een bloknummer – een algemeen getal dat de locatie van het blok weergeeft in de reeks van aanvaarde blokken in Starknet. Let op, het nummer van een blok kan in de loop der tijd veranderen. Ook kan een bepaald getal verwijzen naar verschillende blokken op verschillende tijdstippen, bijvoorbeeld in het geval van L1-ketenherbestellingen.

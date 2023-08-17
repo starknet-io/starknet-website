@@ -1,0 +1,1 @@
+STARK teknologi er moden og sikker, men Starknet har endnu ikke opnået status af et offentligt gode som Ethereum eller internettet. For at Starknet kan nå dette mål, skal dets styring, drift og udvikling fortsat decentraliseres. Dette vil blive lettet gennem to mekanismer: **Starknet Foundation** og **Starknet Token**.

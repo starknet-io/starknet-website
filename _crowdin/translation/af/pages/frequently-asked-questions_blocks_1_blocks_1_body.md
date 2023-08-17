@@ -1,0 +1,1 @@
+Daar is verskeie blokverkenners wat jy kan gebruik: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).

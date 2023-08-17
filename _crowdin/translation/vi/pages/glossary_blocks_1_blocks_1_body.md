@@ -1,0 +1,1 @@
+Người dùng Starknet phát triển các ứng dụng Starknet. Họ viết và triển khai các hợp đồng Starknet và Ethereum.

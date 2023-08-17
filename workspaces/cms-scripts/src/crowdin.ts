@@ -65,7 +65,6 @@ async function translateFields(data: any, fields: CmsField[], filepath: string) 
               );
 
               translatedData = JSON.parse(file);
-              console.log(translatedData)
             } catch { }
           }
 

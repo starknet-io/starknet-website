@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) é uma linguagem completa concebida para provar sucintamente a execução correta dos programas do Cairo. Um programa do Cairo não tem estado, o que significa que você não tem acesso nativo ao armazenamento, outros programas do Cairo ou o estado de L1 (embora você possa acessar aqueles, conforme explicado abaixo). 
+
+Os contratos Starknet, por outro lado, vivem na Starknet VM, que tem um estado persistente que os contratos inteligentes podem acessar e modificar. Esses contratos inteligentes podem armazenar variáveis, se comunicar com outros contratos e enviar/receber mensagens para/de L1 ([ler mais](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

@@ -1,0 +1,1 @@
+Ein separater Prozess (entweder ein Online-Dienst oder intern auf den Knoten), der die Ausgabe der Kairoer Programme empfängt und STARK-Beweise erzeugt, die überprüft werden sollen. Der Prover sendet den STARK-Nachweis an den Prüfer, der die Tatsache auf L1 registriert.

@@ -1,0 +1,1 @@
+En node i Starknet-netværket, der kun bruges til at forespørge den aktuelle Starknet-tilstand. Det kan uafhængigt (dvs. uden / o forespørge yderligere noder) svar forespørgsler om den aktuelle tilstand af Starknet netværk, herunder L1 stat. Det ikke batch transaktioner eller beviser partier.

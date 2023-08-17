@@ -1,0 +1,3 @@
+Nr. Du har flere alternativer for å skrive en kontrakt, hver med sine egne fordeler. 
+
+Cairo er det morsomme språket til en Starknet-kontrakt, som på en måte realiserer det skaleringspotensialet til Starknet. På den andre siden utvikler flere lag transpilatorer fra andre programmeringsspråk (spesielt Solidity) til Kairo. Slike oversendere legger til rette for rask innføring av eksisterende kontrakter på Starknet.**[Se vårt siste utviklingsverktøy](/developers/tools-resources).**

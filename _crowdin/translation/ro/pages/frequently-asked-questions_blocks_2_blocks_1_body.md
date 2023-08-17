@@ -1,0 +1,1 @@
+STARK este un sistem bun. Utilizează criptografie de ultimă oră pentru a oferi complexitate de verificare polilogaritmică şi dimensiune probă, complexitate rezistentă la cvasilinear şi ipoteze minime care sunt post-quantum. Mai multe informații [aici](https://starkware.co/stark/).

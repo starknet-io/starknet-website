@@ -1,0 +1,5 @@
+{
+  "title": "Parte 3: Diseño de Token Starknet",
+  "time_to_consume": "Lectura 5 min",
+  "short_desc": "El diseño de StarkNet Token está moldeado por la necesidad de potenciar una red compuesta por (i) usuarios de StarkNet, (ii) Operadores — personas que proporcionan a la red recursos de computación que realizan secuencias de transacciones, generación de pruebas STARK y proveedores de almacenamiento a largo plazo, y (iii) desarrolladores de software de escritura para su infraestructura y para aplicaciones que se ejecutan en ella.\n"
+}

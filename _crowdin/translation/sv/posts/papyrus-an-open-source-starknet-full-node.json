@@ -1,0 +1,5 @@
+{
+  "title": "Papyrus: En öppen källkod Starknet full nod",
+  "time_to_consume": "3 min läsning",
+  "short_desc": "Idag introducerar vi Papyrus, en Rust implementation av en Starknet full nod, som kommer att bidra till att bana väg för massanvändning av Starknet."
+}

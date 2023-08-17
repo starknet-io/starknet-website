@@ -1,0 +1,1 @@
+Una invocació d'una lògica de transició d'estat específica que es defineix per un contracte. Sintàcticament, una transacció té una estructura ben definida que inclou totes les metadades necessàries i una càrrega útil de dades arbitràries. La semàntica de la transacció està definida pel contracte invocat.

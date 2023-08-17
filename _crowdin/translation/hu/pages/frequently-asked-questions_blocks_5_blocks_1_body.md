@@ -1,0 +1,1 @@
+A Starknet token a Starknet konszenzusos mechanizmusaiban való részvételhez, irányítási tokenként és tranzakciós díjak fizetésére szolgál. Az egyes segédprogramok indoklását [decentralizációs javaslatunk](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)tartalmazza, a „Mire fogják használni a tokeneket?” című részben.

@@ -1,0 +1,1 @@
+Er zijn verschillende block explorers die je kunt gebruiken: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).

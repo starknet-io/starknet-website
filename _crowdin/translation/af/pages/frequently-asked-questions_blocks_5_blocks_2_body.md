@@ -1,0 +1,1 @@
+'n Inheemse teken wat lede van die gemeenskap beloon wat die netwerk ontwikkel, sal die ekosisteem bevorder tot 'n mate wat die gebruik van 'n nie-inheemse teken nie sal doen nie. Ook, as die teken nie-inheems is, kan ekonomiese skokke van besluite wat in ander ekosisteme geneem word, Starknet se diens en sy gebruikers en verskaffers beïnvloed.

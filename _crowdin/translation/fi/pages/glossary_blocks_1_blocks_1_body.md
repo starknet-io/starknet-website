@@ -1,0 +1,1 @@
+Starknetin käyttäjät, jotka kehittävät Starknet-sovelluksia. He kirjoittavat ja ottavat käyttöön Starknet ja Ethereum sopimuksia.

@@ -1,0 +1,1 @@
+No. La fornitura circolante di gettoni aumenterà nel tempo con la coniazione di nuovi gettoni dal protocollo. I dettagli relativi al tasso e al meccanismo di coniazione devono ancora essere definiti.

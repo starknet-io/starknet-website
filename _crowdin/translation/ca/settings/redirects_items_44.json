@@ -1,0 +1,4 @@
+{
+  "source": "/últimes-entrades/:camí*",
+  "destination": "/en/posts"
+}

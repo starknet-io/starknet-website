@@ -1,0 +1,1 @@
+Kahire programlarının çıktısını alan ve doğrulanacak STARK kanıtları üreten ayrı bir süreç (çevrimiçi bir hizmet veya düğüme dahili). Kanıtlayıcı, STARK kanıtını, gerçeği L1'de kaydeden doğrulayıcıya sunar.

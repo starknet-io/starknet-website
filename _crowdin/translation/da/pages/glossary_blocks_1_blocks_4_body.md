@@ -1,0 +1,1 @@
+En påkaldelse af en specifik stat-overgang logik, der er defineret ved en kontrakt. Syntaktisk, en transaktion har en veldefineret struktur, der omfatter alle de nødvendige metadata og en vilkårlig data nyttelast. Transaktionens semantik er defineret i den påberåbte kontrakt.

@@ -1,0 +1,1 @@
+Mã thông báo Starknet chưa có sẵn để bán. Nó không thể được thêm vào ví của bạn ở giai đoạn này. Cẩn thận với những trò gian lận.

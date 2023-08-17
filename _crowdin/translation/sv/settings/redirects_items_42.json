@@ -1,0 +1,4 @@
+{
+  "source": "/community-länkar/:path*",
+  "destination": "/sv"
+}

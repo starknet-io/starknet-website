@@ -1,0 +1,1 @@
+Le nœud principal du réseau Starknet. Il a la fonctionnalité principale de séquencer les transactions qui lui sont soumises. Il exécute le programme Cairo de l'OS Starknet avec les entrées pertinentes, prouve le résultat à l'aide du service de preuve ou d'un prouveur STARK interne, et finalement met à jour l'état du réseau sur le contrat principal Starknet.

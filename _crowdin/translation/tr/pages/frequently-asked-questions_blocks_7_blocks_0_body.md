@@ -1,0 +1,1 @@
+StarkNet ve merkezi olmayan yapısı konusunda heyecanlıysanız ve sürece katılmak istiyorsanız, lütfen StarkNet [Discord](https://starknet.io/discord) ve [inşaatçılara katılın Starknet topluluk forumu](https://community.starknet.io/)

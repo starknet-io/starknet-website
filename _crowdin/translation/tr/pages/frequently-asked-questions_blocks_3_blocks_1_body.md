@@ -1,0 +1,1 @@
+Starknet'te herhangi bir dApp konuşlandırılabilir. Kahire genel hesaplamaya izin verdiği için, herhangi bir iş mantığı StarkNet üzerinden uygulanabilir ve işlenebilir.

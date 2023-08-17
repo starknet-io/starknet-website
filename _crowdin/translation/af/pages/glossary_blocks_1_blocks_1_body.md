@@ -1,0 +1,1 @@
+Die gebruikers van Starknet wat Starknet-toepassings ontwikkel. Hulle skryf en ontplooi Starknet- en Ethereum-kontrakte.

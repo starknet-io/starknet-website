@@ -1,0 +1,1 @@
+Kokoelma sopimuksia (L1 ja L2), joilla yhdessä toteutetaan liiketoimintaa.

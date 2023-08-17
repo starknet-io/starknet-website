@@ -1,0 +1,1 @@
+STARK bir ispat sistemidir. Polilogaritmik doğrulama karmaşıklığı ve kanıt boyutu, yarı doğrusal kanıt karmaşıklığı ve post-kuantum güvenli olan minimum varsayımlar sağlamak için en son kriptografiyi kullanır. Daha fazla bilgi [burada](https://starkware.co/stark/).

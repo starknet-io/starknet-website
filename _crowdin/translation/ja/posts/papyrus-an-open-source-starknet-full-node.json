@@ -1,0 +1,5 @@
+{
+  "title": "Papyrus: オープンソースのStarknetフルノード",
+  "time_to_consume": "3分で読めます",
+  "short_desc": "今日はStarknetの大量使用への道を開くのに役立つStarknetフルノードのRust実装であるPapyrusを導入しています。"
+}

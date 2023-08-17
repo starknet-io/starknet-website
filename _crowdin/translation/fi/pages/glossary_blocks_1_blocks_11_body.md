@@ -1,0 +1,1 @@
+Tämä on Starknet-verkon tärkein solmukohta. Sillä pannaan täytäntöön sille toimitettujen sekvensointitapahtumien keskeiset toiminnot. Se suorittaa Starknet OS Cairo -ohjelman asiaankuuluvilla syötteillä, todistaa tuloksen Proving Servicen tai jonkin sisäisen STARK proverin avulla, ja lopulta päivittää verkon tilaa Starknet Core sopimuksessa.

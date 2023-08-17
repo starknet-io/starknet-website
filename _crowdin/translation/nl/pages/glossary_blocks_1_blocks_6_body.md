@@ -1,0 +1,1 @@
+Een apart proces (hetzij een online dienst of intern aan de node) dat de uitvoer van Caïro programma's ontvangt en STARK bewijzen genereert om te verifiëren. De Prover legt de STARK bewijzen voor aan de verificateur die het feit op L1 registreert.

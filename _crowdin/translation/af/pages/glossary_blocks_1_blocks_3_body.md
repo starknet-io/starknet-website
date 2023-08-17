@@ -1,0 +1,3 @@
+Die program wat die geïmplementeerde toepassing besigheidslogika kodeer. Dit sluit die toepassingsdatastrukture en hantering van spesifieke transaksies wat deur gebruikers gestuur word, in. Spesifiek, die Starknet-kontrak kodeer geldige staatsoorgange vir die toepassing.
+
+* Starknet-rekeningkontrakte: Gegewe rekeningabstraksie, word gebruikersrekeninge nie op protokolvlak geïmplementeer nie. Sommige kontrakte sal dus die konsep van gebruikersrekeninge moet implementeer; dit word Rekeningkontrakte genoem. Die presiese implementering hang af van die kontrak; maar tegnies is dit Starknet-kontrakte wat in Kaïro geïmplementeer word.

@@ -1,0 +1,1 @@
+De gebruikers die communiceren met Starknet sequencer nodes en, indien nodig, met L1 contracten. Deze gebruikers, of ze nu menselijk of geautomatiseerd zijn, zijn agenten die transacties indienen bij het Starknet-netwerk.

@@ -1,0 +1,3 @@
+Chương trình mã hóa logic nghiệp vụ ứng dụng đã triển khai. Điều này bao gồm cấu trúc dữ liệu ứng dụng và xử lý các giao dịch cụ thể do người dùng gửi. Cụ thể, hợp đồng Starknet mã hóa các chuyển đổi trạng thái hợp lệ cho ứng dụng.
+
+* Hợp đồng tài khoản Starknet: Với tính trừu tượng của tài khoản, tài khoản người dùng không được triển khai ở cấp độ giao thức. Do đó, một số hợp đồng sẽ cần triển khai khái niệm tài khoản người dùng; chúng được gọi là Hợp đồng tài khoản. Việc thực hiện chính xác phụ thuộc vào hợp đồng; nhưng, về mặt kỹ thuật, đây là những hợp đồng Starknet được thực hiện ở Cairo.

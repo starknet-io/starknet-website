@@ -1,0 +1,1 @@
+سوف تستخدم رمز Starknet كرمز للمشاركة في آليات إجماع Starknet، وكرمز للإدارة، ولدفع رسوم المعاملات. يتم عرض الأساس المنطقي لكل من هذه المنافع في اقتراحنا [للامركزية](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)، في القسم المعنون "ماذا ستستخدم الرموز المميزة؟"

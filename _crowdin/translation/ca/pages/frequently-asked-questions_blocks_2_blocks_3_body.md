@@ -1,0 +1,3 @@
+No. Tens diverses opcions per redactar un contracte, cadascuna amb els seus propis avantatges. 
+
+El Caire és l'idioma natiu d'un contracte Starknet, que s'adona més plenament del potencial d'escala de Starknet. D'altra banda, diversos equips estan desenvolupant transpilers d'altres llenguatges de programació (sobretot Solidity) al Caire. Aquests transpilers faciliten el desplegament ràpid dels contractes existents a Starknet.**[Consulteu les nostres eines de desenvolupament més recents](/developers/tools-resources).**

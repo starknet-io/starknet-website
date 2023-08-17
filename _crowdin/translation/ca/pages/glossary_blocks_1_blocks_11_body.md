@@ -1,0 +1,1 @@
+El node principal de la xarxa Starknet. Implementa la funcionalitat bàsica de seqüenciar les transaccions que se li envien. Executa el programa Starknet OS Cairo amb les entrades pertinents, prova el resultat mitjançant el servei de prova o algun provador intern STARK i, finalment, actualitza l'estat de la xarxa al contracte principal de Starknet.

@@ -1,0 +1,5 @@
+{
+  "title": "StarkNet Alpha 2 – Ny fas: Sammansättbarhet",
+  "time_to_consume": "3 min läsning",
+  "short_desc": "StarkNet är en otillåten decentraliserad Validity-Rollup (alias a “ZK-Rollup”). Vi tillkännagav dess färdplan i början av året. Alfa, som för närvarande körs på ett offentligt Ethereum testnet, stöder redan tillåten distribution av smarta kontrakt genomföra någon affärslogik, med L1<>L2 meddelanden och on-chain data."
+}

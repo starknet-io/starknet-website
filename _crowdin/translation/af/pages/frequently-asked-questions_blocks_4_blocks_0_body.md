@@ -1,0 +1,3 @@
+**StarkEx**is 'n selfstandige, aanpasbare Laag-2 SAAS vir uitruilings wat die STARK-bewysstelsel gebruik om massiewe skaal te verskaf. Verskeie beduidende uitruilings gebruik reeds StarkEx in produksie op Ethereum Mainnet (lees meer oor StarkEx).
+
+**Starknet**is 'n algemene-doel netwerk waar jy jou eie slim kontrakte kan skryf en ontplooi, interaksie met ander kontrakte, ensovoorts, net soos Ethereum.

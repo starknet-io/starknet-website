@@ -1,0 +1,4 @@
+{
+  "source": "/nyeste-innlegg/:path*",
+  "destination": "/innlegg"
+}

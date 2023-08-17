@@ -1,0 +1,4 @@
+{
+  "source": "/bulletin-board/:pad*",
+  "destination": "/en/ontwikkelaars/gereedskap-en-hulpbronne"
+}

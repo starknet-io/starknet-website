@@ -1,0 +1,4 @@
+{
+  "source": "/linki społecznościowe/:path*",
+  "destination": "/pl"
+}

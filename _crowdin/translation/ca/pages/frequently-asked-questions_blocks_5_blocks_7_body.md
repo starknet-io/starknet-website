@@ -1,0 +1,3 @@
+El testimoni Starknet encara no està a la venda. No es pot afegir a la vostra cartera en aquesta fase. Compte amb les estafes.
+
+El testimoni Starknet es va llançar a Ethereum Mainnet el novembre de 2022. La Fundació Starknet anunciarà més endavant els detalls dels plans de bonificacions i provisions comunitàries, però en el moment d'escriure aquests detalls encara no s'han determinat. Aneu amb compte amb les estafes que es plantegen per vendre fitxes Starknet.

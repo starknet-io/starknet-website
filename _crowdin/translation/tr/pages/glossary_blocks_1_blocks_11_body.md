@@ -1,0 +1,1 @@
+Starknet ağının ana düğümü. Kendisine gönderilen işlemlerin sıralanmasının temel işlevselliğini uygular. Starknet OS Kahire programını ilgili girdilerle yürütür, Kanıtlama Hizmetini veya bazı dahili STARK kanıtlayıcıyı kullanarak sonucu kanıtlar ve sonunda Starknet Çekirdek Sözleşmesinde ağ durumunu günceller.

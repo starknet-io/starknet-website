@@ -1,0 +1,1 @@
+Hlavní uzel sítě Starknet. Uplatňuje základní funkci sekvenování transakcí, které jí byly předloženy. Provádí program Starknet OS Cairo s příslušnými vstupy, dokazuje výsledek pomocí Proving Service nebo některého interního STARK proverce, a nakonec aktualizuje stav sítě na hlavním kontraktu Starknet.

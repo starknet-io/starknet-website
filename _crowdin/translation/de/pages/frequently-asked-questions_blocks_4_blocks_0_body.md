@@ -1,0 +1,3 @@
+**StarkEx**ist ein eigenständiges Layer-2 SAAS für Börsen, das das STARK-Prüfsystem verwendet, um eine massive Skalierung zu ermöglichen. Mehrere bedeutende Börsen setzen bereits StarkEx in der Produktion auf Ethereum Mainnet ein (lesen Sie mehr über StarkEx).
+
+**Starknet**ist ein allgemeines Netzwerk, in dem Sie Ihre eigenen intelligenten Verträge schreiben und verteilen können interagieren mit anderen Verträgen und so weiter, genau wie Ethereum.

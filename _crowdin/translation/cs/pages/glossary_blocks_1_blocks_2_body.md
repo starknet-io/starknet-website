@@ -1,0 +1,1 @@
+Sběr smluv (L1 a L2), které společně provádějí podnikatelský tok.

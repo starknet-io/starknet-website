@@ -1,0 +1,4 @@
+{
+  "title": "Starknet Ethereum'u nasıl ölçeklendirir? ",
+  "description": "Starknet, Ethereum'u güvenli bir şekilde ölçeklendirmek için matematik ve kriptografi kullanır. Bir Validity-rollup (veya ZK-rollup) olarak çalışır: birçok işlemi \"paketler\" ve bunları tek bir işlem olarak Ethereum'a \"yuvarlar\"."
+}

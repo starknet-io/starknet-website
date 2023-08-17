@@ -1,0 +1,1 @@
+Den vigtigste knude i Starknet netværk. Det gennemfører den centrale funktionalitet i sekventering transaktioner, der er indsendt til det. Det udfører Starknet OS Cairo program med de relevante input, beviser resultatet ved hjælp af Proving Service eller nogle interne STARK prover, og til sidst opdaterer netværket tilstand på Starknet Core kontrakt.

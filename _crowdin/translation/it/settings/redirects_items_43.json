@@ -1,0 +1,4 @@
+{
+  "source": "/bollettino/:path*",
+  "destination": "/it/developers/tools-and-resources"
+}

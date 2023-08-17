@@ -1,0 +1,1 @@
+HAYIR. Dolaşımdaki jeton arzı, protokol tarafından yeni jetonların basılmasıyla zaman içinde artacaktır. Basım hızı ve mekanizmasına ilişkin ayrıntılar henüz tanımlanmamıştır.

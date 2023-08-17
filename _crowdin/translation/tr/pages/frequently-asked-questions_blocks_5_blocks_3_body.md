@@ -1,0 +1,1 @@
+Şu anda hayır. Starknet'teki ücretler artık Ether (ETH) cinsinden ödeniyor. Ancak daha sonra, ücretlerin yalnızca yerel Starknet Token ile ödeneceğini tahmin ediyoruz.

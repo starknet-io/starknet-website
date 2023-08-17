@@ -1,0 +1,1 @@
+Geen. Die sirkulerende aanbod van tokens sal mettertyd toeneem met die munt van nuwe tokens deur die protokol. Besonderhede oor die muntkoers en meganisme moet nog gedefinieer word.

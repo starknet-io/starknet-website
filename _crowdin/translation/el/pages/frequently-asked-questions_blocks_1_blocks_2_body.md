@@ -1,0 +1,3 @@
+Ένα καλό μέρος για να ξεκινήσετε είναι η [εκμάθηση Hello Starknet](https://docs.starknet.io/documentation/), που καθοδηγεί τον προγραμματιστή βήμα προς βήμα μέσα από το γράψιμο και την ανάπτυξη μιας απλής σύμβασης. Το [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) προσφέρει ένα περιβάλλον για να μάθετε πώς να γράφετε συμβάσεις Starknet και να τα εξετάζετε. 
+
+Μπορείτε να γίνετε μέρος της κοινότητας των προγραμματιστών και να την υποστηρίξετε εντάσσοντας στο διακομιστή [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

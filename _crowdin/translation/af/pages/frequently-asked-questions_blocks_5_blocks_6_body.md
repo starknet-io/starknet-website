@@ -1,0 +1,1 @@
+Die Starknet-token is nog nie te koop beskikbaar nie. Dit kan nie op hierdie stadium by jou beursie gevoeg word nie. Pasop vir swendelary.

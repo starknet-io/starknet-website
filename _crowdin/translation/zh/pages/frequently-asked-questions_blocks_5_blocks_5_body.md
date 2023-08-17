@@ -1,0 +1,1 @@
+这个信息可以在 [博客文章](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef) 中找到。

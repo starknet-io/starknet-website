@@ -1,0 +1,1 @@
+Poți raporta escrocherii și verifica alte rapoarte de escrocherii în canalul [raport de înșelătorie](https://discord.gg/qypnmzkhbc) de pe serverul [Starknet Discord](https://starknet.io/discord).

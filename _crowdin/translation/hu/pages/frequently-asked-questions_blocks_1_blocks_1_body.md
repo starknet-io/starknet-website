@@ -1,0 +1,1 @@
+Számos blokkfelfedezőt használhat: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [ViewBlock](https://viewblock.io/starknet).

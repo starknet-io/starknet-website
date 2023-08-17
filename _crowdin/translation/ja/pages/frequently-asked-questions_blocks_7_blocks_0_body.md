@@ -1,0 +1,1 @@
+あなたがStarkNetとその分散化に興奮していて、プロセスに参加したい場合。 StarkNet [Discord](https://starknet.io/discord) と [Starknet コミュニティ フォーラム](https://community.starknet.io/) のビルダーに参加してください。

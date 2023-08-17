@@ -1,0 +1,1 @@
+I øjeblikket, nr. Gebyrer i Starknet betales nu i Ether (ETH). Men senere forventer vi, at gebyrerne i fremtiden udelukkende vil blive betalt med den indfødte Starknet Token.

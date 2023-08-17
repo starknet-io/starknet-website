@@ -1,0 +1,4 @@
+{
+  "source": "/bulletin-board/:path*",
+  "destination": "/no/developers/tools-and-resources"
+}

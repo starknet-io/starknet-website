@@ -1,0 +1,3 @@
+Starknet Token ei ole vielä myynnissä. Sitä ei voi lisätä lompakkoon tässä vaiheessa. Varokaa huijauksia.
+
+Starknet-tunnus lanseerattiin Ethereum Mainnet'ssa marraskuussa 2022. Starknet-säätiö ilmoittaa myöhemmässä vaiheessa yhteisön alennuksia ja yhteisön säännöksiä koskevien suunnitelmien yksityiskohdat, mutta näitä tietoja ei ole vielä määritelty. Varokaa huijaukset aiheuttaa myydä Starknet Tokens.

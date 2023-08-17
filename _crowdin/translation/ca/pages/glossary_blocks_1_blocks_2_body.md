@@ -1,0 +1,1 @@
+Col·lecció de contractes (L1 i L2) que implementen col·lectivament un flux empresarial.

@@ -1,0 +1,1 @@
+StarkNet과 탈중앙화에 관심이 있고 프로세스에 참여하고 싶다면 StarkNet [Discord](https://starknet.io/discord) 및 [Starknet 커뮤니티 포럼](https://community.starknet.io/)의 빌더에 가입하십시오.

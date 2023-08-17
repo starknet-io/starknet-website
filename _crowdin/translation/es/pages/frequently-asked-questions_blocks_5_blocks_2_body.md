@@ -1,0 +1,1 @@
+Un token nativo que recompensa a los miembros de la comunidad que desarrollan la red hará que el ecosistema avance en un grado que el uso de un token no nativo no lo hará. Además, si el token no es nativo, los choques económicos derivados de las decisiones tomadas en otros ecosistemas podrían afectar al servicio de Starknet y a sus usuarios y proveedores.

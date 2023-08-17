@@ -1,0 +1,1 @@
+Starknet Token er ennå ikke tilgjengelig for salg. Det kan ikke legges til i lommeboken på dette stadiet. Husk på svindel.

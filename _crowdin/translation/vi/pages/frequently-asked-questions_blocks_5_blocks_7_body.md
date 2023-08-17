@@ -1,0 +1,3 @@
+Mã thông báo Starknet chưa được bán. Nó không thể được thêm vào ví của bạn ở giai đoạn này. Cẩn thận với những trò gian lận.
+
+Mã thông báo Starknet đã được ra mắt trên Ethereum Mainnet vào tháng 11 năm 2022. Tổ chức Starknet sẽ công bố vào một ngày sau đó các chi tiết của kế hoạch Giảm giá cộng đồng và Điều khoản cộng đồng nhưng tại thời điểm viết những chi tiết này vẫn chưa được xác định. Cảnh giác với những trò gian lận giả vờ bán Starknet Tokens.

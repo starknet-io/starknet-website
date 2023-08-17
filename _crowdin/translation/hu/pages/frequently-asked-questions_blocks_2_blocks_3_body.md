@@ -1,0 +1,3 @@
+Nem. Számos lehetőség közül választhat szerződést, mindegyiknek megvannak a maga előnyei. 
+
+Kairó a Starknet-szerződés anyanyelve, amely a Starknet skálázási lehetőségeit a legteljesebben realizálja. Másrészt több csapat is fejleszt más programozási nyelvek (különösen a Solidity) transzpilátorait Kairóba. Az ilyen transzpilerek megkönnyítik a meglévő szerződések gyors telepítését a Starkneten.**[Tekintse meg legújabb fejlesztői eszközeinket](/developers/tools-resources).**

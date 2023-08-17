@@ -1,0 +1,5 @@
+{
+  "title": "Del 3: Starknet Token Design",
+  "time_to_consume": "5 min. læst",
+  "short_desc": "Designet af StarkNet Token er formet af behovet for at drive et netværk, der er sammensat af (i) Brugere af StarkNet, (ii) Operatører — personer, der leverer edb-ressourcer, som udfører sekventering af transaktioner til netværket Generering af STARK beviser, og langsigtede opbevaring udbydere, og (iii) Udviklere skriver software til sin infrastruktur og til applikationer, der kører på det.\n"
+}

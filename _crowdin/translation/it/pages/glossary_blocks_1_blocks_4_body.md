@@ -1,0 +1,1 @@
+Un’invocazione di una logica specifica di transizione statale definita da un contratto. Syntactically, una transazione ha una struttura ben definita che include tutti i metadati necessari e un carico di pagamento arbitrario dei dati. La semantica dell'operazione è definita dal contratto invocato.

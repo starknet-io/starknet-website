@@ -1,0 +1,4 @@
+{
+  "source": "/community/community-jobs/:경로*",
+  "destination": "/en/작업"
+}

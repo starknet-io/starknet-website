@@ -1,0 +1,4 @@
+{
+  "source": "/podcasts/:camí*",
+  "destination": "/en/posts"
+}

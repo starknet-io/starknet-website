@@ -1,0 +1,1 @@
+Durum, sözleşmelerin kodu ve sözleşmelerin saklanmasından oluşur.

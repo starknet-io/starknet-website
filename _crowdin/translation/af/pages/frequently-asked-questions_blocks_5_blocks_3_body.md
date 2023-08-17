@@ -1,0 +1,1 @@
+Tans, nee. Fooie in Starknet word nou in Ether (ETH) betaal. Maar later verwag ons dat fooie in die toekoms eksklusief met die inheemse Starknet Token betaal sal word.

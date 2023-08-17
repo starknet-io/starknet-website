@@ -1,0 +1,1 @@
+Um processo separado (um serviço on-line ou interno do nó) que recebe a saída dos programas do Cairo e gera provas STARK a serem verificadas. A Prova envia a prova STARK ao verificador que registra o fato no L1.

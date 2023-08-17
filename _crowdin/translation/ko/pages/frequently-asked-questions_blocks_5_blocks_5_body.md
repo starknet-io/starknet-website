@@ -1,0 +1,1 @@
+이 정보는 [블로그 게시물](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef)에서 찾을 수 있습니다.

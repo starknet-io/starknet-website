@@ -1,0 +1,1 @@
+Azok a felhasználók, akik a Starknet szekvenszer csomópontokkal, és ha szükséges, L1 szerződésekkel lépnek kapcsolatba. Ezek a felhasználók – akár emberi, akár automatizáltak – azok az ügynökök, akik tranzakciókat küldenek a Starknet hálózatba.

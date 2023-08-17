@@ -1,0 +1,1 @@
+Gli utenti che interagiscono con i nodi sequencer Starknet e, se necessario, con i contratti L1. Questi utenti, umani o automatizzati, sono gli agenti che inviano le transazioni alla rete Starknet.

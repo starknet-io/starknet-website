@@ -1,0 +1,1 @@
+Starknet 令牌将被用作Starknet的共识机制参与标记，作为施政令牌和支付交易费用。 我们的 [分权提案](https://medium.com/@starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)介绍了每个工具的基本原理。 在题为“代币将用于什么？”

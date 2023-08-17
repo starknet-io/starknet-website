@@ -1,0 +1,1 @@
+'n Afsonderlike proses (óf 'n aanlyn diens of intern tot die nodus) wat die uitset van Kaïro-programme ontvang en STARK-bewyse genereer wat geverifieer moet word. Die Bewyser dien die STARK-bewys in by die verifieerder wat die feit op L1 registreer.

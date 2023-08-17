@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) este un limbaj Turing-complete conceput pentru a dovedi succint execuția corectă a programelor Cairo. Un program Cairo este lipsit de statut, însemnând că nu ai acces nativ la stocare, alte programe Cairo sau statul L1 (deși le puteți accesa, după cum se explică mai jos). 
+
+Contractele Starknet, pe de altă parte, locuiesc în MV Starknet, care are o stare persistentă de acces și modificare a contractelor inteligente. Aceste contracte inteligente pot stoca variabile, comunica cu alte contracte și trimite/primi mesaje către/de la L1 ([citește mai mult](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

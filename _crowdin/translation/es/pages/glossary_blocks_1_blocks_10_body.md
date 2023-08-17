@@ -1,0 +1,1 @@
+Un nodo en la red Starknet que se utiliza sólo para consultar el estado actual de Starknet. Puede responder de forma independiente (es decir, sin consultar nodos adicionales) consultas sobre el estado actual de la red Starknet, incluyendo el estado L1. No realiza transacciones por lotes ni prueba lotes.

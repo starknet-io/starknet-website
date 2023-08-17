@@ -1,0 +1,1 @@
+Una invocación de una lógica específica de transición estatal que está definida por un contrato. Syntacticamente, una transacción tiene una estructura bien definida que incluye todos los metadatos necesarios y una carga útil de datos arbitraria. La semántica de la transacción es definida por el contrato invocado.

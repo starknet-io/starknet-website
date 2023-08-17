@@ -1,0 +1,4 @@
+{
+  "source": "/faks/:path*",
+  "destination": "/radgiver/singelliv-og-partnersok/mann-soker-spørsmål"
+}

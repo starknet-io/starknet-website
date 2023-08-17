@@ -1,0 +1,1 @@
+Một quy trình riêng biệt (có thể là dịch vụ trực tuyến hoặc nội bộ của nút) nhận đầu ra của các chương trình Cairo và tạo bằng chứng STARK để xác minh. Người cung cấp chứng minh gửi bằng chứng STARK cho người xác minh đã đăng ký sự việc trên L1.

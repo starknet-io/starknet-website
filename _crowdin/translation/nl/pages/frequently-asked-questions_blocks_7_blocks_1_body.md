@@ -1,0 +1,1 @@
+Je kunt oplichtingen rapporteren en controleren op andere oplichtingsrapporten in het [scam-rapport](https://discord.gg/qypnmzkhbc) kanaal op de [Starknet Discord](https://starknet.io/discord) server.

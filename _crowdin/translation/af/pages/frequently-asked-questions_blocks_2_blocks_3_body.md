@@ -1,0 +1,3 @@
+Geen. Jy het verskeie opsies om 'n kontrak te skryf, elk met sy eie voordele. 
+
+Kaïro is die moedertaal vir 'n Starknet-kontrak, wat die skaalpotensiaal van Starknet ten volle besef. Aan die ander kant ontwikkel verskeie spanne transpileerders van ander programmeertale (veral Solidity) na Kaïro. Sulke transpileerders fasiliteer vinnige ontplooiing van bestaande kontrakte op Starknet.**[Sien ons nuutste ontwikkelingsgereedskap](/developers/tools-resources).**

@@ -1,0 +1,1 @@
+Công nghệ của STARK đã trưởng thành và an toàn, nhưng Starknet vẫn chưa đạt được trạng thái của hàng hóa công cộng như Ethereum hoặc Internet. Để Starknet đạt được mục tiêu này, việc quản trị, vận hành và phát triển của nó phải tiếp tục phi tập trung hóa. Điều này sẽ được hỗ trợ thông qua hai cơ chế: **Starknet Foundation** và **Starknet Token**.

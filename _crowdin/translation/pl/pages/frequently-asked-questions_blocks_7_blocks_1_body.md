@@ -1,0 +1,1 @@
+Możesz zgłaszać oszustwa i sprawdzać inne zgłoszenia oszustw na kanale [scam-report](https://discord.gg/qypnmzkhbc) na serwerze [Starknet Discord](https://starknet.io/discord).

@@ -1,0 +1,1 @@
+Brukerne av Starknet som utvikler Starknet-applikasjoner. De skriver og utdeler Starknet og Ethereum kontrakter.

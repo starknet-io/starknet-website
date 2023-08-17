@@ -1,0 +1,5 @@
+Derzeit nicht. STARKs sind als Validitätsnachweise definiert, was bedeutet, dass sie Rechenintegrität beweisen. Unter Einbeziehung der Validitätsnachweise (STARKs) kann eine Partei nachweisen, dass eine bestimmte Berechnung korrekt durchgeführt wurde. Zero-Knowledge ist ein zusätzliches Eigentum, das besagt, dass der Prover keine in der Berechnung enthaltenen Informationen offenbaren muss.
+
+Die meisten ZK-Rollups sind nicht wirklich Zero-Wissen. Der Fehler kommt aus der Verwechslung zwischen Validitätsnachweisen (garantiert die Rechenintegrität) und Null-Knowledge-Nachweisen (garantiert keine Offenlegung von Informationen).
+
+Starknet verwendet STARK Validitätsnachweise. Es sei daran erinnert, dass die Gewinnung von Informationen aus dem Nachweis extrem schwierig ist – in der Praxis fast unmöglich.

@@ -1,0 +1,4 @@
+{
+  "source": "/laatste-posts/:path*",
+  "destination": "/nl/posts"
+}

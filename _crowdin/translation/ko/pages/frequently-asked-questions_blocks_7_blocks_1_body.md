@@ -1,0 +1,1 @@
+[Starknet Discord](https://starknet.io/discord) 서버의 [scam-report](https://discord.gg/qypnmzkhbc) 채널에서 사기를 신고하고 다른 사기 신고를 확인할 수 있습니다.

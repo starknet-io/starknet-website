@@ -1,0 +1,4 @@
+{
+  "source": "/faq/:pad*",
+  "destination": "/af/leer/algemene-vrae"
+}

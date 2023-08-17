@@ -1,0 +1,1 @@
+Jos olet innostunut StarkNetista ja sen hajauttamisesta ja haluat osallistua prosessiin, Liity rakentajiin StarkNetissa [Discordissa](https://starknet.io/discord) ja [Starknet-yhteisöfoorumissa](https://community.starknet.io/)

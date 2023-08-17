@@ -1,0 +1,1 @@
+A Starknet Token még nem kapható. Jelenleg nem adható hozzá a pénztárcájához. Óvakodj a csalásoktól.

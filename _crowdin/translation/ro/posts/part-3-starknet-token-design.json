@@ -1,0 +1,5 @@
+{
+  "title": "Partea 3: Proiectarea simbolurilor de tip Starknet",
+  "time_to_consume": "5 minute de citire",
+  "short_desc": "Modelul simbolului StarkNet este modelat de necesitatea de a alimenta o rețea compusă din (i) utilizatori de StarkNet, (ii) Operatori – persoane care furnizează rețelei resurse informatice care efectuează secvențierea tranzacțiilor, generarea de dovezi STARK și de furnizori de stocare pe termen lung și (iii) dezvoltă software de scriere pentru infrastructura sa și pentru aplicații care rulează pe ea.\n"
+}

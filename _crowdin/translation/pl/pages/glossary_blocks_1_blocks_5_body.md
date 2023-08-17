@@ -1,0 +1,4 @@
+Zamówione zestawy transakcji Starknet, które są uruchamiane przy użyciu systemu operacyjnego Starknet, skutkująca jedną zagregowaną zmianą państwa, która jest następnie przeznaczona na umowę podstawową Starknet L1. Blok posiada:
+
+* … skrót bloku - unikalny stabilny identyfikator, który może być używany do zapytania i odnoszenia się do bloku.
+* … numer bloku – numer porządkowy reprezentujący lokalizację bloku w sekwencji akceptowanych bloków w Starknet. Uwaga, numer bloku może się z czasem zmieniać. Także dany numer może odnosić się do różnych bloków w różnych momentach, np. w przypadku ponownego zlecenia łańcucha L1.

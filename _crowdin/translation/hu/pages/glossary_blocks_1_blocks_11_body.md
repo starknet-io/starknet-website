@@ -1,0 +1,1 @@
+A Starknet hálózat fő csomópontja. Megvalósítja a hozzá benyújtott tranzakciók sorrendjének alapvető funkcióit. Végrehajtja a Starknet OS Cairo programot a megfelelő bemenetekkel, bizonyítja az eredményt a Proving Service vagy valamilyen belső STARK bizonyító segítségével, és végül frissíti a Starknet Core Contract hálózati állapotát.

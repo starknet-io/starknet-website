@@ -1,0 +1,4 @@
+Acest contract L1 definește starea sistemului prin stocarea angajamentului față de statul L2. De asemenea, contractul stochează hash-ul programului Starknet OS – definind în mod eficient versiunea Starknet pe care o rulează rețeaua. Statul angajat cu privire la contractul de bază L1 este mecanismul de consens al Starknet, adică sistemul este asigurat prin consensul L1 Ethereum. Pe lângă menținerea statului, contractul de bază Starknet L1 este principalul centru de operațiuni pentru Starknet pe L1. Mai exact:
+
+* Acesta stochează lista verificatorilor autorizați (contracte) care pot verifica tranzacțiile actualizate de stat
+* Acesta facilitează interacţiunea L1 ↔️ L2

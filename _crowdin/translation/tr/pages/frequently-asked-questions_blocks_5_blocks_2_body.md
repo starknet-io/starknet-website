@@ -1,0 +1,1 @@
+Ağı geliştiren topluluk üyelerini ödüllendiren yerel bir belirteç, ekosistemi, yerel olmayan bir belirteç kullanımının yapmayacağı bir dereceye kadar ilerletecektir. Ayrıca, belirteç yerel değilse, diğer ekosistemlerde alınan kararlardan kaynaklanan ekonomik şoklar, Starknet'in hizmetini ve kullanıcılarını ve sağlayıcılarını etkileyebilir.

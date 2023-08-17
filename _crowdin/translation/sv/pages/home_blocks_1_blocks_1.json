@@ -1,0 +1,4 @@
+{
+  "title": "Hur kan Starknet skala Ethereum? ",
+  "description": "Starknet använder matematik och kryptografi för att säkert skala Ethereum. Det fungerar som en Validity-rollup (eller ZK-rollup): det \"buntar\" många transaktioner och \"rullar\" dem till Ethereum som en enda transaktion."
+}

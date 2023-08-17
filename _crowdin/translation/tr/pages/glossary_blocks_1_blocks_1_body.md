@@ -1,0 +1,1 @@
+Starknet uygulamaları geliştiren Starknet kullanıcıları. Starknet ve Ethereum sözleşmeleri yazıp dağıtırlar.

@@ -1,0 +1,1 @@
+KHÔNG. Nguồn cung cấp mã thông báo lưu hành sẽ tăng theo thời gian với việc đúc các mã thông báo mới theo giao thức. Thông tin chi tiết về tốc độ đúc và cơ chế vẫn chưa được xác định.

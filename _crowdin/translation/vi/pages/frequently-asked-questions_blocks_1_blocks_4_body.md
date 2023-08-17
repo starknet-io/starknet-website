@@ -1,0 +1,5 @@
+Hiện tại thì không. STARK được định nghĩa là Bằng chứng về tính hợp lệ, nghĩa là chúng chứng minh tính toàn vẹn của tính toán. Với Bằng chứng về tính hợp lệ (bao gồm cả STARK), một bên có thể chứng minh với bên kia rằng một phép tính nhất định đã được thực hiện chính xác. Zero-Knowledge là một thuộc tính bổ sung khẳng định rằng người chứng minh không phải tiết lộ bất kỳ thông tin nào có trong tính toán.
+
+Hầu hết các ZK-Rollup không thực sự là Zero-Knowledge. Sai lầm xuất phát từ sự nhầm lẫn giữa Bằng chứng xác thực (đảm bảo tính toàn vẹn của tính toán) và Bằng chứng không kiến thức (đảm bảo không có thông tin nào bị tiết lộ).
+
+Starknet sử dụng bằng chứng về tính hợp lệ của STARK. Điều đáng chú ý là việc trích xuất thông tin từ bằng chứng là vô cùng khó khăn – hầu như không thể thực hiện được trong thực tế.

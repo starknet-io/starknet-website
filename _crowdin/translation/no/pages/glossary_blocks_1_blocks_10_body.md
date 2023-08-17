@@ -1,0 +1,1 @@
+En node i det mørke nettverket som bare brukes for å be om gjeldende Starknet-tilstand. Den kan uavhengig (dvs uten/o spørre flere noder) besvare spørringer om den gjeldende tilstanden til Starknet-nettverket, inkludert L1. Det er ingen transaksjoner i bunter eller partier.

@@ -1,0 +1,1 @@
+[Starknet Discord](https://starknet.io/discord) sunucusundaki [scam-report](https://discord.gg/qypnmzkhbc) kanalında dolandırıcılığı bildirebilir ve diğer dolandırıcılık raporlarını kontrol edebilirsiniz.

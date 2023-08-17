@@ -1,0 +1,4 @@
+Serie ordinate di transazioni Starknet che vengono eseguite utilizzando il sistema operativo Starknet, che determina una variazione di stato aggregata che è poi impegnata a favore del contratto di base Starknet L1. Un blocco ha:
+
+* … un hash di blocco – un identificatore stabile univoco che può essere utilizzato per interrogare e fare riferimento al blocco.
+* … un numero di blocco – un numero ordinale che rappresenta la posizione del blocco nella sequenza di blocchi accettati in Starknet. Nota, il numero di un blocco può cambiare nel tempo. Inoltre, un determinato numero può riferirsi a blocchi diversi in momenti diversi, ad esempio in caso di riordini a catena L1.

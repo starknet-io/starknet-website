@@ -1,0 +1,1 @@
+Bármely dApp telepíthető a Starkneten. Mivel Kairó lehetővé teszi az általános számításokat, bármilyen üzleti logika megvalósítható és feldolgozható a StarkNeten keresztül.

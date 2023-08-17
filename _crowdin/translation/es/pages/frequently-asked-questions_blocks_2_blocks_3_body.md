@@ -1,0 +1,3 @@
+No. Usted tiene varias opciones para redactar un contrato, cada uno con sus propios beneficios. 
+
+El Cairo es el idioma nativo de un contrato Starknet, el cual más plenamente se da cuenta del potencial de escala de Starknet. Por otra parte, varios equipos están desarrollando transpiladores desde otros lenguajes de programación (especialmente Solididad) hasta Cairo. Tales transpiladores facilitan el despliegue rápido de contratos existentes en Starknet.**[Vea nuestras últimas herramientas de desarrollo](/developers/tools-resources).**

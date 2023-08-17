@@ -1,0 +1,1 @@
+Một tập hợp các hợp đồng (L1 và L2) thực hiện chung một quy trình kinh doanh.

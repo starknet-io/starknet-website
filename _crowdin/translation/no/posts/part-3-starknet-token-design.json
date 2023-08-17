@@ -1,0 +1,5 @@
+{
+  "title": "Del 3: Starknet Token Design",
+  "time_to_consume": "5 min lest",
+  "short_desc": "Utformingen av StarkNet Token er utformet av behovet for å tilføre kraft til et nettverk som består av (i) brukere av StarkNet, (ii) Operatører — personer som leverer nettverket med dataressurser som utfører sekvensering av transaksjoner, generering av STARK-bevis og langsiktige lagringsleverandører og (iii) utviklere skriver programvare for sin infrastruktur, og for applikasjoner som kjører på den.\n"
+}

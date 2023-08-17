@@ -1,0 +1,1 @@
+Egy natív token, amely jutalmazza a közösség hálózatot fejlesztő tagjait, olyan mértékben fejleszti az ökoszisztémát, mint egy nem natív token használata nem. Továbbá, ha a token nem őshonos, akkor a más ökoszisztémákban hozott döntésekből eredő gazdasági sokkok hatással lehetnek a Starknet szolgáltatására és annak felhasználóira és szolgáltatóira.

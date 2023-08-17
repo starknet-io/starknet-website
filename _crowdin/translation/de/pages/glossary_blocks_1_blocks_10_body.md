@@ -1,0 +1,1 @@
+Ein Knoten im Starknet-Netzwerk, der nur zur Abfrage des aktuellen Starknet-Status verwendet wird. Es kann unabhängig (d.h. ohne zusätzliche Knotenabfrage) Anfragen über den aktuellen Zustand des Starknet-Netzwerks, einschließlich des L1-Zustands, beantworten. Transaktionen werden nicht Batch oder Batches nachgewiesen.

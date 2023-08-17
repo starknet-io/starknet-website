@@ -1,0 +1,1 @@
+Jy kan swendelary rapporteer en kyk vir ander verslae van swendelary in die [swendelary-verslag](https://discord.gg/qypnmzkhbc) kanaal op die [Starknet Discord](https://starknet.io/discord) bediener.

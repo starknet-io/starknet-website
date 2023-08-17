@@ -1,0 +1,1 @@
+Als u enthousiast bent over StarkNet en de decentralisatie ervan en wilt deelnemen aan het proces, neem deel aan de bouwvakkers op StarkNet [Discord](https://starknet.io/discord) en [Starknet community forum](https://community.starknet.io/)

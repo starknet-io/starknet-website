@@ -1,0 +1,1 @@
+Starknet Simgesi henüz satışa sunulmadı. Bu aşamada cüzdanınıza eklenemez. Dolandırıcılıklara dikkat edin.

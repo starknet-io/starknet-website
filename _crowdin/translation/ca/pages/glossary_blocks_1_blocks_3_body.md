@@ -1,0 +1,3 @@
+El programa que codifica la lògica empresarial de l'aplicació implementada. Això inclou les estructures de dades de l'aplicació i la gestió de transaccions específiques enviades pels usuaris. Concretament, el contracte Starknet codifica transicions d'estat vàlides per a l'aplicació.
+
+* Contractes de comptes de Starknet: donada l'abstracció del compte, els comptes d'usuari no s'implementen a nivell de protocol. Per tant, alguns contractes hauran d'implementar el concepte de comptes d'usuari; aquests s'anomenen contractes de compte. L'execució exacta depèn del contracte; però, tècnicament, es tracta de contractes Starknet que s'executen al Caire.

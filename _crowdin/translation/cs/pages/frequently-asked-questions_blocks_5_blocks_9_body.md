@@ -1,0 +1,1 @@
+Ne. Pohybující se zásoba žetonů se postupem času zvýší s těžbou nových žetonů protokolem. Podrobnosti o sazbě těžby a mechanismu je ještě třeba definovat.

@@ -1,0 +1,1 @@
+STARK is 'n bewysstelsel. Dit gebruik die nuutste kriptografie om polylogaritmiese verifikasiekompleksiteit en bewysgrootte, kwasilineêre bewyskompleksiteit en minimale aannames wat post-kwantum-veilig is, te verskaf. Meer inligting [hier](https://starkware.co/stark/).

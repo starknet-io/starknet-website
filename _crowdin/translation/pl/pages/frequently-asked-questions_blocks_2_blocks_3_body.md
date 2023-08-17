@@ -1,0 +1,3 @@
+Nie. Masz kilka opcji pisania umowy, z których każdy ma własne korzyści. 
+
+Kairz jest językiem ojczystym umowy Starknet, który najpełniej wykorzystuje potencjał skalowania Starknet. Z drugiej strony kilka zespołów opracowuje transpilery z innych języków programowania (zwłaszcza Solidity) do Kairo. Takie transpilery ułatwiają szybkie wdrożenie istniejących kontraktów na Starknet.**[Zobacz nasze najnowsze narzędzia programistyczne](/developers/tools-resources).**

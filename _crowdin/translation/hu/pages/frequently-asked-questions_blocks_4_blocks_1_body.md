@@ -1,0 +1,1 @@
+Amint a Starknet készen áll, a StarkEx alkalmazások áttérhetnek a StarkNetre, ha úgy döntenek.

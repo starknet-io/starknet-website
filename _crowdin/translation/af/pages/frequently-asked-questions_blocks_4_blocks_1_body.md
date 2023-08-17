@@ -1,0 +1,1 @@
+Sodra Starknet gereed is, kan StarkEx-toepassings na StarkNet migreer as hulle so verkies.

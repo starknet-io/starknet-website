@@ -1,0 +1,4 @@
+Ce contrat L1 définit l'état du système en stockant l'engagement envers l'état L2. Le contrat stocke également le hash du programme Starknet OS - définissant ainsi la version de Starknet que le réseau exécute. L'état validé sur le contrat principal L1 agit comme le mécanisme de consensus de Starknet, c'est-à-dire que le système est sécurisé par le consensus Ethereum L1. En plus de maintenir l'état, le contrat principal Starknet L1 est le principal centre d'opérations pour Starknet sur L1. Spécifiquement:
+
+* Il stocke la liste des vérificateurs autorisés (contrats) qui peuvent vérifier les transactions de mise à jour d'état
+* Il facilite l'interaction L1 ↔️ L2

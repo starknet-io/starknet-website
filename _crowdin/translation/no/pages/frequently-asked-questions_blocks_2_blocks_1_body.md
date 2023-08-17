@@ -1,0 +1,1 @@
+STARK er et sikkert system. Den bruker kryptografi med kuttkantene til å tilby polylogaritmisk verifiseringskompleksitet og sikker størrelse, quasilinear proof complexity, og minimale forutsetninger som er postquantum-sikkert. Mer informasjon [her](https://starkware.co/stark/).

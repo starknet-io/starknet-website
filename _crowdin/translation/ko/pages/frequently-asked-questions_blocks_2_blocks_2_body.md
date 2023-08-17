@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) Cairo 프로그램의 올바른 실행을 간결하게 증명하기 위해 설계된 Turing-complete 언어입니다. Cairo 프로그램은 stateless입니다. 즉, 저장소, 다른 Cairo 프로그램 또는 L1 상태에 대한 기본 액세스 권한이 없습니다(아래 설명된 대로 액세스할 수 있음). 
+
+반면에 Starknet 계약은 스마트 계약이 액세스하고 수정할 수 있는 영구 상태가 있는 Starknet VM에 상주합니다. 이러한 스마트 계약은 변수를 저장하고, 다른 계약과 통신하고, L1과 메시지를 송수신할 수 있습니다([자세히 읽기](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

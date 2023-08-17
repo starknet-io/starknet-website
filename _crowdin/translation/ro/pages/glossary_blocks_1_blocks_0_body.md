@@ -1,0 +1,1 @@
+Utilizatorii care interacționează cu nodurile de secvențiere Starknet și, dacă este necesar, cu contractele L1. Acești utilizatori, umani sau automatizați, sunt agenții care trimit tranzacții la rețeaua Starknet.

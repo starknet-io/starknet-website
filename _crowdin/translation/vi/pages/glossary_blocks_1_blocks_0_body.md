@@ -1,0 +1,1 @@
+Người dùng tương tác với các nút trình sắp xếp chuỗi Starknet và, nếu cần, với các hợp đồng L1. Những người dùng này, dù là con người hay tự động, đều là tác nhân gửi giao dịch tới mạng Starknet.

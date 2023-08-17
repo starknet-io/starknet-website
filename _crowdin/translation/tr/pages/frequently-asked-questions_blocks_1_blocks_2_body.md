@@ -1,0 +1,3 @@
+Başlamak için iyi bir yer, geliştiriciye basit bir sözleşme yazma ve uygulama konusunda adım adım rehberlik eden [Hello Starknet öğreticisidir](https://docs.starknet.io/documentation/). [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) Starknet sözleşmelerinin nasıl yazılacağını ve test edileceğini öğrenmek için bir ortam sunar. 
+
+[Starknet Discord](https://discord.com/invite/QypNMzkHbc) sunucusuna katılarak geliştiriciler topluluğunun bir parçası olabilir ve onu destekleyebilirsiniz.

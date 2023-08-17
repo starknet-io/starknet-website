@@ -1,0 +1,4 @@
+Hợp đồng L1 này xác định trạng thái của hệ thống bằng cách lưu trữ cam kết với trạng thái L2. Hợp đồng cũng lưu trữ hàm băm chương trình Starknet OS – xác định hiệu quả phiên bản Starknet mà mạng đang chạy. Trạng thái cam kết trên hợp đồng lõi L1 đóng vai trò là cơ chế đồng thuận của Starknet, nghĩa là hệ thống được bảo đảm bằng sự đồng thuận L1 Ethereum. Ngoài việc duy trì trạng thái, Hợp đồng lõi L1 của Starknet là trung tâm hoạt động chính của Starknet trên L1. Đặc biệt:
+
+* Nó lưu trữ danh sách các trình xác minh được phép (hợp đồng) có thể xác minh các giao dịch cập nhật trạng thái
+* Nó tạo điều kiện cho tương tác L1 ↔ L2

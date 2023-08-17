@@ -1,0 +1,1 @@
+L'estat es compon de codi de contractes i emmagatzematge de contractes.

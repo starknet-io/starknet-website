@@ -1,0 +1,1 @@
+Nút chính của mạng Starknet. Nó thực hiện chức năng cốt lõi của việc sắp xếp các giao dịch được gửi tới nó. Nó thực thi chương trình Starknet OS Cairo với các đầu vào có liên quan, chứng minh kết quả bằng cách sử dụng Dịch vụ chứng minh hoặc một số chứng minh STARK nội bộ và cuối cùng cập nhật trạng thái mạng trên Hợp đồng lõi Starknet.

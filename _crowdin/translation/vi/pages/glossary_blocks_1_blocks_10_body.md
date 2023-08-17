@@ -1,0 +1,1 @@
+Một nút trong mạng Starknet chỉ được sử dụng để truy vấn trạng thái Starknet hiện tại. Nó có thể trả lời các truy vấn về trạng thái hiện tại của mạng Starknet, bao gồm cả trạng thái L1 một cách độc lập (nghĩa là không/không truy vấn các nút bổ sung). Nó không giao dịch hàng loạt hoặc chứng minh hàng loạt.

@@ -1,0 +1,5 @@
+Starknet er et tillatelsesløs, desentralisert lag 2 (L2) validitetsrullering som er ment å skalere Ethereum mens man beholder Ethereums sikkerhet og desentralisering. I tråd med dette oppdraget ble stiftelsen opprettet som en selvstendig enhet for å fremme den felles teknologien som er Starknet. I tillegg som en ideell enhet med lite oppdrag: å flytte Starknet til offentlig hjelp for alle, og opprettholder det slik i årene som kommer.
+
+Stiftelsen lanserer med 50. % av den første tokenforsyningen for å sikre at ressursene i nettverket utnyttes effektivt mot følgende mål: vedlikehold og sikkerhet av Starknet som offentlig vare; fortsatt utvikling og utvidelse av nettverket, og støtte til en kultur for et konstruktivt samarbeid mellom utviklerne.
+
+For mer informasjon om fondsutvalget, første skritt og styre. se Stiftelsens [“Hallo World” innlegg](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) og [StarkWares komplementære innlegg](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).

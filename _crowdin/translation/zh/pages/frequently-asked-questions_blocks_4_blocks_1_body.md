@@ -1,0 +1,1 @@
+一旦Starknet准备就绪，如果他们愿意，StarkEx应用程序可以迁移到StarkNet。

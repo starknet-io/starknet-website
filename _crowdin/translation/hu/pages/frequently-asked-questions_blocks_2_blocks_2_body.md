@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) egy Turing-teljes nyelv, amelyet a kairói programok helyes végrehajtásának tömör bizonyítására terveztek. A kairói programok hontalanok, ami azt jelenti, hogy nincs natív hozzáférése a tárhelyhez, más kairói programokhoz vagy az L1-es állapothoz (bár ezeket elérheti, az alábbiak szerint). 
+
+A Starknet szerződések viszont a Starknet virtuális gépben élnek, amelynek állandó állapota van, amelyet az intelligens szerződések elérhetnek és módosíthatnak. Ezek az intelligens szerződések tárolhatnak változókat, kommunikálhatnak más szerződésekkel, és üzeneteket küldhetnek/fogadhatnak az L1-be/től ([további információ](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

@@ -1,0 +1,1 @@
+Starknet Token är ännu inte tillgänglig för försäljning. Det kan inte läggas till din plånbok i detta skede. Akta dig för bedrägerier.

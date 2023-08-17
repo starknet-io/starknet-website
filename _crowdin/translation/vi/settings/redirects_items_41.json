@@ -1,0 +1,4 @@
+{
+  "source": "/podcast/:đường dẫn*",
+  "destination": "/vi/bài viết"
+}

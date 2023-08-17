@@ -1,0 +1,1 @@
+Sau khi Starknet sẵn sàng, các ứng dụng StarkEx có thể di chuyển sang StarkNet nếu họ chọn.

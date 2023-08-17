@@ -1,0 +1,5 @@
+Starknet és un paquet de validesa de la capa 2 (L2) descentralitzat sense permís destinat a escalar Ethereum tot conservant la seguretat i la descentralització d'Ethereum. D'acord amb aquesta missió, la Fundació es va establir com una entitat independent per avançar en la tecnologia compartida que és Starknet. A més, com a entitat sense ànim de lucre amb una missió limitada: avançar Starknet com a bé públic per a tothom i mantenir-lo com a tal durant els propers anys.
+
+La Fundació es llança amb el 50,1% del subministrament inicial de Tokens per garantir que els recursos de la xarxa es despleguen eficaçment cap als objectius següents: el manteniment i la seguretat de Starknet com a bé públic; el desenvolupament i expansió continuats de la xarxa; i suport a una cultura de col·laboració constructiva entre desenvolupadors.
+
+Per obtenir més informació sobre la missió, els primers passos i la junta</a>la Fundació, consulteu la publicació</a> de la Fundació "Hola món" i la publicació complementària de StarkWare.</p>

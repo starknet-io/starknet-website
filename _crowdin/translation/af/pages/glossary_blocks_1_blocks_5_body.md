@@ -1,0 +1,4 @@
+Geordende stelle Starknet-transaksies wat met die Starknet-bedryfstelsel uitgevoer word, wat lei tot een saamgevoegde toestandsverandering wat dan verbind word tot die Starknet L1-kernkontrak. 'n Blok het:
+
+* … 'n blokhash – 'n unieke stabiele identifiseerder wat gebruik kan word om navraag te doen en na die blok te verwys.
+* … 'n bloknommer – 'n ranggetal wat die ligging van die blok in die volgorde van aanvaarde blokke in Starknet verteenwoordig. Let wel, 'n blok se nommer kan met verloop van tyd verander. Ook kan 'n gegewe nommer na verskillende blokke op verskillende tydstip verwys, bv. in die geval van L1-kettingherbestellings.

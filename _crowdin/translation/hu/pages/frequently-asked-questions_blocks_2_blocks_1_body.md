@@ -1,0 +1,1 @@
+A STARK egy próbarendszer. A legmodernebb kriptográfiát alkalmazza a polilogaritmikus ellenőrzés bonyolultságának és bizonyítási méretének, a kvázilineáris bizonyítási bonyolultságnak és minimális, utólagos kvantumbiztonságú feltételezéseknek a biztosítására. További információ [itt](https://starkware.co/stark/).

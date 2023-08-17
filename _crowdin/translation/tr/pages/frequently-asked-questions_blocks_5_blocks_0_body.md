@@ -1,0 +1,1 @@
+STARK teknolojisi olgun ve güvenlidir, ancak Starknet henüz Ethereum veya İnternet gibi bir kamu malı statüsüne ulaşmamıştır. Starknet'in bu hedefe ulaşabilmesi için yönetişimi, işleyişi ve gelişimi ademi merkeziyetçi olmaya devam etmelidir. Bu, iki mekanizma aracılığıyla kolaylaştırılacaktır: **Starknet Foundation** ve **Starknet Token**.

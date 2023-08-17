@@ -1,0 +1,5 @@
+{
+  "title": "StarkNet Alpha 2 – Neue Phase: Komponierbarkeit",
+  "time_to_consume": "3 min gelesen",
+  "short_desc": "StarkNet ist ein unzulässiger dezentralisierter Validity-Rollup (auch „ZK-Rollup“). Wir haben seinen Fahrplan Anfang des Jahres angekündigt. Die Alpha, die derzeit auf einem öffentlichen Ethereum Testnetz läuft unterstützt bereits den unzulässigen Einsatz von intelligenten Verträgen, die jede Geschäftslogik umsetzen, mit L1<>L2 Messaging und On-Ketten-Daten."
+}

@@ -1,0 +1,1 @@
+Du kannst Betrügereien melden und auf andere Betrugsberichte im [Betrugsbericht](https://discord.gg/qypnmzkhbc) Kanal auf dem [Starknet Discord](https://starknet.io/discord) Server überprüfen.

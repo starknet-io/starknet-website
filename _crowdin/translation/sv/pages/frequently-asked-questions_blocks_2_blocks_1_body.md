@@ -1,0 +1,1 @@
+STARK är ett säkert system. Den använder banbrytande kryptografi för att ge polylogaritmisk verifiering komplexitet och säker storlek, quasilinear bevis komplexitet, och minimala antaganden som är post-quantum-säker. Mer information [här](https://starkware.co/stark/).

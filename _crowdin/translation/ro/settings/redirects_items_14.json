@@ -1,0 +1,4 @@
+{
+  "source": "/comunitate/locuri de muncă/:path*",
+  "destination": "/ro/joburi"
+}

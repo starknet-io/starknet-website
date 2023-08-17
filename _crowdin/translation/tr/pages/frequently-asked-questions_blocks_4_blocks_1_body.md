@@ -1,0 +1,1 @@
+Starknet hazır olduğunda, StarkEx uygulamaları, isterlerse StarkNet'e geçebilir.

@@ -1,0 +1,1 @@
+Hiện tại, không. Phí trong Starknet hiện được thanh toán bằng Ether (ETH). Nhưng sau này, chúng tôi dự đoán rằng trong tương lai, các khoản phí sẽ được thanh toán độc quyền bằng Mã thông báo Starknet gốc.

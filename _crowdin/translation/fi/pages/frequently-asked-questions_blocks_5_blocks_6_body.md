@@ -1,0 +1,1 @@
+Starknet Token ei ole vielä myynnissä. Sitä ei voi lisätä lompakkoon tässä vaiheessa. Varokaa huijauksia.

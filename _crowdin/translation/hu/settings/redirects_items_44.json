@@ -1,0 +1,4 @@
+{
+  "source": "/legújabb bejegyzések/:útvonal*",
+  "destination": "/en/posts"
+}

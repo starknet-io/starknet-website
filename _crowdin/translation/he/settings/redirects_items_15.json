@@ -1,0 +1,4 @@
+{
+  "source": "/community/community-links/:path*",
+  "destination": "/he/קהילה"
+}

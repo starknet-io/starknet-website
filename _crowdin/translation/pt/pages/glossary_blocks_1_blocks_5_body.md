@@ -1,0 +1,4 @@
+Conjuntos ordenados de transações Starknet que são executados usando o Starknet OS, resultando em uma mudança agregada que é então comprometida com o contrato do núcleo Starknet L1. Um bloco tem:
+
+* … um hash de bloco – um identificador único estável que pode ser usado para consultar e consultar o bloco.
+* … um número de bloco – um número ordinal que representa a localização do bloco na sequência de blocos aceitos em Starknet. Observe que o número de um bloco pode mudar ao longo do tempo. Além disso, um determinado número pode se referir a diferentes blocos em diferentes pontos no tempo, por exemplo, no caso de reordenações L1.

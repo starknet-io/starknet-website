@@ -1,0 +1,1 @@
+Starknetトークンは、取引手数料の支払い、Starknetプロトコルへの参加、およびガバナンスへの参加に使用されます。 これらの各ユーティリティに対する根拠は、私たちの [分散化提案](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)で提示されています 「トークンは何のために使用されますか？」というセクションにあります。

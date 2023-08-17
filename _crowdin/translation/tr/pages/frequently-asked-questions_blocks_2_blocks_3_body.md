@@ -1,0 +1,3 @@
+HAYIR. Bir sözleşme yazmak için her birinin kendine göre avantajları olan birkaç seçeneğiniz vardır. 
+
+Kahire, Starknet'in ölçeklendirme potansiyelini en iyi şekilde gerçekleştiren bir Starknet sözleşmesinin ana dilidir. Öte yandan, birkaç ekip diğer programlama dillerinden (özellikle Solidity) Kahire'ye aktarıcılar geliştiriyor. Bu tür aktarıcılar, Starknet'te mevcut sözleşmelerin hızla uygulanmasını kolaylaştırır.**[En son geliştirme aracımıza bakın](/developers/tools-resources).**

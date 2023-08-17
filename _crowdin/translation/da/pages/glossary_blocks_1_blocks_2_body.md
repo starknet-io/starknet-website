@@ -1,0 +1,1 @@
+En indsamling af kontrakter (L1 og L2), der kollektivt gennemfører en forretningsstrøm.

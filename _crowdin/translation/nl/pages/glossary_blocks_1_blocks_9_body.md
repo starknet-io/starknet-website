@@ -1,0 +1,4 @@
+Dit L1-contract definieert de toestand van het systeem door de toezegging aan de L2-staat op te slaan. Het contract slaat ook het Starknet OS-programma hash op – het definieert in feite de versie van Starknet dat het netwerk draait. De geëngageerde staat over het kerncontract L1 fungeert als het consensusmechanisme van Starknet, dat wil zeggen dat het systeem wordt beveiligd door de L1 Ethereum-consensus. Naast het handhaven van de staat, is het Starknet L1 Core Contract het belangrijkste platform voor operaties voor Starknet op L1. Specifiek:
+
+* Het slaat de lijst van toegestane verificateurs (contracten) op die de status updatetransacties kunnen verifiëren
+* Het vergemakkelijkt L1 :links-rechts_arrow: L2 interactie

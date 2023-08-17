@@ -1,0 +1,1 @@
+STARK技术是成熟和安全的，但Starknet尚未达到Etherum或互联网等公益物的地位。 为了使Starknet能够实现这一目标，它的治理、运作和发展必须继续下放权力。 这将通过两个机制提供便利： **Starknet基金会** 和 **Starknet令牌**。

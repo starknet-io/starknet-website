@@ -1,0 +1,1 @@
+STARK je důkazní systém. Využívá špičkovou kryptografii k zajištění polylogaritmické složitosti a důkazní velikosti, kvazilinní odolnosti a minimálních předpokladů, které jsou postkvantově bezpečné. Více informací [zde](https://starkware.co/stark/).

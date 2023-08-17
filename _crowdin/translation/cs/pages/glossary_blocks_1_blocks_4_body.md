@@ -1,0 +1,1 @@
+Vyvolávání konkrétní státně-transformační logiky, která je definována smlouvou. Syntakticky má dobře definovanou strukturu, která zahrnuje všechna nezbytná metadata a libovolné zatížení dat. Sémantika transakce je vymezena ve smlouvě, na niž se odkazuje.

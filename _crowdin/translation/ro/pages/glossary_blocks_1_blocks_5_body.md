@@ -1,0 +1,4 @@
+Seturi ordonate de tranzacții Starknet care se execută folosind Starknet OS, având ca rezultat o schimbare agregată a stării care este apoi angajată în baza contractului de bază Starknet L1. Un bloc:
+
+* … un hash bloc - un identificator stabil unic, care poate fi folosit pentru a interoga și a face referire la bloc.
+* … un număr de bloc - un număr ordinar reprezentând locaţia blocului în secvenţa blocurilor acceptate în Starknet. Nota, un numar de bloc se poate schimba in timp. De asemenea, un număr dat se poate referi la diferite blocuri în diferite momente ale timpului, de exemplu în cazul unor recomenzi în lanț L1.

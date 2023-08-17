@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) és un llenguatge complet de Turing dissenyat per demostrar de manera sucinta l'execució correcta dels programes Cairo. Un programa del Caire és sense estat, és a dir, no teniu accés natiu a l'emmagatzematge, a altres programes del Caire o a l'estat L1 (tot i que podeu accedir-hi, com s'explica a continuació). 
+
+Els contractes Starknet, en canvi, viuen a la VM Starknet, que té un estat persistent al qual els contractes intel·ligents poden accedir i modificar. Aquests contractes intel·ligents poden emmagatzemar variables, comunicar-se amb altres contractes i enviar/rebre missatges a/des de L1 ([llegir més](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

@@ -1,0 +1,1 @@
+Trạng thái bao gồm mã hợp đồng và lưu trữ hợp đồng.

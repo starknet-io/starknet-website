@@ -1,0 +1,4 @@
+{
+  "source": "/postări latest/:path*",
+  "destination": "/ro/posturi"
+}

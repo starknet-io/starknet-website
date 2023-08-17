@@ -1,0 +1,4 @@
+{
+  "source": "/faq/:sti*",
+  "destination": "/læring/ofte stillede spørgsmål"
+}

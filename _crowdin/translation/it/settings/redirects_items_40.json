@@ -1,0 +1,4 @@
+{
+  "source": "/blog-posts/:path*",
+  "destination": "/it/posts"
+}

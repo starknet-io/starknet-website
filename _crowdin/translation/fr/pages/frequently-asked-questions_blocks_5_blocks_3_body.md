@@ -1,0 +1,1 @@
+Actuellement pas. Les frais sur Starknet sont pour le moment payés en Ether (ETH). Mais plus tard, nous prévoyons qu'à l'avenir, les frais seront payés exclusivement avec le jeton natif de Starknet.

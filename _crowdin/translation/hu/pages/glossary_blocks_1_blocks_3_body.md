@@ -1,0 +1,3 @@
+A megvalósított alkalmazás üzleti logikáját kódoló program. Ez magában foglalja az alkalmazás adatszerkezetét és a felhasználók által küldött konkrét tranzakciók kezelését. Pontosabban, a Starknet szerződés érvényes állapotátmeneteket kódol az alkalmazás számára.
+
+* Starknet-fiókszerződések: A fiókabsztrakció miatt a felhasználói fiókok nincsenek protokollszinten implementálva. Egyes szerződéseknek ezért be kell vezetniük a felhasználói fiókok koncepcióját; ezeket számlaszerződéseknek nevezzük. A pontos megvalósítás a szerződéstől függ; de technikailag ezek Starknet szerződések, amelyeket Kairóban hajtanak végre.

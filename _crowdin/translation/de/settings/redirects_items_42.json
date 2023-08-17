@@ -1,0 +1,4 @@
+{
+  "source": "/community-links/:path*",
+  "destination": "/de"
+}

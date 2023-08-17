@@ -1,0 +1,4 @@
+Bu L1 sözleşmesi, taahhüdü L2 durumuna depolayarak sistemin durumunu tanımlar. Sözleşme ayrıca, ağın çalıştırdığı Starknet sürümünü etkili bir şekilde tanımlayan Starknet OS program karmasını da saklar. L1 çekirdek sözleşmesinde taahhüt edilen durum, Starknet'in mutabakat mekanizması olarak hareket eder, yani sistem, L1 Ethereum mutabakatı tarafından korunur. Durumu korumaya ek olarak, Starknet L1 Temel Sözleşmesi, Starknet'in L1'deki ana operasyon merkezidir. özellikle:
+
+* Durum güncelleme işlemlerini doğrulayabilen izin verilen doğrulayıcıların (sözleşmeler) listesini saklar.
+* L1 ↔ L2 etkileşimini kolaylaştırır

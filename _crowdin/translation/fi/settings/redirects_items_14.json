@@ -1,0 +1,4 @@
+{
+  "source": "/yhteisö/yhteisötyöpaikka/:path*",
+  "destination": "//työpaikka"
+}

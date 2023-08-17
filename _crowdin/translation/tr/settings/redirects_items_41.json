@@ -1,0 +1,4 @@
+{
+  "source": "/podcast'ler/:yol*",
+  "destination": "/tr/yazılar"
+}

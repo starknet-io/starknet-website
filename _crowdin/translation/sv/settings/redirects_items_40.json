@@ -1,0 +1,4 @@
+{
+  "source": "/blog-inläggs/:path*",
+  "destination": "/sv/inlägg"
+}

@@ -1,0 +1,1 @@
+Starknet ağında yalnızca mevcut Starknet durumunu sorgulamak için kullanılan bir düğüm. L1 durumu da dahil olmak üzere Starknet ağının mevcut durumu hakkındaki soruları bağımsız olarak (yani, ek düğümleri sorgulamadan/sorgulamadan) yanıtlayabilir. İşlemleri toplu olarak işlemez veya toplu işlemleri kanıtlamaz.

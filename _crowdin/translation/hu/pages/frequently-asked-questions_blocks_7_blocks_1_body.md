@@ -1,0 +1,1 @@
+A [Starknet Discord](https://starknet.io/discord) szerver [scam-report](https://discord.gg/qypnmzkhbc) csatornáján bejelentheti a csalásokat, és ellenőrizheti, hogy vannak-e más átverési jelentések.

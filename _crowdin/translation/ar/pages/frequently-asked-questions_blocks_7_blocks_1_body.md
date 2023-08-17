@@ -1,0 +1,1 @@
+يمكنك الإبلاغ عن الاحتيالات والتحقق من التقارير الأخرى عن الاحتيالات في قناة [تقرير الاحتيال](https://discord.gg/qypnmzkhbc) على خادم [Starknet Discord](https://starknet.io/discord).

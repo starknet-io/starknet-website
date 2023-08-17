@@ -1,0 +1,1 @@
+Mã thông báo gốc thưởng cho các thành viên của cộng đồng phát triển mạng sẽ thúc đẩy hệ sinh thái đến một mức độ mà việc sử dụng mã thông báo không phải gốc sẽ không. Ngoài ra, nếu mã thông báo không có nguồn gốc, các cú sốc kinh tế từ các quyết định được đưa ra trong các hệ sinh thái khác có thể ảnh hưởng đến dịch vụ của Starknet cũng như người dùng và nhà cung cấp của nó.

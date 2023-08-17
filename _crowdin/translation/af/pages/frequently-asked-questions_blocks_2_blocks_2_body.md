@@ -1,0 +1,3 @@
+[Kaïro](https://medium.com/starkware/hello-cairo-3cb43b13b209) is 'n Turing-volledige taal wat ontwerp is om die korrekte uitvoering van Kaïro-programme bondig te bewys. 'n Kaïro-program is staatloos, wat beteken dat jy nie inheemse toegang tot berging, ander Kaïro-programme of die L1-staat het nie (alhoewel jy toegang daartoe het, soos hieronder verduidelik). 
+
+Starknet-kontrakte, aan die ander kant, woon in die Starknet VM, wat 'n aanhoudende toestand het waartoe slim kontrakte toegang kan verkry en dit kan verander. Hierdie slim kontrakte kan veranderlikes stoor, met ander kontrakte kommunikeer en boodskappe na/van L1 stuur/ontvang ([lees meer](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

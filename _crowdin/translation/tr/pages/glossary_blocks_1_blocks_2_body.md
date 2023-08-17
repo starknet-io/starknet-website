@@ -1,0 +1,1 @@
+Bir iş akışını toplu olarak uygulayan bir sözleşmeler koleksiyonu (L1 ve L2).

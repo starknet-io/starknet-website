@@ -1,0 +1,1 @@
+Oddzielny proces (usługa online lub wewnętrzna dla węzła) odbierający dane wyjściowe programów Cairo i generujący dowody STARK do zweryfikowania. Oferent przedstawia weryfikatorowi dowód STARK rejestrujący fakt w L1.

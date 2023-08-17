@@ -1,0 +1,4 @@
+{
+  "source": "/faq/:path*",
+  "destination": "/ro/learn/ly-put"
+}

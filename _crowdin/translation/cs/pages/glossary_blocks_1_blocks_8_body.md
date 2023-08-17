@@ -1,0 +1,1 @@
+Stát se skládá ze smluvních kódů a smluvních skladů.

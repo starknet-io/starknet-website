@@ -1,0 +1,5 @@
+{
+  "title": "Part 3: Disseny de fitxes Starknet",
+  "time_to_consume": "5 minuts de lectura",
+  "short_desc": "El disseny del testimoni StarkNet està configurat per la necessitat d'alimentar una xarxa que es compon de (i) usuaris de StarkNet, (ii) operadors: persones que proporcionen a la xarxa recursos informàtics que realitzen seqüenciació de transaccions, generació de proves STARK i proveïdors d'emmagatzematge a llarg termini i (iii) desenvolupadors que escrivin programari per a la seva infraestructura i per a les aplicacions que s'hi executen.\n"
+}

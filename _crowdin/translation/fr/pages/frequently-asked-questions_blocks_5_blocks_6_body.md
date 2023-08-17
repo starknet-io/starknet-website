@@ -1,0 +1,1 @@
+Le jeton Starknet n'est pas encore disponible à la vente. Il ne peut pas être ajouté à votre portefeuille à ce stade. Méfiez-vous des arnaques.

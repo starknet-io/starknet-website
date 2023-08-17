@@ -1,0 +1,5 @@
+{
+  "title": "Phần 3: Thiết kế mã thông báo Starknet",
+  "time_to_consume": "5 phút đọc",
+  "short_desc": "Thiết kế của Mã thông báo StarkNet được định hình bởi nhu cầu cung cấp năng lượng cho mạng bao gồm (i) Người dùng StarkNet, (ii) Người vận hành — những người cung cấp cho mạng tài nguyên máy tính thực hiện trình tự giao dịch, tạo bằng chứng STARK và nhà cung cấp dịch vụ lưu trữ dài hạn và (iii) Nhà phát triển viết phần mềm cho cơ sở hạ tầng của nó và cho các ứng dụng chạy trên nó.\n"
+}

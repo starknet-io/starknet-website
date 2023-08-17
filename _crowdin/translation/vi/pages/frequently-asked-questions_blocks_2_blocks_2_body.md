@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) là một ngôn ngữ hoàn chỉnh Turing được thiết kế để chứng minh ngắn gọn việc thực thi chính xác các chương trình Cairo. Chương trình Cairo là không trạng thái, nghĩa là bạn không có quyền truy cập riêng vào bộ lưu trữ, các chương trình Cairo khác hoặc trạng thái L1 (mặc dù bạn có thể truy cập các chương trình đó, như được giải thích bên dưới). 
+
+Mặt khác, các hợp đồng Starknet tồn tại trong Starknet VM, có trạng thái liên tục mà các hợp đồng thông minh có thể truy cập và sửa đổi. Các hợp đồng thông minh này có thể lưu trữ các biến, giao tiếp với các hợp đồng khác và gửi/nhận tin nhắn đến/từ L1 ([đọc thêm](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

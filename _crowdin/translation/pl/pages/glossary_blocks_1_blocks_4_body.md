@@ -1,0 +1,1 @@
+Powołanie się na konkretną logikę transformacji państwa, która jest określona w umowie. Syntaktycznie transakcja ma dobrze zdefiniowaną strukturę, która obejmuje wszystkie niezbędne metadane i arbitralne obciążenie danych. semantyka transakcji jest zdefiniowana przez przywołaną umowę.

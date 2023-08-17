@@ -1,0 +1,3 @@
+מקום טוב להתחיל בו הוא המדריך [Hello Starknet](https://docs.starknet.io/documentation/), המנחה את המפתח צעד אחר צעד בכתיבה ופריסה של חוזה פשוט. מגרש המשחקים [Starknet](https://starknet.io/playground/?lesson=starknet_contract) מציע סביבה ללימוד כיצד לכתוב חוזי Starknet ולבדוק אותם. 
+
+אתה יכול להיות חלק מקהילת המפתחים, ולתמוך בה, על ידי הצטרפות לשרת [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

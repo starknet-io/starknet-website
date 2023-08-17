@@ -1,0 +1,3 @@
+Program, který kóduje implementovanou podnikatelskou logiku aplikace. To zahrnuje aplikační datové struktury a zpracování konkrétních transakcí zaslaných uživateli. Konkrétně smlouva se Starknet kóduje platné přechody stavu pro aplikaci.
+
+* Smlouvy o účtu Starknet: Vzhledem k abstrakci účtu nejsou uživatelské účty implementovány na úrovni protokolu. Některé smlouvy proto budou muset realizovat koncepci uživatelských účtů; jedná se o smlouvy o účtu. Přesná realizace závisí na smlouvě, ale z technického hlediska se jedná o smlouvy Starknet, které jsou realizovány v Káhiře.

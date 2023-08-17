@@ -1,0 +1,1 @@
+Cualquier dApp puede ser desplegado en Starknet. Como El Cairo permite el cálculo general, cualquier lógica de negocio puede ser implementada y procesada a través de StarkNet.

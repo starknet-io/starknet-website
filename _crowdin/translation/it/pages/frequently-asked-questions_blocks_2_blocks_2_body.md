@@ -1,0 +1,3 @@
+[Il Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) è un linguaggio Turing-complete progettato per dimostrare sinteticamente la corretta esecuzione dei programmi del Cairo. Un programma Cairo è senza stato, il che significa che non hai accesso nativo allo storage, altri programmi del Cairo o lo stato L1 (anche se è possibile accedere a questi, come spiegato di seguito). 
+
+Starknet contratti, d'altra parte, vivono in Starknet VM, che ha uno stato persistente che gli smart contract possono accedere e modificare. Questi smart contract possono memorizzare le variabili, comunicare con altri contratti e inviare/ricevere messaggi per/da L1 ([leggi di più](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

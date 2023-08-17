@@ -1,0 +1,5 @@
+{
+  "title": "STARKs, StarkEx, et Starknet",
+  "time_to_consume": "3min de lecture",
+  "short_desc": "Les TARKs (arguments de connaissance transparents et évolutifs, Scalable, Transparent ARgument of Knowledge) sont un système de preuve qui permet de prouver et de vérifier des calculs. Il permet de traiter un grand calcul, de générer une preuve de la correction du calcul, puis de vérifier la preuve en très peu d'étapes."
+}

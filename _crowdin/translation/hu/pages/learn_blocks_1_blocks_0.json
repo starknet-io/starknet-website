@@ -1,0 +1,4 @@
+{
+  "title": "Starknet 101",
+  "description": "A Starknet egy 2. rétegű hálózat, amely matematikát és kriptográfiát használ az Ethereum biztonságos méretezéséhez. Validity-rollup (vagy ZK-összegzés) néven ismert; sok tranzakciót „felteker”, hogy egyetlen tranzakcióként elküldje az Ethereumnak. Olvasson tovább, hogy megtanulja az alapokat."
+}

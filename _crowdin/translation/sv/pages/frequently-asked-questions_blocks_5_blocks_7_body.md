@@ -1,0 +1,3 @@
+Starknet Token är ännu inte till salu. Det kan inte läggas till din plånbok i detta skede. Akta dig för bedrägerier.
+
+Starknet-token lanserades på Ethereum Mainnet i november 2022. Starknet-stiftelsen kommer vid ett senare tillfälle att meddela detaljerna i gemenskapens rabatter och gemenskapsbestämmelser, men i skrivande stund är dessa uppgifter ännu inte fastställda. Se upp för bedrägerier som poserar för att sälja Starknet Tokens.

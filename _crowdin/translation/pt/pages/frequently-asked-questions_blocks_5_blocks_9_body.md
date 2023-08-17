@@ -1,0 +1,1 @@
+Não. O fornecimento de tokens em circulação aumentará ao longo do tempo com a cunhagem de novos tokens pelo protocolo. Ainda não foram definidos pormenores sobre a taxa de cunhagem e o mecanismo.

@@ -1,0 +1,1 @@
+Die hoofknooppunt van die Starknet-netwerk. Dit implementeer die kernfunksies van volgordebepaling van transaksies wat aan hom voorgelê word. Dit voer die Starknet OS Cairo-program uit met die toepaslike insette, bewys die resultaat deur die bewysdiens of een of ander interne STARK-bewyser te gebruik, en werk uiteindelik die netwerkstatus op die Starknet-kernkontrak op.

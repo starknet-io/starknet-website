@@ -1,0 +1,3 @@
+A Starknet token még nem eladó. Jelenleg nem adható hozzá a pénztárcájához. Óvakodj a csalásoktól.
+
+A Starknet token 2022 novemberében jelent meg az Ethereum Mainneten. A Starknet Alapítvány egy későbbi időpontban jelenti be a közösségi árengedmények és közösségi rendelkezések részleteit, de a cikk írásakor ezek a részletek még nem határozhatók meg. Óvakodj azoktól a csalásoktól, amelyek Starknet tokeneket árulnak.

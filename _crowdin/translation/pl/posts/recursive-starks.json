@@ -1,0 +1,5 @@
+{
+  "title": "Rekurencyjne STARK",
+  "time_to_consume": "min. przeczytane",
+  "short_desc": "Obecnie wytwarzane są dowody rekurencyjne – oparte na ogólnych obliczeniach Kairo. Oznacza to znaczne zwiększenie mocy skalowania L2 za pomocą STARK. Dzięki jednemu dowodowi szybko zwiększy się liczba transakcji, które można zapisać do Ethereum."
+}

@@ -1,0 +1,1 @@
+Samostatný proces (online služba nebo interní k uzlu), který přijímá výstup programů Káhira a vytváří důkazy STARK, které mají být ověřeny. Poskytovatel předloží ověřovateli důkaz STARK, který zaregistruje skutečnost na L1.

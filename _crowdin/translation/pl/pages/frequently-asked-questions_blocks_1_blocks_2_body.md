@@ -1,0 +1,3 @@
+Dobrym miejscem do rozpoczęcia jest [samouczek Starknet](https://docs.starknet.io/documentation/), który z kolei kieruje wykonawcą krok po kroku poprzez pisanie i wdrażanie prostej umowy. [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) oferuje środowisko do nauki pisania umów Starknet i przetestowania ich. 
+
+Możesz stać się częścią społeczności deweloperów i wspierać ją, dołączając do serwera [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

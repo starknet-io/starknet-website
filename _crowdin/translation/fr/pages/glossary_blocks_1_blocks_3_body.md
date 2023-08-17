@@ -1,0 +1,3 @@
+Le programme qui code la logique métier de l'application implémentée. Cela comprend les structures de données de l'application et la gestion des transactions spécifiques envoyées par les utilisateurs. Plus spécifiquement, le contrat Starknet encode des transitions d'état valides pour l'application.
+
+* Les contrats de compte Starknet : Compte tenu de l'abstraction des comptes, les comptes utilisateur ne sont pas implémentés au niveau du protocole. Certains contrats devront donc implémenter le concept de comptes utilisateur ; ceux-ci sont appelés contrats de compte (Account Contracts en anglais). L'implémentation exacte dépend du contrat, mais techniquement, ce sont des contrats Starknet implémentés en Cairo.

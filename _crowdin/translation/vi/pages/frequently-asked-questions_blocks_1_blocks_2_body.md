@@ -1,0 +1,3 @@
+Một nơi tốt để bắt đầu là hướng dẫn [Hello Starknet](https://docs.starknet.io/documentation/), hướng dẫn nhà phát triển từng bước thông qua việc viết và triển khai một hợp đồng đơn giản. [Sân chơi Starknet](https://starknet.io/playground/?lesson=starknet_contract) cung cấp một môi trường để học cách viết và kiểm tra hợp đồng Starknet. 
+
+Bạn có thể trở thành một phần của cộng đồng nhà phát triển và hỗ trợ nó bằng cách tham gia máy chủ [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

@@ -1,0 +1,1 @@
+Nej. Den cirkulerende forsyning af tokens vil stige over tid med prægning af nye tokens i protokollen. Der er endnu ikke fastlagt nærmere oplysninger om minehastigheden og -mekanismen.

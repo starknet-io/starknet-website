@@ -1,0 +1,4 @@
+{
+  "source": "/nuutste-plasings/:pad*",
+  "destination": "/af/plasings"
+}

@@ -1,0 +1,1 @@
+Enhver dApp kan distribueres på Starknet. I løpet av Cairo kan all forretningslogikk implementeres og behandles over StarkNet.

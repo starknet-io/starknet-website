@@ -1,0 +1,4 @@
+Ez az L1 szerződés határozza meg a rendszer állapotát az L2 állapotra vonatkozó kötelezettség eltárolásával. A szerződés a Starknet OS program kivonatát is tárolja – ez gyakorlatilag meghatározza a hálózaton futó Starknet verzióját. Az L1 alapszerződés elkötelezett állapota a Starknet konszenzus mechanizmusaként működik, azaz a rendszert az L1 Ethereum konszenzus biztosítja. Az állam fenntartása mellett a Starknet L1 Core Contract a Starknet fő műveleti központja az L1-en. Kimondottan:
+
+* Tárolja azon engedélyezett hitelesítők (szerződések) listáját, amelyek ellenőrizhetik az állapotfrissítési tranzakciókat
+* Megkönnyíti az L1 ↔ L2 interakciót

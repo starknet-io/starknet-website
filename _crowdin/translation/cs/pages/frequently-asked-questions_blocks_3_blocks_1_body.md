@@ -1,0 +1,1 @@
+Každá dApp může být nasazena na Starknet. Vzhledem k tomu, že Káhira umožňuje všeobecný výpočet, lze zavést a zpracovat jakoukoli podnikatelskou logiku přes StarkNet.

@@ -1,0 +1,1 @@
+Den viktigste noden på Starknet-nettverket. Det implementerer kjernefunksjonaliteten til sekvenseringstransaksjoner som er sendt inn. Den utfører Starknet OS Cairo programmet med relevante inndata, beviser resultatet ved hjelp av en verifiseringstjenesten eller en intern STARK prosess. og etterhvert oppdaterer nettverksstatusen på Starknet Core-Kontrakten.

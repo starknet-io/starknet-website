@@ -1,0 +1,3 @@
+Nej. Du har flere muligheder for at skrive en kontrakt, hver med sine egne fordele. 
+
+Cairo er modersmål for en Starknet-kontrakt, som fuldt ud indser skaleringspotentialet i Starknet. På den anden side er flere hold i færd med at udvikle transformatorer fra andre programmeringssprog (især Solidity) til Cairo. Sådanne omladninger gør det lettere hurtigt at implementere eksisterende kontrakter på Starknet.**[Se vores seneste udviklingsværktøj](/developers/tools-resources).**

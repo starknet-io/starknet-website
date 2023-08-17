@@ -1,0 +1,1 @@
+إذا كنت متحمس لـ StarkNet ولامركزيته و ترغب في المشاركة في العملية، يرجى الانضمام إلى البنائين على StarkNet [ديسكورد](https://starknet.io/discord) و [منتدى مجتمع Starknet](https://community.starknet.io/)

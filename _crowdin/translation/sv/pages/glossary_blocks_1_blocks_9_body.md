@@ -1,0 +1,4 @@
+Detta L1-kontrakt definierar tillståndet i systemet genom att lagra åtagandet till L2-staten. Kontraktet lagrar också Starknet OS-programmet hash – vilket effektivt definierar den version av Starknet som nätverket kör. Den engagerade staten på L1 kärnkontrakt fungerar som konsensus mekanism av Starknet, dvs. systemet säkras av L1 Ethereum konsensus. Förutom att upprätthålla staten, är Starknet L1 Core Contract det huvudsakliga navet i verksamheten för Starknet på L1. Specifikt:
+
+* Den lagrar listan över tillåtna verifierare (kontrakt) som kan verifiera statsuppdateringstransaktioner
+* Det underlättar L1 ↔️ L2 interaktion

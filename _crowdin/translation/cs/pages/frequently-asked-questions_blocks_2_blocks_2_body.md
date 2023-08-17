@@ -1,0 +1,3 @@
+[Káhira](https://medium.com/starkware/hello-cairo-3cb43b13b209) je Turing-complete jazyk navržený pro výstižné prokázání správného provádění Káhirových programů. Program Káhira je bez státní příslušnosti, což znamená, že nemáte přístup k úložišti. jiné Káhirské programy nebo stav L1 (i když k nim můžete přistupovat, jak je vysvětleno níže). 
+
+Naproti tomu kontrakty Starknet žijí ve Starknet VM, která má trvalý stav, k němuž mohou přistupovat a upravovat chytré kontrakce. Tyto chytré smlouvy mohou ukládat proměnné, komunikovat s ostatními smlouvami a odesílat/přijímat zprávy do/od L1 ([více](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

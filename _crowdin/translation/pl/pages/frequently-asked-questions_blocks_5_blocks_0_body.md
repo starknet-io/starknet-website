@@ -1,0 +1,1 @@
+Technologia STARK jest dojrzała i bezpieczna, ale Starknet nie uzyskał jeszcze statusu dobra publicznego, takiego jak Ethereum czy Internet. Aby Starknet mógł osiągnąć ten cel, należy nadal zdecentralizować jego zarządzanie, funkcjonowanie i rozwój. Zostanie to ułatwione dzięki dwóm mechanizmom: **Starknet Foundation** i **Starknet Token**.

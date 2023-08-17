@@ -1,0 +1,1 @@
+Існує кілька дослідників блоків, які ви можете використовувати: [StarkScan](https://starkscan.co/), [Voyager](https://voyager.online/txns), [Блок](https://viewblock.io/starknet).

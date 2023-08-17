@@ -1,0 +1,5 @@
+{
+  "title": "StarkNet Alpha 2: nova fase: composició",
+  "time_to_consume": "3 minuts de lectura",
+  "short_desc": "StarkNet és un Validity-Rollup descentralitzat sense permís (també conegut com a \"ZK-Rollup\"). Vam anunciar el seu full de ruta a principis d'any. L'Alpha, que s'executa actualment en una xarxa de proves pública d'Ethereum, ja admet el desplegament sense permís de contractes intel·ligents que implementen qualsevol lògica empresarial, amb missatgeria L1<>L2 i dades en cadena."
+}

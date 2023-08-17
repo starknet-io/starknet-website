@@ -1,0 +1,7 @@
+Giai đoạn đầu tiên của Quản trị Starknet đã được triển khai (chi tiết khác[tại đây](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). Từ giờ trở đi, các thành viên cộng đồng có thể tham gia định hình Starknet thông qua một kênh khác, đó là bỏ phiếu về các thay đổi giao thức.
+
+Trong giai đoạn đầu tiên, quản trị Starknet sẽ tập trung vào việc nâng cấp giao thức Starknet. Mọi nâng cấp phiên bản Starknet sẽ được triển khai trên Goerli Testnet; người bình chọn sau đó sẽ có khoảng thời gian 6 ngày để kiểm tra và thử nghiệm phiên bản nâng cấp khi phiên bản này chạy trên Goerli. Trong thời gian này, một đề xuất Ảnh chụp nhanh sẽ được mở và cộng đồng có thể bỏ phiếu về việc phê duyệt hay từ chối phiên bản nâng cấp để triển khai Mainnet.
+
+Nếu đề xuất nhận được đa số phiếu bầu 'CÓ' trong thời gian bỏ phiếu sáu ngày, thì đề xuất được thông qua và mạng chính của Starknet sẽ được nâng cấp tương ứng. Chúng tôi hy vọng cuộc bỏ phiếu cho[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)sẽ sớm được mở.
+
+Chúng tôi khuyến khích bạn đọc tất cả các chi tiết trong các bài đăng sau và tham gia thảo luận trong[diễn đàn cộng đồng Starknet](https://community.starknet.io/).

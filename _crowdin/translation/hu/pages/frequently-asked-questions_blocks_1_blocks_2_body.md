@@ -1,0 +1,3 @@
+Jó kiindulópont a [Hello Starknet oktatóanyag](https://docs.starknet.io/documentation/), amely lépésről lépésre végigvezeti a fejlesztőt egy egyszerű szerződés megírásán és bevezetésén. A [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) környezetet kínál a Starknet-szerződések írásának és tesztelésének megtanulásához. 
+
+A [Starknet Discord](https://discord.com/invite/QypNMzkHbc) szerverhez csatlakozva a fejlesztői közösség részévé válhat és támogathatja azt.

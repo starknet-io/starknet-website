@@ -1,0 +1,3 @@
+No. Hai diverse opzioni per scrivere un contratto, ciascuno con i propri benefici. 
+
+Cairo è la lingua madre per un contratto Starknet, che la maggior parte pienamente realizza il potenziale di scala di Starknet. D'altra parte, diverse squadre stanno sviluppando transpiler da altri linguaggi di programmazione (in particolare Solidity) al Cairo. Tali transpiler facilitano la rapida distribuzione dei contratti esistenti su Starknet.**[Consulta il nostro ultimo strumento di sviluppo](/developers/tools-resources).**

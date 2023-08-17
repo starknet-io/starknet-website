@@ -1,0 +1,1 @@
+Uživatelé Starknetu, kteří vyvíjejí aplikace Starknet. Píšou a rozmístí smlouvy Starknet a Ethereum.

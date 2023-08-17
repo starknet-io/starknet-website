@@ -1,0 +1,4 @@
+Hierdie L1-kontrak definieer die toestand van die stelsel deur die verbintenis tot die L2-staat te stoor. Die kontrak stoor ook die Starknet OS-programhash – wat effektief die weergawe van Starknet definieer wat die netwerk gebruik. Die toegewyde staat op die L1-kernkontrak tree op as die konsensusmeganisme van Starknet, dit wil sê die stelsel word verseker deur die L1 Ethereum-konsensus. Benewens die instandhouding van die staat, is die Starknet L1-kernkontrak die hoofsentrum van bedrywighede vir Starknet op L1. Spesifiek:
+
+* Dit stoor die lys van toegelate verifieerders (kontrakte) wat staatsopdateringtransaksies kan verifieer
+* Dit vergemaklik L1 ↔ L2 interaksie

@@ -1,0 +1,1 @@
+'n Aanroep van 'n spesifieke staat-oorgangslogika wat deur 'n kontrak gedefinieer word. Sintakties het 'n transaksie 'n goed gedefinieerde struktuur wat al die nodige metadata en 'n arbitrêre data loonvrag insluit. Die semantiek van die transaksie word gedefinieer deur die opgeroep kontrak.

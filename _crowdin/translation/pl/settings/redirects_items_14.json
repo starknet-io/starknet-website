@@ -1,0 +1,4 @@
+{
+  "source": "/społeczność/społeczność/:path*",
+  "destination": "/pl/jobs"
+}

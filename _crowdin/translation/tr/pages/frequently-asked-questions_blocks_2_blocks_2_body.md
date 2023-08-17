@@ -1,0 +1,3 @@
+[Kahire](https://medium.com/starkware/hello-cairo-3cb43b13b209) Kahire programlarının doğru yürütüldüğünü kısaca kanıtlamak için tasarlanmış bir Turing-complete dilidir. Bir Kahire programı durum bilgisizdir, yani depolamaya, diğer Kahire programlarına veya L1 durumuna yerel erişiminiz yoktur (yine de aşağıda açıklandığı gibi bunlara erişebilirsiniz). 
+
+Starknet sözleşmeleri ise, akıllı sözleşmelerin erişebileceği ve değiştirebileceği kalıcı bir duruma sahip olan Starknet VM'de yaşıyor. Bu akıllı sözleşmeler, değişkenleri saklayabilir, diğer sözleşmelerle iletişim kurabilir ve L1'e/L1'den mesaj gönderip/alabilir ([daha fazlasını okuyun](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

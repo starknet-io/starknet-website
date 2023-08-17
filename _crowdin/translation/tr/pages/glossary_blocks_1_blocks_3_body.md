@@ -1,0 +1,3 @@
+Uygulanan uygulama iş mantığını kodlayan program. Bu, uygulama veri yapılarını ve kullanıcılar tarafından gönderilen belirli işlemlerin işlenmesini içerir. Spesifik olarak, Starknet sözleşmesi, uygulama için geçerli durum geçişlerini kodlar.
+
+* Starknet Hesap Sözleşmeleri: Hesap soyutlaması verildiğinde, kullanıcı hesapları protokol düzeyinde uygulanmaz. Bu nedenle, bazı sözleşmelerin kullanıcı hesapları kavramını uygulaması gerekecektir; bunlara Hesap Sözleşmeleri denir. Kesin uygulama sözleşmeye bağlıdır; ancak teknik olarak bunlar Kahire'de uygulanan Starknet sözleşmeleridir.

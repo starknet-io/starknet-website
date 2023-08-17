@@ -1,0 +1,7 @@
+Elindult a Starknet Governance első fázisa (további részletek[itt](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). Ezentúl a közösség tagjai egy további csatornán, mégpedig a protokollmódosítások szavazásán keresztül vehetnek részt a Starknet alakításában.
+
+Az első szakaszban a Starknet irányítása a Starknet protokoll frissítésére összpontosít. Minden Starknet verziófrissítés a Goerli Testneten lesz telepítve; a szavazóknak ezután 6 nap áll rendelkezésükre, hogy megvizsgálják és teszteljék a frissített verziót, ahogy az a Goerli-n fut. Ez idő alatt megnyílik egy pillanatkép-javaslat, és a közösség szavazhat arról, hogy jóváhagyja-e vagy elutasítja a frissített verziót a Mainnet telepítéséhez.
+
+Ha a javaslat az „IGEN” szavazatok többségét megszerzi a hatnapos szavazási időszak alatt, a javaslat sikeres lesz, és a Starknet hálózat ennek megfelelően frissül. Várakozásaink szerint hamarosan megnyílik a szavazás[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)ről.
+
+Javasoljuk, hogy olvassa el az összes részletet a következő bejegyzésekben, és vegyen részt a[Starknet közösségi fórumon](https://community.starknet.io/)folyó vitákban.

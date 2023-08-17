@@ -1,0 +1,5 @@
+{
+  "title": "StarkNet Alpha 2 – 新しいフェーズ: Composability",
+  "time_to_consume": "3分で読めます",
+  "short_desc": "StarkNetは権限のない分散型Validity-Rollup（別名「ZK-Rollup」）です。年の初めにロードマップを発表しました。 Alphaは現在パブリックEthereumテストネット上で動作しています L1<>L2メッセージとオンチェーンデータを使用して、任意のビジネスロジックを実装するスマートコントラクトの無許可デプロイメントをすでにサポートしています。"
+}

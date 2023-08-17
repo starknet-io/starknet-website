@@ -1,0 +1,3 @@
+Un bon lloc per començar és el tutorial [Hello Starknet](https://docs.starknet.io/documentation/), que guia el desenvolupador pas a pas per escriure i desplegar un contracte senzill. El [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) ofereix un entorn per aprendre a escriure contractes Starknet i provar-los. 
+
+Podeu formar part de la comunitat de desenvolupadors i donar-hi suport unint-vos al servidor [Starknet Discord](https://discord.com/invite/QypNMzkHbc).

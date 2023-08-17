@@ -1,0 +1,1 @@
+Użytkownicy, którzy współdziałają z węzłami sekwencerów Starknet oraz, w razie potrzeby, z kontraktami L1. Użytkownikami tymi – zarówno ludzkimi, jak i zautomatyzowanymi – są agenci, którzy dokonują transakcji w sieci Starknet.

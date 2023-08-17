@@ -1,0 +1,4 @@
+{
+  "source": "/gyak/:path*",
+  "destination": "/hu/learn/frequently-asked-questions"
+}

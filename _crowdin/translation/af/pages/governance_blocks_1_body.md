@@ -1,0 +1,7 @@
+Die eerste fase van Starknet Governance is van stapel gestuur (meer besonderhede[hier](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase)). Gemeenskapslede kan voortaan deelneem aan die vorming van Starknet deur 'n verdere kanaal, naamlik om oor protokolveranderings te stem.
+
+In sy eerste fase sal Starknet-bestuur op Starknet-protokol-opgraderings fokus. Elke Starknet-weergawe-opgradering sal op Goerli-toetsnet ontplooi word; kiesers sal dan 'n tydperk van 6 dae hê om die opgegradeerde weergawe te ondersoek en te toets soos dit op Goerli loop. Gedurende hierdie tyd sal 'n Snapshot-voorstel oopgemaak word, en die gemeenskap kan stem oor die goedkeuring of verwerping van die opgegradeerde weergawe vir Mainnet-ontplooiing.
+
+As die voorstel 'n meerderheid van 'JA'-stemme kry gedurende die ses-dae-stemperiode, word die voorstel geslaag en sal Starknet-hoofnet dienooreenkomstig opgegradeer word. Ons verwag dat die stemming oor[Starknet Alpha v0.11.0](https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/#what_to_expect)binnekort oop sal wees.
+
+Ons moedig jou aan om al die besonderhede in die volgende plasings te lees en betrokke te raak by die besprekings in die[Starknet-gemeenskapsforum](https://community.starknet.io/).

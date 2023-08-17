@@ -1,0 +1,1 @@
+Användarna av Starknet som utvecklar Starknet applikationer. De skriver och distribuerar Starknet och Ethereum kontrakt.

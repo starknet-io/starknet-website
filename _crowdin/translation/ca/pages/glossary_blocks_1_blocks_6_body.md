@@ -1,0 +1,1 @@
+Un procés independent (ja sigui un servei en línia o intern al node) que rep la sortida dels programes del Caire i genera proves STARK per ser verificades. El Provedor envia la prova STARK al verificador que registra el fet a L1.

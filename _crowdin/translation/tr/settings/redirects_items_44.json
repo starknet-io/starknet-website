@@ -1,0 +1,4 @@
+{
+  "source": "/son gönderiler/:yol*",
+  "destination": "/tr/yazılar"
+}

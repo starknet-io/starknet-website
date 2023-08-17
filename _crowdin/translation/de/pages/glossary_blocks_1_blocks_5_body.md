@@ -1,0 +1,4 @@
+Bestellte Sätze von Starknet-Transaktionen, die über das Starknet-Betriebssystem ausgeführt werden, , was zu einer aggregierten Statusänderung führt, die dann dem Starknet L1-Kernvertrag verpflichtet ist. Ein Block hat:
+
+* … ein Blockhash – ein einzigartiger stabiler Identifikator, der verwendet werden kann, um den Block abzufragen und zu verweisen.
+* … eine Blocknummer – eine Ordinalnummer, die die Position des Blocks in der Reihenfolge der akzeptierten Blöcke in Starknet darstellt. Beachten Sie, dass sich die Anzahl der Blöcke im Laufe der Zeit ändern kann. Eine angegebene Zahl kann auch zu verschiedenen Zeiten auf verschiedene Blöcke verweisen, z.B. im Falle von L1-Kettenreorderungen.

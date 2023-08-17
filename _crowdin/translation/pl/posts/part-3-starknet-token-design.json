@@ -1,0 +1,5 @@
+{
+  "title": "Część 3: Żeton Starknet Design",
+  "time_to_consume": "5 minut odczytu",
+  "short_desc": "Projekt tokena StarkNet kształtuje konieczność zasilania sieci składającej się z: (i) Użytkowników StarkNet, (ii) Operatorzy – osoby dostarczające sieci zasobów obliczeniowych, które wykonują kolejność transakcji, generowanie dowodów STARK i dostawców długotrwałego przechowywania, oraz (iii) programistów pisających oprogramowanie dla swojej infrastruktury i aplikacji na jej terytorium.\n"
+}

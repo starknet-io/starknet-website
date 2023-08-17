@@ -1,0 +1,3 @@
+Die Starknet Token is nog nie te koop nie. Dit kan nie op hierdie stadium by jou beursie gevoeg word nie. Pasop vir swendelary.
+
+Die Starknet-token is in November 2022 op Ethereum Mainnet bekendgestel. Die Starknet-stigting sal op 'n later datum die besonderhede van die Gemeenskapskortings en Gemeenskapsvoorsieningsplanne aankondig, maar by die skryf hiervan moet hierdie besonderhede nog bepaal word. Pasop vir swendelary wat poseer om Starknet-tokens te verkoop.

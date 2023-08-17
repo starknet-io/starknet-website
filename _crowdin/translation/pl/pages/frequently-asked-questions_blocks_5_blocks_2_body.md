@@ -1,0 +1,1 @@
+Natywny token, który nagradza członków społeczności, którzy rozwijają sieć, przyczyni się do rozwoju ekosystemu w takim stopniu, że używanie nierodzimego tokenu nie. Ponadto, jeśli token jest nienaturalny, wstrząsy gospodarcze wynikające z decyzji podjętych w innych ekosystemach mogą mieć wpływ na usługę Starknet oraz jego użytkowników i dostawców.

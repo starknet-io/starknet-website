@@ -1,0 +1,1 @@
+Tällä hetkellä nro Starknetin maksut maksetaan nyt Etherissä (ETH). Mutta myöhemmin, me ennakoimme, että tulevaisuudessa maksut maksetaan yksinomaan natiivi Starknet Token.

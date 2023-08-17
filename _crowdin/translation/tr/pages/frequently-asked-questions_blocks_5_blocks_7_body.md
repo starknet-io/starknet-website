@@ -1,0 +1,3 @@
+Starknet Jetonu henüz satılık değil. Bu aşamada cüzdanınıza eklenemez. Dolandırıcılıklara dikkat edin.
+
+Starknet jetonu, Kasım 2022'de Ethereum Mainnet'te piyasaya sürüldü. Starknet Vakfı, Topluluk Geri Ödemeleri ve Topluluk Hükümleri planlarının ayrıntılarını daha sonraki bir tarihte açıklayacak, ancak bu ayrıntılar yazılırken henüz belirlenmedi. Starknet Jetonlarını satmak için poz veren dolandırıcılıklara dikkat edin.

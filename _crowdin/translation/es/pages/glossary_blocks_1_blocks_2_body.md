@@ -1,0 +1,1 @@
+Una colección de contratos (L1 y L2) que implementan colectivamente un flujo de negocio.

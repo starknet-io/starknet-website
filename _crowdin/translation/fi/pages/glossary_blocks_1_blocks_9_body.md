@@ -1,0 +1,4 @@
+Tässä L1-sopimuksessa määritellään järjestelmän tila siten, että L2-osavaltiolle tehdään sitoumus. Sopimus myös tallentaa Starknet OS ohjelma hash – tehokkaasti määrittelemällä versio Starknet on käynnissä. Starknetin konsensusmekanismina toimii L1-ydinsopimuksen sitova valtio, eli järjestelmä on turvattu L1-Ethereum -järjestelmän suostumuksella. Valtion säilyttämisen lisäksi Starknet L1 Core Contract on Starknetin tärkein toiminnan solmukohta L1:ssä. Erityisesti:
+
+* Se tallentaa luettelon sallituista todentajista (sopimukset), jotka voivat tarkistaa valtion päivitystapahtumat
+* Se helpottaa L1 ↔️ L2 yhteisvaikutusta

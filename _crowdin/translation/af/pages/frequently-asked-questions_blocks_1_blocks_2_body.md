@@ -1,0 +1,3 @@
+'n Goeie plek om te begin is die [Hello Starknet-tutoriaal](https://docs.starknet.io/documentation/), wat die ontwikkelaar stap vir stap deur die skryf en implementering van 'n eenvoudige kontrak lei. Die [Starknet Playground](https://starknet.io/playground/?lesson=starknet_contract) bied 'n omgewing om te leer hoe om Starknet-kontrakte te skryf en dit te toets. 
+
+U kan deel word van die ontwikkelaarsgemeenskap en dit ondersteun deur by die [Starknet Discord](https://discord.com/invite/QypNMzkHbc) -bediener aan te sluit.

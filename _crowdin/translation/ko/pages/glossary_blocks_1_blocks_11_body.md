@@ -1,0 +1,1 @@
+Starknet 네트워크의 메인 노드. 제출된 시퀀싱 트랜잭션의 핵심 기능을 구현합니다. 관련 입력으로 Starknet OS Cairo 프로그램을 실행하고 Proving Service 또는 일부 내부 STARK 증명자를 사용하여 결과를 증명하고 결국 Starknet Core Contract의 네트워크 상태를 업데이트합니다.
