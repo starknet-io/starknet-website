@@ -54,7 +54,7 @@ export const badgeTheme = defineStyleConfig({
     paddingLeft: "12px",
     paddingRight: "12px",
     borderRadius: "12px",
-    color: "badge-starkstruck-fg"
+    color: "badge-starkstruck-fg",
   },
   variants: {
     developers,
@@ -64,6 +64,7 @@ export const badgeTheme = defineStyleConfig({
     stark_at_home,
     governance,
     community_and_events,
+    events_and_webinars: community_and_events,
     foundation,
     ecosystem,
     github,
