@@ -99,8 +99,8 @@ items:
               - custom_title: Governance
                 custom_internal_link: /posts/governance
                 hide_from_footer: true
-              - custom_title: Stark math
-                custom_internal_link: /posts/stark-math
+              - custom_title: Tutorials & guides
+                custom_internal_link: /posts/tutorials-and-guides
                 hide_from_footer: true
               - custom_title: STARK Struck Podcast
                 custom_internal_link: /posts/stark-struck
