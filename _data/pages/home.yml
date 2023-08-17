@@ -22,36 +22,51 @@ blocks:
         columns: "4"
   - type: group
     blocks:
-      - size: large
-        color: orange
-        variant: large_card
-        orientation: left
-        withIllustration: false
-        title: What is Starknet?
-        icon: /assets/illustration-how-it-works.png
-        type: image_icon_link_card
-        link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: What is Starknet?
-        description: Starknet is a decentralized layer-2 network that enables Ethereum
-          to scale securely and dapps to achieve unlimited scale for
-          transactions and computation.
-        columns: "4"
-      - size: large
-        color: orange
-        variant: large_card
-        orientation: right
-        withIllustration: false
-        title: How does Starknet scale Ethereum?
-        icon: /assets/illustration-scaling.png
-        type: image_icon_link_card
-        link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: How does it work
-        description: 'Starknet uses math and cryptography to securely scale Ethereum. It
-          operates as a Validity-rollup (or ZK-rollup): it "bundles" many
-          transactions and "rolls" them to Ethereum as a single transaction.'
-        columns: "4"
+      - type: page_header
+        title: What do Ethereum + Starknet unlock?
+        description: "Together the networks unlock Ethereum’s vision for a fairer and
+          more open internet. Decentralised financial systems. Digital assets.
+          Trustless systems. "
+      - type: large_card
+        img: /assets/account-abstraction.png
+        title: Computational Integrity
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        linkText: Learn more ->
+        linkUrl: "#"
+        orientation: horizontal
+      - type: large_card
+        img: /assets/cairo.png
+        title: Computational Integrity
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        linkText: Learn more ->
+        linkUrl: "#"
+        orientation: vertical
+      - type: large_card
+        img: /assets/account-abstraction.png
+        title: Better UX Experience
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        linkText: Learn more ->
+        linkUrl: "#"
+        orientation: vertical
+      - type: large_card
+        img: /assets/cairo.png
+        title: Computational Integrity
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        linkText: Learn more ->
+        linkUrl: "#"
+        orientation: horizontal
   - heading: "Start building "
     description_variant: body
     blocks:
