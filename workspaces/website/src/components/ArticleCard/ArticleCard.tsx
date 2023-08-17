@@ -6,7 +6,8 @@ import {
   Image as ChakraImage,
   Icon,
   Flex,
-  useBreakpointValue
+  useBreakpointValue,
+  ChakraProps,
 } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
