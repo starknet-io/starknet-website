@@ -38,10 +38,11 @@ jobs:
         run: yarn
 
       - name: Set date environment variables
-        run: echo "YMDHM=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
-        run: echo "YMDH=$(date +%Y%m%d%H)" >> $GITHUB_ENV
-        run: echo "YMD=$(date +%Y%m%d)" >> $GITHUB_ENV
-        run: echo "YM=$(date +%Y%m)" >> $GITHUB_ENV
+        run: |
+          echo "YMDHM=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "YMDH=$(date +%Y%m%d%H)" >> $GITHUB_ENV
+          echo "YMD=$(date +%Y%m%d)" >> $GITHUB_ENV
+          echo "YM=$(date +%Y%m)" >> $GITHUB_ENV
 
       - name: Restore Crowdin Cache
         uses: actions/cache/restore@v3
@@ -69,7 +70,6 @@ jobs:
         env:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-
 
       - name: Save Crowdin Cache
         uses: actions/cache/save@v3
