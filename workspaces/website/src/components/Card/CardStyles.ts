@@ -36,6 +36,7 @@ export const IconLinkCardLayout = {
   gap: "32px 32px",
   flex: "1 0 0",
   flexWrap: "wrap",
+  height: "100%",
   ...CardStyle
 }
 export const IconLinkCardBodyLayout = {

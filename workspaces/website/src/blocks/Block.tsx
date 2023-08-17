@@ -1,8 +1,10 @@
 import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
+import { IconLinkCardBlock } from "./IconLinkCardBlock";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { AmbassadorsList } from "./AmbassadorsList";
 import { BlockCards } from "./BlockCards";
+import EcosystemBlock  from "./EcosystemHomepageBlock";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
@@ -42,6 +44,10 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
   } else if (block.type === "image_icon_link_card") {
     return <ImageIconCard {...block} locale={locale} />;
+  } else if (block.type === "icon_link_card") {
+    return <IconLinkCardBlock {...block} />;
+  } else if (block.type === "ecosystem_block") {
+    return <EcosystemBlock {...block} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} /> ;
   } else if (block.type === "ambassadors_list") {

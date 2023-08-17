@@ -23,6 +23,7 @@ import { CustomLink } from "@ui/Link";
 type BodyProps = {
   variant?: "grid" | "asset" | "large" | "iconLink";
   children: ReactNode;
+  height?: string;
 };
 
 type TitleProps = {
@@ -68,9 +69,10 @@ const titleStyles = {
   display: "flex",
 }
 
-export const CardBody = ({ variant, children }: BodyProps) => {
+export const CardBody = ({ variant, height, children }: BodyProps) => {
   let styles = {
-    ...variant === "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles
+    ...variant === "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles,
+    ...height && { height: height }
   }
   return (
     <Flex sx={styles}>

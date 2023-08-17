@@ -51,7 +51,7 @@ export const BlockCards = ({
   xl,
 }: Props) => {
   return (
-    <Box>
+    <Box maxW="1280px" m="0 auto">
       {heading && (
         <Heading
           variant="h3"

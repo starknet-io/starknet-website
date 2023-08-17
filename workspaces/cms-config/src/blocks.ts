@@ -364,6 +364,68 @@ export const blocks = [
     ],
   },
   {
+    name: "icon_link_card",
+    label: "Icon link card",
+    widget: "object",
+    fields: [
+      {
+        name: "img",
+        label: "Icon",
+        widget: "image"
+      },
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        required: true,
+        crowdin: true
+      },
+      {
+        name: "description",
+        label: "Description",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "linkText",
+        label: "Link text",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "linkUrl",
+        label: "Link url",
+        widget: "string",
+        crowdin: true
+      }
+    ],
+  },
+  {
+    name: "ecosystem_block",
+    label: "Ecosystem block",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "ctaText",
+        label: "CTA text",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "ctakUrl",
+        label: "CTA url",
+        widget: "string",
+        crowdin: true
+      }
+    ],
+  },
+  {
     name: "image_icon_link_card",
     label: "Image Icon link card",
     widget: "object",

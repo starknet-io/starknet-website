@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Box, Flex } from "@chakra-ui/react";
 import StarknetProject from "./StarknetProject";
 import './OutlineCardsStyle.css';
+import { Button } from "@ui/Button";
+import { Heading } from "@ui/Typography/Heading";
 
 type Project = {
   name: string;
@@ -70,7 +72,13 @@ const CircleRow: React.FC<CircleProps> = ({ items, direction }) => {
   );
 };
 
-const StarknetProjects: React.FC = () => {
+type EcosystemBlockProps = {
+  title: string;
+  ctaText: string;
+  ctaUrl: string;
+};
+
+const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
@@ -103,20 +111,34 @@ const StarknetProjects: React.FC = () => {
   if (filteredProjects) {
 
   return (
-    <Flex
-      direction="column"
-      gap="24px"
-      overflow="visible"
-      height="600px"
-    >
-      <CircleRow items={firstRowItems} direction="right" />
-      <CircleRow items={secondRowItems} direction="left" />
-      <CircleRow items={thirdRowItems} direction="right" />
-    </Flex>
+    <Box bg="#EDF7F7" padding="15% 50px"
+      sx={{
+        "clip-path": "polygon(0 10vw,100% 0,100% calc(100% - 10vw),0 100%)",
+        backgroundImage: "url(/assets/outline-bg.svg)",
+        backgroundSize: "130%",
+        backgroundPosition: "center"
+      }}>
+        <Box maxW="1280px" width="100%" m="0 auto" pt="10px" borderTop="1px solid #8DBABB">
+          <Heading variant="h2" color="heading-navy-fg" pb="108px">{title}</Heading>
+        </Box>
+        <Flex
+          direction="column"
+          gap="24px"
+          overflow="visible"
+          height="600px"
+        >
+          <CircleRow items={firstRowItems} direction="right" />
+          <CircleRow items={secondRowItems} direction="left" />
+          <CircleRow items={thirdRowItems} direction="right" />
+        </Flex>
+        <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
+        <Button variant="outline" mt="140px" bg="#e5eeee" href={ctaUrl}>{ctaText}</Button>
+      </Flex>
+    </Box>
   )
 } else {
   return null;
 }
 };
 
-export default StarknetProjects;
+export default EcosystemBlock;

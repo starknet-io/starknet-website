@@ -55,14 +55,14 @@ blocks:
   - heading: "Start building "
     description_variant: body
     blocks:
-      - type: card
+      - type: icon_link_card
         img: /assets/build-tutorials.svg
         title: Read the Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
         linkText: View
         linkUrl: /tutorials/
-      - type: card
+      - type: icon_link_card
         img: /assets/build_read_the_docs.svg
         title: Read the Starknet Book
         description: Developed by the Starknet community, the Starknet book teaches
@@ -70,7 +70,7 @@ blocks:
           the Ethereum world.
         linkText: View
         linkUrl: /documentation/
-      - type: card
+      - type: icon_link_card
         img: /assets/build_tools_resources.svg
         title: Set-up a Local Environment
         description: Learn how to get your dev environment up and running so you can
