@@ -147,7 +147,7 @@ export const HomepageHero = ({ seo }: Props) => {
           </Flex>
         </Box>
       </Box>
-      <Box bg="#8DBABB33" padding="15% 50px"
+      <Box bg="#EDF7F7" padding="15% 50px"
       sx={{
         "clip-path": "polygon(0 10vw,100% 0,100% calc(100% - 10vw),0 100%)",
         backgroundImage: "url(/assets/outline-bg.svg)",
