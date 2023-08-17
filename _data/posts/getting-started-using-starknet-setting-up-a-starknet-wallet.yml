@@ -44,21 +44,18 @@ blocks:
           Each of these steps is detailed either in other sections of this blog post, or in external documentation on another site.
 
 
-          * Set up an Ethereum wallet.
-
-
-          There are many. For a list, see [Ethereum wallets](https://ethereum.org/en/wallets/), and for a helpful guide, see [How to "create" an Ethereum account](https://ethereum.org/en/guides/how-to-create-an-ethereum-account/). Both are  on the Ethereum site. 
-
+          1. Set up an Ethereum wallet.\
+             There are many. For a list, see [Ethereum wallets](https://ethereum.org/en/wallets/), and for a helpful guide, see [How to "create" an Ethereum account](https://ethereum.org/en/guides/how-to-create-an-ethereum-account/). Both are  on the Ethereum site. 
 
           You can use a search engine like Google to help you decide on the right one for you. I found that [Best Ethereum Wallets of 2023](https://www.investopedia.com/best-ethereum-wallets-6830692) helped me, and to get started, I decided to use [MetaMask](https://metamask.io/). For information on setting up a wallet, see the documentation for the wallet you choose. 
 
 
-          * Deposit some ETH to your Ethereum wallet. You can use your credit card or your bank account with an exchange such as [Binance](https://www.binance.com/) or [Coinbase](https://www.coinbase.com/).
+          2. Deposit some ETH to your Ethereum wallet. You can use your credit card or your bank account with an exchange such as [Binance](https://www.binance.com/) or [Coinbase](https://www.coinbase.com/).
 
-          * Set up a Starknet wallet, which includes funding the wallet and deploying your account on Starknet. For more information, see [Setting up a Starknet wallet](https://docs.google.com/document/d/1IOu2wgYUyxxCkqid43DZIjGpK-3Uv-mcT10EiYzQDsQ/edit#heading=h.dxb1jmtyt4f) below. 
+          3. Set up a Starknet wallet, which includes funding the wallet and deploying your account on Starknet. For more information, see [Setting up a Starknet wallet](https://docs.google.com/document/d/1IOu2wgYUyxxCkqid43DZIjGpK-3Uv-mcT10EiYzQDsQ/edit#heading=h.dxb1jmtyt4f) below. 
 
 
-          **NOTE:** You can also add funds directly to your Starknet wallet from a credit card or bank by using an on-ramp service, such as [Banxa](https://banxa.com/) or [Ramp](https://ramp.network/). 
+          NOTE: You can also add funds directly to your Starknet wallet from a credit card or bank by using an on-ramp service, such as [Banxa](https://banxa.com/) or [Ramp](https://ramp.network/). 
 
 
           After you complete these procedures, you’ll be ready to start actually doing something. 
@@ -150,6 +147,7 @@ blocks:
 
           1. Go to JediSwap at <https://app.jediswap.xyz>.
 
+             ![](/assets/10-jediswap_connect_button.png)
           2. Connect your wallet by clicking Connect Wallet and then selecting your Starknet wallet.
 
           3. When your wallet prompts you to approve the connection, click Approve.\
@@ -166,27 +164,27 @@ blocks:
 
              ![Wallet post swap ](/assets/12-wallet_post_swap.png "Wallet post swap ")
 
-          ## What Now?
+          What now?
 
 
           Now that you've taken those first steps into Starknet, it's time to plunge deeper into the ever-expanding Starknet ecosystem. As a permissionless network, Starknet sees new developers constantly creating novel dApps and features like stars bursting into being.
 
 
-          To safely navigate the uncharted waters of Starknet, follow these mappings:
+          To safely navigate the uncharted waters of Starknet, make sure to:
 
 
-          * Research new releases. Regularly scan Starknet's news sites and follow the core community to stay oriented on the latest dApps emerging from the void. This universe evolves fast.
+          * Research new releases. Regularly scan Starknet's news sites and follow the core community to stay abreast of new dApps. This universe evolves fast.
 
-          * Do your own research before interacting with any dApp on Starknet. As with all permissionless platforms, do due diligence on dApp legitimacy and security before connecting your wallet.
+          * Research before interacting with any dApp on Starknet. As with all permissionless platforms, perform due diligence on the legitimacy and security of any dApp before connecting your wallet.
 
-          * Seek fellow travelers. The Starknet forum at <https://forum.starknet.io/> is ideal for learning from other pioneers' journeys, asking questions, stay critical.
+          * Seek fellow travelers. The Starknet forum at <https://forum.starknet.io/> is ideal for learning from the journeys of pioneers. Ask questions, think critically.
 
           * Be wary of scams. Verify URLs, transactions, and addresses - don't be lured into ambushes.
 
           * And most importantly, enable wallet protections like 2FA, [Hardware Signers](https://www.youtube.com/watch?v=PbGKTQQgZGA), or [Wallet Shields](https://www.argent.xyz/blog/argent-shield-2fa-for-argent-x/). This novel protection level is possible on Starknet because of [native account abstraction](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/). 
 
 
-          By staying alert and doing thorough research, you can enjoy the full benefits of Starknet's ever-growing array of dApps and integrations. As with any new technology, educated caution is very important. If something sounds too good to be true, it is possible. With some common sense, you can explore Starknet safely as it continues rapid decentralization.
+          By staying alert and doing thorough research, you can enjoy the full benefits of Starknet's ever-growing array of dApps and integrations. As with any new technology, educated caution is very important. If something sounds too good to be true, it probably is. With some common sense, you can explore Starknet safely.
 
 
           \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
