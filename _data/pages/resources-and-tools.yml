@@ -43,6 +43,12 @@ blocks:
           custom_external_link: https://github.com/Starknet-php/starknet.php
         subLabel:
           label: "A PHP SDK for Starknet "
+      - type: link_list_item
+        link:
+          custom_title: starknet.dart
+          custom_external_link: https://github.com/focustree/starknet.dart
+        subLabel:
+          label: "A Dart/Flutter SDK for Starknet"
   - type: link_list
     heading: Development frameworks
     listSize: lg
