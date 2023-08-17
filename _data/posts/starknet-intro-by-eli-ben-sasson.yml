@@ -1,0 +1,69 @@
+id: 071c8318-b8c3-4500-b778-a840c458d185
+post_type: video
+title: Starknet - Intro by Eli Ben-Sasson
+published_date: 2023-08-04T11:16:59.798Z
+video:
+  url: https://www.youtube.com/watch?v=Ftxm1o-1okc
+  id: Ftxm1o-1okc
+  data:
+    kind: youtube#video
+    etag: boZQeq59o8JNACAu0rZIO7QCWN0
+    id: Ftxm1o-1okc
+    snippet:
+      publishedAt: 2023-08-04T07:00:07Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Starknet - Intro - Eli Ben-Sasson
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Ftxm1o-1okc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Ftxm1o-1okc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Ftxm1o-1okc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Ftxm1o-1okc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Ftxm1o-1okc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Starknet - Intro - Eli Ben-Sasson
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT20M50S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/starknet-intro-by-eli-ben-sasson.jpg
+category: community-and-events

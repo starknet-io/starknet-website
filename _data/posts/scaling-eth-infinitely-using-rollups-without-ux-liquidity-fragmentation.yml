@@ -1,0 +1,71 @@
+id: b916d57e-3c04-4abb-908d-898f27ca3242
+post_type: video
+title: Scaling ETH "Infinitely" using Rollups without UX & Liquidity fragmentation
+published_date: 2023-08-04T12:12:20.260Z
+video:
+  url: https://www.youtube.com/watch?v=H107ar01zxw
+  id: H107ar01zxw
+  data:
+    kind: youtube#video
+    etag: QweUEUi56yETrHhRohQ-WPUOL9I
+    id: H107ar01zxw
+    snippet:
+      publishedAt: 2023-08-04T14:15:01Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Scaling ETH "Infinitely" using Rollups without UX & Liquidity
+        fragmentation - Daniel Lumi
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/H107ar01zxw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/H107ar01zxw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/H107ar01zxw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/H107ar01zxw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/H107ar01zxw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Scaling ETH "Infinitely" using Rollups without UX & Liquidity
+          fragmentation - Daniel Lumi
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT20M9S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/scaling-eth-infinitely-using-rollups-without-ux-liquidity-fragmentation.jpg
+category: community-and-events
