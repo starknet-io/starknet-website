@@ -49,6 +49,9 @@ type Props = {
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
+  const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=80px,height=auto,format=auto${props.image}`;
+  const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
+  
   return (
     <Box maxW="5xl">
       <LinkBox
@@ -83,7 +86,7 @@ export const ListCard = (props: Props) => {
                   <Img
                     width="full"
                     height="full"
-                    src={props.image}
+                    src={isProd ? cloudflareImage : props.image}
                     title={props.title}
                     objectFit="contain"
                   />
