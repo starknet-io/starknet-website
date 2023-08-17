@@ -1,6 +1,6 @@
 id: c0b83aa7-4ae7-4dfc-a064-45a82fefdcbe
 post_type: article
-title: "Getting started using Starknet: Setting up a Starknet wallet"
+title: "Getting Started Using Starknet: Setting Up a Starknet Wallet"
 toc: true
 published_date: 2023-08-17T06:57:33.268Z
 image: /assets/getting-started.png
@@ -38,7 +38,7 @@ blocks:
           You should also understand what wallets are, the difference between hot and cold wallets, EOAs and contract accounts. You can find this information on the [Ethereum website](https://ethereum.org/en/wallets/). 
 
 
-          ## High-level steps
+          ## High-Level Steps
 
 
           Each of these steps is detailed either in other sections of this blog post, or in external documentation on another site.
@@ -67,7 +67,7 @@ blocks:
           For example, this tutorial walks you through swapping ETH for another cryptocurrency using [Jediswap](https://app.jediswapio.xyz/). There are lots of other things you can do, such as providing liquidity to a pool, buying NFTs, minting your own NFTs, and playing games.
 
 
-          ## Let’s Get Started - Setting up a Starknet wallet
+          ## Let’s Get Started - Setting Up a Starknet Wallet
 
 
           Once you have an Ethereum wallet with some ETH, you can install and set up a Starknet wallet.
@@ -117,7 +117,7 @@ blocks:
 
           Your Starknet wallet is now connected, and it prompts you to add funds. In order to deploy your account on Starknet, you need to add funds.\
 
-          NOTE:Deploying an account incurs a small gas fee on Ethereum. But don’t worry, you only have to deploy the account once.
+          **NOTE**: Deploying an account incurs a small gas fee on Ethereum. But don’t worry, you only have to deploy the account once.
 
 
           7. Confirm that you’re on the Deposit tab. 
@@ -139,7 +139,7 @@ blocks:
           ![StarkGate updated balance ](/assets/9-starkgate_updated_bals.png "StarkGate updated balance ")
 
 
-          ## Swapping ETH for another token using JediSwap
+          ## Swapping ETH for Another Token Using JediSwap
 
 
           JediSwap is a community-driven Automated Market Maker (AMM) on Starknet that enables you to swap one type of token for another. The JediSwap documentation provides information on swapping and on adding liquidity. This procedure demonstrates swapping ETH for WBTC.
@@ -166,7 +166,7 @@ blocks:
 
              ![Wallet post swap ](/assets/12-wallet_post_swap.png "Wallet post swap ")
 
-          ## What now?
+          ## What Now?
 
 
           Now that you've taken those first steps into Starknet, it's time to plunge deeper into the ever-expanding Starknet ecosystem. As a permissionless network, Starknet sees new developers constantly creating novel dApps and features like stars bursting into being.
