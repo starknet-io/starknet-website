@@ -830,6 +830,19 @@ export const topLevelBlocks = [
         default: "sm",
       },
       {
+        name: "description",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "description_variant",
+        widget: "select",
+        options: ["cardBody", "body", "breadcrumbs", "footerLink", "textLink"],
+        required: false,
+        default: "sm",
+      },
+      {
         name: "blocks",
         label: "Blocks",
         widget: "list",
