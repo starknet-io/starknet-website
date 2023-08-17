@@ -95,7 +95,6 @@ blocks:
           2. Click the wallet that you want to use. In this example, click MetaMask, as it is already  installed.
 
           3. When your wallet prompts you to connect, approve the connection.\
-             \
              StarkGate completes the connection. Your Ethereum wallet is now connected.
           4. When StarkGate prompts you to connect a Starknet wallet, click Connect Starknet Wallet.
 
@@ -153,7 +152,6 @@ blocks:
 
           2. Connect your wallet by clicking Connect Wallet and then selecting your Starknet wallet.
 
-             ![JediSwap connect button ](/assets/10-jediswap_connect_button.png "JediSwap connect button ")
           3. When your wallet prompts you to approve the connection, click Approve.\
              Once JediSwap connects to your wallet, it shows your balance in each token that it supports. For example, my wallet has about 0.05 ETH.
 
