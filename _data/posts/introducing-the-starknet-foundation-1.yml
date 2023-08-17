@@ -1,0 +1,73 @@
+id: 4a5effd4-0c64-40d3-8dc2-f1a0f17ac7e3
+post_type: video
+title: "Introducing the Starknet Foundation "
+published_date: 2023-08-04T11:44:00.248Z
+video:
+  url: https://www.youtube.com/watch?v=WN6j00REwhY
+  id: WN6j00REwhY
+  data:
+    kind: youtube#video
+    etag: kqDNmNoZkXQZkW7pXMPzr_9dhB8
+    id: WN6j00REwhY
+    snippet:
+      publishedAt: 2023-08-04T07:30:06Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Introducing the Starknet Foundation - Diego Oliva
+      description: |-
+        Starknet Foundation Twitter : https://twitter.com/StarknetFndn
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/WN6j00REwhY/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/WN6j00REwhY/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/WN6j00REwhY/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/WN6j00REwhY/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/WN6j00REwhY/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Introducing the Starknet Foundation - Diego Oliva
+        description: |-
+          Starknet Foundation Twitter : https://twitter.com/StarknetFndn
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT24M52S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/introducing-the-starknet-foundation-diego-oliva.jpg
+category: community-and-events

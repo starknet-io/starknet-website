@@ -1,0 +1,69 @@
+id: 39f9a517-80b6-4c82-9948-6cfb278e3a8d
+post_type: video
+title: EVM Precompiles on Kakarot
+published_date: 2023-08-04T12:05:12.720Z
+video:
+  url: https://www.youtube.com/watch?v=5BndqgugKOU
+  id: 5BndqgugKOU
+  data:
+    kind: youtube#video
+    etag: _OpIjXsyEbtZDCpmPLdk1MMgSLI
+    id: 5BndqgugKOU
+    snippet:
+      publishedAt: 2023-08-04T13:45:00Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: EVM Precompiles on Kakarot - Clément Walter
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/5BndqgugKOU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/5BndqgugKOU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/5BndqgugKOU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/5BndqgugKOU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/5BndqgugKOU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: EVM Precompiles on Kakarot - Clément Walter
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT18M34S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/evm-precompiles-on-kakarot.jpg
+category: community-and-events
