@@ -36,11 +36,23 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      - name: Set date environment variables
+        run: echo "YMDHM=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+        run: echo "YMDH=$(date +%Y%m%d%H)" >> $GITHUB_ENV
+        run: echo "YMD=$(date +%Y%m%d)" >> $GITHUB_ENV
+        run: echo "YM=$(date +%Y%m)" >> $GITHUB_ENV
+
       - name: Restore Crowdin Cache
         uses: actions/cache/restore@v3
         with:
           path: _crowdin
-          key: crowdin-cache-${{ github.ref_name }}
+          key: crowdin-cache-${{ github.ref_name }}-${{ env.YMDHM }}
+          restore-keys: |
+            crowdin-cache-${{ github.ref_name }}-${{ env.YMDHM }}
+            crowdin-cache-${{ github.ref_name }}-${{ env.YMDH }}
+            crowdin-cache-${{ github.ref_name }}-${{ env.YMD }}
+            crowdin-cache-${{ github.ref_name }}-${{ env.YM }}
+            crowdin-cache-${{ github.ref_name }}
 
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
