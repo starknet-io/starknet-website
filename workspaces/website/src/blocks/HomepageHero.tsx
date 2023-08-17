@@ -2,7 +2,6 @@ import { Box, Flex, Img, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import StarknetProjects from "./EcosystemHomepageBlock";
 type Props = {
   readonly seo: {
     heroText: string;
@@ -146,21 +145,6 @@ export const HomepageHero = ({ seo }: Props) => {
             />
           </Flex>
         </Box>
-      </Box>
-      <Box bg="#EDF7F7" padding="15% 50px"
-      sx={{
-        "clip-path": "polygon(0 10vw,100% 0,100% calc(100% - 10vw),0 100%)",
-        backgroundImage: "url(/assets/outline-bg.svg)",
-        backgroundSize: "130%",
-        backgroundPosition: "center"
-      }}>
-        <Box maxW="1036px" width="100%" m="0 auto" pt="10px" borderTop="1px solid #8DBABB">
-          <Heading variant="h2" color="heading-navy-fg" pb="108px">Projects exploring new ideas</Heading>
-        </Box>
-        <StarknetProjects />
-        <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
-          <Button variant="outline" mt="140px" bg="#e5eeee">{`Check out all the projects ->`}</Button>
-        </Flex>
       </Box>
     </>
   );

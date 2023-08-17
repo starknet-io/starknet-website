@@ -27,6 +27,12 @@ export interface BasicCardBlock {
 
   readonly size?: "sm" | "md";
 }
+
+export interface CardBlock {
+  readonly type: "card";
+  readonly variant?: "grid" | "asset" | "large" | "iconLink";
+  readonly orientation?: "horizontal" | "vertical";
+}
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -162,7 +168,8 @@ export type Block =
   | AccordionBlock
   | OrderedBlock
   | ListCardItemsBlock
-  | AmbassadorsListBlock;
+  | AmbassadorsListBlock
+  | CardBlock;
 
 export interface Container {
   readonly type: "container";
