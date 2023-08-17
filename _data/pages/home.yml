@@ -79,7 +79,7 @@ blocks:
         linkUrl: /developers/tools-and-resources/
     heading_variant: h3
     base: 1
-    md: 2
+    md: 3
     type: flex_layout
     lg: 3
     description: "Together the networks unlock Ethereum’s vision for a fairer and
