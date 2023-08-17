@@ -52,12 +52,8 @@ blocks:
           operates as a Validity-rollup (or ZK-rollup): it "bundles" many
           transactions and "rolls" them to Ethereum as a single transaction.'
         columns: "4"
-  - type: flex_layout
-    heading_variant: h3
-    base: 1
-    md: 2
-    lg: 3
-    heading: "Start building "
+  - heading: "Start building "
+    description_variant: body
     blocks:
       - type: image_icon_link_card
         color: blue-default
@@ -88,6 +84,14 @@ blocks:
           page: 4c40a102-df5b-4f39-98fb-774d6841da9e
           custom_title: View resources
         withIllustration: true
+    heading_variant: h3
+    base: 1
+    md: 2
+    type: flex_layout
+    lg: 3
+    description: "Together the networks unlock Ethereum’s vision for a fairer and
+      more open internet.  Decentralised financial systems. Digital assets.
+      Trustless systems. "
   - type: flex_layout
     heading_variant: h3
     base: 1
