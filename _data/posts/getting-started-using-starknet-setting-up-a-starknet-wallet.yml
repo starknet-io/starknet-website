@@ -92,8 +92,6 @@ blocks:
              StarkGate prompts you to select an Ethereum wallet.
 
              ![Wallets Ethereum ](/assets/2-wallets_ethereum.png "Wallets Ethereum ")
-
-
           2. Click the wallet that you want to use. In this example, click MetaMask, as it is already  installed.
 
           3. When your wallet prompts you to connect, approve the connection.\
@@ -179,7 +177,7 @@ blocks:
           To safely navigate the uncharted waters of Starknet, follow these mappings:
 
 
-          * Research new releases. Regularly scan Starknet's news sites and follow the core community on X to stay oriented on the latest dApps emerging from the void. This universe evolves fast.
+          * Research new releases. Regularly scan Starknet's news sites and follow the core community to stay oriented on the latest dApps emerging from the void. This universe evolves fast.
 
           * Do your own research before interacting with any dApp on Starknet. As with all permissionless platforms, do due diligence on dApp legitimacy and security before connecting your wallet.
 
@@ -187,7 +185,7 @@ blocks:
 
           * Be wary of scams. Verify URLs, transactions, and addresses - don't be lured into ambushes.
 
-          * And the most importantly, enable wallet protections like 2FA, [Hardware Signers](https://www.youtube.com/watch?v=PbGKTQQgZGA), or [Wallet Shields](https://www.argent.xyz/blog/argent-shield-2fa-for-argent-x/). This novel protection level is possible on Starknet because of [native account abstraction](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/). 
+          * And most importantly, enable wallet protections like 2FA, [Hardware Signers](https://www.youtube.com/watch?v=PbGKTQQgZGA), or [Wallet Shields](https://www.argent.xyz/blog/argent-shield-2fa-for-argent-x/). This novel protection level is possible on Starknet because of [native account abstraction](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/). 
 
 
           By staying alert and doing thorough research, you can enjoy the full benefits of Starknet's ever-growing array of dApps and integrations. As with any new technology, educated caution is very important. If something sounds too good to be true, it is possible. With some common sense, you can explore Starknet safely as it continues rapid decentralization.
