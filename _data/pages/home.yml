@@ -85,6 +85,10 @@ blocks:
     description: "Together the networks unlock Ethereum’s vision for a fairer and
       more open internet.  Decentralised financial systems. Digital assets.
       Trustless systems. "
+  - type: ecosystem_block
+    title: Projects exploring new ideas
+    ctaText: Check out all the projects ->
+    ctakUrl: /ecosystem/dapps/
   - type: flex_layout
     heading_variant: h3
     base: 1
