@@ -1,5 +1,6 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 import React from "react";
 
 type Props = {
@@ -9,6 +10,8 @@ type Props = {
   lg?: number;
   xl?: number;
   heading?: string;
+  description?: string;
+  descriptionVariant?: "cardBody" | "body" | "breadcrumbs" | "footerLink" | "textLink";
   headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
@@ -39,6 +42,8 @@ export const renderHeadingVariant = (headingVariant: string) => {
 export const BlockCards = ({
   heading,
   headingVariant = "h3",
+  description,
+  descriptionVariant = "body",
   children,
   base = 2,
   md = 2,
@@ -56,6 +61,7 @@ export const BlockCards = ({
           {heading}
         </Heading>
       )}
+      {description ? <Text variant={descriptionVariant}>{description}</Text> : null}
       <SimpleGrid columns={{ base, md, lg, xl }} spacing="32px">
         {children}
       </SimpleGrid>
