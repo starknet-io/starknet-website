@@ -6,6 +6,7 @@ import {
   Image as ChakraImage,
   Icon,
   Flex,
+  useBreakpointValue,
   ChakraProps,
   useBreakpointValue
 } from "@chakra-ui/react";
