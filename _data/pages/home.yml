@@ -156,7 +156,7 @@ blocks:
         title: What is Starkex?
         pattern: circle-lines
         link: "#"
-    base: 2
-    md: 4
+    base: 1
+    md: 2
     lg: 4
     heading: FAQs
