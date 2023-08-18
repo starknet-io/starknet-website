@@ -49,17 +49,17 @@ jobs:
           path: _crowdin
           key: crowdin-cache-dev
 
-      - name: Restore social media cache
+      - name: Restore social media data
         uses: actions/cache/restore@v3
         with:
           path: _social-media
-          key: sm-${{ github.ref_name }}-${{ env.YMDHM }}
+          key: sm-cache-${{ github.ref_name }}-${{ env.YMDHM }}
           restore-keys: |
-            sm-${{ github.ref_name }}-${{ env.YMDH }}
-            sm-${{ github.ref_name }}-${{ env.YMD }}
-            sm-${{ github.ref_name }}-${{ env.YM }}
-            sm-${{ github.ref_name }}
-            sm-
+            sm-cache-${{ github.ref_name }}-${{ env.YMDH }}
+            sm-cache-${{ github.ref_name }}-${{ env.YMD }}
+            sm-cache-${{ github.ref_name }}-${{ env.YM }}
+            sm-cache-${{ github.ref_name }}
+            sm-cache-
 
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
@@ -89,4 +89,3 @@ jobs:
           wranglerVersion: '3'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}
-
