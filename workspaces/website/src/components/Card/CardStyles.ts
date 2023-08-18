@@ -15,6 +15,7 @@ export const LargeCardLayout = {
   gap: "32px 32px",
   flex: "1 0 0",
   flexWrap: "wrap",
+  flexDirection: "column",
   ...CardStyle
 }
 export const LargeCardHorizontalLayout = {

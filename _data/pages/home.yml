@@ -27,55 +27,43 @@ blocks:
         description: "Together the networks unlock Ethereum’s vision for a fairer and
           more open internet. Decentralised financial systems. Digital assets.
           Trustless systems. "
-      - type: large_card
-        img: /assets/account-abstraction.png
-        title: Computational Integrity
-        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        linkText: Learn more ->
-        linkUrl: "#"
-        orientation: horizontal
-      - type: large_card
-        img: /assets/cairo.png
-        title: Computational Integrity
-        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        linkText: Learn more ->
-        linkUrl: "#"
-        orientation: vertical
-      - type: large_card
-        img: /assets/account-abstraction.png
-        title: Better UX Experience
-        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        linkText: Learn more ->
-        linkUrl: "#"
-        orientation: vertical
-      - type: large_card
-        img: /assets/cairo.png
-        title: Computational Integrity
-        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        linkText: Learn more ->
-        linkUrl: "#"
-        orientation: horizontal
       - type: large_cards
         horizontal1:
+          img: /assets/account-abstraction.png
           title: Computational Integrity
+          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          linkText: Learn more ->
+          linkUrl: "#"
         vertical1:
+          img: /assets/cairo.png
           title: Computational Integrity
+          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          linkText: Learn more ->
+          linkUrl: "#"
         vertical2:
+          img: /assets/account-abstraction.png
           title: Better UX Experience
+          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          linkText: Learn more ->
+          linkUrl: "#"
         horizontal2:
+          img: /assets/cairo.png
           title: Computational Integrity
+          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          linkText: Learn more ->
+          linkUrl: "#"
   - heading: "Start building "
     description_variant: body
     blocks:

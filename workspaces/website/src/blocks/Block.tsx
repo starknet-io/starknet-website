@@ -1,6 +1,7 @@
 import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
 import { IconLinkCardBlock } from "./IconLinkCardBlock";
+import { LargeCardsBlock } from "./LargeCardsBlock";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { AmbassadorsList } from "./AmbassadorsList";
 import { BlockCards } from "./BlockCards";
@@ -46,6 +47,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return <ImageIconCard {...block} locale={locale} />;
   } else if (block.type === "icon_link_card") {
     return <IconLinkCardBlock {...block} />;
+  } else if (block.type === "large_card") {
+    return <LargeCardsBlock {...block} />;
   } else if (block.type === "ecosystem_block") {
     return <EcosystemBlock {...block} />;
   } else if (block.type === "markdown") {
@@ -69,6 +72,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         xl={block.xl}
         heading={block.heading}
         headingVariant={block.heading_variant}
+        descriptionVariant={block.description_variant}
+        description={block.description}
       >
         {block.blocks.map((block, i) => (
           <Block

@@ -154,6 +154,7 @@ export interface OrderedBlock {
 }
 
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type DescriptionVariant = "cardBody" | "body" | "breadcrumbs" | "footerLink" | "textLink";
 
 export type Block =
   | MarkdownBlock
@@ -184,6 +185,8 @@ export interface FlexLayoutBlock {
   readonly xl?: number;
   readonly heading?: string;
   readonly heading_variant?: HeadingVariant;
+  readonly description?: string;
+  readonly description_variant?: DescriptionVariant;
   readonly blocks: readonly Block[];
 }
 export interface GroupBlock {

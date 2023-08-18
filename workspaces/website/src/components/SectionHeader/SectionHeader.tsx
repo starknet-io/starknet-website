@@ -20,9 +20,10 @@ export const SectionHeader = ({
   return (
     <Box
       as="section"
+      maxW="864px"
       // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
-      <Stack spacing="3" pb={6}>
+      <Stack spacing="40px" pb={6}>
         <Box>
           <Heading
             variant="h2"
@@ -41,7 +42,6 @@ export const SectionHeader = ({
           )}
           {bottomContent}
         </Box>
-        <Divider variant="primary" />
       </Stack>
     </Box>
   );
