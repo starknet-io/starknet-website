@@ -1,27 +1,25 @@
 import { Box } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
-import { IconType } from "react-icons/lib";
 import { CardGradientBorder } from "./components/CardGradientBorder";
 import { useAsync } from "react-streaming";
 import { getSocialMediaData } from "@starknet-io/cms-data/src/getSocialMediaData";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { SiDiscord, SiTwitter } from "react-icons/si";
+import formatAnalyticsNumber from "src/utils/formatAnalyticsNumber";
 
 type Props = {
-  icon: IconType;
-  stat: string;
+  type: "twitter" | "discord";
   description?: string;
   bg?: string;
 };
 
 export const AnalyticsCard = ({
-  icon: Icon,
-  stat = "100k",
   description = "Followers on Social Media",
   bg = "surface.bgPage",
+  type = 'twitter',
 }: Props) => {
   const pageContext = usePageContext();
   const socialMedia = useAsync(['getSocialMediaData'], () => getSocialMediaData(pageContext.context));
-  console.log("socialMedia", socialMedia)
 
   return (
     <CardGradientBorder display="inline-block">
@@ -32,7 +30,12 @@ export const AnalyticsCard = ({
           justifyContent="space-between"
           gap="3xl"
         >
-          <Icon size="48px" fill="content.accent" />
+          {type === 'twitter' && (
+            <SiTwitter size="48px" fill="content.accent" />
+          )}
+          {type === 'discord' && (
+            <SiDiscord size="48px" fill="content.accent" />
+          )}
           <Box display="flex" flexDir="column" gap="4px">
             <Heading
               variant="h5"
@@ -41,7 +44,7 @@ export const AnalyticsCard = ({
               fontWeight={600}
               color="content.accent"
             >
-              {stat}
+              {formatAnalyticsNumber(socialMedia[type].followersCount)}
             </Heading>
             <Box
               fontSize={18}

@@ -1940,14 +1940,12 @@ export const AnalyticsCards = () => {
         my="4rem"
       >
         <AnalyticsCard
-          icon={SiTwitter}
           description="Followers on Social Media"
-          stat="100k"
-        />
+          type="twitter"
+          />
         <AnalyticsCard
-          icon={SiDiscord}
+          type="discord"
           description="Followers on Social Media"
-          stat="100k"
           bg="#FFFAD5"
         />
       </SimpleGrid>
