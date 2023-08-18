@@ -14,7 +14,8 @@ jobs:
         with:
           endpoint: https://discord.com/api/v9/invites/qypnmzkhbc?with_counts=true&with_expiration=true
           retry: true
-          save-location: _social-media/discord.json
+          save-location: _social-media
+          save-name: discord
 
       - name: Fetch Twitter followers data
         uses: JamesIves/fetch-api-data-action@v2
@@ -22,7 +23,8 @@ jobs:
           endpoint: https://api.twitter.com/1.1/users/show.json?screen_name=Starknet
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.TW_BEARER_TOKEN }}"} }'
           retry: true
-          save-location: _social-media/twitter.json
+          save-location: _social-media
+          save-name: twitter
 
       - name: Set date environment variables
         run: |

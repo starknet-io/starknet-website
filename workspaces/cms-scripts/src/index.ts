@@ -186,13 +186,6 @@ const createSocialMediaData = async () => {
     }
 }
 
-const readAllFilesInSocialMediaDir = async () => {
-  const filesPath = path.join(process.cwd(), "_social-media")
-  const filesInDir = await fs.readdir(filesPath);
-
-  console.log("filesInDir", filesInDir)
-}
-
 const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
@@ -348,4 +341,3 @@ await createRoadmapDetails()
 await createAnnouncementDetails()
 await createSharedData()
 await createSocialMediaData()
-await readAllFilesInSocialMediaDir()
