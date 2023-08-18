@@ -15,7 +15,7 @@ export const LargeCardLayout = {
   gap: "32px 32px",
   flex: "1 0 0",
   flexWrap: "wrap",
-  flexDirection: "column",
+  flexDirection: {base: "column-reverse", md: "column"},
   ...CardStyle
 }
 export const LargeCardHorizontalLayout = {
@@ -26,7 +26,9 @@ export const LargeCardHorizontalLayout = {
   alignContent: "center",
   gap: "16px 16px",
   flex: "1 0 0",
-  flexWrap: "wrap"
+  flexWrap: "wrap",
+  flexDirection: {base: "column-reverse", md: "row"},
+  ...CardStyle
 }
 export const IconLinkCardLayout = {
   display: "flex",
@@ -45,7 +47,8 @@ export const IconLinkCardBodyLayout = {
   flexDirection: "column",
   alignItems: "flex-start",
   gap: "20px",
-  alignSelf: "stretch"
+  alignSelf: "stretch",
+  ...CardStyle
 }
 export const IconLinkCardLinkLayout = {
   display: "flex",
@@ -97,7 +100,8 @@ export const AssetCardHorizontalLayout = {
   gap: "24px 24px",
   flex: "1 0 0",
   alignSelf: "stretch",
-  flexWrap: "wrap"
+  flexWrap: "wrap",
+  ...CardStyleWhite
 }
 export const AssetCardTitleLayout = {
   display: "flex",

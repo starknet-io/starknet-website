@@ -19,9 +19,9 @@ type Props = {
 
 export const LargeCardsBlock = (props: Props) => {
   const  { horizontal1, horizontal2, vertical1, vertical2 } = props;
-
+  console.log('ussao ', props)
   return (
-    <Box>
+    <Flex direction="column" gap="32px">
       <Card variant="large" orientation="horizontal">
           <img src={horizontal1.img} />
           <CardBody>
@@ -36,7 +36,7 @@ export const LargeCardsBlock = (props: Props) => {
               </CardLink>
           </CardBody>
       </Card>
-      <Flex>
+      <Flex gap="32px" direction={{ base: "column", md: "row" }}>
         <Card variant="large" orientation="vertical">
             <img src={vertical1.img} />
             <CardBody>
@@ -80,6 +80,6 @@ export const LargeCardsBlock = (props: Props) => {
               </CardLink>
           </CardBody>
       </Card>
-    </Box>
+    </Flex>
   )
 };

@@ -47,7 +47,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return <ImageIconCard {...block} locale={locale} />;
   } else if (block.type === "icon_link_card") {
     return <IconLinkCardBlock {...block} />;
-  } else if (block.type === "large_card") {
+  } else if (block.type === "large_cards") {
     return <LargeCardsBlock {...block} />;
   } else if (block.type === "ecosystem_block") {
     return <EcosystemBlock {...block} />;

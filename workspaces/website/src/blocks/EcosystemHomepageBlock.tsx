@@ -118,7 +118,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
         backgroundSize: "130%",
         backgroundPosition: "center"
       }}>
-        <Box maxW="1280px" width="100%" m="0 auto" pt="10px" borderTop="1px solid #8DBABB">
+        <Box maxW={{ base: "1296px", md: "1312px" }} px={{ base: "16px", md: "32px" }} width="100%" m="0 auto" pt="10px" borderTop="1px solid #8DBABB">
           <Heading variant="h2" color="heading-navy-fg" pb="108px">{title}</Heading>
         </Box>
         <Flex
@@ -132,7 +132,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           <CircleRow items={thirdRowItems} direction="right" />
         </Flex>
         <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
-        <Button variant="outline" mt="140px" bg="#e5eeee" href={ctaUrl}>{ctaText}</Button>
+        <Button variant="outline" mt="140px" bg="#EDF7F7" href={ctaUrl}>{ctaText}</Button>
       </Flex>
     </Box>
   )
