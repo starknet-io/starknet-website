@@ -32,8 +32,8 @@ blocks:
           img: /assets/account-abstraction.png
           title: Computational Integrity
           description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           linkText: Learn more ->
           linkUrl: "#"
@@ -41,8 +41,8 @@ blocks:
           img: /assets/cairo.png
           title: Computational Integrity
           description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           linkText: Learn more ->
           linkUrl: "#"
@@ -50,8 +50,8 @@ blocks:
           img: /assets/account-abstraction.png
           title: Better UX Experience
           description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           linkText: Learn more ->
           linkUrl: "#"
@@ -59,8 +59,8 @@ blocks:
           img: /assets/cairo.png
           title: Computational Integrity
           description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           linkText: Learn more ->
           linkUrl: "#"
@@ -140,42 +140,22 @@ blocks:
   - type: flex_layout
     heading_variant: h3
     blocks:
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: orange
-        title: "View all questions "
-        link:
-          custom_title: View
-          page: b5689d3a-348b-4ccb-b787-520b64c55e41
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: null
-        title: What is STARK?
-        link:
-          custom_title: View
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: orange
-        title: What is Cairo?
-        link:
-          custom_title: View
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: orange
-        title: "What is Starknet? "
-        link:
-          custom_title: View
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
+      - type: pattern_card
+        title: View all questions
+        pattern: two-lines
+        link: /learn/frequently-asked-questions
+      - type: pattern_card
+        title: What is Starknet?
+        link: /learn/what-is-starknet
+        pattern: ethereum
+      - type: pattern_card
+        title: How does Starknet work?
+        pattern: curly-lines
+        link: "#"
+      - type: pattern_card
+        title: What is Starkex?
+        pattern: circle-lines
+        link: "#"
     base: 2
     md: 4
     lg: 4
