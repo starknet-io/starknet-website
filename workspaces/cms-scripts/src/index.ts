@@ -127,10 +127,9 @@ const createSharedData = async () => {
 
 const createSocialMediaData = async () => {
   try {
-    const twitterRes = await fs.readFile(
-      path.join(process.cwd(), "_social-media", "twitter" + ".json"),
-      "utf8"
-      )
+      const twPath = path.join(process.cwd(), "_social-media", "twitter" + ".json")
+      console.log("twPath", twPath)
+      const twitterRes = await fs.readFile(twPath, "utf8")
 
       const discordRes = await fs.readFile(
         path.join(process.cwd(), "_social-media", "discord" + ".json"),
@@ -161,6 +160,7 @@ const createSocialMediaData = async () => {
       );
 
     } catch (error) {
+      console.log("createSocialMediaData error", error)
       try {
         await fs.readFile(
           path.join(process.cwd(), "public/data/social-media/data.json"),
@@ -184,6 +184,13 @@ const createSocialMediaData = async () => {
         );
       }
     }
+}
+
+const readAllFilesInSocialMediaDir = async () => {
+  const filesPath = path.join(process.cwd(), "_social-media")
+  const filesInDir = await fs.readdir(filesPath);
+
+  console.log("filesInDir", filesInDir)
 }
 
 const simpleDataTypes = [
@@ -341,3 +348,4 @@ await createRoadmapDetails()
 await createAnnouncementDetails()
 await createSharedData()
 await createSocialMediaData()
+await readAllFilesInSocialMediaDir()
