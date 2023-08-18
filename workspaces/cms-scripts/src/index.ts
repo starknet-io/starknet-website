@@ -151,6 +151,7 @@ const createSocialMediaData = async () => {
           followersCount: discordData.approximate_member_count,
       }
 
+      await fs.mkdir(`public/data/social-media`, { recursive: true });
       await write(
         path.join("public/data/social-media", "data.json"),
         {
@@ -177,7 +178,6 @@ const createSocialMediaData = async () => {
             followersCount: 172000,
           }
         }
-        await fs.mkdir(`public/data/social-media`, { recursive: true });
         await write(
           path.join("public/data/social-media", "data.json"),
           staticData
