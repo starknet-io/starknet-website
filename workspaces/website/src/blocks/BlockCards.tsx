@@ -51,7 +51,7 @@ export const BlockCards = ({
   xl,
 }: Props) => {
   return (
-    <Box maxW={{ base: "1296px", md: "1312px" }} m="0 auto" px={{ base: "16px", md: "32px" }}>
+    <Box maxW={{ base: "1296px", md: "1312px" }} width="100%" m="0 auto" px={{ base: "16px", md: "32px" }}>
       <Box maxW="864px">
         {heading && (
           <Heading
