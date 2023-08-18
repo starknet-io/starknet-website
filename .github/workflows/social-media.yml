@@ -1,0 +1,35 @@
+name: Fetching twitter and discord data
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # every day at midnight
+  workflow_dispatch:
+
+jobs:
+  update-social-media-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Discord members data 
+        uses: JamesIves/fetch-api-data-action@v2
+        with:
+          endpoint: https://discord.com/api/v9/invites/qypnmzkhbc?with_counts=true&with_expiration=true
+          retry: true
+          save-name: discord
+
+      - name: Fetch Twitter followers data
+        uses: JamesIves/fetch-api-data-action@v2
+        with:
+          endpoint: https://api.twitter.com/1.1/users/show.json?screen_name=Starknet
+          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.TW_BEARER_TOKEN }}"} }'
+          retry: true
+          save-name: twitter	
+
+      - name: Set date environment variables
+        run: |
+          echo "YMDHM=$(date +%Y-%m-%d%-H-%M)" >> $GITHUB_ENV
+
+      - name: Save social media data into cache
+        uses: actions/cache/save@v3
+        with:
+          path: _social-media
+          key: sm-cache-${{ github.ref_name }}-${{ env.YMDHM }}
