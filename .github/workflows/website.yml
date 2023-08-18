@@ -36,11 +36,30 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      - name: Set date environment variables
+        run: |
+          echo "YMDHM=$(date +%Y-%m-%d-%H-%M)" >> $GITHUB_ENV
+          echo "YMDH=$(date +%Y-%m-%d-%H)" >> $GITHUB_ENV
+          echo "YMD=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+          echo "YM=$(date +%Y-%m)" >> $GITHUB_ENV
+
       - name: Restore Crowdin Cache
         uses: actions/cache/restore@v3
         with:
           path: _crowdin
           key: crowdin-cache-dev
+
+      - name: Restore social media data
+        uses: actions/cache/restore@v3
+        with:
+          path: _social-media
+          key: sm-cache-${{ github.ref_name }}-${{ env.YMDHM }}
+          restore-keys: |
+            sm-cache-${{ github.ref_name }}-${{ env.YMDH }}
+            sm-cache-${{ github.ref_name }}-${{ env.YMD }}
+            sm-cache-${{ github.ref_name }}-${{ env.YM }}
+            sm-cache-${{ github.ref_name }}
+            sm-cache-
 
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
@@ -70,4 +89,3 @@ jobs:
           wranglerVersion: '3'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}
-
