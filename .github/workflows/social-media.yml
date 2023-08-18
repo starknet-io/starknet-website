@@ -26,7 +26,7 @@ jobs:
 
       - name: Set date environment variables
         run: |
-          echo "YMDHM=$(date +%Y-%m-%d%-H-%M)" >> $GITHUB_ENV
+          echo "YMDHM=$(date +%Y-%m-%d-%H-%M)" >> $GITHUB_ENV
 
       - name: Create _social-media if it does not exist
         run: |
