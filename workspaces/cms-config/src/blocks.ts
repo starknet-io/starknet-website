@@ -469,6 +469,31 @@ export const blocks = [
     meta: true
   },
   {
+    name: "pattern_card",
+    label: "Pattern card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        widget: "string",
+        label: "Title",
+        crowdin: true,
+      },
+      {
+        name: "link",
+        widget: "string",
+        label: "Link url",
+        crowdin: true,
+      },
+      {
+        name: "pattern",
+        widget: "select",
+        label: "Pattern",
+        options: ["two-lines", "ethereum", "curly-lines", "circle-lines"]
+      },
+    ],
+  },
+  {
     name: "ecosystem_block",
     label: "Ecosystem block",
     widget: "object",
