@@ -7,7 +7,7 @@ on:
 
 jobs:
   update-social-media-data:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Fetch Discord members data 
         uses: JamesIves/fetch-api-data-action@v2
@@ -27,6 +27,10 @@ jobs:
       - name: Set date environment variables
         run: |
           echo "YMDHM=$(date +%Y-%m-%d%-H-%M)" >> $GITHUB_ENV
+
+      - name: Create _social-media if it does not exist
+        run: |
+          mkdir -p _social-media
 
       - name: Save social media data into cache
         uses: actions/cache/save@v3
