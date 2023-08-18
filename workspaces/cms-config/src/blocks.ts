@@ -1,5 +1,38 @@
 import { CmsField, CmsFieldList } from "./types";
 
+export const largeCards = [
+  {
+    name: "img",
+    label: "Icon",
+    widget: "image"
+  },
+  {
+    name: "title",
+    label: "Title",
+    widget: "string",
+    required: true,
+    crowdin: true
+  },
+  {
+    name: "description",
+    label: "Description",
+    widget: "string",
+    crowdin: true
+  },
+  {
+    name: "linkText",
+    label: "Link text",
+    widget: "string",
+    crowdin: true
+  },
+  {
+    name: "linkUrl",
+    label: "Link url",
+    widget: "string",
+    crowdin: true
+  }
+] satisfies CmsField[]
+
 export const linkFields = [
   {
     label: "Custom Title",
@@ -399,6 +432,41 @@ export const blocks = [
         crowdin: true
       }
     ],
+  },
+  {
+    name: "large_cards",
+    label: "Large cards",
+    widget: "object",
+    fields: [
+      {
+        name: "horizontal1",
+        widget: "object",
+        label: "First horizontal card",
+        fields: largeCards
+      },
+      {
+        name: "vertical1",
+        widget: "object",
+        label: "First vertical card",
+        fields: largeCards
+      },
+      {
+        name: "vertical2",
+        widget: "object",
+        label: "Second vertical card",
+        fields: largeCards
+      },
+      {
+        name: "horizontal2",
+        widget: "object",
+        label: "Second horizontal card",
+        fields: largeCards
+      }
+    ],
+    crowdin: true,
+    required: false,
+    index_file: "",
+    meta: true
   },
   {
     name: "ecosystem_block",
@@ -886,6 +954,7 @@ export const topLevelBlocks = [
       },
       {
         name: "heading_variant",
+        label: "Heading variant",
         widget: "select",
         options: ["h1", "h2", "h3", "h4", "h5", "h6"],
         required: false,
@@ -899,6 +968,7 @@ export const topLevelBlocks = [
       },
       {
         name: "description_variant",
+        label: "Description text variant",
         widget: "select",
         options: ["cardBody", "body", "breadcrumbs", "footerLink", "textLink"],
         required: false,

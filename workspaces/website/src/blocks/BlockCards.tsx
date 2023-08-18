@@ -51,18 +51,21 @@ export const BlockCards = ({
   xl,
 }: Props) => {
   return (
-    <Box maxW="1280px" m="0 auto">
-      {heading && (
-        <Heading
-          variant="h3"
-          color="heading-navy-fg"
-          sx={renderHeadingVariant(headingVariant)}
-        >
-          {heading}
-        </Heading>
-      )}
-      {description ? <Text variant={descriptionVariant}>{description}</Text> : null}
-      <SimpleGrid columns={{ base, md, lg, xl }} spacing="32px">
+    <Box maxW="1280px" m="0 auto" px={{ base: "16px", md: "32px" }}>
+      <Box maxW="864px">
+        {heading && (
+          <Heading
+            variant="h3"
+            color="heading-navy-fg"
+            sx={renderHeadingVariant(headingVariant)}
+            mb="40px"
+          >
+            {heading}
+          </Heading>
+        )}
+        {description ? <Text variant={descriptionVariant} mb="40px">{description}</Text> : null}
+      </Box>
+      <SimpleGrid columns={{ base, md, lg, xl }} spacing={{base: "16px", md: "24px" }}>
         {children}
       </SimpleGrid>
     </Box>

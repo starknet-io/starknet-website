@@ -25,7 +25,7 @@ export const IconLinkCardBlock = (props: Props) => {
                         {description}
                     </Text> : null}
                 </Box>
-                {linkText ? <CardLink variant="iconLink" href={linkUrl ?? ""}>
+                {linkText ? <CardLink variant="iconLink" href={linkUrl as string}>
                     {linkText}{" "}
                     <svg
                     xmlns="http://www.w3.org/2000/svg"

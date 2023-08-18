@@ -9,7 +9,7 @@ export const BlockGrouping = ({
   children,
 }: Props) => {
   return (
-    <Flex direction="column" gap="32px">
+    <Flex direction="column" gap="32px" maxW="1280px" m="0 auto">
       {children}
     </Flex>
   );
