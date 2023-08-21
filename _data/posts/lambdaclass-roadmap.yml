@@ -1,0 +1,69 @@
+id: 2e40aa7e-f7d4-4092-8e11-cf464eade594
+post_type: article
+title: "LambdaClass : Roadmap "
+published_date: 2023-08-04T14:25:18.698Z
+video:
+  url: https://www.youtube.com/watch?v=_zHdjJUkqbQ
+  id: _zHdjJUkqbQ
+  data:
+    kind: youtube#video
+    etag: CZGBaW8cBAsfuaZ_lAUMLCw5TlQ
+    id: _zHdjJUkqbQ
+    snippet:
+      publishedAt: 2023-08-04T17:30:04Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "LambdaClass : Roadmap - Federico Carrone - Leandro Ferrigno"
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/_zHdjJUkqbQ/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/_zHdjJUkqbQ/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/_zHdjJUkqbQ/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/_zHdjJUkqbQ/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/_zHdjJUkqbQ/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "LambdaClass : Roadmap - Federico Carrone - Leandro Ferrigno"
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT21M25S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/lambdaclass-roadmap-federico-carrone-leandro-ferrigno.jpg
+category: community-and-events
