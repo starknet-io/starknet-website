@@ -7,21 +7,6 @@ blocks:
   - type: home_hero
   - type: group
     blocks:
-      - size: large
-        color: orange
-        variant: community_card
-        orientation: left
-        withIllustration: false
-        title: "Community led. "
-        type: image_icon_link_card
-        link:
-          custom_title: Get involved
-          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
-        description: "This website is a community powered guide to the Starknet
-          ecosystem.  "
-        columns: "4"
-  - type: group
-    blocks:
       - type: page_header
         title: What do Ethereum + Starknet unlock?
         description: "Together the networks unlock Ethereum’s vision for a fairer and
@@ -101,41 +86,6 @@ blocks:
     title: Projects exploring new ideas
     ctaText: Check out all the projects ->
     ctakUrl: /ecosystem/dapps/
-  - type: flex_layout
-    heading_variant: h3
-    base: 1
-    md: 2
-    lg: 3
-    heading: Use Starknet
-    blocks:
-      - type: image_icon_link_card
-        color: blue-default
-        title: Discover dapps
-        description: Explore dapps in the Starknet ecosystem – from Defi to NFTs and gaming.
-        icon: /assets/dapps.svg
-        link:
-          custom_title: Explore
-          page: 0dc3d102-0936-433e-9219-f46e3087e396
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: "Find a wallet "
-        description: Learn about wallets on Starknet and discover the options available.
-        icon: /assets/wallet.svg
-        link:
-          custom_title: View wallets
-          page: d202009a-3541-4366-b664-36ef2e492aa3
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: Deposit & withdraw funds
-        description: Learn how to deposit and withdraw funds for use in the Starknet
-          ecosystem.
-        icon: /assets/deposit-withdraw.svg
-        link:
-          custom_title: View options
-          page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
-        withIllustration: true
   - type: community_events
   - type: flex_layout
     heading_variant: h3
