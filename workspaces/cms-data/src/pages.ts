@@ -135,6 +135,12 @@ export interface HomeHeroBlock {
     readonly heroText: string;
   };
 }
+export interface PromoBlock {
+  readonly type: "promo_block";
+  readonly seo: {
+    readonly heroText: string;
+  };
+}
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
@@ -164,6 +170,7 @@ export type Block =
   | ImageIconLinkCardBlock
   | HeroBlock
   | HomeHeroBlock
+  | PromoBlock
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock

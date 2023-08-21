@@ -1,4 +1,5 @@
 
+import { useState, useEffect } from "react";
 import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
@@ -11,7 +12,7 @@ import { Flex } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import React, { Fragment } from "react";
-import { Box, ButtonGroup } from "@chakra-ui/react";
+import { Box, ButtonGroup, ColorModeProvider } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
@@ -28,7 +29,7 @@ export interface Props {
   readonly languageCenterSeo: SEOTexts['language'];
 }
 
-export default function Navbar({
+export function NavbarWrapper({
   mainMenu,
   env,
   searchSEO,
@@ -201,4 +202,51 @@ export default function Navbar({
       />
     </NavbarContainer>
   );
+}
+
+export default function Navbar({
+  mainMenu,
+  env,
+  searchSEO,
+  languageCenterSeo,
+}: Props) {
+  const { locale, urlPathname: pathname } = usePageContext();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  if (pathname === `/${locale}/` && !isScrolled) {
+    return (
+      <ColorModeProvider value="dark">
+        <NavbarWrapper
+          mainMenu={mainMenu}
+          env={env}
+          searchSEO={searchSEO}
+          languageCenterSeo={languageCenterSeo}
+        />
+      </ColorModeProvider>)}
+    else {
+    return (
+      <NavbarWrapper
+        mainMenu={mainMenu}
+        env={env}
+        searchSEO={searchSEO}
+        languageCenterSeo={languageCenterSeo}
+      />
+    )
+  }
 }

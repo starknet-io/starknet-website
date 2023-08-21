@@ -17,59 +17,25 @@ export const HomepageHero = ({ seo }: Props) => {
         as="section"
         pt="46px"
         pb="93px"
-        overflow="hidden"
         bg="#eaeaea"
         minHeight="729px"
         _dark={{
           bgGradient:
             "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
         }}
-        bgGradient="linear(0.59deg, #FBECF3 0.97%, #F3EBF7 26.24%, #F0F0FB 54.59%, #E6F0FF 99.96%)"
-        borderRadius="24px"
+        bgGradient="linear(0.59deg, #0C0C4F 0.97%, #0C0C4F 26.24%, #060625 99.96%)"
         position="relative"
         mt="-24px"
+        sx={{
+          overflow: "visible",
+          marginTop: "-150px",
+          paddingTop: "256px",
+          clipPath: "polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%)"
+        }}
       >
         <Box
-          inset={0}
-          position="absolute"
-          opacity="0.6"
-          mixBlendMode="overlay"
-          _dark={{
-            opacity: 0.3,
-          }}
-        >
-          <Img
-            zIndex={0}
-            pos="relative"
-            w="full"
-            h="full"
-            src="/assets/home/Pattern.png"
-            alt="Screenshot for Form builder"
-            objectFit={{ base: "cover", lg: "cover" }}
-          />
-        </Box>
-        <Box
           zIndex={2}
-          inset={0}
-          position="absolute"
-          mixBlendMode="color-dodge"
-          _dark={{
-            mixBlendMode: "soft-light",
-            opacity: 0.4,
-          }}
-        >
-          <Img
-            pos="relative"
-            w="full"
-            h="full"
-            src="/assets/home/curves.svg"
-            alt="curves"
-            objectFit={{ base: "cover", lg: "cover" }}
-          />
-        </Box>
-
-        <Box
-          zIndex={2}
+          minHeight="729px"
           maxW={{ base: "xl", md: "7xl" }}
           mx="auto"
           px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
@@ -85,26 +51,24 @@ export const HomepageHero = ({ seo }: Props) => {
               top={{ lg: "-64px" }}
               position="relative"
               flex="1"
-              maxW={{ lg: "xl" }}
               pt="0"
               order={{ base: 1, lg: 0 }}
             >
               <Heading
                 variant="h1hero"
-                color="heading-navy-fg"
+                color="white"
                 lineHeight="98.5px"
                 mt={{ base: "0", lg: "-20px" }}
               >
-                Ethereum’s next leap in <Intro />
+                Ethereum’s next<br/> leap in <Intro />
               </Heading>
               <Text
-                color="hero-subtitle-fg"
+                color="white"
                 mt="5"
                 fontSize="20px"
                 fontWeight="500"
-              >
-                {seo.heroText}
-              </Text>
+                dangerouslySetInnerHTML={{ __html: seo.heroText }}
+              />
 
               <Stack
                 direction={{ base: "column", md: "row" }}
@@ -115,18 +79,10 @@ export const HomepageHero = ({ seo }: Props) => {
               >
                 <Button
                   onClick={() => navigate("/en/developers")}
-                  size="lg"
                   minW="210px"
-                  variant="primaryHero"
+                  variant="outline"
                 >
                   Build on Starknet
-                </Button>
-                <Button
-                  size="lg"
-                  variant="secondaryHero"
-                  onClick={() => navigate("/en/what-is-starknet")}
-                >
-                  Learn the basics
                 </Button>
               </Stack>
             </Box>
@@ -134,14 +90,6 @@ export const HomepageHero = ({ seo }: Props) => {
               zIndex={0}
               order={{ base: 0, lg: 1 }}
               // boxSize={{ base: "20", lg: "8" }}
-            />
-            <Img
-              position="relative"
-              marginRight={{ sm: "-70px", md: "-10px", lg: "-5rem", xl: "-9rem" }}
-              right={{ base: "-2rem", md: "-3rem", lg: "auto" }}
-              width={{ base: "100%", lg: "35rem" }}
-              src="/assets/home/hero_illustration.png"
-              alt="Screenshot for Form builder"
             />
           </Flex>
         </Box>

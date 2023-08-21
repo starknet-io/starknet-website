@@ -345,6 +345,17 @@ export const blocks = [
     ],
   },
   {
+    name: "promo_block",
+    label: "Promo block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+    ],
+  },
+  {
     name: "community_events",
     label: "Community events block",
     widget: "object",
