@@ -1,0 +1,67 @@
+id: 9b3571c9-af0b-442b-99a3-1b5ee65feb81
+post_type: video
+title: STARK-pilling the World through content creation
+published_date: 2023-08-04T07:17:09.897Z
+video:
+  url: https://www.youtube.com/watch?v=IgaBEq27hls
+  id: IgaBEq27hls
+  data:
+    kind: youtube#video
+    etag: w9JqGHTIp69QvNUz7B_o8iA7Ca4
+    id: IgaBEq27hls
+    snippet:
+      publishedAt: 2023-08-04T16:30:05Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Starkpilling the World through content creation - Nurstar - Gurkha -
+        Henri Lieutaud - Emma Lee
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/IgaBEq27hls/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/IgaBEq27hls/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/IgaBEq27hls/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/IgaBEq27hls/sddefault.jpg
+          width: 640
+          height: 480
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Starkpilling the World through content creation - Nurstar - Gurkha -
+          Henri Lieutaud - Emma Lee
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT26M30S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: ""
+category: community-and-events
