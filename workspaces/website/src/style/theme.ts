@@ -30,18 +30,28 @@ const theme = extendTheme(proTheme, {
       nebula: "#4A4AB5",
     },
     content: {
+      default: "#04030DAB",
+      defaultHover: "#0C0C4F",
+      defaultDisabled: "#908E96",
+      success: "#30B37C",
+      danger: "#E4442F",
       support: "rgba(12, 12, 79, 0.72)",
       accent: "#0C0C4F",
     },
     border: {
       card: "#ECECF9",
+      divider: "rgba(35, 25, 45, 0.10)",
     },
     surface: {
       accent: "#0C0C4F",
       accentText: "#FBFBFB",
+      "on-surface-inverted": "#FBFBFB",
       accentInverted: "#F0F0FF",
       accentInvertedText: "#161618",
       bgPage: "#F6F6F6",
+      card: "#FFFFFF",
+      transparent: "#4826480F",
+      transparentHover: "#2B1E3714",
     },
     offWhite: "#EAEFEE",
     sea: {
@@ -179,6 +189,15 @@ const theme = extendTheme(proTheme, {
     "4xl": "80px",
     "5xl": "120px",
     "6xl": "160px",
+  },
+  radii: {
+    none: "0",
+    base: "4px",
+    xs: "8px",
+    sm: "12px",
+    md: "16px",
+    lg: "24px",
+    round: "999px",
   },
 });
 export default theme;

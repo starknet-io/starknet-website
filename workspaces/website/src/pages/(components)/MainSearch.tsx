@@ -100,7 +100,7 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  seo: SEOTexts['search']
+  seo: SEOTexts["search"];
 }
 
 export function MainSearch({ env, seo }: Props): JSX.Element | null {
@@ -139,7 +139,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
           },
           onSelect({ setIsOpen }) {
             setIsOpen(true);
-          }
+          },
         };
       },
     });
@@ -173,7 +173,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
           },
           onSelect({ setIsOpen }) {
             setIsOpen(true);
-          }
+          },
         };
       },
     });
@@ -189,7 +189,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
   }, []);
 
   return (
-    <Box position="relative" height="44px">
+    <Box position="relative" height="44px" className="group">
       <Autocomplete<any>
         detachedMediaQuery=""
         openOnFocus={true}
@@ -302,7 +302,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
       />
       <Kbd
         background="kbd-bg"
-        color="default-fg"
+        color="content.default"
         padding="8px 16px"
         borderRadius="4px"
         borderWidth="0px"
@@ -313,6 +313,9 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         onClick={() => searchBox?.click()}
         pointerEvents="none"
         display={{ base: "none", lg: "block" }}
+        _groupHover={{
+          color: "content.defaultHover",
+        }}
       >
         /
       </Kbd>
