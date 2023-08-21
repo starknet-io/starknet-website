@@ -16,39 +16,48 @@ blocks:
       - type: large_cards
         horizontal1:
           img: /assets/unlimited-scale.png
-          title: Computational Integrity
-          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          linkText: Learn more ->
+          title: Unlimited Scale
+          description: Starknet utilizes the power of STARK technology to ensure
+            computational integrity.   By validating off-chain transactions with
+            advanced math and cryptography, Starknet overcomes Ethereum’s
+            scalability limitations. Starknet is a Validity Rollup that provides
+            unlimited scale while retaining Ethereum’s security and
+            decentralization.
+          linkText: Discover Validity Rollups ->
           linkUrl: "#"
         vertical1:
-          img: /assets/cairo.png
-          title: Computational Integrity
-          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          linkText: Learn more ->
+          img: /assets/superior-ux.png
+          title: Superior UX
+          description: "Starknet offers efficient and user-friendly experiences by
+            employing Native Account Abstraction.   All accounts are smart
+            accounts: their behavior is determined by their developers rather
+            than at the protocol level. This means unparalleled flexibility in
+            account management. Developers can customize their applications
+            beyond protocol constraints to elevate user experience and
+            security.  "
+          linkText: Dive into Native AA ->
           linkUrl: "#"
         vertical2:
-          img: /assets/account-abstraction.png
-          title: Better UX Experience
-          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          linkText: Learn more ->
+          img: /assets/thriving-ecosystem.png
+          title: Thriving Ecosystem
+          description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
+            passionate community of developers, users, and partners.   With the
+            Starknet Stack evolving at an astounding pace, this vibrant
+            collective has developed the most decentralized Rollup Stack,
+            enhancing network security, censorship resistance, resilience, and
+            transparency.
+          linkText: The growing Starknet Stack ->
           linkUrl: "#"
         horizontal2:
-          img: /assets/cairo.png
-          title: Computational Integrity
-          description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          linkText: Learn more ->
+          img: /assets/creativity-unleased.png
+          title: Creativity Unleashed
+          description: Starknet devs are empowered to code solutions that make a
+            difference.   Cairo, Starknet’s native smart contract language,
+            allows developers to push the boundaries of their applications by
+            allowing them to code any kind of business logic.   Building with
+            Cairo, developers can let their vision reach its full potential on
+            Starknet.
+          linkText: Build with Cairo ->
           linkUrl: "#"
   - heading: "Start building "
     description_variant: body
