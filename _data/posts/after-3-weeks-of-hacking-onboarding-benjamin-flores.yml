@@ -1,0 +1,69 @@
+id: ab87b449-e957-45ab-85db-ae1d842a00c2
+post_type: video
+title: After 3 weeks of hacking & onboarding - Benjamin Flores
+published_date: 2023-08-04T07:20:28.029Z
+video:
+  url: https://www.youtube.com/watch?v=M4Ex8zEjp30
+  id: M4Ex8zEjp30
+  data:
+    kind: youtube#video
+    etag: JO01hnMyxGURBmxazy4I6EGFB-g
+    id: M4Ex8zEjp30
+    snippet:
+      publishedAt: 2023-08-04T17:00:13.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/M4Ex8zEjp30/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/M4Ex8zEjp30/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/M4Ex8zEjp30/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/M4Ex8zEjp30/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/M4Ex8zEjp30/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en
+      channelTitle: StarkNetCC
+      title: After 3 weeks of hacking & onboarding - Benjamin Flores
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      defaultLanguage: en
+      categoryId: "28"
+      localized:
+        title: After 3 weeks of hacking & onboarding - Benjamin Flores
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+    contentDetails:
+      duration: PT9M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/after-3-weeks-of-hacking-onboarding-benjamin-flores.jpg
+category: community-and-events
