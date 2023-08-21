@@ -1,0 +1,64 @@
+id: bfe6cfd2-31ef-42ab-acb1-4bc512c8a551
+post_type: video
+title: Interoperability / Fragmentation of L2s and fractal L3s
+published_date: 2023-08-04T14:27:01.535Z
+video:
+  url: https://www.youtube.com/watch?v=ThYpLCmS73k
+  id: ThYpLCmS73k
+  data:
+    kind: youtube#video
+    etag: fsKXNmP-RkEwoBP91TIftSWOpcY
+    id: ThYpLCmS73k
+    snippet:
+      publishedAt: 2023-08-04T18:00:10Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Interoperability/fragmentation of L2s and fractal L3s
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/ThYpLCmS73k/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/ThYpLCmS73k/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/ThYpLCmS73k/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/ThYpLCmS73k/sddefault.jpg
+          width: 640
+          height: 480
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Interoperability/fragmentation of L2s and fractal L3s
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT28M53S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+category: community-and-events
