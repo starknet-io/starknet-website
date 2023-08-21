@@ -125,6 +125,67 @@ const createSharedData = async () => {
   }
 };
 
+const createSocialMediaData = async () => {
+  try {
+      const twPath = path.join(process.cwd(), "_social-media", "twitter" + ".json")
+      console.log("twPath", twPath)
+      const twitterRes = await fs.readFile(twPath, "utf8")
+
+      const discordRes = await fs.readFile(
+        path.join(process.cwd(), "_social-media", "discord" + ".json"),
+        "utf8"
+      )
+
+      const twitterData = JSON.parse(twitterRes);
+      const discordData = JSON.parse(discordRes);
+
+      const twitter = {
+          id: twitterData.id,
+          name: twitterData.screen_name,
+          followersCount: twitterData.followers_count,
+      }
+
+      const discord = {
+          id: discordData.id,
+          name: discordData.guild.name,
+          followersCount: discordData.approximate_member_count,
+      }
+
+      await fs.mkdir(`public/data/social-media`, { recursive: true });
+      await write(
+        path.join("public/data/social-media", "data.json"),
+        {
+          twitter,
+          discord,
+        }
+      );
+
+    } catch (error) {
+      console.log("createSocialMediaData error", error)
+      try {
+        await fs.readFile(
+          path.join(process.cwd(), "public/data/social-media/data.json"),
+          "utf8"
+          )
+      } catch(e) {
+        const staticData = {
+          discord: {
+            name: "Starknet",
+            followersCount: 177000,
+          },
+          twitter: {
+            name: "Starknet",
+            followersCount: 172000,
+          }
+        }
+        await write(
+          path.join("public/data/social-media", "data.json"),
+          staticData
+        );
+      }
+    }
+}
+
 const simpleDataTypes = [
   await getSimpleData("categories"),
   await getSimpleData("events"),
@@ -279,3 +340,4 @@ await write(`workspaces/website/redirects.json`, redirects);
 await createRoadmapDetails()
 await createAnnouncementDetails()
 await createSharedData()
+await createSocialMediaData()
