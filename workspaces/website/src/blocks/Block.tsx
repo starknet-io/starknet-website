@@ -19,6 +19,7 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
+import { PromoBlock } from "./PromoBlock";
 import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
@@ -161,6 +162,13 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
 
     return <HomepageHero seo={homeSEO} />;
+  } else if (block.type === "promo_block") {
+      const pageContext = usePageContext();
+      const homeSEO = useAsync(["getBlockExplorers", locale], () =>
+        getHomeSEO(locale, pageContext.context)
+      );
+  
+      return <PromoBlock seo={homeSEO} />;
   } else if (block.type === "card_list") {
     return (
       <ListCardItems
