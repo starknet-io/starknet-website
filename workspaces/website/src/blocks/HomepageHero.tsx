@@ -2,6 +2,8 @@ import { Box, Flex, Img, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
+
 type Props = {
   readonly seo: {
     heroText: string;
@@ -77,13 +79,24 @@ export const HomepageHero = ({ seo }: Props) => {
                 position={{ base: "relative", md: "relative" }}
                 zIndex={4}
               >
-                <Button
-                  onClick={() => navigate("/en/developers")}
-                  minW="210px"
-                  variant="outline"
+                <Box
+                  sx={{
+                    background: "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
+                    border: "1px solid transparent",
+                    borderRadius: "8px"
+                  }}
                 >
-                  Build on Starknet
-                </Button>
+                  <Button
+                    onClick={() => navigate("/en/developers")}
+                    minW="210px"
+                    variant="solid"
+                    sx={{
+                      bg: "#0C0C4F"
+                    }}
+                  >
+                    Build on Starknet
+                  </Button>
+                </Box>
               </Stack>
             </Box>
             <Box
