@@ -1,0 +1,69 @@
+id: c133c1c2-ea99-49e1-be96-f6710df64b5e
+post_type: video
+title: Starknet Infrastructure & Web3 Routers
+published_date: 2023-08-04T14:23:52.541Z
+video:
+  url: https://www.youtube.com/watch?v=Y9sy3XspeEI
+  id: Y9sy3XspeEI
+  data:
+    kind: youtube#video
+    etag: B5cXbFbP39AeDywkH8JSC_yikvo
+    id: Y9sy3XspeEI
+    snippet:
+      publishedAt: 2023-08-04T17:15:01Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Starknet Infrastructure & Web3 Routers - Antiryo
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Y9sy3XspeEI/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Y9sy3XspeEI/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Y9sy3XspeEI/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Y9sy3XspeEI/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Y9sy3XspeEI/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Starknet Infrastructure & Web3 Routers - Antiryo
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT5M57S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/starknet-infrastructure-web3-routers-antiryo.jpg
+category: community-and-events
