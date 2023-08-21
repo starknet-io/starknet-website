@@ -1,0 +1,69 @@
+id: 3c355cc3-08e0-49b0-8d69-840fdf652170
+post_type: video
+title: "Starknet in Rust "
+published_date: 2023-08-04T14:57:03.724Z
+video:
+  url: https://www.youtube.com/watch?v=229fN4-nD9k
+  id: 229fN4-nD9k
+  data:
+    kind: youtube#video
+    etag: wxI6pWegpsWR1cX4_vGnore8hUY
+    id: 229fN4-nD9k
+    snippet:
+      publishedAt: 2023-08-04T15:45:00Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Starknet in Rust - Juan Bono
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/229fN4-nD9k/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/229fN4-nD9k/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/229fN4-nD9k/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/229fN4-nD9k/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/229fN4-nD9k/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Starknet in Rust - Juan Bono
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT7M41S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/starknet-in-rust-juan-bono.jpg
+category: community-and-events
