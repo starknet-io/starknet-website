@@ -84,6 +84,9 @@ export function Autocomplete<TItem extends BaseItem>(
 
         panelRootRef.current.render(children);
       },
+      renderNoResults({ state, render }, root) {
+        render(`No results for "${state.query}".`, root);
+      },
     });
 
     return () => {
@@ -189,7 +192,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
   }, []);
 
   return (
-    <Box position="relative" height="44px" className="group">
+    <Box position="relative" height="44px" className="group" pos="relative">
       <Autocomplete<any>
         detachedMediaQuery=""
         openOnFocus={true}
@@ -307,7 +310,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         borderRadius="4px"
         borderWidth="0px"
         position="absolute"
-        top="7px"
+        top="5px"
         right="8px"
         cursor="pointer"
         onClick={() => searchBox?.click()}
