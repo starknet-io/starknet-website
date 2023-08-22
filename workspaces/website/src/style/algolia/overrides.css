@@ -421,14 +421,14 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   flex-direction: column;
   align-items: center;
   gap: var(--chakra-space-3xl);
-  padding-block: 120px;
-  max-height: var(--aa-detached-modal-max-height);
+  height: var(--aa-detached-modal-max-height);
+  justify-content: center;
 }
 
 @media screen and (max-width: 680px) {
   .algolia-no-results {
-    padding-block: 80px;
-    max-height: auto;
+    padding-top: clamp(80px, 140px, 15vh);
+    height: auto;
   }
 }
 
