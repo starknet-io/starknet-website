@@ -20,7 +20,7 @@ export const HomepageHero = ({ seo }: Props) => {
         pt="46px"
         pb="93px"
         bg="#eaeaea"
-        minHeight="729px"
+        minHeight="600px"
         _dark={{
           bgGradient:
             "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
@@ -32,12 +32,12 @@ export const HomepageHero = ({ seo }: Props) => {
           overflow: "visible",
           marginTop: "-150px",
           paddingTop: "256px",
-          clipPath: "polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%)"
+          clipPath: "polygon(0 0,100% 0,100% calc(100% - 14vw),0 100%)"
         }}
       >
         <Box
           zIndex={2}
-          minHeight="729px"
+          minHeight="600px"
           maxW={{ base: "xl", md: "7xl" }}
           mx="auto"
           px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
@@ -58,16 +58,18 @@ export const HomepageHero = ({ seo }: Props) => {
             >
               <Heading
                 variant="h1hero"
-                color="white"
+                color="hero-subtitle-fg"
                 lineHeight="98.5px"
                 mt={{ base: "0", lg: "-20px" }}
+                fontWeight="500"
               >
                 Ethereum’s next<br/> leap in <Intro />
               </Heading>
               <Text
-                color="white"
-                mt="5"
+                color="hero-subtitle-fg"
+                mt="31px"
                 fontSize="20px"
+                lineHeight="36px"
                 fontWeight="500"
                 dangerouslySetInnerHTML={{ __html: seo.heroText }}
               />
@@ -75,20 +77,19 @@ export const HomepageHero = ({ seo }: Props) => {
               <Stack
                 direction={{ base: "column", md: "row" }}
                 spacing="4"
-                mt="72px"
+                mt="47px"
                 position={{ base: "relative", md: "relative" }}
                 zIndex={4}
               >
                 <Box
                   sx={{
-                    background: "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
+                    background: "linear-gradient(78deg, #FFFDD8 -10%, #8BF3F9 40%, #EC796B 75%, #D672EF 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
                     border: "1px solid transparent",
                     borderRadius: "8px"
                   }}
                 >
                   <Button
                     onClick={() => navigate("/en/developers")}
-                    minW="210px"
                     variant="solid"
                     sx={{
                       bg: "#0C0C4F"

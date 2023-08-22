@@ -530,6 +530,25 @@ export const blocks = [
     ],
   },
   {
+    name: "social_block",
+    label: "Social homepage block",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "description",
+        label: "Description",
+        widget: "string",
+        crowdin: true
+      }
+    ],
+  },
+  {
     name: "image_icon_link_card",
     label: "Image Icon link card",
     widget: "object",

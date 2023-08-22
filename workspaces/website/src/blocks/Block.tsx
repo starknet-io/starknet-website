@@ -7,6 +7,7 @@ import { MarkdownBlock } from "./MarkdownBlock";
 import { AmbassadorsList } from "./AmbassadorsList";
 import { BlockCards } from "./BlockCards";
 import EcosystemBlock  from "./EcosystemHomepageBlock";
+import SocialHomepageBlock from "./SocialHomepageBlock";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
@@ -55,6 +56,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return <PatternCard {...block} />;
   } else if (block.type === "ecosystem_block") {
     return <EcosystemBlock {...block} />;
+  } else if (block.type === "social_block") {
+    return <SocialHomepageBlock {...block} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} /> ;
   } else if (block.type === "ambassadors_list") {

@@ -12,9 +12,9 @@ export const PromoBlock = ({ seo }: Props) => {
   return (
     <Box
       bg="linear-gradient(216deg, #040E56 0%, #040E56 30%, #412EB7 44.79%, #EC796B 100%)"
-      mt="-346px"
+      mt="-372px"
       sx={{
-        clipPath: "polygon(0 10vw,100% 0,100% calc(100% - 10vw),0 100%)",
+        clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
       }}
     >
       <Box
@@ -23,13 +23,13 @@ export const PromoBlock = ({ seo }: Props) => {
           backgroundSize: "100%",
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
-          height: 465
+          height: 530
         }}
       >
         <Box
           maxW={{ base: "1296px", md: "1312px" }}
           px={{ base: "16px", md: "32px" }}
-          py="120px"
+          py="140px"
           m="0 auto"
           sx={{
             alignItems: "flex-end",
@@ -50,7 +50,7 @@ export const PromoBlock = ({ seo }: Props) => {
             letterSpacing: "0.84px",
             alignItems: "center",
             py: "16px",
-            mb: "16px",
+            mb: "24px",
             borderTop: "1px solid var(--static-white-9, rgba(255, 255, 255, 0.44))",
             borderBottom: "1px solid var(--static-white-9, rgba(255, 255, 255, 0.44))"
           }}>

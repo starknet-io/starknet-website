@@ -8,26 +8,47 @@ export const CardStyleWhite = {
 }
 export const LargeCardLayout = {
   display: "flex",
-  padding: { base: "24px", lg: "40px" },
+  padding: { base: "24px", lg: "80px" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
-  gap: "32px 32px",
+  gap: { base: "40px", lg: "80px" },
   flex: "1 0 0",
   flexWrap: "wrap",
-  flexDirection: {base: "column-reverse", md: "column"},
+  flexDirection: {base: "column-reverse", lg: "column"},
   ...CardStyle
+}
+export const LargeCardImgLayout = {
+  maxWidth: {base: "100%", lg: "354px"},
+  maxHeight: "400px"
+}
+export const LargeCardBodyLayout = {
+  display: "flex",
+  minWidth: "164px",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  gap: {base: "20px", lg: "40px"},
+  flex: "1 0 0"
+}
+export const LargeCardHorizontalBodyLayout = {
+  display: "flex",
+  minWidth: "164px",
+  maxWidth: "460px",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  gap: "40px",
+  flex: "1 0 0"
 }
 export const LargeCardHorizontalLayout = {
   display: "flex",
-  padding: "24px",
+  padding: { base: "24px", lg: "80px" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
-  gap: "16px 16px",
+  gap: "80px",
   flex: "1 0 0",
   flexWrap: "wrap",
-  flexDirection: {base: "column-reverse", md: "row"},
+  flexDirection: {base: "column-reverse", md: "row-reverse", lg: "row"},
   ...CardStyle
 }
 export const IconLinkCardLayout = {
@@ -62,13 +83,15 @@ export const GridCardLayout = {
   alignItems: "center",
   alignContent: "center",
   flexDirection: "column",
-  flex: "1 0 0",
+  flex: 2,
   flexWrap: "wrap",
-  borderRadius: "16px",
+  // borderRadius: "16px",
   ...CardStyle
 }
 export const GridCardImgLayout = {
-  width: "100%"
+  width: "100%",
+  minHeight: 225,
+  maxHeight: 225
 }
 export const GridCardBodyLayout = {
   display: "flex",
@@ -78,7 +101,8 @@ export const GridCardBodyLayout = {
   alignItems: "flex-start",
   flex: "1 0 0",
   flexDirection: "column",
-  gap: "20px"
+  gap: "20px",
+  bg: "white"
 }
 export const AssetCardLayout = {
   display: "flex",

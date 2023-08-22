@@ -26,9 +26,10 @@ export const SectionHeader = ({
       <Stack spacing="40px" pb={6}>
         <Box>
           <Heading
-            variant="h2"
-            fontSize={{ base: "32px", md: "48px" }}
-            lineHeight={{ base: "1.5em", md: "1.5em" }}
+            variant="h1"
+            as="h2"
+            // fontSize={{ base: "32px", md: "48px" }}
+            // lineHeight={{ base: "1.5em", md: "1.5em" }}
             pb={size === "sm" ? 2 : 6}
             fontWeight="extrabold"
             color="heading-navy-fg"

@@ -113,7 +113,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
   return (
     <Box bg="#EDF7F7" padding="15% 50px"
       sx={{
-        "clip-path": "polygon(0 10vw,100% 0,100% calc(100% - 10vw),0 100%)",
+        "clip-path": "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
         backgroundImage: "url(/assets/outline-bg.svg)",
         backgroundSize: "130%",
         backgroundPosition: "center"
