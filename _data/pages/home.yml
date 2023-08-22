@@ -96,6 +96,10 @@ blocks:
     title: Projects exploring new ideas
     ctaText: Check out all the projects ->
     ctakUrl: /ecosystem/dapps/
+  - type: social_block
+    title: Join the biggest community of developers, enthusiasts and explorers
+    description: Join a community of developers, enthusiasts and explorers, working
+      together to build Starknet and scale Ethereum.
   - type: flex_layout
     heading_variant: sm
     description_variant: sm
