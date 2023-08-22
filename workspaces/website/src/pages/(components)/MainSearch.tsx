@@ -23,9 +23,10 @@ import type { Page } from "@starknet-io/cms-data/src/pages";
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
-import { Box, Kbd } from "@chakra-ui/react";
+import { Box, Image, Kbd } from "@chakra-ui/react";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { Heading } from "@ui/Typography/Heading";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -84,8 +85,31 @@ export function Autocomplete<TItem extends BaseItem>(
 
         panelRootRef.current.render(children);
       },
-      renderNoResults({ state, render }, root) {
-        render(`No results for "${state.query}".`, root);
+      renderNoResults({ state }, root) {
+        if (state.query === "" && rootRef.current) {
+          panelRootRef.current?.unmount();
+          panelRootRef.current = createRoot(rootRef.current);
+          return;
+        }
+
+        if (panelRootRef.current && rootRef.current) {
+          panelRootRef.current.render(
+            <Box className="algolia-no-results">
+              <Image
+                src="/assets/algolia-no-results.png"
+                width="280px"
+                height="280px"
+              />
+              <Box className="text-container">
+                <Heading variant="h4">No data to display</Heading>
+                <Box as="p">
+                  Apply different filters or criteria to find the data you're
+                  looking for.
+                </Box>
+              </Box>
+            </Box>
+          );
+        }
       },
     });
 
@@ -192,7 +216,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
   }, []);
 
   return (
-    <Box position="relative" height="44px" className="group" pos="relative">
+    <Box position="relative" height="44px" className="group">
       <Autocomplete<any>
         detachedMediaQuery=""
         openOnFocus={true}

@@ -414,3 +414,37 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
     background-color: transparent;
   }
 }
+
+.algolia-no-results {
+  padding-inline: var(--chakra-space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--chakra-space-3xl);
+  padding-block: 120px;
+  max-height: var(--aa-detached-modal-max-height);
+}
+
+@media screen and (max-width: 680px) {
+  .algolia-no-results {
+    padding-block: 80px;
+    max-height: auto;
+  }
+}
+
+.algolia-no-results .text-container {
+  text-align: center;
+}
+
+.algolia-no-results .text-container h4 {
+  margin-bottom: var(--chakra-space-md);
+  color: var(--chakra-colors-content-accent);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.algolia-no-results .text-container p {
+  color: var(--chakra-colors-content-default);
+  font-size: 14px;
+  line-height: 24px;
+}
