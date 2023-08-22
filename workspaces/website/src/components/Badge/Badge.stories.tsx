@@ -2,6 +2,7 @@ import { VStack } from "@chakra-ui/react";
 import { Meta } from "@storybook/react";
 import { Badge } from "./Badge";
 import { ThemeProvider } from "src/renderer/ThemeProvider";
+import { StatusBadge } from "./StatusBadge";
 
 export default {
   title: "starknet.io/Badge",
@@ -24,6 +25,16 @@ export const Primary = () => (
       <Badge variant="github">Github</Badge>
       <Badge variant="blog">Blog</Badge>
       <Badge variant="youtube">Youtube</Badge>
+    </VStack>
+  </ThemeProvider>
+);
+
+export const StatusBadges = () => (
+  //todo figure out why chakra storybook addon is not adding custom themeprovider
+  <ThemeProvider>
+    <VStack alignItems="flex-start">
+      <StatusBadge variant="success">On testnet</StatusBadge>
+      <StatusBadge variant="danger">On backlog</StatusBadge>
     </VStack>
   </ThemeProvider>
 );

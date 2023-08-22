@@ -1,11 +1,14 @@
 import { Badge, BadgeProps, Box } from "@chakra-ui/react";
 
 type StatusBadgeProps = {
-  status: string;
-  variant: "primary" | "secondary";
+  variant: "success" | "danger";
 } & BadgeProps;
 
-export const StatusBadge = ({ status, variant, ...rest }: StatusBadgeProps) => {
+export const StatusBadge = ({
+  children,
+  variant,
+  ...rest
+}: StatusBadgeProps) => {
   return (
     <Badge
       display="flex"
@@ -23,10 +26,10 @@ export const StatusBadge = ({ status, variant, ...rest }: StatusBadgeProps) => {
       fontWeight={500}
       {...rest}
     >
-      {status}
+      {children}
       <Box
         display="inline-block"
-        bg={variant === "primary" ? "content.success" : "content.danger"}
+        bg={variant === "success" ? "content.success" : "content.danger"}
         borderRadius="50%"
         width="12px"
         height="12px"

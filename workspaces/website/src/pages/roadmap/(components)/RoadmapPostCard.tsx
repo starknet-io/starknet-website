@@ -58,11 +58,12 @@ export default function RoadmapPostCard({
             </Text>
             {roadmapPost?.state ? (
               <StatusBadge
-                status={roadmapPost?.state}
                 variant={
-                  roadmapPost?.state === "On testnet" ? "primary" : "secondary"
+                  roadmapPost?.state === "On testnet" ? "success" : "danger"
                 }
-              />
+              >
+                {roadmapPost?.state}
+              </StatusBadge>
             ) : null}
           </Flex>
         </CardHeader>

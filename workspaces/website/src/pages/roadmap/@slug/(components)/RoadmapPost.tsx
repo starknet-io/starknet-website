@@ -127,9 +127,10 @@ export default function RoadmapPost({
             </Flex>
             {roadmapPost?.state ? (
               <StatusBadge 
-                status={roadmapPost?.state}
-                variant={roadmapPost?.state === "On testnet" ? "primary" : "secondary"}
-              />
+                variant={roadmapPost?.state === "On testnet" ? "success" : "danger"}
+              >
+                {roadmapPost?.state}
+              </StatusBadge>
             ): null}
           </Flex>
           <Divider mt="8px" mb="32px" />
