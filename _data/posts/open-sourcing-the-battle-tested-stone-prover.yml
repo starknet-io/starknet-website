@@ -1,0 +1,111 @@
+id: 9bd7e9f7-333a-4f5a-acaa-4eb407f1c6ca
+post_type: article
+title: Open-Sourcing the Battle-Tested Stone Prover
+toc: true
+published_date: 2023-08-22T15:24:24.253Z
+image: /assets/prover-os.png
+category: engineering
+topic:
+  - decentralization
+  - open_source
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+short_desc: StarkWare marks a pivotal moment in developing and releasing open
+  tools for securely scaling Ethereum. StarkWare believes open-sourcing the
+  Starknet tech stack means more collaboration, better quality, improved
+  security, innovation, and independence. All of these values can help Starknet
+  and Ethereum reach their full potential.
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ## StarkWare is Open-Sourcing the STARK Prover, now named Stone, under
+          Apache 2.0.
+
+
+          _﻿\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+
+          A code review session will be done on August 31st during [Starknet Summit](https://summit23.starknet.io/). On this date, the code of the Stone prover will be available for the community
+
+
+          _﻿\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+      - type: markdown
+        body: >-
+          ## TL;DR
+
+
+          * As [announced in February 2023](https://starkware.co/resource/open-sourcing-the-starknet-prover/), we are about to open-source StarkWare’s STARK Prover, now named Stone (STARK one), under Apache 2.0 license.
+
+          * Open-sourcing the prover is a major step forward in decentralizing Starknet. It will boost collaboration and innovation, and enable devs to observe, optimize and use the prover’s code, preferably for the good of public Starknet.
+
+          * This step is consistent with previous steps to open-source license for the [Starknet Stack](https://starkware.co/resource/the-starknet-stacks-growth-spurt/). With the fastest-growing developer community, Starknet has the most decentralized Rollup Stack, including multiple key infrastructure components, such as Cairo, several Full Node implementations, Starknet’s new Sequencer, and other open-sourced features built by independent teams.
+
+          * The Stone Prover is a powerful engine, and teams are encouraged to add customizations and wrappings around it in order to build the proving system they need and require.
+
+
+          ## Big News
+
+
+          We are excited! As announced earlier this year, and as planned from the early stages of Starknet, we are open-sourcing the STARK Prover code, now named Stone. The Prover’s code base will be available under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0). An intro session to the code will take place during [the Starknet Summit](https://summit23.starknet.io/) on August 31st, which will be the date on which the code will be available.
+
+
+          This is a major step forward in the decentralization of StarkWare’s technology that enables the community to build upon and contribute to the Prover’s development independently.
+
+
+          For devs, this means that the battle-tested engine at the center of StarkWare’s scaling achievements is available for all to use to prove Cairo programs. We provide you with a powerful STARK-prover, and you can use it to help build upon and contribute to the development of Starknet’s ecosystem.
+
+
+          ## Open-Sourcing the Stone STARK Prover
+
+
+          The STARK Prover is a vital component within Starknet’s tech stack. It’s responsible for compressing transactions and generating cryptographic proofs, and plays a key role in helping to scale Ethereum.
+
+
+          This Prover has been in production since June 2020, playing a critical role in proving transactions from decentralized applications powered by StarkEx (such as Immutable X, Sorare, dYdX, and more) and Starknet. The code has been continuously optimized, and we are sharing its latest updated version (which was released in March 2023).
+
+
+          Since launch, STARK-tech scaling solutions built with this Prover at their basis (including StarkEx and Starknet) have compressed and proved $1T in cumulative transaction volume, 500M transactions, and more than 100M NFTs mintings. Of course, further innovations and optimizations can be made, whether by StarkWare, or by devs who will choose to take the code and use it for their own initiatives.
+
+
+          An open-source Prover allows more eyes to review the code and offer optimizations, improve its quality, help detect bugs, and provide transparency.
+
+
+          Currently, StarkWare already has open-sourced Cairo, Papyrus Full Node, and all Starknet versions. The new Starknet Sequencer that is being built, will also be open-sourced. These projects are joined by several open-sourced projects in the Starknet ecosystem.
+
+
+          ## What is Open-Sourced, and How Can Devs Use it?
+
+
+          The open-sourced code includes the Stone STARK Prover in C++ (under Apache 2.0 license). In addition, a C++ STARK Verifier will also be available.
+
+
+          The open-source Stone Prover will allow innovative initiatives that will be able to utilize it as the underlying proving engine of their proving systems. Devs will be able to use it as follows:
+
+
+          1. Write a Cairo0 program
+
+          2. Use the [Cairo tools](https://github.com/starkware-libs/cairo-lang) to take the Cairo0 program and compile it to CASM
+
+          3. Run the CASM code with cairo_run and receive a Cairo trace for that run
+
+          4. Use the Stone STARK Prover to prove the Cairo trace
+
+          5. Receive a STARK Proof
+
+          6. Use the C++ Verifier in order to ensure that the proof is valid
+
+
+          ![using the prover](/assets/group-85-4-.png "using the prover")
+
+
+          The Stone Prover is suitable for proving Cairo programs. Additional wrappings and customizations can be built on top of it in order to utilize it for several and various proving systems and needs. Devs can take this trailblazing, battle-tested engine and build their own custom-made proving service. For example, StarkWare built the SHARP system with this Prover as its basis.
+
+
+          ## Summary
+
+
+          With the release of the Stone Prover codebase under the Apache 2.0 license, StarkWare marks a pivotal moment in developing and releasing open tools for securely scaling Ethereum. StarkWare believes open-sourcing the Starknet tech stack means more collaboration, better quality, improved security, innovation, and independence. All of these values can help Starknet and Ethereum reach their full potential.
+
+
+          In the future, everything devs need to operate and run the Starknet Stack is planned to be open-sourced, as is appropriate for a decentralized, permissionless Layer 2 network.
