@@ -96,6 +96,26 @@ blocks:
     title: Projects exploring new ideas
     ctaText: Check out all the projects ->
     ctakUrl: /ecosystem/dapps/
+  - type: flex_layout
+    heading_variant: sm
+    description_variant: sm
+    blocks:
+      - type: icon_link_card
+        title: Starknet blog & media
+        description: Stay up to date with the latest thinking on all things Starknet via
+          articles, podcasts, and videos.
+        linkText: Learn more ->
+        linkUrl: "#"
+        img: /assets/online_communities.svg
+      - type: icon_link_card
+        title: Community Hub
+        description: Explore opportunities with teams  building in the ecosystem.
+        linkText: Learn more ->
+        linkUrl: "#"
+        img: /assets/community-2-.svg
+    base: 1
+    md: 2
+    lg: ""
   - type: community_events
   - type: flex_layout
     heading_variant: h3
