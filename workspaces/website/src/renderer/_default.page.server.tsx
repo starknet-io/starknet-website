@@ -3,7 +3,7 @@ import { escapeInject } from "vite-plugin-ssr/server";
 import { PageContextServer } from "./types";
 import { PageShell } from "./PageShell";
 import { getDefaultPageContext } from "./helpers";
-import type { InjectFilterEntry } from 'vite-plugin-ssr/types'
+import type { InjectFilterEntry } from "vite-plugin-ssr/types";
 
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = [
@@ -27,7 +27,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps, redirectTo } = pageContext;
 
-  if (redirectTo) return {}
+  if (redirectTo) return {};
 
   const page = (
     <PageShell pageContext={pageContext}>
@@ -73,14 +73,24 @@ export async function render(pageContext: PageContextServer) {
       <meta property="og:title" content="${title}">
       <meta property="og:description" content="${description}">
       <meta property="og:image" content="${image}">
+      <meta property="og:video" content="${documentProps?.video || ""}">
+      <meta property="og:video:height" content="720">
+      <meta property="og:video:width" content="1280">
 
+      
       <!-- Twitter -->
-      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:card" content=${
+        documentProps?.video ? "player" : "summary_large_image"
+      }>
+      <meta property="twitter:site" content="@Starknet">
       <meta property="twitter:url" content="${pageContext.urlOriginal}">
       <meta property="twitter:title" content="${title}">
       <meta property="twitter:description" content="${description}">
       <meta property="twitter:image" content="${image}">
-
+      <meta property="twitter:player" content="${documentProps?.video || ""}">
+      <meta property="twitter:player:height" content="720">
+      <meta property="twitter:player:width" content="1280">
+      
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}"></script>
       <script>
@@ -110,31 +120,30 @@ export async function render(pageContext: PageContextServer) {
   return { documentHtml, injectFilter };
 }
 
-
 const injectFilter = (assets: InjectFilterEntry[]): void => {
-  assets.forEach(asset => {
+  assets.forEach((asset) => {
     if (
       // We don't touch entry assets (recommended)
       asset.isEntry ||
       // We don't touch JavaScript preloading (recommended)
-      asset.assetType === 'script'
+      asset.assetType === "script"
     ) {
-      return
+      return;
     }
 
     // Preload images
-    if (asset.assetType === 'image') {
-      asset.inject = 'HTML_BEGIN'
+    if (asset.assetType === "image") {
+      asset.inject = "HTML_BEGIN";
     }
 
     // Don't preload fonts
-    if (asset.assetType === 'font') {
-      asset.inject = false
+    if (asset.assetType === "font") {
+      asset.inject = false;
     }
 
     // Preload videos
-    if (asset.mediaType?.startsWith('video')) {
-      asset.inject = 'HTML_END'
+    if (asset.mediaType?.startsWith("video")) {
+      asset.inject = "HTML_END";
     }
-  })
-}
+  });
+};
