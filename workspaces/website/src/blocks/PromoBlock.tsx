@@ -11,7 +11,6 @@ type Props = {
 export const PromoBlock = ({ seo }: Props) => {
   return (
     <Box
-      bg="linear-gradient(216deg, #040E56 0%, #040E56 30%, #412EB7 44.79%, #EC796B 100%)"
       mt="-372px"
       sx={{
         clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",

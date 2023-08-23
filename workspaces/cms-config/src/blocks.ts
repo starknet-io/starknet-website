@@ -441,6 +441,13 @@ export const blocks = [
         label: "Link url",
         widget: "string",
         crowdin: true
+      },
+      {
+        name: "color",
+        label: "Shade of the card",
+        widget: "select",
+        options: ["default", "red", "green", "blue"],
+        default: "default"
       }
     ],
   },

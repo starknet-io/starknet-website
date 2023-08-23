@@ -20,7 +20,6 @@ type Props = {
 
 export const LargeCardsBlock = (props: Props) => {
   const  { horizontal1, horizontal2, vertical1, vertical2 } = props;
-  console.log('ussao ', props)
   return (
     <Flex direction="column" gap="32px">
       <Card variant="large" orientation="horizontal">

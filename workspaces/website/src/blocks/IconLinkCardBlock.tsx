@@ -9,14 +9,36 @@ type Props = {
   description?: string;
   linkText?: string;
   linkUrl?: string;
+  color?: string;
 } & BoxProps;
 
 export const IconLinkCardBlock = (props: Props) => {
-  const { img, title, description, linkText, linkUrl } = props;
+  const { img, title, description, linkText, linkUrl, color } = props;
+  const renderColorValues = (color: string) => {
+    switch (color) {
+        case "red":
+            return { background: "#FFFAFA", borderColor: "#FFC0B8" };
+        case "green":
+            return { background: "#F9FEFF", borderColor: "#9DE2EE" };
+        case "blue":
+            return { background: "#FAFBFF", borderColor: "#A8B6FF" };
+        default:
+            return {
+                background: "",
+                borderColor: ""
+              };
+      }
+  };
+  const colorValues = renderColorValues(color as string);
 
   return (
-    <Card variant="iconLink">
-        <CardBody variant="iconLink" height="100%">
+    <Card variant="iconLink" {...(!!color && { sx: {
+        background: colorValues.background,
+        border: `1px solid ${colorValues.borderColor}`
+    }})}>
+        <CardBody variant="iconLink" height="100%" {...(color && { sx: {
+        background: colorValues.background
+    }})}>
             <Flex direction="column" justifyContent="space-between" height="100%">
                 <Box>
                     {img ? <img src={img} width="60px" /> : null}

@@ -1,4 +1,4 @@
-import { Box, BoxProps, Flex } from "@chakra-ui/react";
+import { Box, BoxProps, Flex, ChakraProps } from "@chakra-ui/react";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { ReactNode } from "react";
 import {
@@ -28,6 +28,7 @@ type BodyProps = {
   children: ReactNode;
   height?: string;
   orientation?: string;
+  sx?: ChakraProps['sx']
 };
 
 type TitleProps = {
@@ -73,13 +74,13 @@ const titleStyles = {
   display: "flex",
 }
 
-export const CardBody = ({ variant, height, orientation, children }: BodyProps) => {
-  let styles = {
+export const CardBody = ({ variant, height, orientation, children, sx }: BodyProps) => {
+  const styles = {
     ...variant === "large" ? (orientation === "horizontal" ? LargeCardHorizontalBodyLayout : LargeCardBodyLayout) : "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles,
     ...height && { height: height }
   }
   return (
-    <Flex sx={styles}>
+    <Flex sx={{ ...styles, ...sx }}>
       {children}
     </Flex>
   );
