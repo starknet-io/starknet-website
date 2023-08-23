@@ -32,9 +32,19 @@ export const HomepageHero = ({ seo }: Props) => {
           overflow: "visible",
           marginTop: "-150px",
           paddingTop: "256px",
-          clipPath: "polygon(0 0,100% 0,100% calc(100% - 14vw),0 100%)"
+          clipPath: "polygon(0 0,100% 0,100% calc(100% - 14vw),0 100%)",
+          "& iframe": {
+            position: "absolute",
+            top: "-215px",
+            right: "-300px",
+            minWidth: "calc(100% + 400px)",
+            height: "140%",
+            border: "none",
+            zIndex: -1
+          }
         }}
       >
+        <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe>
         <Box
           zIndex={2}
           minHeight="600px"
