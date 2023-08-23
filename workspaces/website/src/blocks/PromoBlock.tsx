@@ -32,7 +32,7 @@ export const PromoBlock = ({ seo }: Props) => {
           py="140px"
           m="0 auto"
           sx={{
-            alignItems: "flex-end",
+            alignItems: { base: "flex-start", md: "flex-end" },
             flexDirection: "column",
             justifyContent: "center",
             display: "flex",
@@ -41,23 +41,30 @@ export const PromoBlock = ({ seo }: Props) => {
         >
           <Heading variant="h3" color="white" sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { base: "column", md: "row"},
             gap: "20px",
             fontSize: "42px",
             fontStyle: "normal",
             fontWeight: "500",
             lineHeight: "normal",
             letterSpacing: "0.84px",
-            alignItems: "center",
+            alignItems: { base: "flex-start", md: "center" },
             py: "16px",
             mb: "24px",
             borderTop: "1px solid var(--static-white-9, rgba(255, 255, 255, 0.44))",
             borderBottom: "1px solid var(--static-white-9, rgba(255, 255, 255, 0.44))"
           }}>
             <img src="/assets/STARKNETSummitLogo.svg" alt="Starknet" />
-            <Box bg="linear-gradient(119deg, #EC796B 0%, #D672EF 100%)" width="2px" height="32px" />
-            Summit <Box sx={{display: "inline-block", fontWeight: 700}}>2023</Box></Heading>
-          <Flex direction="row" alignItems="center" gap="16px">
+            <Box
+              sx={{
+                bg: "linear-gradient(119deg, #EC796B 0%, #D672EF 100%)",
+                width: { base: "100%", md: "2px" },
+                height: { base: "2px", md: "32px" }
+              }}
+            />
+            <Box>Summit <Box sx={{display: "inline-block", fontWeight: 700}}>2023</Box></Box>
+          </Heading>
+          <Flex direction={{ base: "column", md: "row"}} alignItems={{ base: "flex-start", md: "center"}} gap="16px">
             <Text
               variant="body"
               color="white"

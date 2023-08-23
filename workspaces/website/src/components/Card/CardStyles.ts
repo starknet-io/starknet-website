@@ -1,7 +1,8 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
 export const CardStyle = {
-  background: "#FBFBFB"
+  background: "#FBFBFB",
+  height: "100%"
 }
 export const CardStyleWhite = {
   background: "#FFFFFF"

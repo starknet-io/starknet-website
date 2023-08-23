@@ -150,6 +150,9 @@ export const Card = (props: Props) => {
     default:
       break;
   }
+  if (variant === "large") {
+    console.log('styles ', styles)
+  }
   return (
     <CardGradientBorder bg={bgColor} padding="0" borderRadius="16px">
       <Box
