@@ -1,5 +1,6 @@
 :root {
-  --aa-search-input-height: 40px;
+  --aa-search-input-height: 44px;
+  --aa-search-input-placeholder-height: 40px;
   --aa-input-icon-size: 24px;
   --aa-base-unit: 16;
   --aa-spacing-factor: 1;
@@ -169,7 +170,7 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .aa-DetachedSearchButtonPlaceholder {
-  line-height: var(--aa-search-input-height);
+  line-height: var(--aa-search-input-placeholder-height);
 }
 
 .aa-DetachedSearchButton svg {

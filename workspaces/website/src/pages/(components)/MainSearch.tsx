@@ -334,7 +334,8 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         borderRadius="4px"
         borderWidth="0px"
         position="absolute"
-        top="5px"
+        top="50%"
+        transform="translateY(-50%)"
         right="8px"
         cursor="pointer"
         onClick={() => searchBox?.click()}
