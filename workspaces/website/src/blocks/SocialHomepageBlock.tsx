@@ -42,8 +42,8 @@ const SocialHomepageBlock = ({ title, description }: SocialHomepageBlockProps) =
           <Text variant="body" color="heading-navy-fg" sx={{ maxW: "673px" }}>{description}</Text>
         </Box>
         <Box sx={{ position: "relative", height: 535, mt: "80px" }}>
-          <Box sx={{ position: "absolute", left: "30%" }}>
-            <Box sx={{ position: "relative", left: "-35%" }}>
+          <Box sx={{ position: "absolute", left: { base: "55%", md: "50%" } }}>
+            <Box sx={{ position: "relative", left: { base: "-60%", md: "-55%" } }}>
               <Flex
                 direction="row"
                 gap="24px"

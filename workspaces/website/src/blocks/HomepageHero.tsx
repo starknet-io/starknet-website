@@ -38,28 +38,30 @@ export const HomepageHero = ({ seo }: Props) => {
         <Box
           zIndex={2}
           minHeight="600px"
-          maxW={{ base: "xl", md: "7xl" }}
+          maxW={{ base: "1296px", md: "1312px" }}
+          px={{ base: "16px", md: "32px" }}
           mx="auto"
-          px={{ base: "6", md: "48px", lg: "40px", xl: "56px" }}
         >
           <Flex
-            align="flex-end"
+            align="flex-start"
             direction={{ base: "column", lg: "row" }}
             justify="space-between"
             // paddingBottom="33px"
             // mb="56px"
           >
             <Box
-              top={{ lg: "-64px" }}
               position="relative"
               flex="1"
               pt="0"
               order={{ base: 1, lg: 0 }}
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-start"
             >
               <Heading
                 variant="h1hero"
                 color="hero-subtitle-fg"
-                lineHeight="98.5px"
+                lineHeight="120%"
                 mt={{ base: "0", lg: "-20px" }}
                 fontWeight="500"
               >
@@ -67,7 +69,7 @@ export const HomepageHero = ({ seo }: Props) => {
               </Heading>
               <Text
                 color="hero-subtitle-fg"
-                mt="31px"
+                mt="28px"
                 fontSize="20px"
                 lineHeight="36px"
                 fontWeight="500"
@@ -77,7 +79,7 @@ export const HomepageHero = ({ seo }: Props) => {
               <Stack
                 direction={{ base: "column", md: "row" }}
                 spacing="4"
-                mt="47px"
+                mt="32px"
                 position={{ base: "relative", md: "relative" }}
                 zIndex={4}
               >

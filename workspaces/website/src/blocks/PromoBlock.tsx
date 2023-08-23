@@ -19,17 +19,17 @@ export const PromoBlock = ({ seo }: Props) => {
     >
       <Box
         sx={{
-          backgroundImage: "url(/assets/promo-bg.svg)",
-          backgroundSize: "100%",
-          backgroundPosition: "top center",
+          backgroundImage: "url(/assets/PromoBg.svg)",
+          backgroundSize: "cover",
+          backgroundPosition: "top right",
           backgroundRepeat: "no-repeat",
-          height: 530
+          height: { base: 670, md: 530 }
         }}
       >
         <Box
-          maxW={{ base: "1296px", md: "1312px" }}
+          maxW={{ base: "1200px", md: "1212px" }}
           px={{ base: "16px", md: "32px" }}
-          py="140px"
+          py="120px"
           m="0 auto"
           sx={{
             alignItems: { base: "flex-start", md: "flex-end" },
@@ -78,7 +78,7 @@ export const PromoBlock = ({ seo }: Props) => {
             >
               San Francisco <Box as="span" sx={{display: "inline-block", lineHeight: "20px", height: "20px", paddingLeft: "8px", borderLeft: "2px solid white"}}>Aug 31st</Box>
             </Text>
-            <Button variant="outline" size="md" bg="#040E56" sx={{ borderColor: "white", color: "white", minWidth: "200px" }}>Get Tickets</Button>
+            <Button variant="outline" size="md" bg="#d48c87" sx={{ borderColor: "white", color: "white", minWidth: "200px" }}>Get Tickets</Button>
           </Flex>
         </Box>
       </Box>

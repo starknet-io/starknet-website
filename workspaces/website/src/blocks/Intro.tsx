@@ -48,7 +48,7 @@ export const Intro = () => {
         "background-clip": "text",
         "-webkit-background-clip": "text",
         "-webkit-text-fill-color": "transparent",
-        lineHeight: "98.5px",
+        lineHeight: "120%",
         fontWeight: 600
       }}
     />
