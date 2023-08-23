@@ -69,6 +69,7 @@ blocks:
           contracts and dapps.
         linkText: View
         linkUrl: /tutorials/
+        color: red
       - type: icon_link_card
         img: /assets/build_read_the_docs.svg
         title: Read the Starknet Book
@@ -77,6 +78,7 @@ blocks:
           the Ethereum world.
         linkText: View
         linkUrl: /documentation/
+        color: green
       - type: icon_link_card
         img: /assets/build_tools_resources.svg
         title: Set-up a Local Environment
@@ -84,6 +86,7 @@ blocks:
           start building.
         linkText: View
         linkUrl: /developers/tools-and-resources/
+        color: blue
     heading_variant: h3
     base: 1
     md: 3
