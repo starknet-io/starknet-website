@@ -1,5 +1,5 @@
 
-import { Box, Flex, Container, HStack } from "@chakra-ui/react";
+import { Box, Flex, Grid, Container, HStack } from "@chakra-ui/react";
 import moment from "moment";
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
@@ -52,7 +52,7 @@ export function BlockCommunityEventsList({
       <Box
         sx={{
           position: "relative",
-          height: 1838,
+          minHeight: { base: 2538, md: 2138, lg: 1838 },
           paddingTop: 900,
           mt: "-900",
           "&::before": {
@@ -113,7 +113,15 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
 
   return (
     <>
-      <HStack gap={4}>
+      <Grid
+        gap={4}
+        gridTemplateColumns={[
+          "1fr",
+          "1fr",
+          "repeat(2, 1fr)",
+          "repeat(3, 1fr)"
+        ]}
+      >
         {hits.map((hit, i) => {
           if (i > hitsPerPage) return null;
           else {
@@ -155,7 +163,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
             );
           }
         })}
-      </HStack>
+      </Grid>
       <Flex mt="24px" alignItems="center" direction="column">
         <Button
           onClick={() => navigate("/en/events")}
