@@ -85,7 +85,6 @@ export const GridCardLayout = {
   flexDirection: "column",
   flex: 2,
   flexWrap: "wrap",
-  // borderRadius: "16px",
   ...CardStyle
 }
 export const GridCardImgLayout = {

@@ -76,7 +76,7 @@ const titleStyles = {
 
 export const CardBody = ({ variant, height, orientation, children, sx }: BodyProps) => {
   const styles = {
-    ...variant === "large" ? (orientation === "horizontal" ? LargeCardHorizontalBodyLayout : LargeCardBodyLayout) : "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles,
+    ...variant === "large" ? (orientation === "horizontal" ? LargeCardHorizontalBodyLayout : LargeCardBodyLayout) : variant === "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles,
     ...height && { height: height }
   }
   return (

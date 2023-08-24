@@ -1,5 +1,5 @@
 
-import { Box, Flex, Container, HStack, Divider } from "@chakra-ui/react";
+import { Box, Flex, Container, HStack } from "@chakra-ui/react";
 import moment from "moment";
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
@@ -112,7 +112,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
 
   return (
     <>
-      <Flex gap={4}>
+      <HStack gap={4}>
         {hits.map((hit, i) => {
           if (i > hitsPerPage) return null;
           else {
@@ -154,7 +154,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
             );
           }
         })}
-      </Flex>
+      </HStack>
       <Flex mt="24px" alignItems="center" direction="column">
         <Button
           onClick={() => navigate("/en/events")}
