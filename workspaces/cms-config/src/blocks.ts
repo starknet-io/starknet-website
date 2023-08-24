@@ -1,5 +1,38 @@
 import { CmsField, CmsFieldList } from "./types";
 
+export const largeCards = [
+  {
+    name: "img",
+    label: "Icon",
+    widget: "image"
+  },
+  {
+    name: "title",
+    label: "Title",
+    widget: "string",
+    required: true,
+    crowdin: true
+  },
+  {
+    name: "description",
+    label: "Description",
+    widget: "string",
+    crowdin: true
+  },
+  {
+    name: "linkText",
+    label: "Link text",
+    widget: "string",
+    crowdin: true
+  },
+  {
+    name: "linkUrl",
+    label: "Link url",
+    widget: "string",
+    crowdin: true
+  }
+] satisfies CmsField[]
+
 export const linkFields = [
   {
     label: "Custom Title",
@@ -312,6 +345,17 @@ export const blocks = [
     ],
   },
   {
+    name: "promo_block",
+    label: "Promo block",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+    ],
+  },
+  {
     name: "community_events",
     label: "Community events block",
     widget: "object",
@@ -361,6 +405,171 @@ export const blocks = [
         options: ["sm", "md"],
         default: "sm",
       },
+    ],
+  },
+  {
+    name: "icon_link_card",
+    label: "Icon link card",
+    widget: "object",
+    fields: [
+      {
+        name: "img",
+        label: "Icon",
+        widget: "image"
+      },
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        required: true,
+        crowdin: true
+      },
+      {
+        name: "description",
+        label: "Description",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "linkText",
+        label: "Link text",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "linkUrl",
+        label: "Link url",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "color",
+        label: "Shade of the card",
+        widget: "select",
+        options: ["default", "red", "green", "blue"],
+        default: "default"
+      }
+    ],
+  },
+  {
+    name: "large_cards",
+    label: "Large cards",
+    widget: "object",
+    fields: [
+      {
+        name: "horizontal1",
+        widget: "object",
+        label: "First horizontal card",
+        fields: largeCards
+      },
+      {
+        name: "vertical1",
+        widget: "object",
+        label: "First vertical card",
+        fields: largeCards
+      },
+      {
+        name: "vertical2",
+        widget: "object",
+        label: "Second vertical card",
+        fields: largeCards
+      },
+      {
+        name: "horizontal2",
+        widget: "object",
+        label: "Second horizontal card",
+        fields: largeCards
+      }
+    ],
+    crowdin: true,
+    required: false,
+    index_file: "",
+    meta: true
+  },
+  {
+    name: "stat_cards",
+    label: "Stat cards",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        widget: "string",
+        required: false,
+        label: "Title",
+        crowdin: true
+      }
+    ],
+    crowdin: true,
+    index_file: "",
+    meta: true
+  },
+  {
+    name: "pattern_card",
+    label: "Pattern card",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        widget: "string",
+        label: "Title",
+        crowdin: true,
+      },
+      {
+        name: "link",
+        widget: "string",
+        label: "Link url",
+        crowdin: true,
+      },
+      {
+        name: "pattern",
+        widget: "select",
+        label: "Pattern",
+        options: ["two-lines", "ethereum", "curly-lines", "circle-lines"]
+      },
+    ],
+  },
+  {
+    name: "ecosystem_block",
+    label: "Ecosystem block",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "ctaText",
+        label: "CTA text",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "ctakUrl",
+        label: "CTA url",
+        widget: "string",
+        crowdin: true
+      }
+    ],
+  },
+  {
+    name: "social_block",
+    label: "Social homepage block",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "description",
+        label: "Description",
+        widget: "string",
+        crowdin: true
+      }
     ],
   },
   {
@@ -824,8 +1033,23 @@ export const topLevelBlocks = [
       },
       {
         name: "heading_variant",
+        label: "Heading variant",
         widget: "select",
         options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+        required: false,
+        default: "sm",
+      },
+      {
+        name: "description",
+        required: false,
+        widget: "string",
+        crowdin: true
+      },
+      {
+        name: "description_variant",
+        label: "Description text variant",
+        widget: "select",
+        options: ["cardBody", "body", "breadcrumbs", "footerLink", "textLink"],
         required: false,
         default: "sm",
       },

@@ -33,8 +33,8 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
     <Box>
       <PageLayout
         contentMaxW={maxW[data.template]}
-        maxW={isFirstBlockLandingHero ? "none" : undefined}
         sx={isFirstBlockLandingHero ? { px: "0px" } : undefined}
+        maxW="none"
         breadcrumbs={
           <>
             {data.breadcrumbs &&

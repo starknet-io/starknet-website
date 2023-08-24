@@ -1,4 +1,4 @@
-import { ButtonProps, Button as ChakraButton, Box } from "@chakra-ui/react";
+import { ButtonProps, Button as ChakraButton, ChakraProps } from "@chakra-ui/react";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 import React, { forwardRef } from "react";
 import { buttonTheme } from "./ButtonStyles.ts";
@@ -23,10 +23,12 @@ type props = {
   target?: ButtonProps["formTarget"];
   fullWidth?: boolean;
   size?: "sm" | "md";
+  bg?: string;
+  sx?: ChakraProps['sx']
 } & ButtonProps;
 
 export const Button = forwardRef<HTMLButtonElement, props>(
-  ({ children, toId, href, fullWidth, size = "md", ...rest }, ref) => {
+  ({ children, toId, href, fullWidth, size = "md", bg, sx, ...rest }, ref) => {
     const handleOnClick = () => {
       if (!toId) {
         return;
@@ -46,6 +48,13 @@ export const Button = forwardRef<HTMLButtonElement, props>(
           size={size}
           {...buttonTheme}
           {...rest}
+          sx={{
+            bg: `linear-gradient(${bg && rest.variant === "outline" ? bg : "white"}, ${bg && rest.variant === "outline" ? bg : "white"}) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box`,
+            "&:hover": {
+              bg: `linear-gradient(${bg}E3, ${bg}E3) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box`
+            },
+            ...sx
+          }}
         >
           {children}
         </ChakraButton>

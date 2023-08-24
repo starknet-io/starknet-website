@@ -27,7 +27,7 @@ export const CardGradientBorder = ({
       padding={padding}
       bg={bg}
       borderRadius={borderRadius}
-      height="100%"
+      flex="1"
       overflow="hidden"
       _hover={{
         background:

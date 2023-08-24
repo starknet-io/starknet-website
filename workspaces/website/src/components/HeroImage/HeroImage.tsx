@@ -96,6 +96,7 @@ export const HeroImage = ({
           <Text color="content.accent">{description}</Text>
           {buttonText && (buttonUrl || onButtonClick) && (
             <Button
+              zIndex={99}
               as={onButtonClick ? undefined : Link}
               href={buttonUrl}
               onClick={onButtonClick}

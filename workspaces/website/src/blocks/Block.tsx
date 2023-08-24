@@ -1,8 +1,14 @@
 import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { BasicCard } from "./cards/BasicCard";
+import { PatternCard } from "../components/Card/PatternCard";
+import { IconLinkCardBlock } from "./IconLinkCardBlock";
+import { LargeCardsBlock } from "./LargeCardsBlock";
+import { StatCardsBlock } from "./StatCardsBlock";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { AmbassadorsList } from "./AmbassadorsList";
 import { BlockCards } from "./BlockCards";
+import EcosystemBlock  from "./EcosystemHomepageBlock";
+import SocialHomepageBlock from "./SocialHomepageBlock";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
@@ -15,6 +21,7 @@ import { AccordionItem, AccordionRoot } from "./AccordionBlock";
 import { PageHeaderBlock } from "./PageHeaderBlock";
 import { OrderedBlock, OrderedBlockItem } from "./OrderedBlock";
 import { HomepageHero } from "./HomepageHero";
+import { PromoBlock } from "./PromoBlock";
 import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
@@ -42,6 +49,18 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
   } else if (block.type === "image_icon_link_card") {
     return <ImageIconCard {...block} locale={locale} />;
+  } else if (block.type === "icon_link_card") {
+    return <IconLinkCardBlock {...block} />;
+  } else if (block.type === "large_cards") {
+    return <LargeCardsBlock {...block} />;
+  } else if (block.type === "stat_cards") {
+    return <StatCardsBlock {...block} />;
+  } else if (block.type === "pattern_card") {
+    return <PatternCard {...block} />;
+  } else if (block.type === "ecosystem_block") {
+    return <EcosystemBlock {...block} />;
+  } else if (block.type === "social_block") {
+    return <SocialHomepageBlock {...block} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} /> ;
   } else if (block.type === "ambassadors_list") {
@@ -63,6 +82,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         xl={block.xl}
         heading={block.heading}
         headingVariant={block.heading_variant}
+        descriptionVariant={block.description_variant}
+        description={block.description}
       >
         {block.blocks.map((block, i) => (
           <Block
@@ -147,6 +168,13 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
 
     return <HomepageHero seo={homeSEO} />;
+  } else if (block.type === "promo_block") {
+      const pageContext = usePageContext();
+      const homeSEO = useAsync(["getBlockExplorers", locale], () =>
+        getHomeSEO(locale, pageContext.context)
+      );
+  
+      return <PromoBlock seo={homeSEO} />;
   } else if (block.type === "card_list") {
     return (
       <ListCardItems
