@@ -3,6 +3,7 @@ import { BasicCard } from "./cards/BasicCard";
 import { PatternCard } from "../components/Card/PatternCard";
 import { IconLinkCardBlock } from "./IconLinkCardBlock";
 import { LargeCardsBlock } from "./LargeCardsBlock";
+import { StatCardsBlock } from "./StatCardsBlock";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { AmbassadorsList } from "./AmbassadorsList";
 import { BlockCards } from "./BlockCards";
@@ -52,6 +53,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return <IconLinkCardBlock {...block} />;
   } else if (block.type === "large_cards") {
     return <LargeCardsBlock {...block} />;
+  } else if (block.type === "stat_cards") {
+    return <StatCardsBlock {...block} />;
   } else if (block.type === "pattern_card") {
     return <PatternCard {...block} />;
   } else if (block.type === "ecosystem_block") {

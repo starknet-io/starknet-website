@@ -487,6 +487,23 @@ export const blocks = [
     meta: true
   },
   {
+    name: "stat_cards",
+    label: "Stat cards",
+    widget: "object",
+    fields: [
+      {
+        name: "title",
+        widget: "string",
+        required: false,
+        label: "Title",
+        crowdin: true
+      }
+    ],
+    crowdin: true,
+    index_file: "",
+    meta: true
+  },
+  {
     name: "pattern_card",
     label: "Pattern card",
     widget: "object",
