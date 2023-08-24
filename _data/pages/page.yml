@@ -4,3 +4,9 @@ template: content
 toc: true
 breadcrumbs: true
 page_last_updated: true
+blocks:
+  - type: group
+    blocks:
+      - type: basic_card
+        size: sm
+        title: das
