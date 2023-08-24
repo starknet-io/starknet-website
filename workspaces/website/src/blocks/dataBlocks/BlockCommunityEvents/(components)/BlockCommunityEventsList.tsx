@@ -83,7 +83,8 @@ export function BlockCommunityEventsList({
             sx={{
               fontSize: "64px",
               fontWeight: "600",
-              lineHeight: "80px"
+              lineHeight: "80px",
+              maxW: 710
             }}>
             Community events near you
           </Heading>
@@ -158,9 +159,11 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
       <Flex mt="24px" alignItems="center" direction="column">
         <Button
           onClick={() => navigate("/en/events")}
-          flexShrink={0}
-          variant="outline"
-          bg="#EC796B"
+          variant="solid"
+          size="md"
+          sx={{
+            bg: "#0C0C4F"
+          }}
         >
           {`Check out all events ->`}
         </Button>

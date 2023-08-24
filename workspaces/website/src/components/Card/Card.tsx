@@ -87,7 +87,7 @@ export const CardBody = ({ variant, height, orientation, children, sx }: BodyPro
 };
 
 export const CardLink = ({ variant, href, children }: LinkProps) => {
-  let styles = {
+  const styles = {
     ...(variant === "iconLink" || variant === "grid") ? IconLinkCardLinkLayout : linkStyles
   }
   return (
@@ -107,7 +107,7 @@ export const CardImg = ({ variant, orientation, src }: ImgProps) => {
 };
 
 export const CardTitle = ({ variant, children }: TitleProps) => {
-  let styles = {
+  const styles = {
     ...(variant === "grid" || variant === "asset") ? AssetCardTitleLayout : titleStyles
   }
   return (
