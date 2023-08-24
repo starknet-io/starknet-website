@@ -127,7 +127,7 @@ export const tokens = {
       "hero-gradient-nodes-and-services-b": "#CDCEE7",
       "hero-gradient-security-a": "#C4D7FF",
       "hero-gradient-security-b": "#F3CDFF",
-      "hero-subtitle-fg": "#313131",
+      "hero-subtitle-fg": "#F9E8E8",
       "gradient-orange-a": "#FAE4AB",
       "gradient-orange-b": "#F6D0C7",
       "gradient-blue-a": "#B4DCFE",
@@ -148,6 +148,7 @@ export const tokens = {
       "roadmap-card-tag-bg": "#ffffff",
       "summit-popup-date-heading-color": "#D672EF",
       "councils-title-fg": "#1F1F1F",
+      "title-red-fg": "#EC796B",
     },
 
     dark: {
@@ -276,7 +277,7 @@ export const tokens = {
       "hero-gradient-nodes-and-services-b": "#1A1628",
       "hero-gradient-security-a": "#143B75",
       "hero-gradient-security-b": "#0C0F32",
-      "hero-subtitle-fg": "#CCCCCC",
+      "hero-subtitle-fg": "#F9E8E8",
       "gradient-orange-a": "#202134",
       "gradient-orange-b": "#63494B",
       "gradient-blue-a": "#1B2035",
@@ -296,6 +297,7 @@ export const tokens = {
       "roadmap-card-tag-bg": "#313131",
       "summit-popup-date-heading-color": "#D672EF",
       "councils-title-fg": "#FFFFFF",
+      "title-red-fg": "#EC796B",
     },
   },
 };
@@ -873,6 +875,10 @@ export const semanticTokens = {
     "councils-title-fg": {
       default: tokens.colors.light["councils-title-fg"],
       _dark: tokens.colors.dark["councils-title-fg"],
+    },
+    "title-red-fg": {
+      default: tokens.colors.light["title-red-fg"],
+      _dark: tokens.colors.dark["title-red-fg"],
     },
   },
 };

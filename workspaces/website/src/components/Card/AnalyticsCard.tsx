@@ -23,7 +23,7 @@ export const AnalyticsCard = ({
 
   return (
     <CardGradientBorder display="inline-block">
-      <Box p="2xl" bg={bg}>
+      <Box p="2xl" width="288px" bg={bg}>
         <Box
           display="flex"
           flexDir="column"
@@ -31,10 +31,10 @@ export const AnalyticsCard = ({
           gap="3xl"
         >
           {type === 'twitter' && (
-            <SiTwitter size="48px" fill="content.accent" />
+            <SiTwitter size="32px" fill="content.accent" />
           )}
           {type === 'discord' && (
-            <SiDiscord size="48px" fill="content.accent" />
+            <SiDiscord size="32px" fill="content.accent" />
           )}
           <Box display="flex" flexDir="column" gap="4px">
             <Heading

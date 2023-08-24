@@ -1,8 +1,11 @@
-import { Box, BoxProps, Flex } from "@chakra-ui/react";
+import { Box, BoxProps, Flex, ChakraProps } from "@chakra-ui/react";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { ReactNode } from "react";
 import {
   LargeCardLayout,
+  LargeCardImgLayout,
+  LargeCardBodyLayout,
+  LargeCardHorizontalBodyLayout,
   LargeCardHorizontalLayout,
   IconLinkCardLayout,
   IconLinkCardBodyLayout,
@@ -23,6 +26,9 @@ import { CustomLink } from "@ui/Link";
 type BodyProps = {
   variant?: "grid" | "asset" | "large" | "iconLink";
   children: ReactNode;
+  height?: string;
+  orientation?: string;
+  sx?: ChakraProps['sx']
 };
 
 type TitleProps = {
@@ -68,19 +74,20 @@ const titleStyles = {
   display: "flex",
 }
 
-export const CardBody = ({ variant, children }: BodyProps) => {
-  let styles = {
-    ...variant === "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles
+export const CardBody = ({ variant, height, orientation, children, sx }: BodyProps) => {
+  const styles = {
+    ...variant === "large" ? (orientation === "horizontal" ? LargeCardHorizontalBodyLayout : LargeCardBodyLayout) : variant === "iconLink" ? IconLinkCardBodyLayout : variant === "grid" ? GridCardBodyLayout : variant === "asset" ? AssetCardBodyLayout : bodyStyles,
+    ...height && { height: height }
   }
   return (
-    <Flex sx={styles}>
+    <Flex sx={{ ...styles, ...sx }}>
       {children}
     </Flex>
   );
 };
 
 export const CardLink = ({ variant, href, children }: LinkProps) => {
-  let styles = {
+  const styles = {
     ...(variant === "iconLink" || variant === "grid") ? IconLinkCardLinkLayout : linkStyles
   }
   return (
@@ -91,27 +98,27 @@ export const CardLink = ({ variant, href, children }: LinkProps) => {
 };
 
 export const CardImg = ({ variant, orientation, src }: ImgProps) => {
-  let styles = {
-    ...variant === "grid" ? GridCardImgLayout : variant === "asset" ? (orientation === "horizontal" ? AssetCardImgHorizontalLayout : AssetCardImgLayout) : imgStyles
+  const styles = {
+    ...variant === "large" ? LargeCardImgLayout : variant === "grid" ? GridCardImgLayout : variant === "asset" ? (orientation === "horizontal" ? AssetCardImgHorizontalLayout : AssetCardImgLayout) : imgStyles
   }
   return (
-    <img style={styles} src={src}/>
+    <img style={styles} src={src} alt=""/>
   );
 };
 
 export const CardTitle = ({ variant, children }: TitleProps) => {
-  let styles = {
+  const styles = {
     ...(variant === "grid" || variant === "asset") ? AssetCardTitleLayout : titleStyles
   }
   return (
-    <Heading sx={styles} variant="h3" color="btn-primary-bg">
+    <Heading sx={styles} variant={variant === "large" ? "h2" : "h3"} color="btn-primary-bg">
       {children}
     </Heading>
   );
 };
 
 export const Card = (props: Props) => {
-  const { variant, orientation = "vertical", ...rest } = props;
+  const { variant, orientation = "vertical", sx, ...rest } = props;
   const bgColor = variant === "asset" ? "white" : "#FBFBFB"
   let styles = {
     borderRadius: "16px",
@@ -144,10 +151,13 @@ export const Card = (props: Props) => {
     default:
       break;
   }
+  if (variant === "large") {
+    console.log('styles ', styles)
+  }
   return (
     <CardGradientBorder bg={bgColor} padding="0" borderRadius="16px">
       <Box
-        sx={styles} {...rest}
+        sx={{...styles, ...sx}} {...rest}
       />
     </CardGradientBorder>
   )

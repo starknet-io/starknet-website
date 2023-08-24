@@ -27,6 +27,12 @@ export interface BasicCardBlock {
 
   readonly size?: "sm" | "md";
 }
+
+export interface CardBlock {
+  readonly type: "card";
+  readonly variant?: "grid" | "asset" | "large" | "iconLink";
+  readonly orientation?: "horizontal" | "vertical";
+}
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -129,6 +135,12 @@ export interface HomeHeroBlock {
     readonly heroText: string;
   };
 }
+export interface PromoBlock {
+  readonly type: "promo_block";
+  readonly seo: {
+    readonly heroText: string;
+  };
+}
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
@@ -148,6 +160,7 @@ export interface OrderedBlock {
 }
 
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type DescriptionVariant = "cardBody" | "body" | "breadcrumbs" | "footerLink" | "textLink";
 
 export type Block =
   | MarkdownBlock
@@ -157,12 +170,14 @@ export type Block =
   | ImageIconLinkCardBlock
   | HeroBlock
   | HomeHeroBlock
+  | PromoBlock
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock
   | OrderedBlock
   | ListCardItemsBlock
-  | AmbassadorsListBlock;
+  | AmbassadorsListBlock
+  | CardBlock;
 
 export interface Container {
   readonly type: "container";
@@ -177,6 +192,8 @@ export interface FlexLayoutBlock {
   readonly xl?: number;
   readonly heading?: string;
   readonly heading_variant?: HeadingVariant;
+  readonly description?: string;
+  readonly description_variant?: DescriptionVariant;
   readonly blocks: readonly Block[];
 }
 export interface GroupBlock {

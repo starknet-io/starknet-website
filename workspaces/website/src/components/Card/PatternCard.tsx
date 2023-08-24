@@ -18,6 +18,7 @@ export const PatternCard = ({
       <Box
         padding="0px"
         display="flex"
+        height="100%"
         flexDir={{
           base: "row",
           lg: "column",
@@ -63,6 +64,8 @@ export const PatternCard = ({
           gap="lg"
           display="flex"
           flexDir="column"
+          flex="1"
+          justifyContent="space-between"
         >
           <Heading
             variant="h5"

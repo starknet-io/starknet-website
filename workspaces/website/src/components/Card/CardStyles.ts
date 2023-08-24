@@ -1,31 +1,56 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
 export const CardStyle = {
-  background: "#FBFBFB"
+  background: "#FBFBFB",
+  height: "100%"
 }
 export const CardStyleWhite = {
   background: "#FFFFFF"
 }
 export const LargeCardLayout = {
   display: "flex",
-  padding: { base: "24px", lg: "40px" },
+  padding: { base: "24px", lg: "80px" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
-  gap: "32px 32px",
+  gap: { base: "40px", lg: "80px" },
   flex: "1 0 0",
   flexWrap: "wrap",
+  flexDirection: {base: "column-reverse", lg: "column"},
   ...CardStyle
+}
+export const LargeCardImgLayout = {
+  maxWidth: {base: "100%", lg: "354px"},
+  maxHeight: "400px"
+}
+export const LargeCardBodyLayout = {
+  display: "flex",
+  minWidth: "164px",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  gap: {base: "20px", lg: "40px"},
+  flex: "1 0 0"
+}
+export const LargeCardHorizontalBodyLayout = {
+  display: "flex",
+  minWidth: "164px",
+  maxWidth: "460px",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  gap: "40px",
+  flex: "1 0 0"
 }
 export const LargeCardHorizontalLayout = {
   display: "flex",
-  padding: "24px",
+  padding: { base: "24px", lg: "80px" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
-  gap: "16px 16px",
+  gap: "80px",
   flex: "1 0 0",
-  flexWrap: "wrap"
+  flexWrap: "wrap",
+  flexDirection: {base: "column-reverse", md: "row-reverse", lg: "row"},
+  ...CardStyle
 }
 export const IconLinkCardLayout = {
   display: "flex",
@@ -43,7 +68,8 @@ export const IconLinkCardBodyLayout = {
   flexDirection: "column",
   alignItems: "flex-start",
   gap: "20px",
-  alignSelf: "stretch"
+  alignSelf: "stretch",
+  ...CardStyle
 }
 export const IconLinkCardLinkLayout = {
   display: "flex",
@@ -57,13 +83,14 @@ export const GridCardLayout = {
   alignItems: "center",
   alignContent: "center",
   flexDirection: "column",
-  flex: "1 0 0",
+  flex: 2,
   flexWrap: "wrap",
-  borderRadius: "16px",
   ...CardStyle
 }
 export const GridCardImgLayout = {
-  width: "100%"
+  width: "100%",
+  minHeight: 225,
+  maxHeight: 225
 }
 export const GridCardBodyLayout = {
   display: "flex",
@@ -73,7 +100,8 @@ export const GridCardBodyLayout = {
   alignItems: "flex-start",
   flex: "1 0 0",
   flexDirection: "column",
-  gap: "20px"
+  gap: "20px",
+  bg: "white"
 }
 export const AssetCardLayout = {
   display: "flex",
@@ -95,7 +123,8 @@ export const AssetCardHorizontalLayout = {
   gap: "24px 24px",
   flex: "1 0 0",
   alignSelf: "stretch",
-  flexWrap: "wrap"
+  flexWrap: "wrap",
+  ...CardStyleWhite
 }
 export const AssetCardTitleLayout = {
   display: "flex",

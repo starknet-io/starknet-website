@@ -28,12 +28,6 @@ export const StatsCard = ({
       }}
       minW={{
         base: "260px",
-        lg: "302px",
-      }}
-      maxW={{
-        base: "auto",
-        md: "400px",
-        lg: "400px",
       }}
       borderRadius="1rem"
     >

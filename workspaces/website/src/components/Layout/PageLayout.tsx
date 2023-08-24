@@ -23,7 +23,7 @@ type Props = {
 
 export const PageLayout = (props: Props) => {
   return (
-    <Container py="0" pb="16" flex="1" maxW={props.maxW ? props.maxW : "1344px"}>
+    <Container py="0" px="0" pb="16" flex="1" maxW={props.maxW ? props.maxW : "1344px"} overflowX="clip" overflowY="visible">
       <Flex py="4" direction={{ base: "column", lg: "row" }}>
         <Box>{props.breadcrumbs}</Box>
         <Spacer />
