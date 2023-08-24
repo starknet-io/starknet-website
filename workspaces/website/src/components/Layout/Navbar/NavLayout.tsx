@@ -43,7 +43,7 @@ export const NavLayout = (props: NavLayoutProps) => {
   return (
     <Container
       py={{ base: "4", lg: "17px" }}
-      px={{ base: "16px", md: "32px" }}
+      px={{ base: "page.leftRigt.base", md: "page.leftRight.md" }}
       maxW="1344px"
     >
       <HStack spacing="4" justify="space-between">

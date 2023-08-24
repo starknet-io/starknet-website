@@ -15,6 +15,7 @@ import { headingTheme } from "../components/Typography/HeadingStyles";
 import { textTheme } from "../components/Typography/TextStyles";
 import { alertTheme } from "../components/Alert/AlertStyles";
 import { tooltipTheme } from "../components/Tooltip/TooltipStyles";
+import { page, cards } from "./spaces";
 
 const theme = extendTheme(proTheme, {
   styles,
@@ -189,6 +190,9 @@ const theme = extendTheme(proTheme, {
     "4xl": "80px",
     "5xl": "120px",
     "6xl": "160px",
+    "page-gap-standart": "80px",
+    cards,
+    page,
   },
   radii: {
     none: "0",
@@ -198,6 +202,11 @@ const theme = extendTheme(proTheme, {
     md: "16px",
     lg: "24px",
     round: "999px",
+  },
+  sizes: {
+    contentMaxW: "1344px",
+    page,
+    cards,
   },
 });
 export default theme;

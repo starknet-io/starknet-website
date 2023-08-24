@@ -48,7 +48,7 @@ export function BlockCommunityEventsList({
           startOfDay(new Date())
         )} AND type: community_event`}
       />
-      <Container maxW="1062px">
+      <Container maxW="1062px" px="0">
         <Box>
           <Flex justifyContent="center">
             <Heading variant="h2" color="heading-navy-fg" mb="64px">
