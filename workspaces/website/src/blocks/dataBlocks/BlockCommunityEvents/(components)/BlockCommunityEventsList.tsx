@@ -1,12 +1,8 @@
-
 import { Box, Flex, Grid, Container, HStack } from "@chakra-ui/react";
 import moment from "moment";
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  Configure,
-} from "react-instantsearch-hooks-web";
+import { InstantSearch, Configure } from "react-instantsearch-hooks-web";
 import { useHits } from "react-instantsearch-hooks";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -67,7 +63,7 @@ export function BlockCommunityEventsList({
             backgroundImage: "url(/assets/community-events-bg.svg)",
             backgroundSize: "130%",
             backgroundPosition: "center",
-            zIndex: -1
+            zIndex: -1,
           },
         }}
       >
@@ -84,8 +80,9 @@ export function BlockCommunityEventsList({
               fontSize: "64px",
               fontWeight: "600",
               lineHeight: "80px",
-              maxW: 710
-            }}>
+              maxW: 710,
+            }}
+          >
             Community events near you
           </Heading>
           <CustomHits hitsPerPage={hitsPerPage} />
@@ -115,12 +112,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
     <>
       <Grid
         gap={4}
-        gridTemplateColumns={[
-          "1fr",
-          "1fr",
-          "repeat(2, 1fr)",
-          "repeat(3, 1fr)"
-        ]}
+        gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
       >
         {hits.map((hit, i) => {
           if (i > hitsPerPage) return null;
@@ -130,13 +122,13 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                 <CardImg variant="grid" src={hit.image} />
                 <CardBody variant="grid">
                   <Text variant="cardBody">
-                    {
-                      hit?.end_date
-                        ? `${moment(hit?.start_date).format(
-                            "ddd MMM DD"
-                          )} - ${moment(hit?.end_date).format("ddd MMM DD, YYYY")}`
-                        : moment(hit?.start_date).format("ddd MMM DD, YYYY")
-                    }
+                    {hit?.end_date
+                      ? `${moment(hit?.start_date).format(
+                          "ddd MMM DD"
+                        )} - ${moment(hit?.end_date).format(
+                          "ddd MMM DD, YYYY"
+                        )}`
+                      : moment(hit?.start_date).format("ddd MMM DD, YYYY")}
                   </Text>
                   <Heading m="0" variant="h3" color="heading-navy-fg">
                     {hit.name}
@@ -170,7 +162,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
           variant="solid"
           size="md"
           sx={{
-            bg: "#0C0C4F"
+            bg: "#0C0C4F",
           }}
         >
           {`Check out all events ->`}

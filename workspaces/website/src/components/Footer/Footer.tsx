@@ -22,22 +22,22 @@ const socialLinks = [
   {
     label: "Discord",
     href: "https://starknet.io/discord",
-    icon: <SiDiscord fontSize="1.25rem" style={{marginLeft: '-0.25rem'}} />,
+    icon: <SiDiscord fontSize="1.25rem" style={{ marginLeft: "-0.25rem" }} />,
   },
   {
     label: "GitHub",
     href: "https://github.com/starknet-io/starknet-website",
-    icon: <SiGithub fontSize="1.25rem" style={{marginLeft: '-0.5rem'}} />,
+    icon: <SiGithub fontSize="1.25rem" style={{ marginLeft: "-0.5rem" }} />,
   },
   {
     label: "Twitter",
     href: "https://twitter.com/Starknet",
-    icon: <SiTwitter fontSize="1.25rem" style={{marginLeft: '-0.5rem'}} />,
+    icon: <SiTwitter fontSize="1.25rem" style={{ marginLeft: "-0.5rem" }} />,
   },
   {
     label: "YouTube",
     href: "https://www.youtube.com/channel/UCQZ3gKgk5YJNKAQgETdZqRQ",
-    icon: <SiYoutube fontSize="1.25rem" style={{marginLeft: 'left'}} />,
+    icon: <SiYoutube fontSize="1.25rem" style={{ marginLeft: "left" }} />,
   },
 ];
 
@@ -51,87 +51,99 @@ type RootProps = {
 
 const Root = ({ children, seo, ...rest }: RootProps) => {
   return (
-    <Box as="footer" role="contentinfo" {...rest} margin="auto" maxWidth="auto" overflowX='hidden' color='fg-default'>
-        <Box display="flex" justifyContent="center">
-          <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
-            <Box
-              py={{ base: "12", md: "16" }}
-              maxW={1344}
-              px="2xl"
-              marginInline="auto"
-            >
-              {children}
-            </Box>
-            <Box
+    <Box
+      as="footer"
+      role="contentinfo"
+      {...rest}
+      margin="auto"
+      maxWidth="auto"
+      overflowX="hidden"
+      color="fg-default"
+    >
+      <Box display="flex" justifyContent="center">
+        <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
+          <Box
+            py={{ base: "12", md: "16" }}
+            maxW="contentMaxW"
+            px={{
+              base: "page.leftRight.base",
+              md: "page.leftRight.md",
+            }}
+            marginInline="auto"
+          >
+            {children}
+          </Box>
+          <Box
+            width="100%"
+            maxW="contentMaxW"
+            px={{
+              base: "page.leftRight.base",
+              md: "page.leftRight.md",
+            }}
+            marginInline="auto"
+          >
+            <Stack
+              py="3xl"
+              justify="space-between"
+              direction={{ base: "column", lg: "row" }}
+              align={{ base: "start", lg: "center" }}
               width="100%"
-              maxW={1344}
-              px="2xl"
-              marginInline="auto"
+              gap={{
+                base: "xl",
+                lg: "0",
+              }}
             >
-              <Stack
-                py="3xl"
-                justify="space-between"
-                direction={{ base: "column", lg: "row" }}
-                align={{ base: "start", lg: "center" }}
-                width="100%"
-                gap={{
-                  base: "xl",
-                  lg: "0",
-                }}
+              <HStack
+                justify={{ base: "space-between", sm: "start" }}
+                width={{ base: "full", sm: "auto" }}
+                spacing="0"
+                gap="xl"
               >
-                <HStack
-                  justify={{ base: "space-between", sm: "start" }}
-                  width={{ base: "full", sm: "auto" }}
-                  spacing="0"
-                  gap="xl"
-                >
-                  <Box>
-                    <StarknetLogo height="32px" />
-                  </Box>
-                  <Center height="32px">
-                    <Divider
-                      orientation="vertical"
-                      borderColor="divider-bg"
-                      opacity="1"
-                    />
-                  </Center>
-                  <Text fontSize="sm">
-                    {seo?.footerText}
-                  </Text>
-                </HStack>
-                <ButtonGroup
-                  padding={{ base: "20px 0", md: "8px 0px" }}
-                  fontSize="14px"
-                  lineHeight="24px"
-                  gap={{ base: "2xl", md: "3xl" }}
-                  flexDirection={{ base: "column", md: "row" }}
-                >
-                  {socialLinks.map((social) => (
-                    <Button
-                      key={social.label}
-                      as="a"
-                      href={social.href}
-                      size="small"
-                      fontWeight="normal"
-                      variant="unstyled"
-                      color="fg-default-light"
-                      _hover={{
-                        color: "fg-default-hover",
-                      }}
-                      display="flex"
-                      gap="0.5rem"
-                      padding="0.5rem 0"
-                      ml='0px !important'
-                    >
-                      {social.icon}
-                      {social.label}
-                    </Button>
-                  ))}
-                </ButtonGroup>
-              </Stack>
-            </Box>
-          </Container>
-        </Box>
+                <Box>
+                  <StarknetLogo height="32px" />
+                </Box>
+                <Center height="32px">
+                  <Divider
+                    orientation="vertical"
+                    borderColor="divider-bg"
+                    opacity="1"
+                  />
+                </Center>
+                <Text fontSize="sm">{seo?.footerText}</Text>
+              </HStack>
+              <ButtonGroup
+                padding={{ base: "20px 0", md: "8px 0px" }}
+                fontSize="14px"
+                lineHeight="24px"
+                gap={{ base: "2xl", md: "3xl" }}
+                flexDirection={{ base: "column", md: "row" }}
+              >
+                {socialLinks.map((social) => (
+                  <Button
+                    key={social.label}
+                    as="a"
+                    href={social.href}
+                    size="small"
+                    fontWeight="normal"
+                    variant="unstyled"
+                    color="fg-default-light"
+                    _hover={{
+                      color: "fg-default-hover",
+                    }}
+                    display="flex"
+                    gap="0.5rem"
+                    padding="0.5rem 0"
+                    ml="0px !important"
+                  >
+                    {social.icon}
+                    {social.label}
+                  </Button>
+                ))}
+              </ButtonGroup>
+            </Stack>
+          </Box>
+        </Container>
+      </Box>
     </Box>
   );
 };

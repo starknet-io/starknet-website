@@ -8,6 +8,7 @@ import {
   HStack,
   Divider,
   Grid,
+  Icon,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import moment from "moment";
@@ -29,6 +30,9 @@ import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButto
 import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { navigate } from "vite-plugin-ssr/client/router";
+import { HiOutlineHome } from "react-icons/hi2";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
+import { Chip } from "@ui/Chip/Chip";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -107,24 +111,24 @@ const PostsPageLayout = ({
     handleFilterClick,
     filtersCounts,
     selectedFilters,
-    setSelectedFilters
+    setSelectedFilters,
   } = useMobileFiltersDrawer(topicsItems);
 
   function mapSelectedFilters() {
     let result: { topic?: string[] } = {};
     let topicsFilteredValues = topicsItems
-        .filter(item => item.isRefined)
-        .map(item => item.value);
+      .filter((item) => item.isRefined)
+      .map((item) => item.value);
     if (topicsFilteredValues.length > 0) {
-        result["topic"] = topicsFilteredValues;
+      result["topic"] = topicsFilteredValues;
     }
     return result;
   }
-  
+
   const handleModalClose = () => {
     onClose();
     setSelectedFilters(mapSelectedFilters());
-  }
+  };
 
   const handleApplyChanges = () => {
     if (selectedFilters["topic"]?.length) {
@@ -136,7 +140,7 @@ const PostsPageLayout = ({
         topic.isRefined && refineTopics(topic.value);
       });
     }
-  }
+  };
 
   const handleApplyFilters = () => {
     handleApplyChanges();
@@ -161,30 +165,19 @@ const PostsPageLayout = ({
         />
       }
       breadcrumbs={
-        <Breadcrumb separator="/">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}/community`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Community
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem isCurrentPage fontSize="sm">
-            <BreadcrumbLink fontSize="sm">Blog</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
+        <Breadcrumbs
+          locale={params.locale}
+          items={[
+            {
+              link: `/${params.locale}/community`,
+              label: "Community",
+            },
+            {
+              label: "Blog",
+              link: ``,
+            },
+          ]}
+        />
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
@@ -209,8 +202,18 @@ const PostsPageLayout = ({
               selectedFilters={selectedFilters}
               isDesktop={false}
             />
-            <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
-            <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
+            <Button
+              variant="solid"
+              fullWidth
+              mb={2}
+              mt={6}
+              onClick={handleApplyFilters}
+            >
+              Apply filters
+            </Button>
+            <Button variant="outline" onClick={handleClearFilters} fullWidth>
+              Clear all
+            </Button>
           </MobileFiltersDrawer>
         </Box>
       }
@@ -230,7 +233,7 @@ function CustomTopics({
   items,
   refineTopics,
   selectedFilters,
-  isDesktop = true
+  isDesktop = true,
 }: CustomTopicsProps) {
   // const router = useRouter();
   // const pathname = usePathname()!;
@@ -238,7 +241,11 @@ function CustomTopics({
   // const topicSet = useMemo(() => {
   //   return new Set(searchParams.get("topic")?.split(",") ?? []);
   // }, [searchParams]);
-  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+  const checkIfFilterExists = (
+    role: string,
+    filter: string,
+    selectedFilters: { [key: string]: string[] }
+  ) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
@@ -256,33 +263,21 @@ function CustomTopics({
   return (
     <Box display="flex" flexWrap="wrap" gap="8px" columnGap="4px" width="100%">
       {validTopics.map((topic, i) => (
-        <Button
-          size="sm"
-          px="8px"
-          // variant={topicSet.has(topic.value) ? "filterActive" : "filter"}
-          variant={isDesktop ? (topic.isRefined ? "filterActive" : "filter") : checkIfFilterExists(topic.label, "topic", selectedFilters) ? "filterActive" : "filter"}
+        <Chip
+          key={topic.value}
+          isSelected={
+            isDesktop
+              ? topic.isRefined
+              : checkIfFilterExists(topic.label, "topic", selectedFilters)
+          }
           onClick={() => {
-            isDesktop ? refineTopics(topic.value) : refineTopics("topic", topic.label);
-
-            // const params = new URLSearchParams(searchParams);
-
-            // if (topicSet.has(topic.value)) {
-            //   topicSet.delete(topic.value);
-            // } else {
-            //   topicSet.add(topic.value);
-            // }
-
-            // if (topicSet.size === 0) {
-            //   router.replace(pathname);
-            // } else {
-            //   params.set("topic", Array.from(topicSet.values()).join(","));
-            //   router.replace(`${pathname}?${params.toString()}`);
-            // }
+            isDesktop
+              ? refineTopics(topic.value)
+              : refineTopics("topic", topic.label);
           }}
-          key={i}
         >
           {topicsDict[topic.value].name} ({topic.count})
-        </Button>
+        </Chip>
       ))}
     </Box>
   );
@@ -308,8 +303,8 @@ function CustomCategories({
           isActive={params.category == null}
           onClick={() => {
             navigate(`/${params.locale}/posts`, {
-              overwriteLastHistoryEntry: true
-            })
+              overwriteLastHistoryEntry: true,
+            });
           }}
         >
           All posts
@@ -325,8 +320,8 @@ function CustomCategories({
               if (category.slug === params.category) return;
 
               navigate(`/${params.locale}/posts/${category.slug}`, {
-                overwriteLastHistoryEntry: true
-              })
+                overwriteLastHistoryEntry: true,
+              });
             }}
           >
             <> {category.name}</>
@@ -344,14 +339,14 @@ type VideoData = {
   snippet: object;
   contentDetails: {
     duration: string;
-  }
-}
+  };
+};
 
 type Video = {
   data: VideoData;
   url: string;
   id: string;
-}
+};
 
 type Hit = {
   readonly id: string;
@@ -376,75 +371,105 @@ interface Block {
   type?: string;
 }
 
-function CustomHits({ categories, params }: Pick<Props, "categories" | "params">) {
+function CustomHits({
+  categories,
+  params,
+}: Pick<Props, "categories" | "params">) {
   const category = categories.find((c) => c.slug === params.category);
   const { hits, showMore, isLastPage } = useInfiniteHits<Hit>();
   const [featuredHit, setFeaturedHit] = useState<Hit>();
   const [filteredHits, setFilteredHits] = useState<Hit[]>([]);
   const [featuredHitDate, setFeaturedHitDate] = useState<string>();
-  const [featuredHitCategory, setFeaturedHitCategory] = useState<Category>(categories[0]);
+  const [featuredHitCategory, setFeaturedHitCategory] = useState<Category>(
+    categories[0]
+  );
 
   useEffect(() => {
     const handleResize = () => {
       if (hits) {
         if (category) {
-          if (window.innerWidth > 992 && category.show_custom_featured_post && category.custom_featured_post) {
-            setFilteredHits(hits.filter(hit => hit.id !== category.custom_featured_post));
-            setFeaturedHit(hits.find(hit => hit.id === category.custom_featured_post))
-          } else if (window.innerWidth > 992 && !(category.show_custom_featured_post && category.custom_featured_post)) {
-            setFeaturedHit(hits[0])
+          if (
+            window.innerWidth > 992 &&
+            category.show_custom_featured_post &&
+            category.custom_featured_post
+          ) {
+            setFilteredHits(
+              hits.filter((hit) => hit.id !== category.custom_featured_post)
+            );
+            setFeaturedHit(
+              hits.find((hit) => hit.id === category.custom_featured_post)
+            );
+          } else if (
+            window.innerWidth > 992 &&
+            !(
+              category.show_custom_featured_post &&
+              category.custom_featured_post
+            )
+          ) {
+            setFeaturedHit(hits[0]);
             setFilteredHits(hits.slice(1));
           } else {
             setFilteredHits(hits);
           }
         } else {
-          if (window.innerWidth > 992 && hits.some(obj => obj.featured_post === true)) {
-            setFilteredHits(hits.filter(hit => hit.featured_post !== true));
-            setFeaturedHit(hits.find(hit => hit.featured_post === true))
-          } else if (window.innerWidth > 992 && !hits.some(obj => obj.featured_post === true)) {
-            setFeaturedHit(hits[0])
+          if (
+            window.innerWidth > 992 &&
+            hits.some((obj) => obj.featured_post === true)
+          ) {
+            setFilteredHits(hits.filter((hit) => hit.featured_post !== true));
+            setFeaturedHit(hits.find((hit) => hit.featured_post === true));
+          } else if (
+            window.innerWidth > 992 &&
+            !hits.some((obj) => obj.featured_post === true)
+          ) {
+            setFeaturedHit(hits[0]);
             setFilteredHits(hits.slice(1));
           } else {
             setFilteredHits(hits);
           }
         }
       }
-    }
+    };
     handleResize();
-    window.addEventListener('resize', handleResize)
-  }, [hits])
+    window.addEventListener("resize", handleResize);
+  }, [hits]);
   useEffect(() => {
     if (hits && featuredHit) {
-      setFeaturedHitDate(moment(featuredHit.published_date).format("MMM DD, YYYY"));
-      setFeaturedHitCategory(categories.find((c) => c.id === featuredHit.category) || categories[0])
+      setFeaturedHitDate(
+        moment(featuredHit.published_date).format("MMM DD, YYYY")
+      );
+      setFeaturedHitCategory(
+        categories.find((c) => c.id === featuredHit.category) || categories[0]
+      );
     }
-
-  }, [hits, categories, featuredHit])
+  }, [hits, categories, featuredHit]);
   return (
     <>
-      {featuredHit && window.innerWidth > 992 && <Box mb="48px">
-        <ArticleCard.Root
-          href={`/${featuredHit?.locale}/posts/${featuredHit?.category}/${featuredHit?.slug}`}
-          type="featured"
-        >
-          <ArticleCard.Image url={featuredHit?.image} type="featured" />
+      {featuredHit && window.innerWidth > 992 && (
+        <Box mb="48px">
+          <ArticleCard.Root
+            href={`/${featuredHit?.locale}/posts/${featuredHit?.category}/${featuredHit?.slug}`}
+            type="featured"
+          >
+            <ArticleCard.Image url={featuredHit?.image} type="featured" />
 
-          <ArticleCard.Body type="featured">
-            <ArticleCard.Category category={featuredHitCategory} />
-            <ArticleCard.Content
-              title={featuredHit?.title}
-              excerpt={featuredHit?.short_desc}
-              type="featured"
-            />
-            <ArticleCard.Footer
-              postType={featuredHit?.post_type}
-              publishedAt={featuredHitDate}
-              timeToConsume={featuredHit?.timeToConsume}
-              type="featured"
-            />
-          </ArticleCard.Body>
-        </ArticleCard.Root>
-      </Box>}
+            <ArticleCard.Body type="featured">
+              <ArticleCard.Category category={featuredHitCategory} />
+              <ArticleCard.Content
+                title={featuredHit?.title}
+                excerpt={featuredHit?.short_desc}
+                type="featured"
+              />
+              <ArticleCard.Footer
+                postType={featuredHit?.post_type}
+                publishedAt={featuredHitDate}
+                timeToConsume={featuredHit?.timeToConsume}
+                type="featured"
+              />
+            </ArticleCard.Body>
+          </ArticleCard.Root>
+        </Box>
+      )}
       <Grid
         templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
         templateRows="1fr"
@@ -460,7 +485,7 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
             <ArticleCard.Root
               href={`/${hit.locale}/posts/${category?.slug}/${hit.slug}`}
               key={i}
-              sx={{maxW: {base: "none", lg: "440px", xl: "400px"}}}
+              sx={{ maxW: { base: "none", lg: "440px", xl: "400px" } }}
             >
               <ArticleCard.Image url={hit.image} />
 
@@ -483,11 +508,7 @@ function CustomHits({ categories, params }: Pick<Props, "categories" | "params">
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button
-            onClick={() => showMore()}
-            flexShrink={0}
-            variant="rounded"
-          >
+          <Button onClick={() => showMore()} flexShrink={0} variant="rounded">
             View More
           </Button>
           <Divider />

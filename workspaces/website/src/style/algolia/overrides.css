@@ -1,6 +1,7 @@
 :root {
   --aa-search-input-height: 44px;
-  --aa-input-icon-size: 20px;
+  --aa-search-input-placeholder-height: 40px;
+  --aa-input-icon-size: 24px;
   --aa-base-unit: 16;
   --aa-spacing-factor: 1;
   --aa-spacing: calc(var(--aa-base-unit) * var(--aa-spacing-factor) * 1px);
@@ -110,34 +111,34 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   cursor: pointer;
   display: grid;
   padding: 0px; /* remove padding from parent and add it to child so that we can click link more easily*/
-  margin-bottom: 8px;
-  border-radius: 8px;
-  background-color: rgba(var(--aa-item-background-rgb), 1);
+  margin-bottom: var(--chakra-space-sm);
+  border-radius: var(--chakra-space-xs);
+  background-color: var(--chakra-colors-surface-transparent);
 }
 
 .aa-ItemLink,
 .aa-ItemWrapper {
-  padding: 16px;
-  min-height: 70px;
+  padding-inline: var(--chakra-space-md);
+  padding-block: var(--chakra-space-sm);
 }
 
 .aa-Item:last-child {
   margin-bottom: 24px;
 }
 .aa-Item[aria-selected="true"] {
-  background-color: rgba(
-    var(--aa-selected-color-rgb),
-    var(--aa-selected-color-alpha)
-  );
-  color: rgb(var(--aa-selected-text-color-rgb));
+  background-color: var(--chakra-colors-surface-accentInverted);
+  color: var(--chakra-colors-content-defaultHover);
 }
 
 .aa-Item[aria-selected="true"] svg {
-  color: #fff;
+  color: var(--chakra-colors-content-defaultHover);
 }
 
 .aa-DetachedContainer .aa-SourceHeader {
-  margin: var(--aa-spacing) 0 12px 0;
+  margin: 0 0 var(--chakra-space-xs) 0;
+  color: var(--chakra-colors-content-default);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .aa-PanelLayout {
@@ -146,7 +147,8 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   max-height: 650px;
   max-height: var(--aa-panel-max-height);
   overflow-y: auto;
-  padding: 16px 32px;
+  padding-inline: var(--chakra-space-xl);
+  padding-block: var(--chakra-space-md);
   position: relative;
   text-align: left;
 }
@@ -156,14 +158,19 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   border-radius: 8px;
   border: 0px;
   color: var(--chakra-colors-fg-default-light);
-  background-color: var(--chakra-colors-nav-searchinput-bg);
+  background-color: var(--chakra-colors-surface-transparent);
 }
+
+.aa-DetachedSearchButton:hover {
+  color: var(--chakra-colors-content-defaultHover);
+}
+
 .aa-DetachedSearchButtonIcon {
   color: inherit;
 }
 
 .aa-DetachedSearchButtonPlaceholder {
-  line-height: var(--aa-search-input-height);
+  line-height: var(--aa-search-input-placeholder-height);
 }
 
 .aa-DetachedSearchButton svg {
@@ -214,13 +221,13 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .aa-DetachedFormContainer {
-  border-bottom: 1px solid
-    rgba(var(--aa-primary-color-rgb), var(--aa-primary-color-alpha));
+  border-bottom: 1px solid var(--chakra-colors-border-divider);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
-  padding-inline: 2rem;
+  padding-inline: var(--chakra-space-xl);
+  padding-block: var(--chakra-space-sm);
 }
 
 .aa-Form {
@@ -237,15 +244,14 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   margin: 0;
   position: relative;
   flex: 1;
-  padding-block: 8px;
   background: transparent;
 }
 
 .aa-SubmitButton {
   line-height: 1;
-  width: auto;
-  margin: 0;
-  padding: 0 var(--aa-spacing) 0 0;
+  width: var(--aa-input-icon-size);
+  margin: 0 var(--chakra-space-sm) 0 0;
+  padding: 0;
 }
 
 .aa-Form[focus-within] {
@@ -264,9 +270,16 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   outline: medium none currentColor;
 }
 
+.aa-Input {
+  color: var(--chakra-colors-content-default);
+}
 .aa-Input::placeholder {
   font-weight: 400;
   color: inherit;
+  font-size: 16px;
+}
+.aa-Label svg {
+  color: var(--chakra-colors-content-default);
 }
 
 .aa-SourceHeaderTitle {
@@ -282,15 +295,46 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .aa-DetachedCancelButton {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  font: inherit;
-  border-radius: 8px;
-  border: 1px solid
-    rgba(var(--aa-panel-border-color-rgb), var(--aa-panel-border-color-alpha));
-  padding: 10px 16px;
-  margin: auto 0;
+  border-radius: var(--chakra-space-xs);
+  padding-inline: var(--chakra-space-md);
+  padding-block: var(--chakra-space-xs);
+  font-size: 16px;
+  color: var(--chakra-colors-content-default);
+  font-weight: 700;
+  min-width: none;
+  line-height: 24px;
+  height: auto;
+  background: transparent;
+}
+
+.aa-ItemActionButtonDanger {
+  border-radius: var(--chakra-space-xs);
+  padding: var(--chakra-space-xs);
+  color: var(--chakra-colors-content-default);
+}
+
+.aa-ItemActionButton svg {
+  width: 24px;
+  height: 20px;
+}
+
+.aa-DetachedCancelButton:hover,
+.aa-ItemActionButtonDanger:hover {
+  background: #eae9eb;
+  color: var(--chakra-colors-content-defaultHover);
+}
+.aa-DetachedCancelButton:active,
+.aa-ItemActionButtonDanger:active {
+  background: "#eae9eb";
+  box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.1);
+  outline-width: 1px;
+}
+
+.aa-DetachedCancelButton:focus-visible,
+.aa-ItemActionButtonDanger:focus-visible {
+  box-shadow: none;
+  outline-offset: 1;
+  outline: 3px solid #3f8cff;
 }
 
 .aa-Autocomplete .aa-Form {
@@ -303,7 +347,8 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .aa-ItemContent {
-  gap: var(--aa-spacing);
+  gap: var(--chakra-space-md);
+  min-height: 40px;
 }
 .aa-ItemContent mark {
   color: inherit;
@@ -311,8 +356,10 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   font-weight: var(--aa-font-weight-semibold);
 }
 
-.aa-ItemActionButtonDanger:hover svg {
-  fill: #ff4557;
+.aa-ItemActions {
+  margin-left: var(--chakra-space-md);
+  padding: 0px;
+  gap: var(--chakra-space-xs);
 }
 
 .aa-ItemLink:hover {
@@ -367,4 +414,38 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   .aa-DetachedSearchButton {
     background-color: transparent;
   }
+}
+
+.algolia-no-results {
+  padding-inline: var(--chakra-space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--chakra-space-3xl);
+  height: var(--aa-detached-modal-max-height);
+  justify-content: center;
+}
+
+@media screen and (max-width: 680px) {
+  .algolia-no-results {
+    padding-top: clamp(80px, 140px, 15vh);
+    height: auto;
+  }
+}
+
+.algolia-no-results .text-container {
+  text-align: center;
+}
+
+.algolia-no-results .text-container h4 {
+  margin-bottom: var(--chakra-space-md);
+  color: var(--chakra-colors-content-accent);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.algolia-no-results .text-container p {
+  color: var(--chakra-colors-content-default);
+  font-size: 14px;
+  line-height: 24px;
 }

@@ -23,9 +23,10 @@ import type { Page } from "@starknet-io/cms-data/src/pages";
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { createLocalStorageRecentSearchesPlugin } from "@algolia/autocomplete-plugin-recent-searches";
 import { createQuerySuggestionsPlugin } from "@algolia/autocomplete-plugin-query-suggestions";
-import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
+import { Box, Image, Kbd } from "@chakra-ui/react";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import { Heading } from "@ui/Typography/Heading";
 
 export function Autocomplete<TItem extends BaseItem>(
   props: Partial<AutocompleteOptions<TItem>>
@@ -84,6 +85,32 @@ export function Autocomplete<TItem extends BaseItem>(
 
         panelRootRef.current.render(children);
       },
+      renderNoResults({ state }, root) {
+        if (state.query === "" && rootRef.current) {
+          panelRootRef.current?.unmount();
+          panelRootRef.current = createRoot(rootRef.current);
+          return;
+        }
+
+        if (panelRootRef.current && rootRef.current) {
+          panelRootRef.current.render(
+            <Box className="algolia-no-results">
+              <Image
+                src="/assets/algolia-no-results.png"
+                width="280px"
+                height="280px"
+              />
+              <Box className="text-container">
+                <Heading variant="h4">No data to display</Heading>
+                <Box as="p">
+                  Apply different filters or criteria to find the data you're
+                  looking for.
+                </Box>
+              </Box>
+            </Box>
+          );
+        }
+      },
     });
 
     return () => {
@@ -100,7 +127,7 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  seo: SEOTexts['search']
+  seo: SEOTexts["search"];
 }
 
 export function MainSearch({ env, seo }: Props): JSX.Element | null {
@@ -139,7 +166,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
           },
           onSelect({ setIsOpen }) {
             setIsOpen(true);
-          }
+          },
         };
       },
     });
@@ -173,7 +200,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
           },
           onSelect({ setIsOpen }) {
             setIsOpen(true);
-          }
+          },
         };
       },
     });
@@ -189,12 +216,12 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
   }, []);
 
   return (
-    <Box position="relative" height="44px">
+    <Box position="relative" height="44px" className="group">
       <Autocomplete<any>
         detachedMediaQuery=""
         openOnFocus={true}
         plugins={[data.recentSearchesPlugin, data.querySuggestionsPlugin]}
-        placeholder={seo?.search}
+        placeholder={seo?.search || "Search"}
         getSources={({ query }) => {
           if (!query) return [];
 
@@ -302,17 +329,21 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
       />
       <Kbd
         background="kbd-bg"
-        color="default-fg"
+        color="content.default"
         padding="8px 16px"
         borderRadius="4px"
         borderWidth="0px"
         position="absolute"
-        top="7px"
+        top="50%"
+        transform="translateY(-50%)"
         right="8px"
         cursor="pointer"
         onClick={() => searchBox?.click()}
         pointerEvents="none"
         display={{ base: "none", lg: "block" }}
+        _groupHover={{
+          color: "content.defaultHover",
+        }}
       >
         /
       </Kbd>
@@ -578,8 +609,20 @@ export function RecentSearchesItem({
           title="Remove this search"
           onClick={onRemoveItem}
         >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18 7v13c0 0.276-0.111 0.525-0.293 0.707s-0.431 0.293-0.707 0.293h-10c-0.276 0-0.525-0.111-0.707-0.293s-0.293-0.431-0.293-0.707v-13zM17 5v-1c0-0.828-0.337-1.58-0.879-2.121s-1.293-0.879-2.121-0.879h-4c-0.828 0-1.58 0.337-2.121 0.879s-0.879 1.293-0.879 2.121v1h-4c-0.552 0-1 0.448-1 1s0.448 1 1 1h1v13c0 0.828 0.337 1.58 0.879 2.121s1.293 0.879 2.121 0.879h10c0.828 0 1.58-0.337 2.121-0.879s0.879-1.293 0.879-2.121v-13h1c0.552 0 1-0.448 1-1s-0.448-1-1-1zM9 5v-1c0-0.276 0.111-0.525 0.293-0.707s0.431-0.293 0.707-0.293h4c0.276 0 0.525 0.111 0.707 0.293s0.293 0.431 0.293 0.707v1zM9 11v6c0 0.552 0.448 1 1 1s1-0.448 1-1v-6c0-0.552-0.448-1-1-1s-1 0.448-1 1zM13 11v6c0 0.552 0.448 1 1 1s1-0.448 1-1v-6c0-0.552-0.448-1-1-1s-1 0.448-1 1z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.9999 3C11.4522 3 10.9066 3.00876 10.3633 3.02614C9.60866 3.05028 8.99988 3.68393 8.99988 4.47819V4.59082C9.99224 4.53056 10.9925 4.5 11.9999 4.5C13.0072 4.5 14.0075 4.53056 14.9999 4.59082V4.47819C14.9999 3.68393 14.3911 3.05028 13.6365 3.02614C13.0931 3.00876 12.5475 3 11.9999 3ZM16.4999 4.70498V4.47819C16.4999 2.91371 15.2873 1.57818 13.6844 1.52691C13.1251 1.50901 12.5635 1.5 11.9999 1.5C11.4362 1.5 10.8747 1.50901 10.3153 1.52691C8.71241 1.57818 7.49988 2.91371 7.49988 4.47819V4.70498C6.54515 4.79237 5.59834 4.90731 4.66024 5.04898C4.3129 5.10143 3.96677 5.15755 3.62187 5.2173C3.21373 5.28799 2.94019 5.67617 3.01088 6.0843C3.08158 6.49244 3.46975 6.76598 3.87789 6.69529C3.94749 6.68323 4.01715 6.67132 4.08686 6.65957L5.09229 19.7301C5.21252 21.2931 6.51584 22.5 8.08345 22.5H15.9163C17.4839 22.5 18.7872 21.2931 18.9075 19.7301L19.9129 6.65957C19.9826 6.67132 20.0523 6.68323 20.1219 6.69529C20.53 6.76598 20.9182 6.49244 20.9889 6.0843C21.0596 5.67617 20.786 5.28799 20.3779 5.2173C20.033 5.15755 19.6869 5.10143 19.3395 5.04898C18.4014 4.90731 17.4546 4.79237 16.4999 4.70498ZM18.4259 6.43321C17.5225 6.3104 16.611 6.2131 15.6921 6.14209C14.4739 6.04796 13.2425 6 11.9999 6C10.7572 6 9.5259 6.04796 8.30766 6.14209C7.38873 6.2131 6.47722 6.3104 5.57388 6.43321L6.58787 19.615C6.64798 20.3965 7.29964 21 8.08345 21H15.9163C16.7001 21 17.3518 20.3965 17.4119 19.615L18.4259 6.43321ZM9.23067 8.25055C9.64458 8.23463 9.99302 8.55727 10.0089 8.97118L10.3551 17.9712C10.371 18.3851 10.0484 18.7335 9.63447 18.7494C9.22057 18.7654 8.87212 18.4427 8.8562 18.0288L8.51005 9.02882C8.49413 8.61492 8.81676 8.26647 9.23067 8.25055ZM14.7691 8.25055C15.183 8.26647 15.5056 8.61492 15.4897 9.02882L15.1436 18.0288C15.1276 18.4427 14.7792 18.7654 14.3653 18.7494C13.9514 18.7335 13.6287 18.3851 13.6447 17.9712L13.9908 8.97118C14.0067 8.55727 14.3552 8.23463 14.7691 8.25055Z"
+              fill="currentColor"
+              fill-opacity="0.67"
+            />
           </svg>
         </button>
         <button
@@ -587,8 +630,19 @@ export function RecentSearchesItem({
           title={`Fill query with "${hit.label}"`}
           onClick={onSelectItem}
         >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8 17v-7.586l8.293 8.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-8.293-8.293h7.586c0.552 0 1-0.448 1-1s-0.448-1-1-1h-10c-0.552 0-1 0.448-1 1v10c0 0.552 0.448 1 1 1s1-0.448 1-1z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.75 12C3.75 11.5858 4.08579 11.25 4.5 11.25L17.6893 11.25L12.2197 5.78033C11.9268 5.48744 11.9268 5.01256 12.2197 4.71967C12.5126 4.42678 12.9874 4.42678 13.2803 4.71967L20.0303 11.4697C20.3232 11.7626 20.3232 12.2374 20.0303 12.5303L13.2803 19.2803C12.9874 19.5732 12.5126 19.5732 12.2197 19.2803C11.9268 18.9874 11.9268 18.5126 12.2197 18.2197L17.6893 12.75L4.5 12.75C4.08579 12.75 3.75 12.4142 3.75 12Z"
+              fill="currentColor"
+            />
           </svg>
         </button>
       </div>

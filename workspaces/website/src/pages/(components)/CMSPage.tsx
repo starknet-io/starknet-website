@@ -11,23 +11,30 @@ import {
   BreadcrumbLink,
   Flex,
 } from "@chakra-ui/react";
-import '@ui/CodeHighlight/code-highlight-init'
+import "@ui/CodeHighlight/code-highlight-init";
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
+import { LandingConent } from "@ui/HeroImage/LandingConent";
 
 type CMSPageProps = {
   data: PageType;
   locale: string;
 };
-export default function CMSPage({
-  data,
-  locale,
-}: CMSPageProps) {
+const maxW = {
+  content: undefined,
+  "narrow content": "846px",
+  landing: "none",
+};
+export default function CMSPage({ data, locale }: CMSPageProps) {
   const date = data?.gitlog?.date;
+  const [firstBlock, ...remainingBlocks] = data.blocks || [];
+  const isFirstBlockLandingHero = firstBlock?.type === "hero";
+
   return (
     <Box>
       <PageLayout
+        contentMaxW={maxW[data.template]}
+        sx={isFirstBlockLandingHero ? { px: "0px" } : undefined}
         maxW="none"
-        contentMaxW={data.template === "narrow content" ? "846px" : null}
         breadcrumbs={
           <>
             {data.breadcrumbs &&
@@ -67,25 +74,51 @@ export default function CMSPage({
           <Flex
             direction="column"
             gap={{
-              base: (data.template === "content" || data.template === "narrow content") ? "32px" : "56px",
-              lg: (data.template === "content" || data.template === "narrow content") ? "32px" : "136px",
+              base:
+                data.template === "content" ||
+                data.template === "narrow content"
+                  ? "32px"
+                  : "56px",
+              lg:
+                data.template === "content" ||
+                data.template === "narrow content"
+                  ? "32px"
+                  : "136px",
             }}
           >
-            {data.show_title ? <Heading variant="h1" color="text-hero-fg">{data.title}</Heading> : null}
-            {data.blocks?.map((block, i) => {
-              return (
-                <Block
-                  key={i}
-                  block={block}
-                  locale={locale}
-                />
-              );
-            })}
+            {data.show_title ? (
+              <Heading variant="h1" color="text-hero-fg">
+                {data.title}
+              </Heading>
+            ) : null}
+            {!isFirstBlockLandingHero &&
+              data.blocks?.map((block, i) => {
+                return <Block key={i} block={block} locale={locale} />;
+              })}
+            {isFirstBlockLandingHero && (
+              <>
+                <Block block={firstBlock} locale={locale} />
+                <LandingConent
+                  display="flex"
+                  flexDirection="column"
+                  gap="page-gap-standart"
+                >
+                  {remainingBlocks?.map((block, i) => {
+                    return <Block key={i} block={block} locale={locale} />;
+                  })}
+                </LandingConent>
+              </>
+            )}
           </Flex>
         }
         rightAside={
           data.template === "content" ? (
-            <TableOfContents headings={blocksToTOC(data.blocks, 1)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
+            <TableOfContents
+              headings={blocksToTOC(data.blocks, 1)}
+              {...(data.tocCustomTitle && {
+                tocCustomTitle: data.tocCustomTitle,
+              })}
+            />
           ) : null
         }
       />

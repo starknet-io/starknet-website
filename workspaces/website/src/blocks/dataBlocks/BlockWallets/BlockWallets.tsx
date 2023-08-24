@@ -17,7 +17,7 @@ export default function BlockWallets({
 
   return (
     <Box>
-      <Container maxW="1062px">
+      <Container maxW="1062px" px="0">
         <Flex gap={4} direction="column" flex={1}>
           {(wallets).slice(0, noOfItems).map((wallet, i) => {
             return (
