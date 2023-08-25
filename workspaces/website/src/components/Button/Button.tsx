@@ -48,13 +48,13 @@ export const Button = forwardRef<HTMLButtonElement, props>(
           size={size}
           {...buttonTheme}
           {...rest}
-          sx={{
+          {...(!!bg && { sx: {
             bg: `linear-gradient(${bg && rest.variant === "outline" ? bg : "white"}, ${bg && rest.variant === "outline" ? bg : "white"}) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box`,
             "&:hover": {
               bg: `linear-gradient(${bg}E3, ${bg}E3) padding-box, linear-gradient(to right, #EC796B, #D672EF) border-box`
             },
             ...sx
-          }}
+        }})}
         >
           {children}
         </ChakraButton>
