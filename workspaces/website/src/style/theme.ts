@@ -161,7 +161,6 @@ const theme = extendTheme(proTheme, {
     "4xl": "80px",
     "5xl": "120px",
     "6xl": "160px",
-    "page-gap-standart": "80px",
     cards,
     page,
   },

@@ -1,5 +1,6 @@
 items:
-  - body: Braavos Smart Wallet offers an unparalleled UX and advance security via
+  - body:
+      Braavos Smart Wallet offers an unparalleled UX and advance security via
       its Hardware Signer 2-factor authentication and multi-signer 3-factor
       authentication capabilities.
     type_list:
@@ -18,8 +19,9 @@ items:
       - ios
       - android
     image: /assets/braavos.jpg
-    description: Braavos Smart Wallet offers an unparalleled UX and advance security
-      via its Hardware Signer 2-factor authentication and multi-signer 3-factor
+    description:
+      Braavos Smart Wallet offers an unparalleled UX and advance security via
+      its Hardware Signer 2-factor authentication and multi-signer 3-factor
       authentication capabilities.
   - body: Earn, stake and trade with low fees, high speeds & strong security.
     type_list:

@@ -9,52 +9,65 @@ blocks:
     variant: security
     title: Security & audits
     description: Secure your apps with auditing services for Starknet Smart Contracts.
-  - type: card_list
+    image: /assets/ecosystem/security.svg
+  - type: flex_layout
     randomize: true
-    title: Auditing Companies
-    card_list_items:
-      - title: ABDK
+    heading: Auditing Companies
+    blocks:
+      - type: asset_card
+        title: ABDK
         website_url: https://www.abdk.consulting/
         image: /assets/abdk-logo.png
-      - title: ChainSecurity
+      - type: asset_card
+        title: ChainSecurity
         image: /assets/chiansecurity-logo.png
         website_url: https://chainsecurity.com/
-      - title: ConsenSys Diligence
+      - type: asset_card Diligence
+        title: ConsenSys Diligence
         website_url: http://consensys.net/diligence
         image: /assets/consensys-diligence-logo.svg
-        description: ConsenSys is a leading smart contract auditing and blockchain
+        description:
+          ConsenSys is a leading smart contract auditing and blockchain
           security tooling for smart contract developers, auditors and web3
           protocols.
-      - title: Nethermind
+      - type: asset_card
+        title: Nethermind
         website_url: https://nethermind.io/
         image: /assets/nethermind-logo.png
         description: Nethermind is a leading Blockchain Research and Software
           Engineering Company, that provides auditing and formal verification
           services for Starknet smart contracts.
-      - title: OpenZeppelin
+      - type: asset_card
+        title: OpenZeppelin
         website_url: https://www.openzeppelin.com/
         image: /assets/openzeppelin-logo.png
-        description: OpenZeppelin is a leading blockchain security company providing
+        description:
+          OpenZeppelin is a leading blockchain security company providing
           products and audits to trusted organizations in Web3.
       - website_url: http://www.trailofbits.com
         image: /assets/trail-of-bits-logo.png
         title: Trail of Bits
-        description: Since 2012, Trail of Bits has helped secure some of the world’s
+        description:
+          Since 2012, Trail of Bits has helped secure some of the world’s
           most targeted organizations and products, combining high-end security
           research, with a real-world attacker mentality to reduce risk and
           fortify code.
-      - title: Ginger Security
+      - type: asset_card Security
+        title: Ginger Security
         image: /assets/ginger-security-logo.png
         website_url: https://gingersec.xyz/
-      - title: Extropy
-        description: Extropy provides auditing, training and development services for
+      - type: asset_card
+        title: Extropy
+        description:
+          Extropy provides auditing, training and development services for
           Web3 / ZKP companies.
-        link_url: https://security.extropy.io/
+        website_url: https://security.extropy.io/
         image: /assets/extropy-logoi.jpeg
-  - type: card_list
+  - type: flex_layout
     randomize: true
-    title: Bug Bounty Program
-    card_list_items:
-      - title: Immunefi
+    heading: Bug Bounty Program
+    blocks:
+      - type: asset_card
+        title: Immunefi
         website_url: https://immunefi.com/bounty/starknet/
         image: /assets/immunefi-logo.jpg

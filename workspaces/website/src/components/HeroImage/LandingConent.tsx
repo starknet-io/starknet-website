@@ -10,8 +10,8 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
       zIndex={2}
       w="100%"
       padding={{
-        base: "page.leftRight.base",
-        md: "page.leftRight.md",
+        base: "page.left-right.base",
+        md: "page.left-right.md",
       }}
       {...rest}
     >
@@ -28,6 +28,14 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
           lg: "4xl",
         }}
         borderTopRadius="lg"
+        display="flex"
+        flexDirection="column"
+        gap={{
+          base: "page.gap-standart.base",
+          md: "page.gap-standart.md",
+          lg: "page.gap-standart.lg",
+        }}
+        // overflow="hidden"
       >
         {children}
       </Box>

@@ -1,4 +1,11 @@
-import { Box, Flex, Grid, Container, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  Container,
+  HStack,
+  SystemStyleObject,
+} from "@chakra-ui/react";
 import moment from "moment";
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
@@ -24,11 +31,47 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
   hitsPerPage?: number;
+  variant: "home" | "generic";
 }
+const bgStyles: Record<Props["variant"], SystemStyleObject> = {
+  home: {
+    position: "relative",
+    minHeight: { base: 2538, md: 2138, lg: 1838 },
+    paddingTop: 900,
+    mt: "-900",
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      bg: "#EC796B",
+      clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
+      backgroundImage: "url(/assets/community-events-bg.svg)",
+      backgroundSize: "130%",
+      backgroundPosition: "center",
+      zIndex: -1,
+    },
+  },
+  generic: {},
+};
+
+const headingStyles: Record<Props["variant"], SystemStyleObject> = {
+  home: {
+    fontSize: "64px",
+    fontWeight: "600",
+    lineHeight: "80px",
+    maxW: 710,
+    mb: "64px",
+  },
+  generic: {},
+};
 export function BlockCommunityEventsList({
   params,
   env,
   hitsPerPage = 3,
+  variant = "generic",
 }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
@@ -45,28 +88,7 @@ export function BlockCommunityEventsList({
           startOfDay(new Date())
         )} AND type: community_event`}
       />
-      <Box
-        sx={{
-          position: "relative",
-          minHeight: { base: 2538, md: 2138, lg: 1838 },
-          paddingTop: 900,
-          mt: "-900",
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            bg: "#EC796B",
-            clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
-            backgroundImage: "url(/assets/community-events-bg.svg)",
-            backgroundSize: "130%",
-            backgroundPosition: "center",
-            zIndex: -1,
-          },
-        }}
-      >
+      <Box sx={bgStyles[variant]}>
         <Box
           maxW={{ base: "1296px", md: "1312px" }}
           px={{ base: "16px", md: "32px" }}
@@ -75,13 +97,8 @@ export function BlockCommunityEventsList({
           <Heading
             variant="h2"
             color="heading-navy-fg"
-            mb="64px"
-            sx={{
-              fontSize: "64px",
-              fontWeight: "600",
-              lineHeight: "80px",
-              maxW: 710,
-            }}
+            mb="40px"
+            sx={headingStyles[variant]}
           >
             Community events near you
           </Heading>

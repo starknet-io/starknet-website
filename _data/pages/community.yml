@@ -6,11 +6,13 @@ page_last_updated: false
 blocks:
   - type: hero
     title: Community hub
-    description: Join a community of developers, enthusiasts and explorers, working
+    description:
+      Join a community of developers, enthusiasts and explorers, working
       together to build Starknet and scale Ethereum.
     variant: community
+    image: /assets/ecosystem/community.svg
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
     base: 1
     md: 2
     lg: 3
@@ -26,7 +28,8 @@ blocks:
         link:
           page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
           custom_title: View
-        description: Connect with Starknet enthusiasts in online communities and social
+        description:
+          Connect with Starknet enthusiasts in online communities and social
           media.
       - type: image_icon_link_card
         color: blue-default

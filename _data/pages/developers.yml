@@ -8,6 +8,7 @@ blocks:
     title: Developers Hub
     description: A manual and resource list for builders, by builders.
     variant: build
+    image: /assets/ecosystem/developer.svg
   - type: flex_layout
     heading_variant: h3
     base: 1
