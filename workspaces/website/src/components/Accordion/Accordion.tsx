@@ -71,7 +71,7 @@ const page = definePartsStyle({
     fontWeight: 600,
     fontSize: "16px",
     gap: "xs",
-    color: "content.accent",
+    color: "content.accent.value",
     div: {
       fontSize: "16px",
     },

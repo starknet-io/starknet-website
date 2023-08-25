@@ -93,7 +93,7 @@ export const HeroImage = ({
           >
             {fixhyphens(title)}
           </Heading>
-          <Text color="content.accent">{description}</Text>
+          <Text color="content.accent.value">{description}</Text>
           {buttonText && (buttonUrl || onButtonClick) && (
             <Button
               zIndex={99}

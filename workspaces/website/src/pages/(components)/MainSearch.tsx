@@ -329,7 +329,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
       />
       <Kbd
         background="kbd-bg"
-        color="content.default"
+        color="content.default.value"
         padding="8px 16px"
         borderRadius="4px"
         borderWidth="0px"
@@ -342,7 +342,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
         pointerEvents="none"
         display={{ base: "none", lg: "block" }}
         _groupHover={{
-          color: "content.defaultHover",
+          color: "content.default.hover",
         }}
       >
         /

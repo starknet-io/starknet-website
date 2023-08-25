@@ -13,14 +13,14 @@ export const StatusBadge = ({
     <Badge
       display="flex"
       alignItems="center"
-      color="content.accent"
+      color="content.accent.value"
       fontSize="14px"
       borderRadius="base"
       paddingY="xs"
       paddingX="sm"
       borderWidth="1px"
       borderStyle="solid"
-      borderColor="border.card"
+      borderColor="border.card.value"
       bg="surface.card"
       gap="xs"
       fontWeight={500}

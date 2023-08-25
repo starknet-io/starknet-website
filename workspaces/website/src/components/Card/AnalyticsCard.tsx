@@ -15,11 +15,13 @@ type Props = {
 
 export const AnalyticsCard = ({
   description = "Followers on Social Media",
-  bg = "surface.bgPage",
-  type = 'twitter',
+  bg = "surface.bg-page",
+  type = "twitter",
 }: Props) => {
   const pageContext = usePageContext();
-  const socialMedia = useAsync(['getSocialMediaData'], () => getSocialMediaData(pageContext.context));
+  const socialMedia = useAsync(["getSocialMediaData"], () =>
+    getSocialMediaData(pageContext.context)
+  );
 
   return (
     <CardGradientBorder display="inline-block">
@@ -30,11 +32,11 @@ export const AnalyticsCard = ({
           justifyContent="space-between"
           gap="3xl"
         >
-          {type === 'twitter' && (
-            <SiTwitter size="32px" fill="content.accent" />
+          {type === "twitter" && (
+            <SiTwitter size="32px" fill="content.accent.value" />
           )}
-          {type === 'discord' && (
-            <SiDiscord size="32px" fill="content.accent" />
+          {type === "discord" && (
+            <SiDiscord size="32px" fill="content.accent.value" />
           )}
           <Box display="flex" flexDir="column" gap="4px">
             <Heading
@@ -42,7 +44,7 @@ export const AnalyticsCard = ({
               fontSize="64px"
               lineHeight="80px"
               fontWeight={600}
-              color="content.accent"
+              color="content.accent.value"
             >
               {formatAnalyticsNumber(socialMedia[type].followersCount)}
             </Heading>

@@ -23,7 +23,7 @@ export const Breadcrumbs = ({ items, locale }: BreadcrumbsProps) => {
           /
         </Box>
       }
-      color="content.default"
+      color="content.default.value"
       fontSize="14px"
       fontWeight={500}
       spacing={0}
