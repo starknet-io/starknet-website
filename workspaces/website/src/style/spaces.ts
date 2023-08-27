@@ -4,11 +4,6 @@ export const page = {
     md: "24px",
     lg: "160px",
   },
-  leftRight: {
-    base: "16px",
-    md: "24px",
-    lg: "160px",
-  },
   "gap-wide": {
     base: "80px",
     md: "80px",

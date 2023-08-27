@@ -11,7 +11,12 @@ type Props = {
   xl?: number;
   heading?: string;
   description?: string;
-  descriptionVariant?: "cardBody" | "body" | "breadcrumbs" | "footerLink" | "textLink";
+  descriptionVariant?:
+    | "cardBody"
+    | "body"
+    | "breadcrumbs"
+    | "footerLink"
+    | "textLink";
   headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
@@ -45,27 +50,34 @@ export const BlockCards = ({
   description,
   descriptionVariant = "body",
   children,
-  base = 2,
+  base = 1,
   md = 2,
-  lg,
+  lg = 3,
   xl,
 }: Props) => {
   return (
-    <Box maxW={{ base: "1296px", md: "1312px" }} width="100%" m="0 auto" px={{ base: "16px", md: "32px" }}>
+    <Box
+      maxW={{ base: "1296px", md: "1312px" }}
+      width="100%"
+      m="0 auto"
+      px={{ base: "16px", md: "32px" }}
+    >
       <Box maxW="864px">
         {heading && (
-          <Heading
-            variant="h3"
-            color="heading-navy-fg"
-            sx={renderHeadingVariant(headingVariant)}
-            mb="40px"
-          >
+          <Heading variant="h2" color="heading-navy-fg" mb="40px">
             {heading}
           </Heading>
         )}
-        {description ? <Text variant={descriptionVariant} mb="40px">{description}</Text> : null}
+        {description ? (
+          <Text variant={descriptionVariant} mb="40px">
+            {description}
+          </Text>
+        ) : null}
       </Box>
-      <SimpleGrid columns={{ base, md, lg, xl }} spacing={{base: "16px", md: "24px" }}>
+      <SimpleGrid
+        columns={{ base, md, lg, xl }}
+        spacing={{ base: "16px", md: "24px" }}
+      >
         {children}
       </SimpleGrid>
     </Box>

@@ -13,13 +13,15 @@ export default function BlockWallets({
   params: { locale },
 }: Props): JSX.Element {
   const pageContext = usePageContext();
-  const wallets = useAsync(['getWallets', locale], () => getWallets(locale, pageContext.context));
+  const wallets = useAsync(["getWallets", locale], () =>
+    getWallets(locale, pageContext.context)
+  );
 
   return (
     <Box>
       <Container maxW="1062px" px="0">
         <Flex gap={4} direction="column" flex={1}>
-          {(wallets).slice(0, noOfItems).map((wallet, i) => {
+          {wallets.slice(0, noOfItems).map((wallet, i) => {
             return (
               <ListCard
                 href={wallet.website_url}

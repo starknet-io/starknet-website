@@ -66,8 +66,8 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
             py={{ base: "12", md: "16" }}
             maxW="contentMaxW"
             px={{
-              base: "page.leftRight.base",
-              md: "page.leftRight.md",
+              base: "page.left-right.base",
+              md: "page.left-right.md",
             }}
             marginInline="auto"
           >
@@ -77,8 +77,8 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
             width="100%"
             maxW="contentMaxW"
             px={{
-              base: "page.leftRight.base",
-              md: "page.leftRight.md",
+              base: "page.left-right.base",
+              md: "page.left-right.md",
             }}
             marginInline="auto"
           >

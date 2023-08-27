@@ -98,11 +98,7 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             {isFirstBlockLandingHero && (
               <>
                 <Block block={firstBlock} locale={locale} />
-                <LandingConent
-                  display="flex"
-                  flexDirection="column"
-                  gap="page-gap-standart"
-                >
+                <LandingConent>
                   {remainingBlocks?.map((block, i) => {
                     return <Block key={i} block={block} locale={locale} />;
                   })}

@@ -1,6 +1,10 @@
 import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getShuffledArray } from "@starknet-io/cms-utils/src/index";
+import {
+  getFirst,
+  getJSON,
+  getShuffledArray,
+} from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 
 export interface MarkdownBlock {
@@ -115,16 +119,7 @@ export interface HeroBlock {
   readonly type: "hero";
   readonly title: string;
   readonly description: string;
-  readonly variant?:
-    | "wallets"
-    | "block_explorers"
-    | "bridges"
-    | "dapps"
-    | "learn"
-    | "build"
-    | "community"
-    | "nodes_and_services"
-    | "security";
+  readonly image: string;
   readonly buttonText?: string;
   readonly buttonUrl?: string;
   readonly leftBoxMaxWidth?: number;
@@ -160,7 +155,12 @@ export interface OrderedBlock {
 }
 
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-export type DescriptionVariant = "cardBody" | "body" | "breadcrumbs" | "footerLink" | "textLink";
+export type DescriptionVariant =
+  | "cardBody"
+  | "body"
+  | "breadcrumbs"
+  | "footerLink"
+  | "textLink";
 
 export type Block =
   | MarkdownBlock
@@ -195,6 +195,7 @@ export interface FlexLayoutBlock {
   readonly description?: string;
   readonly description_variant?: DescriptionVariant;
   readonly blocks: readonly Block[];
+  readonly randomize?: boolean;
 }
 export interface GroupBlock {
   readonly type: "group";
@@ -207,7 +208,12 @@ export interface HeadingContainerBlock {
   readonly blocks: readonly Block[];
 }
 
-export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container | HeadingContainerBlock;
+export type TopLevelBlock =
+  | Block
+  | FlexLayoutBlock
+  | GroupBlock
+  | Container
+  | HeadingContainerBlock;
 
 export interface Page extends Meta {
   readonly id: string;
@@ -226,20 +232,22 @@ export interface Page extends Meta {
 }
 
 const getPageWithRandomizedData = (data: Page): Page => {
-  const randomizedData = {...data}
+  const randomizedData = { ...data };
   randomizedData.blocks?.forEach((block: TopLevelBlock) => {
-
-    if (block.type === 'link_list' && block.randomize) {
+    if (
+      (block.type === "link_list" || block.type === "flex_layout") &&
+      block.randomize
+    ) {
       //@ts-expect-error
       block.blocks = getShuffledArray(block.blocks || []);
-    } else if (block.type === 'card_list' && block.randomize) {
+    } else if (block.type === "card_list" && block.randomize) {
       //@ts-expect-error
       block.card_list_items = getShuffledArray(block.card_list_items || []);
     }
-  })
+  });
 
-  return randomizedData
-}
+  return randomizedData;
+};
 export async function getPageBySlug(
   slug: string,
   locale: string,
@@ -253,7 +261,7 @@ export async function getPageBySlug(
       )
     );
 
-    return getPageWithRandomizedData(data)
+    return getPageWithRandomizedData(data);
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
       cause,
@@ -269,7 +277,8 @@ export async function getPageById(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/pages/" + value + "/" + id, context)
+        (value) => async () =>
+          getJSON("data/pages/" + value + "/" + id, context)
       )
     );
   } catch (cause) {

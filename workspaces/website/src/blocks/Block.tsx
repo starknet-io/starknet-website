@@ -7,7 +7,7 @@ import { StatCardsBlock } from "./StatCardsBlock";
 import { MarkdownBlock } from "./MarkdownBlock";
 import { AmbassadorsList } from "./AmbassadorsList";
 import { BlockCards } from "./BlockCards";
-import EcosystemBlock  from "./EcosystemHomepageBlock";
+import EcosystemBlock from "./EcosystemHomepageBlock";
 import SocialHomepageBlock from "./SocialHomepageBlock";
 import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCommunityEvents";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
@@ -26,6 +26,7 @@ import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
 import { HeadingContainer } from "./HeadingContainer";
+import { AssetCard } from "@ui/Card/AssetCard";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -39,11 +40,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return (
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
-          <Block
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </Container>
     );
@@ -55,6 +52,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return <LargeCardsBlock {...block} />;
   } else if (block.type === "stat_cards") {
     return <StatCardsBlock {...block} />;
+  } else if (block.type === "asset_card") {
+    return <AssetCard {...block} />;
   } else if (block.type === "pattern_card") {
     return <PatternCard {...block} />;
   } else if (block.type === "ecosystem_block") {
@@ -62,7 +61,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
   } else if (block.type === "social_block") {
     return <SocialHomepageBlock {...block} />;
   } else if (block.type === "markdown") {
-    return <MarkdownBlock body={block.body} /> ;
+    return <MarkdownBlock body={block.body} />;
   } else if (block.type === "ambassadors_list") {
     return <AmbassadorsList {...block} />;
   } else if (block.type === "community_events") {
@@ -86,11 +85,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         description={block.description}
       >
         {block.blocks.map((block, i) => (
-          <Block
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
     );
@@ -130,23 +125,18 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return (
       <BlockGrouping>
         {block.blocks.map((block, i) => (
-          <Block
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </BlockGrouping>
     );
-  }else if (block.type === "heading_container") {
+  } else if (block.type === "heading_container") {
     return (
-      <HeadingContainer heading={block.heading} headingVariant={block.heading_variant}>
+      <HeadingContainer
+        heading={block.heading}
+        headingVariant={block.heading_variant}
+      >
         {block.blocks.map((block, i) => (
-          <Block
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block key={i} block={block} locale={locale} />
         ))}
       </HeadingContainer>
     );
@@ -155,7 +145,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       <HeroImage
         title={block.title}
         description={block.description}
-        variant={block.variant}
+        image={block.image}
         buttonText={block.buttonText}
         buttonUrl={block.buttonUrl}
         leftBoxMaxWidth={block.leftBoxMaxWidth}
@@ -169,15 +159,15 @@ export function Block({ block, locale }: Props): JSX.Element | null {
 
     return <HomepageHero seo={homeSEO} />;
   } else if (block.type === "promo_block") {
-      const pageContext = usePageContext();
-      const homeSEO = useAsync(["getBlockExplorers", locale], () =>
-        getHomeSEO(locale, pageContext.context)
-      );
-  
-      return <PromoBlock seo={homeSEO} />;
+    const pageContext = usePageContext();
+    const homeSEO = useAsync(["getBlockExplorers", locale], () =>
+      getHomeSEO(locale, pageContext.context)
+    );
+
+    return <PromoBlock seo={homeSEO} />;
   } else if (block.type === "card_list") {
     return (
-      <ListCardItems
+      <AssetCard
         {...block}
         params={{
           locale,

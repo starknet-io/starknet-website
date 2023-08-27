@@ -125,6 +125,7 @@ blocks:
     md: 2
     lg: ""
   - type: community_events
+    variant: home
   - type: flex_layout
     heading_variant: h3
     blocks:
