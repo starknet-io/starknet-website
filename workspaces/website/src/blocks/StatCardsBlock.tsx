@@ -1,16 +1,11 @@
-import { Grid, Flex } from "@chakra-ui/react";
-import { Card, CardImg, CardBody, CardLink, CardTitle } from "@ui/Card/Card";
+import { Grid } from "@chakra-ui/react";
+import { StatCardsBlock as StatCardsBlockType } from "@starknet-io/cms-data/src/pages";
 import { StatsCard } from "@ui/Card/StatsCard";
 
-export const StatCardsBlock = () => {
+export const StatCardsBlock = (_: StatCardsBlockType) => {
   return (
     <Grid
-      gridTemplateColumns={[
-        "1fr",
-        "1fr",
-        "repeat(2, 1fr)",
-        "repeat(4, 1fr)"
-      ]}
+      gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(4, 1fr)"]}
       gap="32px"
       maxW={{ base: "1296px", md: "1312px" }}
       px={{ base: "16px", md: "32px" }}
@@ -26,5 +21,5 @@ export const StatCardsBlock = () => {
       <StatsCard title="Average block time" stat="2min" />
       <StatsCard title="Value locked in bridge" stat="70.4M+" />
     </Grid>
-  )
+  );
 };

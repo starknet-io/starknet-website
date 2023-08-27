@@ -13,8 +13,6 @@ import { BlockCommunityEvents } from "./dataBlocks/BlockCommunityEvents/BlockCom
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
-import ListCardItems from "./ListCardItems";
-import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { Container } from "./Container";
 import { LinkList } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
@@ -165,23 +163,6 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
 
     return <PromoBlock seo={homeSEO} />;
-  } else if (block.type === "card_list") {
-    return (
-      <AssetCard
-        {...block}
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "wallets") {
-    return (
-      <BlockWallets
-        params={{
-          locale,
-        }}
-      />
-    );
   } else {
     // this will report type error if there is unhandled block.type
     block satisfies never;
