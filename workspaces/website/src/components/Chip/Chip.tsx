@@ -19,21 +19,25 @@ export const Chip = ({
       p="md"
       borderRadius="xs"
       variant="unstyled"
-      color={isSelected ? "surface.on-surface-inverted" : "content.default"}
-      bg={isSelected ? "surface.accent" : "surface.transparent"}
+      color={
+        isSelected
+          ? "content.on-surface-inverted.value"
+          : "content.default.value"
+      }
+      bg={isSelected ? "surface.accent.value" : "surface.transparent.value"}
       fontSize="14px"
       fontWeight={500}
       lineHeight="24px"
       display="inline-flex"
       gap="xs"
       _hover={{
-        bg: isSelected ? "surface.accent" : "surface.transparentHover",
+        bg: isSelected ? "surface.accent.value" : "surface.transparent.hover",
         color: isSelected
-          ? "surface.on-surface-inverted"
-          : "content.defaultHover",
+          ? "content.on-surface-inverted.value"
+          : "content.default.hover",
       }}
       _disabled={{
-        color: "content.defaultDisabled",
+        color: "content.default.disabled",
         pointerEvents: "none",
       }}
       {...props}

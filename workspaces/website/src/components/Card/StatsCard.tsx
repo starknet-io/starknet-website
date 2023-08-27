@@ -18,7 +18,7 @@ export const StatsCard = ({
       pos="relative"
       py="2xl"
       px="xl"
-      bg="surface.accent"
+      bg="surface.accent.value"
       display="inline-flex"
       flexDirection="column"
       w="auto"
@@ -36,7 +36,7 @@ export const StatsCard = ({
         variant="h4"
         fontSize="24px"
         lineHeight={1.5}
-        color="#EBEBFF"
+        color="brand-primary-infinite-blue-solid-3"
         fontWeight={500}
         pr={{
           base: "md",
@@ -44,7 +44,7 @@ export const StatsCard = ({
         }}
         pb="xl"
         borderBottom="1px solid"
-        borderColor="brand.infiniteBlue"
+        borderColor="brand-primary-infinite-blue-solid-9"
       >
         {title}
       </Heading>
@@ -70,7 +70,7 @@ export const StatsCard = ({
         <Tooltip label={tooltip} placement="auto" gutter={18} hasArrow>
           <Button
             aria-label="Information"
-            color="brand.infiniteBlue"
+            color="brand-primary-infinite-blue-solid-9"
             _hover={{
               color: "surface.accentInverted",
             }}

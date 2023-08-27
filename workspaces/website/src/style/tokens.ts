@@ -1,3 +1,6 @@
+import { aliases } from "./alias";
+import { brandColors } from "./brand-colors";
+
 export const tokens = {
   colors: {
     light: {
@@ -880,5 +883,7 @@ export const semanticTokens = {
       default: tokens.colors.light["title-red-fg"],
       _dark: tokens.colors.dark["title-red-fg"],
     },
+    ...aliases,
+    ...brandColors,
   },
 };

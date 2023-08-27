@@ -70,7 +70,7 @@ export const PatternCard = ({
           <Heading
             variant="h5"
             title={title}
-            color="content.accent"
+            color="content.accent.value"
             fontSize="20px"
             lineHeight="28px"
           >
