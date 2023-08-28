@@ -9,7 +9,7 @@ export const CardStyleWhite = {
 }
 export const LargeCardLayout = {
   display: "flex",
-  padding: { base: "24px", lg: "80px" },
+  padding: { base: "32px", md: "120px 40px", lg: "80px" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
@@ -28,7 +28,7 @@ export const LargeCardBodyLayout = {
   minWidth: "164px",
   flexDirection: "column",
   alignItems: "flex-start",
-  gap: {base: "20px", lg: "40px"},
+  gap: {base: "32px", lg: "40px"},
   flex: "1 0 0"
 }
 export const LargeCardHorizontalBodyLayout = {

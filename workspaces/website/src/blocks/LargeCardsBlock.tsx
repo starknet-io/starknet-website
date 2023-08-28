@@ -17,7 +17,7 @@ interface Props extends LargeCardsBlockType, BoxProps {}
 export const LargeCardsBlock = (props: Props) => {
   const { horizontal1, horizontal2, vertical1, vertical2 } = props;
   return (
-    <Flex direction="column" gap="32px">
+    <Flex direction="column" gap="40px">
       <Card variant="large" orientation="horizontal">
         <CardImg variant="large" src={horizontal1.img as string} />
         <CardBody variant="large" orientation="horizontal">

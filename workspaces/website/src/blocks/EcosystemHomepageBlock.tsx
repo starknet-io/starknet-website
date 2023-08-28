@@ -153,9 +153,8 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           width="100%"
           m="0 auto"
           pt="10px"
-          borderTop="1px solid" borderColor="border.divider"
         >
-          <Heading variant="h2" color="heading-navy-fg" pb="108px">
+          <Heading variant="h2" color="heading-navy-fg" pt="40px" pb="120px" borderTop="1px solid" borderColor="border.divider">
             {title}
           </Heading>
         </Box>

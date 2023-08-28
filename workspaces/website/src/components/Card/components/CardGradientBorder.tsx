@@ -1,4 +1,4 @@
-import { Box, BoxProps } from "@chakra-ui/react";
+import { Box, BoxProps, ChakraProps } from "@chakra-ui/react";
 import React from "react";
 
 interface BorderRadius {
@@ -11,6 +11,8 @@ type Props = {
   padding?: BoxProps["padding"];
   borderRadius?: BorderRadius | string;
   bg?: string;
+  borderColor?: string;
+  borderSx?: ChakraProps['sx'];
 } & BoxProps;
 
 export const CardGradientBorder = ({
@@ -18,12 +20,14 @@ export const CardGradientBorder = ({
   padding = 0,
   borderRadius = "16px",
   bg = "card-bg",
+  borderColor,
+  borderSx,
   ...rest
 }: Props) => {
+  console.log('borderSx ', borderSx)
   return (
     <Box
       borderWidth="1px"
-      borderColor="border-card"
       padding={padding}
       bg={bg}
       borderRadius={borderRadius}
@@ -34,6 +38,9 @@ export const CardGradientBorder = ({
           "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
         borderColor: "transparent",
       }}
+      sx={{
+        borderColor: borderColor ?? "border-card",
+        ...borderSx}}
       {...rest}
     >
       {children}

@@ -30,11 +30,10 @@ export const IconLinkCardBlock = (props: Props) => {
       variant="iconLink"
       {...(!!color && {
         sx: {
-          background: colorValues.background,
-          border: "1px solid",
-          borderColor: colorValues.borderColor
+          background: colorValues.background
         },
       })}
+      borderColor={colorValues.borderColor}
     >
       <CardBody
         variant="iconLink"
@@ -47,11 +46,11 @@ export const IconLinkCardBlock = (props: Props) => {
       >
         <Flex direction="column" justifyContent="space-between" height="100%">
           <Box>
-            {img ? <img src={img} width="60px" /> : null}
+            {img ? <img src={img} width="60px" height="60px" /> : null}
             <Heading variant="h3" mt="32px" mb="20px" color="content.accent.value">
               {title}
             </Heading>
-            {description ? <Text variant="body">{description}</Text> : null}
+            {description ? <Text variant="body" color="content.support">{description}</Text> : null}
           </Box>
           {linkText ? (
             <CardLink variant="iconLink" href={linkUrl as string}>

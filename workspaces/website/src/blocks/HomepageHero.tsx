@@ -79,7 +79,7 @@ export const HomepageHero = ({ seo }: Props) => {
             >
               <Heading
                 variant="h1hero"
-                color="hero-subtitle-fg"
+                color="#E8E8F7"
                 lineHeight="120%"
                 mt={{ base: "0", lg: "-20px" }}
                 fontWeight="500"
@@ -87,7 +87,7 @@ export const HomepageHero = ({ seo }: Props) => {
                 Ethereum’s next<br/> leap in <Intro />
               </Heading>
               <Text
-                color="hero-subtitle-fg"
+                color="#FCCFD4"
                 mt="28px"
                 fontSize="20px"
                 lineHeight="36px"
@@ -104,8 +104,8 @@ export const HomepageHero = ({ seo }: Props) => {
               >
                 <Box
                   sx={{
-                    background: "linear-gradient(78deg, #FFFDD8 -10%, #8BF3F9 40%, #EC796B 75%, #D672EF 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-                    border: "1px solid transparent",
+                    background: "linear-gradient(284deg, #FFFDD8 0%, #EC796B 15.63%, #D672EF 43.09%, #8BF3F9 74.52%)",
+                    border: "2px solid transparent",
                     borderRadius: "8px"
                   }}
                 >

@@ -37,7 +37,7 @@ export const SectionHeader = ({
             {title}
           </Heading>
           {description && (
-            <Text color="muted" variant="body" pb={{ base: 4, lg: 8 }}>
+            <Text color="content.accent.value" variant="body" pb={{ base: 4, lg: 8 }}>
               {description}
             </Text>
           )}

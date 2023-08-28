@@ -24,7 +24,13 @@ export const AnalyticsCard = ({
   );
 
   return (
-    <CardGradientBorder display="inline-block">
+    <CardGradientBorder
+      display="inline-block"
+      borderSx={{
+        borderColor: "transparent",
+        boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+      }}
+    >
       <Box p="2xl" width="288px" bg={bg}>
         <Box
           display="flex"
@@ -33,10 +39,10 @@ export const AnalyticsCard = ({
           gap="3xl"
         >
           {type === "twitter" && (
-            <SiTwitter size="32px" fill="#0C0C4F" />
+            <SiTwitter size="48px" fill="#0C0C4F" />
           )}
           {type === "discord" && (
-            <SiDiscord size="32px" fill="#0C0C4F" />
+            <SiDiscord size="48px" fill="#0C0C4F" />
           )}
           <Box display="flex" flexDir="column" gap="4px">
             <Heading
