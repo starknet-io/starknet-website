@@ -216,7 +216,6 @@ for (const simpleData of simpleDataTypes) {
 }
 
 const simpleFiles = [
-  await getSimpleFiles("settings", "wallets"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
   await getSimpleFiles("settings", "permissions"),

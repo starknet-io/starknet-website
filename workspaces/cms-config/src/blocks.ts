@@ -277,23 +277,6 @@ export const blocks = [
     ],
   },
   {
-    name: "wallets",
-    label: "Wallets block",
-    widget: "object",
-    fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
-      {
-        name: "no_of_items",
-        required: false,
-        widget: "string",
-        crowdin: false,
-      },
-    ],
-  },
-  {
     name: "basic_card",
     label: "Basic card",
     widget: "object",
