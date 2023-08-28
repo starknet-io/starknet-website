@@ -22,10 +22,16 @@ export interface DocumentProps {
   image?: string;
 }
 
+export type NavConfig = {
+  invertColorOnLight?: boolean;
+  invertColorOnDark?: boolean;
+};
+
 export type PageContextCustom = {
   Page: Page;
   pageProps?: PageProps;
   hasLayout?: boolean;
+  navConfig?: NavConfig;
   exports: {
     documentProps?: DocumentProps;
   };

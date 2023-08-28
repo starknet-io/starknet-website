@@ -24,15 +24,17 @@ type NavLayoutProps = {
   menuButtonRef?: React.RefObject<HTMLButtonElement>;
   languageSwitcher?: React.ReactNode;
   searchArea: React.ReactNode;
+  toggleGlobalColorMode: () => void;
+  globalColorMode: "light" | "dark";
 };
 
 export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const { locale } = usePageContext();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const colorMode = props.globalColorMode;
   const toogleTheme = () => {
-    toggleColorMode();
+    props?.toggleGlobalColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
         event_category: "engagement",

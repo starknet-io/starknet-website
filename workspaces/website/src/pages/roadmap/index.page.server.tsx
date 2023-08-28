@@ -15,16 +15,19 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const roadmapSettings = await getRoadmapSettings(locale, pageContext.context);
 
   const pageProps: RoadmapPageProps = {
-      roadmapPosts,
-      roadmapVersions,
-      roadmapSettings,
-      locale,
+    roadmapPosts,
+    roadmapVersions,
+    roadmapSettings,
+    locale,
   };
 
   return {
     pageContext: {
       ...defaultPageContext,
       pageProps,
+      navConfig: {
+        invertColorOnDark: true,
+      },
     },
   };
 }
