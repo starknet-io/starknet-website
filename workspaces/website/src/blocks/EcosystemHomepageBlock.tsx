@@ -138,7 +138,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
   if (filteredProjects) {
     return (
       <Box
-        bg="brand-secondary-comet-green-3""
+        bg="brand-secondary-comet-green-3"
         padding="15% 50px"
         sx={{
           "clip-path": "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
