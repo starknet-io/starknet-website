@@ -33,7 +33,7 @@ blocks:
           label: A Rust SDK for Starknet
       - type: link_list_item
         link:
-          custom_title: "Caigo "
+          custom_title: starknet.go
           custom_external_link: https://github.com/dontpanicdao/caigo
         subLabel:
           label: "A Golang SDK for Starknet "
@@ -44,7 +44,7 @@ blocks:
         subLabel:
           label: "A PHP SDK for Starknet "
   - type: link_list
-    heading: Development frameworks
+    heading: Development frameworks - Cairo 0
     listSize: lg
     randomize: true
     blocks:
@@ -53,9 +53,6 @@ blocks:
           custom_external_link: https://github.com/software-mansion/protostar
         subLabel:
           label: Starknet smart contract development toolchain
-      - link:
-          custom_title: Hardhat-starknet
-          custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
       - link:
           custom_title: Nile
           custom_external_link: https://github.com/OpenZeppelin/nile
@@ -66,12 +63,20 @@ blocks:
           custom_external_link: https://github.com/Shard-Labs/starknet-devnet
         subLabel:
           label: Like Ganache, but for Starknet
+  - type: link_list
+    randomize: true
+    heading: Development frameworks - Cairo 1
+    blocks:
       - link:
           hasIcon: true
-          custom_title: Foundry
           custom_external_link: https://github.com/foundry-rs/starknet-foundry
+          custom_title: Foundry
         subLabel:
           label: Ethereum’s leading toolkit for developers is coming to Starknet
+      - link:
+          hasIcon: true
+          custom_title: Hardhat-starknet
+          custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
   - type: link_list
     heading: "Editor plugins "
     listSize: lg
