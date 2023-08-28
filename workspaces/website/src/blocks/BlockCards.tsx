@@ -64,12 +64,12 @@ export const BlockCards = ({
     >
       <Box maxW="864px">
         {heading && (
-          <Heading variant="h2" color="heading-navy-fg" mb="40px">
+          <Heading variant="h2" color="content.accent.value" mb="40px">
             {heading}
           </Heading>
         )}
         {description ? (
-          <Text variant={descriptionVariant} mb="40px">
+          <Text variant={descriptionVariant} mb="40px" color="content.accent.value">
             {description}
           </Text>
         ) : null}

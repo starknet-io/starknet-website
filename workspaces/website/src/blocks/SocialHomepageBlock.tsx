@@ -21,7 +21,7 @@ const SocialHomepageBlock = ({ title, description }: SocialHomepageBlockProps) =
           <Heading
             variant="h1"
             as="h2"
-            color="heading-navy-fg"
+            color="content.accent.value"
             sx={{
               fontWeight: "700",
               maxW: "865px",
@@ -30,7 +30,7 @@ const SocialHomepageBlock = ({ title, description }: SocialHomepageBlockProps) =
               <Heading
                 variant="h1"
                 as="h2"
-                color="title-red-fg"
+                color="content.danger"
                 sx={{
                   display: "inline-block"
                 }}
@@ -39,7 +39,7 @@ const SocialHomepageBlock = ({ title, description }: SocialHomepageBlockProps) =
               </Heading>
               {` `}{restOfSentence}
           </Heading>
-          <Text variant="body" color="heading-navy-fg" sx={{ maxW: "673px" }}>{description}</Text>
+          <Text variant="body" color="content.accent.value" sx={{ maxW: "673px" }}>{description}</Text>
         </Box>
         <Box sx={{ position: "relative", height: 535, mt: "80px" }}>
           <Box sx={{ position: "absolute", left: { base: "55%", md: "50%" } }}>

@@ -111,15 +111,15 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
   if (filteredProjects) {
 
   return (
-    <Box bg="#EDF7F7" padding="15% 50px"
+    <Box bg="brand-secondary-comet-green-3" padding="15% 50px"
       sx={{
         "clip-path": "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
         backgroundImage: "url(/assets/outline-bg.svg)",
         backgroundSize: "130%",
         backgroundPosition: "center"
       }}>
-        <Box maxW={{ base: "1296px", md: "1312px" }} px={{ base: "16px", md: "32px" }} width="100%" m="0 auto" pt="10px" borderTop="1px solid #8DBABB">
-          <Heading variant="h2" color="heading-navy-fg" pb="108px">{title}</Heading>
+        <Box maxW={{ base: "1296px", md: "1312px" }} px={{ base: "16px", md: "32px" }} width="100%" m="0 auto" pt="10px" borderTop="1px solid" borderColor="border.divider">
+          <Heading variant="h2" color="content.accent.value" pb="108px">{title}</Heading>
         </Box>
         <Flex
           direction="column"
@@ -132,7 +132,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           <CircleRow items={thirdRowItems} direction="right" />
         </Flex>
         <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
-        <Button variant="outline" mt="140px" bg="#EDF7F7" href={ctaUrl}>{ctaText}</Button>
+        <Button variant="outline" mt="140px" bg="brand-secondary-comet-green-3" href={ctaUrl}>{ctaText}</Button>
       </Flex>
     </Box>
   )

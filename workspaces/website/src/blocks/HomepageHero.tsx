@@ -11,40 +11,49 @@ type Props = {
 };
 import { Intro } from "./Intro";
 import { navigate } from "vite-plugin-ssr/client/router";
+import { useRive } from '@rive-app/react-canvas';
 
 export const HomepageHero = ({ seo }: Props) => {
+  const { rive, RiveComponent } = useRive({
+    src: '/assets/starknet-hub.riv',
+    autoplay: true,
+  });
+
   return (
     <>
       <Box
         as="section"
         pt="46px"
         pb="93px"
-        bg="#eaeaea"
         minHeight="600px"
         _dark={{
           bgGradient:
-            "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
+            "linear-gradient(5deg, #15151E 0%, #0F0E1B 16.58%, #000 100%)",
         }}
-        bgGradient="linear(0.59deg, #0C0C4F 0.97%, #0C0C4F 26.24%, #060625 99.96%)"
+        bgGradient="linear-gradient(5deg, #0C0C4F 0%, #0C0C4F 16.58%, #060625 100%)"
         position="relative"
         mt="-24px"
         sx={{
           overflow: "visible",
           marginTop: "-150px",
           paddingTop: "256px",
+          position: "relative",
           clipPath: "polygon(0 0,100% 0,100% calc(100% - 14vw),0 100%)",
-          "& iframe": {
+          "& .rive-animation": {
             position: "absolute",
             top: "-215px",
             right: "-300px",
             minWidth: "calc(100% + 400px)",
-            height: "140%",
+            height: "140% !important",
             border: "none",
             zIndex: -1
           }
         }}
       >
-        <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe>
+        {/* <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe> */}
+        <RiveComponent
+        className="rive-animation"
+    />
         <Box
           zIndex={2}
           minHeight="600px"
@@ -103,9 +112,6 @@ export const HomepageHero = ({ seo }: Props) => {
                   <Button
                     onClick={() => navigate("/en/developers")}
                     variant="solid"
-                    sx={{
-                      bg: "#0C0C4F"
-                    }}
                   >
                     Build on Starknet
                   </Button>

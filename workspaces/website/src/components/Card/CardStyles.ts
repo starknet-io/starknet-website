@@ -1,7 +1,7 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
 export const CardStyle = {
-  background: "#FBFBFB",
+  background: "surface.bg-page",
   height: "100%"
 }
 export const CardStyleWhite = {
@@ -101,7 +101,7 @@ export const GridCardBodyLayout = {
   flex: "1 0 0",
   flexDirection: "column",
   gap: "20px",
-  bg: "white"
+  bg: "surface.bg-page"
 }
 export const AssetCardLayout = {
   display: "flex",
@@ -141,7 +141,8 @@ export const AssetCardBodyLayout = {
   alignItems: "flex-start",
   gap: "16px",
   alignSelf: "stretch",
-  flex: 1
+  flex: 1,
+  
 }
 export const AssetCardImgHorizontalLayout = {
   borderRadius: "12px"

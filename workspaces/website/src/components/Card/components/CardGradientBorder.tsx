@@ -23,7 +23,7 @@ export const CardGradientBorder = ({
   return (
     <Box
       borderWidth="1px"
-      borderColor="card-br"
+      borderColor="border-card"
       padding={padding}
       bg={bg}
       borderRadius={borderRadius}

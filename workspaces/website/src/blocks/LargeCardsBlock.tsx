@@ -26,10 +26,10 @@ export const LargeCardsBlock = (props: Props) => {
           <CardImg variant="large" src={horizontal1.img as string} />
           <CardBody variant="large" orientation="horizontal">
             <CardTitle variant="large">{horizontal1.title}</CardTitle>
-            <Text variant="body">
+            <Text variant="body" color="content.support">
                 {horizontal1.description}
             </Text>
-            <Button variant="outline" href={horizontal1.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
+            <Button bg="surface.bg-page" variant="outline" href={horizontal1.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
                 {horizontal1.linkText}
             </Button>
           </CardBody>
@@ -39,10 +39,10 @@ export const LargeCardsBlock = (props: Props) => {
             <CardImg variant="large" src={vertical1.img as string} />
             <CardBody variant="large">
                 <CardTitle variant="large">{vertical1.title}</CardTitle>
-                <Text variant="body">
+                <Text variant="body" color="content.support">
                     {vertical1.description}
                 </Text>
-                <Button variant="outline" href={vertical1.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
+                <Button bg="surface.bg-page" variant="outline" href={vertical1.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
                     {vertical1.linkText}
                 </Button>
             </CardBody>
@@ -51,10 +51,10 @@ export const LargeCardsBlock = (props: Props) => {
             <CardImg variant="large" src={vertical2.img as string} />
             <CardBody variant="large">
                 <CardTitle variant="large">{vertical2.title}</CardTitle>
-                <Text variant="body">
+                <Text variant="body" color="content.support">
                     {vertical2.description}
                 </Text>
-                <Button variant="outline" href={vertical2.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
+                <Button bg="surface.bg-page" variant="outline" href={vertical2.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
                     {vertical2.linkText}
                 </Button>
             </CardBody>
@@ -64,10 +64,10 @@ export const LargeCardsBlock = (props: Props) => {
           <CardImg variant="large" src={horizontal2.img as string} />
           <CardBody variant="large" orientation="horizontal">
             <CardTitle variant="large">{horizontal2.title}</CardTitle>
-            <Text variant="body">
+            <Text variant="body" color="content.support">
                 {horizontal2.description}
             </Text>
-            <Button variant="outline" href={horizontal2.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
+            <Button bg="surface.bg-page" variant="outline" href={horizontal2.linkUrl as string} sx={{mt: {base: "4px", lg: "0"}}}>
                 {horizontal2.linkText}
             </Button>
           </CardBody>
