@@ -42,20 +42,24 @@ blocks:
     blocks:
       - link:
           hasIcon: true
-          custom_title: Starknet Ecosystem
-          custom_external_link: https://t.me/starknet_ecosystem
-      - link:
-          hasIcon: true
           custom_title: Starknet Cairo Core Stars - Pharaohs
           custom_external_link: https://t.me/sncorestars
       - link:
           hasIcon: true
-          custom_title: Starknet Vietnam Community
-          custom_external_link: https://t.me/starknetvn
+          custom_external_link: https://t.me/starknetna
+          custom_title: Starknet Developers & Builders - North America
       - link:
           hasIcon: true
           custom_title: Starknet Devs Africa
           custom_external_link: https://t.me/StarkNetAfrica
+      - link:
+          hasIcon: true
+          custom_external_link: https://t.me/starknetechos
+          custom_title: Starknet Echos
+      - link:
+          hasIcon: true
+          custom_title: Starknet Ecosystem
+          custom_external_link: https://t.me/starknet_ecosystem
       - link:
           hasIcon: true
           custom_title: Starknet India
@@ -66,20 +70,16 @@ blocks:
           custom_title: " Starknet Portugal"
       - link:
           hasIcon: true
-          custom_external_link: https://t.me/starknetSwizerland
-          custom_title: Starknet Swizerland
-      - link:
-          hasIcon: true
-          custom_external_link: https://t.me/starknetna
-          custom_title: Starknet Developers & Builders - North America
-      - link:
-          hasIcon: true
           custom_title: Starknet Singapore
           custom_external_link: https://t.me/starknetsingapore
       - link:
           hasIcon: true
-          custom_external_link: https://t.me/starknetechos
-          custom_title: Starknet Echos
+          custom_external_link: https://t.me/starknetSwizerland
+          custom_title: Starknet Swizerland
+      - link:
+          hasIcon: true
+          custom_title: Starknet Vietnam Community
+          custom_external_link: https://t.me/starknetvn
   - type: link_list
     randomize: false
     heading: "Global Twitter communities "
