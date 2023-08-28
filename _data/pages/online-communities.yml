@@ -29,7 +29,13 @@ blocks:
           custom_title: "Community forum "
           custom_external_link: https://community.starknet.io/
         subLabel:
-          label: Share, discuss and collaborate on initiatives.
+          label: Share, discuss and collaborate on initiatives
+      - link:
+          hasIcon: true
+          custom_title: Starknet basecamp
+          custom_external_link: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
+        subLabel:
+          label: Sign up for the next basecamp and learn about Starknet
   - type: link_list
     heading: Telegram groups
     listSize: lg
