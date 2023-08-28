@@ -37,7 +37,7 @@ blocks:
         subLabel:
           label: Sign up for the next basecamp and learn about Starknet
   - type: link_list
-    heading: Community Telegram groups
+    heading: Telegram Community groups
     listSize: lg
     blocks:
       - link:
