@@ -3,7 +3,7 @@ import { escapeInject } from "vite-plugin-ssr/server";
 import { PageContextServer } from "./types";
 import { PageShell } from "./PageShell";
 import { getDefaultPageContext } from "./helpers";
-import type { InjectFilterEntry } from 'vite-plugin-ssr/types'
+import type { InjectFilterEntry } from "vite-plugin-ssr/types";
 
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = [
@@ -11,6 +11,7 @@ export const passToClient = [
   "routeParams",
   "pageProps",
   "documentProps",
+  "navConfig",
   "locale",
   "alerts",
   "mainMenu",
@@ -27,7 +28,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps, redirectTo } = pageContext;
 
-  if (redirectTo) return {}
+  if (redirectTo) return {};
 
   const page = (
     <PageShell pageContext={pageContext}>
@@ -110,31 +111,30 @@ export async function render(pageContext: PageContextServer) {
   return { documentHtml, injectFilter };
 }
 
-
 const injectFilter = (assets: InjectFilterEntry[]): void => {
-  assets.forEach(asset => {
+  assets.forEach((asset) => {
     if (
       // We don't touch entry assets (recommended)
       asset.isEntry ||
       // We don't touch JavaScript preloading (recommended)
-      asset.assetType === 'script'
+      asset.assetType === "script"
     ) {
-      return
+      return;
     }
 
     // Preload images
-    if (asset.assetType === 'image') {
-      asset.inject = 'HTML_BEGIN'
+    if (asset.assetType === "image") {
+      asset.inject = "HTML_BEGIN";
     }
 
     // Don't preload fonts
-    if (asset.assetType === 'font') {
-      asset.inject = false
+    if (asset.assetType === "font") {
+      asset.inject = false;
     }
 
     // Preload videos
-    if (asset.mediaType?.startsWith('video')) {
-      asset.inject = 'HTML_END'
+    if (asset.mediaType?.startsWith("video")) {
+      asset.inject = "HTML_END";
     }
-  })
-}
+  });
+};
