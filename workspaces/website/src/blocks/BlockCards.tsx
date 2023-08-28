@@ -29,14 +29,14 @@ export const renderHeadingVariant = (headingVariant: string) => {
       return {
         fontWeight: "extrabold",
         fontSize: "32px",
-        marginBottom: "24px",
+        marginBottom: "xl",
       };
 
     case "h2":
       return {
         fontWeight: "extrabold",
         fontSize: "48px",
-        marginBottom: "48px",
+        marginBottom: "xl",
       };
 
     default:
@@ -46,9 +46,8 @@ export const renderHeadingVariant = (headingVariant: string) => {
 
 export const BlockCards = ({
   heading,
-  headingVariant = "h3",
+  headingVariant = "h2",
   description,
-  descriptionVariant = "body",
   children,
   base = 1,
   md = 2,
@@ -61,18 +60,29 @@ export const BlockCards = ({
       width="100%"
       m="0 auto"
       px={{ base: "16px", md: "32px" }}
+      display="flex"
+      flexDirection="column"
+      gap={{
+        base: "page.block-gap.base",
+        md: "page.block-gap.md",
+        lg: "page.block-gap.lg",
+      }}
     >
       <Box maxW="864px">
         {heading && (
-          <Heading variant="h2" color="heading-navy-fg" mb="40px">
-            {heading}
-          </Heading>
+          <Box>
+            <Heading
+              variant={headingVariant}
+              color="content.accent.value"
+              withMarginBottom
+            >
+              {heading}
+            </Heading>
+            {description && (
+              <Text variant="headingDescription">{description}</Text>
+            )}
+          </Box>
         )}
-        {description ? (
-          <Text variant={descriptionVariant} mb="40px">
-            {description}
-          </Text>
-        ) : null}
       </Box>
       <SimpleGrid
         columns={{ base, md, lg, xl }}

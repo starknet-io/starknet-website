@@ -142,7 +142,7 @@ export const CardTitle = ({ variant, children }: TitleProps) => {
     <Heading
       sx={styles}
       variant={variant === "large" ? "h2" : "h3"}
-      color="btn-primary-bg"
+      color="content.accent.value"
     >
       {children}
     </Heading>
