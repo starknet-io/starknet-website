@@ -11,7 +11,13 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 
   return {
     pageContext: {
-      pageProps: { data } satisfies Props,
+      pageProps: {
+        data,
+      } satisfies Props,
+      navConfig: {
+        invertColorOnLight: slug === "home",
+        invertColorOnDark: data.template === "landing",
+      },
       documentProps: {
         title: slug == "home" ? undefined : data.title,
       } satisfies DocumentProps,

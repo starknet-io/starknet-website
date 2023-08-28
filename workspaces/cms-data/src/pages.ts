@@ -16,14 +16,27 @@ export interface CommunityEventsBlock {
   readonly type: "community_events";
 }
 
-export interface AmbassadorsListBlock {
-  readonly type: "ambassadors_list";
+export type AmbassadorTag = {
+  tag: string;
+};
+
+export interface Ambassador {
+  readonly full_name: string;
+  readonly title: string;
+  readonly description: string;
+  readonly image: string;
+  readonly website?: string;
+  readonly twitter?: string;
+  readonly discord?: string;
+  readonly tags?: AmbassadorTag[];
 }
 
-export interface WalletsBlock {
-  readonly type: "wallets";
-  readonly no_of_items: number;
+export interface AmbassadorsListBlock {
+  readonly type: "ambassadors_list";
+  readonly title?: string;
+  readonly ambassador?: Ambassador[];
 }
+
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
@@ -32,11 +45,16 @@ export interface BasicCardBlock {
   readonly size?: "sm" | "md";
 }
 
-export interface CardBlock {
-  readonly type: "card";
-  readonly variant?: "grid" | "asset" | "large" | "iconLink";
-  readonly orientation?: "horizontal" | "vertical";
+export interface AssetCardBlock {
+  readonly type: "asset_card";
+  readonly title: string;
+  readonly description: string;
+  readonly website_url: string;
+  readonly twitter: string;
+  readonly image: string;
+  readonly discord: string;
 }
+
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -54,27 +72,54 @@ export interface ImageIconLinkCardBlock {
     | "grey";
 }
 
-interface Icon {
-  icon: string;
-  linkUrl: string;
+export interface IconLinkCardBlock {
+  type: "icon_link_card";
+  img?: string;
+  title?: string;
+  description?: string;
+  linkText?: string;
+  linkUrl?: string;
+  color?: string;
 }
 
-interface ListCardItems {
-  title: string;
-  description: string;
-  linkUrl: string;
-  icons: Icon;
-  website_url: string;
-  twitter: string;
-  image: string;
+type LargeCard = {
+  img?: string;
+  title?: string;
+  description?: string;
+  linkText?: string;
+  linkUrl?: string;
+};
+
+export type LargeCardsBlock = {
+  readonly type: "large_cards";
+  readonly horizontal1: LargeCard;
+  readonly horizontal2: LargeCard;
+  readonly vertical1: LargeCard;
+  readonly vertical2: LargeCard;
+};
+
+export interface StatCardsBlock {
+  type: "stat_cards";
 }
-export interface ListCardItemsBlock {
-  readonly type: "card_list";
+
+export interface PatternCardBlock {
+  readonly type: "pattern_card";
   readonly title: string;
-  readonly card_list_items: ListCardItems[];
-  readonly noOfItems: number;
+  readonly link: string;
+  readonly pattern: "two-lines" | "ethereum" | "curly-lines" | "circle-lines";
+}
+
+export interface EcosystemBlock {
+  readonly type: "ecosystem_block";
+  readonly title: string;
+  readonly ctaText: string;
+  readonly ctaUrl: string;
+}
+
+export interface SocialHomepageBlock {
+  readonly type: "social_block";
+  readonly title: string;
   readonly description: string;
-  randomize?: boolean;
 }
 
 export interface LinkListItem {
@@ -165,9 +210,14 @@ export type DescriptionVariant =
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
-  | WalletsBlock
   | BasicCardBlock
   | ImageIconLinkCardBlock
+  | IconLinkCardBlock
+  | LargeCardsBlock
+  | StatCardsBlock
+  | PatternCardBlock
+  | EcosystemBlock
+  | SocialHomepageBlock
   | HeroBlock
   | HomeHeroBlock
   | PromoBlock
@@ -175,9 +225,8 @@ export type Block =
   | PageHeaderBlock
   | AccordionBlock
   | OrderedBlock
-  | ListCardItemsBlock
   | AmbassadorsListBlock
-  | CardBlock;
+  | AssetCardBlock;
 
 export interface Container {
   readonly type: "container";
@@ -240,9 +289,6 @@ const getPageWithRandomizedData = (data: Page): Page => {
     ) {
       //@ts-expect-error
       block.blocks = getShuffledArray(block.blocks || []);
-    } else if (block.type === "card_list" && block.randomize) {
-      //@ts-expect-error
-      block.card_list_items = getShuffledArray(block.card_list_items || []);
     }
   });
 

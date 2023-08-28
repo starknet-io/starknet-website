@@ -18,37 +18,26 @@ import {
   IconButton,
   Wrap,
   HStack,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 import { HiGlobeAlt } from "react-icons/hi2";
+import {
+  Ambassador,
+  AmbassadorsListBlock as AmbassadorsListBlockType,
+  AmbassadorTag as Tag,
+} from "@starknet-io/cms-data/src/pages";
 
 export type AmbassadorsSize = "sm" | "md" | "lg";
 
-export interface Ambassador {
-  readonly full_name: string;
-  readonly title: string;
-  readonly description: string;
-  readonly image: string;
-  readonly website?: string;
-  readonly twitter?: string;
-  readonly discord?: string;
-  readonly tags?: Tag[];
-}
-
-type Tag = {
-  tag: string;
-}
-
-type RootProps = {
-  title?: string;
-  ambassador?: Ambassador[];
-} & FlexProps;
+interface RootProps
+  extends AmbassadorsListBlockType,
+    Omit<FlexProps, "title"> {}
 
 const AmbassadorsList = (props: RootProps) => {
   const { ambassador, title, ...rest } = props;
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedMember, setSelectedMember] = useState<Ambassador>();
 
   const handleClose = () => {
@@ -61,10 +50,15 @@ const AmbassadorsList = (props: RootProps) => {
   };
 
   const changeMember = (navigator: number) => {
-    let index = ambassador?.findIndex(a => a.full_name == selectedMember?.full_name) ?? 0;
+    let index =
+      ambassador?.findIndex((a) => a.full_name == selectedMember?.full_name) ??
+      0;
     let nextAmbassador = selectedMember;
-    if(index !== -1 && ambassador) {
-      if ((navigator > 0 && index < ambassador.length - 1) || (navigator < 0 && index > 0)) {
+    if (index !== -1 && ambassador) {
+      if (
+        (navigator > 0 && index < ambassador.length - 1) ||
+        (navigator < 0 && index > 0)
+      ) {
         nextAmbassador = ambassador[index + navigator];
       }
     }
@@ -85,13 +79,8 @@ const AmbassadorsList = (props: RootProps) => {
           {title}
         </Heading>
       )}
-      <Flex
-        {...rest}
-        overflow="hidden"
-        direction="row"
-        flexWrap="wrap"
-      >
-        {ambassador?.map(a => {
+      <Flex {...rest} overflow="hidden" direction="row" flexWrap="wrap">
+        {ambassador?.map((a) => {
           return (
             <Flex
               alignItems="center"
@@ -100,7 +89,11 @@ const AmbassadorsList = (props: RootProps) => {
               onClick={() => viewMember(a)}
               cursor="pointer"
               px="2"
-              maxWidth={{base: "calc(100% - 16px)", md: "calc(50% - 16px)", lg: "calc(33.333333% - 16px)" }}
+              maxWidth={{
+                base: "calc(100% - 16px)",
+                md: "calc(50% - 16px)",
+                lg: "calc(33.333333% - 16px)",
+              }}
               width="100%"
             >
               <Img
@@ -112,18 +105,37 @@ const AmbassadorsList = (props: RootProps) => {
                 sx={{ borderRadius: "50%" }}
                 mb="24px"
               />
-              <Heading variant="h4" color="heading-navy-fg">{a.full_name}</Heading>
-              <Text align="center" variant="cardBody" color="columnlink-fg">{a.title}</Text>
+              <Heading variant="h4" color="heading-navy-fg">
+                {a.full_name}
+              </Heading>
+              <Text align="center" variant="cardBody" color="columnlink-fg">
+                {a.title}
+              </Text>
               {a.tags?.map((t: Tag) => (
-                <Badge mt="2" variant={t.tag === "Content generator" ? "community_and_events" : t.tag === "Event organizer" ? "youtube" : "stark_math"}>{t.tag}</Badge>
+                <Badge
+                  mt="2"
+                  variant={
+                    t.tag === "Content generator"
+                      ? "community_and_events"
+                      : t.tag === "Event organizer"
+                      ? "youtube"
+                      : "stark_math"
+                  }
+                >
+                  {t.tag}
+                </Badge>
               ))}
             </Flex>
-          )})
-        }
+          );
+        })}
         <Modal isOpen={isOpen} onClose={handleClose}>
           <ModalOverlay />
           <ModalContent maxWidth="1100px" width="100%">
-            <ModalCloseButton cursor="pointer" zIndex="9" onClick={handleClose} />
+            <ModalCloseButton
+              cursor="pointer"
+              zIndex="9"
+              onClick={handleClose}
+            />
             <Flex>
               <Img
                 width="auto"
@@ -132,37 +144,45 @@ const AmbassadorsList = (props: RootProps) => {
                 title={selectedMember?.title}
                 objectFit="contain"
               />
-              <Box
-                p="40px 40px 70px 40px"
-                position="relative"
-                flex="1"
-              >
-                <Heading variant="h4" color="heading-navy-fg">{selectedMember?.full_name}</Heading>
-                <Text variant="cardBody" color="columnlink-fg" mb="2">{selectedMember?.title}</Text>
-                <Text variant="cardBody" color="columnlink-fg">{selectedMember?.description}</Text>
-                {selectedMember?.tags ? <HStack mt="20px">
-                  {selectedMember.tags.map((t: Tag) => (
-                    <Badge variant={t.tag === "Content generator" ? "community_and_events" : t.tag === "Event organizer" ? "youtube" : "stark_math"}>{t.tag}</Badge>
-                  ))}
-                </HStack> : null}
-                <Wrap spacingX="24px" shouldWrapChildren mt='20px'>
-                  {selectedMember?.website && (
-                      <Link
-                        isExternal
-                        href={`${selectedMember?.website}`}
+              <Box p="40px 40px 70px 40px" position="relative" flex="1">
+                <Heading variant="h4" color="heading-navy-fg">
+                  {selectedMember?.full_name}
+                </Heading>
+                <Text variant="cardBody" color="columnlink-fg" mb="2">
+                  {selectedMember?.title}
+                </Text>
+                <Text variant="cardBody" color="columnlink-fg">
+                  {selectedMember?.description}
+                </Text>
+                {selectedMember?.tags ? (
+                  <HStack mt="20px">
+                    {selectedMember.tags.map((t: Tag) => (
+                      <Badge
+                        variant={
+                          t.tag === "Content generator"
+                            ? "community_and_events"
+                            : t.tag === "Event organizer"
+                            ? "youtube"
+                            : "stark_math"
+                        }
                       >
-                        <Icon
-                          boxSize="18px"
-                          color="list-card-icon-fg"
-                          as={HiGlobeAlt}
-                        />
-                      </Link>
-                    )}
+                        {t.tag}
+                      </Badge>
+                    ))}
+                  </HStack>
+                ) : null}
+                <Wrap spacingX="24px" shouldWrapChildren mt="20px">
+                  {selectedMember?.website && (
+                    <Link isExternal href={`${selectedMember?.website}`}>
+                      <Icon
+                        boxSize="18px"
+                        color="list-card-icon-fg"
+                        as={HiGlobeAlt}
+                      />
+                    </Link>
+                  )}
                   {selectedMember?.twitter && (
-                    <Link
-                      isExternal
-                      href={`${selectedMember?.twitter}`}
-                    >
+                    <Link isExternal href={`${selectedMember?.twitter}`}>
                       <Icon
                         boxSize="18px"
                         color="list-card-icon-fg"
@@ -171,10 +191,7 @@ const AmbassadorsList = (props: RootProps) => {
                     </Link>
                   )}
                   {selectedMember?.discord && (
-                    <Link
-                      isExternal
-                      href={`${selectedMember?.discord}`}
-                    >
+                    <Link isExternal href={`${selectedMember?.discord}`}>
                       <Icon
                         boxSize="18px"
                         color="list-card-icon-fg"
@@ -193,10 +210,10 @@ const AmbassadorsList = (props: RootProps) => {
                     bg="transparent"
                     border="1px solid transparent"
                     color="list-card-icon-fg"
-                    icon={<ArrowLeftIcon/>}
+                    icon={<ArrowLeftIcon />}
                     aria-label="View previous"
                     _hover={{
-                      color: "white"
+                      color: "white",
                     }}
                     onClick={() => changeMember(-1)}
                   />
@@ -207,7 +224,7 @@ const AmbassadorsList = (props: RootProps) => {
                     icon={<ArrowRightIcon />}
                     aria-label="View next"
                     _hover={{
-                      color: "white"
+                      color: "white",
                     }}
                     onClick={() => changeMember(1)}
                   />

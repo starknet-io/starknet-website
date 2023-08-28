@@ -8,6 +8,7 @@ import {
 import { Text } from "@ui/Typography/Text";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 import { IconType } from "react-icons/lib";
+import { AssetCardBlock } from "@starknet-io/cms-data/src/pages";
 
 const SocialIconLink = ({ href, icon }: { href: string; icon: IconType }) => {
   return (
@@ -30,14 +31,8 @@ const SocialIconLink = ({ href, icon }: { href: string; icon: IconType }) => {
   );
 };
 
-type AssetCardProps = {
-  title: string;
-  description: string;
-  website_url: string;
-  twitter: string;
-  image: string;
-  discord: string;
-};
+interface AssetCardProps extends AssetCardBlock {}
+
 export const AssetCard = ({
   title,
   description,

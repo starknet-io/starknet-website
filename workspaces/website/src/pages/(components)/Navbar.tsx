@@ -1,5 +1,3 @@
-
-import { useState, useEffect } from "react";
 import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
@@ -12,7 +10,7 @@ import { Flex } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import React, { Fragment } from "react";
-import { Box, ButtonGroup, ColorModeProvider } from "@chakra-ui/react";
+import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
@@ -25,16 +23,11 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  readonly searchSEO: SEOTexts['search'];
-  readonly languageCenterSeo: SEOTexts['language'];
+  readonly searchSEO: SEOTexts["search"];
+  readonly languageCenterSeo: SEOTexts["language"];
 }
 
-export function NavbarWrapper({
-  mainMenu,
-  env,
-  searchSEO,
-  languageCenterSeo,
-}: Props) {
+function Navbar({ mainMenu, env, searchSEO, languageCenterSeo }: Props) {
   const { locale, urlPathname: pathname } = usePageContext();
 
   return (
@@ -85,13 +78,13 @@ export function NavbarWrapper({
                                 as="a"
                                 aria-label={label!}
                                 _hover={{
-                                  background: 'transparent !important',
+                                  background: "transparent !important",
                                 }}
                                 sx={{
-                                  '&:hover *': {
-                                      background: 'transparent !important',
-                                      fill: 'fg-default-hover',
-                                  }
+                                  "&:hover *": {
+                                    background: "transparent !important",
+                                    fill: "fg-default-hover",
+                                  },
                                 }}
                                 icon={
                                   item.custom_icon === "SiDiscord" ? (
@@ -101,7 +94,9 @@ export function NavbarWrapper({
                                   ) : item.custom_icon === "SiTwitter" ? (
                                     <SiTwitter fontSize="1.25rem" />
                                   ) : item.custom_icon === "SiYoutube" ? (
-                                    <Box ml="-16px"><SiYoutube fontSize="1.25rem" /></Box>
+                                    <Box ml="-16px">
+                                      <SiYoutube fontSize="1.25rem" />
+                                    </Box>
                                   ) : (
                                     <React.Fragment />
                                   )
@@ -204,49 +199,4 @@ export function NavbarWrapper({
   );
 }
 
-export default function Navbar({
-  mainMenu,
-  env,
-  searchSEO,
-  languageCenterSeo,
-}: Props) {
-  const { locale, urlPathname: pathname } = usePageContext();
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  if (pathname === `/${locale}/` && !isScrolled) {
-    return (
-      <ColorModeProvider value="dark">
-        <NavbarWrapper
-          mainMenu={mainMenu}
-          env={env}
-          searchSEO={searchSEO}
-          languageCenterSeo={languageCenterSeo}
-        />
-      </ColorModeProvider>)}
-    else {
-    return (
-      <NavbarWrapper
-        mainMenu={mainMenu}
-        env={env}
-        searchSEO={searchSEO}
-        languageCenterSeo={languageCenterSeo}
-      />
-    )
-  }
-}
+export default Navbar;

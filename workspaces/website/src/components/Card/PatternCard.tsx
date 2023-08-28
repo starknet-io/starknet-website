@@ -2,12 +2,9 @@ import { Box, Image, Link } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { CardGradientBorder } from "./components/CardGradientBorder";
+import { PatternCardBlock as PatternCardBlockType } from "@starknet-io/cms-data/src/pages";
 
-type PatternCardProps = {
-  title: string;
-  link: string;
-  pattern: "two-lines" | "ethereum" | "curly-lines" | "circle-lines";
-};
+interface PatternCardProps extends PatternCardBlockType {}
 export const PatternCard = ({
   title,
   link,

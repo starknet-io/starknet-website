@@ -11,6 +11,7 @@ import {
   useColorMode,
   useDisclosure,
   Icon,
+  ColorModeProvider,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -58,9 +59,15 @@ export const NavBar = ({
     () => setLanguagesDrawerOpen(true),
     []
   );
-  const { locale, urlPathname: pathname } = usePageContext();
+  const { locale, urlPathname: pathname, navConfig } = usePageContext();
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;
   const topLanguages = ["en", "es", "fr", "de", "pt", "ar", "ja", "ko"];
+  let color = colorMode;
+  if (colorMode === "light" && navConfig?.invertColorOnLight) {
+    color = "dark";
+  } else if (colorMode === "dark" && navConfig?.invertColorOnDark) {
+    color = "light";
+  }
 
   React.useEffect(() => {
     onClose();
@@ -95,13 +102,17 @@ export const NavBar = ({
         isPageScrolled ? "1px solid rgba(35, 25, 45, 0.10)" : "none"
       }
     >
-      <NavLayout
-        onClickMenu={onOpen}
-        isMenuOpen={isOpen}
-        items={desktopNavItems}
-        languageSwitcher={languageSwitcher}
-        searchArea={search}
-      />
+      <ColorModeProvider value={isPageScrolled ? colorMode : color}>
+        <NavLayout
+          onClickMenu={onOpen}
+          toggleGlobalColorMode={toggleColorMode}
+          globalColorMode={colorMode}
+          isMenuOpen={isOpen}
+          items={desktopNavItems}
+          languageSwitcher={languageSwitcher}
+          searchArea={search}
+        />
+      </ColorModeProvider>
       <Box display={{ base: "block", lg: "none" }}>
         <Drawer
           placement="left"
@@ -121,6 +132,8 @@ export const NavBar = ({
                 onClickMenu={onClose}
                 isMenuOpen={isOpen}
                 menuButtonRef={menuButtonRef}
+                globalColorMode={colorMode}
+                toggleGlobalColorMode={toggleColorMode}
               />
             </DrawerHeader>
             <DrawerBody>{mobileNavItems}</DrawerBody>
