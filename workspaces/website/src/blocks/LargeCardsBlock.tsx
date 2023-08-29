@@ -1,4 +1,4 @@
-import { BoxProps, Flex } from "@chakra-ui/react";
+import { BoxProps, Flex, useColorMode } from "@chakra-ui/react";
 import { Card, CardImg, CardBody, CardTitle } from "@ui/Card/Card";
 import { Text } from "@ui/Typography/Text";
 import { Button } from "@ui/Button";
@@ -16,10 +16,11 @@ interface Props extends LargeCardsBlockType, BoxProps {}
 
 export const LargeCardsBlock = (props: Props) => {
   const { horizontal1, horizontal2, vertical1, vertical2 } = props;
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex direction="column" gap="40px">
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={horizontal1.img as string} />
+        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg as string} />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal1.title}</CardTitle>
           <Text variant="body" color="content.support">{horizontal1.description}</Text>
