@@ -179,12 +179,8 @@ blocks:
         link:
           custom_title: Cairo docker
           custom_external_link: https://hub.docker.com/repository/docker/shardlabs/cairo-cli
-      - type: link_list_item
-        link:
-          custom_title: "Empiric network "
-          custom_external_link: https://docs.empiric.network/
         subLabel:
-          label: "Starknet native oracle "
+          label: A docker container packaging the Cairo compiler and scarb
       - type: link_list_item
         link:
           custom_title: starknet-deeplink
@@ -193,19 +189,29 @@ blocks:
           label: Starknet deeplink generator
       - type: link_list_item
         link:
-          custom_title: Starknet Goerli ETH faucet
-          custom_external_link: https://faucet.goerli.starknet.io/
-        subLabel:
-          label: "Testnet ETH faucet "
-      - type: link_list_item
-        link:
-          custom_title: "TypeChain "
-          custom_external_link: https://github.com/dethcrypto/TypeChain
-        subLabel:
-          label: TypeScript bindings generator for Cairo
-      - type: link_list_item
-        link:
           custom_title: Warp
           custom_external_link: https://github.com/NethermindEth/warp
         subLabel:
           label: Solidity to Cairo transpiler (outdated, cairo0)
+  - type: link_list
+    randomize: false
+    heading: Additional resources
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Starknet Goerli ETH faucet
+          custom_external_link: https://faucet.goerli.starknet.io/
+        subLabel:
+          label: "Testnet ETH faucet "
+      - link:
+          hasIcon: true
+          custom_title: "Empiric network "
+          custom_external_link: https://docs.empiric.network/
+        subLabel:
+          label: "Starknet native oracle "
+      - link:
+          hasIcon: true
+          custom_title: "TypeChain "
+          custom_external_link: https://github.com/dethcrypto/TypeChain
+        subLabel:
+          label: TypeScript bindings generator for Cairo
