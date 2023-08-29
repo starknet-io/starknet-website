@@ -26,6 +26,7 @@ blocks:
             decentralization.
           linkText: Discover Validity Rollups ->
           linkUrl: "#"
+          darkImg: /assets/unlimited-scale-dark.png
         vertical1:
           img: /assets/superior-ux.png
           title: Superior UX
@@ -38,6 +39,7 @@ blocks:
             security.  "
           linkText: Dive into Native AA ->
           linkUrl: "#"
+          darkImg: /assets/superior-ux-dark.png
         vertical2:
           img: /assets/thriving-ecosystem.png
           title: Thriving Ecosystem
@@ -49,6 +51,7 @@ blocks:
             transparency.
           linkText: The growing Starknet Stack ->
           linkUrl: "#"
+          darkImg: /assets/thriving-ecosystem-dark.png
         horizontal2:
           img: /assets/creativity-unleased.png
           title: Creativity Unleashed
@@ -60,6 +63,7 @@ blocks:
             Starknet.
           linkText: Build with Cairo ->
           linkUrl: "#"
+          darkImg: /assets/creativity-unleased-dark.png
   - heading: "Start building "
     description_variant: body
     blocks:
