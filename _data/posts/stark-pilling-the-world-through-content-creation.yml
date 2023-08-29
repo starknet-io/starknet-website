@@ -10,13 +10,8 @@ video:
     etag: w9JqGHTIp69QvNUz7B_o8iA7Ca4
     id: IgaBEq27hls
     snippet:
-      publishedAt: 2023-08-04T16:30:05Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: Starkpilling the World through content creation - Nurstar - Gurkha -
-        Henri Lieutaud - Emma Lee
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T16:30:05.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/IgaBEq27hls/default.jpg
@@ -34,7 +29,10 @@ video:
           url: https://i.ytimg.com/vi/IgaBEq27hls/sddefault.jpg
           width: 640
           height: 480
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: Starkpilling the World through content creation - Nurstar - Gurkha -
+        Henri Lieutaud - Emma Lee
       tags:
         - crypto
         - ethereum
@@ -45,16 +43,18 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Starkpilling the World through content creation - Nurstar - Gurkha -
           Henri Lieutaud - Emma Lee
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT26M30S
       dimension: 2d
@@ -63,5 +63,5 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-image: ""
+image: /assets/youthumb_igabeq27hls_standard.png
 category: community-and-events
