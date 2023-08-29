@@ -20,7 +20,7 @@ export const SectionHeader = ({
   return (
     <Box
       as="section"
-      maxW="864px"
+      maxW="contentMaxW.md"
       // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
       <Stack spacing="40px" pb={6}>
@@ -37,7 +37,11 @@ export const SectionHeader = ({
             {title}
           </Heading>
           {description && (
-            <Text color="content.accent.value" variant="body" pb={{ base: 4, lg: 8 }}>
+            <Text
+              color="content.accent.value"
+              variant="body"
+              pb={{ base: 4, lg: 8 }}
+            >
               {description}
             </Text>
           )}

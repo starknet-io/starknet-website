@@ -16,7 +16,8 @@ type Props = {
     | "body"
     | "breadcrumbs"
     | "footerLink"
-    | "textLink";
+    | "textLink"
+    | "headingDescription";
   headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
@@ -29,14 +30,14 @@ export const renderHeadingVariant = (headingVariant: string) => {
       return {
         fontWeight: "extrabold",
         fontSize: "32px",
-        marginBottom: "24px",
+        marginBottom: "xl",
       };
 
     case "h2":
       return {
         fontWeight: "extrabold",
         fontSize: "48px",
-        marginBottom: "48px",
+        marginBottom: "xl",
       };
 
     default:
@@ -46,9 +47,9 @@ export const renderHeadingVariant = (headingVariant: string) => {
 
 export const BlockCards = ({
   heading,
-  headingVariant = "h3",
+  headingVariant = "h2",
+  descriptionVariant = "headingDescription",
   description,
-  descriptionVariant = "body",
   children,
   base = 1,
   md = 2,
@@ -57,22 +58,38 @@ export const BlockCards = ({
 }: Props) => {
   return (
     <Box
-      maxW={{ base: "1296px", md: "1312px" }}
+      maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
       width="100%"
       m="0 auto"
-      px={{ base: "16px", md: "32px" }}
+      px={{
+        base: "page.left-right.base",
+        md: "page.left-right.md",
+      }}
+      display="flex"
+      flexDirection="column"
+      gap={{
+        base: "page.block-gap.base",
+        md: "page.block-gap.md",
+        lg: "page.block-gap.lg",
+      }}
     >
-      <Box maxW="864px">
+      <Box maxW="contentMaxW.md">
         {heading && (
-          <Heading variant="h2" color="content.accent.value" mb="40px">
-            {heading}
-          </Heading>
+          <Box>
+            <Heading
+              variant={headingVariant}
+              color="content.accent.value"
+              withMarginBottom={description ? true : false}
+            >
+              {heading}
+            </Heading>
+            {description && (
+              <Text variant={descriptionVariant} color="content.accent.value">
+                {description}
+              </Text>
+            )}
+          </Box>
         )}
-        {description ? (
-          <Text variant={descriptionVariant} mb="40px" color="content.accent.value">
-            {description}
-          </Text>
-        ) : null}
       </Box>
       <SimpleGrid
         columns={{ base, md, lg, xl }}

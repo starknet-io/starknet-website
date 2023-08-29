@@ -77,7 +77,7 @@ export function PostsPage({
             [category, params.locale]
           )}
         />
-        <Container maxW="1344px" mb={4}>
+        <Container maxW="contentMaxW.xl" mb={4}>
           <CustomCategories categories={categories} params={params} />
         </Container>
         <PostsPageLayout

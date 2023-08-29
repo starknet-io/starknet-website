@@ -22,8 +22,11 @@ const SocialHomepageBlock = ({
   return (
     <Box>
       <Box
-        maxW={{ base: "1296px", md: "1312px" }}
-        px={{ base: "16px", md: "32px" }}
+        maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+        px={{
+          base: "page.left-right.base",
+          md: "page.left-right.md",
+        }}
         width="100%"
         m="0 auto"
         pt="10px"
@@ -51,7 +54,11 @@ const SocialHomepageBlock = ({
           {` `}
           {restOfSentence}
         </Heading>
-        <Text variant="body" color="content.accent.value" sx={{ maxW: "673px" }}>
+        <Text
+          variant="body"
+          color="content.accent.value"
+          sx={{ maxW: "673px" }}
+        >
           {description}
         </Text>
       </Box>

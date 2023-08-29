@@ -96,6 +96,10 @@ export default function CustomPreview(props: CustomPreviewProps) {
             block = await fixImagePreview(block, "icon");
           } else if (block.hasOwnProperty("image")) {
             block = await fixImagePreview(block);
+          } else if (block.hasOwnProperty("img")) {
+            block = await fixImagePreview(block, "img");
+          } else if (block.hasOwnProperty("icon")) {
+            block = await fixImagePreview(block, "icon");
           }
 
           return block;

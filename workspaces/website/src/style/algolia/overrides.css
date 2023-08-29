@@ -84,14 +84,6 @@ body.chakra-ui-dark {
   --aa-item-background-rgb: 30, 29, 29;
 }
 
-body.chakra-ui-dark .aa-Input::placeholder {
-  color: rgba(var(--aa-primary-color-rgb), 1);
-}
-
-body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
-  color: rgb(var(--aa-selected-text-color-rgb));
-}
-
 .aa-Panel {
   background-color: rgba(
     var(--aa-background-color-rgb),
@@ -106,6 +98,11 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   position: absolute;
   transition: opacity 0.2s ease-in, filter 0.2s ease-in;
 }
+.aa-Item,
+.aa-ItemLink {
+  border: 1px solid transparent;
+}
+
 .aa-Item {
   align-items: center;
   cursor: pointer;
@@ -113,7 +110,7 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   padding: 0px; /* remove padding from parent and add it to child so that we can click link more easily*/
   margin-bottom: var(--chakra-space-sm);
   border-radius: var(--chakra-space-xs);
-  background-color: var(--chakra-colors-surface-transparent);
+  background-color: var(--chakra-colors-surface-transparent-value);
 }
 
 .aa-ItemLink,
@@ -125,18 +122,21 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 .aa-Item:last-child {
   margin-bottom: 24px;
 }
-.aa-Item[aria-selected="true"] {
-  background-color: var(--chakra-colors-surface-accentInverted);
-  color: var(--chakra-colors-content-defaultHover);
+.aa-Item[aria-selected="true"],
+.aa-ItemLink[aria-selected="true"] {
+  background-color: var(--chakra-colors-surface-accent-inverted);
+  color: var(--chakra-colors-content-default-hover);
+  border: 1px solid var(--chakra-colors-border-divider);
 }
 
-.aa-Item[aria-selected="true"] svg {
-  color: var(--chakra-colors-content-defaultHover);
+.aa-Item[aria-selected="true"] svg,
+.aa-ItemLink[aria-selected="true"] svg {
+  color: var(--chakra-colors-content-default-hover);
 }
 
 .aa-DetachedContainer .aa-SourceHeader {
   margin: 0 0 var(--chakra-space-xs) 0;
-  color: var(--chakra-colors-content-default);
+  color: var(--chakra-colors-content-default-value);
   font-weight: 500;
   font-size: 14px;
 }
@@ -158,11 +158,11 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   border-radius: 8px;
   border: 0px;
   color: var(--chakra-colors-fg-default-light);
-  background-color: var(--chakra-colors-surface-transparent);
+  background-color: var(--chakra-colors-surface-transparent-value);
 }
 
 .aa-DetachedSearchButton:hover {
-  color: var(--chakra-colors-content-defaultHover);
+  color: var(--chakra-colors-content-default-hover);
 }
 
 .aa-DetachedSearchButtonIcon {
@@ -271,15 +271,19 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .aa-Input {
-  color: var(--chakra-colors-content-default);
+  color: var(--chakra-colors-content-default-value);
+}
+
+.aa-InputWrapper .aa-Input {
+  height: 40px;
 }
 .aa-Input::placeholder {
   font-weight: 400;
-  color: inherit;
+  color: inherit !important;
   font-size: 16px;
 }
 .aa-Label svg {
-  color: var(--chakra-colors-content-default);
+  color: var(--chakra-colors-content-default-value);
 }
 
 .aa-SourceHeaderTitle {
@@ -288,7 +292,7 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   line-height: 17px;
   font-weight: var(--aa-font-weight-bold);
   margin: 0;
-  padding: 0 var(--aa-spacing-half) 0 0;
+  padding: 4px 0;
   position: relative;
   z-index: var(--aa-base-z-index);
   color: inherit;
@@ -299,7 +303,20 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
   padding-inline: var(--chakra-space-md);
   padding-block: var(--chakra-space-xs);
   font-size: 16px;
-  color: var(--chakra-colors-content-default);
+  color: var(--chakra-colors-content-default-value);
+  font-weight: 700;
+  min-width: none;
+  line-height: 24px;
+  height: auto;
+  background: transparent;
+}
+
+.aa-ClearButton {
+  border-radius: var(--chakra-space-xs);
+  padding-inline: var(--chakra-space-xs);
+  padding-block: var(--chakra-space-xs);
+  font-size: 16px;
+  color: var(--chakra-colors-content-default-value);
   font-weight: 700;
   min-width: none;
   line-height: 24px;
@@ -310,7 +327,7 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 .aa-ItemActionButtonDanger {
   border-radius: var(--chakra-space-xs);
   padding: var(--chakra-space-xs);
-  color: var(--chakra-colors-content-default);
+  color: var(--chakra-colors-content-default-value);
 }
 
 .aa-ItemActionButton svg {
@@ -319,19 +336,22 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .aa-DetachedCancelButton:hover,
-.aa-ItemActionButtonDanger:hover {
-  background: #eae9eb;
-  color: var(--chakra-colors-content-defaultHover);
+.aa-ItemActionButtonDanger:hover,
+.aa-ClearButton:hover {
+  background: var(--chakra-colors-grays-alpha-3);
+  color: var(--chakra-colors-content-default-hover);
 }
 .aa-DetachedCancelButton:active,
-.aa-ItemActionButtonDanger:active {
-  background: "#eae9eb";
+.aa-ItemActionButtonDanger:active,
+.aa-ClearButton:hover {
+  background: var(--chakra-colors-grays-alpha-5);
   box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.1);
   outline-width: 1px;
 }
 
 .aa-DetachedCancelButton:focus-visible,
-.aa-ItemActionButtonDanger:focus-visible {
+.aa-ItemActionButtonDanger:focus-visible,
+.aa-ClearButton:focus-visible {
   box-shadow: none;
   outline-offset: 1;
   outline: 3px solid #3f8cff;
@@ -352,7 +372,7 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 .aa-ItemContent mark {
   color: inherit;
-  border-bottom: 2px solid rgb(var(--aa-mark-underline-color));
+  border-bottom: 2px solid var(--chakra-colors-content-default-hover);
   font-weight: var(--aa-font-weight-semibold);
 }
 
@@ -388,10 +408,6 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 .aa-Item[aria-selected="true"] .aa-ItemTitle,
 .aa-Item[aria-selected="true"] .aa-ItemDesc {
   color: inherit;
-}
-
-.aa-Item[aria-selected="true"] .aa-ItemContent mark {
-  border-color: inherit;
 }
 
 .aa-DetachedSearchButton:focus {
@@ -445,7 +461,7 @@ body.chakra-ui-dark .aa-Item[aria-selected="true"] svg {
 }
 
 .algolia-no-results .text-container p {
-  color: var(--chakra-colors-content-default);
+  color: var(--chakra-colors-content-default-value);
   font-size: 14px;
   line-height: 24px;
 }

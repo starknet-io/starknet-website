@@ -7,8 +7,11 @@ export const StatCardsBlock = (_: StatCardsBlockType) => {
     <Grid
       gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(4, 1fr)"]}
       gap="32px"
-      maxW={{ base: "1296px", md: "1312px" }}
-      px={{ base: "16px", md: "32px" }}
+      maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+      px={{
+        base: "page.left-right.base",
+        md: "page.left-right.md",
+      }}
       width="100%"
       m="0 auto"
     >

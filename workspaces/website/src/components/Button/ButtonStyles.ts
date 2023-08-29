@@ -383,7 +383,7 @@ const secondaryHero = defineStyle({
 
 const switchButton = defineStyle({
   height: "auto",
-  padding: "11px",
+  padding: "sm",
   color: "grey.darkText",
   bg: "transparent",
   borderColor: "transparent",
@@ -509,7 +509,7 @@ const unstyled = defineStyle({
 });
 const icon = defineStyle({
   height: "auto",
-  padding: "11px",
+  padding: "sm",
   color: "darkMode.card",
   bg: "transparent",
   borderColor: "transparent",

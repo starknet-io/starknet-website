@@ -1,5 +1,6 @@
 import {
   Button,
+  ColorModeProvider,
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -11,9 +12,14 @@ import { PopoverIcon } from "./PopoverIcon";
 type Props = {
   label: string;
   children: React.ReactNode;
+  globalColorMode: "light" | "dark";
 };
 
-export const MenuItemWithDropdown = ({ children, label }: Props) => (
+export const MenuItemWithDropdown = ({
+  children,
+  label,
+  globalColorMode,
+}: Props) => (
   <Popover
     trigger="hover"
     openDelay={250}
@@ -27,7 +33,7 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
         <PopoverTrigger>
           <Button
             color="fg-default-light"
-            _hover={{ color: "fg-default-hover" , bg: 'transparent'}}
+            _hover={{ color: "fg-default-hover", bg: "transparent" }}
             size="sm"
             height="40px"
             p="8px 12px"
@@ -36,24 +42,23 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
             borderRadius="4px"
             fontWeight="400"
             rightIcon={
-              <PopoverIcon
-                isOpen={isOpen}
-                sx={{ marginLeft: "-2px" }}
-              />
+              <PopoverIcon isOpen={isOpen} sx={{ marginLeft: "-2px" }} />
             }
           >
             {label}
           </Button>
         </PopoverTrigger>
-        <PopoverContent
-          bg="navbar-dropdown-bg"
-          border={0}
-          px="24px"
-          pt="24px"
-          width="auto"
-        >
-          {children}
-        </PopoverContent>
+        <ColorModeProvider value={globalColorMode}>
+          <PopoverContent
+            bg="navbar-dropdown-bg"
+            border={0}
+            px="24px"
+            pt="24px"
+            width="auto"
+          >
+            {children}
+          </PopoverContent>
+        </ColorModeProvider>
       </>
     )}
   </Popover>

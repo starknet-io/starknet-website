@@ -6,7 +6,7 @@ import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Flex } from "@chakra-ui/react";
+import { ColorModeProvider, Flex, useColorMode } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import React, { Fragment } from "react";
@@ -29,11 +29,14 @@ export interface Props {
 
 function Navbar({ mainMenu, env, searchSEO, languageCenterSeo }: Props) {
   const { locale, urlPathname: pathname } = usePageContext();
+  const { colorMode } = useColorMode();
 
   return (
     <NavbarContainer>
       <NavBar
-        languageSwitcher={<LocaleSwitcher seo={languageCenterSeo} />}
+        languageSwitcher={
+          <LocaleSwitcher seo={languageCenterSeo} globalColorMode={colorMode} />
+        }
         search={
           <div>
             <MainSearch env={env} seo={searchSEO} />
@@ -45,6 +48,7 @@ function Navbar({ mainMenu, env, searchSEO, languageCenterSeo }: Props) {
             <MenuItemWithDropdown
               key={`${mainMenuItemIndex}-${pathname}`}
               label={mainMenuItem.title}
+              globalColorMode={colorMode}
             >
               <Flex
                 maxW="900px"

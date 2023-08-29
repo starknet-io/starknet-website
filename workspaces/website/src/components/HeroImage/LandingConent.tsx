@@ -3,20 +3,20 @@ import { Box, BoxProps } from "@chakra-ui/react";
 export const LandingConent = ({ children, ...rest }: BoxProps) => {
   return (
     <Box
-      maxW="contentMaxW"
+      maxW="contentMaxW.xl"
       marginX="auto"
       position="relative"
       mt="-500px"
       zIndex={2}
       w="100%"
       padding={{
-        base: "page.left-right.base",
+        base: "0px",
         md: "page.left-right.md",
       }}
       {...rest}
     >
       <Box
-        bg="bg-default"
+        bg="surface.bg-page"
         paddingX={{
           base: "md",
           md: "3xl",
@@ -34,6 +34,11 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
           base: "page.gap-standart.base",
           md: "page.gap-standart.md",
           lg: "page.gap-standart.lg",
+        }}
+        sx={{
+          "> *, .community-events-list": {
+            px: "0 !important",
+          },
         }}
         // overflow="hidden"
       >

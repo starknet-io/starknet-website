@@ -92,7 +92,7 @@ blocks:
         linkText: View
         linkUrl: /developers/tools-and-resources/
         color: blue
-    heading_variant: h3
+    heading_variant: h2
     base: 1
     md: 3
     type: flex_layout
@@ -109,7 +109,7 @@ blocks:
     description: Join a community of developers, enthusiasts and explorers, working
       together to build Starknet and scale Ethereum.
   - type: flex_layout
-    heading_variant: sm
+    heading_variant: h2
     description_variant: sm
     blocks:
       - type: icon_link_card
@@ -131,7 +131,7 @@ blocks:
   - type: community_events
     variant: home
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
     blocks:
       - type: pattern_card
         title: View all questions

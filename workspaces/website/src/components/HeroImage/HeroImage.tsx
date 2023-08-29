@@ -70,6 +70,7 @@ export const HeroImage = ({
             md: "5xl",
           }}
           paddingX={{
+            base: "page.left-right.base",
             md: "3xl",
             lg: "5xl",
           }}
@@ -83,7 +84,7 @@ export const HeroImage = ({
           gap={{ base: "lg", md: "auto" }}
           zIndex={2}
           position="relative"
-          maxW="contentMaxW"
+          maxW="contentMaxW.xl"
           marginX="auto"
         >
           <Box maxW="487px">

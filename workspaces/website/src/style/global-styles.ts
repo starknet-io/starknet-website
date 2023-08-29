@@ -5,8 +5,8 @@ export const styles = {
       scrollPaddingTop: "140px",
     },
     body: {
-      background: "bg-default",
-      color: "fg-default",
+      background: "surface.bg-page",
+      color: "content.default.value",
     },
     "p + h3, ul + h3, .hljs-box + h3": {
       marginTop: "48px",

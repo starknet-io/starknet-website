@@ -2,7 +2,7 @@ import { Box, Flex, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { keyframes } from '@emotion/react';
+import { keyframes } from "@emotion/react";
 
 type Props = {
   readonly seo: {
@@ -11,13 +11,13 @@ type Props = {
 };
 import { Intro } from "./Intro";
 import { navigate } from "vite-plugin-ssr/client/router";
-import { useRive } from '@rive-app/react-canvas';
+import { useRive } from "@rive-app/react-canvas";
 
-const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } })
+const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 
 export const HomepageHero = ({ seo }: Props) => {
   const { rive, RiveComponent } = useRive({
-    src: '/assets/starknet-hub.riv',
+    src: "/assets/starknet-hub.riv",
     autoplay: true,
   });
 
@@ -49,19 +49,17 @@ export const HomepageHero = ({ seo }: Props) => {
             minWidth: "calc(100% + 400px)",
             height: "140% !important",
             border: "none",
-            zIndex: -1
-          }
+            zIndex: -1,
+          },
         }}
       >
         {/* <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe> */}
-        <RiveComponent
-        className="rive-animation"
-    />
+        <RiveComponent className="rive-animation" />
         <Box
           zIndex={2}
           minHeight="600px"
-          maxW={{ base: "1296px", md: "1312px" }}
-          px={{ base: "16px", md: "32px" }}
+          maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+          px={{ base: "page.left-right.base", md: "page.left-right.md" }}
           mx="auto"
         >
           <Flex
@@ -87,7 +85,8 @@ export const HomepageHero = ({ seo }: Props) => {
                 mt={{ base: "0", lg: "-20px" }}
                 fontWeight="500"
               >
-                Ethereum’s next<br/> leap in <Intro />
+                Ethereum’s next
+                <br /> leap in <Intro />
               </Heading>
               <Text
                 color="#FCCFD4"
@@ -107,9 +106,10 @@ export const HomepageHero = ({ seo }: Props) => {
               >
                 <Box
                   sx={{
-                    background: "linear-gradient(284deg, #FFFDD8 0%, #EC796B 15.63%, #D672EF 43.09%, #8BF3F9 74.52%)",
+                    background:
+                      "linear-gradient(284deg, #FFFDD8 0%, #EC796B 15.63%, #D672EF 43.09%, #8BF3F9 74.52%)",
                     padding: "2px",
-                    borderRadius: "8px"
+                    borderRadius: "8px",
                   }}
                 >
                   <Button
