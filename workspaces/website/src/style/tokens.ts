@@ -158,7 +158,7 @@ export const tokens = {
       "listLink-fg": "#AFCAFF",
       "link-fg": "#5C9EFF",
       "link-hover-fg": "#2C73DD",
-      "bg-default": "#0B0B0B",
+      "bg-default": "#1B1B22",
       "fg-default": "#CCCCCC",
       "fg-default-light": "rgba(248, 247, 253, 0.80)",
       "fg-default-hover": "#FFFFFF",

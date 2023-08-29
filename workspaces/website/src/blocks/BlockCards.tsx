@@ -16,7 +16,8 @@ type Props = {
     | "body"
     | "breadcrumbs"
     | "footerLink"
-    | "textLink";
+    | "textLink"
+    | "headingDescription";
   headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
@@ -47,6 +48,7 @@ export const renderHeadingVariant = (headingVariant: string) => {
 export const BlockCards = ({
   heading,
   headingVariant = "h2",
+  descriptionVariant = "headingDescription",
   description,
   children,
   base = 1,
@@ -79,7 +81,9 @@ export const BlockCards = ({
               {heading}
             </Heading>
             {description && (
-              <Text variant="headingDescription">{description}</Text>
+              <Text variant={descriptionVariant} color="content.accent.value">
+                {description}
+              </Text>
             )}
           </Box>
         )}

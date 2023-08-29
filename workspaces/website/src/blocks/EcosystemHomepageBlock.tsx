@@ -138,7 +138,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
   if (filteredProjects) {
     return (
       <Box
-        bg="#EDF7F7"
+        bg="brand-secondary-comet-green-3"
         padding="15% 50px"
         sx={{
           "clip-path": "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
@@ -153,9 +153,8 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           width="100%"
           m="0 auto"
           pt="10px"
-          borderTop="1px solid #8DBABB"
         >
-          <Heading variant="h2" color="heading-navy-fg" pb="108px">
+          <Heading variant="h2" color="heading-navy-fg" pt="40px" pb="120px" borderTop="1px solid" borderColor="border.divider">
             {title}
           </Heading>
         </Box>
@@ -165,7 +164,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           <CircleRow items={thirdRowItems} direction="right" />
         </Flex>
         <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
-          <Button variant="outline" mt="140px" bg="#EDF7F7" href={ctaUrl}>
+          <Button variant="outline" mt="140px" bg="brand-secondary-comet-green-3" href={ctaUrl}>
             {ctaText}
           </Button>
         </Flex>

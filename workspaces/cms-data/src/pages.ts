@@ -84,6 +84,7 @@ export interface IconLinkCardBlock {
 
 type LargeCard = {
   img?: string;
+  darkImg?: string;
   title?: string;
   description?: string;
   linkText?: string;

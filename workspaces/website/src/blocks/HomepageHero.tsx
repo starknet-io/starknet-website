@@ -1,8 +1,8 @@
-import { Box, Flex, Img, Stack } from "@chakra-ui/react";
+import { Box, Flex, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
+import { keyframes } from '@emotion/react';
 
 type Props = {
   readonly seo: {
@@ -11,40 +11,52 @@ type Props = {
 };
 import { Intro } from "./Intro";
 import { navigate } from "vite-plugin-ssr/client/router";
+import { useRive } from '@rive-app/react-canvas';
+
+const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } })
 
 export const HomepageHero = ({ seo }: Props) => {
+  const { rive, RiveComponent } = useRive({
+    src: '/assets/starknet-hub.riv',
+    autoplay: true,
+  });
+
   return (
     <>
       <Box
         as="section"
         pt="46px"
         pb="93px"
-        bg="#eaeaea"
         minHeight="600px"
         _dark={{
           bgGradient:
-            "linear(0.39deg, #3F1838 -0.96%, #110751 44.39%, #171B31 100.23%)",
+            "linear-gradient(5deg, #15151E 0%, #0F0E1B 16.58%, #000 100%)",
         }}
-        bgGradient="linear(0.59deg, #0C0C4F 0.97%, #0C0C4F 26.24%, #060625 99.96%)"
+        bgGradient="linear-gradient(5deg, #0C0C4F 0%, #0C0C4F 16.58%, #060625 100%)"
         position="relative"
         mt="-24px"
         sx={{
           overflow: "visible",
           marginTop: "-150px",
           paddingTop: "256px",
+          position: "relative",
           clipPath: "polygon(0 0,100% 0,100% calc(100% - 14vw),0 100%)",
-          "& iframe": {
+          "& .rive-animation": {
+            animation: `${fadeIn} 3s ease-in-out`,
             position: "absolute",
             top: "-215px",
             right: "-300px",
             minWidth: "calc(100% + 400px)",
-            height: "140%",
+            height: "140% !important",
             border: "none",
             zIndex: -1
           }
         }}
       >
-        <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe>
+        {/* <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe> */}
+        <RiveComponent
+        className="rive-animation"
+    />
         <Box
           zIndex={2}
           minHeight="600px"
@@ -70,7 +82,7 @@ export const HomepageHero = ({ seo }: Props) => {
             >
               <Heading
                 variant="h1hero"
-                color="hero-subtitle-fg"
+                color="#E8E8F7"
                 lineHeight="120%"
                 mt={{ base: "0", lg: "-20px" }}
                 fontWeight="500"
@@ -78,7 +90,7 @@ export const HomepageHero = ({ seo }: Props) => {
                 Ethereum’s next<br/> leap in <Intro />
               </Heading>
               <Text
-                color="hero-subtitle-fg"
+                color="#FCCFD4"
                 mt="28px"
                 fontSize="20px"
                 lineHeight="36px"
@@ -95,17 +107,14 @@ export const HomepageHero = ({ seo }: Props) => {
               >
                 <Box
                   sx={{
-                    background: "linear-gradient(78deg, #FFFDD8 -10%, #8BF3F9 40%, #EC796B 75%, #D672EF 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-                    border: "1px solid transparent",
+                    background: "linear-gradient(284deg, #FFFDD8 0%, #EC796B 15.63%, #D672EF 43.09%, #8BF3F9 74.52%)",
+                    padding: "2px",
                     borderRadius: "8px"
                   }}
                 >
                   <Button
                     onClick={() => navigate("/en/developers")}
                     variant="solid"
-                    sx={{
-                      bg: "#0C0C4F"
-                    }}
                   >
                     Build on Starknet
                   </Button>

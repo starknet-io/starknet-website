@@ -19,7 +19,7 @@ const StarknetProject: React.FC<StarknetProjectProps> = ({ project, handleErrorI
 
   return (
     <Box px="12px">
-      <CardGradientBorder borderRadius="100%" bg="#EDF7F7" border={`1px solid ${colors[0]}99`}  width="198px" height="198px">
+      <CardGradientBorder borderRadius="100%" bg="brand-secondary-comet-green-3" border={`1px solid ${colors[0]}99`}  width="198px" height="198px">
         <Box
             as="a"
             href={project.url}
@@ -28,7 +28,7 @@ const StarknetProject: React.FC<StarknetProjectProps> = ({ project, handleErrorI
                 cursor: "pointer",
                 padding: "16px",
                 borderRadius: "999px",
-                bg: "#EDF7F7",
+                bg: "brand-secondary-comet-green-3",
                 width: "196px",
                 height: "196px",
                 display: "block"
