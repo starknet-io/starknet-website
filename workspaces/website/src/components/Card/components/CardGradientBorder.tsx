@@ -12,7 +12,7 @@ type Props = {
   borderRadius?: BorderRadius | string;
   bg?: string;
   borderColor?: string;
-  borderSx?: ChakraProps['sx'];
+  borderSx?: ChakraProps["sx"];
 } & BoxProps;
 
 export const CardGradientBorder = ({
@@ -35,11 +35,12 @@ export const CardGradientBorder = ({
       _hover={{
         background:
           "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-        borderColor: "transparent",
+        borderColor: "none",
       }}
       sx={{
-        borderColor: borderColor ?? "border-card",
-        ...borderSx}}
+        borderColor: borderColor ?? "border.card.value",
+        ...borderSx,
+      }}
       {...rest}
     >
       {children}

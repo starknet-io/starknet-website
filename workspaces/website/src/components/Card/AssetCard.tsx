@@ -1,5 +1,5 @@
 import { Card, CardBody, CardImg, CardLink, CardTitle } from "./Card";
-import { HStack, Icon, Link } from "@chakra-ui/react";
+import { HStack, Icon, Link, useColorMode } from "@chakra-ui/react";
 import {
   HiArrowTopRightOnSquare,
   HiGlobeAlt,
@@ -41,16 +41,13 @@ export const AssetCard = ({
   image,
   discord,
 }: AssetCardProps) => {
+  const { colorMode } = useColorMode();
   return (
     <Card variant="asset">
       <CardImg variant="asset" src={image} />
       <CardBody variant="asset">
         <CardTitle variant="asset">
-          {title}{" "}
-          <Icon
-            as={HiArrowTopRightOnSquare}
-            color="list-card-sm-title-link-fg"
-          />
+          {title} <Icon as={HiArrowTopRightOnSquare} />
         </CardTitle>
         <Text variant="body">{description}</Text>
         <HStack>

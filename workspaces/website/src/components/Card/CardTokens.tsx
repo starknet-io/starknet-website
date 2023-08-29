@@ -1,14 +1,14 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const CardStyle = styled.div`
   border-radius: var(--radius-md, 16px);
-  border: 1px solid var(--border-card, #ECECF9);
-  background: var(--surface-bg-page, #FBFBFB);
+  border: 1px solid var(--border-card-value, #ececf9);
+  background: var(--surface-bg-page, #fbfbfb);
 `;
 export const CardStyleWhite = styled.div`
   border-radius: var(--radius-md, 16px);
-  border: 1px solid var(--border-card, #ECECF9);
-  background: var(--surface-bg-page, #FFFFFF);
+  border: 1px solid var(--border-card-value, #ececf9);
+  background: var(--surface-bg-page, #ffffff);
 `;
 export const LargeCardLayout = styled.div`
   display: flex;
