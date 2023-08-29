@@ -176,7 +176,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
       <Flex mt="24px" alignItems="center" direction="column">
         <Button
           onClick={() => navigate("/en/events")}
-          variant="solid"
+          variant="outline"
           bg="surface.accent.value"
         >
           {`Check out all events ->`}
