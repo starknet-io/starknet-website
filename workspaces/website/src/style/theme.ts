@@ -174,7 +174,11 @@ const theme = extendTheme(proTheme, {
     round: "999px",
   },
   sizes: {
-    contentMaxW: "1344px",
+    contentMaxW: {
+      md: "864px",
+      lg: "1296px",
+      xl: "1344px",
+    },
     page,
     cards,
   },

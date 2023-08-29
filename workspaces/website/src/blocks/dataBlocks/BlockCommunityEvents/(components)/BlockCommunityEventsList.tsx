@@ -90,9 +90,13 @@ export function BlockCommunityEventsList({
       />
       <Box sx={bgStyles[variant]}>
         <Box
-          maxW={{ base: "1296px", md: "1312px" }}
-          px={{ base: "16px", md: "32px" }}
+          maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+          px={{
+            base: "page.left-right.base",
+            md: "page.left-right.md",
+          }}
           m="0 auto"
+          className="community-events-list"
         >
           <Heading
             variant="h2"

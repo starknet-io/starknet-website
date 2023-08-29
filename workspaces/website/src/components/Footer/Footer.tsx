@@ -64,7 +64,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
         <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
           <Box
             py={{ base: "12", md: "16" }}
-            maxW="contentMaxW"
+            maxW="contentMaxW.xl"
             px={{
               base: "page.left-right.base",
               md: "page.left-right.md",
@@ -75,7 +75,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
           </Box>
           <Box
             width="100%"
-            maxW="contentMaxW"
+            maxW="contentMaxW.xl"
             px={{
               base: "page.left-right.base",
               md: "page.left-right.md",

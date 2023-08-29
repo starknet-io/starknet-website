@@ -3,7 +3,7 @@ import { Box, BoxProps } from "@chakra-ui/react";
 export const LandingConent = ({ children, ...rest }: BoxProps) => {
   return (
     <Box
-      maxW="contentMaxW"
+      maxW="contentMaxW.xl"
       marginX="auto"
       position="relative"
       mt="-500px"
@@ -34,6 +34,11 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
           base: "page.gap-standart.base",
           md: "page.gap-standart.md",
           lg: "page.gap-standart.lg",
+        }}
+        sx={{
+          "> *, .community-events-list": {
+            px: "0 !important",
+          },
         }}
         // overflow="hidden"
       >

@@ -58,10 +58,13 @@ export const BlockCards = ({
 }: Props) => {
   return (
     <Box
-      maxW={{ base: "1296px", md: "1312px" }}
+      maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
       width="100%"
       m="0 auto"
-      // px={{ base: "16px", md: "32px" }}
+      px={{
+        base: "page.left-right.base",
+        md: "page.left-right.md",
+      }}
       display="flex"
       flexDirection="column"
       gap={{
@@ -70,7 +73,7 @@ export const BlockCards = ({
         lg: "page.block-gap.lg",
       }}
     >
-      <Box maxW="864px">
+      <Box maxW="contentMaxW.md">
         {heading && (
           <Box>
             <Heading

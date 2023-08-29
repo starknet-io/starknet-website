@@ -20,10 +20,26 @@ type CMSPageProps = {
   locale: string;
 };
 const maxW = {
-  content: undefined,
+  content: {
+    base: "contentMaxW.lg",
+    lg: "contentMaxW.xl",
+  },
   "narrow content": "846px",
   landing: "none",
 };
+
+const px = {
+  landing: "0px",
+  "narrow content": {
+    base: "page.left-right.base",
+    md: "page.left-right.md",
+  },
+  content: {
+    base: "page.left-right.base",
+    md: "page.left-right.md",
+  },
+};
+
 export default function CMSPage({ data, locale }: CMSPageProps) {
   const date = data?.gitlog?.date;
   const [firstBlock, ...remainingBlocks] = data.blocks || [];
@@ -33,8 +49,11 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
     <Box>
       <PageLayout
         contentMaxW={maxW[data.template]}
-        sx={isFirstBlockLandingHero ? { px: "0px" } : undefined}
-        maxW="none"
+        sx={
+          isFirstBlockLandingHero
+            ? { px: "0px" }
+            : { paddingInline: px[data.template] }
+        }
         breadcrumbs={
           <>
             {data.breadcrumbs &&

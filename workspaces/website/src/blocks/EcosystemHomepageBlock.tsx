@@ -148,13 +148,23 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
         }}
       >
         <Box
-          maxW={{ base: "1296px", md: "1312px" }}
-          px={{ base: "16px", md: "32px" }}
+          maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+          px={{
+            base: "page.left-right.base",
+            md: "page.left-right.md",
+          }}
           width="100%"
           m="0 auto"
           pt="10px"
         >
-          <Heading variant="h2" color="heading-navy-fg" pt="40px" pb="120px" borderTop="1px solid" borderColor="border.divider">
+          <Heading
+            variant="h2"
+            color="heading-navy-fg"
+            pt="40px"
+            pb="120px"
+            borderTop="1px solid"
+            borderColor="border.divider"
+          >
             {title}
           </Heading>
         </Box>
@@ -164,7 +174,12 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           <CircleRow items={thirdRowItems} direction="right" />
         </Flex>
         <Flex maxW="1036px" width="100%" m="0 auto" justifyContent="center">
-          <Button variant="outline" mt="140px" bg="brand-secondary-comet-green-3" href={ctaUrl}>
+          <Button
+            variant="outline"
+            mt="140px"
+            bg="brand-secondary-comet-green-3"
+            href={ctaUrl}
+          >
             {ctaText}
           </Button>
         </Flex>
