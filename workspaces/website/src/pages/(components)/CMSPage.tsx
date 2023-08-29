@@ -54,6 +54,7 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             ? { px: "0px" }
             : { paddingInline: px[data.template] }
         }
+        maxW={data.template === "landing" ? "none" : undefined}
         breadcrumbs={
           <>
             {data.breadcrumbs &&

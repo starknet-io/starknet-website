@@ -16,7 +16,7 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
       {...rest}
     >
       <Box
-        bg="bg-default"
+        bg="surface.bg-page"
         paddingX={{
           base: "md",
           md: "3xl",
