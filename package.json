@@ -44,6 +44,7 @@
     "@fontsource/tajawal": "^4.5.9",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
+    "@rive-app/react-canvas": "^4.1.6",
     "@starknet-io/cms-data": "workspace:*",
     "@starknet-io/cms-utils": "workspace:*",
     "@types/cors": "^2.8.13",

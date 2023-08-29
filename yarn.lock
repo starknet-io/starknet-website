@@ -4624,6 +4624,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rive-app/canvas@npm:2.2.2":
+  version: 2.2.2
+  resolution: "@rive-app/canvas@npm:2.2.2"
+  checksum: c420b431e512642e791942910aa40a9973cadb9320c98ec8f4575f5d4b7aab904dd1bc6f7e0f0f5cfcd9c9739333149e5caed0695179485be2fbf46f35e9d8de
+  languageName: node
+  linkType: hard
+
+"@rive-app/react-canvas@npm:^4.1.6":
+  version: 4.1.6
+  resolution: "@rive-app/react-canvas@npm:4.1.6"
+  dependencies:
+    "@rive-app/canvas": 2.2.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: c851bf1cb68461b427d9eaf199308bfd04314ff1fb5982b415c60d062f5280b4a65e20ff21e23005f9470a75ffd8fb560c1fb89d821223594018e1477f9e6952
+  languageName: node
+  linkType: hard
+
 "@rollup/pluginutils@npm:^4.2.0":
   version: 4.2.1
   resolution: "@rollup/pluginutils@npm:4.2.1"
@@ -4912,6 +4930,7 @@ __metadata:
     "@fontsource/tajawal": ^4.5.9
     "@headlessui/react": ^1.7.14
     "@heroicons/react": ^2.0.17
+    "@rive-app/react-canvas": ^4.1.6
     "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     "@types/cors": ^2.8.13

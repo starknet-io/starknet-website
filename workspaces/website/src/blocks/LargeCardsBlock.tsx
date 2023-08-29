@@ -1,4 +1,4 @@
-import { BoxProps, Flex } from "@chakra-ui/react";
+import { BoxProps, Flex, useColorMode } from "@chakra-ui/react";
 import { Card, CardImg, CardBody, CardTitle } from "@ui/Card/Card";
 import { Text } from "@ui/Typography/Text";
 import { Button } from "@ui/Button";
@@ -16,17 +16,19 @@ interface Props extends LargeCardsBlockType, BoxProps {}
 
 export const LargeCardsBlock = (props: Props) => {
   const { horizontal1, horizontal2, vertical1, vertical2 } = props;
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Flex direction="column" gap="32px">
+    <Flex direction="column" gap="40px">
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={horizontal1.img as string} />
+        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg as string} />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal1.title}</CardTitle>
-          <Text variant="body">{horizontal1.description}</Text>
+          <Text variant="body" color="content.support">{horizontal1.description}</Text>
           <Button
             variant="outline"
             href={horizontal1.linkUrl as string}
             sx={{ mt: { base: "4px", lg: "0" } }}
+            bg="surface.bg-page"
           >
             {horizontal1.linkText}
           </Button>
@@ -37,11 +39,12 @@ export const LargeCardsBlock = (props: Props) => {
           <CardImg variant="large" src={vertical1.img as string} />
           <CardBody variant="large">
             <CardTitle variant="large">{vertical1.title}</CardTitle>
-            <Text variant="body">{vertical1.description}</Text>
+            <Text variant="body" color="content.support">{vertical1.description}</Text>
             <Button
               variant="outline"
               href={vertical1.linkUrl as string}
               sx={{ mt: { base: "4px", lg: "0" } }}
+              bg="surface.bg-page"
             >
               {vertical1.linkText}
             </Button>
@@ -51,11 +54,12 @@ export const LargeCardsBlock = (props: Props) => {
           <CardImg variant="large" src={vertical2.img as string} />
           <CardBody variant="large">
             <CardTitle variant="large">{vertical2.title}</CardTitle>
-            <Text variant="body">{vertical2.description}</Text>
+            <Text variant="body" color="content.support">{vertical2.description}</Text>
             <Button
               variant="outline"
               href={vertical2.linkUrl as string}
               sx={{ mt: { base: "4px", lg: "0" } }}
+              bg="surface.bg-page"
             >
               {vertical2.linkText}
             </Button>
@@ -66,11 +70,12 @@ export const LargeCardsBlock = (props: Props) => {
         <CardImg variant="large" src={horizontal2.img as string} />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal2.title}</CardTitle>
-          <Text variant="body">{horizontal2.description}</Text>
+          <Text variant="body" color="content.support">{horizontal2.description}</Text>
           <Button
             variant="outline"
             href={horizontal2.linkUrl as string}
             sx={{ mt: { base: "4px", lg: "0" } }}
+            bg="surface.bg-page"
           >
             {horizontal2.linkText}
           </Button>

@@ -52,6 +52,9 @@ type ImgProps = {
 type Props = {
   variant?: "grid" | "asset" | "large" | "iconLink";
   orientation?: "horizontal" | "vertical";
+  borderColor?: string;
+  sx?: ChakraProps['sx'];
+  borderSx?: ChakraProps['sx'];
 } & BoxProps;
 
 const bodyStyles = {
@@ -142,7 +145,7 @@ export const CardTitle = ({ variant, children }: TitleProps) => {
     <Heading
       sx={styles}
       variant={variant === "large" ? "h2" : "h3"}
-      color="btn-primary-bg"
+      color="content.accent.value"
     >
       {children}
     </Heading>
@@ -150,7 +153,7 @@ export const CardTitle = ({ variant, children }: TitleProps) => {
 };
 
 export const Card = (props: Props) => {
-  const { variant, orientation = "vertical", sx, ...rest } = props;
+  const { variant, orientation = "vertical", borderColor, borderSx, sx, ...rest } = props;
   const bgColor = variant === "asset" ? "white" : "#FBFBFB";
   let styles = {
     borderRadius: "16px",
@@ -187,11 +190,8 @@ export const Card = (props: Props) => {
     default:
       break;
   }
-  if (variant === "large") {
-    console.log("styles ", styles);
-  }
   return (
-    <CardGradientBorder bg={bgColor} padding="0" borderRadius="16px">
+    <CardGradientBorder bg={bgColor} padding="0" borderRadius="16px" borderColor={borderColor} borderSx={{ ...borderSx }}>
       <Box sx={{ ...styles, ...sx }} {...rest} />
     </CardGradientBorder>
   );

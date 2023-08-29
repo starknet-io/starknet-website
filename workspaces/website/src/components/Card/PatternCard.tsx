@@ -25,7 +25,7 @@ export const PatternCard = ({
           lg: "flex-start",
         }}
         borderRadius={{ base: "16px" }}
-        bg="card-bg"
+        bg="surface.card"
       >
         <Image
           src={`/assets/pattern/${pattern}.svg`}

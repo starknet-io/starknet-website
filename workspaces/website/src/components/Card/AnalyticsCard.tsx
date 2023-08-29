@@ -15,7 +15,7 @@ type Props = {
 
 export const AnalyticsCard = ({
   description = "Followers on Social Media",
-  bg = "surface.bg-page",
+  bg = "#F9F8F9",
   type = "twitter",
 }: Props) => {
   const pageContext = usePageContext();
@@ -24,7 +24,13 @@ export const AnalyticsCard = ({
   );
 
   return (
-    <CardGradientBorder display="inline-block">
+    <CardGradientBorder
+      display="inline-block"
+      borderSx={{
+        borderColor: "transparent",
+        boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+      }}
+    >
       <Box p="2xl" width="288px" bg={bg}>
         <Box
           display="flex"
@@ -33,10 +39,10 @@ export const AnalyticsCard = ({
           gap="3xl"
         >
           {type === "twitter" && (
-            <SiTwitter size="32px" fill="content.accent.value" />
+            <SiTwitter size="48px" fill="#0C0C4F" />
           )}
           {type === "discord" && (
-            <SiDiscord size="32px" fill="content.accent.value" />
+            <SiDiscord size="48px" fill="#0C0C4F" />
           )}
           <Box display="flex" flexDir="column" gap="4px">
             <Heading
@@ -44,7 +50,7 @@ export const AnalyticsCard = ({
               fontSize="64px"
               lineHeight="80px"
               fontWeight={600}
-              color="content.accent.value"
+              color="#0C0C4F"
             >
               {formatAnalyticsNumber(socialMedia[type].followersCount)}
             </Heading>
@@ -52,7 +58,7 @@ export const AnalyticsCard = ({
               fontSize={18}
               lineHeight="32px"
               fontWeight={500}
-              color="content.support"
+              color="#0C0C4FB8"
             >
               {description}
             </Box>

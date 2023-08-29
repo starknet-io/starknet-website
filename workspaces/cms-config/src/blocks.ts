@@ -3,7 +3,12 @@ import { CmsField, CmsFieldList } from "./types";
 export const largeCards = [
   {
     name: "img",
-    label: "Icon",
+    label: "Image",
+    widget: "image",
+  },
+  {
+    name: "darkImg",
+    label: "Dark image",
     widget: "image",
   },
   {
