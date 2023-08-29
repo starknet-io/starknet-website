@@ -25,14 +25,15 @@ type NavLayoutProps = {
   languageSwitcher?: React.ReactNode;
   searchArea: React.ReactNode;
   toggleGlobalColorMode: () => void;
-  globalColorMode: "light" | "dark";
+  globalColorMode?: "light" | "dark";
 };
 
 export const NavLayout = (props: NavLayoutProps) => {
   const { onClickMenu, isMenuOpen, menuButtonRef } = props;
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const { locale } = usePageContext();
-  const colorMode = props.globalColorMode;
+  const { colorMode: localColorMode } = useColorMode();
+  const colorMode = props.globalColorMode || localColorMode;
   const toogleTheme = () => {
     props?.toggleGlobalColorMode();
     if (typeof window !== "undefined" && window.gtag) {
@@ -86,10 +87,10 @@ export const NavLayout = (props: NavLayoutProps) => {
 
           <Box
             w="1px"
-            bg="nav-footer-br"
+            bg="border.divider"
             h="30px"
             position="relative"
-            marginInlineStart="12px !important"
+            marginInlineStart="xs"
             display={{ base: "none", lg: "block" }}
           />
           <Box

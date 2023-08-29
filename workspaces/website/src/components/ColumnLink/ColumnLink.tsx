@@ -17,15 +17,9 @@ export const ColumnLink = ({ active, ...props }: Props) => {
   return (
     <Button
       {...props}
-      variant="icon"
+      variant={active ? "solid" : "outline"}
       as={Link}
-      leftIcon={
-        <Icon
-          color={active ? "columnlink-active-fg" : "columnlink-bg"}
-          as={HiPlay}
-          boxSize="24px"
-        />
-      }
+      leftIcon={<Icon as={HiPlay} boxSize="24px" />}
       height="36px"
       lineHeight="1.2"
       transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
@@ -36,14 +30,6 @@ export const ColumnLink = ({ active, ...props }: Props) => {
       fontSize="14px"
       fontWeight="semibold"
       justifyContent="flex-start"
-      bg="columnlink-bg"
-      color={active ? "columnlink-active-fg !important" : "columnlink-fg"}
-      _hover={{ bg: "columnlink-hover-bg", color: "columnlink-hover-fg" }}
-      _active={{ bg: "columnlink-active-bg", color: "columnlink-active-fg" }}
-      _focus={{
-        boxShadow:
-          "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-      }}
     >
       {props.children}
     </Button>

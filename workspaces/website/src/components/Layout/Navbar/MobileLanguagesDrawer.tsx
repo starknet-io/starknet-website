@@ -4,10 +4,8 @@ import {
   DrawerBody,
   DrawerContent,
   DrawerHeader,
-  DrawerOverlay,
-  Box
+  useColorMode,
 } from "@chakra-ui/react";
-import LocaleSwitcher from "./LocaleSwitcher";
 import { CSSProperties, ReactNode } from "react";
 import { NavLayout } from "./NavLayout";
 
@@ -23,9 +21,10 @@ export default function MobileLanguagesDrawer({
   isOpen,
   onClose,
   contentStyle,
-  search
+  search,
 }: Props) {
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const { toggleColorMode } = useColorMode();
   return (
     <Drawer
       placement="right"
@@ -36,21 +35,25 @@ export default function MobileLanguagesDrawer({
       /* set trapFocus to false to make search inside drawer interactive */
       trapFocus={false}
     >
-        <DrawerContent bg="nav-dialog-bg" overflow='scroll' maxH="100vh">
-          <DrawerHeader padding="0" bg="white">
-            <NavLayout
-              searchArea={search}
-              onClickMenu={onClose}
-              isMenuOpen={isOpen}
-              menuButtonRef={menuButtonRef}
-              />
-          </DrawerHeader>
-          <DrawerBody pb="5rem" style={contentStyle} borderTopColor="btn-outline-border"
-                borderTopStyle="solid"
-                borderTopWidth="1px">
-            {children}
-          </DrawerBody>
-        </DrawerContent>
+      <DrawerContent bg="nav-dialog-bg" overflow="scroll" maxH="100vh">
+        <DrawerHeader padding="0" borderBottom="none">
+          <NavLayout
+            searchArea={search}
+            onClickMenu={onClose}
+            isMenuOpen={isOpen}
+            menuButtonRef={menuButtonRef}
+            toggleGlobalColorMode={toggleColorMode}
+          />
+        </DrawerHeader>
+        <DrawerBody
+          pb="5rem"
+          style={contentStyle}
+          borderTopColor="border.divider"
+          borderTopWidth="1px"
+        >
+          {children}
+        </DrawerBody>
+      </DrawerContent>
     </Drawer>
   );
 }

@@ -12,6 +12,7 @@ import {
   useDisclosure,
   Icon,
   ColorModeProvider,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -113,6 +114,7 @@ export const NavBar = ({
           searchArea={search}
         />
       </ColorModeProvider>
+
       <Box display={{ base: "block", lg: "none" }}>
         <Drawer
           placement="left"
@@ -173,69 +175,75 @@ export const NavBar = ({
             </HStack>
           </DrawerContent>
         </Drawer>
-        <MobileLanguagesDrawer
-          search={search}
-          isOpen={isLanguagesDrawerOpen}
-          onClose={onLanguagesDrawerClose}
-        >
-          <Heading
-            color="heading-navy-fg"
-            variant="h6"
-            mb={5}
-            mt={5}
-            textTransform="uppercase"
-          >
-            Languages
-          </Heading>
-          {i18nConfig
-            .filter((c) => topLanguages.includes(c.code))
-            .map((c, i) => {
-              return (
-                <HStack key={i}>
-                  <ColumnLink
-                    active={localeConfig.code === c.code}
-                    href={`/${c.code}${pathname.replace(
-                      /^\/\w{2}($|\/)/,
-                      "/"
-                    )}`}
-                  >
-                    {c.name}
-                  </ColumnLink>
-                  <ColumnLinkDescription active={localeConfig.code === c.code}>
-                    {c.localName}
-                  </ColumnLinkDescription>
-                </HStack>
-              );
-            })}
-          <Stack
-            spacing="1"
-            pb={4}
-            pt={10}
-            mt={8}
-            borderTopWidth="1px"
-            borderTopStyle="solid"
-            borderColor="btn-outline-border"
+        <ColorModeProvider value={colorMode}>
+          <MobileLanguagesDrawer
+            search={search}
+            isOpen={isLanguagesDrawerOpen}
+            onClose={onLanguagesDrawerClose}
           >
             <Heading
               color="heading-navy-fg"
               variant="h6"
-              textTransform="uppercase"
               mb={5}
+              mt={5}
+              textTransform="uppercase"
             >
-              {seo.subtitle}
+              Languages
             </Heading>
-
-            <Text variant="cardBody">{seo.description}</Text>
-            <Box height="32px" />
-            <Button
-              as="a"
-              variant="outline"
-              href="/en/community/language-support"
+            <Box display="flex" flexDir="column" gap="md">
+              {i18nConfig
+                .filter((c) => topLanguages.includes(c.code))
+                .map((c, i) => {
+                  return (
+                    <HStack key={i}>
+                      <ColumnLink
+                        active={localeConfig.code === c.code}
+                        href={`/${c.code}${pathname.replace(
+                          /^\/\w{2}($|\/)/,
+                          "/"
+                        )}`}
+                      >
+                        {c.name}
+                      </ColumnLink>
+                      <ColumnLinkDescription
+                        active={localeConfig.code === c.code}
+                      >
+                        {c.localName}
+                      </ColumnLinkDescription>
+                    </HStack>
+                  );
+                })}
+            </Box>
+            <Stack
+              spacing="1"
+              pb={4}
+              pt={10}
+              mt={8}
+              borderTopWidth="1px"
+              borderTopStyle="solid"
+              borderColor="btn-outline-border"
             >
-              {seo.callToAction}
-            </Button>
-          </Stack>
-        </MobileLanguagesDrawer>
+              <Heading
+                color="heading-navy-fg"
+                variant="h6"
+                textTransform="uppercase"
+                mb={5}
+              >
+                {seo.subtitle}
+              </Heading>
+
+              <Text variant="cardBody">{seo.description}</Text>
+              <Box height="32px" />
+              <Button
+                as="a"
+                variant="outline"
+                href="/en/community/language-support"
+              >
+                {seo.callToAction}
+              </Button>
+            </Stack>
+          </MobileLanguagesDrawer>
+        </ColorModeProvider>
       </Box>
     </Box>
   );
