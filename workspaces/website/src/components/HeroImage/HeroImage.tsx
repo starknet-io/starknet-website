@@ -70,6 +70,7 @@ export const HeroImage = ({
             md: "5xl",
           }}
           paddingX={{
+            base: "page.left-right.base",
             md: "3xl",
             lg: "5xl",
           }}

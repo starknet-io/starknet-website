@@ -10,7 +10,7 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
       zIndex={2}
       w="100%"
       padding={{
-        base: "page.left-right.base",
+        base: "0px",
         md: "page.left-right.md",
       }}
       {...rest}

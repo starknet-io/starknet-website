@@ -1,7 +1,10 @@
 import { Box, Grid, Heading, Icon } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { roadmapStagesFields } from "@starknet-io/cms-config/src/collections/roadmapPosts";
-import { RoadmapDetails, RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
+import {
+  RoadmapDetails,
+  RoadmapVersion,
+} from "@starknet-io/cms-data/src/roadmap";
 import { Roadmap } from "@starknet-io/cms-data/src/settings/roadmap";
 import RoadmapLayout from "../../(components)/roadmap/RoadmapLayout";
 import RoadmapPostCard from "./RoadmapPostCard";
@@ -39,19 +42,25 @@ export default function RoadmapPage({
   }, [roadmapPosts]);
 
   return (
-    <RoadmapLayout locale={locale} mode="ROADMAP" roadmapSettings={roadmapSettings}>
+    <RoadmapLayout
+      locale={locale}
+      mode="ROADMAP"
+      roadmapSettings={roadmapSettings}
+    >
       {roadmapStagesFields.map((stage) => {
         const stagePosts = roadmapPostsByStage[stage.value] || [];
 
         return (
           <Box key={stage.value} mb="5rem">
-            <Heading variant="h4" display="flex" alignItems="center" mb="2rem" color="heading-navy-fg">
-              <Icon
-                boxSize="22px"
-                as={stage.icon}
-                mr="12px"
-                color="heading-navy-fg"
-              />
+            <Heading
+              variant="h3"
+              display="flex"
+              alignItems="center"
+              mb="sm"
+              color="content.default.value"
+              gap="md"
+            >
+              <Icon boxSize="22px" as={stage.icon} />
               {stage.label} ({stagePosts.length})
             </Heading>
             <Grid

@@ -22,22 +22,24 @@ export default function RoadmapPostCard({
   return (
     <CardGradientBorder height="100%" padding="0" maxW="md" borderRadius="lg">
       <Card
-        borderColor="roadmap-card-border-color"
-        bg="roadmap-card-bg-color"
+        borderColor="border.card.value"
+        bg="surface.card"
         borderWidth="1px"
-        borderRadius="24px"
+        borderRadius="lg"
         as="a"
         href={`/${locale}/roadmap/${roadmapPost?.slug}`}
-        padding="8px"
+        padding="xs"
         height="100%"
       >
         <CardHeader
           minHeight="194px"
-          background="btn-filter-bg"
+          background="surface.transparent.value"
           borderTopRadius="lg"
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
+          paddingY="lg"
+          paddingX="md"
         >
           <Heading
             variant="h3"
@@ -67,7 +69,7 @@ export default function RoadmapPostCard({
             ) : null}
           </Flex>
         </CardHeader>
-        <CardBody padding="24px 16px 16px 16px">
+        <CardBody paddingY="xl" paddingX="md">
           <RoadmapPostVersion roadmapVersion={roadmapVersion} />
         </CardBody>
       </Card>

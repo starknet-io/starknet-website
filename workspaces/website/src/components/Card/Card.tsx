@@ -22,6 +22,7 @@ import {
 } from "./CardStyles";
 import { Heading } from "@ui/Typography/Heading";
 import { CustomLink } from "@ui/Link";
+import { CustomLinkProps } from "@ui/Link/CustomLink";
 
 type BodyProps = {
   variant?: "grid" | "asset" | "large" | "iconLink";
@@ -41,7 +42,7 @@ type LinkProps = {
   children: ReactNode;
   href: string;
   isExternal?: boolean;
-};
+} & CustomLinkProps;
 
 type ImgProps = {
   variant?: "grid" | "asset" | "large" | "iconLink";
@@ -104,6 +105,7 @@ export const CardLink = ({
   href,
   children,
   isExternal,
+  ...rest
 }: LinkProps) => {
   const styles = {
     ...(variant === "iconLink" || variant === "grid"
@@ -111,7 +113,13 @@ export const CardLink = ({
       : linkStyles),
   };
   return (
-    <CustomLink size="md" href={href} sx={styles} isExternal={isExternal}>
+    <CustomLink
+      size="md"
+      href={href}
+      sx={styles}
+      isExternal={isExternal}
+      {...rest}
+    >
       {children}
     </CustomLink>
   );

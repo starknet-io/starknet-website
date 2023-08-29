@@ -59,7 +59,7 @@ export const BlockCards = ({
       maxW={{ base: "1296px", md: "1312px" }}
       width="100%"
       m="0 auto"
-      px={{ base: "16px", md: "32px" }}
+      // px={{ base: "16px", md: "32px" }}
       display="flex"
       flexDirection="column"
       gap={{
@@ -74,7 +74,7 @@ export const BlockCards = ({
             <Heading
               variant={headingVariant}
               color="content.accent.value"
-              withMarginBottom
+              withMarginBottom={description ? true : false}
             >
               {heading}
             </Heading>

@@ -1,23 +1,26 @@
 import { topLevelBlocks } from "../blocks";
 import { CmsCollection } from "../types";
-import { BiBullseye, BiWrench } from "react-icons/bi";
-import { AiOutlineAppstore } from "react-icons/ai";
+import {
+  HiOutlineWrenchScrewdriver,
+  HiOutlineRocketLaunch,
+  HiOutlineSquares2X2,
+} from "react-icons/hi2";
 
 export const roadmapStagesFields = [
   {
     label: "Building now",
     value: "building-now",
-    icon: BiWrench
+    icon: HiOutlineWrenchScrewdriver,
   },
   {
     label: "Building next",
     value: "building-next",
-    icon: BiBullseye
+    icon: HiOutlineRocketLaunch,
   },
   {
     label: "Backlog",
     value: "backlog",
-    icon: AiOutlineAppstore
+    icon: HiOutlineSquares2X2,
   },
 ];
 
@@ -69,10 +72,7 @@ export const roadmapPostsCollectionConfig = {
       name: "state",
       label: "Availability state",
       widget: "select",
-      options: [
-        "On testnet",
-        "Testing now"
-      ],
+      options: ["On testnet", "Testing now"],
       required: false,
     },
     {
@@ -81,7 +81,7 @@ export const roadmapPostsCollectionConfig = {
       widget: "string",
       required: false,
       index_file: "",
-      meta: false
+      meta: false,
     },
     {
       name: "version",
