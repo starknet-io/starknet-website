@@ -46,9 +46,9 @@ const Root = (props: RootProps) => {
         {...rest}
         as="ul"
         bg={listGap ? "transparent" : "card-bg"}
-        borderRadius={listGap ? "0px" : "16px"}
+        borderRadius={listGap ? "0px" : "md"}
         borderWidth="1px"
-        borderColor={listGap ? "transparent" : "card-br"}
+        borderColor={listGap ? "transparent" : "border.divider"}
         overflow="hidden"
         direction="column"
         gap={gap[listGap as ListSize] || "0px"}

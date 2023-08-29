@@ -292,7 +292,7 @@ body.chakra-ui-dark {
   line-height: 17px;
   font-weight: var(--aa-font-weight-bold);
   margin: 0;
-  padding: 0 var(--aa-spacing-half) 0 0;
+  padding: 4px 0;
   position: relative;
   z-index: var(--aa-base-z-index);
   color: inherit;
