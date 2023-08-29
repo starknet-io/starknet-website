@@ -108,7 +108,7 @@ export const HomepageHero = ({ seo }: Props) => {
                 <Box
                   sx={{
                     background: "linear-gradient(284deg, #FFFDD8 0%, #EC796B 15.63%, #D672EF 43.09%, #8BF3F9 74.52%)",
-                    border: "2px solid transparent",
+                    padding: "2px",
                     borderRadius: "8px"
                   }}
                 >
