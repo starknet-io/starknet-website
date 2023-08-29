@@ -54,16 +54,6 @@
     100% {transform: translateX(0%);}
 }
 
-@keyframes scrolling-right1 {
-    0% {transform: translateX(100%);}
-    100% {transform: translateX(200%);}
-}
-
-@keyframes scrolling-right2 {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(100%);}
-}
-
 .marqueeStyleRight {
     display:flex;
     animation-play-state: running;
@@ -78,27 +68,17 @@
     /* Apply animation to this element */
     -webkit-animation: scrolling-right2 120s linear infinite;
     animation: scrolling-right2 120s linear infinite;
-    animation-delay: 60s;
 }
 /* scrolling-right is continuous/repeatly text */
 @keyframes scrolling-right1 {
-    0% {transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);}
-    100% {transform: translateX(100%);
-        -webkit-transform: translateX(100%);}
+    0% {transform: translateX(0%);
+        -webkit-transform: translateX(0%);}
+    100% {transform: translateX(200%);
+        -webkit-transform: translateX(200%);}
 }
 @keyframes scrolling-right2 {
     0% {transform: translateX(-200%);
         -webkit-transform: translateX(-200%);}
     100% {transform: translateX(0%);
         -webkit-transform: translateX(0%);}
-}
-
-@-webkit-keyframes scrolling-right1 {
-    0% {-webkit-transform: translateX(-100%);}
-    100% {-webkit-transform: translateX(100%);}
-}
-@-webkit-keyframes scrolling-right2 {
-    0% {-webkit-transform: translateX(-200%);}
-    100% {-webkit-transform: translateX(0%);}
 }
