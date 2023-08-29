@@ -70,8 +70,10 @@ export default function RoadmapPage({
                 xl: "1fr 1fr 1fr",
               }}
               templateRows="1fr"
-              columnGap="32px"
-              rowGap="24px"
+              gridGap={{
+                base: "cards.gap-standart.base",
+                md: "cards.gap-standart.md",
+              }}
               // justifyContent="center"
             >
               {stagePosts.map((post) => {

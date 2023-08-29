@@ -20,12 +20,15 @@ export default function RoadmapPostCard({
   locale,
 }: RoadmapPostCardProps) {
   return (
-    <CardGradientBorder height="100%" padding="0" maxW="md" borderRadius="lg">
+    <CardGradientBorder
+      height="100%"
+      padding="0"
+      maxW="md"
+      borderRadius="lg"
+      borderColor="border.card.value"
+    >
       <Card
-        borderColor="border.card.value"
         bg="surface.card"
-        borderWidth="1px"
-        borderRadius="lg"
         as="a"
         href={`/${locale}/roadmap/${roadmapPost?.slug}`}
         padding="xs"
