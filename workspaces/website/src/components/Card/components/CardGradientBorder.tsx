@@ -24,7 +24,6 @@ export const CardGradientBorder = ({
   borderSx,
   ...rest
 }: Props) => {
-  console.log('borderSx ', borderSx)
   return (
     <Box
       borderWidth="1px"

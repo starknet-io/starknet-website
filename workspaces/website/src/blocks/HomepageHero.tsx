@@ -1,8 +1,8 @@
-import { Box, Flex, Img, Stack } from "@chakra-ui/react";
+import { Box, Flex, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
+import { keyframes } from '@emotion/react';
 
 type Props = {
   readonly seo: {
@@ -12,6 +12,8 @@ type Props = {
 import { Intro } from "./Intro";
 import { navigate } from "vite-plugin-ssr/client/router";
 import { useRive } from '@rive-app/react-canvas';
+
+const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } })
 
 export const HomepageHero = ({ seo }: Props) => {
   const { rive, RiveComponent } = useRive({
@@ -40,6 +42,7 @@ export const HomepageHero = ({ seo }: Props) => {
           position: "relative",
           clipPath: "polygon(0 0,100% 0,100% calc(100% - 14vw),0 100%)",
           "& .rive-animation": {
+            animation: `${fadeIn} 3s ease-in-out`,
             position: "absolute",
             top: "-215px",
             right: "-300px",

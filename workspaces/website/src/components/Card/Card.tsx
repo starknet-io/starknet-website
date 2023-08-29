@@ -190,10 +190,6 @@ export const Card = (props: Props) => {
     default:
       break;
   }
-  if (variant === "large") {
-    console.log("styles ", styles);
-  }
-  console.log('borderSx 1 ', borderSx)
   return (
     <CardGradientBorder bg={bgColor} padding="0" borderRadius="16px" borderColor={borderColor} borderSx={{ ...borderSx }}>
       <Box sx={{ ...styles, ...sx }} {...rest} />
