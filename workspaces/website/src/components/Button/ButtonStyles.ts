@@ -485,11 +485,12 @@ const category = defineStyle({
   fontWeight: "medium",
   fontSize: "14px",
   lineHeight: "14px",
-  padding: "8px 0 16px",
+  padding: "24px 12px",
   color: "tabs-fg",
   borderBottomWidth: "1px",
   borderColor: "tabs-border-bg",
-
+  height: "auto",
+  maxHeight: "none",
   bg: "tabs-bg",
   _hover: {
     bg: "tabs-bg",

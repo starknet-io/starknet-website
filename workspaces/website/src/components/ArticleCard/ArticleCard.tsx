@@ -50,13 +50,23 @@ type ImageProps = {
 
 const Image = ({ url, imageAlt, type = "grid" }: ImageProps) => {
   return (
-    <Box overflow="hidden" {...type === "featured" && { width: "auto", maxWidth: "60%"}}>
+    <Box
+      overflow="hidden"
+      {...type === "featured" && { width: "auto", maxWidth: "60%"}}
+      position="relative"
+      width="100%"
+      paddingBottom="56.25%"
+      height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
+    >
       <ChakraImage
         src={url}
         alt={imageAlt}
-        width="full"
-        height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
         objectFit="cover"
+        position="absolute"
+        top="0"
+        left="0"
+        width="100%"
+        height="100%"
         {...type === "grid" && { borderTopRadius: 8}}
       />
     </Box>

@@ -77,9 +77,7 @@ export function PostsPage({
             [category, params.locale]
           )}
         />
-        <Container maxW="contentMaxW.xl" mb={4}>
-          <CustomCategories categories={categories} params={params} />
-        </Container>
+        <CustomCategories categories={categories} params={params} />
         <PostsPageLayout
           categories={categories}
           params={params}
@@ -261,7 +259,7 @@ function CustomTopics({
   }, [topicsDict, items]);
 
   return (
-    <Box display="flex" flexWrap="wrap" gap="12px" columnGap="4px" width="100%">
+    <Box display="flex" flexWrap="wrap" gap="12px" columnGap="8px" width="100%">
       {validTopics.map((topic, i) => (
         <Chip
           key={topic.value}
@@ -288,47 +286,59 @@ function CustomCategories({
   params,
 }: Pick<Props, "categories" | "params">) {
   return (
-    <Flex
-      as="ul"
-      sx={{ overflowX: "auto" }}
-      gap="24px"
+    <Box
+      borderTopWidth="1px"
       borderBottomWidth="1px"
       borderColor="tabs-main-br"
       width="100%"
     >
-      <Box>
-        <Button
-          variant="category"
-          as="a"
-          isActive={params.category == null}
-          onClick={() => {
-            navigate(`/${params.locale}/posts`, {
-              overwriteLastHistoryEntry: true,
-            });
-          }}
+      <Flex
+        as="ul"
+        sx={{ overflowX: "auto" }}
+        gap="24px"
+        maxW="contentMaxW.xl"
+        margin="0 auto"
+        px={{
+          base: "page.left-right.base",
+          md: "page.left-right.md",
+        }}
+      >
+        <Box
+          
         >
-          All posts
-        </Button>
-      </Box>
-      {categories.map((category) => (
-        <Box key={category.slug}>
           <Button
             variant="category"
             as="a"
-            isActive={category.slug === params.category}
+            isActive={params.category == null}
             onClick={() => {
-              if (category.slug === params.category) return;
-
-              navigate(`/${params.locale}/posts/${category.slug}`, {
+              navigate(`/${params.locale}/posts`, {
                 overwriteLastHistoryEntry: true,
               });
             }}
           >
-            <> {category.name}</>
+            All posts
           </Button>
         </Box>
-      ))}
-    </Flex>
+        {categories.map((category) => (
+          <Box key={category.slug}>
+            <Button
+              variant="category"
+              as="a"
+              isActive={category.slug === params.category}
+              onClick={() => {
+                if (category.slug === params.category) return;
+
+                navigate(`/${params.locale}/posts/${category.slug}`, {
+                  overwriteLastHistoryEntry: true,
+                });
+              }}
+            >
+              <> {category.name}</>
+            </Button>
+          </Box>
+        ))}
+      </Flex>
+    </Box>
   );
 }
 
@@ -446,7 +456,7 @@ function CustomHits({
   return (
     <>
       {featuredHit && window.innerWidth > 992 && (
-        <Box mb="48px">
+        <Box mb="24px">
           <ArticleCard.Root
             href={`/${featuredHit?.locale}/posts/${featuredHit?.category}/${featuredHit?.slug}`}
             type="featured"
@@ -474,7 +484,7 @@ function CustomHits({
         templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
         templateRows="1fr"
         columnGap="24px"
-        rowGap="48px"
+        rowGap="24px"
       >
         {filteredHits.map((hit, i) => {
           // todo: add a featured image once we have image templates in place
