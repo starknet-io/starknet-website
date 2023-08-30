@@ -92,11 +92,13 @@ export const HeroImage = ({
               color="heading-navy-fg"
               variant="h1"
               size={useBreakpointValue({ base: "md", md: "lg" })}
-              marginBottom={{ base: "xl", md: "3xl" }}
+              marginBottom="xs"
             >
               {fixhyphens(title)}
             </Heading>
-            <Text color="content.accent.value">{description}</Text>
+            <Text color="content.accent.value" fontSize="18px">
+              {description}
+            </Text>
             {buttonText && (buttonUrl || onButtonClick) && (
               <Button
                 zIndex={99}

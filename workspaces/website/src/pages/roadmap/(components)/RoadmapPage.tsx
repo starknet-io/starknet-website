@@ -59,6 +59,7 @@ export default function RoadmapPage({
               mb="sm"
               color="content.default.value"
               gap="md"
+              fontSize="16px"
             >
               <Icon boxSize="22px" as={stage.icon} />
               {stage.label} ({stagePosts.length})

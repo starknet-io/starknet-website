@@ -120,7 +120,7 @@ export default function RoadmapPost({
           <Flex direction="row" alignItems="center" mt="6" mb="32px" justifyContent="space-between">
             <Flex direction="row" alignItems="center">
               <Text variant="cardBody"><strong>STAGE:</strong> {stages[roadmapPost?.stage]}</Text>
-              <Heading variant="h4" fontSize="sm" mt="0" ml="2" pl="2" borderLeftWidth="1px" mb="0" sx={{borderWeight: "solid", borderColor: "fg-default"}}>
+              <Heading variant="h4" fontSize="sm" mt="0" ml="2" pl="2" borderLeftWidth="1px" mb="0" sx={{borderWeight: "solid", borderColor: "border.card.value"}}>
               {roadmapPost.availability}
               </Heading>
               {roadmapPost?.state ? <Flex alignItems="center">{roadmapPost?.specific_info ? <Text variant="cardBody" ml="2">{roadmapPost?.specific_info}</Text> : null}</Flex> : null}
