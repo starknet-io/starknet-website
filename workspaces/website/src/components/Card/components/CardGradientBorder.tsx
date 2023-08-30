@@ -32,14 +32,14 @@ export const CardGradientBorder = ({
       borderRadius={borderRadius}
       flex="1"
       overflow="hidden"
-      _hover={{
-        background:
-          "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-        borderColor: "none",
-      }}
       sx={{
         borderColor: borderColor ?? "border.card.value",
         ...borderSx,
+      }}
+      _hover={{
+        background:
+          "linear-gradient(119deg, #EC796B -25.87%, #D672EF 125.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
+        borderColor: "transparent",
       }}
       {...rest}
     >

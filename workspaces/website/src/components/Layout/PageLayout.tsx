@@ -43,6 +43,11 @@ export const PageLayout = (props: Props) => {
       <Flex py="xl" direction={{ base: "column", lg: "row" }}>
         <Box>{props.breadcrumbs}</Box>
         <Spacer />
+        <Box>
+          <Text variant="cardBody" top="1px" pos="relative">
+            {props.pageLastUpdated}
+          </Text>
+        </Box>
       </Flex>
       {/* page layout */}
       <Stack

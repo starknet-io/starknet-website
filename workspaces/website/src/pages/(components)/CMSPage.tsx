@@ -1,20 +1,14 @@
+import { Box, Flex } from "@chakra-ui/react";
 import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
+import "@ui/CodeHighlight/code-highlight-init";
+import { LandingConent } from "@ui/HeroImage/LandingConent";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import moment from "moment";
 import { Heading } from "@ui/Typography/Heading";
-import { Text } from "@ui/Typography/Text";
+import moment from "moment";
 import { Block } from "src/blocks/Block";
 import { TableOfContents } from "./TableOfContents/TableOfContents";
-import {
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Flex,
-} from "@chakra-ui/react";
-import "@ui/CodeHighlight/code-highlight-init";
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
-import { LandingConent } from "@ui/HeroImage/LandingConent";
 
 type CMSPageProps = {
   data: PageType;
@@ -67,30 +61,26 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             {data.breadcrumbs &&
             data.breadcrumbs_data &&
             data.breadcrumbs_data.length > 0 ? (
-              <Breadcrumb separator="/">
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    fontSize="sm"
-                    href={`/${data.breadcrumbs_data[0].locale}`}
-                  >
-                    Home
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem>
-                  <BreadcrumbLink
-                    fontSize="sm"
-                    href={`/${data.breadcrumbs_data[0].locale}/${data.breadcrumbs_data[0].slug}`}
-                  >
-                    {data.breadcrumbs_data[0].title}
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-
-                <BreadcrumbItem isCurrentPage>
-                  <BreadcrumbLink fontSize="sm">{data.title}</BreadcrumbLink>
-                </BreadcrumbItem>
-              </Breadcrumb>
+              <Breadcrumbs
+                locale={data.breadcrumbs_data[0].locale}
+                items={[
+                  {
+                    link: `/${data.breadcrumbs_data[0].locale}/${data.breadcrumbs_data[0].slug}`,
+                    label: data.breadcrumbs_data[0].title,
+                  },
+                  {
+                    label: data.title,
+                    link: "",
+                  },
+                ]}
+              />
             ) : null}
           </>
+        }
+        pageLastUpdated={
+          data.page_last_updated && date
+            ? `Page last updated ${moment(date).fromNow()}  `
+            : null
         }
         main={
           <Flex
@@ -115,12 +105,6 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
                 {data.title}
               </Heading>
             ) : null}
-            {data.page_last_updated && date
-                  ? <Box>
-              <Text variant="cardBody" top="1px" pos="relative">
-                Page last updated {moment(date).fromNow()}
-              </Text>
-            </Box>: null}
             {!isFirstBlockLandingHero &&
               data.blocks?.map((block, i) => {
                 return <Block key={i} block={block} locale={locale} />;
