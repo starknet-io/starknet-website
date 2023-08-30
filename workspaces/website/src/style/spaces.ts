@@ -9,7 +9,7 @@ export const page = {
     md: "80px",
     lg: "160px",
   },
-  "gap-standart": {
+  "gap-standard": {
     base: "40px",
     md: "80px",
     lg: "80px",
@@ -32,7 +32,7 @@ export const cards = {
     md: "32px",
     lg: "40px",
   },
-  "gap-standart": {
+  "gap-standard": {
     base: "16px",
     md: "24px",
     lg: "24px",

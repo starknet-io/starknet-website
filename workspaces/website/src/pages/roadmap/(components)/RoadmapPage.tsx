@@ -51,7 +51,7 @@ export default function RoadmapPage({
         const stagePosts = roadmapPostsByStage[stage.value] || [];
 
         return (
-          <Box key={stage.value} mb="5rem">
+          <Box key={stage.value}>
             <Heading
               variant="h3"
               display="flex"
@@ -71,8 +71,8 @@ export default function RoadmapPage({
               }}
               templateRows="1fr"
               gridGap={{
-                base: "cards.gap-standart.base",
-                md: "cards.gap-standart.md",
+                base: "cards.gap-standard.base",
+                md: "cards.gap-standard.md",
               }}
               // justifyContent="center"
             >

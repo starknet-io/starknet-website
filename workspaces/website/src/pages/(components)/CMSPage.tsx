@@ -40,6 +40,12 @@ const px = {
   },
 };
 
+const gap = {
+  landing: {
+    base: "page.block-gap.base",
+  },
+};
+
 export default function CMSPage({ data, locale }: CMSPageProps) {
   const date = data?.gitlog?.date;
   const [firstBlock, ...remainingBlocks] = data.blocks || [];
@@ -95,15 +101,17 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             direction="column"
             gap={{
               base:
-                data.template === "content" ||
-                data.template === "narrow content"
-                  ? "32px"
-                  : "56px",
+                data.slug === "home"
+                  ? "page.gap-wide.base"
+                  : "page.gap-standard.base",
+              md:
+                data.slug === "home"
+                  ? "page.gap-wide.md"
+                  : "page.gap-standard.md",
               lg:
-                data.template === "content" ||
-                data.template === "narrow content"
-                  ? "32px"
-                  : "140px",
+                data.slug === "home"
+                  ? "page.gap-wide.lg"
+                  : "page.gap-standard.lg",
             }}
           >
             {data.show_title ? (
