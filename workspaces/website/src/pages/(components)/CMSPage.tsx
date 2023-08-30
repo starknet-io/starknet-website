@@ -115,13 +115,12 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
                 {data.title}
               </Heading>
             ) : null}
-            <Box>
+            {data.page_last_updated && date
+                  ? <Box>
               <Text variant="cardBody" top="1px" pos="relative">
-                {data.page_last_updated && date
-                  ? `Page last updated ${moment(date).fromNow()}  `
-                  : null}
+                Page last updated {moment(date).fromNow()}
               </Text>
-            </Box>
+            </Box>: null}
             {!isFirstBlockLandingHero &&
               data.blocks?.map((block, i) => {
                 return <Block key={i} block={block} locale={locale} />;

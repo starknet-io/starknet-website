@@ -19,7 +19,6 @@ const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 export const HomepageHero = ({ seo }: Props) => {
   const { colorMode } = useColorMode();
   const [riveAnimation, setRiveAnimation] = useState(colorMode === "light" ?  "/assets/starknet-hub.riv" : "/assets/starknet-hub-dark.riv");
-
   useEffect(() => {
     setRiveAnimation(colorMode === "light" ?  "/assets/starknet-hub.riv" : "/assets/starknet-hub-dark.riv");
   }, [colorMode])
