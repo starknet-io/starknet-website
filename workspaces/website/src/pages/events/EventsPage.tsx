@@ -1,4 +1,3 @@
-
 import {
   Box,
   Breadcrumb,
@@ -35,6 +34,8 @@ import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawe
 import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import EventCard from "./EventCard";
+import { Chip } from "@ui/Chip/Chip";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
 
 export interface AutoProps {
   readonly params: {
@@ -49,7 +50,7 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
   readonly mode: "UPCOMING_EVENTS" | "PAST_EVENTS";
-  readonly seo: SEOTexts['events'];
+  readonly seo: SEOTexts["events"];
 }
 
 const getEventFilter = (mode: "UPCOMING_EVENTS" | "PAST_EVENTS") => {
@@ -123,45 +124,43 @@ const EventsPageLayout = ({
     handleFilterClick,
     filtersCounts,
     selectedFilters,
-    setSelectedFilters } = useMobileFiltersDrawer([
-    ...locations,
-    ...types,
-  ]);
+    setSelectedFilters,
+  } = useMobileFiltersDrawer([...locations, ...types]);
 
   const mapSelectedFilters = () => {
-    let result: { location?: string[], type?: string[], month?: string[] } = {};
+    let result: { location?: string[]; type?: string[]; month?: string[] } = {};
 
     let locationsFilteredValues = locations
-        .filter(item => item.isRefined)
-        .map(item => item.value);
+      .filter((item) => item.isRefined)
+      .map((item) => item.value);
 
     if (locationsFilteredValues.length > 0) {
-        result["location"] = locationsFilteredValues;
+      result["location"] = locationsFilteredValues;
     }
 
     let typesFilteredValues = types
-        .filter(item => item.isRefined)
-        .map(item => item.value);
+      .filter((item) => item.isRefined)
+      .map((item) => item.value);
 
     if (typesFilteredValues.length > 0) {
-        result["type"] = typesFilteredValues;
+      result["type"] = typesFilteredValues;
     }
 
     let monthsFilteredValues = months
-        .filter(item => item.isRefined)
-        .map(item => item.value);
+      .filter((item) => item.isRefined)
+      .map((item) => item.value);
 
     if (monthsFilteredValues.length > 0) {
-        result["month"] = monthsFilteredValues;
+      result["month"] = monthsFilteredValues;
     }
 
     return result;
-  }
+  };
 
   const handleModalClose = () => {
     onClose();
     setSelectedFilters(mapSelectedFilters());
-  }
+  };
 
   const handleApplyChanges = () => {
     if (selectedFilters["location"]?.length) {
@@ -175,9 +174,9 @@ const EventsPageLayout = ({
     }
 
     if (selectedFilters["type"]?.length) {
-      selectedFilters["type"].map(type => {
+      selectedFilters["type"].map((type) => {
         refineTypes(type);
-      })
+      });
     } else {
       types.map((type) => {
         type.isRefined && refineTypes(type.value);
@@ -185,15 +184,15 @@ const EventsPageLayout = ({
     }
 
     if (selectedFilters["month"]?.length) {
-      selectedFilters["month"].map(month => {
+      selectedFilters["month"].map((month) => {
         refineMonths(month);
-      })
+      });
     } else {
       months.map((month) => {
         month.isRefined && refineMonths(month.value);
       });
     }
-  }
+  };
 
   const handleApplyFilters = () => {
     handleApplyChanges();
@@ -202,13 +201,12 @@ const EventsPageLayout = ({
 
   const checkIsRefined = (arr: any) => {
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i].hasOwnProperty('isRefined') && arr[i].isRefined === true) {
+      if (arr[i].hasOwnProperty("isRefined") && arr[i].isRefined === true) {
         return true;
       }
     }
     return false;
-  }
-  
+  };
 
   const handleClearFilters = () => {
     const locationsRefined = checkIsRefined(locations);
@@ -224,32 +222,19 @@ const EventsPageLayout = ({
       sectionHeaderTitle={seo.title}
       sectionHeaderDescription={seo.subtitle}
       breadcrumbs={
-        <Breadcrumb separator="/">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}/community`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Community
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink fontSize="sm" noOfLines={1}>
-              Events
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
+        <Breadcrumbs
+          locale={params.locale}
+          items={[
+            {
+              label: "Community",
+              link: `/${params.locale}/community`,
+            },
+            {
+              label: "Events",
+              link: "",
+            },
+          ]}
+        />
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
@@ -258,11 +243,24 @@ const EventsPageLayout = ({
             locations={locations}
             selectedFilters={selectedFilters}
           />
-          <CustomType types={types} refineTypes={refineTypes} selectedFilters={selectedFilters} />
+          <CustomType
+            types={types}
+            refineTypes={refineTypes}
+            selectedFilters={selectedFilters}
+          />
         </Box>
       }
       main={
-        <Box>
+        <Box
+          display="flex"
+          flexDir="column"
+          gap={{
+            base: "page.gap-condenced.base",
+            md: "page.gap-condenced.md",
+            lg: "page.gap-condenced.lg",
+          }}
+        >
+          <MobileFiltersButton filtersCount={filtersCounts} onClick={onOpen} />
           <Flex
             as="ul"
             sx={{ overflowX: "auto" }}
@@ -270,48 +268,55 @@ const EventsPageLayout = ({
             borderBottomWidth="1px"
             borderColor="tabs-main-br"
             width="100%"
-            mb={4}
           >
-            <Box>
-              <Button
-                variant="category"
-                isActive={mode === "UPCOMING_EVENTS"}
-                href={`/${params.locale}/events`}
-              >
-                Upcoming events
-              </Button>
-            </Box>
-            <Box>
-              <Button
-                variant="category"
-                isActive={mode === "PAST_EVENTS"}
-                href={`/${params.locale}/events/past`}
-              >
-                Past events
-              </Button>
-            </Box>
+            <Button
+              variant="category"
+              isActive={mode === "UPCOMING_EVENTS"}
+              href={`/${params.locale}/events`}
+            >
+              Upcoming events
+            </Button>
+            <Button
+              variant="category"
+              isActive={mode === "PAST_EVENTS"}
+              href={`/${params.locale}/events/past`}
+            >
+              Past events
+            </Button>
           </Flex>
-          <MobileFiltersButton
-            filtersCount={filtersCounts}
-            onClick={onOpen}
-            style={{ marginTop: "24px" }}
-          />
           <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
-            <CustomLocation
-              locations={locations}
-              refineLocation={handleFilterClick}
-              selectedFilters={selectedFilters}
-              isDesktop={false}
-            />
-            <CustomType types={types} refineTypes={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
-            <CustomMonth
-              refineMonths={handleFilterClick}
-              months={months}
-              selectedFilters={selectedFilters}
-              isDesktop={false}
-            />
-            <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
-            <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
+            <Flex direction="column" gap="sm">
+              <CustomLocation
+                locations={locations}
+                refineLocation={handleFilterClick}
+                selectedFilters={selectedFilters}
+                isDesktop={false}
+              />
+              <CustomType
+                types={types}
+                refineTypes={handleFilterClick}
+                selectedFilters={selectedFilters}
+                isDesktop={false}
+              />
+              <CustomMonth
+                refineMonths={handleFilterClick}
+                months={months}
+                selectedFilters={selectedFilters}
+                isDesktop={false}
+              />
+            </Flex>
+            <Button
+              variant="solid"
+              fullWidth
+              mt="2xl"
+              mb="md"
+              onClick={handleApplyFilters}
+            >
+              Apply filters
+            </Button>
+            <Button variant="outline" onClick={handleClearFilters} fullWidth>
+              Clear all
+            </Button>
           </MobileFiltersDrawer>
           <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
         </Box>
@@ -331,29 +336,54 @@ function CustomLocation({
   locations,
   refineLocation,
   selectedFilters,
-  isDesktop = true
+  isDesktop = true,
 }: CustomLocationProps) {
-  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+  const checkIfFilterExists = (
+    role: string,
+    filter: string,
+    selectedFilters: { [key: string]: string[] }
+  ) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
   return (
     <Box>
-      <Heading variant="h6" mb={4}>
+      <Heading
+        variant="h3"
+        mb={4}
+        color="content.accent.value"
+        marginBottom="sm"
+      >
         Location
       </Heading>
-      <Flex direction="column" gap="8px">
+      <Flex
+        direction={{
+          base: "row",
+          md: "column",
+        }}
+        gap="sm"
+        py={{
+          base: "0",
+          md: "sm",
+        }}
+        wrap="wrap"
+      >
         {locations.map((item, i) => (
-          <Button
-            justifyContent="flex-start"
-            size="sm"
-            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "location", selectedFilters) ? "filterActive" : "filter"}
-            onClick={() => isDesktop ? refineLocation(item.value) : refineLocation("location", item.label)}
+          <Chip
+            onClick={() =>
+              isDesktop
+                ? refineLocation(item.value)
+                : refineLocation("location", item.label)
+            }
             key={i}
-            style={{ order: item.value === "online_remote" ? -1 : 0 }}
+            isSelected={
+              isDesktop
+                ? item.isRefined
+                : checkIfFilterExists(item.label, "location", selectedFilters)
+            }
           >
             {eventsLocationsLabels[item.value] || titleCase(item.label)}
-          </Button>
+          </Chip>
         ))}
       </Flex>
     </Box>
@@ -371,30 +401,51 @@ function CustomMonth({
   months,
   refineMonths,
   selectedFilters,
-  isDesktop = true
+  isDesktop = true,
 }: CustomMonthProps) {
-  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+  const checkIfFilterExists = (
+    role: string,
+    filter: string,
+    selectedFilters: { [key: string]: string[] }
+  ) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
   return (
     <Box>
-      <Heading variant="h6" mb={4} mt={7}>
+      <Heading variant="h3" pt="xl" mb="sm" color="content.accent.value">
         Month
       </Heading>
-      <Flex direction="column" gap="8px">
-        {months.sort((a, b) => new Date(a.value).getTime() - new Date(b.value).getTime()).map((item, i) => (
-          <Button
-            justifyContent="flex-start"
-            size="sm"
-            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "month", selectedFilters) ? "filterActive" : "filter"}
-            onClick={() => isDesktop ? refineMonths(item.value) : refineMonths("month", item.label)}
-            key={i}
-            style={{ order: item.value === "online_remote" ? -1 : 0 }}
-          >
-            {eventsLocationsLabels[item.value] || titleCase(item.label)}
-          </Button>
-        ))}
+      <Flex
+        direction={{
+          base: "row",
+          md: "column",
+        }}
+        flexWrap="wrap"
+        gap="sm"
+      >
+        {months
+          .sort(
+            (a, b) => new Date(a.value).getTime() - new Date(b.value).getTime()
+          )
+          .map((item, i) => (
+            <Chip
+              isSelected={
+                isDesktop
+                  ? item.isRefined
+                  : checkIfFilterExists(item.label, "month", selectedFilters)
+              }
+              onClick={() =>
+                isDesktop
+                  ? refineMonths(item.value)
+                  : refineMonths("month", item.label)
+              }
+              key={i}
+              style={{ order: item.value === "online_remote" ? -1 : 0 }}
+            >
+              {eventsLocationsLabels[item.value] || titleCase(item.label)}
+            </Chip>
+          ))}
       </Flex>
     </Box>
   );
@@ -404,35 +455,57 @@ function CustomType({
   types,
   refineTypes,
   selectedFilters,
-  isDesktop = true
+  isDesktop = true,
 }: {
   types: RefinementListProps["items"];
   refineTypes: any;
   selectedFilters: any;
   isDesktop?: boolean;
 }) {
-  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+  const checkIfFilterExists = (
+    role: string,
+    filter: string,
+    selectedFilters: { [key: string]: string[] }
+  ) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
   return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
+    <Box>
+      <Heading pt="xl" variant="h3" mb="sm" color="content.accent.value">
         Type
       </Heading>
-      <VStack dir="column" alignItems="stretch">
+      <Flex
+        direction={{
+          base: "row",
+          md: "column",
+        }}
+        wrap="wrap"
+        alignItems="stretch"
+        py={{
+          base: "0",
+          md: "sm",
+        }}
+        gap="sm"
+      >
         {types.map((item, i) => (
-          <Button
-            justifyContent="flex-start"
-            size="sm"
-            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "type", selectedFilters) ? "filterActive" : "filter"}
-            onClick={() => isDesktop ? refineTypes(item.value) : refineTypes("type", item.label)}
+          <Chip
+            isSelected={
+              isDesktop
+                ? item.isRefined
+                : checkIfFilterExists(item.label, "type", selectedFilters)
+            }
+            onClick={() =>
+              isDesktop
+                ? refineTypes(item.value)
+                : refineTypes("type", item.label)
+            }
             key={i}
           >
             {eventsTypesLabels[item.value] || titleCase(item.label)}
-          </Button>
+          </Chip>
         ))}
-      </VStack>
+      </Flex>
     </Box>
   );
 }
@@ -465,15 +538,27 @@ function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
           <Box key={key}>
             <Heading
               variant="h6"
+              fontSize="16px"
               fontWeight={700}
-              fontSize="lg"
               lineHeight={1.5}
-              mt="2.5rem"
-              mb="1rem"
+              mb={{
+                base: "cards.gap-standard.base",
+                md: "cards.gap-standard.md",
+                lg: "cards.gap-standard.lg",
+              }}
+              color="content.support"
             >
               {moment(key, "YYYY-MM").format("MMMM YYYY")}
             </Heading>
-            <Flex gap={4} direction="column" flex={1}>
+            <Flex
+              direction="column"
+              flex={1}
+              gap={{
+                base: "cards.gap-standard.base",
+                md: "cards.gap-standard.md",
+                lg: "cards.gap-standard.lg",
+              }}
+            >
               {monthHits.map((hit) => (
                 <EventCard
                   key={hit.objectID}
@@ -488,11 +573,7 @@ function CustomHits({ isPastEvent }: { isPastEvent: boolean }) {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button
-            onClick={() => showMore()}
-            flexShrink={0}
-            variant="rounded"
-          >
+          <Button onClick={() => showMore()} flexShrink={0} variant="rounded">
             View More
           </Button>
           <Divider />

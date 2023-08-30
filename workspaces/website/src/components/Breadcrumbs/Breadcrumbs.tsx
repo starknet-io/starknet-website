@@ -27,6 +27,14 @@ export const Breadcrumbs = ({ items, locale }: BreadcrumbsProps) => {
       fontSize="14px"
       fontWeight={500}
       spacing={0}
+      sx={{
+        "a:hover": {
+          color: "content.default.hover",
+        },
+        "a:disabled": {
+          color: "content.default.disabled",
+        },
+      }}
     >
       <BreadcrumbItem>
         <BreadcrumbLink
@@ -52,7 +60,7 @@ export const Breadcrumbs = ({ items, locale }: BreadcrumbsProps) => {
       ))}
 
       <BreadcrumbItem isCurrentPage>
-        <BreadcrumbLink px="xs" py="lg">
+        <BreadcrumbLink px="xs" py="lg" color="content.default.selected">
           {lastItem.label}
         </BreadcrumbLink>
       </BreadcrumbItem>

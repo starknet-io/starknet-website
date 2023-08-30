@@ -1,20 +1,17 @@
-import { Button } from "@chakra-ui/react";
-import { CSSProperties } from "react";
+import { Button, ButtonProps } from "@chakra-ui/react";
 import { HiAdjustmentsVertical } from "react-icons/hi2";
 
 type Props = {
   filtersCount: number;
   onClick: () => void;
-  style?: CSSProperties;
-};
+} & ButtonProps;
 export default function MobileFiltersButton({
   filtersCount,
   onClick,
-  style,
+  ...rest
 }: Props) {
   return (
     <Button
-      style={style}
       variant={filtersCount > 0 ? "solid" : "outline"}
       leftIcon={<HiAdjustmentsVertical size={24} />}
       w="100%"
@@ -22,6 +19,7 @@ export default function MobileFiltersButton({
       lineHeight={1}
       alignItems="center"
       onClick={onClick}
+      {...rest}
     >
       Filters {filtersCount > 0 && `(${filtersCount})`}
     </Button>
