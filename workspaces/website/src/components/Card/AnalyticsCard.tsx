@@ -26,12 +26,13 @@ export const AnalyticsCard = ({
   return (
     <CardGradientBorder
       display="inline-block"
+      maxWidth={{ base: "216px", lg: "288px"}}
       borderSx={{
         borderColor: "transparent",
         boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
       }}
     >
-      <Box p={{ base: "xl", lg: "2xl" }} width={{ base: "216px", lg: "288px"}} height="100%" bg={bg}>
+      <Box cursor="pointer" p={{ base: "xl", lg: "2xl" }} width={{ base: "216px", lg: "288px"}} height="100%" bg={bg} onClick={() => window.open(type === "twitter" ? "https://twitter.com/Starknet/" : "https://discord.com/invite/qypnmzkhbc", "_blank")}>
         <Box
           display="flex"
           flexDir="column"

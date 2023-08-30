@@ -40,6 +40,7 @@ const bgStyles: Record<Props["variant"], SystemStyleObject> = {
     paddingTop: 900,
     mt: "-960",
     mb: { base: 0, lg: -130 },
+    zIndex: -1,
     "&::before": {
       content: '""',
       position: "absolute",

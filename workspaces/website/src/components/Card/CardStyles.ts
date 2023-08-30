@@ -11,7 +11,7 @@ export const LargeCardLayout = {
   gap: { base: "40px", lg: "80px" },
   flex: "1 0 0",
   flexWrap: "wrap",
-  flexDirection: { base: "column-reverse", lg: "column" },
+  flexDirection: "column",
   ...CardStyle,
 };
 export const LargeCardImgLayout = {
@@ -42,12 +42,12 @@ export const LargeCardHorizontalLayout = {
   gap: "80px",
   flex: "1 0 0",
   flexWrap: "wrap",
-  flexDirection: { base: "column-reverse", md: "row-reverse", lg: "row" },
+  flexDirection: { base: "column", md: "row" },
   ...CardStyle,
 };
 export const IconLinkCardLayout = {
   display: "flex",
-  padding: { base: "24px", lg: "48px 40px 40px 40px" },
+  padding: { base: "40px 24px", lg: "48px 40px 40px 40px" },
   flexDirection: "column",
   alignItems: "flex-start",
   alignContent: "flex-start",

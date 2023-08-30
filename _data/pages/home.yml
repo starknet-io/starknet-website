@@ -72,7 +72,7 @@ blocks:
         title: Read the Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        linkText: View
+        linkText: View ->
         linkUrl: /tutorials/
         color: red
       - type: icon_link_card
@@ -81,7 +81,7 @@ blocks:
         description: Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
-        linkText: View
+        linkText: View ->
         linkUrl: /documentation/
         color: green
       - type: icon_link_card
@@ -89,7 +89,7 @@ blocks:
         title: Set-up a Local Environment
         description: Learn how to get your dev environment up and running so you can
           start building.
-        linkText: View
+        linkText: View ->
         linkUrl: /developers/tools-and-resources/
         color: blue
     heading_variant: h2

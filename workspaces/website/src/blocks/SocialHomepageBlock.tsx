@@ -37,7 +37,8 @@ const SocialHomepageBlock = ({
           color="content.accent.value"
           sx={{
             fontWeight: "700",
-            maxW: "865px",
+            maxW: "835px",
+            lineHeight: "106.25%",
             mb: "8px",
           }}
         >
@@ -62,12 +63,12 @@ const SocialHomepageBlock = ({
           {description}
         </Text>
       </Box>
-      <Box sx={{ position: "relative", height: 545, mt: "80px" }}>
+      <Box sx={{ position: "relative", height: { base: 800, lg: 545 }, mt: "80px" }}>
         <Box sx={{ position: "absolute", left: { base: "55%", md: "50%" } }}>
           <Box
             sx={{ position: "relative", left: { base: "-60%", md: "-55%" } }}
           >
-            <Flex direction="row" gap="24px" overflow="visible">
+            <Flex direction="row" gap="24px" overflow="visible" ml={{ base: "160px", lg: 0}}>
               <Box
                 sx={{
                   width: { base: 216, lg: 288 },
@@ -75,6 +76,7 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaFirst.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
               <Box
@@ -84,6 +86,7 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaSecond.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
               <Box
@@ -93,6 +96,7 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaThird.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
               <AnalyticsCard
@@ -106,10 +110,11 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaFourth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
             </Flex>
-            <Flex direction="row" gap="24px" overflow="visible" mt="24px">
+            <Flex direction="row" gap="24px" overflow="visible" my="24px" ml={{ base: "300px", lg: 0}}>
               <Box
                 sx={{
                   width: { base: 302, lg: 423 },
@@ -117,6 +122,7 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaFifth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
               <Box
@@ -126,6 +132,7 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaSixth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
               <AnalyticsCard
@@ -140,6 +147,7 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaSeventh.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
               <Box
@@ -149,6 +157,69 @@ const SocialHomepageBlock = ({
                   backgroundImage: "/assets/socialMediaSixth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+            </Flex>
+            <Flex direction="row" gap="24px" overflow="visible" display={{ base: "flex", md: "none"}}>
+            <Box
+                sx={{
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaSecond.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+              <Box
+                sx={{
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaSecond.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+              <Box
+                sx={{
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaFirst.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+              <Box
+                sx={{
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaSecond.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+              <Box
+                sx={{
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaFirst.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+              <Box
+                sx={{
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaSecond.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
             </Flex>
