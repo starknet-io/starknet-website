@@ -18,13 +18,14 @@ const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 
 export const HomepageHero = ({ seo }: Props) => {
   const { colorMode } = useColorMode();
-  const [riveAnimation, setRiveAnimation] = useState(colorMode === "light" ?  "/assets/starknet-hub.riv" : "/assets/starknet-hub-dark.riv");
-  useEffect(() => {
-    setRiveAnimation(colorMode === "light" ?  "/assets/starknet-hub.riv" : "/assets/starknet-hub-dark.riv");
-  }, [colorMode])
-  const { RiveComponent } = useRive({
-    src: riveAnimation,
-    autoplay: true,
+  const { RiveComponent: RiveLight } = useRive({
+    src: "/assets/starknet-hub.riv",
+    autoplay: true
+  });
+
+  const { RiveComponent: RiveDark } = useRive({
+    src: "/assets/starknet-hub-dark.riv",
+    autoplay: true
   });
 
   return (
@@ -57,9 +58,16 @@ export const HomepageHero = ({ seo }: Props) => {
             border: "none",
             zIndex: -1,
           },
+          "& .displayBlock": {
+            display: "block"
+          },
+          "& .displayNone": {
+            display: "none"
+          }
         }}
       >
-        <RiveComponent className="rive-animation" />
+        <RiveLight className={`rive-animation ${colorMode === "light" ? "displayBlock" : "displayNone"}`} />
+        <RiveDark className={`rive-animation ${colorMode === "dark" ? "displayBlock" : "displayNone"}`} />
         <Box
           zIndex={2}
           minHeight="600px"
