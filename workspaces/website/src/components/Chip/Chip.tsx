@@ -16,7 +16,7 @@ export const Chip = ({
   return (
     <Button
       size="sm"
-      p="md"
+      p="8px 16px"
       borderRadius="xs"
       variant="unstyled"
       color={

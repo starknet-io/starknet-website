@@ -464,7 +464,7 @@ function CustomHits({
             <ArticleCard.Image url={featuredHit?.image} type="featured" />
 
             <ArticleCard.Body type="featured">
-              <ArticleCard.Category category={featuredHitCategory} />
+              <ArticleCard.Category type="featured" category={featuredHitCategory} />
               <ArticleCard.Content
                 title={featuredHit?.title}
                 excerpt={featuredHit?.short_desc}

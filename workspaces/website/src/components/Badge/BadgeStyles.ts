@@ -53,8 +53,10 @@ export const badgeTheme = defineStyleConfig({
   baseStyle: {
     paddingLeft: "12px",
     paddingRight: "12px",
+    paddingTop: 0,
+    paddingBottom: 0,
     borderRadius: "12px",
-    color: "badge-starkstruck-fg"
+    color: "badge-starkstruck-fg",
   },
   variants: {
     developers,

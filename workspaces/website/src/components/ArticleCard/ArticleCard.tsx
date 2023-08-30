@@ -88,11 +88,12 @@ const Body = ({ children, type = "grid" }: BodyProps) => {
 
 interface CategoryProps {
   category: DataCategory;
+  type?: string;
 }
 
-const Category = ({ category }: CategoryProps) => {
+const Category = ({ category, type }: CategoryProps) => {
   return (
-    <Box pb={3}>
+    <Box pb={type === "featured" ? "20px" : 3}>
       <Badge variant={category.slug.replaceAll("-", "_")}>
         {category.name}
       </Badge>
@@ -108,7 +109,7 @@ type ContentProps = {
 
 const Content = ({ title, excerpt, type = "grid" }: ContentProps) => {
   return (
-    <Flex gap="3" direction="column" flex={1}>
+    <Flex gap={type === "featured" ? "8px" : "4px"} direction="column" flex={type === "featured" ? "initial" : 1}>
       <Heading
         color="heading-navy-fg"
         variant={type === "featured" ? "h2" : "h4"}
@@ -151,7 +152,7 @@ const Footer = ({
     }
   };
   return (
-    <Flex p={type === "featured" ? "14px 0" : 6}>
+    <Flex p={type === "featured" ? "16px 0" : "0 24px 24px 24px"}>
       <HStack>
         <Icon as={renderPostTypeIcon()} />
 
