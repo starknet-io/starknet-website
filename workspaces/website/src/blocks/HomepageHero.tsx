@@ -1,4 +1,5 @@
-import { Box, Flex, Stack } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import { Box, Flex, Stack, useColorMode } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -16,8 +17,14 @@ import { useRive } from "@rive-app/react-canvas";
 const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 
 export const HomepageHero = ({ seo }: Props) => {
-  const { rive, RiveComponent } = useRive({
-    src: "/assets/starknet-hub.riv",
+  const { colorMode } = useColorMode();
+  const [riveAnimation, setRiveAnimation] = useState(colorMode === "light" ?  "/assets/starknet-hub.riv" : "/assets/starknet-hub-dark.riv");
+
+  useEffect(() => {
+    setRiveAnimation(colorMode === "light" ?  "/assets/starknet-hub.riv" : "/assets/starknet-hub-dark.riv");
+  }, [colorMode])
+  const { RiveComponent } = useRive({
+    src: riveAnimation,
     autoplay: true,
   });
 
