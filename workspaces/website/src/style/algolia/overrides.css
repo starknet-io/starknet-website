@@ -343,7 +343,7 @@ body.chakra-ui-dark {
 }
 .aa-DetachedCancelButton:active,
 .aa-ItemActionButtonDanger:active,
-.aa-ClearButton:hover {
+.aa-ClearButton:active {
   background: var(--chakra-colors-grays-alpha-5);
   box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.1);
   outline-width: 1px;
