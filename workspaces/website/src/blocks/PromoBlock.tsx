@@ -11,7 +11,7 @@ type Props = {
 export const PromoBlock = ({ seo }: Props) => {
   return (
     <Box
-      mt={{ base: "-372px", "2xl": "-23.5%" }}
+      mt={{ base: "-372px", "2xl": "-23.8%" }}
       sx={{
         clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
       }}

@@ -82,21 +82,17 @@ export default function PostByCategory({
           </BreadcrumbItem>
         </Breadcrumb>
       }
-      pageLastUpdated={`Page last updated ${moment(
-        post?.gitlog?.date
-      ).fromNow()}`}
       main={
         <Container maxWidth="846px">
           {post.post_type !== "video" ? (
             <Img
-              mb="32px"
               borderRadius={"8px"}
               src={post.image}
               alt={post.title}
             />
           ) : null}
 
-          <Box mb={"16px"}>
+          <Box my="24px">
             <Badge variant="stark_at_home" textTransform="capitalize">
               {post.post_type}
             </Badge>
@@ -105,7 +101,7 @@ export default function PostByCategory({
             {post.title}
           </Heading>
           <Flex mt="16px">
-            <HStack>
+            <HStack pb="16px">
               <Text fontSize="sm" color="muted">
                 {moment(post.published_date).format("MMM DD,YYYY")} ·
               </Text>
@@ -114,6 +110,13 @@ export default function PostByCategory({
               </Text>
             </HStack>
             <Spacer />
+            <Box>
+              <Text variant="cardBody" top="1px" pos="relative">
+                {`Page last updated ${moment(
+                  post?.gitlog?.date
+                ).fromNow()}`}
+              </Text>
+            </Box>
           </Flex>
           <Divider mt="8px" mb="24px" />
           {post.post_type === "video" ? (

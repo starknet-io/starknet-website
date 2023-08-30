@@ -2,6 +2,7 @@ import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
 import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 import { Block } from "src/blocks/Block";
 import { TableOfContents } from "./TableOfContents/TableOfContents";
 import {
@@ -91,11 +92,6 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             ) : null}
           </>
         }
-        pageLastUpdated={
-          data.page_last_updated && date
-            ? `Page last updated ${moment(date).fromNow()}  `
-            : null
-        }
         main={
           <Flex
             direction="column"
@@ -119,6 +115,13 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
                 {data.title}
               </Heading>
             ) : null}
+            <Box>
+              <Text variant="cardBody" top="1px" pos="relative">
+                {data.page_last_updated && date
+                  ? `Page last updated ${moment(date).fromNow()}  `
+                  : null}
+              </Text>
+            </Box>
             {!isFirstBlockLandingHero &&
               data.blocks?.map((block, i) => {
                 return <Block key={i} block={block} locale={locale} />;
