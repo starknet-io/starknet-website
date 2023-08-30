@@ -32,7 +32,7 @@ export const PageLayout = (props: Props) => {
   return (
     <Container
       py="0"
-      px="0"
+      px="32px"
       pb="16"
       flex="1"
       maxW={props.maxW ? props.maxW : "contentMaxW.xl"}
@@ -40,7 +40,7 @@ export const PageLayout = (props: Props) => {
       overflowY="visible"
       sx={props.sx}
     >
-      <Flex py="4" direction={{ base: "column", lg: "row" }}>
+      <Flex py="xl" direction={{ base: "column", lg: "row" }}>
         <Box>{props.breadcrumbs}</Box>
         <Spacer />
         <Box>
@@ -54,7 +54,7 @@ export const PageLayout = (props: Props) => {
         direction={{ base: "column", lg: "row" }}
         spacing={{ base: "12", lg: "100px" }}
         flex="1"
-        pt={{ base: 2, lg: 10 }}
+        pt={{ base: 2, lg: 0 }}
         // bg="yellow"
         maxWidth={props.contentMaxW || ""}
         margin={props.contentMaxW ? "0 auto" : "0"}

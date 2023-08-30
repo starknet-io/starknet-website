@@ -53,7 +53,7 @@ export const LanguageSwitcherDropdown = ({
           <Button
             size="sm"
             leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
-            variant="icon"
+            variant="ghost"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
             textTransform="uppercase"
             sx={{ marginInlineStart: "0 !important" }}

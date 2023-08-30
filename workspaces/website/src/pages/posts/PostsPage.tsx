@@ -181,7 +181,7 @@ const PostsPageLayout = ({
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
-          <Heading mt="-24px" color="heading-navy-fg" variant="h4" mb="1rem">
+          <Heading color="heading-navy-fg" variant="h3" mb="sm">
             Topics
           </Heading>
           <CustomTopics
@@ -261,7 +261,7 @@ function CustomTopics({
   }, [topicsDict, items]);
 
   return (
-    <Box display="flex" flexWrap="wrap" gap="8px" columnGap="4px" width="100%">
+    <Box display="flex" flexWrap="wrap" gap="12px" columnGap="4px" width="100%">
       {validTopics.map((topic, i) => (
         <Chip
           key={topic.value}
