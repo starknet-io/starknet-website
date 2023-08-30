@@ -75,6 +75,7 @@ export interface ImageIconLinkCardBlock {
 export interface IconLinkCardBlock {
   type: "icon_link_card";
   img?: string;
+  dark_img?: string;
   title?: string;
   description?: string;
   linkText?: string;

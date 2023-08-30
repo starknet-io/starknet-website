@@ -40,7 +40,6 @@ const bgStyles: Record<Props["variant"], SystemStyleObject> = {
     paddingTop: 900,
     mt: "-960",
     mb: { base: 0, lg: -130 },
-    zIndex: -1,
     "&::before": {
       content: '""',
       position: "absolute",
@@ -142,7 +141,16 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
           else {
             return (
               <Card variant="grid" key={hit?.name}>
-                <CardImg variant="grid" src={hit.image} />
+                <Box
+                  overflow="hidden"
+                  position="relative"
+                  width="100%"
+                  paddingBottom="56.25%"
+                  height={"100%"}
+                >
+                  <CardImg
+                    variant="grid" src={hit.image} />
+                </Box>
                 <CardBody variant="grid">
                   <Text variant="cardBody">
                     {hit?.end_date
@@ -182,7 +190,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
       <Flex mt="24px" alignItems="center" direction="column" pb="4xl">
         <Button
           onClick={() => navigate("/en/events")}
-          variant="outline"
+          variant="solid"
           bg="surface.accent.value"
         >
           {`Check out all events ->`}

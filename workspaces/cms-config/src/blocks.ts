@@ -316,6 +316,11 @@ export const blocks = [
         widget: "image",
       },
       {
+        name: "dark_img",
+        label: "Dark icon",
+        widget: "image",
+      },
+      {
         name: "title",
         label: "Title",
         widget: "string",

@@ -118,13 +118,14 @@ blocks:
           articles, podcasts, and videos.
         linkText: Learn more ->
         linkUrl: "#"
-        img: /assets/online_communities.svg
+        img: /assets/blogandmedia.svg
       - type: icon_link_card
         title: Community Hub
         description: Explore opportunities with teams  building in the ecosystem.
         linkText: Learn more ->
         linkUrl: "#"
         img: /assets/community-2-.svg
+        dark_img: /assets/community-dark.svg
     base: 1
     md: 2
     lg: ""

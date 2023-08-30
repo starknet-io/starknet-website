@@ -78,12 +78,18 @@ export const GridCardLayout = {
   flexDirection: "column",
   flex: 2,
   flexWrap: "wrap",
+  borderColor: "transparent",
   ...CardStyle,
 };
 export const GridCardImgLayout = {
   width: "100%",
   minHeight: 225,
   maxHeight: 225,
+  objectFit: "cover",
+  position: "absolute",
+  top: "0",
+  left: "0",
+  height: { base: "16rem", md: "12rem", lg: "10rem" },
 };
 export const GridCardBodyLayout = {
   display: "flex",

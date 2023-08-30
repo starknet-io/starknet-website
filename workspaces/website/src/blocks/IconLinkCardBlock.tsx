@@ -1,4 +1,4 @@
-import { BoxProps, Box, Flex } from "@chakra-ui/react";
+import { BoxProps, Box, Flex, useColorMode } from "@chakra-ui/react";
 import { IconLinkCardBlock as IconLinkCardBlockType } from "@starknet-io/cms-data/src/pages";
 import { Card, CardBody, CardLink } from "@ui/Card/Card";
 import { Heading } from "@ui/Typography/Heading";
@@ -7,7 +7,7 @@ import { Text } from "@ui/Typography/Text";
 interface Props extends IconLinkCardBlockType, Omit<BoxProps, "color"> {}
 
 export const IconLinkCardBlock = (props: Props) => {
-  const { img, title, description, linkText, linkUrl, color } = props;
+  const { img, dark_img, title, description, linkText, linkUrl, color } = props;
   const renderColorValues = (color: string) => {
     switch (color) {
       case "red":
@@ -33,7 +33,7 @@ export const IconLinkCardBlock = (props: Props) => {
     }
   };
   const colorValues = renderColorValues(color as string);
-
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Card
       variant="iconLink"
@@ -55,7 +55,7 @@ export const IconLinkCardBlock = (props: Props) => {
       >
         <Flex direction="column" justifyContent="space-between" height="100%">
           <Box>
-            {img ? <img src={img} width="60px" height="60px" /> : null}
+            {img ? <img src={colorMode === 'light' ? img : dark_img ? dark_img : img} width="60px" height="60px" alt="" /> : null}
             <Heading
               variant="h3"
               mt="12px"

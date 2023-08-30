@@ -20,7 +20,7 @@ export const LargeCardsBlock = (props: Props) => {
   return (
     <Flex direction="column" gap="40px">
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg as string} />
+        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg ? horizontal1.darkImg as string : horizontal1.img} />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal1.title}</CardTitle>
           <Text
