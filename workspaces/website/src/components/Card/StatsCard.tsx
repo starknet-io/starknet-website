@@ -45,6 +45,9 @@ export const StatsCard = ({
         pb="xl"
         borderBottom="1px solid"
         borderColor="brand-primary-infinite-blue-solid-9"
+        minHeight="97px"
+        display="flex"
+        alignItems="flex-end"
       >
         {title}
       </Heading>
@@ -57,6 +60,9 @@ export const StatsCard = ({
         fontWeight={600}
       >
         {stat}
+        <Box marginTop="20px">
+          <img src="/assets/StatCardGraph.svg" alt="" width="32px" height="38px" />
+        </Box>
       </Box>
       <Box
         p="xs"

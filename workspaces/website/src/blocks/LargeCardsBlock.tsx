@@ -36,7 +36,7 @@ export const LargeCardsBlock = (props: Props) => {
           <Button
             variant="outline"
             href={horizontal1.linkUrl as string}
-            sx={{ mt: { base: "4px", lg: "0" } }}
+            sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
             bg="surface.bg-page"
           >
             {horizontal1.linkText}
@@ -61,7 +61,7 @@ export const LargeCardsBlock = (props: Props) => {
             <Button
               variant="outline"
               href={vertical1.linkUrl as string}
-              sx={{ mt: { base: "4px", lg: "0" } }}
+              sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
               bg="surface.bg-page"
             >
               {vertical1.linkText}
@@ -85,7 +85,7 @@ export const LargeCardsBlock = (props: Props) => {
             <Button
               variant="outline"
               href={vertical2.linkUrl as string}
-              sx={{ mt: { base: "4px", lg: "0" } }}
+              sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
               bg="surface.bg-page"
             >
               {vertical2.linkText}
@@ -110,7 +110,7 @@ export const LargeCardsBlock = (props: Props) => {
           <Button
             variant="outline"
             href={horizontal2.linkUrl as string}
-            sx={{ mt: { base: "4px", lg: "0" } }}
+            sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
             bg="surface.bg-page"
           >
             {horizontal2.linkText}

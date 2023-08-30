@@ -22,7 +22,7 @@ export const PromoBlock = ({ seo }: Props) => {
           backgroundSize: "cover",
           backgroundPosition: "top right",
           backgroundRepeat: "no-repeat",
-          minHeight: { base: 670, md: 530, "2xl": 580, "3xl": 700 }
+          minHeight: { base: 670, md: 530, "2xl": 580, "3xl": 700, "4xl": 800 }
         }}
       >
         <Box

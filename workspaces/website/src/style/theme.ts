@@ -148,6 +148,7 @@ const theme = extendTheme(proTheme, {
     xl: "80em",
     "2xl": "96em",
     "3xl": "140em",
+    "4xl": "180em",
   },
   space: {
     none: "0px",

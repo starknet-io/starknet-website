@@ -35,7 +35,7 @@ export const LargeCardHorizontalBodyLayout = {
 };
 export const LargeCardHorizontalLayout = {
   display: "flex",
-  padding: { base: "24px", lg: "80px" },
+  padding: { base: "24px", md: "120px 40px", lg: "80px" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
