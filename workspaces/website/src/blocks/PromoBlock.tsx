@@ -11,7 +11,7 @@ type Props = {
 export const PromoBlock = ({ seo }: Props) => {
   return (
     <Box
-      mt="-372px"
+      mt={{ base: "-372px", "2xl": "-23.5%" }}
       sx={{
         clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
       }}
@@ -22,13 +22,13 @@ export const PromoBlock = ({ seo }: Props) => {
           backgroundSize: "cover",
           backgroundPosition: "top right",
           backgroundRepeat: "no-repeat",
-          height: { base: 670, md: 530 }
+          minHeight: { base: 670, md: 530, "2xl": 580, "3xl": 700 }
         }}
       >
         <Box
           maxW={{ base: "1200px", md: "1212px" }}
           px={{ base: "16px", md: "32px" }}
-          py="120px"
+          py={{ base: "120px", "2xl": "8.5%" }}
           m="0 auto"
           sx={{
             alignItems: { base: "flex-start", md: "flex-end" },

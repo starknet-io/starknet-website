@@ -11,10 +11,10 @@
 }
 
 .rssBlock {
-    left:0px;
+    left: 0px;
     background: transparent;
     position: absolute;
-    width:1070px;
+    width: 1070px;
     height: 200px;
     overflow: visible;
     flex-direction: row;
@@ -28,7 +28,7 @@
   }
 
 .marqueeStyle {
-    display:flex;
+    display: flex;
     animation-play-state: running;
     /* Apply animation to this element */
     -webkit-animation: scrolling-left1 120s linear infinite;
@@ -36,7 +36,7 @@
 }
 
 .marqueeStyle2 {
-    display:flex;
+    display: flex;
     animation-play-state: running;
     /* Apply animation to this element */
     -webkit-animation: scrolling-left2 120s linear infinite;
@@ -55,7 +55,7 @@
 }
 
 .marqueeStyleRight {
-    display:flex;
+    display: flex;
     animation-play-state: running;
     /* Apply animation to this element */
     -webkit-animation: scrolling-right1 120s linear infinite;
@@ -63,7 +63,7 @@
 }
 
 .marqueeStyle2Right {
-    display:flex;
+    display: flex;
     animation-play-state: running;
     /* Apply animation to this element */
     -webkit-animation: scrolling-right2 120s linear infinite;
