@@ -6,12 +6,11 @@ const { definePartsStyle, defineMultiStyleConfig } =
 
 const listCard = definePartsStyle({
   container: {
-    px: "12px",
-    py: "2px",
-    background: "#F3F4F6",
-    color: "#1F2937",
+    px: "sm",
+    background: "surface.transparent.value",
+    color: "content.accent.value",
     fontSize: "14px",
-    borderRadius: "12px",
+    borderRadius: "round",
   },
 });
 

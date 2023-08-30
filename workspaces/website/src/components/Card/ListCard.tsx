@@ -49,36 +49,35 @@ type Props = {
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
+  const showWebsiteIcon =
+    props.href && props.variant !== "event" && props.variant !== "job";
+
   return (
     <Box maxW="5xl">
-      <LinkBox
-        sx={{ textDecoration: "none!important", cursor: "pointer" }}
-      >
-        <CardGradientBorder padding="0" borderRadius={{ base: "16px" }}>
+      <LinkBox sx={{ textDecoration: "none!important", cursor: "pointer" }}>
+        <CardGradientBorder padding="0" borderRadius="md">
           <Box
             w={{ base: "full" }}
             mx="auto"
-            bg="card-bg"
-            borderRadius="16px"
+            bg="surface.card"
             rounded={props.variant === "default" ? "8px" : "16px"}
-            padding={"32px 24px"}
-            // borderWidth="1px"
-            borderColor="card-br"
-            // shadow={{ md: "base" }}
-            px={{ base: "6", md: "8" }}
+            p={{
+              base: "xl",
+              md: "2xl",
+            }}
           >
             <Stack
               direction={{ base: "column", md: "row" }}
-              spacing={{ base: "3", md: "6" }}
+              spacing="xl"
               align="center"
             >
-              {props.image && <Stack spacing="4">
+              {props.image && (
                 <Box
                   width="80px"
                   height="80px"
                   borderRadius="8px"
                   overflow="hidden"
-                  marginBottom={{ base: "16px", md: "0" }}
+                  // marginBottom={{ base: "16px", md: "0" }}
                 >
                   <Img
                     width="full"
@@ -88,91 +87,59 @@ export const ListCard = (props: Props) => {
                     objectFit="contain"
                   />
                 </Box>
-              </Stack>}
-              <Box flex="1">
+              )}
+              <Box flex="1" display="flex" flexDir="column" gap="base">
                 {props.startDateTime && (
                   <Text
-                    // mt="2"
-                    fontSize="xs"
-                    fontWeight="bold"
-                    color="list-card-sm-title-fg"
+                    fontSize="12px"
+                    lineHeight="16px"
+                    fontWeight="500"
+                    color="content.support"
                     display="flex"
                     flexDirection={{ base: "row", md: "row" }}
-                    // justifyContent="space-between"
                     alignItems={{ base: "flex-start", md: "center" }}
-                    // margin="0"
                   >
                     {props.startDateTime}
-                    {props.city && (
-                      <Text fontSize="xs" fontWeight="bold" px="4px">
-                        ·
-                      </Text>
-                    )}
-                    <Text
-                      // mt="2"
-                      fontSize="xs"
-                      fontWeight="bold"
-                      color="list-card-sm-title-fg"
-                      // paddingBottom="4px",
-
-                      as="span"
-                    >
-                      {/* {props.city} */}
+                    {props.city && <Text px="4px">·</Text>}
+                    <Text color="content.support" as="span">
                       {props.city && `  ${props.city}, `}
                       {props.country && props.country}
                     </Text>
                   </Text>
                 )}
                 <Stack
-                  spacing={{ base: "1", md: "2" }}
+                  spacing="base"
+                  alignItems="center"
                   direction={{ base: "row", md: "row" }}
-                  pb="4px"
-                  // removing until designers look at this
-                  // borderTop={!props.startDateTime ? "none" : "1px solid red"}
-                  paddingTop="4px"
                 >
                   <Heading
-                    variant="h4"
-                    color="btn-primary-bg"
+                    variant="h3"
+                    color="content.accent.value"
                     _dark={{
                       color: "button-nav-fg",
                     }}
                   >
                     {props.title}
                   </Heading>
-                  <HStack fontSize={{ base: "md", md: "xl" }}>
-                    {/* <Icon as={FiExternalLink} color="list-card-sm-title-link-fg" /> */}
-                    <Icon
-                      as={HiArrowTopRightOnSquare}
-                      color="list-card-sm-title-link-fg"
-                    />
-                  </HStack>
+                  <Icon
+                    as={HiArrowTopRightOnSquare}
+                    color="content.link.value"
+                    boxSize="20px"
+                  />
                 </Stack>
 
-                <LinkOverlay 
-                  pb="12px" 
-                  fontSize="sm" 
-                  color="list-card-lg-desc-fg"
+                <LinkOverlay
+                  fontSize="14px"
+                  color="content.default.value"
                   href={props.href!}
                   target="_blank"
                 >
                   {props.description}
                 </LinkOverlay>
-                {/* {props.variant === "event" && (
-                <Box py="8px">
-                  <Button variant="outline" size="sm">
-                    View event recap
-                  </Button>
-                </Box>
-              )} */}
                 {props.type_list ? (
-                  <Wrap shouldWrapChildren mb="12px">
+                  <Wrap shouldWrapChildren pt="xs">
                     {props.type_list.map((tag) => (
-                      <Link
-                        key={tag.type}
-                        isExternal
-                        href={tag.url}
-                      >
+                      <Link key={tag.type} isExternal href={tag.url}>
                         <Tag variant="listCard">
                           {tag.type !== "ios" ? titleCase(tag.type) : "iOS"}
                         </Tag>
@@ -181,7 +148,7 @@ export const ListCard = (props: Props) => {
                   </Wrap>
                 ) : (
                   props.type && (
-                    <Wrap shouldWrapChildren mb="12px">
+                    <Wrap shouldWrapChildren pt="xs" spacing="xs">
                       {props.location && (
                         <Tag variant="listCard">
                           {titleCase(props.location)}
@@ -197,15 +164,12 @@ export const ListCard = (props: Props) => {
                     </Wrap>
                   )
                 )}
-
-                <Wrap spacingX="24px" shouldWrapChildren mt='20px'>
-                  {props.href &&
-                    props.variant !== "event" &&
-                    props.variant !== "job" && (
-                      <Link
-                        isExternal
-                        href={`${props.href}`}
-                      >
+                {(showWebsiteIcon ||
+                  props.twitterHandle ||
+                  props.discordHandle) && (
+                  <Wrap spacingX="24px" shouldWrapChildren mt="20px">
+                    {showWebsiteIcon && (
+                      <Link isExternal href={`${props.href}`}>
                         <Icon
                           boxSize="18px"
                           color="list-card-icon-fg"
@@ -213,31 +177,26 @@ export const ListCard = (props: Props) => {
                         />
                       </Link>
                     )}
-                  {props.twitterHandle && (
-                    <Link
-                      isExternal
-                      href={`${props.twitterHandle}`}
-                    >
-                      <Icon
-                        boxSize="18px"
-                        color="list-card-icon-fg"
-                        as={SiTwitter}
-                      />
-                    </Link>
-                  )}
-                  {props.discordHandle && (
-                    <Link
-                      isExternal
-                      href={`${props.discordHandle}`}
-                    >
-                      <Icon
-                        boxSize="18px"
-                        color="list-card-icon-fg"
-                        as={SiDiscord}
-                      />
-                    </Link>
-                  )}
-                </Wrap>
+                    {props.twitterHandle && (
+                      <Link isExternal href={`${props.twitterHandle}`}>
+                        <Icon
+                          boxSize="18px"
+                          color="list-card-icon-fg"
+                          as={SiTwitter}
+                        />
+                      </Link>
+                    )}
+                    {props.discordHandle && (
+                      <Link isExternal href={`${props.discordHandle}`}>
+                        <Icon
+                          boxSize="18px"
+                          color="list-card-icon-fg"
+                          as={SiDiscord}
+                        />
+                      </Link>
+                    )}
+                  </Wrap>
+                )}
                 {props.recap?.link && (
                   <Button
                     href={props.recap.link}

@@ -16,7 +16,8 @@ export const Chip = ({
   return (
     <Button
       size="sm"
-      p="8px 16px"
+      py="xs"
+      px="md"
       borderRadius="xs"
       variant="unstyled"
       color={
@@ -31,7 +32,7 @@ export const Chip = ({
       display="inline-flex"
       gap="xs"
       _hover={{
-        bg: isSelected ? "surface.accent.value" : "surface.transparent.hover",
+        bg: isSelected ? "surface.accent.hover" : "surface.transparent.hover",
         color: isSelected
           ? "content.on-surface-inverted.value"
           : "content.default.hover",
@@ -39,6 +40,7 @@ export const Chip = ({
       _disabled={{
         color: "content.default.disabled",
         pointerEvents: "none",
+        background: "surface.transparent.value",
       }}
       {...props}
     >
