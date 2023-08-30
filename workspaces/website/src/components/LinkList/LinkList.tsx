@@ -31,13 +31,13 @@ const Root = (props: RootProps) => {
     lg: "24px",
   };
   return (
-    <Box mb="80px">
+    <Box>
       {heading && (
         <Heading
           variant="h3"
           color="heading-navy-fg"
           id={`toc-${slugify(heading)}`}
-          marginBottom="24px"
+          marginBottom="sm"
         >
           {heading}
         </Heading>

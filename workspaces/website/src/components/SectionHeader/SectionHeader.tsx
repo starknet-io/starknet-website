@@ -21,16 +21,22 @@ export const SectionHeader = ({
     <Box
       as="section"
       maxW="contentMaxW.md"
+      borderBottom="1px solid"
+      borderColor="border.divider"
+      pb={{
+        base: "page.block-gap.base",
+        md: "page.block-gap.md",
+        lg: "page.block-gap.lg",
+      }}
       // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
-      <Stack spacing="40px" pb={6}>
+      <Stack spacing="40px">
         <Box>
           <Heading
             variant="h1"
             as="h2"
             // fontSize={{ base: "32px", md: "48px" }}
             // lineHeight={{ base: "1.5em", md: "1.5em" }}
-            pb={size === "sm" ? 2 : 6}
             fontWeight="extrabold"
             color="heading-navy-fg"
           >
@@ -40,7 +46,7 @@ export const SectionHeader = ({
             <Text
               color="content.accent.value"
               variant="body"
-              pb={{ base: 4, lg: 8 }}
+              pt={size === "sm" ? "xs" : "lg"}
             >
               {description}
             </Text>

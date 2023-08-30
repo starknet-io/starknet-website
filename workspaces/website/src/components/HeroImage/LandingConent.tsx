@@ -31,9 +31,9 @@ export const LandingConent = ({ children, ...rest }: BoxProps) => {
         display="flex"
         flexDirection="column"
         gap={{
-          base: "page.gap-standart.base",
-          md: "page.gap-standart.md",
-          lg: "page.gap-standart.lg",
+          base: "page.gap-standard.base",
+          md: "page.gap-standard.md",
+          lg: "page.gap-standard.lg",
         }}
         sx={{
           "> *, .community-events-list": {
