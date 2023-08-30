@@ -145,6 +145,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           backgroundImage: "url(/assets/outline-bg.svg)",
           backgroundSize: "130%",
           backgroundPosition: "center",
+          marginTop: { base: 0, lg: -100 }
         }}
       >
         <Box

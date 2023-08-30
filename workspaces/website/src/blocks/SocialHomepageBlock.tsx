@@ -62,7 +62,7 @@ const SocialHomepageBlock = ({
           {description}
         </Text>
       </Box>
-      <Box sx={{ position: "relative", height: 535, mt: "80px" }}>
+      <Box sx={{ position: "relative", height: 545, mt: "80px" }}>
         <Box sx={{ position: "absolute", left: { base: "55%", md: "50%" } }}>
           <Box
             sx={{ position: "relative", left: { base: "-60%", md: "-55%" } }}
@@ -70,8 +70,8 @@ const SocialHomepageBlock = ({
             <Flex direction="row" gap="24px" overflow="visible">
               <Box
                 sx={{
-                  width: 288,
-                  height: 255,
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaFirst.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -79,8 +79,8 @@ const SocialHomepageBlock = ({
               />
               <Box
                 sx={{
-                  width: 423,
-                  height: 255,
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaSecond.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -88,8 +88,8 @@ const SocialHomepageBlock = ({
               />
               <Box
                 sx={{
-                  width: 288,
-                  height: 255,
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaThird.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -101,8 +101,8 @@ const SocialHomepageBlock = ({
               />
               <Box
                 sx={{
-                  width: 423,
-                  height: 255,
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaFourth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -112,8 +112,8 @@ const SocialHomepageBlock = ({
             <Flex direction="row" gap="24px" overflow="visible" mt="24px">
               <Box
                 sx={{
-                  width: 423,
-                  height: 255,
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaFifth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -121,8 +121,8 @@ const SocialHomepageBlock = ({
               />
               <Box
                 sx={{
-                  width: 288,
-                  height: 255,
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaSixth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -135,8 +135,8 @@ const SocialHomepageBlock = ({
               />
               <Box
                 sx={{
-                  width: 423,
-                  height: 255,
+                  width: { base: 302, lg: 423 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaSeventh.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
@@ -144,8 +144,8 @@ const SocialHomepageBlock = ({
               />
               <Box
                 sx={{
-                  width: 288,
-                  height: 255,
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaSixth.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",

@@ -53,7 +53,6 @@ export const HomepageHero = ({ seo }: Props) => {
           },
         }}
       >
-        {/* <iframe width="2000" height="1025" src="https://rive.app/s/l5ivPhccukGcLoezhwqWyQ/embed"></iframe> */}
         <RiveComponent className="rive-animation" />
         <Box
           zIndex={2}
@@ -90,7 +89,7 @@ export const HomepageHero = ({ seo }: Props) => {
               </Heading>
               <Text
                 color="#FCCFD4"
-                mt="28px"
+                mt={{ base: "8px", lg: "20px" }}
                 fontSize="20px"
                 lineHeight="36px"
                 fontWeight="500"
@@ -100,7 +99,7 @@ export const HomepageHero = ({ seo }: Props) => {
               <Stack
                 direction={{ base: "column", md: "row" }}
                 spacing="4"
-                mt="32px"
+                mt="40px"
                 position={{ base: "relative", md: "relative" }}
                 zIndex={4}
               >

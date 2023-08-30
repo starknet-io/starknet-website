@@ -58,8 +58,8 @@ export const IconLinkCardBlock = (props: Props) => {
             {img ? <img src={img} width="60px" height="60px" /> : null}
             <Heading
               variant="h3"
-              mt="32px"
-              mb="20px"
+              mt="12px"
+              mb="4px"
               color="content.accent.value"
             >
               {title}

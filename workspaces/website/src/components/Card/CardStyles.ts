@@ -23,7 +23,6 @@ export const LargeCardBodyLayout = {
   minWidth: "164px",
   flexDirection: "column",
   alignItems: "flex-start",
-  gap: { base: "32px", lg: "40px" },
   flex: "1 0 0",
 };
 export const LargeCardHorizontalBodyLayout = {
@@ -32,7 +31,6 @@ export const LargeCardHorizontalBodyLayout = {
   maxWidth: "460px",
   flexDirection: "column",
   alignItems: "flex-start",
-  gap: "40px",
   flex: "1 0 0",
 };
 export const LargeCardHorizontalLayout = {
@@ -95,7 +93,6 @@ export const GridCardBodyLayout = {
   alignItems: "flex-start",
   flex: "1 0 0",
   flexDirection: "column",
-  gap: "20px",
   bg: "surface.bg-page",
 };
 export const AssetCardLayout = {

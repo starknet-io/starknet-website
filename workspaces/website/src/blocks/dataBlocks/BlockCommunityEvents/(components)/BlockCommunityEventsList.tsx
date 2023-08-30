@@ -38,7 +38,8 @@ const bgStyles: Record<Props["variant"], SystemStyleObject> = {
     position: "relative",
     minHeight: { base: 2538, md: 2138, lg: 1838 },
     paddingTop: 900,
-    mt: "-900",
+    mt: "-960",
+    mb: { base: 0, lg: -130 },
     "&::before": {
       content: '""',
       position: "absolute",
@@ -151,7 +152,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                         )}`
                       : moment(hit?.start_date).format("ddd MMM DD, YYYY")}
                   </Text>
-                  <Heading m="0" variant="h3" color="heading-navy-fg">
+                  <Heading mt="8px" mb={{base: "12px", lg: "20px"}} variant="h3" color="heading-navy-fg">
                     {hit.name}
                   </Heading>
                   <CardLink variant="iconLink" href="">
@@ -177,7 +178,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
           }
         })}
       </Grid>
-      <Flex mt="24px" alignItems="center" direction="column">
+      <Flex mt="24px" alignItems="center" direction="column" pb="4xl">
         <Button
           onClick={() => navigate("/en/events")}
           variant="outline"

@@ -103,7 +103,7 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
                 data.template === "content" ||
                 data.template === "narrow content"
                   ? "32px"
-                  : "136px",
+                  : "140px",
             }}
           >
             {data.show_title ? (

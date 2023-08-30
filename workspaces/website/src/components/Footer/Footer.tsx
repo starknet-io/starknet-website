@@ -115,7 +115,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                 padding={{ base: "20px 0", md: "8px 0px" }}
                 fontSize="14px"
                 lineHeight="24px"
-                gap={{ base: "2xl", md: "3xl" }}
+                gap={{ base: "8px", md: "3xl" }}
                 flexDirection={{ base: "column", md: "row" }}
               >
                 {socialLinks.map((social) => (
@@ -205,7 +205,7 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
         marginTop="0px !important"
         display="flex"
         flexDirection="column"
-        gap="1rem"
+        gap="4px"
         sx={{
           "& > *": {
             paddingBlock: "0.5rem",

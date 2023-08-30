@@ -58,7 +58,7 @@ export const PatternCard = ({
           py={{
             lg: "xl",
           }}
-          gap="lg"
+          gap="4px"
           display="flex"
           flexDir="column"
           flex="1"
