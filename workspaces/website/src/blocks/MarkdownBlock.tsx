@@ -49,7 +49,8 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
                 id={`toc-${slugify(props.children.join(" "))}`}
                 color="heading-navy-fg"
                 variant="h2"
-                marginBottom="16px"
+                marginTop="20px"
+                marginBottom="4px"
                 {...props}
               />
             </>
@@ -62,7 +63,8 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
               /> */}
               <Heading
                 color="heading-navy-fg"
-                marginBottom="16px"
+                marginTop="20px"
+                marginBottom="4px"
                 id={`toc-${slugify(props.children.join(" "))}`}
                 variant="h3"
                 {...props}
@@ -79,7 +81,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
             <Heading color="heading-navy-fg" variant="h6" {...props} />
           ),
           p: (props) => (
-            <Text pt={2} pb={4} lineHeight="32px" variant="body" {...props} />
+            <Text pt={1} pb={3} lineHeight="32px" variant="body" {...props} />
           ),
           ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
