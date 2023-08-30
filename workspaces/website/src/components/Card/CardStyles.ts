@@ -100,7 +100,7 @@ export const GridCardBodyLayout = {
 };
 export const AssetCardLayout = {
   display: "flex",
-  padding: "24px",
+  padding: "xl",
   alignItems: "center",
   alignContent: "center",
   gap: "24px 24px",
@@ -133,7 +133,7 @@ export const AssetCardBodyLayout = {
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  gap: "16px",
+  gap: "base",
   alignSelf: "stretch",
   flex: 1,
 };

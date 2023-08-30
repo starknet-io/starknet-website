@@ -169,9 +169,9 @@ export const Card = (props: Props) => {
     sx,
     ...rest
   } = props;
-  const bgColor = variant === "asset" ? "white" : "#FBFBFB";
+  const bgColor = variant === "asset" ? "border.card" : "#FBFBFB";
   let styles = {
-    borderRadius: "16px",
+    borderRadius: "md",
   };
   switch (variant) {
     case "grid":

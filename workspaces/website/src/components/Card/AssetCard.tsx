@@ -1,5 +1,5 @@
 import { Card, CardBody, CardImg, CardLink, CardTitle } from "./Card";
-import { HStack, Icon, Link, useColorMode } from "@chakra-ui/react";
+import { Box, HStack, Icon, Link, useColorMode } from "@chakra-ui/react";
 import {
   HiArrowTopRightOnSquare,
   HiGlobeAlt,
@@ -41,14 +41,23 @@ export const AssetCard = ({
   image,
   discord,
 }: AssetCardProps) => {
-  const { colorMode } = useColorMode();
   return (
-    <Card variant="asset">
+    <Card variant="asset" bgColor="surface.card">
       <CardImg variant="asset" src={image} />
       <CardBody variant="asset">
-        <CardTitle variant="asset">
-          {title} <Icon as={HiArrowTopRightOnSquare} />
-        </CardTitle>
+        <Box display="flex" alignItems="center" gap="xs">
+          <CardTitle variant="asset">{title}</CardTitle>
+          {website_url && (
+            <Link
+              href={website_url}
+              aria-label="Website link"
+              lineHeight={1}
+              isExternal
+            >
+              <Icon as={HiArrowTopRightOnSquare} width="24px" height="24px" />
+            </Link>
+          )}
+        </Box>
         <Text variant="body">{description}</Text>
         <HStack>
           {twitter && <SocialIconLink href={twitter} icon={SiTwitter} />}
@@ -57,7 +66,7 @@ export const AssetCard = ({
             <SocialIconLink href={website_url} icon={HiGlobeAlt} />
           )}
         </HStack>
-        <CardLink variant="iconLink" href={website_url} isExternal>
+        <CardLink variant="iconLink" href={website_url} isExternal mt="sm">
           View <Icon as={HiOutlineArrowRight} aria-label="Link" />
         </CardLink>
       </CardBody>
