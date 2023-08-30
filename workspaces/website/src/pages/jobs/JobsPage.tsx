@@ -1,4 +1,3 @@
-
 import {
   BreadcrumbItem,
   BreadcrumbLink,
@@ -27,6 +26,7 @@ import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFilter
 import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import JobsCard from "./JobsCard";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
 
 export interface AutoProps {
   readonly params: {
@@ -40,7 +40,7 @@ export interface Props extends AutoProps {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  readonly seo: SEOTexts['jobs'];
+  readonly seo: SEOTexts["jobs"];
 }
 
 export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
@@ -56,7 +56,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
       >
         <Configure
           hitsPerPage={40}
-          facetsRefinements={{ locale: [params.locale], status: ['active'] }}
+          facetsRefinements={{ locale: [params.locale], status: ["active"] }}
         />
         <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
@@ -65,7 +65,6 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
 }
 
 const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
-
   const { items: roles, refine: refineRoles } = useRefinementList({
     attribute: "job.role",
     sortBy: ["name:asc"],
@@ -84,29 +83,26 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     handleFilterClick,
     filtersCounts,
     selectedFilters,
-    setSelectedFilters
-  } = useMobileFiltersDrawer([
-    ...roles,
-    ...types,
-  ]);
+    setSelectedFilters,
+  } = useMobileFiltersDrawer([...roles, ...types]);
 
   function mapSelectedFilters() {
-    let result: { "job.role"?: string[], "job.type"?: string[] } = {};
+    let result: { "job.role"?: string[]; "job.type"?: string[] } = {};
 
     let rolesFilteredValues = roles
-        .filter(item => item.isRefined)
-        .map(item => item.value);
+      .filter((item) => item.isRefined)
+      .map((item) => item.value);
 
     if (rolesFilteredValues.length > 0) {
-        result["job.role"] = rolesFilteredValues;
+      result["job.role"] = rolesFilteredValues;
     }
 
     let typesFilteredValues = types
-        .filter(item => item.isRefined)
-        .map(item => item.value);
+      .filter((item) => item.isRefined)
+      .map((item) => item.value);
 
     if (typesFilteredValues.length > 0) {
-        result["job.type"] = typesFilteredValues;
+      result["job.type"] = typesFilteredValues;
     }
 
     return result;
@@ -115,7 +111,7 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
   const handleModalClose = () => {
     onClose();
     setSelectedFilters(mapSelectedFilters());
-  }
+  };
 
   const handleApplyChanges = () => {
     if (selectedFilters["job.role"]?.length) {
@@ -129,15 +125,15 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     }
 
     if (selectedFilters["job.type"]?.length) {
-      selectedFilters["job.type"].map(type => {
+      selectedFilters["job.type"].map((type) => {
         refineTypes(type);
-      })
+      });
     } else {
       types.map((type) => {
         type.isRefined && refineTypes(type.value);
       });
     }
-  }
+  };
 
   const handleApplyFilters = () => {
     handleApplyChanges();
@@ -148,7 +144,7 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     handleApplyChanges();
     setSelectedFilters({});
   };
-  
+
   return (
     <PageLayout
       sectionHeaderTitle={seo.title}
@@ -163,45 +159,62 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
         />
       }
       breadcrumbs={
-        <Breadcrumb separator="/">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}/community`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Community
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink fontSize="sm">Jobs</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
+        <Breadcrumbs
+          locale={params.locale}
+          items={[
+            {
+              label: "Community",
+              link: `/${params.locale}/community`,
+            },
+            {
+              label: "Jobs",
+              link: ``,
+            },
+          ]}
+        />
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
-          <CustomRole items={roles} refine={refineRoles} selectedFilters={selectedFilters} />
-          <CustomType items={types} refine={refineTypes} selectedFilters={selectedFilters} />
+          <CustomRole
+            items={roles}
+            refine={refineRoles}
+            selectedFilters={selectedFilters}
+          />
+          <CustomType
+            items={types}
+            refine={refineTypes}
+            selectedFilters={selectedFilters}
+          />
         </Box>
       }
       main={
         <Box>
           <CustomHits />
           <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
-          <CustomRole items={roles} refine={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
-          <CustomType items={types} refine={handleFilterClick} selectedFilters={selectedFilters} isDesktop={false} />
-          <Button variant="solid" fullWidth mb={2} mt={6} onClick={handleApplyFilters}>Apply filters</Button>
-          <Button variant="outline" onClick={handleClearFilters} fullWidth>Clear all</Button>
+            <CustomRole
+              items={roles}
+              refine={handleFilterClick}
+              selectedFilters={selectedFilters}
+              isDesktop={false}
+            />
+            <CustomType
+              items={types}
+              refine={handleFilterClick}
+              selectedFilters={selectedFilters}
+              isDesktop={false}
+            />
+            <Button
+              variant="solid"
+              fullWidth
+              mb={2}
+              mt={6}
+              onClick={handleApplyFilters}
+            >
+              Apply filters
+            </Button>
+            <Button variant="outline" onClick={handleClearFilters} fullWidth>
+              Clear all
+            </Button>
           </MobileFiltersDrawer>
         </Box>
       }
@@ -212,14 +225,18 @@ function CustomRole({
   items,
   refine,
   selectedFilters,
-  isDesktop = true
+  isDesktop = true,
 }: {
   items: RefinementListProps["items"];
   refine: any;
   selectedFilters: any;
   isDesktop?: boolean;
 }) {
-  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+  const checkIfFilterExists = (
+    role: string,
+    filter: string,
+    selectedFilters: { [key: string]: string[] }
+  ) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
@@ -232,8 +249,18 @@ function CustomRole({
         {items.map((item, i) => (
           <Button
             size="sm"
-            variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "job.role", selectedFilters) ? "filterActive" : "filter"}
-            onClick={() => isDesktop ? refine(item.value) : refine("job.role", item.label)}
+            variant={
+              isDesktop
+                ? item.isRefined
+                  ? "filterActive"
+                  : "filter"
+                : checkIfFilterExists(item.label, "job.role", selectedFilters)
+                ? "filterActive"
+                : "filter"
+            }
+            onClick={() =>
+              isDesktop ? refine(item.value) : refine("job.role", item.label)
+            }
             key={i}
             justifyContent="flex-start"
           >
@@ -249,14 +276,18 @@ function CustomType({
   items,
   refine,
   selectedFilters,
-  isDesktop = true
+  isDesktop = true,
 }: {
   items: RefinementListProps["items"];
   refine: any;
   selectedFilters: any;
   isDesktop?: boolean;
 }) {
-  const checkIfFilterExists = (role: string, filter: string, selectedFilters: { [key: string]: string[] }) => {
+  const checkIfFilterExists = (
+    role: string,
+    filter: string,
+    selectedFilters: { [key: string]: string[] }
+  ) => {
     const rolesA = selectedFilters[filter];
     return rolesA && rolesA.includes(role);
   };
@@ -270,9 +301,19 @@ function CustomType({
           const label = titleCase(item.label);
           return (
             <Button
-              variant={isDesktop ? (item.isRefined ? "filterActive" : "filter") : checkIfFilterExists(item.label, "job.type", selectedFilters) ? "filterActive" : "filter"}
+              variant={
+                isDesktop
+                  ? item.isRefined
+                    ? "filterActive"
+                    : "filter"
+                  : checkIfFilterExists(item.label, "job.type", selectedFilters)
+                  ? "filterActive"
+                  : "filter"
+              }
               size="sm"
-              onClick={() => isDesktop ? refine(item.value) : refine("job.type", item.label)}
+              onClick={() =>
+                isDesktop ? refine(item.value) : refine("job.type", item.label)
+              }
               key={i}
               justifyContent="flex-start"
             >
@@ -317,7 +358,21 @@ function CustomHits() {
 
   return (
     <>
-      <Flex gap={4} direction="column" flex={1}>
+      <Flex
+        rowGap={4}
+        columnGap={{
+          base: "cards.gap-standard.base",
+          md: "cards.gap-standard.md",
+          lg: "cards.gap-standard.lg",
+        }}
+        direction="column"
+        flex={1}
+        mt={{
+          base: "page.gap-condenced.base",
+          md: "page.gap-condenced.md",
+          lg: "page.gap-condenced.lg",
+        }}
+      >
         {hits.map((hit, i) => (
           <JobsCard key={i} hit={hit} />
         ))}
@@ -325,11 +380,7 @@ function CustomHits() {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button
-            onClick={() => showMore()}
-            flexShrink={0}
-            variant="rounded"
-          >
+          <Button onClick={() => showMore()} flexShrink={0} variant="rounded">
             View More
           </Button>
           <Divider />

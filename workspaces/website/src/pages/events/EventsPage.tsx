@@ -1,13 +1,4 @@
-import {
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Divider,
-  Flex,
-  HStack,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Divider, Flex, HStack } from "@chakra-ui/react";
 import { Event } from "@starknet-io/cms-data/src/events";
 import { Button } from "@ui/Button";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -36,6 +27,8 @@ import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import EventCard from "./EventCard";
 import { Chip } from "@ui/Chip/Chip";
 import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
+import { ChipFilterLabel } from "@ui/ChipFilter/ChipFilterLabel";
+import { ChipFilterContainer } from "@ui/ChipFilter/ChipFilterContainer";
 
 export interface AutoProps {
   readonly params: {
@@ -348,26 +341,8 @@ function CustomLocation({
   };
   return (
     <Box>
-      <Heading
-        variant="h3"
-        mb={4}
-        color="content.accent.value"
-        marginBottom="sm"
-      >
-        Location
-      </Heading>
-      <Flex
-        direction={{
-          base: "row",
-          md: "column",
-        }}
-        gap="sm"
-        py={{
-          base: "0",
-          md: "sm",
-        }}
-        wrap="wrap"
-      >
+      <ChipFilterLabel pt="none">Location</ChipFilterLabel>
+      <ChipFilterContainer>
         {locations.map((item, i) => (
           <Chip
             onClick={() =>
@@ -385,7 +360,7 @@ function CustomLocation({
             {eventsLocationsLabels[item.value] || titleCase(item.label)}
           </Chip>
         ))}
-      </Flex>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -413,17 +388,8 @@ function CustomMonth({
   };
   return (
     <Box>
-      <Heading variant="h3" pt="xl" mb="sm" color="content.accent.value">
-        Month
-      </Heading>
-      <Flex
-        direction={{
-          base: "row",
-          md: "column",
-        }}
-        flexWrap="wrap"
-        gap="sm"
-      >
+      <ChipFilterLabel>Month</ChipFilterLabel>
+      <ChipFilterContainer>
         {months
           .sort(
             (a, b) => new Date(a.value).getTime() - new Date(b.value).getTime()
@@ -446,7 +412,7 @@ function CustomMonth({
               {eventsLocationsLabels[item.value] || titleCase(item.label)}
             </Chip>
           ))}
-      </Flex>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -472,22 +438,8 @@ function CustomType({
   };
   return (
     <Box>
-      <Heading pt="xl" variant="h3" mb="sm" color="content.accent.value">
-        Type
-      </Heading>
-      <Flex
-        direction={{
-          base: "row",
-          md: "column",
-        }}
-        wrap="wrap"
-        alignItems="stretch"
-        py={{
-          base: "0",
-          md: "sm",
-        }}
-        gap="sm"
-      >
+      <ChipFilterLabel>Type</ChipFilterLabel>
+      <ChipFilterContainer>
         {types.map((item, i) => (
           <Chip
             isSelected={
@@ -505,7 +457,7 @@ function CustomType({
             {eventsTypesLabels[item.value] || titleCase(item.label)}
           </Chip>
         ))}
-      </Flex>
+      </ChipFilterContainer>
     </Box>
   );
 }

@@ -1,13 +1,4 @@
-import {
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Breadcrumb,
-  Box,
-  VStack,
-  HStack,
-  Divider,
-  Grid,
-} from "@chakra-ui/react";
+import { Box, HStack, Divider, Grid, Flex } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
@@ -18,7 +9,6 @@ import {
 } from "react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import { Heading } from "@ui/Typography/Heading";
 import { titleCase } from "src/utils/utils";
 import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
 import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
@@ -27,6 +17,10 @@ import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawe
 import { navigate } from "vite-plugin-ssr/client/router";
 import TutorialsCard from "./TutorialsCard";
 import { Tutorial } from "@starknet-io/cms-data/src/tutorials";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
+import { Chip } from "@ui/Chip/Chip";
+import { ChipFilterLabel } from "@ui/ChipFilter/ChipFilterLabel";
+import { ChipFilterContainer } from "@ui/ChipFilter/ChipFilterContainer";
 
 type RefinementListItem = {
   value: string;
@@ -36,10 +30,10 @@ type RefinementListItem = {
   isRefined: boolean;
 };
 
-let levelRanks: {[key: string]: number} = {
-  "beginner": 1,
-  "intermediate": 2,
-  "advanced": 3
+let levelRanks: { [key: string]: number } = {
+  beginner: 1,
+  intermediate: 2,
+  advanced: 3,
 };
 
 export interface Props extends LocaleProps {
@@ -111,45 +105,28 @@ const TutorialsPageLayout = ({
     <PageLayout
       sectionHeaderTitle={seo.title}
       sectionHeaderDescription={seo.subtitle}
-      sectionHeaderBottomContent={
-        <MobileFiltersButton
-          filtersCount={filtersCount}
-          onClick={onOpen}
-          style={{
-            marginBlock: "1rem",
-          }}
-        />
-      }
       breadcrumbs={
-        <Breadcrumb separator="/">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href={`/${params.locale}/developers`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Developers
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink fontSize="sm">Tutorials</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
+        <Breadcrumbs
+          locale={params.locale}
+          items={[
+            {
+              label: "Developers",
+              link: `/${params.locale}/developers`,
+            },
+            {
+              label: "Tutorials",
+              link: "",
+            },
+          ]}
+        ></Breadcrumbs>
       }
       leftAside={
         <Box minH="xs" display={{ base: "none", lg: "block" }}>
           <CustomDifficulty
-            items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem) => levelRanks[a.value] - levelRanks[b.value])}
+            items={difficultyItems.sort(
+              (a: RefinementListItem, b: RefinementListItem) =>
+                levelRanks[a.value] - levelRanks[b.value]
+            )}
             refineDifficulty={refineDifficulty}
           />
           <CustomType items={typeItems} refineTypes={refineTypes} />
@@ -158,16 +135,34 @@ const TutorialsPageLayout = ({
         </Box>
       }
       main={
-        <Box>
+        <Box
+          mt={{
+            base: "page.gap-condenced.base",
+            md: "page.gap-condenced.md",
+            lg: "page.gap-condenced.lg",
+          }}
+        >
+          <MobileFiltersButton
+            filtersCount={filtersCount}
+            onClick={onOpen}
+            style={{
+              marginBlock: "1rem",
+            }}
+          />
           <CustomHits locale={params.locale} />
           <MobileFiltersDrawer isOpen={isOpen} onClose={onClose}>
-            <CustomDifficulty
-              items={difficultyItems.sort((a: RefinementListItem, b: RefinementListItem ) => levelRanks[a.value] - levelRanks[b.value])}
-              refineDifficulty={refineDifficulty}
-            />
-            <CustomType items={typeItems} refineTypes={refineTypes} />
-            <CustomCourse params={params} />
-            <CustomTags items={tagsItems} refineTags={refineTags} />
+            <Flex direction="column" gap="sm">
+              <CustomDifficulty
+                items={difficultyItems.sort(
+                  (a: RefinementListItem, b: RefinementListItem) =>
+                    levelRanks[a.value] - levelRanks[b.value]
+                )}
+                refineDifficulty={refineDifficulty}
+              />
+              <CustomType items={typeItems} refineTypes={refineTypes} />
+              <CustomCourse params={params} />
+              <CustomTags items={tagsItems} refineTags={refineTags} />
+            </Flex>
           </MobileFiltersDrawer>
         </Box>
       }
@@ -182,26 +177,22 @@ function CustomDifficulty({
   refineDifficulty: (v: string) => void;
 }) {
   return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
-        Level
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
+    <Box>
+      <ChipFilterLabel pt="none">Level</ChipFilterLabel>
+      <ChipFilterContainer>
         {items.map((item, i) => {
           let label = titleCase(item.label);
           return (
-            <Button
-              justifyContent="flex-start"
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refineDifficulty(item.value)}
+            <Chip
               key={i}
+              isSelected={item.isRefined}
+              onClick={() => refineDifficulty(item.value)}
             >
               {label}
-            </Button>
+            </Chip>
           );
         })}
-      </VStack>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -215,25 +206,21 @@ function CustomType({
 }) {
   return (
     <Box>
-      <Heading variant="h6" mb={4} mt={8}>
-        Type
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
+      <ChipFilterLabel>Type</ChipFilterLabel>
+      <ChipFilterContainer>
         {items.map((item, i) => {
           let label = titleCase(item.label);
           return (
-            <Button
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refineTypes(item.value)}
+            <Chip
               key={i}
-              justifyContent="flex-start"
+              isSelected={item.isRefined}
+              onClick={() => refineTypes(item.value)}
             >
               {label}
-            </Button>
+            </Chip>
           );
         })}
-      </VStack>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -245,26 +232,24 @@ function CustomTags({
   refineTags: any;
 }) {
   return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
+    <Box>
+      <ChipFilterLabel variant="h6" mb={4}>
         Tags
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
+      </ChipFilterLabel>
+      <ChipFilterContainer>
         {items.map((item, i) => {
           let label = titleCase(item.label);
           return (
-            <Button
-              size="sm"
-              variant={item.isRefined ? "filterActive" : "filter"}
-              onClick={() => refineTags(item.value)}
+            <Chip
               key={i}
-              justifyContent="flex-start"
+              isSelected={item.isRefined}
+              onClick={() => refineTags(item.value)}
             >
               {label}
-            </Button>
+            </Chip>
           );
         })}
-      </VStack>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -298,36 +283,32 @@ const courses = [
 
 function CustomCourse({ params }: Pick<Props, "params">) {
   return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
-        Courses / series
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
+    <Box>
+      <ChipFilterLabel>Courses / series</ChipFilterLabel>
+      <ChipFilterContainer>
         {courses.map((item, i) => {
           let label = titleCase(item.label);
           return (
-            <Button
-              size="sm"
-              variant={item.value === params.course ? "filterActive" : "filter"}
+            <Chip
+              key={i}
+              isSelected={item.value === params.course}
               onClick={() => {
                 if (item.value === params.course) {
                   navigate(`/${params.locale}/tutorials`, {
-                    overwriteLastHistoryEntry: true
-                  })
+                    overwriteLastHistoryEntry: true,
+                  });
                 } else {
                   navigate(`/${params.locale}/tutorials/${item.value}`, {
-                    overwriteLastHistoryEntry: true
-                  })
+                    overwriteLastHistoryEntry: true,
+                  });
                 }
               }}
-              key={i}
-              justifyContent="flex-start"
             >
               {label}
-            </Button>
+            </Chip>
           );
         })}
-      </VStack>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -374,8 +355,17 @@ function CustomHits({ locale }: CustomHitsProps) {
       <Grid
         templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
         templateRows="1fr"
-        columnGap="24px"
         rowGap="48px"
+        mt={{
+          base: "page.block-gap.base",
+          md: "page.block-gap.md",
+          lg: "page.block-gap.lg",
+        }}
+        columnGap={{
+          base: "cards.gap-standard.base",
+          md: "cards.gap-standard.md",
+          lg: "cards.gap-standard.lg",
+        }}
       >
         {hits.map((hit) => {
           // let tags: string[] = [];
@@ -404,11 +394,7 @@ function CustomHits({ locale }: CustomHitsProps) {
       {!isLastPage && (
         <HStack mt="24">
           <Divider />
-          <Button
-            onClick={() => showMore()}
-            flexShrink={0}
-            variant="rounded"
-          >
+          <Button onClick={() => showMore()} flexShrink={0} variant="rounded">
             View More
           </Button>
           <Divider />
