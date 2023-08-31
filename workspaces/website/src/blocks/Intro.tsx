@@ -6,7 +6,7 @@ const texts = [
   "scalability",
   "innovation",
   "security",
-  "ux"
+  "UX"
 ];
 
 
