@@ -1,4 +1,4 @@
-import { ResponsiveValue } from '@chakra-ui/styled-system';
+import { ResponsiveValue } from "@chakra-ui/styled-system";
 import { useRef, useEffect, useState, ReactNode, forwardRef } from "react";
 // toDo rebuild this card in to a generalized grid card
 import {
@@ -6,11 +6,12 @@ import {
   Box,
   HStack,
   Image as ChakraImage,
-  Tooltip as ChakraTooltip, TooltipProps,
+  Tooltip as ChakraTooltip,
+  TooltipProps,
   Icon,
   Flex,
   Link,
-  useBreakpointValue
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Tag } from "@ui/Tag/Tag";
 import { HiArrowUpRight } from "react-icons/hi2";
@@ -29,14 +30,14 @@ type RootProps = {
   newTab?: boolean;
 };
 
-type CardContentVariant = 'vertical' | 'horizontal';
+type CardContentVariant = "vertical" | "horizontal";
 
 const Root = ({ children, href, newTab }: RootProps) => {
   return (
     <CardGradientBorder padding="0" borderRadius={{ base: "8px" }}>
       <Box
         as="a"
-        {...newTab && {target: "_blank"}}
+        {...(newTab && { target: "_blank" })}
         href={href}
         _hover={{ textDecor: "none" }}
         role="group"
@@ -72,9 +73,9 @@ type ImageProps = {
 };
 
 const Image = ({ url, imageAlt, type }: ImageProps) => {
-  const size = useBreakpointValue({ base: '581', md: '430px', xl: '320px' });
+  const size = useBreakpointValue({ base: "581", md: "430px", xl: "320px" });
   const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${size},height=auto,format=auto${url}`;
-  const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
+  const isProd = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const renderImage = () => {
     switch (type) {
       case "github":
@@ -126,7 +127,7 @@ const Category = ({ category }: any) => {
 type Author = {
   readonly author?: string;
   readonly author_link?: string;
-}
+};
 
 type ContentProps = {
   title: string;
@@ -137,11 +138,24 @@ type ContentProps = {
   tags?: string[];
 };
 
-const Content = ({ title, date, authors, difficulty, variant = "vertical", tags }: ContentProps) => {
+const Content = ({
+  title,
+  date,
+  authors,
+  difficulty,
+  variant = "vertical",
+  tags,
+}: ContentProps) => {
   if (!difficulty) return null;
   const formattedDifficulty = titleCase(difficulty);
   return (
-    <Flex gap="3" direction="column" alignItems="flex-start" flex={variant === "vertical" ? 1 : "initial"} w={variant === "vertical" ? "full" : "auto"}>
+    <Flex
+      gap="3"
+      direction="column"
+      alignItems="flex-start"
+      flex={variant === "vertical" ? 1 : "initial"}
+      w={variant === "vertical" ? "full" : "auto"}
+    >
       <Text
         color="heading-navy-fg"
         fontSize="18px"
@@ -186,22 +200,34 @@ const Content = ({ title, date, authors, difficulty, variant = "vertical", tags 
         ))}
       </Flex>
       <Flex direction="row">
-        <Flex direction={variant === "vertical" ? "column" : "row"} alignItems={variant === "horizontal" ? "center" : "flex-start"} gap={variant === "horizontal" ? "2" : "3"}>
+        <Flex
+          direction={variant === "vertical" ? "column" : "row"}
+          alignItems={variant === "horizontal" ? "center" : "flex-start"}
+          gap={variant === "horizontal" ? "xl" : "3"}
+        >
           <HStack spacing="2">
-            <Icon as={HiOutlineCalendarDays} boxSize="24px" stroke="tutorials-card-icon-color" />
+            <Icon
+              as={HiOutlineCalendarDays}
+              boxSize="24px"
+              stroke="tutorials-card-icon-color"
+            />
             <Text variant="cardBody" noOfLines={4}>
               {date}
             </Text>
           </HStack>
           <HStack spacing="2">
-            <Icon as={HiOutlineAcademicCap} boxSize="24px" stroke="tutorials-card-icon-color" />
+            <Icon
+              as={HiOutlineAcademicCap}
+              boxSize="24px"
+              stroke="tutorials-card-icon-color"
+            />
             <Text variant="cardBody" noOfLines={4}>
               {formattedDifficulty}
             </Text>
           </HStack>
         </Flex>
         {variant === "horizontal" ? (
-          <Flex height="40px" ml="24px">
+          <Flex height="40px" ml="xl">
             {Array.isArray(tags) &&
               tags.map((tag, i) => {
                 // only show max 2 tags
@@ -251,7 +277,6 @@ const Tooltip = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
 Tooltip.displayName = "Tooltip";
 
-
 interface StringListProps {
   strings: string[];
   maxWidth?: string;
@@ -265,7 +290,9 @@ const StringList = forwardRef<HTMLDivElement, StringListProps>(
 
     useEffect(() => {
       if (tooltipRef.current) {
-        setShowTooltip(tooltipRef.current.clientWidth < tooltipRef.current.scrollWidth);
+        setShowTooltip(
+          tooltipRef.current.clientWidth < tooltipRef.current.scrollWidth
+        );
       }
     }, [strings]);
 

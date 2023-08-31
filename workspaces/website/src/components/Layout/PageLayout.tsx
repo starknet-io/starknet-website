@@ -67,7 +67,6 @@ export const PageLayout = (props: Props) => {
             width={{ base: "full", md: "200px" }}
             minWidth={{ base: "full", md: "200px" }}
             alignSelf="start"
-            // position={{ base: "unset", lg: "sticky" }}
             top="36"
           >
             {props.leftAside}
@@ -81,6 +80,7 @@ export const PageLayout = (props: Props) => {
                 title={props.sectionHeaderTitle}
                 description={props.sectionHeaderDescription}
                 bottomContent={props.sectionHeaderBottomContent}
+                maxW="none"
               />
             )}
             {props.main}
