@@ -21,8 +21,9 @@ export const SectionHeader = ({
   return (
     <Box
       as="section"
-      borderBottom="1px solid"
-      borderColor="border.divider"
+      // borderBottom="1px solid"
+      // borderColor="border.divider"
+      maxW="864px"
       pb={{
         base: "page.block-gap.base",
         md: "page.block-gap.md",

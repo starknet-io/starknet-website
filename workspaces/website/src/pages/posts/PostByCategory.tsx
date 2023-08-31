@@ -2,6 +2,7 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { Block } from "src/blocks/Block";
@@ -44,43 +45,23 @@ export default function PostByCategory({
   return (
     <PageLayout
       breadcrumbs={
-        <Breadcrumb separator="/">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}/posts`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Blog
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}/posts/${category?.slug}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              {category?.name}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink fontSize="sm" noOfLines={1}>
-              {post.title}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
+        <Breadcrumbs
+          locale="en"
+          items={[
+            {
+              link: `/${locale}/posts`,
+              label: "Blog"
+            },
+            {
+              link: `/${locale}/posts/${category?.slug}`,
+              label: category?.name ?? ""
+            },
+            {
+              link: "",
+              label: post.title
+            },
+          ]}
+        />
       }
       main={
         <Container maxWidth="846px">

@@ -8,8 +8,8 @@ export const StatCardsBlock = (_: StatCardsBlockType) => {
       background="url(/assets/HomepagePattern.svg)"
       backgroundSize="100% 50%"
       backgroundRepeat="repeat-y"
-      paddingBottom="3000px"
-      marginBottom="-3000px"
+      paddingBottom="3666px"
+      marginBottom="-3666px"
     >
       <Grid
         gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(4, 1fr)"]}
