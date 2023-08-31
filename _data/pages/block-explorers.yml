@@ -44,6 +44,7 @@ blocks:
       - type: asset_card
         title: Apibara
         image: /assets/apibara-logo.png
+        img_bg_color: green
         website_url: https://www.apibara.com/
         description:
           Apibara is an open-source data platform connecting Starknet to Web2
@@ -54,6 +55,7 @@ blocks:
           Checkpoint is a library for indexing data from Starknet events and
           making it accessible through a GraphQL API
         image: /assets/checkpoint-real-logo-blue.png
+        img_bg_color: green
         website_url: https://checkpoint.fyi/#/
       - type: asset_card
         title: Token Flow
@@ -61,4 +63,5 @@ blocks:
           Token Flow provides fully decoded and contextualised on-chain data,
           including storage information and L1 / L2 messaging.
         image: /assets/token-flow-logo.jpg
+        img_bg_color: green
         website_url: https://tokenflow.live/

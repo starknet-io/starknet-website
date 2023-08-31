@@ -41,17 +41,32 @@ const SocialIconLink = ({
 
 interface AssetCardProps extends AssetCardBlock {}
 
+const colors = {
+  pink: "brand-secondary-lilac-stardust-4",
+  green: "brand-secondary-boreal-green-4",
+};
 export const AssetCard = ({
   title,
   description,
   website_url,
   twitter,
   image,
+  img_bg_color = "pink",
   discord,
 }: AssetCardProps) => {
   return (
     <Card variant="asset" bgColor="surface.card">
-      <CardImg variant="asset" src={image} />
+      <Box
+        display="flex"
+        padding="70px 76px"
+        justifyContent="center"
+        alignItems="center"
+        bg={colors[img_bg_color] || colors.pink}
+        w="100%"
+        borderRadius="sm"
+      >
+        <CardImg variant="asset" src={image} />
+      </Box>
       <CardBody variant="asset">
         <Box display="flex" alignItems="center" gap="xs">
           <CardTitle variant="asset">{title}</CardTitle>
@@ -66,7 +81,7 @@ export const AssetCard = ({
             </Link>
           )}
         </Box>
-        <Text variant="body" lineHeight="28px">
+        <Text variant="body" lineHeight="28px" color="content.default.value">
           {description}
         </Text>
         <HStack color="content.default.value">

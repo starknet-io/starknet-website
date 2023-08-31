@@ -129,8 +129,9 @@ export const AssetCardTitleLayout = {
   gap: "16px",
 };
 export const AssetCardImgLayout = {
-  borderRadius: "12px",
-  width: "100%",
+  borderRadius: "16px",
+  width: "80px",
+  height: "80px",
 };
 export const AssetCardBodyLayout = {
   display: "flex",
@@ -141,5 +142,5 @@ export const AssetCardBodyLayout = {
   flex: 1,
 };
 export const AssetCardImgHorizontalLayout = {
-  borderRadius: "12px",
+  borderRadius: "16px",
 };

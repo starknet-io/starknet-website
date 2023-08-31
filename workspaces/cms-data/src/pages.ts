@@ -53,6 +53,7 @@ export interface AssetCardBlock {
   readonly twitter: string;
   readonly image: string;
   readonly discord: string;
+  readonly img_bg_color: "pink" | "green";
 }
 
 export interface ImageIconLinkCardBlock {

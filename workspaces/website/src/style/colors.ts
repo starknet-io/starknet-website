@@ -456,7 +456,7 @@ export const colors = {
     "brand-secondary-boreal-green-1": "#121B17",
     "brand-secondary-comet-green-8": "#92B3B3",
     "grays-alpha-12": "#FBFBFDCC",
-    "grays-alpha-11": "#F8F7FDAA",
+    "grays-alpha-11": "#F8F7FDAB",
     "grays-alpha-10": "#EFEDFD7A",
     "grays-solid-7": "#6B6B89",
     "grays-alpha-6": "#DEDEFB26",
