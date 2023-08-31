@@ -1,13 +1,4 @@
-import {
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Breadcrumb,
-  Box,
-  Flex,
-  VStack,
-  HStack,
-  Divider,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Divider } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
@@ -18,7 +9,6 @@ import {
 } from "react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
-import { Heading } from "@ui/Typography/Heading";
 import { titleCase } from "src/utils/utils";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
@@ -27,6 +17,9 @@ import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawe
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import JobsCard from "./JobsCard";
 import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
+import { ChipFilterLabel } from "@ui/ChipFilter/ChipFilterLabel";
+import { ChipFilterContainer } from "@ui/ChipFilter/ChipFilterContainer";
+import { Chip } from "@ui/Chip/Chip";
 
 export interface AutoProps {
   readonly params: {
@@ -188,7 +181,13 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
         </Box>
       }
       main={
-        <Box>
+        <Box
+          mt={{
+            base: "page.gap-condenced.base",
+            md: "page.gap-condenced.md",
+            lg: "page.gap-condenced.lg",
+          }}
+        >
           <CustomHits />
           <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
             <CustomRole
@@ -242,32 +241,24 @@ function CustomRole({
   };
   return (
     <Box>
-      <Heading variant="h6" mb={4}>
-        Role
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
+      <ChipFilterLabel pt="0">Role</ChipFilterLabel>
+      <ChipFilterContainer>
         {items.map((item, i) => (
-          <Button
-            size="sm"
-            variant={
+          <Chip
+            key={i}
+            isSelected={
               isDesktop
                 ? item.isRefined
-                  ? "filterActive"
-                  : "filter"
                 : checkIfFilterExists(item.label, "job.role", selectedFilters)
-                ? "filterActive"
-                : "filter"
             }
             onClick={() =>
               isDesktop ? refine(item.value) : refine("job.role", item.label)
             }
-            key={i}
-            justifyContent="flex-start"
           >
             {item.label}
-          </Button>
+          </Chip>
         ))}
-      </VStack>
+      </ChipFilterContainer>
     </Box>
   );
 }
@@ -292,36 +283,28 @@ function CustomType({
     return rolesA && rolesA.includes(role);
   };
   return (
-    <Box mt={8}>
-      <Heading variant="h6" mb={4}>
-        Type
-      </Heading>
-      <VStack dir="column" alignItems="stretch">
+    <Box>
+      <ChipFilterLabel>Type</ChipFilterLabel>
+      <ChipFilterContainer>
         {items.map((item, i) => {
           const label = titleCase(item.label);
           return (
-            <Button
-              variant={
+            <Chip
+              key={i}
+              isSelected={
                 isDesktop
                   ? item.isRefined
-                    ? "filterActive"
-                    : "filter"
                   : checkIfFilterExists(item.label, "job.type", selectedFilters)
-                  ? "filterActive"
-                  : "filter"
               }
-              size="sm"
               onClick={() =>
                 isDesktop ? refine(item.value) : refine("job.type", item.label)
               }
-              key={i}
-              justifyContent="flex-start"
             >
               {label}
-            </Button>
+            </Chip>
           );
         })}
-      </VStack>
+      </ChipFilterContainer>
     </Box>
   );
 }

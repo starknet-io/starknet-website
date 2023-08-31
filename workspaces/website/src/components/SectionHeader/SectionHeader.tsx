@@ -1,4 +1,4 @@
-import { Box, Stack, Divider } from "@chakra-ui/react";
+import { Box, Stack, Divider, BoxProps } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
 
@@ -9,13 +9,14 @@ type Props = {
   description?: string | undefined;
   bottomContent?: React.ReactNode;
   size?: "sm" | "lg";
-};
+} & BoxProps;
 
 export const SectionHeader = ({
   size = "sm",
   title,
   description,
   bottomContent,
+  ...rest
 }: Props) => {
   return (
     <Box
@@ -28,6 +29,7 @@ export const SectionHeader = ({
         lg: "2xl",
       }}
       mb="40px"
+      {...rest}
       // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
       <Stack spacing="40px">

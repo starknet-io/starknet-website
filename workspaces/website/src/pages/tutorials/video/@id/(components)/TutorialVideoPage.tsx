@@ -18,7 +18,6 @@ export interface Props {
   readonly tutorial: Tutorial;
 }
 
-
 function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
   const videoId = tutorial.url.split("/").pop();
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
@@ -86,7 +85,6 @@ function TutorialVideoPage({ tutorial, params }: Props): JSX.Element | null {
               variant="horizontal"
               tags={tutorial.tags}
             />
-            
           </Flex>
           <MarkdownBlock body={tutorial.description as string} />
         </div>
