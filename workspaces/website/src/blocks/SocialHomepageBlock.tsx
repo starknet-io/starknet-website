@@ -64,9 +64,9 @@ const SocialHomepageBlock = ({
         </Text>
       </Box>
       <Box sx={{ position: "relative", height: { base: 800, lg: 545 }, mt: "80px" }}>
-        <Box sx={{ position: "absolute", left: { base: "55%", md: "50%" } }}>
+        <Box sx={{ position: "absolute", left: { base: "45%", md: "45%" } }}>
           <Box
-            sx={{ position: "relative", left: { base: "-60%", md: "-55%" } }}
+            sx={{ position: "relative", left: { base: "-50%", md: "-45%" } }}
           >
             <Flex direction="row" gap="24px" overflow="visible" ml={{ base: "160px", lg: 0}}>
               <Box
@@ -108,6 +108,16 @@ const SocialHomepageBlock = ({
                   width: { base: 302, lg: 423 },
                   height: { base: 192, lg: 260 },
                   backgroundImage: "/assets/socialMediaFourth.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
+              <Box
+                sx={{
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaFirstLast.png",
                   backgroundSize: "cover",
                   borderRadius: "16px",
                   boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
@@ -160,9 +170,19 @@ const SocialHomepageBlock = ({
                   boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 }}
               />
+              <Box
+                sx={{
+                  width: { base: 216, lg: 288 },
+                  height: { base: 192, lg: 260 },
+                  backgroundImage: "/assets/socialMediaSecondLast.png",
+                  backgroundSize: "cover",
+                  borderRadius: "16px",
+                  boxShadow: "0px 60px 70px -2px rgba(0, 0, 0, 0.08), 0px 1px 47px -3px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                }}
+              />
             </Flex>
             <Flex direction="row" gap="24px" overflow="visible" display={{ base: "flex", md: "none"}}>
-            <Box
+              <Box
                 sx={{
                   width: { base: 302, lg: 423 },
                   height: { base: 192, lg: 260 },
