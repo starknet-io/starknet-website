@@ -13,7 +13,7 @@ blocks:
       DAOs and more.
     image: /assets/ecosystem/dapps.svg
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
     base: 1
     md: 2
     lg: 3
