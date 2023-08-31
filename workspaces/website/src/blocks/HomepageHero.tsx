@@ -66,8 +66,8 @@ export const HomepageHero = ({ seo }: Props) => {
           }
         }}
       >
-        {/* <RiveLight className={`rive-animation ${colorMode === "light" ? "displayBlock" : "displayNone"}`} />
-        <RiveDark className={`rive-animation ${colorMode === "dark" ? "displayBlock" : "displayNone"}`} /> */}
+        <RiveLight className={`rive-animation ${colorMode === "light" ? "displayBlock" : "displayNone"}`} />
+        <RiveDark className={`rive-animation ${colorMode === "dark" ? "displayBlock" : "displayNone"}`} />
         <Box
           zIndex={2}
           minHeight="600px"

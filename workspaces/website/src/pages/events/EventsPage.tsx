@@ -252,6 +252,9 @@ const EventsPageLayout = ({
             md: "page.gap-condenced.md",
             lg: "page.gap-condenced.lg",
           }}
+          mt={{
+            lg: "-40px",
+          }}
         >
           <MobileFiltersButton filtersCount={filtersCounts} onClick={onOpen} />
           <Flex

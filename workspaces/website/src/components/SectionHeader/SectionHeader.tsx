@@ -21,15 +21,16 @@ export const SectionHeader = ({
   return (
     <Box
       as="section"
-      maxW="contentMaxW.md"
       borderBottom="1px solid"
       borderColor="border.divider"
       pb={{
         base: "page.block-gap.base",
         md: "page.block-gap.md",
-        lg: "page.block-gap.lg",
+        lg: "2xl",
       }}
+      mb="40px"
       {...rest}
+      // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
       <Stack spacing="40px">
         <Box>

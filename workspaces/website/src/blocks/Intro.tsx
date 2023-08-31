@@ -4,15 +4,9 @@ import { useScramble } from "use-scramble";
 
 const texts = [
   "scalability",
-  "へようこそ",
-  "Bienvenue à",
-  "ברוכים הבאים ל",
-  "مرحبا بك في",
-  "欢迎来到",
-  "歡迎來到",
-  "Grüezi tso",
-  "Bienvenida a",
-  "Servus zu",
+  "innovation",
+  "security",
+  "ux"
 ];
 
 
@@ -44,7 +38,7 @@ export const Intro = () => {
       mt="8"
       height={{ base: "1.4em" }}
       sx={{
-        background: "linear-gradient(271deg, #FFFDD8 0%, #EC796B 15.56%, #D672EF 43.09%, #8BF3F9 74.52%)",
+        background: "linear-gradient(270deg, #F09280 1.91%, #E87888 38.19%, #D672EF 73.51%, #BCA1F3 95.51%)",
         "background-clip": "text",
         "-webkit-background-clip": "text",
         "-webkit-text-fill-color": "transparent",
