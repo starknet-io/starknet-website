@@ -146,7 +146,6 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                   position="relative"
                   width="100%"
                   paddingBottom="56.25%"
-                  height={"100%"}
                 >
                   <CardImg
                     variant="grid" src={hit.image} />
