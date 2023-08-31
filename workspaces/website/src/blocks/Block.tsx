@@ -68,6 +68,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         params={{
           locale,
         }}
+        {...block}
       />
     );
   } else if (block.type === "flex_layout") {
