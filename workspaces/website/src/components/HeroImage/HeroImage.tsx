@@ -53,15 +53,14 @@ export const HeroImage = ({
           zIndex={1}
           opacity={0.5}
           mixBlendMode="soft-light"
-          marginLeft="-80px"
-          marginTop="-140px"
+          marginTop="-100px"
         >
           <Img
             src="/lines.svg"
             alt="lines"
             objectFit="cover"
-            w="100%"
             height="100%"
+            width="100%"
           />
         </Box>
         <Box

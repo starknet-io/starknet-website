@@ -72,7 +72,7 @@ export function BlockCommunityEventsList({
   params,
   env,
   hitsPerPage = 3,
-  variant = "home",
+  variant = "generic",
 }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
@@ -147,8 +147,7 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                   width="100%"
                   paddingBottom="56.25%"
                 >
-                  <CardImg
-                    variant="grid" src={hit.image} />
+                  <CardImg variant="grid" src={hit.image} />
                 </Box>
                 <CardBody variant="grid">
                   <Text variant="cardBody">
@@ -160,7 +159,12 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
                         )}`
                       : moment(hit?.start_date).format("ddd MMM DD, YYYY")}
                   </Text>
-                  <Heading mt="8px" mb={{base: "12px", lg: "20px"}} variant="h3" color="heading-navy-fg">
+                  <Heading
+                    mt="8px"
+                    mb={{ base: "12px", lg: "20px" }}
+                    variant="h3"
+                    color="heading-navy-fg"
+                  >
                     {hit.name}
                   </Heading>
                   <CardLink variant="iconLink" href="">

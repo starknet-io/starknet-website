@@ -53,15 +53,15 @@ export default function RoadmapPage({
         return (
           <Box key={stage.value}>
             <Heading
-              variant="h3"
+              as="h3"
+              variant="h4"
               display="flex"
               alignItems="center"
               mb="sm"
               color="content.default.value"
               gap="md"
-              fontSize="16px"
             >
-              <Icon boxSize="22px" as={stage.icon} />
+              <Icon boxSize="24px" as={stage.icon} />
               {stage.label} ({stagePosts.length})
             </Heading>
             <Grid

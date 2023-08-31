@@ -35,22 +35,18 @@ export default function RoadmapPostCard({
         height="100%"
       >
         <CardHeader
-          minHeight="194px"
+          minHeight="160px"
           background="surface.transparent.value"
           borderTopRadius="lg"
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
-          paddingY="lg"
+          paddingTop="lg"
+          paddingBottom="xs"
           paddingX="md"
+          color="content.accent.value"
         >
-          <Heading
-            variant="h3"
-            pb="2"
-            color="heading-navy-fg"
-            fontWeight={600}
-            lineHeight="28px"
-          >
+          <Heading variant="h3" pb="sm" fontWeight={600} lineHeight="28px">
             {roadmapPost?.title}
           </Heading>
           <Flex
@@ -58,9 +54,7 @@ export default function RoadmapPostCard({
             alignItems="center"
             justifyContent="space-between"
           >
-            <Text variant="cardBody" color="heading-navy-fg">
-              {roadmapPost?.availability}
-            </Text>
+            <Text variant="body">{roadmapPost?.availability}</Text>
             {roadmapPost?.state ? (
               <StatusBadge
                 variant={
