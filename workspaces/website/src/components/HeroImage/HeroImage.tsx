@@ -41,9 +41,9 @@ export const HeroImage = ({
         zIndex={0}
         overflow="hidden"
         bgGradient="linear(315deg, #F9E8E8 0%, #CDCDE8 100%)"
-        paddingTop="150px"
-        paddingBottom="600px"
-        marginTop="-200px"
+        paddingBottom="500px"
+        marginTop="-90px"
+        paddingTop="140px"
         clipPath="polygon(100% 0, 100% 80%, 0 100%, 0 0)"
       >
         <Box
@@ -52,8 +52,7 @@ export const HeroImage = ({
           width="100%"
           zIndex={1}
           opacity={0.5}
-          mixBlendMode="soft-light"
-          marginTop="-100px"
+          marginTop="-140px"
         >
           <Img
             src="/lines.svg"
@@ -61,17 +60,21 @@ export const HeroImage = ({
             objectFit="cover"
             height="100%"
             width="100%"
+            objectPosition={{
+              base: "30%",
+              lg: "50% 0px",
+            }}
           />
         </Box>
         <Box
           paddingTop={{
-            base: "4xl",
-            md: "5xl",
+            base: "0",
+            md: "3xl",
           }}
           paddingX={{
             base: "page.left-right.base",
             md: "3xl",
-            lg: "5xl",
+            lg: "4xl",
           }}
           paddingBottom="lg"
           display="flex"
@@ -116,7 +119,7 @@ export const HeroImage = ({
             )}
           </Box>
           <Image
-            boxSize={{ base: "200px", lg: "280px" }}
+            boxSize="200px"
             src={image}
             alt="starknet"
             w={{

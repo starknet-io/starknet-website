@@ -57,28 +57,30 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
         }
         maxW={data.template === "landing" ? "none" : undefined}
         breadcrumbs={
-          <>
-            {data.breadcrumbs &&
-            data.breadcrumbs_data &&
-            data.breadcrumbs_data.length > 0 ? (
-              <Breadcrumbs
-                locale={data.breadcrumbs_data[0].locale}
-                items={[
-                  {
-                    link: `/${data.breadcrumbs_data[0].locale}/${data.breadcrumbs_data[0].slug}`,
-                    label: data.breadcrumbs_data[0].title,
-                  },
-                  {
-                    label: data.title,
-                    link: "",
-                  },
-                ]}
-              />
-            ) : null}
-          </>
+          !isFirstBlockLandingHero ? (
+            <>
+              {data.breadcrumbs &&
+              data.breadcrumbs_data &&
+              data.breadcrumbs_data.length > 0 ? (
+                <Breadcrumbs
+                  locale={data.breadcrumbs_data[0].locale}
+                  items={[
+                    {
+                      link: `/${data.breadcrumbs_data[0].locale}/${data.breadcrumbs_data[0].slug}`,
+                      label: data.breadcrumbs_data[0].title,
+                    },
+                    {
+                      label: data.title,
+                      link: "",
+                    },
+                  ]}
+                />
+              ) : null}
+            </>
+          ) : null
         }
         pageLastUpdated={
-          data.page_last_updated && date
+          !isFirstBlockLandingHero && data.page_last_updated && date
             ? `Page last updated ${moment(date).fromNow()}  `
             : null
         }
