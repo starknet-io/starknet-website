@@ -1976,22 +1976,22 @@ export const PatternCards = () => {
       >
         <PatternCard
           title="View all questions"
-          pattern="two-lines"
+          pattern="viewallquestions"
           link="/learn/frequently-asked-questions"
         />
         <PatternCard
           title="What is the starknet?"
-          pattern="ethereum"
+          pattern="howdoesitwork"
           link="/learn/frequently-asked-questions"
         />
         <PatternCard
           title="How does Starknet work?"
-          pattern="curly-lines"
+          pattern="whatisstarkex"
           link="/learn/frequently-asked-questions"
         />
         <PatternCard
           title="What is StarkEx?"
-          pattern="circle-lines"
+          pattern="whatisstarknet"
           link="/learn/frequently-asked-questions"
         />
       </SimpleGrid>
@@ -2000,7 +2000,7 @@ export const PatternCards = () => {
       </Heading>
       <PatternCard
         title="What is StarkEx?"
-        pattern="two-lines"
+        pattern="viewallquestions"
         link="/learn/frequently-asked-questions"
       />
     </ThemeProvider>

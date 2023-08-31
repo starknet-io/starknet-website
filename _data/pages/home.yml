@@ -136,19 +136,19 @@ blocks:
     blocks:
       - type: pattern_card
         title: View all questions
-        pattern: two-lines
+        pattern: viewallquestions
         link: /learn/frequently-asked-questions
       - type: pattern_card
         title: What is Starknet?
         link: /learn/what-is-starknet
-        pattern: ethereum
+        pattern: whatisstarknet
       - type: pattern_card
         title: How does Starknet work?
-        pattern: curly-lines
+        pattern: howdoesitwork
         link: "#"
       - type: pattern_card
         title: What is Starkex?
-        pattern: circle-lines
+        pattern: whatisstarkex
         link: "#"
     base: 1
     md: 2

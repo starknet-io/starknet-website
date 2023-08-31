@@ -108,7 +108,11 @@ export interface PatternCardBlock {
   readonly type: "pattern_card";
   readonly title: string;
   readonly link: string;
-  readonly pattern: "two-lines" | "ethereum" | "curly-lines" | "circle-lines";
+  readonly pattern:
+    | "viewallquestions"
+    | "howdoesitwork"
+    | "whatisstarkex"
+    | "whatisstarknet";
 }
 
 export interface EcosystemBlock {

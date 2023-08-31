@@ -8,7 +8,7 @@ interface PatternCardProps extends PatternCardBlockType {}
 export const PatternCard = ({
   title,
   link,
-  pattern = "two-lines",
+  pattern = "viewallquestions",
 }: PatternCardProps) => {
   return (
     <CardGradientBorder display="inline-block">
@@ -27,29 +27,24 @@ export const PatternCard = ({
         borderRadius={{ base: "16px" }}
         bg="surface.card"
       >
-        <Image
-          src={`/assets/pattern/${pattern}.svg`}
-          alt={title}
-          objectFit="cover"
-          objectPosition={{
-            base: "left center",
-            lg: "50% 50%",
-          }}
-          h={{
-            lg: "auto",
-          }}
-          w={{
-            lg: "100%",
-          }}
-          maxW={{
-            base: "160px",
-            lg: "100%",
-          }}
-          aspectRatio={{
-            base: "1",
-            lg: "16 / 9",
-          }}
-        />
+        <Box
+          overflow="hidden"
+          position="relative"
+          width="100%"
+          paddingBottom="56.25%"
+          height={{ base: "16rem", md: "12rem", lg: "10rem" }}
+        >
+          <Image
+            src={`/assets/pattern/${pattern}.png`}
+            alt={title}
+            objectFit="cover"
+            position="absolute"
+            top="0"
+            left="0"
+            width="100%"
+            height="100%"
+          />
+        </Box>
         <Box
           px={{
             base: "xl",
