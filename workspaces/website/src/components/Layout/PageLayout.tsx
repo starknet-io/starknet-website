@@ -40,15 +40,17 @@ export const PageLayout = (props: Props) => {
       overflowY="visible"
       sx={props.sx}
     >
-      <Flex py="xl" direction={{ base: "column", lg: "row" }}>
-        <Box>{props.breadcrumbs}</Box>
-        <Spacer />
-        <Box>
-          <Text variant="cardBody" top="1px" pos="relative">
-            {props.pageLastUpdated}
-          </Text>
-        </Box>
-      </Flex>
+      {(props.pageLastUpdated || props.breadcrumbs) && (
+        <Flex py="xl" direction={{ base: "column", lg: "row" }}>
+          <Box>{props.breadcrumbs}</Box>
+          <Spacer />
+          <Box>
+            <Text variant="cardBody" top="1px" pos="relative">
+              {props.pageLastUpdated}
+            </Text>
+          </Box>
+        </Flex>
+      )}
       {/* page layout */}
       <Stack
         direction={{ base: "column", lg: "row" }}
