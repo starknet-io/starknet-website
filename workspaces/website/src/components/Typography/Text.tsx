@@ -7,7 +7,7 @@ type Props = {
     | "breadcrumbs"
     | "footerLink"
     | "textLink"
-    | "headingDescription";
+    | "bodyLg";
 } & TextProps;
 
 export const Text = ({

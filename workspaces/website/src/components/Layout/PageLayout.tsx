@@ -33,7 +33,6 @@ export const PageLayout = (props: Props) => {
     <Container
       py="0"
       px="32px"
-      pb="16"
       flex="1"
       maxW={props.maxW ? props.maxW : "contentMaxW.xl"}
       overflowX="clip"
