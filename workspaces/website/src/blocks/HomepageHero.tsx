@@ -34,7 +34,7 @@ export const HomepageHero = ({ seo }: Props) => {
         as="section"
         pt="46px"
         pb="93px"
-        minHeight="600px"
+        minHeight={{ base: "600px", "3xl": 1000, "4xl": 1200 }}
         _dark={{
           bgGradient:
             "linear-gradient(5deg, #15151E 0%, #0F0E1B 16.58%, #000 100%)",
@@ -51,10 +51,11 @@ export const HomepageHero = ({ seo }: Props) => {
           "& .rive-animation": {
             animation: `${fadeIn} 3s ease-in-out`,
             position: "absolute",
-            top: "-215px",
-            right: "-300px",
-            minWidth: "calc(100% + 400px)",
-            height: "140% !important",
+            top: 0,
+            bottom: 0,
+            left: { base: "-600px", "2xl": "-1500px" },
+            width: "100%",
+            minWidth: { base: "1900px", lg: "2300px", xl: "2500px", "2xl": "4500px" },
             border: "none",
             zIndex: -1,
           },

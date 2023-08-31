@@ -20,7 +20,7 @@ export const LargeCardsBlock = (props: Props) => {
   return (
     <Flex direction="column" gap="40px">
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg ? horizontal1.darkImg as string : horizontal1.img} />
+        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg as string ?? horizontal1.img as string} />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal1.title}</CardTitle>
           <Text
@@ -45,7 +45,7 @@ export const LargeCardsBlock = (props: Props) => {
       </Card>
       <Flex gap="32px" direction={{ base: "column", md: "row" }}>
         <Card variant="large" orientation="vertical">
-          <CardImg variant="large" src={vertical1.img as string} />
+          <CardImg variant="large" src={colorMode === 'light' ? vertical1.img as string : vertical1.darkImg as string ?? vertical1.img as string} />
           <CardBody variant="large">
             <CardTitle variant="large">{vertical1.title}</CardTitle>
             <Text
@@ -69,7 +69,7 @@ export const LargeCardsBlock = (props: Props) => {
           </CardBody>
         </Card>
         <Card variant="large" orientation="vertical">
-          <CardImg variant="large" src={vertical2.img as string} />
+          <CardImg variant="large" src={colorMode === 'light' ? vertical2.img as string : vertical2.darkImg as string ?? vertical2.img as string} />
           <CardBody variant="large">
             <CardTitle variant="large">{vertical2.title}</CardTitle>
             <Text 
@@ -94,7 +94,7 @@ export const LargeCardsBlock = (props: Props) => {
         </Card>
       </Flex>
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={horizontal2.img as string} />
+        <CardImg variant="large" src={colorMode === 'light' ? horizontal2.img as string : horizontal2.darkImg as string ?? horizontal2.img as string} />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal2.title}</CardTitle>
           <Text

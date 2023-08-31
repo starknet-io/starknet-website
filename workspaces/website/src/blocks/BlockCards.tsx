@@ -61,6 +61,7 @@ export const BlockCards = ({
       maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
       width="100%"
       m="0 auto"
+      zIndex="2"
       px={{
         base: "page.left-right.base",
         md: "page.left-right.md",

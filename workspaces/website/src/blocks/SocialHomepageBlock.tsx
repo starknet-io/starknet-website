@@ -63,7 +63,7 @@ const SocialHomepageBlock = ({
           {description}
         </Text>
       </Box>
-      <Box sx={{ position: "relative", height: { base: 800, lg: 545 }, mt: "80px" }}>
+      <Box sx={{ zIndex: 2, position: "relative", height: { base: 800, lg: 545 }, mt: "80px" }}>
         <Box sx={{ position: "absolute", left: { base: "45%", md: "45%" } }}>
           <Box
             sx={{ position: "relative", left: { base: "-50%", md: "-45%" } }}
