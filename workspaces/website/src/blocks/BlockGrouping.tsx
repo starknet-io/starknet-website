@@ -12,7 +12,7 @@ export const BlockGrouping = ({ children }: Props) => {
       gap="32px"
       maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
       width="100%"
-      px={{ base: "page.left-right.base", md: "page.left-right.md" }}
+      // px={{ base: "page.left-right.base", md: "page.left-right.md" }}
       m="0 auto"
     >
       {children}

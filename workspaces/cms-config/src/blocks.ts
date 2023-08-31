@@ -246,6 +246,22 @@ export const blocks = [
         widget: "string",
         crowdin: true,
       },
+      {
+        name: "border",
+        label: "Border",
+        widget: "boolean",
+        required: false,
+        default: false,
+        crowdin: true,
+      },
+      {
+        name: "lastUpdated",
+        label: "Include last updated?",
+        widget: "boolean",
+        required: false,
+        default: false,
+        crowdin: true,
+      },
     ],
   },
   {

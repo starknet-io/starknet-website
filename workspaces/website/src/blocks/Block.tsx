@@ -118,7 +118,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
   } else if (block.type === "page_header") {
     return (
-      <PageHeaderBlock title={block.title} description={block.description} />
+      <PageHeaderBlock title={block.title} description={block.description} border={block.border} lastUpdated={block.lastUpdated}/>
     );
   } else if (block.type === "group") {
     return (

@@ -165,6 +165,8 @@ export interface PageHeaderBlock {
   readonly type: "page_header";
   readonly title: string;
   readonly description: string;
+  readonly  border?: boolean;
+  readonly lastUpdated?: string | null;
 }
 
 export interface HeroBlock {

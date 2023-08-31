@@ -21,6 +21,8 @@ type Props = {
   breadcrumbs?: React.ReactNode;
   pageLastUpdated?: string | null;
   sectionHeaderTitle?: string | undefined;
+  sectionHeaderBorder?: boolean;
+  sectionHeaderLastUpdated?: boolean;
   sectionHeaderDescription?: string | undefined;
   sectionHeaderBottomContent?: React.ReactNode;
   maxW?: string;
@@ -29,6 +31,7 @@ type Props = {
 };
 
 export const PageLayout = (props: Props) => {
+  console.log('props.pageLastUpdated ', props.sectionHeaderTitle)
   return (
     <Container
       py="0"
@@ -73,17 +76,23 @@ export const PageLayout = (props: Props) => {
             {props.leftAside}
           </Box>
         )}
-
         <Box as="main" role="main" width="full" mt="0 !important" minW="0px">
           <Box minH="lg">
             {props.sectionHeaderTitle && (
-              <SectionHeader
-                title={props.sectionHeaderTitle}
-                description={props.sectionHeaderDescription}
-                bottomContent={props.sectionHeaderBottomContent}
-                maxW="none"
-              />
+              <Box>
+                <SectionHeader
+                  title={props.sectionHeaderTitle}
+                  description={props.sectionHeaderDescription}
+                  bottomContent={props.sectionHeaderBottomContent}
+                  maxW="none"
+                  border={props.sectionHeaderBorder}
+                  pageLastUpdated={props.pageLastUpdated}
+                />
+              </Box>
             )}
+            <Box pb="xl" borderBottom="1px solid" borderColor="border.divider">
+              {props.pageLastUpdated}
+            </Box>
             {props.main}
           </Box>
         </Box>

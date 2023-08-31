@@ -153,6 +153,8 @@ const PostsPageLayout = ({
   return (
     <PageLayout
       sectionHeaderTitle={category != null ? category.name : "All posts"}
+      sectionHeaderBorder={true}
+      sectionHeaderLastUpdated={true}
       sectionHeaderBottomContent={
         <MobileFiltersButton
           filtersCount={filtersCounts}

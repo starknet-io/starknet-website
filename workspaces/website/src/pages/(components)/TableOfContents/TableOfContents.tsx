@@ -69,9 +69,9 @@ export function TableOfContents(props: Props) {
       <Heading
         py="16px"
         pl="16px"
-        textTransform="uppercase"
         variant="h6"
         color="heading-navy-fg"
+        fontWeight="600"
       >
         {props.tocCustomTitle ? props.tocCustomTitle : "On this page"}
       </Heading>

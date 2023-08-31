@@ -9,20 +9,27 @@ type Props = {
   description?: string | undefined;
   bottomContent?: React.ReactNode;
   size?: "sm" | "lg";
+  border?: boolean;
+  pageLastUpdated?: string | null;
 } & BoxProps;
 
 export const SectionHeader = ({
   size = "sm",
   title,
+  border,
   description,
   bottomContent,
+  pageLastUpdated,
   ...rest
 }: Props) => {
   return (
     <Box
       as="section"
-      // borderBottom="1px solid"
-      // borderColor="border.divider"
+      {...(border && { sx: {
+        borderBottom: "1px solid",
+        borderColor: "border.divider"
+      }
+      })}
       maxW="864px"
       pb={{
         base: "page.block-gap.base",
@@ -33,7 +40,7 @@ export const SectionHeader = ({
       {...rest}
       // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
-      <Stack spacing="40px">
+      <Stack spacing="40px" {...(border && { borderBottom: "1px solid", borderColor: "border.divider"})}>
         <Box>
           <Heading
             variant="h1"

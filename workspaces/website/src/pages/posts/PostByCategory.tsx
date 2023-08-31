@@ -17,17 +17,14 @@ import {
   Divider,
   Spacer,
   Badge,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  HStack,
-  Link,
+  Icon,
 } from "@chakra-ui/react";
 
 import { TableOfContents } from "src/pages/(components)/TableOfContents/TableOfContents";
 import { Category } from "@starknet-io/cms-data/src/categories";
 import { Topic } from "@starknet-io/cms-data/src/topics";
 import { blocksToTOC } from "../(components)/TableOfContents/blocksToTOC";
+import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 
 type PostByCategoryProps = {
   post: Post;
@@ -42,8 +39,22 @@ export default function PostByCategory({
   topics,
 }: PostByCategoryProps) {
   let videoId = post.post_type === "video" ? post.video?.id : undefined;
+  const renderPostTypeIcon = () => {
+    switch (post.post_type) {
+      case "article":
+        return FiBookOpen;
+      case "audio":
+        return FiHeadphones;
+      case "video":
+        return FiTv;
+
+      default:
+        return FiBookOpen;
+    }
+  };
   return (
     <PageLayout
+      sectionHeaderLastUpdated={true}
       breadcrumbs={
         <Breadcrumbs
           locale="en"
@@ -64,7 +75,7 @@ export default function PostByCategory({
         />
       }
       main={
-        <Container maxWidth="846px">
+        <Container maxWidth="796px" sx={{p: 0, paddingInlineStart: "0 !important", paddingInlineEnd: "0 !important" }} m={0}>
           {post.post_type !== "video" ? (
             <Img
               borderRadius={"8px"}
@@ -82,22 +93,23 @@ export default function PostByCategory({
             {post.title}
           </Heading>
           <Flex mt="16px">
-            <HStack pb="16px">
-              <Text fontSize="sm" color="muted">
-                {moment(post.published_date).format("MMM DD,YYYY")} ·
-              </Text>
-              <Text fontSize="sm" color="muted">
-                {post.timeToConsume}
-              </Text>
-            </HStack>
-            <Spacer />
-            <Box>
+            <Flex width="100%" direction="row" alignItems="center" pb="16px" justifyContent="space-between">
+              <Flex direction="row"  alignItems="center" gap="4px">
+                <Icon as={renderPostTypeIcon()} mr="4px" />
+                <Text fontSize="sm" color="muted">
+                  {moment(post.published_date).format("MMM DD,YYYY")} ·
+                </Text>
+                <Text fontSize="sm" color="muted">
+                  {post.timeToConsume}
+                </Text>
+              </Flex>
               <Text variant="cardBody" top="1px" pos="relative">
                 {`Page last updated ${moment(
                   post?.gitlog?.date
                 ).fromNow()}`}
               </Text>
-            </Box>
+            </Flex>
+            <Spacer />
           </Flex>
           <Divider mt="8px" mb="24px" />
           {post.post_type === "video" ? (
@@ -122,9 +134,15 @@ export default function PostByCategory({
           </Flex>
           <Spacer height="32px" />
           <Divider />
-          <Flex direction="row" gap="8px" mt="64px">
+          <Flex direction="row" gap="8px" py="24px">
             {post.topic?.map((topic, i) => (
-              <Tag key={i} capitalize={false}> {topics.find((t) => t.id === topic)?.name} </Tag>
+              <Box key={i} sx={{
+                borderRadius: "999px",
+                border: "1px solid",
+                borderColor: "border.card.value",
+                color: "content.accent.value",
+                p: "0 12px"
+              }}> {topics.find((t) => t.id === topic)?.name} </Box>
             ))}
           </Flex>
         </Container>
