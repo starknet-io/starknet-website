@@ -19,35 +19,29 @@ blocks:
     heading: "How to get involved? "
     blocks:
       - size: large
-        color: blue-default
-        variant: image_icon_link_card
+        color: red
+        variant: icon_link_card
         withIllustration: true
         title: Online communities
-        icon: /assets/online-communities.svg
-        type: image_icon_link_card
-        link:
-          page: d4d04818-2330-4c35-a33e-0f2bc3ca7e8f
-          custom_title: View
+        img: /assets/online-communities.svg
+        type: icon_link_card
+        linkUrl: /online-communities
+        linkText: View ->
         description:
           Connect with Starknet enthusiasts in online communities and social
           media.
-      - type: image_icon_link_card
-        color: blue-default
+      - type: icon_link_card
+        color: green
         title: Community events
         description: Find events near you to connect with the Starknet builders.
-        icon: /assets/community-events.svg
-        link:
-          custom_internal_link: /events/
-          custom_title: View
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
+        img: /assets/community-events.svg
+        linkUrl: /events/
+        linkText: View ->
+      - type: icon_link_card
+        color: blue
         title: "Ecosystem jobs "
         description: Explore opportunities with teams building in the ecosystem.
-        icon: /assets/jobs.svg
-        link:
-          custom_icon: ""
-          custom_title: View
-          custom_internal_link: /jobs/
-        withIllustration: true
+        img: /assets/jobs.svg
+        linkUrl: /jobs/
+        linkText: View ->
   - type: community_events
