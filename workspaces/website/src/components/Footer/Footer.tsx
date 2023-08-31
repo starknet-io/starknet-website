@@ -59,11 +59,14 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
       maxWidth="auto"
       overflowX="hidden"
       color="fg-default"
+      mt={{
+        base: "3xl",
+        lg: "4xl",
+      }}
     >
       <Box display="flex" justifyContent="center">
         <Container as="footer" role="contentinfo" maxWidth="auto" px="0">
           <Box
-            py={{ base: "12", md: "16" }}
             maxW="contentMaxW.xl"
             px={{
               base: "page.left-right.base",
@@ -193,14 +196,14 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
         },
       }}
     >
-      <Heading
-        variant="h4"
-        color="fg-default-hover"
+      <Text
+        variant="bodyLg"
+        color="content.accent.value"
         fontWeight="500"
-        paddingY="1.5rem"
+        paddingY="sm"
       >
         {title}
-      </Heading>
+      </Text>
       <Box
         marginTop="0px !important"
         display="flex"
@@ -208,9 +211,9 @@ const Column = ({ title, children, color, sx }: ColumnProps) => {
         gap="4px"
         sx={{
           "& > *": {
-            paddingBlock: "0.5rem",
+            paddingBlock: "xs",
           },
-          color: "fg-default-light",
+          color: "content.default.value",
         }}
       >
         {children}

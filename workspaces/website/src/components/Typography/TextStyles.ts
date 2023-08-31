@@ -15,11 +15,10 @@ export const textTheme = defineStyleConfig({
       lineHeight: "32px",
       fontWeight: 400,
     },
-    headingDescription: {
+    bodyLg: {
       fontSize: "18px",
       lineHeight: "32px",
       fontWeight: 400,
-      color: "content.accent.value",
     },
     breadcrumbs: {
       fontSize: "12px",
