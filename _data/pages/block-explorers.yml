@@ -35,7 +35,7 @@ blocks:
         website_url: https://voyager.online
         twitter: https://twitter.com/0xvoyageronline
         image: /assets/voyager.jpg
-    title: Block explorers
+    heading: Block explorers
     randomize: true
   - type: flex_layout
     randomize: true

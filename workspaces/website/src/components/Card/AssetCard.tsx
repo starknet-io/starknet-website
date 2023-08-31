@@ -1,5 +1,5 @@
 import { Card, CardBody, CardImg, CardLink, CardTitle } from "./Card";
-import { Box, HStack, Icon, Link, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, HStack, Icon, Link, useColorMode } from "@chakra-ui/react";
 import {
   HiArrowTopRightOnSquare,
   HiGlobeAlt,
@@ -10,7 +10,15 @@ import { SiDiscord, SiTwitter } from "react-icons/si";
 import { IconType } from "react-icons/lib";
 import { AssetCardBlock } from "@starknet-io/cms-data/src/pages";
 
-const SocialIconLink = ({ href, icon }: { href: string; icon: IconType }) => {
+const SocialIconLink = ({
+  href,
+  icon,
+  iconColor = "list-card-icon-fg",
+}: {
+  href: string;
+  icon: IconType;
+  iconColor?: string;
+}) => {
   return (
     <Link
       isExternal
@@ -26,7 +34,7 @@ const SocialIconLink = ({ href, icon }: { href: string; icon: IconType }) => {
         alignItems: "center",
       }}
     >
-      <Icon boxSize="18px" color="list-card-icon-fg" as={icon} />
+      <Icon boxSize="18px" color={iconColor} as={icon} />
     </Link>
   );
 };
@@ -58,17 +66,43 @@ export const AssetCard = ({
             </Link>
           )}
         </Box>
-        <Text variant="body">{description}</Text>
-        <HStack>
-          {twitter && <SocialIconLink href={twitter} icon={SiTwitter} />}
-          {discord && <SocialIconLink href={discord} icon={SiDiscord} />}
+        <Text variant="body" lineHeight="28px">
+          {description}
+        </Text>
+        <HStack color="content.default.value">
+          {twitter && (
+            <SocialIconLink
+              href={twitter}
+              icon={SiTwitter}
+              iconColor="content.default.value"
+            />
+          )}
+          {discord && (
+            <SocialIconLink
+              href={discord}
+              icon={SiDiscord}
+              iconColor="content.default.value"
+            />
+          )}
           {website_url && (
-            <SocialIconLink href={website_url} icon={HiGlobeAlt} />
+            <SocialIconLink
+              href={website_url}
+              icon={HiGlobeAlt}
+              iconColor="content.default.value"
+            />
           )}
         </HStack>
-        <CardLink variant="iconLink" href={website_url} isExternal mt="sm">
-          View <Icon as={HiOutlineArrowRight} aria-label="Link" />
-        </CardLink>
+        <Flex flex={1} direction="column" justifyContent="flex-end">
+          <CardLink
+            variant="iconLink"
+            href={website_url}
+            isExternal
+            fontWeight={600}
+            mt="md"
+          >
+            View <Icon as={HiOutlineArrowRight} aria-label="Link" />
+          </CardLink>
+        </Flex>
       </CardBody>
     </Card>
   );
