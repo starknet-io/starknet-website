@@ -28,17 +28,13 @@ type CircleProps = {
 
 const CircleRow: React.FC<CircleProps> = ({ items, direction }) => {
   const totalItems = items.length % 2 === 0 ? items.length : items.length - 1;
-  const itemsPerRow = totalItems / 2;
+  const itemsPerRow = totalItems;
   const [firstRowItems, setFirstRowItems] = useState<Project[]>(
     items.slice(0, itemsPerRow)
-  );
-  const [secondRowItems, setSecondRowItems] = useState<Project[]>(
-    items.slice(itemsPerRow, itemsPerRow * 2)
   );
 
   useEffect(() => {
     setFirstRowItems(items.slice(0, itemsPerRow));
-    setSecondRowItems(items.slice(itemsPerRow, itemsPerRow * 2));
   }, [items]);
 
   const handleFirstRowErrorImg = (image: string) => {
@@ -46,21 +42,6 @@ const CircleRow: React.FC<CircleProps> = ({ items, direction }) => {
       (item) => item.image !== image
     );
     setFirstRowItems(updatedFirstRow);
-
-    if (updatedFirstRow.length < secondRowItems.length) {
-      setSecondRowItems(secondRowItems.slice(0, -1));
-    }
-  };
-
-  const handleSecondRowErrorImg = (image: string) => {
-    const updatedSecondRow = secondRowItems.filter(
-      (item) => item.image !== image
-    );
-    setSecondRowItems(updatedSecondRow);
-
-    if (updatedSecondRow.length < firstRowItems.length) {
-      setFirstRowItems(firstRowItems.slice(0, -1));
-    }
   };
 
   return (
@@ -78,17 +59,18 @@ const CircleRow: React.FC<CircleProps> = ({ items, direction }) => {
               handleErrorImg={handleFirstRowErrorImg}
             />
           ))}
-        </div>
-        <div
-          className={
-            direction === "left" ? "marqueeStyle2" : "marqueeStyle2Right"
-          }
-        >
-          {secondRowItems.map((item, index) => (
+          {firstRowItems.map((item, index) => (
             <StarknetProject
               project={item}
               key={index}
-              handleErrorImg={handleSecondRowErrorImg}
+              handleErrorImg={handleFirstRowErrorImg}
+            />
+          ))}
+          {firstRowItems.map((item, index) => (
+            <StarknetProject
+              project={item}
+              key={index}
+              handleErrorImg={handleFirstRowErrorImg}
             />
           ))}
         </div>

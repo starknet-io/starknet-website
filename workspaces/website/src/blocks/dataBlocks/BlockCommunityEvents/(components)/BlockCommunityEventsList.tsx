@@ -190,7 +190,6 @@ function CustomHits({ hitsPerPage }: { hitsPerPage: number }) {
         <Button
           onClick={() => navigate("/en/events")}
           variant="solid"
-          bg="surface.accent.value"
         >
           {`Check out all events ->`}
         </Button>
