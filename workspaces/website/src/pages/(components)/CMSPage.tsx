@@ -35,16 +35,14 @@ const px = {
   },
 };
 
-const gap = {
-  landing: {
-    base: "page.block-gap.base",
-  },
-};
-
 export default function CMSPage({ data, locale }: CMSPageProps) {
   const date = data?.gitlog?.date;
   const [firstBlock, ...remainingBlocks] = data.blocks || [];
   const isFirstBlockLandingHero = firstBlock?.type === "hero";
+  const pageLastUpdated =
+    !isFirstBlockLandingHero && data.page_last_updated && date
+      ? `Page last updated ${moment(date).fromNow()}  `
+      : "";
 
   return (
     <Box>
@@ -79,14 +77,19 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             </>
           ) : null
         }
-        pageLastUpdated={
-          !isFirstBlockLandingHero && data.page_last_updated && date
-            ? `Page last updated ${moment(date).fromNow()}  `
-            : null
-        }
+        pageLastUpdated={pageLastUpdated}
         main={
           <Flex
             direction="column"
+            mt={
+              isFirstBlockLandingHero
+                ? "0px"
+                : {
+                    base: "page.block-gap.base",
+                    md: "page.block-gap.md",
+                    lg: "page.block-gap.lg",
+                  }
+            }
             gap={{
               base:
                 data.slug === "home"
@@ -109,6 +112,19 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
             ) : null}
             {!isFirstBlockLandingHero &&
               data.blocks?.map((block, i) => {
+                if (block.type === "page_header") {
+                  return (
+                    <Block
+                      key={i}
+                      block={{
+                        ...block,
+                        pageLastUpdated: pageLastUpdated,
+                        hasBorderBottom: true,
+                      }}
+                      locale={locale}
+                    />
+                  );
+                }
                 return <Block key={i} block={block} locale={locale} />;
               })}
             {isFirstBlockLandingHero && (

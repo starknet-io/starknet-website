@@ -117,9 +117,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       </OrderedBlock>
     );
   } else if (block.type === "page_header") {
-    return (
-      <PageHeaderBlock title={block.title} description={block.description} border={block.border} lastUpdated={block.lastUpdated}/>
-    );
+    return <PageHeaderBlock {...block} />;
   } else if (block.type === "group") {
     return (
       <BlockGrouping>

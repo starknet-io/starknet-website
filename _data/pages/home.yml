@@ -14,6 +14,7 @@ blocks:
         description: "Together the networks unlock Ethereum’s vision for a fairer and
           more open internet. Decentralised financial systems. Digital assets.
           Trustless systems. "
+        withMarginBottom: true
       - type: large_cards
         horizontal1:
           img: /assets/unlimited-scale.png

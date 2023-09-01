@@ -29,6 +29,7 @@ import { Chip } from "@ui/Chip/Chip";
 import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
 import { ChipFilterLabel } from "@ui/ChipFilter/ChipFilterLabel";
 import { ChipFilterContainer } from "@ui/ChipFilter/ChipFilterContainer";
+import { CategoryTabs } from "@ui/CategoryTabs/CategoryTabs";
 
 export interface AutoProps {
   readonly params: {
@@ -244,42 +245,49 @@ const EventsPageLayout = ({
         </Box>
       }
       main={
-        <Box
-          display="flex"
-          flexDir="column"
-          gap={{
-            base: "page.gap-condenced.base",
-            md: "page.gap-condenced.md",
-            lg: "page.gap-condenced.lg",
-          }}
-          mt={{
-            lg: "-40px",
-          }}
-        >
-          <MobileFiltersButton filtersCount={filtersCounts} onClick={onOpen} />
-          <Flex
-            as="ul"
-            sx={{ overflowX: "auto" }}
-            gap="24px"
-            borderBottomWidth="1px"
-            borderColor="tabs-main-br"
-            width="100%"
+        <>
+          <Box
+            display="flex"
+            flexDir="column"
+            gap={{
+              base: "page.block-gap.base",
+              md: "page.block-gap.md",
+              lg: "page.block-gap.lg",
+            }}
           >
-            <Button
-              variant="category"
-              isActive={mode === "UPCOMING_EVENTS"}
-              href={`/${params.locale}/events`}
+            <MobileFiltersButton
+              filtersCount={filtersCounts}
+              onClick={onOpen}
+            />
+            <Flex
+              direction="column"
+              gap={{
+                base: "page.gap-condenced.base",
+                md: "page.gap-condenced.md",
+                lg: "page.gap-condenced.lg",
+              }}
             >
-              Upcoming events
-            </Button>
-            <Button
-              variant="category"
-              isActive={mode === "PAST_EVENTS"}
-              href={`/${params.locale}/events/past`}
-            >
-              Past events
-            </Button>
-          </Flex>
+              <CategoryTabs
+                activeItemId={
+                  mode === "PAST_EVENTS" ? "past-events" : "upcoming-events"
+                }
+                items={[
+                  {
+                    id: "upcoming-events",
+                    label: "Upcoming events",
+                    link: `/${params.locale}/events`,
+                  },
+                  {
+                    id: "past-events",
+                    label: "Past events",
+                    link: `/${params.locale}/events/past`,
+                  },
+                ]}
+                withInlinePadding={false}
+              />
+              <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
+            </Flex>
+          </Box>
           <MobileFiltersDrawer isOpen={isOpen} onClose={handleModalClose}>
             <Flex direction="column" gap="sm">
               <CustomLocation
@@ -314,8 +322,7 @@ const EventsPageLayout = ({
               Clear all
             </Button>
           </MobileFiltersDrawer>
-          <CustomHits isPastEvent={mode === "PAST_EVENTS"} />
-        </Box>
+        </>
       }
     />
   );

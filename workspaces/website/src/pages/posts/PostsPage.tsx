@@ -33,6 +33,8 @@ import { navigate } from "vite-plugin-ssr/client/router";
 import { HiOutlineHome } from "react-icons/hi2";
 import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
 import { Chip } from "@ui/Chip/Chip";
+import { CategoryTabItem } from "@ui/CategoryTabs/CategoryTabs";
+import { CategoryTabs } from "@ui/CategoryTabs/CategoryTabs";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -77,7 +79,11 @@ export function PostsPage({
             [category, params.locale]
           )}
         />
-        <CustomCategories categories={categories} params={params} />
+        <CustomCategories
+          categories={categories}
+          params={params}
+          currentCategoryId={category?.id}
+        />
         <PostsPageLayout
           categories={categories}
           params={params}
@@ -217,6 +223,13 @@ const PostsPageLayout = ({
           </MobileFiltersDrawer>
         </Box>
       }
+      sx={{
+        mt: {
+          base: "page.block-gap.base",
+          md: "page.block-gap.md",
+          lg: "page.block-gap.lg",
+        },
+      }}
     />
   );
 };
@@ -286,61 +299,30 @@ function CustomTopics({
 function CustomCategories({
   categories,
   params,
-}: Pick<Props, "categories" | "params">) {
+  currentCategoryId = "all",
+}: Pick<Props, "categories" | "params"> & {
+  currentCategoryId?: string;
+}) {
+  const allCategories = [
+    {
+      id: "all",
+      link: `/${params.locale}/posts`,
+      label: "All posts",
+    },
+  ];
+  categories.forEach((category) => {
+    allCategories.push({
+      id: category.id,
+      link: `/${params.locale}/posts/${category.slug}`,
+      label: category.name,
+    });
+  });
   return (
-    <Box
-      borderTopWidth="1px"
-      borderBottomWidth="1px"
-      borderColor="tabs-main-br"
-      width="100%"
-    >
-      <Flex
-        as="ul"
-        sx={{ overflowX: "auto" }}
-        gap="24px"
-        maxW="contentMaxW.xl"
-        margin="0 auto"
-        px={{
-          base: "page.left-right.base",
-          md: "page.left-right.md",
-        }}
-      >
-        <Box
-          
-        >
-          <Button
-            variant="category"
-            as="a"
-            isActive={params.category == null}
-            onClick={() => {
-              navigate(`/${params.locale}/posts`, {
-                overwriteLastHistoryEntry: true,
-              });
-            }}
-          >
-            All posts
-          </Button>
-        </Box>
-        {categories.map((category) => (
-          <Box key={category.slug}>
-            <Button
-              variant="category"
-              as="a"
-              isActive={category.slug === params.category}
-              onClick={() => {
-                if (category.slug === params.category) return;
-
-                navigate(`/${params.locale}/posts/${category.slug}`, {
-                  overwriteLastHistoryEntry: true,
-                });
-              }}
-            >
-              <> {category.name}</>
-            </Button>
-          </Box>
-        ))}
-      </Flex>
-    </Box>
+    <CategoryTabs
+      items={allCategories}
+      activeItemId={currentCategoryId}
+      withInlinePadding
+    />
   );
 }
 
@@ -466,7 +448,10 @@ function CustomHits({
             <ArticleCard.Image url={featuredHit?.image} type="featured" />
 
             <ArticleCard.Body type="featured">
-              <ArticleCard.Category type="featured" category={featuredHitCategory} />
+              <ArticleCard.Category
+                type="featured"
+                category={featuredHitCategory}
+              />
               <ArticleCard.Content
                 title={featuredHit?.title}
                 excerpt={featuredHit?.short_desc}

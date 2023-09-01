@@ -2,15 +2,12 @@ import {
   Box,
   Container,
   ContainerProps,
-  Flex,
   LayoutProps,
-  Spacer,
   Stack,
 } from "@chakra-ui/react";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { Text } from "@ui/Typography/Text";
-import { SummitPromo } from "./SummitPromo";
 import React from "react";
+import { SummitPromo } from "./SummitPromo";
 
 type Props = {
   leftAside?: React.ReactNode;
@@ -41,17 +38,6 @@ export const PageLayout = (props: Props) => {
       overflowY="visible"
       sx={props.sx}
     >
-      {(props.pageLastUpdated || props.breadcrumbs) && (
-        <Flex py="xl" direction={{ base: "column", lg: "row" }}>
-          <Box>{props.breadcrumbs}</Box>
-          <Spacer />
-          <Box>
-            <Text variant="cardBody" top="1px" pos="relative">
-              {props.pageLastUpdated}
-            </Text>
-          </Box>
-        </Flex>
-      )}
       {/* page layout */}
       <Stack
         direction={{ base: "column", lg: "row" }}
@@ -84,18 +70,10 @@ export const PageLayout = (props: Props) => {
                   description={props.sectionHeaderDescription}
                   bottomContent={props.sectionHeaderBottomContent}
                   maxW="none"
-                  border={props.sectionHeaderBorder}
+                  hasBorderBottom={false}
+                  withMarginBottom={true}
                   pageLastUpdated={props.pageLastUpdated}
                 />
-              </Box>
-            )}
-            {props.pageLastUpdated && (
-              <Box
-                pb="xl"
-                borderBottom="1px solid"
-                borderColor="border.divider"
-              >
-                {props.pageLastUpdated}
               </Box>
             )}
             {props.main}

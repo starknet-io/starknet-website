@@ -40,7 +40,7 @@ export default function RoadmapLayout({
               />
             )}
             <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
-            <LandingConent mt="-400px">{children}</LandingConent>
+            <LandingConent>{children}</LandingConent>
           </Box>
         }
       />
