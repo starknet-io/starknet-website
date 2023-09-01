@@ -12,7 +12,7 @@ blocks:
       the Starknet and Cairo is assumed.
   - type: ordered_block
     blocks:
-      type: markdown
+      - type: markdown
         body: >-
           ## Starknet Users
           The users that interact with Starknet sequencer nodes and, if necessary,

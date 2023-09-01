@@ -49,34 +49,31 @@ blocks:
     heading: Courses
     blocks:
       - type: icon_link_card
-        color: purple
         title: Learn Through Tutorials
         description: "Learn from the Starknet's community of developers and technologies. "
         img: /assets/7.svg
-        linkText: View
+        linkText: View ->
         linkUrl: /tutorials/
         withIllustration: true
       - type: icon_link_card
-        color: peach
         title: Starknet Basecamp
         description:
           Sign up for the next basecamp and learn everything about Starknet -
           from STARK mathematics to Cairo 1 smart contracts best practices.
         img: /assets/basecamp.svg
-        linkText: Sign-up
+        linkText: Sign-up ->
         linkUrl: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
         withIllustration: true
       - type: icon_link_card
-        color: cyan
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
         img: /assets/starknet_edu.svg
-        linkText: View
+        linkText: View ->
         linkUrl: /tutorials/starknet_edu
         withIllustration: true
   - type: community_events
   - type: flex_layout
-    heading_variant: h2
+    heading_variant: h3
     base: 1
     md: 2
     lg: 3
