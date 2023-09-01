@@ -53,7 +53,7 @@ export const HomepageHero = ({ seo }: Props) => {
             position: "absolute",
             top: 0,
             bottom: 0,
-            left: { base: "-600px", "2xl": "-1000px" },
+            left: { base: "-600px", "2xl": "-1000px", "4xl": "-500px" },
             width: "100%",
             minWidth: { base: "1900px", lg: "2300px", xl: "2500px", "2xl": "4500px" },
             border: "none",
