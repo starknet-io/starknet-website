@@ -19,7 +19,7 @@ const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 export const HomepageHero = ({ seo }: Props) => {
   const { colorMode } = useColorMode();
   const { RiveComponent: RiveLight } = useRive({
-    src: "/assets/starknet-hub.riv",
+    src: "/assets/starknet-hub-noclip.riv",
     autoplay: true
   });
 
@@ -53,7 +53,7 @@ export const HomepageHero = ({ seo }: Props) => {
             position: "absolute",
             top: 0,
             bottom: 0,
-            left: { base: "-600px", "2xl": "-1500px" },
+            left: { base: "-600px", "2xl": "-1000px" },
             width: "100%",
             minWidth: { base: "1900px", lg: "2300px", xl: "2500px", "2xl": "4500px" },
             border: "none",
