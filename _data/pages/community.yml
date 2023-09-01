@@ -45,3 +45,5 @@ blocks:
         linkUrl: /jobs/
         linkText: View ->
   - type: community_events
+    cardType: event
+    title: Community events
