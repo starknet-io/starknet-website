@@ -97,7 +97,7 @@ export function BlockCommunityEventsList({
       />
       <Box sx={bgStyles[variant]}>
         <Box
-          maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+          maxW={cardType === "event" ? "900px" : { base: "contentMaxW.lg", md: "contentMaxW.xl" }}
           px={{
             base: "page.left-right.base",
             md: "page.left-right.md",
