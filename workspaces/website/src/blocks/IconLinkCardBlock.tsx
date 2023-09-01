@@ -34,6 +34,7 @@ export const IconLinkCardBlock = (props: Props) => {
   };
   const colorValues = renderColorValues(color as string);
   const { colorMode, toggleColorMode } = useColorMode();
+  const IconSrc = colorMode === 'light' ? img : dark_img ? dark_img : img;
   return (
     <Card
       variant="iconLink"
@@ -56,7 +57,7 @@ export const IconLinkCardBlock = (props: Props) => {
       >
         <Flex direction="column" justifyContent="space-between" height="100%">
           <Box>
-            {img ? <img src={colorMode === 'light' ? img : dark_img ? dark_img : img} width="60px" height="60px" alt="" /> : null}
+            {img ? <img color="content.accent.value" src={IconSrc} width="60px" height="60px" alt="" /> : null}
             <Heading
               variant="h3"
               mt="12px"
