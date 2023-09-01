@@ -7,7 +7,7 @@ import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { Block } from "src/blocks/Block";
 import { Post } from "@starknet-io/cms-data/src/posts";
-import '@ui/CodeHighlight/code-highlight-init'
+import "@ui/CodeHighlight/code-highlight-init";
 
 import {
   Container,
@@ -54,34 +54,38 @@ export default function PostByCategory({
   };
   return (
     <PageLayout
-      sectionHeaderLastUpdated={true}
       breadcrumbs={
         <Breadcrumbs
+          collapseOnMobile={true}
           locale="en"
           items={[
             {
               link: `/${locale}/posts`,
-              label: "Blog"
+              label: "Blog",
             },
             {
               link: `/${locale}/posts/${category?.slug}`,
-              label: category?.name ?? ""
+              label: category?.name ?? "",
             },
             {
               link: "",
-              label: post.title
+              label: post.title,
             },
           ]}
         />
       }
       main={
-        <Container maxWidth="796px" sx={{p: 0, paddingInlineStart: "0 !important", paddingInlineEnd: "0 !important" }} m={0}>
+        <Container
+          maxWidth="796px"
+          sx={{
+            p: 0,
+            paddingInlineStart: "0 !important",
+            paddingInlineEnd: "0 !important",
+          }}
+          m={0}
+        >
           {post.post_type !== "video" ? (
-            <Img
-              borderRadius={"8px"}
-              src={post.image}
-              alt={post.title}
-            />
+            <Img borderRadius={"8px"} src={post.image} alt={post.title} />
           ) : null}
 
           <Box my="24px">
@@ -93,8 +97,14 @@ export default function PostByCategory({
             {post.title}
           </Heading>
           <Flex mt="16px">
-            <Flex width="100%" direction="row" alignItems="center" pb="16px" justifyContent="space-between">
-              <Flex direction="row"  alignItems="center" gap="4px">
+            <Flex
+              width="100%"
+              direction="row"
+              alignItems="center"
+              pb="16px"
+              justifyContent="space-between"
+            >
+              <Flex direction="row" alignItems="center" gap="4px">
                 <Icon as={renderPostTypeIcon()} mr="4px" />
                 <Text fontSize="sm" color="muted">
                   {moment(post.published_date).format("MMM DD,YYYY")} ·
@@ -104,9 +114,7 @@ export default function PostByCategory({
                 </Text>
               </Flex>
               <Text variant="cardBody" top="1px" pos="relative">
-                {`Page last updated ${moment(
-                  post?.gitlog?.date
-                ).fromNow()}`}
+                {`Page last updated ${moment(post?.gitlog?.date).fromNow()}`}
               </Text>
             </Flex>
             <Spacer />
@@ -115,34 +123,35 @@ export default function PostByCategory({
           {post.post_type === "video" ? (
             <Flex mb={!post.blocks?.length ? "32px" : 0} direction="column">
               <YoutubePlayer videoId={videoId} />
-              {!post.blocks?.length && <Text
-                pt={2}
-                pb={4}
-                lineHeight="32px"
-                variant="body"
-              >{post.short_desc}</Text>}
+              {!post.blocks?.length && (
+                <Text pt={2} pb={4} lineHeight="32px" variant="body">
+                  {post.short_desc}
+                </Text>
+              )}
             </Flex>
           ) : null}
           <Flex direction="column" gap="32px">
             {post.blocks?.map((block, i) => (
-              <Block
-                key={i}
-                block={block}
-                locale={locale}
-              />
+              <Block key={i} block={block} locale={locale} />
             ))}
           </Flex>
           <Spacer height="32px" />
           <Divider />
           <Flex direction="row" gap="8px" py="24px">
             {post.topic?.map((topic, i) => (
-              <Box key={i} sx={{
-                borderRadius: "999px",
-                border: "1px solid",
-                borderColor: "border.card.value",
-                color: "content.accent.value",
-                p: "0 12px"
-              }}> {topics.find((t) => t.id === topic)?.name} </Box>
+              <Box
+                key={i}
+                sx={{
+                  borderRadius: "999px",
+                  border: "1px solid",
+                  borderColor: "border.card.value",
+                  color: "content.accent.value",
+                  p: "0 12px",
+                }}
+              >
+                {" "}
+                {topics.find((t) => t.id === topic)?.name}{" "}
+              </Box>
             ))}
           </Flex>
         </Container>

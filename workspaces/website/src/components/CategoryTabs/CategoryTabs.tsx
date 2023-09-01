@@ -26,9 +26,7 @@ export const CategoryTabs = ({
       width="100%"
     >
       <Flex
-        as="ul"
         sx={{ overflowX: "auto" }}
-        gap="24px"
         maxW="contentMaxW.xl"
         margin="0 auto"
         px={{
@@ -39,6 +37,8 @@ export const CategoryTabs = ({
         {items.map((item) => {
           return (
             <Button
+              display="block"
+              minW="none"
               key={item.id}
               variant="category"
               href={item.link}

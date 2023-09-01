@@ -19,12 +19,12 @@ type Props = {
   pageLastUpdated?: string | null;
   sectionHeaderTitle?: string | undefined;
   sectionHeaderBorder?: boolean;
-  sectionHeaderLastUpdated?: boolean;
   sectionHeaderDescription?: string | undefined;
   sectionHeaderBottomContent?: React.ReactNode;
   maxW?: string;
   contentMaxW?: LayoutProps["maxW"];
   sx?: ContainerProps["sx"];
+  withMarginTop?: boolean;
 };
 
 export const PageLayout = (props: Props) => {
@@ -36,8 +36,18 @@ export const PageLayout = (props: Props) => {
       maxW={props.maxW ? props.maxW : "contentMaxW.xl"}
       overflowX="clip"
       overflowY="visible"
+      mt={
+        props.withMarginTop
+          ? {
+              base: "page.block-gap.base",
+              md: "page.block-gap.md",
+              lg: "page.block-gap.lg",
+            }
+          : undefined
+      }
       sx={props.sx}
     >
+      {props.breadcrumbs}
       {/* page layout */}
       <Stack
         direction={{ base: "column", lg: "row" }}
@@ -70,7 +80,7 @@ export const PageLayout = (props: Props) => {
                   description={props.sectionHeaderDescription}
                   bottomContent={props.sectionHeaderBottomContent}
                   maxW="none"
-                  hasBorderBottom={false}
+                  hasBorderBottom={props.sectionHeaderBorder}
                   withMarginBottom={true}
                   pageLastUpdated={props.pageLastUpdated}
                 />

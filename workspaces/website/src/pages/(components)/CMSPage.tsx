@@ -44,9 +44,11 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
       ? `Page last updated ${moment(date).fromNow()}  `
       : "";
 
+  const hasBreadcrumb = data.breadcrumbs && !!data?.breadcrumbs_data?.length;
   return (
     <Box>
       <PageLayout
+        withMarginTop={!(hasBreadcrumb || isFirstBlockLandingHero)}
         contentMaxW={maxW[data.template]}
         sx={
           isFirstBlockLandingHero
@@ -57,10 +59,9 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
         breadcrumbs={
           !isFirstBlockLandingHero ? (
             <>
-              {data.breadcrumbs &&
-              data.breadcrumbs_data &&
-              data.breadcrumbs_data.length > 0 ? (
+              {hasBreadcrumb ? (
                 <Breadcrumbs
+                  collapseOnMobile={true}
                   locale={data.breadcrumbs_data[0].locale}
                   items={[
                     {
@@ -81,15 +82,6 @@ export default function CMSPage({ data, locale }: CMSPageProps) {
         main={
           <Flex
             direction="column"
-            mt={
-              isFirstBlockLandingHero
-                ? "0px"
-                : {
-                    base: "page.block-gap.base",
-                    md: "page.block-gap.md",
-                    lg: "page.block-gap.lg",
-                  }
-            }
             gap={{
               base:
                 data.slug === "home"

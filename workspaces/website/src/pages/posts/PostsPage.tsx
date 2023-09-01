@@ -1,40 +1,26 @@
-import {
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Breadcrumb,
-  Box,
-  Container,
-  Flex,
-  HStack,
-  Divider,
-  Grid,
-  Icon,
-} from "@chakra-ui/react";
-import { Button } from "@ui/Button";
-import moment from "moment";
+import { Box, Divider, Grid, HStack } from "@chakra-ui/react";
+import type { Category } from "@starknet-io/cms-data/src/categories";
+import type { Topic } from "@starknet-io/cms-data/src/topics";
 import * as ArticleCard from "@ui/ArticleCard/ArticleCard";
-import { useMemo, useState, useEffect } from "react";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
+import { Button } from "@ui/Button";
+import { CategoryTabs } from "@ui/CategoryTabs/CategoryTabs";
+import { Chip } from "@ui/Chip/Chip";
+import { PageLayout } from "@ui/Layout/PageLayout";
+import { Heading } from "@ui/Typography/Heading";
 import algoliasearch from "algoliasearch/lite";
+import moment from "moment";
+import { useEffect, useMemo, useState } from "react";
 import {
-  InstantSearch,
   Configure,
+  InstantSearch,
+  useInfiniteHits,
   useRefinementList,
 } from "react-instantsearch-hooks-web";
-import type { Category } from "@starknet-io/cms-data/src/categories";
-import { PageLayout } from "@ui/Layout/PageLayout";
-import type { Topic } from "@starknet-io/cms-data/src/topics";
-import { useInfiniteHits } from "react-instantsearch-hooks-web";
-import { Heading } from "@ui/Typography/Heading";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
-import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
-import { navigate } from "vite-plugin-ssr/client/router";
-import { HiOutlineHome } from "react-icons/hi2";
-import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
-import { Chip } from "@ui/Chip/Chip";
-import { CategoryTabItem } from "@ui/CategoryTabs/CategoryTabs";
-import { CategoryTabs } from "@ui/CategoryTabs/CategoryTabs";
+import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFiltersDrawer";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
@@ -160,7 +146,6 @@ const PostsPageLayout = ({
     <PageLayout
       sectionHeaderTitle={category != null ? category.name : "All posts"}
       sectionHeaderBorder={true}
-      sectionHeaderLastUpdated={true}
       sectionHeaderBottomContent={
         <MobileFiltersButton
           filtersCount={filtersCounts}
@@ -223,13 +208,6 @@ const PostsPageLayout = ({
           </MobileFiltersDrawer>
         </Box>
       }
-      sx={{
-        mt: {
-          base: "page.block-gap.base",
-          md: "page.block-gap.md",
-          lg: "page.block-gap.lg",
-        },
-      }}
     />
   );
 };

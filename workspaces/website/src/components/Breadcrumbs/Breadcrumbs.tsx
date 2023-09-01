@@ -4,16 +4,49 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Icon,
+  useBreakpoint,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { HiOutlineHome } from "react-icons/hi2";
 
+type BreadcrumbItem = { link: string; label: string };
 type BreadcrumbsProps = {
-  items: Array<{ link: string; label: string }>;
+  items: Array<BreadcrumbItem>;
   locale: string;
+  collapseOnMobile?: boolean;
 };
 
-export const Breadcrumbs = ({ items, locale }: BreadcrumbsProps) => {
-  const middleItems = items.slice(0, items.length - 1);
+const getMiddleItems = (
+  items: Array<BreadcrumbItem>,
+  locale: string,
+  collapse?: boolean
+) => {
+  let middleItems: BreadcrumbItem[] = [];
+  if (collapse) {
+    if (items.length > 2) {
+      middleItems = [{ link: items[items.length - 2].link, label: "..." }];
+    } else {
+      middleItems = [];
+    }
+  } else {
+    middleItems = items.slice(0, items.length - 1);
+  }
+
+  return middleItems;
+};
+
+export const Breadcrumbs = ({
+  items,
+  locale,
+  collapseOnMobile = false,
+}: BreadcrumbsProps) => {
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const middleItems = getMiddleItems(
+    items,
+    locale,
+    isMobile && collapseOnMobile
+  );
+
   const lastItem = items[items.length - 1];
 
   return (
@@ -35,6 +68,10 @@ export const Breadcrumbs = ({ items, locale }: BreadcrumbsProps) => {
           color: "content.default.disabled",
         },
       }}
+      paddingBlock={{
+        base: "sm",
+        lg: "xl",
+      }}
     >
       <BreadcrumbItem>
         <BreadcrumbLink
@@ -46,21 +83,19 @@ export const Breadcrumbs = ({ items, locale }: BreadcrumbsProps) => {
           gap="xs"
         >
           <Icon as={HiOutlineHome} boxSize="20px" />
-          <Box px="xs" py="lg">
-            Home
-          </Box>
+          <Box p="xs">Home</Box>
         </BreadcrumbLink>
       </BreadcrumbItem>
-      {middleItems.map((item) => (
+      {middleItems?.map((item) => (
         <BreadcrumbItem>
-          <BreadcrumbLink href={item.link} noOfLines={1} px="xs" py="lg">
+          <BreadcrumbLink href={item.link} noOfLines={1} p="xs">
             {item.label}
           </BreadcrumbLink>
         </BreadcrumbItem>
       ))}
 
       <BreadcrumbItem isCurrentPage>
-        <BreadcrumbLink px="xs" py="lg" color="content.default.selected">
+        <BreadcrumbLink p="xs" color="content.default.selected">
           {lastItem.label}
         </BreadcrumbLink>
       </BreadcrumbItem>
