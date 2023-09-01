@@ -57,8 +57,7 @@ blocks:
         withIllustration: true
       - type: icon_link_card
         title: Starknet Basecamp
-        description:
-          Sign up for the next basecamp and learn everything about Starknet -
+        description: Sign up for the next basecamp and learn everything about Starknet -
           from STARK mathematics to Cairo 1 smart contracts best practices.
         img: /assets/courses-basecamp.svg
         linkText: Sign-up ->
@@ -72,6 +71,8 @@ blocks:
         linkUrl: /tutorials/starknet_edu
         withIllustration: true
   - type: community_events
+    cardType: event
+    title: Community events
   - type: flex_layout
     heading_variant: h3
     base: 1
