@@ -57,7 +57,7 @@ export const IconLinkCardBlock = (props: Props) => {
       >
         <Flex direction="column" justifyContent="space-between" height="100%">
           <Box>
-            {img ? <img color="content.accent.value" src={IconSrc} width="60px" height="60px" alt="" /> : null}
+            {img ? <img color="content.accent.value" src={IconSrc} style={{maxWidth: "60px", width: "100%", height: "60px"}}  alt="" /> : null}
             <Heading
               variant="h3"
               mt="12px"

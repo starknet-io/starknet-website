@@ -19,7 +19,6 @@ blocks:
     heading: "How to get involved? "
     blocks:
       - size: large
-        color: red
         variant: icon_link_card
         withIllustration: true
         title: Online communities
@@ -31,14 +30,12 @@ blocks:
           Connect with Starknet enthusiasts in online communities and social
           media.
       - type: icon_link_card
-        color: green
         title: Community events
         description: Find events near you to connect with the Starknet builders.
         img: /assets/community-events.svg
         linkUrl: /events/
         linkText: View ->
       - type: icon_link_card
-        color: blue
         title: "Ecosystem jobs "
         description: Explore opportunities with teams building in the ecosystem.
         img: /assets/jobs.svg
