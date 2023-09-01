@@ -14,6 +14,8 @@ export interface MarkdownBlock {
 
 export interface CommunityEventsBlock {
   readonly type: "community_events";
+  readonly cardType: "grid" | "event";
+  readonly title: string;
 }
 
 export type AmbassadorTag = {

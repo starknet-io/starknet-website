@@ -295,6 +295,20 @@ export const blocks = [
         name: "type",
         widget: "hidden",
       },
+      {
+        name: "cardType",
+        label: "Card type",
+        default: "grid",
+        widget: "select",
+        options: ["grid", "event"]
+      },
+      {
+        name: "title",
+        label: "Title",
+        widget: "string",
+        required: false,
+        crowdin: true,
+      },
     ],
   },
   {

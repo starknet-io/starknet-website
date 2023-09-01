@@ -37,6 +37,7 @@ export const IconLinkCardBlock = (props: Props) => {
   return (
     <Card
       variant="iconLink"
+      sx={{ background: "surface.bg-page", borderColor: "border.card.value" }}
       {...(!!color && {
         sx: {
           background: colorValues.background,
