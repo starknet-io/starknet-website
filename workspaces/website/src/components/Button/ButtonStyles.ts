@@ -90,6 +90,10 @@ const rounded = defineStyle({
     borderImage: "none",
     boxShadow: "none",
   },
+  _dark: {
+    background: "rgba(208, 208, 224, 0.07) !important",
+    color: "#E8E8F7 !important"
+  },
   _focusVisible: {
     boxShadow: "1px solid #ffffff",
     outlineOffset: 1,
