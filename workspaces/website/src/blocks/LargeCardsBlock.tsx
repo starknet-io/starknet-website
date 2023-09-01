@@ -34,10 +34,10 @@ export const LargeCardsBlock = (props: Props) => {
             {horizontal1.description}
           </Text>
           <Button
-            variant="outline"
+            variant="gradient"
+            size="md"
             href={horizontal1.linkUrl as string}
             sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
-            bg="surface.bg-page"
           >
             {horizontal1.linkText}
           </Button>
@@ -59,10 +59,10 @@ export const LargeCardsBlock = (props: Props) => {
               {vertical1.description}
             </Text>
             <Button
-              variant="outline"
+              variant="gradient"
+              size="md"
               href={vertical1.linkUrl as string}
               sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
-              bg="surface.bg-page"
             >
               {vertical1.linkText}
             </Button>
@@ -83,10 +83,10 @@ export const LargeCardsBlock = (props: Props) => {
               {vertical2.description}
             </Text>
             <Button
-              variant="outline"
+              variant="gradient"
+              size="md"
               href={vertical2.linkUrl as string}
               sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
-              bg="surface.bg-page"
             >
               {vertical2.linkText}
             </Button>
@@ -108,10 +108,10 @@ export const LargeCardsBlock = (props: Props) => {
             {horizontal2.description}
           </Text>
           <Button
-            variant="outline"
+            variant="gradient"
+            size="md"
             href={horizontal2.linkUrl as string}
             sx={{ mt: { base: "4px", lg: "0" }, fontWeight: "700" }}
-            bg="surface.bg-page"
           >
             {horizontal2.linkText}
           </Button>

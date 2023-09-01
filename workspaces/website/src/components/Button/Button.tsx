@@ -15,7 +15,8 @@ type props = {
     | "filterActive"
     | "category"
     | "icon"
-    | "rounded";
+    | "rounded"
+    | "gradient";
   children: React.ReactNode;
   toId?: string;
   href?: string;

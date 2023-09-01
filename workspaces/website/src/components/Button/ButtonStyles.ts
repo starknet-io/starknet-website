@@ -255,6 +255,63 @@ const solid = defineStyle({
   },
 });
 
+const gradient = defineStyle({
+  borderRadius: 8,
+  fontWeight: 600,
+  fontSize: "16px",
+  minWidth: "none",
+  lineHeight: "24px",
+  height: "auto",
+  color: "btn-primary-fg",
+  background: "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
+  _dark: {
+    background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)"
+  },
+  "&:disabled": {
+    background: "btn-primary-disabled-bg",
+    color: "btn-primary-disabled-fg",
+    boxShadow: "none",
+  },
+  _hover: {
+    background: "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
+    "&:disabled": {
+      background: "btn-primary-disabled-bg !important",
+      color: "btn-primary-disabled-fg",
+      boxShadow: "none !important",
+    },
+    _dark: {
+      background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
+    },
+  },
+  _active: {
+    background: "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
+    boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
+    outlineOffset: 1,
+    "&:disabled": {
+      background: "btn-primary-disabled-bg !important",
+      color: "btn-primary-disabled-fg",
+      boxShadow: "none !important",
+    },
+    _dark: {
+      background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      _focus: {
+        background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
+        boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      },
+    },
+  },
+  _focusVisible: {
+    outlineOffset: 1,
+    outline: "3px solid #3F8CFF",
+    boxShadow: "none",
+    border: "none",
+    _dark: {
+      outlineOffset: 0,
+    },
+  },
+});
+
 const primaryHero = defineStyle({
   borderRadius: 4,
   fontWeight: "medium",
@@ -596,6 +653,7 @@ export const buttonTheme = defineStyleConfig({
     switch: switchButton,
     icon,
     rounded,
+    gradient,
     unstyled,
   },
   sizes: {
