@@ -1,4 +1,4 @@
-import { Box, Stack, Divider, BoxProps } from "@chakra-ui/react";
+import { Box, BoxProps } from "@chakra-ui/react";
 import { Text } from "@ui/Typography/Text";
 import { Heading } from "@ui/Typography/Heading";
 
@@ -9,61 +9,76 @@ type Props = {
   description?: string | undefined;
   bottomContent?: React.ReactNode;
   size?: "sm" | "lg";
-  border?: boolean;
+  hasBorderBottom?: boolean;
   pageLastUpdated?: string | null;
+  withMarginBottom?: boolean;
 } & BoxProps;
 
 export const SectionHeader = ({
   size = "sm",
   title,
-  border,
+  hasBorderBottom = false,
   description,
   bottomContent,
   pageLastUpdated,
+  withMarginBottom = false,
   ...rest
 }: Props) => {
+  const mb = {
+    base: "page.block-gap.base",
+    md: "page.block-gap.md",
+    lg: "page.block-gap.lg",
+  };
+
+  const pb = {
+    base: pageLastUpdated ? "xl" : "page.block-gap.base",
+    md: pageLastUpdated ? "xl" : "page.block-gap.md",
+    lg: pageLastUpdated ? "xl" : "page.block-gap.lg",
+  };
+
   return (
     <Box
       as="section"
-      {...(border && { sx: {
-        borderBottom: "1px solid",
-        borderColor: "border.divider"
-      }
+      {...(hasBorderBottom && {
+        sx: {
+          borderBottom: "1px solid",
+          borderColor: "border.divider",
+        },
       })}
       maxW="864px"
-      pb={{
-        base: "page.block-gap.base",
-        md: "page.block-gap.md",
-        lg: "2xl",
-      }}
-      mb="40px"
+      pb={hasBorderBottom ? pb : "0px"}
+      mb={withMarginBottom ? mb : "0px"}
       {...rest}
-      // pt={{ base: "4", md: "8" }} pb={{ base: "12", md: "12" }}
     >
-      <Stack spacing="40px" {...(border && { borderBottom: "1px solid", borderColor: "border.divider"})}>
-        <Box>
-          <Heading
-            variant="h1"
-            as="h2"
-            // fontSize={{ base: "32px", md: "48px" }}
-            // lineHeight={{ base: "1.5em", md: "1.5em" }}
-            fontWeight="extrabold"
-            color="heading-navy-fg"
-          >
-            {title}
-          </Heading>
-          {description && (
-            <Text
-              color="content.accent.value"
-              variant="body"
-              pt={size === "sm" ? "xs" : "lg"}
-            >
-              {description}
-            </Text>
-          )}
-          {bottomContent}
-        </Box>
-      </Stack>
+      <Heading
+        variant="h1"
+        as="h2"
+        // fontSize={{ base: "32px", md: "48px" }}
+        // lineHeight={{ base: "1.5em", md: "1.5em" }}
+        fontWeight="extrabold"
+        color="heading-navy-fg"
+      >
+        {title}
+      </Heading>
+      {description && (
+        <Text
+          color="content.accent.value"
+          variant="body"
+          pt={size === "sm" ? "xs" : "lg"}
+        >
+          {description}
+        </Text>
+      )}
+      <Box
+        pt="lg"
+        fontSize="12px"
+        fontWeight="500"
+        lineHeight="16px"
+        display={pageLastUpdated ? "block" : "none"}
+      >
+        {pageLastUpdated}
+      </Box>
+      {bottomContent}
     </Box>
   );
 };

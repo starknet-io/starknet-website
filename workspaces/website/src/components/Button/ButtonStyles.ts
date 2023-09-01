@@ -485,20 +485,18 @@ const category = defineStyle({
   fontWeight: "medium",
   fontSize: "14px",
   lineHeight: "14px",
-  padding: "24px 12px",
-  color: "tabs-fg",
-  borderBottomWidth: "1px",
-  borderColor: "tabs-border-bg",
+  py: "xl",
+  px: "sm",
+  color: "content.default.value",
+  borderBottomWidth: "2px",
+  borderColor: "transparent",
   height: "auto",
   maxHeight: "none",
-  bg: "tabs-bg",
   _hover: {
-    bg: "tabs-bg",
-    color: "tabs-hover-fg",
+    color: "content.default.hover",
   },
-  _active: {
-    bg: "tabs-bg",
-    color: "tabs-fg-active",
+  _selected: {
+    color: "content.default.active",
     borderColor: "tabs-border-active-bg",
   },
 });
