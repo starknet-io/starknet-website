@@ -47,7 +47,7 @@ export const LargeCardHorizontalLayout = {
 };
 export const IconLinkCardLayout = {
   display: "flex",
-  padding: { base: "40px 24px", lg: "48px 40px 40px 40px" },
+  padding: { base: "40px 24px", lg: "40px" },
   flexDirection: "column",
   alignItems: "flex-start",
   alignContent: "flex-start",

@@ -17,36 +17,30 @@ blocks:
     heading: "Get started "
     blocks:
       - type: icon_link_card
-        color: red
+        img: /assets/build-tutorials.svg
         title: Read the Docs
-        description:
-          Read the official Starknet documentation to build your first
+        description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        img: /assets/read_the_docs.svg
+        linkText: View ->
         linkUrl: https://docs.starknet.io/
-        linkText: View
-        withIllustration: true
+        color: red
       - type: icon_link_card
-        color: green
+        img: /assets/build_read_the_docs.svg
         title: Read the Starknet Book
-        description:
-          Developed by the Starknet community, the Starknet book teaches
+        description: Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
-        img: /assets/docs.svg
+        linkText: View ->
         linkUrl: https://book.starknet.io/
-        linkText: View
-        withIllustration: true
+        color: green
       - type: icon_link_card
-        color: blue
-        title: "Set-up a Local Environment "
-        description:
-          Learn how to get your dev environment up and running so you can
+        img: /assets/build_tools_resources.svg
+        title: Set-up a Local Environment
+        description: Learn how to get your dev environment up and running so you can
           start building.
-        img: /assets/local-environment.svg
+        linkText: View ->
         linkUrl: https://docs.starknet.io/documentation/getting_started/environment_setup/
-        linkText: View
-        withIllustration: true
+        color: blue
   - type: flex_layout
     heading_variant: h2
     base: 1
