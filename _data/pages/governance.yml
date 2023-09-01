@@ -54,69 +54,69 @@ blocks:
           label: Helping token holders choose delegates
   - type: heading_container
     heading_variant: h3
-    blocks: []
     heading: "Further Reading "
-  - type: link_list
-    listSize: lg
-    heading: "Starknet Governance: First Phase"
     blocks:
-      - link:
-          custom_title: "Starknet’s governance: First phase"
-          custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
-          hasIcon: true
-      - link:
-          hasIcon: true
-          custom_title: Delegate Profile Thread
-          custom_external_link: https://community.starknet.io/t/delegate-profile-thread/4049
-      - link:
-          hasIcon: true
-          custom_title: Starknet Builders’ Council - Mission Statement
-          custom_external_link: https://community.starknet.io/t/starknet-builders-council-mission-statement/4045/1
-      - link:
-          hasIcon: true
-          custom_title: "[Proposal] Starknet Alpha v0.11.0"
-          custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334/1
-      - link:
-          hasIcon: true
-          custom_title: "[Proposal] Starknet Alpha v0.12.0"
-          custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-12-0/95997
-      - link:
-          hasIcon: true
-          custom_title: Suggested Delegation Agreement
-          custom_internal_link: https://www.starknet.io/en/community/governance/delegation-agreement
-  - type: link_list
-    randomize: false
-    heading: Starknet Foundation
-    blocks:
-      - link:
-          hasIcon: true
-          custom_title: Welcome to the world, Starknet foundation!
-          custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
-      - link:
-          hasIcon: true
-          custom_title: "Introducing: The Starknet Foundation"
-          custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
-  - type: link_list
-    randomize: false
-    heading: "STRK Token "
-    blocks:
-      - link:
-          hasIcon: true
-          custom_title: Starknet token is deployed on Ethereum
-          custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
-  - type: link_list
-    randomize: false
-    heading: Starknet Sovereignty
-    blocks:
-      - link:
-          hasIcon: true
-          custom_title: "Part 1: A Decentralization Proposal"
-          custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
-      - link:
-          hasIcon: true
-          custom_title: "Part 2: A Decentralization and Governance Proposal for Starknet"
-          custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
-      - link:
-          hasIcon: true
-          custom_title: "Part 3: Starknet Token Design"
-          custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
+      - type: link_list
+        listSize: lg
+        heading: "Starknet Governance: First Phase"
+        blocks:
+          - link:
+              custom_title: "Starknet’s governance: First phase"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/starknets-governance-first-phase
+              hasIcon: true
+          - link:
+              hasIcon: true
+              custom_title: Delegate Profile Thread
+              custom_external_link: https://community.starknet.io/t/delegate-profile-thread/4049
+          - link:
+              hasIcon: true
+              custom_title: Starknet Builders’ Council - Mission Statement
+              custom_external_link: https://community.starknet.io/t/starknet-builders-council-mission-statement/4045/1
+          - link:
+              hasIcon: true
+              custom_title: "[Proposal] Starknet Alpha v0.11.0"
+              custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334/1
+          - link:
+              hasIcon: true
+              custom_title: "[Proposal] Starknet Alpha v0.12.0"
+              custom_external_link: https://community.starknet.io/t/proposal-starknet-alpha-v0-12-0/95997
+          - link:
+              hasIcon: true
+              custom_title: Suggested Delegation Agreement
+              custom_internal_link: https://www.starknet.io/en/community/governance/delegation-agreement
+      - type: link_list
+        randomize: false
+        heading: Starknet Foundation
+        blocks:
+          - link:
+              hasIcon: true
+              custom_title: Welcome to the world, Starknet foundation!
+              custom_internal_link: https://www.starknet.io/en/posts/governance/welcome-to-the-world-starknet-foundation
+          - link:
+              hasIcon: true
+              custom_title: "Introducing: The Starknet Foundation"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/introducing-the-starknet-foundation
+      - type: link_list
+        randomize: false
+        heading: "STRK Token "
+        blocks:
+          - link:
+              hasIcon: true
+              custom_title: Starknet token is deployed on Ethereum
+              custom_internal_link: https://www.starknet.io/en/posts/governance/starknet-token-is-deployed-on-ethereum
+      - type: link_list
+        randomize: false
+        heading: Starknet Sovereignty
+        blocks:
+          - link:
+              hasIcon: true
+              custom_title: "Part 1: A Decentralization Proposal"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
+          - link:
+              hasIcon: true
+              custom_title: "Part 2: A Decentralization and Governance Proposal for Starknet"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+          - link:
+              hasIcon: true
+              custom_title: "Part 3: Starknet Token Design"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
