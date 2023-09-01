@@ -1,8 +1,7 @@
 import {
   Box,
   Flex,
-  Grid,
-  Container,
+  useColorMode,
   HStack,
   SystemStyleObject,
   Divider
@@ -37,30 +36,6 @@ export interface Props extends AutoProps {
   cardType?: "grid" | "event";
   title?: string;
 }
-const bgStyles: Record<Props["variant"], SystemStyleObject> = {
-  home: {
-    position: "relative",
-    minHeight: { base: 2538, md: 2138, lg: 1838 },
-    paddingTop: 900,
-    mt: "-960",
-    mb: { base: 0, lg: -130 },
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      bg: "brand-primary-solar-tangerine-solid-8",
-      clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
-      backgroundImage: "url(/assets/community-events-bg.svg)",
-      backgroundSize: "130%",
-      backgroundPosition: "center",
-      zIndex: -1,
-    },
-  },
-  generic: {},
-};
 
 const headingStyles: Record<Props["variant"], SystemStyleObject> = {
   home: {
@@ -80,6 +55,31 @@ export function BlockCommunityEventsList({
   cardType = "grid",
   title = "Community events near you"
 }: Props): JSX.Element | null {
+  const { colorMode } = useColorMode();
+  const bgStyles: Record<Props["variant"], SystemStyleObject> = {
+    home: {
+      position: "relative",
+      minHeight: { base: 2538, md: 2138, lg: 1838 },
+      paddingTop: 900,
+      mt: "-960",
+      mb: { base: 0, lg: -130 },
+      "&::before": {
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        bg: "brand-primary-solar-tangerine-solid-8",
+        clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
+        backgroundImage: colorMode === "light" ? "url(/assets/pattern-orange-light.svg)" : "url(/assets/pattern-orange-dark.svg)",
+        backgroundSize: "130%",
+        backgroundPosition: "center",
+        zIndex: -1,
+      },
+    },
+    generic: {},
+  };
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
