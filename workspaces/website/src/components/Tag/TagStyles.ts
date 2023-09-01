@@ -14,8 +14,22 @@ const listCard = definePartsStyle({
   },
 });
 
+const tutorialCard = definePartsStyle({
+  container: {
+    bg: "surface.transparent.value",
+    color: "content.accent.value",
+    fontSize: "14px",
+    lineHeight: "24px",
+    borderRadius: "round",
+    paddingInline: "sm",
+    minHeight: "24px",
+    fontWeight: 500,
+  },
+});
+
 export const tagTheme = defineMultiStyleConfig({
   variants: {
     listCard,
+    tutorialCard,
   },
 });

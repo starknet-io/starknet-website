@@ -30,14 +30,14 @@ export const Heading: React.FC<CustomHeadingProps> = ({
   withMarginBottom = false,
   ...props
 }) => {
-  const { ...rest } = props;
   const Tag = variant || "h2";
   return (
     <ChakraHeading
+      color="content.accent.value"
       {...headingTheme[Tag as keyof typeof headingTheme]}
       as={as ? as : variant === "h1hero" ? "h1" : (variant as typeof as)}
       mb={renderMb(variant, withMarginBottom)}
-      {...rest}
+      {...props}
     />
   );
 };

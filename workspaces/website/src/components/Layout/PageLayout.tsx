@@ -31,7 +31,6 @@ type Props = {
 };
 
 export const PageLayout = (props: Props) => {
-  console.log('props.pageLastUpdated ', props.sectionHeaderTitle)
   return (
     <Container
       py="0"
@@ -90,9 +89,15 @@ export const PageLayout = (props: Props) => {
                 />
               </Box>
             )}
-            <Box pb="xl" borderBottom="1px solid" borderColor="border.divider">
-              {props.pageLastUpdated}
-            </Box>
+            {props.pageLastUpdated && (
+              <Box
+                pb="xl"
+                borderBottom="1px solid"
+                borderColor="border.divider"
+              >
+                {props.pageLastUpdated}
+              </Box>
+            )}
             {props.main}
           </Box>
         </Box>

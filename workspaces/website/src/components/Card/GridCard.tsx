@@ -150,21 +150,23 @@ const Content = ({
   const formattedDifficulty = titleCase(difficulty);
   return (
     <Flex
-      gap="3"
+      gap={variant === "horizontal" ? "xs" : "3"}
       direction="column"
       alignItems="flex-start"
       flex={variant === "vertical" ? 1 : "initial"}
       w={variant === "vertical" ? "full" : "auto"}
     >
-      <Text
-        color="heading-navy-fg"
-        fontSize="18px"
-        variant="cardBody"
-        fontWeight="bold"
-        noOfLines={2}
-      >
-        {title}
-      </Text>
+      {title && (
+        <Text
+          color="heading-navy-fg"
+          fontSize="18px"
+          variant="cardBody"
+          fontWeight="bold"
+          noOfLines={2}
+        >
+          {title}
+        </Text>
+      )}
       <Flex
         direction={variant === "vertical" ? "column" : "row"}
         alignItems={variant === "horizontal" ? "center" : "flex-start"}
@@ -181,6 +183,7 @@ const Content = ({
               <Link href={anAuthor.author_link} isExternal={true} mr="2">
                 <Text
                   variant="textLink"
+                  color="content.link.value"
                   sx={{
                     display: "flex",
                     flexDirection: "row",
@@ -199,13 +202,22 @@ const Content = ({
           </HStack>
         ))}
       </Flex>
-      <Flex direction="row">
+      <Flex
+        direction={{
+          base: "column",
+          md: "row",
+        }}
+        gap={{
+          base: "xs",
+          md: "md",
+        }}
+      >
         <Flex
           direction={variant === "vertical" ? "column" : "row"}
           alignItems={variant === "horizontal" ? "center" : "flex-start"}
-          gap={variant === "horizontal" ? "xl" : "3"}
+          gap={variant === "horizontal" ? "md" : "3"}
         >
-          <HStack spacing="2">
+          <HStack spacing="xs">
             <Icon
               as={HiOutlineCalendarDays}
               boxSize="24px"
@@ -215,7 +227,7 @@ const Content = ({
               {date}
             </Text>
           </HStack>
-          <HStack spacing="2">
+          <HStack spacing="xs">
             <Icon
               as={HiOutlineAcademicCap}
               boxSize="24px"
@@ -227,13 +239,13 @@ const Content = ({
           </HStack>
         </Flex>
         {variant === "horizontal" ? (
-          <Flex height="40px" ml="xl">
+          <Flex gap="md">
             {Array.isArray(tags) &&
               tags.map((tag, i) => {
                 // only show max 2 tags
                 if (i > 1) return null;
                 return (
-                  <Tag key={i} variant="listCard">
+                  <Tag key={i} variant="tutorialCard">
                     {tag}
                   </Tag>
                 );
