@@ -47,16 +47,12 @@ blocks:
           1. Set up an Ethereum wallet.\
              There are many. For a list, see [Ethereum wallets](https://ethereum.org/en/wallets/), and for a helpful guide, see [How to "create" an Ethereum account](https://ethereum.org/en/guides/how-to-create-an-ethereum-account/). Both are  on the Ethereum site. 
 
-          You can use a search engine like Google to help you decide on the right one for you. I found that [Best Ethereum Wallets of 2023](https://www.investopedia.com/best-ethereum-wallets-6830692) helped me, and to get started, I decided to use [MetaMask](https://metamask.io/). For information on setting up a wallet, see the documentation for the wallet you choose. 
-
-
+             You can use a search engine like Google to help you decide on the right one for you. I found that [Best Ethereum Wallets of 2023](https://www.investopedia.com/best-ethereum-wallets-6830692) helped me, and to get started, I decided to use [MetaMask](https://metamask.io/). For information on setting up a wallet, see the documentation for the wallet you choose. 
           2. Deposit some ETH to your Ethereum wallet. You can use your credit card or your bank account with an exchange such as [Binance](https://www.binance.com/) or [Coinbase](https://www.coinbase.com/).
 
-          3. Set up a Starknet wallet, which includes funding the wallet and deploying your account on Starknet. For more information, see [Setting up a Starknet wallet](https://docs.google.com/document/d/1IOu2wgYUyxxCkqid43DZIjGpK-3Uv-mcT10EiYzQDsQ/edit#heading=h.dxb1jmtyt4f) below. 
+          3. Set up a Starknet wallet, which includes funding the wallet and deploying your account on Starknet. For more information, see *Setting up a Starknet Wallet* below. 
 
-
-          NOTE: You can also add funds directly to your Starknet wallet from a credit card or bank by using an on-ramp service, such as [Banxa](https://banxa.com/) or [Ramp](https://ramp.network/). 
-
+             NOTE: You can also add funds directly to your Starknet wallet from a credit card or bank by using an on-ramp service, such as [Banxa](https://banxa.com/) or [Ramp](https://ramp.network/). 
 
           After you complete these procedures, you’ll be ready to start actually doing something. 
 
