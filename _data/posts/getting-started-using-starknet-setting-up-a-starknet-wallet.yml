@@ -104,15 +104,10 @@ blocks:
 
              ![Braavos connect prompt ](/assets/6-braavos_connect.png "Braavos connect prompt ")
 
-          StarkGate completes the connection.\
-
-          \
-
-          Your Starknet wallet is now connected, and it prompts you to add funds. In order to deploy your account on Starknet, you need to add funds.\
-
-          **NOTE**: Deploying an account incurs a small gas fee on Ethereum. But don’t worry, you only have to deploy the account once.
-
-
+             StarkGate completes the connection.\
+             \
+             Your Starknet wallet is now connected, and it prompts you to add funds. In order to deploy your account on Starknet, you need to add funds.\
+             **NOTE**: Deploying an account incurs a small gas fee on Ethereum. But don’t worry, you only have to deploy the account once.
           7. Confirm that you’re on the Deposit tab. 
 
              ![Deposit tab](/assets/7-deposit_tab.png "Deposit tab")
