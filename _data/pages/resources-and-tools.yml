@@ -33,18 +33,18 @@ blocks:
           label: A Rust SDK for Starknet
       - type: link_list_item
         link:
-          custom_title: "Caigo "
+          custom_title: starknet.go
           custom_external_link: https://github.com/dontpanicdao/caigo
         subLabel:
           label: "A Golang SDK for Starknet "
-      - type: link_list_item
-        link:
-          custom_title: starknet.php
-          custom_external_link: https://github.com/Starknet-php/starknet.php
+      - link:
+          hasIcon: true
+          custom_title: starknet jvm
+          custom_external_link: https://github.com/software-mansion/starknet-jvm
         subLabel:
-          label: "A PHP SDK for Starknet "
+          label: A JVM languages (Java, Kotlin, Scala) SDK for Starknet
   - type: link_list
-    heading: Development frameworks
+    heading: Development frameworks - Cairo 0
     listSize: lg
     randomize: true
     blocks:
@@ -54,24 +54,26 @@ blocks:
         subLabel:
           label: Starknet smart contract development toolchain
       - link:
-          custom_title: Hardhat-starknet
-          custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
-      - link:
           custom_title: Nile
           custom_external_link: https://github.com/OpenZeppelin/nile
         subLabel:
           label: CLI tool for interacting with Starknet projects
-      - link:
-          custom_title: "Starknet Devnet "
-          custom_external_link: https://github.com/Shard-Labs/starknet-devnet
-        subLabel:
-          label: Like Ganache, but for Starknet
+  - type: link_list
+    randomize: true
+    heading: Development frameworks - Cairo
+    blocks:
       - link:
           hasIcon: true
-          custom_title: Foundry
           custom_external_link: https://github.com/foundry-rs/starknet-foundry
+          custom_title: Foundry
         subLabel:
           label: Ethereum’s leading toolkit for developers is coming to Starknet
+      - link:
+          hasIcon: true
+          custom_title: Hardhat-starknet
+          custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
+        subLabel:
+          label: A Cario plugin for  Hardhat
   - type: link_list
     heading: "Editor plugins "
     listSize: lg
@@ -82,11 +84,11 @@ blocks:
           custom_title: Cairo.vim
           custom_external_link: https://github.com/miguelmota/cairo.vim
         subLabel:
-          label: (Outdate) vim syntax plugin for Cairo
+          label: Vim syntax plugin for Cairo (outdated, cairo0)
       - type: link_list_item
         link:
           custom_title: Cairo VS Code
-          custom_external_link: https://www.cairo-lang.org/docs/quickstart.html#visual-studio-code-setup
+          custom_external_link: https://marketplace.visualstudio.com/items?itemName=starkware.cairo1
         subLabel:
           label: "VS Code syntax support for Cairo (requires manual installation) "
       - type: link_list_item
@@ -94,7 +96,7 @@ blocks:
           custom_title: Cairo language support
           custom_external_link: https://marketplace.visualstudio.com/items?itemName=ericglau.cairo-ls
         subLabel:
-          label: Code assistance and compile error highlighting in VS Code
+          label: A code completion for VS Code (outdated, cairo0)
   - type: link_list
     heading: Templates
     listSize: lg
@@ -118,6 +120,50 @@ blocks:
           custom_external_link: https://github.com/fracek/starknet-react-example
         subLabel:
           label: Connect your ReactApp to Starknet
+      - link:
+          hasIcon: true
+          custom_title: React
+          custom_external_link: https://github.com/apibara/starknet-react
+      - link:
+          hasIcon: true
+          custom_title: Starknet forge template
+          custom_external_link: https://github.com/foundry-rs/starknet_forge_template
+        subLabel:
+          label: Forkable template to get started with Starknet Foundry's Forge
+  - type: link_list
+    randomize: false
+    heading: Building tools
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Scarb
+          custom_external_link: https://github.com/software-mansion/scarb
+        subLabel:
+          label: A Cairo project and dependencies management tool
+      - link:
+          hasIcon: true
+          custom_title: get-starknet
+          custom_external_link: https://www.npmjs.com/package/get-starknet
+        subLabel:
+          label: Starknet wallet <-> dApp bridge
+      - link:
+          hasIcon: true
+          custom_title: Starknet devnet
+          custom_external_link: https://github.com/Shard-Labs/starknet-devnet
+        subLabel:
+          label: A local testnet
+      - link:
+          hasIcon: true
+          custom_title: Rust devent
+          custom_external_link: https://github.com/0xSpaceShard/starknet-devnet-rs
+        subLabel:
+          label: A local testnet for Starknet in Rust
+      - link:
+          hasIcon: true
+          custom_title: Katana
+          custom_external_link: https://book.dojoengine.org/toolchain/katana/overview.html
+        subLabel:
+          label: A local Starknet node, designed to support local development with Dojo
   - type: link_list
     heading: "General "
     listSize: lg
@@ -133,18 +179,8 @@ blocks:
         link:
           custom_title: Cairo docker
           custom_external_link: https://hub.docker.com/repository/docker/shardlabs/cairo-cli
-      - type: link_list_item
-        link:
-          custom_title: "Empiric network "
-          custom_external_link: https://docs.empiric.network/
         subLabel:
-          label: "Starknet native oracle "
-      - type: link_list_item
-        link:
-          custom_title: get-starknet
-          custom_external_link: https://www.npmjs.com/package/get-starknet
-        subLabel:
-          label: Starknet wallet <-> dapp bridge
+          label: A docker container packaging the Cairo compiler and scarb
       - type: link_list_item
         link:
           custom_title: starknet-deeplink
@@ -153,43 +189,29 @@ blocks:
           label: Starknet deeplink generator
       - type: link_list_item
         link:
-          custom_title: Nile
-          custom_external_link: https://github.com/OpenZeppelin/nile
+          custom_title: Warp
+          custom_external_link: https://github.com/NethermindEth/warp
         subLabel:
-          label: "CLI tool to develop Starknet projects "
-      - type: link_list_item
-        link:
-          custom_title: Starknet devnet
-          custom_external_link: https://github.com/Shard-Labs/starknet-devnet
-        subLabel:
-          label: "Local testnet "
-      - type: link_list_item
-        link:
+          label: Solidity to Cairo transpiler (outdated, cairo0)
+  - type: link_list
+    randomize: false
+    heading: Additional resources
+    blocks:
+      - link:
+          hasIcon: true
           custom_title: Starknet Goerli ETH faucet
           custom_external_link: https://faucet.goerli.starknet.io/
         subLabel:
           label: "Testnet ETH faucet "
-      - type: link_list_item
-        link:
-          custom_title: Starknet node by Infura
-          custom_external_link: https://www.infura.io/networks/ethereum/starknet
+      - link:
+          hasIcon: true
+          custom_title: "Empiric network "
+          custom_external_link: https://docs.empiric.network/
         subLabel:
-          label: Scale your infrastructure
-      - type: link_list_item
-        link:
-          custom_title: "Starknet node by Chainstack "
-          custom_external_link: https://chainstack.com/build-better-with-starknet/
-        subLabel:
-          label: Get your API services without running your own node
-      - type: link_list_item
-        link:
+          label: "Starknet native oracle "
+      - link:
+          hasIcon: true
           custom_title: "TypeChain "
           custom_external_link: https://github.com/dethcrypto/TypeChain
         subLabel:
           label: TypeScript bindings generator for Cairo
-      - type: link_list_item
-        link:
-          custom_title: Warp
-          custom_external_link: https://github.com/NethermindEth/warp
-        subLabel:
-          label: "Solidity to Cairo transpiler "
