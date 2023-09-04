@@ -8,25 +8,36 @@ export const StatCardsBlock = (_: StatCardsBlockType) => {
       paddingBottom="3666px"
       marginBottom="-3666px"
       style={{
-        backgroundImage: "url(/assets/abstract-spot.svg), url(/assets/ethereum.svg)",
+        backgroundImage:
+          "url(/assets/abstract-spot.svg), url(/assets/ethereum.svg)",
         backgroundPosition: "left center, right center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "auto 800px, auto 800px"
+        backgroundSize: "auto 800px, auto 800px",
       }}
     >
       <Box
-      paddingBottom="666px"
-      marginBottom="-666px"
+        paddingBottom="666px"
+        marginBottom="-666px"
         style={{
-          backgroundImage: "url(/assets/abstract-spot.svg), url(/assets/ethereum.svg)",
+          backgroundImage:
+            "url(/assets/abstract-spot.svg), url(/assets/ethereum.svg)",
           backgroundPosition: "left center, right center",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "auto 800px, auto 800px"
+          backgroundSize: "auto 800px, auto 800px",
         }}
       >
         <Grid
-          gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(4, 1fr)"]}
-          gap="32px"
+          gridTemplateColumns={[
+            "1fr",
+            "1fr",
+            "repeat(2, 1fr)",
+            "repeat(4, 1fr)",
+          ]}
+          gap={{
+            base: "cards.gap-standard.base",
+            md: "cards.gap-standard.md",
+            lg: "cards.gap-standard.lg",
+          }}
           maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
           px={{
             base: "page.left-right.base",

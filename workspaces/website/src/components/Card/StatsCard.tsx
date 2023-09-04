@@ -23,13 +23,13 @@ export const StatsCard = ({
       flexDirection="column"
       w="auto"
       gap={{
-        base: "3xl",
-        lg: "5xl",
+        base: "2xl",
+        lg: "3xl",
       }}
       minW={{
         base: "260px",
       }}
-      borderRadius="1rem"
+      borderRadius="md"
     >
       <Heading
         title={title}
@@ -42,7 +42,7 @@ export const StatsCard = ({
           base: "md",
           md: "3xl",
         }}
-        pb="xl"
+        pb="md"
         borderBottom="1px solid"
         borderColor="brand-primary-infinite-blue-solid-9"
         minHeight="97px"
@@ -61,24 +61,37 @@ export const StatsCard = ({
       >
         {stat}
         <Box marginTop="20px">
-          <img src="/assets/StatCardGraph.svg" alt="" width="32px" height="38px" />
+          <img
+            src="/assets/StatCardGraph.svg"
+            alt=""
+            width="32px"
+            height="38px"
+          />
         </Box>
       </Box>
       <Box
-        p="xs"
         pos="absolute"
         right={0}
         top={0}
         display="flex"
         flexDir="column"
         alignItems="center"
+        p="xs"
       >
-        <Tooltip label={tooltip} placement="auto" gutter={18} hasArrow>
+        <Tooltip
+          label={tooltip}
+          placement="auto"
+          gutter={18}
+          hasArrow
+          color="content.accent.value"
+          background="surface.accent-inverted"
+          p="sm"
+        >
           <Button
             aria-label="Information"
-            color="brand-primary-infinite-blue-solid-9"
+            color="brand-primary-infinite-blue-solid-8"
             _hover={{
-              color: "surface.accentInverted",
+              color: "brand-primary-infinite-blue-solid-3",
             }}
             variant="unstyled"
           >
