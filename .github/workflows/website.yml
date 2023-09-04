@@ -47,7 +47,14 @@ jobs:
         uses: actions/cache/restore@v3
         with:
           path: _crowdin
-          key: crowdin-cache-dev
+          key: crowdin-cache-${{ github.ref_name }}-${{ env.YMDHM }}
+          restore-keys: |
+            crowdin-cache-${{ github.ref_name }}-${{ env.YMDHM }}
+            crowdin-cache-${{ github.ref_name }}-${{ env.YMDH }}
+            crowdin-cache-${{ github.ref_name }}-${{ env.YMD }}
+            crowdin-cache-${{ github.ref_name }}-${{ env.YM }}
+            crowdin-cache-${{ github.ref_name }}
+            crowdin-cache-
 
       - name: Restore social media data
         uses: actions/cache/restore@v3
@@ -86,6 +93,6 @@ jobs:
           projectName: starknet-website
           directory: dist/client
           workingDirectory: workspaces/website
-          wranglerVersion: '3'
+          wranglerVersion: "3"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}
