@@ -1,0 +1,81 @@
+id: bf5e2e92-b9a2-4f27-b0b9-9f5565065293
+post_type: video
+title: "Giza : Enabling ML in the blockchain using Cairo"
+published_date: 2023-08-14T11:01:24.113Z
+video:
+  url: https://www.youtube.com/watch?v=t1Z5Anx_t6c
+  id: t1Z5Anx_t6c
+  data:
+    kind: youtube#video
+    etag: cB4ZWBpc7hsZJOQ32VF9RZNfYW4
+    id: t1Z5Anx_t6c
+    snippet:
+      publishedAt: 2023-08-02T20:06:23Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Giza : Enabling ML in the blockchain using Cairo - Fran Algaba"
+      description: >-
+        Giza : http://gizatech.xyz/
+
+        Fran on Twitter : https://twitter.com/franalgaba_?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+
+        StarkNetCC : https://www.starknet.cc/
+
+        Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/t1Z5Anx_t6c/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/t1Z5Anx_t6c/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/t1Z5Anx_t6c/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/t1Z5Anx_t6c/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/t1Z5Anx_t6c/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Giza : Enabling ML in the blockchain using Cairo - Fran Algaba"
+        description: >-
+          Giza : http://gizatech.xyz/
+
+          Fran on Twitter : https://twitter.com/franalgaba_?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+
+          StarkNetCC : https://www.starknet.cc/
+
+          Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT12M37S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/giza-enabling-ml-in-the-blockchain-using-cairo.jpg
+category: community-and-events

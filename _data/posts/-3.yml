@@ -1,0 +1,73 @@
+id: c6cee90d-b6d7-411a-abc1-ec6c33dd6e85
+post_type: video
+title: "Pragma : The Provable Oracle"
+published_date: 2023-08-04T12:07:14.399Z
+video:
+  url: https://www.youtube.com/watch?v=MjU2vOElpqA
+  id: MjU2vOElpqA
+  data:
+    kind: youtube#video
+    etag: 7VMbKpjV3H-TFign1GSo_OUm-MQ
+    id: MjU2vOElpqA
+    snippet:
+      publishedAt: 2023-08-04T14:00:15.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/MjU2vOElpqA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/MjU2vOElpqA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/MjU2vOElpqA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/MjU2vOElpqA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/MjU2vOElpqA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en
+      channelTitle: StarkNetCC
+      title: "Pragma : The Provable Oracle - Matthias Hallgren"
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      defaultLanguage: en
+      categoryId: "28"
+      localized:
+        title: "Pragma : The Provable Oracle - Matthias Hallgren"
+        description: |-
+          Pragma : https://www.pragmaoracle.com/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      description: |-
+        Pragma : https://www.pragmaoracle.com/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+    contentDetails:
+      duration: PT11M56S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/pragma-the-provable-oracle.jpg
+category: community-and-events

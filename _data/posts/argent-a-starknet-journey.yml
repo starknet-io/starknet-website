@@ -1,0 +1,73 @@
+id: d0a2fb1c-4f80-4f9c-9b12-24318b543f64
+post_type: video
+title: "Argent : A Starknet journey"
+published_date: 2023-08-04T14:10:52.701Z
+video:
+  url: https://www.youtube.com/watch?v=1YjUsir58Lc
+  id: 1YjUsir58Lc
+  data:
+    kind: youtube#video
+    etag: VKUQYRK_GA1Sx7r8LGW17Xh4py0
+    id: 1YjUsir58Lc
+    snippet:
+      publishedAt: 2023-08-04T16:15:00Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Argent : A Starknet journey - Julien Niset"
+      description: |-
+        Argent : https://www.argent.xyz/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/1YjUsir58Lc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/1YjUsir58Lc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/1YjUsir58Lc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/1YjUsir58Lc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/1YjUsir58Lc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Argent : A Starknet journey - Julien Niset"
+        description: |-
+          Argent : https://www.argent.xyz/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT13M13S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/argent-a-starknet-journey-julien-niset.jpg
+category: community-and-events

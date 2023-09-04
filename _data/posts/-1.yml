@@ -1,0 +1,83 @@
+id: 56e6d27c-e87f-4a7d-814b-e41010ec1b03
+post_type: video
+title: The Radius - A sequencing layer to make app-specific rollups sustainable
+published_date: 2023-08-02T11:06:46.117Z
+video:
+  url: https://www.youtube.com/watch?v=9uTXfD9kYJw
+  id: 9uTXfD9kYJw
+  data:
+    kind: youtube#video
+    etag: qzR7Y5GRPzAxTg-ineed-Wgl6xc
+    id: 9uTXfD9kYJw
+    snippet:
+      publishedAt: 2023-08-02T20:03:58.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/9uTXfD9kYJw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/9uTXfD9kYJw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/9uTXfD9kYJw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/9uTXfD9kYJw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/9uTXfD9kYJw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en
+      channelTitle: StarkNetCC
+      title: The Radius - A sequencing layer to make app-specific rollups sustainable
+        - Tariz Jeong
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      defaultLanguage: en
+      categoryId: "28"
+      localized:
+        title: The Radius - A sequencing layer to make app-specific rollups sustainable
+          - Tariz Jeong
+        description: >-
+          The Radius : https://www.theradius.xyz
+
+          Tariz on Twitter : https://twitter.com/hyunxukee?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+
+          StarkNetCC : https://www.starknet.cc/
+
+          Starkware : https://starkware.co/
+      description: >-
+        The Radius : https://www.theradius.xyz
+
+        Tariz on Twitter : https://twitter.com/hyunxukee?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+
+        StarkNetCC : https://www.starknet.cc/
+
+        Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+    contentDetails:
+      duration: PT15M59S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/the-radius-a-sequencing-layer-to-make-app-specific-rollups-sustainable.jpg
+category: community-and-events

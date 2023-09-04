@@ -20,6 +20,7 @@ export interface DocumentProps {
   title?: string;
   description?: string;
   image?: string;
+  video?: string;
 }
 
 export type NavConfig = {

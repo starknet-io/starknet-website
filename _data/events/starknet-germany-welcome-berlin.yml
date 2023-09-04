@@ -1,0 +1,19 @@
+type: meetup
+name: StarkNet Germany - Welcome Berlin!
+description: Welcome Berlin 👋  Join us for the kick-off event for curious minds
+  that want to stay on top of the strongest innovation in the blockchain
+  space.  Learn about provable Rust-like language Cairo, powered by zk STARKs,
+  the layer 2 validity rollup StarkNet that scales Ethereum, account
+  abstraction, decentralized sequencers, provers and much more.  We're bringing
+  together developers, enthusiasts, and industry experts for an introduction to
+  StarkNet during the Berlin Blockchain Week. Doors open 6 PM and talks start
+  around 6.20 PM. Feel free to follow us to stay up to date.
+url: https://www.meetup.com/starknet-germany/events/295346685/
+start_date: 2023-09-17T15:00:02.700Z
+month: September 2023
+end_date: 2023-09-17T18:00:02.711Z
+show_in_past_events: false
+image: /assets/frame-4-4.png
+location: europe
+city: "Berlin "
+country: "Germany "

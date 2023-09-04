@@ -1,0 +1,69 @@
+id: a240a8ee-9c73-41b3-b0a8-f9bfa327a0d4
+post_type: video
+title: Community building in Starknet
+published_date: 2023-08-04T10:57:53.774Z
+video:
+  url: https://www.youtube.com/watch?v=FYfzKaKvMGI
+  id: FYfzKaKvMGI
+  data:
+    kind: youtube#video
+    etag: m_zb95CBI3m_Wim4GrnsmfDU1jY
+    id: FYfzKaKvMGI
+    snippet:
+      publishedAt: 2023-08-04T10:00:10.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/FYfzKaKvMGI/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/FYfzKaKvMGI/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/FYfzKaKvMGI/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/FYfzKaKvMGI/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/FYfzKaKvMGI/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en
+      channelTitle: StarkNetCC
+      title: Community building in Starknet - Louis Guthmann
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      defaultLanguage: en
+      categoryId: "28"
+      localized:
+        title: Community building in Starknet - Louis Guthmann
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+    contentDetails:
+      duration: PT20M24S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/community-building-in-starknet-louis-guthmann.jpg
+category: community-and-events
