@@ -58,7 +58,7 @@ export function BlockCommunityEventsList({
   const bgStyles: Record<Props["variant"], SystemStyleObject> = {
     home: {
       position: "relative",
-      minHeight: { base: 2538, md: 2138, lg: 1838 },
+      // minHeight: { base: 2538, md: 2138, lg: 1838 },
       paddingTop: 900,
       mt: "-960",
       mb: { base: 0, lg: -130 },
