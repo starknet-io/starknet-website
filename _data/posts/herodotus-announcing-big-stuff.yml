@@ -1,0 +1,73 @@
+id: f41e4b38-b9ab-4125-8c0b-bd4bd3ec87ea
+post_type: video
+title: "Herodotus : Announcing big stuff"
+published_date: 2023-08-04T12:03:32.465Z
+video:
+  url: https://www.youtube.com/watch?v=1bQcyNh6p08
+  id: 1bQcyNh6p08
+  data:
+    kind: youtube#video
+    etag: Z3S1aB9r5SM8zgdjK2ya3Y48Vyk
+    id: 1bQcyNh6p08
+    snippet:
+      publishedAt: 2023-08-04T13:30:01Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Herodotus : Announcing big stuff - Marcello Bardus"
+      description: |-
+        Herodotus : https://www.herodotus.dev/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/1bQcyNh6p08/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/1bQcyNh6p08/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/1bQcyNh6p08/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/1bQcyNh6p08/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/1bQcyNh6p08/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Herodotus : Announcing big stuff - Marcello Bardus"
+        description: |-
+          Herodotus : https://www.herodotus.dev/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT14M12S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/herodotus-announcing-big-stuff.jpg
+category: community-and-events

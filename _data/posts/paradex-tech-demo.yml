@@ -1,0 +1,69 @@
+id: 7f1424d2-d055-4692-b809-04f67b0c1c99
+post_type: video
+title: "Paradex : Tech demo"
+published_date: 2023-08-04T12:15:23.540Z
+video:
+  url: https://www.youtube.com/watch?v=d1IqNH_7dj0
+  id: d1IqNH_7dj0
+  data:
+    kind: youtube#video
+    etag: izQENOd91CHIJHNXRaZoEERRDQM
+    id: d1IqNH_7dj0
+    snippet:
+      publishedAt: 2023-08-04T14:45:02Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Paradex : Tech demo - Sergey Vidyuk"
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/d1IqNH_7dj0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/d1IqNH_7dj0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/d1IqNH_7dj0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/d1IqNH_7dj0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/d1IqNH_7dj0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Paradex : Tech demo - Sergey Vidyuk"
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT13M41S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/paradex-tech-demo.jpg
+category: community-and-events

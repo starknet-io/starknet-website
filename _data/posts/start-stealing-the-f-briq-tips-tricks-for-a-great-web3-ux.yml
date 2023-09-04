@@ -1,0 +1,75 @@
+id: 3a3aa8a7-f807-4a37-94f1-038934855d51
+post_type: video
+title: "Start stealing the f*** briq: tips & tricks for a great web3 UX"
+published_date: 2023-08-04T11:17:38.590Z
+video:
+  url: https://www.youtube.com/watch?v=7Y9e4DfcJFY
+  id: 7Y9e4DfcJFY
+  data:
+    kind: youtube#video
+    etag: 4f32OGockQqRoNM8x4UQVn-Ph9k
+    id: 7Y9e4DfcJFY
+    snippet:
+      publishedAt: 2023-08-04T10:15:00Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "Start stealing the f*** briq: tips & tricks for a great web3 UX -
+        Lancelot De Ferrière"
+      description: |-
+        Briq : https://briq.construction/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/7Y9e4DfcJFY/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/7Y9e4DfcJFY/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/7Y9e4DfcJFY/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/7Y9e4DfcJFY/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/7Y9e4DfcJFY/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "Start stealing the f*** briq: tips & tricks for a great web3 UX -
+          Lancelot De Ferrière"
+        description: |-
+          Briq : https://briq.construction/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT15M1S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/start-stealing-the-f-briq-tips-tricks-for-a-great-web3-uxjpg.jpeg
+category: community-and-events

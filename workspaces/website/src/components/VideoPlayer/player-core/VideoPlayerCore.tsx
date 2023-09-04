@@ -1,4 +1,3 @@
-
 import VideoJS from "@ui/VideoPlayer/player-core/VideoJS";
 import React, {
   CSSProperties,
@@ -25,6 +24,8 @@ import { useVolume } from "./hooks/useVolume";
 import ShareModal from "./share/ShareModal";
 import { isFinalChapter } from "./utils";
 import "./player-overrides.css";
+import { FinalChapterLeftCTA } from "./chapter-cta/FinalChapterLeftCTA";
+import { FinalChapterRightCTA } from "./chapter-cta/FinalChapterRightCTA";
 
 export type PlayerRef = React.MutableRefObject<Player | null>;
 
@@ -39,7 +40,7 @@ type VideoPlayerCoreProps = {
   videoWrapperStyle: CSSProperties;
   videoPositionStyle: CSSProperties;
   onFullscreenChange?: (isFullscreen: boolean) => void;
-  onContainerHeightChange?: (height: number) => void;
+  onContainerHeightChange?: (height: number, width: number) => void;
   onPlayingStatusChange?: (playingStatus: SeekStatuses) => void;
   renderChapter: (options: {
     chapter: Chapter;
@@ -63,7 +64,7 @@ export function VideoPlayerCore({
 }: VideoPlayerCoreProps) {
   const [bufferPercent, setBufferPercent] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
-  const [videoContainerRef, { height }] = useMeasure<HTMLDivElement>();
+  const [videoContainerRef, { height, width }] = useMeasure<HTMLDivElement>();
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
   const currentChapterRef = useRef(currentChapter);
 
@@ -143,8 +144,8 @@ export function VideoPlayerCore({
     onFullscreenChange?.(isFullscreen);
   }, [isFullscreen, onFullscreenChange]);
   useEffect(() => {
-    onContainerHeightChange?.(height);
-  }, [height, onContainerHeightChange]);
+    onContainerHeightChange?.(height, width);
+  }, [height, width, onContainerHeightChange]);
 
   useEffect(() => {
     onPlayingStatusChange?.(playingStatus);
@@ -224,6 +225,11 @@ export function VideoPlayerCore({
     return isPlayerActive || isInteractingWithVolume;
   }, [isInteractingWithVolume, isPlayerActive, playingStatus]);
 
+  const shouldShowChapterCTA =
+    chapter?.id === chapters[chapters.length - 1].id &&
+    totalDuration !== 0 &&
+    totalDuration - currentTime < 5;
+
   return (
     <div style={videoWrapperStyle} ref={videoWrapperRef}>
       <div style={videoPositionStyle} onClick={onPlayToggle}>
@@ -231,6 +237,17 @@ export function VideoPlayerCore({
           options={videojsOptions}
           onReady={handlePlayerReady}
           videoContainerRef={videoContainerRef}
+        />
+
+        <FinalChapterLeftCTA
+          height={height}
+          width={width}
+          isVisible={shouldShowChapterCTA}
+        />
+        <FinalChapterRightCTA
+          height={height}
+          width={width}
+          isVisible={shouldShowChapterCTA}
         />
       </div>
       <ChapterAutoPlayModal
@@ -255,6 +272,7 @@ export function VideoPlayerCore({
           episode: chapterIndex + 1,
           isVisible: isControlVisible,
         })}
+
       {chapter && (
         <CustomControl
           chapter={chapter}

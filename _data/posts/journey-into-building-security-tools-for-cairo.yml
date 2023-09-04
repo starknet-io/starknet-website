@@ -1,0 +1,71 @@
+id: 28ac2666-6638-4382-94fe-fdc0d887dbc7
+post_type: video
+title: Journey into building security tools for Cairo
+published_date: 2023-08-08T15:40:22.331Z
+video:
+  url: https://www.youtube.com/watch?v=bzk9nZ5CT00
+  id: bzk9nZ5CT00
+  data:
+    kind: youtube#video
+    etag: VlKDEzXDFLsxURYoDP--tArrcDQ
+    id: bzk9nZ5CT00
+    snippet:
+      publishedAt: 2023-08-04T08:45:04Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Journey into building security tools for Cairo - Patrick Ventuzelo
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/bzk9nZ5CT00/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/bzk9nZ5CT00/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/bzk9nZ5CT00/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/bzk9nZ5CT00/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/bzk9nZ5CT00/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Journey into building security tools for Cairo - Patrick Ventuzelo
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT17M52S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/journey-into-building-security-tools-for-cairo.jpg
+category: community-and-events
+topic:
+  - cairo
