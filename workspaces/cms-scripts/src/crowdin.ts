@@ -171,11 +171,13 @@ export function handleFields(
           break;
 
         case "markdown":
-          files.push({
-            type: "markdown",
-            data: data[field.name],
-            filepath: filepath + "_" + field.name,
-          });
+          if(data[field.name] != null){
+            files.push({
+              type: "markdown",
+              data: data[field.name],
+              filepath: filepath + "_" + field.name,
+            });
+          }
           break;
 
         case "list":
