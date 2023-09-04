@@ -83,14 +83,12 @@ export const GridCardLayout = {
   ...CardStyle,
 };
 export const GridCardImgLayout = {
-  width: "100%",
-  minHeight: 225,
-  maxHeight: 225,
   objectFit: "cover",
   position: "absolute",
   top: "0",
   left: "0",
-  height: { base: "16rem", md: "12rem", lg: "10rem" },
+  width: "100%",
+  height: "100%",
 };
 export const GridCardBodyLayout = {
   display: "flex",

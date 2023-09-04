@@ -1,23 +1,22 @@
 import {
   Box,
+  Divider,
   Flex,
-  useColorMode,
+  Grid,
   HStack,
   SystemStyleObject,
-  Divider
+  useColorMode,
 } from "@chakra-ui/react";
-import EventCard from "../../../../pages/events/EventCard";
-import moment from "moment";
-import { useMemo } from "react";
-import algoliasearch from "algoliasearch/lite";
-import { InstantSearch, Configure } from "react-instantsearch-hooks-web";
-import { useHits } from "react-instantsearch-hooks";
-import { Heading } from "@ui/Typography/Heading";
-import { Text } from "@ui/Typography/Text";
-import { Card, CardBody, CardLink, CardImg, CardTitle } from "@ui/Card/Card";
 import { Button } from "@ui/Button";
+import { Heading } from "@ui/Typography/Heading";
+import algoliasearch from "algoliasearch/lite";
 import { getUnixTime, startOfDay } from "date-fns";
+import { useMemo } from "react";
+import { useHits } from "react-instantsearch-hooks";
+import { Configure, InstantSearch } from "react-instantsearch-hooks-web";
+import EventsGridCard from "src/pages/events/EventGridCard";
 import { navigate } from "vite-plugin-ssr/client/router";
+import EventCard from "../../../../pages/events/EventCard";
 
 export interface AutoProps {
   readonly params: {
@@ -53,7 +52,7 @@ export function BlockCommunityEventsList({
   hitsPerPage = 3,
   variant = "generic",
   cardType = "grid",
-  title = "Community events near you"
+  title = "Community events near you",
 }: Props): JSX.Element | null {
   const { colorMode } = useColorMode();
   const bgStyles: Record<Props["variant"], SystemStyleObject> = {
@@ -72,7 +71,10 @@ export function BlockCommunityEventsList({
         bottom: 0,
         bg: "brand-primary-solar-tangerine-solid-8",
         clipPath: "polygon(0 14vw,100% 0,100% calc(100% - 14vw),0 100%)",
-        backgroundImage: colorMode === "light" ? "url(/assets/pattern-orange-light.svg)" : "url(/assets/pattern-orange-dark.svg)",
+        backgroundImage:
+          colorMode === "light"
+            ? "url(/assets/pattern-orange-light.svg)"
+            : "url(/assets/pattern-orange-dark.svg)",
         backgroundSize: "130%",
         backgroundPosition: "center",
         zIndex: -1,
@@ -97,7 +99,11 @@ export function BlockCommunityEventsList({
       />
       <Box sx={bgStyles[variant]}>
         <Box
-          maxW={cardType === "event" ? "900px" : { base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+          maxW={
+            cardType === "event"
+              ? "900px"
+              : { base: "contentMaxW.lg", md: "contentMaxW.xl" }
+          }
           px={{
             base: "page.left-right.base",
             md: "page.left-right.md",
@@ -114,7 +120,7 @@ export function BlockCommunityEventsList({
           >
             {title}
           </Heading>
-          <CustomHits hitsPerPage={hitsPerPage} cardType={cardType}  />
+          <CustomHits hitsPerPage={hitsPerPage} cardType={cardType} />
         </Box>
       </Box>
     </InstantSearch>
@@ -134,93 +140,76 @@ type HitProps = {
     readonly url: string;
   }[];
 };
-function CustomHits({ hitsPerPage, cardType }: { hitsPerPage: number, cardType: "grid" | "event" }) {
+function CustomHits({
+  hitsPerPage,
+  cardType,
+}: {
+  hitsPerPage: number;
+  cardType: "grid" | "event";
+}) {
   const { hits }: HitProps = useHits();
 
   return (
     <>
+      {cardType === "event" && (
+        <Flex gap={4}>
+          {hits.map((hit, i) => {
+            if (i > hitsPerPage) return null;
+            return (
+              <EventCard key={`${i}-event`} event={hit} isPastEvent={false} />
+            );
+          })}
+        </Flex>
+      )}
+      {cardType === "grid" && (
+        <Grid
+          gap={{
+            base: "cards.gap-standard.base",
+            md: "cards.gap-standard.md",
+            lg: "cards.gap-standard.lg",
+          }}
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+        >
+          {hits.map((hit, i) => {
+            if (i > hitsPerPage) return null;
+            return (
+              <EventsGridCard
+                key={`${i}-event`}
+                event={hit}
+                isPastEvent={false}
+              />
+            );
+          })}
+        </Grid>
+      )}
       <Flex
-        gap={4}
-        direction={cardType === "event" ? "column" : "row"}
-        gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
+        mt={{
+          base: "page.block-gap.base",
+          md: "page.block-gap.md",
+          lg: "page.block-gap.lg",
+        }}
+        alignItems="center"
+        direction="column"
+        pb="4xl"
       >
-        {hits.map((hit, i) => {
-          if (i > hitsPerPage) return null;
-          else {
-            if (cardType === "grid") {
-              return (
-                <Card variant="grid" key={hit?.name}>
-                  <Box
-                    overflow="hidden"
-                    position="relative"
-                    width="100%"
-                    paddingBottom="56.25%"
-                  >
-                    <CardImg variant="grid" src={hit.image} />
-                  </Box>
-                  <CardBody variant="grid">
-                    <Text variant="cardBody">
-                      {hit?.end_date
-                        ? `${moment(hit?.start_date).format(
-                            "ddd MMM DD"
-                          )} - ${moment(hit?.end_date).format(
-                            "ddd MMM DD, YYYY"
-                          )}`
-                        : moment(hit?.start_date).format("ddd MMM DD, YYYY")}
-                    </Text>
-                    <Heading
-                      mt="8px"
-                      mb={{ base: "12px", lg: "20px" }}
-                      variant="h3"
-                      color="heading-navy-fg"
-                    >
-                      {hit.name}
-                    </Heading>
-                    <CardLink variant="iconLink" href="">
-                      Learn more{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M7.34467 2.09467C7.63756 1.80178 8.11244 1.80178 8.40533 2.09467L12.7803 6.46967C12.921 6.61032 13 6.80109 13 7C13 7.19891 12.921 7.38968 12.7803 7.53033L8.40533 11.9053C8.11244 12.1982 7.63756 12.1982 7.34467 11.9053C7.05178 11.6124 7.05178 11.1376 7.34467 10.8447L10.4393 7.75H1.75C1.33579 7.75 1 7.41421 1 7C1 6.58579 1.33579 6.25 1.75 6.25H10.4393L7.34467 3.15533C7.05178 2.86244 7.05178 2.38756 7.34467 2.09467Z"
-                          fill="#3F8CFF" // content.link / brand-primary-galaxy-blue-solid-9
-                        />
-                      </svg>
-                    </CardLink>
-                  </CardBody>
-                </Card>
-              );
-            } else {
-              console.log('hit je ', hit)
-              return (<EventCard
-                  key={`${i}-event`}
-                  event={hit}
-                  isPastEvent={false}
-                />)
-            }
-          }
-        })}
-      </Flex>
-      <Flex mt="24px" alignItems="center" direction="column" pb="4xl">
         {cardType === "event" ? (
           <HStack mt="16px" width="100%">
             <Divider />
-            <Button onClick={() => navigate("/en/events")} flexShrink={0} variant="rounded">
+            <Button
+              onClick={() => navigate("/en/events")}
+              flexShrink={0}
+              variant="rounded"
+            >
               See all events
             </Button>
             <Divider />
           </HStack>
         ) : (
-          <Button
-            onClick={() => navigate("/en/events")}
-            variant="solid"
-          >
+          <Button onClick={() => navigate("/en/events")} variant="solid">
             {`Check out all events ->`}
           </Button>
         )}
