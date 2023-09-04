@@ -49,6 +49,7 @@ export const IconLinkCardBlock = (props: Props) => {
       <CardBody
         variant="iconLink"
         height="100%"
+        sx={{ background: "surface.bg-page" }}
         {...(color && {
           sx: {
             background: colorValues.background,

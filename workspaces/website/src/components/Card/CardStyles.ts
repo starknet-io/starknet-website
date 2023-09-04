@@ -13,6 +13,7 @@ export const LargeCardLayout = {
   flexWrap: "wrap",
   flexDirection: "column",
   ...CardStyle,
+  background: "surface.bg-page",
 };
 export const LargeCardImgLayout = {
   maxWidth: { base: "100%", lg: "354px" },
