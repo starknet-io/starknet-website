@@ -1,0 +1,56 @@
+id: 52162761-ebc2-4f03-9035-a8a0f77e05f6
+post_type: video
+title: STARK SPACE | The Future of Starknet with Kakarot and Omni
+published_date: 2023-05-17T07:32:59.332Z
+video:
+  url: https://www.youtube.com/watch?v=1tzlLSy-neI
+  id: 1tzlLSy-neI
+  data:
+    kind: youtube#video
+    etag: h5zDR6UHDw8aCNs8P8N88GJQYD4
+    id: 1tzlLSy-neI
+    snippet:
+      publishedAt: 2023-05-17T08:14:37.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/1tzlLSy-neI/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/1tzlLSy-neI/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/1tzlLSy-neI/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/1tzlLSy-neI/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/1tzlLSy-neI/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: STARK SPACE | The Future of Starknet with Kakarot and Omni
+      categoryId: "28"
+      localized:
+        title: STARK SPACE | The Future of Starknet with Kakarot and Omni
+        description: ""
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT38M21S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/twitter-space-the-future-of-starknet-with-kakarot-and-omni-0.5-hub.png
+category: stark-math
+topic:
+  - cairo
