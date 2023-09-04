@@ -90,7 +90,7 @@ blocks:
           custom_title: Cairo VS Code
           custom_external_link: https://marketplace.visualstudio.com/items?itemName=starkware.cairo1
         subLabel:
-          label: "VS Code syntax support for Cairo (requires manual installation) "
+          label: "VS Code syntax support for Cairo "
       - type: link_list_item
         link:
           custom_title: Cairo language support
@@ -120,10 +120,6 @@ blocks:
           custom_external_link: https://github.com/fracek/starknet-react-example
         subLabel:
           label: Connect your ReactApp to Starknet
-      - link:
-          hasIcon: true
-          custom_title: React
-          custom_external_link: https://github.com/apibara/starknet-react
       - link:
           hasIcon: true
           custom_title: Starknet forge template
@@ -164,6 +160,12 @@ blocks:
           custom_external_link: https://book.dojoengine.org/toolchain/katana/overview.html
         subLabel:
           label: A local Starknet node, designed to support local development with Dojo
+      - link:
+          hasIcon: true
+          custom_title: React
+          custom_external_link: https://github.com/apibara/starknet-react
+        subLabel:
+          label: A collection of React hooks for Starknet
   - type: link_list
     heading: "General "
     listSize: lg
