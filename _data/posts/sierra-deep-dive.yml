@@ -1,0 +1,69 @@
+id: 436d143e-5b6f-4950-b148-5b3a1e53789b
+post_type: video
+title: Sierra - Deep Dive
+published_date: 2023-08-10T13:40:10.017Z
+video:
+  url: https://www.youtube.com/watch?v=EAGRQDiGgbI
+  id: EAGRQDiGgbI
+  data:
+    kind: youtube#video
+    etag: YyRAnXkMfPMbU5hbY7x2zPXiLLY
+    id: EAGRQDiGgbI
+    snippet:
+      publishedAt: 2023-08-04T09:45:00Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Sierra - Deep Dive - Lior Goldberg
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/EAGRQDiGgbI/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/EAGRQDiGgbI/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/EAGRQDiGgbI/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/EAGRQDiGgbI/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/EAGRQDiGgbI/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Sierra - Deep Dive - Lior Goldberg
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT19M47S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/sierra-deep-dive-lior-goldberg.jpg
+category: community-and-events

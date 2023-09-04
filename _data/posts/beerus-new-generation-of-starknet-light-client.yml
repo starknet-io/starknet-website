@@ -1,0 +1,83 @@
+id: 1f6ed613-1bfe-464c-97c1-0b1b2f06ea84
+post_type: video
+title: Beerus - new generation of Starknet Light Client
+published_date: 2023-08-02T11:14:12.284Z
+video:
+  url: https://www.youtube.com/watch?v=8QT7edN2Xnk
+  id: 8QT7edN2Xnk
+  data:
+    kind: youtube#video
+    etag: lEBLhli_5R74t1e9B8PUMntjPAE
+    id: 8QT7edN2Xnk
+    snippet:
+      publishedAt: 2023-08-02T20:07:36Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: Beerus - new generation of Starknet Light Client - Paul-Henry Kajfasz
+      description: >-
+        Paul-Henri on Twitter :
+        https://twitter.com/phklive?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+        Beerus : https://github.com/keep-starknet-strange/beerus/discussions/515
+
+
+        StarkNetCC : https://www.starknet.cc/
+
+        Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/8QT7edN2Xnk/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/8QT7edN2Xnk/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/8QT7edN2Xnk/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/8QT7edN2Xnk/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/8QT7edN2Xnk/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: Beerus - new generation of Starknet Light Client - Paul-Henry Kajfasz
+        description: >-
+          Paul-Henri on Twitter :
+          https://twitter.com/phklive?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+          Beerus : https://github.com/keep-starknet-strange/beerus/discussions/515
+
+
+          StarkNetCC : https://www.starknet.cc/
+
+          Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT20M25S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/beerus-new-generation-of-starknet-light-client-.jpg
+category: community-and-events

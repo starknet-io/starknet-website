@@ -70,7 +70,7 @@ const AmbassadorsList = (props: RootProps) => {
       {title && (
         <Heading
           variant="h3"
-          color="councils-title-fg"
+          color="heading-navy-fg"
           id={`toc-${slugify(title)}`}
           marginBottom="24px"
           lineHeight="150%"
@@ -85,7 +85,7 @@ const AmbassadorsList = (props: RootProps) => {
             <Flex
               alignItems="center"
               direction="column"
-              mt="32px"
+              mt="48px"
               onClick={() => viewMember(a)}
               cursor="pointer"
               px="2"
@@ -95,6 +95,7 @@ const AmbassadorsList = (props: RootProps) => {
                 lg: "calc(33.333333% - 16px)",
               }}
               width="100%"
+              justifyContent="space-between"
             >
               <Img
                 width="120px"

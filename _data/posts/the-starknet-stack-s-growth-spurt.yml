@@ -139,8 +139,6 @@ blocks:
           | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                   | Andrew Milson | In development     |
 
 
-
-
           * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
 
           * Indexers: [Apibara](https://www.apibara.com/), [Checkpoint](https://checkpoint.fyi/#/), [TokenFlow](https://tokenflow.live/)
@@ -151,7 +149,7 @@ blocks:
 
           * Fiat on-ramps: [Banxa](https://banxa.com/), [Ramp](https://ramp.network/)
 
-          * Wallets: [Argent](https://www.argent.xyz/argent-x/), [Braavos](https://braavos.app/), [Cartridge](https://cartridge.gg/) and [Metamask’s Snap](https://metamask.io/snaps/) (coming Sep 2023)
+          * Wallets: [Argent](https://www.argent.xyz/argent-x/), [Braavos](https://braavos.app/), [Cartridge](https://cartridge.gg/) and [Metamask’s Snap](https://metamask.io/snaps/) (coming soon)
 
           * Domain-specific application development framework: [Dojo](https://dojoengine.org/) (gaming)
 

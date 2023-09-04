@@ -1,0 +1,73 @@
+id: d567f654-e16f-40e1-a5de-27df39c4cfeb
+post_type: video
+title: "SNARKS on STARKS : An Emulated Field journey for Garaga"
+published_date: 2023-08-04T06:32:12.175Z
+video:
+  url: https://www.youtube.com/watch?v=ttJ2z5KnhFA
+  id: ttJ2z5KnhFA
+  data:
+    kind: youtube#video
+    etag: lAH4fcksOIj1NMxzXXdIlNM9WRk
+    id: ttJ2z5KnhFA
+    snippet:
+      publishedAt: 2023-08-04T09:15:03Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: "SNARKS on STARKS : An Emulated Field journey for Garaga - Feltroid"
+      description: |-
+        Garaga : https://github.com/keep-starknet-strange/garaga
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/ttJ2z5KnhFA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/ttJ2z5KnhFA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/ttJ2z5KnhFA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/ttJ2z5KnhFA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/ttJ2z5KnhFA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: "SNARKS on STARKS : An Emulated Field journey for Garaga - Feltroid"
+        description: |-
+          Garaga : https://github.com/keep-starknet-strange/garaga
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT17M27S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/snarks-on-starks-an-emulated-field-journey-for-garaga.jpg
+category: community-and-events

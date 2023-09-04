@@ -1,6 +1,7 @@
 id: b689eb1e-cc14-419b-999d-41c39ed97c52
 title: Milestone for full node P2P communication
 availability: Q3 2023
+state: Testing now
 version: 6774d826-4dbc-48d0-b2d2-682d056ce26d
 stage: building-now
 blocks:
