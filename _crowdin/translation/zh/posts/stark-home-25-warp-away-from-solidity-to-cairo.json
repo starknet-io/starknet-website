@@ -1,0 +1,4 @@
+{
+  "title": "STARK @ Home 25: 离开Solidity语言，转向使用Cairo语言",
+  "short_desc": "Starknet 已在主网上启动并运行。但它兼容 EVM 吗？你可以在 Starknet 上部署你的 Solidity 合约吗？答案是肯定的，使用 Warp。\n"
+}

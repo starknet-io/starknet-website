@@ -1,0 +1,1 @@
+任何 dApp 都可以部署在 Starknet 上。 由于 Cairo 允许通用计算，任何业务逻辑都可以通过 StarkNet 实现和处理。

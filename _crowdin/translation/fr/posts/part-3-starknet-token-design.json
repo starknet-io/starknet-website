@@ -1,0 +1,4 @@
+{
+  "title": "Partie 3 : Conception du jeton Starknet",
+  "short_desc": "La conception du jeton Starknet est façonné par la nécessité de fournir de la puissance à un réseau composé de (i) les utilisateurs de Starknet, (ii) des opérateurs - c'est-à-dire des personnes fournissant au réseau des ressources informatiques qui effectuent le séquencement des transactions, la génération de preuves STARK et la fourniture de stockage à long terme, et (iii) de développeurs écrivant des logiciels pour son infrastructure et pour les applications s'exécutant dessus.\n"
+}

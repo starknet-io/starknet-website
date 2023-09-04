@@ -1,0 +1,1 @@
+Wenn Sie von StarkNet und seiner Dezentralisierung begeistert sind und an dem Prozess teilnehmen möchten, schließen Sie sich bitte den Entwicklern im StarkNet [Discord](https://starknet.io/discord) und [Starknet-Community-Forum](https://community.starknet.io/)an

@@ -1,0 +1,1 @@
+Если вы в восторге от StarkNet и его децентрализации и хотите участвовать в этом процессе, присоединяйтесь к разработчикам на StarkNet [Discord](https://starknet.io/discord) и [Форум сообщества Starknet](https://community.starknet.io/)

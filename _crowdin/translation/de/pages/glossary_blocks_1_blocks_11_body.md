@@ -1,0 +1,1 @@
+Der Hauptknoten des Starknet-Netzwerks. Es implementiert die Kernfunktionalität der Sequenzierung der an es übermittelten Transaktionen. Es führt das Starknet OS Cairo-Programm mit den relevanten Eingaben aus, prüft das Ergebnis mithilfe des Prüfdienstes oder eines internen STARK-Prüfers und aktualisiert schließlich den Netzwerkstatus im Starknet-Kernvertrag.

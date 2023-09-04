@@ -1,0 +1,4 @@
+Geordnete Sätze von Starknet-Transaktionen, die unter Verwendung des Starknet-Betriebssystems ausgeführt werden, was zu einer aggregierten Statusänderung führt, die dann an den Starknet L1-Kernvertrag übertragen wird. Ein Block hat:
+
+* … ein Block-Hash – eine eindeutige stabile Kennung, die zum Abfragen und Verweisen auf den Block verwendet werden kann.
+* … eine Blocknummer – eine Ordnungszahl, die die Position des Blocks in der Reihenfolge der akzeptierten Blöcke in Starknet darstellt. Beachten Sie, dass sich die Nummer eines Blocks im Laufe der Zeit ändern kann. Außerdem kann sich eine bestimmte Zahl auf verschiedene Blöcke zu unterschiedlichen Zeitpunkten beziehen, z. B. im Falle von Neuordnungen der L1-Kette.

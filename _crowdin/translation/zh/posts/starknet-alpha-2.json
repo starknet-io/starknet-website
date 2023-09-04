@@ -1,0 +1,4 @@
+{
+  "title": "Starknet Alpha 2 – 新阶段：可组合性",
+  "short_desc": "Starknet 是一个无需许可的去中心化 Validity-Rollup（又名“ZK-Rollup”）。我们在年初宣布了其路线图。 Alpha 目前在公共以太坊测试网上运行，已经支持实现任何业务逻辑的智能合约的无许可部署，具有 L1<>L2 消息传递和链上数据。"
+}

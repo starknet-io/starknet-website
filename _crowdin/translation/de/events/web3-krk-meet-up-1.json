@@ -1,0 +1,6 @@
+{
+  "name": "web3.krk-Treffen Nr. 1",
+  "description": "Wir freuen uns, Sie zu unserem ersten Treffen einzuladen! Wir veranstalten drei Präsentationen, die Sie durch die Welt von Starknet, Layer 2 und formaler Verifizierung führen. Wenn Sie nicht persönlich kommen können, können Sie am Live-Stream teilnehmen (Link folgt in Kürze). Wie ist der Plan? 1. Tom Brand, Starkware TBA 2. Maksymilian Demitraszek, Software Mansion Wie kann man nicht aus Versehen Millionen verlieren? Einführung in die formale Verifizierung Intelligente Verträge kontrollieren häufig kritische Vermögenswerte. Die Geschichte zeigt, dass ein kleiner Fehler eines Entwicklers großen Schaden anrichten kann. Die formale Verifizierung ist eine Technik, die dieses Risiko mindern kann. Anstatt das Vertragsverhalten in verschiedenen Szenarien zu testen, können wir nachweisen, dass sich der Vertrag genau so verhält, wie es in der Spezifikation definiert ist. In diesem Vortrag werden wir kurz auf die zugrunde liegende Technologie und die möglichen Konsequenzen für das gesamte Blockchain-Ökosystem eingehen. 3. Antoni Pawlak, L2BEAT Was ist Layer 2? Einführung in Skalierungslösungen, die auf Ethereum bereitgestellt werden. Bleiben Sie nach dem Treffen für Pizza, Bier und Networking!",
+  "city": "Krakau",
+  "country": "Polen"
+}

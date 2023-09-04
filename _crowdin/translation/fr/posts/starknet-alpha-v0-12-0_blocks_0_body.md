@@ -1,0 +1,1 @@
+StarkWare et Lambda Class présenteront au conseil des constructeurs et aux délégués la nouvelle version de Starknet en préparation du prochain vote. Une discussion ouverte concernant la mise à niveau de la version Starknet Alpha v0.12.0. Et une explication détaillée de toutes les nouvelles fonctionnalités de la prochaine version.

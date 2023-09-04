@@ -1,0 +1,4 @@
+{
+  "title": "Le saut quantique de Starknet : des améliorations majeures du débit sont arrivées !",
+  "short_desc": "Starknet Alpha V0.12.0 se concentre sur l'amélioration des performances et de l'expérience utilisateur. La nouvelle version introduit une implémentation basée sur Rust du séquenceur, améliorant le débit de 10 fois et réduisant la latence des transactions. Les autres fonctionnalités incluent une nouvelle version du compilateur, la suppression du statut de transaction en attente et l'ajout d'un appel système de hachage de bloc. \n"
+}

@@ -1,0 +1,4 @@
+Ensembles ordonnés de transactions Starknet qui sont exécutées en utilisant le système d'exploitation Starknet, résultant en un seul changement d'état agrégé qui est ensuite validé sur le contrat principal Starknet L1. Un bloc a :
+
+* ... un hash de bloc - un identifiant unique et stable qui peut être utilisé pour interroger et se référer au bloc.
+* … un numéro de bloc - un nombre ordinal représentant l'emplacement du bloc dans la séquence des blocs acceptés dans Starknet. Notez que le numéro d'un bloc peut changer avec le temps. De plus, un numéro donné peut faire référence à différents blocs à différents moments, par exemple, en cas de réorganisation de la chaîne L1.

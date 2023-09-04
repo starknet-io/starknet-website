@@ -1,0 +1,1 @@
+Une collection de contrats (L1 et L2) qui mettent en œuvre collectivement un flux d’affaires.

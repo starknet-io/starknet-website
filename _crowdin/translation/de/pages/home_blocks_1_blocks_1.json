@@ -1,0 +1,4 @@
+{
+  "title": "Wie skaliert Starknet Ethereum?",
+  "description": "Starknet nutzt Mathematik und Kryptographie, um Ethereum sicher zu skalieren. Es funktioniert als Gültigkeits-Rollup (oder ZK-Rollup): Es „bündelt“ viele Transaktionen und „rollt“ sie als eine einzelne Transaktion an Ethereum."
+}

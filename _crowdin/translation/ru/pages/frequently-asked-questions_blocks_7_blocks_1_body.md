@@ -1,0 +1,1 @@
+Вы можете сообщить о мошенничестве и проверить наличие других сообщений о мошенничестве в канале [scam-report](https://discord.gg/qypnmzkhbc) на сервере [Starknet Discord](https://starknet.io/discord).

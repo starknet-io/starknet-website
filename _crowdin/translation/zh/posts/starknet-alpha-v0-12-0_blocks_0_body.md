@@ -1,0 +1,1 @@
+StarkWare 和 Lambda Class 将向构建者委员会和代表展示 Starknet 新版本，为即将到来的投票做准备。 关于 Starknet Alpha v0.12.0 版本升级的公开讨论。 并对即将发布的版本的所有新功能进行了深入的解释。

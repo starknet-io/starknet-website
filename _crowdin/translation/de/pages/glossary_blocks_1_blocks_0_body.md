@@ -1,0 +1,1 @@
+Die Benutzer, die mit Starknet-Sequenzerknoten und bei Bedarf mit L1-Verträgen interagieren. Diese Benutzer, ob menschlich oder automatisiert, sind die Agenten, die Transaktionen an das Starknet-Netzwerk übermitteln.

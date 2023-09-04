@@ -68,12 +68,12 @@ for (const file of files) {
       }
     );
   } else if (file.type === "markdown") {
-    await fs.writeFile(
-      path.join("_crowdin/source", file.filepath + ".md"),
-      file.data,
-      {
-        encoding: "utf8",
-      }
-    );
+      await fs.writeFile(
+        path.join("_crowdin/source", file.filepath + ".md"),
+        file.data,
+        {
+          encoding: "utf8",
+        }
+      );
   }
 }

@@ -1,0 +1,4 @@
+{
+  "title": "Comment Sierra empêche DOS dans Starknet",
+  "short_desc": "Sierra est une IR entre Cairo 1.0 et Cairo Assembly. Dans cette conférence, Ariel, alias @FeedTheFed, explique le problème d'exhaustivité dans le contexte de Starknet et comment un IR entre le code utilisateur et le code éprouvé peut le résoudre. Nous discuterons également d'autres avantages d'un tel IR, tels que le comptage du gaz et la séparation entre les environnements d'exécution et de vérification."
+}

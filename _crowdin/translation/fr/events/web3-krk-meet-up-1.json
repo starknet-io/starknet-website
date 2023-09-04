@@ -1,0 +1,6 @@
+{
+  "name": "web3.krk rencontre #1",
+  "description": "Nous sommes heureux de vous inviter à notre première rencontre ! Nous avons trois présentations qui vous guideront à travers le monde de Starknet, de la couche 2 et de la vérification formelle. Si vous ne pouvez pas venir en personne, vous pouvez rejoindre le flux en direct (lien bientôt). Quel est le plan? 1. Tom Brand, Starkware TBA 2. Maksymilian Demitraszek, Software Mansion Comment ne pas perdre des millions par erreur ? Introduction à la vérification formelle Les contrats intelligents contrôlent souvent les actifs critiques. L'histoire montre qu'une petite erreur d'un développeur peut causer beaucoup de dégâts. La vérification formelle est une technique qui peut atténuer ce risque. Au lieu de tester le comportement du contrat dans différents scénarios, nous pouvons prouver que le contrat se comporte exactement comme défini dans la spécification. Dans cette conférence, nous discuterons brièvement de la technologie sous-jacente et des conséquences possibles pour l'ensemble de l'écosystème de la blockchain. 3. Antoni Pawlak, L2BEAT Qu'est-ce que la couche 2 ? Introduction aux solutions de mise à l'échelle déployées sur Ethereum. Restez pour une pizza, une bière et du réseautage après la rencontre !",
+  "city": "Cracovie",
+  "country": "Pologne"
+}

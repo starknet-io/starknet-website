@@ -1,0 +1,3 @@
+[Cairo](https://medium.com/starkware/hello-cairo-3cb43b13b209) ist eine Turing-vollständige Sprache, die für den prägnanten Nachweis der korrekten Ausführung von Cairo-Programmen entwickelt wurde. Ein Cairo-Programm ist zustandslos, das heißt, Sie haben keinen nativen Zugriff auf den Speicher, andere Cairo-Programme oder den L1-Status (obwohl Sie darauf zugreifen können, wie unten erläutert). 
+
+Starknet-Verträge hingegen befinden sich in der Starknet-VM, die über einen dauerhaften Zustand verfügt, auf den Smart Contracts zugreifen und ihn ändern können. Diese intelligenten Verträge können Variablen speichern, mit anderen Verträgen kommunizieren und Nachrichten an/von L1 senden/empfangen ([weiterlesen](https://www.cairo-lang.org/docs/hello_starknet/index.html)).

@@ -1,0 +1,1 @@
+STARK est un système de preuve. Il utilise la cryptographie de pointe pour fournir une complexité et une taille de preuve de vérification polylogarithmiques, une complexité de preuve quasi linéaire et des hypothèses minimales qui sont sécurisées après quantum. Plus d'informations [ici](https://starkware.co/stark/).

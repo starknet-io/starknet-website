@@ -148,14 +148,11 @@ export function handleFields(
 
   fields.forEach((field) => {
     if (field.crowdin !== false) {
-
-
       switch (field.widget) {
         case "string":
         case "text":
           jsonFile.data[field.name] = data[field.name];
           break;
-
 
         case "object":
           if ("fields" in field) {
@@ -171,11 +168,13 @@ export function handleFields(
           break;
 
         case "markdown":
-          files.push({
-            type: "markdown",
-            data: data[field.name],
-            filepath: filepath + "_" + field.name,
-          });
+          if (data[field.name] != null) {
+            files.push({
+              type: "markdown",
+              data: data[field.name],
+              filepath: filepath + "_" + field.name,
+            });
+          }
           break;
 
         case "list":

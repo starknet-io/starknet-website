@@ -1,0 +1,1 @@
+STARK ist ein Beweissystem. Es nutzt modernste Kryptographie, um polylogarithmische Verifizierungskomplexität und Beweisgröße, quasilineare Beweiskomplexität und minimale Annahmen bereitzustellen, die postquantensicher sind. Weitere Informationen [hier](https://starkware.co/stark/).

@@ -1,0 +1,4 @@
+{
+  "title": "STARK, StarkEx et Starknet",
+  "short_desc": "Les TARKs (Scalable, Transparent ARgument of Knowledge) sont un système de preuve qui permet la vérification de calculs. Il permet de traiter un grand calcul, de générer une preuve de la correction du calcul, et ensuite de vérifier la preuve en très peu d'étapes."
+}

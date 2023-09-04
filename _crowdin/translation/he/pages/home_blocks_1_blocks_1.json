@@ -1,0 +1,4 @@
+{
+  "title": "כיצד Starknet מדרג את Ethereum?",
+  "description": "Starknet משתמשת במתמטיקה ובקריפטוגרפיה כדי להרחיב בצורה מאובטחת את Ethereum. הוא פועל כ-Validity-rollup (או ZK-rollup): הוא \"מצרף\" עסקאות רבות ו\"מגלגל\" אותן ל-Ethereum כעסקה אחת."
+}

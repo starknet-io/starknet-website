@@ -1,0 +1,3 @@
+Madara basiert auf dem robusten Substrate-Framework und ist dank Rust schnell und bietet Leistung und Skalierbarkeit für die Starknet-basierte Validity Rollup-Kette.
+
+Madara basiert auf Substrat und nutzt die Cairo VM und den Blockifier, um Cairo-Programme und Starknet-Smart-Verträge auszuführen. Es nutzt die Macht von Kairo, um jede Programmausführung tatsächlich nachweisbar zu machen. Ein Prüfer oder ein Prüfermarkt kann letztendlich auf die von der Kette erzeugten Blöcke hören und Beweise generieren. Somit kann sich eine Madara-Kette technisch gesehen auf jedem L1/L2 niederlassen.

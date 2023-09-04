@@ -1,0 +1,1 @@
+Starknet 代币将用于支付交易费用、参与 Starknet 协议以及参与治理。 我们的 [去中心化提案](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)中标题为“代币将用于什么？”的部分中介绍了每个实用程序的基本原理。

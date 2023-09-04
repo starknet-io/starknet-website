@@ -1,0 +1,4 @@
+{
+  "title": "Starknet Alpha 2 – Nouvelle Phase : Composabilité",
+  "short_desc": "Starknet est un Validity-Rollup décentralisé sans autorisation (alias un \"ZK-Rollup\"). Nous avons annoncé sa feuille de route en début d'année. L'Alpha, actuellement exécuté sur un réseau de test public Ethereum, prend déjà en charge le déploiement sans autorisation de contrats intelligents mettant en œuvre n'importe quelle logique métier, avec la messagerie L1<>L2 et les données en chaîne."
+}

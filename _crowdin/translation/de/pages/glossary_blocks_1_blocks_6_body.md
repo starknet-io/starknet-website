@@ -1,0 +1,1 @@
+Ein separater Prozess (entweder ein Onlinedienst oder knotenintern), der die Ausgabe von Cairo-Programmen empfängt und zu verifizierende STARK-Beweise generiert. Der Prüfer übermittelt den STARK-Beweis an den Verifizierer, der die Tatsache auf L1 registriert.

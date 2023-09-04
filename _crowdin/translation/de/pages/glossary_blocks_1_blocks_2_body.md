@@ -1,0 +1,1 @@
+Eine Sammlung von Verträgen (L1 und L2), die gemeinsam einen Geschäftsablauf implementieren.

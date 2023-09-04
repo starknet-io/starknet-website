@@ -1,0 +1,1 @@
+Un processus séparé (soit un service en ligne, soit interne au nœud) qui reçoit la sortie des programmes Cairo et génère des preuves STARK à vérifier. Le Prouveur soumet la preuve STARK au vérificateur qui enregistre le fait sur la L1.

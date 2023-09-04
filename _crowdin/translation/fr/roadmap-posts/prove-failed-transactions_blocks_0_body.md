@@ -1,0 +1,3 @@
+La version 0.15.0 de Starknet permettra une meilleure gestion des transactions ayant échoué. Notamment, l'utilisation de Sierra pour prouver les transactions ayant échoué. Cet ajout garantit une expérience réseau plus fiable et robuste en réduisant l'occurrence des transactions échouées et en améliorant l'efficacité globale du traitement des transactions.
+
+Cette avancée s'aligne sur l'engagement de Starknet à optimiser l'utilisation des ressources, à améliorer la fiabilité du traitement des transactions et à créer un écosystème convivial pour créer et interagir avec des applications sur le réseau.

@@ -58,10 +58,15 @@ next-env.d.ts
 
 .types
 .types-*
-_crowdin
+_crowdin/source
+_crowdin/translation/*
+!_crowdin/translation/de
+!_crowdin/translation/he
+!_crowdin/translation/ru
+!_crowdin/translation/fr
+!_crowdin/translation/zh
 *.vars
 *.__*
 dist
 public/data
-!_crowdin/translation
 .wrangler/

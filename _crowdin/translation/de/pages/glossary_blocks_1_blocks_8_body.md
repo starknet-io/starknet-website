@@ -1,0 +1,1 @@
+Der Zustand besteht aus dem Vertragscode und der Vertragsspeicherung.

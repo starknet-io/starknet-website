@@ -1,0 +1,5 @@
+Zur Zeit nicht. STARKs werden als Gültigkeitsbeweise definiert, was bedeutet, dass sie die rechnerische Integrität beweisen. Mit Gültigkeitsnachweisen (einschließlich STARKs) kann eine Partei einer anderen Partei nachweisen, dass eine bestimmte Berechnung korrekt durchgeführt wurde. Zero-Knowledge ist eine zusätzliche Eigenschaft, die besagt, dass der Prüfer keine in der Berechnung enthaltenen Informationen offenlegen muss.
+
+Die meisten ZK-Rollups sind nicht wirklich Zero-Knowledge. Der Fehler ergibt sich aus der Verwechslung zwischen Gültigkeitsbeweisen (gewährleistet die rechnerische Integrität) und Zero-Knowledge-Beweisen (stellt sicher, dass keine Informationen offengelegt werden).
+
+Starknet verwendet STARK-Gültigkeitsnachweise. Es ist erwähnenswert, dass es äußerst schwierig ist, Informationen aus dem Beweis zu extrahieren – in der Praxis fast unmöglich.

@@ -1,0 +1,1 @@
+Der Starknet-Token ist noch nicht zum Verkauf verfügbar. Es kann zu diesem Zeitpunkt nicht zu Ihrer Brieftasche hinzugefügt werden. Vorsicht vor Betrügereien.

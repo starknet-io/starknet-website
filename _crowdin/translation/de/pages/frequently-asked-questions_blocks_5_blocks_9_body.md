@@ -1,0 +1,1 @@
+NEIN. Das zirkulierende Angebot an Token wird im Laufe der Zeit mit der Prägung neuer Token durch das Protokoll zunehmen. Details zur Prägerate und zum Mechanismus müssen noch definiert werden.

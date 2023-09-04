@@ -1,0 +1,4 @@
+{
+  "title": "Comment Starknet fait-il évoluer Ethereum ?",
+  "description": "Starknet utilise les mathématiques et la cryptographie pour faire évoluer Ethereum de manière sécurisée. Il fonctionne comme un Validity-rollup (ou ZK-rollup) : il \"regroupe\" de nombreuses transactions et les \"enroule\" vers Ethereum sous la forme d'une seule transaction."
+}

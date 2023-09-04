@@ -1,0 +1,3 @@
+NEIN. Sie haben mehrere Möglichkeiten, einen Vertrag zu verfassen, jede mit ihren eigenen Vorteilen. 
+
+Kairo ist die Muttersprache für einen Starknet-Vertrag, der das Skalierungspotenzial von Starknet am besten ausschöpft. Andererseits entwickeln mehrere Teams Transpiler von anderen Programmiersprachen (insbesondere Solidity) nach Cairo. Solche Transpiler erleichtern die schnelle Bereitstellung bestehender Verträge im Starknet.**[Sehen Sie sich unsere neuesten Entwicklungstools an](/developers/tools-resources).**
