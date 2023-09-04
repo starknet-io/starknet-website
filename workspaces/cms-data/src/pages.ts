@@ -170,6 +170,7 @@ export interface PageHeaderBlock {
   readonly hasBorderBottom?: boolean;
   readonly pageLastUpdated?: string | null;
   readonly withMarginBottom?: boolean;
+  readonly withInlinePadding?: boolean;
 }
 
 export interface HeroBlock {

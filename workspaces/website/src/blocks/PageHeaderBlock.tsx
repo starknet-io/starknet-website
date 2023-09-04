@@ -9,6 +9,7 @@ export const PageHeaderBlock = (props: PageHeaderBlockProps) => {
       hasBorderBottom={props.hasBorderBottom}
       pageLastUpdated={props.pageLastUpdated}
       withMarginBottom={props.withMarginBottom}
+      withInlinePadding={props.withInlinePadding}
     />
   );
 };

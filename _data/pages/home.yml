@@ -15,6 +15,7 @@ blocks:
           more open internet. Decentralised financial systems. Digital assets.
           Trustless systems. "
         withMarginBottom: true
+        withInlinePadding: true
       - type: large_cards
         horizontal1:
           img: /assets/unlimited-scale.png

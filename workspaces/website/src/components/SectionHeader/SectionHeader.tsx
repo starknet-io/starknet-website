@@ -12,6 +12,7 @@ type Props = {
   hasBorderBottom?: boolean;
   pageLastUpdated?: string | null;
   withMarginBottom?: boolean;
+  withInlinePadding?: boolean;
 } & BoxProps;
 
 export const SectionHeader = ({
@@ -22,6 +23,7 @@ export const SectionHeader = ({
   bottomContent,
   pageLastUpdated,
   withMarginBottom = false,
+  withInlinePadding = false,
   ...rest
 }: Props) => {
   const mb = {
@@ -36,6 +38,10 @@ export const SectionHeader = ({
     lg: pageLastUpdated ? "xl" : "page.block-gap.lg",
   };
 
+  const px = {
+    base: withInlinePadding ? "page.left-right.base" : "0px",
+    md: withInlinePadding ? "page.left-right.md" : "0px",
+  };
   return (
     <Box
       as="section"
@@ -48,6 +54,7 @@ export const SectionHeader = ({
       maxW="864px"
       pb={hasBorderBottom ? pb : "0px"}
       mb={withMarginBottom ? mb : "0px"}
+      px={px}
       {...rest}
     >
       <Heading

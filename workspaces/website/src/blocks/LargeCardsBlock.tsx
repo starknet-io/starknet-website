@@ -1,4 +1,4 @@
-import { BoxProps, Flex, useColorMode } from "@chakra-ui/react";
+import { Box, BoxProps, Flex, useColorMode } from "@chakra-ui/react";
 import { Card, CardImg, CardBody, CardTitle } from "@ui/Card/Card";
 import { Text } from "@ui/Typography/Text";
 import { Button } from "@ui/Button";
@@ -16,11 +16,25 @@ interface Props extends LargeCardsBlockType, BoxProps {}
 
 export const LargeCardsBlock = (props: Props) => {
   const { horizontal1, horizontal2, vertical1, vertical2 } = props;
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   return (
-    <Flex direction="column" gap="40px">
+    <Flex
+      direction="column"
+      gap="40px"
+      px={{
+        base: "page.left-right.base",
+        md: "page.left-right.md",
+      }}
+    >
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={colorMode === 'light' ? horizontal1.img as string : horizontal1.darkImg as string ?? horizontal1.img as string} />
+        <CardImg
+          variant="large"
+          src={
+            colorMode === "light"
+              ? (horizontal1.img as string)
+              : (horizontal1.darkImg as string) ?? (horizontal1.img as string)
+          }
+        />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal1.title}</CardTitle>
           <Text
@@ -28,7 +42,7 @@ export const LargeCardsBlock = (props: Props) => {
             color="content.support"
             sx={{
               pt: { base: "8px", lg: "20px" },
-              pb: "40px"
+              pb: "40px",
             }}
           >
             {horizontal1.description}
@@ -45,7 +59,14 @@ export const LargeCardsBlock = (props: Props) => {
       </Card>
       <Flex gap="32px" direction={{ base: "column", md: "row" }}>
         <Card variant="large" orientation="vertical">
-          <CardImg variant="large" src={colorMode === 'light' ? vertical1.img as string : vertical1.darkImg as string ?? vertical1.img as string} />
+          <CardImg
+            variant="large"
+            src={
+              colorMode === "light"
+                ? (vertical1.img as string)
+                : (vertical1.darkImg as string) ?? (vertical1.img as string)
+            }
+          />
           <CardBody variant="large">
             <CardTitle variant="large">{vertical1.title}</CardTitle>
             <Text
@@ -53,7 +74,7 @@ export const LargeCardsBlock = (props: Props) => {
               color="content.support"
               sx={{
                 pt: { base: "8px", lg: "20px" },
-                pb: "40px"
+                pb: "40px",
               }}
             >
               {vertical1.description}
@@ -69,15 +90,22 @@ export const LargeCardsBlock = (props: Props) => {
           </CardBody>
         </Card>
         <Card variant="large" orientation="vertical">
-          <CardImg variant="large" src={colorMode === 'light' ? vertical2.img as string : vertical2.darkImg as string ?? vertical2.img as string} />
+          <CardImg
+            variant="large"
+            src={
+              colorMode === "light"
+                ? (vertical2.img as string)
+                : (vertical2.darkImg as string) ?? (vertical2.img as string)
+            }
+          />
           <CardBody variant="large">
             <CardTitle variant="large">{vertical2.title}</CardTitle>
-            <Text 
+            <Text
               variant="body"
               color="content.support"
               sx={{
                 pt: { base: "8px", lg: "20px" },
-                pb: "40px"
+                pb: "40px",
               }}
             >
               {vertical2.description}
@@ -94,7 +122,14 @@ export const LargeCardsBlock = (props: Props) => {
         </Card>
       </Flex>
       <Card variant="large" orientation="horizontal">
-        <CardImg variant="large" src={colorMode === 'light' ? horizontal2.img as string : horizontal2.darkImg as string ?? horizontal2.img as string} />
+        <CardImg
+          variant="large"
+          src={
+            colorMode === "light"
+              ? (horizontal2.img as string)
+              : (horizontal2.darkImg as string) ?? (horizontal2.img as string)
+          }
+        />
         <CardBody variant="large" orientation="horizontal">
           <CardTitle variant="large">{horizontal2.title}</CardTitle>
           <Text
@@ -102,7 +137,7 @@ export const LargeCardsBlock = (props: Props) => {
             color="content.support"
             sx={{
               pt: { base: "8px", lg: "20px" },
-              pb: "40px"
+              pb: "40px",
             }}
           >
             {horizontal2.description}

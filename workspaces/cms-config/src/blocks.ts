@@ -262,6 +262,14 @@ export const blocks = [
         default: false,
         crowdin: false,
       },
+      {
+        name: "withInlinePadding",
+        label: "Should have padding on left and right?",
+        widget: "boolean",
+        required: false,
+        default: false,
+        crowdin: false,
+      },
     ],
   },
   {
@@ -300,7 +308,7 @@ export const blocks = [
         label: "Card type",
         default: "grid",
         widget: "select",
-        options: ["grid", "event"]
+        options: ["grid", "event"],
       },
       {
         name: "title",

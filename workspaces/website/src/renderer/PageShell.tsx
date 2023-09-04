@@ -1,4 +1,7 @@
 import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 import "@fontsource/inter/variable.css";
 import "@fontsource/noto-sans-hebrew/hebrew.css";
 import "@fontsource/tajawal/arabic.css";

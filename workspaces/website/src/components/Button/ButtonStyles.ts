@@ -92,7 +92,7 @@ const rounded = defineStyle({
   },
   _dark: {
     background: "rgba(208, 208, 224, 0.07) !important",
-    color: "#E8E8F7 !important"
+    color: "#E8E8F7 !important",
   },
   _focusVisible: {
     boxShadow: "1px solid #ffffff",
@@ -262,29 +262,33 @@ const gradient = defineStyle({
   minWidth: "none",
   lineHeight: "24px",
   height: "auto",
-  color: "btn-primary-fg",
+  color: "content.on-surface-inverted.value",
   background: "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
   _dark: {
-    background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)"
+    background:
+      "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
   },
   "&:disabled": {
-    background: "btn-primary-disabled-bg",
-    color: "btn-primary-disabled-fg",
+    background: "surface.accent.disabled",
+    color: "content.on-surface-inverted.disabled",
     boxShadow: "none",
   },
   _hover: {
-    background: "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
+    background:
+      "linear-gradient(270deg, #6565B3 0%, #7666D8 51%, #D586B5 100%)",
     "&:disabled": {
       background: "btn-primary-disabled-bg !important",
       color: "btn-primary-disabled-fg",
       boxShadow: "none !important",
     },
     _dark: {
-      background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
+      background:
+        "linear-gradient(270deg, #B7B7F5 0%, #C7C7F9 44.79%, #FFDBD6 100%)",
     },
   },
   _active: {
-    background: "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
+    background:
+      "linear-gradient(270deg, #171870 0%, #3928A0 51%, #A15882 100%)",
     boxShadow: "0px 6px 0px 0px rgba(17, 17, 17, 0.24) inset !important",
     outlineOffset: 1,
     "&:disabled": {
@@ -293,10 +297,12 @@ const gradient = defineStyle({
       boxShadow: "none !important",
     },
     _dark: {
-      background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
+      background:
+        "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
       boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       _focus: {
-        background: "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
+        background:
+          "linear-gradient(270deg, #9090E0 0%, #A4A4EA 44.79%, #FEAEA4 100%)",
         boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
       },
     },
