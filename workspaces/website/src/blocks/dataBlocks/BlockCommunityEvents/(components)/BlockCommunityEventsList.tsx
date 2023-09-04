@@ -62,6 +62,7 @@ export function BlockCommunityEventsList({
       paddingTop: 900,
       mt: "-960",
       mb: { base: 0, lg: -130 },
+      pb: "7vw",
       "&::before": {
         content: '""',
         position: "absolute",
