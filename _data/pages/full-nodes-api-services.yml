@@ -44,32 +44,32 @@ blocks:
         title: Infura
         description: API service for Starknet
         image: /assets/logo_infura_80x80.png
-        img_bg_color: green
+        img_bg_color: boreal-green
       - description: API service for Starknet
         title: Chainstack
         link_url: https://chainstack.com/build-better-with-starknet
         website_url: https://chainstack.com/build-better-with-starknet
         image: /assets/logo_chainstack_80x80.png
-        img_bg_color: green
+        img_bg_color: boreal-green
       - type: asset_card
         link_url: https://www.alchemy.com/starknet
         website_url: https://www.alchemy.com/starknet
         title: Alchemy
         description: API service for Starknet
         image: /assets/logo_alchemy_80x80.png
-        img_bg_color: green
+        img_bg_color: boreal-green
       - type: asset_card
         link_url: https://www.lavanet.xyz
         website_url: https://www.lavanet.xyz
         title: Lava Protocol
         description: Lava is an open-source protocol for reliable access to RPC data
         image: /assets/logo_lava_80x80.png
-        img_bg_color: green
+        img_bg_color: boreal-green
       - type: asset_card
         title: Blast API
         description: API service for Starknet
         link_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
-        img_bg_color: green
+        img_bg_color: boreal-green
         website_url: https://blastapi.io/public-api/starknet
     randomize: true

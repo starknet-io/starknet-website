@@ -133,6 +133,8 @@ export const AssetCardImgLayout = {
   borderRadius: "16px",
   width: "80px",
   height: "80px",
+  boxShadow:
+    "3px 5px 12px 0px rgba(0, 0, 0, 0.12), 20px 20px 32px 0px rgba(0, 0, 0, 0.20)",
 };
 export const AssetCardBodyLayout = {
   display: "flex",
@@ -144,4 +146,6 @@ export const AssetCardBodyLayout = {
 };
 export const AssetCardImgHorizontalLayout = {
   borderRadius: "16px",
+  boxShadow:
+    "3px 5px 12px 0px rgba(0, 0, 0, 0.12), 20px 20px 32px 0px rgba(0, 0, 0, 0.20)",
 };

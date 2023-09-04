@@ -41,9 +41,16 @@ const SocialIconLink = ({
 
 interface AssetCardProps extends AssetCardBlock {}
 
-const colors = {
-  pink: "brand-secondary-lilac-stardust-4",
-  green: "brand-secondary-boreal-green-4",
+// grays-solid-1: #FBFBFB
+
+const colors: Record<AssetCardProps["img_bg_color"], string> = {
+  "lilac-stardust": "brand-secondary-lilac-stardust-4",
+  "banana-star": "brand-secondary-banana-star-4",
+  "sunlit-pink": "brand-secondary-sunlit-pink-4",
+  "space-blue": "brand-secondary-space-blue-4",
+  "boreal-green": "brand-secondary-boreal-green-4",
+  "comet-green": "brand-secondary-comet-green-6",
+  "cosmic-coral": "brand-secondary-cosmic-coral-2",
 };
 export const AssetCard = ({
   title,
@@ -51,7 +58,7 @@ export const AssetCard = ({
   website_url,
   twitter,
   image,
-  img_bg_color = "pink",
+  img_bg_color = "lilac-stardust",
   discord,
 }: AssetCardProps) => {
   return (
@@ -61,7 +68,7 @@ export const AssetCard = ({
         padding="70px 76px"
         justifyContent="center"
         alignItems="center"
-        bg={colors[img_bg_color] || colors.pink}
+        bg={colors[img_bg_color] || colors["lilac-stardust"]}
         w="100%"
         borderRadius="sm"
       >

@@ -169,7 +169,7 @@ export const Card = (props: Props) => {
     sx,
     ...rest
   } = props;
-  const bgColor = "border.card";
+  const bgColor = "border.card.value";
   let styles = {
     borderRadius: "md",
   };

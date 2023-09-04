@@ -55,7 +55,7 @@ blocks:
         website_url: https://banxa.com
         twitter: https://twitter.com/BanxaOfficial
         image: /assets/banxa.jpg
-        img_bg_color: green
+        img_bg_color: boreal-green
       - type: asset_card
         title: Ramp
         description: Non-custodial fiat to crypto on-ramp.
@@ -63,5 +63,5 @@ blocks:
         twitter: https://twitter.com/RampNetwork
         link_url: https://ramp.network
         website_url: https://ramp.network
-        img_bg_color: green
+        img_bg_color: boreal-green
     randomize: true
