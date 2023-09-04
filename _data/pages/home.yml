@@ -5,7 +5,7 @@ breadcrumbs: false
 page_last_updated: false
 blocks:
   - type: home_hero
-  - type: promo_block
+  # - type: promo_block
   - type: stat_cards
   - type: group
     blocks:

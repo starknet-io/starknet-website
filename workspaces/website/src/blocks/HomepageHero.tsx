@@ -20,12 +20,12 @@ export const HomepageHero = ({ seo }: Props) => {
   const { colorMode } = useColorMode();
   const { RiveComponent: RiveLight } = useRive({
     src: "/assets/starknet-hub-noclip.riv",
-    autoplay: true
+    autoplay: true,
   });
 
   const { RiveComponent: RiveDark } = useRive({
     src: "/assets/starknet-hub-dark.riv",
-    autoplay: true
+    autoplay: true,
   });
 
   return (
@@ -42,6 +42,10 @@ export const HomepageHero = ({ seo }: Props) => {
         bgGradient="linear-gradient(5deg, #0C0C4F 0%, #0C0C4F 16.58%, #060625 100%)"
         position="relative"
         mt="-24px"
+        mb={{
+          base: "-20px",
+          lg: "-7vw",
+        }}
         sx={{
           overflow: "visible",
           marginTop: "-150px",
@@ -55,20 +59,33 @@ export const HomepageHero = ({ seo }: Props) => {
             bottom: 0,
             left: { base: "-600px", "2xl": "-1000px", "4xl": "-500px" },
             width: "100%",
-            minWidth: { base: "1900px", lg: "2300px", xl: "2500px", "2xl": "4500px" },
+            minWidth: {
+              base: "1900px",
+              lg: "2300px",
+              xl: "2500px",
+              "2xl": "4500px",
+            },
             border: "none",
             zIndex: -1,
           },
           "& .displayBlock": {
-            display: "block"
+            display: "block",
           },
           "& .displayNone": {
-            display: "none"
-          }
+            display: "none",
+          },
         }}
       >
-        <RiveLight className={`rive-animation ${colorMode === "light" ? "displayBlock" : "displayNone"}`} />
-        <RiveDark className={`rive-animation ${colorMode === "dark" ? "displayBlock" : "displayNone"}`} />
+        <RiveLight
+          className={`rive-animation ${
+            colorMode === "light" ? "displayBlock" : "displayNone"
+          }`}
+        />
+        <RiveDark
+          className={`rive-animation ${
+            colorMode === "dark" ? "displayBlock" : "displayNone"
+          }`}
+        />
         <Box
           zIndex={2}
           minHeight="600px"
