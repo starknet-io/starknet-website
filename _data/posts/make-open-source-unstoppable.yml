@@ -1,0 +1,69 @@
+id: ab747e6a-a55b-4770-b057-a64e534eb9f3
+post_type: video
+title: Make open source unstoppable
+published_date: 2023-08-04T07:38:19.720Z
+video:
+  url: https://www.youtube.com/watch?v=NKWnIqTbg8E
+  id: NKWnIqTbg8E
+  data:
+    kind: youtube#video
+    etag: 2pogQjzlEfV4T12P6kepTNklKYY
+    id: NKWnIqTbg8E
+    snippet:
+      publishedAt: 2023-08-04T09:30:13.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/NKWnIqTbg8E/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/NKWnIqTbg8E/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/NKWnIqTbg8E/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/NKWnIqTbg8E/sddefault.jpg
+          width: 640
+          height: 480
+      defaultAudioLanguage: en
+      channelTitle: StarkNetCC
+      title: Make open source unstoppable - Grégoire Gambatto
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      defaultLanguage: en
+      categoryId: "28"
+      localized:
+        title: Make open source unstoppable - Grégoire Gambatto
+        description: |-
+          Onlydust : https://www.onlydust.xyz/
+
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      description: |-
+        Onlydust : https://www.onlydust.xyz/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+    contentDetails:
+      duration: PT3M33S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_nkwniqtbg8e_standard.png
+category: community-and-events
