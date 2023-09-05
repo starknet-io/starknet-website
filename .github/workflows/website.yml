@@ -36,6 +36,14 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      - name: Set Crowdin Environment
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/production" ]]; then
+            echo "CW_SOURCE_ID=dev" >> $GITHUB_ENV
+          else
+            echo "CW_SOURCE_ID=test" >> $GITHUB_ENV
+          fi
+          
       - name: Set date environment variables
         run: |
           echo "YMDHM=$(date +%Y-%m-%d-%H-%M)" >> $GITHUB_ENV
@@ -47,13 +55,13 @@ jobs:
         uses: actions/cache/restore@v3
         with:
           path: _crowdin
-          key: crowdin-cache-${{ github.ref_name }}-${{ env.YMDHM }}
+          key: crowdin-cache-${{ env.CW_SOURCE_ID }}-${{ env.YMDHM }}
           restore-keys: |
-            crowdin-cache-${{ github.ref_name }}-${{ env.YMDHM }}
-            crowdin-cache-${{ github.ref_name }}-${{ env.YMDH }}
-            crowdin-cache-${{ github.ref_name }}-${{ env.YMD }}
-            crowdin-cache-${{ github.ref_name }}-${{ env.YM }}
-            crowdin-cache-${{ github.ref_name }}
+            crowdin-cache-${{ env.CW_SOURCE_ID }}-${{ env.YMDHM }}
+            crowdin-cache-${{ env.CW_SOURCE_ID }}-${{ env.YMDH }}
+            crowdin-cache-${{ env.CW_SOURCE_ID }}-${{ env.YMD }}
+            crowdin-cache-${{ env.CW_SOURCE_ID }}-${{ env.YM }}
+            crowdin-cache-${{ env.CW_SOURCE_ID }}
             crowdin-cache-
 
       - name: Restore social media data
