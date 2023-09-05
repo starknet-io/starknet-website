@@ -114,3 +114,6 @@ items:
                 custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet roundup newsletter
                 custom_external_link: https://starknetroundup.substack.com/
+              - custom_title: Starknet Edu Blog
+                custom_external_link: https://medium.com/starknet-edu
+                hide_from_footer: true
