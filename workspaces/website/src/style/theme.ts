@@ -32,11 +32,6 @@ const theme = extendTheme(proTheme, {
       300: "#4B9EDA",
       400: "#261F63",
     },
-    orange: {
-      sunfade: "#FF7E6D",
-      fanta: "#FF6450",
-    },
-    yellowSunfade: "#FFCD9A",
     bg: {
       main: "#F6F6F6",
       200: "#FBFBFB",
