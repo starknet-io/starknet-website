@@ -12,7 +12,7 @@ export const playlist: Chapter[] = [
   {
     id: "scaling-eth",
     subtitle: "Chapter 1",
-    title: "How Starkness Scales Ethereum",
+    title: "How Starknet Scales Ethereum",
     description: "Chapter 1 explains how Starknet works at a high level",
     poster: "/assets/video/chapter1.png",
     thumbnail: "/assets/video/chapter1-thumbnail.jpg",

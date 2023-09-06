@@ -65,7 +65,7 @@ export default function CustomControl(props: CustomControlProps) {
         pos: "absolute",
         bottom: 0,
         left: 0,
-        zIndex: 10,
+        zIndex: 9,
         width: "100%",
         display: "flex",
         flexDir: "column",
@@ -109,6 +109,8 @@ export default function CustomControl(props: CustomControlProps) {
           bg: "rgba(0, 0, 0, .75)",
           backdropBlur: "sm",
           alignItems: "center",
+          borderBottomLeftRadius: "10px",
+          borderBottomRightRadius: "10px",
         }}
       >
         <PlayButton playingStatus={playingStatus} handlePlay={onPlayToggle} />

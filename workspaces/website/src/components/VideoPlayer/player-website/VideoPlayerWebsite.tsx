@@ -77,10 +77,7 @@ export function VideoPlayerWebsite({
         display: "grid",
         position: "relative",
       }}
-      gap={{
-        base: "2xl",
-        lg: "21px",
-      }}
+      gap="2xl"
       gridTemplateColumns={{
         base: "1fr",
         lg: playlistOnBottom ? "1fr" : "2fr 1fr",

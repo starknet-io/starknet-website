@@ -31,15 +31,6 @@ export const FinalChapterRightCTA = ({
     width,
   });
 
-  const br = useBreakpointValue({
-    base: "base",
-    sm: "sm",
-    md: "md",
-    lg: "md",
-  });
-
-  console.log("br", br);
-
   return (
     <Box
       display="flex"

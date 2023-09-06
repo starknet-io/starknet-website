@@ -68,7 +68,7 @@ export default function EducationPage({ chapter }: Props) {
             onChapterChange={onChapterChange}
             playlistOnBottom
           />
-          <Box mt="2xl">
+          <Box mt="md">
             <CategoryTabs
               activeItemId={transcriptTab}
               onTabClick={(id) => setTranscriptTab(id)}
@@ -121,7 +121,7 @@ export default function EducationPage({ chapter }: Props) {
                 ipsum?
               </Text>
             </Box>
-            <Flex py="xl" gap="sm">
+            <Flex py="xl" gap="sm" overflowX="auto">
               {["Scalability", "Roadmap", "Cairo", "Layer 2"].map((b) => (
                 <Badge variant="outline" key={b}>
                   {b}

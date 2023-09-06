@@ -1,6 +1,7 @@
-import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { Chapter } from "../constants";
-import { useUpdateEffect } from "react-use";
+import { useOverflow } from "../hooks/useOverflow";
+import { useRef } from "react";
 
 type ChaptersPlaylistProps = {
   height: number;
@@ -17,6 +18,10 @@ export default function ChaptersPlaylist({
   onChapterSelect,
   playlistOnBottom,
 }: ChaptersPlaylistProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { hasOverflowX, hasOverflowY } = useOverflow(ref);
+  // console.log("hasOverflowX", hasOverflowX);
+  // console.log("hasOverflowY", hasOverflowY);
   // useUpdateEffect(() => {
   //   const chapterElement = document.getElementById(currentChapter);
   //   if (chapterElement) {
@@ -30,8 +35,9 @@ export default function ChaptersPlaylist({
 
   return (
     <Box
+      ref={ref}
       sx={{
-        overflow: "scroll",
+        overflow: "auto",
         cursor: "pointer",
       }}
       gap={{
@@ -42,6 +48,10 @@ export default function ChaptersPlaylist({
       flexDirection={{ base: "row", lg: playlistOnBottom ? "row" : "column" }}
       maxH={{ base: "auto", lg: playlistOnBottom ? "auto" : height }}
       flexWrap="nowrap"
+      borderStyle="solid"
+      borderColor="border.divider"
+      borderRightWidth={hasOverflowX ? "1px" : "0px"}
+      paddingRight={hasOverflowX ? "sm" : undefined}
     >
       {chapters.map((chapter) => {
         const isActive = chapter.id === currentChapter;
@@ -73,7 +83,10 @@ export default function ChaptersPlaylist({
               lg: playlistOnBottom ? "column" : "row",
             }}
             flexWrap="nowrap"
-            padding={{ base: "0px 0px 2rem 0px", lg: "0px 1rem 0px 0px" }}
+            padding={{
+              base: "0px 0px 1rem 0px",
+              lg: playlistOnBottom ? undefined : "0px 1rem 0px 0px",
+            }}
             height="max-content"
             gap="md"
             _first={{
