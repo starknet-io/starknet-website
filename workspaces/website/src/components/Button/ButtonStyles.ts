@@ -630,6 +630,34 @@ const icon = defineStyle({
   },
 });
 
+const education = defineStyle({
+  color: "#FFFFFF",
+  bg: "rgba(0, 0, 0, 0.85)",
+  border: "1px solid #313131",
+  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1)",
+  borderRadius: "40px", // 2.8571em
+  display: "flex",
+  gap: "0.7143em", // 10px
+  alignItems: "center",
+  fontSize: "14px",
+  lineHeight: "normal",
+  fontWeight: "500",
+  // pl: "0.7143em", // 10px
+  px: "1.1429em", // 16px
+  py: "0.5714em", // 8px
+
+  _hover: {
+    background: "rgba(22, 22, 22, 0.85)",
+    boxShadow:
+      "0px 2px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
+  },
+  _active: {
+    background: "rgba(22, 22, 22, 0.85)",
+    boxShadow:
+      "0px 2px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
+  },
+});
+
 const sm = defineStyle({
   padding: "8px 16px",
   minHeight: "40px",
@@ -641,6 +669,8 @@ const md = defineStyle({
   minHeight: "48px",
   maxHeight: "48px",
 });
+
+const auto = defineStyle({});
 
 export const buttonTheme = defineStyleConfig({
   variants: {
@@ -657,9 +687,11 @@ export const buttonTheme = defineStyleConfig({
     rounded,
     gradient,
     unstyled,
+    education,
   },
   sizes: {
     sm,
     md,
+    auto,
   },
 });

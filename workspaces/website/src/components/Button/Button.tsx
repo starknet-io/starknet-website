@@ -16,14 +16,15 @@ type props = {
     | "category"
     | "icon"
     | "rounded"
-    | "gradient";
+    | "gradient"
+    | "education";
   children: React.ReactNode;
   toId?: string;
   href?: string;
   isExternal?: boolean;
   target?: ButtonProps["formTarget"];
   fullWidth?: boolean;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "auto";
   bg?: string;
   sx?: ChakraProps['sx']
 } & ButtonProps;

@@ -1,6 +1,8 @@
 export type Chapter = {
   id: string;
+  subtitle: string;
   title: string;
+  poster: string;
   thumbnail: string;
   description: string;
   videoId: string;
@@ -9,33 +11,41 @@ export type Chapter = {
 export const playlist: Chapter[] = [
   {
     id: "scaling-eth",
-    title: "How Starknet scales Ethereum",
+    subtitle: "Chapter 1",
+    title: "How Starknet Scales Ethereum",
     description: "Chapter 1 explains how Starknet works at a high level",
-    thumbnail: "/assets/video/chapter1.png",
+    poster: "/assets/video/chapter1.png",
+    thumbnail: "/assets/video/chapter1-thumbnail.jpg",
     videoId: "abd99c9696f1862f828c6e18136d75e5",
     durationTime: "02:42",
   },
   {
     id: "sequencer",
+    subtitle: "Chapter 2",
     title: "The Starknet Sequencer",
     description: "Chapter 2 explains about the Starknet Sequencer",
-    thumbnail: "/assets/video/chapter2.png",
+    poster: "/assets/video/chapter2.png",
+    thumbnail: "/assets/video/chapter2-thumbnail.jpg",
     videoId: "7ca4a89a8031a1737e4632ec498afb55",
     durationTime: "02:24",
   },
   {
     id: "prover",
+    subtitle: "Chapter 3",
     title: "The Starknet Prover",
     description: "Chapter 3 explains how the Starknet Prover works",
-    thumbnail: "/assets/video/chapter3.png",
+    poster: "/assets/video/chapter3.png",
+    thumbnail: "/assets/video/chapter3-thumbnail.jpg",
     videoId: "b66a934468bf72606e60abd7d475acf3",
     durationTime: "02:26",
   },
   {
     id: "eth-settlement",
-    title: "Secure settlement on Ethereum",
+    subtitle: "Chapter 4",
+    title: "Secure Settlement on Ethereum",
     description: "Chapter 4 explains how to secure settlement on Ethereum",
-    thumbnail: "/assets/video/chapter4.png",
+    poster: "/assets/video/chapter4.png",
+    thumbnail: "/assets/video/chapter4-thumbnail.jpg",
     videoId: "af654c93367a0d4eae7ea90252ac342e",
     durationTime: "03:28",
   },

@@ -52,6 +52,10 @@ const youtube = defineStyle({
   background: "badge-governance-bg",
   color: "badge-governance-fg",
 });
+const outline = defineStyle({
+  color: "content.accent.value",
+  borderColor: "border.card.value",
+});
 
 export const badgeTheme = defineStyleConfig({
   baseStyle: {
@@ -76,5 +80,6 @@ export const badgeTheme = defineStyleConfig({
     github,
     blog,
     youtube,
+    outline,
   },
 });
