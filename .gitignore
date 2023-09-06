@@ -32,6 +32,7 @@ storybook-static
 __*
 _data/_dynamic
 .eslintcache
+.tool-versions
 
 # debug
 npm-debug.log*
