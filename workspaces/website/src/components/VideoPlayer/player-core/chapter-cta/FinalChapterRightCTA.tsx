@@ -1,7 +1,8 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { HiArrowRight } from "react-icons/hi2";
 import { useChapterCTAStyles } from "./useChapterCTAStyles";
+import { ChapterCTA } from "./ChapterCTA";
 
 const buttons = [
   {
@@ -25,15 +26,7 @@ export const FinalChapterRightCTA = ({
   height,
   width,
 }: FinalChapterRightCTAProps) => {
-  const {
-    top,
-    rightCTAStart,
-    gap,
-    borderRadius,
-    fontSize,
-    paddingY,
-    paddingX,
-  } = useChapterCTAStyles({
+  const { top, rightCTAStart, gap, fontSize } = useChapterCTAStyles({
     height,
     width,
   });
@@ -52,26 +45,7 @@ export const FinalChapterRightCTA = ({
       transition="opacity 0.5s ease-in-out"
     >
       {buttons.map(({ label, link }) => (
-        <Button
-          key={label}
-          as="a"
-          variant="solid"
-          borderRadius={borderRadius}
-          fontSize={fontSize}
-          lineHeight={1}
-          href={link}
-          target="_blank"
-          isExternal
-          padding={0}
-          paddingY={paddingY}
-          paddingInline={paddingX}
-          rightIcon={<HiArrowRight />}
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          {label}
-        </Button>
+        <ChapterCTA key={label} label={label} link={link} fontSize={fontSize} />
       ))}
     </Box>
   );

@@ -1,5 +1,6 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 import React from "react";
 
 type Props = {
@@ -9,6 +10,14 @@ type Props = {
   lg?: number;
   xl?: number;
   heading?: string;
+  description?: string;
+  descriptionVariant?:
+    | "cardBody"
+    | "body"
+    | "breadcrumbs"
+    | "footerLink"
+    | "textLink"
+    | "bodyLg";
   headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 };
 
@@ -21,14 +30,14 @@ export const renderHeadingVariant = (headingVariant: string) => {
       return {
         fontWeight: "extrabold",
         fontSize: "32px",
-        marginBottom: "24px",
+        marginBottom: "xl",
       };
 
     case "h2":
       return {
         fontWeight: "extrabold",
         fontSize: "48px",
-        marginBottom: "48px",
+        marginBottom: "xl",
       };
 
     default:
@@ -38,25 +47,55 @@ export const renderHeadingVariant = (headingVariant: string) => {
 
 export const BlockCards = ({
   heading,
-  headingVariant = "h3",
+  headingVariant = "h2",
+  descriptionVariant = "bodyLg",
+  description,
   children,
-  base = 2,
+  base = 1,
   md = 2,
-  lg,
+  lg = 3,
   xl,
 }: Props) => {
   return (
-    <Box>
-      {heading && (
-        <Heading
-          variant="h3"
-          color="heading-navy-fg"
-          sx={renderHeadingVariant(headingVariant)}
-        >
-          {heading}
-        </Heading>
-      )}
-      <SimpleGrid columns={{ base, md, lg, xl }} spacing="32px">
+    <Box
+      maxW={{ base: "contentMaxW.lg", md: "contentMaxW.xl" }}
+      width="100%"
+      m="0 auto"
+      zIndex="2"
+      px={{
+        base: "page.left-right.base",
+        md: "page.left-right.md",
+      }}
+      display="flex"
+      flexDirection="column"
+      gap={{
+        base: "page.block-gap.base",
+        md: "page.block-gap.md",
+        lg: "page.block-gap.lg",
+      }}
+    >
+      <Box maxW="contentMaxW.md">
+        {heading && (
+          <Box>
+            <Heading
+              variant={headingVariant}
+              color="content.accent.value"
+              // withMarginBottom={description ? true : false}
+            >
+              {heading}
+            </Heading>
+            {description && (
+              <Text variant={descriptionVariant} mt="xs">
+                {description}
+              </Text>
+            )}
+          </Box>
+        )}
+      </Box>
+      <SimpleGrid
+        columns={{ base, md, lg, xl }}
+        spacing={{ base: "16px", md: "24px" }}
+      >
         {children}
       </SimpleGrid>
     </Box>

@@ -12,8 +12,10 @@ blocks:
       the Starknet and Cairo is assumed.
   - type: ordered_block
     blocks:
-      - title: Starknet Users
-        body: The users that interact with Starknet sequencer nodes and, if necessary,
+      - type: markdown
+        body: >-
+          ## Starknet Users
+          The users that interact with Starknet sequencer nodes and, if necessary,
           with L1 contracts. These users, whether human or automated, are the
           agents that submit transactions to the Starknet network.
       - title: Application Developers

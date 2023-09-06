@@ -9,9 +9,10 @@ import {
   Stack,
   HStack,
   useColorMode,
-  useColorModeValue,
   useDisclosure,
   Icon,
+  ColorModeProvider,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
@@ -24,13 +25,14 @@ import { NavLayout } from "./NavLayout";
 import MobileLanguagesDrawer from "./MobileLanguagesDrawer";
 import { usePageContext } from "src/renderer/PageContextProvider";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
+import { usePageScrolled } from "./usePageScrolled";
 
 type Props = {
   desktopNavItems?: React.ReactNode;
   mobileNavItems?: React.ReactNode;
   languageSwitcher?: React.ReactNode;
   search?: React.ReactNode;
-  seo: SEOTexts['language'];
+  seo: SEOTexts["language"];
 };
 
 declare global {
@@ -44,7 +46,7 @@ export const NavBar = ({
   mobileNavItems,
   languageSwitcher,
   search,
-  seo
+  seo,
 }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
@@ -54,10 +56,19 @@ export const NavBar = ({
     setLanguagesDrawerOpen(false);
     onOpen();
   }, []);
-  const onLanguagesDrawerOpen = useCallback(() => setLanguagesDrawerOpen(true), []);
-  const { locale, urlPathname: pathname } = usePageContext();
+  const onLanguagesDrawerOpen = useCallback(
+    () => setLanguagesDrawerOpen(true),
+    []
+  );
+  const { locale, urlPathname: pathname, navConfig } = usePageContext();
   const localeConfig = i18nConfig.find((c) => c.code === locale)!;
   const topLanguages = ["en", "es", "fr", "de", "pt", "ar", "ja", "ko"];
+  let color = colorMode;
+  if (colorMode === "light" && navConfig?.invertColorOnLight) {
+    color = "dark";
+  } else if (colorMode === "dark" && navConfig?.invertColorOnDark) {
+    color = "light";
+  }
 
   React.useEffect(() => {
     onClose();
@@ -67,29 +78,43 @@ export const NavBar = ({
     toggleColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
-        'event_category': "engagement",
-        'value': colorMode
+        event_category: "engagement",
+        value: colorMode,
       });
     }
-  }
+  };
 
   const openLanguageDrawer = () => {
     onLanguagesDrawerOpen();
-  }
+  };
 
-  useEffect(()  => {
+  useEffect(() => {
     isLanguagesDrawerOpen && onClose();
-  }, [isLanguagesDrawerOpen])
+  }, [isLanguagesDrawerOpen]);
+
+  const { isPageScrolled } = usePageScrolled();
 
   return (
-    <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>
-      <NavLayout
-        onClickMenu={onOpen}
-        isMenuOpen={isOpen}
-        items={desktopNavItems}
-        languageSwitcher={languageSwitcher}
-        searchArea={search}
-      />
+    <Box
+      as="nav"
+      transition="background 0.2s"
+      bg={isPageScrolled ? "navbar-bg" : "transparent"}
+      borderBottom={
+        isPageScrolled ? "1px solid rgba(35, 25, 45, 0.10)" : "none"
+      }
+    >
+      <ColorModeProvider value={isPageScrolled ? colorMode : color}>
+        <NavLayout
+          onClickMenu={onOpen}
+          toggleGlobalColorMode={toggleColorMode}
+          globalColorMode={colorMode}
+          isMenuOpen={isOpen}
+          items={desktopNavItems}
+          languageSwitcher={languageSwitcher}
+          searchArea={search}
+        />
+      </ColorModeProvider>
+
       <Box display={{ base: "block", lg: "none" }}>
         <Drawer
           placement="left"
@@ -109,6 +134,8 @@ export const NavBar = ({
                 onClickMenu={onClose}
                 isMenuOpen={isOpen}
                 menuButtonRef={menuButtonRef}
+                globalColorMode={colorMode}
+                toggleGlobalColorMode={toggleColorMode}
               />
             </DrawerHeader>
             <DrawerBody>{mobileNavItems}</DrawerBody>
@@ -148,32 +175,54 @@ export const NavBar = ({
             </HStack>
           </DrawerContent>
         </Drawer>
-        <MobileLanguagesDrawer search={search} isOpen={isLanguagesDrawerOpen} onClose={onLanguagesDrawerClose}>
-          <Heading
-            color="heading-navy-fg"
-            variant="h6"
-            mb={5}
-            mt={5}
-            textTransform="uppercase"
-          >Languages</Heading>
-          {i18nConfig
-            .filter((c) => topLanguages.includes(c.code))
-            .map((c, i) => {
-              return (
-                <HStack key={i}>
-                  <ColumnLink
-                    active={localeConfig.code === c.code}
-                    href={`/${c.code}${pathname.replace(/^\/\w{2}($|\/)/, "/")}`}
-                  >
-                    {c.name}
-                  </ColumnLink>
-                  <ColumnLinkDescription active={localeConfig.code === c.code}>
-                    {c.localName}
-                  </ColumnLinkDescription>
-                </HStack>
-              );
-            })}
-            <Stack spacing="1" pb={4} pt={10} mt={8} borderTopWidth="1px" borderTopStyle="solid" borderColor="btn-outline-border">
+        <ColorModeProvider value={colorMode}>
+          <MobileLanguagesDrawer
+            search={search}
+            isOpen={isLanguagesDrawerOpen}
+            onClose={onLanguagesDrawerClose}
+          >
+            <Heading
+              color="heading-navy-fg"
+              variant="h6"
+              mb={5}
+              mt={5}
+              textTransform="uppercase"
+            >
+              Languages
+            </Heading>
+            <Box display="flex" flexDir="column" gap="md">
+              {i18nConfig
+                .filter((c) => topLanguages.includes(c.code))
+                .map((c, i) => {
+                  return (
+                    <HStack key={i}>
+                      <ColumnLink
+                        active={localeConfig.code === c.code}
+                        href={`/${c.code}${pathname.replace(
+                          /^\/\w{2}($|\/)/,
+                          "/"
+                        )}`}
+                      >
+                        {c.name}
+                      </ColumnLink>
+                      <ColumnLinkDescription
+                        active={localeConfig.code === c.code}
+                      >
+                        {c.localName}
+                      </ColumnLinkDescription>
+                    </HStack>
+                  );
+                })}
+            </Box>
+            <Stack
+              spacing="1"
+              pb={4}
+              pt={10}
+              mt={8}
+              borderTopWidth="1px"
+              borderTopStyle="solid"
+              borderColor="btn-outline-border"
+            >
               <Heading
                 color="heading-navy-fg"
                 variant="h6"
@@ -193,7 +242,8 @@ export const NavBar = ({
                 {seo.callToAction}
               </Button>
             </Stack>
-        </MobileLanguagesDrawer>
+          </MobileLanguagesDrawer>
+        </ColorModeProvider>
       </Box>
     </Box>
   );

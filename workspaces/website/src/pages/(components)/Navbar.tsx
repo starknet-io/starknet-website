@@ -1,4 +1,3 @@
-
 import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import LocaleSwitcher from "./LocaleSwitcher";
@@ -7,7 +6,7 @@ import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Flex } from "@chakra-ui/react";
+import { ColorModeProvider, Flex, useColorMode } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import React, { Fragment } from "react";
@@ -24,22 +23,20 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  readonly searchSEO: SEOTexts['search'];
-  readonly languageCenterSeo: SEOTexts['language'];
+  readonly searchSEO: SEOTexts["search"];
+  readonly languageCenterSeo: SEOTexts["language"];
 }
 
-export default function Navbar({
-  mainMenu,
-  env,
-  searchSEO,
-  languageCenterSeo,
-}: Props) {
+function Navbar({ mainMenu, env, searchSEO, languageCenterSeo }: Props) {
   const { locale, urlPathname: pathname } = usePageContext();
+  const { colorMode } = useColorMode();
 
   return (
     <NavbarContainer>
       <NavBar
-        languageSwitcher={<LocaleSwitcher seo={languageCenterSeo} />}
+        languageSwitcher={
+          <LocaleSwitcher seo={languageCenterSeo} globalColorMode={colorMode} />
+        }
         search={
           <div>
             <MainSearch env={env} seo={searchSEO} />
@@ -51,14 +48,17 @@ export default function Navbar({
             <MenuItemWithDropdown
               key={`${mainMenuItemIndex}-${pathname}`}
               label={mainMenuItem.title}
+              globalColorMode={colorMode}
             >
               <Flex
-                // bg="red"
                 maxW="900px"
                 mx="auto"
                 gap="48px"
-                // display="block"
-                // sx={{ columnCount: [1, 2, 3, 4] }}
+                // sx={{
+                //   '& a': {
+                //     fontWeight: 'normal',
+                //   },
+                // }}
               >
                 {mainMenuItem.columns?.length &&
                   mainMenuItem.columns?.map((column, columnIndex) => (
@@ -77,11 +77,19 @@ export default function Navbar({
                           if (item.custom_icon) {
                             return (
                               <IconButton
-                                // isExternal={item.custom_external_link != null}
                                 href={href}
                                 key={itemIndex}
                                 as="a"
                                 aria-label={label!}
+                                _hover={{
+                                  background: "transparent !important",
+                                }}
+                                sx={{
+                                  "&:hover *": {
+                                    background: "transparent !important",
+                                    fill: "fg-default-hover",
+                                  },
+                                }}
                                 icon={
                                   item.custom_icon === "SiDiscord" ? (
                                     <SiDiscord fontSize="1.25rem" />
@@ -90,7 +98,9 @@ export default function Navbar({
                                   ) : item.custom_icon === "SiTwitter" ? (
                                     <SiTwitter fontSize="1.25rem" />
                                   ) : item.custom_icon === "SiYoutube" ? (
-                                    <Box ml="-16px"><SiYoutube fontSize="1.25rem" /></Box>
+                                    <Box ml="-16px">
+                                      <SiYoutube fontSize="1.25rem" />
+                                    </Box>
                                   ) : (
                                     <React.Fragment />
                                   )
@@ -192,3 +202,5 @@ export default function Navbar({
     </NavbarContainer>
   );
 }
+
+export default Navbar;

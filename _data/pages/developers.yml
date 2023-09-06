@@ -8,82 +8,74 @@ blocks:
     title: Developers Hub
     description: A manual and resource list for builders, by builders.
     variant: build
+    image: /assets/ecosystem/developer.svg
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
     base: 1
     md: 2
     lg: 3
     heading: "Get started "
     blocks:
-      - type: image_icon_link_card
-        color: blue-default
+      - type: icon_link_card
+        img: /assets/build-tutorials.svg
         title: Read the Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        icon: /assets/read_the_docs.svg
-        link:
-          custom_external_link: https://docs.starknet.io/
-          custom_title: View
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
+        linkText: View ->
+        linkUrl: https://docs.starknet.io/
+        color: red
+      - type: icon_link_card
+        img: /assets/build_read_the_docs.svg
         title: Read the Starknet Book
         description: Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
-        icon: /assets/docs.svg
-        link:
-          custom_external_link: https://book.starknet.io/
-          custom_internal_link: ""
-          custom_title: View
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: "Set-up a Local Environment "
+        linkText: View ->
+        linkUrl: https://book.starknet.io/
+        color: green
+      - type: icon_link_card
+        img: /assets/build_tools_resources.svg
+        title: Set-up a Local Environment
         description: Learn how to get your dev environment up and running so you can
           start building.
-        icon: /assets/local-environment.svg
-        link:
-          custom_external_link: https://docs.starknet.io/documentation/getting_started/environment_setup/
-          custom_title: View
-        withIllustration: true
+        linkText: View ->
+        linkUrl: https://docs.starknet.io/documentation/getting_started/environment_setup/
+        color: blue
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
     base: 1
     md: 2
     lg: 3
     heading: Courses
     blocks:
-      - type: image_icon_link_card
-        color: purple
+      - type: icon_link_card
         title: Learn Through Tutorials
         description: "Learn from the Starknet's community of developers and technologies. "
-        icon: /assets/7.svg
-        link:
-          custom_title: View
-          custom_internal_link: /tutorials/
+        img: /assets/courses-tutorials.svg
+        linkText: View ->
+        linkUrl: /tutorials/
         withIllustration: true
-      - type: image_icon_link_card
-        color: peach
+        dark_img: /assets/tutorials-dark.svg
+      - type: icon_link_card
         title: Starknet Basecamp
         description: Sign up for the next basecamp and learn everything about Starknet -
           from STARK mathematics to Cairo 1 smart contracts best practices.
-        icon: /assets/basecamp.svg
-        link:
-          custom_title: Sign-up
-          custom_internal_link: ""
-          custom_external_link: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
+        img: /assets/courses-basecamp.svg
+        linkText: Sign-up ->
+        linkUrl: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
         withIllustration: true
-      - type: image_icon_link_card
-        color: cyan
+        dark_img: /assets/basecamp-dark.svg
+      - type: icon_link_card
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
-        icon: /assets/starknet_edu.svg
-        link:
-          custom_title: View
-          custom_internal_link: /tutorials/starknet_edu
+        img: /assets/courses-edu.svg
+        linkText: View ->
+        linkUrl: /tutorials/starknet_edu
         withIllustration: true
+        dark_img: /assets/starknet_edu-dark.svg
   - type: community_events
+    cardType: event
+    title: Community events
   - type: flex_layout
     heading_variant: h3
     base: 1

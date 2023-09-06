@@ -65,7 +65,7 @@ export default function CustomControl(props: CustomControlProps) {
         pos: "absolute",
         bottom: 0,
         left: 0,
-        zIndex: 10,
+        zIndex: 9,
         width: "100%",
         display: "flex",
         flexDir: "column",
@@ -103,12 +103,14 @@ export default function CustomControl(props: CustomControlProps) {
       <Box
         sx={{
           display: "flex",
-          gap: "4px",
+          gap: "20px",
           px: "20px",
-          py: "5px",
+          py: "8px",
           bg: "rgba(0, 0, 0, .75)",
           backdropBlur: "sm",
           alignItems: "center",
+          borderBottomLeftRadius: "10px",
+          borderBottomRightRadius: "10px",
         }}
       >
         <PlayButton playingStatus={playingStatus} handlePlay={onPlayToggle} />
@@ -143,7 +145,7 @@ export default function CustomControl(props: CustomControlProps) {
           sx={{
             display: "flex",
             flex: 1,
-            gap: "4px",
+            gap: "20px",
             justifyContent: "flex-end",
           }}
         >

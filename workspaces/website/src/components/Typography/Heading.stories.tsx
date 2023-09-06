@@ -36,22 +36,17 @@ export default {
 
 } as Meta<typeof Heading>;
 
+export const H1Hero = (args: CustomHeadingProps) => (
+  <ThemeProvider>
+    <HStack p={12}>
+      <Heading variant="h1hero" {...args}>H1 Hero</Heading>
+    </HStack>
+  </ThemeProvider>
+);
 export const H1 = (args: CustomHeadingProps) => (
   <ThemeProvider>
     <HStack p={12}>
       <Heading variant="h1" {...args}>Heading 1</Heading>
-    </HStack>
-    <HStack p={12}>
-      <></>
-      <Heading
-        variant="h1"
-        fontWeight="normal"
-        color="heading-navy-fg"
-        mt="-20px"
-        fontSize={{ base: "56px", md: "80px", xl: "92px" }}
-      >
-        Responsive heading
-      </Heading>
     </HStack>
   </ThemeProvider>
 );
@@ -87,15 +82,6 @@ export const H5 = (args: CustomHeadingProps) => (
     <HStack p={12}>
       <>
       <Heading variant="h5" {...args}>Heading 5</Heading>
-      </>
-    </HStack>
-  </ThemeProvider>
-);
-export const H6 = (args: CustomHeadingProps) => (
-  <ThemeProvider>
-    <HStack p={12}>
-      <>
-      <Heading variant="h6" {...args}>Heading 6</Heading>
       </>
     </HStack>
   </ThemeProvider>

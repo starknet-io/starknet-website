@@ -1,6 +1,9 @@
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
-import { HiOutlineArrowRightCircle } from "react-icons/hi2";
+import {
+  HiOutlineArrowRightCircle,
+  HiOutlineArrowUpRight,
+} from "react-icons/hi2";
 import { Box, Icon, Flex, FlexProps, Link, Avatar } from "@chakra-ui/react";
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { createContext, useContext } from "react";
@@ -28,13 +31,13 @@ const Root = (props: RootProps) => {
     lg: "24px",
   };
   return (
-    <Box mb="80px">
+    <Box>
       {heading && (
         <Heading
           variant="h3"
           color="heading-navy-fg"
           id={`toc-${slugify(heading)}`}
-          marginBottom="24px"
+          marginBottom="sm"
         >
           {heading}
         </Heading>
@@ -43,9 +46,9 @@ const Root = (props: RootProps) => {
         {...rest}
         as="ul"
         bg={listGap ? "transparent" : "card-bg"}
-        borderRadius={listGap ? "0px" : "16px"}
+        borderRadius={listGap ? "0px" : "md"}
         borderWidth="1px"
-        borderColor={listGap ? "transparent" : "card-br"}
+        borderColor={listGap ? "transparent" : "border.divider"}
         overflow="hidden"
         direction="column"
         gap={gap[listGap as ListSize] || "0px"}
@@ -122,7 +125,11 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
         {avatar && (
           <Flex alignItems="center" gap="8px">
             <Avatar name={avatar.title || "N/A "} src={avatar.url} size="sm" />
-            {avatar.displayTitle && avatar.title && <Text>{avatar.title}</Text>}
+            {avatar.displayTitle && avatar.title && (
+              <Text color="content.support" lineHeight="28px">
+                {avatar.title}
+              </Text>
+            )}
           </Flex>
         )}
 
@@ -135,20 +142,21 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
             }
             isExternal={isLinkisExternal}
             display="flex"
-            gap="8px"
-            color="listLink-fg"
+            gap="sm"
+            alignItems="center"
             _hover={{ textDecoration: "underline" }}
           >
             {(link.hasIcon ?? true) && (
               <Icon boxSize="24px" as={getLinkIcon(link.custom_icon)} />
             )}
-            {link.custom_title}{" "}
+            {link.custom_title}
             {isLinkisExternal && (
               <Icon
                 fontWeight="bold"
-                boxSize="24px"
-                as={ArrowUpIcon}
-                height="24px"
+                height="16x"
+                width="16x"
+                as={HiOutlineArrowUpRight}
+                marginLeft="-4px"
               />
             )}
           </Link>
@@ -160,15 +168,12 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
               base: "column",
               md: "row",
             }}
+            color="content.support"
           >
             {subLabel.label && (
               <Flex gap="8px">
-                <Text display={{ base: "none", md: "flex" }} color="fg-default">
-                  •
-                </Text>
-                <Text noOfLines={1} color="fg-default">
-                  {subLabel.label}
-                </Text>
+                <Text display={{ base: "none", md: "flex" }}>•</Text>
+                <Text noOfLines={1}>{subLabel.label}</Text>
               </Flex>
             )}
             {subLabel.boldLabel && (
@@ -176,7 +181,8 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
                 // pl={{ base: "32px", md: "0px" }}
                 noOfLines={1}
                 color="subnav-fg-accent"
-                fontWeight={700}
+                fontWeight={600}
+                lineHeight="xl"
               >
                 {subLabel.boldLabel}
               </Text>

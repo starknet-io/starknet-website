@@ -1,0 +1,54 @@
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.row {
+    display: flex;
+    overflow: hidden;
+}
+
+.rssBlock {
+    left: 0px;
+    background: transparent;
+    position: absolute;
+    width: 1070px;
+    height: 200px;
+    overflow: visible;
+    flex-direction: row;
+    display: flex;
+  }
+  .rssBlock:hover .marqueeStyle,
+  .rssBlock:hover .marqueeStyleRight {
+    animation-play-state: paused;
+  }
+
+.marqueeStyle {
+    display: flex;
+    animation-play-state: running;
+    /* Apply animation to this element */
+    -webkit-animation: scrolling-left1 120s linear infinite;
+    animation: scrolling-left1 120s linear infinite;
+}
+
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-33.33%); }
+}
+
+.marqueeStyleRight {
+    display: flex;
+    animation-play-state: running;
+    /* Apply animation to this element */
+    -webkit-animation: scrolling-right1 120s linear infinite;
+    animation: scrolling-right1 120s linear infinite;
+}
+
+/* scrolling-right is continuous/repeatly text */
+@keyframes scrolling-right1 {
+    0% { transform: translateX(-33.33%); }
+    100% { transform: translateX(0%); }
+}

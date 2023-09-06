@@ -1,6 +1,10 @@
 import { LinkData } from "./settings/main-menu";
 import { defaultLocale } from "./i18n/config";
-import { getFirst, getJSON, getShuffledArray } from "@starknet-io/cms-utils/src/index";
+import {
+  getFirst,
+  getJSON,
+  getShuffledArray,
+} from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
 
 export interface MarkdownBlock {
@@ -10,16 +14,31 @@ export interface MarkdownBlock {
 
 export interface CommunityEventsBlock {
   readonly type: "community_events";
+  readonly cardType: "grid" | "event";
+  readonly title: string;
+}
+
+export type AmbassadorTag = {
+  tag: string;
+};
+
+export interface Ambassador {
+  readonly full_name: string;
+  readonly title: string;
+  readonly description: string;
+  readonly image: string;
+  readonly website?: string;
+  readonly twitter?: string;
+  readonly discord?: string;
+  readonly tags?: AmbassadorTag[];
 }
 
 export interface AmbassadorsListBlock {
   readonly type: "ambassadors_list";
+  readonly title?: string;
+  readonly ambassador?: Ambassador[];
 }
 
-export interface WalletsBlock {
-  readonly type: "wallets";
-  readonly no_of_items: number;
-}
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
@@ -27,6 +46,25 @@ export interface BasicCardBlock {
 
   readonly size?: "sm" | "md";
 }
+
+export interface AssetCardBlock {
+  readonly type: "asset_card";
+  readonly title: string;
+  readonly description: string;
+  readonly website_url: string;
+  readonly twitter: string;
+  readonly image: string;
+  readonly discord: string;
+  readonly img_bg_color:
+    | "lilac-stardust"
+    | "banana-star"
+    | "sunlit-pink"
+    | "space-blue"
+    | "boreal-green"
+    | "comet-green"
+    | "cosmic-coral";
+}
+
 export interface ImageIconLinkCardBlock {
   readonly type: "image_icon_link_card";
   readonly title: string;
@@ -44,27 +82,60 @@ export interface ImageIconLinkCardBlock {
     | "grey";
 }
 
-interface Icon {
-  icon: string;
-  linkUrl: string;
+export interface IconLinkCardBlock {
+  type: "icon_link_card";
+  img?: string;
+  dark_img?: string;
+  title?: string;
+  description?: string;
+  linkText?: string;
+  linkUrl?: string;
+  color?: string;
 }
 
-interface ListCardItems {
-  title: string;
-  description: string;
-  linkUrl: string;
-  icons: Icon;
-  website_url: string;
-  twitter: string;
-  image: string;
+type LargeCard = {
+  img?: string;
+  darkImg?: string;
+  title?: string;
+  description?: string;
+  linkText?: string;
+  linkUrl?: string;
+};
+
+export type LargeCardsBlock = {
+  readonly type: "large_cards";
+  readonly horizontal1: LargeCard;
+  readonly horizontal2: LargeCard;
+  readonly vertical1: LargeCard;
+  readonly vertical2: LargeCard;
+};
+
+export interface StatCardsBlock {
+  type: "stat_cards";
 }
-export interface ListCardItemsBlock {
-  readonly type: "card_list";
+
+export interface PatternCardBlock {
+  readonly type: "pattern_card";
   readonly title: string;
-  readonly card_list_items: ListCardItems[];
-  readonly noOfItems: number;
+  readonly linkUrl: string;
+  readonly pattern:
+    | "viewallquestions"
+    | "howdoesitwork"
+    | "whatisstarkex"
+    | "whatisstarknet";
+}
+
+export interface EcosystemBlock {
+  readonly type: "ecosystem_block";
+  readonly title: string;
+  readonly ctaText: string;
+  readonly ctaUrl: string;
+}
+
+export interface SocialHomepageBlock {
+  readonly type: "social_block";
+  readonly title: string;
   readonly description: string;
-  randomize?: boolean;
 }
 
 export interface LinkListItem {
@@ -103,28 +174,29 @@ export interface PageHeaderBlock {
   readonly type: "page_header";
   readonly title: string;
   readonly description: string;
+  readonly hasBorderBottom?: boolean;
+  readonly pageLastUpdated?: string | null;
+  readonly withMarginBottom?: boolean;
+  readonly withInlinePadding?: boolean;
 }
 
 export interface HeroBlock {
   readonly type: "hero";
   readonly title: string;
   readonly description: string;
-  readonly variant?:
-    | "wallets"
-    | "block_explorers"
-    | "bridges"
-    | "dapps"
-    | "learn"
-    | "build"
-    | "community"
-    | "nodes_and_services"
-    | "security";
+  readonly image: string;
   readonly buttonText?: string;
   readonly buttonUrl?: string;
   readonly leftBoxMaxWidth?: number;
 }
 export interface HomeHeroBlock {
   readonly type: "home_hero";
+  readonly seo: {
+    readonly heroText: string;
+  };
+}
+export interface PromoBlock {
+  readonly type: "promo_block";
   readonly seo: {
     readonly heroText: string;
   };
@@ -148,21 +220,33 @@ export interface OrderedBlock {
 }
 
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type DescriptionVariant =
+  | "cardBody"
+  | "body"
+  | "breadcrumbs"
+  | "footerLink"
+  | "textLink";
 
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
-  | WalletsBlock
   | BasicCardBlock
   | ImageIconLinkCardBlock
+  | IconLinkCardBlock
+  | LargeCardsBlock
+  | StatCardsBlock
+  | PatternCardBlock
+  | EcosystemBlock
+  | SocialHomepageBlock
   | HeroBlock
   | HomeHeroBlock
+  | PromoBlock
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock
   | OrderedBlock
-  | ListCardItemsBlock
-  | AmbassadorsListBlock;
+  | AmbassadorsListBlock
+  | AssetCardBlock;
 
 export interface Container {
   readonly type: "container";
@@ -177,7 +261,10 @@ export interface FlexLayoutBlock {
   readonly xl?: number;
   readonly heading?: string;
   readonly heading_variant?: HeadingVariant;
+  readonly description?: string;
+  readonly description_variant?: DescriptionVariant;
   readonly blocks: readonly Block[];
+  readonly randomize?: boolean;
 }
 export interface GroupBlock {
   readonly type: "group";
@@ -190,7 +277,12 @@ export interface HeadingContainerBlock {
   readonly blocks: readonly Block[];
 }
 
-export type TopLevelBlock = Block | FlexLayoutBlock | GroupBlock | Container | HeadingContainerBlock;
+export type TopLevelBlock =
+  | Block
+  | FlexLayoutBlock
+  | GroupBlock
+  | Container
+  | HeadingContainerBlock;
 
 export interface Page extends Meta {
   readonly id: string;
@@ -209,20 +301,19 @@ export interface Page extends Meta {
 }
 
 const getPageWithRandomizedData = (data: Page): Page => {
-  const randomizedData = {...data}
+  const randomizedData = { ...data };
   randomizedData.blocks?.forEach((block: TopLevelBlock) => {
-
-    if (block.type === 'link_list' && block.randomize) {
+    if (
+      (block.type === "link_list" || block.type === "flex_layout") &&
+      block.randomize
+    ) {
       //@ts-expect-error
       block.blocks = getShuffledArray(block.blocks || []);
-    } else if (block.type === 'card_list' && block.randomize) {
-      //@ts-expect-error
-      block.card_list_items = getShuffledArray(block.card_list_items || []);
     }
-  })
+  });
 
-  return randomizedData
-}
+  return randomizedData;
+};
 export async function getPageBySlug(
   slug: string,
   locale: string,
@@ -236,7 +327,7 @@ export async function getPageBySlug(
       )
     );
 
-    return getPageWithRandomizedData(data)
+    return getPageWithRandomizedData(data);
   } catch (cause) {
     throw new Error(`Page not found! ${slug}`, {
       cause,
@@ -252,7 +343,8 @@ export async function getPageById(
   try {
     return await getFirst(
       ...[locale, defaultLocale].map(
-        (value) => async () => getJSON("data/pages/" + value + "/" + id, context)
+        (value) => async () =>
+          getJSON("data/pages/" + value + "/" + id, context)
       )
     );
   } catch (cause) {

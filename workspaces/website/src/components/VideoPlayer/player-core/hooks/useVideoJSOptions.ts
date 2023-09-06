@@ -28,7 +28,7 @@ export default function useVideoJSOptions({
     const chapter = getChapterById(chapters, currentChapter) || chapters[0];
     return {
       ...videoJsBaseOptions,
-      poster: chapter.thumbnail,
+      poster: chapter.poster,
       sources: [
         {
           src: getVideoSrc(chapter.videoId),

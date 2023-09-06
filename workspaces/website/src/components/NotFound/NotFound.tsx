@@ -12,7 +12,7 @@ export default function NotFound({ type = "page" }: Props) {
   return (
     <Box as="section" py={{ base: "16", md: "24" }}>
       <Container
-        bg="navbar-bg"
+        bg="not-found-bg"
         py={{ base: "64px", md: "128px" }}
         borderRadius="24px"
         borderWidth="1px"
@@ -34,7 +34,9 @@ export default function NotFound({ type = "page" }: Props) {
               </Text>
             </Stack>
           </Stack>
-          <Button variant="solid" onClick={() => navigate("/")}>Return to homepage</Button>
+          <Button variant="solid" onClick={() => navigate("/")}>
+            Return to homepage
+          </Button>
         </Stack>
       </Container>
     </Box>

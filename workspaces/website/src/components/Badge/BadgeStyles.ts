@@ -24,6 +24,10 @@ const community_and_events = defineStyle({
   background: "badge-community-and-events-bg",
   color: "badge-community-and-events-fg",
 });
+const events_and_webinars = defineStyle({
+  background: "badge-community-and-events-bg",
+  color: "badge-community-and-events-fg",
+});
 const stark_struck_podcast = defineStyle({
   background: "badge-starkstruck-bg",
   color: "badge-starkstruck-fg",
@@ -48,11 +52,17 @@ const youtube = defineStyle({
   background: "badge-governance-bg",
   color: "badge-governance-fg",
 });
+const outline = defineStyle({
+  color: "content.accent.value",
+  borderColor: "border.card.value",
+});
 
 export const badgeTheme = defineStyleConfig({
   baseStyle: {
     paddingLeft: "12px",
     paddingRight: "12px",
+    paddingTop: 0,
+    paddingBottom: 0,
     borderRadius: "12px",
     color: "badge-starkstruck-fg",
   },
@@ -64,11 +74,12 @@ export const badgeTheme = defineStyleConfig({
     stark_at_home,
     governance,
     community_and_events,
-    events_and_webinars: community_and_events,
+    events_and_webinars,
     foundation,
     ecosystem,
     github,
     blog,
     youtube,
+    outline,
   },
 });

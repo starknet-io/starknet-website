@@ -6,17 +6,30 @@ const { definePartsStyle, defineMultiStyleConfig } =
 
 const listCard = definePartsStyle({
   container: {
-    px: "12px",
-    py: "2px",
-    background: "#F3F4F6",
-    color: "#1F2937",
+    px: "sm",
+    background: "surface.transparent.value",
+    color: "content.accent.value",
     fontSize: "14px",
-    borderRadius: "12px",
+    borderRadius: "round",
+  },
+});
+
+const tutorialCard = definePartsStyle({
+  container: {
+    bg: "surface.transparent.value",
+    color: "content.accent.value",
+    fontSize: "14px",
+    lineHeight: "24px",
+    borderRadius: "round",
+    paddingInline: "sm",
+    minHeight: "24px",
+    fontWeight: 500,
   },
 });
 
 export const tagTheme = defineMultiStyleConfig({
   variants: {
     listCard,
+    tutorialCard,
   },
 });

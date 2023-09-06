@@ -7,15 +7,17 @@ type Props = {
     | "breadcrumbs"
     | "footerLink"
     | "textLink"
+    | "bodyLg";
 } & TextProps;
 
-export const Text = ({ variant, fontWeight = 'normal', children, ...rest }: Props) => {
+export const Text = ({
+  variant,
+  fontWeight = "normal",
+  children,
+  ...rest
+}: Props) => {
   return (
-    <ChakraText
-      variant={variant}
-      fontWeight={fontWeight}
-      {...rest}
-    >
+    <ChakraText variant={variant} fontWeight={fontWeight} {...rest}>
       {children}
     </ChakraText>
   );

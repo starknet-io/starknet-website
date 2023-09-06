@@ -23,10 +23,16 @@ export interface DocumentProps {
   video?: string;
 }
 
+export type NavConfig = {
+  invertColorOnLight?: boolean;
+  invertColorOnDark?: boolean;
+};
+
 export type PageContextCustom = {
   Page: Page;
   pageProps?: PageProps;
   hasLayout?: boolean;
+  navConfig?: NavConfig;
   exports: {
     documentProps?: DocumentProps;
   };

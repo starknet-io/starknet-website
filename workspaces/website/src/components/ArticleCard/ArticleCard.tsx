@@ -55,13 +55,23 @@ const Image = ({ url, imageAlt, type = "grid" }: ImageProps) => {
   const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${type === "featured" ? featuredImageSize : size},height=auto,format=auto${url}`;
   const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   return (
-    <Box overflow="hidden" {...type === "featured" && { width: "auto", maxWidth: "60%"}}>
+    <Box
+      overflow="hidden"
+      {...type === "featured" && { width: "auto", maxWidth: "60%"}}
+      position="relative"
+      width="100%"
+      paddingBottom="56.25%"
+      height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
+    >
       <ChakraImage
         src={isProd ? cloudflareImage : url}
         alt={imageAlt}
-        width="full"
-        height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
         objectFit="cover"
+        position="absolute"
+        top="0"
+        left="0"
+        width="100%"
+        height="100%"
         {...type === "grid" && { borderTopRadius: 8}}
       />
     </Box>
@@ -83,11 +93,12 @@ const Body = ({ children, type = "grid" }: BodyProps) => {
 
 interface CategoryProps {
   category: DataCategory;
+  type?: string;
 }
 
-const Category = ({ category }: CategoryProps) => {
+const Category = ({ category, type }: CategoryProps) => {
   return (
-    <Box pb={3}>
+    <Box pb={type === "featured" ? "20px" : 3}>
       <Badge variant={category.slug.replaceAll("-", "_")}>
         {category.name}
       </Badge>
@@ -103,7 +114,7 @@ type ContentProps = {
 
 const Content = ({ title, excerpt, type = "grid" }: ContentProps) => {
   return (
-    <Flex gap="3" direction="column" flex={1}>
+    <Flex gap={type === "featured" ? "8px" : "4px"} direction="column" flex={type === "featured" ? "initial" : 1}>
       <Heading
         color="heading-navy-fg"
         variant={type === "featured" ? "h2" : "h4"}
@@ -146,7 +157,7 @@ const Footer = ({
     }
   };
   return (
-    <Flex p={type === "featured" ? "14px 0" : 6}>
+    <Flex p={type === "featured" ? "16px 0" : "0 24px 24px 24px"}>
       <HStack>
         <Icon as={renderPostTypeIcon()} />
 

@@ -19,6 +19,7 @@ export const NavbarHeading = ({
       pl="16px"
       mb="16px"
       pt={pt}
+      fontWeight={600}
     >
       {children}
     </Heading>

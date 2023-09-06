@@ -12,8 +12,8 @@ import {
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { ReactMarkdownProps } from "react-markdown/lib/complex-types";
 import CodeHighlight from "@ui/CodeHighlight/CodeHighlight";
-import remarkGfm from 'remark-gfm'
-import '../style/table.css'
+import remarkGfm from "remark-gfm";
+import "../style/table.css";
 interface Props {
   readonly body: string;
 }
@@ -24,6 +24,21 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
+          h1: (props) => (
+            <>
+              {/* <Spacer
+                height="140px"
+                id={`toc-${slugify(props.children.join(" "))}`}
+              /> */}
+              <Heading
+                id={`toc-${slugify(props.children.join(" "))}`}
+                color="heading-navy-fg"
+                variant="h1"
+                marginBottom="16px"
+                {...props}
+              />
+            </>
+          ),
           h2: (props) => (
             <>
               {/* <Spacer
@@ -33,8 +48,9 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
               <Heading
                 id={`toc-${slugify(props.children.join(" "))}`}
                 color="heading-navy-fg"
-                variant="h3"
-                marginBottom="16px"
+                variant="h2"
+                marginTop="20px"
+                marginBottom="4px"
                 {...props}
               />
             </>
@@ -47,7 +63,8 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
               /> */}
               <Heading
                 color="heading-navy-fg"
-                marginBottom="16px"
+                marginTop="20px"
+                marginBottom="4px"
                 id={`toc-${slugify(props.children.join(" "))}`}
                 variant="h3"
                 {...props}
@@ -58,19 +75,13 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
             <Heading color="heading-navy-fg" variant="h4" {...props} />
           ),
           h5: (props) => (
-            <Heading color="heading-navy-fg" variant="h4" {...props} />
+            <Heading color="heading-navy-fg" variant="h5" {...props} />
           ),
           h6: (props) => (
             <Heading color="heading-navy-fg" variant="h6" {...props} />
           ),
           p: (props) => (
-            <Text
-            pt={2}
-            pb={4}
-            lineHeight="32px"
-            variant="body"
-            {...props}
-          />
+            <Text pt={1} pb={3} lineHeight="32px" variant="body" {...props} />
           ),
           ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
@@ -79,23 +90,34 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
           a: (props) => <Link variant="standard" {...props} />,
           pre: (props) => {
             // @ts-ignore
-            if(props.node.children[0]?.tagName === 'code'){
-
+            if (props.node.children[0]?.tagName === "code") {
               //@ts-ignore
-              const codeProps = props.children[0]?.props as (undefined | Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLPreElement>, HTMLPreElement>, "ref"> & ReactMarkdownProps)
+              const codeProps = props.children[0]?.props as
+                | undefined
+                | (Omit<
+                    React.DetailedHTMLProps<
+                      React.HTMLAttributes<HTMLPreElement>,
+                      HTMLPreElement
+                    >,
+                    "ref"
+                  > &
+                    ReactMarkdownProps);
 
-              const code = typeof codeProps?.children?.[0] === 'string' ? codeProps?.children?.[0]: ''
-              const language = codeProps?.className?.split("-")?.[1]
+              const code =
+                typeof codeProps?.children?.[0] === "string"
+                  ? codeProps?.children?.[0]
+                  : "";
+              const language = codeProps?.className?.split("-")?.[1];
 
-              if(!code){
-                return <pre {...props}>{props.children}</pre>
+              if (!code) {
+                return <pre {...props}>{props.children}</pre>;
               }
-              
-              return <CodeHighlight language={language} code={code} />
-            }else {
-              return <pre {...props}>{props.children}</pre>
+
+              return <CodeHighlight language={language} code={code} />;
+            } else {
+              return <pre {...props}>{props.children}</pre>;
             }
-          }
+          },
         }}
       >
         {body}

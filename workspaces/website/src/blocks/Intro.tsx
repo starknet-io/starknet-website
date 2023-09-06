@@ -2,19 +2,7 @@ import { Heading } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
-const texts = [
-  "Welcome to",
-  "へようこそ",
-  "Bienvenue à",
-  "ברוכים הבאים ל",
-  "مرحبا بك في",
-  "欢迎来到",
-  "歡迎來到",
-  "Grüezi tso",
-  "Bienvenida a",
-  "Servus zu",
-];
-
+const texts = ["scaling", "innovation", "security", "UX"];
 
 export const Intro = () => {
   const [index, setIndex] = useState(0);
@@ -39,13 +27,19 @@ export const Intro = () => {
     <Heading
       aria-label={texts[index]}
       ref={ref}
-      variant="h2"
+      variant="h1hero"
+      as="span"
       mt="8"
-      fontWeight="bold"
-      height={{ base: "1.2em" }}
-      fontSize={{ base: "39px", md: "55px", xl: "80px" }}
-      fontFamily="InterVariable, Tajawal, Noto Sans Hebrew, Noto Sans JP, Noto Sans TC, Noto Sans SC"
-      color="heading-navy-fg"
+      height={{ base: "1.4em" }}
+      sx={{
+        background:
+          "linear-gradient(270deg, #F09280 1.91%, #E87888 38.19%, #D672EF 73.51%, #BCA1F3 95.51%)",
+        "background-clip": "text",
+        "-webkit-background-clip": "text",
+        "-webkit-text-fill-color": "transparent",
+        lineHeight: "120%",
+        fontWeight: 600,
+      }}
     />
   );
 };

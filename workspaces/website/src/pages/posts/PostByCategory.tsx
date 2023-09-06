@@ -2,11 +2,12 @@ import { PageLayout } from "@ui/Layout/PageLayout";
 import { Tag } from "@ui/Tag/Tag";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+import { Breadcrumbs } from "@ui/Breadcrumbs/Breadcrumbs";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import moment from "moment";
 import { Block } from "src/blocks/Block";
 import { Post } from "@starknet-io/cms-data/src/posts";
-import '@ui/CodeHighlight/code-highlight-init'
+import "@ui/CodeHighlight/code-highlight-init";
 
 import {
   Container,
@@ -16,17 +17,14 @@ import {
   Divider,
   Spacer,
   Badge,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  HStack,
-  Link,
+  Icon,
 } from "@chakra-ui/react";
 
 import { TableOfContents } from "src/pages/(components)/TableOfContents/TableOfContents";
 import { Category } from "@starknet-io/cms-data/src/categories";
 import { Topic } from "@starknet-io/cms-data/src/topics";
 import { blocksToTOC } from "../(components)/TableOfContents/blocksToTOC";
+import { FiBookOpen, FiHeadphones, FiTv } from "react-icons/fi";
 
 type PostByCategoryProps = {
   post: Post;
@@ -41,106 +39,119 @@ export default function PostByCategory({
   topics,
 }: PostByCategoryProps) {
   let videoId = post.post_type === "video" ? post.video?.id : undefined;
+  const renderPostTypeIcon = () => {
+    switch (post.post_type) {
+      case "article":
+        return FiBookOpen;
+      case "audio":
+        return FiHeadphones;
+      case "video":
+        return FiTv;
+
+      default:
+        return FiBookOpen;
+    }
+  };
   return (
     <PageLayout
       breadcrumbs={
-        <Breadcrumb separator="/">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}/posts`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              Blog
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              as={Link}
-              href={`/${locale}/posts/${category?.slug}`}
-              fontSize="sm"
-              noOfLines={1}
-            >
-              {category?.name}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink fontSize="sm" noOfLines={1}>
-              {post.title}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
+        <Breadcrumbs
+          collapseOnMobile={true}
+          locale="en"
+          items={[
+            {
+              link: `/${locale}/posts`,
+              label: "Blog",
+            },
+            {
+              link: `/${locale}/posts/${category?.slug}`,
+              label: category?.name ?? "",
+            },
+            {
+              link: "",
+              label: post.title,
+            },
+          ]}
+        />
       }
-      pageLastUpdated={`Page last updated ${moment(
-        post?.gitlog?.date
-      ).fromNow()}`}
       main={
-        <Container maxWidth="846px">
+        <Container
+          maxWidth="796px"
+          sx={{
+            p: 0,
+            paddingInlineStart: "0 !important",
+            paddingInlineEnd: "0 !important",
+          }}
+          m={0}
+        >
           {post.post_type !== "video" ? (
-            <Img
-              mb="32px"
-              borderRadius={"8px"}
-              src={post.image}
-              alt={post.title}
-            />
+            <Img borderRadius={"8px"} src={post.image} alt={post.title} />
           ) : null}
 
-          <Box mb={"16px"}>
+          <Box my="24px">
             <Badge variant="stark_at_home" textTransform="capitalize">
               {post.post_type}
             </Badge>
           </Box>
-          <Heading variant="h2" color="heading-navy-fg" fontWeight="extrabold">
+          <Heading variant="h1" as="h1" color="heading-navy-fg">
             {post.title}
           </Heading>
           <Flex mt="16px">
-            <HStack>
-              <Text fontSize="sm" color="muted">
-                {moment(post.published_date).format("MMM DD,YYYY")} ·
+            <Flex
+              width="100%"
+              direction="row"
+              alignItems="center"
+              pb="16px"
+              justifyContent="space-between"
+            >
+              <Flex direction="row" alignItems="center" gap="4px">
+                <Icon as={renderPostTypeIcon()} mr="4px" />
+                <Text fontSize="sm" color="muted">
+                  {moment(post.published_date).format("MMM DD,YYYY")} ·
+                </Text>
+                <Text fontSize="sm" color="muted">
+                  {post.timeToConsume}
+                </Text>
+              </Flex>
+              <Text variant="cardBody" top="1px" pos="relative">
+                {`Page last updated ${moment(post?.gitlog?.date).fromNow()}`}
               </Text>
-              <Text fontSize="sm" color="muted">
-                {post.timeToConsume}
-              </Text>
-            </HStack>
+            </Flex>
             <Spacer />
           </Flex>
           <Divider mt="8px" mb="24px" />
           {post.post_type === "video" ? (
             <Flex mb={!post.blocks?.length ? "32px" : 0} direction="column">
               <YoutubePlayer videoId={videoId} />
-              {!post.blocks?.length && <Text
-                pt={2}
-                pb={4}
-                lineHeight="32px"
-                variant="body"
-              >{post.short_desc}</Text>}
+              {!post.blocks?.length && (
+                <Text pt={2} pb={4} lineHeight="32px" variant="body">
+                  {post.short_desc}
+                </Text>
+              )}
             </Flex>
           ) : null}
           <Flex direction="column" gap="32px">
             {post.blocks?.map((block, i) => (
-              <Block
-                key={i}
-                block={block}
-                locale={locale}
-              />
+              <Block key={i} block={block} locale={locale} />
             ))}
           </Flex>
           <Spacer height="32px" />
           <Divider />
-          <Flex direction="row" gap="8px" mt="64px">
+          <Flex direction="row" gap="8px" py="24px">
             {post.topic?.map((topic, i) => (
-              <Tag key={i} capitalize={false}> {topics.find((t) => t.id === topic)?.name} </Tag>
+              <Box
+                key={i}
+                sx={{
+                  borderRadius: "999px",
+                  border: "1px solid",
+                  borderColor: "border.card.value",
+                  color: "content.accent.value",
+                  p: "0 12px",
+                }}
+              >
+                {" "}
+                {topics.find((t) => t.id === topic)?.name}{" "}
+              </Box>
             ))}
           </Flex>
         </Container>

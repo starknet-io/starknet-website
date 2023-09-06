@@ -70,7 +70,7 @@ export interface Props extends IconButtonProps {
 };
 
 export const IconButton = forwardRef<HTMLButtonElement, Props>(({ href, toId, size, ...rest }, ref) => {
-  const paddingValue = size === "small" ? "0" : "11px";
+  const paddingValue = size === "small" ? "0" : "sm";
   const minWidthValue = size === "small" ? "auto" : "2.5rem";
   const handleOnClick = () => {
     if (!toId) {

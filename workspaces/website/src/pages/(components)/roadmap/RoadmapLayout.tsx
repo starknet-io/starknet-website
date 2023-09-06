@@ -1,10 +1,11 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { ReactNode } from "react";
 import { useBoolean } from "react-use";
 import RoadmapSubscribeForm from "./RoadmapSubscribeForm";
 import { Roadmap } from "@starknet-io/cms-data/src/settings/roadmap";
+import { LandingConent } from "@ui/HeroImage/LandingConent";
 
 type RoadmapLayoutProps = {
   children: ReactNode;
@@ -14,57 +15,33 @@ type RoadmapLayoutProps = {
 };
 export default function RoadmapLayout({
   children,
-  mode,
-  locale,
-  roadmapSettings
+  roadmapSettings,
 }: RoadmapLayoutProps) {
   const [isOpen, setIsOpen] = useBoolean(false);
   return (
     <>
       <PageLayout
+        maxW="none"
+        // contentMaxW="none"
+        sx={{
+          px: "0",
+        }}
         main={
-          <Container>
-            {roadmapSettings?.show_hero_banner && <HeroImage
-              title={roadmapSettings?.hero_title}
-              description={roadmapSettings?.hero_description}
-              variant="roadmap"
-              {...roadmapSettings?.show_hero_cta && { buttonText: roadmapSettings?.hero_cta_copy} }
-              onButtonClick={() => setIsOpen(true)}
-            />}
+          <Box pos="relative">
+            {roadmapSettings?.show_hero_banner && (
+              <HeroImage
+                title={roadmapSettings?.hero_title}
+                description={roadmapSettings?.hero_description}
+                {...(roadmapSettings?.show_hero_cta && {
+                  buttonText: roadmapSettings?.hero_cta_copy,
+                })}
+                onButtonClick={() => setIsOpen(true)}
+                image="/assets/ecosystem/roadmap.svg"
+              />
+            )}
             <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Box my="56px"></Box>
-            {/* <Flex
-              as="ul"
-              sx={{ overflowX: "auto" }}
-              gap="24px"
-              borderBottomWidth="1px"
-              borderColor="tabs-main-br"
-              width="100%"
-              my="56px"
-            >
-              <Box>
-                <Button
-                  variant="category"
-                  as={Link}
-                  isActive={mode === "ANNOUNCEMENTS"}
-                  href={`/${locale}/announcements`}
-                >
-                  Announcements
-                </Button>
-              </Box>
-              <Box>
-                <Button
-                  variant="category"
-                  as={Link}
-                  isActive={mode === "ROADMAP"}
-                  href={`/${locale}/roadmap`}
-                >
-                  Roadmap
-                </Button>
-              </Box>
-            </Flex> */}
-            {children}
-          </Container>
+            <LandingConent>{children}</LandingConent>
+          </Box>
         }
       />
     </>

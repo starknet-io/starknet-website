@@ -1,10 +1,13 @@
-import { Box, Container, Flex, Spacer, Stack } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import { useLocalStorage } from "react-use";
+import {
+  Box,
+  Container,
+  ContainerProps,
+  LayoutProps,
+  Stack,
+} from "@chakra-ui/react";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
-import { Text } from "@ui/Typography/Text";
-import { SummitPromo } from "./SummitPromo";
 import React from "react";
+import { SummitPromo } from "./SummitPromo";
 
 type Props = {
   leftAside?: React.ReactNode;
@@ -15,32 +18,44 @@ type Props = {
   breadcrumbs?: React.ReactNode;
   pageLastUpdated?: string | null;
   sectionHeaderTitle?: string | undefined;
+  sectionHeaderBorder?: boolean;
   sectionHeaderDescription?: string | undefined;
   sectionHeaderBottomContent?: React.ReactNode;
   maxW?: string;
-  contentMaxW?: string;
+  contentMaxW?: LayoutProps["maxW"];
+  sx?: ContainerProps["sx"];
+  withMarginTop?: boolean;
 };
 
 export const PageLayout = (props: Props) => {
   return (
-    <Container py="0" pb="16" flex="1" maxW={props.maxW ? props.maxW : "1344px"}>
-      <Flex py="4" direction={{ base: "column", lg: "row" }}>
-        <Box>{props.breadcrumbs}</Box>
-        <Spacer />
-        <Box>
-          <Text variant="cardBody" top="1px" pos="relative">
-            {props.pageLastUpdated}
-          </Text>
-        </Box>
-      </Flex>
+    <Container
+      py="0"
+      px="32px"
+      flex="1"
+      maxW={props.maxW ? props.maxW : "contentMaxW.xl"}
+      overflowX="clip"
+      overflowY="visible"
+      mt={
+        props.withMarginTop
+          ? {
+              base: "page.block-gap.base",
+              md: "page.block-gap.md",
+              lg: "page.block-gap.lg",
+            }
+          : undefined
+      }
+      sx={props.sx}
+    >
+      {props.breadcrumbs}
       {/* page layout */}
       <Stack
         direction={{ base: "column", lg: "row" }}
         spacing={{ base: "12", lg: "100px" }}
         flex="1"
-        pt={{ base: 2, lg: 10 }}
+        pt={{ base: 2, lg: 0 }}
         // bg="yellow"
-        maxWidth={props.contentMaxW ? props.contentMaxW : ""}
+        maxWidth={props.contentMaxW || ""}
         margin={props.contentMaxW ? "0 auto" : "0"}
       >
         {props.leftAside && (
@@ -48,29 +63,28 @@ export const PageLayout = (props: Props) => {
             as="aside"
             order={{ base: "2", lg: "0" }}
             role="complementary"
-            width={{ base: "full", md: "213px" }}
+            width={{ base: "full", md: "200px" }}
+            minWidth={{ base: "full", md: "200px" }}
             alignSelf="start"
-            // position={{ base: "unset", lg: "sticky" }}
             top="36"
           >
             {props.leftAside}
           </Box>
         )}
-
-        <Box
-          as="main"
-          role="main"
-          width="full"
-          mt="0 !important"
-          minW='0px'
-        >
+        <Box as="main" role="main" width="full" mt="0 !important" minW="0px">
           <Box minH="lg">
             {props.sectionHeaderTitle && (
-              <SectionHeader
-                title={props.sectionHeaderTitle}
-                description={props.sectionHeaderDescription}
-                bottomContent={props.sectionHeaderBottomContent}
-              />
+              <Box>
+                <SectionHeader
+                  title={props.sectionHeaderTitle}
+                  description={props.sectionHeaderDescription}
+                  bottomContent={props.sectionHeaderBottomContent}
+                  maxW="none"
+                  hasBorderBottom={props.sectionHeaderBorder}
+                  withMarginBottom={true}
+                  pageLastUpdated={props.pageLastUpdated}
+                />
+              </Box>
             )}
             {props.main}
           </Box>

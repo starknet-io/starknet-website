@@ -24,58 +24,66 @@ import {
 import { translateFile } from "./crowdin";
 
 const createRoadmapDetails = async () => {
-  await fs.mkdir(`public/data/roadmap-details`, {recursive: true});
+  await fs.mkdir(`public/data/roadmap-details`, { recursive: true });
   for (const locale of locales) {
     const roadmapPosts: RoadmapDetails[] = [];
-    const filesPath = path.join("public/data/roadmap-posts", locale)
+    const filesPath = path.join("public/data/roadmap-posts", locale);
     const filesInDir = await fs.readdir(filesPath);
 
     const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
 
     for (const fileName of jsonFilesInDir) {
       const fileData = await fs.readFile(
-        path.join(
-          process.cwd(),
-          "public/data/roadmap-posts",
-          locale,
-          fileName
-        ),
+        path.join(process.cwd(), "public/data/roadmap-posts", locale, fileName),
         "utf8"
       );
 
-      const { blocks, gitlog, sourceFilepath, objectID, ...roadmapDetails }: RoadmapPost = JSON.parse(fileData.toString());
+      const {
+        blocks,
+        gitlog,
+        sourceFilepath,
+        objectID,
+        ...roadmapDetails
+      }: RoadmapPost = JSON.parse(fileData.toString());
       roadmapPosts.push(roadmapDetails);
     }
-    await write(path.join("public/data/roadmap-details", `${locale}.json`), roadmapPosts);
+    await write(
+      path.join("public/data/roadmap-details", `${locale}.json`),
+      roadmapPosts
+    );
   }
-}
+};
 
 const createAnnouncementDetails = async () => {
-  await fs.mkdir(`public/data/announcements-details`, {recursive: true});
+  await fs.mkdir(`public/data/announcements-details`, { recursive: true });
   for (const locale of locales) {
     const roadmapPosts: AnnouncementDetails[] = [];
-    const filesPath = path.join("public/data/announcements", locale)
+    const filesPath = path.join("public/data/announcements", locale);
     const filesInDir = await fs.readdir(filesPath);
 
     const jsonFilesInDir = filesInDir.filter((file) => file.endsWith(".json"));
 
     for (const fileName of jsonFilesInDir) {
       const fileData = await fs.readFile(
-        path.join(
-          process.cwd(),
-          "public/data/announcements",
-          locale,
-          fileName
-        ),
+        path.join(process.cwd(), "public/data/announcements", locale, fileName),
         "utf8"
       );
 
-      const { blocks, gitlog, sourceFilepath, objectID, ...roadmapDetails }: AnnouncementsPost = JSON.parse(fileData.toString());
+      const {
+        blocks,
+        gitlog,
+        sourceFilepath,
+        objectID,
+        ...roadmapDetails
+      }: AnnouncementsPost = JSON.parse(fileData.toString());
       roadmapPosts.push(roadmapDetails);
     }
-    await write(path.join("public/data/announcements-details", `${locale}.json`), roadmapPosts);
+    await write(
+      path.join("public/data/announcements-details", `${locale}.json`),
+      roadmapPosts
+    );
   }
-}
+};
 
 const createSharedData = async () => {
   await fs.mkdir(`public/data/shared-data`, { recursive: true });
@@ -90,16 +98,16 @@ const createSharedData = async () => {
   ];
 
   for (const locale of locales) {
-    const seo: Record<string, any> = {}
+    const seo: Record<string, any> = {};
 
     for (const fileName of seoFiles) {
       const fileData = await fs.readFile(
         path.join(process.cwd(), `public/data/seo/${fileName}/${locale}.json`),
         "utf8"
       );
-      
+
       const fileDataParsed = JSON.parse(fileData.toString());
-      seo[fileName] = fileDataParsed
+      seo[fileName] = fileDataParsed;
     }
 
     const mainMenuData = await fs.readFile(
@@ -116,12 +124,72 @@ const createSharedData = async () => {
       seo,
       mainMenu: JSON.parse(mainMenuData.toString()),
       alerts: JSON.parse(alertsData.toString()),
-    }
+    };
 
     await write(
       path.join("public/data/shared-data", `${locale}.json`),
       sharedData
     );
+  }
+};
+
+const createSocialMediaData = async () => {
+  try {
+    const twPath = path.join(
+      process.cwd(),
+      "_social-media",
+      "twitter" + ".json"
+    );
+    const twitterRes = await fs.readFile(twPath, "utf8");
+
+    const discordRes = await fs.readFile(
+      path.join(process.cwd(), "_social-media", "discord" + ".json"),
+      "utf8"
+    );
+
+    const twitterData = JSON.parse(twitterRes);
+    const discordData = JSON.parse(discordRes);
+
+    const twitter = {
+      id: twitterData.id,
+      name: twitterData.screen_name,
+      followersCount: twitterData.followers_count,
+    };
+
+    const discord = {
+      id: discordData.id,
+      name: discordData.guild.name,
+      followersCount: discordData.approximate_member_count,
+    };
+
+    await fs.mkdir(`public/data/social-media`, { recursive: true });
+    await write(path.join("public/data/social-media", "data.json"), {
+      twitter,
+      discord,
+    });
+  } catch (error) {
+    try {
+      await fs.readFile(
+        path.join(process.cwd(), "public/data/social-media/data.json"),
+        "utf8"
+      );
+    } catch (e) {
+      const staticData = {
+        discord: {
+          name: "Starknet",
+          followersCount: 177000,
+        },
+        twitter: {
+          name: "Starknet",
+          followersCount: 172000,
+        },
+      };
+      await fs.mkdir(`public/data/social-media`, { recursive: true });
+      await write(
+        path.join("public/data/social-media", "data.json"),
+        staticData
+      );
+    }
   }
 };
 
@@ -148,7 +216,6 @@ for (const simpleData of simpleDataTypes) {
 }
 
 const simpleFiles = [
-  await getSimpleFiles("settings", "wallets"),
   await getSimpleFiles("settings", "redirects"),
   await getSimpleFiles("settings", "alert"),
   await getSimpleFiles("settings", "permissions"),
@@ -224,9 +291,9 @@ for (const data of roadmapPosts.filenameMap.values()) {
 
 for (const data of announcements.filenameMap.values()) {
   await write(
-  `public/data/announcements/${data.locale}/${data.slug}.json`,
-  data
-);
+    `public/data/announcements/${data.locale}/${data.slug}.json`,
+    data
+  );
 }
 
 for (const locale of locales) {
@@ -276,6 +343,7 @@ for (const locale of locales) {
 const redirects = await yaml("_data/settings/redirects.yml");
 
 await write(`workspaces/website/redirects.json`, redirects);
-await createRoadmapDetails()
-await createAnnouncementDetails()
-await createSharedData()
+await createRoadmapDetails();
+await createAnnouncementDetails();
+await createSharedData();
+await createSocialMediaData();

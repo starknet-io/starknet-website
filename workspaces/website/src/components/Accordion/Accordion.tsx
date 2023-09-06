@@ -32,20 +32,27 @@ const navigation = definePartsStyle({
 
 const page = definePartsStyle({
   root: {
-    bg: "card-bg",
-    borderRadius: "16px",
-    borderWidth: "1px",
-    borderColor: "card-br",
+    bg: "surface.card",
+    borderBottomWidth: "1px",
+    borderColor: "border.divider",
     overflow: "hidden",
   },
   panel: {
     border: "0px",
     size: "12px",
-    paddingLeft: "64px!important",
-    paddingTop: "0px!important",
+    marginTop: "0px !important",
+    paddingY: "0px",
+    paddingLeft: "32px",
+    paddingTop: "sm",
     fontSize: "16px!important",
+    p: {
+      padding: 0,
+    },
+    color: "content.support",
+    lineHeight: "28px",
   },
   container: {
+    padding: "xl",
     borderTopWidth: "0px!important",
     borderBottomWidth: "1px!important",
     borderColor: "card-br!important",
@@ -59,13 +66,12 @@ const page = definePartsStyle({
   },
 
   button: {
-    px: "24px",
-    py: "24px",
+    padding: 0,
     border: "0px",
-    fontWeight: "bold",
+    fontWeight: 600,
     fontSize: "16px",
-    gap: "16px",
-    color: "heading-navy-fg",
+    gap: "xs",
+    color: "content.accent.value",
     div: {
       fontSize: "16px",
     },

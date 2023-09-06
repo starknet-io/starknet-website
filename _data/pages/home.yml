@@ -4,166 +4,164 @@ template: landing
 breadcrumbs: false
 page_last_updated: false
 blocks:
+  - type: home_hero
+  # - type: promo_block
+  - type: stat_cards
   - type: group
     blocks:
-      - type: home_hero
-      - size: large
-        color: orange
-        variant: community_card
-        orientation: left
-        withIllustration: false
-        title: "Community led. "
-        type: image_icon_link_card
-        link:
-          custom_title: Get involved
-          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
-        description: "This website is a community powered guide to the Starknet
-          ecosystem.  "
-        columns: "4"
-  - type: group
+      - type: page_header
+        title: What do Ethereum + Starknet unlock?
+        description:
+          "Together the networks unlock Ethereum’s vision for a fairer and
+          more open internet. Decentralised financial systems. Digital assets.
+          Trustless systems. "
+        withMarginBottom: true
+        withInlinePadding: true
+      - type: large_cards
+        horizontal1:
+          img: /assets/unlimited-scale.png
+          title: Unlimited Scale
+          description: Starknet utilizes the power of STARK technology to ensure
+            computational integrity.   By validating off-chain transactions with
+            advanced math and cryptography, Starknet overcomes Ethereum’s
+            scalability limitations. Starknet is a Validity Rollup that provides
+            unlimited scale while retaining Ethereum’s security and
+            decentralization.
+          linkText: Discover Validity Rollups ->
+          linkUrl: "#"
+          darkImg: /assets/unlimited-scale-dark.png
+        vertical1:
+          img: /assets/superior-ux.png
+          title: Superior UX
+          description:
+            "Starknet offers efficient and user-friendly experiences by
+            employing Native Account Abstraction.   All accounts are smart
+            accounts: their behavior is determined by their developers rather
+            than at the protocol level. This means unparalleled flexibility in
+            account management. Developers can customize their applications
+            beyond protocol constraints to elevate user experience and
+            security.  "
+          linkText: Dive into Native AA ->
+          linkUrl: "#"
+          darkImg: /assets/superior-ux-dark.png
+        vertical2:
+          img: /assets/thriving-ecosystem.png
+          title: Thriving Ecosystem
+          description:
+            Starknet's meteoric rise as a blockchain ecosystem is fueled by its
+            passionate community of developers, users, and partners.   With the
+            Starknet Stack evolving at an astounding pace, this vibrant
+            collective has developed the most decentralized Rollup Stack,
+            enhancing network security, censorship resistance, resilience, and
+            transparency.
+          linkText: The growing Starknet Stack ->
+          linkUrl: "#"
+          darkImg: /assets/thriving-ecosystem-dark.png
+        horizontal2:
+          img: /assets/creativity-unleased.png
+          title: Creativity Unleashed
+          description: Starknet devs are empowered to code solutions that make a
+            difference.   Cairo, Starknet’s native smart contract language,
+            allows developers to push the boundaries of their applications by
+            allowing them to code any kind of business logic.   Building with
+            Cairo, developers can let their vision reach its full potential on
+            Starknet.
+          linkText: Build with Cairo ->
+          linkUrl: "#"
+          darkImg: /assets/creativity-unleased-dark.png
+  - heading: "Start building "
+    description_variant: body
     blocks:
-      - size: large
-        color: orange
-        variant: large_card
-        orientation: left
-        withIllustration: false
-        title: What is Starknet?
-        icon: /assets/illustration-how-it-works.png
-        type: image_icon_link_card
-        link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: What is Starknet?
-        description: Starknet is a decentralized layer-2 network that enables Ethereum
-          to scale securely and dapps to achieve unlimited scale for
-          transactions and computation.
-        columns: "4"
-      - size: large
-        color: orange
-        variant: large_card
-        orientation: right
-        withIllustration: false
-        title: How does Starknet scale Ethereum?
-        icon: /assets/illustration-scaling.png
-        type: image_icon_link_card
-        link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: How does it work
-        description: 'Starknet uses math and cryptography to securely scale Ethereum. It
-          operates as a Validity-rollup (or ZK-rollup): it "bundles" many
-          transactions and "rolls" them to Ethereum as a single transaction.'
-        columns: "4"
-  - type: flex_layout
-    heading_variant: h3
-    base: 1
-    md: 2
-    lg: 3
-    heading: "Start building "
-    blocks:
-      - type: image_icon_link_card
-        color: blue-default
-        title: "Developer documentation "
-        description: Read the official Starknet documentation to build your first
+      - type: icon_link_card
+        img: /assets/build-tutorials.svg
+        title: Read the Docs
+        description:
+          Read the official Starknet documentation to build your first
           contracts and dapps.
-        icon: /assets/docs.svg
-        link:
-          custom_external_link: https://docs.starknet.io/
-          custom_title: View docs
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: "Developer tutorials "
-        description: Learn from Starknet's community of developers and builders.
-        icon: /assets/tutorials.svg
-        link:
-          custom_internal_link: /tutorials/
-          custom_title: "View tutorials "
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: Tools & resources
-        description: Find libraries, editor plugins and developer tools to help you
+        linkText: View ->
+        linkUrl: https://docs.starknet.io/
+        color: red
+      - type: icon_link_card
+        img: /assets/build_read_the_docs.svg
+        title: Read the Starknet Book
+        description:
+          Developed by the Starknet community, the Starknet book teaches
+          Cairo programming and Starknet development. Start reading and conquer
+          the Ethereum world.
+        linkText: View ->
+        linkUrl: https://book.starknet.io/
+        color: green
+      - type: icon_link_card
+        img: /assets/build_tools_resources.svg
+        title: Set-up a Local Environment
+        description:
+          Learn how to get your dev environment up and running so you can
           start building.
-        icon: /assets/1.svg
-        link:
-          page: 4c40a102-df5b-4f39-98fb-774d6841da9e
-          custom_title: View resources
-        withIllustration: true
+        linkText: View ->
+        linkUrl: https://docs.starknet.io/documentation/getting_started/environment_setup/
+        color: blue
+    heading_variant: h2
+    base: 1
+    md: 3
+    type: flex_layout
+    lg: 3
+    description:
+      "Together the networks unlock Ethereum’s vision for a fairer and
+      more open internet.  Decentralised financial systems. Digital assets.
+      Trustless systems. "
+  - type: ecosystem_block
+    title: Projects exploring new ideas
+    ctaText: Check out all the projects ->
+    ctaUrl: /ecosystem/dapps/
+  - type: social_block
+    title: Join the biggest community of developers, enthusiasts and explorers
+    description:
+      Join a community of developers, enthusiasts and explorers, working
+      together to build Starknet and scale Ethereum.
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
+    description_variant: sm
+    blocks:
+      - type: icon_link_card
+        title: Starknet blog & media
+        description:
+          Stay up to date with the latest thinking on all things Starknet via
+          articles, podcasts, and videos.
+        linkText: Learn more ->
+        linkUrl: "/posts"
+        img: /assets/blogandmedia.svg
+      - type: icon_link_card
+        title: Community Hub
+        description: Explore opportunities with teams  building in the ecosystem.
+        linkText: Learn more ->
+        linkUrl: "/community"
+        img: /assets/community-2-.svg
+        dark_img: /assets/community-dark.svg
     base: 1
     md: 2
-    lg: 3
-    heading: Use Starknet
-    blocks:
-      - type: image_icon_link_card
-        color: blue-default
-        title: Discover dapps
-        description: Explore dapps in the Starknet ecosystem – from Defi to NFTs and gaming.
-        icon: /assets/dapps.svg
-        link:
-          custom_title: Explore
-          page: 0dc3d102-0936-433e-9219-f46e3087e396
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: "Find a wallet "
-        description: Learn about wallets on Starknet and discover the options available.
-        icon: /assets/wallet.svg
-        link:
-          custom_title: View wallets
-          page: d202009a-3541-4366-b664-36ef2e492aa3
-        withIllustration: true
-      - type: image_icon_link_card
-        color: blue-default
-        title: Deposit & withdraw funds
-        description: Learn how to deposit and withdraw funds for use in the Starknet
-          ecosystem.
-        icon: /assets/deposit-withdraw.svg
-        link:
-          custom_title: View options
-          page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
-        withIllustration: true
+    lg: ""
   - type: community_events
+    variant: home
   - type: flex_layout
-    heading_variant: h3
+    heading_variant: h2
     blocks:
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: orange
-        title: "View all questions "
-        link:
-          custom_title: View
-          page: b5689d3a-348b-4ccb-b787-520b64c55e41
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: null
-        title: What is STARK?
-        link:
-          custom_title: View
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: orange
-        title: What is Cairo?
-        link:
-          custom_title: View
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
-      - type: image_icon_link_card
-        variant: icon_link_card
-        size: large
-        withIllustration: false
-        color: orange
-        title: "What is Starknet? "
-        link:
-          custom_title: View
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-    base: 2
-    md: 4
+      - type: pattern_card
+        title: View all questions
+        pattern: viewallquestions
+        linkUrl: /learn/frequently-asked-questions
+      - type: pattern_card
+        title: What is Starknet?
+        linkUrl: /learn/what-is-starknet
+        pattern: whatisstarknet
+      - type: pattern_card
+        title: How does Starknet work?
+        pattern: howdoesitwork
+        linkUrl: "/education"
+      - type: pattern_card
+        title: What is Starkex?
+        pattern: whatisstarkex
+        linkUrl: "https://starkware.co/starkex/"
+    base: 1
+    md: 2
     lg: 4
     heading: FAQs

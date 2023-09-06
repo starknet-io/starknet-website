@@ -11,6 +11,7 @@ export const passToClient = [
   "routeParams",
   "pageProps",
   "documentProps",
+  "navConfig",
   "locale",
   "alerts",
   "mainMenu",

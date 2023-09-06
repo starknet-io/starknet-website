@@ -50,3 +50,10 @@
 }
 
 /* End of "Scrubber" library overrides */
+
+.vjs-poster img {
+  object-fit: cover;
+}
+.video-js {
+  background-color: transparent !important;
+}

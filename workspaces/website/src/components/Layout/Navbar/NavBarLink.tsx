@@ -9,8 +9,7 @@ export const NavBarLink = (props: Props) => {
       fontSize="sm"
       px={4}
       height="36px"
-      bg="navbar-link-bg"
-      color="navbar-link-fg"
+      color="fg-default-light"
       borderRadius={18}
       display="flex"
       alignItems="center"
@@ -18,22 +17,16 @@ export const NavBarLink = (props: Props) => {
       textDecoration="none"
       mt="0px!important"
       gap={1}
+      fontWeight={400}
       _hover={{
-        color: "navbar-link-hover-fg",
-        bg: "navbar-link-hover-bg",
+        color: "fg-default-hover",
       }}
       _active={{
-        color: "navbar-link-active-fg",
+        color: "fg-default-hover",
         svg: {
-          color: "navbar-link-active-fg",
+          color: "fg-default-hover",
         },
       }}
-      // _visited={{
-      //   color: "navbar-link-active-fg",
-      //   svg: {
-      //     color: "navbar-link-active-fg",
-      //   },
-      // }}
       {...props}
       href={props.href}
     >

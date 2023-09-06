@@ -10,7 +10,7 @@ type AccordionRootProps = {
 
 export const AccordionRoot = ({ heading, children }: AccordionRootProps) => {
   return (
-    <Box mb="80px">
+    <Box>
       {heading && (
         <Heading
           variant="h3"

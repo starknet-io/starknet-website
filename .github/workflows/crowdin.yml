@@ -1,6 +1,8 @@
 name: Crowdin Action
 
 on:
+  schedule:
+    - cron: "0 1 * * *" # every day at 1am UTC
   workflow_dispatch:
 
 concurrency: crowdin-dev
@@ -19,6 +21,22 @@ jobs:
         with:
           node-version: 18
           cache: yarn
+
+      - name: Set date environment variables
+        run: |
+          echo "YMDHM=$(date +%Y-%m-%d-%H-%M)" >> $GITHUB_ENV
+          echo "YMDH=$(date +%Y-%m-%d-%H)" >> $GITHUB_ENV
+          echo "YMD=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+          echo "YM=$(date +%Y-%m)" >> $GITHUB_ENV
+
+      - name: Set Crowdin Source Folder
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/production" ]]; then
+            echo "CW_SOURCE=dev" >> $GITHUB_ENV
+          else
+            echo "CW_SOURCE=test" >> $GITHUB_ENV
+          fi
+          
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -41,19 +59,25 @@ jobs:
         uses: actions/cache/restore@v3
         with:
           path: _crowdin
-          key: crowdin-cache-${{ github.ref_name }}
+          key: crowdin-cache-${{ env.CW_SOURCE }}-${{ env.YMDHM }}
+          restore-keys: |
+            crowdin-cache-${{ env.CW_SOURCE }}-${{ env.YMDHM }}
+            crowdin-cache-${{ env.CW_SOURCE }}-${{ env.YMDH }}
+            crowdin-cache-${{ env.CW_SOURCE }}-${{ env.YMD }}
+            crowdin-cache-${{ env.CW_SOURCE }}-${{ env.YM }}
+            crowdin-cache-${{ env.CW_SOURCE }}
 
       - name: Run pre-Crowdin script for file preparation
         run: yarn workspace @starknet-io/cms-scripts pre-crowdin
 
       - name: Upload source files to Crowdin project
-        run: yarn crowdin upload -b ${{ github.ref_name }}
+        run: yarn crowdin upload -b ${{ env.CW_SOURCE }}
         env:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Download approved translations from Crowdin
-        run: yarn crowdin download -b ${{ github.ref_name }} --export-only-approved --skip-untranslated-strings
+        run: yarn crowdin download -b ${{ env.CW_SOURCE }} --export-only-approved --skip-untranslated-strings
         env:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
@@ -62,4 +86,4 @@ jobs:
         uses: actions/cache/save@v3
         with:
           path: _crowdin
-          key: crowdin-cache-${{ github.ref_name }}
+          key: crowdin-cache-${{ env.CW_SOURCE }}-${{ env.YMDHM }}

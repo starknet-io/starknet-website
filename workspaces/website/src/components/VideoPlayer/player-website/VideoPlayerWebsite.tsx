@@ -1,4 +1,3 @@
-
 import { Box } from "@chakra-ui/react";
 import React, { CSSProperties, useCallback, useState } from "react";
 import { useUpdateEffect } from "react-use";
@@ -14,11 +13,13 @@ type VideoPlayerWebsiteProps = {
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
+  playlistOnBottom?: boolean;
 };
 export function VideoPlayerWebsite({
   chapters,
   initialActiveChapter,
   onChapterChange,
+  playlistOnBottom,
 }: VideoPlayerWebsiteProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
@@ -74,12 +75,12 @@ export function VideoPlayerWebsite({
     <Box
       sx={{
         display: "grid",
-        gap: "23px",
         position: "relative",
       }}
+      gap="2xl"
       gridTemplateColumns={{
         base: "1fr",
-        lg: "1fr auto",
+        lg: playlistOnBottom ? "1fr" : "2fr 1fr",
       }}
     >
       <VideoPlayerCore
@@ -105,6 +106,7 @@ export function VideoPlayerWebsite({
         chapters={chapters}
         currentChapter={currentChapter}
         onChapterSelect={onChapterSelect}
+        playlistOnBottom={playlistOnBottom}
       />
     </Box>
   );

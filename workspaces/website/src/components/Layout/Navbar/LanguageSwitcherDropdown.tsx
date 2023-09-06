@@ -9,6 +9,7 @@ import {
   Spacer,
   Box,
   StackDivider,
+  ColorModeProvider,
 } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
@@ -26,6 +27,7 @@ type Props = {
   callToAction: string;
   children?: React.ReactNode;
   selectedLocale: string;
+  globalColorMode: "light" | "dark";
 };
 
 export const LanguageSwitcherDropdown = ({
@@ -35,6 +37,7 @@ export const LanguageSwitcherDropdown = ({
   callToAction,
   children,
   selectedLocale,
+  globalColorMode,
 }: Props) => (
   <Popover
     trigger="hover"
@@ -45,79 +48,84 @@ export const LanguageSwitcherDropdown = ({
     offset={[0, 24]}
   >
     {({ isOpen }) => (
-      <Box sx={{marginInlineStart: "12px !important"}}>
+      <Box sx={{ marginInlineStart: "xs" }}>
         <PopoverTrigger>
           <Button
             size="sm"
             leftIcon={<Icon as={HiOutlineGlobeAlt} fontSize="xl" />}
-            variant="icon"
+            variant="ghost"
             rightIcon={<PopoverIcon isOpen={isOpen} />}
             textTransform="uppercase"
-            sx={{marginInlineStart: "0 !important"}}
+            sx={{ marginInlineStart: "0 !important" }}
+            padding="sm"
+            minH="44px"
+            maxH="44px"
           >
             {selectedLocale}
           </Button>
         </PopoverTrigger>
-        <PopoverContent
-          bg="navbar-dropdown-bg"
-          border={0}
-          py="48px"
-          px="32px"
-          right="32px"
-          borderRadius="16px"
-          width={{ base: "sm", md: "3xl" }}
-        >
-          <HStack
-            spacing={8}
-            alignItems="start"
-            divider={
-              <StackDivider
-                borderColor="divider-bg"
-                top="0"
-                position="relative"
-                height="435px"
-              />
-            }
+        <ColorModeProvider value={globalColorMode}>
+          <PopoverContent
+            bg="navbar-dropdown-bg"
+            border={0}
+            py="48px"
+            px="32px"
+            right="32px"
+            borderRadius="16px"
+            width={{ base: "sm", md: "3xl" }}
           >
-            <VStack spacing={2} alignItems="start">
-              <Heading
-                pl={10}
-                color="heading-navy-fg"
-                variant="h6"
-                mb={3}
-                textTransform="uppercase"
-              >
-                {title}
-              </Heading>
-              {children}
-              <Spacer height={3} />
-              <Box pl={10}>
-                {/* <Button variant="outline">See all languages</Button> */}
-              </Box>
-            </VStack>
+            <HStack
+              spacing={8}
+              alignItems="start"
+              divider={
+                <StackDivider
+                  borderColor="divider-bg"
+                  top="0"
+                  position="relative"
+                  height="435px"
+                />
+              }
+            >
+              <VStack spacing={2} alignItems="start">
+                <Heading
+                  pl={10}
+                  color="heading-navy-fg"
+                  variant="h6"
+                  mb={3}
+                  textTransform="uppercase"
+                >
+                  {title}
+                </Heading>
+                {children}
+                <Spacer height={3} />
+                <Box pl={10}>
+                  {/* <Button variant="outline">See all languages</Button> */}
+                </Box>
+              </VStack>
 
-            <Stack spacing="1" pb={4}>
-              <Heading
-                color="heading-navy-fg"
-                variant="h6"
-                textTransform="uppercase"
-                mb={5}
-              >
-                {subtitle}
-              </Heading>
+              <Stack spacing="1" pb={4}>
+                <Heading
+                  color="heading-navy-fg"
+                  variant="h6"
+                  textTransform="uppercase"
+                  mb={5}
+                >
+                  {subtitle}
+                </Heading>
 
-              <Text variant="cardBody">{description}</Text>
-              <Box height="32px" />
-              <Button
-                as="a"
-                variant="outline"
-                href="/en/community/language-support"
-              >
-                {callToAction}
-              </Button>
-            </Stack>
-          </HStack>
-        </PopoverContent>
+                <Text color="content.default.value">{description}</Text>
+                <Box height="32px" />
+                <Button
+                  as="a"
+                  variant="outline"
+                  href="/en/community/language-support"
+                >
+                  {callToAction}
+                </Button>
+              </Stack>
+            </HStack>
+          </PopoverContent>
+        </ColorModeProvider>
       </Box>
     )}
   </Popover>
