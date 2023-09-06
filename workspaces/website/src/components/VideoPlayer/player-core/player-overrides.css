@@ -53,8 +53,13 @@
 
 .vjs-poster img {
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .video-js .vjs-tech {
+  border-radius: 10px;
+}
+
+.video-js {
   border-radius: 10px;
 }
