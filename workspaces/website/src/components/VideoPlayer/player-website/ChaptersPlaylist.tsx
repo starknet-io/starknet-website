@@ -33,15 +33,23 @@ export default function ChaptersPlaylist({
       sx={{
         overflow: "scroll",
         maxHeight: height,
-        gap: "16px",
         cursor: "pointer",
       }}
-      display={{ base: "flex", lg: "grid" }}
+      gap={{
+        base: "40px",
+        lg: "lg",
+      }}
+      display="flex"
+      flexDirection={{ base: "row", lg: "column" }}
       maxH={{ base: "auto", lg: height }}
       flexWrap="nowrap"
     >
       {chapters.map((chapter) => {
         const isActive = chapter.id === currentChapter;
+        const textColor = isActive
+          ? "content.accent.value"
+          : "content.accent.disabled";
+
         return (
           <Box
             key={chapter.id}
@@ -49,25 +57,42 @@ export default function ChaptersPlaylist({
             onClick={() => onChapterSelect(chapter.id)}
             sx={{
               display: "flex",
-              gap: "16px",
               pointer: "cursor",
             }}
-            minW={{ base: "151px", lg: "auto" }}
-            flexDir={{ base: "column", lg: "row" }}
+            minW={{ base: "151px", md: "175px", lg: "auto" }}
+            maxW={{ base: "151px", md: "175px", lg: "none" }}
+            flexDirection={{ base: "column", lg: "row" }}
             flexWrap="nowrap"
-            padding={{ base: "0px 0px 2rem", lg: "0px 1rem 0px" }}
+            padding={{ base: "0px 0px 2rem 0px", lg: "0px 1rem 0px 0px" }}
             height="max-content"
+            gap="md"
+            _first={{
+              marginLeft: {
+                base: "auto",
+                lg: "0px",
+              },
+            }}
+            _last={{
+              marginRight: {
+                base: "auto",
+                lg: "0px",
+              },
+            }}
           >
             <Box
-              maxW={{ base: "151px", lg: "99px", xl: "151px" }}
-              height="min-content"
+              // height="min-content"
+              minW={{
+                base: "151px",
+                md: "175px",
+                lg: "151px",
+              }}
             >
               <Image
                 src={chapter.thumbnail}
                 width={{
                   base: "151px",
-                  lg: "99px",
-                  xl: "151px",
+                  md: "175px",
+                  lg: "151px",
                 }}
                 height="auto"
                 alt={chapter.title}
@@ -76,38 +101,39 @@ export default function ChaptersPlaylist({
                   borderRadius: "10px",
                 }}
                 aspectRatio="16/9"
+                objectFit="cover"
               />
             </Box>
-            <Box display="flex" flexDir="column" gap="4px">
+            <Box display="flex" flexDir="column" gap="base" color={textColor}>
               <Box
-                as="h5"
-                fontSize="sm"
-                fontWeight="bold"
-                color={isActive ? "heading-navy-fg" : "fg-muted"}
+                fontSize="12px"
+                fontWeight={500}
                 lineHeight="normal"
+                display="flex"
+                justifyContent="space-between"
               >
+                {chapter.subtitle}
+                <Box
+                  display={{
+                    base: "block",
+                    lg: "none",
+                  }}
+                >
+                  {chapter.durationTime}
+                </Box>
+              </Box>
+              <Box as="h5" fontSize="15px" fontWeight="600" lineHeight="21px">
                 {chapter.title}
               </Box>
               <Box
                 as="p"
                 fontSize="12px"
-                lineHeight="15px"
-                sx={{
-                  maxW: "200px",
-                  color: isActive ? "heading-navy-fg" : "fg-muted",
-                }}
-              >
-                {chapter.description}
-              </Box>
-              <Box
-                as="p"
-                fontSize="xs"
-                lineHeight={1}
-                sx={{
-                  color: isActive ? "heading-navy-fg" : "fg-muted",
-                }}
+                lineHeight="normal"
                 flex={1}
-                display="flex"
+                display={{
+                  base: "none",
+                  lg: "flex",
+                }}
                 alignItems="flex-end"
               >
                 {chapter.durationTime}

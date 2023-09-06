@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { CSSProperties } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
@@ -14,8 +14,8 @@ export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
     <Box
       sx={{
         position: "absolute",
-        bottom: "100px",
-        right: "100px",
+        bottom: "48px",
+        right: "48px",
         zIndex: 9999,
         gap: "30px",
         pointerEvents: isOpen ? "auto" : "none",
@@ -25,22 +25,7 @@ export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
       }}
     >
       <Flex gap="20px">
-        <Button
-          variant="unstyled"
-          onClick={onPlayNextChapter}
-          color="#FFFFFF"
-          bg="rgba(0, 0, 0, 0.85)"
-          border="1px solid #313131"
-          boxShadow="0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1)"
-          borderRadius="40px"
-          display="flex"
-          gap="12px"
-          alignItems="center"
-          fontSize="sm"
-          fontWeight="500"
-          p="12px"
-          pr="20px"
-        >
+        <Button variant="education" size="auto" onClick={onPlayNextChapter}>
           {isOpen && (
             <CountdownCircleTimer
               isPlaying={isOpen}
@@ -53,10 +38,9 @@ export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
             />
           )}
           <Text>Next Chapter</Text>
-          <img
+          <Image
             src="/assets/video/arrow_right.svg"
-            width={20}
-            height={20}
+            boxSize="20px"
             alt="Right Arrow"
           />
         </Button>

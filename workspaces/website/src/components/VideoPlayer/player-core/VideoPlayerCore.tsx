@@ -270,7 +270,7 @@ export function VideoPlayerCore({
         renderChapter({
           chapter,
           episode: chapterIndex + 1,
-          isVisible: isControlVisible,
+          isVisible: isControlVisible || isBigPlayBtnVisible,
         })}
 
       {chapter && (

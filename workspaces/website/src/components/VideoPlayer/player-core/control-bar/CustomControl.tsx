@@ -103,9 +103,9 @@ export default function CustomControl(props: CustomControlProps) {
       <Box
         sx={{
           display: "flex",
-          gap: "4px",
-          px: "20px",
-          py: "5px",
+          gap: "20px",
+          px: "24px",
+          py: "8px",
           bg: "rgba(0, 0, 0, .75)",
           backdropBlur: "sm",
           alignItems: "center",
@@ -143,7 +143,7 @@ export default function CustomControl(props: CustomControlProps) {
           sx={{
             display: "flex",
             flex: 1,
-            gap: "4px",
+            gap: "20px",
             justifyContent: "flex-end",
           }}
         >

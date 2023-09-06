@@ -4,40 +4,31 @@ import { HiArrowRight } from "react-icons/hi2";
 type ChapterCTAProps = {
   label: string;
   link: string;
-  borderRadius: string;
   fontSize: string;
-  paddingY: string;
-  paddingX: string;
 };
 
-export const ChapterCTA = ({
-  label,
-  link,
-  borderRadius,
-  fontSize,
-  paddingY,
-  paddingX,
-}: ChapterCTAProps) => {
+export const ChapterCTA = ({ label, link, fontSize }: ChapterCTAProps) => {
   return (
     <Button
+      style={{
+        //@ts-ignore
+        "--chapter-fontSize": fontSize,
+      }}
       as="a"
-      variant="solid"
-      borderRadius={borderRadius}
-      fontSize={fontSize}
+      variant="education"
+      size="auto"
+      fontSize={{
+        base: "clamp(6px, var(--chapter-fontSize), 14px)",
+        sm: "clamp(8px, var(--chapter-fontSize), 14px)",
+        md: "clamp(11px, var(--chapter-fontSize), 14px)",
+      }}
       href={link}
-      lineHeight={1}
       target="_blank"
       isExternal
-      padding={0}
-      paddingY={paddingY}
-      paddingInline={paddingX}
-      rightIcon={<HiArrowRight />}
-      display="flex"
-      alignItems="center"
       justifyContent="space-between"
-      minW="auto"
     >
       {label}
+      <HiArrowRight />
     </Button>
   );
 };

@@ -1,4 +1,3 @@
-
 import { Box } from "@chakra-ui/react";
 import React, { CSSProperties, useCallback, useState } from "react";
 import { useUpdateEffect } from "react-use";
@@ -74,12 +73,15 @@ export function VideoPlayerWebsite({
     <Box
       sx={{
         display: "grid",
-        gap: "23px",
         position: "relative",
+      }}
+      gap={{
+        base: "2xl",
+        lg: "21px",
       }}
       gridTemplateColumns={{
         base: "1fr",
-        lg: "1fr auto",
+        lg: "2fr 1fr",
       }}
     >
       <VideoPlayerCore

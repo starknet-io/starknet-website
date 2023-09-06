@@ -28,11 +28,10 @@ export const FinalChapterLeftCTA = ({
   width,
   isVisible,
 }: FinalChapterLeftCTAProps) => {
-  const { top, leftCTAStart, gap, borderRadius, fontSize, paddingY, paddingX } =
-    useChapterCTAStyles({
-      height,
-      width,
-    });
+  const { top, leftCTAStart, gap, fontSize } = useChapterCTAStyles({
+    height,
+    width,
+  });
 
   return (
     <Box
@@ -48,15 +47,7 @@ export const FinalChapterLeftCTA = ({
       transition="opacity 0.5s ease-in-out"
     >
       {buttons.map(({ label, link }) => (
-        <ChapterCTA
-          key={label}
-          label={label}
-          link={link}
-          borderRadius={borderRadius}
-          fontSize={fontSize}
-          paddingY={paddingY}
-          paddingX={paddingX}
-        />
+        <ChapterCTA key={label} label={label} link={link} fontSize={fontSize} />
       ))}
     </Box>
   );
