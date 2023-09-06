@@ -2,7 +2,7 @@ id: 1cf8d129-c305-4440-ac49-ed07e18e7f74
 title: Short & fixed block intervals
 availability: Q1 2024
 version: ddad74c8-290d-4a1b-9560-d4a2465615e5
-stage: backlog
+stage: building-next
 blocks:
   - type: markdown
     body: >-
