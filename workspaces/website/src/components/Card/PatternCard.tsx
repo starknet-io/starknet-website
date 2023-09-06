@@ -3,13 +3,16 @@ import { Heading } from "@ui/Typography/Heading";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { CardGradientBorder } from "./components/CardGradientBorder";
 import { PatternCardBlock as PatternCardBlockType } from "@starknet-io/cms-data/src/pages";
+import { useCMSLink } from "src/utils/useCMSLink";
 
 interface PatternCardProps extends PatternCardBlockType {}
 export const PatternCard = ({
   title,
-  link,
+  linkUrl,
   pattern = "viewallquestions",
 }: PatternCardProps) => {
+  const { isAbsolute, href } = useCMSLink(linkUrl);
+
   return (
     <CardGradientBorder display="inline-block">
       <Box
@@ -69,7 +72,8 @@ export const PatternCard = ({
             {title}
           </Heading>
           <Link
-            href={link}
+            isExternal={isAbsolute}
+            href={href}
             display="flex"
             gap="base"
             p="base"

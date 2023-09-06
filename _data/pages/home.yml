@@ -11,7 +11,8 @@ blocks:
     blocks:
       - type: page_header
         title: What do Ethereum + Starknet unlock?
-        description: "Together the networks unlock Ethereum’s vision for a fairer and
+        description:
+          "Together the networks unlock Ethereum’s vision for a fairer and
           more open internet. Decentralised financial systems. Digital assets.
           Trustless systems. "
         withMarginBottom: true
@@ -32,7 +33,8 @@ blocks:
         vertical1:
           img: /assets/superior-ux.png
           title: Superior UX
-          description: "Starknet offers efficient and user-friendly experiences by
+          description:
+            "Starknet offers efficient and user-friendly experiences by
             employing Native Account Abstraction.   All accounts are smart
             accounts: their behavior is determined by their developers rather
             than at the protocol level. This means unparalleled flexibility in
@@ -45,7 +47,8 @@ blocks:
         vertical2:
           img: /assets/thriving-ecosystem.png
           title: Thriving Ecosystem
-          description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
+          description:
+            Starknet's meteoric rise as a blockchain ecosystem is fueled by its
             passionate community of developers, users, and partners.   With the
             Starknet Stack evolving at an astounding pace, this vibrant
             collective has developed the most decentralized Rollup Stack,
@@ -72,43 +75,48 @@ blocks:
       - type: icon_link_card
         img: /assets/build-tutorials.svg
         title: Read the Docs
-        description: Read the official Starknet documentation to build your first
+        description:
+          Read the official Starknet documentation to build your first
           contracts and dapps.
         linkText: View ->
-        linkUrl: /tutorials/
+        linkUrl: https://docs.starknet.io/
         color: red
       - type: icon_link_card
         img: /assets/build_read_the_docs.svg
         title: Read the Starknet Book
-        description: Developed by the Starknet community, the Starknet book teaches
+        description:
+          Developed by the Starknet community, the Starknet book teaches
           Cairo programming and Starknet development. Start reading and conquer
           the Ethereum world.
         linkText: View ->
-        linkUrl: /documentation/
+        linkUrl: https://book.starknet.io/
         color: green
       - type: icon_link_card
         img: /assets/build_tools_resources.svg
         title: Set-up a Local Environment
-        description: Learn how to get your dev environment up and running so you can
+        description:
+          Learn how to get your dev environment up and running so you can
           start building.
         linkText: View ->
-        linkUrl: /developers/tools-and-resources/
+        linkUrl: https://docs.starknet.io/documentation/getting_started/environment_setup/
         color: blue
     heading_variant: h2
     base: 1
     md: 3
     type: flex_layout
     lg: 3
-    description: "Together the networks unlock Ethereum’s vision for a fairer and
+    description:
+      "Together the networks unlock Ethereum’s vision for a fairer and
       more open internet.  Decentralised financial systems. Digital assets.
       Trustless systems. "
   - type: ecosystem_block
     title: Projects exploring new ideas
     ctaText: Check out all the projects ->
-    ctakUrl: /ecosystem/dapps/
+    ctaUrl: /ecosystem/dapps/
   - type: social_block
     title: Join the biggest community of developers, enthusiasts and explorers
-    description: Join a community of developers, enthusiasts and explorers, working
+    description:
+      Join a community of developers, enthusiasts and explorers, working
       together to build Starknet and scale Ethereum.
   - type: flex_layout
     heading_variant: h2
@@ -116,16 +124,17 @@ blocks:
     blocks:
       - type: icon_link_card
         title: Starknet blog & media
-        description: Stay up to date with the latest thinking on all things Starknet via
+        description:
+          Stay up to date with the latest thinking on all things Starknet via
           articles, podcasts, and videos.
         linkText: Learn more ->
-        linkUrl: "#"
+        linkUrl: "/posts"
         img: /assets/blogandmedia.svg
       - type: icon_link_card
         title: Community Hub
         description: Explore opportunities with teams  building in the ecosystem.
         linkText: Learn more ->
-        linkUrl: "#"
+        linkUrl: "/community"
         img: /assets/community-2-.svg
         dark_img: /assets/community-dark.svg
     base: 1
@@ -139,19 +148,19 @@ blocks:
       - type: pattern_card
         title: View all questions
         pattern: viewallquestions
-        link: /learn/frequently-asked-questions
+        linkUrl: /learn/frequently-asked-questions
       - type: pattern_card
         title: What is Starknet?
-        link: /learn/what-is-starknet
+        linkUrl: /learn/what-is-starknet
         pattern: whatisstarknet
       - type: pattern_card
         title: How does Starknet work?
         pattern: howdoesitwork
-        link: "#"
+        linkUrl: "/education"
       - type: pattern_card
         title: What is Starkex?
         pattern: whatisstarkex
-        link: "#"
+        linkUrl: "https://starkware.co/starkex/"
     base: 1
     md: 2
     lg: 4

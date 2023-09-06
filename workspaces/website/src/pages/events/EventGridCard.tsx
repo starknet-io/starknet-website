@@ -38,7 +38,7 @@ const EventsGridCard = ({ event: hit }: EventCardProps) => {
         >
           {hit.name}
         </Heading>
-        <CardLink variant="iconLink" href="">
+        <CardLink variant="iconLink" href={hit.url} isExternal>
           Learn more{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

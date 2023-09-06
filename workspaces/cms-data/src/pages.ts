@@ -117,7 +117,7 @@ export interface StatCardsBlock {
 export interface PatternCardBlock {
   readonly type: "pattern_card";
   readonly title: string;
-  readonly link: string;
+  readonly linkUrl: string;
   readonly pattern:
     | "viewallquestions"
     | "howdoesitwork"

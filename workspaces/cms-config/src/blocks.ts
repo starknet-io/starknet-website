@@ -456,7 +456,7 @@ export const blocks = [
         crowdin: true,
       },
       {
-        name: "link",
+        name: "linkUrl",
         widget: "string",
         label: "Link url",
         crowdin: true,
@@ -554,7 +554,7 @@ export const blocks = [
         crowdin: true,
       },
       {
-        name: "ctakUrl",
+        name: "ctaUrl",
         label: "CTA url",
         widget: "string",
         crowdin: true,

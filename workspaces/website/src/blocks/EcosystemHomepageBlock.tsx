@@ -5,6 +5,7 @@ import "./OutlineCardsStyle.css";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { EcosystemBlock as EcosystemBlockType } from "@starknet-io/cms-data/src/pages";
+import { useCMSLink } from "src/utils/useCMSLink";
 
 type Project = {
   name: string;
@@ -83,6 +84,7 @@ interface EcosystemBlockProps extends EcosystemBlockType {}
 
 const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
   const [projects, setProjects] = useState<Project[]>([]);
+  const { isAbsolute, href } = useCMSLink(ctaUrl);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -127,7 +129,7 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
           backgroundImage: "url(/assets/outline-bg.svg)",
           backgroundSize: "130%",
           backgroundPosition: "center",
-          marginTop: { base: 0, lg: -100 }
+          marginTop: { base: 0, lg: -100 },
         }}
       >
         <Box
@@ -161,7 +163,8 @@ const EcosystemBlock = ({ title, ctaText, ctaUrl }: EcosystemBlockProps) => {
             variant="outline"
             mt="140px"
             bg="brand-secondary-comet-green-3"
-            href={ctaUrl}
+            href={href}
+            isExternal={isAbsolute}
           >
             {ctaText}
           </Button>

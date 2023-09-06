@@ -2,6 +2,28 @@ import { Grid, Box } from "@chakra-ui/react";
 import { StatCardsBlock as StatCardsBlockType } from "@starknet-io/cms-data/src/pages";
 import { StatsCard } from "@ui/Card/StatsCard";
 
+const statData = [
+  {
+    title: "TPS",
+    stat: "2.76",
+    tooltip: "TPS",
+  },
+  {
+    title: "Cumulative new addresses ",
+    stat: "67,505",
+    tooltip: "Cumulative new addresses ",
+  },
+  {
+    title: "Average block time",
+    stat: "2min",
+    tooltip: "Average block time",
+  },
+  {
+    title: "Value locked in bridge",
+    stat: "70.4M+",
+    tooltip: "Value locked in bridge",
+  },
+];
 export const StatCardsBlock = (_: StatCardsBlockType) => {
   return (
     <Box
@@ -46,14 +68,14 @@ export const StatCardsBlock = (_: StatCardsBlockType) => {
           width="100%"
           m="0 auto"
         >
-          <StatsCard title="TPS" stat="2.76" />
-          <StatsCard
-            title="Cumulative new addresses "
-            stat="67,505"
-            tooltip="I am a very long tooltip, longer than the box itself"
-          />
-          <StatsCard title="Average block time" stat="2min" />
-          <StatsCard title="Value locked in bridge" stat="70.4M+" />
+          {statData.map((stat) => (
+            <StatsCard
+              key={stat.title}
+              title={stat.title}
+              tooltip={stat.tooltip}
+              stat={stat.stat}
+            />
+          ))}
         </Grid>
       </Box>
     </Box>

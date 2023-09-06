@@ -3,11 +3,13 @@ import { IconLinkCardBlock as IconLinkCardBlockType } from "@starknet-io/cms-dat
 import { Card, CardBody, CardLink } from "@ui/Card/Card";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+import { useCMSLink } from "src/utils/useCMSLink";
 
 interface Props extends IconLinkCardBlockType, Omit<BoxProps, "color"> {}
 
 export const IconLinkCardBlock = (props: Props) => {
   const { img, dark_img, title, description, linkText, linkUrl, color } = props;
+  const { href, isAbsolute } = useCMSLink(linkUrl || "");
   const renderColorValues = (color: string) => {
     switch (color) {
       case "red":
@@ -34,7 +36,7 @@ export const IconLinkCardBlock = (props: Props) => {
   };
   const colorValues = renderColorValues(color as string);
   const { colorMode, toggleColorMode } = useColorMode();
-  const IconSrc = colorMode === 'light' ? img : dark_img ? dark_img : img;
+  const IconSrc = colorMode === "light" ? img : dark_img ? dark_img : img;
   return (
     <Card
       variant="iconLink"
@@ -58,7 +60,14 @@ export const IconLinkCardBlock = (props: Props) => {
       >
         <Flex direction="column" justifyContent="space-between" height="100%">
           <Box>
-            {img ? <img color="content.accent.value" src={IconSrc} style={{maxWidth: "60px", width: "100%", height: "60px"}}  alt="" /> : null}
+            {img ? (
+              <img
+                color="content.accent.value"
+                src={IconSrc}
+                style={{ maxWidth: "60px", width: "100%", height: "60px" }}
+                alt=""
+              />
+            ) : null}
             <Heading
               variant="h3"
               mt="12px"
@@ -76,8 +85,9 @@ export const IconLinkCardBlock = (props: Props) => {
           {linkText ? (
             <CardLink
               variant="iconLink"
-              href={linkUrl as string}
+              href={href}
               paddingTop="xl !important"
+              isExternal={isAbsolute}
             >
               {linkText}
             </CardLink>
