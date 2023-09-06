@@ -1,15 +1,21 @@
+import { Box, Heading } from "@chakra-ui/react";
 import { DocumentProps } from "src/renderer/types";
 
 export function Page() {
   return (
-    <div
-      style={{
-        marginLeft: "2rem",
-        maxWidth: 700,
+    <Box
+      mx="auto"
+      w="100%"
+      maxWidth={700}
+      px={{
+        base: "page.left-right.base",
+        md: "page.left-right.md",
       }}
     >
       <div>
-        <h2>Explanation</h2>
+        <Heading variant="h2" mt="2xl" mb="xl">
+          Video player in iframe
+        </Heading>
         <div
           style={{
             position: "relative",
@@ -30,9 +36,8 @@ export function Page() {
             }}
           />
         </div>
-        <h2>End</h2>
       </div>
-    </div>
+    </Box>
   );
 }
 
