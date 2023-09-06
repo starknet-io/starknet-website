@@ -62,4 +62,5 @@
 
 .video-js {
   border-radius: 10px;
+  background-color: transparent !important;
 }
