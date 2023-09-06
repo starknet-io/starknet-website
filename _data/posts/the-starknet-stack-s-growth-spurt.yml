@@ -134,7 +134,7 @@ blocks:
 
           | Prover           | [Stone](https://www.starknet.io/en/posts/engineering/opensourcing-the-battletested-stoneprover) | StarkWare     | In production      |
 
-          | Prover           | [LC Prover](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)         | LambdaClass   | In development     |
+          | Prover           | [Platinum](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)﻿         | LambdaClass   | In development     |
 
           | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                          | Andrew Milson | In development     |
 
