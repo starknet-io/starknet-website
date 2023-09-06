@@ -13,11 +13,13 @@ type VideoPlayerWebsiteProps = {
   initialActiveChapter: string;
   onChapterChange?: (currentChapter: string) => void;
   embeddable?: boolean;
+  playlistOnBottom?: boolean;
 };
 export function VideoPlayerWebsite({
   chapters,
   initialActiveChapter,
   onChapterChange,
+  playlistOnBottom,
 }: VideoPlayerWebsiteProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
@@ -81,7 +83,7 @@ export function VideoPlayerWebsite({
       }}
       gridTemplateColumns={{
         base: "1fr",
-        lg: "2fr 1fr",
+        lg: playlistOnBottom ? "1fr" : "2fr 1fr",
       }}
     >
       <VideoPlayerCore
@@ -107,6 +109,7 @@ export function VideoPlayerWebsite({
         chapters={chapters}
         currentChapter={currentChapter}
         onChapterSelect={onChapterSelect}
+        playlistOnBottom={playlistOnBottom}
       />
     </Box>
   );

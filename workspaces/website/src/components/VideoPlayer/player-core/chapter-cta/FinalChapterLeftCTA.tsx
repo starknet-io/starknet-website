@@ -11,10 +11,10 @@ const buttons = [
     label: "Starknet book",
     link: "https://book.starknet.io/",
   },
-  {
-    label: "Starknet basecamp",
-    link: "https://starknet.io/",
-  },
+  // {
+  //   label: "Starknet basecamp",
+  //   link: "https://starknet.io/",
+  // },
 ];
 
 type FinalChapterLeftCTAProps = {

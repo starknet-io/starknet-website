@@ -14,7 +14,7 @@ export default function ChapterAutoPlayModal(props: ChapterAutoPlayModalProps) {
     <Box
       sx={{
         position: "absolute",
-        bottom: "48px",
+        bottom: "72px",
         right: "48px",
         zIndex: 9999,
         gap: "30px",

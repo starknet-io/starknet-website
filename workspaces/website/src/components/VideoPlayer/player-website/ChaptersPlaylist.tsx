@@ -7,6 +7,7 @@ type ChaptersPlaylistProps = {
   chapters: Chapter[];
   currentChapter: string;
   onChapterSelect: (currentChapter: string) => void;
+  playlistOnBottom?: boolean;
 };
 
 export default function ChaptersPlaylist({
@@ -14,34 +15,32 @@ export default function ChaptersPlaylist({
   chapters,
   currentChapter,
   onChapterSelect,
+  playlistOnBottom,
 }: ChaptersPlaylistProps) {
-  const isMobile = useBreakpointValue({ base: true, lg: false });
-
-  useUpdateEffect(() => {
-    const chapterElement = document.getElementById(currentChapter);
-    if (chapterElement) {
-      chapterElement.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: isMobile ? "center" : "nearest",
-      });
-    }
-  }, [currentChapter, isMobile]);
+  // useUpdateEffect(() => {
+  //   const chapterElement = document.getElementById(currentChapter);
+  //   if (chapterElement) {
+  //     chapterElement.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "nearest",
+  //       inline: isMobile ? "center" : "nearest",
+  //     });
+  //   }
+  // }, [currentChapter, isMobile]);
 
   return (
     <Box
       sx={{
         overflow: "scroll",
-        maxHeight: height,
         cursor: "pointer",
       }}
       gap={{
         base: "40px",
-        lg: "lg",
+        lg: playlistOnBottom ? "40px" : "lg",
       }}
       display="flex"
-      flexDirection={{ base: "row", lg: "column" }}
-      maxH={{ base: "auto", lg: height }}
+      flexDirection={{ base: "row", lg: playlistOnBottom ? "row" : "column" }}
+      maxH={{ base: "auto", lg: playlistOnBottom ? "auto" : height }}
       flexWrap="nowrap"
     >
       {chapters.map((chapter) => {
@@ -59,9 +58,20 @@ export default function ChaptersPlaylist({
               display: "flex",
               pointer: "cursor",
             }}
-            minW={{ base: "151px", md: "175px", lg: "auto" }}
-            maxW={{ base: "151px", md: "175px", lg: "none" }}
-            flexDirection={{ base: "column", lg: "row" }}
+            minW={{
+              base: "151px",
+              md: "175px",
+              lg: playlistOnBottom ? "175px" : "auto",
+            }}
+            maxW={{
+              base: "151px",
+              md: "175px",
+              lg: playlistOnBottom ? "175px" : "none",
+            }}
+            flexDirection={{
+              base: "column",
+              lg: playlistOnBottom ? "column" : "row",
+            }}
             flexWrap="nowrap"
             padding={{ base: "0px 0px 2rem 0px", lg: "0px 1rem 0px 0px" }}
             height="max-content"
@@ -69,13 +79,13 @@ export default function ChaptersPlaylist({
             _first={{
               marginLeft: {
                 base: "auto",
-                lg: "0px",
+                lg: playlistOnBottom ? "auto" : "0px",
               },
             }}
             _last={{
               marginRight: {
                 base: "auto",
-                lg: "0px",
+                lg: playlistOnBottom ? "auto" : "0px",
               },
             }}
           >
@@ -84,7 +94,7 @@ export default function ChaptersPlaylist({
               minW={{
                 base: "151px",
                 md: "175px",
-                lg: "151px",
+                lg: playlistOnBottom ? "175px" : "151px",
               }}
             >
               <Image
@@ -92,7 +102,7 @@ export default function ChaptersPlaylist({
                 width={{
                   base: "151px",
                   md: "175px",
-                  lg: "151px",
+                  lg: playlistOnBottom ? "175px" : "151px",
                 }}
                 height="auto"
                 alt={chapter.title}
@@ -116,7 +126,7 @@ export default function ChaptersPlaylist({
                 <Box
                   display={{
                     base: "block",
-                    lg: "none",
+                    lg: playlistOnBottom ? "block" : "none",
                   }}
                 >
                   {chapter.durationTime}
@@ -132,7 +142,7 @@ export default function ChaptersPlaylist({
                 flex={1}
                 display={{
                   base: "none",
-                  lg: "flex",
+                  lg: playlistOnBottom ? "none" : "flex",
                 }}
                 alignItems="flex-end"
               >

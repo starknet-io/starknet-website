@@ -36,6 +36,11 @@ export default function ControlButton({
           outline: "none",
           boxShadow: "none",
         },
+        "& svg": {
+          width: "28px",
+          height: "28px",
+          boxSize: "28px",
+        },
       }}
     ></IconButton>
   );

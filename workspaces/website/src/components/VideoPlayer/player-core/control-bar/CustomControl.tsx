@@ -104,7 +104,7 @@ export default function CustomControl(props: CustomControlProps) {
         sx={{
           display: "flex",
           gap: "20px",
-          px: "24px",
+          px: "20px",
           py: "8px",
           bg: "rgba(0, 0, 0, .75)",
           backdropBlur: "sm",
