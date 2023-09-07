@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useLocalStorage } from "react-use";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
 import { Text } from "@ui/Typography/Text";
-import { SummitPromo } from "./SummitPromo";
+// import { SummitPromo } from "./SummitPromo";
 import React from "react";
 
 type Props = {
@@ -90,7 +90,7 @@ export const PageLayout = (props: Props) => {
           </Box>
         )}
       </Stack>
-      <SummitPromo />
+      {/* <SummitPromo /> */}
     </Container>
   );
 };
