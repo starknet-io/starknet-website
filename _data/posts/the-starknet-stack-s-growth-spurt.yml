@@ -110,33 +110,33 @@ blocks:
           The Starknet ecosystem aims to have multiple implementations of every single component in the Stack. Here is a taste of the different teams and the infrastructure they’re developing:
 
 
-          | Category         | Project                                                                                         | Entity        | Status             |
+          | Category         | Project                                                                                         | Entity        | Status             | Open-Source |
 
-          | ---------------- | ----------------------------------------------------------------------------------------------- | ------------- | ------------------ |
+          | ---------------- | ----------------------------------------------------------------------------------------------- | ------------- | ------------------ | ----------- |
 
-          | Full Node        | [Pathfinder](https://github.com/eqlabs/pathfinder)                                              | Equilibrium   | In production      |
+          | Full Node        | [Pathfinder](https://github.com/eqlabs/pathfinder)                                              | Equilibrium   | In production      | Yes         |
 
-          | Full Node        | [Juno](https://github.com/NethermindEth/juno)                                                   | Nethermind    | In production      |
+          | Full Node        | [Juno](https://github.com/NethermindEth/juno)                                                   | Nethermind    | In production      | Yes         |
 
-          | Full Node        | [Papyrus](https://github.com/starkware-libs/papyrus)                                            | StarkWare     | In development     |
+          | Full Node        | [Papyrus](https://github.com/starkware-libs/papyrus)                                            | StarkWare     | In development     | Yes         |
 
-          | Full Node        | [Deoxys](https://github.com/KasarLabs/deoxys)                                                   | KasarLabs     | In development     |
+          | Full Node        | [Deoxys](https://github.com/KasarLabs/deoxys)                                                   | KasarLabs     | In development     | Yes         |
 
-          | Execution Engine | [Blockifier](https://github.com/starkware-libs/blockifier)                                      | StarkWare     | In production      |
+          | Execution Engine | [Blockifier](https://github.com/starkware-libs/blockifier)                                      | StarkWare     | In production      | Yes         |
 
-          | Execution Engine | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                             | LambdaClass   | Soon in production |
+          | Execution Engine | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                             | LambdaClass   | Soon in production | Yes         |
 
-          | Sequencer        | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)               | StarkWare     | In production      |
+          | Sequencer        | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)               | StarkWare     | In production      | Yes         |
 
-          | Sequencer        | [Madara](https://github.com/keep-starknet-strange/madara)                                       | Community     | In development     |
+          | Sequencer        | [Madara](https://github.com/keep-starknet-strange/madara)                                       | Community     | In development     | Yes         |
 
-          | Sequencer        | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)                    | LambdaClass   | In development     |
+          | Sequencer        | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)                    | LambdaClass   | In development     | Yes         |
 
-          | Prover           | [Stone](https://www.starknet.io/en/posts/engineering/opensourcing-the-battletested-stoneprover) | StarkWare     | In production      |
+          | Prover           | [Stone](https://www.starknet.io/en/posts/engineering/opensourcing-the-battletested-stoneprover) | StarkWare     | In production      | Yes         |
 
-          | Prover           | [Platinum](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)﻿         | LambdaClass   | In development     |
+          | Prover           | [Platinum](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)﻿         | LambdaClass   | In development     | Yes         |
 
-          | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                          | Andrew Milson | In development     |
+          | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                          | Andrew Milson | In development     | Yes         |
 
 
           * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
