@@ -1,0 +1,54 @@
+id: d8d08b09-8ad6-4b1d-87dc-38a635ad4ea9
+post_type: video
+title: "Fireside Chat: Can STARKs Fix Bitcoin?"
+published_date: 2023-09-07T13:24:52.617Z
+video:
+  url: https://www.youtube.com/watch?v=QlUeYmUZIZg&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=28
+  id: QlUeYmUZIZg
+  data:
+    kind: youtube#video
+    etag: 4kBVC_-hF0XaXZ9uBiq-KUo0esI
+    id: QlUeYmUZIZg
+    snippet:
+      publishedAt: 2023-09-07T15:40:30Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Fireside chat: Can STARKs fix Bitcoin?"
+      description: Eric Wall & Udi Wertheimer
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/QlUeYmUZIZg/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/QlUeYmUZIZg/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/QlUeYmUZIZg/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/QlUeYmUZIZg/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/QlUeYmUZIZg/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Fireside chat: Can STARKs fix Bitcoin?"
+        description: Eric Wall & Udi Wertheimer
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT24M47S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_qlueymuzizg_maxres.png
+category: community-and-events
