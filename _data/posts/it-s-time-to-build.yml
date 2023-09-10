@@ -1,0 +1,61 @@
+id: 5f654e5a-3ae5-42d9-a4a0-63a1a9e9f0c2
+post_type: video
+title: It’s time to build
+published_date: 2023-09-10T10:57:46.329Z
+video:
+  url: https://www.youtube.com/watch?v=pXpMtxyTa0U&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=3
+  id: pXpMtxyTa0U
+  data:
+    kind: youtube#video
+    etag: vv76BihMXXASWXok0N36TGe7vJw
+    id: pXpMtxyTa0U
+    snippet:
+      publishedAt: 2023-09-06T09:22:22Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: It’s time to build | Itamar Lessuise
+      description: Starknet is gaining serious momentum, but there is still much to do
+        in terms of new use cases and mass adoption. Join Argent as they
+        announce plans to lay the foundation of construction on Starknet.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/pXpMtxyTa0U/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/pXpMtxyTa0U/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/pXpMtxyTa0U/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/pXpMtxyTa0U/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/pXpMtxyTa0U/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: It’s time to build | Itamar Lessuise
+        description: Starknet is gaining serious momentum, but there is still much to do
+          in terms of new use cases and mass adoption. Join Argent as they
+          announce plans to lay the foundation of construction on Starknet.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT16M19S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_pxpmtxyta0u_maxres.png
+category: community-and-events
+short_desc: Starknet is gaining serious momentum, but there is still much to do
+  in terms of new use cases and mass adoption. Join Argent as they announce
+  plans to lay the foundation of construction on Starknet.
