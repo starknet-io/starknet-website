@@ -1,0 +1,75 @@
+id: 7eec10d6-283f-4173-9d99-1a52e432b9ff
+post_type: video
+title: From Shadows to Light - Engineering Trust in the Carbon Market
+published_date: 2023-09-03T13:07:37.419Z
+video:
+  url: https://www.youtube.com/watch?v=xtOEDcV4Tcs&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=22
+  id: xtOEDcV4Tcs
+  data:
+    kind: youtube#video
+    etag: o7C0p7lIdwxvyQm7bLvAfumzdSg
+    id: xtOEDcV4Tcs
+    snippet:
+      publishedAt: 2023-09-03T17:16:17Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "From Shadows to Light: Engineering Trust in the Carbon Market |
+        Guillaume Leti"
+      description: The voluntary carbon market has long been plagued by integrity and
+        transparency issues. But what if technology could forge a new path
+        forward? In this conference, we delve into the revolutionary potential
+        of blockchain and AI for enhancing traceability and accountability in
+        Nature-based Solutions. Join us as we explore this fascinating
+        intersection of technology and sustainability, offering a fresh
+        perspective and tangible insights for the future of the ecosystem.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/xtOEDcV4Tcs/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/xtOEDcV4Tcs/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/xtOEDcV4Tcs/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/xtOEDcV4Tcs/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/xtOEDcV4Tcs/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "From Shadows to Light: Engineering Trust in the Carbon Market |
+          Guillaume Leti"
+        description: The voluntary carbon market has long been plagued by integrity and
+          transparency issues. But what if technology could forge a new path
+          forward? In this conference, we delve into the revolutionary potential
+          of blockchain and AI for enhancing traceability and accountability in
+          Nature-based Solutions. Join us as we explore this fascinating
+          intersection of technology and sustainability, offering a fresh
+          perspective and tangible insights for the future of the ecosystem.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT12M2S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_xtoedcv4tcs_maxres.png
+category: community-and-events
+short_desc: The voluntary carbon market has long been plagued by integrity and
+  transparency issues. But what if technology could forge a new path forward? In
+  this conference, we delve into the revolutionary potential of blockchain and
+  AI for enhancing traceability and accountability in Nature-based Solutions.
+  Join us as we explore this fascinating intersection of technology and
+  sustainability, offering a fresh perspective and tangible insights for the
+  future of the ecosystem.
