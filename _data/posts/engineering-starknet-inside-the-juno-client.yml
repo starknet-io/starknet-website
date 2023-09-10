@@ -1,0 +1,72 @@
+id: d4c9e1f1-9b54-4e77-b264-fda19d711490
+post_type: video
+title: Engineering Starknet - Inside the Juno Client
+published_date: 2023-09-03T12:35:40.360Z
+video:
+  url: https://www.youtube.com/watch?v=kh7f_Mvgpak&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=12
+  id: kh7f_Mvgpak
+  data:
+    kind: youtube#video
+    etag: jEH17mnIV1f_T_Cu02ZqcY0YkzU
+    id: kh7f_Mvgpak
+    snippet:
+      publishedAt: 2023-09-03T15:08:04Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Engineering Starknet: Inside the Juno Client | Josh Klopfenstein"
+      description: Juno is a robust Starknet client built to seamlessly integrate into
+        demanding production deployments, casual setups, and everything in
+        between. Backed by fine-tuned optimizations and rigorous testing, Juno
+        is prepared to lead the way on Starknet's path to decentralization. This
+        talk highlights the design decisions behind Juno's performance and
+        stability, and discusses how those features benefit Starknet users.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/kh7f_Mvgpak/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/kh7f_Mvgpak/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/kh7f_Mvgpak/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/kh7f_Mvgpak/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/kh7f_Mvgpak/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Engineering Starknet: Inside the Juno Client | Josh Klopfenstein"
+        description: Juno is a robust Starknet client built to seamlessly integrate into
+          demanding production deployments, casual setups, and everything in
+          between. Backed by fine-tuned optimizations and rigorous testing, Juno
+          is prepared to lead the way on Starknet's path to decentralization.
+          This talk highlights the design decisions behind Juno's performance
+          and stability, and discusses how those features benefit Starknet
+          users.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT15M20S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_kh7f_mvgpak_maxres.png
+category: community-and-events
+short_desc: >
+  Juno is a robust Starknet client built to seamlessly integrate into demanding
+  production deployments, casual setups, and everything in between. Backed by
+  fine-tuned optimizations and rigorous testing, Juno is prepared to lead the
+  way on Starknet's path to decentralization. This talk highlights the design
+  decisions behind Juno's performance and stability and discusses how those
+  features benefit Starknet users.
