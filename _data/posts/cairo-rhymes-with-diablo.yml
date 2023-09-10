@@ -1,0 +1,68 @@
+id: 735e65eb-2c21-45dc-98f0-37051e499e57
+post_type: video
+title: Cairo Rhymes with Diablo
+published_date: 2023-09-03T12:57:59.936Z
+video:
+  url: https://www.youtube.com/watch?v=iOu_ixGxh6w&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=18
+  id: iOu_ixGxh6w
+  data:
+    kind: youtube#video
+    etag: XjKeBnEGvBQLtpGwdtsoYrfFiMk
+    id: iOu_ixGxh6w
+    snippet:
+      publishedAt: 2023-09-03T16:38:04Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Cairo rhymes with Diablo | Sam Benyakoub
+      description: "Introducing Node Guardians: a public initiative designed for
+        intermediate to experienced Cairo developers and security researchers.
+        Engage with RPG-style coding challenges, test your abilities, and earn
+        unique 'soulbound' tokens as proof of your skill. No excuses not to own
+        Cairo now."
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/iOu_ixGxh6w/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/iOu_ixGxh6w/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/iOu_ixGxh6w/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/iOu_ixGxh6w/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/iOu_ixGxh6w/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Cairo rhymes with Diablo | Sam Benyakoub
+        description: "Introducing Node Guardians: a public initiative designed for
+          intermediate to experienced Cairo developers and security researchers.
+          Engage with RPG-style coding challenges, test your abilities, and earn
+          unique 'soulbound' tokens as proof of your skill. No excuses not to
+          own Cairo now."
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT11M2S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_iou_ixgxh6w_maxres.png
+category: community-and-events
+topic:
+  - cairo
+short_desc: "Introducing Node Guardians: a public initiative designed for
+  intermediate to experienced Cairo developers and security researchers. Engage
+  with RPG-style coding challenges, test your abilities, and earn unique
+  'soulbound' tokens as proof of your skill. No excuses not to own Cairo now."
