@@ -1,0 +1,77 @@
+id: cc8003a1-e5b4-44dd-9436-018feea3fb23
+post_type: video
+title: "Security track: Caracal - A new static analysis framework for Cairo"
+published_date: 2023-09-10T13:48:35.055Z
+video:
+  url: https://www.youtube.com/watch?v=lsS5jYP5lWw&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=34
+  id: lsS5jYP5lWw
+  data:
+    kind: youtube#video
+    etag: qbDOWzQXxHjOekmI8sCkz7M46dQ
+    id: lsS5jYP5lWw
+    snippet:
+      publishedAt: 2023-09-10T09:45:46Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Security track: Caracal - A new static analysis framework for Cairo |
+        Justin Jacob"
+      description: Justin is a blockchain security engineer at Trail of Bits. His
+        expertise includes Ethereum, Defi, Bridges, Starknet and zero-knowledge
+        proofs. At Trail of Bits, he contributes to security and tool
+        development. He is a regular contributor to Slither and Caracal, which
+        are static analysis tools for Solidity and Starknet. Justin holds a B.S
+        in Mathematics from the University of California Irvine and previously
+        researched dynamical systems and on the attractors of iterated function
+        systems.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/lsS5jYP5lWw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/lsS5jYP5lWw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/lsS5jYP5lWw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/lsS5jYP5lWw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/lsS5jYP5lWw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Security track: Caracal - A new static analysis framework for Cairo |
+          Justin Jacob"
+        description: Justin is a blockchain security engineer at Trail of Bits. His
+          expertise includes Ethereum, Defi, Bridges, Starknet and
+          zero-knowledge proofs. At Trail of Bits, he contributes to security
+          and tool development. He is a regular contributor to Slither and
+          Caracal, which are static analysis tools for Solidity and Starknet.
+          Justin holds a B.S in Mathematics from the University of California
+          Irvine and previously researched dynamical systems and on the
+          attractors of iterated function systems.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT24M3S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_lss5jyp5lww_maxres.png
+category: community-and-events
+short_desc: Justin is a blockchain security engineer at Trail of Bits. His
+  expertise includes Ethereum, Defi, Bridges, Starknet, and zero-knowledge
+  proofs. At Trail of Bits, he contributes to security and tool development. He
+  is a regular contributor to Slither and Caracal, which are static analysis
+  tools for Solidity and Starknet. Justin holds a B.S in Mathematics from the
+  University of California Irvine and previously researched dynamical systems
+  and the attractors of iterated function systems.
