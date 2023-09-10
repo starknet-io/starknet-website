@@ -1,0 +1,59 @@
+id: 99e2dc59-3876-4cd1-96d5-4f19042b08ae
+post_type: video
+title: Kakarot Roadmap - The Journey to Testnet and then Mainnet
+published_date: 2023-09-03T13:04:09.797Z
+video:
+  url: https://www.youtube.com/watch?v=oI2XiRgiFCo&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=21
+  id: oI2XiRgiFCo
+  data:
+    kind: youtube#video
+    etag: an3YZnG1GedATDkFFmNiFBWOysI
+    id: oI2XiRgiFCo
+    snippet:
+      publishedAt: 2023-09-03T17:04:59Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Kakarot Roadmap - The journey to Testnet and then Mainnet | Danilo Kim
+      description: We will update on our latest works, improvements and how we are
+        going towards the Testnet and Mainet release
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/oI2XiRgiFCo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/oI2XiRgiFCo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/oI2XiRgiFCo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/oI2XiRgiFCo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/oI2XiRgiFCo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Kakarot Roadmap - The journey to Testnet and then Mainnet | Danilo Kim
+        description: We will update on our latest works, improvements and how we are
+          going towards the Testnet and Mainet release
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT9M17S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_oi2xirgifco_maxres.png
+category: community-and-events
+short_desc: Danilo Kim, Co-founder and Ecosystem Leam of Kakarot, will update on
+  their latest works, improvements, and how they are going towards the Testnet
+  and Mainet release.
