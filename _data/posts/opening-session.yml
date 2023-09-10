@@ -1,0 +1,68 @@
+id: b17c5511-0c93-498f-8296-d9e2eda67499
+post_type: video
+title: Opening Session
+published_date: 2023-09-01T10:53:57.266Z
+video:
+  url: https://www.youtube.com/watch?v=qq6_GCZzxwk&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=2
+  id: qq6_GCZzxwk
+  data:
+    kind: youtube#video
+    etag: -JyRcNQPofO0q716vs2DzPyb-P4
+    id: qq6_GCZzxwk
+    snippet:
+      publishedAt: 2023-09-01T14:23:14Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Opening session
+      description: |-
+        Eli Ben-Sasson
+        Co-Founder & President
+        Starkware
+
+        Uri Kolodny
+        Co-Founder & CEO
+        Starkware
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/qq6_GCZzxwk/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/qq6_GCZzxwk/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/qq6_GCZzxwk/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/qq6_GCZzxwk/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/qq6_GCZzxwk/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Opening session
+        description: |-
+          Eli Ben-Sasson
+          Co-Founder & President
+          Starkware
+
+          Uri Kolodny
+          Co-Founder & CEO
+          Starkware
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT4M47S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_qq6_gczzxwk_maxres.png
+category: community-and-events
