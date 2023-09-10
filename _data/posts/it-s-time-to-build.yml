@@ -1,6 +1,6 @@
 id: 5f654e5a-3ae5-42d9-a4a0-63a1a9e9f0c2
 post_type: video
-title: It’s time to build
+title: It’s Time to Build
 published_date: 2023-09-10T10:57:46.329Z
 video:
   url: https://www.youtube.com/watch?v=pXpMtxyTa0U&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=3
@@ -10,12 +10,8 @@ video:
     etag: vv76BihMXXASWXok0N36TGe7vJw
     id: pXpMtxyTa0U
     snippet:
-      publishedAt: 2023-09-06T09:22:22Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: It’s time to build | Itamar Lessuise
-      description: Starknet is gaining serious momentum, but there is still much to do
-        in terms of new use cases and mass adoption. Join Argent as they
-        announce plans to lay the foundation of construction on Starknet.
+      publishedAt: 2023-09-06T09:22:22.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/pXpMtxyTa0U/default.jpg
@@ -37,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/pXpMtxyTa0U/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: It’s time to build | Itamar Lessuise
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: It’s time to build | Itamar Lessuise
         description: Starknet is gaining serious momentum, but there is still much to do
           in terms of new use cases and mass adoption. Join Argent as they
           announce plans to lay the foundation of construction on Starknet.
-      defaultAudioLanguage: en-US
+      description: Starknet is gaining serious momentum, but there is still much to do
+        in terms of new use cases and mass adoption. Join Argent as they
+        announce plans to lay the foundation of construction on Starknet.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT16M19S
       dimension: 2d
