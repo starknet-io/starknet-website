@@ -1,0 +1,59 @@
+id: cd8eded4-c063-4102-bd01-514831e237ff
+post_type: video
+title: Starknet Decentralized Protocol
+published_date: 2023-09-01T11:06:22.582Z
+video:
+  url: https://www.youtube.com/watch?v=haYos7E3GE0&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=5
+  id: haYos7E3GE0
+  data:
+    kind: youtube#video
+    etag: PDt6FicUMtl8jyP4VgkCQgxJt5g
+    id: haYos7E3GE0
+    snippet:
+      publishedAt: 2023-09-01T15:38:41Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Starknet Decentralized Protocol | Ilia Volokh
+      description: We will go over a complete proposal for a decentralized Starknet
+        protocol, including staking, consensus, proofs, and L1 state updates.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/haYos7E3GE0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/haYos7E3GE0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/haYos7E3GE0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/haYos7E3GE0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/haYos7E3GE0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Starknet Decentralized Protocol | Ilia Volokh
+        description: We will go over a complete proposal for a decentralized Starknet
+          protocol, including staking, consensus, proofs, and L1 state updates.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT15M20S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_hayos7e3ge0_maxres.png
+category: community-and-events
+short_desc: In this session, Ilia Volokh, StarkWare's Product Manager and
+  Blockchain Researcher, will go over a complete proposal for a decentralized
+  Starknet protocol, including staking, consensus, proofs, and L1 state updates.
