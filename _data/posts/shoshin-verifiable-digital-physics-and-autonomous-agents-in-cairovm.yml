@@ -1,0 +1,88 @@
+id: 34179cfc-0496-4cfe-a470-bc23826f2dc9
+post_type: video
+title: Shoshin - Verifiable Digital Physics and Autonomous Agents in CairoVM
+published_date: 2023-09-03T11:16:05.694Z
+video:
+  url: https://www.youtube.com/watch?v=dSlRJXlPrWY&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=8
+  id: dSlRJXlPrWY
+  data:
+    kind: youtube#video
+    etag: QxqvOUVktq8L9L4js8JWG3z8Rh4
+    id: dSlRJXlPrWY
+    snippet:
+      publishedAt: 2023-09-03T09:27:42Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Shoshin: Verifiable Digital Physics and Autonomous Agents in CairoVM"
+      description: >-
+        The founders of Topology will talk about a new world to experiment on
+        verifiable digital physics and autonomous agents in CairoVM.
+
+
+        Kunho Kim
+
+        Wizard
+
+        Topology
+
+
+        guiltygyoza
+
+        Wizard
+
+        Topology
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/dSlRJXlPrWY/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/dSlRJXlPrWY/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/dSlRJXlPrWY/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/dSlRJXlPrWY/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/dSlRJXlPrWY/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Shoshin: Verifiable Digital Physics and Autonomous Agents in CairoVM"
+        description: >-
+          The founders of Topology will talk about a new world to experiment on
+          verifiable digital physics and autonomous agents in CairoVM.
+
+
+          Kunho Kim
+
+          Wizard
+
+          Topology
+
+
+          guiltygyoza
+
+          Wizard
+
+          Topology
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT16M29S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_dslrjxlprwy_maxres.png
+category: community-and-events
+short_desc: The founders of Topology will talk about a new world to experiment
+  on verifiable digital physics and autonomous agents in CairoVM.
