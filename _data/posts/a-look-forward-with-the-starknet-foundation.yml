@@ -1,6 +1,6 @@
 id: b580e2e3-cd6e-4d12-8ae7-8819a0b5ea3b
 post_type: video
-title: A look forward with the Starknet Foundation
+title: A Look Forward With the Starknet Foundation
 published_date: 2023-09-06T10:55:39.249Z
 video:
   url: https://www.youtube.com/watch?v=n_LrlcZbU0I&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=3
@@ -10,11 +10,8 @@ video:
     etag: KlCPmQVoF1zszT9IURv-YuxOFqw
     id: n_LrlcZbU0I
     snippet:
-      publishedAt: 2023-09-05T23:05:55Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: A look forward with the Starknet Foundation | Diego Oliva
-      description: A review by the Starknet Foundation on what has happened so far and
-        what big focuses and initiatives are coming up for the next quarter.
+      publishedAt: 2023-09-05T23:05:55.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/n_LrlcZbU0I/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/n_LrlcZbU0I/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: A look forward with the Starknet Foundation | Diego Oliva
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: A look forward with the Starknet Foundation | Diego Oliva
         description: A review by the Starknet Foundation on what has happened so far and
           what big focuses and initiatives are coming up for the next quarter.
-      defaultAudioLanguage: en-US
+      description: A review by the Starknet Foundation on what has happened so far and
+        what big focuses and initiatives are coming up for the next quarter.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT20M43S
       dimension: 2d
