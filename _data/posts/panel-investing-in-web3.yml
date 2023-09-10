@@ -1,0 +1,76 @@
+id: 968f021e-958f-4fc1-8a28-01d667f906b5
+post_type: video
+title: "Panel: Investing in Web3"
+published_date: 2023-09-07T13:39:00.469Z
+video:
+  url: https://www.youtube.com/watch?v=PPtSuUB2VDc&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=30
+  id: PPtSuUB2VDc
+  data:
+    kind: youtube#video
+    etag: 9luIK9yLNM1Tvy4GD3gLLbS0bQs
+    id: PPtSuUB2VDc
+    snippet:
+      publishedAt: 2023-09-07T16:37:09Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Panel: Investing in Web3"
+      description: |-
+        Paul Veradittakit
+        Managing Partner
+        Pantera
+
+        Avichal Garg
+        Co-Founder, Partner
+        Electric Capital
+
+        Gal Ron
+        Product Manager & Blockchain Researcher
+        Starkware
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/PPtSuUB2VDc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/PPtSuUB2VDc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/PPtSuUB2VDc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/PPtSuUB2VDc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/PPtSuUB2VDc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Panel: Investing in Web3"
+        description: |-
+          Paul Veradittakit
+          Managing Partner
+          Pantera
+
+          Avichal Garg
+          Co-Founder, Partner
+          Electric Capital
+
+          Gal Ron
+          Product Manager & Blockchain Researcher
+          Starkware
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT26M8S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_pptsuub2vdc_maxres.png
+category: community-and-events
