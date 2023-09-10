@@ -1,0 +1,72 @@
+id: 74217f38-3c14-4c02-9f87-4d4c6cbd3cc6
+post_type: video
+title: Augmenting the Ethereum Rollup Stack via Shared Security
+published_date: 2023-09-03T12:24:32.998Z
+video:
+  url: https://www.youtube.com/watch?v=BdmShzOXHRQ&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=9
+  id: BdmShzOXHRQ
+  data:
+    kind: youtube#video
+    etag: BZYZlubz_iy4n3hsYhls7ZGPhfU
+    id: BdmShzOXHRQ
+    snippet:
+      publishedAt: 2023-09-03T09:37:38Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Augmenting the Ethereum Rollup Stack via Shared Security | Sreeram Kannan
+      description: In this talk, we highlight how restaking and shared security can
+        play a vital role in augmenting the rollup stack. We showcase how
+        EigenLayer can be used to build a variety of solutions that complement
+        the Ethereum rollup stack, including a hyperscale Data Availability
+        layer, modular MEV management solutions, bridging solutions across
+        rollups, decentralized sequencing, superfast settlement with high
+        economic security.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/BdmShzOXHRQ/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/BdmShzOXHRQ/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/BdmShzOXHRQ/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/BdmShzOXHRQ/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/BdmShzOXHRQ/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Augmenting the Ethereum Rollup Stack via Shared Security | Sreeram Kannan
+        description: In this talk, we highlight how restaking and shared security can
+          play a vital role in augmenting the rollup stack. We showcase how
+          EigenLayer can be used to build a variety of solutions that complement
+          the Ethereum rollup stack, including a hyperscale Data Availability
+          layer, modular MEV management solutions, bridging solutions across
+          rollups, decentralized sequencing, superfast settlement with high
+          economic security.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT17M39S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_bdmshzoxhrq_maxres.png
+category: community-and-events
+short_desc: This talk highlights how re-staking and shared security can play a
+  vital role in augmenting the rollup stack. It showcases how EigenLayer can be
+  used to build a variety of solutions that complement the Ethereum rollup
+  stack, including a hyperscale Data Availability layer, modular MEV management
+  solutions, bridging solutions across rollups, decentralized sequencing,
+  superfast settlement with high economic security.
