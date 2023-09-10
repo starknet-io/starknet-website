@@ -1,0 +1,54 @@
+id: 235b75aa-726b-495a-9654-8b165a66dd2d
+post_type: video
+title: ZK OGs Panel
+published_date: 2023-09-07T13:42:49.748Z
+video:
+  url: https://www.youtube.com/watch?v=mp5u3p24p6g&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=32
+  id: mp5u3p24p6g
+  data:
+    kind: youtube#video
+    etag: zxf1o1YSjHWxVwGkvC7F30C68QU
+    id: mp5u3p24p6g
+    snippet:
+      publishedAt: 2023-09-07T18:26:35Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: ZK OGs Panel
+      description: Eli Ben-Sasson, Dan Boneh, Shafi Goldwasser
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/mp5u3p24p6g/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/mp5u3p24p6g/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/mp5u3p24p6g/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/mp5u3p24p6g/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/mp5u3p24p6g/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: ZK OGs Panel
+        description: Eli Ben-Sasson, Dan Boneh, Shafi Goldwasser
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT33M19S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_mp5u3p24p6g_maxres.png
+category: community-and-events
