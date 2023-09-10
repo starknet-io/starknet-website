@@ -1,0 +1,58 @@
+id: 3fb83194-6003-42bd-861b-8e8d0cd8c93c
+post_type: video
+title: DoorLabs Ticketing Platform
+published_date: 2023-09-03T12:59:44.692Z
+video:
+  url: https://www.youtube.com/watch?v=fIbE13worZU&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=19
+  id: fIbE13worZU
+  data:
+    kind: youtube#video
+    etag: kDqk5-yZzYfKoix5DTgrH2ANT-g
+    id: fIbE13worZU
+    snippet:
+      publishedAt: 2023-09-03T16:44:32Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: DoorLabs Ticketing platform | Giwook
+      description: Join us for a live demo of our advanced ticketing platform. Learn
+        about its advantages and the benefits for your organization.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/fIbE13worZU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/fIbE13worZU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/fIbE13worZU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/fIbE13worZU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/fIbE13worZU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: DoorLabs Ticketing platform | Giwook
+        description: Join us for a live demo of our advanced ticketing platform. Learn
+          about its advantages and the benefits for your organization.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT9M34S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_fibe13worzu_maxres.png
+category: community-and-events
+short_desc: Join Door Labs for a live demo of their advanced ticketing platform.
+  Learn about its advantages and benefits for your organization.
