@@ -1,0 +1,70 @@
+id: b28be676-d18a-4d44-a7ae-14ac816307ae
+post_type: video
+title: Starknet Foundry Workshop
+published_date: 2023-09-10T13:55:48.847Z
+video:
+  url: https://www.youtube.com/watch?v=zJSOScXYn08&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=37
+  id: zJSOScXYn08
+  data:
+    kind: youtube#video
+    etag: e5yCrTLxf2Z6Fbnp_7Ed10qmSi8
+    id: zJSOScXYn08
+    snippet:
+      publishedAt: 2023-09-10T13:34:16Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Starknet Foundry Workshop | Maksymilian Demitraszek
+      description: Do you want to contribute to Starknet open-source project? Or are
+        you a seasoned contributor looking for new areas to get involved in?
+        During this workshop, we will introduce you to Starknet Foundry, a
+        blazingly fast contract development tool for Starknet contracts. We will
+        explain to you how things work under the hood, and you will get your
+        hands on opening your first pull request.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/zJSOScXYn08/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/zJSOScXYn08/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/zJSOScXYn08/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/zJSOScXYn08/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/zJSOScXYn08/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Starknet Foundry Workshop | Maksymilian Demitraszek
+        description: Do you want to contribute to Starknet open-source project? Or are
+          you a seasoned contributor looking for new areas to get involved in?
+          During this workshop, we will introduce you to Starknet Foundry, a
+          blazingly fast contract development tool for Starknet contracts. We
+          will explain to you how things work under the hood, and you will get
+          your hands on opening your first pull request.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT16M24S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_zjsoscxyn08_maxres.png
+category: community-and-events
+short_desc: Do you want to contribute to Starknet open-source project? Or are
+  you a seasoned contributor looking for new areas to get involved in? During
+  this workshop, we will introduce you to Starknet Foundry, a blazingly fast
+  contract development tool for Starknet contracts. We will explain to you how
+  things work under the hood, and you will get your hands on opening your first
+  pull request.
