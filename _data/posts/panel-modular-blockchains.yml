@@ -10,10 +10,8 @@ video:
     etag: CRb-JBwxUjEOGF3GnnPPsTQgY4U
     id: xDA2DFxOybU
     snippet:
-      publishedAt: 2023-09-07T17:32:37Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Panel: Modular Blockchains"
-      description: Nick White, Jill Gunter, Vitaly Yakovlev, Soo Nahm
+      publishedAt: 2023-09-07T17:32:37.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/xDA2DFxOybU/default.jpg
@@ -35,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/xDA2DFxOybU/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Panel: Modular Blockchains"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Panel: Modular Blockchains"
         description: Nick White, Jill Gunter, Vitaly Yakovlev, Soo Nahm
-      defaultAudioLanguage: en-US
+      description: Nick White, Jill Gunter, Vitaly Yakovlev, Soo Nahm
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT28M26S
       dimension: 2d
@@ -51,3 +51,4 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_xda2dfxoybu_maxres.png
+category: community-and-events
