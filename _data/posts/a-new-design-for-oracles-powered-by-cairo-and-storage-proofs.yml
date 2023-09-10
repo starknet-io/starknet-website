@@ -1,0 +1,61 @@
+id: ec58beaa-6d1f-436f-9a4e-2dad1c40c795
+post_type: video
+title: A New Design for Oracles, Powered by Cairo and Storage Proofs
+published_date: 2023-09-03T12:44:52.360Z
+video:
+  url: https://www.youtube.com/watch?v=hIdpqjRCFSU&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=15
+  id: hIdpqjRCFSU
+  data:
+    kind: youtube#video
+    etag: C99RkhXoTKZ09TAVP7lyKPo4obU
+    id: hIdpqjRCFSU
+    snippet:
+      publishedAt: 2023-09-03T16:13:22Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: A new design for oracles, powered by Cairo and storage proofs | Matthias
+        Hallgren
+      description: "We’ll dive into Pragma's design, zoom into the 3 main verticals of
+        oracle design : Data Publishing / Aggregation / Relaying."
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/hIdpqjRCFSU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/hIdpqjRCFSU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/hIdpqjRCFSU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/hIdpqjRCFSU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/hIdpqjRCFSU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: A new design for oracles, powered by Cairo and storage proofs | Matthias
+          Hallgren
+        description: "We’ll dive into Pragma's design, zoom into the 3 main verticals of
+          oracle design : Data Publishing / Aggregation / Relaying."
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT13M9S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_hidpqjrcfsu_maxres.png
+category: community-and-events
+short_desc: "In this talk, Matthias Hallgren, the CTO of Pragma, will dive into
+  Pragma's design, zoom into the 3 main verticals of oracle design : Data
+  Publishing / Aggregation / Relaying."
