@@ -1,0 +1,70 @@
+id: 16f40e17-7b4e-4956-8ea6-6b13da0f9f21
+post_type: video
+title: Future of Ethereum Scaling (Panel)
+published_date: 2023-09-07T13:22:45.718Z
+video:
+  url: https://www.youtube.com/watch?v=cxMuXDQTsSc&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=27
+  id: cxMuXDQTsSc
+  data:
+    kind: youtube#video
+    etag: ozRCnw9MGh-CrByfWQV4cKbLV6Y
+    id: cxMuXDQTsSc
+    snippet:
+      publishedAt: 2023-09-07T15:14:08Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Future of Ethereum Scaling (Panel)
+      description: |-
+        Eli Ben-Sasson | Co-Founder & President Starkware
+
+        Ed Felten | Co-founder & Chief Scientist Offchain Labs
+
+        Daniel Lubarov |  Co-founder Polygon Zero
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/cxMuXDQTsSc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/cxMuXDQTsSc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/cxMuXDQTsSc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/cxMuXDQTsSc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/cxMuXDQTsSc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Future of Ethereum Scaling (Panel)
+        description: |-
+          Eli Ben-Sasson | Co-Founder & President Starkware
+
+          Ed Felten | Co-founder & Chief Scientist Offchain Labs
+
+          Daniel Lubarov |  Co-founder Polygon Zero
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT31M23S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_qq6_gczzxwk_maxres.png
+category: community-and-events
+short_desc: |-
+  Guests: Eli Ben-Sasson | Co-Founder & President Starkware
+
+  Ed Felten | Co-founder & Chief Scientist Offchain Labs
+
+  Daniel Lubarov |  Co-founder Polygon Zero
