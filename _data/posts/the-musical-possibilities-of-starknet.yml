@@ -1,0 +1,80 @@
+id: 713e493d-8fd0-49be-bcd0-ad0ceb31c7e1
+post_type: video
+title: The Musical Possibilities of Starknet
+published_date: 2023-09-03T12:52:58.352Z
+video:
+  url: https://www.youtube.com/watch?v=2FdHZa1Bris&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=17
+  id: 2FdHZa1Bris
+  data:
+    kind: youtube#video
+    etag: hS3nWeaI0ZXeAWJtRQAL_Ak2UWA
+    id: 2FdHZa1Bris
+    snippet:
+      publishedAt: 2023-09-03T16:24:01Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: The Musical Possibilities of Starknet | Casey Wescott
+      description: My talk presents generative music libraries on Starknet and
+        explores their integration with games and applications. I will share how
+        music is being used in games on Starknet such as Loot Realms/Survivor,
+        Cartridge’s RYO and my collaboration with Topology on the music game
+        MuMu. Tools are demonstrated, played and used to compose ever-varying
+        music. Music models' capability to adjust to changing player dynamics is
+        outlined. Beyond gaming, musical applications in collaborative contexts
+        are discussed, underscoring the potential of generative music in
+        enhancing user experiences across diverse applications on Starknet.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/2FdHZa1Bris/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/2FdHZa1Bris/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/2FdHZa1Bris/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/2FdHZa1Bris/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/2FdHZa1Bris/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: The Musical Possibilities of Starknet | Casey Wescott
+        description: My talk presents generative music libraries on Starknet and
+          explores their integration with games and applications. I will share
+          how music is being used in games on Starknet such as Loot
+          Realms/Survivor, Cartridge’s RYO and my collaboration with Topology on
+          the music game MuMu. Tools are demonstrated, played and used to
+          compose ever-varying music. Music models' capability to adjust to
+          changing player dynamics is outlined. Beyond gaming, musical
+          applications in collaborative contexts are discussed, underscoring the
+          potential of generative music in enhancing user experiences across
+          diverse applications on Starknet.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT12M15S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_2fdhza1bris_maxres.png
+category: community-and-events
+short_desc: In Casey Wescott's talk, she presents generative music libraries on
+  Starknet and explores their integration with games and applications. She will
+  share how music is being used in games on Starknet, such as Loot
+  Realms/Survivor, Cartridge’s RYO, and her collaboration with Topology on the
+  music game MuMu. Tools are demonstrated, played, and used to compose
+  ever-varying music. Music models' capability to adjust to changing player
+  dynamics is outlined. Beyond gaming, musical applications in collaborative
+  contexts are discussed, underscoring the potential of generative music in
+  enhancing user experiences across diverse applications on Starknet.
