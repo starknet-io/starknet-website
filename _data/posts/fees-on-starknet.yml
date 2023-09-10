@@ -1,0 +1,61 @@
+id: 8fe9fb59-e363-4859-8004-0549b2b8a06e
+post_type: video
+title: Fees on Starknet
+published_date: 2023-09-01T10:59:33.474Z
+video:
+  url: https://www.youtube.com/watch?v=tmCEo8YLbZU&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=4
+  id: tmCEo8YLbZU
+  data:
+    kind: youtube#video
+    etag: ZSTlOSgsZ5ta00AO58iG-j6g2S0
+    id: tmCEo8YLbZU
+    snippet:
+      publishedAt: 2023-09-01T15:11:59Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Fees on Starknet | Noam Nisan
+      description: We will briefly discuss some of the issues, thoughts,
+        considerations, and points of view that are influencing the design of
+        the Starknet Fee Mechanism.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/tmCEo8YLbZU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/tmCEo8YLbZU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/tmCEo8YLbZU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/tmCEo8YLbZU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/tmCEo8YLbZU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Fees on Starknet | Noam Nisan
+        description: We will briefly discuss some of the issues, thoughts,
+          considerations, and points of view that are influencing the design of
+          the Starknet Fee Mechanism.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT16M16S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_tmceo8ylbzu_maxres.png
+category: community-and-events
+short_desc: This session briefly discusses some of the issues, thoughts,
+  considerations, and points of view that are influencing the design of the
+  Starknet Fee Mechanism.
