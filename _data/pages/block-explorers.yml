@@ -33,7 +33,7 @@ blocks:
       - title: OKLink
         description: OKLink Starknet explorer is a multi-chain aggregated blockchain
           explorer that allows users to search through on-chain data covering
-          30+ mainstream chains including BTC, ETH, BSC, Starknet, polygon,etc.
+          30+ mainstream chains.
         link_url: https://www.oklink.com/starknet
         website_url: https://www.oklink.com/starknet
         image: /assets/oklink-logo.jpeg
