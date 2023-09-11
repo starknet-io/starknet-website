@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { HiOutlineHome } from "react-icons/hi2";
 
-type BreadcrumbItem = { link: string; label: string };
+type BreadcrumbItem = { link: string; label: string; isDisabled?: boolean };
 type BreadcrumbsProps = {
   items: Array<BreadcrumbItem>;
   locale: string;
@@ -87,7 +87,10 @@ export const Breadcrumbs = ({
         </BreadcrumbLink>
       </BreadcrumbItem>
       {middleItems?.map((item) => (
-        <BreadcrumbItem>
+        <BreadcrumbItem
+          isCurrentPage={item.isDisabled}
+          color={item.isDisabled ? "content.default.disabled" : undefined}
+        >
           <BreadcrumbLink href={item.link} noOfLines={1} p="xs">
             {item.label}
           </BreadcrumbLink>

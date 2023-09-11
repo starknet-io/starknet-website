@@ -4,6 +4,9 @@ items:
       - blocks:
           - items:
               - page: 93b845d7-5662-4cd4-8c13-3730440880c0
+              - custom_title: How Starknet Scales Ethereum
+                custom_internal_link: /education?chapter=scaling-eth
+                hide_from_footer: true
               - page: 1dd72e46-c830-4a44-9bdf-d62b195b4c98
               - custom_title: FAQ
                 page: b5689d3a-348b-4ccb-b787-520b64c55e41

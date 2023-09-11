@@ -41,6 +41,7 @@ export default function EducationPage({ chapter }: Props) {
           items={[
             {
               link: `/${locale}/learn`,
+              isDisabled: true,
               label: "Learn",
             },
             {
@@ -121,13 +122,13 @@ export default function EducationPage({ chapter }: Props) {
                 ipsum?
               </Text>
             </Box>
-            <Flex py="xl" gap="sm" overflowX="auto">
+            {/* <Flex py="xl" gap="sm" overflowX="auto">
               {["Scalability", "Roadmap", "Cairo", "Layer 2"].map((b) => (
                 <Badge variant="outline" key={b}>
                   {b}
                 </Badge>
               ))}
-            </Flex>
+            </Flex> */}
           </Box>
         </Box>
       }
