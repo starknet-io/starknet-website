@@ -1,0 +1,79 @@
+id: 6a72272e-6f77-4dee-879a-9e4311520c48
+post_type: video
+title: Volition on Starknet Discussion
+published_date: 2023-09-11T07:02:32.498Z
+video:
+  url: https://www.youtube.com/watch?v=uwk8oFc3YOA&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=39
+  id: uwk8oFc3YOA
+  data:
+    kind: youtube#video
+    etag: FWeKss66-HqmlnS0Rmgesbo2RUA
+    id: uwk8oFc3YOA
+    snippet:
+      publishedAt: 2023-09-10T14:18:55Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Volition on Starknet discussion | Evyatar Oster
+      description: "Volition presents a design proposal aimed at reducing L1 data
+        availability costs, which currently account for over 90% of the average
+        transaction cost on Starknet. This proposal offers developers and users
+        the choice to select from various data availability solutions. During
+        this workshop, we will delve into the challenges and associated risks.
+        Our objective is to brainstorm potential design modifications that can
+        address these issues effectively. For further reading on “Volition on
+        Starknet” (ahead of this session):
+        https://community.starknet.io/t/volition-hybrid-data-availability-solut\
+        ion/97387"
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/uwk8oFc3YOA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/uwk8oFc3YOA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/uwk8oFc3YOA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/uwk8oFc3YOA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/uwk8oFc3YOA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Volition on Starknet discussion | Evyatar Oster
+        description: "Volition presents a design proposal aimed at reducing L1 data
+          availability costs, which currently account for over 90% of the
+          average transaction cost on Starknet. This proposal offers developers
+          and users the choice to select from various data availability
+          solutions. During this workshop, we will delve into the challenges and
+          associated risks. Our objective is to brainstorm potential design
+          modifications that can address these issues effectively. For further
+          reading on “Volition on Starknet” (ahead of this session):
+          https://community.starknet.io/t/volition-hybrid-data-availability-sol\
+          ution/97387"
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT53M36S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_uwk8ofc3yoa_maxres.png
+category: community-and-events
+short_desc: Volition presents a design proposal aimed at reducing L1 data
+  availability costs, which currently account for over 90% of the average
+  transaction cost on Starknet. This proposal offers developers and users the
+  choice to select from various data availability solutions. During this
+  workshop, we will delve into the challenges and associated risks. Our
+  objective is to brainstorm potential design modifications that can address
+  these issues effectively.
