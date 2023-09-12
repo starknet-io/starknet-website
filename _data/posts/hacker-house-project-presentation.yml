@@ -1,0 +1,54 @@
+id: 2a9c0f84-d60e-46dd-b2d8-249f17c61df3
+post_type: video
+title: Hacker House Project Presentation
+published_date: 2023-09-04T13:19:45.669Z
+video:
+  url: https://www.youtube.com/watch?v=fLHD3Xmybpk&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=26
+  id: fLHD3Xmybpk
+  data:
+    kind: youtube#video
+    etag: EniGt8X-5vd7Q0lBSUh49ciXvAo
+    id: fLHD3Xmybpk
+    snippet:
+      publishedAt: 2023-09-04T18:21:24Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Hacker House Project Presentation
+      description: ""
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/fLHD3Xmybpk/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/fLHD3Xmybpk/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/fLHD3Xmybpk/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/fLHD3Xmybpk/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/fLHD3Xmybpk/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Hacker House Project Presentation
+        description: ""
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT26M28S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_flhd3xmybpk_maxres.png
+category: community-and-events

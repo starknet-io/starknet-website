@@ -1,0 +1,92 @@
+id: 22a00819-f0aa-493f-b534-41df3166cb40
+post_type: video
+title: "The Convergence of TradFi and Defi: a Conversation with Visa"
+published_date: 2023-09-07T13:37:23.088Z
+video:
+  url: https://www.youtube.com/watch?v=CtT3mNuCoWE&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=29
+  id: CtT3mNuCoWE
+  data:
+    kind: youtube#video
+    etag: Hpaiff-FyecqX2ed-l_F3B1IQGo
+    id: CtT3mNuCoWE
+    snippet:
+      publishedAt: 2023-09-07T16:11:20Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "The Convergence of TradFi and Defi: a Conversation with Visa"
+      description: >-
+        Emmanuel Vallod
+
+        CIO
+
+        Stake Capital Group
+
+
+
+        Cuy Sheffield
+
+        Global Head of Crypto
+
+        Visa
+
+
+
+        Blockchain backends will become ubiquitous within the next decade, prominently so in financial services. Visa will provide an in-depth look into their blockchain strategy, what tech developments they are most excited about, and their top-priority use-cases.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/CtT3mNuCoWE/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/CtT3mNuCoWE/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/CtT3mNuCoWE/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/CtT3mNuCoWE/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/CtT3mNuCoWE/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "The Convergence of TradFi and Defi: a Conversation with Visa"
+        description: >-
+          Emmanuel Vallod
+
+          CIO
+
+          Stake Capital Group
+
+
+
+          Cuy Sheffield
+
+          Global Head of Crypto
+
+          Visa
+
+
+
+          Blockchain backends will become ubiquitous within the next decade, prominently so in financial services. Visa will provide an in-depth look into their blockchain strategy, what tech developments they are most excited about, and their top-priority use-cases.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT26M26S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_ctt3mnucowe_maxres.png
+category: community-and-events
+short_desc: Blockchain backends will become ubiquitous within the next decade,
+  prominently so in financial services. Visa will provide an in-depth look into
+  their blockchain strategy, what tech developments they are most excited about,
+  and their top-priority use-cases.

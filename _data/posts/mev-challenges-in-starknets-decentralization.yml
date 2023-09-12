@@ -1,0 +1,67 @@
+id: 7ca3efa7-5ad1-4266-9e41-51116f1858f1
+post_type: video
+title: MEV Challenges in Starknet's Decentralization
+published_date: 2023-09-03T12:37:51.046Z
+video:
+  url: https://www.youtube.com/watch?v=Z771qDpCTWA&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=13
+  id: Z771qDpCTWA
+  data:
+    kind: youtube#video
+    etag: u0RR2jdzDXB0oWo7asih-e2kNj0
+    id: Z771qDpCTWA
+    snippet:
+      publishedAt: 2023-09-03T15:26:23Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: MEV Challenges in Starknet's Decentralization | Ömer Faruk Irmak
+      description: As Starknet progresses toward decentralization, addressing Miner
+        Extractable Value (MEV) challenges is vital. This presentation provides
+        an overview into MEV complexities, community responses, and their unique
+        influence on Starknet's decentralization roadmap as a framework for
+        community to think about.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Z771qDpCTWA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Z771qDpCTWA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Z771qDpCTWA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Z771qDpCTWA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Z771qDpCTWA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: MEV Challenges in Starknet's Decentralization | Ömer Faruk Irmak
+        description: As Starknet progresses toward decentralization, addressing Miner
+          Extractable Value (MEV) challenges is vital. This presentation
+          provides an overview into MEV complexities, community responses, and
+          their unique influence on Starknet's decentralization roadmap as a
+          framework for community to think about.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT20M2S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_z771qdpctwa_maxres.png
+category: community-and-events
+short_desc: As Starknet progresses toward decentralization, addressing Miner
+  Extractable Value (MEV) challenges is vital. This presentation provides an
+  overview into MEV complexities, community responses, and their unique
+  influence on Starknet's decentralization roadmap as a framework for the
+  community to think about.

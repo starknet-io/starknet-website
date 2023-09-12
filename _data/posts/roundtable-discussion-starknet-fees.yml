@@ -1,0 +1,54 @@
+id: 9e5c9aaa-5356-41a2-ba5d-0795fe644aea
+post_type: video
+title: "Roundtable Discussion - Starknet Fees "
+published_date: 2023-09-10T13:50:48.512Z
+video:
+  url: https://www.youtube.com/watch?v=Pr5Qsa3gnjo&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=35
+  id: Pr5Qsa3gnjo
+  data:
+    kind: youtube#video
+    etag: FYq08VM4WHTFmATKv9USXY-Al0w
+    id: Pr5Qsa3gnjo
+    snippet:
+      publishedAt: 2023-09-10T12:58:06Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Starknet Fees roundtable discussion
+      description: Noam Nisan & Ilia Volokh
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Pr5Qsa3gnjo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Pr5Qsa3gnjo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Pr5Qsa3gnjo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Pr5Qsa3gnjo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Pr5Qsa3gnjo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Starknet Fees roundtable discussion
+        description: Noam Nisan & Ilia Volokh
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT54M29S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_pr5qsa3gnjo_maxres.png
+category: community-and-events
