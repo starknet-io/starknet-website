@@ -1,0 +1,91 @@
+id: 816d8e30-6715-4532-887b-83257264c0cd
+post_type: article
+title: ​​The What’s What of the Cairo World
+toc: true
+published_date: 2023-09-11T13:39:54.110Z
+image: /assets/cairo-terminology-.png
+category: engineering
+topic:
+  - cairo
+short_desc: "Delve into Starknet's foundational elements: Cairo VM, CASM, Cairo
+  Zero, Cairo, and Sierra. Discover their pivotal role in Layer 2 scaling,
+  enhancing Ethereum efficiency, and advancing the developer landscape in
+  decentralized ecosystems."
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ### Deciphering Cairo VM, CASM, Cairo Zero, Cairo, and Sierra. 
+
+
+
+
+
+
+
+
+          ## Intro 
+
+
+          In order to unlock secure and decentralized scaling for Ethereum, Validity Rollups make the verification of batches of transactions vastly more efficient than their naive re-execution. Specialized nodes (called Sequencers) on Layer 2 (L2) bundle transactions into new L2 blocks, while Ethereum mainnet nodes confirm these transactions with minimal effort.
+
+
+          Starknet is a Validity Rollup that leverages the Cairo VM, purposefully designed to optimize the efficiency of Validity proofs. Starknet utilizes STARKs (Scalable, Transparent ARgument of Knowledge) as its proof system, enabling the generation of succinct proofs for complex computations, thus greatly reducing the complexity of on-chain verification processes.
+
+
+          In this blog post, we’ll dive into the different components that make Starknet the most performant L2 by TPS – Cairo VM, CASM, Cairo Zero, Cairo, and Sierra.  
+
+
+          ## Cairo VM
+
+
+          Creating Validity Proofs for general computational programs requires a deep grasp of the complex mathematical principles that underlie STARKs. For every computation, it’s crucial to construct an Algebraic Intermediate Representation (AIR), which comprises a set of polynomial constraints that accurately represent the given computation. Initially coined as “CPU AIR,” Cairo is a virtual CPU and a singular AIR, capable of describing any computation with the same “generic” AIR. The Cairo VM is intentionally tailored for Validity Proof systems and is not constrained by the limitations imposed by the EVM (Ethereum virtual machine)
+
+
+          |                     | CairoVM                                                                             | EVM                                                                      |
+
+          | ------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+
+          | Purpose             | Proof Optimised VM                                                                  | Blockchain                                                               |
+
+          | Computational model | Von Neumann architecture                                                            | Stack-based machine                                                      |
+
+          | Basic type          | Field elements                                                                      | 256-bit words                                                            |
+
+          | Memory model        | Nondeterministic read-only memory (key in optimizing the proof for memory accesses) | Read \ write memory **requires more computation to generate a proof.**   |
+
+
+          ## CASM
+
+
+          CASM (Cairo Assembly) is the machine code that the Cairo VM runs. CASM is translated to polynomial constraints that enforce the correct execution of a program. CASM is a key component in the ecosystem because regardless of what the user sends to the Starknet sequencer, what’s proven is the correct CASM execution. 
+
+
+          ## Cairo Zero, A Breakthrough
+
+
+          Cairo Zero, released in 2020, introduced the world’s first Turing-complete language for creating STARK-provable programs, revolutionizing verifiable computation. Cairo Zero programs were compiled locally into CASM and then sent to the Starknet sequencer. Although groundbreaking, Cairo Zero had a steep learning curve owing to its low-level nature and did not entirely abstract away the underlying cryptographic primitives required to prove the program execution. 
+
+
+          ## Cairo: Cairo Zero, but Better
+
+
+          [Cairo](https://starkware.co/resource/cairo-roadmap-join-the-ride/) (now v2.1.1) overcomes the limitations of Cairo Zero, promising safer, more efficient contract writing. Cairo greatly improves the developer experience with a Rust-like syntax and by abstracting away the limitations that were present in Cairo Zero (e.g. write once memory).\
+
+          Cairo brings modern programming concepts from the rust world, such as trait/impls, generics, enum matching, without compromising the efficiency of proof generation that is brought about by the underlying CairoVM.
+
+
+          ## Sierra
+
+
+          With Cairo, came Sierra. Sierra serves as an intermediate representation between Cairo and  CASM. This additional layer ensures that user code remains provable in all cases. Sierra compiles down to “safe CASM,” a subset of CASM that is guaranteed to be provable for all inputs. This intermediate layer between user code and proven code is crucial in protecting the Starknet sequencer from DOS in the form of unprovable transactions.
+
+
+          A perhaps surprising benefit of Sierra is, that thanks to this simple intermediate representation, Starknet sequencers may eventually run on native hardware directly instead of going through the CairoVM. To illustrate the power of sequencers executing Sierra, consider the following example: one can use type information from Sierra to work with native types (e.g. u32) instead of working in the prime field of the CairoVM.
+
+
+          ## Conclusion
+
+
+          Cairo builds upon the foundation laid by CairoVM to revolutionize verifiable computation. With a Rust-like syntax and modern programming languages features, Cairo greatly enhances the developer experience, simplifying contract writing and reducing the chance for bugs. Cairo emerges as a powerful tool driving decentralized innovation.
