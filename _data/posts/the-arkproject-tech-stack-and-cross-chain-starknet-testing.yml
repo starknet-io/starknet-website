@@ -10,16 +10,8 @@ video:
     etag: TOEYfXsv7BAmH4EFDlse4eks7ZA
     id: sR5rACzlyy4
     snippet:
-      publishedAt: 2023-09-03T17:54:05Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: The ArkProject tech stack and cross-chain Starknet testing | Pierre
-        Bertin
-      description: Dive into the Ark Project's approach to NFTs, where simplicity
-        meets shared liquidity. Learn about our innovative protocol that make
-        NFTs market unique via our decentralized cross-chain orderbook. Testing
-        such architecture is challenging, and you'll have insights on our
-        testing strategy and hands-on experiments with Starknet's cross-chain
-        capabilities.
+      publishedAt: 2023-09-03T17:54:05.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/sR5rACzlyy4/default.jpg
@@ -41,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/sR5rACzlyy4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: The ArkProject tech stack and cross-chain Starknet testing | Pierre
+        Bertin
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: The ArkProject tech stack and cross-chain Starknet testing | Pierre
           Bertin
@@ -53,7 +47,13 @@ video:
           Testing such architecture is challenging, and you'll have insights on
           our testing strategy and hands-on experiments with Starknet's
           cross-chain capabilities.
-      defaultAudioLanguage: en-US
+      description: Dive into the Ark Project's approach to NFTs, where simplicity
+        meets shared liquidity. Learn about our innovative protocol that make
+        NFTs market unique via our decentralized cross-chain orderbook. Testing
+        such architecture is challenging, and you'll have insights on our
+        testing strategy and hands-on experiments with Starknet's cross-chain
+        capabilities.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT8M51S
       dimension: 2d
@@ -64,6 +64,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_sr5raczlyy4_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: Dive into the Ark Project's approach to NFTs, where simplicity meets
   shared liquidity. Learn about their innovative protocol that makes the NFTs
   market unique via their decentralized cross-chain orderbook. Testing such
