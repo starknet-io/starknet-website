@@ -10,13 +10,8 @@ video:
     etag: ww8oAtaWWM3elT-R99JkI6yKco4
     id: 01tIeGBHsek
     snippet:
-      publishedAt: 2023-09-03T17:28:59Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "SHARP: StarkWare's Shared Prover | Kineret Segal"
-      description: |-
-        Kineret Segal
-        Engineering Lead
-        Starkware
+      publishedAt: 2023-09-03T17:28:59.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/01tIeGBHsek/default.jpg
@@ -38,16 +33,21 @@ video:
           url: https://i.ytimg.com/vi/01tIeGBHsek/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "SHARP: StarkWare's Shared Prover | Kineret Segal"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "SHARP: StarkWare's Shared Prover | Kineret Segal"
         description: |-
           Kineret Segal
           Engineering Lead
           Starkware
-      defaultAudioLanguage: en-US
+      description: |-
+        Kineret Segal
+        Engineering Lead
+        Starkware
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT15M39S
       dimension: 2d
@@ -58,3 +58,5 @@ video:
       projection: rectangular
 image: /assets/youthumb_01tiegbhsek_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
