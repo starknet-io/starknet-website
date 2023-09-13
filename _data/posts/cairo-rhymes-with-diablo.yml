@@ -10,14 +10,8 @@ video:
     etag: XjKeBnEGvBQLtpGwdtsoYrfFiMk
     id: iOu_ixGxh6w
     snippet:
-      publishedAt: 2023-09-03T16:38:04Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Cairo rhymes with Diablo | Sam Benyakoub
-      description: "Introducing Node Guardians: a public initiative designed for
-        intermediate to experienced Cairo developers and security researchers.
-        Engage with RPG-style coding challenges, test your abilities, and earn
-        unique 'soulbound' tokens as proof of your skill. No excuses not to own
-        Cairo now."
+      publishedAt: 2023-09-03T16:38:04.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/iOu_ixGxh6w/default.jpg
@@ -39,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/iOu_ixGxh6w/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Cairo rhymes with Diablo | Sam Benyakoub
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Cairo rhymes with Diablo | Sam Benyakoub
         description: "Introducing Node Guardians: a public initiative designed for
@@ -49,7 +44,12 @@ video:
           Engage with RPG-style coding challenges, test your abilities, and earn
           unique 'soulbound' tokens as proof of your skill. No excuses not to
           own Cairo now."
-      defaultAudioLanguage: en-US
+      description: "Introducing Node Guardians: a public initiative designed for
+        intermediate to experienced Cairo developers and security researchers.
+        Engage with RPG-style coding challenges, test your abilities, and earn
+        unique 'soulbound' tokens as proof of your skill. No excuses not to own
+        Cairo now."
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT11M2S
       dimension: 2d
@@ -62,6 +62,7 @@ image: /assets/youthumb_iou_ixgxh6w_maxres.png
 category: community-and-events
 topic:
   - cairo
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: "Introducing Node Guardians: a public initiative designed for
   intermediate to experienced Cairo developers and security researchers. Engage
   with RPG-style coding challenges, test your abilities, and earn unique
