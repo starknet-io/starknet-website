@@ -10,15 +10,8 @@ video:
     etag: ozRCnw9MGh-CrByfWQV4cKbLV6Y
     id: cxMuXDQTsSc
     snippet:
-      publishedAt: 2023-09-07T15:14:08Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Future of Ethereum Scaling (Panel)
-      description: |-
-        Eli Ben-Sasson | Co-Founder & President Starkware
-
-        Ed Felten | Co-founder & Chief Scientist Offchain Labs
-
-        Daniel Lubarov |  Co-founder Polygon Zero
+      publishedAt: 2023-09-07T15:14:08.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/cxMuXDQTsSc/default.jpg
@@ -40,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/cxMuXDQTsSc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Future of Ethereum Scaling (Panel)
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Future of Ethereum Scaling (Panel)
         description: |-
@@ -51,7 +45,13 @@ video:
           Ed Felten | Co-founder & Chief Scientist Offchain Labs
 
           Daniel Lubarov |  Co-founder Polygon Zero
-      defaultAudioLanguage: en-US
+      description: |-
+        Eli Ben-Sasson | Co-Founder & President Starkware
+
+        Ed Felten | Co-founder & Chief Scientist Offchain Labs
+
+        Daniel Lubarov |  Co-founder Polygon Zero
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT31M23S
       dimension: 2d
@@ -62,6 +62,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_qq6_gczzxwk_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: |-
   Guests: Eli Ben-Sasson | Co-Founder & President Starkware
 
