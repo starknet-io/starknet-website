@@ -10,21 +10,8 @@ video:
     etag: 9luIK9yLNM1Tvy4GD3gLLbS0bQs
     id: PPtSuUB2VDc
     snippet:
-      publishedAt: 2023-09-07T16:37:09Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Panel: Investing in Web3"
-      description: |-
-        Paul Veradittakit
-        Managing Partner
-        Pantera
-
-        Avichal Garg
-        Co-Founder, Partner
-        Electric Capital
-
-        Gal Ron
-        Product Manager & Blockchain Researcher
-        Starkware
+      publishedAt: 2023-09-07T16:37:09.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/PPtSuUB2VDc/default.jpg
@@ -46,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/PPtSuUB2VDc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Panel: Investing in Web3"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Panel: Investing in Web3"
         description: |-
@@ -63,7 +51,19 @@ video:
           Gal Ron
           Product Manager & Blockchain Researcher
           Starkware
-      defaultAudioLanguage: en-US
+      description: |-
+        Paul Veradittakit
+        Managing Partner
+        Pantera
+
+        Avichal Garg
+        Co-Founder, Partner
+        Electric Capital
+
+        Gal Ron
+        Product Manager & Blockchain Researcher
+        Starkware
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT26M8S
       dimension: 2d
@@ -74,3 +74,5 @@ video:
       projection: rectangular
 image: /assets/youthumb_pptsuub2vdc_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
