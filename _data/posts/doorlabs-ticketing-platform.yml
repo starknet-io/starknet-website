@@ -10,11 +10,8 @@ video:
     etag: kDqk5-yZzYfKoix5DTgrH2ANT-g
     id: fIbE13worZU
     snippet:
-      publishedAt: 2023-09-03T16:44:32Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: DoorLabs Ticketing platform | Giwook
-      description: Join us for a live demo of our advanced ticketing platform. Learn
-        about its advantages and the benefits for your organization.
+      publishedAt: 2023-09-03T16:44:32.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/fIbE13worZU/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/fIbE13worZU/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: DoorLabs Ticketing platform | Giwook
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: DoorLabs Ticketing platform | Giwook
         description: Join us for a live demo of our advanced ticketing platform. Learn
           about its advantages and the benefits for your organization.
-      defaultAudioLanguage: en-US
+      description: Join us for a live demo of our advanced ticketing platform. Learn
+        about its advantages and the benefits for your organization.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT9M34S
       dimension: 2d
@@ -54,5 +54,7 @@ video:
       projection: rectangular
 image: /assets/youthumb_fibe13worzu_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: Join Door Labs for a live demo of their advanced ticketing platform.
   Learn about its advantages and benefits for your organization.
