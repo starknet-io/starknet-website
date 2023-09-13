@@ -10,10 +10,8 @@ video:
     etag: EniGt8X-5vd7Q0lBSUh49ciXvAo
     id: fLHD3Xmybpk
     snippet:
-      publishedAt: 2023-09-04T18:21:24Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Hacker House Project Presentation
-      description: ""
+      publishedAt: 2023-09-04T18:21:24.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/fLHD3Xmybpk/default.jpg
@@ -35,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/fLHD3Xmybpk/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Hacker House Project Presentation
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Hacker House Project Presentation
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT26M28S
       dimension: 2d
@@ -52,3 +52,5 @@ video:
       projection: rectangular
 image: /assets/youthumb_flhd3xmybpk_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
