@@ -10,12 +10,8 @@ video:
     etag: 4xW4h2BtfW0uB-e1G4IK_rKWrXk
     id: t2O1jXXBMzw
     snippet:
-      publishedAt: 2023-09-03T10:52:30Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Herodotus: Journey to Genesis | Kacper Koziol"
-      description: Storage proofs, Merkle Mountain Range Accumulators, STARKs, and the
-        SHARP. A combination like no other. Join Herodotus and Starkware on this
-        journey through time.
+      publishedAt: 2023-09-03T10:52:30.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/t2O1jXXBMzw/default.jpg
@@ -37,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/t2O1jXXBMzw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Herodotus: Journey to Genesis | Kacper Koziol"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Herodotus: Journey to Genesis | Kacper Koziol"
         description: Storage proofs, Merkle Mountain Range Accumulators, STARKs, and the
           SHARP. A combination like no other. Join Herodotus and Starkware on
           this journey through time.
-      defaultAudioLanguage: en-US
+      description: Storage proofs, Merkle Mountain Range Accumulators, STARKs, and the
+        SHARP. A combination like no other. Join Herodotus and Starkware on this
+        journey through time.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT15M51S
       dimension: 2d
@@ -56,6 +56,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_t2o1jxxbmzw_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: Storage proofs, Merkle Mountain Range Accumulators, STARKs, and the
   SHARP. A combination like no other. Join Herodotus and Starkware on this
   journey through time.
