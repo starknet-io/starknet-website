@@ -10,11 +10,8 @@ video:
     etag: PDt6FicUMtl8jyP4VgkCQgxJt5g
     id: haYos7E3GE0
     snippet:
-      publishedAt: 2023-09-01T15:38:41Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Starknet Decentralized Protocol | Ilia Volokh
-      description: We will go over a complete proposal for a decentralized Starknet
-        protocol, including staking, consensus, proofs, and L1 state updates.
+      publishedAt: 2023-09-01T15:38:41.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/haYos7E3GE0/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/haYos7E3GE0/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Starknet Decentralized Protocol | Ilia Volokh
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Starknet Decentralized Protocol | Ilia Volokh
         description: We will go over a complete proposal for a decentralized Starknet
           protocol, including staking, consensus, proofs, and L1 state updates.
-      defaultAudioLanguage: en-US
+      description: We will go over a complete proposal for a decentralized Starknet
+        protocol, including staking, consensus, proofs, and L1 state updates.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT15M20S
       dimension: 2d
@@ -54,6 +54,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_hayos7e3ge0_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: In this session, Ilia Volokh, StarkWare's Product Manager and
   Blockchain Researcher, will go over a complete proposal for a decentralized
   Starknet protocol, including staking, consensus, proofs, and L1 state updates.
