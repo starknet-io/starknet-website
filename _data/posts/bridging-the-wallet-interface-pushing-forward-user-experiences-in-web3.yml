@@ -10,15 +10,8 @@ video:
     etag: UKxz9g8Ornf2tV82KYO-0CU1Qjw
     id: 8MzW0OVk__M
     snippet:
-      publishedAt: 2023-09-03T15:41:14Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Bridging the wallet interface, pushing forward user experiences in web3 |
-        Itai Turbahn
-      description: "The Starkgate bridge plays a crucial role in the Starkware
-        ecosystem. In this talk, we'll explore how the Starkware team and
-        Dynamic.xyz rebuilt the bridge authentication flow (see it in action
-        here: https://starkgate.starknet.io/), learnings from interacting with
-        wallets, future plans and the world of multi-chain wallets."
+      publishedAt: 2023-09-03T15:41:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/8MzW0OVk__M/default.jpg
@@ -40,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/8MzW0OVk__M/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Bridging the wallet interface, pushing forward user experiences in web3 |
+        Itai Turbahn
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Bridging the wallet interface, pushing forward user experiences in web3 |
           Itai Turbahn
@@ -51,7 +46,12 @@ video:
           Dynamic.xyz rebuilt the bridge authentication flow (see it in action
           here: https://starkgate.starknet.io/), learnings from interacting with
           wallets, future plans and the world of multi-chain wallets."
-      defaultAudioLanguage: en-US
+      description: "The Starkgate bridge plays a crucial role in the Starkware
+        ecosystem. In this talk, we'll explore how the Starkware team and
+        Dynamic.xyz rebuilt the bridge authentication flow (see it in action
+        here: https://starkgate.starknet.io/), learnings from interacting with
+        wallets, future plans and the world of multi-chain wallets."
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT14M28S
       dimension: 2d
@@ -62,6 +62,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_8mzw0ovk__m_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: "The Starkgate bridge plays a crucial role in the Starkware
   ecosystem. In this talk, we'll explore how the Starkware team and Dynamic.xyz
   rebuilt the bridge authentication flow (see it in action here:
