@@ -10,12 +10,8 @@ video:
     etag: ZSTlOSgsZ5ta00AO58iG-j6g2S0
     id: tmCEo8YLbZU
     snippet:
-      publishedAt: 2023-09-01T15:11:59Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Fees on Starknet | Noam Nisan
-      description: We will briefly discuss some of the issues, thoughts,
-        considerations, and points of view that are influencing the design of
-        the Starknet Fee Mechanism.
+      publishedAt: 2023-09-01T15:11:59.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/tmCEo8YLbZU/default.jpg
@@ -37,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/tmCEo8YLbZU/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Fees on Starknet | Noam Nisan
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Fees on Starknet | Noam Nisan
         description: We will briefly discuss some of the issues, thoughts,
           considerations, and points of view that are influencing the design of
           the Starknet Fee Mechanism.
-      defaultAudioLanguage: en-US
+      description: We will briefly discuss some of the issues, thoughts,
+        considerations, and points of view that are influencing the design of
+        the Starknet Fee Mechanism.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT16M16S
       dimension: 2d
@@ -56,6 +56,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_tmceo8ylbzu_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: This session briefly discusses some of the issues, thoughts,
   considerations, and points of view that are influencing the design of the
   Starknet Fee Mechanism.
