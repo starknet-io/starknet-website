@@ -10,26 +10,8 @@ video:
     etag: QxqvOUVktq8L9L4js8JWG3z8Rh4
     id: dSlRJXlPrWY
     snippet:
-      publishedAt: 2023-09-03T09:27:42Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Shoshin: Verifiable Digital Physics and Autonomous Agents in CairoVM"
-      description: >-
-        The founders of Topology will talk about a new world to experiment on
-        verifiable digital physics and autonomous agents in CairoVM.
-
-
-        Kunho Kim
-
-        Wizard
-
-        Topology
-
-
-        guiltygyoza
-
-        Wizard
-
-        Topology
+      publishedAt: 2023-09-03T09:27:42.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/dSlRJXlPrWY/default.jpg
@@ -51,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/dSlRJXlPrWY/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Shoshin: Verifiable Digital Physics and Autonomous Agents in CairoVM"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Shoshin: Verifiable Digital Physics and Autonomous Agents in CairoVM"
         description: >-
@@ -73,7 +56,24 @@ video:
           Wizard
 
           Topology
-      defaultAudioLanguage: en-US
+      description: >-
+        The founders of Topology will talk about a new world to experiment on
+        verifiable digital physics and autonomous agents in CairoVM.
+
+
+        Kunho Kim
+
+        Wizard
+
+        Topology
+
+
+        guiltygyoza
+
+        Wizard
+
+        Topology
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT16M29S
       dimension: 2d
@@ -84,5 +84,7 @@ video:
       projection: rectangular
 image: /assets/youthumb_dslrjxlprwy_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: The founders of Topology will talk about a new world to experiment
   on verifiable digital physics and autonomous agents in CairoVM.
