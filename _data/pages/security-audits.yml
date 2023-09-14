@@ -25,12 +25,12 @@ blocks:
         description: ConsenSys is a leading smart contract auditing and blockchain
           security tooling for smart contract developers, auditors and web3
           protocols.
-      - title: Nethermind
-        website_url: https://nethermind.io/
-        image: /assets/nethermind_icon_colour.png
-        description: Nethermind is a leading Blockchain Research and Software
-          Engineering Company, that provides auditing and formal verification
-          services for Starknet smart contracts.
+      - title: Nethermind Security
+        website_url: https://nethermind.io/smart-contracts-audits/
+        image: /assets/nethermind_security_ico.png
+        description: Nethermind Security is the security arm of Nethermind, providing
+          services related to Smart Contract Audits, Formal Verification, and
+          Real-Time Monitoring.
       - title: OpenZeppelin
         website_url: https://www.openzeppelin.com/
         image: /assets/openzeppelin-logo.png
