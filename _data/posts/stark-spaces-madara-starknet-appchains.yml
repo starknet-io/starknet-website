@@ -1,0 +1,59 @@
+id: 24d6b566-9d93-4c38-8d2f-a491a7b4c436
+post_type: video
+title: STARK SPACES | Madara + Starknet Appchains
+published_date: 2023-09-04T11:57:15.976Z
+video:
+  url: https://www.youtube.com/watch?v=HnikjCxrl7Y&list=PLcIyXLwiPilVmfeWlxZhskABURfmsZuwu&index=13
+  id: HnikjCxrl7Y
+  data:
+    kind: youtube#video
+    etag: qWcvJIdiQ5DaEMKtfQIqr8dQ2y0
+    id: HnikjCxrl7Y
+    snippet:
+      publishedAt: 2023-09-04T12:55:25Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | Madara + Starknet Appchains
+      description: Learn more about Madara, a high-performance Starknet sequencer,
+        that provides the power to create customizable and efficient appchains.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/HnikjCxrl7Y/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/HnikjCxrl7Y/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/HnikjCxrl7Y/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/HnikjCxrl7Y/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/HnikjCxrl7Y/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | Madara + Starknet Appchains
+        description: Learn more about Madara, a high-performance Starknet sequencer,
+          that provides the power to create customizable and efficient
+          appchains.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT21M42S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_hnikjcxrl7y_maxres.png
+category: ecosystem
+short_desc: Learn more about Madara, a high-performance Starknet sequencer that
+  provides the power to create customizable and efficient appchains.
