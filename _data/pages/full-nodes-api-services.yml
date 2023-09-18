@@ -64,4 +64,10 @@ blocks:
         image: /assets/nethermind_icon_1600_black-1-.png
         website_url: http://starknetrpc.nethermind.io/
         link_url: http://starknetrpc.nethermind.io/
+      - description: Chainbase is an open Web3 data infrastructure for accessing,
+          organizing, and analyzing on-chain data at scale.
+        title: Chainbase
+        link_url: https://chainbase.com/chainNetwork/Starknet
+        website_url: https://chainbase.com/chainNetwork/Starknet
+        image: /assets/logo_icon_black_512.png
     randomize: true
