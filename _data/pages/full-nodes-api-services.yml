@@ -62,6 +62,6 @@ blocks:
         description: Nethermind provides fast and reliable Starknet RPC service built
           for developers.
         image: /assets/nethermind_icon_1600_black-1-.png
-        website_url: https://nethermind.notion.site/Nethermind-s-RPC-Service-for-Starknet-builders-d3a086536b8b477ca1b7fa264a8cf951?pvs=4
-        link_url: https://nethermind.notion.site/Nethermind-s-RPC-Service-for-Starknet-builders-d3a086536b8b477ca1b7fa264a8cf951?pvs=4
+        website_url: http://starknetrpc.nethermind.io/
+        link_url: http://starknetrpc.nethermind.io/
     randomize: true
