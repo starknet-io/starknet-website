@@ -1,6 +1,6 @@
 id: 2bc70e41-14fb-478d-9c61-f1bc095fe9b9
 post_type: video
-title: STARK SPACES | Oracle roundtable discussion
+title: STARK SPACES | Oracle Roundtable Discussion
 published_date: 2023-09-04T11:45:49.798Z
 video:
   url: https://www.youtube.com/watch?v=QcsBj49yBbA&list=PLcIyXLwiPilVmfeWlxZhskABURfmsZuwu&index=8&pp=iAQB
@@ -10,12 +10,8 @@ video:
     etag: gWhwP9JVv88N943XanVzGdTp5lE
     id: QcsBj49yBbA
     snippet:
-      publishedAt: 2023-09-04T04:39:41Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES | Oracle roundtable discussion
-      description: Deep dive into the world of Oracles on Starknet and their mystical
-        powers with a special roundtable discussion featuring Redstone,
-        Switchboard, Stork, and Pragma.
+      publishedAt: 2023-09-04T04:39:41.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/QcsBj49yBbA/default.jpg
@@ -37,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/QcsBj49yBbA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES | Oracle roundtable discussion
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES | Oracle roundtable discussion
         description: Deep dive into the world of Oracles on Starknet and their mystical
           powers with a special roundtable discussion featuring Redstone,
           Switchboard, Stork, and Pragma.
-      defaultAudioLanguage: en-US
+      description: Deep dive into the world of Oracles on Starknet and their mystical
+        powers with a special roundtable discussion featuring Redstone,
+        Switchboard, Stork, and Pragma.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT44M7S
       dimension: 2d
